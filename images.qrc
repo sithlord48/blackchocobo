@@ -1,0 +1,44 @@
+<RCC>
+    <qresource prefix="/icon">
+        <file>icon/open.png</file>
+        <file>icon/quit.png</file>
+        <file>icon/save.png</file>
+        <file alias="aeris_icon">icon/aeris.png</file>
+        <file alias="barret_icon">icon/barret.png</file>
+        <file alias="cait_icon">icon/cait.png</file>
+        <file alias="cid_icon">icon/cid.png</file>
+        <file alias="cloud_icon">icon/cloud.png</file>
+        <file alias="red_icon">icon/red.png</file>
+        <file alias="sep_icon">icon/sep.png</file>
+        <file alias="tifa_icon">icon/tifa.png</file>
+        <file alias="vincent_icon">icon/vincent.png</file>
+        <file alias="yuffie_icon">icon/yuffie.png</file>
+        <file>icon/bchoco.png</file>
+        <file>icon/qt_logo.png</file>
+        <file alias="barret_weapon">icon/gunarm.png</file>
+        <file alias="tifa_weapon">icon/glove.png</file>
+        <file alias="aeris_weapon">icon/staff.png</file>
+        <file alias="red_weapon">icon/clip.png</file>
+        <file alias="cait_weapon">icon/mphone.png</file>
+        <file alias="yuffie_weapon">icon/star.png</file>
+        <file alias="vincent_weapon">icon/gun.png</file>
+        <file alias="cid_weapon">icon/spear.png</file>
+        <file alias="armor">icon/armor.png</file>
+        <file alias="accessory">icon/accessory.png</file>
+        <file alias="summon">icon/s_materia.png</file>
+        <file alias="magic">icon/m_materia.png</file>
+        <file alias="command">icon/c_materia.png</file>
+        <file alias="independent">icon/i_materia.png</file>
+        <file alias="support">icon/sup_materia.png</file>
+        <file alias="item">icon/item.png</file>
+        <file alias="cloud_weapon">icon/sword.png</file>
+        <file>icon/psxmc.png</file>
+        <file>icon/exportpc.png</file>
+        <file>icon/copy.png</file>
+        <file>icon/paste.png</file>
+        <file>icon/delete.png</file>
+        <file>icon/previous.png</file>
+        <file>icon/next.png</file>
+        <file>icon/psn.png</file>
+    </qresource>
+</RCC>
