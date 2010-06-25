@@ -3486,16 +3486,43 @@ void MainWindow::guirefresh(void)
     load = true; //used to cheat the removal of "apply buttons"
 
     //new code for materia tab..
+    //clear then set the skill list & stats
     ui->list_spells->clear();
     for (int i=0; i<Materias[ui->combo_add_mat->currentIndex()].levels;i++){ui->list_spells->addItem(Materias[ui->combo_add_mat->currentIndex()].skills[i]);}
+    ui->lbl_mat_stats->setText(Materias[ui->combo_add_mat->currentIndex()].stats);
 
+    // Check Materia Max AP and Set the Spin Box's Max Value.
     if(Materias[ui->combo_add_mat->currentIndex()].levels>1)
     {
-    ui->sb_addap->setMaximum(Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels-2]);
+      ui->sb_addap->setMaximum(Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels-2]);
     }
     else{ui->sb_addap->setMaximum(16777215);}
 
-
+    //Show levels stars
+    switch (Materias[ui->combo_add_mat->currentIndex()].levels)
+    {
+    qint32 aptemp;
+    //dump temp here...
+            case 0:
+                //hide all buttons.
+                break;
+            case 1:
+                //show one star , FILLED (all materia w/ one star are special
+                break;
+            case 2:
+                //show two stars , fill based on aptemp and Materia[x].ap[y]
+                break;
+            case 3:
+               //show three stars
+               break;
+            case 4:
+               //show 4 stars
+               break;
+            case 5:
+               //show 5 stars
+               break;
+    //fill all stars needed..
+           }
     //END OF NEW MATERIA CODE
     ui->lcd_current_slot->display(s+1);
     ui->cb_replay->setCurrentIndex(0);
