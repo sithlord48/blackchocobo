@@ -4728,8 +4728,8 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>560</x>
-        <y>0</y>
+        <x>564</x>
+        <y>8</y>
         <width>161</width>
         <height>467</height>
        </rect>
@@ -5120,6 +5120,9 @@
          </item>
          <item>
           <widget class="QSpinBox" name="sb_addap">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
            <property name="minimumSize">
             <size>
              <width>100</width>
@@ -5189,16 +5192,19 @@
       </layout>
      </widget>
      <widget class="QGroupBox" name="groupBox_14">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>242</x>
-        <y>340</y>
+        <y>344</y>
         <width>314</width>
-        <height>121</height>
+        <height>131</height>
        </rect>
       </property>
       <property name="title">
-       <string>Materia Provides</string>
+       <string>Materia Skills and Stat Info</string>
       </property>
       <widget class="QListWidget" name="list_spells">
        <property name="geometry">
@@ -5273,6 +5279,19 @@
        </property>
        <property name="text">
         <string>Lvl 5</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="lbl_mat_stats">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>112</y>
+         <width>301</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </widget>
@@ -12994,8 +13013,8 @@
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>571</x>
-      <y>1</y>
+      <x>585</x>
+      <y>0</y>
       <width>141</width>
       <height>22</height>
      </rect>
