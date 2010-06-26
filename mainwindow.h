@@ -172,6 +172,8 @@ private slots:
     void on_combo_pen3_currentIndexChanged(int index);
     void on_combo_pen4_currentIndexChanged(int index);
 
+    void loadFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
+    void saveFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
 
 
     // gui functions functions
@@ -212,8 +214,7 @@ private slots:
     void on_actionSlot_13_activated();
     void on_actionSlot_14_activated();
     void on_actionSlot_15_activated();
-    void loadFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
-    void saveFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
+
 
 
     //party tab
