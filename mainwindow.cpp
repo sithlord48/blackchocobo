@@ -570,28 +570,55 @@ void MainWindow::guirefresh(void)
     else{ui->sb_addap->setMaximum(16777215);}
 
     //Show levels stars
+    qint32 aptemp = ui->sb_addap->value();
+    qint32 masterap = Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels-2];
+    int level=0;
+    for(int i=0; i<Materias[ui->combo_add_mat->currentIndex()].levels-2;i++){if(aptemp > Materias[ui->combo_add_mat->currentIndex()].ap[i]){level++;}}
+
     switch (Materias[ui->combo_add_mat->currentIndex()].levels)
     {
-    qint32 aptemp;
-    //dump temp here...
-            case 0:
-                //hide all buttons.
-                break;
-            case 1:
-                //show one star , FILLED (all materia w/ one star are special
-                break;
-            case 2:
-                //show two stars , fill based on aptemp and Materia[x].ap[y]
-                break;
-            case 3:
-               //show three stars
-               break;
-            case 4:
-               //show 4 stars
-               break;
-            case 5:
-               //show 5 stars
-               break;
+        case 0:
+            ui->btn_m_lvl1->setVisible(0);
+            ui->btn_m_lvl2->setVisible(0);
+            ui->btn_m_lvl3->setVisible(0);
+            ui->btn_m_lvl4->setVisible(0);
+            ui->btn_m_lvl5->setVisible(0);
+            break;
+        case 1:
+            ui->btn_m_lvl1->setVisible(1);
+            ui->btn_m_lvl2->setVisible(0);
+            ui->btn_m_lvl3->setVisible(0);
+            ui->btn_m_lvl4->setVisible(0);
+            ui->btn_m_lvl5->setVisible(0);
+            break;
+        case 2:
+            ui->btn_m_lvl1->setVisible(1);
+            ui->btn_m_lvl2->setVisible(1);
+            ui->btn_m_lvl3->setVisible(0);
+            ui->btn_m_lvl4->setVisible(0);
+            ui->btn_m_lvl5->setVisible(0);
+            break;
+        case 3:
+            ui->btn_m_lvl1->setVisible(1);
+            ui->btn_m_lvl2->setVisible(1);
+            ui->btn_m_lvl3->setVisible(1);
+            ui->btn_m_lvl4->setVisible(0);
+            ui->btn_m_lvl5->setVisible(0);
+            break;
+        case 4:
+            ui->btn_m_lvl1->setVisible(1);
+            ui->btn_m_lvl2->setVisible(1);
+            ui->btn_m_lvl3->setVisible(1);
+            ui->btn_m_lvl4->setVisible(1);
+            ui->btn_m_lvl5->setVisible(0);
+            break;
+        case 5:
+            ui->btn_m_lvl1->setVisible(1);
+            ui->btn_m_lvl2->setVisible(1);
+            ui->btn_m_lvl3->setVisible(1);
+            ui->btn_m_lvl4->setVisible(1);
+            ui->btn_m_lvl5->setVisible(1);
+            break;
     //fill all stars needed..
            }
     //END OF NEW MATERIA CODE
@@ -1028,6 +1055,7 @@ void MainWindow::chocobo_refresh()
      ui->box_stable4->setEnabled(false);
      ui->box_stable5->setEnabled(false);
      ui->box_stable6->setEnabled(false);
+     break;
  case 1:
      ui->box_stable1->setEnabled(true);
      ui->box_stable2->setEnabled(false);
@@ -1035,6 +1063,7 @@ void MainWindow::chocobo_refresh()
      ui->box_stable4->setEnabled(false);
      ui->box_stable5->setEnabled(false);
      ui->box_stable6->setEnabled(false);
+     break;
  case 2:
      ui->box_stable1->setEnabled(true);
      ui->box_stable2->setEnabled(true);
@@ -1042,6 +1071,7 @@ void MainWindow::chocobo_refresh()
      ui->box_stable4->setEnabled(false);
      ui->box_stable5->setEnabled(false);
      ui->box_stable6->setEnabled(false);
+     break;
  case 3:
      ui->box_stable1->setEnabled(true);
      ui->box_stable2->setEnabled(true);
@@ -1049,6 +1079,7 @@ void MainWindow::chocobo_refresh()
      ui->box_stable4->setEnabled(false);
      ui->box_stable5->setEnabled(false);
      ui->box_stable6->setEnabled(false);
+     break;
  case 4:
      ui->box_stable1->setEnabled(true);
      ui->box_stable2->setEnabled(true);
@@ -1056,6 +1087,7 @@ void MainWindow::chocobo_refresh()
      ui->box_stable4->setEnabled(true);
      ui->box_stable5->setEnabled(false);
      ui->box_stable6->setEnabled(false);
+     break;
  case 5:
      ui->box_stable1->setEnabled(true);
      ui->box_stable2->setEnabled(true);
@@ -1063,6 +1095,7 @@ void MainWindow::chocobo_refresh()
      ui->box_stable4->setEnabled(true);
      ui->box_stable5->setEnabled(true);
      ui->box_stable6->setEnabled(false);
+     break;
  case 6:
      ui->box_stable1->setEnabled(true);
      ui->box_stable2->setEnabled(true);
@@ -1070,8 +1103,7 @@ void MainWindow::chocobo_refresh()
      ui->box_stable4->setEnabled(true);
      ui->box_stable5->setEnabled(true);
      ui->box_stable6->setEnabled(true);
-
-
+     break;
  }
 
  ui->line_c1_name->clear();
