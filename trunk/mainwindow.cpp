@@ -560,24 +560,59 @@ void MainWindow::guirefresh(void)
     //clear then set the skill list & stats
     ui->list_spells->clear();
     for (int i=0; i<Materias[ui->combo_add_mat->currentIndex()].levels;i++){ui->list_spells->addItem(Materias[ui->combo_add_mat->currentIndex()].skills[i]);}
-    ui->lbl_mat_stats->setText(Materias[ui->combo_add_mat->currentIndex()].stats);
 
+    ui->lbl_mat_stats->setText(Materias[ui->combo_add_mat->currentIndex()].stats);// set stat string..
+
+
+    qint32 aptemp = ui->sb_addap->value();
+    qint32 masterap = Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels-2];
+    ui->lcd_ap_master->display(masterap);
     // Check Materia Max AP and Set the Spin Box's Max Value.
     if(Materias[ui->combo_add_mat->currentIndex()].levels>1)
     {
-      ui->sb_addap->setMaximum(Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels-2]);
+      ui->sb_addap->setMaximum(masterap);
     }
     else{ui->sb_addap->setMaximum(16777215);}
 
     //Show levels stars
-    qint32 aptemp = ui->sb_addap->value();
-    qint32 masterap = Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels-2];
+
     int level=0;
-    for(int i=0; i<Materias[ui->combo_add_mat->currentIndex()].levels-2;i++){if(aptemp > Materias[ui->combo_add_mat->currentIndex()].ap[i]){level++;}}
+    QString e_icon;
+    QString f_icon;
+    switch(Materias[ui->combo_add_mat->currentIndex()].type)
+    {// COLORS 1-magic(g),2-summon(r),3-independent(f),4-support(b),5-command(y),0-unknown
+    case 0:
+        e_icon= "\0";
+        f_icon= "\0";
+        break;
+    case 1:
+        e_icon= ":/icon/magic_empty";
+        f_icon= ":/icon/magic_full";
+        break;
+    case 2:
+        e_icon= ":/icon/summon_empty";
+        f_icon= ":/icon/summon_full";
+        break;
+    case 3:
+        e_icon= ":/icon/independent_empty";
+        f_icon= ":/icon/independent_full";
+        break;
+    case 4:
+        e_icon= ":/icon/support_empty";
+        f_icon= ":/icon/support_full";
+        break;
+    case 5:
+        e_icon= ":/icon/command_empty";
+        f_icon= ":/icon/command_full";
+        break;
+    }
+
+    for(int i=0; i<Materias[ui->combo_add_mat->currentIndex()].levels;i++){if(aptemp >= Materias[ui->combo_add_mat->currentIndex()].ap[i]){level++;}}
 
     switch (Materias[ui->combo_add_mat->currentIndex()].levels)
     {
         case 0:
+
             ui->btn_m_lvl1->setVisible(0);
             ui->btn_m_lvl2->setVisible(0);
             ui->btn_m_lvl3->setVisible(0);
@@ -586,42 +621,131 @@ void MainWindow::guirefresh(void)
             break;
         case 1:
             ui->btn_m_lvl1->setVisible(1);
+            ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
+
             ui->btn_m_lvl2->setVisible(0);
             ui->btn_m_lvl3->setVisible(0);
             ui->btn_m_lvl4->setVisible(0);
             ui->btn_m_lvl5->setVisible(0);
+            ui->lcd_ap_master->display(0);
             break;
         case 2:
             ui->btn_m_lvl1->setVisible(1);
+            ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
+
             ui->btn_m_lvl2->setVisible(1);
+            if (level >1){ui->btn_m_lvl2->setIcon((QIcon(f_icon)));}
+            else{ui->btn_m_lvl2->setIcon((QIcon(e_icon)));}
+
             ui->btn_m_lvl3->setVisible(0);
             ui->btn_m_lvl4->setVisible(0);
             ui->btn_m_lvl5->setVisible(0);
+
             break;
         case 3:
             ui->btn_m_lvl1->setVisible(1);
+            ui->btn_m_lvl1->setIcon((QIcon (f_icon)));
+
             ui->btn_m_lvl2->setVisible(1);
+            if (level >1){ui->btn_m_lvl2->setIcon((QIcon(f_icon)));}
+            else{ui->btn_m_lvl2->setIcon((QIcon(e_icon)));}
+
             ui->btn_m_lvl3->setVisible(1);
+            if (level >2){ui->btn_m_lvl3->setIcon((QIcon(f_icon)));}
+            else{ui->btn_m_lvl3->setIcon((QIcon(e_icon)));}
+
             ui->btn_m_lvl4->setVisible(0);
             ui->btn_m_lvl5->setVisible(0);
             break;
         case 4:
             ui->btn_m_lvl1->setVisible(1);
+            ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
+
             ui->btn_m_lvl2->setVisible(1);
+            if (level >1){ui->btn_m_lvl2->setIcon((QIcon(f_icon)));}
+            else{ui->btn_m_lvl2->setIcon((QIcon(e_icon)));}
+
             ui->btn_m_lvl3->setVisible(1);
+            if (level >2){ui->btn_m_lvl3->setIcon((QIcon(f_icon)));}
+            else{ui->btn_m_lvl3->setIcon((QIcon(e_icon)));}
+
             ui->btn_m_lvl4->setVisible(1);
+            if (level >3){ui->btn_m_lvl4->setIcon((QIcon(f_icon)));}
+            else{ui->btn_m_lvl4->setIcon((QIcon(e_icon)));}
+
             ui->btn_m_lvl5->setVisible(0);
             break;
         case 5:
             ui->btn_m_lvl1->setVisible(1);
+            ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
+
             ui->btn_m_lvl2->setVisible(1);
+            if (level >1){ui->btn_m_lvl2->setIcon((QIcon(f_icon)));}
+            else{ui->btn_m_lvl2->setIcon((QIcon(e_icon)));}
+
             ui->btn_m_lvl3->setVisible(1);
+            if (level >2){ui->btn_m_lvl3->setIcon((QIcon(f_icon)));}
+            else{ui->btn_m_lvl3->setIcon((QIcon(e_icon)));}
+
             ui->btn_m_lvl4->setVisible(1);
+            if (level >3){ui->btn_m_lvl4->setIcon((QIcon(f_icon)));}
+            else{ui->btn_m_lvl4->setIcon((QIcon(e_icon)));}
+
             ui->btn_m_lvl5->setVisible(1);
+            if (level >4){ui->btn_m_lvl5->setIcon((QIcon(f_icon)));}
+            else{ui->btn_m_lvl5->setIcon((QIcon(e_icon)));}
             break;
     //fill all stars needed..
            }
-    //END OF NEW MATERIA CODE
+    switch(level)
+    {
+       case 0:
+            ui->list_spells->setRowHidden(0,1);
+            ui->list_spells->setRowHidden(1,1);
+            ui->list_spells->setRowHidden(2,1);
+            ui->list_spells->setRowHidden(3,1);
+            ui->list_spells->setRowHidden(4,1);
+            break;
+
+       case 1:
+            ui->list_spells->setRowHidden(0,0);
+            ui->list_spells->setRowHidden(1,1);
+            ui->list_spells->setRowHidden(2,1);
+            ui->list_spells->setRowHidden(3,1);
+            ui->list_spells->setRowHidden(4,1);
+            break;
+
+       case 2:
+            ui->list_spells->setRowHidden(0,0);
+            ui->list_spells->setRowHidden(1,0);
+            ui->list_spells->setRowHidden(2,1);
+            ui->list_spells->setRowHidden(3,1);
+            ui->list_spells->setRowHidden(4,1);
+            break;
+
+       case 3:
+            ui->list_spells->setRowHidden(0,0);
+            ui->list_spells->setRowHidden(1,0);
+            ui->list_spells->setRowHidden(2,0);
+            ui->list_spells->setRowHidden(3,1);
+            ui->list_spells->setRowHidden(4,1);
+            break;
+       case 4:
+            ui->list_spells->setRowHidden(0,0);
+            ui->list_spells->setRowHidden(1,0);
+            ui->list_spells->setRowHidden(2,0);
+            ui->list_spells->setRowHidden(3,0);
+            ui->list_spells->setRowHidden(4,1);
+            break;
+       case 5:
+            ui->list_spells->setRowHidden(0,0);
+            ui->list_spells->setRowHidden(1,0);
+            ui->list_spells->setRowHidden(2,0);
+            ui->list_spells->setRowHidden(3,0);
+            ui->list_spells->setRowHidden(4,0);
+            break;
+        }
+            //END OF NEW MATERIA CODE
     ui->lcd_current_slot->display(s+1);
     ui->cb_replay->setCurrentIndex(0);
     ui->sb_bm_progress1->setValue(ff7.slot[s].bm_progress1);
@@ -3021,4 +3145,34 @@ if(!load)
     load =false;
 
     }
+}
+
+void MainWindow::on_btn_m_lvl1_clicked()
+{
+    ui->sb_addap->setValue(0);
+    guirefresh();
+}
+
+void MainWindow::on_btn_m_lvl2_clicked()
+{
+    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[0]);
+    guirefresh();
+}
+
+void MainWindow::on_btn_m_lvl3_clicked()
+{
+    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[1]);
+    guirefresh();
+}
+
+void MainWindow::on_btn_m_lvl4_clicked()
+{
+    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[2]);
+    guirefresh();
+}
+
+void MainWindow::on_btn_m_lvl5_clicked()
+{
+    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[3]);
+    guirefresh();
 }

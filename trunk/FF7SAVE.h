@@ -939,7 +939,7 @@ static MATERIA Materias[]=
     {QObject::tr(("Counter Attack")),   ":/icon/independent", 0x0D,/*{0,0,0,0,0,0,0,0}*/"",{"Counter Attack 20%","Counter Attack 40%","Counter Attack 60%","Counter Attack 80%","Counter Attack 100%"},{10000,20000,50000,100000},3,5},
     {QObject::tr(("Slash-All")),	":/icon/command",     0x0E,/*{0,0,0,0,0,0,0,0}*/"",{"Slash-All","Flash","","",""},{130000,150000,0,0},5,3},
     {QObject::tr(("Double Cut")),       ":/icon/command",     0x0F,/*{0,0,0,0,+2,0,0,0}*/"Dex:+2",{"2x-Cut","4x-Cut","","",""},{100000,150000,0,0},5,3},
-    {QObject::tr(("Cover")),		":/icon/independent", 0x10,/*{0,0,0,+1,0,0,0,0}*/"Vit:+1",{"Cover +20%","Cover +40%","Cover +60%","Cover +80%","Cover +100%"},{2000,10000,25000,40000},5,3},
+    {QObject::tr(("Cover")),		":/icon/independent", 0x10,/*{0,0,0,+1,0,0,0,0}*/"Vit:+1",{"Cover +20%","Cover +40%","Cover +60%","Cover +80%","Cover +100%"},{2000,10000,25000,40000},4,3},
     {QObject::tr(("Underwater")),       ":/icon/independent", 0x11,/*{0,0,0,0,0,0,0,0}*/"",{"Underwater","","","",""},{0,0,0,0},3,1},
     {QObject::tr(("HP <-> MP")),	":/icon/independent", 0x12,/*{0,0,0,0,0,0,0,0}*/"",{"HP <-> MP","","","",""},{80000,0,0,0},3,2},
     {QObject::tr(("W-Magic")),		":/icon/command",     0x13,/*{0,0,0,0,0,0,0,0}*/"",{"W-Magic","","","",""},{250000,0,0,0},5,2},
