@@ -358,7 +358,7 @@
     <message>
         <location filename="../mainwindow.ui" line="3989"/>
         <source>&amp;Items</source>
-        <translation type="unfinished">&amp;Objetos</translation>
+        <translation>&amp;Objetos</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4652"/>
@@ -1359,42 +1359,42 @@
     <message>
         <location filename="../mainwindow.ui" line="4640"/>
         <source>&amp;Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Materia</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5207"/>
         <source>Materia Skills and Stat Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Materia Habilidades e Info de Stats</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5229"/>
         <source>Lvl 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nv 1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5242"/>
         <source>Lvl 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Nv 2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5255"/>
         <source>Lvl 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Nv 3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5268"/>
         <source>Lvl 4</source>
-        <translation type="unfinished"></translation>
+        <translation>Nv 4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5281"/>
         <source>Lvl 5</source>
-        <translation type="unfinished"></translation>
+        <translation>Nv 5</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5313"/>
         <source>Ap to Master</source>
-        <translation type="unfinished"></translation>
+        <translation>AP para Maestro</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5536"/>
@@ -3325,12 +3325,12 @@ no es un Archivo de Guardado de FF7.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="3034"/>
         <source>Replay the bombing mission from right after you get off the first train, game might crash after the mission right before jessie talks to you about midgar.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rejugar bombing mission justo después de que te bajes del primer tren, el juego puede que se cuelgue después de la misión justo antes de que Jessie te hable sobre Midgar.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3103"/>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent, if you wish to edit cloud or vincent after selecting this replay then change the box to the first(blank) entry and then when you have set those chars as you wish reselect this replay from the combobox.</source>
-        <translation type="unfinished"></translation>
+        <translation>Activando esto se copiará Cloud como Cloud joven (en la ranura de Cait Sith) los stats de sephiroth vendrán directamente de Vincent, si quieres editar a Cloud o Vincent después de seleccionar este replay entonces cambia la caja a la primera (en blanco) y cuando hayas puesto los personajes a tu gusto, vuelve a seleccionar este replay en la &apos;cajacombo&apos;.</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="631"/>
@@ -3616,13 +3616,13 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Ms. Sith&lt;/span&gt; - Causes shes awesome.&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	Chocobo Negro es un Editor de Archivos de Guardado de FF7. (PC + PSX)&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	Escrito Por Sithlord48. usando Qt.&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                                                                  	             Versión :: &lt;span style=&quot; font-weight:600;&quot;&gt;1.0&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                                                                  	             Versión :: &lt;span style=&quot; font-weight:600;&quot;&gt;1.3&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Este programa es software libre: puedes distribuirlo y/o modificarlo&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; bajo los términos de la GNU General Public License publicados por&lt;/span&gt;&lt;/p&gt;
@@ -3658,7 +3658,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;dhrosa&lt;/span&gt; - por ayudarme dándome una mejor comprensión de las funciones de Qt cuando los archivos de ayuda no eran suficientes.&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Ms. Sith&lt;/span&gt; - Porque es maravillosa.&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; {3C?} {4.0/?} {3.?} {40/?} {1&quot;?} {10p?} {400;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {7.?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {48 ?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {1.3&lt;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {3 ?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {12p?} {0p?} {0p?} {0;?} {0p?} {508e?} {8;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {600;?} {600;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {4 ?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {600;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {6r?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {600;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {600;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {0p?} {0p?} {0p?} {0p?} {0;?} {0p?} {600;?} {0p?} {12p?} {0p?} {0p?} {0;?} {0p?}</translation>
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
