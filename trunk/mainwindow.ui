@@ -35,7 +35,7 @@
    <string>Black Chocobo</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="images.qrc">
+   <iconset>
     <normaloff>:/icon/icon/bchoco.png</normaloff>:/icon/icon/bchoco.png</iconset>
   </property>
   <property name="unifiedTitleAndToolBarOnMac">
@@ -50,7 +50,7 @@
      <rect>
       <x>0</x>
       <y>20</y>
-      <width>731</width>
+      <width>1074</width>
       <height>530</height>
      </rect>
     </property>
@@ -82,7 +82,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <property name="usesScrollButtons">
      <bool>true</bool>
@@ -132,7 +132,7 @@
            <string>Cloud</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
           </property>
          </item>
@@ -141,7 +141,7 @@
            <string>Barret</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
           </property>
          </item>
@@ -150,7 +150,7 @@
            <string>Tifa</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
           </property>
          </item>
@@ -159,7 +159,7 @@
            <string>Aeris</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
           </property>
          </item>
@@ -168,7 +168,7 @@
            <string>Red XIII</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
           </property>
          </item>
@@ -177,7 +177,7 @@
            <string>Yuffie</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
           </property>
          </item>
@@ -186,7 +186,7 @@
            <string>Cait Sith</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
           </property>
          </item>
@@ -195,7 +195,7 @@
            <string>Vincent</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
           </property>
          </item>
@@ -204,7 +204,7 @@
            <string>Cid</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
           </property>
          </item>
@@ -243,7 +243,7 @@
            <string>Cloud</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
           </property>
          </item>
@@ -252,7 +252,7 @@
            <string>Barret</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
           </property>
          </item>
@@ -261,7 +261,7 @@
            <string>Tifa</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
           </property>
          </item>
@@ -270,7 +270,7 @@
            <string>Aeris</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
           </property>
          </item>
@@ -279,7 +279,7 @@
            <string>Red XIII</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
           </property>
          </item>
@@ -288,7 +288,7 @@
            <string>Yuffie</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
           </property>
          </item>
@@ -297,7 +297,7 @@
            <string>Cait Sith</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
           </property>
          </item>
@@ -306,7 +306,7 @@
            <string>Vincent</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
           </property>
          </item>
@@ -315,7 +315,7 @@
            <string>Cid</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
           </property>
          </item>
@@ -354,7 +354,7 @@
            <string>Cloud</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
           </property>
          </item>
@@ -363,7 +363,7 @@
            <string>Barret</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
           </property>
          </item>
@@ -372,7 +372,7 @@
            <string>Tifa</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
           </property>
          </item>
@@ -381,7 +381,7 @@
            <string>Aeris</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
           </property>
          </item>
@@ -390,7 +390,7 @@
            <string>Red XIII</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
           </property>
          </item>
@@ -399,7 +399,7 @@
            <string>Yuffie</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
           </property>
          </item>
@@ -408,7 +408,7 @@
            <string>Cait Sith</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
           </property>
          </item>
@@ -417,7 +417,7 @@
            <string>Vincent</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
           </property>
          </item>
@@ -426,7 +426,7 @@
            <string>Cid</string>
           </property>
           <property name="icon">
-           <iconset resource="images.qrc">
+           <iconset>
             <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
           </property>
          </item>
@@ -488,7 +488,7 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="images.qrc">
+          <iconset>
            <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
          </property>
          <property name="iconSize">
@@ -517,7 +517,7 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="images.qrc">
+          <iconset>
            <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
          </property>
          <property name="iconSize">
@@ -546,7 +546,7 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="images.qrc">
+          <iconset>
            <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
          </property>
          <property name="iconSize">
@@ -575,7 +575,7 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="images.qrc">
+          <iconset>
            <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
          </property>
          <property name="iconSize">
@@ -604,7 +604,7 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="images.qrc">
+          <iconset>
            <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
          </property>
          <property name="iconSize">
@@ -633,7 +633,7 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="images.qrc">
+          <iconset>
            <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
          </property>
          <property name="iconSize">
@@ -662,7 +662,7 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="images.qrc">
+          <iconset>
            <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
          </property>
          <property name="iconSize">
@@ -691,7 +691,7 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="images.qrc">
+          <iconset>
            <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
          </property>
          <property name="iconSize">
@@ -720,7 +720,7 @@
           <string/>
          </property>
          <property name="icon">
-          <iconset resource="images.qrc">
+          <iconset>
            <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
          </property>
          <property name="iconSize">
@@ -5198,9 +5198,9 @@
       <property name="geometry">
        <rect>
         <x>242</x>
-        <y>344</y>
-        <width>314</width>
-        <height>131</height>
+        <y>300</y>
+        <width>318</width>
+        <height>171</height>
        </rect>
       </property>
       <property name="title">
@@ -5209,8 +5209,8 @@
       <widget class="QListWidget" name="list_spells">
        <property name="geometry">
         <rect>
-         <x>35</x>
-         <y>20</y>
+         <x>40</x>
+         <y>60</y>
          <width>276</width>
          <height>91</height>
         </rect>
@@ -5219,8 +5219,8 @@
       <widget class="QLabel" name="label_lvl1">
        <property name="geometry">
         <rect>
-         <x>3</x>
-         <y>23</y>
+         <x>8</x>
+         <y>63</y>
          <width>31</width>
          <height>17</height>
         </rect>
@@ -5232,8 +5232,8 @@
       <widget class="QLabel" name="label_lvl2">
        <property name="geometry">
         <rect>
-         <x>3</x>
-         <y>40</y>
+         <x>8</x>
+         <y>80</y>
          <width>31</width>
          <height>17</height>
         </rect>
@@ -5245,8 +5245,8 @@
       <widget class="QLabel" name="label_lvl3">
        <property name="geometry">
         <rect>
-         <x>3</x>
-         <y>57</y>
+         <x>8</x>
+         <y>97</y>
          <width>31</width>
          <height>17</height>
         </rect>
@@ -5258,8 +5258,8 @@
       <widget class="QLabel" name="label_lvl4">
        <property name="geometry">
         <rect>
-         <x>3</x>
-         <y>75</y>
+         <x>8</x>
+         <y>115</y>
          <width>31</width>
          <height>17</height>
         </rect>
@@ -5271,8 +5271,8 @@
       <widget class="QLabel" name="label_lvl5">
        <property name="geometry">
         <rect>
-         <x>3</x>
-         <y>92</y>
+         <x>8</x>
+         <y>132</y>
          <width>31</width>
          <height>17</height>
         </rect>
@@ -5284,14 +5284,243 @@
       <widget class="QLabel" name="lbl_mat_stats">
        <property name="geometry">
         <rect>
-         <x>10</x>
-         <y>112</y>
+         <x>15</x>
+         <y>152</y>
          <width>301</width>
          <height>17</height>
         </rect>
        </property>
        <property name="text">
         <string/>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_7">
+       <property name="geometry">
+        <rect>
+         <x>221</x>
+         <y>11</y>
+         <width>83</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Ap to Master</string>
+       </property>
+      </widget>
+      <widget class="QLCDNumber" name="lcd_ap_master">
+       <property name="geometry">
+        <rect>
+         <x>223</x>
+         <y>31</y>
+         <width>78</width>
+         <height>24</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>24</height>
+        </size>
+       </property>
+       <property name="numDigits">
+        <number>7</number>
+       </property>
+       <property name="segmentStyle">
+        <enum>QLCDNumber::Flat</enum>
+       </property>
+       <property name="intValue" stdset="0">
+        <number>0</number>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_m_lvl2">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>41</x>
+         <y>21</y>
+         <width>32</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_m_lvl4">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>137</x>
+         <y>21</y>
+         <width>32</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_m_lvl1">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>73</x>
+         <y>21</y>
+         <width>32</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_m_lvl5">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>169</x>
+         <y>21</y>
+         <width>32</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="btn_m_lvl3">
+       <property name="enabled">
+        <bool>false</bool>
+       </property>
+       <property name="geometry">
+        <rect>
+         <x>105</x>
+         <y>21</y>
+         <width>32</width>
+         <height>32</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>32</width>
+         <height>32</height>
+        </size>
+       </property>
+       <property name="flat">
+        <bool>false</bool>
        </property>
       </widget>
      </widget>
@@ -8774,7 +9003,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="images.qrc">:/icon/barret_icon</pixmap>
+          <pixmap>:/icon/barret_icon</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -8812,7 +9041,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="images.qrc">:/icon/aeris_icon</pixmap>
+          <pixmap>:/icon/aeris_icon</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -8847,7 +9076,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="images.qrc">:/icon/tifa_icon</pixmap>
+          <pixmap>:/icon/tifa_icon</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -8882,7 +9111,7 @@
           <string/>
          </property>
          <property name="pixmap">
-          <pixmap resource="images.qrc">:/icon/yuffie_icon</pixmap>
+          <pixmap>:/icon/yuffie_icon</pixmap>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -13148,7 +13377,7 @@
   </widget>
   <action name="action_Quit">
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/icon/quit.png</normaloff>
      <normalon>icon/quit.png</normalon>:/icon/icon/quit.png</iconset>
    </property>
@@ -13161,7 +13390,7 @@
   </action>
   <action name="actionOpen_Save_File">
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/icon/open.png</normaloff>:/icon/icon/open.png</iconset>
    </property>
    <property name="text">
@@ -13176,7 +13405,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/icon/save.png</normaloff>:/icon/icon/save.png</iconset>
    </property>
    <property name="text">
@@ -13188,7 +13417,7 @@
   </action>
   <action name="actionAbout">
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/icon/bchoco.png</normaloff>:/icon/icon/bchoco.png</iconset>
    </property>
    <property name="text">
@@ -13200,7 +13429,7 @@
   </action>
   <action name="actionAbout_Qt">
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/icon/qt_logo.png</normaloff>:/icon/icon/qt_logo.png</iconset>
    </property>
    <property name="text">
@@ -13215,7 +13444,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/icon/exportpc.png</normaloff>:/icon/icon/exportpc.png</iconset>
    </property>
    <property name="text">
@@ -13233,7 +13462,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/icon/psxmc.png</normaloff>:/icon/icon/psxmc.png</iconset>
    </property>
    <property name="text">
@@ -13427,7 +13656,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/icon/psxmc.png</normaloff>:/icon/icon/psxmc.png</iconset>
    </property>
    <property name="text">
@@ -13439,7 +13668,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/icon/psn.png</normaloff>:/icon/icon/psn.png</iconset>
    </property>
    <property name="text">
@@ -13451,7 +13680,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/icon/copy.png</normaloff>:/icon/icon/copy.png</iconset>
    </property>
    <property name="text">
@@ -13466,7 +13695,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/icon/paste.png</normaloff>:/icon/icon/paste.png</iconset>
    </property>
    <property name="text">
@@ -13481,7 +13710,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/icon/delete.png</normaloff>:/icon/icon/delete.png</iconset>
    </property>
    <property name="text">
@@ -13496,7 +13725,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/icon/previous.png</normaloff>:/icon/icon/previous.png</iconset>
    </property>
    <property name="text">
@@ -13511,7 +13740,7 @@
     <bool>false</bool>
    </property>
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/icon/next.png</normaloff>:/icon/icon/next.png</iconset>
    </property>
    <property name="text">
@@ -13576,9 +13805,7 @@
   <tabstop>sb_time_sec</tabstop>
   <tabstop>sb_time_min</tabstop>
  </tabstops>
- <resources>
-  <include location="images.qrc"/>
- </resources>
+ <resources/>
  <connections>
   <connection>
    <sender>action_Quit</sender>
