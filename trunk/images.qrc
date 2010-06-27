@@ -40,5 +40,15 @@
         <file>icon/previous.png</file>
         <file>icon/next.png</file>
         <file>icon/psn.png</file>
+        <file>icon/b_m_s_e.png</file>
+        <file>icon/b_m_s_f.png</file>
+        <file>icon/f_m_s_e.png</file>
+        <file>icon/f_m_s_f.png</file>
+        <file>icon/g_m_s_e.png</file>
+        <file>icon/g_m_s_f.png</file>
+        <file>icon/r_m_s_e.png</file>
+        <file>icon/r_m_s_f.png</file>
+        <file>icon/y_m_s_e.png</file>
+        <file>icon/y_m_s_f.png</file>
     </qresource>
 </RCC>
