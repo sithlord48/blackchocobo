@@ -700,7 +700,7 @@ void MainWindow::guirefresh(void)
     switch(level)
     {
        case 0:
-            ui->list_spells->setRowHidden(0,1);
+            ui->list_spells->setRowHidden(0,0);
             ui->list_spells->setRowHidden(1,1);
             ui->list_spells->setRowHidden(2,1);
             ui->list_spells->setRowHidden(3,1);
