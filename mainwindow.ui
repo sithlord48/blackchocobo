@@ -82,7 +82,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="usesScrollButtons">
      <bool>true</bool>
@@ -2502,8 +2502,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>100</width>
-         <height>30</height>
+         <width>423</width>
+         <height>415</height>
         </rect>
        </property>
        <attribute name="label">
@@ -5080,8 +5080,8 @@
      <widget class="QGroupBox" name="groupBox_19">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>10</y>
+        <x>244</x>
+        <y>3</y>
         <width>232</width>
         <height>91</height>
        </rect>
@@ -5197,8 +5197,8 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>242</x>
-        <y>300</y>
+        <x>243</x>
+        <y>302</y>
         <width>318</width>
         <height>171</height>
        </rect>
@@ -5340,12 +5340,12 @@
       </widget>
       <widget class="QPushButton" name="btn_m_lvl2">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="geometry">
         <rect>
-         <x>41</x>
-         <y>21</y>
+         <x>44</x>
+         <y>20</y>
          <width>32</width>
          <height>32</height>
         </rect>
@@ -5371,18 +5371,21 @@
          <height>32</height>
         </size>
        </property>
-       <property name="flat">
+       <property name="default">
         <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
        </property>
       </widget>
       <widget class="QPushButton" name="btn_m_lvl4">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="geometry">
         <rect>
-         <x>137</x>
-         <y>21</y>
+         <x>108</x>
+         <y>20</y>
          <width>32</width>
          <height>32</height>
         </rect>
@@ -5409,17 +5412,17 @@
         </size>
        </property>
        <property name="flat">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
       </widget>
       <widget class="QPushButton" name="btn_m_lvl1">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="geometry">
         <rect>
-         <x>73</x>
-         <y>21</y>
+         <x>12</x>
+         <y>20</y>
          <width>32</width>
          <height>32</height>
         </rect>
@@ -5445,18 +5448,21 @@
          <height>32</height>
         </size>
        </property>
-       <property name="flat">
+       <property name="default">
         <bool>false</bool>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
        </property>
       </widget>
       <widget class="QPushButton" name="btn_m_lvl5">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="geometry">
         <rect>
-         <x>169</x>
-         <y>21</y>
+         <x>140</x>
+         <y>20</y>
          <width>32</width>
          <height>32</height>
         </rect>
@@ -5483,17 +5489,17 @@
         </size>
        </property>
        <property name="flat">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
       </widget>
       <widget class="QPushButton" name="btn_m_lvl3">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="geometry">
         <rect>
-         <x>105</x>
-         <y>21</y>
+         <x>76</x>
+         <y>20</y>
          <width>32</width>
          <height>32</height>
         </rect>
@@ -5520,7 +5526,7 @@
         </size>
        </property>
        <property name="flat">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
       </widget>
      </widget>

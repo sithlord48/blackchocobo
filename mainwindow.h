@@ -49,6 +49,11 @@ private slots:
 
 
 
+    void on_btn_m_lvl5_clicked();
+    void on_btn_m_lvl4_clicked();
+    void on_btn_m_lvl3_clicked();
+    void on_btn_m_lvl2_clicked();
+    void on_btn_m_lvl1_clicked();
     void on_cb_replay_currentIndexChanged(int index);
     void on_sb_bm_progress1_valueChanged(int );
     void on_sb_bm_progress2_valueChanged(int );
