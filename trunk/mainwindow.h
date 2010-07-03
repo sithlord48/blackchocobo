@@ -49,6 +49,7 @@ private slots:
 
 
 
+
     void on_btn_m_lvl5_clicked();
     void on_btn_m_lvl4_clicked();
     void on_btn_m_lvl3_clicked();
@@ -96,8 +97,8 @@ private slots:
 
     //items/materia tab
     void on_list_keyitems_itemChanged();
-
-    void on_tbl_materia_cellClicked(int row);
+void on_tbl_materia_currentCellChanged(int row);
+    //void on_tbl_materia_cellClicked(int row);
     void on_btn_mastermateria_clicked();
     void on_clearMateria_clicked();
     void on_combo_add_mat_currentIndexChanged(int index);
@@ -109,7 +110,7 @@ private slots:
     void on_btn_eskillclear_clicked();
     void on_list_eskill_itemChanged();
 
-    void on_tbl_itm_cellClicked(int row);
+    void on_tbl_itm_currentCellChanged(int row);
     void on_combo_additem_currentIndexChanged(int);
     void on_sb_addqty_valueChanged(int );
     void on_clearItem_clicked();

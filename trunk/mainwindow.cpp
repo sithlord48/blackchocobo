@@ -556,196 +556,6 @@ void MainWindow::guirefresh(void)
 {
     load = true; //used to cheat the removal of "apply buttons"
 
-    //new code for materia tab..
-    //clear then set the skill list & stats
-    ui->list_spells->clear();
-    for (int i=0; i<Materias[ui->combo_add_mat->currentIndex()].levels;i++){ui->list_spells->addItem(Materias[ui->combo_add_mat->currentIndex()].skills[i]);}
-
-    ui->lbl_mat_stats->setText(Materias[ui->combo_add_mat->currentIndex()].stats);// set stat string..
-
-
-    qint32 aptemp = ui->sb_addap->value();
-    qint32 masterap = Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels-2];
-    ui->lcd_ap_master->display(masterap);
-    // Check Materia Max AP and Set the Spin Box's Max Value.
-    if(Materias[ui->combo_add_mat->currentIndex()].levels>1)
-    {
-      ui->sb_addap->setMaximum(masterap);
-    }
-    else{ui->sb_addap->setMaximum(16777215);}
-
-    //Show levels stars
-
-    int level=0;
-    QString e_icon;
-    QString f_icon;
-    switch(Materias[ui->combo_add_mat->currentIndex()].type)
-    {// COLORS 1-magic(g),2-summon(r),3-independent(f),4-support(b),5-command(y),0-unknown
-    case 0:
-        e_icon= "\0";
-        f_icon= "\0";
-        break;
-    case 1:
-        e_icon= ":/icon/magic_empty";
-        f_icon= ":/icon/magic_full";
-        break;
-    case 2:
-        e_icon= ":/icon/summon_empty";
-        f_icon= ":/icon/summon_full";
-        break;
-    case 3:
-        e_icon= ":/icon/independent_empty";
-        f_icon= ":/icon/independent_full";
-        break;
-    case 4:
-        e_icon= ":/icon/support_empty";
-        f_icon= ":/icon/support_full";
-        break;
-    case 5:
-        e_icon= ":/icon/command_empty";
-        f_icon= ":/icon/command_full";
-        break;
-    }
-
-    for(int i=0; i<Materias[ui->combo_add_mat->currentIndex()].levels;i++){if(aptemp >= Materias[ui->combo_add_mat->currentIndex()].ap[i]){level++;}}
-
-    switch (Materias[ui->combo_add_mat->currentIndex()].levels)
-    {
-        case 0:
-
-            ui->btn_m_lvl1->setVisible(0);
-            ui->btn_m_lvl2->setVisible(0);
-            ui->btn_m_lvl3->setVisible(0);
-            ui->btn_m_lvl4->setVisible(0);
-            ui->btn_m_lvl5->setVisible(0);
-            break;
-        case 1:
-            ui->btn_m_lvl1->setVisible(1);
-            ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
-
-            ui->btn_m_lvl2->setVisible(0);
-            ui->btn_m_lvl3->setVisible(0);
-            ui->btn_m_lvl4->setVisible(0);
-            ui->btn_m_lvl5->setVisible(0);
-            ui->lcd_ap_master->display(0);
-            break;
-        case 2:
-            ui->btn_m_lvl1->setVisible(1);
-            ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
-
-            ui->btn_m_lvl2->setVisible(1);
-            if (level >1){ui->btn_m_lvl2->setIcon((QIcon(f_icon)));}
-            else{ui->btn_m_lvl2->setIcon((QIcon(e_icon)));}
-
-            ui->btn_m_lvl3->setVisible(0);
-            ui->btn_m_lvl4->setVisible(0);
-            ui->btn_m_lvl5->setVisible(0);
-
-            break;
-        case 3:
-            ui->btn_m_lvl1->setVisible(1);
-            ui->btn_m_lvl1->setIcon((QIcon (f_icon)));
-
-            ui->btn_m_lvl2->setVisible(1);
-            if (level >1){ui->btn_m_lvl2->setIcon((QIcon(f_icon)));}
-            else{ui->btn_m_lvl2->setIcon((QIcon(e_icon)));}
-
-            ui->btn_m_lvl3->setVisible(1);
-            if (level >2){ui->btn_m_lvl3->setIcon((QIcon(f_icon)));}
-            else{ui->btn_m_lvl3->setIcon((QIcon(e_icon)));}
-
-            ui->btn_m_lvl4->setVisible(0);
-            ui->btn_m_lvl5->setVisible(0);
-            break;
-        case 4:
-            ui->btn_m_lvl1->setVisible(1);
-            ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
-
-            ui->btn_m_lvl2->setVisible(1);
-            if (level >1){ui->btn_m_lvl2->setIcon((QIcon(f_icon)));}
-            else{ui->btn_m_lvl2->setIcon((QIcon(e_icon)));}
-
-            ui->btn_m_lvl3->setVisible(1);
-            if (level >2){ui->btn_m_lvl3->setIcon((QIcon(f_icon)));}
-            else{ui->btn_m_lvl3->setIcon((QIcon(e_icon)));}
-
-            ui->btn_m_lvl4->setVisible(1);
-            if (level >3){ui->btn_m_lvl4->setIcon((QIcon(f_icon)));}
-            else{ui->btn_m_lvl4->setIcon((QIcon(e_icon)));}
-
-            ui->btn_m_lvl5->setVisible(0);
-            break;
-        case 5:
-            ui->btn_m_lvl1->setVisible(1);
-            ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
-
-            ui->btn_m_lvl2->setVisible(1);
-            if (level >1){ui->btn_m_lvl2->setIcon((QIcon(f_icon)));}
-            else{ui->btn_m_lvl2->setIcon((QIcon(e_icon)));}
-
-            ui->btn_m_lvl3->setVisible(1);
-            if (level >2){ui->btn_m_lvl3->setIcon((QIcon(f_icon)));}
-            else{ui->btn_m_lvl3->setIcon((QIcon(e_icon)));}
-
-            ui->btn_m_lvl4->setVisible(1);
-            if (level >3){ui->btn_m_lvl4->setIcon((QIcon(f_icon)));}
-            else{ui->btn_m_lvl4->setIcon((QIcon(e_icon)));}
-
-            ui->btn_m_lvl5->setVisible(1);
-            if (level >4){ui->btn_m_lvl5->setIcon((QIcon(f_icon)));}
-            else{ui->btn_m_lvl5->setIcon((QIcon(e_icon)));}
-            break;
-    //fill all stars needed..
-           }
-    switch(level)
-    {
-       case 0:
-            ui->list_spells->setRowHidden(0,0);
-            ui->list_spells->setRowHidden(1,1);
-            ui->list_spells->setRowHidden(2,1);
-            ui->list_spells->setRowHidden(3,1);
-            ui->list_spells->setRowHidden(4,1);
-            break;
-
-       case 1:
-            ui->list_spells->setRowHidden(0,0);
-            ui->list_spells->setRowHidden(1,1);
-            ui->list_spells->setRowHidden(2,1);
-            ui->list_spells->setRowHidden(3,1);
-            ui->list_spells->setRowHidden(4,1);
-            break;
-
-       case 2:
-            ui->list_spells->setRowHidden(0,0);
-            ui->list_spells->setRowHidden(1,0);
-            ui->list_spells->setRowHidden(2,1);
-            ui->list_spells->setRowHidden(3,1);
-            ui->list_spells->setRowHidden(4,1);
-            break;
-
-       case 3:
-            ui->list_spells->setRowHidden(0,0);
-            ui->list_spells->setRowHidden(1,0);
-            ui->list_spells->setRowHidden(2,0);
-            ui->list_spells->setRowHidden(3,1);
-            ui->list_spells->setRowHidden(4,1);
-            break;
-       case 4:
-            ui->list_spells->setRowHidden(0,0);
-            ui->list_spells->setRowHidden(1,0);
-            ui->list_spells->setRowHidden(2,0);
-            ui->list_spells->setRowHidden(3,0);
-            ui->list_spells->setRowHidden(4,1);
-            break;
-       case 5:
-            ui->list_spells->setRowHidden(0,0);
-            ui->list_spells->setRowHidden(1,0);
-            ui->list_spells->setRowHidden(2,0);
-            ui->list_spells->setRowHidden(3,0);
-            ui->list_spells->setRowHidden(4,0);
-            break;
-        }
-            //END OF NEW MATERIA CODE
     ui->lcd_current_slot->display(s+1);
     ui->cb_replay->setCurrentIndex(0);
     ui->sb_bm_progress1->setValue(ff7.slot[s].bm_progress1);
@@ -1052,7 +862,7 @@ for (int i=0;i<51;i++)// key items
 
     QTableWidgetItem *newItem;
     //set up item table
-    int j= ui->tbl_itm->currentRow();
+int j= ui->tbl_itm->currentRow();
     ui->tbl_itm->clear(); // just incase
     ui->tbl_itm->setColumnWidth(0,145);
     ui->tbl_itm->setColumnWidth(1,32);
@@ -1088,16 +898,18 @@ for (int i=0;i<51;i++)// key items
         }
         ui->tbl_itm->setCurrentCell(j,0);
     }
-    j=ui->tbl_materia->currentRow();
+
+    j= ui->tbl_materia->currentRow();
+
     //set up materia table.
-    ui->tbl_materia->clear();
+    //ui->tbl_materia->clear();
     ui->tbl_materia->setColumnWidth(0,145);
     ui->tbl_materia->setColumnWidth(1,64);
     ui->tbl_materia->setRowCount(200);
     for(int mat=0;mat<200;mat++)// partys materias
     {
 
-        int aptemp;
+        qint32 aptemp=0;
         QString ap;
         if (ff7.slot[s].materias[mat].id == 0x2C)
         {
@@ -1120,9 +932,206 @@ for (int i=0;i<51;i++)// key items
         {
             newItem = new QTableWidgetItem("===Empty Slot===",0);
             ui->tbl_materia->setItem(mat,0,newItem);
+            newItem = new QTableWidgetItem("",0);
+            ui->tbl_materia->setItem(mat,1,newItem);
         }
     }
-    ui->tbl_materia->setCurrentCell(j,0);
+    ui->tbl_materia->setCurrentCell(j,0,QItemSelectionModel::ClearAndSelect);
+
+    /*~~~~~~~~~~~~~~~~~~~~~~`New Materia Code~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+        //clear then set the skill list & stats
+        ui->list_spells->clear();
+
+        for (int i=0; i<Materias[ui->combo_add_mat->currentIndex()].levels;i++){ui->list_spells->addItem(Materias[ui->combo_add_mat->currentIndex()].skills[i]);}
+
+        ui->lbl_mat_stats->setText(Materias[ui->combo_add_mat->currentIndex()].stats);// set stat string..
+
+        qint32 aptemp = ff7.slot[s].materias[j].ap[0] |(ff7.slot[s].materias[j].ap[1] << 8) | (ff7.slot[s].materias[j].ap[2] << 16);
+
+        qint32 masterap = Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels-2];
+
+        ui->lcd_ap_master->display(masterap);
+
+        // Check Materia Max AP and Set the Spin Box's Max Value.
+        if(Materias[ui->combo_add_mat->currentIndex()].levels>1)
+        {
+          ui->sb_addap->setMaximum(masterap);
+        }
+        else{ui->sb_addap->setMaximum(16777215);}
+        ui->sb_addap->setValue(aptemp);
+        //Show levels stars
+
+        int level=0;
+        QString e_icon;
+        QString f_icon;
+        switch(Materias[ui->combo_add_mat->currentIndex()].type)
+        {// COLORS 1-magic(g),2-summon(r),3-independent(f),4-support(b),5-command(y),0-unknown
+        case 0:
+            e_icon= "\0";
+            f_icon= "\0";
+            break;
+        case 1:
+            e_icon= ":/icon/magic_empty";
+            f_icon= ":/icon/magic_full";
+            break;
+        case 2:
+            e_icon= ":/icon/summon_empty";
+            f_icon= ":/icon/summon_full";
+            break;
+        case 3:
+            e_icon= ":/icon/independent_empty";
+            f_icon= ":/icon/independent_full";
+            break;
+        case 4:
+            e_icon= ":/icon/support_empty";
+            f_icon= ":/icon/support_full";
+            break;
+        case 5:
+            e_icon= ":/icon/command_empty";
+            f_icon= ":/icon/command_full";
+            break;
+        }
+
+        for(int i=0; i<Materias[ui->combo_add_mat->currentIndex()].levels;i++){if(aptemp >= Materias[ui->combo_add_mat->currentIndex()].ap[i]){level++;}}
+
+        switch (Materias[ui->combo_add_mat->currentIndex()].levels)
+        {
+            case 0:
+
+                ui->btn_m_lvl1->setVisible(0);
+                ui->btn_m_lvl2->setVisible(0);
+                ui->btn_m_lvl3->setVisible(0);
+                ui->btn_m_lvl4->setVisible(0);
+                ui->btn_m_lvl5->setVisible(0);
+                break;
+            case 1:
+                ui->btn_m_lvl1->setVisible(1);
+                ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
+
+                ui->btn_m_lvl2->setVisible(0);
+                ui->btn_m_lvl3->setVisible(0);
+                ui->btn_m_lvl4->setVisible(0);
+                ui->btn_m_lvl5->setVisible(0);
+                ui->lcd_ap_master->display(0);
+                break;
+            case 2:
+                ui->btn_m_lvl1->setVisible(1);
+                ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
+
+                ui->btn_m_lvl2->setVisible(1);
+                if (level >1){ui->btn_m_lvl2->setIcon((QIcon(f_icon)));}
+                else{ui->btn_m_lvl2->setIcon((QIcon(e_icon)));}
+
+                ui->btn_m_lvl3->setVisible(0);
+                ui->btn_m_lvl4->setVisible(0);
+                ui->btn_m_lvl5->setVisible(0);
+
+                break;
+            case 3:
+                ui->btn_m_lvl1->setVisible(1);
+                ui->btn_m_lvl1->setIcon((QIcon (f_icon)));
+
+                ui->btn_m_lvl2->setVisible(1);
+                if (level >1){ui->btn_m_lvl2->setIcon((QIcon(f_icon)));}
+                else{ui->btn_m_lvl2->setIcon((QIcon(e_icon)));}
+
+                ui->btn_m_lvl3->setVisible(1);
+                if (level >2){ui->btn_m_lvl3->setIcon((QIcon(f_icon)));}
+                else{ui->btn_m_lvl3->setIcon((QIcon(e_icon)));}
+
+                ui->btn_m_lvl4->setVisible(0);
+                ui->btn_m_lvl5->setVisible(0);
+                break;
+            case 4:
+                ui->btn_m_lvl1->setVisible(1);
+                ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
+
+                ui->btn_m_lvl2->setVisible(1);
+                if (level >1){ui->btn_m_lvl2->setIcon((QIcon(f_icon)));}
+                else{ui->btn_m_lvl2->setIcon((QIcon(e_icon)));}
+
+                ui->btn_m_lvl3->setVisible(1);
+                if (level >2){ui->btn_m_lvl3->setIcon((QIcon(f_icon)));}
+                else{ui->btn_m_lvl3->setIcon((QIcon(e_icon)));}
+
+                ui->btn_m_lvl4->setVisible(1);
+                if (level >3){ui->btn_m_lvl4->setIcon((QIcon(f_icon)));}
+                else{ui->btn_m_lvl4->setIcon((QIcon(e_icon)));}
+
+                ui->btn_m_lvl5->setVisible(0);
+                break;
+            case 5:
+                ui->btn_m_lvl1->setVisible(1);
+                ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
+
+                ui->btn_m_lvl2->setVisible(1);
+                if (level >1){ui->btn_m_lvl2->setIcon((QIcon(f_icon)));}
+                else{ui->btn_m_lvl2->setIcon((QIcon(e_icon)));}
+
+                ui->btn_m_lvl3->setVisible(1);
+                if (level >2){ui->btn_m_lvl3->setIcon((QIcon(f_icon)));}
+                else{ui->btn_m_lvl3->setIcon((QIcon(e_icon)));}
+
+                ui->btn_m_lvl4->setVisible(1);
+                if (level >3){ui->btn_m_lvl4->setIcon((QIcon(f_icon)));}
+                else{ui->btn_m_lvl4->setIcon((QIcon(e_icon)));}
+
+                ui->btn_m_lvl5->setVisible(1);
+                if (level >4){ui->btn_m_lvl5->setIcon((QIcon(f_icon)));}
+                else{ui->btn_m_lvl5->setIcon((QIcon(e_icon)));}
+                break;
+        //fill all stars needed..
+               }
+        switch(level)
+        {
+           case 0:
+                ui->list_spells->setRowHidden(0,0);
+                ui->list_spells->setRowHidden(1,1);
+                ui->list_spells->setRowHidden(2,1);
+                ui->list_spells->setRowHidden(3,1);
+                ui->list_spells->setRowHidden(4,1);
+                break;
+
+           case 1:
+                ui->list_spells->setRowHidden(0,0);
+                ui->list_spells->setRowHidden(1,1);
+                ui->list_spells->setRowHidden(2,1);
+                ui->list_spells->setRowHidden(3,1);
+                ui->list_spells->setRowHidden(4,1);
+                break;
+
+           case 2:
+                ui->list_spells->setRowHidden(0,0);
+                ui->list_spells->setRowHidden(1,0);
+                ui->list_spells->setRowHidden(2,1);
+                ui->list_spells->setRowHidden(3,1);
+                ui->list_spells->setRowHidden(4,1);
+                break;
+
+           case 3:
+                ui->list_spells->setRowHidden(0,0);
+                ui->list_spells->setRowHidden(1,0);
+                ui->list_spells->setRowHidden(2,0);
+                ui->list_spells->setRowHidden(3,1);
+                ui->list_spells->setRowHidden(4,1);
+                break;
+           case 4:
+                ui->list_spells->setRowHidden(0,0);
+                ui->list_spells->setRowHidden(1,0);
+                ui->list_spells->setRowHidden(2,0);
+                ui->list_spells->setRowHidden(3,0);
+                ui->list_spells->setRowHidden(4,1);
+                break;
+           case 5:
+                ui->list_spells->setRowHidden(0,0);
+                ui->list_spells->setRowHidden(1,0);
+                ui->list_spells->setRowHidden(2,0);
+                ui->list_spells->setRowHidden(3,0);
+                ui->list_spells->setRowHidden(4,0);
+                break;
+            }
+    /*~~~~~~~~~~~~~~~~~~~~~~End Of New Materia Code~~~~~~~~~~~~~~~~~~~~~*/
+
 
 
     //set up materia_2 table
@@ -1164,6 +1173,8 @@ for (int i=0;i<51;i++)// key items
     }
     load =false;
  }
+
+
 void MainWindow::chocobo_refresh()
 {
  ui->sb_stables_owned->setValue(ff7.slot[s].stables);
@@ -2217,26 +2228,31 @@ void MainWindow::on_sb_love_yuffie_valueChanged()
 
 //items & materia Tab
 
-void MainWindow::on_tbl_materia_cellClicked(int row)
+
+void MainWindow::on_tbl_materia_currentCellChanged(int row)
 {
+    if(!load)
+    {
     if(ff7.slot[s].materias[row].id == 0x2C)
     {
         ui->eskill_group->setVisible(true);
         geteskills(row);
         ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
+        ui->sb_addap->setEnabled(0);
     }
     else
     {
     ui->eskill_group->setVisible(false);
     ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
+    ui->sb_addap->setEnabled(1);
     ui->sb_addap->setValue(ff7.slot[s].materias[row].ap[0] |(ff7.slot[s].materias[row].ap[1] << 8) | (ff7.slot[s].materias[row].ap[2] << 16));
-    }
+    }  
+}   
 
 }
-
 void MainWindow::on_sb_addap_valueChanged(int value)
 {
-    if(!load && ui->tbl_materia->currentRow() >0)
+    if(!load && ui->tbl_materia->currentRow() >-1)
     {
         if(value == Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels -2] && Materias[ui->combo_add_mat->currentIndex()].levels >1)
         {
@@ -2261,7 +2277,7 @@ void MainWindow::on_combo_add_mat_currentIndexChanged(int index)
     if(!load)
     {
         ff7.slot[s].materias[ui->tbl_materia->currentRow()].id = index;
-        guirefresh();
+        guirefresh();          
     }
 }
 
@@ -2324,8 +2340,10 @@ void MainWindow::on_sb_addqty_valueChanged(int value)
         guirefresh();
     }
 }
-void MainWindow::on_tbl_itm_cellClicked(int row)
+void MainWindow::on_tbl_itm_currentCellChanged(int row)
 {
+if(!load)
+    {
     if (ff7.slot[s].items[row].qty == 255 && ff7.slot[s].items[row].id == 255) // if you click on an empty slot add whats in the item and qty boxes.
     {
         if (ui->combo_additem->currentIndex()<256){ff7.slot[s].items[row].id = ui->combo_additem->currentIndex();ff7.slot[s].items[row].qty = quint8(ui->sb_addqty->value() * 2);}
@@ -2346,6 +2364,7 @@ void MainWindow::on_tbl_itm_cellClicked(int row)
         ui->sb_addqty->setValue(ff7.slot[s].items[row].qty/2);
         }
         load = false;
+    }
     }
 }
 
@@ -3176,3 +3195,4 @@ void MainWindow::on_btn_m_lvl5_clicked()
     ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[3]);
     guirefresh();
 }
+
