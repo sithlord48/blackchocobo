@@ -1921,15 +1921,13 @@ void MainWindow::clearslot(int rmslot)
     {
         temp=0x00;
         memcpy(&ff7.slot[rmslot].materias[met].id,temp,1);
-        temp=0x000000;
-        for (int ma=0;ma<3;ma++){ff7.slot[rmslot].materias[met].ap[ma]=temp.at(ma);}
+        for (int ma=0;ma<3;ma++){ff7.slot[rmslot].materias[met].ap[ma]=0x00;}
     }
     for(int met=0;met<48;met++) //Materia stolen by Yuffie
     {
         temp=0x00;
         memcpy(&ff7.slot[rmslot].stolen[met].id,temp,1);
-        temp=0x000000;
-        for (int ma=0;ma<3;ma++){ff7.slot[rmslot].stolen[met].ap[ma]=temp.at(ma);}
+        for (int ma=0;ma<3;ma++){ff7.slot[rmslot].stolen[met].ap[ma]=0x00;}
     }
     for(int c=0;c<6;c++)// clear chocobo slots
     {
