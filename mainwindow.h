@@ -43,13 +43,8 @@ public slots:
 private slots:
 
     //wip functions
-
-
-
-
-
-
-
+    void on_combo_add_mat_2_currentIndexChanged();
+    void on_combo_mat_type_currentIndexChanged(int index);
     void on_btn_m_lvl5_clicked();
     void on_btn_m_lvl4_clicked();
     void on_btn_m_lvl3_clicked();
@@ -97,7 +92,7 @@ private slots:
 
     //items/materia tab
     void on_list_keyitems_itemChanged();
-void on_tbl_materia_currentCellChanged(int row);
+    void on_tbl_materia_currentCellChanged(int row);
     //void on_tbl_materia_cellClicked(int row);
     void on_btn_mastermateria_clicked();
     void on_clearMateria_clicked();

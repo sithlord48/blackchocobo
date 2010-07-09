@@ -2502,8 +2502,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>423</width>
-         <height>415</height>
+         <width>100</width>
+         <height>30</height>
         </rect>
        </property>
        <attribute name="label">
@@ -5111,7 +5111,7 @@
        <property name="geometry">
         <rect>
          <x>40</x>
-         <y>117</y>
+         <y>120</y>
          <width>276</width>
          <height>91</height>
         </rect>
@@ -5130,7 +5130,7 @@
        <property name="geometry">
         <rect>
          <x>8</x>
-         <y>120</y>
+         <y>123</y>
          <width>31</width>
          <height>17</height>
         </rect>
@@ -5143,7 +5143,7 @@
        <property name="geometry">
         <rect>
          <x>8</x>
-         <y>137</y>
+         <y>140</y>
          <width>31</width>
          <height>17</height>
         </rect>
@@ -5156,7 +5156,7 @@
        <property name="geometry">
         <rect>
          <x>8</x>
-         <y>154</y>
+         <y>157</y>
          <width>31</width>
          <height>17</height>
         </rect>
@@ -5169,7 +5169,7 @@
        <property name="geometry">
         <rect>
          <x>8</x>
-         <y>172</y>
+         <y>175</y>
          <width>31</width>
          <height>17</height>
         </rect>
@@ -5182,7 +5182,7 @@
        <property name="geometry">
         <rect>
          <x>8</x>
-         <y>189</y>
+         <y>192</y>
          <width>31</width>
          <height>17</height>
         </rect>
@@ -5195,7 +5195,7 @@
        <property name="geometry">
         <rect>
          <x>4</x>
-         <y>210</y>
+         <y>213</y>
          <width>312</width>
          <height>20</height>
         </rect>
@@ -5214,7 +5214,7 @@
        <property name="geometry">
         <rect>
          <x>60</x>
-         <y>60</y>
+         <y>64</y>
          <width>48</width>
          <height>48</height>
         </rect>
@@ -5254,7 +5254,7 @@
        <property name="geometry">
         <rect>
          <x>160</x>
-         <y>60</y>
+         <y>64</y>
          <width>48</width>
          <height>48</height>
         </rect>
@@ -5291,7 +5291,7 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>60</y>
+         <y>64</y>
          <width>48</width>
          <height>48</height>
         </rect>
@@ -5331,7 +5331,7 @@
        <property name="geometry">
         <rect>
          <x>210</x>
-         <y>60</y>
+         <y>64</y>
          <width>48</width>
          <height>48</height>
         </rect>
@@ -5368,7 +5368,7 @@
        <property name="geometry">
         <rect>
          <x>110</x>
-         <y>60</y>
+         <y>64</y>
          <width>48</width>
          <height>48</height>
         </rect>
@@ -5396,22 +5396,6 @@
        </property>
        <property name="flat">
         <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QComboBox" name="combo_add_mat">
-       <property name="geometry">
-        <rect>
-         <x>145</x>
-         <y>20</y>
-         <width>165</width>
-         <height>29</height>
-        </rect>
-       </property>
-       <property name="minimumSize">
-        <size>
-         <width>165</width>
-         <height>0</height>
-        </size>
        </property>
       </widget>
       <widget class="QFrame" name="frame_3">
@@ -5584,6 +5568,155 @@
         </property>
        </widget>
       </widget>
+      <widget class="QComboBox" name="combo_add_mat_2">
+       <property name="geometry">
+        <rect>
+         <x>140</x>
+         <y>33</y>
+         <width>165</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>165</width>
+         <height>0</height>
+        </size>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="combo_mat_type">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>33</y>
+         <width>124</width>
+         <height>29</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>124</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>16</width>
+         <height>16</height>
+        </size>
+       </property>
+       <item>
+        <property name="text">
+         <string>All</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/icon/icon/a_materia.png</normalon>
+         </iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Magic</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/icon/magic</normalon>
+         </iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Summon</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/icon/summon</normalon>
+         </iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Independent</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/icon/independent</normalon>
+         </iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Support</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/icon/support</normalon>
+         </iconset>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Command</string>
+        </property>
+        <property name="icon">
+         <iconset>
+          <normalon>:/icon/command</normalon>
+         </iconset>
+        </property>
+       </item>
+      </widget>
+      <widget class="QLabel" name="label_175">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>16</y>
+         <width>121</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Type Filter</string>
+       </property>
+      </widget>
+      <zorder>list_spells</zorder>
+      <zorder>label_lvl1</zorder>
+      <zorder>label_lvl2</zorder>
+      <zorder>label_lvl3</zorder>
+      <zorder>label_lvl4</zorder>
+      <zorder>label_lvl5</zorder>
+      <zorder>lbl_mat_stats</zorder>
+      <zorder>btn_m_lvl2</zorder>
+      <zorder>btn_m_lvl4</zorder>
+      <zorder>btn_m_lvl1</zorder>
+      <zorder>btn_m_lvl5</zorder>
+      <zorder>btn_m_lvl3</zorder>
+      <zorder>frame_3</zorder>
+      <zorder>frame</zorder>
+      <zorder>combo_add_mat_2</zorder>
+      <zorder>combo_mat_type</zorder>
+      <zorder>label_175</zorder>
+      <zorder>lcd_ap_master</zorder>
+      <zorder>label_7</zorder>
+     </widget>
+     <widget class="QComboBox" name="combo_add_mat">
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>440</y>
+        <width>165</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>165</width>
+        <height>0</height>
+       </size>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_chocobos">
@@ -5603,7 +5736,7 @@
        <enum>QTabWidget::East</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
