@@ -52,14 +52,22 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     for (int i=288;i<320;i++){ui->combo_acc->addItem(QIcon(Items[i].image),Items[i].name);}
     for (int i=0;i<320;i++){ui->combo_additem->addItem(QIcon(Items[i].image),Items[i].name);}
     for (int i=0;i<0x5b;i++){ui->combo_add_mat->addItem(QIcon(Materias[i].image),Materias[i].name);}
+
+    for (int i=0;i<0x5b;i++){if(Materias[i].name !="DON'T USE"){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),Materias[i].name);}}
+
     for (int i=0;i<0x5b;i++){ui->combo_add_mat_slot->addItem(QIcon(Materias[i].image),Materias[i].name);}
-    ui->eskill_group->setVisible(false);
-    ui->eskill_group_2->setVisible(false);
+
+    //set up tables..
     ui->tbl_location_field->setColumnWidth(0,147);
     ui->tbl_location_field->setColumnWidth(1,50);
     ui->tbl_location_field->setColumnWidth(2,50);
     ui->tbl_location_field->setColumnWidth(3,50);
     ui->tbl_location_field->setColumnWidth(4,50);
+
+    //Hide the stuff that needs to be hidden.
+    ui->eskill_group->setVisible(false);
+    ui->eskill_group_2->setVisible(false);
+    ui->combo_add_mat->setVisible(false);
 
     load=false;
 }
@@ -2240,13 +2248,28 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row)
         ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
         ui->sb_addap->setEnabled(0);
     }
+
     else
     {
     ui->eskill_group->setVisible(false);
-    ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
-    ui->sb_addap->setEnabled(1);
-    ui->sb_addap->setValue(ff7.slot[s].materias[row].ap[0] |(ff7.slot[s].materias[row].ap[1] << 8) | (ff7.slot[s].materias[row].ap[2] << 16));
-    }  
+    if(ui->tbl_materia->currentItem()->text() == "===Empty Slot===")
+        {
+            ui->combo_mat_type->setCurrentIndex(0);
+            ui->combo_add_mat->setCurrentIndex(0);
+            ff7.slot[s].materias[row].id =0xFF;
+            ff7.slot[s].materias[row].ap[0]=0xFF;
+            ff7.slot[s].materias[row].ap[1]=0xFF;
+            ff7.slot[s].materias[row].ap[2]=0xFF;
+            guirefresh();
+        }
+
+    else
+        {
+            ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
+            ui->sb_addap->setEnabled(1);
+            ui->sb_addap->setValue(ff7.slot[s].materias[row].ap[0] |(ff7.slot[s].materias[row].ap[1] << 8) | (ff7.slot[s].materias[row].ap[2] << 16));
+        }
+    }
 }   
 
 }
@@ -2274,10 +2297,70 @@ void MainWindow::on_sb_addap_valueChanged(int value)
 
 void MainWindow::on_combo_add_mat_currentIndexChanged(int index)
 {
+    ui->combo_mat_type->setCurrentIndex(Materias[index].type);
+    for(int i=0;i<ui->combo_add_mat_2->count();i++)
+        {if(ui->combo_add_mat_2->itemText(i)==Materias[index].name){ui->combo_add_mat_2->setCurrentIndex(i);}}
+
     if(!load)
     {
-        ff7.slot[s].materias[ui->tbl_materia->currentRow()].id = index;
-        guirefresh();          
+            ff7.slot[s].materias[ui->tbl_materia->currentRow()].id = index;
+            guirefresh();
+
+    }
+
+}
+
+void MainWindow::on_btn_m_lvl1_clicked()
+{
+    ui->sb_addap->setValue(0);
+    guirefresh();
+}
+void MainWindow::on_btn_m_lvl2_clicked()
+{
+    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[0]);
+    guirefresh();
+}
+void MainWindow::on_btn_m_lvl3_clicked()
+{
+    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[1]);
+    guirefresh();
+}
+void MainWindow::on_btn_m_lvl4_clicked()
+{
+    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[2]);
+    guirefresh();
+}
+void MainWindow::on_btn_m_lvl5_clicked()
+{
+    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[3]);
+    guirefresh();
+}
+
+void MainWindow::on_combo_mat_type_currentIndexChanged(int index)
+{
+    ui->combo_add_mat_2->clear();
+    if(index == 0)
+    {
+        for(int i=0;i<0x5B;i++)
+        {
+            if(Materias[i].name !="DON'T USE"){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),Materias[i].name);}
+        }
+
+    }
+    else
+    {
+        for(int i=0;i<0x5B;i++){if(index==Materias[i].type){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),Materias[i].name);}}
+    }
+}
+
+void MainWindow::on_combo_add_mat_2_currentIndexChanged()
+{
+    if(!load)
+    {//set combo_add_mat.setCurrentindex = selected materia.id
+     for(int i=0;i<0x5B;i++)
+        {
+         if(ui->combo_add_mat_2->currentText()== Materias[i].name){ui->combo_add_mat->setCurrentIndex(i);}
+        }
     }
 }
 
@@ -3014,9 +3097,6 @@ void MainWindow::on_cb_c2_born_toggled(bool checked) // not working correctly.
     else{ff7.slot[s].chocoborn |= (0<<1);}
 }
 
-
-
-
 void MainWindow::on_sb_mprogress_valueChanged()
 {
     if(!load){ff7.slot[s].mprogress = ui->sb_mprogress->value();}
@@ -3026,10 +3106,12 @@ void MainWindow::on_sb_bm_progress1_valueChanged(int value)
 {
     if(!load){ff7.slot[s].bm_progress1 =value;}
 }
+
 void MainWindow::on_sb_bm_progress2_valueChanged(int value)
 {
     if(!load){ff7.slot[s].bm_progress2 =value;}
 }
+
 void MainWindow::on_sb_bm_progress3_valueChanged(int value)
 {
     if(!load){ff7.slot[s].bm_progress3 =value;}
@@ -3123,6 +3205,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     }
     else {ui->label_replaynote->setText("         INFO ON CURRENTLY SELECTED REPLAY MISSION");}
 }
+
 void MainWindow::geteskills2(int row)
 {
     quint32 temp = ff7.slot[s].chars[curchar].materias[row].ap[0] |(ff7.slot[s].chars[curchar].materias[row].ap[1] << 8) | (ff7.slot[s].chars[curchar].materias[row].ap[2] << 16);
@@ -3134,10 +3217,12 @@ void MainWindow::geteskills2(int row)
                     else{ui->list_eskill_2->currentItem()->setCheckState(Qt::Unchecked);}
                 }
 }
+
 void MainWindow::on_list_eskill_2_itemChanged()
 {
     apply_eskills2();
 }
+
 void MainWindow::apply_eskills2()
 {
 if(!load)
@@ -3164,35 +3249,5 @@ if(!load)
     load =false;
 
     }
-}
-
-void MainWindow::on_btn_m_lvl1_clicked()
-{
-    ui->sb_addap->setValue(0);
-    guirefresh();
-}
-
-void MainWindow::on_btn_m_lvl2_clicked()
-{
-    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[0]);
-    guirefresh();
-}
-
-void MainWindow::on_btn_m_lvl3_clicked()
-{
-    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[1]);
-    guirefresh();
-}
-
-void MainWindow::on_btn_m_lvl4_clicked()
-{
-    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[2]);
-    guirefresh();
-}
-
-void MainWindow::on_btn_m_lvl5_clicked()
-{
-    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[3]);
-    guirefresh();
 }
 

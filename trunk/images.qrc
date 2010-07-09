@@ -50,5 +50,6 @@
         <file alias="summon_full">icon/r_m_s_f.png</file>
         <file alias="command_empty">icon/y_m_s_e.png</file>
         <file alias="command_full">icon/y_m_s_f.png</file>
+        <file>icon/a_materia.png</file>
     </qresource>
 </RCC>
