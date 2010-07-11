@@ -94,7 +94,6 @@ private slots:
     void on_list_keyitems_itemChanged();
     void on_tbl_materia_currentCellChanged(int row);
     //void on_tbl_materia_cellClicked(int row);
-    void on_btn_mastermateria_clicked();
     void on_clearMateria_clicked();
     void on_combo_add_mat_currentIndexChanged(int index);
     void on_sb_addap_valueChanged(int );

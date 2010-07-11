@@ -948,9 +948,9 @@ int j= ui->tbl_itm->currentRow();
 
     /*~~~~~~~~~~~~~~~~~~~~~~`New Materia Code~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
         //clear then set the skill list & stats
-        ui->list_spells->clear();
+        //ui->list_spells->clear();
 
-        for (int i=0; i<Materias[ui->combo_add_mat->currentIndex()].levels;i++){ui->list_spells->addItem(Materias[ui->combo_add_mat->currentIndex()].skills[i]);}
+        //for (int i=0; i<Materias[ui->combo_add_mat->currentIndex()].levels;i++){ui->list_spells->addItem(Materias[ui->combo_add_mat->currentIndex()].skills[i]);}
 
         ui->lbl_mat_stats->setText(Materias[ui->combo_add_mat->currentIndex()].stats);// set stat string..
 
@@ -1092,50 +1092,68 @@ int j= ui->tbl_itm->currentRow();
                }
         switch(level)
         {
-           case 0:
-                ui->list_spells->setRowHidden(0,0);
-                ui->list_spells->setRowHidden(1,1);
-                ui->list_spells->setRowHidden(2,1);
-                ui->list_spells->setRowHidden(3,1);
-                ui->list_spells->setRowHidden(4,1);
+        case 0:
+                ui->spell_lvl1_group->setVisible(1);
+                ui->spell_lvl2_group->setVisible(0);
+                ui->spell_lvl3_group->setVisible(0);
+                ui->spell_lvl4_group->setVisible(0);
+                ui->spell_lvl5_group->setVisible(0);
+                ui->lbl_spell_lvl1->setText(Materias[ui->combo_add_mat->currentIndex()].skills[0]);
                 break;
 
-           case 1:
-                ui->list_spells->setRowHidden(0,0);
-                ui->list_spells->setRowHidden(1,1);
-                ui->list_spells->setRowHidden(2,1);
-                ui->list_spells->setRowHidden(3,1);
-                ui->list_spells->setRowHidden(4,1);
+        case 1:
+                ui->spell_lvl1_group->setVisible(1);
+                ui->spell_lvl2_group->setVisible(0);
+                ui->spell_lvl3_group->setVisible(0);
+                ui->spell_lvl4_group->setVisible(0);
+                ui->spell_lvl5_group->setVisible(0);
+                ui->lbl_spell_lvl1->setText(Materias[ui->combo_add_mat->currentIndex()].skills[0]);
                 break;
 
-           case 2:
-                ui->list_spells->setRowHidden(0,0);
-                ui->list_spells->setRowHidden(1,0);
-                ui->list_spells->setRowHidden(2,1);
-                ui->list_spells->setRowHidden(3,1);
-                ui->list_spells->setRowHidden(4,1);
+        case 2:
+                ui->spell_lvl1_group->setVisible(1);
+                ui->spell_lvl2_group->setVisible(1);
+                ui->spell_lvl3_group->setVisible(0);
+                ui->spell_lvl4_group->setVisible(0);
+                ui->spell_lvl5_group->setVisible(0);
+                ui->lbl_spell_lvl1->setText(Materias[ui->combo_add_mat->currentIndex()].skills[0]);
+                ui->lbl_spell_lvl2->setText(Materias[ui->combo_add_mat->currentIndex()].skills[1]);
                 break;
 
-           case 3:
-                ui->list_spells->setRowHidden(0,0);
-                ui->list_spells->setRowHidden(1,0);
-                ui->list_spells->setRowHidden(2,0);
-                ui->list_spells->setRowHidden(3,1);
-                ui->list_spells->setRowHidden(4,1);
+        case 3:
+                ui->spell_lvl1_group->setVisible(1);
+                ui->spell_lvl2_group->setVisible(1);
+                ui->spell_lvl3_group->setVisible(1);
+                ui->spell_lvl4_group->setVisible(0);
+                ui->spell_lvl5_group->setVisible(0);
+                ui->lbl_spell_lvl1->setText(Materias[ui->combo_add_mat->currentIndex()].skills[0]);
+                ui->lbl_spell_lvl2->setText(Materias[ui->combo_add_mat->currentIndex()].skills[1]);
+                ui->lbl_spell_lvl3->setText(Materias[ui->combo_add_mat->currentIndex()].skills[2]);
                 break;
-           case 4:
-                ui->list_spells->setRowHidden(0,0);
-                ui->list_spells->setRowHidden(1,0);
-                ui->list_spells->setRowHidden(2,0);
-                ui->list_spells->setRowHidden(3,0);
-                ui->list_spells->setRowHidden(4,1);
+
+        case 4:
+                ui->spell_lvl1_group->setVisible(1);
+                ui->spell_lvl2_group->setVisible(1);
+                ui->spell_lvl3_group->setVisible(1);
+                ui->spell_lvl4_group->setVisible(1);
+                ui->spell_lvl5_group->setVisible(0);
+                ui->lbl_spell_lvl1->setText(Materias[ui->combo_add_mat->currentIndex()].skills[0]);
+                ui->lbl_spell_lvl2->setText(Materias[ui->combo_add_mat->currentIndex()].skills[1]);
+                ui->lbl_spell_lvl3->setText(Materias[ui->combo_add_mat->currentIndex()].skills[2]);
+                ui->lbl_spell_lvl4->setText(Materias[ui->combo_add_mat->currentIndex()].skills[3]);
                 break;
-           case 5:
-                ui->list_spells->setRowHidden(0,0);
-                ui->list_spells->setRowHidden(1,0);
-                ui->list_spells->setRowHidden(2,0);
-                ui->list_spells->setRowHidden(3,0);
-                ui->list_spells->setRowHidden(4,0);
+
+        case 5:
+                ui->spell_lvl1_group->setVisible(1);
+                ui->spell_lvl2_group->setVisible(1);
+                ui->spell_lvl3_group->setVisible(1);
+                ui->spell_lvl4_group->setVisible(1);
+                ui->spell_lvl5_group->setVisible(1);
+                ui->lbl_spell_lvl1->setText(Materias[ui->combo_add_mat->currentIndex()].skills[0]);
+                ui->lbl_spell_lvl2->setText(Materias[ui->combo_add_mat->currentIndex()].skills[1]);
+                ui->lbl_spell_lvl3->setText(Materias[ui->combo_add_mat->currentIndex()].skills[2]);
+                ui->lbl_spell_lvl4->setText(Materias[ui->combo_add_mat->currentIndex()].skills[3]);
+                ui->lbl_spell_lvl5->setText(Materias[ui->combo_add_mat->currentIndex()].skills[4]);
                 break;
             }
     /*~~~~~~~~~~~~~~~~~~~~~~End Of New Materia Code~~~~~~~~~~~~~~~~~~~~~*/
@@ -2360,7 +2378,10 @@ void MainWindow::on_combo_add_mat_2_currentIndexChanged()
      for(int i=0;i<0x5B;i++)
         {
          if(ui->combo_add_mat_2->currentText()== Materias[i].name){ui->combo_add_mat->setCurrentIndex(i);}
+
         }
+     if(ui->combo_add_mat_2->currentText()== "Enemy Skill"){ui->eskill_group->setVisible(true);}
+     else{ui->eskill_group->setVisible(false);}
     }
 }
 
@@ -2400,10 +2421,7 @@ void MainWindow::on_clearMateria_clicked()
     ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2] = 0xFF;
     guirefresh();
 }
-void MainWindow::on_btn_mastermateria_clicked()
-{
-    ui->sb_addap->setValue(16777215);
-}
+
 void MainWindow::on_combo_additem_currentIndexChanged(int index)
 {
    if(!load)

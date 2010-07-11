@@ -2502,8 +2502,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>100</width>
-         <height>30</height>
+         <width>423</width>
+         <height>415</height>
         </rect>
        </property>
        <attribute name="label">
@@ -4051,6 +4051,94 @@
          </column>
         </widget>
        </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBox_21">
+         <property name="title">
+          <string>Edit Selected Item Slot</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_13">
+          <property name="margin">
+           <number>2</number>
+          </property>
+          <item row="0" column="0" colspan="3">
+           <widget class="QComboBox" name="combo_additem">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>190</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>180</width>
+              <height>29</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_6">
+            <property name="maximumSize">
+             <size>
+              <width>26</width>
+              <height>17</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>QTY:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QSpinBox" name="sb_addqty">
+            <property name="maximumSize">
+             <size>
+              <width>58</width>
+              <height>25</height>
+             </size>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+            </property>
+            <property name="minimum">
+             <number>1</number>
+            </property>
+            <property name="maximum">
+             <number>127</number>
+            </property>
+            <property name="value">
+             <number>1</number>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="clearItem">
+            <property name="minimumSize">
+             <size>
+              <width>80</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>80</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="text">
+             <string>Clear Slot</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
       </layout>
      </widget>
      <widget class="QGroupBox" name="group_keyitems">
@@ -4059,7 +4147,7 @@
         <x>470</x>
         <y>0</y>
         <width>251</width>
-        <height>479</height>
+        <height>477</height>
        </rect>
       </property>
       <property name="minimumSize">
@@ -4546,96 +4634,134 @@
        </item>
       </widget>
      </widget>
-     <widget class="QGroupBox" name="groupBox_21">
+     <widget class="QGroupBox" name="groupBox_22">
       <property name="geometry">
        <rect>
-        <x>220</x>
-        <y>10</y>
-        <width>203</width>
-        <height>87</height>
+        <x>210</x>
+        <y>0</y>
+        <width>261</width>
+        <height>131</height>
        </rect>
       </property>
       <property name="title">
-       <string>Edit Selected Item Slot</string>
+       <string>Turtle Paradise Flyers Collected</string>
       </property>
-      <layout class="QGridLayout" name="gridLayout_13">
+      <layout class="QVBoxLayout" name="verticalLayout_16">
        <property name="margin">
-        <number>2</number>
+        <number>0</number>
        </property>
-       <item row="0" column="0" colspan="3">
-        <widget class="QComboBox" name="combo_additem">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
+       <item>
+        <widget class="QListWidget" name="list_flyers">
          <property name="minimumSize">
           <size>
-           <width>190</width>
+           <width>0</width>
            <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>180</width>
-           <height>29</height>
+           <width>16777215</width>
+           <height>415</height>
           </size>
          </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QLabel" name="label_6">
-         <property name="maximumSize">
-          <size>
-           <width>26</width>
-           <height>17</height>
-          </size>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
          </property>
-         <property name="text">
-          <string>QTY:</string>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
          </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QSpinBox" name="sb_addqty">
-         <property name="maximumSize">
-          <size>
-           <width>58</width>
-           <height>25</height>
-          </size>
+         <property name="frameShadow">
+          <enum>QFrame::Sunken</enum>
          </property>
-         <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         <property name="editTriggers">
+          <set>QAbstractItemView::SelectedClicked</set>
          </property>
-         <property name="minimum">
-          <number>1</number>
+         <property name="showDropIndicator" stdset="0">
+          <bool>false</bool>
          </property>
-         <property name="maximum">
-          <number>127</number>
+         <property name="dragDropMode">
+          <enum>QAbstractItemView::NoDragDrop</enum>
          </property>
-         <property name="value">
-          <number>1</number>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectItems</enum>
          </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QPushButton" name="clearItem">
-         <property name="minimumSize">
-          <size>
-           <width>80</width>
-           <height>0</height>
-          </size>
+         <property name="movement">
+          <enum>QListView::Static</enum>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>80</width>
-           <height>16777215</height>
-          </size>
+         <property name="viewMode">
+          <enum>QListView::ListMode</enum>
          </property>
-         <property name="text">
-          <string>Clear Slot</string>
+         <property name="modelColumn">
+          <number>0</number>
          </property>
+         <item>
+          <property name="text">
+           <string>Sector 7 Slums</string>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>1st Floor Shinra Building</string>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Gold Saucer - Ghost Hotel</string>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Cosmo Canyon - Inn 2nd Floor</string>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Cosmo Canyon - Near Shop</string>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Wutai - In Front Of Trap Room</string>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
         </widget>
        </item>
       </layout>
@@ -5098,7 +5224,7 @@
         <x>243</x>
         <y>10</y>
         <width>318</width>
-        <height>281</height>
+        <height>381</height>
        </rect>
       </property>
       <property name="title">
@@ -5107,95 +5233,11 @@
       <property name="alignment">
        <set>Qt::AlignCenter</set>
       </property>
-      <widget class="QListWidget" name="list_spells">
-       <property name="geometry">
-        <rect>
-         <x>40</x>
-         <y>120</y>
-         <width>276</width>
-         <height>91</height>
-        </rect>
-       </property>
-       <property name="editTriggers">
-        <set>QAbstractItemView::NoEditTriggers</set>
-       </property>
-       <property name="showDropIndicator" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="viewMode">
-        <enum>QListView::ListMode</enum>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_lvl1">
-       <property name="geometry">
-        <rect>
-         <x>8</x>
-         <y>123</y>
-         <width>31</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Lvl 1</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_lvl2">
-       <property name="geometry">
-        <rect>
-         <x>8</x>
-         <y>140</y>
-         <width>31</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Lvl 2</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_lvl3">
-       <property name="geometry">
-        <rect>
-         <x>8</x>
-         <y>157</y>
-         <width>31</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Lvl 3</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_lvl4">
-       <property name="geometry">
-        <rect>
-         <x>8</x>
-         <y>175</y>
-         <width>31</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Lvl 4</string>
-       </property>
-      </widget>
-      <widget class="QLabel" name="label_lvl5">
-       <property name="geometry">
-        <rect>
-         <x>8</x>
-         <y>192</y>
-         <width>31</width>
-         <height>17</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Lvl 5</string>
-       </property>
-      </widget>
       <widget class="QLabel" name="lbl_mat_stats">
        <property name="geometry">
         <rect>
          <x>4</x>
-         <y>213</y>
+         <y>350</y>
          <width>312</width>
          <height>20</height>
         </rect>
@@ -5214,7 +5256,7 @@
        <property name="geometry">
         <rect>
          <x>60</x>
-         <y>64</y>
+         <y>90</y>
          <width>48</width>
          <height>48</height>
         </rect>
@@ -5254,7 +5296,7 @@
        <property name="geometry">
         <rect>
          <x>160</x>
-         <y>64</y>
+         <y>90</y>
          <width>48</width>
          <height>48</height>
         </rect>
@@ -5291,7 +5333,7 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>64</y>
+         <y>90</y>
          <width>48</width>
          <height>48</height>
         </rect>
@@ -5331,7 +5373,7 @@
        <property name="geometry">
         <rect>
          <x>210</x>
-         <y>64</y>
+         <y>90</y>
          <width>48</width>
          <height>48</height>
         </rect>
@@ -5368,7 +5410,7 @@
        <property name="geometry">
         <rect>
          <x>110</x>
-         <y>64</y>
+         <y>90</y>
          <width>48</width>
          <height>48</height>
         </rect>
@@ -5401,9 +5443,9 @@
       <widget class="QFrame" name="frame_3">
        <property name="geometry">
         <rect>
-         <x>5</x>
-         <y>246</y>
-         <width>216</width>
+         <x>80</x>
+         <y>150</y>
+         <width>231</width>
          <height>29</height>
         </rect>
        </property>
@@ -5469,84 +5511,11 @@
          <number>0</number>
         </property>
        </widget>
-       <widget class="QPushButton" name="btn_mastermateria">
-        <property name="geometry">
-         <rect>
-          <x>134</x>
-          <y>1</y>
-          <width>20</width>
-          <height>27</height>
-         </rect>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>20</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>M</string>
-        </property>
-       </widget>
-       <widget class="QPushButton" name="clearMateria">
-        <property name="geometry">
-         <rect>
-          <x>160</x>
-          <y>1</y>
-          <width>55</width>
-          <height>27</height>
-         </rect>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>55</width>
-          <height>0</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>55</width>
-          <height>16777215</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>Clear</string>
-        </property>
-       </widget>
-      </widget>
-      <widget class="QFrame" name="frame">
-       <property name="geometry">
-        <rect>
-         <x>230</x>
-         <y>234</y>
-         <width>85</width>
-         <height>45</height>
-        </rect>
-       </property>
-       <widget class="QLabel" name="label_7">
-        <property name="geometry">
-         <rect>
-          <x>1</x>
-          <y>0</y>
-          <width>83</width>
-          <height>17</height>
-         </rect>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>24</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>Ap to Master</string>
-        </property>
-       </widget>
        <widget class="QLCDNumber" name="lcd_ap_master">
         <property name="geometry">
          <rect>
-          <x>0</x>
-          <y>21</y>
+          <x>147</x>
+          <y>0</y>
           <width>82</width>
           <height>24</height>
          </rect>
@@ -5567,12 +5536,39 @@
          <number>0</number>
         </property>
        </widget>
+       <widget class="QLabel" name="label_7">
+        <property name="geometry">
+         <rect>
+          <x>129</x>
+          <y>0</y>
+          <width>16</width>
+          <height>29</height>
+         </rect>
+        </property>
+        <property name="font">
+         <font>
+          <pointsize>17</pointsize>
+         </font>
+        </property>
+        <property name="lineWidth">
+         <number>1</number>
+        </property>
+        <property name="text">
+         <string>/</string>
+        </property>
+        <property name="textFormat">
+         <enum>Qt::AutoText</enum>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
       </widget>
       <widget class="QComboBox" name="combo_add_mat_2">
        <property name="geometry">
         <rect>
          <x>140</x>
-         <y>33</y>
+         <y>50</y>
          <width>165</width>
          <height>29</height>
         </rect>
@@ -5588,7 +5584,7 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>33</y>
+         <y>50</y>
          <width>124</width>
          <height>29</height>
         </rect>
@@ -5670,7 +5666,7 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>16</y>
+         <y>30</y>
          <width>121</width>
          <height>17</height>
         </rect>
@@ -5679,25 +5675,323 @@
         <string>Type Filter</string>
        </property>
       </widget>
-      <zorder>list_spells</zorder>
-      <zorder>label_lvl1</zorder>
-      <zorder>label_lvl2</zorder>
-      <zorder>label_lvl3</zorder>
-      <zorder>label_lvl4</zorder>
-      <zorder>label_lvl5</zorder>
-      <zorder>lbl_mat_stats</zorder>
-      <zorder>btn_m_lvl2</zorder>
-      <zorder>btn_m_lvl4</zorder>
-      <zorder>btn_m_lvl1</zorder>
-      <zorder>btn_m_lvl5</zorder>
-      <zorder>btn_m_lvl3</zorder>
-      <zorder>frame_3</zorder>
-      <zorder>frame</zorder>
-      <zorder>combo_add_mat_2</zorder>
-      <zorder>combo_mat_type</zorder>
-      <zorder>label_175</zorder>
-      <zorder>lcd_ap_master</zorder>
-      <zorder>label_7</zorder>
+      <widget class="QPushButton" name="clearMateria">
+       <property name="geometry">
+        <rect>
+         <x>180</x>
+         <y>20</y>
+         <width>125</width>
+         <height>27</height>
+        </rect>
+       </property>
+       <property name="minimumSize">
+        <size>
+         <width>80</width>
+         <height>0</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>125</width>
+         <height>16777215</height>
+        </size>
+       </property>
+       <property name="text">
+        <string>Clear Materia Slot</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="spell_lvl2_group">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>230</y>
+         <width>301</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <widget class="QLabel" name="label_lvl2_2">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>1</y>
+          <width>29</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>29</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Lvl 2</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_spell_lvl2">
+        <property name="geometry">
+         <rect>
+          <x>39</x>
+          <y>1</y>
+          <width>261</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>261</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="spell_lvl3_group">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>250</y>
+         <width>301</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <widget class="QLabel" name="label_lvl3">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>1</y>
+          <width>29</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>29</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Lvl 3</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_spell_lvl3">
+        <property name="geometry">
+         <rect>
+          <x>39</x>
+          <y>1</y>
+          <width>261</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>261</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="spell_lvl4_group">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>270</y>
+         <width>301</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <widget class="QLabel" name="label_lvl4">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>1</y>
+          <width>29</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>29</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Lvl 4</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_spell_lvl4">
+        <property name="geometry">
+         <rect>
+          <x>40</x>
+          <y>0</y>
+          <width>261</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>261</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QFrame" name="spell_lvl5_group">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>290</y>
+         <width>301</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <widget class="QLabel" name="label_lvl5">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>1</y>
+          <width>29</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>29</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Lvl 5</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_spell_lvl5">
+        <property name="geometry">
+         <rect>
+          <x>39</x>
+          <y>1</y>
+          <width>261</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>261</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
+      <widget class="QLabel" name="label_176">
+       <property name="geometry">
+        <rect>
+         <x>100</x>
+         <y>183</y>
+         <width>91</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Materia Skills</string>
+       </property>
+      </widget>
+      <widget class="Line" name="line_7">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>200</y>
+         <width>318</width>
+         <height>3</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="Line" name="line_8">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>340</y>
+         <width>318</width>
+         <height>3</height>
+        </rect>
+       </property>
+       <property name="orientation">
+        <enum>Qt::Horizontal</enum>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label_177">
+       <property name="geometry">
+        <rect>
+         <x>80</x>
+         <y>320</y>
+         <width>141</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Materia Stat Changes</string>
+       </property>
+      </widget>
+      <widget class="QFrame" name="spell_lvl1_group">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>210</y>
+         <width>301</width>
+         <height>19</height>
+        </rect>
+       </property>
+       <widget class="QLabel" name="label_lvl1">
+        <property name="geometry">
+         <rect>
+          <x>1</x>
+          <y>1</y>
+          <width>29</width>
+          <height>17</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>29</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string>Lvl 1</string>
+        </property>
+       </widget>
+       <widget class="QLabel" name="lbl_spell_lvl1">
+        <property name="geometry">
+         <rect>
+          <x>39</x>
+          <y>0</y>
+          <width>261</width>
+          <height>20</height>
+         </rect>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>261</width>
+          <height>16777215</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </widget>
      </widget>
      <widget class="QComboBox" name="combo_add_mat">
       <property name="enabled">
@@ -9522,138 +9816,6 @@
          <item>
           <property name="text">
            <string>Cid</string>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_22">
-      <property name="geometry">
-       <rect>
-        <x>450</x>
-        <y>50</y>
-        <width>271</width>
-        <height>131</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>Turtle Paradise Flyers Collected</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_16">
-       <property name="margin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QListWidget" name="list_flyers">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>415</height>
-          </size>
-         </property>
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::StyledPanel</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Sunken</enum>
-         </property>
-         <property name="editTriggers">
-          <set>QAbstractItemView::SelectedClicked</set>
-         </property>
-         <property name="showDropIndicator" stdset="0">
-          <bool>false</bool>
-         </property>
-         <property name="dragDropMode">
-          <enum>QAbstractItemView::NoDragDrop</enum>
-         </property>
-         <property name="selectionBehavior">
-          <enum>QAbstractItemView::SelectItems</enum>
-         </property>
-         <property name="movement">
-          <enum>QListView::Static</enum>
-         </property>
-         <property name="viewMode">
-          <enum>QListView::ListMode</enum>
-         </property>
-         <property name="modelColumn">
-          <number>0</number>
-         </property>
-         <item>
-          <property name="text">
-           <string>Sector 7 Slums</string>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>1st Floor Shinra Building</string>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Gold Saucer - Ghost Hotel</string>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Cosmo Canyon - Inn 2nd Floor</string>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Cosmo Canyon - Near Shop</string>
-          </property>
-          <property name="checkState">
-           <enum>Unchecked</enum>
-          </property>
-          <property name="flags">
-           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Wutai - In Front Of Trap Room</string>
           </property>
           <property name="checkState">
            <enum>Unchecked</enum>
