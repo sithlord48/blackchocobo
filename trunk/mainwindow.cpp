@@ -3156,6 +3156,9 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     {
     ui->sb_curdisc->setValue(1);
     ui->sb_mprogress->setValue(341);
+    ui->sb_bm_progress1->setValue(120);
+    ui->sb_bm_progress2->setValue(198);
+    ui->sb_bm_progress3->setValue(3);
     ui->line_location->setText("Kalm Inn");
     ui->sb_map_id->setValue(1);
     ui->sb_loc_id->setValue(332);
@@ -3220,6 +3223,22 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     ff7.slot[s].chars[7].name[8] = chFF7['h'];
     for (int i=9; i<12;i++){ff7.slot[s].chars[7].name[i] = 0xFF;}
     ui->label_replaynote->setText(tr("Setting This Will Copy Cloud as is to young cloud (caitsith's slot). sephiroth's stats will come directly from vincent, if you wish to edit cloud or vincent after selecting this replay then change the box to the first(blank) entry and then when you have set those chars as you wish reselect this replay from the combobox."));
+    }
+
+    else if(index == 3) // The Date Scene
+    {
+    ui->sb_curdisc->setValue(2);
+    ui->sb_mprogress->setValue(583);
+    ui->sb_bm_progress1->setValue(120);
+    ui->sb_bm_progress2->setValue(198);
+    ui->sb_bm_progress3->setValue(3);
+    ui->line_location->setText("Ropeway Station");
+    ui->sb_map_id->setValue(1);
+    ui->sb_loc_id->setValue(496);
+    ui->sb_coordx->setValue(64767);
+    ui->sb_coordy->setValue(95);
+    ui->sb_coordz->setValue(26);
+    ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too."));
     }
     else {ui->label_replaynote->setText("         INFO ON CURRENTLY SELECTED REPLAY MISSION");}
 }
