@@ -2380,8 +2380,9 @@ void MainWindow::on_combo_add_mat_2_currentIndexChanged()
          if(ui->combo_add_mat_2->currentText()== Materias[i].name){ui->combo_add_mat->setCurrentIndex(i);}
 
         }
-     if(ui->combo_add_mat_2->currentText()== "Enemy Skill"){ui->eskill_group->setVisible(true);}
-     else{ui->eskill_group->setVisible(false);}
+     // if its eskill set it up right , or else do normal setup.
+     if(ui->combo_add_mat_2->currentText()== "Enemy Skill"){ui->eskill_group->setVisible(true);ui->sb_addap->setEnabled(0);geteskills(ui->tbl_materia->currentRow());}
+     else{ui->eskill_group->setVisible(false);ui->sb_addap->setEnabled(1);}
     }
 }
 
