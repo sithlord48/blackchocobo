@@ -1438,57 +1438,57 @@
     <message>
         <location filename="../mainwindow.ui" line="5231"/>
         <source>Selected Materia Skills and Stat Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Info de Habilidades y Stats de la Materia Seleccionada</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5606"/>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation>Todo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5616"/>
         <source>Magic</source>
-        <translation type="unfinished"></translation>
+        <translation>Magia</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5626"/>
         <source>Summon</source>
-        <translation type="unfinished"></translation>
+        <translation>Invocación</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5636"/>
         <source>Independent</source>
-        <translation type="unfinished"></translation>
+        <translation>Independiente</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5646"/>
         <source>Support</source>
-        <translation type="unfinished"></translation>
+        <translation>Soporte</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5656"/>
         <source>Command</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5675"/>
         <source>Type Filter</source>
-        <translation type="unfinished"></translation>
+        <translation>Filtro por Tipo</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5700"/>
         <source>Clear Materia Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaciar la ranura de materia</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5905"/>
         <source>Materia Skills</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilidades de la Materia</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5944"/>
         <source>Materia Stat Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambios de Stats de la Materia</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="9834"/>
