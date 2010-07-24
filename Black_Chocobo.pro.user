@@ -10,7 +10,7 @@
  </data>
  <data>
   <variable>RunConfiguration0-Executable</variable>
-  <value type="QString">/home/chris/Black_Chocobo/Black_Chocobo</value>
+  <value type="QString">/home/chris/blackchocobo/trunk/Black_Chocobo</value>
  </data>
  <data>
   <variable>RunConfiguration0-RunConfiguration.name</variable>
@@ -78,7 +78,7 @@
   <valuemap type="QVariantMap">
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Release</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList">
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-kyh1NJMYCp,guid=8250685f1390779368325d684bc8cfc5</value>
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-zVJTAHF0gw,guid=5d1a5d83f0f1aa0b6d5ec9d64c48afc8</value>
     <value type="QString">DESKTOP_SESSION=kde</value>
     <value type="QString">DISPLAY=:0.0</value>
     <value type="QString">DM_CONTROL=/var/run/xdmctl</value>
@@ -86,7 +86,7 @@
     <value type="QString">DVDCSS_METHOD=key</value>
     <value type="QString">DVDCSS_RAW_DEVICE=/dev/rdvd</value>
     <value type="QString">DVDCSS_VERBOSE=0</value>
-    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-wUEmc5/S.gpg-agent:4080:1</value>
+    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-KfVhYx/S.gpg-agent:1688:1</value>
     <value type="QString">GS_LIB=/home/chris/.fonts</value>
     <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/chris/.gtkrc-2.0:/home/chris/.gtkrc-2.0-kde4:/home/chris/.kde/share/config/gtkrc-2.0</value>
     <value type="QString">GTK_MODULES=canberra-gtk-module</value>
@@ -99,27 +99,26 @@
     <value type="QString">LANG=en_US.UTF-8</value>
     <value type="QString">LANGUAGE=</value>
     <value type="QString">LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
-    <value type="QString">LIBGL_DRIVERS_PATH=/usr/lib/dri:/usr/lib32/dri</value>
+    <value type="QString">LIBGL_DRIVERS_PATH=/usr/lib/fglrx/dri:/usr/lib32/fglrx/dri</value>
     <value type="QString">LOGNAME=chris</value>
     <value type="QString">PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
     <value type="QString">PWD=/home/chris/Documents</value>
     <value type="QString">QTDIR=/usr/share/qt4</value>
     <value type="QString">QT_PLUGIN_PATH=/home/chris/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString">SESSION_MANAGER=local/void:@/tmp/.ICE-unix/4168,unix/void:/tmp/.ICE-unix/4168</value>
+    <value type="QString">SESSION_MANAGER=local/void:@/tmp/.ICE-unix/1791,unix/void:/tmp/.ICE-unix/1791</value>
     <value type="QString">SHELL=/bin/bash</value>
     <value type="QString">SHLVL=0</value>
-    <value type="QString">SPEECHD_PORT=7560</value>
-    <value type="QString">SSH_AGENT_PID=4079</value>
-    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-TsxuWC4019/agent.4019</value>
+    <value type="QString">SSH_AGENT_PID=1687</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-tmTTYq1638/agent.1638</value>
     <value type="QString">USER=chris</value>
     <value type="QString">WINDOWPATH=7</value>
     <value type="QString">XCURSOR_THEME=pTux-24-ed</value>
     <value type="QString">XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share</value>
-    <value type="QString">XDG_SESSION_COOKIE=b7292aae87089f50e0964adc4ae39eca-1271451589.323160-2126854100</value>
+    <value type="QString">XDG_SESSION_COOKIE=9a845bbc3e81441ac71e7ab04bdca878-1279832008.717456-854509024</value>
     <value type="QString">XDM_MANAGED=method=classic</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList">
-    <value type="QString">/home/chris/Black_Chocobo/Black_Chocobo/Black_Chocobo.pro</value>
+    <value type="QString">/home/chris/blackchocobo/trunk/Black_Chocobo.pro</value>
     <value type="QString">-spec</value>
     <value type="QString">linux-g++</value>
     <value type="QString">-r</value>
@@ -127,7 +126,7 @@
    </valuelist>
    <value key="abstractProcess.command" type="QString">/usr/bin/qmake-qt4</value>
    <value key="abstractProcess.enabled" type="bool">false</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/chris/Black_Chocobo/Black_Chocobo</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/chris/blackchocobo/trunk</value>
   </valuemap>
  </data>
  <data>
@@ -135,7 +134,7 @@
   <valuemap type="QVariantMap">
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Release</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList">
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-kyh1NJMYCp,guid=8250685f1390779368325d684bc8cfc5</value>
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-zVJTAHF0gw,guid=5d1a5d83f0f1aa0b6d5ec9d64c48afc8</value>
     <value type="QString">DESKTOP_SESSION=kde</value>
     <value type="QString">DISPLAY=:0.0</value>
     <value type="QString">DM_CONTROL=/var/run/xdmctl</value>
@@ -143,7 +142,7 @@
     <value type="QString">DVDCSS_METHOD=key</value>
     <value type="QString">DVDCSS_RAW_DEVICE=/dev/rdvd</value>
     <value type="QString">DVDCSS_VERBOSE=0</value>
-    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-wUEmc5/S.gpg-agent:4080:1</value>
+    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-KfVhYx/S.gpg-agent:1688:1</value>
     <value type="QString">GS_LIB=/home/chris/.fonts</value>
     <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/chris/.gtkrc-2.0:/home/chris/.gtkrc-2.0-kde4:/home/chris/.kde/share/config/gtkrc-2.0</value>
     <value type="QString">GTK_MODULES=canberra-gtk-module</value>
@@ -156,23 +155,22 @@
     <value type="QString">LANG=en_US.UTF-8</value>
     <value type="QString">LANGUAGE=</value>
     <value type="QString">LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
-    <value type="QString">LIBGL_DRIVERS_PATH=/usr/lib/dri:/usr/lib32/dri</value>
+    <value type="QString">LIBGL_DRIVERS_PATH=/usr/lib/fglrx/dri:/usr/lib32/fglrx/dri</value>
     <value type="QString">LOGNAME=chris</value>
     <value type="QString">PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
     <value type="QString">PWD=/home/chris/Documents</value>
     <value type="QString">QTDIR=/usr/share/qt4</value>
     <value type="QString">QT_PLUGIN_PATH=/home/chris/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString">SESSION_MANAGER=local/void:@/tmp/.ICE-unix/4168,unix/void:/tmp/.ICE-unix/4168</value>
+    <value type="QString">SESSION_MANAGER=local/void:@/tmp/.ICE-unix/1791,unix/void:/tmp/.ICE-unix/1791</value>
     <value type="QString">SHELL=/bin/bash</value>
     <value type="QString">SHLVL=0</value>
-    <value type="QString">SPEECHD_PORT=7560</value>
-    <value type="QString">SSH_AGENT_PID=4079</value>
-    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-TsxuWC4019/agent.4019</value>
+    <value type="QString">SSH_AGENT_PID=1687</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-tmTTYq1638/agent.1638</value>
     <value type="QString">USER=chris</value>
     <value type="QString">WINDOWPATH=7</value>
     <value type="QString">XCURSOR_THEME=pTux-24-ed</value>
     <value type="QString">XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share</value>
-    <value type="QString">XDG_SESSION_COOKIE=b7292aae87089f50e0964adc4ae39eca-1271451589.323160-2126854100</value>
+    <value type="QString">XDG_SESSION_COOKIE=9a845bbc3e81441ac71e7ab04bdca878-1279832008.717456-854509024</value>
     <value type="QString">XDM_MANAGED=method=classic</value>
    </valuelist>
    <value key="abstractProcess.IgnoreReturnValue" type="bool">false</value>
@@ -181,7 +179,7 @@
    </valuelist>
    <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
    <value key="abstractProcess.enabled" type="bool">true</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/chris/Black_Chocobo/Black_Chocobo</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/chris/blackchocobo/trunk</value>
   </valuemap>
  </data>
  <data>
@@ -189,7 +187,7 @@
   <valuemap type="QVariantMap">
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Release</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList">
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-kyh1NJMYCp,guid=8250685f1390779368325d684bc8cfc5</value>
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-zVJTAHF0gw,guid=5d1a5d83f0f1aa0b6d5ec9d64c48afc8</value>
     <value type="QString">DESKTOP_SESSION=kde</value>
     <value type="QString">DISPLAY=:0.0</value>
     <value type="QString">DM_CONTROL=/var/run/xdmctl</value>
@@ -197,7 +195,7 @@
     <value type="QString">DVDCSS_METHOD=key</value>
     <value type="QString">DVDCSS_RAW_DEVICE=/dev/rdvd</value>
     <value type="QString">DVDCSS_VERBOSE=0</value>
-    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-wUEmc5/S.gpg-agent:4080:1</value>
+    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-KfVhYx/S.gpg-agent:1688:1</value>
     <value type="QString">GS_LIB=/home/chris/.fonts</value>
     <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/chris/.gtkrc-2.0:/home/chris/.gtkrc-2.0-kde4:/home/chris/.kde/share/config/gtkrc-2.0</value>
     <value type="QString">GTK_MODULES=canberra-gtk-module</value>
@@ -210,23 +208,22 @@
     <value type="QString">LANG=en_US.UTF-8</value>
     <value type="QString">LANGUAGE=</value>
     <value type="QString">LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
-    <value type="QString">LIBGL_DRIVERS_PATH=/usr/lib/dri:/usr/lib32/dri</value>
+    <value type="QString">LIBGL_DRIVERS_PATH=/usr/lib/fglrx/dri:/usr/lib32/fglrx/dri</value>
     <value type="QString">LOGNAME=chris</value>
     <value type="QString">PATH=/usr/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games</value>
     <value type="QString">PWD=/home/chris/Documents</value>
     <value type="QString">QTDIR=/usr/share/qt4</value>
     <value type="QString">QT_PLUGIN_PATH=/home/chris/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString">SESSION_MANAGER=local/void:@/tmp/.ICE-unix/4168,unix/void:/tmp/.ICE-unix/4168</value>
+    <value type="QString">SESSION_MANAGER=local/void:@/tmp/.ICE-unix/1791,unix/void:/tmp/.ICE-unix/1791</value>
     <value type="QString">SHELL=/bin/bash</value>
     <value type="QString">SHLVL=0</value>
-    <value type="QString">SPEECHD_PORT=7560</value>
-    <value type="QString">SSH_AGENT_PID=4079</value>
-    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-TsxuWC4019/agent.4019</value>
+    <value type="QString">SSH_AGENT_PID=1687</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-tmTTYq1638/agent.1638</value>
     <value type="QString">USER=chris</value>
     <value type="QString">WINDOWPATH=7</value>
     <value type="QString">XCURSOR_THEME=pTux-24-ed</value>
     <value type="QString">XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share</value>
-    <value type="QString">XDG_SESSION_COOKIE=b7292aae87089f50e0964adc4ae39eca-1271451589.323160-2126854100</value>
+    <value type="QString">XDG_SESSION_COOKIE=9a845bbc3e81441ac71e7ab04bdca878-1279832008.717456-854509024</value>
     <value type="QString">XDM_MANAGED=method=classic</value>
    </valuelist>
    <value key="abstractProcess.IgnoreReturnValue" type="bool">true</value>
@@ -236,7 +233,7 @@
    </valuelist>
    <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
    <value key="abstractProcess.enabled" type="bool">true</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/chris/Black_Chocobo/Black_Chocobo</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/chris/blackchocobo/trunk</value>
    <value key="cleanConfig" type="bool">true</value>
    <valuelist key="makeargs" type="QVariantList">
     <value type="QString">clean</value>
@@ -248,15 +245,11 @@
   <valuemap type="QVariantMap">
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Release</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList">
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-zk5Uzfs7XW,guid=cfbce9af2fc6b69b78856dea4c100947</value>
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-oGNWpHm0c3,guid=f010955d4a2848eeb7ca06dd4c4af7d8</value>
     <value type="QString">DESKTOP_SESSION=kde</value>
     <value type="QString">DISPLAY=:0.0</value>
     <value type="QString">DM_CONTROL=/var/run/xdmctl</value>
-    <value type="QString">DVDCSS_CACHE=/home/chris/.dvdcss/</value>
-    <value type="QString">DVDCSS_METHOD=key</value>
-    <value type="QString">DVDCSS_RAW_DEVICE=/dev/rdvd</value>
-    <value type="QString">DVDCSS_VERBOSE=0</value>
-    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-AbtXkJ/S.gpg-agent:1621:1</value>
+    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-Y3KGbQ/S.gpg-agent:1708:1</value>
     <value type="QString">GS_LIB=/home/chris/.fonts</value>
     <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/chris/.gtkrc-2.0:/home/chris/.gtkrc-2.0-kde4:/home/chris/.kde/share/config/gtkrc-2.0</value>
     <value type="QString">GTK_MODULES=canberra-gtk-module</value>
@@ -267,7 +260,6 @@
     <value type="QString">KDE_SESSION_UID=1000</value>
     <value type="QString">KDE_SESSION_VERSION=4</value>
     <value type="QString">LANG=en_US.UTF-8</value>
-    <value type="QString">LANGUAGE=</value>
     <value type="QString">LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
     <value type="QString">LIBGL_DRIVERS_PATH=/usr/lib/fglrx/dri:/usr/lib32/fglrx/dri</value>
     <value type="QString">LOGNAME=chris</value>
@@ -275,27 +267,27 @@
     <value type="QString">PWD=/home/chris/Documents</value>
     <value type="QString">QTDIR=/usr/share/qt4</value>
     <value type="QString">QT_PLUGIN_PATH=/home/chris/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString">SESSION_MANAGER=local/void:@/tmp/.ICE-unix/1723,unix/void:/tmp/.ICE-unix/1723</value>
+    <value type="QString">SESSION_MANAGER=local/void:@/tmp/.ICE-unix/1812,unix/void:/tmp/.ICE-unix/1812</value>
     <value type="QString">SHELL=/bin/bash</value>
     <value type="QString">SHLVL=0</value>
-    <value type="QString">SSH_AGENT_PID=1620</value>
-    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-eOfdfM1571/agent.1571</value>
+    <value type="QString">SSH_AGENT_PID=1707</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-vxjpQd1656/agent.1656</value>
     <value type="QString">USER=chris</value>
     <value type="QString">WINDOWPATH=7</value>
     <value type="QString">XCURSOR_THEME=pTux-24-ed</value>
     <value type="QString">XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share</value>
-    <value type="QString">XDG_SESSION_COOKIE=9a845bbc3e81441ac71e7ab04bdca878-1276119367.662649-1420370153</value>
+    <value type="QString">XDG_SESSION_COOKIE=9a845bbc3e81441ac71e7ab04bdca878-1279981528.258555-902341164</value>
     <value type="QString">XDM_MANAGED=method=classic</value>
    </valuelist>
    <valuelist key="abstractProcess.arguments" type="QVariantList">
-    <value type="QString">/home/chris/Black_Chocobo/Black_Chocobo.pro</value>
+    <value type="QString">/home/chris/blackchocobo/trunk/Black_Chocobo.pro</value>
     <value type="QString">-spec</value>
     <value type="QString">linux-g++</value>
     <value type="QString">-r</value>
    </valuelist>
    <value key="abstractProcess.command" type="QString">/usr/bin/qmake-qt4</value>
    <value key="abstractProcess.enabled" type="bool">false</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/chris/Black_Chocobo</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/chris/blackchocobo/trunk</value>
   </valuemap>
  </data>
  <data>
@@ -303,15 +295,11 @@
   <valuemap type="QVariantMap">
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Release</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList">
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-zk5Uzfs7XW,guid=cfbce9af2fc6b69b78856dea4c100947</value>
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-oGNWpHm0c3,guid=f010955d4a2848eeb7ca06dd4c4af7d8</value>
     <value type="QString">DESKTOP_SESSION=kde</value>
     <value type="QString">DISPLAY=:0.0</value>
     <value type="QString">DM_CONTROL=/var/run/xdmctl</value>
-    <value type="QString">DVDCSS_CACHE=/home/chris/.dvdcss/</value>
-    <value type="QString">DVDCSS_METHOD=key</value>
-    <value type="QString">DVDCSS_RAW_DEVICE=/dev/rdvd</value>
-    <value type="QString">DVDCSS_VERBOSE=0</value>
-    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-AbtXkJ/S.gpg-agent:1621:1</value>
+    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-Y3KGbQ/S.gpg-agent:1708:1</value>
     <value type="QString">GS_LIB=/home/chris/.fonts</value>
     <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/chris/.gtkrc-2.0:/home/chris/.gtkrc-2.0-kde4:/home/chris/.kde/share/config/gtkrc-2.0</value>
     <value type="QString">GTK_MODULES=canberra-gtk-module</value>
@@ -322,7 +310,6 @@
     <value type="QString">KDE_SESSION_UID=1000</value>
     <value type="QString">KDE_SESSION_VERSION=4</value>
     <value type="QString">LANG=en_US.UTF-8</value>
-    <value type="QString">LANGUAGE=</value>
     <value type="QString">LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
     <value type="QString">LIBGL_DRIVERS_PATH=/usr/lib/fglrx/dri:/usr/lib32/fglrx/dri</value>
     <value type="QString">LOGNAME=chris</value>
@@ -330,16 +317,16 @@
     <value type="QString">PWD=/home/chris/Documents</value>
     <value type="QString">QTDIR=/usr/share/qt4</value>
     <value type="QString">QT_PLUGIN_PATH=/home/chris/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString">SESSION_MANAGER=local/void:@/tmp/.ICE-unix/1723,unix/void:/tmp/.ICE-unix/1723</value>
+    <value type="QString">SESSION_MANAGER=local/void:@/tmp/.ICE-unix/1812,unix/void:/tmp/.ICE-unix/1812</value>
     <value type="QString">SHELL=/bin/bash</value>
     <value type="QString">SHLVL=0</value>
-    <value type="QString">SSH_AGENT_PID=1620</value>
-    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-eOfdfM1571/agent.1571</value>
+    <value type="QString">SSH_AGENT_PID=1707</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-vxjpQd1656/agent.1656</value>
     <value type="QString">USER=chris</value>
     <value type="QString">WINDOWPATH=7</value>
     <value type="QString">XCURSOR_THEME=pTux-24-ed</value>
     <value type="QString">XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share</value>
-    <value type="QString">XDG_SESSION_COOKIE=9a845bbc3e81441ac71e7ab04bdca878-1276119367.662649-1420370153</value>
+    <value type="QString">XDG_SESSION_COOKIE=9a845bbc3e81441ac71e7ab04bdca878-1279981528.258555-902341164</value>
     <value type="QString">XDM_MANAGED=method=classic</value>
    </valuelist>
    <value key="abstractProcess.IgnoreReturnValue" type="bool">false</value>
@@ -348,7 +335,7 @@
    </valuelist>
    <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
    <value key="abstractProcess.enabled" type="bool">true</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/chris/Black_Chocobo</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/chris/blackchocobo/trunk</value>
   </valuemap>
  </data>
  <data>
@@ -356,15 +343,11 @@
   <valuemap type="QVariantMap">
    <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Release</value>
    <valuelist key="abstractProcess.Environment" type="QVariantList">
-    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-zk5Uzfs7XW,guid=cfbce9af2fc6b69b78856dea4c100947</value>
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-oGNWpHm0c3,guid=f010955d4a2848eeb7ca06dd4c4af7d8</value>
     <value type="QString">DESKTOP_SESSION=kde</value>
     <value type="QString">DISPLAY=:0.0</value>
     <value type="QString">DM_CONTROL=/var/run/xdmctl</value>
-    <value type="QString">DVDCSS_CACHE=/home/chris/.dvdcss/</value>
-    <value type="QString">DVDCSS_METHOD=key</value>
-    <value type="QString">DVDCSS_RAW_DEVICE=/dev/rdvd</value>
-    <value type="QString">DVDCSS_VERBOSE=0</value>
-    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-AbtXkJ/S.gpg-agent:1621:1</value>
+    <value type="QString">GPG_AGENT_INFO=/tmp/gpg-Y3KGbQ/S.gpg-agent:1708:1</value>
     <value type="QString">GS_LIB=/home/chris/.fonts</value>
     <value type="QString">GTK2_RC_FILES=/etc/gtk-2.0/gtkrc:/home/chris/.gtkrc-2.0:/home/chris/.gtkrc-2.0-kde4:/home/chris/.kde/share/config/gtkrc-2.0</value>
     <value type="QString">GTK_MODULES=canberra-gtk-module</value>
@@ -375,7 +358,6 @@
     <value type="QString">KDE_SESSION_UID=1000</value>
     <value type="QString">KDE_SESSION_VERSION=4</value>
     <value type="QString">LANG=en_US.UTF-8</value>
-    <value type="QString">LANGUAGE=</value>
     <value type="QString">LD_LIBRARY_PATH=/usr/lib/qtcreator:</value>
     <value type="QString">LIBGL_DRIVERS_PATH=/usr/lib/fglrx/dri:/usr/lib32/fglrx/dri</value>
     <value type="QString">LOGNAME=chris</value>
@@ -383,16 +365,16 @@
     <value type="QString">PWD=/home/chris/Documents</value>
     <value type="QString">QTDIR=/usr/share/qt4</value>
     <value type="QString">QT_PLUGIN_PATH=/home/chris/.kde/lib/kde4/plugins/:/usr/lib/kde4/plugins/</value>
-    <value type="QString">SESSION_MANAGER=local/void:@/tmp/.ICE-unix/1723,unix/void:/tmp/.ICE-unix/1723</value>
+    <value type="QString">SESSION_MANAGER=local/void:@/tmp/.ICE-unix/1812,unix/void:/tmp/.ICE-unix/1812</value>
     <value type="QString">SHELL=/bin/bash</value>
     <value type="QString">SHLVL=0</value>
-    <value type="QString">SSH_AGENT_PID=1620</value>
-    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-eOfdfM1571/agent.1571</value>
+    <value type="QString">SSH_AGENT_PID=1707</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/ssh-vxjpQd1656/agent.1656</value>
     <value type="QString">USER=chris</value>
     <value type="QString">WINDOWPATH=7</value>
     <value type="QString">XCURSOR_THEME=pTux-24-ed</value>
     <value type="QString">XDG_DATA_DIRS=/usr/share:/usr/share:/usr/local/share</value>
-    <value type="QString">XDG_SESSION_COOKIE=9a845bbc3e81441ac71e7ab04bdca878-1276119367.662649-1420370153</value>
+    <value type="QString">XDG_SESSION_COOKIE=9a845bbc3e81441ac71e7ab04bdca878-1279981528.258555-902341164</value>
     <value type="QString">XDM_MANAGED=method=classic</value>
    </valuelist>
    <value key="abstractProcess.IgnoreReturnValue" type="bool">true</value>
@@ -402,7 +384,7 @@
    </valuelist>
    <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
    <value key="abstractProcess.enabled" type="bool">true</value>
-   <value key="abstractProcess.workingDirectory" type="QString">/home/chris/Black_Chocobo</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/chris/blackchocobo/trunk</value>
    <value key="cleanConfig" type="bool">true</value>
    <valuelist key="makeargs" type="QVariantList">
     <value type="QString">clean</value>
