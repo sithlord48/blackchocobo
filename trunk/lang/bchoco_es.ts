@@ -2344,7 +2344,7 @@
     <message>
         <location filename="../mainwindow.ui" line="12213"/>
         <source>The Date Scene</source>
-        <translation type="unfinished"></translation>
+        <translation>La Escena de la Cita</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="12227"/>
@@ -3391,7 +3391,7 @@ no es un Archivo de Guardado de FF7.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="3242"/>
         <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rejugar la Escena de la Cita, Tu situación se pondrá en la Estación Ropeway, Habla con el Hombre al lado del Tranvía para empezar el evento, Si buscas una cita en especial asegúrate de que has puesto los puntos de amor</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="631"/>
