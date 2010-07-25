@@ -763,7 +763,7 @@
          <x>0</x>
          <y>0</y>
          <width>423</width>
-         <height>415</height>
+         <height>423</height>
         </rect>
        </property>
        <attribute name="label">
@@ -2584,7 +2584,7 @@
          <x>0</x>
          <y>0</y>
          <width>423</width>
-         <height>415</height>
+         <height>423</height>
         </rect>
        </property>
        <attribute name="label">
@@ -3950,7 +3950,7 @@
         <number>3</number>
        </property>
        <property name="verticalSpacing">
-        <number>-1</number>
+        <number>6</number>
        </property>
        <property name="leftMargin">
         <number>6</number>
@@ -5986,8 +5986,8 @@
        <widget class="QLabel" name="lbl_spell_lvl4">
         <property name="geometry">
          <rect>
-          <x>40</x>
-          <y>0</y>
+          <x>39</x>
+          <y>1</y>
           <width>261</width>
           <height>20</height>
          </rect>
@@ -6141,7 +6141,7 @@
         <property name="geometry">
          <rect>
           <x>39</x>
-          <y>0</y>
+          <y>1</y>
           <width>261</width>
           <height>20</height>
          </rect>
@@ -12318,7 +12318,7 @@
            <item>
             <layout class="QHBoxLayout" name="horizontalLayout_25">
              <property name="spacing">
-              <number>-1</number>
+              <number>6</number>
              </property>
              <item>
               <spacer name="horizontalSpacer_12">
@@ -13823,7 +13823,7 @@
      <x>0</x>
      <y>0</y>
      <width>730</width>
-     <height>24</height>
+     <height>18</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
