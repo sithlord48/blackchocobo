@@ -923,7 +923,7 @@ struct MATERIA {
 
 static MATERIA Materias[]=
 {                                                            //ID   hp,mp,str,vit,dex,lck,mag,spi
-    {QObject::tr(("MP Plus")),		":/icon/independent", 0x00,/*{0,0,0,0,0,0,0,0}*/"MP:+%  depending on level",{"MP Plus +10%","MP Plus +20%","MP Plus +30%","MP Plus +40%","MP Plus +50%"},{10000,20000,30000,50000},3,5},
+    {QObject::tr(("MP Plus")),		":/icon/independent", 0x00,/*{0,0,0,0,0,0,0,0}*/"MP:+% depending on level",{"MP Plus +10%","MP Plus +20%","MP Plus +30%","MP Plus +40%","MP Plus +50%"},{10000,20000,30000,50000},3,5},
     {QObject::tr(("HP Plus")),		":/icon/independent", 0x01,/*{0,0,0,0,0,0,0,0}*/"HP:+% depending on level",{"HP Plus +10%","HP Plus +20%","HP Plus +30%","HP Plus +40%","HP Plus +50%"},{10000,20000,30000,50000},3,5},
     {QObject::tr(("Speed Plus")),       ":/icon/independent", 0x02,/*{0,0,0,0,0,0,0,0}*/"Dex:+% depending on level",{"Speed Plus +10%","Speed Plus +20%","Speed Plus +30%","Speed Plus +40%","Speed Plus +50%"},{15000,30000,60000,100000},3,5},
     {QObject::tr(("Magic Plus")),       ":/icon/independent", 0x03,/*{0,0,0,0,0,0,0,0}*/"Mag:+% depending on level",{"Magic Plus +10%","Magic Plus +20%","Magic Plus +30%","Magic Plus +40%","Magic Plus +50%"},{10000,20000,30000,50000},3,5},
