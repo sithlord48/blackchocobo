@@ -1953,19 +1953,24 @@ void MainWindow::on_combo_pen4_currentIndexChanged(int index)
 void MainWindow::on_sb_stables_owned_valueChanged()
 {
     ff7.slot[s].stables = ui->sb_stables_owned->value();
+    if(ui->sb_stables_occupied->value() > ui->sb_stables_owned->value())
+    {
+    ui->sb_stables_occupied->setValue(ui->sb_stables_owned->value());
+    }
 }
 void MainWindow::on_sb_stables_occupied_valueChanged(int value)
 {
-    /*FIXED! v0.9.1 */
-
-    ff7.slot[s].chocobomask = 0;
-    for (int i=0;i<value;i++)
+    if (value <= ui->sb_stables_owned->value())
     {
-    ff7.slot[s].chocobomask |= (1<<i);
+        ff7.slot[s].chocobomask = 0;
+        for (int i=0;i<value;i++)
+        {
+            ff7.slot[s].chocobomask |= (1<<i);
+        }
+        ff7.slot[s].stablesoccupied = value;
+        chocobo_refresh();
     }
-    ff7.slot[s].stablesoccupied = value;
-
-    chocobo_refresh();
+    else {ui->sb_stables_occupied->setValue(ui->sb_stables_owned->value());}
 }
 
 //ChocoboStats
