@@ -698,13 +698,13 @@ else if (ff7.savetype ==3)
 }
 else if (ff7.savetype ==4)
 {
-    ui->actionSave_File->setEnabled(0);
+    ui->actionSave_File->setEnabled(0); // read only
     ui->actionExport_PC_Save->setEnabled(1);
     ui->actionExport_PSX->setEnabled(1);
     ui->actionFrom_PSV_Slot->setEnabled(0);
     ui->actionFrom_PSX_Slot->setEnabled(0);
     ui->actionClear_Slot->setEnabled(0);
-    ui->actionPaste_Slot->setEnabled(0);
+    ui->actionPaste_Slot->setEnabled(0); // read only no point
     ui->actionCopy_Slot->setEnabled(1);
     ui->actionNext_Slot->setEnabled(0);
     ui->actionPrevious_Slot->setEnabled(0);
@@ -724,6 +724,36 @@ else if (ff7.savetype ==4)
     ui->actionSlot_13->setEnabled(0);
     ui->actionSlot_14->setEnabled(0);
     ui->actionSlot_15->setEnabled(0);
+
+}
+else if (ff7.savetype ==5)
+{
+    ui->actionSave_File->setEnabled(0);          // read only
+    ui->actionExport_PC_Save->setEnabled(1);
+    ui->actionExport_PSX->setEnabled(1);
+    ui->actionFrom_PSV_Slot->setEnabled(0);    //read only
+    ui->actionFrom_PSX_Slot->setEnabled(0);   //read only
+    ui->actionClear_Slot->setEnabled(0);
+    ui->actionPaste_Slot->setEnabled(0);      //read only
+    ui->actionCopy_Slot->setEnabled(1);
+    ui->actionNext_Slot->setEnabled(1);
+    ui->actionPrevious_Slot->setEnabled(1);
+    ui->actionShow_Selection_Dialog->setEnabled(1);
+    ui->actionSlot_01->setEnabled(1);
+    ui->actionSlot_02->setEnabled(1);
+    ui->actionSlot_03->setEnabled(1);
+    ui->actionSlot_04->setEnabled(1);
+    ui->actionSlot_05->setEnabled(1);
+    ui->actionSlot_06->setEnabled(1);
+    ui->actionSlot_07->setEnabled(1);
+    ui->actionSlot_08->setEnabled(1);
+    ui->actionSlot_09->setEnabled(1);
+    ui->actionSlot_10->setEnabled(1);
+    ui->actionSlot_11->setEnabled(1);
+    ui->actionSlot_12->setEnabled(1);
+    ui->actionSlot_13->setEnabled(1);
+    ui->actionSlot_14->setEnabled(1);
+    ui->actionSlot_15->setEnabled(1);
 
 }
 else

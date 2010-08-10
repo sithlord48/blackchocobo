@@ -33,7 +33,7 @@ void MainWindow::on_actionOpen_Save_File_activated()
 
     QString fileName = QFileDialog::getOpenFileName(this,
                                         tr("Open Final Fantasy 7 Save"),(""),
-            tr("Known FF7 Save Types (*.ff7 BAS* *.mcr *.mcd *.psv);;PC FF7 SaveGame (*.ff7);;PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv)"));
+                                        tr("Known FF7 Save Types (*.ff7 BAS* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)"));
 
     if (!fileName.isEmpty())
         loadFileFull(fileName);
@@ -154,6 +154,23 @@ QByteArray temp; // create a temp to be used when needed
        ff7.file_headerp     = ff7.file_header_psv;          //pointer to psx file header
        ff7.file_footerp     = ff7.file_footer_psv;          //pointer to psx file footer
        ff7.savetype         = 4;
+    }
+    else if(file_size ==FF7_PSP_SAVE_GAME_SIZE)
+    {
+        ff7.SG_SIZE          = FF7_PSP_SAVE_GAME_SIZE;
+        ff7.SG_HEADER        = FF7_PSP_SAVE_GAME_HEADER;
+        ff7.SG_FOOTER        = FF7_PSP_SAVE_GAME_FOOTER;
+        ff7.SG_DATA_SIZE     = FF7_PSP_SAVE_GAME_DATA_SIZE;
+        ff7.SG_SLOT_HEADER   = FF7_PSP_SAVE_GAME_SLOT_HEADER;
+        ff7.SG_SLOT_FOOTER   = FF7_PSP_SAVE_GAME_SLOT_FOOTER;
+        ff7.SG_SLOT_SIZE     = FF7_PSP_SAVE_GAME_SLOT_SIZE;
+        ff7.SG_SLOT_NUMBER   = FF7_PSP_SAVE_GAME_SLOT_NUMBER;
+        ff7.SG_TYPE          = "PSP";
+        ff7.file_headerp     = ff7.file_header_psp;          //pointer to psx file header
+        ff7.file_footerp     = ff7.file_footer_psp;          //pointer to psx file footer
+        ff7.savetype         = 5;
+
+
     }
     else {
        //ff7.SG_TYPE          = "UNKNOWN";
@@ -611,7 +628,7 @@ for (int i=0;i<ff7.SG_SLOT_NUMBER;i++){ // MAIN FILL LOOP
 }//Parse slot data....
 
 //for(int z=0;z<ff7.SG_FOOTER;z++){ff7.file_footerp[z] = temp.at(z);}//colect file footer UNUSED!!
-if (ff7.savetype == 1 || ff7.savetype == 3)
+if (ff7.savetype == 1 || ff7.savetype == 3 || ff7.savetype ==5)
 {
           SlotSelect slotselect;
           slotselect.exec();
@@ -1612,30 +1629,24 @@ void MainWindow::on_actionCopy_Slot_activated()
 
     for(int itm=0;itm<320;itm++) //Party item stock
     {
-
         bufferslot.items[itm].id = ff7.slot[s].items[itm].id;
-
         bufferslot.items[itm].qty = ff7.slot[s].items[itm].qty;
     }
 
     for (int met=0;met<200;met++) //Party materia stock
     {
-
         bufferslot.materias[met].id =ff7.slot[s].materias[met].id;
-
         for (int ma=0;ma<3;ma++){bufferslot.materias[met].ap[ma] = ff7.slot[s].materias[met].ap[ma];}
     }
     for (int met=0;met<48;met++) //Materia stolen by Yuffie
     {
-
         bufferslot.stolen[met].id = ff7.slot[s].stolen[met].id;
-
         for (int ma=0;ma<3;ma++){bufferslot.stolen[met].ap[ma] = ff7.slot[s].stolen[met].ap[ma];}
     }
 
     for(int z=0;z<32;z++)//32 Bytes Unknown
     {
-    bufferslot.z_3[z] = ff7.slot[s].z_3[z];
+        bufferslot.z_3[z] = ff7.slot[s].z_3[z];
     }
 
 
@@ -1644,7 +1655,7 @@ void MainWindow::on_actionCopy_Slot_activated()
 
     for (int z=0;z<16;z++)
     {
-    bufferslot.z_4[z] = ff7.slot[s].z_4[z];
+        bufferslot.z_4[z] = ff7.slot[s].z_4[z];
     }
 
 
