@@ -344,6 +344,15 @@ const int FF7_MC_SAVE_GAME_SLOT_HEADER = 0x0200;
 const int FF7_MC_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
 const int FF7_MC_SAVE_GAME_SLOT_SIZE = 0x2000;
 const int FF7_MC_SAVE_GAME_SLOT_NUMBER = 15;
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PSP SAVE FORMAT~~~~~~~~~~~~~~~~~~~*/
+const int FF7_PSP_SAVE_GAME_SIZE = 0x20080;
+const int FF7_PSP_SAVE_GAME_HEADER = 0x2080;
+const int FF7_PSP_SAVE_GAME_FOOTER = 0x0000;
+const int FF7_PSP_SAVE_GAME_DATA_SIZE = 0x10F4;
+const int FF7_PSP_SAVE_GAME_SLOT_HEADER = 0x0200;
+const int FF7_PSP_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
+const int FF7_PSP_SAVE_GAME_SLOT_SIZE = 0x2000;
+const int FF7_PSP_SAVE_GAME_SLOT_NUMBER = 15;
 
 /* END FILE INFO */
 
@@ -534,11 +543,14 @@ struct FF7 {				// [0xFE55]
         quint8 file_header_pc[0x09];        // [0x0000] 0x06277371 this replace quint8 file_tag[9];
         quint8 file_header_psx[0x0000];	// [0x0000] 0x06277371 this replace quint8 file_tag[9];
         quint8 file_header_psv[0x0000];
+        quint8 file_header_psp[0x2080];
         quint8 file_header_mc[0x2000];	// [0x0000] 0x06277371 this replace quint8 file_tag[9];
         quint8 file_footer_pc[0x00];	// [0x0000] 0x06277371
         quint8 file_footer_psx[0x0000];	// [0x0000] 0x06277371
         quint8 file_footer_psv[0x0000];
         quint8 file_footer_mc[0x0000];	// [0x0000] 0x06277371
+        quint8 file_footer_psp[0x0000];
+
         //FF7SLOT slot_pc[15];		// [0x0009] The 15 save slots
         //FF7SLOT slot_psx[1];		// [0x0009] The 1  save slot
         //FF7SLOT slot_mc[15];		// [0x0009] The 15 save slots
