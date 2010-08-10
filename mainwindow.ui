@@ -763,7 +763,7 @@
          <x>0</x>
          <y>0</y>
          <width>423</width>
-         <height>423</height>
+         <height>415</height>
         </rect>
        </property>
        <attribute name="label">
@@ -2584,7 +2584,7 @@
          <x>0</x>
          <y>0</y>
          <width>423</width>
-         <height>423</height>
+         <height>415</height>
         </rect>
        </property>
        <attribute name="label">
@@ -4174,12 +4174,6 @@
          <attribute name="verticalHeaderVisible">
           <bool>false</bool>
          </attribute>
-         <attribute name="verticalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="horizontalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
          <column>
           <property name="text">
            <string>Item</string>
@@ -4977,15 +4971,6 @@
          </attribute>
          <attribute name="verticalHeaderDefaultSectionSize">
           <number>22</number>
-         </attribute>
-         <attribute name="verticalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="verticalHeaderDefaultSectionSize">
-          <number>22</number>
-         </attribute>
-         <attribute name="horizontalHeaderVisible">
-          <bool>false</bool>
          </attribute>
          <column>
           <property name="text">
@@ -5893,7 +5878,7 @@
           <x>39</x>
           <y>1</y>
           <width>261</width>
-          <height>17</height>
+          <height>20</height>
          </rect>
         </property>
         <property name="maximumSize">
@@ -5941,7 +5926,7 @@
           <x>39</x>
           <y>1</y>
           <width>261</width>
-          <height>17</height>
+          <height>20</height>
          </rect>
         </property>
         <property name="maximumSize">
@@ -5989,7 +5974,7 @@
           <x>39</x>
           <y>1</y>
           <width>261</width>
-          <height>17</height>
+          <height>20</height>
          </rect>
         </property>
         <property name="maximumSize">
@@ -6037,7 +6022,7 @@
           <x>39</x>
           <y>1</y>
           <width>261</width>
-          <height>17</height>
+          <height>20</height>
          </rect>
         </property>
         <property name="maximumSize">
@@ -6143,7 +6128,7 @@
           <x>39</x>
           <y>1</y>
           <width>261</width>
-          <height>17</height>
+          <height>20</height>
          </rect>
         </property>
         <property name="maximumSize">
@@ -9837,12 +9822,6 @@
          <attribute name="verticalHeaderDefaultSectionSize">
           <number>22</number>
          </attribute>
-         <attribute name="verticalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="verticalHeaderDefaultSectionSize">
-          <number>22</number>
-         </attribute>
          <column>
           <property name="text">
            <string>Materia</string>
@@ -10054,21 +10033,6 @@
       </attribute>
       <attribute name="verticalHeaderDefaultSectionSize">
        <number>20</number>
-      </attribute>
-      <attribute name="verticalHeaderVisible">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="verticalHeaderDefaultSectionSize">
-       <number>20</number>
-      </attribute>
-      <attribute name="horizontalHeaderCascadingSectionResizes">
-       <bool>false</bool>
-      </attribute>
-      <attribute name="horizontalHeaderMinimumSectionSize">
-       <number>26</number>
-      </attribute>
-      <attribute name="horizontalHeaderDefaultSectionSize">
-       <number>50</number>
       </attribute>
       <row>
        <property name="text">
@@ -13823,7 +13787,7 @@
      <x>0</x>
      <y>0</y>
      <width>730</width>
-     <height>18</height>
+     <height>24</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
