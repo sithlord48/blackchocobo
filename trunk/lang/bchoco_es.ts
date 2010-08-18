@@ -3345,7 +3345,7 @@ no es un Archivo de Guardado de FF7.</translation>
     <message>
         <location filename="../loadsave.cpp" line="36"/>
         <source>Known FF7 Save Types (*.ff7 BAS* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipos de Guardado de FF7 Conocidos (*.ff7 BAS* *.mcr *.mcd *.psv *.vmp);;Partida Guardada de FF7 PC (*.ff7);;Partida Guardada de FF7 PSX (*-S*);;Partida Guardada MC (*.mcr *.mcd);; Partida Guardada PSV (*.psv);; Partida Guardada PSP (*.vmp)</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="49"/>
@@ -3380,22 +3380,22 @@ no es un Archivo de Guardado de FF7.</translation>
     <message>
         <location filename="../loadsave.cpp" line="74"/>
         <source>Save Final Fantasy 7 PS3 SaveGame</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar Partida Guardada de Final Fantasy 7 PS3</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="75"/>
         <source>FF7 PS3 SaveGame(*.psv)</source>
-        <translation type="unfinished"></translation>
+        <translation>Partida Guardada de FF7 PS3 (*.psv)</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="83"/>
         <source>Save Final Fantasy 7 PSP SaveGame</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar Partida Guardada de Final Fantasy 7 PSP</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="84"/>
         <source>FF7 PSP SaveGame(*.VMP)</source>
-        <translation type="unfinished"></translation>
+        <translation>Partida Guardada de FF7 PSP (*.VMP)</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="2740"/>
