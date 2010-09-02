@@ -2330,11 +2330,12 @@ void MainWindow::on_sb_addap_valueChanged(int value)
 {
     if(!load && ui->tbl_materia->currentRow() >-1)
     {
-        if(value == Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels -2] && Materias[ui->combo_add_mat->currentIndex()].levels >1)
+     if(value == Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels -2] && Materias[ui->combo_add_mat->currentIndex()].levels >1)
         {
             for(int i=0;i<3;i++){ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[i] = 0xFF;}
         }
-        else
+
+     else
         {
         int a = (value & 0xff);
         int b = (value & 0xff00) >> 8;
@@ -2511,8 +2512,8 @@ void MainWindow::on_btn_eskillall_clicked()
     {
         ui->list_eskill->setCurrentRow(i);
         ui->list_eskill->currentItem()->setCheckState(Qt::Checked);
-        apply_eskills();
     }
+        apply_eskills();
 }
 void MainWindow::geteskills(int row)
 {
@@ -2535,8 +2536,8 @@ void MainWindow::on_btn_eskillclear_clicked()
     {
         ui->list_eskill->setCurrentRow(i);
         ui->list_eskill->currentItem()->setCheckState(Qt::Unchecked);
-        apply_eskills();
     }
+    apply_eskills();
 }
 void MainWindow::apply_eskills()
 {
@@ -2562,6 +2563,7 @@ if(!load)
             ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2]=c;
 
     ui->list_eskill->setCurrentRow(j);
+    ui->sb_addap->setValue(ap_temp);
     load =false;
     }
 }
