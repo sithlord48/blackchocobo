@@ -18,9 +18,9 @@
 //#include <QProcess>   // for calling ext processes (like checksum)
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "globals.h"   // contains checksumming functions.
-#include "slotselect.h"
-#include "about.h"
+#include "globals.h"    // contains checksumming functions
+#include "slotselect.h" // slot selection dialog stuff.
+#include "about.h"      // about dialog stuff.
 
 #include "loadsave.h" // Load / Save
 
@@ -2519,12 +2519,15 @@ void MainWindow::geteskills(int row)
 {
     quint32 temp = ff7.slot[s].materias[row].ap[0] |(ff7.slot[s].materias[row].ap[1] << 8) | (ff7.slot[s].materias[row].ap[2] << 16);
     ui->sb_addap->setValue(temp);
-        for (int i=0;i<24;i++)
+    load = true;
+    for (int i=0;i<24;i++)
                 {
                     ui->list_eskill->setCurrentRow(i);
                     if ((1 << i) & temp){ui->list_eskill->currentItem()->setCheckState(Qt::Checked);}
                     else{ui->list_eskill->currentItem()->setCheckState(Qt::Unchecked);}
+
                 }
+    load = false;
 }
 void MainWindow::on_list_eskill_itemChanged()
 {
@@ -2895,7 +2898,6 @@ void MainWindow::on_btn_mastermateria_slot_clicked()
     if(ff7.slot[s].chars[curchar].materias[mslotsel].id == 0x2C) {geteskills2(mslotsel);}
     guirefresh();
 }
-
 void MainWindow::on_clearMateria_slot_clicked()
 {
     ff7.slot[s].chars[curchar].materias[mslotsel].id = 0xFF;
@@ -2905,7 +2907,6 @@ void MainWindow::on_clearMateria_slot_clicked()
     if(ff7.slot[s].chars[curchar].materias[mslotsel].id == 0x2C) {geteskills2(mslotsel);}
     guirefresh();
 }
-
 
 void MainWindow::on_w_m_s1_clicked()
 {
@@ -3265,7 +3266,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 
     else if(index == 3) // The Date Scene
     {
-    ui->sb_curdisc->setValue(2);
+    ui->sb_curdisc->setValue(1);
     ui->sb_mprogress->setValue(583);
     ui->sb_bm_progress1->setValue(120);
     ui->sb_bm_progress2->setValue(198);
@@ -3277,6 +3278,22 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     ui->sb_coordy->setValue(95);
     ui->sb_coordz->setValue(26);
     ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too."));
+    }
+    else if (index == 4)//Aeris Death
+    {
+    ui->sb_curdisc->setValue(1);
+    ui->sb_mprogress->setValue(664);
+    ui->sb_bm_progress1->setValue(120);
+    ui->sb_bm_progress2->setValue(198);
+    ui->sb_bm_progress3->setValue(3);
+    ui->line_location->setText("Forgotten City");
+    ui->sb_map_id->setValue(1);
+    ui->sb_loc_id->setValue(646);
+    ui->sb_coordx->setValue(641);
+    ui->sb_coordy->setValue(793);
+    ui->sb_coordz->setValue(243);
+    ui->list_chars->item(3)->setCheckState(Qt::Unchecked);
+    ui->label_replaynote->setText(tr("Replay the death of Aeris.This option Will remove Aeris from your PHS"));
     }
     else {ui->label_replaynote->setText("         INFO ON CURRENTLY SELECTED REPLAY MISSION");}
 }
@@ -3308,9 +3325,9 @@ if(!load)
    quint32 temp =0;
    for (int i=0;i<24;i++)
            {
-       ui->list_eskill_2->setCurrentRow(i);
-       if (ui->list_eskill_2->currentItem()->checkState() == Qt::Checked)
-           temp |= (1 << i);
+                ui->list_eskill_2->setCurrentRow(i);
+                if (ui->list_eskill_2->currentItem()->checkState() == Qt::Checked){temp |= (1 << i);}
+                else{};
            }
             ap_temp=(temp & 0xFFFFFF);
             int a = ap_temp & 0xff;

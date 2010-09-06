@@ -763,7 +763,7 @@
          <x>0</x>
          <y>0</y>
          <width>423</width>
-         <height>415</height>
+         <height>419</height>
         </rect>
        </property>
        <attribute name="label">
@@ -2583,8 +2583,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>423</width>
-         <height>415</height>
+         <width>94</width>
+         <height>24</height>
         </rect>
        </property>
        <attribute name="label">
@@ -4995,7 +4995,7 @@
         <x>564</x>
         <y>8</y>
         <width>161</width>
-        <height>467</height>
+        <height>421</height>
        </rect>
       </property>
       <property name="title">
@@ -5010,13 +5010,13 @@
          <x>4</x>
          <y>17</y>
          <width>153</width>
-         <height>415</height>
+         <height>374</height>
         </rect>
        </property>
        <property name="minimumSize">
         <size>
          <width>0</width>
-         <height>415</height>
+         <height>374</height>
         </size>
        </property>
        <property name="maximumSize">
@@ -5294,7 +5294,7 @@
        <property name="geometry">
         <rect>
          <x>10</x>
-         <y>436</y>
+         <y>393</y>
          <width>75</width>
          <height>27</height>
         </rect>
@@ -5319,7 +5319,7 @@
        <property name="geometry">
         <rect>
          <x>90</x>
-         <y>436</y>
+         <y>393</y>
          <width>66</width>
          <height>27</height>
         </rect>
@@ -6149,8 +6149,8 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>400</x>
-        <y>440</y>
+        <x>560</x>
+        <y>430</y>
         <width>165</width>
         <height>29</height>
        </rect>
@@ -9650,8 +9650,11 @@
        </item>
        <item row="0" column="1">
         <widget class="QSpinBox" name="sb_love_barret">
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
          <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -9689,7 +9692,7 @@
        <item row="0" column="3">
         <widget class="QSpinBox" name="sb_love_aeris">
          <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -9724,7 +9727,7 @@
        <item row="2" column="1">
         <widget class="QSpinBox" name="sb_love_tifa">
          <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -9759,7 +9762,7 @@
        <item row="2" column="3">
         <widget class="QSpinBox" name="sb_love_yuffie">
          <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -9860,6 +9863,12 @@
        </property>
        <item>
         <widget class="QListWidget" name="list_chars">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="maximumSize">
           <size>
            <width>111</width>
@@ -12177,6 +12186,11 @@
         <string>The Date Scene</string>
        </property>
       </item>
+      <item>
+       <property name="text">
+        <string>Aeris' Death</string>
+       </property>
+      </item>
      </widget>
      <widget class="QLabel" name="label_171">
       <property name="geometry">
@@ -12201,7 +12215,7 @@
        </rect>
       </property>
       <property name="text">
-       <string> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Aera Is Under Heavy Development</string>
+       <string> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -13787,7 +13801,7 @@
      <x>0</x>
      <y>0</y>
      <width>730</width>
-     <height>24</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
