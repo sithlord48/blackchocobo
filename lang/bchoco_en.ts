@@ -5,13 +5,13 @@
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="35"/>
-        <location filename="../loadsave.cpp" line="88"/>
-        <location filename="../loadsave.cpp" line="95"/>
-        <location filename="../loadsave.cpp" line="672"/>
-        <location filename="../loadsave.cpp" line="1116"/>
-        <location filename="../loadsave.cpp" line="2246"/>
-        <location filename="../loadsave.cpp" line="2502"/>
-        <location filename="../loadsave.cpp" line="2745"/>
+        <location filename="../loadsave.cpp" line="70"/>
+        <location filename="../loadsave.cpp" line="77"/>
+        <location filename="../loadsave.cpp" line="654"/>
+        <location filename="../loadsave.cpp" line="1098"/>
+        <location filename="../loadsave.cpp" line="2228"/>
+        <location filename="../loadsave.cpp" line="2484"/>
+        <location filename="../loadsave.cpp" line="2727"/>
         <source>Black Chocobo</source>
         <translation type="unfinished"></translation>
     </message>
@@ -24,7 +24,7 @@
         <location filename="../mainwindow.ui" line="132"/>
         <location filename="../mainwindow.ui" line="243"/>
         <location filename="../mainwindow.ui" line="354"/>
-        <location filename="../mainwindow.ui" line="9874"/>
+        <location filename="../mainwindow.ui" line="9883"/>
         <source>Cloud</source>
         <translation type="unfinished"></translation>
     </message>
@@ -32,7 +32,7 @@
         <location filename="../mainwindow.ui" line="141"/>
         <location filename="../mainwindow.ui" line="252"/>
         <location filename="../mainwindow.ui" line="363"/>
-        <location filename="../mainwindow.ui" line="9885"/>
+        <location filename="../mainwindow.ui" line="9894"/>
         <source>Barret</source>
         <translation type="unfinished"></translation>
     </message>
@@ -40,7 +40,7 @@
         <location filename="../mainwindow.ui" line="150"/>
         <location filename="../mainwindow.ui" line="261"/>
         <location filename="../mainwindow.ui" line="372"/>
-        <location filename="../mainwindow.ui" line="9896"/>
+        <location filename="../mainwindow.ui" line="9905"/>
         <source>Tifa</source>
         <translation type="unfinished"></translation>
     </message>
@@ -48,7 +48,7 @@
         <location filename="../mainwindow.ui" line="159"/>
         <location filename="../mainwindow.ui" line="270"/>
         <location filename="../mainwindow.ui" line="381"/>
-        <location filename="../mainwindow.ui" line="9907"/>
+        <location filename="../mainwindow.ui" line="9916"/>
         <source>Aeris</source>
         <translation type="unfinished"></translation>
     </message>
@@ -56,7 +56,7 @@
         <location filename="../mainwindow.ui" line="168"/>
         <location filename="../mainwindow.ui" line="279"/>
         <location filename="../mainwindow.ui" line="390"/>
-        <location filename="../mainwindow.ui" line="9918"/>
+        <location filename="../mainwindow.ui" line="9927"/>
         <source>Red XIII</source>
         <oldsource>Red XII</oldsource>
         <translation type="unfinished"></translation>
@@ -65,7 +65,7 @@
         <location filename="../mainwindow.ui" line="177"/>
         <location filename="../mainwindow.ui" line="288"/>
         <location filename="../mainwindow.ui" line="399"/>
-        <location filename="../mainwindow.ui" line="9929"/>
+        <location filename="../mainwindow.ui" line="9938"/>
         <source>Yuffie</source>
         <translation type="unfinished"></translation>
     </message>
@@ -73,7 +73,7 @@
         <location filename="../mainwindow.ui" line="186"/>
         <location filename="../mainwindow.ui" line="297"/>
         <location filename="../mainwindow.ui" line="408"/>
-        <location filename="../mainwindow.ui" line="9951"/>
+        <location filename="../mainwindow.ui" line="9960"/>
         <source>Cait Sith</source>
         <translation type="unfinished"></translation>
     </message>
@@ -81,7 +81,7 @@
         <location filename="../mainwindow.ui" line="195"/>
         <location filename="../mainwindow.ui" line="306"/>
         <location filename="../mainwindow.ui" line="417"/>
-        <location filename="../mainwindow.ui" line="9940"/>
+        <location filename="../mainwindow.ui" line="9949"/>
         <source>Vincent</source>
         <translation type="unfinished"></translation>
     </message>
@@ -89,7 +89,7 @@
         <location filename="../mainwindow.ui" line="204"/>
         <location filename="../mainwindow.ui" line="315"/>
         <location filename="../mainwindow.ui" line="426"/>
-        <location filename="../mainwindow.ui" line="9962"/>
+        <location filename="../mainwindow.ui" line="9971"/>
         <source>Cid</source>
         <translation type="unfinished"></translation>
     </message>
@@ -252,7 +252,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4982"/>
-        <location filename="../mainwindow.ui" line="9832"/>
+        <location filename="../mainwindow.ui" line="9835"/>
         <source>AP</source>
         <translation type="unfinished"></translation>
     </message>
@@ -356,7 +356,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4977"/>
-        <location filename="../mainwindow.ui" line="9827"/>
+        <location filename="../mainwindow.ui" line="9830"/>
         <source>Materia</source>
         <translation type="unfinished"></translation>
     </message>
@@ -820,7 +820,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="9781"/>
+        <location filename="../mainwindow.ui" line="9784"/>
         <source>Materia Stolen By Yuffie</source>
         <translation type="unfinished"></translation>
     </message>
@@ -830,122 +830,122 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13810"/>
+        <location filename="../mainwindow.ui" line="13824"/>
         <source>&amp;Export From Current Slot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13820"/>
+        <location filename="../mainwindow.ui" line="13834"/>
         <source>&amp;Import To Current Slot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13878"/>
+        <location filename="../mainwindow.ui" line="13892"/>
         <source>Alt+Q</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13887"/>
+        <location filename="../mainwindow.ui" line="13901"/>
         <source>&amp;Open Save File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13890"/>
+        <location filename="../mainwindow.ui" line="13904"/>
         <source>Ctrl+O</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13929"/>
+        <location filename="../mainwindow.ui" line="13943"/>
         <source>F2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13941"/>
+        <location filename="../mainwindow.ui" line="13955"/>
         <source>Export PC Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13944"/>
+        <location filename="../mainwindow.ui" line="13958"/>
         <source>Export PSX or MCR Save As a PC Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13976"/>
+        <location filename="../mainwindow.ui" line="13990"/>
         <source>Slot-01</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13990"/>
+        <location filename="../mainwindow.ui" line="14004"/>
         <source>Slot-02</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14001"/>
+        <location filename="../mainwindow.ui" line="14015"/>
         <source>Slot-03</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14012"/>
+        <location filename="../mainwindow.ui" line="14026"/>
         <source>Slot-04</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14023"/>
+        <location filename="../mainwindow.ui" line="14037"/>
         <source>Slot-05</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14034"/>
+        <location filename="../mainwindow.ui" line="14048"/>
         <source>Slot-06</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14045"/>
+        <location filename="../mainwindow.ui" line="14059"/>
         <source>Slot-07</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14056"/>
+        <location filename="../mainwindow.ui" line="14070"/>
         <source>Slot-08</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14067"/>
+        <location filename="../mainwindow.ui" line="14081"/>
         <source>Slot-09</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14078"/>
+        <location filename="../mainwindow.ui" line="14092"/>
         <source>Slot-10</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14089"/>
+        <location filename="../mainwindow.ui" line="14103"/>
         <source>Slot-11</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14100"/>
+        <location filename="../mainwindow.ui" line="14114"/>
         <source>Slot-12</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14111"/>
+        <location filename="../mainwindow.ui" line="14125"/>
         <source>Slot-13</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14122"/>
+        <location filename="../mainwindow.ui" line="14136"/>
         <source>Slot-14</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14133"/>
+        <location filename="../mainwindow.ui" line="14147"/>
         <source>Slot-15</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14141"/>
+        <location filename="../mainwindow.ui" line="14155"/>
         <source>Show Selection Dialog</source>
         <translation type="unfinished"></translation>
     </message>
@@ -966,7 +966,7 @@
         <location filename="../mainwindow.ui" line="7984"/>
         <location filename="../mainwindow.ui" line="8476"/>
         <location filename="../mainwindow.ui" line="8968"/>
-        <location filename="../mainwindow.ui" line="10274"/>
+        <location filename="../mainwindow.ui" line="10283"/>
         <source>Name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1291,7 +1291,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="9852"/>
+        <location filename="../mainwindow.ui" line="9855"/>
         <source>Allowed In PHS</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1326,51 +1326,51 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11931"/>
+        <location filename="../mainwindow.ui" line="11940"/>
         <source>Current Disc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13245"/>
+        <location filename="../mainwindow.ui" line="13259"/>
         <source>Upper Left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13263"/>
-        <location filename="../mainwindow.ui" line="13383"/>
-        <location filename="../mainwindow.ui" line="13503"/>
-        <location filename="../mainwindow.ui" line="13641"/>
+        <location filename="../mainwindow.ui" line="13277"/>
+        <location filename="../mainwindow.ui" line="13397"/>
+        <location filename="../mainwindow.ui" line="13517"/>
+        <location filename="../mainwindow.ui" line="13655"/>
         <source>R</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13292"/>
-        <location filename="../mainwindow.ui" line="13412"/>
-        <location filename="../mainwindow.ui" line="13538"/>
-        <location filename="../mainwindow.ui" line="13670"/>
+        <location filename="../mainwindow.ui" line="13306"/>
+        <location filename="../mainwindow.ui" line="13426"/>
+        <location filename="../mainwindow.ui" line="13552"/>
+        <location filename="../mainwindow.ui" line="13684"/>
         <source>G</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13321"/>
-        <location filename="../mainwindow.ui" line="13441"/>
-        <location filename="../mainwindow.ui" line="13573"/>
-        <location filename="../mainwindow.ui" line="13699"/>
+        <location filename="../mainwindow.ui" line="13335"/>
+        <location filename="../mainwindow.ui" line="13455"/>
+        <location filename="../mainwindow.ui" line="13587"/>
+        <location filename="../mainwindow.ui" line="13713"/>
         <source>B</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13365"/>
+        <location filename="../mainwindow.ui" line="13379"/>
         <source>Upper Right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13485"/>
+        <location filename="../mainwindow.ui" line="13499"/>
         <source>Lower Left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13623"/>
+        <location filename="../mainwindow.ui" line="13637"/>
         <source>Lower Right</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1456,950 +1456,950 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="9978"/>
+        <location filename="../mainwindow.ui" line="9987"/>
         <source>Sav&amp;e Location</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10039"/>
-        <location filename="../mainwindow.ui" line="10914"/>
-        <location filename="../mainwindow.ui" line="10919"/>
-        <location filename="../mainwindow.ui" line="10924"/>
-        <location filename="../mainwindow.ui" line="10929"/>
-        <location filename="../mainwindow.ui" line="11069"/>
-        <location filename="../mainwindow.ui" line="11074"/>
-        <location filename="../mainwindow.ui" line="11079"/>
-        <location filename="../mainwindow.ui" line="11369"/>
-        <location filename="../mainwindow.ui" line="11374"/>
-        <location filename="../mainwindow.ui" line="11379"/>
+        <location filename="../mainwindow.ui" line="10048"/>
+        <location filename="../mainwindow.ui" line="10923"/>
+        <location filename="../mainwindow.ui" line="10928"/>
+        <location filename="../mainwindow.ui" line="10933"/>
+        <location filename="../mainwindow.ui" line="10938"/>
+        <location filename="../mainwindow.ui" line="11078"/>
+        <location filename="../mainwindow.ui" line="11083"/>
+        <location filename="../mainwindow.ui" line="11088"/>
+        <location filename="../mainwindow.ui" line="11378"/>
+        <location filename="../mainwindow.ui" line="11383"/>
+        <location filename="../mainwindow.ui" line="11388"/>
         <source>0</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10044"/>
-        <location filename="../mainwindow.ui" line="10309"/>
-        <location filename="../mainwindow.ui" line="10339"/>
-        <location filename="../mainwindow.ui" line="10369"/>
-        <location filename="../mainwindow.ui" line="10399"/>
-        <location filename="../mainwindow.ui" line="10429"/>
-        <location filename="../mainwindow.ui" line="10459"/>
-        <location filename="../mainwindow.ui" line="10489"/>
-        <location filename="../mainwindow.ui" line="10519"/>
-        <location filename="../mainwindow.ui" line="10549"/>
-        <location filename="../mainwindow.ui" line="10579"/>
-        <location filename="../mainwindow.ui" line="10609"/>
-        <location filename="../mainwindow.ui" line="10639"/>
-        <location filename="../mainwindow.ui" line="10669"/>
-        <location filename="../mainwindow.ui" line="10699"/>
-        <location filename="../mainwindow.ui" line="10729"/>
-        <location filename="../mainwindow.ui" line="10759"/>
-        <location filename="../mainwindow.ui" line="10789"/>
-        <location filename="../mainwindow.ui" line="10819"/>
-        <location filename="../mainwindow.ui" line="10849"/>
-        <location filename="../mainwindow.ui" line="10879"/>
-        <location filename="../mainwindow.ui" line="10939"/>
-        <location filename="../mainwindow.ui" line="10969"/>
-        <location filename="../mainwindow.ui" line="10999"/>
-        <location filename="../mainwindow.ui" line="11029"/>
-        <location filename="../mainwindow.ui" line="11059"/>
-        <location filename="../mainwindow.ui" line="11089"/>
-        <location filename="../mainwindow.ui" line="11119"/>
-        <location filename="../mainwindow.ui" line="11149"/>
-        <location filename="../mainwindow.ui" line="11179"/>
-        <location filename="../mainwindow.ui" line="11209"/>
-        <location filename="../mainwindow.ui" line="11239"/>
-        <location filename="../mainwindow.ui" line="11269"/>
-        <location filename="../mainwindow.ui" line="11299"/>
-        <location filename="../mainwindow.ui" line="11329"/>
-        <location filename="../mainwindow.ui" line="11359"/>
-        <location filename="../mainwindow.ui" line="11389"/>
-        <location filename="../mainwindow.ui" line="11419"/>
-        <location filename="../mainwindow.ui" line="11449"/>
-        <location filename="../mainwindow.ui" line="11479"/>
-        <location filename="../mainwindow.ui" line="11509"/>
-        <location filename="../mainwindow.ui" line="11539"/>
-        <location filename="../mainwindow.ui" line="11569"/>
-        <location filename="../mainwindow.ui" line="11599"/>
-        <location filename="../mainwindow.ui" line="11629"/>
-        <location filename="../mainwindow.ui" line="11659"/>
-        <location filename="../mainwindow.ui" line="11689"/>
+        <location filename="../mainwindow.ui" line="10053"/>
+        <location filename="../mainwindow.ui" line="10318"/>
+        <location filename="../mainwindow.ui" line="10348"/>
+        <location filename="../mainwindow.ui" line="10378"/>
+        <location filename="../mainwindow.ui" line="10408"/>
+        <location filename="../mainwindow.ui" line="10438"/>
+        <location filename="../mainwindow.ui" line="10468"/>
+        <location filename="../mainwindow.ui" line="10498"/>
+        <location filename="../mainwindow.ui" line="10528"/>
+        <location filename="../mainwindow.ui" line="10558"/>
+        <location filename="../mainwindow.ui" line="10588"/>
+        <location filename="../mainwindow.ui" line="10618"/>
+        <location filename="../mainwindow.ui" line="10648"/>
+        <location filename="../mainwindow.ui" line="10678"/>
+        <location filename="../mainwindow.ui" line="10708"/>
+        <location filename="../mainwindow.ui" line="10738"/>
+        <location filename="../mainwindow.ui" line="10768"/>
+        <location filename="../mainwindow.ui" line="10798"/>
+        <location filename="../mainwindow.ui" line="10828"/>
+        <location filename="../mainwindow.ui" line="10858"/>
+        <location filename="../mainwindow.ui" line="10888"/>
+        <location filename="../mainwindow.ui" line="10948"/>
+        <location filename="../mainwindow.ui" line="10978"/>
+        <location filename="../mainwindow.ui" line="11008"/>
+        <location filename="../mainwindow.ui" line="11038"/>
+        <location filename="../mainwindow.ui" line="11068"/>
+        <location filename="../mainwindow.ui" line="11098"/>
+        <location filename="../mainwindow.ui" line="11128"/>
+        <location filename="../mainwindow.ui" line="11158"/>
+        <location filename="../mainwindow.ui" line="11188"/>
+        <location filename="../mainwindow.ui" line="11218"/>
+        <location filename="../mainwindow.ui" line="11248"/>
+        <location filename="../mainwindow.ui" line="11278"/>
+        <location filename="../mainwindow.ui" line="11308"/>
+        <location filename="../mainwindow.ui" line="11338"/>
+        <location filename="../mainwindow.ui" line="11368"/>
+        <location filename="../mainwindow.ui" line="11398"/>
+        <location filename="../mainwindow.ui" line="11428"/>
+        <location filename="../mainwindow.ui" line="11458"/>
+        <location filename="../mainwindow.ui" line="11488"/>
+        <location filename="../mainwindow.ui" line="11518"/>
+        <location filename="../mainwindow.ui" line="11548"/>
+        <location filename="../mainwindow.ui" line="11578"/>
+        <location filename="../mainwindow.ui" line="11608"/>
+        <location filename="../mainwindow.ui" line="11638"/>
+        <location filename="../mainwindow.ui" line="11668"/>
+        <location filename="../mainwindow.ui" line="11698"/>
         <source>1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10049"/>
-        <location filename="../mainwindow.ui" line="10909"/>
+        <location filename="../mainwindow.ui" line="10058"/>
+        <location filename="../mainwindow.ui" line="10918"/>
         <source>2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10109"/>
-        <location filename="../mainwindow.ui" line="10509"/>
+        <location filename="../mainwindow.ui" line="10118"/>
+        <location filename="../mainwindow.ui" line="10518"/>
         <source>14</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10114"/>
-        <location filename="../mainwindow.ui" line="10599"/>
+        <location filename="../mainwindow.ui" line="10123"/>
+        <location filename="../mainwindow.ui" line="10608"/>
         <source>15</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10119"/>
-        <location filename="../mainwindow.ui" line="10684"/>
+        <location filename="../mainwindow.ui" line="10128"/>
+        <location filename="../mainwindow.ui" line="10693"/>
         <source>16</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10124"/>
-        <location filename="../mainwindow.ui" line="10809"/>
+        <location filename="../mainwindow.ui" line="10133"/>
+        <location filename="../mainwindow.ui" line="10818"/>
         <source>17</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10129"/>
+        <location filename="../mainwindow.ui" line="10138"/>
         <source>18</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10134"/>
+        <location filename="../mainwindow.ui" line="10143"/>
         <source>19</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10139"/>
-        <location filename="../mainwindow.ui" line="10629"/>
+        <location filename="../mainwindow.ui" line="10148"/>
+        <location filename="../mainwindow.ui" line="10638"/>
         <source>20</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10144"/>
-        <location filename="../mainwindow.ui" line="10389"/>
+        <location filename="../mainwindow.ui" line="10153"/>
+        <location filename="../mainwindow.ui" line="10398"/>
         <source>21</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10149"/>
+        <location filename="../mainwindow.ui" line="10158"/>
         <source>22</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10154"/>
+        <location filename="../mainwindow.ui" line="10163"/>
         <source>23</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10159"/>
-        <location filename="../mainwindow.ui" line="10419"/>
-        <location filename="../mainwindow.ui" line="11469"/>
+        <location filename="../mainwindow.ui" line="10168"/>
+        <location filename="../mainwindow.ui" line="10428"/>
+        <location filename="../mainwindow.ui" line="11478"/>
         <source>24</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10164"/>
-        <location filename="../mainwindow.ui" line="10329"/>
+        <location filename="../mainwindow.ui" line="10173"/>
+        <location filename="../mainwindow.ui" line="10338"/>
         <source>25</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10169"/>
-        <location filename="../mainwindow.ui" line="11439"/>
+        <location filename="../mainwindow.ui" line="10178"/>
+        <location filename="../mainwindow.ui" line="11448"/>
         <source>26</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10174"/>
+        <location filename="../mainwindow.ui" line="10183"/>
         <source>27</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10179"/>
+        <location filename="../mainwindow.ui" line="10188"/>
         <source>28</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10184"/>
+        <location filename="../mainwindow.ui" line="10193"/>
         <source>29</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10189"/>
+        <location filename="../mainwindow.ui" line="10198"/>
         <source>New Row</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10194"/>
+        <location filename="../mainwindow.ui" line="10203"/>
         <source>30</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10199"/>
-        <location filename="../mainwindow.ui" line="11499"/>
+        <location filename="../mainwindow.ui" line="10208"/>
+        <location filename="../mainwindow.ui" line="11508"/>
         <source>31</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10204"/>
+        <location filename="../mainwindow.ui" line="10213"/>
         <source>32</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10209"/>
+        <location filename="../mainwindow.ui" line="10218"/>
         <source>33</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10214"/>
-        <location filename="../mainwindow.ui" line="10499"/>
-        <location filename="../mainwindow.ui" line="11169"/>
-        <location filename="../mainwindow.ui" line="11194"/>
-        <location filename="../mainwindow.ui" line="11399"/>
-        <location filename="../mainwindow.ui" line="11679"/>
+        <location filename="../mainwindow.ui" line="10223"/>
+        <location filename="../mainwindow.ui" line="10508"/>
+        <location filename="../mainwindow.ui" line="11178"/>
+        <location filename="../mainwindow.ui" line="11203"/>
+        <location filename="../mainwindow.ui" line="11408"/>
+        <location filename="../mainwindow.ui" line="11688"/>
         <source>34</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10219"/>
-        <location filename="../mainwindow.ui" line="10689"/>
+        <location filename="../mainwindow.ui" line="10228"/>
+        <location filename="../mainwindow.ui" line="10698"/>
         <source>35</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10224"/>
-        <location filename="../mainwindow.ui" line="11009"/>
+        <location filename="../mainwindow.ui" line="10233"/>
+        <location filename="../mainwindow.ui" line="11018"/>
         <source>37</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10229"/>
+        <location filename="../mainwindow.ui" line="10238"/>
         <source>38</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10234"/>
+        <location filename="../mainwindow.ui" line="10243"/>
         <source>39</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10239"/>
-        <location filename="../mainwindow.ui" line="11559"/>
+        <location filename="../mainwindow.ui" line="10248"/>
+        <location filename="../mainwindow.ui" line="11568"/>
         <source>40</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10244"/>
+        <location filename="../mainwindow.ui" line="10253"/>
         <source>41</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10249"/>
+        <location filename="../mainwindow.ui" line="10258"/>
         <source>42</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10254"/>
+        <location filename="../mainwindow.ui" line="10263"/>
         <source>43</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10259"/>
-        <location filename="../mainwindow.ui" line="11524"/>
-        <location filename="../mainwindow.ui" line="11589"/>
+        <location filename="../mainwindow.ui" line="10268"/>
+        <location filename="../mainwindow.ui" line="11533"/>
+        <location filename="../mainwindow.ui" line="11598"/>
         <source>44</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10264"/>
-        <location filename="../mainwindow.ui" line="10379"/>
+        <location filename="../mainwindow.ui" line="10273"/>
+        <location filename="../mainwindow.ui" line="10388"/>
         <source>45</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10269"/>
-        <location filename="../mainwindow.ui" line="11259"/>
+        <location filename="../mainwindow.ui" line="10278"/>
+        <location filename="../mainwindow.ui" line="11268"/>
         <source>46</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10279"/>
+        <location filename="../mainwindow.ui" line="10288"/>
         <source>map</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10284"/>
+        <location filename="../mainwindow.ui" line="10293"/>
         <source>loc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10304"/>
+        <location filename="../mainwindow.ui" line="10313"/>
         <source>Platform</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10314"/>
-        <location filename="../mainwindow.ui" line="11619"/>
+        <location filename="../mainwindow.ui" line="10323"/>
+        <location filename="../mainwindow.ui" line="11628"/>
         <source>116</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10319"/>
+        <location filename="../mainwindow.ui" line="10328"/>
         <source>3655</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10324"/>
+        <location filename="../mainwindow.ui" line="10333"/>
         <source>27432</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10334"/>
+        <location filename="../mainwindow.ui" line="10343"/>
         <source>Tunnel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10344"/>
+        <location filename="../mainwindow.ui" line="10353"/>
         <source>736</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10349"/>
+        <location filename="../mainwindow.ui" line="10358"/>
         <source>65453</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10354"/>
+        <location filename="../mainwindow.ui" line="10363"/>
         <source>65237</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10359"/>
+        <location filename="../mainwindow.ui" line="10368"/>
         <source>215</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10364"/>
+        <location filename="../mainwindow.ui" line="10373"/>
         <source>Junon Inn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10374"/>
+        <location filename="../mainwindow.ui" line="10383"/>
         <source>376</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10384"/>
+        <location filename="../mainwindow.ui" line="10393"/>
         <source>197</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10394"/>
-        <location filename="../mainwindow.ui" line="11144"/>
+        <location filename="../mainwindow.ui" line="10403"/>
+        <location filename="../mainwindow.ui" line="11153"/>
         <source>Midgar Sector 8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10404"/>
+        <location filename="../mainwindow.ui" line="10413"/>
         <source>732</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10409"/>
+        <location filename="../mainwindow.ui" line="10418"/>
         <source>265</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10414"/>
+        <location filename="../mainwindow.ui" line="10423"/>
         <source>65332</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10424"/>
+        <location filename="../mainwindow.ui" line="10433"/>
         <source>Shinra Bldg 67F.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10434"/>
+        <location filename="../mainwindow.ui" line="10443"/>
         <source>256</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10439"/>
+        <location filename="../mainwindow.ui" line="10448"/>
         <source>65426</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10444"/>
+        <location filename="../mainwindow.ui" line="10453"/>
         <source>797</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10449"/>
+        <location filename="../mainwindow.ui" line="10458"/>
         <source>283</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10454"/>
+        <location filename="../mainwindow.ui" line="10463"/>
         <source>Train Graveyard</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10464"/>
+        <location filename="../mainwindow.ui" line="10473"/>
         <source>144</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10469"/>
+        <location filename="../mainwindow.ui" line="10478"/>
         <source>1981</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10474"/>
+        <location filename="../mainwindow.ui" line="10483"/>
         <source>62327</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10479"/>
-        <location filename="../mainwindow.ui" line="10749"/>
+        <location filename="../mainwindow.ui" line="10488"/>
+        <location filename="../mainwindow.ui" line="10758"/>
         <source>71</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10484"/>
+        <location filename="../mainwindow.ui" line="10493"/>
         <source>Underwater Reactor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10494"/>
+        <location filename="../mainwindow.ui" line="10503"/>
         <source>422</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10504"/>
+        <location filename="../mainwindow.ui" line="10513"/>
         <source>426</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10514"/>
+        <location filename="../mainwindow.ui" line="10523"/>
         <source>Junon Office F2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10524"/>
+        <location filename="../mainwindow.ui" line="10533"/>
         <source>397</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10529"/>
+        <location filename="../mainwindow.ui" line="10538"/>
         <source>65162</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10534"/>
+        <location filename="../mainwindow.ui" line="10543"/>
         <source>65236</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10544"/>
+        <location filename="../mainwindow.ui" line="10553"/>
         <source>Shinra Bldg 69F.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10554"/>
+        <location filename="../mainwindow.ui" line="10563"/>
         <source>264</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10559"/>
+        <location filename="../mainwindow.ui" line="10568"/>
         <source>150</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10564"/>
+        <location filename="../mainwindow.ui" line="10573"/>
         <source>65102</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10569"/>
+        <location filename="../mainwindow.ui" line="10578"/>
         <source>226</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10574"/>
+        <location filename="../mainwindow.ui" line="10583"/>
         <source>Kalm Inn</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10584"/>
+        <location filename="../mainwindow.ui" line="10593"/>
         <source>332</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10589"/>
+        <location filename="../mainwindow.ui" line="10598"/>
         <source>267</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10594"/>
+        <location filename="../mainwindow.ui" line="10603"/>
         <source>65429</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10604"/>
+        <location filename="../mainwindow.ui" line="10613"/>
         <source>Reactor No. 5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10614"/>
-        <location filename="../mainwindow.ui" line="11219"/>
+        <location filename="../mainwindow.ui" line="10623"/>
+        <location filename="../mainwindow.ui" line="11228"/>
         <source>128</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10619"/>
+        <location filename="../mainwindow.ui" line="10628"/>
         <source>64035</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10624"/>
+        <location filename="../mainwindow.ui" line="10633"/>
         <source>2546</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10634"/>
+        <location filename="../mainwindow.ui" line="10643"/>
         <source>Aeris House</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10644"/>
+        <location filename="../mainwindow.ui" line="10653"/>
         <source>187</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10649"/>
+        <location filename="../mainwindow.ui" line="10658"/>
         <source>175</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10654"/>
+        <location filename="../mainwindow.ui" line="10663"/>
         <source>65330</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10659"/>
+        <location filename="../mainwindow.ui" line="10668"/>
         <source>138</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10664"/>
+        <location filename="../mainwindow.ui" line="10673"/>
         <source>North Crater</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10674"/>
+        <location filename="../mainwindow.ui" line="10683"/>
         <source>749</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10679"/>
+        <location filename="../mainwindow.ui" line="10688"/>
         <source>65344</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10694"/>
+        <location filename="../mainwindow.ui" line="10703"/>
         <source>Wall Market</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10704"/>
+        <location filename="../mainwindow.ui" line="10713"/>
         <source>195</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10709"/>
-        <location filename="../mainwindow.ui" line="11304"/>
+        <location filename="../mainwindow.ui" line="10718"/>
+        <location filename="../mainwindow.ui" line="11313"/>
         <source>462</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10714"/>
+        <location filename="../mainwindow.ui" line="10723"/>
         <source>1080</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10719"/>
+        <location filename="../mainwindow.ui" line="10728"/>
         <source>58</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10724"/>
+        <location filename="../mainwindow.ui" line="10733"/>
         <source>Beginner&apos;s Hall</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10734"/>
+        <location filename="../mainwindow.ui" line="10743"/>
         <source>149</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10739"/>
-        <location filename="../mainwindow.ui" line="11319"/>
+        <location filename="../mainwindow.ui" line="10748"/>
+        <location filename="../mainwindow.ui" line="11328"/>
         <source>220</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10744"/>
+        <location filename="../mainwindow.ui" line="10753"/>
         <source>65371</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10754"/>
+        <location filename="../mainwindow.ui" line="10763"/>
         <source>Whirlwind Maze</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10764"/>
+        <location filename="../mainwindow.ui" line="10773"/>
         <source>705</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10769"/>
-        <location filename="../mainwindow.ui" line="11364"/>
+        <location filename="../mainwindow.ui" line="10778"/>
+        <location filename="../mainwindow.ui" line="11373"/>
         <source>94</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10774"/>
+        <location filename="../mainwindow.ui" line="10783"/>
         <source>1168</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10779"/>
-        <location filename="../mainwindow.ui" line="11334"/>
+        <location filename="../mainwindow.ui" line="10788"/>
+        <location filename="../mainwindow.ui" line="11343"/>
         <source>173</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10784"/>
-        <location filename="../mainwindow.ui" line="10874"/>
+        <location filename="../mainwindow.ui" line="10793"/>
+        <location filename="../mainwindow.ui" line="10883"/>
         <source>Gaeas Cliff</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10794"/>
+        <location filename="../mainwindow.ui" line="10803"/>
         <source>699</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10799"/>
+        <location filename="../mainwindow.ui" line="10808"/>
         <source>65424</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10804"/>
+        <location filename="../mainwindow.ui" line="10813"/>
         <source>240</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10814"/>
+        <location filename="../mainwindow.ui" line="10823"/>
         <source>Mt. Nibel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10824"/>
+        <location filename="../mainwindow.ui" line="10833"/>
         <source>317</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10829"/>
+        <location filename="../mainwindow.ui" line="10838"/>
         <source>667</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10834"/>
+        <location filename="../mainwindow.ui" line="10843"/>
         <source>65035</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10839"/>
+        <location filename="../mainwindow.ui" line="10848"/>
         <source>261</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10844"/>
+        <location filename="../mainwindow.ui" line="10853"/>
         <source>Gaeas Cliff Base</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10854"/>
+        <location filename="../mainwindow.ui" line="10863"/>
         <source>687</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10859"/>
+        <location filename="../mainwindow.ui" line="10868"/>
         <source>165</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10864"/>
+        <location filename="../mainwindow.ui" line="10873"/>
         <source>51</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10884"/>
+        <location filename="../mainwindow.ui" line="10893"/>
         <source>693</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10889"/>
+        <location filename="../mainwindow.ui" line="10898"/>
         <source>65384</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10894"/>
+        <location filename="../mainwindow.ui" line="10903"/>
         <source>1104</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10904"/>
+        <location filename="../mainwindow.ui" line="10913"/>
         <source>Test Fight</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10934"/>
+        <location filename="../mainwindow.ui" line="10943"/>
         <source>Sector 7 - Slums</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10944"/>
+        <location filename="../mainwindow.ui" line="10953"/>
         <source>156</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10949"/>
+        <location filename="../mainwindow.ui" line="10958"/>
         <source>65185</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10954"/>
+        <location filename="../mainwindow.ui" line="10963"/>
         <source>636</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10959"/>
+        <location filename="../mainwindow.ui" line="10968"/>
         <source>231</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10964"/>
+        <location filename="../mainwindow.ui" line="10973"/>
         <source>Shinra Bldg. 64F.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10974"/>
+        <location filename="../mainwindow.ui" line="10983"/>
         <source>247</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10979"/>
+        <location filename="../mainwindow.ui" line="10988"/>
         <source>64386</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10984"/>
+        <location filename="../mainwindow.ui" line="10993"/>
         <source>65253</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10989"/>
+        <location filename="../mainwindow.ui" line="10998"/>
         <source>245</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10994"/>
+        <location filename="../mainwindow.ui" line="11003"/>
         <source>Reactor No.1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11004"/>
+        <location filename="../mainwindow.ui" line="11013"/>
         <source>124</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11014"/>
+        <location filename="../mainwindow.ui" line="11023"/>
         <source>1579</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11019"/>
-        <location filename="../mainwindow.ui" line="11289"/>
-        <location filename="../mainwindow.ui" line="11409"/>
+        <location filename="../mainwindow.ui" line="11028"/>
+        <location filename="../mainwindow.ui" line="11298"/>
+        <location filename="../mainwindow.ui" line="11418"/>
         <source>36</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11024"/>
+        <location filename="../mainwindow.ui" line="11033"/>
         <source>Corel Prison</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11034"/>
+        <location filename="../mainwindow.ui" line="11043"/>
         <source>473</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11039"/>
+        <location filename="../mainwindow.ui" line="11048"/>
         <source>876</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11044"/>
+        <location filename="../mainwindow.ui" line="11053"/>
         <source>1471</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11049"/>
+        <location filename="../mainwindow.ui" line="11058"/>
         <source>74</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11054"/>
+        <location filename="../mainwindow.ui" line="11063"/>
         <source>Debug Room</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11913"/>
+        <location filename="../mainwindow.ui" line="11922"/>
         <source>&amp;Game Progress</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11979"/>
+        <location filename="../mainwindow.ui" line="11988"/>
         <source>Main Progress Var</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11992"/>
+        <location filename="../mainwindow.ui" line="12001"/>
         <source>Bombing Mission Progress</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12004"/>
+        <location filename="../mainwindow.ui" line="12013"/>
         <source>0x0C85</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12036"/>
+        <location filename="../mainwindow.ui" line="12045"/>
         <source>0x0C86</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12049"/>
+        <location filename="../mainwindow.ui" line="12058"/>
         <source>0x0CE6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12167"/>
+        <location filename="../mainwindow.ui" line="12176"/>
         <source>Bombing Mission</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12172"/>
+        <location filename="../mainwindow.ui" line="12181"/>
         <source>Cloud&apos;s Flashback</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12177"/>
+        <location filename="../mainwindow.ui" line="12186"/>
         <source>The Date Scene</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="12191"/>
+        <source>Aeris&apos; Death</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="12205"/>
         <source>Replay Mission</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12204"/>
-        <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Aera Is Under Heavy Development</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../mainwindow.ui" line="12223"/>
+        <location filename="../mainwindow.ui" line="12237"/>
         <source>         INFO ON CURRENTLY SELECTED REPLAY MISSION</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12254"/>
+        <location filename="../mainwindow.ui" line="12268"/>
         <source>Game Op&amp;tions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13959"/>
+        <location filename="../mainwindow.ui" line="13973"/>
         <source>Export PSX Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14153"/>
+        <location filename="../mainwindow.ui" line="14167"/>
         <source>PSX Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14165"/>
+        <location filename="../mainwindow.ui" line="14179"/>
         <source> PSV Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14177"/>
+        <location filename="../mainwindow.ui" line="14191"/>
         <source>Copy Current Slot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14180"/>
+        <location filename="../mainwindow.ui" line="14194"/>
         <source>Alt+C</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14192"/>
+        <location filename="../mainwindow.ui" line="14206"/>
         <source>Paste Slot Here</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14195"/>
+        <location filename="../mainwindow.ui" line="14209"/>
         <source>Alt+V</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4270"/>
-        <location filename="../mainwindow.ui" line="14207"/>
+        <location filename="../mainwindow.ui" line="14221"/>
         <source>Clear Slot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14210"/>
+        <location filename="../mainwindow.ui" line="14224"/>
         <source>Alt+Del</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14222"/>
+        <location filename="../mainwindow.ui" line="14236"/>
         <source>Previous Slot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14225"/>
+        <location filename="../mainwindow.ui" line="14239"/>
         <source>Alt+Left</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14237"/>
+        <location filename="../mainwindow.ui" line="14251"/>
         <source>Next Slot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14240"/>
+        <location filename="../mainwindow.ui" line="14254"/>
         <source>Alt+Right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10899"/>
-        <location filename="../mainwindow.ui" line="11064"/>
+        <location filename="../mainwindow.ui" line="10908"/>
+        <location filename="../mainwindow.ui" line="11073"/>
         <source>65</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2439,701 +2439,706 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10054"/>
+        <location filename="../mainwindow.ui" line="10063"/>
         <source>3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10059"/>
+        <location filename="../mainwindow.ui" line="10068"/>
         <source>4</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10064"/>
-        <location filename="../mainwindow.ui" line="10869"/>
+        <location filename="../mainwindow.ui" line="10073"/>
+        <location filename="../mainwindow.ui" line="10878"/>
         <source>5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10069"/>
+        <location filename="../mainwindow.ui" line="10078"/>
         <source>6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10074"/>
-        <location filename="../mainwindow.ui" line="11139"/>
+        <location filename="../mainwindow.ui" line="10083"/>
+        <location filename="../mainwindow.ui" line="11148"/>
         <source>7</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10079"/>
-        <location filename="../mainwindow.ui" line="10539"/>
+        <location filename="../mainwindow.ui" line="10088"/>
+        <location filename="../mainwindow.ui" line="10548"/>
         <source>8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10084"/>
+        <location filename="../mainwindow.ui" line="10093"/>
         <source>9</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10089"/>
+        <location filename="../mainwindow.ui" line="10098"/>
         <source>10</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10094"/>
+        <location filename="../mainwindow.ui" line="10103"/>
         <source>11</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10099"/>
-        <location filename="../mainwindow.ui" line="11109"/>
+        <location filename="../mainwindow.ui" line="10108"/>
+        <location filename="../mainwindow.ui" line="11118"/>
         <source>12</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10104"/>
-        <location filename="../mainwindow.ui" line="11199"/>
-        <location filename="../mainwindow.ui" line="11529"/>
+        <location filename="../mainwindow.ui" line="10113"/>
+        <location filename="../mainwindow.ui" line="11208"/>
+        <location filename="../mainwindow.ui" line="11538"/>
         <source>13</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11084"/>
+        <location filename="../mainwindow.ui" line="11093"/>
         <source>Fort Condor</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11094"/>
+        <location filename="../mainwindow.ui" line="11103"/>
         <source>355</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11099"/>
+        <location filename="../mainwindow.ui" line="11108"/>
         <source>1118</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11104"/>
+        <location filename="../mainwindow.ui" line="11113"/>
         <source>391</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11114"/>
+        <location filename="../mainwindow.ui" line="11123"/>
         <source>Inside Submarine</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11124"/>
+        <location filename="../mainwindow.ui" line="11133"/>
         <source>408</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11129"/>
+        <location filename="../mainwindow.ui" line="11138"/>
         <source>65484</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11134"/>
+        <location filename="../mainwindow.ui" line="11143"/>
         <source>433</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11154"/>
+        <location filename="../mainwindow.ui" line="11163"/>
         <source>739</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11159"/>
+        <location filename="../mainwindow.ui" line="11168"/>
         <source>61439</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11164"/>
+        <location filename="../mainwindow.ui" line="11173"/>
         <source>18394</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11174"/>
+        <location filename="../mainwindow.ui" line="11183"/>
         <source>Hallway</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11184"/>
-        <location filename="../mainwindow.ui" line="11514"/>
+        <location filename="../mainwindow.ui" line="11193"/>
+        <location filename="../mainwindow.ui" line="11523"/>
         <source>88</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11189"/>
+        <location filename="../mainwindow.ui" line="11198"/>
         <source>65141</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11204"/>
+        <location filename="../mainwindow.ui" line="11213"/>
         <source>Cosmo Canyon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11214"/>
+        <location filename="../mainwindow.ui" line="11223"/>
         <source>529</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11224"/>
+        <location filename="../mainwindow.ui" line="11233"/>
         <source>65215</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11229"/>
+        <location filename="../mainwindow.ui" line="11238"/>
         <source>79</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11234"/>
+        <location filename="../mainwindow.ui" line="11243"/>
         <source>Boat</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11244"/>
+        <location filename="../mainwindow.ui" line="11253"/>
         <source>436</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11249"/>
+        <location filename="../mainwindow.ui" line="11258"/>
         <source>65430</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11254"/>
+        <location filename="../mainwindow.ui" line="11263"/>
         <source>64368</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11264"/>
+        <location filename="../mainwindow.ui" line="11273"/>
         <source>Lower Sector 4 Plate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11274"/>
+        <location filename="../mainwindow.ui" line="11283"/>
         <source>169</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11279"/>
+        <location filename="../mainwindow.ui" line="11288"/>
         <source>65422</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11284"/>
+        <location filename="../mainwindow.ui" line="11293"/>
         <source>468</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11294"/>
+        <location filename="../mainwindow.ui" line="11303"/>
         <source>Mt. Corel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11309"/>
+        <location filename="../mainwindow.ui" line="11318"/>
         <source>63498</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11314"/>
+        <location filename="../mainwindow.ui" line="11323"/>
         <source>65531</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11324"/>
+        <location filename="../mainwindow.ui" line="11333"/>
         <source>Sector 5 - Slums</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11339"/>
+        <location filename="../mainwindow.ui" line="11348"/>
         <source>64997</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11344"/>
+        <location filename="../mainwindow.ui" line="11353"/>
         <source>135</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11349"/>
+        <location filename="../mainwindow.ui" line="11358"/>
         <source>78</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11354"/>
+        <location filename="../mainwindow.ui" line="11363"/>
         <source>Debug - English</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11384"/>
+        <location filename="../mainwindow.ui" line="11393"/>
         <source>Reactor No. 5 </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11394"/>
+        <location filename="../mainwindow.ui" line="11403"/>
         <source>131</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11404"/>
+        <location filename="../mainwindow.ui" line="11413"/>
         <source>1617</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11414"/>
+        <location filename="../mainwindow.ui" line="11423"/>
         <source>Ropeway Station</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11424"/>
+        <location filename="../mainwindow.ui" line="11433"/>
         <source>496</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11429"/>
+        <location filename="../mainwindow.ui" line="11438"/>
         <source>64767</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11434"/>
+        <location filename="../mainwindow.ui" line="11443"/>
         <source>95</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11444"/>
+        <location filename="../mainwindow.ui" line="11453"/>
         <source>Junon Way</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11454"/>
+        <location filename="../mainwindow.ui" line="11463"/>
         <source>394</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11459"/>
+        <location filename="../mainwindow.ui" line="11468"/>
         <source>2184</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11464"/>
+        <location filename="../mainwindow.ui" line="11473"/>
         <source>64947</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11474"/>
+        <location filename="../mainwindow.ui" line="11483"/>
         <source>Junon Airport Path</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11484"/>
+        <location filename="../mainwindow.ui" line="11493"/>
         <source>386</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11489"/>
+        <location filename="../mainwindow.ui" line="11498"/>
         <source>64902</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11494"/>
+        <location filename="../mainwindow.ui" line="11503"/>
         <source>65203</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11504"/>
+        <location filename="../mainwindow.ui" line="11513"/>
         <source>Vestibule</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11519"/>
+        <location filename="../mainwindow.ui" line="11528"/>
         <source>65157</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11534"/>
+        <location filename="../mainwindow.ui" line="11543"/>
         <source>Forgotten Captial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11544"/>
+        <location filename="../mainwindow.ui" line="11553"/>
         <source>633</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11549"/>
+        <location filename="../mainwindow.ui" line="11558"/>
         <source>65402</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11554"/>
+        <location filename="../mainwindow.ui" line="11563"/>
         <source>65401</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11564"/>
+        <location filename="../mainwindow.ui" line="11573"/>
         <source>Whilwind Maze </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11574"/>
+        <location filename="../mainwindow.ui" line="11583"/>
         <source>703</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11579"/>
+        <location filename="../mainwindow.ui" line="11588"/>
         <source>65170</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11584"/>
+        <location filename="../mainwindow.ui" line="11593"/>
         <source>64488</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11594"/>
+        <location filename="../mainwindow.ui" line="11603"/>
         <source>Sector 8, Underground</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11604"/>
+        <location filename="../mainwindow.ui" line="11613"/>
         <source>733</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11609"/>
+        <location filename="../mainwindow.ui" line="11618"/>
         <source>65264</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11614"/>
+        <location filename="../mainwindow.ui" line="11623"/>
         <source>1614</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11624"/>
+        <location filename="../mainwindow.ui" line="11633"/>
         <source>Shinra Bldg.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11634"/>
+        <location filename="../mainwindow.ui" line="11643"/>
         <source>227</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11639"/>
+        <location filename="../mainwindow.ui" line="11648"/>
         <source>512</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11644"/>
+        <location filename="../mainwindow.ui" line="11653"/>
         <source>63074</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11649"/>
+        <location filename="../mainwindow.ui" line="11658"/>
         <source>105</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11654"/>
+        <location filename="../mainwindow.ui" line="11663"/>
         <source>Wutai</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11664"/>
+        <location filename="../mainwindow.ui" line="11673"/>
         <source>579</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11669"/>
+        <location filename="../mainwindow.ui" line="11678"/>
         <source>64961</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11674"/>
+        <location filename="../mainwindow.ui" line="11683"/>
         <source>1101</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11684"/>
+        <location filename="../mainwindow.ui" line="11693"/>
         <source>Forgotten City</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11694"/>
+        <location filename="../mainwindow.ui" line="11703"/>
         <source>646</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11699"/>
+        <location filename="../mainwindow.ui" line="11708"/>
         <source>641</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11704"/>
+        <location filename="../mainwindow.ui" line="11713"/>
         <source>793</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11709"/>
+        <location filename="../mainwindow.ui" line="11718"/>
         <source>243</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11723"/>
+        <location filename="../mainwindow.ui" line="11732"/>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11739"/>
+        <location filename="../mainwindow.ui" line="11748"/>
         <source>Have Fun With This Feature, But Don&apos;t Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11760"/>
+        <location filename="../mainwindow.ui" line="11769"/>
         <source>Location Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11790"/>
+        <location filename="../mainwindow.ui" line="11799"/>
         <source>Map ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11817"/>
+        <location filename="../mainwindow.ui" line="11826"/>
         <source>Location ID</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10289"/>
-        <location filename="../mainwindow.ui" line="11841"/>
+        <location filename="../mainwindow.ui" line="10298"/>
+        <location filename="../mainwindow.ui" line="11850"/>
         <source>x</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10294"/>
-        <location filename="../mainwindow.ui" line="11865"/>
+        <location filename="../mainwindow.ui" line="10303"/>
+        <location filename="../mainwindow.ui" line="11874"/>
         <source>y</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10299"/>
-        <location filename="../mainwindow.ui" line="11889"/>
+        <location filename="../mainwindow.ui" line="10308"/>
+        <location filename="../mainwindow.ui" line="11898"/>
         <source>z</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12266"/>
+        <location filename="../mainwindow.ui" line="12218"/>
+        <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="12280"/>
         <source>General Config</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12303"/>
+        <location filename="../mainwindow.ui" line="12317"/>
         <source>Sound Mode</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12339"/>
+        <location filename="../mainwindow.ui" line="12353"/>
         <source>Mono</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12344"/>
+        <location filename="../mainwindow.ui" line="12358"/>
         <source>Stereo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12385"/>
+        <location filename="../mainwindow.ui" line="12399"/>
         <source>Controller Setting</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12421"/>
+        <location filename="../mainwindow.ui" line="12435"/>
         <source>Default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12426"/>
+        <location filename="../mainwindow.ui" line="12440"/>
         <source>Custom</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12467"/>
+        <location filename="../mainwindow.ui" line="12481"/>
         <source>Cursor Type</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12503"/>
+        <location filename="../mainwindow.ui" line="12517"/>
         <source>Initial</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12508"/>
+        <location filename="../mainwindow.ui" line="12522"/>
         <source>Memory</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12549"/>
+        <location filename="../mainwindow.ui" line="12563"/>
         <source>ATB Style</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12585"/>
+        <location filename="../mainwindow.ui" line="12599"/>
         <source>Active</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12590"/>
+        <location filename="../mainwindow.ui" line="12604"/>
         <source>Recommended</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12595"/>
+        <location filename="../mainwindow.ui" line="12609"/>
         <source>Wait</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12636"/>
+        <location filename="../mainwindow.ui" line="12650"/>
         <source>Camera</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12672"/>
+        <location filename="../mainwindow.ui" line="12686"/>
         <source>Automatic</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12677"/>
+        <location filename="../mainwindow.ui" line="12691"/>
         <source>Fixed View</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12724"/>
+        <location filename="../mainwindow.ui" line="12738"/>
         <source>Magic Order</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12766"/>
+        <location filename="../mainwindow.ui" line="12780"/>
         <source>Restore,Attack,Indirect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12771"/>
+        <location filename="../mainwindow.ui" line="12785"/>
         <source>Restore,Indirect,Attack</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12776"/>
+        <location filename="../mainwindow.ui" line="12790"/>
         <source>Attack,Indirect,Restore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12781"/>
+        <location filename="../mainwindow.ui" line="12795"/>
         <source>Attack,Restore,Indirect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12786"/>
+        <location filename="../mainwindow.ui" line="12800"/>
         <source>Indirect,Restore,Attack</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12791"/>
+        <location filename="../mainwindow.ui" line="12805"/>
         <source>Indirect,Attack,Restore</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12841"/>
+        <location filename="../mainwindow.ui" line="12855"/>
         <source>Show Extra Information Durring Battle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12876"/>
+        <location filename="../mainwindow.ui" line="12890"/>
         <source>Battle Speed:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12920"/>
-        <location filename="../mainwindow.ui" line="13021"/>
-        <location filename="../mainwindow.ui" line="13140"/>
+        <location filename="../mainwindow.ui" line="12934"/>
+        <location filename="../mainwindow.ui" line="13035"/>
+        <location filename="../mainwindow.ui" line="13154"/>
         <source>Fast</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12964"/>
-        <location filename="../mainwindow.ui" line="13065"/>
-        <location filename="../mainwindow.ui" line="13190"/>
+        <location filename="../mainwindow.ui" line="12978"/>
+        <location filename="../mainwindow.ui" line="13079"/>
+        <location filename="../mainwindow.ui" line="13204"/>
         <source>Slow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="12977"/>
+        <location filename="../mainwindow.ui" line="12991"/>
         <source>Battle Message Speed:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13084"/>
+        <location filename="../mainwindow.ui" line="13098"/>
         <source>Field Message Speed:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13210"/>
+        <location filename="../mainwindow.ui" line="13224"/>
         <source>Dialog Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13754"/>
+        <location filename="../mainwindow.ui" line="13768"/>
         <source>Current Slot:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13795"/>
+        <location filename="../mainwindow.ui" line="13809"/>
         <source>Help</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13803"/>
+        <location filename="../mainwindow.ui" line="13817"/>
         <source>&amp;File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13838"/>
+        <location filename="../mainwindow.ui" line="13852"/>
         <source>S&amp;lot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13875"/>
+        <location filename="../mainwindow.ui" line="13889"/>
         <source>&amp;Quit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13902"/>
+        <location filename="../mainwindow.ui" line="13916"/>
         <source>&amp;Save File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13905"/>
+        <location filename="../mainwindow.ui" line="13919"/>
         <source>Ctrl+S</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13914"/>
+        <location filename="../mainwindow.ui" line="13928"/>
         <source>About Black Chocobo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13917"/>
+        <location filename="../mainwindow.ui" line="13931"/>
         <source>F1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="13926"/>
+        <location filename="../mainwindow.ui" line="13940"/>
         <source>About Qt</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3143,20 +3148,20 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="196"/>
+        <location filename="../loadsave.cpp" line="178"/>
         <source>Unknown File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="197"/>
+        <location filename="../loadsave.cpp" line="179"/>
         <source>File: %1 
 isn&apos;t a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="96"/>
-        <location filename="../loadsave.cpp" line="673"/>
-        <location filename="../loadsave.cpp" line="1117"/>
+        <location filename="../loadsave.cpp" line="78"/>
+        <location filename="../loadsave.cpp" line="655"/>
+        <location filename="../loadsave.cpp" line="1099"/>
         <source>Cannot read file %1:
 %2.</source>
         <translation type="unfinished"></translation>
@@ -3197,85 +3202,70 @@ isn&apos;t a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="74"/>
-        <source>Save Final Fantasy 7 PS3 SaveGame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../loadsave.cpp" line="75"/>
-        <source>FF7 PS3 SaveGame(*.psv)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../loadsave.cpp" line="83"/>
-        <source>Save Final Fantasy 7 PSP SaveGame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../loadsave.cpp" line="84"/>
-        <source>FF7 PSP SaveGame(*.VMP)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../loadsave.cpp" line="2740"/>
+        <location filename="../loadsave.cpp" line="2722"/>
         <source>BASCUS-94163FF7-S01(*-S01);;BASCUS-94163FF7-S02(*-S02);;BASCUS-94163FF7-S03(*-S03);;BASCUS-94163FF7-S04(*-S04);;BASCUS-94163FF7-S05(*-S05);;BASCUS-94163FF7-S06(*-S06);;BASCUS-94163FF7-S07(*-S07);;BASCUS-94163FF7-S08(*-S08);;BASCUS-94163FF7-S09(*-S09);;BASCUS-94163FF7-S10(*-S10);;BASCUS-94163FF7-S11(*-S11);;BASCUS-94163FF7-S12(*-S12);;BASCUS-94163FF7-S13(*-S13);;BASCUS-94163FF7-S14(*-S14);;BASCUS-94163FF7-S15(*-S15)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3189"/>
+        <location filename="../mainwindow.cpp" line="3192"/>
         <source>Replay the bombing mission from right after you get off the first train, game might crash after the mission right before jessie talks to you about midgar.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3261"/>
+        <location filename="../mainwindow.cpp" line="3264"/>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent, if you wish to edit cloud or vincent after selecting this replay then change the box to the first(blank) entry and then when you have set those chars as you wish reselect this replay from the combobox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3277"/>
+        <location filename="../mainwindow.cpp" line="3280"/>
         <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="666"/>
+        <location filename="../mainwindow.cpp" line="3296"/>
+        <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../loadsave.cpp" line="648"/>
         <source>Select Final Fantasy 7 PSX Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="666"/>
+        <location filename="../loadsave.cpp" line="648"/>
         <source>PSX FF7 SaveGame (*-S*)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="1110"/>
+        <location filename="../loadsave.cpp" line="1092"/>
         <source>Select Final Fantasy 7 PSV Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="1110"/>
+        <location filename="../loadsave.cpp" line="1092"/>
         <source>PSX FF7 SaveGame (*.psv)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="88"/>
+        <location filename="../loadsave.cpp" line="70"/>
         <source>Cannot save This Type of File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="2496"/>
-        <location filename="../loadsave.cpp" line="2739"/>
+        <location filename="../loadsave.cpp" line="2478"/>
+        <location filename="../loadsave.cpp" line="2721"/>
         <source>Save Final Fantasy 7 SaveGame</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="2497"/>
+        <location filename="../loadsave.cpp" line="2479"/>
         <source>FF7 SaveGame(*.ff7)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="2246"/>
-        <location filename="../loadsave.cpp" line="2502"/>
-        <location filename="../loadsave.cpp" line="2745"/>
+        <location filename="../loadsave.cpp" line="2228"/>
+        <location filename="../loadsave.cpp" line="2484"/>
+        <location filename="../loadsave.cpp" line="2727"/>
         <source>Cannot write file %1:
 %2.</source>
         <translation type="unfinished"></translation>
@@ -3458,50 +3448,50 @@ isn&apos;t a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../about.ui" line="35"/>
+        <location filename="../about.ui" line="38"/>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	Black Chocobo Is A Save Game Editor For FF7. (PC + PSX)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	   Written By: sithlord48 using Qt&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                                                                  	             Version :: &lt;span style=&quot; font-weight:600;&quot;&gt;1.3&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;This program is free software: you can redistribute it and/or modify&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;it under the terms of the GNU General Public License as published by&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;the Free Software Foundation, either version 3 of the License, or&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;(at your option) any later version.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;This program is distributed in the hope that it will be useful,&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;but WITHOUT ANY WARRANTY; without even the implied warranty of&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;GNU General Public License for more details.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;You should have received a copy of the GNU General Public License&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;along with this program.  If not, see &lt;/span&gt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; text-decoration: underline; color:#508ed8;&quot;&gt;&amp;lt;http://www.gnu.org/licenses/&amp;gt;&lt;/span&gt;&lt;/a&gt; &lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                       &lt;/span&gt;  &lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Other Programers Who Helped:&lt;/span&gt;  &lt;span style=&quot; font-weight:600;&quot;&gt;                             &lt;/span&gt;	  &lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;vegeta_ss4 - Psx load/save function &amp;amp; internal checksuming fix&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                                       &lt;/span&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Translators:&lt;/span&gt; &lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Spanish - Eslava&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;French - Myst6re&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                                         &lt;/span&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Testers:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                                   Jari | Eslava | Timu | Chocobo Girl&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600; text-decoration: underline;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                                    &lt;/span&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Special Thanks:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Qhimm&lt;/span&gt; - for providing the source to jenova , this programs uses modified versions of his  savefile struct,item/materia lists  and string converting functions his source saved a lot of time durring the earily stages of devlopment.&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Dziugo&lt;/span&gt; - for  the old checksum program.&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Aali&lt;/span&gt; - for helping me see the light of stupid errors.&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;dhrosa&lt;/span&gt; - for helping me by providing a better understanding of Qt&apos;s functions when the help files alone where not enuff.&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Ms. Sith&lt;/span&gt; - Causes shes awesome.&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;	&lt;/span&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Black Chocobo&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; Is A Save Game Editor For FF7. (PC + PSX)&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;	   Written By: sithlord48 using Qt&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;                                                                  	             Version :: &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;1.4&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;This program is free software: you can redistribute it and/or modify&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;it under the terms of the GNU General Public License as published by&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;the Free Software Foundation, either version 3 of the License, or&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;(at your option) any later version.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;This program is distributed in the hope that it will be useful,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;but WITHOUT ANY WARRANTY; without even the implied warranty of&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;GNU General Public License for more details.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;You should have received a copy of the GNU General Public License&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;along with this program.  If not, see &lt;/span&gt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt; text-decoration: underline; color:#508ed8;&quot;&gt;&amp;lt;http://www.gnu.org/licenses/&amp;gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;                       &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; text-decoration: underline;&quot;&gt;Other Programers Who Helped:&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;  &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;                             &lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;	  &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;vegeta_ss4 - Psx load/save function &amp;amp; internal checksuming fix&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;                                       &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; text-decoration: underline;&quot;&gt;Translators:&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;Spanish - Eslava&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;French - Myst6re&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;                                         &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; text-decoration: underline;&quot;&gt;Testers:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;                                   Jari | Eslava | Timu | Chocobo Girl&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt; font-weight:600; text-decoration: underline;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600;&quot;&gt;                                    &lt;/span&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; text-decoration: underline;&quot;&gt;Special Thanks:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; text-decoration: underline;&quot;&gt;Qhimm&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; - for providing the source to jenova , this programs uses modified versions of his  savefile struct,item/materia lists  and string converting functions his source saved a lot of time durring the earily stages of devlopment.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; text-decoration: underline;&quot;&gt;Dziugo&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; - for  the old checksum program.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; text-decoration: underline;&quot;&gt;Aali&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; - for helping me see the light of stupid errors.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; text-decoration: underline;&quot;&gt;dhrosa&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; - for helping me by providing a better understanding of Qt&apos;s functions when the help files alone where not enuff.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; text-decoration: underline;&quot;&gt;Ms. Sith&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; - Causes shes awesome.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
