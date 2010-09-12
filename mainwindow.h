@@ -42,16 +42,12 @@ public slots:
 
 private slots:
 
-    //wip functions
+    //test functions to be removed....
     void on_pushButton_2_clicked();
     void on_pushButton_clicked();
-    void on_combo_add_mat_2_currentIndexChanged();
-    void on_combo_mat_type_currentIndexChanged(int index);
-    void on_btn_m_lvl5_clicked();
-    void on_btn_m_lvl4_clicked();
-    void on_btn_m_lvl3_clicked();
-    void on_btn_m_lvl2_clicked();
-    void on_btn_m_lvl1_clicked();
+
+    //wip functions
+
     void on_cb_replay_currentIndexChanged(int index);
     void on_sb_bm_progress1_valueChanged(int );
     void on_sb_bm_progress2_valueChanged(int );
@@ -92,25 +88,30 @@ private slots:
     void on_sb_love_aeris_valueChanged();
     void on_sb_love_barret_valueChanged();
 
-    //items/materia tab
+    //items tab
     void on_list_keyitems_itemChanged();
-    void on_tbl_materia_currentCellChanged(int row);
-    //void on_tbl_materia_cellClicked(int row);
-    void on_clearMateria_clicked();
-    void on_combo_add_mat_currentIndexChanged(int index);
-    void on_sb_addap_valueChanged(int );
-
-    void on_btn_eskillall_clicked();
-    void geteskills(int row);
-    void apply_eskills();
-    void on_btn_eskillclear_clicked();
-    void on_list_eskill_itemChanged();
-
     void on_tbl_itm_currentCellChanged(int row);
     void on_combo_additem_currentIndexChanged(int);
     void on_sb_addqty_valueChanged(int );
     void on_clearItem_clicked();
 
+    // Materia Tab
+    void on_tbl_materia_currentCellChanged(int row);
+    void on_clearMateria_clicked();
+    void on_combo_add_mat_currentIndexChanged(int index);
+    void on_sb_addap_valueChanged(int );
+    void on_btn_eskillall_clicked();
+    void geteskills(int row);
+    void apply_eskills();
+    void on_btn_eskillclear_clicked();
+    void on_list_eskill_itemChanged();
+    void on_combo_add_mat_2_currentIndexChanged();
+    void on_combo_mat_type_currentIndexChanged(int index);
+    void on_btn_m_lvl5_clicked();
+    void on_btn_m_lvl4_clicked();
+    void on_btn_m_lvl3_clicked();
+    void on_btn_m_lvl2_clicked();
+    void on_btn_m_lvl1_clicked();
     //chocobo tab
     void on_sb_stables_owned_valueChanged();
     void on_sb_stables_occupied_valueChanged(int );
@@ -174,9 +175,6 @@ private slots:
     void on_combo_pen3_currentIndexChanged(int index);
     void on_combo_pen4_currentIndexChanged(int index);
 
-    void loadFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
-    void saveFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
-
 
     // gui functions functions
     void setarmorslots(void);
@@ -187,15 +185,20 @@ private slots:
     void clearslot(int);
 
     //menu actions
+
+    //load save items
+    void loadFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
+    void saveFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
+    void on_actionExport_PC_Save_activated();
+    void on_actionFrom_PSX_Slot_activated();
+    void on_actionClear_Slot_activated();
+    void on_actionPaste_Slot_activated();
+
     void on_actionOpen_Save_File_activated();
     void on_actionSave_File_activated();
     void on_actionAbout_Qt_activated();
     void on_actionAbout_activated();
     void on_actionExport_PSX_activated();
-    void on_actionExport_PC_Save_activated();
-    void on_actionFrom_PSX_Slot_activated();
-    void on_actionClear_Slot_activated();
-    void on_actionPaste_Slot_activated();
     void on_actionCopy_Slot_activated();
     void on_actionNext_Slot_activated();
     void on_actionPrevious_Slot_activated();
