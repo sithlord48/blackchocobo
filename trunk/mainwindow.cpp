@@ -13,27 +13,25 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
+/*~~~~~~~~~~~Includes~~~~~~~~*/
 #include <QFileDialog> // for file dialogs
 #include <QDataStream> // for data manip
-//#include <QProcess>   // for calling ext processes (like checksum)
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "globals.h"    // contains checksumming functions
 #include "slotselect.h" // slot selection dialog stuff.
 #include "about.h"      // about dialog stuff.
-
 #include "loadsave.h" // Load / Save
 
+/*~~~~~GLOBALS~~~~~~*/
 bool load =false; //used for checking if data is initial load (to block some overrights when gui objects change)
 extern FF7 ff7; // our save file struct
-//FF7SLOT bufferslot;
 extern int s; //keeps track of our slot globally
 char chFF7[256];  // char arrary for converting to ff7 chars , so far not used.
-//QByteArray ff7file; // the raw file for reading
 int curchar; //keeps track of current character displayed
-int mslotsel = 0;
+int mslotsel = 0; //keeps track of materia slot on char selected
 
-// window functions to set up the gui
+/*~~~~~~~~GUI Set Up~~~~~~~*/
 
 MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindow)
 {
@@ -88,8 +86,6 @@ void MainWindow::changeEvent(QEvent *e)
 }
 
 //MENU ACTIONS
-
-
 
 void MainWindow::on_actionSlot_01_activated()
 {
@@ -194,8 +190,6 @@ void MainWindow::on_actionAbout_Qt_activated()
 {
     qApp->aboutQt();
 }
-
-
 
 //gui functions
 
@@ -1229,8 +1223,6 @@ int j= ui->tbl_itm->currentRow();
     }
     load =false;
  }
-
-
 void MainWindow::chocobo_refresh()
 {
  ui->sb_stables_owned->setValue(ff7.slot[s].stables);
@@ -2253,19 +2245,6 @@ void MainWindow::on_list_chars_itemChanged()
    ui->list_chars->setCurrentRow(j);
    }
 }
-void MainWindow::on_list_flyers_itemChanged()
-{
-    if(!load)
-    {int j= ui->list_flyers->currentRow();
-        ff7.slot[s].turtleflyers=0x40;
-        for (int i=0;i<6;i++)
-        {
-        ui->list_flyers->setCurrentRow(i);
-        if(ui->list_flyers->currentItem()->checkState() ==2){ff7.slot[s].turtleflyers |= (1 << i);}
-        }
-     ui->list_flyers->setCurrentRow(j);
-    }
-}
 void MainWindow::on_sb_curdisc_valueChanged()
 {
     ff7.slot[s].disc = ui->sb_curdisc->value();
@@ -2287,8 +2266,94 @@ void MainWindow::on_sb_love_yuffie_valueChanged()
     ff7.slot[s].love.yuffie = ui->sb_love_yuffie->value();
 }
 
-//items & materia Tab
+//Item Tab
 
+void MainWindow::on_list_flyers_itemChanged()
+{
+    if(!load)
+    {int j= ui->list_flyers->currentRow();
+        ff7.slot[s].turtleflyers=0x40;
+        for (int i=0;i<6;i++)
+        {
+        ui->list_flyers->setCurrentRow(i);
+        if(ui->list_flyers->currentItem()->checkState() ==2){ff7.slot[s].turtleflyers |= (1 << i);}
+        }
+     ui->list_flyers->setCurrentRow(j);
+    }
+}
+void MainWindow::on_list_keyitems_itemChanged()
+{
+
+    if (!load)
+    {
+        int j = ui->list_keyitems->currentRow();
+        for (int i=0;i<8;i++) { ff7.slot[s].keyitems[i] = 0; }
+        for (int i=0;i<51;i++)
+        {
+            ui->list_keyitems->setCurrentRow(i);
+            if (ui->list_keyitems->currentItem()->checkState() == Qt::Checked)
+                {
+                        ff7.slot[s].keyitems[div(i,8).quot] |= (1 << (div(i,8).rem));
+
+                }
+        }
+        ui->list_keyitems->setCurrentRow(j);
+    }
+
+}
+void MainWindow::on_clearItem_clicked()
+{
+    ff7.slot[s].items[ui->tbl_itm->currentRow()].id = 0xFF;
+    ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = 0xFF;
+    guirefresh();
+}
+void MainWindow::on_combo_additem_currentIndexChanged(int index)
+{
+   if(!load)
+    {   //we must also set the qty, since that determins how the table and the game will reconize the item and prevents bug#3014592.
+        if (index<256){ff7.slot[s].items[ui->tbl_itm->currentRow()].id = index;ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(ui->sb_addqty->value() * 2);}
+        else{ff7.slot[s].items[ui->tbl_itm->currentRow()].id = (index-256);ff7.slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(ui->sb_addqty->value()* 2) +1;}
+        guirefresh();
+    }
+}
+void MainWindow::on_sb_addqty_valueChanged(int value)
+{
+ if(!load)
+    {
+        if (ui->combo_additem->currentIndex()<256){ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(value * 2);}
+        else{ff7.slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(value* 2) +1;}
+        guirefresh();
+    }
+}
+void MainWindow::on_tbl_itm_currentCellChanged(int row)
+{
+if(!load)
+    {
+    if (ff7.slot[s].items[row].qty == 255 && ff7.slot[s].items[row].id == 255) // if you click on an empty slot add whats in the item and qty boxes.
+    {
+        if (ui->combo_additem->currentIndex()<256){ff7.slot[s].items[row].id = ui->combo_additem->currentIndex();ff7.slot[s].items[row].qty = quint8(ui->sb_addqty->value() * 2);}
+        else{ff7.slot[s].items[row].id = (ui->combo_additem->currentIndex()-256);ff7.slot[s].items[row].qty  = quint8(ui->sb_addqty->value()* 2) +1;}
+        guirefresh();
+    }
+    else
+    {
+        load =true;
+        if(ff7.slot[s].items[row].qty %2 ==0)
+        {
+        ui->combo_additem->setCurrentIndex(ff7.slot[s].items[row].id);
+        ui->sb_addqty->setValue(ff7.slot[s].items[row].qty/2);
+        }
+        else
+        {
+        ui->combo_additem->setCurrentIndex(ff7.slot[s].items[row].id+256);
+        ui->sb_addqty->setValue(ff7.slot[s].items[row].qty/2);
+        }
+        load = false;
+    }
+    }
+}
+
+//materia Tab
 
 void MainWindow::on_tbl_materia_currentCellChanged(int row)
 {
@@ -2348,7 +2413,6 @@ void MainWindow::on_sb_addap_valueChanged(int value)
         guirefresh();
     }
 }
-
 void MainWindow::on_combo_add_mat_currentIndexChanged(int index)
 {
     ui->combo_mat_type->setCurrentIndex(Materias[index].type);
@@ -2406,7 +2470,6 @@ void MainWindow::on_combo_mat_type_currentIndexChanged(int index)
         for(int i=0;i<0x5B;i++){if(index==Materias[i].type){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),Materias[i].name);}}
     }
 }
-
 void MainWindow::on_combo_add_mat_2_currentIndexChanged()
 {
     if(!load)
@@ -2421,35 +2484,6 @@ void MainWindow::on_combo_add_mat_2_currentIndexChanged()
      else{ui->eskill_group->setVisible(false);ui->sb_addap->setEnabled(1);}
     }
 }
-
-void MainWindow::on_list_keyitems_itemChanged()
-{
-
-    if (!load)
-    {
-        int j = ui->list_keyitems->currentRow();
-        for (int i=0;i<8;i++) { ff7.slot[s].keyitems[i] = 0; }
-        for (int i=0;i<51;i++)
-        {
-            ui->list_keyitems->setCurrentRow(i);
-            if (ui->list_keyitems->currentItem()->checkState() == Qt::Checked)
-                {
-                        ff7.slot[s].keyitems[div(i,8).quot] |= (1 << (div(i,8).rem));
-
-                }
-        }
-        ui->list_keyitems->setCurrentRow(j);
-    }
-
-}
-
-void MainWindow::on_clearItem_clicked()
-{
-    ff7.slot[s].items[ui->tbl_itm->currentRow()].id = 0xFF;
-    ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = 0xFF;
-    guirefresh();
-}
-
 void MainWindow::on_clearMateria_clicked()
 {
     ff7.slot[s].materias[ui->tbl_materia->currentRow()].id = 0xFF;
@@ -2458,54 +2492,6 @@ void MainWindow::on_clearMateria_clicked()
     ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2] = 0xFF;
     guirefresh();
 }
-
-void MainWindow::on_combo_additem_currentIndexChanged(int index)
-{
-   if(!load)
-    {   //we must also set the qty, since that determins how the table and the game will reconize the item and prevents bug#3014592.
-        if (index<256){ff7.slot[s].items[ui->tbl_itm->currentRow()].id = index;ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(ui->sb_addqty->value() * 2);}
-        else{ff7.slot[s].items[ui->tbl_itm->currentRow()].id = (index-256);ff7.slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(ui->sb_addqty->value()* 2) +1;}
-        guirefresh();
-    }
-}
-
-void MainWindow::on_sb_addqty_valueChanged(int value)
-{
- if(!load)
-    {
-        if (ui->combo_additem->currentIndex()<256){ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(value * 2);}
-        else{ff7.slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(value* 2) +1;}
-        guirefresh();
-    }
-}
-void MainWindow::on_tbl_itm_currentCellChanged(int row)
-{
-if(!load)
-    {
-    if (ff7.slot[s].items[row].qty == 255 && ff7.slot[s].items[row].id == 255) // if you click on an empty slot add whats in the item and qty boxes.
-    {
-        if (ui->combo_additem->currentIndex()<256){ff7.slot[s].items[row].id = ui->combo_additem->currentIndex();ff7.slot[s].items[row].qty = quint8(ui->sb_addqty->value() * 2);}
-        else{ff7.slot[s].items[row].id = (ui->combo_additem->currentIndex()-256);ff7.slot[s].items[row].qty  = quint8(ui->sb_addqty->value()* 2) +1;}
-        guirefresh();
-    }
-    else
-    {
-        load =true;
-        if(ff7.slot[s].items[row].qty %2 ==0)
-        {
-        ui->combo_additem->setCurrentIndex(ff7.slot[s].items[row].id);
-        ui->sb_addqty->setValue(ff7.slot[s].items[row].qty/2);
-        }
-        else
-        {
-        ui->combo_additem->setCurrentIndex(ff7.slot[s].items[row].id+256);
-        ui->sb_addqty->setValue(ff7.slot[s].items[row].qty/2);
-        }
-        load = false;
-    }
-    }
-}
-
 void MainWindow::on_btn_eskillall_clicked()
 {
     for (int i=0;i<24;i++)
@@ -2513,19 +2499,18 @@ void MainWindow::on_btn_eskillall_clicked()
         ui->list_eskill->setCurrentRow(i);
         ui->list_eskill->currentItem()->setCheckState(Qt::Checked);
     }
-        apply_eskills();
 }
+
 void MainWindow::geteskills(int row)
 {
     quint32 temp = ff7.slot[s].materias[row].ap[0] |(ff7.slot[s].materias[row].ap[1] << 8) | (ff7.slot[s].materias[row].ap[2] << 16);
     ui->sb_addap->setValue(temp);
     load = true;
+    on_btn_eskillclear_clicked();
     for (int i=0;i<24;i++)
                 {
                     ui->list_eskill->setCurrentRow(i);
                     if ((1 << i) & temp){ui->list_eskill->currentItem()->setCheckState(Qt::Checked);}
-                    else{ui->list_eskill->currentItem()->setCheckState(Qt::Unchecked);}
-
                 }
     load = false;
 }
@@ -2539,8 +2524,7 @@ void MainWindow::on_btn_eskillclear_clicked()
     {
         ui->list_eskill->setCurrentRow(i);
         ui->list_eskill->currentItem()->setCheckState(Qt::Unchecked);
-    }
-    apply_eskills();
+    }//loop thru and uncheck no need to apply each one should thrown an itemChanged() event
 }
 void MainWindow::apply_eskills()
 {
@@ -2551,16 +2535,16 @@ if(!load)
    quint32 ap_temp =0;
    quint32 temp =0;
    for (int i=0;i<24;i++)
-           {
+       {
        ui->list_eskill->setCurrentRow(i);
        if (ui->list_eskill->currentItem()->checkState() == Qt::Checked)
-           temp |= (1 << i);
-           }
+           {temp |= (1 << i);}
+       }
 
             ap_temp= (temp & 0xFFFFFF);
-            int a = ap_temp & 0xff;
-            int b = (ap_temp & 0xff00) >>8;
-            int c = (ap_temp & 0xff0000) >> 16;
+            quint8 a = ap_temp & 0xff;
+            quint8 b = (ap_temp & 0xff00) >>8;
+            quint8 c = (ap_temp & 0xff0000) >> 16;
             ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[0]=a;
             ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[1]=b;
             ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2]=c;
@@ -2568,6 +2552,7 @@ if(!load)
     ui->list_eskill->setCurrentRow(j);
     ui->sb_addap->setValue(ap_temp);
     load =false;
+    guirefresh();
     }
 }
 
@@ -3073,6 +3058,50 @@ void MainWindow::on_a_m_s8_clicked()
     load=false;
 }
 
+void MainWindow::geteskills2(int row)
+{
+    quint32 temp = ff7.slot[s].chars[curchar].materias[row].ap[0] |(ff7.slot[s].chars[curchar].materias[row].ap[1] << 8) | (ff7.slot[s].chars[curchar].materias[row].ap[2] << 16);
+    ui->sb_addap_slot->setValue(temp);
+        for (int i=0;i<24;i++)
+                {
+                    ui->list_eskill_2->setCurrentRow(i);
+                    if ((1 << i) & temp){ui->list_eskill_2->currentItem()->setCheckState(Qt::Checked);}
+                    else{ui->list_eskill_2->currentItem()->setCheckState(Qt::Unchecked);}
+                }
+}
+void MainWindow::on_list_eskill_2_itemChanged()
+{
+    apply_eskills2();
+}
+void MainWindow::apply_eskills2()
+{
+if(!load)
+    load =true;
+   {
+   int j = ui->list_eskill_2->currentRow();
+   quint32 ap_temp =0;
+   quint32 temp =0;
+   //on_list_eskill_2_btn
+   for (int i=0;i<24;i++)
+           {
+                ui->list_eskill_2->setCurrentRow(i);
+                if (ui->list_eskill_2->currentItem()->checkState() == Qt::Checked){temp |= (1 << i);}
+                else{};
+           }
+            ap_temp=(temp & 0xFFFFFF);
+            quint8 a = ap_temp & 0xff;
+            quint8 b = (ap_temp & 0xff00) >>8;
+            quint8 c = (ap_temp & 0xff0000) >> 16;
+            ff7.slot[s].chars[curchar].materias[mslotsel].ap[0]=a;
+            ff7.slot[s].chars[curchar].materias[mslotsel].ap[1]=b;
+            ff7.slot[s].chars[curchar].materias[mslotsel].ap[2]=c;
+    ui->list_eskill_2->setCurrentRow(j);
+    ui->sb_addap_slot->setValue(ap_temp);
+    load =false;
+
+    }
+}
+
 
 // game options
 
@@ -3301,52 +3330,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     else {ui->label_replaynote->setText("         INFO ON CURRENTLY SELECTED REPLAY MISSION");}
 }
 
-void MainWindow::geteskills2(int row)
-{
-    quint32 temp = ff7.slot[s].chars[curchar].materias[row].ap[0] |(ff7.slot[s].chars[curchar].materias[row].ap[1] << 8) | (ff7.slot[s].chars[curchar].materias[row].ap[2] << 16);
-    ui->sb_addap_slot->setValue(temp);
-        for (int i=0;i<24;i++)
-                {
-                    ui->list_eskill_2->setCurrentRow(i);
-                    if ((1 << i) & temp){ui->list_eskill_2->currentItem()->setCheckState(Qt::Checked);}
-                    else{ui->list_eskill_2->currentItem()->setCheckState(Qt::Unchecked);}
-                }
-}
-
-void MainWindow::on_list_eskill_2_itemChanged()
-{
-    apply_eskills2();
-}
-
-void MainWindow::apply_eskills2()
-{
-if(!load)
-    load =true;
-   {
-   int j = ui->list_eskill_2->currentRow();
-   quint32 ap_temp =0;
-   quint32 temp =0;
-   for (int i=0;i<24;i++)
-           {
-                ui->list_eskill_2->setCurrentRow(i);
-                if (ui->list_eskill_2->currentItem()->checkState() == Qt::Checked){temp |= (1 << i);}
-                else{};
-           }
-            ap_temp=(temp & 0xFFFFFF);
-            int a = ap_temp & 0xff;
-            int b = (ap_temp & 0xff00) >>8;
-            int c = (ap_temp & 0xff0000) >> 16;
-            ff7.slot[s].chars[curchar].materias[mslotsel].ap[0]=a;
-            ff7.slot[s].chars[curchar].materias[mslotsel].ap[1]=b;
-            ff7.slot[s].chars[curchar].materias[mslotsel].ap[2]=c;
-    ui->list_eskill_2->setCurrentRow(j);
-    ui->sb_addap_slot->setValue(ap_temp);
-    load =false;
-
-    }
-}
-
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS FOR TESTING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_pushButton_clicked() //used for testing
 {
     for(int i=0;i<320;i++)
