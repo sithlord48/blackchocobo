@@ -3345,3 +3345,25 @@ if(!load)
     }
 }
 
+
+void MainWindow::on_pushButton_clicked() //used for testing
+{
+    for(int i=0;i<320;i++)
+    {
+    ff7.slot[s].items[i].id=0xFF;
+    ff7.slot[s].items[i].qty=0xFF;
+    }
+    guirefresh();
+}
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    for (int i=0;i<200;i++)
+    {
+    ff7.slot[s].materias[i].id =0xFF;
+    ff7.slot[s].materias[i].ap[0]=0xFF;
+    ff7.slot[s].materias[i].ap[1]=0xFF;
+    ff7.slot[s].materias[i].ap[2]=0xFF;
+    }
+    guirefresh();
+}
