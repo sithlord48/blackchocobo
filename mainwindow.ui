@@ -2583,8 +2583,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>94</width>
-         <height>24</height>
+         <width>100</width>
+         <height>30</height>
         </rect>
        </property>
        <attribute name="label">
@@ -4901,6 +4901,19 @@
        </item>
       </layout>
      </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>450</y>
+        <width>121</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Remove ALL Items</string>
+      </property>
+     </widget>
     </widget>
     <widget class="QWidget" name="tab_4">
      <attribute name="title">
@@ -6160,6 +6173,19 @@
         <width>165</width>
         <height>0</height>
        </size>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton_2">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>440</y>
+        <width>151</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Remove ALL Materia</string>
       </property>
      </widget>
     </widget>
