@@ -2653,6 +2653,7 @@ void MainWindow::on_line_name_lostFocus()
 void MainWindow::on_sb_lvl_valueChanged()
 {
     ff7.slot[s].chars[curchar].level = ui->sb_lvl->value();
+    ff7.slot[s].desc.level = ui->sb_lvl->value();
 }
 void MainWindow::on_sb_curhp_valueChanged()
 {
