@@ -33,7 +33,7 @@ void MainWindow::on_actionOpen_Save_File_activated()
 
     QString fileName = QFileDialog::getOpenFileName(this,
                                         tr("Open Final Fantasy 7 Save"),(""),
-                                        tr("Known FF7 Save Types (*.ff7 BAS* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)"));
+                                        tr("Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)"));
 
     if (!fileName.isEmpty())
         loadFileFull(fileName);
