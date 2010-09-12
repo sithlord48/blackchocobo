@@ -43,6 +43,8 @@ public slots:
 private slots:
 
     //wip functions
+    void on_pushButton_2_clicked();
+    void on_pushButton_clicked();
     void on_combo_add_mat_2_currentIndexChanged();
     void on_combo_mat_type_currentIndexChanged(int index);
     void on_btn_m_lvl5_clicked();
