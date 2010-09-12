@@ -2747,10 +2747,12 @@ void MainWindow::on_cb_front_clicked(bool checked)
 void MainWindow::on_cb_fury_clicked(bool checked)
 {
     if(checked){ui->cb_sadness->setChecked(0); ff7.slot[s].chars[curchar].flags[0] =32;}
+    else {ff7.slot[s].chars[curchar].flags[0]=0;}
 }
 void MainWindow::on_cb_sadness_clicked(bool checked)
 {
    if(checked){ui->cb_fury->setChecked(0); ff7.slot[s].chars[curchar].flags[0] =16;}
+   else {ff7.slot[s].chars[curchar].flags[0]=0;}
 }
 //char limit stuff
 void MainWindow::on_sb_used1_valueChanged()
