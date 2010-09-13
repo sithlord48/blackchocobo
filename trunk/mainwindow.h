@@ -43,6 +43,18 @@ public slots:
 private slots:
 
     //test functions to be removed....
+    void on_slide_lr_b_valueChanged(int value);
+    void on_slide_lr_g_valueChanged(int value);
+    void on_slide_lr_r_valueChanged(int value);
+    void on_slide_ll_b_valueChanged(int value);
+    void on_slide_ll_g_valueChanged(int value);
+    void on_slide_ll_r_valueChanged(int value);
+    void on_slide_ur_b_valueChanged(int value);
+    void on_slide_ur_g_valueChanged(int value);
+    void on_slide_ur_r_valueChanged(int value);
+    void on_slide_ul_b_valueChanged(int value);
+    void on_slide_ul_g_valueChanged(int value);
+    void on_slide_ul_r_valueChanged(int value);
     void on_pushButton_2_clicked();
     void on_pushButton_clicked();
 
