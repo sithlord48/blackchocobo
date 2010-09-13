@@ -171,7 +171,6 @@ void MainWindow::on_actionClear_Slot_activated()
 {
     clearslot(s);
     guirefresh();
-
 }
 void MainWindow::on_actionPrevious_Slot_activated()
 {
@@ -215,9 +214,11 @@ void MainWindow::charupdate(void)
         else{ui->cb_id->setChecked(false);}
     }
     ui->line_name->clear();
-    for (int n=0;n<12;n++){
+    for (int n=0;n<12;n++)
+    {
         if(chPC[ff7.slot[s].chars[curchar].name[n]] =='\0'){break;}
-        else{this->ui->line_name->setText( this->ui->line_name->text() + chPC[ff7.slot[s].chars[curchar].name[n]]);}}
+        else{this->ui->line_name->setText( this->ui->line_name->text() + chPC[ff7.slot[s].chars[curchar].name[n]]);}
+    }
     ui->sb_exp->setValue(ff7.slot[s].chars[curchar].exp);
     ui->sb_next->setValue(ff7.slot[s].chars[curchar].expNext);
     ui->sb_lvl->setValue(ff7.slot[s].chars[curchar].level);
@@ -280,8 +281,8 @@ void MainWindow::charupdate(void)
     if(ff7.slot[s].chars[curchar].materias[5].id != 0xFF){ui->w_m_s6->setToolTip(Materias[ff7.slot[s].chars[curchar].materias[5].id].name);}else{ui->w_m_s6->setToolTip(QString("Empty"));}
     if(ff7.slot[s].chars[curchar].materias[6].id != 0xFF){ui->w_m_s7->setToolTip(Materias[ff7.slot[s].chars[curchar].materias[6].id].name);}else{ui->w_m_s7->setToolTip(QString("Empty"));}
     if(ff7.slot[s].chars[curchar].materias[7].id != 0xFF){ui->w_m_s8->setToolTip(Materias[ff7.slot[s].chars[curchar].materias[7].id].name);}else{ui->w_m_s8->setToolTip(QString("Empty"));}
-    MainWindow::setarmorslots();
-    MainWindow::setweaponslots();
+    setarmorslots();
+    setweaponslots();
     ui->sb_strbonus->setValue(ff7.slot[s].chars[curchar].strength_bonus);
     ui->sb_vitbonus->setValue(ff7.slot[s].chars[curchar].vitality_bonus);
     ui->sb_magbonus->setValue(ff7.slot[s].chars[curchar].magic_bonus);
@@ -289,6 +290,11 @@ void MainWindow::charupdate(void)
     ui->sb_dexbonus->setValue(ff7.slot[s].chars[curchar].dexterity_bonus);
     ui->sb_lckbonus->setValue(ff7.slot[s].chars[curchar].luck_bonus);
     ui->pbar_level->setValue(ff7.slot[s].chars[curchar].flags[2]);
+    ui->lcd_z_4_0->display(ff7.slot[s].chars[curchar].z_4[0]);
+    ui->lcd_z_4_1->display(ff7.slot[s].chars[curchar].z_4[1]);
+    ui->lcd_z_4_2->display(ff7.slot[s].chars[curchar].z_4[2]);
+    ui->lcd_z_4_3->display(ff7.slot[s].chars[curchar].z_4[3]);
+
 }
 void MainWindow::setarmorslots(void)
 {
@@ -872,15 +878,16 @@ for (int i=0;i<51;i++)// key items
     ui->sb_time_hour->setValue(ff7.slot[s].time / 3600);
     ui->sb_time_min->setValue(ff7.slot[s].time/60%60);
     ui->sb_time_sec->setValue(ff7.slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+
     ui->slide_ul_r->setValue(ff7.slot[s].colors[0][0]);
     ui->slide_ul_g->setValue(ff7.slot[s].colors[0][1]);
     ui->slide_ul_b->setValue(ff7.slot[s].colors[0][2]);
     ui->slide_ur_r->setValue(ff7.slot[s].colors[1][0]);
-    ui->slide_ur_b->setValue(ff7.slot[s].colors[1][1]);
-    ui->slide_ur_g->setValue(ff7.slot[s].colors[1][2]);
+    ui->slide_ur_g->setValue(ff7.slot[s].colors[1][1]);
+    ui->slide_ur_b->setValue(ff7.slot[s].colors[1][2]);
     ui->slide_ll_r->setValue(ff7.slot[s].colors[2][0]);
-    ui->slide_ll_b->setValue(ff7.slot[s].colors[2][1]);
-    ui->slide_ll_g->setValue(ff7.slot[s].colors[2][2]);
+    ui->slide_ll_g->setValue(ff7.slot[s].colors[2][1]);
+    ui->slide_ll_b->setValue(ff7.slot[s].colors[2][2]);
     ui->slide_lr_r->setValue(ff7.slot[s].colors[3][0]);
     ui->slide_lr_g->setValue(ff7.slot[s].colors[3][1]);
     ui->slide_lr_b->setValue(ff7.slot[s].colors[3][2]);
@@ -1424,7 +1431,8 @@ ui->combo_pen4->setCurrentIndex(ff7.slot[s].pennedchocos[3]);
 
 //Char Buttons.
 
-void MainWindow::on_btn_cloud_clicked(){
+void MainWindow::on_btn_cloud_clicked()
+{
     curchar=0;
     load=true;
     charupdate();
@@ -3351,4 +3359,56 @@ void MainWindow::on_pushButton_2_clicked()
     ff7.slot[s].materias[i].ap[2]=0xFF;
     }
     guirefresh();
+}
+
+void MainWindow::on_slide_ul_r_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[0][0] = value;}
+}
+void MainWindow::on_slide_ul_g_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[0][1] = value;}
+}
+void MainWindow::on_slide_ul_b_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[0][2] = value;}
+}
+
+void MainWindow::on_slide_ur_r_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[1][0] = value;}
+}
+void MainWindow::on_slide_ur_g_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[1][1] = value;}
+}
+void MainWindow::on_slide_ur_b_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[1][2] = value;}
+}
+
+void MainWindow::on_slide_ll_r_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[2][0] = value;}
+}
+void MainWindow::on_slide_ll_g_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[2][1] = value;}
+}
+void MainWindow::on_slide_ll_b_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[2][2] = value;}
+}
+
+void MainWindow::on_slide_lr_r_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[3][0] = value;}
+}
+void MainWindow::on_slide_lr_g_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[3][1] = value;}
+}
+void MainWindow::on_slide_lr_b_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[3][2] = value;}
 }
