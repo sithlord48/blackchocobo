@@ -3412,3 +3412,14 @@ void MainWindow::on_slide_lr_b_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[3][2] = value;}
 }
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    for(int i=0;i<48;i++)
+    {
+    ff7.slot[s].stolen[i].id =0xFF;
+    ff7.slot[s].stolen[i].ap[0]=0xFF;
+    ff7.slot[s].stolen[i].ap[1]=0xFF;
+    ff7.slot[s].stolen[i].ap[2]=0xFF;
+    }
+}
