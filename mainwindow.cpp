@@ -2279,7 +2279,7 @@ void MainWindow::on_sb_love_yuffie_valueChanged()
 void MainWindow::on_list_flyers_itemChanged()
 {
     if(!load)
-    {int j= ui->list_flyers->currentRow();
+    {int j=ui->list_flyers->currentRow();
         ff7.slot[s].turtleflyers=0x40;
         for (int i=0;i<6;i++)
         {
@@ -2302,7 +2302,6 @@ void MainWindow::on_list_keyitems_itemChanged()
             if (ui->list_keyitems->currentItem()->checkState() == Qt::Checked)
                 {
                         ff7.slot[s].keyitems[div(i,8).quot] |= (1 << (div(i,8).rem));
-
                 }
         }
         ui->list_keyitems->setCurrentRow(j);
@@ -3112,6 +3111,57 @@ if(!load)
 
 
 // game options
+void MainWindow::on_slide_ul_r_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[0][0] = value;}
+}
+void MainWindow::on_slide_ul_g_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[0][1] = value;}
+}
+void MainWindow::on_slide_ul_b_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[0][2] = value;}
+}
+
+void MainWindow::on_slide_ur_r_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[1][0] = value;}
+}
+void MainWindow::on_slide_ur_g_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[1][1] = value;}
+}
+void MainWindow::on_slide_ur_b_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[1][2] = value;}
+}
+
+void MainWindow::on_slide_ll_r_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[2][0] = value;}
+}
+void MainWindow::on_slide_ll_g_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[2][1] = value;}
+}
+void MainWindow::on_slide_ll_b_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[2][2] = value;}
+}
+
+void MainWindow::on_slide_lr_r_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[3][0] = value;}
+}
+void MainWindow::on_slide_lr_g_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[3][1] = value;}
+}
+void MainWindow::on_slide_lr_b_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].colors[3][2] = value;}
+}
 
 void MainWindow::on_slide_battlespeed_valueChanged(int value)
 {
@@ -3361,58 +3411,6 @@ void MainWindow::on_pushButton_2_clicked()
     guirefresh();
 }
 
-void MainWindow::on_slide_ul_r_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].colors[0][0] = value;}
-}
-void MainWindow::on_slide_ul_g_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].colors[0][1] = value;}
-}
-void MainWindow::on_slide_ul_b_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].colors[0][2] = value;}
-}
-
-void MainWindow::on_slide_ur_r_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].colors[1][0] = value;}
-}
-void MainWindow::on_slide_ur_g_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].colors[1][1] = value;}
-}
-void MainWindow::on_slide_ur_b_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].colors[1][2] = value;}
-}
-
-void MainWindow::on_slide_ll_r_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].colors[2][0] = value;}
-}
-void MainWindow::on_slide_ll_g_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].colors[2][1] = value;}
-}
-void MainWindow::on_slide_ll_b_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].colors[2][2] = value;}
-}
-
-void MainWindow::on_slide_lr_r_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].colors[3][0] = value;}
-}
-void MainWindow::on_slide_lr_g_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].colors[3][1] = value;}
-}
-void MainWindow::on_slide_lr_b_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].colors[3][2] = value;}
-}
-
 void MainWindow::on_pushButton_3_clicked()
 {
     for(int i=0;i<48;i++)
@@ -3422,4 +3420,5 @@ void MainWindow::on_pushButton_3_clicked()
     ff7.slot[s].stolen[i].ap[1]=0xFF;
     ff7.slot[s].stolen[i].ap[2]=0xFF;
     }
+    guirefresh();
 }
