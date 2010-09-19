@@ -43,6 +43,7 @@ public slots:
 private slots:
 
     //test functions to be removed....
+    void on_cb_show_test_buttons_stateChanged(int );
     void on_pushButton_3_clicked();
     void on_slide_lr_b_valueChanged(int value);
     void on_slide_lr_g_valueChanged(int value);

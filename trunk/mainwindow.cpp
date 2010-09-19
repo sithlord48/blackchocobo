@@ -66,6 +66,9 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->eskill_group->setVisible(false);
     ui->eskill_group_2->setVisible(false);
     ui->combo_add_mat->setVisible(false);
+    ui->pushButton->setVisible(false);
+    ui->pushButton_2->setVisible(false);
+    ui->pushButton_3->setVisible(false);
 
     load=false;
 }
@@ -3369,7 +3372,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     ui->sb_coordz->setValue(26);
     ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too."));
     }
-    else if (index == 4)//Aeris Death
+    else if (index == 4)//Aerith Death
     {
     ui->sb_curdisc->setValue(1);
     ui->sb_mprogress->setValue(664);
@@ -3383,7 +3386,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     ui->sb_coordy->setValue(793);
     ui->sb_coordz->setValue(243);
     ui->list_chars->item(3)->setCheckState(Qt::Unchecked);
-    ui->label_replaynote->setText(tr("Replay the death of Aeris.This option Will remove Aeris from your PHS"));
+    ui->label_replaynote->setText(tr("Replay the death of Aerith.This option Will remove Aerith from your PHS"));
     }
     else {ui->label_replaynote->setText("         INFO ON CURRENTLY SELECTED REPLAY MISSION");}
 }
@@ -3421,4 +3424,20 @@ void MainWindow::on_pushButton_3_clicked()
     ff7.slot[s].stolen[i].ap[2]=0xFF;
     }
     guirefresh();
+}
+
+void MainWindow::on_cb_show_test_buttons_stateChanged(int )
+{
+   if(ui->cb_show_test_buttons->isChecked())
+    {
+       ui->pushButton->setVisible(true);
+       ui->pushButton_2->setVisible(true);
+       ui->pushButton_3->setVisible(true);
+   }
+   else
+   {
+       ui->pushButton->setVisible(false);
+       ui->pushButton_2->setVisible(false);
+       ui->pushButton_3->setVisible(false);
+   }
 }

@@ -156,7 +156,7 @@
          </item>
          <item>
           <property name="text">
-           <string>Aeris</string>
+           <string>Aerith</string>
           </property>
           <property name="icon">
            <iconset resource="images.qrc">
@@ -267,7 +267,7 @@
          </item>
          <item>
           <property name="text">
-           <string>Aeris</string>
+           <string>Aerith</string>
           </property>
           <property name="icon">
            <iconset resource="images.qrc">
@@ -378,7 +378,7 @@
          </item>
          <item>
           <property name="text">
-           <string>Aeris</string>
+           <string>Aerith</string>
           </property>
           <property name="icon">
            <iconset resource="images.qrc">
@@ -763,7 +763,7 @@
          <x>0</x>
          <y>0</y>
          <width>423</width>
-         <height>419</height>
+         <height>423</height>
         </rect>
        </property>
        <attribute name="label">
@@ -2720,8 +2720,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>423</width>
-         <height>419</height>
+         <width>96</width>
+         <height>26</height>
         </rect>
        </property>
        <attribute name="label">
@@ -5050,6 +5050,9 @@
       </layout>
      </widget>
      <widget class="QPushButton" name="pushButton">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="geometry">
        <rect>
         <x>220</x>
@@ -12393,7 +12396,7 @@
       </item>
       <item>
        <property name="text">
-        <string>Aeris' Death</string>
+        <string>Aerith's Death</string>
        </property>
       </item>
      </widget>
@@ -13999,6 +14002,19 @@
      </property>
     </widget>
    </widget>
+   <widget class="QCheckBox" name="cb_show_test_buttons">
+    <property name="geometry">
+     <rect>
+      <x>420</x>
+      <y>0</y>
+      <width>141</width>
+      <height>17</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Show Test Buttons</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -14006,7 +14022,7 @@
      <x>0</x>
      <y>0</y>
      <width>730</width>
-     <height>22</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
