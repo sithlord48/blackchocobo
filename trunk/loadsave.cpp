@@ -63,7 +63,23 @@ else if(ff7.savetype==3)
 {
     QString fileName = QFileDialog::getSaveFileName(this,
                                                     tr("Save Final Fantasy 7 MC SaveGame"), "",
-                tr("FF7 MC SaveGame(*.mcr),(*.mcd)"));
+                tr("FF7 MC SaveGame(*.mcr *.mcd)"));
+    if (!fileName.isEmpty())
+        saveFileFull(fileName);
+}
+else if(ff7.savetype==4)
+{
+    QString fileName = QFileDialog::getSaveFileName(this,
+                                                    tr("Save Final Fantasy 7 PSV SaveGame"), "",
+                tr("FF7 PSV SaveGame(*.psv)"));
+    if (!fileName.isEmpty())
+        saveFileFull(fileName);
+}
+else if(ff7.savetype==5)
+{
+    QString fileName = QFileDialog::getSaveFileName(this,
+                                                    tr("Save Final Fantasy 7  PSP SaveGame"), "",
+                tr("FF7 PSP SaveGame(*.vmp)"));
     if (!fileName.isEmpty())
         saveFileFull(fileName);
 }
