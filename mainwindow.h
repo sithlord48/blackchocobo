@@ -43,8 +43,9 @@ public slots:
 private slots:
 
     //test functions to be removed....
-    void on_cb_show_test_buttons_stateChanged(int );
-    void on_pushButton_3_clicked();
+
+    void on_cb_show_test_buttons_stateChanged();
+    void on_btn_remove_all_stolen_clicked();
     void on_slide_lr_b_valueChanged(int value);
     void on_slide_lr_g_valueChanged(int value);
     void on_slide_lr_r_valueChanged(int value);
@@ -57,8 +58,8 @@ private slots:
     void on_slide_ul_b_valueChanged(int value);
     void on_slide_ul_g_valueChanged(int value);
     void on_slide_ul_r_valueChanged(int value);
-    void on_pushButton_2_clicked();
-    void on_pushButton_clicked();
+    void on_btn_remove_all_materia_clicked();
+    void on_btn_remove_all_items_clicked();
 
     //wip functions
 
@@ -95,7 +96,8 @@ private slots:
 
     //other tab
     void on_list_flyers_itemChanged();
-    void on_list_chars_itemChanged();
+    void on_list_chars_unlocked_itemChanged();
+    void on_list_phs_chars_itemChanged();
     void on_sb_curdisc_valueChanged();
     void on_sb_love_yuffie_valueChanged();
     void on_sb_love_tifa_valueChanged();

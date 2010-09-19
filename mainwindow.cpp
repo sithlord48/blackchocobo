@@ -66,9 +66,19 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->eskill_group->setVisible(false);
     ui->eskill_group_2->setVisible(false);
     ui->combo_add_mat->setVisible(false);
-    ui->pushButton->setVisible(false);
-    ui->pushButton_2->setVisible(false);
-    ui->pushButton_3->setVisible(false);
+
+    //testing stuff.
+    ui->btn_remove_all_items->setVisible(false);
+    ui->btn_remove_all_materia->setVisible(false);
+    ui->btn_remove_all_stolen->setVisible(false);
+    ui->lbl_z_4_0->setVisible(false);
+    ui->lbl_z_4_1->setVisible(false);
+    ui->lbl_z_4_2->setVisible(false);
+    ui->lbl_z_4_3->setVisible(false);
+    ui->lcd_z_4_0->setVisible(false);
+    ui->lcd_z_4_1->setVisible(false);
+    ui->lcd_z_4_2->setVisible(false);
+    ui->lcd_z_4_3->setVisible(false);
 
     load=false;
 }
@@ -855,9 +865,15 @@ for (int i=0;i<6;i++)//flyers
 }
 for (int i=0;i<9;i++)//phsmask
 {
-    ui->list_chars->setCurrentRow(i);
-    if ((1 << i) & ff7.slot[s].phsmask){ui->list_chars->currentItem()->setCheckState(Qt::Unchecked);}
-    else{ui->list_chars->currentItem()->setCheckState(Qt::Checked);}
+    ui->list_phs_chars->setCurrentRow(i);
+    if ((1 << i) & ff7.slot[s].phsmask){ui->list_phs_chars->currentItem()->setCheckState(Qt::Unchecked);}
+    else{ui->list_phs_chars->currentItem()->setCheckState(Qt::Checked);}
+}
+for (int i=0;i<9;i++)//unlocked
+{
+    ui->list_chars_unlocked->setCurrentRow(i);
+    if ((1 << i) & ff7.slot[s].unlockedchars){ui->list_chars_unlocked->currentItem()->setCheckState(Qt::Checked);}
+    else{ui->list_chars_unlocked->currentItem()->setCheckState(Qt::Unchecked);}
 }
 for (int i=0;i<51;i++)// key items
 {
@@ -2233,27 +2249,37 @@ void MainWindow::on_line_c6_name_lostFocus()
 
 //others tab
 
-void MainWindow::on_list_chars_itemChanged()
+void MainWindow::on_list_phs_chars_itemChanged()
 {
     if(!load)
     {
     quint16 temp =0;
-    int j = ui->list_chars->currentRow();
+    int j = ui->list_phs_chars->currentRow();
     for (int i=0;i<9;i++)
     {
-        ui->list_chars->setCurrentRow(i);
-        if(ui->list_chars->currentItem()->checkState() ==Qt::Unchecked)
+        ui->list_phs_chars->setCurrentRow(i);
+        if(ui->list_phs_chars->currentItem()->checkState() ==Qt::Unchecked)
             temp |=(1 <<i);
     }
     ff7.slot[s].phsmask=temp;
-   for (int i=0;i<9;i++)
-   {
-   ui->list_chars->setCurrentRow(i);
-   if(ui->list_chars->currentItem()->checkState() ==Qt::Checked)
-       temp |= (1<<i);
-   }
-   ff7.slot[s].unlockedchars=temp;
-   ui->list_chars->setCurrentRow(j);
+    ui->list_phs_chars->setCurrentRow(j);
+    }
+}
+
+void MainWindow::on_list_chars_unlocked_itemChanged()
+{
+    if(!load)
+    {
+    quint16 temp=0;
+    int j=ui->list_chars_unlocked->currentRow();
+    for (int i=0;i<9;i++)
+    {
+        ui->list_chars_unlocked->setCurrentRow(i);
+        if(ui->list_chars_unlocked->currentItem()->checkState() ==Qt::Checked)
+        {temp |= (1<<i);}
+    }
+    ff7.slot[s].unlockedchars=temp;
+    ui->list_chars_unlocked->setCurrentRow(j);
    }
 }
 void MainWindow::on_sb_curdisc_valueChanged()
@@ -2497,9 +2523,7 @@ void MainWindow::on_combo_add_mat_2_currentIndexChanged()
 void MainWindow::on_clearMateria_clicked()
 {
     ff7.slot[s].materias[ui->tbl_materia->currentRow()].id = 0xFF;
-    ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[0] = 0xFF;
-    ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[1] = 0xFF;
-    ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2] = 0xFF;
+    ui->sb_addap->setValue(0xFFFFFF);
     guirefresh();
 }
 void MainWindow::on_btn_eskillall_clicked()
@@ -2555,12 +2579,12 @@ if(!load)
             quint8 a = ap_temp & 0xff;
             quint8 b = (ap_temp & 0xff00) >>8;
             quint8 c = (ap_temp & 0xff0000) >> 16;
+            ui->sb_addap->setValue(temp);
             ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[0]=a;
             ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[1]=b;
             ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2]=c;
 
     ui->list_eskill->setCurrentRow(j);
-    ui->sb_addap->setValue(ap_temp);
     load =false;
     guirefresh();
     }
@@ -2876,6 +2900,7 @@ void MainWindow::on_sb_addap_slot_valueChanged(int value)
 {
     if(!load)
     {
+    load=true;
         int a = (value & 0xff);
         int b = (value & 0xff00) >> 8;
         int c = (value & 0xff0000) >> 16;
@@ -2884,24 +2909,21 @@ void MainWindow::on_sb_addap_slot_valueChanged(int value)
        ff7.slot[s].chars[curchar].materias[mslotsel].ap[1] = b;
        ff7.slot[s].chars[curchar].materias[mslotsel].ap[2] = c;
        guirefresh();
-   }
+    load=false;
+    }
 
 }
 
 void MainWindow::on_btn_mastermateria_slot_clicked()
 {
-    ff7.slot[s].chars[curchar].materias[mslotsel].ap[0] = 0xFF;
-    ff7.slot[s].chars[curchar].materias[mslotsel].ap[1] = 0xFF;
-    ff7.slot[s].chars[curchar].materias[mslotsel].ap[2] = 0xFF;
+    ui->sb_addap_slot->setValue(0xFFFFFF);
     if(ff7.slot[s].chars[curchar].materias[mslotsel].id == 0x2C) {geteskills2(mslotsel);}
     guirefresh();
 }
 void MainWindow::on_clearMateria_slot_clicked()
 {
     ff7.slot[s].chars[curchar].materias[mslotsel].id = 0xFF;
-    ff7.slot[s].chars[curchar].materias[mslotsel].ap[0] = 0xFF;
-    ff7.slot[s].chars[curchar].materias[mslotsel].ap[1] = 0xFF;
-    ff7.slot[s].chars[curchar].materias[mslotsel].ap[2] = 0xFF;
+    ui->sb_addap_slot->setValue(0xFFFFFF);
     if(ff7.slot[s].chars[curchar].materias[mslotsel].id == 0x2C) {geteskills2(mslotsel);}
     guirefresh();
 }
@@ -3072,12 +3094,14 @@ void MainWindow::geteskills2(int row)
 {
     quint32 temp = ff7.slot[s].chars[curchar].materias[row].ap[0] |(ff7.slot[s].chars[curchar].materias[row].ap[1] << 8) | (ff7.slot[s].chars[curchar].materias[row].ap[2] << 16);
     ui->sb_addap_slot->setValue(temp);
-        for (int i=0;i<24;i++)
+
+    for (int i=0;i<24;i++)
                 {
                     ui->list_eskill_2->setCurrentRow(i);
                     if ((1 << i) & temp){ui->list_eskill_2->currentItem()->setCheckState(Qt::Checked);}
                     else{ui->list_eskill_2->currentItem()->setCheckState(Qt::Unchecked);}
                 }
+
 }
 void MainWindow::on_list_eskill_2_itemChanged()
 {
@@ -3091,7 +3115,6 @@ if(!load)
    int j = ui->list_eskill_2->currentRow();
    quint32 ap_temp =0;
    quint32 temp =0;
-   //on_list_eskill_2_btn
    for (int i=0;i<24;i++)
            {
                 ui->list_eskill_2->setCurrentRow(i);
@@ -3099,15 +3122,9 @@ if(!load)
                 else{};
            }
             ap_temp=(temp & 0xFFFFFF);
-            quint8 a = ap_temp & 0xff;
-            quint8 b = (ap_temp & 0xff00) >>8;
-            quint8 c = (ap_temp & 0xff0000) >> 16;
-            ff7.slot[s].chars[curchar].materias[mslotsel].ap[0]=a;
-            ff7.slot[s].chars[curchar].materias[mslotsel].ap[1]=b;
-            ff7.slot[s].chars[curchar].materias[mslotsel].ap[2]=c;
     ui->list_eskill_2->setCurrentRow(j);
-    ui->sb_addap_slot->setValue(ap_temp);
     load =false;
+    ui->sb_addap_slot->setValue(ap_temp);//set the values
 
     }
 }
@@ -3385,14 +3402,15 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     ui->sb_coordx->setValue(641);
     ui->sb_coordy->setValue(793);
     ui->sb_coordz->setValue(243);
-    ui->list_chars->item(3)->setCheckState(Qt::Unchecked);
+    ui->list_chars_unlocked->item(3)->setCheckState(Qt::Unchecked);
+    ui->list_phs_chars->item(3)->setCheckState(Qt::Unchecked);
     ui->label_replaynote->setText(tr("Replay the death of Aerith.This option Will remove Aerith from your PHS"));
     }
     else {ui->label_replaynote->setText("         INFO ON CURRENTLY SELECTED REPLAY MISSION");}
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS FOR TESTING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_pushButton_clicked() //used for testing
+void MainWindow::on_btn_remove_all_items_clicked() //used for testing
 {
     for(int i=0;i<320;i++)
     {
@@ -3402,7 +3420,7 @@ void MainWindow::on_pushButton_clicked() //used for testing
     guirefresh();
 }
 
-void MainWindow::on_pushButton_2_clicked()
+void MainWindow::on_btn_remove_all_materia_clicked()
 {
     for (int i=0;i<200;i++)
     {
@@ -3414,7 +3432,7 @@ void MainWindow::on_pushButton_2_clicked()
     guirefresh();
 }
 
-void MainWindow::on_pushButton_3_clicked()
+void MainWindow::on_btn_remove_all_stolen_clicked()
 {
     for(int i=0;i<48;i++)
     {
@@ -3426,18 +3444,35 @@ void MainWindow::on_pushButton_3_clicked()
     guirefresh();
 }
 
-void MainWindow::on_cb_show_test_buttons_stateChanged(int )
+void MainWindow::on_cb_show_test_buttons_stateChanged()
 {
    if(ui->cb_show_test_buttons->isChecked())
     {
-       ui->pushButton->setVisible(true);
-       ui->pushButton_2->setVisible(true);
-       ui->pushButton_3->setVisible(true);
+       ui->btn_remove_all_items->setVisible(true);
+       ui->btn_remove_all_materia->setVisible(true);
+       ui->btn_remove_all_stolen->setVisible(true);
+       ui->lbl_z_4_0->setVisible(true);
+       ui->lbl_z_4_1->setVisible(true);
+       ui->lbl_z_4_2->setVisible(true);
+       ui->lbl_z_4_3->setVisible(true);
+       ui->lcd_z_4_0->setVisible(true);
+       ui->lcd_z_4_1->setVisible(true);
+       ui->lcd_z_4_2->setVisible(true);
+       ui->lcd_z_4_3->setVisible(true);
    }
    else
    {
-       ui->pushButton->setVisible(false);
-       ui->pushButton_2->setVisible(false);
-       ui->pushButton_3->setVisible(false);
+       ui->btn_remove_all_items->setVisible(false);
+       ui->btn_remove_all_materia->setVisible(false);
+       ui->btn_remove_all_stolen->setVisible(false);
+       ui->lbl_z_4_0->setVisible(false);
+       ui->lbl_z_4_1->setVisible(false);
+       ui->lbl_z_4_2->setVisible(false);
+       ui->lbl_z_4_3->setVisible(false);
+       ui->lcd_z_4_0->setVisible(false);
+       ui->lcd_z_4_1->setVisible(false);
+       ui->lcd_z_4_2->setVisible(false);
+       ui->lcd_z_4_3->setVisible(false);
    }
 }
+
