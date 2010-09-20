@@ -1446,32 +1446,32 @@
         <location filename="../mainwindow.ui" line="10111"/>
         <location filename="../mainwindow.ui" line="10288"/>
         <source>Aerith</source>
-        <translation type="unfinished"></translation>
+        <translation>Aerith</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2675"/>
         <source> z_4[0]</source>
-        <translation type="unfinished"></translation>
+        <translation> z_4[0]</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2688"/>
         <source> z_4[1]</source>
-        <translation type="unfinished"></translation>
+        <translation> z_4[1]</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2701"/>
         <source> z_4[2]</source>
-        <translation type="unfinished"></translation>
+        <translation> z_4[2]</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2714"/>
         <source> z_4[3]</source>
-        <translation type="unfinished"></translation>
+        <translation> z_4[3]</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5065"/>
         <source>Remove ALL Items</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar TODOS los objetos</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5521"/>
@@ -1531,34 +1531,34 @@
     <message>
         <location filename="../mainwindow.ui" line="6348"/>
         <source>Remove ALL Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar TODA la materia</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="10177"/>
         <location filename="../mainwindow.ui" line="10354"/>
         <source>Sephiroth</source>
-        <translation type="unfinished"></translation>
+        <translation>Sephiroth</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="10188"/>
         <location filename="../mainwindow.ui" line="10365"/>
         <source>Young Cloud</source>
-        <translation type="unfinished"></translation>
+        <translation>Cloud Joven</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="10211"/>
         <source>Clear Stolen Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>Borrar Materia Robada</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="10227"/>
         <source>Unlocked Chars</source>
-        <translation type="unfinished"></translation>
+        <translation>Pers. Desbloqueados</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="10388"/>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation type="unfinished"></translation>
+        <translation>Cait Sith y Vincent no deberían ser desbloqueados si estan deshabilitados en la pestaña de grupo. </translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="10400"/>
@@ -3229,7 +3229,7 @@
     <message>
         <location filename="../mainwindow.ui" line="14220"/>
         <source>Test Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo de Test</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="14235"/>
@@ -3364,12 +3364,12 @@
     <message>
         <location filename="../mainwindow.ui" line="12604"/>
         <source>Aerith&apos;s Death</source>
-        <translation type="unfinished"></translation>
+        <translation>Muerte de Aerith</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="12631"/>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
-        <translation type="unfinished"></translation>
+        <translation> Fija la misión rejugable más arriba para poner el juego de vuelta otra vez en esa misión. Esto pondrá automáticamente tu sitio de guardado y el número de disco asi como las variables de progreso de misión. NO SOBREESCRIBAS TU GUARDADO ACTUAL, cuando uses esta función, no puedo prometerte que podrás jugar desde cualquier punto hasta el final del juego. O que una misión rejugable dada funcione con tu partida guardada, este área esta bajo desarrollo intenso</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="14330"/>
@@ -3433,7 +3433,7 @@ no es un Archivo de Guardado de FF7.</translation>
     <message>
         <location filename="../loadsave.cpp" line="36"/>
         <source>Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos de guardado de FF7 conocidos (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;Guardado de FF7 PC (*.ff7);;Guardado de FF7 PSX (*-S*);;Guardado MC (*.mcr *.mcd);;Guardado PSV (*.psv);;Guardado PSP (*.vmp)</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="49"/>
@@ -3463,27 +3463,27 @@ no es un Archivo de Guardado de FF7.</translation>
     <message>
         <location filename="../loadsave.cpp" line="66"/>
         <source>FF7 MC SaveGame(*.mcr *.mcd)</source>
-        <translation type="unfinished"></translation>
+        <translation>Partida Guardada de FF7 MC(*.mcr *.mcd)</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="73"/>
         <source>Save Final Fantasy 7 PSV SaveGame</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar Archivo de Partida Guardada de FF7 PSV</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="74"/>
         <source>FF7 PSV SaveGame(*.psv)</source>
-        <translation type="unfinished"></translation>
+        <translation>Partida Guardada FF7 PSV(*.psv)</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="81"/>
         <source>Save Final Fantasy 7  PSP SaveGame</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar Archivo de guardado de FF7 PSP</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="82"/>
         <source>FF7 PSP SaveGame(*.vmp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Partida Guardada de FF7 PSP(*.vmp)</translation>
     </message>
     <message>
         <source>FF7 MC SaveGame(*.mcr),(*.mcd)</source>
@@ -3528,7 +3528,7 @@ no es un Archivo de Guardado de FF7.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="3405"/>
         <source>Replay the death of Aerith.This option Will remove Aerith from your PHS</source>
-        <translation type="unfinished"></translation>
+        <translation>Rejugar la muerte de Aerith. Esta opción eliminará a Aerith de tu PHS</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="664"/>
@@ -3814,7 +3814,49 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; text-decoration: underline;&quot;&gt;Ms. Sith&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; - Causes shes awesome.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;	&lt;/span&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Chocobo Negro&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;	es un Editor de Archivos de Guardado de FF7. (PC + PSX)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	Escrito Por Sithlord48. usando Qt.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                                                                  	             Versión :: &lt;span style=&quot; font-weight:600;&quot;&gt;1.4&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Este programa es software libre: puedes distribuirlo y/o modificarlo&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; bajo los términos de la GNU General Public License publicados por&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; La Fundación de Software Libre, ya sea la versión 3 de la licencia o&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;(a tu elección) cualquier versión posterior.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Este programa está distribuido con la esperanza de que sea útil,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;pero sin NINGUNA GARANTÍA; ni siquiera la garantía implícita de&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;MERCANTIBILIDAD o APTITUD PARA UN PROPÓSITO ESPECÍFICO.  Ver la&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;GNU General Public License para más detalles.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Deberías haber recibido una copia de la GNU General Public License&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;junto a este programa.  Si no, mira &lt;/span&gt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; text-decoration: underline; color:#508ed8;&quot;&gt;&amp;lt;http://www.gnu.org/licenses/&amp;gt;&lt;/span&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                       &lt;/span&gt;  &lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Otros Programadores que han Ayudado:&lt;/span&gt;  &lt;span style=&quot; font-weight:600;&quot;&gt;                             &lt;/span&gt;	  &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;vegeta_ss4 - Funciones de carga/guardado y checksums internos para Psx&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                                       &lt;/span&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Traductores:&lt;/span&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Español - Eslava&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Francés - Myst6re&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                                         &lt;/span&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Testers:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                                   Jari | Eslava | Timu | Chocobo Girl&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600; text-decoration: underline;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                                    &lt;/span&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Agradecimientos Especiales:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Qhimm&lt;/span&gt; - Por facilitarme el código fuente de Jenova, este programa usa versiones modificadas de su estructura de guardado, listas de objetos/materia y funciones de conversión de strings. Su código me ha ahorrado mucho tiempo&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Dziugo&lt;/span&gt; - por el programa de checksum, y facilitarme la fuente en el foro de Qhimm.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Aali&lt;/span&gt; - por ayudarme a ver la luz con errores estúpidos.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;dhrosa&lt;/span&gt; - por ayudarme dándome una mejor comprensión de las funciones de Qt cuando los archivos de ayuda no eran suficientes.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Ms. Sith&lt;/span&gt; - Porque es maravillosa.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
