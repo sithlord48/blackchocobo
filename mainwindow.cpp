@@ -79,7 +79,6 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->lcd_z_4_1->setVisible(false);
     ui->lcd_z_4_2->setVisible(false);
     ui->lcd_z_4_3->setVisible(false);
-
     load=false;
 }
 MainWindow::~MainWindow()
@@ -829,6 +828,8 @@ ui->sb_curdisc->setValue(ff7.slot[s].disc);
 // ui->sb_kalmprog->setValue(ff7.slot[s].kalmprog);
 
 // check for seppie and young cloud to avoid possible breakage of save game since we don't account for them yet.
+
+
 if (ff7.slot[s].chars[6].id == 9)
 {
     ui->btn_cait->setEnabled(false);
@@ -842,6 +843,13 @@ if (ff7.slot[s].chars[7].id == 10)
     if(curchar ==7){curchar = 0;}
 }
 else {ui->btn_vincent->setEnabled(true);}
+
+if(ui->cb_show_test_buttons->checkState()==Qt::Checked)
+{
+    ui->btn_vincent->setEnabled(true);
+    ui->btn_cait->setEnabled(true);
+    ui->cb_id->setEnabled(true);
+}
 
 //Set up location Data
 ui->sb_coordx->setValue(ff7.slot[s].coord.x);
@@ -2329,9 +2337,9 @@ void MainWindow::on_list_keyitems_itemChanged()
         {
             ui->list_keyitems->setCurrentRow(i);
             if (ui->list_keyitems->currentItem()->checkState() == Qt::Checked)
-                {
-                        ff7.slot[s].keyitems[div(i,8).quot] |= (1 << (div(i,8).rem));
-                }
+            {
+                ff7.slot[s].keyitems[i/8] |= (1<<i%8);
+            }
         }
         ui->list_keyitems->setCurrentRow(j);
     }
@@ -2457,9 +2465,8 @@ void MainWindow::on_combo_add_mat_currentIndexChanged(int index)
 
     if(!load)
     {
-            ff7.slot[s].materias[ui->tbl_materia->currentRow()].id = index;
-            guirefresh();
-
+        ff7.slot[s].materias[ui->tbl_materia->currentRow()].id = index;
+        guirefresh();
     }
 
 }
@@ -2537,20 +2544,20 @@ void MainWindow::on_btn_eskillall_clicked()
 
 void MainWindow::geteskills(int row)
 {
+    load = true;
     quint32 temp = ff7.slot[s].materias[row].ap[0] |(ff7.slot[s].materias[row].ap[1] << 8) | (ff7.slot[s].materias[row].ap[2] << 16);
     ui->sb_addap->setValue(temp);
-    load = true;
     on_btn_eskillclear_clicked();
     for (int i=0;i<24;i++)
-                {
-                    ui->list_eskill->setCurrentRow(i);
-                    if ((1 << i) & temp){ui->list_eskill->currentItem()->setCheckState(Qt::Checked);}
-                }
+        {
+        ui->list_eskill->setCurrentRow(i);
+        if ((1 << i) & temp){ui->list_eskill->currentItem()->setCheckState(Qt::Checked);}
+        }
     load = false;
 }
 void MainWindow::on_list_eskill_itemChanged()
 {
-    apply_eskills();
+ if(!load)apply_eskills();
 }
 void MainWindow::on_btn_eskillclear_clicked()
 {
@@ -2561,34 +2568,23 @@ void MainWindow::on_btn_eskillclear_clicked()
     }//loop thru and uncheck no need to apply each one should thrown an itemChanged() event
 }
 void MainWindow::apply_eskills()
-{
-if(!load)
-    load =true;
-   {
-   int j = ui->list_eskill->currentRow();
-   quint32 ap_temp =0;
-   quint32 temp =0;
-   for (int i=0;i<24;i++)
-       {
-       ui->list_eskill->setCurrentRow(i);
-       if (ui->list_eskill->currentItem()->checkState() == Qt::Checked)
-           {temp |= (1 << i);}
-       }
-
-            ap_temp= (temp & 0xFFFFFF);
-            quint8 a = ap_temp & 0xff;
-            quint8 b = (ap_temp & 0xff00) >>8;
-            quint8 c = (ap_temp & 0xff0000) >> 16;
-            ui->sb_addap->setValue(temp);
-            ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[0]=a;
-            ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[1]=b;
-            ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2]=c;
-
-    ui->list_eskill->setCurrentRow(j);
-    load =false;
-    guirefresh();
+{if(!load){
+load =true;
+int j = ui->list_eskill->currentRow();
+quint32 ap_temp =0;
+quint32 temp =0;
+for (int i=0;i<24;i++)
+    {
+    ui->list_eskill->setCurrentRow(i);
+    if (ui->list_eskill->currentItem()->checkState() == Qt::Checked)
+       {temp |= (1 << i);}
     }
-}
+ap_temp= (temp & 0xFFFFFF);
+ui->list_eskill->setCurrentRow(j);
+load =false;
+ui->sb_addap->setValue(ap_temp);
+guirefresh();
+}}
 
 //save location tab
 void MainWindow::on_tbl_location_field_itemSelectionChanged()
@@ -2641,20 +2637,22 @@ void MainWindow::on_sb_coordz_valueChanged()
 }
 
 //char stats tab
-void MainWindow::on_cb_id_clicked(bool checked)
+void MainWindow::on_cb_id_toggled(bool checked)
 {
-
+if(!load)
+{
     if (curchar ==6)
     {
-        if (checked){ff7.slot[s].chars[curchar].id = 9;}
-        else {ff7.slot[s].chars[curchar].id = 6;}
+        if (checked){ff7.slot[s].chars[6].id = 9;}
+        else {ff7.slot[s].chars[6].id = 6;}
     }
     if (curchar ==7)
     {
-        if (checked){ff7.slot[s].chars[curchar].id = 10;}
-        else {ff7.slot[s].chars[curchar].id = 7;}
+        if (checked){ff7.slot[s].chars[7].id = 10;}
+        else {ff7.slot[s].chars[7].id = 7;}
     }
-charupdate();
+//charupdate();
+}
 }
 void MainWindow::on_line_name_lostFocus()
 {
@@ -3459,6 +3457,9 @@ void MainWindow::on_cb_show_test_buttons_stateChanged()
        ui->lcd_z_4_1->setVisible(true);
        ui->lcd_z_4_2->setVisible(true);
        ui->lcd_z_4_3->setVisible(true);
+       ui->btn_vincent->setEnabled(true);
+       ui->cb_id->setEnabled(true);
+       ui->btn_cait->setEnabled(true);
    }
    else
    {
@@ -3473,6 +3474,8 @@ void MainWindow::on_cb_show_test_buttons_stateChanged()
        ui->lcd_z_4_1->setVisible(false);
        ui->lcd_z_4_2->setVisible(false);
        ui->lcd_z_4_3->setVisible(false);
+       if(ff7.slot[s].chars[6].id == 9) {ui->btn_vincent->setEnabled(false);}
+       ui->cb_id->setEnabled(false);
+       if(ff7.slot[s].chars[7].id == 10) {ui->btn_cait->setEnabled(false);}
    }
 }
-

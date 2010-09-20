@@ -44,6 +44,7 @@ private slots:
 
     //test functions to be removed....
 
+    void on_cb_id_toggled(bool checked);
     void on_cb_show_test_buttons_stateChanged();
     void on_btn_remove_all_stolen_clicked();
     void on_slide_lr_b_valueChanged(int value);
@@ -257,7 +258,7 @@ private slots:
     void on_sb_gil_valueChanged();
 
     //char stats
-    void on_cb_id_clicked(bool checked);
+   // void on_cb_id_clicked(bool checked);
     void on_line_name_lostFocus();
     void on_sb_lvl_valueChanged();
     void on_sb_exp_valueChanged();
