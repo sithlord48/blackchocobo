@@ -2720,8 +2720,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>100</width>
-         <height>30</height>
+         <width>94</width>
+         <height>24</height>
         </rect>
        </property>
        <attribute name="label">
@@ -5055,7 +5055,7 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>220</x>
+        <x>210</x>
         <y>450</y>
         <width>121</width>
         <height>25</height>
@@ -10037,10 +10037,10 @@
      <widget class="QGroupBox" name="groupBox_16">
       <property name="geometry">
        <rect>
-        <x>242</x>
-        <y>119</y>
+        <x>462</x>
+        <y>59</y>
         <width>121</width>
-        <height>191</height>
+        <height>201</height>
        </rect>
       </property>
       <property name="toolTip">
@@ -10067,7 +10067,7 @@
          <property name="maximumSize">
           <size>
            <width>111</width>
-           <height>170</height>
+           <height>180</height>
           </size>
          </property>
          <property name="whatsThis">
@@ -10172,6 +10172,28 @@
            <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>Sephiroth</string>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Young Cloud</string>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
         </widget>
        </item>
       </layout>
@@ -10179,8 +10201,8 @@
      <widget class="QPushButton" name="btn_remove_all_stolen">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>340</y>
+        <x>240</x>
+        <y>450</y>
         <width>141</width>
         <height>21</height>
        </rect>
@@ -10192,10 +10214,10 @@
      <widget class="QGroupBox" name="groupBox_19">
       <property name="geometry">
        <rect>
-        <x>370</x>
-        <y>120</y>
+        <x>590</x>
+        <y>60</y>
         <width>121</width>
-        <height>191</height>
+        <height>201</height>
        </rect>
       </property>
       <property name="toolTip">
@@ -10222,7 +10244,7 @@
          <property name="maximumSize">
           <size>
            <width>111</width>
-           <height>170</height>
+           <height>180</height>
           </size>
          </property>
          <property name="whatsThis">
@@ -10327,9 +10349,50 @@
            <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
           </property>
          </item>
+         <item>
+          <property name="text">
+           <string>Sephiroth</string>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Young Cloud</string>
+          </property>
+          <property name="checkState">
+           <enum>Unchecked</enum>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+          </property>
+         </item>
         </widget>
        </item>
       </layout>
+     </widget>
+     <widget class="QLabel" name="label_178">
+      <property name="geometry">
+       <rect>
+        <x>460</x>
+        <y>370</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_location">
@@ -14147,14 +14210,14 @@
    <widget class="QCheckBox" name="cb_show_test_buttons">
     <property name="geometry">
      <rect>
-      <x>420</x>
+      <x>400</x>
       <y>0</y>
-      <width>141</width>
-      <height>17</height>
+      <width>161</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>Show Test Buttons</string>
+     <string>Test Mode</string>
     </property>
    </widget>
   </widget>
