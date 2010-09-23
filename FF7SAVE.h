@@ -19,10 +19,6 @@
 #include <QObject>
 #include <QCoreApplication>
 
-typedef unsigned short USHORT;
-typedef unsigned int UINT;
-typedef unsigned long ULONG;
-
 const int slot_len=4340; //hex 0x10F4
 const int header_len= 9; //hex 0x09
 const int desc_len= 55;  //hex 0x37
@@ -54,7 +50,7 @@ const int FF7_PSX_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
 const int FF7_PSX_SAVE_GAME_SLOT_SIZE = 0x2000;
 const int FF7_PSX_SAVE_GAME_SLOT_NUMBER = 1;
 
-//BELOW HEADER DATA FOR EACH PSX SAVE SLOT, (NOTE: currently only s01 is used when saving a slot)
+//BELOW HEADER DATA FOR EACH PSX SAVE SLOT, (NOTE: they are us and should be redone to account for other regions)
 //Slot 01 Header
 const quint8 PSX_SAVE_GAME_FILE_HEADER_S01[0x200]=
 {0x53,0x43,0x11,0x01, 0x82,0x65,0x82,0x65, 0x82,0x56,0x81,0x5E, 0x82,0x72,0x82,0x60, 0x82,0x75,0x82,0x64, 0x82,0x4F,0x82,0x50, 0x81,0x5E,0x82,0x4F, 0x82,0x58,0x81,0x46,
@@ -388,11 +384,11 @@ struct FF7CHAR {        	// [0x0084] Character info -98% - 1 Unknown
     quint8 magic;		// [0x0004] Magic (0-255)
     quint8 spirit;		// [0x0005] Spirit (0-255)
     quint8 dexterity;		// [0x0006] Dexterity (0-255)
-    quint8 luck;			// [0x0007] Luck (0-255)
-    quint8 strength_bonus;       // [0x0008] Str Bonus
+    quint8 luck;		// [0x0007] Luck (0-255)
+    quint8 strength_bonus;      // [0x0008] Str Bonus
     quint8 vitality_bonus;	// [0x0009] Vitality (0-255)
     quint8 magic_bonus;		// [0x000A] Magic (0-255)
-    quint8 spirit_bonus;		// [0x000B] Spirit (0-255)
+    quint8 spirit_bonus;	// [0x000B] Spirit (0-255)
     quint8 dexterity_bonus;	// [0x000C] Dexterity (0-255)
     quint8 luck_bonus;		// [0x000D] Luck (0-255)
     qint8 limitlevel;		// [0x000E] Current limit level (1-4)
@@ -411,7 +407,7 @@ struct FF7CHAR {        	// [0x0084] Character info -98% - 1 Unknown
     quint16 baseHP;		// [0x002E] Base HP (before materia alterations)
     quint16 curMP;		// [0x0030] Current MP
     quint16 baseMP;		// [0x0032] Base MP (before materia alterations)
-    signed char z_4[4];         // [0x0034] UNKNOWN!!!!
+    quint8 z_4[4];              // [0x0034] UNKNOWN!!!!
     quint16 maxHP;		// [0x0038] Maximum HP (after materia alterations)
     quint16 maxMP;		// [0x003A] Maximum MP (after materia alterations)
     quint32 exp;		// [0x003C] Current EXP
