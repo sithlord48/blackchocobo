@@ -2226,8 +2226,10 @@ void MainWindow::on_sb_c6_stamina_valueChanged()
 }
 void MainWindow::on_line_c1_name_lostFocus()
 {
+
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[0][i] =0xFF;}
     for (int i=0;i<ui->line_c1_name->text().size();i++){ff7.slot[s].chocobonames[0][i] = chFF7[ui->line_c1_name->text().at(i).toAscii()];}
+
 }
 void MainWindow::on_line_c2_name_lostFocus()
 {
@@ -2292,23 +2294,38 @@ void MainWindow::on_list_chars_unlocked_itemChanged()
 }
 void MainWindow::on_sb_curdisc_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].disc = ui->sb_curdisc->value();
+    }
 }
 void MainWindow::on_sb_love_barret_valueChanged()
 {
+   if(!load)
+   {
    ff7.slot[s].love.barret = ui->sb_love_barret->value();
+   }
 }
 void MainWindow::on_sb_love_aeris_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].love.aeris = ui->sb_love_aeris->value();
+    }
 }
 void MainWindow::on_sb_love_tifa_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].love.tifa = ui->sb_love_tifa->value();
+    }
 }
 void MainWindow::on_sb_love_yuffie_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].love.yuffie = ui->sb_love_yuffie->value();
+    }
 }
 
 //Item Tab
@@ -2656,6 +2673,8 @@ if(!load)
 }
 void MainWindow::on_line_name_lostFocus()
 {
+    if(!load)
+    {
     for (int i=0;i<12;i++){ff7.slot[s].chars[curchar].name[i] =0xFF;}
     for (int i=0;i<ui->line_name->text().size();i++){ff7.slot[s].chars[curchar].name[i] = chFF7[ui->line_name->text().at(i).toAscii()];}
 
@@ -2665,133 +2684,223 @@ void MainWindow::on_line_name_lostFocus()
         for (int i=0;i<ui->line_name->text().size();i++){ff7.slot[s].desc.name[i] = chFF7[ui->line_name->text().at(i).toAscii()];}
 
     }
-
+    }
 }
 void MainWindow::on_sb_lvl_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].level = ui->sb_lvl->value();
     ff7.slot[s].desc.level = ui->sb_lvl->value();
+    }
 }
 void MainWindow::on_sb_curhp_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].curHP = ui->sb_curhp->value();
+    }
 }
 void MainWindow::on_sb_curmp_valueChanged()
 {
+   if(!load)
+   {
    ff7.slot[s].chars[curchar].curMP = ui->sb_curmp->value();
+   }
 }
 void MainWindow::on_sb_maxhp_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].maxHP =ui->sb_maxhp->value();
+    }
 }
 void MainWindow::on_sb_maxmp_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].maxMP =ui->sb_maxmp->value();
+    }
 }
 void MainWindow::on_sb_hp_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].baseHP = ui->sb_hp->value();
+    }
 }
 void MainWindow::on_sb_mp_valueChanged()
 {
+   if(!load)
+   {
    ff7.slot[s].chars[curchar].baseMP = ui->sb_mp->value();
+   }
 }
 void MainWindow::on_sb_next_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].expNext =  ui->sb_next->value();
+    }
 }
 void MainWindow::on_sb_exp_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].exp = ui->sb_exp->value();
+    }
 }
 void MainWindow::on_sb_kills_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].kills = ui->sb_kills->value();
+    }
 }
 
 void MainWindow::on_sb_str_valueChanged()
 {
+   if(!load)
+   {
    ff7.slot[s].chars[curchar].strength = ui->sb_str->value();
+   }
 }
 void MainWindow::on_sb_dex_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].dexterity = ui->sb_dex->value();
+    }
 }
 void MainWindow::on_sb_mag_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].magic = ui->sb_mag->value();
+    }
 }
 void MainWindow::on_sb_vit_valueChanged()
 {
+   if(!load)
+   {
    ff7.slot[s].chars[curchar].vitality = ui->sb_vit->value();
+   }
 }
 void MainWindow::on_sb_spr_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].spirit = ui->sb_spr->value();
+    }
 }
 void MainWindow::on_sb_lck_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].luck = ui->sb_lck->value();
+    }
 }
 void MainWindow::on_sb_strbonus_valueChanged()
 {
+   if(!load)
+   {
    ff7.slot[s].chars[curchar].strength_bonus = ui->sb_strbonus->value();
+   }
 }
 void MainWindow::on_sb_dexbonus_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].dexterity_bonus = ui->sb_dexbonus->value();
+    }
 }
 void MainWindow::on_sb_magbonus_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].magic_bonus = ui->sb_magbonus->value();
+    }
 }
 void MainWindow::on_sb_vitbonus_valueChanged()
 {
+   if(!load)
+   {
    ff7.slot[s].chars[curchar].vitality_bonus = ui->sb_vitbonus->value();
+   }
 }
 void MainWindow::on_sb_sprbonus_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].spirit_bonus = ui->sb_sprbonus->value();
+    }
 }
 void MainWindow::on_sb_lckbonus_valueChanged()
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].luck_bonus = ui->sb_lckbonus->value();
+    }
 }
 void MainWindow::on_cb_front_clicked(bool checked)
 {
+   if(!load)
+   {
    if(checked) ff7.slot[s].chars[curchar].flags[1] = 255;
    if(!checked)ff7.slot[s].chars[curchar].flags[1] =254;
+   }
 }
 void MainWindow::on_cb_fury_clicked(bool checked)
 {
+    if(!load)
+    {
     if(checked){ui->cb_sadness->setChecked(0); ff7.slot[s].chars[curchar].flags[0] =32;}
     else {ff7.slot[s].chars[curchar].flags[0]=0;}
+    }
 }
 void MainWindow::on_cb_sadness_clicked(bool checked)
 {
+   if(!load)
+   {
    if(checked){ui->cb_fury->setChecked(0); ff7.slot[s].chars[curchar].flags[0] =16;}
    else {ff7.slot[s].chars[curchar].flags[0]=0;}
+   }
 }
 //char limit stuff
 void MainWindow::on_sb_used1_valueChanged()
 {
+   if(!load)
+   {
    ff7.slot[s].chars[curchar].timesused1 = ui->sb_used1->value();
+   }
 }
 void MainWindow::on_sb_used2_valueChanged()
 {
+   if(!load)
+   {
    ff7.slot[s].chars[curchar].timesused2 = ui->sb_used2->value();
+   }
 }
 void MainWindow::on_sb_used3_valueChanged()
 {
+   if(!load)
+   {
    ff7.slot[s].chars[curchar].timesused3 = ui->sb_used3->value();
+   }
 }
 void MainWindow::on_sb_limitlvl_valueChanged(int value)
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].limitlevel= value; //ui->sb_limitlvl->value();
+    }
 }
 void MainWindow::on_slide_limit_valueChanged(int value)
 {
+   if(!load)
+   {
    ff7.slot[s].chars[curchar].limitbar = value; //ui->slide_limit->value();
+    }
 }
 void MainWindow::limitapply()
 {
@@ -2853,12 +2962,18 @@ void MainWindow::on_combo_weapon_currentIndexChanged()
 }
 void MainWindow::on_combo_armor_currentIndexChanged(int index)
 {
+  if(!load)
+  {
   ff7.slot[s].chars[curchar].armor = index;
   setarmorslots();
+  }
 }
 void MainWindow::on_combo_acc_currentIndexChanged(int index)
 {
+    if(!load)
+    {
     ff7.slot[s].chars[curchar].accessory = index;
+    }
 }
 void MainWindow::on_combo_weapon_activated(int index)
 {
