@@ -55,7 +55,7 @@ else if(ff7.savetype==2)
 {
     QString fileName = QFileDialog::getSaveFileName(this,
                                                     tr("Save Final Fantasy 7 PSX SaveGame"), "",
-                tr("FF7 PSX SaveGame(*)"));
+                tr("FF7 PSX SaveGame(*-S*)"));//this should really be *-S*
     if (!fileName.isEmpty())
         saveFileFull(fileName);
 }
@@ -2262,23 +2262,14 @@ for(int i=0;i<ff7.SG_HEADER;i++){out << ff7.file_headerp[i];}//write file header
 
 
 for(int si=0;si<ff7.SG_SLOT_NUMBER;si++)
-
-//int si=0; // used for testing new values.
-{//write 15 slots
-   //  out << ff7_checksum(&ff7.slot[si].desc); // call to dizugo's checksum function (global.cpp)
-  // out << Checksum((char *)&ff7.slot[si].desc); // call to quimm's checksum function (global.cpp)
-    // out << Checksum((char *)&ff7.slot[si].desc); // call to quimm's checksum function (global.cpp)
-
-    //temp = ff7file.mid((ff7.SG_SLOT_SIZE*i) + (ff7.SG_HEADER + 0x0000),ff7.SG_SLOT_HEADER);// added collect slot header len(0x0200) bytes (PSX)
-    //for(int z=0;z<ff7.SG_SLOT_HEADER;z++){ff7.slot->headerp[z] = temp.at(z);}
-
-
-    //out << ff7.slot[si].headerp;
+{
     for(int z=0;z<ff7.SG_SLOT_HEADER;z++){out << ff7.hf[si].sl_header[z];}//write slot header
-    /*FILE *pfile; // file needs to be written with one or two lines.. aali demands it :P and it should save trouble in the future.
+    /*FILE *pfile; // this section is starting to work correctly!
     pfile = fopen(fileName.toAscii(),"w");
- fwrite(&ff7.slot[si],1,0x10F4,pfile);*/
-
+    fwrite(&ff7.slot,sizeof(ff7.slot),1,pfile);
+    for(int z=0;z<ff7.SG_SLOT_FOOTER;z++){out << ff7.hf[si].sl_footer[z];}
+    fclose(pfile);
+    /**/
     out << ff7.slot[si].checksum;
     out << ff7.slot[si].z_1;
     out << ff7.slot[si].desc.level;
@@ -2440,8 +2431,8 @@ for(int si=0;si<ff7.SG_SLOT_NUMBER;si++)
     for(int z=0;z<7;z++){out<<ff7.slot[si].z_20[z];}
 
     for(int z=0;z<ff7.SG_SLOT_FOOTER;z++){out << ff7.hf[si].sl_footer[z];}              //write slot footer
-//*/  //used to cut out all of write. for C style writing
-}// END OF SLOTS
+//  //used to cut out all of write. for C style writing
+/* memcpy(&out,*ff7.slot[si],0x10FD);*/}// END OF SLOTS
 
 // START CHECKSUM VEGETA
 //FILE * file2;
