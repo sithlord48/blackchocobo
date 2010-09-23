@@ -2259,17 +2259,9 @@ QDataStream out (&file);
 out.setByteOrder(QDataStream::LittleEndian);
 
 for(int i=0;i<ff7.SG_HEADER;i++){out << ff7.file_headerp[i];}//write file header
-
-
 for(int si=0;si<ff7.SG_SLOT_NUMBER;si++)
 {
     for(int z=0;z<ff7.SG_SLOT_HEADER;z++){out << ff7.hf[si].sl_header[z];}//write slot header
-    /*FILE *pfile; // this section is starting to work correctly!
-    pfile = fopen(fileName.toAscii(),"w");
-    fwrite(&ff7.slot,sizeof(ff7.slot),1,pfile);
-    for(int z=0;z<ff7.SG_SLOT_FOOTER;z++){out << ff7.hf[si].sl_footer[z];}
-    fclose(pfile);
-    /**/
     out << ff7.slot[si].checksum;
     out << ff7.slot[si].z_1;
     out << ff7.slot[si].desc.level;
@@ -2431,8 +2423,7 @@ for(int si=0;si<ff7.SG_SLOT_NUMBER;si++)
     for(int z=0;z<7;z++){out<<ff7.slot[si].z_20[z];}
 
     for(int z=0;z<ff7.SG_SLOT_FOOTER;z++){out << ff7.hf[si].sl_footer[z];}              //write slot footer
-//  //used to cut out all of write. for C style writing
-/* memcpy(&out,*ff7.slot[si],0x10FD);*/}// END OF SLOTS
+}// END OF SLOTS
 
 // START CHECKSUM VEGETA
 //FILE * file2;
@@ -2482,244 +2473,77 @@ free(memory);
 void MainWindow::on_actionExport_PC_Save_activated()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
-                                                    tr("Save Final Fantasy 7 SaveGame"), "",
-                tr("FF7 SaveGame(*.ff7)")); // Only Allow PC save Since we are going to force its creation.
-        if (!fileName.isEmpty())
+    tr("Save Final Fantasy 7 SaveGame"), //TITLE
+    "",         //PATH
+    tr("FF7 SaveGame(*.ff7)")); // Only Allow PC save Since we are going to make one
+
+    if(ff7.SG_TYPE !="PC")
     {
-            QFile file(fileName);
-                if (!file.open(QFile::ReadWrite )) {
-                    QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot write file %1:\n%2.")
-                             .arg(fileName)
-                             .arg(file.errorString()));
-                    return;
+        ui->combo_control->setCurrentIndex(0); // if not pc then chance of breaking controls.
+    }
+    ff7.SG_SIZE          = FF7_PC_SAVE_GAME_SIZE;
+    ff7.SG_HEADER        = FF7_PC_SAVE_GAME_HEADER;
+    ff7.SG_FOOTER        = FF7_PC_SAVE_GAME_FOOTER;
+    ff7.SG_DATA_SIZE     = FF7_PC_SAVE_GAME_DATA_SIZE;
+    ff7.SG_SLOT_HEADER   = FF7_PC_SAVE_GAME_SLOT_HEADER;
+    ff7.SG_SLOT_FOOTER   = FF7_PC_SAVE_GAME_SLOT_FOOTER;
+    ff7.SG_SLOT_SIZE     = FF7_PC_SAVE_GAME_SLOT_SIZE;
+    ff7.SG_SLOT_NUMBER   = FF7_PC_SAVE_GAME_SLOT_NUMBER;
+    ff7.SG_TYPE          = "PC";
+    ff7.file_headerp     = ff7.file_header_pc;           //pointer to pc file header
+    ff7.file_footerp     = ff7.file_footer_pc;           //pointer to pc file footer
 
-                }
-                ff7.SG_SIZE          = FF7_PC_SAVE_GAME_SIZE;
-                ff7.SG_HEADER        = FF7_PC_SAVE_GAME_HEADER;
-                ff7.SG_FOOTER        = FF7_PC_SAVE_GAME_FOOTER;
-                ff7.SG_DATA_SIZE     = FF7_PC_SAVE_GAME_DATA_SIZE;
-                ff7.SG_SLOT_HEADER   = FF7_PC_SAVE_GAME_SLOT_HEADER;
-                ff7.SG_SLOT_FOOTER   = FF7_PC_SAVE_GAME_SLOT_FOOTER;
-                ff7.SG_SLOT_SIZE     = FF7_PC_SAVE_GAME_SLOT_SIZE;
-                ff7.SG_SLOT_NUMBER   = FF7_PC_SAVE_GAME_SLOT_NUMBER;
-                ff7.SG_TYPE          = "PC";
-                ff7.file_headerp     = ff7.file_header_pc;           //pointer to pc file header
-                ff7.file_footerp     = ff7.file_footer_pc;           //pointer to pc file footer
-            ui->combo_control->setCurrentIndex(0); // set controls to default so we don't break the controller maping!
-            QDataStream out (&file);
-            out.setByteOrder(QDataStream::LittleEndian);
+/*~~~~~~~~~~~~~~~~~~~~~~~~ NEW SHORT SAVE - SITHLORD48 - V. 1.4 ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    FILE *pfile; // this section is starting to work correctly!
+    pfile = fopen(fileName.toAscii(),"w");
+    fwrite(ff7.file_headerp,ff7.SG_HEADER,1,pfile);
+    for(int si=0;si<15;si++)
+    {
+        fwrite(ff7.hf[si].sl_header,ff7.SG_SLOT_HEADER,1,pfile);
+        fwrite(&ff7.slot[si],ff7.SG_DATA_SIZE,1,pfile);
+        fwrite(ff7.hf[si].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
+    }
+    fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
+    fclose(pfile);
+/*~~~~~~~~~~~~~~~~~~~~~~END NEW SHORT SAVE -SITHLORD48- V.1.4~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-            for(int i=0;i<9;i++){out << PC_SAVE_GAME_FILE_HEADER[i];}//write A PC file header
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START CHECKSUM VEGETA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    void * memory;
+    long file_size;
 
-
-            for(int si=0;si<15;si++)
-            //int si=0; // used for testing new values.
-            {//write 15 slots its a pc save...
-
-                out << ff7.slot[si].checksum;
-                out << ff7.slot[si].z_1;
-                out << ff7.slot[si].desc.level;
-                for (int p=0;p<3;p++){out << ff7.slot[si].desc.party[p];}
-                for (int n=0;n<16;n++){out << qint8(ff7.slot[si].desc.name[n]);}
-                out << ff7.slot[si].desc.curHP;
-                out << ff7.slot[si].desc.maxHP;
-                out << ff7.slot[si].desc.curMP;
-                out << ff7.slot[si].desc.maxMP;
-                out << ff7.slot[si].desc.gil;
-                out << ff7.slot[si].desc.time;
-                for (int loc=0; loc<32;loc++){out << ff7.slot[si].desc.location[loc];}
-                for(int c=0;c<4;c++){for (int cc=0;cc<3;cc++){out << ff7.slot[si].colors[c][cc];}}
-                for (int i=0;i<9;i++){//OUTPUT CHAR RECORDS!
-                    out << ff7.slot[si].chars[i].id;
-                    out << ff7.slot[si].chars[i].level;
-                    out << ff7.slot[si].chars[i].strength;
-                    out << ff7.slot[si].chars[i].vitality;
-                    out << ff7.slot[si].chars[i].magic;
-                    out << ff7.slot[si].chars[i].spirit;
-                    out << ff7.slot[si].chars[i].dexterity;
-                    out << ff7.slot[si].chars[i].luck;
-                    out << ff7.slot[si].chars[i].strength_bonus;
-                    out << ff7.slot[si].chars[i].vitality_bonus;
-                    out << ff7.slot[si].chars[i].magic_bonus;
-                    out << ff7.slot[si].chars[i].spirit_bonus;
-                    out << ff7.slot[si].chars[i].dexterity_bonus;
-                    out << ff7.slot[si].chars[i].luck_bonus;
-                    out << ff7.slot[si].chars[i].limitlevel;
-                    out << ff7.slot[si].chars[i].limitbar;
-                    for(int n=0;n<12;n++){out << ff7.slot[si].chars[i].name[n];}
-                    out << ff7.slot[si].chars[i].weapon;
-                    out << ff7.slot[si].chars[i].armor;
-                    out << ff7.slot[si].chars[i].accessory;
-                    for(int f=0;f<3;f++){out << ff7.slot[si].chars[i].flags[f];}
-                    out << ff7.slot[si].chars[i].limits;
-                    out << ff7.slot[si].chars[i].kills;
-                    out << ff7.slot[si].chars[i].timesused1;
-                    out << ff7.slot[si].chars[i].timesused2;
-                    out << ff7.slot[si].chars[i].timesused3;
-                    out << ff7.slot[si].chars[i].curHP;
-                    out << ff7.slot[si].chars[i].baseHP;
-                    out << ff7.slot[si].chars[i].curMP;
-                    out << ff7.slot[si].chars[i].baseMP;
-                    for (int z=0;z<4;z++){out << ff7.slot[si].chars[i].z_4[z];}
-                    out << ff7.slot[si].chars[i].maxHP;
-                    out << ff7.slot[si].chars[i].maxMP;
-                    out << ff7.slot[si].chars[i].exp;
-                    for (int m=0;m<16;m++){out << ff7.slot[si].chars[i].materias[m].id;
-                    for (int ma=0;ma<3;ma++){out << ff7.slot[si].chars[i].materias[m].ap[ma];}}
-                    out << ff7.slot[si].chars[i].expNext;
-                }//end char loop
-                for (int p=0;p<3;p++){out<< ff7.slot[si].party[p];}
-                out<< ff7.slot[si].z_2;
-                for (int itm=0;itm<320;itm ++)
-                {
-                    out<< ff7.slot[si].items[itm].id;
-                    out<< ff7.slot[si].items[itm].qty;
-                }
-                for(int mat=0;mat<200;mat++)
-                {
-                    out << ff7.slot[si].materias[mat].id;
-                    for(int ma=0;ma<3;ma++){out << ff7.slot[si].materias[mat].ap[ma];}
-                }
-                for(int mat=0;mat<48;mat++)
-                {
-                    out << ff7.slot[si].stolen[mat].id;
-                    for(int ma=0;ma<3;ma++){out << ff7.slot[si].stolen[mat].ap[ma];}
-                }
-                for(int z=0;z<32;z++){out<< ff7.slot[si].z_3[z];}
-                out << ff7.slot[si].gil;
-                out<< ff7.slot[si].time;
-                for (int z=0;z<16;z++){out<< ff7.slot[si].z_4[z];}
-                out << ff7.slot[si].mapid;
-                out << ff7.slot[si].locationid;
-                for (int z=0;z<2;z++){out << ff7.slot[si].z_5[z];}
-                out<< ff7.slot[si].coord.x;
-                out<<ff7.slot[si].coord.y;
-                out<<ff7.slot[si].coord.z;
-                for(int z=0;z<4;z++){out<<ff7.slot[si].z_6[z];}
-                out<< ff7.slot[si].mprogress;
-                out<<ff7.slot[si].unknown1;
-                out<< ff7.slot[si].love.aeris;
-                out<< ff7.slot[si].love.tifa;
-                out<< ff7.slot[si].love.yuffie;
-                out<< ff7.slot[si].love.barret;
-                for (int z=0;z<17;z++){out << ff7.slot[si].z_7[z];}
-                out << ff7.slot[si].battles;
-                out << ff7.slot[si].runs;
-                for(int t=0;t<36;t++){out << ff7.slot[si].temp[t];}
-                for(int k=0;k<8;k++){out << ff7.slot[si].keyitems[k];}
-                for(int z=0;z<13;z++){out << ff7.slot[si].z_8[z];}
-                for (int c=0;c<4;c++){out << ff7.slot[si].pennedchocos[c];}
-                for (int z=0;z<136;z++){out << ff7.slot[si].z_9[z];}
-                out<<ff7.slot[si].bm_progress1;
-                out<<ff7.slot[si].bm_progress2;
-                for (int z=0;z<95;z++){out<<ff7.slot[si].unknown2[z];}
-                out<<ff7.slot[si].bm_progress3;
-                for (int z=0;z<7;z++){out<<ff7.slot[si].unknown3[z];}
-                out << ff7.slot[si].gp;
-                for (int z=0;z<12;z++){out << ff7.slot[si].z_10[z];}
-                out << ff7.slot[si].stables;
-                out << ff7.slot[si].stablesoccupied;//Bug Fixed! Before was z_11 (Vegeta_Ss4) v0.8.3
-                out << ff7.slot[si].z_11;//Bug Fixed! Before was stablesoccupied (Vegeta_Ss4) v0.8.3
-                out << ff7.slot[si].chocobomask;
-                out << ff7.slot[si].chocoborn;
-                for(int z=0;z<101;z++){out << ff7.slot[si].z_12[z];}
-                out << ff7.slot[si].turtleflyers;
-                for (int z=0;z<93;z++){out <<ff7.slot[si].temp2[z];}
-                for(int c=0;c<4;c++)
-                {
-                    out << ff7.slot[si].chocobos[c].sprintspd;//fixed before speed
-                    out << ff7.slot[si].chocobos[c].maxsprintspd;
-                    out << ff7.slot[si].chocobos[c].speed;
-                    out << ff7.slot[si].chocobos[c].maxspeed;
-                    out << ff7.slot[si].chocobos[c].accel;
-                    out << ff7.slot[si].chocobos[c].coop;
-                    out << ff7.slot[si].chocobos[c].intelligence;
-                    out << ff7.slot[si].chocobos[c].personality;
-                    out << ff7.slot[si].chocobos[c].pcount;
-                    out << ff7.slot[si].chocobos[c].raceswon;
-                    out << ff7.slot[si].chocobos[c].sex;
-                    out << ff7.slot[si].chocobos[c].type;
-
-                }
-                for(int z=0;z<160;z++){out<<ff7.slot[si].z_13[z];}                                  //0x0E04 z_13
-                out << ff7.slot[si].disc;                                                           //0x0EA4 Current Disk
-                for(int z=0;z<31;z++){out << ff7.slot[si].z_14[z];}                                 //0x0EA5 z_14
-                for(int c=0;c<6;c++){for(int o=0;o<6;o++){out << ff7.slot[si].chocobonames[c][o];}} //0x0EC4 save chocobonames
-                for(int c=0;c<6;c++){out << ff7.slot[si].chocostaminas[c];}                         //0x0EE8 save all the stamina values too
-                for(int z=0;z<400;z++){out << ff7.slot[si].z_17[z];}                                //0x0EF4 z_17
-                for(int c=4;c<6;c++)                                                                //0x1084 ADDED CHOCO 5-6
-                {
-                    out << ff7.slot[si].chocobos[c].sprintspd;
-                    out << ff7.slot[si].chocobos[c].maxsprintspd;
-                    out << ff7.slot[si].chocobos[c].speed;
-                    out << ff7.slot[si].chocobos[c].maxspeed;
-                    out << ff7.slot[si].chocobos[c].accel;
-                    out << ff7.slot[si].chocobos[c].coop;
-                    out << ff7.slot[si].chocobos[c].intelligence;
-                    out << ff7.slot[si].chocobos[c].personality;
-                    out << ff7.slot[si].chocobos[c].pcount;
-                    out << ff7.slot[si].chocobos[c].raceswon;
-                    out << ff7.slot[si].chocobos[c].sex;
-                    out << ff7.slot[si].chocobos[c].type;
-
-                }
-                out << ff7.slot[si].phsmask;                                                        //0x10A4
-                out << ff7.slot[si].unlockedchars;                                                  //0x10A6
-                for(int z=0;z<48;z++){out << ff7.slot[si].z_18[z];}                                 //0x10A8
-                out <<ff7.slot[si].battlespeed;
-                out <<ff7.slot[si].battlemspeed;
-                out <<ff7.slot[si].options1;
-                out <<ff7.slot[si].options2;
-                for(int z=0;z<16;z++){out <<ff7.slot[si].z_19[z];}
-                out <<ff7.slot[si].fieldmspeed;
-                for(int z=0;z<7;z++){out<<ff7.slot[si].z_20[z];}
-            }// END OF SLOTS
-
-            // START CHECKSUM VEGETA
-            //FILE * file2;
-            void * memory;
-            long file_size;
-
-            file.seek(0);//Set pointer to the Beggining
-
-            QByteArray ff7savefile;
-
-            ff7savefile = file.readAll(); //put all data in temp raw file
-            file_size = file.size();//Get File Size
-            memory = (void*) malloc(ff7.SG_SIZE);//Memory Allocation
-
-            if (!memory) {
-            return;
-            }
-
-            file.seek(0);
-            memcpy(memory,ff7savefile.mid(0x00000,ff7.SG_SIZE),ff7.SG_SIZE);
-
-            //Do checksum foreach slot
-                for(int i=0, checksum=0; i<ff7.SG_SLOT_NUMBER; i++)
-                {
-
-                    char * data_pointer = ((char*)memory + ff7.SG_HEADER + ff7.SG_SLOT_SIZE*i + ff7.SG_SLOT_HEADER + 0x04);
-                    checksum = ff7__checksum(data_pointer); //2 Bytes checksum (a 16-bit Byte checksum)
-
-                    if(checksum != 0x4D1D) //if is a blank slot don't write checksum!
-                    {
-
-                        int index = ff7.SG_HEADER + ff7.SG_SLOT_SIZE*i + ff7.SG_SLOT_HEADER;
-
-                        file.seek(index);
-
-                        out << checksum;
-                    }
-
-                }
-
-
-            file.close();
-            free(memory);
-            // END CHECKSUM VEGETA
+    QFile file(fileName);
+    if (!file.open(QFile::ReadWrite ))
+    {
+        QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot write file %1:\n%2.")
+        .arg(fileName) .arg(file.errorString()));
+        return;
+    }
+    QDataStream out (&file);
+    out.setByteOrder(QDataStream::LittleEndian);
+    file.seek(0);//Set pointer to the Beggining
+    QByteArray ff7savefile;
+    ff7savefile = file.readAll(); //put all data in temp raw file
+    file_size = file.size();//Get File Size
+    memory = (void*) malloc(ff7.SG_SIZE);//Memory Allocation
+    if (!memory){return;}
+    file.seek(0);
+    memcpy(memory,ff7savefile.mid(0x00000,ff7.SG_SIZE),ff7.SG_SIZE);
+    //Do checksum foreach slot
+    for(int i=0, checksum=0; i<ff7.SG_SLOT_NUMBER; i++)
+    {
+        char * data_pointer = ((char*)memory + ff7.SG_HEADER + ff7.SG_SLOT_SIZE*i + ff7.SG_SLOT_HEADER + 0x04);
+        checksum = ff7__checksum(data_pointer); //2 Bytes checksum (a 16-bit Byte checksum)
+        if(checksum != 0x4D1D) //if is a blank slot don't write checksum!
+        {
+        int index = ff7.SG_HEADER + ff7.SG_SLOT_SIZE*i + ff7.SG_SLOT_HEADER;
+        file.seek(index);
+        out << checksum;
         }
     }
+    file.close();
+    free(memory);
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END CHECKSUM VEGETA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+}
 
 void MainWindow::on_actionExport_PSX_activated()
 {
