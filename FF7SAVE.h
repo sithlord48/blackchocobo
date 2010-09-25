@@ -416,10 +416,10 @@ struct FF7CHAR {        	// [0x0084] Character info -98% - 1 Unknown
 };
 
 struct FF7CHOCOBO {		// [0x0010] Chocobo - 99% - 1 Personality unknown!
-    quint16 speed;		// [0x0000] Sprint speed
-    quint16 maxspeed;		// [0x0002] Max Sprint speed
     quint16 sprintspd;		// [0x0004] Speed
     quint16 maxsprintspd;       // [0x0006] Max Speed
+    quint16 speed;		// [0x0000] Sprint speed
+    quint16 maxspeed;		// [0x0002] Max Sprint speed
     quint8 accel;               // [0x0008] acceleration
     quint8 coop;                // [0x0009] cooperation
     quint8 intelligence;	// [0x000A] Intelligence
@@ -443,69 +443,69 @@ struct FF7SLOT {		// [0x10F4] Save slot -
     quint8 colors[4][3];	// [0x0048] Window colors (RGB)
     FF7CHAR chars[9];		// [0x0054:84] The nine characters (Cl,Ba,Ti,Ae,Re,Yu,Ca,Vi,Ci)
     qint8 party[3];		// [0x04F8] Party members
-    signed char z_2;            // [0x04FB] always 0xFF
+    quint8 z_2;            // [0x04FB] always 0xFF
     item items[320];		// [0x04FC] Items (320 slots)
     materia materias[200];	// [0x077C] Materia (200 slots)
     materia stolen[48];         // [0x0A9C] materia stolen by yuffie.
-    signed char z_3[32];        //unknown - Cut 0xBA4 out for main progress var (quint16)
+    quint8 z_3[32];        //unknown - Cut 0xBA4 out for main progress var (quint16)
     quint32 gil;		// [0x0B7C] Party gil
     quint32 time;		// [0x0B80] Total number of seconds played
-    signed char z_4[16];
+    quint8 z_4[16];
     quint16 mapid;		// [0x0B9D] Current map
     quint16 locationid;		// [0x0B9F] Current location
-    signed char z_5[2];
+    quint8 z_5[2];
     FF7XYZ coord;		// [0x0B9A] Current coordinates (world map)
-    signed char z_6[4];
+    quint8 z_6[4];
     quint16 mprogress;          // [0x0BA4] Main Progress var
-    signed char unknown1;       // [0x0BA6]
+    quint8 unknown1;       // [0x0BA6]
     struct {			// [0X0BA1] Love points
-        qint8 barret;qint8 tifa;qint8 aeris;qint8 yuffie;
+        qint8 aeris;qint8 tifa;qint8 yuffie;qint8 barret;
     } love;                     // [0x0BA5
-    signed char z_7[17];        //0xbb4 unknown data
+    quint8 z_7[17];        //0xbb4 unknown data
     quint16 battles;            // [0x0Bc5] Number of battle
     quint16 runs;               // [0x0Bc7] Number of escapes
-    signed char temp[36];       //temp var. from 0x0bc9 -0xbe4
+    quint8 temp[36];       //temp var. from 0x0bc9 -0xbe4
     quint8 keyitems[8];         // [0x0BE4] Key items
-    signed char z_8[13];        //[0x0BEC] C00UNKNOWN
+    quint8 z_8[13];        //[0x0BEC] C00UNKNOWN
     qint8 pennedchocos[4];      //[0x0C01] chocos in fenced area at farm rating
-    signed char z_9[136];       //[0x0C05] unknown - 128 ...
+    quint8 z_9[136];       //[0x0C05] unknown - 128 ...
     quint8 bm_progress1;        //[0x0C85]
     quint8 bm_progress2;        //[0x0C86]
-    signed char unknown2[95];   //[0X0C87]
+    quint8 unknown2[95];   //[0X0C87]
     quint8 bm_progress3;        //[0X0CE6]
-    signed char unknown3[7];   //[0X0CF6]- 14.....
+    quint8 unknown3[7];   //[0X0CF6]- 14.....
     quint16 gp;                 // [0x0Cf7] OK! Party GP (0-10000)
-    signed char z_10[12];       //unknown Data [0x0cf9]
+    quint8 z_10[12];       //unknown Data [0x0cf9]
     qint8 stables;              // [0x0d05] OkNumber of chocobo stables owned //genereated incorrectly ?
-    signed char z_11;           //0x0d06 unknown char
-    qint8 stablesoccupied;      // [0x0d07] Number of occupied stables //genereated incorrectly ?
+    qint8 stablesoccupied;      // [0x0d06] Number of occupied stables //genereated incorrectly ?
+    quint8 z_11;                //0x0d07 unknown char
     qint8 chocobomask;          // [0x0d08] Mask of occupied stables//genereated incorrectly ?
     quint8 chocoborn;           //0xd09 what stall a choco was just born in.
-    signed char z_12[101];      //0x0d0A  - 0x0ecd  UNKNOWN
+    quint8 z_12[101];      //0x0d0A  - 0x0ecd  UNKNOWN
     quint8 turtleflyers;        //[0x0d6E] turtles paradice flyers.
-    signed char temp2[93];      //[0X0D6F] temp var2 unknown
+    quint8 temp2[93];      //[0X0D6F] temp var2 unknown
     //quint8 kalmprog;          // [0xD36] kalm prog ?
-    FF7CHOCOBO chocobos[6];     // [0x0DCD] Chocobo slots
-    signed char z_13[160];      //[0x0E04]  //mod (Vegeta_Ss4) v0.8.3
+    FF7CHOCOBO chocobos[4];     // [0x0DCD] Chocobo slots
+    quint8 z_13[160];      //[0x0E04]  //mod (Vegeta_Ss4) v0.8.3
     qint8 disc;                 // [0x0EAD] Current CD
-    signed char z_14[31];
+    quint8 z_14[31];
     quint8 chocobonames[6][6];  // [0x0ECD] Chocobo names
     quint16 chocostaminas[6];   // [0x0EE8] Chocobo staminas 12 bytes
     //_UNKNOWN z_15[24];
     //char location[24];        // [0x0F14] Name of location
     //_UNKNOWN z_16[436];
-    signed char z_17[400];      //0x0EE8 - 0x1084 unchecked data //mod (Vegeta_Ss4) v0.8.3
-                                //0x1084 Chocobo slots 5-6
+    quint8 z_17[400];      //0x0EE8 - 0x1084 unchecked data //mod (Vegeta_Ss4) v0.8.3
+    FF7CHOCOBO choco56[2];    //0x1084 Chocobo slots 5-6
     quint16 phsmask;            //0x10A4 who is allowed in the phs
     quint16 unlockedchars;      //0x10A6 who is visible in the phs
-    signed char z_18[48];       //0x10A8 -0x10D7 UNCHECKED
+    quint8 z_18[48];       //0x10A8 -0x10D7 UNCHECKED
     quint8 battlespeed;         //0x10D8
     quint8 battlemspeed;        //0x10D9
     qint8 options1;             //0x10DA
     quint8 options2;            //0x10DB
-    signed char z_19[16];       //0x10DC unchecked (controller mapping?)
+    quint8 z_19[16];       //0x10DC unchecked (controller mapping?)
     quint8 fieldmspeed;         //0x10f5
-    signed char z_20[7];        //unchecked
+    quint8 z_20[7];        //unchecked
 };
 /* FF7HEADFOOT FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
 struct FF7HEADFOOT {
