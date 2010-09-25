@@ -2495,7 +2495,7 @@ void MainWindow::on_actionExport_PC_Save_activated()
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~ NEW SHORT SAVE - SITHLORD48 - V. 1.4 ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     FILE *pfile; // this section is starting to work correctly!
-    pfile = fopen(fileName.toAscii(),"w");
+    pfile = fopen(fileName.toAscii(),"wb");
     fwrite(ff7.file_headerp,ff7.SG_HEADER,1,pfile);
     for(int si=0;si<15;si++)
     {
