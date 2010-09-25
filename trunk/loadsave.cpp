@@ -1048,7 +1048,7 @@ for(int z=0;z<400;z++){
 
 for (int c=0;c<2;c++)// collect chocobo slots 5-6
 {
-temp2 = ff7file.mid((index+0x1084)+((c-4)*16),16);
+temp2 = ff7file.mid((index+0x1084)+((c)*16),16);
 temp = temp2.mid (0x0,2);
 memcpy(&ff7.slot[s].choco56[c].sprintspd,temp,2);
 temp = temp2.mid (0x2,2);
@@ -1491,7 +1491,7 @@ for(int z=0;z<400;z++){
 
 for (int c=0;c<2;c++)// collect chocobo slots 5-6
 {
-temp2 = ff7file.mid((index+0x1084)+((c-4)*16),16);
+temp2 = ff7file.mid((index+0x1084)+((c)*16),16);
 temp = temp2.mid (0x0,2);
 memcpy(&ff7.slot[s].choco56[c].sprintspd,temp,2);
 temp = temp2.mid (0x2,2);
