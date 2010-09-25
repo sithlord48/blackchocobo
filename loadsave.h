@@ -9,3 +9,4 @@
 
 //void loadFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
 //void saveFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
+void fix_sum(const QString &fileName);
