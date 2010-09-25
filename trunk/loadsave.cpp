@@ -13,7 +13,7 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-
+#include <QMessageBox>
 #include <QFileDialog> // for file dialogs
 #include <QDataStream> // for data manip
 //#include <QProcess>   // for calling ext processes (like checksum)
@@ -2272,10 +2272,10 @@ else {QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot save This Type o
 
 }
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~ NEW SHORT SAVE - SITHLORD48 - V. 1.4 ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::saveFileFull(const QString &fileName)
 {
-/*~~~~~~~~~~~~~~~~~~~~~~~~ NEW SHORT SAVE - SITHLORD48 - V. 1.4 ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-FILE *pfile; // this section is starting to work correctly!
+FILE *pfile;
 pfile = fopen(fileName.toAscii(),"wb");
 
 fwrite(ff7.file_headerp,ff7.SG_HEADER,1,pfile);
@@ -2287,45 +2287,10 @@ fwrite(&ff7.hf[si].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
 }
 fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
 fclose(pfile);
+fix_sum(fileName);
+}
 /*~~~~~~~~~~~~~~~~~~~~~~END NEW SHORT SAVE -SITHLORD48- V.1.4~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START CHECKSUM VEGETA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-    void * memory;
-    long file_size;
-    QFile file(fileName);
-    if (!file.open(QFile::ReadWrite ))
-        {
-        QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot write file %1:\n%2.")
-        .arg(fileName) .arg(file.errorString()));
-        return;
-        }
-    QDataStream out (&file);
-    out.setByteOrder(QDataStream::LittleEndian);
-    file.seek(0);//Set pointer to the Beggining
-    QByteArray ff7savefile;
-    ff7savefile = file.readAll(); //put all data in temp raw file
-    file_size = file.size();//Get File Size
-    memory = (void*) malloc(ff7.SG_SIZE);//Memory Allocation
-    if (!memory){return;}
-    file.seek(0);
-    memcpy(memory,ff7savefile.mid(0x00000,ff7.SG_SIZE),ff7.SG_SIZE);
-    //Do checksum foreach slot
-    for(int i=0, checksum=0; i<ff7.SG_SLOT_NUMBER; i++)
-    {
-        char * data_pointer = ((char*)memory + ff7.SG_HEADER + ff7.SG_SLOT_SIZE*i + ff7.SG_SLOT_HEADER + 0x04);
-        checksum = ff7__checksum(data_pointer); //2 Bytes checksum (a 16-bit Byte checksum)
-        if(checksum != 0x4D1D) //if is a blank slot don't write checksum!
-        {
-        int index = ff7.SG_HEADER + ff7.SG_SLOT_SIZE*i + ff7.SG_SLOT_HEADER;
-        file.seek(index);
-        out << checksum;
-        }
-    }
-    file.close();
-    free(memory);
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END CHECKSUM VEGETA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-}// END OF SAVE
 
 
 void MainWindow::on_actionExport_PC_Save_activated()
@@ -2362,46 +2327,9 @@ void MainWindow::on_actionExport_PC_Save_activated()
     }
     fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
     fclose(pfile);
-
-    /*~~~~~~~~~~~~~~~~~~~~~~END NEW SHORT SAVE -SITHLORD48- V.1.4~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START CHECKSUM VEGETA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-        void * memory;
-        long file_size;
-        QFile file(fileName);
-        if (!file.open(QFile::ReadWrite ))
-        {
-         QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot write file %1:\n%2.")
-         .arg(fileName) .arg(file.errorString()));
-         return;
-        }
-        QDataStream out (&file);
-        out.setByteOrder(QDataStream::LittleEndian);
-        file.seek(0);//Set pointer to the Beggining
-        QByteArray ff7savefile;
-        ff7savefile = file.readAll(); //put all data in temp raw file
-        file_size = file.size();//Get File Size
-        memory = (void*) malloc(ff7.SG_SIZE);//Memory Allocation
-        if (!memory){return;}
-        file.seek(0);
-        memcpy(memory,ff7savefile.mid(0x00000,ff7.SG_SIZE),ff7.SG_SIZE);
-        //Do checksum foreach slot
-        for(int i=0, checksum=0; i<ff7.SG_SLOT_NUMBER; i++)
-        {
-            char * data_pointer = ((char*)memory + ff7.SG_HEADER + ff7.SG_SLOT_SIZE*i + ff7.SG_SLOT_HEADER + 0x04);
-            checksum = ff7__checksum(data_pointer); //2 Bytes checksum (a 16-bit Byte checksum)
-            if(checksum != 0x4D1D) //if is a blank slot don't write checksum!
-            {
-            int index = ff7.SG_HEADER + ff7.SG_SLOT_SIZE*i + ff7.SG_SLOT_HEADER;
-            file.seek(index);
-            out << checksum;
-            }
-        }
-        file.close();
-        free(memory);
-        /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END CHECKSUM VEGETA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-    }// END OF EXPORT_PC
+    fix_sum(fileName);
+    }
+/*~~~~~~~~~~~~~~~~~~~~~~END NEW SHORT SAVE -SITHLORD48- V.1.4~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_actionExport_PSX_activated()
 {
@@ -2450,19 +2378,18 @@ fwrite(&ff7.slot[s],ff7.SG_DATA_SIZE,1,pfile);
 fwrite(ff7.hf[s].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
 fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
 fclose(pfile);
+fix_sum(fileName);
+}
 /*~~~~~~~~~~~~~~~~~~~~~~END NEW SHORT SAVE -SITHLORD48- V.1.4~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START CHECKSUM VEGETA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START CHECKSUM VEGETA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+void fix_sum(const QString &fileName)
+{
     void * memory;
     long file_size;
     QFile file(fileName);
-    if (!file.open(QFile::ReadWrite ))
-    {
-     QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot write file %1:\n%2.")
-     .arg(fileName) .arg(file.errorString()));
-     return;
-    }
+    if (!file.open(QFile::ReadWrite )){return;}
     QDataStream out (&file);
     out.setByteOrder(QDataStream::LittleEndian);
     file.seek(0);//Set pointer to the Beggining
