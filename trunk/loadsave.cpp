@@ -574,33 +574,33 @@ for (int i=0;i<ff7.SG_SLOT_NUMBER;i++){ // MAIN FILL LOOP
    }
 
 
-   for (int c=4;c<6;c++)// collect chocobo slots 5-6
+   for (int c=0;c<2;c++)// collect chocobo slots 5-6
    {
-    temp2 = ff7file.mid((index+0x1084)+((c-4)*16),16);
+    temp2 = ff7file.mid((index+0x1084)+((c)*16),16);
     temp = temp2.mid (0x0,2);
-    memcpy(&ff7.slot[i].chocobos[c].sprintspd,temp,2);
+    memcpy(&ff7.slot[i].choco56[c].sprintspd,temp,2);
     temp = temp2.mid (0x2,2);
-    memcpy(&ff7.slot[i].chocobos[c].maxsprintspd,temp,2);
+    memcpy(&ff7.slot[i].choco56[c].maxsprintspd,temp,2);
     temp = temp2.mid (0x4,2);
-    memcpy(&ff7.slot[i].chocobos[c].speed,temp,2);
+    memcpy(&ff7.slot[i].choco56[c].speed,temp,2);
     temp = temp2.mid (0x6,2);
-    memcpy(&ff7.slot[i].chocobos[c].maxspeed,temp,2);
+    memcpy(&ff7.slot[i].choco56[c].maxspeed,temp,2);
     temp = temp2.mid (0x8,1);
-    memcpy(&ff7.slot[i].chocobos[c].accel,temp,1);
+    memcpy(&ff7.slot[i].choco56[c].accel,temp,1);
     temp = temp2.mid (0x9,1);
-    memcpy(&ff7.slot[i].chocobos[c].coop,temp,1);
+    memcpy(&ff7.slot[i].choco56[c].coop,temp,1);
     temp = temp2.mid (0xA,1);
-    memcpy(&ff7.slot[i].chocobos[c].intelligence,temp,1);
+    memcpy(&ff7.slot[i].choco56[c].intelligence,temp,1);
     temp = temp2.mid (0xB,1);
-    memcpy(&ff7.slot[i].chocobos[c].personality,temp,1);
+    memcpy(&ff7.slot[i].choco56[c].personality,temp,1);
     temp = temp2.mid (0xC,1);
-    memcpy(&ff7.slot[i].chocobos[c].pcount,temp,1);
+    memcpy(&ff7.slot[i].choco56[c].pcount,temp,1);
     temp = temp2.mid (0xD,1);
-    memcpy(&ff7.slot[i].chocobos[c].raceswon,temp,1);
+    memcpy(&ff7.slot[i].choco56[c].raceswon,temp,1);
     temp = temp2.mid (0xE,1);
-    memcpy(&ff7.slot[i].chocobos[c].sex,temp,1);
+    memcpy(&ff7.slot[i].choco56[c].sex,temp,1);
     temp = temp2.mid (0xF,1);
-    memcpy(&ff7.slot[i].chocobos[c].type,temp,1);
+    memcpy(&ff7.slot[i].choco56[c].type,temp,1);
    }
 
 
@@ -1046,33 +1046,33 @@ for(int z=0;z<400;z++){
 }
 
 
-for (int c=4;c<6;c++)// collect chocobo slots 5-6
+for (int c=0;c<2;c++)// collect chocobo slots 5-6
 {
 temp2 = ff7file.mid((index+0x1084)+((c-4)*16),16);
 temp = temp2.mid (0x0,2);
-memcpy(&ff7.slot[s].chocobos[c].sprintspd,temp,2);
+memcpy(&ff7.slot[s].choco56[c].sprintspd,temp,2);
 temp = temp2.mid (0x2,2);
-memcpy(&ff7.slot[s].chocobos[c].maxsprintspd,temp,2);
+memcpy(&ff7.slot[s].choco56[c].maxsprintspd,temp,2);
 temp = temp2.mid (0x4,2);
-memcpy(&ff7.slot[s].chocobos[c].speed,temp,2);
+memcpy(&ff7.slot[s].choco56[c].speed,temp,2);
 temp = temp2.mid (0x6,2);
-memcpy(&ff7.slot[s].chocobos[c].maxspeed,temp,2);
+memcpy(&ff7.slot[s].choco56[c].maxspeed,temp,2);
 temp = temp2.mid (0x8,1);
-memcpy(&ff7.slot[s].chocobos[c].accel,temp,1);
+memcpy(&ff7.slot[s].choco56[c].accel,temp,1);
 temp = temp2.mid (0x9,1);
-memcpy(&ff7.slot[s].chocobos[c].coop,temp,1);
+memcpy(&ff7.slot[s].choco56[c].coop,temp,1);
 temp = temp2.mid (0xA,1);
-memcpy(&ff7.slot[s].chocobos[c].intelligence,temp,1);
+memcpy(&ff7.slot[s].choco56[c].intelligence,temp,1);
 temp = temp2.mid (0xB,1);
-memcpy(&ff7.slot[s].chocobos[c].personality,temp,1);
+memcpy(&ff7.slot[s].choco56[c].personality,temp,1);
 temp = temp2.mid (0xC,1);
-memcpy(&ff7.slot[s].chocobos[c].pcount,temp,1);
+memcpy(&ff7.slot[s].choco56[c].pcount,temp,1);
 temp = temp2.mid (0xD,1);
-memcpy(&ff7.slot[s].chocobos[c].raceswon,temp,1);
+memcpy(&ff7.slot[s].choco56[c].raceswon,temp,1);
 temp = temp2.mid (0xE,1);
-memcpy(&ff7.slot[s].chocobos[c].sex,temp,1);
+memcpy(&ff7.slot[s].choco56[c].sex,temp,1);
 temp = temp2.mid (0xF,1);
-memcpy(&ff7.slot[s].chocobos[c].type,temp,1);
+memcpy(&ff7.slot[s].choco56[c].type,temp,1);
 }
 
 
@@ -1489,33 +1489,33 @@ for(int z=0;z<400;z++){
 }
 
 
-for (int c=4;c<6;c++)// collect chocobo slots 5-6
+for (int c=0;c<2;c++)// collect chocobo slots 5-6
 {
 temp2 = ff7file.mid((index+0x1084)+((c-4)*16),16);
 temp = temp2.mid (0x0,2);
-memcpy(&ff7.slot[s].chocobos[c].sprintspd,temp,2);
+memcpy(&ff7.slot[s].choco56[c].sprintspd,temp,2);
 temp = temp2.mid (0x2,2);
-memcpy(&ff7.slot[s].chocobos[c].maxsprintspd,temp,2);
+memcpy(&ff7.slot[s].choco56[c].maxsprintspd,temp,2);
 temp = temp2.mid (0x4,2);
-memcpy(&ff7.slot[s].chocobos[c].speed,temp,2);
+memcpy(&ff7.slot[s].choco56[c].speed,temp,2);
 temp = temp2.mid (0x6,2);
-memcpy(&ff7.slot[s].chocobos[c].maxspeed,temp,2);
+memcpy(&ff7.slot[s].choco56[c].maxspeed,temp,2);
 temp = temp2.mid (0x8,1);
-memcpy(&ff7.slot[s].chocobos[c].accel,temp,1);
+memcpy(&ff7.slot[s].choco56[c].accel,temp,1);
 temp = temp2.mid (0x9,1);
-memcpy(&ff7.slot[s].chocobos[c].coop,temp,1);
+memcpy(&ff7.slot[s].choco56[c].coop,temp,1);
 temp = temp2.mid (0xA,1);
-memcpy(&ff7.slot[s].chocobos[c].intelligence,temp,1);
+memcpy(&ff7.slot[s].choco56[c].intelligence,temp,1);
 temp = temp2.mid (0xB,1);
-memcpy(&ff7.slot[s].chocobos[c].personality,temp,1);
+memcpy(&ff7.slot[s].choco56[c].personality,temp,1);
 temp = temp2.mid (0xC,1);
-memcpy(&ff7.slot[s].chocobos[c].pcount,temp,1);
+memcpy(&ff7.slot[s].choco56[c].pcount,temp,1);
 temp = temp2.mid (0xD,1);
-memcpy(&ff7.slot[s].chocobos[c].raceswon,temp,1);
+memcpy(&ff7.slot[s].choco56[c].raceswon,temp,1);
 temp = temp2.mid (0xE,1);
-memcpy(&ff7.slot[s].chocobos[c].sex,temp,1);
+memcpy(&ff7.slot[s].choco56[c].sex,temp,1);
 temp = temp2.mid (0xF,1);
-memcpy(&ff7.slot[s].chocobos[c].type,temp,1);
+memcpy(&ff7.slot[s].choco56[c].type,temp,1);
 }
 
 
@@ -1956,7 +1956,7 @@ void MainWindow::clearslot(int rmslot)
         memcpy(&ff7.slot[rmslot].stolen[met].id,temp,1);
         for (int ma=0;ma<3;ma++){ff7.slot[rmslot].stolen[met].ap[ma]=0x00;}
     }
-    for(int c=0;c<6;c++)// clear chocobo slots
+    for(int c=0;c<4;c++)// clear chocobo slots
     {
     temp=0x0000;
     memcpy(&ff7.slot[rmslot].chocobos[c].sprintspd,temp,2);
@@ -1972,6 +1972,23 @@ void MainWindow::clearslot(int rmslot)
     memcpy(&ff7.slot[rmslot].chocobos[c].raceswon,temp,1);
     memcpy(&ff7.slot[rmslot].chocobos[c].sex,temp,1);
     memcpy(&ff7.slot[rmslot].chocobos[c].type,temp,1);
+    }
+    for(int c=0;c<2;c++)// clear chocobo slots 4&5
+    {
+    temp=0x0000;
+    memcpy(&ff7.slot[rmslot].choco56[c].sprintspd,temp,2);
+    memcpy(&ff7.slot[rmslot].choco56[c].maxsprintspd,temp,2);
+    memcpy(&ff7.slot[rmslot].choco56[c].speed,temp,2);
+    memcpy(&ff7.slot[rmslot].choco56[c].maxspeed,temp,2);
+    temp=0x00;
+    memcpy(&ff7.slot[rmslot].choco56[c].accel,temp,1);
+    memcpy(&ff7.slot[rmslot].choco56[c].coop,temp,1);
+    memcpy(&ff7.slot[rmslot].choco56[c].intelligence,temp,1);
+    memcpy(&ff7.slot[rmslot].choco56[c].personality,temp,1);
+    memcpy(&ff7.slot[rmslot].choco56[c].pcount,temp,1);
+    memcpy(&ff7.slot[rmslot].choco56[c].raceswon,temp,1);
+    memcpy(&ff7.slot[rmslot].choco56[c].sex,temp,1);
+    memcpy(&ff7.slot[rmslot].choco56[c].type,temp,1);
     }
 
 }
@@ -2169,7 +2186,7 @@ void MainWindow::on_actionPaste_Slot_activated()
 
     for(int z=0;z<93;z++){ff7.slot[s].temp2[z] = bufferslot.temp2[z];}
 
-    for (int c=0;c<6;c++)// collect chocobo slots 1-4
+    for (int c=0;c<4;c++)// collect chocobo slots 1-4
     {
 
     ff7.slot[s].chocobos[c].sprintspd =bufferslot.chocobos[c].sprintspd;
@@ -2186,7 +2203,23 @@ void MainWindow::on_actionPaste_Slot_activated()
     ff7.slot[s].chocobos[c].sex =bufferslot.chocobos[c].sex;
     ff7.slot[s].chocobos[c].type =bufferslot.chocobos[c].type;
     }
+    for (int c=0;c<4;c++)// collect chocobo slots 5/6
+    {
 
+    ff7.slot[s].choco56[c].sprintspd =bufferslot.choco56[c].sprintspd;
+    ff7.slot[s].choco56[c].maxsprintspd =bufferslot.choco56[c].maxsprintspd;
+    ff7.slot[s].choco56[c].speed =bufferslot.choco56[c].speed;
+    ff7.slot[s].choco56[c].maxspeed =bufferslot.choco56[c].maxspeed;
+
+    ff7.slot[s].choco56[c].accel =bufferslot.choco56[c].accel;
+    ff7.slot[s].choco56[c].coop =bufferslot.choco56[c].coop;
+    ff7.slot[s].choco56[c].intelligence =bufferslot.choco56[c].intelligence;
+    ff7.slot[s].choco56[c].personality =bufferslot.choco56[c].personality;
+    ff7.slot[s].choco56[c].pcount =bufferslot.choco56[c].pcount;
+    ff7.slot[s].choco56[c].raceswon =bufferslot.choco56[c].raceswon;
+    ff7.slot[s].choco56[c].sex =bufferslot.choco56[c].sex;
+    ff7.slot[s].choco56[c].type =bufferslot.choco56[c].type;
+    }
 
     for (int z=0;z<160;z++){ff7.slot[s].z_13[z]= bufferslot.z_13[z];}
 
@@ -2395,20 +2428,20 @@ for(int si=0;si<ff7.SG_SLOT_NUMBER;si++)
     for(int c=0;c<6;c++){for(int o=0;o<6;o++){out << ff7.slot[si].chocobonames[c][o];}} //0x0EC4 save chocobonames
     for(int c=0;c<6;c++){out << ff7.slot[si].chocostaminas[c];}                         //0x0EE8 save all the stamina values too
     for(int z=0;z<400;z++){out << ff7.slot[si].z_17[z];}                                //0x0EF4 z_17
-    for(int c=4;c<6;c++)                                                                //0x1084 ADDED CHOCO 5-6
+    for(int c=0;c<2;c++)                                                                //0x1084 ADDED CHOCO 5-6
     {
-        out << ff7.slot[si].chocobos[c].sprintspd;
-        out << ff7.slot[si].chocobos[c].maxsprintspd;
-        out << ff7.slot[si].chocobos[c].speed;
-        out << ff7.slot[si].chocobos[c].maxspeed;
-        out << ff7.slot[si].chocobos[c].accel;
-        out << ff7.slot[si].chocobos[c].coop;
-        out << ff7.slot[si].chocobos[c].intelligence;
-        out << ff7.slot[si].chocobos[c].personality;
-        out << ff7.slot[si].chocobos[c].pcount;
-        out << ff7.slot[si].chocobos[c].raceswon;
-        out << ff7.slot[si].chocobos[c].sex;
-        out << ff7.slot[si].chocobos[c].type;
+        out << ff7.slot[si].choco56[c].sprintspd;
+        out << ff7.slot[si].choco56[c].maxsprintspd;
+        out << ff7.slot[si].choco56[c].speed;
+        out << ff7.slot[si].choco56[c].maxspeed;
+        out << ff7.slot[si].choco56[c].accel;
+        out << ff7.slot[si].choco56[c].coop;
+        out << ff7.slot[si].choco56[c].intelligence;
+        out << ff7.slot[si].choco56[c].personality;
+        out << ff7.slot[si].choco56[c].pcount;
+        out << ff7.slot[si].choco56[c].raceswon;
+        out << ff7.slot[si].choco56[c].sex;
+        out << ff7.slot[si].choco56[c].type;
 
     }
     out << ff7.slot[si].phsmask;                                                        //0x10A4
@@ -2728,20 +2761,20 @@ void MainWindow::on_actionExport_PSX_activated()
                 for(int c=0;c<6;c++){for(int o=0;o<6;o++){out << ff7.slot[si].chocobonames[c][o];}} //0x0EC4 save chocobonames
                 for(int c=0;c<6;c++){out << ff7.slot[si].chocostaminas[c];}                         //0x0EE8 save all the stamina values too
                 for(int z=0;z<400;z++){out << ff7.slot[si].z_17[z];}                                //0x0EF4 z_17
-                for(int c=4;c<6;c++)                                                                //0x1084 ADDED CHOCO 5-6
+                for(int c=0;c<2;c++)                                                                //0x1084 ADDED CHOCO 5-6
                 {
-                    out << ff7.slot[si].chocobos[c].sprintspd;
-                    out << ff7.slot[si].chocobos[c].maxsprintspd;
-                    out << ff7.slot[si].chocobos[c].speed;
-                    out << ff7.slot[si].chocobos[c].maxspeed;
-                    out << ff7.slot[si].chocobos[c].accel;
-                    out << ff7.slot[si].chocobos[c].coop;
-                    out << ff7.slot[si].chocobos[c].intelligence;
-                    out << ff7.slot[si].chocobos[c].personality;
-                    out << ff7.slot[si].chocobos[c].pcount;
-                    out << ff7.slot[si].chocobos[c].raceswon;
-                    out << ff7.slot[si].chocobos[c].sex;
-                    out << ff7.slot[si].chocobos[c].type;
+                    out << ff7.slot[si].choco56[c].sprintspd;
+                    out << ff7.slot[si].choco56[c].maxsprintspd;
+                    out << ff7.slot[si].choco56[c].speed;
+                    out << ff7.slot[si].choco56[c].maxspeed;
+                    out << ff7.slot[si].choco56[c].accel;
+                    out << ff7.slot[si].choco56[c].coop;
+                    out << ff7.slot[si].choco56[c].intelligence;
+                    out << ff7.slot[si].choco56[c].personality;
+                    out << ff7.slot[si].choco56[c].pcount;
+                    out << ff7.slot[si].choco56[c].raceswon;
+                    out << ff7.slot[si].choco56[c].sex;
+                    out << ff7.slot[si].choco56[c].type;
 
                 }
                 out << ff7.slot[si].phsmask;                                                        //0x10A4
