@@ -1413,19 +1413,19 @@ for (int n=0;n<6;n++)
     if(chPC[ff7.slot[s].chocobonames[4][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
     else{this->ui->line_c5_name->setText( ui->line_c5_name->text() + chPC[ff7.slot[s].chocobonames[4][n]]);}
 }
-ui->sb_c5_sprint->setValue(ff7.slot[s].chocobos[4].sprintspd);
-ui->sb_c5_maxsprint->setValue(ff7.slot[s].chocobos[4].maxsprintspd);
-ui->sb_c5_speed->setValue(ff7.slot[s].chocobos[4].speed);
-ui->sb_c5_maxspeed->setValue((ff7.slot[s].chocobos[4].maxspeed));
-//ui->cb_c5_personality->setCurrentIndex(ff7.slot[s].chocobos[4].personality); //need more data for this.
+ui->sb_c5_sprint->setValue(ff7.slot[s].choco56[0].sprintspd);
+ui->sb_c5_maxsprint->setValue(ff7.slot[s].choco56[0].maxsprintspd);
+ui->sb_c5_speed->setValue(ff7.slot[s].choco56[0].speed);
+ui->sb_c5_maxspeed->setValue((ff7.slot[s].choco56[0].maxspeed));
+//ui->cb_c5_personality->setCurrentIndex(ff7.slot[s].choco56[0].personality); //need more data for this.
 //below are OK
-ui->cb_c5_sex->setCurrentIndex(ff7.slot[s].chocobos[4].sex);
-ui->cb_c5_type->setCurrentIndex(ff7.slot[s].chocobos[4].type);
-ui->sb_c5_accel->setValue(ff7.slot[s].chocobos[4].accel);
-ui->sb_c5_coop->setValue(ff7.slot[s].chocobos[4].coop);
-ui->sb_c5_intel->setValue(ff7.slot[s].chocobos[4].intelligence);
-ui->sb_c5_pcount->setValue(ff7.slot[s].chocobos[4].pcount);
-ui->sb_c5_raceswon->setValue(ff7.slot[s].chocobos[4].raceswon);
+ui->cb_c5_sex->setCurrentIndex(ff7.slot[s].choco56[0].sex);
+ui->cb_c5_type->setCurrentIndex(ff7.slot[s].choco56[0].type);
+ui->sb_c5_accel->setValue(ff7.slot[s].choco56[0].accel);
+ui->sb_c5_coop->setValue(ff7.slot[s].choco56[0].coop);
+ui->sb_c5_intel->setValue(ff7.slot[s].choco56[0].intelligence);
+ui->sb_c5_pcount->setValue(ff7.slot[s].choco56[0].pcount);
+ui->sb_c5_raceswon->setValue(ff7.slot[s].choco56[0].raceswon);
 ui->sb_c5_stamina->setValue(ff7.slot[s].chocostaminas[4]);//Bug fix (Vegeta_Ss4) v0.8.3
 // end choco 5
 ui->line_c6_name->clear();
@@ -1434,19 +1434,19 @@ for (int n=0;n<6;n++)
     if(chPC[ff7.slot[s].chocobonames[5][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
     else{this->ui->line_c6_name->setText( ui->line_c6_name->text() + chPC[ff7.slot[s].chocobonames[5][n]]);}
 }
-ui->sb_c6_sprint->setValue(ff7.slot[s].chocobos[5].sprintspd);
-ui->sb_c6_maxsprint->setValue(ff7.slot[s].chocobos[5].maxsprintspd);
-ui->sb_c6_speed->setValue(ff7.slot[s].chocobos[5].speed);
-ui->sb_c6_maxspeed->setValue((ff7.slot[s].chocobos[5].maxspeed));
-//ui->cb_c6_personality->setCurrentIndex(ff7.slot[s].chocobos[5].personality); //need more data for this.
+ui->sb_c6_sprint->setValue(ff7.slot[s].choco56[1].sprintspd);
+ui->sb_c6_maxsprint->setValue(ff7.slot[s].choco56[1].maxsprintspd);
+ui->sb_c6_speed->setValue(ff7.slot[s].choco56[1].speed);
+ui->sb_c6_maxspeed->setValue((ff7.slot[s].choco56[1].maxspeed));
+//ui->cb_c6_personality->setCurrentIndex(ff7.slot[s].choco56[1].personality); //need more data for this.
 //below are OK
-ui->cb_c6_sex->setCurrentIndex(ff7.slot[s].chocobos[5].sex);
-ui->cb_c6_type->setCurrentIndex(ff7.slot[s].chocobos[5].type);
-ui->sb_c6_accel->setValue(ff7.slot[s].chocobos[5].accel);
-ui->sb_c6_coop->setValue(ff7.slot[s].chocobos[5].coop);
-ui->sb_c6_intel->setValue(ff7.slot[s].chocobos[5].intelligence);
-ui->sb_c6_pcount->setValue(ff7.slot[s].chocobos[5].pcount);
-ui->sb_c6_raceswon->setValue(ff7.slot[s].chocobos[5].raceswon);
+ui->cb_c6_sex->setCurrentIndex(ff7.slot[s].choco56[1].sex);
+ui->cb_c6_type->setCurrentIndex(ff7.slot[s].choco56[1].type);
+ui->sb_c6_accel->setValue(ff7.slot[s].choco56[1].accel);
+ui->sb_c6_coop->setValue(ff7.slot[s].choco56[1].coop);
+ui->sb_c6_intel->setValue(ff7.slot[s].choco56[1].intelligence);
+ui->sb_c6_pcount->setValue(ff7.slot[s].choco56[1].pcount);
+ui->sb_c6_raceswon->setValue(ff7.slot[s].choco56[1].raceswon);
 ui->sb_c6_stamina->setValue(ff7.slot[s].chocostaminas[5]);//Bug fix (Vegeta_Ss4) v0.8.3
 // end choco 6
 //set the penned chocobos
@@ -1926,6 +1926,7 @@ void MainWindow::on_btn_cid_clicked()
 
 void MainWindow::on_sb_gil_valueChanged()
 {
+
     ff7.slot[s].gil = ui->sb_gil->value();
     ff7.slot[s].desc.gil = ff7.slot[s].gil;
 }
@@ -2146,59 +2147,59 @@ void MainWindow::on_sb_c4_pcount_valueChanged()
 }
 void MainWindow::on_cb_c5_sex_currentIndexChanged(int index)
 {
-    ff7.slot[s].chocobos[4].sex = index;
+    ff7.slot[s].choco56[0].sex = index;
 }
 void MainWindow::on_cb_c5_type_currentIndexChanged(int index)
 {
-    ff7.slot[s].chocobos[4].type = index;
+    ff7.slot[s].choco56[0].type = index;
 }
 void MainWindow::on_sb_c5_coop_valueChanged()
 {
-    ff7.slot[s].chocobos[4].coop= ui->sb_c5_coop->value();
+    ff7.slot[s].choco56[0].coop= ui->sb_c5_coop->value();
 }
 void MainWindow::on_sb_c5_accel_valueChanged()
 {
-    ff7.slot[s].chocobos[4].accel= ui->sb_c5_accel->value();
+    ff7.slot[s].choco56[0].accel= ui->sb_c5_accel->value();
 }
 void MainWindow::on_sb_c5_intel_valueChanged()
 {
-    ff7.slot[s].chocobos[4].intelligence = ui->sb_c5_intel->value();
+    ff7.slot[s].choco56[0].intelligence = ui->sb_c5_intel->value();
 }
 void MainWindow::on_sb_c5_raceswon_valueChanged()
 {
-    ff7.slot[s].chocobos[4].raceswon = ui->sb_c5_raceswon->value();
+    ff7.slot[s].choco56[0].raceswon = ui->sb_c5_raceswon->value();
 }
 void MainWindow::on_sb_c5_pcount_valueChanged()
 {
-    ff7.slot[s].chocobos[4].pcount= ui->sb_c5_pcount->value();
+    ff7.slot[s].choco56[0].pcount= ui->sb_c5_pcount->value();
 }
 void MainWindow::on_cb_c6_sex_currentIndexChanged(int index)
 {
-    ff7.slot[s].chocobos[5].sex = index;
+    ff7.slot[s].choco56[1].sex = index;
 }
 void MainWindow::on_cb_c6_type_currentIndexChanged(int index)
 {
-    ff7.slot[s].chocobos[5].type = index;
+    ff7.slot[s].choco56[1].type = index;
 }
 void MainWindow::on_sb_c6_coop_valueChanged()
 {
-    ff7.slot[s].chocobos[5].coop= ui->sb_c6_coop->value();
+    ff7.slot[s].choco56[1].coop= ui->sb_c6_coop->value();
 }
 void MainWindow::on_sb_c6_accel_valueChanged()
 {
-    ff7.slot[s].chocobos[5].accel= ui->sb_c6_accel->value();
+    ff7.slot[s].choco56[1].accel= ui->sb_c6_accel->value();
 }
 void MainWindow::on_sb_c6_intel_valueChanged()
 {
-    ff7.slot[s].chocobos[5].intelligence = ui->sb_c6_intel->value();
+    ff7.slot[s].choco56[1].intelligence = ui->sb_c6_intel->value();
 }
 void MainWindow::on_sb_c6_raceswon_valueChanged()
 {
-    ff7.slot[s].chocobos[5].raceswon = ui->sb_c6_raceswon->value();
+    ff7.slot[s].choco56[1].raceswon = ui->sb_c6_raceswon->value();
 }
 void MainWindow::on_sb_c6_pcount_valueChanged()
 {
-    ff7.slot[s].chocobos[5].pcount= ui->sb_c6_pcount->value();
+    ff7.slot[s].choco56[1].pcount= ui->sb_c6_pcount->value();
 }
 void MainWindow::on_sb_c1_stamina_valueChanged()
 {
