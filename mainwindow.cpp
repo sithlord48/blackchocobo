@@ -883,9 +883,15 @@ for (int i=0;i<9;i++)//unlocked
     if ((1 << i) & ff7.slot[s].unlockedchars){ui->list_chars_unlocked->currentItem()->setCheckState(Qt::Checked);}
     else{ui->list_chars_unlocked->currentItem()->setCheckState(Qt::Unchecked);}
 }
+for(int i=0;i<51;i++)
+{
+ui->list_keyitems->setCurrentRow(i);
+ui->list_keyitems->currentItem()->setCheckState(Qt::Unchecked);
+}
 for (int i=0;i<51;i++)// key items
 {
-    if (ff7.slot[s].keyitems[div(i,8).quot] & (1 << (div(i,8).rem)))
+   // if (ff7.slot[s].keyitems[div(i,8).quot] & (1 << (div(i,8).rem)))
+    if (ff7.slot[s].keyitems[i/8] & (1 << (i%8)))
     {
         ui->list_keyitems->setCurrentRow(i);
         ui->list_keyitems->currentItem()->setCheckState(Qt::Checked);
@@ -2346,11 +2352,10 @@ void MainWindow::on_list_flyers_itemChanged()
 }
 void MainWindow::on_list_keyitems_itemChanged()
 {
-
     if (!load)
     {
         int j = ui->list_keyitems->currentRow();
-        for (int i=0;i<8;i++) { ff7.slot[s].keyitems[i] = 0; }
+        for (int i=0;i<8;i++) {ff7.slot[s].keyitems[i] = 0; }
         for (int i=0;i<51;i++)
         {
             ui->list_keyitems->setCurrentRow(i);
