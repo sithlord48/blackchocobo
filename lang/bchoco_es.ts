@@ -3515,7 +3515,7 @@ no es un Archivo de Guardado de FF7.</translation>
     <message>
         <location filename="../mainwindow.cpp" line="3504"/>
         <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
-        <translation>Rejugar la Escena de la Cita, Tu situación se pondrá en la Estación Ropeway, Habla con el Hombre al lado del Tranvía para empezar el evento, Si buscas una cita en especial asegúrate de que has puesto los puntos de amor</translation>
+        <translation>Rejugar la Escena de la Cita, Tu situación se pondrá en la Estación Ropeway, Habla con el Hombre al lado del Tranvía para empezar el evento, Si buscas una cita en especial asegúrate de que has puesto los puntos de amor.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="3521"/>
@@ -3567,7 +3567,7 @@ no es un Archivo de Guardado de FF7.</translation>
     <message>
         <location filename="../loadsave.cpp" line="257"/>
         <source>FF7 PSX SaveGame(*-S*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Partida Guardada FF7 PSX (*-S*)</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="312"/>
