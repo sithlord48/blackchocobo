@@ -359,7 +359,7 @@
     <message>
         <location filename="../mainwindow.ui" line="4267"/>
         <source>&amp;Items</source>
-        <translation type="unfinished">&amp;Objets</translation>
+        <translation>Obje&amp;ts</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5083"/>
@@ -530,7 +530,7 @@
     <message>
         <location filename="../mainwindow.ui" line="5905"/>
         <source>All</source>
-        <translation type="unfinished">Tout</translation>
+        <translation>Tout</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4279"/>
@@ -1117,7 +1117,7 @@
     <message>
         <location filename="../mainwindow.ui" line="12560"/>
         <source>Aerith&apos;s Death</source>
-        <translation type="unfinished"></translation>
+        <translation>La Mort de Aerith</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="12587"/>
@@ -1479,17 +1479,17 @@
         <location filename="../mainwindow.ui" line="3624"/>
         <location filename="../mainwindow.ui" line="5767"/>
         <source>AP:</source>
-        <translation type="unfinished"></translation>
+        <translation>AP:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4046"/>
         <source>Accessory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Accessoire:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5071"/>
         <source>&amp;Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Matéria</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="6295"/>
@@ -1566,27 +1566,27 @@
         <location filename="../mainwindow.ui" line="10111"/>
         <location filename="../mainwindow.ui" line="10266"/>
         <source>Aerith</source>
-        <translation type="unfinished"></translation>
+        <translation>Aerith</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2675"/>
         <source> z_4[0]</source>
-        <translation type="unfinished"></translation>
+        <translation>z_4[0]</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2688"/>
         <source> z_4[1]</source>
-        <translation type="unfinished"></translation>
+        <translation>z_4[1]</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2701"/>
         <source> z_4[2]</source>
-        <translation type="unfinished"></translation>
+        <translation>z_4[2]</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="2714"/>
         <source> z_4[3]</source>
-        <translation type="unfinished"></translation>
+        <translation>z_4[3]</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5065"/>
@@ -1601,7 +1601,7 @@
     <message>
         <location filename="../mainwindow.ui" line="5915"/>
         <source>Magic</source>
-        <translation type="unfinished"></translation>
+        <translation>Magie</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5925"/>
@@ -1621,7 +1621,7 @@
     <message>
         <location filename="../mainwindow.ui" line="5955"/>
         <source>Command</source>
-        <translation type="unfinished"></translation>
+        <translation>Commande</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5974"/>
@@ -1631,7 +1631,7 @@
     <message>
         <location filename="../mainwindow.ui" line="6008"/>
         <source>Clear Materia Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer le Matérias slot</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="6222"/>
@@ -1651,7 +1651,7 @@
     <message>
         <location filename="../mainwindow.ui" line="10189"/>
         <source>Clear Stolen Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer le Matérias volées par Youfie</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="10205"/>
@@ -1661,7 +1661,7 @@
     <message>
         <location filename="../mainwindow.ui" line="10344"/>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation type="unfinished"></translation>
+        <translation>Cait Sith Et Vincent doit pas être activé s&apos;ils sont handicapés dans l&apos;onglet Groupe.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="10356"/>
@@ -2487,22 +2487,22 @@
     <message>
         <location filename="../mainwindow.ui" line="12370"/>
         <source>Bombing Mission Progress</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Jeu pro&amp;grès</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="12382"/>
         <source>0x0C85</source>
-        <translation type="unfinished"></translation>
+        <translation>0x0C85</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="12414"/>
         <source>0x0C86</source>
-        <translation type="unfinished"></translation>
+        <translation>0x0C86</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="12427"/>
         <source>0x0CE6</source>
-        <translation type="unfinished"></translation>
+        <translation>0x0CE6</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="12545"/>
@@ -2512,7 +2512,7 @@
     <message>
         <location filename="../mainwindow.ui" line="12550"/>
         <source>Cloud&apos;s Flashback</source>
-        <translation type="unfinished"></translation>
+        <translation>Flashback Du Cloud</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="12555"/>
@@ -3043,7 +3043,7 @@
     <message>
         <location filename="../mainwindow.ui" line="12002"/>
         <source>Shinra Bldg.</source>
-        <translation>Bât. Shinra</translation>
+        <translation>Bât. Shinra.</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="12012"/>
@@ -3450,37 +3450,37 @@
     <message>
         <location filename="../loadsave.cpp" line="36"/>
         <source>Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Types connus de sauvegardes FF7 (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;Sauvegarde FF7 PC (*.ff7);;Sauvegarde FF7 PSX (*-S*);;Sauvegarde MC (*.mcr *.mcd);;Sauvegarde PSV (*.psv);;Sauvegarde PSP (*.vmp)</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="257"/>
         <source>FF7 PSX SaveGame(*-S*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarde FF7 PSX (*-S*)</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="265"/>
         <source>FF7 MC SaveGame(*.mcr *.mcd)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarde FF7 MC (*.mcr *.mcd)</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="272"/>
         <source>Save Final Fantasy 7 PSV SaveGame</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner sauvegarde Final Fantasy 7 PSV</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="273"/>
         <source>FF7 PSV SaveGame(*.psv)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarde FF7 PSV (*.psv)</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="280"/>
         <source>Save Final Fantasy 7  PSP SaveGame</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner sauvegarde Final Fantasy 7 PSP</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="281"/>
         <source>FF7 PSP SaveGame(*.vmp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarde FF7 PSP (*.vmp)</translation>
     </message>
     <message>
         <location filename="../loadsave.cpp" line="178"/>
@@ -3775,7 +3775,45 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt; font-weight:600; text-decoration: underline;&quot;&gt;Ms. Sith&lt;/span&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; - Causes shes awesome.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	Black Chocobo est un éditeur de sauvegarde pour  FF7. (PC)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	            Écrit par sithlord48 avec Qt.		&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;				       Version :: &lt;span style=&quot; font-weight:600;&quot;&gt;1.4&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Je tiens à remercier les personnes suivantes pour leur aide sur ce programme : &lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Qhimm&lt;/span&gt; - pour avoir diffusé le code source de Jenova, mon programme utilise une version modifiée de sa stucture des sauvegardes, les listes d&apos;objets/materias et les fonctions de convertion de string m&apos;ont bien souvent aidés&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Dziugo&lt;/span&gt; - pour l&apos;ancien programme checksum, et pour avoir trouvé pourquoi le mien de fonctionnait pas&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Vegeta_Ss4 &lt;/span&gt;- Pour avoir écrit une fonction checksum avec Qt.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Aali&lt;/span&gt; - pour m&apos;avoir aidé à mettre en lumière mes erreurs stupides.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;dhrosa&lt;/span&gt; - pour m&apos;avoir aidé à mieux comprendre les fonctions Qt quand les fichiers d&apos;aide ne suffisaient pas.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Ms. Sith&lt;/span&gt; - Parce qu&apos;elle est géniale.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Testeurs&lt;/span&gt; - Jari | Eslava | Timu | Chocobo Girl&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Traducteurs&lt;/span&gt; - &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Spanish - Eslava | Français - myst6re&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;This program is free software: you can redistribute it and/or modify&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;it under the terms of the GNU General Public License as published by&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;the Free Software Foundation, either version 3 of the License, or&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;(at your option) any later version.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;This program is distributed in the hope that it will be useful,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;but WITHOUT ANY WARRANTY; without even the implied warranty of&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;GNU General Public License for more details.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;You should have received a copy of the GNU General Public License&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;along with this program.  If not, see &lt;/span&gt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; text-decoration: underline; color:#508ed8;&quot;&gt;&amp;lt;http://www.gnu.org/licenses/&amp;gt;&lt;/span&gt;&lt;/a&gt; &lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
