@@ -2720,8 +2720,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>100</width>
-         <height>30</height>
+         <width>423</width>
+         <height>419</height>
         </rect>
        </property>
        <attribute name="label">
@@ -11009,7 +11009,7 @@
       </item>
       <item row="11" column="0">
        <property name="text">
-        <string>Aeris House</string>
+        <string>Aerith's House</string>
        </property>
       </item>
       <item row="11" column="1">
