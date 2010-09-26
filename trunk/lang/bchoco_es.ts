@@ -2063,9 +2063,8 @@
         <translation>2546</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="11012"/>
         <source>Aeris House</source>
-        <translation>Casa de Aeris</translation>
+        <translation type="obsolete">Casa de Aeris</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="11022"/>
@@ -2617,6 +2616,11 @@
         <location filename="../mainwindow.ui" line="11907"/>
         <source>13</source>
         <translation>13</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="11012"/>
+        <source>Aerith&apos;s House</source>
+        <translation>Casa de Aerith</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="11462"/>
@@ -3503,22 +3507,22 @@ no es un Archivo de Guardado de FF7.</translation>
         <translation>BASCUS-94163FF7-S01(*-S01);;BASCUS-94163FF7-S02(*-S02);;BASCUS-94163FF7-S03(*-S03);;BASCUS-94163FF7-S04(*-S04);;BASCUS-94163FF7-S05(*-S05);;BASCUS-94163FF7-S06(*-S06);;BASCUS-94163FF7-S07(*-S07);;BASCUS-94163FF7-S08(*-S08);;BASCUS-94163FF7-S09(*-S09);;BASCUS-94163FF7-S10(*-S10);;BASCUS-94163FF7-S11(*-S11);;BASCUS-94163FF7-S12(*-S12);;BASCUS-94163FF7-S13(*-S13);;BASCUS-94163FF7-S14(*-S14);;BASCUS-94163FF7-S15(*-S15)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3416"/>
+        <location filename="../mainwindow.cpp" line="3421"/>
         <source>Replay the bombing mission from right after you get off the first train, game might crash after the mission right before jessie talks to you about midgar.</source>
         <translation>Rejugar bombing mission justo después de que te bajes del primer tren, el juego puede que se cuelgue después de la misión justo antes de que Jessie te hable sobre Midgar.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3488"/>
+        <location filename="../mainwindow.cpp" line="3493"/>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent, if you wish to edit cloud or vincent after selecting this replay then change the box to the first(blank) entry and then when you have set those chars as you wish reselect this replay from the combobox.</source>
         <translation>Activando esto se copiará Cloud como Cloud joven (en la ranura de Cait Sith) los stats de sephiroth vendrán directamente de Vincent, si quieres editar a Cloud o Vincent después de seleccionar este replay entonces cambia la caja a la primera (en blanco) y cuando hayas puesto los personajes a tu gusto, vuelve a seleccionar este replay en la &apos;cajacombo&apos;.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3504"/>
+        <location filename="../mainwindow.cpp" line="3509"/>
         <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
         <translation>Rejugar la Escena de la Cita, Tu situación se pondrá en la Estación Ropeway, Habla con el Hombre al lado del Tranvía para empezar el evento, Si buscas una cita en especial asegúrate de que has puesto los puntos de amor.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3521"/>
+        <location filename="../mainwindow.cpp" line="3526"/>
         <source>Replay the death of Aerith.This option Will remove Aerith from your PHS</source>
         <translation>Rejugar la muerte de Aerith. Esta opción eliminará a Aerith de tu PHS</translation>
     </message>
