@@ -1127,7 +1127,7 @@
     <message>
         <location filename="../mainwindow.ui" line="14176"/>
         <source>Test Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Mode Test</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="14206"/>
@@ -1494,27 +1494,27 @@
     <message>
         <location filename="../mainwindow.ui" line="6295"/>
         <source>Lvl 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nv 1</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="6045"/>
         <source>Lvl 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Nv 2</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="6093"/>
         <source>Lvl 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Nv 3</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="6141"/>
         <source>Lvl 4</source>
-        <translation type="unfinished"></translation>
+        <translation>Nv 4</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="6189"/>
         <source>Lvl 5</source>
-        <translation type="unfinished"></translation>
+        <translation>Nv 5</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="6354"/>
@@ -1591,12 +1591,12 @@
     <message>
         <location filename="../mainwindow.ui" line="5065"/>
         <source>Remove ALL Items</source>
-        <translation type="unfinished"></translation>
+        <translation>Retirez TOUS les éléments</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5521"/>
         <source>Selected Materia Skills and Stat Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Information et le niveau de la materia sélectionnée</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5915"/>
@@ -1606,7 +1606,7 @@
     <message>
         <location filename="../mainwindow.ui" line="5925"/>
         <source>Summon</source>
-        <translation type="unfinished"></translation>
+        <translation>Invocation</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="5935"/>
