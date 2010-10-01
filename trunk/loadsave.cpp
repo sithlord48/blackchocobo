@@ -357,22 +357,27 @@ void MainWindow::on_actionExport_PSX_activated()
     FILE *pfile; // this section is starting to work correctly!
     pfile = fopen(fileName.toAscii(),"wb");
 
-    if(fileName.endsWith("S01")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S01,ff7.SG_SLOT_HEADER,1,pfile);}
-    else if(fileName.endsWith("S02")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S02,ff7.SG_SLOT_HEADER,1,pfile);}
-    else if(fileName.endsWith("S03")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S03,ff7.SG_SLOT_HEADER,1,pfile);}
-    else if(fileName.endsWith("S04")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S04,ff7.SG_SLOT_HEADER,1,pfile);}
-    else if(fileName.endsWith("S05")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S05,ff7.SG_SLOT_HEADER,1,pfile);}
-    else if(fileName.endsWith("S06")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S06,ff7.SG_SLOT_HEADER,1,pfile);}
-    else if(fileName.endsWith("S07")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S07,ff7.SG_SLOT_HEADER,1,pfile);}
-    else if(fileName.endsWith("S08")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S08,ff7.SG_SLOT_HEADER,1,pfile);}
-    else if(fileName.endsWith("S09")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S09,ff7.SG_SLOT_HEADER,1,pfile);}
-    else if(fileName.endsWith("S10")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S10,ff7.SG_SLOT_HEADER,1,pfile);}
-    else if(fileName.endsWith("S11")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S11,ff7.SG_SLOT_HEADER,1,pfile);}
-    else if(fileName.endsWith("S12")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S12,ff7.SG_SLOT_HEADER,1,pfile);}
-    else if(fileName.endsWith("S13")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S13,ff7.SG_SLOT_HEADER,1,pfile);}
-    else if(fileName.endsWith("S14")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S14,ff7.SG_SLOT_HEADER,1,pfile);}
-    else if(fileName.endsWith("S15")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S15,ff7.SG_SLOT_HEADER,1,pfile);}
+    if(fileName.endsWith("S01")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S01,0x100,1,pfile);}
+    else if(fileName.endsWith("S02")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S02,0x100,1,pfile);}
+    else if(fileName.endsWith("S03")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S03,0x100,1,pfile);}
+    else if(fileName.endsWith("S04")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S04,0x100,1,pfile);}
+    else if(fileName.endsWith("S05")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S05,0x100,1,pfile);}
+    else if(fileName.endsWith("S06")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S06,0x100,1,pfile);}
+    else if(fileName.endsWith("S07")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S07,0x100,1,pfile);}
+    else if(fileName.endsWith("S08")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S08,0x100,1,pfile);}
+    else if(fileName.endsWith("S09")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S09,0x100,1,pfile);}
+    else if(fileName.endsWith("S10")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S10,0x100,1,pfile);}
+    else if(fileName.endsWith("S11")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S11,0x100,1,pfile);}
+    else if(fileName.endsWith("S12")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S12,0x100,1,pfile);}
+    else if(fileName.endsWith("S13")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S13,0x100,1,pfile);}
+    else if(fileName.endsWith("S14")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S14,0x100,1,pfile);}
+    else if(fileName.endsWith("S15")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S15,0x100,1,pfile);}
     else{QMessageBox::information(this,"Bad Psx Save Name", "Can't Decide On What Header to Write, Please Add the sufix SXX (where x= 01-15, with leading 0 if < 10) US Header for that slot number will be written to the save"   );return;}
+
+    QByteArray temp;
+    temp.fill(0x00,0x100);
+    fwrite(temp,256,1,pfile); // 256  bytes of 0x00 (rest of psx header data)
+
     fwrite(&ff7.slot[s],ff7.SG_DATA_SIZE,1,pfile);
     fwrite(ff7.hf[s].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
     fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);

@@ -9692,7 +9692,7 @@
     </widget>
     <widget class="QWidget" name="tab_other">
      <attribute name="title">
-      <string>&amp;Other</string>
+      <string>Othe&amp;r</string>
      </attribute>
      <widget class="QGroupBox" name="groupBox_6">
       <property name="geometry">
@@ -10353,7 +10353,7 @@
     </widget>
     <widget class="QWidget" name="tab_location">
      <attribute name="title">
-      <string>Sav&amp;e Location</string>
+      <string>Save &amp;Location</string>
      </attribute>
      <widget class="QTableWidget" name="tbl_location_field">
       <property name="geometry">
@@ -14163,19 +14163,6 @@
      </property>
     </widget>
    </widget>
-   <widget class="QCheckBox" name="cb_show_test_buttons">
-    <property name="geometry">
-     <rect>
-      <x>400</x>
-      <y>0</y>
-      <width>161</width>
-      <height>16</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Test Mode</string>
-    </property>
-   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
@@ -14188,7 +14175,7 @@
    </property>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
-     <string>Help</string>
+     <string>H&amp;elp</string>
     </property>
     <addaction name="separator"/>
     <addaction name="actionAbout"/>
@@ -14257,8 +14244,40 @@
     <addaction name="actionSlot_14"/>
     <addaction name="actionSlot_15"/>
    </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>&amp;Options</string>
+    </property>
+    <widget class="QMenu" name="menuSet_Export_Region">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="title">
+      <string>Export Region</string>
+     </property>
+     <addaction name="action_Region_USA"/>
+     <addaction name="action_Region_PAL"/>
+     <addaction name="action_Region_JPN"/>
+    </widget>
+    <widget class="QMenu" name="menuLang">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Lang</string>
+     </property>
+     <addaction name="action_Lang_en"/>
+     <addaction name="action_Lang_es"/>
+     <addaction name="action_Lang_fr"/>
+    </widget>
+    <addaction name="action_show_test_data"/>
+    <addaction name="separator"/>
+    <addaction name="menuSet_Export_Region"/>
+    <addaction name="menuLang"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuSlot"/>
+   <addaction name="menuOptions"/>
    <addaction name="menuAbout"/>
   </widget>
   <action name="action_Quit">
@@ -14634,6 +14653,74 @@
    </property>
    <property name="shortcut">
     <string>Alt+Right</string>
+   </property>
+  </action>
+  <action name="action_show_test_data">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Show Test Data</string>
+   </property>
+  </action>
+  <action name="action_Region_USA">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Usa</string>
+   </property>
+  </action>
+  <action name="action_Region_PAL">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Pal</string>
+   </property>
+  </action>
+  <action name="action_Region_JPN">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Jpn</string>
+   </property>
+  </action>
+  <action name="action_Lang_en">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>English</string>
+   </property>
+  </action>
+  <action name="action_Lang_es">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Spanish</string>
+   </property>
+  </action>
+  <action name="action_Lang_fr">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>French</string>
    </property>
   </action>
  </widget>
