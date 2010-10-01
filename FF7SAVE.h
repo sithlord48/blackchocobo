@@ -19,12 +19,16 @@
 #include <QObject>
 #include <QCoreApplication>
 
+
+
+
+/* REMOVE THIS CODE
 const int slot_len=4340; //hex 0x10F4
 const int header_len= 9; //hex 0x09
 const int desc_len= 55;  //hex 0x37
 const int char_len= 132; //hex 0x84
 const int rawpsx_start= 0x200;
-
+*/
 
 
 /* START FILE INFO (Vegeta_Ss4) v0.8.3*/
@@ -443,7 +447,7 @@ struct FF7SLOT {		// [0x10F4] Save slot -
     quint8 colors[4][3];	// [0x0048] Window colors (RGB)
     FF7CHAR chars[9];		// [0x0054:84] The nine characters (Cl,Ba,Ti,Ae,Re,Yu,Ca,Vi,Ci)
     qint8 party[3];		// [0x04F8] Party members
-    quint8 z_2;            // [0x04FB] always 0xFF
+    quint8 z_2;                 // [0x04FB] always 0xFF
     item items[320];		// [0x04FC] Items (320 slots)
     materia materias[200];	// [0x077C] Materia (200 slots)
     materia stolen[48];         // [0x0A9C] materia stolen by yuffie.
@@ -457,36 +461,39 @@ struct FF7SLOT {		// [0x10F4] Save slot -
     FF7XYZ coord;		// [0x0B9A] Current coordinates (world map)
     quint8 z_6[4];
     quint16 mprogress;          // [0x0BA4] Main Progress var
-    quint8 unknown1;       // [0x0BA6]
+    quint8 unknown1;            // [0x0BA6]
     struct {			// [0X0BA1] Love points
-        qint8 aeris;qint8 tifa;qint8 yuffie;qint8 barret;
-    } love;                     // [0x0BA5
-    quint8 z_7[17];        //0xbb4 unknown data
+            qint8 aeris;
+            qint8 tifa;
+            qint8 yuffie;
+            qint8 barret;
+            } love;             // [0x0BA5
+    quint8 z_7[17];             //0xbb4 unknown data
     quint16 battles;            // [0x0Bc5] Number of battle
     quint16 runs;               // [0x0Bc7] Number of escapes
-    quint8 temp[36];       //temp var. from 0x0bc9 -0xbe4
+    quint8 temp[36];            //temp var. from 0x0bc9 -0xbe4
     quint8 keyitems[8];         // [0x0BE4] Key items
-    quint8 z_8[13];        //[0x0BEC] C00UNKNOWN
+    quint8 z_8[13];             //[0x0BEC] C00UNKNOWN
     qint8 pennedchocos[4];      //[0x0C01] chocos in fenced area at farm rating
-    quint8 z_9[136];       //[0x0C05] unknown - 128 ...
+    quint8 z_9[136];            //[0x0C05] unknown - 128 ...
     quint8 bm_progress1;        //[0x0C85]
     quint8 bm_progress2;        //[0x0C86]
-    quint8 unknown2[95];   //[0X0C87]
+    quint8 unknown2[95];        //[0X0C87]
     quint8 bm_progress3;        //[0X0CE6]
-    quint8 unknown3[7];   //[0X0CF6]- 14.....
+    quint8 unknown3[7];         //[0X0CF6]- 14.....
     quint16 gp;                 // [0x0Cf7] OK! Party GP (0-10000)
-    quint8 z_10[12];       //unknown Data [0x0cf9]
+    quint8 z_10[12];            //unknown Data [0x0cf9]
     qint8 stables;              // [0x0d05] OkNumber of chocobo stables owned //genereated incorrectly ?
     qint8 stablesoccupied;      // [0x0d06] Number of occupied stables //genereated incorrectly ?
     quint8 z_11;                //0x0d07 unknown char
     qint8 chocobomask;          // [0x0d08] Mask of occupied stables//genereated incorrectly ?
     quint8 chocoborn;           //0xd09 what stall a choco was just born in.
-    quint8 z_12[101];      //0x0d0A  - 0x0ecd  UNKNOWN
+    quint8 z_12[101];           //0x0d0A  - 0x0ecd  UNKNOWN
     quint8 turtleflyers;        //[0x0d6E] turtles paradice flyers.
-    quint8 temp2[93];      //[0X0D6F] temp var2 unknown
+    quint8 temp2[93];           //[0X0D6F] temp var2 unknown
     //quint8 kalmprog;          // [0xD36] kalm prog ?
     FF7CHOCOBO chocobos[4];     // [0x0DCD] Chocobo slots
-    quint8 z_13[160];      //[0x0E04]  //mod (Vegeta_Ss4) v0.8.3
+    quint8 z_13[160];           //[0x0E04]  //mod (Vegeta_Ss4) v0.8.3
     qint8 disc;                 // [0x0EAD] Current CD
     quint8 z_14[31];
     quint8 chocobonames[6][6];  // [0x0ECD] Chocobo names
@@ -508,23 +515,9 @@ struct FF7SLOT {		// [0x10F4] Save slot -
     quint8 z_20[7];        //unchecked
 };
 /* FF7HEADFOOT FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
-struct FF7HEADFOOT {
-/* Unused
-quint8 header_pc[0x00];         // [0x0000] 0x06277371
-quint8 header_psx[0x0200];	// [0x0000] 0x06277371
-quint8 header_mc[0x0200];	// [0x0000] 0x06277371
-quint8 footer_pc[0x00];         // [0x0000] 0x06277371
-quint8 footer_psx[0x0D0C];	// [0x0000] 0x06277371
-quint8 footer_mc[0x0D0C];	// [0x0000] 0x06277371
-
-quint8 * headerp;               // Pointer to Slot header
-quint8 * footerp;               // Pointer to Slot footer
-*/
-    
-quint8 sl_header[0x0200];       // [0x0000] Slot Header
-quint8 sl_footer[0x0D0C];       // [0x0000] Slot Footer
-
-
+    struct FF7HEADFOOT {
+    quint8 sl_header[0x0200];       // [0x0000] Slot Header
+    quint8 sl_footer[0x0D0C];       // [0x0000] Slot Footer
 };
 
 struct FF7 {				// [0xFE55]
@@ -546,14 +539,9 @@ struct FF7 {				// [0xFE55]
         quint8 file_footer_psv[0x0000];
         quint8 file_footer_mc[0x0000];	// [0x0000] 0x06277371
         quint8 file_footer_psp[0x0000];
-
-        //FF7SLOT slot_pc[15];		// [0x0009] The 15 save slots
-        //FF7SLOT slot_psx[1];		// [0x0009] The 1  save slot
-        //FF7SLOT slot_mc[15];		// [0x0009] The 15 save slots
-
         FF7HEADFOOT hf[15];                 // [0x0009] The 15 save slots header/footer
 
-        int savetype;                       //0=unknown,1=pc,2=psx,3=mc,4=psv
+        int savetype;                       //0=unknown,1=pc,2=psx,3=mc,4=psv,5=vmp
 
         int SG_SIZE;
         int SG_HEADER;
@@ -564,11 +552,8 @@ struct FF7 {				// [0xFE55]
         int SG_SLOT_SIZE;
         int SG_SLOT_NUMBER;
         QString SG_TYPE;
-
         quint8 * file_headerp;              //pointer to file header
         quint8 * file_footerp;              //pointer to file footer
-
-        /*END FORMAT COMPATIBILITY */
 
 };
 

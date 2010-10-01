@@ -16,28 +16,24 @@
 #include <QMessageBox>
 #include <QFileDialog> // for file dialogs
 #include <QDataStream> // for data manip
-//#include <QProcess>   // for calling ext processes (like checksum)
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "globals.h"   // contains checksumming functions.
 #include "slotselect.h"
-
 #include "loadsave.h"
+
 extern FF7 ff7;
 extern int s;
-
 FF7SLOT bufferslot;
 
 void MainWindow::on_actionOpen_Save_File_activated()
 {
-
     QString fileName = QFileDialog::getOpenFileName(this,
-                                        tr("Open Final Fantasy 7 Save"),(""),
-                                        tr("Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)"));
+    tr("Open Final Fantasy 7 Save"),(""),
+    tr("Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)"));
 
     if (!fileName.isEmpty())
         loadFileFull(fileName);
-
 }
 
 void MainWindow::loadFileFull(const QString &fileName)
@@ -68,8 +64,6 @@ void MainWindow::loadFileFull(const QString &fileName)
        ff7.SG_TYPE          = "PC";
        ff7.file_headerp     = ff7.file_header_pc;           //pointer to pc file header
        ff7.file_footerp     = ff7.file_footer_pc;           //pointer to pc file footer
-       //ff7.hf->headerp      = ff7.hf->header_pc;            //pointer to pc slot header
-       //ff7.hf->footerp      = ff7.hf->footer_pc;            //pointer to pc slot footer
        ff7.savetype         = 1;
     }
     else if(file_size == FF7_PSX_SAVE_GAME_SIZE)
@@ -85,8 +79,6 @@ void MainWindow::loadFileFull(const QString &fileName)
        ff7.SG_TYPE          = "PSX";
        ff7.file_headerp     = ff7.file_header_psx;          //pointer to psx file header
        ff7.file_footerp     = ff7.file_footer_psx;          //pointer to psx file footer
-       //ff7.hf->headerp      = ff7.hf->header_psx;           //pointer to psx slot header
-       //ff7.hf->footerp      = ff7.hf->footer_psx;           //pointer to psx slot footer
        ff7.savetype         = 2;
     }
     else if(file_size == FF7_MC_SAVE_GAME_SIZE)
@@ -102,8 +94,6 @@ void MainWindow::loadFileFull(const QString &fileName)
        ff7.SG_TYPE          = "MC";
        ff7.file_headerp     = ff7.file_header_mc;           //pointer to mc file header
        ff7.file_footerp     = ff7.file_footer_mc;           //pointer to mc file footer
-       //ff7.hf->headerp      = ff7.hf->header_mc;            //pointer to mc slot header
-       //ff7.hf->footerp      = ff7.hf->footer_mc;            //pointer to mc slot footer
        ff7.savetype         = 3;
     }
     else if(file_size == FF7_PSV_SAVE_GAME_SIZE)
@@ -117,8 +107,8 @@ void MainWindow::loadFileFull(const QString &fileName)
        ff7.SG_SLOT_SIZE     = FF7_PSV_SAVE_GAME_SLOT_SIZE;
        ff7.SG_SLOT_NUMBER   = FF7_PSV_SAVE_GAME_SLOT_NUMBER;
        ff7.SG_TYPE          = "PSV";
-       ff7.file_headerp     = ff7.file_header_psv;          //pointer to psx file header
-       ff7.file_footerp     = ff7.file_footer_psv;          //pointer to psx file footer
+       ff7.file_headerp     = ff7.file_header_psv;          //pointer to psv file header
+       ff7.file_footerp     = ff7.file_footer_psv;          //pointer to psv file footer
        ff7.savetype         = 4;
     }
     else if(file_size ==FF7_PSP_SAVE_GAME_SIZE)
@@ -132,8 +122,8 @@ void MainWindow::loadFileFull(const QString &fileName)
         ff7.SG_SLOT_SIZE     = FF7_PSP_SAVE_GAME_SLOT_SIZE;
         ff7.SG_SLOT_NUMBER   = FF7_PSP_SAVE_GAME_SLOT_NUMBER;
         ff7.SG_TYPE          = "PSP";
-        ff7.file_headerp     = ff7.file_header_psp;          //pointer to psx file header
-        ff7.file_footerp     = ff7.file_footer_psp;          //pointer to psx file footer
+        ff7.file_headerp     = ff7.file_header_psp;          //pointer to psp file header
+        ff7.file_footerp     = ff7.file_footer_psp;          //pointer to psp file footer
         ff7.savetype         = 5;
 
 
@@ -288,23 +278,20 @@ void MainWindow::on_actionSave_File_activated()
 /*~~~~~~~~~~~~~~~~~~~~~~~~ NEW SHORT SAVE - SITHLORD48 - V. 1.4 ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::saveFileFull(const QString &fileName)
 {
-FILE *pfile;
-pfile = fopen(fileName.toAscii(),"wb");
-
-fwrite(ff7.file_headerp,ff7.SG_HEADER,1,pfile);
-for(int si=0;si<ff7.SG_SLOT_NUMBER;si++)
-{
-fwrite(&ff7.hf[si].sl_header,ff7.SG_SLOT_HEADER,1,pfile);
-fwrite(&ff7.slot[si],ff7.SG_DATA_SIZE,1,pfile);
-fwrite(&ff7.hf[si].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
-}
-fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
-fclose(pfile);
-fix_sum(fileName);
+    FILE *pfile;
+    pfile = fopen(fileName.toAscii(),"wb");
+    fwrite(ff7.file_headerp,ff7.SG_HEADER,1,pfile);
+    for(int si=0;si<ff7.SG_SLOT_NUMBER;si++)
+    {
+        fwrite(&ff7.hf[si].sl_header,ff7.SG_SLOT_HEADER,1,pfile);
+        fwrite(&ff7.slot[si],ff7.SG_DATA_SIZE,1,pfile);
+    fwrite(&ff7.hf[si].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
+    }
+    fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
+    fclose(pfile);
+    fix_sum(fileName);
 }
 /*~~~~~~~~~~~~~~~~~~~~~~END NEW SHORT SAVE -SITHLORD48- V.1.4~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-
 
 void MainWindow::on_actionExport_PC_Save_activated()
 {
@@ -341,8 +328,8 @@ void MainWindow::on_actionExport_PC_Save_activated()
     fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
     fclose(pfile);
     fix_sum(fileName);
-    }
-/*~~~~~~~~~~~~~~~~~~~~~~END NEW SHORT SAVE -SITHLORD48- V.1.4~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~~~~~~~~END NEW SHORT SAVE -SITHLORD48- V.1.4~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+}
 
 void MainWindow::on_actionExport_PSX_activated()
 {
@@ -365,6 +352,7 @@ void MainWindow::on_actionExport_PSX_activated()
     ff7.SG_TYPE          = "PSX";
     ff7.file_headerp     = ff7.file_header_psx;           //pointer to pc file header
     ff7.file_footerp     = ff7.file_footer_psx;           //pointer to pc file footer
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~ NEW SHORT SAVE - SITHLORD48 - V. 1.4 ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     FILE *pfile; // this section is starting to work correctly!
     pfile = fopen(fileName.toAscii(),"wb");
@@ -385,13 +373,13 @@ void MainWindow::on_actionExport_PSX_activated()
     else if(fileName.endsWith("S14")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S14,ff7.SG_SLOT_HEADER,1,pfile);}
     else if(fileName.endsWith("S15")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S15,ff7.SG_SLOT_HEADER,1,pfile);}
     else{QMessageBox::information(this,"Bad Psx Save Name", "Can't Decide On What Header to Write, Please Add the sufix SXX (where x= 01-15, with leading 0 if < 10) US Header for that slot number will be written to the save"   );return;}
-fwrite(&ff7.slot[s],ff7.SG_DATA_SIZE,1,pfile);
-fwrite(ff7.hf[s].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
-fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
-fclose(pfile);
-fix_sum(fileName);
-}
+    fwrite(&ff7.slot[s],ff7.SG_DATA_SIZE,1,pfile);
+    fwrite(ff7.hf[s].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
+    fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
+    fclose(pfile);
+    fix_sum(fileName);
 /*~~~~~~~~~~~~~~~~~~~~~~END NEW SHORT SAVE -SITHLORD48- V.1.4~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+}
 
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START CHECKSUM VEGETA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -425,5 +413,5 @@ void fix_sum(const QString &fileName)
     }
     file.close();
     free(memory);
-    /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END CHECKSUM VEGETA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-}// END OF EXPORT_PSX
+}
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END CHECKSUM VEGETA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
