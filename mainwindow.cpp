@@ -90,7 +90,7 @@ void MainWindow::changeEvent(QEvent *e)
     QMainWindow::changeEvent(e);
     switch (e->type()) {
     case QEvent::LanguageChange:
-        ui->retranslateUi(this);
+         ui->retranslateUi(this);
         break;
     default:
         break;
@@ -844,7 +844,7 @@ if (ff7.slot[s].chars[7].id == 10)
 }
 else {ui->btn_vincent->setEnabled(true);}
 
-if(ui->cb_show_test_buttons->checkState()==Qt::Checked)
+if(ui->action_show_test_data->isChecked())
 {
     ui->btn_vincent->setEnabled(true);
     ui->btn_cait->setEnabled(true);
@@ -2233,6 +2233,7 @@ void MainWindow::on_sb_c6_stamina_valueChanged()
 }
 void MainWindow::on_line_c1_name_lostFocus()
 {
+if(!load)
 
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[0][i] =0xFF;}
     for (int i=0;i<ui->line_c1_name->text().size();i++){ff7.slot[s].chocobonames[0][i] = chFF7[ui->line_c1_name->text().at(i).toAscii()];}
@@ -3563,40 +3564,76 @@ void MainWindow::on_btn_remove_all_stolen_clicked()
     guirefresh();
 }
 
-void MainWindow::on_cb_show_test_buttons_stateChanged()
+void MainWindow::on_action_show_test_data_toggled()
 {
-   if(ui->cb_show_test_buttons->isChecked())
+    if(ui->action_show_test_data->isChecked())
+     {
+        ui->btn_remove_all_items->setVisible(true);
+        ui->btn_remove_all_materia->setVisible(true);
+        ui->btn_remove_all_stolen->setVisible(true);
+        ui->lbl_z_4_0->setVisible(true);
+        ui->lbl_z_4_1->setVisible(true);
+        ui->lbl_z_4_2->setVisible(true);
+        ui->lbl_z_4_3->setVisible(true);
+        ui->lcd_z_4_0->setVisible(true);
+        ui->lcd_z_4_1->setVisible(true);
+        ui->lcd_z_4_2->setVisible(true);
+        ui->lcd_z_4_3->setVisible(true);
+        ui->btn_vincent->setEnabled(true);
+        ui->cb_id->setEnabled(true);
+        ui->btn_cait->setEnabled(true);
+    }
+    else
     {
-       ui->btn_remove_all_items->setVisible(true);
-       ui->btn_remove_all_materia->setVisible(true);
-       ui->btn_remove_all_stolen->setVisible(true);
-       ui->lbl_z_4_0->setVisible(true);
-       ui->lbl_z_4_1->setVisible(true);
-       ui->lbl_z_4_2->setVisible(true);
-       ui->lbl_z_4_3->setVisible(true);
-       ui->lcd_z_4_0->setVisible(true);
-       ui->lcd_z_4_1->setVisible(true);
-       ui->lcd_z_4_2->setVisible(true);
-       ui->lcd_z_4_3->setVisible(true);
-       ui->btn_vincent->setEnabled(true);
-       ui->cb_id->setEnabled(true);
-       ui->btn_cait->setEnabled(true);
-   }
-   else
-   {
-       ui->btn_remove_all_items->setVisible(false);
-       ui->btn_remove_all_materia->setVisible(false);
-       ui->btn_remove_all_stolen->setVisible(false);
-       ui->lbl_z_4_0->setVisible(false);
-       ui->lbl_z_4_1->setVisible(false);
-       ui->lbl_z_4_2->setVisible(false);
-       ui->lbl_z_4_3->setVisible(false);
-       ui->lcd_z_4_0->setVisible(false);
-       ui->lcd_z_4_1->setVisible(false);
-       ui->lcd_z_4_2->setVisible(false);
-       ui->lcd_z_4_3->setVisible(false);
-       if(ff7.slot[s].chars[6].id == 9) {ui->btn_vincent->setEnabled(false);}
-       ui->cb_id->setEnabled(false);
-       if(ff7.slot[s].chars[7].id == 10) {ui->btn_cait->setEnabled(false);}
-   }
+        ui->btn_remove_all_items->setVisible(false);
+        ui->btn_remove_all_materia->setVisible(false);
+        ui->btn_remove_all_stolen->setVisible(false);
+        ui->lbl_z_4_0->setVisible(false);
+        ui->lbl_z_4_1->setVisible(false);
+        ui->lbl_z_4_2->setVisible(false);
+        ui->lbl_z_4_3->setVisible(false);
+        ui->lcd_z_4_0->setVisible(false);
+        ui->lcd_z_4_1->setVisible(false);
+        ui->lcd_z_4_2->setVisible(false);
+        ui->lcd_z_4_3->setVisible(false);
+        if(ff7.slot[s].chars[6].id == 9) {ui->btn_vincent->setEnabled(false);}
+        ui->cb_id->setEnabled(false);
+        if(ff7.slot[s].chars[7].id == 10) {ui->btn_cait->setEnabled(false);}
+    }
+}
+
+void MainWindow::on_action_Region_USA_triggered()
+{
+    ui->action_Region_PAL->setChecked(false);
+    ui->action_Region_JPN->setChecked(false);
+}
+
+void MainWindow::on_action_Region_PAL_triggered()
+{
+    ui->action_Region_USA->setChecked(false);
+    ui->action_Region_JPN->setChecked(false);
+}
+
+void MainWindow::on_action_Region_JPN_triggered()
+{
+    ui->action_Region_PAL->setChecked(false);
+    ui->action_Region_USA->setChecked(false);
+}
+
+void MainWindow::on_action_Lang_en_triggered()
+{
+    ui->action_Lang_es->setChecked(false);
+    ui->action_Lang_fr->setChecked(false);
+}
+
+void MainWindow::on_action_Lang_es_triggered()
+{
+    ui->action_Lang_en->setChecked(false);
+    ui->action_Lang_fr->setChecked(false);
+}
+
+void MainWindow::on_action_Lang_fr_triggered()
+{
+    ui->action_Lang_es->setChecked(false);
+    ui->action_Lang_en->setChecked(false);
 }

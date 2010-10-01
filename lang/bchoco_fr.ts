@@ -5,10 +5,10 @@
     <name>MainWindow</name>
     <message>
         <location filename="../mainwindow.ui" line="35"/>
-        <location filename="../loadsave.cpp" line="48"/>
-        <location filename="../loadsave.cpp" line="184"/>
-        <location filename="../loadsave.cpp" line="208"/>
-        <location filename="../loadsave.cpp" line="285"/>
+        <location filename="../loadsave.cpp" line="44"/>
+        <location filename="../loadsave.cpp" line="174"/>
+        <location filename="../loadsave.cpp" line="198"/>
+        <location filename="../loadsave.cpp" line="275"/>
         <source>Black Chocobo</source>
         <translation>Black Chocobo</translation>
     </message>
@@ -1115,6 +1115,11 @@
         <translation>Étable 6</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="10356"/>
+        <source>Save &amp;Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.ui" line="12560"/>
         <source>Aerith&apos;s Death</source>
         <translation>La Mort de Aerith</translation>
@@ -1125,127 +1130,126 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14176"/>
         <source>Test Mode</source>
-        <translation>Mode Test</translation>
+        <translation type="obsolete">Mode Test</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14206"/>
+        <location filename="../mainwindow.ui" line="14193"/>
         <source>&amp;Export From Current Slot</source>
         <translation>&amp;Exporter le slot sous</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14216"/>
+        <location filename="../mainwindow.ui" line="14203"/>
         <source>&amp;Import To Current Slot</source>
         <translation>&amp;Importer le slot de</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14274"/>
+        <location filename="../mainwindow.ui" line="14293"/>
         <source>Alt+Q</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14283"/>
+        <location filename="../mainwindow.ui" line="14302"/>
         <source>&amp;Open Save File</source>
         <translation>&amp;Ouvrir sauvegarde</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14286"/>
+        <location filename="../mainwindow.ui" line="14305"/>
         <source>Ctrl+O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14325"/>
+        <location filename="../mainwindow.ui" line="14344"/>
         <source>F2</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14337"/>
+        <location filename="../mainwindow.ui" line="14356"/>
         <source>Export PC Save</source>
         <translation>Sauvegarde PC</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14340"/>
+        <location filename="../mainwindow.ui" line="14359"/>
         <source>Export PSX or MCR Save As a PC Save</source>
         <translation>Sauvegarde PSX ou MCR</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14372"/>
+        <location filename="../mainwindow.ui" line="14391"/>
         <source>Slot-01</source>
         <translation>Slot 01</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14386"/>
+        <location filename="../mainwindow.ui" line="14405"/>
         <source>Slot-02</source>
         <translation>Slot 02</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14397"/>
+        <location filename="../mainwindow.ui" line="14416"/>
         <source>Slot-03</source>
         <translation>Slot 03</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14408"/>
+        <location filename="../mainwindow.ui" line="14427"/>
         <source>Slot-04</source>
         <translation>Slot 04</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14419"/>
+        <location filename="../mainwindow.ui" line="14438"/>
         <source>Slot-05</source>
         <translation>Slot 05</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14430"/>
+        <location filename="../mainwindow.ui" line="14449"/>
         <source>Slot-06</source>
         <translation>Slot 06</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14441"/>
+        <location filename="../mainwindow.ui" line="14460"/>
         <source>Slot-07</source>
         <translation>Slot 07</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14452"/>
+        <location filename="../mainwindow.ui" line="14471"/>
         <source>Slot-08</source>
         <translation>Slot 08</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14463"/>
+        <location filename="../mainwindow.ui" line="14482"/>
         <source>Slot-09</source>
         <translation>Slot 09</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14474"/>
+        <location filename="../mainwindow.ui" line="14493"/>
         <source>Slot-10</source>
         <translation>Slot 10</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14485"/>
+        <location filename="../mainwindow.ui" line="14504"/>
         <source>Slot-11</source>
         <translation>Slot 11</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14496"/>
+        <location filename="../mainwindow.ui" line="14515"/>
         <source>Slot-12</source>
         <translation>Slot 12</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14507"/>
+        <location filename="../mainwindow.ui" line="14526"/>
         <source>Slot-13</source>
         <translation>Slot 13</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14518"/>
+        <location filename="../mainwindow.ui" line="14537"/>
         <source>Slot-14</source>
         <translation>Slot 14</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14529"/>
+        <location filename="../mainwindow.ui" line="14548"/>
         <source>Slot-15</source>
         <translation>Slot 15</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14537"/>
+        <location filename="../mainwindow.ui" line="14556"/>
         <source>Show Selection Dialog</source>
         <translation>Afficher la fenêtre de sélection</translation>
     </message>
@@ -1263,9 +1267,8 @@
         <translation>Étables occupées</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="9695"/>
         <source>&amp;Other</source>
-        <translation>&amp;Autres</translation>
+        <translation type="obsolete">&amp;Autres</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="9707"/>
@@ -1649,6 +1652,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="9695"/>
+        <source>Othe&amp;r</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.ui" line="10189"/>
         <source>Clear Stolen Materia</source>
         <translation>Effacer le Matérias volées par Youfie</translation>
@@ -1664,9 +1672,8 @@
         <translation>Cait Sith Et Vincent doit pas être activé s&apos;ils sont handicapés dans l&apos;onglet Groupe.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="10356"/>
         <source>Sav&amp;e Location</source>
-        <translation>Zon&amp;e de sauvegarde</translation>
+        <translation type="obsolete">Zon&amp;e de sauvegarde</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="10417"/>
@@ -2173,6 +2180,36 @@
         <translation>2546</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="14663"/>
+        <source>Show Test Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="14674"/>
+        <source>Usa</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="14685"/>
+        <source>Pal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="14696"/>
+        <source>Jpn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="14707"/>
+        <source>English</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="14723"/>
+        <source>French</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Aeris House</source>
         <translation type="obsolete">Maison d&apos;Aeris</translation>
     </message>
@@ -2534,73 +2571,88 @@
         <translation>Configura&amp;tion du jeu</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14234"/>
+        <location filename="../mainwindow.ui" line="14178"/>
+        <source>H&amp;elp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="14221"/>
         <source>S&amp;lot</source>
         <translation>S&amp;lot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14355"/>
+        <location filename="../mainwindow.ui" line="14249"/>
+        <source>&amp;Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="14256"/>
+        <source>Export Region</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="14374"/>
         <source>Export PSX Save</source>
         <translation>Exporter Sauvegarde PSX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14549"/>
+        <location filename="../mainwindow.ui" line="14568"/>
         <source>PSX Save</source>
         <translation>Sauvegarde PSX</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14561"/>
+        <location filename="../mainwindow.ui" line="14580"/>
         <source> PSV Save</source>
         <translation>Sauvegarde PSV</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14573"/>
+        <location filename="../mainwindow.ui" line="14592"/>
         <source>Copy Current Slot</source>
         <translation>Copier slot courant</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14576"/>
+        <location filename="../mainwindow.ui" line="14595"/>
         <source>Alt+C</source>
         <translation>Alt+C</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14588"/>
+        <location filename="../mainwindow.ui" line="14607"/>
         <source>Paste Slot Here</source>
         <translation>Coller Slot Ici</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14591"/>
+        <location filename="../mainwindow.ui" line="14610"/>
         <source>Alt+V</source>
         <translation>Alt+V</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="4407"/>
-        <location filename="../mainwindow.ui" line="14603"/>
+        <location filename="../mainwindow.ui" line="14622"/>
         <source>Clear Slot</source>
         <translation>Effacer le slot</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14606"/>
+        <location filename="../mainwindow.ui" line="14625"/>
         <source>Alt+Del</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14618"/>
+        <location filename="../mainwindow.ui" line="14637"/>
         <source>Previous Slot</source>
         <translation>Slot Précédent</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14621"/>
+        <location filename="../mainwindow.ui" line="14640"/>
         <source>Alt+Left</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14633"/>
+        <location filename="../mainwindow.ui" line="14652"/>
         <source>Next Slot</source>
         <translation>Slot Suivant</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14636"/>
+        <location filename="../mainwindow.ui" line="14655"/>
         <source>Alt+Right</source>
         <translation></translation>
     </message>
@@ -3330,12 +3382,11 @@
         <translation>Slot courant :</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14191"/>
         <source>Help</source>
-        <translation>Aide</translation>
+        <translation type="obsolete">Aide</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14199"/>
+        <location filename="../mainwindow.ui" line="14186"/>
         <source>&amp;File</source>
         <translation>&amp;Fichier</translation>
     </message>
@@ -3344,11 +3395,12 @@
         <translation type="obsolete">Ouvrir</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="14267"/>
         <source>Lang</source>
-        <translation type="obsolete">Langue</translation>
+        <translation type="unfinished">Langue</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14271"/>
+        <location filename="../mainwindow.ui" line="14290"/>
         <source>&amp;Quit</source>
         <translation>&amp;Quitter</translation>
     </message>
@@ -3357,27 +3409,27 @@
         <translation type="obsolete">Ouvrir sauvegarde</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14298"/>
+        <location filename="../mainwindow.ui" line="14317"/>
         <source>&amp;Save File</source>
         <translation>Enregi&amp;strer fichier</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14301"/>
+        <location filename="../mainwindow.ui" line="14320"/>
         <source>Ctrl+S</source>
         <translation>Ctrl+S</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14310"/>
+        <location filename="../mainwindow.ui" line="14329"/>
         <source>About Black Chocobo</source>
         <translation>À propos de Black Chocobo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14313"/>
+        <location filename="../mainwindow.ui" line="14332"/>
         <source>F1</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="14322"/>
+        <location filename="../mainwindow.ui" line="14341"/>
         <source>About Qt</source>
         <translation>À propos de Qt</translation>
     </message>
@@ -3386,21 +3438,22 @@
         <translation type="obsolete">Ouvrir PSX brut</translation>
     </message>
     <message>
+        <location filename="../mainwindow.ui" line="14715"/>
         <source>Spanish</source>
-        <translation type="obsolete">Spanish</translation>
+        <translation type="unfinished">Spanish</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="248"/>
+        <location filename="../loadsave.cpp" line="238"/>
         <source>Save Final Fantasy 7 PC SaveGame</source>
         <translation>Enregistrer sauvegarde Final Fantasy 7 PC</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="249"/>
+        <location filename="../loadsave.cpp" line="239"/>
         <source>FF7 PC SaveGame(*.ff7)</source>
         <translation>Sauvegarde FF7 PC (*.ff7)</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="256"/>
+        <location filename="../loadsave.cpp" line="246"/>
         <source>Save Final Fantasy 7 PSX SaveGame</source>
         <translation>Enregistrer sauvegarde Final Fantasy 7 PSX</translation>
     </message>
@@ -3409,7 +3462,7 @@
         <translation type="obsolete">Sauvegarde FF7 PSX (*)</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="264"/>
+        <location filename="../loadsave.cpp" line="254"/>
         <source>Save Final Fantasy 7 MC SaveGame</source>
         <translation>Enregistrer sauvegarde Final Fantasy 7 MC</translation>
     </message>
@@ -3418,22 +3471,22 @@
         <translation type="obsolete">Sauvegarde FF7 MC (*.mcr),(*.mcd)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3421"/>
+        <location filename="../mainwindow.cpp" line="3426"/>
         <source>Replay the bombing mission from right after you get off the first train, game might crash after the mission right before jessie talks to you about midgar.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3493"/>
+        <location filename="../mainwindow.cpp" line="3498"/>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent, if you wish to edit cloud or vincent after selecting this replay then change the box to the first(blank) entry and then when you have set those chars as you wish reselect this replay from the combobox.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3509"/>
+        <location filename="../mainwindow.cpp" line="3514"/>
         <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="3526"/>
+        <location filename="../mainwindow.cpp" line="3531"/>
         <source>Replay the death of Aerith.This option Will remove Aerith from your PHS</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3442,95 +3495,95 @@
         <translation type="obsolete">Types connus de sauvegardes FF7 (*.ff7 BAS* *.mcr *.mcd *.psv);;Sauvegarde FF7 PC (*.ff7);;Sauvegarde FF7 PSX (*-S*);;Sauvegarde MC (*.mcr *.mcd);;Sauvegarde PSV (*.psv)</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="351"/>
+        <location filename="../loadsave.cpp" line="338"/>
         <source>BASCUS-94163FF7-S01(*-S01);;BASCUS-94163FF7-S02(*-S02);;BASCUS-94163FF7-S03(*-S03);;BASCUS-94163FF7-S04(*-S04);;BASCUS-94163FF7-S05(*-S05);;BASCUS-94163FF7-S06(*-S06);;BASCUS-94163FF7-S07(*-S07);;BASCUS-94163FF7-S08(*-S08);;BASCUS-94163FF7-S09(*-S09);;BASCUS-94163FF7-S10(*-S10);;BASCUS-94163FF7-S11(*-S11);;BASCUS-94163FF7-S12(*-S12);;BASCUS-94163FF7-S13(*-S13);;BASCUS-94163FF7-S14(*-S14);;BASCUS-94163FF7-S15(*-S15)</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="178"/>
+        <location filename="../loadsave.cpp" line="168"/>
         <source>Select Final Fantasy 7 PSX Save</source>
         <translation>Sélectionner sauvegarde Final Fantasy 7 PSX</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="36"/>
+        <location filename="../loadsave.cpp" line="33"/>
         <source>Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</source>
         <translation>Types connus de sauvegardes FF7 (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;Sauvegarde FF7 PC (*.ff7);;Sauvegarde FF7 PSX (*-S*);;Sauvegarde MC (*.mcr *.mcd);;Sauvegarde PSV (*.psv);;Sauvegarde PSP (*.vmp)</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="257"/>
+        <location filename="../loadsave.cpp" line="247"/>
         <source>FF7 PSX SaveGame(*-S*)</source>
         <translation>Sauvegarde FF7 PSX (*-S*)</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="265"/>
+        <location filename="../loadsave.cpp" line="255"/>
         <source>FF7 MC SaveGame(*.mcr *.mcd)</source>
         <translation>Sauvegarde FF7 MC (*.mcr *.mcd)</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="272"/>
+        <location filename="../loadsave.cpp" line="262"/>
         <source>Save Final Fantasy 7 PSV SaveGame</source>
         <translation>Sélectionner sauvegarde Final Fantasy 7 PSV</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="273"/>
+        <location filename="../loadsave.cpp" line="263"/>
         <source>FF7 PSV SaveGame(*.psv)</source>
         <translation>Sauvegarde FF7 PSV (*.psv)</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="280"/>
+        <location filename="../loadsave.cpp" line="270"/>
         <source>Save Final Fantasy 7  PSP SaveGame</source>
         <translation>Sélectionner sauvegarde Final Fantasy 7 PSP</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="281"/>
+        <location filename="../loadsave.cpp" line="271"/>
         <source>FF7 PSP SaveGame(*.vmp)</source>
         <translation>Sauvegarde FF7 PSP (*.vmp)</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="178"/>
+        <location filename="../loadsave.cpp" line="168"/>
         <source>PSX FF7 SaveGame (*-S*)</source>
         <translation>Sauvegarde FF7 PSX (*-S*)</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="202"/>
+        <location filename="../loadsave.cpp" line="192"/>
         <source>Select Final Fantasy 7 PSV Save</source>
         <translation>Sélectionner sauvegarde Final Fantasy 7 PSV</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="202"/>
+        <location filename="../loadsave.cpp" line="192"/>
         <source>PSX FF7 SaveGame (*.psv)</source>
         <translation>Sauvegarde FF7 PSX (*.psv)</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="285"/>
+        <location filename="../loadsave.cpp" line="275"/>
         <source>Cannot save This Type of File</source>
         <translation>Impossible de sauvegarder ce type de fichier</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="145"/>
+        <location filename="../loadsave.cpp" line="135"/>
         <source>Unknown File</source>
         <translation>Fichier inconnu</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="146"/>
+        <location filename="../loadsave.cpp" line="136"/>
         <source>File: %1 
 isn&apos;t a FF7 SaveGame.</source>
         <translation>le fichier : %1 
 n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="312"/>
-        <location filename="../loadsave.cpp" line="350"/>
+        <location filename="../loadsave.cpp" line="299"/>
+        <location filename="../loadsave.cpp" line="337"/>
         <source>Save Final Fantasy 7 SaveGame</source>
         <translation>Enregistrer Sauvegarde Final Fantasy 7</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="313"/>
+        <location filename="../loadsave.cpp" line="300"/>
         <source>FF7 SaveGame(*.ff7)</source>
         <translation>Sauvegarde FF7 (*.ff7)</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="35"/>
+        <location filename="../loadsave.cpp" line="32"/>
         <source>Open Final Fantasy 7 Save</source>
         <translation>Ouvrir Sauvegarde Final Fantasy 7</translation>
     </message>
@@ -3543,9 +3596,9 @@ n&apos;est pas une sauvegarde de FF7.</translation>
         <translation type="obsolete">Sauvegarde PSX brut (*)</translation>
     </message>
     <message>
-        <location filename="../loadsave.cpp" line="49"/>
-        <location filename="../loadsave.cpp" line="185"/>
-        <location filename="../loadsave.cpp" line="209"/>
+        <location filename="../loadsave.cpp" line="45"/>
+        <location filename="../loadsave.cpp" line="175"/>
+        <location filename="../loadsave.cpp" line="199"/>
         <source>Cannot read file %1:
 %2.</source>
         <translation>Impossible de lire le fichier %1:

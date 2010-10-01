@@ -44,8 +44,14 @@ private slots:
 
     //test functions to be removed....
 
+    void on_action_Lang_fr_triggered();
+    void on_action_Lang_es_triggered();
+    void on_action_Lang_en_triggered();
+    void on_action_Region_JPN_triggered();
+    void on_action_Region_PAL_triggered();
+    void on_action_Region_USA_triggered();
+    void on_action_show_test_data_toggled();
     void on_cb_id_toggled(bool checked);
-    void on_cb_show_test_buttons_stateChanged();
     void on_btn_remove_all_stolen_clicked();
     void on_slide_lr_b_valueChanged(int value);
     void on_slide_lr_g_valueChanged(int value);
