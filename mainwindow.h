@@ -19,6 +19,7 @@
 #include <QMainWindow>
 #include <QWidget>
 #include <QMessageBox>
+void fix_sum(const QString &fileName);
 
 
 namespace Ui {
@@ -39,11 +40,11 @@ private:
 
 public slots:
 
-
 private slots:
 
     //test functions to be removed....
 
+    void on_actionEdit_Paths_triggered();
     void on_action_Lang_fr_triggered();
     void on_action_Lang_es_triggered();
     void on_action_Lang_en_triggered();
@@ -212,6 +213,7 @@ private slots:
     //load save items
     void loadFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
     void saveFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
+
     void on_actionExport_PC_Save_activated();
     void on_actionFrom_PSX_Slot_activated();
     void on_actionClear_Slot_activated();
