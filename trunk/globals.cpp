@@ -14,12 +14,9 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "globals.h"
+
 FF7 ff7;
 int* s;
-
-
-
-
 
 int ff7__checksum( void* qw )
 {
