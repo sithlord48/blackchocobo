@@ -17,17 +17,21 @@
 #include <QLocale>
 #include <QTranslator>
 #include "mainwindow.h"
+#include <QSettings>
+
 
 int main(int argc, char *argv[])
 {
+
+    QSettings setting(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
     Q_INIT_RESOURCE(images);
     QApplication a(argc, argv);
     a.setApplicationName("Black Chocobo");
     QTranslator translator;
     QString lang = "lang/bchoco_";
-    lang.append(QLocale::system().name().section('_', 0, 0)); //add system lang to end so we get a full item
-    lang.append("fr"); // for french lang testing
-    lang.append("es"); // for spanish lang testing
+    lang.append(setting.value("lang").toString());
+    if (lang== "lang/bchoco_")
+        lang.append(QLocale::system().name().section('_', 0, 0)); //add system lang to end so we get a full item
     translator.load(lang);
     a.installTranslator(&translator);
     MainWindow w;

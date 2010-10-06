@@ -33,7 +33,7 @@ char chFF7[256];  // char arrary for converting to ff7 chars , so far not used.
 int curchar; //keeps track of current character displayed
 int mslotsel = 0; //keeps track of materia slot on char selected
 
-QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"Sithlord48","BlackChocobo",0);
+QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
 
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 

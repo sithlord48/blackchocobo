@@ -2,7 +2,7 @@
 #include "ui_options.h"
 #include <QFileDialog>
 #include <QSettings>
-QSettings bchoco_settings(QSettings::NativeFormat,QSettings::UserScope,"Sithlord48","BlackChocobo",0);
+QSettings bchoco_settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
 
 Options::Options(QWidget *parent) :
     QDialog(parent),
