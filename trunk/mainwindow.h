@@ -44,6 +44,9 @@ private slots:
 
     //test functions to be removed....
 
+    void on_sb_time_sec_valueChanged(int );
+    void on_sb_time_min_valueChanged(int );
+    void on_sb_time_hour_valueChanged(int );
     void on_actionEdit_Paths_triggered();
     void on_action_Lang_fr_triggered();
     void on_action_Lang_es_triggered();

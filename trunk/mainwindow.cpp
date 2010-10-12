@@ -4059,3 +4059,27 @@ void MainWindow::on_action_Lang_fr_triggered()
     QMessageBox::information(this,"Langue Modifiée","Vous Devez Redemarrer Pour Changer la Langue");
 }
 
+
+void MainWindow::on_sb_time_hour_valueChanged(int value)
+{
+    if (!load)
+    {
+    ff7.slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60%60) + (ui->sb_time_sec->value()));
+    }
+}
+
+void MainWindow::on_sb_time_min_valueChanged(int value)
+{
+    if (!load)
+    {
+    ff7.slot[s].time = ((ui->sb_time_hour->value()*3600) + (value*60%60) + (ui->sb_time_sec->value()));
+    }
+}
+
+void MainWindow::on_sb_time_sec_valueChanged(int value)
+{
+    if (!load)
+    {
+    ff7.slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60%60) + (value));
+    }
+}
