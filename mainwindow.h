@@ -44,9 +44,6 @@ private slots:
 
     //test functions to be removed....
 
-    void on_sb_time_sec_valueChanged(int );
-    void on_sb_time_min_valueChanged(int );
-    void on_sb_time_hour_valueChanged(int );
     void on_actionEdit_Paths_triggered();
     void on_action_Lang_fr_triggered();
     void on_action_Lang_es_triggered();
@@ -114,6 +111,9 @@ private slots:
     void on_sb_love_tifa_valueChanged();
     void on_sb_love_aeris_valueChanged();
     void on_sb_love_barret_valueChanged();
+    void on_sb_time_sec_valueChanged(int);
+    void on_sb_time_min_valueChanged(int);
+    void on_sb_time_hour_valueChanged(int);
 
     //items tab
     void on_list_keyitems_itemChanged();
@@ -142,6 +142,7 @@ private slots:
     //chocobo tab
     void on_sb_stables_owned_valueChanged();
     void on_sb_stables_occupied_valueChanged(int );
+
     void on_line_c1_name_lostFocus();
     void on_line_c2_name_lostFocus();
     void on_line_c3_name_lostFocus();
@@ -196,6 +197,31 @@ private slots:
     void on_cb_c4_sex_currentIndexChanged(int index);
     void on_cb_c5_sex_currentIndexChanged(int index);
     void on_cb_c6_sex_currentIndexChanged(int index);
+    void on_sb_c1_maxsprint_valueChanged(int );
+    void on_sb_c1_sprint_valueChanged(int );
+    void on_sb_c1_maxspeed_valueChanged(int );
+    void on_sb_c1_speed_valueChanged(int );
+    void on_sb_c2_maxsprint_valueChanged(int );
+    void on_sb_c2_sprint_valueChanged(int );
+    void on_sb_c2_maxspeed_valueChanged(int );
+    void on_sb_c2_speed_valueChanged(int );
+    void on_sb_c3_maxsprint_valueChanged(int );
+    void on_sb_c3_sprint_valueChanged(int );
+    void on_sb_c3_maxspeed_valueChanged(int );
+    void on_sb_c3_speed_valueChanged(int );
+    void on_sb_c4_maxsprint_valueChanged(int );
+    void on_sb_c4_sprint_valueChanged(int );
+    void on_sb_c4_maxspeed_valueChanged(int );
+    void on_sb_c4_speed_valueChanged(int );
+    void on_sb_c5_maxsprint_valueChanged(int );
+    void on_sb_c5_sprint_valueChanged(int );
+    void on_sb_c5_maxspeed_valueChanged(int );
+    void on_sb_c5_speed_valueChanged(int );
+    void on_sb_c6_maxsprint_valueChanged(int );
+    void on_sb_c6_sprint_valueChanged(int );
+    void on_sb_c6_maxspeed_valueChanged(int );
+    void on_sb_c6_speed_valueChanged(int );
+
     //The Chocobo pens.
     void on_combo_pen1_currentIndexChanged(int index);
     void on_combo_pen2_currentIndexChanged(int index);

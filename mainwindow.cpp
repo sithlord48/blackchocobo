@@ -2450,175 +2450,280 @@ void MainWindow::on_sb_stables_occupied_valueChanged(int value)
 }
 
 //ChocoboStats
+void MainWindow::on_sb_c1_speed_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[0].speed = value;}
+}
+void MainWindow::on_sb_c1_maxspeed_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[0].maxspeed = value;}
+}
+void MainWindow::on_sb_c1_sprint_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[0].sprintspd = value;}
+}
+void MainWindow::on_sb_c1_maxsprint_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[0].maxsprintspd = value;}
+}
 
 void MainWindow::on_cb_c1_sex_currentIndexChanged(int index)
 {
-    ff7.slot[s].chocobos[0].sex = index;
+    if(!load){ff7.slot[s].chocobos[0].sex = index;}
 }
 void MainWindow::on_cb_c1_type_currentIndexChanged(int index)
 {
-    ff7.slot[s].chocobos[0].type = index;
+    if(!load){ff7.slot[s].chocobos[0].type = index;}
 }
 void MainWindow::on_sb_c1_coop_valueChanged()
 {
-    ff7.slot[s].chocobos[0].coop= ui->sb_c1_coop->value();
+    if(!load){ff7.slot[s].chocobos[0].coop= ui->sb_c1_coop->value();}
 }
 void MainWindow::on_sb_c1_accel_valueChanged()
 {
-    ff7.slot[s].chocobos[0].accel= ui->sb_c1_accel->value();
+    if(!load){ff7.slot[s].chocobos[0].accel= ui->sb_c1_accel->value();}
 }
 void MainWindow::on_sb_c1_intel_valueChanged()
 {
-    ff7.slot[s].chocobos[0].intelligence = ui->sb_c1_intel->value();
+    if(!load){ff7.slot[s].chocobos[0].intelligence = ui->sb_c1_intel->value();}
 }
 void MainWindow::on_sb_c1_raceswon_valueChanged()
 {
-    ff7.slot[s].chocobos[0].raceswon = ui->sb_c1_raceswon->value();
+    if(!load){ff7.slot[s].chocobos[0].raceswon = ui->sb_c1_raceswon->value();}
 }
 void MainWindow::on_sb_c1_pcount_valueChanged()
 {
-    ff7.slot[s].chocobos[0].pcount= ui->sb_c1_pcount->value();
+    if(!load){ff7.slot[s].chocobos[0].pcount= ui->sb_c1_pcount->value();}
 }
+
+void MainWindow::on_sb_c2_speed_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[1].speed = value;}
+}
+void MainWindow::on_sb_c2_maxspeed_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[1].maxspeed = value;}
+}
+void MainWindow::on_sb_c2_sprint_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[1].sprintspd = value;}
+}
+void MainWindow::on_sb_c2_maxsprint_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[1].maxsprintspd = value;}
+}
+
 void MainWindow::on_cb_c2_sex_currentIndexChanged(int index)
 {
-    ff7.slot[s].chocobos[1].sex = index;
+    if(!load){ff7.slot[s].chocobos[1].sex = index;}
 }
 void MainWindow::on_cb_c2_type_currentIndexChanged(int index)
 {
-    ff7.slot[s].chocobos[1].type = index;
+    if(!load){ff7.slot[s].chocobos[1].type = index;}
 }
 void MainWindow::on_sb_c2_coop_valueChanged()
 {
-    ff7.slot[s].chocobos[1].coop= ui->sb_c2_coop->value();
+    if(!load){ff7.slot[s].chocobos[1].coop= ui->sb_c2_coop->value();}
 }
 void MainWindow::on_sb_c2_accel_valueChanged()
 {
-    ff7.slot[s].chocobos[1].accel= ui->sb_c2_accel->value();
+    if(!load){ff7.slot[s].chocobos[1].accel= ui->sb_c2_accel->value();}
 }
 void MainWindow::on_sb_c2_intel_valueChanged()
 {
-    ff7.slot[s].chocobos[1].intelligence = ui->sb_c2_intel->value();
+    if(!load){ff7.slot[s].chocobos[1].intelligence = ui->sb_c2_intel->value();}
 }
 void MainWindow::on_sb_c2_raceswon_valueChanged()
 {
-    ff7.slot[s].chocobos[1].raceswon = ui->sb_c2_raceswon->value();
+    if(!load){ff7.slot[s].chocobos[1].raceswon = ui->sb_c2_raceswon->value();}
 }
 void MainWindow::on_sb_c2_pcount_valueChanged()
 {
-    ff7.slot[s].chocobos[1].pcount= ui->sb_c2_pcount->value();
+    if(!load){ff7.slot[s].chocobos[1].pcount= ui->sb_c2_pcount->value();}
+}
+
+
+void MainWindow::on_sb_c3_speed_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[2].speed = value;}
+}
+void MainWindow::on_sb_c3_maxspeed_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[2].maxspeed = value;}
+}
+void MainWindow::on_sb_c3_sprint_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[2].sprintspd = value;}
+}
+void MainWindow::on_sb_c3_maxsprint_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[2].maxsprintspd = value;}
 }
 void MainWindow::on_cb_c3_sex_currentIndexChanged(int index)
 {
-    ff7.slot[s].chocobos[2].sex = index;
+    if(!load){ff7.slot[s].chocobos[2].sex = index;}
 }
 void MainWindow::on_cb_c3_type_currentIndexChanged(int index)
 {
-    ff7.slot[s].chocobos[2].type = index;
+    if(!load){ff7.slot[s].chocobos[2].type = index;}
 }
 void MainWindow::on_sb_c3_coop_valueChanged()
 {
-    ff7.slot[s].chocobos[2].coop= ui->sb_c3_coop->value();
+    if(!load){ff7.slot[s].chocobos[2].coop= ui->sb_c3_coop->value();}
 }
 void MainWindow::on_sb_c3_accel_valueChanged()
 {
-    ff7.slot[s].chocobos[2].accel= ui->sb_c3_accel->value();
+    if(!load){ff7.slot[s].chocobos[2].accel= ui->sb_c3_accel->value();}
 }
 void MainWindow::on_sb_c3_intel_valueChanged()
 {
-    ff7.slot[s].chocobos[2].intelligence = ui->sb_c3_intel->value();
+    if(!load){ff7.slot[s].chocobos[2].intelligence = ui->sb_c3_intel->value();}
 }
 void MainWindow::on_sb_c3_raceswon_valueChanged()
 {
-    ff7.slot[s].chocobos[2].raceswon = ui->sb_c3_raceswon->value();
+    if(!load){ff7.slot[s].chocobos[2].raceswon = ui->sb_c3_raceswon->value();}
 }
 void MainWindow::on_sb_c3_pcount_valueChanged()
 {
-    ff7.slot[s].chocobos[2].pcount= ui->sb_c3_pcount->value();
+    if(!load){ff7.slot[s].chocobos[2].pcount= ui->sb_c3_pcount->value();}
 }
+
+void MainWindow::on_sb_c4_speed_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[3].speed = value;}
+}
+void MainWindow::on_sb_c4_maxspeed_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[3].maxspeed = value;}
+}
+void MainWindow::on_sb_c4_sprint_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[3].sprintspd = value;}
+}
+void MainWindow::on_sb_c4_maxsprint_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].chocobos[3].maxsprintspd = value;}
+}
+
 void MainWindow::on_cb_c4_sex_currentIndexChanged(int index)
 {
-    ff7.slot[s].chocobos[3].sex = index;
+    if(!load){ff7.slot[s].chocobos[3].sex = index;}
 }
 void MainWindow::on_cb_c4_type_currentIndexChanged(int index)
 {
-    ff7.slot[s].chocobos[3].type = index;
+    if(!load){ff7.slot[s].chocobos[3].type = index;}
 }
 void MainWindow::on_sb_c4_coop_valueChanged()
 {
-    ff7.slot[s].chocobos[3].coop= ui->sb_c4_coop->value();
+    if(!load){ff7.slot[s].chocobos[3].coop= ui->sb_c4_coop->value();}
 }
 void MainWindow::on_sb_c4_accel_valueChanged()
 {
-    ff7.slot[s].chocobos[3].accel= ui->sb_c4_accel->value();
+    if(!load){ff7.slot[s].chocobos[3].accel= ui->sb_c4_accel->value();}
 }
 void MainWindow::on_sb_c4_intel_valueChanged()
 {
-    ff7.slot[s].chocobos[3].intelligence = ui->sb_c4_intel->value();
+    if(!load){ff7.slot[s].chocobos[3].intelligence = ui->sb_c4_intel->value();}
 }
 void MainWindow::on_sb_c4_raceswon_valueChanged()
 {
-    ff7.slot[s].chocobos[3].raceswon = ui->sb_c4_raceswon->value();
+    if(!load){ff7.slot[s].chocobos[3].raceswon = ui->sb_c4_raceswon->value();}
 }
 void MainWindow::on_sb_c4_pcount_valueChanged()
 {
-    ff7.slot[s].chocobos[3].pcount= ui->sb_c4_pcount->value();
+    if(!load){ff7.slot[s].chocobos[3].pcount= ui->sb_c4_pcount->value();}
+}
+
+void MainWindow::on_sb_c5_speed_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].choco56[0].speed = value;}
+}
+void MainWindow::on_sb_c5_maxspeed_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].choco56[0].maxspeed = value;}
+}
+void MainWindow::on_sb_c5_sprint_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].choco56[0].sprintspd = value;}
+}
+void MainWindow::on_sb_c5_maxsprint_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].choco56[0].maxsprintspd = value;}
 }
 void MainWindow::on_cb_c5_sex_currentIndexChanged(int index)
 {
-    ff7.slot[s].choco56[0].sex = index;
+    if(!load){ff7.slot[s].choco56[0].sex = index;}
 }
 void MainWindow::on_cb_c5_type_currentIndexChanged(int index)
 {
-    ff7.slot[s].choco56[0].type = index;
+    if(!load){ff7.slot[s].choco56[0].type = index;}
 }
 void MainWindow::on_sb_c5_coop_valueChanged()
 {
-    ff7.slot[s].choco56[0].coop= ui->sb_c5_coop->value();
+    if(!load){ff7.slot[s].choco56[0].coop= ui->sb_c5_coop->value();}
 }
 void MainWindow::on_sb_c5_accel_valueChanged()
 {
-    ff7.slot[s].choco56[0].accel= ui->sb_c5_accel->value();
+    if(!load){ff7.slot[s].choco56[0].accel= ui->sb_c5_accel->value();}
 }
 void MainWindow::on_sb_c5_intel_valueChanged()
 {
-    ff7.slot[s].choco56[0].intelligence = ui->sb_c5_intel->value();
+    if(!load){ff7.slot[s].choco56[0].intelligence = ui->sb_c5_intel->value();}
 }
 void MainWindow::on_sb_c5_raceswon_valueChanged()
 {
-    ff7.slot[s].choco56[0].raceswon = ui->sb_c5_raceswon->value();
+    if(!load){ff7.slot[s].choco56[0].raceswon = ui->sb_c5_raceswon->value();}
 }
 void MainWindow::on_sb_c5_pcount_valueChanged()
 {
-    ff7.slot[s].choco56[0].pcount= ui->sb_c5_pcount->value();
+    if(!load){ff7.slot[s].choco56[0].pcount= ui->sb_c5_pcount->value();}
+}
+
+void MainWindow::on_sb_c6_speed_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].choco56[1].speed = value;}
+}
+void MainWindow::on_sb_c6_maxspeed_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].choco56[1].maxspeed = value;}
+}
+void MainWindow::on_sb_c6_sprint_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].choco56[1].sprintspd = value;}
+}
+void MainWindow::on_sb_c6_maxsprint_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].choco56[1].maxsprintspd = value;}
 }
 void MainWindow::on_cb_c6_sex_currentIndexChanged(int index)
 {
-    ff7.slot[s].choco56[1].sex = index;
+    if(!load){ff7.slot[s].choco56[1].sex = index;}
 }
 void MainWindow::on_cb_c6_type_currentIndexChanged(int index)
 {
-    ff7.slot[s].choco56[1].type = index;
+    if(!load){ff7.slot[s].choco56[1].type = index;}
 }
 void MainWindow::on_sb_c6_coop_valueChanged()
 {
-    ff7.slot[s].choco56[1].coop= ui->sb_c6_coop->value();
+    if(!load){ff7.slot[s].choco56[1].coop= ui->sb_c6_coop->value();}
 }
 void MainWindow::on_sb_c6_accel_valueChanged()
 {
-    ff7.slot[s].choco56[1].accel= ui->sb_c6_accel->value();
+    if(!load){ff7.slot[s].choco56[1].accel= ui->sb_c6_accel->value();}
 }
 void MainWindow::on_sb_c6_intel_valueChanged()
 {
-    ff7.slot[s].choco56[1].intelligence = ui->sb_c6_intel->value();
+    if(!load){ff7.slot[s].choco56[1].intelligence = ui->sb_c6_intel->value();}
 }
 void MainWindow::on_sb_c6_raceswon_valueChanged()
 {
-    ff7.slot[s].choco56[1].raceswon = ui->sb_c6_raceswon->value();
+    if(!load){ff7.slot[s].choco56[1].raceswon = ui->sb_c6_raceswon->value();}
 }
 void MainWindow::on_sb_c6_pcount_valueChanged()
 {
-    ff7.slot[s].choco56[1].pcount= ui->sb_c6_pcount->value();
+    if(!load){ff7.slot[s].choco56[1].pcount= ui->sb_c6_pcount->value();}
 }
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_sb_c1_stamina_valueChanged()
 {
     ff7.slot[s].chocostaminas[0] = ui->sb_c1_stamina->value();//Bug fixed Before was ui->sb_c1_stamina->value()*10 and (999*10 != 9999), is 9990 (Vegeta_Ss4) v0.8.3
@@ -2646,10 +2751,10 @@ void MainWindow::on_sb_c6_stamina_valueChanged()
 void MainWindow::on_line_c1_name_lostFocus()
 {
 if(!load)
-
+    {
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[0][i] =0xFF;}
     for (int i=0;i<ui->line_c1_name->text().size();i++){ff7.slot[s].chocobonames[0][i] = chFF7[ui->line_c1_name->text().at(i).toAscii()];}
-
+    }
 }
 void MainWindow::on_line_c2_name_lostFocus()
 {
@@ -2745,6 +2850,30 @@ void MainWindow::on_sb_love_yuffie_valueChanged()
     if(!load)
     {
     ff7.slot[s].love.yuffie = ui->sb_love_yuffie->value();
+    }
+}
+
+void MainWindow::on_sb_time_hour_valueChanged(int value)
+{
+    if (!load)
+    {
+    ff7.slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60%60) + (ui->sb_time_sec->value()));
+    }
+}
+
+void MainWindow::on_sb_time_min_valueChanged(int value)
+{
+    if (!load)
+    {
+    ff7.slot[s].time = ((ui->sb_time_hour->value()*3600) + (value*60%60) + (ui->sb_time_sec->value()));
+    }
+}
+
+void MainWindow::on_sb_time_sec_valueChanged(int value)
+{
+    if (!load)
+    {
+    ff7.slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60%60) + (value));
     }
 }
 
@@ -4057,29 +4186,4 @@ void MainWindow::on_action_Lang_fr_triggered()
     ui->action_Lang_en->setChecked(false);
     settings.setValue("lang","fr");
     QMessageBox::information(this,"Langue Modifiée","Vous Devez Redemarrer Pour Changer la Langue");
-}
-
-
-void MainWindow::on_sb_time_hour_valueChanged(int value)
-{
-    if (!load)
-    {
-    ff7.slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60%60) + (ui->sb_time_sec->value()));
-    }
-}
-
-void MainWindow::on_sb_time_min_valueChanged(int value)
-{
-    if (!load)
-    {
-    ff7.slot[s].time = ((ui->sb_time_hour->value()*3600) + (value*60%60) + (ui->sb_time_sec->value()));
-    }
-}
-
-void MainWindow::on_sb_time_sec_valueChanged(int value)
-{
-    if (!load)
-    {
-    ff7.slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60%60) + (value));
-    }
 }
