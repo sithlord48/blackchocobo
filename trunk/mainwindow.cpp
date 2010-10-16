@@ -70,19 +70,19 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->eskill_group->setVisible(false);
     ui->eskill_group_2->setVisible(false);
     ui->combo_add_mat->setVisible(false);
-
     //testing stuff.
+    ui->tabWidget->setTabEnabled(8,0);
     ui->btn_remove_all_items->setVisible(false);
     ui->btn_remove_all_materia->setVisible(false);
     ui->btn_remove_all_stolen->setVisible(false);
-    ui->lbl_z_4_0->setVisible(false);
-    ui->lbl_z_4_1->setVisible(false);
-    ui->lbl_z_4_2->setVisible(false);
-    ui->lbl_z_4_3->setVisible(false);
-    ui->lcd_z_4_0->setVisible(false);
-    ui->lcd_z_4_1->setVisible(false);
-    ui->lcd_z_4_2->setVisible(false);
-    ui->lcd_z_4_3->setVisible(false);
+    ui->lbl_0x34->setVisible(false);
+    ui->lbl_0x35->setVisible(false);
+    ui->lbl_0x36->setVisible(false);
+    ui->lbl_0x37->setVisible(false);
+    ui->lcd_0x34->setVisible(false);
+    ui->lcd_0x35->setVisible(false);
+    ui->lcd_0x36->setVisible(false);
+    ui->lcd_0x37->setVisible(false);
     load=false;
 
     // load settings
@@ -714,10 +714,10 @@ void MainWindow::charupdate(void)
     ui->sb_dexbonus->setValue(ff7.slot[s].chars[curchar].dexterity_bonus);
     ui->sb_lckbonus->setValue(ff7.slot[s].chars[curchar].luck_bonus);
     ui->pbar_level->setValue(ff7.slot[s].chars[curchar].flags[2]);
-    ui->lcd_z_4_0->display(ff7.slot[s].chars[curchar].z_4[0]);
-    ui->lcd_z_4_1->display(ff7.slot[s].chars[curchar].z_4[1]);
-    ui->lcd_z_4_2->display(ff7.slot[s].chars[curchar].z_4[2]);
-    ui->lcd_z_4_3->display(ff7.slot[s].chars[curchar].z_4[3]);
+    ui->lcd_0x34->display(ff7.slot[s].chars[curchar].z_4[0]);
+    ui->lcd_0x35->display(ff7.slot[s].chars[curchar].z_4[1]);
+    ui->lcd_0x36->display(ff7.slot[s].chars[curchar].z_4[2]);
+    ui->lcd_0x37->display(ff7.slot[s].chars[curchar].z_4[3]);
 
 }
 void MainWindow::setarmorslots(void)
@@ -1673,6 +1673,7 @@ int j= ui->tbl_itm->currentRow();
        case 7:{ui->btn_vincent->click();break;}
        case 8:{ui->btn_cid->click();break;}
     }
+
     load =false;
  }
 void MainWindow::chocobo_refresh()
@@ -4110,17 +4111,20 @@ void MainWindow::on_action_show_test_data_toggled()
     if(ui->action_show_test_data->isChecked())
      {
         this->setWindowTitle(tr("Black Chocobo - Testing Mode"));
+        ui->page_test->setEnabled(true);
+        ui->tabWidget->setTabEnabled(8,1);
+        testdata_refresh();
         ui->btn_remove_all_items->setVisible(true);
         ui->btn_remove_all_materia->setVisible(true);
         ui->btn_remove_all_stolen->setVisible(true);
-        ui->lbl_z_4_0->setVisible(true);
-        ui->lbl_z_4_1->setVisible(true);
-        ui->lbl_z_4_2->setVisible(true);
-        ui->lbl_z_4_3->setVisible(true);
-        ui->lcd_z_4_0->setVisible(true);
-        ui->lcd_z_4_1->setVisible(true);
-        ui->lcd_z_4_2->setVisible(true);
-        ui->lcd_z_4_3->setVisible(true);
+        ui->lbl_0x34->setVisible(true);
+        ui->lbl_0x35->setVisible(true);
+        ui->lbl_0x36->setVisible(true);
+        ui->lbl_0x37->setVisible(true);
+        ui->lcd_0x34->setVisible(true);
+        ui->lcd_0x35->setVisible(true);
+        ui->lcd_0x36->setVisible(true);
+        ui->lcd_0x37->setVisible(true);
         ui->btn_vincent->setEnabled(true);
         ui->cb_id->setEnabled(true);
         ui->btn_cait->setEnabled(true);
@@ -4129,17 +4133,19 @@ void MainWindow::on_action_show_test_data_toggled()
     else
     {
         this->setWindowTitle(tr("Black Chocobo"));
+        ui->page_test->setEnabled(false);
+        ui->tabWidget->setTabEnabled(8,0);
         ui->btn_remove_all_items->setVisible(false);
         ui->btn_remove_all_materia->setVisible(false);
         ui->btn_remove_all_stolen->setVisible(false);
-        ui->lbl_z_4_0->setVisible(false);
-        ui->lbl_z_4_1->setVisible(false);
-        ui->lbl_z_4_2->setVisible(false);
-        ui->lbl_z_4_3->setVisible(false);
-        ui->lcd_z_4_0->setVisible(false);
-        ui->lcd_z_4_1->setVisible(false);
-        ui->lcd_z_4_2->setVisible(false);
-        ui->lcd_z_4_3->setVisible(false);
+        ui->lbl_0x34->setVisible(false);
+        ui->lbl_0x35->setVisible(false);
+        ui->lbl_0x36->setVisible(false);
+        ui->lbl_0x37->setVisible(false);
+        ui->lcd_0x34->setVisible(false);
+        ui->lcd_0x35->setVisible(false);
+        ui->lcd_0x36->setVisible(false);
+        ui->lcd_0x37->setVisible(false);
         if(ff7.slot[s].chars[6].id == 9) {ui->btn_vincent->setEnabled(false);}
         ui->cb_id->setEnabled(false);
         if(ff7.slot[s].chars[7].id == 10) {ui->btn_cait->setEnabled(false);}
@@ -4188,4 +4194,91 @@ void MainWindow::on_action_Lang_fr_triggered()
     ui->action_Lang_en->setChecked(false);
     settings.setValue("lang","fr");
     QMessageBox::information(this,"Langue Modifiée","Vous Devez Redemarrer Pour Changer la Langue");
+}
+void MainWindow::testdata_refresh()
+{
+    //z_1
+    ui->lcd_z_1_1_hex->display(ff7.slot[s].z_1[0]);
+    ui->lcd_z_1_2_hex->display(ff7.slot[s].z_1[1]);
+    //z_2
+    ui->lcd_z_2_hex->display(ff7.slot[s].z_2);
+    // z_3
+    ui->lcd_z_3_1_hex->display(ff7.slot[s].z_3[0]);
+    ui->lcd_z_3_2_hex->display(ff7.slot[s].z_3[1]);
+    ui->lcd_z_3_3_hex->display(ff7.slot[s].z_3[2]);
+    ui->lcd_z_3_4_hex->display(ff7.slot[s].z_3[3]);
+    ui->lcd_z_3_5_hex->display(ff7.slot[s].z_3[4]);
+    ui->lcd_z_3_6_hex->display(ff7.slot[s].z_3[5]);
+    ui->lcd_z_3_7_hex->display(ff7.slot[s].z_3[6]);
+    ui->lcd_z_3_8_hex->display(ff7.slot[s].z_3[7]);
+    ui->lcd_z_3_9_hex->display(ff7.slot[s].z_3[8]);
+    ui->lcd_z_3_10_hex->display(ff7.slot[s].z_3[9]);
+    ui->lcd_z_3_11_hex->display(ff7.slot[s].z_3[10]);
+    ui->lcd_z_3_12_hex->display(ff7.slot[s].z_3[11]);
+    ui->lcd_z_3_13_hex->display(ff7.slot[s].z_3[12]);
+    ui->lcd_z_3_14_hex->display(ff7.slot[s].z_3[13]);
+    ui->lcd_z_3_15_hex->display(ff7.slot[s].z_3[14]);
+    ui->lcd_z_3_16_hex->display(ff7.slot[s].z_3[15]);
+    ui->lcd_z_3_17_hex->display(ff7.slot[s].z_3[16]);
+    ui->lcd_z_3_18_hex->display(ff7.slot[s].z_3[17]);
+    ui->lcd_z_3_19_hex->display(ff7.slot[s].z_3[18]);
+    ui->lcd_z_3_20_hex->display(ff7.slot[s].z_3[19]);
+    ui->lcd_z_3_21_hex->display(ff7.slot[s].z_3[20]);
+    ui->lcd_z_3_22_hex->display(ff7.slot[s].z_3[21]);
+    ui->lcd_z_3_23_hex->display(ff7.slot[s].z_3[22]);
+    ui->lcd_z_3_24_hex->display(ff7.slot[s].z_3[23]);
+    ui->lcd_z_3_25_hex->display(ff7.slot[s].z_3[24]);
+    ui->lcd_z_3_26_hex->display(ff7.slot[s].z_3[25]);
+    ui->lcd_z_3_27_hex->display(ff7.slot[s].z_3[26]);
+    ui->lcd_z_3_28_hex->display(ff7.slot[s].z_3[27]);
+    ui->lcd_z_3_29_hex->display(ff7.slot[s].z_3[28]);
+    ui->lcd_z_3_30_hex->display(ff7.slot[s].z_3[29]);
+    ui->lcd_z_3_31_hex->display(ff7.slot[s].z_3[30]);
+    ui->lcd_z_3_32_hex->display(ff7.slot[s].z_3[31]);
+    // z_4
+    ui->lcd_z_4_1_hex->display(ff7.slot[s].z_4[0]);
+    ui->lcd_z_4_2_hex->display(ff7.slot[s].z_4[1]);
+    ui->lcd_z_4_3_hex->display(ff7.slot[s].z_4[2]);
+    ui->lcd_z_4_4_hex->display(ff7.slot[s].z_4[3]);
+    ui->lcd_z_4_5_hex->display(ff7.slot[s].z_4[4]);
+    ui->lcd_z_4_6_hex->display(ff7.slot[s].z_4[5]);
+    ui->lcd_z_4_7_hex->display(ff7.slot[s].z_4[6]);
+    ui->lcd_z_4_8_hex->display(ff7.slot[s].z_4[7]);
+    ui->lcd_z_4_9_hex->display(ff7.slot[s].z_4[8]);
+    ui->lcd_z_4_10_hex->display(ff7.slot[s].z_4[9]);
+    ui->lcd_z_4_11_hex->display(ff7.slot[s].z_4[10]);
+    ui->lcd_z_4_12_hex->display(ff7.slot[s].z_4[11]);
+    ui->lcd_z_4_13_hex->display(ff7.slot[s].z_4[12]);
+    ui->lcd_z_4_14_hex->display(ff7.slot[s].z_4[13]);
+    ui->lcd_z_4_15_hex->display(ff7.slot[s].z_4[14]);
+    ui->lcd_z_4_16_hex->display(ff7.slot[s].z_4[15]);
+    // z_5
+    ui->lcd_z_5_1_hex->display(ff7.slot[s].z_5[0]);
+    ui->lcd_z_5_2_hex->display(ff7.slot[s].z_5[1]);
+    // z_6
+    ui->lcd_z_6_1_hex->display(ff7.slot[s].z_6[0]);
+    ui->lcd_z_6_2_hex->display(ff7.slot[s].z_6[1]);
+    ui->lcd_z_6_3_hex->display(ff7.slot[s].z_6[2]);
+    ui->lcd_z_6_4_hex->display(ff7.slot[s].z_6[3]);
+    //z_7
+    ui->lcd_z_7_hex->display(ff7.slot[s].z_7);
+    //z_8
+    ui->lcd_z_8_1_hex->display(ff7.slot[s].z_8[0]);
+    ui->lcd_z_8_2_hex->display(ff7.slot[s].z_8[1]);
+    ui->lcd_z_8_3_hex->display(ff7.slot[s].z_8[2]);
+    ui->lcd_z_8_4_hex->display(ff7.slot[s].z_8[3]);
+    ui->lcd_z_8_5_hex->display(ff7.slot[s].z_8[4]);
+    ui->lcd_z_8_6_hex->display(ff7.slot[s].z_8[5]);
+    ui->lcd_z_8_7_hex->display(ff7.slot[s].z_8[6]);
+    ui->lcd_z_8_8_hex->display(ff7.slot[s].z_8[7]);
+    ui->lcd_z_8_9_hex->display(ff7.slot[s].z_8[8]);
+    ui->lcd_z_8_10_hex->display(ff7.slot[s].z_8[9]);
+    ui->lcd_z_8_11_hex->display(ff7.slot[s].z_8[10]);
+    ui->lcd_z_8_12_hex->display(ff7.slot[s].z_8[11]);
+    ui->lcd_z_8_13_hex->display(ff7.slot[s].z_8[12]);
+    ui->lcd_z_8_14_hex->display(ff7.slot[s].z_8[13]);
+    ui->lcd_z_8_15_hex->display(ff7.slot[s].z_8[14]);
+    ui->lcd_z_8_16_hex->display(ff7.slot[s].z_8[15]);
+    ui->lcd_z_8_17_hex->display(ff7.slot[s].z_8[16]);
+
 }
