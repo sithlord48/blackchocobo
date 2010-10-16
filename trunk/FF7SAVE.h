@@ -250,12 +250,12 @@ const int FF7_PSP_SAVE_GAME_SLOT_NUMBER = 15;
 
 /* END FILE INFO */
 
-struct item{
+struct item{// sizeof 2
 quint8 id;// item id
 quint8 qty;//
 };
 
-struct materia{
+struct materia{// sizeof 4
 quint8 id;
 quint8 ap[3];
 
@@ -328,16 +328,16 @@ struct FF7CHOCOBO {		// [0x0010] Chocobo - 99% - 1 Personality unknown!
     quint8 type;		// [0x000F] Type (Yellow,Green,Blue,Black,Gold)
 };
 
-struct FF7XYZ {                 //used for x.y coords
+struct FF7XYZ {                 // size of 6. used for coords
     quint16 x;
     quint16 y;
     quint16 z;
 };
 
-struct FF7SLOT {		// [0x10F4] Save slot -
+struct FF7SLOT {		// Save slot - Length 0x10F4
     qint16 checksum;		// [0x0000] Checksum
-    qint16 z_1;                 // [0x0002] Unknown data
-    FF7DESC desc;		// [0x0004]Length:44] Slot description
+    quint8 z_1[2];              // [0x0002] Unknown data
+    FF7DESC desc;		// [0x0004] Length:0x44] Slot description
     quint8 colors[4][3];	// [0x0048] Window colors (RGB)
     FF7CHAR chars[9];		// [0x0054:84] The nine characters (Cl,Ba,Ti,Ae,Re,Yu,Ca,Vi,Ci)
     qint8 party[3];		// [0x04F8] Party members
@@ -345,68 +345,64 @@ struct FF7SLOT {		// [0x10F4] Save slot -
     item items[320];		// [0x04FC] Items (320 slots)
     materia materias[200];	// [0x077C] Materia (200 slots)
     materia stolen[48];         // [0x0A9C] materia stolen by yuffie.
-    quint8 z_3[32];        //unknown - Cut 0xBA4 out for main progress var (quint16)
+    quint8 z_3[32];             // [0x0B5C] UNKNOWN DATA
     quint32 gil;		// [0x0B7C] Party gil
     quint32 time;		// [0x0B80] Total number of seconds played
-    quint8 z_4[16];
-    quint16 mapid;		// [0x0B9D] Current map
-    quint16 locationid;		// [0x0B9F] Current location
-    quint8 z_5[2];
+    quint8 z_4[16];             // [0x0B84] UNKNOWN DATA
+    quint16 mapid;		// [0x0B94] Current map
+    quint16 locationid;		// [0x0B96] Current location
+    quint8 z_5[2];              // [0x0B98] UNKNOWN DATA
     FF7XYZ coord;		// [0x0B9A] Current coordinates (world map)
-    quint8 z_6[4];
+    quint8 z_6[4];              // [0x0BA0] UNKNOWN DATA
     quint16 mprogress;          // [0x0BA4] Main Progress var
-    quint8 unknown1;            // [0x0BA6]
-    struct {			// [0X0BA1] Love points
-            qint8 aeris;
-            qint8 tifa;
-            qint8 yuffie;
-            qint8 barret;
-            } love;             // [0x0BA5
-    quint8 z_7[17];             //0xbb4 unknown data
-    quint16 battles;            // [0x0Bc5] Number of battle
-    quint16 runs;               // [0x0Bc7] Number of escapes
-    quint8 temp[36];            //temp var. from 0x0bc9 -0xbe4
+    quint8 z_7;                 // [0x0BA6] UNKNOWN DATA
+    struct {
+            qint8 aeris;        // [0X0BA7] Aeris love points.
+            qint8 tifa;         // [0X0BA8] Tifa love Points
+            qint8 yuffie;       // [0x0BA9] Yuffie love Points
+            qint8 barret;       // [0x0BAA] Barret love Points
+            } love;
+    quint8 z_8[17];             // [0x0BAB] UNKNOWN DATA
+    quint16 battles;            // [0x0BBC] Number of battle
+    quint16 runs;               // [0x0BBE] Number of escapes
+    quint8 z_9[36];             // [0x0BC0] UNKNOWN DATA
     quint8 keyitems[8];         // [0x0BE4] Key items
-    quint8 z_8[13];             //[0x0BEC] C00UNKNOWN
-    qint8 pennedchocos[4];      //[0x0C01] chocos in fenced area at farm rating
-    quint8 z_9[136];            //[0x0C05] unknown - 128 ...
-    quint8 bm_progress1;        //[0x0C85]
-    quint8 bm_progress2;        //[0x0C86]
-    quint8 unknown2[95];        //[0X0C87]
-    quint8 bm_progress3;        //[0X0CE6]
-    quint8 unknown3[7];         //[0X0CF6]- 14.....
-    quint16 gp;                 // [0x0Cf7] OK! Party GP (0-10000)
-    quint8 z_10[12];            //unknown Data [0x0cf9]
-    qint8 stables;              // [0x0d05] OkNumber of chocobo stables owned //genereated incorrectly ?
-    qint8 stablesoccupied;      // [0x0d06] Number of occupied stables //genereated incorrectly ?
-    quint8 z_11;                //0x0d07 unknown char
-    qint8 chocobomask;          // [0x0d08] Mask of occupied stables//genereated incorrectly ?
-    quint8 chocoborn;           //0xd09 what stall a choco was just born in.
-    quint8 z_12[101];           //0x0d0A  - 0x0ecd  UNKNOWN
-    quint8 turtleflyers;        //[0x0d6E] turtles paradice flyers.
-    quint8 temp2[93];           //[0X0D6F] temp var2 unknown
-    //quint8 kalmprog;          // [0xD36] kalm prog ?
-    FF7CHOCOBO chocobos[4];     // [0x0DCD] Chocobo slots
-    quint8 z_13[160];           //[0x0E04]  //mod (Vegeta_Ss4) v0.8.3
-    qint8 disc;                 // [0x0EAD] Current CD
-    quint8 z_14[31];
-    quint8 chocobonames[6][6];  // [0x0ECD] Chocobo names
+    quint8 z_10[13];            // [0x0BEC] UNKNOWN DATA
+    qint8 pennedchocos[4];      // [0x0BF9] chocos in fenced area at farm rating
+    quint8 z_11[136];           // [0x0BFD] UNKNOWN DATA
+    quint8 bm_progress1;        // [0x0C85] Bombing Mission Flag 1
+    quint8 bm_progress2;        // [0x0C86] Bombing Mission Flag 2
+    quint8 z_12[95];            // [0X0C87] UNKNOWN DATA
+    quint8 bm_progress3;        // [0X0CE6] Bombing mission flag 3
+    quint8 z_13[7];             // [0X0CE7] UNKNOWN DATA
+    quint16 gp;                 // [0x0CEE] Party GP (0-10000)
+    quint8 z_14[12];            // [0x0CF0] UNKNOWN DATA
+    qint8 stables;              // [0x0CFC] Number of chocobo stables owned
+    qint8 stablesoccupied;      // [0x0CFD] Number of occupied stables //genereated incorrectly ?
+    quint8 z_15;                // [0x0CFE] UNKNOWN DATA
+    qint8 chocobomask;          // [0x0CFF] Mask of occupied stables//genereated incorrectly ?
+    quint8 chocoborn;           // [0x0D00] what stall a choco was just born in.
+    quint8 z_16[101];           // [0x0D01] UNKNOWN DATA
+    quint8 turtleflyers;        // [0x0D66] turtles paradice flyers.
+    quint8 z_17[93];            // [0X0D67] UNKNOWN DATA
+    FF7CHOCOBO chocobos[4];     // [0x0DC4] Chocobo slots
+    quint8 z_18[160];           // [0x0E04] UNKNOWN DATA
+    qint8 disc;                 // [0x0EA4] Current CD
+    quint8 z_19[31];            // [0x0EA5] UNKNOWN DATA
+    quint8 chocobonames[6][6];  // [0x0EC4] <-OK Chocobo names
     quint16 chocostaminas[6];   // [0x0EE8] Chocobo staminas 12 bytes
-    //_UNKNOWN z_15[24];
-    //char location[24];        // [0x0F14] Name of location
-    //_UNKNOWN z_16[436];
-    quint8 z_17[400];      //0x0EE8 - 0x1084 unchecked data //mod (Vegeta_Ss4) v0.8.3
-    FF7CHOCOBO choco56[2];    //0x1084 Chocobo slots 5-6
-    quint16 phsmask;            //0x10A4 who is allowed in the phs
-    quint16 unlockedchars;      //0x10A6 who is visible in the phs
-    quint8 z_18[48];       //0x10A8 -0x10D7 UNCHECKED
-    quint8 battlespeed;         //0x10D8
-    quint8 battlemspeed;        //0x10D9
-    qint8 options1;             //0x10DA
-    quint8 options2;            //0x10DB
-    quint8 z_19[16];       //0x10DC unchecked (controller mapping?)
-    quint8 fieldmspeed;         //0x10f5
-    quint8 z_20[7];        //unchecked
+    quint8 z_20[400];           // [0x0EF4] UNKNOWN DATA
+    FF7CHOCOBO choco56[2];      // [0x1084] Chocobo slots 5-6
+    quint16 phsmask;            // [0x10A4] who is allowed in the phs
+    quint16 unlockedchars;      // [0x10A6] who is visible in the phs
+    quint8 z_21[48];            // [0x10A8] UNKNOWN DATA
+    quint8 battlespeed;         // [0x10D8] Battle Speed
+    quint8 battlemspeed;        // [0x10D9] Battle Message Speed
+    qint8 options1;             // [0x10DA] Options 1
+    quint8 options2;            // [0x10DB] Options 2
+    quint8 z_22[16];            // [0x10DC] UNKNOWN DATA (controller mapping?)
+    quint8 fieldmspeed;         // [0x10EC] Message Speed On field
+    quint8 z_23[7];             // [0x10ED] UNKNOWN DATA
 };
 /* FF7HEADFOOT FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
     struct FF7HEADFOOT {
