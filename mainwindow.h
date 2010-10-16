@@ -43,7 +43,7 @@ public slots:
 private slots:
 
     //test functions to be removed....
-
+    void testdata_refresh();
     void on_actionEdit_Paths_triggered();
     void on_action_Lang_fr_triggered();
     void on_action_Lang_es_triggered();
