@@ -4109,6 +4109,7 @@ void MainWindow::on_action_show_test_data_toggled()
 {
     if(ui->action_show_test_data->isChecked())
      {
+        this->setWindowTitle(tr("Black Chocobo - Testing Mode"));
         ui->btn_remove_all_items->setVisible(true);
         ui->btn_remove_all_materia->setVisible(true);
         ui->btn_remove_all_stolen->setVisible(true);
@@ -4127,6 +4128,7 @@ void MainWindow::on_action_show_test_data_toggled()
     }
     else
     {
+        this->setWindowTitle(tr("Black Chocobo"));
         ui->btn_remove_all_items->setVisible(false);
         ui->btn_remove_all_materia->setVisible(false);
         ui->btn_remove_all_stolen->setVisible(false);
