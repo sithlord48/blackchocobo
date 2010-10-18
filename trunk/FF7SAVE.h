@@ -367,7 +367,7 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint16 runs;               // [0x0BBE] Number of escapes
     quint16 menu_visible;        // [0x0BC0] Menu items Visible
     quint16 menu_locked;         // [0x0BC2] Menu items locked
-    quint8 z_9[34];             // [0x0BC4] UNKNOWN DATA
+    quint8 z_9[32];             // [0x0BC4] UNKNOWN DATA
     quint8 keyitems[8];         // [0x0BE4] Key items
     quint8 z_10[13];            // [0x0BEC] UNKNOWN DATA
     qint8 pennedchocos[4];      // [0x0BF9] chocos in fenced area at farm rating
