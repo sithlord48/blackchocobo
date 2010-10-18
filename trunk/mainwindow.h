@@ -43,6 +43,8 @@ public slots:
 private slots:
 
     //test functions to be removed....
+    void on_list_menu_locked_itemChanged();
+    void on_list_menu_visible_itemChanged();
     void testdata_refresh();
     void on_actionEdit_Paths_triggered();
     void on_action_Lang_fr_triggered();
