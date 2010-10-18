@@ -1295,6 +1295,18 @@ for (int i=0;i<9;i++)//unlocked
     if ((1 << i) & ff7.slot[s].unlockedchars){ui->list_chars_unlocked->currentItem()->setCheckState(Qt::Checked);}
     else{ui->list_chars_unlocked->currentItem()->setCheckState(Qt::Unchecked);}
 }
+for (int i=0;i<10;i++)//visible_menu
+{
+    ui->list_menu_visible->setCurrentRow(i);
+    if ((1 << i) & ff7.slot[s].menu_visible){ui->list_menu_visible->currentItem()->setCheckState(Qt::Checked);}
+    else{ui->list_menu_visible->currentItem()->setCheckState(Qt::Unchecked);}
+}
+for (int i=0;i<10;i++)//menu_locked
+{
+    ui->list_menu_locked->setCurrentRow(i);
+    if ((1 << i) & ff7.slot[s].menu_locked){ui->list_menu_locked->currentItem()->setCheckState(Qt::Checked);}
+    else{ui->list_menu_locked->currentItem()->setCheckState(Qt::Unchecked);}
+}
 for(int i=0;i<51;i++)
 {
 ui->list_keyitems->setCurrentRow(i);
@@ -4281,4 +4293,38 @@ void MainWindow::testdata_refresh()
     ui->lcd_z_8_16_hex->display(ff7.slot[s].z_8[15]);
     ui->lcd_z_8_17_hex->display(ff7.slot[s].z_8[16]);
 
+}
+
+void MainWindow::on_list_menu_visible_itemChanged()
+{
+    if(!load)
+    {
+    quint16 temp=0;
+    int j=ui->list_menu_visible->currentRow();
+    for (int i=0;i<10;i++)
+    {
+        ui->list_menu_visible->setCurrentRow(i);
+        if(ui->list_menu_visible->currentItem()->checkState() ==Qt::Checked)
+        {temp |= (1<<i);}
+    }
+    ff7.slot[s].menu_visible=temp;
+    ui->list_menu_visible->setCurrentRow(j);
+   }
+}
+
+void MainWindow::on_list_menu_locked_itemChanged()
+{
+    if(!load)
+    {
+    quint16 temp=0;
+    int j=ui->list_menu_locked->currentRow();
+    for (int i=0;i<10;i++)
+    {
+        ui->list_menu_locked->setCurrentRow(i);
+        if(ui->list_menu_locked->currentItem()->checkState() ==Qt::Checked)
+        {temp |= (1<<i);}
+    }
+    ff7.slot[s].menu_locked=temp;
+    ui->list_menu_locked->setCurrentRow(j);
+   }
 }
