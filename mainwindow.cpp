@@ -986,14 +986,13 @@ void MainWindow::setweaponslots(void)
 }
 void MainWindow::guirefresh(void)
 {
-    load = true; //used to cheat the removal of "apply buttons"
-
-    ui->lcd_current_slot->display(s+1);
-    ui->cb_replay->setCurrentIndex(0);
-    ui->sb_bm_progress1->setValue(ff7.slot[s].bm_progress1);
-    ui->sb_bm_progress2->setValue(ff7.slot[s].bm_progress2);
-    ui->sb_bm_progress3->setValue(ff7.slot[s].bm_progress3);
-    ui->sb_mprogress->setValue(ff7.slot[s].mprogress);
+load = true; //used to cheat the removal of "apply buttons"
+ui->lcd_current_slot->display(s+1);
+ui->cb_replay->setCurrentIndex(0);
+ui->sb_bm_progress1->setValue(ff7.slot[s].bm_progress1);
+ui->sb_bm_progress2->setValue(ff7.slot[s].bm_progress2);
+ui->sb_bm_progress3->setValue(ff7.slot[s].bm_progress3);
+ui->sb_mprogress->setValue(ff7.slot[s].mprogress);
 /*~~~~~~~~~~~~~~~~~~~~~~~~~Set Menu Items~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 ui->actionSlot_01->setChecked(0);
 ui->actionSlot_02->setChecked(0);
@@ -1012,21 +1011,21 @@ ui->actionSlot_14->setChecked(0);
 ui->actionSlot_15->setChecked(0);
 switch(s)
 {
-case 0:ui->actionSlot_01->setChecked(1);break;
-case 1:ui->actionSlot_02->setChecked(1);break;
-case 2:ui->actionSlot_03->setChecked(1);break;
-case 3:ui->actionSlot_04->setChecked(1);break;
-case 4:ui->actionSlot_05->setChecked(1);break;
-case 5:ui->actionSlot_06->setChecked(1);break;
-case 6:ui->actionSlot_07->setChecked(1);break;
-case 7:ui->actionSlot_08->setChecked(1);break;
-case 8:ui->actionSlot_09->setChecked(1);break;
-case 9:ui->actionSlot_10->setChecked(1);break;
-case 10:ui->actionSlot_11->setChecked(1);break;
-case 11:ui->actionSlot_12->setChecked(1);break;
-case 12:ui->actionSlot_13->setChecked(1);break;
-case 13:ui->actionSlot_14->setChecked(1);break;
-case 14:ui->actionSlot_15->setChecked(1);break;
+    case 0:ui->actionSlot_01->setChecked(1);break;
+    case 1:ui->actionSlot_02->setChecked(1);break;
+    case 2:ui->actionSlot_03->setChecked(1);break;
+    case 3:ui->actionSlot_04->setChecked(1);break;
+    case 4:ui->actionSlot_05->setChecked(1);break;
+    case 5:ui->actionSlot_06->setChecked(1);break;
+    case 6:ui->actionSlot_07->setChecked(1);break;
+    case 7:ui->actionSlot_08->setChecked(1);break;
+    case 8:ui->actionSlot_09->setChecked(1);break;
+    case 9:ui->actionSlot_10->setChecked(1);break;
+    case 10:ui->actionSlot_11->setChecked(1);break;
+    case 11:ui->actionSlot_12->setChecked(1);break;
+    case 12:ui->actionSlot_13->setChecked(1);break;
+    case 13:ui->actionSlot_14->setChecked(1);break;
+    case 14:ui->actionSlot_15->setChecked(1);break;
 }
 
 if (ff7.savetype ==1)
@@ -1687,6 +1686,7 @@ int j= ui->tbl_itm->currentRow();
     }
 
     load =false;
+    if(ui->action_show_test_data->isChecked()){testdata_refresh();}
  }
 void MainWindow::chocobo_refresh()
 {
@@ -4209,89 +4209,25 @@ void MainWindow::on_action_Lang_fr_triggered()
 }
 void MainWindow::testdata_refresh()
 {
-    //z_1
-    ui->lcd_z_1_1_hex->display(ff7.slot[s].z_1[0]);
-    ui->lcd_z_1_2_hex->display(ff7.slot[s].z_1[1]);
-    //z_2
-    ui->lcd_z_2_hex->display(ff7.slot[s].z_2);
-    // z_3
-    ui->lcd_z_3_1_hex->display(ff7.slot[s].z_3[0]);
-    ui->lcd_z_3_2_hex->display(ff7.slot[s].z_3[1]);
-    ui->lcd_z_3_3_hex->display(ff7.slot[s].z_3[2]);
-    ui->lcd_z_3_4_hex->display(ff7.slot[s].z_3[3]);
-    ui->lcd_z_3_5_hex->display(ff7.slot[s].z_3[4]);
-    ui->lcd_z_3_6_hex->display(ff7.slot[s].z_3[5]);
-    ui->lcd_z_3_7_hex->display(ff7.slot[s].z_3[6]);
-    ui->lcd_z_3_8_hex->display(ff7.slot[s].z_3[7]);
-    ui->lcd_z_3_9_hex->display(ff7.slot[s].z_3[8]);
-    ui->lcd_z_3_10_hex->display(ff7.slot[s].z_3[9]);
-    ui->lcd_z_3_11_hex->display(ff7.slot[s].z_3[10]);
-    ui->lcd_z_3_12_hex->display(ff7.slot[s].z_3[11]);
-    ui->lcd_z_3_13_hex->display(ff7.slot[s].z_3[12]);
-    ui->lcd_z_3_14_hex->display(ff7.slot[s].z_3[13]);
-    ui->lcd_z_3_15_hex->display(ff7.slot[s].z_3[14]);
-    ui->lcd_z_3_16_hex->display(ff7.slot[s].z_3[15]);
-    ui->lcd_z_3_17_hex->display(ff7.slot[s].z_3[16]);
-    ui->lcd_z_3_18_hex->display(ff7.slot[s].z_3[17]);
-    ui->lcd_z_3_19_hex->display(ff7.slot[s].z_3[18]);
-    ui->lcd_z_3_20_hex->display(ff7.slot[s].z_3[19]);
-    ui->lcd_z_3_21_hex->display(ff7.slot[s].z_3[20]);
-    ui->lcd_z_3_22_hex->display(ff7.slot[s].z_3[21]);
-    ui->lcd_z_3_23_hex->display(ff7.slot[s].z_3[22]);
-    ui->lcd_z_3_24_hex->display(ff7.slot[s].z_3[23]);
-    ui->lcd_z_3_25_hex->display(ff7.slot[s].z_3[24]);
-    ui->lcd_z_3_26_hex->display(ff7.slot[s].z_3[25]);
-    ui->lcd_z_3_27_hex->display(ff7.slot[s].z_3[26]);
-    ui->lcd_z_3_28_hex->display(ff7.slot[s].z_3[27]);
-    ui->lcd_z_3_29_hex->display(ff7.slot[s].z_3[28]);
-    ui->lcd_z_3_30_hex->display(ff7.slot[s].z_3[29]);
-    ui->lcd_z_3_31_hex->display(ff7.slot[s].z_3[30]);
-    ui->lcd_z_3_32_hex->display(ff7.slot[s].z_3[31]);
-    // z_4
-    ui->lcd_z_4_1_hex->display(ff7.slot[s].z_4[0]);
-    ui->lcd_z_4_2_hex->display(ff7.slot[s].z_4[1]);
-    ui->lcd_z_4_3_hex->display(ff7.slot[s].z_4[2]);
-    ui->lcd_z_4_4_hex->display(ff7.slot[s].z_4[3]);
-    ui->lcd_z_4_5_hex->display(ff7.slot[s].z_4[4]);
-    ui->lcd_z_4_6_hex->display(ff7.slot[s].z_4[5]);
-    ui->lcd_z_4_7_hex->display(ff7.slot[s].z_4[6]);
-    ui->lcd_z_4_8_hex->display(ff7.slot[s].z_4[7]);
-    ui->lcd_z_4_9_hex->display(ff7.slot[s].z_4[8]);
-    ui->lcd_z_4_10_hex->display(ff7.slot[s].z_4[9]);
-    ui->lcd_z_4_11_hex->display(ff7.slot[s].z_4[10]);
-    ui->lcd_z_4_12_hex->display(ff7.slot[s].z_4[11]);
-    ui->lcd_z_4_13_hex->display(ff7.slot[s].z_4[12]);
-    ui->lcd_z_4_14_hex->display(ff7.slot[s].z_4[13]);
-    ui->lcd_z_4_15_hex->display(ff7.slot[s].z_4[14]);
-    ui->lcd_z_4_16_hex->display(ff7.slot[s].z_4[15]);
-    // z_5
-    ui->lcd_z_5_1_hex->display(ff7.slot[s].z_5[0]);
-    ui->lcd_z_5_2_hex->display(ff7.slot[s].z_5[1]);
-    // z_6
-    ui->lcd_z_6_1_hex->display(ff7.slot[s].z_6[0]);
-    ui->lcd_z_6_2_hex->display(ff7.slot[s].z_6[1]);
-    ui->lcd_z_6_3_hex->display(ff7.slot[s].z_6[2]);
-    ui->lcd_z_6_4_hex->display(ff7.slot[s].z_6[3]);
-    //z_7
-    ui->lcd_z_7_hex->display(ff7.slot[s].z_7);
-    //z_8
-    ui->lcd_z_8_1_hex->display(ff7.slot[s].z_8[0]);
-    ui->lcd_z_8_2_hex->display(ff7.slot[s].z_8[1]);
-    ui->lcd_z_8_3_hex->display(ff7.slot[s].z_8[2]);
-    ui->lcd_z_8_4_hex->display(ff7.slot[s].z_8[3]);
-    ui->lcd_z_8_5_hex->display(ff7.slot[s].z_8[4]);
-    ui->lcd_z_8_6_hex->display(ff7.slot[s].z_8[5]);
-    ui->lcd_z_8_7_hex->display(ff7.slot[s].z_8[6]);
-    ui->lcd_z_8_8_hex->display(ff7.slot[s].z_8[7]);
-    ui->lcd_z_8_9_hex->display(ff7.slot[s].z_8[8]);
-    ui->lcd_z_8_10_hex->display(ff7.slot[s].z_8[9]);
-    ui->lcd_z_8_11_hex->display(ff7.slot[s].z_8[10]);
-    ui->lcd_z_8_12_hex->display(ff7.slot[s].z_8[11]);
-    ui->lcd_z_8_13_hex->display(ff7.slot[s].z_8[12]);
-    ui->lcd_z_8_14_hex->display(ff7.slot[s].z_8[13]);
-    ui->lcd_z_8_15_hex->display(ff7.slot[s].z_8[14]);
-    ui->lcd_z_8_16_hex->display(ff7.slot[s].z_8[15]);
-    ui->lcd_z_8_17_hex->display(ff7.slot[s].z_8[16]);
+
+ui->sb_b_love_aeris->setValue(ff7.slot[s].b_love.aeris);
+ui->sb_b_love_tifa->setValue(ff7.slot[s].b_love.tifa);
+ui->sb_b_love_yuffie->setValue(ff7.slot[s].b_love.yuffie);
+ui->sb_b_love_barret->setValue(ff7.slot[s].b_love.barret);
+ui->sb_u_weapon_hp->setValue(ff7.slot[s].u_weapon_hp[0] |(ff7.slot[s].u_weapon_hp[1] << 8) | (ff7.slot[s].u_weapon_hp[2] << 16));
+
+if(ff7.slot[s].tut_sub == 0x2F){ui->cb_tut_sub->setChecked(Qt::Checked);}
+else if(ff7.slot[s].tut_sub ==0x2B){ui->cb_tut_sub->setChecked(Qt::Unchecked);}
+ui->lcdNumber_6->display(ff7.slot[s].tut_sub);
+
+
+if(ff7.slot[s].tut_save == 0x3A){ui->cb_tut_worldsave->setChecked(Qt::Checked);}
+else if(ff7.slot[s].tut_save ==0x32){ui->cb_tut_worldsave->setChecked(Qt::Unchecked);}
+ui->lcdNumber_7->display(ff7.slot[s].tut_save);
+
+if(ff7.slot[s].reg_vinny == 0xFF){ui->cb_reg_vinny->setChecked(Qt::Checked);}
+else if(ff7.slot[s].reg_vinny ==0xFB){ui->cb_reg_vinny->setChecked(Qt::Unchecked);}
+ui->lcdNumber_8->display(ff7.slot[s].reg_vinny);
 
 }
 
@@ -4327,4 +4263,80 @@ void MainWindow::on_list_menu_locked_itemChanged()
     ff7.slot[s].menu_locked=temp;
     ui->list_menu_locked->setCurrentRow(j);
    }
+}
+
+void MainWindow::on_sb_b_love_aeris_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].b_love.aeris = value;}
+}
+
+void MainWindow::on_sb_b_love_tifa_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].b_love.tifa = value;}
+}
+
+void MainWindow::on_sb_b_love_yuffie_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].b_love.yuffie = value;}
+}
+
+void MainWindow::on_sb_b_love_barret_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].b_love.barret = value;}
+}
+
+void MainWindow::on_sb_coster_1_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].coster_1=value;}
+}
+void MainWindow::on_sb_coster_2_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].coster_2 = value;}
+}
+void MainWindow::on_sb_coster_3_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].coster_3 = value;}
+}
+
+
+void MainWindow::on_sb_u_weapon_hp_valueChanged(int value)
+{
+   if(!load)
+    {
+    load=true;
+    int a = (value & 0xff);
+    int b = (value & 0xff00) >> 8;
+    int c = (value & 0xff0000) >> 16;
+    ff7.slot[s].u_weapon_hp[0] = a;
+    ff7.slot[s].u_weapon_hp[1] = b;
+    ff7.slot[s].u_weapon_hp[2] = c;
+    load=false;
+    }
+}
+
+void MainWindow::on_cb_tut_sub_toggled(bool checked)
+{
+    if(!load)
+    {
+        if (checked){ff7.slot[s].tut_sub =0x2F;}
+        else{ff7.slot[s].tut_sub =0x2B;}
+    }
+}
+
+void MainWindow::on_cb_tut_worldsave_toggled(bool checked)
+{
+    if(!load)
+    {
+        if (checked){ff7.slot[s].tut_save =0x3A;}
+        else{ff7.slot[s].tut_save =0x32;}
+    }
+}
+
+void MainWindow::on_cb_reg_vinny_toggled(bool checked)
+{
+    if(!load)
+    {
+        if (checked){ff7.slot[s].reg_vinny =0xFF;}
+        else{ff7.slot[s].reg_vinny =0xFB;}
+    }
 }

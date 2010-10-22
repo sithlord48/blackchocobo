@@ -19,18 +19,6 @@
 #include <QObject>
 #include <QCoreApplication>
 
-
-
-
-/* REMOVE THIS CODE
-const int slot_len=4340; //hex 0x10F4
-const int header_len= 9; //hex 0x09
-const int desc_len= 55;  //hex 0x37
-const int char_len= 132; //hex 0x84
-const int rawpsx_start= 0x200;
-*/
-
-
 /* START FILE INFO (Vegeta_Ss4) v0.8.3*/
 
 /* PC HEADER INFO */
@@ -253,13 +241,20 @@ const int FF7_PSP_SAVE_GAME_SLOT_NUMBER = 15;
 struct item{// sizeof 2
 quint8 id;// item id
 quint8 qty;//
-};
+}__attribute__((__packed__));
 
-struct materia{// sizeof 4
+struct materia
+{// sizeof 4
 quint8 id;
 quint8 ap[3];
-
-};
+}__attribute__((__packed__));
+struct LOVE
+{
+qint8 aeris;
+qint8 tifa;
+qint8 yuffie;
+qint8 barret;
+}__attribute__((__packed__));
 
 struct FF7DESC {		// [0x0044] Descriptions; no actual game data -100%
     qint8 level;		// [0x0000] Lead character's level
@@ -272,7 +267,7 @@ struct FF7DESC {		// [0x0044] Descriptions; no actual game data -100%
     quint32 gil;		// [0x001C] Amount of gil
     quint32 time;		// [0x0020] Total number of seconds played
     quint8 location[32];	// [0x0024] Save location (ff7 string)
-};
+}__attribute__((__packed__));
 
 struct FF7CHAR {        	// [0x0084] Character info -98% - 1 Unknown
     qint8 id;			// [0x0000] Character id (used by Sephiroth/Vincent slot)
@@ -311,7 +306,7 @@ struct FF7CHAR {        	// [0x0084] Character info -98% - 1 Unknown
     quint32 exp;		// [0x003C] Current EXP
     materia materias[16];	// [0x0040] Materia slots (0-7=weapon,8-15=armor)
     quint32 expNext;            // [0x0080] EXP to next level
-};
+}__attribute__((__packed__));
 
 struct FF7CHOCOBO {		// [0x0010] Chocobo - 99% - 1 Personality unknown!
     quint16 sprintspd;		// [0x0000] Speed
@@ -326,13 +321,13 @@ struct FF7CHOCOBO {		// [0x0010] Chocobo - 99% - 1 Personality unknown!
     quint8 raceswon;		// [0x000D] Number of races won
     quint8 sex;			// [0x000E] Sex (0=male,1=female)
     quint8 type;		// [0x000F] Type (Yellow,Green,Blue,Black,Gold)
-};
+}__attribute__((__packed__));
 
 struct FF7XYZ {                 // size of 6. used for coords
     quint16 x;
     quint16 y;
     quint16 z;
-};
+}__attribute__((__packed__));
 
 struct FF7SLOT {		// Save slot - Length 0x10F4
     qint16 checksum;		// [0x0000] Checksum
@@ -356,61 +351,70 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 z_6[4];              // [0x0BA0] UNKNOWN DATA
     quint16 mprogress;          // [0x0BA4] Main Progress var
     quint8 z_7;                 // [0x0BA6] UNKNOWN DATA
-    struct {
-            qint8 aeris;        // [0X0BA7] Aeris love points.
-            qint8 tifa;         // [0X0BA8] Tifa love Points
-            qint8 yuffie;       // [0x0BA9] Yuffie love Points
-            qint8 barret;       // [0x0BAA] Barret love Points
-            } love;
+    LOVE love;                  // [0X0BA7] Main love points.
     quint8 z_8[17];             // [0x0BAB] UNKNOWN DATA
     quint16 battles;            // [0x0BBC] Number of battle
     quint16 runs;               // [0x0BBE] Number of escapes
-    quint16 menu_visible;        // [0x0BC0] Menu items Visible
-    quint16 menu_locked;         // [0x0BC2] Menu items locked
+    quint16 menu_visible;       // [0x0BC0] Menu items Visible
+    quint16 menu_locked;        // [0x0BC2] Menu items locked
     quint8 z_9[32];             // [0x0BC4] UNKNOWN DATA
     quint8 keyitems[8];         // [0x0BE4] Key items
-    quint8 z_10[13];            // [0x0BEC] UNKNOWN DATA
+    quint8 z_10[8];             // [0x0BEC] UNKNOWN DATA
+    LOVE b_love;                // [0x0BF4] Battle Love PointsA
+    quint8 z_11;                // [0x0BF8] UNKNOWN DATA
     qint8 pennedchocos[4];      // [0x0BF9] chocos in fenced area at farm rating
-    quint8 z_11[136];           // [0x0BFD] UNKNOWN DATA
+    quint8 z_12[2];             // [0x0BFD] UNKNOWN DATA 136
+    quint8 u_weapon_hp[3];      // [0x0BFF] Ultimate Weapons Remaining Hp
+    quint8 z_13[28];            // [0x0C02] UNKNOWN DATA
+    quint8 tut_sub;             // [0x0C1E] Have we seen the sub tutorial?
+    quint8 z_14[102];           // [0x0C1F] UNKNOWN DATA
     quint8 bm_progress1;        // [0x0C85] Bombing Mission Flag 1
     quint8 bm_progress2;        // [0x0C86] Bombing Mission Flag 2
-    quint8 z_12[95];            // [0X0C87] UNKNOWN DATA
+    quint8 z_15[95];            // [0X0C87] UNKNOWN DATA
     quint8 bm_progress3;        // [0X0CE6] Bombing mission flag 3
-    quint8 z_13[7];             // [0X0CE7] UNKNOWN DATA
+    quint8 z_16[7];             // [0X0CE7] UNKNOWN DATA
     quint16 gp;                 // [0x0CEE] Party GP (0-10000)
-    quint8 z_14[12];            // [0x0CF0] UNKNOWN DATA
+    quint8 z_17[12];            // [0x0CF0] UNKNOWN DATA
     qint8 stables;              // [0x0CFC] Number of chocobo stables owned
     qint8 stablesoccupied;      // [0x0CFD] Number of occupied stables //genereated incorrectly ?
-    quint8 z_15;                // [0x0CFE] UNKNOWN DATA
+    quint8 z_18;                // [0x0CFE] UNKNOWN DATA
     qint8 chocobomask;          // [0x0CFF] Mask of occupied stables//genereated incorrectly ?
     quint8 chocoborn;           // [0x0D00] what stall a choco was just born in.
-    quint8 z_16[101];           // [0x0D01] UNKNOWN DATA
+    quint8 z_19[101];           // [0x0D01] UNKNOWN DATA
     quint8 turtleflyers;        // [0x0D66] turtles paradice flyers.
-    quint8 z_17[93];            // [0X0D67] UNKNOWN DATA
+    quint8 z_20[93];            // [0X0D67] UNKNOWN DATA
     FF7CHOCOBO chocobos[4];     // [0x0DC4] Chocobo slots
-    quint8 z_18[160];           // [0x0E04] UNKNOWN DATA
+    quint8 z_21[32];            // [0x0E04] UNKNOWN DATA
+    quint16 coster_2;           // [0x0E24] Coster 2nd place score
+    quint16 coster_3;           // [0x0E26] Coster 3rd place score
+    quint8 z_22[17];            // [0x0E28] UNKNOWN DATA
+    quint16 coster_1;           // [0x0E39] Coster 1st place
+    quint8 z_23[105];           // [0x0E3C] UNKNOWN DATA
     qint8 disc;                 // [0x0EA4] Current CD
-    quint8 z_19[31];            // [0x0EA5] UNKNOWN DATA
+    quint8 z_24[31];            // [0x0EA5] UNKNOWN DATA
     quint8 chocobonames[6][6];  // [0x0EC4] <-OK Chocobo names
     quint16 chocostaminas[6];   // [0x0EE8] Chocobo staminas 12 bytes
-    quint8 z_20[400];           // [0x0EF4] UNKNOWN DATA
+    quint8 reg_vinny;         // [0x0EF4] 0xFF for true 0xFB false (vincent a regualar?)
+    quint8 z_25[52];            // [0x0EF5] UNKNOWN DATA
+    quint8 tut_save;            // [0x0F29] Have we seen save tut ? 0x3A true , 0x32 false
+    quint8 z_26[346];           // [0x0F2A] UNKNOWN DATA
     FF7CHOCOBO choco56[2];      // [0x1084] Chocobo slots 5-6
     quint16 phsmask;            // [0x10A4] who is allowed in the phs
     quint16 unlockedchars;      // [0x10A6] who is visible in the phs
-    quint8 z_21[48];            // [0x10A8] UNKNOWN DATA
+    quint8 z_27[48];            // [0x10A8] UNKNOWN DATA
     quint8 battlespeed;         // [0x10D8] Battle Speed
     quint8 battlemspeed;        // [0x10D9] Battle Message Speed
     qint8 options1;             // [0x10DA] Options 1
     quint8 options2;            // [0x10DB] Options 2
-    quint8 z_22[16];            // [0x10DC] UNKNOWN DATA (controller mapping?)
+    quint8 z_28[16];            // [0x10DC] UNKNOWN DATA (controller mapping?)
     quint8 fieldmspeed;         // [0x10EC] Message Speed On field
-    quint8 z_23[7];             // [0x10ED] UNKNOWN DATA
-};
+    quint8 z_29[7];             // [0x10ED] UNKNOWN DATA
+}__attribute__((__packed__));
 /* FF7HEADFOOT FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
     struct FF7HEADFOOT {
     quint8 sl_header[0x0200];       // [0x0000] Slot Header
     quint8 sl_footer[0x0D0C];       // [0x0000] Slot Footer
-};
+}__attribute__((__packed__));
 
 struct FF7 {				// [0xFE55]
         quint8 file_tag[9];		// [0x0000] 0x06277371
@@ -900,6 +904,5 @@ static MATERIA Materias[]=
     {QObject::tr(("Knights of Round")), ":/icon/summon",      0x59,/*{-10,+20,0,0,0,0,+8,+8}*/"HP:-10% MP:+20% Mag:+8 Spi:+8",{"Summon KOTR x1 (250mp)","Summon KOTR x2 (250mp)","Summon KOTR x3 (250mp)","Summon KOTR x4 (250mp)","Summon KOTR x5 (250mp)"},{50000,200000,300000,500000},2,5},
     {QObject::tr(("Master Summon")),	":/icon/summon",      0x5A,/*{0,0,0,0,0,0,0,0}*/"",{"Master Summon","","","",""},{0,0,0,0},2,1}
 };
-
 #endif // FF7SAVE_H
 

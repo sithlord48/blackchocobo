@@ -43,9 +43,22 @@ public slots:
 private slots:
 
     //test functions to be removed....
+    void on_cb_reg_vinny_toggled(bool checked);
+    void on_cb_tut_worldsave_toggled(bool checked);
+    void on_cb_tut_sub_toggled(bool checked);
+    void on_sb_u_weapon_hp_valueChanged(int );
+    void on_sb_coster_1_valueChanged(int);
+    void on_sb_coster_2_valueChanged(int);
+    void on_sb_coster_3_valueChanged(int);
+    void on_sb_b_love_barret_valueChanged(int);
+    void on_sb_b_love_yuffie_valueChanged(int);
+    void on_sb_b_love_tifa_valueChanged(int);
+    void on_sb_b_love_aeris_valueChanged(int);
     void on_list_menu_locked_itemChanged();
     void on_list_menu_visible_itemChanged();
     void testdata_refresh();
+
+
     void on_actionEdit_Paths_triggered();
     void on_action_Lang_fr_triggered();
     void on_action_Lang_es_triggered();
@@ -55,7 +68,7 @@ private slots:
     void on_action_Region_USA_triggered();
     void on_action_show_test_data_toggled();
     void on_cb_id_toggled(bool checked);
-    void on_btn_remove_all_stolen_clicked();
+
     void on_slide_lr_b_valueChanged(int value);
     void on_slide_lr_g_valueChanged(int value);
     void on_slide_lr_r_valueChanged(int value);
@@ -70,6 +83,7 @@ private slots:
     void on_slide_ul_r_valueChanged(int value);
     void on_btn_remove_all_materia_clicked();
     void on_btn_remove_all_items_clicked();
+    void on_btn_remove_all_stolen_clicked();
 
     //wip functions
 
