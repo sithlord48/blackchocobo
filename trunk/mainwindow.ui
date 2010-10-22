@@ -49,7 +49,7 @@
     <property name="geometry">
      <rect>
       <x>0</x>
-      <y>25</y>
+      <y>20</y>
       <width>728</width>
       <height>504</height>
      </rect>
@@ -837,7 +837,7 @@
              </size>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -903,7 +903,7 @@
              </size>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -954,7 +954,7 @@
              </size>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -1001,7 +1001,7 @@
              </size>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -1052,7 +1052,7 @@
              </size>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -1099,7 +1099,7 @@
              </size>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -1155,7 +1155,7 @@
              </size>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -1221,7 +1221,7 @@
              </size>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -1326,7 +1326,7 @@
              </size>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -1391,7 +1391,7 @@
              </size>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -1435,7 +1435,7 @@
              </size>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -1519,7 +1519,7 @@
              </size>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -1594,7 +1594,7 @@
              </size>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -1653,7 +1653,7 @@
              </size>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -1723,7 +1723,7 @@
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -1775,7 +1775,7 @@
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -1832,7 +1832,7 @@
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -1881,7 +1881,7 @@
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -1932,7 +1932,7 @@
           </rect>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -1973,7 +1973,7 @@
           </rect>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -2018,7 +2018,7 @@
           </rect>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="accelerated">
           <bool>true</bool>
@@ -2078,7 +2078,7 @@
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::UpDownArrows</enum>
@@ -2305,7 +2305,7 @@
           <string/>
          </property>
          <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="minimum">
           <number>0</number>
@@ -2467,7 +2467,7 @@
            <item>
             <widget class="QSpinBox" name="sb_used1">
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="correctionMode">
               <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -2494,7 +2494,7 @@
            <item>
             <widget class="QSpinBox" name="sb_used2">
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="correctionMode">
               <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -2518,7 +2518,7 @@
            <item>
             <widget class="QSpinBox" name="sb_used3">
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="correctionMode">
               <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -3655,7 +3655,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="buttonSymbols">
               <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -4136,7 +4136,7 @@
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -4164,7 +4164,7 @@
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="buttonSymbols">
           <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -4197,76 +4197,102 @@
       <property name="title">
        <string>Money</string>
       </property>
-      <layout class="QGridLayout" name="gridLayout_11">
-       <property name="rightMargin">
-        <number>6</number>
+      <layout class="QFormLayout" name="formLayout_2">
+       <property name="leftMargin">
+        <number>15</number>
        </property>
        <item row="0" column="0">
-        <widget class="QLabel" name="label_10">
-         <property name="text">
-          <string>Gil</string>
-         </property>
-         <property name="buddy">
-          <cstring>sb_gil</cstring>
-         </property>
-        </widget>
+        <layout class="QHBoxLayout" name="horizontalLayout_78">
+         <item>
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>Gil</string>
+           </property>
+           <property name="buddy">
+            <cstring>sb_gil</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sb_gil">
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::PlusMinus</enum>
+           </property>
+           <property name="accelerated">
+            <bool>true</bool>
+           </property>
+           <property name="correctionMode">
+            <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+           </property>
+           <property name="maximum">
+            <number>999999999</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
-       <item row="0" column="1" colspan="2">
-        <widget class="QSpinBox" name="sb_gil">
-         <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-         </property>
-         <property name="buttonSymbols">
-          <enum>QAbstractSpinBox::PlusMinus</enum>
-         </property>
-         <property name="accelerated">
-          <bool>true</bool>
-         </property>
-         <property name="correctionMode">
-          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-         </property>
-         <property name="maximum">
-          <number>999999999</number>
-         </property>
-         <property name="value">
-          <number>0</number>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0" colspan="2">
-        <widget class="QLabel" name="label_11">
-         <property name="text">
-          <string>GP</string>
-         </property>
-         <property name="buddy">
-          <cstring>sb_gp</cstring>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QSpinBox" name="sb_gp">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-         </property>
-         <property name="buttonSymbols">
-          <enum>QAbstractSpinBox::PlusMinus</enum>
-         </property>
-         <property name="accelerated">
-          <bool>true</bool>
-         </property>
-         <property name="correctionMode">
-          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-         </property>
-         <property name="maximum">
-          <number>10000</number>
-         </property>
-         <property name="value">
-          <number>0</number>
-         </property>
-        </widget>
+       <item row="1" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_79">
+         <item>
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>GP</string>
+           </property>
+           <property name="buddy">
+            <cstring>sb_gp</cstring>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sb_gp">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>92</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>92</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="buttonSymbols">
+            <enum>QAbstractSpinBox::PlusMinus</enum>
+           </property>
+           <property name="accelerated">
+            <bool>true</bool>
+           </property>
+           <property name="correctionMode">
+            <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
      </widget>
@@ -4385,7 +4411,7 @@
              </size>
             </property>
             <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+             <set>Qt::AlignCenter</set>
             </property>
             <property name="minimum">
              <number>1</number>
@@ -5057,22 +5083,6 @@
         </widget>
        </item>
       </layout>
-     </widget>
-     <widget class="QPushButton" name="btn_remove_all_items">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>210</x>
-        <y>450</y>
-        <width>121</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Remove ALL Items</string>
-      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_4">
@@ -5801,7 +5811,7 @@
          </size>
         </property>
         <property name="alignment">
-         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+         <set>Qt::AlignCenter</set>
         </property>
         <property name="buttonSymbols">
          <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -6344,19 +6354,6 @@
        </size>
       </property>
      </widget>
-     <widget class="QPushButton" name="btn_remove_all_materia">
-      <property name="geometry">
-       <rect>
-        <x>240</x>
-        <y>450</y>
-        <width>151</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Remove ALL Materia</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="tab_chocobos">
      <attribute name="title">
@@ -6573,7 +6570,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -6599,7 +6596,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -6632,7 +6629,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -6658,7 +6655,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -6691,7 +6688,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -6720,7 +6717,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -6741,7 +6738,7 @@
            <item>
             <widget class="QSpinBox" name="sb_c1_stamina">
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -6770,7 +6767,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -6803,7 +6800,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -6832,7 +6829,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -7065,7 +7062,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -7091,7 +7088,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -7124,7 +7121,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -7150,7 +7147,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -7183,7 +7180,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -7212,7 +7209,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -7233,7 +7230,7 @@
            <item>
             <widget class="QSpinBox" name="sb_c2_stamina">
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -7262,7 +7259,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -7295,7 +7292,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -7324,7 +7321,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -7557,7 +7554,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -7583,7 +7580,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -7616,7 +7613,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -7642,7 +7639,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -7675,7 +7672,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -7704,7 +7701,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -7725,7 +7722,7 @@
            <item>
             <widget class="QSpinBox" name="sb_c3_stamina">
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -7754,7 +7751,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -7787,7 +7784,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -7816,7 +7813,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -8338,7 +8335,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -8364,7 +8361,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -8397,7 +8394,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -8423,7 +8420,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -8456,7 +8453,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -8485,7 +8482,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -8506,7 +8503,7 @@
            <item>
             <widget class="QSpinBox" name="sb_c4_stamina">
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -8535,7 +8532,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -8568,7 +8565,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -8597,7 +8594,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -8830,7 +8827,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -8856,7 +8853,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -8889,7 +8886,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -8915,7 +8912,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -8948,7 +8945,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -8977,7 +8974,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -8998,7 +8995,7 @@
            <item>
             <widget class="QSpinBox" name="sb_c5_stamina">
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -9027,7 +9024,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -9060,7 +9057,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -9089,7 +9086,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -9322,7 +9319,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -9348,7 +9345,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -9381,7 +9378,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -9407,7 +9404,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -9440,7 +9437,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -9469,7 +9466,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -9490,7 +9487,7 @@
            <item>
             <widget class="QSpinBox" name="sb_c6_stamina">
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>9999</number>
@@ -9519,7 +9516,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -9552,7 +9549,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -9581,7 +9578,7 @@
               </size>
              </property>
              <property name="alignment">
-              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              <set>Qt::AlignCenter</set>
              </property>
              <property name="maximum">
               <number>255</number>
@@ -9657,7 +9654,7 @@
        <item>
         <widget class="QSpinBox" name="sb_stables_owned">
          <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="maximum">
           <number>6</number>
@@ -9689,7 +9686,7 @@
           <bool>true</bool>
          </property>
          <property name="alignment">
-          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="maximum">
           <number>6</number>
@@ -9709,7 +9706,7 @@
         <x>-2</x>
         <y>0</y>
         <width>422</width>
-        <height>479</height>
+        <height>481</height>
        </rect>
       </property>
       <property name="verticalScrollBarPolicy">
@@ -11439,10 +11436,10 @@
      <widget class="QLabel" name="label_166">
       <property name="geometry">
        <rect>
-        <x>460</x>
-        <y>0</y>
-        <width>251</width>
-        <height>71</height>
+        <x>440</x>
+        <y>10</y>
+        <width>256</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
@@ -11456,9 +11453,9 @@
       <property name="geometry">
        <rect>
         <x>430</x>
-        <y>170</y>
+        <y>160</y>
         <width>291</width>
-        <height>121</height>
+        <height>86</height>
        </rect>
       </property>
       <property name="text">
@@ -11471,8 +11468,8 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>430</x>
-        <y>70</y>
+        <x>425</x>
+        <y>55</y>
         <width>296</width>
         <height>95</height>
        </rect>
@@ -11528,6 +11525,9 @@
              <height>0</height>
             </size>
            </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
            <property name="readOnly">
             <bool>false</bool>
            </property>
@@ -11548,6 +11548,9 @@
           <widget class="QSpinBox" name="sb_loc_id">
            <property name="enabled">
             <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
            <property name="readOnly">
             <bool>false</bool>
@@ -11573,6 +11576,9 @@
            <property name="enabled">
             <bool>true</bool>
            </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
            <property name="readOnly">
             <bool>false</bool>
            </property>
@@ -11596,6 +11602,9 @@
           <widget class="QSpinBox" name="sb_coordy">
            <property name="enabled">
             <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
            <property name="readOnly">
             <bool>false</bool>
@@ -11621,6 +11630,9 @@
            <property name="enabled">
             <bool>true</bool>
            </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
            <property name="readOnly">
             <bool>false</bool>
            </property>
@@ -11641,8 +11653,8 @@
      <widget class="QWidget" name="layoutWidget_2">
       <property name="geometry">
        <rect>
-        <x>590</x>
-        <y>0</y>
+        <x>595</x>
+        <y>360</y>
         <width>128</width>
         <height>29</height>
        </rect>
@@ -11666,6 +11678,9 @@
            <height>16777215</height>
           </size>
          </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
          <property name="minimum">
           <number>1</number>
          </property>
@@ -11676,41 +11691,12 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSpinBox" name="sb_mprogress">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>130</x>
-        <y>10</y>
-        <width>81</width>
-        <height>25</height>
-       </rect>
-      </property>
-      <property name="maximum">
-       <number>1000000000</number>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_167">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>10</y>
-        <width>121</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Main Progress Var</string>
-      </property>
-     </widget>
      <widget class="QGroupBox" name="groupBox_25">
       <property name="geometry">
        <rect>
         <x>0</x>
         <y>40</y>
-        <width>191</width>
+        <width>181</width>
         <height>201</height>
        </rect>
       </property>
@@ -11741,6 +11727,9 @@
          <width>58</width>
          <height>25</height>
         </rect>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
        <property name="correctionMode">
         <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
@@ -11787,6 +11776,9 @@
          <height>25</height>
         </rect>
        </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
+       </property>
        <property name="correctionMode">
         <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
        </property>
@@ -11805,6 +11797,9 @@
          <width>58</width>
          <height>25</height>
         </rect>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignCenter</set>
        </property>
        <property name="correctionMode">
         <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
@@ -11874,84 +11869,17 @@
        </property>
       </widget>
      </widget>
-     <widget class="QComboBox" name="cb_replay">
-      <property name="geometry">
-       <rect>
-        <x>402</x>
-        <y>10</y>
-        <width>151</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <item>
-       <property name="text">
-        <string/>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Bombing Mission</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Cloud's Flashback</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>The Date Scene</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Aerith's Death</string>
-       </property>
-      </item>
-     </widget>
-     <widget class="QLabel" name="label_171">
-      <property name="geometry">
-       <rect>
-        <x>290</x>
-        <y>10</y>
-        <width>111</width>
-        <height>20</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Replay Mission</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="label_172">
       <property name="geometry">
        <rect>
-        <x>10</x>
-        <y>240</y>
+        <x>5</x>
+        <y>245</y>
         <width>711</width>
         <height>101</height>
        </rect>
       </property>
       <property name="text">
        <string> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</string>
-      </property>
-      <property name="wordWrap">
-       <bool>true</bool>
-      </property>
-     </widget>
-     <widget class="QLabel" name="label_replaynote">
-      <property name="geometry">
-       <rect>
-        <x>260</x>
-        <y>50</y>
-        <width>391</width>
-        <height>181</height>
-       </rect>
-      </property>
-      <property name="frameShape">
-       <enum>QFrame::StyledPanel</enum>
-      </property>
-      <property name="text">
-       <string>         INFO ON CURRENTLY SELECTED REPLAY MISSION</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -11978,6 +11906,126 @@
       <property name="segmentStyle">
        <enum>QLCDNumber::Flat</enum>
       </property>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>325</x>
+        <y>5</y>
+        <width>393</width>
+        <height>214</height>
+       </rect>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_7">
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_171">
+         <property name="maximumSize">
+          <size>
+           <width>150</width>
+           <height>25</height>
+          </size>
+         </property>
+         <property name="text">
+          <string>Replay Mission</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QComboBox" name="cb_replay">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>25</height>
+          </size>
+         </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Bombing Mission</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Cloud's Flashback</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>The Date Scene</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Aerith's Death</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QLabel" name="label_replaynote">
+         <property name="minimumSize">
+          <size>
+           <width>391</width>
+           <height>181</height>
+          </size>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="text">
+          <string>         INFO ON CURRENTLY SELECTED REPLAY MISSION</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>221</width>
+        <height>25</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_77">
+       <item>
+        <widget class="QLabel" name="label_167">
+         <property name="text">
+          <string>Main Progress Var</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="sb_mprogress">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>71</width>
+           <height>16777215</height>
+          </size>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="maximum">
+          <number>1000000000</number>
+         </property>
+         <property name="value">
+          <number>2000</number>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_config">
@@ -13467,7 +13515,7 @@
       <property name="geometry">
        <rect>
         <x>505</x>
-        <y>125</y>
+        <y>235</y>
         <width>216</width>
         <height>66</height>
        </rect>
@@ -13521,7 +13569,7 @@
             </size>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignCenter</set>
            </property>
            <property name="maximum">
             <number>1000</number>
@@ -13572,7 +13620,7 @@
             </size>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignCenter</set>
            </property>
            <property name="maximum">
             <number>59</number>
@@ -13623,7 +13671,7 @@
             </size>
            </property>
            <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            <set>Qt::AlignCenter</set>
            </property>
            <property name="maximum">
             <number>59</number>
@@ -13647,8 +13695,14 @@
        <string>Love Points</string>
       </property>
       <layout class="QGridLayout" name="gridLayout_5">
+       <property name="leftMargin">
+        <number>3</number>
+       </property>
        <property name="topMargin">
         <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>3</number>
        </property>
        <property name="bottomMargin">
         <number>0</number>
@@ -13669,13 +13723,13 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>48</width>
+           <width>50</width>
            <height>68</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>48</width>
+           <width>50</width>
            <height>68</height>
           </size>
          </property>
@@ -13703,13 +13757,13 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>48</width>
+           <width>50</width>
            <height>68</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>48</width>
+           <width>50</width>
            <height>68</height>
           </size>
          </property>
@@ -13734,13 +13788,13 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>48</width>
+           <width>50</width>
            <height>68</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>48</width>
+           <width>50</width>
            <height>68</height>
           </size>
          </property>
@@ -13765,13 +13819,13 @@
          </property>
          <property name="minimumSize">
           <size>
-           <width>48</width>
+           <width>50</width>
            <height>68</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
-           <width>48</width>
+           <width>50</width>
            <height>68</height>
           </size>
          </property>
@@ -13797,14 +13851,20 @@
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
-           <width>48</width>
+           <width>50</width>
            <height>23</height>
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -13822,14 +13882,20 @@
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
-           <width>48</width>
+           <width>50</width>
            <height>23</height>
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -13844,14 +13910,20 @@
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
-           <width>48</width>
+           <width>50</width>
            <height>23</height>
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -13866,9 +13938,15 @@
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>0</height>
+          </size>
+         </property>
          <property name="maximumSize">
           <size>
-           <width>48</width>
+           <width>50</width>
            <height>23</height>
           </size>
          </property>
@@ -13876,7 +13954,7 @@
           <enum>Qt::LeftToRight</enum>
          </property>
          <property name="alignment">
-          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+          <set>Qt::AlignCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -13894,7 +13972,7 @@
         <x>0</x>
         <y>0</y>
         <width>241</width>
-        <height>471</height>
+        <height>476</height>
        </rect>
       </property>
       <property name="title">
@@ -14107,19 +14185,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="btn_remove_all_stolen">
-      <property name="geometry">
-       <rect>
-        <x>240</x>
-        <y>450</y>
-        <width>141</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Clear Stolen Materia</string>
-      </property>
-     </widget>
      <widget class="QGroupBox" name="groupBox_19">
       <property name="geometry">
        <rect>
@@ -14133,7 +14198,7 @@
        <string/>
       </property>
       <property name="title">
-       <string>Unlocked Chars</string>
+       <string>Visible In PHS</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_13">
        <property name="spacing">
@@ -14285,7 +14350,7 @@
       <property name="geometry">
        <rect>
         <x>250</x>
-        <y>225</y>
+        <y>235</y>
         <width>121</width>
         <height>181</height>
        </rect>
@@ -14396,7 +14461,7 @@
       <property name="geometry">
        <rect>
         <x>375</x>
-        <y>225</y>
+        <y>235</y>
         <width>126</width>
         <height>181</height>
        </rect>
@@ -14503,151 +14568,512 @@
        </item>
       </layout>
      </widget>
+     <widget class="QGroupBox" name="groupBox_29">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>505</x>
+        <y>130</y>
+        <width>216</width>
+        <height>101</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Coaster Shooter High Scores</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_63">
+       <property name="leftMargin">
+        <number>4</number>
+       </property>
+       <property name="topMargin">
+        <number>1</number>
+       </property>
+       <property name="rightMargin">
+        <number>2</number>
+       </property>
+       <property name="bottomMargin">
+        <number>2</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_149">
+         <item>
+          <widget class="QLabel" name="label_183">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>23</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>1000</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>1st</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sb_coster_1">
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_148">
+         <item>
+          <widget class="QLabel" name="label_184">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>23</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>1000</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>2nd</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sb_coster_2">
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_147">
+         <property name="spacing">
+          <number>1</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_185">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>23</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>1000</width>
+             <height>32</height>
+            </size>
+           </property>
+           <property name="text">
+            <string>3rd</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sb_coster_3">
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="maximum">
+            <number>10000</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_test">
      <attribute name="title">
       <string>Test Data</string>
      </attribute>
-     <widget class="QGroupBox" name="groupBox_27">
+     <widget class="QGroupBox" name="groupBox_28">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>80</width>
-        <height>41</height>
+        <x>230</x>
+        <y>5</y>
+        <width>251</width>
+        <height>87</height>
        </rect>
       </property>
       <property name="title">
-       <string notr="true"> 0x02   0x03</string>
+       <string>Tutorials Seen</string>
       </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
+      <layout class="QVBoxLayout" name="verticalLayout_31">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_71">
+         <item>
+          <widget class="QCheckBox" name="cb_tut_sub">
+           <property name="text">
+            <string>Controling the Sub</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLCDNumber" name="lcdNumber_6">
+           <property name="maximumSize">
+            <size>
+             <width>64</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="mode">
+            <enum>QLCDNumber::Hex</enum>
+           </property>
+           <property name="segmentStyle">
+            <enum>QLCDNumber::Flat</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_74">
+         <item>
+          <widget class="QCheckBox" name="cb_tut_worldsave">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="text">
+            <string>Saving on the World Map</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLCDNumber" name="lcdNumber_7">
+           <property name="maximumSize">
+            <size>
+             <width>64</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="mode">
+            <enum>QLCDNumber::Hex</enum>
+           </property>
+           <property name="segmentStyle">
+            <enum>QLCDNumber::Flat</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_27">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>5</y>
+        <width>221</width>
+        <height>126</height>
+       </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_71">
-       <property name="spacing">
-        <number>-1</number>
+      <property name="title">
+       <string>Battle Love Points</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <property name="leftMargin">
+        <number>3</number>
        </property>
-       <property name="margin">
+       <property name="topMargin">
         <number>0</number>
        </property>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_1_1_hex">
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <property name="horizontalSpacing">
+        <number>-1</number>
+       </property>
+       <property name="verticalSpacing">
+        <number>0</number>
+       </property>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label_179">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>48</horstretch>
+           <verstretch>68</verstretch>
+          </sizepolicy>
          </property>
-         <property name="numDigits">
-          <number>2</number>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>68</height>
+          </size>
          </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>68</height>
+          </size>
          </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
          </property>
-         <property name="intValue" stdset="0">
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="images.qrc">:/icon/aeris_icon</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_180">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="images.qrc">:/icon/tifa_icon</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="label_181">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="images.qrc">:/icon/yuffie_icon</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QLabel" name="label_182">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>50</width>
+           <height>68</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="images.qrc">:/icon/barret_icon</pixmap>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QSpinBox" name="sb_b_love_aeris">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="maximum">
+          <number>255</number>
+         </property>
+         <property name="value">
           <number>0</number>
          </property>
         </widget>
        </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_1_2_hex">
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
+       <item row="1" column="1">
+        <widget class="QSpinBox" name="sb_b_love_tifa">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
          </property>
-         <property name="numDigits">
-          <number>2</number>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>0</height>
+          </size>
          </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>23</height>
+          </size>
          </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_28">
-      <property name="geometry">
-       <rect>
-        <x>85</x>
-        <y>0</y>
-        <width>40</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Ubuntu</family>
-       </font>
-      </property>
-      <property name="title">
-       <string notr="true">0x45B</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_74">
-       <property name="margin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_2_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
+         <property name="maximum">
+          <number>255</number>
          </property>
         </widget>
        </item>
-      </layout>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_29">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>0</y>
-        <width>80</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string notr="true">0xB98~0xB99</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_76">
-       <property name="margin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_5_1_hex">
-         <property name="numDigits">
-          <number>2</number>
+       <item row="1" column="2">
+        <widget class="QSpinBox" name="sb_b_love_yuffie">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
          </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>0</height>
+          </size>
          </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="maximum">
+          <number>255</number>
          </property>
         </widget>
        </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_5_2_hex">
-         <property name="numDigits">
-          <number>2</number>
+       <item row="1" column="3">
+        <widget class="QSpinBox" name="sb_b_love_barret">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
          </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
+         <property name="minimumSize">
+          <size>
+           <width>50</width>
+           <height>0</height>
+          </size>
          </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
+         <property name="maximumSize">
+          <size>
+           <width>51</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="maximum">
+          <number>255</number>
+         </property>
+         <property name="value">
+          <number>0</number>
          </property>
         </widget>
        </item>
@@ -14656,1033 +15082,95 @@
      <widget class="QGroupBox" name="groupBox_30">
       <property name="geometry">
        <rect>
-        <x>412</x>
-        <y>0</y>
-        <width>160</width>
-        <height>41</height>
+        <x>570</x>
+        <y>355</y>
+        <width>149</width>
+        <height>118</height>
        </rect>
       </property>
       <property name="title">
-       <string notr="true">0xBA0~0xBA1~0xBA2~0xBA3</string>
+       <string>Remove ALL</string>
       </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_77">
-       <property name="margin">
-        <number>0</number>
-       </property>
+      <layout class="QVBoxLayout" name="verticalLayout_32">
        <item>
-        <widget class="QLCDNumber" name="lcd_z_6_1_hex">
-         <property name="numDigits">
-          <number>2</number>
+        <widget class="QPushButton" name="btn_remove_all_items">
+         <property name="enabled">
+          <bool>true</bool>
          </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
+         <property name="text">
+          <string>Items</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLCDNumber" name="lcd_z_6_2_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
+        <widget class="QPushButton" name="btn_remove_all_materia">
+         <property name="text">
+          <string>Materia </string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLCDNumber" name="lcd_z_6_3_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_6_4_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
+        <widget class="QPushButton" name="btn_remove_all_stolen">
+         <property name="text">
+          <string>Stolen Materia</string>
          </property>
         </widget>
        </item>
       </layout>
      </widget>
-     <widget class="QGroupBox" name="groupBox_31">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>575</x>
-        <y>0</y>
-        <width>40</width>
-        <height>41</height>
+        <x>235</x>
+        <y>100</y>
+        <width>136</width>
+        <height>46</height>
        </rect>
       </property>
-      <property name="font">
-       <font>
-        <family>Ubuntu</family>
-       </font>
-      </property>
-      <property name="title">
-       <string notr="true">0xBA6</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_78">
-       <property name="margin">
-        <number>0</number>
-       </property>
+      <layout class="QVBoxLayout" name="verticalLayout_33">
        <item>
-        <widget class="QLCDNumber" name="lcd_z_7_hex">
-         <property name="numDigits">
-          <number>2</number>
+        <widget class="QLabel" name="label_186">
+         <property name="text">
+          <string>Ultimate Weapons Hp</string>
          </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSpinBox" name="sb_u_weapon_hp">
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
          </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
+         <property name="maximum">
+          <number>16777215</number>
          </property>
         </widget>
        </item>
       </layout>
      </widget>
-     <widget class="QGroupBox" name="groupBox_33">
+     <widget class="QWidget" name="">
       <property name="geometry">
        <rect>
-        <x>0</x>
-        <y>40</y>
-        <width>671</width>
-        <height>41</height>
+        <x>230</x>
+        <y>225</y>
+        <width>207</width>
+        <height>25</height>
        </rect>
       </property>
-      <property name="title">
-       <string notr="true">0xB5C~0xB5D~0xB5E~0xB5F~0xB60~0xB61~0xB62~0xB63~0xB64~0xB65~0xB66~0xB67~0xB68~0xB69~0xB6A~0xB6B</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_79">
-       <property name="margin">
-        <number>0</number>
-       </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_76">
        <item>
-        <widget class="QLCDNumber" name="lcd_z_3_1_hex">
-         <property name="numDigits">
-          <number>2</number>
+        <widget class="QCheckBox" name="cb_reg_vinny">
+         <property name="text">
+          <string>Vincent is unlocked</string>
          </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_2_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_3_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_4_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_5_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_6_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_7_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_8_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_9_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_10_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_11_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_12_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_13_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_14_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_15_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_16_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_34">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>80</y>
-        <width>671</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string notr="true">0xB6C~0xB6D~0xB6E~0xB6F~0xB70~0xB71~0xB72~0xB73~0xB74~0xB75~0xB76~0xB77~0xB78~0xB79~0xB7A~0xB7B</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_80">
-       <property name="margin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_17_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_18_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_19_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_20_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_21_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_22_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_23_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_24_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_25_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_26_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_27_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_28_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_29_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_30_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_31_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_3_32_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_35">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>120</y>
-        <width>671</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string notr="true">0xB84~0xB85~0xB86~0xB87~0xB88~0xB89~0xB8A~0xB8B~0xB8C~0xB8D~0xB8E~0xB8F~0xB90~0xB91~0xB92~0xB93</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_81">
-       <property name="margin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_1_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_2_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_3_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_4_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_5_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_6_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_7_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_8_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_9_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_10_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_11_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_12_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_13_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_14_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_15_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_4_16_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_36">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>160</y>
-        <width>724</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string notr="true">0xBAB~0xBAC~0xBAD~0xBAE~0xBAF~0xBB0~0xBB1~0xBB2~0xBB3~0xBB4~0xBB5~0xBB6~0xBB7~0xBB8~0xBB9~0xBBA~0XBBB</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_82">
-       <property name="margin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_1_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_2_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_3_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_4_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_5_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_6_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_7_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_8_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_9_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_10_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_11_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_12_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_13_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_14_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_15_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLCDNumber" name="lcd_z_8_16_hex">
-         <property name="numDigits">
-          <number>2</number>
-         </property>
-         <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
-         </property>
-         <property name="segmentStyle">
-          <enum>QLCDNumber::Flat</enum>
-         </property>
         </widget>
        </item>
        <item>
-        <widget class="QLCDNumber" name="lcd_z_8_17_hex">
-         <property name="numDigits">
-          <number>2</number>
+        <widget class="QLCDNumber" name="lcdNumber_8">
+         <property name="maximumSize">
+          <size>
+           <width>64</width>
+           <height>16777215</height>
+          </size>
          </property>
          <property name="mode">
           <enum>QLCDNumber::Hex</enum>
