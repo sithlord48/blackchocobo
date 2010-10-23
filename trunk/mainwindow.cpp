@@ -177,6 +177,7 @@ void MainWindow::loadFileFull(const QString &fileName)
        ff7.file_footerp     = ff7.file_footer_mc;           //pointer to mc file footer
        ff7.savetype         = 3;
     }
+
     else if(file_size == FF7_PSV_SAVE_GAME_SIZE)
     {
        ff7.SG_SIZE          = FF7_PSV_SAVE_GAME_SIZE;
@@ -1690,6 +1691,7 @@ int j= ui->tbl_itm->currentRow();
  }
 void MainWindow::chocobo_refresh()
 {
+ load=true;
  ui->sb_stables_owned->setValue(ff7.slot[s].stables);
 
  ui->sb_stables_occupied->setValue(ff7.slot[s].stablesoccupied);
@@ -1885,6 +1887,7 @@ ui->combo_pen1->setCurrentIndex(ff7.slot[s].pennedchocos[0]);
 ui->combo_pen2->setCurrentIndex(ff7.slot[s].pennedchocos[1]);
 ui->combo_pen3->setCurrentIndex(ff7.slot[s].pennedchocos[2]);
 ui->combo_pen4->setCurrentIndex(ff7.slot[s].pennedchocos[3]);
+load=false;
 }
 
 //Char Buttons.
@@ -4209,7 +4212,7 @@ void MainWindow::on_action_Lang_fr_triggered()
 }
 void MainWindow::testdata_refresh()
 {
-
+load=true;
 ui->sb_b_love_aeris->setValue(ff7.slot[s].b_love.aeris);
 ui->sb_b_love_tifa->setValue(ff7.slot[s].b_love.tifa);
 ui->sb_b_love_yuffie->setValue(ff7.slot[s].b_love.yuffie);
@@ -4229,7 +4232,36 @@ if(ff7.slot[s].reg_vinny == 0xFF){ui->cb_reg_vinny->setChecked(Qt::Checked);}
 else if(ff7.slot[s].reg_vinny ==0xFB){ui->cb_reg_vinny->setChecked(Qt::Unchecked);}
 ui->lcdNumber_8->display(ff7.slot[s].reg_vinny);
 
-}
+if((ff7.slot[s].itemsmask_1)& (1<<0)){ui->cb_itemmask1_1->setChecked(Qt::Checked);}
+else{ui->cb_itemmask1_1->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].itemsmask_1)& (1<<1)){ui->cb_itemmask1_2->setChecked(Qt::Checked);}
+else{ui->cb_itemmask1_2->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].itemsmask_1)& (1<<2)){ui->cb_itemmask1_3->setChecked(Qt::Checked);}
+else{ui->cb_itemmask1_3->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].itemsmask_1)& (1<<3)){ui->cb_itemmask1_4->setChecked(Qt::Checked);}
+else{ui->cb_itemmask1_4->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].itemsmask_1)& (1<<4)){ui->cb_itemmask1_5->setChecked(Qt::Checked);}
+else{ui->cb_itemmask1_5->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].itemsmask_1)& (1<<5)){ui->cb_itemmask1_6->setChecked(Qt::Checked);}
+else{ui->cb_itemmask1_6->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].itemsmask_1)& (1<<6)){ui->cb_itemmask1_7->setChecked(Qt::Checked);}
+else{ui->cb_itemmask1_7->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].itemsmask_1)& (1<<7)){ui->cb_itemmask1_8->setChecked(Qt::Checked);}
+else{ui->cb_itemmask1_8->setChecked(Qt::Unchecked);}
+ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+
+if((ff7.slot[s].materiacaves)& (1<<0)){ui->cb_materiacave_1->setChecked(Qt::Checked);}
+else{ui->cb_materiacave_1->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].materiacaves)& (1<<1)){ui->cb_materiacave_2->setChecked(Qt::Checked);}
+else{ui->cb_materiacave_2->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].materiacaves)& (1<<2)){ui->cb_materiacave_3->setChecked(Qt::Checked);}
+else{ui->cb_materiacave_3->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].materiacaves)& (1<<3)){ui->cb_materiacave_4->setChecked(Qt::Checked);}
+else{ui->cb_materiacave_4->setChecked(Qt::Unchecked);}
+
+
+
+load=false;}//end of testdata_refresh()
 
 void MainWindow::on_list_menu_visible_itemChanged()
 {
@@ -4339,4 +4371,85 @@ void MainWindow::on_cb_reg_vinny_toggled(bool checked)
         if (checked){ff7.slot[s].reg_vinny =0xFF;}
         else{ff7.slot[s].reg_vinny =0xFB;}
     }
+}
+
+void MainWindow::on_cb_itemmask1_1_toggled()
+{
+    if(!load){calc_itemmask1();}
+}
+
+void MainWindow::on_cb_itemmask1_2_toggled()
+{
+    if(!load){calc_itemmask1();}
+}
+
+void MainWindow::on_cb_itemmask1_3_toggled()
+{
+    if(!load){calc_itemmask1();}
+}
+
+void MainWindow::on_cb_itemmask1_4_toggled()
+{
+    if(!load){calc_itemmask1();}
+}
+
+void MainWindow::on_cb_itemmask1_5_toggled()
+{
+    if(!load){calc_itemmask1();}
+}
+
+void MainWindow::on_cb_itemmask1_6_toggled()
+{
+    if(!load){calc_itemmask1();}
+}
+
+void MainWindow::on_cb_itemmask1_7_toggled()
+{
+    if(!load){calc_itemmask1();}
+}
+
+void MainWindow::on_cb_itemmask1_8_toggled()
+{
+    if(!load){calc_itemmask1();}
+}
+
+void MainWindow::calc_itemmask1()
+{
+quint8 temp=0;
+if(ui->cb_itemmask1_1->isChecked()){temp |= (1<<0);}
+if(ui->cb_itemmask1_2->isChecked()){temp |= (1<<1);}
+if(ui->cb_itemmask1_3->isChecked()){temp |= (1<<2);}
+if(ui->cb_itemmask1_4->isChecked()){temp |= (1<<3);}
+if(ui->cb_itemmask1_5->isChecked()){temp |= (1<<4);}
+if(ui->cb_itemmask1_6->isChecked()){temp |= (1<<5);}
+if(ui->cb_itemmask1_7->isChecked()){temp |= (1<<6);}
+if(ui->cb_itemmask1_8->isChecked()){temp |= (1<<7);}
+ff7.slot[s].itemsmask_1 = temp;
+testdata_refresh();
+}
+void MainWindow::on_cb_materiacave_1_toggled()
+{
+    if(!load){calc_materiacaves();}
+}
+void MainWindow::on_cb_materiacave_2_toggled()
+{
+    if(!load){calc_materiacaves();}
+}
+void MainWindow::on_cb_materiacave_3_toggled()
+{
+    if(!load){calc_materiacaves();}
+}
+void MainWindow::on_cb_materiacave_4_toggled()
+{
+    if(!load){calc_materiacaves();}
+}
+void MainWindow::calc_materiacaves()
+{
+    quint8 temp=0;
+    if(ui->cb_materiacave_1->isChecked()){temp |= (1<<0);}
+    if(ui->cb_materiacave_2->isChecked()){temp |= (1<<1);}
+    if(ui->cb_materiacave_3->isChecked()){temp |= (1<<2);}
+    if(ui->cb_materiacave_4->isChecked()){temp |= (1<<3);}
+    ff7.slot[s].materiacaves = temp;
+    testdata_refresh();
 }

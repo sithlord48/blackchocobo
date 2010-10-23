@@ -42,7 +42,7 @@ const int FF7_PSX_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
 const int FF7_PSX_SAVE_GAME_SLOT_SIZE = 0x2000;
 const int FF7_PSX_SAVE_GAME_SLOT_NUMBER = 1;
 
-//BELOW 1/2 HEADER DATA FOR EACH PSX SAVE SLOT, (NOTE: last 256 bytes are 0x00, no region data in these)
+//BELOW 1/2 HEADER DATA FOR EACH PSX SAVE SLOT, (NOTE: last 256 bytes are 0x00, no region data in this section)
 
 //Slot 01 Header
 const quint8 PSX_SAVE_GAME_FILE_HEADER_S01[0x100]=
@@ -197,6 +197,7 @@ const quint8 PSX_SAVE_GAME_FILE_HEADER_S14[0x100]=
  0xAF,0x9A,0xDD,0xBB, 0xED,0xDD,0x59,0xFA, 0xAF,0xBA,0xDD,0x9C, 0xEC,0xC9,0xDD,0xFA, 0xAF,0xBA,0xEE,0xCE, 0x9E,0xEE,0xDD,0xFA, 0xAF,0xBA,0x9E,0x12, 0x11,0xE2,0xB9,0xFA,
  0xAF,0x9A,0x44,0x44, 0x22,0xE4,0xB5,0xFA, 0x81,0x66,0x49,0xC9, 0x24,0x9C,0xDA,0xFA, 0xB6,0xDB,0x4C,0xF1, 0x21,0xE9,0xDA,0xFA, 0xDB,0x36,0x94,0x12, 0x21,0xE9,0x9A,0xFA,
  0x71,0x33,0x41,0x29, 0x91,0xAE,0xAA,0xFA, 0x35,0x93,0x1F,0x9E, 0xE9,0x33,0xAA,0xFA, 0x33,0x93,0x1F,0x44, 0x1E,0x39,0x83,0xFA, 0x33,0x93,0x11,0x24, 0x19,0x39,0x13,0xFF};
+
 //Slot 15 Header
 const quint8 PSX_SAVE_GAME_FILE_HEADER_S15[0x100]=
 {0x53,0x43,0x11,0x01, 0x82,0x65,0x82,0x65, 0x82,0x56,0x81,0x5E, 0x82,0x72,0x82,0x60, 0x82,0x75,0x82,0x64, 0x82,0x50,0x82,0x54, 0x81,0x5E,0x82,0x58, 0x82,0x58,0x81,0x46,
@@ -238,16 +239,17 @@ const int FF7_PSP_SAVE_GAME_SLOT_NUMBER = 15;
 
 /* END FILE INFO */
 
+
 struct item{// sizeof 2
 quint8 id;// item id
 quint8 qty;//
 }__attribute__((__packed__));
 
-struct materia
-{// sizeof 4
+struct materia{// sizeof 4
 quint8 id;
 quint8 ap[3];
 }__attribute__((__packed__));
+
 struct LOVE
 {
 qint8 aeris;
@@ -357,58 +359,61 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint16 runs;               // [0x0BBE] Number of escapes
     quint16 menu_visible;       // [0x0BC0] Menu items Visible
     quint16 menu_locked;        // [0x0BC2] Menu items locked
-    quint8 z_9[32];             // [0x0BC4] UNKNOWN DATA
+    quint8 z_9[16];             // [0x0BC4] UNKNOWN DATA
+    quint8 itemsmask_1;         // [0x0BD4] Item mask_1
+    quint8 materiacaves;        // [0x0BD5] materia caves picked up  0x01 mime,0x02 HP<->MP,0x04 4xmag, 0x08 KOTR
+    quint8 z_10[14];            // [0x0BD6] UNKNOWN DATA
     quint8 keyitems[8];         // [0x0BE4] Key items
-    quint8 z_10[8];             // [0x0BEC] UNKNOWN DATA
+    quint8 z_11[8];             // [0x0BEC] UNKNOWN DATA
     LOVE b_love;                // [0x0BF4] Battle Love PointsA
-    quint8 z_11;                // [0x0BF8] UNKNOWN DATA
+    quint8 z_12;                // [0x0BF8] UNKNOWN DATA
     qint8 pennedchocos[4];      // [0x0BF9] chocos in fenced area at farm rating
-    quint8 z_12[2];             // [0x0BFD] UNKNOWN DATA 136
+    quint8 z_13[2];             // [0x0BFD] UNKNOWN DATA 136
     quint8 u_weapon_hp[3];      // [0x0BFF] Ultimate Weapons Remaining Hp
-    quint8 z_13[28];            // [0x0C02] UNKNOWN DATA
+    quint8 z_14[28];            // [0x0C02] UNKNOWN DATA
     quint8 tut_sub;             // [0x0C1E] Have we seen the sub tutorial?
-    quint8 z_14[102];           // [0x0C1F] UNKNOWN DATA
+    quint8 z_15[102];           // [0x0C1F] UNKNOWN DATA
     quint8 bm_progress1;        // [0x0C85] Bombing Mission Flag 1
     quint8 bm_progress2;        // [0x0C86] Bombing Mission Flag 2
-    quint8 z_15[95];            // [0X0C87] UNKNOWN DATA
+    quint8 z_16[95];            // [0X0C87] UNKNOWN DATA
     quint8 bm_progress3;        // [0X0CE6] Bombing mission flag 3
-    quint8 z_16[7];             // [0X0CE7] UNKNOWN DATA
+    quint8 z_17[7];             // [0X0CE7] UNKNOWN DATA
     quint16 gp;                 // [0x0CEE] Party GP (0-10000)
-    quint8 z_17[12];            // [0x0CF0] UNKNOWN DATA
+    quint8 z_18[12];            // [0x0CF0] UNKNOWN DATA
     qint8 stables;              // [0x0CFC] Number of chocobo stables owned
     qint8 stablesoccupied;      // [0x0CFD] Number of occupied stables //genereated incorrectly ?
-    quint8 z_18;                // [0x0CFE] UNKNOWN DATA
+    quint8 z_19;                // [0x0CFE] UNKNOWN DATA
     qint8 chocobomask;          // [0x0CFF] Mask of occupied stables//genereated incorrectly ?
     quint8 chocoborn;           // [0x0D00] what stall a choco was just born in.
-    quint8 z_19[101];           // [0x0D01] UNKNOWN DATA
+    quint8 z_20[101];           // [0x0D01] UNKNOWN DATA
     quint8 turtleflyers;        // [0x0D66] turtles paradice flyers.
-    quint8 z_20[93];            // [0X0D67] UNKNOWN DATA
+    quint8 z_21[93];            // [0X0D67] UNKNOWN DATA
     FF7CHOCOBO chocobos[4];     // [0x0DC4] Chocobo slots
-    quint8 z_21[32];            // [0x0E04] UNKNOWN DATA
+    quint8 z_22[32];            // [0x0E04] UNKNOWN DATA
     quint16 coster_2;           // [0x0E24] Coster 2nd place score
     quint16 coster_3;           // [0x0E26] Coster 3rd place score
-    quint8 z_22[17];            // [0x0E28] UNKNOWN DATA
+    quint8 z_23[17];            // [0x0E28] UNKNOWN DATA
     quint16 coster_1;           // [0x0E39] Coster 1st place
-    quint8 z_23[105];           // [0x0E3C] UNKNOWN DATA
+    quint8 z_24[105];           // [0x0E3C] UNKNOWN DATA
     qint8 disc;                 // [0x0EA4] Current CD
-    quint8 z_24[31];            // [0x0EA5] UNKNOWN DATA
+    quint8 z_25[31];            // [0x0EA5] UNKNOWN DATA
     quint8 chocobonames[6][6];  // [0x0EC4] <-OK Chocobo names
     quint16 chocostaminas[6];   // [0x0EE8] Chocobo staminas 12 bytes
     quint8 reg_vinny;         // [0x0EF4] 0xFF for true 0xFB false (vincent a regualar?)
-    quint8 z_25[52];            // [0x0EF5] UNKNOWN DATA
+    quint8 z_26[52];            // [0x0EF5] UNKNOWN DATA
     quint8 tut_save;            // [0x0F29] Have we seen save tut ? 0x3A true , 0x32 false
-    quint8 z_26[346];           // [0x0F2A] UNKNOWN DATA
+    quint8 z_27[346];           // [0x0F2A] UNKNOWN DATA
     FF7CHOCOBO choco56[2];      // [0x1084] Chocobo slots 5-6
     quint16 phsmask;            // [0x10A4] who is allowed in the phs
     quint16 unlockedchars;      // [0x10A6] who is visible in the phs
-    quint8 z_27[48];            // [0x10A8] UNKNOWN DATA
+    quint8 z_28[48];            // [0x10A8] UNKNOWN DATA
     quint8 battlespeed;         // [0x10D8] Battle Speed
     quint8 battlemspeed;        // [0x10D9] Battle Message Speed
     qint8 options1;             // [0x10DA] Options 1
     quint8 options2;            // [0x10DB] Options 2
-    quint8 z_28[16];            // [0x10DC] UNKNOWN DATA (controller mapping?)
+    quint8 z_29[16];            // [0x10DC] UNKNOWN DATA (controller mapping?)
     quint8 fieldmspeed;         // [0x10EC] Message Speed On field
-    quint8 z_29[7];             // [0x10ED] UNKNOWN DATA
+    quint8 z_30[7];             // [0x10ED] UNKNOWN DATA
 }__attribute__((__packed__));
 /* FF7HEADFOOT FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
     struct FF7HEADFOOT {
