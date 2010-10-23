@@ -11907,7 +11907,7 @@
        <enum>QLCDNumber::Flat</enum>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>325</x>
@@ -11986,7 +11986,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>0</x>
@@ -13864,7 +13864,7 @@
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -13895,7 +13895,7 @@
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -13923,7 +13923,7 @@
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -13954,7 +13954,7 @@
           <enum>Qt::LeftToRight</enum>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -14718,6 +14718,49 @@
        </item>
       </layout>
      </widget>
+     <widget class="QGroupBox" name="groupBox_34">
+      <property name="geometry">
+       <rect>
+        <x>505</x>
+        <y>305</y>
+        <width>216</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Materia Caves Empty</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_36">
+       <item>
+        <widget class="QCheckBox" name="cb_materiacave_1">
+         <property name="text">
+          <string>Mime</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cb_materiacave_2">
+         <property name="text">
+          <string>HP &lt;-&gt; MP</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cb_materiacave_3">
+         <property name="text">
+          <string>Quadra Magic</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cb_materiacave_4">
+         <property name="text">
+          <string>KOTR</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QWidget" name="page_test">
      <attribute name="title">
@@ -14977,7 +15020,7 @@
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -15008,7 +15051,7 @@
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -15036,7 +15079,7 @@
           </size>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -15067,7 +15110,7 @@
           <enum>Qt::LeftToRight</enum>
          </property>
          <property name="alignment">
-          <set>Qt::AlignCenter</set>
+          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
          </property>
          <property name="maximum">
           <number>255</number>
@@ -15118,7 +15161,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>235</x>
@@ -15147,33 +15190,163 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QGroupBox" name="groupBox_31">
       <property name="geometry">
        <rect>
-        <x>230</x>
-        <y>225</y>
-        <width>207</width>
-        <height>25</height>
+        <x>555</x>
+        <y>5</y>
+        <width>157</width>
+        <height>86</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_76">
+      <property name="title">
+       <string>Secret Chars Unlocked</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_34">
        <item>
-        <widget class="QCheckBox" name="cb_reg_vinny">
+        <layout class="QHBoxLayout" name="horizontalLayout_76">
+         <item>
+          <widget class="QCheckBox" name="cb_reg_vinny">
+           <property name="text">
+            <string>Vincent</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLCDNumber" name="lcdNumber_8">
+           <property name="maximumSize">
+            <size>
+             <width>64</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="mode">
+            <enum>QLCDNumber::Hex</enum>
+           </property>
+           <property name="segmentStyle">
+            <enum>QLCDNumber::Flat</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_80">
+         <item>
+          <widget class="QCheckBox" name="cb_reg_yuffie">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>Yuffie</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLCDNumber" name="lcdNumber_9">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>64</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <property name="mode">
+            <enum>QLCDNumber::Hex</enum>
+           </property>
+           <property name="segmentStyle">
+            <enum>QLCDNumber::Flat</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="groupBox_33">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>135</y>
+        <width>181</width>
+        <height>231</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>0xBD4 (itemmasks_1)</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_35">
+       <item>
+        <widget class="QCheckBox" name="cb_itemmask1_1">
          <property name="text">
-          <string>Vincent is unlocked</string>
+          <string>0x01 Potion On MD8_3</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QLCDNumber" name="lcdNumber_8">
-         <property name="maximumSize">
+        <widget class="QCheckBox" name="cb_itemmask1_2">
+         <property name="text">
+          <string>0x02</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cb_itemmask1_3">
+         <property name="text">
+          <string>0x04</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cb_itemmask1_4">
+         <property name="text">
+          <string>0x08</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cb_itemmask1_5">
+         <property name="text">
+          <string>0x10</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cb_itemmask1_6">
+         <property name="text">
+          <string>0x20</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cb_itemmask1_7">
+         <property name="text">
+          <string>0x40</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="cb_itemmask1_8">
+         <property name="text">
+          <string>0x80</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="lcd_itemmask_1">
+         <property name="minimumSize">
           <size>
-           <width>64</width>
-           <height>16777215</height>
+           <width>0</width>
+           <height>23</height>
           </size>
          </property>
+         <property name="digitCount">
+          <number>8</number>
+         </property>
          <property name="mode">
-          <enum>QLCDNumber::Hex</enum>
+          <enum>QLCDNumber::Bin</enum>
          </property>
          <property name="segmentStyle">
           <enum>QLCDNumber::Flat</enum>
