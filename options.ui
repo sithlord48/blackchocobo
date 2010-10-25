@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>415</width>
-    <height>161</height>
+    <width>413</width>
+    <height>159</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -50,7 +50,7 @@
      <item>
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Default Folder To Save Virtual (.mcd/.mcr) savgames</string>
+        <string>Default Folder To Save Virtual (.mcd/.mcr) savegames</string>
        </property>
       </widget>
      </item>
