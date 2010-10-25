@@ -43,6 +43,7 @@ public slots:
 private slots:
 
     //test functions to be removed....
+    void on_cb_reg_yuffie_toggled(bool checked);
     void on_cb_materiacave_1_toggled();
     void on_cb_materiacave_2_toggled();
     void on_cb_materiacave_3_toggled();

@@ -387,33 +387,35 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 chocoborn;           // [0x0D00] what stall a choco was just born in.
     quint8 z_20[101];           // [0x0D01] UNKNOWN DATA
     quint8 turtleflyers;        // [0x0D66] turtles paradice flyers.
-    quint8 z_21[93];            // [0X0D67] UNKNOWN DATA
+    quint8 z_21[12];            // [0X0D67] UNKNOWN DATA
+    quint8 reg_yuffie;          // [0x0D73] yuffie regular? 0x6E=yes 0x6=no
+    quint8 z_22[80];            // [0x0D74] UNKNOWN DATA
     FF7CHOCOBO chocobos[4];     // [0x0DC4] Chocobo slots
-    quint8 z_22[32];            // [0x0E04] UNKNOWN DATA
+    quint8 z_23[32];            // [0x0E04] UNKNOWN DATA
     quint16 coster_2;           // [0x0E24] Coster 2nd place score
     quint16 coster_3;           // [0x0E26] Coster 3rd place score
-    quint8 z_23[17];            // [0x0E28] UNKNOWN DATA
+    quint8 z_24[17];            // [0x0E28] UNKNOWN DATA
     quint16 coster_1;           // [0x0E39] Coster 1st place
-    quint8 z_24[105];           // [0x0E3C] UNKNOWN DATA
+    quint8 z_25[105];           // [0x0E3C] UNKNOWN DATA
     qint8 disc;                 // [0x0EA4] Current CD
-    quint8 z_25[31];            // [0x0EA5] UNKNOWN DATA
+    quint8 z_26[31];            // [0x0EA5] UNKNOWN DATA
     quint8 chocobonames[6][6];  // [0x0EC4] <-OK Chocobo names
     quint16 chocostaminas[6];   // [0x0EE8] Chocobo staminas 12 bytes
     quint8 reg_vinny;         // [0x0EF4] 0xFF for true 0xFB false (vincent a regualar?)
-    quint8 z_26[52];            // [0x0EF5] UNKNOWN DATA
+    quint8 z_27[52];            // [0x0EF5] UNKNOWN DATA
     quint8 tut_save;            // [0x0F29] Have we seen save tut ? 0x3A true , 0x32 false
-    quint8 z_27[346];           // [0x0F2A] UNKNOWN DATA
+    quint8 z_28[346];           // [0x0F2A] UNKNOWN DATA
     FF7CHOCOBO choco56[2];      // [0x1084] Chocobo slots 5-6
     quint16 phsmask;            // [0x10A4] who is allowed in the phs
     quint16 unlockedchars;      // [0x10A6] who is visible in the phs
-    quint8 z_28[48];            // [0x10A8] UNKNOWN DATA
+    quint8 z_29[48];            // [0x10A8] UNKNOWN DATA
     quint8 battlespeed;         // [0x10D8] Battle Speed
     quint8 battlemspeed;        // [0x10D9] Battle Message Speed
     qint8 options1;             // [0x10DA] Options 1
     quint8 options2;            // [0x10DB] Options 2
-    quint8 z_29[16];            // [0x10DC] UNKNOWN DATA (controller mapping?)
+    quint8 z_30[16];            // [0x10DC] UNKNOWN DATA (controller mapping?)
     quint8 fieldmspeed;         // [0x10EC] Message Speed On field
-    quint8 z_30[7];             // [0x10ED] UNKNOWN DATA
+    quint8 z_31[7];             // [0x10ED] UNKNOWN DATA
 }__attribute__((__packed__));
 /* FF7HEADFOOT FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
     struct FF7HEADFOOT {

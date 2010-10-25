@@ -380,7 +380,7 @@ void MainWindow::on_actionExport_PC_Save_activated()
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 SaveGame"),  settings.value("export_pc").toString() ,
     tr("FF7 SaveGame(*.ff7)")); // Only Allow PC save Since we are going to make one
-
+    if (fileName ==""){return;}
     if(ff7.SG_TYPE !="PC")
     {
         ui->combo_control->setCurrentIndex(0); // if not pc then chance of breaking controls.
@@ -418,6 +418,7 @@ void MainWindow::on_actionExport_PSX_activated()
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 SaveGame"), "BASCUS-94163FF7-",
     tr("BASCUS-94163FF7-S01(*-S01);;BASCUS-94163FF7-S02(*-S02);;BASCUS-94163FF7-S03(*-S03);;BASCUS-94163FF7-S04(*-S04);;BASCUS-94163FF7-S05(*-S05);;BASCUS-94163FF7-S06(*-S06);;BASCUS-94163FF7-S07(*-S07);;BASCUS-94163FF7-S08(*-S08);;BASCUS-94163FF7-S09(*-S09);;BASCUS-94163FF7-S10(*-S10);;BASCUS-94163FF7-S11(*-S11);;BASCUS-94163FF7-S12(*-S12);;BASCUS-94163FF7-S13(*-S13);;BASCUS-94163FF7-S14(*-S14);;BASCUS-94163FF7-S15(*-S15)")); // Only Allow PSX save slots Since we are going to force its creation.
+    if(fileName ==""){return;}
 
     if(ff7.SG_TYPE != "PSX")
     {
@@ -4232,6 +4233,10 @@ if(ff7.slot[s].reg_vinny == 0xFF){ui->cb_reg_vinny->setChecked(Qt::Checked);}
 else if(ff7.slot[s].reg_vinny ==0xFB){ui->cb_reg_vinny->setChecked(Qt::Unchecked);}
 ui->lcdNumber_8->display(ff7.slot[s].reg_vinny);
 
+if(ff7.slot[s].reg_yuffie == 0x6F){ui->cb_reg_yuffie->setChecked(Qt::Checked);}
+else if(ff7.slot[s].reg_yuffie==0x6E){ui->cb_reg_yuffie->setChecked(Qt::Unchecked);}
+ui->lcdNumber_9->display(ff7.slot[s].reg_yuffie);
+
 if((ff7.slot[s].itemsmask_1)& (1<<0)){ui->cb_itemmask1_1->setChecked(Qt::Checked);}
 else{ui->cb_itemmask1_1->setChecked(Qt::Unchecked);}
 if((ff7.slot[s].itemsmask_1)& (1<<1)){ui->cb_itemmask1_2->setChecked(Qt::Checked);}
@@ -4352,6 +4357,7 @@ void MainWindow::on_cb_tut_sub_toggled(bool checked)
     {
         if (checked){ff7.slot[s].tut_sub =0x2F;}
         else{ff7.slot[s].tut_sub =0x2B;}
+        testdata_refresh();
     }
 }
 
@@ -4361,6 +4367,7 @@ void MainWindow::on_cb_tut_worldsave_toggled(bool checked)
     {
         if (checked){ff7.slot[s].tut_save =0x3A;}
         else{ff7.slot[s].tut_save =0x32;}
+        testdata_refresh();
     }
 }
 
@@ -4370,6 +4377,7 @@ void MainWindow::on_cb_reg_vinny_toggled(bool checked)
     {
         if (checked){ff7.slot[s].reg_vinny =0xFF;}
         else{ff7.slot[s].reg_vinny =0xFB;}
+        testdata_refresh();
     }
 }
 
@@ -4452,4 +4460,14 @@ void MainWindow::calc_materiacaves()
     if(ui->cb_materiacave_4->isChecked()){temp |= (1<<3);}
     ff7.slot[s].materiacaves = temp;
     testdata_refresh();
+}
+
+void MainWindow::on_cb_reg_yuffie_toggled(bool checked)
+{
+    if(!load)
+    {
+        if (checked){ff7.slot[s].reg_yuffie =0x6F;}
+        else{ff7.slot[s].reg_yuffie =0x6E;}
+        testdata_refresh();
+    }
 }
