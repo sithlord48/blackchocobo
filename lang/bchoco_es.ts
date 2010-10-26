@@ -2875,6 +2875,34 @@ no es un Archivo de Guardado de FF7.</translation>
         <source>0x80</source>
         <translation type="unfinished">0x80</translation>
     </message>
+    <message>
+        <source>Mystery Ninja </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Can Fight Yuffie in Forests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>tutorials seen unchecked might force them  to be watched, tristate check box here ?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0xD83 Midgar Train Flags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x01 Talked to Bigs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x02 Talked to Wedge twice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x04 Talked to Jessie Before Looking At Map</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
@@ -2888,10 +2916,6 @@ no es un Archivo de Guardado de FF7.</translation>
     </message>
     <message>
         <source>...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Default Folder To Save Virtual (.mcd/.mcr) savgames</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2920,6 +2944,10 @@ no es un Archivo de Guardado de FF7.</translation>
     </message>
     <message>
         <source>Pc Save Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Default Folder To Save Virtual (.mcd/.mcr) savegames</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
