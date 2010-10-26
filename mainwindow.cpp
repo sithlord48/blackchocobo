@@ -29,14 +29,11 @@ extern FF7 ff7; // our save file struct
 extern int s; //keeps track of our slot globally
 FF7SLOT bufferslot; // a buffer slot to keep copied slots in
 char chFF7[256];  // char arrary for converting to ff7 chars , so far not used.
-
 int curchar; //keeps track of current character displayed
 int mslotsel = 0; //keeps track of materia slot on char selected
-
 QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
 
 /*~~~~~~~~GUI Set Up~~~~~~~*/
-
 MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
@@ -72,9 +69,6 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->combo_add_mat->setVisible(false);
     //testing stuff.
     ui->tabWidget->setTabEnabled(8,0);
-    ui->btn_remove_all_items->setVisible(false);
-    ui->btn_remove_all_materia->setVisible(false);
-    ui->btn_remove_all_stolen->setVisible(false);
     ui->lbl_0x34->setVisible(false);
     ui->lbl_0x35->setVisible(false);
     ui->lbl_0x36->setVisible(false);
@@ -106,6 +100,7 @@ void MainWindow::changeEvent(QEvent *e)
         break;
     }
 }
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionOpen_Save_File_activated()
 {
@@ -243,7 +238,7 @@ void MainWindow::loadFileFull(const QString &fileName)
     }
     guirefresh();
 }
-
+/*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionFrom_PSX_Slot_activated()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
@@ -267,7 +262,7 @@ void MainWindow::on_actionFrom_PSX_Slot_activated()
     }//Parse slot data....
     guirefresh();
 }
-
+/*~~~~~~~~~~~~~~~~~IMPORT PSV~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionFrom_PSV_Slot_activated()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
@@ -292,25 +287,6 @@ void MainWindow::on_actionFrom_PSV_Slot_activated()
     guirefresh();
 }
 
-void MainWindow::on_actionCopy_Slot_activated()
-{
-    memcpy(&bufferslot,&ff7.slot[s],0x10f4);
-}
-
-void MainWindow::clearslot(int rmslot)
-{
-    QByteArray temp;
-    temp.fill(0x00,0x10f4);
-    memcpy(&ff7.slot[rmslot],temp,0x10f4);
-}
-
-void MainWindow::on_actionPaste_Slot_activated()
-{
-    memcpy(&ff7.slot[s],&bufferslot,0x10f4);
-    guirefresh();
-}
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~New Save Section - Sithlord48 ~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionSave_File_activated()
 {
 // check for the type of save loaded and set the output type so we don't save the wrong type, all conversion opperations should be done via an Export function.
@@ -356,8 +332,7 @@ void MainWindow::on_actionSave_File_activated()
     }
     else {QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot save This Type of File"));}
 }
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~ NEW SHORT SAVE - SITHLORD48 - V. 1.4 ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~SHORT SAVE~~~~~~~~~~~~*/
 void MainWindow::saveFileFull(const QString &fileName)
 {
     FILE *pfile;
@@ -373,14 +348,14 @@ void MainWindow::saveFileFull(const QString &fileName)
     fclose(pfile);
     fix_sum(fileName);
 }
-/*~~~~~~~~~~~~~~~~~~~~~~END NEW SHORT SAVE -SITHLORD48- V.1.4~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
+/*~~~~~~~~END SHORT SAVE~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~EXPORT PC~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionExport_PC_Save_activated()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 SaveGame"),  settings.value("export_pc").toString() ,
     tr("FF7 SaveGame(*.ff7)")); // Only Allow PC save Since we are going to make one
-    if (fileName ==""){return;}
+    if (fileName ==""){return;}// catch if Cancel is pressed
     if(ff7.SG_TYPE !="PC")
     {
         ui->combo_control->setCurrentIndex(0); // if not pc then chance of breaking controls.
@@ -397,7 +372,7 @@ void MainWindow::on_actionExport_PC_Save_activated()
     ff7.file_headerp     = ff7.file_header_pc;           //pointer to pc file header
     ff7.file_footerp     = ff7.file_footer_pc;           //pointer to pc file footer
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~ NEW SHORT SAVE - SITHLORD48 - V. 1.4 ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~~~~~SHORT SAVE - SITHLORD48~~~~~~~~~~~~*/
     FILE *pfile; // this section is starting to work correctly!
     pfile = fopen(fileName.toAscii(),"wb");
     fwrite(ff7.file_headerp,ff7.SG_HEADER,1,pfile);
@@ -410,9 +385,9 @@ void MainWindow::on_actionExport_PC_Save_activated()
     fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
     fclose(pfile);
     fix_sum(fileName);
-    /*~~~~~~~~~~~~~~~~~~~~~~END NEW SHORT SAVE -SITHLORD48- V.1.4~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~~~~~END SHORT SAVE -SITHLORD48~~~~~~~~~~~~~*/
 }
-
+/*~~~~~~~~~~~~~~~~~EXPORT PSX~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionExport_PSX_activated()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
@@ -436,7 +411,7 @@ void MainWindow::on_actionExport_PSX_activated()
     ff7.file_headerp     = ff7.file_header_psx;           //pointer to pc file header
     ff7.file_footerp     = ff7.file_footer_psx;           //pointer to pc file footer
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~ NEW SHORT SAVE - SITHLORD48 - V. 1.4 ~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~~~~ SHORT SAVE - SITHLORD48 ~~~~~~~~~*/
     FILE *pfile; // this section is starting to work correctly!
     pfile = fopen(fileName.toAscii(),"wb");
 
@@ -466,11 +441,9 @@ void MainWindow::on_actionExport_PSX_activated()
     fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
     fclose(pfile);
     fix_sum(fileName);
-/*~~~~~~~~~~~~~~~~~~~~~~END NEW SHORT SAVE -SITHLORD48- V.1.4~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+    /*~~~~END NEW SHORT SAVE -SITHLORD48- V.1.4~~~~*/
 }
-
-
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ START CHECKSUM VEGETA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~ START CHECKSUM VEGETA~~~~~~~~~~~*/
 void fix_sum(const QString &fileName)
 {
     void * memory;
@@ -502,96 +475,113 @@ void fix_sum(const QString &fileName)
     file.close();
     free(memory);
 }
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~ END CHECKSUM VEGETA~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~ END CHECKSUM VEGETA~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~LANGUAGE ACTIONS~~~~~~~~~~~~~~*/
+void MainWindow::on_action_Lang_en_triggered()
+{
+    ui->action_Lang_es->setChecked(false);
+    ui->action_Lang_fr->setChecked(false);
+    settings.setValue("lang","en");
+    QMessageBox::information(this,"Language Changed","You Must Restart For The Language to Change");
+}
+void MainWindow::on_action_Lang_es_triggered()
+{
+    ui->action_Lang_en->setChecked(false);
+    ui->action_Lang_fr->setChecked(false);
+    settings.setValue("lang","es");
+    QMessageBox::information(this,"Idioma Cambiado","Debe reiniciar Para el cambio de idioma");
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+}
+void MainWindow::on_action_Lang_fr_triggered()
+{
+    ui->action_Lang_es->setChecked(false);
+    ui->action_Lang_en->setChecked(false);
+    settings.setValue("lang","fr");
+    QMessageBox::information(this,"Langue Modifiée","Vous Devez Redemarrer Pour Changer la Langue");
+}
+/*~~~~~~~~~~~END LANGUAGE ACTIONS~~~~~~~~~~*/
 
-//MENU ACTIONS
+void MainWindow::on_actionCopy_Slot_activated()
+{
+    memcpy(&bufferslot,&ff7.slot[s],0x10f4);
+}
+
+
+void MainWindow::on_actionPaste_Slot_activated()
+{
+    memcpy(&ff7.slot[s],&bufferslot,0x10f4);
+    guirefresh();
+}
 
 void MainWindow::on_actionSlot_01_activated()
 {
-    s=0;
-    guirefresh();
+    s=0; guirefresh();
 }
 void MainWindow::on_actionSlot_02_activated()
 {
-    s=1;
-    guirefresh();
+    s=1; guirefresh();
 }
 void MainWindow::on_actionSlot_03_activated()
 {
-    s=2;
-    guirefresh();
+    s=2; guirefresh();
 }
 void MainWindow::on_actionSlot_04_activated()
 {
-    s=3;
-    guirefresh();
+    s=3; guirefresh();
 }
 void MainWindow::on_actionSlot_05_activated()
 {
-    s=4;
-    guirefresh();
+    s=4; guirefresh();
 }
 void MainWindow::on_actionSlot_06_activated()
 {
-    s=5;
-    guirefresh();
+    s=5; guirefresh();
 }
 void MainWindow::on_actionSlot_07_activated()
 {
-    s=6;
-    guirefresh();
+    s=6; guirefresh();
 }
 void MainWindow::on_actionSlot_08_activated()
 {
-    s=7;
-    guirefresh();
+    s=7; guirefresh();
 }
 void MainWindow::on_actionSlot_09_activated()
 {
-    s=8;
-    guirefresh();
+    s=8; guirefresh();
 }
 void MainWindow::on_actionSlot_10_activated()
 {
-    s=9;
-    guirefresh();
+    s=9; guirefresh();
 }
 void MainWindow::on_actionSlot_11_activated()
 {
-    s=10;
-    guirefresh();
+    s=10; guirefresh();
 }
 void MainWindow::on_actionSlot_12_activated()
 {
-    s=11;
-    guirefresh();
+    s=11; guirefresh();
 }
 void MainWindow::on_actionSlot_13_activated()
 {
-    s=12;
-    guirefresh();
+    s=12; guirefresh();
 }
 void MainWindow::on_actionSlot_14_activated()
 {
-    s=13;
-    guirefresh();
+    s=13; guirefresh();
 }
 void MainWindow::on_actionSlot_15_activated()
 {
-    s=14;
-    guirefresh();
+    s=14; guirefresh();
 }
 void MainWindow::on_actionShow_Selection_Dialog_activated()
 {
-    SlotSelect slotselect;
-    slotselect.exec();
+    SlotSelect slotselect; slotselect.exec();
 }
 void MainWindow::on_actionClear_Slot_activated()
 {
-    clearslot(s);
-    guirefresh();
+    clearslot(s);  guirefresh();
 }
 void MainWindow::on_actionPrevious_Slot_activated()
 {
@@ -603,21 +593,19 @@ void MainWindow::on_actionNext_Slot_activated()
 }
 void MainWindow::on_actionAbout_activated()
 {
-   about adialog;
-   adialog.exec();
+   about adialog; adialog.exec();
 }
 void MainWindow::on_actionEdit_Paths_triggered()
 {
-    Options odialog;
-    odialog.exec();
+    Options odialog; odialog.exec();
 }
 void MainWindow::on_actionAbout_Qt_activated()
 {
     qApp->aboutQt();
 }
-
-//gui functions
-
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GUI FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~Char Update~~~~~~~~~~*/
 void MainWindow::charupdate(void)
 {   //clear the text incase there is something there
     //mslotsel=0;
@@ -722,6 +710,8 @@ void MainWindow::charupdate(void)
     ui->lcd_0x37->display(ff7.slot[s].chars[curchar].z_4[3]);
 
 }
+/*~~~~~~~END Char Update~~~~~~~~*/
+/*~~~~~~~~~Char Update~~~~~~~~~~*/
 void MainWindow::setarmorslots(void)
 {
     ui->a_m_l1->setHidden(1);
@@ -1182,7 +1172,7 @@ else if (ff7.savetype ==5)
 
 }
 else
-{  
+{
     ui->actionSave_File->setEnabled(0);
     ui->actionExport_PC_Save->setEnabled(0);
     ui->actionExport_PSX->setEnabled(0);
@@ -1673,6 +1663,18 @@ int j= ui->tbl_itm->currentRow();
         }
     }
 
+    if((ff7.slot[s].materiacaves)& (1<<0)){ui->cb_materiacave_1->setChecked(Qt::Checked);}
+    else{ui->cb_materiacave_1->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].materiacaves)& (1<<1)){ui->cb_materiacave_2->setChecked(Qt::Checked);}
+    else{ui->cb_materiacave_2->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].materiacaves)& (1<<2)){ui->cb_materiacave_3->setChecked(Qt::Checked);}
+    else{ui->cb_materiacave_3->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].materiacaves)& (1<<3)){ui->cb_materiacave_4->setChecked(Qt::Checked);}
+    else{ui->cb_materiacave_4->setChecked(Qt::Unchecked);}
+
+    if((ff7.slot[s].yuffieforest)& (1<<0)){ui->cb_yuffieforest->setChecked(Qt::Checked);}
+    else{ui->cb_yuffieforest->setChecked(Qt::Unchecked);}
+    load =false; // all functions should set load on their own.
     chocobo_refresh();
     switch (curchar) // click char button for who?
     {
@@ -1686,10 +1688,9 @@ int j= ui->tbl_itm->currentRow();
        case 7:{ui->btn_vincent->click();break;}
        case 8:{ui->btn_cid->click();break;}
     }
-
-    load =false;
     if(ui->action_show_test_data->isChecked()){testdata_refresh();}
  }
+
 void MainWindow::chocobo_refresh()
 {
  load=true;
@@ -1890,7 +1891,12 @@ ui->combo_pen3->setCurrentIndex(ff7.slot[s].pennedchocos[2]);
 ui->combo_pen4->setCurrentIndex(ff7.slot[s].pennedchocos[3]);
 load=false;
 }
-
+void MainWindow::clearslot(int rmslot)
+{
+    QByteArray temp;
+    temp.fill(0x00,0x10f4);
+    memcpy(&ff7.slot[rmslot],temp,0x10f4);
+}
 //Char Buttons.
 
 void MainWindow::on_btn_cloud_clicked()
@@ -2799,7 +2805,7 @@ void MainWindow::on_line_c6_name_lostFocus()
     for (int i=0;i<ui->line_c6_name->text().size();i++){ff7.slot[s].chocobonames[5][i] = chFF7[ui->line_c6_name->text().at(i).toAscii()];}
 }
 
-//others tab
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_list_phs_chars_itemChanged()
 {
@@ -2836,65 +2842,41 @@ void MainWindow::on_list_chars_unlocked_itemChanged()
 }
 void MainWindow::on_sb_curdisc_valueChanged()
 {
-    if(!load)
-    {
-    ff7.slot[s].disc = ui->sb_curdisc->value();
-    }
+    if(!load){ff7.slot[s].disc = ui->sb_curdisc->value();}
 }
 void MainWindow::on_sb_love_barret_valueChanged()
 {
-   if(!load)
-   {
-   ff7.slot[s].love.barret = ui->sb_love_barret->value();
-   }
+   if(!load){ff7.slot[s].love.barret = ui->sb_love_barret->value();}
 }
 void MainWindow::on_sb_love_aeris_valueChanged()
 {
-    if(!load)
-    {
-    ff7.slot[s].love.aeris = ui->sb_love_aeris->value();
-    }
+    if(!load){ff7.slot[s].love.aeris = ui->sb_love_aeris->value();}
 }
 void MainWindow::on_sb_love_tifa_valueChanged()
 {
-    if(!load)
-    {
-    ff7.slot[s].love.tifa = ui->sb_love_tifa->value();
-    }
+    if(!load){ff7.slot[s].love.tifa = ui->sb_love_tifa->value();}
 }
 void MainWindow::on_sb_love_yuffie_valueChanged()
 {
-    if(!load)
-    {
-    ff7.slot[s].love.yuffie = ui->sb_love_yuffie->value();
-    }
+    if(!load){ff7.slot[s].love.yuffie = ui->sb_love_yuffie->value();}
 }
 
 void MainWindow::on_sb_time_hour_valueChanged(int value)
 {
-    if (!load)
-    {
-    ff7.slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60%60) + (ui->sb_time_sec->value()));
-    }
+    if(!load){ff7.slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60%60) + (ui->sb_time_sec->value()));}
 }
 
 void MainWindow::on_sb_time_min_valueChanged(int value)
 {
-    if (!load)
-    {
-    ff7.slot[s].time = ((ui->sb_time_hour->value()*3600) + (value*60%60) + (ui->sb_time_sec->value()));
-    }
+    if(!load){ff7.slot[s].time = ((ui->sb_time_hour->value()*3600) + (value*60%60) + (ui->sb_time_sec->value()));}
 }
 
 void MainWindow::on_sb_time_sec_valueChanged(int value)
 {
-    if (!load)
-    {
-    ff7.slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60%60) + (value));
-    }
+    if(!load){ff7.slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60%60) + (value));}
 }
 
-//Item Tab
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_list_flyers_itemChanged()
 {
@@ -2979,7 +2961,7 @@ if(!load)
     }
 }
 
-//materia Tab
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_tbl_materia_currentCellChanged(int row)
 {
@@ -3168,7 +3150,7 @@ ui->sb_addap->setValue(ap_temp);
 guirefresh();
 }}
 
-//save location tab
+/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SAVE LOCATION TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_tbl_location_field_itemSelectionChanged()
 {
     ui->tbl_location_field->setCurrentCell(ui->tbl_location_field->currentRow(),0);
@@ -3222,19 +3204,18 @@ void MainWindow::on_sb_coordz_valueChanged()
 void MainWindow::on_cb_id_toggled(bool checked)
 {
 if(!load)
-{
-    if (curchar ==6)
     {
-        if (checked){ff7.slot[s].chars[6].id = 9;}
-        else {ff7.slot[s].chars[6].id = 6;}
+        if (curchar ==6)
+        {
+            if (checked){ff7.slot[s].chars[6].id = 9;}
+            else {ff7.slot[s].chars[6].id = 6;}
+        }
+        if (curchar ==7)
+        {
+            if (checked){ff7.slot[s].chars[7].id = 10;}
+            else {ff7.slot[s].chars[7].id = 7;}
+        }
     }
-    if (curchar ==7)
-    {
-        if (checked){ff7.slot[s].chars[7].id = 10;}
-        else {ff7.slot[s].chars[7].id = 7;}
-    }
-//charupdate();
-}
 }
 void MainWindow::on_line_name_lostFocus()
 {
@@ -4130,9 +4111,6 @@ void MainWindow::on_action_show_test_data_toggled()
         ui->page_test->setEnabled(true);
         ui->tabWidget->setTabEnabled(8,1);
         testdata_refresh();
-        ui->btn_remove_all_items->setVisible(true);
-        ui->btn_remove_all_materia->setVisible(true);
-        ui->btn_remove_all_stolen->setVisible(true);
         ui->lbl_0x34->setVisible(true);
         ui->lbl_0x35->setVisible(true);
         ui->lbl_0x36->setVisible(true);
@@ -4151,9 +4129,6 @@ void MainWindow::on_action_show_test_data_toggled()
         this->setWindowTitle(tr("Black Chocobo"));
         ui->page_test->setEnabled(false);
         ui->tabWidget->setTabEnabled(8,0);
-        ui->btn_remove_all_items->setVisible(false);
-        ui->btn_remove_all_materia->setVisible(false);
-        ui->btn_remove_all_stolen->setVisible(false);
         ui->lbl_0x34->setVisible(false);
         ui->lbl_0x35->setVisible(false);
         ui->lbl_0x36->setVisible(false);
@@ -4173,44 +4148,23 @@ void MainWindow::on_action_Region_USA_triggered()
 {
     ui->action_Region_PAL->setChecked(false);
     ui->action_Region_JPN->setChecked(false);
+/*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
 }
 
 void MainWindow::on_action_Region_PAL_triggered()
 {
     ui->action_Region_USA->setChecked(false);
     ui->action_Region_JPN->setChecked(false);
+/*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
 }
 
 void MainWindow::on_action_Region_JPN_triggered()
 {
     ui->action_Region_PAL->setChecked(false);
     ui->action_Region_USA->setChecked(false);
+/*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
 }
 
-void MainWindow::on_action_Lang_en_triggered()
-{
-    ui->action_Lang_es->setChecked(false);
-    ui->action_Lang_fr->setChecked(false);
-    settings.setValue("lang","en");
-    QMessageBox::information(this,"Language Changed","You Must Restart For The Language to Change");
-}
-
-void MainWindow::on_action_Lang_es_triggered()
-{
-    ui->action_Lang_en->setChecked(false);
-    ui->action_Lang_fr->setChecked(false);
-    settings.setValue("lang","es");
-    QMessageBox::information(this,"Idioma Cambiado","Debe reiniciar Para el cambio de idioma");
-
-}
-
-void MainWindow::on_action_Lang_fr_triggered()
-{
-    ui->action_Lang_es->setChecked(false);
-    ui->action_Lang_en->setChecked(false);
-    settings.setValue("lang","fr");
-    QMessageBox::information(this,"Langue Modifiée","Vous Devez Redemarrer Pour Changer la Langue");
-}
 void MainWindow::testdata_refresh()
 {
 load=true;
@@ -4255,16 +4209,24 @@ if((ff7.slot[s].itemsmask_1)& (1<<7)){ui->cb_itemmask1_8->setChecked(Qt::Checked
 else{ui->cb_itemmask1_8->setChecked(Qt::Unchecked);}
 ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
 
-if((ff7.slot[s].materiacaves)& (1<<0)){ui->cb_materiacave_1->setChecked(Qt::Checked);}
-else{ui->cb_materiacave_1->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].materiacaves)& (1<<1)){ui->cb_materiacave_2->setChecked(Qt::Checked);}
-else{ui->cb_materiacave_2->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].materiacaves)& (1<<2)){ui->cb_materiacave_3->setChecked(Qt::Checked);}
-else{ui->cb_materiacave_3->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].materiacaves)& (1<<3)){ui->cb_materiacave_4->setChecked(Qt::Checked);}
-else{ui->cb_materiacave_4->setChecked(Qt::Unchecked);}
 
-
+if((ff7.slot[s].midgartrainflags)& (1<<0)){ui->cb_midgartrain_1->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_1->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].midgartrainflags)& (1<<1)){ui->cb_midgartrain_2->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_2->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].midgartrainflags)& (1<<2)){ui->cb_midgartrain_3->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_3->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].midgartrainflags)& (1<<3)){ui->cb_midgartrain_4->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_4->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].midgartrainflags)& (1<<4)){ui->cb_midgartrain_5->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_5->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].midgartrainflags)& (1<<5)){ui->cb_midgartrain_6->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_6->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].midgartrainflags)& (1<<6)){ui->cb_midgartrain_7->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_7->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].midgartrainflags)& (1<<7)){ui->cb_midgartrain_8->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_8->setChecked(Qt::Unchecked);}
+ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
 
 load=false;}//end of testdata_refresh()
 
@@ -4381,85 +4343,116 @@ void MainWindow::on_cb_reg_vinny_toggled(bool checked)
     }
 }
 
-void MainWindow::on_cb_itemmask1_1_toggled()
+void MainWindow::on_cb_itemmask1_1_toggled(bool checked)
 {
-    if(!load){calc_itemmask1();}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<0);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<0);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
+}
+void MainWindow::on_cb_itemmask1_2_toggled(bool checked)
+{
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<1);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<1);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
 }
 
-void MainWindow::on_cb_itemmask1_2_toggled()
+void MainWindow::on_cb_itemmask1_3_toggled(bool checked)
 {
-    if(!load){calc_itemmask1();}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<2);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<2);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
 }
 
-void MainWindow::on_cb_itemmask1_3_toggled()
+void MainWindow::on_cb_itemmask1_4_toggled(bool checked)
 {
-    if(!load){calc_itemmask1();}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<3);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<3);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
 }
 
-void MainWindow::on_cb_itemmask1_4_toggled()
+void MainWindow::on_cb_itemmask1_5_toggled(bool checked)
 {
-    if(!load){calc_itemmask1();}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<4);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<4);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
 }
 
-void MainWindow::on_cb_itemmask1_5_toggled()
+void MainWindow::on_cb_itemmask1_6_toggled(bool checked)
 {
-    if(!load){calc_itemmask1();}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<5);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<5);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
 }
 
-void MainWindow::on_cb_itemmask1_6_toggled()
+void MainWindow::on_cb_itemmask1_7_toggled(bool checked)
 {
-    if(!load){calc_itemmask1();}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<6);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<6);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
 }
 
-void MainWindow::on_cb_itemmask1_7_toggled()
+void MainWindow::on_cb_itemmask1_8_toggled(bool checked)
 {
-    if(!load){calc_itemmask1();}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<7);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<7);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
 }
 
-void MainWindow::on_cb_itemmask1_8_toggled()
+void MainWindow::on_cb_materiacave_1_toggled(bool checked)
 {
-    if(!load){calc_itemmask1();}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].materiacaves |= (1<<0);}
+        else{ff7.slot[s].materiacaves &= ~(1<<0);}
+    }
 }
-
-void MainWindow::calc_itemmask1()
+void MainWindow::on_cb_materiacave_2_toggled(bool checked)
 {
-quint8 temp=0;
-if(ui->cb_itemmask1_1->isChecked()){temp |= (1<<0);}
-if(ui->cb_itemmask1_2->isChecked()){temp |= (1<<1);}
-if(ui->cb_itemmask1_3->isChecked()){temp |= (1<<2);}
-if(ui->cb_itemmask1_4->isChecked()){temp |= (1<<3);}
-if(ui->cb_itemmask1_5->isChecked()){temp |= (1<<4);}
-if(ui->cb_itemmask1_6->isChecked()){temp |= (1<<5);}
-if(ui->cb_itemmask1_7->isChecked()){temp |= (1<<6);}
-if(ui->cb_itemmask1_8->isChecked()){temp |= (1<<7);}
-ff7.slot[s].itemsmask_1 = temp;
-testdata_refresh();
+    if(!load)
+    {
+        if(checked){ff7.slot[s].materiacaves |= (1<<1);}
+        else{ff7.slot[s].materiacaves &= ~(1<<1);}
+    }
 }
-void MainWindow::on_cb_materiacave_1_toggled()
+void MainWindow::on_cb_materiacave_3_toggled(bool checked)
 {
-    if(!load){calc_materiacaves();}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].materiacaves |= (1<<2);}
+        else{ff7.slot[s].materiacaves &= ~(1<<2);}
+    }
 }
-void MainWindow::on_cb_materiacave_2_toggled()
+void MainWindow::on_cb_materiacave_4_toggled(bool checked)
 {
-    if(!load){calc_materiacaves();}
-}
-void MainWindow::on_cb_materiacave_3_toggled()
-{
-    if(!load){calc_materiacaves();}
-}
-void MainWindow::on_cb_materiacave_4_toggled()
-{
-    if(!load){calc_materiacaves();}
-}
-void MainWindow::calc_materiacaves()
-{
-    quint8 temp=0;
-    if(ui->cb_materiacave_1->isChecked()){temp |= (1<<0);}
-    if(ui->cb_materiacave_2->isChecked()){temp |= (1<<1);}
-    if(ui->cb_materiacave_3->isChecked()){temp |= (1<<2);}
-    if(ui->cb_materiacave_4->isChecked()){temp |= (1<<3);}
-    ff7.slot[s].materiacaves = temp;
-    testdata_refresh();
+    if(!load)
+    {
+        if(checked){ff7.slot[s].materiacaves |= (1<<3);}
+        else{ff7.slot[s].materiacaves &= ~(1<<3);}
+    }
 }
 
 void MainWindow::on_cb_reg_yuffie_toggled(bool checked)
@@ -4469,5 +4462,94 @@ void MainWindow::on_cb_reg_yuffie_toggled(bool checked)
         if (checked){ff7.slot[s].reg_yuffie =0x6F;}
         else{ff7.slot[s].reg_yuffie =0x6E;}
         testdata_refresh();
+    }
+}
+
+void MainWindow::on_cb_yuffieforest_toggled(bool checked)
+{
+    if(!load)
+    {
+        if(checked){ff7.slot[s].yuffieforest |= (1<<0);}
+        else{ff7.slot[s].yuffieforest &= ~(1<<0);}
+    }
+}
+
+void MainWindow::on_cb_midgartrain_1_toggled(bool checked)
+{
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<0);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<0);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    }
+}
+
+void MainWindow::on_cb_midgartrain_2_toggled(bool checked)
+{
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<1);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<1);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    }
+}
+
+void MainWindow::on_cb_midgartrain_3_toggled(bool checked)
+{
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<2);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<2);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    }
+}
+
+void MainWindow::on_cb_midgartrain_4_toggled(bool checked)
+{
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<3);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<3);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    }
+}
+
+void MainWindow::on_cb_midgartrain_5_toggled(bool checked)
+{
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<4);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<4);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    }
+}
+
+void MainWindow::on_cb_midgartrain_6_toggled(bool checked)
+{
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<5);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<5);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    }
+}
+
+void MainWindow::on_cb_midgartrain_7_toggled(bool checked)
+{
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<6);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<6);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    }
+}
+
+void MainWindow::on_cb_midgartrain_8_toggled(bool checked)
+{
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<7);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<7);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
     }
 }

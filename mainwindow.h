@@ -43,26 +43,34 @@ public slots:
 private slots:
 
     //test functions to be removed....
-    void on_cb_reg_yuffie_toggled(bool checked);
-    void on_cb_materiacave_1_toggled();
-    void on_cb_materiacave_2_toggled();
-    void on_cb_materiacave_3_toggled();
-    void on_cb_materiacave_4_toggled();
-    void calc_materiacaves();
+    void on_cb_midgartrain_8_toggled(bool);
+    void on_cb_midgartrain_7_toggled(bool);
+    void on_cb_midgartrain_6_toggled(bool);
+    void on_cb_midgartrain_5_toggled(bool);
+    void on_cb_midgartrain_4_toggled(bool);
+    void on_cb_midgartrain_3_toggled(bool);
+    void on_cb_midgartrain_2_toggled(bool);
+    void on_cb_midgartrain_1_toggled(bool);
+    void on_cb_yuffieforest_toggled(bool);
+    void on_cb_reg_yuffie_toggled(bool);
+    void on_cb_materiacave_1_toggled(bool);
+    void on_cb_materiacave_2_toggled(bool);
+    void on_cb_materiacave_3_toggled(bool);
+    void on_cb_materiacave_4_toggled(bool);
 
-    void on_cb_itemmask1_1_toggled();
-    void on_cb_itemmask1_2_toggled();
-    void on_cb_itemmask1_3_toggled();
-    void on_cb_itemmask1_4_toggled();
-    void on_cb_itemmask1_5_toggled();
-    void on_cb_itemmask1_6_toggled();
-    void on_cb_itemmask1_7_toggled();
-    void on_cb_itemmask1_8_toggled();
-    void calc_itemmask1();
-    void on_cb_reg_vinny_toggled(bool checked);
-    void on_cb_tut_worldsave_toggled(bool checked);
-    void on_cb_tut_sub_toggled(bool checked);
-    void on_sb_u_weapon_hp_valueChanged(int );
+    void on_cb_itemmask1_1_toggled(bool);
+    void on_cb_itemmask1_2_toggled(bool);
+    void on_cb_itemmask1_3_toggled(bool);
+    void on_cb_itemmask1_4_toggled(bool);
+    void on_cb_itemmask1_5_toggled(bool);
+    void on_cb_itemmask1_6_toggled(bool);
+    void on_cb_itemmask1_7_toggled(bool);
+    void on_cb_itemmask1_8_toggled(bool);
+    //void calc_itemmask1();
+    void on_cb_reg_vinny_toggled(bool);
+    void on_cb_tut_worldsave_toggled(bool);
+    void on_cb_tut_sub_toggled(bool);
+    void on_sb_u_weapon_hp_valueChanged(int);
     void on_sb_coster_1_valueChanged(int);
     void on_sb_coster_2_valueChanged(int);
     void on_sb_coster_3_valueChanged(int);

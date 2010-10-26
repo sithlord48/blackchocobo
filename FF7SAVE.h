@@ -385,11 +385,15 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 z_19;                // [0x0CFE] UNKNOWN DATA
     qint8 chocobomask;          // [0x0CFF] Mask of occupied stables//genereated incorrectly ?
     quint8 chocoborn;           // [0x0D00] what stall a choco was just born in.
-    quint8 z_20[101];           // [0x0D01] UNKNOWN DATA
+    quint8 z_20[40];            // [0x0D01] UNKNOWN DATA
+    quint8 yuffieforest;        // [0x0D29] yuffie in forest if bit1 = 1 then yes.. others here too?
+    quint8 Z_21[60];            // [0x0D30] UNKNOWN DATA
     quint8 turtleflyers;        // [0x0D66] turtles paradice flyers.
     quint8 z_21[12];            // [0X0D67] UNKNOWN DATA
-    quint8 reg_yuffie;          // [0x0D73] yuffie regular? 0x6E=yes 0x6=no
-    quint8 z_22[80];            // [0x0D74] UNKNOWN DATA
+    quint8 reg_yuffie;          // [0x0D73] yuffie regular? 0x6F=yes 0x6E=no
+    quint8 z_22[15];            // [0x0D74] UNKNOWN DATA
+    quint8 midgartrainflags;    // [0x0D83] Midgar Train Flags.
+    quint8 Z_22[64];            // [0x0D84] UNKNOWN DATA
     FF7CHOCOBO chocobos[4];     // [0x0DC4] Chocobo slots
     quint8 z_23[32];            // [0x0E04] UNKNOWN DATA
     quint16 coster_2;           // [0x0E24] Coster 2nd place score
@@ -401,7 +405,7 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 z_26[31];            // [0x0EA5] UNKNOWN DATA
     quint8 chocobonames[6][6];  // [0x0EC4] <-OK Chocobo names
     quint16 chocostaminas[6];   // [0x0EE8] Chocobo staminas 12 bytes
-    quint8 reg_vinny;         // [0x0EF4] 0xFF for true 0xFB false (vincent a regualar?)
+    quint8 reg_vinny;           // [0x0EF4] 0xFF for true 0xFB false (vincent a regualar?)
     quint8 z_27[52];            // [0x0EF5] UNKNOWN DATA
     quint8 tut_save;            // [0x0F29] Have we seen save tut ? 0x3A true , 0x32 false
     quint8 z_28[346];           // [0x0F2A] UNKNOWN DATA
