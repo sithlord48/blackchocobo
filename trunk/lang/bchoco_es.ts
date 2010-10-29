@@ -1413,7 +1413,7 @@
     </message>
     <message>
         <source>Show Test Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar datos de test</translation>
     </message>
     <message>
         <source>Usa</source>
@@ -1429,19 +1429,19 @@
     </message>
     <message>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>Inglés</translation>
     </message>
     <message>
         <source>Spanish</source>
-        <translation type="unfinished"></translation>
+        <translation>Español</translation>
     </message>
     <message>
         <source>French</source>
-        <translation type="unfinished"></translation>
+        <translation>Francés</translation>
     </message>
     <message>
         <source>More Options....</source>
-        <translation type="unfinished"></translation>
+        <translation>Más Opciones....</translation>
     </message>
     <message>
         <source>Aeris House</source>
@@ -2389,11 +2389,11 @@
     </message>
     <message>
         <source>&amp;Options</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Opciones</translation>
     </message>
     <message>
         <source>Export Region</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportar Región</translation>
     </message>
     <message>
         <source>Lang</source>
@@ -2493,7 +2493,7 @@
     </message>
     <message>
         <source>Save &amp;Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Lugar de &amp;Guardado</translation>
     </message>
     <message>
         <source>Aerith&apos;s Death</source>
@@ -2505,7 +2505,7 @@
     </message>
     <message>
         <source>H&amp;elp</source>
-        <translation type="unfinished"></translation>
+        <translation>A&amp;yuda</translation>
     </message>
     <message>
         <source>Ctrl+O</source>
@@ -2603,7 +2603,7 @@ no es un Archivo de Guardado de FF7.</translation>
     </message>
     <message>
         <source>Black Chocobo - Testing Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Black Chocobo - Modo de Testeo</translation>
     </message>
     <message>
         <source>FF7 MC SaveGame(*.mcr),(*.mcd)</source>
@@ -2715,139 +2715,139 @@ no es un Archivo de Guardado de FF7.</translation>
     </message>
     <message>
         <source>Hour</source>
-        <translation type="unfinished"></translation>
+        <translation>Hora</translation>
     </message>
     <message>
         <source>Min</source>
-        <translation type="unfinished"></translation>
+        <translation>Min</translation>
     </message>
     <message>
         <source>Visible In PHS</source>
-        <translation type="unfinished"></translation>
+        <translation>Visible en PHS</translation>
     </message>
     <message>
         <source>Visible Menu Items</source>
-        <translation type="unfinished"></translation>
+        <translation>Items en el Menú Visibles</translation>
     </message>
     <message>
         <source>Equip</source>
-        <translation type="unfinished"></translation>
+        <translation>Equipamiento</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>Estado</translation>
     </message>
     <message>
         <source>Order</source>
-        <translation type="unfinished"></translation>
+        <translation>Orden</translation>
     </message>
     <message>
         <source>Limit</source>
-        <translation type="unfinished"></translation>
+        <translation>Límite</translation>
     </message>
     <message>
         <source>Config</source>
-        <translation type="unfinished"></translation>
+        <translation>Config</translation>
     </message>
     <message>
         <source>P.H.S</source>
-        <translation type="unfinished"></translation>
+        <translation>P.H.S</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar</translation>
     </message>
     <message>
         <source>Locked Menu Items</source>
-        <translation type="unfinished"></translation>
+        <translation>Items del Menú Bloqueados</translation>
     </message>
     <message>
         <source>Coaster Shooter High Scores</source>
-        <translation type="unfinished"></translation>
+        <translation>Puntuación Minijuego Montaña Rusa</translation>
     </message>
     <message>
         <source>1st</source>
-        <translation type="unfinished"></translation>
+        <translation>1º</translation>
     </message>
     <message>
         <source>2nd</source>
-        <translation type="unfinished"></translation>
+        <translation>2º</translation>
     </message>
     <message>
         <source>3rd</source>
-        <translation type="unfinished"></translation>
+        <translation>3º</translation>
     </message>
     <message>
         <source>Materia Caves Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>Cuevas de Materia Vacías</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation type="unfinished"></translation>
+        <translation>Gesto</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation type="unfinished"></translation>
+        <translation>PG &lt;-&gt; PM</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
-        <translation type="unfinished"></translation>
+        <translation>Cuadrimagia</translation>
     </message>
     <message>
         <source>KOTR</source>
-        <translation type="unfinished"></translation>
+        <translation>Caballeros de la Tabla Redonda</translation>
     </message>
     <message>
         <source>Test Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Datos de Test</translation>
     </message>
     <message>
         <source>Tutorials Seen</source>
-        <translation type="unfinished"></translation>
+        <translation>Tutoriales Vistos</translation>
     </message>
     <message>
         <source>Controling the Sub</source>
-        <translation type="unfinished"></translation>
+        <translation>Controlar el Submarino</translation>
     </message>
     <message>
         <source>Saving on the World Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar en el Mapa del Mundo</translation>
     </message>
     <message>
         <source>Battle Love Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Puntos de pelea de amor</translation>
     </message>
     <message>
         <source>Remove ALL</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar TODO</translation>
     </message>
     <message>
         <source>Items</source>
-        <translation type="unfinished"></translation>
+        <translation>Objetos</translation>
     </message>
     <message>
         <source>Materia </source>
-        <translation type="unfinished"></translation>
+        <translation>Materia</translation>
     </message>
     <message>
         <source>Stolen Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>Materia Robada</translation>
     </message>
     <message>
         <source>Ultimate Weapons Hp</source>
-        <translation type="unfinished"></translation>
+        <translation>PH de Arma</translation>
     </message>
     <message>
         <source>Secret Chars Unlocked</source>
-        <translation type="unfinished"></translation>
+        <translation>Pers Secretos Desbloqueados</translation>
     </message>
     <message>
         <source>0xBD4 (itemmasks_1)</source>
-        <translation type="unfinished"></translation>
+        <translation>0xBD4 (itemmasks_1)</translation>
     </message>
     <message>
         <source>0x01 Potion On MD8_3</source>
-        <translation type="unfinished"></translation>
+        <translation>0x01 Potion On MD8_3</translation>
     </message>
     <message>
         <source>0x02</source>
@@ -2879,78 +2879,78 @@ no es un Archivo de Guardado de FF7.</translation>
     </message>
     <message>
         <source>Mystery Ninja </source>
-        <translation type="unfinished"></translation>
+        <translation>Ninja Misterioso</translation>
     </message>
     <message>
         <source>Can Fight Yuffie in Forests</source>
-        <translation type="unfinished"></translation>
+        <translation>Se puede luchar contra Yuffie en los bosques</translation>
     </message>
     <message>
         <source>tutorials seen unchecked might force them  to be watched, tristate check box here ?</source>
-        <translation type="unfinished"></translation>
+        <translation>Desmarcar los tutoriales vistos puede forzar a que vuelvan a aparecer, tristate check box here ?</translation>
     </message>
     <message>
         <source>0xD83 Midgar Train Flags</source>
-        <translation type="unfinished"></translation>
+        <translation>0xD83 Banderas del Tren de Midgar</translation>
     </message>
     <message>
         <source>0x01 Talked to Bigs</source>
-        <translation type="unfinished"></translation>
+        <translation>0x01 Hablar a Biggs</translation>
     </message>
     <message>
         <source>0x02 Talked to Wedge twice</source>
-        <translation type="unfinished"></translation>
+        <translation>0x02 Hablar con Wedge dos veces</translation>
     </message>
     <message>
         <source>0x04 Talked to Jessie Before Looking At Map</source>
-        <translation type="unfinished"></translation>
+        <translation>0x04 Hablar con Jessie antes de mirar al mapa</translation>
     </message>
 </context>
 <context>
     <name>Options</name>
     <message>
         <source>More Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Más Opciones</translation>
     </message>
     <message>
         <source>Default Folder To Save Pc (.ff7) savegames</source>
-        <translation type="unfinished"></translation>
+        <translation>Carpeta por defecto para guardar partidas de PC (.ff7)</translation>
     </message>
     <message>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <source>Default Folder To Load FF7 Saves (all types) from</source>
-        <translation type="unfinished"></translation>
+        <translation>Carpeta por defecto para cargar las partidas de FF7 (todos los tipos)</translation>
     </message>
     <message>
         <source>Default Path To Export Pc Save Games To</source>
-        <translation type="unfinished"></translation>
+        <translation>Carpeta por defecto para exportar las partidas de PC</translation>
     </message>
     <message>
         <source>Select A Directory To Save FF7 PC Saves</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un directorio para guardar las partidas de FF7 PC</translation>
     </message>
     <message>
         <source>Select A Directory To Save mcd/mcr saves</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un directorio para guardar las partidas mcd/mcr</translation>
     </message>
     <message>
         <source>Select A Directory To Load FF7 PC Saves From</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un directorio para cargar las partidas de FF7 PC</translation>
     </message>
     <message>
         <source>Select A Directory To Export FF7 PC Saves</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un directorio para exportar las partidas de FF7 PC</translation>
     </message>
     <message>
         <source>Pc Save Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opciones de guardado PC</translation>
     </message>
     <message>
         <source>Default Folder To Save Virtual (.mcd/.mcr) savegames</source>
-        <translation type="unfinished"></translation>
+        <translation>Carpeta por defecto para guardar las partidas virtuales (.mcd/.mcr)</translation>
     </message>
 </context>
 <context>
@@ -3674,7 +3674,49 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600; text-decoration: underline;&quot;&gt;Ms. Sith&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt; - Causes shes awesome.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;	&lt;/span&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Chocobo Negro&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;	es un Editor de Archivos de Guardado de FF7. (PC + PSX)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	Escrito Por Sithlord48. usando Qt.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                                                                  	             Versión :: &lt;span style=&quot; font-weight:600;&quot;&gt;1.5&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Este programa es software libre: puedes distribuirlo y/o modificarlo&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; bajo los términos de la GNU General Public License publicados por&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; La Fundación de Software Libre, ya sea la versión 3 de la licencia o&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;(a tu elección) cualquier versión posterior.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Este programa está distribuido con la esperanza de que sea útil,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;pero sin NINGUNA GARANTÍA; ni siquiera la garantía implícita de&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;MERCANTIBILIDAD o APTITUD PARA UN PROPÓSITO ESPECÍFICO.  Ver la&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;GNU General Public License para más detalles.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Deberías haber recibido una copia de la GNU General Public License&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;junto a este programa.  Si no, mira &lt;/span&gt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; text-decoration: underline; color:#508ed8;&quot;&gt;&amp;lt;http://www.gnu.org/licenses/&amp;gt;&lt;/span&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                       &lt;/span&gt;  &lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Otros Programadores que han Ayudado:&lt;/span&gt;  &lt;span style=&quot; font-weight:600;&quot;&gt;                             &lt;/span&gt;	  &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;vegeta_ss4 - Funciones de carga/guardado y checksums internos para Psx&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                                       &lt;/span&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Traductores:&lt;/span&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Español - Eslava&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Francés - Myst6re&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                                         &lt;/span&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Testers:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                                   Jari | Eslava | Timu | Chocobo Girl&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600; text-decoration: underline;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                                    &lt;/span&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Agradecimientos Especiales:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Qhimm&lt;/span&gt; - Por facilitarme el código fuente de Jenova, este programa usa versiones modificadas de su estructura de guardado, listas de objetos/materia y funciones de conversión de strings. Su código me ha ahorrado mucho tiempo&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Dziugo&lt;/span&gt; - por el programa de checksum, y facilitarme la fuente en el foro de Qhimm.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Aali&lt;/span&gt; - por ayudarme a ver la luz con errores estúpidos.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;dhrosa&lt;/span&gt; - por ayudarme dándome una mejor comprensión de las funciones de Qt cuando los archivos de ayuda no eran suficientes.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Ms. Sith&lt;/span&gt; - Porque es maravillosa.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 </TS>
