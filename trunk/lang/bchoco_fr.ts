@@ -745,7 +745,7 @@
     </message>
     <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Set Replay Mission-dessus pour régler le jeu de retour de cette mission. This Will automatiquement configurer votre emplacement de sauvegarde et le disque # ainsi que Quest vars progression. Ne pas écraser votre COURANT SAVE, lorsque vous utilisez cette fonction, je ne peux pas promettre que vous serez en mesure de jouer de toute rediffusion jusqu&apos;à la fin de l&apos;game.Or C&apos;est Any Given Replay fonctionnera dans votre Save, ce domaine est en lourd de développement</translation>
     </message>
     <message>
         <source>Test Mode</source>
@@ -1117,11 +1117,11 @@
     </message>
     <message>
         <source>Independent</source>
-        <translation type="unfinished"></translation>
+        <translation>Indépendant</translation>
     </message>
     <message>
         <source>Support</source>
-        <translation type="unfinished"></translation>
+        <translation>Support</translation>
     </message>
     <message>
         <source>Command</source>
@@ -1129,7 +1129,7 @@
     </message>
     <message>
         <source>Type Filter</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Type Filtre</translation>
     </message>
     <message>
         <source>Clear Materia Slot</source>
@@ -1137,11 +1137,11 @@
     </message>
     <message>
         <source>Materia Skills</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Matéria Compétence</translation>
     </message>
     <message>
         <source>Materia Stat Changes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Matéria Statistique Transformer</translation>
     </message>
     <message>
         <source>Othe&amp;r</source>
@@ -1497,7 +1497,7 @@
     </message>
     <message>
         <source>Show Test Data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Montrer Donnée Test</translation>
     </message>
     <message>
         <source>Usa</source>
@@ -1513,11 +1513,11 @@
     </message>
     <message>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>Anglais</translation>
     </message>
     <message>
         <source>French</source>
-        <translation type="unfinished"></translation>
+        <translation>Français</translation>
     </message>
     <message>
         <source>More Options....</source>
@@ -1761,11 +1761,11 @@
     </message>
     <message>
         <source>&amp;Game Progress</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Jeux pro&amp;grès</translation>
     </message>
     <message>
         <source>Main Progress Var</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Var principaux progrès</translation>
     </message>
     <message>
         <source>Bombing Mission Progress</source>
@@ -1785,7 +1785,7 @@
     </message>
     <message>
         <source>Bombing Mission</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bombe Mission</translation>
     </message>
     <message>
         <source>Cloud&apos;s Flashback</source>
@@ -1797,11 +1797,11 @@
     </message>
     <message>
         <source>Replay Mission</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rejouer Mission</translation>
     </message>
     <message>
         <source>         INFO ON CURRENTLY SELECTED REPLAY MISSION</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">               INFO SUR actuellement sélectionné MISSION REPLAY</translation>
     </message>
     <message>
         <source>Game Op&amp;tions</source>
@@ -1821,7 +1821,7 @@
     </message>
     <message>
         <source>Export Region</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Région à l&apos;exportation</translation>
     </message>
     <message>
         <source>Export PSX Save</source>
@@ -2533,19 +2533,19 @@
     </message>
     <message>
         <source>Replay the bombing mission from right after you get off the first train, game might crash after the mission right before jessie talks to you about midgar.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Replay la mission de bombardement de la droite après vous descendez le premier train, jeu peut se bloquer après le droit mission avant que les pourparlers jessie à vous au sujet de Midgar.</translation>
     </message>
     <message>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent, if you wish to edit cloud or vincent after selecting this replay then change the box to the first(blank) entry and then when you have set those chars as you wish reselect this replay from the combobox.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cadre cette copie Cloud est de nuage jeunes (fente de Caitsith). stats sephiroth viendra directement de Vincent, si vous souhaitez modifier nuage ou Vincent après la sélection de cette relecture, puis modifiez la zone à la première (en blanc) d&apos;entrée et puis quand vous avez défini les caractères que vous souhaitez sélectionner à nouveau cette relecture de la liste déroulante.</translation>
     </message>
     <message>
         <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Rejouer la scène Date, votre emplacement sera mis à la station des remontées mécaniques, Parlez à l&apos;homme par le tramway de démarrer cette compétition, si vous cherchez pour une spéciale Date assurez-vous de définir vos points d&apos;amour aussi.</translation>
     </message>
     <message>
         <source>Replay the death of Aerith.This option Will remove Aerith from your PHS</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Replay la mort de l&apos;option Aerith.This Ostera Aerith de votre PHS</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 BAS* *.mcr *.mcd *.psv);;PC FF7 SaveGame (*.ff7);;PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv)</source>
@@ -2589,7 +2589,7 @@
     </message>
     <message>
         <source>Black Chocobo - Testing Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Black Chocobo - Mode Éprouvant</translation>
     </message>
     <message>
         <source>PSX FF7 SaveGame (*-S*)</source>
@@ -2667,39 +2667,39 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Hour</source>
-        <translation type="unfinished"></translation>
+        <translation>Heure</translation>
     </message>
     <message>
         <source>Min</source>
-        <translation type="unfinished"></translation>
+        <translation>Min</translation>
     </message>
     <message>
         <source>Visible In PHS</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Visible Dans PHS</translation>
     </message>
     <message>
         <source>Visible Menu Items</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">éléments de menu visible</translation>
     </message>
     <message>
         <source>Equip</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Équiper</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Statut</translation>
     </message>
     <message>
         <source>Order</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ordre</translation>
     </message>
     <message>
         <source>Limit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Limite</translation>
     </message>
     <message>
         <source>Config</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>P.H.S</source>
@@ -2707,39 +2707,39 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sauvegarder</translation>
     </message>
     <message>
         <source>Locked Menu Items</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Éléments de menu verrouillé</translation>
     </message>
     <message>
         <source>Coaster Shooter High Scores</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Partitions Shooter Coaster haut</translation>
     </message>
     <message>
         <source>1st</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1er</translation>
     </message>
     <message>
         <source>2nd</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2émé</translation>
     </message>
     <message>
         <source>3rd</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3émé</translation>
     </message>
     <message>
         <source>Materia Caves Empty</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grottes Materia Vide</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">mimer</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">HP &lt;-&gt; MP</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
@@ -2751,27 +2751,27 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Test Data</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Test Donnée</translation>
     </message>
     <message>
         <source>Tutorials Seen</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tutoriels Vu</translation>
     </message>
     <message>
         <source>Controling the Sub</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Contrôle du sous-mari</translation>
     </message>
     <message>
         <source>Saving on the World Map</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sauver sur la Carte du Monde</translation>
     </message>
     <message>
         <source>Battle Love Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Combat Points D&apos;affection</translation>
     </message>
     <message>
         <source>Remove ALL</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Supprimer Toutes</translation>
     </message>
     <message>
         <source>Items</source>
@@ -2779,19 +2779,19 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Materia </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Matéria</translation>
     </message>
     <message>
         <source>Stolen Materia</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Matérias volées</translation>
     </message>
     <message>
         <source>Ultimate Weapons Hp</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Armes Ultimate Hp</translation>
     </message>
     <message>
         <source>Secret Chars Unlocked</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Personnages secrets débloqué</translation>
     </message>
     <message>
         <source>0xBD4 (itemmasks_1)</source>
@@ -2799,7 +2799,7 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>0x01 Potion On MD8_3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">0x01 Potion sur MD8_3</translation>
     </message>
     <message>
         <source>0x02</source>
@@ -2831,31 +2831,31 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Mystery Ninja </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mystère Ninja</translation>
     </message>
     <message>
         <source>Can Fight Yuffie in Forests</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">lutte Yuffie dans les forêts</translation>
     </message>
     <message>
         <source>tutorials seen unchecked might force them  to be watched, tristate check box here ?</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">tutoriaux vu incontrôlée pourrait les forcer à être regardé, case à cocher tristate ici?</translation>
     </message>
     <message>
         <source>0xD83 Midgar Train Flags</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Drapeaux Train Midgar</translation>
     </message>
     <message>
         <source>0x01 Talked to Bigs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">0x01 Parlé à Biggs</translation>
     </message>
     <message>
         <source>0x02 Talked to Wedge twice</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Parlé à deux reprises Wedge</translation>
     </message>
     <message>
         <source>0x04 Talked to Jessie Before Looking At Map</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Parlé à Jessie avant de regarder la carte</translation>
     </message>
 </context>
 <context>
@@ -2866,7 +2866,7 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Default Folder To Save Pc (.ff7) savegames</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">dossier par défaut pour enregistrer Pc (. FF7) enregistrer les jeux</translation>
     </message>
     <message>
         <source>...</source>
@@ -2874,35 +2874,35 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Default Folder To Load FF7 Saves (all types) from</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">dossier par défaut pour charger Enregistre FF7 (tous types) à partir de</translation>
     </message>
     <message>
         <source>Default Path To Export Pc Save Games To</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Chemin d&apos;accès par défaut pour l&apos;exportation PC Jeux Enregistrer</translation>
     </message>
     <message>
         <source>Select A Directory To Save FF7 PC Saves</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sélectionnez un répertoire pour enregistrer FF7 PC Sauvegarde</translation>
     </message>
     <message>
         <source>Select A Directory To Save mcd/mcr saves</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sélectionnez un répertoire pour enregistrer mcd / MCR permet d&apos;économiser</translation>
     </message>
     <message>
         <source>Select A Directory To Load FF7 PC Saves From</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sélectionnez un répertoire à la charge FF7 PC évite de</translation>
     </message>
     <message>
         <source>Select A Directory To Export FF7 PC Saves</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sélectionnez un répertoire à exporter FF7 Enregistre PC</translation>
     </message>
     <message>
         <source>Pc Save Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PC Enregistrer les options</translation>
     </message>
     <message>
         <source>Default Folder To Save Virtual (.mcd/.mcr) savegames</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Default Folder To Save virtuel (.mcd / .mcr) sauvegardes</translation>
     </message>
 </context>
 <context>
