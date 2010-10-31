@@ -15623,9 +15623,24 @@
      <property name="title">
       <string>Export Region</string>
      </property>
+     <widget class="QMenu" name="menuPal">
+      <property name="title">
+       <string>Pal</string>
+      </property>
+      <addaction name="action_Region_PAL_Generic"/>
+      <addaction name="action_Region_PAL_German"/>
+      <addaction name="action_Region_PAL_Spanish"/>
+     </widget>
+     <widget class="QMenu" name="menuJpn">
+      <property name="title">
+       <string>Jpn</string>
+      </property>
+      <addaction name="action_Region_Jpn"/>
+      <addaction name="action_Region_Jpn_International"/>
+     </widget>
      <addaction name="action_Region_USA"/>
-     <addaction name="action_Region_PAL"/>
-     <addaction name="action_Region_JPN"/>
+     <addaction name="menuPal"/>
+     <addaction name="menuJpn"/>
     </widget>
     <widget class="QMenu" name="menuLang">
      <property name="enabled">
@@ -16044,28 +16059,6 @@
     <string>Usa</string>
    </property>
   </action>
-  <action name="action_Region_PAL">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Pal</string>
-   </property>
-  </action>
-  <action name="action_Region_JPN">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Jpn</string>
-   </property>
-  </action>
   <action name="action_Lang_en">
    <property name="checkable">
     <bool>true</bool>
@@ -16096,6 +16089,46 @@
   <action name="actionEdit_Paths">
    <property name="text">
     <string>More Options....</string>
+   </property>
+  </action>
+  <action name="action_Region_PAL_Generic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Pal_Generic</string>
+   </property>
+  </action>
+  <action name="action_Region_PAL_German">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Pal_German</string>
+   </property>
+  </action>
+  <action name="action_Region_PAL_Spanish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Pal_Spanish</string>
+   </property>
+  </action>
+  <action name="action_Region_Jpn">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Jpn</string>
+   </property>
+  </action>
+  <action name="action_Region_Jpn_International">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Jpn_International</string>
    </property>
   </action>
  </widget>
