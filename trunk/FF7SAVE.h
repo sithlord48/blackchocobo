@@ -345,7 +345,8 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 z_3[32];             // [0x0B5C] UNKNOWN DATA
     quint32 gil;		// [0x0B7C] Party gil
     quint32 time;		// [0x0B80] Total number of seconds played
-    quint8 z_4[16];             // [0x0B84] UNKNOWN DATA
+    quint8 timer[3];            // [0x0B84] countdown timer H:M:S
+    quint8 z_4[13];             // [0x0B87] UNKNOWN DATA
     quint16 mapid;		// [0x0B94] Current map
     quint16 locationid;		// [0x0B96] Current location
     quint8 z_5[2];              // [0x0B98] UNKNOWN DATA

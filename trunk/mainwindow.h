@@ -43,6 +43,9 @@ public slots:
 private slots:
 
     //test functions to be removed....
+    void on_sb_timer_time_sec_valueChanged(int );
+    void on_sb_timer_time_min_valueChanged(int );
+    void on_sb_timer_time_hour_valueChanged(int );
     void on_cb_midgartrain_8_toggled(bool);
     void on_cb_midgartrain_7_toggled(bool);
     void on_cb_midgartrain_6_toggled(bool);

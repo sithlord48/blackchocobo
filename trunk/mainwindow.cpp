@@ -4567,6 +4567,10 @@ void MainWindow::testdata_refresh()
 {
 load=true;
 
+ui->sb_timer_time_hour->setValue(ff7.slot[s].timer[0]);
+ui->sb_timer_time_min->setValue(ff7.slot[s].timer[1]);
+ui->sb_timer_time_sec->setValue(ff7.slot[s].timer[2]);
+
 ui->sb_b_love_aeris->setValue(ff7.slot[s].b_love.aeris);
 ui->sb_b_love_tifa->setValue(ff7.slot[s].b_love.tifa);
 ui->sb_b_love_yuffie->setValue(ff7.slot[s].b_love.yuffie);
@@ -4951,4 +4955,19 @@ void MainWindow::on_cb_midgartrain_8_toggled(bool checked)
         else{ff7.slot[s].midgartrainflags &= ~(1<<7);}
         ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
     }
+}
+
+void MainWindow::on_sb_timer_time_hour_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].timer[0] = value;}
+}
+
+void MainWindow::on_sb_timer_time_min_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].timer[1] = value;}
+}
+
+void MainWindow::on_sb_timer_time_sec_valueChanged(int value)
+{
+    if(!load){ff7.slot[s].timer[2] = value;}
 }
