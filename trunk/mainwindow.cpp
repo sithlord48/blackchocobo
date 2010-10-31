@@ -333,15 +333,17 @@ void MainWindow::on_actionSave_File_activated()
         {
             QByteArray mc_header_2;
             mc_header_2.append("MC");
-            for(int i=0; i<125;i++){mc_header_2.append(ff7.file_header_mc[i+2]);}
-            //calc xor byte..
             quint8 xor_byte = 0x00;
+            int index=2;
+            for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_mc[k+index]);}
+            xor_byte= 0x00;
             for(int x=0;x<127;x++){xor_byte^=mc_header_2[x];}
             //write xor byte..
             mc_header_2.append(xor_byte);
-            int index=128;
+            // thats a normal header
             for(int i=0;i<15;i++)
             {
+                //calc xor byte..
                 index= (128 +(128*i));
                 if(ff7.SG_Region_String[i].contains("00867") ||
                 ff7.SG_Region_String[i].contains("00869") ||
@@ -364,6 +366,12 @@ void MainWindow::on_actionSave_File_activated()
                     temp[9] = 0xFF;
                     mc_header_2.append(temp);
                     mc_header_2.append(ff7.SG_Region_String[i]);
+                    temp.resize(98);
+                    for(int f=0;f<98;f++){temp[f]=0x00;}
+                    mc_header_2.append(temp);
+                    xor_byte = 0x00;
+                    for(int x=0;x<127;x++){xor_byte^=mc_header_2[x+index];}
+                    mc_header_2.append(xor_byte);
                     switch(i)
                     {
                     case 0:
@@ -474,18 +482,19 @@ void MainWindow::on_actionSave_File_activated()
 
                     }
                 } // write string if found
-                else{for(int j=0;j<29;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}} // else write what ever is in the header.
-                index+=29; //we wrote 19 either way so index ++
-                for(int j=0;j<98;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}
-                xor_byte=0;
-                index+=98;
-                for(int x=0;x<127;x++){xor_byte^=mc_header_2[x+index];}
-                //write xor byte..
-                mc_header_2.append(xor_byte);
+
+                else{for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}} // else write what ever is in the header.
+               // index+=29; //we wrote 19 either way so index ++
+               // for(int j=0;j<98;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}
+               // xor_byte=0;
+               // index+=98;
+               // for(int x=0;x<127;x++){xor_byte^=mc_header_2[x+index];}
+               // write xor byte..
+               // mc_header_2.append(xor_byte);
 
             }
-            index=2058;
-            for(int i=0;i<6134;i++){mc_header_2.append(ff7.file_header_mc[index+i]);}// fill the remainder
+            index=2048;
+            for(int i=0;i<6143;i++){mc_header_2.append(ff7.file_header_mc[index+i]);}// fill the remainder
             memcpy(&ff7.file_header_mc,mc_header_2,0x2000);
 
 
