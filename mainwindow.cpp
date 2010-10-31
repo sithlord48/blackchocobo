@@ -4577,13 +4577,15 @@ ui->sb_b_love_yuffie->setValue(ff7.slot[s].b_love.yuffie);
 ui->sb_b_love_barret->setValue(ff7.slot[s].b_love.barret);
 ui->sb_u_weapon_hp->setValue(ff7.slot[s].u_weapon_hp[0] |(ff7.slot[s].u_weapon_hp[1] << 8) | (ff7.slot[s].u_weapon_hp[2] << 16));
 
-if(ff7.slot[s].tut_sub == 0x2F){ui->cb_tut_sub->setChecked(Qt::Checked);}
-else if(ff7.slot[s].tut_sub ==0x2B){ui->cb_tut_sub->setChecked(Qt::Unchecked);}
+if(ff7.slot[s].tut_sub == 0x2F){ui->cb_tut_sub->setCheckState(Qt::Checked);}
+else if(ff7.slot[s].tut_sub ==0x2B){ui->cb_tut_sub->setCheckState(Qt::PartiallyChecked);}
+else{ui->cb_tut_sub->setCheckState(Qt::Unchecked);}
 ui->lcdNumber_6->display(ff7.slot[s].tut_sub);
 
 
-if(ff7.slot[s].tut_save == 0x3A){ui->cb_tut_worldsave->setChecked(Qt::Checked);}
-else if(ff7.slot[s].tut_save ==0x32){ui->cb_tut_worldsave->setChecked(Qt::Unchecked);}
+if(ff7.slot[s].tut_save == 0x3A){ui->cb_tut_worldsave->setCheckState(Qt::Checked);}
+else if(ff7.slot[s].tut_save ==0x32){ui->cb_tut_worldsave->setCheckState(Qt::PartiallyChecked);}
+else{ui->cb_tut_worldsave->setCheckState(Qt::Unchecked);}
 ui->lcdNumber_7->display(ff7.slot[s].tut_save);
 
 if(ff7.slot[s].reg_vinny == 0xFF){ui->cb_reg_vinny->setChecked(Qt::Checked);}
@@ -4713,26 +4715,6 @@ void MainWindow::on_sb_u_weapon_hp_valueChanged(int value)
     ff7.slot[s].u_weapon_hp[1] = b;
     ff7.slot[s].u_weapon_hp[2] = c;
     load=false;
-    }
-}
-
-void MainWindow::on_cb_tut_sub_toggled(bool checked)
-{
-    if(!load)
-    {
-        if (checked){ff7.slot[s].tut_sub =0x2F;}
-        else{ff7.slot[s].tut_sub =0x2B;}
-        testdata_refresh();
-    }
-}
-
-void MainWindow::on_cb_tut_worldsave_toggled(bool checked)
-{
-    if(!load)
-    {
-        if (checked){ff7.slot[s].tut_save =0x3A;}
-        else{ff7.slot[s].tut_save =0x32;}
-        testdata_refresh();
     }
 }
 
@@ -4970,4 +4952,26 @@ void MainWindow::on_sb_timer_time_min_valueChanged(int value)
 void MainWindow::on_sb_timer_time_sec_valueChanged(int value)
 {
     if(!load){ff7.slot[s].timer[2] = value;}
+}
+
+void MainWindow::on_cb_tut_sub_stateChanged(int value)
+{
+    if(!load)
+    {
+        if (value == 0){ff7.slot[s].tut_sub =0x00;}
+    else if(value ==1){ff7.slot[s].tut_sub =0x2B;}
+    else if(value ==2){ff7.slot[s].tut_sub=0x2F;}
+    testdata_refresh();
+    }
+}
+
+void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
+{
+    if(!load)
+    {
+        if (value == 0){ff7.slot[s].tut_save =0x00;}
+    else if(value ==1){ff7.slot[s].tut_save =0x32;}
+    else if(value ==2){ff7.slot[s].tut_save=0x3A;}
+    testdata_refresh();
+    }
 }
