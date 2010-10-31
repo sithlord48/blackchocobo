@@ -342,7 +342,9 @@ void MainWindow::on_actionSave_File_activated()
                 index+=19; //we wrote 19 either way so index ++
                 for(int j=0;j<109;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}
             }
-            memcpy(ff7.file_header_mc,mc_header_2,0x2000);
+            index=2058;
+            for(int i=0;i<6134;i++){mc_header_2.append(ff7.file_header_mc[index+i]);}// fill the remainder
+            memcpy(&ff7.file_header_mc,mc_header_2,0x2000);
             saveFileFull(fileName);
         }
     }
