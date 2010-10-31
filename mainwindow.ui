@@ -15465,6 +15465,19 @@
        </item>
       </layout>
      </widget>
+     <widget class="QLabel" name="lbl_sg_region">
+      <property name="geometry">
+       <rect>
+        <x>25</x>
+        <y>390</y>
+        <width>231</width>
+        <height>26</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QFrame" name="frame">
@@ -15605,7 +15618,7 @@
     </property>
     <widget class="QMenu" name="menuSet_Export_Region">
      <property name="enabled">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="title">
       <string>Export Region</string>
@@ -16025,7 +16038,7 @@
     <bool>true</bool>
    </property>
    <property name="checked">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>Usa</string>
@@ -16036,7 +16049,7 @@
     <bool>true</bool>
    </property>
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="text">
     <string>Pal</string>
@@ -16047,7 +16060,7 @@
     <bool>true</bool>
    </property>
    <property name="enabled">
-    <bool>false</bool>
+    <bool>true</bool>
    </property>
    <property name="text">
     <string>Jpn</string>

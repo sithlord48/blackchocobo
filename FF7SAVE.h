@@ -461,7 +461,7 @@ struct FF7 {				// [0xFE55]
         QString SG_TYPE;
         quint8 * file_headerp;              //pointer to file header
         quint8 * file_footerp;              //pointer to file footer
-
+        QString SG_Region_String[15];       // Store Region String one per slot..
 };
 
 

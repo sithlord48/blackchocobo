@@ -28,6 +28,7 @@ bool load =false; //used for checking if data is initial load (to block some ove
 extern FF7 ff7; // our save file struct
 extern int s; //keeps track of our slot globally
 FF7SLOT bufferslot; // a buffer slot to keep copied slots in
+QString buffer_region; //keep track of the region of any copied slots.
 char chFF7[256];  // char arrary for converting to ff7 chars , so far not used.
 int curchar; //keeps track of current character displayed
 int mslotsel = 0; //keeps track of materia slot on char selected
@@ -171,6 +172,7 @@ void MainWindow::loadFileFull(const QString &fileName)
        ff7.file_headerp     = ff7.file_header_mc;           //pointer to mc file header
        ff7.file_footerp     = ff7.file_footer_mc;           //pointer to mc file footer
        ff7.savetype         = 3;
+
     }
 
     else if(file_size == FF7_PSV_SAVE_GAME_SIZE)
@@ -226,12 +228,28 @@ void MainWindow::loadFileFull(const QString &fileName)
         memcpy(ff7.hf[i].sl_footer,ff7file.mid((ff7.SG_SLOT_SIZE*i)+ (ff7.SG_HEADER+ff7.SG_SLOT_HEADER+ff7.SG_DATA_SIZE),ff7.SG_SLOT_FOOTER),ff7.SG_SLOT_FOOTER);// collect slot footer (0x00) bytes (PC), (0x0D0C) bytes (PSX), (0x0D0C) bytes (MC)
     }
     /*~~~~~~~End Load~~~~~~~~~~~~~~*/
-    if (ff7.savetype == 1 || ff7.savetype == 3 || ff7.savetype ==5)
+    if (ff7.savetype == 1 || ff7.savetype ==5)
     {
         SlotSelect slotselect;
         slotselect.exec();
     }
+
+    else if (ff7.savetype == 3)
+    {
+        QByteArray mc_header;
+        mc_header = ff7file.mid(0,0x2000);
+        int index=0;
+        for(int i=0; i<15;i++)
+        {
+            index = (128*i) +138;
+            ff7.SG_Region_String[i] = QString(mc_header.mid(index,19));
+        }
+        SlotSelect slotselect;
+        slotselect.exec();
+    }
+
     else
+
     {
         s=0;
         for(int i=1;i<14;i++){clearslot(i);}
@@ -312,7 +330,21 @@ void MainWindow::on_actionSave_File_activated()
         tr("Save Final Fantasy 7 MC SaveGame"), settings.value("save_emu_path").toString(),
         tr("FF7 MC SaveGame(*.mcr *.mcd)"));
         if (!fileName.isEmpty())
+        {
+            QByteArray mc_header_2;
+            for(int i=0; i<138;i++){mc_header_2.append(ff7.file_header_mc[i]);}
+            int index=0;
+            for(int i=0;i<15;i++)
+            {
+                index= (138 +(128*i));
+                if(!ff7.SG_Region_String[i].isEmpty()){mc_header_2.append(ff7.SG_Region_String[i]);} // write string if found
+                else{for(int j=0;j<19;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}} // else write what ever is in the header.
+                index+=19; //we wrote 19 either way so index ++
+                for(int j=0;j<109;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}
+            }
+            memcpy(ff7.file_header_mc,mc_header_2,0x2000);
             saveFileFull(fileName);
+        }
     }
     else if(ff7.savetype==4)
     {
@@ -506,12 +538,33 @@ void MainWindow::on_action_Lang_fr_triggered()
 void MainWindow::on_actionCopy_Slot_activated()
 {
     memcpy(&bufferslot,&ff7.slot[s],0x10f4);
+    buffer_region = ff7.SG_Region_String[s];
 }
 
 
 void MainWindow::on_actionPaste_Slot_activated()
 {
     memcpy(&ff7.slot[s],&bufferslot,0x10f4);
+    ff7.SG_Region_String[s] = buffer_region;
+    ff7.SG_Region_String[s].chop(2);
+    switch(s)
+    {
+    case 0:ff7.SG_Region_String[s].append("01"); break;
+    case 1:ff7.SG_Region_String[s].append("02"); break;
+    case 2:ff7.SG_Region_String[s].append("03"); break;
+    case 3:ff7.SG_Region_String[s].append("04"); break;
+    case 4:ff7.SG_Region_String[s].append("05"); break;
+    case 5:ff7.SG_Region_String[s].append("06"); break;
+    case 6:ff7.SG_Region_String[s].append("07"); break;
+    case 7:ff7.SG_Region_String[s].append("08"); break;
+    case 8:ff7.SG_Region_String[s].append("09"); break;
+    case 9:ff7.SG_Region_String[s].append("10"); break;
+    case 10:ff7.SG_Region_String[s].append("11"); break;
+    case 11:ff7.SG_Region_String[s].append("12"); break;
+    case 12:ff7.SG_Region_String[s].append("13"); break;
+    case 13:ff7.SG_Region_String[s].append("14"); break;
+    case 14:ff7.SG_Region_String[s].append("15"); break;
+    }
     guirefresh();
 }
 
@@ -1109,6 +1162,15 @@ else if (ff7.savetype ==3)
     ui->actionSlot_13->setEnabled(1);
     ui->actionSlot_14->setEnabled(1);
     ui->actionSlot_15->setEnabled(1);
+    ui->action_Region_JPN->setChecked(Qt::Unchecked);
+    ui->action_Region_PAL->setChecked(Qt::Unchecked);
+    ui->action_Region_USA->setChecked(Qt::Unchecked);
+    if(ff7.SG_Region_String[s].startsWith("BASCUS-94163")){ui->action_Region_USA->setChecked(Qt::Checked);}
+    else if (ff7.SG_Region_String[s].startsWith("BESCES-00867")){ui->action_Region_PAL->setChecked(Qt::Checked);}
+    else if (ff7.SG_Region_String[s].startsWith("BISLPS-00700")){ui->action_Region_JPN->setChecked(Qt::Checked);}
+    else {/*QMessageBox::information(this,"Region Detect Error","Unknow Region String");*/}
+    ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+
 
 }
 else if (ff7.savetype ==4)
@@ -4146,28 +4208,96 @@ void MainWindow::on_action_show_test_data_toggled()
 
 void MainWindow::on_action_Region_USA_triggered()
 {
+    if(!load)
+    {
+        /*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
+        switch(s)
+        {
+        case 0:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01"; break;
+        case 1:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S02"; break;
+        case 2:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S03"; break;
+        case 3:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S04"; break;
+        case 4:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S05"; break;
+        case 5:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S06"; break;
+        case 6:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S07"; break;
+        case 7:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S08"; break;
+        case 8:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S09"; break;
+        case 9:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S10"; break;
+        case 10:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S11"; break;
+        case 11:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S12"; break;
+        case 12:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S13"; break;
+        case 13:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S14"; break;
+        case 14:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S15"; break;
+        }
     ui->action_Region_PAL->setChecked(false);
     ui->action_Region_JPN->setChecked(false);
-/*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
+    ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+    }
+
 }
 
 void MainWindow::on_action_Region_PAL_triggered()
 {
+    if(!load)
+    {
+        /*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
+        switch(s)
+        {
+        case 0:ff7.SG_Region_String[s] = "BESCES-00867FF7-S01"; break;
+        case 1:ff7.SG_Region_String[s] = "BESCES-00867FF7-S02"; break;
+        case 2:ff7.SG_Region_String[s] = "BESCES-00867FF7-S03"; break;
+        case 3:ff7.SG_Region_String[s] = "BESCES-00867FF7-S04"; break;
+        case 4:ff7.SG_Region_String[s] = "BESCES-00867FF7-S05"; break;
+        case 5:ff7.SG_Region_String[s] = "BESCES-00867FF7-S06"; break;
+        case 6:ff7.SG_Region_String[s] = "BESCES-00867FF7-S07"; break;
+        case 7:ff7.SG_Region_String[s] = "BESCES-00867FF7-S08"; break;
+        case 8:ff7.SG_Region_String[s] = "BESCES-00867FF7-S09"; break;
+        case 9:ff7.SG_Region_String[s] = "BESCES-00867FF7-S10"; break;
+        case 10:ff7.SG_Region_String[s] = "BESCES-00867FF7-S11"; break;
+        case 11:ff7.SG_Region_String[s] = "BESCES-00867FF7-S12"; break;
+        case 12:ff7.SG_Region_String[s] = "BESCES-00867FF7-S13"; break;
+        case 13:ff7.SG_Region_String[s] = "BESCES-00867FF7-S14"; break;
+        case 14:ff7.SG_Region_String[s] = "BESCES-00867FF7-S15"; break;
+        }
     ui->action_Region_USA->setChecked(false);
     ui->action_Region_JPN->setChecked(false);
-/*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
+    ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+    }
 }
 
 void MainWindow::on_action_Region_JPN_triggered()
 {
+    if(!load)
+    {
+    /*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
+        switch(s)
+        {
+        case 0:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01"; break;
+        case 1:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S02"; break;
+        case 2:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S03"; break;
+        case 3:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S04"; break;
+        case 4:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S05"; break;
+        case 5:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S06"; break;
+        case 6:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S07"; break;
+        case 7:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S08"; break;
+        case 8:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S09"; break;
+        case 9:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S10"; break;
+        case 10:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S11"; break;
+        case 11:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S12"; break;
+        case 12:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S13"; break;
+        case 13:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S14"; break;
+        case 14:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S15"; break;
+        }
     ui->action_Region_PAL->setChecked(false);
     ui->action_Region_USA->setChecked(false);
-/*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
+    ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+    }
 }
 
 void MainWindow::testdata_refresh()
 {
 load=true;
+
 ui->sb_b_love_aeris->setValue(ff7.slot[s].b_love.aeris);
 ui->sb_b_love_tifa->setValue(ff7.slot[s].b_love.tifa);
 ui->sb_b_love_yuffie->setValue(ff7.slot[s].b_love.yuffie);
