@@ -82,7 +82,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>8</number>
+     <number>0</number>
     </property>
     <property name="usesScrollButtons">
      <bool>true</bool>
@@ -2735,8 +2735,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>423</width>
-         <height>414</height>
+         <width>94</width>
+         <height>24</height>
         </rect>
        </property>
        <attribute name="label">
