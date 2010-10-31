@@ -43,6 +43,9 @@ public slots:
 private slots:
 
     //test functions to be removed....
+    void on_cb_tut_worldsave_stateChanged(int );
+    void on_cb_tut_sub_stateChanged(int );
+
     void on_sb_timer_time_sec_valueChanged(int );
     void on_sb_timer_time_min_valueChanged(int );
     void on_sb_timer_time_hour_valueChanged(int );
@@ -69,10 +72,9 @@ private slots:
     void on_cb_itemmask1_6_toggled(bool);
     void on_cb_itemmask1_7_toggled(bool);
     void on_cb_itemmask1_8_toggled(bool);
-    //void calc_itemmask1();
+
     void on_cb_reg_vinny_toggled(bool);
-    void on_cb_tut_worldsave_toggled(bool);
-    void on_cb_tut_sub_toggled(bool);
+
     void on_sb_u_weapon_hp_valueChanged(int);
     void on_sb_coster_1_valueChanged(int);
     void on_sb_coster_2_valueChanged(int);

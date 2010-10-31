@@ -2735,8 +2735,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>94</width>
-         <height>24</height>
+         <width>100</width>
+         <height>30</height>
         </rect>
        </property>
        <attribute name="label">
@@ -14798,8 +14798,8 @@
       </property>
       <property name="geometry">
        <rect>
-        <x>230</x>
-        <y>5</y>
+        <x>235</x>
+        <y>10</y>
         <width>251</width>
         <height>87</height>
        </rect>
@@ -14814,6 +14814,9 @@
           <widget class="QCheckBox" name="cb_tut_sub">
            <property name="text">
             <string>Controling the Sub</string>
+           </property>
+           <property name="tristate">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -14844,6 +14847,9 @@
            </property>
            <property name="text">
             <string>Saving on the World Map</string>
+           </property>
+           <property name="tristate">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -15151,16 +15157,22 @@
      <widget class="QGroupBox" name="groupBox_30">
       <property name="geometry">
        <rect>
-        <x>570</x>
-        <y>355</y>
-        <width>149</width>
-        <height>118</height>
+        <x>160</x>
+        <y>370</y>
+        <width>151</width>
+        <height>106</height>
        </rect>
       </property>
       <property name="title">
        <string>Remove ALL</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_32">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="margin">
+        <number>2</number>
+       </property>
        <item>
         <widget class="QPushButton" name="btn_remove_all_items">
          <property name="enabled">
@@ -15190,13 +15202,16 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>565</x>
-        <y>105</y>
-        <width>136</width>
-        <height>46</height>
+        <x>5</x>
+        <y>370</y>
+        <width>146</width>
+        <height>41</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_33">
+       <property name="spacing">
+        <number>0</number>
+       </property>
        <item>
         <widget class="QLabel" name="label_186">
          <property name="text">
@@ -15219,16 +15234,22 @@
      <widget class="QGroupBox" name="groupBox_31">
       <property name="geometry">
        <rect>
-        <x>550</x>
-        <y>10</y>
-        <width>157</width>
-        <height>86</height>
+        <x>5</x>
+        <y>415</y>
+        <width>146</width>
+        <height>61</height>
        </rect>
       </property>
       <property name="title">
        <string>Secret Chars Unlocked</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_34">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_76">
          <item>
@@ -15385,13 +15406,13 @@
       <property name="geometry">
        <rect>
         <x>235</x>
-        <y>100</y>
+        <y>95</y>
         <width>251</width>
-        <height>36</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="text">
-       <string>tutorials seen unchecked might force them  to be watched, tristate check box here ?</string>
+       <string>When Box is Partally Checked (&quot;-&quot;)it will trigger shting that tutoral</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>
@@ -15491,7 +15512,7 @@
       <property name="geometry">
        <rect>
         <x>495</x>
-        <y>155</y>
+        <y>15</y>
         <width>216</width>
         <height>66</height>
        </rect>
