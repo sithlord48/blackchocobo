@@ -2735,8 +2735,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>100</width>
-         <height>30</height>
+         <width>94</width>
+         <height>24</height>
         </rect>
        </property>
        <attribute name="label">
@@ -15412,7 +15412,7 @@
        </rect>
       </property>
       <property name="text">
-       <string>When Box is Partally Checked (&quot;-&quot;)it will trigger shting that tutoral</string>
+       <string>When Box is Partally Checked (&quot;-&quot;)it will trigger showing that tutorial</string>
       </property>
       <property name="wordWrap">
        <bool>true</bool>

@@ -2600,10 +2600,6 @@ isn&apos;t a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>When Box is Partally Checked (&quot;-&quot;)it will trigger shting that tutoral</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Countdown Timer</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2621,6 +2617,10 @@ isn&apos;t a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Jpn_International</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When Box is Partally Checked (&quot;-&quot;)it will trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

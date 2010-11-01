@@ -2860,10 +2860,6 @@ n&apos;est pas une sauvegarde de FF7.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>When Box is Partally Checked (&quot;-&quot;)it will trigger shting that tutoral</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Countdown Timer</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2881,6 +2877,10 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Jpn_International</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When Box is Partally Checked (&quot;-&quot;)it will trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
