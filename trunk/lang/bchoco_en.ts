@@ -2580,10 +2580,6 @@ isn&apos;t a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>tutorials seen unchecked might force them  to be watched, tristate check box here ?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>0xD83 Midgar Train Flags</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2597,6 +2593,34 @@ isn&apos;t a FF7 SaveGame.</source>
     </message>
     <message>
         <source>0x04 Talked to Jessie Before Looking At Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Region String</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When Box is Partally Checked (&quot;-&quot;)it will trigger shting that tutoral</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Countdown Timer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pal_Generic</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pal_German</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pal_Spanish</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Jpn_International</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
