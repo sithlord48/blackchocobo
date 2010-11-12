@@ -228,16 +228,20 @@ void MainWindow::loadFileFull(const QString &fileName)
         memcpy(ff7.hf[i].sl_footer,ff7file.mid((ff7.SG_SLOT_SIZE*i)+ (ff7.SG_HEADER+ff7.SG_SLOT_HEADER+ff7.SG_DATA_SIZE),ff7.SG_SLOT_FOOTER),ff7.SG_SLOT_FOOTER);// collect slot footer (0x00) bytes (PC), (0x0D0C) bytes (PSX), (0x0D0C) bytes (MC)
     }
     /*~~~~~~~End Load~~~~~~~~~~~~~~*/
-    if (ff7.savetype == 1 || ff7.savetype ==5)
+    if (ff7.savetype == 1)// || ff7.savetype ==5)
     {
         SlotSelect slotselect;
         slotselect.exec();
     }
 
-    else if (ff7.savetype == 3)
+    else if (ff7.savetype == 3 || ff7.savetype ==5)
     {
         QByteArray mc_header;
-        mc_header = ff7file.mid(0,0x2000);
+
+        int diff = 0;
+        if(ff7.savetype ==5){diff = 0x80;} // psp save. start after the "extra" vmp header info
+
+        mc_header = ff7file.mid(diff,ff7.SG_HEADER);
         int index=0;
         for(int i=0; i<15;i++)
         {
@@ -331,6 +335,7 @@ void MainWindow::on_actionSave_File_activated()
         tr("FF7 MC SaveGame(*.mcr *.mcd)"));
         if (!fileName.isEmpty())
         {
+
             QByteArray mc_header_2;
             mc_header_2.append("MC");
             quint8 xor_byte = 0x00;
@@ -345,7 +350,7 @@ void MainWindow::on_actionSave_File_activated()
             {
                 //calc xor byte..
                 index= (128 +(128*i));
-                if(ff7.SG_Region_String[i].contains("00867") ||
+             if(ff7.SG_Region_String[i].contains("00867") ||
                 ff7.SG_Region_String[i].contains("00869") ||
                 ff7.SG_Region_String[i].contains("00900") ||
                 ff7.SG_Region_String[i].contains("94163") ||
@@ -484,13 +489,6 @@ void MainWindow::on_actionSave_File_activated()
                 } // write string if found
 
                 else{for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}} // else write what ever is in the header.
-               // index+=29; //we wrote 19 either way so index ++
-               // for(int j=0;j<98;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}
-               // xor_byte=0;
-               // index+=98;
-               // for(int x=0;x<127;x++){xor_byte^=mc_header_2[x+index];}
-               // write xor byte..
-               // mc_header_2.append(xor_byte);
 
             }
             index=2048;
@@ -515,7 +513,173 @@ void MainWindow::on_actionSave_File_activated()
         tr("Save Final Fantasy 7  PSP SaveGame"), "",
         tr("FF7 PSP SaveGame(*.vmp)"));
         if (!fileName.isEmpty())
+        {
+            QByteArray mc_header_2;
+            for(int i=0; i<0x80; i++){mc_header_2.append(ff7.file_header_psp[i]);}
+            quint8 xor_byte = 0x00;
+            int index=0x82;
+            mc_header_2.append("MC");
+            for(int k=2; k<125;k++){mc_header_2.append(ff7.file_header_psp[k+index]);}
+            xor_byte= 0x00;
+            for(int x=128;x<255;x++){xor_byte^=mc_header_2[x];}
+            //write xor byte..
+            mc_header_2.append(xor_byte);
+            // thats a normal header
+            for(int i=0;i<15;i++)
+            {
+                //calc xor byte..
+                index= (128 +(128*i))+ (0x80);
+             if(ff7.SG_Region_String[i].contains("00867") ||
+                ff7.SG_Region_String[i].contains("00869") ||
+                ff7.SG_Region_String[i].contains("00900") ||
+                ff7.SG_Region_String[i].contains("94163") ||
+                ff7.SG_Region_String[i].contains("00700") ||
+                ff7.SG_Region_String[i].contains("01057"))
+                {
+                    QByteArray temp;
+                    temp.resize(10);
+                    temp[0] = 0x51;
+                    temp[1] = 0x00;
+                    temp[2] = 0x00;
+                    temp[3] = 0x00;
+                    temp[4] = 0x00;
+                    temp[5] = 0x20;
+                    temp[6] = 0x00;
+                    temp[7] = 0x00;
+                    temp[8] = 0xFF;
+                    temp[9] = 0xFF;
+                    mc_header_2.append(temp);
+                    mc_header_2.append(ff7.SG_Region_String[i]);
+                    temp.resize(98);
+                    for(int f=0;f<98;f++){temp[f]=0x00;}
+                    mc_header_2.append(temp);
+                    xor_byte = 0x00;
+                    for(int x=0;x<127;x++){xor_byte^=mc_header_2[x+index];}
+                    mc_header_2.append(xor_byte);
+                    switch(i)
+                    {
+                    case 0:
+                        for(int P=0;P<512;P++)
+                        {
+                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
+                            else{ff7.hf[i].sl_header[P]= 0x00;}
+                        }
+                        break;
+                    case 1:
+                        for(int P=0;P<512;P++)
+                        {
+                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S02[P];}
+                            else{ff7.hf[i].sl_header[P]= 0x00;}
+                        }
+                        break;
+                    case 2:
+                        for(int P=0;P<512;P++)
+                        {
+                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S03[P];}
+                            else{ff7.hf[i].sl_header[P]= 0x00;}
+                        }
+                        break;
+                    case 3:
+                        for(int P=0;P<512;P++)
+                        {
+                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S04[P];}
+                            else{ff7.hf[i].sl_header[P]= 0x00;}
+                        }
+                        break;
+                    case 4:
+                        for(int P=0;P<512;P++)
+                        {
+                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S05[P];}
+                            else{ff7.hf[i].sl_header[P]= 0x00;}
+                        }
+                        break;
+                    case 5:
+                        for(int P=0;P<512;P++)
+                        {
+                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S06[P];}
+                            else{ff7.hf[i].sl_header[P]= 0x00;}
+                        }
+                        break;
+                    case 6:
+                        for(int P=0;P<512;P++)
+                        {
+                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S07[P];}
+                            else{ff7.hf[i].sl_header[P]= 0x00;}
+                        }
+                        break;
+                    case 7:
+                        for(int P=0;P<512;P++)
+                        {
+                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S08[P];}
+                            else{ff7.hf[i].sl_header[P]= 0x00;}
+                        }
+                        break;
+                    case 8:
+                        for(int P=0;P<512;P++)
+                        {
+                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S09[P];}
+                            else{ff7.hf[i].sl_header[P]= 0x00;}
+                        }
+                        break;
+                    case 9:
+                        for(int P=0;P<512;P++)
+                        {
+                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S10[P];}
+                            else{ff7.hf[i].sl_header[P]= 0x00;}
+                        }
+                        break;
+                    case 10:
+                        for(int P=0;P<512;P++)
+                        {
+                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S11[P];}
+                            else{ff7.hf[i].sl_header[P]= 0x00;}
+                        }
+                        break;
+                    case 11:
+                        for(int P=0;P<512;P++)
+                        {
+                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S12[P];}
+                            else{ff7.hf[i].sl_header[P]= 0x00;}
+                        }
+                        break;
+                    case 12:
+                        for(int P=0;P<512;P++)
+                        {
+                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S13[P];}
+                            else{ff7.hf[i].sl_header[P]= 0x00;}
+                        }
+                        break;
+                    case 13:
+                        for(int P=0;P<512;P++)
+                        {
+                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S14[P];}
+                            else{ff7.hf[i].sl_header[P]= 0x00;}
+                        }
+                        break;
+                    case 14:
+                        for(int P=0;P<512;P++)
+                        {
+                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S15[P];}
+                            else{ff7.hf[i].sl_header[P]= 0x00;}
+                        }
+                        break;
+
+                    }
+                } // write string if found
+
+                else{for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_psp[index+j]);}} // else write what ever is in the header.
+
+            }
+            index=2048+0x80;
+            for(int i=0;i<6143;i++){mc_header_2.append(ff7.file_header_psp[index+i]);}// fill the remainder
+            memcpy(&ff7.file_header_psp,mc_header_2,0x2080);
+
+
             saveFileFull(fileName);
+            //Checksum PSP save..
+            QMessageBox::information(this,"PSP Save Notice","This File Is Not Checksumed. You Must have a PSP capable of ingoring VMP checksums to use this save");
+
+        }
     }
     else {QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot save This Type of File"));}
 }
@@ -1209,6 +1373,7 @@ ui->actionSlot_12->setChecked(0);
 ui->actionSlot_13->setChecked(0);
 ui->actionSlot_14->setChecked(0);
 ui->actionSlot_15->setChecked(0);
+ui->menuSlot_Region->setEnabled(0);
 switch(s)
 {
     case 0:ui->actionSlot_01->setChecked(1);break;
@@ -1228,7 +1393,7 @@ switch(s)
     case 14:ui->actionSlot_15->setChecked(1);break;
 }
 
-if (ff7.savetype ==1)
+if (ff7.savetype ==1)//pc
 {
     ui->actionSave_File->setEnabled(1);
     ui->actionExport_PC_Save->setEnabled(1);
@@ -1317,20 +1482,23 @@ else if (ff7.savetype ==3)
     ui->actionSlot_13->setEnabled(1);
     ui->actionSlot_14->setEnabled(1);
     ui->actionSlot_15->setEnabled(1);
-    ui->action_Region_USA->setChecked(false);
-    ui->action_Region_PAL_Generic->setChecked(false);
-    ui->action_Region_PAL_German->setChecked(false);
-    ui->action_Region_PAL_Spanish->setChecked(false);
-    ui->action_Region_Jpn->setChecked(false);
-    ui->action_Region_Jpn_International->setChecked(false);
+    //Region stuff...
+    ui->menuSlot_Region->setEnabled(1);
+    ui->action_Region_USA->setChecked(0);
+    ui->action_Region_PAL_Generic->setChecked(0);
+    ui->action_Region_PAL_German->setChecked(0);
+    ui->action_Region_PAL_Spanish->setChecked(0);
+    ui->action_Region_JPN->setChecked(0);
+    ui->action_Region_JPN_International->setChecked(0);
 
     if(ff7.SG_Region_String[s].contains("94163")){ui->action_Region_USA->setChecked(Qt::Checked);}
     else if (ff7.SG_Region_String[s].contains("00867")){ui->action_Region_PAL_Generic->setChecked(Qt::Checked);}
     else if (ff7.SG_Region_String[s].contains("00869")){ui->action_Region_PAL_German->setChecked(Qt::Checked);}
     else if (ff7.SG_Region_String[s].contains("00900")){ui->action_Region_PAL_Spanish->setChecked(Qt::Checked);}
-    else if (ff7.SG_Region_String[s].contains("00700")){ui->action_Region_Jpn->setChecked(Qt::Checked);}
-    else if (ff7.SG_Region_String[s].contains("01057")){ui->action_Region_Jpn_International->setChecked(Qt::Checked);}
-    else {/*QMessageBox::information(this,"Region Detect Error","Unknow Region String");*/}
+    else if (ff7.SG_Region_String[s].contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);}
+    else if (ff7.SG_Region_String[s].contains("01057")){ui->action_Region_JPN_International->setChecked(Qt::Checked);}
+    else {/*QMessageBox::information(this,"Region Detect Error","Unknow Region String, this is  not a ff7 save");*/}
+
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
 
 
@@ -1365,15 +1533,15 @@ else if (ff7.savetype ==4)
     ui->actionSlot_15->setEnabled(0);
 
 }
-else if (ff7.savetype ==5)
+else if (ff7.savetype ==5)//PSP
 {
-    ui->actionSave_File->setEnabled(0);          // read only
+    ui->actionSave_File->setEnabled(1);
     ui->actionExport_PC_Save->setEnabled(1);
     ui->actionExport_PSX->setEnabled(1);
-    ui->actionFrom_PSV_Slot->setEnabled(0);    //read only
-    ui->actionFrom_PSX_Slot->setEnabled(0);   //read only
-    ui->actionClear_Slot->setEnabled(0);
-    ui->actionPaste_Slot->setEnabled(0);      //read only
+    ui->actionFrom_PSV_Slot->setEnabled(1);
+    ui->actionFrom_PSX_Slot->setEnabled(1);
+    ui->actionClear_Slot->setEnabled(1);
+    ui->actionPaste_Slot->setEnabled(1);
     ui->actionCopy_Slot->setEnabled(1);
     ui->actionNext_Slot->setEnabled(1);
     ui->actionPrevious_Slot->setEnabled(1);
@@ -1393,6 +1561,26 @@ else if (ff7.savetype ==5)
     ui->actionSlot_13->setEnabled(1);
     ui->actionSlot_14->setEnabled(1);
     ui->actionSlot_15->setEnabled(1);
+
+    //Region stuff...
+    ui->menuSlot_Region->setEnabled(1);
+    ui->action_Region_USA->setChecked(0);
+    ui->action_Region_PAL_Generic->setChecked(0);
+    ui->action_Region_PAL_German->setChecked(0);
+    ui->action_Region_PAL_Spanish->setChecked(0);
+    ui->action_Region_JPN->setChecked(0);
+    ui->action_Region_JPN_International->setChecked(0);
+
+    if(ff7.SG_Region_String[s].contains("94163")){ui->action_Region_USA->setChecked(Qt::Checked);}
+    else if (ff7.SG_Region_String[s].contains("00867")){ui->action_Region_PAL_Generic->setChecked(Qt::Checked);}
+    else if (ff7.SG_Region_String[s].contains("00869")){ui->action_Region_PAL_German->setChecked(Qt::Checked);}
+    else if (ff7.SG_Region_String[s].contains("00900")){ui->action_Region_PAL_Spanish->setChecked(Qt::Checked);}
+    else if (ff7.SG_Region_String[s].contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);}
+    else if (ff7.SG_Region_String[s].contains("01057")){ui->action_Region_JPN_International->setChecked(Qt::Checked);}
+    else {/*QMessageBox::information(this,"Region Detect Error","Unknow Region String, this is  not a ff7 save");*/}
+
+    ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+
 
 }
 else
@@ -2120,6 +2308,7 @@ void MainWindow::clearslot(int rmslot)
     QByteArray temp;
     temp.fill(0x00,0x10f4);
     memcpy(&ff7.slot[rmslot],temp,0x10f4);
+    ff7.SG_Region_String[rmslot]="";
 }
 //Char Buttons.
 
@@ -4394,8 +4583,8 @@ void MainWindow::on_action_Region_USA_triggered()
     ui->action_Region_PAL_Generic->setChecked(false);
     ui->action_Region_PAL_German->setChecked(false);
     ui->action_Region_PAL_Spanish->setChecked(false);
-    ui->action_Region_Jpn->setChecked(false);
-    ui->action_Region_Jpn_International->setChecked(false);
+    ui->action_Region_JPN->setChecked(false);
+    ui->action_Region_JPN_International->setChecked(false);
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
     }
 
@@ -4427,8 +4616,8 @@ void MainWindow::on_action_Region_PAL_Generic_triggered()
     ui->action_Region_USA->setChecked(false);
     ui->action_Region_PAL_German->setChecked(false);
     ui->action_Region_PAL_Spanish->setChecked(false);
-    ui->action_Region_Jpn->setChecked(false);
-    ui->action_Region_Jpn_International->setChecked(false);
+    ui->action_Region_JPN->setChecked(false);
+    ui->action_Region_JPN_International->setChecked(false);
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
 
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
@@ -4460,8 +4649,8 @@ void MainWindow::on_action_Region_PAL_German_triggered()
     ui->action_Region_USA->setChecked(false);
     ui->action_Region_PAL_Generic->setChecked(false);
     ui->action_Region_PAL_Spanish->setChecked(false);
-    ui->action_Region_Jpn->setChecked(false);
-    ui->action_Region_Jpn_International->setChecked(false);
+    ui->action_Region_JPN->setChecked(false);
+    ui->action_Region_JPN_International->setChecked(false);
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
 
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
@@ -4494,14 +4683,14 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered()
     ui->action_Region_USA->setChecked(false);
     ui->action_Region_PAL_German->setChecked(false);
     ui->action_Region_PAL_Generic->setChecked(false);
-    ui->action_Region_Jpn->setChecked(false);
-    ui->action_Region_Jpn_International->setChecked(false);
+    ui->action_Region_JPN->setChecked(false);
+    ui->action_Region_JPN_International->setChecked(false);
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
 
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
     }
 }
-void MainWindow::on_action_Region_Jpn_triggered()
+void MainWindow::on_action_Region_JPN_triggered()
 {
     if(!load)
     {
@@ -4528,11 +4717,11 @@ void MainWindow::on_action_Region_Jpn_triggered()
     ui->action_Region_PAL_Generic->setChecked(false);
     ui->action_Region_PAL_German->setChecked(false);
     ui->action_Region_PAL_Spanish->setChecked(false);
-    ui->action_Region_Jpn_International->setChecked(false);
+    ui->action_Region_JPN_International->setChecked(false);
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
     }
 }
-void MainWindow::on_action_Region_Jpn_International_triggered()
+void MainWindow::on_action_Region_JPN_International_triggered()
 {
     if(!load)
     {
@@ -4559,7 +4748,7 @@ void MainWindow::on_action_Region_Jpn_International_triggered()
     ui->action_Region_PAL_Generic->setChecked(false);
     ui->action_Region_PAL_German->setChecked(false);
     ui->action_Region_PAL_Spanish->setChecked(false);
-    ui->action_Region_Jpn->setChecked(false);
+    ui->action_Region_JPN->setChecked(false);
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
     }
 }

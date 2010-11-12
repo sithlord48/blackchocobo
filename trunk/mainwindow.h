@@ -93,8 +93,8 @@ private slots:
     void on_action_Lang_es_triggered();
     void on_action_Lang_en_triggered();
 
-    void on_action_Region_Jpn_triggered();
-    void on_action_Region_Jpn_International_triggered();
+    void on_action_Region_JPN_triggered();
+    void on_action_Region_JPN_International_triggered();
     void on_action_Region_PAL_Generic_triggered();
     void on_action_Region_PAL_German_triggered();
     void on_action_Region_PAL_Spanish_triggered();

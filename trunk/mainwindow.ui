@@ -2735,8 +2735,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>94</width>
-         <height>24</height>
+         <width>423</width>
+         <height>414</height>
         </rect>
        </property>
        <attribute name="label">
@@ -15789,6 +15789,22 @@
     <property name="title">
      <string>S&amp;lot</string>
     </property>
+    <widget class="QMenu" name="menuSlot_Region">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Slot Region</string>
+     </property>
+     <addaction name="action_Region_USA"/>
+     <addaction name="separator"/>
+     <addaction name="action_Region_PAL_Generic"/>
+     <addaction name="action_Region_PAL_German"/>
+     <addaction name="action_Region_PAL_Spanish"/>
+     <addaction name="separator"/>
+     <addaction name="action_Region_JPN"/>
+     <addaction name="action_Region_JPN_International"/>
+    </widget>
     <addaction name="actionPrevious_Slot"/>
     <addaction name="actionNext_Slot"/>
     <addaction name="actionShow_Selection_Dialog"/>
@@ -15796,6 +15812,8 @@
     <addaction name="actionCopy_Slot"/>
     <addaction name="actionPaste_Slot"/>
     <addaction name="actionClear_Slot"/>
+    <addaction name="separator"/>
+    <addaction name="menuSlot_Region"/>
     <addaction name="separator"/>
     <addaction name="actionSlot_01"/>
     <addaction name="actionSlot_02"/>
@@ -15817,32 +15835,6 @@
     <property name="title">
      <string>&amp;Options</string>
     </property>
-    <widget class="QMenu" name="menuSet_Export_Region">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="title">
-      <string>Export Region</string>
-     </property>
-     <widget class="QMenu" name="menuPal">
-      <property name="title">
-       <string>Pal</string>
-      </property>
-      <addaction name="action_Region_PAL_Generic"/>
-      <addaction name="action_Region_PAL_German"/>
-      <addaction name="action_Region_PAL_Spanish"/>
-     </widget>
-     <widget class="QMenu" name="menuJpn">
-      <property name="title">
-       <string>Jpn</string>
-      </property>
-      <addaction name="action_Region_Jpn"/>
-      <addaction name="action_Region_Jpn_International"/>
-     </widget>
-     <addaction name="action_Region_USA"/>
-     <addaction name="menuPal"/>
-     <addaction name="menuJpn"/>
-    </widget>
     <widget class="QMenu" name="menuLang">
      <property name="enabled">
       <bool>true</bool>
@@ -15856,7 +15848,6 @@
     </widget>
     <addaction name="action_show_test_data"/>
     <addaction name="separator"/>
-    <addaction name="menuSet_Export_Region"/>
     <addaction name="menuLang"/>
     <addaction name="separator"/>
     <addaction name="actionEdit_Paths"/>
@@ -16249,7 +16240,7 @@
     <string>Show Test Data</string>
    </property>
   </action>
-  <action name="action_Region_USA">
+  <action name="action_Region_USA_old">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -16289,10 +16280,10 @@
   </action>
   <action name="actionEdit_Paths">
    <property name="text">
-    <string>More Options....</string>
+    <string>Set Directorys</string>
    </property>
   </action>
-  <action name="action_Region_PAL_Generic">
+  <action name="action_Region_PAL_Generic_old">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -16300,7 +16291,7 @@
     <string>Pal_Generic</string>
    </property>
   </action>
-  <action name="action_Region_PAL_German">
+  <action name="action_Region_PAL_German_old">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -16308,7 +16299,7 @@
     <string>Pal_German</string>
    </property>
   </action>
-  <action name="action_Region_PAL_Spanish">
+  <action name="action_Region_PAL_Spanish_old">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -16316,7 +16307,7 @@
     <string>Pal_Spanish</string>
    </property>
   </action>
-  <action name="action_Region_Jpn">
+  <action name="action_Region_Jpn_old">
    <property name="checkable">
     <bool>true</bool>
    </property>
@@ -16324,12 +16315,60 @@
     <string>Jpn</string>
    </property>
   </action>
-  <action name="action_Region_Jpn_International">
+  <action name="action_Region_Jpn_International_old">
    <property name="checkable">
     <bool>true</bool>
    </property>
    <property name="text">
     <string>Jpn_International</string>
+   </property>
+  </action>
+  <action name="action_Region_USA">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>USA (BASLUS-94163)</string>
+   </property>
+  </action>
+  <action name="action_Region_PAL_Generic">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>PAL (BESCES-00867)</string>
+   </property>
+  </action>
+  <action name="action_Region_PAL_German">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>PAL (BESCES-00869)</string>
+   </property>
+  </action>
+  <action name="action_Region_PAL_Spanish">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>PAL (BESCES-00900)</string>
+   </property>
+  </action>
+  <action name="action_Region_JPN">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>JPN (BISLPS-00700)</string>
+   </property>
+  </action>
+  <action name="action_Region_JPN_International">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>JPN (BISLPS-01057)</string>
    </property>
   </action>
  </widget>
