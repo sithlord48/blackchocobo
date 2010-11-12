@@ -385,6 +385,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 1:
                         for(int P=0;P<512;P++)
@@ -392,6 +396,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S02[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 2:
                         for(int P=0;P<512;P++)
@@ -399,6 +407,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S03[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 3:
                         for(int P=0;P<512;P++)
@@ -406,6 +418,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S04[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 4:
                         for(int P=0;P<512;P++)
@@ -413,6 +429,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S05[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 5:
                         for(int P=0;P<512;P++)
@@ -420,6 +440,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S06[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 6:
                         for(int P=0;P<512;P++)
@@ -427,6 +451,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S07[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 7:
                         for(int P=0;P<512;P++)
@@ -434,6 +462,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S08[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 8:
                         for(int P=0;P<512;P++)
@@ -441,6 +473,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S09[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 9:
                         for(int P=0;P<512;P++)
@@ -448,6 +484,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S10[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 10:
                         for(int P=0;P<512;P++)
@@ -455,6 +495,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S11[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 11:
                         for(int P=0;P<512;P++)
@@ -462,6 +506,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S12[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 12:
                         for(int P=0;P<512;P++)
@@ -469,6 +517,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S13[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 13:
                         for(int P=0;P<512;P++)
@@ -476,6 +528,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S14[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 14:
                         for(int P=0;P<512;P++)
@@ -483,6 +539,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S15[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
 
                     }
@@ -564,6 +624,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 1:
                         for(int P=0;P<512;P++)
@@ -571,6 +635,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S02[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 2:
                         for(int P=0;P<512;P++)
@@ -578,6 +646,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S03[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 3:
                         for(int P=0;P<512;P++)
@@ -585,6 +657,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S04[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 4:
                         for(int P=0;P<512;P++)
@@ -592,6 +668,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S05[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 5:
                         for(int P=0;P<512;P++)
@@ -599,6 +679,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S06[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 6:
                         for(int P=0;P<512;P++)
@@ -606,6 +690,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S07[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 7:
                         for(int P=0;P<512;P++)
@@ -613,6 +701,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S08[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 8:
                         for(int P=0;P<512;P++)
@@ -620,6 +712,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S09[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 9:
                         for(int P=0;P<512;P++)
@@ -627,6 +723,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S10[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 10:
                         for(int P=0;P<512;P++)
@@ -634,6 +734,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S11[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 11:
                         for(int P=0;P<512;P++)
@@ -641,6 +745,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S12[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 12:
                         for(int P=0;P<512;P++)
@@ -648,6 +756,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S13[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 13:
                         for(int P=0;P<512;P++)
@@ -655,6 +767,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S14[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
                     case 14:
                         for(int P=0;P<512;P++)
@@ -662,6 +778,10 @@ void MainWindow::on_actionSave_File_activated()
                             if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S15[P];}
                             else{ff7.hf[i].sl_header[P]= 0x00;}
                         }
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                        ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                        ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                         break;
 
                     }
@@ -677,7 +797,7 @@ void MainWindow::on_actionSave_File_activated()
 
             saveFileFull(fileName);
             //Checksum PSP save..
-            QMessageBox::information(this,"PSP Save Notice","This File Is Not Checksumed. You Must have a PSP capable of ingoring VMP checksums to use this save");
+            QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Is Not Checksumed. You Must have a PSP capable of ingoring VMP checksums to use this save"));
 
         }
     }
@@ -766,26 +886,33 @@ void MainWindow::on_actionExport_PSX_activated()
     FILE *pfile; // this section is starting to work correctly!
     pfile = fopen(fileName.toAscii(),"wb");
 
-    if(fileName.endsWith("S01")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S01,0x100,1,pfile);}
-    else if(fileName.endsWith("S02")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S02,0x100,1,pfile);}
-    else if(fileName.endsWith("S03")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S03,0x100,1,pfile);}
-    else if(fileName.endsWith("S04")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S04,0x100,1,pfile);}
-    else if(fileName.endsWith("S05")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S05,0x100,1,pfile);}
-    else if(fileName.endsWith("S06")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S06,0x100,1,pfile);}
-    else if(fileName.endsWith("S07")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S07,0x100,1,pfile);}
-    else if(fileName.endsWith("S08")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S08,0x100,1,pfile);}
-    else if(fileName.endsWith("S09")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S09,0x100,1,pfile);}
-    else if(fileName.endsWith("S10")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S10,0x100,1,pfile);}
-    else if(fileName.endsWith("S11")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S11,0x100,1,pfile);}
-    else if(fileName.endsWith("S12")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S12,0x100,1,pfile);}
-    else if(fileName.endsWith("S13")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S13,0x100,1,pfile);}
-    else if(fileName.endsWith("S14")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S14,0x100,1,pfile);}
-    else if(fileName.endsWith("S15")){fwrite(&PSX_SAVE_GAME_FILE_HEADER_S15,0x100,1,pfile);}
-    else{QMessageBox::information(this,"Bad Psx Save Name", "Can't Decide On What Header to Write, Please Add the sufix SXX (where x= 01-15, with leading 0 if < 10) US Header for that slot number will be written to the save"   );return;}
+    QByteArray temp; temp.resize(512);//
 
-    QByteArray temp;
-    temp.fill(0x00,0x100);
-    fwrite(temp,256,1,pfile); // 256  bytes of 0x00 (rest of psx header data)
+         if(fileName.endsWith("S01")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S01[i];}}
+    else if(fileName.endsWith("S02")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S02[i];}}
+    else if(fileName.endsWith("S03")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S03[i];}}
+    else if(fileName.endsWith("S04")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S04[i];}}
+    else if(fileName.endsWith("S05")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S05[i];}}
+    else if(fileName.endsWith("S06")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S06[i];}}
+    else if(fileName.endsWith("S07")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S07[i];}}
+    else if(fileName.endsWith("S08")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S08[i];}}
+    else if(fileName.endsWith("S09")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S09[i];}}
+    else if(fileName.endsWith("S10")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S10[i];}}
+    else if(fileName.endsWith("S11")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S11[i];}}
+    else if(fileName.endsWith("S12")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S12[i];}}
+    else if(fileName.endsWith("S13")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S13[i];}}
+    else if(fileName.endsWith("S14")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S14[i];}}
+    else if(fileName.endsWith("S15")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S15[i];}}
+    else{QMessageBox::information(this,tr("Bad Psx Save Name"), tr("Can't Decide On What Header to Write, Please Add the sufix SXX (where x= 01-15, with leading 0 if < 10) US Header for that slot number will be written to the save"));return;}
+
+    for(int i=256;i<512;i++){temp[i]= 0x00;};
+
+    temp[27] = (ui->sb_time_hour->value()/10)+0x4F;
+    temp[29] = (ui->sb_time_hour->value()%10)+0x4F;
+    temp[33] = (ui->sb_time_min->value()/10)+0x4F;
+    temp[35] = (ui->sb_time_min->value()%10)+0x4F;
+
+    fwrite(temp,512,1,pfile); // Write Header.
 
     fwrite(&ff7.slot[s],ff7.SG_DATA_SIZE,1,pfile);
     fwrite(ff7.hf[s].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
@@ -1497,7 +1624,7 @@ else if (ff7.savetype ==3)
     else if (ff7.SG_Region_String[s].contains("00900")){ui->action_Region_PAL_Spanish->setChecked(Qt::Checked);}
     else if (ff7.SG_Region_String[s].contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);}
     else if (ff7.SG_Region_String[s].contains("01057")){ui->action_Region_JPN_International->setChecked(Qt::Checked);}
-    else {/*QMessageBox::information(this,"Region Detect Error","Unknow Region String, this is  not a ff7 save");*/}
+    else {/*QMessageBox::information(this,tr("Region Detect Error"),tr("Unknow Region String, this is  not a ff7 save"));*/}
 
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
 
@@ -1577,7 +1704,7 @@ else if (ff7.savetype ==5)//PSP
     else if (ff7.SG_Region_String[s].contains("00900")){ui->action_Region_PAL_Spanish->setChecked(Qt::Checked);}
     else if (ff7.SG_Region_String[s].contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);}
     else if (ff7.SG_Region_String[s].contains("01057")){ui->action_Region_JPN_International->setChecked(Qt::Checked);}
-    else {/*QMessageBox::information(this,"Region Detect Error","Unknow Region String, this is  not a ff7 save");*/}
+    else {/*QMessageBox::information(this,tr("Region Detect Error"),tr("Unknow Region String, this is  not a ff7 save"));*/}
 
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
 
