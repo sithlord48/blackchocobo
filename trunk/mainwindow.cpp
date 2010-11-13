@@ -1931,7 +1931,7 @@ int j= ui->tbl_itm->currentRow();
 
     //set up materia table.
 
-    //ui->tbl_materia->clear();
+    ui->tbl_materia->clear();
 
     ui->tbl_materia->setColumnWidth(0,145);
     ui->tbl_materia->setColumnWidth(1,64);
@@ -1966,7 +1966,7 @@ int j= ui->tbl_itm->currentRow();
             ui->tbl_materia->setItem(mat,1,newItem);
         }
     }
-    ui->tbl_materia->setCurrentCell(j,0,QItemSelectionModel::Select);
+   // ui->tbl_materia->setCurrentCell(j,0,QItemSelectionModel::Select);
 
 
     /*~~~~~~~~~~~~~~~~~~~~~~`New Materia Code~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -2207,6 +2207,9 @@ int j= ui->tbl_itm->currentRow();
                 ui->lbl_spell_lvl5->setText(Materias[ui->combo_add_mat->currentIndex()].skills[4]);
                 break;
         }
+        load=false;
+        ui->tbl_materia->setCurrentCell(j,0,QItemSelectionModel::ClearAndSelect);
+        load=true;
     }
         /*~~~~~~~~~~~~~~~~~~~~~~End Of New Materia Code~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -3562,7 +3565,7 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row)
             ff7.slot[s].materias[row].ap[1]=0xFF;
             ff7.slot[s].materias[row].ap[2]=0xFF;
             load = false;
-            guirefresh();
+        //    guirefresh();
         }
 
         else
