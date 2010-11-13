@@ -109,8 +109,7 @@ void MainWindow::on_actionOpen_Save_File_activated()
     tr("Open Final Fantasy 7 Save"),settings.value("load_path").toString(),
     tr("Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)"));
 
-    if (!fileName.isEmpty())
-        loadFileFull(fileName);
+    if (!fileName.isEmpty()) loadFileFull(fileName);
 }
 
 void MainWindow::loadFileFull(const QString &fileName)
@@ -124,6 +123,7 @@ void MainWindow::loadFileFull(const QString &fileName)
         return;
     }
     QByteArray ff7file;
+
     ff7file = file.readAll(); //put all data in temp raw file
     QByteArray temp; // create a temp to be used when needed
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~Set File Type Vars ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -258,6 +258,7 @@ void MainWindow::loadFileFull(const QString &fileName)
         s=0;
         for(int i=1;i<14;i++){clearslot(i);}
     }
+    this->setWindowTitle(tr("Black Chocobo - ") + fileName); //eslava this is for you :)
     guirefresh();
 }
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
@@ -1769,28 +1770,28 @@ ui->sb_curdisc->setValue(ff7.slot[s].disc);
 
 // ui->sb_kalmprog->setValue(ff7.slot[s].kalmprog);
 
-// check for seppie and young cloud to avoid possible breakage of save game since we don't account for them yet.
-
-
-if (ff7.slot[s].chars[6].id == 9)
-{
-    ui->btn_cait->setEnabled(false);
-    if(curchar ==6){curchar =0;}
-}
-else {ui->btn_cait->setEnabled(true);}
-
-if (ff7.slot[s].chars[7].id == 10)
-{
-    ui->btn_vincent->setEnabled(false);
-    if(curchar ==7){curchar = 0;}
-}
-else {ui->btn_vincent->setEnabled(true);}
-
 if(ui->action_show_test_data->isChecked())
 {
     ui->btn_vincent->setEnabled(true);
     ui->btn_cait->setEnabled(true);
     ui->cb_id->setEnabled(true);
+}
+
+else //test mode off..check for seppie and young cloud to avoid possible breakage of save game since we don't account for them yet.
+{
+    if (ff7.slot[s].chars[6].id == 9)
+    {
+        ui->btn_cait->setEnabled(false);
+        if(curchar ==6){curchar =0;}
+    }
+    else {ui->btn_cait->setEnabled(true);}
+
+    if (ff7.slot[s].chars[7].id == 10)
+    {
+        ui->btn_vincent->setEnabled(false);
+        if(curchar ==7){curchar = 0;}
+    }
+    else {ui->btn_vincent->setEnabled(true);}
 }
 
 //Set up location Data
@@ -3403,17 +3404,17 @@ void MainWindow::on_sb_love_yuffie_valueChanged()
 
 void MainWindow::on_sb_time_hour_valueChanged(int value)
 {
-    if(!load){ff7.slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60%60) + (ui->sb_time_sec->value()));}
+    if(!load){ff7.slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60) + (ui->sb_time_sec->value())); ff7.slot[s].desc.time = ff7.slot[s].time;}
 }
 
 void MainWindow::on_sb_time_min_valueChanged(int value)
 {
-    if(!load){ff7.slot[s].time = ((ui->sb_time_hour->value()*3600) + (value*60%60) + (ui->sb_time_sec->value()));}
+    if(!load){ff7.slot[s].time = ( (ui->sb_time_hour->value()*3600) + ((value*60)) + (ui->sb_time_sec->value()) );ff7.slot[s].desc.time = ff7.slot[s].time; }
 }
 
 void MainWindow::on_sb_time_sec_valueChanged(int value)
 {
-    if(!load){ff7.slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60%60) + (value));}
+    if(!load){ff7.slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60) + (value)); ff7.slot[s].desc.time = ff7.slot[s].time;}
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -4647,7 +4648,6 @@ void MainWindow::on_action_show_test_data_toggled()
 {
     if(ui->action_show_test_data->isChecked())
      {
-        this->setWindowTitle(tr("Black Chocobo - Testing Mode"));
         ui->page_test->setEnabled(true);
         ui->tabWidget->setTabEnabled(8,1);
         testdata_refresh();
@@ -4663,10 +4663,10 @@ void MainWindow::on_action_show_test_data_toggled()
         ui->cb_id->setEnabled(true);
         ui->btn_cait->setEnabled(true);
         settings.setValue("show_test",1);
+
     }
     else
     {
-        this->setWindowTitle(tr("Black Chocobo"));
         ui->page_test->setEnabled(false);
         ui->tabWidget->setTabEnabled(8,0);
         ui->lbl_0x34->setVisible(false);
