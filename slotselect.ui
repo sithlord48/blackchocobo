@@ -219,6 +219,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -238,6 +241,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -256,6 +262,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -463,6 +472,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -482,6 +494,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -500,6 +515,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -707,6 +725,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -726,6 +747,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -744,6 +768,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -953,6 +980,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -972,6 +1002,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -990,6 +1023,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -1197,6 +1233,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -1216,6 +1255,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -1234,6 +1276,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -1441,6 +1486,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -1460,6 +1508,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -1478,6 +1529,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -1687,6 +1741,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -1706,6 +1763,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -1724,6 +1784,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -1931,6 +1994,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -1950,6 +2016,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -1968,6 +2037,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -2175,6 +2247,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -2194,6 +2269,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -2212,6 +2290,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -2421,6 +2502,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -2440,6 +2524,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -2458,6 +2545,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -2665,6 +2755,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -2684,6 +2777,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -2702,6 +2798,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -2909,6 +3008,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -2928,6 +3030,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -2946,6 +3051,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -3155,6 +3263,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -3174,6 +3285,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -3192,6 +3306,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -3399,6 +3516,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -3418,6 +3538,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -3436,6 +3559,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -3643,6 +3769,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -3662,6 +3791,9 @@
          <property name="text">
           <string/>
          </property>
+         <property name="scaledContents">
+          <bool>true</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -3680,6 +3812,9 @@
          </property>
          <property name="text">
           <string/>
+         </property>
+         <property name="scaledContents">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
