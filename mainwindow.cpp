@@ -1928,8 +1928,11 @@ int j= ui->tbl_itm->currentRow();
 
     j= ui->tbl_materia->currentRow();
 
+
     //set up materia table.
+
     //ui->tbl_materia->clear();
+
     ui->tbl_materia->setColumnWidth(0,145);
     ui->tbl_materia->setColumnWidth(1,64);
     ui->tbl_materia->setRowCount(200);
@@ -1963,13 +1966,39 @@ int j= ui->tbl_itm->currentRow();
             ui->tbl_materia->setItem(mat,1,newItem);
         }
     }
-    ui->tbl_materia->setCurrentCell(j,0,QItemSelectionModel::ClearAndSelect);
+    ui->tbl_materia->setCurrentCell(j,0,QItemSelectionModel::Select);
+
 
     /*~~~~~~~~~~~~~~~~~~~~~~`New Materia Code~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
         //clear then set the skill list & stats
-        //ui->list_spells->clear();
 
+        //ui->list_spells->clear();
         //for (int i=0; i<Materias[ui->combo_add_mat->currentIndex()].levels;i++){ui->list_spells->addItem(Materias[ui->combo_add_mat->currentIndex()].skills[i]);}
+
+    if(ff7.slot[s].materias[j].id == 0xFF) //if the slot is empty take some precautions
+
+    {
+        ui->lbl_mat_stats->setText("Empty Slot");
+        ui->lcd_ap_master->display(0);
+        ui->sb_addap->setValue(0);
+        ui->sb_addap->setMaximum(0);
+        ui->combo_mat_type->setCurrentIndex(0);
+        ui->combo_add_mat->setCurrentIndex(0xFF);
+        ui->btn_m_lvl1->setVisible(0);
+        ui->btn_m_lvl2->setVisible(0);
+        ui->btn_m_lvl3->setVisible(0);
+        ui->btn_m_lvl4->setVisible(0);
+        ui->btn_m_lvl5->setVisible(0);
+        ui->spell_lvl1_group->setVisible(0);
+        ui->spell_lvl2_group->setVisible(0);
+        ui->spell_lvl3_group->setVisible(0);
+        ui->spell_lvl4_group->setVisible(0);
+        ui->spell_lvl5_group->setVisible(0);
+    }
+
+
+    else // make the materia look nice
+    {
 
         ui->lbl_mat_stats->setText(Materias[ui->combo_add_mat->currentIndex()].stats);// set stat string..
 
@@ -1986,6 +2015,8 @@ int j= ui->tbl_itm->currentRow();
         }
         else{ui->sb_addap->setMaximum(16777215);}
         ui->sb_addap->setValue(aptemp);
+
+
         //Show levels stars
 
         int level=0;
@@ -2112,6 +2143,7 @@ int j= ui->tbl_itm->currentRow();
         switch(level)
         {
         case 0:
+
                 ui->spell_lvl1_group->setVisible(1);
                 ui->spell_lvl2_group->setVisible(0);
                 ui->spell_lvl3_group->setVisible(0);
@@ -2174,8 +2206,9 @@ int j= ui->tbl_itm->currentRow();
                 ui->lbl_spell_lvl4->setText(Materias[ui->combo_add_mat->currentIndex()].skills[3]);
                 ui->lbl_spell_lvl5->setText(Materias[ui->combo_add_mat->currentIndex()].skills[4]);
                 break;
-            }
-    /*~~~~~~~~~~~~~~~~~~~~~~End Of New Materia Code~~~~~~~~~~~~~~~~~~~~~*/
+        }
+    }
+        /*~~~~~~~~~~~~~~~~~~~~~~End Of New Materia Code~~~~~~~~~~~~~~~~~~~~~*/
 
 
 
@@ -3518,19 +3551,21 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row)
 
     else
     {
-    ui->eskill_group->setVisible(false);
-    if(ui->tbl_materia->currentItem()->text() == "===Empty Slot===")
+        ui->eskill_group->setVisible(false);
+        if(ui->tbl_materia->currentItem()->text() == "===Empty Slot===")
         {
+            load=true;
             ui->combo_mat_type->setCurrentIndex(0);
             ui->combo_add_mat->setCurrentIndex(0);
             ff7.slot[s].materias[row].id =0xFF;
             ff7.slot[s].materias[row].ap[0]=0xFF;
             ff7.slot[s].materias[row].ap[1]=0xFF;
             ff7.slot[s].materias[row].ap[2]=0xFF;
+            load = false;
             guirefresh();
         }
 
-    else
+        else
         {
             ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
             ui->sb_addap->setEnabled(1);
