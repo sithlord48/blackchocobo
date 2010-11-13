@@ -1117,15 +1117,15 @@ void MainWindow::charupdate(void)
 
         ui->cb_id->setText("Young Cloud");
         ui->cb_id->setVisible(true);
-        if (ff7.slot[s].chars[curchar].id == 9){ui->cb_id->setChecked(true);}
-        else{ui->cb_id->setChecked(false);}
+        if (ff7.slot[s].chars[curchar].id == 9){ui->cb_id->setChecked(true); ui->lbl_avatar->setPixmap(QPixmap(":/icon/cloud_icon"));}
+        else{ui->cb_id->setChecked(false);ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));}
     }
     if(curchar==7)
     {
         ui->cb_id->setText("Sephiroth");
         ui->cb_id->setVisible(true);
-        if (ff7.slot[s].chars[curchar].id == 10){ui->cb_id->setChecked(true);}
-        else{ui->cb_id->setChecked(false);}
+        if (ff7.slot[s].chars[curchar].id == 10){ui->cb_id->setChecked(true);ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));}
+        else{ui->cb_id->setChecked(false);ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));}
     }
     ui->line_name->clear();
     for (int n=0;n<12;n++)
@@ -2444,8 +2444,8 @@ void MainWindow::on_btn_cloud_clicked()
 {
     curchar=0;
     load=true;
-    charupdate();
     ui->lbl_avatar->setPixmap(QPixmap(":/icon/cloud_icon"));
+    charupdate();
     //enable boxes for limits
     ui->limit_1a->setEnabled(1);
     ui->limit_1b->setEnabled(1);
@@ -2496,8 +2496,8 @@ void MainWindow::on_btn_barret_clicked()
 {
     curchar=1;
     load=true;
-    charupdate();
     ui->lbl_avatar->setPixmap(QPixmap(":/icon/barret_icon"));
+    charupdate();
 
     //enable boxes for limits
     ui->limit_1a->setEnabled(1);
@@ -2549,8 +2549,8 @@ void MainWindow::on_btn_tifa_clicked()
 {
     curchar=2;
     load=true;
-    charupdate();
     ui->lbl_avatar->setPixmap(QPixmap(":/icon/tifa_icon"));
+    charupdate();
     //enable boxes for limits
     ui->limit_1a->setEnabled(1);
     ui->limit_1b->setEnabled(1);
@@ -2600,8 +2600,8 @@ void MainWindow::on_btn_aeris_clicked()
 {
     curchar=3;
     load=true;
-    charupdate();
     ui->lbl_avatar->setPixmap(QPixmap(":/icon/aeris_icon"));
+    charupdate();
     //enable boxes for limits
     ui->limit_1a->setEnabled(1);
     ui->limit_1b->setEnabled(1);
@@ -2651,8 +2651,8 @@ void MainWindow::on_btn_aeris_clicked()
 void MainWindow::on_btn_red_clicked()
 {   curchar=4;
     load=true;
-    charupdate();
     ui->lbl_avatar->setPixmap(QPixmap(":/icon/red_icon"));
+    charupdate();
     //enable boxes for limits
     ui->limit_1a->setEnabled(1);
     ui->limit_1b->setEnabled(1);
@@ -2703,8 +2703,8 @@ void MainWindow::on_btn_yuffie_clicked()
 {
     curchar=5;
     load=true;
-    charupdate();
     ui->lbl_avatar->setPixmap(QPixmap(":/icon/yuffie_icon"));
+    charupdate();
     //enable boxes for limits
     ui->limit_1a->setEnabled(1);
     ui->limit_1b->setEnabled(1);
@@ -2755,8 +2755,8 @@ void MainWindow::on_btn_cait_clicked()
 {
     curchar=6;
     load=true;
-    charupdate();
     ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));
+    charupdate();
     //enable boxes for limits
     ui->limit_1a->setEnabled(1);
     ui->limit_1b->setEnabled(0);
@@ -2804,8 +2804,8 @@ void MainWindow::on_btn_vincent_clicked()
 {
     curchar=7;
     load=true;
-    charupdate();
     ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));
+    charupdate();
     //enable boxes for limits
     ui->limit_1a->setEnabled(1);
     ui->limit_1b->setEnabled(0);
@@ -2854,8 +2854,8 @@ void MainWindow::on_btn_cid_clicked()
     {
     curchar=8;
     load=true;
-    charupdate();
     ui->lbl_avatar->setPixmap(QPixmap(":/icon/cid_icon"));
+    charupdate();
     //enable boxes for limits
     ui->limit_1a->setEnabled(1);
     ui->limit_1b->setEnabled(1);
@@ -3748,13 +3748,13 @@ if(!load)
     {
         if (curchar ==6)
         {
-            if (checked){ff7.slot[s].chars[6].id = 9;}
-            else {ff7.slot[s].chars[6].id = 6;}
+            if (checked){ff7.slot[s].chars[6].id = 9;ui->lbl_avatar->setPixmap(QPixmap(":/icon/cloud_icon"));}
+            else {ff7.slot[s].chars[6].id = 6;ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));}
         }
         if (curchar ==7)
         {
-            if (checked){ff7.slot[s].chars[7].id = 10;}
-            else {ff7.slot[s].chars[7].id = 7;}
+            if (checked){ff7.slot[s].chars[7].id = 10;ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));}
+            else {ff7.slot[s].chars[7].id = 7;ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));}
         }
     }
 }
