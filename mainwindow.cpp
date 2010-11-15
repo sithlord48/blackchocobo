@@ -2207,10 +2207,11 @@ int j= ui->tbl_itm->currentRow();
                 ui->lbl_spell_lvl5->setText(Materias[ui->combo_add_mat->currentIndex()].skills[4]);
                 break;
         }
-        load=false;
-        ui->tbl_materia->setCurrentCell(j,0,QItemSelectionModel::ClearAndSelect);
-        load=true;
     }
+    // this will ensure that the right side of materia stuff is set correctly.
+    load=false;
+    ui->tbl_materia->setCurrentCell(j,0,QItemSelectionModel::ClearAndSelect);
+    load=true;
         /*~~~~~~~~~~~~~~~~~~~~~~End Of New Materia Code~~~~~~~~~~~~~~~~~~~~~*/
 
 
@@ -3543,7 +3544,7 @@ if(!load)
 void MainWindow::on_tbl_materia_currentCellChanged(int row)
 {
     if(!load)
-    {
+   {
     if(ff7.slot[s].materias[row].id == 0x2C)
     {
         ui->eskill_group->setVisible(true);
@@ -3565,7 +3566,7 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row)
             ff7.slot[s].materias[row].ap[1]=0xFF;
             ff7.slot[s].materias[row].ap[2]=0xFF;
             load = false;
-        //    guirefresh();
+        //  guirefresh();
         }
 
         else
@@ -3575,7 +3576,7 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row)
             ui->sb_addap->setValue(ff7.slot[s].materias[row].ap[0] |(ff7.slot[s].materias[row].ap[1] << 8) | (ff7.slot[s].materias[row].ap[2] << 16));
         }
     }
-}   
+    }
 
 }
 void MainWindow::on_sb_addap_valueChanged(int value)
