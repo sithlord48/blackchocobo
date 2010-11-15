@@ -4495,7 +4495,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
           </font>
          </property>
          <property name="frameShape">
@@ -4958,7 +4958,7 @@
         <x>210</x>
         <y>0</y>
         <width>261</width>
-        <height>131</height>
+        <height>116</height>
        </rect>
       </property>
       <property name="title">
@@ -4984,7 +4984,7 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>10</pointsize>
+           <pointsize>9</pointsize>
           </font>
          </property>
          <property name="frameShape">
