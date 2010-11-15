@@ -179,7 +179,6 @@ private slots:
     void on_sb_addap_valueChanged(int );
     void on_btn_eskillall_clicked();
     void geteskills(int row);
-    void apply_eskills();
     void on_btn_eskillclear_clicked();
     void on_list_eskill_itemChanged();
     void on_combo_add_mat_2_currentIndexChanged();
@@ -392,6 +391,7 @@ private slots:
     void on_combo_weapon_currentIndexChanged();
     void on_combo_armor_currentIndexChanged(int);
     void on_combo_acc_currentIndexChanged(int);
+    void mslotcalc();
     void on_a_m_s1_clicked();
     void on_a_m_s2_clicked();
     void on_a_m_s3_clicked();
@@ -413,7 +413,7 @@ private slots:
     void on_sb_addap_slot_valueChanged(int );
     void on_combo_add_mat_slot_currentIndexChanged(int index);
     void geteskills2(int row);
-    void apply_eskills2();
+
     void on_list_eskill_2_itemChanged();
 };
 #endif // MAINWINDOW_H
