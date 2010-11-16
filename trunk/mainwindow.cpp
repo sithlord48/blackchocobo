@@ -1115,7 +1115,7 @@ void MainWindow::charupdate(void)
 
         ui->cb_id->setText("Young Cloud");
         ui->cb_id->setVisible(true);
-        if (ff7.slot[s].chars[curchar].id == 9){ui->cb_id->setChecked(true); ui->lbl_avatar->setPixmap(QPixmap(":/icon/cloud_icon"));}
+        if (ff7.slot[s].chars[curchar].id == 9){ui->cb_id->setChecked(true); ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));}
         else{ui->cb_id->setChecked(false);ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));}
     }
     if(curchar==7)

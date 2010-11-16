@@ -51,5 +51,6 @@
         <file alias="command_empty">icon/y_m_s_e.png</file>
         <file alias="command_full">icon/y_m_s_f.png</file>
         <file>icon/a_materia.png</file>
+        <file alias="y_cloud_icon">icon/y_cloud.png</file>
     </qresource>
 </RCC>
