@@ -1925,8 +1925,11 @@ ui->tbl_itm->setCurrentCell(j,0);
 /*~~~~~~~~~~~~~~~~~~~~~~End Item Code~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~ Materia Code~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 j= ui->tbl_materia->currentRow();
-//set up materia table.
-ui->tbl_materia->clear();
+
+
+ui->tbl_materia->reset();
+//ui->tbl_materia->clearSelection();
+
 ui->tbl_materia->setColumnWidth(0,145);
 ui->tbl_materia->setColumnWidth(1,64);
 ui->tbl_materia->setRowCount(200);
@@ -1955,12 +1958,13 @@ for(int mat=0;mat<200;mat++)// partys materias
 
     else
     {
-    newItem = new QTableWidgetItem("===Empty Slot===",0);
-    ui->tbl_materia->setItem(mat,0,newItem);
-    newItem = new QTableWidgetItem("",0);
-    ui->tbl_materia->setItem(mat,1,newItem);
+        newItem = new QTableWidgetItem("===Empty Slot===",0);
+        ui->tbl_materia->setItem(mat,0,newItem);
+        newItem = new QTableWidgetItem("",0);
+        ui->tbl_materia->setItem(mat,1,newItem);
     }
 }
+
 if(ff7.slot[s].materias[j].id == 0xFF) //if the slot is empty take some precautions
     {
     ui->lbl_mat_stats->setText("Empty Slot");
@@ -1984,7 +1988,7 @@ else // make the materia look nice
     {
     ui->lbl_mat_stats->setText(Materias[ui->combo_add_mat->currentIndex()].stats);// set stat string..
     qint32 aptemp = ff7.slot[s].materias[j].ap[0] |(ff7.slot[s].materias[j].ap[1] << 8) | (ff7.slot[s].materias[j].ap[2] << 16);
-    qint32 masterap = Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels-2];
+    qint32 masterap = (Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels-2]);
     ui->lcd_ap_master->display(masterap);
 // Check Materia Max AP and Set the Spin Box's Max Value.
     if(Materias[ui->combo_add_mat->currentIndex()].levels>1){ui->sb_addap->setMaximum(masterap);}
@@ -2161,9 +2165,10 @@ switch(level)
         break;
     }
 }
+
 // this will ensure that the right side of materia stuff is set correctly.
 load=false;
-ui->tbl_materia->setCurrentCell(j,0,QItemSelectionModel::ClearAndSelect);
+ui->tbl_materia->setCurrentCell(j,1);
 load=true;
 /*~~~~~~~~~~~~~~~~~~~~~~End Materia Code~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -3499,40 +3504,48 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row)
 {
 if(!load)
 {
-if(ff7.slot[s].materias[row].id == 0x2C)
-{
-ui->eskill_group->setVisible(true);
-geteskills(row);
-ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
-ui->sb_addap->setEnabled(0);
+    if(ff7.slot[s].materias[row].id == 0x2C)
+    {
+        ui->eskill_group->setVisible(true);
+        geteskills(row);
+        ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
+        ui->sb_addap->setEnabled(0);
+    }
+
+    else if(ff7.slot[s].materias[row].id == 0xFF) //if the slot is empty take some precautions
+    {
+        load=true;
+        ui->lbl_mat_stats->setText("Empty Slot");
+        ui->lcd_ap_master->display(0);
+        ui->sb_addap->setValue(0);
+        ui->sb_addap->setMaximum(0);
+        ui->combo_mat_type->setCurrentIndex(0);
+        ui->combo_add_mat->setCurrentIndex(0xFF);
+        ui->btn_m_lvl1->setVisible(0);
+        ui->btn_m_lvl2->setVisible(0);
+        ui->btn_m_lvl3->setVisible(0);
+        ui->btn_m_lvl4->setVisible(0);
+        ui->btn_m_lvl5->setVisible(0);
+        ui->spell_lvl1_group->setVisible(0);
+        ui->spell_lvl2_group->setVisible(0);
+        ui->spell_lvl3_group->setVisible(0);
+        ui->spell_lvl4_group->setVisible(0);
+        ui->spell_lvl5_group->setVisible(0);
+        ui->eskill_group->setVisible(false);
+        load=false;
+    }
+
+    else
+    {
+        ui->eskill_group->setVisible(false);
+        ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
+        ui->sb_addap->setEnabled(1);
+        ui->sb_addap->setValue(ff7.slot[s].materias[row].ap[0] |(ff7.slot[s].materias[row].ap[1] << 8) | (ff7.slot[s].materias[row].ap[2] << 16));
+    }
 }
 
-else
-{
-ui->eskill_group->setVisible(false);
-if(ui->tbl_materia->currentItem()->text() == "===Empty Slot===")
-{
-load=true;
-ui->combo_mat_type->setCurrentIndex(0);
-ui->combo_add_mat->setCurrentIndex(0);
-ff7.slot[s].materias[row].id =0xFF;
-ff7.slot[s].materias[row].ap[0]=0xFF;
-ff7.slot[s].materias[row].ap[1]=0xFF;
-ff7.slot[s].materias[row].ap[2]=0xFF;
-load = false;
-//  guirefresh();
 }
 
-else
-{
-ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
-ui->sb_addap->setEnabled(1);
-ui->sb_addap->setValue(ff7.slot[s].materias[row].ap[0] |(ff7.slot[s].materias[row].ap[1] << 8) | (ff7.slot[s].materias[row].ap[2] << 16));
-}
-}
-}
-
-}
 void MainWindow::on_sb_addap_valueChanged(int value)
 {
 if(!load && ui->tbl_materia->currentRow() >-1)
