@@ -213,12 +213,22 @@
          </item>
          <item>
           <property name="text">
-           <string>0x09</string>
+           <string>Y.Cloud</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icon/y_cloud_icon</normalon>
+           </iconset>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>0x0A</string>
+           <string>Sephiroth</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icon/sep_icon</normalon>
+           </iconset>
           </property>
          </item>
          <item>
@@ -324,12 +334,22 @@
          </item>
          <item>
           <property name="text">
-           <string>0x09</string>
+           <string>Y.Cloud</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icon/y_cloud_icon</normalon>
+           </iconset>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>0x0A</string>
+           <string>Sephiroth</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icon/sep_icon</normalon>
+           </iconset>
           </property>
          </item>
          <item>
@@ -435,12 +455,22 @@
          </item>
          <item>
           <property name="text">
-           <string>0x09</string>
+           <string>Y.Cloud</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icon/y_cloud_icon</normalon>
+           </iconset>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>0x0A</string>
+           <string>Sephiroth</string>
+          </property>
+          <property name="icon">
+           <iconset>
+            <normalon>:/icon/sep_icon</normalon>
+           </iconset>
           </property>
          </item>
          <item>
@@ -2735,8 +2765,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>423</width>
-         <height>414</height>
+         <width>94</width>
+         <height>24</height>
         </rect>
        </property>
        <attribute name="label">
