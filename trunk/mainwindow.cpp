@@ -3757,7 +3757,7 @@ if(!load)
 {
 if (curchar ==6)
 {
-if (checked){ff7.slot[s].chars[6].id = 9;ui->lbl_avatar->setPixmap(QPixmap(":/icon/cloud_icon"));}
+if (checked){ff7.slot[s].chars[6].id = 9;ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));}
 else {ff7.slot[s].chars[6].id = 6;ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));}
 }
 if (curchar ==7)
