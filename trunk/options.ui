@@ -6,12 +6,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>413</width>
+    <width>411</width>
     <height>159</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>More Options</string>
+   <string>Set Load And Save Paths.</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/icon/icon/bchoco.png</normaloff>:/icon/icon/bchoco.png</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -50,7 +54,7 @@
      <item>
       <widget class="QLabel" name="label_2">
        <property name="text">
-        <string>Default Folder To Save Virtual (.mcd/.mcr) savegames</string>
+        <string>Default Folder To Load/Save Virtual (.mcd/.mcr) savegames</string>
        </property>
       </widget>
      </item>
@@ -149,6 +153,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>
