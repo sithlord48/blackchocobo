@@ -78,6 +78,9 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->lcd_0x35->setVisible(false);
     ui->lcd_0x36->setVisible(false);
     ui->lcd_0x37->setVisible(false);
+    ui->sb_bm_progress1->setEnabled(false);
+    ui->sb_bm_progress2->setEnabled(false);
+    ui->sb_bm_progress3->setEnabled(false);
     load=false;
 
     // load settings
@@ -741,8 +744,8 @@ void MainWindow::on_actionExport_PC_Save_activated()
 void MainWindow::on_actionExport_PSX_activated()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
-    tr("Save Final Fantasy 7 SaveGame"), "BASCUS-94163FF7-",
-    tr("BASCUS-94163FF7-S01(*-S01);;BASCUS-94163FF7-S02(*-S02);;BASCUS-94163FF7-S03(*-S03);;BASCUS-94163FF7-S04(*-S04);;BASCUS-94163FF7-S05(*-S05);;BASCUS-94163FF7-S06(*-S06);;BASCUS-94163FF7-S07(*-S07);;BASCUS-94163FF7-S08(*-S08);;BASCUS-94163FF7-S09(*-S09);;BASCUS-94163FF7-S10(*-S10);;BASCUS-94163FF7-S11(*-S11);;BASCUS-94163FF7-S12(*-S12);;BASCUS-94163FF7-S13(*-S13);;BASCUS-94163FF7-S14(*-S14);;BASCUS-94163FF7-S15(*-S15)")); // Only Allow PSX save slots Since we are going to force its creation.
+    tr("Save Final Fantasy 7 SaveGame"), "",
+    tr("BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)"));//;;BASCUS-94163FF7-S07(*-S07);;BASCUS-94163FF7-S08(*-S08);;BASCUS-94163FF7-S09(*-S09);;BASCUS-94163FF7-S10(*-S10);;BASCUS-94163FF7-S11(*-S11);;BASCUS-94163FF7-S12(*-S12);;BASCUS-94163FF7-S13(*-S13);;BASCUS-94163FF7-S14(*-S14);;BASCUS-94163FF7-S15(*-S15)")); // Only Allow PSX save slots Since we are going to force its creation.
     if(fileName ==""){return;}
 
     if(ff7.SG_TYPE != "PSX")
@@ -1466,7 +1469,7 @@ void MainWindow::guirefresh(void)
         ui->actionExport_PSX->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(1);
         ui->actionFrom_PSX_Slot->setEnabled(1);
-        ui->actionClear_Slot->setEnabled(0);
+        ui->actionClear_Slot->setEnabled(1);
         ui->actionPaste_Slot->setEnabled(1);
         ui->actionCopy_Slot->setEnabled(1);
         ui->actionNext_Slot->setEnabled(1);
@@ -4439,9 +4442,13 @@ ui->lcd_0x34->setVisible(true);
 ui->lcd_0x35->setVisible(true);
 ui->lcd_0x36->setVisible(true);
 ui->lcd_0x37->setVisible(true);
+ui->sb_bm_progress1->setEnabled(true);
+ui->sb_bm_progress2->setEnabled(true);
+ui->sb_bm_progress3->setEnabled(true);
 ui->btn_vincent->setEnabled(true);
 ui->cb_id->setEnabled(true);
 ui->btn_cait->setEnabled(true);
+
 settings.setValue("show_test",1);
 
 }
@@ -4457,6 +4464,9 @@ ui->lcd_0x34->setVisible(false);
 ui->lcd_0x35->setVisible(false);
 ui->lcd_0x36->setVisible(false);
 ui->lcd_0x37->setVisible(false);
+ui->sb_bm_progress1->setEnabled(false);
+ui->sb_bm_progress2->setEnabled(false);
+ui->sb_bm_progress3->setEnabled(false);
 if(ff7.slot[s].chars[6].id == 9) {ui->btn_vincent->setEnabled(false);}
 ui->cb_id->setEnabled(false);
 if(ff7.slot[s].chars[7].id == 10) {ui->btn_cait->setEnabled(false);}
