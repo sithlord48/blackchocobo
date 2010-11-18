@@ -1002,20 +1002,7 @@
              <number>0</number>
             </property>
            </widget>
-           <widget class="QLabel" name="label_15">
-            <property name="geometry">
-             <rect>
-              <x>102</x>
-              <y>2</y>
-              <width>27</width>
-              <height>17</height>
-             </rect>
-            </property>
-            <property name="text">
-             <string>DEX</string>
-            </property>
-           </widget>
-           <widget class="QSpinBox" name="sb_dex">
+           <widget class="QSpinBox" name="sb_spr">
             <property name="geometry">
              <rect>
               <x>139</x>
@@ -1049,14 +1036,10 @@
              <number>0</number>
             </property>
            </widget>
-          </widget>
-         </item>
-         <item>
-          <widget class="QFrame" name="frame_sprlck">
            <widget class="QLabel" name="label_18">
             <property name="geometry">
              <rect>
-              <x>2</x>
+              <x>102</x>
               <y>2</y>
               <width>26</width>
               <height>17</height>
@@ -1066,40 +1049,10 @@
              <string>SPR</string>
             </property>
            </widget>
-           <widget class="QSpinBox" name="sb_spr">
-            <property name="geometry">
-             <rect>
-              <x>40</x>
-              <y>2</y>
-              <width>54</width>
-              <height>18</height>
-             </rect>
-            </property>
-            <property name="maximumSize">
-             <size>
-              <width>54</width>
-              <height>16777215</height>
-             </size>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="buttonSymbols">
-             <enum>QAbstractSpinBox::UpDownArrows</enum>
-            </property>
-            <property name="correctionMode">
-             <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-            </property>
-            <property name="minimum">
-             <number>0</number>
-            </property>
-            <property name="maximum">
-             <number>255</number>
-            </property>
-            <property name="value">
-             <number>0</number>
-            </property>
-           </widget>
+          </widget>
+         </item>
+         <item>
+          <widget class="QFrame" name="frame_sprlck">
            <widget class="QLabel" name="label_17">
             <property name="geometry">
              <rect>
@@ -1147,6 +1100,59 @@
              <number>0</number>
             </property>
            </widget>
+           <widget class="QSpinBox" name="sb_dex">
+            <property name="geometry">
+             <rect>
+              <x>40</x>
+              <y>2</y>
+              <width>54</width>
+              <height>18</height>
+             </rect>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>54</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::UpDownArrows</enum>
+            </property>
+            <property name="correctionMode">
+             <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+            </property>
+            <property name="minimum">
+             <number>0</number>
+            </property>
+            <property name="maximum">
+             <number>255</number>
+            </property>
+            <property name="value">
+             <number>0</number>
+            </property>
+           </widget>
+           <widget class="QLabel" name="label_15">
+            <property name="geometry">
+             <rect>
+              <x>2</x>
+              <y>2</y>
+              <width>27</width>
+              <height>17</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>DEX</string>
+            </property>
+           </widget>
+           <zorder>label_17</zorder>
+           <zorder>sb_lck</zorder>
+           <zorder>sb_dex</zorder>
+           <zorder>label_15</zorder>
+           <zorder>sb_dex</zorder>
+           <zorder>label_15</zorder>
           </widget>
          </item>
          <item>
@@ -11748,7 +11754,7 @@
       </widget>
       <widget class="QSpinBox" name="sb_bm_progress1">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="geometry">
         <rect>
@@ -11796,7 +11802,7 @@
       </widget>
       <widget class="QSpinBox" name="sb_bm_progress2">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="geometry">
         <rect>
@@ -11818,7 +11824,7 @@
       </widget>
       <widget class="QSpinBox" name="sb_bm_progress3">
        <property name="enabled">
-        <bool>false</bool>
+        <bool>true</bool>
        </property>
        <property name="geometry">
         <rect>
@@ -16285,7 +16291,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Show Test Data</string>
+    <string>Debug Mode</string>
    </property>
   </action>
   <action name="action_Region_USA_old">
