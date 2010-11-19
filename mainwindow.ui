@@ -1147,12 +1147,6 @@
              <string>DEX</string>
             </property>
            </widget>
-           <zorder>label_17</zorder>
-           <zorder>sb_lck</zorder>
-           <zorder>sb_dex</zorder>
-           <zorder>label_15</zorder>
-           <zorder>sb_dex</zorder>
-           <zorder>label_15</zorder>
           </widget>
          </item>
          <item>
@@ -2771,8 +2765,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>423</width>
-         <height>414</height>
+         <width>94</width>
+         <height>24</height>
         </rect>
        </property>
        <attribute name="label">
@@ -15817,6 +15811,7 @@
      </property>
      <addaction name="actionExport_PC_Save"/>
      <addaction name="actionExport_PSX"/>
+     <addaction name="actionExport_MC"/>
     </widget>
     <widget class="QMenu" name="menuImport">
      <property name="enabled">
@@ -16423,6 +16418,14 @@
    </property>
    <property name="text">
     <string>JPN (BISLPS-01057)</string>
+   </property>
+  </action>
+  <action name="actionExport_MC">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Export MC File</string>
    </property>
   </action>
  </widget>
