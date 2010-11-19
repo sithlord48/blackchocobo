@@ -2935,6 +2935,10 @@ n&apos;est pas une sauvegarde de FF7.</translation>
         <source>Can&apos;t Decide On What Header to Write, Please Add the sufix SXX (where x= 01-15, with leading 0 if &lt; 10) US Header for that slot number will be written to the save</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Export MC File</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
