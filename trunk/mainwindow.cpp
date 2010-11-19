@@ -717,7 +717,6 @@ void MainWindow::on_actionSave_File_activated()
             saveFileFull(fileName);
             //PUT PSP CHECKSUMING HERE ..
             QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Is Not Checksumed. You Must have a PSP capable of ingoring VMP checksums to use this save"));
-
         }
     }
     else {QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot save This Type of File"));}
@@ -781,7 +780,7 @@ void MainWindow::on_actionExport_PC_Save_activated()
 void MainWindow::on_actionExport_PSX_activated()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
-    tr("Save Final Fantasy 7 SaveGame"), "",
+    tr("Save Final Fantasy 7 SaveGame"), ff7.SG_Region_String[s],
     tr("BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)"));//;;BASCUS-94163FF7-S07(*-S07);;BASCUS-94163FF7-S08(*-S08);;BASCUS-94163FF7-S09(*-S09);;BASCUS-94163FF7-S10(*-S10);;BASCUS-94163FF7-S11(*-S11);;BASCUS-94163FF7-S12(*-S12);;BASCUS-94163FF7-S13(*-S13);;BASCUS-94163FF7-S14(*-S14);;BASCUS-94163FF7-S15(*-S15)")); // Only Allow PSX save slots Since we are going to force its creation.
     if(fileName ==""){return;}
 
