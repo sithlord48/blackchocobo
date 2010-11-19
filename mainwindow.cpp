@@ -88,6 +88,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     {
         ui->action_show_test_data->setChecked(1);
     }
+   // loadFileFull("save0"); //load the default save map..
 }
 MainWindow::~MainWindow()
 {
@@ -230,6 +231,35 @@ void MainWindow::loadFileFull(const QString &fileName)
     {
         SlotSelect slotselect;
         slotselect.exec();
+        ff7.SG_Region_String[0]= "BASLUS-94163FF7-S01";
+        ff7.SG_Region_String[1]= "BASLUS-94163FF7-S02";
+        ff7.SG_Region_String[2]= "BASLUS-94163FF7-S03";
+        ff7.SG_Region_String[3]= "BASLUS-94163FF7-S04";
+        ff7.SG_Region_String[4]= "BASLUS-94163FF7-S05";
+        ff7.SG_Region_String[5]= "BASLUS-94163FF7-S06";
+        ff7.SG_Region_String[6]= "BASLUS-94163FF7-S07";
+        ff7.SG_Region_String[7]= "BASLUS-94163FF7-S08";
+        ff7.SG_Region_String[8]= "BASLUS-94163FF7-S09";
+        ff7.SG_Region_String[9]= "BASLUS-94163FF7-S10";
+        ff7.SG_Region_String[10]= "BASLUS-94163FF7-S11";
+        ff7.SG_Region_String[11]= "BASLUS-94163FF7-S12";
+        ff7.SG_Region_String[12]= "BASLUS-94163FF7-S13";
+        ff7.SG_Region_String[13]= "BASLUS-94163FF7-S14";
+        ff7.SG_Region_String[14]= "BASLUS-94163FF7-S15";
+    }
+
+    else if (ff7.savetype == 2 || ff7.savetype == 4)
+    {
+        s=0;
+             if(fileName.contains("00867")){ff7.SG_Region_String[s] = "BESCES-00867FF7-S01";}
+        else if(fileName.contains("00869")){ff7.SG_Region_String[s] = "BESCES-00869FF7-S01";}
+        else if(fileName.contains("00900")){ff7.SG_Region_String[s] = "BESCES-00900FF7-S01";}
+        else if(fileName.contains("94163")){ff7.SG_Region_String[s] = "BASLUS-94163FF7-S01";}
+        else if(fileName.contains("00700")){ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01";}
+        else if(fileName.contains("01057")){ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01";}
+        else {ff7.SG_Region_String[s] ="";}
+
+        for(int i=1;i<14;i++){clearslot(i);}
     }
 
     else if (ff7.savetype == 3 || ff7.savetype ==5)
@@ -247,12 +277,10 @@ void MainWindow::loadFileFull(const QString &fileName)
         SlotSelect slotselect;
         slotselect.exec();
     }
-
     else
-
     {
-        s=0;
-        for(int i=1;i<14;i++){clearslot(i);}
+    s=0;
+    for(int i=1;i<14;i++){clearslot(i);}
     }
     this->setWindowTitle(tr("Black Chocobo - ") + fileName); //eslava this is for you :)
     guirefresh();
@@ -320,7 +348,7 @@ void MainWindow::on_actionSave_File_activated()
     else if(ff7.savetype==2)
     {
         QString fileName = QFileDialog::getSaveFileName(this,
-        tr("Save Final Fantasy 7 PSX SaveGame"), "",
+        tr("Save Final Fantasy 7 PSX SaveGame"), ff7.SG_Region_String[s],
         tr("FF7 PSX SaveGame(*-S*)"));//this should really be *-S*
         if (!fileName.isEmpty())
             saveFileFull(fileName);
@@ -330,6 +358,7 @@ void MainWindow::on_actionSave_File_activated()
         QString fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 MC SaveGame"), settings.value("save_emu_path").toString(),
         tr("FF7 MC SaveGame(*.mcr *.mcd)"));
+
         if (!fileName.isEmpty())
         {
 
@@ -482,10 +511,14 @@ void MainWindow::on_actionSave_File_activated()
                         }
                         break;
                     }
-                ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
-                ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
-                ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
-                ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
+                    if((ff7.slot[i].time/3600)>99){ff7.hf[i].sl_header[27]=0x58;ff7.hf[i].sl_header[29]=0x58;}
+                    else
+                    {
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                    }
+                    ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                    ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                 } // write string if found
 
                 else{for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}} //write what ever is in the header.(NOT FF7 SAVE)
@@ -665,10 +698,14 @@ void MainWindow::on_actionSave_File_activated()
                         break;
 
                     }
-                ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
-                ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
-                ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
-                ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
+                    if((ff7.slot[i].time/3600)>99){ff7.hf[i].sl_header[27]=0x58;ff7.hf[i].sl_header[29]=0x58;}
+                    else
+                    {
+                        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+                    }
+                    ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+                    ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
                 } // write string if found
 
                 else{for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_psp[index+j]);}}//write what ever is in the header (NOT FF7 SAVE DATA).
@@ -761,8 +798,8 @@ void MainWindow::on_actionExport_PSX_activated()
     ff7.SG_SLOT_SIZE     = FF7_PSX_SAVE_GAME_SLOT_SIZE;
     ff7.SG_SLOT_NUMBER   = FF7_PSX_SAVE_GAME_SLOT_NUMBER;
     ff7.SG_TYPE          = "PSX";
-    ff7.file_headerp     = ff7.file_header_psx;           //pointer to pc file header
-    ff7.file_footerp     = ff7.file_footer_psx;           //pointer to pc file footer
+    ff7.file_headerp     = ff7.file_header_psx;           //pointer to psx file header
+    ff7.file_footerp     = ff7.file_footer_psx;           //pointer to psx file footer
 
     /*~~~~~~~ SHORT SAVE - SITHLORD48 ~~~~~~~~~*/
     FILE *pfile; // this section is starting to work correctly!
@@ -789,8 +826,12 @@ void MainWindow::on_actionExport_PSX_activated()
 
     for(int i=256;i<512;i++){temp[i]= 0x00;};
 
-    temp[27] = (ui->sb_time_hour->value()/10)+0x4F;
-    temp[29] = (ui->sb_time_hour->value()%10)+0x4F;
+    if(ui->sb_time_hour->value()>99){temp[27]=0x58;temp[29]=0x58;}
+    else
+    {
+        temp[27] = (ui->sb_time_hour->value()/10)+0x4F;
+        temp[29] = (ui->sb_time_hour->value()%10)+0x4F;
+    }
     temp[33] = (ui->sb_time_min->value()/10)+0x4F;
     temp[35] = (ui->sb_time_min->value()%10)+0x4F;
 
@@ -802,6 +843,201 @@ void MainWindow::on_actionExport_PSX_activated()
     fclose(pfile);
     fix_sum(fileName);
     /*~~~~END NEW SHORT SAVE -SITHLORD48- V.1.4~~~~*/
+}
+/*~~~~~Export Mcr/Mcd~~~~~~*/
+void MainWindow::on_actionExport_MC_triggered()
+{
+
+    QString fileName = QFileDialog::getSaveFileName(this,
+    tr("Save Final Fantasy 7 MC SaveGame"), settings.value("save_emu_path").toString(),
+    tr("FF7 MC SaveGame(*.mcr *.mcd)"));
+
+    if(fileName==""){return;}
+
+    if(ff7.SG_TYPE != "MC")
+    {
+        ui->combo_control->setCurrentIndex(0);
+    }
+
+    ff7.SG_SIZE          = FF7_MC_SAVE_GAME_SIZE;
+    ff7.SG_HEADER        = FF7_MC_SAVE_GAME_HEADER;
+    ff7.SG_FOOTER        = FF7_MC_SAVE_GAME_FOOTER;
+    ff7.SG_DATA_SIZE     = FF7_MC_SAVE_GAME_DATA_SIZE;
+    ff7.SG_SLOT_HEADER   = FF7_MC_SAVE_GAME_SLOT_HEADER;
+    ff7.SG_SLOT_FOOTER   = FF7_MC_SAVE_GAME_SLOT_FOOTER;
+    ff7.SG_SLOT_SIZE     = FF7_MC_SAVE_GAME_SLOT_SIZE;
+    ff7.SG_SLOT_NUMBER   = FF7_MC_SAVE_GAME_SLOT_NUMBER;
+    ff7.SG_TYPE          = "MC";
+    ff7.file_headerp     = ff7.file_header_mc;           //pointer to mc file header
+    ff7.file_footerp     = ff7.file_footer_mc;           //pointer to mc file footer
+
+        QByteArray mc_header_2;
+        mc_header_2.append("MC");
+        quint8 xor_byte = 0x00;
+        int index=2;
+        for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_mc[k+index]);}
+        xor_byte= 0x00;
+        for(int x=0;x<127;x++){xor_byte^=mc_header_2[x];}
+        //write xor byte..
+        mc_header_2.append(xor_byte);
+        // thats a normal header
+        for(int i=0;i<15;i++)
+        {
+            //calc xor byte..
+            index= (128 +(128*i));
+         if(ff7.SG_Region_String[i].contains("00867") ||
+            ff7.SG_Region_String[i].contains("00869") ||
+            ff7.SG_Region_String[i].contains("00900") ||
+            ff7.SG_Region_String[i].contains("94163") ||
+            ff7.SG_Region_String[i].contains("00700") ||
+            ff7.SG_Region_String[i].contains("01057"))
+            {
+                QByteArray temp;
+                temp.resize(10);
+                temp[0] = 0x51;
+                temp[1] = 0x00;
+                temp[2] = 0x00;
+                temp[3] = 0x00;
+                temp[4] = 0x00;
+                temp[5] = 0x20;
+                temp[6] = 0x00;
+                temp[7] = 0x00;
+                temp[8] = 0xFF;
+                temp[9] = 0xFF;
+                mc_header_2.append(temp);
+                mc_header_2.append(ff7.SG_Region_String[i]);
+                temp.resize(98);
+                for(int f=0;f<98;f++){temp[f]=0x00;}
+                mc_header_2.append(temp);
+                xor_byte = 0x00;
+                for(int x=0;x<127;x++){xor_byte^=mc_header_2[x+index];}
+                mc_header_2.append(xor_byte);
+                switch(i)
+                {
+                case 0:
+                    for(int P=0;P<512;P++)
+                    {
+                        if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
+                        else{ff7.hf[i].sl_header[P]= 0x00;}
+                    }
+                    break;
+                case 1:
+                    for(int P=0;P<512;P++)
+                    {
+                        if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S02[P];}
+                        else{ff7.hf[i].sl_header[P]= 0x00;}
+                    }
+                    break;
+                case 2:
+                    for(int P=0;P<512;P++)
+                    {
+                        if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S03[P];}
+                        else{ff7.hf[i].sl_header[P]= 0x00;}
+                    }
+                    break;
+                case 3:
+                    for(int P=0;P<512;P++)
+                    {
+                        if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S04[P];}
+                        else{ff7.hf[i].sl_header[P]= 0x00;}
+                    }
+                    break;
+                case 4:
+                    for(int P=0;P<512;P++)
+                    {
+                        if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S05[P];}
+                        else{ff7.hf[i].sl_header[P]= 0x00;}
+                    }
+                    break;
+                case 5:
+                    for(int P=0;P<512;P++)
+                    {
+                        if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S06[P];}
+                        else{ff7.hf[i].sl_header[P]= 0x00;}
+                    }
+                    break;
+                case 6:
+                    for(int P=0;P<512;P++)
+                    {
+                        if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S07[P];}
+                        else{ff7.hf[i].sl_header[P]= 0x00;}
+                    }
+                    break;
+                case 7:
+                    for(int P=0;P<512;P++)
+                    {
+                        if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S08[P];}
+                        else{ff7.hf[i].sl_header[P]= 0x00;}
+                    }
+                    break;
+                case 8:
+                    for(int P=0;P<512;P++)
+                    {
+                        if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S09[P];}
+                        else{ff7.hf[i].sl_header[P]= 0x00;}
+                    }
+                    break;
+                case 9:
+                    for(int P=0;P<512;P++)
+                    {
+                        if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S10[P];}
+                        else{ff7.hf[i].sl_header[P]= 0x00;}
+                    }
+                    break;
+                case 10:
+                    for(int P=0;P<512;P++)
+                    {
+                        if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S11[P];}
+                        else{ff7.hf[i].sl_header[P]= 0x00;}
+                    }
+                    break;
+                case 11:
+                    for(int P=0;P<512;P++)
+                    {
+                        if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S12[P];}
+                        else{ff7.hf[i].sl_header[P]= 0x00;}
+                    }
+                    break;
+                case 12:
+                    for(int P=0;P<512;P++)
+                    {
+                        if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S13[P];}
+                        else{ff7.hf[i].sl_header[P]= 0x00;}
+                    }
+                    break;
+                case 13:
+                    for(int P=0;P<512;P++)
+                    {
+                        if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S14[P];}
+                        else{ff7.hf[i].sl_header[P]= 0x00;}
+                    }
+                    break;
+                case 14:
+                    for(int P=0;P<512;P++)
+                    {
+                        if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S15[P];}
+                        else{ff7.hf[i].sl_header[P]= 0x00;}
+                    }
+                    break;
+                }
+            if((ff7.slot[i].time/3600)>99){ff7.hf[i].sl_header[27]=0x58;ff7.hf[i].sl_header[29]=0x58;}
+            else
+            {
+                ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
+                ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+            }
+            ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
+            ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
+            } // write string if found
+
+            else{for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}} //write what ever is in the header.(NOT FF7 SAVE)
+
+        }
+        index=2048;
+        for(int i=0;i<6143;i++){mc_header_2.append(ff7.file_header_mc[index+i]);}// fill the remainder
+        memcpy(&ff7.file_header_mc,mc_header_2,0x2000);
+
+        saveFileFull(fileName);
 }
 /*~~~~~~~~~~~ START CHECKSUM VEGETA~~~~~~~~~~~*/
 void fix_sum(const QString &fileName)
@@ -1366,7 +1602,8 @@ void MainWindow::guirefresh(void)
     ui->sb_bm_progress2->setValue(ff7.slot[s].bm_progress2);
     ui->sb_bm_progress3->setValue(ff7.slot[s].bm_progress3);
     ui->sb_mprogress->setValue(ff7.slot[s].mprogress);
-/*~~~~~Set Menu Items~~~~~~~~~~~~~~*/
+
+    /*~~~~~Set Menu Items~~~~~~~~~~~~~~*/
     ui->actionSlot_01->setChecked(0);
     ui->actionSlot_02->setChecked(0);
     ui->actionSlot_03->setChecked(0);
@@ -1407,6 +1644,7 @@ void MainWindow::guirefresh(void)
         ui->actionSave_File->setEnabled(1);
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
+        ui->actionExport_MC->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(1);
         ui->actionFrom_PSX_Slot->setEnabled(1);
         ui->actionClear_Slot->setEnabled(1);
@@ -1415,6 +1653,7 @@ void MainWindow::guirefresh(void)
         ui->actionNext_Slot->setEnabled(1);
         ui->actionPrevious_Slot->setEnabled(1);
         ui->actionShow_Selection_Dialog->setEnabled(1);
+         ui->menuSlot_Region->setEnabled(1);
         ui->actionSlot_01->setEnabled(1);
         ui->actionSlot_02->setEnabled(1);
         ui->actionSlot_03->setEnabled(1);
@@ -1432,11 +1671,12 @@ void MainWindow::guirefresh(void)
         ui->actionSlot_15->setEnabled(1);
     }
 
-    else if (ff7.savetype ==2)//RAW
+    else if (ff7.savetype == 2)//PSX
     {
         ui->actionSave_File->setEnabled(1);
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
+        ui->actionExport_MC->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(1);
         ui->actionFrom_PSX_Slot->setEnabled(1);
         ui->actionClear_Slot->setEnabled(0);
@@ -1462,11 +1702,12 @@ void MainWindow::guirefresh(void)
         ui->actionSlot_15->setEnabled(0);
     }
 
-    else if (ff7.savetype ==3)//mcr/mcd
+    else if (ff7.savetype == 3)//mcr/mcd
     {
         ui->actionSave_File->setEnabled(1);
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
+        ui->actionExport_MC->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(1);
         ui->actionFrom_PSX_Slot->setEnabled(1);
         ui->actionClear_Slot->setEnabled(1);
@@ -1490,22 +1731,6 @@ void MainWindow::guirefresh(void)
         ui->actionSlot_13->setEnabled(1);
         ui->actionSlot_14->setEnabled(1);
         ui->actionSlot_15->setEnabled(1);
-        //Region Clear and Set..
-        ui->menuSlot_Region->setEnabled(1);
-        ui->action_Region_USA->setChecked(0);
-        ui->action_Region_PAL_Generic->setChecked(0);
-        ui->action_Region_PAL_German->setChecked(0);
-        ui->action_Region_PAL_Spanish->setChecked(0);
-        ui->action_Region_JPN->setChecked(0);
-        ui->action_Region_JPN_International->setChecked(0);
-        if(ff7.SG_Region_String[s].contains("94163")){ui->action_Region_USA->setChecked(Qt::Checked);}
-        else if (ff7.SG_Region_String[s].contains("00867")){ui->action_Region_PAL_Generic->setChecked(Qt::Checked);}
-        else if (ff7.SG_Region_String[s].contains("00869")){ui->action_Region_PAL_German->setChecked(Qt::Checked);}
-        else if (ff7.SG_Region_String[s].contains("00900")){ui->action_Region_PAL_Spanish->setChecked(Qt::Checked);}
-        else if (ff7.SG_Region_String[s].contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);}
-        else if (ff7.SG_Region_String[s].contains("01057")){ui->action_Region_JPN_International->setChecked(Qt::Checked);}
-        else {/*QMessageBox::information(this,tr("Region Detect Error"),tr("Unknow Region String, this is  not a ff7 save"));*/}
-        ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
     }
 
     else if (ff7.savetype ==4)//PSV
@@ -1513,6 +1738,7 @@ void MainWindow::guirefresh(void)
         ui->actionSave_File->setEnabled(0); // read only
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
+        ui->actionExport_MC->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(0);
         ui->actionFrom_PSX_Slot->setEnabled(0);
         ui->actionClear_Slot->setEnabled(0);
@@ -1543,6 +1769,7 @@ void MainWindow::guirefresh(void)
         ui->actionSave_File->setEnabled(1);
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
+        ui->actionExport_MC->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(1);
         ui->actionFrom_PSX_Slot->setEnabled(1);
         ui->actionClear_Slot->setEnabled(1);
@@ -1566,22 +1793,6 @@ void MainWindow::guirefresh(void)
         ui->actionSlot_13->setEnabled(1);
         ui->actionSlot_14->setEnabled(1);
         ui->actionSlot_15->setEnabled(1);
-        //Region Clear then Set...
-        ui->menuSlot_Region->setEnabled(1);
-        ui->action_Region_USA->setChecked(0);
-        ui->action_Region_PAL_Generic->setChecked(0);
-        ui->action_Region_PAL_German->setChecked(0);
-        ui->action_Region_PAL_Spanish->setChecked(0);
-        ui->action_Region_JPN->setChecked(0);
-        ui->action_Region_JPN_International->setChecked(0);
-        if(ff7.SG_Region_String[s].contains("94163")){ui->action_Region_USA->setChecked(Qt::Checked);}
-        else if (ff7.SG_Region_String[s].contains("00867")){ui->action_Region_PAL_Generic->setChecked(Qt::Checked);}
-        else if (ff7.SG_Region_String[s].contains("00869")){ui->action_Region_PAL_German->setChecked(Qt::Checked);}
-        else if (ff7.SG_Region_String[s].contains("00900")){ui->action_Region_PAL_Spanish->setChecked(Qt::Checked);}
-        else if (ff7.SG_Region_String[s].contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);}
-        else if (ff7.SG_Region_String[s].contains("01057")){ui->action_Region_JPN_International->setChecked(Qt::Checked);}
-        else {/*QMessageBox::information(this,tr("Region Detect Error"),tr("Unknow Region String, this is  not a ff7 save"));*/}
-        ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
     }
 
     else
@@ -1589,6 +1800,7 @@ void MainWindow::guirefresh(void)
         ui->actionSave_File->setEnabled(0);
         ui->actionExport_PC_Save->setEnabled(0);
         ui->actionExport_PSX->setEnabled(0);
+        ui->actionExport_MC->setEnabled(0);
         ui->actionFrom_PSV_Slot->setEnabled(0);
         ui->actionFrom_PSX_Slot->setEnabled(0);
         ui->actionClear_Slot->setEnabled(0);
@@ -1612,7 +1824,23 @@ void MainWindow::guirefresh(void)
         ui->actionSlot_13->setEnabled(0);
         ui->actionSlot_14->setEnabled(0);
         ui->actionSlot_15->setEnabled(0);
+        ui->menuSlot_Region->setEnabled(0);
     }
+    ui->menuSlot_Region->setEnabled(1);
+    ui->action_Region_USA->setChecked(0);
+    ui->action_Region_PAL_Generic->setChecked(0);
+    ui->action_Region_PAL_German->setChecked(0);
+    ui->action_Region_PAL_Spanish->setChecked(0);
+    ui->action_Region_JPN->setChecked(0);
+    ui->action_Region_JPN_International->setChecked(0);
+    if(ff7.SG_Region_String[s].contains("94163")){ui->action_Region_USA->setChecked(Qt::Checked);}
+    else if (ff7.SG_Region_String[s].contains("00867")){ui->action_Region_PAL_Generic->setChecked(Qt::Checked);}
+    else if (ff7.SG_Region_String[s].contains("00869")){ui->action_Region_PAL_German->setChecked(Qt::Checked);}
+    else if (ff7.SG_Region_String[s].contains("00900")){ui->action_Region_PAL_Spanish->setChecked(Qt::Checked);}
+    else if (ff7.SG_Region_String[s].contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);}
+    else if (ff7.SG_Region_String[s].contains("01057")){ui->action_Region_JPN_International->setChecked(Qt::Checked);}
+    else {/*QMessageBox::information(this,tr("Region Detect Error"),tr("Unknow Region String, this is  not a ff7 save"));*/}
+    ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
 /*~~~~~End of menu options~~~~*/
 /*~~~~~Load Game Options~~~~~*/
     if((ff7.slot[s].options1)& (1<<0)){ui->combo_sound->setCurrentIndex(1);}
@@ -4474,200 +4702,218 @@ settings.setValue("show_test",0);
 }
 }
 
+/*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_USA_triggered()
 {
-if(!load)
-{
-/*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
-switch(s)
-{
-case 0:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01"; break;
-case 1:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S02"; break;
-case 2:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S03"; break;
-case 3:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S04"; break;
-case 4:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S05"; break;
-case 5:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S06"; break;
-case 6:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S07"; break;
-case 7:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S08"; break;
-case 8:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S09"; break;
-case 9:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S10"; break;
-case 10:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S11"; break;
-case 11:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S12"; break;
-case 12:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S13"; break;
-case 13:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S14"; break;
-case 14:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S15"; break;
+    if(!load)
+    {
+    if(!ui->action_Region_USA->isChecked()){ff7.SG_Region_String[s].clear();ui->lbl_sg_region->clear();}
+    else
+        {
+        switch(s)
+            {
+            case 0:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01"; break;
+            case 1:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S02"; break;
+            case 2:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S03"; break;
+            case 3:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S04"; break;
+            case 4:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S05"; break;
+            case 5:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S06"; break;
+            case 6:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S07"; break;
+            case 7:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S08"; break;
+            case 8:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S09"; break;
+            case 9:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S10"; break;
+            case 10:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S11"; break;
+            case 11:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S12"; break;
+            case 12:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S13"; break;
+            case 13:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S14"; break;
+            case 14:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S15"; break;
+            }
+        ui->action_Region_PAL_Generic->setChecked(false);
+        ui->action_Region_PAL_German->setChecked(false);
+        ui->action_Region_PAL_Spanish->setChecked(false);
+        ui->action_Region_JPN->setChecked(false);
+        ui->action_Region_JPN_International->setChecked(false);
+        ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+        }
+    }
 }
-ui->action_Region_PAL_Generic->setChecked(false);
-ui->action_Region_PAL_German->setChecked(false);
-ui->action_Region_PAL_Spanish->setChecked(false);
-ui->action_Region_JPN->setChecked(false);
-ui->action_Region_JPN_International->setChecked(false);
-ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
-}
-
-}
-
+/*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_PAL_Generic_triggered()
 {
 if(!load)
-{
-/*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
-switch(s)
-{
-case 0:ff7.SG_Region_String[s] = "BESCES-00867FF7-S01"; break;
-case 1:ff7.SG_Region_String[s] = "BESCES-00867FF7-S02"; break;
-case 2:ff7.SG_Region_String[s] = "BESCES-00867FF7-S03"; break;
-case 3:ff7.SG_Region_String[s] = "BESCES-00867FF7-S04"; break;
-case 4:ff7.SG_Region_String[s] = "BESCES-00867FF7-S05"; break;
-case 5:ff7.SG_Region_String[s] = "BESCES-00867FF7-S06"; break;
-case 6:ff7.SG_Region_String[s] = "BESCES-00867FF7-S07"; break;
-case 7:ff7.SG_Region_String[s] = "BESCES-00867FF7-S08"; break;
-case 8:ff7.SG_Region_String[s] = "BESCES-00867FF7-S09"; break;
-case 9:ff7.SG_Region_String[s] = "BESCES-00867FF7-S10"; break;
-case 10:ff7.SG_Region_String[s] = "BESCES-00867FF7-S11"; break;
-case 11:ff7.SG_Region_String[s] = "BESCES-00867FF7-S12"; break;
-case 12:ff7.SG_Region_String[s] = "BESCES-00867FF7-S13"; break;
-case 13:ff7.SG_Region_String[s] = "BESCES-00867FF7-S14"; break;
-case 14:ff7.SG_Region_String[s] = "BESCES-00867FF7-S15"; break;
+    {
+    if(!ui->action_Region_PAL_Generic->isChecked()){ff7.SG_Region_String[s].clear();ui->lbl_sg_region->clear();}
+    else
+        {
+        switch(s)
+            {
+            case 0:ff7.SG_Region_String[s] = "BESCES-00867FF7-S01"; break;
+            case 1:ff7.SG_Region_String[s] = "BESCES-00867FF7-S02"; break;
+            case 2:ff7.SG_Region_String[s] = "BESCES-00867FF7-S03"; break;
+            case 3:ff7.SG_Region_String[s] = "BESCES-00867FF7-S04"; break;
+            case 4:ff7.SG_Region_String[s] = "BESCES-00867FF7-S05"; break;
+            case 5:ff7.SG_Region_String[s] = "BESCES-00867FF7-S06"; break;
+            case 6:ff7.SG_Region_String[s] = "BESCES-00867FF7-S07"; break;
+            case 7:ff7.SG_Region_String[s] = "BESCES-00867FF7-S08"; break;
+            case 8:ff7.SG_Region_String[s] = "BESCES-00867FF7-S09"; break;
+            case 9:ff7.SG_Region_String[s] = "BESCES-00867FF7-S10"; break;
+            case 10:ff7.SG_Region_String[s] = "BESCES-00867FF7-S11"; break;
+            case 11:ff7.SG_Region_String[s] = "BESCES-00867FF7-S12"; break;
+            case 12:ff7.SG_Region_String[s] = "BESCES-00867FF7-S13"; break;
+            case 13:ff7.SG_Region_String[s] = "BESCES-00867FF7-S14"; break;
+            case 14:ff7.SG_Region_String[s] = "BESCES-00867FF7-S15"; break;
+            }
+    ui->action_Region_USA->setChecked(false);
+    ui->action_Region_PAL_German->setChecked(false);
+    ui->action_Region_PAL_Spanish->setChecked(false);
+    ui->action_Region_JPN->setChecked(false);
+    ui->action_Region_JPN_International->setChecked(false);
+    ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+    ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+        }
+    }
 }
-ui->action_Region_USA->setChecked(false);
-ui->action_Region_PAL_German->setChecked(false);
-ui->action_Region_PAL_Spanish->setChecked(false);
-ui->action_Region_JPN->setChecked(false);
-ui->action_Region_JPN_International->setChecked(false);
-ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
-
-ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
-}
-}
+/*~~~~~~~~~~~~~SET PAL_German MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_PAL_German_triggered()
 {
-if(!load)
-{
-/*~~~~~~~~~~~~~SET PAL_German MC HEADER~~~~~~~~~~~~~~~~*/
-switch(s)
-{
-case 0:ff7.SG_Region_String[s] = "BESCES-00869FF7-S01"; break;
-case 1:ff7.SG_Region_String[s] = "BESCES-00869FF7-S02"; break;
-case 2:ff7.SG_Region_String[s] = "BESCES-00869FF7-S03"; break;
-case 3:ff7.SG_Region_String[s] = "BESCES-00869FF7-S04"; break;
-case 4:ff7.SG_Region_String[s] = "BESCES-00869FF7-S05"; break;
-case 5:ff7.SG_Region_String[s] = "BESCES-00869FF7-S06"; break;
-case 6:ff7.SG_Region_String[s] = "BESCES-00869FF7-S07"; break;
-case 7:ff7.SG_Region_String[s] = "BESCES-00869FF7-S08"; break;
-case 8:ff7.SG_Region_String[s] = "BESCES-00869FF7-S09"; break;
-case 9:ff7.SG_Region_String[s] = "BESCES-00869FF7-S10"; break;
-case 10:ff7.SG_Region_String[s] = "BESCES-00869FF7-S11"; break;
-case 11:ff7.SG_Region_String[s] = "BESCES-00869FF7-S12"; break;
-case 12:ff7.SG_Region_String[s] = "BESCES-00869FF7-S13"; break;
-case 13:ff7.SG_Region_String[s] = "BESCES-00869FF7-S14"; break;
-case 14:ff7.SG_Region_String[s] = "BESCES-00869FF7-S15"; break;
+    if(!load)
+    {
+        if(!ui->action_Region_PAL_German->isChecked()){ff7.SG_Region_String[s].clear();ui->lbl_sg_region->clear();}
+        else
+        {
+        switch(s)
+            {
+            case 0:ff7.SG_Region_String[s] = "BESCES-00869FF7-S01"; break;
+            case 1:ff7.SG_Region_String[s] = "BESCES-00869FF7-S02"; break;
+            case 2:ff7.SG_Region_String[s] = "BESCES-00869FF7-S03"; break;
+            case 3:ff7.SG_Region_String[s] = "BESCES-00869FF7-S04"; break;
+            case 4:ff7.SG_Region_String[s] = "BESCES-00869FF7-S05"; break;
+            case 5:ff7.SG_Region_String[s] = "BESCES-00869FF7-S06"; break;
+            case 6:ff7.SG_Region_String[s] = "BESCES-00869FF7-S07"; break;
+            case 7:ff7.SG_Region_String[s] = "BESCES-00869FF7-S08"; break;
+            case 8:ff7.SG_Region_String[s] = "BESCES-00869FF7-S09"; break;
+            case 9:ff7.SG_Region_String[s] = "BESCES-00869FF7-S10"; break;
+            case 10:ff7.SG_Region_String[s] = "BESCES-00869FF7-S11"; break;
+            case 11:ff7.SG_Region_String[s] = "BESCES-00869FF7-S12"; break;
+            case 12:ff7.SG_Region_String[s] = "BESCES-00869FF7-S13"; break;
+            case 13:ff7.SG_Region_String[s] = "BESCES-00869FF7-S14"; break;
+            case 14:ff7.SG_Region_String[s] = "BESCES-00869FF7-S15"; break;
+            }
+        ui->action_Region_USA->setChecked(false);
+        ui->action_Region_PAL_Generic->setChecked(false);
+        ui->action_Region_PAL_Spanish->setChecked(false);
+        ui->action_Region_JPN->setChecked(false);
+        ui->action_Region_JPN_International->setChecked(false);
+        ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+        ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+        }
+    }
 }
-ui->action_Region_USA->setChecked(false);
-ui->action_Region_PAL_Generic->setChecked(false);
-ui->action_Region_PAL_Spanish->setChecked(false);
-ui->action_Region_JPN->setChecked(false);
-ui->action_Region_JPN_International->setChecked(false);
-ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
-
-ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
-}
-}
-
+/*~~~~~~~~~~~~~SET PAL_Spanish MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_PAL_Spanish_triggered()
 {
-if(!load)
-{
-/*~~~~~~~~~~~~~SET PAL_Spanish MC HEADER~~~~~~~~~~~~~~~~*/
-switch(s)
-{
-case 0:ff7.SG_Region_String[s] = "BESCES-00900FF7-S01"; break;
-case 1:ff7.SG_Region_String[s] = "BESCES-00900FF7-S02"; break;
-case 2:ff7.SG_Region_String[s] = "BESCES-00900FF7-S03"; break;
-case 3:ff7.SG_Region_String[s] = "BESCES-00900FF7-S04"; break;
-case 4:ff7.SG_Region_String[s] = "BESCES-00900FF7-S05"; break;
-case 5:ff7.SG_Region_String[s] = "BESCES-00900FF7-S06"; break;
-case 6:ff7.SG_Region_String[s] = "BESCES-00900FF7-S07"; break;
-case 7:ff7.SG_Region_String[s] = "BESCES-00900FF7-S08"; break;
-case 8:ff7.SG_Region_String[s] = "BESCES-00900FF7-S09"; break;
-case 9:ff7.SG_Region_String[s] = "BESCES-00900FF7-S10"; break;
-case 10:ff7.SG_Region_String[s] = "BESCES-00900FF7-S11"; break;
-case 11:ff7.SG_Region_String[s] = "BESCES-00900FF7-S12"; break;
-case 12:ff7.SG_Region_String[s] = "BESCES-00900FF7-S13"; break;
-case 13:ff7.SG_Region_String[s] = "BESCES-00900FF7-S14"; break;
-case 14:ff7.SG_Region_String[s] = "BESCES-00900FF7-S15"; break;
+    if(!load)
+    {
+        if(!ui->action_Region_PAL_Spanish->isChecked()){ff7.SG_Region_String[s].clear();ui->lbl_sg_region->clear();}
+        else
+        {
+        switch(s)
+            {
+            case 0:ff7.SG_Region_String[s] = "BESCES-00900FF7-S01"; break;
+            case 1:ff7.SG_Region_String[s] = "BESCES-00900FF7-S02"; break;
+            case 2:ff7.SG_Region_String[s] = "BESCES-00900FF7-S03"; break;
+            case 3:ff7.SG_Region_String[s] = "BESCES-00900FF7-S04"; break;
+            case 4:ff7.SG_Region_String[s] = "BESCES-00900FF7-S05"; break;
+            case 5:ff7.SG_Region_String[s] = "BESCES-00900FF7-S06"; break;
+            case 6:ff7.SG_Region_String[s] = "BESCES-00900FF7-S07"; break;
+            case 7:ff7.SG_Region_String[s] = "BESCES-00900FF7-S08"; break;
+            case 8:ff7.SG_Region_String[s] = "BESCES-00900FF7-S09"; break;
+            case 9:ff7.SG_Region_String[s] = "BESCES-00900FF7-S10"; break;
+            case 10:ff7.SG_Region_String[s] = "BESCES-00900FF7-S11"; break;
+            case 11:ff7.SG_Region_String[s] = "BESCES-00900FF7-S12"; break;
+            case 12:ff7.SG_Region_String[s] = "BESCES-00900FF7-S13"; break;
+            case 13:ff7.SG_Region_String[s] = "BESCES-00900FF7-S14"; break;
+            case 14:ff7.SG_Region_String[s] = "BESCES-00900FF7-S15"; break;
+            }
+        ui->action_Region_USA->setChecked(false);
+        ui->action_Region_PAL_German->setChecked(false);
+        ui->action_Region_PAL_Generic->setChecked(false);
+        ui->action_Region_JPN->setChecked(false);
+        ui->action_Region_JPN_International->setChecked(false);
+        ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+        ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+        }
+    }
 }
-ui->action_Region_USA->setChecked(false);
-ui->action_Region_PAL_German->setChecked(false);
-ui->action_Region_PAL_Generic->setChecked(false);
-ui->action_Region_JPN->setChecked(false);
-ui->action_Region_JPN_International->setChecked(false);
-ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
-
-ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
-}
-}
+/*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_JPN_triggered()
 {
-if(!load)
-{
-/*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
-switch(s)
-{
-case 0:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01"; break;
-case 1:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S02"; break;
-case 2:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S03"; break;
-case 3:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S04"; break;
-case 4:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S05"; break;
-case 5:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S06"; break;
-case 6:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S07"; break;
-case 7:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S08"; break;
-case 8:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S09"; break;
-case 9:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S10"; break;
-case 10:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S11"; break;
-case 11:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S12"; break;
-case 12:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S13"; break;
-case 13:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S14"; break;
-case 14:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S15"; break;
+    if(!load)
+    {
+        if(!ui->action_Region_JPN->isChecked()){ff7.SG_Region_String[s].clear();ui->lbl_sg_region->clear();}
+        else
+        {
+        switch(s)
+            {
+            case 0:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01"; break;
+            case 1:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S02"; break;
+            case 2:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S03"; break;
+            case 3:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S04"; break;
+            case 4:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S05"; break;
+            case 5:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S06"; break;
+            case 6:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S07"; break;
+            case 7:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S08"; break;
+            case 8:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S09"; break;
+            case 9:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S10"; break;
+            case 10:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S11"; break;
+            case 11:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S12"; break;
+            case 12:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S13"; break;
+            case 13:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S14"; break;
+            case 14:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S15"; break;
+            }
+        ui->action_Region_USA->setChecked(false);
+        ui->action_Region_PAL_Generic->setChecked(false);
+        ui->action_Region_PAL_German->setChecked(false);
+        ui->action_Region_PAL_Spanish->setChecked(false);
+        ui->action_Region_JPN_International->setChecked(false);
+        ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+        }
+    }
 }
-ui->action_Region_USA->setChecked(false);
-ui->action_Region_PAL_Generic->setChecked(false);
-ui->action_Region_PAL_German->setChecked(false);
-ui->action_Region_PAL_Spanish->setChecked(false);
-ui->action_Region_JPN_International->setChecked(false);
-ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
-}
-}
+/*~~~~~~~~~~~~~SET JPN_International MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_JPN_International_triggered()
 {
-if(!load)
-{
-/*~~~~~~~~~~~~~SET JPN_International MC HEADER~~~~~~~~~~~~~~~~*/
-switch(s)
-{
-case 0:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01"; break;
-case 1:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S02"; break;
-case 2:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S03"; break;
-case 3:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S04"; break;
-case 4:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S05"; break;
-case 5:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S06"; break;
-case 6:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S07"; break;
-case 7:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S08"; break;
-case 8:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S09"; break;
-case 9:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S10"; break;
-case 10:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S11"; break;
-case 11:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S12"; break;
-case 12:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S13"; break;
-case 13:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S14"; break;
-case 14:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S15"; break;
-}
-ui->action_Region_USA->setChecked(false);
-ui->action_Region_PAL_Generic->setChecked(false);
-ui->action_Region_PAL_German->setChecked(false);
-ui->action_Region_PAL_Spanish->setChecked(false);
-ui->action_Region_JPN->setChecked(false);
-ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
-}
+    if(!load)
+    {
+        if(!ui->action_Region_JPN_International->isChecked()){ff7.SG_Region_String[s].clear();ui->lbl_sg_region->clear();}
+        else
+        {
+        switch(s)
+            {
+            case 0:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01"; break;
+            case 1:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S02"; break;
+            case 2:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S03"; break;
+            case 3:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S04"; break;
+            case 4:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S05"; break;
+            case 5:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S06"; break;
+            case 6:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S07"; break;
+            case 7:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S08"; break;
+            case 8:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S09"; break;
+            case 9:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S10"; break;
+            case 10:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S11"; break;
+            case 11:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S12"; break;
+            case 12:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S13"; break;
+            case 13:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S14"; break;
+            case 14:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S15"; break;
+            }
+        ui->action_Region_USA->setChecked(false);
+        ui->action_Region_PAL_Generic->setChecked(false);
+        ui->action_Region_PAL_German->setChecked(false);
+        ui->action_Region_PAL_Spanish->setChecked(false);
+        ui->action_Region_JPN->setChecked(false);
+        ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+        }
+    }
 }
 void MainWindow::testdata_refresh()
 {
