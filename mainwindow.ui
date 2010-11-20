@@ -2765,8 +2765,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>423</width>
-         <height>414</height>
+         <width>94</width>
+         <height>24</height>
         </rect>
        </property>
        <attribute name="label">
@@ -16306,7 +16306,7 @@
     <bool>true</bool>
    </property>
    <property name="checked">
-    <bool>true</bool>
+    <bool>false</bool>
    </property>
    <property name="text">
     <string>English</string>
