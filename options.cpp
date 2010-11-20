@@ -51,3 +51,11 @@ void Options::on_btn_set_export_pc_clicked()
     QString temp = QFileDialog::getExistingDirectory(this,tr("Select A Directory To Export FF7 PC Saves"),bchoco_settings.value("export_pc").toString());
     bchoco_settings.setValue("export_pc",temp);
 }
+
+
+void Options::on_btn_set_default_save_clicked()
+{
+    QString temp = QFileDialog::getOpenFileName(this,tr("Select A Default Save Game (Must Be Raw PSX)"),bchoco_settings.value("default_save_file").toString());
+    bchoco_settings.setValue("default_save_file",temp);
+}
+

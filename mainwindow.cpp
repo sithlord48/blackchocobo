@@ -88,6 +88,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     {
         ui->action_show_test_data->setChecked(1);
     }
+   if(settings.value("default_save_file").isNull()){settings.setValue("default_save_file","save0");}
    // loadFileFull("save0"); //load the default save map..
 }
 MainWindow::~MainWindow()
@@ -279,8 +280,8 @@ void MainWindow::loadFileFull(const QString &fileName)
     }
     else
     {
-    s=0;
-    for(int i=1;i<14;i++){clearslot(i);}
+        s=0;
+        for(int i=1;i<14;i++){clearslot(i);}
     }
     this->setWindowTitle(tr("Black Chocobo - ") + fileName); //eslava this is for you :)
     guirefresh();
@@ -290,6 +291,7 @@ void MainWindow::on_actionFrom_PSX_Slot_activated()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Select Final Fantasy 7 PSX Save"),(""),tr("PSX FF7 SaveGame (*-S*)"));
+    if(fileName== ""){return;}
     if (!fileName.isEmpty())
     {
             QFile file(fileName);
@@ -306,6 +308,13 @@ void MainWindow::on_actionFrom_PSX_Slot_activated()
         int index = 0x200;
         temp = ff7file.mid(index,0x10f4);
         memcpy(&ff7.slot[s],temp,0x10f4);
+        if(fileName.contains("00867")){ff7.SG_Region_String[s] = "BESCES-00867FF7-S01";}
+   else if(fileName.contains("00869")){ff7.SG_Region_String[s] = "BESCES-00869FF7-S01";}
+   else if(fileName.contains("00900")){ff7.SG_Region_String[s] = "BESCES-00900FF7-S01";}
+   else if(fileName.contains("94163")){ff7.SG_Region_String[s] = "BASLUS-94163FF7-S01";}
+   else if(fileName.contains("00700")){ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01";}
+   else if(fileName.contains("01057")){ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01";}
+   else {ff7.SG_Region_String[s] ="";}
     }//Parse slot data....
     guirefresh();
 }
@@ -314,6 +323,7 @@ void MainWindow::on_actionFrom_PSV_Slot_activated()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Select Final Fantasy 7 PSV Save"),(""),tr("PSX FF7 SaveGame (*.psv)"));
+    if (fileName == ""){return;}
     if (!fileName.isEmpty())
         {
             QFile file(fileName);
@@ -330,6 +340,13 @@ void MainWindow::on_actionFrom_PSV_Slot_activated()
             int index = 0x284;
             temp = ff7file.mid(index,0x10f4);
             memcpy(&ff7.slot[s],temp,0x10f4);
+            if(fileName.contains("00867")){ff7.SG_Region_String[s] = "BESCES-00867FF7-S01";}
+       else if(fileName.contains("00869")){ff7.SG_Region_String[s] = "BESCES-00869FF7-S01";}
+       else if(fileName.contains("00900")){ff7.SG_Region_String[s] = "BESCES-00900FF7-S01";}
+       else if(fileName.contains("94163")){ff7.SG_Region_String[s] = "BASLUS-94163FF7-S01";}
+       else if(fileName.contains("00700")){ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01";}
+       else if(fileName.contains("01057")){ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01";}
+       else {ff7.SG_Region_String[s] ="";}
         }//Parse slot data....
     guirefresh();
 }
@@ -1797,33 +1814,33 @@ void MainWindow::guirefresh(void)
     else
     {
         ui->actionSave_File->setEnabled(0);
-        ui->actionExport_PC_Save->setEnabled(0);
-        ui->actionExport_PSX->setEnabled(0);
-        ui->actionExport_MC->setEnabled(0);
-        ui->actionFrom_PSV_Slot->setEnabled(0);
-        ui->actionFrom_PSX_Slot->setEnabled(0);
-        ui->actionClear_Slot->setEnabled(0);
-        ui->actionPaste_Slot->setEnabled(0);
-        ui->actionCopy_Slot->setEnabled(0);
-        ui->actionNext_Slot->setEnabled(0);
-        ui->actionPrevious_Slot->setEnabled(0);
-        ui->actionShow_Selection_Dialog->setEnabled(0);
-        ui->actionSlot_01->setEnabled(0);
-        ui->actionSlot_02->setEnabled(0);
-        ui->actionSlot_03->setEnabled(0);
-        ui->actionSlot_04->setEnabled(0);
-        ui->actionSlot_05->setEnabled(0);
-        ui->actionSlot_06->setEnabled(0);
-        ui->actionSlot_07->setEnabled(0);
-        ui->actionSlot_08->setEnabled(0);
-        ui->actionSlot_09->setEnabled(0);
-        ui->actionSlot_10->setEnabled(0);
-        ui->actionSlot_11->setEnabled(0);
-        ui->actionSlot_12->setEnabled(0);
-        ui->actionSlot_13->setEnabled(0);
-        ui->actionSlot_14->setEnabled(0);
-        ui->actionSlot_15->setEnabled(0);
-        ui->menuSlot_Region->setEnabled(0);
+        ui->actionExport_PC_Save->setEnabled(1);
+        ui->actionExport_PSX->setEnabled(1);
+        ui->actionExport_MC->setEnabled(1);
+        ui->actionFrom_PSV_Slot->setEnabled(1);
+        ui->actionFrom_PSX_Slot->setEnabled(1);
+        ui->actionClear_Slot->setEnabled(1);
+        ui->actionPaste_Slot->setEnabled(1);
+        ui->actionCopy_Slot->setEnabled(1);
+        ui->actionNext_Slot->setEnabled(1);
+        ui->actionPrevious_Slot->setEnabled(1);
+        ui->actionShow_Selection_Dialog->setEnabled(1);
+        ui->actionSlot_01->setEnabled(1);
+        ui->actionSlot_02->setEnabled(1);
+        ui->actionSlot_03->setEnabled(1);
+        ui->actionSlot_04->setEnabled(1);
+        ui->actionSlot_05->setEnabled(1);
+        ui->actionSlot_06->setEnabled(1);
+        ui->actionSlot_07->setEnabled(1);
+        ui->actionSlot_08->setEnabled(1);
+        ui->actionSlot_09->setEnabled(1);
+        ui->actionSlot_10->setEnabled(1);
+        ui->actionSlot_11->setEnabled(1);
+        ui->actionSlot_12->setEnabled(1);
+        ui->actionSlot_13->setEnabled(1);
+        ui->actionSlot_14->setEnabled(1);
+        ui->actionSlot_15->setEnabled(1);
+        ui->menuSlot_Region->setEnabled(1);
     }
     ui->menuSlot_Region->setEnabled(1);
     ui->action_Region_USA->setChecked(0);
@@ -1842,6 +1859,7 @@ void MainWindow::guirefresh(void)
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
 /*~~~~~End of menu options~~~~*/
 /*~~~~~Load Game Options~~~~~*/
+
     if((ff7.slot[s].options1)& (1<<0)){ui->combo_sound->setCurrentIndex(1);}
     else{ui->combo_sound->setCurrentIndex(0);}
     if((ff7.slot[s].options1) & (1<<2)){ui->combo_control->setCurrentIndex(1);}
@@ -1995,20 +2013,24 @@ void MainWindow::guirefresh(void)
 
     QTableWidgetItem *newItem;
 /*~~~~~Item Table Code~~~~~*/
+
     int j= ui->tbl_itm->currentRow();
-    ui->tbl_itm->clear(); // just incase
+    ui->tbl_itm->reset(); // just incase
     ui->tbl_itm->setColumnWidth(0,145);
     ui->tbl_itm->setColumnWidth(1,32);
     ui->tbl_itm->setRowCount(320);
     for (int i=0;i<320;i++) // set up items
         {
-        if (ff7.slot[s].items[i].qty == 255 && ff7.slot[s].items[i].id == 255)
+        if (ff7.slot[s].items[i].qty == 0xFF && ff7.slot[s].items[i].id == 0xFF)
             {
             newItem = new QTableWidgetItem("-------EMPTY--------",0);
             ui->tbl_itm->setItem(i,0,newItem);
             ui->tbl_itm->setRowHeight(i,22);
+            newItem = new QTableWidgetItem("",0);
+            ui->tbl_itm->setItem(i,1,newItem);
+
             }
-        else
+         else
             {
             QString qty;
             if(ff7.slot[s].items[i].qty %2 ==0)
@@ -2028,10 +2050,11 @@ void MainWindow::guirefresh(void)
                 ui->tbl_itm->setItem(i,1,newItem);
                 }
             }
-        ui->tbl_itm->setCurrentCell(j,0);
         }
+    ui->tbl_itm->setCurrentCell(j,0);
 /*~~~~~End Item Code~~~~~*/
 /*~~~~~Materia Code~~~~~~*/
+
     j= ui->tbl_materia->currentRow();
     ui->tbl_materia->reset();
     ui->tbl_materia->setColumnWidth(0,145);
@@ -2283,7 +2306,7 @@ void MainWindow::guirefresh(void)
     load=true;
 /*~~~~~End Materia Code~~~~~*/
 /*~~~~~Stolen Materia~~~~~~~*/
-    ui->tbl_materia_2->reset();
+  ui->tbl_materia_2->reset();
     ui->tbl_materia_2->setColumnWidth(0,145);
     ui->tbl_materia_2->setColumnWidth(1,64);
     ui->tbl_materia_2->setRowCount(48);
@@ -2305,6 +2328,7 @@ void MainWindow::guirefresh(void)
             ui->tbl_materia_2->setItem(mat,0,newItem);
             }
         }
+
 /*~~~~~End Stolen Materia~~~~*/
     if((ff7.slot[s].materiacaves)& (1<<0)){ui->cb_materiacave_1->setChecked(Qt::Checked);}
     else{ui->cb_materiacave_1->setChecked(Qt::Unchecked);}
@@ -5326,3 +5350,24 @@ else if(value ==2){ff7.slot[s].tut_save=0x3A;}
 testdata_refresh();
 }
 }
+
+void MainWindow::on_actionMake_Default_triggered()
+{
+            QFile file(settings.value("default_save_file").toString());
+            if(!file.open(QFile::ReadOnly))
+            {
+                QMessageBox::warning(this, tr("Black Chocobo"),
+                tr("Cannot read file %1:\n%2., Be Sure its is a PSX Save")
+                .arg(settings.value("default_save_file").toString()).arg(file.errorString()));
+                return;
+            }
+        QByteArray ff7file;
+        ff7file = file.readAll(); //put all data in temp raw file
+        QByteArray temp; // create a temp to be used when needed
+        int index = 0x200;
+        temp = ff7file.mid(index,0x10f4);
+        memcpy(&ff7.slot[s],temp,0x10f4);
+    if(ff7.SG_Region_String[s] == ""){ff7.SG_Region_String[s] = "BASLUS-94163FF7-S01";}
+    guirefresh();
+}
+

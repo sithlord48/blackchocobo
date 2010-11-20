@@ -2765,8 +2765,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>94</width>
-         <height>24</height>
+         <width>423</width>
+         <height>414</height>
         </rect>
        </property>
        <attribute name="label">
@@ -15860,6 +15860,7 @@
     <addaction name="separator"/>
     <addaction name="actionCopy_Slot"/>
     <addaction name="actionPaste_Slot"/>
+    <addaction name="actionMake_Default"/>
     <addaction name="actionClear_Slot"/>
     <addaction name="separator"/>
     <addaction name="menuSlot_Region"/>
@@ -16426,6 +16427,14 @@
    </property>
    <property name="text">
     <string>Export MC File</string>
+   </property>
+  </action>
+  <action name="actionMake_Default">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>Make &quot;Default&quot; Save Here</string>
    </property>
   </action>
  </widget>
