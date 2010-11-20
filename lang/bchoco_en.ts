@@ -1626,14 +1626,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Spanish</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>French</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Clear Slot</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2663,6 +2655,23 @@ isn&apos;t a FF7 SaveGame.</source>
         <source>Export MC File</source>
         <translation type="unfinished"></translation>
     </message>
+    <message encoding="UTF-8">
+        <source>Español</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Francais</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Make &quot;Default&quot; Save Here</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read file %1:
+%2., Be Sure its is a PSX Save</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
@@ -2708,6 +2717,14 @@ isn&apos;t a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Default Folder To Load/Save Virtual (.mcd/.mcr) savegames</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File To load When &quot;Make Defalut save&quot; is used</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A Default Save Game (Must Be Raw PSX)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

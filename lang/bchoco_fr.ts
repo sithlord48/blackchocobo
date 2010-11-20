@@ -1503,7 +1503,7 @@
     </message>
     <message>
         <source>French</source>
-        <translation>Français</translation>
+        <translation type="obsolete">Français</translation>
     </message>
     <message>
         <source>More Options....</source>
@@ -2491,7 +2491,7 @@
     </message>
     <message>
         <source>Spanish</source>
-        <translation type="unfinished">Spanish</translation>
+        <translation type="obsolete">Spanish</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 PC SaveGame</source>
@@ -2939,6 +2939,23 @@ n&apos;est pas une sauvegarde de FF7.</translation>
         <source>Export MC File</source>
         <translation type="unfinished"></translation>
     </message>
+    <message encoding="UTF-8">
+        <source>Español</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Francais</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Make &quot;Default&quot; Save Here</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read file %1:
+%2., Be Sure its is a PSX Save</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
@@ -2992,6 +3009,14 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Default Folder To Load/Save Virtual (.mcd/.mcr) savegames</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File To load When &quot;Make Defalut save&quot; is used</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A Default Save Game (Must Be Raw PSX)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
