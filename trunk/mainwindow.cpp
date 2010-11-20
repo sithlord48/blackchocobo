@@ -90,6 +90,18 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     }
    if(settings.value("default_save_file").isNull()){settings.setValue("default_save_file","save0");}
    // loadFileFull("save0"); //load the default save map..
+   if(settings.value("lang").toString() == "en")
+   {
+       ui->action_Lang_en->setChecked(1);
+   }
+   else if(settings.value("lang").toString() == "es")
+   {
+       ui->action_Lang_es->setChecked(1);
+   }
+   else if(settings.value("lang").toString() == "fr")
+   {
+       ui->action_Lang_fr->setChecked(1);
+   }
 }
 MainWindow::~MainWindow()
 {
@@ -1093,23 +1105,24 @@ void fix_sum(const QString &fileName)
 /*~~~~~~~~~~~~LANGUAGE ACTIONS~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Lang_en_triggered()
 {
-    ui->action_Lang_es->setChecked(false);
-    ui->action_Lang_fr->setChecked(false);
+    //clear other lang
+    ui->action_Lang_es->setChecked(0);
+    ui->action_Lang_fr->setChecked(0);
     settings.setValue("lang","en");
     QMessageBox::information(this,"Language Changed","You Must Restart For The Language to Change");
 }
 void MainWindow::on_action_Lang_es_triggered()
 {
-    ui->action_Lang_en->setChecked(false);
-    ui->action_Lang_fr->setChecked(false);
+    ui->action_Lang_en->setChecked(0);
+    ui->action_Lang_fr->setChecked(0);
     settings.setValue("lang","es");
     QMessageBox::information(this,"Idioma Cambiado","Debe reiniciar Para el cambio de idioma");
 
 }
 void MainWindow::on_action_Lang_fr_triggered()
 {
-    ui->action_Lang_es->setChecked(false);
-    ui->action_Lang_en->setChecked(false);
+    ui->action_Lang_en->setChecked(0);
+    ui->action_Lang_es->setChecked(0);
     settings.setValue("lang","fr");
     QMessageBox::information(this,"Langue Modifiée","Vous Devez Redemarrer Pour Changer la Langue");
 }
