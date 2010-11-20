@@ -30,8 +30,7 @@ int main(int argc, char *argv[])
     QTranslator translator;
     QString lang = "lang/bchoco_";
     lang.append(setting.value("lang").toString());
-    if (lang== "lang/bchoco_")
-        lang.append(QLocale::system().name().section('_', 0, 0)); //add system lang to end so we get a full item
+    if (lang == "lang/bchoco_"){lang.append(QLocale::system().name().section('_', 0, 0));} //add system lang to end so we get a full item
     translator.load(lang);
     a.installTranslator(&translator);
     MainWindow w;

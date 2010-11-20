@@ -22,6 +22,7 @@ private:
     Ui::Options *ui;
 
 private slots:
+    void on_btn_set_default_save_clicked();
     void on_btn_set_export_pc_clicked();
     void on_btn_set_load_pc_clicked();
     void on_btn_set_save_emu_clicked();
