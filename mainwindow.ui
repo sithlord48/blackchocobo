@@ -2765,8 +2765,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>94</width>
-         <height>24</height>
+         <width>423</width>
+         <height>414</height>
         </rect>
        </property>
        <attribute name="label">
@@ -16309,7 +16309,7 @@
     <bool>false</bool>
    </property>
    <property name="text">
-    <string>English</string>
+    <string notr="true">English</string>
    </property>
   </action>
   <action name="action_Lang_es">
@@ -16317,7 +16317,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>Spanish</string>
+    <string notr="true">Español</string>
    </property>
   </action>
   <action name="action_Lang_fr">
@@ -16325,7 +16325,7 @@
     <bool>true</bool>
    </property>
    <property name="text">
-    <string>French</string>
+    <string notr="true">Francais</string>
    </property>
   </action>
   <action name="actionEdit_Paths">

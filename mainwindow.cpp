@@ -2108,7 +2108,7 @@ void MainWindow::guirefresh(void)
         ui->sb_addap->setValue(0);
         ui->sb_addap->setMaximum(0);
         ui->combo_mat_type->setCurrentIndex(0);
-        ui->combo_add_mat->setCurrentIndex(0xFF);
+        ui->combo_add_mat->setCurrentIndex(0);
         ui->btn_m_lvl1->setVisible(0);
         ui->btn_m_lvl2->setVisible(0);
         ui->btn_m_lvl3->setVisible(0);
@@ -3653,7 +3653,7 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row)
             ui->sb_addap->setValue(0);
             ui->sb_addap->setMaximum(0);
             ui->combo_mat_type->setCurrentIndex(0);
-            ui->combo_add_mat->setCurrentIndex(0xFF);
+            ui->combo_add_mat->setCurrentIndex(0);
             ui->btn_m_lvl1->setVisible(0);
             ui->btn_m_lvl2->setVisible(0);
             ui->btn_m_lvl3->setVisible(0);
