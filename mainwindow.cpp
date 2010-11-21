@@ -793,7 +793,7 @@ void MainWindow::on_actionExport_PC_Save_activated()
     /*~~~~~~~~~~~~~~~SHORT SAVE - SITHLORD48~~~~~~~~~~~~*/
     FILE *pfile; // this section is starting to work correctly!
     pfile = fopen(fileName.toAscii(),"wb");
-    fwrite(ff7.file_headerp,ff7.SG_HEADER,1,pfile);
+    fwrite(PC_SAVE_GAME_FILE_HEADER,9,1,pfile);
     for(int si=0;si<15;si++)
     {
         fwrite(ff7.hf[si].sl_header,ff7.SG_SLOT_HEADER,1,pfile);
