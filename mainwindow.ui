@@ -2765,8 +2765,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>423</width>
-         <height>414</height>
+         <width>94</width>
+         <height>24</height>
         </rect>
        </property>
        <attribute name="label">
@@ -16330,7 +16330,7 @@
   </action>
   <action name="actionEdit_Paths">
    <property name="text">
-    <string>Set Directories</string>
+    <string>More Options...</string>
    </property>
   </action>
   <action name="action_Region_PAL_Generic_old">
