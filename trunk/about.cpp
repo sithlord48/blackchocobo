@@ -39,3 +39,8 @@ void about::changeEvent(QEvent *e)
         break;
     }
 }
+
+void about::on_pushButton_clicked()
+{
+    this->close();
+}
