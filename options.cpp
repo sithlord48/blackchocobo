@@ -59,3 +59,8 @@ void Options::on_btn_set_default_save_clicked()
     bchoco_settings.setValue("default_save_file",temp);
 }
 
+
+void Options::on_pushButton_clicked()
+{
+    this->close();
+}
