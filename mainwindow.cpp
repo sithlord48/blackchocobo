@@ -3608,10 +3608,10 @@ void MainWindow::on_tbl_itm_currentCellChanged(int row)
     if(!load)
         {
         if (ff7.slot[s].items[row].qty == 255 && ff7.slot[s].items[row].id == 255) // if you click on an empty slot add whats in the item and qty boxes.
-            {
-            if (ui->combo_additem->currentIndex()<256){ff7.slot[s].items[row].id = ui->combo_additem->currentIndex();ff7.slot[s].items[row].qty = quint8(ui->sb_addqty->value() * 2);}
-            else{ff7.slot[s].items[row].id = (ui->combo_additem->currentIndex()-256);ff7.slot[s].items[row].qty  = quint8(ui->sb_addqty->value()* 2) +1;}
-            guirefresh();
+            {// now we do nothing cause noone liked it placing items.
+            //if (ui->combo_additem->currentIndex()<256){ff7.slot[s].items[row].id = ui->combo_additem->currentIndex();ff7.slot[s].items[row].qty = quint8(ui->sb_addqty->value() * 2);}
+            //else{ff7.slot[s].items[row].id = (ui->combo_additem->currentIndex()-256);ff7.slot[s].items[row].qty  = quint8(ui->sb_addqty->value()* 2) +1;}
+            //guirefresh();
             }
         else
             {
@@ -3739,6 +3739,8 @@ void MainWindow::on_btn_m_lvl5_clicked()
 
 void MainWindow::on_combo_mat_type_currentIndexChanged(int index)
 {
+    if(!load)
+    {
     ui->combo_add_mat_2->clear();
     if(index == 0)
         {
@@ -3750,8 +3752,11 @@ void MainWindow::on_combo_mat_type_currentIndexChanged(int index)
         }
     else
         {
+        load=true;
         for(int i=0;i<0x5B;i++){if(index==Materias[i].type){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),Materias[i].name);}}
+        load=false;
         }
+    }
 }
 void MainWindow::on_combo_add_mat_2_currentIndexChanged()
 {
