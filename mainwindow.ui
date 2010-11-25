@@ -2765,8 +2765,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>94</width>
-         <height>24</height>
+         <width>423</width>
+         <height>414</height>
         </rect>
        </property>
        <attribute name="label">
@@ -15809,6 +15809,10 @@
      <property name="title">
       <string>&amp;Export From Current Slot</string>
      </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/icon/icon/export.png</normaloff>:/icon/icon/export.png</iconset>
+     </property>
      <addaction name="actionExport_PC_Save"/>
      <addaction name="actionExport_PSX"/>
      <addaction name="actionExport_MC"/>
@@ -15819,6 +15823,10 @@
      </property>
      <property name="title">
       <string>&amp;Import To Current Slot</string>
+     </property>
+     <property name="icon">
+      <iconset resource="images.qrc">
+       <normaloff>:/icon/icon/import.png</normaloff>:/icon/icon/import.png</iconset>
      </property>
      <addaction name="actionFrom_PSX_Slot"/>
      <addaction name="actionFrom_PSV_Slot"/>
@@ -16308,6 +16316,10 @@
    <property name="checked">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/us_unsel</normaloff>:/icon/us_unsel</iconset>
+   </property>
    <property name="text">
     <string notr="true">English</string>
    </property>
@@ -16315,6 +16327,10 @@
   <action name="action_Lang_es">
    <property name="checkable">
     <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/es_unsel</normaloff>:/icon/es_unsel</iconset>
    </property>
    <property name="text">
     <string notr="true">Español</string>
@@ -16324,7 +16340,17 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/fr_unsel</normaloff>:/icon/fr_unsel</iconset>
+   </property>
    <property name="text">
+    <string notr="true">Francais</string>
+   </property>
+   <property name="iconText">
+    <string notr="true">Francais</string>
+   </property>
+   <property name="toolTip">
     <string notr="true">Francais</string>
    </property>
   </action>
@@ -16377,6 +16403,10 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/icon/icon/us_unsel.png</normaloff>:/icon/icon/us_unsel.png</iconset>
+   </property>
    <property name="text">
     <string>USA (BASLUS-94163)</string>
    </property>
@@ -16384,6 +16414,10 @@
   <action name="action_Region_PAL_Generic">
    <property name="checkable">
     <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/icon/icon/eu_unsel.png</normaloff>:/icon/icon/eu_unsel.png</iconset>
    </property>
    <property name="text">
     <string>PAL (BESCES-00867)</string>
@@ -16393,6 +16427,10 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/icon/icon/de_unsel.png</normaloff>:/icon/icon/de_unsel.png</iconset>
+   </property>
    <property name="text">
     <string>PAL (BESCES-00869)</string>
    </property>
@@ -16401,6 +16439,10 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/icon/icon/es_unsel.png</normaloff>:/icon/icon/es_unsel.png</iconset>
+   </property>
    <property name="text">
     <string>PAL (BESCES-00900)</string>
    </property>
@@ -16408,6 +16450,10 @@
   <action name="action_Region_JPN">
    <property name="checkable">
     <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>:/icon/icon/jp_unsel.png</normaloff>:/icon/icon/jp_unsel.png</iconset>
    </property>
    <property name="text">
     <string>JPN (BISLPS-00700)</string>

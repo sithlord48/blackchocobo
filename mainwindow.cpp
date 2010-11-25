@@ -93,14 +93,17 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
    if(settings.value("lang").toString() == "en")
    {
        ui->action_Lang_en->setChecked(1);
+       ui->action_Lang_en->setIcon(QIcon(":/icon/us_sel"));
    }
    else if(settings.value("lang").toString() == "es")
    {
        ui->action_Lang_es->setChecked(1);
+       ui->action_Lang_en->setIcon(QIcon(":/icon/es_sel"));
    }
    else if(settings.value("lang").toString() == "fr")
    {
        ui->action_Lang_fr->setChecked(1);
+       ui->action_Lang_en->setIcon(QIcon(":/icon/fr_sel"));
    }
 }
 MainWindow::~MainWindow()
@@ -1106,24 +1109,33 @@ void fix_sum(const QString &fileName)
 void MainWindow::on_action_Lang_en_triggered()
 {
     //clear other lang
+    ui->action_Lang_es->setIcon(QIcon(":/icon/es_unsel"));
     ui->action_Lang_es->setChecked(0);
+    ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
     ui->action_Lang_fr->setChecked(0);
     settings.setValue("lang","en");
+    ui->action_Lang_en->setIcon(QIcon(":/icon/us_sel"));
     QMessageBox::information(this,"Language Changed","You Must Restart For The Language to Change");
 }
 void MainWindow::on_action_Lang_es_triggered()
 {
     ui->action_Lang_en->setChecked(0);
+    ui->action_Lang_en->setIcon(QIcon(":/icon/us_unsel"));
     ui->action_Lang_fr->setChecked(0);
+    ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
     settings.setValue("lang","es");
+    ui->action_Lang_es->setIcon(QIcon(":/icon/es_sel"));
     QMessageBox::information(this,"Idioma Cambiado","Debe reiniciar Para el cambio de idioma");
 
 }
 void MainWindow::on_action_Lang_fr_triggered()
 {
     ui->action_Lang_en->setChecked(0);
+    ui->action_Lang_en->setIcon(QIcon(":/icon/us_unsel"));
     ui->action_Lang_es->setChecked(0);
+    ui->action_Lang_es->setIcon(QIcon(":/icon/es_unsel"));
     settings.setValue("lang","fr");
+    ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_sel"));
     QMessageBox::information(this,"Langue Modifiée","Vous Devez Redemarrer Pour Changer la Langue");
 }
 /*~~~~~~~~~~~END LANGUAGE ACTIONS~~~~~~~~~~*/
@@ -1862,11 +1874,17 @@ void MainWindow::guirefresh(void)
     ui->action_Region_PAL_Spanish->setChecked(0);
     ui->action_Region_JPN->setChecked(0);
     ui->action_Region_JPN_International->setChecked(0);
-    if(ff7.SG_Region_String[s].contains("94163")){ui->action_Region_USA->setChecked(Qt::Checked);}
-    else if (ff7.SG_Region_String[s].contains("00867")){ui->action_Region_PAL_Generic->setChecked(Qt::Checked);}
-    else if (ff7.SG_Region_String[s].contains("00869")){ui->action_Region_PAL_German->setChecked(Qt::Checked);}
-    else if (ff7.SG_Region_String[s].contains("00900")){ui->action_Region_PAL_Spanish->setChecked(Qt::Checked);}
-    else if (ff7.SG_Region_String[s].contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);}
+    ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
+    ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+    ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+    ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
+    ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
+    //ui->action_Region_JPN_International->setIcon(QIcon(""));
+    if(ff7.SG_Region_String[s].contains("94163")){ui->action_Region_USA->setChecked(Qt::Checked);ui->action_Region_USA->setIcon(QIcon(":/icon/us_sel"));}
+    else if (ff7.SG_Region_String[s].contains("00867")){ui->action_Region_PAL_Generic->setChecked(Qt::Checked);ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_sel"));}
+    else if (ff7.SG_Region_String[s].contains("00869")){ui->action_Region_PAL_German->setChecked(Qt::Checked);ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_sel"));}
+    else if (ff7.SG_Region_String[s].contains("00900")){ui->action_Region_PAL_Spanish->setChecked(Qt::Checked);ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_sel"));}
+    else if (ff7.SG_Region_String[s].contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_sel"));}
     else if (ff7.SG_Region_String[s].contains("01057")){ui->action_Region_JPN_International->setChecked(Qt::Checked);}
     else {/*QMessageBox::information(this,tr("Region Detect Error"),tr("Unknow Region String, this is  not a ff7 save"));*/}
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
