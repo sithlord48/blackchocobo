@@ -52,5 +52,20 @@
         <file alias="command_full">icon/y_m_s_f.png</file>
         <file>icon/a_materia.png</file>
         <file alias="y_cloud_icon">icon/y_cloud.png</file>
+        <file>icon/import.png</file>
+        <file>icon/export.png</file>
+        <file alias="us_sel">icon/us.png</file>
+        <file alias="fr_sel">icon/fr.png</file>
+        <file alias="de_sel">icon/de.png</file>
+        <file alias="es_sel">icon/es.png</file>
+        <file alias="jp_sel">icon/jp.png</file>
+        <file alias="eu_sel">icon/eu.png</file>
+        <file alias="es_unsel">icon/es_unsel.png</file>
+        <file alias="de_unsel">icon/de_unsel.png</file>
+        <file alias="fr_unsel">icon/fr_unsel.png</file>
+        <file alias="jp_unsel">icon/jp_unsel.png</file>
+        <file alias="us_unsel">icon/us_unsel.png</file>
+        <file alias="eu_unsel">icon/eu_unsel.png</file>
+        <file>icon/config.png</file>
     </qresource>
 </RCC>
