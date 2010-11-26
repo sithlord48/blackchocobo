@@ -70,5 +70,37 @@
         <file>icon/exportpc.png</file>
         <file>icon/slot_sel.png</file>
         <file>icon/default_save.png</file>
+        <file alias="debug_sel">icon/debug.png</file>
+        <file alias="debug_unsel">icon/debug_unsel.png</file>
+        <file alias="1_sel">icon/1.png</file>
+        <file alias="1_unsel">icon/1_unsel.png</file>
+        <file alias="2_sel">icon/2.png</file>
+        <file alias="2_unsel">icon/2_unsel.png</file>
+        <file alias="3_sel">icon/3.png</file>
+        <file alias="3_unsel">icon/3_unsel.png</file>
+        <file alias="4_sel">icon/4.png</file>
+        <file alias="4_unsel">icon/4_unsel.png</file>
+        <file alias="5_sel">icon/5.png</file>
+        <file alias="5_unsel">icon/5_unsel.png</file>
+        <file alias="6_sel">icon/6.png</file>
+        <file alias="6_unsel">icon/6_unsel.png</file>
+        <file alias="7_sel">icon/7.png</file>
+        <file alias="7_unsel">icon/7_unsel.png</file>
+        <file alias="8_sel">icon/8.png</file>
+        <file alias="8_unsel">icon/8_unsel.png</file>
+        <file alias="9_sel">icon/9.png</file>
+        <file alias="9_unsel">icon/9_unsel.png</file>
+        <file alias="10_sel">icon/10.png</file>
+        <file alias="10_unsel">icon/10_unsel.png</file>
+        <file alias="11_sel">icon/11.png</file>
+        <file alias="11_unsel">icon/11_unsel.png</file>
+        <file alias="12_sel">icon/12.png</file>
+        <file alias="12_unsel">icon/12_unsel.png</file>
+        <file alias="13_sel">icon/13.png</file>
+        <file alias="13_unsel">icon/13_unsel.png</file>
+        <file alias="14_sel">icon/14.png</file>
+        <file alias="14_unsel">icon/14_unsel.png</file>
+        <file alias="15_sel">icon/15.png</file>
+        <file alias="15_unsel">icon/15_unsel.png</file>
     </qresource>
 </RCC>

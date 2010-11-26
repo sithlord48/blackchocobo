@@ -87,6 +87,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     if(settings.value("show_test").toBool())
     {
         ui->action_show_test_data->setChecked(1);
+        ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
     }
    if(settings.value("default_save_file").isNull()){settings.setValue("default_save_file","save0");}
    // loadFileFull("save0"); //load the default save map..
@@ -1646,38 +1647,53 @@ void MainWindow::guirefresh(void)
 
     /*~~~~~Set Menu Items~~~~~~~~~~~~~~*/
     ui->actionSlot_01->setChecked(0);
+    ui->actionSlot_01->setIcon(QIcon(":icon/1_unsel"));
     ui->actionSlot_02->setChecked(0);
+    ui->actionSlot_02->setIcon(QIcon(":icon/2_unsel"));
     ui->actionSlot_03->setChecked(0);
+    ui->actionSlot_03->setIcon(QIcon(":icon/3_unsel"));
     ui->actionSlot_04->setChecked(0);
+    ui->actionSlot_04->setIcon(QIcon(":icon/4_unsel"));
     ui->actionSlot_05->setChecked(0);
+    ui->actionSlot_05->setIcon(QIcon(":icon/5_unsel"));
     ui->actionSlot_06->setChecked(0);
+    ui->actionSlot_06->setIcon(QIcon(":icon/6_unsel"));
     ui->actionSlot_07->setChecked(0);
+    ui->actionSlot_07->setIcon(QIcon(":icon/7_unsel"));
     ui->actionSlot_08->setChecked(0);
+    ui->actionSlot_08->setIcon(QIcon(":icon/8_unsel"));
     ui->actionSlot_09->setChecked(0);
+    ui->actionSlot_09->setIcon(QIcon(":icon/9_unsel"));
     ui->actionSlot_10->setChecked(0);
+    ui->actionSlot_10->setIcon(QIcon(":icon/10_unsel"));
     ui->actionSlot_11->setChecked(0);
+    ui->actionSlot_11->setIcon(QIcon(":icon/11_unsel"));
     ui->actionSlot_12->setChecked(0);
+    ui->actionSlot_12->setIcon(QIcon(":icon/12_unsel"));
     ui->actionSlot_13->setChecked(0);
+    ui->actionSlot_13->setIcon(QIcon(":icon/13_unsel"));
     ui->actionSlot_14->setChecked(0);
+    ui->actionSlot_14->setIcon(QIcon(":icon/14_unsel"));
     ui->actionSlot_15->setChecked(0);
+    ui->actionSlot_15->setIcon(QIcon(":icon/15_unsel"));
     ui->menuSlot_Region->setEnabled(0);
     switch(s)
         {
-        case 0:ui->actionSlot_01->setChecked(1);break;
-        case 1:ui->actionSlot_02->setChecked(1);break;
-        case 2:ui->actionSlot_03->setChecked(1);break;
-        case 3:ui->actionSlot_04->setChecked(1);break;
-        case 4:ui->actionSlot_05->setChecked(1);break;
-        case 5:ui->actionSlot_06->setChecked(1);break;
-        case 6:ui->actionSlot_07->setChecked(1);break;
-        case 7:ui->actionSlot_08->setChecked(1);break;
-        case 8:ui->actionSlot_09->setChecked(1);break;
-        case 9:ui->actionSlot_10->setChecked(1);break;
-        case 10:ui->actionSlot_11->setChecked(1);break;
-        case 11:ui->actionSlot_12->setChecked(1);break;
-        case 12:ui->actionSlot_13->setChecked(1);break;
-        case 13:ui->actionSlot_14->setChecked(1);break;
-        case 14:ui->actionSlot_15->setChecked(1);break;
+        case 0:ui->actionSlot_01->setChecked(1);ui->actionSlot_01->setIcon(QIcon(":icon/1_sel"));break;
+        case 1:ui->actionSlot_02->setChecked(1);ui->actionSlot_02->setIcon(QIcon(":icon/2_sel"));break;
+        case 2:ui->actionSlot_03->setChecked(1);ui->actionSlot_03->setIcon(QIcon(":icon/3_sel"));break;
+        case 3:ui->actionSlot_04->setChecked(1);ui->actionSlot_04->setIcon(QIcon(":icon/4_sel"));break;
+        case 4:ui->actionSlot_05->setChecked(1);ui->actionSlot_05->setIcon(QIcon(":icon/5_sel"));break;
+        case 5:ui->actionSlot_06->setChecked(1);ui->actionSlot_06->setIcon(QIcon(":icon/6_sel"));break;
+        case 6:ui->actionSlot_07->setChecked(1);ui->actionSlot_07->setIcon(QIcon(":icon/7_sel"));break;
+        case 7:ui->actionSlot_08->setChecked(1);ui->actionSlot_08->setIcon(QIcon(":icon/8_sel"));break;
+        case 8:ui->actionSlot_09->setChecked(1);ui->actionSlot_09->setIcon(QIcon(":icon/9_sel"));break;
+        case 9:ui->actionSlot_10->setChecked(1);ui->actionSlot_10->setIcon(QIcon(":icon/10_sel"));break;
+        case 10:ui->actionSlot_11->setChecked(1);ui->actionSlot_11->setIcon(QIcon(":icon/11_sel"));break;
+        case 11:ui->actionSlot_12->setChecked(1);ui->actionSlot_12->setIcon(QIcon(":icon/12_sel"));break;
+        case 12:ui->actionSlot_13->setChecked(1);ui->actionSlot_13->setIcon(QIcon(":icon/13_sel"));break;
+        case 13:ui->actionSlot_14->setChecked(1);ui->actionSlot_14->setIcon(QIcon(":icon/14_sel"));break;
+        case 14:ui->actionSlot_15->setChecked(1);ui->actionSlot_15->setIcon(QIcon(":icon/15_sel"));break;
         }
 
     if (ff7.savetype ==1)//PC
@@ -4737,7 +4753,7 @@ ui->cb_id->setEnabled(true);
 ui->btn_cait->setEnabled(true);
 
 settings.setValue("show_test",1);
-
+ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
 }
 else
 {
@@ -4758,6 +4774,7 @@ if(ff7.slot[s].chars[6].id == 9) {ui->btn_vincent->setEnabled(false);}
 ui->cb_id->setEnabled(false);
 if(ff7.slot[s].chars[7].id == 10) {ui->btn_cait->setEnabled(false);}
 settings.setValue("show_test",0);
+ui->action_show_test_data->setIcon(QIcon(":/icon/debug_unsel"));
 }
 }
 
