@@ -2765,8 +2765,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>423</width>
-         <height>414</height>
+         <width>94</width>
+         <height>24</height>
         </rect>
        </property>
        <attribute name="label">
@@ -16443,6 +16443,10 @@
   <action name="actionMake_Default">
    <property name="enabled">
     <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/icon/default_save.png</normaloff>:/icon/icon/default_save.png</iconset>
    </property>
    <property name="text">
     <string>Make &quot;Default&quot; Save Here</string>
