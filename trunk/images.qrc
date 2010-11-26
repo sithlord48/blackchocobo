@@ -69,5 +69,6 @@
         <file>icon/exportmc.png</file>
         <file>icon/exportpc.png</file>
         <file>icon/slot_sel.png</file>
+        <file>icon/default_save.png</file>
     </qresource>
 </RCC>
