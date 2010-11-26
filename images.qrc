@@ -33,7 +33,6 @@
         <file alias="item">icon/item.png</file>
         <file alias="cloud_weapon">icon/sword.png</file>
         <file>icon/psxmc.png</file>
-        <file>icon/exportpc.png</file>
         <file>icon/copy.png</file>
         <file>icon/paste.png</file>
         <file>icon/delete.png</file>
@@ -67,5 +66,8 @@
         <file alias="us_unsel">icon/us_unsel.png</file>
         <file alias="eu_unsel">icon/eu_unsel.png</file>
         <file>icon/config.png</file>
+        <file>icon/exportmc.png</file>
+        <file>icon/exportpc.png</file>
+        <file>icon/slot_sel.png</file>
     </qresource>
 </RCC>

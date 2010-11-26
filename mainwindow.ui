@@ -16187,6 +16187,10 @@
    <property name="enabled">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/icon/slot_sel.png</normaloff>:/icon/icon/slot_sel.png</iconset>
+   </property>
    <property name="text">
     <string>Show Selection Dialog</string>
    </property>
@@ -16298,17 +16302,6 @@
     <string>Debug Mode</string>
    </property>
   </action>
-  <action name="action_Region_USA_old">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="checked">
-    <bool>false</bool>
-   </property>
-   <property name="text">
-    <string>Usa</string>
-   </property>
-  </action>
   <action name="action_Lang_en">
    <property name="checkable">
     <bool>true</bool>
@@ -16355,48 +16348,12 @@
    </property>
   </action>
   <action name="actionEdit_Paths">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/icon/config.png</normaloff>:/icon/icon/config.png</iconset>
+   </property>
    <property name="text">
     <string>More Options...</string>
-   </property>
-  </action>
-  <action name="action_Region_PAL_Generic_old">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Pal_Generic</string>
-   </property>
-  </action>
-  <action name="action_Region_PAL_German_old">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Pal_German</string>
-   </property>
-  </action>
-  <action name="action_Region_PAL_Spanish_old">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Pal_Spanish</string>
-   </property>
-  </action>
-  <action name="action_Region_Jpn_old">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Jpn</string>
-   </property>
-  </action>
-  <action name="action_Region_Jpn_International_old">
-   <property name="checkable">
-    <bool>true</bool>
-   </property>
-   <property name="text">
-    <string>Jpn_International</string>
    </property>
   </action>
   <action name="action_Region_USA">
@@ -16404,8 +16361,8 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>:/icon/icon/us_unsel.png</normaloff>:/icon/icon/us_unsel.png</iconset>
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/us_unsel</normaloff>:/icon/us_unsel</iconset>
    </property>
    <property name="text">
     <string>USA (BASLUS-94163)</string>
@@ -16416,8 +16373,8 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>:/icon/icon/eu_unsel.png</normaloff>:/icon/icon/eu_unsel.png</iconset>
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/eu_unsel</normaloff>:/icon/eu_unsel</iconset>
    </property>
    <property name="text">
     <string>PAL (BESCES-00867)</string>
@@ -16428,8 +16385,8 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>:/icon/icon/de_unsel.png</normaloff>:/icon/icon/de_unsel.png</iconset>
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/de_unsel</normaloff>:/icon/de_unsel</iconset>
    </property>
    <property name="text">
     <string>PAL (BESCES-00869)</string>
@@ -16440,8 +16397,8 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>:/icon/icon/es_unsel.png</normaloff>:/icon/icon/es_unsel.png</iconset>
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/es_unsel</normaloff>:/icon/es_unsel</iconset>
    </property>
    <property name="text">
     <string>PAL (BESCES-00900)</string>
@@ -16452,8 +16409,8 @@
     <bool>true</bool>
    </property>
    <property name="icon">
-    <iconset>
-     <normaloff>:/icon/icon/jp_unsel.png</normaloff>:/icon/icon/jp_unsel.png</iconset>
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/jp_unsel</normaloff>:/icon/jp_unsel</iconset>
    </property>
    <property name="text">
     <string>JPN (BISLPS-00700)</string>
@@ -16463,6 +16420,10 @@
    <property name="checkable">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/jp_unsel</normaloff>:/icon/jp_unsel</iconset>
+   </property>
    <property name="text">
     <string>JPN (BISLPS-01057)</string>
    </property>
@@ -16470,6 +16431,10 @@
   <action name="actionExport_MC">
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/icon/exportmc.png</normaloff>:/icon/icon/exportmc.png</iconset>
    </property>
    <property name="text">
     <string>Export MC File</string>
@@ -16481,6 +16446,9 @@
    </property>
    <property name="text">
     <string>Make &quot;Default&quot; Save Here</string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Ins</string>
    </property>
   </action>
  </widget>
