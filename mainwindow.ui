@@ -16022,6 +16022,10 @@
    <property name="enabled">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/1_unsel</normaloff>:/icon/1_unsel</iconset>
+   </property>
    <property name="text">
     <string>Slot-01</string>
    </property>
@@ -16036,6 +16040,10 @@
    <property name="enabled">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/2_unsel</normaloff>:/icon/2_unsel</iconset>
+   </property>
    <property name="text">
     <string>Slot-02</string>
    </property>
@@ -16046,6 +16054,10 @@
    </property>
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/3_unsel</normaloff>:/icon/3_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-03</string>
@@ -16058,6 +16070,10 @@
    <property name="enabled">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/4_unsel</normaloff>:/icon/4_unsel</iconset>
+   </property>
    <property name="text">
     <string>Slot-04</string>
    </property>
@@ -16068,6 +16084,10 @@
    </property>
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/5_unsel</normaloff>:/icon/5_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-05</string>
@@ -16080,6 +16100,10 @@
    <property name="enabled">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/6_unsel</normaloff>:/icon/6_unsel</iconset>
+   </property>
    <property name="text">
     <string>Slot-06</string>
    </property>
@@ -16090,6 +16114,10 @@
    </property>
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/7_unsel</normaloff>:/icon/7_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-07</string>
@@ -16102,6 +16130,10 @@
    <property name="enabled">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/8_unsel</normaloff>:/icon/8_unsel</iconset>
+   </property>
    <property name="text">
     <string>Slot-08</string>
    </property>
@@ -16112,6 +16144,10 @@
    </property>
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/9_unsel</normaloff>:/icon/9_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-09</string>
@@ -16124,6 +16160,10 @@
    <property name="enabled">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/10_unsel</normaloff>:/icon/10_unsel</iconset>
+   </property>
    <property name="text">
     <string>Slot-10</string>
    </property>
@@ -16134,6 +16174,10 @@
    </property>
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/11_unsel</normaloff>:/icon/11_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-11</string>
@@ -16146,6 +16190,10 @@
    <property name="enabled">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/12_unsel</normaloff>:/icon/12_unsel</iconset>
+   </property>
    <property name="text">
     <string>Slot-12</string>
    </property>
@@ -16156,6 +16204,10 @@
    </property>
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/13_unsel</normaloff>:/icon/13_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-13</string>
@@ -16168,6 +16220,10 @@
    <property name="enabled">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/14_unsel</normaloff>:/icon/14_unsel</iconset>
+   </property>
    <property name="text">
     <string>Slot-14</string>
    </property>
@@ -16178,6 +16234,10 @@
    </property>
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/15_unsel</normaloff>:/icon/15_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-15</string>
@@ -16297,6 +16357,10 @@
   <action name="action_show_test_data">
    <property name="checkable">
     <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/debug_unsel</normaloff>:/icon/debug_unsel</iconset>
    </property>
    <property name="text">
     <string>Debug Mode</string>
