@@ -35,8 +35,8 @@
    <string>Black Chocobo</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>:/icon/icon/bchoco.png</normaloff>:/icon/icon/bchoco.png</iconset>
+   <iconset resource="images.qrc">
+    <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="unifiedTitleAndToolBarOnMac">
    <bool>false</bool>
@@ -2765,8 +2765,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>423</width>
-         <height>414</height>
+         <width>94</width>
+         <height>24</height>
         </rect>
        </property>
        <attribute name="label">
