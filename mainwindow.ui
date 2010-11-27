@@ -2765,8 +2765,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>423</width>
-         <height>414</height>
+         <width>94</width>
+         <height>24</height>
         </rect>
        </property>
        <attribute name="label">
@@ -15924,9 +15924,8 @@
   </widget>
   <action name="action_Quit">
    <property name="icon">
-    <iconset>
-     <normaloff>:/icon/icon/quit.png</normaloff>
-     <normalon>icon/quit.png</normalon>:/icon/icon/quit.png</iconset>
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/quit</normaloff>:/icon/quit</iconset>
    </property>
    <property name="text">
     <string>&amp;Quit</string>
