@@ -1,8 +1,8 @@
 <RCC>
     <qresource prefix="/icon">
-        <file>icon/open.png</file>
+        <file alias="open">icon/open.png</file>
         <file alias="quit">icon/quit.png</file>
-        <file>icon/save.png</file>
+        <file alias="save">icon/save.png</file>
         <file alias="aeris_icon">icon/aeris.png</file>
         <file alias="barret_icon">icon/barret.png</file>
         <file alias="cait_icon">icon/cait.png</file>
@@ -13,8 +13,8 @@
         <file alias="tifa_icon">icon/tifa.png</file>
         <file alias="vincent_icon">icon/vincent.png</file>
         <file alias="yuffie_icon">icon/yuffie.png</file>
-        <file>icon/bchoco.png</file>
-        <file>icon/qt_logo.png</file>
+        <file alias="bchoco">icon/bchoco.png</file>
+        <file alias="qt_logo">icon/qt_logo.png</file>
         <file alias="barret_weapon">icon/gunarm.png</file>
         <file alias="tifa_weapon">icon/glove.png</file>
         <file alias="aeris_weapon">icon/staff.png</file>
@@ -32,13 +32,13 @@
         <file alias="support">icon/sup_materia.png</file>
         <file alias="item">icon/item.png</file>
         <file alias="cloud_weapon">icon/sword.png</file>
-        <file>icon/psxmc.png</file>
-        <file>icon/copy.png</file>
-        <file>icon/paste.png</file>
-        <file>icon/delete.png</file>
+        <file alias="psxmc">icon/psxmc.png</file>
+        <file alias="copy">icon/copy.png</file>
+        <file alias="paste">icon/paste.png</file>
+        <file alias="delete">icon/delete.png</file>
         <file alias="prev">icon/previous.png</file>
         <file alias="next">icon/next.png</file>
-        <file>icon/psn.png</file>
+        <file alias="psn">icon/psn.png</file>
         <file alias="support_empty">icon/b_m_s_e.png</file>
         <file alias="support_full">icon/b_m_s_f.png</file>
         <file alias="independent_empty">icon/f_m_s_e.png</file>
@@ -49,10 +49,10 @@
         <file alias="summon_full">icon/r_m_s_f.png</file>
         <file alias="command_empty">icon/y_m_s_e.png</file>
         <file alias="command_full">icon/y_m_s_f.png</file>
-        <file>icon/a_materia.png</file>
+        <file alias="all_materia">icon/a_materia.png</file>
         <file alias="y_cloud_icon">icon/y_cloud.png</file>
-        <file>icon/import.png</file>
-        <file>icon/export.png</file>
+        <file alias="import">icon/import.png</file>
+        <file alias="export">icon/export.png</file>
         <file alias="us_sel">icon/us.png</file>
         <file alias="fr_sel">icon/fr.png</file>
         <file alias="de_sel">icon/de.png</file>
@@ -65,11 +65,11 @@
         <file alias="jp_unsel">icon/jp_unsel.png</file>
         <file alias="us_unsel">icon/us_unsel.png</file>
         <file alias="eu_unsel">icon/eu_unsel.png</file>
-        <file>icon/config.png</file>
-        <file>icon/exportmc.png</file>
-        <file>icon/exportpc.png</file>
-        <file>icon/slot_sel.png</file>
-        <file>icon/default_save.png</file>
+        <file alias="config">icon/config.png</file>
+        <file alias="exportmc">icon/exportmc.png</file>
+        <file alias="exportpc">icon/exportpc.png</file>
+        <file alias="slot_sel">icon/slot_sel.png</file>
+        <file alias="def_save">icon/default_save.png</file>
         <file alias="debug_sel">icon/debug.png</file>
         <file alias="debug_unsel">icon/debug_unsel.png</file>
         <file alias="1_sel">icon/1.png</file>
