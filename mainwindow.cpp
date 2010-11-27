@@ -1653,25 +1653,24 @@ void MainWindow::guirefresh(void)
             QMessageBox errbox;
             errbox.setWindowTitle(tr("Non-FF7 Slot Detected"));
             errbox.setText(tr("Please Select An Action To Continue"));
-            errbox.setInformativeText(tr("Curent Slot::") + ff7.SG_Region_String[s]);
-            QPushButton *prev = errbox.addButton(tr("Previous Slot"),QMessageBox::ActionRole); prev->setIcon(QIcon(":icon/prev"));
-            QPushButton *ingore = errbox.addButton(tr("View Anyway"),QMessageBox::ActionRole); ingore->setIcon(QIcon(":icon/quit"));
-            QPushButton *next = errbox.addButton(tr("Next Slot"),QMessageBox::ActionRole);next->setIcon(QIcon(":icon/next"));next->setLayoutDirection(Qt::RightToLeft);
+            errbox.setInformativeText(tr("Curent Slot") + "::" + ff7.SG_Region_String[s]);
+            QPushButton *prev = errbox.addButton(tr("Pr&evious Slot"),QMessageBox::ActionRole); prev->setIcon(QIcon(":icon/prev"));
+            QPushButton *ingore = errbox.addButton(tr("View &Anyway"),QMessageBox::ActionRole); ingore->setIcon(QIcon(":icon/quit"));
+            QPushButton *next = errbox.addButton("    "+tr("Ne&xt Slot"),QMessageBox::ActionRole);next->setIcon(QIcon(":icon/next"));next->setLayoutDirection(Qt::RightToLeft);
 
             errbox.exec();
             if(errbox.clickedButton() ==next)
             {
                 if(s<14){s++; guirefresh();}
-                else{QMessageBox::information(this,"Your At Slot 15","Sorry There is no Next Slot");errbox.exec();}
+                else{QMessageBox::information(this,tr("Your At Slot 15"),tr("Sorry There is no Next Slot"));guirefresh();}
             }
             else if(errbox.clickedButton() ==prev)
             {
                 if(s>0){s--; guirefresh();}
-                else{QMessageBox::information(this,"Your At Slot 1","Sorry There is no Previous Slot");errbox.exec();}
+                else{QMessageBox::information(this,tr("Your At Slot 1"),tr("Sorry There is no Previous Slot"));guirefresh();}
             }
             else if(errbox.clickedButton() == ingore)
-            {QMessageBox::information(this,"Ingoring Non FF7 Save","Be Cautious This Might Not Work.");}
-
+            {QMessageBox::information(this,tr("Ingoring Non FF7 Save"),tr("Be Cautious This Might Not Work."));}
          }
     }
 /*~~~~ END Type Check~~~~*/
