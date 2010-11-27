@@ -1,7 +1,7 @@
 <RCC>
     <qresource prefix="/icon">
         <file>icon/open.png</file>
-        <file>icon/quit.png</file>
+        <file alias="quit">icon/quit.png</file>
         <file>icon/save.png</file>
         <file alias="aeris_icon">icon/aeris.png</file>
         <file alias="barret_icon">icon/barret.png</file>
@@ -36,8 +36,8 @@
         <file>icon/copy.png</file>
         <file>icon/paste.png</file>
         <file>icon/delete.png</file>
-        <file>icon/previous.png</file>
-        <file>icon/next.png</file>
+        <file alias="prev">icon/previous.png</file>
+        <file alias="next">icon/next.png</file>
         <file>icon/psn.png</file>
         <file alias="support_empty">icon/b_m_s_e.png</file>
         <file alias="support_full">icon/b_m_s_f.png</file>
