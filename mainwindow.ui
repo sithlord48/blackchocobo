@@ -35,7 +35,7 @@
    <string>Black Chocobo</string>
   </property>
   <property name="windowIcon">
-   <iconset resource="images.qrc">
+   <iconset>
     <normaloff>:/icon/icon/bchoco.png</normaloff>:/icon/icon/bchoco.png</iconset>
   </property>
   <property name="unifiedTitleAndToolBarOnMac">
@@ -2765,8 +2765,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>94</width>
-         <height>24</height>
+         <width>423</width>
+         <height>414</height>
         </rect>
        </property>
        <attribute name="label">
@@ -5755,7 +5755,7 @@
         </property>
         <property name="icon">
          <iconset>
-          <normalon>:/icon/icon/a_materia.png</normalon>
+          <normalon>:/icon/all_materia</normalon>
          </iconset>
         </property>
        </item>
@@ -15811,7 +15811,7 @@
      </property>
      <property name="icon">
       <iconset resource="images.qrc">
-       <normaloff>:/icon/icon/export.png</normaloff>:/icon/icon/export.png</iconset>
+       <normaloff>:/icon/export</normaloff>:/icon/export</iconset>
      </property>
      <addaction name="actionExport_PC_Save"/>
      <addaction name="actionExport_PSX"/>
@@ -15826,7 +15826,7 @@
      </property>
      <property name="icon">
       <iconset resource="images.qrc">
-       <normaloff>:/icon/icon/import.png</normaloff>:/icon/icon/import.png</iconset>
+       <normaloff>:/icon/import</normaloff>:/icon/import</iconset>
      </property>
      <addaction name="actionFrom_PSX_Slot"/>
      <addaction name="actionFrom_PSV_Slot"/>
@@ -15937,7 +15937,7 @@
   <action name="actionOpen_Save_File">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/open.png</normaloff>:/icon/icon/open.png</iconset>
+     <normaloff>:/icon/open</normaloff>:/icon/open</iconset>
    </property>
    <property name="text">
     <string>&amp;Open Save File</string>
@@ -15952,7 +15952,7 @@
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/save.png</normaloff>:/icon/icon/save.png</iconset>
+     <normaloff>:/icon/save</normaloff>:/icon/save</iconset>
    </property>
    <property name="text">
     <string>&amp;Save File</string>
@@ -15962,9 +15962,12 @@
    </property>
   </action>
   <action name="actionAbout">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/bchoco.png</normaloff>:/icon/icon/bchoco.png</iconset>
+     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
    </property>
    <property name="text">
     <string>About Black Chocobo</string>
@@ -15976,7 +15979,7 @@
   <action name="actionAbout_Qt">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/qt_logo.png</normaloff>:/icon/icon/qt_logo.png</iconset>
+     <normaloff>:/icon/qt_logo</normaloff>:/icon/qt_logo</iconset>
    </property>
    <property name="text">
     <string>About Qt</string>
@@ -15991,7 +15994,7 @@
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/exportpc.png</normaloff>:/icon/icon/exportpc.png</iconset>
+     <normaloff>:/icon/exportpc</normaloff>:/icon/exportpc</iconset>
    </property>
    <property name="text">
     <string>Export PC Save</string>
@@ -16009,7 +16012,7 @@
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/psxmc.png</normaloff>:/icon/icon/psxmc.png</iconset>
+     <normaloff>:/icon/psxmc</normaloff>:/icon/psxmc</iconset>
    </property>
    <property name="text">
     <string>Export PSX Save</string>
@@ -16255,7 +16258,7 @@
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/slot_sel.png</normaloff>:/icon/icon/slot_sel.png</iconset>
+     <normaloff>:/icon/slot_sel</normaloff>:/icon/slot_sel</iconset>
    </property>
    <property name="text">
     <string>Show Selection Dialog</string>
@@ -16267,7 +16270,7 @@
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/psxmc.png</normaloff>:/icon/icon/psxmc.png</iconset>
+     <normaloff>:/icon/psxmc</normaloff>:/icon/psxmc</iconset>
    </property>
    <property name="text">
     <string>PSX Save</string>
@@ -16279,7 +16282,7 @@
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/psn.png</normaloff>:/icon/icon/psn.png</iconset>
+     <normaloff>:/icon/psn</normaloff>:/icon/psn</iconset>
    </property>
    <property name="text">
     <string> PSV Save</string>
@@ -16291,7 +16294,7 @@
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/copy.png</normaloff>:/icon/icon/copy.png</iconset>
+     <normaloff>:/icon/copy</normaloff>:/icon/copy</iconset>
    </property>
    <property name="text">
     <string>Copy Current Slot</string>
@@ -16306,7 +16309,7 @@
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/paste.png</normaloff>:/icon/icon/paste.png</iconset>
+     <normaloff>:/icon/paste</normaloff>:/icon/paste</iconset>
    </property>
    <property name="text">
     <string>Paste Slot</string>
@@ -16321,7 +16324,7 @@
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/delete.png</normaloff>:/icon/icon/delete.png</iconset>
+     <normaloff>:/icon/delete</normaloff>:/icon/delete</iconset>
    </property>
    <property name="text">
     <string>Clear Slot</string>
@@ -16420,7 +16423,7 @@
   <action name="actionEdit_Paths">
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/config.png</normaloff>:/icon/icon/config.png</iconset>
+     <normaloff>:/icon/config</normaloff>:/icon/config</iconset>
    </property>
    <property name="text">
     <string>More Options...</string>
@@ -16504,7 +16507,7 @@
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/exportmc.png</normaloff>:/icon/icon/exportmc.png</iconset>
+     <normaloff>:/icon/exportmc</normaloff>:/icon/exportmc</iconset>
    </property>
    <property name="text">
     <string>Export MC File</string>
@@ -16516,7 +16519,7 @@
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/default_save.png</normaloff>:/icon/icon/default_save.png</iconset>
+     <normaloff>:/icon/def_save</normaloff>:/icon/def_save</iconset>
    </property>
    <property name="text">
     <string>Make &quot;Default&quot; Save</string>
