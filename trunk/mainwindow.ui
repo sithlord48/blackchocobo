@@ -2765,8 +2765,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>94</width>
-         <height>24</height>
+         <width>423</width>
+         <height>414</height>
         </rect>
        </property>
        <attribute name="label">
@@ -2778,7 +2778,7 @@
           <x>10</x>
           <y>0</y>
           <width>401</width>
-          <height>91</height>
+          <height>96</height>
          </rect>
         </property>
         <property name="title">
@@ -15792,7 +15792,7 @@
    </property>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
-     <string>H&amp;elp</string>
+     <string>Hel&amp;p</string>
     </property>
     <addaction name="separator"/>
     <addaction name="actionAbout"/>
@@ -15844,34 +15844,12 @@
      <bool>true</bool>
     </property>
     <property name="title">
-     <string>S&amp;lot</string>
+     <string>Vie&amp;w</string>
     </property>
-    <widget class="QMenu" name="menuSlot_Region">
-     <property name="enabled">
-      <bool>false</bool>
-     </property>
-     <property name="title">
-      <string>Slot Region</string>
-     </property>
-     <addaction name="action_Region_USA"/>
-     <addaction name="separator"/>
-     <addaction name="action_Region_PAL_Generic"/>
-     <addaction name="action_Region_PAL_German"/>
-     <addaction name="action_Region_PAL_Spanish"/>
-     <addaction name="separator"/>
-     <addaction name="action_Region_JPN"/>
-     <addaction name="action_Region_JPN_International"/>
-    </widget>
     <addaction name="actionPrevious_Slot"/>
     <addaction name="actionNext_Slot"/>
+    <addaction name="separator"/>
     <addaction name="actionShow_Selection_Dialog"/>
-    <addaction name="separator"/>
-    <addaction name="actionCopy_Slot"/>
-    <addaction name="actionPaste_Slot"/>
-    <addaction name="actionMake_Default"/>
-    <addaction name="actionClear_Slot"/>
-    <addaction name="separator"/>
-    <addaction name="menuSlot_Region"/>
     <addaction name="separator"/>
     <addaction name="actionSlot_01"/>
     <addaction name="actionSlot_02"/>
@@ -15910,14 +15888,43 @@
     <addaction name="separator"/>
     <addaction name="actionEdit_Paths"/>
    </widget>
+   <widget class="QMenu" name="menu_Edit">
+    <property name="title">
+     <string>&amp;Edit</string>
+    </property>
+    <widget class="QMenu" name="menuRegion">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="title">
+      <string>Slot Region</string>
+     </property>
+     <addaction name="action_Region_USA"/>
+     <addaction name="separator"/>
+     <addaction name="action_Region_PAL_Generic"/>
+     <addaction name="action_Region_PAL_German"/>
+     <addaction name="action_Region_PAL_Spanish"/>
+     <addaction name="separator"/>
+     <addaction name="action_Region_JPN"/>
+     <addaction name="action_Region_JPN_International"/>
+    </widget>
+    <addaction name="actionCopy_Slot"/>
+    <addaction name="actionPaste_Slot"/>
+    <addaction name="separator"/>
+    <addaction name="actionMake_Default"/>
+    <addaction name="actionClear_Slot"/>
+    <addaction name="separator"/>
+    <addaction name="menuRegion"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menu_Edit"/>
    <addaction name="menuSlot"/>
    <addaction name="menuOptions"/>
    <addaction name="menuAbout"/>
   </widget>
   <action name="action_Quit">
    <property name="icon">
-    <iconset resource="images.qrc">
+    <iconset>
      <normaloff>:/icon/icon/quit.png</normaloff>
      <normalon>icon/quit.png</normalon>:/icon/icon/quit.png</iconset>
    </property>
@@ -16303,7 +16310,7 @@
      <normaloff>:/icon/icon/paste.png</normaloff>:/icon/icon/paste.png</iconset>
    </property>
    <property name="text">
-    <string>Paste Slot Here</string>
+    <string>Paste Slot</string>
    </property>
    <property name="shortcut">
     <string>Alt+V</string>
@@ -16330,7 +16337,7 @@
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/previous.png</normaloff>:/icon/icon/previous.png</iconset>
+     <normaloff>:/icon/prev</normaloff>:/icon/prev</iconset>
    </property>
    <property name="text">
     <string>Previous Slot</string>
@@ -16345,7 +16352,7 @@
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/icon/next.png</normaloff>:/icon/icon/next.png</iconset>
+     <normaloff>:/icon/next</normaloff>:/icon/next</iconset>
    </property>
    <property name="text">
     <string>Next Slot</string>
@@ -16513,7 +16520,7 @@
      <normaloff>:/icon/icon/default_save.png</normaloff>:/icon/icon/default_save.png</iconset>
    </property>
    <property name="text">
-    <string>Make &quot;Default&quot; Save Here</string>
+    <string>Make &quot;Default&quot; Save</string>
    </property>
    <property name="shortcut">
     <string>Alt+Ins</string>

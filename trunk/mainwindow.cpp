@@ -1095,9 +1095,9 @@ void fix_sum(const QString &fileName)
         checksum = ff7__checksum(data_pointer); //2 Bytes checksum (a 16-bit Byte checksum)
         if(checksum != 0x4D1D) //if is a blank slot don't write checksum!
         {
-        int index = ff7.SG_HEADER + ff7.SG_SLOT_SIZE*i + ff7.SG_SLOT_HEADER;
-        file.seek(index);
-        out << checksum;
+            int index = ff7.SG_HEADER + ff7.SG_SLOT_SIZE*i + ff7.SG_SLOT_HEADER;
+            file.seek(index);
+            out << checksum;
         }
     }
     file.close();
@@ -1147,7 +1147,6 @@ void MainWindow::on_actionCopy_Slot_activated()
     buffer_region = ff7.SG_Region_String[s];
 }
 
-
 void MainWindow::on_actionPaste_Slot_activated()
 {
     memcpy(&ff7.slot[s],&bufferslot,0x10f4);
@@ -1155,21 +1154,21 @@ void MainWindow::on_actionPaste_Slot_activated()
     ff7.SG_Region_String[s].chop(2);
     switch(s)
     {
-    case 0:ff7.SG_Region_String[s].append("01"); break;
-    case 1:ff7.SG_Region_String[s].append("02"); break;
-    case 2:ff7.SG_Region_String[s].append("03"); break;
-    case 3:ff7.SG_Region_String[s].append("04"); break;
-    case 4:ff7.SG_Region_String[s].append("05"); break;
-    case 5:ff7.SG_Region_String[s].append("06"); break;
-    case 6:ff7.SG_Region_String[s].append("07"); break;
-    case 7:ff7.SG_Region_String[s].append("08"); break;
-    case 8:ff7.SG_Region_String[s].append("09"); break;
-    case 9:ff7.SG_Region_String[s].append("10"); break;
-    case 10:ff7.SG_Region_String[s].append("11"); break;
-    case 11:ff7.SG_Region_String[s].append("12"); break;
-    case 12:ff7.SG_Region_String[s].append("13"); break;
-    case 13:ff7.SG_Region_String[s].append("14"); break;
-    case 14:ff7.SG_Region_String[s].append("15"); break;
+        case 0:ff7.SG_Region_String[s].append("01"); break;
+        case 1:ff7.SG_Region_String[s].append("02"); break;
+        case 2:ff7.SG_Region_String[s].append("03"); break;
+        case 3:ff7.SG_Region_String[s].append("04"); break;
+        case 4:ff7.SG_Region_String[s].append("05"); break;
+        case 5:ff7.SG_Region_String[s].append("06"); break;
+        case 6:ff7.SG_Region_String[s].append("07"); break;
+        case 7:ff7.SG_Region_String[s].append("08"); break;
+        case 8:ff7.SG_Region_String[s].append("09"); break;
+        case 9:ff7.SG_Region_String[s].append("10"); break;
+        case 10:ff7.SG_Region_String[s].append("11"); break;
+        case 11:ff7.SG_Region_String[s].append("12"); break;
+        case 12:ff7.SG_Region_String[s].append("13"); break;
+        case 13:ff7.SG_Region_String[s].append("14"); break;
+        case 14:ff7.SG_Region_String[s].append("15"); break;
     }
     guirefresh();
 }
@@ -1638,6 +1637,44 @@ void MainWindow::setweaponslots(void)
 void MainWindow::guirefresh(void)
 {
     load = true; //used to cheat the removal of "apply buttons"
+/*~~~~Check for SG type and ff7~~~~*/
+    if(ff7.savetype == 3 || ff7.savetype == 5 )
+    {
+        if(ff7.SG_Region_String[s].contains("00867") ||
+           ff7.SG_Region_String[s].contains("00869") ||
+           ff7.SG_Region_String[s].contains("00900") ||
+           ff7.SG_Region_String[s].contains("94163") ||
+           ff7.SG_Region_String[s].contains("00700") ||
+           ff7.SG_Region_String[s].contains("01057") ||
+           ff7.SG_Region_String[s].isEmpty())
+        {/*FF7 Save Game*/ }
+        else
+        {
+            QMessageBox errbox;
+            errbox.setWindowTitle(tr("Non-FF7 Slot Detected"));
+            errbox.setText(tr("Please Select An Action To Continue"));
+            errbox.setInformativeText(tr("Curent Slot::") + ff7.SG_Region_String[s]);
+            QPushButton *prev = errbox.addButton(tr("Previous Slot"),QMessageBox::ActionRole); prev->setIcon(QIcon(":icon/prev"));
+            QPushButton *ingore = errbox.addButton(tr("View Anyway"),QMessageBox::ActionRole); ingore->setIcon(QIcon(":icon/quit"));
+            QPushButton *next = errbox.addButton(tr("Next Slot"),QMessageBox::ActionRole);next->setIcon(QIcon(":icon/next"));next->setLayoutDirection(Qt::RightToLeft);
+
+            errbox.exec();
+            if(errbox.clickedButton() ==next)
+            {
+                if(s<14){s++; guirefresh();}
+                else{QMessageBox::information(this,"Your At Slot 15","Sorry There is no Next Slot");errbox.exec();}
+            }
+            else if(errbox.clickedButton() ==prev)
+            {
+                if(s>0){s--; guirefresh();}
+                else{QMessageBox::information(this,"Your At Slot 1","Sorry There is no Previous Slot");errbox.exec();}
+            }
+            else if(errbox.clickedButton() == ingore)
+            {QMessageBox::information(this,"Ingoring Non FF7 Save","Be Cautious This Might Not Work.");}
+
+         }
+    }
+/*~~~~ END Type Check~~~~*/
     ui->lcd_current_slot->display(s+1);
     ui->cb_replay->setCurrentIndex(0);
     ui->sb_bm_progress1->setValue(ff7.slot[s].bm_progress1);
@@ -1676,9 +1713,9 @@ void MainWindow::guirefresh(void)
     ui->actionSlot_14->setIcon(QIcon(":icon/14_unsel"));
     ui->actionSlot_15->setChecked(0);
     ui->actionSlot_15->setIcon(QIcon(":icon/15_unsel"));
-    ui->menuSlot_Region->setEnabled(0);
+    ui->menuRegion->setEnabled(0);
     switch(s)
-        {
+    {
         case 0:ui->actionSlot_01->setChecked(1);ui->actionSlot_01->setIcon(QIcon(":icon/1_sel"));break;
         case 1:ui->actionSlot_02->setChecked(1);ui->actionSlot_02->setIcon(QIcon(":icon/2_sel"));break;
         case 2:ui->actionSlot_03->setChecked(1);ui->actionSlot_03->setIcon(QIcon(":icon/3_sel"));break;
@@ -1694,8 +1731,7 @@ void MainWindow::guirefresh(void)
         case 12:ui->actionSlot_13->setChecked(1);ui->actionSlot_13->setIcon(QIcon(":icon/13_sel"));break;
         case 13:ui->actionSlot_14->setChecked(1);ui->actionSlot_14->setIcon(QIcon(":icon/14_sel"));break;
         case 14:ui->actionSlot_15->setChecked(1);ui->actionSlot_15->setIcon(QIcon(":icon/15_sel"));break;
-        }
-
+    }
     if (ff7.savetype ==1)//PC
     {
         ui->actionSave_File->setEnabled(1);
@@ -1710,7 +1746,7 @@ void MainWindow::guirefresh(void)
         ui->actionNext_Slot->setEnabled(1);
         ui->actionPrevious_Slot->setEnabled(1);
         ui->actionShow_Selection_Dialog->setEnabled(1);
-         ui->menuSlot_Region->setEnabled(1);
+        ui->menuRegion->setEnabled(1);
         ui->actionSlot_01->setEnabled(1);
         ui->actionSlot_02->setEnabled(1);
         ui->actionSlot_03->setEnabled(1);
@@ -1727,7 +1763,6 @@ void MainWindow::guirefresh(void)
         ui->actionSlot_14->setEnabled(1);
         ui->actionSlot_15->setEnabled(1);
     }
-
     else if (ff7.savetype == 2)//PSX
     {
         ui->actionSave_File->setEnabled(1);
@@ -1758,7 +1793,6 @@ void MainWindow::guirefresh(void)
         ui->actionSlot_14->setEnabled(0);
         ui->actionSlot_15->setEnabled(0);
     }
-
     else if (ff7.savetype == 3)//mcr/mcd
     {
         ui->actionSave_File->setEnabled(1);
@@ -1789,7 +1823,6 @@ void MainWindow::guirefresh(void)
         ui->actionSlot_14->setEnabled(1);
         ui->actionSlot_15->setEnabled(1);
     }
-
     else if (ff7.savetype ==4)//PSV
     {
         ui->actionSave_File->setEnabled(0); // read only
@@ -1820,7 +1853,6 @@ void MainWindow::guirefresh(void)
         ui->actionSlot_14->setEnabled(0);
         ui->actionSlot_15->setEnabled(0);
     }
-
     else if (ff7.savetype ==5)//PSP
     {
         ui->actionSave_File->setEnabled(1);
@@ -1851,7 +1883,6 @@ void MainWindow::guirefresh(void)
         ui->actionSlot_14->setEnabled(1);
         ui->actionSlot_15->setEnabled(1);
     }
-
     else
     {
         ui->actionSave_File->setEnabled(0);
@@ -1881,9 +1912,9 @@ void MainWindow::guirefresh(void)
         ui->actionSlot_13->setEnabled(1);
         ui->actionSlot_14->setEnabled(1);
         ui->actionSlot_15->setEnabled(1);
-        ui->menuSlot_Region->setEnabled(1);
+        ui->menuRegion->setEnabled(1);
     }
-    ui->menuSlot_Region->setEnabled(1);
+    ui->menuRegion->setEnabled(1);
     ui->action_Region_USA->setChecked(0);
     ui->action_Region_PAL_Generic->setChecked(0);
     ui->action_Region_PAL_German->setChecked(0);
@@ -1906,7 +1937,6 @@ void MainWindow::guirefresh(void)
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
 /*~~~~~End of menu options~~~~*/
 /*~~~~~Load Game Options~~~~~*/
-
     if((ff7.slot[s].options1)& (1<<0)){ui->combo_sound->setCurrentIndex(1);}
     else{ui->combo_sound->setCurrentIndex(0);}
     if((ff7.slot[s].options1) & (1<<2)){ui->combo_control->setCurrentIndex(1);}
@@ -1930,100 +1960,92 @@ void MainWindow::guirefresh(void)
     else{ui->combo_magic_order->setCurrentIndex(0);}
     if((ff7.slot[s].options2)&(1<<6)){ui->cb_battle_help->setCheckState(Qt::Checked);}
     else{ui->cb_battle_help->setCheckState(Qt::Unchecked);}
-
     ui->sb_curdisc->setValue(ff7.slot[s].disc);
     if(ui->action_show_test_data->isChecked())
-        {
+    {
         ui->btn_vincent->setEnabled(true);
         ui->btn_cait->setEnabled(true);
         ui->cb_id->setEnabled(true);
-        }
+    }
     else //test mode off..check for seppie and young cloud to avoid possible breakage of save game since we don't account for them yet.
-        {
+    {
         if (ff7.slot[s].chars[6].id == 9)
-            {
+        {
             ui->btn_cait->setEnabled(false);
             if(curchar ==6){curchar =0;
-            }
         }
+    }
         else {ui->btn_cait->setEnabled(true);}
 
         if (ff7.slot[s].chars[7].id == 10)
-            {
+        {
             ui->btn_vincent->setEnabled(false);
             if(curchar ==7){curchar = 0;}
-            }
-        else {ui->btn_vincent->setEnabled(true);}
         }
+        else {ui->btn_vincent->setEnabled(true);}
+    }
 
 /*~~~~~~~Set up location Data~~~~~~~*/
     ui->sb_coordx->setValue(ff7.slot[s].coord.x);
     ui->sb_coordy->setValue(ff7.slot[s].coord.y);
     ui->sb_coordz->setValue(ff7.slot[s].coord.z);
     ui->line_location->clear();
-
     for (int loc=0; loc<32;loc++)
-        {
+    {
         if (chPC[ff7.slot[s].desc.location[loc]]=='\0'){break;}
         else{ui->line_location->setText( ui->line_location->text() + QString(chPC[ff7.slot[s].desc.location[loc]]));}
-        }
+    }
     ui->sb_map_id->setValue(ff7.slot[s].mapid);
     ui->sb_loc_id->setValue(ff7.slot[s].locationid);
-
     for (int i=0;i<6;i++)//flyers
-        {
+    {
         ui->list_flyers->setCurrentRow(i);
         if ((1 << i) & ff7.slot[s].turtleflyers){ui->list_flyers->currentItem()->setCheckState(Qt::Checked);}
         else{ui->list_flyers->currentItem()->setCheckState(Qt::Unchecked);}
         ui->list_flyers->setCurrentRow(-1);
-        }
-
+    }
     for (int i=0;i<9;i++)//phsmask
-        {
+    {
         ui->list_phs_chars->setCurrentRow(i);
         if ((1 << i) & ff7.slot[s].phsmask){ui->list_phs_chars->currentItem()->setCheckState(Qt::Unchecked);}
         else{ui->list_phs_chars->currentItem()->setCheckState(Qt::Checked);}
         ui->list_phs_chars->setCurrentRow(-1);
-        }
-
+    }
     for (int i=0;i<9;i++)//unlocked
-        {
+    {
         ui->list_chars_unlocked->setCurrentRow(i);
         if ((1 << i) & ff7.slot[s].unlockedchars){ui->list_chars_unlocked->currentItem()->setCheckState(Qt::Checked);}
         else{ui->list_chars_unlocked->currentItem()->setCheckState(Qt::Unchecked);}
         ui->list_chars_unlocked->setCurrentRow(-1);
-        }
-
+    }
     for (int i=0;i<10;i++)//visible_menu
-        {
+    {
         ui->list_menu_visible->setCurrentRow(i);
         if ((1 << i) & ff7.slot[s].menu_visible){ui->list_menu_visible->currentItem()->setCheckState(Qt::Checked);}
         else{ui->list_menu_visible->currentItem()->setCheckState(Qt::Unchecked);}
         ui->list_menu_visible->setCurrentRow(-1);
-        }
-
+    }
     for (int i=0;i<10;i++)//menu_locked
-        {
+    {
         ui->list_menu_locked->setCurrentRow(i);
         if ((1 << i) & ff7.slot[s].menu_locked){ui->list_menu_locked->currentItem()->setCheckState(Qt::Checked);}
         else{ui->list_menu_locked->currentItem()->setCheckState(Qt::Unchecked);}
         ui->list_menu_locked->setCurrentRow(-1);
-        }
-
+    }
     for(int i=0;i<51;i++)// be sure to clear key items first..
-        {
+    {
         ui->list_keyitems->setCurrentRow(i);
         ui->list_keyitems->currentItem()->setCheckState(Qt::Unchecked);
-        }
+    }
 
     for (int i=0;i<51;i++)// key items
-        {
+    {
         if (ff7.slot[s].keyitems[i/8] & (1 << (i%8)))
-            {
+        {
             ui->list_keyitems->setCurrentRow(i);
             ui->list_keyitems->currentItem()->setCheckState(Qt::Checked);
-            }
         }
+    }
     ui->list_keyitems->setCurrentRow(-1);
 
 /*~~~~~party combo boxes (checking for empty slots)~~~*/
@@ -2067,37 +2089,36 @@ void MainWindow::guirefresh(void)
     ui->tbl_itm->setColumnWidth(1,32);
     ui->tbl_itm->setRowCount(320);
     for (int i=0;i<320;i++) // set up items
-        {
+    {
         if (ff7.slot[s].items[i].qty == 0xFF && ff7.slot[s].items[i].id == 0xFF)
-            {
+        {
             newItem = new QTableWidgetItem("-------EMPTY--------",0);
             ui->tbl_itm->setItem(i,0,newItem);
             ui->tbl_itm->setRowHeight(i,22);
             newItem = new QTableWidgetItem("",0);
             ui->tbl_itm->setItem(i,1,newItem);
-
-            }
-         else
-            {
+        }
+        else
+        {
             QString qty;
             if(ff7.slot[s].items[i].qty %2 ==0)
-                {
+            {
                 newItem = new QTableWidgetItem(QIcon(Items[ff7.slot[s].items[i].id].image),Items[ff7.slot[s].items[i].id].name,0);
                 ui->tbl_itm->setItem(i,0, newItem);
                 ui->tbl_itm->setRowHeight(i,22);
                 newItem = new QTableWidgetItem(qty.setNum(ff7.slot[s].items[i].qty/2),0);
                 ui->tbl_itm->setItem(i,1,newItem);
-                }
+            }
             else
-                {
+            {
                 newItem = new QTableWidgetItem(QIcon(Items[256+(ff7.slot[s].items[i].id)].image),Items[256+(ff7.slot[s].items[i].id)].name,0);
                 ui->tbl_itm->setItem(i,0, newItem);
                 ui->tbl_itm->setRowHeight(i,22);
                 newItem = new QTableWidgetItem(qty.setNum(ff7.slot[s].items[i].qty/2),0);
                 ui->tbl_itm->setItem(i,1,newItem);
-                }
             }
         }
+    }
     ui->tbl_itm->setCurrentCell(j,0);
 /*~~~~~End Item Code~~~~~*/
 /*~~~~~Materia Code~~~~~~*/
@@ -2108,35 +2129,35 @@ void MainWindow::guirefresh(void)
     ui->tbl_materia->setColumnWidth(1,64);
     ui->tbl_materia->setRowCount(200);
     for(int mat=0;mat<200;mat++)// partys materias
-        {
+    {
         qint32 aptemp=0;
         QString ap;
         if (ff7.slot[s].materias[mat].id == 0x2C)
-            {
+        {
             newItem = new QTableWidgetItem(QIcon(Materias[ff7.slot[s].materias[mat].id].image),Materias[ff7.slot[s].materias[mat].id].name,0);
             ui->tbl_materia->setItem(mat,0,newItem);
             aptemp = ff7.slot[s].materias[mat].ap[0] |(ff7.slot[s].materias[mat].ap[1] << 8) | (ff7.slot[s].materias[mat].ap[2] << 16);
             if (aptemp == 0xFFFFFF){newItem =new QTableWidgetItem("Master");ui->tbl_materia->setItem(mat,1,newItem);}
             else{newItem =new QTableWidgetItem(QString("N/A"),0);ui->tbl_materia->setItem(mat,1,newItem);}
-            }
+        }
         else if (ff7.slot[s].materias[mat].id !=0xff)
-            {
+        {
             newItem = new QTableWidgetItem(QIcon(Materias[ff7.slot[s].materias[mat].id].image),Materias[ff7.slot[s].materias[mat].id].name,0);
             ui->tbl_materia->setItem(mat,0,newItem);
             aptemp = ff7.slot[s].materias[mat].ap[0] |(ff7.slot[s].materias[mat].ap[1] << 8) | (ff7.slot[s].materias[mat].ap[2] << 16);
             if (aptemp == 0xFFFFFF){newItem =new QTableWidgetItem("Master");ui->tbl_materia->setItem(mat,1,newItem);}
             else{newItem =new QTableWidgetItem(ap.setNum(aptemp));ui->tbl_materia->setItem(mat,1,newItem);}
-            }
+        }
         else
-            {
+        {
             newItem = new QTableWidgetItem("===Empty Slot===",0);
             ui->tbl_materia->setItem(mat,0,newItem);
             newItem = new QTableWidgetItem("",0);
             ui->tbl_materia->setItem(mat,1,newItem);
-            }
         }
+    }
     if(ff7.slot[s].materias[j].id == 0xFF) //if the slot is empty take some precautions
-        {
+    {
         ui->lbl_mat_stats->setText("Empty Slot");
         ui->lcd_ap_master->display(0);
         ui->sb_addap->setValue(0);
@@ -2153,9 +2174,9 @@ void MainWindow::guirefresh(void)
         ui->spell_lvl3_group->setVisible(0);
         ui->spell_lvl4_group->setVisible(0);
         ui->spell_lvl5_group->setVisible(0);
-        }
+    }
     else // make the materia look nice
-        {
+    {
         ui->lbl_mat_stats->setText(Materias[ui->combo_add_mat->currentIndex()].stats);// set stat string..
         qint32 aptemp = ff7.slot[s].materias[j].ap[0] |(ff7.slot[s].materias[j].ap[1] << 8) | (ff7.slot[s].materias[j].ap[2] << 16);
         qint32 masterap = (Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels-2]);
@@ -2169,7 +2190,7 @@ void MainWindow::guirefresh(void)
         QString e_icon;
         QString f_icon;
         switch(Materias[ui->combo_add_mat->currentIndex()].type)
-            {// COLORS 1-magic(g),2-summon(r),3-independent(f),4-support(b),5-command(y),0-unknown
+        {// COLORS 1-magic(g),2-summon(r),3-independent(f),4-support(b),5-command(y),0-unknown
             case 0:
                 e_icon= "\0";
                 f_icon= "\0";
@@ -2198,11 +2219,10 @@ void MainWindow::guirefresh(void)
                 e_icon= ":/icon/command_empty";
                 f_icon= ":/icon/command_full";
                 break;
-            }
+        }
         for(int i=0; i<Materias[ui->combo_add_mat->currentIndex()].levels;i++){if(aptemp >= Materias[ui->combo_add_mat->currentIndex()].ap[i]){level++;}}
         switch (Materias[ui->combo_add_mat->currentIndex()].levels)
-            {
-
+        {
             case 0:
                 ui->btn_m_lvl1->setVisible(0);
                 ui->btn_m_lvl2->setVisible(0);
@@ -2210,7 +2230,6 @@ void MainWindow::guirefresh(void)
                 ui->btn_m_lvl4->setVisible(0);
                 ui->btn_m_lvl5->setVisible(0);
                 break;
-
             case 1:
                 ui->btn_m_lvl1->setVisible(1);
                 ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
@@ -2220,7 +2239,6 @@ void MainWindow::guirefresh(void)
                 ui->btn_m_lvl5->setVisible(0);
                 ui->lcd_ap_master->display(0);
                 break;
-
             case 2:
                 ui->btn_m_lvl1->setVisible(1);
                 ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
@@ -2231,7 +2249,6 @@ void MainWindow::guirefresh(void)
                 ui->btn_m_lvl4->setVisible(0);
                 ui->btn_m_lvl5->setVisible(0);
                 break;
-
             case 3:
                 ui->btn_m_lvl1->setVisible(1);
                 ui->btn_m_lvl1->setIcon((QIcon (f_icon)));
@@ -2244,7 +2261,6 @@ void MainWindow::guirefresh(void)
                 ui->btn_m_lvl4->setVisible(0);
                 ui->btn_m_lvl5->setVisible(0);
                 break;
-
             case 4:
                 ui->btn_m_lvl1->setVisible(1);
                 ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
@@ -2259,7 +2275,6 @@ void MainWindow::guirefresh(void)
                 else{ui->btn_m_lvl4->setIcon((QIcon(e_icon)));}
                 ui->btn_m_lvl5->setVisible(0);
                 break;
-
             case 5:
                 ui->btn_m_lvl1->setVisible(1);
                 ui->btn_m_lvl1->setIcon((QIcon(f_icon)));
@@ -2276,11 +2291,10 @@ void MainWindow::guirefresh(void)
                 if (level >4){ui->btn_m_lvl5->setIcon((QIcon(f_icon)));}
                 else{ui->btn_m_lvl5->setIcon((QIcon(e_icon)));}
                 break;
-            }
+        }
 //fill all stars needed..
         switch(level)
-            {
-
+        {
             case 0:
                 ui->spell_lvl1_group->setVisible(1);
                 ui->spell_lvl2_group->setVisible(0);
@@ -2289,7 +2303,6 @@ void MainWindow::guirefresh(void)
                 ui->spell_lvl5_group->setVisible(0);
                 ui->lbl_spell_lvl1->setText(Materias[ui->combo_add_mat->currentIndex()].skills[0]);
                 break;
-
             case 1:
                 ui->spell_lvl1_group->setVisible(1);
                 ui->spell_lvl2_group->setVisible(0);
@@ -2298,7 +2311,6 @@ void MainWindow::guirefresh(void)
                 ui->spell_lvl5_group->setVisible(0);
                 ui->lbl_spell_lvl1->setText(Materias[ui->combo_add_mat->currentIndex()].skills[0]);
                 break;
-
             case 2:
                 ui->spell_lvl1_group->setVisible(1);
                 ui->spell_lvl2_group->setVisible(1);
@@ -2308,7 +2320,6 @@ void MainWindow::guirefresh(void)
                 ui->lbl_spell_lvl1->setText(Materias[ui->combo_add_mat->currentIndex()].skills[0]);
                 ui->lbl_spell_lvl2->setText(Materias[ui->combo_add_mat->currentIndex()].skills[1]);
                 break;
-
             case 3:
                 ui->spell_lvl1_group->setVisible(1);
                 ui->spell_lvl2_group->setVisible(1);
@@ -2319,7 +2330,6 @@ void MainWindow::guirefresh(void)
                 ui->lbl_spell_lvl2->setText(Materias[ui->combo_add_mat->currentIndex()].skills[1]);
                 ui->lbl_spell_lvl3->setText(Materias[ui->combo_add_mat->currentIndex()].skills[2]);
                 break;
-
             case 4:
                 ui->spell_lvl1_group->setVisible(1);
                 ui->spell_lvl2_group->setVisible(1);
@@ -2331,7 +2341,6 @@ void MainWindow::guirefresh(void)
                 ui->lbl_spell_lvl3->setText(Materias[ui->combo_add_mat->currentIndex()].skills[2]);
                 ui->lbl_spell_lvl4->setText(Materias[ui->combo_add_mat->currentIndex()].skills[3]);
                 break;
-
             case 5:
                 ui->spell_lvl1_group->setVisible(1);
                 ui->spell_lvl2_group->setVisible(1);
@@ -2344,37 +2353,36 @@ void MainWindow::guirefresh(void)
                 ui->lbl_spell_lvl4->setText(Materias[ui->combo_add_mat->currentIndex()].skills[3]);
                 ui->lbl_spell_lvl5->setText(Materias[ui->combo_add_mat->currentIndex()].skills[4]);
                 break;
-            }
+        }
     } //end of else
-
 // this will ensure that the right side of materia stuff is set correctly.
     load=false;
     ui->tbl_materia->setCurrentCell(j,1);
     load=true;
 /*~~~~~End Materia Code~~~~~*/
 /*~~~~~Stolen Materia~~~~~~~*/
-  ui->tbl_materia_2->reset();
+    ui->tbl_materia_2->reset();
     ui->tbl_materia_2->setColumnWidth(0,145);
     ui->tbl_materia_2->setColumnWidth(1,64);
     ui->tbl_materia_2->setRowCount(48);
     for(int mat=0;mat<48;mat++) //materias stolen by yuffie
-        {
+    {
         int aptemp;
         QString ap;
         if (ff7.slot[s].stolen[mat].id !=0xff)
-            {
+        {
             newItem = new QTableWidgetItem(QIcon(Materias[ff7.slot[s].stolen[mat].id].image),Materias[ff7.slot[s].stolen[mat].id].name,0);
             ui->tbl_materia_2->setItem(mat,0,newItem);
             aptemp = ff7.slot[s].stolen[mat].ap[0] |(ff7.slot[s].stolen[mat].ap[1] << 8) | (ff7.slot[s].stolen[mat].ap[2] << 16);
             if (aptemp == 0xFFFFFF){newItem =new QTableWidgetItem("Master");ui->tbl_materia_2->setItem(mat,1,newItem);}
             else{newItem =new QTableWidgetItem(ap.setNum(aptemp));ui->tbl_materia_2->setItem(mat,1,newItem);}
-            }
+        }
         else
-            {
+        {
             newItem = new QTableWidgetItem("===Empty Slot===",0);
             ui->tbl_materia_2->setItem(mat,0,newItem);
-            }
         }
+    }
 
 /*~~~~~End Stolen Materia~~~~*/
     if((ff7.slot[s].materiacaves)& (1<<0)){ui->cb_materiacave_1->setChecked(Qt::Checked);}
@@ -2392,7 +2400,7 @@ void MainWindow::guirefresh(void)
 /*~~~~~Call External Functions~~~~~~~*/
     chocobo_refresh();
     switch (curchar) // click char button for who?
-        {
+    {
         case 0:{ui->btn_cloud->click();break;}
         case 1:{ui->btn_barret->click();break;}
         case 2:{ui->btn_tifa->click();break;}
@@ -2402,7 +2410,7 @@ void MainWindow::guirefresh(void)
         case 6:{ui->btn_cait->click();break;}
         case 7:{ui->btn_vincent->click();break;}
         case 8:{ui->btn_cid->click();break;}
-        }
+    }
     if(ui->action_show_test_data->isChecked()){testdata_refresh();}
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~Chocobo Refresh~~~~~~~~~~~~~~~~*/
@@ -2413,7 +2421,7 @@ void MainWindow::chocobo_refresh()
     ui->sb_stables_occupied->setValue(ff7.slot[s].stablesoccupied);
 
     switch(ui->sb_stables_occupied->value())
-        {
+    {
         case 0:
             ui->box_stable1->setEnabled(false);
             ui->box_stable2->setEnabled(false);
@@ -2476,14 +2484,14 @@ void MainWindow::chocobo_refresh()
             ui->box_stable5->setEnabled(true);
             ui->box_stable6->setEnabled(true);
             break;
-        }
+    }
 
     ui->line_c1_name->clear();
     for (int n=0;n<6;n++)
-        {
-            if(chPC[ff7.slot[s].chocobonames[0][n]] =='\0'){break;}
-            else{this->ui->line_c1_name->setText( ui->line_c1_name->text() + chPC[ff7.slot[s].chocobonames[0][n]]);}
-        }
+    {
+        if(chPC[ff7.slot[s].chocobonames[0][n]] =='\0'){break;}
+        else{this->ui->line_c1_name->setText( ui->line_c1_name->text() + chPC[ff7.slot[s].chocobonames[0][n]]);}
+    }
     //ui->cb_c1_personality->setCurrentIndex(ff7.slot[s].chocobos[0].personality); //need more data for this.
     ui->sb_c1_sprint->setValue(ff7.slot[s].chocobos[0].sprintspd);
     ui->sb_c1_maxsprint->setValue(ff7.slot[s].chocobos[0].maxsprintspd);
@@ -2501,10 +2509,10 @@ void MainWindow::chocobo_refresh()
 
     ui->line_c2_name->clear();
     for (int n=0;n<6;n++)
-        {
-            if(chPC[ff7.slot[s].chocobonames[1][n]] =='\0'){break;}
-            else{this->ui->line_c2_name->setText( ui->line_c2_name->text() + chPC[ff7.slot[s].chocobonames[1][n]]);}
-        }
+    {
+        if(chPC[ff7.slot[s].chocobonames[1][n]] =='\0'){break;}
+        else{this->ui->line_c2_name->setText( ui->line_c2_name->text() + chPC[ff7.slot[s].chocobonames[1][n]]);}
+    }
     //ui->cb_c2_personality->setCurrentIndex(ff7.slot[s].chocobos[1].personality); //need more data for this.
     ui->sb_c2_sprint->setValue(ff7.slot[s].chocobos[1].sprintspd);
     ui->sb_c2_maxsprint->setValue(ff7.slot[s].chocobos[1].maxsprintspd);
@@ -2521,10 +2529,10 @@ void MainWindow::chocobo_refresh()
     //end Choco 2
     ui->line_c3_name->clear();
     for (int n=0;n<6;n++)
-        {
-            if(chPC[ff7.slot[s].chocobonames[2][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
-            else{this->ui->line_c3_name->setText( ui->line_c3_name->text() + chPC[ff7.slot[s].chocobonames[2][n]]);}
-        }
+    {
+        if(chPC[ff7.slot[s].chocobonames[2][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
+        else{this->ui->line_c3_name->setText( ui->line_c3_name->text() + chPC[ff7.slot[s].chocobonames[2][n]]);}
+    }
     //ui->cb_c3_personality->setCurrentIndex(ff7.slot[s].chocobos[2].personality); //need more data for this.
     ui->sb_c3_sprint->setValue(ff7.slot[s].chocobos[2].sprintspd);
     ui->sb_c3_maxsprint->setValue(ff7.slot[s].chocobos[2].maxsprintspd);
@@ -2541,10 +2549,10 @@ void MainWindow::chocobo_refresh()
     // end choco 3
     ui->line_c4_name->clear();
     for (int n=0;n<6;n++)
-        {
+    {
         if(chPC[ff7.slot[s].chocobonames[3][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
         else{this->ui->line_c4_name->setText( ui->line_c4_name->text() + chPC[ff7.slot[s].chocobonames[3][n]]);}
-        }
+    }
     //ui->cb_c4_personality->setCurrentIndex(ff7.slot[s].chocobos[3].personality); //need more data for this.
     ui->sb_c4_sprint->setValue(ff7.slot[s].chocobos[3].sprintspd);
     ui->sb_c4_maxsprint->setValue(ff7.slot[s].chocobos[3].maxsprintspd);
@@ -2561,10 +2569,10 @@ void MainWindow::chocobo_refresh()
     // end choco 4
     ui->line_c5_name->clear();
     for (int n=0;n<6;n++)
-        {
-            if(chPC[ff7.slot[s].chocobonames[4][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
-            else{this->ui->line_c5_name->setText( ui->line_c5_name->text() + chPC[ff7.slot[s].chocobonames[4][n]]);}
-        }
+    {
+        if(chPC[ff7.slot[s].chocobonames[4][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
+        else{this->ui->line_c5_name->setText( ui->line_c5_name->text() + chPC[ff7.slot[s].chocobonames[4][n]]);}
+    }
     //ui->cb_c5_personality->setCurrentIndex(ff7.slot[s].choco56[0].personality); //need more data for this.
     ui->sb_c5_sprint->setValue(ff7.slot[s].choco56[0].sprintspd);
     ui->sb_c5_maxsprint->setValue(ff7.slot[s].choco56[0].maxsprintspd);
@@ -2581,10 +2589,10 @@ void MainWindow::chocobo_refresh()
     // end choco 5
     ui->line_c6_name->clear();
     for (int n=0;n<6;n++)
-        {
-            if(chPC[ff7.slot[s].chocobonames[5][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
-            else{this->ui->line_c6_name->setText( ui->line_c6_name->text() + chPC[ff7.slot[s].chocobonames[5][n]]);}
-        }
+    {
+        if(chPC[ff7.slot[s].chocobonames[5][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
+        else{this->ui->line_c6_name->setText( ui->line_c6_name->text() + chPC[ff7.slot[s].chocobonames[5][n]]);}
+    }
     //ui->cb_c6_personality->setCurrentIndex(ff7.slot[s].choco56[1].personality); //need more data for this.
     ui->sb_c6_sprint->setValue(ff7.slot[s].choco56[1].sprintspd);
     ui->sb_c6_maxsprint->setValue(ff7.slot[s].choco56[1].maxsprintspd);
@@ -3085,7 +3093,7 @@ void MainWindow::on_sb_gil_valueChanged()
 void MainWindow::on_combo_party1_currentIndexChanged(int index)
 {
     if(index == 12) //empty char slot?
-        {
+    {
         ff7.slot[s].party[0] = 0xFF;
         //whipe all desc data if noone is there
         ff7.slot[s].desc.party[0]=ff7.slot[s].party[0];
@@ -3095,12 +3103,12 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
         ff7.slot[s].desc.maxMP =0;
         ff7.slot[s].desc.level =0;
         for(int n=0;n<16;n++)
-            {
-            ff7.slot[s].desc.name[n]=0xFF;
-            }
-        }
-    else
         {
+            ff7.slot[s].desc.name[n]=0xFF;
+        }
+    }
+    else
+    {
         ff7.slot[s].party[0] = index;
         ff7.slot[s].desc.party[0]=ff7.slot[s].party[0];
         ff7.slot[s].desc.curHP =ff7.slot[s].chars[ui->combo_party1->currentIndex()].curHP;
@@ -3109,17 +3117,17 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
         ff7.slot[s].desc.maxMP =ff7.slot[s].chars[ui->combo_party1->currentIndex()].maxMP;
         ff7.slot[s].desc.level = ff7.slot[s].chars[ui->combo_party1->currentIndex()].level;
         for(int n=0;n<16;n++)
-            {
+        {
             if(n<13){ff7.slot[s].desc.name[n]=ff7.slot[s].chars[ui->combo_party1->currentIndex()].name[n];}
             else{ff7.slot[s].desc.name[n]=0xFF;}
-            }
         }
+    }
 }
 void MainWindow::on_combo_party2_currentIndexChanged(int index)
 {
     if(index == 12){ff7.slot[s].party[1]= 0xFF;}
     else{ff7.slot[s].party[1] = index;}
-//either way set the desc
+    //either way set the desc
     ff7.slot[s].desc.party[1]=ff7.slot[s].party[1];
 }
 void MainWindow::on_combo_party3_currentIndexChanged(int index)
@@ -3167,15 +3175,15 @@ void MainWindow::on_sb_stables_owned_valueChanged()
 void MainWindow::on_sb_stables_occupied_valueChanged(int value)
 {
     if (value <= ui->sb_stables_owned->value())
-        {
+    {
         ff7.slot[s].chocobomask = 0;
         for (int i=0;i<value;i++)
-            {
+        {
             ff7.slot[s].chocobomask |= (1<<i);
-            }
+        }
         ff7.slot[s].stablesoccupied = value;
         chocobo_refresh();
-        }
+    }
     else {ui->sb_stables_occupied->setValue(ui->sb_stables_owned->value());}
 }
 
@@ -3241,7 +3249,6 @@ void MainWindow::on_sb_c2_maxsprint_valueChanged(int value)
 {
     if(!load){ff7.slot[s].chocobos[1].maxsprintspd = value;}
 }
-
 void MainWindow::on_cb_c2_sex_currentIndexChanged(int index)
 {
     if(!load){ff7.slot[s].chocobos[1].sex = index;}
@@ -3270,7 +3277,6 @@ void MainWindow::on_sb_c2_pcount_valueChanged()
 {
     if(!load){ff7.slot[s].chocobos[1].pcount= ui->sb_c2_pcount->value();}
 }
-
 
 void MainWindow::on_sb_c3_speed_valueChanged(int value)
 {
@@ -3452,7 +3458,6 @@ void MainWindow::on_sb_c6_pcount_valueChanged()
 {
     if(!load){ff7.slot[s].choco56[1].pcount= ui->sb_c6_pcount->value();}
 }
-
 void MainWindow::on_sb_c1_stamina_valueChanged()
 {
     ff7.slot[s].chocostaminas[0] = ui->sb_c1_stamina->value();//Bug fixed Before was ui->sb_c1_stamina->value()*10 and (999*10 != 9999), is 9990 (Vegeta_Ss4) v0.8.3
@@ -3480,10 +3485,10 @@ void MainWindow::on_sb_c6_stamina_valueChanged()
 void MainWindow::on_line_c1_name_lostFocus()
 {
     if(!load)
-        {
+    {
         for (int i=0;i<6;i++){ff7.slot[s].chocobonames[0][i] =0xFF;}
         for (int i=0;i<ui->line_c1_name->text().size();i++){ff7.slot[s].chocobonames[0][i] = chFF7[ui->line_c1_name->text().at(i).toAscii()];}
-        }
+    }
 }
 void MainWindow::on_line_c2_name_lostFocus()
 {
@@ -3516,33 +3521,21 @@ void MainWindow::on_line_c6_name_lostFocus()
 void MainWindow::on_list_phs_chars_itemChanged()
 {
     if(!load)
-        {
-        quint16 temp =0;
-        int j = ui->list_phs_chars->currentRow();
-        for (int i=0;i<9;i++)
-            {
-            ui->list_phs_chars->setCurrentRow(i);
-            if(ui->list_phs_chars->currentItem()->checkState() ==Qt::Unchecked){temp |=(1 <<i);}
-            }
-        ff7.slot[s].phsmask=temp;
-        ui->list_phs_chars->setCurrentRow(j);
-        }
+    {
+        int j = ui->list_phs_chars->currentRow();       
+        if(ui->list_phs_chars->currentItem()->checkState() ==Qt::Unchecked){ff7.slot[s].phsmask |=(1 <<j);}
+        else{ff7.slot[s].phsmask &= ~(1<<j);}
+    }
 }
 
 void MainWindow::on_list_chars_unlocked_itemChanged()
 {
     if(!load)
-        {
-        quint16 temp=0;
+    {
         int j=ui->list_chars_unlocked->currentRow();
-        for (int i=0;i<9;i++)
-            {
-            ui->list_chars_unlocked->setCurrentRow(i);
-            if(ui->list_chars_unlocked->currentItem()->checkState() ==Qt::Checked){temp |= (1<<i);}
-            }
-        ff7.slot[s].unlockedchars=temp;
-        ui->list_chars_unlocked->setCurrentRow(j);
-        }
+        if(ui->list_chars_unlocked->currentItem()->checkState() ==Qt::Checked){ff7.slot[s].unlockedchars |= (1<<j);}
+        else{ff7.slot[s].unlockedchars &= ~(1<<j);}
+    }
 }
 void MainWindow::on_sb_curdisc_valueChanged()
 {
@@ -3585,33 +3578,25 @@ void MainWindow::on_sb_time_sec_valueChanged(int value)
 void MainWindow::on_list_flyers_itemChanged()
 {
     if(!load)
-        {
+    {
         int j=ui->list_flyers->currentRow();
         ff7.slot[s].turtleflyers=0x40;
         for (int i=0;i<6;i++)
-            {
+        {
             ui->list_flyers->setCurrentRow(i);
-            if(ui->list_flyers->currentItem()->checkState() ==2){ff7.slot[s].turtleflyers |= (1 << i);}
-            }
-        ui->list_flyers->setCurrentRow(j);
+            if(ui->list_flyers->currentItem()->checkState() ==Qt::Checked){ff7.slot[s].turtleflyers |= (1 << i);}
         }
+        ui->list_flyers->setCurrentRow(j);
+    }
 }
 void MainWindow::on_list_keyitems_itemChanged()
 {
     if (!load)
-        {
+    {
         int j = ui->list_keyitems->currentRow();
-        for (int i=0;i<8;i++) {ff7.slot[s].keyitems[i] = 0; }
-        for (int i=0;i<51;i++)
-            {
-            ui->list_keyitems->setCurrentRow(i);
-            if (ui->list_keyitems->currentItem()->checkState() == Qt::Checked)
-                {
-                ff7.slot[s].keyitems[i/8] |= (1<<i%8);
-                }
-            }
-        ui->list_keyitems->setCurrentRow(j);
-        }
+        if (ui->list_keyitems->currentItem()->checkState() == Qt::Checked){ff7.slot[s].keyitems[j/8] |= (1<<j%8);}
+        else{ff7.slot[s].keyitems[j/8] &= ~(1<<j%8);}
+    }
 }
 void MainWindow::on_clearItem_clicked()
 {
@@ -3622,47 +3607,42 @@ void MainWindow::on_clearItem_clicked()
 void MainWindow::on_combo_additem_currentIndexChanged(int index)
 {
     if(!load)
-        {   //we must also set the qty, since that determins how the table and the game will reconize the item and prevents bug#3014592.
+    {   //we must also set the qty, since that determins how the table and the game will reconize the item and prevents bug#3014592.
         if (index<256){ff7.slot[s].items[ui->tbl_itm->currentRow()].id = index;ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(ui->sb_addqty->value() * 2);}
         else{ff7.slot[s].items[ui->tbl_itm->currentRow()].id = (index-256);ff7.slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(ui->sb_addqty->value()* 2) +1;}
         guirefresh();
-        }
+    }
 }
 void MainWindow::on_sb_addqty_valueChanged(int value)
 {
     if(!load)
-        {
+    {
         if (ui->combo_additem->currentIndex()<256){ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(value * 2);}
         else{ff7.slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(value* 2) +1;}
         guirefresh();
-        }
+    }
 }
 void MainWindow::on_tbl_itm_currentCellChanged(int row)
 {
     if(!load)
-        {
-        if (ff7.slot[s].items[row].qty == 255 && ff7.slot[s].items[row].id == 255) // if you click on an empty slot add whats in the item and qty boxes.
-            {// now we do nothing cause noone liked it placing items.
-            //if (ui->combo_additem->currentIndex()<256){ff7.slot[s].items[row].id = ui->combo_additem->currentIndex();ff7.slot[s].items[row].qty = quint8(ui->sb_addqty->value() * 2);}
-            //else{ff7.slot[s].items[row].id = (ui->combo_additem->currentIndex()-256);ff7.slot[s].items[row].qty  = quint8(ui->sb_addqty->value()* 2) +1;}
-            //guirefresh();
-            }
+    {
+        if (ff7.slot[s].items[row].qty == 255 && ff7.slot[s].items[row].id == 255){/*empty slot.....do nothing*/}
         else
+        {
+            load =true;
+            if(ff7.slot[s].items[row].qty %2 ==0)
             {
-                load =true;
-                if(ff7.slot[s].items[row].qty %2 ==0)
-                    {
-                    ui->combo_additem->setCurrentIndex(ff7.slot[s].items[row].id);
-                    ui->sb_addqty->setValue(ff7.slot[s].items[row].qty/2);
-                    }
-                else
-                    {
-                    ui->combo_additem->setCurrentIndex(ff7.slot[s].items[row].id+256);
-                    ui->sb_addqty->setValue(ff7.slot[s].items[row].qty/2);
-                    }
-                load = false;
+                ui->combo_additem->setCurrentIndex(ff7.slot[s].items[row].id);
+                ui->sb_addqty->setValue(ff7.slot[s].items[row].qty/2);
             }
+            else
+            {
+                ui->combo_additem->setCurrentIndex(ff7.slot[s].items[row].id+256);
+                ui->sb_addqty->setValue(ff7.slot[s].items[row].qty/2);
+            }
+            load = false;
         }
+    }
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -3670,17 +3650,16 @@ void MainWindow::on_tbl_itm_currentCellChanged(int row)
 void MainWindow::on_tbl_materia_currentCellChanged(int row)
 {
     if(!load)
-        {
+    {
         if(ff7.slot[s].materias[row].id == 0x2C)
-            {
+        {
             ui->eskill_group->setVisible(true);
             geteskills(row);
             ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
             ui->sb_addap->setEnabled(0);
-            }
-
-    else if(ff7.slot[s].materias[row].id == 0xFF) //if the slot is empty take some precautions
-            {
+        }
+        else if(ff7.slot[s].materias[row].id == 0xFF) //if the slot is empty take some precautions
+        {
             load=true;
             ui->lbl_mat_stats->setText("Empty Slot");
             ui->lcd_ap_master->display(0);
@@ -3700,50 +3679,51 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row)
             ui->spell_lvl5_group->setVisible(0);
             ui->eskill_group->setVisible(false);
             load=false;
-            }
-
-    else
-            {
+        }
+        else
+        {
             ui->eskill_group->setVisible(false);
             ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
             ui->sb_addap->setEnabled(1);
             ui->sb_addap->setValue(ff7.slot[s].materias[row].ap[0] |(ff7.slot[s].materias[row].ap[1] << 8) | (ff7.slot[s].materias[row].ap[2] << 16));
-            }
         }
+    }
 }
 
 void MainWindow::on_sb_addap_valueChanged(int value)
 {
     if(!load && ui->tbl_materia->currentRow() >-1)
-        {
+    {
         if(value == Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels -2] && Materias[ui->combo_add_mat->currentIndex()].levels >1)
-            {
+        {
             for(int i=0;i<3;i++){ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[i] = 0xFF;}
-            }
+        }
 
         else
-            {
+        {
             int a = (value & 0xff);
             int b = (value & 0xff00) >> 8;
             int c = (value & 0xff0000) >> 16;
             ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[0] = a;
             ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[1] = b;
             ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2] = c;
-            }
-        guirefresh();
         }
+        guirefresh();
+    }
 }
 void MainWindow::on_combo_add_mat_currentIndexChanged(int index)
 {
     ui->combo_mat_type->setCurrentIndex(Materias[index].type);
     for(int i=0;i<ui->combo_add_mat_2->count();i++)
-    {if(ui->combo_add_mat_2->itemText(i)==Materias[index].name){ui->combo_add_mat_2->setCurrentIndex(i);}}
+    {
+        if(ui->combo_add_mat_2->itemText(i)==Materias[index].name){ui->combo_add_mat_2->setCurrentIndex(i);}
+    }
 
     if(!load)
-        {
+    {
         ff7.slot[s].materias[ui->tbl_materia->currentRow()].id = index;
         guirefresh();
-        }
+    }
 }
 void MainWindow::on_btn_m_lvl1_clicked()
 {
@@ -3775,35 +3755,34 @@ void MainWindow::on_combo_mat_type_currentIndexChanged(int index)
 {
     if(!load)
     {
-    ui->combo_add_mat_2->clear();
-    if(index == 0)
+        ui->combo_add_mat_2->clear();
+        if(index == 0)
         {
-        for(int i=0;i<0x5B;i++)
+            for(int i=0;i<0x5B;i++)
             {
-            if(Materias[i].name !="DON'T USE"){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),Materias[i].name);}
+                if(Materias[i].name !="DON'T USE"){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),Materias[i].name);}
             }
-
         }
-    else
+        else
         {
-        load=true;
-        for(int i=0;i<0x5B;i++){if(index==Materias[i].type){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),Materias[i].name);}}
-        load=false;
+            load=true;
+            for(int i=0;i<0x5B;i++){if(index==Materias[i].type){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),Materias[i].name);}}
+            load=false;
         }
     }
 }
 void MainWindow::on_combo_add_mat_2_currentIndexChanged()
 {
     if(!load)
-        {//set combo_add_mat.setCurrentindex = selected materia.id
+    {//set combo_add_mat.setCurrentindex = selected materia.id
         for(int i=0;i<0x5B;i++)
-            {
+        {
             if(ui->combo_add_mat_2->currentText()== Materias[i].name){ui->combo_add_mat->setCurrentIndex(i);}
-            }
+        }
 // if its eskill set it up right , or else do normal setup.
         if(ui->combo_add_mat_2->currentText()== "Enemy Skill"){ui->eskill_group->setVisible(true);ui->sb_addap->setEnabled(0);geteskills(ui->tbl_materia->currentRow());}
         else{ui->eskill_group->setVisible(false);ui->sb_addap->setEnabled(1);}
-        }
+    }
 }
 void MainWindow::on_clearMateria_clicked()
 {
@@ -3814,10 +3793,10 @@ void MainWindow::on_clearMateria_clicked()
 void MainWindow::on_btn_eskillall_clicked()
 {
     for (int i=0;i<24;i++)
-        {
+    {
         ui->list_eskill->setCurrentRow(i);
         ui->list_eskill->currentItem()->setCheckState(Qt::Checked);
-        }
+    }
     ui->list_eskill->setCurrentRow(-1);
 }
 
@@ -3828,17 +3807,17 @@ void MainWindow::geteskills(int row)
     ui->sb_addap->setValue(temp);// no one cares cause there is no ap really..
     on_btn_eskillclear_clicked();
     for (int i=0;i<24;i++)
-        {
+    {
         ui->list_eskill->setCurrentRow(i);
         if ((1 << i) & temp){ui->list_eskill->currentItem()->setCheckState(Qt::Checked);}
-        }
+    }
     ui->list_eskill->setCurrentRow(-1);
     load = false;
 }
 void MainWindow::on_list_eskill_itemChanged()
 {
     if(!load)
-        {
+    {
         quint32 temp = ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[0] |(ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[1] << 8) | (ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2] << 16);
         if(ui->list_eskill->currentItem()->checkState()){temp |= (1 << ui->list_eskill->currentRow());}
         else{temp &= ~(1<<ui->list_eskill->currentRow());}
@@ -3851,15 +3830,15 @@ void MainWindow::on_list_eskill_itemChanged()
         ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[0] = a;
         ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[1] = b;
         ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2] = c;
-        }
+    }
 }
 void MainWindow::on_btn_eskillclear_clicked()
 {
     for (int i=0;i<24;i++)
-        {
+    {
         ui->list_eskill->setCurrentRow(i);
         ui->list_eskill->currentItem()->setCheckState(Qt::Unchecked);
-        }//loop thru and uncheck no need to apply each one should thrown an itemChanged() event
+    }//loop thru and uncheck no need to apply each one should thrown an itemChanged() event
     ui->list_eskill->setCurrentRow(-1);
 }
 
@@ -3881,296 +3860,217 @@ void MainWindow::on_tbl_location_field_itemSelectionChanged()
 }
 void MainWindow::on_sb_map_id_valueChanged()
 {
-    ff7.slot[s].mapid= ui->sb_map_id->value();
+    if(!load){ff7.slot[s].mapid= ui->sb_map_id->value();}
 }
 void MainWindow::on_sb_loc_id_valueChanged()
 {
-    ff7.slot[s].locationid = ui->sb_loc_id->value();
+    if(!load){ff7.slot[s].locationid = ui->sb_loc_id->value();}
 }
 void MainWindow::on_line_location_textChanged()
 {
     if (!load)
-        {
+    {
         for (int i=0;i<32;i++){ff7.slot[s].desc.location[i] =0xFF;}
         for (int i=0;i<ui->line_location->text().size();i++){ff7.slot[s].desc.location[i] = chFF7[ui->line_location->text().at(i).toAscii()];}
-        }
+    }
 }
 void MainWindow::on_sb_coordx_valueChanged()
 {
-    ff7.slot[s].coord.x = ui->sb_coordx->value();
+    if(!load){ff7.slot[s].coord.x = ui->sb_coordx->value();}
 }
 void MainWindow::on_sb_coordy_valueChanged()
 {
-    ff7.slot[s].coord.y = ui->sb_coordy->value();
+    if(!load){ff7.slot[s].coord.y = ui->sb_coordy->value();}
 }
 void MainWindow::on_sb_coordz_valueChanged()
 {
-    ff7.slot[s].coord.z = ui->sb_coordz->value();
+    if(!load){ff7.slot[s].coord.z = ui->sb_coordz->value();}
 }
 
 //char stats tab
 void MainWindow::on_cb_id_toggled(bool checked)
 {
     if(!load)
-        {
+    {
         if (curchar ==6)
-            {
+        {
             if (checked){ff7.slot[s].chars[6].id = 9;ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));}
             else {ff7.slot[s].chars[6].id = 6;ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));}
-            }
+        }
         if (curchar ==7)
-            {
+        {
             if (checked){ff7.slot[s].chars[7].id = 10;ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));}
             else {ff7.slot[s].chars[7].id = 7;ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));}
-            }
         }
+    }
 }
 void MainWindow::on_line_name_lostFocus()
 {
     if(!load)
-        {
+    {
         for (int i=0;i<12;i++){ff7.slot[s].chars[curchar].name[i] =0xFF;}
         for (int i=0;i<ui->line_name->text().size();i++){ff7.slot[s].chars[curchar].name[i] = chFF7[ui->line_name->text().at(i).toAscii()];}
         if (curchar == ui->combo_party1->currentIndex())
-            {
+        {
             for (int i=0;i<16;i++){ff7.slot[s].desc.name[i] =0xFF;}
             for (int i=0;i<ui->line_name->text().size();i++){ff7.slot[s].desc.name[i] = chFF7[ui->line_name->text().at(i).toAscii()];}
-            }
         }
+    }
 }
 void MainWindow::on_sb_lvl_valueChanged()
 {
     if(!load)
-        {
+    {
         ff7.slot[s].chars[curchar].level = ui->sb_lvl->value();
         ff7.slot[s].desc.level = ui->sb_lvl->value();
-        }
+    }
 }
 void MainWindow::on_sb_curhp_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].curHP = ui->sb_curhp->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].curHP = ui->sb_curhp->value();}
 }
 void MainWindow::on_sb_curmp_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].curMP = ui->sb_curmp->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].curMP = ui->sb_curmp->value();}
 }
 void MainWindow::on_sb_maxhp_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].maxHP =ui->sb_maxhp->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].maxHP =ui->sb_maxhp->value();}
 }
 void MainWindow::on_sb_maxmp_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].maxMP =ui->sb_maxmp->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].maxMP =ui->sb_maxmp->value();}
 }
 void MainWindow::on_sb_hp_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].baseHP = ui->sb_hp->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].baseHP = ui->sb_hp->value();}
 }
 void MainWindow::on_sb_mp_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].baseMP = ui->sb_mp->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].baseMP = ui->sb_mp->value();}
 }
 void MainWindow::on_sb_next_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].expNext =  ui->sb_next->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].expNext =  ui->sb_next->value();}
 }
 void MainWindow::on_sb_exp_valueChanged()
 {
-    if(!load)
-    {
-        ff7.slot[s].chars[curchar].exp = ui->sb_exp->value();
-    }
+    if(!load){ff7.slot[s].chars[curchar].exp = ui->sb_exp->value();}
 }
 void MainWindow::on_sb_kills_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].kills = ui->sb_kills->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].kills = ui->sb_kills->value();}
 }
-
 void MainWindow::on_sb_str_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].strength = ui->sb_str->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].strength = ui->sb_str->value();}
 }
 void MainWindow::on_sb_dex_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].dexterity = ui->sb_dex->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].dexterity = ui->sb_dex->value();}
 }
 void MainWindow::on_sb_mag_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].magic = ui->sb_mag->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].magic = ui->sb_mag->value();}
 }
 void MainWindow::on_sb_vit_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].vitality = ui->sb_vit->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].vitality = ui->sb_vit->value();}
 }
 void MainWindow::on_sb_spr_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].spirit = ui->sb_spr->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].spirit = ui->sb_spr->value();}
 }
 void MainWindow::on_sb_lck_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].luck = ui->sb_lck->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].luck = ui->sb_lck->value();}
 }
 void MainWindow::on_sb_strbonus_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].strength_bonus = ui->sb_strbonus->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].strength_bonus = ui->sb_strbonus->value();}
 }
 void MainWindow::on_sb_dexbonus_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].dexterity_bonus = ui->sb_dexbonus->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].dexterity_bonus = ui->sb_dexbonus->value();}
 }
 void MainWindow::on_sb_magbonus_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].magic_bonus = ui->sb_magbonus->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].magic_bonus = ui->sb_magbonus->value();}
 }
 void MainWindow::on_sb_vitbonus_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].vitality_bonus = ui->sb_vitbonus->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].vitality_bonus = ui->sb_vitbonus->value();}
 }
 void MainWindow::on_sb_sprbonus_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].spirit_bonus = ui->sb_sprbonus->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].spirit_bonus = ui->sb_sprbonus->value();}
 }
 void MainWindow::on_sb_lckbonus_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].luck_bonus = ui->sb_lckbonus->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].luck_bonus = ui->sb_lckbonus->value();}
 }
 void MainWindow::on_cb_front_clicked(bool checked)
 {
     if(!load)
-        {
+    {
         if(checked) ff7.slot[s].chars[curchar].flags[1] = 255;
         if(!checked)ff7.slot[s].chars[curchar].flags[1] =254;
-        }
+    }
 }
 void MainWindow::on_cb_fury_clicked(bool checked)
 {
     if(!load)
-        {
+    {
         if(checked){ui->cb_sadness->setChecked(0); ff7.slot[s].chars[curchar].flags[0] =32;}
         else {ff7.slot[s].chars[curchar].flags[0]=0;}
-        }
+    }
 }
 void MainWindow::on_cb_sadness_clicked(bool checked)
 {
     if(!load)
-        {
+    {
         if(checked){ui->cb_fury->setChecked(0); ff7.slot[s].chars[curchar].flags[0] =16;}
         else {ff7.slot[s].chars[curchar].flags[0]=0;}
-        }
+    }
 }
 //char limit stuff
 void MainWindow::on_sb_used1_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].timesused1 = ui->sb_used1->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].timesused1 = ui->sb_used1->value();}
 }
 void MainWindow::on_sb_used2_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].timesused2 = ui->sb_used2->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].timesused2 = ui->sb_used2->value();}
 }
 void MainWindow::on_sb_used3_valueChanged()
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].timesused3 = ui->sb_used3->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].timesused3 = ui->sb_used3->value();}
 }
 void MainWindow::on_sb_limitlvl_valueChanged(int value)
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].limitlevel= value; //ui->sb_limitlvl->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].limitlevel= value;} //ui->sb_limitlvl->value();
 }
 void MainWindow::on_slide_limit_valueChanged(int value)
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].limitbar = value; //ui->slide_limit->value();
-        }
+    if(!load){ff7.slot[s].chars[curchar].limitbar = value;} //ui->slide_limit->value();
 }
 void MainWindow::limitapply()
 {
     ff7.slot[s].chars[curchar].limits = 0;
     if (curchar == 7)
-        {
+    {
         if (ui->limit_1a->isChecked()==1) ff7.slot[s].chars[curchar].limits |= (1<<0);
         if (ui->limit_2a->isChecked()==1) ff7.slot[s].chars[curchar].limits |= (1<<3);
         if (ui->limit_3a->isChecked()==1) ff7.slot[s].chars[curchar].limits |= (1<<6);
         if (ui->limit_4 ->isChecked()==1) ff7.slot[s].chars[curchar].limits |= (1<<9);
-        }
+    }
     else if (curchar == 6)
-        {
+    {
         if (ui->limit_1a->isChecked()==1) ff7.slot[s].chars[curchar].limits |= (1<<0);
         if (ui->limit_2a->isChecked()==1) ff7.slot[s].chars[curchar].limits |= (1<<3);
-        }
+    }
     else
-        {
+    {
         if (ui->limit_1a->isChecked()==1) ff7.slot[s].chars[curchar].limits |= (1<<0);
         if (ui->limit_1b->isChecked()==1) ff7.slot[s].chars[curchar].limits |= (1<<1);
         if (ui->limit_2a->isChecked()==1) ff7.slot[s].chars[curchar].limits |= (1<<3);
@@ -4178,7 +4078,7 @@ void MainWindow::limitapply()
         if (ui->limit_3a->isChecked()==1) ff7.slot[s].chars[curchar].limits |= (1<<6);
         if (ui->limit_3b->isChecked()==1) ff7.slot[s].chars[curchar].limits |= (1<<7);
         if (ui->limit_4 ->isChecked()==1) ff7.slot[s].chars[curchar].limits |= (1<<9);
-        }
+    }
 }
 void MainWindow::on_limit_1a_toggled()
 {
@@ -4218,22 +4118,19 @@ void MainWindow::on_combo_weapon_currentIndexChanged()
 void MainWindow::on_combo_armor_currentIndexChanged(int index)
 {
     if(!load)
-        {
+    {
         ff7.slot[s].chars[curchar].armor = index;
         setarmorslots();
-        }
+    }
 }
 void MainWindow::on_combo_acc_currentIndexChanged(int index)
 {
-    if(!load)
-        {
-        ff7.slot[s].chars[curchar].accessory = index;
-        }
+    if(!load){ff7.slot[s].chars[curchar].accessory = index;}
 }
 void MainWindow::on_combo_weapon_activated(int index)
 {
     switch(curchar)
-        {
+    {
         case 0:{ff7.slot[s].chars[curchar].weapon = index;break;}
         case 1:{ff7.slot[s].chars[curchar].weapon = index+32;break;}
         case 2:{ff7.slot[s].chars[curchar].weapon = index+16;break;}
@@ -4243,38 +4140,38 @@ void MainWindow::on_combo_weapon_activated(int index)
         case 6:{ff7.slot[s].chars[curchar].weapon = index+101;break;}
         case 7:{ff7.slot[s].chars[curchar].weapon = index+114;break;}
         case 8:{ff7.slot[s].chars[curchar].weapon = index+73;break;}
-        }
+    }
 }
 void MainWindow::on_combo_add_mat_slot_currentIndexChanged(int index)
 {
     if(!load)
-        {
+    {
         ff7.slot[s].chars[curchar].materias[mslotsel].id = Materias[index].id;
         guirefresh();
-        }
+    }
     if(ff7.slot[s].chars[curchar].materias[mslotsel].id == 0x2C)
-        {
+    {
         ui->eskill_group_2->setVisible(true);
         geteskills2(mslotsel);
         ui->sb_addap_slot->setEnabled(false);
-        }
+    }
     else
-        {
+    {
         ui->eskill_group_2->setVisible(false);
         ui->sb_addap_slot->setEnabled(true);
-        }
+    }
 }
 void MainWindow::on_sb_addap_slot_valueChanged(int value)
 {
     if(!load)
-        {
+    {
         int a = (value & 0xff);
         int b = (value & 0xff00) >> 8;
         int c = (value & 0xff0000) >> 16;
         ff7.slot[s].chars[curchar].materias[mslotsel].ap[0] = a;
         ff7.slot[s].chars[curchar].materias[mslotsel].ap[1] = b;
         ff7.slot[s].chars[curchar].materias[mslotsel].ap[2] = c;
-        }
+    }
 }
 
 void MainWindow::on_btn_mastermateria_slot_clicked()
@@ -4291,21 +4188,21 @@ void MainWindow::on_clearMateria_slot_clicked()
 void MainWindow::mslotcalc()
 {
     if(ff7.slot[s].chars[curchar].materias[mslotsel].id != 0x2C)
-        {
+    {
         int aptemp;
         load =true;
         aptemp = (ff7.slot[s].chars[curchar].materias[mslotsel].ap[0]|(ff7.slot[s].chars[curchar].materias[mslotsel].ap[1] << 8)|(ff7.slot[s].chars[curchar].materias[mslotsel].ap[2] << 16));
         ui->combo_add_mat_slot->setCurrentIndex(ff7.slot[s].chars[curchar].materias[mslotsel].id);
         ui->sb_addap_slot->setValue(aptemp);
         load=false;
-        }
+    }
     else
-        {
+    {
         load=true;
         ui->combo_add_mat_slot->setCurrentIndex(ff7.slot[s].chars[curchar].materias[mslotsel].id);
         load=false;
         geteskills2(mslotsel);
-        }
+    }
 }
 void MainWindow::on_w_m_s1_clicked()
 {
@@ -4395,18 +4292,18 @@ void MainWindow::geteskills2(int row)
     quint32 temp = ff7.slot[s].chars[curchar].materias[row].ap[0] |(ff7.slot[s].chars[curchar].materias[row].ap[1] << 8) | (ff7.slot[s].chars[curchar].materias[row].ap[2] << 16);
     ui->sb_addap_slot->setValue(temp);
     for (int i=0;i<24;i++)
-        {
+    {
         ui->list_eskill_2->setCurrentRow(i);
         if ((1 << i) & temp){ui->list_eskill_2->currentItem()->setCheckState(Qt::Checked);}
         else{ui->list_eskill_2->currentItem()->setCheckState(Qt::Unchecked);}
-        }
+    }
     ui->list_eskill_2->setCurrentRow(-1);
     load=false;
 }
 void MainWindow::on_list_eskill_2_itemChanged()
 {
     if(!load)
-        {
+    {
         quint32 temp = ff7.slot[s].chars[curchar].materias[mslotsel].ap[0] |(ff7.slot[s].chars[curchar].materias[mslotsel].ap[1] << 8) | (ff7.slot[s].chars[curchar].materias[mslotsel].ap[2] << 16);
         if(ui->list_eskill_2->currentItem()->checkState()){temp |= (1 << ui->list_eskill_2->currentRow());}
         else{temp &= ~(1<<ui->list_eskill_2->currentRow());}
@@ -4419,7 +4316,7 @@ void MainWindow::on_list_eskill_2_itemChanged()
         load=true;
         ui->sb_addap_slot->setValue(temp);
         load=false;
-        }
+    }
 }
 
 // game options
@@ -4571,7 +4468,7 @@ void MainWindow::on_sb_bm_progress3_valueChanged(int value)
 void MainWindow::on_cb_replay_currentIndexChanged(int index)
 {
     if(index == 1) // bombing mission
-        {
+    {
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(1);
         ui->sb_bm_progress1->setValue(0);
@@ -4584,10 +4481,10 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_coordy->setValue(27432);
         ui->sb_coordz->setValue(25);
         ui->label_replaynote->setText(tr("Replay the bombing mission from right after you get off the first train, game might crash after the mission right before jessie talks to you about midgar."));
-        }
+    }
 
     else if (index ==2)// Flash back
-        {
+    {
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(341);
         ui->sb_bm_progress1->setValue(120);
@@ -4634,10 +4531,10 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7.slot[s].chars[6].limitlevel= ff7.slot[s].chars[0].limitlevel;
         ff7.slot[s].chars[6].limits= ff7.slot[s].chars[0].limits;
         for (int i=0;i<16;i++)
-            {
+        {
             ff7.slot[s].chars[6].materias[i].id = ff7.slot[s].chars[0].materias[i].id;
             for (int j=0;j<3;j++){ff7.slot[s].chars[6].materias[i].ap[j]=ff7.slot[s].chars[0].materias[i].ap[j];}
-            }
+        }
         ff7.slot[s].chars[6].timesused1 = ff7.slot[s].chars[0].timesused1;
         ff7.slot[s].chars[6].timesused2 = ff7.slot[s].chars[0].timesused2;
         ff7.slot[s].chars[6].timesused3 = ff7.slot[s].chars[0].timesused3;
@@ -4655,11 +4552,11 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7.slot[s].chars[7].name[8] = chFF7['h'];
         for (int i=9; i<12;i++){ff7.slot[s].chars[7].name[i] = 0xFF;}
         ui->label_replaynote->setText(tr("Setting This Will Copy Cloud as is to young cloud (caitsith's slot). sephiroth's stats will come directly from vincent, if you wish to edit cloud or vincent after selecting this replay then change the box to the first(blank) entry and then when you have set those chars as you wish reselect this replay from the combobox."));
-        }
+    }
 
 
     else if(index == 3) // The Date Scene
-        {
+    {
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(583);
         ui->sb_bm_progress1->setValue(120);
@@ -4672,10 +4569,10 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_coordy->setValue(95);
         ui->sb_coordz->setValue(26);
         ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too."));
-        }
+    }
 
     else if (index == 4)//Aerith Death
-        {
+    {
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(664);
         ui->sb_bm_progress1->setValue(120);
@@ -4690,7 +4587,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->list_chars_unlocked->item(3)->setCheckState(Qt::Unchecked);
         ui->list_phs_chars->item(3)->setCheckState(Qt::Unchecked);
         ui->label_replaynote->setText(tr("Replay the death of Aerith.This option Will remove Aerith from your PHS"));
-        }
+    }
 
     else {ui->label_replaynote->setText("         INFO ON CURRENTLY SELECTED REPLAY MISSION");}
 }
@@ -4698,84 +4595,85 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS FOR TESTING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_btn_remove_all_items_clicked() //used for testing
 {
-for(int i=0;i<320;i++)
-{
-ff7.slot[s].items[i].id=0xFF;
-ff7.slot[s].items[i].qty=0xFF;
-}
-guirefresh();
+    for(int i=0;i<320;i++)
+    {
+        ff7.slot[s].items[i].id=0xFF;
+        ff7.slot[s].items[i].qty=0xFF;
+    }
+    guirefresh();
 }
 
 void MainWindow::on_btn_remove_all_materia_clicked()
 {
-for (int i=0;i<200;i++)
-{
-ff7.slot[s].materias[i].id =0xFF;
-ff7.slot[s].materias[i].ap[0]=0xFF;
-ff7.slot[s].materias[i].ap[1]=0xFF;
-ff7.slot[s].materias[i].ap[2]=0xFF;
-}
-guirefresh();
+    for (int i=0;i<200;i++)
+    {
+        ff7.slot[s].materias[i].id =0xFF;
+        ff7.slot[s].materias[i].ap[0]=0xFF;
+        ff7.slot[s].materias[i].ap[1]=0xFF;
+        ff7.slot[s].materias[i].ap[2]=0xFF;
+    }
+    guirefresh();
 }
 
 void MainWindow::on_btn_remove_all_stolen_clicked()
 {
-for(int i=0;i<48;i++)
-{
-ff7.slot[s].stolen[i].id =0xFF;
-ff7.slot[s].stolen[i].ap[0]=0xFF;
-ff7.slot[s].stolen[i].ap[1]=0xFF;
-ff7.slot[s].stolen[i].ap[2]=0xFF;
-}
-guirefresh();
+    for(int i=0;i<48;i++)
+    {
+        ff7.slot[s].stolen[i].id =0xFF;
+        ff7.slot[s].stolen[i].ap[0]=0xFF;
+        ff7.slot[s].stolen[i].ap[1]=0xFF;
+        ff7.slot[s].stolen[i].ap[2]=0xFF;
+    }
+    guirefresh();
 }
 
 void MainWindow::on_action_show_test_data_toggled()
 {
-if(ui->action_show_test_data->isChecked())
-{
-ui->page_test->setEnabled(true);
-ui->tabWidget->setTabEnabled(8,1);
-testdata_refresh();
-ui->lbl_0x34->setVisible(true);
-ui->lbl_0x35->setVisible(true);
-ui->lbl_0x36->setVisible(true);
-ui->lbl_0x37->setVisible(true);
-ui->lcd_0x34->setVisible(true);
-ui->lcd_0x35->setVisible(true);
-ui->lcd_0x36->setVisible(true);
-ui->lcd_0x37->setVisible(true);
-ui->sb_bm_progress1->setEnabled(true);
-ui->sb_bm_progress2->setEnabled(true);
-ui->sb_bm_progress3->setEnabled(true);
-ui->btn_vincent->setEnabled(true);
-ui->cb_id->setEnabled(true);
-ui->btn_cait->setEnabled(true);
+    if(ui->action_show_test_data->isChecked())
+    {
+        ui->page_test->setEnabled(true);
+        ui->tabWidget->setTabEnabled(8,1);
+        testdata_refresh();
+        ui->lbl_0x34->setVisible(true);
+        ui->lbl_0x35->setVisible(true);
+        ui->lbl_0x36->setVisible(true);
+        ui->lbl_0x37->setVisible(true);
+        ui->lcd_0x34->setVisible(true);
+        ui->lcd_0x35->setVisible(true);
+        ui->lcd_0x36->setVisible(true);
+        ui->lcd_0x37->setVisible(true);
+        ui->sb_bm_progress1->setEnabled(true);
+        ui->sb_bm_progress2->setEnabled(true);
+        ui->sb_bm_progress3->setEnabled(true);
+        ui->btn_vincent->setEnabled(true);
+        ui->cb_id->setEnabled(true);
+        ui->btn_cait->setEnabled(true);
 
-settings.setValue("show_test",1);
-ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
-}
-else
-{
-ui->page_test->setEnabled(false);
-ui->tabWidget->setTabEnabled(8,0);
-ui->lbl_0x34->setVisible(false);
-ui->lbl_0x35->setVisible(false);
-ui->lbl_0x36->setVisible(false);
-ui->lbl_0x37->setVisible(false);
-ui->lcd_0x34->setVisible(false);
-ui->lcd_0x35->setVisible(false);
-ui->lcd_0x36->setVisible(false);
-ui->lcd_0x37->setVisible(false);
-ui->sb_bm_progress1->setEnabled(false);
-ui->sb_bm_progress2->setEnabled(false);
-ui->sb_bm_progress3->setEnabled(false);
-if(ff7.slot[s].chars[6].id == 9) {ui->btn_vincent->setEnabled(false);}
-ui->cb_id->setEnabled(false);
-if(ff7.slot[s].chars[7].id == 10) {ui->btn_cait->setEnabled(false);}
-settings.setValue("show_test",0);
-ui->action_show_test_data->setIcon(QIcon(":/icon/debug_unsel"));
-}
+        settings.setValue("show_test",1);
+        ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
+    }
+
+    else
+    {
+        ui->page_test->setEnabled(false);
+        ui->tabWidget->setTabEnabled(8,0);
+        ui->lbl_0x34->setVisible(false);
+        ui->lbl_0x35->setVisible(false);
+        ui->lbl_0x36->setVisible(false);
+        ui->lbl_0x37->setVisible(false);
+        ui->lcd_0x34->setVisible(false);
+        ui->lcd_0x35->setVisible(false);
+        ui->lcd_0x36->setVisible(false);
+        ui->lcd_0x37->setVisible(false);
+        ui->sb_bm_progress1->setEnabled(false);
+        ui->sb_bm_progress2->setEnabled(false);
+        ui->sb_bm_progress3->setEnabled(false);
+        if(ff7.slot[s].chars[6].id == 9) {ui->btn_vincent->setEnabled(false);}
+        ui->cb_id->setEnabled(false);
+        if(ff7.slot[s].chars[7].id == 10) {ui->btn_cait->setEnabled(false);}
+        settings.setValue("show_test",0);
+        ui->action_show_test_data->setIcon(QIcon(":/icon/debug_unsel"));
+    }
 }
 
 /*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
@@ -5059,415 +4957,400 @@ void MainWindow::on_action_Region_JPN_International_triggered()
 }
 void MainWindow::testdata_refresh()
 {
-load=true;
+    load=true;
 
-ui->sb_timer_time_hour->setValue(ff7.slot[s].timer[0]);
-ui->sb_timer_time_min->setValue(ff7.slot[s].timer[1]);
-ui->sb_timer_time_sec->setValue(ff7.slot[s].timer[2]);
+    ui->sb_timer_time_hour->setValue(ff7.slot[s].timer[0]);
+    ui->sb_timer_time_min->setValue(ff7.slot[s].timer[1]);
+    ui->sb_timer_time_sec->setValue(ff7.slot[s].timer[2]);
 
-ui->sb_b_love_aeris->setValue(ff7.slot[s].b_love.aeris);
-ui->sb_b_love_tifa->setValue(ff7.slot[s].b_love.tifa);
-ui->sb_b_love_yuffie->setValue(ff7.slot[s].b_love.yuffie);
-ui->sb_b_love_barret->setValue(ff7.slot[s].b_love.barret);
-ui->sb_u_weapon_hp->setValue(ff7.slot[s].u_weapon_hp[0] |(ff7.slot[s].u_weapon_hp[1] << 8) | (ff7.slot[s].u_weapon_hp[2] << 16));
+    ui->sb_b_love_aeris->setValue(ff7.slot[s].b_love.aeris);
+    ui->sb_b_love_tifa->setValue(ff7.slot[s].b_love.tifa);
+    ui->sb_b_love_yuffie->setValue(ff7.slot[s].b_love.yuffie);
+    ui->sb_b_love_barret->setValue(ff7.slot[s].b_love.barret);
+    ui->sb_u_weapon_hp->setValue(ff7.slot[s].u_weapon_hp[0] |(ff7.slot[s].u_weapon_hp[1] << 8) | (ff7.slot[s].u_weapon_hp[2] << 16));
 
-if(ff7.slot[s].tut_sub == 0x2F){ui->cb_tut_sub->setCheckState(Qt::Checked);}
-else if(ff7.slot[s].tut_sub ==0x2B){ui->cb_tut_sub->setCheckState(Qt::PartiallyChecked);}
-else{ui->cb_tut_sub->setCheckState(Qt::Unchecked);}
-ui->lcdNumber_6->display(ff7.slot[s].tut_sub);
-
-
-if(ff7.slot[s].tut_save == 0x3A){ui->cb_tut_worldsave->setCheckState(Qt::Checked);}
-else if(ff7.slot[s].tut_save ==0x32){ui->cb_tut_worldsave->setCheckState(Qt::PartiallyChecked);}
-else{ui->cb_tut_worldsave->setCheckState(Qt::Unchecked);}
-ui->lcdNumber_7->display(ff7.slot[s].tut_save);
-
-if(ff7.slot[s].reg_vinny == 0xFF){ui->cb_reg_vinny->setChecked(Qt::Checked);}
-else if(ff7.slot[s].reg_vinny ==0xFB){ui->cb_reg_vinny->setChecked(Qt::Unchecked);}
-ui->lcdNumber_8->display(ff7.slot[s].reg_vinny);
-
-if(ff7.slot[s].reg_yuffie == 0x6F){ui->cb_reg_yuffie->setChecked(Qt::Checked);}
-else if(ff7.slot[s].reg_yuffie==0x6E){ui->cb_reg_yuffie->setChecked(Qt::Unchecked);}
-ui->lcdNumber_9->display(ff7.slot[s].reg_yuffie);
-
-if((ff7.slot[s].itemsmask_1)& (1<<0)){ui->cb_itemmask1_1->setChecked(Qt::Checked);}
-else{ui->cb_itemmask1_1->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].itemsmask_1)& (1<<1)){ui->cb_itemmask1_2->setChecked(Qt::Checked);}
-else{ui->cb_itemmask1_2->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].itemsmask_1)& (1<<2)){ui->cb_itemmask1_3->setChecked(Qt::Checked);}
-else{ui->cb_itemmask1_3->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].itemsmask_1)& (1<<3)){ui->cb_itemmask1_4->setChecked(Qt::Checked);}
-else{ui->cb_itemmask1_4->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].itemsmask_1)& (1<<4)){ui->cb_itemmask1_5->setChecked(Qt::Checked);}
-else{ui->cb_itemmask1_5->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].itemsmask_1)& (1<<5)){ui->cb_itemmask1_6->setChecked(Qt::Checked);}
-else{ui->cb_itemmask1_6->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].itemsmask_1)& (1<<6)){ui->cb_itemmask1_7->setChecked(Qt::Checked);}
-else{ui->cb_itemmask1_7->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].itemsmask_1)& (1<<7)){ui->cb_itemmask1_8->setChecked(Qt::Checked);}
-else{ui->cb_itemmask1_8->setChecked(Qt::Unchecked);}
-ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    if(ff7.slot[s].tut_sub == 0x2F){ui->cb_tut_sub->setCheckState(Qt::Checked);}
+    else if(ff7.slot[s].tut_sub ==0x2B){ui->cb_tut_sub->setCheckState(Qt::PartiallyChecked);}
+    else{ui->cb_tut_sub->setCheckState(Qt::Unchecked);}
+    ui->lcdNumber_6->display(ff7.slot[s].tut_sub);
 
 
-if((ff7.slot[s].midgartrainflags)& (1<<0)){ui->cb_midgartrain_1->setChecked(Qt::Checked);}
-else{ui->cb_midgartrain_1->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].midgartrainflags)& (1<<1)){ui->cb_midgartrain_2->setChecked(Qt::Checked);}
-else{ui->cb_midgartrain_2->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].midgartrainflags)& (1<<2)){ui->cb_midgartrain_3->setChecked(Qt::Checked);}
-else{ui->cb_midgartrain_3->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].midgartrainflags)& (1<<3)){ui->cb_midgartrain_4->setChecked(Qt::Checked);}
-else{ui->cb_midgartrain_4->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].midgartrainflags)& (1<<4)){ui->cb_midgartrain_5->setChecked(Qt::Checked);}
-else{ui->cb_midgartrain_5->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].midgartrainflags)& (1<<5)){ui->cb_midgartrain_6->setChecked(Qt::Checked);}
-else{ui->cb_midgartrain_6->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].midgartrainflags)& (1<<6)){ui->cb_midgartrain_7->setChecked(Qt::Checked);}
-else{ui->cb_midgartrain_7->setChecked(Qt::Unchecked);}
-if((ff7.slot[s].midgartrainflags)& (1<<7)){ui->cb_midgartrain_8->setChecked(Qt::Checked);}
-else{ui->cb_midgartrain_8->setChecked(Qt::Unchecked);}
-ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    if(ff7.slot[s].tut_save == 0x3A){ui->cb_tut_worldsave->setCheckState(Qt::Checked);}
+    else if(ff7.slot[s].tut_save ==0x32){ui->cb_tut_worldsave->setCheckState(Qt::PartiallyChecked);}
+    else{ui->cb_tut_worldsave->setCheckState(Qt::Unchecked);}
+    ui->lcdNumber_7->display(ff7.slot[s].tut_save);
 
-load=false;}//end of testdata_refresh()
+    if(ff7.slot[s].reg_vinny == 0xFF){ui->cb_reg_vinny->setChecked(Qt::Checked);}
+    else if(ff7.slot[s].reg_vinny ==0xFB){ui->cb_reg_vinny->setChecked(Qt::Unchecked);}
+    ui->lcdNumber_8->display(ff7.slot[s].reg_vinny);
+
+    if(ff7.slot[s].reg_yuffie == 0x6F){ui->cb_reg_yuffie->setChecked(Qt::Checked);}
+    else if(ff7.slot[s].reg_yuffie==0x6E){ui->cb_reg_yuffie->setChecked(Qt::Unchecked);}
+    ui->lcdNumber_9->display(ff7.slot[s].reg_yuffie);
+
+    if((ff7.slot[s].itemsmask_1)& (1<<0)){ui->cb_itemmask1_1->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_1->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].itemsmask_1)& (1<<1)){ui->cb_itemmask1_2->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_2->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].itemsmask_1)& (1<<2)){ui->cb_itemmask1_3->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_3->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].itemsmask_1)& (1<<3)){ui->cb_itemmask1_4->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_4->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].itemsmask_1)& (1<<4)){ui->cb_itemmask1_5->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_5->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].itemsmask_1)& (1<<5)){ui->cb_itemmask1_6->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_6->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].itemsmask_1)& (1<<6)){ui->cb_itemmask1_7->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_7->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].itemsmask_1)& (1<<7)){ui->cb_itemmask1_8->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_8->setChecked(Qt::Unchecked);}
+    ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+
+
+    if((ff7.slot[s].midgartrainflags)& (1<<0)){ui->cb_midgartrain_1->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_1->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].midgartrainflags)& (1<<1)){ui->cb_midgartrain_2->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_2->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].midgartrainflags)& (1<<2)){ui->cb_midgartrain_3->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_3->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].midgartrainflags)& (1<<3)){ui->cb_midgartrain_4->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_4->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].midgartrainflags)& (1<<4)){ui->cb_midgartrain_5->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_5->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].midgartrainflags)& (1<<5)){ui->cb_midgartrain_6->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_6->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].midgartrainflags)& (1<<6)){ui->cb_midgartrain_7->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_7->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].midgartrainflags)& (1<<7)){ui->cb_midgartrain_8->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_8->setChecked(Qt::Unchecked);}
+    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+
+    load=false;}//end of testdata_refresh()
 
 void MainWindow::on_list_menu_visible_itemChanged()
 {
-if(!load)
-{
-quint16 temp=0;
-int j=ui->list_menu_visible->currentRow();
-for (int i=0;i<10;i++)
-{
-ui->list_menu_visible->setCurrentRow(i);
-if(ui->list_menu_visible->currentItem()->checkState() ==Qt::Checked)
-{temp |= (1<<i);}
-}
-ff7.slot[s].menu_visible=temp;
-ui->list_menu_visible->setCurrentRow(j);
-}
+    if(!load)
+    {
+        int j=ui->list_menu_visible->currentRow();
+        if(ui->list_menu_visible->currentItem()->checkState() ==Qt::Checked){ff7.slot[s].menu_visible |= (1<<j);}
+        else{ff7.slot[s].menu_visible &= ~(1<<j);}
+    }
 }
 
 void MainWindow::on_list_menu_locked_itemChanged()
 {
-if(!load)
-{
-quint16 temp=0;
-int j=ui->list_menu_locked->currentRow();
-for (int i=0;i<10;i++)
-{
-ui->list_menu_locked->setCurrentRow(i);
-if(ui->list_menu_locked->currentItem()->checkState() ==Qt::Checked)
-{temp |= (1<<i);}
-}
-ff7.slot[s].menu_locked=temp;
-ui->list_menu_locked->setCurrentRow(j);
-}
+    if(!load)
+    {
+        int j=ui->list_menu_locked->currentRow();
+        if(ui->list_menu_locked->currentItem()->checkState() ==Qt::Checked){ff7.slot[s].menu_locked |= (1<<j);}
+        else{ff7.slot[s].menu_locked &= ~(1<<j);}
+    }
 }
 
 void MainWindow::on_sb_b_love_aeris_valueChanged(int value)
 {
-if(!load){ff7.slot[s].b_love.aeris = value;}
+    if(!load){ff7.slot[s].b_love.aeris = value;}
 }
 
 void MainWindow::on_sb_b_love_tifa_valueChanged(int value)
 {
-if(!load){ff7.slot[s].b_love.tifa = value;}
+    if(!load){ff7.slot[s].b_love.tifa = value;}
 }
 
 void MainWindow::on_sb_b_love_yuffie_valueChanged(int value)
 {
-if(!load){ff7.slot[s].b_love.yuffie = value;}
+    if(!load){ff7.slot[s].b_love.yuffie = value;}
 }
 
 void MainWindow::on_sb_b_love_barret_valueChanged(int value)
 {
-if(!load){ff7.slot[s].b_love.barret = value;}
+    if(!load){ff7.slot[s].b_love.barret = value;}
 }
 
 void MainWindow::on_sb_coster_1_valueChanged(int value)
 {
-if(!load){ff7.slot[s].coster_1=value;}
+    if(!load){ff7.slot[s].coster_1=value;}
 }
 void MainWindow::on_sb_coster_2_valueChanged(int value)
 {
-if(!load){ff7.slot[s].coster_2 = value;}
+    if(!load){ff7.slot[s].coster_2 = value;}
 }
 void MainWindow::on_sb_coster_3_valueChanged(int value)
 {
-if(!load){ff7.slot[s].coster_3 = value;}
+    if(!load){ff7.slot[s].coster_3 = value;}
 }
-
 
 void MainWindow::on_sb_u_weapon_hp_valueChanged(int value)
 {
-if(!load)
-{
-load=true;
-int a = (value & 0xff);
-int b = (value & 0xff00) >> 8;
-int c = (value & 0xff0000) >> 16;
-ff7.slot[s].u_weapon_hp[0] = a;
-ff7.slot[s].u_weapon_hp[1] = b;
-ff7.slot[s].u_weapon_hp[2] = c;
-load=false;
-}
+    if(!load)
+    {
+        load=true;
+        int a = (value & 0xff);
+        int b = (value & 0xff00) >> 8;
+        int c = (value & 0xff0000) >> 16;
+        ff7.slot[s].u_weapon_hp[0] = a;
+        ff7.slot[s].u_weapon_hp[1] = b;
+        ff7.slot[s].u_weapon_hp[2] = c;
+        load=false;
+    }
 }
 
 void MainWindow::on_cb_reg_vinny_toggled(bool checked)
 {
-if(!load)
-{
-if (checked){ff7.slot[s].reg_vinny =0xFF;}
-else{ff7.slot[s].reg_vinny =0xFB;}
-testdata_refresh();
-}
+    if(!load)
+    {
+        if (checked){ff7.slot[s].reg_vinny =0xFF;}
+        else{ff7.slot[s].reg_vinny =0xFB;}
+        testdata_refresh();
+    }
 }
 
 void MainWindow::on_cb_itemmask1_1_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].itemsmask_1 |= (1<<0);}
-else{ff7.slot[s].itemsmask_1 &= ~(1<<0);}
-ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<0);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<0);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
 }
 void MainWindow::on_cb_itemmask1_2_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].itemsmask_1 |= (1<<1);}
-else{ff7.slot[s].itemsmask_1 &= ~(1<<1);}
-ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<1);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<1);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
 }
 
 void MainWindow::on_cb_itemmask1_3_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].itemsmask_1 |= (1<<2);}
-else{ff7.slot[s].itemsmask_1 &= ~(1<<2);}
-ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<2);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<2);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
 }
 
 void MainWindow::on_cb_itemmask1_4_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].itemsmask_1 |= (1<<3);}
-else{ff7.slot[s].itemsmask_1 &= ~(1<<3);}
-ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<3);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<3);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
 }
 
 void MainWindow::on_cb_itemmask1_5_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].itemsmask_1 |= (1<<4);}
-else{ff7.slot[s].itemsmask_1 &= ~(1<<4);}
-ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<4);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<4);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
 }
 
 void MainWindow::on_cb_itemmask1_6_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].itemsmask_1 |= (1<<5);}
-else{ff7.slot[s].itemsmask_1 &= ~(1<<5);}
-ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<5);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<5);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
 }
 
 void MainWindow::on_cb_itemmask1_7_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].itemsmask_1 |= (1<<6);}
-else{ff7.slot[s].itemsmask_1 &= ~(1<<6);}
-ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<6);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<6);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
 }
 
 void MainWindow::on_cb_itemmask1_8_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].itemsmask_1 |= (1<<7);}
-else{ff7.slot[s].itemsmask_1 &= ~(1<<7);}
-ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].itemsmask_1 |= (1<<7);}
+        else{ff7.slot[s].itemsmask_1 &= ~(1<<7);}
+        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+    }
 }
 
 void MainWindow::on_cb_materiacave_1_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].materiacaves |= (1<<0);}
-else{ff7.slot[s].materiacaves &= ~(1<<0);}
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].materiacaves |= (1<<0);}
+        else{ff7.slot[s].materiacaves &= ~(1<<0);}
+    }
 }
 void MainWindow::on_cb_materiacave_2_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].materiacaves |= (1<<1);}
-else{ff7.slot[s].materiacaves &= ~(1<<1);}
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].materiacaves |= (1<<1);}
+        else{ff7.slot[s].materiacaves &= ~(1<<1);}
+    }
 }
 void MainWindow::on_cb_materiacave_3_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].materiacaves |= (1<<2);}
-else{ff7.slot[s].materiacaves &= ~(1<<2);}
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].materiacaves |= (1<<2);}
+        else{ff7.slot[s].materiacaves &= ~(1<<2);}
+    }
 }
 void MainWindow::on_cb_materiacave_4_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].materiacaves |= (1<<3);}
-else{ff7.slot[s].materiacaves &= ~(1<<3);}
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].materiacaves |= (1<<3);}
+        else{ff7.slot[s].materiacaves &= ~(1<<3);}
+    }
 }
 
 void MainWindow::on_cb_reg_yuffie_toggled(bool checked)
 {
-if(!load)
-{
-if (checked){ff7.slot[s].reg_yuffie =0x6F;}
-else{ff7.slot[s].reg_yuffie =0x6E;}
-testdata_refresh();
-}
+    if(!load)
+    {
+        if (checked){ff7.slot[s].reg_yuffie =0x6F;}
+        else{ff7.slot[s].reg_yuffie =0x6E;}
+        testdata_refresh();
+    }
 }
 
 void MainWindow::on_cb_yuffieforest_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].yuffieforest |= (1<<0);}
-else{ff7.slot[s].yuffieforest &= ~(1<<0);}
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].yuffieforest |= (1<<0);}
+        else{ff7.slot[s].yuffieforest &= ~(1<<0);}
+    }
 }
 
 void MainWindow::on_cb_midgartrain_1_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].midgartrainflags |= (1<<0);}
-else{ff7.slot[s].midgartrainflags &= ~(1<<0);}
-ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<0);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<0);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    }
 }
 
 void MainWindow::on_cb_midgartrain_2_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].midgartrainflags |= (1<<1);}
-else{ff7.slot[s].midgartrainflags &= ~(1<<1);}
-ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<1);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<1);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    }
 }
 
 void MainWindow::on_cb_midgartrain_3_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].midgartrainflags |= (1<<2);}
-else{ff7.slot[s].midgartrainflags &= ~(1<<2);}
-ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<2);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<2);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    }
 }
 
 void MainWindow::on_cb_midgartrain_4_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].midgartrainflags |= (1<<3);}
-else{ff7.slot[s].midgartrainflags &= ~(1<<3);}
-ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<3);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<3);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    }
 }
 
 void MainWindow::on_cb_midgartrain_5_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].midgartrainflags |= (1<<4);}
-else{ff7.slot[s].midgartrainflags &= ~(1<<4);}
-ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<4);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<4);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    }
 }
 
 void MainWindow::on_cb_midgartrain_6_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].midgartrainflags |= (1<<5);}
-else{ff7.slot[s].midgartrainflags &= ~(1<<5);}
-ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<5);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<5);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    }
 }
 
 void MainWindow::on_cb_midgartrain_7_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].midgartrainflags |= (1<<6);}
-else{ff7.slot[s].midgartrainflags &= ~(1<<6);}
-ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<6);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<6);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    }
 }
 
 void MainWindow::on_cb_midgartrain_8_toggled(bool checked)
 {
-if(!load)
-{
-if(checked){ff7.slot[s].midgartrainflags |= (1<<7);}
-else{ff7.slot[s].midgartrainflags &= ~(1<<7);}
-ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}
+    if(!load)
+    {
+        if(checked){ff7.slot[s].midgartrainflags |= (1<<7);}
+        else{ff7.slot[s].midgartrainflags &= ~(1<<7);}
+        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+    }
 }
 
 void MainWindow::on_sb_timer_time_hour_valueChanged(int value)
 {
-if(!load){ff7.slot[s].timer[0] = value;}
+    if(!load){ff7.slot[s].timer[0] = value;}
 }
 
 void MainWindow::on_sb_timer_time_min_valueChanged(int value)
 {
-if(!load){ff7.slot[s].timer[1] = value;}
+    if(!load){ff7.slot[s].timer[1] = value;}
 }
 
 void MainWindow::on_sb_timer_time_sec_valueChanged(int value)
 {
-if(!load){ff7.slot[s].timer[2] = value;}
+    if(!load){ff7.slot[s].timer[2] = value;}
 }
 
 void MainWindow::on_cb_tut_sub_stateChanged(int value)
 {
-if(!load)
-{
-if (value == 0){ff7.slot[s].tut_sub =0x00;}
-else if(value ==1){ff7.slot[s].tut_sub =0x2B;}
-else if(value ==2){ff7.slot[s].tut_sub=0x2F;}
-testdata_refresh();
-}
+    if(!load)
+    {
+        if (value == 0){ff7.slot[s].tut_sub =0x00;}
+        else if(value ==1){ff7.slot[s].tut_sub =0x2B;}
+        else if(value ==2){ff7.slot[s].tut_sub=0x2F;}
+        testdata_refresh();
+    }
 }
 
 void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
 {
-if(!load)
-{
-if (value == 0){ff7.slot[s].tut_save =0x00;}
-else if(value ==1){ff7.slot[s].tut_save =0x32;}
-else if(value ==2){ff7.slot[s].tut_save=0x3A;}
-testdata_refresh();
-}
+    if(!load)
+    {
+        if (value == 0){ff7.slot[s].tut_save =0x00;}
+        else if(value ==1){ff7.slot[s].tut_save =0x32;}
+        else if(value ==2){ff7.slot[s].tut_save=0x3A;}
+        testdata_refresh();
+    }
 }
 
 void MainWindow::on_actionMake_Default_triggered()
