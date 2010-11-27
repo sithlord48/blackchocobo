@@ -1656,8 +1656,8 @@ void MainWindow::guirefresh(void)
             errbox.setInformativeText(tr("Curent Slot") + "::" + ff7.SG_Region_String[s]);
             QPushButton *prev = errbox.addButton(tr("Pr&evious Slot"),QMessageBox::ActionRole); prev->setIcon(QIcon(":icon/prev"));
             QPushButton *ingore = errbox.addButton(tr("View &Anyway"),QMessageBox::ActionRole); ingore->setIcon(QIcon(":icon/quit"));
+            QPushButton *export_psx = errbox.addButton(tr("Export via psx"),QMessageBox::ActionRole); export_psx->setIcon(QIcon(":icon/psxmc"));
             QPushButton *next = errbox.addButton("    "+tr("Ne&xt Slot"),QMessageBox::ActionRole);next->setIcon(QIcon(":icon/next"));next->setLayoutDirection(Qt::RightToLeft);
-
             errbox.exec();
             if(errbox.clickedButton() ==next)
             {
@@ -1671,6 +1671,41 @@ void MainWindow::guirefresh(void)
             }
             else if(errbox.clickedButton() == ingore)
             {QMessageBox::information(this,tr("Ingoring Non FF7 Save"),tr("Be Cautious This Might Not Work."));}
+
+            else if(errbox.clickedButton() == export_psx)
+            {
+                QString fileName = QFileDialog::getSaveFileName(this,
+                tr("Save Raw PSX File"), ff7.SG_Region_String[s],
+                tr("All Files(*)"));
+                if(fileName ==""){return;}
+
+                if(ff7.SG_TYPE != "PSX")
+                {
+                    ui->combo_control->setCurrentIndex(0);
+                }
+                ff7.SG_SIZE          = FF7_PSX_SAVE_GAME_SIZE;
+                ff7.SG_HEADER        = FF7_PSX_SAVE_GAME_HEADER;
+                ff7.SG_FOOTER        = FF7_PSX_SAVE_GAME_FOOTER;
+                ff7.SG_DATA_SIZE     = FF7_PSX_SAVE_GAME_DATA_SIZE;
+                ff7.SG_SLOT_HEADER   = FF7_PSX_SAVE_GAME_SLOT_HEADER;
+                ff7.SG_SLOT_FOOTER   = FF7_PSX_SAVE_GAME_SLOT_FOOTER;
+                ff7.SG_SLOT_SIZE     = FF7_PSX_SAVE_GAME_SLOT_SIZE;
+                ff7.SG_SLOT_NUMBER   = FF7_PSX_SAVE_GAME_SLOT_NUMBER;
+                ff7.SG_TYPE          = "PSX";
+                ff7.file_headerp     = ff7.file_header_psx;           //pointer to psx file header
+                ff7.file_footerp     = ff7.file_footer_psx;           //pointer to psx file footer
+
+                /*~~~~~~~ SHORT SAVE - SITHLORD48 ~~~~~~~~~*/
+                FILE *pfile; // this section is starting to work correctly!
+                pfile = fopen(fileName.toAscii(),"wb");
+                fwrite(ff7.hf[s].sl_header,ff7.SG_SLOT_HEADER,1,pfile); // Write Header.
+                fwrite(&ff7.slot[s],ff7.SG_DATA_SIZE,1,pfile);
+                fwrite(ff7.hf[s].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
+                fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
+                fclose(pfile);
+                QMessageBox::information(this,tr("Save Successfully"),tr("File Saved Sucessfully, Going Back To The Selection Dialog"));
+                guirefresh();
+            }
          }
     }
 /*~~~~ END Type Check~~~~*/
