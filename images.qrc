@@ -102,5 +102,6 @@
         <file alias="14_unsel">icon/14_unsel.png</file>
         <file alias="15_sel">icon/15.png</file>
         <file alias="15_unsel">icon/15_unsel.png</file>
+        <file alias="new_plus">icon/new_plus.png</file>
     </qresource>
 </RCC>

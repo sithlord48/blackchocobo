@@ -82,7 +82,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>8</number>
+     <number>0</number>
     </property>
     <property name="usesScrollButtons">
      <bool>true</bool>
@@ -2765,8 +2765,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>423</width>
-         <height>414</height>
+         <width>94</width>
+         <height>24</height>
         </rect>
        </property>
        <attribute name="label">
@@ -15921,10 +15921,12 @@
      <addaction name="action_Region_JPN"/>
      <addaction name="action_Region_JPN_International"/>
     </widget>
+    <addaction name="actionNew_Game"/>
+    <addaction name="actionNew_Game_Plus"/>
+    <addaction name="separator"/>
     <addaction name="actionCopy_Slot"/>
     <addaction name="actionPaste_Slot"/>
     <addaction name="separator"/>
-    <addaction name="actionMake_Default"/>
     <addaction name="actionClear_Slot"/>
     <addaction name="separator"/>
     <addaction name="menuRegion"/>
@@ -16526,7 +16528,7 @@
     <string>Export MC File</string>
    </property>
   </action>
-  <action name="actionMake_Default">
+  <action name="actionNew_Game">
    <property name="enabled">
     <bool>true</bool>
    </property>
@@ -16535,10 +16537,25 @@
      <normaloff>:/icon/def_save</normaloff>:/icon/def_save</iconset>
    </property>
    <property name="text">
-    <string>Make &quot;Default&quot; Save</string>
+    <string>New Game</string>
    </property>
    <property name="shortcut">
     <string>Alt+Ins</string>
+   </property>
+  </action>
+  <action name="actionNew_Game_Plus">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/new_plus</normaloff>:/icon/new_plus</iconset>
+   </property>
+   <property name="text">
+    <string>New Game+ </string>
+   </property>
+   <property name="shortcut">
+    <string>Alt+Shift+Ins</string>
    </property>
   </action>
  </widget>
