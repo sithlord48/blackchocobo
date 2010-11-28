@@ -1716,6 +1716,9 @@ void MainWindow::guirefresh(void)
     ui->sb_bm_progress3->setValue(ff7.slot[s].bm_progress3);
     ui->sb_mprogress->setValue(ff7.slot[s].mprogress);
 
+    ui->cb_bombing_int->setChecked(Qt::Unchecked);
+    if(ff7.slot[s].intbombing == 0x14){ui->cb_bombing_int->setChecked(Qt::Checked);}
+
     /*~~~~~Set Menu Items~~~~~~~~~~~~~~*/
     ui->actionSlot_01->setChecked(0);
     ui->actionSlot_01->setIcon(QIcon(":icon/1_unsel"));
@@ -4508,6 +4511,15 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_bm_progress1->setValue(0);
         ui->sb_bm_progress2->setValue(0);
         ui->sb_bm_progress3->setValue(0);
+        ui->cb_bombing_int->setChecked(1);
+        ui->cb_midgartrain_1->setChecked(0);
+        ui->cb_midgartrain_2->setChecked(0);
+        ui->cb_midgartrain_3->setChecked(0);
+        ui->cb_midgartrain_4->setChecked(0);
+        ui->cb_midgartrain_5->setChecked(0);
+        ui->cb_midgartrain_6->setChecked(0);
+        ui->cb_midgartrain_7->setChecked(0);
+        ui->cb_midgartrain_8->setChecked(0);
         ui->line_location->setText("Platform");
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(116);
@@ -4524,6 +4536,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_bm_progress1->setValue(120);
         ui->sb_bm_progress2->setValue(198);
         ui->sb_bm_progress3->setValue(3);
+        ui->cb_bombing_int->setChecked(0);
         ui->line_location->setText("Kalm Inn");
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(332);
@@ -4596,6 +4609,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_bm_progress1->setValue(120);
         ui->sb_bm_progress2->setValue(198);
         ui->sb_bm_progress3->setValue(3);
+        ui->cb_bombing_int->setChecked(0);
         ui->line_location->setText("Ropeway Station");
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(496);
@@ -4612,6 +4626,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_bm_progress1->setValue(120);
         ui->sb_bm_progress2->setValue(198);
         ui->sb_bm_progress3->setValue(3);
+        ui->cb_bombing_int->setChecked(0);
         ui->line_location->setText("Forgotten City");
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(646);
@@ -5407,3 +5422,8 @@ void MainWindow::on_actionMake_Default_triggered()
     guirefresh();
 }
 
+void MainWindow::on_cb_bombing_int_stateChanged(int checked)
+{
+    if(checked == Qt::Checked){ff7.slot[s].intbombing = 0x14;}
+    else{ff7.slot[s].intbombing =0x56;}
+}

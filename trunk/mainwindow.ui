@@ -82,7 +82,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>8</number>
     </property>
     <property name="usesScrollButtons">
      <bool>true</bool>
@@ -2765,8 +2765,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>94</width>
-         <height>24</height>
+         <width>423</width>
+         <height>414</height>
         </rect>
        </property>
        <attribute name="label">
@@ -11903,7 +11903,7 @@
       <property name="geometry">
        <rect>
         <x>5</x>
-        <y>245</y>
+        <y>300</y>
         <width>711</width>
         <height>101</height>
        </rect>
@@ -11918,8 +11918,8 @@
      <widget class="QLCDNumber" name="lcdNumber_5">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>372</y>
+        <x>420</x>
+        <y>260</y>
         <width>301</width>
         <height>31</height>
        </rect>
@@ -15726,6 +15726,19 @@
         </layout>
        </item>
       </layout>
+     </widget>
+     <widget class="QCheckBox" name="cb_bombing_int">
+      <property name="geometry">
+       <rect>
+        <x>315</x>
+        <y>380</y>
+        <width>186</width>
+        <height>19</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string> Bombing Mission Start Flag</string>
+      </property>
      </widget>
     </widget>
    </widget>

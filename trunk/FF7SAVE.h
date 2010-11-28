@@ -403,24 +403,26 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint16 coster_1;           // [0x0E39] Coster 1st place
     quint8 z_27[105];           // [0x0E3C] UNKNOWN DATA
     qint8 disc;                 // [0x0EA4] Current CD
-    quint8 z_28[31];            // [0x0EA5] UNKNOWN DATA
+    quint8 z_28[1];             // [0x0EA5] UNKNOWN DATA
+    quint8 intbombing;          // [0x0EA6] 0x14 On Start of Bombing Mission , 0x56 On first Save..
+    quint8 z_29[29];            // [0x0EA7] UNKNOWN DATA
     quint8 chocobonames[6][6];  // [0x0EC4] <-OK Chocobo names
     quint16 chocostaminas[6];   // [0x0EE8] Chocobo staminas 12 bytes
     quint8 reg_vinny;           // [0x0EF4] 0xFF for true 0xFB false (vincent a regualar?)
-    quint8 z_29[52];            // [0x0EF5] UNKNOWN DATA
+    quint8 z_30[52];            // [0x0EF5] UNKNOWN DATA
     quint8 tut_save;            // [0x0F29] Have we seen save tut ? 0x3A true , 0x32 false
-    quint8 z_30[346];           // [0x0F2A] UNKNOWN DATA
+    quint8 z_31[346];           // [0x0F2A] UNKNOWN DATA
     FF7CHOCOBO choco56[2];      // [0x1084] Chocobo slots 5-6
     quint16 phsmask;            // [0x10A4] who is allowed in the phs
     quint16 unlockedchars;      // [0x10A6] who is visible in the phs
-    quint8 z_31[48];            // [0x10A8] UNKNOWN DATA
+    quint8 z_32[48];            // [0x10A8] UNKNOWN DATA
     quint8 battlespeed;         // [0x10D8] Battle Speed
     quint8 battlemspeed;        // [0x10D9] Battle Message Speed
     quint8 options1;            // [0x10DA] Options 1
     quint8 options2;            // [0x10DB] Options 2
-    quint8 z_32[16];            // [0x10DC] UNKNOWN DATA (controller mapping?)
+    quint8 z_33[16];            // [0x10DC] UNKNOWN DATA (controller mapping?)
     quint8 fieldmspeed;         // [0x10EC] Message Speed On field
-    quint8 z_33[7];             // [0x10ED] UNKNOWN DATA
+    quint8 z_34[7];             // [0x10ED] UNKNOWN DATA
 }__attribute__((__packed__));
 /* FF7HEADFOOT FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
     struct FF7HEADFOOT {
