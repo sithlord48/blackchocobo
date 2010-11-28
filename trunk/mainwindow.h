@@ -43,8 +43,9 @@ public slots:
 private slots:
 
     //test functions to be removed....
+    void on_actionNew_Game_Plus_triggered();
     void on_cb_bombing_int_stateChanged(int );
-    void on_actionMake_Default_triggered();
+    void on_actionNew_Game_triggered();
     void on_actionExport_MC_triggered();
     void on_cb_tut_worldsave_stateChanged(int );
     void on_cb_tut_sub_stateChanged(int );

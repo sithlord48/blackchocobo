@@ -771,6 +771,27 @@ void MainWindow::saveFileFull(const QString &fileName)
     fix_sum(fileName);
 }
 /*~~~~~~~~END SHORT SAVE~~~~~~~~~~~*/
+/*~~~~~~~~~~~~~~~New_Game~~~~~~~~~~~*/
+void MainWindow::on_actionNew_Game_triggered()
+{
+            QFile file(settings.value("default_save_file").toString());
+            if(!file.open(QFile::ReadOnly))
+            {
+                QMessageBox::warning(this, tr("Black Chocobo"),
+                tr("Cannot read file %1:\n%2., Be Sure its is a PSX Save")
+                .arg(settings.value("default_save_file").toString()).arg(file.errorString()));
+                return;
+            }
+        QByteArray ff7file;
+        ff7file = file.readAll(); //put all data in temp raw file
+        QByteArray temp; // create a temp to be used when needed
+        int index = 0x200;
+        temp = ff7file.mid(index,0x10f4);
+        memcpy(&ff7.slot[s],temp,0x10f4);
+    if(ff7.SG_Region_String[s] == ""){ff7.SG_Region_String[s] = "BASLUS-94163FF7-S01";}
+    guirefresh();
+}
+/*~~~~~~~~~~End New_Game~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~EXPORT PC~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionExport_PC_Save_activated()
 {
@@ -1751,6 +1772,7 @@ void MainWindow::guirefresh(void)
     ui->actionSlot_15->setChecked(0);
     ui->actionSlot_15->setIcon(QIcon(":icon/15_unsel"));
     ui->menuRegion->setEnabled(0);
+    ui->actionNew_Game_Plus->setEnabled(0);
     switch(s)
     {
         case 0:ui->actionSlot_01->setChecked(1);ui->actionSlot_01->setIcon(QIcon(":icon/1_sel"));break;
@@ -1777,6 +1799,7 @@ void MainWindow::guirefresh(void)
         ui->actionExport_MC->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(1);
         ui->actionFrom_PSX_Slot->setEnabled(1);
+        ui->actionNew_Game_Plus->setEnabled(1);
         ui->actionClear_Slot->setEnabled(1);
         ui->actionPaste_Slot->setEnabled(1);
         ui->actionCopy_Slot->setEnabled(1);
@@ -1808,6 +1831,7 @@ void MainWindow::guirefresh(void)
         ui->actionExport_MC->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(1);
         ui->actionFrom_PSX_Slot->setEnabled(1);
+        ui->actionNew_Game_Plus->setEnabled(1);
         ui->actionClear_Slot->setEnabled(0);
         ui->actionPaste_Slot->setEnabled(1);
         ui->actionCopy_Slot->setEnabled(1);
@@ -1838,6 +1862,7 @@ void MainWindow::guirefresh(void)
         ui->actionExport_MC->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(1);
         ui->actionFrom_PSX_Slot->setEnabled(1);
+        ui->actionNew_Game_Plus->setEnabled(1);
         ui->actionClear_Slot->setEnabled(1);
         ui->actionPaste_Slot->setEnabled(1);
         ui->actionCopy_Slot->setEnabled(1);
@@ -1868,6 +1893,7 @@ void MainWindow::guirefresh(void)
         ui->actionExport_MC->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(0);
         ui->actionFrom_PSX_Slot->setEnabled(0);
+        ui->actionNew_Game_Plus->setEnabled(0);
         ui->actionClear_Slot->setEnabled(0);
         ui->actionPaste_Slot->setEnabled(0); // read only no point
         ui->actionCopy_Slot->setEnabled(1);
@@ -1898,6 +1924,7 @@ void MainWindow::guirefresh(void)
         ui->actionExport_MC->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(1);
         ui->actionFrom_PSX_Slot->setEnabled(1);
+        ui->actionNew_Game_Plus->setEnabled(1);
         ui->actionClear_Slot->setEnabled(1);
         ui->actionPaste_Slot->setEnabled(1);
         ui->actionCopy_Slot->setEnabled(1);
@@ -1997,6 +2024,7 @@ void MainWindow::guirefresh(void)
     else{ui->combo_magic_order->setCurrentIndex(0);}
     if((ff7.slot[s].options2)&(1<<6)){ui->cb_battle_help->setCheckState(Qt::Checked);}
     else{ui->cb_battle_help->setCheckState(Qt::Unchecked);}
+/*~~~~~End Options Loading~~~~~*/
     ui->sb_curdisc->setValue(ff7.slot[s].disc);
     if(ui->action_show_test_data->isChecked())
     {
@@ -5402,28 +5430,54 @@ void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
     }
 }
 
-void MainWindow::on_actionMake_Default_triggered()
-{
-            QFile file(settings.value("default_save_file").toString());
-            if(!file.open(QFile::ReadOnly))
-            {
-                QMessageBox::warning(this, tr("Black Chocobo"),
-                tr("Cannot read file %1:\n%2., Be Sure its is a PSX Save")
-                .arg(settings.value("default_save_file").toString()).arg(file.errorString()));
-                return;
-            }
-        QByteArray ff7file;
-        ff7file = file.readAll(); //put all data in temp raw file
-        QByteArray temp; // create a temp to be used when needed
-        int index = 0x200;
-        temp = ff7file.mid(index,0x10f4);
-        memcpy(&ff7.slot[s],temp,0x10f4);
-    if(ff7.SG_Region_String[s] == ""){ff7.SG_Region_String[s] = "BASLUS-94163FF7-S01";}
-    guirefresh();
-}
+
 
 void MainWindow::on_cb_bombing_int_stateChanged(int checked)
 {
     if(checked == Qt::Checked){ff7.slot[s].intbombing = 0x14;}
     else{ff7.slot[s].intbombing =0x56;}
+}
+
+void MainWindow::on_actionNew_Game_Plus_triggered()
+{
+    QFile file(settings.value("default_save_file").toString());
+    if(!file.open(QFile::ReadOnly))
+    {
+        QMessageBox::warning(this, tr("Black Chocobo"),
+        tr("Cannot read file %1:\n%2., Be Sure its is a PSX Save")
+        .arg(settings.value("default_save_file").toString()).arg(file.errorString()));
+        return;
+    }
+    QByteArray ff7file;
+    ff7file = file.readAll(); //put all data in temp raw file
+    QByteArray temp; // create a temp to be used when needed
+    int index = 0x200;
+    temp = ff7file.mid(index,0x10f4);
+
+    memcpy(&bufferslot,temp,0x10f4);
+    buffer_region = ff7.SG_Region_String[s];
+    ui->line_location->setText("Platform");
+    memcpy(&bufferslot.desc,&ff7.slot[s].desc,0x44);
+    memcpy(&bufferslot.colors,&ff7.slot[s].colors,12);
+    for(int i=0;i<9;i++){memcpy(&bufferslot.chars[i],&ff7.slot[s].chars[i],0x84);}
+    memcpy(&bufferslot.items,ff7.slot[s].items,640);
+    memcpy(&bufferslot.materias,ff7.slot[s].materias,800);
+    bufferslot.gil = ff7.slot[s].gil;
+    bufferslot.battles = ff7.slot[s].battles;
+    bufferslot.runs = ff7.slot[s].runs;
+    bufferslot.gp = ff7.slot[s].gp;
+    bufferslot.stables = ff7.slot[s].stables;
+    bufferslot.stablesoccupied = ff7.slot[s].stablesoccupied;
+    for(int i=0;i<4;i++){memcpy(&bufferslot.chocobos[i],&ff7.slot[s].chocobos[i],0x10);}
+    memcpy(&bufferslot.chocobonames,&ff7.slot[s].chocobonames,36);
+    memcpy(&bufferslot.chocostaminas,&ff7.slot[s].chocostaminas,12);
+    for(int i=0;i<2;i++){memcpy(&bufferslot.choco56,&ff7.slot[s].choco56,0x10);}
+    bufferslot.battlespeed =ff7.slot[s].battlespeed;
+    bufferslot.battlemspeed =ff7.slot[s].battlemspeed;
+    bufferslot.options1 = ff7.slot[s].options1;
+    bufferslot.options2 = ff7.slot[s].options2;
+    memcpy(&bufferslot.controller_map,&ff7.slot[s].controller_map,16);
+    bufferslot.fieldmspeed = ff7.slot[s].fieldmspeed;
+    memcpy(&ff7.slot[s],&bufferslot,0x10fd);
+    guirefresh();
 }

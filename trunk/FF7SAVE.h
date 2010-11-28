@@ -420,9 +420,9 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 battlemspeed;        // [0x10D9] Battle Message Speed
     quint8 options1;            // [0x10DA] Options 1
     quint8 options2;            // [0x10DB] Options 2
-    quint8 z_33[16];            // [0x10DC] UNKNOWN DATA (controller mapping?)
+    quint8 controller_map[16];  // [0x10DC] controller mapping?
     quint8 fieldmspeed;         // [0x10EC] Message Speed On field
-    quint8 z_34[7];             // [0x10ED] UNKNOWN DATA
+    quint8 z_33[7];             // [0x10ED] UNKNOWN DATA
 }__attribute__((__packed__));
 /* FF7HEADFOOT FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
     struct FF7HEADFOOT {
