@@ -1490,14 +1490,6 @@
         <translation type="obsolete">Montrer Donnée Test</translation>
     </message>
     <message>
-        <source>Usa</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>Jpn</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>English</source>
         <translation>Anglais</translation>
     </message>
@@ -1795,11 +1787,11 @@
     </message>
     <message>
         <source>H&amp;elp</source>
-        <translation>Aid&amp;e</translation>
+        <translation type="obsolete">Aid&amp;e</translation>
     </message>
     <message>
         <source>S&amp;lot</source>
-        <translation>S&amp;lot</translation>
+        <translation type="obsolete">S&amp;lot</translation>
     </message>
     <message>
         <source>&amp;Options</source>
@@ -1831,7 +1823,7 @@
     </message>
     <message>
         <source>Paste Slot Here</source>
-        <translation>Coller Slot Ici</translation>
+        <translation type="obsolete">Coller Slot Ici</translation>
     </message>
     <message>
         <source>Alt+V</source>
@@ -2848,22 +2840,6 @@ n&apos;est pas une sauvegarde de FF7.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Pal_Generic</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Pal_German</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Pal_Spanish</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Jpn_International</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will trigger showing that tutorial</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2881,10 +2857,6 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Debug Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set Directories</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2948,12 +2920,116 @@ n&apos;est pas une sauvegarde de FF7.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Make &quot;Default&quot; Save Here</source>
+        <source>Cannot read file %1:
+%2., Be Sure its is a PSX Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot read file %1:
-%2., Be Sure its is a PSX Save</source>
+        <source> Bombing Mission Start Flag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hel&amp;p</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vie&amp;w</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Edit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paste Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>More Options...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New Game</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alt+Ins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New Game+ </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alt+Shift+Ins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Non-FF7 Slot Detected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please Select An Action To Continue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Curent Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pr&amp;evious Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>View &amp;Anyway</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export via psx</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ne&amp;xt Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your At Slot 15</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sorry There is no Next Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your At Slot 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sorry There is no Previous Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ingoring Non FF7 Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Be Cautious This Might Not Work.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Raw PSX File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All Files(*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Successfully</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File Saved Sucessfully, Going Back To The Selection Dialog</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3017,6 +3093,10 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ok</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3467,7 +3547,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Ok</source>
-        <translation type="obsolete">&amp;Ok</translation>
+        <translation type="unfinished">&amp;Ok</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -3556,7 +3636,7 @@ p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;<byte value="x9"/>&lt;/span&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; text-decoration: underline; color:#508ed8;&quot;&gt;Black Chocobo&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt; Is A Save Game Editor For FF7. (PC + PSX)&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;<byte value="x9"/>   Written By: sithlord48 using Qt&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;                                                                  <byte value="x9"/>             Version :: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;1.6&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;                                                                  <byte value="x9"/>             Version :: &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;1.6.x&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;This program is free software: you can redistribute it and/or modify&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;it under the terms of the GNU General Public License as published by&lt;/span&gt;&lt;/p&gt;
