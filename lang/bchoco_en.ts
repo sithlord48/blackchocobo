@@ -2736,6 +2736,31 @@ isn&apos;t a FF7 SaveGame.</source>
         <source>File Saved Sucessfully, Going Back To The Selection Dialog</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Export Current Character</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import Current Character</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select FF7 Character Stat File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7 Character Stat File(*.ff7char)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>%1:
+%2 is Not a FF7 Character Stat File.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save FF7 Character File</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
