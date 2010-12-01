@@ -15829,6 +15829,8 @@
      <addaction name="actionExport_PC_Save"/>
      <addaction name="actionExport_PSX"/>
      <addaction name="actionExport_MC"/>
+     <addaction name="separator"/>
+     <addaction name="actionCurrent_Char_to_File"/>
     </widget>
     <widget class="QMenu" name="menuImport">
      <property name="enabled">
@@ -15843,6 +15845,8 @@
      </property>
      <addaction name="actionFrom_PSX_Slot"/>
      <addaction name="actionFrom_PSV_Slot"/>
+     <addaction name="separator"/>
+     <addaction name="actionFile_To_Current_Char"/>
     </widget>
     <addaction name="actionOpen_Save_File"/>
     <addaction name="actionSave_File"/>
@@ -16556,6 +16560,22 @@
    </property>
    <property name="shortcut">
     <string>Alt+Shift+Ins</string>
+   </property>
+  </action>
+  <action name="actionCurrent_Char_to_File">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Export Current Character</string>
+   </property>
+  </action>
+  <action name="actionFile_To_Current_Char">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>Import Current Character</string>
    </property>
   </action>
  </widget>

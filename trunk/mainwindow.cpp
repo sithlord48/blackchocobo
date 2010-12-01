@@ -30,7 +30,7 @@ extern int s; //keeps track of our slot globally
 FF7SLOT bufferslot; // a buffer slot to keep copied slots in
 QString buffer_region; //keep track of the region of any copied slots.
 char chFF7[256];  // char arrary for converting to ff7 chars , so far not used.
-int curchar; //keeps track of current character displayed
+int curchar =0; //keeps track of current character displayed
 int mslotsel = 0; //keeps track of materia slot on char selected
 QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
 
@@ -51,10 +51,9 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     for (int i=256;i<288;i++){ui->combo_armor->addItem(QIcon(Items[i].image),Items[i].name);}// set up the combo boxes
     for (int i=288;i<320;i++){ui->combo_acc->addItem(QIcon(Items[i].image),Items[i].name);}
     for (int i=0;i<320;i++){ui->combo_additem->addItem(QIcon(Items[i].image),Items[i].name);}
+
     for (int i=0;i<0x5b;i++){ui->combo_add_mat->addItem(QIcon(Materias[i].image),Materias[i].name);}
-
     for (int i=0;i<0x5b;i++){if(Materias[i].name !="DON'T USE"){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),Materias[i].name);}}
-
     for (int i=0;i<0x5b;i++){ui->combo_add_mat_slot->addItem(QIcon(Materias[i].image),Materias[i].name);}
 
     //set up tables..
@@ -365,6 +364,49 @@ void MainWindow::on_actionFrom_PSV_Slot_activated()
        else {ff7.SG_Region_String[s] ="";}
         }//Parse slot data....
     guirefresh();
+}
+void MainWindow::on_actionFile_To_Current_Char_triggered()
+{
+    QString fileName = QFileDialog::getOpenFileName(this,
+    tr("Select FF7 Character Stat File"),(""),tr("FF7 Character Stat File(*.ff7char)"));
+    if (fileName == ""){return;}
+    if (!fileName.isEmpty())
+        {
+            QFile file(fileName);
+            if(!file.open(QFile::ReadOnly))
+            {
+                QMessageBox::warning(this, tr("Black Chocobo"),
+                tr("Cannot read file %1:\n%2.")
+                .arg(fileName).arg(file.errorString()));
+                return;
+            }
+            if(file.size() !=0x84)
+            {
+                QMessageBox::warning(this, tr("Black Chocobo"),
+                tr("%1:\n%2 is Not a FF7 Character Stat File.")
+                .arg(fileName).arg(file.errorString()));
+                return;
+
+            }
+            QByteArray ff7file;
+            ff7file = file.readAll();
+            memcpy(&ff7.slot[s].chars[curchar],ff7file,132);
+        }
+guirefresh();
+}
+
+void MainWindow::on_actionCurrent_Char_to_File_triggered()
+{
+    QString fileName = QFileDialog::getSaveFileName(this,
+    tr("Save FF7 Character File"), settings.value("load_path").toString(),
+    tr("FF7 Character Stat File(*.ff7char)"));
+    if (!fileName.isEmpty())
+    {
+        FILE *pfile;
+        pfile = fopen(fileName.toAscii(),"wb");
+        fwrite(&ff7.slot[s].chars[curchar],132,1,pfile);
+        fclose(pfile);
+    }
 }
 
 void MainWindow::on_actionSave_File_activated()
@@ -1741,6 +1783,8 @@ void MainWindow::guirefresh(void)
     if(ff7.slot[s].intbombing == 0x14){ui->cb_bombing_int->setChecked(Qt::Checked);}
 
     /*~~~~~Set Menu Items~~~~~~~~~~~~~~*/
+    ui->actionFile_To_Current_Char->setEnabled(0);
+    ui->actionCurrent_Char_to_File->setEnabled(0);
     ui->actionSlot_01->setChecked(0);
     ui->actionSlot_01->setIcon(QIcon(":icon/1_unsel"));
     ui->actionSlot_02->setChecked(0);
@@ -1793,6 +1837,9 @@ void MainWindow::guirefresh(void)
     }
     if (ff7.savetype ==1)//PC
     {
+
+        ui->actionFile_To_Current_Char->setEnabled(1);
+        ui->actionCurrent_Char_to_File->setEnabled(1);
         ui->actionSave_File->setEnabled(1);
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
@@ -1825,6 +1872,9 @@ void MainWindow::guirefresh(void)
     }
     else if (ff7.savetype == 2)//PSX
     {
+
+        ui->actionFile_To_Current_Char->setEnabled(1);
+        ui->actionCurrent_Char_to_File->setEnabled(1);
         ui->actionSave_File->setEnabled(1);
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
@@ -1856,6 +1906,9 @@ void MainWindow::guirefresh(void)
     }
     else if (ff7.savetype == 3)//mcr/mcd
     {
+
+        ui->actionFile_To_Current_Char->setEnabled(1);
+        ui->actionCurrent_Char_to_File->setEnabled(1);
         ui->actionSave_File->setEnabled(1);
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
@@ -1887,6 +1940,9 @@ void MainWindow::guirefresh(void)
     }
     else if (ff7.savetype ==4)//PSV
     {
+
+        ui->actionFile_To_Current_Char->setEnabled(1);
+        ui->actionCurrent_Char_to_File->setEnabled(1);
         ui->actionSave_File->setEnabled(0); // read only
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
@@ -1918,6 +1974,9 @@ void MainWindow::guirefresh(void)
     }
     else if (ff7.savetype ==5)//PSP
     {
+
+        ui->actionFile_To_Current_Char->setEnabled(1);
+        ui->actionCurrent_Char_to_File->setEnabled(1);
         ui->actionSave_File->setEnabled(1);
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
@@ -1949,6 +2008,9 @@ void MainWindow::guirefresh(void)
     }
     else
     {
+
+        ui->actionFile_To_Current_Char->setEnabled(1);
+        ui->actionCurrent_Char_to_File->setEnabled(1);
         ui->actionSave_File->setEnabled(0);
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
@@ -5459,7 +5521,11 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
     ui->line_location->setText("Platform");
     memcpy(&bufferslot.desc,&ff7.slot[s].desc,0x44);
     memcpy(&bufferslot.colors,&ff7.slot[s].colors,12);
-    for(int i=0;i<9;i++){memcpy(&bufferslot.chars[i],&ff7.slot[s].chars[i],0x84);}
+    for(int i=0;i<9;i++)
+    {
+        if((i==6)||(i==7)){/*Ingore Cait-sith/Vincent*/}
+        else{memcpy(&bufferslot.chars[i],&ff7.slot[s].chars[i],0x84);}
+    }
     memcpy(&bufferslot.items,ff7.slot[s].items,640);
     memcpy(&bufferslot.materias,ff7.slot[s].materias,800);
     bufferslot.gil = ff7.slot[s].gil;
@@ -5478,6 +5544,7 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
     bufferslot.options2 = ff7.slot[s].options2;
     memcpy(&bufferslot.controller_map,&ff7.slot[s].controller_map,16);
     bufferslot.fieldmspeed = ff7.slot[s].fieldmspeed;
-    memcpy(&ff7.slot[s],&bufferslot,0x10fd);
+    memcpy(&ff7.slot[s],&bufferslot,0x10f4);
     guirefresh();
 }
+
