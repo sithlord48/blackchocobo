@@ -5523,7 +5523,26 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
     memcpy(&bufferslot.colors,&ff7.slot[s].colors,12);
     for(int i=0;i<9;i++)
     {
-        if((i==6)||(i==7)){/*Ingore Cait-sith/Vincent*/}
+        if((i==6)||(i==7))
+        {
+            QString fileName;
+            if(i==6)
+                {
+                    fileName = settings.value("load_path").toString();
+                    fileName.append("/Cait-Sith");
+                }
+            else if(i==7)
+                {
+                    fileName = settings.value("load_path").toString();
+                    fileName.append("/Vincent");
+                }
+            fileName.append(".ff7char");
+            FILE *pfile;
+            pfile = fopen(fileName.toAscii(),"wb");
+            fwrite(&ff7.slot[s].chars[i],132,1,pfile);
+            fclose(pfile);
+            /*Ingore Cait-sith/Vincent*/
+        }
         else{memcpy(&bufferslot.chars[i],&ff7.slot[s].chars[i],0x84);}
     }
     memcpy(&bufferslot.items,ff7.slot[s].items,640);

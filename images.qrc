@@ -103,5 +103,7 @@
         <file alias="15_sel">icon/15.png</file>
         <file alias="15_unsel">icon/15_unsel.png</file>
         <file alias="new_plus">icon/new_plus.png</file>
+        <file alias="export_char">icon/export_char.png</file>
+        <file alias="import_char">icon/import_char.png</file>
     </qresource>
 </RCC>

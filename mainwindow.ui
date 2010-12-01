@@ -16566,6 +16566,10 @@
    <property name="enabled">
     <bool>false</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/import_char</normaloff>:/icon/import_char</iconset>
+   </property>
    <property name="text">
     <string>Export Current Character</string>
    </property>
@@ -16573,6 +16577,10 @@
   <action name="actionFile_To_Current_Char">
    <property name="enabled">
     <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/export_char</normaloff>:/icon/export_char</iconset>
    </property>
    <property name="text">
     <string>Import Current Character</string>
