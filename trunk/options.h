@@ -22,6 +22,7 @@ private:
     Ui::Options *ui;
 
 private slots:
+    void on_btn_set_char_stat_folder_clicked();
     void on_pushButton_clicked();
     void on_btn_set_default_save_clicked();
     void on_btn_set_export_pc_clicked();

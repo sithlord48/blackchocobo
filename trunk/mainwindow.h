@@ -43,8 +43,8 @@ public slots:
 private slots:
 
     //test functions to be removed....
-    void on_actionFile_To_Current_Char_triggered();
-    void on_actionCurrent_Char_to_File_triggered();
+    void on_actionImport_char_triggered();
+    void on_actionExport_char_triggered();
     void on_actionNew_Game_Plus_triggered();
     void on_cb_bombing_int_stateChanged(int );
     void on_actionNew_Game_triggered();
