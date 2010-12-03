@@ -33,6 +33,7 @@ char chFF7[256];  // char arrary for converting to ff7 chars , so far not used.
 int curchar =0; //keeps track of current character displayed
 int mslotsel = 0; //keeps track of materia slot on char selected
 QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
+QString filename;
 
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindow)
@@ -90,6 +91,9 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     }
    if(settings.value("default_save_file").isNull()){settings.setValue("default_save_file","save0");}
    // loadFileFull("save0"); //load the default save map..
+   if(settings.value("load_path").isNull()){settings.setValue("load_path",QDir::homePath());}
+   if(settings.value("char_stat_folder").isNull()){settings.setValue("char_stat_folder",settings.value("load_path"));}
+
    if(settings.value("lang").toString() == "en")
    {
        ui->action_Lang_en->setChecked(1);
@@ -299,6 +303,7 @@ void MainWindow::loadFileFull(const QString &fileName)
         for(int i=1;i<14;i++){clearslot(i);}
     }
     this->setWindowTitle(tr("Black Chocobo - ") + fileName); //eslava this is for you :)
+    filename = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
     guirefresh();
 }
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
@@ -365,10 +370,10 @@ void MainWindow::on_actionFrom_PSV_Slot_activated()
         }//Parse slot data....
     guirefresh();
 }
-void MainWindow::on_actionFile_To_Current_Char_triggered()
+void MainWindow::on_actionImport_char_triggered()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
-    tr("Select FF7 Character Stat File"),(""),tr("FF7 Character Stat File(*.ff7char)"));
+    tr("Select FF7 Character Stat File"),settings.value("char_stat_folder").toString(),tr("FF7 Character Stat File(*.char)"));
     if (fileName == ""){return;}
     if (!fileName.isEmpty())
         {
@@ -395,11 +400,11 @@ void MainWindow::on_actionFile_To_Current_Char_triggered()
 guirefresh();
 }
 
-void MainWindow::on_actionCurrent_Char_to_File_triggered()
+void MainWindow::on_actionExport_char_triggered()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
-    tr("Save FF7 Character File"), settings.value("load_path").toString(),
-    tr("FF7 Character Stat File(*.ff7char)"));
+    tr("Save FF7 Character File"), settings.value("char_stat_folder").toString(),
+    tr("FF7 Character Stat File(*.char)"));
     if (!fileName.isEmpty())
     {
         FILE *pfile;
@@ -1783,8 +1788,8 @@ void MainWindow::guirefresh(void)
     if(ff7.slot[s].intbombing == 0x14){ui->cb_bombing_int->setChecked(Qt::Checked);}
 
     /*~~~~~Set Menu Items~~~~~~~~~~~~~~*/
-    ui->actionFile_To_Current_Char->setEnabled(0);
-    ui->actionCurrent_Char_to_File->setEnabled(0);
+    ui->actionImport_char->setEnabled(0);
+    ui->actionExport_char->setEnabled(0);
     ui->actionSlot_01->setChecked(0);
     ui->actionSlot_01->setIcon(QIcon(":icon/1_unsel"));
     ui->actionSlot_02->setChecked(0);
@@ -1837,9 +1842,8 @@ void MainWindow::guirefresh(void)
     }
     if (ff7.savetype ==1)//PC
     {
-
-        ui->actionFile_To_Current_Char->setEnabled(1);
-        ui->actionCurrent_Char_to_File->setEnabled(1);
+        ui->actionImport_char->setEnabled(1);
+        ui->actionExport_char->setEnabled(1);
         ui->actionSave_File->setEnabled(1);
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
@@ -1872,9 +1876,8 @@ void MainWindow::guirefresh(void)
     }
     else if (ff7.savetype == 2)//PSX
     {
-
-        ui->actionFile_To_Current_Char->setEnabled(1);
-        ui->actionCurrent_Char_to_File->setEnabled(1);
+        ui->actionImport_char->setEnabled(1);
+        ui->actionExport_char->setEnabled(1);
         ui->actionSave_File->setEnabled(1);
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
@@ -1906,9 +1909,8 @@ void MainWindow::guirefresh(void)
     }
     else if (ff7.savetype == 3)//mcr/mcd
     {
-
-        ui->actionFile_To_Current_Char->setEnabled(1);
-        ui->actionCurrent_Char_to_File->setEnabled(1);
+        ui->actionImport_char->setEnabled(1);
+        ui->actionExport_char->setEnabled(1);
         ui->actionSave_File->setEnabled(1);
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
@@ -1940,9 +1942,8 @@ void MainWindow::guirefresh(void)
     }
     else if (ff7.savetype ==4)//PSV
     {
-
-        ui->actionFile_To_Current_Char->setEnabled(1);
-        ui->actionCurrent_Char_to_File->setEnabled(1);
+        ui->actionImport_char->setEnabled(1);
+        ui->actionExport_char->setEnabled(1);
         ui->actionSave_File->setEnabled(0); // read only
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
@@ -1974,9 +1975,8 @@ void MainWindow::guirefresh(void)
     }
     else if (ff7.savetype ==5)//PSP
     {
-
-        ui->actionFile_To_Current_Char->setEnabled(1);
-        ui->actionCurrent_Char_to_File->setEnabled(1);
+        ui->actionImport_char->setEnabled(1);
+        ui->actionExport_char->setEnabled(1);
         ui->actionSave_File->setEnabled(1);
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
@@ -2008,9 +2008,8 @@ void MainWindow::guirefresh(void)
     }
     else
     {
-
-        ui->actionFile_To_Current_Char->setEnabled(1);
-        ui->actionCurrent_Char_to_File->setEnabled(1);
+        ui->actionImport_char->setEnabled(1);
+        ui->actionExport_char->setEnabled(1);
         ui->actionSave_File->setEnabled(0);
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
@@ -5528,15 +5527,33 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
             QString fileName;
             if(i==6)
                 {
-                    fileName = settings.value("load_path").toString();
-                    fileName.append("/Cait-Sith");
+                    fileName = settings.value("char_stat_folder").toString();
+                    fileName.append("/");
+                    fileName.append(filename);
+                    fileName.append("-cait_sith");
+                    if(ff7.savetype == 1 || ff7.savetype == 3 || ff7.savetype ==5)
+                    {
+                        fileName.append("-");
+                        QString str;
+                        str.setNum(s,10);
+                        fileName.append(str);
+                    }
                 }
             else if(i==7)
                 {
-                    fileName = settings.value("load_path").toString();
-                    fileName.append("/Vincent");
+                    fileName = settings.value("char_stat_folder").toString();
+                    fileName.append("/");
+                    fileName.append(filename);
+                    fileName.append("-vincent");
+                    if(ff7.savetype == 1 || ff7.savetype == 3 || ff7.savetype ==5)
+                    {
+                        fileName.append("-");
+                        QString str;
+                        str.setNum(s,10);
+                        fileName.append(str);
+                    }
                 }
-            fileName.append(".ff7char");
+            fileName.append(".char");
             FILE *pfile;
             pfile = fopen(fileName.toAscii(),"wb");
             fwrite(&ff7.slot[s].chars[i],132,1,pfile);

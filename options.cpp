@@ -52,14 +52,18 @@ void Options::on_btn_set_export_pc_clicked()
     bchoco_settings.setValue("export_pc",temp);
 }
 
-
 void Options::on_btn_set_default_save_clicked()
 {
     QString temp = QFileDialog::getOpenFileName(this,tr("Select A Default Save Game (Must Be Raw PSX)"),bchoco_settings.value("default_save_file").toString());
     bchoco_settings.setValue("default_save_file",temp);
 }
 
-
+void Options::on_btn_set_char_stat_folder_clicked()
+{
+    QString temp = QFileDialog::getExistingDirectory(this,tr("Select A Location To Save Character Stat Files"),bchoco_settings.value("char_stat_folder").toString());
+    bchoco_settings.setValue("char_stat_folder",temp);
+}
+/*~~~~~~~~~~~~~~~~CLOSE BUTTON~~~~~~~~~~~~~~~~~~*/
 void Options::on_pushButton_clicked()
 {
     this->close();
