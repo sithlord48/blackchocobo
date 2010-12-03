@@ -15986,7 +15986,7 @@
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
+     <normaloff>:/icon/bchoco2</normaloff>:/icon/bchoco2</iconset>
    </property>
    <property name="text">
     <string>About Black Chocobo</string>

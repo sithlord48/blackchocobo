@@ -9,12 +9,16 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>577</width>
-    <height>386</height>
+    <width>575</width>
+    <height>384</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>About Black Chocobo</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="images.qrc">
+    <normaloff>:/icon/bchoco2</normaloff>:/icon/bchoco2</iconset>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -107,6 +111,8 @@ p, li { white-space: pre-wrap; }
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>
