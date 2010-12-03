@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>434</width>
+    <width>432</width>
     <height>322</height>
    </rect>
   </property>
@@ -14,8 +14,8 @@
    <string>Set Load And Save Paths.</string>
   </property>
   <property name="windowIcon">
-   <iconset>
-    <normaloff>:/icon/icon/bchoco.png</normaloff>:/icon/icon/bchoco.png</iconset>
+   <iconset resource="images.qrc">
+    <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>
@@ -354,6 +354,8 @@
    </item>
   </layout>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>

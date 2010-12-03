@@ -105,5 +105,6 @@
         <file alias="new_plus">icon/new_plus.png</file>
         <file alias="export_char">icon/export_char.png</file>
         <file alias="import_char">icon/import_char.png</file>
+        <file alias="bchoco2">icon/new_choco.png</file>
     </qresource>
 </RCC>
