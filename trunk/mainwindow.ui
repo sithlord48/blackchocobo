@@ -2765,8 +2765,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>94</width>
-         <height>24</height>
+         <width>423</width>
+         <height>414</height>
         </rect>
        </property>
        <attribute name="label">
@@ -6498,13 +6498,13 @@
             <widget class="QComboBox" name="cb_c1_type">
              <property name="minimumSize">
               <size>
-               <width>61</width>
+               <width>75</width>
                <height>24</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>61</width>
+               <width>75</width>
                <height>24</height>
               </size>
              </property>
@@ -6515,25 +6515,45 @@
               <property name="text">
                <string>Yellow</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/yellow_choco</normaloff>:/icon/yellow_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
                <string>Green</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/green_choco</normaloff>:/icon/green_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
-               <string>Blue</string>
+               <string>Red</string>
+              </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/red_choco</normaloff>:/icon/red_choco</iconset>
               </property>
              </item>
              <item>
               <property name="text">
                <string>Black</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/black_choco</normaloff>:/icon/black_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
                <string>Gold</string>
+              </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/gold_choco</normaloff>:/icon/gold_choco</iconset>
               </property>
              </item>
             </widget>
@@ -6990,13 +7010,13 @@
             <widget class="QComboBox" name="cb_c2_type">
              <property name="minimumSize">
               <size>
-               <width>61</width>
+               <width>75</width>
                <height>24</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>61</width>
+               <width>75</width>
                <height>24</height>
               </size>
              </property>
@@ -7007,25 +7027,45 @@
               <property name="text">
                <string>Yellow</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/yellow_choco</normaloff>:/icon/yellow_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
                <string>Green</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/green_choco</normaloff>:/icon/green_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
-               <string>Blue</string>
+               <string>Red</string>
+              </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/red_choco</normaloff>:/icon/red_choco</iconset>
               </property>
              </item>
              <item>
               <property name="text">
                <string>Black</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/black_choco</normaloff>:/icon/black_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
                <string>Gold</string>
+              </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/gold_choco</normaloff>:/icon/gold_choco</iconset>
               </property>
              </item>
             </widget>
@@ -7482,13 +7522,13 @@
             <widget class="QComboBox" name="cb_c3_type">
              <property name="minimumSize">
               <size>
-               <width>61</width>
+               <width>75</width>
                <height>24</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>61</width>
+               <width>75</width>
                <height>24</height>
               </size>
              </property>
@@ -7499,25 +7539,45 @@
               <property name="text">
                <string>Yellow</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/yellow_choco</normaloff>:/icon/yellow_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
                <string>Green</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/green_choco</normaloff>:/icon/green_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
-               <string>Blue</string>
+               <string>Red</string>
+              </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/red_choco</normaloff>:/icon/red_choco</iconset>
               </property>
              </item>
              <item>
               <property name="text">
                <string>Black</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/black_choco</normaloff>:/icon/black_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
                <string>Gold</string>
+              </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/gold_choco</normaloff>:/icon/gold_choco</iconset>
               </property>
              </item>
             </widget>
@@ -8263,13 +8323,13 @@
             <widget class="QComboBox" name="cb_c4_type">
              <property name="minimumSize">
               <size>
-               <width>61</width>
+               <width>75</width>
                <height>24</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>61</width>
+               <width>75</width>
                <height>24</height>
               </size>
              </property>
@@ -8280,25 +8340,45 @@
               <property name="text">
                <string>Yellow</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/yellow_choco</normaloff>:/icon/yellow_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
                <string>Green</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/green_choco</normaloff>:/icon/green_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
-               <string>Blue</string>
+               <string>Red</string>
+              </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/red_choco</normaloff>:/icon/red_choco</iconset>
               </property>
              </item>
              <item>
               <property name="text">
                <string>Black</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/black_choco</normaloff>:/icon/black_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
                <string>Gold</string>
+              </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/gold_choco</normaloff>:/icon/gold_choco</iconset>
               </property>
              </item>
             </widget>
@@ -8755,13 +8835,13 @@
             <widget class="QComboBox" name="cb_c5_type">
              <property name="minimumSize">
               <size>
-               <width>61</width>
+               <width>75</width>
                <height>24</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>61</width>
+               <width>75</width>
                <height>24</height>
               </size>
              </property>
@@ -8772,25 +8852,45 @@
               <property name="text">
                <string>Yellow</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/yellow_choco</normaloff>:/icon/yellow_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
                <string>Green</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/green_choco</normaloff>:/icon/green_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
-               <string>Blue</string>
+               <string>Red</string>
+              </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/red_choco</normaloff>:/icon/red_choco</iconset>
               </property>
              </item>
              <item>
               <property name="text">
                <string>Black</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/black_choco</normaloff>:/icon/black_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
                <string>Gold</string>
+              </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/gold_choco</normaloff>:/icon/gold_choco</iconset>
               </property>
              </item>
             </widget>
@@ -9247,13 +9347,13 @@
             <widget class="QComboBox" name="cb_c6_type">
              <property name="minimumSize">
               <size>
-               <width>61</width>
+               <width>75</width>
                <height>24</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>61</width>
+               <width>75</width>
                <height>24</height>
               </size>
              </property>
@@ -9264,25 +9364,45 @@
               <property name="text">
                <string>Yellow</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/yellow_choco</normaloff>:/icon/yellow_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
                <string>Green</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/green_choco</normaloff>:/icon/green_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
-               <string>Blue</string>
+               <string>Red</string>
+              </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/red_choco</normaloff>:/icon/red_choco</iconset>
               </property>
              </item>
              <item>
               <property name="text">
                <string>Black</string>
               </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/black_choco</normaloff>:/icon/black_choco</iconset>
+              </property>
              </item>
              <item>
               <property name="text">
                <string>Gold</string>
+              </property>
+              <property name="icon">
+               <iconset resource="images.qrc">
+                <normaloff>:/icon/gold_choco</normaloff>:/icon/gold_choco</iconset>
               </property>
              </item>
             </widget>
@@ -15986,7 +16106,7 @@
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/bchoco2</normaloff>:/icon/bchoco2</iconset>
+     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
    </property>
    <property name="text">
     <string>About Black Chocobo</string>

@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>575</width>
-    <height>384</height>
+    <width>573</width>
+    <height>382</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="images.qrc">
-    <normaloff>:/icon/bchoco2</normaloff>:/icon/bchoco2</iconset>
+    <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="modal">
    <bool>true</bool>
