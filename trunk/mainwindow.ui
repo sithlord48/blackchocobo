@@ -6531,11 +6531,11 @@
              </item>
              <item>
               <property name="text">
-               <string>Red</string>
+               <string>Blue</string>
               </property>
               <property name="icon">
                <iconset resource="images.qrc">
-                <normaloff>:/icon/red_choco</normaloff>:/icon/red_choco</iconset>
+                <normaloff>:/icon/blue_choco</normaloff>:/icon/blue_choco</iconset>
               </property>
              </item>
              <item>
@@ -7043,11 +7043,11 @@
              </item>
              <item>
               <property name="text">
-               <string>Red</string>
+               <string>Blue</string>
               </property>
               <property name="icon">
                <iconset resource="images.qrc">
-                <normaloff>:/icon/red_choco</normaloff>:/icon/red_choco</iconset>
+                <normaloff>:/icon/blue_choco</normaloff>:/icon/blue_choco</iconset>
               </property>
              </item>
              <item>
@@ -7555,11 +7555,11 @@
              </item>
              <item>
               <property name="text">
-               <string>Red</string>
+               <string>Blue</string>
               </property>
               <property name="icon">
                <iconset resource="images.qrc">
-                <normaloff>:/icon/red_choco</normaloff>:/icon/red_choco</iconset>
+                <normaloff>:/icon/blue_choco</normaloff>:/icon/blue_choco</iconset>
               </property>
              </item>
              <item>
@@ -8356,11 +8356,11 @@
              </item>
              <item>
               <property name="text">
-               <string>Red</string>
+               <string>Blue</string>
               </property>
               <property name="icon">
                <iconset resource="images.qrc">
-                <normaloff>:/icon/red_choco</normaloff>:/icon/red_choco</iconset>
+                <normaloff>:/icon/blue_choco</normaloff>:/icon/blue_choco</iconset>
               </property>
              </item>
              <item>
@@ -8868,11 +8868,11 @@
              </item>
              <item>
               <property name="text">
-               <string>Red</string>
+               <string>Blue</string>
               </property>
               <property name="icon">
                <iconset resource="images.qrc">
-                <normaloff>:/icon/red_choco</normaloff>:/icon/red_choco</iconset>
+                <normaloff>:/icon/blue_choco</normaloff>:/icon/blue_choco</iconset>
               </property>
              </item>
              <item>
@@ -9380,11 +9380,11 @@
              </item>
              <item>
               <property name="text">
-               <string>Red</string>
+               <string>Blue</string>
               </property>
               <property name="icon">
                <iconset resource="images.qrc">
-                <normaloff>:/icon/red_choco</normaloff>:/icon/red_choco</iconset>
+                <normaloff>:/icon/blue_choco</normaloff>:/icon/blue_choco</iconset>
               </property>
              </item>
              <item>
