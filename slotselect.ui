@@ -3879,21 +3879,32 @@
      <height>27</height>
     </rect>
    </property>
+   <property name="layoutDirection">
+    <enum>Qt::RightToLeft</enum>
+   </property>
    <property name="text">
-    <string>&amp;Next Page</string>
+    <string>   &amp;Next Page</string>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/next</normaloff>:/icon/next</iconset>
    </property>
   </widget>
   <widget class="QPushButton" name="btn_prev">
    <property name="geometry">
     <rect>
-     <x>460</x>
+     <x>450</x>
      <y>0</y>
-     <width>101</width>
+     <width>106</width>
      <height>27</height>
     </rect>
    </property>
    <property name="text">
     <string>&amp;Previous Page</string>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/prev</normaloff>:/icon/prev</iconset>
    </property>
   </widget>
   <widget class="QLabel" name="label_61">
@@ -3910,6 +3921,8 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="images.qrc"/>
+ </resources>
  <connections/>
 </ui>
