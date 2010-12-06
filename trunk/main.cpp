@@ -22,15 +22,14 @@
 
 int main(int argc, char *argv[])
 {
-
     QSettings setting(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
     Q_INIT_RESOURCE(images);
     QApplication a(argc, argv);
     a.setApplicationName("Black Chocobo");
     QTranslator translator;
     QString lang = "lang/bchoco_";
+    if(setting.value("lang").isNull()){setting.setValue("lang",QLocale::system().name().section('_',0,0));} //if no lang set it to os setting.
     lang.append(setting.value("lang").toString());
-    if (lang == "lang/bchoco_"){lang.append(QLocale::system().name().section('_', 0, 0));} //add system lang to end so we get a full item
     translator.load(lang);
     a.installTranslator(&translator);
     MainWindow w;

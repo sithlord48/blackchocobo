@@ -89,7 +89,9 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
         ui->action_show_test_data->setChecked(1);
         ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
     }
+
    if(settings.value("default_save_file").isNull()){settings.setValue("default_save_file","save0");}
+
    // loadFileFull("save0"); //load the default save map..
    if(settings.value("load_path").isNull()){settings.setValue("load_path",QDir::homePath());}
    if(settings.value("char_stat_folder").isNull()){settings.setValue("char_stat_folder",settings.value("load_path"));}
@@ -804,6 +806,15 @@ void MainWindow::on_actionSave_File_activated()
 /*~~~~~~~~~~~SHORT SAVE~~~~~~~~~~~~*/
 void MainWindow::saveFileFull(const QString &fileName)
 {
+    QFile file(fileName);
+    if(!file.open(QFile::ReadWrite))
+    {
+        QMessageBox::warning(this, tr("Black Chocobo"),
+        tr("Cannot write file %1:\n%2.")
+            .arg(fileName)
+            .arg(file.errorString()));
+        return;
+    }
     FILE *pfile;
     pfile = fopen(fileName.toAscii(),"wb");
     fwrite(ff7.file_headerp,ff7.SG_HEADER,1,pfile);
@@ -825,7 +836,7 @@ void MainWindow::on_actionNew_Game_triggered()
             if(!file.open(QFile::ReadOnly))
             {
                 QMessageBox::warning(this, tr("Black Chocobo"),
-                tr("Cannot read file %1:\n%2., Be Sure its is a PSX Save")
+                tr("Cannot read file %1:\n%2 Be Sure its is a PSX Save")
                 .arg(settings.value("default_save_file").toString()).arg(file.errorString()));
                 return;
             }
@@ -863,6 +874,15 @@ void MainWindow::on_actionExport_PC_Save_activated()
     ff7.file_footerp     = ff7.file_footer_pc;           //pointer to pc file footer
 
     /*~~~~~~~~~~~~~~~SHORT SAVE - SITHLORD48~~~~~~~~~~~~*/
+    QFile file(fileName);
+    if(!file.open(QFile::ReadWrite))
+    {
+        QMessageBox::warning(this, tr("Black Chocobo"),
+        tr("Cannot write file %1:\n%2.")
+            .arg(fileName)
+            .arg(file.errorString()));
+        return;
+    }
     FILE *pfile; // this section is starting to work correctly!
     pfile = fopen(fileName.toAscii(),"wb");
     fwrite(PC_SAVE_GAME_FILE_HEADER,9,1,pfile);
@@ -902,6 +922,15 @@ void MainWindow::on_actionExport_PSX_activated()
     ff7.file_footerp     = ff7.file_footer_psx;           //pointer to psx file footer
 
     /*~~~~~~~ SHORT SAVE - SITHLORD48 ~~~~~~~~~*/
+    QFile file(fileName);
+    if(!file.open(QFile::ReadWrite))
+    {
+        QMessageBox::warning(this, tr("Black Chocobo"),
+        tr("Cannot write file %1:\n%2.")
+            .arg(fileName)
+            .arg(file.errorString()));
+        return;
+    }
     FILE *pfile; // this section is starting to work correctly!
     pfile = fopen(fileName.toAscii(),"wb");
 
@@ -1340,7 +1369,6 @@ void MainWindow::charupdate(void)
     ui->cb_id->setVisible(false);
     if(curchar== 6)
     {
-
         ui->cb_id->setText("Young Cloud");
         ui->cb_id->setVisible(true);
         if (ff7.slot[s].chars[curchar].id == 9){ui->cb_id->setChecked(true); ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));}
@@ -1696,16 +1724,14 @@ void MainWindow::setweaponslots(void)
             }
             break;
         }
-
     }
-
 }
 /*~~~~~End Armor/Weapon Update~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::guirefresh(void)
 {
     load = true; //used to cheat the removal of "apply buttons"
-/*~~~~Check for SG type and ff7~~~~*/
+    /*~~~~Check for SG type and ff7~~~~*/
     if(ff7.savetype == 3 || ff7.savetype == 5 )
     {
         if(ff7.SG_Region_String[s].contains("00867") ||
@@ -1716,7 +1742,7 @@ void MainWindow::guirefresh(void)
            ff7.SG_Region_String[s].contains("01057") ||
            ff7.SG_Region_String[s].isEmpty())
         {/*FF7 Save Game*/ }
-        else
+        else // NON FF7 save slot detected create error box and wait for input
         {
             QMessageBox errbox;
             errbox.setWindowTitle(tr("Non-FF7 Slot Detected"));
@@ -1747,10 +1773,6 @@ void MainWindow::guirefresh(void)
                 tr("All Files(*)"));
                 if(fileName ==""){return;}
 
-                if(ff7.SG_TYPE != "PSX")
-                {
-                    ui->combo_control->setCurrentIndex(0);
-                }
                 ff7.SG_SIZE          = FF7_PSX_SAVE_GAME_SIZE;
                 ff7.SG_HEADER        = FF7_PSX_SAVE_GAME_HEADER;
                 ff7.SG_FOOTER        = FF7_PSX_SAVE_GAME_FOOTER;
@@ -1764,6 +1786,15 @@ void MainWindow::guirefresh(void)
                 ff7.file_footerp     = ff7.file_footer_psx;           //pointer to psx file footer
 
                 /*~~~~~~~ SHORT SAVE - SITHLORD48 ~~~~~~~~~*/
+                QFile file(fileName);
+                if(!file.open(QFile::ReadWrite))
+                {
+                    QMessageBox::warning(this, tr("Black Chocobo"),
+                    tr("Cannot write file %1:\n%2.")
+                        .arg(fileName)
+                        .arg(file.errorString()));
+                    return;
+                }
                 FILE *pfile; // this section is starting to work correctly!
                 pfile = fopen(fileName.toAscii(),"wb");
                 fwrite(ff7.hf[s].sl_header,ff7.SG_SLOT_HEADER,1,pfile); // Write Header.
@@ -5554,6 +5585,15 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
                     }
                 }
             fileName.append(".char");
+            QFile file(fileName);
+            if(!file.open(QFile::ReadWrite))
+            {
+                QMessageBox::warning(this, tr("Black Chocobo"),
+                tr("Cannot write file %1:\n%2.")
+                    .arg(fileName)
+                    .arg(file.errorString()));
+                return;
+            }
             FILE *pfile;
             pfile = fopen(fileName.toAscii(),"wb");
             fwrite(&ff7.slot[s].chars[i],132,1,pfile);
@@ -5583,4 +5623,3 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
     memcpy(&ff7.slot[s],&bufferslot,0x10f4);
     guirefresh();
 }
-
