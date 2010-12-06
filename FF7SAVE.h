@@ -431,7 +431,7 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
 }__attribute__((__packed__));
 
 struct FF7 {				// [0xFE55]
-        quint8 file_tag[9];		// [0x0000] 0x06277371
+    //    quint8 file_tag[9];		// [0x0000] 0x06277371
     //    BYTE selection;		// [0x0004] LOWORD = Slot on top of screen (0-12). HIWORD = Slot selection (0-2)
     //    USHORT maskSlots;		// [0x0005] Valid slots mask
    //     _UNKNOWN z_1[2];
@@ -449,10 +449,9 @@ struct FF7 {				// [0xFE55]
         quint8 file_footer_psv[0x0000];
         quint8 file_footer_mc[0x0000];	// [0x0000] 0x06277371
         quint8 file_footer_psp[0x0000];
-        FF7HEADFOOT hf[15];                 // [0x0009] The 15 save slots header/footer
+        FF7HEADFOOT hf[15];             // [0x0009] The 15 save slots header/footer
 
-        int savetype;                       //0=unknown,1=pc,2=psx,3=mc,4=psv,5=vmp
-
+        int savetype;                   //0=unknown,1=pc,2=psx,3=mc,4=psv,5=vmp
         int SG_SIZE;
         int SG_HEADER;
         int SG_FOOTER;
