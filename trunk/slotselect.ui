@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>667</width>
-    <height>427</height>
+    <width>599</width>
+    <height>425</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -21,8 +21,8 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>667</width>
-    <height>427</height>
+    <width>0</width>
+    <height>0</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -42,7 +42,7 @@
     <rect>
      <x>10</x>
      <y>30</y>
-     <width>661</width>
+     <width>591</width>
      <height>391</height>
     </rect>
    </property>
@@ -64,7 +64,7 @@
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>651</width>
+       <width>581</width>
        <height>131</height>
       </rect>
      </property>
@@ -74,7 +74,7 @@
      <widget class="QWidget" name="layoutWidget_5">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>410</x>
         <y>20</y>
         <width>161</width>
         <height>61</height>
@@ -159,7 +159,7 @@
      <widget class="QLabel" name="s1_lbl_name">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>240</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
@@ -177,10 +177,10 @@
      <widget class="QLabel" name="s1_lbl_loc">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>80</y>
-        <width>361</width>
-        <height>41</height>
+        <x>240</x>
+        <y>90</y>
+        <width>331</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -197,7 +197,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>261</width>
+        <width>211</width>
         <height>91</height>
        </rect>
       </property>
@@ -270,40 +270,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSplitter" name="splitter">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>52</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_4">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Level</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="s1_lcd_lvl">
-       <property name="smallDecimalPoint">
-        <bool>false</bool>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="btn_s1">
       <property name="geometry">
        <rect>
@@ -317,13 +283,56 @@
        <string>Load Slot 1</string>
       </property>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>92</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_16">
+       <item>
+        <widget class="QLabel" name="label_4">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Level</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="s1_lcd_lvl">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QGroupBox" name="s2_box">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>130</y>
-       <width>651</width>
+       <width>581</width>
        <height>131</height>
       </rect>
      </property>
@@ -333,7 +342,7 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>410</x>
         <y>20</y>
         <width>161</width>
         <height>61</height>
@@ -412,7 +421,7 @@
      <widget class="QLabel" name="s2_lbl_name">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>240</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
@@ -430,10 +439,10 @@
      <widget class="QLabel" name="s2_lbl_loc">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>80</y>
-        <width>361</width>
-        <height>41</height>
+        <x>240</x>
+        <y>90</y>
+        <width>331</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -450,7 +459,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>261</width>
+        <width>211</width>
         <height>91</height>
        </rect>
       </property>
@@ -523,40 +532,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSplitter" name="splitter_2">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>52</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_8">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Level</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="s2_lcd_lvl">
-       <property name="smallDecimalPoint">
-        <bool>false</bool>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="btn_s2">
       <property name="geometry">
        <rect>
@@ -570,13 +545,56 @@
        <string>Load Slot 2</string>
       </property>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>92</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_17">
+       <item>
+        <widget class="QLabel" name="label_8">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Level</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="s2_lcd_lvl">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QGroupBox" name="s3_box">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>260</y>
-       <width>651</width>
+       <width>581</width>
        <height>131</height>
       </rect>
      </property>
@@ -586,7 +604,7 @@
      <widget class="QWidget" name="layoutWidget_3">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>410</x>
         <y>20</y>
         <width>161</width>
         <height>61</height>
@@ -665,7 +683,7 @@
      <widget class="QLabel" name="s3_lbl_name">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>240</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
@@ -683,10 +701,10 @@
      <widget class="QLabel" name="s3_lbl_loc">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>80</y>
-        <width>361</width>
-        <height>41</height>
+        <x>240</x>
+        <y>90</y>
+        <width>331</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -703,7 +721,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>261</width>
+        <width>211</width>
         <height>91</height>
        </rect>
       </property>
@@ -776,40 +794,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSplitter" name="splitter_3">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>52</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_12">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Level</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="s3_lcd_lvl">
-       <property name="smallDecimalPoint">
-        <bool>false</bool>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="btn_s3">
       <property name="geometry">
        <rect>
@@ -823,6 +807,49 @@
        <string>Load Slot 3</string>
       </property>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>92</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_18">
+       <item>
+        <widget class="QLabel" name="label_12">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Level</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="s3_lcd_lvl">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="page_2">
@@ -831,7 +858,7 @@
       <rect>
        <x>0</x>
        <y>130</y>
-       <width>651</width>
+       <width>581</width>
        <height>131</height>
       </rect>
      </property>
@@ -841,7 +868,7 @@
      <widget class="QWidget" name="layoutWidget_7">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>410</x>
         <y>20</y>
         <width>161</width>
         <height>61</height>
@@ -920,7 +947,7 @@
      <widget class="QLabel" name="s5_lbl_name">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>240</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
@@ -938,10 +965,10 @@
      <widget class="QLabel" name="s5_lbl_loc">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>80</y>
-        <width>361</width>
-        <height>41</height>
+        <x>240</x>
+        <y>90</y>
+        <width>331</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -958,7 +985,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>261</width>
+        <width>211</width>
         <height>91</height>
        </rect>
       </property>
@@ -1031,40 +1058,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSplitter" name="splitter_4">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>52</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_16">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Level</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="s5_lcd_lvl">
-       <property name="smallDecimalPoint">
-        <bool>false</bool>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="btn_s5">
       <property name="geometry">
        <rect>
@@ -1078,13 +1071,56 @@
        <string>Load Slot 5</string>
       </property>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>92</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_29">
+       <item>
+        <widget class="QLabel" name="label_16">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Level</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="s5_lcd_lvl">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QGroupBox" name="s6_box">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>260</y>
-       <width>651</width>
+       <width>581</width>
        <height>131</height>
       </rect>
      </property>
@@ -1094,7 +1130,7 @@
      <widget class="QWidget" name="layoutWidget_9">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>410</x>
         <y>20</y>
         <width>161</width>
         <height>61</height>
@@ -1173,7 +1209,7 @@
      <widget class="QLabel" name="s6_lbl_name">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>240</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
@@ -1191,10 +1227,10 @@
      <widget class="QLabel" name="s6_lbl_loc">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>80</y>
-        <width>361</width>
-        <height>41</height>
+        <x>240</x>
+        <y>90</y>
+        <width>331</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -1211,7 +1247,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>261</width>
+        <width>211</width>
         <height>91</height>
        </rect>
       </property>
@@ -1284,40 +1320,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSplitter" name="splitter_5">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>52</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_20">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Level</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="s6_lcd_lvl">
-       <property name="smallDecimalPoint">
-        <bool>false</bool>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="btn_s6">
       <property name="geometry">
        <rect>
@@ -1331,13 +1333,56 @@
        <string>Load Slot 6</string>
       </property>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>92</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_30">
+       <item>
+        <widget class="QLabel" name="label_20">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Level</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="s6_lcd_lvl">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QGroupBox" name="s4_box">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>651</width>
+       <width>581</width>
        <height>131</height>
       </rect>
      </property>
@@ -1347,7 +1392,7 @@
      <widget class="QWidget" name="layoutWidget_11">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>410</x>
         <y>20</y>
         <width>161</width>
         <height>61</height>
@@ -1426,7 +1471,7 @@
      <widget class="QLabel" name="s4_lbl_name">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>240</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
@@ -1444,10 +1489,10 @@
      <widget class="QLabel" name="s4_lbl_loc">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>80</y>
-        <width>361</width>
-        <height>41</height>
+        <x>240</x>
+        <y>90</y>
+        <width>331</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -1464,7 +1509,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>261</width>
+        <width>211</width>
         <height>91</height>
        </rect>
       </property>
@@ -1537,40 +1582,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSplitter" name="splitter_6">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>52</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_24">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Level</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="s4_lcd_lvl">
-       <property name="smallDecimalPoint">
-        <bool>false</bool>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="btn_s4">
       <property name="geometry">
        <rect>
@@ -1584,6 +1595,49 @@
        <string>Load Slot 4</string>
       </property>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>92</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_28">
+       <item>
+        <widget class="QLabel" name="label_24">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Level</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="s4_lcd_lvl">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="page_3">
@@ -1592,7 +1646,7 @@
       <rect>
        <x>0</x>
        <y>130</y>
-       <width>651</width>
+       <width>581</width>
        <height>131</height>
       </rect>
      </property>
@@ -1602,7 +1656,7 @@
      <widget class="QWidget" name="layoutWidget_13">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>410</x>
         <y>20</y>
         <width>161</width>
         <height>61</height>
@@ -1681,7 +1735,7 @@
      <widget class="QLabel" name="s8_lbl_name">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>240</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
@@ -1699,10 +1753,10 @@
      <widget class="QLabel" name="s8_lbl_loc">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>80</y>
-        <width>361</width>
-        <height>41</height>
+        <x>240</x>
+        <y>90</y>
+        <width>331</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -1719,7 +1773,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>261</width>
+        <width>211</width>
         <height>91</height>
        </rect>
       </property>
@@ -1792,40 +1846,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSplitter" name="splitter_7">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>52</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_28">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Level</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="s8_lcd_lvl">
-       <property name="smallDecimalPoint">
-        <bool>false</bool>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="btn_s8">
       <property name="geometry">
        <rect>
@@ -1839,13 +1859,56 @@
        <string>Load Slot 8</string>
       </property>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>92</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_26">
+       <item>
+        <widget class="QLabel" name="label_28">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Level</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="s8_lcd_lvl">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QGroupBox" name="s9_box">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>260</y>
-       <width>651</width>
+       <width>581</width>
        <height>131</height>
       </rect>
      </property>
@@ -1855,7 +1918,7 @@
      <widget class="QWidget" name="layoutWidget_15">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>410</x>
         <y>20</y>
         <width>161</width>
         <height>61</height>
@@ -1934,7 +1997,7 @@
      <widget class="QLabel" name="s9_lbl_name">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>240</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
@@ -1952,10 +2015,10 @@
      <widget class="QLabel" name="s9_lbl_loc">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>80</y>
-        <width>361</width>
-        <height>41</height>
+        <x>240</x>
+        <y>90</y>
+        <width>331</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -1972,7 +2035,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>261</width>
+        <width>211</width>
         <height>91</height>
        </rect>
       </property>
@@ -2045,40 +2108,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSplitter" name="splitter_8">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>52</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_32">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Level</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="s9_lcd_lvl">
-       <property name="smallDecimalPoint">
-        <bool>false</bool>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="btn_s9">
       <property name="geometry">
        <rect>
@@ -2092,13 +2121,56 @@
        <string>Load Slot 9</string>
       </property>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>92</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_27">
+       <item>
+        <widget class="QLabel" name="label_32">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Level</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="s9_lcd_lvl">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QGroupBox" name="s7_box">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>651</width>
+       <width>581</width>
        <height>131</height>
       </rect>
      </property>
@@ -2108,7 +2180,7 @@
      <widget class="QWidget" name="layoutWidget_17">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>410</x>
         <y>20</y>
         <width>161</width>
         <height>61</height>
@@ -2187,7 +2259,7 @@
      <widget class="QLabel" name="s7_lbl_name">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>240</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
@@ -2205,10 +2277,10 @@
      <widget class="QLabel" name="s7_lbl_loc">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>80</y>
-        <width>361</width>
-        <height>41</height>
+        <x>240</x>
+        <y>90</y>
+        <width>331</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -2225,7 +2297,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>261</width>
+        <width>211</width>
         <height>91</height>
        </rect>
       </property>
@@ -2298,40 +2370,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSplitter" name="splitter_9">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>52</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_36">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Level</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="s7_lcd_lvl">
-       <property name="smallDecimalPoint">
-        <bool>false</bool>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="btn_s7">
       <property name="geometry">
        <rect>
@@ -2345,6 +2383,49 @@
        <string>Load Slot 7</string>
       </property>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>92</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_25">
+       <item>
+        <widget class="QLabel" name="label_36">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Level</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="s7_lcd_lvl">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="page_4">
@@ -2353,7 +2434,7 @@
       <rect>
        <x>0</x>
        <y>130</y>
-       <width>651</width>
+       <width>581</width>
        <height>131</height>
       </rect>
      </property>
@@ -2363,7 +2444,7 @@
      <widget class="QWidget" name="layoutWidget_19">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>410</x>
         <y>20</y>
         <width>161</width>
         <height>61</height>
@@ -2442,7 +2523,7 @@
      <widget class="QLabel" name="s11_lbl_name">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>240</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
@@ -2460,10 +2541,10 @@
      <widget class="QLabel" name="s11_lbl_loc">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>80</y>
-        <width>361</width>
-        <height>41</height>
+        <x>240</x>
+        <y>90</y>
+        <width>331</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -2480,7 +2561,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>261</width>
+        <width>211</width>
         <height>91</height>
        </rect>
       </property>
@@ -2553,40 +2634,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSplitter" name="splitter_10">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>52</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_40">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Level</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="s11_lcd_lvl">
-       <property name="smallDecimalPoint">
-        <bool>false</bool>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="btn_s11">
       <property name="geometry">
        <rect>
@@ -2600,13 +2647,56 @@
        <string>Load Slot 11</string>
       </property>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>92</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_23">
+       <item>
+        <widget class="QLabel" name="label_40">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Level</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="s11_lcd_lvl">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QGroupBox" name="s12_box">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>260</y>
-       <width>651</width>
+       <width>581</width>
        <height>131</height>
       </rect>
      </property>
@@ -2616,7 +2706,7 @@
      <widget class="QWidget" name="layoutWidget_21">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>410</x>
         <y>20</y>
         <width>161</width>
         <height>61</height>
@@ -2695,7 +2785,7 @@
      <widget class="QLabel" name="s12_lbl_name">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>240</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
@@ -2713,10 +2803,10 @@
      <widget class="QLabel" name="s12_lbl_loc">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>80</y>
-        <width>361</width>
-        <height>41</height>
+        <x>240</x>
+        <y>90</y>
+        <width>331</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -2733,7 +2823,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>261</width>
+        <width>211</width>
         <height>91</height>
        </rect>
       </property>
@@ -2806,40 +2896,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSplitter" name="splitter_11">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>52</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_44">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Level</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="s12_lcd_lvl">
-       <property name="smallDecimalPoint">
-        <bool>false</bool>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="btn_s12">
       <property name="geometry">
        <rect>
@@ -2853,13 +2909,56 @@
        <string>Load Slot 12</string>
       </property>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>92</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_24">
+       <item>
+        <widget class="QLabel" name="label_44">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Level</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="s12_lcd_lvl">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QGroupBox" name="s10_box">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>651</width>
+       <width>581</width>
        <height>131</height>
       </rect>
      </property>
@@ -2869,7 +2968,7 @@
      <widget class="QWidget" name="layoutWidget_23">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>410</x>
         <y>20</y>
         <width>161</width>
         <height>61</height>
@@ -2948,7 +3047,7 @@
      <widget class="QLabel" name="s10_lbl_name">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>240</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
@@ -2966,10 +3065,10 @@
      <widget class="QLabel" name="s10_lbl_loc">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>80</y>
-        <width>361</width>
-        <height>41</height>
+        <x>240</x>
+        <y>90</y>
+        <width>331</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -2986,7 +3085,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>261</width>
+        <width>211</width>
         <height>91</height>
        </rect>
       </property>
@@ -3059,40 +3158,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSplitter" name="splitter_12">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>52</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_48">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Level</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="s10_lcd_lvl">
-       <property name="smallDecimalPoint">
-        <bool>false</bool>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="btn_s10">
       <property name="geometry">
        <rect>
@@ -3106,6 +3171,55 @@
        <string>Load Slot 10</string>
       </property>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>92</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_22">
+       <item>
+        <widget class="QLabel" name="label_48">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Level</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="s10_lcd_lvl">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </widget>
    <widget class="QWidget" name="page_5">
@@ -3114,7 +3228,7 @@
       <rect>
        <x>0</x>
        <y>130</y>
-       <width>651</width>
+       <width>581</width>
        <height>131</height>
       </rect>
      </property>
@@ -3124,7 +3238,7 @@
      <widget class="QWidget" name="layoutWidget_25">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>410</x>
         <y>20</y>
         <width>161</width>
         <height>61</height>
@@ -3203,7 +3317,7 @@
      <widget class="QLabel" name="s14_lbl_name">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>240</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
@@ -3221,10 +3335,10 @@
      <widget class="QLabel" name="s14_lbl_loc">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>80</y>
-        <width>361</width>
-        <height>41</height>
+        <x>240</x>
+        <y>90</y>
+        <width>331</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -3241,7 +3355,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>261</width>
+        <width>211</width>
         <height>91</height>
        </rect>
       </property>
@@ -3314,40 +3428,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSplitter" name="splitter_13">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>52</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_52">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Level</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="s14_lcd_lvl">
-       <property name="smallDecimalPoint">
-        <bool>false</bool>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="btn_s14">
       <property name="geometry">
        <rect>
@@ -3361,13 +3441,56 @@
        <string>Load Slot 14</string>
       </property>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>92</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_20">
+       <item>
+        <widget class="QLabel" name="label_52">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Level</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="s14_lcd_lvl">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QGroupBox" name="s15_box">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>260</y>
-       <width>651</width>
+       <width>581</width>
        <height>131</height>
       </rect>
      </property>
@@ -3377,7 +3500,7 @@
      <widget class="QWidget" name="layoutWidget_27">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>410</x>
         <y>20</y>
         <width>161</width>
         <height>61</height>
@@ -3456,7 +3579,7 @@
      <widget class="QLabel" name="s15_lbl_name">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>240</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
@@ -3474,10 +3597,10 @@
      <widget class="QLabel" name="s15_lbl_loc">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>80</y>
-        <width>361</width>
-        <height>41</height>
+        <x>240</x>
+        <y>90</y>
+        <width>331</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -3494,7 +3617,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>261</width>
+        <width>211</width>
         <height>91</height>
        </rect>
       </property>
@@ -3567,40 +3690,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSplitter" name="splitter_14">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>52</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_56">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Level</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="s15_lcd_lvl">
-       <property name="smallDecimalPoint">
-        <bool>false</bool>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="btn_s15">
       <property name="geometry">
        <rect>
@@ -3614,13 +3703,56 @@
        <string>Load Slot 15</string>
       </property>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>92</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_21">
+       <item>
+        <widget class="QLabel" name="label_56">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Level</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="s15_lcd_lvl">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QGroupBox" name="s13_box">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>651</width>
+       <width>581</width>
        <height>131</height>
       </rect>
      </property>
@@ -3630,7 +3762,7 @@
      <widget class="QWidget" name="layoutWidget_29">
       <property name="geometry">
        <rect>
-        <x>450</x>
+        <x>410</x>
         <y>20</y>
         <width>161</width>
         <height>61</height>
@@ -3709,7 +3841,7 @@
      <widget class="QLabel" name="s13_lbl_name">
       <property name="geometry">
        <rect>
-        <x>280</x>
+        <x>240</x>
         <y>20</y>
         <width>151</width>
         <height>21</height>
@@ -3727,10 +3859,10 @@
      <widget class="QLabel" name="s13_lbl_loc">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>80</y>
-        <width>361</width>
-        <height>41</height>
+        <x>240</x>
+        <y>90</y>
+        <width>331</width>
+        <height>31</height>
        </rect>
       </property>
       <property name="font">
@@ -3747,7 +3879,7 @@
        <rect>
         <x>10</x>
         <y>30</y>
-        <width>261</width>
+        <width>211</width>
         <height>91</height>
        </rect>
       </property>
@@ -3820,40 +3952,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QSplitter" name="splitter_15">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>52</y>
-        <width>101</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <widget class="QLabel" name="label_60">
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string>Level</string>
-       </property>
-      </widget>
-      <widget class="QLCDNumber" name="s13_lcd_lvl">
-       <property name="smallDecimalPoint">
-        <bool>false</bool>
-       </property>
-       <property name="numDigits">
-        <number>2</number>
-       </property>
-       <property name="segmentStyle">
-        <enum>QLCDNumber::Flat</enum>
-       </property>
-      </widget>
-     </widget>
      <widget class="QPushButton" name="btn_s13">
       <property name="geometry">
        <rect>
@@ -3867,13 +3965,56 @@
        <string>Load Slot 13</string>
       </property>
      </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>50</y>
+        <width>92</width>
+        <height>33</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_19">
+       <item>
+        <widget class="QLabel" name="label_60">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Level</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLCDNumber" name="s13_lcd_lvl">
+         <property name="minimumSize">
+          <size>
+           <width>48</width>
+           <height>31</height>
+          </size>
+         </property>
+         <property name="smallDecimalPoint">
+          <bool>false</bool>
+         </property>
+         <property name="numDigits">
+          <number>2</number>
+         </property>
+         <property name="segmentStyle">
+          <enum>QLCDNumber::Flat</enum>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </widget>
   </widget>
   <widget class="QPushButton" name="btn_next">
    <property name="geometry">
     <rect>
-     <x>560</x>
+     <x>500</x>
      <y>0</y>
      <width>92</width>
      <height>27</height>
@@ -3893,7 +4034,7 @@
   <widget class="QPushButton" name="btn_prev">
    <property name="geometry">
     <rect>
-     <x>450</x>
+     <x>390</x>
      <y>0</y>
      <width>106</width>
      <height>27</height>
@@ -3905,19 +4046,6 @@
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/icon/prev</normaloff>:/icon/prev</iconset>
-   </property>
-  </widget>
-  <widget class="QLabel" name="label_61">
-   <property name="geometry">
-    <rect>
-     <x>30</x>
-     <y>0</y>
-     <width>421</width>
-     <height>31</height>
-    </rect>
-   </property>
-   <property name="text">
-    <string/>
    </property>
   </widget>
  </widget>
