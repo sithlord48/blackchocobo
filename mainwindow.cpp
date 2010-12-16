@@ -89,12 +89,10 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
         ui->action_show_test_data->setChecked(1);
         ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
     }
-
-   if(settings.value("default_save_file").isNull()){settings.setValue("default_save_file","save0");}
-
-   // loadFileFull("save0"); //load the default save map..
+   //be sure they are not empty, and set them accordingly.
+    if(settings.value("default_save_file").isNull()){settings.setValue("default_save_file",QString(QCoreApplication::applicationDirPath()) + "/"+ "save0");}
    if(settings.value("load_path").isNull()){settings.setValue("load_path",QDir::homePath());}
-   if(settings.value("char_stat_folder").isNull()){settings.setValue("char_stat_folder",settings.value("load_path"));}
+   if(settings.value("char_stat_folder").isNull()){settings.setValue("char_stat_folder",settings.value("load_path").toString());}
 
    if(settings.value("lang").toString() == "en")
    {
