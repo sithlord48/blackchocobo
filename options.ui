@@ -6,9 +6,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>432</width>
-    <height>322</height>
+    <width>725</width>
+    <height>349</height>
    </rect>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::NoContextMenu</enum>
   </property>
   <property name="windowTitle">
    <string>Set Load And Save Paths.</string>
@@ -17,15 +20,18 @@
    <iconset resource="images.qrc">
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
-  <layout class="QVBoxLayout" name="verticalLayout_2">
+  <property name="modal">
+   <bool>true</bool>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout_4">
    <item>
     <widget class="QGroupBox" name="groupBox_3">
      <property name="title">
       <string>Generic Save Options</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_4">
+     <layout class="QVBoxLayout" name="verticalLayout">
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_3">
+       <layout class="QHBoxLayout" name="horizontalLayout">
         <item>
          <widget class="QLabel" name="label_3">
           <property name="text">
@@ -34,20 +40,17 @@
          </widget>
         </item>
         <item>
-         <spacer name="horizontalSpacer">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+         <widget class="QLabel" name="lbl_load_path">
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
           </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>17</width>
-            <height>20</height>
-           </size>
+          <property name="text">
+           <string>                                              Not Set</string>
           </property>
-         </spacer>
+         </widget>
         </item>
         <item>
-         <widget class="QToolButton" name="btn_set_load_pc">
+         <widget class="QPushButton" name="btn_set_load_pc">
           <property name="maximumSize">
            <size>
             <width>23</width>
@@ -62,6 +65,13 @@
        </layout>
       </item>
       <item>
+       <widget class="Line" name="line_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
          <widget class="QLabel" name="label_2">
@@ -71,20 +81,17 @@
          </widget>
         </item>
         <item>
-         <spacer name="horizontalSpacer_2">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+         <widget class="QLabel" name="lbl_save_emu">
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
           </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>17</width>
-            <height>20</height>
-           </size>
+          <property name="text">
+           <string>                                              Not Set</string>
           </property>
-         </spacer>
+         </widget>
         </item>
         <item>
-         <widget class="QToolButton" name="btn_set_save_emu">
+         <widget class="QPushButton" name="btn_set_save_emu">
           <property name="maximumSize">
            <size>
             <width>23</width>
@@ -106,9 +113,9 @@
      <property name="title">
       <string>Pc Save Options</string>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout">
+     <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout">
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
         <item>
          <widget class="QLabel" name="label">
           <property name="text">
@@ -117,20 +124,17 @@
          </widget>
         </item>
         <item>
-         <spacer name="horizontalSpacer_3">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+         <widget class="QLabel" name="lbl_save_pc">
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
           </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>17</width>
-            <height>20</height>
-           </size>
+          <property name="text">
+           <string>                                              Not Set</string>
           </property>
-         </spacer>
+         </widget>
         </item>
         <item>
-         <widget class="QToolButton" name="btn_set_save_pc">
+         <widget class="QPushButton" name="btn_set_save_pc">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -151,6 +155,13 @@
        </layout>
       </item>
       <item>
+       <widget class="Line" name="line_2">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
        <layout class="QHBoxLayout" name="horizontalLayout_4">
         <item>
          <widget class="QLabel" name="label_4">
@@ -160,20 +171,17 @@
          </widget>
         </item>
         <item>
-         <spacer name="horizontalSpacer_4">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+         <widget class="QLabel" name="lbl_export_pc">
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
           </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>17</width>
-            <height>20</height>
-           </size>
+          <property name="text">
+           <string>                                              Not Set</string>
           </property>
-         </spacer>
+         </widget>
         </item>
         <item>
-         <widget class="QToolButton" name="btn_set_export_pc">
+         <widget class="QPushButton" name="btn_set_export_pc">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
             <horstretch>0</horstretch>
@@ -212,17 +220,14 @@
          </widget>
         </item>
         <item>
-         <spacer name="horizontalSpacer_5">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+         <widget class="QLabel" name="lbl_defalut_save">
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
           </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
+          <property name="text">
+           <string>                                              Not Set</string>
           </property>
-         </spacer>
+         </widget>
         </item>
         <item>
          <widget class="QPushButton" name="btn_set_default_save">
@@ -261,6 +266,13 @@
        </layout>
       </item>
       <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
        <layout class="QHBoxLayout" name="horizontalLayout_7">
         <item>
          <widget class="QLabel" name="label_6">
@@ -270,17 +282,14 @@
          </widget>
         </item>
         <item>
-         <spacer name="horizontalSpacer_7">
-          <property name="orientation">
-           <enum>Qt::Horizontal</enum>
+         <widget class="QLabel" name="lbl_char_stat_folder">
+          <property name="frameShape">
+           <enum>QFrame::Box</enum>
           </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>40</width>
-            <height>20</height>
-           </size>
+          <property name="text">
+           <string>                                              Not Set</string>
           </property>
-         </spacer>
+         </widget>
         </item>
         <item>
          <widget class="QPushButton" name="btn_set_char_stat_folder">
@@ -346,7 +355,7 @@
      <item>
       <widget class="QPushButton" name="pushButton">
        <property name="text">
-        <string>Ok</string>
+        <string>&amp;Ok</string>
        </property>
       </widget>
      </item>
