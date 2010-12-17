@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>599</width>
-    <height>425</height>
+    <width>597</width>
+    <height>423</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -283,7 +283,7 @@
        <string>Load Slot 1</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -545,7 +545,7 @@
        <string>Load Slot 2</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -807,7 +807,7 @@
        <string>Load Slot 3</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -1071,7 +1071,7 @@
        <string>Load Slot 5</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -1333,7 +1333,7 @@
        <string>Load Slot 6</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -1595,7 +1595,7 @@
        <string>Load Slot 4</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -1859,7 +1859,7 @@
        <string>Load Slot 8</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -2121,7 +2121,7 @@
        <string>Load Slot 9</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -2383,7 +2383,7 @@
        <string>Load Slot 7</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -2647,7 +2647,7 @@
        <string>Load Slot 11</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -2909,7 +2909,7 @@
        <string>Load Slot 12</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -3171,7 +3171,7 @@
        <string>Load Slot 10</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -3441,7 +3441,7 @@
        <string>Load Slot 14</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -3703,7 +3703,7 @@
        <string>Load Slot 15</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -3965,7 +3965,7 @@
        <string>Load Slot 13</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>240</x>
@@ -4030,6 +4030,9 @@
     <iconset resource="images.qrc">
      <normaloff>:/icon/next</normaloff>:/icon/next</iconset>
    </property>
+   <property name="shortcut">
+    <string>Right</string>
+   </property>
   </widget>
   <widget class="QPushButton" name="btn_prev">
    <property name="geometry">
@@ -4047,8 +4050,30 @@
     <iconset resource="images.qrc">
      <normaloff>:/icon/prev</normaloff>:/icon/prev</iconset>
    </property>
+   <property name="shortcut">
+    <string>Left</string>
+   </property>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>btn_s1</tabstop>
+  <tabstop>btn_s2</tabstop>
+  <tabstop>btn_s3</tabstop>
+  <tabstop>btn_s4</tabstop>
+  <tabstop>btn_s5</tabstop>
+  <tabstop>btn_s6</tabstop>
+  <tabstop>btn_s7</tabstop>
+  <tabstop>btn_s8</tabstop>
+  <tabstop>btn_s9</tabstop>
+  <tabstop>btn_s10</tabstop>
+  <tabstop>btn_s11</tabstop>
+  <tabstop>btn_s12</tabstop>
+  <tabstop>btn_s13</tabstop>
+  <tabstop>btn_s14</tabstop>
+  <tabstop>btn_s15</tabstop>
+  <tabstop>btn_prev</tabstop>
+  <tabstop>btn_next</tabstop>
+ </tabstops>
  <resources>
   <include location="images.qrc"/>
  </resources>
