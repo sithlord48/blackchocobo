@@ -69,7 +69,7 @@
     <property name="maximumSize">
      <size>
       <width>16777215</width>
-      <height>530</height>
+      <height>16777215</height>
      </size>
     </property>
     <property name="acceptDrops">
@@ -100,729 +100,6 @@
      <attribute name="title">
       <string>P&amp;arty</string>
      </attribute>
-     <widget class="QGroupBox" name="groupBox">
-      <property name="geometry">
-       <rect>
-        <x>0</x>
-        <y>0</y>
-        <width>301</width>
-        <height>66</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>In Party</string>
-      </property>
-      <property name="flat">
-       <bool>false</bool>
-      </property>
-      <property name="checkable">
-       <bool>false</bool>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_3">
-       <property name="margin">
-        <number>1</number>
-       </property>
-       <item row="0" column="0">
-        <widget class="QComboBox" name="combo_party1">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>32</height>
-          </size>
-         </property>
-         <item>
-          <property name="text">
-           <string>Cloud</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Barret</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Tifa</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Aerith</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Red XIII</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Yuffie</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Cait Sith</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Vincent</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Cid</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Y.Cloud</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normalon>:/icon/y_cloud_icon</normalon>
-           </iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Sephiroth</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normalon>:/icon/sep_icon</normalon>
-           </iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>0x0B</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>-Empty-</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QComboBox" name="combo_party2">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>32</height>
-          </size>
-         </property>
-         <item>
-          <property name="text">
-           <string>Cloud</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Barret</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Tifa</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Aerith</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Red XIII</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Yuffie</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Cait Sith</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Vincent</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Cid</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Y.Cloud</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normalon>:/icon/y_cloud_icon</normalon>
-           </iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Sephiroth</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normalon>:/icon/sep_icon</normalon>
-           </iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>0x0B</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>-Empty-</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QComboBox" name="combo_party3">
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>32</height>
-          </size>
-         </property>
-         <item>
-          <property name="text">
-           <string>Cloud</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Barret</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Tifa</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Aerith</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Red XIII</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Yuffie</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Cait Sith</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Vincent</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Cid</string>
-          </property>
-          <property name="icon">
-           <iconset resource="images.qrc">
-            <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Y.Cloud</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normalon>:/icon/y_cloud_icon</normalon>
-           </iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Sephiroth</string>
-          </property>
-          <property name="icon">
-           <iconset>
-            <normalon>:/icon/sep_icon</normalon>
-           </iconset>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>0x0B</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>-Empty-</string>
-          </property>
-         </item>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_5">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>170</y>
-        <width>281</width>
-        <height>301</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>Click On A Char To edit ===========&gt;</string>
-      </property>
-      <layout class="QGridLayout" name="gridLayout_2">
-       <property name="margin">
-        <number>0</number>
-       </property>
-       <property name="spacing">
-        <number>-1</number>
-       </property>
-       <item row="0" column="0">
-        <widget class="QPushButton" name="btn_cloud">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>101</horstretch>
-           <verstretch>114</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="images.qrc">
-           <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QPushButton" name="btn_barret">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>64</horstretch>
-           <verstretch>73</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="images.qrc">
-           <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QPushButton" name="btn_tifa">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>64</horstretch>
-           <verstretch>73</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="images.qrc">
-           <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="0">
-        <widget class="QPushButton" name="btn_aeris">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>64</horstretch>
-           <verstretch>73</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="images.qrc">
-           <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QPushButton" name="btn_red">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>64</horstretch>
-           <verstretch>73</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="images.qrc">
-           <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QPushButton" name="btn_yuffie">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>64</horstretch>
-           <verstretch>73</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="images.qrc">
-           <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="0">
-        <widget class="QPushButton" name="btn_cait">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>64</horstretch>
-           <verstretch>73</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="images.qrc">
-           <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QPushButton" name="btn_vincent">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>64</horstretch>
-           <verstretch>73</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="images.qrc">
-           <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="QPushButton" name="btn_cid">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-           <horstretch>101</horstretch>
-           <verstretch>73</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-         <property name="text">
-          <string/>
-         </property>
-         <property name="icon">
-          <iconset resource="images.qrc">
-           <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
-         </property>
-         <property name="iconSize">
-          <size>
-           <width>75</width>
-           <height>86</height>
-          </size>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
      <widget class="QToolBox" name="toolBox">
       <property name="geometry">
        <rect>
@@ -845,7 +122,7 @@
        <enum>QFrame::StyledPanel</enum>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="page_stats">
        <property name="geometry">
@@ -4169,219 +3446,934 @@
        </widget>
       </widget>
      </widget>
-     <widget class="QGroupBox" name="groupBox_12">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>155</x>
-        <y>75</y>
-        <width>141</width>
-        <height>87</height>
+        <x>0</x>
+        <y>10</y>
+        <width>301</width>
+        <height>461</height>
        </rect>
       </property>
-      <property name="title">
-       <string>Fights</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_43">
+      <layout class="QVBoxLayout" name="verticalLayout_45">
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_83">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>In Party</string>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_3">
+          <property name="margin">
+           <number>1</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QComboBox" name="combo_party1">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>32</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string>Cloud</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Barret</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Tifa</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Aerith</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Red XIII</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Yuffie</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cait Sith</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Vincent</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cid</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Y.Cloud</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normalon>:/icon/y_cloud_icon</normalon>
+              </iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sephiroth</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normalon>:/icon/sep_icon</normalon>
+              </iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>0x0B</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>-Empty-</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="combo_party2">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>32</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string>Cloud</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Barret</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Tifa</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Aerith</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Red XIII</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Yuffie</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cait Sith</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Vincent</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cid</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Y.Cloud</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normalon>:/icon/y_cloud_icon</normalon>
+              </iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sephiroth</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normalon>:/icon/sep_icon</normalon>
+              </iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>0x0B</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>-Empty-</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QComboBox" name="combo_party3">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>32</height>
+             </size>
+            </property>
+            <item>
+             <property name="text">
+              <string>Cloud</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Barret</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Tifa</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Aerith</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Red XIII</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Yuffie</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cait Sith</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Vincent</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Cid</string>
+             </property>
+             <property name="icon">
+              <iconset resource="images.qrc">
+               <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Y.Cloud</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normalon>:/icon/y_cloud_icon</normalon>
+              </iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Sephiroth</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normalon>:/icon/sep_icon</normalon>
+              </iconset>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>0x0B</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>-Empty-</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_84">
          <item>
-          <widget class="QLabel" name="label_38">
-           <property name="text">
-            <string>Battles</string>
+          <widget class="QGroupBox" name="groupBox_15">
+           <property name="title">
+            <string>Money</string>
            </property>
-           <property name="buddy">
-            <cstring>sb_battles</cstring>
-           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_44">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_78">
+              <item>
+               <widget class="QLabel" name="label_10">
+                <property name="text">
+                 <string>Gil</string>
+                </property>
+                <property name="buddy">
+                 <cstring>sb_gil</cstring>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="sb_gil">
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="layoutDirection">
+                 <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="buttonSymbols">
+                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                </property>
+                <property name="accelerated">
+                 <bool>true</bool>
+                </property>
+                <property name="correctionMode">
+                 <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                </property>
+                <property name="maximum">
+                 <number>999999999</number>
+                </property>
+                <property name="value">
+                 <number>0</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_79">
+              <item>
+               <widget class="QLabel" name="label_11">
+                <property name="text">
+                 <string>GP</string>
+                </property>
+                <property name="buddy">
+                 <cstring>sb_gp</cstring>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="sb_gp">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>100</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>92</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                </property>
+                <property name="buttonSymbols">
+                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                </property>
+                <property name="accelerated">
+                 <bool>true</bool>
+                </property>
+                <property name="correctionMode">
+                 <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                </property>
+                <property name="maximum">
+                 <number>10000</number>
+                </property>
+                <property name="value">
+                 <number>0</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="sb_battles">
-           <property name="minimumSize">
-            <size>
-             <width>75</width>
-             <height>0</height>
-            </size>
+          <widget class="QGroupBox" name="groupBox_12">
+           <property name="title">
+            <string>Fights</string>
            </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-           <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::PlusMinus</enum>
-           </property>
-           <property name="accelerated">
-            <bool>true</bool>
-           </property>
-           <property name="correctionMode">
-            <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-           </property>
-           <property name="maximum">
-            <number>65535</number>
-           </property>
-           <property name="value">
-            <number>0</number>
-           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_43">
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_83">
+              <item>
+               <widget class="QLabel" name="label_38">
+                <property name="text">
+                 <string>Battles</string>
+                </property>
+                <property name="buddy">
+                 <cstring>sb_battles</cstring>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="sb_battles">
+                <property name="minimumSize">
+                 <size>
+                  <width>75</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="buttonSymbols">
+                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                </property>
+                <property name="accelerated">
+                 <bool>true</bool>
+                </property>
+                <property name="correctionMode">
+                 <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                </property>
+                <property name="maximum">
+                 <number>65535</number>
+                </property>
+                <property name="value">
+                 <number>0</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_81">
+              <item>
+               <widget class="QLabel" name="label_37">
+                <property name="text">
+                 <string>Runs</string>
+                </property>
+                <property name="buddy">
+                 <cstring>sb_runs</cstring>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="sb_runs">
+                <property name="minimumSize">
+                 <size>
+                  <width>75</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="buttonSymbols">
+                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                </property>
+                <property name="accelerated">
+                 <bool>true</bool>
+                </property>
+                <property name="correctionMode">
+                 <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                </property>
+                <property name="maximum">
+                 <number>65535</number>
+                </property>
+                <property name="value">
+                 <number>0</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+           </layout>
           </widget>
          </item>
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_81">
-         <item>
-          <widget class="QLabel" name="label_37">
-           <property name="text">
-            <string>Runs</string>
-           </property>
-           <property name="buddy">
-            <cstring>sb_runs</cstring>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="sb_runs">
-           <property name="minimumSize">
-            <size>
-             <width>75</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignCenter</set>
-           </property>
-           <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::PlusMinus</enum>
-           </property>
-           <property name="accelerated">
-            <bool>true</bool>
-           </property>
-           <property name="correctionMode">
-            <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-           </property>
-           <property name="maximum">
-            <number>65535</number>
-           </property>
-           <property name="value">
-            <number>0</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QGroupBox" name="groupBox_15">
-      <property name="geometry">
-       <rect>
-        <x>5</x>
-        <y>75</y>
-        <width>140</width>
-        <height>87</height>
-       </rect>
-      </property>
-      <property name="title">
-       <string>Money</string>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_44">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_78">
-         <item>
-          <widget class="QLabel" name="label_10">
-           <property name="text">
-            <string>Gil</string>
-           </property>
-           <property name="buddy">
-            <cstring>sb_gil</cstring>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="sb_gil">
-           <property name="minimumSize">
-            <size>
-             <width>100</width>
-             <height>0</height>
-            </size>
-           </property>
-           <property name="layoutDirection">
-            <enum>Qt::LeftToRight</enum>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-           <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::PlusMinus</enum>
-           </property>
-           <property name="accelerated">
-            <bool>true</bool>
-           </property>
-           <property name="correctionMode">
-            <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-           </property>
-           <property name="maximum">
-            <number>999999999</number>
-           </property>
-           <property name="value">
-            <number>0</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_79">
-         <item>
-          <widget class="QLabel" name="label_11">
-           <property name="text">
-            <string>GP</string>
-           </property>
-           <property name="buddy">
-            <cstring>sb_gp</cstring>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="sb_gp">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="minimumSize">
-            <size>
-             <width>100</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="maximumSize">
-            <size>
-             <width>92</width>
-             <height>23</height>
-            </size>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-           <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::PlusMinus</enum>
-           </property>
-           <property name="accelerated">
-            <bool>true</bool>
-           </property>
-           <property name="correctionMode">
-            <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-           </property>
-           <property name="maximum">
-            <number>10000</number>
-           </property>
-           <property name="value">
-            <number>0</number>
-           </property>
-          </widget>
-         </item>
-        </layout>
+        <widget class="QGroupBox" name="groupBox_5">
+         <property name="title">
+          <string>Click On A Char To edit ===========&gt;</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_2">
+          <property name="margin">
+           <number>0</number>
+          </property>
+          <property name="spacing">
+           <number>-1</number>
+          </property>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="btn_cloud">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>101</horstretch>
+              <verstretch>114</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="images.qrc">
+              <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="btn_barret">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>64</horstretch>
+              <verstretch>73</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="images.qrc">
+              <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="2">
+           <widget class="QPushButton" name="btn_tifa">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>64</horstretch>
+              <verstretch>73</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="images.qrc">
+              <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="btn_aeris">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>64</horstretch>
+              <verstretch>73</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="images.qrc">
+              <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="btn_red">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>64</horstretch>
+              <verstretch>73</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="images.qrc">
+              <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="2">
+           <widget class="QPushButton" name="btn_yuffie">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>64</horstretch>
+              <verstretch>73</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="images.qrc">
+              <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="btn_cait">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>64</horstretch>
+              <verstretch>73</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="images.qrc">
+              <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QPushButton" name="btn_vincent">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>64</horstretch>
+              <verstretch>73</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="images.qrc">
+              <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="2">
+           <widget class="QPushButton" name="btn_cid">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>101</horstretch>
+              <verstretch>73</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+            <property name="text">
+             <string/>
+            </property>
+            <property name="icon">
+             <iconset resource="images.qrc">
+              <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
+            </property>
+            <property name="iconSize">
+             <size>
+              <width>75</width>
+              <height>86</height>
+             </size>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
        </item>
       </layout>
      </widget>
