@@ -1841,7 +1841,7 @@ void SlotSelect::changeEvent(QEvent *e)
         break;
     }
 }
-
+/*
 void SlotSelect::on_btn_prev_clicked()
 {
     if (ui->stackedWidget->currentIndex()== 0) {return;}
@@ -1853,7 +1853,7 @@ void SlotSelect::on_btn_next_clicked()
     if (ui->stackedWidget->currentIndex()== 4) {return;}
     else{ui->stackedWidget->setCurrentIndex((ui->stackedWidget->currentIndex()+1));}
 }
-
+*/
 void SlotSelect::on_btn_s1_clicked()
 {
     s=0;SlotSelect::close();

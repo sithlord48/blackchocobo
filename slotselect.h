@@ -39,8 +39,8 @@ private slots:
 
 private slots:
 
-    void on_btn_next_clicked();
-    void on_btn_prev_clicked();
+  //  void on_btn_next_clicked();
+  //  void on_btn_prev_clicked();
     void on_btn_s1_clicked();
     void on_btn_s2_clicked();
     void on_btn_s3_clicked();
