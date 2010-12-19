@@ -24,6 +24,9 @@ SlotSelect::SlotSelect(QWidget *parent) :
 {
     ui->setupUi(this);
 /*~~~~~~~~~~SLOT 1~~~~~~~~~~*/
+    if(ff7.SG_Region_String[0] == ""){ui->s1_lbl_loc->setText("Empty Slot");}
+    else
+    {
     ui->s1_lcd_lvl->display(ff7.slot[0].desc.level);
     ui->s1_lcd_gil->display(double(ff7.slot[0].desc.gil));
     ui->s1_lcd_hr->display(int(ff7.slot[0].desc.time/3600));
@@ -143,7 +146,11 @@ SlotSelect::SlotSelect(QWidget *parent) :
         ui->s1_party3->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
     }
+}
 /*~~~~~~~~~~SLOT 2~~~~~~~~~~*/
+    if(ff7.SG_Region_String[1] == ""){ui->s2_lbl_loc->setText("Empty Slot");}
+    else
+    {
     ui->s2_lcd_lvl->display(ff7.slot[1].desc.level);
     ui->s2_lcd_gil->display(double(ff7.slot[1].desc.gil));
     ui->s2_lcd_hr->display(int(ff7.slot[1].desc.time/3600));
@@ -263,7 +270,11 @@ SlotSelect::SlotSelect(QWidget *parent) :
         ui->s2_party3->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
     }
+}
 /*~~~~~~~~~~SLOT 3~~~~~~~~~~*/
+    if(ff7.SG_Region_String[2] == ""){ui->s3_lbl_loc->setText("Empty Slot");}
+    else
+    {
     ui->s3_lcd_lvl->display(ff7.slot[2].desc.level);
     ui->s3_lcd_gil->display(double(ff7.slot[2].desc.gil));
     ui->s3_lcd_hr->display(int(ff7.slot[2].desc.time/3600));
@@ -383,7 +394,11 @@ SlotSelect::SlotSelect(QWidget *parent) :
         ui->s3_party3->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
     }
+}
 /*~~~~~~~~~~SLOT 4~~~~~~~~~~*/
+    if(ff7.SG_Region_String[3] == ""){ui->s4_lbl_loc->setText("Empty Slot");}
+    else
+    {
     ui->s4_lcd_lvl->display(ff7.slot[3].desc.level);
     ui->s4_lcd_gil->display(double(ff7.slot[3].desc.gil));
     ui->s4_lcd_hr->display(int(ff7.slot[3].desc.time/3600));
@@ -503,7 +518,11 @@ SlotSelect::SlotSelect(QWidget *parent) :
         ui->s4_party3->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
     }
+}
 /*~~~~~~~~~~SLOT 5~~~~~~~~~~*/
+    if(ff7.SG_Region_String[4] == ""){ui->s5_lbl_loc->setText("Empty Slot");}
+    else
+    {
     ui->s5_lcd_lvl->display(ff7.slot[4].desc.level);
     ui->s5_lcd_gil->display(double(ff7.slot[4].desc.gil));
     ui->s5_lcd_hr->display(int(ff7.slot[4].desc.time/3600));
@@ -623,7 +642,11 @@ SlotSelect::SlotSelect(QWidget *parent) :
         ui->s5_party3->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
     }
+}
 /*~~~~~~~~~~SLOT 6~~~~~~~~~~*/
+    if(ff7.SG_Region_String[5] == ""){ui->s6_lbl_loc->setText("Empty Slot");}
+    else
+    {
     ui->s6_lcd_lvl->display(ff7.slot[5].desc.level);
     ui->s6_lcd_gil->display(double(ff7.slot[5].desc.gil));
     ui->s6_lcd_hr->display(int(ff7.slot[5].desc.time/3600));
@@ -743,7 +766,11 @@ SlotSelect::SlotSelect(QWidget *parent) :
         ui->s6_party3->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
     }
+}
 /*~~~~~~~~~~SLOT 7~~~~~~~~~~*/
+    if(ff7.SG_Region_String[6] == ""){ui->s7_lbl_loc->setText("Empty Slot");}
+    else
+    {
     ui->s7_lcd_lvl->display(ff7.slot[6].desc.level);
     ui->s7_lcd_gil->display(double(ff7.slot[6].desc.gil));
     ui->s7_lcd_hr->display(int(ff7.slot[6].desc.time/3600));
@@ -863,7 +890,11 @@ SlotSelect::SlotSelect(QWidget *parent) :
         ui->s7_party3->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
     }
+}
 /*~~~~~~~~~~SLOT 8~~~~~~~~~~*/
+    if(ff7.SG_Region_String[7] == ""){ui->s8_lbl_loc->setText("Empty Slot");}
+    else
+    {
     ui->s8_lcd_lvl->display(ff7.slot[7].desc.level);
     ui->s8_lcd_gil->display(double(ff7.slot[7].desc.gil));
     ui->s8_lcd_hr->display(int(ff7.slot[7].desc.time/3600));
@@ -983,7 +1014,11 @@ SlotSelect::SlotSelect(QWidget *parent) :
          ui->s8_party3->setPixmap(QPixmap(":/icon/sep_icon"));
          break;
      }
+}
 /*~~~~~~~~~~SLOT 9~~~~~~~~~~*/
+    if(ff7.SG_Region_String[8] == ""){ui->s9_lbl_loc->setText("Empty Slot");}
+    else
+    {
     ui->s9_lcd_lvl->display(ff7.slot[8].desc.level);
     ui->s9_lcd_gil->display(double(ff7.slot[8].desc.gil));
     ui->s9_lcd_hr->display(int(ff7.slot[8].desc.time/3600));
@@ -1103,10 +1138,13 @@ SlotSelect::SlotSelect(QWidget *parent) :
         ui->s9_party3->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
     }
+}
 /*~~~~~~~~~~SLOT 10~~~~~~~~~~*/
+    if(ff7.SG_Region_String[9] == ""){ui->s10_lbl_loc->setText("Empty Slot");}
+    else
+    {
     ui->s10_lcd_lvl->display(ff7.slot[9].desc.level);
     ui->s10_lcd_gil->display(double(ff7.slot[9].desc.gil));
-
     ui->s10_lcd_hr->display(int(ff7.slot[9].desc.time/3600));
     ui->s10_lcd_min->display(int(ff7.slot[9].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
@@ -1224,7 +1262,11 @@ SlotSelect::SlotSelect(QWidget *parent) :
         ui->s10_party3->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
     }
+}
 /*~~~~~~~~~~SLOT 11~~~~~~~~~~*/
+    if(ff7.SG_Region_String[10] == ""){ui->s11_lbl_loc->setText("Empty Slot");}
+    else
+    {
     ui->s11_lcd_lvl->display(ff7.slot[10].desc.level);
     ui->s11_lcd_gil->display(double(ff7.slot[10].desc.gil));
     ui->s11_lcd_hr->display(int(ff7.slot[10].desc.time/3600));
@@ -1344,7 +1386,11 @@ SlotSelect::SlotSelect(QWidget *parent) :
         ui->s11_party3->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
     }
+}
 /*~~~~~~~~~~SLOT 12~~~~~~~~~~*/
+    if(ff7.SG_Region_String[11] == ""){ui->s12_lbl_loc->setText("Empty Slot");}
+    else
+    {
     ui->s12_lcd_lvl->display(ff7.slot[11].desc.level);
     ui->s12_lcd_gil->display(double(ff7.slot[11].desc.gil));
     ui->s12_lcd_hr->display(int(ff7.slot[11].desc.time/3600));
@@ -1464,7 +1510,11 @@ SlotSelect::SlotSelect(QWidget *parent) :
         ui->s12_party3->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
     }
+}
 /*~~~~~~~~~~SLOT 13~~~~~~~~~~*/
+    if(ff7.SG_Region_String[12] == ""){ui->s13_lbl_loc->setText("Empty Slot");}
+    else
+    {
     ui->s13_lcd_lvl->display(ff7.slot[12].desc.level);
     ui->s13_lcd_gil->display(double(ff7.slot[12].desc.gil));
     ui->s13_lcd_hr->display(int(ff7.slot[12].desc.time/3600));
@@ -1584,7 +1634,11 @@ SlotSelect::SlotSelect(QWidget *parent) :
          ui->s13_party3->setPixmap(QPixmap(":/icon/sep_icon"));
          break;
      }
+}
 /*~~~~~~~~~~SLOT 14~~~~~~~~~~*/
+    if(ff7.SG_Region_String[13] == ""){ui->s14_lbl_loc->setText("Empty Slot");}
+    else
+    {
     ui->s14_lcd_lvl->display(ff7.slot[13].desc.level);
     ui->s14_lcd_gil->display(double(ff7.slot[13].desc.gil));
     ui->s14_lcd_hr->display(int(ff7.slot[13].desc.time/3600));
@@ -1704,7 +1758,11 @@ SlotSelect::SlotSelect(QWidget *parent) :
         ui->s14_party3->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
     }
+}
 /*~~~~~~~~~~SLOT 15~~~~~~~~~~*/
+    if(ff7.SG_Region_String[14] == ""){ui->s15_lbl_loc->setText("Empty Slot");}
+    else
+    {
     ui->s15_lcd_lvl->display(ff7.slot[14].desc.level);
     ui->s15_lcd_gil->display(double(ff7.slot[14].desc.gil));
     ui->s15_lcd_hr->display(int(ff7.slot[14].desc.time/3600));
@@ -1824,6 +1882,7 @@ SlotSelect::SlotSelect(QWidget *parent) :
         ui->s15_party3->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
     }
+}
 }//end of new ui
 SlotSelect::~SlotSelect()
 {
