@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>618</width>
-    <height>361</height>
+    <width>616</width>
+    <height>359</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -25,6 +25,11 @@
   <property name="windowIcon">
    <iconset resource="images.qrc">
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(48, 47, 47);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+</string>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -53,6 +58,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(32, 31, 31);</string>
+          </property>
          </widget>
         </item>
         <item>
@@ -62,6 +70,11 @@
             <width>23</width>
             <height>23</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(67, 66, 65);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+</string>
           </property>
           <property name="text">
            <string>...</string>
@@ -94,6 +107,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(32, 31, 31);</string>
+          </property>
          </widget>
         </item>
         <item>
@@ -103,6 +119,11 @@
             <width>23</width>
             <height>23</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(67, 66, 65);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+</string>
           </property>
           <property name="text">
            <string>...</string>
@@ -150,6 +171,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(32, 31, 31);</string>
+          </property>
          </widget>
         </item>
         <item>
@@ -165,6 +189,11 @@
             <width>23</width>
             <height>23</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(67, 66, 65);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+</string>
           </property>
           <property name="text">
            <string>...</string>
@@ -197,6 +226,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(32, 31, 31);</string>
+          </property>
          </widget>
         </item>
         <item>
@@ -212,6 +244,11 @@
             <width>23</width>
             <height>23</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(67, 66, 65);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+</string>
           </property>
           <property name="text">
            <string>...</string>
@@ -259,6 +296,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(32, 31, 31);</string>
+          </property>
          </widget>
         </item>
         <item>
@@ -289,6 +329,11 @@
             <width>23</width>
             <height>23</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(67, 66, 65);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+</string>
           </property>
           <property name="text">
            <string>...</string>
@@ -321,6 +366,9 @@
             <verstretch>0</verstretch>
            </sizepolicy>
           </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(32, 31, 31);</string>
+          </property>
          </widget>
         </item>
         <item>
@@ -345,6 +393,11 @@
             <width>23</width>
             <height>23</height>
            </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(67, 66, 65);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+</string>
           </property>
           <property name="text">
            <string>...</string>
@@ -386,6 +439,11 @@
      </item>
      <item>
       <widget class="QPushButton" name="pushButton">
+       <property name="styleSheet">
+        <string notr="true">background-color: rgb(67, 66, 65);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+</string>
+       </property>
        <property name="text">
         <string>&amp;Ok</string>
        </property>
