@@ -249,23 +249,23 @@ void MainWindow::loadFileFull(const QString &fileName)
     /*~~~~~~~End Load~~~~~~~~~~~~~~*/
     if (ff7.savetype == 1)
     {
+        if(ff7.slot[0].checksum != 0x00 && ff7.slot[0].checksum != 0x4D1D){ff7.SG_Region_String[0]= "BASLUS-94163FF7-S01";} else {ff7.SG_Region_String[0] = "";}
+        if(ff7.slot[1].checksum != 0x00 && ff7.slot[1].checksum != 0x4D1D){ff7.SG_Region_String[1]= "BASLUS-94163FF7-S02";} else {ff7.SG_Region_String[1] = "";}
+        if(ff7.slot[2].checksum != 0x00 && ff7.slot[2].checksum != 0x4D1D){ff7.SG_Region_String[2]= "BASLUS-94163FF7-S03";} else {ff7.SG_Region_String[2] = "";}
+        if(ff7.slot[3].checksum != 0x00 && ff7.slot[3].checksum != 0x4D1D){ff7.SG_Region_String[3]= "BASLUS-94163FF7-S04";} else {ff7.SG_Region_String[3] = "";}
+        if(ff7.slot[4].checksum != 0x00 && ff7.slot[4].checksum != 0x4D1D){ff7.SG_Region_String[4]= "BASLUS-94163FF7-S05";} else {ff7.SG_Region_String[4] = "";}
+        if(ff7.slot[5].checksum != 0x00 && ff7.slot[5].checksum != 0x4D1D){ff7.SG_Region_String[5]= "BASLUS-94163FF7-S06";} else {ff7.SG_Region_String[5] = "";}
+        if(ff7.slot[6].checksum != 0x00 && ff7.slot[6].checksum != 0x4D1D){ff7.SG_Region_String[6]= "BASLUS-94163FF7-S07";} else {ff7.SG_Region_String[6] = "";}
+        if(ff7.slot[7].checksum != 0x00 && ff7.slot[7].checksum != 0x4D1D){ff7.SG_Region_String[7]= "BASLUS-94163FF7-S08";} else {ff7.SG_Region_String[7] = "";}
+        if(ff7.slot[8].checksum != 0x00 && ff7.slot[8].checksum != 0x4D1D){ff7.SG_Region_String[8]= "BASLUS-94163FF7-S09";} else {ff7.SG_Region_String[8] = "";}
+        if(ff7.slot[9].checksum != 0x00 && ff7.slot[9].checksum != 0x4D1D){ff7.SG_Region_String[9]= "BASLUS-94163FF7-S10";} else {ff7.SG_Region_String[9] = "";}
+        if(ff7.slot[10].checksum != 0x00 && ff7.slot[10].checksum != 0x4D1D){ff7.SG_Region_String[10]= "BASLUS-94163FF7-S11";} else {ff7.SG_Region_String[10] = "";}
+        if(ff7.slot[11].checksum != 0x00 && ff7.slot[11].checksum != 0x4D1D){ff7.SG_Region_String[11]= "BASLUS-94163FF7-S12";} else {ff7.SG_Region_String[11] = "";}
+        if(ff7.slot[12].checksum != 0x00 && ff7.slot[12].checksum != 0x4D1D){ff7.SG_Region_String[12]= "BASLUS-94163FF7-S13";} else {ff7.SG_Region_String[12] = "";}
+        if(ff7.slot[13].checksum != 0x00 && ff7.slot[13].checksum != 0x4D1D){ff7.SG_Region_String[13]= "BASLUS-94163FF7-S14";} else {ff7.SG_Region_String[13] = "";}
+        if(ff7.slot[14].checksum != 0x00 && ff7.slot[14].checksum != 0x4D1D){ff7.SG_Region_String[14]= "BASLUS-94163FF7-S15";} else {ff7.SG_Region_String[14] = "";}
         SlotSelect slotselect;
         slotselect.exec();
-        ff7.SG_Region_String[0]= "BASLUS-94163FF7-S01";
-        ff7.SG_Region_String[1]= "BASLUS-94163FF7-S02";
-        ff7.SG_Region_String[2]= "BASLUS-94163FF7-S03";
-        ff7.SG_Region_String[3]= "BASLUS-94163FF7-S04";
-        ff7.SG_Region_String[4]= "BASLUS-94163FF7-S05";
-        ff7.SG_Region_String[5]= "BASLUS-94163FF7-S06";
-        ff7.SG_Region_String[6]= "BASLUS-94163FF7-S07";
-        ff7.SG_Region_String[7]= "BASLUS-94163FF7-S08";
-        ff7.SG_Region_String[8]= "BASLUS-94163FF7-S09";
-        ff7.SG_Region_String[9]= "BASLUS-94163FF7-S10";
-        ff7.SG_Region_String[10]= "BASLUS-94163FF7-S11";
-        ff7.SG_Region_String[11]= "BASLUS-94163FF7-S12";
-        ff7.SG_Region_String[12]= "BASLUS-94163FF7-S13";
-        ff7.SG_Region_String[13]= "BASLUS-94163FF7-S14";
-        ff7.SG_Region_String[14]= "BASLUS-94163FF7-S15";
     }
 
     else if (ff7.savetype == 2 || ff7.savetype == 4)
