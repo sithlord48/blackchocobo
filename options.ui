@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>614</width>
+    <width>612</width>
     <height>359</height>
    </rect>
   </property>
@@ -27,7 +27,7 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QLabel:enabled,QDialog{
+   <string notr="true">QGroupBox,QLabel:enabled,QDialog{
 background-color:rgb(48, 47, 47);
 font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
 }
@@ -47,7 +47,8 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
 QPushButton:disabled,QLineEdit:disabled,QSpinBox:disabled,QTableWidget:disabled,QListWidget:disabled{
 background-color:rgb(48, 47, 47);
 font: 9pt &quot;Ubuntu&quot;;color:rgb(74, 80, 73);
-}</string>
+}
+</string>
   </property>
   <property name="modal">
    <bool>true</bool>

@@ -39,8 +39,13 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(48, 47, 47);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+   <string notr="true">QLabel{
+font: 75 14pt &quot;Verdana&quot;;color:rgb(255, 255, 255)
+}
+QPushButton{
+background-color: rgb(65, 64, 63);
+font: 9pt &quot;Ubuntu&quot;;color: rgb(255,255,255);
+}
 </string>
   </property>
   <property name="modal">
@@ -62,14 +67,7 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">QLabel{
-font: 75 14pt &quot;Verdana&quot;;color:rgb(255, 255, 255)
-}
-QPushButton{
-background-color: rgb(65, 64, 63);
-font: 9pt &quot;Ubuntu&quot;;color: rgb(255,255,255);
-}
-
+    <string notr="true">
 </string>
    </property>
    <property name="widgetResizable">
@@ -109,7 +107,8 @@ font: 9pt &quot;Ubuntu&quot;;color: rgb(255,255,255);
         <item row="0" column="0" colspan="3">
          <widget class="QPushButton" name="btn_s1">
           <property name="styleSheet">
-           <string notr="true"/>
+           <string notr="true">
+</string>
           </property>
           <property name="text">
            <string>Load Slot 1</string>
