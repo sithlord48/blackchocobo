@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>616</width>
+    <width>614</width>
     <height>359</height>
    </rect>
   </property>
@@ -27,9 +27,27 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(48, 47, 47);
+   <string notr="true">QLabel:enabled,QDialog{
+background-color:rgb(48, 47, 47);
 font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-</string>
+}
+
+QLineEdit:enabled{
+background-color: rgb(32, 31, 31);
+selection-background-color: rgb(24, 72, 128);
+selection-color: rgb(255,255,255);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+}
+
+QPushButton:enabled{
+background-color: rgb(67, 66, 65);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+}
+
+QPushButton:disabled,QLineEdit:disabled,QSpinBox:disabled,QTableWidget:disabled,QListWidget:disabled{
+background-color:rgb(48, 47, 47);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(74, 80, 73);
+}</string>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -59,7 +77,7 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
            </sizepolicy>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(32, 31, 31);</string>
+           <string notr="true"/>
           </property>
          </widget>
         </item>
@@ -72,9 +90,7 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(67, 66, 65);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>...</string>
@@ -108,7 +124,7 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
            </sizepolicy>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(32, 31, 31);</string>
+           <string notr="true"/>
           </property>
          </widget>
         </item>
@@ -121,9 +137,7 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(67, 66, 65);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>...</string>
@@ -172,7 +186,7 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
            </sizepolicy>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(32, 31, 31);</string>
+           <string notr="true"/>
           </property>
          </widget>
         </item>
@@ -191,9 +205,7 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(67, 66, 65);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>...</string>
@@ -227,7 +239,7 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
            </sizepolicy>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(32, 31, 31);</string>
+           <string notr="true"/>
           </property>
          </widget>
         </item>
@@ -246,9 +258,7 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(67, 66, 65);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>...</string>
@@ -297,7 +307,7 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
            </sizepolicy>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(32, 31, 31);</string>
+           <string notr="true"/>
           </property>
          </widget>
         </item>
@@ -331,9 +341,7 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(67, 66, 65);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>...</string>
@@ -367,7 +375,7 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
            </sizepolicy>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(32, 31, 31);</string>
+           <string notr="true"/>
           </property>
          </widget>
         </item>
@@ -395,9 +403,7 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
            </size>
           </property>
           <property name="styleSheet">
-           <string notr="true">background-color: rgb(67, 66, 65);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>...</string>
@@ -440,9 +446,7 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
      <item>
       <widget class="QPushButton" name="pushButton">
        <property name="styleSheet">
-        <string notr="true">background-color: rgb(67, 66, 65);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-</string>
+        <string notr="true"/>
        </property>
        <property name="text">
         <string>&amp;Ok</string>
