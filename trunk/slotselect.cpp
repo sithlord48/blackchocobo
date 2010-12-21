@@ -16,6 +16,7 @@
 #include "slotselect.h"
 #include "ui_slotselect.h"
 #include "globals.h"
+#include "QMessageBox"
 extern FF7 ff7;
 extern int s;
 SlotSelect::SlotSelect(QWidget *parent) :
@@ -27,10 +28,26 @@ SlotSelect::SlotSelect(QWidget *parent) :
     if(ff7.SG_Region_String[0] == ""){ui->s1_lbl_loc->setText("Empty Slot");}
     else
     {
-    ui->s1_lcd_lvl->display(ff7.slot[0].desc.level);
-    ui->s1_lcd_gil->display(double(ff7.slot[0].desc.gil));
-    ui->s1_lcd_hr->display(int(ff7.slot[0].desc.time/3600));
-    ui->s1_lcd_min->display(int(ff7.slot[0].desc.time/60 %60));
+    //theme the box
+    QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
+    style.append(QString::number(ff7.slot[0].colors[0][0]));
+    style.append(",");
+    style.append(QString::number(ff7.slot[0].colors[0][1]));
+    style.append(",");
+    style.append(QString::number(ff7.slot[0].colors[0][2]));
+    style.append(", 255), stop:1 rgba(");
+    style.append(QString::number(ff7.slot[0].colors[2][0]));
+    style.append(",");
+    style.append(QString::number(ff7.slot[0].colors[2][1]));
+    style.append(",");
+    style.append(QString::number(ff7.slot[0].colors[2][2]));
+    style.append(", 255));");
+    ui->s1_box->setStyleSheet(style);
+    //set info
+    ui->s1_lbl_lvl->setText(QString::number(ff7.slot[0].desc.level));
+    ui->s1_lbl_gil->setText(QString::number(ff7.slot[0].desc.gil));
+    ui->s1_lbl_hr->setText(QString::number(ff7.slot[0].desc.time/3600));
+    ui->s1_lbl_min->setText(QString::number(ff7.slot[0].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
     {
         if (chPC[ff7.slot[0].desc.location[loc]]=='\0'){break;}
@@ -151,10 +168,26 @@ SlotSelect::SlotSelect(QWidget *parent) :
     if(ff7.SG_Region_String[1] == ""){ui->s2_lbl_loc->setText("Empty Slot");}
     else
     {
-    ui->s2_lcd_lvl->display(ff7.slot[1].desc.level);
-    ui->s2_lcd_gil->display(double(ff7.slot[1].desc.gil));
-    ui->s2_lcd_hr->display(int(ff7.slot[1].desc.time/3600));
-    ui->s2_lcd_min->display(int(ff7.slot[1].desc.time/60 %60));
+        //theme the box
+        QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
+        style.append(QString::number(ff7.slot[1].colors[0][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[1].colors[0][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[1].colors[0][2]));
+        style.append(", 255), stop:1 rgba(");
+        style.append(QString::number(ff7.slot[1].colors[2][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[1].colors[2][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[1].colors[2][2]));
+        style.append(", 255));");
+        ui->s2_box->setStyleSheet(style);
+        //set info
+        ui->s2_lbl_lvl->setText(QString::number(ff7.slot[1].desc.level));
+        ui->s2_lbl_gil->setText(QString::number(ff7.slot[1].desc.gil));
+        ui->s2_lbl_hr->setText(QString::number(ff7.slot[1].desc.time/3600));
+        ui->s2_lbl_min->setText(QString::number(ff7.slot[1].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
     {
         if (chPC[ff7.slot[1].desc.location[loc]]=='\0'){break;}
@@ -275,10 +308,26 @@ SlotSelect::SlotSelect(QWidget *parent) :
     if(ff7.SG_Region_String[2] == ""){ui->s3_lbl_loc->setText("Empty Slot");}
     else
     {
-    ui->s3_lcd_lvl->display(ff7.slot[2].desc.level);
-    ui->s3_lcd_gil->display(double(ff7.slot[2].desc.gil));
-    ui->s3_lcd_hr->display(int(ff7.slot[2].desc.time/3600));
-    ui->s3_lcd_min->display(int(ff7.slot[2].desc.time/60 %60));
+        //theme the box
+        QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
+        style.append(QString::number(ff7.slot[2].colors[0][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[2].colors[0][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[2].colors[0][2]));
+        style.append(", 255), stop:1 rgba(");
+        style.append(QString::number(ff7.slot[2].colors[2][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[2].colors[2][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[2].colors[2][2]));
+        style.append(", 255));");
+        ui->s3_box->setStyleSheet(style);
+        //set info
+        ui->s3_lbl_lvl->setText(QString::number(ff7.slot[2].desc.level));
+        ui->s3_lbl_gil->setText(QString::number(ff7.slot[2].desc.gil));
+        ui->s3_lbl_hr->setText(QString::number(ff7.slot[2].desc.time/3600));
+        ui->s3_lbl_min->setText(QString::number(ff7.slot[2].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
     {
         if (chPC[ff7.slot[2].desc.location[loc]]=='\0'){break;}
@@ -399,10 +448,26 @@ SlotSelect::SlotSelect(QWidget *parent) :
     if(ff7.SG_Region_String[3] == ""){ui->s4_lbl_loc->setText("Empty Slot");}
     else
     {
-    ui->s4_lcd_lvl->display(ff7.slot[3].desc.level);
-    ui->s4_lcd_gil->display(double(ff7.slot[3].desc.gil));
-    ui->s4_lcd_hr->display(int(ff7.slot[3].desc.time/3600));
-    ui->s4_lcd_min->display(int(ff7.slot[3].desc.time/60 %60));
+        //theme the box
+        QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
+        style.append(QString::number(ff7.slot[3].colors[0][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[3].colors[0][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[3].colors[0][2]));
+        style.append(", 255), stop:1 rgba(");
+        style.append(QString::number(ff7.slot[3].colors[2][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[3].colors[2][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[3].colors[2][2]));
+        style.append(", 255));");
+        ui->s4_box->setStyleSheet(style);
+        //set info
+        ui->s4_lbl_lvl->setText(QString::number(ff7.slot[3].desc.level));
+        ui->s4_lbl_gil->setText(QString::number(ff7.slot[3].desc.gil));
+        ui->s4_lbl_hr->setText(QString::number(ff7.slot[3].desc.time/3600));
+        ui->s4_lbl_min->setText(QString::number(ff7.slot[3].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
     {
         if (chPC[ff7.slot[3].desc.location[loc]]=='\0'){break;}
@@ -522,11 +587,26 @@ SlotSelect::SlotSelect(QWidget *parent) :
 /*~~~~~~~~~~SLOT 5~~~~~~~~~~*/
     if(ff7.SG_Region_String[4] == ""){ui->s5_lbl_loc->setText("Empty Slot");}
     else
-    {
-    ui->s5_lcd_lvl->display(ff7.slot[4].desc.level);
-    ui->s5_lcd_gil->display(double(ff7.slot[4].desc.gil));
-    ui->s5_lcd_hr->display(int(ff7.slot[4].desc.time/3600));
-    ui->s5_lcd_min->display(int(ff7.slot[4].desc.time/60 %60));
+    {   //theme the box
+        QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
+        style.append(QString::number(ff7.slot[4].colors[0][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[4].colors[0][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[4].colors[0][2]));
+        style.append(", 255), stop:1 rgba(");
+        style.append(QString::number(ff7.slot[4].colors[2][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[4].colors[2][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[4].colors[2][2]));
+        style.append(", 255));");
+        ui->s5_box->setStyleSheet(style);
+        //set info
+        ui->s5_lbl_lvl->setText(QString::number(ff7.slot[4].desc.level));
+        ui->s5_lbl_gil->setText(QString::number(ff7.slot[4].desc.gil));
+        ui->s5_lbl_hr->setText(QString::number(ff7.slot[4].desc.time/3600));
+        ui->s5_lbl_min->setText(QString::number(ff7.slot[4].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
     {
         if (chPC[ff7.slot[4].desc.location[loc]]=='\0'){break;}
@@ -647,10 +727,26 @@ SlotSelect::SlotSelect(QWidget *parent) :
     if(ff7.SG_Region_String[5] == ""){ui->s6_lbl_loc->setText("Empty Slot");}
     else
     {
-    ui->s6_lcd_lvl->display(ff7.slot[5].desc.level);
-    ui->s6_lcd_gil->display(double(ff7.slot[5].desc.gil));
-    ui->s6_lcd_hr->display(int(ff7.slot[5].desc.time/3600));
-    ui->s6_lcd_min->display(int(ff7.slot[5].desc.time/60 %60));
+        //theme the box
+        QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
+        style.append(QString::number(ff7.slot[5].colors[0][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[5].colors[0][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[5].colors[0][2]));
+        style.append(", 255), stop:1 rgba(");
+        style.append(QString::number(ff7.slot[5].colors[2][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[5].colors[2][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[5].colors[2][2]));
+        style.append(", 255));");
+        ui->s6_box->setStyleSheet(style);
+        //set info
+        ui->s6_lbl_lvl->setText(QString::number(ff7.slot[5].desc.level));
+        ui->s6_lbl_gil->setText(QString::number(ff7.slot[5].desc.gil));
+        ui->s6_lbl_hr->setText(QString::number(ff7.slot[5].desc.time/3600));
+        ui->s6_lbl_min->setText(QString::number(ff7.slot[5].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
     {
         if (chPC[ff7.slot[5].desc.location[loc]]=='\0'){break;}
@@ -771,10 +867,26 @@ SlotSelect::SlotSelect(QWidget *parent) :
     if(ff7.SG_Region_String[6] == ""){ui->s7_lbl_loc->setText("Empty Slot");}
     else
     {
-    ui->s7_lcd_lvl->display(ff7.slot[6].desc.level);
-    ui->s7_lcd_gil->display(double(ff7.slot[6].desc.gil));
-    ui->s7_lcd_hr->display(int(ff7.slot[6].desc.time/3600));
-    ui->s7_lcd_min->display(int(ff7.slot[6].desc.time/60 %60));
+        //theme the box
+        QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
+        style.append(QString::number(ff7.slot[6].colors[0][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[6].colors[0][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[6].colors[0][2]));
+        style.append(", 255), stop:1 rgba(");
+        style.append(QString::number(ff7.slot[6].colors[2][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[6].colors[2][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[6].colors[2][2]));
+        style.append(", 255));");
+        ui->s7_box->setStyleSheet(style);
+        //set info
+        ui->s7_lbl_lvl->setText(QString::number(ff7.slot[6].desc.level));
+        ui->s7_lbl_gil->setText(QString::number(ff7.slot[6].desc.gil));
+        ui->s7_lbl_hr->setText(QString::number(ff7.slot[6].desc.time/3600));
+        ui->s7_lbl_min->setText(QString::number(ff7.slot[6].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
     {
         if (chPC[ff7.slot[6].desc.location[loc]]=='\0'){break;}
@@ -895,10 +1007,26 @@ SlotSelect::SlotSelect(QWidget *parent) :
     if(ff7.SG_Region_String[7] == ""){ui->s8_lbl_loc->setText("Empty Slot");}
     else
     {
-    ui->s8_lcd_lvl->display(ff7.slot[7].desc.level);
-    ui->s8_lcd_gil->display(double(ff7.slot[7].desc.gil));
-    ui->s8_lcd_hr->display(int(ff7.slot[7].desc.time/3600));
-    ui->s8_lcd_min->display(int(ff7.slot[7].desc.time/60 %60));
+        //theme the box
+        QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
+        style.append(QString::number(ff7.slot[7].colors[0][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[7].colors[0][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[7].colors[0][2]));
+        style.append(", 255), stop:1 rgba(");
+        style.append(QString::number(ff7.slot[7].colors[2][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[7].colors[2][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[7].colors[2][2]));
+        style.append(", 255));");
+        ui->s8_box->setStyleSheet(style);
+        //set info
+        ui->s8_lbl_lvl->setText(QString::number(ff7.slot[7].desc.level));
+        ui->s8_lbl_gil->setText(QString::number(ff7.slot[7].desc.gil));
+        ui->s8_lbl_hr->setText(QString::number(ff7.slot[7].desc.time/3600));
+        ui->s8_lbl_min->setText(QString::number(ff7.slot[7].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
     {
         if (chPC[ff7.slot[7].desc.location[loc]]=='\0'){break;}
@@ -1019,10 +1147,26 @@ SlotSelect::SlotSelect(QWidget *parent) :
     if(ff7.SG_Region_String[8] == ""){ui->s9_lbl_loc->setText("Empty Slot");}
     else
     {
-    ui->s9_lcd_lvl->display(ff7.slot[8].desc.level);
-    ui->s9_lcd_gil->display(double(ff7.slot[8].desc.gil));
-    ui->s9_lcd_hr->display(int(ff7.slot[8].desc.time/3600));
-    ui->s9_lcd_min->display(int(ff7.slot[8].desc.time/60 %60));
+        //theme the box
+        QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
+        style.append(QString::number(ff7.slot[8].colors[0][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[8].colors[0][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[8].colors[0][2]));
+        style.append(", 255), stop:1 rgba(");
+        style.append(QString::number(ff7.slot[8].colors[2][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[8].colors[2][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[8].colors[2][2]));
+        style.append(", 255));");
+        ui->s9_box->setStyleSheet(style);
+        //set info
+        ui->s9_lbl_lvl->setText(QString::number(ff7.slot[8].desc.level));
+        ui->s9_lbl_gil->setText(QString::number(ff7.slot[8].desc.gil));
+        ui->s9_lbl_hr->setText(QString::number(ff7.slot[8].desc.time/3600));
+        ui->s9_lbl_min->setText(QString::number(ff7.slot[8].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
     {
         if (chPC[ff7.slot[8].desc.location[loc]]=='\0'){break;}
@@ -1143,10 +1287,26 @@ SlotSelect::SlotSelect(QWidget *parent) :
     if(ff7.SG_Region_String[9] == ""){ui->s10_lbl_loc->setText("Empty Slot");}
     else
     {
-    ui->s10_lcd_lvl->display(ff7.slot[9].desc.level);
-    ui->s10_lcd_gil->display(double(ff7.slot[9].desc.gil));
-    ui->s10_lcd_hr->display(int(ff7.slot[9].desc.time/3600));
-    ui->s10_lcd_min->display(int(ff7.slot[9].desc.time/60 %60));
+        //theme the box
+        QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
+        style.append(QString::number(ff7.slot[9].colors[0][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[9].colors[0][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[9].colors[0][2]));
+        style.append(", 255), stop:1 rgba(");
+        style.append(QString::number(ff7.slot[9].colors[2][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[9].colors[2][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[9].colors[2][2]));
+        style.append(", 255));");
+        ui->s10_box->setStyleSheet(style);
+        //set info
+        ui->s10_lbl_lvl->setText(QString::number(ff7.slot[9].desc.level));
+        ui->s10_lbl_gil->setText(QString::number(ff7.slot[9].desc.gil));
+        ui->s10_lbl_hr->setText(QString::number(ff7.slot[9].desc.time/3600));
+        ui->s10_lbl_min->setText(QString::number(ff7.slot[9].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
     {
         if (chPC[ff7.slot[9].desc.location[loc]]=='\0'){break;}
@@ -1267,10 +1427,26 @@ SlotSelect::SlotSelect(QWidget *parent) :
     if(ff7.SG_Region_String[10] == ""){ui->s11_lbl_loc->setText("Empty Slot");}
     else
     {
-    ui->s11_lcd_lvl->display(ff7.slot[10].desc.level);
-    ui->s11_lcd_gil->display(double(ff7.slot[10].desc.gil));
-    ui->s11_lcd_hr->display(int(ff7.slot[10].desc.time/3600));
-    ui->s11_lcd_min->display(int(ff7.slot[10].desc.time/60 %60));
+        //theme the box
+        QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
+        style.append(QString::number(ff7.slot[10].colors[0][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[10].colors[0][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[10].colors[0][2]));
+        style.append(", 255), stop:1 rgba(");
+        style.append(QString::number(ff7.slot[10].colors[2][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[10].colors[2][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[10].colors[2][2]));
+        style.append(", 255));");
+        ui->s11_box->setStyleSheet(style);
+        //set info
+        ui->s11_lbl_lvl->setText(QString::number(ff7.slot[10].desc.level));
+        ui->s11_lbl_gil->setText(QString::number(ff7.slot[10].desc.gil));
+        ui->s11_lbl_hr->setText(QString::number(ff7.slot[10].desc.time/3600));
+        ui->s11_lbl_min->setText(QString::number(ff7.slot[10].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
     {
         if (chPC[ff7.slot[10].desc.location[loc]]=='\0'){break;}
@@ -1391,10 +1567,26 @@ SlotSelect::SlotSelect(QWidget *parent) :
     if(ff7.SG_Region_String[11] == ""){ui->s12_lbl_loc->setText("Empty Slot");}
     else
     {
-    ui->s12_lcd_lvl->display(ff7.slot[11].desc.level);
-    ui->s12_lcd_gil->display(double(ff7.slot[11].desc.gil));
-    ui->s12_lcd_hr->display(int(ff7.slot[11].desc.time/3600));
-    ui->s12_lcd_min->display(int(ff7.slot[11].desc.time/60 %60));
+        //theme the box
+        QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
+        style.append(QString::number(ff7.slot[11].colors[0][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[11].colors[0][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[11].colors[0][2]));
+        style.append(", 255), stop:1 rgba(");
+        style.append(QString::number(ff7.slot[11].colors[2][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[11].colors[2][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[11].colors[2][2]));
+        style.append(", 255));");
+        ui->s12_box->setStyleSheet(style);
+        //set info
+        ui->s12_lbl_lvl->setText(QString::number(ff7.slot[11].desc.level));
+        ui->s12_lbl_gil->setText(QString::number(ff7.slot[11].desc.gil));
+        ui->s12_lbl_hr->setText(QString::number(ff7.slot[11].desc.time/3600));
+        ui->s12_lbl_min->setText(QString::number(ff7.slot[11].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
     {
         if (chPC[ff7.slot[11].desc.location[loc]]=='\0'){break;}
@@ -1515,10 +1707,26 @@ SlotSelect::SlotSelect(QWidget *parent) :
     if(ff7.SG_Region_String[12] == ""){ui->s13_lbl_loc->setText("Empty Slot");}
     else
     {
-    ui->s13_lcd_lvl->display(ff7.slot[12].desc.level);
-    ui->s13_lcd_gil->display(double(ff7.slot[12].desc.gil));
-    ui->s13_lcd_hr->display(int(ff7.slot[12].desc.time/3600));
-    ui->s13_lcd_min->display(int(ff7.slot[12].desc.time/60 %60));
+        //theme the box
+        QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
+        style.append(QString::number(ff7.slot[12].colors[0][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[12].colors[0][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[12].colors[0][2]));
+        style.append(", 255), stop:1 rgba(");
+        style.append(QString::number(ff7.slot[12].colors[2][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[12].colors[2][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[12].colors[2][2]));
+        style.append(", 255));");
+        ui->s13_box->setStyleSheet(style);
+        //set info
+        ui->s13_lbl_lvl->setText(QString::number(ff7.slot[12].desc.level));
+        ui->s13_lbl_gil->setText(QString::number(ff7.slot[12].desc.gil));
+        ui->s13_lbl_hr->setText(QString::number(ff7.slot[12].desc.time/3600));
+        ui->s13_lbl_min->setText(QString::number(ff7.slot[12].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
     {
         if (chPC[ff7.slot[12].desc.location[loc]]=='\0'){break;}
@@ -1639,10 +1847,26 @@ SlotSelect::SlotSelect(QWidget *parent) :
     if(ff7.SG_Region_String[13] == ""){ui->s14_lbl_loc->setText("Empty Slot");}
     else
     {
-    ui->s14_lcd_lvl->display(ff7.slot[13].desc.level);
-    ui->s14_lcd_gil->display(double(ff7.slot[13].desc.gil));
-    ui->s14_lcd_hr->display(int(ff7.slot[13].desc.time/3600));
-    ui->s14_lcd_min->display(int(ff7.slot[13].desc.time/60 %60));
+        //theme the box
+        QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
+        style.append(QString::number(ff7.slot[13].colors[0][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[13].colors[0][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[13].colors[0][2]));
+        style.append(", 255), stop:1 rgba(");
+        style.append(QString::number(ff7.slot[13].colors[2][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[13].colors[2][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[13].colors[2][2]));
+        style.append(", 255));");
+        ui->s14_box->setStyleSheet(style);
+        //set info
+        ui->s14_lbl_lvl->setText(QString::number(ff7.slot[13].desc.level));
+        ui->s14_lbl_gil->setText(QString::number(ff7.slot[13].desc.gil));
+        ui->s14_lbl_hr->setText(QString::number(ff7.slot[13].desc.time/3600));
+        ui->s14_lbl_min->setText(QString::number(ff7.slot[13].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
     {
         if (chPC[ff7.slot[13].desc.location[loc]]=='\0'){break;}
@@ -1763,10 +1987,26 @@ SlotSelect::SlotSelect(QWidget *parent) :
     if(ff7.SG_Region_String[14] == ""){ui->s15_lbl_loc->setText("Empty Slot");}
     else
     {
-    ui->s15_lcd_lvl->display(ff7.slot[14].desc.level);
-    ui->s15_lcd_gil->display(double(ff7.slot[14].desc.gil));
-    ui->s15_lcd_hr->display(int(ff7.slot[14].desc.time/3600));
-    ui->s15_lcd_min->display(int(ff7.slot[14].desc.time/60 %60));
+        //theme the box
+        QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
+        style.append(QString::number(ff7.slot[14].colors[0][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[14].colors[0][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[14].colors[0][2]));
+        style.append(", 255), stop:1 rgba(");
+        style.append(QString::number(ff7.slot[14].colors[2][0]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[14].colors[2][1]));
+        style.append(",");
+        style.append(QString::number(ff7.slot[14].colors[2][2]));
+        style.append(", 255));");
+        ui->s15_box->setStyleSheet(style);
+        //set info
+        ui->s15_lbl_lvl->setText(QString::number(ff7.slot[14].desc.level));
+        ui->s15_lbl_gil->setText(QString::number(ff7.slot[14].desc.gil));
+        ui->s15_lbl_hr->setText(QString::number(ff7.slot[14].desc.time/3600));
+        ui->s15_lbl_min->setText(QString::number(ff7.slot[14].desc.time/60 %60));
     for (int loc=0; loc<32;loc++)
     {
         if (chPC[ff7.slot[14].desc.location[loc]]=='\0'){break;}
