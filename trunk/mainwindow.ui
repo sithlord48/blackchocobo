@@ -38,6 +38,107 @@
    <iconset resource="images.qrc">
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
+  <property name="styleSheet">
+   <string notr="true">/*Slider Colors */
+ QSlider#slide_limit:sub-page {
+	background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87, 255), stop:0.505682 rgba(209, 128, 173, 255), stop:0.931818 rgba(209, 44, 136, 255));
+ }
+ QSlider#slide_limit::add-page {
+  background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));
+ }
+QSlider#slide_ul_r::groove,QSlider#slide_ur_r::groove,QSlider#slide_ll_r::groove,QSlider#slide_lr_r::groove{
+height:12px;
+background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255,0,0, 255));
+}
+QSlider#slide_ul_g::groove,QSlider#slide_ur_g::groove,QSlider#slide_ll_g::groove,QSlider#slide_lr_g::groove{
+height:12px;
+background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(0,255, 0, 255));
+}
+QSlider#slide_ul_b::groove,QSlider#slide_ur_b::groove,QSlider#slide_ll_b::groove,QSlider#slide_lr_b::groove{
+height:12px;
+background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(0,0,255, 255));
+}
+
+/*START OF GENERIC THEME RULES */
+QSlider{
+   border:3px solid; 
+	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
+	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
+	border-bottom-color: rgb(172, 172, 172);
+	border-top-color: rgb(172, 172, 172);
+ }
+QSlider::groove{
+     height: 12px;
+     background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));
+}
+QSlider::handle{
+     background: rgba(172, 172, 172,0);
+     border: 1px solid #5c5c5c;
+     width: 3px;
+     border-radius: 2px;
+ }
+QSlider#slide_battlespeed::handle,QSlider#slide_fieldmspeed::handle,QSlider#slide_battlemspeed::handle{
+     background: rgb(172, 172, 172);
+     border: 1px solid #5c5c5c;
+     width: 3px;
+     border-radius: 2px;
+ }
+QWidget:disabled,QLabel:disabled{
+font: 9pt &quot;Ubuntu&quot;;color:rgb(74, 80, 73);
+background-color:rgb(48, 47, 47);
+}
+QWidget:hover{
+color:rgb(24, 72, 128);
+}
+QWidget:enabled,QLabel:enabled{
+background-color:rgb(48, 47, 47);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+selection-background-color: rgb(24, 72, 128);
+selection-color: rgb(255,255,255);
+}
+
+QMenuBar:item{
+background-color:rgb(48,47,47);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+}
+
+QLineEdit:enabled,QSpinBox:enabled{
+background-color: rgb(32, 31, 31);
+selection-background-color: rgb(24, 72, 128);
+selection-color: rgb(255,255,255);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+}
+
+QComboBox:disabled,QPushButton:disabled,QLineEdit:disabled,QSpinBox:disabled,QTableWidget:disabled,QListWidget:disabled{
+background-color:rgb(48, 47, 47);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(74, 80, 73);
+}
+
+QComboBox:enabled,QPushButton:enabled{
+background-color: rgb(67, 66, 65);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+}
+
+QTableWidget:enabled,QListWidget:enabled {
+background-color: rgb(32, 31, 31);
+selection-background-color: rgb(24, 72, 128);
+selection-color: rgb(255,255,255);
+gridline-color: rgb(25, 25, 25);
+font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+}
+/*Checkboxes*/
+QCheckBox::indicator{
+height:12 px;
+width: 12px;
+background-color: rgb(32,31,31);
+}
+QListWidget::indicator:checked,QCheckBox::indicator:checked {
+	image: url(:/icon/checkbox_checked);
+}
+QListWidget::indicator:indeterminate,QCheckBox::indicator:indeterminate{
+	image: url(:/icon/checkbox_indeterminate);
+}</string>
+  </property>
   <property name="unifiedTitleAndToolBarOnMac">
    <bool>false</bool>
   </property>
@@ -1096,7 +1197,7 @@
           <set>Qt::AlignCenter</set>
          </property>
          <property name="buttonSymbols">
-          <enum>QAbstractSpinBox::PlusMinus</enum>
+          <enum>QAbstractSpinBox::UpDownArrows</enum>
          </property>
          <property name="correctionMode">
           <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -1119,7 +1220,11 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <family>Ubuntu</family>
+           <pointsize>9</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
           </font>
          </property>
          <property name="text">
@@ -1148,7 +1253,7 @@
           <set>Qt::AlignCenter</set>
          </property>
          <property name="buttonSymbols">
-          <enum>QAbstractSpinBox::PlusMinus</enum>
+          <enum>QAbstractSpinBox::UpDownArrows</enum>
          </property>
          <property name="correctionMode">
           <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -1205,7 +1310,7 @@
           <set>Qt::AlignCenter</set>
          </property>
          <property name="buttonSymbols">
-          <enum>QAbstractSpinBox::PlusMinus</enum>
+          <enum>QAbstractSpinBox::UpDownArrows</enum>
          </property>
          <property name="correctionMode">
           <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -1225,7 +1330,11 @@
          </property>
          <property name="font">
           <font>
-           <pointsize>12</pointsize>
+           <family>Ubuntu</family>
+           <pointsize>9</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
           </font>
          </property>
          <property name="text">
@@ -1254,7 +1363,7 @@
           <set>Qt::AlignCenter</set>
          </property>
          <property name="buttonSymbols">
-          <enum>QAbstractSpinBox::PlusMinus</enum>
+          <enum>QAbstractSpinBox::UpDownArrows</enum>
          </property>
          <property name="correctionMode">
           <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -1718,11 +1827,17 @@
            <height>18</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
          <property name="inputMethodHints">
           <set>Qt::ImhDigitsOnly</set>
          </property>
          <property name="maximum">
           <number>255</number>
+         </property>
+         <property name="value">
+          <number>0</number>
          </property>
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
@@ -2105,8 +2220,8 @@
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>417</width>
-         <height>414</height>
+         <width>100</width>
+         <height>30</height>
         </rect>
        </property>
        <attribute name="label">
@@ -3839,7 +3954,7 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -3882,7 +3997,7 @@
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
               </property>
               <property name="buttonSymbols">
-               <enum>QAbstractSpinBox::PlusMinus</enum>
+               <enum>QAbstractSpinBox::UpDownArrows</enum>
               </property>
               <property name="accelerated">
                <bool>true</bool>
@@ -3939,7 +4054,7 @@
                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
               </property>
               <property name="buttonSymbols">
-               <enum>QAbstractSpinBox::PlusMinus</enum>
+               <enum>QAbstractSpinBox::UpDownArrows</enum>
               </property>
               <property name="accelerated">
                <bool>true</bool>
@@ -3990,7 +4105,7 @@
                <set>Qt::AlignCenter</set>
               </property>
               <property name="buttonSymbols">
-               <enum>QAbstractSpinBox::PlusMinus</enum>
+               <enum>QAbstractSpinBox::UpDownArrows</enum>
               </property>
               <property name="accelerated">
                <bool>true</bool>
@@ -4032,7 +4147,7 @@
                <set>Qt::AlignCenter</set>
               </property>
               <property name="buttonSymbols">
-               <enum>QAbstractSpinBox::PlusMinus</enum>
+               <enum>QAbstractSpinBox::UpDownArrows</enum>
               </property>
               <property name="accelerated">
                <bool>true</bool>
@@ -5769,7 +5884,11 @@
         </property>
         <property name="font">
          <font>
-          <pointsize>17</pointsize>
+          <family>Ubuntu</family>
+          <pointsize>9</pointsize>
+          <weight>50</weight>
+          <italic>false</italic>
+          <bold>false</bold>
          </font>
         </property>
         <property name="lineWidth">
@@ -8299,7 +8418,7 @@
          <rect>
           <x>10</x>
           <y>340</y>
-          <width>234</width>
+          <width>231</width>
           <height>95</height>
          </rect>
         </property>
@@ -8307,6 +8426,12 @@
          <string>Fenced Chocobos</string>
         </property>
         <layout class="QFormLayout" name="formLayout">
+         <property name="horizontalSpacing">
+          <number>-1</number>
+         </property>
+         <property name="margin">
+          <number>2</number>
+         </property>
          <item row="0" column="0">
           <widget class="QComboBox" name="combo_pen1">
            <property name="minimumSize">
@@ -12943,7 +13068,7 @@
            <property name="minimumSize">
             <size>
              <width>57</width>
-             <height>0</height>
+             <height>24</height>
             </size>
            </property>
            <property name="maximumSize">
@@ -14018,6 +14143,9 @@
          <property name="text">
           <string>Mime</string>
          </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
         </widget>
        </item>
        <item>
@@ -14096,7 +14224,7 @@
       <property name="geometry">
        <rect>
         <x>410</x>
-        <y>190</y>
+        <y>180</y>
         <width>311</width>
         <height>288</height>
        </rect>
@@ -15042,7 +15170,7 @@
         <x>410</x>
         <y>0</y>
         <width>311</width>
-        <height>191</height>
+        <height>181</height>
        </rect>
       </property>
       <property name="title">
@@ -15052,17 +15180,23 @@
        <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
       </property>
       <layout class="QGridLayout" name="gridLayout_21">
-       <property name="horizontalSpacing">
-        <number>24</number>
+       <property name="leftMargin">
+        <number>0</number>
        </property>
-       <property name="verticalSpacing">
-        <number>12</number>
-       </property>
-       <property name="margin">
+       <property name="topMargin">
         <number>6</number>
        </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
+       <property name="bottomMargin">
+        <number>6</number>
+       </property>
+       <property name="spacing">
+        <number>-1</number>
+       </property>
        <item row="0" column="1">
-        <widget class="QGroupBox" name="groupBox_9">
+        <widget class="QGroupBox" name="group_upper_right_color">
          <property name="minimumSize">
           <size>
            <width>128</width>
@@ -15080,13 +15214,13 @@
          </property>
          <layout class="QGridLayout" name="gridLayout_14">
           <property name="leftMargin">
-           <number>0</number>
+           <number>6</number>
           </property>
           <property name="topMargin">
            <number>0</number>
           </property>
           <property name="rightMargin">
-           <number>0</number>
+           <number>6</number>
           </property>
           <property name="bottomMargin">
            <number>6</number>
@@ -15182,11 +15316,11 @@
         </widget>
        </item>
        <item row="1" column="0">
-        <widget class="QGroupBox" name="groupBox_11">
+        <widget class="QGroupBox" name="group_lower_left_color">
          <property name="minimumSize">
           <size>
            <width>128</width>
-           <height>70</height>
+           <height>72</height>
           </size>
          </property>
          <property name="maximumSize">
@@ -15200,13 +15334,13 @@
          </property>
          <layout class="QGridLayout" name="gridLayout_19">
           <property name="leftMargin">
-           <number>0</number>
+           <number>6</number>
           </property>
           <property name="topMargin">
            <number>0</number>
           </property>
           <property name="rightMargin">
-           <number>0</number>
+           <number>6</number>
           </property>
           <property name="bottomMargin">
            <number>6</number>
@@ -15234,7 +15368,7 @@
             </property>
             <property name="maximumSize">
              <size>
-              <width>93</width>
+              <width>16777215</width>
               <height>20</height>
              </size>
             </property>
@@ -15269,7 +15403,7 @@
             </property>
             <property name="maximumSize">
              <size>
-              <width>93</width>
+              <width>16777215</width>
               <height>18</height>
              </size>
             </property>
@@ -15304,8 +15438,8 @@
             </property>
             <property name="maximumSize">
              <size>
-              <width>93</width>
-              <height>18</height>
+              <width>16777215</width>
+              <height>16777215</height>
              </size>
             </property>
             <property name="maximum">
@@ -15320,7 +15454,7 @@
         </widget>
        </item>
        <item row="1" column="1">
-        <widget class="QGroupBox" name="groupBox_10">
+        <widget class="QGroupBox" name="group_lower_right_color">
          <property name="minimumSize">
           <size>
            <width>128</width>
@@ -15338,13 +15472,13 @@
          </property>
          <layout class="QGridLayout" name="gridLayout_18">
           <property name="leftMargin">
-           <number>0</number>
+           <number>6</number>
           </property>
           <property name="topMargin">
            <number>0</number>
           </property>
           <property name="rightMargin">
-           <number>0</number>
+           <number>6</number>
           </property>
           <property name="bottomMargin">
            <number>6</number>
@@ -15440,7 +15574,7 @@
         </widget>
        </item>
        <item row="0" column="0">
-        <widget class="QGroupBox" name="groupBox_8">
+        <widget class="QGroupBox" name="group_upper_left_color">
          <property name="minimumSize">
           <size>
            <width>128</width>
@@ -15463,13 +15597,13 @@
          </property>
          <layout class="QGridLayout" name="gridLayout_20">
           <property name="leftMargin">
-           <number>0</number>
+           <number>6</number>
           </property>
           <property name="topMargin">
            <number>0</number>
           </property>
           <property name="rightMargin">
-           <number>0</number>
+           <number>6</number>
           </property>
           <property name="bottomMargin">
            <number>6</number>
@@ -15494,6 +15628,9 @@
               <width>0</width>
               <height>15</height>
              </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
             </property>
             <property name="maximum">
              <number>255</number>
@@ -16437,7 +16574,7 @@
            <property name="minimumSize">
             <size>
              <width>57</width>
-             <height>0</height>
+             <height>24</height>
             </size>
            </property>
            <property name="maximumSize">

@@ -4478,53 +4478,424 @@ void MainWindow::on_list_eskill_2_itemChanged()
 void MainWindow::on_slide_ul_r_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[0][0] = value;}
+
+    QString g_style = "QSlider#slide_ul_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    g_style.append(QString::number(ui->slide_ul_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(0));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_ul_b->value()));
+    g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_ul_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(255));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_ul_b->value()));
+    g_style.append(",255));}");
+
+    QString b_style =  "QSlider#slide_ul_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    b_style.append(QString::number(ui->slide_ul_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_ul_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(0));
+    b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_ul_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_ul_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(255));
+    b_style.append(",255));}");
+
+    ui->slide_ul_g->setStyleSheet(g_style);
+    ui->slide_ul_b->setStyleSheet(b_style);
+
 }
 void MainWindow::on_slide_ul_g_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[0][1] = value;}
+
+    QString r_style = "QSlider#slide_ul_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    r_style.append(QString::number(0));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_b->value()));
+    r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_b->value()));
+    r_style.append(",255));}");
+
+    QString b_style =  "QSlider#slide_ul_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    b_style.append(QString::number(ui->slide_ul_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_ul_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(0));
+    b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_ul_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_ul_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(255));
+    b_style.append(",255));}");
+
+    ui->slide_ul_r->setStyleSheet(r_style);
+    ui->slide_ul_b->setStyleSheet(b_style);
 }
 void MainWindow::on_slide_ul_b_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[0][2] = value;}
+
+    QString r_style = "QSlider#slide_ul_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    r_style.append(QString::number(0));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_b->value()));
+    r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_b->value()));
+    r_style.append(",255));}");
+
+    QString g_style = "QSlider#slide_ul_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    g_style.append(QString::number(ui->slide_ul_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(0));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_ul_b->value()));
+    g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_ul_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(255));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_ul_b->value()));
+    g_style.append(",255));}");
+
+    ui->slide_ul_r->setStyleSheet(r_style);
+    ui->slide_ul_g->setStyleSheet(g_style);
 }
+
 void MainWindow::on_slide_ur_r_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[1][0] = value;}
+    QString g_style = "QSlider#slide_ur_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    g_style.append(QString::number(ui->slide_ur_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(0));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_ur_b->value()));
+    g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_ur_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(255));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_ur_b->value()));
+    g_style.append(",255));}");
+
+    QString b_style =  "QSlider#slide_ur_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    b_style.append(QString::number(ui->slide_ur_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_ur_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(0));
+    b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_ur_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_ur_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(255));
+    b_style.append(",255));}");
+
+    ui->slide_ur_g->setStyleSheet(g_style);
+    ui->slide_ur_b->setStyleSheet(b_style);
+
 }
 void MainWindow::on_slide_ur_g_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[1][1] = value;}
+    QString r_style = "QSlider#slide_ur_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    r_style.append(QString::number(0));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_b->value()));
+    r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_b->value()));
+    r_style.append(",255));}");
+
+    QString b_style =  "QSlider#slide_ur_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    b_style.append(QString::number(ui->slide_ur_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_ur_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(0));
+    b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_ur_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_ur_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(255));
+    b_style.append(",255));}");
+
+    ui->slide_ur_r->setStyleSheet(r_style);
+    ui->slide_ur_b->setStyleSheet(b_style);
 }
 void MainWindow::on_slide_ur_b_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[1][2] = value;}
+    QString r_style = "QSlider#slide_ur_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    r_style.append(QString::number(0));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_b->value()));
+    r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_b->value()));
+    r_style.append(",255));}");
+
+    QString g_style = "QSlider#slide_ur_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    g_style.append(QString::number(ui->slide_ur_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(0));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_ur_b->value()));
+    g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_ur_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(255));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_ur_b->value()));
+    g_style.append(",255));}");
+
+    ui->slide_ur_r->setStyleSheet(r_style);
+    ui->slide_ur_g->setStyleSheet(g_style);
 }
 
 void MainWindow::on_slide_ll_r_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[2][0] = value;}
+    QString g_style = "QSlider#slide_ll_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    g_style.append(QString::number(ui->slide_ll_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(0));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_ll_b->value()));
+    g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_ll_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(255));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_ll_b->value()));
+    g_style.append(",255));}");
+
+    QString b_style =  "QSlider#slide_ll_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    b_style.append(QString::number(ui->slide_ll_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_ll_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(0));
+    b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_ll_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_ll_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(255));
+    b_style.append(",255));}");
+
+    ui->slide_ll_g->setStyleSheet(g_style);
+    ui->slide_ll_b->setStyleSheet(b_style);
+
 }
 void MainWindow::on_slide_ll_g_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[2][1] = value;}
+    QString r_style = "QSlider#slide_ll_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    r_style.append(QString::number(0));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_b->value()));
+    r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_b->value()));
+    r_style.append(",255));}");
+
+    QString b_style =  "QSlider#slide_ll_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    b_style.append(QString::number(ui->slide_ll_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_ll_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(0));
+    b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_ll_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_ll_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(255));
+    b_style.append(",255));}");
+
+    ui->slide_ll_r->setStyleSheet(r_style);
+    ui->slide_ll_b->setStyleSheet(b_style);
 }
 void MainWindow::on_slide_ll_b_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[2][2] = value;}
+    QString r_style = "QSlider#slide_ll_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    r_style.append(QString::number(0));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_b->value()));
+    r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_b->value()));
+    r_style.append(",255));}");
+
+    QString g_style = "QSlider#slide_ll_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    g_style.append(QString::number(ui->slide_ll_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(0));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_ll_b->value()));
+    g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_ll_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(255));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_ll_b->value()));
+    g_style.append(",255));}");
+
+    ui->slide_ll_r->setStyleSheet(r_style);
+    ui->slide_ll_g->setStyleSheet(g_style);
 }
 
 void MainWindow::on_slide_lr_r_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[3][0] = value;}
+    QString g_style = "QSlider#slide_lr_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    g_style.append(QString::number(ui->slide_lr_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(0));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_lr_b->value()));
+    g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_lr_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(255));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_lr_b->value()));
+    g_style.append(",255));}");
+
+    QString b_style =  "QSlider#slide_lr_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    b_style.append(QString::number(ui->slide_lr_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_lr_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(0));
+    b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_lr_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_lr_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(255));
+    b_style.append(",255));}");
+
+    ui->slide_lr_g->setStyleSheet(g_style);
+    ui->slide_lr_b->setStyleSheet(b_style);
+
 }
 void MainWindow::on_slide_lr_g_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[3][1] = value;}
+    QString r_style = "QSlider#slide_lr_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    r_style.append(QString::number(0));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_b->value()));
+    r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_b->value()));
+    r_style.append(",255));}");
+
+    QString b_style =  "QSlider#slide_lr_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    b_style.append(QString::number(ui->slide_lr_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_lr_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(0));
+    b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_lr_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_lr_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(255));
+    b_style.append(",255));}");
+
+    ui->slide_lr_r->setStyleSheet(r_style);
+    ui->slide_lr_b->setStyleSheet(b_style);
 }
 void MainWindow::on_slide_lr_b_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[3][2] = value;}
+    QString r_style = "QSlider#slide_lr_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    r_style.append(QString::number(0));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_b->value()));
+    r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_b->value()));
+    r_style.append(",255));}");
+
+    QString g_style = "QSlider#slide_lr_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    g_style.append(QString::number(ui->slide_lr_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(0));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_lr_b->value()));
+    g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_lr_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(255));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_lr_b->value()));
+    g_style.append(",255));}");
+
+    ui->slide_lr_r->setStyleSheet(r_style);
+    ui->slide_lr_g->setStyleSheet(g_style);
+
 }
+
+/*end of color sliders*/
 
 void MainWindow::on_slide_battlespeed_valueChanged(int value)
 {

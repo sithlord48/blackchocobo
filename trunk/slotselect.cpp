@@ -28,6 +28,7 @@ SlotSelect::SlotSelect(QWidget *parent) :
     if(ff7.SG_Region_String[0] == ""){ui->s1_lbl_loc->setText("Empty Slot");}
     else
     {
+
     //theme the box
     QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
     style.append(QString::number(ff7.slot[0].colors[0][0]));
@@ -42,6 +43,7 @@ SlotSelect::SlotSelect(QWidget *parent) :
     style.append(",");
     style.append(QString::number(ff7.slot[0].colors[2][2]));
     style.append(", 255));");
+
     ui->s1_box->setStyleSheet(style);
     //set info
     ui->s1_lbl_lvl->setText(QString::number(ff7.slot[0].desc.level));

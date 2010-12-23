@@ -39,14 +39,19 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QLabel{
+   <string notr="true">QScrollArea{
+background-color: rgb(48, 47, 47);
+}
+QDialog,QGroupBox{
+background-color:rgb(48, 47, 47);
+}
+QLabel{
 font: 75 14pt &quot;Verdana&quot;;color:rgb(255, 255, 255)
 }
-QPushButton{
+QPushButton:enabled{
 background-color: rgb(65, 64, 63);
 font: 9pt &quot;Ubuntu&quot;;color: rgb(255,255,255);
-}
-</string>
+}</string>
   </property>
   <property name="modal">
    <bool>false</bool>
@@ -67,8 +72,7 @@ font: 9pt &quot;Ubuntu&quot;;color: rgb(255,255,255);
     </size>
    </property>
    <property name="styleSheet">
-    <string notr="true">
-</string>
+    <string notr="true">background-color:rgb(48,47,47)</string>
    </property>
    <property name="widgetResizable">
     <bool>true</bool>
@@ -107,8 +111,7 @@ font: 9pt &quot;Ubuntu&quot;;color: rgb(255,255,255);
         <item row="0" column="0" colspan="3">
          <widget class="QPushButton" name="btn_s1">
           <property name="styleSheet">
-           <string notr="true">
-</string>
+           <string notr="true"/>
           </property>
           <property name="text">
            <string>Load Slot 1</string>
@@ -213,6 +216,9 @@ font: 9pt &quot;Ubuntu&quot;;color: rgb(255,255,255);
           </property>
           <property name="frameShadow">
            <enum>QFrame::Sunken</enum>
+          </property>
+          <property name="lineWidth">
+           <number>-7</number>
           </property>
           <property name="text">
            <string/>
@@ -356,6 +362,9 @@ font: 9pt &quot;Ubuntu&quot;;color: rgb(255,255,255);
           </property>
           <property name="frameShadow">
            <enum>QFrame::Plain</enum>
+          </property>
+          <property name="lineWidth">
+           <number>1</number>
           </property>
           <property name="text">
            <string/>
@@ -640,6 +649,9 @@ font: 9pt &quot;Ubuntu&quot;;color: rgb(255,255,255);
           </property>
           <property name="frameShadow">
            <enum>QFrame::Plain</enum>
+          </property>
+          <property name="lineWidth">
+           <number>1</number>
           </property>
           <property name="text">
            <string/>
