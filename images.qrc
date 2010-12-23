@@ -110,5 +110,7 @@
         <file alias="yellow_choco">icon/yellow_choco.png</file>
         <file alias="black_choco">icon/black_choco.png</file>
         <file alias="blue_choco">icon/blue_choco.png</file>
+        <file alias="checkbox_checked">icon/checkbox_checked.png</file>
+        <file alias="checkbox_indeterminate">icon/checkbox_indeterminate.png</file>
     </qresource>
 </RCC>
