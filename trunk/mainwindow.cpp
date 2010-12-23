@@ -1807,6 +1807,15 @@ void MainWindow::guirefresh(void)
     }
 /*~~~~ END Type Check~~~~*/
     ui->lcd_current_slot->display(s+1);
+    //dialog preview
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
+    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
+    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
+    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
+    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+    //make the preview nice
     ui->cb_replay->setCurrentIndex(0);
     ui->sb_bm_progress1->setValue(ff7.slot[s].bm_progress1);
     ui->sb_bm_progress2->setValue(ff7.slot[s].bm_progress2);
@@ -4510,6 +4519,13 @@ void MainWindow::on_slide_ul_r_valueChanged(int value)
     ui->slide_ul_g->setStyleSheet(g_style);
     ui->slide_ul_b->setStyleSheet(b_style);
 
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
+    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
+    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
+    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
+    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
 }
 void MainWindow::on_slide_ul_g_valueChanged(int value)
 {
@@ -4545,6 +4561,14 @@ void MainWindow::on_slide_ul_g_valueChanged(int value)
 
     ui->slide_ul_r->setStyleSheet(r_style);
     ui->slide_ul_b->setStyleSheet(b_style);
+
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
+    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
+    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
+    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
+    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
 }
 void MainWindow::on_slide_ul_b_valueChanged(int value)
 {
@@ -4580,6 +4604,14 @@ void MainWindow::on_slide_ul_b_valueChanged(int value)
 
     ui->slide_ul_r->setStyleSheet(r_style);
     ui->slide_ul_g->setStyleSheet(g_style);
+
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
+    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
+    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
+    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
+    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
 }
 
 void MainWindow::on_slide_ur_r_valueChanged(int value)
@@ -4616,6 +4648,14 @@ void MainWindow::on_slide_ur_r_valueChanged(int value)
     ui->slide_ur_g->setStyleSheet(g_style);
     ui->slide_ur_b->setStyleSheet(b_style);
 
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
+    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
+    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
+    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
+    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+
 }
 void MainWindow::on_slide_ur_g_valueChanged(int value)
 {
@@ -4650,6 +4690,14 @@ void MainWindow::on_slide_ur_g_valueChanged(int value)
 
     ui->slide_ur_r->setStyleSheet(r_style);
     ui->slide_ur_b->setStyleSheet(b_style);
+
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
+    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
+    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
+    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
+    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
 }
 void MainWindow::on_slide_ur_b_valueChanged(int value)
 {
@@ -4684,6 +4732,14 @@ void MainWindow::on_slide_ur_b_valueChanged(int value)
 
     ui->slide_ur_r->setStyleSheet(r_style);
     ui->slide_ur_g->setStyleSheet(g_style);
+
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
+    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
+    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
+    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
+    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
 }
 
 void MainWindow::on_slide_ll_r_valueChanged(int value)
@@ -4720,6 +4776,14 @@ void MainWindow::on_slide_ll_r_valueChanged(int value)
     ui->slide_ll_g->setStyleSheet(g_style);
     ui->slide_ll_b->setStyleSheet(b_style);
 
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
+    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
+    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
+    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
+    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+
 }
 void MainWindow::on_slide_ll_g_valueChanged(int value)
 {
@@ -4754,6 +4818,14 @@ void MainWindow::on_slide_ll_g_valueChanged(int value)
 
     ui->slide_ll_r->setStyleSheet(r_style);
     ui->slide_ll_b->setStyleSheet(b_style);
+
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
+    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
+    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
+    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
+    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
 }
 void MainWindow::on_slide_ll_b_valueChanged(int value)
 {
@@ -4788,6 +4860,14 @@ void MainWindow::on_slide_ll_b_valueChanged(int value)
 
     ui->slide_ll_r->setStyleSheet(r_style);
     ui->slide_ll_g->setStyleSheet(g_style);
+
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
+    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
+    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
+    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
+    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
 }
 
 void MainWindow::on_slide_lr_r_valueChanged(int value)
@@ -4824,6 +4904,14 @@ void MainWindow::on_slide_lr_r_valueChanged(int value)
     ui->slide_lr_g->setStyleSheet(g_style);
     ui->slide_lr_b->setStyleSheet(b_style);
 
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
+    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
+    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
+    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
+    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+
 }
 void MainWindow::on_slide_lr_g_valueChanged(int value)
 {
@@ -4858,6 +4946,14 @@ void MainWindow::on_slide_lr_g_valueChanged(int value)
 
     ui->slide_lr_r->setStyleSheet(r_style);
     ui->slide_lr_b->setStyleSheet(b_style);
+
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
+    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
+    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
+    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
+    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
 }
 void MainWindow::on_slide_lr_b_valueChanged(int value)
 {
@@ -4893,6 +4989,13 @@ void MainWindow::on_slide_lr_b_valueChanged(int value)
     ui->slide_lr_r->setStyleSheet(r_style);
     ui->slide_lr_g->setStyleSheet(g_style);
 
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
+    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
+    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
+    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
+    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
 }
 
 /*end of color sliders*/
