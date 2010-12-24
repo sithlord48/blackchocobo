@@ -112,5 +112,9 @@
         <file alias="blue_choco">icon/blue_choco.png</file>
         <file alias="checkbox_checked">icon/checkbox_checked.png</file>
         <file alias="checkbox_indeterminate">icon/checkbox_indeterminate.png</file>
+        <file alias="checkbox_unchecked">icon/checkbox_unchecked.png</file>
+        <file alias="checkbox_checked_hover">icon/checkbox_checked_hover.png</file>
+        <file alias="checkbox_unchecked_hover">icon/checkbox_unchecked_hover.png</file>
+        <file alias="checkbox_indeterminate_hover">icon/checkbox_indeterminate_hover.png</file>
     </qresource>
 </RCC>
