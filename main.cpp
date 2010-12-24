@@ -18,12 +18,14 @@
 #include <QTranslator>
 #include "mainwindow.h"
 #include <QSettings>
+#include <QPlastiqueStyle>
 
 
 int main(int argc, char *argv[])
 {
     QSettings setting(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
     Q_INIT_RESOURCE(images);
+    QApplication::setStyle("Plastique");
     QApplication a(argc, argv);
     a.setApplicationName("Black Chocobo");
     QTranslator translator;
