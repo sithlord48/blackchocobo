@@ -116,5 +116,15 @@
         <file alias="checkbox_checked_hover">icon/checkbox_checked_hover.png</file>
         <file alias="checkbox_unchecked_hover">icon/checkbox_unchecked_hover.png</file>
         <file alias="checkbox_indeterminate_hover">icon/checkbox_indeterminate_hover.png</file>
+        <file alias="checkbox_checked_disabled">icon/checkbox_checked_disabled.png</file>
+        <file alias="checkbox_checked_hover_disabled">icon/checkbox_checked_hover_disabled.png</file>
+        <file alias="checkbox_indeterminate_disabled">icon/checkbox_indeterminate_disabled.png</file>
+        <file alias="checkbox_indeterminate_hover_disabled">icon/checkbox_indeterminate_hover_disabled.png</file>
+        <file alias="checkbox_unchecked_disabled">icon/checkbox_unchecked_disabled.png</file>
+        <file alias="checkbox_unchecked_hover_disabled">icon/checkbox_unchecked_hover_disabled.png</file>
+        <file alias="arrow_down">icon/arrow-down.png</file>
+        <file alias="arrow_down_disabled">icon/arrow-down_disabled.png</file>
+        <file alias="arrow_up">icon/arrow-up.png</file>
+        <file alias="arrow_up_disabled">icon/arrow-up_disabled.png</file>
     </qresource>
 </RCC>

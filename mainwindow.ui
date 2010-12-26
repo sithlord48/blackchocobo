@@ -39,10 +39,8 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget:disabled,QLabel:disabled{
-font: 9pt &quot;Ubuntu&quot;;color:rgb(74, 80, 73);
-background-color:rgb(48, 47, 47);
-}
+   <string notr="true">/*GENERIC ITEM RULES (qwidget, qabstract area,etc.)*/
+QWidget:disabled,QLabel:disabled{font: 9pt &quot;Ubuntu&quot;;color:rgb(74, 80, 73);background-color:rgb(48, 47, 47);}
 
 QWidget:enabled,QLabel:enabled{
 background-color:rgb(48, 47, 47);
@@ -51,27 +49,19 @@ selection-background-color: rgb(24, 72, 128);
 selection-color: rgb(255,255,255);
 }
 
-QLineEdit ,QSpinBox:enabled{
+QLineEdit:enabled{
 background-color: rgb(32, 31, 31);
 selection-background-color: rgb(24, 72, 128);
 selection-color: rgb(255,255,255);
 font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
 }
 
-QComboBox:enabled,QPushButton:enabled {
-background-color: rgb(67, 66, 65);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-}
+QPushButton:enabled {background-color: rgb(67, 66, 65);font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);}
 
 /*QMenuBar*/
-QMenuBar {
-background-color:rgb(48,47,47);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-}
-QMenuBar:item{
-background-color:rgb(48,47,47);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-}
+QMenuBar {background-color:rgb(48,47,47);font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);}
+QMenuBar:item{background-color:rgb(48,47,47);font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);}
+
 /*
 QTabBar{
 background-color: rgb(48, 47,47);
@@ -88,19 +78,19 @@ background-color:rgb(48, 47, 47);
 font: 9pt &quot;Ubuntu&quot;;color:rgb(74, 80, 73);
 }
 
-QTableWidget:enabled,QListWidget:enabled ,QTableWidget::item{
+QTableWidget:enabled,QListWidget:enabled{
 background-color: rgb(32, 31, 31);
 selection-background-color: rgb(24, 72, 128);
 selection-color: rgb(255,255,255);
 gridline-color: rgb(25, 25, 25);
 font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
 }
-
+/*WIDGET ITEMS (spinboxes, sliders, combos etc...)*/
 /*Sliders */
-QSlider#slide_limit:sub-page {
+QSlider#slide_limit:sub-page,QSlider#slide_battlespeed:sub-page,QSlider#slide_fieldmspeed:sub-page,QSlider#slide_battlemspeed:sub-page{
 background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87, 255), stop:0.505682 rgba(209, 128, 173, 255), stop:0.931818 rgba(209, 44, 136, 255));
  }
-QSlider#slide_limit::add-page {
+QSlider#slide_limit::add-pageQSlider#slide_battlespeed:add-page,QSlider#slide_fieldmspeed:add-page,QSlider#slide_battlemspeed:add-page {
  background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));
  }
 QSlider#slide_ul_r::groove,QSlider#slide_ur_r::groove,QSlider#slide_ll_r::groove,QSlider#slide_lr_r::groove{
@@ -146,15 +136,107 @@ QSlider#slide_battlespeed::handle,QSlider#slide_fieldmspeed::handle,QSlider#slid
      border-radius: 2px;
  }
 
-/*Checkboxes*/
-QListWidget::indicator:checked,QCheckBox::indicator:checked {image: url(:/icon/checkbox_checked);}
-QListWidget::indicator:unchecked,QCheckBox::indicator:unchecked {image: url(:/icon/checkbox_unchecked);}
-QListWidget::indicator:indeterminate,QCheckBox::indicator:indeterminate{image: url(:/icon/checkbox_indeterminate);}
-QListWidget::indicator:checked:hover,QCheckBox::indicator:checked:hover {image: url(:/icon/checkbox_checked_hover);}
-QListWidget::indicator:unchecked:hover,QCheckBox::indicator:unchecked:hover {image: url(:/icon/checkbox_unchecked_hover);}
-QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:hover{image: url(:/icon/checkbox_indeterminate_hover);}
+/*Checkboxes-enabled*/
+QLIstWidget:disabled,QCheckBox:disabled{}
+QListWidget::indicator:enabled:checked,QCheckBox::indicator:enabled:checked {image: url(:/icon/checkbox_checked);}
+QListWidget::indicator:enabled:unchecked,QCheckBox::indicator:enabled:unchecked {image: url(:/icon/checkbox_unchecked);}
+QListWidget::indicator:enabled:indeterminate,QCheckBox::indicator:enabled:indeterminate{image: url(:/icon/checkbox_indeterminate);}
+QListWidget::indicator:enabled:checked:hover,QCheckBox::indicator:enabled:checked:hover {image: url(:/icon/checkbox_checked_hover);}
+QListWidget::indicator:enabled:unchecked:hover,QCheckBox::indicator:enabled:unchecked:hover {image: url(:/icon/checkbox_unchecked_hover);}
+QListWidget::indicator:enabled:indeterminate:hover,QCheckBox::indicator:enabled:indeterminate:hover{image: url(:/icon/checkbox_indeterminate_hover);}
 
- </string>
+/*Checkboxes-disabled*/
+QListWidget::indicator:disabled:checked,QCheckBox::indicator:disabled:checked {image: url(:/icon/checkbox_checked_disabled);}
+QListWidget::indicator:disabled:unchecked,QCheckBox::indicator:disabled:unchecked {image: url(:/icon/checkbox_unchecked_disabled);}
+QListWidget::indicator:disabled:indeterminate,QCheckBox::indicator:disabled:indeterminate{image: url(:/icon/checkbox_indeterminate_disabled);}
+QListWidget::indicator:disabled:checked:hover,QCheckBox::indicator:disabled:checked:hover {image: url(:/icon/checkbox_checked_hover_disabled);}
+QListWidget::indicator:disabled:unchecked:hover,QCheckBox::indicator:disabled:unchecked:hover {image: url(:/icon/checkbox_unchecked_hover_disabled);}
+QListWidget::indicator:disabled:indeterminate:hover,QCheckBox::indicator:disabled:indeterminate:hover{image: url(:/icon/checkbox_indeterminate_hover_disabled);}
+
+/*Spinbox-enabled*/
+QSpinBox:enabled{
+	border:1px solid; 
+	border-color: rgb(67,67,67);
+	background-color: rgb(32,31,31);
+	selection-background-color: rgb(24, 72, 128);
+	selection-color: rgb(255,255,255);
+	font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+}
+QSpinBox::up-button {
+     subcontrol-origin: border;
+     subcontrol-position: top right;
+     width: 8px; 
+	background-color: rgb(67, 67, 67);
+ }
+QSpinBox:up-arrow{
+	image: url(:/icon/arrow_up);
+	width:6px;
+	height:6px;
+}
+QSpinBox::down-button {
+     subcontrol-origin: border;
+     subcontrol-position: bottom right;
+     width: 8px; 
+	background-color: rgb(67,67,67); 
+}
+QSpinBox:down-arrow{
+	image: url(:/icon/arrow_down);
+	width:6px;
+	height:6px;
+}
+
+/*Spinbox-disabled*/
+QSpinBox:disabled{
+	border:1px solid; 
+	border:1px solid; 
+	border-color: rgb(67,67,67);
+	background-color: rgb(67,67,67);
+	font: 9pt &quot;Ubuntu&quot;;color:rgb(128,128,128);
+}
+QSpinBox:up-arrow:disabled, QSpinBox:up-arrow:off{
+	image: url(:/icon/arrow_up_disabled);
+	width:6px;
+	height:6px;
+}
+QSpinBox:down-arrow:disabled, QSpinBox:down-arrow:off{
+	image: url(:/icon/arrow_down_disabled);
+	width:6px;
+	height:6px;
+}
+/*ComboBox-enabled*/
+QComboBox:enabled{
+  border:3px solid; 
+	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
+	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
+	border-bottom-color: rgb(172, 172, 172);
+	border-top-color: rgb(172, 172, 172);
+    background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(32, 31, 31, 255));
+	font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+}
+QComboBox::down-arrow{
+	image: url(:/icon/arrow_down);
+}
+QComboBox::down-arrow:on{
+	top: 1px;
+	left:1px;
+}
+QComboBox::drop-down{
+    border:1px solid; 
+	width:12px;
+	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
+	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
+	border-bottom-color: rgb(172, 172, 172);
+	border-top-color: rgb(172, 172, 172);
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(32, 31, 31, 255));
+	font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+}
+/*ComboBox-disabled*/
+QComboBox:disabled{
+	font: 9pt &quot;Ubuntu&quot;;color:rgb(128,128,128);
+}
+QComboBox::down-arrow:disabled{
+	image: url(:/icon/arrow_down_disabled);
+}</string>
   </property>
   <property name="unifiedTitleAndToolBarOnMac">
    <bool>false</bool>
@@ -742,7 +824,7 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
          <rect>
           <x>2</x>
           <y>320</y>
-          <width>206</width>
+          <width>201</width>
           <height>91</height>
          </rect>
         </property>
@@ -753,14 +835,8 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
          <property name="spacing">
           <number>0</number>
          </property>
-         <property name="leftMargin">
-          <number>2</number>
-         </property>
          <property name="topMargin">
           <number>0</number>
-         </property>
-         <property name="rightMargin">
-          <number>2</number>
          </property>
          <property name="bottomMargin">
           <number>0</number>
@@ -1488,114 +1564,6 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
          </property>
         </widget>
        </widget>
-       <widget class="QFrame" name="frame">
-        <property name="geometry">
-         <rect>
-          <x>109</x>
-          <y>78</y>
-          <width>101</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <widget class="QLabel" name="label_50">
-         <property name="geometry">
-          <rect>
-           <x>1</x>
-           <y>1</y>
-           <width>58</width>
-           <height>18</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Kills</string>
-         </property>
-        </widget>
-        <widget class="QSpinBox" name="sb_kills">
-         <property name="geometry">
-          <rect>
-           <x>30</x>
-           <y>1</y>
-           <width>71</width>
-           <height>18</height>
-          </rect>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="accelerated">
-          <bool>true</bool>
-         </property>
-         <property name="correctionMode">
-          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-         </property>
-         <property name="maximum">
-          <number>65535</number>
-         </property>
-         <property name="value">
-          <number>0</number>
-         </property>
-        </widget>
-       </widget>
-       <widget class="QFrame" name="frame">
-        <property name="geometry">
-         <rect>
-          <x>216</x>
-          <y>2</y>
-          <width>95</width>
-          <height>21</height>
-         </rect>
-        </property>
-        <widget class="QLabel" name="label_2">
-         <property name="geometry">
-          <rect>
-           <x>6</x>
-           <y>6</y>
-           <width>33</width>
-           <height>16</height>
-          </rect>
-         </property>
-         <property name="text">
-          <string>Level</string>
-         </property>
-        </widget>
-        <widget class="QSpinBox" name="sb_lvl">
-         <property name="geometry">
-          <rect>
-           <x>47</x>
-           <y>0</y>
-           <width>44</width>
-           <height>18</height>
-          </rect>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>18</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>44</width>
-           <height>18</height>
-          </size>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
-         </property>
-         <property name="buttonSymbols">
-          <enum>QAbstractSpinBox::UpDownArrows</enum>
-         </property>
-         <property name="correctionMode">
-          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-         </property>
-         <property name="minimum">
-          <number>0</number>
-         </property>
-         <property name="value">
-          <number>0</number>
-         </property>
-        </widget>
-       </widget>
        <widget class="QWidget" name="layoutWidget">
         <property name="geometry">
          <rect>
@@ -1752,25 +1720,6 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
           </widget>
          </item>
         </layout>
-       </widget>
-       <widget class="QLineEdit" name="line_name">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="geometry">
-         <rect>
-          <x>110</x>
-          <y>2</y>
-          <width>101</width>
-          <height>20</height>
-         </rect>
-        </property>
-        <property name="maxLength">
-         <number>12</number>
-        </property>
-        <property name="readOnly">
-         <bool>false</bool>
-        </property>
        </widget>
        <widget class="QFrame" name="frame">
         <property name="geometry">
@@ -2249,14 +2198,119 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
          </item>
         </layout>
        </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>80</y>
+          <width>171</width>
+          <height>25</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_86">
+         <item>
+          <widget class="QLabel" name="label_50">
+           <property name="text">
+            <string>Kills</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sb_kills">
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="accelerated">
+            <bool>true</bool>
+           </property>
+           <property name="correctionMode">
+            <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+           </property>
+           <property name="maximum">
+            <number>65535</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QWidget" name="">
+        <property name="geometry">
+         <rect>
+          <x>110</x>
+          <y>0</y>
+          <width>196</width>
+          <height>23</height>
+         </rect>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_88">
+         <item>
+          <widget class="QLineEdit" name="line_name">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="maxLength">
+            <number>12</number>
+           </property>
+           <property name="readOnly">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_87">
+           <item>
+            <widget class="QLabel" name="label_2">
+             <property name="text">
+              <string>Level</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="sb_lvl">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>18</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>44</width>
+               <height>18</height>
+              </size>
+             </property>
+             <property name="alignment">
+              <set>Qt::AlignCenter</set>
+             </property>
+             <property name="buttonSymbols">
+              <enum>QAbstractSpinBox::UpDownArrows</enum>
+             </property>
+             <property name="correctionMode">
+              <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+             </property>
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QWidget" name="page_eq">
        <property name="geometry">
         <rect>
          <x>0</x>
          <y>0</y>
-         <width>100</width>
-         <height>30</height>
+         <width>417</width>
+         <height>414</height>
         </rect>
        </property>
        <attribute name="label">
@@ -2288,6 +2342,18 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
           <layout class="QHBoxLayout" name="horizontalLayout_72">
            <item>
             <spacer name="horizontalSpacer_11">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>23</height>
+              </size>
+             </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
@@ -2307,13 +2373,13 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
              <property name="minimumSize">
               <size>
                <width>255</width>
-               <height>32</height>
+               <height>23</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
                <width>255</width>
-               <height>32</height>
+               <height>23</height>
               </size>
              </property>
             </widget>
@@ -2715,6 +2781,18 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
           <layout class="QHBoxLayout" name="horizontalLayout_70">
            <item>
             <spacer name="horizontalSpacer_7">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>23</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>23</height>
+              </size>
+             </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
@@ -2734,13 +2812,13 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
              <property name="minimumSize">
               <size>
                <width>255</width>
-               <height>32</height>
+               <height>23</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
                <width>255</width>
-               <height>32</height>
+               <height>23</height>
               </size>
              </property>
             </widget>
@@ -3134,13 +3212,13 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
            <property name="minimumSize">
             <size>
              <width>166</width>
-             <height>24</height>
+             <height>23</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
              <width>16777215</width>
-             <height>24</height>
+             <height>23</height>
             </size>
            </property>
           </widget>
@@ -3629,7 +3707,13 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>32</height>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>23</height>
           </size>
          </property>
          <item>
@@ -3747,10 +3831,19 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
        </item>
        <item row="0" column="1">
         <widget class="QComboBox" name="combo_party2">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>32</height>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>23</height>
           </size>
          </property>
          <item>
@@ -3871,7 +3964,13 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>32</height>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>23</height>
           </size>
          </property>
          <item>
@@ -3994,8 +4093,8 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
        <rect>
         <x>0</x>
         <y>70</y>
-        <width>301</width>
-        <height>99</height>
+        <width>295</width>
+        <height>89</height>
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_84">
@@ -4007,6 +4106,12 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
          <layout class="QVBoxLayout" name="verticalLayout_44">
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_78">
+            <property name="leftMargin">
+             <number>4</number>
+            </property>
+            <property name="rightMargin">
+             <number>4</number>
+            </property>
             <item>
              <widget class="QLabel" name="label_10">
               <property name="text">
@@ -4052,6 +4157,12 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_79">
+            <property name="leftMargin">
+             <number>4</number>
+            </property>
+            <property name="rightMargin">
+             <number>4</number>
+            </property>
             <item>
              <widget class="QLabel" name="label_11">
               <property name="text">
@@ -4115,8 +4226,8 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
          <property name="title">
           <string>Fights</string>
          </property>
-         <layout class="QVBoxLayout" name="verticalLayout_43">
-          <item>
+         <layout class="QGridLayout" name="gridLayout_8">
+          <item row="0" column="0">
            <layout class="QHBoxLayout" name="horizontalLayout_83">
             <item>
              <widget class="QLabel" name="label_38">
@@ -4130,6 +4241,9 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
             </item>
             <item>
              <widget class="QSpinBox" name="sb_battles">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
               <property name="minimumSize">
                <size>
                 <width>75</width>
@@ -4158,7 +4272,7 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
             </item>
            </layout>
           </item>
-          <item>
+          <item row="1" column="0">
            <layout class="QHBoxLayout" name="horizontalLayout_81">
             <item>
              <widget class="QLabel" name="label_37">
@@ -4632,13 +4746,13 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
             <property name="minimumSize">
              <size>
               <width>190</width>
-              <height>0</height>
+              <height>23</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>180</width>
-              <height>29</height>
+              <height>23</height>
              </size>
             </property>
            </widget>
@@ -5954,13 +6068,19 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
          <x>140</x>
          <y>50</y>
          <width>165</width>
-         <height>29</height>
+         <height>23</height>
         </rect>
        </property>
        <property name="minimumSize">
         <size>
          <width>165</width>
-         <height>0</height>
+         <height>23</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>23</height>
         </size>
        </property>
       </widget>
@@ -5970,13 +6090,19 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
          <x>10</x>
          <y>50</y>
          <width>124</width>
-         <height>29</height>
+         <height>23</height>
         </rect>
        </property>
        <property name="minimumSize">
         <size>
          <width>124</width>
-         <height>0</height>
+         <height>23</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>16777215</width>
+         <height>23</height>
         </size>
        </property>
        <property name="iconSize">
@@ -6855,6 +6981,9 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
            </item>
            <item>
             <widget class="QSpinBox" name="sb_c1_speed">
+             <property name="enabled">
+              <bool>true</bool>
+             </property>
              <property name="minimumSize">
               <size>
                <width>60</width>
@@ -8460,9 +8589,9 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
         <property name="geometry">
          <rect>
           <x>10</x>
-          <y>340</y>
+          <y>350</y>
           <width>231</width>
-          <height>95</height>
+          <height>81</height>
          </rect>
         </property>
         <property name="title">
@@ -8480,13 +8609,13 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
            <property name="minimumSize">
             <size>
              <width>106</width>
-             <height>29</height>
+             <height>23</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
              <width>106</width>
-             <height>29</height>
+             <height>23</height>
             </size>
            </property>
            <item>
@@ -8541,13 +8670,13 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
            <property name="minimumSize">
             <size>
              <width>106</width>
-             <height>29</height>
+             <height>23</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
              <width>106</width>
-             <height>29</height>
+             <height>23</height>
             </size>
            </property>
            <item>
@@ -8602,13 +8731,13 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
            <property name="minimumSize">
             <size>
              <width>106</width>
-             <height>29</height>
+             <height>23</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
              <width>106</width>
-             <height>29</height>
+             <height>23</height>
             </size>
            </property>
            <item>
@@ -8663,13 +8792,13 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
            <property name="minimumSize">
             <size>
              <width>106</width>
-             <height>29</height>
+             <height>23</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
              <width>106</width>
-             <height>29</height>
+             <height>23</height>
             </size>
            </property>
            <item>
@@ -12842,7 +12971,7 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>25</height>
+           <height>23</height>
           </size>
          </property>
          <item>
@@ -14034,6 +14163,9 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
        <string>Coaster Shooter High Scores</string>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_63">
+       <property name="spacing">
+        <number>0</number>
+       </property>
        <property name="leftMargin">
         <number>4</number>
        </property>
@@ -14053,19 +14185,19 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>0</horstretch>
-             <verstretch>23</verstretch>
+             <verstretch>21</verstretch>
             </sizepolicy>
            </property>
            <property name="minimumSize">
             <size>
              <width>0</width>
-             <height>23</height>
+             <height>21</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>1000</width>
-             <height>32</height>
+             <width>16777215</width>
+             <height>16777215</height>
             </size>
            </property>
            <property name="text">
@@ -14092,19 +14224,19 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>0</horstretch>
-             <verstretch>23</verstretch>
+             <verstretch>21</verstretch>
             </sizepolicy>
            </property>
            <property name="minimumSize">
             <size>
              <width>0</width>
-             <height>23</height>
+             <height>21</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>1000</width>
-             <height>32</height>
+             <width>16777215</width>
+             <height>16777215</height>
             </size>
            </property>
            <property name="text">
@@ -14134,19 +14266,19 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>0</horstretch>
-             <verstretch>23</verstretch>
+             <verstretch>21</verstretch>
             </sizepolicy>
            </property>
            <property name="minimumSize">
             <size>
              <width>0</width>
-             <height>23</height>
+             <height>21</height>
             </size>
            </property>
            <property name="maximumSize">
             <size>
-             <width>1000</width>
-             <height>32</height>
+             <width>16777215</width>
+             <height>16777215</height>
             </size>
            </property>
            <property name="text">
@@ -14156,6 +14288,18 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
          </item>
          <item>
           <widget class="QSpinBox" name="sb_coster_3">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>0</height>
+            </size>
+           </property>
            <property name="alignment">
             <set>Qt::AlignCenter</set>
            </property>
@@ -14268,7 +14412,7 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
        <rect>
         <x>0</x>
         <y>200</y>
-        <width>301</width>
+        <width>291</width>
         <height>281</height>
        </rect>
       </property>
@@ -14337,6 +14481,12 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
               <widget class="QComboBox" name="combo_sound">
                <property name="enabled">
                 <bool>true</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>65</width>
+                 <height>0</height>
+                </size>
                </property>
                <property name="maximumSize">
                 <size>
@@ -14419,6 +14569,12 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
               <widget class="QComboBox" name="combo_control">
                <property name="enabled">
                 <bool>true</bool>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>73</width>
+                 <height>0</height>
+                </size>
                </property>
                <property name="maximumSize">
                 <size>
@@ -14671,6 +14827,12 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
                <property name="enabled">
                 <bool>true</bool>
                </property>
+               <property name="minimumSize">
+                <size>
+                 <width>90</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="maximumSize">
                 <size>
                  <width>96</width>
@@ -14761,7 +14923,7 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>0</width>
+                 <width>165</width>
                  <height>0</height>
                 </size>
                </property>
@@ -14950,6 +15112,9 @@ QListWidget::indicator:indeterminate:hover,QCheckBox::indicator:indeterminate:ho
              </property>
              <property name="maximum">
               <number>255</number>
+             </property>
+             <property name="value">
+              <number>0</number>
              </property>
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
