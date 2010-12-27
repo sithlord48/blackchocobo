@@ -126,5 +126,9 @@
         <file alias="arrow_down_disabled">icon/arrow-down_disabled.png</file>
         <file alias="arrow_up">icon/arrow-up.png</file>
         <file alias="arrow_up_disabled">icon/arrow-up_disabled.png</file>
+        <file alias="scroll_handle_h">icon/scroll_handle_h.png</file>
+        <file alias="scroll_handle_v">icon/scroll_handle_v.png</file>
+        <file alias="mslot">icon/mslot.png</file>
+        <file alias="mlink">icon/mlink.png</file>
     </qresource>
 </RCC>

@@ -63,8 +63,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->tbl_location_field->setColumnWidth(2,50);
     ui->tbl_location_field->setColumnWidth(3,50);
     ui->tbl_location_field->setColumnWidth(4,50);
-
-    //Hide the stuff that needs to be hidden.
+//Hide the stuff that needs to be hidden.
     ui->eskill_group->setVisible(false);
     ui->eskill_group_2->setVisible(false);
     ui->combo_add_mat->setVisible(false);
@@ -5272,7 +5271,7 @@ void MainWindow::on_action_show_test_data_toggled()
 {
     if(ui->action_show_test_data->isChecked())
     {
-        ui->page_test->setEnabled(true);
+        ui->tab_test->setEnabled(true);
         ui->tabWidget->setTabEnabled(8,1);
         testdata_refresh();
         ui->lbl_0x34->setVisible(true);
@@ -5296,7 +5295,7 @@ void MainWindow::on_action_show_test_data_toggled()
 
     else
     {
-        ui->page_test->setEnabled(false);
+        ui->tab_test->setEnabled(false);
         ui->tabWidget->setTabEnabled(8,0);
         ui->lbl_0x34->setVisible(false);
         ui->lbl_0x35->setVisible(false);
