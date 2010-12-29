@@ -14,7 +14,7 @@
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -27,8 +27,8 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>767</width>
-    <height>560</height>
+    <width>16777215</width>
+    <height>16777215</height>
    </size>
   </property>
   <property name="windowTitle">
@@ -475,7 +475,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
      </rect>
     </property>
     <property name="sizePolicy">
-     <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
       <horstretch>0</horstretch>
       <verstretch>0</verstretch>
      </sizepolicy>
@@ -534,6 +534,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
        <layout class="QVBoxLayout" name="verticalLayout_23">
         <item>
          <widget class="QGroupBox" name="groupBox">
+          <property name="maximumSize">
+           <size>
+            <width>315</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <property name="title">
            <string>In Party</string>
           </property>
@@ -937,7 +943,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
         <item>
          <layout class="QHBoxLayout" name="horizontalLayout_84">
           <property name="spacing">
-           <number>-1</number>
+           <number>6</number>
           </property>
           <item>
            <widget class="QGroupBox" name="groupBox_15">
@@ -945,6 +951,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
              <size>
               <width>0</width>
               <height>70</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>154</width>
+              <height>16777215</height>
              </size>
             </property>
             <property name="title">
@@ -1106,6 +1118,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
               <height>70</height>
              </size>
             </property>
+            <property name="maximumSize">
+             <size>
+              <width>153</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="title">
              <string>Fights</string>
             </property>
@@ -1240,6 +1258,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
         </item>
         <item>
          <widget class="QGroupBox" name="groupBox_5">
+          <property name="maximumSize">
+           <size>
+            <width>315</width>
+            <height>348</height>
+           </size>
+          </property>
           <property name="title">
            <string>Click On A Char To edit ===========&gt;</string>
           </property>
@@ -1598,7 +1622,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>423</width>
+           <width>428</width>
            <height>416</height>
           </rect>
          </property>
@@ -4170,7 +4194,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
            <x>0</x>
            <y>0</y>
            <width>428</width>
-           <height>402</height>
+           <height>416</height>
           </rect>
          </property>
          <attribute name="label">
@@ -4263,14 +4287,20 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
              </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_92">
+               <property name="spacing">
+                <number>0</number>
+               </property>
                <item>
                 <spacer name="horizontalSpacer_34">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Maximum</enum>
+                 </property>
                  <property name="sizeHint" stdset="0">
                   <size>
-                   <width>13</width>
+                   <width>500</width>
                    <height>20</height>
                   </size>
                  </property>
@@ -4282,7 +4312,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="w_m_s1">
+                  <widget class="QPushButton" name="w_m_s8">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -4316,7 +4346,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="w_m_l1">
+                  <widget class="QLabel" name="w_m_l4">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                      <horstretch>0</horstretch>
@@ -4347,7 +4377,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="w_m_s2">
+                  <widget class="QPushButton" name="w_m_s7">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -4404,7 +4434,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="w_m_s3">
+                  <widget class="QPushButton" name="w_m_s6">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -4438,7 +4468,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="w_m_l2">
+                  <widget class="QLabel" name="w_m_l3">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                      <horstretch>0</horstretch>
@@ -4472,7 +4502,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="w_m_s4">
+                  <widget class="QPushButton" name="w_m_s5">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -4529,7 +4559,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="w_m_s5">
+                  <widget class="QPushButton" name="w_m_s4">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -4563,7 +4593,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="w_m_l3">
+                  <widget class="QLabel" name="w_m_l2">
                    <property name="minimumSize">
                     <size>
                      <width>14</width>
@@ -4588,7 +4618,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="w_m_s6">
+                  <widget class="QPushButton" name="w_m_s3">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -4645,7 +4675,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="w_m_s7">
+                  <widget class="QPushButton" name="w_m_s2">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -4679,7 +4709,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <widget class="QLabel" name="w_m_l4">
+                  <widget class="QLabel" name="w_m_l1">
                    <property name="minimumSize">
                     <size>
                      <width>14</width>
@@ -4707,7 +4737,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="w_m_s8">
+                  <widget class="QPushButton" name="w_m_s1">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -4824,14 +4854,20 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
              </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_96">
+               <property name="spacing">
+                <number>0</number>
+               </property>
                <item>
                 <spacer name="horizontalSpacer_26">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Maximum</enum>
+                 </property>
                  <property name="sizeHint" stdset="0">
                   <size>
-                   <width>8</width>
+                   <width>500</width>
                    <height>32</height>
                   </size>
                  </property>
@@ -4843,337 +4879,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   <number>0</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="a_m_s1">
-                   <property name="minimumSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="mslot" stdset="0">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="a_m_l1">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>14</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>14</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="scaledContents">
-                    <bool>false</bool>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QPushButton" name="a_m_s2">
-                   <property name="minimumSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="mslot" stdset="0">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <spacer name="horizontalSpacer_31">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeType">
-                  <enum>QSizePolicy::Fixed</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>14</width>
-                   <height>32</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_93">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QPushButton" name="a_m_s3">
-                   <property name="minimumSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="mslot" stdset="0">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="a_m_l2">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>14</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>14</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="scaledContents">
-                    <bool>false</bool>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QPushButton" name="a_m_s4">
-                   <property name="minimumSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="mslot" stdset="0">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <spacer name="horizontalSpacer_32">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeType">
-                  <enum>QSizePolicy::Fixed</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>14</width>
-                   <height>32</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_94">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QPushButton" name="a_m_s5">
-                   <property name="minimumSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="mslot" stdset="0">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="a_m_l3">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>14</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>14</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="scaledContents">
-                    <bool>false</bool>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QPushButton" name="a_m_s6">
-                   <property name="minimumSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                   <property name="iconSize">
-                    <size>
-                     <width>32</width>
-                     <height>32</height>
-                    </size>
-                   </property>
-                   <property name="mslot" stdset="0">
-                    <bool>true</bool>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </item>
-               <item>
-                <spacer name="horizontalSpacer_33">
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeType">
-                  <enum>QSizePolicy::Fixed</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>14</width>
-                   <height>32</height>
-                  </size>
-                 </property>
-                </spacer>
-               </item>
-               <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_95">
-                 <property name="spacing">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QPushButton" name="a_m_s7">
+                  <widget class="QPushButton" name="a_m_s8">
                    <property name="minimumSize">
                     <size>
                      <width>32</width>
@@ -5232,7 +4938,337 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <widget class="QPushButton" name="a_m_s8">
+                  <widget class="QPushButton" name="a_m_s7">
+                   <property name="minimumSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="mslot" stdset="0">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_31">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>14</width>
+                   <height>32</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_93">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="a_m_s6">
+                   <property name="minimumSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="mslot" stdset="0">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="a_m_l3">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>14</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>14</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>false</bool>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="a_m_s5">
+                   <property name="minimumSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="mslot" stdset="0">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_32">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>14</width>
+                   <height>32</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_94">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="a_m_s4">
+                   <property name="minimumSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="mslot" stdset="0">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="a_m_l2">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>14</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>14</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>false</bool>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="a_m_s3">
+                   <property name="minimumSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="mslot" stdset="0">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_33">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>14</width>
+                   <height>32</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_95">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="a_m_s2">
+                   <property name="minimumSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="iconSize">
+                    <size>
+                     <width>32</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="mslot" stdset="0">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="a_m_l1">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>14</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>14</width>
+                     <height>32</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>false</bool>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="a_m_s1">
                    <property name="minimumSize">
                     <size>
                      <width>32</width>
@@ -15739,6 +15775,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
        </rect>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_77">
+       <property name="leftMargin">
+        <number>6</number>
+       </property>
+       <property name="rightMargin">
+        <number>6</number>
+       </property>
        <item>
         <widget class="QLabel" name="label_167">
          <property name="text">
@@ -17152,7 +17194,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
       <property name="geometry">
        <rect>
         <x>260</x>
-        <y>419</y>
+        <y>415</y>
         <width>246</width>
         <height>56</height>
        </rect>
@@ -17180,7 +17222,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
        <rect>
         <x>0</x>
         <y>195</y>
-        <width>321</width>
+        <width>526</width>
         <height>291</height>
        </rect>
       </property>
@@ -20610,23 +20652,23 @@ p, li { white-space: pre-wrap; }
   <tabstop>limit_3b</tabstop>
   <tabstop>limit_4</tabstop>
   <tabstop>combo_weapon</tabstop>
-  <tabstop>w_m_s1</tabstop>
-  <tabstop>w_m_s2</tabstop>
-  <tabstop>w_m_s3</tabstop>
-  <tabstop>w_m_s4</tabstop>
-  <tabstop>w_m_s5</tabstop>
-  <tabstop>w_m_s6</tabstop>
-  <tabstop>w_m_s7</tabstop>
   <tabstop>w_m_s8</tabstop>
+  <tabstop>w_m_s7</tabstop>
+  <tabstop>w_m_s6</tabstop>
+  <tabstop>w_m_s5</tabstop>
+  <tabstop>w_m_s4</tabstop>
+  <tabstop>w_m_s3</tabstop>
+  <tabstop>w_m_s2</tabstop>
+  <tabstop>w_m_s1</tabstop>
   <tabstop>combo_armor</tabstop>
-  <tabstop>a_m_s1</tabstop>
-  <tabstop>a_m_s2</tabstop>
-  <tabstop>a_m_s3</tabstop>
-  <tabstop>a_m_s4</tabstop>
-  <tabstop>a_m_s5</tabstop>
-  <tabstop>a_m_s6</tabstop>
-  <tabstop>a_m_s7</tabstop>
   <tabstop>a_m_s8</tabstop>
+  <tabstop>a_m_s7</tabstop>
+  <tabstop>a_m_s6</tabstop>
+  <tabstop>a_m_s5</tabstop>
+  <tabstop>a_m_s4</tabstop>
+  <tabstop>a_m_s3</tabstop>
+  <tabstop>a_m_s2</tabstop>
+  <tabstop>a_m_s1</tabstop>
   <tabstop>combo_add_mat_slot</tabstop>
   <tabstop>sb_addap_slot</tabstop>
   <tabstop>btn_mastermateria_slot</tabstop>
