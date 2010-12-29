@@ -1613,11 +1613,11 @@ void MainWindow::setweaponslots(void)
             switch(Items[160+ui->combo_weapon->currentIndex()].linked)
             {
             case 0:{break;}
-            case 1:{ui->w_m_l1->setHidden(0);break;}
-            case 2:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);break;}
-            case 3:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);break;}
-            case 4:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);ui->w_m_l4->setHidden(0);break;}
-            }
+            case 1:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 2:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 3:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
+           }
             break;
         }
     case 2:{
@@ -1636,10 +1636,10 @@ void MainWindow::setweaponslots(void)
             switch(Items[144+ui->combo_weapon->currentIndex()].linked)
             {
             case 0:{break;}
-            case 1:{ui->w_m_l1->setHidden(0);break;}
-            case 2:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);break;}
-            case 3:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);break;}
-            case 4:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);ui->w_m_l4->setHidden(0);break;}
+            case 1:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 2:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 3:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
             }
             break;
         }
@@ -1659,10 +1659,10 @@ void MainWindow::setweaponslots(void)
             switch(Items[190+ui->combo_weapon->currentIndex()].linked)
             {
             case 0:{break;}
-            case 1:{ui->w_m_l1->setHidden(0);break;}
-            case 2:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);break;}
-            case 3:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);break;}
-            case 4:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);ui->w_m_l4->setHidden(0);break;}
+            case 1:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 2:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 3:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
             }
             break;
         }
@@ -1682,11 +1682,11 @@ void MainWindow::setweaponslots(void)
             switch(Items[176+ui->combo_weapon->currentIndex()].linked)
             {
             case 0:{break;}
-            case 1:{ui->w_m_l1->setHidden(0);break;}
-            case 2:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);break;}
-            case 3:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);break;}
-            case 4:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);ui->w_m_l4->setHidden(0);break;}
-            }
+            case 1:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 2:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 3:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
+          }
             break;
         }
     case 5:{
@@ -1705,11 +1705,11 @@ void MainWindow::setweaponslots(void)
             switch(Items[215+ui->combo_weapon->currentIndex()].linked)
             {
             case 0:{break;}
-            case 1:{ui->w_m_l1->setHidden(0);break;}
-            case 2:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);break;}
-            case 3:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);break;}
-            case 4:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);ui->w_m_l4->setHidden(0);break;}
-            }
+            case 1:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 2:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 3:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
+           }
             break;
         }
     case 6:{
@@ -1728,11 +1728,11 @@ void MainWindow::setweaponslots(void)
             switch(Items[229+ui->combo_weapon->currentIndex()].linked)
             {
             case 0:{break;}
-            case 1:{ui->w_m_l1->setHidden(0);break;}
-            case 2:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);break;}
-            case 3:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);break;}
-            case 4:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);ui->w_m_l4->setHidden(0);break;}
-            }
+            case 1:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 2:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 3:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
+           }
             break;
         }
     case 7:{
@@ -1751,10 +1751,10 @@ void MainWindow::setweaponslots(void)
             switch(Items[242+ui->combo_weapon->currentIndex()].linked)
             {
             case 0:{break;}
-            case 1:{ui->w_m_l1->setHidden(0);break;}
-            case 2:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);break;}
-            case 3:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);break;}
-            case 4:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);ui->w_m_l4->setHidden(0);break;}
+            case 1:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 2:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 3:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
             }
             break;
         }
@@ -1774,11 +1774,11 @@ void MainWindow::setweaponslots(void)
             switch(Items[201+ui->combo_weapon->currentIndex()].linked)
             {
             case 0:{break;}
-            case 1:{ui->w_m_l1->setHidden(0);break;}
-            case 2:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);break;}
-            case 3:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);break;}
-            case 4:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);ui->w_m_l4->setHidden(0);break;}
-            }
+            case 1:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 2:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 3:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
+           }
             break;
         }
     }
