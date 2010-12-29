@@ -126,6 +126,12 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
    style.append(", 255));}");
    ui->centralWidget->setStyleSheet(style);
 
+   QString tablestyle = "::section{background-color:rgba(10,10,10,128);color: white;padding-left:4px;border:1px solid #6c6c6c;}";
+   tablestyle.append("QHeaderView:down-arrow{image: url(:/icon/arrow_down);min-width:9px;}");
+   tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
+
+   ui->tbl_location_field->horizontalHeader()->setStyleSheet(tablestyle);
+
    if(settings.value("lang").toString() == "en")
    {
        ui->action_Lang_en->setChecked(1);
