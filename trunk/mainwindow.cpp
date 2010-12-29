@@ -88,10 +88,43 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
         ui->action_show_test_data->setChecked(1);
         ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
     }
+
    //be sure they are not empty, and set them accordingly.
-    if(settings.value("default_save_file").isNull()){settings.setValue("default_save_file",QString(QCoreApplication::applicationDirPath()) + "/"+ "save0");}
+   if(settings.value("default_save_file").isNull()){settings.setValue("default_save_file",QString(QCoreApplication::applicationDirPath()) + "/"+ "save0");}
    if(settings.value("load_path").isNull()){settings.setValue("load_path",QDir::homePath());}
    if(settings.value("char_stat_folder").isNull()){settings.setValue("char_stat_folder",settings.value("load_path").toString());}
+   if(settings.value("color1_r").isNull()){settings.setValue("color1_r","7");}
+   if(settings.value("color1_g").isNull()){settings.setValue("color1_g","6");}
+   if(settings.value("color1_b").isNull()){settings.setValue("color1_b","6");}
+
+   if(settings.value("color2_r").isNull()){settings.setValue("color2_r","35");}
+   if(settings.value("color2_g").isNull()){settings.setValue("color2_g","33");}
+   if(settings.value("color2_b").isNull()){settings.setValue("color2_b","33");}
+
+   if(settings.value("color3_r").isNull()){settings.setValue("color3_r","65");}
+   if(settings.value("color3_g").isNull()){settings.setValue("color3_g","65");}
+   if(settings.value("color3_b").isNull()){settings.setValue("color3_b","65");}
+
+   QString style="QWidget#centralWidget{background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
+   style.append(settings.value("color1_r").toString());
+   style.append(",");
+   style.append(settings.value("color1_g").toString());
+   style.append(",");
+   style.append(settings.value("color1_b").toString());
+   style.append(", 255), stop:0.215909 rgba(");
+   style.append(settings.value("color2_r").toString());
+   style.append(",");
+   style.append(settings.value("color2_g").toString());
+   style.append(",");
+   style.append(settings.value("color2_b").toString());
+   style.append(", 255), stop:0.818182 rgba(");
+   style.append(settings.value("color3_r").toString());
+   style.append(",");
+   style.append(settings.value("color3_g").toString());
+   style.append(",");
+   style.append(settings.value("color3_b").toString());
+   style.append(", 255));}");
+   ui->centralWidget->setStyleSheet(style);
 
    if(settings.value("lang").toString() == "en")
    {
@@ -1350,6 +1383,27 @@ void MainWindow::on_actionAbout_activated()
 void MainWindow::on_actionEdit_Paths_triggered()
 {
     Options odialog; odialog.exec();
+
+    QString style="QWidget#centralWidget{background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
+    style.append(settings.value("color1_r").toString());
+    style.append(",");
+    style.append(settings.value("color1_g").toString());
+    style.append(",");
+    style.append(settings.value("color1_b").toString());
+    style.append(", 255), stop:0.215909 rgba(");
+    style.append(settings.value("color2_r").toString());
+    style.append(",");
+    style.append(settings.value("color2_g").toString());
+    style.append(",");
+    style.append(settings.value("color2_b").toString());
+    style.append(", 255), stop:0.818182 rgba(");
+    style.append(settings.value("color3_r").toString());
+    style.append(",");
+    style.append(settings.value("color3_g").toString());
+    style.append(",");
+    style.append(settings.value("color3_b").toString());
+    style.append(", 255));}");
+    ui->centralWidget->setStyleSheet(style);
 }
 void MainWindow::on_actionAbout_Qt_activated()
 {

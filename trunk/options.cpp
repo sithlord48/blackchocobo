@@ -10,6 +10,15 @@ Options::Options(QWidget *parent) :
 {
     ui->setupUi(this);
     set_path_lbls();
+    ui->slide_c1_r->setValue(bchoco_settings.value("color1_r").toInt());
+    ui->slide_c1_g->setValue(bchoco_settings.value("color1_g").toInt());
+    ui->slide_c1_b->setValue(bchoco_settings.value("color1_b").toInt());
+    ui->slide_c2_r->setValue(bchoco_settings.value("color2_r").toInt());
+    ui->slide_c2_g->setValue(bchoco_settings.value("color2_g").toInt());
+    ui->slide_c2_b->setValue(bchoco_settings.value("color2_b").toInt());
+    ui->slide_c3_r->setValue(bchoco_settings.value("color3_r").toInt());
+    ui->slide_c3_g->setValue(bchoco_settings.value("color3_g").toInt());
+    ui->slide_c3_b->setValue(bchoco_settings.value("color3_b").toInt());
 }
 
 Options::~Options()
@@ -28,7 +37,29 @@ void Options::changeEvent(QEvent *e)
         break;
     }
 }
-
+void Options::set_preview()
+{
+    QString style="background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
+    style.append(QString::number(ui->slide_c1_r->value()));
+    style.append(",");
+    style.append(QString::number(ui->slide_c1_g->value()));
+    style.append(",");
+    style.append(QString::number(ui->slide_c1_b->value()));
+    style.append(", 255), stop:0.215909 rgba(");
+    style.append(QString::number(ui->slide_c2_r->value()));
+    style.append(",");
+    style.append(QString::number(ui->slide_c2_g->value()));
+    style.append(",");
+    style.append(QString::number(ui->slide_c2_b->value()));
+    style.append(", 255), stop:0.818182 rgba(");
+    style.append(QString::number(ui->slide_c3_r->value()));
+    style.append(",");
+    style.append(QString::number(ui->slide_c3_g->value()));
+    style.append(",");
+    style.append(QString::number(ui->slide_c3_b->value()));
+    style.append(", 255));");
+    ui->lbl_preview->setStyleSheet(style);
+}
 void Options::set_path_lbls()
 {
     if (!bchoco_settings.value("default_save_file").isNull()){ui->line_default_save->setText(bchoco_settings.value("default_save_file").toString());}
@@ -112,6 +143,326 @@ void Options::on_btn_set_char_stat_folder_clicked()
     if(!temp.isNull()){bchoco_settings.setValue("char_stat_folder",temp);}
     //set_path_lbls();
 }
+/*~~~~~~~~~~~~~~~~~~Color sliders~~~~~~~~~~~~~~~~~~*/
+void Options::on_slide_c1_r_valueChanged(int value)
+{
+    QString g_style = "QSlider#slide_c1_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    g_style.append(QString::number(ui->slide_c1_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(0));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_c1_b->value()));
+    g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_c1_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(255));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_c1_b->value()));
+    g_style.append(",255));}");
+
+    QString b_style =  "QSlider#slide_c1_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    b_style.append(QString::number(ui->slide_c1_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_c1_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(0));
+    b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_c1_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_c1_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(255));
+    b_style.append(",255));}");
+
+    ui->slide_c1_g->setStyleSheet(g_style);
+    ui->slide_c1_b->setStyleSheet(b_style);
+    bchoco_settings.setValue("color1_r",value);
+    set_preview();
+}
+void Options::on_slide_c1_g_valueChanged(int value)
+{
+    QString r_style = "QSlider#slide_c1_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    r_style.append(QString::number(0));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_b->value()));
+    r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_b->value()));
+    r_style.append(",255));}");
+
+    QString b_style =  "QSlider#slide_c1_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    b_style.append(QString::number(ui->slide_c1_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_c1_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(0));
+    b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_c1_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_c1_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(255));
+    b_style.append(",255));}");
+
+    ui->slide_c1_r->setStyleSheet(r_style);
+    ui->slide_c1_b->setStyleSheet(b_style);
+    bchoco_settings.setValue("color1_g",value);
+    set_preview();
+}
+void Options::on_slide_c1_b_valueChanged(int value)
+{
+    QString r_style = "QSlider#slide_c1_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    r_style.append(QString::number(0));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_b->value()));
+    r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_b->value()));
+    r_style.append(",255));}");
+
+    QString g_style = "QSlider#slide_c1_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    g_style.append(QString::number(ui->slide_c1_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(0));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_c1_b->value()));
+    g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_c1_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(255));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_c1_b->value()));
+    g_style.append(",255));}");
+
+    ui->slide_c1_r->setStyleSheet(r_style);
+    ui->slide_c1_g->setStyleSheet(g_style);
+    bchoco_settings.setValue("color1_b",value);
+    set_preview();
+}
+
+void Options::on_slide_c2_r_valueChanged(int value)
+{
+    QString g_style = "QSlider#slide_c2_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    g_style.append(QString::number(ui->slide_c2_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(0));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_c2_b->value()));
+    g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_c2_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(255));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_c2_b->value()));
+    g_style.append(",255));}");
+
+    QString b_style =  "QSlider#slide_c2_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    b_style.append(QString::number(ui->slide_c2_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_c2_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(0));
+    b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_c2_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_c2_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(255));
+    b_style.append(",255));}");
+
+    ui->slide_c2_g->setStyleSheet(g_style);
+    ui->slide_c2_b->setStyleSheet(b_style);
+    bchoco_settings.setValue("color2_r",value);
+    set_preview();
+}
+void Options::on_slide_c2_g_valueChanged(int value)
+{
+    QString r_style = "QSlider#slide_c2_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    r_style.append(QString::number(0));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_b->value()));
+    r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_b->value()));
+    r_style.append(",255));}");
+
+    QString b_style =  "QSlider#slide_c2_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    b_style.append(QString::number(ui->slide_c2_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_c2_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(0));
+    b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_c2_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_c2_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(255));
+    b_style.append(",255));}");
+
+    ui->slide_c2_r->setStyleSheet(r_style);
+    ui->slide_c2_b->setStyleSheet(b_style);
+    bchoco_settings.setValue("color2_g",value);
+    set_preview();
+}
+void Options::on_slide_c2_b_valueChanged(int value)
+{
+    QString r_style = "QSlider#slide_c2_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    r_style.append(QString::number(0));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_b->value()));
+    r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_b->value()));
+    r_style.append(",255));}");
+
+    QString g_style = "QSlider#slide_c2_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    g_style.append(QString::number(ui->slide_c2_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(0));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_c2_b->value()));
+    g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_c2_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(255));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_c2_b->value()));
+    g_style.append(",255));}");
+
+    ui->slide_c2_r->setStyleSheet(r_style);
+    ui->slide_c2_g->setStyleSheet(g_style);
+    bchoco_settings.setValue("color2_b",value);
+    set_preview();
+}
+
+void Options::on_slide_c3_r_valueChanged(int value)
+{
+    QString g_style = "QSlider#slide_c3_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    g_style.append(QString::number(ui->slide_c3_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(0));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_c3_b->value()));
+    g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_c3_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(255));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_c3_b->value()));
+    g_style.append(",255));}");
+
+    QString b_style =  "QSlider#slide_c3_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    b_style.append(QString::number(ui->slide_c3_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_c3_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(0));
+    b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_c3_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_c3_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(255));
+    b_style.append(",255));}");
+
+    ui->slide_c3_g->setStyleSheet(g_style);
+    ui->slide_c3_b->setStyleSheet(b_style);
+    bchoco_settings.setValue("color3_r",value);
+    set_preview();
+}
+void Options::on_slide_c3_g_valueChanged(int value)
+{
+
+    QString r_style = "QSlider#slide_c3_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    r_style.append(QString::number(0));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_b->value()));
+    r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_b->value()));
+    r_style.append(",255));}");
+
+    QString b_style =  "QSlider#slide_c3_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    b_style.append(QString::number(ui->slide_c3_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_c3_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(0));
+    b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_c3_r->value()));
+    b_style.append(",");
+    b_style.append(QString::number(ui->slide_c3_g->value()));
+    b_style.append(",");
+    b_style.append(QString::number(255));
+    b_style.append(",255));}");
+
+    ui->slide_c3_r->setStyleSheet(r_style);
+    ui->slide_c3_b->setStyleSheet(b_style);
+    bchoco_settings.setValue("color3_g",value);
+    set_preview();
+}
+void Options::on_slide_c3_b_valueChanged(int value)
+{
+    QString r_style = "QSlider#slide_c3_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    r_style.append(QString::number(0));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_b->value()));
+    r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_g->value()));
+    r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_b->value()));
+    r_style.append(",255));}");
+
+    QString g_style = "QSlider#slide_c3_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
+    g_style.append(QString::number(ui->slide_c3_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(0));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_c3_b->value()));
+    g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_c3_r->value()));
+    g_style.append(",");
+    g_style.append(QString::number(255));
+    g_style.append(",");
+    g_style.append(QString::number(ui->slide_c3_b->value()));
+    g_style.append(",255));}");
+
+    ui->slide_c3_r->setStyleSheet(r_style);
+    ui->slide_c3_g->setStyleSheet(g_style);
+    bchoco_settings.setValue("color3_b",value);
+    set_preview();
+}
+
 /*~~~~~~~~~~~~~~~~CLOSE BUTTON~~~~~~~~~~~~~~~~~~*/
 void Options::on_pushButton_clicked()
 {
