@@ -25,9 +25,11 @@ int main(int argc, char *argv[])
 {
     QSettings setting(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
     Q_INIT_RESOURCE(images);
-    QApplication::setStyle("Plastique");
+
     QApplication a(argc, argv);
     a.setApplicationName("Black Chocobo");
+    a.setStyle("Plastique");
+    a.setApplicationVersion("1.7");
     QTranslator translator;
     QString lang = "lang/bchoco_";
     if(setting.value("lang").isNull()){setting.setValue("lang",QLocale::system().name().section('_',0,0));} //if no lang set it to os setting.
