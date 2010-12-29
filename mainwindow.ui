@@ -39,51 +39,49 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">
-/*GENERIC ITEM RULES (qwidget, qabstract area,etc.)*/
-/*QWidget{background-color: rgba(10,10,10,64);}*/
+   <string notr="true">/*GENERIC ITEM RULES (qwidget, qabstract area,etc.)*/
+QWidget{background-color: rgba(10,10,10,16);font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);}
 
-QWidget:disabled,QLabel:disabled{font: 9pt &quot;Ubuntu&quot;;color:rgb(74, 80, 73);background-color:rgb(48, 47, 47);}
+QWidget:disabled,QLabel:disabled{font: 9pt &quot;Ubuntu&quot;;color:rgb(74, 80, 73);background-color:rgba(48, 47, 47,128);}
 
-
-QWidget#centralWidget,QDialog,QWidget#tab_party,QWidget#tab_items,QWidget#tab_materia,QWidget#tab_chocobos,QWidget#tab_location,QWidget#tab_progress,QWidget#tab_other,QWidget#tab_config,QWidget#tab_test,QWidget#tab,QWidget#tab_2,QWidget#page_stats,QWidget#page_eq{
-background-color: rgb(48, 47, 47);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+QDialog{
+background-color:rgb(48,47,47);
 selection-background-color: rgba(34, 201, 247, 128);
 selection-color: rgb(255,255,255);
 }
-
+QWidget#tab_party,QWidget#tab_items,QWidget#tab_materia,QWidget#tab_chocobos,QWidget#tab_location,QWidget#tab_progress,QWidget#tab_other,QWidget#tab_config,QWidget#tab_test,QWidget#tab,QWidget#tab_2,QWidget#page_stats,QWidget#page_eq{
+	background-color: qlineargradient(spread:pad, x1:0.404, y1:0, x2:0, y2:1, stop:0 rgba(48, 47, 47, 32), stop:1 rgba(65, 65, 65, 32));
+	selection-background-color: rgba(34, 201, 247, 128);
+	selection-color: rgb(255,255,255);
+}
+QLabel#lbl_avatar{
+border:2px solid grey;
+border-radius: 5px;
+}
 QListView,QTreeView,QTableView,QColumnView{
 background-color:rgba(10,10,10,64);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
 selection-background-color: rgba(34, 201, 247, 128);
 selection-color: rgb(255,255,255);
 }
 QGroupBox:enabled,QToolBox::item,QMdiArea{
 background-color:rgba(10,10,10,32);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+
 selection-background-color: rgba(34, 201, 247, 128);
 selection-color: rgb(255,255,255);
 }
 QLabel:enabled{
 background-color:rgba(255,255,255,0);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+
 }
 QToolBox::tab{
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-selection-background-color: rgba(34, 201, 247, 128);
-selection-color: rgb(255,255,255);
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(106, 106, 106, 32), stop:1 rgba(67, 67, 67, 128));
+	selection-background-color: rgba(34, 201, 247, 128);
+	selection-color: rgb(255,255,255);
 }
 
 /*QMenuBar*/
-QMenuBar {	font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-	background-color: rgb(48, 47, 47);
-}
-
-QMenuBar:item{
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-background-color: rgb(48, 47, 47);
-
+QMenuBar:item,QMenuBar {
+	background-color: qlineargradient(spread:pad, x1:0.682409, y1:0.097, x2:0.346591, y2:0.892, stop:0 rgba(99, 97, 97, 255), stop:0.715909 rgba(73, 77, 84, 255));
 }
 QMenu{
 	border:2px solid; 
@@ -92,41 +90,54 @@ QMenu{
 	border-bottom-color: rgb(172, 172, 172);
 	border-top-color: rgb(172,172,172);
 	border-radius:5px;
-
+	background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(7, 6, 6, 255), stop:0.340909 rgba(35, 33, 33, 255), stop:0.801136 rgba(65, 65, 65, 255));
 }
 QMenu::item:enabled{
-background-color: rgba(32, 31, 31,32);font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-selection-background-color:rgba(34, 201, 247, 128);selection-color: rgb(255,255,255);
+	background-color: qlineargradient(spread:pad, x1:0.682409, y1:0.097, x2:0.346591, y2:0.892, stop:0 rgba(99, 97, 97, 255), stop:0.715909 rgba(73, 77, 84, 255));
+selection-background-color:rgba(34, 201, 247, 255);selection-color: rgb(255,255,255);
 }
 
-QMenu::item:disabled{background-color:rgba(67,66,65,32);font: 9pt &quot;Ubuntu&quot;;color:rgb(128,128,128);}
-
+QMenu::item:disabled{
+background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(7, 6, 6, 255), stop:0.340909 rgba(35, 33, 33, 255), stop:0.801136 rgba(65, 65, 65, 255));
+}
+/*
 QTabBar{
-	border:2px solid; 
+    border:2px solid; 
+	padding: 2px;
+	margin: 4px;
 	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
 	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
 	border-bottom-color: rgb(172, 172, 172);
 	border-top-color: rgb(172,172,172);
 	border-radius:5px;
-	background-color: rgb(48, 47, 47);
-	font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+	}
+
+   QTabBar::tab{	
+	background-color: rgba(48, 47, 47,64);
+	min-width: 45px;
 }
+QTabBar::tab:selected{
+	border:2px solid grey; 
+	border-radius:5px;
+	background-color: rgba(48, 47, 47,196);
+}
+*/
 QComboBox:disabled,QPushButton:disabled,QLineEdit:disabled,QSpinBox:disabled,QTableWidget:disabled,QListWidget:disabled{
-background-color:rgb(48, 47, 47);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(74, 80, 73);
+background-color:rgba(48, 47, 47,16);
+
 }
 
 QTableWidget:enabled,QListWidget:enabled{
-background-color: rgba(32, 31, 31,128);
+background-color: rgba(32, 31, 31,64);
 selection-background-color: rgba(34, 201, 247, 128);
 selection-color: rgb(255,255,255);
 gridline-color: rgb(25, 25, 25);
-font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+
 }
 /*WIDGET ITEMS (spinboxes, sliders, combos etc...)*/
 /*Sliders */
 QSlider#slide_limit:sub-page,QSlider#slide_battlespeed:sub-page,QSlider#slide_fieldmspeed:sub-page,QSlider#slide_battlemspeed:sub-page{
-background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87, 255), stop:0.505682 rgba(209, 128, 173, 255), stop:0.931818 rgba(209, 44, 136, 255));
+background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87,192), stop:0.505682 rgba(209, 128, 173,192), stop:0.931818 rgba(209, 44, 136, 192));
  }
 QSlider#slide_limit::add-pageQSlider#slide_battlespeed:add-page,QSlider#slide_fieldmspeed:add-page,QSlider#slide_battlemspeed:add-page {
  background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));
@@ -176,10 +187,7 @@ QSlider#slide_battlespeed::handle,QSlider#slide_fieldmspeed::handle,QSlider#slid
  }
 
 /*Checkboxes-enabled*/
-QLIstWidget:enabled,QCheckBox:enabled{
-	background-color: rgba(32,31,31,0);
-	font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-}
+QLIstWidget:enabled,QCheckBox:enabled{background-color: rgba(32,31,31,0);}
 QListWidget::indicator:enabled:checked,QCheckBox::indicator:enabled:checked {image: url(:/icon/checkbox_checked);}
 QListWidget::indicator:enabled:unchecked,QCheckBox::indicator:enabled:unchecked {image: url(:/icon/checkbox_unchecked);}
 QListWidget::indicator:enabled:indeterminate,QCheckBox::indicator:enabled:indeterminate{image: url(:/icon/checkbox_indeterminate);}
@@ -188,10 +196,7 @@ QListWidget::indicator:enabled:unchecked:hover,QCheckBox::indicator:enabled:unch
 QListWidget::indicator:enabled:indeterminate:hover,QCheckBox::indicator:enabled:indeterminate:hover{image: url(:/icon/checkbox_indeterminate_hover);}
 
 /*Checkboxes-disabled*/
-QLIstWidget:disabled,QCheckBox:disabled{
-	background-color: rgb(32,31,31,0);
-	font: 9pt &quot;Ubuntu&quot;;color:rgb(128,128,128);
-}
+QLIstWidget:disabled,QCheckBox:disabled{background-color: rgb(32,31,31,0);}
 QListWidget::indicator:disabled:checked,QCheckBox::indicator:disabled:checked {image: url(:/icon/checkbox_checked_disabled);}
 QListWidget::indicator:disabled:unchecked,QCheckBox::indicator:disabled:unchecked {image: url(:/icon/checkbox_unchecked_disabled);}
 QListWidget::indicator:disabled:indeterminate,QCheckBox::indicator:disabled:indeterminate{image: url(:/icon/checkbox_indeterminate_disabled);}
@@ -202,18 +207,17 @@ QListWidget::indicator:disabled:indeterminate:hover,QCheckBox::indicator:disable
 /*Spinbox-enabled*/
 QSpinBox:enabled{
 	border:1px solid; 
-	border-color: rgb(67,67,67);
-	background-color: rgb(32,31,31);
+	border-color: rgba(67,67,67,192);
+	background-color: rgba(32,31,31,128);
 	selection-background-color: rgba(34, 201, 247, 128);
 	selection-color: rgb(255,255,255);
-	font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
 	border-radius: 5px;
 }
 QSpinBox::up-button {
      subcontrol-origin: border;
      subcontrol-position: top right;
      width: 8px; 
-	background-color: rgb(67, 67, 67);
+	background-color: rgba(67, 67, 67,128);
  }
 QSpinBox:up-arrow{
 	image: url(:/icon/arrow_up);
@@ -224,7 +228,7 @@ QSpinBox::down-button {
      subcontrol-origin: border;
      subcontrol-position: bottom right;
      width: 8px; 
-	background-color: rgb(67,67,67); 
+	background-color: rgba(67,67,67,128); 
 }
 QSpinBox:down-arrow{
 	image: url(:/icon/arrow_down);
@@ -236,9 +240,8 @@ QSpinBox:down-arrow{
 QSpinBox:disabled{
 	border:1px solid; 
 	border:1px solid; 
-	border-color: rgb(67,67,67);
-	background-color: rgb(67,67,67);
-	font: 9pt &quot;Ubuntu&quot;;color:rgb(128,128,128);
+	border-color: rgb(67,67,67,16);
+	background-color: rgb(67,67,67,16);
 	border-radius: 5px;
 }
 QSpinBox:up-arrow:disabled, QSpinBox:up-arrow:off{
@@ -254,12 +257,11 @@ QSpinBox:down-arrow:disabled, QSpinBox:down-arrow:off{
 /*ComboBox-enabled*/
 QComboBox:enabled{
   border:3px solid; 
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: rgb(172, 172, 172);
-	border-top-color: rgb(172, 172, 172);
-    background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(32, 31, 31, 255));
-	font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
+	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
+	border-bottom-color: rgba(172, 172, 172,192);
+	border-top-color: rgba(172, 172, 172,192);
+    background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 128), stop:0.5 rgba(106, 106, 106, 128), stop:1 rgba(32, 31, 31, 128));
 	border-radius: 5px;
 }
 QComboBox::down-arrow{
@@ -271,12 +273,11 @@ QComboBox::down-arrow:on{
 }
 QComboBox::drop-down:on{
     border:1px solid; 
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: rgb(172, 172, 172);
-	border-top-color: rgb(172, 172, 172);
-	background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(32, 31, 31, 255));
-	font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
+	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
+	border-bottom-color: rgba(172, 172, 172,192);
+	border-top-color: rgba(172, 172, 172,192);
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 128), stop:0.5 rgba(106, 106, 106, 128), stop:1 rgba(32, 31, 31, 128));
 	border-radius: 5px;
 }
 QComboBox QAbstractItemView{
@@ -288,19 +289,18 @@ QComboBox QAbstractItemView{
 	background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(32, 31, 31, 255));
 	selection-background-color:rgba(34, 201, 247, 128);
 	selection-color: rgb(255,255,255);
-	font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
 	border-radius: 5px;
 }
 /*ComboBox-disabled*/
 QComboBox:disabled{
-	font: 9pt &quot;Ubuntu&quot;;color:rgb(128,128,128);
+
 }
 QComboBox::down-arrow:disabled{
 	image: url(:/icon/arrow_down_disabled);
 }
 QLineEdit:enabled{
 border: 2px solid grey;
-background-color: rgb(32, 31, 31);
+background-color: rgba(32, 31, 31,96);
 selection-background-color:rgba(34, 201, 247, 128);
 selection-color: rgb(255,255,255);
 color:rgb(255,255,255);
@@ -308,29 +308,28 @@ border-radius: 5px;
 }
 QLCDNumber:enabled{
 	border:2px solid;
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: rgb(172, 172, 172);
-	border-top-color: rgb(172, 172, 172);
-	background-color: rgb(32, 31, 31);
+	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
+	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
+	border-bottom-color: rgba(172, 172, 172,192);
+	border-top-color: rgba(172, 172, 172,192);
+	background-color: rgba(32, 31, 31,96);
 	selection-background-color:rgba(34, 201, 247, 128);
 	selection-color: rgb(255,255,255);
-	font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
 	border-radius: 5px;
 }
-QPushButton:enabled {  border:3px solid; 
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: rgb(172, 172, 172);
-	border-top-color: rgb(172, 172, 172);
-    background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(32, 31, 31, 255));
-	font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
+QPushButton:enabled {  
+    border:3px solid; 
+	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
+	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
+	border-bottom-color: rgba(172, 172, 172,192);
+	border-top-color: rgba(172, 172, 172,192);
+    background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 128), stop:0.5 rgba(106, 106, 106, 128), stop:1 rgba(32, 31, 31,128));
 	border-radius: 5px;
 }
 /*Scroll Bars */
 QScrollBar:horizontal{
     border:1px solid grey;
-	background-color:rgb(47,47,47);
+	background-color:rgba(47,47,47,128);
 	height:14px;
 	margin: 0px 16px 0px 16px ;
 
@@ -366,13 +365,13 @@ image: url(:/icon/next);
 height:12px;
 }
 QScrollBar::add-page:horizontal,QScrollBar::sub-page:horizontal{
-background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(67, 67, 67, 255));
+background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 255), stop:0.5 rgba(106, 106, 106, 192), stop:1 rgba(67, 67, 67, 192));
 }
 /* Vertical scroll bar */
 
 QScrollBar:vertical{
     border:1px solid grey;
-	background-color:rgb(47,47,47);
+	background-color:rgba(47,47,47,192);
 	width:14px;
 	margin: 16px 0px 16px 0px ;
 
@@ -408,7 +407,7 @@ image: url(:/icon/arrow_down);
 width:12px;
 }
 QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical{
-background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(67, 67, 67, 255));
+background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 192), stop:0.5 rgba(106, 106, 106,192), stop:1 rgba(67, 67, 67, 192));
 }
 QPushButton[mslot=&quot;true&quot;]{
 border: 0px;
@@ -2086,6 +2085,21 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_115">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <property name="leftMargin">
+             <number>3</number>
+            </property>
+            <property name="topMargin">
+             <number>6</number>
+            </property>
+            <property name="rightMargin">
+             <number>3</number>
+            </property>
+            <property name="bottomMargin">
+             <number>6</number>
+            </property>
             <item>
              <layout class="QVBoxLayout" name="verticalLayout_25">
               <property name="spacing">
@@ -2216,6 +2230,22 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                 <property name="spacing">
                  <number>0</number>
                 </property>
+                <item>
+                 <spacer name="verticalSpacer_6">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Expanding</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>20</width>
+                    <height>40</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
                 <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_61">
                   <property name="leftMargin">
@@ -6492,7 +6522,7 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>415</height>
+           <height>500</height>
           </size>
          </property>
          <property name="font">
@@ -7891,9 +7921,9 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
      <widget class="QTabWidget" name="tabWidget_2">
       <property name="geometry">
        <rect>
-        <x>20</x>
+        <x>10</x>
         <y>35</y>
-        <width>721</width>
+        <width>711</width>
         <height>441</height>
        </rect>
       </property>
@@ -10894,13 +10924,13 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
             <widget class="QComboBox" name="cb_c4_type">
              <property name="minimumSize">
               <size>
-               <width>75</width>
+               <width>79</width>
                <height>22</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>75</width>
+               <width>79</width>
                <height>22</height>
               </size>
              </property>
@@ -11744,13 +11774,13 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
             <widget class="QComboBox" name="cb_c5_type">
              <property name="minimumSize">
               <size>
-               <width>75</width>
+               <width>79</width>
                <height>22</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>75</width>
+               <width>79</width>
                <height>22</height>
               </size>
              </property>
@@ -12594,13 +12624,13 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
             <widget class="QComboBox" name="cb_c6_type">
              <property name="minimumSize">
               <size>
-               <width>75</width>
+               <width>79</width>
                <height>22</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>75</width>
+               <width>79</width>
                <height>22</height>
               </size>
              </property>
@@ -15660,6 +15690,9 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
        </item>
        <item row="0" column="1">
         <widget class="QComboBox" name="cb_replay">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
          <property name="maximumSize">
           <size>
            <width>16777215</width>
