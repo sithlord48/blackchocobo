@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>763</width>
+    <width>767</width>
     <height>560</height>
    </rect>
   </property>
@@ -21,13 +21,13 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>763</width>
+    <width>767</width>
     <height>560</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>763</width>
+    <width>767</width>
     <height>560</height>
    </size>
   </property>
@@ -476,7 +476,7 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
      <rect>
       <x>0</x>
       <y>20</y>
-      <width>760</width>
+      <width>771</width>
       <height>516</height>
      </rect>
     </property>
@@ -2672,6 +2672,12 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                   <property name="spacing">
                    <number>0</number>
                   </property>
+                  <property name="leftMargin">
+                   <number>3</number>
+                  </property>
+                  <property name="rightMargin">
+                   <number>3</number>
+                  </property>
                   <item>
                    <widget class="QSlider" name="slide_limit">
                     <property name="minimumSize">
@@ -2795,7 +2801,7 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                   <number>0</number>
                  </property>
                  <property name="rightMargin">
-                  <number>0</number>
+                  <number>6</number>
                  </property>
                  <property name="bottomMargin">
                   <number>0</number>
@@ -4169,8 +4175,8 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>423</width>
-           <height>416</height>
+           <width>428</width>
+           <height>402</height>
           </rect>
          </property>
          <attribute name="label">
@@ -4188,6 +4194,12 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
           </property>
           <item>
            <widget class="QGroupBox" name="groupBox_4">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>86</height>
+             </size>
+            </property>
             <property name="title">
              <string>Weapon</string>
             </property>
@@ -4319,21 +4331,18 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                    </property>
                    <property name="minimumSize">
                     <size>
-                     <width>12</width>
+                     <width>14</width>
                      <height>32</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>12</width>
+                     <width>14</width>
                      <height>32</height>
                     </size>
                    </property>
                    <property name="text">
                     <string/>
-                   </property>
-                   <property name="pixmap">
-                    <pixmap resource="images.qrc">:/icon/mlink</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>false</bool>
@@ -4389,7 +4398,7 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
-                   <width>8</width>
+                   <width>14</width>
                    <height>20</height>
                   </size>
                  </property>
@@ -4444,13 +4453,13 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                    </property>
                    <property name="minimumSize">
                     <size>
-                     <width>12</width>
+                     <width>14</width>
                      <height>32</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>12</width>
+                     <width>14</width>
                      <height>32</height>
                     </size>
                    </property>
@@ -4459,9 +4468,6 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                    </property>
                    <property name="text">
                     <string/>
-                   </property>
-                   <property name="pixmap">
-                    <pixmap resource="images.qrc">:/icon/mlink</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>false</bool>
@@ -4517,7 +4523,7 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
-                   <width>4</width>
+                   <width>14</width>
                    <height>20</height>
                   </size>
                  </property>
@@ -4566,21 +4572,18 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                   <widget class="QLabel" name="w_m_l3">
                    <property name="minimumSize">
                     <size>
-                     <width>12</width>
+                     <width>14</width>
                      <height>32</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>12</width>
+                     <width>14</width>
                      <height>32</height>
                     </size>
                    </property>
                    <property name="text">
                     <string/>
-                   </property>
-                   <property name="pixmap">
-                    <pixmap resource="images.qrc">:/icon/mlink</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>false</bool>
@@ -4636,7 +4639,7 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
-                   <width>8</width>
+                   <width>14</width>
                    <height>20</height>
                   </size>
                  </property>
@@ -4685,21 +4688,18 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                   <widget class="QLabel" name="w_m_l4">
                    <property name="minimumSize">
                     <size>
-                     <width>12</width>
+                     <width>14</width>
                      <height>32</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>12</width>
+                     <width>14</width>
                      <height>32</height>
                     </size>
                    </property>
                    <property name="text">
                     <string/>
-                   </property>
-                   <property name="pixmap">
-                    <pixmap resource="images.qrc">:/icon/mlink</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>false</bool>
@@ -4758,7 +4758,7 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>79</height>
+              <height>86</height>
              </size>
             </property>
             <property name="title">
@@ -4886,21 +4886,18 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                    </property>
                    <property name="minimumSize">
                     <size>
-                     <width>12</width>
-                     <height>0</height>
+                     <width>14</width>
+                     <height>32</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>12</width>
+                     <width>14</width>
                      <height>32</height>
                     </size>
                    </property>
                    <property name="text">
                     <string/>
-                   </property>
-                   <property name="pixmap">
-                    <pixmap resource="images.qrc">:/icon/mlink</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>false</bool>
@@ -4950,7 +4947,7 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
-                   <width>8</width>
+                   <width>14</width>
                    <height>32</height>
                   </size>
                  </property>
@@ -4999,21 +4996,18 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                    </property>
                    <property name="minimumSize">
                     <size>
-                     <width>12</width>
+                     <width>14</width>
                      <height>32</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>12</width>
+                     <width>14</width>
                      <height>32</height>
                     </size>
                    </property>
                    <property name="text">
                     <string/>
-                   </property>
-                   <property name="pixmap">
-                    <pixmap resource="images.qrc">:/icon/mlink</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>false</bool>
@@ -5063,7 +5057,7 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
-                   <width>8</width>
+                   <width>14</width>
                    <height>32</height>
                   </size>
                  </property>
@@ -5112,21 +5106,18 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                    </property>
                    <property name="minimumSize">
                     <size>
-                     <width>12</width>
+                     <width>14</width>
                      <height>32</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>12</width>
+                     <width>14</width>
                      <height>32</height>
                     </size>
                    </property>
                    <property name="text">
                     <string/>
-                   </property>
-                   <property name="pixmap">
-                    <pixmap resource="images.qrc">:/icon/mlink</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>false</bool>
@@ -5176,7 +5167,7 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
-                   <width>8</width>
+                   <width>14</width>
                    <height>32</height>
                   </size>
                  </property>
@@ -5225,21 +5216,18 @@ background-color: qlineargradient(x1:0, y1:0, x2:0, y2:1,
                    </property>
                    <property name="minimumSize">
                     <size>
-                     <width>12</width>
+                     <width>14</width>
                      <height>32</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>12</width>
+                     <width>14</width>
                      <height>32</height>
                     </size>
                    </property>
                    <property name="text">
                     <string/>
-                   </property>
-                   <property name="pixmap">
-                    <pixmap resource="images.qrc">:/icon/mlink</pixmap>
                    </property>
                    <property name="scaledContents">
                     <bool>false</bool>
@@ -19781,7 +19769,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>763</width>
+     <width>767</width>
      <height>22</height>
     </rect>
    </property>

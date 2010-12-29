@@ -1518,10 +1518,10 @@ void MainWindow::charupdate(void)
 /*~~~~~~~~~Armor/Weapon Update~~~~~~~~~~*/
 void MainWindow::setarmorslots(void)
 {
-    ui->a_m_l1->setHidden(1);
-    ui->a_m_l2->setHidden(1);
-    ui->a_m_l3->setHidden(1);
-    ui->a_m_l4->setHidden(1);
+    ui->a_m_l1->setPixmap(QPixmap(""));
+    ui->a_m_l2->setPixmap(QPixmap(""));
+    ui->a_m_l3->setPixmap(QPixmap(""));
+    ui->a_m_l4->setPixmap(QPixmap(""));
     ui->a_m_s1->setHidden(1);
     ui->a_m_s2->setHidden(1);
     ui->a_m_s3->setHidden(1);
@@ -1545,18 +1545,18 @@ void MainWindow::setarmorslots(void)
     switch(Items[256 +ff7.slot[s].chars[curchar].armor].linked)
     {
     case 0:{break;}
-    case 1:{ui->a_m_l1->setHidden(0);break;}
-    case 2:{ui->a_m_l1->setHidden(0);ui->a_m_l2->setHidden(0);break;}
-    case 3:{ui->a_m_l1->setHidden(0);ui->a_m_l2->setHidden(0);ui->a_m_l3->setHidden(0);break;}
-    case 4:{ui->a_m_l1->setHidden(0);ui->a_m_l2->setHidden(0);ui->a_m_l3->setHidden(0);ui->a_m_l4->setHidden(0);break;}
+    case 1:{ui->a_m_l1->setPixmap(QPixmap(":/icon/mlink"));break;}
+    case 2:{ui->a_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l2->setPixmap(QPixmap(":/icon/mlink"));break;}
+    case 3:{ui->a_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
+    case 4:{ui->a_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
     }
 }
 void MainWindow::setweaponslots(void)
 {
-    ui->w_m_l1->setHidden(1);
-    ui->w_m_l2->setHidden(1);
-    ui->w_m_l3->setHidden(1);
-    ui->w_m_l4->setHidden(1);
+    ui->w_m_l1->setPixmap(QPixmap(""));
+    ui->w_m_l2->setPixmap(QPixmap(""));
+    ui->w_m_l3->setPixmap(QPixmap(""));
+    ui->w_m_l4->setPixmap(QPixmap(""));
     ui->w_m_s1->setHidden(1);
     ui->w_m_s2->setHidden(1);
     ui->w_m_s3->setHidden(1);
@@ -1584,10 +1584,10 @@ void MainWindow::setweaponslots(void)
             switch(Items[128+ui->combo_weapon->currentIndex()].linked)
             {
             case 0:{break;}
-            case 1:{ui->w_m_l1->setHidden(0);break;}
-            case 2:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);break;}
-            case 3:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);break;}
-            case 4:{ui->w_m_l1->setHidden(0);ui->w_m_l2->setHidden(0);ui->w_m_l3->setHidden(0);ui->w_m_l4->setHidden(0);break;}
+            case 1:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 2:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 3:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
+            case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
             }
             break;
         }
