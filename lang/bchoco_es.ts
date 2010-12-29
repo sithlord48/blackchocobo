@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.0" language="es_ES">
 <context>
     <name>MainWindow</name>
     <message>
@@ -2682,7 +2682,7 @@ no es un Archivo de Guardado de FF7.</translation>
     <message>
         <source>Cannot write file %1:
 %2.</source>
-        <translation type="unfinished">No se puede escribir el archivo%1:
+        <translation>No se puede escribir el archivo%1:
 %2.</translation>
     </message>
     <message>
@@ -3009,148 +3009,149 @@ no es un Archivo de Guardado de FF7.</translation>
     </message>
     <message>
         <source> Bombing Mission Start Flag</source>
-        <translation type="unfinished"></translation>
+        <translation> Bandera de comienzo de&apos; Bombing Mission&apos;</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayud&amp;a</translation>
     </message>
     <message>
         <source>Vie&amp;w</source>
-        <translation type="unfinished"></translation>
+        <translation>Ve&amp;r</translation>
     </message>
     <message>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Editar</translation>
     </message>
     <message>
         <source>Paste Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Pegar Ranura</translation>
     </message>
     <message>
         <source>More Options...</source>
-        <translation type="unfinished"></translation>
+        <translation>Más Opciones...</translation>
     </message>
     <message>
         <source>New Game</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo Juego</translation>
     </message>
     <message>
         <source>Alt+Ins</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Ins</translation>
     </message>
     <message>
         <source>New Game+ </source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo Juego+</translation>
     </message>
     <message>
         <source>Alt+Shift+Ins</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+Ins</translation>
     </message>
     <message>
         <source>Non-FF7 Slot Detected</source>
-        <translation type="unfinished"></translation>
+        <translation>Ranura No-FF7 Detectada</translation>
     </message>
     <message>
         <source>Please Select An Action To Continue</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor selecciona una acción para continuar</translation>
     </message>
     <message>
         <source>Curent Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Ranura Actual</translation>
     </message>
     <message>
         <source>Pr&amp;evious Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Ranura An&amp;terior</translation>
     </message>
     <message>
         <source>View &amp;Anyway</source>
-        <translation type="unfinished"></translation>
+        <translation>Ver De T&amp;odas Formas</translation>
     </message>
     <message>
         <source>Export via psx</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportar via psx</translation>
     </message>
     <message>
         <source>Ne&amp;xt Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Ranura Si&amp;guiente</translation>
     </message>
     <message>
         <source>Your At Slot 15</source>
-        <translation type="unfinished"></translation>
+        <translation>Estás en la ranura 15</translation>
     </message>
     <message>
         <source>Sorry There is no Next Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Lo siento no hay ranura siguiente</translation>
     </message>
     <message>
         <source>Your At Slot 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Estás en la ranura 1</translation>
     </message>
     <message>
         <source>Sorry There is no Previous Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Lo siento no hay ranura anterior</translation>
     </message>
     <message>
         <source>Ingoring Non FF7 Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Ignorando partida guardada No-FF7</translation>
     </message>
     <message>
         <source>Be Cautious This Might Not Work.</source>
-        <translation type="unfinished"></translation>
+        <translation>Cuidado, puede que no funcione.</translation>
     </message>
     <message>
         <source>Save Raw PSX File</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar archivo PSX RAW</translation>
     </message>
     <message>
         <source>All Files(*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Todos los archivos(*)</translation>
     </message>
     <message>
         <source>Save Successfully</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardado con éxito</translation>
     </message>
     <message>
         <source>File Saved Sucessfully, Going Back To The Selection Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo guardado correctamente, volviendo a la pantalla de selección</translation>
     </message>
     <message>
         <source>Export Current Character</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportar personaje actual</translation>
     </message>
     <message>
         <source>Import Current Character</source>
-        <translation type="unfinished"></translation>
+        <translation>Importar personaje actual</translation>
     </message>
     <message>
         <source>Select FF7 Character Stat File</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un archivo de stats de personaje de FF7</translation>
     </message>
     <message>
         <source>%1:
 %2 is Not a FF7 Character Stat File.</source>
-        <translation type="unfinished"></translation>
+        <translation>%1:
+%2 no es un archivo de stats de personaje de FF7.</translation>
     </message>
     <message>
         <source>Save FF7 Character File</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar archivo de personaje de FF7</translation>
     </message>
     <message>
         <source>Import PSX Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Importar partida guardada PSX</translation>
     </message>
     <message>
         <source>Import  PSV Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Importar partida guardada PSV</translation>
     </message>
     <message>
         <source>FF7 Character Stat File(*.char)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo de stats de personaje de FF7(*.char)</translation>
     </message>
     <message>
         <source>In-game Dialog Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Pantalla de diálogo del juego</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -3158,16 +3159,21 @@ no es un Archivo de Guardado de FF7.</translation>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Verdana&apos;; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Verdana&apos;; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>0xD83 Midgar Train Flags (tin_1)</source>
-        <translation type="unfinished"></translation>
+        <translation>0xD83 Midgar Train Flags (tin_1)</translation>
     </message>
     <message>
         <source>Cannot read file %1:
 %2 Be Sure its is a PSX Save</source>
-        <translation type="unfinished"></translation>
+        <translation>No se puede leer el archivo  %1::
+%2 Asegúrate de que es una partida guardada de PSX</translation>
     </message>
 </context>
 <context>
@@ -3234,75 +3240,75 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Stats / New Game </source>
-        <translation type="unfinished"></translation>
+        <translation>Stats / Nuevo Juego </translation>
     </message>
     <message>
         <source>File To load When &quot;New Game&quot; is used</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo a cargar cuando se usa &apos;Nuevo Juego&apos;</translation>
     </message>
     <message>
         <source>Location To Save Character Stat Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Lugar para guardar los archivos de stat de personaje</translation>
     </message>
     <message>
         <source>Select A Location To Save Character Stat Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un lugar para guardar los archivos de stat de personaje</translation>
     </message>
     <message>
         <source> Save Options</source>
-        <translation type="unfinished"></translation>
+        <translation> Opciones de guardado</translation>
     </message>
     <message>
         <source> Folder To Load FF7 Saves (all types) from</source>
-        <translation type="unfinished"></translation>
+        <translation> Carpeta de la que cargar las partidas guardadas de FF7 (todos los tipos)</translation>
     </message>
     <message>
         <source> Folder To Load/Save Emulator Cards (.mcd/.mcr) </source>
-        <translation type="unfinished"></translation>
+        <translation> Carpeta para cargar/guardar tarjetas de emulador (.mcd/.mcr)</translation>
     </message>
     <message>
         <source>Folder To Save Pc (.ff7) Save Games</source>
-        <translation type="unfinished"></translation>
+        <translation>Carpeta para guardar partidas de PC (.ff7)</translation>
     </message>
     <message>
         <source>Folder To Export Pc (.ff7) Save Games</source>
-        <translation type="unfinished"></translation>
+        <translation>Carpeta para exportar partidas de PC (.ff7)</translation>
     </message>
     <message>
         <source>&amp;Ok</source>
-        <translation type="unfinished">&amp;Aceptar</translation>
+        <translation>&amp;Aceptar</translation>
     </message>
     <message>
         <source>Main Window Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Color de fondo de la ventana principal</translation>
     </message>
     <message>
         <source>preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Vista previa</translation>
     </message>
     <message>
         <source>Color 1</source>
-        <translation type="unfinished"></translation>
+        <translation>Color 1</translation>
     </message>
     <message>
         <source>R</source>
-        <translation type="unfinished">R</translation>
+        <translation>R</translation>
     </message>
     <message>
         <source>G</source>
-        <translation type="unfinished">G</translation>
+        <translation>G</translation>
     </message>
     <message>
         <source>B</source>
-        <translation type="unfinished">B</translation>
+        <translation>B</translation>
     </message>
     <message>
         <source>Color 2</source>
-        <translation type="unfinished"></translation>
+        <translation>Color 2</translation>
     </message>
     <message>
         <source>Color 3</source>
-        <translation type="unfinished"></translation>
+        <translation>Color 3</translation>
     </message>
 </context>
 <context>
@@ -3932,7 +3938,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Ok</source>
-        <translation type="unfinished">&amp;Aceptar</translation>
+        <translation>&amp;Aceptar</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -4210,7 +4216,49 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600; text-decoration: underline;&quot;&gt;Ms. Sith&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt; - Causes shes awesome.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;	&lt;/span&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Chocobo Negro&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt;	es un Editor de Archivos de Guardado de FF7. (PC + PSX)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;	Escrito Por Sithlord48. usando Qt.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                                                                  	             Versión :: &lt;span style=&quot; font-weight:600;&quot;&gt;1.7&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Este programa es software libre: puedes distribuirlo y/o modificarlo&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; bajo los términos de la GNU General Public License publicados por&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt; La Fundación de Software Libre, ya sea la versión 3 de la licencia o&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;(a tu elección) cualquier versión posterior.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Este programa está distribuido con la esperanza de que sea útil,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;pero sin NINGUNA GARANTÍA; ni siquiera la garantía implícita de&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;MERCANTIBILIDAD o APTITUD PARA UN PROPÓSITO ESPECÍFICO.  Ver la&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;GNU General Public License para más detalles.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;Deberías haber recibido una copia de la GNU General Public License&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;;&quot;&gt;junto a este programa.  Si no, mira &lt;/span&gt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; text-decoration: underline; color:#508ed8;&quot;&gt;&amp;lt;http://www.gnu.org/licenses/&amp;gt;&lt;/span&gt;&lt;/a&gt; &lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                       &lt;/span&gt;  &lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Otros Programadores que han Ayudado:&lt;/span&gt;  &lt;span style=&quot; font-weight:600;&quot;&gt;                             &lt;/span&gt;	  &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;vegeta_ss4 - Funciones de carga/guardado y checksums internos para Psx&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                                       &lt;/span&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Traductores:&lt;/span&gt; &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Español - Eslava&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Francés - Myst6re&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                                         &lt;/span&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Testers:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                                   Jari | Eslava | Timu | Chocobo Girl&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-weight:600; text-decoration: underline;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;                                    &lt;/span&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Agradecimientos Especiales:&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Qhimm&lt;/span&gt; - Por facilitarme el código fuente de Jenova, este programa usa versiones modificadas de su estructura de guardado, listas de objetos/materia y funciones de conversión de strings. Su código me ha ahorrado mucho tiempo&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Dziugo&lt;/span&gt; - por el programa de checksum, y facilitarme la fuente en el foro de Qhimm.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Aali&lt;/span&gt; - por ayudarme a ver la luz con errores estúpidos.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;dhrosa&lt;/span&gt; - por ayudarme dándome una mejor comprensión de las funciones de Qt cuando los archivos de ayuda no eran suficientes.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600; text-decoration: underline;&quot;&gt;Ms. Sith&lt;/span&gt; - Porque es maravillosa.&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 </TS>
