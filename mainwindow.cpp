@@ -52,7 +52,6 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     for (int i=256;i<288;i++){ui->combo_armor->addItem(QIcon(Items[i].image),Items[i].name);}// set up the combo boxes
     for (int i=288;i<320;i++){ui->combo_acc->addItem(QIcon(Items[i].image),Items[i].name);}
     for (int i=0;i<320;i++){ui->combo_additem->addItem(QIcon(Items[i].image),Items[i].name);}
-
     for (int i=0;i<0x5b;i++){ui->combo_add_mat->addItem(QIcon(Materias[i].image),Materias[i].name);}
     for (int i=0;i<0x5b;i++){if(Materias[i].name !="DON'T USE"){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),Materias[i].name);}}
     for (int i=0;i<0x5b;i++){ui->combo_add_mat_slot->addItem(QIcon(Materias[i].image),Materias[i].name);}
@@ -63,7 +62,8 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->tbl_location_field->setColumnWidth(2,50);
     ui->tbl_location_field->setColumnWidth(3,50);
     ui->tbl_location_field->setColumnWidth(4,50);
-//Hide the stuff that needs to be hidden.
+
+    //Hide the stuff that needs to be hidden.
     ui->eskill_group->setVisible(false);
     ui->eskill_group_2->setVisible(false);
     ui->combo_add_mat->setVisible(false);
@@ -148,10 +148,9 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
        ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_sel"));
    }
 }
-MainWindow::~MainWindow()
-{
-    delete ui;
-}
+
+MainWindow::~MainWindow(){delete ui;}
+
 void MainWindow::changeEvent(QEvent *e)
 {
     QMainWindow::changeEvent(e);
@@ -494,25 +493,15 @@ void MainWindow::on_actionSave_File_activated()
             {
                 //calc xor byte..
                 index= (128 +(128*i));
-             if(ff7.SG_Region_String[i].contains("00867") ||
-                ff7.SG_Region_String[i].contains("00869") ||
-                ff7.SG_Region_String[i].contains("00900") ||
-                ff7.SG_Region_String[i].contains("94163") ||
-                ff7.SG_Region_String[i].contains("00700") ||
-                ff7.SG_Region_String[i].contains("01057"))
+             if(ff7.SG_Region_String[i].contains("00867") ||ff7.SG_Region_String[i].contains("00869") ||
+                ff7.SG_Region_String[i].contains("00900") ||ff7.SG_Region_String[i].contains("94163") ||
+                ff7.SG_Region_String[i].contains("00700") ||ff7.SG_Region_String[i].contains("01057"))
                 {
-                    QByteArray temp;
+                 QByteArray temp;
+
                     temp.resize(10);
-                    temp[0] = 0x51;
-                    temp[1] = 0x00;
-                    temp[2] = 0x00;
-                    temp[3] = 0x00;
-                    temp[4] = 0x00;
-                    temp[5] = 0x20;
-                    temp[6] = 0x00;
-                    temp[7] = 0x00;
-                    temp[8] = 0xFF;
-                    temp[9] = 0xFF;
+                    temp[0]=0x51;temp[1]=0x00;temp[2]=0x00;temp[3]=0x00;temp[4]=0x00;
+                    temp[5]=0x20;temp[6]=0x00;temp[7]=0x00;temp[8]=0xFF;temp[9]=0xFF;
                     mc_header_2.append(temp);
                     mc_header_2.append(ff7.SG_Region_String[i]);
                     temp.resize(98);
@@ -524,18 +513,18 @@ void MainWindow::on_actionSave_File_activated()
                     switch(i)
                     {
                     case 0:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                            for(int P=0;P<512;P++)
+                            {
+                                if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
+                                else{ff7.hf[i].sl_header[P]= 0x00;}
+                            }
                         break;
                     case 1:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S02[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                            for(int P=0;P<512;P++)
+                            {
+                                if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S02[P];}
+                                else{ff7.hf[i].sl_header[P]= 0x00;}
+                            }
                         break;
                     case 2:
                         for(int P=0;P<512;P++)
@@ -680,25 +669,15 @@ void MainWindow::on_actionSave_File_activated()
             {
                 //calc xor byte..
                 index= (128 +(128*i))+ (0x80);
-             if(ff7.SG_Region_String[i].contains("00867") ||
-                ff7.SG_Region_String[i].contains("00869") ||
-                ff7.SG_Region_String[i].contains("00900") ||
-                ff7.SG_Region_String[i].contains("94163") ||
-                ff7.SG_Region_String[i].contains("00700") ||
-                ff7.SG_Region_String[i].contains("01057"))
+             if(ff7.SG_Region_String[i].contains("00867") ||ff7.SG_Region_String[i].contains("00869") ||
+                ff7.SG_Region_String[i].contains("00900") ||ff7.SG_Region_String[i].contains("94163") ||
+                ff7.SG_Region_String[i].contains("00700") ||ff7.SG_Region_String[i].contains("01057"))
                 {
                     QByteArray temp;
                     temp.resize(10);
-                    temp[0] = 0x51;
-                    temp[1] = 0x00;
-                    temp[2] = 0x00;
-                    temp[3] = 0x00;
-                    temp[4] = 0x00;
-                    temp[5] = 0x20;
-                    temp[6] = 0x00;
-                    temp[7] = 0x00;
-                    temp[8] = 0xFF;
-                    temp[9] = 0xFF;
+                    temp[0]= 0x51;temp[1]=0x00;temp[2]=0x00;temp[3]=0x00;temp[4]=0x00;
+                    temp[5]=0x20;temp[6]=0x00;temp[7]=0x00;temp[8]=0xFF;temp[9]=0xFF;
+
                     mc_header_2.append(temp);
                     mc_header_2.append(ff7.SG_Region_String[i]);
                     temp.resize(98);
@@ -967,7 +946,7 @@ void MainWindow::on_actionExport_PSX_activated()
             .arg(file.errorString()));
         return;
     }
-    FILE *pfile; // this section is starting to work correctly!
+    FILE *pfile;
     pfile = fopen(fileName.toAscii(),"wb");
 
     QByteArray temp; temp.resize(512);//
@@ -1050,25 +1029,15 @@ void MainWindow::on_actionExport_MC_triggered()
         {
             //calc xor byte..
             index= (128 +(128*i));
-         if(ff7.SG_Region_String[i].contains("00867") ||
-            ff7.SG_Region_String[i].contains("00869") ||
-            ff7.SG_Region_String[i].contains("00900") ||
-            ff7.SG_Region_String[i].contains("94163") ||
-            ff7.SG_Region_String[i].contains("00700") ||
-            ff7.SG_Region_String[i].contains("01057"))
+         if(ff7.SG_Region_String[i].contains("00867") || ff7.SG_Region_String[i].contains("00869") ||
+            ff7.SG_Region_String[i].contains("00900") || ff7.SG_Region_String[i].contains("94163") ||
+            ff7.SG_Region_String[i].contains("00700") || ff7.SG_Region_String[i].contains("01057"))
             {
                 QByteArray temp;
                 temp.resize(10);
-                temp[0] = 0x51;
-                temp[1] = 0x00;
-                temp[2] = 0x00;
-                temp[3] = 0x00;
-                temp[4] = 0x00;
-                temp[5] = 0x20;
-                temp[6] = 0x00;
-                temp[7] = 0x00;
-                temp[8] = 0xFF;
-                temp[9] = 0xFF;
+                temp[0]=0x51;temp[1]=0x00;temp[2]=0x00;temp[3]=0x00;temp[4]=0x00;
+                temp[5]=0x20;temp[6]=0x00;temp[7]=0x00;temp[8]=0xFF;temp[9]=0xFF;
+
                 mc_header_2.append(temp);
                 mc_header_2.append(ff7.SG_Region_String[i]);
                 temp.resize(98);
@@ -1306,85 +1275,352 @@ void MainWindow::on_actionPaste_Slot_activated()
     guirefresh();
 }
 
-void MainWindow::on_actionSlot_01_activated()
+void MainWindow::on_actionSlot_01_activated(){s=0; guirefresh();}
+void MainWindow::on_actionSlot_02_activated(){s=1; guirefresh();}
+void MainWindow::on_actionSlot_03_activated(){s=2; guirefresh();}
+void MainWindow::on_actionSlot_04_activated(){s=3; guirefresh();}
+void MainWindow::on_actionSlot_05_activated(){s=4; guirefresh();}
+void MainWindow::on_actionSlot_06_activated(){s=5; guirefresh();}
+void MainWindow::on_actionSlot_07_activated(){s=6; guirefresh();}
+void MainWindow::on_actionSlot_08_activated(){s=7; guirefresh();}
+void MainWindow::on_actionSlot_09_activated(){s=8; guirefresh();}
+void MainWindow::on_actionSlot_10_activated(){s=9; guirefresh();}
+void MainWindow::on_actionSlot_11_activated(){s=10; guirefresh();}
+void MainWindow::on_actionSlot_12_activated(){s=11; guirefresh();}
+void MainWindow::on_actionSlot_13_activated(){s=12; guirefresh();}
+void MainWindow::on_actionSlot_14_activated(){s=13; guirefresh();}
+void MainWindow::on_actionSlot_15_activated(){s=14; guirefresh();}
+void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect; slotselect.exec(); guirefresh();}
+void MainWindow::on_actionClear_Slot_activated(){clearslot(s);  guirefresh();}
+void MainWindow::on_actionPrevious_Slot_activated(){if (s > 0) {s--; guirefresh();}}
+void MainWindow::on_actionNext_Slot_activated(){if (s<14){s++; guirefresh();}}
+
+void MainWindow::on_action_show_test_data_toggled()
 {
-    s=0; guirefresh();
+    if(ui->action_show_test_data->isChecked())
+    {
+        ui->tab_test->setEnabled(true);
+        ui->tabWidget->setTabEnabled(8,1);
+        testdata_refresh();
+        ui->lbl_0x34->setVisible(true);
+        ui->lbl_0x35->setVisible(true);
+        ui->lbl_0x36->setVisible(true);
+        ui->lbl_0x37->setVisible(true);
+        ui->lcd_0x34->setVisible(true);
+        ui->lcd_0x35->setVisible(true);
+        ui->lcd_0x36->setVisible(true);
+        ui->lcd_0x37->setVisible(true);
+        ui->sb_bm_progress1->setEnabled(true);
+        ui->sb_bm_progress2->setEnabled(true);
+        ui->sb_bm_progress3->setEnabled(true);
+        ui->btn_vincent->setEnabled(true);
+        ui->cb_id->setEnabled(true);
+        ui->btn_cait->setEnabled(true);
+
+        settings.setValue("show_test",1);
+        ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
+    }
+
+    else
+    {
+        ui->tab_test->setEnabled(false);
+        ui->tabWidget->setTabEnabled(8,0);
+        ui->lbl_0x34->setVisible(false);
+        ui->lbl_0x35->setVisible(false);
+        ui->lbl_0x36->setVisible(false);
+        ui->lbl_0x37->setVisible(false);
+        ui->lcd_0x34->setVisible(false);
+        ui->lcd_0x35->setVisible(false);
+        ui->lcd_0x36->setVisible(false);
+        ui->lcd_0x37->setVisible(false);
+        ui->sb_bm_progress1->setEnabled(false);
+        ui->sb_bm_progress2->setEnabled(false);
+        ui->sb_bm_progress3->setEnabled(false);
+        if(ff7.slot[s].chars[6].id == 9) {ui->btn_vincent->setEnabled(false);}
+        ui->cb_id->setEnabled(false);
+        if(ff7.slot[s].chars[7].id == 10) {ui->btn_cait->setEnabled(false);}
+        settings.setValue("show_test",0);
+        ui->action_show_test_data->setIcon(QIcon(":/icon/debug_unsel"));
+    }
 }
-void MainWindow::on_actionSlot_02_activated()
+/*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
+void MainWindow::on_action_Region_USA_triggered()
 {
-    s=1; guirefresh();
+    if(!load)
+    {
+        if(!ui->action_Region_USA->isChecked())
+        {
+            ff7.SG_Region_String[s].clear();
+            ui->lbl_sg_region->clear();
+            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
+        }
+        else
+        {
+            switch(s)
+            {
+                case 0:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01"; break;
+                case 1:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S02"; break;
+                case 2:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S03"; break;
+                case 3:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S04"; break;
+                case 4:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S05"; break;
+                case 5:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S06"; break;
+                case 6:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S07"; break;
+                case 7:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S08"; break;
+                case 8:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S09"; break;
+                case 9:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S10"; break;
+                case 10:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S11"; break;
+                case 11:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S12"; break;
+                case 12:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S13"; break;
+                case 13:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S14"; break;
+                case 14:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S15"; break;
+            }
+            ui->action_Region_PAL_Generic->setChecked(false);
+            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+            ui->action_Region_PAL_German->setChecked(false);
+            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+            ui->action_Region_PAL_Spanish->setChecked(false);
+            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
+            ui->action_Region_JPN->setChecked(false);
+            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
+            ui->action_Region_JPN_International->setChecked(false);
+            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
+            ui->action_Region_USA->setIcon(QIcon(":/icon/us_sel"));
+            ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+        }
+    }
 }
-void MainWindow::on_actionSlot_03_activated()
+/*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
+void MainWindow::on_action_Region_PAL_Generic_triggered()
 {
-    s=2; guirefresh();
+    if(!load)
+    {
+        if(!ui->action_Region_PAL_Generic->isChecked())
+        {
+            ff7.SG_Region_String[s].clear();
+            ui->lbl_sg_region->clear();
+            ui->action_Region_USA->setIcon(QIcon(":/icon/eu_unsel"));
+        }
+        else
+        {
+            switch(s)
+            {
+                case 0:ff7.SG_Region_String[s] = "BESCES-00867FF7-S01"; break;
+                case 1:ff7.SG_Region_String[s] = "BESCES-00867FF7-S02"; break;
+                case 2:ff7.SG_Region_String[s] = "BESCES-00867FF7-S03"; break;
+                case 3:ff7.SG_Region_String[s] = "BESCES-00867FF7-S04"; break;
+                case 4:ff7.SG_Region_String[s] = "BESCES-00867FF7-S05"; break;
+                case 5:ff7.SG_Region_String[s] = "BESCES-00867FF7-S06"; break;
+                case 6:ff7.SG_Region_String[s] = "BESCES-00867FF7-S07"; break;
+                case 7:ff7.SG_Region_String[s] = "BESCES-00867FF7-S08"; break;
+                case 8:ff7.SG_Region_String[s] = "BESCES-00867FF7-S09"; break;
+                case 9:ff7.SG_Region_String[s] = "BESCES-00867FF7-S10"; break;
+                case 10:ff7.SG_Region_String[s] = "BESCES-00867FF7-S11"; break;
+                case 11:ff7.SG_Region_String[s] = "BESCES-00867FF7-S12"; break;
+                case 12:ff7.SG_Region_String[s] = "BESCES-00867FF7-S13"; break;
+                case 13:ff7.SG_Region_String[s] = "BESCES-00867FF7-S14"; break;
+                case 14:ff7.SG_Region_String[s] = "BESCES-00867FF7-S15"; break;
+            }
+            ui->action_Region_USA->setChecked(false);
+            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
+            ui->action_Region_PAL_German->setChecked(false);
+            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+            ui->action_Region_PAL_Spanish->setChecked(false);
+            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
+            ui->action_Region_JPN->setChecked(false);
+            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
+            ui->action_Region_JPN_International->setChecked(false);
+            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
+            ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_sel"));
+        }
+    }
 }
-void MainWindow::on_actionSlot_04_activated()
+/*~~~~~~~~~~~~~SET PAL_German MC HEADER~~~~~~~~~~~~~~~~*/
+void MainWindow::on_action_Region_PAL_German_triggered()
 {
-    s=3; guirefresh();
+    if(!load)
+    {
+        if(!ui->action_Region_PAL_German->isChecked())
+        {
+            ff7.SG_Region_String[s].clear();
+            ui->lbl_sg_region->clear();
+            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+        }
+        else
+        {
+            switch(s)
+            {
+                case 0:ff7.SG_Region_String[s] = "BESCES-00869FF7-S01"; break;
+                case 1:ff7.SG_Region_String[s] = "BESCES-00869FF7-S02"; break;
+                case 2:ff7.SG_Region_String[s] = "BESCES-00869FF7-S03"; break;
+                case 3:ff7.SG_Region_String[s] = "BESCES-00869FF7-S04"; break;
+                case 4:ff7.SG_Region_String[s] = "BESCES-00869FF7-S05"; break;
+                case 5:ff7.SG_Region_String[s] = "BESCES-00869FF7-S06"; break;
+                case 6:ff7.SG_Region_String[s] = "BESCES-00869FF7-S07"; break;
+                case 7:ff7.SG_Region_String[s] = "BESCES-00869FF7-S08"; break;
+                case 8:ff7.SG_Region_String[s] = "BESCES-00869FF7-S09"; break;
+                case 9:ff7.SG_Region_String[s] = "BESCES-00869FF7-S10"; break;
+                case 10:ff7.SG_Region_String[s] = "BESCES-00869FF7-S11"; break;
+                case 11:ff7.SG_Region_String[s] = "BESCES-00869FF7-S12"; break;
+                case 12:ff7.SG_Region_String[s] = "BESCES-00869FF7-S13"; break;
+                case 13:ff7.SG_Region_String[s] = "BESCES-00869FF7-S14"; break;
+                case 14:ff7.SG_Region_String[s] = "BESCES-00869FF7-S15"; break;
+            }
+            ui->action_Region_USA->setChecked(false);
+            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
+            ui->action_Region_PAL_Generic->setChecked(false);
+            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+            ui->action_Region_PAL_Spanish->setChecked(false);
+            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
+            ui->action_Region_JPN->setChecked(false);
+            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
+            ui->action_Region_JPN_International->setChecked(false);
+            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
+            ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_sel"));
+        }
+    }
 }
-void MainWindow::on_actionSlot_05_activated()
+/*~~~~~~~~~~~~~SET PAL_Spanish MC HEADER~~~~~~~~~~~~~~~~*/
+void MainWindow::on_action_Region_PAL_Spanish_triggered()
 {
-    s=4; guirefresh();
+    if(!load)
+    {
+        if(!ui->action_Region_PAL_Spanish->isChecked())
+        {
+            ff7.SG_Region_String[s].clear();
+            ui->lbl_sg_region->clear();
+            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
+        }
+        else
+        {
+            switch(s)
+            {
+                case 0:ff7.SG_Region_String[s] = "BESCES-00900FF7-S01"; break;
+                case 1:ff7.SG_Region_String[s] = "BESCES-00900FF7-S02"; break;
+                case 2:ff7.SG_Region_String[s] = "BESCES-00900FF7-S03"; break;
+                case 3:ff7.SG_Region_String[s] = "BESCES-00900FF7-S04"; break;
+                case 4:ff7.SG_Region_String[s] = "BESCES-00900FF7-S05"; break;
+                case 5:ff7.SG_Region_String[s] = "BESCES-00900FF7-S06"; break;
+                case 6:ff7.SG_Region_String[s] = "BESCES-00900FF7-S07"; break;
+                case 7:ff7.SG_Region_String[s] = "BESCES-00900FF7-S08"; break;
+                case 8:ff7.SG_Region_String[s] = "BESCES-00900FF7-S09"; break;
+                case 9:ff7.SG_Region_String[s] = "BESCES-00900FF7-S10"; break;
+                case 10:ff7.SG_Region_String[s] = "BESCES-00900FF7-S11"; break;
+                case 11:ff7.SG_Region_String[s] = "BESCES-00900FF7-S12"; break;
+                case 12:ff7.SG_Region_String[s] = "BESCES-00900FF7-S13"; break;
+                case 13:ff7.SG_Region_String[s] = "BESCES-00900FF7-S14"; break;
+                case 14:ff7.SG_Region_String[s] = "BESCES-00900FF7-S15"; break;
+            }
+            ui->action_Region_USA->setChecked(false);
+            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
+            ui->action_Region_PAL_Generic->setChecked(false);
+            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+            ui->action_Region_PAL_German->setChecked(false);
+            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+            ui->action_Region_JPN->setChecked(false);
+            ui->action_Region_JPN_International->setChecked(false);
+            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
+            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
+            ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_sel"));
+
+        }
+    }
 }
-void MainWindow::on_actionSlot_06_activated()
+/*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
+void MainWindow::on_action_Region_JPN_triggered()
 {
-    s=5; guirefresh();
+    if(!load)
+    {
+        if(!ui->action_Region_JPN->isChecked())
+        {
+            ff7.SG_Region_String[s].clear();
+            ui->lbl_sg_region->clear();
+            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
+
+        }
+        else
+        {
+            switch(s)
+            {
+                case 0:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01"; break;
+                case 1:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S02"; break;
+                case 2:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S03"; break;
+                case 3:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S04"; break;
+                case 4:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S05"; break;
+                case 5:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S06"; break;
+                case 6:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S07"; break;
+                case 7:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S08"; break;
+                case 8:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S09"; break;
+                case 9:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S10"; break;
+                case 10:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S11"; break;
+                case 11:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S12"; break;
+                case 12:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S13"; break;
+                case 13:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S14"; break;
+                case 14:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S15"; break;
+            }
+            ui->action_Region_USA->setChecked(false);
+            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
+            ui->action_Region_PAL_Generic->setChecked(false);
+            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+            ui->action_Region_PAL_German->setChecked(false);
+            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+            ui->action_Region_PAL_Spanish->setChecked(false);
+            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
+            ui->action_Region_JPN_International->setChecked(false);
+            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
+            ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_sel"));
+        }
+    }
 }
-void MainWindow::on_actionSlot_07_activated()
+/*~~~~~~~~~~~~~SET JPN_International MC HEADER~~~~~~~~~~~~~~~~*/
+void MainWindow::on_action_Region_JPN_International_triggered()
 {
-    s=6; guirefresh();
-}
-void MainWindow::on_actionSlot_08_activated()
-{
-    s=7; guirefresh();
-}
-void MainWindow::on_actionSlot_09_activated()
-{
-    s=8; guirefresh();
-}
-void MainWindow::on_actionSlot_10_activated()
-{
-    s=9; guirefresh();
-}
-void MainWindow::on_actionSlot_11_activated()
-{
-    s=10; guirefresh();
-}
-void MainWindow::on_actionSlot_12_activated()
-{
-    s=11; guirefresh();
-}
-void MainWindow::on_actionSlot_13_activated()
-{
-    s=12; guirefresh();
-}
-void MainWindow::on_actionSlot_14_activated()
-{
-    s=13; guirefresh();
-}
-void MainWindow::on_actionSlot_15_activated()
-{
-    s=14; guirefresh();
-}
-void MainWindow::on_actionShow_Selection_Dialog_activated()
-{
-    SlotSelect slotselect; slotselect.exec(); guirefresh();
-}
-void MainWindow::on_actionClear_Slot_activated()
-{
-    clearslot(s);  guirefresh();
-}
-void MainWindow::on_actionPrevious_Slot_activated()
-{
-    if (s > 0) {s--; guirefresh();}
-}
-void MainWindow::on_actionNext_Slot_activated()
-{
-    if (s<14){s++; guirefresh();}
-}
-void MainWindow::on_actionAbout_activated()
-{
-   about adialog; adialog.exec();
+    if(!load)
+    {
+        if(!ui->action_Region_JPN_International->isChecked())
+        {
+            ff7.SG_Region_String[s].clear();
+            ui->lbl_sg_region->clear();
+            ui->action_Region_JPN_International->setIcon(QIcon(":icon/jp_unsel"));
+        }
+        else
+        {
+            switch(s)
+            {
+                case 0:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01"; break;
+                case 1:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S02"; break;
+                case 2:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S03"; break;
+                case 3:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S04"; break;
+                case 4:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S05"; break;
+                case 5:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S06"; break;
+                case 6:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S07"; break;
+                case 7:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S08"; break;
+                case 8:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S09"; break;
+                case 9:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S10"; break;
+                case 10:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S11"; break;
+                case 11:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S12"; break;
+                case 12:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S13"; break;
+                case 13:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S14"; break;
+                case 14:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S15"; break;
+            }
+
+            ui->action_Region_USA->setChecked(false);
+            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
+            ui->action_Region_PAL_Generic->setChecked(false);
+            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+            ui->action_Region_PAL_German->setChecked(false);
+            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+            ui->action_Region_PAL_Spanish->setChecked(false);
+            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
+            ui->action_Region_JPN->setChecked(false);
+            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
+            ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_sel"));
+        }
+    }
 }
 void MainWindow::on_actionEdit_Paths_triggered()
 {
@@ -1411,6 +1647,12 @@ void MainWindow::on_actionEdit_Paths_triggered()
     style.append(", 255));}");
     ui->centralWidget->setStyleSheet(style);
 }
+
+void MainWindow::on_actionAbout_activated()
+{
+   about adialog; adialog.exec();
+}
+
 void MainWindow::on_actionAbout_Qt_activated()
 {
     qApp->aboutQt();
@@ -1428,15 +1670,15 @@ void MainWindow::charupdate(void)
     {
         ui->cb_id->setText("Young Cloud");
         ui->cb_id->setVisible(true);
-        if (ff7.slot[s].chars[curchar].id == 9){ui->cb_id->setChecked(true); ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));}
-        else{ui->cb_id->setChecked(false);ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));}
+        if (ff7.slot[s].chars[curchar].id == 9){ui->cb_id->setChecked(true); ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));ui->btn_cait->setStyleSheet("image: url(:/icon/y_cloud_icon);");}
+        else{ui->cb_id->setChecked(false);ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));ui->btn_cait->setStyleSheet("image: url(:/icon/cait_icon);");}
     }
     if(curchar==7)
     {
         ui->cb_id->setText("Sephiroth");
         ui->cb_id->setVisible(true);
-        if (ff7.slot[s].chars[curchar].id == 10){ui->cb_id->setChecked(true);ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));}
-        else{ui->cb_id->setChecked(false);ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));}
+        if (ff7.slot[s].chars[curchar].id == 10){ui->cb_id->setChecked(true);ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));ui->btn_vincent->setStyleSheet("image: url(:/icon/sep_icon);");}
+        else{ui->cb_id->setChecked(false);ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));ui->btn_vincent->setStyleSheet("image: url(:/icon/vincent_icon);");}
     }
     ui->line_name->clear();
     for (int n=0;n<12;n++)
@@ -1804,7 +2046,7 @@ void MainWindow::guirefresh(void)
             QMessageBox errbox;
             errbox.setWindowTitle(tr("Non-FF7 Slot Detected"));
             errbox.setText(tr("Please Select An Action To Continue"));
-            errbox.setInformativeText(tr("Curent Slot") + "::" + ff7.SG_Region_String[s]);
+            errbox.setInformativeText(tr("Current Slot") + "::" + ff7.SG_Region_String[s]);
             QPushButton *prev = errbox.addButton(tr("Pr&evious Slot"),QMessageBox::ActionRole); prev->setIcon(QIcon(":icon/prev"));
             QPushButton *ingore = errbox.addButton(tr("View &Anyway"),QMessageBox::ActionRole); ingore->setIcon(QIcon(":icon/quit"));
             QPushButton *export_psx = errbox.addButton(tr("Export via psx"),QMessageBox::ActionRole); export_psx->setIcon(QIcon(":icon/psxmc"));
@@ -4113,17 +4355,18 @@ void MainWindow::on_sb_coordz_valueChanged()
 //char stats tab
 void MainWindow::on_cb_id_toggled(bool checked)
 {
+
     if(!load)
     {
         if (curchar ==6)
         {
-            if (checked){ff7.slot[s].chars[6].id = 9;ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));}
-            else {ff7.slot[s].chars[6].id = 6;ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));}
+            if (checked){ff7.slot[s].chars[6].id = 9;ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));ui->btn_cait->setStyleSheet("image: url(:/icon/y_cloud_icon);");}
+            else {ff7.slot[s].chars[6].id = 6;ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));ui->btn_cait->setStyleSheet("image: url(:/icon/cait_icon);");}
         }
         if (curchar ==7)
         {
-            if (checked){ff7.slot[s].chars[7].id = 10;ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));}
-            else {ff7.slot[s].chars[7].id = 7;ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));}
+            if (checked){ff7.slot[s].chars[7].id = 10;ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));ui->btn_vincent->setStyleSheet("image: url(:/icon/sep_icon);");}
+            else {ff7.slot[s].chars[7].id = 7;ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));ui->btn_vincent->setStyleSheet("image: url(:/icon/vincent_icon);");}
         }
     }
 }
@@ -5327,334 +5570,6 @@ void MainWindow::on_btn_remove_all_stolen_clicked()
     guirefresh();
 }
 
-void MainWindow::on_action_show_test_data_toggled()
-{
-    if(ui->action_show_test_data->isChecked())
-    {
-        ui->tab_test->setEnabled(true);
-        ui->tabWidget->setTabEnabled(8,1);
-        testdata_refresh();
-        ui->lbl_0x34->setVisible(true);
-        ui->lbl_0x35->setVisible(true);
-        ui->lbl_0x36->setVisible(true);
-        ui->lbl_0x37->setVisible(true);
-        ui->lcd_0x34->setVisible(true);
-        ui->lcd_0x35->setVisible(true);
-        ui->lcd_0x36->setVisible(true);
-        ui->lcd_0x37->setVisible(true);
-        ui->sb_bm_progress1->setEnabled(true);
-        ui->sb_bm_progress2->setEnabled(true);
-        ui->sb_bm_progress3->setEnabled(true);
-        ui->btn_vincent->setEnabled(true);
-        ui->cb_id->setEnabled(true);
-        ui->btn_cait->setEnabled(true);
-
-        settings.setValue("show_test",1);
-        ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
-    }
-
-    else
-    {
-        ui->tab_test->setEnabled(false);
-        ui->tabWidget->setTabEnabled(8,0);
-        ui->lbl_0x34->setVisible(false);
-        ui->lbl_0x35->setVisible(false);
-        ui->lbl_0x36->setVisible(false);
-        ui->lbl_0x37->setVisible(false);
-        ui->lcd_0x34->setVisible(false);
-        ui->lcd_0x35->setVisible(false);
-        ui->lcd_0x36->setVisible(false);
-        ui->lcd_0x37->setVisible(false);
-        ui->sb_bm_progress1->setEnabled(false);
-        ui->sb_bm_progress2->setEnabled(false);
-        ui->sb_bm_progress3->setEnabled(false);
-        if(ff7.slot[s].chars[6].id == 9) {ui->btn_vincent->setEnabled(false);}
-        ui->cb_id->setEnabled(false);
-        if(ff7.slot[s].chars[7].id == 10) {ui->btn_cait->setEnabled(false);}
-        settings.setValue("show_test",0);
-        ui->action_show_test_data->setIcon(QIcon(":/icon/debug_unsel"));
-    }
-}
-
-/*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_USA_triggered()
-{
-    if(!load)
-    {
-        if(!ui->action_Region_USA->isChecked())
-        {
-            ff7.SG_Region_String[s].clear();
-            ui->lbl_sg_region->clear();
-            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
-        }
-        else
-        {
-            switch(s)
-            {
-                case 0:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01"; break;
-                case 1:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S02"; break;
-                case 2:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S03"; break;
-                case 3:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S04"; break;
-                case 4:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S05"; break;
-                case 5:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S06"; break;
-                case 6:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S07"; break;
-                case 7:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S08"; break;
-                case 8:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S09"; break;
-                case 9:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S10"; break;
-                case 10:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S11"; break;
-                case 11:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S12"; break;
-                case 12:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S13"; break;
-                case 13:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S14"; break;
-                case 14:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S15"; break;
-            }
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
-            ui->action_Region_JPN->setChecked(false);
-            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->action_Region_JPN_International->setChecked(false);
-            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->action_Region_USA->setIcon(QIcon(":/icon/us_sel"));
-            ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
-        }
-    }
-}
-/*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_PAL_Generic_triggered()
-{
-    if(!load)
-    {    
-        if(!ui->action_Region_PAL_Generic->isChecked())
-        {
-            ff7.SG_Region_String[s].clear();
-            ui->lbl_sg_region->clear();
-            ui->action_Region_USA->setIcon(QIcon(":/icon/eu_unsel"));
-        }
-        else
-        {
-            switch(s)
-            {
-                case 0:ff7.SG_Region_String[s] = "BESCES-00867FF7-S01"; break;
-                case 1:ff7.SG_Region_String[s] = "BESCES-00867FF7-S02"; break;
-                case 2:ff7.SG_Region_String[s] = "BESCES-00867FF7-S03"; break;
-                case 3:ff7.SG_Region_String[s] = "BESCES-00867FF7-S04"; break;
-                case 4:ff7.SG_Region_String[s] = "BESCES-00867FF7-S05"; break;
-                case 5:ff7.SG_Region_String[s] = "BESCES-00867FF7-S06"; break;
-                case 6:ff7.SG_Region_String[s] = "BESCES-00867FF7-S07"; break;
-                case 7:ff7.SG_Region_String[s] = "BESCES-00867FF7-S08"; break;
-                case 8:ff7.SG_Region_String[s] = "BESCES-00867FF7-S09"; break;
-                case 9:ff7.SG_Region_String[s] = "BESCES-00867FF7-S10"; break;
-                case 10:ff7.SG_Region_String[s] = "BESCES-00867FF7-S11"; break;
-                case 11:ff7.SG_Region_String[s] = "BESCES-00867FF7-S12"; break;
-                case 12:ff7.SG_Region_String[s] = "BESCES-00867FF7-S13"; break;
-                case 13:ff7.SG_Region_String[s] = "BESCES-00867FF7-S14"; break;
-                case 14:ff7.SG_Region_String[s] = "BESCES-00867FF7-S15"; break;
-            }
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
-            ui->action_Region_JPN->setChecked(false);
-            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->action_Region_JPN_International->setChecked(false);
-            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
-            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_sel"));
-        }
-    }
-}
-/*~~~~~~~~~~~~~SET PAL_German MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_PAL_German_triggered()
-{
-    if(!load)
-    {
-        if(!ui->action_Region_PAL_German->isChecked())
-        {
-            ff7.SG_Region_String[s].clear();
-            ui->lbl_sg_region->clear();
-            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
-        }
-        else
-        {
-            switch(s)
-            {
-                case 0:ff7.SG_Region_String[s] = "BESCES-00869FF7-S01"; break;
-                case 1:ff7.SG_Region_String[s] = "BESCES-00869FF7-S02"; break;
-                case 2:ff7.SG_Region_String[s] = "BESCES-00869FF7-S03"; break;
-                case 3:ff7.SG_Region_String[s] = "BESCES-00869FF7-S04"; break;
-                case 4:ff7.SG_Region_String[s] = "BESCES-00869FF7-S05"; break;
-                case 5:ff7.SG_Region_String[s] = "BESCES-00869FF7-S06"; break;
-                case 6:ff7.SG_Region_String[s] = "BESCES-00869FF7-S07"; break;
-                case 7:ff7.SG_Region_String[s] = "BESCES-00869FF7-S08"; break;
-                case 8:ff7.SG_Region_String[s] = "BESCES-00869FF7-S09"; break;
-                case 9:ff7.SG_Region_String[s] = "BESCES-00869FF7-S10"; break;
-                case 10:ff7.SG_Region_String[s] = "BESCES-00869FF7-S11"; break;
-                case 11:ff7.SG_Region_String[s] = "BESCES-00869FF7-S12"; break;
-                case 12:ff7.SG_Region_String[s] = "BESCES-00869FF7-S13"; break;
-                case 13:ff7.SG_Region_String[s] = "BESCES-00869FF7-S14"; break;
-                case 14:ff7.SG_Region_String[s] = "BESCES-00869FF7-S15"; break;
-            }
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
-            ui->action_Region_JPN->setChecked(false);
-            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->action_Region_JPN_International->setChecked(false);
-            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
-            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_sel"));
-        }
-    }
-}
-/*~~~~~~~~~~~~~SET PAL_Spanish MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_PAL_Spanish_triggered()
-{
-    if(!load)
-    {
-        if(!ui->action_Region_PAL_Spanish->isChecked())
-        {
-            ff7.SG_Region_String[s].clear();
-            ui->lbl_sg_region->clear();
-            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
-        }
-        else
-        {
-            switch(s)
-            {
-                case 0:ff7.SG_Region_String[s] = "BESCES-00900FF7-S01"; break;
-                case 1:ff7.SG_Region_String[s] = "BESCES-00900FF7-S02"; break;
-                case 2:ff7.SG_Region_String[s] = "BESCES-00900FF7-S03"; break;
-                case 3:ff7.SG_Region_String[s] = "BESCES-00900FF7-S04"; break;
-                case 4:ff7.SG_Region_String[s] = "BESCES-00900FF7-S05"; break;
-                case 5:ff7.SG_Region_String[s] = "BESCES-00900FF7-S06"; break;
-                case 6:ff7.SG_Region_String[s] = "BESCES-00900FF7-S07"; break;
-                case 7:ff7.SG_Region_String[s] = "BESCES-00900FF7-S08"; break;
-                case 8:ff7.SG_Region_String[s] = "BESCES-00900FF7-S09"; break;
-                case 9:ff7.SG_Region_String[s] = "BESCES-00900FF7-S10"; break;
-                case 10:ff7.SG_Region_String[s] = "BESCES-00900FF7-S11"; break;
-                case 11:ff7.SG_Region_String[s] = "BESCES-00900FF7-S12"; break;
-                case 12:ff7.SG_Region_String[s] = "BESCES-00900FF7-S13"; break;
-                case 13:ff7.SG_Region_String[s] = "BESCES-00900FF7-S14"; break;
-                case 14:ff7.SG_Region_String[s] = "BESCES-00900FF7-S15"; break;
-            }
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
-            ui->action_Region_JPN->setChecked(false);
-            ui->action_Region_JPN_International->setChecked(false);
-            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
-            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_sel"));
-
-        }
-    }
-}
-/*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_JPN_triggered()
-{
-    if(!load)
-    {
-        if(!ui->action_Region_JPN->isChecked())
-        {
-            ff7.SG_Region_String[s].clear();
-            ui->lbl_sg_region->clear();
-            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
-
-        }
-        else
-        {
-            switch(s)
-            {
-                case 0:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01"; break;
-                case 1:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S02"; break;
-                case 2:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S03"; break;
-                case 3:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S04"; break;
-                case 4:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S05"; break;
-                case 5:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S06"; break;
-                case 6:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S07"; break;
-                case 7:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S08"; break;
-                case 8:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S09"; break;
-                case 9:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S10"; break;
-                case 10:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S11"; break;
-                case 11:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S12"; break;
-                case 12:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S13"; break;
-                case 13:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S14"; break;
-                case 14:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S15"; break;
-            }
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
-            ui->action_Region_JPN_International->setChecked(false);
-            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
-            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_sel"));
-        }
-    }
-}
-/*~~~~~~~~~~~~~SET JPN_International MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_JPN_International_triggered()
-{
-    if(!load)
-    {
-        if(!ui->action_Region_JPN_International->isChecked())
-        {
-            ff7.SG_Region_String[s].clear();
-            ui->lbl_sg_region->clear();
-            ui->action_Region_JPN_International->setIcon(QIcon(":icon/jp_unsel"));
-        }
-        else
-        {
-            switch(s)
-            {
-                case 0:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01"; break;
-                case 1:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S02"; break;
-                case 2:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S03"; break;
-                case 3:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S04"; break;
-                case 4:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S05"; break;
-                case 5:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S06"; break;
-                case 6:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S07"; break;
-                case 7:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S08"; break;
-                case 8:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S09"; break;
-                case 9:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S10"; break;
-                case 10:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S11"; break;
-                case 11:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S12"; break;
-                case 12:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S13"; break;
-                case 13:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S14"; break;
-                case 14:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S15"; break;
-            }
-
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
-            ui->action_Region_JPN->setChecked(false);
-            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
-            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_sel"));
-        }
-    }
-}
 void MainWindow::testdata_refresh()
 {
     load=true;
