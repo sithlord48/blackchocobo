@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>750</width>
+    <width>760</width>
     <height>580</height>
    </rect>
   </property>
@@ -21,7 +21,7 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>750</width>
+    <width>760</width>
     <height>580</height>
    </size>
   </property>
@@ -1779,6 +1779,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                       <height>18</height>
                      </size>
                     </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>110</width>
+                      <height>18</height>
+                     </size>
+                    </property>
                     <property name="maxLength">
                      <number>12</number>
                     </property>
@@ -2484,6 +2490,9 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                       </property>
                       <property name="text">
                        <string>      Next</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                       </property>
                      </widget>
                     </item>
@@ -15930,6 +15939,73 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_61">
             <item>
+             <layout class="QHBoxLayout" name="horizontalLayout_77">
+              <item>
+               <widget class="QLabel" name="label_167">
+                <property name="text">
+                 <string>Main Progress Var</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QSpinBox" name="sb_mprogress">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>50</width>
+                  <height>18</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>71</width>
+                  <height>18</height>
+                 </size>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="maximum">
+                 <number>1000000000</number>
+                </property>
+                <property name="value">
+                 <number>0</number>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item>
+             <widget class="QLCDNumber" name="lcdNumber_5">
+              <property name="minimumSize">
+               <size>
+                <width>163</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>24</height>
+               </size>
+              </property>
+              <property name="numDigits">
+               <number>16</number>
+              </property>
+              <property name="digitCount">
+               <number>16</number>
+              </property>
+              <property name="mode">
+               <enum>QLCDNumber::Bin</enum>
+              </property>
+              <property name="segmentStyle">
+               <enum>QLCDNumber::Flat</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
              <widget class="QGroupBox" name="groupBox_25">
               <property name="minimumSize">
                <size>
@@ -16177,78 +16253,21 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 <enum>QLCDNumber::Flat</enum>
                </property>
               </widget>
+              <zorder>label_168</zorder>
+              <zorder>sb_bm_progress1</zorder>
+              <zorder>label_169</zorder>
+              <zorder>label_170</zorder>
+              <zorder>sb_bm_progress2</zorder>
+              <zorder>sb_bm_progress3</zorder>
+              <zorder>lcdNumber_2</zorder>
+              <zorder>lcdNumber_3</zorder>
+              <zorder>lcdNumber_4</zorder>
+              <zorder>label_167</zorder>
+              <zorder></zorder>
              </widget>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_60">
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_77">
-                <item>
-                 <widget class="QLabel" name="label_167">
-                  <property name="text">
-                   <string>Main Progress Var</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QSpinBox" name="sb_mprogress">
-                  <property name="enabled">
-                   <bool>true</bool>
-                  </property>
-                  <property name="minimumSize">
-                   <size>
-                    <width>50</width>
-                    <height>18</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>71</width>
-                    <height>18</height>
-                   </size>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignCenter</set>
-                  </property>
-                  <property name="maximum">
-                   <number>1000000000</number>
-                  </property>
-                  <property name="value">
-                   <number>0</number>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </item>
-              <item>
-               <widget class="QLCDNumber" name="lcdNumber_5">
-                <property name="minimumSize">
-                 <size>
-                  <width>163</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="numDigits">
-                 <number>16</number>
-                </property>
-                <property name="digitCount">
-                 <number>16</number>
-                </property>
-                <property name="mode">
-                 <enum>QLCDNumber::Bin</enum>
-                </property>
-                <property name="segmentStyle">
-                 <enum>QLCDNumber::Flat</enum>
-                </property>
-               </widget>
-              </item>
-             </layout>
+             <layout class="QVBoxLayout" name="verticalLayout_60"/>
             </item>
            </layout>
           </item>
@@ -19844,6 +19863,19 @@ p, li { white-space: pre-wrap; }
           </layout>
          </widget>
         </item>
+        <item>
+         <spacer name="verticalSpacer_17">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="tab_test">
@@ -20769,7 +20801,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>750</width>
+     <width>760</width>
      <height>22</height>
     </rect>
    </property>
