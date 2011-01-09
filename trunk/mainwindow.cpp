@@ -903,13 +903,21 @@ void MainWindow::on_actionExport_PC_Save_activated()
     fwrite(PC_SAVE_GAME_FILE_HEADER,9,1,pfile);
     for(int si=0;si<15;si++)
     {
-        fwrite(ff7.hf[si].sl_header,ff7.SG_SLOT_HEADER,1,pfile);
-        fwrite(&ff7.slot[si],ff7.SG_DATA_SIZE,1,pfile);
-        fwrite(ff7.hf[si].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
+        if(ff7.SG_Region_String[si].contains("00867") || ff7.SG_Region_String[si].contains("00869") ||
+           ff7.SG_Region_String[si].contains("00900") || ff7.SG_Region_String[si].contains("94163") ||
+           ff7.SG_Region_String[si].contains("00700") || ff7.SG_Region_String[si].contains("01057"))
+           {
+            Write:
+            fwrite(ff7.hf[si].sl_header,ff7.SG_SLOT_HEADER,1,pfile);
+            fwrite(&ff7.slot[si],ff7.SG_DATA_SIZE,1,pfile);
+            fwrite(ff7.hf[si].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
+           }
+        else {clearslot(si);    goto Write;} //the program is incomplete with out one use of goto.
     }
     fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
     fclose(pfile);
     fix_sum(fileName);
+
     /*~~~~~~~~~~~END SHORT SAVE -SITHLORD48~~~~~~~~~~~~~*/
 }
 /*~~~~~~~~~~~~~~~~~EXPORT PSX~~~~~~~~~~~~~~~~~~*/
