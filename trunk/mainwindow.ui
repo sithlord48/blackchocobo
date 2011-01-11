@@ -562,6 +562,28 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
        </widget>
       </item>
       <item>
+       <widget class="QLabel" name="lbl_slot_icon">
+        <property name="minimumSize">
+         <size>
+          <width>18</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>18</width>
+          <height>18</height>
+         </size>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+        <property name="scaledContents">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
        <spacer name="horizontalSpacer_115">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -1711,8 +1733,8 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>412</width>
-             <height>439</height>
+             <width>406</width>
+             <height>433</height>
             </rect>
            </property>
            <attribute name="label">
@@ -4312,8 +4334,8 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>423</width>
-             <height>430</height>
+             <width>409</width>
+             <height>407</height>
             </rect>
            </property>
            <attribute name="label">
@@ -16253,7 +16275,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 <enum>QLCDNumber::Flat</enum>
                </property>
               </widget>
-              <zorder>label_168</zorder>
               <zorder>sb_bm_progress1</zorder>
               <zorder>label_169</zorder>
               <zorder>label_170</zorder>
@@ -16262,8 +16283,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
               <zorder>lcdNumber_2</zorder>
               <zorder>lcdNumber_3</zorder>
               <zorder>lcdNumber_4</zorder>
-              <zorder>label_167</zorder>
-              <zorder></zorder>
+              <zorder>label_168</zorder>
              </widget>
             </item>
             <item>
@@ -20289,7 +20309,7 @@ p, li { white-space: pre-wrap; }
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="layoutWidget">
+       <widget class="QWidget" name="layoutWidget1">
         <property name="geometry">
          <rect>
           <x>5</x>
@@ -20802,7 +20822,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>760</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
