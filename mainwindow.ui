@@ -1733,8 +1733,8 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>406</width>
-             <height>433</height>
+             <width>412</width>
+             <height>439</height>
             </rect>
            </property>
            <attribute name="label">
@@ -4334,8 +4334,8 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>409</width>
-             <height>407</height>
+             <width>413</width>
+             <height>423</height>
             </rect>
            </property>
            <attribute name="label">
@@ -8316,7 +8316,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
          <widget class="QTabWidget" name="tabWidget_2">
           <property name="minimumSize">
            <size>
-            <width>60</width>
+            <width>0</width>
             <height>0</height>
            </size>
           </property>
@@ -8336,6 +8336,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
               <property name="enabled">
                <bool>true</bool>
               </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
               <property name="title">
                <string>Stable 1</string>
               </property>
@@ -8344,7 +8350,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 <number>2</number>
                </property>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout">
+                <layout class="QHBoxLayout" name="name_box1">
                  <property name="spacing">
                   <number>-1</number>
                  </property>
@@ -8423,9 +8429,9 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                <layout class="QHBoxLayout" name="type_box1">
                  <property name="spacing">
-                  <number>0</number>
+                  <number>1</number>
                  </property>
                  <property name="leftMargin">
                   <number>6</number>
@@ -8517,7 +8523,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_87">
+                  <spacer name="horizontalSpacer_40">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -8558,7 +8564,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>71</width>
+                     <width>68</width>
                      <height>22</height>
                     </size>
                    </property>
@@ -8580,26 +8586,13 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_3">
+                <layout class="QHBoxLayout" name="run_box1">
                  <property name="leftMargin">
                   <number>6</number>
                  </property>
                  <property name="rightMargin">
                   <number>6</number>
                  </property>
-                 <item>
-                  <spacer name="horizontalSpacer_35">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
                  <item>
                   <widget class="QLabel" name="label_61">
                    <property name="minimumSize">
@@ -8697,7 +8690,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_4">
+                <layout class="QHBoxLayout" name="sprint_box1">
                  <property name="leftMargin">
                   <number>6</number>
                  </property>
@@ -8705,7 +8698,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   <number>6</number>
                  </property>
                  <item>
-                  <spacer name="horizontalSpacer_27">
+                  <spacer name="horizontalSpacer_46">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -8811,7 +8804,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_5">
+                <layout class="QHBoxLayout" name="accel_box1">
                  <property name="leftMargin">
                   <number>6</number>
                  </property>
@@ -8863,19 +8856,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_40">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
                   <widget class="QLabel" name="label_63">
                    <property name="minimumSize">
                     <size>
@@ -8922,9 +8902,9 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_6">
+                <layout class="QHBoxLayout" name="stamina_box1">
                  <property name="spacing">
-                  <number>0</number>
+                  <number>-1</number>
                  </property>
                  <property name="leftMargin">
                   <number>6</number>
@@ -8977,19 +8957,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_41">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
                   <widget class="QLabel" name="label_64">
                    <property name="minimumSize">
                     <size>
@@ -9036,7 +9003,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_7">
+                <layout class="QHBoxLayout" name="coop_box1">
                  <property name="spacing">
                   <number>-1</number>
                  </property>
@@ -9091,7 +9058,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_42">
+                  <spacer name="horizontalSpacer_27">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -9150,7 +9117,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_8">
+                <layout class="QHBoxLayout" name="personality_box1">
                  <property name="leftMargin">
                   <number>6</number>
                  </property>
@@ -9205,9 +9172,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
               <property name="sizeHint" stdset="0">
                <size>
-                <width>1</width>
+                <width>255</width>
                 <height>20</height>
                </size>
               </property>
@@ -9218,6 +9188,18 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
               <property name="enabled">
                <bool>true</bool>
               </property>
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
               <property name="title">
                <string>Stable 2</string>
               </property>
@@ -9226,7 +9208,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 <number>2</number>
                </property>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_9">
+                <layout class="QHBoxLayout" name="name_box2">
                  <property name="leftMargin">
                   <number>6</number>
                  </property>
@@ -9302,9 +9284,9 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_10">
+                <layout class="QHBoxLayout" name="type_box2">
                  <property name="spacing">
-                  <number>0</number>
+                  <number>1</number>
                  </property>
                  <property name="leftMargin">
                   <number>6</number>
@@ -9396,7 +9378,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_50">
+                  <spacer name="horizontalSpacer_41">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -9437,7 +9419,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>71</width>
+                     <width>68</width>
                      <height>22</height>
                     </size>
                    </property>
@@ -9459,7 +9441,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_11">
+                <layout class="QHBoxLayout" name="run_box2">
                  <property name="spacing">
                   <number>-1</number>
                  </property>
@@ -9469,19 +9451,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                  <property name="rightMargin">
                   <number>6</number>
                  </property>
-                 <item>
-                  <spacer name="horizontalSpacer_38">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
                  <item>
                   <widget class="QLabel" name="label_79">
                    <property name="minimumSize">
@@ -9576,7 +9545,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                <layout class="QHBoxLayout" name="sprint_box2">
                  <property name="leftMargin">
                   <number>6</number>
                  </property>
@@ -9584,7 +9553,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   <number>6</number>
                  </property>
                  <item>
-                  <spacer name="horizontalSpacer_37">
+                  <spacer name="horizontalSpacer_47">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -9690,7 +9659,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_13">
+                <layout class="QHBoxLayout" name="accel_box2">
                  <property name="leftMargin">
                   <number>6</number>
                  </property>
@@ -9742,19 +9711,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_43">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
                   <widget class="QLabel" name="label_83">
                    <property name="minimumSize">
                     <size>
@@ -9801,9 +9757,9 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                <layout class="QHBoxLayout" name="stamina_box2">
                  <property name="spacing">
-                  <number>0</number>
+                  <number>-1</number>
                  </property>
                  <property name="leftMargin">
                   <number>6</number>
@@ -9856,19 +9812,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_45">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
                   <widget class="QLabel" name="label_85">
                    <property name="minimumSize">
                     <size>
@@ -9915,7 +9858,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_15">
+                <layout class="QHBoxLayout" name="coop_box2">
                  <property name="leftMargin">
                   <number>6</number>
                  </property>
@@ -9967,7 +9910,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_47">
+                  <spacer name="horizontalSpacer_35">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -10026,7 +9969,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_16">
+                <layout class="QHBoxLayout" name="personality_box2">
                  <property name="leftMargin">
                   <number>6</number>
                  </property>
@@ -10081,9 +10024,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
               <property name="sizeHint" stdset="0">
                <size>
-                <width>0</width>
+                <width>255</width>
                 <height>20</height>
                </size>
               </property>
@@ -10094,6 +10040,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
               <property name="enabled">
                <bool>true</bool>
               </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
+              </property>
               <property name="title">
                <string>Stable 3</string>
               </property>
@@ -10102,7 +10054,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 <number>2</number>
                </property>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_17">
+                <layout class="QHBoxLayout" name="name_box3">
                  <property name="leftMargin">
                   <number>6</number>
                  </property>
@@ -10178,9 +10130,9 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_18">
+                <layout class="QHBoxLayout" name="type_box3">
                  <property name="spacing">
-                  <number>0</number>
+                  <number>1</number>
                  </property>
                  <property name="leftMargin">
                   <number>6</number>
@@ -10272,7 +10224,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_88">
+                  <spacer name="horizontalSpacer_42">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -10313,7 +10265,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>71</width>
+                     <width>68</width>
                      <height>22</height>
                     </size>
                    </property>
@@ -10335,26 +10287,13 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_19">
+                <layout class="QHBoxLayout" name="run_box3">
                  <property name="leftMargin">
                   <number>6</number>
                  </property>
                  <property name="rightMargin">
                   <number>6</number>
                  </property>
-                 <item>
-                  <spacer name="horizontalSpacer_36">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
                  <item>
                   <widget class="QLabel" name="label_92">
                    <property name="minimumSize">
@@ -10449,7 +10388,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_20">
+                <layout class="QHBoxLayout" name="sprint_box3">
                  <property name="leftMargin">
                   <number>6</number>
                  </property>
@@ -10457,7 +10396,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   <number>6</number>
                  </property>
                  <item>
-                  <spacer name="horizontalSpacer_39">
+                  <spacer name="horizontalSpacer_48">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -10563,7 +10502,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_21">
+                <layout class="QHBoxLayout" name="accel_box3">
                  <property name="leftMargin">
                   <number>6</number>
                  </property>
@@ -10615,19 +10554,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_44">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
                   <widget class="QLabel" name="label_96">
                    <property name="minimumSize">
                     <size>
@@ -10674,9 +10600,9 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_22">
+                <layout class="QHBoxLayout" name="stamina_box3">
                  <property name="spacing">
-                  <number>0</number>
+                  <number>-1</number>
                  </property>
                  <property name="leftMargin">
                   <number>6</number>
@@ -10729,19 +10655,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_46">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
                   <widget class="QLabel" name="label_98">
                    <property name="minimumSize">
                     <size>
@@ -10788,7 +10701,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_23">
+                <layout class="QHBoxLayout" name="coop_box3">
                  <property name="leftMargin">
                   <number>6</number>
                  </property>
@@ -10840,7 +10753,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_48">
+                  <spacer name="horizontalSpacer_36">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -10899,7 +10812,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_24">
+                <layout class="QHBoxLayout" name="personality_box3">
                  <property name="leftMargin">
                   <number>6</number>
                  </property>
@@ -10960,6 +10873,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
              <widget class="QGroupBox" name="box_stable4">
               <property name="enabled">
                <bool>true</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
               </property>
               <property name="title">
                <string>Stable 4</string>
@@ -11047,7 +10966,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_35">
                  <property name="spacing">
-                  <number>0</number>
+                  <number>1</number>
                  </property>
                  <property name="leftMargin">
                   <number>6</number>
@@ -11139,7 +11058,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_89">
+                  <spacer name="horizontalSpacer_43">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -11180,7 +11099,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>71</width>
+                     <width>68</width>
                      <height>22</height>
                     </size>
                    </property>
@@ -11209,19 +11128,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                  <property name="rightMargin">
                   <number>6</number>
                  </property>
-                 <item>
-                  <spacer name="horizontalSpacer_49">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
                  <item>
                   <widget class="QLabel" name="label_118">
                    <property name="minimumSize">
@@ -11271,13 +11177,13 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>22</height>
+                     <height>18</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>22</height>
+                     <height>18</height>
                     </size>
                    </property>
                    <property name="text">
@@ -11324,7 +11230,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   <number>6</number>
                  </property>
                  <item>
-                  <spacer name="horizontalSpacer_51">
+                  <spacer name="horizontalSpacer_49">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -11385,13 +11291,13 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>22</height>
+                     <height>18</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>22</height>
+                     <height>18</height>
                     </size>
                    </property>
                    <property name="text">
@@ -11482,19 +11388,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_54">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
                   <widget class="QLabel" name="label_122">
                    <property name="minimumSize">
                     <size>
@@ -11543,7 +11436,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_39">
                  <property name="spacing">
-                  <number>0</number>
+                  <number>-1</number>
                  </property>
                  <property name="leftMargin">
                   <number>6</number>
@@ -11594,19 +11487,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                     <number>9999</number>
                    </property>
                   </widget>
-                 </item>
-                 <item>
-                  <spacer name="horizontalSpacer_55">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_124">
@@ -11707,7 +11587,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_56">
+                  <spacer name="horizontalSpacer_37">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -11821,9 +11701,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
               <property name="sizeHint" stdset="0">
                <size>
-                <width>40</width>
+                <width>255</width>
                 <height>20</height>
                </size>
               </property>
@@ -11833,6 +11716,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
              <widget class="QGroupBox" name="box_stable5">
               <property name="enabled">
                <bool>true</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
               </property>
               <property name="title">
                <string>Stable 5</string>
@@ -11920,7 +11809,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_43">
                  <property name="spacing">
-                  <number>0</number>
+                  <number>1</number>
                  </property>
                  <property name="leftMargin">
                   <number>6</number>
@@ -12012,7 +11901,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_90">
+                  <spacer name="horizontalSpacer_44">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -12053,7 +11942,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>71</width>
+                     <width>68</width>
                      <height>22</height>
                     </size>
                    </property>
@@ -12082,19 +11971,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                  <property name="rightMargin">
                   <number>6</number>
                  </property>
-                 <item>
-                  <spacer name="horizontalSpacer_52">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
                  <item>
                   <widget class="QLabel" name="label_131">
                    <property name="minimumSize">
@@ -12197,7 +12073,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   <number>6</number>
                  </property>
                  <item>
-                  <spacer name="horizontalSpacer_53">
+                  <spacer name="horizontalSpacer_50">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -12258,13 +12134,13 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>22</height>
+                     <height>18</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
                      <width>16777215</width>
-                     <height>22</height>
+                     <height>18</height>
                     </size>
                    </property>
                    <property name="text">
@@ -12355,19 +12231,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_59">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
                   <widget class="QLabel" name="label_135">
                    <property name="minimumSize">
                     <size>
@@ -12416,7 +12279,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_47">
                  <property name="spacing">
-                  <number>0</number>
+                  <number>-1</number>
                  </property>
                  <property name="leftMargin">
                   <number>6</number>
@@ -12467,19 +12330,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                     <number>9999</number>
                    </property>
                   </widget>
-                 </item>
-                 <item>
-                  <spacer name="horizontalSpacer_58">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_137">
@@ -12580,7 +12430,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_57">
+                  <spacer name="horizontalSpacer_38">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -12694,9 +12544,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
               <property name="orientation">
                <enum>Qt::Horizontal</enum>
               </property>
+              <property name="sizeType">
+               <enum>QSizePolicy::Maximum</enum>
+              </property>
               <property name="sizeHint" stdset="0">
                <size>
-                <width>40</width>
+                <width>255</width>
                 <height>20</height>
                </size>
               </property>
@@ -12706,6 +12559,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
              <widget class="QGroupBox" name="box_stable6">
               <property name="enabled">
                <bool>true</bool>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>0</height>
+               </size>
               </property>
               <property name="title">
                <string>Stable 6</string>
@@ -12793,7 +12652,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_27">
                  <property name="spacing">
-                  <number>0</number>
+                  <number>1</number>
                  </property>
                  <property name="leftMargin">
                   <number>6</number>
@@ -12885,7 +12744,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_91">
+                  <spacer name="horizontalSpacer_45">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -12926,7 +12785,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>71</width>
+                     <width>68</width>
                      <height>22</height>
                     </size>
                    </property>
@@ -12955,19 +12814,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                  <property name="rightMargin">
                   <number>6</number>
                  </property>
-                 <item>
-                  <spacer name="horizontalSpacer_60">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
                  <item>
                   <widget class="QLabel" name="label_105">
                    <property name="minimumSize">
@@ -13070,7 +12916,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   <number>6</number>
                  </property>
                  <item>
-                  <spacer name="horizontalSpacer_61">
+                  <spacer name="horizontalSpacer_51">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -13228,19 +13074,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_62">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
                   <widget class="QLabel" name="label_109">
                    <property name="minimumSize">
                     <size>
@@ -13289,7 +13122,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_31">
                  <property name="spacing">
-                  <number>0</number>
+                  <number>-1</number>
                  </property>
                  <property name="leftMargin">
                   <number>6</number>
@@ -13340,19 +13173,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                     <number>9999</number>
                    </property>
                   </widget>
-                 </item>
-                 <item>
-                  <spacer name="horizontalSpacer_63">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_111">
@@ -13453,7 +13273,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                   </widget>
                  </item>
                  <item>
-                  <spacer name="horizontalSpacer_64">
+                  <spacer name="horizontalSpacer_39">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -17173,6 +16993,12 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
               <height>126</height>
              </size>
             </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>126</height>
+             </size>
+            </property>
             <property name="title">
              <string>Love Points</string>
             </property>
@@ -17680,6 +17506,18 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
           </item>
           <item>
            <widget class="QGroupBox" name="groupBox_6">
+            <property name="minimumSize">
+             <size>
+              <width>0</width>
+              <height>62</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>62</height>
+             </size>
+            </property>
             <property name="title">
              <string>Time Played</string>
             </property>
@@ -20822,7 +20660,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>760</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
