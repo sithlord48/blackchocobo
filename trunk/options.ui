@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>558</width>
-    <height>462</height>
+    <width>556</width>
+    <height>460</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -496,7 +496,7 @@ QSlider{
         </property>
         <property name="maximumSize">
          <size>
-          <width>128</width>
+          <width>255</width>
           <height>72</height>
          </size>
         </property>
@@ -545,7 +545,7 @@ QSlider{
         </property>
         <property name="maximumSize">
          <size>
-          <width>128</width>
+          <width>255</width>
           <height>72</height>
          </size>
         </property>
@@ -677,7 +677,7 @@ QSlider{
         </property>
         <property name="maximumSize">
          <size>
-          <width>128</width>
+          <width>255</width>
           <height>72</height>
          </size>
         </property>
@@ -797,7 +797,7 @@ QSlider{
         </property>
         <property name="maximumSize">
          <size>
-          <width>128</width>
+          <width>255</width>
           <height>72</height>
          </size>
         </property>
