@@ -135,7 +135,6 @@ void Options::on_btn_set_default_save_clicked()
 void Options::on_line_char_stat_folder_editingFinished()
 {
     if(!ui->line_char_stat_folder->text().isNull()){bchoco_settings.setValue("char_stat_folder",ui->line_char_stat_folder->text());}
-    //set_path_lbls();
 }
 void Options::on_btn_set_char_stat_folder_clicked()
 {
@@ -463,8 +462,21 @@ void Options::on_slide_c3_b_valueChanged(int value)
     set_preview();
 }
 
+/*~~~~~~~~~~~~~~~~~~RESET STUFF~~~~~~~~~~~~~~~~~~~*/
+void Options::on_reset_default_save_location_clicked()
+{
+ bchoco_settings.setValue("default_save_file",QString(QCoreApplication::applicationDirPath()) + "/"+ "save0");
+ set_path_lbls();
+}
+
+void Options::on_reset_char_stat_folder_clicked()
+{
+ bchoco_settings.setValue("char_stat_folder",QString(QDir::homePath()));
+ set_path_lbls();
+}
 /*~~~~~~~~~~~~~~~~CLOSE BUTTON~~~~~~~~~~~~~~~~~~*/
 void Options::on_pushButton_clicked()
 {
     this->close();
 }
+
