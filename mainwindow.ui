@@ -156,7 +156,7 @@ background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0
 }
 QSlider#slide_ul_b::handle,QSlider#slide_ul_g::handle,QSlider#slide_ul_r::handle,QSlider#slide_ur_b::handle,QSlider#slide_ur_g::handle,QSlider#slide_ur_r::handle,QSlider#slide_ll_b::handle,QSlider#slide_ll_g::handle,QSlider#slide_ll_r::handle,QSlider#slide_lr_b::handle,QSlider#slide_lr_g::handle,QSlider#slide_lr_r::handle{
      background: rgba(172, 172, 172,0);
-     border: 1px solid #5c5c5c;
+     border: 2px solid #5c5c5c;
      width: 3px;
      border-radius: 2px;
  }
@@ -4334,8 +4334,8 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>413</width>
-             <height>423</height>
+             <width>423</width>
+             <height>430</height>
             </rect>
            </property>
            <attribute name="label">
