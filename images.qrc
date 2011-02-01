@@ -145,5 +145,6 @@
         <file alias="slot13">icon/slot13.png</file>
         <file alias="slot14">icon/slot14.png</file>
         <file alias="slot15">icon/slot15.png</file>
+        <file alias="default_setting">icon/default_setting.png</file>
     </qresource>
 </RCC>
