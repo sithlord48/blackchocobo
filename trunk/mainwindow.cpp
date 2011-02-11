@@ -285,21 +285,21 @@ void MainWindow::loadFileFull(const QString &fileName)
     /*~~~~~~~End Load~~~~~~~~~~~~~~*/
     if (ff7.savetype == 1)
     {
-        if(ff7.slot[0].checksum != 0x0000 && ff7.slot[0].checksum != 0x4D1D){ff7.SG_Region_String[0]= "BASLUS-94163FF7-S01";} else {ff7.SG_Region_String[0] = "";}
-        if(ff7.slot[1].checksum != 0x0000 && ff7.slot[1].checksum != 0x4D1D){ff7.SG_Region_String[1]= "BASLUS-94163FF7-S02";} else {ff7.SG_Region_String[1] = "";}
-        if(ff7.slot[2].checksum != 0x0000 && ff7.slot[2].checksum != 0x4D1D){ff7.SG_Region_String[2]= "BASLUS-94163FF7-S03";} else {ff7.SG_Region_String[2] = "";}
-        if(ff7.slot[3].checksum != 0x0000 && ff7.slot[3].checksum != 0x4D1D){ff7.SG_Region_String[3]= "BASLUS-94163FF7-S04";} else {ff7.SG_Region_String[3] = "";}
-        if(ff7.slot[4].checksum != 0x0000 && ff7.slot[4].checksum != 0x4D1D){ff7.SG_Region_String[4]= "BASLUS-94163FF7-S05";} else {ff7.SG_Region_String[4] = "";}
-        if(ff7.slot[5].checksum != 0x0000 && ff7.slot[5].checksum != 0x4D1D){ff7.SG_Region_String[5]= "BASLUS-94163FF7-S06";} else {ff7.SG_Region_String[5] = "";}
-        if(ff7.slot[6].checksum != 0x0000 && ff7.slot[6].checksum != 0x4D1D){ff7.SG_Region_String[6]= "BASLUS-94163FF7-S07";} else {ff7.SG_Region_String[6] = "";}
-        if(ff7.slot[7].checksum != 0x0000 && ff7.slot[7].checksum != 0x4D1D){ff7.SG_Region_String[7]= "BASLUS-94163FF7-S08";} else {ff7.SG_Region_String[7] = "";}
-        if(ff7.slot[8].checksum != 0x0000 && ff7.slot[8].checksum != 0x4D1D){ff7.SG_Region_String[8]= "BASLUS-94163FF7-S09";} else {ff7.SG_Region_String[8] = "";}
-        if(ff7.slot[9].checksum != 0x0000 && ff7.slot[9].checksum != 0x4D1D){ff7.SG_Region_String[9]= "BASLUS-94163FF7-S10";} else {ff7.SG_Region_String[9] = "";}
-        if(ff7.slot[10].checksum != 0x0000 && ff7.slot[10].checksum != 0x4D1D){ff7.SG_Region_String[10]= "BASLUS-94163FF7-S11";} else {ff7.SG_Region_String[10] = "";}
-        if(ff7.slot[11].checksum != 0x0000 && ff7.slot[11].checksum != 0x4D1D){ff7.SG_Region_String[11]= "BASLUS-94163FF7-S12";} else {ff7.SG_Region_String[11] = "";}
-        if(ff7.slot[12].checksum != 0x0000 && ff7.slot[12].checksum != 0x4D1D){ff7.SG_Region_String[12]= "BASLUS-94163FF7-S13";} else {ff7.SG_Region_String[12] = "";}
-        if(ff7.slot[13].checksum != 0x0000 && ff7.slot[13].checksum != 0x4D1D){ff7.SG_Region_String[13]= "BASLUS-94163FF7-S14";} else {ff7.SG_Region_String[13] = "";}
-        if(ff7.slot[14].checksum != 0x0000 && ff7.slot[14].checksum != 0x4D1D){ff7.SG_Region_String[14]= "BASLUS-94163FF7-S15";} else {ff7.SG_Region_String[14] = "";}
+        if(ff7.slot[0].checksum != 0x0000 && ff7.slot[0].checksum != 0x4D1D){ff7.SG_Region_String[0]= "BASCUS-94163FF7-S01";} else {ff7.SG_Region_String[0] = "";}
+        if(ff7.slot[1].checksum != 0x0000 && ff7.slot[1].checksum != 0x4D1D){ff7.SG_Region_String[1]= "BASCUS-94163FF7-S02";} else {ff7.SG_Region_String[1] = "";}
+        if(ff7.slot[2].checksum != 0x0000 && ff7.slot[2].checksum != 0x4D1D){ff7.SG_Region_String[2]= "BASCUS-94163FF7-S03";} else {ff7.SG_Region_String[2] = "";}
+        if(ff7.slot[3].checksum != 0x0000 && ff7.slot[3].checksum != 0x4D1D){ff7.SG_Region_String[3]= "BASCUS-94163FF7-S04";} else {ff7.SG_Region_String[3] = "";}
+        if(ff7.slot[4].checksum != 0x0000 && ff7.slot[4].checksum != 0x4D1D){ff7.SG_Region_String[4]= "BASCUS-94163FF7-S05";} else {ff7.SG_Region_String[4] = "";}
+        if(ff7.slot[5].checksum != 0x0000 && ff7.slot[5].checksum != 0x4D1D){ff7.SG_Region_String[5]= "BASCUS-94163FF7-S06";} else {ff7.SG_Region_String[5] = "";}
+        if(ff7.slot[6].checksum != 0x0000 && ff7.slot[6].checksum != 0x4D1D){ff7.SG_Region_String[6]= "BASCUS-94163FF7-S07";} else {ff7.SG_Region_String[6] = "";}
+        if(ff7.slot[7].checksum != 0x0000 && ff7.slot[7].checksum != 0x4D1D){ff7.SG_Region_String[7]= "BASCUS-94163FF7-S08";} else {ff7.SG_Region_String[7] = "";}
+        if(ff7.slot[8].checksum != 0x0000 && ff7.slot[8].checksum != 0x4D1D){ff7.SG_Region_String[8]= "BASCUS-94163FF7-S09";} else {ff7.SG_Region_String[8] = "";}
+        if(ff7.slot[9].checksum != 0x0000 && ff7.slot[9].checksum != 0x4D1D){ff7.SG_Region_String[9]= "BASCUS-94163FF7-S10";} else {ff7.SG_Region_String[9] = "";}
+        if(ff7.slot[10].checksum != 0x0000 && ff7.slot[10].checksum != 0x4D1D){ff7.SG_Region_String[10]= "BASCUS-94163FF7-S11";} else {ff7.SG_Region_String[10] = "";}
+        if(ff7.slot[11].checksum != 0x0000 && ff7.slot[11].checksum != 0x4D1D){ff7.SG_Region_String[11]= "BASCUS-94163FF7-S12";} else {ff7.SG_Region_String[11] = "";}
+        if(ff7.slot[12].checksum != 0x0000 && ff7.slot[12].checksum != 0x4D1D){ff7.SG_Region_String[12]= "BASCUS-94163FF7-S13";} else {ff7.SG_Region_String[12] = "";}
+        if(ff7.slot[13].checksum != 0x0000 && ff7.slot[13].checksum != 0x4D1D){ff7.SG_Region_String[13]= "BASCUS-94163FF7-S14";} else {ff7.SG_Region_String[13] = "";}
+        if(ff7.slot[14].checksum != 0x0000 && ff7.slot[14].checksum != 0x4D1D){ff7.SG_Region_String[14]= "BASCUS-94163FF7-S15";} else {ff7.SG_Region_String[14] = "";}
         SlotSelect slotselect;
         slotselect.exec();
     }
@@ -310,7 +310,7 @@ void MainWindow::loadFileFull(const QString &fileName)
              if(fileName.contains("00867")){ff7.SG_Region_String[s] = "BESCES-00867FF7-S01";}
         else if(fileName.contains("00869")){ff7.SG_Region_String[s] = "BESCES-00869FF7-S01";}
         else if(fileName.contains("00900")){ff7.SG_Region_String[s] = "BESCES-00900FF7-S01";}
-        else if(fileName.contains("94163")){ff7.SG_Region_String[s] = "BASLUS-94163FF7-S01";}
+        else if(fileName.contains("94163")){ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01";}
         else if(fileName.contains("00700")){ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01";}
         else if(fileName.contains("01057")){ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01";}
         else {ff7.SG_Region_String[s] ="";}
@@ -367,7 +367,7 @@ void MainWindow::on_actionFrom_PSX_Slot_activated()
         if(fileName.contains("00867")){ff7.SG_Region_String[s] = "BESCES-00867FF7-S01";}
    else if(fileName.contains("00869")){ff7.SG_Region_String[s] = "BESCES-00869FF7-S01";}
    else if(fileName.contains("00900")){ff7.SG_Region_String[s] = "BESCES-00900FF7-S01";}
-   else if(fileName.contains("94163")){ff7.SG_Region_String[s] = "BASLUS-94163FF7-S01";}
+   else if(fileName.contains("94163")){ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01";}
    else if(fileName.contains("00700")){ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01";}
    else if(fileName.contains("01057")){ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01";}
    else {ff7.SG_Region_String[s] ="";}
@@ -399,7 +399,7 @@ void MainWindow::on_actionFrom_PSV_Slot_activated()
             if(fileName.contains("00867")){ff7.SG_Region_String[s] = "BESCES-00867FF7-S01";}
        else if(fileName.contains("00869")){ff7.SG_Region_String[s] = "BESCES-00869FF7-S01";}
        else if(fileName.contains("00900")){ff7.SG_Region_String[s] = "BESCES-00900FF7-S01";}
-       else if(fileName.contains("94163")){ff7.SG_Region_String[s] = "BASLUS-94163FF7-S01";}
+       else if(fileName.contains("94163")){ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01";}
        else if(fileName.contains("00700")){ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01";}
        else if(fileName.contains("01057")){ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01";}
        else {ff7.SG_Region_String[s] ="";}
@@ -872,7 +872,7 @@ void MainWindow::on_actionNew_Game_triggered()
         int index = 0x200;
         temp = ff7file.mid(index,0x10f4);
         memcpy(&ff7.slot[s],temp,0x10f4);
-    if(ff7.SG_Region_String[s] == ""){ff7.SG_Region_String[s] = "BASLUS-94163FF7-S01";}
+    if(ff7.SG_Region_String[s] == ""){ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01";}
     guirefresh();
 }
 /*~~~~~~~~~~End New_Game~~~~~~~~~~~*/
@@ -6015,7 +6015,7 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
 
     memcpy(&bufferslot,temp,0x10f4);
     buffer_region = ff7.SG_Region_String[s];
-    ui->line_location->setText("Platform");
+    ui->line_location->setText("New Game +");
     memcpy(&bufferslot.desc,&ff7.slot[s].desc,0x44);
     memcpy(&bufferslot.colors,&ff7.slot[s].colors,12);
     for(int i=0;i<9;i++)
