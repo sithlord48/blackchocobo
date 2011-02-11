@@ -46,9 +46,10 @@ quint8 newheader[0x09] = {0x71,0x73,0x27,0x06,0x00,0x00,0x00,0x00,0x00};
 //calc 0x04 of the header (selected slot) no idea why they choose this way to do it but slot15 = 0xC2 , slot 14= 0xb2  and so on till slot2 = 0x01 and slot 01 0x00
 switch(s)
 {
-case 0: newheader[4]=0x00;
-case 1: newheader[4]=0x01;
-default:newheader[4]= (16 * (s-2))+2;
+case 0: newheader[4]=0x00; break;
+case 1: newheader[4]=0x01; break;
+
+default:newheader[4]= (16 * (s-2))+2; break;
 };
 //calc 0x05 of the header (slots 1-8 empty?)
 for(int i=0;i<8;i++)
