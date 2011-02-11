@@ -234,7 +234,6 @@ void MainWindow::loadFileFull(const QString &fileName)
        ff7.savetype         = 3;
 
     }
-
     else if(file_size == FF7_PSV_SAVE_GAME_SIZE)
     {
        ff7.SG_SIZE          = FF7_PSV_SAVE_GAME_SIZE;
@@ -286,21 +285,21 @@ void MainWindow::loadFileFull(const QString &fileName)
     /*~~~~~~~End Load~~~~~~~~~~~~~~*/
     if (ff7.savetype == 1)
     {
-        if(ff7.slot[0].checksum != 0x00 && ff7.slot[0].checksum != 0x4D1D){ff7.SG_Region_String[0]= "BASLUS-94163FF7-S01";} else {ff7.SG_Region_String[0] = "";}
-        if(ff7.slot[1].checksum != 0x00 && ff7.slot[1].checksum != 0x4D1D){ff7.SG_Region_String[1]= "BASLUS-94163FF7-S02";} else {ff7.SG_Region_String[1] = "";}
-        if(ff7.slot[2].checksum != 0x00 && ff7.slot[2].checksum != 0x4D1D){ff7.SG_Region_String[2]= "BASLUS-94163FF7-S03";} else {ff7.SG_Region_String[2] = "";}
-        if(ff7.slot[3].checksum != 0x00 && ff7.slot[3].checksum != 0x4D1D){ff7.SG_Region_String[3]= "BASLUS-94163FF7-S04";} else {ff7.SG_Region_String[3] = "";}
-        if(ff7.slot[4].checksum != 0x00 && ff7.slot[4].checksum != 0x4D1D){ff7.SG_Region_String[4]= "BASLUS-94163FF7-S05";} else {ff7.SG_Region_String[4] = "";}
-        if(ff7.slot[5].checksum != 0x00 && ff7.slot[5].checksum != 0x4D1D){ff7.SG_Region_String[5]= "BASLUS-94163FF7-S06";} else {ff7.SG_Region_String[5] = "";}
-        if(ff7.slot[6].checksum != 0x00 && ff7.slot[6].checksum != 0x4D1D){ff7.SG_Region_String[6]= "BASLUS-94163FF7-S07";} else {ff7.SG_Region_String[6] = "";}
-        if(ff7.slot[7].checksum != 0x00 && ff7.slot[7].checksum != 0x4D1D){ff7.SG_Region_String[7]= "BASLUS-94163FF7-S08";} else {ff7.SG_Region_String[7] = "";}
-        if(ff7.slot[8].checksum != 0x00 && ff7.slot[8].checksum != 0x4D1D){ff7.SG_Region_String[8]= "BASLUS-94163FF7-S09";} else {ff7.SG_Region_String[8] = "";}
-        if(ff7.slot[9].checksum != 0x00 && ff7.slot[9].checksum != 0x4D1D){ff7.SG_Region_String[9]= "BASLUS-94163FF7-S10";} else {ff7.SG_Region_String[9] = "";}
-        if(ff7.slot[10].checksum != 0x00 && ff7.slot[10].checksum != 0x4D1D){ff7.SG_Region_String[10]= "BASLUS-94163FF7-S11";} else {ff7.SG_Region_String[10] = "";}
-        if(ff7.slot[11].checksum != 0x00 && ff7.slot[11].checksum != 0x4D1D){ff7.SG_Region_String[11]= "BASLUS-94163FF7-S12";} else {ff7.SG_Region_String[11] = "";}
-        if(ff7.slot[12].checksum != 0x00 && ff7.slot[12].checksum != 0x4D1D){ff7.SG_Region_String[12]= "BASLUS-94163FF7-S13";} else {ff7.SG_Region_String[12] = "";}
-        if(ff7.slot[13].checksum != 0x00 && ff7.slot[13].checksum != 0x4D1D){ff7.SG_Region_String[13]= "BASLUS-94163FF7-S14";} else {ff7.SG_Region_String[13] = "";}
-        if(ff7.slot[14].checksum != 0x00 && ff7.slot[14].checksum != 0x4D1D){ff7.SG_Region_String[14]= "BASLUS-94163FF7-S15";} else {ff7.SG_Region_String[14] = "";}
+        if(ff7.slot[0].checksum != 0x0000 && ff7.slot[0].checksum != 0x4D1D){ff7.SG_Region_String[0]= "BASLUS-94163FF7-S01";} else {ff7.SG_Region_String[0] = "";}
+        if(ff7.slot[1].checksum != 0x0000 && ff7.slot[1].checksum != 0x4D1D){ff7.SG_Region_String[1]= "BASLUS-94163FF7-S02";} else {ff7.SG_Region_String[1] = "";}
+        if(ff7.slot[2].checksum != 0x0000 && ff7.slot[2].checksum != 0x4D1D){ff7.SG_Region_String[2]= "BASLUS-94163FF7-S03";} else {ff7.SG_Region_String[2] = "";}
+        if(ff7.slot[3].checksum != 0x0000 && ff7.slot[3].checksum != 0x4D1D){ff7.SG_Region_String[3]= "BASLUS-94163FF7-S04";} else {ff7.SG_Region_String[3] = "";}
+        if(ff7.slot[4].checksum != 0x0000 && ff7.slot[4].checksum != 0x4D1D){ff7.SG_Region_String[4]= "BASLUS-94163FF7-S05";} else {ff7.SG_Region_String[4] = "";}
+        if(ff7.slot[5].checksum != 0x0000 && ff7.slot[5].checksum != 0x4D1D){ff7.SG_Region_String[5]= "BASLUS-94163FF7-S06";} else {ff7.SG_Region_String[5] = "";}
+        if(ff7.slot[6].checksum != 0x0000 && ff7.slot[6].checksum != 0x4D1D){ff7.SG_Region_String[6]= "BASLUS-94163FF7-S07";} else {ff7.SG_Region_String[6] = "";}
+        if(ff7.slot[7].checksum != 0x0000 && ff7.slot[7].checksum != 0x4D1D){ff7.SG_Region_String[7]= "BASLUS-94163FF7-S08";} else {ff7.SG_Region_String[7] = "";}
+        if(ff7.slot[8].checksum != 0x0000 && ff7.slot[8].checksum != 0x4D1D){ff7.SG_Region_String[8]= "BASLUS-94163FF7-S09";} else {ff7.SG_Region_String[8] = "";}
+        if(ff7.slot[9].checksum != 0x0000 && ff7.slot[9].checksum != 0x4D1D){ff7.SG_Region_String[9]= "BASLUS-94163FF7-S10";} else {ff7.SG_Region_String[9] = "";}
+        if(ff7.slot[10].checksum != 0x0000 && ff7.slot[10].checksum != 0x4D1D){ff7.SG_Region_String[10]= "BASLUS-94163FF7-S11";} else {ff7.SG_Region_String[10] = "";}
+        if(ff7.slot[11].checksum != 0x0000 && ff7.slot[11].checksum != 0x4D1D){ff7.SG_Region_String[11]= "BASLUS-94163FF7-S12";} else {ff7.SG_Region_String[11] = "";}
+        if(ff7.slot[12].checksum != 0x0000 && ff7.slot[12].checksum != 0x4D1D){ff7.SG_Region_String[12]= "BASLUS-94163FF7-S13";} else {ff7.SG_Region_String[12] = "";}
+        if(ff7.slot[13].checksum != 0x0000 && ff7.slot[13].checksum != 0x4D1D){ff7.SG_Region_String[13]= "BASLUS-94163FF7-S14";} else {ff7.SG_Region_String[13] = "";}
+        if(ff7.slot[14].checksum != 0x0000 && ff7.slot[14].checksum != 0x4D1D){ff7.SG_Region_String[14]= "BASLUS-94163FF7-S15";} else {ff7.SG_Region_String[14] = "";}
         SlotSelect slotselect;
         slotselect.exec();
     }
@@ -322,9 +321,9 @@ void MainWindow::loadFileFull(const QString &fileName)
     else if (ff7.savetype == 3 || ff7.savetype ==5)
     {
         QByteArray mc_header;
-        int diff = 0;
-        if(ff7.savetype ==5){diff = 0x80;} // psp save. start after the extra vmp header info
-        mc_header = ff7file.mid(diff,ff7.SG_HEADER);
+        int offset = 0;
+        if(ff7.savetype ==5){offset = 0x80;} // psp save. start after the extra vmp header info
+        mc_header = ff7file.mid(offset,ff7.SG_HEADER);
         int index=0;
         for(int i=0; i<15;i++)
         {
@@ -460,6 +459,7 @@ void MainWindow::on_actionSave_File_activated()
         tr("Save Final Fantasy 7 PC SaveGame"), settings.value("save_pc_path").toString(),
         tr("FF7 PC SaveGame(*.ff7)"));
         if (!fileName.isEmpty())
+            fix_pc_bytemask();// adjust the bytemask so the correct slots are shown
             saveFileFull(fileName);
     }
     else if(ff7.savetype==2)
@@ -468,7 +468,18 @@ void MainWindow::on_actionSave_File_activated()
         tr("Save Final Fantasy 7 PSX SaveGame"), ff7.SG_Region_String[s],
         tr("FF7 PSX SaveGame(*-S*)"));//this should really be *-S*
         if (!fileName.isEmpty())
+        {
+            if((ff7.slot[s].time/3600)>99){ff7.hf[s].sl_header[27]=0x58;ff7.hf[s].sl_header[29]=0x58;}
+            else
+            {
+                ff7.hf[s].sl_header[27] = ((ff7.slot[s].time/3600)/10)+0x4F;
+                ff7.hf[s].sl_header[29] = ((ff7.slot[s].time/3600)%10)+0x4F;
+            }
+            ff7.hf[s].sl_header[33] = ((ff7.slot[s].time/60%60)/10)+0x4F;
+            ff7.hf[s].sl_header[35] = ((ff7.slot[s].time/60%60)%10)+0x4F;
+            //above is to set the playtime
             saveFileFull(fileName);
+        }
     }
     else if(ff7.savetype==3)
     {
@@ -875,19 +886,20 @@ void MainWindow::on_actionExport_PC_Save_activated()
     if(ff7.SG_TYPE !="PC")
     {
         ui->combo_control->setCurrentIndex(0); // if not pc then chance of breaking controls.
+        // no need to change if its pc already.
+        ff7.SG_SIZE          = FF7_PC_SAVE_GAME_SIZE;
+        ff7.SG_HEADER        = FF7_PC_SAVE_GAME_HEADER;
+        ff7.SG_FOOTER        = FF7_PC_SAVE_GAME_FOOTER;
+        ff7.SG_DATA_SIZE     = FF7_PC_SAVE_GAME_DATA_SIZE;
+        ff7.SG_SLOT_HEADER   = FF7_PC_SAVE_GAME_SLOT_HEADER;
+        ff7.SG_SLOT_FOOTER   = FF7_PC_SAVE_GAME_SLOT_FOOTER;
+        ff7.SG_SLOT_SIZE     = FF7_PC_SAVE_GAME_SLOT_SIZE;
+        ff7.SG_SLOT_NUMBER   = FF7_PC_SAVE_GAME_SLOT_NUMBER;
+        ff7.SG_TYPE          = "PC";
+        ff7.file_headerp     = ff7.file_header_pc;           //pointer to pc file header
+        ff7.file_footerp     = ff7.file_footer_pc;           //pointer to pc file footer
     }
-    ff7.SG_SIZE          = FF7_PC_SAVE_GAME_SIZE;
-    ff7.SG_HEADER        = FF7_PC_SAVE_GAME_HEADER;
-    ff7.SG_FOOTER        = FF7_PC_SAVE_GAME_FOOTER;
-    ff7.SG_DATA_SIZE     = FF7_PC_SAVE_GAME_DATA_SIZE;
-    ff7.SG_SLOT_HEADER   = FF7_PC_SAVE_GAME_SLOT_HEADER;
-    ff7.SG_SLOT_FOOTER   = FF7_PC_SAVE_GAME_SLOT_FOOTER;
-    ff7.SG_SLOT_SIZE     = FF7_PC_SAVE_GAME_SLOT_SIZE;
-    ff7.SG_SLOT_NUMBER   = FF7_PC_SAVE_GAME_SLOT_NUMBER;
-    ff7.SG_TYPE          = "PC";
-    ff7.file_headerp     = ff7.file_header_pc;           //pointer to pc file header
-    ff7.file_footerp     = ff7.file_footer_pc;           //pointer to pc file footer
-
+    fix_pc_bytemask();
     /*~~~~~~~~~~~~~~~SHORT SAVE - SITHLORD48~~~~~~~~~~~~*/
     QFile file(fileName);
     if(!file.open(QFile::ReadWrite))
@@ -900,7 +912,7 @@ void MainWindow::on_actionExport_PC_Save_activated()
     }
     FILE *pfile; // this section is starting to work correctly!
     pfile = fopen(fileName.toAscii(),"wb");
-    fwrite(PC_SAVE_GAME_FILE_HEADER,9,1,pfile);
+    fwrite(ff7.file_headerp,9,1,pfile);
     for(int si=0;si<15;si++)
     {
         if(ff7.SG_Region_String[si].contains("00867") || ff7.SG_Region_String[si].contains("00869") ||
@@ -931,19 +943,19 @@ void MainWindow::on_actionExport_PSX_activated()
     if(ff7.SG_TYPE != "PSX")
     {
         ui->combo_control->setCurrentIndex(0);
-    }
-    ff7.SG_SIZE          = FF7_PSX_SAVE_GAME_SIZE;
-    ff7.SG_HEADER        = FF7_PSX_SAVE_GAME_HEADER;
-    ff7.SG_FOOTER        = FF7_PSX_SAVE_GAME_FOOTER;
-    ff7.SG_DATA_SIZE     = FF7_PSX_SAVE_GAME_DATA_SIZE;
-    ff7.SG_SLOT_HEADER   = FF7_PSX_SAVE_GAME_SLOT_HEADER;
-    ff7.SG_SLOT_FOOTER   = FF7_PSX_SAVE_GAME_SLOT_FOOTER;
-    ff7.SG_SLOT_SIZE     = FF7_PSX_SAVE_GAME_SLOT_SIZE;
-    ff7.SG_SLOT_NUMBER   = FF7_PSX_SAVE_GAME_SLOT_NUMBER;
-    ff7.SG_TYPE          = "PSX";
-    ff7.file_headerp     = ff7.file_header_psx;           //pointer to psx file header
-    ff7.file_footerp     = ff7.file_footer_psx;           //pointer to psx file footer
 
+        ff7.SG_SIZE          = FF7_PSX_SAVE_GAME_SIZE;
+        ff7.SG_HEADER        = FF7_PSX_SAVE_GAME_HEADER;
+        ff7.SG_FOOTER        = FF7_PSX_SAVE_GAME_FOOTER;
+        ff7.SG_DATA_SIZE     = FF7_PSX_SAVE_GAME_DATA_SIZE;
+        ff7.SG_SLOT_HEADER   = FF7_PSX_SAVE_GAME_SLOT_HEADER;
+        ff7.SG_SLOT_FOOTER   = FF7_PSX_SAVE_GAME_SLOT_FOOTER;
+        ff7.SG_SLOT_SIZE     = FF7_PSX_SAVE_GAME_SLOT_SIZE;
+        ff7.SG_SLOT_NUMBER   = FF7_PSX_SAVE_GAME_SLOT_NUMBER;
+        ff7.SG_TYPE          = "PSX";
+        ff7.file_headerp     = ff7.file_header_psx;           //pointer to psx file header
+        ff7.file_footerp     = ff7.file_footer_psx;           //pointer to psx file footer
+    }
     /*~~~~~~~ SHORT SAVE - SITHLORD48 ~~~~~~~~~*/
     QFile file(fileName);
     if(!file.open(QFile::ReadWrite))
@@ -1009,20 +1021,19 @@ void MainWindow::on_actionExport_MC_triggered()
     if(ff7.SG_TYPE != "MC")
     {
         ui->combo_control->setCurrentIndex(0);
+
+        ff7.SG_SIZE          = FF7_MC_SAVE_GAME_SIZE;
+        ff7.SG_HEADER        = FF7_MC_SAVE_GAME_HEADER;
+        ff7.SG_FOOTER        = FF7_MC_SAVE_GAME_FOOTER;
+        ff7.SG_DATA_SIZE     = FF7_MC_SAVE_GAME_DATA_SIZE;
+        ff7.SG_SLOT_HEADER   = FF7_MC_SAVE_GAME_SLOT_HEADER;
+        ff7.SG_SLOT_FOOTER   = FF7_MC_SAVE_GAME_SLOT_FOOTER;
+        ff7.SG_SLOT_SIZE     = FF7_MC_SAVE_GAME_SLOT_SIZE;
+        ff7.SG_SLOT_NUMBER   = FF7_MC_SAVE_GAME_SLOT_NUMBER;
+        ff7.SG_TYPE          = "MC";
+        ff7.file_headerp     = ff7.file_header_mc;           //pointer to mc file header
+        ff7.file_footerp     = ff7.file_footer_mc;           //pointer to mc file footer
     }
-
-    ff7.SG_SIZE          = FF7_MC_SAVE_GAME_SIZE;
-    ff7.SG_HEADER        = FF7_MC_SAVE_GAME_HEADER;
-    ff7.SG_FOOTER        = FF7_MC_SAVE_GAME_FOOTER;
-    ff7.SG_DATA_SIZE     = FF7_MC_SAVE_GAME_DATA_SIZE;
-    ff7.SG_SLOT_HEADER   = FF7_MC_SAVE_GAME_SLOT_HEADER;
-    ff7.SG_SLOT_FOOTER   = FF7_MC_SAVE_GAME_SLOT_FOOTER;
-    ff7.SG_SLOT_SIZE     = FF7_MC_SAVE_GAME_SLOT_SIZE;
-    ff7.SG_SLOT_NUMBER   = FF7_MC_SAVE_GAME_SLOT_NUMBER;
-    ff7.SG_TYPE          = "MC";
-    ff7.file_headerp     = ff7.file_header_mc;           //pointer to mc file header
-    ff7.file_footerp     = ff7.file_footer_mc;           //pointer to mc file footer
-
         QByteArray mc_header_2;
         mc_header_2.append("MC");
         quint8 xor_byte = 0x00;
@@ -1162,6 +1173,7 @@ void MainWindow::on_actionExport_MC_triggered()
                     }
                     break;
                 }
+
             if((ff7.slot[i].time/3600)>99){ff7.hf[i].sl_header[27]=0x58;ff7.hf[i].sl_header[29]=0x58;}
             else
             {
@@ -1170,6 +1182,7 @@ void MainWindow::on_actionExport_MC_triggered()
             }
             ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
             ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
+
             } // write string if found
 
             else{for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}} //write what ever is in the header.(NOT FF7 SAVE)

@@ -30,7 +30,7 @@ const int FF7_PC_SAVE_GAME_SLOT_HEADER = 0x00;
 const int FF7_PC_SAVE_GAME_SLOT_FOOTER = 0x0000;
 const int FF7_PC_SAVE_GAME_SLOT_SIZE = 0x10F4;
 const int FF7_PC_SAVE_GAME_SLOT_NUMBER = 15;
-const quint8 PC_SAVE_GAME_FILE_HEADER[0x09] = {0x71,0x73,0x27,0x06,0x00,0x07,0x00,0x00,0x00}; //PC HEADER (for when we need to create one)
+const quint8 PC_SAVE_GAME_FILE_HEADER[0x09] = {0x71,0x73,0x27,0x06,0x00,0x00,0x00,0x00,0x00}; //PC HEADER (for when we need to create one)
 
 /*psx save file */
 const int FF7_PSX_SAVE_GAME_SIZE = 0x2000;
@@ -439,7 +439,7 @@ struct FF7 {				// [0xFE55]
 
 
         /*START FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
-        quint8 file_header_pc[0x09];        // [0x0000] 0x06277371 this replace quint8 file_tag[9];
+        quint8 file_header_pc[0x09];    // [0x0000] 0x06277371 this replace quint8 file_tag[9];
         quint8 file_header_psx[0x0000];	// [0x0000] 0x06277371 this replace quint8 file_tag[9];
         quint8 file_header_psv[0x0000];
         quint8 file_header_psp[0x2080];

@@ -22,7 +22,7 @@
 int ff7__checksum(void * qw );
 
 void preptext (void);
-
+void fix_pc_bytemask(void);
 static char chPC[256] = {
         ' ',	// 00: Space
         '!',
