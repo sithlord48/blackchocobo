@@ -562,7 +562,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="lbl_slot_icon">
+       <widget class="QLabel" name="lbl_slot_icon_old">
         <property name="minimumSize">
          <size>
           <width>18</width>
@@ -16296,7 +16296,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
        <attribute name="title">
         <string>Othe&amp;r</string>
        </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout_131">
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
          <widget class="QGroupBox" name="groupBox_20">
           <property name="minimumSize">
@@ -16381,7 +16381,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
          </widget>
         </item>
         <item>
-         <spacer name="horizontalSpacer_116">
+         <spacer name="horizontalSpacer_117">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -16394,15 +16394,30 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
          </spacer>
         </item>
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_66">
+         <layout class="QVBoxLayout" name="verticalLayout_39">
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_130">
+            <property name="spacing">
+             <number>-1</number>
+            </property>
+            <property name="sizeConstraint">
+             <enum>QLayout::SetDefaultConstraint</enum>
+            </property>
             <item>
              <widget class="QGroupBox" name="groupBox_16">
               <property name="minimumSize">
                <size>
                 <width>121</width>
-                <height>171</height>
+                <height>160</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>160</height>
                </size>
               </property>
               <property name="toolTip">
@@ -16415,7 +16430,16 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                <property name="spacing">
                 <number>1</number>
                </property>
-               <property name="margin">
+               <property name="leftMargin">
+                <number>3</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>3</number>
+               </property>
+               <property name="bottomMargin">
                 <number>2</number>
                </property>
                <item>
@@ -16429,13 +16453,13 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                  <property name="minimumSize">
                   <size>
                    <width>111</width>
-                   <height>165</height>
+                   <height>140</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
-                   <height>16777215</height>
+                   <height>140</height>
                   </size>
                  </property>
                  <property name="whatsThis">
@@ -16550,7 +16574,13 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
               <property name="minimumSize">
                <size>
                 <width>121</width>
-                <height>171</height>
+                <height>160</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>160</height>
                </size>
               </property>
               <property name="toolTip">
@@ -16563,7 +16593,16 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                <property name="spacing">
                 <number>1</number>
                </property>
-               <property name="margin">
+               <property name="leftMargin">
+                <number>3</number>
+               </property>
+               <property name="topMargin">
+                <number>0</number>
+               </property>
+               <property name="rightMargin">
+                <number>3</number>
+               </property>
+               <property name="bottomMargin">
                 <number>2</number>
                </property>
                <item>
@@ -16577,13 +16616,13 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                  <property name="minimumSize">
                   <size>
                    <width>111</width>
-                   <height>171</height>
+                   <height>140</height>
                   </size>
                  </property>
                  <property name="maximumSize">
                   <size>
                    <width>16777215</width>
-                   <height>16777215</height>
+                   <height>140</height>
                   </size>
                  </property>
                  <property name="whatsThis">
@@ -16710,12 +16749,21 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_129">
+            <property name="sizeConstraint">
+             <enum>QLayout::SetMaximumSize</enum>
+            </property>
             <item>
              <widget class="QGroupBox" name="groupBox_32">
               <property name="minimumSize">
                <size>
                 <width>121</width>
-                <height>181</height>
+                <height>170</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>175</height>
                </size>
               </property>
               <property name="title">
@@ -16739,7 +16787,13 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                  <property name="minimumSize">
                   <size>
                    <width>121</width>
-                   <height>172</height>
+                   <height>155</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>155</height>
                   </size>
                  </property>
                  <item>
@@ -16832,7 +16886,13 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
               <property name="minimumSize">
                <size>
                 <width>126</width>
-                <height>181</height>
+                <height>175</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>175</height>
                </size>
               </property>
               <property name="title">
@@ -16856,7 +16916,13 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                  <property name="minimumSize">
                   <size>
                    <width>121</width>
-                   <height>172</height>
+                   <height>155</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>155</height>
                   </size>
                  </property>
                  <item>
@@ -16948,10 +17014,16 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
           </item>
           <item>
            <widget class="QGroupBox" name="groupBox_38">
+            <property name="minimumSize">
+             <size>
+              <width>184</width>
+              <height>66</height>
+             </size>
+            </property>
             <property name="title">
              <string>Region String</string>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_39">
+            <layout class="QHBoxLayout" name="horizontalLayout">
              <item>
               <widget class="QLabel" name="lbl_sg_region">
                <property name="text">
@@ -16962,13 +17034,41 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
                </property>
               </widget>
              </item>
+             <item>
+              <widget class="QLabel" name="lbl_slot_icon">
+               <property name="minimumSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>32</width>
+                 <height>32</height>
+                </size>
+               </property>
+               <property name="sizeIncrement">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+               <property name="scaledContents">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
             </layout>
            </widget>
           </item>
          </layout>
         </item>
         <item>
-         <spacer name="horizontalSpacer_117">
+         <spacer name="horizontalSpacer_116">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
@@ -17790,7 +17890,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
           <item>
            <widget class="QGroupBox" name="groupBox_8">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -17875,6 +17975,12 @@ p, li { white-space: pre-wrap; }
           </item>
           <item>
            <widget class="QGroupBox" name="groupBox_7">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
               <width>300</width>
@@ -18439,6 +18545,12 @@ p, li { white-space: pre-wrap; }
         </item>
         <item>
          <widget class="QGroupBox" name="groupBox_24">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="title">
            <string>General Config</string>
           </property>
