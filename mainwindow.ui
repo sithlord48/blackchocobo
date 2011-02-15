@@ -562,28 +562,6 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
        </widget>
       </item>
       <item>
-       <widget class="QLabel" name="lbl_slot_icon_old">
-        <property name="minimumSize">
-         <size>
-          <width>18</width>
-          <height>18</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>18</width>
-          <height>18</height>
-         </size>
-        </property>
-        <property name="text">
-         <string/>
-        </property>
-        <property name="scaledContents">
-         <bool>true</bool>
-        </property>
-       </widget>
-      </item>
-      <item>
        <spacer name="horizontalSpacer_115">
         <property name="orientation">
          <enum>Qt::Horizontal</enum>
@@ -593,7 +571,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
         </property>
         <property name="sizeHint" stdset="0">
          <size>
-          <width>10</width>
+          <width>28</width>
           <height>20</height>
          </size>
         </property>
@@ -4334,8 +4312,8 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>423</width>
-             <height>430</height>
+             <width>413</width>
+             <height>423</height>
             </rect>
            </property>
            <attribute name="label">
@@ -21006,7 +20984,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icon/psxmc</normaloff>:/icon/psxmc</iconset>
    </property>
    <property name="text">
-    <string>Export PSX Save</string>
+    <string>Export Raw PSX Save</string>
    </property>
    <property name="visible">
     <bool>true</bool>
@@ -21264,7 +21242,7 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icon/psxmc</normaloff>:/icon/psxmc</iconset>
    </property>
    <property name="text">
-    <string>Import PSX Save</string>
+    <string>Import  Raw PSX Save</string>
    </property>
   </action>
   <action name="actionFrom_PSV_Slot">
