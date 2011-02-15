@@ -1805,7 +1805,7 @@
     </message>
     <message>
         <source>Export PSX Save</source>
-        <translation>Exporter Sauvegarde PSX</translation>
+        <translation type="obsolete">Exporter Sauvegarde PSX</translation>
     </message>
     <message>
         <source>PSX Save</source>
@@ -2537,11 +2537,11 @@
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</source>
-        <translation>Types connus de sauvegardes FF7 (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;Sauvegarde FF7 PC (*.ff7);;Sauvegarde FF7 PSX (*-S*);;Sauvegarde MC (*.mcr *.mcd);;Sauvegarde PSV (*.psv);;Sauvegarde PSP (*.vmp)</translation>
+        <translation type="obsolete">Types connus de sauvegardes FF7 (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;Sauvegarde FF7 PC (*.ff7);;Sauvegarde FF7 PSX (*-S*);;Sauvegarde MC (*.mcr *.mcd);;Sauvegarde PSV (*.psv);;Sauvegarde PSP (*.vmp)</translation>
     </message>
     <message>
         <source>FF7 PSX SaveGame(*-S*)</source>
-        <translation>Sauvegarde FF7 PSX (*-S*)</translation>
+        <translation type="obsolete">Sauvegarde FF7 PSX (*-S*)</translation>
     </message>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd)</source>
@@ -2569,7 +2569,7 @@
     </message>
     <message>
         <source>PSX FF7 SaveGame (*-S*)</source>
-        <translation>Sauvegarde FF7 PSX (*-S*)</translation>
+        <translation type="obsolete">Sauvegarde FF7 PSX (*-S*)</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSV Save</source>
@@ -2894,10 +2894,6 @@ n&apos;est pas une sauvegarde de FF7.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>This File Is Not Checksumed. You Must have a PSP capable of ingoring VMP checksums to use this save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2911,11 +2907,6 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Export MC File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cannot read file %1:
-%2., Be Sure its is a PSX Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3044,10 +3035,6 @@ n&apos;est pas une sauvegarde de FF7.</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Import PSX Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Import  PSV Save</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3072,16 +3059,45 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot read file %1:
-%2 Be Sure its is a PSX Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Show Extra Information During Battle</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Current Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export Raw PSX Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import  Raw PSX Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Raw PSX FF7 SaveGame (*-S*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7 Raw PSX SaveGame(*-S*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This File Does Not Have An Updated Checksum.It will not work on your PSP.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read file %1:
+%2 Be Sure its is a Raw PSX Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read file %1:
+%2., Be Sure its is a Raw PSX Save</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

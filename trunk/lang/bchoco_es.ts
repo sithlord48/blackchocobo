@@ -1725,7 +1725,7 @@
     </message>
     <message>
         <source>Export PSX Save</source>
-        <translation>Exportar Guardado de PSX</translation>
+        <translation type="obsolete">Exportar Guardado de PSX</translation>
     </message>
     <message>
         <source>PSX Save</source>
@@ -2547,7 +2547,7 @@ no es un Archivo de Guardado de FF7.</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</source>
-        <translation>Archivos de guardado de FF7 conocidos (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;Guardado de FF7 PC (*.ff7);;Guardado de FF7 PSX (*-S*);;Guardado MC (*.mcr *.mcd);;Guardado PSV (*.psv);;Guardado PSP (*.vmp)</translation>
+        <translation type="obsolete">Archivos de guardado de FF7 conocidos (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;Guardado de FF7 PC (*.ff7);;Guardado de FF7 PSX (*-S*);;Guardado MC (*.mcr *.mcd);;Guardado PSV (*.psv);;Guardado PSP (*.vmp)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 PC SaveGame</source>
@@ -2639,7 +2639,7 @@ no es un Archivo de Guardado de FF7.</translation>
     </message>
     <message>
         <source>PSX FF7 SaveGame (*-S*)</source>
-        <translation>Partida Guardada FF7 PSX (*-S*)</translation>
+        <translation type="obsolete">Partida Guardada FF7 PSX (*-S*)</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSV Save</source>
@@ -2669,7 +2669,7 @@ no es un Archivo de Guardado de FF7.</translation>
     </message>
     <message>
         <source>FF7 PSX SaveGame(*-S*)</source>
-        <translation>Partida Guardada FF7 PSX (*-S*)</translation>
+        <translation type="obsolete">Partida Guardada FF7 PSX (*-S*)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 SaveGame</source>
@@ -2971,7 +2971,7 @@ no es un Archivo de Guardado de FF7.</translation>
     </message>
     <message>
         <source>This File Is Not Checksumed. You Must have a PSP capable of ingoring VMP checksums to use this save</source>
-        <translation>Este archivo no tiene checksum. Necesitas una PSP capaz de ignorar los checksums VMP para utilizarlo</translation>
+        <translation type="obsolete">Este archivo no tiene checksum. Necesitas una PSP capaz de ignorar los checksums VMP para utilizarlo</translation>
     </message>
     <message>
         <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
@@ -3004,7 +3004,7 @@ no es un Archivo de Guardado de FF7.</translation>
     <message>
         <source>Cannot read file %1:
 %2., Be Sure its is a PSX Save</source>
-        <translation>No se puede leer el archivo %1:
+        <translation type="obsolete">No se puede leer el archivo %1:
 %2., Asegúrate de que es una partida de PSX</translation>
     </message>
     <message>
@@ -3139,7 +3139,7 @@ no es un Archivo de Guardado de FF7.</translation>
     </message>
     <message>
         <source>Import PSX Save</source>
-        <translation>Importar partida guardada PSX</translation>
+        <translation type="obsolete">Importar partida guardada PSX</translation>
     </message>
     <message>
         <source>Import  PSV Save</source>
@@ -3172,7 +3172,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Cannot read file %1:
 %2 Be Sure its is a PSX Save</source>
-        <translation>No se puede leer el archivo  %1::
+        <translation type="obsolete">No se puede leer el archivo  %1::
 %2 Asegúrate de que es una partida guardada de PSX</translation>
     </message>
     <message>
@@ -3181,6 +3181,40 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Current Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Export Raw PSX Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Import  Raw PSX Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Raw PSX FF7 SaveGame (*-S*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7 Raw PSX SaveGame(*-S*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This File Does Not Have An Updated Checksum.It will not work on your PSP.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read file %1:
+%2 Be Sure its is a Raw PSX Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot read file %1:
+%2., Be Sure its is a Raw PSX Save</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
