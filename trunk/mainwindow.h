@@ -42,16 +42,9 @@ public slots:
 
 private slots:
 
-    //test functions to be removed....
-    void on_actionImport_char_triggered();
-    void on_actionExport_char_triggered();
-    void on_actionNew_Game_Plus_triggered();
     void on_cb_bombing_int_stateChanged(int );
-    void on_actionNew_Game_triggered();
-    void on_actionExport_MC_triggered();
     void on_cb_tut_worldsave_stateChanged(int );
     void on_cb_tut_sub_stateChanged(int );
-
     void on_sb_timer_time_sec_valueChanged(int );
     void on_sb_timer_time_min_valueChanged(int );
     void on_sb_timer_time_hour_valueChanged(int );
@@ -297,12 +290,15 @@ private slots:
     //load save items
     void loadFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
     void saveFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
-
+    void on_actionImport_char_triggered();
+    void on_actionExport_char_triggered();
+    void on_actionNew_Game_triggered();
+    void on_actionNew_Game_Plus_triggered();
+    void on_actionExport_MC_triggered();
     void on_actionExport_PC_Save_activated();
     void on_actionFrom_PSX_Slot_activated();
     void on_actionClear_Slot_activated();
     void on_actionPaste_Slot_activated();
-
     void on_actionOpen_Save_File_activated();
     void on_actionSave_File_activated();
     void on_actionAbout_Qt_activated();

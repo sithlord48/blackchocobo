@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010 Chris Rizzitello <sithlord48@gmail.com>                //
+//    copyright 2010,2011 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -168,7 +168,7 @@ void MainWindow::on_actionOpen_Save_File_activated()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Open Final Fantasy 7 Save"),settings.value("load_path").toString(),
-    tr("Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)"));
+    tr("Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)"));
     if (!fileName.isEmpty()) loadFileFull(fileName);
 }
 
@@ -346,7 +346,7 @@ void MainWindow::loadFileFull(const QString &fileName)
 void MainWindow::on_actionFrom_PSX_Slot_activated()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
-    tr("Select Final Fantasy 7 PSX Save"),(""),tr("PSX FF7 SaveGame (*-S*)"));
+    tr("Select Final Fantasy 7 PSX Save"),(""),tr("Raw PSX FF7 SaveGame (*-S*)"));
     if(fileName== ""){return;}
     if (!fileName.isEmpty())
     {
@@ -466,7 +466,7 @@ void MainWindow::on_actionSave_File_activated()
     {
         QString fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 PSX SaveGame"), ff7.SG_Region_String[s],
-        tr("FF7 PSX SaveGame(*-S*)"));//this should really be *-S*
+        tr("FF7 Raw PSX SaveGame(*-S*)"));
         if (!fileName.isEmpty())
         {
             if((ff7.slot[s].time/3600)>99){ff7.hf[s].sl_header[27]=0x58;ff7.hf[s].sl_header[29]=0x58;}
@@ -824,7 +824,7 @@ void MainWindow::on_actionSave_File_activated()
             memcpy(&ff7.file_header_psp,mc_header_2,0x2080);
             saveFileFull(fileName);
             //PUT PSP CHECKSUMING HERE ..
-            QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Is Not Checksumed. You Must have a PSP capable of ingoring VMP checksums to use this save"));
+            QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PSP."));
         }
     }
     else {QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot save This Type of File"));}
@@ -862,7 +862,7 @@ void MainWindow::on_actionNew_Game_triggered()
             if(!file.open(QFile::ReadOnly))
             {
                 QMessageBox::warning(this, tr("Black Chocobo"),
-                tr("Cannot read file %1:\n%2 Be Sure its is a PSX Save")
+                tr("Cannot read file %1:\n%2 Be Sure its is a Raw PSX Save")
                 .arg(settings.value("default_save_file").toString()).arg(file.errorString()));
                 return;
             }
@@ -876,6 +876,103 @@ void MainWindow::on_actionNew_Game_triggered()
     guirefresh();
 }
 /*~~~~~~~~~~End New_Game~~~~~~~~~~~*/
+/*~~~~~~~~~~New Game + ~~~~~~~~~~~~*/
+void MainWindow::on_actionNew_Game_Plus_triggered()
+{
+    QFile file(settings.value("default_save_file").toString());
+    if(!file.open(QFile::ReadOnly))
+    {
+        QMessageBox::warning(this, tr("Black Chocobo"),
+        tr("Cannot read file %1:\n%2., Be Sure its is a Raw PSX Save")
+        .arg(settings.value("default_save_file").toString()).arg(file.errorString()));
+        return;
+    }
+    QByteArray ff7file;
+    ff7file = file.readAll(); //put all data in temp raw file
+    QByteArray temp; // create a temp to be used when needed
+    int index = 0x200;
+    temp = ff7file.mid(index,0x10f4); // dump file -> temp
+    memcpy(&bufferslot,temp,0x10f4);  // copy temp to the buffer slot
+    buffer_region = ff7.SG_Region_String[s];
+    ui->line_location->setText("New Game +");
+    memcpy(&bufferslot.desc,&ff7.slot[s].desc,0x44); // keep a old preview
+    memcpy(&bufferslot.colors,&ff7.slot[s].colors,12); // keep old colors.
+    for(int i=0;i<9;i++) // keep all old character info.
+    {
+        if((i==6)||(i==7))// except we have to export cait sith and vincent.the game needs y.cloud/seppie,for the flash back.
+        {
+            QString fileName;
+            if(i==6) //export cait sith. cait sith's stats are only generated when he joins the party.
+            {
+                    fileName = settings.value("char_stat_folder").toString();
+                    fileName.append("/");
+                    fileName.append(filename);
+                    fileName.append("-cait_sith");
+                    if(ff7.savetype == 1 || ff7.savetype == 3 || ff7.savetype ==5)
+                    {
+                        fileName.append("-");
+                        QString str;
+                        str.setNum(s,10);
+                        fileName.append(str);
+                    }
+                }
+            else if(i==7)// export vincent. vincent's stats are only generated when he joins the party.
+                {
+                    fileName = settings.value("char_stat_folder").toString();
+                    fileName.append("/");
+                    fileName.append(filename);
+                    fileName.append("-vincent");
+                    if(ff7.savetype == 1 || ff7.savetype == 3 || ff7.savetype ==5)
+                    {
+                        fileName.append("-");
+                        QString str;
+                        str.setNum(s,10);
+                        fileName.append(str);
+                    }
+                }
+            fileName.append(".char");
+            QFile file(fileName);
+            if(!file.open(QFile::ReadWrite))
+            {
+                QMessageBox::warning(this, tr("Black Chocobo"),
+                tr("Cannot write file %1:\n%2.")
+                    .arg(fileName)
+                    .arg(file.errorString()));
+                return;
+            }
+            FILE *pfile;
+            pfile = fopen(fileName.toAscii(),"wb");
+            fwrite(&ff7.slot[s].chars[i],132,1,pfile);
+            fclose(pfile);
+
+        }
+        else{memcpy(&bufferslot.chars[i],&ff7.slot[s].chars[i],0x84);} // normal character
+    }
+    memcpy(&bufferslot.items,ff7.slot[s].items,640);// copy items
+    memcpy(&bufferslot.materias,ff7.slot[s].materias,800); // copy materia
+    bufferslot.gil = ff7.slot[s].gil; // copy gil
+    bufferslot.battles = ff7.slot[s].battles; // copy battle count
+    bufferslot.runs = ff7.slot[s].runs; // copy run count
+    bufferslot.gp = ff7.slot[s].gp; // copy gp
+    //copy chocobo info.
+    bufferslot.stables = ff7.slot[s].stables;
+    bufferslot.stablesoccupied = ff7.slot[s].stablesoccupied;
+    for(int i=0;i<4;i++){memcpy(&bufferslot.chocobos[i],&ff7.slot[s].chocobos[i],0x10);}
+    memcpy(&bufferslot.chocobonames,&ff7.slot[s].chocobonames,36);
+    memcpy(&bufferslot.chocostaminas,&ff7.slot[s].chocostaminas,12);
+    for(int i=0;i<2;i++){memcpy(&bufferslot.choco56,&ff7.slot[s].choco56,0x10);}
+    // copy options
+    bufferslot.battlespeed =ff7.slot[s].battlespeed;
+    bufferslot.battlemspeed =ff7.slot[s].battlemspeed;
+    bufferslot.options1 = ff7.slot[s].options1;
+    bufferslot.options2 = ff7.slot[s].options2;
+    memcpy(&bufferslot.controller_map,&ff7.slot[s].controller_map,16);
+    bufferslot.fieldmspeed = ff7.slot[s].fieldmspeed;
+    /*~~ buffer now ready to be copied~*/
+    memcpy(&ff7.slot[s],&bufferslot,0x10f4); // copy buffer to the current slot.
+    guirefresh();
+}
+/*~~~~~~~~~~End New_Game +~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~EXPORT PC~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionExport_PC_Save_activated()
 {
@@ -5989,104 +6086,8 @@ void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
     }
 }
 
-
-
 void MainWindow::on_cb_bombing_int_stateChanged(int checked)
 {
     if(checked == Qt::Checked){ff7.slot[s].intbombing = 0x14;}
     else{ff7.slot[s].intbombing =0x56;}
-}
-
-void MainWindow::on_actionNew_Game_Plus_triggered()
-{
-    QFile file(settings.value("default_save_file").toString());
-    if(!file.open(QFile::ReadOnly))
-    {
-        QMessageBox::warning(this, tr("Black Chocobo"),
-        tr("Cannot read file %1:\n%2., Be Sure its is a PSX Save")
-        .arg(settings.value("default_save_file").toString()).arg(file.errorString()));
-        return;
-    }
-    QByteArray ff7file;
-    ff7file = file.readAll(); //put all data in temp raw file
-    QByteArray temp; // create a temp to be used when needed
-    int index = 0x200;
-    temp = ff7file.mid(index,0x10f4);
-
-    memcpy(&bufferslot,temp,0x10f4);
-    buffer_region = ff7.SG_Region_String[s];
-    ui->line_location->setText("New Game +");
-    memcpy(&bufferslot.desc,&ff7.slot[s].desc,0x44);
-    memcpy(&bufferslot.colors,&ff7.slot[s].colors,12);
-    for(int i=0;i<9;i++)
-    {
-        if((i==6)||(i==7))
-        {
-            QString fileName;
-            if(i==6)
-                {
-                    fileName = settings.value("char_stat_folder").toString();
-                    fileName.append("/");
-                    fileName.append(filename);
-                    fileName.append("-cait_sith");
-                    if(ff7.savetype == 1 || ff7.savetype == 3 || ff7.savetype ==5)
-                    {
-                        fileName.append("-");
-                        QString str;
-                        str.setNum(s,10);
-                        fileName.append(str);
-                    }
-                }
-            else if(i==7)
-                {
-                    fileName = settings.value("char_stat_folder").toString();
-                    fileName.append("/");
-                    fileName.append(filename);
-                    fileName.append("-vincent");
-                    if(ff7.savetype == 1 || ff7.savetype == 3 || ff7.savetype ==5)
-                    {
-                        fileName.append("-");
-                        QString str;
-                        str.setNum(s,10);
-                        fileName.append(str);
-                    }
-                }
-            fileName.append(".char");
-            QFile file(fileName);
-            if(!file.open(QFile::ReadWrite))
-            {
-                QMessageBox::warning(this, tr("Black Chocobo"),
-                tr("Cannot write file %1:\n%2.")
-                    .arg(fileName)
-                    .arg(file.errorString()));
-                return;
-            }
-            FILE *pfile;
-            pfile = fopen(fileName.toAscii(),"wb");
-            fwrite(&ff7.slot[s].chars[i],132,1,pfile);
-            fclose(pfile);
-            /*Ingore Cait-sith/Vincent*/
-        }
-        else{memcpy(&bufferslot.chars[i],&ff7.slot[s].chars[i],0x84);}
-    }
-    memcpy(&bufferslot.items,ff7.slot[s].items,640);
-    memcpy(&bufferslot.materias,ff7.slot[s].materias,800);
-    bufferslot.gil = ff7.slot[s].gil;
-    bufferslot.battles = ff7.slot[s].battles;
-    bufferslot.runs = ff7.slot[s].runs;
-    bufferslot.gp = ff7.slot[s].gp;
-    bufferslot.stables = ff7.slot[s].stables;
-    bufferslot.stablesoccupied = ff7.slot[s].stablesoccupied;
-    for(int i=0;i<4;i++){memcpy(&bufferslot.chocobos[i],&ff7.slot[s].chocobos[i],0x10);}
-    memcpy(&bufferslot.chocobonames,&ff7.slot[s].chocobonames,36);
-    memcpy(&bufferslot.chocostaminas,&ff7.slot[s].chocostaminas,12);
-    for(int i=0;i<2;i++){memcpy(&bufferslot.choco56,&ff7.slot[s].choco56,0x10);}
-    bufferslot.battlespeed =ff7.slot[s].battlespeed;
-    bufferslot.battlemspeed =ff7.slot[s].battlemspeed;
-    bufferslot.options1 = ff7.slot[s].options1;
-    bufferslot.options2 = ff7.slot[s].options2;
-    memcpy(&bufferslot.controller_map,&ff7.slot[s].controller_map,16);
-    bufferslot.fieldmspeed = ff7.slot[s].fieldmspeed;
-    memcpy(&ff7.slot[s],&bufferslot,0x10f4);
-    guirefresh();
 }
