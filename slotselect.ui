@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>633</width>
-    <height>510</height>
+    <width>625</width>
+    <height>490</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -21,15 +21,26 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>633</width>
-    <height>510</height>
+    <width>625</width>
+    <height>172</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>633</width>
+    <width>625</width>
     <height>16777215</height>
    </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <stylestrategy>PreferDefault</stylestrategy>
+   </font>
   </property>
   <property name="windowTitle">
    <string>Select A Save Slot</string>
@@ -107,10 +118,16 @@ image: url(:/icon/mslot);
 	width:32px;
 }</string>
   </property>
+  <property name="sizeGripEnabled">
+   <bool>false</bool>
+  </property>
   <property name="modal">
    <bool>false</bool>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="margin">
+    <number>0</number>
+   </property>
    <item>
     <widget class="QScrollArea" name="scrollArea">
      <property name="sizePolicy">
@@ -122,7 +139,7 @@ image: url(:/icon/mslot);
      <property name="minimumSize">
       <size>
        <width>621</width>
-       <height>474</height>
+       <height>125</height>
       </size>
      </property>
      <property name="styleSheet">
@@ -184,14 +201,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s1_party1">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="frameShadow">
@@ -209,14 +226,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s1_party2">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -231,14 +248,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s1_party3">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -474,14 +491,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s2_party1">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="frameShadow">
@@ -499,14 +516,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s2_party2">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -521,14 +538,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s2_party3">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -625,6 +642,12 @@ image: url(:/icon/mslot);
             </item>
             <item row="0" column="1">
              <widget class="QLabel" name="s2_lbl_hr">
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>16777215</height>
+               </size>
+              </property>
               <property name="text">
                <string/>
               </property>
@@ -761,14 +784,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s3_party1">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="frameShadow">
@@ -786,14 +809,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s3_party2">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -808,14 +831,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s3_party3">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -1045,14 +1068,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s4_party1">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="frameShadow">
@@ -1070,14 +1093,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s4_party2">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -1092,14 +1115,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s4_party3">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -1329,14 +1352,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s5_party1">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="frameShadow">
@@ -1354,14 +1377,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s5_party2">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -1376,14 +1399,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s5_party3">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -1613,14 +1636,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s6_party1">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="frameShadow">
@@ -1638,14 +1661,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s6_party2">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -1660,14 +1683,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s6_party3">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -1897,14 +1920,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s7_party1">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="frameShadow">
@@ -1922,14 +1945,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s7_party2">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -1944,14 +1967,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s7_party3">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -2181,14 +2204,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s8_party1">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="frameShadow">
@@ -2206,14 +2229,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s8_party2">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -2228,14 +2251,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s8_party3">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -2465,14 +2488,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s9_party1">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="frameShadow">
@@ -2490,14 +2513,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s9_party2">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -2512,14 +2535,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s9_party3">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -2749,14 +2772,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s10_party1">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="frameShadow">
@@ -2774,14 +2797,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s10_party2">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -2796,14 +2819,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s10_party3">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -3033,14 +3056,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s11_party1">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="frameShadow">
@@ -3058,14 +3081,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s11_party2">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -3080,14 +3103,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s11_party3">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -3317,14 +3340,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s12_party1">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="frameShadow">
@@ -3342,14 +3365,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s12_party2">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -3364,14 +3387,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s12_party3">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -3601,14 +3624,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s13_party1">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="frameShadow">
@@ -3626,14 +3649,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s13_party2">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -3648,14 +3671,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s13_party3">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -3885,14 +3908,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s14_party1">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="frameShadow">
@@ -3910,14 +3933,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s14_party2">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -3932,14 +3955,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s14_party3">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -4169,14 +4192,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s15_party1">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="frameShadow">
@@ -4194,14 +4217,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s15_party2">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
@@ -4216,14 +4239,14 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="s15_party3">
               <property name="minimumSize">
                <size>
-                <width>75</width>
-                <height>86</height>
+                <width>96</width>
+                <height>100</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>16777215</width>
-                <height>16777215</height>
+                <width>100</width>
+                <height>100</height>
                </size>
               </property>
               <property name="text">
