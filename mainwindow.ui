@@ -80,8 +80,11 @@ QToolBox::tab{
 }
 
 /*QMenuBar*/
-QMenuBar:item,QMenuBar {
-	background-color: qlineargradient(spread:pad, x1:0.682409, y1:0.097, x2:0.346591, y2:0.892, stop:0 rgba(99, 97, 97, 255), stop:0.715909 rgba(73, 77, 84, 255));
+QMenuBar:item{
+	background-color: qlineargradient(spread:reflect, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(7, 6, 6, 255), stop:0.0397727 rgba(35, 33, 33, 212), stop:0.960227 rgba(63, 62, 62, 210), stop:0.994318 rgba(18, 16, 16, 255));
+}
+QMenuBar {
+	background-color: qlineargradient(spread:pad, x1:0, y1:0.5, x2:1, y2:0.5, stop:0 rgba(65, 65, 65, 255), stop:0.448864 rgba(35, 33, 33, 255), stop:1 rgba(21, 21, 21, 255));
 }
 QMenu{
 	border:2px solid; 
@@ -90,38 +93,20 @@ QMenu{
 	border-bottom-color: rgb(172, 172, 172);
 	border-top-color: rgb(172,172,172);
 	border-radius:5px;
-	background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(7, 6, 6, 255), stop:0.340909 rgba(35, 33, 33, 255), stop:0.801136 rgba(65, 65, 65, 255));
+	background-color: rgba(99, 97, 97,128);
 }
 QMenu::item:enabled{
-	background-color: qlineargradient(spread:pad, x1:0.682409, y1:0.097, x2:0.346591, y2:0.892, stop:0 rgba(99, 97, 97, 255), stop:0.715909 rgba(73, 77, 84, 255));
+	background-color: rgba(99, 97, 97,255);
 selection-background-color:rgba(34, 201, 247, 255);selection-color: rgb(255,255,255);
 }
 
 QMenu::item:disabled{
-background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(7, 6, 6, 255), stop:0.340909 rgba(35, 33, 33, 255), stop:0.801136 rgba(65, 65, 65, 255));
+	background-color: rgb(38, 38, 38);
 }
-/*
-QTabBar{
-    border:2px solid; 
-	padding: 2px;
-	margin: 4px;
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: rgb(172, 172, 172);
-	border-top-color: rgb(172,172,172);
-	border-radius:5px;
-	}
 
-   QTabBar::tab{	
-	background-color: rgba(48, 47, 47,64);
-	min-width: 45px;
-}
-QTabBar::tab:selected{
-	border:2px solid grey; 
-	border-radius:5px;
-	background-color: rgba(48, 47, 47,196);
-}
-*/
+/*End OF Menu*/
+
+
 QComboBox:disabled,QPushButton:disabled,QLineEdit:disabled,QSpinBox:disabled,QTableWidget:disabled,QListWidget:disabled{
 background-color:rgba(48, 47, 47,16);
 
@@ -439,6 +424,7 @@ QProgressBar {
 	background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87, 255), stop:0.505682 rgba(209, 128, 173, 255), stop:0.931818 rgba(209, 44, 136, 255));
   width:1px;
  }
+/*Button Icons*/
 QPushButton#btn_cloud{
 image: url(:/icon/cloud_icon);
 }
@@ -465,16 +451,7 @@ image: url(:/icon/vincent_icon);
 }
 QPushButton#btn_cait{
 image: url(:/icon/cait_icon);
-}
-/*QHeaderView:section{
-background-color: rgba(10,10,10,32);
-     color: white;
-     padding-left: 4px;
-     border: 1px solid #6c6c6c;
-}
-QHeaderView:down-arrow{image: url(:/icon/arrow_down);}
-QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
-*/</string>
+}</string>
   </property>
   <property name="unifiedTitleAndToolBarOnMac">
    <bool>false</bool>
@@ -4312,8 +4289,8 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>413</width>
-             <height>423</height>
+             <width>423</width>
+             <height>430</height>
             </rect>
            </property>
            <attribute name="label">
@@ -6005,7 +5982,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_46">
            <property name="spacing">
-            <number>0</number>
+            <number>-1</number>
            </property>
            <property name="margin">
             <number>0</number>
@@ -6015,7 +5992,7 @@ QHeaderView:up-arrow{image: url(:/icon/arrow_up);}
              <property name="minimumSize">
               <size>
                <width>187</width>
-               <height>393</height>
+               <height>390</height>
               </size>
              </property>
              <property name="maximumSize">
