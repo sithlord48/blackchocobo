@@ -6301,7 +6301,7 @@ image: url(:/icon/cait_icon);
           <property name="minimumSize">
            <size>
             <width>245</width>
-            <height>470</height>
+            <height>492</height>
            </size>
           </property>
           <property name="maximumSize">
@@ -6314,17 +6314,20 @@ image: url(:/icon/cait_icon);
            <string>Key Items</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_4">
+           <property name="margin">
+            <number>0</number>
+           </property>
            <item>
             <widget class="QListWidget" name="list_keyitems">
              <property name="minimumSize">
               <size>
-               <width>229</width>
-               <height>454</height>
+               <width>0</width>
+               <height>0</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>229</width>
+               <width>16777215</width>
                <height>16777215</height>
               </size>
              </property>
