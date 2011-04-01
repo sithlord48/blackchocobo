@@ -49,7 +49,9 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
         }
     }
     load=true;
-    for (int i=256;i<288;i++){ui->combo_armor->addItem(QIcon(Items[i].image),Items[i].name);}// set up the combo boxes
+
+    //set up comboboxes.
+    for (int i=256;i<288;i++){ui->combo_armor->addItem(QIcon(Items[i].image),Items[i].name);}
     for (int i=288;i<320;i++){ui->combo_acc->addItem(QIcon(Items[i].image),Items[i].name);}
     for (int i=0;i<320;i++){ui->combo_additem->addItem(QIcon(Items[i].image),Items[i].name);}
     for (int i=0;i<0x5b;i++){ui->combo_add_mat->addItem(QIcon(Materias[i].image),Materias[i].name);}
@@ -67,6 +69,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->eskill_group->setVisible(false);
     ui->eskill_group_2->setVisible(false);
     ui->combo_add_mat->setVisible(false);
+
     //testing stuff.
     ui->tabWidget->setTabEnabled(8,0);
     ui->lbl_0x34->setVisible(false);
@@ -80,6 +83,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->sb_bm_progress1->setEnabled(false);
     ui->sb_bm_progress2->setEnabled(false);
     ui->sb_bm_progress3->setEnabled(false);
+
     load=false;
 
     // load settings
@@ -88,8 +92,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
         ui->action_show_test_data->setChecked(1);
         ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
     }
-
-   //be sure they are not empty, and set them accordingly.
+   //are any empty? if so set them accordingly.
    if(settings.value("default_save_file").isNull()){settings.setValue("default_save_file",QString(QCoreApplication::applicationDirPath()) + "/"+ "save0");}
    if(settings.value("load_path").isNull()){settings.setValue("load_path",QDir::homePath());}
    if(settings.value("char_stat_folder").isNull()){settings.setValue("char_stat_folder",settings.value("load_path").toString());}
@@ -126,12 +129,14 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
    style.append(", 255));}");
    ui->centralWidget->setStyleSheet(style);
 
+
    QString tablestyle = "::section{background-color:rgba(10,10,10,128);color: white;padding-left:4px;border:1px solid #6c6c6c;}";
    tablestyle.append("QHeaderView:down-arrow{image: url(:/icon/arrow_down);min-width:9px;}");
    tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
 
    ui->tbl_location_field->horizontalHeader()->setStyleSheet(tablestyle);
 
+   /* LANGUAGE SELECT */
    if(settings.value("lang").toString() == "en")
    {
        ui->action_Lang_en->setChecked(1);
@@ -148,7 +153,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
        ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_sel"));
    }
 }
-
+/*~~~~~~ END GUI SETUP ~~~~~~~*/
 MainWindow::~MainWindow(){delete ui;}
 
 void MainWindow::changeEvent(QEvent *e)
@@ -266,8 +271,8 @@ void MainWindow::loadFileFull(const QString &fileName)
     }
     else
     {
-        QMessageBox::warning(this, tr("Unknown File"),
-        tr("File: %1 \nisn't a FF7 SaveGame.")
+        QMessageBox::warning(this, tr("Unknown Filetype"),
+        tr("File: %1 \nis not a FF7 SaveGame.")
         .arg(fileName));
         return;
     }
