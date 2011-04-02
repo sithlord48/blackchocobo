@@ -23,6 +23,7 @@ about::about(QWidget *parent) :
     ui->setupUi(this);
     ui->lbl_name->setText(QCoreApplication::applicationName().toAscii());
     ui->lbl_bc_version->setText(QCoreApplication::applicationVersion().toAscii());
+    ui->lbl_qt_version->setText(qVersion());
 }
 
 about::~about()
