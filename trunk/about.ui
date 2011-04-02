@@ -38,6 +38,9 @@
    <iconset resource="images.qrc">
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
   <property name="styleSheet">
    <string notr="true">QDialog{
 background-color: rgb(48, 47, 47);
@@ -55,7 +58,7 @@ QWidget#tab_gpl,QWidget#tab,QWidget#tab_about,QWidget#tabWidget{
 	selection-background-color: rgba(34, 201, 247, 128);
 	selection-color: rgb(255,255,255);
 }
-QPushButton:enabled {  border:3px solid; 
+QPushButton:enabled {  border:2px solid; 
 	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
 	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
 	border-bottom-color: rgb(172, 172, 172);
@@ -121,16 +124,16 @@ image: url(:/icon/mslot);
     <number>4</number>
    </property>
    <property name="leftMargin">
-    <number>0</number>
+    <number>4</number>
    </property>
    <property name="topMargin">
     <number>2</number>
    </property>
    <property name="rightMargin">
-    <number>2</number>
+    <number>4</number>
    </property>
    <property name="bottomMargin">
-    <number>3</number>
+    <number>4</number>
    </property>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_3">
@@ -304,7 +307,7 @@ image: url(:/icon/mslot);
           <string>The Final Fantasy VII Save Game Editor</string>
          </property>
          <property name="indent">
-          <number>5</number>
+          <number>-1</number>
          </property>
          <property name="openExternalLinks">
           <bool>false</bool>
@@ -317,7 +320,7 @@ image: url(:/icon/mslot);
           <string>(C) 2010,2011 Chris Rizzitello</string>
          </property>
          <property name="indent">
-          <number>5</number>
+          <number>-1</number>
          </property>
         </widget>
        </item>
@@ -483,7 +486,7 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>359</width>
+            <width>353</width>
             <height>540</height>
            </rect>
           </property>
@@ -774,7 +777,11 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
 </string>
        </property>
        <property name="text">
-        <string>&amp;Ok</string>
+        <string>&amp;Close</string>
+       </property>
+       <property name="icon">
+        <iconset resource="images.qrc">
+         <normaloff>:/icon/quit</normaloff>:/icon/quit</iconset>
        </property>
        <property name="default">
         <bool>false</bool>
