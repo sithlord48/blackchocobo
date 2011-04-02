@@ -2839,27 +2839,27 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Countdown Timer</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Compte à rebours</translation>
     </message>
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will trigger showing that tutorial</source>
-        <translation type="unfinished"></translation>
+        <translation>Lorsque la boîte est partiellement Checked (&quot;-&quot;) il déclenchera montrant que tutoriel</translation>
     </message>
     <message>
         <source>Y.Cloud</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Sephiroth</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Slot Region</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Slot Région</translation>
     </message>
     <message>
         <source>Debug Mode</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Debug Mode</translation>
     </message>
     <message>
         <source>USA (BASLUS-94163)</source>
@@ -2887,11 +2887,11 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Black Chocobo - </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Black Chocobo - </translation>
     </message>
     <message>
         <source>PSP Save Notice</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PSP Enregistrer un avis</translation>
     </message>
     <message>
         <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
@@ -2899,7 +2899,7 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Bad Psx Save Name</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">PSX Bad Enregistrer le nom</translation>
     </message>
     <message>
         <source>Export MC File</source>
@@ -2907,7 +2907,7 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source> Bombing Mission Start Flag</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Bombing Drapeau début de la mission</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
@@ -2915,11 +2915,11 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Vie&amp;w</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">V&amp;ue</translation>
     </message>
     <message>
         <source>&amp;Edit</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Modifi&amp;er</translation>
     </message>
     <message>
         <source>Paste Slot</source>
@@ -2931,7 +2931,7 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>New Game</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">New Game</translation>
     </message>
     <message>
         <source>Alt+Ins</source>
@@ -2939,7 +2939,7 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>New Game+ </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">New Game +</translation>
     </message>
     <message>
         <source>Alt+Shift+Ins</source>
@@ -2947,79 +2947,79 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Non-FF7 Slot Detected</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Non-FF7 Slot Détecté</translation>
     </message>
     <message>
         <source>Please Select An Action To Continue</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">S&apos;il vous plaît sélectionner une action à poursuivre</translation>
     </message>
     <message>
         <source>Pr&amp;evious Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Pr&amp;écédent Slot</translation>
     </message>
     <message>
         <source>View &amp;Anyway</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Voi&amp;r Quoi qu&apos;il en soit</translation>
     </message>
     <message>
         <source>Export via psx</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exportation via psx</translation>
     </message>
     <message>
         <source>Ne&amp;xt Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sui&amp;vant Slot</translation>
     </message>
     <message>
         <source>Your At Slot 15</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Votre niveau de la fente 15</translation>
     </message>
     <message>
         <source>Sorry There is no Next Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Désolé, il n&apos;y a pas de case suivante</translation>
     </message>
     <message>
         <source>Your At Slot 1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Votre À Slot 1</translation>
     </message>
     <message>
         <source>Sorry There is no Previous Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Désolé, il n&apos;y a pas de logement précédent</translation>
     </message>
     <message>
         <source>Ingoring Non FF7 Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ignorant non FF7 Enregistrer</translation>
     </message>
     <message>
         <source>Be Cautious This Might Not Work.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Soyez prudent cela ne fonctionne pas.</translation>
     </message>
     <message>
         <source>Save Raw PSX File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Enregistrer le fichier Raw PSX</translation>
     </message>
     <message>
         <source>All Files(*)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tous les fichiers(*)</translation>
     </message>
     <message>
         <source>Save Successfully</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ajoutez le succès</translation>
     </message>
     <message>
         <source>File Saved Sucessfully, Going Back To The Selection Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fichier enregistré avec succès, pour revenir à la boîte de sélection</translation>
     </message>
     <message>
         <source>Export Current Character</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exporter le caractère en cours</translation>
     </message>
     <message>
         <source>Import Current Character</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importer le caractère en cours</translation>
     </message>
     <message>
         <source>Select FF7 Character Stat File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sélectionnez Fichier FF7 Stat caractères</translation>
     </message>
     <message>
         <source>%1:
@@ -3029,19 +3029,19 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Save FF7 Character File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ajoutez le fichier à caractère FF7</translation>
     </message>
     <message>
         <source>Import  PSV Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importer PSV Enregistrer</translation>
     </message>
     <message>
         <source>FF7 Character Stat File(*.char)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FF7 Character Stat File(*.char)</translation>
     </message>
     <message>
         <source>In-game Dialog Preview</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dans le jeu de dialogue de prévisualisation</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -3057,58 +3057,60 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Show Extra Information During Battle</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Afficher les informations supplémentaires pendant la bataille</translation>
     </message>
     <message>
         <source>Current Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Current Slot</translation>
     </message>
     <message>
         <source>Export Raw PSX Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exporter PSX Raw Enregistrer</translation>
     </message>
     <message>
         <source>Import  Raw PSX Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Importer Raw PSX enregistrer</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</translation>
     </message>
     <message>
         <source>Raw PSX FF7 SaveGame (*-S*)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Raw PSX FF7 SaveGame (*-S*)</translation>
     </message>
     <message>
         <source>FF7 Raw PSX SaveGame(*-S*)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">FF7 Raw PSX SaveGame(*-S*)</translation>
     </message>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PSP.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ce fichier n&apos;a pas une mise à jour Checksum.It ne fonctionnera pas sur votre PSP.</translation>
     </message>
     <message>
         <source>Cannot read file %1:
 %2 Be Sure its is a Raw PSX Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Impossible de lire le fichier%1:
+%2., s&apos;assurer qu&apos;il est un PSX Raw Enregistrer</translation>
     </message>
     <message>
         <source>Cannot read file %1:
 %2., Be Sure its is a Raw PSX Save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Impossible de lire le fichier%1:
+%2., s&apos;assurer qu&apos;il est un PSX Raw Enregistrer</translation>
     </message>
     <message>
         <source>Unknown Filetype</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Type de fichier inconnu</translation>
     </message>
     <message>
         <source>File: %1 
 is not a FF7 SaveGame.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fichier:%1 n&apos;est pas un jeu FF7 Enregistrer.</translation>
     </message>
     <message>
         <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ne peut pas décider Qu&apos;est-tête à écrire, S&apos;il vous plaît Ajouter le suffixe-SXX (où x = 01-15, avec un 0 si &lt;10) Un en-tête de ce numéro d&apos;emplacement sera écrit dans la sauvegarde</translation>
     </message>
 </context>
 <context>
@@ -3949,7 +3951,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://mattahan.deviantart.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Mattahan@deviantart&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>FF7 Program Icon</source>
