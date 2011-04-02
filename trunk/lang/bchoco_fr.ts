@@ -3007,7 +3007,7 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>File Saved Sucessfully, Going Back To The Selection Dialog</source>
-        <translation type="unfinished">Fichier enregistré avec succès, pour revenir à la boîte de sélection</translation>
+        <translation type="obsolete">Fichier enregistré avec succès, pour revenir à la boîte de sélection</translation>
     </message>
     <message>
         <source>Export Current Character</source>
@@ -3111,6 +3111,10 @@ is not a FF7 SaveGame.</source>
     <message>
         <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
         <translation type="unfinished">Ne peut pas décider Qu&apos;est-tête à écrire, S&apos;il vous plaît Ajouter le suffixe-SXX (où x = 01-15, avec un 0 si &lt;10) Un en-tête de ce numéro d&apos;emplacement sera écrit dans la sauvegarde</translation>
+    </message>
+    <message>
+        <source>File Saved Successfully, Going Back To The Selection Dialog</source>
+        <translation type="unfinished">Fichier enregistré avec succès, pour revenir à la boîte de sélection</translation>
     </message>
 </context>
 <context>
