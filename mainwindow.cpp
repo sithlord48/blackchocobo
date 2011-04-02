@@ -1088,7 +1088,7 @@ void MainWindow::on_actionExport_PSX_activated()
     else if(fileName.endsWith("S13")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S13[i];}}
     else if(fileName.endsWith("S14")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S14[i];}}
     else if(fileName.endsWith("S15")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S15[i];}}
-    else{QMessageBox::information(this,tr("Bad Psx Save Name"), tr("Can't Decide On What Header to Write, Please Add the sufix SXX (where x= 01-15, with leading 0 if < 10) US Header for that slot number will be written to the save"));return;}
+    else{QMessageBox::information(this,tr("Bad Psx Save Name"), tr("Can't Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if < 10) A Header for that slot number will be written to the save"));return;}
 
     for(int i=256;i<512;i++){temp[i]= 0x00;};
 
