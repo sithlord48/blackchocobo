@@ -2224,7 +2224,7 @@ void MainWindow::guirefresh(void)
                 fwrite(ff7.hf[s].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
                 fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
                 fclose(pfile);
-                QMessageBox::information(this,tr("Save Successfully"),tr("File Saved Sucessfully, Going Back To The Selection Dialog"));
+                QMessageBox::information(this,tr("Save Successfully"),tr("File Saved Successfully, Going Back To The Selection Dialog"));
                 guirefresh();
             }
          }
