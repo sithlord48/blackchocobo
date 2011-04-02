@@ -46,3 +46,4 @@ void about::on_pushButton_clicked()
 {
     this->close();
 }
+
