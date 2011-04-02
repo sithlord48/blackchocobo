@@ -14,9 +14,9 @@
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
+   <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+    <horstretch>1</horstretch>
+    <verstretch>1</verstretch>
    </sizepolicy>
   </property>
   <property name="minimumSize">
@@ -27,7 +27,7 @@
   </property>
   <property name="maximumSize">
    <size>
-    <width>379</width>
+    <width>1677215</width>
     <height>1677215</height>
    </size>
   </property>
@@ -312,7 +312,7 @@ image: url(:/icon/mslot);
       <enum>Qt::DefaultContextMenu</enum>
      </property>
      <property name="currentIndex">
-      <number>1</number>
+      <number>0</number>
      </property>
      <property name="usesScrollButtons">
       <bool>true</bool>
@@ -344,7 +344,7 @@ image: url(:/icon/mslot);
        <item>
         <widget class="QLabel" name="copyleft">
          <property name="text">
-          <string>(C) 2010,2011 Chris Rizzitello</string>
+          <string notr="true">(C) 2010,2011 Chris Rizzitello</string>
          </property>
          <property name="indent">
           <number>-1</number>
@@ -571,7 +571,7 @@ p, li { white-space: pre-wrap; }
                <item>
                 <widget class="QLabel" name="label">
                  <property name="text">
-                  <string>Sithlord48 (chris):</string>
+                  <string notr="true">Sithlord48 (chris):</string>
                  </property>
                 </widget>
                </item>
@@ -702,7 +702,7 @@ p, li { white-space: pre-wrap; }
                <item>
                 <widget class="QLabel" name="label_8">
                  <property name="text">
-                  <string>Earily Win32 Tester</string>
+                  <string>Early Win32 Tester</string>
                  </property>
                 </widget>
                </item>
@@ -1081,7 +1081,7 @@ p, li { white-space: pre-wrap; }
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-149</y>
+            <y>0</y>
             <width>349</width>
             <height>390</height>
            </rect>
