@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.0" language="fr" sourcelanguage="en_US">
 <context>
     <name>MainWindow</name>
     <message>
@@ -2723,7 +2723,7 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>KOTR</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Test Data</source>
@@ -2771,7 +2771,7 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>0xBD4 (itemmasks_1)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>0x01 Potion On MD8_3</source>
@@ -2835,7 +2835,7 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Region String</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Région</translation>
     </message>
     <message>
         <source>Countdown Timer</source>
@@ -2863,27 +2863,27 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>USA (BASLUS-94163)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>PAL (BESCES-00867)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>PAL (BESCES-00869)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>PAL (BESCES-00900)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>JPN (BISLPS-00700)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>JPN (BISLPS-01057)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Black Chocobo - </source>
@@ -2895,19 +2895,15 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Bad Psx Save Name</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Can&apos;t Decide On What Header to Write, Please Add the sufix SXX (where x= 01-15, with leading 0 if &lt; 10) US Header for that slot number will be written to the save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Export MC File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Exporter Sauvegarde MC</translation>
     </message>
     <message>
         <source> Bombing Mission Start Flag</source>
@@ -2915,7 +2911,7 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Aid&amp;e</translation>
     </message>
     <message>
         <source>Vie&amp;w</source>
@@ -2927,11 +2923,11 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Paste Slot</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Coller Slot</translation>
     </message>
     <message>
         <source>More Options...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Plus d&apos;options....</translation>
     </message>
     <message>
         <source>New Game</source>
@@ -2939,7 +2935,7 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Alt+Ins</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>New Game+ </source>
@@ -2947,7 +2943,7 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Alt+Shift+Ins</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Non-FF7 Slot Detected</source>
@@ -3028,7 +3024,8 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     <message>
         <source>%1:
 %2 is Not a FF7 Character Stat File.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Impossible de lire le fichier %1:
+%2.</translation>
     </message>
     <message>
         <source>Save FF7 Character File</source>
@@ -3109,6 +3106,10 @@ p, li { white-space: pre-wrap; }
 is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
@@ -3158,47 +3159,47 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Set Load And Save Paths.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Charge définir et enregistrer des chemins.</translation>
     </message>
     <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sélectionnez un enregistrement par défaut du jeu (PSX Enregistrer seulement)</translation>
     </message>
     <message>
         <source>Stats / New Game </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stats / Nouveau Jeu</translation>
     </message>
     <message>
         <source>File To load When &quot;New Game&quot; is used</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fichier à charger lorsque &quot;New Game &quot; est utilisée</translation>
     </message>
     <message>
         <source>Location To Save Character Stat Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Emplacement pour enregistrer les fichiers de caractères Stat</translation>
     </message>
     <message>
         <source>Select A Location To Save Character Stat Files</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sélectionnez un emplacement pour enregistrer les fichiers de caractères Stat</translation>
     </message>
     <message>
         <source> Save Options</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> Options Enregistrer</translation>
     </message>
     <message>
         <source> Folder To Load FF7 Saves (all types) from</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dossier pour charger Enregistre FF7 (tous types) à partir de</translation>
     </message>
     <message>
         <source> Folder To Load/Save Emulator Cards (.mcd/.mcr) </source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dossier pour charger / sauver Emulator Cartes (.mcd / .mcr)</translation>
     </message>
     <message>
         <source>Folder To Save Pc (.ff7) Save Games</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dossier pour sauvegarder Pc (. FF7) Sauvegarder Jeux</translation>
     </message>
     <message>
         <source>Folder To Export Pc (.ff7) Save Games</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dossier à exporter Pc (. FF7) Sauvegarder Jeux</translation>
     </message>
     <message>
         <source>&amp;Ok</source>
@@ -3206,15 +3207,15 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Main Window Background Color</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Couleur principale de fond de la fenêtre</translation>
     </message>
     <message>
         <source>preview</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">extrait</translation>
     </message>
     <message>
         <source>Color 1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Couleur 1</translation>
     </message>
     <message>
         <source>R</source>
@@ -3230,15 +3231,15 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Color 2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Couleur 2</translation>
     </message>
     <message>
         <source>Color 3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Couleur 3</translation>
     </message>
     <message>
         <source>Reset to Default</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Réinitialiser</translation>
     </message>
 </context>
 <context>
@@ -3688,7 +3689,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Ok</source>
-        <translation type="unfinished">&amp;Ok</translation>
+        <translation type="obsolete">&amp;Ok</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -3772,27 +3773,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Black Chocobo </source>
-        <translation type="unfinished"></translation>
+        <translation>Black Chocobo</translation>
     </message>
     <message>
         <source>Version:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1.8-WIP</source>
-        <translation type="unfinished"></translation>
+        <translation>Version:</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;À propos</translation>
     </message>
     <message>
         <source>The Final Fantasy VII Save Game Editor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>(C) 2010,2011 Chris Rizzitello</source>
-        <translation type="unfinished"></translation>
+        <translation>L&apos;Éditeur de jeu sauvé FF7</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -3800,7 +3793,11 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU Licence Publique Générale Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -3808,7 +3805,11 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Page d`Acceuil du Projet&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -3816,97 +3817,47 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;View User Guide&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Voir Guide d&apos;utilisateur&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Newest Features</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveautés</translation>
     </message>
     <message>
         <source>New: This Fancy About Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: ce dialogue a propos géniale</translation>
     </message>
     <message>
         <source>New: Main Window Resizeable</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: vitre principale redimmensionable</translation>
     </message>
     <message>
         <source>New: Psx Icons Show In Region Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: icônes PSX apparaisent dans l&apos;info de région</translation>
     </message>
     <message>
         <source>New: Some Options have Ability to reset to default</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: des options peuvent remettre à défaut</translation>
     </message>
     <message>
         <source>Fixed: No longer export non ff7 slots to pc</source>
-        <translation type="unfinished"></translation>
+        <translation>Réparé: n&apos;exporte plus des slot pas appartenant à FF7 vers le PC</translation>
     </message>
     <message>
         <source>Fixed: Pc Header Mask Aware</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Réparé: Masque-tête Pc Aware</translation>
     </message>
     <message>
         <source>Fixed: Saves Will Display Slots Correctly</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Contributors</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600; text-decoration: underline;&quot;&gt;Testers:&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; Jari | Eslava | Timu | Chocobo Girl|Covarr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600; text-decoration: underline;&quot;&gt;Translators:&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt;Spanish - Eslava | French - Myst6re, sl1982, google&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600; text-decoration: underline;&quot;&gt;Icons Used In this Program From The Following:&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;	&lt;/span&gt;&lt;/p&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://tango.freedesktop.org/Tango_Desktop_Project&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Tango&lt;/span&gt;&lt;/a&gt; , &lt;a href=&quot;http://mattahan.deviantart.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Mattahan@Deviantart&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-size:10pt;&quot;&gt; ,&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt;Team Avalanche,Covarr&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600; text-decoration: underline;&quot;&gt;Special Thanks:&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600; text-decoration: underline;&quot;&gt;Qhimm&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; - for providing the source to jenova , this programs uses modified versions of his  savefile struct,item/materia lists  and string converting functions his source saved a lot of time durring the earily stages of devlopment.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600; text-decoration: underline;&quot;&gt;Eslava&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; - for  All of the Help With Black Chocobo, Seriously People he does everything from helping me test &amp;amp; translate to writing the user guide with me.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600;&quot;&gt;                           &lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt;	  &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600; text-decoration: underline;&quot;&gt;Vegeta_ss4&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; - Inital Psx load/save function &amp;amp; internal checksuming fix&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600; text-decoration: underline;&quot;&gt;Dziugo&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; - for  the old checksum program.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600; text-decoration: underline;&quot;&gt;Aali&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; - for helping me see the light of stupid errors.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600; text-decoration: underline;&quot;&gt;dhrosa&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; - for helping me by providing a better understanding of Qt&apos;s functions when the help files alone where not enuff.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-weight:600; text-decoration: underline;&quot;&gt;Ms. Sith&lt;/span&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;;&quot;&gt; - Causes shes awesome.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Réparé: Sauvegarde Will Afficher Slots correctement</translation>
     </message>
     <message>
         <source>License</source>
-        <translation type="unfinished"></translation>
+        <translation>License</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -3926,6 +3877,118 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;You should have received a copy of the GNU General Public License&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;along with this program.  If not, see &lt;/span&gt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt; text-decoration: underline; color:#508ed8;&quot;&gt;&amp;lt;http://www.gnu.org/licenses/&amp;gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation>&amp;Fermer</translation>
+    </message>
+    <message>
+        <source>Using Qt:</source>
+        <translation>Utilisation Qt:</translation>
+    </message>
+    <message>
+        <source>Credits</source>
+        <translation>Crédits</translation>
+    </message>
+    <message>
+        <source>Giving Credit Where Credit is Due</source>
+        <translation>Donner à César ce qui est raison</translation>
+    </message>
+    <message>
+        <source>Programmers</source>
+        <translation>Programmation</translation>
+    </message>
+    <message>
+        <source>Main Programmer</source>
+        <translation>Programmeur principal</translation>
+    </message>
+    <message>
+        <source>checksuming fix, initial stages of psx load/save</source>
+        <translation type="unfinished">fixer de contrôle, les étapes initiales de la charge PSX / save</translation>
+    </message>
+    <message>
+        <source>Bug Testers</source>
+        <translation>Bug Testeurs</translation>
+    </message>
+    <message>
+        <source>Main Bug Tester, for win/gnome + ingame</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mac Os Tester</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Windows Tester</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Translators</source>
+        <translation>Traducteurs</translation>
+    </message>
+    <message>
+        <source>Spanish Translation:</source>
+        <translation>Traduction Espagnole:</translation>
+    </message>
+    <message>
+        <source>French Translation:</source>
+        <translation>Traduction en Français:</translation>
+    </message>
+    <message>
+        <source>Icons Used In this Program</source>
+        <translation type="unfinished">Icônes utilisées dans ce Programme</translation>
+    </message>
+    <message>
+        <source>Buff Icons (and one or two more) by </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://mattahan.deviantart.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Mattahan@deviantart&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7 Program Icon</source>
+        <translation type="unfinished">FF7 icône du programme</translation>
+    </message>
+    <message>
+        <source>Thanks To</source>
+        <translation type="unfinished">Merci Pour</translation>
+    </message>
+    <message>
+        <source>A Big Thank You  To:</source>
+        <translation type="unfinished">Un grand merci à:</translation>
+    </message>
+    <message>
+        <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct,item/materia lists  and string conversion function. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
+        <translation type="unfinished">Merci d &apos;avoir, en fournissant la source de Jenova. Ce programme utilise des versions modifiées de savefile Jenova struct, les listes d&apos;articles materia / et la fonction de conversion de chaîne. L&apos;accès au code source, il a sauvé beaucoup de temps durant les premiers stades de développement.</translation>
+    </message>
+    <message>
+        <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
+        <translation type="unfinished">Merci d &apos;avoir, toute l&apos;aide Avec Chocobo Noir. Traduire, les tests de bogues, w aider / data trouver dans le savemap. essais thème, etc, il fait beaucoup pour aider.</translation>
+    </message>
+    <message>
+        <source>Thank You For, the old checksum program</source>
+        <translation type="unfinished">Merci d &apos;avoir, le programme de contrôle vieux</translation>
+    </message>
+    <message>
+        <source>Thank You For, Helping me see the light of stupid errors. </source>
+        <translation type="unfinished">Merci d &apos;avoir, à me rendre la lumière des erreurs stupides.</translation>
+    </message>
+    <message>
+        <source>Thank You For, Providing a Better understanding of Qt&apos;s Functions When the help files failed.</source>
+        <translation type="unfinished">Merci d &apos;avoir, une meilleure compréhension des fonctions de Qt Lorsque les fichiers d&apos;aide ont échoué.</translation>
+    </message>
+    <message>
+        <source>Cause She&apos;s Just Awesome!</source>
+        <translation type="unfinished">Parce qu&apos;elle est juste impressionnant!</translation>
+    </message>
+    <message>
+        <source>Early Win32 Tester</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
