@@ -2246,8 +2246,8 @@ void MainWindow::guirefresh(void)
     ui->sb_bm_progress3->setValue(ff7.slot[s].bm_progress3);
     ui->sb_mprogress->setValue(ff7.slot[s].mprogress);
 
-    ui->cb_bombing_int->setChecked(Qt::Unchecked);
     if(ff7.slot[s].intbombing == 0x14){ui->cb_bombing_int->setChecked(Qt::Checked);}
+    else if(ff7.slot[s].intbombing ==0x56){ui->cb_bombing_int->setChecked(Qt::Unchecked);}
 
     /*~~~~~Set Menu Items~~~~~~~~~~~~~~*/
     ui->actionImport_char->setEnabled(0);
@@ -2763,8 +2763,29 @@ void MainWindow::guirefresh(void)
         ui->spell_lvl4_group->setVisible(0);
         ui->spell_lvl5_group->setVisible(0);
     }
+
+    else if(Materias[ff7.slot[s].materias[j].id].name == tr("DON'T USE")) //this is a placeholder materia.
+    {
+
+        ui->lbl_mat_stats->setText(Materias[ff7.slot[s].materias[j].id].stats);
+        ui->lcd_ap_master->display("NO CAP");
+        ui->sb_addap->setMaximum(16777215);
+        qint32 aptemp = ff7.slot[s].materias[j].ap[0] |(ff7.slot[s].materias[j].ap[1] << 8) | (ff7.slot[s].materias[j].ap[2] << 16);
+        ui->sb_addap->setValue(aptemp);
+        // Hide the Stars
+        ui->btn_m_lvl1->setVisible(0);
+        ui->btn_m_lvl2->setVisible(0);
+        ui->btn_m_lvl3->setVisible(0);
+        ui->btn_m_lvl4->setVisible(0);
+        ui->btn_m_lvl5->setVisible(0);
+        // Set the unknown skills
+        ui->spell_lvl1_group->setVisible(1);
+        ui->lbl_spell_lvl1->setText(Materias[ui->combo_add_mat->currentIndex()].skills[0]);
+    }
+
     else // make the materia look nice
     {
+
         ui->lbl_mat_stats->setText(Materias[ui->combo_add_mat->currentIndex()].stats);// set stat string..
         qint32 aptemp = ff7.slot[s].materias[j].ap[0] |(ff7.slot[s].materias[j].ap[1] << 8) | (ff7.slot[s].materias[j].ap[2] << 16);
         qint32 masterap = (Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels-2]);
@@ -4301,6 +4322,13 @@ void MainWindow::on_sb_addap_valueChanged(int value)
 }
 void MainWindow::on_combo_add_mat_currentIndexChanged(int index)
 {
+    if(ui->combo_add_mat->currentText() =="DON'T USE")// this is a placeholder materia
+    {
+        QMessageBox::information(this,tr("Empty Materia"),tr("Place holder Materia Detected\n Remember 16777215 AP = master"));
+        guirefresh();// clean up the gui.
+        return; //we are done here.
+    }
+
     ui->combo_mat_type->setCurrentIndex(Materias[index].type);
     for(int i=0;i<ui->combo_add_mat_2->count();i++)
     {
@@ -5495,7 +5523,7 @@ void MainWindow::setoptions_two()
 
 void MainWindow::on_cb_c2_born_toggled(bool checked) // not working correctly.
 {
-    if(checked== 2){ff7.slot[s].chocoborn |= (1<<1);}
+    if(checked== Qt::Checked){ff7.slot[s].chocoborn |= (1<<1);}
     else{ff7.slot[s].chocoborn |= (0<<1);}
 }
 
@@ -5644,7 +5672,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_bm_progress2->setValue(198);
         ui->sb_bm_progress3->setValue(3);
         ui->cb_bombing_int->setChecked(0);
-        ui->line_location->setText("Forgotten City");
+        ui->line_location->setText(tr("Forgotten City"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(646);
         ui->sb_coordx->setValue(641);
@@ -6093,6 +6121,6 @@ void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
 
 void MainWindow::on_cb_bombing_int_stateChanged(int checked)
 {
-    if(checked == Qt::Checked){ff7.slot[s].intbombing = 0x14;}
+    if(checked == Qt::Checked){ff7.slot[s].intbombing =0x14;}
     else{ff7.slot[s].intbombing =0x56;}
 }

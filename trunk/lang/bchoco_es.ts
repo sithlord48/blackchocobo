@@ -3237,6 +3237,19 @@ no es una partida guardada de FF7</translation>
         <source>File Saved Successfully, Going Back To The Selection Dialog</source>
         <translation>Archivo guardado con éxito, Volviendo a la pantalla de selección</translation>
     </message>
+    <message>
+        <source>DON&apos;T USE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Empty Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place holder Materia Detected
+ Remember 16777215 AP = master</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
