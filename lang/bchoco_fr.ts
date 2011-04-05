@@ -3116,6 +3116,19 @@ is not a FF7 SaveGame.</source>
         <source>File Saved Successfully, Going Back To The Selection Dialog</source>
         <translation type="unfinished">Fichier enregistré avec succès, pour revenir à la boîte de sélection</translation>
     </message>
+    <message>
+        <source>DON&apos;T USE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Empty Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place holder Materia Detected
+ Remember 16777215 AP = master</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
