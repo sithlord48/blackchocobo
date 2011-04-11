@@ -2782,6 +2782,246 @@ is not a FF7 SaveGame.</source>
  Remember 16777215 AP = master</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>New Game +</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Young Cloud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>===Empty Slot===</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Empty Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NO CAP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Braver</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cross-Slash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Blade Beam</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Climhazzard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Meteorain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Finishing Touch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>OmniSlash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Big Shot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mindblow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Grenade Bomb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hammerblow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Satellite Beam</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angermax</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Catastrophe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Beat Rush</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SomerSault</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Waterkick</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Meteodrive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dolphin Blow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Meteor Strike</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Final Heaven</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Healing Wind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Seal Evil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Breath of the Earth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fury Brand</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Planet Protector</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pulse of Life</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Great Gospel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sled Fang</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lunatic High</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Blood Fang</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stardust Ray</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Howling Moon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Earth Rave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cosmo Memory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Greased Lightning</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear Tranquil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Landscaper</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bloodfest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gauntlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Doom of the Living</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All Creation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gallian Beast</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Death Gigas</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hellmasker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chaos</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Boost Jump</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dynamite</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hyper Jump</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dragon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dragon Dive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Big Brawl</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
