@@ -899,7 +899,7 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
     temp = ff7file.mid(index,0x10f4); // dump file -> temp
     memcpy(&bufferslot,temp,0x10f4);  // copy temp to the buffer slot
     buffer_region = ff7.SG_Region_String[s];
-    ui->line_location->setText("New Game +");
+    ui->line_location->setText(tr("New Game +"));
     memcpy(&bufferslot.desc,&ff7.slot[s].desc,0x44); // keep a old preview
     memcpy(&bufferslot.colors,&ff7.slot[s].colors,12); // keep old colors.
     for(int i=0;i<9;i++) // keep all old character info.
@@ -1791,14 +1791,14 @@ void MainWindow::charupdate(void)
     ui->cb_id->setVisible(false);
     if(curchar== 6)
     {
-        ui->cb_id->setText("Young Cloud");
+        ui->cb_id->setText(tr("Young Cloud"));
         ui->cb_id->setVisible(true);
         if (ff7.slot[s].chars[curchar].id == 9){ui->cb_id->setChecked(true); ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));ui->btn_cait->setStyleSheet("image: url(:/icon/y_cloud_icon);");}
         else{ui->cb_id->setChecked(false);ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));ui->btn_cait->setStyleSheet("image: url(:/icon/cait_icon);");}
     }
     if(curchar==7)
     {
-        ui->cb_id->setText("Sephiroth");
+        ui->cb_id->setText(tr("Sephiroth"));
         ui->cb_id->setVisible(true);
         if (ff7.slot[s].chars[curchar].id == 10){ui->cb_id->setChecked(true);ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));ui->btn_vincent->setStyleSheet("image: url(:/icon/sep_icon);");}
         else{ui->cb_id->setChecked(false);ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));ui->btn_vincent->setStyleSheet("image: url(:/icon/vincent_icon);");}
@@ -2725,7 +2725,7 @@ void MainWindow::guirefresh(void)
             newItem = new QTableWidgetItem(QIcon(Materias[ff7.slot[s].materias[mat].id].image),Materias[ff7.slot[s].materias[mat].id].name,0);
             ui->tbl_materia->setItem(mat,0,newItem);
             aptemp = ff7.slot[s].materias[mat].ap[0] |(ff7.slot[s].materias[mat].ap[1] << 8) | (ff7.slot[s].materias[mat].ap[2] << 16);
-            if (aptemp == 0xFFFFFF){newItem =new QTableWidgetItem("Master");ui->tbl_materia->setItem(mat,1,newItem);}
+            if (aptemp == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
             else{newItem =new QTableWidgetItem(QString("N/A"),0);ui->tbl_materia->setItem(mat,1,newItem);}
         }
         else if (ff7.slot[s].materias[mat].id !=0xff)
@@ -2733,12 +2733,12 @@ void MainWindow::guirefresh(void)
             newItem = new QTableWidgetItem(QIcon(Materias[ff7.slot[s].materias[mat].id].image),Materias[ff7.slot[s].materias[mat].id].name,0);
             ui->tbl_materia->setItem(mat,0,newItem);
             aptemp = ff7.slot[s].materias[mat].ap[0] |(ff7.slot[s].materias[mat].ap[1] << 8) | (ff7.slot[s].materias[mat].ap[2] << 16);
-            if (aptemp == 0xFFFFFF){newItem =new QTableWidgetItem("Master");ui->tbl_materia->setItem(mat,1,newItem);}
+            if (aptemp == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
             else{newItem =new QTableWidgetItem(ap.setNum(aptemp));ui->tbl_materia->setItem(mat,1,newItem);}
         }
         else
         {
-            newItem = new QTableWidgetItem("===Empty Slot===",0);
+            newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
             ui->tbl_materia->setItem(mat,0,newItem);
             newItem = new QTableWidgetItem("",0);
             ui->tbl_materia->setItem(mat,1,newItem);
@@ -2746,7 +2746,7 @@ void MainWindow::guirefresh(void)
     }
     if(ff7.slot[s].materias[j].id == 0xFF) //if the slot is empty take some precautions
     {
-        ui->lbl_mat_stats->setText("Empty Slot");
+        ui->lbl_mat_stats->setText(tr("Empty Slot"));
         ui->lcd_ap_master->display(0);
         ui->sb_addap->setValue(0);
         ui->sb_addap->setMaximum(0);
@@ -2768,7 +2768,7 @@ void MainWindow::guirefresh(void)
     {
 
         ui->lbl_mat_stats->setText(Materias[ff7.slot[s].materias[j].id].stats);
-        ui->lcd_ap_master->display("NO CAP");
+        ui->lcd_ap_master->display(tr("NO CAP"));
         ui->sb_addap->setMaximum(16777215);
         qint32 aptemp = ff7.slot[s].materias[j].ap[0] |(ff7.slot[s].materias[j].ap[1] << 8) | (ff7.slot[s].materias[j].ap[2] << 16);
         ui->sb_addap->setValue(aptemp);
@@ -2983,12 +2983,12 @@ void MainWindow::guirefresh(void)
             newItem = new QTableWidgetItem(QIcon(Materias[ff7.slot[s].stolen[mat].id].image),Materias[ff7.slot[s].stolen[mat].id].name,0);
             ui->tbl_materia_2->setItem(mat,0,newItem);
             aptemp = ff7.slot[s].stolen[mat].ap[0] |(ff7.slot[s].stolen[mat].ap[1] << 8) | (ff7.slot[s].stolen[mat].ap[2] << 16);
-            if (aptemp == 0xFFFFFF){newItem =new QTableWidgetItem("Master");ui->tbl_materia_2->setItem(mat,1,newItem);}
+            if (aptemp == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia_2->setItem(mat,1,newItem);}
             else{newItem =new QTableWidgetItem(ap.setNum(aptemp));ui->tbl_materia_2->setItem(mat,1,newItem);}
         }
         else
         {
-            newItem = new QTableWidgetItem("===Empty Slot===",0);
+            newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
             ui->tbl_materia_2->setItem(mat,0,newItem);
         }
     }
@@ -3265,13 +3265,13 @@ void MainWindow::on_btn_cloud_clicked()
     ui->limit_3b->setVisible(1);
     ui->limit_4->setVisible(1);
 //label boxes
-    ui->limit_1a->setText("Braver");
-    ui->limit_1b->setText("Cross-Slash");
-    ui->limit_2a->setText("Blade Beam");
-    ui->limit_2b->setText("Climhazzard");
-    ui->limit_3a->setText("Meteorain");
-    ui->limit_3b->setText("Finishing Touch");
-    ui->limit_4->setText("OmniSlash");
+    ui->limit_1a->setText(tr("Braver"));
+    ui->limit_1b->setText(tr("Cross-Slash"));
+    ui->limit_2a->setText(tr("Blade Beam"));
+    ui->limit_2b->setText(tr("Climhazzard"));
+    ui->limit_3a->setText(tr("Meteorain"));
+    ui->limit_3b->setText(tr("Finishing Touch"));
+    ui->limit_4->setText(tr("OmniSlash"));
 // set up checked limits
     int n = ff7.slot[s].chars[curchar].limits;
     if (n & (1<<0)) ui->limit_1a->setChecked(1);
@@ -3317,13 +3317,13 @@ void MainWindow::on_btn_barret_clicked()
     ui->limit_3b->setChecked(0);
     ui->limit_4->setChecked(0);
 //label boxes
-    ui->limit_1a->setText("Big Shot");
-    ui->limit_1b->setText("Mindblow");
-    ui->limit_2a->setText("Grenade Bomb");
-    ui->limit_2b->setText("Hammerblow");
-    ui->limit_3a->setText("Satellite Beam");
-    ui->limit_3b->setText("Angermax");
-    ui->limit_4->setText("Catastrophe");
+    ui->limit_1a->setText(tr("Big Shot"));
+    ui->limit_1b->setText(tr("Mindblow"));
+    ui->limit_2a->setText(tr("Grenade Bomb"));
+    ui->limit_2b->setText(tr("Hammerblow"));
+    ui->limit_3a->setText(tr("Satellite Beam"));
+    ui->limit_3b->setText(tr("Angermax"));
+    ui->limit_4->setText(tr("Catastrophe"));
 //check off learned limits
     int n = ff7.slot[s].chars[curchar].limits;
     if (n & (1<<0)) ui->limit_1a->setChecked(1);
@@ -3368,13 +3368,13 @@ void MainWindow::on_btn_tifa_clicked()
     ui->limit_3b->setVisible(1);
     ui->limit_4->setVisible(1);
 //label boxes
-    ui->limit_1a->setText("Beat Rush");
-    ui->limit_1b->setText("SomerSault");
-    ui->limit_2a->setText("Waterkick");
-    ui->limit_2b->setText("Meteodrive");
-    ui->limit_3a->setText("Dolphin Blow");
-    ui->limit_3b->setText("Meteor Strike");
-    ui->limit_4->setText("Final Heaven");
+    ui->limit_1a->setText(tr("Beat Rush"));
+    ui->limit_1b->setText(tr("SomerSault"));
+    ui->limit_2a->setText(tr("Waterkick"));
+    ui->limit_2b->setText(tr("Meteodrive"));
+    ui->limit_3a->setText(tr("Dolphin Blow"));
+    ui->limit_3b->setText(tr("Meteor Strike"));
+    ui->limit_4->setText(tr("Final Heaven"));
 // check off learned limits
     int n = ff7.slot[s].chars[curchar].limits;
     if (n & (1<<0)) ui->limit_1a->setChecked(1);
@@ -3420,13 +3420,13 @@ void MainWindow::on_btn_aeris_clicked()
     ui->limit_3b->setVisible(1);
     ui->limit_4->setVisible(1);
 //label boxes
-    ui->limit_1a->setText("Healing Wind");
-    ui->limit_1b->setText("Seal Evil");
-    ui->limit_2a->setText("Breath of the Earth");
-    ui->limit_2b->setText("Fury Brand");
-    ui->limit_3a->setText("Planet Protector");
-    ui->limit_3b->setText("Pulse of Life");
-    ui->limit_4->setText("Great Gospel");
+    ui->limit_1a->setText(tr("Healing Wind"));
+    ui->limit_1b->setText(tr("Seal Evil"));
+    ui->limit_2a->setText(tr("Breath of the Earth"));
+    ui->limit_2b->setText(tr("Fury Brand"));
+    ui->limit_3a->setText(tr("Planet Protector"));
+    ui->limit_3b->setText(tr("Pulse of Life"));
+    ui->limit_4->setText(tr("Great Gospel"));
 //check off learned limits
     int n = ff7.slot[s].chars[curchar].limits;
     if (n & (1<<0)) ui->limit_1a->setChecked(1);
@@ -3472,13 +3472,13 @@ void MainWindow::on_btn_red_clicked()
     ui->limit_3b->setVisible(1);
     ui->limit_4->setVisible(1);
 //label boxes
-    ui->limit_1a->setText("Sled Fang");
-    ui->limit_1b->setText("Lunatic High");
-    ui->limit_2a->setText("Blood Fang");
-    ui->limit_2b->setText("Stardust Ray");
-    ui->limit_3a->setText("Howling Moon");
-    ui->limit_3b->setText("Earth Rave");
-    ui->limit_4->setText("Cosmo Memory");
+    ui->limit_1a->setText(tr("Sled Fang"));
+    ui->limit_1b->setText(tr("Lunatic High"));
+    ui->limit_2a->setText(tr("Blood Fang"));
+    ui->limit_2b->setText(tr("Stardust Ray"));
+    ui->limit_3a->setText(tr("Howling Moon"));
+    ui->limit_3b->setText(tr("Earth Rave"));
+    ui->limit_4->setText(tr("Cosmo Memory"));
 //set learned limits
     int n = ff7.slot[s].chars[curchar].limits;
     if (n & (1<<0)) ui->limit_1a->setChecked(1);
@@ -3524,13 +3524,13 @@ void MainWindow::on_btn_yuffie_clicked()
     ui->limit_3b->setVisible(1);
     ui->limit_4->setVisible(1);
 //label boxes
-    ui->limit_1a->setText("Greased Lightning");
-    ui->limit_1b->setText("Clear Tranquil");
-    ui->limit_2a->setText("Landscaper");
-    ui->limit_2b->setText("Bloodfest");
-    ui->limit_3a->setText("Gauntlet");
-    ui->limit_3b->setText("Doom of the Living");
-    ui->limit_4->setText("All Creation");
+    ui->limit_1a->setText(tr("Greased Lightning"));
+    ui->limit_1b->setText(tr("Clear Tranquil"));
+    ui->limit_2a->setText(tr("Landscaper"));
+    ui->limit_2b->setText(tr("Bloodfest"));
+    ui->limit_3a->setText(tr("Gauntlet"));
+    ui->limit_3b->setText(tr("Doom of the Living"));
+    ui->limit_4->setText(tr("All Creation"));
 //set learned limits
     int n = ff7.slot[s].chars[curchar].limits;
     if (n & (1<<0)) ui->limit_1a->setChecked(1);
@@ -3576,9 +3576,9 @@ void MainWindow::on_btn_cait_clicked()
     ui->limit_3b->setVisible(0);
     ui->limit_4->setVisible(0);
 //label limits
-    ui->limit_1a->setText("Dice");
+    ui->limit_1a->setText(tr("Dice"));
     ui->limit_1b->setText("");
-    ui->limit_2a->setText("Slots");
+    ui->limit_2a->setText(tr("Slots"));
     ui->limit_2b->setText("");
     ui->limit_3a->setText("");
     ui->limit_3b->setText("");
@@ -3623,13 +3623,13 @@ void MainWindow::on_btn_vincent_clicked()
     ui->limit_3b->setVisible(0);
     ui->limit_4->setVisible(1);
 //label boxes
-    ui->limit_1a->setText("Gallian Beast");
+    ui->limit_1a->setText(tr("Gallian Beast"));
     ui->limit_1b->setText("");
-    ui->limit_2a->setText("Death Gigas");
+    ui->limit_2a->setText(tr("Death Gigas"));
     ui->limit_2b->setText("");
-    ui->limit_3a->setText("Hellmasker");
+    ui->limit_3a->setText(tr("Hellmasker"));
     ui->limit_3b->setText("");
-    ui->limit_4->setText("Chaos");
+    ui->limit_4->setText(tr("Chaos"));
 //check learned limits
     int n = ff7.slot[s].chars[curchar].limits;
     if (n & (1<<0)) ui->limit_1a->setChecked(1);
@@ -3672,13 +3672,13 @@ void MainWindow::on_btn_cid_clicked()
     ui->limit_3b->setVisible(1);
     ui->limit_4->setVisible(1);
 //label boxes
-    ui->limit_1a->setText("Boost Jump");
-    ui->limit_1b->setText("Dynamite");
-    ui->limit_2a->setText("Hyper Jump");
-    ui->limit_2b->setText("Dragon");
-    ui->limit_3a->setText("Dragon Dive");
-    ui->limit_3b->setText("Big Brawl");
-    ui->limit_4->setText("Highwind");
+    ui->limit_1a->setText(tr("Boost Jump"));
+    ui->limit_1b->setText(tr("Dynamite"));
+    ui->limit_2a->setText(tr("Hyper Jump"));
+    ui->limit_2b->setText(tr("Dragon"));
+    ui->limit_3a->setText(tr("Dragon Dive"));
+    ui->limit_3b->setText(tr("Big Brawl"));
+    ui->limit_4->setText(tr("Highwind"));
 //set learned limits
     int n = ff7.slot[s].chars[curchar].limits;
     if (n & (1<<0)) ui->limit_1a->setChecked(1);
@@ -4270,7 +4270,7 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row)
         else if(ff7.slot[s].materias[row].id == 0xFF) //if the slot is empty take some precautions
         {
             load=true;
-            ui->lbl_mat_stats->setText("Empty Slot");
+            ui->lbl_mat_stats->setText(tr("Empty Slot"));
             ui->lcd_ap_master->display(0);
             ui->sb_addap->setValue(0);
             ui->sb_addap->setMaximum(0);
@@ -5565,7 +5565,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->cb_midgartrain_6->setChecked(0);
         ui->cb_midgartrain_7->setChecked(0);
         ui->cb_midgartrain_8->setChecked(0);
-        ui->line_location->setText("Platform");
+        ui->line_location->setText(tr("Platform"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(116);
         ui->sb_coordx->setValue(3655);
@@ -5582,7 +5582,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_bm_progress2->setValue(198);
         ui->sb_bm_progress3->setValue(3);
         ui->cb_bombing_int->setChecked(0);
-        ui->line_location->setText("Kalm Inn");
+        ui->line_location->setText(tr("Kalm Inn"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(332);
         ui->sb_coordx->setValue(267);
@@ -5655,7 +5655,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_bm_progress2->setValue(198);
         ui->sb_bm_progress3->setValue(3);
         ui->cb_bombing_int->setChecked(0);
-        ui->line_location->setText("Ropeway Station");
+        ui->line_location->setText(tr("Ropeway Station"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(496);
         ui->sb_coordx->setValue(64767);
@@ -5683,7 +5683,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->label_replaynote->setText(tr("Replay the death of Aerith.This option Will remove Aerith from your PHS"));
     }
 
-    else {ui->label_replaynote->setText("         INFO ON CURRENTLY SELECTED REPLAY MISSION");}
+    else {ui->label_replaynote->setText(tr("         INFO ON CURRENTLY SELECTED REPLAY MISSION"));}
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS FOR TESTING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
