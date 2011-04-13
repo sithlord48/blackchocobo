@@ -1057,7 +1057,7 @@
     </message>
     <message>
         <source>Young Cloud</source>
-        <translation type="unfinished">Cloud Joven</translation>
+        <translation>Cloud Joven</translation>
     </message>
     <message>
         <source>Clear Stolen Materia</source>
@@ -3239,252 +3239,253 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation type="unfinished"></translation>
+        <translation>NO USAR</translation>
     </message>
     <message>
         <source>Empty Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>Vaciar materia</translation>
     </message>
     <message>
         <source>Place holder Materia Detected
  Remember 16777215 AP = master</source>
-        <translation type="unfinished"></translation>
+        <translation>Materia de relleno detectada
+ Recuerda 16777215 AP = maestro</translation>
     </message>
     <message>
         <source>New Game +</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo juego +</translation>
     </message>
     <message>
         <source>===Empty Slot===</source>
-        <translation type="unfinished"></translation>
+        <translation>===Ranura vacía===</translation>
     </message>
     <message>
         <source>Empty Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Ranura vacía</translation>
     </message>
     <message>
         <source>NO CAP</source>
-        <translation type="unfinished"></translation>
+        <translation>SIN TOPE</translation>
     </message>
     <message>
         <source>Braver</source>
-        <translation type="unfinished"></translation>
+        <translation>Bravura</translation>
     </message>
     <message>
         <source>Cross-Slash</source>
-        <translation type="unfinished"></translation>
+        <translation>Corte Cruzado</translation>
     </message>
     <message>
         <source>Blade Beam</source>
-        <translation type="unfinished"></translation>
+        <translation>Haz Espada</translation>
     </message>
     <message>
         <source>Climhazzard</source>
-        <translation type="unfinished"></translation>
+        <translation>Aerolito</translation>
     </message>
     <message>
         <source>Meteorain</source>
-        <translation type="unfinished"></translation>
+        <translation>Lluvia de Meteoritos</translation>
     </message>
     <message>
         <source>Finishing Touch</source>
-        <translation type="unfinished"></translation>
+        <translation>Toque Final</translation>
     </message>
     <message>
         <source>OmniSlash</source>
-        <translation type="unfinished"></translation>
+        <translation>Omnilátigo</translation>
     </message>
     <message>
         <source>Big Shot</source>
-        <translation type="unfinished"></translation>
+        <translation>Gran Tiro</translation>
     </message>
     <message>
         <source>Mindblow</source>
-        <translation type="unfinished"></translation>
+        <translation>Aluci.</translation>
     </message>
     <message>
         <source>Grenade Bomb</source>
-        <translation type="unfinished"></translation>
+        <translation>Granada</translation>
     </message>
     <message>
         <source>Hammerblow</source>
-        <translation type="unfinished"></translation>
+        <translation>Golpe de Martillo</translation>
     </message>
     <message>
         <source>Satellite Beam</source>
-        <translation type="unfinished"></translation>
+        <translation>Haz del Satélite</translation>
     </message>
     <message>
         <source>Angermax</source>
-        <translation type="unfinished"></translation>
+        <translation>Ungarmax</translation>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation type="unfinished"></translation>
+        <translation>Catástrofe</translation>
     </message>
     <message>
         <source>Beat Rush</source>
-        <translation type="unfinished"></translation>
+        <translation>Golpe Veloz</translation>
     </message>
     <message>
         <source>SomerSault</source>
-        <translation type="unfinished"></translation>
+        <translation>Salto Mortal</translation>
     </message>
     <message>
         <source>Waterkick</source>
-        <translation type="unfinished"></translation>
+        <translation>Golpeagua</translation>
     </message>
     <message>
         <source>Meteodrive</source>
-        <translation type="unfinished"></translation>
+        <translation>Meteobatida</translation>
     </message>
     <message>
         <source>Dolphin Blow</source>
-        <translation type="unfinished"></translation>
+        <translation>Golpe de Delfín</translation>
     </message>
     <message>
         <source>Meteor Strike</source>
-        <translation type="unfinished"></translation>
+        <translation>Ataque Meteorito</translation>
     </message>
     <message>
         <source>Final Heaven</source>
-        <translation type="unfinished"></translation>
+        <translation>Cielo Final</translation>
     </message>
     <message>
         <source>Healing Wind</source>
-        <translation type="unfinished"></translation>
+        <translation>Ala Sanadora</translation>
     </message>
     <message>
         <source>Seal Evil</source>
-        <translation type="unfinished"></translation>
+        <translation>Sello Maldito</translation>
     </message>
     <message>
         <source>Breath of the Earth</source>
-        <translation type="unfinished"></translation>
+        <translation>Aliento de la Tierra</translation>
     </message>
     <message>
         <source>Fury Brand</source>
-        <translation type="unfinished"></translation>
+        <translation>Marca Furia</translation>
     </message>
     <message>
         <source>Planet Protector</source>
-        <translation type="unfinished"></translation>
+        <translation>Protector del Planeta</translation>
     </message>
     <message>
         <source>Pulse of Life</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulso Vital</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation type="unfinished"></translation>
+        <translation>Gran Evangelio</translation>
     </message>
     <message>
         <source>Sled Fang</source>
-        <translation type="unfinished"></translation>
+        <translation>Colmillo Trineo</translation>
     </message>
     <message>
         <source>Lunatic High</source>
-        <translation type="unfinished"></translation>
+        <translation>Marea Luna</translation>
     </message>
     <message>
         <source>Blood Fang</source>
-        <translation type="unfinished"></translation>
+        <translation>Colmillo Sangrante</translation>
     </message>
     <message>
         <source>Stardust Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>Rayo Estelar</translation>
     </message>
     <message>
         <source>Howling Moon</source>
-        <translation type="unfinished"></translation>
+        <translation>Luna Aullando</translation>
     </message>
     <message>
         <source>Earth Rave</source>
-        <translation type="unfinished"></translation>
+        <translation>Tempestad</translation>
     </message>
     <message>
         <source>Cosmo Memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Memoria Cósmica</translation>
     </message>
     <message>
         <source>Greased Lightning</source>
-        <translation type="unfinished"></translation>
+        <translation>Relámpago Robótico</translation>
     </message>
     <message>
         <source>Clear Tranquil</source>
-        <translation type="unfinished"></translation>
+        <translation>Serenidad</translation>
     </message>
     <message>
         <source>Landscaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Rascacielos</translation>
     </message>
     <message>
         <source>Bloodfest</source>
-        <translation type="unfinished"></translation>
+        <translation>Carnicería</translation>
     </message>
     <message>
         <source>Gauntlet</source>
-        <translation type="unfinished"></translation>
+        <translation>Guante</translation>
     </message>
     <message>
         <source>Doom of the Living</source>
-        <translation type="unfinished"></translation>
+        <translation>Hado de los Vivos</translation>
     </message>
     <message>
         <source>All Creation</source>
-        <translation type="unfinished"></translation>
+        <translation>Toda Creación</translation>
     </message>
     <message>
         <source>Dice</source>
-        <translation type="unfinished"></translation>
+        <translation>Dados</translation>
     </message>
     <message>
         <source>Slots</source>
-        <translation type="unfinished"></translation>
+        <translation>Ranuras</translation>
     </message>
     <message>
         <source>Gallian Beast</source>
-        <translation type="unfinished"></translation>
+        <translation>Bestia Galiana</translation>
     </message>
     <message>
         <source>Death Gigas</source>
-        <translation type="unfinished"></translation>
+        <translation>Gigante Mortal</translation>
     </message>
     <message>
         <source>Hellmasker</source>
-        <translation type="unfinished"></translation>
+        <translation>Máscara Infernal</translation>
     </message>
     <message>
         <source>Chaos</source>
-        <translation type="unfinished"></translation>
+        <translation>Caos</translation>
     </message>
     <message>
         <source>Boost Jump</source>
-        <translation type="unfinished"></translation>
+        <translation>Gran Salto</translation>
     </message>
     <message>
         <source>Dynamite</source>
-        <translation type="unfinished"></translation>
+        <translation>Dinamita</translation>
     </message>
     <message>
         <source>Hyper Jump</source>
-        <translation type="unfinished"></translation>
+        <translation>Super Salto</translation>
     </message>
     <message>
         <source>Dragon</source>
-        <translation type="unfinished"></translation>
+        <translation>Dragón</translation>
     </message>
     <message>
         <source>Dragon Dive</source>
-        <translation type="unfinished"></translation>
+        <translation>Salto Dragón</translation>
     </message>
     <message>
         <source>Big Brawl</source>
-        <translation type="unfinished"></translation>
+        <translation>Gran Alboroto</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation type="unfinished"></translation>
+        <translation>Gran Viento</translation>
     </message>
 </context>
 <context>
