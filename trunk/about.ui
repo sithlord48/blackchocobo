@@ -46,6 +46,7 @@
 background-color: rgb(48, 47, 47);
 font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
 }
+
 QWidget{background-color: rgb(48, 47, 47);
 font: &quot;Ubuntu&quot;;color:rgb(255,255,255);
 }
@@ -443,6 +444,11 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>New: Using Myst6re SaveIcon</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New: This Fancy About Dialog</string>
           </property>
          </item>
@@ -520,26 +526,11 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>349</width>
-            <height>357</height>
+            <width>358</width>
+            <height>392</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_9">
-           <property name="spacing">
-            <number>4</number>
-           </property>
-           <property name="leftMargin">
-            <number>0</number>
-           </property>
-           <property name="topMargin">
-            <number>1</number>
-           </property>
-           <property name="rightMargin">
-            <number>0</number>
-           </property>
-           <property name="bottomMargin">
-            <number>4</number>
-           </property>
            <item>
             <layout class="QVBoxLayout" name="verticalLayout_3">
              <property name="spacing">
@@ -615,6 +606,37 @@ p, li { white-space: pre-wrap; }
                </item>
                <item>
                 <spacer name="horizontalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_22">
+               <item>
+                <widget class="QLabel" name="label_36">
+                 <property name="text">
+                  <string notr="true">Myst6re:</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_37">
+                 <property name="text">
+                  <string>save icon class used to make the psx icon</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_17">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
                  </property>
