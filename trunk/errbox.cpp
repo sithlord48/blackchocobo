@@ -43,14 +43,14 @@ errbox::errbox(QWidget *parent) :
     ui->lbl_regionstring->setText(ff7.SG_Region_String[s].toAscii());
 }
 
-errbox::~errbox()
+ errbox::~errbox()
 {
     delete ui;
 }
 
 void errbox::on_btn_prev_clicked()
 {
-    if(s>0){s--;this->close();}
+    if(s>0){s--;this->done(1);}
     else{QMessageBox::information(this,tr("Your At Slot 1"),tr("Sorry There is no Previous Slot"));}
 }
 
@@ -91,17 +91,17 @@ void errbox::on_btn_export_clicked()
     fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
     fclose(pfile);
     QMessageBox::information(this,tr("Save Successfully"),tr("File Saved Successfully, Going Back To The Selection Dialog"));
-this->close();
+this->done(2);
 }
 
 void errbox::on_btn_view_clicked()
 {
     QMessageBox::information(this,tr("Ingoring Non FF7 Save"),tr("Be Cautious This Might Not Work."));
-    this->close();
+    this->done(0);
 }
 
 void errbox::on_btn_next_clicked()
 {
-    if(s<14){s++; this->close();}
+    if(s<14){s++; this->done(1);}
     else{QMessageBox::information(this,tr("Your At Slot 15"),tr("Sorry There is no Next Slot"));}
 }
