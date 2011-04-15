@@ -2947,63 +2947,63 @@ n&apos;est pas une sauvegarde de FF7.</translation>
     </message>
     <message>
         <source>Non-FF7 Slot Detected</source>
-        <translation type="unfinished">Non-FF7 Slot Détecté</translation>
+        <translation type="obsolete">Non-FF7 Slot Détecté</translation>
     </message>
     <message>
         <source>Please Select An Action To Continue</source>
-        <translation type="unfinished">S&apos;il vous plaît sélectionner une action à poursuivre</translation>
+        <translation type="obsolete">S&apos;il vous plaît sélectionner une action à poursuivre</translation>
     </message>
     <message>
         <source>Pr&amp;evious Slot</source>
-        <translation type="unfinished">Pr&amp;écédent Slot</translation>
+        <translation type="obsolete">Pr&amp;écédent Slot</translation>
     </message>
     <message>
         <source>View &amp;Anyway</source>
-        <translation type="unfinished">Voi&amp;r Quoi qu&apos;il en soit</translation>
+        <translation type="obsolete">Voi&amp;r Quoi qu&apos;il en soit</translation>
     </message>
     <message>
         <source>Export via psx</source>
-        <translation type="unfinished">Exportation via psx</translation>
+        <translation type="obsolete">Exportation via psx</translation>
     </message>
     <message>
         <source>Ne&amp;xt Slot</source>
-        <translation type="unfinished">Sui&amp;vant Slot</translation>
+        <translation type="obsolete">Sui&amp;vant Slot</translation>
     </message>
     <message>
         <source>Your At Slot 15</source>
-        <translation type="unfinished">Votre niveau de la fente 15</translation>
+        <translation type="obsolete">Votre niveau de la fente 15</translation>
     </message>
     <message>
         <source>Sorry There is no Next Slot</source>
-        <translation type="unfinished">Désolé, il n&apos;y a pas de case suivante</translation>
+        <translation type="obsolete">Désolé, il n&apos;y a pas de case suivante</translation>
     </message>
     <message>
         <source>Your At Slot 1</source>
-        <translation type="unfinished">Votre À Slot 1</translation>
+        <translation type="obsolete">Votre À Slot 1</translation>
     </message>
     <message>
         <source>Sorry There is no Previous Slot</source>
-        <translation type="unfinished">Désolé, il n&apos;y a pas de logement précédent</translation>
+        <translation type="obsolete">Désolé, il n&apos;y a pas de logement précédent</translation>
     </message>
     <message>
         <source>Ingoring Non FF7 Save</source>
-        <translation type="unfinished">Ignorant non FF7 Enregistrer</translation>
+        <translation type="obsolete">Ignorant non FF7 Enregistrer</translation>
     </message>
     <message>
         <source>Be Cautious This Might Not Work.</source>
-        <translation type="unfinished">Soyez prudent cela ne fonctionne pas.</translation>
+        <translation type="obsolete">Soyez prudent cela ne fonctionne pas.</translation>
     </message>
     <message>
         <source>Save Raw PSX File</source>
-        <translation type="unfinished">Enregistrer le fichier Raw PSX</translation>
+        <translation type="obsolete">Enregistrer le fichier Raw PSX</translation>
     </message>
     <message>
         <source>All Files(*)</source>
-        <translation type="unfinished">Tous les fichiers(*)</translation>
+        <translation type="obsolete">Tous les fichiers(*)</translation>
     </message>
     <message>
         <source>Save Successfully</source>
-        <translation type="unfinished">Ajoutez le succès</translation>
+        <translation type="obsolete">Ajoutez le succès</translation>
     </message>
     <message>
         <source>File Saved Sucessfully, Going Back To The Selection Dialog</source>
@@ -3061,7 +3061,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Current Slot</source>
-        <translation type="unfinished">Current Slot</translation>
+        <translation type="obsolete">Current Slot</translation>
     </message>
     <message>
         <source>Export Raw PSX Save</source>
@@ -3114,7 +3114,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>File Saved Successfully, Going Back To The Selection Dialog</source>
-        <translation type="unfinished">Fichier enregistré avec succès, pour revenir à la boîte de sélection</translation>
+        <translation type="obsolete">Fichier enregistré avec succès, pour revenir à la boîte de sélection</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -4249,6 +4249,103 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Early Win32 Tester</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Using Myst6re SaveIcon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>save icon class used to make the psx icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>errbox</name>
+    <message>
+        <source>Non Final Fantasy VII Slot Detected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please Select An Action To Continue</source>
+        <translation type="unfinished">S&apos;il vous plaît sélectionner une action à poursuivre</translation>
+    </message>
+    <message>
+        <source>Slot Preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Region String</source>
+        <translation type="unfinished">Région</translation>
+    </message>
+    <message>
+        <source>TextLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Previous Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>View Anyway </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>    &amp;Next Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Export As Raw PSX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your At Slot 1</source>
+        <translation type="unfinished">Votre À Slot 1</translation>
+    </message>
+    <message>
+        <source>Sorry There is no Previous Slot</source>
+        <translation type="unfinished">Désolé, il n&apos;y a pas de logement précédent</translation>
+    </message>
+    <message>
+        <source>Save Raw PSX File</source>
+        <translation type="unfinished">Enregistrer le fichier Raw PSX</translation>
+    </message>
+    <message>
+        <source>All Files(*)</source>
+        <translation type="unfinished">Tous les fichiers(*)</translation>
+    </message>
+    <message>
+        <source>Black Chocobo</source>
+        <translation type="unfinished">Black Chocobo</translation>
+    </message>
+    <message>
+        <source>Cannot write file %1:
+%2.</source>
+        <translation type="unfinished">Impossible d&apos;écrire dans le fichier %1:
+%2.</translation>
+    </message>
+    <message>
+        <source>Save Successfully</source>
+        <translation type="unfinished">Ajoutez le succès</translation>
+    </message>
+    <message>
+        <source>File Saved Successfully, Going Back To The Selection Dialog</source>
+        <translation type="unfinished">Fichier enregistré avec succès, pour revenir à la boîte de sélection</translation>
+    </message>
+    <message>
+        <source>Ingoring Non FF7 Save</source>
+        <translation type="unfinished">Ignorant non FF7 Enregistrer</translation>
+    </message>
+    <message>
+        <source>Be Cautious This Might Not Work.</source>
+        <translation type="unfinished">Soyez prudent cela ne fonctionne pas.</translation>
+    </message>
+    <message>
+        <source>Your At Slot 15</source>
+        <translation type="unfinished">Votre niveau de la fente 15</translation>
+    </message>
+    <message>
+        <source>Sorry There is no Next Slot</source>
+        <translation type="unfinished">Désolé, il n&apos;y a pas de case suivante</translation>
     </message>
 </context>
 </TS>

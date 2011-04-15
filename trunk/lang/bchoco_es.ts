@@ -3049,11 +3049,11 @@ no es un Archivo de Guardado de FF7.</translation>
     </message>
     <message>
         <source>Non-FF7 Slot Detected</source>
-        <translation>Ranura No-FF7 Detectada</translation>
+        <translation type="obsolete">Ranura No-FF7 Detectada</translation>
     </message>
     <message>
         <source>Please Select An Action To Continue</source>
-        <translation>Por favor selecciona una acción para continuar</translation>
+        <translation type="obsolete">Por favor selecciona una acción para continuar</translation>
     </message>
     <message>
         <source>Curent Slot</source>
@@ -3061,55 +3061,55 @@ no es un Archivo de Guardado de FF7.</translation>
     </message>
     <message>
         <source>Pr&amp;evious Slot</source>
-        <translation>Ranura An&amp;terior</translation>
+        <translation type="obsolete">Ranura An&amp;terior</translation>
     </message>
     <message>
         <source>View &amp;Anyway</source>
-        <translation>Ver De T&amp;odas Formas</translation>
+        <translation type="obsolete">Ver De T&amp;odas Formas</translation>
     </message>
     <message>
         <source>Export via psx</source>
-        <translation>Exportar via psx</translation>
+        <translation type="obsolete">Exportar via psx</translation>
     </message>
     <message>
         <source>Ne&amp;xt Slot</source>
-        <translation>Ranura Si&amp;guiente</translation>
+        <translation type="obsolete">Ranura Si&amp;guiente</translation>
     </message>
     <message>
         <source>Your At Slot 15</source>
-        <translation>Estás en la ranura 15</translation>
+        <translation type="obsolete">Estás en la ranura 15</translation>
     </message>
     <message>
         <source>Sorry There is no Next Slot</source>
-        <translation>Lo siento no hay ranura siguiente</translation>
+        <translation type="obsolete">Lo siento no hay ranura siguiente</translation>
     </message>
     <message>
         <source>Your At Slot 1</source>
-        <translation>Estás en la ranura 1</translation>
+        <translation type="obsolete">Estás en la ranura 1</translation>
     </message>
     <message>
         <source>Sorry There is no Previous Slot</source>
-        <translation>Lo siento no hay ranura anterior</translation>
+        <translation type="obsolete">Lo siento no hay ranura anterior</translation>
     </message>
     <message>
         <source>Ingoring Non FF7 Save</source>
-        <translation>Ignorando partida guardada No-FF7</translation>
+        <translation type="obsolete">Ignorando partida guardada No-FF7</translation>
     </message>
     <message>
         <source>Be Cautious This Might Not Work.</source>
-        <translation>Cuidado, puede que no funcione.</translation>
+        <translation type="obsolete">Cuidado, puede que no funcione.</translation>
     </message>
     <message>
         <source>Save Raw PSX File</source>
-        <translation>Guardar archivo PSX RAW</translation>
+        <translation type="obsolete">Guardar archivo PSX RAW</translation>
     </message>
     <message>
         <source>All Files(*)</source>
-        <translation>Todos los archivos(*)</translation>
+        <translation type="obsolete">Todos los archivos(*)</translation>
     </message>
     <message>
         <source>Save Successfully</source>
-        <translation>Guardado con éxito</translation>
+        <translation type="obsolete">Guardado con éxito</translation>
     </message>
     <message>
         <source>File Saved Sucessfully, Going Back To The Selection Dialog</source>
@@ -3181,7 +3181,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Current Slot</source>
-        <translation>Ranura Actual</translation>
+        <translation type="obsolete">Ranura Actual</translation>
     </message>
     <message>
         <source>Export Raw PSX Save</source>
@@ -3235,7 +3235,7 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>File Saved Successfully, Going Back To The Selection Dialog</source>
-        <translation>Archivo guardado con éxito, Volviendo a la pantalla de selección</translation>
+        <translation type="obsolete">Archivo guardado con éxito, Volviendo a la pantalla de selección</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -4815,6 +4815,103 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Early Win32 Tester</source>
         <translation>Probador de Win32</translation>
+    </message>
+    <message>
+        <source>New: Using Myst6re SaveIcon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>save icon class used to make the psx icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>errbox</name>
+    <message>
+        <source>Non Final Fantasy VII Slot Detected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please Select An Action To Continue</source>
+        <translation type="unfinished">Por favor selecciona una acción para continuar</translation>
+    </message>
+    <message>
+        <source>Slot Preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Region String</source>
+        <translation type="unfinished">String de Región</translation>
+    </message>
+    <message>
+        <source>TextLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Previous Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>View Anyway </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>    &amp;Next Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Export As Raw PSX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your At Slot 1</source>
+        <translation type="unfinished">Estás en la ranura 1</translation>
+    </message>
+    <message>
+        <source>Sorry There is no Previous Slot</source>
+        <translation type="unfinished">Lo siento no hay ranura anterior</translation>
+    </message>
+    <message>
+        <source>Save Raw PSX File</source>
+        <translation type="unfinished">Guardar archivo PSX RAW</translation>
+    </message>
+    <message>
+        <source>All Files(*)</source>
+        <translation type="unfinished">Todos los archivos(*)</translation>
+    </message>
+    <message>
+        <source>Black Chocobo</source>
+        <translation type="unfinished">Chocobo Negro</translation>
+    </message>
+    <message>
+        <source>Cannot write file %1:
+%2.</source>
+        <translation type="unfinished">No se puede escribir el archivo%1:
+%2.</translation>
+    </message>
+    <message>
+        <source>Save Successfully</source>
+        <translation type="unfinished">Guardado con éxito</translation>
+    </message>
+    <message>
+        <source>File Saved Successfully, Going Back To The Selection Dialog</source>
+        <translation type="unfinished">Archivo guardado con éxito, Volviendo a la pantalla de selección</translation>
+    </message>
+    <message>
+        <source>Ingoring Non FF7 Save</source>
+        <translation type="unfinished">Ignorando partida guardada No-FF7</translation>
+    </message>
+    <message>
+        <source>Be Cautious This Might Not Work.</source>
+        <translation type="unfinished">Cuidado, puede que no funcione.</translation>
+    </message>
+    <message>
+        <source>Your At Slot 15</source>
+        <translation type="unfinished">Estás en la ranura 15</translation>
+    </message>
+    <message>
+        <source>Sorry There is no Next Slot</source>
+        <translation type="unfinished">Lo siento no hay ranura siguiente</translation>
     </message>
 </context>
 </TS>

@@ -2601,66 +2601,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Non-FF7 Slot Detected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Please Select An Action To Continue</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Pr&amp;evious Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>View &amp;Anyway</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Export via psx</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ne&amp;xt Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your At Slot 15</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sorry There is no Next Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Your At Slot 1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sorry There is no Previous Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ingoring Non FF7 Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Be Cautious This Might Not Work.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save Raw PSX File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>All Files(*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save Successfully</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Export Current Character</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2715,10 +2655,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Current Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Export Raw PSX Save</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2763,10 +2699,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>File Saved Successfully, Going Back To The Selection Dialog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3429,6 +3361,102 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Early Win32 Tester</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Using Myst6re SaveIcon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>save icon class used to make the psx icon</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>errbox</name>
+    <message>
+        <source>Non Final Fantasy VII Slot Detected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please Select An Action To Continue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot Preview</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Region String</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TextLabel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Previous Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>View Anyway </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>    &amp;Next Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Export As Raw PSX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your At Slot 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sorry There is no Previous Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Raw PSX File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All Files(*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Black Chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot write file %1:
+%2.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Successfully</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File Saved Successfully, Going Back To The Selection Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ingoring Non FF7 Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Be Cautious This Might Not Work.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your At Slot 15</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sorry There is no Next Slot</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
