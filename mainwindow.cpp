@@ -2063,14 +2063,33 @@ void MainWindow::guirefresh(void)
 {
     load = true; //used to cheat the removal of "apply buttons"
     /*~~~~Check for SG type and ff7~~~~*/
-    top:
     if(ff7.savetype == 3 || ff7.savetype == 5 )
     {
         if(ff7.SG_Region_String[s].contains("00867") || ff7.SG_Region_String[s].contains("00869") ||
            ff7.SG_Region_String[s].contains("00900") || ff7.SG_Region_String[s].contains("94163") ||
            ff7.SG_Region_String[s].contains("00700") || ff7.SG_Region_String[s].contains("01057") ||
            ff7.SG_Region_String[s].isEmpty())    {/*FF7 Save Game*/ }
-        else {errbox error; error.exec();goto top;}//NOT FF7
+        else
+        {
+            errbox error;
+            switch(error.exec())
+            {
+            case 0://View Anyway..
+            break;
+
+            case 1://Previous or next was clicked
+            guirefresh();
+            break;
+
+            case 2://export as psx
+            SlotSelect selector;
+            selector.exec();
+            guirefresh();
+            break;
+}
+
+
+        }//NOT FF7
     }
 /*~~~~ END Type Check~~~~*/
     ui->lcd_current_slot->display(s+1);
