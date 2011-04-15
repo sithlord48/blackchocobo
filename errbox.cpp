@@ -2,7 +2,6 @@
 #include "ui_errbox.h"
 #include <QFileDialog> // for file dialogs
 #include "globals.h"    // contains checksumming functions
-#include "mainwindow.h"
 #include <SaveIcon.h>
 /*~~~~~GLOBALS~~~~~~*/
 extern FF7 ff7; // our save file struct
