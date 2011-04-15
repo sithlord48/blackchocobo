@@ -23,17 +23,22 @@ SOURCES += main.cpp \
     slotselect.cpp \
     globals.cpp \
     about.cpp \
-    options.cpp
+    options.cpp \
+    SaveIcon.cpp \
+    errbox.cpp
 HEADERS += mainwindow.h \
     FF7SAVE.h \
     slotselect.h \
     about.h \
     globals.h \
-    options.h
+    options.h \
+    SaveIcon.h \
+    errbox.h
 FORMS += mainwindow.ui \
     slotselect.ui \
     about.ui \
-    options.ui
+    options.ui \
+    errbox.ui
 RESOURCES += images.qrc
 TRANSLATIONS += lang/bchoco_en.ts \
     lang/bchoco_es.ts \
