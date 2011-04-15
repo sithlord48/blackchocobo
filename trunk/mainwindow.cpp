@@ -22,7 +22,9 @@
 #include "slotselect.h" // slot selection dialog stuff.
 #include "options.h" // contains the options dialog
 #include "about.h"      // about dialog stuff.
+#include "errbox.h" //non ff7 error box
 #include <QSettings>
+#include <SaveIcon.h>
 /*~~~~~GLOBALS~~~~~~*/
 bool load =false; //used for checking if data is initial load (to block some overrights when gui objects change)
 extern FF7 ff7; // our save file struct
@@ -529,109 +531,63 @@ void MainWindow::on_actionSave_File_activated()
                     switch(i)
                     {
                     case 0:
-                            for(int P=0;P<512;P++)
-                            {
-                                if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
-                                else{ff7.hf[i].sl_header[P]= 0x00;}
-                            }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
                         break;
+
                     case 1:
-                            for(int P=0;P<512;P++)
-                            {
-                                if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S02[P];}
-                                else{ff7.hf[i].sl_header[P]= 0x00;}
-                            }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S02[P];}
                         break;
+
                     case 2:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S03[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S03[P];}
                         break;
+
                     case 3:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S04[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S04[P];}
                         break;
+
                     case 4:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S05[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S05[P];}
                         break;
+
                     case 5:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S06[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S06[P];}
                         break;
+
                     case 6:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S07[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S07[P];}
                         break;
+
                     case 7:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S08[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S08[P];}
                         break;
+
                     case 8:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S09[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S09[P];}
                         break;
+
                     case 9:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S10[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S10[P];}
                         break;
+
                     case 10:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S11[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S11[P];}
                         break;
+
                     case 11:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S12[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S12[P];}
                         break;
+
                     case 12:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S13[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S13[P];}
                         break;
+
                     case 13:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S14[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S14[P];}
                         break;
+
                     case 14:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S15[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S15[P];}
                         break;
                     }
                     if((ff7.slot[i].time/3600)>99){ff7.hf[i].sl_header[27]=0x58;ff7.hf[i].sl_header[29]=0x58;}
@@ -705,111 +661,64 @@ void MainWindow::on_actionSave_File_activated()
                     switch(i)
                     {
                     case 0:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
-                        break;
-                    case 1:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S02[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
-                        break;
-                    case 2:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S03[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
-                        break;
-                    case 3:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S04[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
-                        break;
-                    case 4:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S05[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
-                        break;
-                    case 5:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S06[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
-                        break;
-                    case 6:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S07[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
-                        break;
-                    case 7:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S08[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
-                        break;
-                    case 8:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S09[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
-                        break;
-                    case 9:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S10[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
-                        break;
-                    case 10:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S11[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
-                        break;
-                    case 11:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S12[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
-                        break;
-                    case 12:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S13[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
-                        break;
-                    case 13:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S14[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
-                        break;
-                    case 14:
-                        for(int P=0;P<512;P++)
-                        {
-                            if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S15[P];}
-                            else{ff7.hf[i].sl_header[P]= 0x00;}
-                        }
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
                         break;
 
+                    case 1:
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S02[P];}
+                        break;
+
+                    case 2:
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S03[P];}
+                        break;
+
+                    case 3:
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S04[P];}
+                        break;
+
+                    case 4:
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S05[P];}
+                        break;
+
+                    case 5:
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S06[P];}
+                        break;
+
+                    case 6:
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S07[P];}
+                        break;
+
+                    case 7:
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S08[P];}
+                        break;
+
+                    case 8:
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S09[P];}
+                        break;
+
+                    case 9:
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S10[P];}
+                        break;
+
+                    case 10:
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S11[P];}
+                        break;
+
+                    case 11:
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S12[P];}
+                        break;
+
+                    case 12:
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S13[P];}
+                        break;
+
+                    case 13:
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S14[P];}
+                        break;
+
+                    case 14:
+                        for(int P=0;P<512;P++){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S15[P];}
+                        break;
                     }
                     if((ff7.slot[i].time/3600)>99){ff7.hf[i].sl_header[27]=0x58;ff7.hf[i].sl_header[29]=0x58;}
                     else
@@ -2154,80 +2063,14 @@ void MainWindow::guirefresh(void)
 {
     load = true; //used to cheat the removal of "apply buttons"
     /*~~~~Check for SG type and ff7~~~~*/
+    top:
     if(ff7.savetype == 3 || ff7.savetype == 5 )
     {
-        if(ff7.SG_Region_String[s].contains("00867") ||
-           ff7.SG_Region_String[s].contains("00869") ||
-           ff7.SG_Region_String[s].contains("00900") ||
-           ff7.SG_Region_String[s].contains("94163") ||
-           ff7.SG_Region_String[s].contains("00700") ||
-           ff7.SG_Region_String[s].contains("01057") ||
-           ff7.SG_Region_String[s].isEmpty())
-        {/*FF7 Save Game*/ }
-        else // NON FF7 save slot detected create error box and wait for input
-        {
-            QMessageBox errbox;
-            errbox.setWindowTitle(tr("Non-FF7 Slot Detected"));
-            errbox.setText(tr("Please Select An Action To Continue"));
-            errbox.setInformativeText(tr("Current Slot") + "::" + ff7.SG_Region_String[s]);
-            QPushButton *prev = errbox.addButton(tr("Pr&evious Slot"),QMessageBox::ActionRole); prev->setIcon(QIcon(":icon/prev"));
-            QPushButton *ingore = errbox.addButton(tr("View &Anyway"),QMessageBox::ActionRole); ingore->setIcon(QIcon(":icon/quit"));
-            QPushButton *export_psx = errbox.addButton(tr("Export via psx"),QMessageBox::ActionRole); export_psx->setIcon(QIcon(":icon/psxmc"));
-            QPushButton *next = errbox.addButton("    "+tr("Ne&xt Slot"),QMessageBox::ActionRole);next->setIcon(QIcon(":icon/next"));next->setLayoutDirection(Qt::RightToLeft);
-            errbox.exec();
-            if(errbox.clickedButton() ==next)
-            {
-                if(s<14){s++; guirefresh();}
-                else{QMessageBox::information(this,tr("Your At Slot 15"),tr("Sorry There is no Next Slot"));guirefresh();}
-            }
-            else if(errbox.clickedButton() ==prev)
-            {
-                if(s>0){s--; guirefresh();}
-                else{QMessageBox::information(this,tr("Your At Slot 1"),tr("Sorry There is no Previous Slot"));guirefresh();}
-            }
-            else if(errbox.clickedButton() == ingore)
-            {QMessageBox::information(this,tr("Ingoring Non FF7 Save"),tr("Be Cautious This Might Not Work."));}
-
-            else if(errbox.clickedButton() == export_psx)
-            {
-                QString fileName = QFileDialog::getSaveFileName(this,
-                tr("Save Raw PSX File"), ff7.SG_Region_String[s],
-                tr("All Files(*)"));
-                if(fileName ==""){return;}
-
-                ff7.SG_SIZE          = FF7_PSX_SAVE_GAME_SIZE;
-                ff7.SG_HEADER        = FF7_PSX_SAVE_GAME_HEADER;
-                ff7.SG_FOOTER        = FF7_PSX_SAVE_GAME_FOOTER;
-                ff7.SG_DATA_SIZE     = FF7_PSX_SAVE_GAME_DATA_SIZE;
-                ff7.SG_SLOT_HEADER   = FF7_PSX_SAVE_GAME_SLOT_HEADER;
-                ff7.SG_SLOT_FOOTER   = FF7_PSX_SAVE_GAME_SLOT_FOOTER;
-                ff7.SG_SLOT_SIZE     = FF7_PSX_SAVE_GAME_SLOT_SIZE;
-                ff7.SG_SLOT_NUMBER   = FF7_PSX_SAVE_GAME_SLOT_NUMBER;
-                ff7.SG_TYPE          = "PSX";
-                ff7.file_headerp     = ff7.file_header_psx;           //pointer to psx file header
-                ff7.file_footerp     = ff7.file_footer_psx;           //pointer to psx file footer
-
-                /*~~~~~~~ SHORT SAVE - SITHLORD48 ~~~~~~~~~*/
-                QFile file(fileName);
-                if(!file.open(QFile::ReadWrite))
-                {
-                    QMessageBox::warning(this, tr("Black Chocobo"),
-                    tr("Cannot write file %1:\n%2.")
-                        .arg(fileName)
-                        .arg(file.errorString()));
-                    return;
-                }
-                FILE *pfile; // this section is starting to work correctly!
-                pfile = fopen(fileName.toAscii(),"wb");
-                fwrite(ff7.hf[s].sl_header,ff7.SG_SLOT_HEADER,1,pfile); // Write Header.
-                fwrite(&ff7.slot[s],ff7.SG_DATA_SIZE,1,pfile);
-                fwrite(ff7.hf[s].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
-                fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
-                fclose(pfile);
-                QMessageBox::information(this,tr("Save Successfully"),tr("File Saved Successfully, Going Back To The Selection Dialog"));
-                guirefresh();
-            }
-         }
+        if(ff7.SG_Region_String[s].contains("00867") || ff7.SG_Region_String[s].contains("00869") ||
+           ff7.SG_Region_String[s].contains("00900") || ff7.SG_Region_String[s].contains("94163") ||
+           ff7.SG_Region_String[s].contains("00700") || ff7.SG_Region_String[s].contains("01057") ||
+           ff7.SG_Region_String[s].isEmpty())    {/*FF7 Save Game*/ }
+        else {errbox error; error.exec();goto top;}//NOT FF7
     }
 /*~~~~ END Type Check~~~~*/
     ui->lcd_current_slot->display(s+1);
@@ -2284,24 +2127,27 @@ void MainWindow::guirefresh(void)
     ui->actionSlot_15->setIcon(QIcon(":icon/15_unsel"));
     ui->menuRegion->setEnabled(0);
     ui->actionNew_Game_Plus->setEnabled(0);
+
     switch(s)
-    {
-        case 0:ui->actionSlot_01->setChecked(1);ui->actionSlot_01->setIcon(QIcon(":icon/1_sel"));ui->lbl_slot_icon->setPixmap(QPixmap(":/icon/slot1"));break;
-        case 1:ui->actionSlot_02->setChecked(1);ui->actionSlot_02->setIcon(QIcon(":icon/2_sel"));ui->lbl_slot_icon->setPixmap(QPixmap(":/icon/slot2"));break;
-        case 2:ui->actionSlot_03->setChecked(1);ui->actionSlot_03->setIcon(QIcon(":icon/3_sel"));ui->lbl_slot_icon->setPixmap(QPixmap(":/icon/slot3"));break;
-        case 3:ui->actionSlot_04->setChecked(1);ui->actionSlot_04->setIcon(QIcon(":icon/4_sel"));ui->lbl_slot_icon->setPixmap(QPixmap(":/icon/slot4"));break;
-        case 4:ui->actionSlot_05->setChecked(1);ui->actionSlot_05->setIcon(QIcon(":icon/5_sel"));ui->lbl_slot_icon->setPixmap(QPixmap(":/icon/slot5"));break;
-        case 5:ui->actionSlot_06->setChecked(1);ui->actionSlot_06->setIcon(QIcon(":icon/6_sel"));ui->lbl_slot_icon->setPixmap(QPixmap(":/icon/slot6"));break;
-        case 6:ui->actionSlot_07->setChecked(1);ui->actionSlot_07->setIcon(QIcon(":icon/7_sel"));ui->lbl_slot_icon->setPixmap(QPixmap(":/icon/slot7"));break;
-        case 7:ui->actionSlot_08->setChecked(1);ui->actionSlot_08->setIcon(QIcon(":icon/8_sel"));ui->lbl_slot_icon->setPixmap(QPixmap(":/icon/slot8"));break;
-        case 8:ui->actionSlot_09->setChecked(1);ui->actionSlot_09->setIcon(QIcon(":icon/9_sel"));ui->lbl_slot_icon->setPixmap(QPixmap(":/icon/slot9"));break;
-        case 9:ui->actionSlot_10->setChecked(1);ui->actionSlot_10->setIcon(QIcon(":icon/10_sel"));ui->lbl_slot_icon->setPixmap(QPixmap(":/icon/slot10"));break;
-        case 10:ui->actionSlot_11->setChecked(1);ui->actionSlot_11->setIcon(QIcon(":icon/11_sel"));ui->lbl_slot_icon->setPixmap(QPixmap(":/icon/slot11"));break;
-        case 11:ui->actionSlot_12->setChecked(1);ui->actionSlot_12->setIcon(QIcon(":icon/12_sel"));ui->lbl_slot_icon->setPixmap(QPixmap(":/icon/slot12"));break;
-        case 12:ui->actionSlot_13->setChecked(1);ui->actionSlot_13->setIcon(QIcon(":icon/13_sel"));ui->lbl_slot_icon->setPixmap(QPixmap(":/icon/slot13"));break;
-        case 13:ui->actionSlot_14->setChecked(1);ui->actionSlot_14->setIcon(QIcon(":icon/14_sel"));ui->lbl_slot_icon->setPixmap(QPixmap(":/icon/slot14"));break;
-        case 14:ui->actionSlot_15->setChecked(1);ui->actionSlot_15->setIcon(QIcon(":icon/15_sel"));ui->lbl_slot_icon->setPixmap(QPixmap(":/icon/slot15"));break;
-    }
+       {
+           case 0:ui->actionSlot_01->setChecked(1);ui->actionSlot_01->setIcon(QIcon(":icon/1_sel"));break;
+           case 1:ui->actionSlot_02->setChecked(1);ui->actionSlot_02->setIcon(QIcon(":icon/2_sel"));break;
+           case 2:ui->actionSlot_03->setChecked(1);ui->actionSlot_03->setIcon(QIcon(":icon/3_sel"));break;
+           case 3:ui->actionSlot_04->setChecked(1);ui->actionSlot_04->setIcon(QIcon(":icon/4_sel"));break;
+           case 4:ui->actionSlot_05->setChecked(1);ui->actionSlot_05->setIcon(QIcon(":icon/5_sel"));break;
+           case 5:ui->actionSlot_06->setChecked(1);ui->actionSlot_06->setIcon(QIcon(":icon/6_sel"));break;
+           case 6:ui->actionSlot_07->setChecked(1);ui->actionSlot_07->setIcon(QIcon(":icon/7_sel"));break;
+           case 7:ui->actionSlot_08->setChecked(1);ui->actionSlot_08->setIcon(QIcon(":icon/8_sel"));break;
+           case 8:ui->actionSlot_09->setChecked(1);ui->actionSlot_09->setIcon(QIcon(":icon/9_sel"));break;
+           case 9:ui->actionSlot_10->setChecked(1);ui->actionSlot_10->setIcon(QIcon(":icon/10_sel"));break;
+           case 10:ui->actionSlot_11->setChecked(1);ui->actionSlot_11->setIcon(QIcon(":icon/11_sel"));break;
+           case 11:ui->actionSlot_12->setChecked(1);ui->actionSlot_12->setIcon(QIcon(":icon/12_sel"));break;
+           case 12:ui->actionSlot_13->setChecked(1);ui->actionSlot_13->setIcon(QIcon(":icon/13_sel"));break;
+           case 13:ui->actionSlot_14->setChecked(1);ui->actionSlot_14->setIcon(QIcon(":icon/14_sel"));break;
+           case 14:ui->actionSlot_15->setChecked(1);ui->actionSlot_15->setIcon(QIcon(":icon/15_sel"));break;
+       }
+
+
     if (ff7.savetype ==1)//PC
     {
         ui->actionImport_char->setEnabled(1);
@@ -2368,6 +2214,7 @@ void MainWindow::guirefresh(void)
         ui->actionSlot_13->setEnabled(0);
         ui->actionSlot_14->setEnabled(0);
         ui->actionSlot_15->setEnabled(0);
+
     }
     else if (ff7.savetype == 3)//mcr/mcd
     {
@@ -2522,6 +2369,13 @@ void MainWindow::guirefresh(void)
     else if (ff7.SG_Region_String[s].contains("01057")){ui->action_Region_JPN_International->setChecked(Qt::Checked);ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_sel"));}
     else {/*QMessageBox::information(this,tr("Region Detect Error"),tr("Unknow Region String, this is  not a ff7 save"));*/}
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s]);
+    if (ff7.savetype == 2 || ff7.savetype == 3 || ff7.savetype ==5)
+    {
+        QByteArray data;
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[s].sl_header[i]);}
+        SaveIcon ico(data.mid(96,160));
+        ui->lbl_slot_icon->setPixmap(ico.icon());
+    }
 /*~~~~~End of menu options~~~~*/
 /*~~~~~Load Game Options~~~~~*/
     if((ff7.slot[s].options1)& (1<<0)){ui->combo_sound->setCurrentIndex(1);}

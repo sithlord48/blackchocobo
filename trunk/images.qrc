@@ -130,21 +130,6 @@
         <file alias="scroll_handle_v">icon/scroll_handle_v.png</file>
         <file alias="mslot">icon/mslot.png</file>
         <file alias="mlink">icon/mlink.png</file>
-        <file alias="slot1">icon/slot1.png</file>
-        <file alias="slot2">icon/slot2.png</file>
-        <file alias="slot3">icon/slot3.png</file>
-        <file alias="slot4">icon/slot4.png</file>
-        <file alias="slot5">icon/slot5.png</file>
-        <file alias="slot6">icon/slot6.png</file>
-        <file alias="slot7">icon/slot7.png</file>
-        <file alias="slot8">icon/slot8.png</file>
-        <file alias="slot9">icon/slot9.png</file>
-        <file alias="slot10">icon/slot10.png</file>
-        <file alias="slot11">icon/slot11.png</file>
-        <file alias="slot12">icon/slot12.png</file>
-        <file alias="slot13">icon/slot13.png</file>
-        <file alias="slot14">icon/slot14.png</file>
-        <file alias="slot15">icon/slot15.png</file>
         <file alias="default_setting">icon/default_setting.png</file>
     </qresource>
 </RCC>
