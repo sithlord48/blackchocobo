@@ -444,7 +444,7 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
-           <string>New: Using Myst6re SaveIcon</string>
+           <string>New: Using Myst6re SaveIcon Class</string>
           </property>
          </item>
          <item>
@@ -526,7 +526,7 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>358</width>
+            <width>357</width>
             <height>392</height>
            </rect>
           </property>
@@ -1104,8 +1104,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>349</width>
-            <height>390</height>
+            <width>138</width>
+            <height>740</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">

@@ -2208,10 +2208,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FF7 MC SaveGame(*.mcr *.mcd)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Save Final Fantasy 7 PSV SaveGame</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2663,10 +2659,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Raw PSX FF7 SaveGame (*-S*)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2952,6 +2944,14 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.mcr *.mcd *.mc *.ddf *.ps *.psm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mc *.ddf *.ps *.psm);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7 MC SaveGame(*.mcr *.mcd *.mc *.ddf *.ps *.psm)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3364,11 +3364,11 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New: Using Myst6re SaveIcon</source>
+        <source>save icon class used to make the psx icon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>save icon class used to make the psx icon</source>
+        <source>New: Using Myst6re SaveIcon Class</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

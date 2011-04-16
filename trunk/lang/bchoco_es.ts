@@ -2571,7 +2571,7 @@ no es un Archivo de Guardado de FF7.</translation>
     </message>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd)</source>
-        <translation>Partida Guardada de FF7 MC(*.mcr *.mcd)</translation>
+        <translation type="obsolete">Partida Guardada de FF7 MC(*.mcr *.mcd)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 PSV SaveGame</source>
@@ -3193,7 +3193,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</source>
-        <translation>Tipos de archivo FF7 conocidos (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;Partida guardada FF7 PC (*.ff7);;Partida guardada FF7 PSX (Raw) (*-S*);;Partida guardada MC(*.mcr *.mcd);;Partida guardada PSV (*.psv);;Partida guardada PSP (*.vmp)</translation>
+        <translation type="obsolete">Tipos de archivo FF7 conocidos (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;Partida guardada FF7 PC (*.ff7);;Partida guardada FF7 PSX (Raw) (*-S*);;Partida guardada MC(*.mcr *.mcd);;Partida guardada PSV (*.psv);;Partida guardada PSP (*.vmp)</translation>
     </message>
     <message>
         <source>Raw PSX FF7 SaveGame (*-S*)</source>
@@ -3486,6 +3486,14 @@ no es una partida guardada de FF7</translation>
     <message>
         <source>Highwind</source>
         <translation>Gran Viento</translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.mcr *.mcd *.mc *.ddf *.ps *.psm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mc *.ddf *.ps *.psm);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7 MC SaveGame(*.mcr *.mcd *.mc *.ddf *.ps *.psm)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4817,11 +4825,11 @@ p, li { white-space: pre-wrap; }
         <translation>Probador de Win32</translation>
     </message>
     <message>
-        <source>New: Using Myst6re SaveIcon</source>
+        <source>save icon class used to make the psx icon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>save icon class used to make the psx icon</source>
+        <source>New: Using Myst6re SaveIcon Class</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -16975,7 +16975,7 @@ image: url(:/icon/cait_icon);
             <property name="minimumSize">
              <size>
               <width>184</width>
-              <height>66</height>
+              <height>75</height>
              </size>
             </property>
             <property name="title">
@@ -16996,14 +16996,14 @@ image: url(:/icon/cait_icon);
               <widget class="QLabel" name="lbl_slot_icon">
                <property name="minimumSize">
                 <size>
-                 <width>32</width>
-                 <height>32</height>
+                 <width>64</width>
+                 <height>64</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>32</width>
-                 <height>32</height>
+                 <width>64</width>
+                 <height>64</height>
                 </size>
                </property>
                <property name="sizeIncrement">
