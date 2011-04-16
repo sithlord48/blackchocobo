@@ -41,7 +41,6 @@ QString filename;
 MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
     for (int i=0; i<256; i++)
     {
         for (int j=255; j>=0; j--)
@@ -175,7 +174,7 @@ void MainWindow::on_actionOpen_Save_File_activated()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Open Final Fantasy 7 Save"),settings.value("load_path").toString(),
-    tr("Known FF7 Save Types (*.ff7 *-S* *.mcr *.mcd *.psv *.vmp);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)"));
+    tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.mcr *.mcd *.mc *.ddf *.ps *.psm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mc *.ddf *.ps *.psm);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)"));
     if (!fileName.isEmpty()) loadFileFull(fileName);
 }
 
@@ -492,7 +491,7 @@ void MainWindow::on_actionSave_File_activated()
     {
         QString fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 MC SaveGame"), settings.value("save_emu_path").toString(),
-        tr("FF7 MC SaveGame(*.mcr *.mcd)"));
+        tr("FF7 MC SaveGame(*.mcr *.mcd *.mc *.ddf *.ps *.psm)"));
 
         if (!fileName.isEmpty())
         {
@@ -1025,7 +1024,7 @@ void MainWindow::on_actionExport_MC_triggered()
 
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 MC SaveGame"), settings.value("save_emu_path").toString(),
-    tr("FF7 MC SaveGame(*.mcr *.mcd)"));
+    tr("FF7 MC SaveGame(*.mcr *.mcd *.mc *.ddf *.ps *.psm)"));
 
     if(fileName==""){return;}
 
@@ -2393,7 +2392,7 @@ void MainWindow::guirefresh(void)
         QByteArray data;
         for(int i=0;i<0x200;i++){data.append(ff7.hf[s].sl_header[i]);}
         SaveIcon ico(data.mid(96,160));
-        ui->lbl_slot_icon->setPixmap(ico.icon());
+        ui->lbl_slot_icon->setPixmap(ico.icon().scaledToHeight(64,Qt::SmoothTransformation));
     }
 /*~~~~~End of menu options~~~~*/
 /*~~~~~Load Game Options~~~~~*/
