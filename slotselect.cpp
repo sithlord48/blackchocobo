@@ -16,19 +16,25 @@
 #include "slotselect.h"
 #include "ui_slotselect.h"
 #include "globals.h"
+#include "SaveIcon.h"
 #include "QMessageBox"
 extern FF7 ff7;
 extern int s;
+SaveIcon icons[15];
+
 SlotSelect::SlotSelect(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SlotSelect)
 {
     ui->setupUi(this);
 /*~~~~~~~~~~SLOT 1~~~~~~~~~~*/
-    if(ff7.SG_Region_String[0] == ""){ui->s1_lbl_loc->setText("Empty Slot");}
-    else
-    {
 
+    if(ff7.SG_Region_String[0] == ""){ui->s1_lbl_loc->setText("Empty Slot");}
+
+    else if(ff7.SG_Region_String[0].contains("00867") ||ff7.SG_Region_String[0].contains("00869") ||
+            ff7.SG_Region_String[0].contains("00900") ||ff7.SG_Region_String[0].contains("94163") ||
+            ff7.SG_Region_String[0].contains("00700") ||ff7.SG_Region_String[0].contains("01057"))
+    {
     //theme the box
     QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
     style.append(QString::number(ff7.slot[0].colors[0][0]));
@@ -130,7 +136,7 @@ SlotSelect::SlotSelect(QWidget *parent) :
         ui->s1_party2->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
     }
-    switch (ff7.slot[0].desc.party[2]){
+    switch (ff7.slot[0].desc.party[2])    {
     case 0:
         ui->s1_party3->setPixmap(QPixmap(":/icon/cloud_icon"));
         break;
@@ -164,11 +170,48 @@ SlotSelect::SlotSelect(QWidget *parent) :
     case 10:
         ui->s1_party3->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
+     }
     }
-}
+
+    else//NOT FF7 Show Icon and Region String;
+    {
+        bool invalid =false;
+        QByteArray data;
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[0].sl_header[i]);}
+
+        switch((quint8)data.at(2))
+        {
+            case 0x11://1 frame
+                icons[0].setAll(data.mid(96,160));
+                break;
+
+            case 0x12://2 frames
+                icons[0].setAll(data.mid(96,288), 2);
+                break;
+
+            case 0x13://3 frames
+                icons[0].setAll(data.mid(96,416), 3);
+                break;
+
+            default:
+                invalid = true;
+        }
+
+        if(!invalid)
+        {
+            ui->s1_party2->setPixmap(icons[0].icon());
+            connect(&icons[0], SIGNAL(nextIcon(QPixmap)), ui->s1_party2, SLOT(setPixmap(QPixmap)));
+        }
+        ui->s1_lbl_loc->setText(ff7.SG_Region_String[0].toAscii());
+    }
+
 /*~~~~~~~~~~SLOT 2~~~~~~~~~~*/
+
     if(ff7.SG_Region_String[1] == ""){ui->s2_lbl_loc->setText("Empty Slot");}
-    else
+
+    else if(ff7.SG_Region_String[1].contains("00867") ||ff7.SG_Region_String[1].contains("00869") ||
+            ff7.SG_Region_String[1].contains("00900") ||ff7.SG_Region_String[1].contains("94163") ||
+            ff7.SG_Region_String[1].contains("00700") ||ff7.SG_Region_String[1].contains("01057"))
     {
         //theme the box
         QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
@@ -305,10 +348,47 @@ SlotSelect::SlotSelect(QWidget *parent) :
         ui->s2_party3->setPixmap(QPixmap(":/icon/sep_icon"));
         break;
     }
-}
+    }
+
+    else//NOT FF7 Show Icon and Region String;
+    {
+        bool invalid =false;
+        QByteArray data;
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[1].sl_header[i]);}
+
+        switch((quint8)data.at(2))
+        {
+            case 0x11://1 frame
+                icons[1].setAll(data.mid(96,160));
+                break;
+
+            case 0x12://2 frames
+                icons[1].setAll(data.mid(96,288), 2);
+                break;
+
+            case 0x13://3 frames
+                icons[1].setAll(data.mid(96,416), 3);
+                break;
+
+            default:
+                invalid = true;
+        }
+
+        if(!invalid)
+        {
+            ui->s2_party2->setPixmap(icons[1].icon());
+            connect(&icons[1], SIGNAL(nextIcon(QPixmap)), ui->s2_party2, SLOT(setPixmap(QPixmap)));
+        }
+        ui->s2_lbl_loc->setText(ff7.SG_Region_String[1].toAscii());
+    }
+
 /*~~~~~~~~~~SLOT 3~~~~~~~~~~*/
+
     if(ff7.SG_Region_String[2] == ""){ui->s3_lbl_loc->setText("Empty Slot");}
-    else
+
+    else if(ff7.SG_Region_String[2].contains("00867") ||ff7.SG_Region_String[2].contains("00869") ||
+            ff7.SG_Region_String[2].contains("00900") ||ff7.SG_Region_String[2].contains("94163") ||
+            ff7.SG_Region_String[2].contains("00700") ||ff7.SG_Region_String[2].contains("01057"))
     {
         //theme the box
         QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
@@ -446,9 +526,46 @@ SlotSelect::SlotSelect(QWidget *parent) :
         break;
     }
 }
+
+    else//NOT FF7 Show Icon and Region String;
+    {
+        bool invalid =false;
+        QByteArray data;
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[2].sl_header[i]);}
+
+        switch((quint8)data.at(2))
+        {
+            case 0x11://1 frame
+                icons[2].setAll(data.mid(96,160));
+                break;
+
+            case 0x12://2 frames
+                icons[2].setAll(data.mid(96,288), 2);
+                break;
+
+            case 0x13://3 frames
+                icons[2].setAll(data.mid(96,416), 3);
+                break;
+
+            default:
+                invalid = true;
+        }
+
+        if(!invalid)
+        {
+            ui->s3_party2->setPixmap(icons[2].icon());
+            connect(&icons[2], SIGNAL(nextIcon(QPixmap)), ui->s3_party2, SLOT(setPixmap(QPixmap)));
+        }
+        ui->s3_lbl_loc->setText(ff7.SG_Region_String[2].toAscii());
+    }
+
 /*~~~~~~~~~~SLOT 4~~~~~~~~~~*/
+
     if(ff7.SG_Region_String[3] == ""){ui->s4_lbl_loc->setText("Empty Slot");}
-    else
+
+    else if(ff7.SG_Region_String[3].contains("00867") ||ff7.SG_Region_String[3].contains("00869") ||
+            ff7.SG_Region_String[3].contains("00900") ||ff7.SG_Region_String[3].contains("94163") ||
+            ff7.SG_Region_String[3].contains("00700") ||ff7.SG_Region_String[3].contains("01057"))
     {
         //theme the box
         QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
@@ -586,9 +703,46 @@ SlotSelect::SlotSelect(QWidget *parent) :
         break;
     }
 }
+
+    else//NOT FF7 Show Icon and Region String;
+    {
+        bool invalid =false;
+        QByteArray data;
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[3].sl_header[i]);}
+
+        switch((quint8)data.at(2))
+        {
+            case 0x11://1 frame
+                icons[3].setAll(data.mid(96,160));
+                break;
+
+            case 0x12://2 frames
+                icons[3].setAll(data.mid(96,288), 2);
+                break;
+
+            case 0x13://3 frames
+                icons[3].setAll(data.mid(96,416), 3);
+                break;
+
+            default:
+                invalid = true;
+        }
+
+        if(!invalid)
+        {
+            ui->s4_party2->setPixmap(icons[3].icon());
+            connect(&icons[3], SIGNAL(nextIcon(QPixmap)), ui->s4_party2, SLOT(setPixmap(QPixmap)));
+        }
+        ui->s4_lbl_loc->setText(ff7.SG_Region_String[3].toAscii());
+    }
+
 /*~~~~~~~~~~SLOT 5~~~~~~~~~~*/
+
     if(ff7.SG_Region_String[4] == ""){ui->s5_lbl_loc->setText("Empty Slot");}
-    else
+
+    else if(ff7.SG_Region_String[4].contains("00867") ||ff7.SG_Region_String[4].contains("00869") ||
+            ff7.SG_Region_String[4].contains("00900") ||ff7.SG_Region_String[4].contains("94163") ||
+            ff7.SG_Region_String[4].contains("00700") ||ff7.SG_Region_String[4].contains("01057"))
     {   //theme the box
         QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
         style.append(QString::number(ff7.slot[4].colors[0][0]));
@@ -725,9 +879,46 @@ SlotSelect::SlotSelect(QWidget *parent) :
         break;
     }
 }
+
+    else//NOT FF7 Show Icon and Region String;
+    {
+        bool invalid =false;
+        QByteArray data;
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[4].sl_header[i]);}
+
+        switch((quint8)data.at(2))
+        {
+            case 0x11://1 frame
+                icons[4].setAll(data.mid(96,160));
+                break;
+
+            case 0x12://2 frames
+                icons[4].setAll(data.mid(96,288), 2);
+                break;
+
+            case 0x13://3 frames
+                icons[4].setAll(data.mid(96,416), 3);
+                break;
+
+            default:
+                invalid = true;
+        }
+
+        if(!invalid)
+        {
+            ui->s5_party2->setPixmap(icons[4].icon());
+            connect(&icons[4], SIGNAL(nextIcon(QPixmap)), ui->s5_party2, SLOT(setPixmap(QPixmap)));
+        }
+        ui->s5_lbl_loc->setText(ff7.SG_Region_String[4].toAscii());
+    }
+
 /*~~~~~~~~~~SLOT 6~~~~~~~~~~*/
+
     if(ff7.SG_Region_String[5] == ""){ui->s6_lbl_loc->setText("Empty Slot");}
-    else
+
+    else if(ff7.SG_Region_String[5].contains("00867") ||ff7.SG_Region_String[5].contains("00869") ||
+            ff7.SG_Region_String[5].contains("00900") ||ff7.SG_Region_String[5].contains("94163") ||
+            ff7.SG_Region_String[5].contains("00700") ||ff7.SG_Region_String[5].contains("01057"))
     {
         //theme the box
         QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
@@ -865,9 +1056,45 @@ SlotSelect::SlotSelect(QWidget *parent) :
         break;
     }
 }
-/*~~~~~~~~~~SLOT 7~~~~~~~~~~*/
+
+    else//NOT FF7 Show Icon and Region String;
+    {
+        bool invalid =false;
+        QByteArray data;
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[5].sl_header[i]);}
+
+        switch((quint8)data.at(2))
+        {
+            case 0x11://1 frame
+                icons[5].setAll(data.mid(96,160));
+                break;
+
+            case 0x12://2 frames
+                icons[5].setAll(data.mid(96,288), 2);
+                break;
+
+            case 0x13://3 frames
+                icons[5].setAll(data.mid(96,416), 3);
+                break;
+
+            default:
+                invalid = true;
+        }
+
+        if(!invalid)
+        {
+            ui->s6_party2->setPixmap(icons[5].icon());
+            connect(&icons[5], SIGNAL(nextIcon(QPixmap)), ui->s6_party2, SLOT(setPixmap(QPixmap)));
+        }
+        ui->s6_lbl_loc->setText(ff7.SG_Region_String[5].toAscii());
+    }
+    /*~~~~~~~~~~SLOT 7~~~~~~~~~~*/
+
     if(ff7.SG_Region_String[6] == ""){ui->s7_lbl_loc->setText("Empty Slot");}
-    else
+
+    else if(ff7.SG_Region_String[6].contains("00867") ||ff7.SG_Region_String[6].contains("00869") ||
+            ff7.SG_Region_String[6].contains("00900") ||ff7.SG_Region_String[6].contains("94163") ||
+            ff7.SG_Region_String[6].contains("00700") ||ff7.SG_Region_String[6].contains("01057"))
     {
         //theme the box
         QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
@@ -1005,9 +1232,46 @@ SlotSelect::SlotSelect(QWidget *parent) :
         break;
     }
 }
+
+    else//NOT FF7 Show Icon and Region String;
+    {
+        bool invalid =false;
+        QByteArray data;
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[6].sl_header[i]);}
+
+        switch((quint8)data.at(2))
+        {
+            case 0x11://1 frame
+                icons[6].setAll(data.mid(96,160));
+                break;
+
+            case 0x12://2 frames
+                icons[6].setAll(data.mid(96,288), 2);
+                break;
+
+            case 0x13://3 frames
+                icons[6].setAll(data.mid(96,416), 3);
+                break;
+
+            default:
+                invalid = true;
+        }
+
+        if(!invalid)
+        {
+            ui->s7_party2->setPixmap(icons[6].icon());
+            connect(&icons[6], SIGNAL(nextIcon(QPixmap)), ui->s7_party2, SLOT(setPixmap(QPixmap)));
+        }
+        ui->s7_lbl_loc->setText(ff7.SG_Region_String[6].toAscii());
+    }
+
 /*~~~~~~~~~~SLOT 8~~~~~~~~~~*/
+
     if(ff7.SG_Region_String[7] == ""){ui->s8_lbl_loc->setText("Empty Slot");}
-    else
+
+    else if(ff7.SG_Region_String[7].contains("00867") ||ff7.SG_Region_String[7].contains("00869") ||
+            ff7.SG_Region_String[7].contains("00900") ||ff7.SG_Region_String[7].contains("94163") ||
+            ff7.SG_Region_String[7].contains("00700") ||ff7.SG_Region_String[7].contains("01057"))
     {
         //theme the box
         QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
@@ -1145,9 +1409,46 @@ SlotSelect::SlotSelect(QWidget *parent) :
          break;
      }
 }
+
+    else//NOT FF7 Show Icon and Region String;
+    {
+        bool invalid =false;
+        QByteArray data;
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[7].sl_header[i]);}
+
+        switch((quint8)data.at(2))
+        {
+            case 0x11://1 frame
+                icons[7].setAll(data.mid(96,160));
+                break;
+
+            case 0x12://2 frames
+                icons[7].setAll(data.mid(96,288), 2);
+                break;
+
+            case 0x13://3 frames
+                icons[7].setAll(data.mid(96,416), 3);
+                break;
+
+            default:
+                invalid = true;
+        }
+
+        if(!invalid)
+        {
+            ui->s8_party2->setPixmap(icons[7].icon());
+            connect(&icons[7], SIGNAL(nextIcon(QPixmap)), ui->s8_party2, SLOT(setPixmap(QPixmap)));
+        }
+        ui->s8_lbl_loc->setText(ff7.SG_Region_String[7].toAscii());
+    }
+
 /*~~~~~~~~~~SLOT 9~~~~~~~~~~*/
+
     if(ff7.SG_Region_String[8] == ""){ui->s9_lbl_loc->setText("Empty Slot");}
-    else
+
+    else if(ff7.SG_Region_String[8].contains("00867") ||ff7.SG_Region_String[8].contains("00869") ||
+            ff7.SG_Region_String[8].contains("00900") ||ff7.SG_Region_String[8].contains("94163") ||
+            ff7.SG_Region_String[8].contains("00700") ||ff7.SG_Region_String[8].contains("01057"))
     {
         //theme the box
         QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
@@ -1285,9 +1586,46 @@ SlotSelect::SlotSelect(QWidget *parent) :
         break;
     }
 }
+
+    else//NOT FF7 Show Icon and Region String;
+    {
+        bool invalid =false;
+        QByteArray data;
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[8].sl_header[i]);}
+
+        switch((quint8)data.at(2))
+        {
+            case 0x11://1 frame
+                icons[8].setAll(data.mid(96,160));
+                break;
+
+            case 0x12://2 frames
+                icons[8].setAll(data.mid(96,288), 2);
+                break;
+
+            case 0x13://3 frames
+                icons[8].setAll(data.mid(96,416), 3);
+                break;
+
+            default:
+                invalid = true;
+        }
+
+        if(!invalid)
+        {
+            ui->s9_party2->setPixmap(icons[8].icon());
+            connect(&icons[8], SIGNAL(nextIcon(QPixmap)), ui->s9_party2, SLOT(setPixmap(QPixmap)));
+        }
+        ui->s9_lbl_loc->setText(ff7.SG_Region_String[8].toAscii());
+    }
+
 /*~~~~~~~~~~SLOT 10~~~~~~~~~~*/
+
     if(ff7.SG_Region_String[9] == ""){ui->s10_lbl_loc->setText("Empty Slot");}
-    else
+
+    else if(ff7.SG_Region_String[9].contains("00867") ||ff7.SG_Region_String[9].contains("00869") ||
+            ff7.SG_Region_String[9].contains("00900") ||ff7.SG_Region_String[9].contains("94163") ||
+            ff7.SG_Region_String[9].contains("00700") ||ff7.SG_Region_String[9].contains("01057"))
     {
         //theme the box
         QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
@@ -1425,9 +1763,46 @@ SlotSelect::SlotSelect(QWidget *parent) :
         break;
     }
 }
+
+    else//NOT FF7 Show Icon and Region String;
+    {
+        bool invalid =false;
+        QByteArray data;
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[9].sl_header[i]);}
+
+        switch((quint8)data.at(2))
+        {
+            case 0x11://1 frame
+                icons[9].setAll(data.mid(96,160));
+                break;
+
+            case 0x12://2 frames
+                icons[9].setAll(data.mid(96,288), 2);
+                break;
+
+            case 0x13://3 frames
+                icons[9].setAll(data.mid(96,416), 3);
+                break;
+
+            default:
+                invalid = true;
+        }
+
+        if(!invalid)
+        {
+            ui->s10_party2->setPixmap(icons[9].icon());
+            connect(&icons[9], SIGNAL(nextIcon(QPixmap)), ui->s10_party2, SLOT(setPixmap(QPixmap)));
+        }
+        ui->s10_lbl_loc->setText(ff7.SG_Region_String[9].toAscii());
+    }
+
 /*~~~~~~~~~~SLOT 11~~~~~~~~~~*/
+
     if(ff7.SG_Region_String[10] == ""){ui->s11_lbl_loc->setText("Empty Slot");}
-    else
+
+    else if(ff7.SG_Region_String[10].contains("00867") ||ff7.SG_Region_String[10].contains("00869") ||
+            ff7.SG_Region_String[10].contains("00900") ||ff7.SG_Region_String[10].contains("94163") ||
+            ff7.SG_Region_String[10].contains("00700") ||ff7.SG_Region_String[10].contains("01057"))
     {
         //theme the box
         QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
@@ -1565,9 +1940,46 @@ SlotSelect::SlotSelect(QWidget *parent) :
         break;
     }
 }
+
+    else//NOT FF7 Show Icon and Region String;
+    {
+        bool invalid =false;
+        QByteArray data;
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[10].sl_header[i]);}
+
+        switch((quint8)data.at(2))
+        {
+            case 0x11://1 frame
+                icons[10].setAll(data.mid(96,160));
+                break;
+
+            case 0x12://2 frames
+                icons[10].setAll(data.mid(96,288), 2);
+                break;
+
+            case 0x13://3 frames
+                icons[10].setAll(data.mid(96,416), 3);
+                break;
+
+            default:
+                invalid = true;
+        }
+
+        if(!invalid)
+        {
+            ui->s11_party2->setPixmap(icons[10].icon());
+            connect(&icons[10], SIGNAL(nextIcon(QPixmap)), ui->s11_party2, SLOT(setPixmap(QPixmap)));
+        }
+        ui->s11_lbl_loc->setText(ff7.SG_Region_String[10].toAscii());
+    }
+
 /*~~~~~~~~~~SLOT 12~~~~~~~~~~*/
+
     if(ff7.SG_Region_String[11] == ""){ui->s12_lbl_loc->setText("Empty Slot");}
-    else
+
+    else if(ff7.SG_Region_String[11].contains("00867") ||ff7.SG_Region_String[11].contains("00869") ||
+            ff7.SG_Region_String[11].contains("00900") ||ff7.SG_Region_String[11].contains("94163") ||
+            ff7.SG_Region_String[11].contains("00700") ||ff7.SG_Region_String[11].contains("01057"))
     {
         //theme the box
         QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
@@ -1705,9 +2117,46 @@ SlotSelect::SlotSelect(QWidget *parent) :
         break;
     }
 }
+
+    else//NOT FF7 Show Icon and Region String;
+    {
+        bool invalid =false;
+        QByteArray data;
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[11].sl_header[i]);}
+
+        switch((quint8)data.at(2))
+        {
+            case 0x11://1 frame
+                icons[11].setAll(data.mid(96,160));
+                break;
+
+            case 0x12://2 frames
+                icons[11].setAll(data.mid(96,288), 2);
+                break;
+
+            case 0x13://3 frames
+                icons[11].setAll(data.mid(96,416), 3);
+                break;
+
+            default:
+                invalid = true;
+        }
+
+        if(!invalid)
+        {
+            ui->s12_party2->setPixmap(icons[11].icon());
+            connect(&icons[11], SIGNAL(nextIcon(QPixmap)), ui->s12_party2, SLOT(setPixmap(QPixmap)));
+        }
+        ui->s12_lbl_loc->setText(ff7.SG_Region_String[11].toAscii());
+    }
+
 /*~~~~~~~~~~SLOT 13~~~~~~~~~~*/
+
     if(ff7.SG_Region_String[12] == ""){ui->s13_lbl_loc->setText("Empty Slot");}
-    else
+
+    else if(ff7.SG_Region_String[12].contains("00867") ||ff7.SG_Region_String[12].contains("00869") ||
+            ff7.SG_Region_String[12].contains("00900") ||ff7.SG_Region_String[12].contains("94163") ||
+            ff7.SG_Region_String[12].contains("00700") ||ff7.SG_Region_String[12].contains("01057"))
     {
         //theme the box
         QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
@@ -1845,9 +2294,46 @@ SlotSelect::SlotSelect(QWidget *parent) :
          break;
      }
 }
+
+    else//NOT FF7 Show Icon and Region String;
+    {
+        bool invalid =false;
+        QByteArray data;
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[12].sl_header[i]);}
+
+        switch((quint8)data.at(2))
+        {
+            case 0x11://1 frame
+                icons[12].setAll(data.mid(96,160));
+                break;
+
+            case 0x12://2 frames
+                icons[12].setAll(data.mid(96,288), 2);
+                break;
+
+            case 0x13://3 frames
+                icons[12].setAll(data.mid(96,416), 3);
+                break;
+
+            default:
+                invalid = true;
+        }
+
+        if(!invalid)
+        {
+            ui->s13_party2->setPixmap(icons[12].icon());
+            connect(&icons[12], SIGNAL(nextIcon(QPixmap)), ui->s13_party2, SLOT(setPixmap(QPixmap)));
+        }
+        ui->s13_lbl_loc->setText(ff7.SG_Region_String[12].toAscii());
+    }
+
 /*~~~~~~~~~~SLOT 14~~~~~~~~~~*/
+
     if(ff7.SG_Region_String[13] == ""){ui->s14_lbl_loc->setText("Empty Slot");}
-    else
+
+    else if(ff7.SG_Region_String[13].contains("00867") ||ff7.SG_Region_String[13].contains("00869") ||
+            ff7.SG_Region_String[13].contains("00900") ||ff7.SG_Region_String[13].contains("94163") ||
+            ff7.SG_Region_String[13].contains("00700") ||ff7.SG_Region_String[13].contains("01057"))
     {
         //theme the box
         QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
@@ -1985,9 +2471,46 @@ SlotSelect::SlotSelect(QWidget *parent) :
         break;
     }
 }
+
+    else//NOT FF7 Show Icon and Region String;
+    {
+        bool invalid =false;
+        QByteArray data;
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[13].sl_header[i]);}
+
+        switch((quint8)data.at(2))
+        {
+            case 0x11://1 frame
+                icons[13].setAll(data.mid(96,160));
+                break;
+
+            case 0x12://2 frames
+                icons[13].setAll(data.mid(96,288), 2);
+                break;
+
+            case 0x13://3 frames
+                icons[13].setAll(data.mid(96,416), 3);
+                break;
+
+            default:
+                invalid = true;
+        }
+
+        if(!invalid)
+        {
+            ui->s14_party2->setPixmap(icons[13].icon());
+            connect(&icons[13], SIGNAL(nextIcon(QPixmap)), ui->s14_party2, SLOT(setPixmap(QPixmap)));
+        }
+        ui->s14_lbl_loc->setText(ff7.SG_Region_String[13].toAscii());
+    }
+
 /*~~~~~~~~~~SLOT 15~~~~~~~~~~*/
+
     if(ff7.SG_Region_String[14] == ""){ui->s15_lbl_loc->setText("Empty Slot");}
-    else
+
+    else if(ff7.SG_Region_String[14].contains("00867") ||ff7.SG_Region_String[14].contains("00869") ||
+            ff7.SG_Region_String[14].contains("00900") ||ff7.SG_Region_String[14].contains("94163") ||
+            ff7.SG_Region_String[14].contains("00700") ||ff7.SG_Region_String[14].contains("01057"))
     {
         //theme the box
         QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
@@ -2125,6 +2648,39 @@ SlotSelect::SlotSelect(QWidget *parent) :
         break;
     }
 }
+
+    else//NOT FF7 Show Icon and Region String;
+    {
+        bool invalid =false;
+        QByteArray data;
+
+        for(int i=0;i<0x200;i++){data.append(ff7.hf[14].sl_header[i]);}
+
+        switch((quint8)data.at(2))
+        {
+            case 0x11://1 frame
+                icons[14].setAll(data.mid(96,160));
+                break;
+
+            case 0x12://2 frames
+                icons[14].setAll(data.mid(96,288), 2);
+                break;
+
+            case 0x13://3 frames
+                icons[14].setAll(data.mid(96,416), 3);
+                break;
+
+            default:
+                invalid = true;
+        }
+
+        if(!invalid)
+        {
+            ui->s15_party2->setPixmap(icons[14].icon());
+            connect(&icons[14], SIGNAL(nextIcon(QPixmap)), ui->s15_party2, SLOT(setPixmap(QPixmap)));
+        }
+        ui->s15_lbl_loc->setText(ff7.SG_Region_String[14].toAscii());
+    }
 }//end of new ui
 SlotSelect::~SlotSelect()
 {
