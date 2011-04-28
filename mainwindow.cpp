@@ -1697,20 +1697,29 @@ void MainWindow::charupdate(void)
     ui->cb_id->setText("");
     ui->cb_id->setChecked(false);
     ui->cb_id->setVisible(false);
+
+    if (ff7.slot[s].chars[6].id == 9){ui->cb_id->setChecked(true);ui->btn_cait->setStyleSheet("image: url(:/icon/y_cloud_icon);");}
+    else{ui->cb_id->setChecked(false);ui->btn_cait->setStyleSheet("image: url(:/icon/cait_icon);");}
+
+    if (ff7.slot[s].chars[7].id == 10){ui->cb_id->setChecked(true);ui->btn_vincent->setStyleSheet("image: url(:/icon/sep_icon);");}
+    else{ui->cb_id->setChecked(false);ui->btn_vincent->setStyleSheet("image: url(:/icon/vincent_icon);");}
+
     if(curchar== 6)
     {
         ui->cb_id->setText(tr("Young Cloud"));
         ui->cb_id->setVisible(true);
-        if (ff7.slot[s].chars[curchar].id == 9){ui->cb_id->setChecked(true); ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));ui->btn_cait->setStyleSheet("image: url(:/icon/y_cloud_icon);");}
-        else{ui->cb_id->setChecked(false);ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));ui->btn_cait->setStyleSheet("image: url(:/icon/cait_icon);");}
+        if(ff7.slot[s].chars[6].id == 9){ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));}
+        else{ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));}
     }
+
     if(curchar==7)
     {
         ui->cb_id->setText(tr("Sephiroth"));
         ui->cb_id->setVisible(true);
-        if (ff7.slot[s].chars[curchar].id == 10){ui->cb_id->setChecked(true);ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));ui->btn_vincent->setStyleSheet("image: url(:/icon/sep_icon);");}
-        else{ui->cb_id->setChecked(false);ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));ui->btn_vincent->setStyleSheet("image: url(:/icon/vincent_icon);");}
+        if(ff7.slot[s].chars[7].id == 10){ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));}
+        else{ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));}
     }
+
     ui->line_name->clear();
     for (int n=0;n<12;n++)
     {
@@ -2433,9 +2442,8 @@ void MainWindow::guirefresh(void)
         if (ff7.slot[s].chars[6].id == 9)
         {
             ui->btn_cait->setEnabled(false);
-            if(curchar ==6){curchar =0;
+            if(curchar ==6){curchar =0;}
         }
-    }
         else {ui->btn_cait->setEnabled(true);}
 
         if (ff7.slot[s].chars[7].id == 10)
