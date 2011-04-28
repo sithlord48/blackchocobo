@@ -1,6 +1,5 @@
 #include "errbox.h"
 #include "ui_errbox.h"
-#include <QFileDialog> // for file dialogs
 #include "globals.h"    // contains checksumming functions
 #include <SaveIcon.h>
 /*~~~~~GLOBALS~~~~~~*/
@@ -54,6 +53,12 @@ void errbox::on_btn_prev_clicked()
     else{QMessageBox::information(this,tr("Your At Slot 1"),tr("Sorry There is no Previous Slot"));}
 }
 
+void errbox::on_btn_next_clicked()
+{
+    if(s<14){s++; this->done(1);}
+    else{QMessageBox::information(this,tr("Your At Slot 15"),tr("Sorry There is no Next Slot"));}
+}
+
 void errbox::on_btn_export_clicked()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
@@ -96,12 +101,5 @@ this->done(2);
 
 void errbox::on_btn_view_clicked()
 {
-    QMessageBox::information(this,tr("Ingoring Non FF7 Save"),tr("Be Cautious This Might Not Work."));
     this->done(0);
-}
-
-void errbox::on_btn_next_clicked()
-{
-    if(s<14){s++; this->done(1);}
-    else{QMessageBox::information(this,tr("Your At Slot 15"),tr("Sorry There is no Next Slot"));}
 }

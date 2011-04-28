@@ -444,6 +444,11 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>Fixed: Items/Materia Names And Skill Now Translated</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New: Using Myst6re SaveIcon Class</string>
           </property>
          </item>
@@ -525,7 +530,7 @@ p, li { white-space: pre-wrap; }
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>0</y>
+            <y>-168</y>
             <width>357</width>
             <height>392</height>
            </rect>
@@ -1104,8 +1109,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>138</width>
-            <height>740</height>
+            <width>349</width>
+            <height>390</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">

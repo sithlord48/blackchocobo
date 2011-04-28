@@ -934,7 +934,7 @@ void MainWindow::on_actionExport_PC_Save_activated()
             fwrite(&ff7.slot[si],ff7.SG_DATA_SIZE,1,pfile);
             fwrite(ff7.hf[si].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
            }
-        else {clearslot(si);    goto Write;} //the program is incomplete with out one use of goto.
+        else {clearslot(si);    goto Write;} //the program is incomplete with out one use of a goto.
     }
     fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
     fclose(pfile);
@@ -2074,16 +2074,17 @@ void MainWindow::guirefresh(void)
             switch(error.exec())
             {
             case 0://View Anyway..
-            break;
+                QMessageBox::information(this,tr("Ingoring Non FF7 Save"),tr("Be Cautious This Might Not Work."));
+                break;
 
             case 1://Previous or next was clicked
-            guirefresh();
-            break;
+                guirefresh();
+                break;
 
             case 2://export as psx
-            SlotSelect selector;
-            selector.exec();
-            guirefresh();
+                SlotSelect selector;
+                selector.exec();
+                guirefresh();
             break;
 }
 
@@ -3100,7 +3101,9 @@ void MainWindow::clearslot(int rmslot)
 {
     QByteArray temp;
     temp.fill(0x00,0x10f4);
+    memcpy(&ff7.hf[rmslot].sl_header,temp,ff7.SG_SLOT_HEADER);// clear the header..
     memcpy(&ff7.slot[rmslot],temp,0x10f4);
+    memcpy(&ff7.hf[rmslot].sl_footer,temp,ff7.SG_SLOT_FOOTER);// clear the footer..
     ff7.SG_Region_String[rmslot]="";
 }
 
