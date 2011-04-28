@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>373</width>
-    <height>208</height>
+    <width>371</width>
+    <height>206</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -139,6 +139,9 @@ QPushButton:enabled {
           <iconset resource="images.qrc">
            <normaloff>:/icon/prev</normaloff>:/icon/prev</iconset>
          </property>
+         <property name="shortcut">
+          <string>Alt+Left</string>
+         </property>
         </widget>
        </item>
        <item>
@@ -166,6 +169,9 @@ QPushButton:enabled {
          <property name="icon">
           <iconset resource="images.qrc">
            <normaloff>:/icon/next</normaloff>:/icon/next</iconset>
+         </property>
+         <property name="shortcut">
+          <string>Alt+Right</string>
          </property>
          <property name="default">
           <bool>true</bool>
