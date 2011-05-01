@@ -595,10 +595,10 @@ static MATERIA Materias[]=
    ,{QObject::tr("Summon Ifrit x1 (34mp)"),QObject::tr("Summon Ifrit x2 (34mp)"),QObject::tr("Summon Ifrit x3 (34mp)"),QObject::tr("Summon Ifrit x4 (34mp)"),QObject::tr("Summon Ifrit x5 (34mp)")},{5000,20000,35000,60000},2,5},
 
     {QObject::tr("Ramuh"),		":/icon/summon",      0x4D,/*{-2,+2,0,0,0,0,+1,0}*/         QObject::tr("HP:-2% MP:+2% Mag:+1")
-   ,{QObject::tr("Summon Ramuh x1 (40mp)"),QObject::tr("Summon Ramuh x2 (40mp)"),QObject::tr("Summon Ramuh x3 (40mp)"),QObject::tr("Summon Ramuh x4 (40mp)"),QObject::tr("Summon Ramuh x5 (40mp)")},{15000,30000,60000,80000},2,5},
+   ,{QObject::tr("Summon Ramuh x1 (40mp)"),QObject::tr("Summon Ramuh x2 (40mp)"),QObject::tr("Summon Ramuh x3 (40mp)"),QObject::tr("Summon Ramuh x4 (40mp)"),QObject::tr("Summon Ramuh x5 (40mp)")},{10000,25000,50000,70000},2,5},
 
     {QObject::tr("Titan"),		":/icon/summon",      0x4E,/*{-2,+2,0,0,0,0,+1,0}*/         QObject::tr("HP:-2% MP:+2% Mag:+1")
-   ,{QObject::tr("Summon Titan x1 (46mp)"),QObject::tr("Summon Titan x2 (46mp)"),QObject::tr("Summon Titan x3 (46mp)"),QObject::tr("Summon Titan x4 (46mp)"),QObject::tr("Summon Titan x5 (46mp)")},{10000,25000,50000,70000},2,5},
+   ,{QObject::tr("Summon Titan x1 (46mp)"),QObject::tr("Summon Titan x2 (46mp)"),QObject::tr("Summon Titan x3 (46mp)"),QObject::tr("Summon Titan x4 (46mp)"),QObject::tr("Summon Titan x5 (46mp)")},{15000,30000,60000,80000},2,5},
 
     {QObject::tr("Odin"),		":/icon/summon",      0x4F,/*{-5,+5,0,0,0,0,+1,+1}*/        QObject::tr("HP:-5% MP:+5% Mag:+1 Spi:+1")
    ,{QObject::tr("Summon Odin x1 (80mp)"),QObject::tr("Summon Odin x2 (80mp)"),QObject::tr("Summon Odin x3 (80mp)"),QObject::tr("Summon Odin x4 (80mp)"),QObject::tr("Summon Odin x5 (80mp)")},{16000,32000,65000,90000},2,5},
