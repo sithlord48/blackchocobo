@@ -82,7 +82,7 @@ static ITEM Items[]=
         {QObject::tr("Eye drop"),		":/icon/item",0,0},
         {QObject::tr("Molotov"),		":/icon/item",0,0},
         {QObject::tr("S-mine"),                 ":/icon/item",0,0},
-        {QObject::tr("8inch Cannon"),		":/icon/item",0,0},
+        {QObject::tr("8 Inch Cannon"),		":/icon/item",0,0},
         {QObject::tr("Graviball"),		":/icon/item",0,0},
         {QObject::tr("T/S Bomb"),		":/icon/item",0,0},
         {QObject::tr("Ink"),			":/icon/item",0,0},
@@ -160,7 +160,7 @@ static ITEM Items[]=
         {QObject::tr("Buster Sword"),           ":/icon/cloud_weapon",2,1},
         {QObject::tr("Mythril Saber"),  	":/icon/cloud_weapon",3,1},
         {QObject::tr("Hardedge"),		":/icon/cloud_weapon",4,1},
-        {QObject::tr("Bytterfly Edge"), 	":/icon/cloud_weapon",4,2},
+        {QObject::tr("Butterfly Edge"), 	":/icon/cloud_weapon",4,2},
         {QObject::tr("Enhance Sword"),          ":/icon/cloud_weapon",8,4},
         {QObject::tr("Organics"),		":/icon/cloud_weapon",6,2},
         {QObject::tr("Crystal Sword"),          ":/icon/cloud_weapon",6,3},
@@ -449,7 +449,7 @@ static MATERIA Materias[]=
    ,{QObject::tr("MP Absorb"),QObject::tr("Mastered"),"","",""},{100000,0,0,0},4,2},
 
     {QObject::tr("HP Absorb"),          ":/icon/support",     0x1C,/*{0,0,0,0,0,0,0,0}*/        ""
-   ,{QObject::tr("HP Abosrb"),QObject::tr("Mastered"),"","",""},{100000,0,0,0},4,2},
+   ,{QObject::tr("HP Absorb"),QObject::tr("Mastered"),"","",""},{100000,0,0,0},4,2},
 
     {QObject::tr("Elemental"),          ":/icon/support",     0x1D,/*{0,0,0,0,0,0,0,0}*/        ""
    ,{QObject::tr("Elemental 50%"),QObject::tr("Elemental 100%"),QObject::tr("Elemental 200%"),QObject::tr("Mastered"),""},{10000,40000,80000,0},4,4},
@@ -466,7 +466,7 @@ static MATERIA Materias[]=
     {QObject::tr("Added Cut"),          ":/icon/support",     0x21,/*{0,0,0,0,0,0,0,0}*/        ""
    ,{QObject::tr("Added Cut"),QObject::tr("Mastered"),"","",""},{200000,0,0,0},4,2},
 
-    {QObject::tr("Steal As Well"),	":/icon/support",     0x22,/*{0,0,0,0,0,0,0,0}*/        ""
+    {QObject::tr("Steal-As-Well"),	":/icon/support",     0x22,/*{0,0,0,0,0,0,0,0}*/        ""
    ,{QObject::tr("Steal-As-Well"),QObject::tr("Mastered"),"","",""},{200000,0,0,0},4,2},
 
     {QObject::tr("Quadra Magic"),	":/icon/support",     0x23,/*{0,0,0,0,0,0,0,0}*/        ""
@@ -487,7 +487,7 @@ static MATERIA Materias[]=
     {QObject::tr("Morph"),		":/icon/command",     0x28,/*{0,0,0,0,0,0,0,0}*/        ""
    ,{QObject::tr("Morph"),QObject::tr("Mastered"),"","",""},{100000,0,0,0},5,2},
 
-    {QObject::tr("Deathblow"),  	":/icon/command",     0x29,/*{0,0,0,0,0,+1,0,0}*/       QObject::tr("Lck:+1")
+    {QObject::tr("DeathBlow"),  	":/icon/command",     0x29,/*{0,0,0,0,0,+1,0,0}*/       QObject::tr("Lck:+1")
    ,{QObject::tr("DeathBlow"),QObject::tr("Mastered"),"","",""},{40000,0,0,0},5,2},
 
     {QObject::tr("Manipulate"),         ":/icon/command",     0x2A,/*{0,0,0,0,0,0,0,0}*/        ""
