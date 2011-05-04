@@ -2,6 +2,37 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="es_ES">
 <context>
+    <name>Items</name>
+    <message>
+        <source>Catastrophe</source>
+        <translation type="obsolete">Catástrofe</translation>
+    </message>
+    <message>
+        <source>Final Heaven</source>
+        <translation type="obsolete">Cielo Final</translation>
+    </message>
+    <message>
+        <source>Great Gospel</source>
+        <translation type="obsolete">Gran Evangelio</translation>
+    </message>
+    <message>
+        <source>Cosmo Memory</source>
+        <translation type="obsolete">Memoria Cósmica</translation>
+    </message>
+    <message>
+        <source>All Creation</source>
+        <translation type="obsolete">Toda Creación</translation>
+    </message>
+    <message>
+        <source>Chaos</source>
+        <translation type="obsolete">Caos</translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation type="obsolete">Gran Viento</translation>
+    </message>
+</context>
+<context>
     <name>MainWindow</name>
     <message>
         <source>Black Chocobo</source>
@@ -2973,6 +3004,33 @@ no es una partida guardada de FF7</translation>
         <source>Be Cautious This Might Not Work.</source>
         <translation type="unfinished">Cuidado, puede que no funcione.</translation>
     </message>
+    <message>
+        <source>Time</source>
+        <translation type="obsolete">Tiempo</translation>
+    </message>
+</context>
+<context>
+    <name>Materia</name>
+    <message>
+        <source>HP &lt;-&gt; MP</source>
+        <translation type="obsolete">PG &lt;-&gt; PM</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="obsolete">Todo</translation>
+    </message>
+    <message>
+        <source>Quadra Magic</source>
+        <translation type="obsolete">Cuadrimagia</translation>
+    </message>
+    <message>
+        <source>Mime</source>
+        <translation type="obsolete">Gesto</translation>
+    </message>
+    <message>
+        <source>Time</source>
+        <translation type="obsolete">Tiempo</translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
@@ -3088,12 +3146,52 @@ no es una partida guardada de FF7</translation>
 <context>
     <name>QObject</name>
     <message>
-        <source>MP Plus</source>
-        <translation type="unfinished"></translation>
+        <source>Catastrophe</source>
+        <translation type="unfinished">Catástrofe</translation>
     </message>
     <message>
-        <source>HP Plus</source>
-        <translation type="unfinished"></translation>
+        <source>Final Heaven</source>
+        <translation type="unfinished">Cielo Final</translation>
+    </message>
+    <message>
+        <source>Great Gospel</source>
+        <translation type="unfinished">Gran Evangelio</translation>
+    </message>
+    <message>
+        <source>Cosmo Memory</source>
+        <translation type="unfinished">Memoria Cósmica</translation>
+    </message>
+    <message>
+        <source>All Creation</source>
+        <translation type="unfinished">Toda Creación</translation>
+    </message>
+    <message>
+        <source>Chaos</source>
+        <translation type="unfinished">Caos</translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation type="unfinished">Gran Viento</translation>
+    </message>
+    <message>
+        <source>HP &lt;-&gt; MP</source>
+        <translation type="unfinished">PG &lt;-&gt; PM</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="unfinished">Todo</translation>
+    </message>
+    <message>
+        <source>Quadra Magic</source>
+        <translation type="unfinished">Cuadrimagia</translation>
+    </message>
+    <message>
+        <source>Mime</source>
+        <translation type="unfinished">Gesto</translation>
+    </message>
+    <message>
+        <source>Time</source>
+        <translation type="unfinished">Tiempo</translation>
     </message>
     <message>
         <source>Potion</source>
@@ -3316,7 +3414,7 @@ no es una partida guardada de FF7</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>8inch Cannon</source>
+        <source>8 Inch Cannon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3448,34 +3546,6 @@ no es una partida guardada de FF7</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Catastrophe</source>
-        <translation type="unfinished">Catástrofe</translation>
-    </message>
-    <message>
-        <source>Final Heaven</source>
-        <translation type="unfinished">Cielo Final</translation>
-    </message>
-    <message>
-        <source>Great Gospel</source>
-        <translation type="unfinished">Gran Evangelio</translation>
-    </message>
-    <message>
-        <source>Cosmo Memory</source>
-        <translation type="unfinished">Memoria Cósmica</translation>
-    </message>
-    <message>
-        <source>All Creation</source>
-        <translation type="unfinished">Toda Creación</translation>
-    </message>
-    <message>
-        <source>Chaos</source>
-        <translation type="unfinished">Caos</translation>
-    </message>
-    <message>
-        <source>Highwind</source>
-        <translation type="unfinished">Gran Viento</translation>
-    </message>
-    <message>
         <source>1/35 Soldier</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3528,7 +3598,7 @@ no es una partida guardada de FF7</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Bytterfly Edge</source>
+        <source>Butterfly Edge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4284,6 +4354,10 @@ no es una partida guardada de FF7</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>MP Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>MP:+% depending on level</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4305,6 +4379,10 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>MP Plus +50%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>HP Plus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4624,10 +4702,6 @@ no es una partida guardada de FF7</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP &lt;-&gt; MP</source>
-        <translation type="unfinished">PG &lt;-&gt; PM</translation>
-    </message>
-    <message>
         <source>W-Magic</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4638,10 +4712,6 @@ no es una partida guardada de FF7</translation>
     <message>
         <source>W-Item</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation type="unfinished">Todo</translation>
     </message>
     <message>
         <source>All x1</source>
@@ -4744,10 +4814,6 @@ no es una partida guardada de FF7</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP Abosrb</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Elemental</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4820,16 +4886,8 @@ no es una partida guardada de FF7</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Steal As Well</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Steal-As-Well</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Quadra Magic</source>
-        <translation type="unfinished">Cuadrimagia</translation>
     </message>
     <message>
         <source>Quadra Magic x1</source>
@@ -4880,20 +4938,12 @@ no es una partida guardada de FF7</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Deathblow</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>DeathBlow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Manipulate</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mime</source>
-        <translation type="unfinished">Gesto</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
@@ -5138,10 +5188,6 @@ no es una partida guardada de FF7</translation>
     <message>
         <source>Comet2 (110mp)</source>
         <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Time</source>
-        <translation type="unfinished">Tiempo</translation>
     </message>
     <message>
         <source>Haste (18mp)</source>
@@ -5967,6 +6013,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Using Myst6re SaveIcon Class</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Items/Materia Names And Skill Now Translated</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -3077,14 +3077,6 @@ is not a FF7 SaveGame.</source>
 <context>
     <name>QObject</name>
     <message>
-        <source>MP Plus</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>HP Plus</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Potion</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3305,7 +3297,7 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>8inch Cannon</source>
+        <source>8 Inch Cannon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3517,7 +3509,7 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Bytterfly Edge</source>
+        <source>Butterfly Edge</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4273,6 +4265,10 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>MP Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>MP:+% depending on level</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4294,6 +4290,10 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>MP Plus +50%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>HP Plus</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4733,10 +4733,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP Abosrb</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Elemental</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4809,10 +4805,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Steal As Well</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Steal-As-Well</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4866,10 +4858,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Morph</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Deathblow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5924,6 +5912,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Using Myst6re SaveIcon Class</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Items/Materia Names And Skill Now Translated</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
