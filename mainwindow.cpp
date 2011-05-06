@@ -57,7 +57,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     for (int i=288;i<320;i++){ui->combo_acc->addItem(QIcon(Items[i].image),names.ItemNames(i));}
     for (int i=0;i<320;i++){ui->combo_additem->addItem(QIcon(Items[i].image),names.ItemNames(i));}
     for (int i=0;i<0x5b;i++){ui->combo_add_mat->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
-    for (int i=0;i<0x5b;i++){if(Materias[i].name !="DON'T USE"){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}}
+    for (int i=0;i<0x5b;i++){if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}}
     for (int i=0;i<0x5b;i++){ui->combo_add_mat_slot->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
     //set up tables..
     ui->tbl_location_field->setColumnWidth(0,147);
@@ -2645,7 +2645,7 @@ void MainWindow::guirefresh(void)
         ui->spell_lvl5_group->setVisible(0);
     }
 
-    else if(Materias[ff7.slot[s].materias[j].id].name == tr("DON'T USE")) //this is a placeholder materia.
+    else if(names.MateriaNames(ff7.slot[s].materias[j].id) == tr("DON'T USE")) //this is a placeholder materia.
     {
 
         ui->lbl_mat_stats->setText(names.MateriaStats(ff7.slot[s].materias[j].id));
