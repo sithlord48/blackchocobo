@@ -468,19 +468,15 @@ struct FF7 {				// [0xFE55]
 
 
 struct ITEM {
-        QString name;
         QString image;
         qint8 mslots;
         qint8 linked;
 };
 
-struct MATERIA {
-    QString name;
+struct MATERIA { //use MateriaNames,MateriaSkills or MateriaStats for text data.
     QString image;
     quint8 id;
     //struct {qint8 hp,mp,str,vit,dex,lck,mag,spi;}stats;
-    QString stats;
-    QString skills[5];
     qint32 ap[4];
     qint8 type; //1-magic,2-summon,3-independent,4-support,5-command,0-unknown
     qint8 levels;
