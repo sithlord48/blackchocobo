@@ -2962,6 +2962,10 @@ is not a FF7 SaveGame.</source>
         <source>Be Cautious This Might Not Work.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Enemy Skill</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Options</name>
@@ -3076,1198 +3080,6 @@ is not a FF7 SaveGame.</source>
 </context>
 <context>
     <name>QObject</name>
-    <message>
-        <source>Potion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hi-Potion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>X-Potion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ether</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Turbo Ether</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Elixir</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Megalixir</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Phoenix Down</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Antidote</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Soft</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Maiden&apos;s Kiss</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cornucopia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Echo screen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hyper</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Tranquilizer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remedy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Smoke Bomb</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Speed Drink</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hero Drink</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Vaccine</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Grenade</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shrapnel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Right Arm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hourglass</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Kiss of Death</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Spider Web</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dream Powder</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mute Mask</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>War Gong</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Loco weed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fire Fang</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fire Veil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Antarctic Wind</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ice Crystal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bolt Plume</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Swift Bolt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Earth Drum</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Earth Mallet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Deadly Waste</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>M-Tentacles</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stardust</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Vampire Fang</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ghost Hand</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Vagyrisk Claw</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Light Curtain</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lunar Curtain</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mirror</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Holy Torch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bird Wing</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dragon Scales</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Impaler</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shrivel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Eye drop</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Molotov</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S-mine</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>8 Inch Cannon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Graviball</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>T/S Bomb</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ink</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dazers</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dragon Fang</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cauldron</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sylkis Greens</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reagan Greens</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mimett Greens</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Curiel Greens</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Pahsana Greens</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Tantal Greens</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Krakka Greens</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gysahl Greens</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Tent</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Power Source</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Guard Source</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic Source</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mind Source</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Speed Source</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Luck Source</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Zeio Nut</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Carob Nut</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Porov Nut</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Pram Nut</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lasan Nut</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sahara Nut</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Luchile Nut</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Pepio Nut</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Battery</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Tissue</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Omnislash</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Catastrophe</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Final Heaven</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Great Gospel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cosmo Memory</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>All Creation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Chaos</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Highwind</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1/35 Soldier</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Super Sweeper</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Masamune Blade</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save Crystal</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Combat Diary</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Autograph</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gambler</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Desert Rose</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Earth Harp</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Guide Book</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Buster Sword</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mythril Saber</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hardedge</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Butterfly Edge</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Enhance Sword</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Organics</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Crystal Sword</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Force Stealer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Rune Blade</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Murasame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Nail Bat</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Yoshiyuki</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Apocalypse</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Heaven&apos;s Cloud</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ragnarok</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ultima Weapon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Leather Glove</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Metal Knuckle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mythril Claw</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Grand Glove</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Tiger Fang</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Diamond Knuckle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dragon Claw</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Crystal Glove</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Motor Drive</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Platinum Fist</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Kaiser Knuckle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Work Glove</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Powersoul</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Master Fist</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>God&apos;s Hand</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Premium Heart</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gatling Gun</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Assault Gun</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cannon Ball</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Atomic Scissors</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Heavy Vulcan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Chainsaw</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Microlaser</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>A-M Cannon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>W Machine Gun</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Drill Arm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Solid Bazooka</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Rocket Punch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Enemy Launcher</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Pile Banger</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Max Ray</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Missing Score</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mythril Clip</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Diamond Pin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Silver Barette</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gold Barette</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Adaman Clip</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Crystal Comb</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic Comb</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Plus Barette</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Centclip</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hairpin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Seraph Comb</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Behemoth Horn</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Spring Gun Clip</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Limited Moon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Guard Stick</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mythril Rod</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Full Metal Staff</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Striking Staff</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Prism Staff</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Aurora Rod</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wizard Staff</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wizer Staff</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fairy Tale</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Umbrella</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Princess Guard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Spear</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slash Lance</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Trident</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mast Ax</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Partisan</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Viper Halberd</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Javelin</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Grow Lance</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mop</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dragoon Lance</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Scimitar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Flayer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Spirit Lance</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Venus Gospel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>4-point Shuriken</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Boomerang</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Pinwheel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Razor Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hawkeye</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Crystal Cross</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wind Slash</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Twin Viper</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Spiral Shuriken</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Superball</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic Shuriken</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Rising Sun</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Oritsuru</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Conformer</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Yellow M-phone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Green M-phone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Blue M-phone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Red M-phone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Crystal M-phone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>White M-phone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Black M-phone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Silver M-phone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Trumpet Shell</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gold M-phone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Battle Trumpet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Starlight Phone</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>HP Shout</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Quicksilver</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shotgun</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shortbarrel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lariat</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Winchester</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Peacemaker</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Buntline</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Long Barrel R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Silver Rifle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sniper CR</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Supershot ST</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Outsider</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Death Penalty</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Masamune</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bronze Bangle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Iron Bangle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Titan Bangle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mythril Armlet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Carbon Bangle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Silver Armlet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gold Armlet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Diamond Bangle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Crystal Bangle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Platinum Bangle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Rune Armlet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Edincoat</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wizard Bracelet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Adaman Bangle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gigas Armlet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Imperial Guard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Aegis Armlet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fourth Bracelet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Warrior Bangle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shinra Beta</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shinra Alpha</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Four Slots</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fire Armlet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Aurora Armlet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bolt Armlet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dragon Armlet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Minerva Band</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Escort Guard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mystile</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ziedrich</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Precious Watch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Chocobracelet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Power Wrist</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect Vest</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Earring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Talisman</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Choco Feather</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Amulet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Champion Belt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Poison Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Tough Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Circlet</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Star Pendant</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Silver Glasses</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Headband</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fairy Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Jem Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>White Cape</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sprint Shoes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Peace Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ribbon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fire Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ice Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bolt Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Tetra Elemental</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Safety Bit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fury Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Curse Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cat&apos;s Bell</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reflect Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Water Ring</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sneak Glove</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>HypnoCrown</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MP Plus</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>MP:+% depending on level</source>
         <translation type="unfinished"></translation>
@@ -5606,6 +4418,1202 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Master Summon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MP Plus</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hi-Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>X-Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ether</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Turbo Ether</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Elixir</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Megalixir</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Phoenix Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Antidote</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Soft</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Maiden&apos;s Kiss</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cornucopia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Echo screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hyper</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tranquilizer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remedy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Smoke Bomb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed Drink</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hero Drink</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vaccine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Grenade</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shrapnel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right Arm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hourglass</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Kiss of Death</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spider Web</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dream Powder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mute Mask</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>War Gong</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Loco weed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fire Fang</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fire Veil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Antarctic Wind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ice Crystal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bolt Plume</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Swift Bolt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Earth Drum</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Earth Mallet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deadly Waste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>M-Tentacles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stardust</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vampire Fang</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ghost Hand</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vagyrisk Claw</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Light Curtain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lunar Curtain</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mirror</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Holy Torch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bird Wing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dragon Scales</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Impaler</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shrivel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Eye drop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Molotov</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S-mine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>8 Inch Cannon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Graviball</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>T/S Bomb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ink</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dazers</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dragon Fang</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cauldron</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sylkis Greens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reagan Greens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mimett Greens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Curiel Greens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pahsana Greens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tantal Greens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Krakka Greens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gysahl Greens</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Power Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guard Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mind Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Luck Source</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Zeio Nut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Carob Nut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Porov Nut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pram Nut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lasan Nut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sahara Nut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Luchile Nut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pepio Nut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Battery</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tissue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Omnislash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Catastrophe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Final Heaven</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Great Gospel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cosmo Memory</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All Creation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chaos</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>1/35 Soldier</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Super Sweeper</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Masamune Blade</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Crystal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Combat Diary</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Autograph</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gambler</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Desert Rose</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Earth Harp</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guide Book</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DON&apos;T USE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Buster Sword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mythril Saber</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hardedge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Butterfly Edge</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enhance Sword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Organics</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Crystal Sword</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Force Stealer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rune Blade</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Murasame</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nail Bat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Yoshiyuki</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Apocalypse</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Heaven&apos;s Cloud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ragnarok</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ultima Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Leather Glove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Metal Knuckle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mythril Claw</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Grand Glove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tiger Fang</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diamond Knuckle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dragon Claw</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Crystal Glove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Motor Drive</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Platinum Fist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Kaiser Knuckle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Work Glove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Powersoul</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Master Fist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>God&apos;s Hand</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Premium Heart</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gatling Gun</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Assault Gun</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannon Ball</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Atomic Scissors</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Heavy Vulcan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chainsaw</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Microlaser</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A-M Cannon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>W Machine Gun</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drill Arm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Solid Bazooka</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rocket Punch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enemy Launcher</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pile Banger</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Max Ray</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Missing Score</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mythril Clip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diamond Pin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Silver Barette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gold Barette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Adaman Clip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Crystal Comb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic Comb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plus Barette</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Centclip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hairpin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Seraph Comb</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Behemoth Horn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spring Gun Clip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Limited Moon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Guard Stick</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mythril Rod</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Full Metal Staff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Striking Staff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prism Staff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Aurora Rod</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wizard Staff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wizer Staff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fairy Tale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Umbrella</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Princess Guard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spear</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slash Lance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trident</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mast Ax</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Partisan</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Viper Halberd</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Javelin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Grow Lance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dragoon Lance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Scimitar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flayer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spirit Lance</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Venus Gospel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>4-point Shuriken</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Boomerang</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pinwheel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Razor Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hawkeye</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Crystal Cross</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wind Slash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Twin Viper</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spiral Shuriken</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Superball</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic Shuriken</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rising Sun</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Oritsuru</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Conformer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Yellow M-phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Green M-phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Blue M-phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Red M-phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Crystal M-phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>White M-phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Black M-phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Silver M-phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trumpet Shell</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gold M-phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Battle Trumpet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Starlight Phone</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>HP Shout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Quicksilver</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shotgun</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shortbarrel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lariat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Winchester</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Peacemaker</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Buntline</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Long Barrel R</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Silver Rifle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sniper CR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Supershot ST</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Outsider</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Death Penalty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Masamune</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bronze Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Iron Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Titan Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mythril Armlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Carbon Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Silver Armlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gold Armlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diamond Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Crystal Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Platinum Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rune Armlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edincoat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wizard Bracelet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Adaman Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gigas Armlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Imperial Guard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Aegis Armlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fourth Bracelet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Warrior Bangle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Beta</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Alpha</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Four Slots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fire Armlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Aurora Armlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bolt Armlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dragon Armlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Minerva Band</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Escort Guard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mystile</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ziedrich</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Precious Watch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chocobracelet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Power Wrist</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Protect Vest</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Earring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Talisman</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Choco Feather</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Amulet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Champion Belt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Poison Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tough Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Circlet</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Star Pendant</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Silver Glasses</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Headband</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fairy Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Jem Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>White Cape</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sprint Shoes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Peace Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ribbon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fire Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ice Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bolt Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tetra Elemental</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Safety Bit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fury Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Curse Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Protect Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cat&apos;s Bell</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reflect Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Water Ring</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sneak Glove</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>HypnoCrown</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
