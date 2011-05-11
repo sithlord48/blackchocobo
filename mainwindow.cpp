@@ -174,7 +174,7 @@ void MainWindow::on_actionOpen_Save_File_activated()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Open Final Fantasy 7 Save"),settings.value("load_path").toString(),
-    tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.mcr *.mcd *.mc *.ddf *.ps *.psm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mc *.ddf *.ps *.psm);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)"));
+    tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.mcr *.mcd *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)"));
     if (!fileName.isEmpty()) loadFileFull(fileName);
 }
 
@@ -491,7 +491,7 @@ void MainWindow::on_actionSave_File_activated()
     {
         QString fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 MC SaveGame"), settings.value("save_emu_path").toString(),
-        tr("FF7 MC SaveGame(*.mcr *.mcd *.mc *.ddf *.ps *.psm)"));
+        tr("FF7 MC SaveGame(*.mcr *.mcd *.mc *.ddf *.ps *.psm *.bin)"));
 
         if (!fileName.isEmpty())
         {
@@ -1024,7 +1024,7 @@ void MainWindow::on_actionExport_MC_triggered()
 
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 MC SaveGame"), settings.value("save_emu_path").toString(),
-    tr("FF7 MC SaveGame(*.mcr *.mcd *.mc *.ddf *.ps *.psm)"));
+    tr("FF7 MC SaveGame(*.mcr *.mcd *.mc *.ddf *.ps *.psm *.bin)"));
 
     if(fileName==""){return;}
 
