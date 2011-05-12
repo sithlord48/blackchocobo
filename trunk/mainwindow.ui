@@ -40,9 +40,9 @@
   </property>
   <property name="styleSheet">
    <string notr="true">/*GENERIC ITEM RULES (qwidget, qabstract area,etc.)*/
-QWidget{background-color: rgba(10,10,10,16);font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);}
+QWidget{background-color: rgba(10,10,10,16);font:9pt &quot;ubuntu&quot;;color:rgb(255,255,255);}
 
-QWidget:disabled,QLabel:disabled{font: 9pt &quot;Ubuntu&quot;;color:rgb(74, 80, 73);background-color:rgba(48, 47, 47,128);}
+QWidget:disabled,QLabel:disabled{font:9pt&quot;ubuntu&quot; ;color:rgb(74, 80, 73);background-color:rgba(48, 47, 47,128);}
 
 QDialog{
 background-color:rgb(48,47,47);
@@ -1880,7 +1880,7 @@ image: url(:/icon/cait_icon);
                    <widget class="QLabel" name="label_47">
                     <property name="font">
                      <font>
-                      <family>Ubuntu</family>
+                      <family>ubuntu</family>
                       <pointsize>9</pointsize>
                       <weight>50</weight>
                       <italic>false</italic>
@@ -1994,7 +1994,7 @@ image: url(:/icon/cait_icon);
                    <widget class="QLabel" name="label_49">
                     <property name="font">
                      <font>
-                      <family>Ubuntu</family>
+                      <family>ubuntu</family>
                       <pointsize>9</pointsize>
                       <weight>50</weight>
                       <italic>false</italic>
@@ -5574,7 +5574,7 @@ image: url(:/icon/cait_icon);
                  </property>
                  <property name="font">
                   <font>
-                   <family>Ubuntu</family>
+                   <family>ubuntu</family>
                    <pointsize>9</pointsize>
                    <weight>50</weight>
                    <italic>false</italic>
@@ -6141,6 +6141,12 @@ image: url(:/icon/cait_icon);
          <layout class="QVBoxLayout" name="verticalLayout_54">
           <item>
            <widget class="QGroupBox" name="groupBox_22">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
               <width>242</width>
@@ -6173,15 +6179,6 @@ image: url(:/icon/cait_icon);
                  <width>16777215</width>
                  <height>110</height>
                 </size>
-               </property>
-               <property name="font">
-                <font>
-                 <family>Ubuntu</family>
-                 <pointsize>9</pointsize>
-                 <weight>50</weight>
-                 <italic>false</italic>
-                 <bold>false</bold>
-                </font>
                </property>
                <property name="frameShape">
                 <enum>QFrame::StyledPanel</enum>
@@ -6330,15 +6327,6 @@ image: url(:/icon/cait_icon);
                <width>16777215</width>
                <height>16777215</height>
               </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Ubuntu</family>
-               <pointsize>9</pointsize>
-               <weight>50</weight>
-               <italic>false</italic>
-               <bold>false</bold>
-              </font>
              </property>
              <property name="frameShape">
               <enum>QFrame::StyledPanel</enum>
@@ -7058,14 +7046,14 @@ image: url(:/icon/cait_icon);
             <widget class="QPushButton" name="clearMateria">
              <property name="geometry">
               <rect>
-               <x>180</x>
+               <x>119</x>
                <y>20</y>
-               <width>125</width>
-               <height>27</height>
+               <width>186</width>
+               <height>21</height>
               </rect>
              </property>
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+              <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
               </sizepolicy>
@@ -7678,7 +7666,7 @@ image: url(:/icon/cait_icon);
                <widget class="QLabel" name="label_7">
                 <property name="font">
                  <font>
-                  <family>Ubuntu</family>
+                  <family>ubuntu</family>
                   <pointsize>9</pointsize>
                   <weight>50</weight>
                   <italic>false</italic>
@@ -8148,6 +8136,9 @@ image: url(:/icon/cait_icon);
          </spacer>
         </item>
        </layout>
+       <zorder>groupBox_18</zorder>
+       <zorder>combo_add_mat</zorder>
+       <zorder>clearMateria</zorder>
       </widget>
       <widget class="QWidget" name="tab_chocobos">
        <attribute name="title">
@@ -17989,7 +17980,7 @@ p, li { white-space: pre-wrap; }
                </property>
                <property name="font">
                 <font>
-                 <family>Ubuntu</family>
+                 <family>ubuntu</family>
                  <pointsize>9</pointsize>
                  <weight>50</weight>
                  <italic>false</italic>

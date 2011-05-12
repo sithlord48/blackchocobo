@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>556</width>
-    <height>460</height>
+    <height>466</height>
    </rect>
   </property>
   <property name="minimumSize">
@@ -169,7 +169,7 @@ QSlider{
         <item>
          <widget class="QLabel" name="label_2">
           <property name="text">
-           <string> Folder To Load/Save Emulator Cards (.mcd/.mcr) </string>
+           <string> Folder To Load/Save Emulator Memory Cards  </string>
           </property>
          </widget>
         </item>
