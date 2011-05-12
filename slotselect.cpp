@@ -19,7 +19,6 @@
 #include "SaveIcon.h"
 #include "QMessageBox"
 extern FF7 ff7;
-extern int s;
 SaveIcon icons[15];
 
 SlotSelect::SlotSelect(QWidget *parent) :
@@ -2698,90 +2697,19 @@ void SlotSelect::changeEvent(QEvent *e)
         break;
     }
 }
-/*
-void SlotSelect::on_btn_prev_clicked()
-{
-    if (ui->stackedWidget->currentIndex()== 0) {return;}
-    else{ui->stackedWidget->setCurrentIndex((ui->stackedWidget->currentIndex()-1));}
-}
 
-void SlotSelect::on_btn_next_clicked()
-{
-    if (ui->stackedWidget->currentIndex()== 4) {return;}
-    else{ui->stackedWidget->setCurrentIndex((ui->stackedWidget->currentIndex()+1));}
-}
-*/
-void SlotSelect::on_btn_s1_clicked()
-{
-    s=0;SlotSelect::close();
-}
-
-void SlotSelect::on_btn_s2_clicked()
-{
-    s=1;SlotSelect::close();
-}
-
-void SlotSelect::on_btn_s3_clicked()
-{
-    s=2;SlotSelect::close();
-}
-
-void SlotSelect::on_btn_s4_clicked()
-{
-    s=3;SlotSelect::close();
-}
-
-void SlotSelect::on_btn_s5_clicked()
-{
-    s=4;SlotSelect::close();
-}
-
-void SlotSelect::on_btn_s6_clicked()
-{
-    s=5;SlotSelect::close();
-}
-
-void SlotSelect::on_btn_s7_clicked()
-{
-    s=6;SlotSelect::close();
-}
-
-void SlotSelect::on_btn_s8_clicked()
-{
-    s=7;SlotSelect::close();
-}
-
-void SlotSelect::on_btn_s9_clicked()
-{
-    s=8;SlotSelect::close();
-}
-
-void SlotSelect::on_btn_s10_clicked()
-{
-    s=9;SlotSelect::close();
-}
-
-void SlotSelect::on_btn_s11_clicked()
-{
-    s=10;SlotSelect::close();
-}
-
-void SlotSelect::on_btn_s12_clicked()
-{
-    s=11;SlotSelect::close();
-}
-
-void SlotSelect::on_btn_s13_clicked()
-{
-    s=12;SlotSelect::close();
-}
-
-void SlotSelect::on_btn_s14_clicked()
-{
-    s=13;SlotSelect::close();
-}
-
-void SlotSelect::on_btn_s15_clicked()
-{
-    s=14;SlotSelect::close();
-}
+void SlotSelect::on_btn_s1_clicked(){this->done(0);}
+void SlotSelect::on_btn_s2_clicked(){this->done(1);}
+void SlotSelect::on_btn_s3_clicked(){this->done(2);}
+void SlotSelect::on_btn_s4_clicked(){this->done(3);}
+void SlotSelect::on_btn_s5_clicked(){this->done(4);}
+void SlotSelect::on_btn_s6_clicked(){this->done(5);}
+void SlotSelect::on_btn_s7_clicked(){this->done(6);}
+void SlotSelect::on_btn_s8_clicked(){this->done(7);}
+void SlotSelect::on_btn_s9_clicked(){this->done(8);}
+void SlotSelect::on_btn_s10_clicked(){this->done(9);}
+void SlotSelect::on_btn_s11_clicked(){this->done(10);}
+void SlotSelect::on_btn_s12_clicked(){this->done(11);}
+void SlotSelect::on_btn_s13_clicked(){this->done(12);}
+void SlotSelect::on_btn_s14_clicked(){this->done(13);}
+void SlotSelect::on_btn_s15_clicked(){this->done(14);}
