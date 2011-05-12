@@ -307,7 +307,7 @@ void MainWindow::loadFileFull(const QString &fileName)
         if(ff7.slot[13].checksum != 0x0000 && ff7.slot[13].checksum != 0x4D1D){ff7.SG_Region_String[13]= "BASCUS-94163FF7-S14";} else {ff7.SG_Region_String[13] = "";}
         if(ff7.slot[14].checksum != 0x0000 && ff7.slot[14].checksum != 0x4D1D){ff7.SG_Region_String[14]= "BASCUS-94163FF7-S15";} else {ff7.SG_Region_String[14] = "";}
         SlotSelect slotselect;
-        slotselect.exec();
+        s=slotselect.exec();
     }
 
     else if (ff7.savetype == 2 || ff7.savetype == 4)
@@ -337,7 +337,7 @@ void MainWindow::loadFileFull(const QString &fileName)
             ff7.SG_Region_String[i] = QString(mc_header.mid(index,19));
         }
         SlotSelect slotselect;
-        slotselect.exec();
+        s=slotselect.exec();
     }
     else
     {
@@ -1321,7 +1321,7 @@ void MainWindow::on_actionSlot_12_activated(){s=11; guirefresh();}
 void MainWindow::on_actionSlot_13_activated(){s=12; guirefresh();}
 void MainWindow::on_actionSlot_14_activated(){s=13; guirefresh();}
 void MainWindow::on_actionSlot_15_activated(){s=14; guirefresh();}
-void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect; slotselect.exec(); guirefresh();}
+void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect; s=slotselect.exec(); guirefresh();}
 void MainWindow::on_actionClear_Slot_activated(){clearslot(s);  guirefresh();}
 void MainWindow::on_actionPrevious_Slot_activated(){if (s > 0) {s--; guirefresh();}}
 void MainWindow::on_actionNext_Slot_activated(){if (s<14){s++; guirefresh();}}
@@ -2086,7 +2086,7 @@ void MainWindow::guirefresh(void)
 
             case 2://export as psx
                 SlotSelect selector;
-                selector.exec();
+                s=selector.exec();
                 guirefresh();
             break;
 }
