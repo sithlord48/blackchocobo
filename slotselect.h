@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010 Chris Rizzitello <sithlord48@gmail.com>                //
+//    copyright 2010, 2011 Chris Rizzitello <sithlord48@gmail.com>          //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -13,11 +13,14 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
+
 #ifndef SLOTSELECT_H
 #define SLOTSELECT_H
 
 #include <QDialog>
-
+#include "globals.h"
+#include "SaveIcon.h"
+#include "QMessageBox"
 namespace Ui {
     class SlotSelect;
 }

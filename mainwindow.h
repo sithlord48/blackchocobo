@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010 Chris Rizzitello <sithlord48@gmail.com>                //
+//    copyright 2010, 2011 Chris Rizzitello <sithlord48@gmail.com>          //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -13,12 +13,22 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include <QFileDialog> // for file dialogs
+#include <QDataStream> // for data manip
 #include <QMainWindow>
 #include <QWidget>
 #include <QMessageBox>
+#include "slotselect.h" // slot selection dialog stuff.
+#include "options.h" // contains the options dialog
+#include "about.h"      // about dialog stuff.
+#include "errbox.h" //non ff7 error box
+#include <QSettings>
+#include <SaveIcon.h>
+
 void fix_sum(const QString &fileName);
 
 
