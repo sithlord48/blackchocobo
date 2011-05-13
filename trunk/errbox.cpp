@@ -1,7 +1,22 @@
+/****************************************************************************/
+//    copyright 2010, 2011 Chris Rizzitello <sithlord48@gmail.com>          //
+//                                                                          //
+//    This file is part of Black Chocobo.                                   //
+//                                                                          //
+//    Black Chocobo is free software: you can redistribute it and/or modify //
+//    it under the terms of the GNU General Public License as published by  //
+//    the Free Software Foundation, either version 3 of the License, or     //
+//    (at your option) any later version.                                   //
+//                                                                          //
+//    Black Chocobo is distributed in the hope that it will be useful,      //
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
+//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
+//    GNU General Public License for more details.                          //
+/****************************************************************************/
+
 #include "errbox.h"
 #include "ui_errbox.h"
-#include "globals.h"    // contains checksumming functions
-#include <SaveIcon.h>
+
 /*~~~~~GLOBALS~~~~~~*/
 extern FF7 ff7; // our save file struct
 extern int s; //keeps track of our slot globally

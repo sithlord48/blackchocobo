@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010 Chris Rizzitello <sithlord48@gmail.com>                //
+//    copyright 2010, 2011 Chris Rizzitello <sithlord48@gmail.com>          //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -16,8 +16,8 @@
 // This file is a modified verion of ff7file.h from Qhimm's jenova editor   //
 #ifndef FF7SAVE_H
 #define FF7SAVE_H
+
 #include <QObject>
-#include <QCoreApplication>
 
 /* START FILE INFO (Vegeta_Ss4) v0.8.3*/
 

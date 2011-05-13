@@ -14,17 +14,10 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 /*~~~~~~~~~~~Includes~~~~~~~~*/
-#include <QFileDialog> // for file dialogs
-#include <QDataStream> // for data manip
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include "globals.h"    // contains checksumming functions
-#include "slotselect.h" // slot selection dialog stuff.
-#include "options.h" // contains the options dialog
-#include "about.h"      // about dialog stuff.
-#include "errbox.h" //non ff7 error box
-#include <QSettings>
-#include <SaveIcon.h>
+
 /*~~~~~GLOBALS~~~~~~*/
 bool load =false; //used for checking if data is initial load (to block some overrights when gui objects change)
 extern FF7 ff7; // our save file struct
