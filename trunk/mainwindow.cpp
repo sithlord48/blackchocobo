@@ -1695,16 +1695,16 @@ void MainWindow::charupdate(void)
     {
         ui->cb_id->setText(tr("Young Cloud"));
         ui->cb_id->setVisible(true);
-        if(ff7.slot[s].chars[6].id == 9){ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));}
-        else{ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));}
+        if(ff7.slot[s].chars[6].id == 9){ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));ui->cb_id->setChecked(1);}
+        else{ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));ui->cb_id->setChecked(0);}
     }
 
     if(curchar==7)
     {
         ui->cb_id->setText(tr("Sephiroth"));
         ui->cb_id->setVisible(true);
-        if(ff7.slot[s].chars[7].id == 10){ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));}
-        else{ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));}
+        if(ff7.slot[s].chars[7].id == 10){ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));ui->cb_id->setChecked(1);}
+        else{ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));ui->cb_id->setChecked(0);}
     }
 
     ui->line_name->clear();
@@ -1844,6 +1844,7 @@ void MainWindow::setweaponslots(void)
     switch(curchar)
     {
     case 0:{
+        clouds_weapons:
             switch(Items[128 +ui->combo_weapon->currentIndex()].mslots)
             {
             case 0:{break;}
@@ -1957,7 +1958,7 @@ void MainWindow::setweaponslots(void)
             case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
           }
             break;
-        }
+       }
     case 5:{
             switch(Items[215 +ui->combo_weapon->currentIndex()].mslots)
             {
@@ -1982,48 +1983,60 @@ void MainWindow::setweaponslots(void)
             break;
         }
     case 6:{
-            switch(Items[229 +ui->combo_weapon->currentIndex()].mslots)
+            if(ff7.slot[s].chars[curchar].id==6)
             {
-            case 0:{break;}
-            case 1:{ui->w_m_s1->setHidden(0);break;}
-            case 2:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);break;}
-            case 3:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);break;}
-            case 4:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);break;}
-            case 5:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);break;}
-            case 6:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);break;}
-            case 7:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);break;}
-            case 8:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);ui->w_m_s8->setHidden(0);break;}
+                switch(Items[229 +ui->combo_weapon->currentIndex()].mslots)
+                {
+                case 0:{break;}
+                case 1:{ui->w_m_s1->setHidden(0);break;}
+                case 2:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);break;}
+                case 3:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);break;}
+                case 4:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);break;}
+                case 5:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);break;}
+                case 6:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);break;}
+                case 7:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);break;}
+                case 8:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);ui->w_m_s8->setHidden(0);break;}
+                }
+                switch(Items[229+ui->combo_weapon->currentIndex()].linked)
+                {
+                case 0:{break;}
+                case 1:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));break;}
+                case 2:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));break;}
+                case 3:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
+                case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
+               }
             }
-            switch(Items[229+ui->combo_weapon->currentIndex()].linked)
-            {
-            case 0:{break;}
-            case 1:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));break;}
-            case 2:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));break;}
-            case 3:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
-            case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
-           }
+            else {goto clouds_weapons;}//jump to case0
             break;
         }
     case 7:{
-            switch(Items[242 +ui->combo_weapon->currentIndex()].mslots)
+            if(ff7.slot[s].chars[curchar].id==7)
             {
-            case 0:{break;}
-            case 1:{ui->w_m_s1->setHidden(0);break;}
-            case 2:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);break;}
-            case 3:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);break;}
-            case 4:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);break;}
-            case 5:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);break;}
-            case 6:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);break;}
-            case 7:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);break;}
-            case 8:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);ui->w_m_s8->setHidden(0);break;}
+                switch(Items[242 +ui->combo_weapon->currentIndex()].mslots)
+                {
+                case 0:{break;}
+                case 1:{ui->w_m_s1->setHidden(0);break;}
+                case 2:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);break;}
+                case 3:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);break;}
+                case 4:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);break;}
+                case 5:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);break;}
+                case 6:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);break;}
+                case 7:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);break;}
+                case 8:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);ui->w_m_s8->setHidden(0);break;}
+                }
+                switch(Items[242+ui->combo_weapon->currentIndex()].linked)
+                {
+                case 0:{break;}
+                case 1:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));break;}
+                case 2:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));break;}
+                case 3:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
+                case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
+                }
             }
-            switch(Items[242+ui->combo_weapon->currentIndex()].linked)
+            else //sephiroth has only one weapon.
             {
-            case 0:{break;}
-            case 1:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));break;}
-            case 2:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));break;}
-            case 3:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
-            case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
+                ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);
+                ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));
             }
             break;
         }
@@ -3424,6 +3437,7 @@ void MainWindow::on_btn_yuffie_clicked()
 void MainWindow::on_btn_cait_clicked()
 {
     curchar=6;
+  //  if(ff7.slot[s].chars[curchar].id==9){ui->btn_cloud->click();}
     load=true;
     ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));
     charupdate();
@@ -3464,9 +3478,17 @@ void MainWindow::on_btn_cait_clicked()
     if (n & (1<<0)) ui->limit_1a->setChecked(1);
     if (n & (1<<3)) ui->limit_2a->setChecked(1);
 //fill and set weapon
-    for(int i=229;i<242;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
-    ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-101);
-    load=false;
+   if(ff7.slot[s].chars[curchar].id==6)
+   {
+       for(int i=229;i<242;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
+       ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-101);
+   }
+   else//fill w/ clouds weapons.
+   {
+       for(int i=128;i<144;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
+       ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon);
+   }
+   load=false;
 }
 void MainWindow::on_btn_vincent_clicked()
 {
@@ -3513,8 +3535,16 @@ void MainWindow::on_btn_vincent_clicked()
     if (n & (1<<6)) ui->limit_3a->setChecked(1);
     if (n & (1<<9)) ui->limit_4->setChecked(1);
 //fill and select weapon
-    for(int i=242;i<255;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
-    ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-114);
+    if(ff7.slot[s].chars[curchar].id==7)
+    {
+        for(int i=242;i<255;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
+        ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-114);
+    }
+    else
+    {
+     ui->combo_weapon->addItem(QIcon(Items[255].image),names.ItemNames(255));
+     ui->combo_weapon->setCurrentIndex(0);
+    }
     load=false;
 }
 void MainWindow::on_btn_cid_clicked()
