@@ -121,7 +121,7 @@ static ITEM Items[]=
   {":/icon/vincent_weapon",4,2},{":/icon/vincent_weapon",6,3},{":/icon/vincent_weapon",8,2},
   {":/icon/vincent_weapon",8,4},
 //sepi weapon =255
-  {":/icon/item",0,0},
+  {":/icon/item",5,2},
 //armor  256-287
   {":/icon/armor",0,0},{":/icon/armor",1,0},{":/icon/armor",2,0},{":/icon/armor",2,1},
   {":/icon/armor",3,1},{":/icon/armor",4,1},{":/icon/armor",4,2},{":/icon/armor",5,2},
