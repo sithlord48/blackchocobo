@@ -25,6 +25,8 @@ int ff7__checksum(void * qw );
 
 void preptext (void);
 void fix_pc_bytemask(void);
+void fix_psx_header(int);
+void fix_vmc_header(void);
 
 class ff7names
 {
