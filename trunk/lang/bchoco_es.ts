@@ -2711,14 +2711,6 @@
         <translation>Copiar Ranura Actual</translation>
     </message>
     <message>
-        <source>Alt+C</source>
-        <translation>Alt+C</translation>
-    </message>
-    <message>
-        <source>Alt+V</source>
-        <translation>Alt+V</translation>
-    </message>
-    <message>
         <source>Clear Slot</source>
         <translation>Borrar Ranura</translation>
     </message>
@@ -3287,10 +3279,6 @@
         <translation>Alt+Q</translation>
     </message>
     <message>
-        <source>F2</source>
-        <translation>F2</translation>
-    </message>
-    <message>
         <source>Export PC Save</source>
         <translation>Exportar Guardado de PC</translation>
     </message>
@@ -3363,10 +3351,6 @@
         <translation>Mostrar Menú de Selección</translation>
     </message>
     <message>
-        <source>&amp;Open Save File</source>
-        <translation>&amp;Abrir Archivo de Guardado</translation>
-    </message>
-    <message>
         <source>Othe&amp;r</source>
         <translation>Ot&amp;ros</translation>
     </message>
@@ -3385,10 +3369,6 @@
     <message>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
-    </message>
-    <message>
-        <source>&amp;Save File</source>
-        <translation>&amp;Guardar Archivo</translation>
     </message>
     <message>
         <source>Ctrl+S</source>
@@ -4170,6 +4150,102 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mc *.ddf *.ps *.psm *.bin)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S01</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S02</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S03</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S04</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S05</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S06</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S07</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S08</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S09</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S11</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S12</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S13</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S14</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>S15</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save As</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alt+Shift+S</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alt+F1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ctrl+Shift+C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ctrl+Shift+V</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>File Name is Empty</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6064,6 +6140,14 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;You should have received a copy of the GNU General Public License&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;along with this program.  If not, see &lt;/span&gt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt; text-decoration: underline; color:#508ed8;&quot;&gt;&amp;lt;http://www.gnu.org/licenses/&amp;gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Save and Save as are now both allowed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Change Slot Posin in Debug mode (MC only) </source>
         <translation type="unfinished"></translation>
     </message>
 </context>
