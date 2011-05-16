@@ -310,7 +310,7 @@ private slots:
     void on_actionClear_Slot_activated();
     void on_actionPaste_Slot_activated();
     void on_actionOpen_Save_File_activated();
-    void on_actionSave_File_activated();
+    void on_actionSave_File_As_activated();
     void on_actionAbout_Qt_activated();
     void on_actionAbout_activated();
     void on_actionExport_PSX_activated();
@@ -427,5 +427,7 @@ private slots:
     void geteskills2(int row);
 
     void on_list_eskill_2_itemChanged();
+    void on_action_Save_activated();
+    void on_cb_Region_Slot_currentIndexChanged();
 };
 #endif // MAINWINDOW_H
