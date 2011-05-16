@@ -4290,7 +4290,7 @@ image: url(:/icon/cait_icon);
              <x>0</x>
              <y>0</y>
              <width>423</width>
-             <height>430</height>
+             <height>426</height>
             </rect>
            </property>
            <attribute name="label">
@@ -8136,9 +8136,6 @@ image: url(:/icon/cait_icon);
          </spacer>
         </item>
        </layout>
-       <zorder>groupBox_18</zorder>
-       <zorder>combo_add_mat</zorder>
-       <zorder>clearMateria</zorder>
       </widget>
       <widget class="QWidget" name="tab_chocobos">
        <attribute name="title">
@@ -16962,7 +16959,7 @@ image: url(:/icon/cait_icon);
            </layout>
           </item>
           <item>
-           <widget class="QGroupBox" name="groupBox_38">
+           <widget class="QGroupBox" name="Group_Region">
             <property name="minimumSize">
              <size>
               <width>184</width>
@@ -16971,6 +16968,9 @@ image: url(:/icon/cait_icon);
             </property>
             <property name="title">
              <string>Region String</string>
+            </property>
+            <property name="checked">
+             <bool>false</bool>
             </property>
             <layout class="QHBoxLayout" name="horizontalLayout">
              <item>
@@ -16981,6 +16981,106 @@ image: url(:/icon/cait_icon);
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="cb_Region_Slot">
+               <property name="enabled">
+                <bool>false</bool>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>48</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 9pt &quot;Ubuntu&quot;; color: rgb(255, 255, 255)</string>
+               </property>
+               <property name="currentIndex">
+                <number>-1</number>
+               </property>
+               <property name="maxVisibleItems">
+                <number>15</number>
+               </property>
+               <property name="frame">
+                <bool>false</bool>
+               </property>
+               <item>
+                <property name="text">
+                 <string>S01</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S02</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S03</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S04</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S05</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S06</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S07</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S08</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S09</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S10</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S11</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S12</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S13</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S14</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>S15</string>
+                </property>
+               </item>
               </widget>
              </item>
              <item>
@@ -20770,7 +20870,8 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionImport_char"/>
     </widget>
     <addaction name="actionOpen_Save_File"/>
-    <addaction name="actionSave_File"/>
+    <addaction name="action_Save"/>
+    <addaction name="actionSave_File_As"/>
     <addaction name="separator"/>
     <addaction name="menuImport"/>
     <addaction name="menuExport"/>
@@ -20880,25 +20981,25 @@ p, li { white-space: pre-wrap; }
      <normaloff>:/icon/open</normaloff>:/icon/open</iconset>
    </property>
    <property name="text">
-    <string>&amp;Open Save File</string>
+    <string>&amp;Open</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+O</string>
    </property>
   </action>
-  <action name="actionSave_File">
+  <action name="actionSave_File_As">
    <property name="enabled">
     <bool>false</bool>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/save</normaloff>:/icon/save</iconset>
+     <normaloff>:/icon/save_as</normaloff>:/icon/save_as</iconset>
    </property>
    <property name="text">
-    <string>&amp;Save File</string>
+    <string>Save As</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+S</string>
+    <string>Alt+Shift+S</string>
    </property>
   </action>
   <action name="actionAbout">
@@ -20925,7 +21026,7 @@ p, li { white-space: pre-wrap; }
     <string>About Qt</string>
    </property>
    <property name="shortcut">
-    <string>F2</string>
+    <string>Alt+F1</string>
    </property>
   </action>
   <action name="actionExport_PC_Save">
@@ -21240,7 +21341,7 @@ p, li { white-space: pre-wrap; }
     <string>Copy Current Slot</string>
    </property>
    <property name="shortcut">
-    <string>Alt+C</string>
+    <string>Ctrl+Shift+C</string>
    </property>
   </action>
   <action name="actionPaste_Slot">
@@ -21255,7 +21356,7 @@ p, li { white-space: pre-wrap; }
     <string>Paste Slot</string>
    </property>
    <property name="shortcut">
-    <string>Alt+V</string>
+    <string>Ctrl+Shift+V</string>
    </property>
   </action>
   <action name="actionClear_Slot">
@@ -21505,6 +21606,21 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Import Current Character</string>
+   </property>
+  </action>
+  <action name="action_Save">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/save</normaloff>:/icon/save</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;Save</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
    </property>
   </action>
  </widget>
