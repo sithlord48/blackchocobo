@@ -2,7 +2,6 @@
     <qresource prefix="/icon">
         <file alias="open">icon/open.png</file>
         <file alias="quit">icon/quit.png</file>
-        <file alias="save">icon/save.png</file>
         <file alias="aeris_icon">icon/aeris.png</file>
         <file alias="barret_icon">icon/barret.png</file>
         <file alias="cait_icon">icon/cait.png</file>
@@ -131,5 +130,7 @@
         <file alias="mslot">icon/mslot.png</file>
         <file alias="mlink">icon/mlink.png</file>
         <file alias="default_setting">icon/default_setting.png</file>
+        <file alias="save_as">icon/save_as.png</file>
+        <file alias="save">icon/save.png</file>
     </qresource>
 </RCC>
