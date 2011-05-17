@@ -132,5 +132,7 @@
         <file alias="default_setting">icon/default_setting.png</file>
         <file alias="save_as">icon/save_as.png</file>
         <file alias="save">icon/save.png</file>
+        <file alias="vgs">icon/vgs.png</file>
+        <file alias="dex">icon/dex.png</file>
     </qresource>
 </RCC>
