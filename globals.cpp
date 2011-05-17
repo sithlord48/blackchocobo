@@ -96,14 +96,19 @@ void fix_vmc_header(void)
     int index=2;
 
     if(ff7.savetype==5){for(int i=0; i<0x80; i++){mc_header_2.append(ff7.file_header_psp[i]);} index=0x82;}
+    if(ff7.savetype==6){for(int i=0; i<0x40; i++){mc_header_2.append(ff7.file_header_vgs[i]);} index=0x42;}
+    if(ff7.savetype==7){for(int i=0; i<0xF40; i++){mc_header_2.append(ff7.file_header_vgs[i]);} index=0xF42;}
     quint8 xor_byte = 0x00;
     mc_header_2.append("MC");
     if(ff7.savetype==3){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_mc[k+index]);}}
     if(ff7.savetype==5){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_psp[k+index]);}}
+    if(ff7.savetype==6){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_vgs[k+index]);}}
+    if(ff7.savetype==6){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_dex[k+index]);}}
     xor_byte= 0x00;
     if(ff7.savetype==3){for(int x=0;x<127;x++){xor_byte^=mc_header_2[x];}}
     if(ff7.savetype==5){for(int x=128;x<256;x++){xor_byte^=mc_header_2[x];}}
-
+    if(ff7.savetype==6){for(int x=64;x<192;x++){xor_byte^=mc_header_2[x];}}
+    if(ff7.savetype==6){for(int x=0xF40;x<0x1000;x++){xor_byte^=mc_header_2[x];}}
     //write xor byte..
     mc_header_2.append(xor_byte);
     // thats a normal header
@@ -112,7 +117,8 @@ void fix_vmc_header(void)
         //calc xor byte..
         index= (128 +(128*i));
         if(ff7.savetype==5){index+=0x80;}
-
+        if(ff7.savetype==6){index+=0x40;}
+        if(ff7.savetype==7){index+=0xF40;}
         if(ff7.SG_Region_String[i].contains("00867") ||ff7.SG_Region_String[i].contains("00869") ||
            ff7.SG_Region_String[i].contains("00900") ||ff7.SG_Region_String[i].contains("94163") ||
            ff7.SG_Region_String[i].contains("00700") ||ff7.SG_Region_String[i].contains("01057"))
@@ -256,6 +262,10 @@ void fix_vmc_header(void)
         {
             if(ff7.savetype==3){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}}
             if(ff7.savetype==5){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_psp[index+j]);}}   //write what ever is in the header.(NOT FF7 SAVE)
+            if(ff7.savetype==6){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_vgs[index+j]);}}   //write what ever is in the header.(NOT FF7 SAVE)
+            if(ff7.savetype==7){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_dex[index+j]);}}   //write what ever is in the header.(NOT FF7 SAVE)
+
+
         }
     }
 
@@ -271,6 +281,18 @@ void fix_vmc_header(void)
         for(int i=0;i<6143;i++){mc_header_2.append(ff7.file_header_psp[index+i]);}// fill the remainder
         memcpy(&ff7.file_header_psp,mc_header_2,0x2080);
         //PUT PSP CHECKSUMING HERE ..
+    }
+    if(ff7.savetype==6)
+    {
+        index=2048+0x40;
+        for(int i=0;i<6143;i++){mc_header_2.append(ff7.file_header_vgs[index+i]);}// fill the remainder
+        memcpy(&ff7.file_header_psp,mc_header_2,0x2040);
+    }
+    if(ff7.savetype==7)
+    {
+        index=2048+0xF40;
+        for(int i=0;i<6143;i++){mc_header_2.append(ff7.file_header_dex[index+i]);}// fill the remainder
+        memcpy(&ff7.file_header_psp,mc_header_2,0x2F40);
     }
 }
 
