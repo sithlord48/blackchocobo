@@ -4145,14 +4145,6 @@ no es una partida guardada de FF7</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.mcr *.mcd *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7 MC SaveGame(*.mcr *.mcd *.mc *.ddf *.ps *.psm *.bin)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>S01</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4241,11 +4233,51 @@ no es una partida guardada de FF7</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save Error</source>
+        <source>Export VGS File</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>File Name is Empty</source>
+        <source>Export Dex-Drive File</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Final Fantasy 7  VGS SaveGame</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7 VGS SaveGame(*.vgs *.mem)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Final Fantasy 7  Dex-Drive SaveGame</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7 VGS SaveGame(*.gme)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Final Fantasy 7 VGS SaveGame</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7 MC SaveGame(*.vgs *.mem)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Final Fantasy 7 Dex-Drive SaveGame</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7 MC SaveGame(*.gme)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
