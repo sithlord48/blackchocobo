@@ -166,7 +166,7 @@ void MainWindow::on_actionOpen_Save_File_activated()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Open Final Fantasy 7 Save"),settings.value("load_path").toString(),
-    tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.mcr *.mcd *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)"));
+    tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme)"));
     if (!fileName.isEmpty()) loadFileFull(fileName);
 }
 
@@ -262,6 +262,36 @@ void MainWindow::loadFileFull(const QString &fileName)
         ff7.file_footerp     = ff7.file_footer_psp;          //pointer to psp file footer
         ff7.savetype         = 5;
     }
+    else if(file_size ==FF7_VGS_SAVE_GAME_SIZE)
+    {
+        ff7.SG_SIZE          = FF7_VGS_SAVE_GAME_SIZE;
+        ff7.SG_HEADER        = FF7_VGS_SAVE_GAME_HEADER;
+        ff7.SG_FOOTER        = FF7_VGS_SAVE_GAME_FOOTER;
+        ff7.SG_DATA_SIZE     = FF7_VGS_SAVE_GAME_DATA_SIZE;
+        ff7.SG_SLOT_HEADER   = FF7_VGS_SAVE_GAME_SLOT_HEADER;
+        ff7.SG_SLOT_FOOTER   = FF7_VGS_SAVE_GAME_SLOT_FOOTER;
+        ff7.SG_SLOT_SIZE     = FF7_VGS_SAVE_GAME_SLOT_SIZE;
+        ff7.SG_SLOT_NUMBER   = FF7_VGS_SAVE_GAME_SLOT_NUMBER;
+        ff7.SG_TYPE          = "VGS";
+        ff7.file_headerp     = ff7.file_header_vgs;          //pointer to vgs file header
+        ff7.file_footerp     = ff7.file_footer_vgs;          //pointer to vgs file footer
+        ff7.savetype         = 6;
+    }
+    else if(file_size ==FF7_DEX_SAVE_GAME_SIZE)
+    {
+        ff7.SG_SIZE          = FF7_DEX_SAVE_GAME_SIZE;
+        ff7.SG_HEADER        = FF7_DEX_SAVE_GAME_HEADER;
+        ff7.SG_FOOTER        = FF7_DEX_SAVE_GAME_FOOTER;
+        ff7.SG_DATA_SIZE     = FF7_DEX_SAVE_GAME_DATA_SIZE;
+        ff7.SG_SLOT_HEADER   = FF7_DEX_SAVE_GAME_SLOT_HEADER;
+        ff7.SG_SLOT_FOOTER   = FF7_DEX_SAVE_GAME_SLOT_FOOTER;
+        ff7.SG_SLOT_SIZE     = FF7_DEX_SAVE_GAME_SLOT_SIZE;
+        ff7.SG_SLOT_NUMBER   = FF7_DEX_SAVE_GAME_SLOT_NUMBER;
+        ff7.SG_TYPE          = "DEX";
+        ff7.file_headerp     = ff7.file_header_dex;          //pointer to vgs file header
+        ff7.file_footerp     = ff7.file_footer_dex;          //pointer to vgs file footer
+        ff7.savetype         = 7;
+    }
     else
     {
         QMessageBox::warning(this, tr("Unknown Filetype"),
@@ -316,11 +346,13 @@ void MainWindow::loadFileFull(const QString &fileName)
         for(int i=1;i<14;i++){clearslot(i);}
     }
 
-    else if (ff7.savetype == 3 || ff7.savetype ==5)
+    else if (ff7.savetype == 3 || ff7.savetype ==5 || ff7.savetype ==6||ff7.savetype==7)
     {
         QByteArray mc_header;
         int offset = 0;
         if(ff7.savetype ==5){offset = 0x80;} // psp save. start after the extra vmp header info
+        if(ff7.savetype ==6){offset = 0x40;} // vgs save.
+        if(ff7.savetype ==7){offset = 0xF40;} // dex save.
         mc_header = ff7file.mid(offset,ff7.SG_HEADER);
         int index=0;
         for(int i=0; i<15;i++)
@@ -432,7 +464,7 @@ void MainWindow::on_actionImport_char_triggered()
             ff7file = file.readAll();
             memcpy(&ff7.slot[s].chars[curchar],ff7file,132);
         }
-guirefresh();
+    guirefresh();
 }
 
 void MainWindow::on_actionExport_char_triggered()
@@ -452,28 +484,18 @@ void MainWindow::on_action_Save_activated()
 {
     if(!filename.isEmpty())
     {
-        if(ff7.savetype==1)
-        {
-            fix_pc_bytemask();
-        }
+        if(ff7.savetype==1){fix_pc_bytemask();}
+        else if(ff7.savetype==2){fix_psx_header(s);}
 
-        else if(ff7.savetype==2)
-        {
-            fix_psx_header(s);
-        }
-
-        else if(ff7.savetype==3 || ff7.savetype==5)
+        else if(ff7.savetype==3 || ff7.savetype==5 || ff7.savetype==6 || ff7.savetype ==7)
         {
             fix_vmc_header();
             if(ff7.savetype==5){QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PSP."));}
         }
 
-        else if(ff7.savetype==4)
-        {
-            //deal w/ psv here. or in fix_vmc_header()
-        }
-
+        else if(ff7.savetype==4){/*deal w/ psv here. or in fix_vmc_header()*/}
         else {QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot save This Type of File"));return;}
+
         saveFileFull(filename);
     }
 }//END ACTION_SAVE_ACTIVATED()
@@ -485,6 +507,7 @@ void MainWindow::on_actionSave_File_As_activated()
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 PC SaveGame"), settings.value("save_pc_path").toString(),
         tr("FF7 PC SaveGame(*.ff7)"));
+
         fix_pc_bytemask();// adjust the bytemask so the correct slots are shown
     }
     else if(ff7.savetype==2)
@@ -498,7 +521,7 @@ void MainWindow::on_actionSave_File_As_activated()
     {
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 MC SaveGame"), settings.value("save_emu_path").toString(),
-        tr("FF7 MC SaveGame(*.mcr *.mcd *.mc *.ddf *.ps *.psm *.bin)"));
+        tr("FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)"));
         fix_vmc_header();
 
     }
@@ -517,9 +540,23 @@ void MainWindow::on_actionSave_File_As_activated()
         QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PSP."));
 
     }
+    else if(ff7.savetype==6)
+    {
+        fileName = QFileDialog::getSaveFileName(this,
+        tr("Save Final Fantasy 7  VGS SaveGame"), "",
+        tr("FF7 VGS SaveGame(*.vgs *.mem)"));
+        fix_vmc_header();
+    }
+    else if(ff7.savetype==7)
+    {
+        fileName = QFileDialog::getSaveFileName(this,
+        tr("Save Final Fantasy 7  Dex-Drive SaveGame"), "",
+        tr("FF7 VGS SaveGame(*.gme)"));
+        fix_vmc_header();
+    }
     else {QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot save This Type of File"));return;}
-    if(!fileName.isEmpty()){saveFileFull(fileName);} //reguardless save the file of course if its has a string.
-    else{QMessageBox::information(this,tr("Save Error"),tr("File Name is Empty"));}
+    if(fileName.isEmpty()){return;}
+    saveFileFull(fileName); //reguardless save the file of course if its has a string.
 }
 /*~~~~~~~~~~~SHORT SAVE~~~~~~~~~~~~*/
 void MainWindow::saveFileFull(const QString &fileName)
@@ -600,7 +637,7 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
                     fileName.append("/");
                     fileName.append(filename);
                     fileName.append("-cait_sith");
-                    if(ff7.savetype == 1 || ff7.savetype == 3 || ff7.savetype ==5)
+                    if(ff7.savetype == 1 || ff7.savetype == 3 || ff7.savetype ==5 || ff7.savetype ==6 || ff7.savetype ==7)
                     {
                         fileName.append("-");
                         QString str;
@@ -614,7 +651,7 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
                     fileName.append("/");
                     fileName.append(filename);
                     fileName.append("-vincent");
-                    if(ff7.savetype == 1 || ff7.savetype == 3 || ff7.savetype ==5)
+                    if(ff7.savetype == 1 || ff7.savetype == 3 || ff7.savetype ==5 || ff7.savetype ==6 || ff7.savetype ==7)
                     {
                         fileName.append("-");
                         QString str;
@@ -671,7 +708,7 @@ void MainWindow::on_actionExport_PC_Save_activated()
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 SaveGame"),  settings.value("export_pc").toString() ,
     tr("FF7 SaveGame(*.ff7)")); // Only Allow PC save Since we are going to make one
-    if (fileName ==""){return;}// catch if Cancel is pressed
+    if (fileName.isEmpty()){return;}// catch if Cancel is pressed
     if(ff7.SG_TYPE !="PC")
     {
         ui->combo_control->setCurrentIndex(0); // if not pc then chance of breaking controls.
@@ -688,39 +725,19 @@ void MainWindow::on_actionExport_PC_Save_activated()
         ff7.file_headerp     = ff7.file_header_pc;           //pointer to pc file header
         ff7.file_footerp     = ff7.file_footer_pc;           //pointer to pc file footer
         ff7.savetype         = 1;
+        // Add File Header
+        for(int i=0;i<9;i++){ff7.file_header_pc[i]= PC_SAVE_GAME_FILE_HEADER[i];}
     }
     fix_pc_bytemask();
-    /*~~~~~~~~~~~~~~~SHORT SAVE - SITHLORD48~~~~~~~~~~~~*/
-    QFile file(fileName);
-    if(!file.open(QFile::ReadWrite))
-    {
-        QMessageBox::warning(this, tr("Black Chocobo"),
-        tr("Cannot write file %1:\n%2.")
-            .arg(fileName)
-            .arg(file.errorString()));
-        return;
-    }
-    FILE *pfile; // this section is starting to work correctly!
-    pfile = fopen(fileName.toAscii(),"wb");
-    fwrite(ff7.file_headerp,9,1,pfile);
     for(int si=0;si<15;si++)
     {
         if(ff7.SG_Region_String[si].contains("00867") || ff7.SG_Region_String[si].contains("00869") ||
            ff7.SG_Region_String[si].contains("00900") || ff7.SG_Region_String[si].contains("94163") ||
            ff7.SG_Region_String[si].contains("00700") || ff7.SG_Region_String[si].contains("01057"))
-           {
-            Write:
-            fwrite(ff7.hf[si].sl_header,ff7.SG_SLOT_HEADER,1,pfile);
-            fwrite(&ff7.slot[si],ff7.SG_DATA_SIZE,1,pfile);
-            fwrite(ff7.hf[si].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
-           }
-        else {clearslot(si);    goto Write;} //the program is incomplete with out one use of a goto.
+            {/*FF7FILE*/}
+        else{clearslot(si);}
     }
-    fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
-    fclose(pfile);
-    fix_sum(fileName);
-
-    /*~~~~~~~~~~~END SHORT SAVE -SITHLORD48~~~~~~~~~~~~~*/
+    saveFileFull(fileName);
 }
 /*~~~~~~~~~~~~~~~~~EXPORT PSX~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionExport_PSX_activated()
@@ -728,7 +745,7 @@ void MainWindow::on_actionExport_PSX_activated()
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 SaveGame"), ff7.SG_Region_String[s],
     tr("BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)"));//;;BASCUS-94163FF7-S07(*-S07);;BASCUS-94163FF7-S08(*-S08);;BASCUS-94163FF7-S09(*-S09);;BASCUS-94163FF7-S10(*-S10);;BASCUS-94163FF7-S11(*-S11);;BASCUS-94163FF7-S12(*-S12);;BASCUS-94163FF7-S13(*-S13);;BASCUS-94163FF7-S14(*-S14);;BASCUS-94163FF7-S15(*-S15)")); // Only Allow PSX save slots Since we are going to force its creation.
-    if(fileName ==""){return;}
+    if(fileName.isEmpty()){return;}
 
     if(ff7.SG_TYPE != "PSX")
     {
@@ -805,10 +822,10 @@ void MainWindow::on_actionExport_MC_triggered()
 
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 MC SaveGame"), settings.value("save_emu_path").toString(),
-    tr("FF7 MC SaveGame(*.mcr *.mcd *.mc *.ddf *.ps *.psm *.bin)"));
+    tr("FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)"));
 
-    if(fileName==""){return;}
-
+        if(fileName.isEmpty()){return;}
+    if(ff7.SG_TYPE =="PSX") {for(int i=1;i<15;i++){clearslot(i);}}
     if(ff7.SG_TYPE != "MC")
     {
         ui->combo_control->setCurrentIndex(0);
@@ -825,10 +842,96 @@ void MainWindow::on_actionExport_MC_triggered()
         ff7.file_headerp     = ff7.file_header_mc;           //pointer to mc file header
         ff7.file_footerp     = ff7.file_footer_mc;           //pointer to mc file footer
         ff7.savetype         = 3;
+        //No Special Header Treatment Needed
     }
     fix_vmc_header();
     saveFileFull(fileName);
 }
+void MainWindow::on_actionExport_VGS_triggered()
+{
+
+    QString fileName = QFileDialog::getSaveFileName(this,
+    tr("Save Final Fantasy 7 VGS SaveGame"), settings.value("save_emu_path").toString(),
+    tr("FF7 MC SaveGame(*.vgs *.mem)"));
+
+    if(fileName.isEmpty()){return;}
+    if(ff7.SG_TYPE =="PSX") {for(int i=1;i<15;i++){clearslot(i);}}
+    if(ff7.SG_TYPE != "VGS")
+    {
+        ui->combo_control->setCurrentIndex(0);
+
+        ff7.SG_SIZE          = FF7_VGS_SAVE_GAME_SIZE;
+        ff7.SG_HEADER        = FF7_VGS_SAVE_GAME_HEADER;
+        ff7.SG_FOOTER        = FF7_VGS_SAVE_GAME_FOOTER;
+        ff7.SG_DATA_SIZE     = FF7_VGS_SAVE_GAME_DATA_SIZE;
+        ff7.SG_SLOT_HEADER   = FF7_VGS_SAVE_GAME_SLOT_HEADER;
+        ff7.SG_SLOT_FOOTER   = FF7_VGS_SAVE_GAME_SLOT_FOOTER;
+        ff7.SG_SLOT_SIZE     = FF7_VGS_SAVE_GAME_SLOT_SIZE;
+        ff7.SG_SLOT_NUMBER   = FF7_VGS_SAVE_GAME_SLOT_NUMBER;
+        ff7.SG_TYPE          = "VGS";
+        ff7.file_headerp     = ff7.file_header_vgs;           //pointer to mc file header
+        ff7.file_footerp     = ff7.file_footer_vgs;           //pointer to mc file footer
+        ff7.savetype         = 6;
+        // Fill the Header With The Needed Default
+        ff7.file_header_vgs[0] =0x56;
+        ff7.file_header_vgs[1] =0x67;
+        ff7.file_header_vgs[2] =0x73;
+        ff7.file_header_vgs[3] =0x4D;
+        ff7.file_header_vgs[4] =0x01;
+        ff7.file_header_vgs[8] =0x01;
+        ff7.file_header_vgs[12] =0x01;
+    }
+    fix_vmc_header();
+    saveFileFull(fileName);
+}
+void MainWindow::on_actionExport_DEX_triggered()
+{
+
+    QString fileName = QFileDialog::getSaveFileName(this,
+    tr("Save Final Fantasy 7 Dex-Drive SaveGame"), settings.value("save_emu_path").toString(),
+    tr("FF7 MC SaveGame(*.gme)"));
+
+    if(fileName.isEmpty()){return;}
+    if(ff7.SG_TYPE =="PSX") {for(int i=1;i<15;i++){clearslot(i);}}
+    if(ff7.SG_TYPE != "DEX")
+    {
+        ui->combo_control->setCurrentIndex(0);
+
+        ff7.SG_SIZE          = FF7_DEX_SAVE_GAME_SIZE;
+        ff7.SG_HEADER        = FF7_DEX_SAVE_GAME_HEADER;
+        ff7.SG_FOOTER        = FF7_DEX_SAVE_GAME_FOOTER;
+        ff7.SG_DATA_SIZE     = FF7_DEX_SAVE_GAME_DATA_SIZE;
+        ff7.SG_SLOT_HEADER   = FF7_DEX_SAVE_GAME_SLOT_HEADER;
+        ff7.SG_SLOT_FOOTER   = FF7_DEX_SAVE_GAME_SLOT_FOOTER;
+        ff7.SG_SLOT_SIZE     = FF7_DEX_SAVE_GAME_SLOT_SIZE;
+        ff7.SG_SLOT_NUMBER   = FF7_DEX_SAVE_GAME_SLOT_NUMBER;
+        ff7.SG_TYPE          = "DEX";
+        ff7.file_headerp     = ff7.file_header_dex;           //pointer to mc file header
+        ff7.file_footerp     = ff7.file_footer_dex;           //pointer to mc file footer
+        ff7.savetype         = 7;
+        //default header..
+        ff7.file_header_dex[0]=0x31;
+        ff7.file_header_dex[1]=0x32;
+        ff7.file_header_dex[2]=0x33;
+        ff7.file_header_dex[3]=0x2D;
+        ff7.file_header_dex[4]=0x34;
+        ff7.file_header_dex[5]=0x35;
+        ff7.file_header_dex[6]=0x36;
+        ff7.file_header_dex[7]=0x2D;
+        ff7.file_header_dex[8]=0x53;
+        ff7.file_header_dex[9]=0x54;
+        ff7.file_header_dex[10]=0x44;
+        ff7.file_header_dex[18]=0x01;
+        ff7.file_header_dex[20]=0x01;
+        ff7.file_header_dex[21]=0x4D;
+        ff7.file_header_dex[22]=0x51;
+        for(int i=0x17;i<0x25;i++){ff7.file_header_dex[i]=0xA0;}
+        ff7.file_header_dex[38]=0xFF;
+    }
+    fix_vmc_header();
+    saveFileFull(fileName);
+}
+
 /*~~~~~~~~~~~ START CHECKSUM VEGETA~~~~~~~~~~~*/
 void fix_sum(const QString &fileName)
 {
@@ -1709,7 +1812,7 @@ void MainWindow::guirefresh(void)
 {
     load = true; //used to cheat the removal of "apply buttons"
     /*~~~~Check for SG type and ff7~~~~*/
-    if(ff7.savetype == 3 || ff7.savetype == 5 )
+    if(ff7.savetype == 3 || ff7.savetype == 5 ||ff7.savetype ==6 ||ff7.savetype ==7)
     {
         if(ff7.SG_Region_String[s].contains("00867") || ff7.SG_Region_String[s].contains("00869") ||
            ff7.SG_Region_String[s].contains("00900") || ff7.SG_Region_String[s].contains("94163") ||
@@ -1823,6 +1926,8 @@ void MainWindow::guirefresh(void)
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
         ui->actionExport_MC->setEnabled(1);
+        ui->actionExport_VGS->setEnabled(1);
+        ui->actionExport_DEX->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(1);
         ui->actionFrom_PSX_Slot->setEnabled(1);
         ui->actionNew_Game_Plus->setEnabled(1);
@@ -1858,6 +1963,8 @@ void MainWindow::guirefresh(void)
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
         ui->actionExport_MC->setEnabled(1);
+        ui->actionExport_VGS->setEnabled(1);
+        ui->actionExport_DEX->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(1);
         ui->actionFrom_PSX_Slot->setEnabled(1);
         ui->actionNew_Game_Plus->setEnabled(1);
@@ -1893,6 +2000,8 @@ void MainWindow::guirefresh(void)
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
         ui->actionExport_MC->setEnabled(1);
+        ui->actionExport_VGS->setEnabled(1);
+        ui->actionExport_DEX->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(1);
         ui->actionFrom_PSX_Slot->setEnabled(1);
         ui->actionNew_Game_Plus->setEnabled(1);
@@ -1927,6 +2036,8 @@ void MainWindow::guirefresh(void)
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
         ui->actionExport_MC->setEnabled(1);
+        ui->actionExport_VGS->setEnabled(1);
+        ui->actionExport_DEX->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(0);
         ui->actionFrom_PSX_Slot->setEnabled(0);
         ui->actionNew_Game_Plus->setEnabled(0);
@@ -1961,6 +2072,80 @@ void MainWindow::guirefresh(void)
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
         ui->actionExport_MC->setEnabled(1);
+        ui->actionExport_VGS->setEnabled(1);
+        ui->actionExport_DEX->setEnabled(1);
+        ui->actionFrom_PSV_Slot->setEnabled(1);
+        ui->actionFrom_PSX_Slot->setEnabled(1);
+        ui->actionNew_Game_Plus->setEnabled(1);
+        ui->actionClear_Slot->setEnabled(1);
+        ui->actionPaste_Slot->setEnabled(1);
+        ui->actionCopy_Slot->setEnabled(1);
+        ui->actionNext_Slot->setEnabled(1);
+        ui->actionPrevious_Slot->setEnabled(1);
+        ui->actionShow_Selection_Dialog->setEnabled(1);
+        ui->actionSlot_01->setEnabled(1);
+        ui->actionSlot_02->setEnabled(1);
+        ui->actionSlot_03->setEnabled(1);
+        ui->actionSlot_04->setEnabled(1);
+        ui->actionSlot_05->setEnabled(1);
+        ui->actionSlot_06->setEnabled(1);
+        ui->actionSlot_07->setEnabled(1);
+        ui->actionSlot_08->setEnabled(1);
+        ui->actionSlot_09->setEnabled(1);
+        ui->actionSlot_10->setEnabled(1);
+        ui->actionSlot_11->setEnabled(1);
+        ui->actionSlot_12->setEnabled(1);
+        ui->actionSlot_13->setEnabled(1);
+        ui->actionSlot_14->setEnabled(1);
+        ui->actionSlot_15->setEnabled(1);
+    }
+    else if (ff7.savetype == 6)//vgs type
+    {
+        ui->actionImport_char->setEnabled(1);
+        ui->actionExport_char->setEnabled(1);
+        ui->action_Save->setEnabled(1);
+        ui->actionSave_File_As->setEnabled(1);
+        ui->actionExport_PC_Save->setEnabled(1);
+        ui->actionExport_PSX->setEnabled(1);
+        ui->actionExport_MC->setEnabled(1);
+        ui->actionExport_VGS->setEnabled(1);
+        ui->actionExport_DEX->setEnabled(1);
+        ui->actionFrom_PSV_Slot->setEnabled(1);
+        ui->actionFrom_PSX_Slot->setEnabled(1);
+        ui->actionNew_Game_Plus->setEnabled(1);
+        ui->actionClear_Slot->setEnabled(1);
+        ui->actionPaste_Slot->setEnabled(1);
+        ui->actionCopy_Slot->setEnabled(1);
+        ui->actionNext_Slot->setEnabled(1);
+        ui->actionPrevious_Slot->setEnabled(1);
+        ui->actionShow_Selection_Dialog->setEnabled(1);
+        ui->actionSlot_01->setEnabled(1);
+        ui->actionSlot_02->setEnabled(1);
+        ui->actionSlot_03->setEnabled(1);
+        ui->actionSlot_04->setEnabled(1);
+        ui->actionSlot_05->setEnabled(1);
+        ui->actionSlot_06->setEnabled(1);
+        ui->actionSlot_07->setEnabled(1);
+        ui->actionSlot_08->setEnabled(1);
+        ui->actionSlot_09->setEnabled(1);
+        ui->actionSlot_10->setEnabled(1);
+        ui->actionSlot_11->setEnabled(1);
+        ui->actionSlot_12->setEnabled(1);
+        ui->actionSlot_13->setEnabled(1);
+        ui->actionSlot_14->setEnabled(1);
+        ui->actionSlot_15->setEnabled(1);
+    }
+    else if (ff7.savetype == 7)//DEX type
+    {
+        ui->actionImport_char->setEnabled(1);
+        ui->actionExport_char->setEnabled(1);
+        ui->action_Save->setEnabled(1);
+        ui->actionSave_File_As->setEnabled(1);
+        ui->actionExport_PC_Save->setEnabled(1);
+        ui->actionExport_PSX->setEnabled(1);
+        ui->actionExport_MC->setEnabled(1);
+        ui->actionExport_VGS->setEnabled(1);
+        ui->actionExport_DEX->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(1);
         ui->actionFrom_PSX_Slot->setEnabled(1);
         ui->actionNew_Game_Plus->setEnabled(1);
@@ -1995,6 +2180,8 @@ void MainWindow::guirefresh(void)
         ui->actionExport_PC_Save->setEnabled(1);
         ui->actionExport_PSX->setEnabled(1);
         ui->actionExport_MC->setEnabled(1);
+        ui->actionExport_VGS->setEnabled(1);
+        ui->actionExport_DEX->setEnabled(1);
         ui->actionFrom_PSV_Slot->setEnabled(1);
         ui->actionFrom_PSX_Slot->setEnabled(1);
         ui->actionClear_Slot->setEnabled(1);
@@ -5733,6 +5920,6 @@ void MainWindow::on_cb_Region_Slot_currentIndexChanged()
         new_regionString.append(ui->cb_Region_Slot->currentText().toAscii());
         ff7.SG_Region_String[s].clear();
         ff7.SG_Region_String[s].append(&new_regionString);
-        if(ff7.savetype==3 || ff7.savetype==5){fix_vmc_header(); guirefresh();}
+        if(ff7.savetype==3 || ff7.savetype==5|| ff7.savetype==6 || ff7.savetype ==7){fix_vmc_header(); guirefresh();}
     }
 }
