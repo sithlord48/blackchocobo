@@ -4289,8 +4289,8 @@ image: url(:/icon/cait_icon);
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>423</width>
-             <height>426</height>
+             <width>413</width>
+             <height>423</height>
             </rect>
            </property>
            <attribute name="label">
@@ -20850,6 +20850,8 @@ p, li { white-space: pre-wrap; }
      <addaction name="actionExport_PC_Save"/>
      <addaction name="actionExport_PSX"/>
      <addaction name="actionExport_MC"/>
+     <addaction name="actionExport_VGS"/>
+     <addaction name="actionExport_DEX"/>
      <addaction name="separator"/>
      <addaction name="actionExport_char"/>
     </widget>
@@ -21621,6 +21623,30 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="shortcut">
     <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionExport_VGS">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/vgs</normaloff>:/icon/vgs</iconset>
+   </property>
+   <property name="text">
+    <string>Export VGS File</string>
+   </property>
+  </action>
+  <action name="actionExport_DEX">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/dex</normaloff>:/icon/dex</iconset>
+   </property>
+   <property name="text">
+    <string>Export Dex-Drive File</string>
    </property>
   </action>
  </widget>

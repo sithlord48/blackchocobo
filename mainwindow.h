@@ -305,6 +305,8 @@ private slots:
     void on_actionNew_Game_triggered();
     void on_actionNew_Game_Plus_triggered();
     void on_actionExport_MC_triggered();
+    void on_actionExport_VGS_triggered();
+    void on_actionExport_DEX_triggered();
     void on_actionExport_PC_Save_activated();
     void on_actionFrom_PSX_Slot_activated();
     void on_actionClear_Slot_activated();
