@@ -2399,7 +2399,7 @@ void MainWindow::guirefresh(void)
     {
         if (ff7.slot[s].items[i].qty == 0xFF && ff7.slot[s].items[i].id == 0xFF)
         {
-            newItem = new QTableWidgetItem("-------EMPTY--------",0);
+            newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
             ui->tbl_itm->setItem(i,0,newItem);
             ui->tbl_itm->setRowHeight(i,22);
             newItem = new QTableWidgetItem("",0);
@@ -4061,6 +4061,11 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row)
             ui->sb_addap->setMaximum(0);
             ui->combo_mat_type->setCurrentIndex(0);
             ui->combo_add_mat->setCurrentIndex(0);
+            ui->combo_add_mat_2->clear();
+            for(int i=0;i<0x5B;i++)
+            {
+                if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
+            }
             ui->btn_m_lvl1->setVisible(0);
             ui->btn_m_lvl2->setVisible(0);
             ui->btn_m_lvl3->setVisible(0);
@@ -4107,21 +4112,19 @@ void MainWindow::on_sb_addap_valueChanged(int value)
 }
 void MainWindow::on_combo_add_mat_currentIndexChanged(int index)
 {
-    if(ui->combo_add_mat->currentText() =="DON'T USE")// this is a placeholder materia
-    {
-        QMessageBox::information(this,tr("Empty Materia"),tr("Place holder Materia Detected\n Remember 16777215 AP = master"));
-        guirefresh();// clean up the gui.
-        return; //we are done here.
-    }
-
-    ui->combo_mat_type->setCurrentIndex(Materias[index].type);
-    for(int i=0;i<ui->combo_add_mat_2->count();i++)
-    {
-        if(ui->combo_add_mat_2->itemText(i)==names.MateriaNames(index)){ui->combo_add_mat_2->setCurrentIndex(i);}
-    }
-
     if(!load)
     {
+        if(ui->combo_add_mat->currentText() ==tr("DON'T USE"))// this is a placeholder materia
+        {
+            QMessageBox::information(this,tr("Empty Materia"),tr("Place holder Materia Detected\n Remember 16777215 AP = master"));
+            guirefresh();// clean up the gui.
+            return; //we are done here.
+        }
+            ui->combo_mat_type->setCurrentIndex(Materias[index].type);
+            for(int i=0;i<ui->combo_add_mat_2->count();i++)
+            {
+                if(ui->combo_add_mat_2->itemText(i)==names.MateriaNames(index)){ui->combo_add_mat_2->setCurrentIndex(i);}
+            }
         ff7.slot[s].materias[ui->tbl_materia->currentRow()].id = index;
         guirefresh();
     }
@@ -4161,7 +4164,7 @@ void MainWindow::on_combo_mat_type_currentIndexChanged(int index)
         {
             for(int i=0;i<0x5B;i++)
             {
-                if(names.MateriaNames(i) !="DON'T USE"){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
+                if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
             }
         }
         else
