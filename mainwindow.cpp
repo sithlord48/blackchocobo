@@ -313,44 +313,49 @@ void MainWindow::loadFileFull(const QString &fileName)
     /*~~~~~~~End Load~~~~~~~~~~~~~~*/
     if (ff7.savetype == 1)
     {
-        if(ff7.slot[0].checksum != 0x0000 && ff7.slot[0].checksum != 0x4D1D){ff7.SG_Region_String[0]= "BASCUS-94163FF7-S01";} else {ff7.SG_Region_String[0] = "";}
-        if(ff7.slot[1].checksum != 0x0000 && ff7.slot[1].checksum != 0x4D1D){ff7.SG_Region_String[1]= "BASCUS-94163FF7-S02";} else {ff7.SG_Region_String[1] = "";}
-        if(ff7.slot[2].checksum != 0x0000 && ff7.slot[2].checksum != 0x4D1D){ff7.SG_Region_String[2]= "BASCUS-94163FF7-S03";} else {ff7.SG_Region_String[2] = "";}
-        if(ff7.slot[3].checksum != 0x0000 && ff7.slot[3].checksum != 0x4D1D){ff7.SG_Region_String[3]= "BASCUS-94163FF7-S04";} else {ff7.SG_Region_String[3] = "";}
-        if(ff7.slot[4].checksum != 0x0000 && ff7.slot[4].checksum != 0x4D1D){ff7.SG_Region_String[4]= "BASCUS-94163FF7-S05";} else {ff7.SG_Region_String[4] = "";}
-        if(ff7.slot[5].checksum != 0x0000 && ff7.slot[5].checksum != 0x4D1D){ff7.SG_Region_String[5]= "BASCUS-94163FF7-S06";} else {ff7.SG_Region_String[5] = "";}
-        if(ff7.slot[6].checksum != 0x0000 && ff7.slot[6].checksum != 0x4D1D){ff7.SG_Region_String[6]= "BASCUS-94163FF7-S07";} else {ff7.SG_Region_String[6] = "";}
-        if(ff7.slot[7].checksum != 0x0000 && ff7.slot[7].checksum != 0x4D1D){ff7.SG_Region_String[7]= "BASCUS-94163FF7-S08";} else {ff7.SG_Region_String[7] = "";}
-        if(ff7.slot[8].checksum != 0x0000 && ff7.slot[8].checksum != 0x4D1D){ff7.SG_Region_String[8]= "BASCUS-94163FF7-S09";} else {ff7.SG_Region_String[8] = "";}
-        if(ff7.slot[9].checksum != 0x0000 && ff7.slot[9].checksum != 0x4D1D){ff7.SG_Region_String[9]= "BASCUS-94163FF7-S10";} else {ff7.SG_Region_String[9] = "";}
-        if(ff7.slot[10].checksum != 0x0000 && ff7.slot[10].checksum != 0x4D1D){ff7.SG_Region_String[10]= "BASCUS-94163FF7-S11";} else {ff7.SG_Region_String[10] = "";}
-        if(ff7.slot[11].checksum != 0x0000 && ff7.slot[11].checksum != 0x4D1D){ff7.SG_Region_String[11]= "BASCUS-94163FF7-S12";} else {ff7.SG_Region_String[11] = "";}
-        if(ff7.slot[12].checksum != 0x0000 && ff7.slot[12].checksum != 0x4D1D){ff7.SG_Region_String[12]= "BASCUS-94163FF7-S13";} else {ff7.SG_Region_String[12] = "";}
-        if(ff7.slot[13].checksum != 0x0000 && ff7.slot[13].checksum != 0x4D1D){ff7.SG_Region_String[13]= "BASCUS-94163FF7-S14";} else {ff7.SG_Region_String[13] = "";}
-        if(ff7.slot[14].checksum != 0x0000 && ff7.slot[14].checksum != 0x4D1D){ff7.SG_Region_String[14]= "BASCUS-94163FF7-S15";} else {ff7.SG_Region_String[14] = "";}
+        if(ff7.slot[0].checksum != 0x0000 && ff7.slot[0].checksum != 0x4D1D){ff7.SG_Region_String[0]= "BASCUS-94163FF7-S01";} else {ff7.SG_Region_String[0].clear();}
+        if(ff7.slot[1].checksum != 0x0000 && ff7.slot[1].checksum != 0x4D1D){ff7.SG_Region_String[1]= "BASCUS-94163FF7-S02";} else {ff7.SG_Region_String[1].clear();}
+        if(ff7.slot[2].checksum != 0x0000 && ff7.slot[2].checksum != 0x4D1D){ff7.SG_Region_String[2]= "BASCUS-94163FF7-S03";} else {ff7.SG_Region_String[2].clear();}
+        if(ff7.slot[3].checksum != 0x0000 && ff7.slot[3].checksum != 0x4D1D){ff7.SG_Region_String[3]= "BASCUS-94163FF7-S04";} else {ff7.SG_Region_String[3].clear();}
+        if(ff7.slot[4].checksum != 0x0000 && ff7.slot[4].checksum != 0x4D1D){ff7.SG_Region_String[4]= "BASCUS-94163FF7-S05";} else {ff7.SG_Region_String[4].clear();}
+        if(ff7.slot[5].checksum != 0x0000 && ff7.slot[5].checksum != 0x4D1D){ff7.SG_Region_String[5]= "BASCUS-94163FF7-S06";} else {ff7.SG_Region_String[5].clear();}
+        if(ff7.slot[6].checksum != 0x0000 && ff7.slot[6].checksum != 0x4D1D){ff7.SG_Region_String[6]= "BASCUS-94163FF7-S07";} else {ff7.SG_Region_String[6].clear();}
+        if(ff7.slot[7].checksum != 0x0000 && ff7.slot[7].checksum != 0x4D1D){ff7.SG_Region_String[7]= "BASCUS-94163FF7-S08";} else {ff7.SG_Region_String[7].clear();}
+        if(ff7.slot[8].checksum != 0x0000 && ff7.slot[8].checksum != 0x4D1D){ff7.SG_Region_String[8]= "BASCUS-94163FF7-S09";} else {ff7.SG_Region_String[8].clear();}
+        if(ff7.slot[9].checksum != 0x0000 && ff7.slot[9].checksum != 0x4D1D){ff7.SG_Region_String[9]= "BASCUS-94163FF7-S10";} else {ff7.SG_Region_String[9].clear();}
+        if(ff7.slot[10].checksum != 0x0000 && ff7.slot[10].checksum != 0x4D1D){ff7.SG_Region_String[10]= "BASCUS-94163FF7-S11";} else {ff7.SG_Region_String[10].clear();}
+        if(ff7.slot[11].checksum != 0x0000 && ff7.slot[11].checksum != 0x4D1D){ff7.SG_Region_String[11]= "BASCUS-94163FF7-S12";} else {ff7.SG_Region_String[11].clear();}
+        if(ff7.slot[12].checksum != 0x0000 && ff7.slot[12].checksum != 0x4D1D){ff7.SG_Region_String[12]= "BASCUS-94163FF7-S13";} else {ff7.SG_Region_String[12].clear();}
+        if(ff7.slot[13].checksum != 0x0000 && ff7.slot[13].checksum != 0x4D1D){ff7.SG_Region_String[13]= "BASCUS-94163FF7-S14";} else {ff7.SG_Region_String[13].clear();}
+        if(ff7.slot[14].checksum != 0x0000 && ff7.slot[14].checksum != 0x4D1D){ff7.SG_Region_String[14]= "BASCUS-94163FF7-S15";} else {ff7.SG_Region_String[14].clear();}
         SlotSelect slotselect;
         s=slotselect.exec();
     }
 
-    else if (ff7.savetype == 2 || ff7.savetype == 4)
+    else if (ff7.savetype == 2)// PSx save
     {
         s=0;
-             if(fileName.contains("00867")){ff7.SG_Region_String[s] = "BESCES-00867FF7-S01";}
-        else if(fileName.contains("00869")){ff7.SG_Region_String[s] = "BESCES-00869FF7-S01";}
-        else if(fileName.contains("00900")){ff7.SG_Region_String[s] = "BESCES-00900FF7-S01";}
-        else if(fileName.contains("94163")){ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01";}
-        else if(fileName.contains("00700")){ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01";}
-        else if(fileName.contains("01057")){ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01";}
-        else {ff7.SG_Region_String[s] ="";}
+             if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
+                (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")))
+             {
+                 QString string;
+                 string = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
+                 ff7.SG_Region_String[s]= string.mid(string.lastIndexOf("BA")-1,string.lastIndexOf("FF7-S")+8);
+             }
+             else {ff7.SG_Region_String[s].clear();}
 
         for(int i=1;i<14;i++){clearslot(i);}
+    }
+    else if (ff7.savetype ==4)//psv file
+    {
+        ff7.SG_Region_String[s] = QString(ff7file.mid(0x64,19));
     }
 
     else if (ff7.savetype == 3 || ff7.savetype ==5 || ff7.savetype ==6||ff7.savetype==7)
     {
         QByteArray mc_header;
-        int offset = 0;
-        if(ff7.savetype ==5){offset = 0x80;} // psp save. start after the extra vmp header info
+        int offset = 0;//raw psx card types
+        if(ff7.savetype ==5){offset = 0x80;} // psp save.
         if(ff7.savetype ==6){offset = 0x40;} // vgs save.
         if(ff7.savetype ==7){offset = 0xF40;} // dex save.
         mc_header = ff7file.mid(offset,ff7.SG_HEADER);
@@ -395,13 +400,14 @@ void MainWindow::on_actionFrom_PSX_Slot_activated()
         int index = 0x200;
         temp = ff7file.mid(index,0x10f4);
         memcpy(&ff7.slot[s],temp,0x10f4);
-        if(fileName.contains("00867")){ff7.SG_Region_String[s] = "BESCES-00867FF7-S01";}
-   else if(fileName.contains("00869")){ff7.SG_Region_String[s] = "BESCES-00869FF7-S01";}
-   else if(fileName.contains("00900")){ff7.SG_Region_String[s] = "BESCES-00900FF7-S01";}
-   else if(fileName.contains("94163")){ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01";}
-   else if(fileName.contains("00700")){ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01";}
-   else if(fileName.contains("01057")){ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01";}
-   else {ff7.SG_Region_String[s] ="";}
+        if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
+           (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")))
+        {
+            QString string;
+            string = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
+            ff7.SG_Region_String[s]= string.mid(string.lastIndexOf("BA")-1,string.lastIndexOf("FF7-S")+8);
+        }
+        else {ff7.SG_Region_String[s].clear();}
     }//Parse slot data....
     guirefresh();
 }
@@ -427,13 +433,10 @@ void MainWindow::on_actionFrom_PSV_Slot_activated()
             int index = 0x284;
             temp = ff7file.mid(index,0x10f4);
             memcpy(&ff7.slot[s],temp,0x10f4);
-            if(fileName.contains("00867")){ff7.SG_Region_String[s] = "BESCES-00867FF7-S01";}
-       else if(fileName.contains("00869")){ff7.SG_Region_String[s] = "BESCES-00869FF7-S01";}
-       else if(fileName.contains("00900")){ff7.SG_Region_String[s] = "BESCES-00900FF7-S01";}
-       else if(fileName.contains("94163")){ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01";}
-       else if(fileName.contains("00700")){ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01";}
-       else if(fileName.contains("01057")){ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01";}
-       else {ff7.SG_Region_String[s] ="";}
+            if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
+               (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")))
+                                {ff7.SG_Region_String[s] = QString(ff7file.mid(0x64,19));}
+            else {ff7.SG_Region_String[s].clear();}
         }//Parse slot data....
     guirefresh();
 }
@@ -495,9 +498,9 @@ void MainWindow::on_action_Save_activated()
 
         else if(ff7.savetype==4){/*deal w/ psv here. or in fix_vmc_header()*/}
         else {QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot save This Type of File"));return;}
-
         saveFileFull(filename);
     }
+    else{QMessageBox::warning(this,tr("No Save File Loaded"),tr("The Filename is empty"));}
 }//END ACTION_SAVE_ACTIVATED()
 void MainWindow::on_actionSave_File_As_activated()
 {QString fileName;
@@ -559,7 +562,7 @@ void MainWindow::on_actionSave_File_As_activated()
     saveFileFull(fileName); //reguardless save the file of course if its has a string.
 }
 /*~~~~~~~~~~~SHORT SAVE~~~~~~~~~~~~*/
-void MainWindow::saveFileFull(const QString &fileName)
+void MainWindow::saveFileFull(QString fileName)
 {
     QFile file(fileName);
     if(!file.open(QFile::ReadWrite))
@@ -601,7 +604,7 @@ void MainWindow::on_actionNew_Game_triggered()
         int index = 0x200;
         temp = ff7file.mid(index,0x10f4);
         memcpy(&ff7.slot[s],temp,0x10f4);
-    if(ff7.SG_Region_String[s] == ""){ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01";}
+    if(ff7.SG_Region_String[s].isEmpty()){ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01";}
     guirefresh();
 }
 /*~~~~~~~~~~End New_Game~~~~~~~~~~~*/
@@ -744,9 +747,7 @@ void MainWindow::on_actionExport_PSX_activated()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 SaveGame"), ff7.SG_Region_String[s],
-    tr("BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)"));//;;BASCUS-94163FF7-S07(*-S07);;BASCUS-94163FF7-S08(*-S08);;BASCUS-94163FF7-S09(*-S09);;BASCUS-94163FF7-S10(*-S10);;BASCUS-94163FF7-S11(*-S11);;BASCUS-94163FF7-S12(*-S12);;BASCUS-94163FF7-S13(*-S13);;BASCUS-94163FF7-S14(*-S14);;BASCUS-94163FF7-S15(*-S15)")); // Only Allow PSX save slots Since we are going to force its creation.
-    if(fileName.isEmpty()){return;}
-
+    tr("BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)"));
     if(ff7.SG_TYPE != "PSX")
     {
         ui->combo_control->setCurrentIndex(0);
@@ -2226,10 +2227,10 @@ void MainWindow::guirefresh(void)
     else if (ff7.SG_Region_String[s].contains("00900")){ui->action_Region_PAL_Spanish->setChecked(Qt::Checked);ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_sel"));}
     else if (ff7.SG_Region_String[s].contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_sel"));}
     else if (ff7.SG_Region_String[s].contains("01057")){ui->action_Region_JPN_International->setChecked(Qt::Checked);ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_sel"));}
-    else {/*QMessageBox::information(this,tr("Region Detect Error"),tr("Unknow Region String, this is  not a ff7 save"));*/}
+    else {QMessageBox::information(this,tr("Region Detect Error"),tr("Region Can't be Automaticly Detected, You Must Set it Manually"));}
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
     ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
-    if (ff7.savetype == 2 || ff7.savetype == 3 || ff7.savetype ==5)
+    if (ff7.savetype != 1) //we Display an icon. for all formats except for pc
     {
         QByteArray data;
         for(int i=0;i<0x200;i++){data.append(ff7.hf[s].sl_header[i]);}

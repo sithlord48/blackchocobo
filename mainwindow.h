@@ -299,7 +299,7 @@ private slots:
 
     //load save items
     void loadFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
-    void saveFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
+    void saveFileFull(QString);//(Vegeta_Ss4) v0.8.3
     void on_actionImport_char_triggered();
     void on_actionExport_char_triggered();
     void on_actionNew_Game_triggered();

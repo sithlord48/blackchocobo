@@ -4269,6 +4269,26 @@ is not a FF7 SaveGame.</source>
         <source>FF7 MC SaveGame(*.gme)</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>No Save File Loaded</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Filename is empty</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Region Detect Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-------EMPTY--------</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Region Can&apos;t be Automaticly Detected, You Must Set it Manually</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -6120,10 +6140,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New: .bin .mc .ps .psm .dff  Format Support</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Fixed: Titan/Ramuh Stats Backward.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6153,6 +6169,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Change Slot Posin in Debug mode (MC only) </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Support for .vgs .mem and .gme formats</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: .bin .mc .mci .ps .psm .dff  Format Support</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
