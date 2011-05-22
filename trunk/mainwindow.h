@@ -294,6 +294,7 @@ private slots:
     void guirefresh(void);
     void chocobo_refresh();
     void clearslot(int);
+    void setmenu(void);
 
     //menu actions
 

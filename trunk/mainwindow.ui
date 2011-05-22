@@ -20935,7 +20935,7 @@ p, li { white-space: pre-wrap; }
     </property>
     <widget class="QMenu" name="menuRegion">
      <property name="enabled">
-      <bool>false</bool>
+      <bool>true</bool>
      </property>
      <property name="title">
       <string>Slot Region</string>
