@@ -102,24 +102,15 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
    if(settings.value("color3_b").isNull()){settings.setValue("color3_b","65");}
 
    QString style="QWidget#centralWidget{background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
-   style.append(settings.value("color1_r").toString());
-   style.append(",");
-   style.append(settings.value("color1_g").toString());
-   style.append(",");
-   style.append(settings.value("color1_b").toString());
-   style.append(", 255), stop:0.215909 rgba(");
-   style.append(settings.value("color2_r").toString());
-   style.append(",");
-   style.append(settings.value("color2_g").toString());
-   style.append(",");
-   style.append(settings.value("color2_b").toString());
-   style.append(", 255), stop:0.818182 rgba(");
-   style.append(settings.value("color3_r").toString());
-   style.append(",");
-   style.append(settings.value("color3_g").toString());
-   style.append(",");
-   style.append(settings.value("color3_b").toString());
-   style.append(", 255));}");
+   style.append(settings.value("color1_r").toString());   style.append(",");
+   style.append(settings.value("color1_g").toString());   style.append(",");
+   style.append(settings.value("color1_b").toString());   style.append(", 255), stop:0.215909 rgba(");
+   style.append(settings.value("color2_r").toString());   style.append(",");
+   style.append(settings.value("color2_g").toString());   style.append(",");
+   style.append(settings.value("color2_b").toString());   style.append(", 255), stop:0.818182 rgba(");
+   style.append(settings.value("color3_r").toString());   style.append(",");
+   style.append(settings.value("color3_g").toString());   style.append(",");
+   style.append(settings.value("color3_b").toString());   style.append(", 255));}");
    ui->centralWidget->setStyleSheet(style);
 
 
@@ -171,7 +162,8 @@ void MainWindow::on_actionOpen_Save_File_activated()
 }
 
 void MainWindow::loadFileFull(const QString &fileName)
-{load=true;
+{
+    load=true;
     QFile file(fileName);
     if (!file.open(QFile::ReadOnly ))
     {
@@ -374,7 +366,7 @@ void MainWindow::loadFileFull(const QString &fileName)
         for(int i=1;i<14;i++){clearslot(i);}
     }
     this->setWindowTitle(tr("Black Chocobo - ") + fileName); //eslava this is for you :)
-    filename = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
+    filename = fileName;
     load=false;
     guirefresh();
 }
@@ -636,29 +628,25 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
             QString fileName;
             if(i==6) //export cait sith. cait sith's stats are only generated when he joins the party.
             {
-                    fileName = settings.value("char_stat_folder").toString();
-                    fileName.append("/");
                     fileName.append(filename);
                     fileName.append("-cait_sith");
-                    if(ff7.savetype == 1 || ff7.savetype == 3 || ff7.savetype ==5 || ff7.savetype ==6 || ff7.savetype ==7)
+                    if(ff7.savetype != 2 || ff7.savetype != 4)
                     {
                         fileName.append("-");
                         QString str;
-                        str.setNum(s,10);
+                        str.setNum(s,10)+1;
                         fileName.append(str);
                     }
                 }
             else if(i==7)// export vincent. vincent's stats are only generated when he joins the party.
                 {
-                    fileName = settings.value("char_stat_folder").toString();
-                    fileName.append("/");
                     fileName.append(filename);
                     fileName.append("-vincent");
-                    if(ff7.savetype == 1 || ff7.savetype == 3 || ff7.savetype ==5 || ff7.savetype ==6 || ff7.savetype ==7)
+                    if(ff7.savetype != 2 || ff7.savetype != 4)
                     {
                         fileName.append("-");
                         QString str;
-                        str.setNum(s,10);
+                        str.setNum(s,10)+1;
                         fileName.append(str);
                     }
                 }
@@ -1808,12 +1796,112 @@ void MainWindow::setweaponslots(void)
     }
 }
 /*~~~~~End Armor/Weapon Update~~~~*/
+/*~~~~~~~~Set Menu Items~~~~~~~~~~*/
+void MainWindow::setmenu(void)
+{
+    load=true;
+    /*~~Clear All Menu Items~~*/
+    ui->actionSlot_01->setChecked(0);ui->actionSlot_01->setIcon(QIcon(":icon/1_unsel"));
+    ui->actionSlot_02->setChecked(0);ui->actionSlot_02->setIcon(QIcon(":icon/2_unsel"));
+    ui->actionSlot_03->setChecked(0);ui->actionSlot_03->setIcon(QIcon(":icon/3_unsel"));
+    ui->actionSlot_04->setChecked(0);ui->actionSlot_04->setIcon(QIcon(":icon/4_unsel"));
+    ui->actionSlot_05->setChecked(0);ui->actionSlot_05->setIcon(QIcon(":icon/5_unsel"));
+    ui->actionSlot_06->setChecked(0);ui->actionSlot_06->setIcon(QIcon(":icon/6_unsel"));
+    ui->actionSlot_07->setChecked(0);ui->actionSlot_07->setIcon(QIcon(":icon/7_unsel"));
+    ui->actionSlot_08->setChecked(0);ui->actionSlot_08->setIcon(QIcon(":icon/8_unsel"));
+    ui->actionSlot_09->setChecked(0);ui->actionSlot_09->setIcon(QIcon(":icon/9_unsel"));
+    ui->actionSlot_10->setChecked(0);ui->actionSlot_10->setIcon(QIcon(":icon/10_unsel"));
+    ui->actionSlot_11->setChecked(0);ui->actionSlot_11->setIcon(QIcon(":icon/11_unsel"));
+    ui->actionSlot_12->setChecked(0);ui->actionSlot_12->setIcon(QIcon(":icon/12_unsel"));
+    ui->actionSlot_13->setChecked(0);ui->actionSlot_13->setIcon(QIcon(":icon/13_unsel"));
+    ui->actionSlot_14->setChecked(0);ui->actionSlot_14->setIcon(QIcon(":icon/14_unsel"));
+    ui->actionSlot_15->setChecked(0);ui->actionSlot_15->setIcon(QIcon(":icon/15_unsel"));
+    ui->action_Region_USA->setChecked(0);ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
+    ui->action_Region_PAL_Generic->setChecked(0);ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+    ui->action_Region_PAL_German->setChecked(0);ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+    ui->action_Region_PAL_Spanish->setChecked(0);ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
+    ui->action_Region_JPN->setChecked(0);ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
+    ui->action_Region_JPN_International->setChecked(0);ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
+    ui->actionImport_char->setEnabled(0);ui->actionExport_char->setEnabled(0);ui->actionNew_Game_Plus->setEnabled(0);
+    ui->action_Save->setEnabled(0);ui->actionSave_File_As->setEnabled(0);ui->actionExport_PC_Save->setEnabled(0);
+    ui->actionExport_PSX->setEnabled(0);ui->actionExport_MC->setEnabled(0);ui->actionExport_VGS->setEnabled(0);
+    ui->actionExport_DEX->setEnabled(0);ui->actionFrom_PSV_Slot->setEnabled(0);ui->actionFrom_PSX_Slot->setEnabled(0);
+    ui->actionNew_Game_Plus->setEnabled(0);ui->actionClear_Slot->setEnabled(0);ui->actionPaste_Slot->setEnabled(0);
+    ui->actionCopy_Slot->setEnabled(0);ui->actionNext_Slot->setEnabled(0);ui->actionPrevious_Slot->setEnabled(0);
+    ui->actionShow_Selection_Dialog->setEnabled(0);ui->actionSlot_01->setEnabled(0);ui->actionSlot_02->setEnabled(0);
+    ui->actionSlot_03->setEnabled(0);ui->actionSlot_04->setEnabled(0);ui->actionSlot_05->setEnabled(0);
+    ui->actionSlot_06->setEnabled(0);ui->actionSlot_07->setEnabled(0);ui->actionSlot_08->setEnabled(0);
+    ui->actionSlot_09->setEnabled(0);ui->actionSlot_10->setEnabled(0);ui->actionSlot_11->setEnabled(0);
+    ui->actionSlot_12->setEnabled(0);ui->actionSlot_13->setEnabled(0);ui->actionSlot_14->setEnabled(0);
+    ui->actionSlot_15->setEnabled(0);ui->actionNew_Game->setEnabled(0);
+    /*~~End Clear Menu Items~~*/
+    /*~~~~~~Current Slot~~~~~~*/
+    switch(s)
+    {
+        case 0:ui->actionSlot_01->setChecked(1);ui->actionSlot_01->setIcon(QIcon(":icon/1_sel"));break;
+        case 1:ui->actionSlot_02->setChecked(1);ui->actionSlot_02->setIcon(QIcon(":icon/2_sel"));break;
+        case 2:ui->actionSlot_03->setChecked(1);ui->actionSlot_03->setIcon(QIcon(":icon/3_sel"));break;
+        case 3:ui->actionSlot_04->setChecked(1);ui->actionSlot_04->setIcon(QIcon(":icon/4_sel"));break;
+        case 4:ui->actionSlot_05->setChecked(1);ui->actionSlot_05->setIcon(QIcon(":icon/5_sel"));break;
+        case 5:ui->actionSlot_06->setChecked(1);ui->actionSlot_06->setIcon(QIcon(":icon/6_sel"));break;
+        case 6:ui->actionSlot_07->setChecked(1);ui->actionSlot_07->setIcon(QIcon(":icon/7_sel"));break;
+        case 7:ui->actionSlot_08->setChecked(1);ui->actionSlot_08->setIcon(QIcon(":icon/8_sel"));break;
+        case 8:ui->actionSlot_09->setChecked(1);ui->actionSlot_09->setIcon(QIcon(":icon/9_sel"));break;
+        case 9:ui->actionSlot_10->setChecked(1);ui->actionSlot_10->setIcon(QIcon(":icon/10_sel"));break;
+        case 10:ui->actionSlot_11->setChecked(1);ui->actionSlot_11->setIcon(QIcon(":icon/11_sel"));break;
+        case 11:ui->actionSlot_12->setChecked(1);ui->actionSlot_12->setIcon(QIcon(":icon/12_sel"));break;
+        case 12:ui->actionSlot_13->setChecked(1);ui->actionSlot_13->setIcon(QIcon(":icon/13_sel"));break;
+        case 13:ui->actionSlot_14->setChecked(1);ui->actionSlot_14->setIcon(QIcon(":icon/14_sel"));break;
+        case 14:ui->actionSlot_15->setChecked(1);ui->actionSlot_15->setIcon(QIcon(":icon/15_sel"));break;
+    }
+    /*~~~~End Current Slot~~~~~*/
+    /*~~~~~~~Set Actions By Type~~~~~~~*/
+    ui->actionExport_PC_Save->setEnabled(1);    ui->actionExport_PSX->setEnabled(1);
+    ui->actionExport_MC->setEnabled(1);         ui->actionExport_VGS->setEnabled(1);
+    ui->actionExport_DEX->setEnabled(1);        ui->actionCopy_Slot->setEnabled(1);
+    ui->actionExport_char->setEnabled(1);
+
+    if (ff7.savetype !=2 && ff7.savetype !=4) //more then on slot
+    {
+        ui->actionSlot_01->setEnabled(1);   ui->actionNext_Slot->setEnabled(1);
+        ui->actionSlot_02->setEnabled(1);   ui->actionPrevious_Slot->setEnabled(1);
+        ui->actionSlot_03->setEnabled(1);   ui->actionShow_Selection_Dialog->setEnabled(1);
+        ui->actionSlot_04->setEnabled(1);   ui->actionClear_Slot->setEnabled(1);
+        ui->actionSlot_05->setEnabled(1);   ui->actionNew_Game->setEnabled(1);
+        ui->actionSlot_06->setEnabled(1);   ui->actionSlot_07->setEnabled(1);
+        ui->actionSlot_08->setEnabled(1);   ui->actionSlot_09->setEnabled(1);
+        ui->actionSlot_10->setEnabled(1);   ui->actionSlot_11->setEnabled(1);
+        ui->actionSlot_12->setEnabled(1);   ui->actionSlot_13->setEnabled(1);
+        ui->actionSlot_14->setEnabled(1);   ui->actionSlot_15->setEnabled(1);
+    }
+
+    if (ff7.savetype != 4)// saveable type
+    {
+        ui->actionImport_char->setEnabled(1);        ui->action_Save->setEnabled(1);
+        ui->actionSave_File_As->setEnabled(1);       ui->actionFrom_PSV_Slot->setEnabled(1);
+        ui->actionFrom_PSX_Slot->setEnabled(1);      ui->actionNew_Game_Plus->setEnabled(1);
+        ui->actionPaste_Slot->setEnabled(1);
+    }
+    /*~~~End Set Actions By Type~~~*/
+    /*~~Set Detected Region ~~*/
+    if(ff7.SG_Region_String[s].contains("94163")){ui->action_Region_USA->setChecked(Qt::Checked);ui->action_Region_USA->setIcon(QIcon(":/icon/us_sel"));}
+    else if(ff7.SG_Region_String[s].contains("00867")){ui->action_Region_PAL_Generic->setChecked(Qt::Checked);ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_sel"));}
+    else if(ff7.SG_Region_String[s].contains("00869")){ui->action_Region_PAL_German->setChecked(Qt::Checked);ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_sel"));}
+    else if(ff7.SG_Region_String[s].contains("00900")){ui->action_Region_PAL_Spanish->setChecked(Qt::Checked);ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_sel"));}
+    else if(ff7.SG_Region_String[s].contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_sel"));}
+    else if(ff7.SG_Region_String[s].contains("01057")){ui->action_Region_JPN_International->setChecked(Qt::Checked);ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_sel"));}
+    else {QMessageBox::information(this,tr("Region Detect Error"),tr("Region Can't be Automaticly Detected, You Must Set it Manually"));}
+    /*~~End Detected Region~~*/
+    load=false;
+}
+/*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::guirefresh(void)
 {
     load = true; //used to cheat the removal of "apply buttons"
+    ui->lcd_current_slot->display(s+1);
     /*~~~~Check for SG type and ff7~~~~*/
-    if(ff7.savetype == 3 || ff7.savetype == 5 ||ff7.savetype ==6 ||ff7.savetype ==7)
+    if(ff7.savetype == 3 || ff7.savetype ==4 ||ff7.savetype == 5 ||ff7.savetype ==6 ||ff7.savetype ==7)
     {
         if(ff7.SG_Region_String[s].contains("00867") || ff7.SG_Region_String[s].contains("00869") ||
            ff7.SG_Region_String[s].contains("00900") || ff7.SG_Region_String[s].contains("94163") ||
@@ -1836,14 +1924,11 @@ void MainWindow::guirefresh(void)
                 SlotSelect selector;
                 s=selector.exec();
                 guirefresh();
-            break;
-}
-
-
+                break;
+            }
         }//NOT FF7
     }
-/*~~~~ END Type Check~~~~*/
-    ui->lcd_current_slot->display(s+1);
+    /*~~~~ END Type Check~~~~*/
     //dialog preview
     QImage image(2, 2, QImage::Format_ARGB32);
     image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
@@ -1853,6 +1938,7 @@ void MainWindow::guirefresh(void)
     QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
     //make the preview nice
+
     ui->cb_replay->setCurrentIndex(0);
     ui->sb_bm_progress1->setValue(ff7.slot[s].bm_progress1);
     ui->sb_bm_progress2->setValue(ff7.slot[s].bm_progress2);
@@ -1862,372 +1948,9 @@ void MainWindow::guirefresh(void)
     if(ff7.slot[s].intbombing == 0x14){ui->cb_bombing_int->setChecked(Qt::Checked);}
     else if(ff7.slot[s].intbombing ==0x56){ui->cb_bombing_int->setChecked(Qt::Unchecked);}
 
-    /*~~~~~Set Menu Items~~~~~~~~~~~~~~*/
-    ui->actionImport_char->setEnabled(0);
-    ui->actionExport_char->setEnabled(0);
-    ui->actionSlot_01->setChecked(0);
-    ui->actionSlot_01->setIcon(QIcon(":icon/1_unsel"));
-    ui->actionSlot_02->setChecked(0);
-    ui->actionSlot_02->setIcon(QIcon(":icon/2_unsel"));
-    ui->actionSlot_03->setChecked(0);
-    ui->actionSlot_03->setIcon(QIcon(":icon/3_unsel"));
-    ui->actionSlot_04->setChecked(0);
-    ui->actionSlot_04->setIcon(QIcon(":icon/4_unsel"));
-    ui->actionSlot_05->setChecked(0);
-    ui->actionSlot_05->setIcon(QIcon(":icon/5_unsel"));
-    ui->actionSlot_06->setChecked(0);
-    ui->actionSlot_06->setIcon(QIcon(":icon/6_unsel"));
-    ui->actionSlot_07->setChecked(0);
-    ui->actionSlot_07->setIcon(QIcon(":icon/7_unsel"));
-    ui->actionSlot_08->setChecked(0);
-    ui->actionSlot_08->setIcon(QIcon(":icon/8_unsel"));
-    ui->actionSlot_09->setChecked(0);
-    ui->actionSlot_09->setIcon(QIcon(":icon/9_unsel"));
-    ui->actionSlot_10->setChecked(0);
-    ui->actionSlot_10->setIcon(QIcon(":icon/10_unsel"));
-    ui->actionSlot_11->setChecked(0);
-    ui->actionSlot_11->setIcon(QIcon(":icon/11_unsel"));
-    ui->actionSlot_12->setChecked(0);
-    ui->actionSlot_12->setIcon(QIcon(":icon/12_unsel"));
-    ui->actionSlot_13->setChecked(0);
-    ui->actionSlot_13->setIcon(QIcon(":icon/13_unsel"));
-    ui->actionSlot_14->setChecked(0);
-    ui->actionSlot_14->setIcon(QIcon(":icon/14_unsel"));
-    ui->actionSlot_15->setChecked(0);
-    ui->actionSlot_15->setIcon(QIcon(":icon/15_unsel"));
-    ui->menuRegion->setEnabled(0);
-    ui->actionNew_Game_Plus->setEnabled(0);
+    setmenu();
 
-    switch(s)
-       {
-           case 0:ui->actionSlot_01->setChecked(1);ui->actionSlot_01->setIcon(QIcon(":icon/1_sel"));break;
-           case 1:ui->actionSlot_02->setChecked(1);ui->actionSlot_02->setIcon(QIcon(":icon/2_sel"));break;
-           case 2:ui->actionSlot_03->setChecked(1);ui->actionSlot_03->setIcon(QIcon(":icon/3_sel"));break;
-           case 3:ui->actionSlot_04->setChecked(1);ui->actionSlot_04->setIcon(QIcon(":icon/4_sel"));break;
-           case 4:ui->actionSlot_05->setChecked(1);ui->actionSlot_05->setIcon(QIcon(":icon/5_sel"));break;
-           case 5:ui->actionSlot_06->setChecked(1);ui->actionSlot_06->setIcon(QIcon(":icon/6_sel"));break;
-           case 6:ui->actionSlot_07->setChecked(1);ui->actionSlot_07->setIcon(QIcon(":icon/7_sel"));break;
-           case 7:ui->actionSlot_08->setChecked(1);ui->actionSlot_08->setIcon(QIcon(":icon/8_sel"));break;
-           case 8:ui->actionSlot_09->setChecked(1);ui->actionSlot_09->setIcon(QIcon(":icon/9_sel"));break;
-           case 9:ui->actionSlot_10->setChecked(1);ui->actionSlot_10->setIcon(QIcon(":icon/10_sel"));break;
-           case 10:ui->actionSlot_11->setChecked(1);ui->actionSlot_11->setIcon(QIcon(":icon/11_sel"));break;
-           case 11:ui->actionSlot_12->setChecked(1);ui->actionSlot_12->setIcon(QIcon(":icon/12_sel"));break;
-           case 12:ui->actionSlot_13->setChecked(1);ui->actionSlot_13->setIcon(QIcon(":icon/13_sel"));break;
-           case 13:ui->actionSlot_14->setChecked(1);ui->actionSlot_14->setIcon(QIcon(":icon/14_sel"));break;
-           case 14:ui->actionSlot_15->setChecked(1);ui->actionSlot_15->setIcon(QIcon(":icon/15_sel"));break;
-       }
-
-
-    if (ff7.savetype ==1)//PC
-    {
-        ui->actionImport_char->setEnabled(1);
-        ui->actionExport_char->setEnabled(1);
-        ui->action_Save->setEnabled(1);
-        ui->actionSave_File_As->setEnabled(1);
-        ui->actionExport_PC_Save->setEnabled(1);
-        ui->actionExport_PSX->setEnabled(1);
-        ui->actionExport_MC->setEnabled(1);
-        ui->actionExport_VGS->setEnabled(1);
-        ui->actionExport_DEX->setEnabled(1);
-        ui->actionFrom_PSV_Slot->setEnabled(1);
-        ui->actionFrom_PSX_Slot->setEnabled(1);
-        ui->actionNew_Game_Plus->setEnabled(1);
-        ui->actionClear_Slot->setEnabled(1);
-        ui->actionPaste_Slot->setEnabled(1);
-        ui->actionCopy_Slot->setEnabled(1);
-        ui->actionNext_Slot->setEnabled(1);
-        ui->actionPrevious_Slot->setEnabled(1);
-        ui->actionShow_Selection_Dialog->setEnabled(1);
-        ui->menuRegion->setEnabled(1);
-        ui->actionSlot_01->setEnabled(1);
-        ui->actionSlot_02->setEnabled(1);
-        ui->actionSlot_03->setEnabled(1);
-        ui->actionSlot_04->setEnabled(1);
-        ui->actionSlot_05->setEnabled(1);
-        ui->actionSlot_06->setEnabled(1);
-        ui->actionSlot_07->setEnabled(1);
-        ui->actionSlot_08->setEnabled(1);
-        ui->actionSlot_09->setEnabled(1);
-        ui->actionSlot_10->setEnabled(1);
-        ui->actionSlot_11->setEnabled(1);
-        ui->actionSlot_12->setEnabled(1);
-        ui->actionSlot_13->setEnabled(1);
-        ui->actionSlot_14->setEnabled(1);
-        ui->actionSlot_15->setEnabled(1);
-    }
-    else if (ff7.savetype == 2)//PSX
-    {
-        ui->actionImport_char->setEnabled(1);
-        ui->actionExport_char->setEnabled(1);
-        ui->action_Save->setEnabled(1);
-        ui->actionSave_File_As->setEnabled(1);
-        ui->actionExport_PC_Save->setEnabled(1);
-        ui->actionExport_PSX->setEnabled(1);
-        ui->actionExport_MC->setEnabled(1);
-        ui->actionExport_VGS->setEnabled(1);
-        ui->actionExport_DEX->setEnabled(1);
-        ui->actionFrom_PSV_Slot->setEnabled(1);
-        ui->actionFrom_PSX_Slot->setEnabled(1);
-        ui->actionNew_Game_Plus->setEnabled(1);
-        ui->actionClear_Slot->setEnabled(0);
-        ui->actionPaste_Slot->setEnabled(1);
-        ui->actionCopy_Slot->setEnabled(1);
-        ui->actionNext_Slot->setEnabled(0);
-        ui->actionPrevious_Slot->setEnabled(0);
-        ui->actionShow_Selection_Dialog->setEnabled(0);
-        ui->actionSlot_01->setEnabled(0);
-        ui->actionSlot_02->setEnabled(0);
-        ui->actionSlot_03->setEnabled(0);
-        ui->actionSlot_04->setEnabled(0);
-        ui->actionSlot_05->setEnabled(0);
-        ui->actionSlot_06->setEnabled(0);
-        ui->actionSlot_07->setEnabled(0);
-        ui->actionSlot_08->setEnabled(0);
-        ui->actionSlot_09->setEnabled(0);
-        ui->actionSlot_10->setEnabled(0);
-        ui->actionSlot_11->setEnabled(0);
-        ui->actionSlot_12->setEnabled(0);
-        ui->actionSlot_13->setEnabled(0);
-        ui->actionSlot_14->setEnabled(0);
-        ui->actionSlot_15->setEnabled(0);
-
-    }
-    else if (ff7.savetype == 3)//mcr/mcd
-    {
-        ui->actionImport_char->setEnabled(1);
-        ui->actionExport_char->setEnabled(1);
-        ui->action_Save->setEnabled(1);
-        ui->actionSave_File_As->setEnabled(1);
-        ui->actionExport_PC_Save->setEnabled(1);
-        ui->actionExport_PSX->setEnabled(1);
-        ui->actionExport_MC->setEnabled(1);
-        ui->actionExport_VGS->setEnabled(1);
-        ui->actionExport_DEX->setEnabled(1);
-        ui->actionFrom_PSV_Slot->setEnabled(1);
-        ui->actionFrom_PSX_Slot->setEnabled(1);
-        ui->actionNew_Game_Plus->setEnabled(1);
-        ui->actionClear_Slot->setEnabled(1);
-        ui->actionPaste_Slot->setEnabled(1);
-        ui->actionCopy_Slot->setEnabled(1);
-        ui->actionNext_Slot->setEnabled(1);
-        ui->actionPrevious_Slot->setEnabled(1);
-        ui->actionShow_Selection_Dialog->setEnabled(1);
-        ui->actionSlot_01->setEnabled(1);
-        ui->actionSlot_02->setEnabled(1);
-        ui->actionSlot_03->setEnabled(1);
-        ui->actionSlot_04->setEnabled(1);
-        ui->actionSlot_05->setEnabled(1);
-        ui->actionSlot_06->setEnabled(1);
-        ui->actionSlot_07->setEnabled(1);
-        ui->actionSlot_08->setEnabled(1);
-        ui->actionSlot_09->setEnabled(1);
-        ui->actionSlot_10->setEnabled(1);
-        ui->actionSlot_11->setEnabled(1);
-        ui->actionSlot_12->setEnabled(1);
-        ui->actionSlot_13->setEnabled(1);
-        ui->actionSlot_14->setEnabled(1);
-        ui->actionSlot_15->setEnabled(1);
-    }
-    else if (ff7.savetype ==4)//PSV
-    {
-        ui->actionImport_char->setEnabled(1);
-        ui->actionExport_char->setEnabled(1);
-        ui->action_Save->setEnabled(0);
-        ui->actionSave_File_As->setEnabled(0); // read only
-        ui->actionExport_PC_Save->setEnabled(1);
-        ui->actionExport_PSX->setEnabled(1);
-        ui->actionExport_MC->setEnabled(1);
-        ui->actionExport_VGS->setEnabled(1);
-        ui->actionExport_DEX->setEnabled(1);
-        ui->actionFrom_PSV_Slot->setEnabled(0);
-        ui->actionFrom_PSX_Slot->setEnabled(0);
-        ui->actionNew_Game_Plus->setEnabled(0);
-        ui->actionClear_Slot->setEnabled(0);
-        ui->actionPaste_Slot->setEnabled(0); // read only no point
-        ui->actionCopy_Slot->setEnabled(1);
-        ui->actionNext_Slot->setEnabled(0);
-        ui->actionPrevious_Slot->setEnabled(0);
-        ui->actionShow_Selection_Dialog->setEnabled(0);
-        ui->actionSlot_01->setEnabled(0);
-        ui->actionSlot_02->setEnabled(0);
-        ui->actionSlot_03->setEnabled(0);
-        ui->actionSlot_04->setEnabled(0);
-        ui->actionSlot_05->setEnabled(0);
-        ui->actionSlot_06->setEnabled(0);
-        ui->actionSlot_07->setEnabled(0);
-        ui->actionSlot_08->setEnabled(0);
-        ui->actionSlot_09->setEnabled(0);
-        ui->actionSlot_10->setEnabled(0);
-        ui->actionSlot_11->setEnabled(0);
-        ui->actionSlot_12->setEnabled(0);
-        ui->actionSlot_13->setEnabled(0);
-        ui->actionSlot_14->setEnabled(0);
-        ui->actionSlot_15->setEnabled(0);
-    }
-    else if (ff7.savetype ==5)//PSP
-    {
-        ui->actionImport_char->setEnabled(1);
-        ui->actionExport_char->setEnabled(1);
-        ui->action_Save->setEnabled(0);
-        ui->actionSave_File_As->setEnabled(1);
-        ui->actionExport_PC_Save->setEnabled(1);
-        ui->actionExport_PSX->setEnabled(1);
-        ui->actionExport_MC->setEnabled(1);
-        ui->actionExport_VGS->setEnabled(1);
-        ui->actionExport_DEX->setEnabled(1);
-        ui->actionFrom_PSV_Slot->setEnabled(1);
-        ui->actionFrom_PSX_Slot->setEnabled(1);
-        ui->actionNew_Game_Plus->setEnabled(1);
-        ui->actionClear_Slot->setEnabled(1);
-        ui->actionPaste_Slot->setEnabled(1);
-        ui->actionCopy_Slot->setEnabled(1);
-        ui->actionNext_Slot->setEnabled(1);
-        ui->actionPrevious_Slot->setEnabled(1);
-        ui->actionShow_Selection_Dialog->setEnabled(1);
-        ui->actionSlot_01->setEnabled(1);
-        ui->actionSlot_02->setEnabled(1);
-        ui->actionSlot_03->setEnabled(1);
-        ui->actionSlot_04->setEnabled(1);
-        ui->actionSlot_05->setEnabled(1);
-        ui->actionSlot_06->setEnabled(1);
-        ui->actionSlot_07->setEnabled(1);
-        ui->actionSlot_08->setEnabled(1);
-        ui->actionSlot_09->setEnabled(1);
-        ui->actionSlot_10->setEnabled(1);
-        ui->actionSlot_11->setEnabled(1);
-        ui->actionSlot_12->setEnabled(1);
-        ui->actionSlot_13->setEnabled(1);
-        ui->actionSlot_14->setEnabled(1);
-        ui->actionSlot_15->setEnabled(1);
-    }
-    else if (ff7.savetype == 6)//vgs type
-    {
-        ui->actionImport_char->setEnabled(1);
-        ui->actionExport_char->setEnabled(1);
-        ui->action_Save->setEnabled(1);
-        ui->actionSave_File_As->setEnabled(1);
-        ui->actionExport_PC_Save->setEnabled(1);
-        ui->actionExport_PSX->setEnabled(1);
-        ui->actionExport_MC->setEnabled(1);
-        ui->actionExport_VGS->setEnabled(1);
-        ui->actionExport_DEX->setEnabled(1);
-        ui->actionFrom_PSV_Slot->setEnabled(1);
-        ui->actionFrom_PSX_Slot->setEnabled(1);
-        ui->actionNew_Game_Plus->setEnabled(1);
-        ui->actionClear_Slot->setEnabled(1);
-        ui->actionPaste_Slot->setEnabled(1);
-        ui->actionCopy_Slot->setEnabled(1);
-        ui->actionNext_Slot->setEnabled(1);
-        ui->actionPrevious_Slot->setEnabled(1);
-        ui->actionShow_Selection_Dialog->setEnabled(1);
-        ui->actionSlot_01->setEnabled(1);
-        ui->actionSlot_02->setEnabled(1);
-        ui->actionSlot_03->setEnabled(1);
-        ui->actionSlot_04->setEnabled(1);
-        ui->actionSlot_05->setEnabled(1);
-        ui->actionSlot_06->setEnabled(1);
-        ui->actionSlot_07->setEnabled(1);
-        ui->actionSlot_08->setEnabled(1);
-        ui->actionSlot_09->setEnabled(1);
-        ui->actionSlot_10->setEnabled(1);
-        ui->actionSlot_11->setEnabled(1);
-        ui->actionSlot_12->setEnabled(1);
-        ui->actionSlot_13->setEnabled(1);
-        ui->actionSlot_14->setEnabled(1);
-        ui->actionSlot_15->setEnabled(1);
-    }
-    else if (ff7.savetype == 7)//DEX type
-    {
-        ui->actionImport_char->setEnabled(1);
-        ui->actionExport_char->setEnabled(1);
-        ui->action_Save->setEnabled(1);
-        ui->actionSave_File_As->setEnabled(1);
-        ui->actionExport_PC_Save->setEnabled(1);
-        ui->actionExport_PSX->setEnabled(1);
-        ui->actionExport_MC->setEnabled(1);
-        ui->actionExport_VGS->setEnabled(1);
-        ui->actionExport_DEX->setEnabled(1);
-        ui->actionFrom_PSV_Slot->setEnabled(1);
-        ui->actionFrom_PSX_Slot->setEnabled(1);
-        ui->actionNew_Game_Plus->setEnabled(1);
-        ui->actionClear_Slot->setEnabled(1);
-        ui->actionPaste_Slot->setEnabled(1);
-        ui->actionCopy_Slot->setEnabled(1);
-        ui->actionNext_Slot->setEnabled(1);
-        ui->actionPrevious_Slot->setEnabled(1);
-        ui->actionShow_Selection_Dialog->setEnabled(1);
-        ui->actionSlot_01->setEnabled(1);
-        ui->actionSlot_02->setEnabled(1);
-        ui->actionSlot_03->setEnabled(1);
-        ui->actionSlot_04->setEnabled(1);
-        ui->actionSlot_05->setEnabled(1);
-        ui->actionSlot_06->setEnabled(1);
-        ui->actionSlot_07->setEnabled(1);
-        ui->actionSlot_08->setEnabled(1);
-        ui->actionSlot_09->setEnabled(1);
-        ui->actionSlot_10->setEnabled(1);
-        ui->actionSlot_11->setEnabled(1);
-        ui->actionSlot_12->setEnabled(1);
-        ui->actionSlot_13->setEnabled(1);
-        ui->actionSlot_14->setEnabled(1);
-        ui->actionSlot_15->setEnabled(1);
-    }
-    else
-    {
-        ui->actionImport_char->setEnabled(1);
-        ui->actionExport_char->setEnabled(1);
-        ui->action_Save->setEnabled(0);
-        ui->actionSave_File_As->setEnabled(0);
-        ui->actionExport_PC_Save->setEnabled(1);
-        ui->actionExport_PSX->setEnabled(1);
-        ui->actionExport_MC->setEnabled(1);
-        ui->actionExport_VGS->setEnabled(1);
-        ui->actionExport_DEX->setEnabled(1);
-        ui->actionFrom_PSV_Slot->setEnabled(1);
-        ui->actionFrom_PSX_Slot->setEnabled(1);
-        ui->actionClear_Slot->setEnabled(1);
-        ui->actionPaste_Slot->setEnabled(1);
-        ui->actionCopy_Slot->setEnabled(1);
-        ui->actionNext_Slot->setEnabled(1);
-        ui->actionPrevious_Slot->setEnabled(1);
-        ui->actionShow_Selection_Dialog->setEnabled(1);
-        ui->actionSlot_01->setEnabled(1);
-        ui->actionSlot_02->setEnabled(1);
-        ui->actionSlot_03->setEnabled(1);
-        ui->actionSlot_04->setEnabled(1);
-        ui->actionSlot_05->setEnabled(1);
-        ui->actionSlot_06->setEnabled(1);
-        ui->actionSlot_07->setEnabled(1);
-        ui->actionSlot_08->setEnabled(1);
-        ui->actionSlot_09->setEnabled(1);
-        ui->actionSlot_10->setEnabled(1);
-        ui->actionSlot_11->setEnabled(1);
-        ui->actionSlot_12->setEnabled(1);
-        ui->actionSlot_13->setEnabled(1);
-        ui->actionSlot_14->setEnabled(1);
-        ui->actionSlot_15->setEnabled(1);
-        ui->menuRegion->setEnabled(1);
-    }
-    ui->menuRegion->setEnabled(1);
-    ui->action_Region_USA->setChecked(0);
-    ui->action_Region_PAL_Generic->setChecked(0);
-    ui->action_Region_PAL_German->setChecked(0);
-    ui->action_Region_PAL_Spanish->setChecked(0);
-    ui->action_Region_JPN->setChecked(0);
-    ui->action_Region_JPN_International->setChecked(0);
-    ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
-    ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
-    ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
-    ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
-    ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
-    ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
-    if(ff7.SG_Region_String[s].contains("94163")){ui->action_Region_USA->setChecked(Qt::Checked);ui->action_Region_USA->setIcon(QIcon(":/icon/us_sel"));}
-    else if (ff7.SG_Region_String[s].contains("00867")){ui->action_Region_PAL_Generic->setChecked(Qt::Checked);ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_sel"));}
-    else if (ff7.SG_Region_String[s].contains("00869")){ui->action_Region_PAL_German->setChecked(Qt::Checked);ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_sel"));}
-    else if (ff7.SG_Region_String[s].contains("00900")){ui->action_Region_PAL_Spanish->setChecked(Qt::Checked);ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_sel"));}
-    else if (ff7.SG_Region_String[s].contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_sel"));}
-    else if (ff7.SG_Region_String[s].contains("01057")){ui->action_Region_JPN_International->setChecked(Qt::Checked);ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_sel"));}
-    else {QMessageBox::information(this,tr("Region Detect Error"),tr("Region Can't be Automaticly Detected, You Must Set it Manually"));}
+    /*~~~~Set Region info and icon~~~~*/
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
     ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
     if (ff7.savetype != 1) //we Display an icon. for all formats except for pc
@@ -2237,8 +1960,7 @@ void MainWindow::guirefresh(void)
         SaveIcon ico(data.mid(96,160));
         ui->lbl_slot_icon->setPixmap(ico.icon().scaledToHeight(64,Qt::SmoothTransformation));
     }
-/*~~~~~End of menu options~~~~*/
-/*~~~~~Load Game Options~~~~~*/
+    /*~~~~~Load Game Options~~~~~*/
     if((ff7.slot[s].options1)& (1<<0)){ui->combo_sound->setCurrentIndex(1);}
     else{ui->combo_sound->setCurrentIndex(0);}
     if((ff7.slot[s].options1) & (1<<2)){ui->combo_control->setCurrentIndex(1);}
