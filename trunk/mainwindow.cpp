@@ -2951,7 +2951,7 @@ void MainWindow::clearslot(int rmslot)
     memcpy(&ff7.hf[rmslot].sl_header,temp,ff7.SG_SLOT_HEADER);// clear the header..
     memcpy(&ff7.slot[rmslot],temp,0x10f4);
     memcpy(&ff7.hf[rmslot].sl_footer,temp,ff7.SG_SLOT_FOOTER);// clear the footer..
-    ff7.SG_Region_String[rmslot]="";
+    ff7.SG_Region_String[rmslot].clear();
 }
 
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
