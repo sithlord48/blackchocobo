@@ -211,10 +211,10 @@ const quint8 PSX_SAVE_GAME_FILE_HEADER_S15[0x100]=
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PSV SAVE INFO~~~~~~~~~~~~~~~~~~~~~~~~~*/
 const int FF7_PSV_SAVE_GAME_SIZE = 0x2084;
-const int FF7_PSV_SAVE_GAME_HEADER = 0x0000;
+const int FF7_PSV_SAVE_GAME_HEADER = 0x0084;
 const int FF7_PSV_SAVE_GAME_FOOTER = 0x0000;
 const int FF7_PSV_SAVE_GAME_DATA_SIZE = 0x10F4;
-const int FF7_PSV_SAVE_GAME_SLOT_HEADER = 0x0284;
+const int FF7_PSV_SAVE_GAME_SLOT_HEADER = 0x0200;
 const int FF7_PSV_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
 const int FF7_PSV_SAVE_GAME_SLOT_SIZE = 0x2000;
 const int FF7_PSV_SAVE_GAME_SLOT_NUMBER = 1;
