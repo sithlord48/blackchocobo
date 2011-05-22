@@ -6206,6 +6206,10 @@ p, li { white-space: pre-wrap; }
         <source>New: .bin .mc .mci .ps .psm .dff  Format Support</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Fixed:Psx and Psv Region Detection</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>errbox</name>
