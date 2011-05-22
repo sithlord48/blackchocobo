@@ -51,7 +51,6 @@ QWidget{background-color: rgb(48, 47, 47);
 font: 9pt&quot;ubuntu&quot;;color:rgb(255,255,255);
 }
 QLabel#lbl_bc_version,QLabel#label1{
-font-weight: bold;
 font-size: 8pt;
 }
 QLabel#lbl_qt_version,QLabel#label2{
@@ -184,9 +183,9 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
             <font>
              <family>ubuntu</family>
              <pointsize>8</pointsize>
-             <weight>75</weight>
+             <weight>50</weight>
              <italic>false</italic>
-             <bold>true</bold>
+             <bold>false</bold>
             </font>
            </property>
            <property name="text">
@@ -200,9 +199,9 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
             <font>
              <family>ubuntu</family>
              <pointsize>8</pointsize>
-             <weight>75</weight>
+             <weight>50</weight>
              <italic>false</italic>
-             <bold>true</bold>
+             <bold>false</bold>
             </font>
            </property>
            <property name="text">
@@ -432,6 +431,11 @@ p, li { white-space: pre-wrap; }
          <property name="selectionMode">
           <enum>QAbstractItemView::NoSelection</enum>
          </property>
+         <item>
+          <property name="text">
+           <string>Fixed:Psx and Psv Region Detection</string>
+          </property>
+         </item>
          <item>
           <property name="text">
            <string>New: Support for .vgs .mem and .gme formats</string>
