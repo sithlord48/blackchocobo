@@ -61,6 +61,8 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->eskill_group->setVisible(false);
     ui->eskill_group_2->setVisible(false);
     ui->combo_add_mat->setVisible(false);
+    ui->combo_id->setVisible(false);
+    ui->lbl_id->setVisible(false);
 
     //testing stuff.
     ui->tabWidget->setTabEnabled(8,0);
@@ -1064,6 +1066,8 @@ void MainWindow::on_action_show_test_data_toggled()
         ui->btn_cait->setEnabled(true);
         ui->cb_id->setEnabled(true);
         ui->cb_Region_Slot->setEnabled(true);
+        ui->combo_id->setVisible(true);
+        ui->lbl_id->setVisible(true);
         settings.setValue("show_test",1);
         ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
     }
@@ -1087,6 +1091,8 @@ void MainWindow::on_action_show_test_data_toggled()
         ui->cb_id->setEnabled(false);
         if(ff7.slot[s].chars[7].id == 10) {ui->btn_cait->setEnabled(false);}
         ui->cb_Region_Slot->setEnabled(false);
+        ui->combo_id->setVisible(false);
+        ui->lbl_id->setVisible(false);
         settings.setValue("show_test",0);
         ui->action_show_test_data->setIcon(QIcon(":/icon/debug_unsel"));
     }
@@ -1415,34 +1421,41 @@ void MainWindow::on_actionAbout_Qt_activated()
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GUI FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~Char Update~~~~~~~~~~*/
 void MainWindow::charupdate(void)
-{   //clear the text incase there is something there
+{
+    load=true;
+    //clear everthing.
     //mslotsel=0;
     ui->cb_id->setText("");
     ui->cb_id->setChecked(false);
     ui->cb_id->setVisible(false);
+    ui->line_name->clear();
+    ui->cb_sadness->setChecked(0);
+    ui->cb_fury->setChecked(0);
+    ui->cb_front->setChecked(0);
 
     if(curchar== 6)
     {
         ui->cb_id->setText(tr("Young Cloud"));
         ui->cb_id->setVisible(true);
-        if(ff7.slot[s].chars[6].id == 9){ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));ui->cb_id->setChecked(1);}
-        else{ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));ui->cb_id->setChecked(0);}
+        if(ff7.slot[s].chars[6].id == 9){ui->cb_id->setChecked(1);}
+        else{ui->cb_id->setChecked(0);}
     }
 
     if(curchar==7)
     {
         ui->cb_id->setText(tr("Sephiroth"));
         ui->cb_id->setVisible(true);
-        if(ff7.slot[s].chars[7].id == 10){ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));ui->cb_id->setChecked(1);}
-        else{ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));ui->cb_id->setChecked(0);}
+        if(ff7.slot[s].chars[7].id == 10){ui->cb_id->setChecked(1);}
+        else{ui->cb_id->setChecked(0);}
     }
 
-    ui->line_name->clear();
+
     for (int n=0;n<12;n++)
     {
         if(chPC[ff7.slot[s].chars[curchar].name[n]] =='\0'){break;}
         else{this->ui->line_name->setText( this->ui->line_name->text() + chPC[ff7.slot[s].chars[curchar].name[n]]);}
     }
+    ui->combo_id->setCurrentIndex(ff7.slot[s].chars[curchar].id);
     ui->sb_exp->setValue(ff7.slot[s].chars[curchar].exp);
     ui->sb_next->setValue(ff7.slot[s].chars[curchar].expNext);
     ui->sb_lvl->setValue(ff7.slot[s].chars[curchar].level);
@@ -1464,9 +1477,6 @@ void MainWindow::charupdate(void)
     ui->sb_used3->setValue(ff7.slot[s].chars[curchar].timesused3);
     ui->sb_limitlvl->setValue(ff7.slot[s].chars[curchar].limitlevel);
     ui->slide_limit->setValue(ff7.slot[s].chars[curchar].limitbar);
-    ui->cb_sadness->setChecked(0);
-    ui->cb_fury->setChecked(0);
-    ui->cb_front->setChecked(0);
     if(ff7.slot[s].chars[curchar].flags[0] == 16){ui->cb_sadness->setChecked(1);}
     if(ff7.slot[s].chars[curchar].flags[0] == 32){ui->cb_fury->setChecked(1);}
     if(ff7.slot[s].chars[curchar].flags[1] == 255){ui->cb_front->setChecked(1);}
@@ -1518,6 +1528,250 @@ void MainWindow::charupdate(void)
     ui->lcd_0x35->display(ff7.slot[s].chars[curchar].z_4[1]);
     ui->lcd_0x36->display(ff7.slot[s].chars[curchar].z_4[2]);
     ui->lcd_0x37->display(ff7.slot[s].chars[curchar].z_4[3]);
+    if(ff7.slot[s].chars[curchar].id !=10 && ff7.slot[s].chars[curchar].id !=7 && ff7.slot[s].chars[curchar].id !=6)
+    {
+        //enable boxes for limits
+        ui->limit_1a->setEnabled(1);
+        ui->limit_1b->setEnabled(1);
+        ui->limit_2a->setEnabled(1);
+        ui->limit_2b->setEnabled(1);
+        ui->limit_3a->setEnabled(1);
+        ui->limit_3b->setEnabled(1);
+        ui->limit_4->setEnabled(1);
+        //clear cheked on all boxes
+        ui->limit_1a->setChecked(0);
+        ui->limit_1b->setChecked(0);
+        ui->limit_2a->setChecked(0);
+        ui->limit_2b->setChecked(0);
+        ui->limit_3a->setChecked(0);
+        ui->limit_3b->setChecked(0);
+        ui->limit_4->setChecked(0);
+        //show enabled boxes
+        ui->limit_1a->setVisible(1);
+        ui->limit_1b->setVisible(1);
+        ui->limit_2a->setVisible(1);
+        ui->limit_2b->setVisible(1);
+        ui->limit_3a->setVisible(1);
+        ui->limit_3b->setVisible(1);
+        ui->limit_4->setVisible(1);
+        //check off learned limits
+        int n = ff7.slot[s].chars[curchar].limits;
+        if (n & (1<<0)) ui->limit_1a->setChecked(1);
+        if (n & (1<<1)) ui->limit_1b->setChecked(1);
+        if (n & (1<<3)) ui->limit_2a->setChecked(1);
+        if (n & (1<<4)) ui->limit_2b->setChecked(1);
+        if (n & (1<<6)) ui->limit_3a->setChecked(1);
+        if (n & (1<<7)) ui->limit_3b->setChecked(1);
+        if (n & (1<<9)) ui->limit_4->setChecked(1);
+    }
+    else if(ff7.slot[s].chars[curchar].id == 6)
+    {
+        //enable boxes for limits
+        ui->limit_1a->setEnabled(1);
+        ui->limit_1b->setEnabled(0);
+        ui->limit_2a->setEnabled(1);
+        ui->limit_2b->setEnabled(0);
+        ui->limit_3a->setEnabled(0);
+        ui->limit_3b->setEnabled(0);
+        ui->limit_4->setEnabled(0);
+        //clear all checks
+        ui->limit_1a->setChecked(0);
+        ui->limit_1b->setChecked(0);
+        ui->limit_2a->setChecked(0);
+        ui->limit_2b->setChecked(0);
+        ui->limit_3a->setChecked(0);
+        ui->limit_3b->setChecked(0);
+        ui->limit_4->setChecked(0);
+        //show enabled boxes
+        ui->limit_1a->setVisible(1);
+        ui->limit_1b->setVisible(0);
+        ui->limit_2a->setVisible(1);
+        ui->limit_2b->setVisible(0);
+        ui->limit_3a->setVisible(0);
+        ui->limit_3b->setVisible(0);
+        ui->limit_4->setVisible(0);
+        //set learned limits
+        int n = ff7.slot[s].chars[curchar].limits;
+        if (n & (1<<0)) ui->limit_1a->setChecked(1);
+        if (n & (1<<3)) ui->limit_2a->setChecked(1);
+    }
+    else if(ff7.slot[s].chars[curchar].id == 7)
+    {
+        ui->limit_1a->setEnabled(1);
+        ui->limit_1b->setEnabled(0);
+        ui->limit_2a->setEnabled(1);
+        ui->limit_2b->setEnabled(0);
+        ui->limit_3a->setEnabled(1);
+        ui->limit_3b->setEnabled(0);
+        ui->limit_4->setEnabled(1);
+        //clear all checks
+        ui->limit_1a->setChecked(0);
+        ui->limit_1b->setChecked(0);
+        ui->limit_2a->setChecked(0);
+        ui->limit_2b->setChecked(0);
+        ui->limit_3a->setChecked(0);
+        ui->limit_3b->setChecked(0);
+        ui->limit_4->setChecked(0);
+        //show enabled boxes
+        ui->limit_1a->setVisible(1);
+        ui->limit_1b->setVisible(0);
+        ui->limit_2a->setVisible(1);
+        ui->limit_2b->setVisible(0);
+        ui->limit_3a->setVisible(1);
+        ui->limit_3b->setVisible(0);
+        ui->limit_4->setVisible(1);
+        //check learned limits
+        int n = ff7.slot[s].chars[curchar].limits;
+        if (n & (1<<0)) ui->limit_1a->setChecked(1);
+        if (n & (1<<3)) ui->limit_2a->setChecked(1);
+        if (n & (1<<6)) ui->limit_3a->setChecked(1);
+        if (n & (1<<9)) ui->limit_4->setChecked(1);
+    }
+    else
+    {
+        ui->limit_1a->setVisible(0);
+        ui->limit_1b->setVisible(0);
+        ui->limit_2a->setVisible(0);
+        ui->limit_2b->setVisible(0);
+        ui->limit_3a->setVisible(0);
+        ui->limit_3b->setVisible(0);
+        ui->limit_4->setVisible(0);
+    }
+    switch(ff7.slot[s].chars[curchar].id)
+    {
+    case 0: case 9://cloud
+        if(ff7.slot[s].chars[curchar].id ==0){ui->lbl_avatar->setPixmap(QPixmap(":/icon/cloud_icon"));}
+        else{ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));}
+        //label boxes
+        ui->limit_1a->setText(tr("Braver"));
+        ui->limit_1b->setText(tr("Cross-Slash"));
+        ui->limit_2a->setText(tr("Blade Beam"));
+        ui->limit_2b->setText(tr("Climhazzard"));
+        ui->limit_3a->setText(tr("Meteorain"));
+        ui->limit_3b->setText(tr("Finishing Touch"));
+        ui->limit_4->setText(tr("OmniSlash"));
+        //label weapons then set current...
+        for(int i=128;i<144;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
+        ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon);
+        break;
+    case 1://barret
+        ui->lbl_avatar->setPixmap(QPixmap(":/icon/barret_icon"));
+        //label boxes
+        ui->limit_1a->setText(tr("Big Shot"));
+        ui->limit_1b->setText(tr("Mindblow"));
+        ui->limit_2a->setText(tr("Grenade Bomb"));
+        ui->limit_2b->setText(tr("Hammerblow"));
+        ui->limit_3a->setText(tr("Satellite Beam"));
+        ui->limit_3b->setText(tr("Angermax"));
+        ui->limit_4->setText(tr("Catastrophe"));
+        //label then set current weapon
+        for(int i=160;i<176;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
+        ui->combo_weapon->setCurrentIndex((ff7.slot[s].chars[curchar].weapon)-32);
+        break;
+    case 2://tifa
+        ui->lbl_avatar->setPixmap(QPixmap(":/icon/tifa_icon"));
+        //label boxes
+        ui->limit_1a->setText(tr("Beat Rush"));
+        ui->limit_1b->setText(tr("SomerSault"));
+        ui->limit_2a->setText(tr("Waterkick"));
+        ui->limit_2b->setText(tr("Meteodrive"));
+        ui->limit_3a->setText(tr("Dolphin Blow"));
+        ui->limit_3b->setText(tr("Meteor Strike"));
+        ui->limit_4->setText(tr("Final Heaven"));
+        // fill then set weapon
+        for(int i=144;i<160;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
+        ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-16);
+        break;
+    case 3://aerith
+        ui->lbl_avatar->setPixmap(QPixmap(":/icon/aeris_icon"));
+        //label boxes
+        ui->limit_1a->setText(tr("Healing Wind"));
+        ui->limit_1b->setText(tr("Seal Evil"));
+        ui->limit_2a->setText(tr("Breath of the Earth"));
+        ui->limit_2b->setText(tr("Fury Brand"));
+        ui->limit_3a->setText(tr("Planet Protector"));
+        ui->limit_3b->setText(tr("Pulse of Life"));
+        ui->limit_4->setText(tr("Great Gospel"));
+        //fill weapons and select current
+        for(int i=190;i<201;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
+        ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-62);
+        break;
+    case 4://red
+        ui->lbl_avatar->setPixmap(QPixmap(":/icon/red_icon"));
+        //label boxes
+        ui->limit_1a->setText(tr("Sled Fang"));
+        ui->limit_1b->setText(tr("Lunatic High"));
+        ui->limit_2a->setText(tr("Blood Fang"));
+        ui->limit_2b->setText(tr("Stardust Ray"));
+        ui->limit_3a->setText(tr("Howling Moon"));
+        ui->limit_3b->setText(tr("Earth Rave"));
+        ui->limit_4->setText(tr("Cosmo Memory"));
+        //fill and set weapons
+        for(int i=176;i<190;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
+        ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-48);
+        break;
+    case 5://yuffie
+        ui->lbl_avatar->setPixmap(QPixmap(":/icon/yuffie_icon"));
+        //label boxes
+        ui->limit_1a->setText(tr("Greased Lightning"));
+        ui->limit_1b->setText(tr("Clear Tranquil"));
+        ui->limit_2a->setText(tr("Landscaper"));
+        ui->limit_2b->setText(tr("Bloodfest"));
+        ui->limit_3a->setText(tr("Gauntlet"));
+        ui->limit_3b->setText(tr("Doom of the Living"));
+        ui->limit_4->setText(tr("All Creation"));
+        //fill and set weapons
+        for(int i=215;i<229;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
+        ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-87);
+        break;
+    case 6://cait
+        ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));
+        //label limits
+        ui->limit_1a->setText(tr("Dice"));
+        ui->limit_1b->setText("");
+        ui->limit_2a->setText(tr("Slots"));
+        ui->limit_2b->setText("");
+        ui->limit_3a->setText("");
+        ui->limit_3b->setText("");
+        ui->limit_4->setText("");
+        for(int i=229;i<242;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
+        ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-101);
+        break;
+    case 7://vincent
+        ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));
+        //label boxes
+        ui->limit_1a->setText(tr("Gallian Beast"));
+        ui->limit_1b->setText("");
+        ui->limit_2a->setText(tr("Death Gigas"));
+        ui->limit_2b->setText("");
+        ui->limit_3a->setText(tr("Hellmasker"));
+        ui->limit_3b->setText("");
+        ui->limit_4->setText(tr("Chaos"));
+        //fill and select weapon
+        for(int i=242;i<255;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
+        ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-114);
+        break;
+    case 8://cid
+        ui->lbl_avatar->setPixmap(QPixmap(":/icon/cid_icon"));
+        //label boxes
+        ui->limit_1a->setText(tr("Boost Jump"));
+        ui->limit_1b->setText(tr("Dynamite"));
+        ui->limit_2a->setText(tr("Hyper Jump"));
+        ui->limit_2b->setText(tr("Dragon"));
+        ui->limit_3a->setText(tr("Dragon Dive"));
+        ui->limit_3b->setText(tr("Big Brawl"));
+        ui->limit_4->setText(tr("Highwind"));
+        //fill and set weapon
+        for(int i=201;i<215;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
+        ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-73);
+        break;
+    case 10://sephiroth
+        ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));
+        ui->combo_weapon->addItem(QIcon(Items[255].image),names.ItemNames(255));
+        ui->combo_weapon->setCurrentIndex(0);
+        break;
+    }
+    load=false;
 }
 /*~~~~~~~END Char Update~~~~~~~~*/
 /*~~~~~~~~~Armor/Weapon Update~~~~~~~~~~*/
@@ -1890,7 +2144,8 @@ void MainWindow::setmenu(void)
     else if(ff7.SG_Region_String[s].contains("00900")){ui->action_Region_PAL_Spanish->setChecked(Qt::Checked);ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_sel"));}
     else if(ff7.SG_Region_String[s].contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_sel"));}
     else if(ff7.SG_Region_String[s].contains("01057")){ui->action_Region_JPN_International->setChecked(Qt::Checked);ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_sel"));}
-    else {QMessageBox::information(this,tr("Region Detect Error"),tr("Region Can't be Automaticly Detected, You Must Set it Manually"));}
+    else if(ff7.SG_Region_String[s].isEmpty()){/*do nothing*/}
+    else{QMessageBox::information(this,tr("Region Detect Error"),tr("Region Can't be Automaticly Detected, You Must Set it Manually"));}
     /*~~End Detected Region~~*/
     load=false;
 }
@@ -1986,11 +2241,6 @@ void MainWindow::guirefresh(void)
     else{ui->cb_battle_help->setCheckState(Qt::Unchecked);}
 /*~~~~~End Options Loading~~~~~*/
     ui->sb_curdisc->setValue(ff7.slot[s].disc);
-
-    if(ff7.slot[s].chars[6].id ==9){ui->btn_cait->setStyleSheet("image: url(:/icon/y_cloud_icon);");}
-    else{ui->btn_cait->setStyleSheet("image: url(:/icon/cait_icon);");}
-    if(ff7.slot[s].chars[7].id ==10){ui->btn_vincent->setStyleSheet("image: url(:/icon/sep_icon);");}
-    else{ui->btn_vincent->setStyleSheet("image: url(:/icon/vincent_icon);");}
 
     if(ui->action_show_test_data->isChecked())
     {
@@ -2447,21 +2697,19 @@ void MainWindow::guirefresh(void)
     if((ff7.slot[s].yuffieforest)& (1<<0)){ui->cb_yuffieforest->setChecked(Qt::Checked);}
     else{ui->cb_yuffieforest->setChecked(Qt::Unchecked);}
 
+    ui->btn_cloud->setStyleSheet(avatar_style(ff7.slot[s].chars[0].id));
+    ui->btn_barret->setStyleSheet(avatar_style(ff7.slot[s].chars[1].id));
+    ui->btn_tifa->setStyleSheet(avatar_style(ff7.slot[s].chars[2].id));
+    ui->btn_aeris->setStyleSheet(avatar_style(ff7.slot[s].chars[3].id));
+    ui->btn_red->setStyleSheet(avatar_style(ff7.slot[s].chars[4].id));
+    ui->btn_yuffie->setStyleSheet(avatar_style(ff7.slot[s].chars[5].id));
+    ui->btn_cait->setStyleSheet(avatar_style(ff7.slot[s].chars[6].id));
+    ui->btn_vincent->setStyleSheet(avatar_style(ff7.slot[s].chars[7].id));
+    ui->btn_cid->setStyleSheet(avatar_style(ff7.slot[s].chars[8].id));
     load =false; // all functions should set load on their own.
-/*~~~~~Call External Functions~~~~~~~*/
+    /*~~~~~Call External Functions~~~~~~~*/
     chocobo_refresh();
-    switch (curchar) // click char button for who?
-    {
-        case 0:{ui->btn_cloud->click();break;}
-        case 1:{ui->btn_barret->click();break;}
-        case 2:{ui->btn_tifa->click();break;}
-        case 3:{ui->btn_aeris->click();break;}
-        case 4:{ui->btn_red->click();break;}
-        case 5:{ui->btn_yuffie->click();break;}
-        case 6:{ui->btn_cait->click();break;}
-        case 7:{ui->btn_vincent->click();break;}
-        case 8:{ui->btn_cid->click();break;}
-    }
+    charupdate();
     if(ui->action_show_test_data->isChecked()){testdata_refresh();}
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~Chocobo Refresh~~~~~~~~~~~~~~~~*/
@@ -2675,532 +2923,16 @@ void MainWindow::clearslot(int rmslot)
     memcpy(&ff7.hf[rmslot].sl_footer,temp,ff7.SG_SLOT_FOOTER);// clear the footer..
     ff7.SG_Region_String[rmslot].clear();
 }
-
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
-
-void MainWindow::on_btn_cloud_clicked()
-{
-    curchar=0;
-    load=true;
-    ui->lbl_avatar->setPixmap(QPixmap(":/icon/cloud_icon"));
-    charupdate();
-//enable boxes for limits
-    ui->limit_1a->setEnabled(1);
-    ui->limit_1b->setEnabled(1);
-    ui->limit_2a->setEnabled(1);
-    ui->limit_2b->setEnabled(1);
-    ui->limit_3a->setEnabled(1);
-    ui->limit_3b->setEnabled(1);
-    ui->limit_4->setEnabled(1);
-//clear cheked on all boxes
-    ui->limit_1a->setChecked(0);
-    ui->limit_1b->setChecked(0);
-    ui->limit_2a->setChecked(0);
-    ui->limit_2b->setChecked(0);
-    ui->limit_3a->setChecked(0);
-    ui->limit_3b->setChecked(0);
-    ui->limit_4->setChecked(0);
-//show enabled boxes
-    ui->limit_1a->setVisible(1);
-    ui->limit_1b->setVisible(1);
-    ui->limit_2a->setVisible(1);
-    ui->limit_2b->setVisible(1);
-    ui->limit_3a->setVisible(1);
-    ui->limit_3b->setVisible(1);
-    ui->limit_4->setVisible(1);
-//label boxes
-    ui->limit_1a->setText(tr("Braver"));
-    ui->limit_1b->setText(tr("Cross-Slash"));
-    ui->limit_2a->setText(tr("Blade Beam"));
-    ui->limit_2b->setText(tr("Climhazzard"));
-    ui->limit_3a->setText(tr("Meteorain"));
-    ui->limit_3b->setText(tr("Finishing Touch"));
-    ui->limit_4->setText(tr("OmniSlash"));
-// set up checked limits
-    int n = ff7.slot[s].chars[curchar].limits;
-    if (n & (1<<0)) ui->limit_1a->setChecked(1);
-    if (n & (1<<1)) ui->limit_1b->setChecked(1);
-    if (n & (1<<3)) ui->limit_2a->setChecked(1);
-    if (n & (1<<4)) ui->limit_2b->setChecked(1);
-    if (n & (1<<6)) ui->limit_3a->setChecked(1);
-    if (n & (1<<7)) ui->limit_3b->setChecked(1);
-    if (n & (1<<9)) ui->limit_4->setChecked(1);
-//label weapons then set current...
-    for(int i=128;i<144;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
-    ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon);
-    load = false;
-}
-void MainWindow::on_btn_barret_clicked()
-{
-    curchar=1;
-    load=true;
-    ui->lbl_avatar->setPixmap(QPixmap(":/icon/barret_icon"));
-    charupdate();
-//enable boxes for limits
-    ui->limit_1a->setEnabled(1);
-    ui->limit_1b->setEnabled(1);
-    ui->limit_2a->setEnabled(1);
-    ui->limit_2b->setEnabled(1);
-    ui->limit_3a->setEnabled(1);
-    ui->limit_3b->setEnabled(1);
-    ui->limit_4->setEnabled(1);
-//show enabled boxes
-    ui->limit_1a->setVisible(1);
-    ui->limit_1b->setVisible(1);
-    ui->limit_2a->setVisible(1);
-    ui->limit_2b->setVisible(1);
-    ui->limit_3a->setVisible(1);
-    ui->limit_3b->setVisible(1);
-    ui->limit_4->setVisible(1);
-// clear all checks
-    ui->limit_1a->setChecked(0);
-    ui->limit_1b->setChecked(0);
-    ui->limit_2a->setChecked(0);
-    ui->limit_2b->setChecked(0);
-    ui->limit_3a->setChecked(0);
-    ui->limit_3b->setChecked(0);
-    ui->limit_4->setChecked(0);
-//label boxes
-    ui->limit_1a->setText(tr("Big Shot"));
-    ui->limit_1b->setText(tr("Mindblow"));
-    ui->limit_2a->setText(tr("Grenade Bomb"));
-    ui->limit_2b->setText(tr("Hammerblow"));
-    ui->limit_3a->setText(tr("Satellite Beam"));
-    ui->limit_3b->setText(tr("Angermax"));
-    ui->limit_4->setText(tr("Catastrophe"));
-//check off learned limits
-    int n = ff7.slot[s].chars[curchar].limits;
-    if (n & (1<<0)) ui->limit_1a->setChecked(1);
-    if (n & (1<<1)) ui->limit_1b->setChecked(1);
-    if (n & (1<<3)) ui->limit_2a->setChecked(1);
-    if (n & (1<<4)) ui->limit_2b->setChecked(1);
-    if (n & (1<<6)) ui->limit_3a->setChecked(1);
-    if (n & (1<<7)) ui->limit_3b->setChecked(1);
-    if (n & (1<<9)) ui->limit_4->setChecked(1);
-//label then set current weapon
-    for(int i=160;i<176;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
-    ui->combo_weapon->setCurrentIndex((ff7.slot[s].chars[curchar].weapon)-32);
-    load=false;
-}
-void MainWindow::on_btn_tifa_clicked()
-{
-    curchar=2;
-    load=true;
-    ui->lbl_avatar->setPixmap(QPixmap(":/icon/tifa_icon"));
-    charupdate();
-//enable boxes for limits
-    ui->limit_1a->setEnabled(1);
-    ui->limit_1b->setEnabled(1);
-    ui->limit_2a->setEnabled(1);
-    ui->limit_2b->setEnabled(1);
-    ui->limit_3a->setEnabled(1);
-    ui->limit_3b->setEnabled(1);
-    ui->limit_4->setEnabled(1);
-    ui->limit_1a->setChecked(0);
-    ui->limit_1b->setChecked(0);
-    ui->limit_2a->setChecked(0);
-    ui->limit_2b->setChecked(0);
-    ui->limit_3a->setChecked(0);
-    ui->limit_3b->setChecked(0);
-    ui->limit_4->setChecked(0);
-//show enabled boxes
-    ui->limit_1a->setVisible(1);
-    ui->limit_1b->setVisible(1);
-    ui->limit_2a->setVisible(1);
-    ui->limit_2b->setVisible(1);
-    ui->limit_3a->setVisible(1);
-    ui->limit_3b->setVisible(1);
-    ui->limit_4->setVisible(1);
-//label boxes
-    ui->limit_1a->setText(tr("Beat Rush"));
-    ui->limit_1b->setText(tr("SomerSault"));
-    ui->limit_2a->setText(tr("Waterkick"));
-    ui->limit_2b->setText(tr("Meteodrive"));
-    ui->limit_3a->setText(tr("Dolphin Blow"));
-    ui->limit_3b->setText(tr("Meteor Strike"));
-    ui->limit_4->setText(tr("Final Heaven"));
-// check off learned limits
-    int n = ff7.slot[s].chars[curchar].limits;
-    if (n & (1<<0)) ui->limit_1a->setChecked(1);
-    if (n & (1<<1)) ui->limit_1b->setChecked(1);
-    if (n & (1<<3)) ui->limit_2a->setChecked(1);
-    if (n & (1<<4)) ui->limit_2b->setChecked(1);
-    if (n & (1<<6)) ui->limit_3a->setChecked(1);
-    if (n & (1<<7)) ui->limit_3b->setChecked(1);
-    if (n & (1<<9)) ui->limit_4->setChecked(1);
-// fill then set weapon
-    for(int i=144;i<160;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
-    ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-16);
-    load=false;
-}
-void MainWindow::on_btn_aeris_clicked()
-{
-    curchar=3;
-    load=true;
-    ui->lbl_avatar->setPixmap(QPixmap(":/icon/aeris_icon"));
-    charupdate();
-//enable boxes for limits
-    ui->limit_1a->setEnabled(1);
-    ui->limit_1b->setEnabled(1);
-    ui->limit_2a->setEnabled(1);
-    ui->limit_2b->setEnabled(1);
-    ui->limit_3a->setEnabled(1);
-    ui->limit_3b->setEnabled(1);
-    ui->limit_4->setEnabled(1);
-//clear all checks
-    ui->limit_1a->setChecked(0);
-    ui->limit_1b->setChecked(0);
-    ui->limit_2a->setChecked(0);
-    ui->limit_2b->setChecked(0);
-    ui->limit_3a->setChecked(0);
-    ui->limit_3b->setChecked(0);
-    ui->limit_4->setChecked(0);
-//show enabled boxes
-    ui->limit_1a->setVisible(1);
-    ui->limit_1b->setVisible(1);
-    ui->limit_2a->setVisible(1);
-    ui->limit_2b->setVisible(1);
-    ui->limit_3a->setVisible(1);
-    ui->limit_3b->setVisible(1);
-    ui->limit_4->setVisible(1);
-//label boxes
-    ui->limit_1a->setText(tr("Healing Wind"));
-    ui->limit_1b->setText(tr("Seal Evil"));
-    ui->limit_2a->setText(tr("Breath of the Earth"));
-    ui->limit_2b->setText(tr("Fury Brand"));
-    ui->limit_3a->setText(tr("Planet Protector"));
-    ui->limit_3b->setText(tr("Pulse of Life"));
-    ui->limit_4->setText(tr("Great Gospel"));
-//check off learned limits
-    int n = ff7.slot[s].chars[curchar].limits;
-    if (n & (1<<0)) ui->limit_1a->setChecked(1);
-    if (n & (1<<1)) ui->limit_1b->setChecked(1);
-    if (n & (1<<3)) ui->limit_2a->setChecked(1);
-    if (n & (1<<4)) ui->limit_2b->setChecked(1);
-    if (n & (1<<6)) ui->limit_3a->setChecked(1);
-    if (n & (1<<7)) ui->limit_3b->setChecked(1);
-    if (n & (1<<9)) ui->limit_4->setChecked(1);
-//fill weapons and select current
-    for(int i=190;i<201;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
-    ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-62);
-    load=false;
-}
-void MainWindow::on_btn_red_clicked()
-{
-    curchar=4;
-    load=true;
-    ui->lbl_avatar->setPixmap(QPixmap(":/icon/red_icon"));
-    charupdate();
-//enable boxes for limits
-    ui->limit_1a->setEnabled(1);
-    ui->limit_1b->setEnabled(1);
-    ui->limit_2a->setEnabled(1);
-    ui->limit_2b->setEnabled(1);
-    ui->limit_3a->setEnabled(1);
-    ui->limit_3b->setEnabled(1);
-    ui->limit_4->setEnabled(1);
-//clear all checks
-    ui->limit_1a->setChecked(0);
-    ui->limit_1b->setChecked(0);
-    ui->limit_2a->setChecked(0);
-    ui->limit_2b->setChecked(0);
-    ui->limit_3a->setChecked(0);
-    ui->limit_3b->setChecked(0);
-    ui->limit_4->setChecked(0);
-//show enabled boxes
-    ui->limit_1a->setVisible(1);
-    ui->limit_1b->setVisible(1);
-    ui->limit_2a->setVisible(1);
-    ui->limit_2b->setVisible(1);
-    ui->limit_3a->setVisible(1);
-    ui->limit_3b->setVisible(1);
-    ui->limit_4->setVisible(1);
-//label boxes
-    ui->limit_1a->setText(tr("Sled Fang"));
-    ui->limit_1b->setText(tr("Lunatic High"));
-    ui->limit_2a->setText(tr("Blood Fang"));
-    ui->limit_2b->setText(tr("Stardust Ray"));
-    ui->limit_3a->setText(tr("Howling Moon"));
-    ui->limit_3b->setText(tr("Earth Rave"));
-    ui->limit_4->setText(tr("Cosmo Memory"));
-//set learned limits
-    int n = ff7.slot[s].chars[curchar].limits;
-    if (n & (1<<0)) ui->limit_1a->setChecked(1);
-    if (n & (1<<1)) ui->limit_1b->setChecked(1);
-    if (n & (1<<3)) ui->limit_2a->setChecked(1);
-    if (n & (1<<4)) ui->limit_2b->setChecked(1);
-    if (n & (1<<6)) ui->limit_3a->setChecked(1);
-    if (n & (1<<7)) ui->limit_3b->setChecked(1);
-    if (n & (1<<9)) ui->limit_4->setChecked(1);
-//fill and set weapons
-    for(int i=176;i<190;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
-    ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-48);
-    load=false;
-}
-void MainWindow::on_btn_yuffie_clicked()
-{
-    curchar=5;
-    load=true;
-    ui->lbl_avatar->setPixmap(QPixmap(":/icon/yuffie_icon"));
-    charupdate();
-//enable boxes for limits
-    ui->limit_1a->setEnabled(1);
-    ui->limit_1b->setEnabled(1);
-    ui->limit_2a->setEnabled(1);
-    ui->limit_2b->setEnabled(1);
-    ui->limit_3a->setEnabled(1);
-    ui->limit_3b->setEnabled(1);
-    ui->limit_4->setEnabled(1);
-//clear all checks
-    ui->limit_1a->setChecked(0);
-    ui->limit_1b->setChecked(0);
-    ui->limit_2a->setChecked(0);
-    ui->limit_2b->setChecked(0);
-    ui->limit_3a->setChecked(0);
-    ui->limit_3b->setChecked(0);
-    ui->limit_4->setChecked(0);
-//show enabled boxes
-    ui->limit_1a->setVisible(1);
-    ui->limit_1b->setVisible(1);
-    ui->limit_2a->setVisible(1);
-    ui->limit_2b->setVisible(1);
-    ui->limit_3a->setVisible(1);
-    ui->limit_3b->setVisible(1);
-    ui->limit_4->setVisible(1);
-//label boxes
-    ui->limit_1a->setText(tr("Greased Lightning"));
-    ui->limit_1b->setText(tr("Clear Tranquil"));
-    ui->limit_2a->setText(tr("Landscaper"));
-    ui->limit_2b->setText(tr("Bloodfest"));
-    ui->limit_3a->setText(tr("Gauntlet"));
-    ui->limit_3b->setText(tr("Doom of the Living"));
-    ui->limit_4->setText(tr("All Creation"));
-//set learned limits
-    int n = ff7.slot[s].chars[curchar].limits;
-    if (n & (1<<0)) ui->limit_1a->setChecked(1);
-    if (n & (1<<1)) ui->limit_1b->setChecked(1);
-    if (n & (1<<3)) ui->limit_2a->setChecked(1);
-    if (n & (1<<4)) ui->limit_2b->setChecked(1);
-    if (n & (1<<6)) ui->limit_3a->setChecked(1);
-    if (n & (1<<7)) ui->limit_3b->setChecked(1);
-    if (n & (1<<9)) ui->limit_4->setChecked(1);
-//fill and set weapons
-    for(int i=215;i<229;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
-    ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-87);
-    load=false;
-}
-void MainWindow::on_btn_cait_clicked()
-{
-    curchar=6;
-  //  if(ff7.slot[s].chars[curchar].id==9){ui->btn_cloud->click();}
-    load=true;
-    ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));
-    charupdate();
-//enable boxes for limits
-    ui->limit_1a->setEnabled(1);
-    ui->limit_1b->setEnabled(0);
-    ui->limit_2a->setEnabled(1);
-    ui->limit_2b->setEnabled(0);
-    ui->limit_3a->setEnabled(0);
-    ui->limit_3b->setEnabled(0);
-    ui->limit_4->setEnabled(0);
-//clear all checks
-    ui->limit_1a->setChecked(0);
-    ui->limit_1b->setChecked(0);
-    ui->limit_2a->setChecked(0);
-    ui->limit_2b->setChecked(0);
-    ui->limit_3a->setChecked(0);
-    ui->limit_3b->setChecked(0);
-    ui->limit_4->setChecked(0);
-//show enabled boxes
-    ui->limit_1a->setVisible(1);
-    ui->limit_1b->setVisible(0);
-    ui->limit_2a->setVisible(1);
-    ui->limit_2b->setVisible(0);
-    ui->limit_3a->setVisible(0);
-    ui->limit_3b->setVisible(0);
-    ui->limit_4->setVisible(0);
-//label limits
-    ui->limit_1a->setText(tr("Dice"));
-    ui->limit_1b->setText("");
-    ui->limit_2a->setText(tr("Slots"));
-    ui->limit_2b->setText("");
-    ui->limit_3a->setText("");
-    ui->limit_3b->setText("");
-    ui->limit_4->setText("");
-//set learned limits
-    int n = ff7.slot[s].chars[curchar].limits;
-    if (n & (1<<0)) ui->limit_1a->setChecked(1);
-    if (n & (1<<3)) ui->limit_2a->setChecked(1);
-//fill and set weapon
-   if(ff7.slot[s].chars[curchar].id==6)
-   {
-       for(int i=229;i<242;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
-       ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-101);
-   }
-   else//fill w/ clouds weapons and limits.
-   {
-       ui->limit_1a->setEnabled(1);
-       ui->limit_1b->setEnabled(1);
-       ui->limit_2a->setEnabled(1);
-       ui->limit_2b->setEnabled(1);
-       ui->limit_3a->setEnabled(1);
-       ui->limit_3b->setEnabled(1);
-       ui->limit_4->setEnabled(1);
-   //clear cheked on all boxes
-       ui->limit_1a->setChecked(0);
-       ui->limit_1b->setChecked(0);
-       ui->limit_2a->setChecked(0);
-       ui->limit_2b->setChecked(0);
-       ui->limit_3a->setChecked(0);
-       ui->limit_3b->setChecked(0);
-       ui->limit_4->setChecked(0);
-   //show enabled boxes
-       ui->limit_1a->setVisible(1);
-       ui->limit_1b->setVisible(1);
-       ui->limit_2a->setVisible(1);
-       ui->limit_2b->setVisible(1);
-       ui->limit_3a->setVisible(1);
-       ui->limit_3b->setVisible(1);
-       ui->limit_4->setVisible(1);
-   //label boxes
-       ui->limit_1a->setText(tr("Braver"));
-       ui->limit_1b->setText(tr("Cross-Slash"));
-       ui->limit_2a->setText(tr("Blade Beam"));
-       ui->limit_2b->setText(tr("Climhazzard"));
-       ui->limit_3a->setText(tr("Meteorain"));
-       ui->limit_3b->setText(tr("Finishing Touch"));
-       ui->limit_4->setText(tr("OmniSlash"));
-   // set up checked limits
-       int n = ff7.slot[s].chars[curchar].limits;
-       if (n & (1<<0)) ui->limit_1a->setChecked(1);
-       if (n & (1<<1)) ui->limit_1b->setChecked(1);
-       if (n & (1<<3)) ui->limit_2a->setChecked(1);
-       if (n & (1<<4)) ui->limit_2b->setChecked(1);
-       if (n & (1<<6)) ui->limit_3a->setChecked(1);
-       if (n & (1<<7)) ui->limit_3b->setChecked(1);
-       if (n & (1<<9)) ui->limit_4->setChecked(1);
-       for(int i=128;i<144;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
-       ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon);
-   }
-   load=false;
-}
-void MainWindow::on_btn_vincent_clicked()
-{
-    curchar=7;
-    load=true;
-    ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));
-    charupdate();
-//enable boxes for limits
-    ui->limit_1a->setEnabled(1);
-    ui->limit_1b->setEnabled(0);
-    ui->limit_2a->setEnabled(1);
-    ui->limit_2b->setEnabled(0);
-    ui->limit_3a->setEnabled(1);
-    ui->limit_3b->setEnabled(0);
-    ui->limit_4->setEnabled(1);
-//clear all checks
-    ui->limit_1a->setChecked(0);
-    ui->limit_1b->setChecked(0);
-    ui->limit_2a->setChecked(0);
-    ui->limit_2b->setChecked(0);
-    ui->limit_3a->setChecked(0);
-    ui->limit_3b->setChecked(0);
-    ui->limit_4->setChecked(0);
-//show enabled boxes
-    ui->limit_1a->setVisible(1);
-    ui->limit_1b->setVisible(0);
-    ui->limit_2a->setVisible(1);
-    ui->limit_2b->setVisible(0);
-    ui->limit_3a->setVisible(1);
-    ui->limit_3b->setVisible(0);
-    ui->limit_4->setVisible(1);
-//label boxes
-    ui->limit_1a->setText(tr("Gallian Beast"));
-    ui->limit_1b->setText("");
-    ui->limit_2a->setText(tr("Death Gigas"));
-    ui->limit_2b->setText("");
-    ui->limit_3a->setText(tr("Hellmasker"));
-    ui->limit_3b->setText("");
-    ui->limit_4->setText(tr("Chaos"));
-//check learned limits
-    int n = ff7.slot[s].chars[curchar].limits;
-    if (n & (1<<0)) ui->limit_1a->setChecked(1);
-    if (n & (1<<3)) ui->limit_2a->setChecked(1);
-    if (n & (1<<6)) ui->limit_3a->setChecked(1);
-    if (n & (1<<9)) ui->limit_4->setChecked(1);
-//fill and select weapon
-    if(ff7.slot[s].chars[curchar].id==7)
-    {
-        for(int i=242;i<255;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
-        ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-114);
-    }
-    else //sephiroth and hide limits.
-    {
-        ui->limit_1a->setVisible(0);
-        ui->limit_1b->setVisible(0);
-        ui->limit_2a->setVisible(0);
-        ui->limit_2b->setVisible(0);
-        ui->limit_3a->setVisible(0);
-        ui->limit_3b->setVisible(0);
-        ui->limit_4->setVisible(0);
-        ui->combo_weapon->addItem(QIcon(Items[255].image),names.ItemNames(255));
-        ui->combo_weapon->setCurrentIndex(0);
-    }
-    load=false;
-}
-void MainWindow::on_btn_cid_clicked()
-{
-    curchar=8;
-    load=true;
-    ui->lbl_avatar->setPixmap(QPixmap(":/icon/cid_icon"));
-    charupdate();
-//enable boxes for limits
-    ui->limit_1a->setEnabled(1);
-    ui->limit_1b->setEnabled(1);
-    ui->limit_2a->setEnabled(1);
-    ui->limit_2b->setEnabled(1);
-    ui->limit_3a->setEnabled(1);
-    ui->limit_3b->setEnabled(1);
-    ui->limit_4->setEnabled(1);
-//clear all checks
-    ui->limit_1a->setChecked(0);
-    ui->limit_1b->setChecked(0);
-    ui->limit_2a->setChecked(0);
-    ui->limit_2b->setChecked(0);
-    ui->limit_3a->setChecked(0);
-    ui->limit_3b->setChecked(0);
-    ui->limit_4->setChecked(0);
-//show enabled boxes
-    ui->limit_1a->setVisible(1);
-    ui->limit_1b->setVisible(1);
-    ui->limit_2a->setVisible(1);
-    ui->limit_2b->setVisible(1);
-    ui->limit_3a->setVisible(1);
-    ui->limit_3b->setVisible(1);
-    ui->limit_4->setVisible(1);
-//label boxes
-    ui->limit_1a->setText(tr("Boost Jump"));
-    ui->limit_1b->setText(tr("Dynamite"));
-    ui->limit_2a->setText(tr("Hyper Jump"));
-    ui->limit_2b->setText(tr("Dragon"));
-    ui->limit_3a->setText(tr("Dragon Dive"));
-    ui->limit_3b->setText(tr("Big Brawl"));
-    ui->limit_4->setText(tr("Highwind"));
-//set learned limits
-    int n = ff7.slot[s].chars[curchar].limits;
-    if (n & (1<<0)) ui->limit_1a->setChecked(1);
-    if (n & (1<<1)) ui->limit_1b->setChecked(1);
-    if (n & (1<<3)) ui->limit_2a->setChecked(1);
-    if (n & (1<<4)) ui->limit_2b->setChecked(1);
-    if (n & (1<<6)) ui->limit_3a->setChecked(1);
-    if (n & (1<<7)) ui->limit_3b->setChecked(1);
-    if (n & (1<<9)) ui->limit_4->setChecked(1);
-//fill and set weapon
-    for(int i=201;i<215;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
-    ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon-73);
-    load=false;
-}
+void MainWindow::on_btn_cloud_clicked()     {curchar=0; charupdate();ui->btn_cloud->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
+void MainWindow::on_btn_barret_clicked()    {curchar=1; charupdate();ui->btn_barret->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
+void MainWindow::on_btn_tifa_clicked()      {curchar=2; charupdate();ui->btn_tifa->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
+void MainWindow::on_btn_aeris_clicked()     {curchar=3; charupdate();ui->btn_aeris->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
+void MainWindow::on_btn_red_clicked()       {curchar=4; charupdate();ui->btn_red->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
+void MainWindow::on_btn_yuffie_clicked()    {curchar=5; charupdate();ui->btn_yuffie->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
+void MainWindow::on_btn_cait_clicked()      {curchar=6; charupdate();ui->btn_cait->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
+void MainWindow::on_btn_vincent_clicked()   {curchar=7; charupdate();ui->btn_vincent->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
+void MainWindow::on_btn_cid_clicked()       {curchar=8; charupdate();ui->btn_cid->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_sb_gil_valueChanged()
 {
@@ -4022,14 +3754,14 @@ void MainWindow::on_cb_id_toggled(bool checked)
     {
         if (curchar ==6)
         {
-            if (checked){ff7.slot[s].chars[6].id = 9;ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));ui->btn_cait->setStyleSheet("image: url(:/icon/y_cloud_icon);");}
-            else {ff7.slot[s].chars[6].id = 6;ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));ui->btn_cait->setStyleSheet("image: url(:/icon/cait_icon);");}
+            if (checked){ff7.slot[s].chars[6].id = 9;}
+            else {ff7.slot[s].chars[6].id = 6;}
             ui->btn_cait->click();
         }
         if (curchar ==7)
         {
-            if (checked){ff7.slot[s].chars[7].id = 10;ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));ui->btn_vincent->setStyleSheet("image: url(:/icon/sep_icon);");}
-            else {ff7.slot[s].chars[7].id = 7;ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));ui->btn_vincent->setStyleSheet("image: url(:/icon/vincent_icon);");}
+            if (checked){ff7.slot[s].chars[7].id = 10;}
+            else {ff7.slot[s].chars[7].id = 7;}
             ui->btn_vincent->click();
         }
     }
@@ -5648,4 +5380,9 @@ void MainWindow::on_cb_Region_Slot_currentIndexChanged()
         ff7.SG_Region_String[s].append(&new_regionString);
         if(ff7.savetype==3 || ff7.savetype==5|| ff7.savetype==6 || ff7.savetype ==7){fix_vmc_header(); guirefresh();}
     }
+}
+
+void MainWindow::on_combo_id_currentIndexChanged(int index)
+{
+    if(!load){ff7.slot[s].chars[curchar].id=index; guirefresh();}
 }
