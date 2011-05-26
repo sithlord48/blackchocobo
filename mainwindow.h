@@ -432,5 +432,6 @@ private slots:
     void on_list_eskill_2_itemChanged();
     void on_action_Save_activated();
     void on_cb_Region_Slot_currentIndexChanged();
+    void on_combo_id_currentIndexChanged(int index);
 };
 #endif // MAINWINDOW_H
