@@ -295,6 +295,47 @@ void fix_vmc_header(void)
         memcpy(&ff7.file_header_psp,mc_header_2,0x2F40);
     }
 }
+QString avatar_style(int id)
+{
+    QString style;
+    switch(id)
+    {
+      case 0:
+        style="image: url(:/icon/cloud_icon)";
+        break;
+      case 1:
+        style="image: url(:/icon/barret_icon)";
+        break;
+      case 2:
+        style="image: url(:/icon/tifa_icon)";
+        break;
+      case 3:
+        style="image: url(:/icon/aeris_icon)";
+        break;
+      case 4:
+        style="image: url(:/icon/red_icon)";
+        break;
+      case 5:
+        style="image: url(:/icon/yuffie_icon)";
+        break;
+      case 6:
+        style="image: url(:/icon/cait_icon)";
+        break;
+      case 7:
+        style="image: url(:/icon/vincent_icon)";
+        break;
+      case 8:
+        style="image: url(:/icon/cid_icon)";
+        break;
+      case 9:
+        style="image: url(:/icon/y_cloud_icon)";
+        break;
+      case 10:
+        style="image: url(:/icon/sep_icon)";
+        break;
+      }
+    return style;
+}
 
 static const char *itemNames[]=
 {
