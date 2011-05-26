@@ -27,10 +27,11 @@ void preptext (void);
 void fix_pc_bytemask(void);
 void fix_psx_header(int);
 void fix_vmc_header(void);
-
+QString avatar_style(int);
 class ff7names
 {
 public:
+
 QString ItemNames(int);
 QString MateriaNames(int);
 QString MateriaStats(int);
