@@ -4106,7 +4106,7 @@ image: url(:/icon/cait_icon);
                    <item>
                     <widget class="QCheckBox" name="limit_1a">
                      <property name="enabled">
-                      <bool>false</bool>
+                      <bool>true</bool>
                      </property>
                      <property name="text">
                       <string/>
@@ -4116,7 +4116,7 @@ image: url(:/icon/cait_icon);
                    <item>
                     <widget class="QCheckBox" name="limit_1b">
                      <property name="enabled">
-                      <bool>false</bool>
+                      <bool>true</bool>
                      </property>
                      <property name="text">
                       <string/>
@@ -4126,7 +4126,7 @@ image: url(:/icon/cait_icon);
                    <item>
                     <widget class="QCheckBox" name="limit_2a">
                      <property name="enabled">
-                      <bool>false</bool>
+                      <bool>true</bool>
                      </property>
                      <property name="text">
                       <string/>
@@ -4136,7 +4136,7 @@ image: url(:/icon/cait_icon);
                    <item>
                     <widget class="QCheckBox" name="limit_2b">
                      <property name="enabled">
-                      <bool>false</bool>
+                      <bool>true</bool>
                      </property>
                      <property name="text">
                       <string/>
@@ -4146,7 +4146,7 @@ image: url(:/icon/cait_icon);
                    <item>
                     <widget class="QCheckBox" name="limit_3a">
                      <property name="enabled">
-                      <bool>false</bool>
+                      <bool>true</bool>
                      </property>
                      <property name="text">
                       <string/>
@@ -4156,7 +4156,7 @@ image: url(:/icon/cait_icon);
                    <item>
                     <widget class="QCheckBox" name="limit_3b">
                      <property name="enabled">
-                      <bool>false</bool>
+                      <bool>true</bool>
                      </property>
                      <property name="text">
                       <string/>
@@ -4166,7 +4166,7 @@ image: url(:/icon/cait_icon);
                    <item>
                     <widget class="QCheckBox" name="limit_4">
                      <property name="enabled">
-                      <bool>false</bool>
+                      <bool>true</bool>
                      </property>
                      <property name="text">
                       <string/>
@@ -4413,8 +4413,8 @@ image: url(:/icon/cait_icon);
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>423</width>
-             <height>430</height>
+             <width>413</width>
+             <height>423</height>
             </rect>
            </property>
            <attribute name="label">

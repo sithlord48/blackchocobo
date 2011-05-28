@@ -162,7 +162,7 @@ void MainWindow::on_actionOpen_Save_File_activated()
     tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme)"));
     if (!fileName.isEmpty()) loadFileFull(fileName);
 }
-
+/*~~~~~~~~~~~~~~~~~Load Full ~~~~~~~~~~~~~~~~~~*/
 void MainWindow::loadFileFull(const QString &fileName)
 {
     load=true;
@@ -175,7 +175,6 @@ void MainWindow::loadFileFull(const QString &fileName)
         return;
     }
     QByteArray ff7file;
-
     ff7file = file.readAll(); //put all data in temp raw file
     QByteArray temp; // create a temp to be used when needed
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~Set File Type Vars ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -282,8 +281,8 @@ void MainWindow::loadFileFull(const QString &fileName)
         ff7.SG_SLOT_SIZE     = FF7_DEX_SAVE_GAME_SLOT_SIZE;
         ff7.SG_SLOT_NUMBER   = FF7_DEX_SAVE_GAME_SLOT_NUMBER;
         ff7.SG_TYPE          = "DEX";
-        ff7.file_headerp     = ff7.file_header_dex;          //pointer to vgs file header
-        ff7.file_footerp     = ff7.file_footer_dex;          //pointer to vgs file footer
+        ff7.file_headerp     = ff7.file_header_dex;          //pointer to dex file header
+        ff7.file_footerp     = ff7.file_footer_dex;          //pointer to dex file footer
         ff7.savetype         = 7;
     }
     else
@@ -340,9 +339,11 @@ void MainWindow::loadFileFull(const QString &fileName)
 
         for(int i=1;i<14;i++){clearslot(i);}
     }
+
     else if (ff7.savetype ==4)//psv file
     {
         ff7.SG_Region_String[s] = QString(ff7file.mid(0x64,19));
+        for(int i=1;i<14;i++){clearslot(i);}
     }
 
     else if (ff7.savetype == 3 || ff7.savetype ==5 || ff7.savetype ==6||ff7.savetype==7)
@@ -362,11 +363,7 @@ void MainWindow::loadFileFull(const QString &fileName)
         SlotSelect slotselect;
         s=slotselect.exec();
     }
-    else
-    {
-        s=0;
-        for(int i=1;i<14;i++){clearslot(i);}
-    }
+    else{s=0;for(int i=1;i<14;i++){clearslot(i);}}
     this->setWindowTitle(tr("Black Chocobo - ") + fileName); //eslava this is for you :)
     filename = fileName;
     load=false;
@@ -377,8 +374,8 @@ void MainWindow::on_actionFrom_PSX_Slot_activated()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Select Final Fantasy 7 PSX Save"),(""),tr("Raw PSX FF7 SaveGame (*-S*)"));
-    if(fileName== ""){return;}
-    if (!fileName.isEmpty())
+    if(fileName.isEmpty()){return;}
+    else
     {
             QFile file(fileName);
             if(!file.open(QFile::ReadOnly))
@@ -410,57 +407,57 @@ void MainWindow::on_actionFrom_PSV_Slot_activated()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Select Final Fantasy 7 PSV Save"),(""),tr("PSX FF7 SaveGame (*.psv)"));
-    if (fileName == ""){return;}
-    if (!fileName.isEmpty())
+    if (fileName.isEmpty()){return;}
+    else
+    {
+        QFile file(fileName);
+        if(!file.open(QFile::ReadOnly))
         {
-            QFile file(fileName);
-            if(!file.open(QFile::ReadOnly))
-            {
-                QMessageBox::warning(this, tr("Black Chocobo"),
-                tr("Cannot read file %1:\n%2.")
-                .arg(fileName).arg(file.errorString()));
-                return;
-            }
-            QByteArray ff7file;
-            ff7file = file.readAll(); //put all data in temp raw file
-            QByteArray temp; // create a temp to be used when needed
-            int index = 0x284;
-            temp = ff7file.mid(index,0x10f4);
-            memcpy(&ff7.slot[s],temp,0x10f4);
-            if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
-               (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")))
-                                {ff7.SG_Region_String[s] = QString(ff7file.mid(0x64,19));}
-            else {ff7.SG_Region_String[s].clear();}
-        }//Parse slot data....
+            QMessageBox::warning(this, tr("Black Chocobo"),
+            tr("Cannot read file %1:\n%2.")
+            .arg(fileName).arg(file.errorString()));
+            return;
+        }
+        QByteArray ff7file;
+        ff7file = file.readAll(); //put all data in temp raw file
+        QByteArray temp; // create a temp to be used when needed
+        int index = 0x284;
+        temp = ff7file.mid(index,0x10f4);
+        memcpy(&ff7.slot[s],temp,0x10f4);
+        if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
+           (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")))
+           {ff7.SG_Region_String[s] = QString(ff7file.mid(0x64,19));}
+        else {ff7.SG_Region_String[s].clear();}
+    }//Parse slot data....
     guirefresh();
 }
+/*~~~~~~~~~~~~~~~~~IMPORT Char~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionImport_char_triggered()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Select FF7 Character Stat File"),settings.value("char_stat_folder").toString(),tr("FF7 Character Stat File(*.char)"));
-    if (fileName == ""){return;}
-    if (!fileName.isEmpty())
+    if (fileName.isEmpty()){return;}
+    else
+    {
+        QFile file(fileName);
+        if(!file.open(QFile::ReadOnly))
         {
-            QFile file(fileName);
-            if(!file.open(QFile::ReadOnly))
-            {
-                QMessageBox::warning(this, tr("Black Chocobo"),
-                tr("Cannot read file %1:\n%2.")
-                .arg(fileName).arg(file.errorString()));
-                return;
-            }
-            if(file.size() !=0x84)
-            {
-                QMessageBox::warning(this, tr("Black Chocobo"),
-                tr("%1:\n%2 is Not a FF7 Character Stat File.")
-                .arg(fileName).arg(file.errorString()));
-                return;
-
-            }
-            QByteArray ff7file;
-            ff7file = file.readAll();
-            memcpy(&ff7.slot[s].chars[curchar],ff7file,132);
+            QMessageBox::warning(this, tr("Black Chocobo"),
+            tr("Cannot read file %1:\n%2.")
+            .arg(fileName).arg(file.errorString()));
+            return;
         }
+        if(file.size() !=0x84)
+        {
+            QMessageBox::warning(this, tr("Black Chocobo"),
+            tr("%1:\n%2 is Not a FF7 Character Stat File.")
+            .arg(fileName).arg(file.errorString()));
+            return;
+        }
+        QByteArray ff7file;
+        ff7file = file.readAll();
+        memcpy(&ff7.slot[s].chars[curchar],ff7file,132);
+    }
     guirefresh();
 }
 
@@ -584,20 +581,20 @@ void MainWindow::saveFileFull(QString fileName)
 /*~~~~~~~~~~~~~~~New_Game~~~~~~~~~~~*/
 void MainWindow::on_actionNew_Game_triggered()
 {
-            QFile file(settings.value("default_save_file").toString());
-            if(!file.open(QFile::ReadOnly))
-            {
-                QMessageBox::warning(this, tr("Black Chocobo"),
-                tr("Cannot read file %1:\n%2 Be Sure its is a Raw PSX Save")
-                .arg(settings.value("default_save_file").toString()).arg(file.errorString()));
-                return;
-            }
-        QByteArray ff7file;
-        ff7file = file.readAll(); //put all data in temp raw file
-        QByteArray temp; // create a temp to be used when needed
-        int index = 0x200;
-        temp = ff7file.mid(index,0x10f4);
-        memcpy(&ff7.slot[s],temp,0x10f4);
+    QFile file(settings.value("default_save_file").toString());
+    if(!file.open(QFile::ReadOnly))
+    {
+         QMessageBox::warning(this, tr("Black Chocobo"),
+             tr("Cannot read file %1:\n%2 Be Sure its is a Raw PSX Save")
+            .arg(settings.value("default_save_file").toString()).arg(file.errorString()));
+         return;
+    }
+    QByteArray ff7file;
+    ff7file = file.readAll(); //put all data in temp raw file
+    QByteArray temp; // create a temp to be used when needed
+    int index = 0x200;
+    temp = ff7file.mid(index,0x10f4);
+    memcpy(&ff7.slot[s],temp,0x10f4);
     if(ff7.SG_Region_String[s].isEmpty()){ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01";}
     guirefresh();
 }
@@ -816,7 +813,6 @@ void MainWindow::on_actionExport_MC_triggered()
     tr("FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)"));
 
         if(fileName.isEmpty()){return;}
-    if(ff7.SG_TYPE =="PSX") {for(int i=1;i<15;i++){clearslot(i);}}
     if(ff7.SG_TYPE != "MC")
     {
         ui->combo_control->setCurrentIndex(0);
@@ -844,9 +840,7 @@ void MainWindow::on_actionExport_VGS_triggered()
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 VGS SaveGame"), settings.value("save_emu_path").toString(),
     tr("FF7 MC SaveGame(*.vgs *.mem)"));
-
     if(fileName.isEmpty()){return;}
-    if(ff7.SG_TYPE =="PSX") {for(int i=1;i<15;i++){clearslot(i);}}
     if(ff7.SG_TYPE != "VGS")
     {
         ui->combo_control->setCurrentIndex(0);
@@ -879,11 +873,8 @@ void MainWindow::on_actionExport_DEX_triggered()
 {
 
     QString fileName = QFileDialog::getSaveFileName(this,
-    tr("Save Final Fantasy 7 Dex-Drive SaveGame"), settings.value("save_emu_path").toString(),
-    tr("FF7 MC SaveGame(*.gme)"));
-
+        tr("Save Final Fantasy 7 Dex-Drive SaveGame"), settings.value("save_emu_path").toString(),tr("FF7 MC SaveGame(*.gme)"));
     if(fileName.isEmpty()){return;}
-    if(ff7.SG_TYPE =="PSX") {for(int i=1;i<15;i++){clearslot(i);}}
     if(ff7.SG_TYPE != "DEX")
     {
         ui->combo_control->setCurrentIndex(0);
@@ -958,6 +949,29 @@ void fix_sum(const QString &fileName)
 /*~~~~~~~~~~~~ END CHECKSUM VEGETA~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*~~~~~~~~~~~~Simple Menu Stuff~~~~~~~~~~~~~~~~*/
+void MainWindow::on_actionSlot_01_activated(){s=0; guirefresh();}
+void MainWindow::on_actionSlot_02_activated(){s=1; guirefresh();}
+void MainWindow::on_actionSlot_03_activated(){s=2; guirefresh();}
+void MainWindow::on_actionSlot_04_activated(){s=3; guirefresh();}
+void MainWindow::on_actionSlot_05_activated(){s=4; guirefresh();}
+void MainWindow::on_actionSlot_06_activated(){s=5; guirefresh();}
+void MainWindow::on_actionSlot_07_activated(){s=6; guirefresh();}
+void MainWindow::on_actionSlot_08_activated(){s=7; guirefresh();}
+void MainWindow::on_actionSlot_09_activated(){s=8; guirefresh();}
+void MainWindow::on_actionSlot_10_activated(){s=9; guirefresh();}
+void MainWindow::on_actionSlot_11_activated(){s=10; guirefresh();}
+void MainWindow::on_actionSlot_12_activated(){s=11; guirefresh();}
+void MainWindow::on_actionSlot_13_activated(){s=12; guirefresh();}
+void MainWindow::on_actionSlot_14_activated(){s=13; guirefresh();}
+void MainWindow::on_actionSlot_15_activated(){s=14; guirefresh();}
+void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect; s=slotselect.exec(); guirefresh();}
+void MainWindow::on_actionClear_Slot_activated(){clearslot(s);  guirefresh();}
+void MainWindow::on_actionPrevious_Slot_activated(){if (s > 0) {s--; guirefresh();}}
+void MainWindow::on_actionNext_Slot_activated(){if (s<14){s++; guirefresh();}}
+void MainWindow::on_actionAbout_activated(){about adialog; adialog.exec();}
+void MainWindow::on_actionAbout_Qt_activated(){qApp->aboutQt();}
+
 /*~~~~~~~~~~~~LANGUAGE ACTIONS~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Lang_en_triggered()
 {
@@ -992,11 +1006,7 @@ void MainWindow::on_action_Lang_fr_triggered()
 }
 /*~~~~~~~~~~~END LANGUAGE ACTIONS~~~~~~~~~~*/
 
-void MainWindow::on_actionCopy_Slot_activated()
-{
-    memcpy(&bufferslot,&ff7.slot[s],0x10f4);
-    buffer_region = ff7.SG_Region_String[s];
-}
+void MainWindow::on_actionCopy_Slot_activated(){memcpy(&bufferslot,&ff7.slot[s],0x10f4); buffer_region = ff7.SG_Region_String[s];}
 
 void MainWindow::on_actionPaste_Slot_activated()
 {
@@ -1023,26 +1033,6 @@ void MainWindow::on_actionPaste_Slot_activated()
     }
     guirefresh();
 }
-
-void MainWindow::on_actionSlot_01_activated(){s=0; guirefresh();}
-void MainWindow::on_actionSlot_02_activated(){s=1; guirefresh();}
-void MainWindow::on_actionSlot_03_activated(){s=2; guirefresh();}
-void MainWindow::on_actionSlot_04_activated(){s=3; guirefresh();}
-void MainWindow::on_actionSlot_05_activated(){s=4; guirefresh();}
-void MainWindow::on_actionSlot_06_activated(){s=5; guirefresh();}
-void MainWindow::on_actionSlot_07_activated(){s=6; guirefresh();}
-void MainWindow::on_actionSlot_08_activated(){s=7; guirefresh();}
-void MainWindow::on_actionSlot_09_activated(){s=8; guirefresh();}
-void MainWindow::on_actionSlot_10_activated(){s=9; guirefresh();}
-void MainWindow::on_actionSlot_11_activated(){s=10; guirefresh();}
-void MainWindow::on_actionSlot_12_activated(){s=11; guirefresh();}
-void MainWindow::on_actionSlot_13_activated(){s=12; guirefresh();}
-void MainWindow::on_actionSlot_14_activated(){s=13; guirefresh();}
-void MainWindow::on_actionSlot_15_activated(){s=14; guirefresh();}
-void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect; s=slotselect.exec(); guirefresh();}
-void MainWindow::on_actionClear_Slot_activated(){clearslot(s);  guirefresh();}
-void MainWindow::on_actionPrevious_Slot_activated(){if (s > 0) {s--; guirefresh();}}
-void MainWindow::on_actionNext_Slot_activated(){if (s<14){s++; guirefresh();}}
 
 void MainWindow::on_action_show_test_data_toggled()
 {
@@ -1099,293 +1089,272 @@ void MainWindow::on_action_show_test_data_toggled()
 }
 /*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_USA_triggered()
-{
-    if(!load)
+{if(!load){
+    if(!ui->action_Region_USA->isChecked())
     {
-        if(!ui->action_Region_USA->isChecked())
-        {
-            ff7.SG_Region_String[s].clear();
-            ui->lbl_sg_region->clear();
-            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
-        }
-        else
-        {
-            switch(s)
-            {
-                case 0:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01"; break;
-                case 1:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S02"; break;
-                case 2:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S03"; break;
-                case 3:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S04"; break;
-                case 4:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S05"; break;
-                case 5:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S06"; break;
-                case 6:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S07"; break;
-                case 7:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S08"; break;
-                case 8:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S09"; break;
-                case 9:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S10"; break;
-                case 10:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S11"; break;
-                case 11:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S12"; break;
-                case 12:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S13"; break;
-                case 13:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S14"; break;
-                case 14:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S15"; break;
-            }
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
-            ui->action_Region_JPN->setChecked(false);
-            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->action_Region_JPN_International->setChecked(false);
-            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->action_Region_USA->setIcon(QIcon(":/icon/us_sel"));
-            ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
-        }
+        ff7.SG_Region_String[s].clear();
+        ui->lbl_sg_region->clear();
+        ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
     }
-}
+    else
+    {
+        switch(s)
+        {
+            case 0:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01"; break;
+            case 1:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S02"; break;
+            case 2:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S03"; break;
+            case 3:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S04"; break;
+            case 4:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S05"; break;
+            case 5:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S06"; break;
+            case 6:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S07"; break;
+            case 7:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S08"; break;
+            case 8:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S09"; break;
+            case 9:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S10"; break;
+            case 10:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S11"; break;
+            case 11:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S12"; break;
+            case 12:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S13"; break;
+            case 13:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S14"; break;
+            case 14:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S15"; break;
+        }
+        ui->action_Region_PAL_Generic->setChecked(false);
+        ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+        ui->action_Region_PAL_German->setChecked(false);
+        ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+        ui->action_Region_PAL_Spanish->setChecked(false);
+        ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
+        ui->action_Region_JPN->setChecked(false);
+        ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
+        ui->action_Region_JPN_International->setChecked(false);
+        ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
+        ui->action_Region_USA->setIcon(QIcon(":/icon/us_sel"));
+        ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
+        ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
+    }
+}}
 /*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_PAL_Generic_triggered()
-{
-    if(!load)
+{if(!load){
+    if(!ui->action_Region_PAL_Generic->isChecked())
     {
-        if(!ui->action_Region_PAL_Generic->isChecked())
-        {
-            ff7.SG_Region_String[s].clear();
-            ui->lbl_sg_region->clear();
-            ui->action_Region_USA->setIcon(QIcon(":/icon/eu_unsel"));
-        }
-        else
-        {
-            switch(s)
-            {
-                case 0:ff7.SG_Region_String[s] = "BESCES-00867FF7-S01"; break;
-                case 1:ff7.SG_Region_String[s] = "BESCES-00867FF7-S02"; break;
-                case 2:ff7.SG_Region_String[s] = "BESCES-00867FF7-S03"; break;
-                case 3:ff7.SG_Region_String[s] = "BESCES-00867FF7-S04"; break;
-                case 4:ff7.SG_Region_String[s] = "BESCES-00867FF7-S05"; break;
-                case 5:ff7.SG_Region_String[s] = "BESCES-00867FF7-S06"; break;
-                case 6:ff7.SG_Region_String[s] = "BESCES-00867FF7-S07"; break;
-                case 7:ff7.SG_Region_String[s] = "BESCES-00867FF7-S08"; break;
-                case 8:ff7.SG_Region_String[s] = "BESCES-00867FF7-S09"; break;
-                case 9:ff7.SG_Region_String[s] = "BESCES-00867FF7-S10"; break;
-                case 10:ff7.SG_Region_String[s] = "BESCES-00867FF7-S11"; break;
-                case 11:ff7.SG_Region_String[s] = "BESCES-00867FF7-S12"; break;
-                case 12:ff7.SG_Region_String[s] = "BESCES-00867FF7-S13"; break;
-                case 13:ff7.SG_Region_String[s] = "BESCES-00867FF7-S14"; break;
-                case 14:ff7.SG_Region_String[s] = "BESCES-00867FF7-S15"; break;
-            }
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
-            ui->action_Region_JPN->setChecked(false);
-            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->action_Region_JPN_International->setChecked(false);
-            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_sel"));
-            ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
-        }
+        ff7.SG_Region_String[s].clear();
+        ui->lbl_sg_region->clear();
+        ui->action_Region_USA->setIcon(QIcon(":/icon/eu_unsel"));
     }
-}
+    else
+    {
+        switch(s)
+        {
+            case 0:ff7.SG_Region_String[s] = "BESCES-00867FF7-S01"; break;
+            case 1:ff7.SG_Region_String[s] = "BESCES-00867FF7-S02"; break;
+            case 2:ff7.SG_Region_String[s] = "BESCES-00867FF7-S03"; break;
+            case 3:ff7.SG_Region_String[s] = "BESCES-00867FF7-S04"; break;
+            case 4:ff7.SG_Region_String[s] = "BESCES-00867FF7-S05"; break;
+            case 5:ff7.SG_Region_String[s] = "BESCES-00867FF7-S06"; break;
+            case 6:ff7.SG_Region_String[s] = "BESCES-00867FF7-S07"; break;
+            case 7:ff7.SG_Region_String[s] = "BESCES-00867FF7-S08"; break;
+            case 8:ff7.SG_Region_String[s] = "BESCES-00867FF7-S09"; break;
+            case 9:ff7.SG_Region_String[s] = "BESCES-00867FF7-S10"; break;
+            case 10:ff7.SG_Region_String[s] = "BESCES-00867FF7-S11"; break;
+            case 11:ff7.SG_Region_String[s] = "BESCES-00867FF7-S12"; break;
+            case 12:ff7.SG_Region_String[s] = "BESCES-00867FF7-S13"; break;
+            case 13:ff7.SG_Region_String[s] = "BESCES-00867FF7-S14"; break;
+            case 14:ff7.SG_Region_String[s] = "BESCES-00867FF7-S15"; break;
+        }
+        ui->action_Region_USA->setChecked(false);
+        ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
+        ui->action_Region_PAL_German->setChecked(false);
+        ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+        ui->action_Region_PAL_Spanish->setChecked(false);
+        ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
+        ui->action_Region_JPN->setChecked(false);
+        ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
+        ui->action_Region_JPN_International->setChecked(false);
+        ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
+        ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_sel"));
+        ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
+        ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
+    }
+}}
 /*~~~~~~~~~~~~~SET PAL_German MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_PAL_German_triggered()
-{
-    if(!load)
+{if(!load){
+    if(!ui->action_Region_PAL_German->isChecked())
     {
-        if(!ui->action_Region_PAL_German->isChecked())
-        {
-            ff7.SG_Region_String[s].clear();
-            ui->lbl_sg_region->clear();
-            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
-        }
-        else
-        {
-            switch(s)
-            {
-                case 0:ff7.SG_Region_String[s] = "BESCES-00869FF7-S01"; break;
-                case 1:ff7.SG_Region_String[s] = "BESCES-00869FF7-S02"; break;
-                case 2:ff7.SG_Region_String[s] = "BESCES-00869FF7-S03"; break;
-                case 3:ff7.SG_Region_String[s] = "BESCES-00869FF7-S04"; break;
-                case 4:ff7.SG_Region_String[s] = "BESCES-00869FF7-S05"; break;
-                case 5:ff7.SG_Region_String[s] = "BESCES-00869FF7-S06"; break;
-                case 6:ff7.SG_Region_String[s] = "BESCES-00869FF7-S07"; break;
-                case 7:ff7.SG_Region_String[s] = "BESCES-00869FF7-S08"; break;
-                case 8:ff7.SG_Region_String[s] = "BESCES-00869FF7-S09"; break;
-                case 9:ff7.SG_Region_String[s] = "BESCES-00869FF7-S10"; break;
-                case 10:ff7.SG_Region_String[s] = "BESCES-00869FF7-S11"; break;
-                case 11:ff7.SG_Region_String[s] = "BESCES-00869FF7-S12"; break;
-                case 12:ff7.SG_Region_String[s] = "BESCES-00869FF7-S13"; break;
-                case 13:ff7.SG_Region_String[s] = "BESCES-00869FF7-S14"; break;
-                case 14:ff7.SG_Region_String[s] = "BESCES-00869FF7-S15"; break;
-            }
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
-            ui->action_Region_JPN->setChecked(false);
-            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->action_Region_JPN_International->setChecked(false);
-            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_sel"));
-            ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
-        }
+        ff7.SG_Region_String[s].clear();
+        ui->lbl_sg_region->clear();
+        ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
     }
-}
+    else
+    {
+        switch(s)
+        {
+            case 0:ff7.SG_Region_String[s] = "BESCES-00869FF7-S01"; break;
+            case 1:ff7.SG_Region_String[s] = "BESCES-00869FF7-S02"; break;
+            case 2:ff7.SG_Region_String[s] = "BESCES-00869FF7-S03"; break;
+            case 3:ff7.SG_Region_String[s] = "BESCES-00869FF7-S04"; break;
+            case 4:ff7.SG_Region_String[s] = "BESCES-00869FF7-S05"; break;
+            case 5:ff7.SG_Region_String[s] = "BESCES-00869FF7-S06"; break;
+            case 6:ff7.SG_Region_String[s] = "BESCES-00869FF7-S07"; break;
+            case 7:ff7.SG_Region_String[s] = "BESCES-00869FF7-S08"; break;
+            case 8:ff7.SG_Region_String[s] = "BESCES-00869FF7-S09"; break;
+            case 9:ff7.SG_Region_String[s] = "BESCES-00869FF7-S10"; break;
+            case 10:ff7.SG_Region_String[s] = "BESCES-00869FF7-S11"; break;
+            case 11:ff7.SG_Region_String[s] = "BESCES-00869FF7-S12"; break;
+            case 12:ff7.SG_Region_String[s] = "BESCES-00869FF7-S13"; break;
+            case 13:ff7.SG_Region_String[s] = "BESCES-00869FF7-S14"; break;
+            case 14:ff7.SG_Region_String[s] = "BESCES-00869FF7-S15"; break;
+        }
+        ui->action_Region_USA->setChecked(false);
+        ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
+        ui->action_Region_PAL_Generic->setChecked(false);
+        ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+        ui->action_Region_PAL_Spanish->setChecked(false);
+        ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
+        ui->action_Region_JPN->setChecked(false);
+        ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
+        ui->action_Region_JPN_International->setChecked(false);
+        ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
+        ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_sel"));
+        ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
+        ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
+    }
+}}
 /*~~~~~~~~~~~~~SET PAL_Spanish MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_PAL_Spanish_triggered()
-{
-    if(!load)
+{if(!load){
+    if(!ui->action_Region_PAL_Spanish->isChecked())
     {
-        if(!ui->action_Region_PAL_Spanish->isChecked())
-        {
-            ff7.SG_Region_String[s].clear();
-            ui->lbl_sg_region->clear();
-            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
-        }
-        else
-        {
-            switch(s)
-            {
-                case 0:ff7.SG_Region_String[s] = "BESCES-00900FF7-S01"; break;
-                case 1:ff7.SG_Region_String[s] = "BESCES-00900FF7-S02"; break;
-                case 2:ff7.SG_Region_String[s] = "BESCES-00900FF7-S03"; break;
-                case 3:ff7.SG_Region_String[s] = "BESCES-00900FF7-S04"; break;
-                case 4:ff7.SG_Region_String[s] = "BESCES-00900FF7-S05"; break;
-                case 5:ff7.SG_Region_String[s] = "BESCES-00900FF7-S06"; break;
-                case 6:ff7.SG_Region_String[s] = "BESCES-00900FF7-S07"; break;
-                case 7:ff7.SG_Region_String[s] = "BESCES-00900FF7-S08"; break;
-                case 8:ff7.SG_Region_String[s] = "BESCES-00900FF7-S09"; break;
-                case 9:ff7.SG_Region_String[s] = "BESCES-00900FF7-S10"; break;
-                case 10:ff7.SG_Region_String[s] = "BESCES-00900FF7-S11"; break;
-                case 11:ff7.SG_Region_String[s] = "BESCES-00900FF7-S12"; break;
-                case 12:ff7.SG_Region_String[s] = "BESCES-00900FF7-S13"; break;
-                case 13:ff7.SG_Region_String[s] = "BESCES-00900FF7-S14"; break;
-                case 14:ff7.SG_Region_String[s] = "BESCES-00900FF7-S15"; break;
-            }
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
-            ui->action_Region_JPN->setChecked(false);
-            ui->action_Region_JPN_International->setChecked(false);
-            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_sel"));
-            ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
-
-        }
+        ff7.SG_Region_String[s].clear();
+        ui->lbl_sg_region->clear();
+        ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
     }
-}
+    else
+    {
+        switch(s)
+        {
+            case 0:ff7.SG_Region_String[s] = "BESCES-00900FF7-S01"; break;
+            case 1:ff7.SG_Region_String[s] = "BESCES-00900FF7-S02"; break;
+            case 2:ff7.SG_Region_String[s] = "BESCES-00900FF7-S03"; break;
+            case 3:ff7.SG_Region_String[s] = "BESCES-00900FF7-S04"; break;
+            case 4:ff7.SG_Region_String[s] = "BESCES-00900FF7-S05"; break;
+            case 5:ff7.SG_Region_String[s] = "BESCES-00900FF7-S06"; break;
+            case 6:ff7.SG_Region_String[s] = "BESCES-00900FF7-S07"; break;
+            case 7:ff7.SG_Region_String[s] = "BESCES-00900FF7-S08"; break;
+            case 8:ff7.SG_Region_String[s] = "BESCES-00900FF7-S09"; break;
+            case 9:ff7.SG_Region_String[s] = "BESCES-00900FF7-S10"; break;
+            case 10:ff7.SG_Region_String[s] = "BESCES-00900FF7-S11"; break;
+            case 11:ff7.SG_Region_String[s] = "BESCES-00900FF7-S12"; break;
+            case 12:ff7.SG_Region_String[s] = "BESCES-00900FF7-S13"; break;
+            case 13:ff7.SG_Region_String[s] = "BESCES-00900FF7-S14"; break;
+            case 14:ff7.SG_Region_String[s] = "BESCES-00900FF7-S15"; break;
+        }
+        ui->action_Region_USA->setChecked(false);
+        ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
+        ui->action_Region_PAL_Generic->setChecked(false);
+        ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+        ui->action_Region_PAL_German->setChecked(false);
+        ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+        ui->action_Region_JPN->setChecked(false);
+        ui->action_Region_JPN_International->setChecked(false);
+        ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
+        ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
+        ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_sel"));
+        ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
+        ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
+    }
+}}
 /*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_JPN_triggered()
-{
-    if(!load)
+{if(!load){
+    if(!ui->action_Region_JPN->isChecked())
     {
-        if(!ui->action_Region_JPN->isChecked())
-        {
-            ff7.SG_Region_String[s].clear();
-            ui->lbl_sg_region->clear();
-            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
-
-        }
-        else
-        {
-            switch(s)
-            {
-                case 0:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01"; break;
-                case 1:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S02"; break;
-                case 2:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S03"; break;
-                case 3:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S04"; break;
-                case 4:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S05"; break;
-                case 5:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S06"; break;
-                case 6:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S07"; break;
-                case 7:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S08"; break;
-                case 8:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S09"; break;
-                case 9:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S10"; break;
-                case 10:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S11"; break;
-                case 11:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S12"; break;
-                case 12:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S13"; break;
-                case 13:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S14"; break;
-                case 14:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S15"; break;
-            }
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
-            ui->action_Region_JPN_International->setChecked(false);
-            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_sel"));
-            ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
-        }
+        ff7.SG_Region_String[s].clear();
+        ui->lbl_sg_region->clear();
+        ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
     }
-}
+    else
+    {
+        switch(s)
+        {
+            case 0:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01"; break;
+            case 1:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S02"; break;
+            case 2:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S03"; break;
+            case 3:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S04"; break;
+            case 4:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S05"; break;
+            case 5:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S06"; break;
+            case 6:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S07"; break;
+            case 7:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S08"; break;
+            case 8:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S09"; break;
+            case 9:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S10"; break;
+            case 10:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S11"; break;
+            case 11:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S12"; break;
+            case 12:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S13"; break;
+            case 13:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S14"; break;
+            case 14:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S15"; break;
+        }
+        ui->action_Region_USA->setChecked(false);
+        ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
+        ui->action_Region_PAL_Generic->setChecked(false);
+        ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+        ui->action_Region_PAL_German->setChecked(false);
+        ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+        ui->action_Region_PAL_Spanish->setChecked(false);
+        ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
+        ui->action_Region_JPN_International->setChecked(false);
+        ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
+        ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_sel"));
+        ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
+        ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
+    }
+}}
 /*~~~~~~~~~~~~~SET JPN_International MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_JPN_International_triggered()
-{
-    if(!load)
+{if(!load){
+    if(!ui->action_Region_JPN_International->isChecked())
     {
-        if(!ui->action_Region_JPN_International->isChecked())
-        {
-            ff7.SG_Region_String[s].clear();
-            ui->lbl_sg_region->clear();
-            ui->action_Region_JPN_International->setIcon(QIcon(":icon/jp_unsel"));
-        }
-        else
-        {
-            switch(s)
-            {
-                case 0:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01"; break;
-                case 1:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S02"; break;
-                case 2:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S03"; break;
-                case 3:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S04"; break;
-                case 4:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S05"; break;
-                case 5:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S06"; break;
-                case 6:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S07"; break;
-                case 7:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S08"; break;
-                case 8:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S09"; break;
-                case 9:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S10"; break;
-                case 10:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S11"; break;
-                case 11:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S12"; break;
-                case 12:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S13"; break;
-                case 13:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S14"; break;
-                case 14:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S15"; break;
-            }
-
-            ui->action_Region_USA->setChecked(false);
-            ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
-            ui->action_Region_PAL_Generic->setChecked(false);
-            ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
-            ui->action_Region_PAL_German->setChecked(false);
-            ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
-            ui->action_Region_PAL_Spanish->setChecked(false);
-            ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
-            ui->action_Region_JPN->setChecked(false);
-            ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
-            ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_sel"));
-            ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
-            ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
-        }
+        ff7.SG_Region_String[s].clear();
+        ui->lbl_sg_region->clear();
+        ui->action_Region_JPN_International->setIcon(QIcon(":icon/jp_unsel"));
     }
-}
+    else
+    {
+        switch(s)
+        {
+            case 0:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01"; break;
+            case 1:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S02"; break;
+            case 2:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S03"; break;
+            case 3:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S04"; break;
+            case 4:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S05"; break;
+            case 5:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S06"; break;
+            case 6:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S07"; break;
+            case 7:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S08"; break;
+            case 8:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S09"; break;
+            case 9:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S10"; break;
+            case 10:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S11"; break;
+            case 11:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S12"; break;
+            case 12:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S13"; break;
+            case 13:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S14"; break;
+            case 14:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S15"; break;
+        }
+        ui->action_Region_USA->setChecked(false);
+        ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
+        ui->action_Region_PAL_Generic->setChecked(false);
+        ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+        ui->action_Region_PAL_German->setChecked(false);
+        ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+        ui->action_Region_PAL_Spanish->setChecked(false);
+        ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
+        ui->action_Region_JPN->setChecked(false);
+        ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
+        ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_sel"));
+        ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
+        ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
+    }
+}}
+
 void MainWindow::on_actionEdit_Paths_triggered()
 {
     Options odialog; odialog.exec();
-
     QString style="QWidget#centralWidget{background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
     style.append(settings.value("color1_r").toString());
     style.append(",");
@@ -1407,16 +1376,6 @@ void MainWindow::on_actionEdit_Paths_triggered()
     style.append(", 255));}");
     ui->centralWidget->setStyleSheet(style);
 }
-
-void MainWindow::on_actionAbout_activated()
-{
-   about adialog; adialog.exec();
-}
-
-void MainWindow::on_actionAbout_Qt_activated()
-{
-    qApp->aboutQt();
-}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GUI FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~Char Update~~~~~~~~~~*/
@@ -1432,6 +1391,7 @@ void MainWindow::charupdate(void)
     ui->cb_sadness->setChecked(0);
     ui->cb_fury->setChecked(0);
     ui->cb_front->setChecked(0);
+    ui->combo_weapon->clear();
 
     if(curchar== 6)
     {
@@ -1449,12 +1409,12 @@ void MainWindow::charupdate(void)
         else{ui->cb_id->setChecked(0);}
     }
 
-
     for (int n=0;n<12;n++)
     {
         if(chPC[ff7.slot[s].chars[curchar].name[n]] =='\0'){break;}
         else{this->ui->line_name->setText( this->ui->line_name->text() + chPC[ff7.slot[s].chars[curchar].name[n]]);}
     }
+
     ui->combo_id->setCurrentIndex(ff7.slot[s].chars[curchar].id);
     ui->sb_exp->setValue(ff7.slot[s].chars[curchar].exp);
     ui->sb_next->setValue(ff7.slot[s].chars[curchar].expNext);
@@ -1480,43 +1440,6 @@ void MainWindow::charupdate(void)
     if(ff7.slot[s].chars[curchar].flags[0] == 16){ui->cb_sadness->setChecked(1);}
     if(ff7.slot[s].chars[curchar].flags[0] == 32){ui->cb_fury->setChecked(1);}
     if(ff7.slot[s].chars[curchar].flags[1] == 255){ui->cb_front->setChecked(1);}
-    ui->combo_armor->setCurrentIndex(ff7.slot[s].chars[curchar].armor);
-    ui->combo_acc->setCurrentIndex(ff7.slot[s].chars[curchar].accessory);
-    ui->combo_weapon->clear();
-    if(ff7.slot[s].chars[curchar].materias[8].id != 0xFF){ui->a_m_s1->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[8].id].image));}else{ui->a_m_s1->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[9].id != 0xFF){ui->a_m_s2->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[9].id].image));}else{ui->a_m_s2->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[10].id != 0xFF){ui->a_m_s3->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[10].id].image));}else{ui->a_m_s3->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[11].id != 0xFF){ui->a_m_s4->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[11].id].image));}else{ui->a_m_s4->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[12].id != 0xFF){ui->a_m_s5->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[12].id].image));}else{ui->a_m_s5->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[13].id != 0xFF){ui->a_m_s6->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[13].id].image));}else{ui->a_m_s6->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[14].id != 0xFF){ui->a_m_s7->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[14].id].image));}else{ui->a_m_s7->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[15].id != 0xFF){ui->a_m_s8->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[15].id].image));}else{ui->a_m_s8->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[0].id != 0xFF){ui->w_m_s1->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[0].id].image));}else{ui->w_m_s1->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[1].id != 0xFF){ui->w_m_s2->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[1].id].image));}else{ui->w_m_s2->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[2].id != 0xFF){ui->w_m_s3->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[2].id].image));}else{ui->w_m_s3->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[3].id != 0xFF){ui->w_m_s4->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[3].id].image));}else{ui->w_m_s4->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[4].id != 0xFF){ui->w_m_s5->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[4].id].image));}else{ui->w_m_s5->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[5].id != 0xFF){ui->w_m_s6->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[5].id].image));}else{ui->w_m_s6->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[6].id != 0xFF){ui->w_m_s7->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[6].id].image));}else{ui->w_m_s7->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[7].id != 0xFF){ui->w_m_s8->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[7].id].image));}else{ui->w_m_s8->setIcon(QIcon(QString("")));}
-    if(ff7.slot[s].chars[curchar].materias[8].id != 0xFF){ui->a_m_s1->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[8].id));}else{ui->a_m_s1->setToolTip(QString(tr("Empty")));}
-    if(ff7.slot[s].chars[curchar].materias[9].id != 0xFF){ui->a_m_s2->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[9].id));}else{ui->a_m_s2->setToolTip(QString(tr("Empty")));}
-    if(ff7.slot[s].chars[curchar].materias[10].id != 0xFF){ui->a_m_s3->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[10].id));}else{ui->a_m_s3->setToolTip(QString(tr("Empty")));}
-    if(ff7.slot[s].chars[curchar].materias[11].id != 0xFF){ui->a_m_s4->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[11].id));}else{ui->a_m_s4->setToolTip(QString(tr("Empty")));}
-    if(ff7.slot[s].chars[curchar].materias[12].id != 0xFF){ui->a_m_s5->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[12].id));}else{ui->a_m_s5->setToolTip(QString(tr("Empty")));}
-    if(ff7.slot[s].chars[curchar].materias[13].id != 0xFF){ui->a_m_s6->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[13].id));}else{ui->a_m_s6->setToolTip(QString(tr("Empty")));}
-    if(ff7.slot[s].chars[curchar].materias[14].id != 0xFF){ui->a_m_s7->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[14].id));}else{ui->a_m_s7->setToolTip(QString(tr("Empty")));}
-    if(ff7.slot[s].chars[curchar].materias[15].id != 0xFF){ui->a_m_s8->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[15].id));}else{ui->a_m_s8->setToolTip(QString(tr("Empty")));}
-    if(ff7.slot[s].chars[curchar].materias[0].id != 0xFF){ui->w_m_s1->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[0].id));}else{ui->w_m_s1->setToolTip(QString(tr("Empty")));}
-    if(ff7.slot[s].chars[curchar].materias[1].id != 0xFF){ui->w_m_s2->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[1].id));}else{ui->w_m_s2->setToolTip(QString(tr("Empty")));}
-    if(ff7.slot[s].chars[curchar].materias[2].id != 0xFF){ui->w_m_s3->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[2].id));}else{ui->w_m_s3->setToolTip(QString(tr("Empty")));}
-    if(ff7.slot[s].chars[curchar].materias[3].id != 0xFF){ui->w_m_s4->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[3].id));}else{ui->w_m_s4->setToolTip(QString(tr("Empty")));}
-    if(ff7.slot[s].chars[curchar].materias[4].id != 0xFF){ui->w_m_s5->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[4].id));}else{ui->w_m_s5->setToolTip(QString(tr("Empty")));}
-    if(ff7.slot[s].chars[curchar].materias[5].id != 0xFF){ui->w_m_s6->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[5].id));}else{ui->w_m_s6->setToolTip(QString(tr("Empty")));}
-    if(ff7.slot[s].chars[curchar].materias[6].id != 0xFF){ui->w_m_s7->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[6].id));}else{ui->w_m_s7->setToolTip(QString(tr("Empty")));}
-    if(ff7.slot[s].chars[curchar].materias[7].id != 0xFF){ui->w_m_s8->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[7].id));}else{ui->w_m_s8->setToolTip(QString(tr("Empty")));}
-    setarmorslots();
-    setweaponslots();
     ui->sb_strbonus->setValue(ff7.slot[s].chars[curchar].strength_bonus);
     ui->sb_vitbonus->setValue(ff7.slot[s].chars[curchar].vitality_bonus);
     ui->sb_magbonus->setValue(ff7.slot[s].chars[curchar].magic_bonus);
@@ -1528,25 +1451,39 @@ void MainWindow::charupdate(void)
     ui->lcd_0x35->display(ff7.slot[s].chars[curchar].z_4[1]);
     ui->lcd_0x36->display(ff7.slot[s].chars[curchar].z_4[2]);
     ui->lcd_0x37->display(ff7.slot[s].chars[curchar].z_4[3]);
-    if(ff7.slot[s].chars[curchar].id !=10 && ff7.slot[s].chars[curchar].id !=7 && ff7.slot[s].chars[curchar].id !=6)
+    //Set up Limit Boxes Clear and hide all
+    ui->limit_1a->setChecked(0);    ui->limit_1a->setVisible(0);
+    ui->limit_1b->setChecked(0);    ui->limit_1b->setVisible(0);
+    ui->limit_2a->setChecked(0);    ui->limit_2a->setVisible(0);
+    ui->limit_2b->setChecked(0);    ui->limit_2b->setVisible(0);
+    ui->limit_3a->setChecked(0);    ui->limit_3a->setVisible(0);
+    ui->limit_3b->setChecked(0);    ui->limit_3b->setVisible(0);
+    ui->limit_4->setChecked(0);     ui->limit_4->setVisible(0);
+    //set Visible based on char's limits and check the boxes
+    switch(ff7.slot[s].chars[curchar].id)
     {
-        //enable boxes for limits
-        ui->limit_1a->setEnabled(1);
-        ui->limit_1b->setEnabled(1);
-        ui->limit_2a->setEnabled(1);
-        ui->limit_2b->setEnabled(1);
-        ui->limit_3a->setEnabled(1);
-        ui->limit_3b->setEnabled(1);
-        ui->limit_4->setEnabled(1);
-        //clear cheked on all boxes
-        ui->limit_1a->setChecked(0);
-        ui->limit_1b->setChecked(0);
-        ui->limit_2a->setChecked(0);
-        ui->limit_2b->setChecked(0);
-        ui->limit_3a->setChecked(0);
-        ui->limit_3b->setChecked(0);
-        ui->limit_4->setChecked(0);
-        //show enabled boxes
+    case 6://Cait Sith Has 2 Limits
+        ui->limit_1a->setVisible(1);
+        ui->limit_2a->setVisible(1);
+        //set learned limits
+        if (ff7.slot[s].chars[curchar].limits & (1<<0)) ui->limit_1a->setChecked(1);
+        if (ff7.slot[s].chars[curchar].limits & (1<<3)) ui->limit_2a->setChecked(1);
+        break;
+    case 7://Vincent Has 4 Limits
+        ui->limit_1a->setVisible(1);
+        ui->limit_2a->setVisible(1);
+        ui->limit_3a->setVisible(1);
+        ui->limit_4->setVisible(1);
+        //check learned limits
+        if (ff7.slot[s].chars[curchar].limits & (1<<0)) ui->limit_1a->setChecked(1);
+        if (ff7.slot[s].chars[curchar].limits & (1<<3)) ui->limit_2a->setChecked(1);
+        if (ff7.slot[s].chars[curchar].limits & (1<<6)) ui->limit_3a->setChecked(1);
+        if (ff7.slot[s].chars[curchar].limits & (1<<9)) ui->limit_4->setChecked(1);
+        break;
+
+    case 10:break;//Sephiroth Has no limits
+
+    default://Normal Chars Have 7 limits
         ui->limit_1a->setVisible(1);
         ui->limit_1b->setVisible(1);
         ui->limit_2a->setVisible(1);
@@ -1555,88 +1492,16 @@ void MainWindow::charupdate(void)
         ui->limit_3b->setVisible(1);
         ui->limit_4->setVisible(1);
         //check off learned limits
-        int n = ff7.slot[s].chars[curchar].limits;
-        if (n & (1<<0)) ui->limit_1a->setChecked(1);
-        if (n & (1<<1)) ui->limit_1b->setChecked(1);
-        if (n & (1<<3)) ui->limit_2a->setChecked(1);
-        if (n & (1<<4)) ui->limit_2b->setChecked(1);
-        if (n & (1<<6)) ui->limit_3a->setChecked(1);
-        if (n & (1<<7)) ui->limit_3b->setChecked(1);
-        if (n & (1<<9)) ui->limit_4->setChecked(1);
+        if (ff7.slot[s].chars[curchar].limits & (1<<0)) ui->limit_1a->setChecked(1);
+        if (ff7.slot[s].chars[curchar].limits & (1<<1)) ui->limit_1b->setChecked(1);
+        if (ff7.slot[s].chars[curchar].limits & (1<<3)) ui->limit_2a->setChecked(1);
+        if (ff7.slot[s].chars[curchar].limits & (1<<4)) ui->limit_2b->setChecked(1);
+        if (ff7.slot[s].chars[curchar].limits & (1<<6)) ui->limit_3a->setChecked(1);
+        if (ff7.slot[s].chars[curchar].limits & (1<<7)) ui->limit_3b->setChecked(1);
+        if (ff7.slot[s].chars[curchar].limits & (1<<9)) ui->limit_4->setChecked(1);
+        break;
     }
-    else if(ff7.slot[s].chars[curchar].id == 6)
-    {
-        //enable boxes for limits
-        ui->limit_1a->setEnabled(1);
-        ui->limit_1b->setEnabled(0);
-        ui->limit_2a->setEnabled(1);
-        ui->limit_2b->setEnabled(0);
-        ui->limit_3a->setEnabled(0);
-        ui->limit_3b->setEnabled(0);
-        ui->limit_4->setEnabled(0);
-        //clear all checks
-        ui->limit_1a->setChecked(0);
-        ui->limit_1b->setChecked(0);
-        ui->limit_2a->setChecked(0);
-        ui->limit_2b->setChecked(0);
-        ui->limit_3a->setChecked(0);
-        ui->limit_3b->setChecked(0);
-        ui->limit_4->setChecked(0);
-        //show enabled boxes
-        ui->limit_1a->setVisible(1);
-        ui->limit_1b->setVisible(0);
-        ui->limit_2a->setVisible(1);
-        ui->limit_2b->setVisible(0);
-        ui->limit_3a->setVisible(0);
-        ui->limit_3b->setVisible(0);
-        ui->limit_4->setVisible(0);
-        //set learned limits
-        int n = ff7.slot[s].chars[curchar].limits;
-        if (n & (1<<0)) ui->limit_1a->setChecked(1);
-        if (n & (1<<3)) ui->limit_2a->setChecked(1);
-    }
-    else if(ff7.slot[s].chars[curchar].id == 7)
-    {
-        ui->limit_1a->setEnabled(1);
-        ui->limit_1b->setEnabled(0);
-        ui->limit_2a->setEnabled(1);
-        ui->limit_2b->setEnabled(0);
-        ui->limit_3a->setEnabled(1);
-        ui->limit_3b->setEnabled(0);
-        ui->limit_4->setEnabled(1);
-        //clear all checks
-        ui->limit_1a->setChecked(0);
-        ui->limit_1b->setChecked(0);
-        ui->limit_2a->setChecked(0);
-        ui->limit_2b->setChecked(0);
-        ui->limit_3a->setChecked(0);
-        ui->limit_3b->setChecked(0);
-        ui->limit_4->setChecked(0);
-        //show enabled boxes
-        ui->limit_1a->setVisible(1);
-        ui->limit_1b->setVisible(0);
-        ui->limit_2a->setVisible(1);
-        ui->limit_2b->setVisible(0);
-        ui->limit_3a->setVisible(1);
-        ui->limit_3b->setVisible(0);
-        ui->limit_4->setVisible(1);
-        //check learned limits
-        int n = ff7.slot[s].chars[curchar].limits;
-        if (n & (1<<0)) ui->limit_1a->setChecked(1);
-        if (n & (1<<3)) ui->limit_2a->setChecked(1);
-        if (n & (1<<6)) ui->limit_3a->setChecked(1);
-        if (n & (1<<9)) ui->limit_4->setChecked(1);
-    }
-    else
-    {
-        ui->limit_1a->setVisible(0);
-        ui->limit_1b->setVisible(0);
-        ui->limit_2a->setVisible(0);
-        ui->limit_2b->setVisible(0);
-        ui->limit_3a->setVisible(0);
-        ui->limit_3b->setVisible(0);
-        ui->limit_4->setVisible(0);
-    }
+    //Now Set Char Specific Things
     switch(ff7.slot[s].chars[curchar].id)
     {
     case 0: case 9://cloud
@@ -1771,6 +1636,44 @@ void MainWindow::charupdate(void)
         ui->combo_weapon->setCurrentIndex(0);
         break;
     }
+
+    //Equipment Tab Stuff.
+    ui->combo_armor->setCurrentIndex(ff7.slot[s].chars[curchar].armor);
+    ui->combo_acc->setCurrentIndex(ff7.slot[s].chars[curchar].accessory);
+    if(ff7.slot[s].chars[curchar].materias[8].id != 0xFF){ui->a_m_s1->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[8].id].image));}else{ui->a_m_s1->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[9].id != 0xFF){ui->a_m_s2->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[9].id].image));}else{ui->a_m_s2->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[10].id != 0xFF){ui->a_m_s3->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[10].id].image));}else{ui->a_m_s3->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[11].id != 0xFF){ui->a_m_s4->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[11].id].image));}else{ui->a_m_s4->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[12].id != 0xFF){ui->a_m_s5->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[12].id].image));}else{ui->a_m_s5->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[13].id != 0xFF){ui->a_m_s6->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[13].id].image));}else{ui->a_m_s6->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[14].id != 0xFF){ui->a_m_s7->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[14].id].image));}else{ui->a_m_s7->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[15].id != 0xFF){ui->a_m_s8->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[15].id].image));}else{ui->a_m_s8->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[0].id != 0xFF){ui->w_m_s1->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[0].id].image));}else{ui->w_m_s1->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[1].id != 0xFF){ui->w_m_s2->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[1].id].image));}else{ui->w_m_s2->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[2].id != 0xFF){ui->w_m_s3->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[2].id].image));}else{ui->w_m_s3->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[3].id != 0xFF){ui->w_m_s4->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[3].id].image));}else{ui->w_m_s4->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[4].id != 0xFF){ui->w_m_s5->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[4].id].image));}else{ui->w_m_s5->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[5].id != 0xFF){ui->w_m_s6->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[5].id].image));}else{ui->w_m_s6->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[6].id != 0xFF){ui->w_m_s7->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[6].id].image));}else{ui->w_m_s7->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[7].id != 0xFF){ui->w_m_s8->setIcon(QIcon(Materias[ff7.slot[s].chars[curchar].materias[7].id].image));}else{ui->w_m_s8->setIcon(QIcon(QString("")));}
+    if(ff7.slot[s].chars[curchar].materias[8].id != 0xFF){ui->a_m_s1->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[8].id));}else{ui->a_m_s1->setToolTip(QString(tr("Empty")));}
+    if(ff7.slot[s].chars[curchar].materias[9].id != 0xFF){ui->a_m_s2->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[9].id));}else{ui->a_m_s2->setToolTip(QString(tr("Empty")));}
+    if(ff7.slot[s].chars[curchar].materias[10].id != 0xFF){ui->a_m_s3->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[10].id));}else{ui->a_m_s3->setToolTip(QString(tr("Empty")));}
+    if(ff7.slot[s].chars[curchar].materias[11].id != 0xFF){ui->a_m_s4->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[11].id));}else{ui->a_m_s4->setToolTip(QString(tr("Empty")));}
+    if(ff7.slot[s].chars[curchar].materias[12].id != 0xFF){ui->a_m_s5->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[12].id));}else{ui->a_m_s5->setToolTip(QString(tr("Empty")));}
+    if(ff7.slot[s].chars[curchar].materias[13].id != 0xFF){ui->a_m_s6->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[13].id));}else{ui->a_m_s6->setToolTip(QString(tr("Empty")));}
+    if(ff7.slot[s].chars[curchar].materias[14].id != 0xFF){ui->a_m_s7->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[14].id));}else{ui->a_m_s7->setToolTip(QString(tr("Empty")));}
+    if(ff7.slot[s].chars[curchar].materias[15].id != 0xFF){ui->a_m_s8->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[15].id));}else{ui->a_m_s8->setToolTip(QString(tr("Empty")));}
+    if(ff7.slot[s].chars[curchar].materias[0].id != 0xFF){ui->w_m_s1->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[0].id));}else{ui->w_m_s1->setToolTip(QString(tr("Empty")));}
+    if(ff7.slot[s].chars[curchar].materias[1].id != 0xFF){ui->w_m_s2->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[1].id));}else{ui->w_m_s2->setToolTip(QString(tr("Empty")));}
+    if(ff7.slot[s].chars[curchar].materias[2].id != 0xFF){ui->w_m_s3->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[2].id));}else{ui->w_m_s3->setToolTip(QString(tr("Empty")));}
+    if(ff7.slot[s].chars[curchar].materias[3].id != 0xFF){ui->w_m_s4->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[3].id));}else{ui->w_m_s4->setToolTip(QString(tr("Empty")));}
+    if(ff7.slot[s].chars[curchar].materias[4].id != 0xFF){ui->w_m_s5->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[4].id));}else{ui->w_m_s5->setToolTip(QString(tr("Empty")));}
+    if(ff7.slot[s].chars[curchar].materias[5].id != 0xFF){ui->w_m_s6->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[5].id));}else{ui->w_m_s6->setToolTip(QString(tr("Empty")));}
+    if(ff7.slot[s].chars[curchar].materias[6].id != 0xFF){ui->w_m_s7->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[6].id));}else{ui->w_m_s7->setToolTip(QString(tr("Empty")));}
+    if(ff7.slot[s].chars[curchar].materias[7].id != 0xFF){ui->w_m_s8->setToolTip(names.MateriaNames(ff7.slot[s].chars[curchar].materias[7].id));}else{ui->w_m_s8->setToolTip(QString(tr("Empty")));}
+    setarmorslots();
+    setweaponslots();
     load=false;
 }
 /*~~~~~~~END Char Update~~~~~~~~*/
@@ -2934,13 +2837,9 @@ void MainWindow::on_btn_cait_clicked()      {curchar=6; charupdate();ui->btn_cai
 void MainWindow::on_btn_vincent_clicked()   {curchar=7; charupdate();ui->btn_vincent->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
 void MainWindow::on_btn_cid_clicked()       {curchar=8; charupdate();ui->btn_cid->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_sb_gil_valueChanged()
-{
-    ff7.slot[s].gil = ui->sb_gil->value();
-    ff7.slot[s].desc.gil = ff7.slot[s].gil;
-}
+void MainWindow::on_sb_gil_valueChanged(){if(!load){ff7.slot[s].gil = ui->sb_gil->value();   ff7.slot[s].desc.gil = ff7.slot[s].gil;}}
 void MainWindow::on_combo_party1_currentIndexChanged(int index)
-{
+{if(!load){
     if(index == 12) //empty char slot?
     {
         ff7.slot[s].party[0] = 0xFF;
@@ -2971,58 +2870,38 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
             else{ff7.slot[s].desc.name[n]=0xFF;}
         }
     }
-}
+}}
 void MainWindow::on_combo_party2_currentIndexChanged(int index)
-{
+{if(!load){
     if(index == 12){ff7.slot[s].party[1]= 0xFF;}
     else{ff7.slot[s].party[1] = index;}
     //either way set the desc
     ff7.slot[s].desc.party[1]=ff7.slot[s].party[1];
-}
+}}
 void MainWindow::on_combo_party3_currentIndexChanged(int index)
-{
+{if(!load){
     if(index ==12){ff7.slot[s].party[2] =0xFF;}
     else{ff7.slot[s].party[2] = index;}
     ff7.slot[s].desc.party[2]=ff7.slot[s].party[2];
-}
-void MainWindow::on_sb_gp_valueChanged()
-{
-    ff7.slot[s].gp = ui->sb_gp->value();
-}
-void MainWindow::on_sb_runs_valueChanged()
-{
-    ff7.slot[s].runs = ui->sb_runs->value();
-}
-void MainWindow::on_sb_battles_valueChanged()
-{
-    ff7.slot[s].battles = ui->sb_battles->value();
-}
+}}
+void MainWindow::on_sb_gp_valueChanged(){if(!load){ff7.slot[s].gp = ui->sb_gp->value();}}
+void MainWindow::on_sb_runs_valueChanged(){if(!load){ff7.slot[s].runs = ui->sb_runs->value();}}
+void MainWindow::on_sb_battles_valueChanged(){if(!load){ff7.slot[s].battles = ui->sb_battles->value();}}
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~Chocobo Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 //set data for pens outside
-void MainWindow::on_combo_pen1_currentIndexChanged(int index)
-{
-    ff7.slot[s].pennedchocos[0]=index;
-}
-void MainWindow::on_combo_pen2_currentIndexChanged(int index)
-{
-    ff7.slot[s].pennedchocos[1]=index;
-}
-void MainWindow::on_combo_pen3_currentIndexChanged(int index)
-{
-    ff7.slot[s].pennedchocos[2]=index;
-}
-void MainWindow::on_combo_pen4_currentIndexChanged(int index)
-{
-    ff7.slot[s].pennedchocos[3]=index;
-}
+void MainWindow::on_combo_pen1_currentIndexChanged(int index){if(!load){ff7.slot[s].pennedchocos[0]=index;}}
+void MainWindow::on_combo_pen2_currentIndexChanged(int index){if(!load){ff7.slot[s].pennedchocos[1]=index;}}
+void MainWindow::on_combo_pen3_currentIndexChanged(int index){if(!load){ff7.slot[s].pennedchocos[2]=index;}}
+void MainWindow::on_combo_pen4_currentIndexChanged(int index){if(!load){ff7.slot[s].pennedchocos[3]=index;}}
 //set data for stables inside
 void MainWindow::on_sb_stables_owned_valueChanged()
-{
+{if(!load){
     ff7.slot[s].stables = ui->sb_stables_owned->value();
     if(ui->sb_stables_occupied->value() > ui->sb_stables_owned->value()){ui->sb_stables_occupied->setValue(ui->sb_stables_owned->value());}
-}
+}}
 void MainWindow::on_sb_stables_occupied_valueChanged(int value)
-{
+{if(!load){
     if (value <= ui->sb_stables_owned->value())
     {
         ff7.slot[s].chocobomask = 0;
@@ -3034,378 +2913,137 @@ void MainWindow::on_sb_stables_occupied_valueChanged(int value)
         chocobo_refresh();
     }
     else {ui->sb_stables_occupied->setValue(ui->sb_stables_owned->value());}
-}
+}}
 
 /*~~~~~ChocoboStats~~~~~*/
-void MainWindow::on_sb_c1_speed_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[0].speed = value;}
-}
-void MainWindow::on_sb_c1_maxspeed_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[0].maxspeed = value;}
-}
-void MainWindow::on_sb_c1_sprint_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[0].sprintspd = value;}
-}
-void MainWindow::on_sb_c1_maxsprint_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[0].maxsprintspd = value;}
-}
-void MainWindow::on_cb_c1_sex_currentIndexChanged(int index)
-{
-    if(!load){ff7.slot[s].chocobos[0].sex = index;}
-}
-void MainWindow::on_cb_c1_type_currentIndexChanged(int index)
-{
-    if(!load){ff7.slot[s].chocobos[0].type = index;}
-}
-void MainWindow::on_sb_c1_coop_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[0].coop= ui->sb_c1_coop->value();}
-}
-void MainWindow::on_sb_c1_accel_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[0].accel= ui->sb_c1_accel->value();}
-}
-void MainWindow::on_sb_c1_intel_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[0].intelligence = ui->sb_c1_intel->value();}
-}
-void MainWindow::on_sb_c1_raceswon_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[0].raceswon = ui->sb_c1_raceswon->value();}
-}
-void MainWindow::on_sb_c1_pcount_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[0].pcount= ui->sb_c1_pcount->value();}
-}
-
-void MainWindow::on_sb_c2_speed_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[1].speed = value;}
-}
-void MainWindow::on_sb_c2_maxspeed_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[1].maxspeed = value;}
-}
-void MainWindow::on_sb_c2_sprint_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[1].sprintspd = value;}
-}
-void MainWindow::on_sb_c2_maxsprint_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[1].maxsprintspd = value;}
-}
-void MainWindow::on_cb_c2_sex_currentIndexChanged(int index)
-{
-    if(!load){ff7.slot[s].chocobos[1].sex = index;}
-}
-void MainWindow::on_cb_c2_type_currentIndexChanged(int index)
-{
-    if(!load){ff7.slot[s].chocobos[1].type = index;}
-}
-void MainWindow::on_sb_c2_coop_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[1].coop= ui->sb_c2_coop->value();}
-}
-void MainWindow::on_sb_c2_accel_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[1].accel= ui->sb_c2_accel->value();}
-}
-void MainWindow::on_sb_c2_intel_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[1].intelligence = ui->sb_c2_intel->value();}
-}
-void MainWindow::on_sb_c2_raceswon_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[1].raceswon = ui->sb_c2_raceswon->value();}
-}
-void MainWindow::on_sb_c2_pcount_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[1].pcount= ui->sb_c2_pcount->value();}
-}
-
-void MainWindow::on_sb_c3_speed_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[2].speed = value;}
-}
-void MainWindow::on_sb_c3_maxspeed_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[2].maxspeed = value;}
-}
-void MainWindow::on_sb_c3_sprint_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[2].sprintspd = value;}
-}
-void MainWindow::on_sb_c3_maxsprint_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[2].maxsprintspd = value;}
-}
-void MainWindow::on_cb_c3_sex_currentIndexChanged(int index)
-{
-    if(!load){ff7.slot[s].chocobos[2].sex = index;}
-}
-void MainWindow::on_cb_c3_type_currentIndexChanged(int index)
-{
-    if(!load){ff7.slot[s].chocobos[2].type = index;}
-}
-void MainWindow::on_sb_c3_coop_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[2].coop= ui->sb_c3_coop->value();}
-}
-void MainWindow::on_sb_c3_accel_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[2].accel= ui->sb_c3_accel->value();}
-}
-void MainWindow::on_sb_c3_intel_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[2].intelligence = ui->sb_c3_intel->value();}
-}
-void MainWindow::on_sb_c3_raceswon_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[2].raceswon = ui->sb_c3_raceswon->value();}
-}
-void MainWindow::on_sb_c3_pcount_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[2].pcount= ui->sb_c3_pcount->value();}
-}
-
-void MainWindow::on_sb_c4_speed_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[3].speed = value;}
-}
-void MainWindow::on_sb_c4_maxspeed_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[3].maxspeed = value;}
-}
-void MainWindow::on_sb_c4_sprint_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[3].sprintspd = value;}
-}
-void MainWindow::on_sb_c4_maxsprint_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chocobos[3].maxsprintspd = value;}
-}
-
-void MainWindow::on_cb_c4_sex_currentIndexChanged(int index)
-{
-    if(!load){ff7.slot[s].chocobos[3].sex = index;}
-}
-void MainWindow::on_cb_c4_type_currentIndexChanged(int index)
-{
-    if(!load){ff7.slot[s].chocobos[3].type = index;}
-}
-void MainWindow::on_sb_c4_coop_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[3].coop= ui->sb_c4_coop->value();}
-}
-void MainWindow::on_sb_c4_accel_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[3].accel= ui->sb_c4_accel->value();}
-}
-void MainWindow::on_sb_c4_intel_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[3].intelligence = ui->sb_c4_intel->value();}
-}
-void MainWindow::on_sb_c4_raceswon_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[3].raceswon = ui->sb_c4_raceswon->value();}
-}
-void MainWindow::on_sb_c4_pcount_valueChanged()
-{
-    if(!load){ff7.slot[s].chocobos[3].pcount= ui->sb_c4_pcount->value();}
-}
-
-void MainWindow::on_sb_c5_speed_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].choco56[0].speed = value;}
-}
-void MainWindow::on_sb_c5_maxspeed_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].choco56[0].maxspeed = value;}
-}
-void MainWindow::on_sb_c5_sprint_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].choco56[0].sprintspd = value;}
-}
-void MainWindow::on_sb_c5_maxsprint_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].choco56[0].maxsprintspd = value;}
-}
-void MainWindow::on_cb_c5_sex_currentIndexChanged(int index)
-{
-    if(!load){ff7.slot[s].choco56[0].sex = index;}
-}
-void MainWindow::on_cb_c5_type_currentIndexChanged(int index)
-{
-    if(!load){ff7.slot[s].choco56[0].type = index;}
-}
-void MainWindow::on_sb_c5_coop_valueChanged()
-{
-    if(!load){ff7.slot[s].choco56[0].coop= ui->sb_c5_coop->value();}
-}
-void MainWindow::on_sb_c5_accel_valueChanged()
-{
-    if(!load){ff7.slot[s].choco56[0].accel= ui->sb_c5_accel->value();}
-}
-void MainWindow::on_sb_c5_intel_valueChanged()
-{
-    if(!load){ff7.slot[s].choco56[0].intelligence = ui->sb_c5_intel->value();}
-}
-void MainWindow::on_sb_c5_raceswon_valueChanged()
-{
-    if(!load){ff7.slot[s].choco56[0].raceswon = ui->sb_c5_raceswon->value();}
-}
-void MainWindow::on_sb_c5_pcount_valueChanged()
-{
-    if(!load){ff7.slot[s].choco56[0].pcount= ui->sb_c5_pcount->value();}
-}
-
-void MainWindow::on_sb_c6_speed_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].choco56[1].speed = value;}
-}
-void MainWindow::on_sb_c6_maxspeed_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].choco56[1].maxspeed = value;}
-}
-void MainWindow::on_sb_c6_sprint_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].choco56[1].sprintspd = value;}
-}
-void MainWindow::on_sb_c6_maxsprint_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].choco56[1].maxsprintspd = value;}
-}
-void MainWindow::on_cb_c6_sex_currentIndexChanged(int index)
-{
-    if(!load){ff7.slot[s].choco56[1].sex = index;}
-}
-void MainWindow::on_cb_c6_type_currentIndexChanged(int index)
-{
-    if(!load){ff7.slot[s].choco56[1].type = index;}
-}
-void MainWindow::on_sb_c6_coop_valueChanged()
-{
-    if(!load){ff7.slot[s].choco56[1].coop= ui->sb_c6_coop->value();}
-}
-void MainWindow::on_sb_c6_accel_valueChanged()
-{
-    if(!load){ff7.slot[s].choco56[1].accel= ui->sb_c6_accel->value();}
-}
-void MainWindow::on_sb_c6_intel_valueChanged()
-{
-    if(!load){ff7.slot[s].choco56[1].intelligence = ui->sb_c6_intel->value();}
-}
-void MainWindow::on_sb_c6_raceswon_valueChanged()
-{
-    if(!load){ff7.slot[s].choco56[1].raceswon = ui->sb_c6_raceswon->value();}
-}
-void MainWindow::on_sb_c6_pcount_valueChanged()
-{
-    if(!load){ff7.slot[s].choco56[1].pcount= ui->sb_c6_pcount->value();}
-}
-void MainWindow::on_sb_c1_stamina_valueChanged()
-{
-    ff7.slot[s].chocostaminas[0] = ui->sb_c1_stamina->value();//Bug fixed Before was ui->sb_c1_stamina->value()*10 and (999*10 != 9999), is 9990 (Vegeta_Ss4) v0.8.3
-}
-void MainWindow::on_sb_c2_stamina_valueChanged()
-{
-    ff7.slot[s].chocostaminas[1] = ui->sb_c2_stamina->value();//Bug fix (Vegeta_Ss4) v0.8.3
-}
-void MainWindow::on_sb_c3_stamina_valueChanged()
-{
-    ff7.slot[s].chocostaminas[2] = ui->sb_c3_stamina->value();//Bug fix (Vegeta_Ss4) v0.8.3
-}
-void MainWindow::on_sb_c4_stamina_valueChanged()
-{
-    ff7.slot[s].chocostaminas[3] = ui->sb_c4_stamina->value();//Bug fix (Vegeta_Ss4) v0.8.3
-}
-void MainWindow::on_sb_c5_stamina_valueChanged()
-{
-    ff7.slot[s].chocostaminas[4] = ui->sb_c5_stamina->value();//Bug fix (Vegeta_Ss4) v0.8.3
-}
-void MainWindow::on_sb_c6_stamina_valueChanged()
-{
-    ff7.slot[s].chocostaminas[5] = ui->sb_c6_stamina->value();//Bug fix (Vegeta_Ss4) v0.8.3
-}
 void MainWindow::on_line_c1_name_lostFocus()
-{
-    if(!load)
-    {
+{if(!load){
         for (int i=0;i<6;i++){ff7.slot[s].chocobonames[0][i] =0xFF;}
         for (int i=0;i<ui->line_c1_name->text().size();i++){ff7.slot[s].chocobonames[0][i] = chFF7[ui->line_c1_name->text().at(i).toAscii()];}
-    }
-}
+}}
+void MainWindow::on_sb_c1_stamina_valueChanged(){if(!load){ff7.slot[s].chocostaminas[0] = ui->sb_c1_stamina->value();}}
+void MainWindow::on_sb_c1_speed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].speed = value;}}
+void MainWindow::on_sb_c1_maxspeed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].maxspeed = value;}}
+void MainWindow::on_sb_c1_sprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].sprintspd = value;}}
+void MainWindow::on_sb_c1_maxsprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].maxsprintspd = value;}}
+void MainWindow::on_cb_c1_sex_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[0].sex = index;}}
+void MainWindow::on_cb_c1_type_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[0].type = index;}}
+void MainWindow::on_sb_c1_coop_valueChanged(){if(!load){ff7.slot[s].chocobos[0].coop= ui->sb_c1_coop->value();}}
+void MainWindow::on_sb_c1_accel_valueChanged(){if(!load){ff7.slot[s].chocobos[0].accel= ui->sb_c1_accel->value();}}
+void MainWindow::on_sb_c1_intel_valueChanged(){if(!load){ff7.slot[s].chocobos[0].intelligence = ui->sb_c1_intel->value();}}
+void MainWindow::on_sb_c1_raceswon_valueChanged(){if(!load){ff7.slot[s].chocobos[0].raceswon = ui->sb_c1_raceswon->value();}}
+void MainWindow::on_sb_c1_pcount_valueChanged(){if(!load){ff7.slot[s].chocobos[0].pcount= ui->sb_c1_pcount->value();}}
+
 void MainWindow::on_line_c2_name_lostFocus()
-{
+{if(!load){
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[1][i] =0xFF;}
     for (int i=0;i<ui->line_c2_name->text().size();i++){ff7.slot[s].chocobonames[1][i] = chFF7[ui->line_c2_name->text().at(i).toAscii()];}
-}
+}}
+void MainWindow::on_sb_c2_stamina_valueChanged(){if(!load){ff7.slot[s].chocostaminas[1] = ui->sb_c2_stamina->value();}}
+void MainWindow::on_sb_c2_speed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].speed = value;}}
+void MainWindow::on_sb_c2_maxspeed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].maxspeed = value;}}
+void MainWindow::on_sb_c2_sprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].sprintspd = value;}}
+void MainWindow::on_sb_c2_maxsprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].maxsprintspd = value;}}
+void MainWindow::on_cb_c2_sex_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[1].sex = index;}}
+void MainWindow::on_cb_c2_type_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[1].type = index;}}
+void MainWindow::on_sb_c2_coop_valueChanged(){if(!load){ff7.slot[s].chocobos[1].coop= ui->sb_c2_coop->value();}}
+void MainWindow::on_sb_c2_accel_valueChanged(){if(!load){ff7.slot[s].chocobos[1].accel= ui->sb_c2_accel->value();}}
+void MainWindow::on_sb_c2_intel_valueChanged(){if(!load){ff7.slot[s].chocobos[1].intelligence = ui->sb_c2_intel->value();}}
+void MainWindow::on_sb_c2_raceswon_valueChanged(){if(!load){ff7.slot[s].chocobos[1].raceswon = ui->sb_c2_raceswon->value();}}
+void MainWindow::on_sb_c2_pcount_valueChanged(){if(!load){ff7.slot[s].chocobos[1].pcount= ui->sb_c2_pcount->value();}}
+
 void MainWindow::on_line_c3_name_lostFocus()
-{
+{if(!load){
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[2][i] =0xFF;}
     for (int i=0;i<ui->line_c3_name->text().size();i++){ff7.slot[s].chocobonames[2][i] = chFF7[ui->line_c3_name->text().at(i).toAscii()];}
-}
+}}
+void MainWindow::on_sb_c3_stamina_valueChanged(){if(!load){ff7.slot[s].chocostaminas[2] = ui->sb_c3_stamina->value();}}
+void MainWindow::on_sb_c3_speed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].speed = value;}}
+void MainWindow::on_sb_c3_maxspeed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].maxspeed = value;}}
+void MainWindow::on_sb_c3_sprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].sprintspd = value;}}
+void MainWindow::on_sb_c3_maxsprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].maxsprintspd = value;}}
+void MainWindow::on_cb_c3_sex_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[2].sex = index;}}
+void MainWindow::on_cb_c3_type_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[2].type = index;}}
+void MainWindow::on_sb_c3_coop_valueChanged(){if(!load){ff7.slot[s].chocobos[2].coop= ui->sb_c3_coop->value();}}
+void MainWindow::on_sb_c3_accel_valueChanged(){if(!load){ff7.slot[s].chocobos[2].accel= ui->sb_c3_accel->value();}}
+void MainWindow::on_sb_c3_intel_valueChanged(){if(!load){ff7.slot[s].chocobos[2].intelligence = ui->sb_c3_intel->value();}}
+void MainWindow::on_sb_c3_raceswon_valueChanged(){if(!load){ff7.slot[s].chocobos[2].raceswon = ui->sb_c3_raceswon->value();}}
+void MainWindow::on_sb_c3_pcount_valueChanged(){if(!load){ff7.slot[s].chocobos[2].pcount= ui->sb_c3_pcount->value();}}
+
 void MainWindow::on_line_c4_name_lostFocus()
-{
+{if(!load){
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[3][i] =0xFF;}
     for (int i=0;i<ui->line_c4_name->text().size();i++){ff7.slot[s].chocobonames[3][i] = chFF7[ui->line_c4_name->text().at(i).toAscii()];}
-}
+}}
+void MainWindow::on_sb_c4_stamina_valueChanged(){if(!load){ff7.slot[s].chocostaminas[3] = ui->sb_c4_stamina->value();}}
+void MainWindow::on_sb_c4_speed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].speed = value;}}
+void MainWindow::on_sb_c4_maxspeed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].maxspeed = value;}}
+void MainWindow::on_sb_c4_sprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].sprintspd = value;}}
+void MainWindow::on_sb_c4_maxsprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].maxsprintspd = value;}}
+void MainWindow::on_cb_c4_sex_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[3].sex = index;}}
+void MainWindow::on_cb_c4_type_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[3].type = index;}}
+void MainWindow::on_sb_c4_coop_valueChanged(){if(!load){ff7.slot[s].chocobos[3].coop= ui->sb_c4_coop->value();}}
+void MainWindow::on_sb_c4_accel_valueChanged(){if(!load){ff7.slot[s].chocobos[3].accel= ui->sb_c4_accel->value();}}
+void MainWindow::on_sb_c4_intel_valueChanged(){if(!load){ff7.slot[s].chocobos[3].intelligence = ui->sb_c4_intel->value();}}
+void MainWindow::on_sb_c4_raceswon_valueChanged(){if(!load){ff7.slot[s].chocobos[3].raceswon = ui->sb_c4_raceswon->value();}}
+void MainWindow::on_sb_c4_pcount_valueChanged(){if(!load){ff7.slot[s].chocobos[3].pcount= ui->sb_c4_pcount->value();}}
+
 void MainWindow::on_line_c5_name_lostFocus()
-{
+{if(!load){
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[4][i] =0xFF;}
     for (int i=0;i<ui->line_c5_name->text().size();i++){ff7.slot[s].chocobonames[4][i] = chFF7[ui->line_c5_name->text().at(i).toAscii()];}
-}
+}}
+void MainWindow::on_sb_c5_stamina_valueChanged(){if(!load){ff7.slot[s].chocostaminas[4] = ui->sb_c5_stamina->value();}}
+void MainWindow::on_sb_c5_speed_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].speed = value;}}
+void MainWindow::on_sb_c5_maxspeed_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].maxspeed = value;}}
+void MainWindow::on_sb_c5_sprint_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].sprintspd = value;}}
+void MainWindow::on_sb_c5_maxsprint_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].maxsprintspd = value;}}
+void MainWindow::on_cb_c5_sex_currentIndexChanged(int index){if(!load){ff7.slot[s].choco56[0].sex = index;}}
+void MainWindow::on_cb_c5_type_currentIndexChanged(int index){if(!load){ff7.slot[s].choco56[0].type = index;}}
+void MainWindow::on_sb_c5_coop_valueChanged(){if(!load){ff7.slot[s].choco56[0].coop= ui->sb_c5_coop->value();}}
+void MainWindow::on_sb_c5_accel_valueChanged(){if(!load){ff7.slot[s].choco56[0].accel= ui->sb_c5_accel->value();}}
+void MainWindow::on_sb_c5_intel_valueChanged(){if(!load){ff7.slot[s].choco56[0].intelligence = ui->sb_c5_intel->value();}}
+void MainWindow::on_sb_c5_raceswon_valueChanged(){ if(!load){ff7.slot[s].choco56[0].raceswon = ui->sb_c5_raceswon->value();}}
+void MainWindow::on_sb_c5_pcount_valueChanged(){if(!load){ff7.slot[s].choco56[0].pcount= ui->sb_c5_pcount->value();}}
+
 void MainWindow::on_line_c6_name_lostFocus()
-{
+{if(!load){
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[5][i] =0xFF;}
     for (int i=0;i<ui->line_c6_name->text().size();i++){ff7.slot[s].chocobonames[5][i] = chFF7[ui->line_c6_name->text().at(i).toAscii()];}
-}
+}}
+void MainWindow::on_sb_c6_stamina_valueChanged(){if(!load){ff7.slot[s].chocostaminas[5] = ui->sb_c6_stamina->value();}}
+void MainWindow::on_sb_c6_speed_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].speed = value;}}
+void MainWindow::on_sb_c6_maxspeed_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].maxspeed = value;}}
+void MainWindow::on_sb_c6_sprint_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].sprintspd = value;}}
+void MainWindow::on_sb_c6_maxsprint_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].maxsprintspd = value;}}
+void MainWindow::on_cb_c6_sex_currentIndexChanged(int index){if(!load){ff7.slot[s].choco56[1].sex = index;}}
+void MainWindow::on_cb_c6_type_currentIndexChanged(int index){if(!load){ff7.slot[s].choco56[1].type = index;}}
+void MainWindow::on_sb_c6_coop_valueChanged(){if(!load){ff7.slot[s].choco56[1].coop= ui->sb_c6_coop->value();}}
+void MainWindow::on_sb_c6_accel_valueChanged(){if(!load){ff7.slot[s].choco56[1].accel= ui->sb_c6_accel->value();}}
+void MainWindow::on_sb_c6_intel_valueChanged(){if(!load){ff7.slot[s].choco56[1].intelligence = ui->sb_c6_intel->value();}}
+void MainWindow::on_sb_c6_raceswon_valueChanged(){if(!load){ff7.slot[s].choco56[1].raceswon = ui->sb_c6_raceswon->value();}}
+void MainWindow::on_sb_c6_pcount_valueChanged(){if(!load){ff7.slot[s].choco56[1].pcount= ui->sb_c6_pcount->value();}}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_list_phs_chars_itemChanged()
-{
-    if(!load)
-    {
-        int j = ui->list_phs_chars->currentRow();       
-        if(ui->list_phs_chars->currentItem()->checkState() ==Qt::Unchecked){ff7.slot[s].phsmask |=(1 <<j);}
-        else{ff7.slot[s].phsmask &= ~(1<<j);}
-    }
-}
+{if(!load){
+    int j = ui->list_phs_chars->currentRow();
+    if(ui->list_phs_chars->currentItem()->checkState() ==Qt::Unchecked){ff7.slot[s].phsmask |=(1 <<j);}
+    else{ff7.slot[s].phsmask &= ~(1<<j);}
+}}
 
 void MainWindow::on_list_chars_unlocked_itemChanged()
-{
-    if(!load)
-    {
-        int j=ui->list_chars_unlocked->currentRow();
-        if(ui->list_chars_unlocked->currentItem()->checkState() ==Qt::Checked){ff7.slot[s].unlockedchars |= (1<<j);}
-        else{ff7.slot[s].unlockedchars &= ~(1<<j);}
-    }
-}
-void MainWindow::on_sb_curdisc_valueChanged()
-{
-    if(!load){ff7.slot[s].disc = ui->sb_curdisc->value();}
-}
-void MainWindow::on_sb_love_barret_valueChanged()
-{
-    if(!load){ff7.slot[s].love.barret = ui->sb_love_barret->value();}
-}
-void MainWindow::on_sb_love_aeris_valueChanged()
-{
-    if(!load){ff7.slot[s].love.aeris = ui->sb_love_aeris->value();}
-}
-void MainWindow::on_sb_love_tifa_valueChanged()
-{
-    if(!load){ff7.slot[s].love.tifa = ui->sb_love_tifa->value();}
-}
-void MainWindow::on_sb_love_yuffie_valueChanged()
-{
-    if(!load){ff7.slot[s].love.yuffie = ui->sb_love_yuffie->value();}
-}
+{if(!load){
+    int j=ui->list_chars_unlocked->currentRow();
+    if(ui->list_chars_unlocked->currentItem()->checkState() ==Qt::Checked){ff7.slot[s].unlockedchars |= (1<<j);}
+    else{ff7.slot[s].unlockedchars &= ~(1<<j);}
+}}
+void MainWindow::on_sb_curdisc_valueChanged(){if(!load){ff7.slot[s].disc = ui->sb_curdisc->value();}}
+void MainWindow::on_sb_love_barret_valueChanged(){if(!load){ff7.slot[s].love.barret = ui->sb_love_barret->value();}}
+void MainWindow::on_sb_love_aeris_valueChanged(){if(!load){ff7.slot[s].love.aeris = ui->sb_love_aeris->value();}}
+void MainWindow::on_sb_love_tifa_valueChanged(){if(!load){ff7.slot[s].love.tifa = ui->sb_love_tifa->value();}}
+void MainWindow::on_sb_love_yuffie_valueChanged(){if(!load){ff7.slot[s].love.yuffie = ui->sb_love_yuffie->value();}}
 
 void MainWindow::on_sb_time_hour_valueChanged(int value)
 {
@@ -3425,230 +3063,189 @@ void MainWindow::on_sb_time_sec_valueChanged(int value)
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_list_flyers_itemChanged()
-{
-    if(!load)
+{if(!load){
+    int j=ui->list_flyers->currentRow();
+    ff7.slot[s].turtleflyers=0x40;
+    for (int i=0;i<6;i++)
     {
-        int j=ui->list_flyers->currentRow();
-        ff7.slot[s].turtleflyers=0x40;
-        for (int i=0;i<6;i++)
-        {
-            ui->list_flyers->setCurrentRow(i);
-            if(ui->list_flyers->currentItem()->checkState() ==Qt::Checked){ff7.slot[s].turtleflyers |= (1 << i);}
-        }
-        ui->list_flyers->setCurrentRow(j);
+        ui->list_flyers->setCurrentRow(i);
+        if(ui->list_flyers->currentItem()->checkState() ==Qt::Checked){ff7.slot[s].turtleflyers |= (1 << i);}
     }
-}
+    ui->list_flyers->setCurrentRow(j);
+}}
+
 void MainWindow::on_list_keyitems_itemChanged()
-{
-    if (!load)
-    {
-        int j = ui->list_keyitems->currentRow();
-        if (ui->list_keyitems->currentItem()->checkState() == Qt::Checked){ff7.slot[s].keyitems[j/8] |= (1<<j%8);}
-        else{ff7.slot[s].keyitems[j/8] &= ~(1<<j%8);}
-    }
-}
+{if(!load){
+    int j = ui->list_keyitems->currentRow();
+    if (ui->list_keyitems->currentItem()->checkState() == Qt::Checked){ff7.slot[s].keyitems[j/8] |= (1<<j%8);}
+    else{ff7.slot[s].keyitems[j/8] &= ~(1<<j%8);}
+}}
+
 void MainWindow::on_clearItem_clicked()
 {
     ff7.slot[s].items[ui->tbl_itm->currentRow()].id = 0xFF;
     ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = 0xFF;
     guirefresh();
 }
+
 void MainWindow::on_combo_additem_currentIndexChanged(int index)
-{
-    if(!load)
-    {   //we must also set the qty, since that determins how the table and the game will reconize the item and prevents bug#3014592.
-        if (index<256){ff7.slot[s].items[ui->tbl_itm->currentRow()].id = index;ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(ui->sb_addqty->value() * 2);}
-        else{ff7.slot[s].items[ui->tbl_itm->currentRow()].id = (index-256);ff7.slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(ui->sb_addqty->value()* 2) +1;}
-        guirefresh();
-    }
-}
+{if(!load){   //we must also set the qty, since that determins how the table and the game will reconize the item and prevents bug#3014592.
+    if (index<256){ff7.slot[s].items[ui->tbl_itm->currentRow()].id = index;ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(ui->sb_addqty->value() * 2);}
+    else{ff7.slot[s].items[ui->tbl_itm->currentRow()].id = (index-256);ff7.slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(ui->sb_addqty->value()* 2) +1;}
+    guirefresh();
+}}
+
 void MainWindow::on_sb_addqty_valueChanged(int value)
-{
-    if(!load)
-    {
-        if (ui->combo_additem->currentIndex()<256){ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(value * 2);}
-        else{ff7.slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(value* 2) +1;}
-        guirefresh();
-    }
-}
+{if(!load){
+    if (ui->combo_additem->currentIndex()<256){ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(value * 2);}
+    else{ff7.slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(value* 2) +1;}
+    guirefresh();
+}}
+
 void MainWindow::on_tbl_itm_currentCellChanged(int row)
-{
-    if(!load)
+{if(!load){
+    if (ff7.slot[s].items[row].qty == 255 && ff7.slot[s].items[row].id == 255){/*empty slot.....do nothing*/}
+    else
     {
-        if (ff7.slot[s].items[row].qty == 255 && ff7.slot[s].items[row].id == 255){/*empty slot.....do nothing*/}
+        load =true;
+        if(ff7.slot[s].items[row].qty %2 ==0)
+        {
+            ui->combo_additem->setCurrentIndex(ff7.slot[s].items[row].id);
+            ui->sb_addqty->setValue(ff7.slot[s].items[row].qty/2);
+        }
         else
         {
-            load =true;
-            if(ff7.slot[s].items[row].qty %2 ==0)
-            {
-                ui->combo_additem->setCurrentIndex(ff7.slot[s].items[row].id);
-                ui->sb_addqty->setValue(ff7.slot[s].items[row].qty/2);
-            }
-            else
-            {
-                ui->combo_additem->setCurrentIndex(ff7.slot[s].items[row].id+256);
-                ui->sb_addqty->setValue(ff7.slot[s].items[row].qty/2);
-            }
-            load = false;
+            ui->combo_additem->setCurrentIndex(ff7.slot[s].items[row].id+256);
+            ui->sb_addqty->setValue(ff7.slot[s].items[row].qty/2);
         }
+        load = false;
     }
-}
+}}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_tbl_materia_currentCellChanged(int row)
-{
-    if(!load)
+{if(!load){
+    if(ff7.slot[s].materias[row].id == 0x2C)
     {
-        if(ff7.slot[s].materias[row].id == 0x2C)
-        {
-            ui->eskill_group->setVisible(true);
-            geteskills(row);
-            ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
-            ui->sb_addap->setEnabled(0);
-        }
-        else if(ff7.slot[s].materias[row].id == 0xFF) //if the slot is empty take some precautions
-        {
-            load=true;
-            ui->lbl_mat_stats->setText(tr("Empty Slot"));
-            ui->lcd_ap_master->display(0);
-            ui->sb_addap->setValue(0);
-            ui->sb_addap->setMaximum(0);
-            ui->combo_mat_type->setCurrentIndex(0);
-            ui->combo_add_mat->setCurrentIndex(0);
-            ui->combo_add_mat_2->clear();
-            for(int i=0;i<0x5B;i++)
-            {
-                if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
-            }
-            ui->btn_m_lvl1->setVisible(0);
-            ui->btn_m_lvl2->setVisible(0);
-            ui->btn_m_lvl3->setVisible(0);
-            ui->btn_m_lvl4->setVisible(0);
-            ui->btn_m_lvl5->setVisible(0);
-            ui->spell_lvl1_group->setVisible(0);
-            ui->spell_lvl2_group->setVisible(0);
-            ui->spell_lvl3_group->setVisible(0);
-            ui->spell_lvl4_group->setVisible(0);
-            ui->spell_lvl5_group->setVisible(0);
-            ui->eskill_group->setVisible(false);
-            load=false;
-        }
-        else
-        {
-            ui->eskill_group->setVisible(false);
-            ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
-            ui->sb_addap->setEnabled(1);
-            ui->sb_addap->setValue(ff7.slot[s].materias[row].ap[0] |(ff7.slot[s].materias[row].ap[1] << 8) | (ff7.slot[s].materias[row].ap[2] << 16));
-        }
+       ui->eskill_group->setVisible(true);
+       geteskills(row);
+       ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
+       ui->sb_addap->setEnabled(0);
     }
-}
+    else if(ff7.slot[s].materias[row].id == 0xFF) //if the slot is empty take some precautions
+    {
+       load=true;
+       ui->lbl_mat_stats->setText(tr("Empty Slot"));
+       ui->lcd_ap_master->display(0);
+       ui->sb_addap->setValue(0);
+       ui->sb_addap->setMaximum(0);
+       ui->combo_mat_type->setCurrentIndex(0);
+       ui->combo_add_mat->setCurrentIndex(0);
+       ui->combo_add_mat_2->clear();
+       for(int i=0;i<0x5B;i++)
+       {
+           if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
+       }
+       ui->btn_m_lvl1->setVisible(0);
+       ui->btn_m_lvl2->setVisible(0);
+       ui->btn_m_lvl3->setVisible(0);
+       ui->btn_m_lvl4->setVisible(0);
+       ui->btn_m_lvl5->setVisible(0);
+       ui->spell_lvl1_group->setVisible(0);
+       ui->spell_lvl2_group->setVisible(0);
+       ui->spell_lvl3_group->setVisible(0);
+       ui->spell_lvl4_group->setVisible(0);
+       ui->spell_lvl5_group->setVisible(0);
+       ui->eskill_group->setVisible(false);
+       load=false;
+    }
+    else
+    {
+        ui->eskill_group->setVisible(false);
+        ui->combo_add_mat->setCurrentIndex(ff7.slot[s].materias[row].id);
+        ui->sb_addap->setEnabled(1);
+        ui->sb_addap->setValue(ff7.slot[s].materias[row].ap[0] |(ff7.slot[s].materias[row].ap[1] << 8) | (ff7.slot[s].materias[row].ap[2] << 16));
+    }
+}}
 
 void MainWindow::on_sb_addap_valueChanged(int value)
-{
-    if(!load && ui->tbl_materia->currentRow() >-1)
+{if(!load && ui->tbl_materia->currentRow() >-1){
+    if(value == Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels -2] && Materias[ui->combo_add_mat->currentIndex()].levels >1)
     {
-        if(value == Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels -2] && Materias[ui->combo_add_mat->currentIndex()].levels >1)
-        {
-            for(int i=0;i<3;i++){ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[i] = 0xFF;}
-        }
+        for(int i=0;i<3;i++){ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[i] = 0xFF;}
+    }
+    else
+    {
+        int a = (value & 0xff);
+        int b = (value & 0xff00) >> 8;
+        int c = (value & 0xff0000) >> 16;
+        ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[0] = a;
+        ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[1] = b;
+        ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2] = c;
+    }
+    guirefresh();
+}}
 
-        else
-        {
-            int a = (value & 0xff);
-            int b = (value & 0xff00) >> 8;
-            int c = (value & 0xff0000) >> 16;
-            ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[0] = a;
-            ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[1] = b;
-            ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2] = c;
-        }
-        guirefresh();
-    }
-}
 void MainWindow::on_combo_add_mat_currentIndexChanged(int index)
-{
-    if(!load)
+{if(!load){
+    if(ui->combo_add_mat->currentText() ==tr("DON'T USE"))// this is a placeholder materia
     {
-        if(ui->combo_add_mat->currentText() ==tr("DON'T USE"))// this is a placeholder materia
-        {
-            QMessageBox::information(this,tr("Empty Materia"),tr("Place holder Materia Detected\n Remember 16777215 AP = master"));
-            guirefresh();// clean up the gui.
-            return; //we are done here.
-        }
-            ui->combo_mat_type->setCurrentIndex(Materias[index].type);
-            for(int i=0;i<ui->combo_add_mat_2->count();i++)
-            {
-                if(ui->combo_add_mat_2->itemText(i)==names.MateriaNames(index)){ui->combo_add_mat_2->setCurrentIndex(i);}
-            }
-        ff7.slot[s].materias[ui->tbl_materia->currentRow()].id = index;
-        guirefresh();
+        QMessageBox::information(this,tr("Empty Materia"),tr("Place holder Materia Detected\n Remember 16777215 AP = master"));
+        guirefresh();// clean up the gui.
+        return; //we are done here.
     }
-}
-void MainWindow::on_btn_m_lvl1_clicked()
-{
-    ui->sb_addap->setValue(0);
+        ui->combo_mat_type->setCurrentIndex(Materias[index].type);
+        for(int i=0;i<ui->combo_add_mat_2->count();i++)
+        {
+            if(ui->combo_add_mat_2->itemText(i)==names.MateriaNames(index)){ui->combo_add_mat_2->setCurrentIndex(i);}
+        }
+    ff7.slot[s].materias[ui->tbl_materia->currentRow()].id = index;
     guirefresh();
-}
-void MainWindow::on_btn_m_lvl2_clicked()
-{
-    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[0]);
-    guirefresh();
-}
-void MainWindow::on_btn_m_lvl3_clicked()
-{
-    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[1]);
-    guirefresh();
-}
-void MainWindow::on_btn_m_lvl4_clicked()
-{
-    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[2]);
-    guirefresh();
-}
-void MainWindow::on_btn_m_lvl5_clicked()
-{
-    ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[3]);
-    guirefresh();
-}
+}}
+
+void MainWindow::on_btn_m_lvl1_clicked(){ui->sb_addap->setValue(0);    guirefresh();}
+void MainWindow::on_btn_m_lvl2_clicked(){ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[0]);    guirefresh();}
+void MainWindow::on_btn_m_lvl3_clicked(){ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[1]);    guirefresh();}
+void MainWindow::on_btn_m_lvl4_clicked(){ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[2]);    guirefresh();}
+void MainWindow::on_btn_m_lvl5_clicked(){ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[3]);    guirefresh();}
 
 void MainWindow::on_combo_mat_type_currentIndexChanged(int index)
-{
-    if(!load)
+{if(!load){
+    ui->combo_add_mat_2->clear();
+    if(index == 0)
     {
-        ui->combo_add_mat_2->clear();
-        if(index == 0)
-        {
-            for(int i=0;i<0x5B;i++)
-            {
-                if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
-            }
-        }
-        else
-        {
-            load=true;
-            for(int i=0;i<0x5B;i++){if(index==Materias[i].type){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}}
-            load=false;
-        }
-    }
-}
-void MainWindow::on_combo_add_mat_2_currentIndexChanged()
-{
-    if(!load)
-    {//set combo_add_mat.setCurrentindex = selected materia.id
         for(int i=0;i<0x5B;i++)
         {
-            if(ui->combo_add_mat_2->currentText()== names.MateriaNames(i)){ui->combo_add_mat->setCurrentIndex(i);}
+            if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
         }
-// if its eskill set it up right , or else do normal setup.
-        if(ui->combo_add_mat_2->currentText()== tr("Enemy Skill")){ui->eskill_group->setVisible(true);ui->sb_addap->setEnabled(0);geteskills(ui->tbl_materia->currentRow());}
-        else{ui->eskill_group->setVisible(false);ui->sb_addap->setEnabled(1);}
     }
-}
+    else
+    {
+        load=true;
+        for(int i=0;i<0x5B;i++){if(index==Materias[i].type){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}}
+        load=false;
+    }
+}}
+
+void MainWindow::on_combo_add_mat_2_currentIndexChanged()
+{if(!load){//set combo_add_mat.setCurrentindex = selected materia.id
+    for(int i=0;i<0x5B;i++)
+    {
+        if(ui->combo_add_mat_2->currentText()== names.MateriaNames(i)){ui->combo_add_mat->setCurrentIndex(i);}
+    }
+// if its eskill set it up right , or else do normal setup.
+    if(ui->combo_add_mat_2->currentText()== tr("Enemy Skill")){ui->eskill_group->setVisible(true);ui->sb_addap->setEnabled(0);geteskills(ui->tbl_materia->currentRow());}
+    else{ui->eskill_group->setVisible(false);ui->sb_addap->setEnabled(1);}
+}}
+
 void MainWindow::on_clearMateria_clicked()
 {
     ff7.slot[s].materias[ui->tbl_materia->currentRow()].id = 0xFF;
     ui->sb_addap->setValue(0xFFFFFF);
     guirefresh();
 }
+
 void MainWindow::on_btn_eskillall_clicked()
 {
     for (int i=0;i<24;i++)
@@ -3673,24 +3270,23 @@ void MainWindow::geteskills(int row)
     ui->list_eskill->setCurrentRow(-1);
     load = false;
 }
+
 void MainWindow::on_list_eskill_itemChanged()
-{
-    if(!load)
-    {
-        quint32 temp = ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[0] |(ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[1] << 8) | (ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2] << 16);
-        if(ui->list_eskill->currentItem()->checkState()){temp |= (1 << ui->list_eskill->currentRow());}
-        else{temp &= ~(1<<ui->list_eskill->currentRow());}
-        load = true;
-        ui->sb_addap->setValue(temp);
-        load = false;
-        int a = (temp & 0xff);
-        int b = (temp & 0xff00) >> 8;
-        int c = (temp & 0xff0000) >> 16;
-        ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[0] = a;
-        ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[1] = b;
-        ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2] = c;
-    }
-}
+{if(!load){
+    quint32 temp = ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[0] |(ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[1] << 8) | (ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2] << 16);
+    if(ui->list_eskill->currentItem()->checkState()){temp |= (1 << ui->list_eskill->currentRow());}
+    else{temp &= ~(1<<ui->list_eskill->currentRow());}
+    load = true;
+    ui->sb_addap->setValue(temp);
+    load = false;
+    int a = (temp & 0xff);
+    int b = (temp & 0xff00) >> 8;
+    int c = (temp & 0xff0000) >> 16;
+    ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[0] = a;
+    ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[1] = b;
+    ff7.slot[s].materias[ui->tbl_materia->currentRow()].ap[2] = c;
+}}
+
 void MainWindow::on_btn_eskillclear_clicked()
 {
     for (int i=0;i<24;i++)
@@ -3717,205 +3313,101 @@ void MainWindow::on_tbl_location_field_itemSelectionChanged()
     ui->tbl_location_field->setCurrentCell(ui->tbl_location_field->currentRow(),5);
     ui->sb_coordz->setValue(ui->tbl_location_field->currentItem()->text().toInt());
 }
-void MainWindow::on_sb_map_id_valueChanged()
-{
-    if(!load){ff7.slot[s].mapid= ui->sb_map_id->value();}
-}
-void MainWindow::on_sb_loc_id_valueChanged()
-{
-    if(!load){ff7.slot[s].locationid = ui->sb_loc_id->value();}
-}
+void MainWindow::on_sb_map_id_valueChanged(){if(!load){ff7.slot[s].mapid= ui->sb_map_id->value();}}
+void MainWindow::on_sb_loc_id_valueChanged(){if(!load){ff7.slot[s].locationid = ui->sb_loc_id->value();}}
+void MainWindow::on_sb_coordx_valueChanged(){if(!load){ff7.slot[s].coord.x = ui->sb_coordx->value();}}
+void MainWindow::on_sb_coordy_valueChanged(){if(!load){ff7.slot[s].coord.y = ui->sb_coordy->value();}}
+void MainWindow::on_sb_coordz_valueChanged(){if(!load){ff7.slot[s].coord.z = ui->sb_coordz->value();}}
+
 void MainWindow::on_line_location_textChanged()
-{
-    if (!load)
-    {
-        for (int i=0;i<32;i++){ff7.slot[s].desc.location[i] =0xFF;}
-        for (int i=0;i<ui->line_location->text().size();i++){ff7.slot[s].desc.location[i] = chFF7[ui->line_location->text().at(i).toAscii()];}
-    }
-}
-void MainWindow::on_sb_coordx_valueChanged()
-{
-    if(!load){ff7.slot[s].coord.x = ui->sb_coordx->value();}
-}
-void MainWindow::on_sb_coordy_valueChanged()
-{
-    if(!load){ff7.slot[s].coord.y = ui->sb_coordy->value();}
-}
-void MainWindow::on_sb_coordz_valueChanged()
-{
-    if(!load){ff7.slot[s].coord.z = ui->sb_coordz->value();}
-}
+{if (!load){
+    for (int i=0;i<32;i++){ff7.slot[s].desc.location[i] =0xFF;}
+    for (int i=0;i<ui->line_location->text().size();i++){ff7.slot[s].desc.location[i] = chFF7[ui->line_location->text().at(i).toAscii()];}
+}}
 
 //char stats tab
 void MainWindow::on_cb_id_toggled(bool checked)
-{
+{if(!load){
+    if (curchar ==6)
+    {
+        if (checked){ff7.slot[s].chars[6].id = 9;}
+        else {ff7.slot[s].chars[6].id = 6;}
+        charupdate();
+        ui->btn_cait->setStyleSheet(avatar_style(ff7.slot[s].chars[6].id));
+    }
+    if (curchar ==7)
+    {
+        if (checked){ff7.slot[s].chars[7].id = 10;}
+        else {ff7.slot[s].chars[7].id = 7;}
+        charupdate();
+        ui->btn_vincent->setStyleSheet(avatar_style(ff7.slot[s].chars[7].id));
+    }
+}}
 
-    if(!load)
-    {
-        if (curchar ==6)
-        {
-            if (checked){ff7.slot[s].chars[6].id = 9;}
-            else {ff7.slot[s].chars[6].id = 6;}
-            ui->btn_cait->click();
-        }
-        if (curchar ==7)
-        {
-            if (checked){ff7.slot[s].chars[7].id = 10;}
-            else {ff7.slot[s].chars[7].id = 7;}
-            ui->btn_vincent->click();
-        }
-    }
-}
 void MainWindow::on_line_name_lostFocus()
-{
-    if(!load)
+{if(!load){
+    for (int i=0;i<12;i++){ff7.slot[s].chars[curchar].name[i] =0xFF;}
+    for (int i=0;i<ui->line_name->text().size();i++){ff7.slot[s].chars[curchar].name[i] = chFF7[ui->line_name->text().at(i).toAscii()];}
+    if (curchar == ui->combo_party1->currentIndex())
     {
-        for (int i=0;i<12;i++){ff7.slot[s].chars[curchar].name[i] =0xFF;}
-        for (int i=0;i<ui->line_name->text().size();i++){ff7.slot[s].chars[curchar].name[i] = chFF7[ui->line_name->text().at(i).toAscii()];}
-        if (curchar == ui->combo_party1->currentIndex())
-        {
-            for (int i=0;i<16;i++){ff7.slot[s].desc.name[i] =0xFF;}
-            for (int i=0;i<ui->line_name->text().size();i++){ff7.slot[s].desc.name[i] = chFF7[ui->line_name->text().at(i).toAscii()];}
-        }
+        for (int i=0;i<16;i++){ff7.slot[s].desc.name[i] =0xFF;}
+        for (int i=0;i<ui->line_name->text().size();i++){ff7.slot[s].desc.name[i] = chFF7[ui->line_name->text().at(i).toAscii()];}
     }
-}
+}}
+
 void MainWindow::on_sb_lvl_valueChanged()
-{
-    if(!load)
-    {
-        ff7.slot[s].chars[curchar].level = ui->sb_lvl->value();
-        ff7.slot[s].desc.level = ui->sb_lvl->value();
-    }
-}
-void MainWindow::on_sb_curhp_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].curHP = ui->sb_curhp->value();}
-}
-void MainWindow::on_sb_curmp_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].curMP = ui->sb_curmp->value();}
-}
-void MainWindow::on_sb_maxhp_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].maxHP =ui->sb_maxhp->value();}
-}
-void MainWindow::on_sb_maxmp_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].maxMP =ui->sb_maxmp->value();}
-}
-void MainWindow::on_sb_hp_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].baseHP = ui->sb_hp->value();}
-}
-void MainWindow::on_sb_mp_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].baseMP = ui->sb_mp->value();}
-}
-void MainWindow::on_sb_next_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].expNext =  ui->sb_next->value();}
-}
-void MainWindow::on_sb_exp_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].exp = ui->sb_exp->value();}
-}
-void MainWindow::on_sb_kills_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].kills = ui->sb_kills->value();}
-}
-void MainWindow::on_sb_str_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].strength = ui->sb_str->value();}
-}
-void MainWindow::on_sb_dex_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].dexterity = ui->sb_dex->value();}
-}
-void MainWindow::on_sb_mag_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].magic = ui->sb_mag->value();}
-}
-void MainWindow::on_sb_vit_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].vitality = ui->sb_vit->value();}
-}
-void MainWindow::on_sb_spr_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].spirit = ui->sb_spr->value();}
-}
-void MainWindow::on_sb_lck_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].luck = ui->sb_lck->value();}
-}
-void MainWindow::on_sb_strbonus_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].strength_bonus = ui->sb_strbonus->value();}
-}
-void MainWindow::on_sb_dexbonus_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].dexterity_bonus = ui->sb_dexbonus->value();}
-}
-void MainWindow::on_sb_magbonus_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].magic_bonus = ui->sb_magbonus->value();}
-}
-void MainWindow::on_sb_vitbonus_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].vitality_bonus = ui->sb_vitbonus->value();}
-}
-void MainWindow::on_sb_sprbonus_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].spirit_bonus = ui->sb_sprbonus->value();}
-}
-void MainWindow::on_sb_lckbonus_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].luck_bonus = ui->sb_lckbonus->value();}
-}
+{if(!load){
+    ff7.slot[s].chars[curchar].level = ui->sb_lvl->value();
+    ff7.slot[s].desc.level = ui->sb_lvl->value();
+}}
+
+void MainWindow::on_sb_curhp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].curHP = ui->sb_curhp->value();}}
+void MainWindow::on_sb_curmp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].curMP = ui->sb_curmp->value();}}
+void MainWindow::on_sb_maxhp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].maxHP =ui->sb_maxhp->value();}}
+void MainWindow::on_sb_maxmp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].maxMP =ui->sb_maxmp->value();}}
+void MainWindow::on_sb_hp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].baseHP = ui->sb_hp->value();}}
+void MainWindow::on_sb_mp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].baseMP = ui->sb_mp->value();}}
+void MainWindow::on_sb_next_valueChanged(){if(!load){ff7.slot[s].chars[curchar].expNext =  ui->sb_next->value();}}
+void MainWindow::on_sb_exp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].exp = ui->sb_exp->value();}}
+void MainWindow::on_sb_kills_valueChanged(){if(!load){ff7.slot[s].chars[curchar].kills = ui->sb_kills->value();}}
+void MainWindow::on_sb_str_valueChanged(){if(!load){ff7.slot[s].chars[curchar].strength = ui->sb_str->value();}}
+void MainWindow::on_sb_dex_valueChanged(){if(!load){ff7.slot[s].chars[curchar].dexterity = ui->sb_dex->value();}}
+void MainWindow::on_sb_mag_valueChanged(){if(!load){ff7.slot[s].chars[curchar].magic = ui->sb_mag->value();}}
+void MainWindow::on_sb_vit_valueChanged(){if(!load){ff7.slot[s].chars[curchar].vitality = ui->sb_vit->value();}}
+void MainWindow::on_sb_spr_valueChanged(){if(!load){ff7.slot[s].chars[curchar].spirit = ui->sb_spr->value();}}
+void MainWindow::on_sb_lck_valueChanged(){if(!load){ff7.slot[s].chars[curchar].luck = ui->sb_lck->value();}}
+void MainWindow::on_sb_strbonus_valueChanged(){if(!load){ff7.slot[s].chars[curchar].strength_bonus = ui->sb_strbonus->value();}}
+void MainWindow::on_sb_dexbonus_valueChanged(){if(!load){ff7.slot[s].chars[curchar].dexterity_bonus = ui->sb_dexbonus->value();}}
+void MainWindow::on_sb_magbonus_valueChanged(){if(!load){ff7.slot[s].chars[curchar].magic_bonus = ui->sb_magbonus->value();}}
+void MainWindow::on_sb_vitbonus_valueChanged(){if(!load){ff7.slot[s].chars[curchar].vitality_bonus = ui->sb_vitbonus->value();}}
+void MainWindow::on_sb_sprbonus_valueChanged(){if(!load){ff7.slot[s].chars[curchar].spirit_bonus = ui->sb_sprbonus->value();}}
+void MainWindow::on_sb_lckbonus_valueChanged(){if(!load){ff7.slot[s].chars[curchar].luck_bonus = ui->sb_lckbonus->value();}}
+
 void MainWindow::on_cb_front_clicked(bool checked)
-{
-    if(!load)
-    {
-        if(checked) ff7.slot[s].chars[curchar].flags[1] = 255;
-        if(!checked)ff7.slot[s].chars[curchar].flags[1] =254;
-    }
-}
+{if(!load){
+    if(checked) ff7.slot[s].chars[curchar].flags[1] = 255;
+    if(!checked)ff7.slot[s].chars[curchar].flags[1] =254;
+}}
+
 void MainWindow::on_cb_fury_clicked(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ui->cb_sadness->setChecked(0); ff7.slot[s].chars[curchar].flags[0] =32;}
-        else {ff7.slot[s].chars[curchar].flags[0]=0;}
-    }
-}
+{if(!load){
+    if(checked){ui->cb_sadness->setChecked(0); ff7.slot[s].chars[curchar].flags[0] =32;}
+    else {ff7.slot[s].chars[curchar].flags[0]=0;}
+}}
+
 void MainWindow::on_cb_sadness_clicked(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ui->cb_fury->setChecked(0); ff7.slot[s].chars[curchar].flags[0] =16;}
-        else {ff7.slot[s].chars[curchar].flags[0]=0;}
-    }
-}
+{if(!load){
+    if(checked){ui->cb_fury->setChecked(0); ff7.slot[s].chars[curchar].flags[0] =16;}
+    else {ff7.slot[s].chars[curchar].flags[0]=0;}
+}}
+
 //char limit stuff
-void MainWindow::on_sb_used1_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].timesused1 = ui->sb_used1->value();}
-}
-void MainWindow::on_sb_used2_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].timesused2 = ui->sb_used2->value();}
-}
-void MainWindow::on_sb_used3_valueChanged()
-{
-    if(!load){ff7.slot[s].chars[curchar].timesused3 = ui->sb_used3->value();}
-}
-void MainWindow::on_sb_limitlvl_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chars[curchar].limitlevel= value;} //ui->sb_limitlvl->value();
-}
-void MainWindow::on_slide_limit_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].chars[curchar].limitbar = value;} //ui->slide_limit->value();
-}
+void MainWindow::on_sb_used1_valueChanged(){if(!load){ff7.slot[s].chars[curchar].timesused1 = ui->sb_used1->value();}}
+void MainWindow::on_sb_used2_valueChanged(){if(!load){ff7.slot[s].chars[curchar].timesused2 = ui->sb_used2->value();}}
+void MainWindow::on_sb_used3_valueChanged(){if(!load){ff7.slot[s].chars[curchar].timesused3 = ui->sb_used3->value();}}
+void MainWindow::on_sb_limitlvl_valueChanged(int value){if(!load){ff7.slot[s].chars[curchar].limitlevel= value;}}
+void MainWindow::on_slide_limit_valueChanged(int value){if(!load){ff7.slot[s].chars[curchar].limitbar = value;}}
+
 void MainWindow::limitapply()
 {
     ff7.slot[s].chars[curchar].limits = 0;
@@ -3942,53 +3434,26 @@ void MainWindow::limitapply()
         if (ui->limit_4 ->isChecked()==1) ff7.slot[s].chars[curchar].limits |= (1<<9);
     }
 }
-void MainWindow::on_limit_1a_toggled()
-{
-    if(!load) {limitapply();}
-}
-void MainWindow::on_limit_1b_toggled()
-{
-    if(!load) {limitapply();}
-}
-void MainWindow::on_limit_2a_toggled()
-{
-    if(!load) {limitapply();}
-}
-void MainWindow::on_limit_2b_toggled()
-{
-    if(!load) {limitapply();}
-}
-void MainWindow::on_limit_3a_toggled()
-{
-    if(!load) {limitapply();}
-}
-void MainWindow::on_limit_3b_toggled()
-{
-    if(!load) {limitapply();}
-}
-void MainWindow::on_limit_4_toggled()
-{
-    if(!load) {limitapply();}
-}
+
+void MainWindow::on_limit_1a_toggled(){if(!load) {limitapply();}}
+void MainWindow::on_limit_1b_toggled(){if(!load) {limitapply();}}
+void MainWindow::on_limit_2a_toggled(){if(!load) {limitapply();}}
+void MainWindow::on_limit_2b_toggled(){if(!load) {limitapply();}}
+void MainWindow::on_limit_3a_toggled(){if(!load) {limitapply();}}
+void MainWindow::on_limit_3b_toggled(){if(!load) {limitapply();}}
+void MainWindow::on_limit_4_toggled(){if(!load) {limitapply();}}
 
 //Char Equiptment Tab
 
-void MainWindow::on_combo_weapon_currentIndexChanged()
-{
-    setweaponslots();
-}
 void MainWindow::on_combo_armor_currentIndexChanged(int index)
-{
-    if(!load)
-    {
-        ff7.slot[s].chars[curchar].armor = index;
-        setarmorslots();
-    }
-}
-void MainWindow::on_combo_acc_currentIndexChanged(int index)
-{
-    if(!load){ff7.slot[s].chars[curchar].accessory = index;}
-}
+{if(!load){
+    ff7.slot[s].chars[curchar].armor = index;
+    setarmorslots();
+}}
+
+void MainWindow::on_combo_weapon_currentIndexChanged(){setweaponslots();}
+void MainWindow::on_combo_acc_currentIndexChanged(int index){if(!load){ff7.slot[s].chars[curchar].accessory = index;}}
+
 void MainWindow::on_combo_weapon_activated(int index)
 {
     switch(curchar)
@@ -4004,6 +3469,7 @@ void MainWindow::on_combo_weapon_activated(int index)
         case 8:{ff7.slot[s].chars[curchar].weapon = index+73;break;}
     }
 }
+
 void MainWindow::on_combo_add_mat_slot_currentIndexChanged(int index)
 {
     if(!load)
@@ -4023,24 +3489,19 @@ void MainWindow::on_combo_add_mat_slot_currentIndexChanged(int index)
         ui->sb_addap_slot->setEnabled(true);
     }
 }
-void MainWindow::on_sb_addap_slot_valueChanged(int value)
-{
-    if(!load)
-    {
-        int a = (value & 0xff);
-        int b = (value & 0xff00) >> 8;
-        int c = (value & 0xff0000) >> 16;
-        ff7.slot[s].chars[curchar].materias[mslotsel].ap[0] = a;
-        ff7.slot[s].chars[curchar].materias[mslotsel].ap[1] = b;
-        ff7.slot[s].chars[curchar].materias[mslotsel].ap[2] = c;
-    }
-}
 
-void MainWindow::on_btn_mastermateria_slot_clicked()
-{
-    ui->sb_addap_slot->setValue(0xFFFFFF);
-    mslotcalc();
-}
+void MainWindow::on_sb_addap_slot_valueChanged(int value)
+{if(!load){
+    int a = (value & 0xff);
+    int b = (value & 0xff00) >> 8;
+    int c = (value & 0xff0000) >> 16;
+    ff7.slot[s].chars[curchar].materias[mslotsel].ap[0] = a;
+    ff7.slot[s].chars[curchar].materias[mslotsel].ap[1] = b;
+    ff7.slot[s].chars[curchar].materias[mslotsel].ap[2] = c;
+}}
+
+void MainWindow::on_btn_mastermateria_slot_clicked(){ui->sb_addap_slot->setValue(0xFFFFFF);   mslotcalc();}
+
 void MainWindow::on_clearMateria_slot_clicked()
 {
     ff7.slot[s].chars[curchar].materias[mslotsel].id = 0xFF;
@@ -4066,87 +3527,22 @@ void MainWindow::mslotcalc()
         geteskills2(mslotsel);
     }
 }
-void MainWindow::on_w_m_s1_clicked()
-{
-    mslotsel =0;
-    mslotcalc();
-}
-void MainWindow::on_w_m_s2_clicked()
-{
-    mslotsel =1;
-    mslotcalc();
-}
-void MainWindow::on_w_m_s3_clicked()
-{
-    mslotsel =2;
-    mslotcalc();
-}
-void MainWindow::on_w_m_s4_clicked()
-{
-    mslotsel =3;
-    mslotcalc();
-}
-void MainWindow::on_w_m_s5_clicked()
-{
-    mslotsel =4;
-    mslotcalc();
-}
-void MainWindow::on_w_m_s6_clicked()
-{
-    mslotsel =5;
-    mslotcalc();
-}
-void MainWindow::on_w_m_s7_clicked()
-{
-    mslotsel =6;
-    mslotcalc();
-}
-void MainWindow::on_w_m_s8_clicked()
-{
-    mslotsel =7;
-    mslotcalc();
-}
-
-void MainWindow::on_a_m_s1_clicked()
-{
-    mslotsel =8;
-    mslotcalc();
-}
-void MainWindow::on_a_m_s2_clicked()
-{
-    mslotsel =9;
-    mslotcalc();
-}
-void MainWindow::on_a_m_s3_clicked()
-{
-    mslotsel =10;
-    mslotcalc();
-}
-void MainWindow::on_a_m_s4_clicked()
-{
-    mslotsel =11;
-    mslotcalc();
-}
-void MainWindow::on_a_m_s5_clicked()
-{
-    mslotsel =12;
-    mslotcalc();
-}
-void MainWindow::on_a_m_s6_clicked()
-{
-    mslotsel =13;
-    mslotcalc();
-}
-void MainWindow::on_a_m_s7_clicked()
-{
-    mslotsel =14;
-    mslotcalc();
-}
-void MainWindow::on_a_m_s8_clicked()
-{
-    mslotsel = 15;
-    mslotcalc();
-}
+void MainWindow::on_w_m_s1_clicked(){mslotsel=0;    mslotcalc();}
+void MainWindow::on_w_m_s2_clicked(){mslotsel=1;    mslotcalc();}
+void MainWindow::on_w_m_s3_clicked(){mslotsel=2;    mslotcalc();}
+void MainWindow::on_w_m_s4_clicked(){mslotsel=3;    mslotcalc();}
+void MainWindow::on_w_m_s5_clicked(){mslotsel=4;    mslotcalc();}
+void MainWindow::on_w_m_s6_clicked(){mslotsel=5;    mslotcalc();}
+void MainWindow::on_w_m_s7_clicked(){mslotsel=6;    mslotcalc();}
+void MainWindow::on_w_m_s8_clicked(){mslotsel=7;    mslotcalc();}
+void MainWindow::on_a_m_s1_clicked(){mslotsel=8;    mslotcalc();}
+void MainWindow::on_a_m_s2_clicked(){mslotsel=9;    mslotcalc();}
+void MainWindow::on_a_m_s3_clicked(){mslotsel=10;   mslotcalc();}
+void MainWindow::on_a_m_s4_clicked(){mslotsel=11;   mslotcalc();}
+void MainWindow::on_a_m_s5_clicked(){mslotsel=12;   mslotcalc();}
+void MainWindow::on_a_m_s6_clicked(){mslotsel=13;   mslotcalc();}
+void MainWindow::on_a_m_s7_clicked(){mslotsel=14;   mslotcalc();}
+void MainWindow::on_a_m_s8_clicked(){mslotsel=15;   mslotcalc();}
 
 void MainWindow::geteskills2(int row)
 {
@@ -4163,25 +3559,22 @@ void MainWindow::geteskills2(int row)
     load=false;
 }
 void MainWindow::on_list_eskill_2_itemChanged()
-{
-    if(!load)
-    {
-        quint32 temp = ff7.slot[s].chars[curchar].materias[mslotsel].ap[0] |(ff7.slot[s].chars[curchar].materias[mslotsel].ap[1] << 8) | (ff7.slot[s].chars[curchar].materias[mslotsel].ap[2] << 16);
-        if(ui->list_eskill_2->currentItem()->checkState()){temp |= (1 << ui->list_eskill_2->currentRow());}
-        else{temp &= ~(1<<ui->list_eskill_2->currentRow());}
-        int a = (temp & 0xff);
-        int b = (temp & 0xff00) >> 8;
-        int c = (temp & 0xff0000) >> 16;
-        ff7.slot[s].chars[curchar].materias[mslotsel].ap[0] = a;
-        ff7.slot[s].chars[curchar].materias[mslotsel].ap[1] = b;
-        ff7.slot[s].chars[curchar].materias[mslotsel].ap[2] = c;
-        load=true;
-        ui->sb_addap_slot->setValue(temp);
-        load=false;
-    }
-}
+{if(!load){
+    quint32 temp = ff7.slot[s].chars[curchar].materias[mslotsel].ap[0] |(ff7.slot[s].chars[curchar].materias[mslotsel].ap[1] << 8) | (ff7.slot[s].chars[curchar].materias[mslotsel].ap[2] << 16);
+    if(ui->list_eskill_2->currentItem()->checkState()){temp |= (1 << ui->list_eskill_2->currentRow());}
+    else{temp &= ~(1<<ui->list_eskill_2->currentRow());}
+    int a = (temp & 0xff);
+    int b = (temp & 0xff00) >> 8;
+    int c = (temp & 0xff0000) >> 16;
+    ff7.slot[s].chars[curchar].materias[mslotsel].ap[0] = a;
+    ff7.slot[s].chars[curchar].materias[mslotsel].ap[1] = b;
+    ff7.slot[s].chars[curchar].materias[mslotsel].ap[2] = c;
+    load=true;
+    ui->sb_addap_slot->setValue(temp);
+    load=false;
+}}
 
-// game options
+/*~~~~~~~~~~~~~~~~~~~ Game Options~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_slide_ul_r_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[0][0] = value;}
@@ -4698,46 +4091,17 @@ void MainWindow::on_slide_lr_b_valueChanged(int value)
 
 /*end of color sliders*/
 
-void MainWindow::on_slide_battlespeed_valueChanged(int value)
-{
-    ff7.slot[s].battlespeed = value;
-}
-void MainWindow::on_slide_battlemspeed_valueChanged(int value)
-{
-    ff7.slot[s].battlemspeed = value;
-}
-void MainWindow::on_slide_fieldmspeed_valueChanged(int value)
-{
-    ff7.slot[s].fieldmspeed = value;
-}
-void MainWindow::on_combo_control_currentIndexChanged()
-{
-    if(!load){setoptions_one();}
-}
-void MainWindow::on_combo_sound_currentIndexChanged()
-{
-    if(!load){setoptions_one();}
-}
-void MainWindow::on_combo_cursor_currentIndexChanged()
-{
-    if(!load){setoptions_one();}
-}
-void MainWindow::on_combo_atb_currentIndexChanged()
-{
-    if(!load){setoptions_one();}
-}
-void MainWindow::on_combo_camera_currentIndexChanged()
-{
-    if(!load){setoptions_two();}
-}
-void MainWindow::on_combo_magic_order_currentIndexChanged()
-{
-    if(!load){setoptions_two();}
-}
-void MainWindow::on_cb_battle_help_toggled()
-{
-    if(!load){setoptions_two();}
-}
+void MainWindow::on_slide_battlespeed_valueChanged(int value){if(!load){ff7.slot[s].battlespeed = value;}}
+void MainWindow::on_slide_battlemspeed_valueChanged(int value){if(!load){ff7.slot[s].battlemspeed = value;}}
+void MainWindow::on_slide_fieldmspeed_valueChanged(int value){if(!load){ff7.slot[s].fieldmspeed = value;}}
+void MainWindow::on_combo_control_currentIndexChanged(){if(!load){setoptions_one();}}
+void MainWindow::on_combo_sound_currentIndexChanged(){if(!load){setoptions_one();}}
+void MainWindow::on_combo_cursor_currentIndexChanged(){if(!load){setoptions_one();}}
+void MainWindow::on_combo_atb_currentIndexChanged(){if(!load){setoptions_one();}}
+void MainWindow::on_combo_camera_currentIndexChanged(){if(!load){setoptions_two();}}
+void MainWindow::on_combo_magic_order_currentIndexChanged(){if(!load){setoptions_two();}}
+void MainWindow::on_cb_battle_help_toggled(){if(!load){setoptions_two();}}
+
 void MainWindow::setoptions_one()
 {
     load = true;
@@ -4772,25 +4136,10 @@ void MainWindow::on_cb_c2_born_toggled(bool checked) // not working correctly.
     else{ff7.slot[s].chocoborn |= (0<<1);}
 }
 
-void MainWindow::on_sb_mprogress_valueChanged()
-{
-    if(!load){ff7.slot[s].mprogress = ui->sb_mprogress->value();}
-}
-
-void MainWindow::on_sb_bm_progress1_valueChanged(int value)
-{
-if(!load){ff7.slot[s].bm_progress1 =value;}
-}
-
-void MainWindow::on_sb_bm_progress2_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].bm_progress2 =value;}
-}
-
-void MainWindow::on_sb_bm_progress3_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].bm_progress3 =value;}
-}
+void MainWindow::on_sb_mprogress_valueChanged(){if(!load){ff7.slot[s].mprogress = ui->sb_mprogress->value();}}
+void MainWindow::on_sb_bm_progress1_valueChanged(int value){if(!load){ff7.slot[s].bm_progress1 =value;}}
+void MainWindow::on_sb_bm_progress2_valueChanged(int value){if(!load){ff7.slot[s].bm_progress2 =value;}}
+void MainWindow::on_sb_bm_progress3_valueChanged(int value){if(!load){ff7.slot[s].bm_progress3 =value;}}
 
 void MainWindow::on_cb_replay_currentIndexChanged(int index)
 {
@@ -5036,353 +4385,230 @@ void MainWindow::testdata_refresh()
     else{ui->cb_midgartrain_8->setChecked(Qt::Unchecked);}
     ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
 
-    load=false;}//end of testdata_refresh()
+    load=false;
+}//end of testdata_refresh()
+
+void MainWindow::on_sb_b_love_aeris_valueChanged(int value){if(!load){ff7.slot[s].b_love.aeris = value;}}
+void MainWindow::on_sb_b_love_tifa_valueChanged(int value){if(!load){ff7.slot[s].b_love.tifa = value;}}
+void MainWindow::on_sb_b_love_yuffie_valueChanged(int value){if(!load){ff7.slot[s].b_love.yuffie = value;}}
+void MainWindow::on_sb_b_love_barret_valueChanged(int value){if(!load){ff7.slot[s].b_love.barret = value;}}
+void MainWindow::on_sb_coster_1_valueChanged(int value){if(!load){ff7.slot[s].coster_1=value;}}
+void MainWindow::on_sb_coster_2_valueChanged(int value){if(!load){ff7.slot[s].coster_2 = value;}}
+void MainWindow::on_sb_coster_3_valueChanged(int value){if(!load){ff7.slot[s].coster_3 = value;}}
+void MainWindow::on_combo_id_currentIndexChanged(int index){if(!load){ff7.slot[s].chars[curchar].id=index; guirefresh();}}
+void MainWindow::on_sb_timer_time_hour_valueChanged(int value){if(!load){ff7.slot[s].timer[0] = value;}}
+void MainWindow::on_sb_timer_time_min_valueChanged(int value){if(!load){ff7.slot[s].timer[1] = value;}}
+void MainWindow::on_sb_timer_time_sec_valueChanged(int value){ if(!load){ff7.slot[s].timer[2] = value;}}
 
 void MainWindow::on_list_menu_visible_itemChanged()
-{
-    if(!load)
-    {
-        int j=ui->list_menu_visible->currentRow();
-        if(ui->list_menu_visible->currentItem()->checkState() ==Qt::Checked){ff7.slot[s].menu_visible |= (1<<j);}
-        else{ff7.slot[s].menu_visible &= ~(1<<j);}
-    }
-}
+{if(!load){
+    int j=ui->list_menu_visible->currentRow();
+    if(ui->list_menu_visible->currentItem()->checkState() ==Qt::Checked){ff7.slot[s].menu_visible |= (1<<j);}
+    else{ff7.slot[s].menu_visible &= ~(1<<j);}
+}}
 
 void MainWindow::on_list_menu_locked_itemChanged()
-{
-    if(!load)
-    {
-        int j=ui->list_menu_locked->currentRow();
-        if(ui->list_menu_locked->currentItem()->checkState() ==Qt::Checked){ff7.slot[s].menu_locked |= (1<<j);}
-        else{ff7.slot[s].menu_locked &= ~(1<<j);}
-    }
-}
-
-void MainWindow::on_sb_b_love_aeris_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].b_love.aeris = value;}
-}
-
-void MainWindow::on_sb_b_love_tifa_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].b_love.tifa = value;}
-}
-
-void MainWindow::on_sb_b_love_yuffie_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].b_love.yuffie = value;}
-}
-
-void MainWindow::on_sb_b_love_barret_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].b_love.barret = value;}
-}
-
-void MainWindow::on_sb_coster_1_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].coster_1=value;}
-}
-void MainWindow::on_sb_coster_2_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].coster_2 = value;}
-}
-void MainWindow::on_sb_coster_3_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].coster_3 = value;}
-}
+{if(!load){
+    int j=ui->list_menu_locked->currentRow();
+    if(ui->list_menu_locked->currentItem()->checkState() ==Qt::Checked){ff7.slot[s].menu_locked |= (1<<j);}
+    else{ff7.slot[s].menu_locked &= ~(1<<j);}
+}}
 
 void MainWindow::on_sb_u_weapon_hp_valueChanged(int value)
-{
-    if(!load)
-    {
-        load=true;
-        int a = (value & 0xff);
-        int b = (value & 0xff00) >> 8;
-        int c = (value & 0xff0000) >> 16;
-        ff7.slot[s].u_weapon_hp[0] = a;
-        ff7.slot[s].u_weapon_hp[1] = b;
-        ff7.slot[s].u_weapon_hp[2] = c;
-        load=false;
-    }
-}
+{if(!load){
+    load=true;
+    int a = (value & 0xff);
+    int b = (value & 0xff00) >> 8;
+    int c = (value & 0xff0000) >> 16;
+    ff7.slot[s].u_weapon_hp[0] = a;
+    ff7.slot[s].u_weapon_hp[1] = b;
+    ff7.slot[s].u_weapon_hp[2] = c;
+    load=false;
+}}
 
 void MainWindow::on_cb_reg_vinny_toggled(bool checked)
-{
-    if(!load)
-    {
-        if (checked){ff7.slot[s].reg_vinny =0xFF;}
-        else{ff7.slot[s].reg_vinny =0xFB;}
-        testdata_refresh();
-    }
-}
+{if(!load){
+    if (checked){ff7.slot[s].reg_vinny =0xFF;}
+    else{ff7.slot[s].reg_vinny =0xFB;}
+    testdata_refresh();
+}}
 
 void MainWindow::on_cb_itemmask1_1_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].itemsmask_1 |= (1<<0);}
-        else{ff7.slot[s].itemsmask_1 &= ~(1<<0);}
-        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].itemsmask_1 |= (1<<0);}
+    else{ff7.slot[s].itemsmask_1 &= ~(1<<0);}
+    ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+}}
+
 void MainWindow::on_cb_itemmask1_2_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].itemsmask_1 |= (1<<1);}
-        else{ff7.slot[s].itemsmask_1 &= ~(1<<1);}
-        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].itemsmask_1 |= (1<<1);}
+    else{ff7.slot[s].itemsmask_1 &= ~(1<<1);}
+    ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+}}
 
 void MainWindow::on_cb_itemmask1_3_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].itemsmask_1 |= (1<<2);}
-        else{ff7.slot[s].itemsmask_1 &= ~(1<<2);}
-        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].itemsmask_1 |= (1<<2);}
+    else{ff7.slot[s].itemsmask_1 &= ~(1<<2);}
+    ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+}}
 
 void MainWindow::on_cb_itemmask1_4_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].itemsmask_1 |= (1<<3);}
-        else{ff7.slot[s].itemsmask_1 &= ~(1<<3);}
-        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].itemsmask_1 |= (1<<3);}
+    else{ff7.slot[s].itemsmask_1 &= ~(1<<3);}
+    ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+}}
 
 void MainWindow::on_cb_itemmask1_5_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].itemsmask_1 |= (1<<4);}
-        else{ff7.slot[s].itemsmask_1 &= ~(1<<4);}
-        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].itemsmask_1 |= (1<<4);}
+    else{ff7.slot[s].itemsmask_1 &= ~(1<<4);}
+    ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+}}
 
 void MainWindow::on_cb_itemmask1_6_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].itemsmask_1 |= (1<<5);}
-        else{ff7.slot[s].itemsmask_1 &= ~(1<<5);}
-        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].itemsmask_1 |= (1<<5);}
+    else{ff7.slot[s].itemsmask_1 &= ~(1<<5);}
+    ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+}}
 
 void MainWindow::on_cb_itemmask1_7_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].itemsmask_1 |= (1<<6);}
-        else{ff7.slot[s].itemsmask_1 &= ~(1<<6);}
-        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].itemsmask_1 |= (1<<6);}
+    else{ff7.slot[s].itemsmask_1 &= ~(1<<6);}
+    ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+}}
 
 void MainWindow::on_cb_itemmask1_8_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].itemsmask_1 |= (1<<7);}
-        else{ff7.slot[s].itemsmask_1 &= ~(1<<7);}
-        ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].itemsmask_1 |= (1<<7);}
+    else{ff7.slot[s].itemsmask_1 &= ~(1<<7);}
+    ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+}}
 
 void MainWindow::on_cb_materiacave_1_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].materiacaves |= (1<<0);}
-        else{ff7.slot[s].materiacaves &= ~(1<<0);}
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].materiacaves |= (1<<0);}
+    else{ff7.slot[s].materiacaves &= ~(1<<0);}
+}}
+
 void MainWindow::on_cb_materiacave_2_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].materiacaves |= (1<<1);}
-        else{ff7.slot[s].materiacaves &= ~(1<<1);}
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].materiacaves |= (1<<1);}
+    else{ff7.slot[s].materiacaves &= ~(1<<1);}
+}}
+
 void MainWindow::on_cb_materiacave_3_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].materiacaves |= (1<<2);}
-        else{ff7.slot[s].materiacaves &= ~(1<<2);}
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].materiacaves |= (1<<2);}
+    else{ff7.slot[s].materiacaves &= ~(1<<2);}
+}}
+
 void MainWindow::on_cb_materiacave_4_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].materiacaves |= (1<<3);}
-        else{ff7.slot[s].materiacaves &= ~(1<<3);}
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].materiacaves |= (1<<3);}
+    else{ff7.slot[s].materiacaves &= ~(1<<3);}
+}}
 
 void MainWindow::on_cb_reg_yuffie_toggled(bool checked)
-{
-    if(!load)
-    {
+{if(!load){
         if (checked){ff7.slot[s].reg_yuffie =0x6F;}
         else{ff7.slot[s].reg_yuffie =0x6E;}
         testdata_refresh();
-    }
-}
+}}
 
 void MainWindow::on_cb_yuffieforest_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].yuffieforest |= (1<<0);}
-        else{ff7.slot[s].yuffieforest &= ~(1<<0);}
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].yuffieforest |= (1<<0);}
+    else{ff7.slot[s].yuffieforest &= ~(1<<0);}
+}}
 
 void MainWindow::on_cb_midgartrain_1_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].midgartrainflags |= (1<<0);}
-        else{ff7.slot[s].midgartrainflags &= ~(1<<0);}
-        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].midgartrainflags |= (1<<0);}
+    else{ff7.slot[s].midgartrainflags &= ~(1<<0);}
+    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+}}
 
 void MainWindow::on_cb_midgartrain_2_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].midgartrainflags |= (1<<1);}
-        else{ff7.slot[s].midgartrainflags &= ~(1<<1);}
-        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].midgartrainflags |= (1<<1);}
+    else{ff7.slot[s].midgartrainflags &= ~(1<<1);}
+    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+}}
 
 void MainWindow::on_cb_midgartrain_3_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].midgartrainflags |= (1<<2);}
-        else{ff7.slot[s].midgartrainflags &= ~(1<<2);}
-        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].midgartrainflags |= (1<<2);}
+    else{ff7.slot[s].midgartrainflags &= ~(1<<2);}
+    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+}}
 
 void MainWindow::on_cb_midgartrain_4_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].midgartrainflags |= (1<<3);}
-        else{ff7.slot[s].midgartrainflags &= ~(1<<3);}
-        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].midgartrainflags |= (1<<3);}
+    else{ff7.slot[s].midgartrainflags &= ~(1<<3);}
+    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+}}
 
 void MainWindow::on_cb_midgartrain_5_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].midgartrainflags |= (1<<4);}
-        else{ff7.slot[s].midgartrainflags &= ~(1<<4);}
-        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].midgartrainflags |= (1<<4);}
+    else{ff7.slot[s].midgartrainflags &= ~(1<<4);}
+    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+}}
 
 void MainWindow::on_cb_midgartrain_6_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].midgartrainflags |= (1<<5);}
-        else{ff7.slot[s].midgartrainflags &= ~(1<<5);}
-        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].midgartrainflags |= (1<<5);}
+    else{ff7.slot[s].midgartrainflags &= ~(1<<5);}
+    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+}}
 
 void MainWindow::on_cb_midgartrain_7_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].midgartrainflags |= (1<<6);}
-        else{ff7.slot[s].midgartrainflags &= ~(1<<6);}
-        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-    }
-}
+{if(!load){
+    if(checked){ff7.slot[s].midgartrainflags |= (1<<6);}
+    else{ff7.slot[s].midgartrainflags &= ~(1<<6);}
+    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+}}
 
 void MainWindow::on_cb_midgartrain_8_toggled(bool checked)
-{
-    if(!load)
-    {
-        if(checked){ff7.slot[s].midgartrainflags |= (1<<7);}
-        else{ff7.slot[s].midgartrainflags &= ~(1<<7);}
-        ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-    }
-}
-
-void MainWindow::on_sb_timer_time_hour_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].timer[0] = value;}
-}
-
-void MainWindow::on_sb_timer_time_min_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].timer[1] = value;}
-}
-
-void MainWindow::on_sb_timer_time_sec_valueChanged(int value)
-{
-    if(!load){ff7.slot[s].timer[2] = value;}
-}
+{if(!load){
+    if(checked){ff7.slot[s].midgartrainflags |= (1<<7);}
+    else{ff7.slot[s].midgartrainflags &= ~(1<<7);}
+    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+}}
 
 void MainWindow::on_cb_tut_sub_stateChanged(int value)
-{
-    if(!load)
-    {
-        if (value == 0){ff7.slot[s].tut_sub =0x00;}
-        else if(value ==1){ff7.slot[s].tut_sub =0x2B;}
-        else if(value ==2){ff7.slot[s].tut_sub=0x2F;}
-        testdata_refresh();
-    }
-}
+{if(!load){
+    if (value == 0){ff7.slot[s].tut_sub =0x00;}
+    else if(value ==1){ff7.slot[s].tut_sub =0x2B;}
+    else if(value ==2){ff7.slot[s].tut_sub=0x2F;}
+    testdata_refresh();
+}}
 
 void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
-{
-    if(!load)
-    {
-        if (value == 0){ff7.slot[s].tut_save =0x00;}
-        else if(value ==1){ff7.slot[s].tut_save =0x32;}
-        else if(value ==2){ff7.slot[s].tut_save=0x3A;}
-        testdata_refresh();
-    }
-}
+{if(!load){
+    if (value == 0){ff7.slot[s].tut_save =0x00;}
+    else if(value ==1){ff7.slot[s].tut_save =0x32;}
+    else if(value ==2){ff7.slot[s].tut_save=0x3A;}
+    testdata_refresh();
+}}
 
 void MainWindow::on_cb_bombing_int_stateChanged(int checked)
-{
+{if(!load){
     if(checked == Qt::Checked){ff7.slot[s].intbombing =0x14;}
     else{ff7.slot[s].intbombing =0x56;}
-}
+}}
 
 void MainWindow::on_cb_Region_Slot_currentIndexChanged()
-{
-    if(!load)
-    {
-        QString new_regionString = ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1);
-        new_regionString.append(ui->cb_Region_Slot->currentText().toAscii());
-        ff7.SG_Region_String[s].clear();
-        ff7.SG_Region_String[s].append(&new_regionString);
-        if(ff7.savetype==3 || ff7.savetype==5|| ff7.savetype==6 || ff7.savetype ==7){fix_vmc_header(); guirefresh();}
-    }
-}
-
-void MainWindow::on_combo_id_currentIndexChanged(int index)
-{
-    if(!load){ff7.slot[s].chars[curchar].id=index; guirefresh();}
-}
+{if(!load){
+    QString new_regionString = ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1);
+    new_regionString.append(ui->cb_Region_Slot->currentText().toAscii());
+    ff7.SG_Region_String[s].clear();
+    ff7.SG_Region_String[s].append(&new_regionString);
+    if(ff7.savetype==3 || ff7.savetype==5|| ff7.savetype==6 || ff7.savetype ==7){fix_vmc_header(); guirefresh();}
+}}

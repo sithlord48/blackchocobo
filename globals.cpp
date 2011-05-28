@@ -79,7 +79,7 @@ memcpy(ff7.file_headerp,newheader,9);
 }
 
 void fix_psx_header(int i)
-{
+{   //Time Has to be fixed in the header
     if((ff7.slot[i].time/3600)>99){ff7.hf[i].sl_header[27]=0x58;ff7.hf[i].sl_header[29]=0x58;}
     else
     {
