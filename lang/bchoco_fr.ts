@@ -1315,10 +1315,6 @@
         <translation>Triste</translation>
     </message>
     <message>
-        <source>Exp:</source>
-        <translation>Exp :</translation>
-    </message>
-    <message>
         <source>Kills</source>
         <translation>Tués</translation>
     </message>
@@ -2041,10 +2037,6 @@
     <message>
         <source>HP</source>
         <translation>HP</translation>
-    </message>
-    <message>
-        <source>      Next</source>
-        <translation>      Suivant</translation>
     </message>
     <message>
         <source>Char&apos;s Limits</source>
@@ -4292,6 +4284,14 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>ID </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Total Exp:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

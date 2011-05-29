@@ -65,7 +65,6 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->combo_add_mat_slot->setVisible(false);
     ui->combo_id->setVisible(false);
     ui->lbl_id->setVisible(false);
-    //ui->mskill_group->setVisible(false);
 
     //testing stuff.
     ui->tabWidget->setTabEnabled(8,0);
@@ -1043,7 +1042,6 @@ void MainWindow::on_action_show_test_data_toggled()
     {
         ui->tab_test->setEnabled(true);
         ui->tabWidget->setTabEnabled(8,1);
-        testdata_refresh();
         ui->lbl_0x34->setVisible(true);
         ui->lbl_0x35->setVisible(true);
         ui->lbl_0x36->setVisible(true);
@@ -1055,14 +1053,12 @@ void MainWindow::on_action_show_test_data_toggled()
         ui->sb_bm_progress1->setEnabled(true);
         ui->sb_bm_progress2->setEnabled(true);
         ui->sb_bm_progress3->setEnabled(true);
-        ui->btn_vincent->setEnabled(true);
-        ui->btn_cait->setEnabled(true);
-        ui->cb_id->setEnabled(true);
         ui->cb_Region_Slot->setEnabled(true);
         ui->combo_id->setVisible(true);
         ui->lbl_id->setVisible(true);
         settings.setValue("show_test",1);
         ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
+        testdata_refresh();
     }
 
     else
@@ -1080,9 +1076,6 @@ void MainWindow::on_action_show_test_data_toggled()
         ui->sb_bm_progress1->setEnabled(false);
         ui->sb_bm_progress2->setEnabled(false);
         ui->sb_bm_progress3->setEnabled(false);
-        if(ff7.slot[s].chars[6].id == 9) {ui->btn_vincent->setEnabled(false);}
-        ui->cb_id->setEnabled(false);
-        if(ff7.slot[s].chars[7].id == 10) {ui->btn_cait->setEnabled(false);}
         ui->cb_Region_Slot->setEnabled(false);
         ui->combo_id->setVisible(false);
         ui->lbl_id->setVisible(false);
@@ -1420,7 +1413,8 @@ void MainWindow::charupdate(void)
 
     ui->combo_id->setCurrentIndex(ff7.slot[s].chars[curchar].id);
     ui->sb_exp->setValue(ff7.slot[s].chars[curchar].exp);
-    ui->sb_next->setValue(ff7.slot[s].chars[curchar].expNext);
+    //ui->sb_next->setValue(ff7.slot[s].chars[curchar].expNext);
+    ui->lcd_next->display(double(ff7.slot[s].chars[curchar].expNext));
     ui->sb_lvl->setValue(ff7.slot[s].chars[curchar].level);
     ui->sb_curhp->setValue(ff7.slot[s].chars[curchar].curHP);
     ui->sb_curmp->setValue(ff7.slot[s].chars[curchar].curMP);
@@ -2479,6 +2473,47 @@ void MainWindow::materiaupdate(void)
 load=false;
 ui->tbl_materia->setCurrentCell(j,1);//so that right side is set correctly.
 }
+void MainWindow::itemupdate()
+{
+    QTableWidgetItem *newItem;
+    int j= ui->tbl_itm->currentRow();
+    ui->tbl_itm->reset(); // just incase
+    ui->tbl_itm->setColumnWidth(0,145);
+    ui->tbl_itm->setColumnWidth(1,32);
+    ui->tbl_itm->setRowCount(320);
+    for (int i=0;i<320;i++) // set up items
+    {
+        if (ff7.slot[s].items[i].qty == 0xFF && ff7.slot[s].items[i].id == 0xFF)
+        {
+            newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
+            ui->tbl_itm->setItem(i,0,newItem);
+            ui->tbl_itm->setRowHeight(i,22);
+            newItem = new QTableWidgetItem("",0);
+            ui->tbl_itm->setItem(i,1,newItem);
+        }
+        else
+        {
+            QString qty;
+            if(ff7.slot[s].items[i].qty %2 ==0)
+            {
+                newItem = new QTableWidgetItem(QIcon(Items[ff7.slot[s].items[i].id].image),names.ItemNames(ff7.slot[s].items[i].id),0);
+                ui->tbl_itm->setItem(i,0, newItem);
+                ui->tbl_itm->setRowHeight(i,22);
+                newItem = new QTableWidgetItem(qty.setNum(ff7.slot[s].items[i].qty/2),0);
+                ui->tbl_itm->setItem(i,1,newItem);
+            }
+            else
+            {
+                newItem = new QTableWidgetItem(QIcon(Items[256+(ff7.slot[s].items[i].id)].image),names.ItemNames(256+(ff7.slot[s].items[i].id)),0);
+                ui->tbl_itm->setItem(i,0, newItem);
+                ui->tbl_itm->setRowHeight(i,22);
+                newItem = new QTableWidgetItem(qty.setNum(ff7.slot[s].items[i].qty/2),0);
+                ui->tbl_itm->setItem(i,1,newItem);
+            }
+        }
+    }
+    ui->tbl_itm->setCurrentCell(j,0);
+}
 /*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::guirefresh(void)
 {
@@ -2532,8 +2567,6 @@ void MainWindow::guirefresh(void)
     if(ff7.slot[s].intbombing == 0x14){ui->cb_bombing_int->setChecked(Qt::Checked);}
     else if(ff7.slot[s].intbombing ==0x56){ui->cb_bombing_int->setChecked(Qt::Unchecked);}
 
-    setmenu();
-
     /*~~~~Set Region info and icon~~~~*/
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
     ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
@@ -2569,32 +2602,10 @@ void MainWindow::guirefresh(void)
     if((ff7.slot[s].options2)&(1<<6)){ui->cb_battle_help->setCheckState(Qt::Checked);}
     else{ui->cb_battle_help->setCheckState(Qt::Unchecked);}
 /*~~~~~End Options Loading~~~~~*/
+
     ui->sb_curdisc->setValue(ff7.slot[s].disc);
 
-    if(ui->action_show_test_data->isChecked())
-    {
-        ui->btn_vincent->setEnabled(true);
-        ui->btn_cait->setEnabled(true);
-        ui->cb_id->setEnabled(true);
-    }
-    else //test mode off..check for seppie and young cloud to avoid possible breakage of save game since we don't account for them yet.
-    {
-        if (ff7.slot[s].chars[6].id == 9)
-        {
-            ui->btn_cait->setEnabled(false);
-            if(curchar ==6){curchar =0;}
-        }
-        else {ui->btn_cait->setEnabled(true);}
-
-        if (ff7.slot[s].chars[7].id == 10)
-        {
-            ui->btn_vincent->setEnabled(false);
-            if(curchar ==7){curchar = 0;}
-        }
-        else {ui->btn_vincent->setEnabled(true);}
-    }
-
-/*~~~~~~~Set up location Data~~~~~~~*/
+    /*~~~~~~~Set up location Data~~~~~~~*/
     ui->sb_coordx->setValue(ff7.slot[s].coord.x);
     ui->sb_coordy->setValue(ff7.slot[s].coord.y);
     ui->sb_coordz->setValue(ff7.slot[s].coord.z);
@@ -2689,49 +2700,8 @@ void MainWindow::guirefresh(void)
     ui->sb_love_aeris->setValue(ff7.slot[s].love.aeris);
     ui->sb_love_yuffie->setValue(ff7.slot[s].love.yuffie);
 
-    QTableWidgetItem *newItem;
-/*~~~~~Item Table Code~~~~~*/
-
-    int j= ui->tbl_itm->currentRow();
-    ui->tbl_itm->reset(); // just incase
-    ui->tbl_itm->setColumnWidth(0,145);
-    ui->tbl_itm->setColumnWidth(1,32);
-    ui->tbl_itm->setRowCount(320);
-    for (int i=0;i<320;i++) // set up items
-    {
-        if (ff7.slot[s].items[i].qty == 0xFF && ff7.slot[s].items[i].id == 0xFF)
-        {
-            newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
-            ui->tbl_itm->setItem(i,0,newItem);
-            ui->tbl_itm->setRowHeight(i,22);
-            newItem = new QTableWidgetItem("",0);
-            ui->tbl_itm->setItem(i,1,newItem);
-        }
-        else
-        {
-            QString qty;
-            if(ff7.slot[s].items[i].qty %2 ==0)
-            {
-                newItem = new QTableWidgetItem(QIcon(Items[ff7.slot[s].items[i].id].image),names.ItemNames(ff7.slot[s].items[i].id),0);
-                ui->tbl_itm->setItem(i,0, newItem);
-                ui->tbl_itm->setRowHeight(i,22);
-                newItem = new QTableWidgetItem(qty.setNum(ff7.slot[s].items[i].qty/2),0);
-                ui->tbl_itm->setItem(i,1,newItem);
-            }
-            else
-            {
-                newItem = new QTableWidgetItem(QIcon(Items[256+(ff7.slot[s].items[i].id)].image),names.ItemNames(256+(ff7.slot[s].items[i].id)),0);
-                ui->tbl_itm->setItem(i,0, newItem);
-                ui->tbl_itm->setRowHeight(i,22);
-                newItem = new QTableWidgetItem(qty.setNum(ff7.slot[s].items[i].qty/2),0);
-                ui->tbl_itm->setItem(i,1,newItem);
-            }
-        }
-    }
-    ui->tbl_itm->setCurrentCell(j,0);
-/*~~~~~End Item Code~~~~~*/
-
 /*~~~~~Stolen Materia~~~~~~~*/
+    QTableWidgetItem *newItem;
     ui->tbl_materia_2->reset();
     ui->tbl_materia_2->setColumnWidth(0,145);
     ui->tbl_materia_2->setColumnWidth(1,64);
@@ -2769,6 +2739,8 @@ void MainWindow::guirefresh(void)
 
     load =false; // all functions should set load on their own.
     /*~~~~~Call External Functions~~~~~~~*/
+    setmenu();
+    itemupdate();
     chocobo_refresh();
     charupdate();
     materiaupdate();
@@ -3244,21 +3216,21 @@ void MainWindow::on_clearItem_clicked()
 {
     ff7.slot[s].items[ui->tbl_itm->currentRow()].id = 0xFF;
     ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = 0xFF;
-    guirefresh();
+    itemupdate();
 }
 
 void MainWindow::on_combo_additem_currentIndexChanged(int index)
 {if(!load){   //we must also set the qty, since that determins how the table and the game will reconize the item and prevents bug#3014592.
     if (index<256){ff7.slot[s].items[ui->tbl_itm->currentRow()].id = index;ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(ui->sb_addqty->value() * 2);}
     else{ff7.slot[s].items[ui->tbl_itm->currentRow()].id = (index-256);ff7.slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(ui->sb_addqty->value()* 2) +1;}
-    guirefresh();
+    itemupdate();
 }}
 
 void MainWindow::on_sb_addqty_valueChanged(int value)
 {if(!load){
     if (ui->combo_additem->currentIndex()<256){ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(value * 2);}
     else{ff7.slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(value* 2) +1;}
-    guirefresh();
+    itemupdate();
 }}
 
 void MainWindow::on_tbl_itm_currentCellChanged(int row)
@@ -3526,7 +3498,6 @@ void MainWindow::on_sb_maxhp_valueChanged(){if(!load){ff7.slot[s].chars[curchar]
 void MainWindow::on_sb_maxmp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].maxMP =ui->sb_maxmp->value();}}
 void MainWindow::on_sb_hp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].baseHP = ui->sb_hp->value();}}
 void MainWindow::on_sb_mp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].baseMP = ui->sb_mp->value();}}
-void MainWindow::on_sb_next_valueChanged(){if(!load){ff7.slot[s].chars[curchar].expNext =  ui->sb_next->value();}}
 void MainWindow::on_sb_exp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].exp = ui->sb_exp->value();}}
 void MainWindow::on_sb_kills_valueChanged(){if(!load){ff7.slot[s].chars[curchar].kills = ui->sb_kills->value();}}
 void MainWindow::on_sb_str_valueChanged(){if(!load){ff7.slot[s].chars[curchar].strength = ui->sb_str->value();}}

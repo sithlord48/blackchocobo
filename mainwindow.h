@@ -293,6 +293,7 @@ private slots:
     void charupdate(void);
     void materiaupdate_slot(void);
     void materiaupdate(void);
+    void itemupdate();
     void guirefresh(void);
     void chocobo_refresh();
     void clearslot(int);
@@ -365,7 +366,6 @@ private slots:
     void on_line_name_lostFocus();
     void on_sb_lvl_valueChanged();
     void on_sb_exp_valueChanged();
-    void on_sb_next_valueChanged();
     void on_sb_kills_valueChanged();
     void on_cb_front_clicked(bool checked);
     void on_cb_fury_clicked(bool checked);

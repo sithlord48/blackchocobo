@@ -1311,10 +1311,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Exp:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Kills</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2064,10 +2060,6 @@
     </message>
     <message>
         <source>Lower Right</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>      Next</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4287,6 +4279,14 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>ID </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Total Exp:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
