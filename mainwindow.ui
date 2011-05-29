@@ -5623,18 +5623,6 @@ image: url(:/icon/cait_icon);
                <string>Edit Selected Materia Slot</string>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_68">
-               <property name="spacing">
-                <number>-1</number>
-               </property>
-               <property name="leftMargin">
-                <number>0</number>
-               </property>
-               <property name="topMargin">
-                <number>4</number>
-               </property>
-               <property name="rightMargin">
-                <number>0</number>
-               </property>
                <property name="bottomMargin">
                 <number>0</number>
                </property>
@@ -5763,6 +5751,43 @@ image: url(:/icon/cait_icon);
                     </size>
                    </property>
                   </spacer>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="clearMateria_slot">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>190</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="layoutDirection">
+                    <enum>Qt::RightToLeft</enum>
+                   </property>
+                   <property name="text">
+                    <string>Clear</string>
+                   </property>
+                   <property name="autoExclusive">
+                    <bool>false</bool>
+                   </property>
+                   <property name="default">
+                    <bool>false</bool>
+                   </property>
+                   <property name="flat">
+                    <bool>false</bool>
+                   </property>
+                  </widget>
                  </item>
                 </layout>
                </item>
@@ -6170,72 +6195,25 @@ image: url(:/icon/cait_icon);
                    </item>
                    <item>
                     <layout class="QVBoxLayout" name="verticalLayout_52">
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
                      <item>
-                      <layout class="QHBoxLayout" name="horizontalLayout_7">
-                       <item>
-                        <spacer name="horizontalSpacer_59">
-                         <property name="orientation">
-                          <enum>Qt::Horizontal</enum>
-                         </property>
-                         <property name="sizeHint" stdset="0">
-                          <size>
-                           <width>40</width>
-                           <height>20</height>
-                          </size>
-                         </property>
-                        </spacer>
-                       </item>
-                       <item>
-                        <widget class="QPushButton" name="clearMateria_slot">
-                         <property name="sizePolicy">
-                          <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                          </sizepolicy>
-                         </property>
-                         <property name="minimumSize">
-                          <size>
-                           <width>125</width>
-                           <height>0</height>
-                          </size>
-                         </property>
-                         <property name="maximumSize">
-                          <size>
-                           <width>190</width>
-                           <height>16777215</height>
-                          </size>
-                         </property>
-                         <property name="layoutDirection">
-                          <enum>Qt::RightToLeft</enum>
-                         </property>
-                         <property name="text">
-                          <string>Clear Materia Slot</string>
-                         </property>
-                         <property name="autoExclusive">
-                          <bool>false</bool>
-                         </property>
-                         <property name="default">
-                          <bool>false</bool>
-                         </property>
-                         <property name="flat">
-                          <bool>false</bool>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <spacer name="horizontalSpacer_60">
-                         <property name="orientation">
-                          <enum>Qt::Horizontal</enum>
-                         </property>
-                         <property name="sizeHint" stdset="0">
-                          <size>
-                           <width>40</width>
-                           <height>20</height>
-                          </size>
-                         </property>
-                        </spacer>
-                       </item>
-                      </layout>
+                      <widget class="QLabel" name="label_192">
+                       <property name="text">
+                        <string>Materia Stat Changes</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="Line" name="line_9">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                      </widget>
                      </item>
                      <item>
                       <widget class="QLabel" name="lbl_mat_stats_slot">
@@ -22665,7 +22643,6 @@ p, li { white-space: pre-wrap; }
   <tabstop>btn_m_lvl4_slot</tabstop>
   <tabstop>btn_m_lvl5_slot</tabstop>
   <tabstop>cb_Region_Slot</tabstop>
-  <tabstop>clearMateria_slot</tabstop>
   <tabstop>tbl_itm</tabstop>
   <tabstop>combo_additem</tabstop>
   <tabstop>sb_addqty</tabstop>
