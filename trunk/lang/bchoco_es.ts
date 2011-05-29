@@ -1315,10 +1315,6 @@
         <translation>Tristeza</translation>
     </message>
     <message>
-        <source>Exp:</source>
-        <translation>Exp:</translation>
-    </message>
-    <message>
         <source>Kills</source>
         <translation>Muertes</translation>
     </message>
@@ -1937,10 +1933,6 @@
     <message>
         <source>HP</source>
         <translation>PG</translation>
-    </message>
-    <message>
-        <source>      Next</source>
-        <translation>      Siguiente</translation>
     </message>
     <message>
         <source>Char&apos;s Limits</source>
@@ -4298,6 +4290,14 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>ID </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Total Exp:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
