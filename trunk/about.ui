@@ -433,6 +433,11 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>New: Fancy Character Materia on Equipment tab</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>Fixed:Psx and Psv Region Detection</string>
           </property>
          </item>
