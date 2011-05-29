@@ -291,6 +291,8 @@ private slots:
     void setarmorslots(void);
     void setweaponslots(void);
     void charupdate(void);
+    void materiaupdate_slot(void);
+    void materiaupdate(void);
     void guirefresh(void);
     void chocobo_refresh();
     void clearslot(int);
@@ -386,6 +388,8 @@ private slots:
     void on_sb_sprbonus_valueChanged();
     void on_sb_lck_valueChanged();
     void on_sb_lckbonus_valueChanged();
+    void on_combo_mat_type_slot_currentIndexChanged(int);
+    void on_combo_add_mat_slot_2_currentIndexChanged();
     // LIMITS STUFFS
     void on_limit_1a_toggled();
     void on_limit_1b_toggled();
@@ -424,11 +428,14 @@ private slots:
     void on_w_m_s7_clicked();
     void on_w_m_s8_clicked();
     void on_clearMateria_slot_clicked();
-    void on_btn_mastermateria_slot_clicked();
     void on_sb_addap_slot_valueChanged(int );
     void on_combo_add_mat_slot_currentIndexChanged(int index);
     void geteskills2(int row);
-
+    void on_btn_m_lvl5_slot_clicked();
+    void on_btn_m_lvl4_slot_clicked();
+    void on_btn_m_lvl3_slot_clicked();
+    void on_btn_m_lvl2_slot_clicked();
+    void on_btn_m_lvl1_slot_clicked();
     void on_list_eskill_2_itemChanged();
     void on_action_Save_activated();
     void on_cb_Region_Slot_currentIndexChanged();

@@ -1999,10 +1999,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>M</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Sec</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4289,6 +4285,10 @@ is not a FF7 SaveGame.</source>
         <source>Region Can&apos;t be Automaticly Detected, You Must Set it Manually</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>ID </source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -6181,6 +6181,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed:Psx and Psv Region Detection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Fancy Character Materia on Equipment tab</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
