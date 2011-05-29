@@ -2048,6 +2048,7 @@ ui->spell_lvl2_group_slot->setVisible(0);
 ui->spell_lvl3_group_slot->setVisible(0);
 ui->spell_lvl4_group_slot->setVisible(0);
 ui->spell_lvl5_group_slot->setVisible(0);
+
 if(ff7.slot[s].chars[curchar].materias[mslotsel].id == 0xFF) //if the slot is empty take some precautions
 {
     ui->lbl_mat_stats_slot->setText(tr("Empty Slot"));
@@ -2055,7 +2056,12 @@ if(ff7.slot[s].chars[curchar].materias[mslotsel].id == 0xFF) //if the slot is em
     ui->sb_addap_slot->setValue(0);
     ui->sb_addap_slot->setMaximum(0);
     ui->combo_mat_type_slot->setCurrentIndex(0);
-    ui->combo_add_mat_slot->setCurrentIndex(0);
+    ui->combo_add_mat_slot->setCurrentIndex(-1);
+    ui->combo_add_mat_slot_2->clear();
+    for(int i=0;i<0x5B;i++)
+    {
+        if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_slot_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
+    }
 }
 
 else if(names.MateriaNames(ff7.slot[s].chars[curchar].materias[mslotsel].id) == tr("DON'T USE")) //this is a placeholder materia.
