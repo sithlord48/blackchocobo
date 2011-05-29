@@ -1809,248 +1809,6 @@ image: url(:/icon/cait_icon);
                 </item>
                </layout>
               </item>
-              <item row="0" column="3" rowspan="4">
-               <layout class="QVBoxLayout" name="verticalLayout_12">
-                <property name="spacing">
-                 <number>0</number>
-                </property>
-                <property name="leftMargin">
-                 <number>6</number>
-                </property>
-                <property name="topMargin">
-                 <number>6</number>
-                </property>
-                <item>
-                 <widget class="QCheckBox" name="cb_front">
-                  <property name="text">
-                   <string>Front Row</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QCheckBox" name="cb_fury">
-                  <property name="enabled">
-                   <bool>true</bool>
-                  </property>
-                  <property name="text">
-                   <string>Fury</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QCheckBox" name="cb_sadness">
-                  <property name="enabled">
-                   <bool>true</bool>
-                  </property>
-                  <property name="text">
-                   <string>Sadness</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <spacer name="verticalSpacer_2">
-                  <property name="orientation">
-                   <enum>Qt::Vertical</enum>
-                  </property>
-                  <property name="sizeHint" stdset="0">
-                   <size>
-                    <width>20</width>
-                    <height>40</height>
-                   </size>
-                  </property>
-                 </spacer>
-                </item>
-                <item>
-                 <widget class="QCheckBox" name="cb_id">
-                  <property name="enabled">
-                   <bool>false</bool>
-                  </property>
-                  <property name="text">
-                   <string>CheckBox</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <layout class="QHBoxLayout" name="id_layout">
-                  <property name="spacing">
-                   <number>0</number>
-                  </property>
-                  <item>
-                   <spacer name="horizontalSpacer_52">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>40</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                  <item>
-                   <widget class="QLabel" name="lbl_id">
-                    <property name="text">
-                     <string>ID </string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QComboBox" name="combo_id">
-                    <property name="enabled">
-                     <bool>true</bool>
-                    </property>
-                    <property name="sizePolicy">
-                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                      <horstretch>0</horstretch>
-                      <verstretch>0</verstretch>
-                     </sizepolicy>
-                    </property>
-                    <property name="minimumSize">
-                     <size>
-                      <width>50</width>
-                      <height>27</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>50</width>
-                      <height>27</height>
-                     </size>
-                    </property>
-                    <property name="currentIndex">
-                     <number>0</number>
-                    </property>
-                    <property name="sizeAdjustPolicy">
-                     <enum>QComboBox::AdjustToContents</enum>
-                    </property>
-                    <property name="iconSize">
-                     <size>
-                      <width>26</width>
-                      <height>23</height>
-                     </size>
-                    </property>
-                    <property name="frame">
-                     <bool>false</bool>
-                    </property>
-                    <item>
-                     <property name="text">
-                      <string notr="true"/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="images.qrc">
-                       <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string notr="true"/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="images.qrc">
-                       <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string notr="true"/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="images.qrc">
-                       <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string notr="true"/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="images.qrc">
-                       <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string notr="true"/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="images.qrc">
-                       <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string notr="true"/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="images.qrc">
-                       <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string notr="true"/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="images.qrc">
-                       <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string notr="true"/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="images.qrc">
-                       <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string notr="true"/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="images.qrc">
-                       <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string notr="true"/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="images.qrc">
-                       <normaloff>:/icon/y_cloud_icon</normaloff>:/icon/y_cloud_icon</iconset>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string notr="true"/>
-                     </property>
-                     <property name="icon">
-                      <iconset resource="images.qrc">
-                       <normaloff>:/icon/sep_icon</normaloff>:/icon/sep_icon</iconset>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                  <item>
-                   <spacer name="horizontalSpacer_53">
-                    <property name="orientation">
-                     <enum>Qt::Horizontal</enum>
-                    </property>
-                    <property name="sizeHint" stdset="0">
-                     <size>
-                      <width>40</width>
-                      <height>20</height>
-                     </size>
-                    </property>
-                   </spacer>
-                  </item>
-                 </layout>
-                </item>
-               </layout>
-              </item>
               <item row="1" column="2">
                <layout class="QHBoxLayout" name="horizontalLayout_109">
                 <property name="spacing">
@@ -2352,6 +2110,259 @@ image: url(:/icon/cait_icon);
                  </size>
                 </property>
                </spacer>
+              </item>
+              <item row="0" column="3" rowspan="4">
+               <widget class="QFrame" name="frame_2">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Plain</enum>
+                </property>
+                <property name="lineWidth">
+                 <number>1</number>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_12">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>6</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>6</number>
+                 </property>
+                 <item>
+                  <widget class="QCheckBox" name="cb_front">
+                   <property name="text">
+                    <string>Front Row</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_fury">
+                   <property name="enabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="text">
+                    <string>Fury</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_sadness">
+                   <property name="enabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="text">
+                    <string>Sadness</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="verticalSpacer_2">
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>20</width>
+                     <height>40</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_id">
+                   <property name="enabled">
+                    <bool>false</bool>
+                   </property>
+                   <property name="text">
+                    <string>CheckBox</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="id_layout">
+                   <property name="spacing">
+                    <number>0</number>
+                   </property>
+                   <item>
+                    <spacer name="horizontalSpacer_52">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QLabel" name="lbl_id">
+                     <property name="text">
+                      <string>ID </string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QComboBox" name="combo_id">
+                     <property name="enabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>27</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>27</height>
+                      </size>
+                     </property>
+                     <property name="currentIndex">
+                      <number>0</number>
+                     </property>
+                     <property name="sizeAdjustPolicy">
+                      <enum>QComboBox::AdjustToContents</enum>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>26</width>
+                       <height>23</height>
+                      </size>
+                     </property>
+                     <property name="frame">
+                      <bool>false</bool>
+                     </property>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/y_cloud_icon</normaloff>:/icon/y_cloud_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/sep_icon</normaloff>:/icon/sep_icon</iconset>
+                      </property>
+                     </item>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_53">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
               </item>
              </layout>
             </item>
@@ -5781,6 +5792,19 @@ image: url(:/icon/cait_icon);
                       <number>0</number>
                      </property>
                      <item>
+                      <spacer name="horizontalSpacer_64">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                     <item>
                       <widget class="QLabel" name="label_191">
                        <property name="maximumSize">
                         <size>
@@ -5880,10 +5904,23 @@ image: url(:/icon/cait_icon);
                        </property>
                       </widget>
                      </item>
+                     <item>
+                      <spacer name="horizontalSpacer_63">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                     </layout>
                    </item>
                    <item>
-                    <widget class="QFrame" name="">
+                    <widget class="QFrame" name="frame">
                      <widget class="QPushButton" name="btn_m_lvl1_slot">
                       <property name="enabled">
                        <bool>true</bool>
@@ -6304,7 +6341,7 @@ image: url(:/icon/cait_icon);
                        <bool>false</bool>
                       </property>
                       <property name="dragDropMode">
-                       <enum>QAbstractItemView::NoDragDrop</enum>
+                       <enum>QAbstractItemView::DragOnly</enum>
                       </property>
                       <property name="movement">
                        <enum>QListView::Free</enum>
@@ -6626,7 +6663,7 @@ image: url(:/icon/cait_icon);
                     <string>Materia Skills</string>
                    </property>
                    <property name="alignment">
-                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                    <set>Qt::AlignCenter</set>
                    </property>
                    <property name="flat">
                     <bool>false</bool>
@@ -6639,13 +6676,13 @@ image: url(:/icon/cait_icon);
                      <number>3</number>
                     </property>
                     <property name="topMargin">
-                     <number>0</number>
+                     <number>6</number>
                     </property>
                     <property name="rightMargin">
                      <number>3</number>
                     </property>
                     <property name="bottomMargin">
-                     <number>0</number>
+                     <number>6</number>
                     </property>
                     <item>
                      <widget class="QFrame" name="spell_lvl1_group_slot">
@@ -6658,6 +6695,12 @@ image: url(:/icon/cait_icon);
                        </property>
                        <item>
                         <widget class="QLabel" name="lbl_spell_lvl1_slot">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>20</height>
+                          </size>
+                         </property>
                          <property name="maximumSize">
                           <size>
                            <width>16777215</width>
@@ -6666,6 +6709,9 @@ image: url(:/icon/cait_icon);
                          </property>
                          <property name="text">
                           <string/>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
                          </property>
                         </widget>
                        </item>
@@ -6683,6 +6729,12 @@ image: url(:/icon/cait_icon);
                        </property>
                        <item>
                         <widget class="QLabel" name="lbl_spell_lvl2_slot">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>20</height>
+                          </size>
+                         </property>
                          <property name="maximumSize">
                           <size>
                            <width>16777215</width>
@@ -6691,6 +6743,9 @@ image: url(:/icon/cait_icon);
                          </property>
                          <property name="text">
                           <string/>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
                          </property>
                         </widget>
                        </item>
@@ -6708,6 +6763,12 @@ image: url(:/icon/cait_icon);
                        </property>
                        <item>
                         <widget class="QLabel" name="lbl_spell_lvl3_slot">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>20</height>
+                          </size>
+                         </property>
                          <property name="maximumSize">
                           <size>
                            <width>16777215</width>
@@ -6716,6 +6777,9 @@ image: url(:/icon/cait_icon);
                          </property>
                          <property name="text">
                           <string/>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
                          </property>
                         </widget>
                        </item>
@@ -6733,6 +6797,12 @@ image: url(:/icon/cait_icon);
                        </property>
                        <item>
                         <widget class="QLabel" name="lbl_spell_lvl4_slot">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>20</height>
+                          </size>
+                         </property>
                          <property name="maximumSize">
                           <size>
                            <width>16777215</width>
@@ -6741,6 +6811,9 @@ image: url(:/icon/cait_icon);
                          </property>
                          <property name="text">
                           <string/>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
                          </property>
                         </widget>
                        </item>
@@ -6758,6 +6831,12 @@ image: url(:/icon/cait_icon);
                        </property>
                        <item>
                         <widget class="QLabel" name="lbl_spell_lvl5_slot">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>20</height>
+                          </size>
+                         </property>
                          <property name="maximumSize">
                           <size>
                            <width>16777215</width>
@@ -6766,6 +6845,9 @@ image: url(:/icon/cait_icon);
                          </property>
                          <property name="text">
                           <string/>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
                          </property>
                         </widget>
                        </item>
@@ -22572,9 +22654,18 @@ p, li { white-space: pre-wrap; }
   <tabstop>a_m_s3</tabstop>
   <tabstop>a_m_s2</tabstop>
   <tabstop>a_m_s1</tabstop>
-  <tabstop>combo_add_mat_slot</tabstop>
   <tabstop>combo_acc</tabstop>
+  <tabstop>combo_mat_type_slot</tabstop>
+  <tabstop>combo_add_mat_slot_2</tabstop>
+  <tabstop>sb_addap_slot</tabstop>
   <tabstop>list_eskill_2</tabstop>
+  <tabstop>btn_m_lvl1_slot</tabstop>
+  <tabstop>btn_m_lvl2_slot</tabstop>
+  <tabstop>btn_m_lvl3_slot</tabstop>
+  <tabstop>btn_m_lvl4_slot</tabstop>
+  <tabstop>btn_m_lvl5_slot</tabstop>
+  <tabstop>cb_Region_Slot</tabstop>
+  <tabstop>clearMateria_slot</tabstop>
   <tabstop>tbl_itm</tabstop>
   <tabstop>combo_additem</tabstop>
   <tabstop>sb_addqty</tabstop>
@@ -22779,6 +22870,12 @@ p, li { white-space: pre-wrap; }
   <tabstop>btn_remove_all_stolen</tabstop>
   <tabstop>cb_bombing_int</tabstop>
   <tabstop>combo_add_mat</tabstop>
+  <tabstop>cb_id</tabstop>
+  <tabstop>combo_id</tabstop>
+  <tabstop>sb_next</tabstop>
+  <tabstop>sb_exp</tabstop>
+  <tabstop>slide_limit</tabstop>
+  <tabstop>combo_add_mat_slot</tabstop>
  </tabstops>
  <resources>
   <include location="images.qrc"/>
