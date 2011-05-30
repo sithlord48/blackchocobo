@@ -2557,15 +2557,15 @@ void MainWindow::guirefresh(void)
     QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
     //make the preview nice
-
+    //Clear all check boxes and index's
     ui->cb_replay->setCurrentIndex(0);
+    ui->cb_bombing_int->setChecked(Qt::Unchecked);
+
     ui->sb_bm_progress1->setValue(ff7.slot[s].bm_progress1);
     ui->sb_bm_progress2->setValue(ff7.slot[s].bm_progress2);
     ui->sb_bm_progress3->setValue(ff7.slot[s].bm_progress3);
     ui->sb_mprogress->setValue(ff7.slot[s].mprogress);
-
     if(ff7.slot[s].intbombing == 0x14){ui->cb_bombing_int->setChecked(Qt::Checked);}
-    else if(ff7.slot[s].intbombing ==0x56){ui->cb_bombing_int->setChecked(Qt::Unchecked);}
 
     /*~~~~Set Region info and icon~~~~*/
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
@@ -2580,14 +2580,17 @@ void MainWindow::guirefresh(void)
     /*~~~~~Load Game Options~~~~~*/
     if((ff7.slot[s].options1)& (1<<0)){ui->combo_sound->setCurrentIndex(1);}
     else{ui->combo_sound->setCurrentIndex(0);}
+
     if((ff7.slot[s].options1) & (1<<2)){ui->combo_control->setCurrentIndex(1);}
     else{ui->combo_control->setCurrentIndex(0);}
+
     if((ff7.slot[s].options1)&(1<<4)){ui->combo_cursor->setCurrentIndex(1);}
     else{ui->combo_cursor->setCurrentIndex(0);}
+
     if((ff7.slot[s].options1)&(1<<6)){ui->combo_atb->setCurrentIndex(1);}
+    else if((ff7.slot[s].options1)&(1<<7)){ui->combo_atb->setCurrentIndex(2);}
     else{ui->combo_atb->setCurrentIndex(0);}
-    if((ff7.slot[s].options1)&(1<<7)){ui->combo_atb->setCurrentIndex(2);}
-    else{ui->combo_atb->setCurrentIndex(0);}
+
     ui->slide_battlespeed->setValue(ff7.slot[s].battlespeed);
     ui->slide_battlemspeed->setValue(ff7.slot[s].battlemspeed);
     ui->slide_fieldmspeed->setValue(ff7.slot[s].fieldmspeed);
@@ -2604,7 +2607,9 @@ void MainWindow::guirefresh(void)
 /*~~~~~End Options Loading~~~~~*/
 
     ui->sb_curdisc->setValue(ff7.slot[s].disc);
-
+    ui->sb_coster_1->setValue(ff7.slot[s].coster_1);
+    ui->sb_coster_2->setValue(ff7.slot[s].coster_2);
+    ui->sb_coster_3->setValue(ff7.slot[s].coster_3);
     /*~~~~~~~Set up location Data~~~~~~~*/
     ui->sb_coordx->setValue(ff7.slot[s].coord.x);
     ui->sb_coordy->setValue(ff7.slot[s].coord.y);
@@ -4511,12 +4516,12 @@ void MainWindow::testdata_refresh()
     else{ui->cb_tut_worldsave->setCheckState(Qt::Unchecked);}
     ui->lcdNumber_7->display(ff7.slot[s].tut_save);
 
+    ui->cb_reg_vinny->setChecked(Qt::Unchecked);
     if(ff7.slot[s].reg_vinny == 0xFF){ui->cb_reg_vinny->setChecked(Qt::Checked);}
-    else if(ff7.slot[s].reg_vinny ==0xFB){ui->cb_reg_vinny->setChecked(Qt::Unchecked);}
     ui->lcdNumber_8->display(ff7.slot[s].reg_vinny);
 
+    ui->cb_reg_yuffie->setChecked(Qt::Unchecked);
     if(ff7.slot[s].reg_yuffie == 0x6F){ui->cb_reg_yuffie->setChecked(Qt::Checked);}
-    else if(ff7.slot[s].reg_yuffie==0x6E){ui->cb_reg_yuffie->setChecked(Qt::Unchecked);}
     ui->lcdNumber_9->display(ff7.slot[s].reg_yuffie);
 
     if((ff7.slot[s].itemsmask_1)& (1<<0)){ui->cb_itemmask1_1->setChecked(Qt::Checked);}
