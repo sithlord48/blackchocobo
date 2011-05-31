@@ -4441,8 +4441,8 @@ image: url(:/icon/cait_icon);
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>423</width>
-             <height>430</height>
+             <width>401</width>
+             <height>420</height>
             </rect>
            </property>
            <attribute name="label">
@@ -22896,12 +22896,12 @@ p, li { white-space: pre-wrap; }
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>109</x>
-     <y>141</y>
+     <x>111</x>
+     <y>123</y>
     </hint>
     <hint type="destinationlabel">
-     <x>104</x>
-     <y>175</y>
+     <x>106</x>
+     <y>159</y>
     </hint>
    </hints>
   </connection>
@@ -22912,12 +22912,12 @@ p, li { white-space: pre-wrap; }
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>126</x>
-     <y>206</y>
+     <x>128</x>
+     <y>183</y>
     </hint>
     <hint type="destinationlabel">
-     <x>130</x>
-     <y>233</y>
+     <x>132</x>
+     <y>219</y>
     </hint>
    </hints>
   </connection>
@@ -22928,12 +22928,12 @@ p, li { white-space: pre-wrap; }
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>94</x>
-     <y>268</y>
+     <x>96</x>
+     <y>243</y>
     </hint>
     <hint type="destinationlabel">
-     <x>93</x>
-     <y>297</y>
+     <x>95</x>
+     <y>279</y>
     </hint>
    </hints>
   </connection>
@@ -22944,12 +22944,28 @@ p, li { white-space: pre-wrap; }
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>72</x>
-     <y>105</y>
+     <x>74</x>
+     <y>103</y>
     </hint>
     <hint type="destinationlabel">
-     <x>437</x>
-     <y>383</y>
+     <x>170</x>
+     <y>109</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>slide_limit</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lcdNumber</receiver>
+   <slot>display(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>476</x>
+     <y>331</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>548</x>
+     <y>334</y>
     </hint>
    </hints>
   </connection>
