@@ -17,6 +17,7 @@
 # Project created by QtCreator 2010-03-14T14:53:13
 # -------------------------------------------------
 TARGET = Black_Chocobo
+
 TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \
@@ -45,3 +46,23 @@ TRANSLATIONS += lang/bchoco_en.ts \
     lang/bchoco_fr.ts
 macx:ICON = icon/bchoco_icon_osx.icns
 win32:RC_FILE = bchoco.rc
+
+unix:!macx:!symbian {
+target.path = /usr/bin/blackchocobo
+INSTALLS += target
+save0.path = /usr/bin/blackchocobo
+save0.files = save0
+INSTALLS += save0
+lang.path = /usr/bin/blackchocobo/lang
+lang.files = lang/*
+INSTALLS += lang
+icon.path = /usr/share/pixmaps
+icon.files = icon/Black_Chocobo.png
+INSTALLS += icon
+desktop.path =/usr/share/applications/
+desktop.files = linux_deploy/Black_Chocobo.desktop
+INSTALLS += desktop
+menu.path = /usr/share/menu
+menu.files = linux_deploy/Black_Chocobo
+INSTALLS += menu
+}
