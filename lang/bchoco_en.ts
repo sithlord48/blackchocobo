@@ -3810,10 +3810,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Show Extra Information During Battle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Export Raw PSX Save</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4287,6 +4283,18 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Next</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Battle Target Labels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Battle Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Field Help</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6185,6 +6193,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Fancy Character Materia on Equipment tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Toggle Field Help</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -3821,10 +3821,6 @@ p, li { white-space: pre-wrap; }
         <translation>0xD83 Midgar Train Flags (tin_1)</translation>
     </message>
     <message>
-        <source>Show Extra Information During Battle</source>
-        <translation>Mostrar Información Adicional Durante la Batalla</translation>
-    </message>
-    <message>
         <source>Export Raw PSX Save</source>
         <translation>Exportar archivo de guardado PSX (Raw)</translation>
     </message>
@@ -4298,6 +4294,18 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Next</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Battle Target Labels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Battle Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show Field Help</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6212,6 +6220,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Fancy Character Materia on Equipment tab</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Toggle Field Help</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
