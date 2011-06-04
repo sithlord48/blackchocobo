@@ -54,15 +54,12 @@ save0.path = /usr/bin/blackchocobo
 save0.files = save0
 INSTALLS += save0
 lang.path = /usr/bin/blackchocobo/lang
-lang.files = lang/*
+lang.files = lang/*.qm
 INSTALLS += lang
 icon.path = /usr/share/pixmaps
 icon.files = icon/Black_Chocobo.png
 INSTALLS += icon
 desktop.path =/usr/share/applications/
-desktop.files = linux_deploy/Black_Chocobo.desktop
+desktop.files = Black_Chocobo.desktop
 INSTALLS += desktop
-menu.path = /usr/share/menu
-menu.files = linux_deploy/Black_Chocobo
-INSTALLS += menu
 }
