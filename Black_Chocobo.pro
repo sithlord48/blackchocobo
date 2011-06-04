@@ -48,6 +48,7 @@ macx:ICON = icon/bchoco_icon_osx.icns
 win32:RC_FILE = bchoco.rc
 
 unix:!macx:!symbian {
+system(lrelease Black_Chocobo.pro)
 target.path = /usr/bin/blackchocobo
 INSTALLS += target
 save0.path = /usr/bin/blackchocobo
