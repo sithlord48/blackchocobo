@@ -420,7 +420,6 @@ private slots:
     void on_combo_weapon_currentIndexChanged();
     void on_combo_armor_currentIndexChanged(int);
     void on_combo_acc_currentIndexChanged(int);
-    void mslotcalc();
     void on_a_m_s1_clicked();
     void on_a_m_s2_clicked();
     void on_a_m_s3_clicked();
