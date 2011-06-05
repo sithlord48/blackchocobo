@@ -2043,6 +2043,88 @@ ui->spell_lvl2_group_slot->setVisible(0);
 ui->spell_lvl3_group_slot->setVisible(0);
 ui->spell_lvl4_group_slot->setVisible(0);
 ui->spell_lvl5_group_slot->setVisible(0);
+ui->w_m_s1_frame->setFrameStyle(0);
+ui->w_m_s2_frame->setFrameStyle(0);
+ui->w_m_s3_frame->setFrameStyle(0);
+ui->w_m_s4_frame->setFrameStyle(0);
+ui->w_m_s5_frame->setFrameStyle(0);
+ui->w_m_s6_frame->setFrameStyle(0);
+ui->w_m_s7_frame->setFrameStyle(0);
+ui->w_m_s8_frame->setFrameStyle(0);
+ui->a_m_s1_frame->setFrameStyle(0);
+ui->a_m_s2_frame->setFrameStyle(0);
+ui->a_m_s3_frame->setFrameStyle(0);
+ui->a_m_s4_frame->setFrameStyle(0);
+ui->a_m_s5_frame->setFrameStyle(0);
+ui->a_m_s6_frame->setFrameStyle(0);
+ui->a_m_s7_frame->setFrameStyle(0);
+ui->a_m_s8_frame->setFrameStyle(0);
+switch(mslotsel)
+{
+case 0:
+    ui->w_m_s1_frame->setFrameStyle(1);
+    break;
+
+case 1:
+    ui->w_m_s2_frame->setFrameStyle(1);
+    break;
+
+case 2:
+    ui->w_m_s3_frame->setFrameStyle(1);
+    break;
+
+case 3:
+    ui->w_m_s4_frame->setFrameStyle(1);
+    break;
+
+case 4:
+    ui->w_m_s5_frame->setFrameStyle(1);
+    break;
+
+case 5:
+    ui->w_m_s6_frame->setFrameStyle(1);
+    break;
+
+case 6:
+    ui->w_m_s7_frame->setFrameStyle(1);
+    break;
+
+case 7:
+    ui->w_m_s8_frame->setFrameStyle(1);
+    break;
+
+case 8:
+    ui->a_m_s1_frame->setFrameStyle(1);
+    break;
+
+case 9:
+    ui->a_m_s2_frame->setFrameStyle(1);
+    break;
+
+case 10:
+    ui->a_m_s3_frame->setFrameStyle(1);
+    break;
+
+case 11:
+    ui->a_m_s4_frame->setFrameStyle(1);
+    break;
+
+case 12:
+    ui->a_m_s5_frame->setFrameStyle(1);
+    break;
+
+case 13:
+    ui->a_m_s6_frame->setFrameStyle(1);
+    break;
+
+case 14:
+    ui->a_m_s7_frame->setFrameStyle(1);
+    break;
+
+case 15:
+    ui->a_m_s8_frame->setFrameStyle(1);
+    break;
+}
 
 if(current_id == 0xFF) //if the slot is empty take some precautions
 {
@@ -3363,7 +3445,8 @@ void MainWindow::on_btn_m_lvl4_clicked(){ui->sb_addap->setValue(Materias[ui->com
 void MainWindow::on_btn_m_lvl5_clicked(){ui->sb_addap->setValue(Materias[ui->combo_add_mat->currentIndex()].ap[3]);    materiaupdate();}
 
 void MainWindow::on_combo_mat_type_currentIndexChanged(int index)
-{if(!load){
+{
+    load=true;
     ui->combo_add_mat_2->clear();
     if(index == 0)
     {
@@ -3374,11 +3457,10 @@ void MainWindow::on_combo_mat_type_currentIndexChanged(int index)
     }
     else
     {
-        load=true;
         for(int i=0;i<0x5B;i++){if(index==Materias[i].type){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}}
-        load=false;
     }
-}}
+    load=false;
+}
 
 
 void MainWindow::on_combo_add_mat_2_currentIndexChanged()
