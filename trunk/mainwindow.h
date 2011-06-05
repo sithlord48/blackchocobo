@@ -51,10 +51,18 @@ private:
 public slots:
 
 private slots:
-
+    void on_cb_tut_sub_8_toggled(bool);
+    void on_cb_tut_sub_7_toggled(bool);
+    void on_cb_tut_sub_6_toggled(bool);
+    void on_cb_tut_sub_5_toggled(bool);
+    void on_cb_tut_sub_4_toggled(bool);
+    void on_cb_tut_sub_3_toggled(bool);
+    void on_cb_tut_sub_2_toggled(bool);
+    void on_cb_tut_sub_1_toggled(bool);
+    void on_cb_tut_sub_toggled(bool checked);
     void on_cb_bombing_int_stateChanged(int );
     void on_cb_tut_worldsave_stateChanged(int );
-    void on_cb_tut_sub_stateChanged(int );
+    //void on_cb_tut_sub_stateChanged(int );
     void on_sb_timer_time_sec_valueChanged(int );
     void on_sb_timer_time_min_valueChanged(int );
     void on_sb_timer_time_hour_valueChanged(int );
@@ -141,6 +149,8 @@ private slots:
     void setoptions_one();
     void setoptions_two();
     void on_cb_battle_help_toggled();
+    void on_cb_battle_targets_toggled(bool checked);
+    void on_cb_field_help_toggled(bool checked);
     void on_combo_magic_order_currentIndexChanged();
     void on_combo_camera_currentIndexChanged();
     void on_combo_atb_currentIndexChanged();

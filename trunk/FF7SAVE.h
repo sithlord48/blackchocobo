@@ -391,7 +391,7 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 z_13[2];             // [0x0BFD] UNKNOWN DATA
     quint8 u_weapon_hp[3];      // [0x0BFF] Ultimate Weapons Remaining Hp
     quint8 z_14[28];            // [0x0C02] UNKNOWN DATA
-    quint8 tut_sub;             // [0x0C1E] Have we seen the sub tutorial?
+    quint8 tut_sub;             // [0x0C1E] Have we seen the sub tutorial 0x04 =on Show Battle Targets Label 0x40=on
     quint8 z_15[102];           // [0x0C1F] UNKNOWN DATA
     quint8 bm_progress1;        // [0x0C85] Bombing Mission Flag 1
     quint8 bm_progress2;        // [0x0C86] Bombing Mission Flag 2
@@ -424,24 +424,26 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     qint8 disc;                 // [0x0EA4] Current CD
     quint8 z_28[1];             // [0x0EA5] UNKNOWN DATA
     quint8 intbombing;          // [0x0EA6] 0x14 On Start of Bombing Mission , 0x56 On first Save..
-    quint8 z_29[29];            // [0x0EA7] UNKNOWN DATA
+    quint8 z_29[27];            // [0x0EA7] UNKNOWN DATA
+    quint8 field_help;          // [0x0EC2] Show field hand 1=on 0=off
+    quint8 z_30;                // [0x0EC3] UNKNOWN
     quint8 chocobonames[6][6];  // [0x0EC4] <-OK Chocobo names
     quint16 chocostaminas[6];   // [0x0EE8] Chocobo staminas 12 bytes
     quint8 reg_vinny;           // [0x0EF4] 0xFF for true 0xFB false (vincent a regualar?)
-    quint8 z_30[52];            // [0x0EF5] UNKNOWN DATA
+    quint8 z_31[52];            // [0x0EF5] UNKNOWN DATA
     quint8 tut_save;            // [0x0F29] Have we seen save tut ? 0x3A true , 0x32 false
-    quint8 z_31[346];           // [0x0F2A] UNKNOWN DATA
+    quint8 z_32[346];           // [0x0F2A] UNKNOWN DATA
     FF7CHOCOBO choco56[2];      // [0x1084] Chocobo slots 5-6
     quint16 phsmask;            // [0x10A4] who is allowed in the phs
     quint16 unlockedchars;      // [0x10A6] who is visible in the phs
-    quint8 z_32[48];            // [0x10A8] UNKNOWN DATA
+    quint8 z_33[48];            // [0x10A8] UNKNOWN DATA
     quint8 battlespeed;         // [0x10D8] Battle Speed
     quint8 battlemspeed;        // [0x10D9] Battle Message Speed
     quint8 options1;            // [0x10DA] Options 1
     quint8 options2;            // [0x10DB] Options 2
     quint8 controller_map[16];  // [0x10DC] controller mapping?
     quint8 fieldmspeed;         // [0x10EC] Message Speed On field
-    quint8 z_33[7];             // [0x10ED] UNKNOWN DATA
+    quint8 z_34[7];             // [0x10ED] UNKNOWN DATA
 }__attribute__((__packed__));
 /* FF7HEADFOOT FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
     struct FF7HEADFOOT {
@@ -450,12 +452,8 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
 }__attribute__((__packed__));
 
 struct FF7 {				// [0xFE55]
-    //    quint8 file_tag[9];		// [0x0000] 0x06277371
-    //    BYTE selection;		// [0x0004] LOWORD = Slot on top of screen (0-12). HIWORD = Slot selection (0-2)
-    //    USHORT maskSlots;		// [0x0005] Valid slots mask
-   //     _UNKNOWN z_1[2];
-        FF7SLOT slot[15];		// [0x0009] The 15 save slots
 
+        FF7SLOT slot[15];		// [0x0009] The 15 save slots
 
         /*START FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
         quint8 file_header_pc [0x0009];    // [0x0000] 0x06277371 this replace quint8 file_tag[9];
@@ -489,7 +487,6 @@ struct FF7 {				// [0xFE55]
         QString SG_Region_String[15];       // Store Region String one per slot..
 };
 
-
 struct ITEM {
         QString image;
         qint8 mslots;
@@ -499,11 +496,10 @@ struct ITEM {
 struct MATERIA { //use MateriaNames,MateriaSkills or MateriaStats for text data.
     QString image;
     quint8 id;
-    //struct {qint8 hp,mp,str,vit,dex,lck,mag,spi;}stats;
+    //struct {qint8 hp,mp,str,vit,dex,lck,mag,spi;}stats;//for use in hp/mp/char stat calculations (maybe later)
     qint32 ap[4];
     qint8 type; //1-magic,2-summon,3-independent,4-support,5-command,0-unknown
     qint8 levels;
-
 };
 
 #endif // FF7SAVE_H

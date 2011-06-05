@@ -4441,8 +4441,8 @@ image: url(:/icon/cait_icon);
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>401</width>
-             <height>420</height>
+             <width>423</width>
+             <height>430</height>
             </rect>
            </property>
            <attribute name="label">
@@ -20144,6 +20144,26 @@ p, li { white-space: pre-wrap; }
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_69">
                <item>
+                <spacer name="horizontalSpacer_54">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="cb_battle_targets">
+                 <property name="text">
+                  <string>Show Battle Target Labels</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
                 <spacer name="horizontalSpacer">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
@@ -20180,7 +20200,7 @@ p, li { white-space: pre-wrap; }
                   <enum>Qt::LeftToRight</enum>
                  </property>
                  <property name="text">
-                  <string>Show Extra Information During Battle</string>
+                  <string>Show Battle Help</string>
                  </property>
                 </widget>
                </item>
@@ -20196,6 +20216,26 @@ p, li { white-space: pre-wrap; }
                   <size>
                    <width>144</width>
                    <height>16</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="cb_field_help">
+                 <property name="text">
+                  <string>Show Field Help</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="horizontalSpacer_53">
+                 <property name="orientation">
+                  <enum>Qt::Horizontal</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>40</width>
+                   <height>20</height>
                   </size>
                  </property>
                 </spacer>
@@ -20848,11 +20888,14 @@ p, li { white-space: pre-wrap; }
           <layout class="QHBoxLayout" name="horizontalLayout_71">
            <item>
             <widget class="QCheckBox" name="cb_tut_sub">
+             <property name="enabled">
+              <bool>false</bool>
+             </property>
              <property name="text">
               <string>Controling the Sub</string>
              </property>
              <property name="tristate">
-              <bool>true</bool>
+              <bool>false</bool>
              </property>
             </widget>
            </item>
@@ -21736,6 +21779,99 @@ p, li { white-space: pre-wrap; }
         <property name="text">
          <string> Bombing Mission Start Flag</string>
         </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_38">
+        <property name="geometry">
+         <rect>
+          <x>520</x>
+          <y>135</y>
+          <width>211</width>
+          <height>231</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>0xC1E tut_sub</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_71">
+         <item>
+          <widget class="QCheckBox" name="cb_tut_sub_1">
+           <property name="text">
+            <string>0x01</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_tut_sub_2">
+           <property name="text">
+            <string>0x02 </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_tut_sub_3">
+           <property name="text">
+            <string>0x04 - Played Sub Tutorial</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_tut_sub_4">
+           <property name="text">
+            <string>0x08</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_tut_sub_5">
+           <property name="text">
+            <string>0x10</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_tut_sub_6">
+           <property name="text">
+            <string>0x20</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_tut_sub_7">
+           <property name="enabled">
+            <bool>false</bool>
+           </property>
+           <property name="text">
+            <string>0x40 - Battle Targets</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QCheckBox" name="cb_tut_sub_8">
+           <property name="text">
+            <string>0x80</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLCDNumber" name="lcd_tut_sub">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="digitCount">
+            <number>8</number>
+           </property>
+           <property name="mode">
+            <enum>QLCDNumber::Bin</enum>
+           </property>
+           <property name="segmentStyle">
+            <enum>QLCDNumber::Flat</enum>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </widget>
       </widget>
      </widget>

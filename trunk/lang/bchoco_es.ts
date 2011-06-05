@@ -4308,6 +4308,26 @@ no es una partida guardada de FF7</translation>
         <source>Show Field Help</source>
         <translation>Mostrar mapa del mundo</translation>
     </message>
+    <message>
+        <source>0xC1E tut_sub</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x01</source>
+        <translation type="unfinished">0x01 {0x?}</translation>
+    </message>
+    <message>
+        <source>0x02 </source>
+        <translation type="unfinished">0x02  {0x?}</translation>
+    </message>
+    <message>
+        <source>0x04 - Played Sub Tutorial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x40 - Battle Targets</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -4788,7 +4808,7 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Atrae chocobo</translation>
     </message>
     <message>
         <source>Chocobo Lure +50%</source>
@@ -4824,7 +4844,7 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Long Range</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Larga fila</translation>
     </message>
     <message>
         <source>Mega-all x1</source>
@@ -4868,7 +4888,7 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Slash-All</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fulminar a todos</translation>
     </message>
     <message>
         <source>Flash</source>
@@ -4904,7 +4924,7 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Underwater</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Subacuática</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
@@ -4912,15 +4932,15 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Magia W</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Invocación W</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Objeto W</translation>
     </message>
     <message>
         <source>All x1</source>
@@ -5004,11 +5024,11 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>MP Absorb</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Absorber PM</translation>
     </message>
     <message>
         <source>HP Absorb</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Absorber PG</translation>
     </message>
     <message>
         <source>Elemental 50%</source>
@@ -5024,7 +5044,7 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Efecto añaddo</translation>
     </message>
     <message>
         <source>Sneak Attack 20%</source>
@@ -5068,11 +5088,11 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Corte añadido</translation>
     </message>
     <message>
         <source>Steal-As-Well</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Robo simultáneo</translation>
     </message>
     <message>
         <source>Quadra Magic x1</source>
@@ -5096,7 +5116,7 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Steal</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Robar</translation>
     </message>
     <message>
         <source>Mug</source>
@@ -5108,7 +5128,7 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Throw</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lanzar</translation>
     </message>
     <message>
         <source>Coin</source>
@@ -5116,15 +5136,15 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Morfo</translation>
     </message>
     <message>
         <source>DeathBlow</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Golpe mortal</translation>
     </message>
     <message>
         <source>Manipulate</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Manipular</translation>
     </message>
     <message>
         <source>Mime</source>
@@ -5132,11 +5152,11 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Habil. Enem</translation>
     </message>
     <message>
         <source>Master Command</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Comando maestro</translation>
     </message>
     <message>
         <source>Fire (4mp)</source>
@@ -5356,7 +5376,7 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Master Magic</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Magia maestra</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x1 (14mp)</source>
@@ -5680,7 +5700,7 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Master Summon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Invocación mestra</translation>
     </message>
 </context>
 <context>
@@ -6223,8 +6243,8 @@ p, li { white-space: pre-wrap; }
         <translation>Nuevo:Submenu de materia en el equipo</translation>
     </message>
     <message>
-        <source>New: Toggle Field Help</source>
-        <translation>Nuevo: Activar ayuda en el campo</translation>
+        <source>New: Toggle Field Help and Battle Target Labels</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
