@@ -1782,15 +1782,21 @@ image: url(:/icon/cait_icon);
                   </item>
                   <item>
                    <widget class="QSpinBox" name="sb_lvl">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="minimumSize">
                      <size>
-                      <width>40</width>
+                      <width>30</width>
                       <height>18</height>
                      </size>
                     </property>
                     <property name="maximumSize">
                      <size>
-                      <width>40</width>
+                      <width>30</width>
                       <height>18</height>
                      </size>
                     </property>
@@ -1848,15 +1854,21 @@ image: url(:/icon/cait_icon);
                 </item>
                 <item>
                  <widget class="QSpinBox" name="sb_curhp">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
-                    <width>65</width>
+                    <width>50</width>
                     <height>18</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>65</width>
+                    <width>50</width>
                     <height>18</height>
                    </size>
                   </property>
@@ -1898,15 +1910,21 @@ image: url(:/icon/cait_icon);
                 </item>
                 <item>
                  <widget class="QSpinBox" name="sb_maxhp">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
-                    <width>65</width>
+                    <width>50</width>
                     <height>18</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>65</width>
+                    <width>50</width>
                     <height>18</height>
                    </size>
                   </property>
@@ -1965,15 +1983,21 @@ image: url(:/icon/cait_icon);
                 </item>
                 <item>
                  <widget class="QSpinBox" name="sb_curmp">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
-                    <width>65</width>
+                    <width>50</width>
                     <height>18</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>65</width>
+                    <width>50</width>
                     <height>18</height>
                    </size>
                   </property>
@@ -2012,15 +2036,21 @@ image: url(:/icon/cait_icon);
                 </item>
                 <item>
                  <widget class="QSpinBox" name="sb_maxmp">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
-                    <width>65</width>
+                    <width>50</width>
                     <height>18</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>65</width>
+                    <width>50</width>
                     <height>18</height>
                    </size>
                   </property>
@@ -2073,15 +2103,21 @@ image: url(:/icon/cait_icon);
                 </item>
                 <item>
                  <widget class="QSpinBox" name="sb_kills">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
-                    <width>65</width>
+                    <width>50</width>
                     <height>18</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>65</width>
+                    <width>50</width>
                     <height>18</height>
                    </size>
                   </property>
@@ -2445,20 +2481,20 @@ image: url(:/icon/cait_icon);
                    <item>
                     <widget class="QSpinBox" name="sb_exp">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Maximum" vsizetype="Fixed">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
                        <verstretch>0</verstretch>
                       </sizepolicy>
                      </property>
                      <property name="minimumSize">
                       <size>
-                       <width>95</width>
+                       <width>80</width>
                        <height>18</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>16777215</width>
+                       <width>80</width>
                        <height>18</height>
                       </size>
                      </property>
@@ -2473,6 +2509,9 @@ image: url(:/icon/cait_icon);
                      </property>
                      <property name="maximum">
                       <number>999999999</number>
+                     </property>
+                     <property name="value">
+                      <number>0</number>
                      </property>
                     </widget>
                    </item>
@@ -2877,20 +2916,20 @@ image: url(:/icon/cait_icon);
                    <item>
                     <widget class="QSpinBox" name="sb_used1">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>54</horstretch>
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>40</horstretch>
                        <verstretch>16</verstretch>
                       </sizepolicy>
                      </property>
                      <property name="minimumSize">
                       <size>
-                       <width>54</width>
+                       <width>40</width>
                        <height>18</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>54</width>
+                       <width>40</width>
                        <height>18</height>
                       </size>
                      </property>
@@ -2934,20 +2973,20 @@ image: url(:/icon/cait_icon);
                    <item>
                     <widget class="QSpinBox" name="sb_used2">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>54</horstretch>
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>40</horstretch>
                        <verstretch>16</verstretch>
                       </sizepolicy>
                      </property>
                      <property name="minimumSize">
                       <size>
-                       <width>54</width>
+                       <width>40</width>
                        <height>18</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>54</width>
+                       <width>40</width>
                        <height>18</height>
                       </size>
                      </property>
@@ -2991,20 +3030,20 @@ image: url(:/icon/cait_icon);
                    <item>
                     <widget class="QSpinBox" name="sb_used3">
                      <property name="sizePolicy">
-                      <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                       <horstretch>54</horstretch>
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>40</horstretch>
                        <verstretch>16</verstretch>
                       </sizepolicy>
                      </property>
                      <property name="minimumSize">
                       <size>
-                       <width>54</width>
+                       <width>40</width>
                        <height>18</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>54</width>
+                       <width>40</width>
                        <height>18</height>
                       </size>
                      </property>
@@ -3050,6 +3089,12 @@ image: url(:/icon/cait_icon);
                    </item>
                    <item>
                     <widget class="QSpinBox" name="sb_limitlvl">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="minimumSize">
                       <size>
                        <width>30</width>
@@ -3161,25 +3206,28 @@ image: url(:/icon/cait_icon);
                        <property name="text">
                         <string>STR</string>
                        </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
                       </widget>
                      </item>
                      <item>
                       <widget class="QSpinBox" name="sb_str">
                        <property name="sizePolicy">
-                        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>40</horstretch>
                          <verstretch>0</verstretch>
                         </sizepolicy>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3208,9 +3256,12 @@ image: url(:/icon/cait_icon);
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
                        <property name="sizeHint" stdset="0">
                         <size>
-                         <width>40</width>
+                         <width>20</width>
                          <height>20</height>
                         </size>
                        </property>
@@ -3233,19 +3284,28 @@ image: url(:/icon/cait_icon);
                        <property name="text">
                         <string>VIT</string>
                        </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
                       </widget>
                      </item>
                      <item>
                       <widget class="QSpinBox" name="sb_vit">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>40</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
                        <property name="minimumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3293,19 +3353,28 @@ image: url(:/icon/cait_icon);
                        <property name="text">
                         <string>MAG</string>
                        </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
                       </widget>
                      </item>
                      <item>
                       <widget class="QSpinBox" name="sb_mag">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>40</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
                        <property name="minimumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3334,9 +3403,12 @@ image: url(:/icon/cait_icon);
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
                        <property name="sizeHint" stdset="0">
                         <size>
-                         <width>40</width>
+                         <width>20</width>
                          <height>20</height>
                         </size>
                        </property>
@@ -3359,19 +3431,28 @@ image: url(:/icon/cait_icon);
                        <property name="text">
                         <string>SPR</string>
                        </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
                       </widget>
                      </item>
                      <item>
                       <widget class="QSpinBox" name="sb_spr">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>40</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
                        <property name="minimumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3419,19 +3500,28 @@ image: url(:/icon/cait_icon);
                        <property name="text">
                         <string>DEX</string>
                        </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
                       </widget>
                      </item>
                      <item>
                       <widget class="QSpinBox" name="sb_dex">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>40</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
                        <property name="minimumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3460,9 +3550,12 @@ image: url(:/icon/cait_icon);
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
                        <property name="sizeHint" stdset="0">
                         <size>
-                         <width>40</width>
+                         <width>20</width>
                          <height>20</height>
                         </size>
                        </property>
@@ -3485,19 +3578,28 @@ image: url(:/icon/cait_icon);
                        <property name="text">
                         <string>LCK</string>
                        </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
                       </widget>
                      </item>
                      <item>
                       <widget class="QSpinBox" name="sb_lck">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>40</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
                        <property name="minimumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3545,19 +3647,28 @@ image: url(:/icon/cait_icon);
                        <property name="text">
                         <string>HP</string>
                        </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
                       </widget>
                      </item>
                      <item>
                       <widget class="QSpinBox" name="sb_hp">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
                        <property name="minimumSize">
                         <size>
-                         <width>68</width>
+                         <width>50</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>68</width>
+                         <width>50</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3586,9 +3697,12 @@ image: url(:/icon/cait_icon);
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
                        <property name="sizeHint" stdset="0">
                         <size>
-                         <width>40</width>
+                         <width>20</width>
                          <height>20</height>
                         </size>
                        </property>
@@ -3611,19 +3725,28 @@ image: url(:/icon/cait_icon);
                        <property name="text">
                         <string>MP</string>
                        </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
                       </widget>
                      </item>
                      <item>
                       <widget class="QSpinBox" name="sb_mp">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
                        <property name="minimumSize">
                         <size>
-                         <width>68</width>
+                         <width>50</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>68</width>
+                         <width>50</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3720,25 +3843,28 @@ image: url(:/icon/cait_icon);
                        <property name="text">
                         <string>STR</string>
                        </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
                       </widget>
                      </item>
                      <item>
                       <widget class="QSpinBox" name="sb_strbonus">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
+                         <horstretch>40</horstretch>
                          <verstretch>0</verstretch>
                         </sizepolicy>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3761,9 +3887,12 @@ image: url(:/icon/cait_icon);
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
                        <property name="sizeHint" stdset="0">
                         <size>
-                         <width>40</width>
+                         <width>20</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3787,7 +3916,7 @@ image: url(:/icon/cait_icon);
                         <string>VIT </string>
                        </property>
                        <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                        <set>Qt::AlignCenter</set>
                        </property>
                       </widget>
                      </item>
@@ -3795,19 +3924,19 @@ image: url(:/icon/cait_icon);
                       <widget class="QSpinBox" name="sb_vitbonus">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
+                         <horstretch>40</horstretch>
                          <verstretch>0</verstretch>
                         </sizepolicy>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3849,25 +3978,28 @@ image: url(:/icon/cait_icon);
                        <property name="text">
                         <string>MAG</string>
                        </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
                       </widget>
                      </item>
                      <item>
                       <widget class="QSpinBox" name="sb_magbonus">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
+                         <horstretch>40</horstretch>
                          <verstretch>0</verstretch>
                         </sizepolicy>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>16777215</height>
                         </size>
                        </property>
@@ -3890,54 +4022,57 @@ image: url(:/icon/cait_icon);
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
                        <property name="sizeHint" stdset="0">
                         <size>
-                         <width>40</width>
+                         <width>20</width>
                          <height>20</height>
                         </size>
                        </property>
                       </spacer>
                      </item>
                      <item>
-                      <widget class="QLabel" name="label_43">
+                      <widget class="QLabel" name="label_52">
                        <property name="minimumSize">
                         <size>
-                         <width>24</width>
+                         <width>28</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>24</width>
-                         <height>16777215</height>
+                         <width>16777215</width>
+                         <height>18</height>
                         </size>
                        </property>
                        <property name="text">
-                        <string>DEX</string>
+                        <string>SPR</string>
                        </property>
                        <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                        <set>Qt::AlignCenter</set>
                        </property>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="sb_dexbonus">
+                      <widget class="QSpinBox" name="sb_sprbonus">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
+                         <horstretch>40</horstretch>
                          <verstretch>0</verstretch>
                         </sizepolicy>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>54</width>
-                         <height>16777215</height>
+                         <width>40</width>
+                         <height>18</height>
                         </size>
                        </property>
                        <property name="alignment">
@@ -3962,42 +4097,45 @@ image: url(:/icon/cait_icon);
                       <number>0</number>
                      </property>
                      <item>
-                      <widget class="QLabel" name="label_52">
+                      <widget class="QLabel" name="label_43">
                        <property name="minimumSize">
                         <size>
-                         <width>28</width>
+                         <width>24</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>16777215</width>
-                         <height>18</height>
+                         <width>24</width>
+                         <height>16777215</height>
                         </size>
                        </property>
                        <property name="text">
-                        <string>SPR</string>
+                        <string>DEX</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
                        </property>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="sb_sprbonus">
+                      <widget class="QSpinBox" name="sb_dexbonus">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
+                         <horstretch>40</horstretch>
                          <verstretch>0</verstretch>
                         </sizepolicy>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>54</width>
-                         <height>18</height>
+                         <width>40</width>
+                         <height>16777215</height>
                         </size>
                        </property>
                        <property name="alignment">
@@ -4019,9 +4157,12 @@ image: url(:/icon/cait_icon);
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
                        <property name="sizeHint" stdset="0">
                         <size>
-                         <width>40</width>
+                         <width>20</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -4045,7 +4186,7 @@ image: url(:/icon/cait_icon);
                         <string>LCK</string>
                        </property>
                        <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                        <set>Qt::AlignCenter</set>
                        </property>
                       </widget>
                      </item>
@@ -4053,19 +4194,19 @@ image: url(:/icon/cait_icon);
                       <widget class="QSpinBox" name="sb_lckbonus">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
+                         <horstretch>40</horstretch>
                          <verstretch>0</verstretch>
                         </sizepolicy>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>54</width>
+                         <width>40</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -4466,7 +4607,7 @@ image: url(:/icon/cait_icon);
               <property name="title">
                <string>Weapon</string>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_19">
+              <layout class="QVBoxLayout" name="verticalLayout_79">
                <property name="spacing">
                 <number>-1</number>
                </property>
@@ -4480,7 +4621,7 @@ image: url(:/icon/cait_icon);
                 <number>3</number>
                </property>
                <property name="bottomMargin">
-                <number>0</number>
+                <number>1</number>
                </property>
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_72">
@@ -4531,7 +4672,7 @@ image: url(:/icon/cait_icon);
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_92">
+                <layout class="QHBoxLayout" name="horizontalLayout_19">
                  <property name="spacing">
                   <number>0</number>
                  </property>
@@ -4545,19 +4686,19 @@ image: url(:/icon/cait_icon);
                    </property>
                    <property name="sizeHint" stdset="0">
                     <size>
-                     <width>500</width>
-                     <height>20</height>
+                     <width>13</width>
+                     <height>31</height>
                     </size>
                    </property>
                   </spacer>
                  </item>
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_52">
+                  <layout class="QHBoxLayout" name="horizontalLayout_15">
                    <property name="spacing">
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="w_m_s8">
+                    <widget class="QFrame" name="w_m_s8_frame">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4576,18 +4717,54 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_19">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="w_m_s8">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
@@ -4622,7 +4799,7 @@ image: url(:/icon/cait_icon);
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="w_m_s7">
+                    <widget class="QFrame" name="w_m_s7_frame">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4641,18 +4818,54 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_72">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="w_m_s7">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                   </layout>
@@ -4674,12 +4887,12 @@ image: url(:/icon/cait_icon);
                   </spacer>
                  </item>
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_89">
+                  <layout class="QHBoxLayout" name="horizontalLayout_16">
                    <property name="spacing">
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="w_m_s6">
+                    <widget class="QFrame" name="w_m_s6_frame">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4698,18 +4911,54 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_73">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="w_m_s6">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
@@ -4732,9 +4981,6 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="lineWidth">
-                      <number>1</number>
-                     </property>
                      <property name="text">
                       <string/>
                      </property>
@@ -4747,7 +4993,7 @@ image: url(:/icon/cait_icon);
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="w_m_s5">
+                    <widget class="QFrame" name="w_m_s5_frame">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4766,18 +5012,54 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_74">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="w_m_s5">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                   </layout>
@@ -4799,12 +5081,12 @@ image: url(:/icon/cait_icon);
                   </spacer>
                  </item>
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_90">
+                  <layout class="QHBoxLayout" name="horizontalLayout_18">
                    <property name="spacing">
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="w_m_s4">
+                    <widget class="QFrame" name="w_m_s4_frame">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4823,22 +5105,64 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_77">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="w_m_s4">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
                     <widget class="QLabel" name="w_m_l2">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="minimumSize">
                       <size>
                        <width>14</width>
@@ -4863,7 +5187,7 @@ image: url(:/icon/cait_icon);
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="w_m_s3">
+                    <widget class="QFrame" name="w_m_s3_frame">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4882,18 +5206,54 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_78">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="w_m_s3">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                   </layout>
@@ -4915,12 +5275,12 @@ image: url(:/icon/cait_icon);
                   </spacer>
                  </item>
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_91">
+                  <layout class="QHBoxLayout" name="horizontalLayout_17">
                    <property name="spacing">
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="w_m_s2">
+                    <widget class="QFrame" name="w_m_s2_frame">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -4939,22 +5299,64 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_75">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="w_m_s2">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
                     <widget class="QLabel" name="w_m_l1">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="minimumSize">
                       <size>
                        <width>14</width>
@@ -4976,13 +5378,10 @@ image: url(:/icon/cait_icon);
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
                      </property>
-                     <property name="indent">
-                      <number>0</number>
-                     </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="w_m_s1">
+                    <widget class="QFrame" name="w_m_s1_frame">
                      <property name="sizePolicy">
                       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                        <horstretch>0</horstretch>
@@ -5001,18 +5400,54 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_76">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="w_m_s1">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                   </layout>
@@ -5033,10 +5468,7 @@ image: url(:/icon/cait_icon);
               <property name="title">
                <string>Armor</string>
               </property>
-              <layout class="QVBoxLayout" name="verticalLayout_20">
-               <property name="spacing">
-                <number>-1</number>
-               </property>
+              <layout class="QVBoxLayout" name="verticalLayout_87">
                <property name="leftMargin">
                 <number>3</number>
                </property>
@@ -5098,12 +5530,12 @@ image: url(:/icon/cait_icon);
                 </layout>
                </item>
                <item>
-                <layout class="QHBoxLayout" name="horizontalLayout_96">
+                <layout class="QHBoxLayout" name="horizontalLayout_20">
                  <property name="spacing">
                   <number>0</number>
                  </property>
                  <item>
-                  <spacer name="horizontalSpacer_26">
+                  <spacer name="horizontalSpacer_35">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
                    </property>
@@ -5112,19 +5544,25 @@ image: url(:/icon/cait_icon);
                    </property>
                    <property name="sizeHint" stdset="0">
                     <size>
-                     <width>500</width>
-                     <height>32</height>
+                     <width>13</width>
+                     <height>31</height>
                     </size>
                    </property>
                   </spacer>
                  </item>
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_53">
+                  <layout class="QHBoxLayout" name="horizontalLayout_21">
                    <property name="spacing">
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="a_m_s8">
+                    <widget class="QFrame" name="a_m_s8_frame">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="minimumSize">
                       <size>
                        <width>32</width>
@@ -5137,18 +5575,54 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_20">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="a_m_s8">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
@@ -5183,7 +5657,13 @@ image: url(:/icon/cait_icon);
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="a_m_s7">
+                    <widget class="QFrame" name="a_m_s7_frame">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="minimumSize">
                       <size>
                        <width>32</width>
@@ -5196,18 +5676,54 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_80">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="a_m_s7">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                   </layout>
@@ -5223,18 +5739,24 @@ image: url(:/icon/cait_icon);
                    <property name="sizeHint" stdset="0">
                     <size>
                      <width>14</width>
-                     <height>32</height>
+                     <height>20</height>
                     </size>
                    </property>
                   </spacer>
                  </item>
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_93">
+                  <layout class="QHBoxLayout" name="horizontalLayout_22">
                    <property name="spacing">
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="a_m_s6">
+                    <widget class="QFrame" name="a_m_s6_frame">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="minimumSize">
                       <size>
                        <width>32</width>
@@ -5247,18 +5769,54 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_81">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="a_m_s6">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
@@ -5293,7 +5851,13 @@ image: url(:/icon/cait_icon);
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="a_m_s5">
+                    <widget class="QFrame" name="a_m_s5_frame">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="minimumSize">
                       <size>
                        <width>32</width>
@@ -5306,18 +5870,54 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_82">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="a_m_s5">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                   </layout>
@@ -5333,18 +5933,24 @@ image: url(:/icon/cait_icon);
                    <property name="sizeHint" stdset="0">
                     <size>
                      <width>14</width>
-                     <height>32</height>
+                     <height>20</height>
                     </size>
                    </property>
                   </spacer>
                  </item>
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_94">
+                  <layout class="QHBoxLayout" name="horizontalLayout_23">
                    <property name="spacing">
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="a_m_s4">
+                    <widget class="QFrame" name="a_m_s4_frame">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="minimumSize">
                       <size>
                        <width>32</width>
@@ -5357,18 +5963,54 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_83">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="a_m_s4">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
@@ -5403,7 +6045,13 @@ image: url(:/icon/cait_icon);
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="a_m_s3">
+                    <widget class="QFrame" name="a_m_s3_frame">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="minimumSize">
                       <size>
                        <width>32</width>
@@ -5416,18 +6064,54 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_84">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="a_m_s3">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                   </layout>
@@ -5443,18 +6127,24 @@ image: url(:/icon/cait_icon);
                    <property name="sizeHint" stdset="0">
                     <size>
                      <width>14</width>
-                     <height>32</height>
+                     <height>20</height>
                     </size>
                    </property>
                   </spacer>
                  </item>
                  <item>
-                  <layout class="QHBoxLayout" name="horizontalLayout_95">
+                  <layout class="QHBoxLayout" name="horizontalLayout_24">
                    <property name="spacing">
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QPushButton" name="a_m_s2">
+                    <widget class="QFrame" name="a_m_s2_frame">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="minimumSize">
                       <size>
                        <width>32</width>
@@ -5467,18 +6157,54 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_85">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="a_m_s2">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                    <item>
@@ -5513,7 +6239,13 @@ image: url(:/icon/cait_icon);
                     </widget>
                    </item>
                    <item>
-                    <widget class="QPushButton" name="a_m_s1">
+                    <widget class="QFrame" name="a_m_s1_frame">
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
                      <property name="minimumSize">
                       <size>
                        <width>32</width>
@@ -5526,18 +6258,54 @@ image: url(:/icon/cait_icon);
                        <height>32</height>
                       </size>
                      </property>
-                     <property name="text">
-                      <string/>
+                     <property name="frameShape">
+                      <enum>QFrame::NoFrame</enum>
                      </property>
-                     <property name="iconSize">
-                      <size>
-                       <width>32</width>
-                       <height>32</height>
-                      </size>
+                     <property name="frameShadow">
+                      <enum>QFrame::Plain</enum>
                      </property>
-                     <property name="mslot" stdset="0">
-                      <bool>true</bool>
-                     </property>
+                     <layout class="QVBoxLayout" name="verticalLayout_86">
+                      <property name="spacing">
+                       <number>0</number>
+                      </property>
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QPushButton" name="a_m_s1">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string/>
+                        </property>
+                        <property name="iconSize">
+                         <size>
+                          <width>32</width>
+                          <height>32</height>
+                         </size>
+                        </property>
+                        <property name="mslot" stdset="0">
+                         <bool>true</bool>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
                     </widget>
                    </item>
                   </layout>
@@ -9490,15 +10258,21 @@ image: url(:/icon/cait_icon);
                    <property name="enabled">
                     <bool>true</bool>
                    </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>16777215</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -9511,10 +10285,19 @@ image: url(:/icon/cait_icon);
                    <property name="maximum">
                     <number>9999</number>
                    </property>
+                   <property name="value">
+                    <number>9999</number>
+                   </property>
                   </widget>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_62">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -9537,15 +10320,21 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c1_maxspeed">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>16777215</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -9571,19 +10360,6 @@ image: url(:/icon/cait_icon);
                   <number>6</number>
                  </property>
                  <item>
-                  <spacer name="horizontalSpacer_46">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
                   <widget class="QLabel" name="label_59">
                    <property name="minimumSize">
                     <size>
@@ -9604,15 +10380,21 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c1_sprint">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>16777215</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -9629,6 +10411,12 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QLabel" name="label_144">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -9651,15 +10439,21 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c1_maxsprint">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>16777215</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -9705,9 +10499,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c1_accel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -9751,13 +10551,13 @@ image: url(:/icon/cait_icon);
                   <widget class="QSpinBox" name="sb_c1_raceswon">
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>16777215</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -9768,6 +10568,9 @@ image: url(:/icon/cait_icon);
                     <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                    </property>
                    <property name="maximum">
+                    <number>255</number>
+                   </property>
+                   <property name="value">
                     <number>255</number>
                    </property>
                   </widget>
@@ -9806,15 +10609,21 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c1_stamina">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>16777215</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -9850,9 +10659,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c1_pcount">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -9907,9 +10722,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c1_coop">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -9929,19 +10750,6 @@ image: url(:/icon/cait_icon);
                     <number>255</number>
                    </property>
                   </widget>
-                 </item>
-                 <item>
-                  <spacer name="horizontalSpacer_27">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_66">
@@ -9964,9 +10772,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c1_intel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -10345,9 +11159,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c2_speed">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -10370,6 +11190,12 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QLabel" name="label_80">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -10392,9 +11218,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c2_maxspeed">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -10426,19 +11258,6 @@ image: url(:/icon/cait_icon);
                   <number>6</number>
                  </property>
                  <item>
-                  <spacer name="horizontalSpacer_47">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
                   <widget class="QLabel" name="label_81">
                    <property name="minimumSize">
                     <size>
@@ -10459,9 +11278,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c2_sprint">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -10484,6 +11309,12 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QLabel" name="label_145">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -10506,9 +11337,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c2_maxsprint">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -10560,9 +11397,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c2_accel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -10604,9 +11447,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c2_raceswon">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -10661,9 +11510,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c2_stamina">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -10705,9 +11560,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c2_pcount">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -10759,9 +11620,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c2_coop">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -10781,19 +11648,6 @@ image: url(:/icon/cait_icon);
                     <number>255</number>
                    </property>
                   </widget>
-                 </item>
-                 <item>
-                  <spacer name="horizontalSpacer_35">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_87">
@@ -10816,9 +11670,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c2_intel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -11188,9 +12048,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c3_speed">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -11213,6 +12079,12 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QLabel" name="label_93">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -11235,9 +12107,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c3_maxspeed">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -11269,19 +12147,6 @@ image: url(:/icon/cait_icon);
                   <number>6</number>
                  </property>
                  <item>
-                  <spacer name="horizontalSpacer_48">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
                   <widget class="QLabel" name="label_94">
                    <property name="minimumSize">
                     <size>
@@ -11302,9 +12167,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c3_sprint">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -11327,6 +12198,12 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QLabel" name="label_146">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -11349,9 +12226,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c3_maxsprint">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -11403,9 +12286,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c3_accel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -11447,9 +12336,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c3_raceswon">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -11504,9 +12399,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c3_stamina">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -11548,9 +12449,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c3_pcount">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -11602,9 +12509,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c3_coop">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -11624,19 +12537,6 @@ image: url(:/icon/cait_icon);
                     <number>255</number>
                    </property>
                   </widget>
-                 </item>
-                 <item>
-                  <spacer name="horizontalSpacer_36">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_100">
@@ -11659,9 +12559,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c3_intel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -12022,9 +12928,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c4_speed">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -12047,6 +12959,12 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QLabel" name="label_119">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -12069,9 +12987,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c4_maxspeed">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -12103,19 +13027,6 @@ image: url(:/icon/cait_icon);
                   <number>6</number>
                  </property>
                  <item>
-                  <spacer name="horizontalSpacer_49">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
                   <widget class="QLabel" name="label_120">
                    <property name="minimumSize">
                     <size>
@@ -12136,9 +13047,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c4_sprint">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -12161,6 +13078,12 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QLabel" name="label_148">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -12183,9 +13106,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c4_maxsprint">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -12237,9 +13166,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c4_accel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -12281,9 +13216,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c4_raceswon">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -12338,9 +13279,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c4_stamina">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -12382,9 +13329,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c4_pcount">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -12436,9 +13389,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c4_coop">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -12458,19 +13417,6 @@ image: url(:/icon/cait_icon);
                     <number>255</number>
                    </property>
                   </widget>
-                 </item>
-                 <item>
-                  <spacer name="horizontalSpacer_37">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_126">
@@ -12493,9 +13439,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c4_intel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -12865,9 +13817,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c5_speed">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -12890,6 +13848,12 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QLabel" name="label_132">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -12912,9 +13876,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c5_maxspeed">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -12946,19 +13916,6 @@ image: url(:/icon/cait_icon);
                   <number>6</number>
                  </property>
                  <item>
-                  <spacer name="horizontalSpacer_50">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
                   <widget class="QLabel" name="label_133">
                    <property name="minimumSize">
                     <size>
@@ -12979,9 +13936,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c5_sprint">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -13004,6 +13967,12 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QLabel" name="label_149">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -13026,9 +13995,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c5_maxsprint">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -13080,9 +14055,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c5_accel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -13124,9 +14105,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c5_raceswon">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -13181,9 +14168,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c5_stamina">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -13225,9 +14218,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c5_pcount">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -13279,9 +14278,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c5_coop">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -13301,19 +14306,6 @@ image: url(:/icon/cait_icon);
                     <number>255</number>
                    </property>
                   </widget>
-                 </item>
-                 <item>
-                  <spacer name="horizontalSpacer_38">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_139">
@@ -13336,9 +14328,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c5_intel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -13708,9 +14706,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c6_speed">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -13733,6 +14737,12 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QLabel" name="label_106">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -13755,9 +14765,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c6_maxspeed">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -13789,19 +14805,6 @@ image: url(:/icon/cait_icon);
                   <number>6</number>
                  </property>
                  <item>
-                  <spacer name="horizontalSpacer_51">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
-                 </item>
-                 <item>
                   <widget class="QLabel" name="label_107">
                    <property name="minimumSize">
                     <size>
@@ -13822,9 +14825,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c6_sprint">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -13847,6 +14856,12 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QLabel" name="label_147">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -13869,9 +14884,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c6_maxsprint">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -13923,9 +14944,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c6_accel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -13967,9 +14994,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c6_raceswon">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -14024,9 +15057,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c6_stamina">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>50</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -14068,9 +15107,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c6_pcount">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -14122,9 +15167,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c6_coop">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -14144,19 +15195,6 @@ image: url(:/icon/cait_icon);
                     <number>255</number>
                    </property>
                   </widget>
-                 </item>
-                 <item>
-                  <spacer name="horizontalSpacer_39">
-                   <property name="orientation">
-                    <enum>Qt::Horizontal</enum>
-                   </property>
-                   <property name="sizeHint" stdset="0">
-                    <size>
-                     <width>40</width>
-                     <height>20</height>
-                    </size>
-                   </property>
-                  </spacer>
                  </item>
                  <item>
                   <widget class="QLabel" name="label_113">
@@ -14179,9 +15217,15 @@ image: url(:/icon/cait_icon);
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_c6_intel">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
                    <property name="minimumSize">
                     <size>
-                     <width>60</width>
+                     <width>40</width>
                      <height>18</height>
                     </size>
                    </property>
@@ -22757,8 +23801,6 @@ p, li { white-space: pre-wrap; }
   <tabstop>sb_strbonus</tabstop>
   <tabstop>sb_vitbonus</tabstop>
   <tabstop>sb_magbonus</tabstop>
-  <tabstop>sb_dexbonus</tabstop>
-  <tabstop>sb_sprbonus</tabstop>
   <tabstop>sb_lckbonus</tabstop>
   <tabstop>limit_1a</tabstop>
   <tabstop>limit_1b</tabstop>
@@ -22768,23 +23810,7 @@ p, li { white-space: pre-wrap; }
   <tabstop>limit_3b</tabstop>
   <tabstop>limit_4</tabstop>
   <tabstop>combo_weapon</tabstop>
-  <tabstop>w_m_s8</tabstop>
-  <tabstop>w_m_s7</tabstop>
-  <tabstop>w_m_s6</tabstop>
-  <tabstop>w_m_s5</tabstop>
-  <tabstop>w_m_s4</tabstop>
-  <tabstop>w_m_s3</tabstop>
-  <tabstop>w_m_s2</tabstop>
-  <tabstop>w_m_s1</tabstop>
   <tabstop>combo_armor</tabstop>
-  <tabstop>a_m_s8</tabstop>
-  <tabstop>a_m_s7</tabstop>
-  <tabstop>a_m_s6</tabstop>
-  <tabstop>a_m_s5</tabstop>
-  <tabstop>a_m_s4</tabstop>
-  <tabstop>a_m_s3</tabstop>
-  <tabstop>a_m_s2</tabstop>
-  <tabstop>a_m_s1</tabstop>
   <tabstop>combo_acc</tabstop>
   <tabstop>combo_mat_type_slot</tabstop>
   <tabstop>combo_add_mat_slot_2</tabstop>
