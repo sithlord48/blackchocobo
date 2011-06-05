@@ -2051,7 +2051,7 @@ if(current_id == 0xFF) //if the slot is empty take some precautions
     ui->sb_addap_slot->setValue(0);
     ui->sb_addap_slot->setMaximum(0);
     ui->combo_mat_type_slot->setCurrentIndex(0);
-    ui->combo_add_mat_slot->setCurrentIndex(-1);
+    ui->combo_add_mat_slot->setCurrentIndex(0);
     ui->combo_add_mat_slot_2->clear();
     for(int i=0;i<0x5B;i++)
     {
@@ -2084,6 +2084,7 @@ else // make the materia look nice
     else{ui->sb_addap_slot->setMaximum(16777215);}
     ui->sb_addap_slot->setValue(aptemp);
     ui->combo_add_mat_slot->setCurrentIndex(current_id);
+    ui->combo_mat_type_slot->setCurrentIndex(Materias[current_id].type);
     //Show levels stars
     int level=0;
     QString e_icon;
@@ -3595,12 +3596,7 @@ void MainWindow::on_limit_4_toggled(){if(!load) {limitapply();}}
 
 //Char Equiptment Tab
 
-void MainWindow::on_combo_armor_currentIndexChanged(int index)
-{if(!load){
-    ff7.slot[s].chars[curchar].armor = index;
-    setarmorslots();
-}}
-
+void MainWindow::on_combo_armor_currentIndexChanged(int index){if(!load){ff7.slot[s].chars[curchar].armor = index;    setarmorslots();}}
 void MainWindow::on_combo_weapon_currentIndexChanged(){setweaponslots();}
 void MainWindow::on_combo_acc_currentIndexChanged(int index){if(!load){ff7.slot[s].chars[curchar].accessory = index;}}
 
@@ -3658,6 +3654,7 @@ void MainWindow::mslotcalc()
 
 void MainWindow::on_combo_mat_type_slot_currentIndexChanged(int index)
 {
+    load=true;
     ui->combo_add_mat_slot_2->clear();
     if(index == 0)
     {
@@ -3668,11 +3665,10 @@ void MainWindow::on_combo_mat_type_slot_currentIndexChanged(int index)
     }
     else
     {
-        load=true;
         for(int i=0;i<0x5B;i++){if(index==Materias[i].type){ui->combo_add_mat_slot_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}}
-        load=false;
     }
-    materiaupdate_slot();
+    load=false;
+    //materiaupdate_slot(); //causes all to be a fixed type with empty slot
 }
 void MainWindow::on_combo_add_mat_slot_currentIndexChanged(int index)
 {
@@ -3690,6 +3686,7 @@ if(!load){
     {
         if(ui->combo_add_mat_slot_2->itemText(i)==names.MateriaNames(index)){ui->combo_add_mat_slot_2->setCurrentIndex(i);}
     }
+
     if(ff7.slot[s].chars[curchar].materias[mslotsel].id == 0x2C)
     {
         ui->mskill_group->setVisible(false);
