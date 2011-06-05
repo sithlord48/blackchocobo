@@ -425,7 +425,7 @@
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ne pas utiliser</translation>
     </message>
     <message>
         <source>Buster Sword</source>
@@ -3859,7 +3859,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ne pas utiliser</translation>
     </message>
     <message>
         <source>Empty Materia</source>
@@ -4415,7 +4415,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ne pas utiliser</translation>
     </message>
     <message>
         <source>All</source>
@@ -5197,19 +5197,11 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Bolt3(52mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Cure (5mp)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Cure2 (24mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Regen(30mp)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5246,10 +5238,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Confuse (18mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Berserk (24mp)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5353,10 +5341,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Flare(100mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Full Cure (99mp)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5390,26 +5374,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Summon Choco/Mog x5 (14mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Shiva x1 (34mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Shiva x2 (34mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Shiva x3 (34mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Shiva x4 (34mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Shiva x5 (34mp)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5694,6 +5658,42 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Master Summon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bolt3 (52mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Regen (30mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Flare (100mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Berserk (28mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Summon Shiva x1 (32mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Summon Shiva x2 (32mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Summon Shiva x3 (32mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Summon Shiva x4 (32mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Summon Shiva x5 (32mp)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
