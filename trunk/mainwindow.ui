@@ -6704,7 +6704,7 @@ image: url(:/icon/cait_icon);
                         </size>
                        </property>
                        <property name="numDigits">
-                        <number>7</number>
+                        <number>8</number>
                        </property>
                        <property name="segmentStyle">
                         <enum>QLCDNumber::Flat</enum>
@@ -9391,7 +9391,7 @@ image: url(:/icon/cait_icon);
                  </size>
                 </property>
                 <property name="numDigits">
-                 <number>7</number>
+                 <number>8</number>
                 </property>
                 <property name="segmentStyle">
                  <enum>QLCDNumber::Flat</enum>
