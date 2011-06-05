@@ -5,47 +5,47 @@
     <name>Items</name>
     <message>
         <source>Potion</source>
-        <translation type="unfinished"></translation>
+        <translation>Poción</translation>
     </message>
     <message>
         <source>Hi-Potion</source>
-        <translation type="unfinished"></translation>
+        <translation>Poción S</translation>
     </message>
     <message>
         <source>X-Potion</source>
-        <translation type="unfinished"></translation>
+        <translation>Poción X</translation>
     </message>
     <message>
         <source>Ether</source>
-        <translation type="unfinished"></translation>
+        <translation>Éter</translation>
     </message>
     <message>
         <source>Turbo Ether</source>
-        <translation type="unfinished"></translation>
+        <translation>Éter Turbo</translation>
     </message>
     <message>
         <source>Elixir</source>
-        <translation type="unfinished"></translation>
+        <translation>Elixir</translation>
     </message>
     <message>
         <source>Megalixir</source>
-        <translation type="unfinished"></translation>
+        <translation>Megaelixir</translation>
     </message>
     <message>
         <source>Phoenix Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Cola de fénix</translation>
     </message>
     <message>
         <source>Antidote</source>
-        <translation type="unfinished"></translation>
+        <translation>Antídoto</translation>
     </message>
     <message>
         <source>Soft</source>
-        <translation type="unfinished"></translation>
+        <translation>Blando</translation>
     </message>
     <message>
         <source>Maiden&apos;s Kiss</source>
-        <translation type="unfinished"></translation>
+        <translation>Beso doncella</translation>
     </message>
     <message>
         <source>Cornucopia</source>
@@ -53,23 +53,23 @@
     </message>
     <message>
         <source>Echo screen</source>
-        <translation type="unfinished"></translation>
+        <translation>Pantalla eco</translation>
     </message>
     <message>
         <source>Hyper</source>
-        <translation type="unfinished"></translation>
+        <translation>Híper</translation>
     </message>
     <message>
         <source>Tranquilizer</source>
-        <translation type="unfinished"></translation>
+        <translation>Tranquilizante</translation>
     </message>
     <message>
         <source>Remedy</source>
-        <translation type="unfinished"></translation>
+        <translation>Remedio</translation>
     </message>
     <message>
         <source>Smoke Bomb</source>
-        <translation type="unfinished"></translation>
+        <translation>Bomba humo</translation>
     </message>
     <message>
         <source>Speed Drink</source>
@@ -77,15 +77,15 @@
     </message>
     <message>
         <source>Hero Drink</source>
-        <translation type="unfinished"></translation>
+        <translation>Bebida Héroe</translation>
     </message>
     <message>
         <source>Vaccine</source>
-        <translation type="unfinished"></translation>
+        <translation>Vacuna</translation>
     </message>
     <message>
         <source>Grenade</source>
-        <translation type="unfinished"></translation>
+        <translation>Granada</translation>
     </message>
     <message>
         <source>Shrapnel</source>
@@ -93,7 +93,7 @@
     </message>
     <message>
         <source>Right Arm</source>
-        <translation type="unfinished"></translation>
+        <translation>Brazo derecho</translation>
     </message>
     <message>
         <source>Hourglass</source>
@@ -4118,534 +4118,534 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Ingoring Non FF7 Save</source>
-        <translation type="unfinished">Ignorando partida guardada No-FF7</translation>
+        <translation>Ignorando partida guardada No-FF7</translation>
     </message>
     <message>
         <source>Be Cautious This Might Not Work.</source>
-        <translation type="unfinished">Cuidado, puede que no funcione.</translation>
+        <translation>Cuidado, puede que no funcione.</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation type="unfinished"></translation>
+        <translation>Habil. Enem</translation>
     </message>
     <message>
         <source>S01</source>
-        <translation type="unfinished"></translation>
+        <translation>S01</translation>
     </message>
     <message>
         <source>S02</source>
-        <translation type="unfinished"></translation>
+        <translation>S02</translation>
     </message>
     <message>
         <source>S03</source>
-        <translation type="unfinished"></translation>
+        <translation>S03</translation>
     </message>
     <message>
         <source>S04</source>
-        <translation type="unfinished"></translation>
+        <translation>S04</translation>
     </message>
     <message>
         <source>S05</source>
-        <translation type="unfinished"></translation>
+        <translation>S05</translation>
     </message>
     <message>
         <source>S06</source>
-        <translation type="unfinished"></translation>
+        <translation>S06</translation>
     </message>
     <message>
         <source>S07</source>
-        <translation type="unfinished"></translation>
+        <translation>S07</translation>
     </message>
     <message>
         <source>S08</source>
-        <translation type="unfinished"></translation>
+        <translation>S08</translation>
     </message>
     <message>
         <source>S09</source>
-        <translation type="unfinished"></translation>
+        <translation>S09</translation>
     </message>
     <message>
         <source>S10</source>
-        <translation type="unfinished"></translation>
+        <translation>S10</translation>
     </message>
     <message>
         <source>S11</source>
-        <translation type="unfinished"></translation>
+        <translation>S11</translation>
     </message>
     <message>
         <source>S12</source>
-        <translation type="unfinished"></translation>
+        <translation>S12</translation>
     </message>
     <message>
         <source>S13</source>
-        <translation type="unfinished"></translation>
+        <translation>S13</translation>
     </message>
     <message>
         <source>S14</source>
-        <translation type="unfinished"></translation>
+        <translation>S14</translation>
     </message>
     <message>
         <source>S15</source>
-        <translation type="unfinished"></translation>
+        <translation>S15</translation>
     </message>
     <message>
         <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Abrir</translation>
     </message>
     <message>
         <source>Save As</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar Como</translation>
     </message>
     <message>
         <source>Alt+Shift+S</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Shift+S</translation>
     </message>
     <message>
         <source>Alt+F1</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+F1</translation>
     </message>
     <message>
         <source>Ctrl+Shift+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+C</translation>
     </message>
     <message>
         <source>Ctrl+Shift+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+Shift+V</translation>
     </message>
     <message>
         <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Gaurdar</translation>
     </message>
     <message>
         <source>Export VGS File</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportar archivo VGS</translation>
     </message>
     <message>
         <source>Export Dex-Drive File</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportar archivo de unidad Dex</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipos de archivo FF7 conocidos (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Archivo de guardado FF7 PC (*.ff7);;Archivo de guardado Raw PSX FF7 (*-S*);;Archivo de guardado MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Archivo de guardado PSV (*.psv);;Archivo de guardado PSP (*.vmp);;Archivo de guardado VGS (*.vgs *.mem);;Archivo de guardado de unidad Dex-(*.gme)</translation>
     </message>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivos de guardado FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7  VGS SaveGame</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar archivo de guardado Final Fantasy 7</translation>
     </message>
     <message>
         <source>FF7 VGS SaveGame(*.vgs *.mem)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo de guardado FF7 VGS (*.vgs *.mem)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7  Dex-Drive SaveGame</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar archivo de guardado deFinal Fantasy 7 unidad Dex</translation>
     </message>
     <message>
         <source>FF7 VGS SaveGame(*.gme)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo de guardado FF7 VGS(*.gme)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 VGS SaveGame</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar archivo de guardado Final Fantasy 7 VGS</translation>
     </message>
     <message>
         <source>FF7 MC SaveGame(*.vgs *.mem)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo de guardado FF7 MC(*.vgs *.mem)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 Dex-Drive SaveGame</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar archivo de guardado Final Fantasy 7 unidad Dex</translation>
     </message>
     <message>
         <source>FF7 MC SaveGame(*.gme)</source>
-        <translation type="unfinished"></translation>
+        <translation>Archivo de guardado FF7 MC (*.gme)</translation>
     </message>
     <message>
         <source>No Save File Loaded</source>
-        <translation type="unfinished"></translation>
+        <translation>No se ha cargado un archivo de guardado</translation>
     </message>
     <message>
         <source>The Filename is empty</source>
-        <translation type="unfinished"></translation>
+        <translation>El nombre del archivo está vacío</translation>
     </message>
     <message>
         <source>Region Detect Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error en la detección de región</translation>
     </message>
     <message>
         <source>-------EMPTY--------</source>
-        <translation type="unfinished"></translation>
+        <translation>-------VACIO-------</translation>
     </message>
     <message>
         <source>Region Can&apos;t be Automaticly Detected, You Must Set it Manually</source>
-        <translation type="unfinished"></translation>
+        <translation>La región no se puede detectar automáticamente, Debes ponerla manualmente</translation>
     </message>
     <message>
         <source>ID </source>
-        <translation type="unfinished"></translation>
+        <translation>ID</translation>
     </message>
     <message>
         <source>Total Exp:</source>
-        <translation type="unfinished"></translation>
+        <translation>Exp Total:</translation>
     </message>
     <message>
         <source>Next</source>
-        <translation type="unfinished"></translation>
+        <translation>Siguiente</translation>
     </message>
     <message>
         <source>Show Battle Target Labels</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar etiquetas de los objetivos en batalla</translation>
     </message>
     <message>
         <source>Show Battle Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar ayuda de batalla</translation>
     </message>
     <message>
         <source>Show Field Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrar mapa del mundo</translation>
     </message>
 </context>
 <context>
     <name>Materia_Names</name>
     <message>
         <source>MP Plus</source>
-        <translation type="unfinished"></translation>
+        <translation>Super PM</translation>
     </message>
     <message>
         <source>HP Plus</source>
-        <translation type="unfinished"></translation>
+        <translation>Super PG</translation>
     </message>
     <message>
         <source>Speed Plus</source>
-        <translation type="unfinished"></translation>
+        <translation>Super velocidad</translation>
     </message>
     <message>
         <source>Magic Plus</source>
-        <translation type="unfinished"></translation>
+        <translation>Super magia</translation>
     </message>
     <message>
         <source>Luck Plus</source>
-        <translation type="unfinished"></translation>
+        <translation>Super suerte</translation>
     </message>
     <message>
         <source>EXP Plus</source>
-        <translation type="unfinished"></translation>
+        <translation>Super EXP</translation>
     </message>
     <message>
         <source>Gil Plus</source>
-        <translation type="unfinished"></translation>
+        <translation>Super Gil</translation>
     </message>
     <message>
         <source>Enemy Away</source>
-        <translation type="unfinished"></translation>
+        <translation>Enemigo alejado</translation>
     </message>
     <message>
         <source>Enemy Lure</source>
-        <translation type="unfinished"></translation>
+        <translation>Atrae Enemigo</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
-        <translation type="unfinished"></translation>
+        <translation>Atrae chocobo</translation>
     </message>
     <message>
         <source>Pre-emptive</source>
-        <translation type="unfinished"></translation>
+        <translation>Prevacio</translation>
     </message>
     <message>
         <source>Long Range</source>
-        <translation type="unfinished"></translation>
+        <translation>Larga fila</translation>
     </message>
     <message>
         <source>Mega All</source>
-        <translation type="unfinished"></translation>
+        <translation>Mega todo</translation>
     </message>
     <message>
         <source>Counter Attack</source>
-        <translation type="unfinished"></translation>
+        <translation>Contraataque</translation>
     </message>
     <message>
         <source>Slash-All</source>
-        <translation type="unfinished"></translation>
+        <translation>Fulminar a todos</translation>
     </message>
     <message>
         <source>Double Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Corte Doble</translation>
     </message>
     <message>
         <source>Cover</source>
-        <translation type="unfinished"></translation>
+        <translation>Cubrir</translation>
     </message>
     <message>
         <source>Underwater</source>
-        <translation type="unfinished"></translation>
+        <translation>Subacuática</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation type="unfinished">PG &lt;-&gt; PM</translation>
+        <translation>PG/PM</translation>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation type="unfinished"></translation>
+        <translation>Magia W</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation type="unfinished"></translation>
+        <translation>Invocación W</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation type="unfinished"></translation>
+        <translation>Objeto W</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation type="unfinished">NO USAR</translation>
+        <translation>NO USAR</translation>
     </message>
     <message>
         <source>All</source>
-        <translation type="unfinished">Todo</translation>
+        <translation>Todo</translation>
     </message>
     <message>
         <source>Counter</source>
-        <translation type="unfinished"></translation>
+        <translation>Contar</translation>
     </message>
     <message>
         <source>Magic Counter</source>
-        <translation type="unfinished"></translation>
+        <translation>Oposición mágica</translation>
     </message>
     <message>
         <source>MP Turbo</source>
-        <translation type="unfinished"></translation>
+        <translation>Turbo PM</translation>
     </message>
     <message>
         <source>MP Absorb</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorber PM</translation>
     </message>
     <message>
         <source>HP Absorb</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorber PG</translation>
     </message>
     <message>
         <source>Elemental</source>
-        <translation type="unfinished"></translation>
+        <translation>Elemento Básico</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation type="unfinished"></translation>
+        <translation>Efecto añaddo</translation>
     </message>
     <message>
         <source>Sneak Attack</source>
-        <translation type="unfinished"></translation>
+        <translation>Aqtaque furtivo</translation>
     </message>
     <message>
         <source>Final Attack</source>
-        <translation type="unfinished"></translation>
+        <translation>Ataque final</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Corte añadido</translation>
     </message>
     <message>
         <source>Steal-As-Well</source>
-        <translation type="unfinished"></translation>
+        <translation>Robo simultáneo</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
-        <translation type="unfinished">Cuadrimagia</translation>
+        <translation>Cuadrimagia</translation>
     </message>
     <message>
         <source>Steal</source>
-        <translation type="unfinished"></translation>
+        <translation>Robar</translation>
     </message>
     <message>
         <source>Sense</source>
-        <translation type="unfinished"></translation>
+        <translation>Sentir</translation>
     </message>
     <message>
         <source>Throw</source>
-        <translation type="unfinished"></translation>
+        <translation>Lanzar</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation type="unfinished"></translation>
+        <translation>Morfo</translation>
     </message>
     <message>
         <source>DeathBlow</source>
-        <translation type="unfinished"></translation>
+        <translation>Golpe mortal</translation>
     </message>
     <message>
         <source>Manipulate</source>
-        <translation type="unfinished"></translation>
+        <translation>Manipular</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation type="unfinished">Gesto</translation>
+        <translation>Gesticular</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation type="unfinished"></translation>
+        <translation>Habil. Enem</translation>
     </message>
     <message>
         <source>Master Command</source>
-        <translation type="unfinished"></translation>
+        <translation>Comando maestro</translation>
     </message>
     <message>
         <source>Fire</source>
-        <translation type="unfinished"></translation>
+        <translation>Fuego</translation>
     </message>
     <message>
         <source>Ice</source>
-        <translation type="unfinished"></translation>
+        <translation>Hielo</translation>
     </message>
     <message>
         <source>Earth</source>
-        <translation type="unfinished"></translation>
+        <translation>Tierra</translation>
     </message>
     <message>
         <source>Lightning</source>
-        <translation type="unfinished"></translation>
+        <translation>Rayo</translation>
     </message>
     <message>
         <source>Restore</source>
-        <translation type="unfinished"></translation>
+        <translation>Recuperar</translation>
     </message>
     <message>
         <source>Heal</source>
-        <translation type="unfinished"></translation>
+        <translation>Sanar</translation>
     </message>
     <message>
         <source>Revive</source>
-        <translation type="unfinished"></translation>
+        <translation>Revivir</translation>
     </message>
     <message>
         <source>Seal</source>
-        <translation type="unfinished"></translation>
+        <translation>Sellar</translation>
     </message>
     <message>
         <source>Mystify</source>
-        <translation type="unfinished"></translation>
+        <translation>Mistificar</translation>
     </message>
     <message>
         <source>Transform</source>
-        <translation type="unfinished"></translation>
+        <translation>Transformar</translation>
     </message>
     <message>
         <source>Exit</source>
-        <translation type="unfinished"></translation>
+        <translation>Salir</translation>
     </message>
     <message>
         <source>Poison</source>
-        <translation type="unfinished"></translation>
+        <translation>Envenenar</translation>
     </message>
     <message>
         <source>Demi</source>
-        <translation type="unfinished"></translation>
+        <translation>Gravedad</translation>
     </message>
     <message>
         <source>Barrier</source>
-        <translation type="unfinished"></translation>
+        <translation>Barrera</translation>
     </message>
     <message>
         <source>Comet</source>
-        <translation type="unfinished"></translation>
+        <translation>Cometa</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation type="unfinished">Tiempo</translation>
+        <translation>Tiempo</translation>
     </message>
     <message>
         <source>Destruct</source>
-        <translation type="unfinished"></translation>
+        <translation>Destruir</translation>
     </message>
     <message>
         <source>Contain</source>
-        <translation type="unfinished"></translation>
+        <translation>Contener</translation>
     </message>
     <message>
         <source>FullCure</source>
-        <translation type="unfinished"></translation>
+        <translation>Cura Total</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation type="unfinished"></translation>
+        <translation>Escudo</translation>
     </message>
     <message>
         <source>Ultima</source>
-        <translation type="unfinished"></translation>
+        <translation>Última</translation>
     </message>
     <message>
         <source>Master Magic</source>
-        <translation type="unfinished"></translation>
+        <translation>Magia maestra</translation>
     </message>
     <message>
         <source>Choco/Mog</source>
-        <translation type="unfinished"></translation>
+        <translation>Choco/Mog</translation>
     </message>
     <message>
         <source>Shiva</source>
-        <translation type="unfinished"></translation>
+        <translation>Shiva</translation>
     </message>
     <message>
         <source>Ifrit</source>
-        <translation type="unfinished"></translation>
+        <translation>Ifrit</translation>
     </message>
     <message>
         <source>Ramuh</source>
-        <translation type="unfinished"></translation>
+        <translation>Ramuh</translation>
     </message>
     <message>
         <source>Titan</source>
-        <translation type="unfinished"></translation>
+        <translation>Titán</translation>
     </message>
     <message>
         <source>Odin</source>
-        <translation type="unfinished"></translation>
+        <translation>Odín</translation>
     </message>
     <message>
         <source>Leviathan</source>
-        <translation type="unfinished"></translation>
+        <translation>Leviatán</translation>
     </message>
     <message>
         <source>Bahamut</source>
-        <translation type="unfinished"></translation>
+        <translation>Bahamut</translation>
     </message>
     <message>
         <source>Kujata</source>
-        <translation type="unfinished"></translation>
+        <translation>Kjata</translation>
     </message>
     <message>
         <source>Alexander</source>
-        <translation type="unfinished"></translation>
+        <translation>Alejandro</translation>
     </message>
     <message>
         <source>Phoenix</source>
-        <translation type="unfinished"></translation>
+        <translation>Fénix</translation>
     </message>
     <message>
         <source>Neo Bahamut</source>
-        <translation type="unfinished"></translation>
+        <translation>Neo Bahamut</translation>
     </message>
     <message>
         <source>Hades</source>
-        <translation type="unfinished"></translation>
+        <translation>Hades</translation>
     </message>
     <message>
         <source>Typhoon</source>
-        <translation type="unfinished"></translation>
+        <translation>Typhoon</translation>
     </message>
     <message>
         <source>Bahamut ZERO</source>
-        <translation type="unfinished"></translation>
+        <translation>Bahamut CERO</translation>
     </message>
     <message>
         <source>Knights of Round</source>
-        <translation type="unfinished"></translation>
+        <translation>Cab. de la mesa R.</translation>
     </message>
     <message>
         <source>Master Summon</source>
-        <translation type="unfinished"></translation>
+        <translation>Invocación mestra</translation>
     </message>
 </context>
 <context>
@@ -5687,75 +5687,75 @@ no es una partida guardada de FF7</translation>
     <name>Materia_Stats</name>
     <message>
         <source>MP:+% depending on level</source>
-        <translation type="unfinished"></translation>
+        <translation>PM:+% dependiendo del nivel</translation>
     </message>
     <message>
         <source>HP:+% depending on level</source>
-        <translation type="unfinished"></translation>
+        <translation>PG:+% dependiendo del nivel</translation>
     </message>
     <message>
         <source>Dex:+% depending on level</source>
-        <translation type="unfinished"></translation>
+        <translation>Des:+% dependiendo del nivel</translation>
     </message>
     <message>
         <source>Mag:+% depending on level</source>
-        <translation type="unfinished"></translation>
+        <translation>Mag:+% dependiendo del nivel</translation>
     </message>
     <message>
         <source>Lck:+% depending on level</source>
-        <translation type="unfinished"></translation>
+        <translation>Sue:+% dependiendo del nivel</translation>
     </message>
     <message>
         <source>Lck:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sue:+1</translation>
     </message>
     <message>
         <source>Lck:-1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sue:-1</translation>
     </message>
     <message>
         <source>Dex:+2</source>
-        <translation type="unfinished"></translation>
+        <translation>Des:+2</translation>
     </message>
     <message>
         <source>Vit:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Vit:+1</translation>
     </message>
     <message>
         <source>HP:-2% MP:+2% Str:-1 Mag:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>PG:-2% PM:+2% Fue:-1 Mag:+1</translation>
     </message>
     <message>
         <source>HP:-5% MP:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>PG:-5% PM:+5% Fue:-2 Vit:-1 Mag:+2 Esp:+1</translation>
     </message>
     <message>
         <source>HP:-5% MP:+5% Str:-2 Vit -1 Mag:+2 Spi:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>PG:-5% PM:+5% Fue:-2 Vit:-1 Mag:+2 Esp:+1</translation>
     </message>
     <message>
         <source>HP:-10% MP:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
-        <translation type="unfinished"></translation>
+        <translation>PG:-10% PM:+10% Fue:-4 Vit:-2 Mag:+4 Esp:+2</translation>
     </message>
     <message>
         <source>HP:-2% MP:+2% Mag:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>PG:-2% PM:+2% Mag:+1</translation>
     </message>
     <message>
         <source>HP:-5% MP:+5% Mag:+1 Spi:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>PG:-5% PM:+5% Mag:+1 Esp:+1</translation>
     </message>
     <message>
         <source>HP:-10% MP:+10% Mag:+2 Spi:+2</source>
-        <translation type="unfinished"></translation>
+        <translation>PG:-10% PM:+10% Mag:+2 Esp:+2</translation>
     </message>
     <message>
         <source>HP:-10% MP:+15% Mag:+4 Spi:+4</source>
-        <translation type="unfinished"></translation>
+        <translation>PG:-10% PM:+15% Mag:+1 Esp:+4</translation>
     </message>
     <message>
         <source>HP:-10% MP:+20% Mag:+8 Spi:+8</source>
-        <translation type="unfinished"></translation>
+        <translation>PG:-10% PM:+20% Mag:+8 Esp:+8</translation>
     </message>
 </context>
 <context>
@@ -5866,7 +5866,7 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source> Folder To Load/Save Emulator Memory Cards  </source>
-        <translation type="unfinished"></translation>
+        <translation> Carpeta donde cargar/guardar Memory Cards del emulador  </translation>
     </message>
 </context>
 <context>
@@ -6164,19 +6164,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>save icon class used to make the psx icon</source>
-        <translation type="unfinished"></translation>
+        <translation>guardar tipo de icono usado para el icono de psx</translation>
     </message>
     <message>
         <source>New: Using Myst6re SaveIcon Class</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Usar tipo de icono de guardado de Myst6re</translation>
     </message>
     <message>
         <source>Fixed: Items/Materia Names And Skill Now Translated</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: nombres y habilidades de objetos/materia traducidos</translation>
     </message>
     <message>
         <source>Fixed: Titan/Ramuh Stats Backward.</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Stats de Titan/Ramuh al revés</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -6200,120 +6200,120 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Save and Save as are now both allowed</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Guardar y guardar como ambos disponibles</translation>
     </message>
     <message>
         <source>New: Change Slot Posin in Debug mode (MC only) </source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Cambiar la posición de slot en modo Debug (sólo MC) </translation>
     </message>
     <message>
         <source>New: Support for .vgs .mem and .gme formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Compatibilidad para los formatos gme y vgs</translation>
     </message>
     <message>
         <source>New: .bin .mc .mci .ps .psm .dff  Format Support</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Compatible con los formatos .bin .mc .mci -ps .psm .diff</translation>
     </message>
     <message>
         <source>Fixed:Psx and Psv Region Detection</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Detección de región para psx y psv</translation>
     </message>
     <message>
         <source>New: Fancy Character Materia on Equipment tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo:Submenu de materia en el equipo</translation>
     </message>
     <message>
         <source>New: Toggle Field Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Activar ayuda en el campo</translation>
     </message>
 </context>
 <context>
     <name>errbox</name>
     <message>
         <source>Non Final Fantasy VII Slot Detected</source>
-        <translation type="unfinished"></translation>
+        <translation>Detectada ranura no Final Fantasy VII</translation>
     </message>
     <message>
         <source>Please Select An Action To Continue</source>
-        <translation type="unfinished">Por favor selecciona una acción para continuar</translation>
+        <translation>Por favor selecciona una acción para continuar</translation>
     </message>
     <message>
         <source>Slot Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Previsualización de ranura</translation>
     </message>
     <message>
         <source>Region String</source>
-        <translation type="unfinished">String de Región</translation>
+        <translation>String de Región</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>TextLabel</translation>
     </message>
     <message>
         <source>&amp;Previous Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Ranura Anterior</translation>
     </message>
     <message>
         <source>View Anyway </source>
-        <translation type="unfinished"></translation>
+        <translation>Ver de todas formas </translation>
     </message>
     <message>
         <source>    &amp;Next Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>    &amp;Ranura siguiente</translation>
     </message>
     <message>
         <source>&amp;Export As Raw PSX</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Exportar como PSX Raw</translation>
     </message>
     <message>
         <source>Your At Slot 1</source>
-        <translation type="unfinished">Estás en la ranura 1</translation>
+        <translation>Estás en la ranura 1</translation>
     </message>
     <message>
         <source>Sorry There is no Previous Slot</source>
-        <translation type="unfinished">Lo siento no hay ranura anterior</translation>
+        <translation>Lo siento no hay ranura anterior</translation>
     </message>
     <message>
         <source>Save Raw PSX File</source>
-        <translation type="unfinished">Guardar archivo PSX RAW</translation>
+        <translation>Guardar archivo PSX RAW</translation>
     </message>
     <message>
         <source>All Files(*)</source>
-        <translation type="unfinished">Todos los archivos(*)</translation>
+        <translation>Todos los archivos(*)</translation>
     </message>
     <message>
         <source>Black Chocobo</source>
-        <translation type="unfinished">Chocobo Negro</translation>
+        <translation>Chocobo Negro</translation>
     </message>
     <message>
         <source>Cannot write file %1:
 %2.</source>
-        <translation type="unfinished">No se puede escribir el archivo%1:
+        <translation>No se puede escribir el archivo%1:
 %2.</translation>
     </message>
     <message>
         <source>Save Successfully</source>
-        <translation type="unfinished">Guardado con éxito</translation>
+        <translation>Guardado con éxito</translation>
     </message>
     <message>
         <source>File Saved Successfully, Going Back To The Selection Dialog</source>
-        <translation type="unfinished">Archivo guardado con éxito, Volviendo a la pantalla de selección</translation>
+        <translation>Archivo guardado con éxito, Volviendo a la pantalla de selección</translation>
     </message>
     <message>
         <source>Your At Slot 15</source>
-        <translation type="unfinished">Estás en la ranura 15</translation>
+        <translation>Estás en la ranura 15</translation>
     </message>
     <message>
         <source>Sorry There is no Next Slot</source>
-        <translation type="unfinished">Lo siento no hay ranura siguiente</translation>
+        <translation>Lo siento no hay ranura siguiente</translation>
     </message>
     <message>
         <source>Alt+Left</source>
-        <translation type="unfinished">Alt+Izq.</translation>
+        <translation>Alt+Izq.</translation>
     </message>
     <message>
         <source>Alt+Right</source>
-        <translation type="unfinished">Alt+Derecha</translation>
+        <translation>Alt+Derecha</translation>
     </message>
 </context>
 </TS>
