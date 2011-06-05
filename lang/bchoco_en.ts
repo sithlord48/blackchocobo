@@ -4297,6 +4297,26 @@ is not a FF7 SaveGame.</source>
         <source>Show Field Help</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>0xC1E tut_sub</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x01</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x02 </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x04 - Played Sub Tutorial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x40 - Battle Targets</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -6196,7 +6216,7 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New: Toggle Field Help</source>
+        <source>New: Toggle Field Help and Battle Target Labels</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

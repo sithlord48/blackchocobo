@@ -2554,6 +2554,7 @@ void MainWindow::guirefresh(void)
     }
     /*~~~~ END Type Check~~~~*/
     //dialog preview
+
     QImage image(2, 2, QImage::Format_ARGB32);
     image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
     image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
@@ -2565,6 +2566,12 @@ void MainWindow::guirefresh(void)
     //Clear all check boxes and index's
     ui->cb_replay->setCurrentIndex(0);
     ui->cb_bombing_int->setChecked(Qt::Unchecked);
+    ui->cb_field_help->setChecked(Qt::Unchecked);
+    ui->cb_battle_targets->setChecked(Qt::Unchecked);
+
+    if((ff7.slot[s].field_help)& (1<<0)){ui->cb_field_help->setChecked(Qt::Checked);}
+    //if((ff7.slot[s].field_help)& (1<<6)){ui->cb_battle_targets->setChecked(Qt::Checked);}
+    if((ff7.slot[s].tut_sub)& (1<<6)){ui->cb_battle_targets->setChecked(Qt::Checked);}
 
     ui->sb_bm_progress1->setValue(ff7.slot[s].bm_progress1);
     ui->sb_bm_progress2->setValue(ff7.slot[s].bm_progress2);
@@ -4501,6 +4508,7 @@ void MainWindow::on_btn_remove_all_stolen_clicked()
 void MainWindow::testdata_refresh()
 {
     load=true;
+    ui->cb_tut_sub->setChecked(Qt::Unchecked);
 
     ui->sb_timer_time_hour->setValue(ff7.slot[s].timer[0]);
     ui->sb_timer_time_min->setValue(ff7.slot[s].timer[1]);
@@ -4512,9 +4520,7 @@ void MainWindow::testdata_refresh()
     ui->sb_b_love_barret->setValue(ff7.slot[s].b_love.barret);
     ui->sb_u_weapon_hp->setValue(ff7.slot[s].u_weapon_hp[0] |(ff7.slot[s].u_weapon_hp[1] << 8) | (ff7.slot[s].u_weapon_hp[2] << 16));
 
-    if(ff7.slot[s].tut_sub == 0x2F){ui->cb_tut_sub->setCheckState(Qt::Checked);}
-    else if(ff7.slot[s].tut_sub ==0x2B){ui->cb_tut_sub->setCheckState(Qt::PartiallyChecked);}
-    else{ui->cb_tut_sub->setCheckState(Qt::Unchecked);}
+    if((ff7.slot[s].tut_sub)&(1<<2)){ui->cb_tut_sub->setChecked(Qt::Checked);}
     ui->lcdNumber_6->display(ff7.slot[s].tut_sub);
 
 
@@ -4567,6 +4573,24 @@ void MainWindow::testdata_refresh()
     if((ff7.slot[s].midgartrainflags)& (1<<7)){ui->cb_midgartrain_8->setChecked(Qt::Checked);}
     else{ui->cb_midgartrain_8->setChecked(Qt::Unchecked);}
     ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+
+    if((ff7.slot[s].tut_sub)& (1<<0)){ui->cb_tut_sub_1->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_1->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].tut_sub)& (1<<1)){ui->cb_tut_sub_2->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_2->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].tut_sub)& (1<<2)){ui->cb_tut_sub_3->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_3->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].tut_sub)& (1<<3)){ui->cb_tut_sub_4->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_4->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].tut_sub)& (1<<4)){ui->cb_tut_sub_5->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_5->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].tut_sub)& (1<<5)){ui->cb_tut_sub_6->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_6->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].tut_sub)& (1<<6)){ui->cb_tut_sub_7->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_7->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].tut_sub)& (1<<7)){ui->cb_tut_sub_8->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_8->setChecked(Qt::Unchecked);}
+    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
 
     load=false;
 }//end of testdata_refresh()
@@ -4765,13 +4789,13 @@ void MainWindow::on_cb_midgartrain_8_toggled(bool checked)
     ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
 }}
 
-void MainWindow::on_cb_tut_sub_stateChanged(int value)
+/*void MainWindow::on_cb_tut_sub_stateChanged(int value)
 {if(!load){
-    if (value == 0){ff7.slot[s].tut_sub =0x00;}
+    if (value == 0){ff7.slot[s].tut_sub = 0x00;}
     else if(value ==1){ff7.slot[s].tut_sub =0x2B;}
-    else if(value ==2){ff7.slot[s].tut_sub=0x2F;}
+    else if(value ==2){ff7.slot[s].tut_sub =0x2F;}
     testdata_refresh();
-}}
+}}*/
 
 void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
 {if(!load){
@@ -4794,4 +4818,76 @@ void MainWindow::on_cb_Region_Slot_currentIndexChanged()
     ff7.SG_Region_String[s].clear();
     ff7.SG_Region_String[s].append(&new_regionString);
     if(ff7.savetype==3 || ff7.savetype==5|| ff7.savetype==6 || ff7.savetype ==7){fix_vmc_header(); guirefresh();}
+}}
+
+void MainWindow::on_cb_field_help_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].field_help |= (1<<0);}
+    else{ff7.slot[s].field_help &= ~(1<<0);}
+}}
+
+void MainWindow::on_cb_battle_targets_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].tut_sub |= (1<<6);}
+    else{ff7.slot[s].tut_sub &= ~(1<<6);}
+}}
+void MainWindow::on_cb_tut_sub_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].tut_sub |= (1<<2);}
+    else{ff7.slot[s].tut_sub &= ~(1<<2);}
+}}
+void MainWindow::on_cb_tut_sub_1_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].tut_sub |= (1<<0);}
+    else{ff7.slot[s].tut_sub &= ~(1<<0);}
+    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+}}
+
+void MainWindow::on_cb_tut_sub_2_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].tut_sub |= (1<<1);}
+    else{ff7.slot[s].tut_sub &= ~(1<<1);}
+    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+}}
+
+void MainWindow::on_cb_tut_sub_3_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].tut_sub |= (1<<2);}
+    else{ff7.slot[s].tut_sub &= ~(1<<2);}
+    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+}}
+
+void MainWindow::on_cb_tut_sub_4_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].tut_sub |= (1<<3);}
+    else{ff7.slot[s].tut_sub &= ~(1<<3);}
+    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+}}
+
+void MainWindow::on_cb_tut_sub_5_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].tut_sub |= (1<<4);}
+    else{ff7.slot[s].tut_sub &= ~(1<<4);}
+    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+}}
+
+void MainWindow::on_cb_tut_sub_6_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].tut_sub |= (1<<5);}
+    else{ff7.slot[s].tut_sub &= ~(1<<5);}
+    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+}}
+
+void MainWindow::on_cb_tut_sub_7_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].tut_sub |= (1<<6);}
+    else{ff7.slot[s].tut_sub &= ~(1<<6);}
+    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+}}
+
+void MainWindow::on_cb_tut_sub_8_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].tut_sub |= (1<<7);}
+    else{ff7.slot[s].tut_sub &= ~(1<<7);}
+    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
 }}
