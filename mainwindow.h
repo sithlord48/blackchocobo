@@ -449,5 +449,7 @@ private slots:
     void on_action_Save_activated();
     void on_cb_Region_Slot_currentIndexChanged();
     void on_combo_id_currentIndexChanged(int index);
+    void on_cb_ruby_dead_toggled(bool checked);
+    void on_cb_emerald_dead_toggled(bool checked);
 };
 #endif // MAINWINDOW_H

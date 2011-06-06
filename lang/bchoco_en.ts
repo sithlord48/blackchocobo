@@ -4317,6 +4317,18 @@ is not a FF7 SaveGame.</source>
         <source>0x40 - Battle Targets</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Weapons Killed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ruby</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Emerald</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -6217,6 +6229,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Toggle Field Help and Battle Target Labels</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Revive Ruby Weapon &amp; Emerald Weapon</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

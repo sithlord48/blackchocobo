@@ -18215,31 +18215,36 @@ image: url(:/icon/cait_icon);
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
         <item>
-         <widget class="QGroupBox" name="groupBox_20">
-          <property name="minimumSize">
-           <size>
-            <width>238</width>
-            <height>485</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>238</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="title">
-           <string>Materia Stolen By Yuffie</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-          <layout class="QGridLayout" name="gridLayout_15">
-           <property name="margin">
-            <number>2</number>
-           </property>
-           <item row="0" column="0">
+         <layout class="QVBoxLayout" name="verticalLayout_89">
+          <item>
+           <widget class="QGroupBox" name="groupBox_20">
+            <property name="minimumSize">
+             <size>
+              <width>238</width>
+              <height>430</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>238</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Materia Stolen By Yuffie</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
             <widget class="QTableWidget" name="tbl_materia_2">
+             <property name="geometry">
+              <rect>
+               <x>4</x>
+               <y>19</y>
+               <width>230</width>
+               <height>401</height>
+              </rect>
+             </property>
              <property name="minimumSize">
               <size>
                <width>230</width>
@@ -18293,9 +18298,31 @@ image: url(:/icon/cait_icon);
               </property>
              </column>
             </widget>
-           </item>
-          </layout>
-         </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_35">
+            <property name="minimumSize">
+             <size>
+              <width>216</width>
+              <height>56</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>Mystery Ninja </string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_37">
+             <item>
+              <widget class="QCheckBox" name="cb_yuffieforest">
+               <property name="text">
+                <string>Can Fight Yuffie in Forests</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
         </item>
         <item>
          <spacer name="horizontalSpacer_117">
@@ -19875,21 +19902,40 @@ image: url(:/icon/cait_icon);
            </widget>
           </item>
           <item>
-           <widget class="QGroupBox" name="groupBox_35">
-            <property name="minimumSize">
-             <size>
-              <width>216</width>
-              <height>56</height>
-             </size>
-            </property>
+           <widget class="QGroupBox" name="groupBox_9">
             <property name="title">
-             <string>Mystery Ninja </string>
+             <string>Weapons Killed</string>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_37">
+            <layout class="QVBoxLayout" name="verticalLayout_88">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="margin">
+              <number>3</number>
+             </property>
              <item>
-              <widget class="QCheckBox" name="cb_yuffieforest">
+              <widget class="QCheckBox" name="cb_ruby_dead">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>18</height>
+                </size>
+               </property>
                <property name="text">
-                <string>Can Fight Yuffie in Forests</string>
+                <string>Ruby</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="cb_emerald_dead">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>18</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>Emerald</string>
                </property>
               </widget>
              </item>

@@ -2621,9 +2621,12 @@ void MainWindow::guirefresh(void)
     ui->cb_bombing_int->setChecked(Qt::Unchecked);
     ui->cb_field_help->setChecked(Qt::Unchecked);
     ui->cb_battle_targets->setChecked(Qt::Unchecked);
+    ui->cb_ruby_dead->setChecked(Qt::Unchecked);
+    ui->cb_emerald_dead->setChecked(Qt::Unchecked);
 
+    if((ff7.slot[s].ruby_emerald) &(1<<3)){ui->cb_ruby_dead->setChecked(Qt::Checked);}
+    if((ff7.slot[s].ruby_emerald)& (1<<4)){ui->cb_emerald_dead->setChecked(Qt::Checked);}
     if((ff7.slot[s].field_help)& (1<<0)){ui->cb_field_help->setChecked(Qt::Checked);}
-    //if((ff7.slot[s].field_help)& (1<<6)){ui->cb_battle_targets->setChecked(Qt::Checked);}
     if((ff7.slot[s].tut_sub)& (1<<6)){ui->cb_battle_targets->setChecked(Qt::Checked);}
 
     ui->sb_bm_progress1->setValue(ff7.slot[s].bm_progress1);
@@ -4922,4 +4925,16 @@ void MainWindow::on_cb_tut_sub_8_toggled(bool checked)
     if(checked){ff7.slot[s].tut_sub |= (1<<7);}
     else{ff7.slot[s].tut_sub &= ~(1<<7);}
     ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+}}
+
+void MainWindow::on_cb_ruby_dead_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].ruby_emerald |= (1<<3);}
+    else{ff7.slot[s].ruby_emerald &= ~(1<<3);}
+}}
+
+void MainWindow::on_cb_emerald_dead_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].ruby_emerald |= (1<<4);}
+    else{ff7.slot[s].ruby_emerald &= ~(1<<4);}
 }}
