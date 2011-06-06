@@ -433,6 +433,11 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>New: Revive Ruby Weapon &amp; Emerald Weapon</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New: Toggle Field Help and Battle Target Labels</string>
           </property>
          </item>
