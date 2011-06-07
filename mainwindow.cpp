@@ -4543,6 +4543,7 @@ void MainWindow::on_btn_remove_all_stolen_clicked()
 void MainWindow::testdata_refresh()
 {
     load=true;
+
     ui->cb_tut_sub->setChecked(Qt::Unchecked);
 
     ui->sb_timer_time_hour->setValue(ff7.slot[s].timer[0]);
@@ -4626,6 +4627,29 @@ void MainWindow::testdata_refresh()
     if((ff7.slot[s].tut_sub)& (1<<7)){ui->cb_tut_sub_8->setChecked(Qt::Checked);}
     else{ui->cb_tut_sub_8->setChecked(Qt::Unchecked);}
     ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+
+    if((ff7.slot[s].highwind_buggy)& (1<<0)){ui->cb_highwind_buggy_1->setChecked(Qt::Checked);}
+    else{ui->cb_highwind_buggy_1->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].highwind_buggy)& (1<<1)){ui->cb_highwind_buggy_2->setChecked(Qt::Checked);}
+    else{ui->cb_highwind_buggy_2->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].highwind_buggy)& (1<<2)){ui->cb_highwind_buggy_3->setChecked(Qt::Checked);}
+    else{ui->cb_highwind_buggy_3->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].highwind_buggy)& (1<<3)){ui->cb_highwind_buggy_4->setChecked(Qt::Checked);}
+    else{ui->cb_highwind_buggy_4->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].highwind_buggy)& (1<<4)){ui->cb_highwind_buggy_5->setChecked(Qt::Checked);}
+    else{ui->cb_highwind_buggy_5->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].highwind_buggy)& (1<<5)){ui->cb_highwind_buggy_6->setChecked(Qt::Checked);}
+    else{ui->cb_highwind_buggy_6->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].highwind_buggy)& (1<<6)){ui->cb_highwind_buggy_7->setChecked(Qt::Checked);}
+    else{ui->cb_highwind_buggy_7->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].highwind_buggy)& (1<<7)){ui->cb_highwind_buggy_8->setChecked(Qt::Checked);}
+    else{ui->cb_highwind_buggy_8->setChecked(Qt::Unchecked);}
+    ui->lcd_highwind_buggy->display(ff7.slot[s].highwind_buggy);
+
+    if(ff7.slot[s].highwind_buggy ==0x00){        ui->combo_highwind_buggy->setCurrentIndex(0);}
+    else if(ff7.slot[s].highwind_buggy ==0x01){        ui->combo_highwind_buggy->setCurrentIndex(1);}
+    else if(ff7.slot[s].highwind_buggy ==0x10){        ui->combo_highwind_buggy->setCurrentIndex(2);}
+    else {}
 
     load=false;
 }//end of testdata_refresh()
@@ -4927,6 +4951,62 @@ void MainWindow::on_cb_tut_sub_8_toggled(bool checked)
     ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
 }}
 
+void MainWindow::on_cb_highwind_buggy_1_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].highwind_buggy |= (1<<0);}
+    else{ff7.slot[s].highwind_buggy &= ~(1<<0);}
+    ui->lcd_highwind_buggy->display(ff7.slot[s].highwind_buggy);
+}}
+
+void MainWindow::on_cb_highwind_buggy_2_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].highwind_buggy |= (1<<1);}
+    else{ff7.slot[s].highwind_buggy &= ~(1<<1);}
+    ui->lcd_highwind_buggy->display(ff7.slot[s].highwind_buggy);
+}}
+
+void MainWindow::on_cb_highwind_buggy_3_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].highwind_buggy |= (1<<2);}
+    else{ff7.slot[s].highwind_buggy &= ~(1<<2);}
+    ui->lcd_highwind_buggy->display(ff7.slot[s].highwind_buggy);
+}}
+
+void MainWindow::on_cb_highwind_buggy_4_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].highwind_buggy |= (1<<3);}
+    else{ff7.slot[s].highwind_buggy &= ~(1<<3);}
+    ui->lcd_highwind_buggy->display(ff7.slot[s].highwind_buggy);
+}}
+
+void MainWindow::on_cb_highwind_buggy_5_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].highwind_buggy |= (1<<4);}
+    else{ff7.slot[s].highwind_buggy &= ~(1<<4);}
+    ui->lcd_highwind_buggy->display(ff7.slot[s].highwind_buggy);
+}}
+
+void MainWindow::on_cb_highwind_buggy_6_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].highwind_buggy |= (1<<5);}
+    else{ff7.slot[s].highwind_buggy &= ~(1<<5);}
+    ui->lcd_highwind_buggy->display(ff7.slot[s].highwind_buggy);
+}}
+
+void MainWindow::on_cb_highwind_buggy_7_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].highwind_buggy |= (1<<6);}
+    else{ff7.slot[s].highwind_buggy &= ~(1<<6);}
+    ui->lcd_highwind_buggy->display(ff7.slot[s].highwind_buggy);
+}}
+
+void MainWindow::on_cb_highwind_buggy_8_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].highwind_buggy |= (1<<7);}
+    else{ff7.slot[s].highwind_buggy &= ~(1<<7);}
+    ui->lcd_highwind_buggy->display(ff7.slot[s].highwind_buggy);
+}}
+
 void MainWindow::on_cb_ruby_dead_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].ruby_emerald |= (1<<3);}
@@ -4937,4 +5017,14 @@ void MainWindow::on_cb_emerald_dead_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].ruby_emerald |= (1<<4);}
     else{ff7.slot[s].ruby_emerald &= ~(1<<4);}
+}}
+
+void MainWindow::on_combo_highwind_buggy_currentIndexChanged(int index)
+{if(!load){
+  switch(index)
+  {
+  case 0: ff7.slot[s].highwind_buggy =0x00; break;
+  case 1: ff7.slot[s].highwind_buggy =0x01; break;
+  case 2: ff7.slot[s].highwind_buggy =0x10; break;
+  }
 }}

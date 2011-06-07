@@ -51,6 +51,14 @@ private:
 public slots:
 
 private slots:
+    void on_cb_highwind_buggy_8_toggled(bool);
+    void on_cb_highwind_buggy_7_toggled(bool);
+    void on_cb_highwind_buggy_6_toggled(bool);
+    void on_cb_highwind_buggy_5_toggled(bool);
+    void on_cb_highwind_buggy_4_toggled(bool);
+    void on_cb_highwind_buggy_3_toggled(bool);
+    void on_cb_highwind_buggy_2_toggled(bool);
+    void on_cb_highwind_buggy_1_toggled(bool);
     void on_cb_tut_sub_8_toggled(bool);
     void on_cb_tut_sub_7_toggled(bool);
     void on_cb_tut_sub_6_toggled(bool);
@@ -451,5 +459,6 @@ private slots:
     void on_combo_id_currentIndexChanged(int index);
     void on_cb_ruby_dead_toggled(bool checked);
     void on_cb_emerald_dead_toggled(bool checked);
+    void on_combo_highwind_buggy_currentIndexChanged(int index);
 };
 #endif // MAINWINDOW_H
