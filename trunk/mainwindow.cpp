@@ -80,7 +80,6 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->sb_bm_progress2->setEnabled(false);
     ui->sb_bm_progress3->setEnabled(false);
     ui->cb_Region_Slot->setEnabled(false);
-
     load=false;
 
     // load settings
@@ -4544,6 +4543,50 @@ void MainWindow::testdata_refresh()
 {
     load=true;
 
+
+    //WORLD TAB
+   ui->leader_x->setValue((ff7.slot[s].l_world) & 0x7FFFF);
+   ui->leader_id->setValue((ff7.slot[s].l_world << 19)&0x1F);
+   ui->leader_angle->setValue((ff7.slot[s].l_world) << 24);
+   ui->leader_y->setValue((ff7.slot[s].l_world2) & 0x3FFFF);
+   ui->leader_z->setValue((ff7.slot[s].l_world2) << 18);
+
+   ui->rw_x->setValue((ff7.slot[s].rw_world) & 0x7FFFF);
+   ui->rw_id->setValue((ff7.slot[s].rw_world << 19)&0x1F);
+   ui->rw_angle->setValue((ff7.slot[s].rw_world) << 24);
+   ui->rw_y->setValue((ff7.slot[s].rw_world2) & 0x3FFFF);
+   ui->rw_z->setValue((ff7.slot[s].rw_world2) << 18);
+
+   ui->ew_x->setValue((ff7.slot[s].ew_world) & 0x7FFFF);
+   ui->ew_id->setValue((ff7.slot[s].ew_world << 19)&0x1F);
+   ui->ew_angle->setValue((ff7.slot[s].ew_world) << 24);
+   ui->ew_y->setValue((ff7.slot[s].ew_world2) & 0x3FFFF);
+   ui->ew_z->setValue((ff7.slot[s].ew_world2) << 18);
+
+   ui->uw_x->setValue((ff7.slot[s].uw_world) & 0x7FFFF);
+   ui->uw_id->setValue((ff7.slot[s].uw_world << 19)&0x1F);
+   ui->uw_angle->setValue((ff7.slot[s].uw_world) << 24);
+   ui->uw_y->setValue((ff7.slot[s].uw_world2) & 0x3FFFF);
+   ui->uw_z->setValue((ff7.slot[s].uw_world2) << 18);
+
+   ui->tc_x->setValue((ff7.slot[s].tc_world) & 0x7FFFF);
+   ui->tc_id->setValue((ff7.slot[s].tc_world << 19)&0x1F);
+   ui->tc_angle->setValue((ff7.slot[s].tc_world) << 24);
+   ui->tc_y->setValue((ff7.slot[s].tc_world2) & 0x3FFFF);
+   ui->tc_z->setValue((ff7.slot[s].tc_world2) << 18);
+
+   ui->bh_x->setValue((ff7.slot[s].bh_world) & 0x7FFFF);
+   ui->bh_id->setValue((ff7.slot[s].bh_world << 19)&0x1F);
+   ui->bh_angle->setValue((ff7.slot[s].bh_world) << 24);
+   ui->bh_y->setValue((ff7.slot[s].bh_world2) & 0x3FFFF);
+   ui->bh_z->setValue((ff7.slot[s].bh_world2) << 18);
+
+   ui->sub_x->setValue((ff7.slot[s].sub_world) & 0x7FFFF);
+   ui->sub_id->setValue((ff7.slot[s].sub_world << 19)&0x1F);
+   ui->sub_angle->setValue((ff7.slot[s].sub_world) << 24);
+   ui->sub_y->setValue((ff7.slot[s].sub_world2) & 0x3FFFF);
+   ui->sub_z->setValue((ff7.slot[s].sub_world2) << 18);
+   //TEST TAB
     ui->cb_tut_sub->setChecked(Qt::Unchecked);
 
     ui->sb_timer_time_hour->setValue(ff7.slot[s].timer[0]);
@@ -5028,3 +5071,46 @@ void MainWindow::on_combo_highwind_buggy_currentIndexChanged(int index)
   case 2: ff7.slot[s].highwind_buggy =0x10; break;
   }
 }}
+// Leader's world map stuff.
+void MainWindow::on_leader_x_valueChanged(int value){if(!load){ff7.slot[s].l_world = (value | ui->leader_id->value() << 19 | ui->leader_angle->value() << 24);}}
+void MainWindow::on_leader_id_valueChanged(int value){if(!load){ff7.slot[s].l_world = (ui->leader_x->value()  | value << 19 | ui->leader_angle->value() <<24);}}
+void MainWindow::on_leader_angle_valueChanged(int value){if(!load){ff7.slot[s].l_world = (ui->leader_x->value()  | ui->leader_id->value() << 19 | value <<24);}}
+void MainWindow::on_leader_y_valueChanged(int value){if(!load){ff7.slot[s].l_world2 = (value | ui->leader_z->value() << 18);}}
+void MainWindow::on_leader_z_valueChanged(int value){if(!load){ff7.slot[s].l_world2 = (ui->leader_y->value() | value << 18);}}
+//Ruby world stuff
+void MainWindow::on_rw_x_valueChanged(int value){if(!load){ff7.slot[s].rw_world = (value | ui->rw_id->value() << 19 | ui->rw_angle->value() << 24);}}
+void MainWindow::on_rw_id_valueChanged(int value){if(!load){ff7.slot[s].rw_world = (ui->rw_x->value()  | value << 19 | ui->rw_angle->value() <<24);}}
+void MainWindow::on_rw_angle_valueChanged(int value){if(!load){ff7.slot[s].rw_world = (ui->rw_x->value()  | ui->rw_id->value() << 19 | value <<24);}}
+void MainWindow::on_rw_y_valueChanged(int value){if(!load){ff7.slot[s].rw_world2 = (value | ui->rw_z->value() << 18);}}
+void MainWindow::on_rw_z_valueChanged(int value){if(!load){ff7.slot[s].rw_world2 = (ui->rw_y->value() | value << 18);}}
+//emerald world
+void MainWindow::on_ew_x_valueChanged(int value){if(!load){ff7.slot[s].ew_world = (value | ui->ew_id->value() << 19 | ui->ew_angle->value() << 24);}}
+void MainWindow::on_ew_id_valueChanged(int value){if(!load){ff7.slot[s].ew_world = (ui->ew_x->value()  | value << 19 | ui->ew_angle->value() <<24);}}
+void MainWindow::on_ew_angle_valueChanged(int value){if(!load){ff7.slot[s].ew_world = (ui->ew_x->value()  | ui->ew_id->value() << 19 | value <<24);}}
+void MainWindow::on_ew_y_valueChanged(int value){if(!load){ff7.slot[s].ew_world2 = (value | ui->ew_z->value() << 18);}}
+void MainWindow::on_ew_z_valueChanged(int value){if(!load){ff7.slot[s].ew_world2 = (ui->ew_y->value() | value << 18);}}
+//ultimate weapon
+void MainWindow::on_uw_x_valueChanged(int value){if(!load){ff7.slot[s].uw_world = (value | ui->uw_id->value() << 19 | ui->uw_angle->value() << 24);}}
+void MainWindow::on_uw_id_valueChanged(int value){if(!load){ff7.slot[s].uw_world = (ui->uw_x->value()  | value << 19 | ui->uw_angle->value() <<24);}}
+void MainWindow::on_uw_angle_valueChanged(int value){if(!load){ff7.slot[s].uw_world = (ui->uw_x->value()  | ui->uw_id->value() << 19 | value <<24);}}
+void MainWindow::on_uw_y_valueChanged(int value){if(!load){ff7.slot[s].uw_world2 = (value | ui->uw_z->value() << 18);}}
+void MainWindow::on_uw_z_valueChanged(int value){if(!load){ff7.slot[s].uw_world2 = (ui->uw_y->value() | value << 18);}}
+
+//Tiny bronco / chocobo world
+void MainWindow::on_tc_x_valueChanged(int value){if(!load){ff7.slot[s].tc_world = (value | ui->tc_id->value() << 19 | ui->tc_angle->value() << 24);}}
+void MainWindow::on_tc_id_valueChanged(int value){if(!load){ff7.slot[s].tc_world = (ui->tc_x->value()  | value << 19 | ui->tc_angle->value() <<24);}}
+void MainWindow::on_tc_angle_valueChanged(int value){if(!load){ff7.slot[s].tc_world = (ui->tc_x->value()  | ui->tc_id->value() << 19 | value <<24);}}
+void MainWindow::on_tc_y_valueChanged(int value){if(!load){ff7.slot[s].tc_world2 = (value | ui->tc_z->value() << 18);}}
+void MainWindow::on_tc_z_valueChanged(int value){if(!load){ff7.slot[s].tc_world2 = (ui->tc_y->value() | value << 18);}}
+//buggy / highwind world
+void MainWindow::on_bh_x_valueChanged(int value){if(!load){ff7.slot[s].bh_world = (value | ui->bh_id->value() << 19 | ui->bh_angle->value() << 24);}}
+void MainWindow::on_bh_id_valueChanged(int value){if(!load){ff7.slot[s].bh_world = (ui->bh_x->value()  | value << 19 | ui->bh_angle->value() <<24);}}
+void MainWindow::on_bh_angle_valueChanged(int value){if(!load){ff7.slot[s].bh_world = (ui->bh_x->value()  | ui->bh_id->value() << 19 | value <<24);}}
+void MainWindow::on_bh_y_valueChanged(int value){if(!load){ff7.slot[s].bh_world2 = (value | ui->bh_z->value() << 18);}}
+void MainWindow::on_bh_z_valueChanged(int value){if(!load){ff7.slot[s].bh_world2 = (ui->bh_y->value() | value << 18);}}
+// sub world
+void MainWindow::on_sub_x_valueChanged(int value){if(!load){ff7.slot[s].sub_world = (value | ui->sub_id->value() << 19 | ui->sub_angle->value() << 24);}}
+void MainWindow::on_sub_id_valueChanged(int value){if(!load){ff7.slot[s].sub_world = (ui->sub_x->value()  | value << 19 | ui->sub_angle->value() <<24);}}
+void MainWindow::on_sub_angle_valueChanged(int value){if(!load){ff7.slot[s].sub_world = (ui->sub_x->value()  | ui->sub_id->value() << 19 | value <<24);}}
+void MainWindow::on_sub_y_valueChanged(int value){if(!load){ff7.slot[s].sub_world2 = (value | ui->sub_z->value() << 18);}}
+void MainWindow::on_sub_z_valueChanged(int value){if(!load){ff7.slot[s].sub_world2 = (ui->sub_y->value() | value << 18);}}

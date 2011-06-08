@@ -289,6 +289,13 @@ struct FF7DESC {		// [0x0044] Descriptions; no actual game data -100%
     quint32 time;		// [0x0020] Total number of seconds played
     quint8 location[32];	// [0x0024] Save location (ff7 string)
 }__attribute__((__packed__));
+struct FF7WORLD_COORDS
+{
+quint8 x[3];                   //[0x00] x on map
+quint8 angle;                  //[0x03] viewing angle 0-0xff
+quint8 y[3];                   //[0x04] y on map 0-
+qint8  z;                      //[0x05] z min=-127 max=127
+}__attribute__((__packed__));
 
 struct FF7CHAR {        	// [0x0084] Character info -98% - 1 Unknown
     qint8 id;			// [0x0000] Character id (used by Sephiroth/Vincent slot)
@@ -435,7 +442,22 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 reg_vinny;           // [0x0EF4] 0xFF for true 0xFB false (vincent a regualar?)
     quint8 z_32[52];            // [0x0EF5] UNKNOWN DATA
     quint8 tut_save;            // [0x0F29] Have we seen save tut ? 0x3A true , 0x32 false
-    quint8 z_33[346];           // [0x0F2A] UNKNOWN DATA
+    quint8 z_33[50];            // [0x0F2A] UNKNOWN DATA
+    quint32 l_world;            // [0x0F5C] coords of the leader on the world map part 1 z ad model id + angle
+    quint32 l_world2;           // [0x0F60] leader coords part 2
+    quint32 uw_world;           // [0x0F64] ultimate weapon? coords part 1
+    quint32 uw_world2;          // [0x0F68] ultimate weapon? coords part2
+    quint32 tc_world;           // [0x0F6C] tiny bronco/chocobo coords part 1
+    quint32 tc_world2;          // [0x0F70] tiny bronco/chocobo coords part2
+    quint32 bh_world;           // [0x0F74] Bronco / highwind coords 1
+    quint32 bh_world2;          // [0x0F78] brono /highwind coords 2
+    quint32 sub_world;          // [0x0F7C] sub on world part 1
+    quint32 sub_world2;         // [0x0F80] sub on world part 2
+    quint32 rw_world;         // [0x0F84] ruby?
+    quint32 rw_world2;        // [0x0F8C] ruby2
+    quint32 ew_world;      // [0x0F90] emerald?
+    quint32 ew_world2;     // [0x0F94] emerald2?
+    quint8 z_55[240];           // [0x0F84] UNKNOWN (Start of more coords.. )
     FF7CHOCOBO choco56[2];      // [0x1084] Chocobo slots 5-6
     quint16 phsmask;            // [0x10A4] who is allowed in the phs
     quint16 unlockedchars;      // [0x10A6] who is visible in the phs
