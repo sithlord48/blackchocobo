@@ -460,5 +460,48 @@ private slots:
     void on_cb_ruby_dead_toggled(bool checked);
     void on_cb_emerald_dead_toggled(bool checked);
     void on_combo_highwind_buggy_currentIndexChanged(int index);
+
+    void on_leader_x_valueChanged(int );
+    void on_leader_y_valueChanged(int );
+    void on_leader_z_valueChanged(int );
+    void on_leader_id_valueChanged(int );
+    void on_leader_angle_valueChanged(int );
+
+    void on_tc_x_valueChanged(int );
+    void on_tc_y_valueChanged(int );
+    void on_tc_z_valueChanged(int );
+    void on_tc_id_valueChanged(int );
+    void on_tc_angle_valueChanged(int );
+
+
+    void on_bh_x_valueChanged(int );
+    void on_bh_y_valueChanged(int );
+    void on_bh_z_valueChanged(int );
+    void on_bh_id_valueChanged(int );
+    void on_bh_angle_valueChanged(int );
+
+    void on_sub_x_valueChanged(int );
+    void on_sub_id_valueChanged(int );
+    void on_sub_angle_valueChanged(int );
+    void on_sub_y_valueChanged(int );
+    void on_sub_z_valueChanged(int );
+
+    void on_rw_x_valueChanged(int );
+    void on_rw_y_valueChanged(int );
+    void on_rw_z_valueChanged(int );
+    void on_rw_id_valueChanged(int );
+    void on_rw_angle_valueChanged(int );
+
+    void on_uw_x_valueChanged(int );
+    void on_uw_y_valueChanged(int );
+    void on_uw_z_valueChanged(int );
+    void on_uw_id_valueChanged(int );
+    void on_uw_angle_valueChanged(int );
+
+    void on_ew_x_valueChanged(int );
+    void on_ew_y_valueChanged(int );
+    void on_ew_z_valueChanged(int );
+    void on_ew_id_valueChanged(int );
+    void on_ew_angle_valueChanged(int );
 };
 #endif // MAINWINDOW_H

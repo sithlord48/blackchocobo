@@ -4341,6 +4341,94 @@ no es una partida guardada de FF7</translation>
         <source>Emerald</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Misc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>World</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0xC23 Highwind/buggy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x01 - Buggy?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x04 </source>
+        <translation type="unfinished">0x02 {0x?} {04 ?}</translation>
+    </message>
+    <message>
+        <source>0x10 - Highwind?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Party leader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>X</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Y</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Z</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>angle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>id</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tiny Bronco / Chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Buggy / Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sub</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ultimate Weapon ?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ruby Weapon ?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Emerlad Weapon ?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Buggy Or Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x00-NONE</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x01-Buggy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x10-Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
