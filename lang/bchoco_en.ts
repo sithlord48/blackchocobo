@@ -4338,22 +4338,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>0xC23 Highwind/buggy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x01 - Buggy?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x04 </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x10 - Highwind?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Party leader</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4415,6 +4399,34 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>0x10-Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>sliders show </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Party Leader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>TinyBronco/Chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Buggy/Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ultimate Weapon?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ruby Weapon?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Emerald Weapon?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6168,10 +6180,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>checksuming fix, initial stages of psx load/save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Bug Testers</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6304,14 +6312,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New: .bin .mc .mci .ps .psm .dff  Format Support</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fixed:Psx and Psv Region Detection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>New: Fancy Character Materia on Equipment tab</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6321,6 +6321,26 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Revive Ruby Weapon &amp; Emerald Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Basic Setting of World Locations In Debug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Added .bin .mc .mci .ps .psm .dff  to mcr/mcd list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Psx and Psv Region Detection</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Previous Versions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>inital psx save/load; fixed checksum</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

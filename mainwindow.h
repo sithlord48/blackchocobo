@@ -51,14 +51,6 @@ private:
 public slots:
 
 private slots:
-    void on_cb_highwind_buggy_8_toggled(bool);
-    void on_cb_highwind_buggy_7_toggled(bool);
-    void on_cb_highwind_buggy_6_toggled(bool);
-    void on_cb_highwind_buggy_5_toggled(bool);
-    void on_cb_highwind_buggy_4_toggled(bool);
-    void on_cb_highwind_buggy_3_toggled(bool);
-    void on_cb_highwind_buggy_2_toggled(bool);
-    void on_cb_highwind_buggy_1_toggled(bool);
     void on_cb_tut_sub_8_toggled(bool);
     void on_cb_tut_sub_7_toggled(bool);
     void on_cb_tut_sub_6_toggled(bool);
@@ -503,5 +495,8 @@ private slots:
     void on_ew_z_valueChanged(int );
     void on_ew_id_valueChanged(int );
     void on_ew_angle_valueChanged(int );
+    void on_combo_map_controls_currentIndexChanged(int index);
+    void on_slide_world_x_valueChanged(int value);
+    void on_slide_world_y_valueChanged(int value);
 };
 #endif // MAINWINDOW_H
