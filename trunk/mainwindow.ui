@@ -146,7 +146,7 @@ QSlider#slide_ul_b::handle,QSlider#slide_ul_g::handle,QSlider#slide_ul_r::handle
      border-radius: 2px;
  }
 
-QSlider{
+QSlider[regular=&quot;false&quot;]{
    border:3px solid; 
 	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
 	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
@@ -154,11 +154,11 @@ QSlider{
 	border-top-color: rgb(172, 172, 172);
 	border-radius: 5px;
 }
-QSlider::groove{
+QSlider::groove[regular=&quot;false&quot;]{
      height: 12px;
      background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));
 }
-QSlider::handle{
+QSlider::handle[regular=&quot;false&quot;]{
      background: rgba(172, 172, 172,255);
      border: 1px solid #5c5c5c;
      width: 3px;
@@ -451,7 +451,10 @@ image: url(:/icon/vincent_icon);
 }
 QPushButton#btn_cait{
 image: url(:/icon/cait_icon);
-}</string>
+}
+QSlider#slide_world_y::handle{image: url(:/icon/prev);}
+QSlider#slide_world_x::handle{image: url(:/icon/slider_up);}
+QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
   </property>
   <property name="unifiedTitleAndToolBarOnMac">
    <bool>false</bool>
@@ -562,7 +565,7 @@ image: url(:/icon/cait_icon);
        <bool>true</bool>
       </property>
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Maximum" vsizetype="Maximum">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -1948,6 +1951,22 @@ image: url(:/icon/cait_icon);
                   </property>
                  </widget>
                 </item>
+                <item>
+                 <spacer name="horizontalSpacer_26">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>15</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
                </layout>
               </item>
               <item row="2" column="1">
@@ -2074,6 +2093,22 @@ image: url(:/icon/cait_icon);
                   </property>
                  </widget>
                 </item>
+                <item>
+                 <spacer name="horizontalSpacer_27">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>15</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
                </layout>
               </item>
               <item row="3" column="1">
@@ -2138,6 +2173,22 @@ image: url(:/icon/cait_icon);
                   </property>
                  </widget>
                 </item>
+                <item>
+                 <spacer name="horizontalSpacer_36">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>15</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
                </layout>
               </item>
               <item row="0" column="2" rowspan="4">
@@ -2163,15 +2214,18 @@ image: url(:/icon/cait_icon);
                 <property name="lineWidth">
                  <number>1</number>
                 </property>
-                <layout class="QVBoxLayout" name="verticalLayout_69">
+                <layout class="QVBoxLayout" name="verticalLayout_12">
                  <property name="spacing">
                   <number>0</number>
                  </property>
                  <property name="leftMargin">
-                  <number>6</number>
+                  <number>2</number>
                  </property>
                  <property name="topMargin">
                   <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>2</number>
                  </property>
                  <property name="bottomMargin">
                   <number>0</number>
@@ -2236,178 +2290,171 @@ image: url(:/icon/cait_icon);
                   </spacer>
                  </item>
                  <item>
-                  <layout class="QVBoxLayout" name="verticalLayout_12">
+                  <widget class="QCheckBox" name="cb_id">
+                   <property name="enabled">
+                    <bool>true</bool>
+                   </property>
+                   <property name="text">
+                    <string>CheckBox</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_7">
                    <property name="spacing">
                     <number>0</number>
                    </property>
                    <item>
-                    <widget class="QCheckBox" name="cb_id">
-                     <property name="enabled">
-                      <bool>true</bool>
+                    <widget class="QLabel" name="lbl_id">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>27</height>
+                      </size>
                      </property>
                      <property name="text">
-                      <string>CheckBox</string>
+                      <string>ID </string>
                      </property>
                     </widget>
                    </item>
                    <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_7">
-                     <property name="spacing">
+                    <widget class="QComboBox" name="combo_id">
+                     <property name="enabled">
+                      <bool>true</bool>
+                     </property>
+                     <property name="sizePolicy">
+                      <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                       <horstretch>0</horstretch>
+                       <verstretch>0</verstretch>
+                      </sizepolicy>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>50</width>
+                       <height>27</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>50</width>
+                       <height>27</height>
+                      </size>
+                     </property>
+                     <property name="currentIndex">
                       <number>0</number>
                      </property>
+                     <property name="sizeAdjustPolicy">
+                      <enum>QComboBox::AdjustToContents</enum>
+                     </property>
+                     <property name="iconSize">
+                      <size>
+                       <width>26</width>
+                       <height>23</height>
+                      </size>
+                     </property>
+                     <property name="frame">
+                      <bool>false</bool>
+                     </property>
                      <item>
-                      <widget class="QLabel" name="lbl_id">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>27</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>ID </string>
-                       </property>
-                      </widget>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
+                      </property>
                      </item>
                      <item>
-                      <widget class="QComboBox" name="combo_id">
-                       <property name="enabled">
-                        <bool>true</bool>
-                       </property>
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="minimumSize">
-                        <size>
-                         <width>50</width>
-                         <height>27</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>50</width>
-                         <height>27</height>
-                        </size>
-                       </property>
-                       <property name="currentIndex">
-                        <number>0</number>
-                       </property>
-                       <property name="sizeAdjustPolicy">
-                        <enum>QComboBox::AdjustToContents</enum>
-                       </property>
-                       <property name="iconSize">
-                        <size>
-                         <width>26</width>
-                         <height>23</height>
-                        </size>
-                       </property>
-                       <property name="frame">
-                        <bool>false</bool>
-                       </property>
-                       <item>
-                        <property name="text">
-                         <string notr="true"/>
-                        </property>
-                        <property name="icon">
-                         <iconset resource="images.qrc">
-                          <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true"/>
-                        </property>
-                        <property name="icon">
-                         <iconset resource="images.qrc">
-                          <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true"/>
-                        </property>
-                        <property name="icon">
-                         <iconset resource="images.qrc">
-                          <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true"/>
-                        </property>
-                        <property name="icon">
-                         <iconset resource="images.qrc">
-                          <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true"/>
-                        </property>
-                        <property name="icon">
-                         <iconset resource="images.qrc">
-                          <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true"/>
-                        </property>
-                        <property name="icon">
-                         <iconset resource="images.qrc">
-                          <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true"/>
-                        </property>
-                        <property name="icon">
-                         <iconset resource="images.qrc">
-                          <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true"/>
-                        </property>
-                        <property name="icon">
-                         <iconset resource="images.qrc">
-                          <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true"/>
-                        </property>
-                        <property name="icon">
-                         <iconset resource="images.qrc">
-                          <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true"/>
-                        </property>
-                        <property name="icon">
-                         <iconset resource="images.qrc">
-                          <normaloff>:/icon/y_cloud_icon</normaloff>:/icon/y_cloud_icon</iconset>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string notr="true"/>
-                        </property>
-                        <property name="icon">
-                         <iconset resource="images.qrc">
-                          <normaloff>:/icon/sep_icon</normaloff>:/icon/sep_icon</iconset>
-                        </property>
-                       </item>
-                      </widget>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
+                      </property>
                      </item>
-                    </layout>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/y_cloud_icon</normaloff>:/icon/y_cloud_icon</iconset>
+                      </property>
+                     </item>
+                     <item>
+                      <property name="text">
+                       <string notr="true"/>
+                      </property>
+                      <property name="icon">
+                       <iconset resource="images.qrc">
+                        <normaloff>:/icon/sep_icon</normaloff>:/icon/sep_icon</iconset>
+                      </property>
+                     </item>
+                    </widget>
                    </item>
                   </layout>
                  </item>
@@ -2625,6 +2672,9 @@ image: url(:/icon/cait_icon);
                         <property name="format">
                          <string/>
                         </property>
+                        <property name="regular" stdset="0">
+                         <bool>false</bool>
+                        </property>
                        </widget>
                       </item>
                      </layout>
@@ -2822,6 +2872,9 @@ image: url(:/icon/cait_icon);
                      </property>
                      <property name="tickInterval">
                       <number>25</number>
+                     </property>
+                     <property name="regular" stdset="0">
+                      <bool>false</bool>
                      </property>
                     </widget>
                    </item>
@@ -4582,8 +4635,8 @@ image: url(:/icon/cait_icon);
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>401</width>
-             <height>420</height>
+             <width>423</width>
+             <height>430</height>
             </rect>
            </property>
            <attribute name="label">
@@ -10286,7 +10339,7 @@ image: url(:/icon/cait_icon);
                     <number>9999</number>
                    </property>
                    <property name="value">
-                    <number>9999</number>
+                    <number>0</number>
                    </property>
                   </widget>
                  </item>
@@ -10571,7 +10624,7 @@ image: url(:/icon/cait_icon);
                     <number>255</number>
                    </property>
                    <property name="value">
-                    <number>255</number>
+                    <number>0</number>
                    </property>
                   </widget>
                  </item>
@@ -21646,6 +21699,9 @@ p, li { white-space: pre-wrap; }
                      <property name="orientation">
                       <enum>Qt::Horizontal</enum>
                      </property>
+                     <property name="regular" stdset="0">
+                      <bool>false</bool>
+                     </property>
                     </widget>
                    </item>
                    <item>
@@ -21753,6 +21809,9 @@ p, li { white-space: pre-wrap; }
                      </property>
                      <property name="orientation">
                       <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="regular" stdset="0">
+                      <bool>false</bool>
                      </property>
                     </widget>
                    </item>
@@ -21868,6 +21927,9 @@ p, li { white-space: pre-wrap; }
                      <property name="orientation">
                       <enum>Qt::Horizontal</enum>
                      </property>
+                     <property name="regular" stdset="0">
+                      <bool>false</bool>
+                     </property>
                     </widget>
                    </item>
                    <item>
@@ -21958,7 +22020,16 @@ p, li { white-space: pre-wrap; }
         <string>Test Data</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_151">
-        <property name="margin">
+        <property name="leftMargin">
+         <number>3</number>
+        </property>
+        <property name="topMargin">
+         <number>3</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
          <number>3</number>
         </property>
         <item>
@@ -22334,10 +22405,10 @@ p, li { white-space: pre-wrap; }
              <string> Bombing Mission Start Flag</string>
             </property>
            </widget>
-           <widget class="QWidget" name="layoutWidget">
+           <widget class="QWidget" name="layoutWidget1">
             <property name="geometry">
              <rect>
-              <x>5</x>
+              <x>0</x>
               <y>185</y>
               <width>721</width>
               <height>306</height>
@@ -22747,6 +22818,102 @@ p, li { white-space: pre-wrap; }
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_152">
                <item>
+                <widget class="QGroupBox" name="groupBox_38">
+                 <property name="title">
+                  <string>0xC1E tut_sub</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="verticalLayout_71">
+                  <property name="margin">
+                   <number>3</number>
+                  </property>
+                  <item>
+                   <widget class="QCheckBox" name="cb_tut_sub_1">
+                    <property name="text">
+                     <string>0x01</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_tut_sub_2">
+                    <property name="text">
+                     <string>0x02 </string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_tut_sub_3">
+                    <property name="text">
+                     <string>0x04 - Played Sub Tutorial</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_tut_sub_4">
+                    <property name="text">
+                     <string>0x08</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_tut_sub_5">
+                    <property name="text">
+                     <string>0x10</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_tut_sub_6">
+                    <property name="text">
+                     <string>0x20</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_tut_sub_7">
+                    <property name="enabled">
+                     <bool>false</bool>
+                    </property>
+                    <property name="text">
+                     <string>0x40 - Battle Targets</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="cb_tut_sub_8">
+                    <property name="text">
+                     <string>0x80</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QLCDNumber" name="lcd_tut_sub">
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>23</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>23</height>
+                     </size>
+                    </property>
+                    <property name="digitCount">
+                     <number>8</number>
+                    </property>
+                    <property name="mode">
+                     <enum>QLCDNumber::Bin</enum>
+                    </property>
+                    <property name="segmentStyle">
+                     <enum>QLCDNumber::Flat</enum>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
                 <widget class="QGroupBox" name="groupBox_33">
                  <property name="title">
                   <string>0xBD4 (itemmasks_1)</string>
@@ -22929,102 +23096,6 @@ p, li { white-space: pre-wrap; }
                  </layout>
                 </widget>
                </item>
-               <item>
-                <widget class="QGroupBox" name="groupBox_38">
-                 <property name="title">
-                  <string>0xC1E tut_sub</string>
-                 </property>
-                 <layout class="QVBoxLayout" name="verticalLayout_71">
-                  <property name="margin">
-                   <number>3</number>
-                  </property>
-                  <item>
-                   <widget class="QCheckBox" name="cb_tut_sub_1">
-                    <property name="text">
-                     <string>0x01</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_tut_sub_2">
-                    <property name="text">
-                     <string>0x02 </string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_tut_sub_3">
-                    <property name="text">
-                     <string>0x04 - Played Sub Tutorial</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_tut_sub_4">
-                    <property name="text">
-                     <string>0x08</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_tut_sub_5">
-                    <property name="text">
-                     <string>0x10</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_tut_sub_6">
-                    <property name="text">
-                     <string>0x20</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_tut_sub_7">
-                    <property name="enabled">
-                     <bool>false</bool>
-                    </property>
-                    <property name="text">
-                     <string>0x40 - Battle Targets</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QCheckBox" name="cb_tut_sub_8">
-                    <property name="text">
-                     <string>0x80</string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QLCDNumber" name="lcd_tut_sub">
-                    <property name="minimumSize">
-                     <size>
-                      <width>0</width>
-                      <height>23</height>
-                     </size>
-                    </property>
-                    <property name="maximumSize">
-                     <size>
-                      <width>16777215</width>
-                      <height>23</height>
-                     </size>
-                    </property>
-                    <property name="digitCount">
-                     <number>8</number>
-                    </property>
-                    <property name="mode">
-                     <enum>QLCDNumber::Bin</enum>
-                    </property>
-                    <property name="segmentStyle">
-                     <enum>QLCDNumber::Flat</enum>
-                    </property>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-               </item>
               </layout>
              </item>
             </layout>
@@ -23034,104 +23105,11 @@ p, li { white-space: pre-wrap; }
            <attribute name="title">
             <string>World</string>
            </attribute>
-           <widget class="QGroupBox" name="groupBox_40">
+           <widget class="QWidget" name="layoutWidget2">
             <property name="geometry">
              <rect>
-              <x>275</x>
-              <y>160</y>
-              <width>211</width>
-              <height>231</height>
-             </rect>
-            </property>
-            <property name="title">
-             <string>0xC23 Highwind/buggy</string>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_91">
-             <item>
-              <widget class="QCheckBox" name="cb_highwind_buggy_1">
-               <property name="text">
-                <string>0x01 - Buggy?</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="cb_highwind_buggy_2">
-               <property name="text">
-                <string>0x02 </string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="cb_highwind_buggy_3">
-               <property name="text">
-                <string>0x04 </string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="cb_highwind_buggy_4">
-               <property name="text">
-                <string>0x08</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="cb_highwind_buggy_5">
-               <property name="text">
-                <string>0x10 - Highwind?</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="cb_highwind_buggy_6">
-               <property name="text">
-                <string>0x20</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="cb_highwind_buggy_7">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
-               <property name="text">
-                <string>0x40</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="cb_highwind_buggy_8">
-               <property name="text">
-                <string>0x80</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QLCDNumber" name="lcd_highwind_buggy">
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>23</height>
-                </size>
-               </property>
-               <property name="digitCount">
-                <number>8</number>
-               </property>
-               <property name="mode">
-                <enum>QLCDNumber::Bin</enum>
-               </property>
-               <property name="segmentStyle">
-                <enum>QLCDNumber::Flat</enum>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-           <widget class="QWidget" name="layoutWidget1">
-            <property name="geometry">
-             <rect>
-              <x>270</x>
-              <y>70</y>
+              <x>560</x>
+              <y>445</y>
               <width>146</width>
               <height>42</height>
              </rect>
@@ -23164,9 +23142,24 @@ p, li { white-space: pre-wrap; }
              <rect>
               <x>5</x>
               <y>0</y>
-              <width>261</width>
+              <width>270</width>
               <height>491</height>
              </rect>
+            </property>
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>270</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::NoContextMenu</enum>
             </property>
             <property name="frameShape">
              <enum>QFrame::NoFrame</enum>
@@ -23185,17 +23178,47 @@ p, li { white-space: pre-wrap; }
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>248</width>
-               <height>594</height>
+               <width>256</width>
+               <height>584</height>
               </rect>
              </property>
-             <layout class="QVBoxLayout" name="verticalLayout_92">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_91">
+              <property name="spacing">
+               <number>-1</number>
+              </property>
+              <property name="margin">
+               <number>3</number>
+              </property>
               <item>
                <widget class="QGroupBox" name="leaderonworld_box">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>70</height>
+                 </size>
+                </property>
                 <property name="title">
                  <string>Party leader</string>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_7">
+                 <property name="topMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>3</number>
+                 </property>
                  <item row="0" column="0">
                   <layout class="QHBoxLayout" name="horizontalLayout_53">
                    <item>
@@ -23369,10 +23392,22 @@ p, li { white-space: pre-wrap; }
               </item>
               <item>
                <widget class="QGroupBox" name="leaderonworld_box_4">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>70</height>
+                 </size>
+                </property>
                 <property name="title">
                  <string>Tiny Bronco / Chocobo</string>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_10">
+                 <property name="topMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>3</number>
+                 </property>
                  <item row="0" column="0">
                   <layout class="QHBoxLayout" name="horizontalLayout_111">
                    <item>
@@ -23546,10 +23581,22 @@ p, li { white-space: pre-wrap; }
               </item>
               <item>
                <widget class="QGroupBox" name="leaderonworld_box_3">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>70</height>
+                 </size>
+                </property>
                 <property name="title">
                  <string>Buggy / Highwind</string>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_9">
+                 <property name="topMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>3</number>
+                 </property>
                  <item row="0" column="0">
                   <layout class="QHBoxLayout" name="horizontalLayout_92">
                    <item>
@@ -23723,10 +23770,22 @@ p, li { white-space: pre-wrap; }
               </item>
               <item>
                <widget class="QGroupBox" name="leaderonworld_box_5">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>70</height>
+                 </size>
+                </property>
                 <property name="title">
                  <string>Sub</string>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_11">
+                 <property name="topMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>3</number>
+                 </property>
                  <item row="0" column="0">
                   <layout class="QHBoxLayout" name="horizontalLayout_133">
                    <item>
@@ -23900,10 +23959,22 @@ p, li { white-space: pre-wrap; }
               </item>
               <item>
                <widget class="QGroupBox" name="leaderonworld_box_7">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>70</height>
+                 </size>
+                </property>
                 <property name="title">
                  <string>Ultimate Weapon ?</string>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_15">
+                 <property name="topMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>3</number>
+                 </property>
                  <item row="0" column="0">
                   <layout class="QHBoxLayout" name="horizontalLayout_143">
                    <item>
@@ -24077,10 +24148,22 @@ p, li { white-space: pre-wrap; }
               </item>
               <item>
                <widget class="QGroupBox" name="leaderonworld_box_2">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>70</height>
+                 </size>
+                </property>
                 <property name="title">
                  <string>Ruby Weapon ?</string>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_8">
+                 <property name="topMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>3</number>
+                 </property>
                  <item row="0" column="0">
                   <layout class="QHBoxLayout" name="horizontalLayout_73">
                    <item>
@@ -24254,10 +24337,22 @@ p, li { white-space: pre-wrap; }
               </item>
               <item>
                <widget class="QGroupBox" name="leaderonworld_box_6">
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>70</height>
+                 </size>
+                </property>
                 <property name="title">
                  <string>Emerlad Weapon ?</string>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_12">
+                 <property name="topMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>3</number>
+                 </property>
                  <item row="0" column="0">
                   <layout class="QHBoxLayout" name="horizontalLayout_138">
                    <item>
@@ -24432,12 +24527,12 @@ p, li { white-space: pre-wrap; }
              </layout>
             </widget>
            </widget>
-           <widget class="QWidget" name="layoutWidget">
+           <widget class="QWidget" name="layoutWidget3">
             <property name="geometry">
              <rect>
-              <x>270</x>
-              <y>10</y>
-              <width>109</width>
+              <x>280</x>
+              <y>445</y>
+              <width>124</width>
               <height>46</height>
              </rect>
             </property>
@@ -24469,6 +24564,200 @@ p, li { white-space: pre-wrap; }
               </widget>
              </item>
             </layout>
+           </widget>
+           <widget class="QFrame" name="world_map_frame">
+            <property name="geometry">
+             <rect>
+              <x>280</x>
+              <y>10</y>
+              <width>446</width>
+              <height>381</height>
+             </rect>
+            </property>
+            <widget class="QWidget" name="">
+             <property name="geometry">
+              <rect>
+               <x>15</x>
+               <y>5</y>
+               <width>411</width>
+               <height>25</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_154">
+              <item>
+               <widget class="QLabel" name="label_228">
+                <property name="text">
+                 <string>sliders show </string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="combo_map_controls">
+                <item>
+                 <property name="text">
+                  <string>Party Leader</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>TinyBronco/Chocobo</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Buggy/Highwind</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Sub</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Ultimate Weapon?</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Ruby Weapon?</string>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Emerald Weapon?</string>
+                 </property>
+                </item>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QLabel" name="world_map_view">
+             <property name="geometry">
+              <rect>
+               <x>5</x>
+               <y>32</y>
+               <width>432</width>
+               <height>336</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QSlider" name="slide_world_x">
+             <property name="geometry">
+              <rect>
+               <x>-1</x>
+               <y>369</y>
+               <width>443</width>
+               <height>10</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>443</width>
+               <height>10</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>443</width>
+               <height>10</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true"/>
+             </property>
+             <property name="maximum">
+              <number>295000</number>
+             </property>
+             <property name="singleStep">
+              <number>100</number>
+             </property>
+             <property name="pageStep">
+              <number>1000</number>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+             <property name="tracking">
+              <bool>true</bool>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="tickPosition">
+              <enum>QSlider::NoTicks</enum>
+             </property>
+             <property name="tickInterval">
+              <number>150000</number>
+             </property>
+             <property name="regular" stdset="0">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QSlider" name="slide_world_y">
+             <property name="geometry">
+              <rect>
+               <x>437</x>
+               <y>26</y>
+               <width>10</width>
+               <height>347</height>
+              </rect>
+             </property>
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>10</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>10</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="cursor">
+              <cursorShape>ArrowCursor</cursorShape>
+             </property>
+             <property name="maximum">
+              <number>230000</number>
+             </property>
+             <property name="singleStep">
+              <number>100</number>
+             </property>
+             <property name="pageStep">
+              <number>1000</number>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="invertedAppearance">
+              <bool>true</bool>
+             </property>
+             <property name="invertedControls">
+              <bool>false</bool>
+             </property>
+             <property name="tickPosition">
+              <enum>QSlider::NoTicks</enum>
+             </property>
+             <property name="tickInterval">
+              <number>1500</number>
+             </property>
+             <property name="regular" stdset="0">
+              <bool>true</bool>
+             </property>
+            </widget>
            </widget>
           </widget>
          </widget>

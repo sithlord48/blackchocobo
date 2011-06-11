@@ -134,5 +134,7 @@
         <file alias="save">icon/save.png</file>
         <file alias="vgs">icon/vgs.png</file>
         <file alias="dex">icon/dex.png</file>
+        <file alias="world_map">icon/world_map.png</file>
+        <file alias="slider_up">icon/slider_up.png</file>
     </qresource>
 </RCC>
