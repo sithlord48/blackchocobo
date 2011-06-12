@@ -93,7 +93,7 @@ QMenu{
 	border-bottom-color: rgb(172, 172, 172);
 	border-top-color: rgb(172,172,172);
 	border-radius:5px;
-	background-color: rgba(99, 97, 97,128);
+	background-color: rgba(99, 97, 97,255);
 }
 QMenu::item:enabled{
 	background-color: rgba(99, 97, 97,255);
@@ -4635,8 +4635,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>423</width>
-             <height>430</height>
+             <width>401</width>
+             <height>420</height>
             </rect>
            </property>
            <attribute name="label">
@@ -24574,7 +24574,7 @@ p, li { white-space: pre-wrap; }
               <height>381</height>
              </rect>
             </property>
-            <widget class="QWidget" name="">
+            <widget class="QWidget" name="layoutWidget">
              <property name="geometry">
               <rect>
                <x>15</x>
@@ -24641,8 +24641,20 @@ p, li { white-space: pre-wrap; }
                <height>336</height>
               </rect>
              </property>
+             <property name="cursor">
+              <cursorShape>CrossCursor</cursorShape>
+             </property>
+             <property name="contextMenuPolicy">
+              <enum>Qt::CustomContextMenu</enum>
+             </property>
              <property name="text">
               <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>false</bool>
+             </property>
+             <property name="textInteractionFlags">
+              <set>Qt::NoTextInteraction</set>
              </property>
             </widget>
             <widget class="QSlider" name="slide_world_x">

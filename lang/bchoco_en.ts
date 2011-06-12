@@ -4429,6 +4429,34 @@ is not a FF7 SaveGame.</source>
         <source>Emerald Weapon?</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Place Leader</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place Tiny Bronco/Chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place Buggy/Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place Sub</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place Ultimate Weapon?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place Ruby Weapon?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place Emerald Weapon?</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
