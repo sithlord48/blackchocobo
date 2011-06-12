@@ -4569,46 +4569,46 @@ void MainWindow::testdata_refresh()
     }
     //WORLD TAB
     ui->leader_x->setValue((ff7.slot[s].l_world) & 0x7FFFF);
-    ui->leader_id->setValue((ff7.slot[s].l_world << 19)&0x1F);
-    ui->leader_angle->setValue((ff7.slot[s].l_world) << 24);
+    ui->leader_id->setValue((ff7.slot[s].l_world >> 19)&0x1F);
+    ui->leader_angle->setValue((ff7.slot[s].l_world) >> 24);
     ui->leader_y->setValue((ff7.slot[s].l_world2) & 0x3FFFF);
-    ui->leader_z->setValue((ff7.slot[s].l_world2) << 18);
+    ui->leader_z->setValue((ff7.slot[s].l_world2) >> 18);
 
     ui->rw_x->setValue((ff7.slot[s].rw_world) & 0x7FFFF);
-    ui->rw_id->setValue((ff7.slot[s].rw_world << 19)&0x1F);
-    ui->rw_angle->setValue((ff7.slot[s].rw_world) << 24);
+    ui->rw_id->setValue((ff7.slot[s].rw_world >> 19)&0x1F);
+    ui->rw_angle->setValue((ff7.slot[s].rw_world) >> 24);
     ui->rw_y->setValue((ff7.slot[s].rw_world2) & 0x3FFFF);
-    ui->rw_z->setValue((ff7.slot[s].rw_world2) << 18);
+    ui->rw_z->setValue((ff7.slot[s].rw_world2) >> 18);
 
     ui->ew_x->setValue((ff7.slot[s].ew_world) & 0x7FFFF);
-    ui->ew_id->setValue((ff7.slot[s].ew_world << 19)&0x1F);
-    ui->ew_angle->setValue((ff7.slot[s].ew_world) << 24);
+    ui->ew_id->setValue((ff7.slot[s].ew_world >> 19)&0x1F);
+    ui->ew_angle->setValue((ff7.slot[s].ew_world) >> 24);
     ui->ew_y->setValue((ff7.slot[s].ew_world2) & 0x3FFFF);
-    ui->ew_z->setValue((ff7.slot[s].ew_world2) << 18);
+    ui->ew_z->setValue((ff7.slot[s].ew_world2) >> 18);
 
     ui->uw_x->setValue((ff7.slot[s].uw_world) & 0x7FFFF);
-    ui->uw_id->setValue((ff7.slot[s].uw_world << 19)&0x1F);
-    ui->uw_angle->setValue((ff7.slot[s].uw_world) << 24);
+    ui->uw_id->setValue((ff7.slot[s].uw_world >> 19)&0x1F);
+    ui->uw_angle->setValue((ff7.slot[s].uw_world) >> 24);
     ui->uw_y->setValue((ff7.slot[s].uw_world2) & 0x3FFFF);
-    ui->uw_z->setValue((ff7.slot[s].uw_world2) << 18);
+    ui->uw_z->setValue((ff7.slot[s].uw_world2) >> 18);
 
     ui->tc_x->setValue((ff7.slot[s].tc_world) & 0x7FFFF);
-    ui->tc_id->setValue((ff7.slot[s].tc_world << 19)&0x1F);
-    ui->tc_angle->setValue((ff7.slot[s].tc_world) << 24);
+    ui->tc_id->setValue((ff7.slot[s].tc_world >> 19)&0x1F);
+    ui->tc_angle->setValue((ff7.slot[s].tc_world) >> 24);
     ui->tc_y->setValue((ff7.slot[s].tc_world2) & 0x3FFFF);
-    ui->tc_z->setValue((ff7.slot[s].tc_world2) << 18);
+    ui->tc_z->setValue((ff7.slot[s].tc_world2) >> 18);
 
     ui->bh_x->setValue((ff7.slot[s].bh_world) & 0x7FFFF);
-    ui->bh_id->setValue((ff7.slot[s].bh_world << 19)&0x1F);
-    ui->bh_angle->setValue((ff7.slot[s].bh_world) << 24);
+    ui->bh_id->setValue((ff7.slot[s].bh_world >> 19)&0x1F);
+    ui->bh_angle->setValue((ff7.slot[s].bh_world) >> 24);
     ui->bh_y->setValue((ff7.slot[s].bh_world2) & 0x3FFFF);
-    ui->bh_z->setValue((ff7.slot[s].bh_world2) << 18);
+    ui->bh_z->setValue((ff7.slot[s].bh_world2) >> 18);
 
     ui->sub_x->setValue((ff7.slot[s].sub_world) & 0x7FFFF);
-    ui->sub_id->setValue((ff7.slot[s].sub_world << 19)&0x1F);
-    ui->sub_angle->setValue((ff7.slot[s].sub_world) << 24);
+    ui->sub_id->setValue((ff7.slot[s].sub_world >> 19)&0x1F);
+    ui->sub_angle->setValue((ff7.slot[s].sub_world) >> 24);
     ui->sub_y->setValue((ff7.slot[s].sub_world2) & 0x3FFFF);
-    ui->sub_z->setValue((ff7.slot[s].sub_world2) << 18);
+    ui->sub_z->setValue((ff7.slot[s].sub_world2) >> 18);
 
    //TEST TAB
     ui->cb_tut_sub->setChecked(Qt::Unchecked);
@@ -5015,8 +5015,8 @@ void MainWindow::on_combo_highwind_buggy_currentIndexChanged(int index)
   switch(index)
   {
   case 0: ff7.slot[s].highwind_buggy =0x00; break;
-  case 1: ff7.slot[s].highwind_buggy =0x01; break;
-  case 2: ff7.slot[s].highwind_buggy =0x10; break;
+  case 1: ff7.slot[s].highwind_buggy =0x01; ui->bh_id->setValue(0x06);break;
+  case 2: ff7.slot[s].highwind_buggy =0x10; ui->bh_id->setValue(0x03);break;
   }
 }}
 // Leader's world map stuff. 0
