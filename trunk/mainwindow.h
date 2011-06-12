@@ -498,5 +498,6 @@ private slots:
     void on_combo_map_controls_currentIndexChanged(int index);
     void on_slide_world_x_valueChanged(int value);
     void on_slide_world_y_valueChanged(int value);
+    void on_world_map_view_customContextMenuRequested(QPoint pos);
 };
 #endif // MAINWINDOW_H

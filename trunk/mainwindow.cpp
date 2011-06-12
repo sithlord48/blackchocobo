@@ -5177,3 +5177,54 @@ void MainWindow::on_slide_world_y_valueChanged(int value)
     }
 
 }}
+
+void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
+{//Need to create a Paint System Here To put Dots where Chars Are Placed.
+    QMenu menu(this);
+    QAction *sel;
+    menu.addAction(tr("Place Leader"));
+    menu.addAction(tr("Place Tiny Bronco/Chocobo"));
+    menu.addAction(tr("Place Buggy/Highwind"));
+    menu.addAction(tr("Place Sub"));
+    menu.addAction(tr("Place Ultimate Weapon?"));
+    menu.addAction(tr("Place Ruby Weapon?"));
+    menu.addAction(tr("Place Emerald Weapon?"));
+    sel = menu.exec(ui->world_map_view->mapToGlobal(pos));
+    if(sel==0){return;}
+    if(sel->text()==tr("Place Leader"))
+    {
+        ui->leader_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
+        ui->leader_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
+    }
+    else if(sel->text()==tr("Place Tiny Bronco/Chocobo"))
+    {
+        ui->tc_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
+        ui->tc_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
+    }
+    else if(sel->text()==tr("Place Buggy/Highwind"))
+    {
+         ui->bh_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
+         ui->bh_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
+    }
+    else if(sel->text()==tr("Place Sub"))
+    {
+         ui->sub_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
+         ui->sub_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
+    }
+    else if(sel->text()==tr("Place Ultimate Weapon?"))
+    {
+         ui->uw_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
+         ui->uw_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
+    }
+    else if(sel->text()==tr("Place Ruby Weapon?"))
+    {
+         ui->rw_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
+         ui->rw_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
+    }
+    else if(sel->text()==tr("Place Emerald Weapon?"))
+    {
+         ui->ew_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
+         ui->ew_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
+    }
+    else{return;}
+}//End Of Map Context Menu
