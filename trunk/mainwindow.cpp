@@ -4918,13 +4918,13 @@ void MainWindow::on_cb_bombing_int_stateChanged(int checked)
 }}
 
 void MainWindow::on_cb_Region_Slot_currentIndexChanged()
-{if(!load){
+{if(!load){if(!ff7.SG_Region_String[s].isEmpty()){
     QString new_regionString = ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1);
     new_regionString.append(ui->cb_Region_Slot->currentText().toAscii());
     ff7.SG_Region_String[s].clear();
     ff7.SG_Region_String[s].append(&new_regionString);
     if(ff7.savetype==3 || ff7.savetype==5|| ff7.savetype==6 || ff7.savetype ==7){fix_vmc_header(); guirefresh();}
-}}
+}}}
 
 void MainWindow::on_cb_field_help_toggled(bool checked)
 {if(!load){

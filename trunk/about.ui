@@ -512,6 +512,11 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <property name="text">
+           <string>Fixed: Materia Slots Display Left To Right (see ingame)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>Fixed: Psx and Psv Region Detection</string>
           </property>
          </item>
@@ -1245,8 +1250,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>349</width>
-            <height>390</height>
+            <width>138</width>
+            <height>740</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">

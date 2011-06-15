@@ -6388,6 +6388,10 @@ p, li { white-space: pre-wrap; }
         <source>inital psx save/load; fixed checksum</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Fixed: Materia Slots Display Left To Right (see ingame)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>errbox</name>
