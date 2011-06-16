@@ -4469,6 +4469,14 @@ no es una partida guardada de FF7</translation>
         <source>Place Emerald Weapon?</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>PSV Save Notice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This File Does Not Have An Updated Checksum.It will not work on your PS3.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
