@@ -489,7 +489,11 @@ void MainWindow::on_action_Save_activated()
             if(ff7.savetype==5){QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PSP."));}
         }
 
-        else if(ff7.savetype==4){/*deal w/ psv here. or in fix_vmc_header()*/}
+        else if(ff7.savetype==4)
+        {
+            /*FIX CHECKSUM FIRST!*/
+            QMessageBox::information(this,tr("PSV Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PS3."));
+        }
         else {QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot save This Type of File"));return;}
         saveFileFull(filename);
     }
@@ -526,6 +530,7 @@ void MainWindow::on_actionSave_File_As_activated()
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 PSV SaveGame"), "",
         tr("FF7 PSV SaveGame(*.psv)"));
+        QMessageBox::information(this,tr("PSV Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PS3."));
     }
     else if(ff7.savetype==5)
     {
@@ -1956,12 +1961,7 @@ void MainWindow::setmenu(void)
     ui->action_Region_PAL_Spanish->setChecked(0);ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
     ui->action_Region_JPN->setChecked(0);ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
     ui->action_Region_JPN_International->setChecked(0);ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
-    ui->actionImport_char->setEnabled(0);ui->actionExport_char->setEnabled(0);ui->actionNew_Game_Plus->setEnabled(0);
-    ui->action_Save->setEnabled(0);ui->actionSave_File_As->setEnabled(0);ui->actionExport_PC_Save->setEnabled(0);
-    ui->actionExport_PSX->setEnabled(0);ui->actionExport_MC->setEnabled(0);ui->actionExport_VGS->setEnabled(0);
-    ui->actionExport_DEX->setEnabled(0);ui->actionFrom_PSV_Slot->setEnabled(0);ui->actionFrom_PSX_Slot->setEnabled(0);
-    ui->actionNew_Game_Plus->setEnabled(0);ui->actionClear_Slot->setEnabled(0);ui->actionPaste_Slot->setEnabled(0);
-    ui->actionCopy_Slot->setEnabled(0);ui->actionNext_Slot->setEnabled(0);ui->actionPrevious_Slot->setEnabled(0);
+    ui->actionNext_Slot->setEnabled(0);ui->actionPrevious_Slot->setEnabled(0);
     ui->actionShow_Selection_Dialog->setEnabled(0);ui->actionSlot_01->setEnabled(0);ui->actionSlot_02->setEnabled(0);
     ui->actionSlot_03->setEnabled(0);ui->actionSlot_04->setEnabled(0);ui->actionSlot_05->setEnabled(0);
     ui->actionSlot_06->setEnabled(0);ui->actionSlot_07->setEnabled(0);ui->actionSlot_08->setEnabled(0);
@@ -1990,12 +1990,17 @@ void MainWindow::setmenu(void)
     }
     /*~~~~End Current Slot~~~~~*/
     /*~~~~~~~Set Actions By Type~~~~~~~*/
+    //For first file load.
     ui->actionExport_PC_Save->setEnabled(1);    ui->actionExport_PSX->setEnabled(1);
     ui->actionExport_MC->setEnabled(1);         ui->actionExport_VGS->setEnabled(1);
     ui->actionExport_DEX->setEnabled(1);        ui->actionCopy_Slot->setEnabled(1);
-    ui->actionExport_char->setEnabled(1);
-
-    if (ff7.savetype !=2 && ff7.savetype !=4) //more then on slot
+    ui->actionExport_char->setEnabled(1);       ui->action_Save->setEnabled(1);
+    ui->actionSave_File_As->setEnabled(1);      ui->actionFrom_PSV_Slot->setEnabled(1);
+    ui->actionNew_Game_Plus->setEnabled(1);     ui->actionImport_char->setEnabled(1);
+    ui->actionSave_File_As->setEnabled(1);      ui->actionFrom_PSX_Slot->setEnabled(1);
+    ui->actionPaste_Slot->setEnabled(1);
+    //
+    if (ff7.savetype !=2 && ff7.savetype !=4) //more then one slot
     {
         ui->actionSlot_01->setEnabled(1);   ui->actionNext_Slot->setEnabled(1);
         ui->actionSlot_02->setEnabled(1);   ui->actionPrevious_Slot->setEnabled(1);
@@ -2007,14 +2012,6 @@ void MainWindow::setmenu(void)
         ui->actionSlot_10->setEnabled(1);   ui->actionSlot_11->setEnabled(1);
         ui->actionSlot_12->setEnabled(1);   ui->actionSlot_13->setEnabled(1);
         ui->actionSlot_14->setEnabled(1);   ui->actionSlot_15->setEnabled(1);
-    }
-
-    if (ff7.savetype != 4)// saveable type
-    {
-        ui->actionImport_char->setEnabled(1);        ui->action_Save->setEnabled(1);
-        ui->actionSave_File_As->setEnabled(1);       ui->actionFrom_PSV_Slot->setEnabled(1);
-        ui->actionFrom_PSX_Slot->setEnabled(1);      ui->actionNew_Game_Plus->setEnabled(1);
-        ui->actionPaste_Slot->setEnabled(1);
     }
     /*~~~End Set Actions By Type~~~*/
     /*~~Set Detected Region ~~*/
