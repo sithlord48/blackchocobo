@@ -1691,8 +1691,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>421</width>
-             <height>423</height>
+             <width>423</width>
+             <height>430</height>
             </rect>
            </property>
            <attribute name="label">
@@ -7712,11 +7712,17 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_122">
         <item>
-         <widget class="QGroupBox" name="groupBox_17">
+         <widget class="QGroupBox" name="group_items">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="minimumSize">
            <size>
             <width>200</width>
-            <height>479</height>
+            <height>492</height>
            </size>
           </property>
           <property name="maximumSize">
@@ -7737,6 +7743,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            </property>
            <item>
             <widget class="QTableWidget" name="tbl_itm">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="minimumSize">
               <size>
                <width>187</width>
@@ -7790,6 +7802,24 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            </item>
            <item>
             <widget class="QGroupBox" name="groupBox_21">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>77</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>77</height>
+              </size>
+             </property>
              <property name="title">
               <string>Edit Selected Item Slot</string>
              </property>
@@ -7886,7 +7916,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
          </widget>
         </item>
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_54">
+         <layout class="QVBoxLayout" name="Item_middle">
           <item>
            <widget class="QGroupBox" name="groupBox_22">
             <property name="sizePolicy">
@@ -19181,8 +19211,17 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_65">
-          <property name="margin">
+          <property name="leftMargin">
            <number>3</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>3</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
           </property>
           <item>
            <widget class="QGroupBox" name="groupBox_3">
@@ -19955,22 +19994,34 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item>
            <widget class="QGroupBox" name="groupBox_9">
+            <property name="minimumSize">
+             <size>
+              <width>216</width>
+              <height>64</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>16777215</width>
+              <height>16777215</height>
+             </size>
+            </property>
             <property name="title">
              <string>Weapons Killed</string>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_88">
-             <property name="spacing">
-              <number>-1</number>
-             </property>
-             <property name="margin">
-              <number>4</number>
+            <property name="flat">
+             <bool>false</bool>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_54">
+             <property name="topMargin">
+              <number>6</number>
              </property>
              <item>
               <widget class="QCheckBox" name="cb_ruby_dead">
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>18</height>
+                 <height>15</height>
                 </size>
                </property>
                <property name="text">
@@ -19983,7 +20034,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>18</height>
+                 <height>15</height>
                 </size>
                </property>
                <property name="text">
@@ -22409,9 +22460,9 @@ p, li { white-space: pre-wrap; }
             <property name="geometry">
              <rect>
               <x>0</x>
-              <y>185</y>
+              <y>195</y>
               <width>721</width>
-              <height>306</height>
+              <height>299</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_93">
@@ -22440,10 +22491,13 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <item>
                    <layout class="QHBoxLayout" name="horizontalLayout_71">
+                    <property name="leftMargin">
+                     <number>3</number>
+                    </property>
                     <item>
                      <widget class="QCheckBox" name="cb_tut_sub">
                       <property name="enabled">
-                       <bool>false</bool>
+                       <bool>true</bool>
                       </property>
                       <property name="text">
                        <string>Controling the Sub</string>
@@ -22473,6 +22527,9 @@ p, li { white-space: pre-wrap; }
                   </item>
                   <item>
                    <layout class="QHBoxLayout" name="horizontalLayout_74">
+                    <property name="leftMargin">
+                     <number>3</number>
+                    </property>
                     <item>
                      <widget class="QCheckBox" name="cb_tut_worldsave">
                       <property name="enabled">
@@ -22527,6 +22584,9 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <item>
                    <layout class="QHBoxLayout" name="horizontalLayout_76">
+                    <property name="leftMargin">
+                     <number>3</number>
+                    </property>
                     <item>
                      <widget class="QCheckBox" name="cb_reg_vinny">
                       <property name="text">
@@ -22560,6 +22620,9 @@ p, li { white-space: pre-wrap; }
                   </item>
                   <item>
                    <layout class="QHBoxLayout" name="horizontalLayout_80">
+                    <property name="leftMargin">
+                     <number>3</number>
+                    </property>
                     <item>
                      <widget class="QCheckBox" name="cb_reg_yuffie">
                       <property name="enabled">
@@ -23012,6 +23075,9 @@ p, li { white-space: pre-wrap; }
                   <string>0xD83 Midgar Train Flags (tin_1)</string>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_38">
+                  <property name="margin">
+                   <number>3</number>
+                  </property>
                   <item>
                    <widget class="QCheckBox" name="cb_midgartrain_1">
                     <property name="text">
@@ -24786,7 +24852,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>760</width>
-     <height>21</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
