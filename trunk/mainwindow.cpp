@@ -4608,6 +4608,7 @@ void MainWindow::testdata_refresh()
     ui->sub_z->setValue((ff7.slot[s].sub_world2) >> 18);
 
    //TEST TAB
+
     ui->cb_tut_sub->setChecked(Qt::Unchecked);
     ui->sb_timer_time_hour->setValue(ff7.slot[s].timer[0]);
     ui->sb_timer_time_min->setValue(ff7.slot[s].timer[1]);
@@ -4620,7 +4621,9 @@ void MainWindow::testdata_refresh()
     ui->sb_u_weapon_hp->setValue(ff7.slot[s].u_weapon_hp[0] |(ff7.slot[s].u_weapon_hp[1] << 8) | (ff7.slot[s].u_weapon_hp[2] << 16));
 
     if((ff7.slot[s].tut_sub)&(1<<2)){ui->cb_tut_sub->setChecked(Qt::Checked);}
+
     ui->lcdNumber_6->display(ff7.slot[s].tut_sub);
+
 
 
     if(ff7.slot[s].tut_save == 0x3A){ui->cb_tut_worldsave->setCheckState(Qt::Checked);}
@@ -4892,13 +4895,12 @@ void MainWindow::on_cb_midgartrain_8_toggled(bool checked)
     ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
 }}
 
-/*void MainWindow::on_cb_tut_sub_stateChanged(int value)
+void MainWindow::on_cb_tut_sub_stateChanged(bool checked)
 {if(!load){
-    if (value == 0){ff7.slot[s].tut_sub = 0x00;}
-    else if(value ==1){ff7.slot[s].tut_sub =0x2B;}
-    else if(value ==2){ff7.slot[s].tut_sub =0x2F;}
+    if(checked){ff7.slot[s].tut_sub |= (1<<3);}
+    else{ff7.slot[s].tut_sub &= ~(1<<3);}
     testdata_refresh();
-}}*/
+}}
 
 void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
 {if(!load){
@@ -4938,61 +4940,62 @@ void MainWindow::on_cb_tut_sub_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].tut_sub |= (1<<2);}
     else{ff7.slot[s].tut_sub &= ~(1<<2);}
+    testdata_refresh();
 }}
 void MainWindow::on_cb_tut_sub_1_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].tut_sub |= (1<<0);}
     else{ff7.slot[s].tut_sub &= ~(1<<0);}
-    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+    testdata_refresh();
 }}
 
 void MainWindow::on_cb_tut_sub_2_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].tut_sub |= (1<<1);}
     else{ff7.slot[s].tut_sub &= ~(1<<1);}
-    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+    testdata_refresh();
 }}
 
 void MainWindow::on_cb_tut_sub_3_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].tut_sub |= (1<<2);}
     else{ff7.slot[s].tut_sub &= ~(1<<2);}
-    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+    testdata_refresh();
 }}
 
 void MainWindow::on_cb_tut_sub_4_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].tut_sub |= (1<<3);}
     else{ff7.slot[s].tut_sub &= ~(1<<3);}
-    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+    testdata_refresh();
 }}
 
 void MainWindow::on_cb_tut_sub_5_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].tut_sub |= (1<<4);}
     else{ff7.slot[s].tut_sub &= ~(1<<4);}
-    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+    testdata_refresh();
 }}
 
 void MainWindow::on_cb_tut_sub_6_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].tut_sub |= (1<<5);}
     else{ff7.slot[s].tut_sub &= ~(1<<5);}
-    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+    testdata_refresh();
 }}
 
 void MainWindow::on_cb_tut_sub_7_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].tut_sub |= (1<<6);}
     else{ff7.slot[s].tut_sub &= ~(1<<6);}
-    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+    testdata_refresh();
 }}
 
 void MainWindow::on_cb_tut_sub_8_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].tut_sub |= (1<<7);}
     else{ff7.slot[s].tut_sub &= ~(1<<7);}
-    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+    testdata_refresh();
 }}
 
 void MainWindow::on_cb_ruby_dead_toggled(bool checked)

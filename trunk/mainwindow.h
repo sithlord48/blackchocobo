@@ -60,12 +60,12 @@ private slots:
     void on_cb_tut_sub_2_toggled(bool);
     void on_cb_tut_sub_1_toggled(bool);
     void on_cb_tut_sub_toggled(bool checked);
-    void on_cb_bombing_int_stateChanged(int );
-    void on_cb_tut_worldsave_stateChanged(int );
-    //void on_cb_tut_sub_stateChanged(int );
-    void on_sb_timer_time_sec_valueChanged(int );
-    void on_sb_timer_time_min_valueChanged(int );
-    void on_sb_timer_time_hour_valueChanged(int );
+    void on_cb_bombing_int_stateChanged(int);
+    void on_cb_tut_worldsave_stateChanged(int);
+    void on_cb_tut_sub_stateChanged(bool);
+    void on_sb_timer_time_sec_valueChanged(int);
+    void on_sb_timer_time_min_valueChanged(int);
+    void on_sb_timer_time_hour_valueChanged(int);
     void on_cb_midgartrain_8_toggled(bool);
     void on_cb_midgartrain_7_toggled(bool);
     void on_cb_midgartrain_6_toggled(bool);
@@ -139,9 +139,9 @@ private slots:
     //wip functions
 
     void on_cb_replay_currentIndexChanged(int index);
-    void on_sb_bm_progress1_valueChanged(int );
-    void on_sb_bm_progress2_valueChanged(int );
-    void on_sb_bm_progress3_valueChanged(int );
+    void on_sb_bm_progress1_valueChanged(int);
+    void on_sb_bm_progress2_valueChanged(int);
+    void on_sb_bm_progress3_valueChanged(int);
     void on_sb_mprogress_valueChanged();
     void on_cb_c2_born_toggled(bool checked);
 
@@ -188,14 +188,14 @@ private slots:
     void on_list_keyitems_itemChanged();
     void on_tbl_itm_currentCellChanged(int row);
     void on_combo_additem_currentIndexChanged(int);
-    void on_sb_addqty_valueChanged(int );
+    void on_sb_addqty_valueChanged(int);
     void on_clearItem_clicked();
 
     // Materia Tab
     void on_tbl_materia_currentCellChanged(int row);
     void on_clearMateria_clicked();
     void on_combo_add_mat_currentIndexChanged(int index);
-    void on_sb_addap_valueChanged(int );
+    void on_sb_addap_valueChanged(int);
     void on_btn_eskillall_clicked();
     void geteskills(int row);
     void on_btn_eskillclear_clicked();
@@ -207,10 +207,10 @@ private slots:
     void on_btn_m_lvl3_clicked();
     void on_btn_m_lvl2_clicked();
     void on_btn_m_lvl1_clicked();
+
     //chocobo tab
     void on_sb_stables_owned_valueChanged();
-    void on_sb_stables_occupied_valueChanged(int );
-
+    void on_sb_stables_occupied_valueChanged(int);
     void on_line_c1_name_lostFocus();
     void on_line_c2_name_lostFocus();
     void on_line_c3_name_lostFocus();
@@ -265,30 +265,30 @@ private slots:
     void on_cb_c4_sex_currentIndexChanged(int index);
     void on_cb_c5_sex_currentIndexChanged(int index);
     void on_cb_c6_sex_currentIndexChanged(int index);
-    void on_sb_c1_maxsprint_valueChanged(int );
-    void on_sb_c1_sprint_valueChanged(int );
-    void on_sb_c1_maxspeed_valueChanged(int );
-    void on_sb_c1_speed_valueChanged(int );
-    void on_sb_c2_maxsprint_valueChanged(int );
-    void on_sb_c2_sprint_valueChanged(int );
-    void on_sb_c2_maxspeed_valueChanged(int );
-    void on_sb_c2_speed_valueChanged(int );
-    void on_sb_c3_maxsprint_valueChanged(int );
-    void on_sb_c3_sprint_valueChanged(int );
-    void on_sb_c3_maxspeed_valueChanged(int );
-    void on_sb_c3_speed_valueChanged(int );
-    void on_sb_c4_maxsprint_valueChanged(int );
-    void on_sb_c4_sprint_valueChanged(int );
-    void on_sb_c4_maxspeed_valueChanged(int );
-    void on_sb_c4_speed_valueChanged(int );
-    void on_sb_c5_maxsprint_valueChanged(int );
-    void on_sb_c5_sprint_valueChanged(int );
-    void on_sb_c5_maxspeed_valueChanged(int );
-    void on_sb_c5_speed_valueChanged(int );
-    void on_sb_c6_maxsprint_valueChanged(int );
-    void on_sb_c6_sprint_valueChanged(int );
-    void on_sb_c6_maxspeed_valueChanged(int );
-    void on_sb_c6_speed_valueChanged(int );
+    void on_sb_c1_maxsprint_valueChanged(int);
+    void on_sb_c1_sprint_valueChanged(int);
+    void on_sb_c1_maxspeed_valueChanged(int);
+    void on_sb_c1_speed_valueChanged(int);
+    void on_sb_c2_maxsprint_valueChanged(int);
+    void on_sb_c2_sprint_valueChanged(int);
+    void on_sb_c2_maxspeed_valueChanged(int);
+    void on_sb_c2_speed_valueChanged(int);
+    void on_sb_c3_maxsprint_valueChanged(int);
+    void on_sb_c3_sprint_valueChanged(int);
+    void on_sb_c3_maxspeed_valueChanged(int);
+    void on_sb_c3_speed_valueChanged(int);
+    void on_sb_c4_maxsprint_valueChanged(int);
+    void on_sb_c4_sprint_valueChanged(int);
+    void on_sb_c4_maxspeed_valueChanged(int);
+    void on_sb_c4_speed_valueChanged(int);
+    void on_sb_c5_maxsprint_valueChanged(int);
+    void on_sb_c5_sprint_valueChanged(int);
+    void on_sb_c5_maxspeed_valueChanged(int);
+    void on_sb_c5_speed_valueChanged(int);
+    void on_sb_c6_maxsprint_valueChanged(int);
+    void on_sb_c6_sprint_valueChanged(int);
+    void on_sb_c6_maxspeed_valueChanged(int);
+    void on_sb_c6_speed_valueChanged(int);
 
     //The Chocobo pens.
     void on_combo_pen1_currentIndexChanged(int index);
@@ -437,7 +437,7 @@ private slots:
     void on_w_m_s7_clicked();
     void on_w_m_s8_clicked();
     void on_clearMateria_slot_clicked();
-    void on_sb_addap_slot_valueChanged(int );
+    void on_sb_addap_slot_valueChanged(int);
     void on_combo_add_mat_slot_currentIndexChanged(int index);
     void geteskills2(int row);
     void on_btn_m_lvl5_slot_clicked();
@@ -453,48 +453,48 @@ private slots:
     void on_cb_emerald_dead_toggled(bool checked);
     void on_combo_highwind_buggy_currentIndexChanged(int index);
 
-    void on_leader_x_valueChanged(int );
-    void on_leader_y_valueChanged(int );
-    void on_leader_z_valueChanged(int );
-    void on_leader_id_valueChanged(int );
-    void on_leader_angle_valueChanged(int );
+    void on_leader_x_valueChanged(int);
+    void on_leader_y_valueChanged(int);
+    void on_leader_z_valueChanged(int);
+    void on_leader_id_valueChanged(int);
+    void on_leader_angle_valueChanged(int);
 
-    void on_tc_x_valueChanged(int );
-    void on_tc_y_valueChanged(int );
-    void on_tc_z_valueChanged(int );
-    void on_tc_id_valueChanged(int );
-    void on_tc_angle_valueChanged(int );
+    void on_tc_x_valueChanged(int);
+    void on_tc_y_valueChanged(int);
+    void on_tc_z_valueChanged(int);
+    void on_tc_id_valueChanged(int);
+    void on_tc_angle_valueChanged(int);
 
 
-    void on_bh_x_valueChanged(int );
-    void on_bh_y_valueChanged(int );
-    void on_bh_z_valueChanged(int );
-    void on_bh_id_valueChanged(int );
-    void on_bh_angle_valueChanged(int );
+    void on_bh_x_valueChanged(int);
+    void on_bh_y_valueChanged(int);
+    void on_bh_z_valueChanged(int);
+    void on_bh_id_valueChanged(int);
+    void on_bh_angle_valueChanged(int);
 
-    void on_sub_x_valueChanged(int );
-    void on_sub_id_valueChanged(int );
-    void on_sub_angle_valueChanged(int );
-    void on_sub_y_valueChanged(int );
-    void on_sub_z_valueChanged(int );
+    void on_sub_x_valueChanged(int);
+    void on_sub_id_valueChanged(int);
+    void on_sub_angle_valueChanged(int);
+    void on_sub_y_valueChanged(int);
+    void on_sub_z_valueChanged(int);
 
-    void on_rw_x_valueChanged(int );
-    void on_rw_y_valueChanged(int );
-    void on_rw_z_valueChanged(int );
-    void on_rw_id_valueChanged(int );
-    void on_rw_angle_valueChanged(int );
+    void on_rw_x_valueChanged(int);
+    void on_rw_y_valueChanged(int);
+    void on_rw_z_valueChanged(int);
+    void on_rw_id_valueChanged(int);
+    void on_rw_angle_valueChanged(int);
 
-    void on_uw_x_valueChanged(int );
-    void on_uw_y_valueChanged(int );
-    void on_uw_z_valueChanged(int );
-    void on_uw_id_valueChanged(int );
-    void on_uw_angle_valueChanged(int );
+    void on_uw_x_valueChanged(int);
+    void on_uw_y_valueChanged(int);
+    void on_uw_z_valueChanged(int);
+    void on_uw_id_valueChanged(int);
+    void on_uw_angle_valueChanged(int);
 
-    void on_ew_x_valueChanged(int );
-    void on_ew_y_valueChanged(int );
-    void on_ew_z_valueChanged(int );
-    void on_ew_id_valueChanged(int );
-    void on_ew_angle_valueChanged(int );
+    void on_ew_x_valueChanged(int);
+    void on_ew_y_valueChanged(int);
+    void on_ew_z_valueChanged(int);
+    void on_ew_id_valueChanged(int);
+    void on_ew_angle_valueChanged(int);
     void on_combo_map_controls_currentIndexChanged(int index);
     void on_slide_world_x_valueChanged(int value);
     void on_slide_world_y_valueChanged(int value);
