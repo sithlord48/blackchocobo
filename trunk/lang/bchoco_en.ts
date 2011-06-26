@@ -5100,46 +5100,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Counter Rate %20</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Counter Rate %40</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Counter Rate %60</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Counter Rate %80</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Counter Rate %100</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate %30</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate %40</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate %60</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate %80</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate %100</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>MP Turbo 10%</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5839,6 +5799,46 @@ is not a FF7 SaveGame.</source>
         <source>Summon Shiva x5 (32mp)</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Counter Rate 20%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Counter Rate 40%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Counter Rate 60%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Counter Rate 80%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Counter Rate 100%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate 30%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate 40%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate 60%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate 80%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate 100%</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Stats</name>
@@ -5884,10 +5884,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>HP:-5% MP:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>HP:-5% MP:+5% Str:-2 Vit -1 Mag:+2 Spi:+1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

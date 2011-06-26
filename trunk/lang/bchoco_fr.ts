@@ -5,1195 +5,1195 @@
     <name>Items</name>
     <message>
         <source>Potion</source>
-        <translation type="unfinished">Potion</translation>
+        <translation>Potion</translation>
     </message>
     <message>
         <source>Hi-Potion</source>
-        <translation type="unfinished">Super Potion</translation>
+        <translation>Super Potion</translation>
     </message>
     <message>
         <source>X-Potion</source>
-        <translation type="unfinished">Potion X</translation>
+        <translation>Potion X</translation>
     </message>
     <message>
         <source>Ether</source>
-        <translation type="unfinished">Ether</translation>
+        <translation>Ether</translation>
     </message>
     <message>
         <source>Turbo Ether</source>
-        <translation type="unfinished">Ether Turbo</translation>
+        <translation>Ether Turbo</translation>
     </message>
     <message>
         <source>Elixir</source>
-        <translation type="unfinished">Elixir</translation>
+        <translation>Elixir</translation>
     </message>
     <message>
         <source>Megalixir</source>
-        <translation type="unfinished">Megalixir</translation>
+        <translation>Megalixir</translation>
     </message>
     <message>
         <source>Phoenix Down</source>
-        <translation type="unfinished">Queue de Phénix</translation>
+        <translation>Queue de Phénix</translation>
     </message>
     <message>
         <source>Antidote</source>
-        <translation type="unfinished">Antidote</translation>
+        <translation>Antidote</translation>
     </message>
     <message>
         <source>Soft</source>
-        <translation type="unfinished">Doux</translation>
+        <translation>Doux</translation>
     </message>
     <message>
         <source>Maiden&apos;s Kiss</source>
-        <translation type="unfinished">Baiser de Vierge</translation>
+        <translation>Baiser de Vierge</translation>
     </message>
     <message>
         <source>Cornucopia</source>
-        <translation type="unfinished">Corne d&apos;abondance</translation>
+        <translation>Corne d&apos;abondance</translation>
     </message>
     <message>
         <source>Echo screen</source>
-        <translation type="unfinished">Ecran Sonore</translation>
+        <translation>Ecran Sonore</translation>
     </message>
     <message>
         <source>Hyper</source>
-        <translation type="unfinished">Hyper</translation>
+        <translation>Hyper</translation>
     </message>
     <message>
         <source>Tranquilizer</source>
-        <translation type="unfinished">Calmant</translation>
+        <translation>Calmant</translation>
     </message>
     <message>
         <source>Remedy</source>
-        <translation type="unfinished">Remède</translation>
+        <translation>Remède</translation>
     </message>
     <message>
         <source>Smoke Bomb</source>
-        <translation type="unfinished">Fumigène</translation>
+        <translation>Fumigène</translation>
     </message>
     <message>
         <source>Speed Drink</source>
-        <translation type="unfinished"></translation>
+        <translation>Boisson de vitesse</translation>
     </message>
     <message>
         <source>Hero Drink</source>
-        <translation type="unfinished">Boisson des Héros</translation>
+        <translation>Boisson des Héros</translation>
     </message>
     <message>
         <source>Vaccine</source>
-        <translation type="unfinished">Vaccin</translation>
+        <translation>Vaccin</translation>
     </message>
     <message>
         <source>Grenade</source>
-        <translation type="unfinished">Grenade</translation>
+        <translation>Grenade</translation>
     </message>
     <message>
         <source>Shrapnel</source>
-        <translation type="unfinished">Shrapnel</translation>
+        <translation>Shrapnel</translation>
     </message>
     <message>
         <source>Right Arm</source>
-        <translation type="unfinished">Bras droit</translation>
+        <translation>Bras droit</translation>
     </message>
     <message>
         <source>Hourglass</source>
-        <translation type="unfinished">Sablier</translation>
+        <translation>Sablier</translation>
     </message>
     <message>
         <source>Kiss of Death</source>
-        <translation type="unfinished"></translation>
+        <translation>Baiser de la mort</translation>
     </message>
     <message>
         <source>Spider Web</source>
-        <translation type="unfinished">Toile d&apos;araignée</translation>
+        <translation>Toile d&apos;araignée</translation>
     </message>
     <message>
         <source>Dream Powder</source>
-        <translation type="unfinished">Poussière de Rêve</translation>
+        <translation>Poussière de Rêve</translation>
     </message>
     <message>
         <source>Mute Mask</source>
-        <translation type="unfinished">Masque Muet</translation>
+        <translation>Masque Muet</translation>
     </message>
     <message>
         <source>War Gong</source>
-        <translation type="unfinished">Gong de Guerre</translation>
+        <translation>Gong de Guerre</translation>
     </message>
     <message>
         <source>Loco weed</source>
-        <translation type="unfinished">Graine de Fou</translation>
+        <translation>Graine de Fou</translation>
     </message>
     <message>
         <source>Fire Fang</source>
-        <translation type="unfinished">Dent de Feu</translation>
+        <translation>Dent de Feu</translation>
     </message>
     <message>
         <source>Fire Veil</source>
-        <translation type="unfinished">Voile de Feu</translation>
+        <translation>Voile de Feu</translation>
     </message>
     <message>
         <source>Antarctic Wind</source>
-        <translation type="unfinished">Vent antarctique</translation>
+        <translation>Vent antarctique</translation>
     </message>
     <message>
         <source>Ice Crystal</source>
-        <translation type="unfinished">Cristal de Galce</translation>
+        <translation>Cristal de Galce</translation>
     </message>
     <message>
         <source>Bolt Plume</source>
-        <translation type="unfinished">Plume d&apos;éclair</translation>
+        <translation>Plume d&apos;éclair</translation>
     </message>
     <message>
         <source>Swift Bolt</source>
-        <translation type="unfinished">Eclair furtif</translation>
+        <translation>Eclair furtif</translation>
     </message>
     <message>
         <source>Earth Drum</source>
-        <translation type="unfinished">Tambour Terrien</translation>
+        <translation>Tambour Terrien</translation>
     </message>
     <message>
         <source>Earth Mallet</source>
-        <translation type="unfinished">Maillet Terrien</translation>
+        <translation>Maillet Terrien</translation>
     </message>
     <message>
         <source>Deadly Waste</source>
-        <translation type="unfinished">Matière à Risque</translation>
+        <translation>Matière à Risque</translation>
     </message>
     <message>
         <source>M-Tentacles</source>
-        <translation type="unfinished">Tentacules-M</translation>
+        <translation>Tentacules-M</translation>
     </message>
     <message>
         <source>Stardust</source>
-        <translation type="unfinished">Poussière d&apos;étoiles</translation>
+        <translation>Poussière d&apos;étoiles</translation>
     </message>
     <message>
         <source>Vampire Fang</source>
-        <translation type="unfinished">Canine de Vampire</translation>
+        <translation>Canine de Vampire</translation>
     </message>
     <message>
         <source>Ghost Hand</source>
-        <translation type="unfinished">Main de Fantôme</translation>
+        <translation>Main de Fantôme</translation>
     </message>
     <message>
         <source>Vagyrisk Claw</source>
-        <translation type="unfinished">Griffe de Vagrisk</translation>
+        <translation>Griffe de Vagrisk</translation>
     </message>
     <message>
         <source>Light Curtain</source>
-        <translation type="unfinished">Rideau Clair</translation>
+        <translation>Rideau Clair</translation>
     </message>
     <message>
         <source>Lunar Curtain</source>
-        <translation type="unfinished">Rideau Lunaire</translation>
+        <translation>Rideau Lunaire</translation>
     </message>
     <message>
         <source>Mirror</source>
-        <translation type="unfinished">Miroir</translation>
+        <translation>Miroir</translation>
     </message>
     <message>
         <source>Holy Torch</source>
-        <translation type="unfinished">Torche Sacrée</translation>
+        <translation>Torche Sacrée</translation>
     </message>
     <message>
         <source>Bird Wing</source>
-        <translation type="unfinished">Aile d&apos;oiseau</translation>
+        <translation>Aile d&apos;oiseau</translation>
     </message>
     <message>
         <source>Dragon Scales</source>
-        <translation type="unfinished">Ecailles de dragon</translation>
+        <translation>Ecailles de dragon</translation>
     </message>
     <message>
         <source>Impaler</source>
-        <translation type="unfinished">Empaleur</translation>
+        <translation>Empaleur</translation>
     </message>
     <message>
         <source>Shrivel</source>
-        <translation type="unfinished">Shrivel</translation>
+        <translation>Shrivel</translation>
     </message>
     <message>
         <source>Eye drop</source>
-        <translation type="unfinished">Collyre</translation>
+        <translation>Collyre</translation>
     </message>
     <message>
         <source>Molotov</source>
-        <translation type="unfinished">Mototov</translation>
+        <translation>Mototov</translation>
     </message>
     <message>
         <source>S-mine</source>
-        <translation type="unfinished">Mine-S</translation>
+        <translation>Mine-S</translation>
     </message>
     <message>
         <source>8 Inch Cannon</source>
-        <translation type="unfinished">Cannon 8 pouces</translation>
+        <translation>Cannon 8 pouces</translation>
     </message>
     <message>
         <source>Graviball</source>
-        <translation type="unfinished">Graviballe</translation>
+        <translation>Graviballe</translation>
     </message>
     <message>
         <source>T/S Bomb</source>
-        <translation type="unfinished">Bombe T/S</translation>
+        <translation>Bombe T/S</translation>
     </message>
     <message>
         <source>Ink</source>
-        <translation type="unfinished">Encre</translation>
+        <translation>Encre</translation>
     </message>
     <message>
         <source>Dazers</source>
-        <translation type="unfinished"></translation>
+        <translation>Epine paralysie</translation>
     </message>
     <message>
         <source>Dragon Fang</source>
-        <translation type="unfinished">Canine de Dragon</translation>
+        <translation>Dent de dragon</translation>
     </message>
     <message>
         <source>Cauldron</source>
-        <translation type="unfinished">Chaudron</translation>
+        <translation>Chaudron</translation>
     </message>
     <message>
         <source>Sylkis Greens</source>
-        <translation type="unfinished">Légume Sylkis</translation>
+        <translation>Légume Sylkis</translation>
     </message>
     <message>
         <source>Reagan Greens</source>
-        <translation type="unfinished">Légume Reaan</translation>
+        <translation>Légume Reaan</translation>
     </message>
     <message>
         <source>Mimett Greens</source>
-        <translation type="unfinished">Légume Mimett</translation>
+        <translation>Légume Mimett</translation>
     </message>
     <message>
         <source>Curiel Greens</source>
-        <translation type="unfinished">Légume Curiel</translation>
+        <translation>Légume Curiel</translation>
     </message>
     <message>
         <source>Pahsana Greens</source>
-        <translation type="unfinished">Légume Pahsana</translation>
+        <translation>Légume Pahsana</translation>
     </message>
     <message>
         <source>Tantal Greens</source>
-        <translation type="unfinished">Légume Tantal</translation>
+        <translation>Légume Tantal</translation>
     </message>
     <message>
         <source>Krakka Greens</source>
-        <translation type="unfinished">Légume Krakka</translation>
+        <translation>Légume Krakka</translation>
     </message>
     <message>
         <source>Gysahl Greens</source>
-        <translation type="unfinished">Légume Gysahl</translation>
+        <translation>Légume Gysahl</translation>
     </message>
     <message>
         <source>Tent</source>
-        <translation type="unfinished">Tente</translation>
+        <translation>Tente</translation>
     </message>
     <message>
         <source>Power Source</source>
-        <translation type="unfinished">Source de Force</translation>
+        <translation>Source de Force</translation>
     </message>
     <message>
         <source>Guard Source</source>
-        <translation type="unfinished">Source de Vitalité</translation>
+        <translation>Source de Vitalité</translation>
     </message>
     <message>
         <source>Magic Source</source>
-        <translation type="unfinished">Source de Magie</translation>
+        <translation>Source de Magie</translation>
     </message>
     <message>
         <source>Mind Source</source>
-        <translation type="unfinished">Source d&apos;esprit</translation>
+        <translation>Source d&apos;esprit</translation>
     </message>
     <message>
         <source>Speed Source</source>
-        <translation type="unfinished">Source de Vitesse</translation>
+        <translation>Source de Vitesse</translation>
     </message>
     <message>
         <source>Luck Source</source>
-        <translation type="unfinished">Source de Chance</translation>
+        <translation>Source de Chance</translation>
     </message>
     <message>
         <source>Zeio Nut</source>
-        <translation type="unfinished">Noix de Zeio</translation>
+        <translation>Noix de Zeio</translation>
     </message>
     <message>
         <source>Carob Nut</source>
-        <translation type="unfinished">Noix de Carob</translation>
+        <translation>Noix de Carob</translation>
     </message>
     <message>
         <source>Porov Nut</source>
-        <translation type="unfinished">Noix de Porov</translation>
+        <translation>Noix de Porov</translation>
     </message>
     <message>
         <source>Pram Nut</source>
-        <translation type="unfinished">Noix de Pram</translation>
+        <translation>Noix de Pram</translation>
     </message>
     <message>
         <source>Lasan Nut</source>
-        <translation type="unfinished">Noix de Lasan</translation>
+        <translation>Noix de Lasan</translation>
     </message>
     <message>
         <source>Sahara Nut</source>
-        <translation type="unfinished">Noix de Sahara</translation>
+        <translation>Noix de Sahara</translation>
     </message>
     <message>
         <source>Luchile Nut</source>
-        <translation type="unfinished">Noix de Luchile</translation>
+        <translation>Noix de Luchile</translation>
     </message>
     <message>
         <source>Pepio Nut</source>
-        <translation type="unfinished">Noix de Pepio</translation>
+        <translation>Noix de Pepio</translation>
     </message>
     <message>
         <source>Battery</source>
-        <translation type="unfinished">Batterie</translation>
+        <translation>Batterie</translation>
     </message>
     <message>
         <source>Tissue</source>
-        <translation type="unfinished">Mouchoir</translation>
+        <translation>Mouchoir</translation>
     </message>
     <message>
         <source>Omnislash</source>
-        <translation type="unfinished">Omnislash</translation>
+        <translation>Omnislash</translation>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation type="unfinished">Catastrophe</translation>
+        <translation>Catastrophe</translation>
     </message>
     <message>
         <source>Final Heaven</source>
-        <translation type="unfinished">Dernier Paradis</translation>
+        <translation>Dernier Paradis</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation type="unfinished">Grand Vangile</translation>
+        <translation>Grand Vangile</translation>
     </message>
     <message>
         <source>Cosmo Memory</source>
-        <translation type="unfinished">Mémoire Cosmos</translation>
+        <translation>Mémoire Cosmos</translation>
     </message>
     <message>
         <source>All Creation</source>
-        <translation type="unfinished">Tout Création</translation>
+        <translation>Tout Création</translation>
     </message>
     <message>
         <source>Chaos</source>
-        <translation type="unfinished">Chaos</translation>
+        <translation>Chaos</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation type="unfinished">Hautvent</translation>
+        <translation>Hautvent</translation>
     </message>
     <message>
         <source>1/35 Soldier</source>
-        <translation type="unfinished">Soldats 1/35</translation>
+        <translation>Soldats 1/35</translation>
     </message>
     <message>
         <source>Super Sweeper</source>
-        <translation type="unfinished">Super Sweeper</translation>
+        <translation>Super Sweeper</translation>
     </message>
     <message>
         <source>Masamune Blade</source>
-        <translation type="unfinished">Masamune Blade</translation>
+        <translation>Masamune Blade</translation>
     </message>
     <message>
         <source>Save Crystal</source>
-        <translation type="unfinished">Cristal Sauf</translation>
+        <translation>Cristal Sauf</translation>
     </message>
     <message>
         <source>Combat Diary</source>
-        <translation type="unfinished">Carnet de Combat</translation>
+        <translation>Carnet de Combat</translation>
     </message>
     <message>
         <source>Autograph</source>
-        <translation type="unfinished">Autographe</translation>
+        <translation>Autographe</translation>
     </message>
     <message>
         <source>Gambler</source>
-        <translation type="unfinished">Joueur</translation>
+        <translation>Joueur</translation>
     </message>
     <message>
         <source>Desert Rose</source>
-        <translation type="unfinished">Rose du Désert</translation>
+        <translation>Rose du Désert</translation>
     </message>
     <message>
         <source>Earth Harp</source>
-        <translation type="unfinished">Harpe Terrestre</translation>
+        <translation>Harpe Terrestre</translation>
     </message>
     <message>
         <source>Guide Book</source>
-        <translation type="unfinished">Guide</translation>
+        <translation>Guide</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation type="unfinished">Ne pas utiliser</translation>
+        <translation>Ne pas utiliser</translation>
     </message>
     <message>
         <source>Buster Sword</source>
-        <translation type="unfinished">Epée Broyante</translation>
+        <translation>Epée Broyante</translation>
     </message>
     <message>
         <source>Mythril Saber</source>
-        <translation type="unfinished">Sabre Mythril</translation>
+        <translation>Sabre Mythril</translation>
     </message>
     <message>
         <source>Hardedge</source>
-        <translation type="unfinished">Bord-dur</translation>
+        <translation>Bord-dur</translation>
     </message>
     <message>
         <source>Butterfly Edge</source>
-        <translation type="unfinished">Bord de Papillon</translation>
+        <translation>Bord de Papillon</translation>
     </message>
     <message>
         <source>Enhance Sword</source>
-        <translation type="unfinished">Super Épée</translation>
+        <translation>Super Épée</translation>
     </message>
     <message>
         <source>Organics</source>
-        <translation type="unfinished">Organix</translation>
+        <translation>Organix</translation>
     </message>
     <message>
         <source>Crystal Sword</source>
-        <translation type="unfinished">Epée crystal</translation>
+        <translation>Epée crystal</translation>
     </message>
     <message>
         <source>Force Stealer</source>
-        <translation type="unfinished">Voleur Fou</translation>
+        <translation>Voleur Fou</translation>
     </message>
     <message>
         <source>Rune Blade</source>
-        <translation type="unfinished">Sabre Rune</translation>
+        <translation>Sabre Rune</translation>
     </message>
     <message>
         <source>Murasame</source>
-        <translation type="unfinished">Murasame</translation>
+        <translation>Murasame</translation>
     </message>
     <message>
         <source>Nail Bat</source>
-        <translation type="unfinished">Coup d&apos;ongle</translation>
+        <translation>Coup d&apos;ongle</translation>
     </message>
     <message>
         <source>Yoshiyuki</source>
-        <translation type="unfinished">Yoshiyuki</translation>
+        <translation>Yoshiyuki</translation>
     </message>
     <message>
         <source>Apocalypse</source>
-        <translation type="unfinished">Apocalypse</translation>
+        <translation>Apocalypse</translation>
     </message>
     <message>
         <source>Heaven&apos;s Cloud</source>
-        <translation type="unfinished">Nuage du Paradis</translation>
+        <translation>Nuage du Paradis</translation>
     </message>
     <message>
         <source>Ragnarok</source>
-        <translation type="unfinished">Ragnarok</translation>
+        <translation>Ragnarok</translation>
     </message>
     <message>
         <source>Ultima Weapon</source>
-        <translation type="unfinished">Dernière Arme</translation>
+        <translation>Dernière Arme</translation>
     </message>
     <message>
         <source>Leather Glove</source>
-        <translation type="unfinished">Gant de Cuir</translation>
+        <translation>Gant de Cuir</translation>
     </message>
     <message>
         <source>Metal Knuckle</source>
-        <translation type="unfinished">Poing Metallique</translation>
+        <translation>Poing Metallique</translation>
     </message>
     <message>
         <source>Mythril Claw</source>
-        <translation type="unfinished">Griffe Mythril</translation>
+        <translation>Griffe Mythril</translation>
     </message>
     <message>
         <source>Grand Glove</source>
-        <translation type="unfinished">Gant Majestueux</translation>
+        <translation>Gant Majestueux</translation>
     </message>
     <message>
         <source>Tiger Fang</source>
-        <translation type="unfinished">Canine de Tigre</translation>
+        <translation>Canine de Tigre</translation>
     </message>
     <message>
         <source>Diamond Knuckle</source>
-        <translation type="unfinished">Poing de Diamant</translation>
+        <translation>Poing de Diamant</translation>
     </message>
     <message>
         <source>Dragon Claw</source>
-        <translation type="unfinished">Griffe de Dragon</translation>
+        <translation>Griffe de Dragon</translation>
     </message>
     <message>
         <source>Crystal Glove</source>
-        <translation type="unfinished">Gant Cristal</translation>
+        <translation>Gant Cristal</translation>
     </message>
     <message>
         <source>Motor Drive</source>
-        <translation type="unfinished">Moteur</translation>
+        <translation>Moteur</translation>
     </message>
     <message>
         <source>Platinum Fist</source>
-        <translation type="unfinished">Poing de Platine</translation>
+        <translation>Poing de Platine</translation>
     </message>
     <message>
         <source>Kaiser Knuckle</source>
-        <translation type="unfinished">Poing de Kaiser</translation>
+        <translation>Poing de Kaiser</translation>
     </message>
     <message>
         <source>Work Glove</source>
-        <translation type="unfinished">Gant de Travail</translation>
+        <translation>Gant de Travail</translation>
     </message>
     <message>
         <source>Powersoul</source>
-        <translation type="unfinished">Arme de Pouvoir</translation>
+        <translation>Arme de Pouvoir</translation>
     </message>
     <message>
         <source>Master Fist</source>
-        <translation type="unfinished">Poing Maître</translation>
+        <translation>Poing Maître</translation>
     </message>
     <message>
         <source>God&apos;s Hand</source>
-        <translation type="unfinished">Main Divine</translation>
+        <translation>Main Divine</translation>
     </message>
     <message>
         <source>Premium Heart</source>
-        <translation type="unfinished">Super coeur</translation>
+        <translation>Super coeur</translation>
     </message>
     <message>
         <source>Gatling Gun</source>
-        <translation type="unfinished">Fusil Automatique</translation>
+        <translation>Fusil Automatique</translation>
     </message>
     <message>
         <source>Assault Gun</source>
-        <translation type="unfinished">Fusil d&apos;Attaque</translation>
+        <translation>Fusil d&apos;Attaque</translation>
     </message>
     <message>
         <source>Cannon Ball</source>
-        <translation type="unfinished">Boulet Cannon</translation>
+        <translation>Boulet Cannon</translation>
     </message>
     <message>
         <source>Atomic Scissors</source>
-        <translation type="unfinished">Ciseau Atomique</translation>
+        <translation>Ciseau Atomique</translation>
     </message>
     <message>
         <source>Heavy Vulcan</source>
-        <translation type="unfinished">Volcan Lourd</translation>
+        <translation>Volcan Lourd</translation>
     </message>
     <message>
         <source>Chainsaw</source>
-        <translation type="unfinished">Tronconneuse</translation>
+        <translation>Tronconneuse</translation>
     </message>
     <message>
         <source>Microlaser</source>
-        <translation type="unfinished">Microlaser</translation>
+        <translation>Microlaser</translation>
     </message>
     <message>
         <source>A-M Cannon</source>
-        <translation type="unfinished">A-M Cannon</translation>
+        <translation>A-M Cannon</translation>
     </message>
     <message>
         <source>W Machine Gun</source>
-        <translation type="unfinished">Mitrailleuse W</translation>
+        <translation>Mitrailleuse W</translation>
     </message>
     <message>
         <source>Drill Arm</source>
-        <translation type="unfinished">Bras Vis</translation>
+        <translation>Bras Vis</translation>
     </message>
     <message>
         <source>Solid Bazooka</source>
-        <translation type="unfinished">Bazooka Solide</translation>
+        <translation>Bazooka Solide</translation>
     </message>
     <message>
         <source>Rocket Punch</source>
-        <translation type="unfinished">Punch Foudroyant</translation>
+        <translation>Punch Foudroyant</translation>
     </message>
     <message>
         <source>Enemy Launcher</source>
-        <translation type="unfinished">Lanceur Ennemi</translation>
+        <translation>Lanceur Ennemi</translation>
     </message>
     <message>
         <source>Pile Banger</source>
-        <translation type="unfinished">Bunker</translation>
+        <translation>Bunker</translation>
     </message>
     <message>
         <source>Max Ray</source>
-        <translation type="unfinished">Rayon Maxi</translation>
+        <translation>Rayon Maxi</translation>
     </message>
     <message>
         <source>Missing Score</source>
-        <translation type="unfinished">Manuscrit Manquant</translation>
+        <translation>Manuscrit Manquant</translation>
     </message>
     <message>
         <source>Mythril Clip</source>
-        <translation type="unfinished">Broche Mythril</translation>
+        <translation>Broche Mythril</translation>
     </message>
     <message>
         <source>Diamond Pin</source>
-        <translation type="unfinished">Broche Diamant</translation>
+        <translation>Broche Diamant</translation>
     </message>
     <message>
         <source>Silver Barette</source>
-        <translation type="unfinished">Barrette argent</translation>
+        <translation>Barrette argent</translation>
     </message>
     <message>
         <source>Gold Barette</source>
-        <translation type="unfinished">Barrette or</translation>
+        <translation>Barrette or</translation>
     </message>
     <message>
         <source>Adaman Clip</source>
-        <translation type="unfinished">Broche Adaman</translation>
+        <translation>Broche Adaman</translation>
     </message>
     <message>
         <source>Crystal Comb</source>
-        <translation type="unfinished">Peigne Crystal</translation>
+        <translation>Peigne Crystal</translation>
     </message>
     <message>
         <source>Magic Comb</source>
-        <translation type="unfinished">Peigne Magique</translation>
+        <translation>Peigne Magique</translation>
     </message>
     <message>
         <source>Plus Barette</source>
-        <translation type="unfinished">Barrette Plus</translation>
+        <translation>Barrette Plus</translation>
     </message>
     <message>
         <source>Centclip</source>
-        <translation type="unfinished">Broche</translation>
+        <translation>Broche</translation>
     </message>
     <message>
         <source>Hairpin</source>
-        <translation type="unfinished">Epingle Cheveux</translation>
+        <translation>Epingle Cheveux</translation>
     </message>
     <message>
         <source>Seraph Comb</source>
-        <translation type="unfinished">Peigne Seraphin</translation>
+        <translation>Peigne Seraphin</translation>
     </message>
     <message>
         <source>Behemoth Horn</source>
-        <translation type="unfinished">Corne Behemoth</translation>
+        <translation>Corne Behemoth</translation>
     </message>
     <message>
         <source>Spring Gun Clip</source>
-        <translation type="unfinished">Broche de fusil</translation>
+        <translation>Broche de fusil</translation>
     </message>
     <message>
         <source>Limited Moon</source>
-        <translation type="unfinished">Lune Limitée</translation>
+        <translation>Lune Limitée</translation>
     </message>
     <message>
         <source>Guard Stick</source>
-        <translation type="unfinished">Baton de Garde</translation>
+        <translation>Baton de Garde</translation>
     </message>
     <message>
         <source>Mythril Rod</source>
-        <translation type="unfinished">Baton de Mythril</translation>
+        <translation>Baton de Mythril</translation>
     </message>
     <message>
         <source>Full Metal Staff</source>
-        <translation type="unfinished">Baton Metalque</translation>
+        <translation>Baton Metalque</translation>
     </message>
     <message>
         <source>Striking Staff</source>
-        <translation type="unfinished">Baton de Frappe</translation>
+        <translation>Baton de Frappe</translation>
     </message>
     <message>
         <source>Prism Staff</source>
-        <translation type="unfinished">Baton Prisme</translation>
+        <translation>Baton Prisme</translation>
     </message>
     <message>
         <source>Aurora Rod</source>
-        <translation type="unfinished">Baton Aurore</translation>
+        <translation>Baton Aurore</translation>
     </message>
     <message>
         <source>Wizard Staff</source>
-        <translation type="unfinished">Baton Magicien</translation>
+        <translation>Baton Magicien</translation>
     </message>
     <message>
         <source>Wizer Staff</source>
-        <translation type="unfinished">Baton de Sage</translation>
+        <translation>Baton de Sage</translation>
     </message>
     <message>
         <source>Fairy Tale</source>
-        <translation type="unfinished">Conte de Fée</translation>
+        <translation>Conte de Fée</translation>
     </message>
     <message>
         <source>Umbrella</source>
-        <translation type="unfinished">Parapluie</translation>
+        <translation>Parapluie</translation>
     </message>
     <message>
         <source>Princess Guard</source>
-        <translation type="unfinished">Garde de Princesse</translation>
+        <translation>Garde de Princesse</translation>
     </message>
     <message>
         <source>Spear</source>
-        <translation type="unfinished">Lance</translation>
+        <translation>Lance</translation>
     </message>
     <message>
         <source>Slash Lance</source>
-        <translation type="unfinished">Lance taillade</translation>
+        <translation>Lance taillade</translation>
     </message>
     <message>
         <source>Trident</source>
-        <translation type="unfinished">Trident</translation>
+        <translation>Trident</translation>
     </message>
     <message>
         <source>Mast Ax</source>
-        <translation type="unfinished">Hache Maîtresse</translation>
+        <translation>Hache Maîtresse</translation>
     </message>
     <message>
         <source>Partisan</source>
-        <translation type="unfinished">Partisan</translation>
+        <translation>Partisan</translation>
     </message>
     <message>
         <source>Viper Halberd</source>
-        <translation type="unfinished">Vipère Hallebarde</translation>
+        <translation>Vipère Hallebarde</translation>
     </message>
     <message>
         <source>Javelin</source>
-        <translation type="unfinished">Javelot</translation>
+        <translation>Javelot</translation>
     </message>
     <message>
         <source>Grow Lance</source>
-        <translation type="unfinished">Lance croissante</translation>
+        <translation>Lance croissante</translation>
     </message>
     <message>
         <source>Mop</source>
-        <translation type="unfinished">Mop</translation>
+        <translation>Mop</translation>
     </message>
     <message>
         <source>Dragoon Lance</source>
-        <translation type="unfinished">Lance de Dragon</translation>
+        <translation>Lance de Dragon</translation>
     </message>
     <message>
         <source>Scimitar</source>
-        <translation type="unfinished">Cimeterre</translation>
+        <translation>Cimeterre</translation>
     </message>
     <message>
         <source>Flayer</source>
-        <translation type="unfinished">Fouet</translation>
+        <translation>Fouet</translation>
     </message>
     <message>
         <source>Spirit Lance</source>
-        <translation type="unfinished">Lance Spirituelle</translation>
+        <translation>Lance Spirituelle</translation>
     </message>
     <message>
         <source>Venus Gospel</source>
-        <translation type="unfinished">Evangile de Venus</translation>
+        <translation>Evangile de Venus</translation>
     </message>
     <message>
         <source>4-point Shuriken</source>
-        <translation type="unfinished">Shuriken 4-points</translation>
+        <translation>Shuriken 4-points</translation>
     </message>
     <message>
         <source>Boomerang</source>
-        <translation type="unfinished">Boomerang</translation>
+        <translation>Boomerang</translation>
     </message>
     <message>
         <source>Pinwheel</source>
-        <translation type="unfinished">Feu d&apos;artifice</translation>
+        <translation>Feu d&apos;artifice</translation>
     </message>
     <message>
         <source>Razor Ring</source>
-        <translation type="unfinished">Anneau Rasoir</translation>
+        <translation>Anneau Rasoir</translation>
     </message>
     <message>
         <source>Hawkeye</source>
-        <translation type="unfinished">Regard d&apos;Aigle</translation>
+        <translation>Regard d&apos;Aigle</translation>
     </message>
     <message>
         <source>Crystal Cross</source>
-        <translation type="unfinished">Croix Cristal</translation>
+        <translation>Croix Cristal</translation>
     </message>
     <message>
         <source>Wind Slash</source>
-        <translation type="unfinished">Tailleur de Vent</translation>
+        <translation>Tailleur de Vent</translation>
     </message>
     <message>
         <source>Twin Viper</source>
-        <translation type="unfinished">Vipère Jumelle</translation>
+        <translation>Vipère Jumelle</translation>
     </message>
     <message>
         <source>Spiral Shuriken</source>
-        <translation type="unfinished">Spiral de Shuriken</translation>
+        <translation>Spiral de Shuriken</translation>
     </message>
     <message>
         <source>Superball</source>
-        <translation type="unfinished">Superballe</translation>
+        <translation>Superballe</translation>
     </message>
     <message>
         <source>Magic Shuriken</source>
-        <translation type="unfinished">Shuriken Magique</translation>
+        <translation>Shuriken Magique</translation>
     </message>
     <message>
         <source>Rising Sun</source>
-        <translation type="unfinished">Soleil Levant</translation>
+        <translation>Soleil Levant</translation>
     </message>
     <message>
         <source>Oritsuru</source>
-        <translation type="unfinished">Oritsuru</translation>
+        <translation>Oritsuru</translation>
     </message>
     <message>
         <source>Conformer</source>
-        <translation type="unfinished">Conformiste</translation>
+        <translation>Conformiste</translation>
     </message>
     <message>
         <source>Yellow M-phone</source>
-        <translation type="unfinished">Mphone Jaune</translation>
+        <translation>Mphone Jaune</translation>
     </message>
     <message>
         <source>Green M-phone</source>
-        <translation type="unfinished">Mphone Vert</translation>
+        <translation>Mphone Vert</translation>
     </message>
     <message>
         <source>Blue M-phone</source>
-        <translation type="unfinished">Mphone Blue</translation>
+        <translation>Mphone Blue</translation>
     </message>
     <message>
         <source>Red M-phone</source>
-        <translation type="unfinished">Mphone Rouge</translation>
+        <translation>Mphone Rouge</translation>
     </message>
     <message>
         <source>Crystal M-phone</source>
-        <translation type="unfinished">Mphone Cristal</translation>
+        <translation>Mphone Cristal</translation>
     </message>
     <message>
         <source>White M-phone</source>
-        <translation type="unfinished">Mphone Blanc</translation>
+        <translation>Mphone Blanc</translation>
     </message>
     <message>
         <source>Black M-phone</source>
-        <translation type="unfinished">Mphone Noir</translation>
+        <translation>Mphone Noir</translation>
     </message>
     <message>
         <source>Silver M-phone</source>
-        <translation type="unfinished">Mphone Argent</translation>
+        <translation>Mphone Argent</translation>
     </message>
     <message>
         <source>Trumpet Shell</source>
-        <translation type="unfinished">Conque</translation>
+        <translation>Conque</translation>
     </message>
     <message>
         <source>Gold M-phone</source>
-        <translation type="unfinished">Mphone or</translation>
+        <translation>Mphone or</translation>
     </message>
     <message>
         <source>Battle Trumpet</source>
-        <translation type="unfinished">Bugle de Combat</translation>
+        <translation>Bugle de Combat</translation>
     </message>
     <message>
         <source>Starlight Phone</source>
-        <translation type="unfinished">Tel. d&apos;étoiles</translation>
+        <translation>Tel. d&apos;étoiles</translation>
     </message>
     <message>
         <source>HP Shout</source>
-        <translation type="unfinished">Cri HP</translation>
+        <translation>Cri HP</translation>
     </message>
     <message>
         <source>Quicksilver</source>
-        <translation type="unfinished">Mercure</translation>
+        <translation>Mercure</translation>
     </message>
     <message>
         <source>Shotgun</source>
-        <translation type="unfinished">Fusil Chasse</translation>
+        <translation>Fusil Chasse</translation>
     </message>
     <message>
         <source>Shortbarrel</source>
-        <translation type="unfinished">Petit Tonneau</translation>
+        <translation>Petit Tonneau</translation>
     </message>
     <message>
         <source>Lariat</source>
-        <translation type="unfinished">Lariat</translation>
+        <translation>Lariat</translation>
     </message>
     <message>
         <source>Winchester</source>
-        <translation type="unfinished">Winchester</translation>
+        <translation>Winchester</translation>
     </message>
     <message>
         <source>Peacemaker</source>
-        <translation type="unfinished">Pacificateur</translation>
+        <translation>Pacificateur</translation>
     </message>
     <message>
         <source>Buntline</source>
-        <translation type="unfinished">Cordage</translation>
+        <translation>Cordage</translation>
     </message>
     <message>
         <source>Long Barrel R</source>
-        <translation type="unfinished">Long Tonneau R</translation>
+        <translation>Long Tonneau R</translation>
     </message>
     <message>
         <source>Silver Rifle</source>
-        <translation type="unfinished">Fusil Argent</translation>
+        <translation>Fusil Argent</translation>
     </message>
     <message>
         <source>Sniper CR</source>
-        <translation type="unfinished">CR d&apos;Embuscade</translation>
+        <translation>CR d&apos;Embuscade</translation>
     </message>
     <message>
         <source>Supershot ST</source>
-        <translation type="unfinished">Outsider</translation>
+        <translation>Supercoup ST</translation>
     </message>
     <message>
         <source>Outsider</source>
-        <translation type="unfinished">Supercoup ST</translation>
+        <translation>Outsider</translation>
     </message>
     <message>
         <source>Death Penalty</source>
-        <translation type="unfinished">Peine de Mort</translation>
+        <translation>Peine de Mort</translation>
     </message>
     <message>
         <source>Masamune</source>
-        <translation type="unfinished">Masamune</translation>
+        <translation>Masamune</translation>
     </message>
     <message>
         <source>Bronze Bangle</source>
-        <translation type="unfinished">Bijou de Brouze</translation>
+        <translation>Bijou de Brouze</translation>
     </message>
     <message>
         <source>Iron Bangle</source>
-        <translation type="unfinished">Bijou de fer</translation>
+        <translation>Bijou de fer</translation>
     </message>
     <message>
         <source>Titan Bangle</source>
-        <translation type="unfinished">Bijou Titan</translation>
+        <translation>Bijou Titan</translation>
     </message>
     <message>
         <source>Mythril Armlet</source>
-        <translation type="unfinished">Cercle Mythril</translation>
+        <translation>Cercle Mythril</translation>
     </message>
     <message>
         <source>Carbon Bangle</source>
-        <translation type="unfinished">Bijou Charbon</translation>
+        <translation>Bijou Charbon</translation>
     </message>
     <message>
         <source>Silver Armlet</source>
-        <translation type="unfinished">Bracelet Argent</translation>
+        <translation>Bracelet Argent</translation>
     </message>
     <message>
         <source>Gold Armlet</source>
-        <translation type="unfinished">Braclet or</translation>
+        <translation>Braclet or</translation>
     </message>
     <message>
         <source>Diamond Bangle</source>
-        <translation type="unfinished">Bijou Diamant</translation>
+        <translation>Bijou Diamant</translation>
     </message>
     <message>
         <source>Crystal Bangle</source>
-        <translation type="unfinished">bijou Cristal</translation>
+        <translation>bijou Cristal</translation>
     </message>
     <message>
         <source>Platinum Bangle</source>
-        <translation type="unfinished">Bijou Platine</translation>
+        <translation>Bijou Platine</translation>
     </message>
     <message>
         <source>Rune Armlet</source>
-        <translation type="unfinished">Braclet de Rune</translation>
+        <translation>Braclet de Rune</translation>
     </message>
     <message>
         <source>Edincoat</source>
-        <translation type="unfinished">Vest d&apos;Eden</translation>
+        <translation>Vest d&apos;Eden</translation>
     </message>
     <message>
         <source>Wizard Bracelet</source>
-        <translation type="unfinished">Bracelet Sage</translation>
+        <translation>Bracelet Sage</translation>
     </message>
     <message>
         <source>Adaman Bangle</source>
-        <translation type="unfinished">Bijou Adaman</translation>
+        <translation>Bijou Adaman</translation>
     </message>
     <message>
         <source>Gigas Armlet</source>
-        <translation type="unfinished">Bracelet Gigas</translation>
+        <translation>Bracelet Gigas</translation>
     </message>
     <message>
         <source>Imperial Guard</source>
-        <translation type="unfinished">Garde Imperiale</translation>
+        <translation>Garde Imperiale</translation>
     </message>
     <message>
         <source>Aegis Armlet</source>
-        <translation type="unfinished">Bracelet  Aegis</translation>
+        <translation>Bracelet  Aegis</translation>
     </message>
     <message>
         <source>Fourth Bracelet</source>
-        <translation type="unfinished">4ème Bracelet</translation>
+        <translation>4ème Bracelet</translation>
     </message>
     <message>
         <source>Warrior Bangle</source>
-        <translation type="unfinished">Bijou de Guerrier</translation>
+        <translation>Bijou de Guerrier</translation>
     </message>
     <message>
         <source>Shinra Beta</source>
-        <translation type="unfinished">Beta Shinra</translation>
+        <translation>Beta Shinra</translation>
     </message>
     <message>
         <source>Shinra Alpha</source>
-        <translation type="unfinished">Alpha Shinra</translation>
+        <translation>Alpha Shinra</translation>
     </message>
     <message>
         <source>Four Slots</source>
-        <translation type="unfinished">4 Orifices</translation>
+        <translation>4 Orifices</translation>
     </message>
     <message>
         <source>Fire Armlet</source>
-        <translation type="unfinished">Bracelet Feu</translation>
+        <translation>Bracelet Feu</translation>
     </message>
     <message>
         <source>Aurora Armlet</source>
-        <translation type="unfinished">Bracelet aurore</translation>
+        <translation>Bracelet aurore</translation>
     </message>
     <message>
         <source>Bolt Armlet</source>
-        <translation type="unfinished">Bracelet Eclair</translation>
+        <translation>Bracelet Eclair</translation>
     </message>
     <message>
         <source>Dragon Armlet</source>
-        <translation type="unfinished">Bracelet Dragon</translation>
+        <translation>Bracelet Dragon</translation>
     </message>
     <message>
         <source>Minerva Band</source>
-        <translation type="unfinished">Cerclle Minerve</translation>
+        <translation>Cerclle Minerve</translation>
     </message>
     <message>
         <source>Escort Guard</source>
-        <translation type="unfinished">Garde d&apos;Escorte</translation>
+        <translation>Garde d&apos;Escorte</translation>
     </message>
     <message>
         <source>Mystile</source>
-        <translation type="unfinished">Mystile</translation>
+        <translation>Mystile</translation>
     </message>
     <message>
         <source>Ziedrich</source>
-        <translation type="unfinished">Collier</translation>
+        <translation>Collier</translation>
     </message>
     <message>
         <source>Precious Watch</source>
-        <translation type="unfinished">Montre Precieuse</translation>
+        <translation>Montre Precieuse</translation>
     </message>
     <message>
         <source>Chocobracelet</source>
-        <translation type="unfinished">Chocobracelet</translation>
+        <translation>Chocobracelet</translation>
     </message>
     <message>
         <source>Power Wrist</source>
-        <translation type="unfinished">Super Poignet</translation>
+        <translation>Super Poignet</translation>
     </message>
     <message>
         <source>Protect Vest</source>
-        <translation type="unfinished">Gilet Protection</translation>
+        <translation>Gilet Protection</translation>
     </message>
     <message>
         <source>Earring</source>
-        <translation type="unfinished">Boucle d&apos;Oreille</translation>
+        <translation>Boucle d&apos;Oreille</translation>
     </message>
     <message>
         <source>Talisman</source>
-        <translation type="unfinished">Talisman</translation>
+        <translation>Talisman</translation>
     </message>
     <message>
         <source>Choco Feather</source>
-        <translation type="unfinished">Plume Chocobo</translation>
+        <translation>Plume Chocobo</translation>
     </message>
     <message>
         <source>Amulet</source>
-        <translation type="unfinished">Amulette</translation>
+        <translation>Amulette</translation>
     </message>
     <message>
         <source>Champion Belt</source>
-        <translation type="unfinished">Echarpe Champion</translation>
+        <translation>Echarpe Champion</translation>
     </message>
     <message>
         <source>Poison Ring</source>
-        <translation type="unfinished">Anneau Poison</translation>
+        <translation>Anneau Poison</translation>
     </message>
     <message>
         <source>Tough Ring</source>
-        <translation type="unfinished">Anneau Resistant</translation>
+        <translation>Anneau Resistant</translation>
     </message>
     <message>
         <source>Circlet</source>
-        <translation type="unfinished">Bandeau</translation>
+        <translation>Bandeau</translation>
     </message>
     <message>
         <source>Star Pendant</source>
-        <translation type="unfinished">Pendentif Étoilé</translation>
+        <translation>Pendentif Étoilé</translation>
     </message>
     <message>
         <source>Silver Glasses</source>
-        <translation type="unfinished">Lunettes Argent</translation>
+        <translation>Lunettes Argent</translation>
     </message>
     <message>
         <source>Headband</source>
-        <translation type="unfinished">Bandeau</translation>
+        <translation>Bandeau</translation>
     </message>
     <message>
         <source>Fairy Ring</source>
-        <translation type="unfinished">Anneau Fée</translation>
+        <translation>Anneau Fée</translation>
     </message>
     <message>
         <source>Jem Ring</source>
-        <translation type="unfinished">Anneau de Pierres</translation>
+        <translation>Anneau de Pierres</translation>
     </message>
     <message>
         <source>White Cape</source>
-        <translation type="unfinished">Cape Blanche</translation>
+        <translation>Cape Blanche</translation>
     </message>
     <message>
         <source>Sprint Shoes</source>
-        <translation type="unfinished">Baskets</translation>
+        <translation>Baskets</translation>
     </message>
     <message>
         <source>Peace Ring</source>
-        <translation type="unfinished">Anneau de la Paix</translation>
+        <translation>Anneau de la Paix</translation>
     </message>
     <message>
         <source>Ribbon</source>
-        <translation type="unfinished">Ruban</translation>
+        <translation>Ruban</translation>
     </message>
     <message>
         <source>Fire Ring</source>
-        <translation type="unfinished">Annaau Feu</translation>
+        <translation>Annaau Feu</translation>
     </message>
     <message>
         <source>Ice Ring</source>
-        <translation type="unfinished">Anneau Glace</translation>
+        <translation>Anneau Glace</translation>
     </message>
     <message>
         <source>Bolt Ring</source>
-        <translation type="unfinished">Anneau Eclair</translation>
+        <translation>Anneau Eclair</translation>
     </message>
     <message>
         <source>Tetra Elemental</source>
-        <translation type="unfinished">Tetra Élémentaire</translation>
+        <translation>Tetra Élémentaire</translation>
     </message>
     <message>
         <source>Safety Bit</source>
-        <translation type="unfinished">Bit de Sureté</translation>
+        <translation>Bit de Sureté</translation>
     </message>
     <message>
         <source>Fury Ring</source>
-        <translation type="unfinished">Anneau Furie</translation>
+        <translation>Anneau Furie</translation>
     </message>
     <message>
         <source>Curse Ring</source>
-        <translation type="unfinished">Anneau Maudit</translation>
+        <translation>Anneau Maudit</translation>
     </message>
     <message>
         <source>Protect Ring</source>
-        <translation type="unfinished">Anneau Protecteur</translation>
+        <translation>Anneau Protecteur</translation>
     </message>
     <message>
         <source>Cat&apos;s Bell</source>
-        <translation type="unfinished">Clochette de Chat</translation>
+        <translation>Clochette de Chat</translation>
     </message>
     <message>
         <source>Reflect Ring</source>
-        <translation type="unfinished">Anneau Reflet</translation>
+        <translation>Anneau Reflet</translation>
     </message>
     <message>
         <source>Water Ring</source>
-        <translation type="unfinished">Cercle d&apos;Eau</translation>
+        <translation>Cercle d&apos;Eau</translation>
     </message>
     <message>
         <source>Sneak Glove</source>
-        <translation type="unfinished">Gant de Voleur</translation>
+        <translation>Gant de Voleur</translation>
     </message>
     <message>
         <source>HypnoCrown</source>
-        <translation type="unfinished">Hypnocouronne</translation>
+        <translation>Hypnocouronne</translation>
     </message>
 </context>
 <context>
@@ -3916,7 +3916,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>OmniSlash</source>
-        <translation type="unfinished"></translation>
+        <translation>Omnislash</translation>
     </message>
     <message>
         <source>Big Shot</source>
@@ -3944,7 +3944,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation type="unfinished">Catastrophe</translation>
+        <translation>Catastrophe</translation>
     </message>
     <message>
         <source>Beat Rush</source>
@@ -3972,7 +3972,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Final Heaven</source>
-        <translation type="unfinished">Dernier Paradis</translation>
+        <translation>Dernier Paradis</translation>
     </message>
     <message>
         <source>Healing Wind</source>
@@ -4000,7 +4000,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation type="unfinished">Grand Vangile</translation>
+        <translation>Grand Vangile</translation>
     </message>
     <message>
         <source>Sled Fang</source>
@@ -4028,7 +4028,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Cosmo Memory</source>
-        <translation type="unfinished">Mémoire Cosmos</translation>
+        <translation>Mémoire Cosmos</translation>
     </message>
     <message>
         <source>Greased Lightning</source>
@@ -4056,7 +4056,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>All Creation</source>
-        <translation type="unfinished">Tout Création</translation>
+        <translation>Tout Création</translation>
     </message>
     <message>
         <source>Dice</source>
@@ -4080,7 +4080,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Chaos</source>
-        <translation type="unfinished">Chaos</translation>
+        <translation>Chaos</translation>
     </message>
     <message>
         <source>Boost Jump</source>
@@ -4108,7 +4108,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Highwind</source>
-        <translation type="unfinished">Hautvent</translation>
+        <translation>Hautvent</translation>
     </message>
     <message>
         <source>Ingoring Non FF7 Save</source>
@@ -4272,7 +4272,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>-------EMPTY--------</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">-------Vide----------</translation>
     </message>
     <message>
         <source>Region Can&apos;t be Automaticly Detected, You Must Set it Manually</source>
@@ -4348,15 +4348,15 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>X</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">x</translation>
     </message>
     <message>
         <source>Y</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">y</translation>
     </message>
     <message>
         <source>Z</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">z</translation>
     </message>
     <message>
         <source>angle</source>
@@ -4475,1038 +4475,998 @@ is not a FF7 SaveGame.</source>
     <name>Materia_Names</name>
     <message>
         <source>MP Plus</source>
-        <translation type="unfinished">Super MP</translation>
+        <translation>Super MP</translation>
     </message>
     <message>
         <source>HP Plus</source>
-        <translation type="unfinished">Super HP</translation>
+        <translation>Super HP</translation>
     </message>
     <message>
         <source>Speed Plus</source>
-        <translation type="unfinished">Super Vitesse</translation>
+        <translation>Super Vitesse</translation>
     </message>
     <message>
         <source>Magic Plus</source>
-        <translation type="unfinished">Super Magie</translation>
+        <translation>Super Magie</translation>
     </message>
     <message>
         <source>Luck Plus</source>
-        <translation type="unfinished">Super Chance</translation>
+        <translation>Super Chance</translation>
     </message>
     <message>
         <source>EXP Plus</source>
-        <translation type="unfinished">Super Exp</translation>
+        <translation>Super Exp</translation>
     </message>
     <message>
         <source>Gil Plus</source>
-        <translation type="unfinished">Super Gils</translation>
+        <translation>Super Gils</translation>
     </message>
     <message>
         <source>Enemy Away</source>
-        <translation type="unfinished">Repousse Ennemi</translation>
+        <translation>Repousse Ennemi</translation>
     </message>
     <message>
         <source>Enemy Lure</source>
-        <translation type="unfinished">Appat Ennemi</translation>
+        <translation>Appat Ennemi</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
-        <translation type="unfinished">Appat Chocobo</translation>
+        <translation>Appat Chocobo</translation>
     </message>
     <message>
         <source>Pre-emptive</source>
-        <translation type="unfinished">Prevention</translation>
+        <translation>Prevention</translation>
     </message>
     <message>
         <source>Long Range</source>
-        <translation type="unfinished">Longue Portée</translation>
+        <translation>Longue Portée</translation>
     </message>
     <message>
         <source>Mega All</source>
-        <translation type="unfinished">Mega Tout</translation>
+        <translation>Mega Tout</translation>
     </message>
     <message>
         <source>Counter Attack</source>
-        <translation type="unfinished">Contre Attaque</translation>
+        <translation>Contre Attaque</translation>
     </message>
     <message>
         <source>Slash-All</source>
-        <translation type="unfinished"></translation>
+        <translation>FurieMax</translation>
     </message>
     <message>
         <source>Double Cut</source>
-        <translation type="unfinished">Attaque Double</translation>
+        <translation>Attaque Double</translation>
     </message>
     <message>
         <source>Cover</source>
-        <translation type="unfinished">Converture</translation>
+        <translation>Converture</translation>
     </message>
     <message>
         <source>Underwater</source>
-        <translation type="unfinished">Sous marin</translation>
+        <translation>Sous marin</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation type="unfinished">HP &lt;-&gt; MP</translation>
+        <translation>HP &lt;-&gt; MP</translation>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation type="unfinished">Magie W</translation>
+        <translation>Magie W</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation type="unfinished"></translation>
+        <translation>Invocation-W</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation type="unfinished"></translation>
+        <translation>Elément-W</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation type="unfinished">Ne pas utiliser</translation>
+        <translation>Ne pas utiliser</translation>
     </message>
     <message>
         <source>All</source>
-        <translation type="unfinished">Tout</translation>
+        <translation>Tout</translation>
     </message>
     <message>
         <source>Counter</source>
-        <translation type="unfinished">Opposition</translation>
+        <translation>Opposition</translation>
     </message>
     <message>
         <source>Magic Counter</source>
-        <translation type="unfinished">Opposition Magie</translation>
+        <translation>Opposition Magie</translation>
     </message>
     <message>
         <source>MP Turbo</source>
-        <translation type="unfinished">Turbo MP</translation>
+        <translation>Turbo MP</translation>
     </message>
     <message>
         <source>MP Absorb</source>
-        <translation type="unfinished">Absorption MP</translation>
+        <translation>Absorption MP</translation>
     </message>
     <message>
         <source>HP Absorb</source>
-        <translation type="unfinished">Absorption HP</translation>
+        <translation>Absorption HP</translation>
     </message>
     <message>
         <source>Elemental</source>
-        <translation type="unfinished">Elément de Base</translation>
+        <translation>Elément de Base</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation type="unfinished">Effet Suppl</translation>
+        <translation>Effet Suppl</translation>
     </message>
     <message>
         <source>Sneak Attack</source>
-        <translation type="unfinished">Attaque Furtive</translation>
+        <translation>Attaque Furtive</translation>
     </message>
     <message>
         <source>Final Attack</source>
-        <translation type="unfinished">Attack Fanale</translation>
+        <translation>Attack Fanale</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation type="unfinished">Coupure Suppl</translation>
+        <translation>Coupure Suppl</translation>
     </message>
     <message>
         <source>Steal-As-Well</source>
-        <translation type="unfinished"></translation>
+        <translation>Vol Simultané</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
-        <translation type="unfinished">Quadruple Magie</translation>
+        <translation>Quadruple Magie</translation>
     </message>
     <message>
         <source>Steal</source>
-        <translation type="unfinished"></translation>
+        <translation>Voler</translation>
     </message>
     <message>
         <source>Sense</source>
-        <translation type="unfinished"></translation>
+        <translation>Sentir</translation>
     </message>
     <message>
         <source>Throw</source>
-        <translation type="unfinished"></translation>
+        <translation>Lancer</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation type="unfinished"></translation>
+        <translation>Trans</translation>
     </message>
     <message>
         <source>DeathBlow</source>
-        <translation type="unfinished"></translation>
+        <translation>Coup Mortel</translation>
     </message>
     <message>
         <source>Manipulate</source>
-        <translation type="unfinished"></translation>
+        <translation>Manipuler</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation type="unfinished">mimer</translation>
+        <translation>Mimer</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation type="unfinished"></translation>
+        <translation>Talent de L&apos;ennemi</translation>
     </message>
     <message>
         <source>Master Command</source>
-        <translation type="unfinished"></translation>
+        <translation>Commande Maître</translation>
     </message>
     <message>
         <source>Fire</source>
-        <translation type="unfinished">Feu</translation>
+        <translation>Feu</translation>
     </message>
     <message>
         <source>Ice</source>
-        <translation type="unfinished">Glace</translation>
+        <translation>Glace</translation>
     </message>
     <message>
         <source>Earth</source>
-        <translation type="unfinished">Terre</translation>
+        <translation>Terre</translation>
     </message>
     <message>
         <source>Lightning</source>
-        <translation type="unfinished">Foudre</translation>
+        <translation>Foudre</translation>
     </message>
     <message>
         <source>Restore</source>
-        <translation type="unfinished">Restore</translation>
+        <translation>Restaurer</translation>
     </message>
     <message>
         <source>Heal</source>
-        <translation type="unfinished">Guerir</translation>
+        <translation>Guérir</translation>
     </message>
     <message>
         <source>Revive</source>
-        <translation type="unfinished">Ranimer</translation>
+        <translation>Ranimer</translation>
     </message>
     <message>
         <source>Seal</source>
-        <translation type="unfinished">Sceller</translation>
+        <translation>Sceller</translation>
     </message>
     <message>
         <source>Mystify</source>
-        <translation type="unfinished">Mystifier</translation>
+        <translation>Mystifier</translation>
     </message>
     <message>
         <source>Transform</source>
-        <translation type="unfinished">Transformation</translation>
+        <translation>Transformation</translation>
     </message>
     <message>
         <source>Exit</source>
-        <translation type="unfinished">Quitter</translation>
+        <translation>Quitter</translation>
     </message>
     <message>
         <source>Poison</source>
-        <translation type="unfinished">Poison</translation>
+        <translation>Poison</translation>
     </message>
     <message>
         <source>Demi</source>
-        <translation type="unfinished">Gravité</translation>
+        <translation>Gravité</translation>
     </message>
     <message>
         <source>Barrier</source>
-        <translation type="unfinished">Barrière</translation>
+        <translation>Barrière</translation>
     </message>
     <message>
         <source>Comet</source>
-        <translation type="unfinished">Comète</translation>
+        <translation>Comète</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation type="unfinished">Temps</translation>
+        <translation>Temps</translation>
     </message>
     <message>
         <source>Destruct</source>
-        <translation type="unfinished">Destruction</translation>
+        <translation>Destruction</translation>
     </message>
     <message>
         <source>Contain</source>
-        <translation type="unfinished">Contenir</translation>
+        <translation>Contenir</translation>
     </message>
     <message>
         <source>FullCure</source>
-        <translation type="unfinished">Guerison Max</translation>
+        <translation>Guérison Max</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation type="unfinished">Bouclier</translation>
+        <translation>Bouclier</translation>
     </message>
     <message>
         <source>Ultima</source>
-        <translation type="unfinished">Ultima</translation>
+        <translation>Ultima</translation>
     </message>
     <message>
         <source>Master Magic</source>
-        <translation type="unfinished"></translation>
+        <translation>Magie Maîtresse</translation>
     </message>
     <message>
         <source>Choco/Mog</source>
-        <translation type="unfinished">Choco/Mog</translation>
+        <translation>Choco/Mog</translation>
     </message>
     <message>
         <source>Shiva</source>
-        <translation type="unfinished">Shiva</translation>
+        <translation>Shiva</translation>
     </message>
     <message>
         <source>Ifrit</source>
-        <translation type="unfinished">Ifrit</translation>
+        <translation>Ifrit</translation>
     </message>
     <message>
         <source>Ramuh</source>
-        <translation type="unfinished">Ramuh</translation>
+        <translation>Ramuh</translation>
     </message>
     <message>
         <source>Titan</source>
-        <translation type="unfinished">Titan</translation>
+        <translation>Titan</translation>
     </message>
     <message>
         <source>Odin</source>
-        <translation type="unfinished">Odin</translation>
+        <translation>Odin</translation>
     </message>
     <message>
         <source>Leviathan</source>
-        <translation type="unfinished">Leviathan</translation>
+        <translation>Léviathan</translation>
     </message>
     <message>
         <source>Bahamut</source>
-        <translation type="unfinished">Bahamut</translation>
+        <translation>Bahamut</translation>
     </message>
     <message>
         <source>Kujata</source>
-        <translation type="unfinished">Kjata</translation>
+        <translation>Kjata</translation>
     </message>
     <message>
         <source>Alexander</source>
-        <translation type="unfinished">Alexandre</translation>
+        <translation>Alexandre</translation>
     </message>
     <message>
         <source>Phoenix</source>
-        <translation type="unfinished">Phenix</translation>
+        <translation>Phénix</translation>
     </message>
     <message>
         <source>Neo Bahamut</source>
-        <translation type="unfinished">Neo Bahamut</translation>
+        <translation>Néo Bahamut</translation>
     </message>
     <message>
         <source>Hades</source>
-        <translation type="unfinished">Hades</translation>
+        <translation>Hadès</translation>
     </message>
     <message>
         <source>Typhoon</source>
-        <translation type="unfinished">Typhoon</translation>
+        <translation>Typoon</translation>
     </message>
     <message>
         <source>Bahamut ZERO</source>
-        <translation type="unfinished">Bahamut ZERO</translation>
+        <translation>Bahamut ZÉRO</translation>
     </message>
     <message>
         <source>Knights of Round</source>
-        <translation type="unfinished">Chevalier de la Rounde</translation>
+        <translation>Chevaliers de la Table Ronde</translation>
     </message>
     <message>
         <source>Master Summon</source>
-        <translation type="unfinished"></translation>
+        <translation>Invocation Maître</translation>
     </message>
 </context>
 <context>
     <name>Materia_Skills</name>
     <message>
         <source>MP Plus +10%</source>
-        <translation type="unfinished">Super MP +10%</translation>
+        <translation>Super MP +10%</translation>
     </message>
     <message>
         <source>MP Plus +20%</source>
-        <translation type="unfinished">Super MP +20%</translation>
+        <translation>Super MP +20%</translation>
     </message>
     <message>
         <source>MP Plus +30%</source>
-        <translation type="unfinished">Super MP +30%</translation>
+        <translation>Super MP +30%</translation>
     </message>
     <message>
         <source>MP Plus +40%</source>
-        <translation type="unfinished">Super MP +40%</translation>
+        <translation>Super MP +40%</translation>
     </message>
     <message>
         <source>MP Plus +50%</source>
-        <translation type="unfinished">Super MP +50%</translation>
+        <translation>Super MP +50%</translation>
     </message>
     <message>
         <source>HP Plus +10%</source>
-        <translation type="unfinished">Super HP +10%</translation>
+        <translation>Super HP +10%</translation>
     </message>
     <message>
         <source>HP Plus +20%</source>
-        <translation type="unfinished">Super HP +20%</translation>
+        <translation>Super HP +20%</translation>
     </message>
     <message>
         <source>HP Plus +30%</source>
-        <translation type="unfinished">Super HP +30%</translation>
+        <translation>Super HP +30%</translation>
     </message>
     <message>
         <source>HP Plus +40%</source>
-        <translation type="unfinished">Super HP +40%</translation>
+        <translation>Super HP +40%</translation>
     </message>
     <message>
         <source>HP Plus +50%</source>
-        <translation type="unfinished">Super HP +50%</translation>
+        <translation>Super HP +50%</translation>
     </message>
     <message>
         <source>Speed Plus +10%</source>
-        <translation type="unfinished">Super Vitesse +10%</translation>
+        <translation>Super Vitesse +10%</translation>
     </message>
     <message>
         <source>Speed Plus +20%</source>
-        <translation type="unfinished">Super Vitesse +20%</translation>
+        <translation>Super Vitesse +20%</translation>
     </message>
     <message>
         <source>Speed Plus +30%</source>
-        <translation type="unfinished">Super Vitesse +30%</translation>
+        <translation>Super Vitesse +30%</translation>
     </message>
     <message>
         <source>Speed Plus +40%</source>
-        <translation type="unfinished">Super Vitesse +40%</translation>
+        <translation>Super Vitesse +40%</translation>
     </message>
     <message>
         <source>Speed Plus +50%</source>
-        <translation type="unfinished">Super Vitesse +50%</translation>
+        <translation>Super Vitesse +50%</translation>
     </message>
     <message>
         <source>Magic Plus +10%</source>
-        <translation type="unfinished">Super Magie +10%</translation>
+        <translation>Super Magie +10%</translation>
     </message>
     <message>
         <source>Magic Plus +20%</source>
-        <translation type="unfinished">Super Magie +20%</translation>
+        <translation>Super Magie +20%</translation>
     </message>
     <message>
         <source>Magic Plus +30%</source>
-        <translation type="unfinished">Super Magie +30%</translation>
+        <translation>Super Magie +30%</translation>
     </message>
     <message>
         <source>Magic Plus +40%</source>
-        <translation type="unfinished">Super Magie +40%</translation>
+        <translation>Super Magie +40%</translation>
     </message>
     <message>
         <source>Magic Plus +50%</source>
-        <translation type="unfinished">Super Magie +50%</translation>
+        <translation>Super Magie +50%</translation>
     </message>
     <message>
         <source>Luck Plus +10%</source>
-        <translation type="unfinished">Super Chance +10%</translation>
+        <translation>Super Chance +10%</translation>
     </message>
     <message>
         <source>Luck Plus +20%</source>
-        <translation type="unfinished">Super Chance +20%</translation>
+        <translation>Super Chance +20%</translation>
     </message>
     <message>
         <source>Luck Plus +30%</source>
-        <translation type="unfinished">Super Chance+30</translation>
+        <translation>Super Chance+30</translation>
     </message>
     <message>
         <source>Luck Plus +40%</source>
-        <translation type="unfinished">Super Chance +40%</translation>
+        <translation>Super Chance +40%</translation>
     </message>
     <message>
         <source>Luck Plus +50%</source>
-        <translation type="unfinished">Super Chance +50%</translation>
+        <translation>Super Chance +50%</translation>
     </message>
     <message>
         <source>Exp Plus +50%</source>
-        <translation type="unfinished">Super Exp +50%</translation>
+        <translation>Super Exp +50%</translation>
     </message>
     <message>
         <source>Exp Plus +100%</source>
-        <translation type="unfinished">Super Exp +100%</translation>
+        <translation>Super Exp +100%</translation>
     </message>
     <message>
         <source>Mastered</source>
-        <translation type="unfinished">Masterisé</translation>
+        <translation>Masterisé</translation>
     </message>
     <message>
         <source>Gil Plus +50%</source>
-        <translation type="unfinished">Super Gils +50%</translation>
+        <translation>Super Gils +50%</translation>
     </message>
     <message>
         <source>Gil Plus +100%</source>
-        <translation type="unfinished">Super Gils +100%</translation>
+        <translation>Super Gils +100%</translation>
     </message>
     <message>
         <source>Encounter Rate -50%</source>
-        <translation type="unfinished">Rencontre Taux -50%</translation>
+        <translation>Rencontre Taux -50%</translation>
     </message>
     <message>
         <source>Encounter Rate -75%</source>
-        <translation type="unfinished">Rencontre Taux -75%</translation>
+        <translation>Rencontre Taux -75%</translation>
     </message>
     <message>
         <source>Encounter Rate +50%</source>
-        <translation type="unfinished">Rencontre Taux +50%</translation>
+        <translation>Rencontre Taux +50%</translation>
     </message>
     <message>
         <source>Encounter Rate +100%</source>
-        <translation type="unfinished">Rencontre Taux +100%</translation>
+        <translation>Rencontre Taux +100%</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
-        <translation type="unfinished">Appat Chocobo</translation>
+        <translation>Appat Chocobo</translation>
     </message>
     <message>
         <source>Chocobo Lure +50%</source>
-        <translation type="unfinished">Appat Chocobo +50%</translation>
+        <translation>Appat Chocobo +50%</translation>
     </message>
     <message>
         <source>Chocobo Lure +100%</source>
-        <translation type="unfinished">Appat Chocobo +100%</translation>
+        <translation>Appat Chocobo +100%</translation>
     </message>
     <message>
         <source>Chocobo Lure +200%</source>
-        <translation type="unfinished">Appat Chocobo +200%</translation>
+        <translation>Appat Chocobo +200%</translation>
     </message>
     <message>
         <source>Pre-emptive +6%</source>
-        <translation type="unfinished">Prevention +6%</translation>
+        <translation>Prevention +6%</translation>
     </message>
     <message>
         <source>Pre-emptive +12%</source>
-        <translation type="unfinished">Prevention +12%</translation>
+        <translation>Prevention +12%</translation>
     </message>
     <message>
         <source>Pre-emptive +24%</source>
-        <translation type="unfinished">Prevention +24%</translation>
+        <translation>Prevention +24%</translation>
     </message>
     <message>
         <source>Pre-emptive +36%</source>
-        <translation type="unfinished">Prevention +36%</translation>
+        <translation>Prevention +36%</translation>
     </message>
     <message>
         <source>Pre-emptive +48%</source>
-        <translation type="unfinished">Prevention +48%</translation>
+        <translation>Prevention +48%</translation>
     </message>
     <message>
         <source>Long Range</source>
-        <translation type="unfinished">Longue Portée</translation>
+        <translation>Longue Portée</translation>
     </message>
     <message>
         <source>Mega-all x1</source>
-        <translation type="unfinished">Mega Tout x1</translation>
+        <translation>Mega Tout x1</translation>
     </message>
     <message>
         <source>Mega-all x2</source>
-        <translation type="unfinished">Mega Tout x2</translation>
+        <translation>Mega Tout x2</translation>
     </message>
     <message>
         <source>Mega-all x3</source>
-        <translation type="unfinished">Mega Tout x3</translation>
+        <translation>Mega Tout x3</translation>
     </message>
     <message>
         <source>Mega-all x4</source>
-        <translation type="unfinished">Mega Tout x4</translation>
+        <translation>Mega Tout x4</translation>
     </message>
     <message>
         <source>Mega-all x5</source>
-        <translation type="unfinished">Mega Tout x5</translation>
+        <translation>Mega Tout x5</translation>
     </message>
     <message>
         <source>Counter Attack 20%</source>
-        <translation type="unfinished">Contre Attaque 20%</translation>
+        <translation>Contre Attaque 20%</translation>
     </message>
     <message>
         <source>Counter Attack 40%</source>
-        <translation type="unfinished">Contre Attaque 40%</translation>
+        <translation>Contre Attaque 40%</translation>
     </message>
     <message>
         <source>Counter Attack 60%</source>
-        <translation type="unfinished">Contre Attaque 60%</translation>
+        <translation>Contre Attaque 60%</translation>
     </message>
     <message>
         <source>Counter Attack 80%</source>
-        <translation type="unfinished">Contre Attaque 80%</translation>
+        <translation>Contre Attaque 80%</translation>
     </message>
     <message>
         <source>Counter Attack 100%</source>
-        <translation type="unfinished">Contre Attaque 100%</translation>
+        <translation>Contre Attaque 100%</translation>
     </message>
     <message>
         <source>Slash-All</source>
-        <translation type="unfinished"></translation>
+        <translation>FurieMax</translation>
     </message>
     <message>
         <source>Flash</source>
-        <translation type="unfinished"></translation>
+        <translation>Eclair</translation>
     </message>
     <message>
         <source>2x-Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>2x</translation>
     </message>
     <message>
         <source>4x-Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>4x</translation>
     </message>
     <message>
         <source>Cover +20%</source>
-        <translation type="unfinished">Converture +20%</translation>
+        <translation>Converture +20%</translation>
     </message>
     <message>
         <source>Cover +40%</source>
-        <translation type="unfinished">Converture +40%</translation>
+        <translation>Converture +40%</translation>
     </message>
     <message>
         <source>Cover +60%</source>
-        <translation type="unfinished">Converture +60%</translation>
+        <translation>Converture +60%</translation>
     </message>
     <message>
         <source>Cover +80%</source>
-        <translation type="unfinished">Converture +80%</translation>
+        <translation>Converture +80%</translation>
     </message>
     <message>
         <source>Cover +100%</source>
-        <translation type="unfinished">Converture +100%</translation>
+        <translation>Converture +100%</translation>
     </message>
     <message>
         <source>Underwater</source>
-        <translation type="unfinished">Sous marin</translation>
+        <translation>Sous marin</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation type="unfinished">HP &lt;-&gt; MP</translation>
+        <translation>HP &lt;-&gt; MP</translation>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation type="unfinished">Magie W</translation>
+        <translation>Magie W</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoq-W</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation type="unfinished"></translation>
+        <translation>Elém-W</translation>
     </message>
     <message>
         <source>All x1</source>
-        <translation type="unfinished">Tout x1</translation>
+        <translation>Tout x1</translation>
     </message>
     <message>
         <source>All x2</source>
-        <translation type="unfinished">Tout x2</translation>
+        <translation>Tout x2</translation>
     </message>
     <message>
         <source>All x3</source>
-        <translation type="unfinished">Tout x3</translation>
+        <translation>Tout x3</translation>
     </message>
     <message>
         <source>All x4</source>
-        <translation type="unfinished">Tout x4</translation>
+        <translation>Tout x4</translation>
     </message>
     <message>
         <source>All x5</source>
-        <translation type="unfinished">Tout x5</translation>
-    </message>
-    <message>
-        <source>Counter Rate %20</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Counter Rate %40</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Counter Rate %60</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Counter Rate %80</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Counter Rate %100</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate %30</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate %40</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate %60</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate %80</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate %100</source>
-        <translation type="unfinished"></translation>
+        <translation>Tout x5</translation>
     </message>
     <message>
         <source>MP Turbo 10%</source>
-        <translation type="unfinished">Turbo MP 10%</translation>
+        <translation>Turbo MP 10%</translation>
     </message>
     <message>
         <source>Mp Turbo 20%</source>
-        <translation type="unfinished">Turbo MP 20%</translation>
+        <translation>Turbo MP 20%</translation>
     </message>
     <message>
         <source>Mp Turbo 30%</source>
-        <translation type="unfinished">Turbo MP 30%</translation>
+        <translation>Turbo MP 30%</translation>
     </message>
     <message>
         <source>Mp Turbo 40%</source>
-        <translation type="unfinished">Turbo MP 40%</translation>
+        <translation>Turbo MP 40%</translation>
     </message>
     <message>
         <source>Mp Turbo 50%</source>
-        <translation type="unfinished">Turbo MP 50%</translation>
+        <translation>Turbo MP 50%</translation>
     </message>
     <message>
         <source>MP Absorb</source>
-        <translation type="unfinished">Absorption MP</translation>
+        <translation>Absorption MP</translation>
     </message>
     <message>
         <source>HP Absorb</source>
-        <translation type="unfinished">Absorption HP</translation>
+        <translation>Absorption HP</translation>
     </message>
     <message>
         <source>Elemental 50%</source>
-        <translation type="unfinished">Elément de Base 50%</translation>
+        <translation>Elément de Base 50%</translation>
     </message>
     <message>
         <source>Elemental 100%</source>
-        <translation type="unfinished">Elément de Base 100%</translation>
+        <translation>Elément de Base 100%</translation>
     </message>
     <message>
         <source>Elemental 200%</source>
-        <translation type="unfinished">Elément de Base 200%</translation>
+        <translation>Elément de Base 200%</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation type="unfinished">Effet Suppl</translation>
+        <translation>Effet Suppl</translation>
     </message>
     <message>
         <source>Sneak Attack 20%</source>
-        <translation type="unfinished">Attaque Furtive 20%</translation>
+        <translation>Attaque Furtive 20%</translation>
     </message>
     <message>
         <source>Sneak Attack 35%</source>
-        <translation type="unfinished">Attaque Furtive 35%</translation>
+        <translation>Attaque Furtive 35%</translation>
     </message>
     <message>
         <source>Sneak Attack 50%</source>
-        <translation type="unfinished">Attaque Furtive 50%</translation>
+        <translation>Attaque Furtive 50%</translation>
     </message>
     <message>
         <source>Sneak Attack 65%</source>
-        <translation type="unfinished">Attaque Furtive 65%</translation>
+        <translation>Attaque Furtive 65%</translation>
     </message>
     <message>
         <source>Sneak Attack 80%</source>
-        <translation type="unfinished">Attaque Furtive 80%</translation>
+        <translation>Attaque Furtive 80%</translation>
     </message>
     <message>
         <source>Final Attack x1</source>
-        <translation type="unfinished">Attack Fanale x1</translation>
+        <translation>Attack Fanale x1</translation>
     </message>
     <message>
         <source>Final Attack x2</source>
-        <translation type="unfinished">Attack Fanale x2</translation>
+        <translation>Attack Fanale x2</translation>
     </message>
     <message>
         <source>Final Attack x3</source>
-        <translation type="unfinished">Attack Fanale x3</translation>
+        <translation>Attack Fanale x3</translation>
     </message>
     <message>
         <source>Final Attack x4</source>
-        <translation type="unfinished">Attack Fanale x4</translation>
+        <translation>Attack Fanale x4</translation>
     </message>
     <message>
         <source>Final Attack x5</source>
-        <translation type="unfinished">Attack Fanale x5</translation>
+        <translation>Attack Fanale x5</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation type="unfinished">Coupure Suppl</translation>
+        <translation>Coupure Suppl</translation>
     </message>
     <message>
         <source>Steal-As-Well</source>
-        <translation type="unfinished"></translation>
+        <translation>Vol Simultané</translation>
     </message>
     <message>
         <source>Quadra Magic x1</source>
-        <translation type="unfinished">Quadruple Magie x1</translation>
+        <translation>Quadruple Magie x1</translation>
     </message>
     <message>
         <source>Quadra Magic x2</source>
-        <translation type="unfinished">Quadruple Magie x2</translation>
+        <translation>Quadruple Magie x2</translation>
     </message>
     <message>
         <source>Quadra Magic x3</source>
-        <translation type="unfinished">Quadruple Magie x3</translation>
+        <translation>Quadruple Magie x3</translation>
     </message>
     <message>
         <source>Quadra Magic x4</source>
-        <translation type="unfinished">Quadruple Magie x4</translation>
+        <translation>Quadruple Magie x4</translation>
     </message>
     <message>
         <source>Quadra Magic x5</source>
-        <translation type="unfinished">Quadruple Magie x5</translation>
+        <translation>Quadruple Magie x5</translation>
     </message>
     <message>
         <source>Steal</source>
-        <translation type="unfinished"></translation>
+        <translation>Voler</translation>
     </message>
     <message>
         <source>Mug</source>
-        <translation type="unfinished"></translation>
+        <translation>Assaut</translation>
     </message>
     <message>
         <source>Sence</source>
-        <translation type="unfinished"></translation>
+        <translation>Sentir</translation>
     </message>
     <message>
         <source>Throw</source>
-        <translation type="unfinished"></translation>
+        <translation>Lancer</translation>
     </message>
     <message>
         <source>Coin</source>
-        <translation type="unfinished"></translation>
+        <translation>Argent</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation type="unfinished"></translation>
+        <translation>Trans</translation>
     </message>
     <message>
         <source>DeathBlow</source>
-        <translation type="unfinished"></translation>
+        <translation>CoupM</translation>
     </message>
     <message>
         <source>Manipulate</source>
-        <translation type="unfinished"></translation>
+        <translation>Manip</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation type="unfinished">mimer</translation>
+        <translation>Mimer</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation type="unfinished"></translation>
+        <translation>TalentE</translation>
     </message>
     <message>
         <source>Master Command</source>
-        <translation type="unfinished"></translation>
+        <translation>Commande Maître</translation>
     </message>
     <message>
         <source>Fire (4mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Feu (4mp)</translation>
     </message>
     <message>
         <source>Fire2 (22mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Feu2 (22mp)</translation>
     </message>
     <message>
         <source>Fire3 (52mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Feu3 (52mp)</translation>
     </message>
     <message>
         <source>Ice (4mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Glace (4mp)</translation>
     </message>
     <message>
         <source>Ice2 (22mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Glace2 (22mp)</translation>
     </message>
     <message>
         <source>Ice3 (52mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Glace3 (52mp)</translation>
     </message>
     <message>
         <source>Quake (6mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Trembl (6mp)</translation>
     </message>
     <message>
         <source>Quake2 (28mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Trembl2 (28mp)</translation>
     </message>
     <message>
         <source>Quake3 (68mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Trembl3 (68mp)</translation>
     </message>
     <message>
         <source>Bolt (4mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Eclair (4mp)</translation>
     </message>
     <message>
         <source>Bolt2 (22mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Eclair2 (22mp)</translation>
     </message>
     <message>
         <source>Cure (5mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Guéri (5mp)</translation>
     </message>
     <message>
         <source>Cure2 (24mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Guéri2 (24mp)</translation>
     </message>
     <message>
         <source>Cure3 (64mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Guéri3 (64mp)</translation>
     </message>
     <message>
         <source>Poisona (3mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Poisona (3mp)</translation>
     </message>
     <message>
         <source>Esuna (15mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Esuna (15mp)</translation>
     </message>
     <message>
         <source>Resist (120mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Résist. (120mp)</translation>
     </message>
     <message>
         <source>Life (34mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vie (34mp)</translation>
     </message>
     <message>
         <source>Life2 (100mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Vie2 (100mp)</translation>
     </message>
     <message>
         <source>Sleepel (8mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Slipel (8mp)</translation>
     </message>
     <message>
         <source>Silence (24mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Silence (24mp)</translation>
     </message>
     <message>
         <source>Confuse (18mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Confus (18mp)</translation>
     </message>
     <message>
         <source>Mini (10mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mini (10mp)</translation>
     </message>
     <message>
         <source>Toad (14mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Crapaud (14mp)</translation>
     </message>
     <message>
         <source>Exit (16mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Escapade (16mp)</translation>
     </message>
     <message>
         <source>Remove (99mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Retrait (99mp)</translation>
     </message>
     <message>
         <source>Bio (8mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bio (8mp)</translation>
     </message>
     <message>
         <source>Bio2 (36mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bio2 (36mp)</translation>
     </message>
     <message>
         <source>Bio3 (80mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bio3 (80mp)</translation>
     </message>
     <message>
         <source>Demi (14mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Demi (14mp)</translation>
     </message>
     <message>
         <source>Demi2 (33mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Demi2 (33mp)</translation>
     </message>
     <message>
         <source>Demi3 (48mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Demi3 (48mp)</translation>
     </message>
     <message>
         <source>Barrier (16mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Barrière (16mp)</translation>
     </message>
     <message>
         <source>Magic Barrier (24mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>BarrM (24mp)</translation>
     </message>
     <message>
         <source>Reflect (30mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Reflet (30mp)</translation>
     </message>
     <message>
         <source>Wall (58mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mur (58mp)</translation>
     </message>
     <message>
         <source>Comet (70mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Comète (70mp)</translation>
     </message>
     <message>
         <source>Comet2 (110mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Comète2 (110mp)</translation>
     </message>
     <message>
         <source>Haste (18mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Hâte (18mp)</translation>
     </message>
     <message>
         <source>Slow (20mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Lent (20mp)</translation>
     </message>
     <message>
         <source>Stop (34mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Stop (34mp)</translation>
     </message>
     <message>
         <source>DeBarrier (12mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>AntiBarr (12mp)</translation>
     </message>
     <message>
         <source>DeSpell (20mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>AntiSort (20mp)</translation>
     </message>
     <message>
         <source>Death (30mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mort (30mp)</translation>
     </message>
     <message>
         <source>Freeze (82mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Gel (82mp)</translation>
     </message>
     <message>
         <source>Break (86mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Rupture (86mp)</translation>
     </message>
     <message>
         <source>Tornado (90mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tornade (90mp)</translation>
     </message>
     <message>
         <source>Full Cure (99mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>GuériMax (99mp)</translation>
     </message>
     <message>
         <source>Shield (180mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Bouclier (180mp)</translation>
     </message>
     <message>
         <source>Ultima (130mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ultima (130mp)</translation>
     </message>
     <message>
         <source>Master Magic</source>
-        <translation type="unfinished"></translation>
+        <translation>Magie Maîtresse</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x1 (14mp)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Invocation Choco/Mog (14mp)</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x2 (14mp)</source>
@@ -5806,23 +5766,23 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Master Summon</source>
-        <translation type="unfinished"></translation>
+        <translation>Invocation Maître</translation>
     </message>
     <message>
         <source>Bolt3 (52mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Eclair3 (52mp)</translation>
     </message>
     <message>
         <source>Regen (30mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Regen (30mp)</translation>
     </message>
     <message>
         <source>Flare (100mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Eclat (100mp)</translation>
     </message>
     <message>
         <source>Berserk (28mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Folie (28mp)</translation>
     </message>
     <message>
         <source>Summon Shiva x1 (32mp)</source>
@@ -5843,6 +5803,46 @@ is not a FF7 SaveGame.</source>
     <message>
         <source>Summon Shiva x5 (32mp)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Counter Rate 20%</source>
+        <translation>Contre 20%</translation>
+    </message>
+    <message>
+        <source>Counter Rate 40%</source>
+        <translation>Contre 40%</translation>
+    </message>
+    <message>
+        <source>Counter Rate 60%</source>
+        <translation>Contre 60%</translation>
+    </message>
+    <message>
+        <source>Counter Rate 80%</source>
+        <translation>Contre 80%</translation>
+    </message>
+    <message>
+        <source>Counter Rate 100%</source>
+        <translation>Contre 100%</translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate 30%</source>
+        <translation>Magie Contre 30%</translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate 40%</source>
+        <translation>Magie Contre 40%</translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate 60%</source>
+        <translation>Magie Contre 60%</translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate 80%</source>
+        <translation>Magie Contre 80%</translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate 100%</source>
+        <translation>Magie Contre 100%</translation>
     </message>
 </context>
 <context>
@@ -5869,55 +5869,51 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Lck:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Chc:+1</translation>
     </message>
     <message>
         <source>Lck:-1</source>
-        <translation type="unfinished"></translation>
+        <translation>Chc:-1</translation>
     </message>
     <message>
         <source>Dex:+2</source>
-        <translation type="unfinished"></translation>
+        <translation>Dex:+2</translation>
     </message>
     <message>
         <source>Vit:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Dfs:+1</translation>
     </message>
     <message>
         <source>HP:-2% MP:+2% Str:-1 Mag:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>HP: -2% MP+2% FRC:-1 MAG +1</translation>
     </message>
     <message>
         <source>HP:-5% MP:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>HP:-5% MP:+5% Str:-2 Vit -1 Mag:+2 Spi:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>HP:-5% MP:+5% Frc:-2 Dfs:-1 Mag:+2 Esp:+1</translation>
     </message>
     <message>
         <source>HP:-10% MP:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
-        <translation type="unfinished"></translation>
+        <translation>HP:-10% MP:+10% Frc:-4 Dfs:-2 Mag:+4 Esp:+2</translation>
     </message>
     <message>
         <source>HP:-2% MP:+2% Mag:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>HP:-2% MP:+2% Mag:+1</translation>
     </message>
     <message>
         <source>HP:-5% MP:+5% Mag:+1 Spi:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>HP:-5% MP:+5% Mag:+1 Esp:+1</translation>
     </message>
     <message>
         <source>HP:-10% MP:+10% Mag:+2 Spi:+2</source>
-        <translation type="unfinished"></translation>
+        <translation>HP:-10% MP:+10% Mag:+2 Esp:+2</translation>
     </message>
     <message>
         <source>HP:-10% MP:+15% Mag:+4 Spi:+4</source>
-        <translation type="unfinished"></translation>
+        <translation>HP:-10% MP:+15% Mag:+4 Esp:+4</translation>
     </message>
     <message>
         <source>HP:-10% MP:+20% Mag:+8 Spi:+8</source>
-        <translation type="unfinished"></translation>
+        <translation>HP:-10% MP:+20% Mag:+8 Esp:+8</translation>
     </message>
 </context>
 <context>
@@ -5988,7 +5984,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>&amp;Ok</source>
-        <translation type="unfinished">&amp;Ok</translation>
+        <translation>&amp;Ok</translation>
     </message>
     <message>
         <source>Main Window Background Color</source>
@@ -6198,11 +6194,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Pc Header Mask Aware</source>
-        <translation type="unfinished">Réparé: Masque-tête Pc Aware</translation>
+        <translation>Réparé: Masque-tête Pc Aware</translation>
     </message>
     <message>
         <source>Fixed: Saves Will Display Slots Correctly</source>
-        <translation type="unfinished">Réparé: Sauvegarde Will Afficher Slots correctement</translation>
+        <translation>Réparé: Sauvegarde Will Afficher Slots correctement</translation>
     </message>
     <message>
         <source>License</source>
@@ -6262,7 +6258,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Icons Used In this Program</source>
-        <translation type="unfinished">Icônes utilisées dans ce Programme</translation>
+        <translation>Icônes utilisées dans ce Programme</translation>
     </message>
     <message>
         <source>Buff Icons (and one or two more) by </source>
@@ -6278,39 +6274,39 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>FF7 Program Icon</source>
-        <translation type="unfinished">FF7 icône du programme</translation>
+        <translation>FF7 icône du programme</translation>
     </message>
     <message>
         <source>Thanks To</source>
-        <translation type="unfinished">Merci Pour</translation>
+        <translation>Merci Pour</translation>
     </message>
     <message>
         <source>A Big Thank You  To:</source>
-        <translation type="unfinished">Un grand merci à:</translation>
+        <translation>Un grand merci à:</translation>
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct,item/materia lists  and string conversion function. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation type="unfinished">Merci d &apos;avoir, en fournissant la source de Jenova. Ce programme utilise des versions modifiées de savefile Jenova struct, les listes d&apos;articles materia / et la fonction de conversion de chaîne. L&apos;accès au code source, il a sauvé beaucoup de temps durant les premiers stades de développement.</translation>
+        <translation>Merci d &apos;avoir, en fournissant la source de Jenova. Ce programme utilise des versions modifiées de savefile Jenova struct, les listes d&apos;articles materia / et la fonction de conversion de chaîne. L&apos;accès au code source, il a sauvé beaucoup de temps durant les premiers stades de développement.</translation>
     </message>
     <message>
         <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
-        <translation type="unfinished">Merci d &apos;avoir, toute l&apos;aide Avec Chocobo Noir. Traduire, les tests de bogues, w aider / data trouver dans le savemap. essais thème, etc, il fait beaucoup pour aider.</translation>
+        <translation>Merci d &apos;avoir, toute l&apos;aide Avec Chocobo Noir. Traduire, les tests de bogues, w aider / data trouver dans le savemap. essais thème, etc, il fait beaucoup pour aider.</translation>
     </message>
     <message>
         <source>Thank You For, the old checksum program</source>
-        <translation type="unfinished">Merci d &apos;avoir, le programme de contrôle vieux</translation>
+        <translation>Merci d &apos;avoir, le programme de contrôle vieux</translation>
     </message>
     <message>
         <source>Thank You For, Helping me see the light of stupid errors. </source>
-        <translation type="unfinished">Merci d &apos;avoir, à me rendre la lumière des erreurs stupides.</translation>
+        <translation>Merci d &apos;avoir, à me rendre la lumière des erreurs stupides.</translation>
     </message>
     <message>
         <source>Thank You For, Providing a Better understanding of Qt&apos;s Functions When the help files failed.</source>
-        <translation type="unfinished">Merci d &apos;avoir, une meilleure compréhension des fonctions de Qt Lorsque les fichiers d&apos;aide ont échoué.</translation>
+        <translation>Merci d &apos;avoir, une meilleure compréhension des fonctions de Qt Lorsque les fichiers d&apos;aide ont échoué.</translation>
     </message>
     <message>
         <source>Cause She&apos;s Just Awesome!</source>
-        <translation type="unfinished">Parce qu&apos;elle est juste impressionnant!</translation>
+        <translation>Parce qu&apos;elle est juste impressionnant!</translation>
     </message>
     <message>
         <source>Early Win32 Tester</source>
