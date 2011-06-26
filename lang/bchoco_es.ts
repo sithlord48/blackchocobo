@@ -5112,46 +5112,6 @@ no es una partida guardada de FF7</translation>
         <translation>Todo x5</translation>
     </message>
     <message>
-        <source>Counter Rate %20</source>
-        <translation>Tasa de contraataque %20</translation>
-    </message>
-    <message>
-        <source>Counter Rate %40</source>
-        <translation>Tasa de contraataque %40</translation>
-    </message>
-    <message>
-        <source>Counter Rate %60</source>
-        <translation>Tasa de contraataque %60</translation>
-    </message>
-    <message>
-        <source>Counter Rate %80</source>
-        <translation>Tasa de contraataque %80</translation>
-    </message>
-    <message>
-        <source>Counter Rate %100</source>
-        <translation>Tasa de contraataque %100</translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate %30</source>
-        <translation>Tasa de contraataque mágico %30</translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate %40</source>
-        <translation>Tasa de contraataque mágico %40</translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate %60</source>
-        <translation>Tasa de contraataque mágico %60</translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate %80</source>
-        <translation>Tasa de contraataque mágico %80</translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate %100</source>
-        <translation>Tasa de contraataque mágico %100</translation>
-    </message>
-    <message>
         <source>MP Turbo 10%</source>
         <translation>Turbo PM 10%</translation>
     </message>
@@ -5851,6 +5811,46 @@ no es una partida guardada de FF7</translation>
         <source>Summon Shiva x5 (32mp)</source>
         <translation>Invoca Shiva x5 (32pm)</translation>
     </message>
+    <message>
+        <source>Counter Rate 20%</source>
+        <translation>Tasa de contraataque 20%</translation>
+    </message>
+    <message>
+        <source>Counter Rate 40%</source>
+        <translation>Tasa de contraataque 40%</translation>
+    </message>
+    <message>
+        <source>Counter Rate 60%</source>
+        <translation>Tasa de contraataque 60%</translation>
+    </message>
+    <message>
+        <source>Counter Rate 80%</source>
+        <translation>Tasa de contraataque 80%</translation>
+    </message>
+    <message>
+        <source>Counter Rate 100%</source>
+        <translation>Tasa de contraataque 100%</translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate 30%</source>
+        <translation>Tasa de contraataque mágico 30%</translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate 40%</source>
+        <translation>Tasa de contraataque mágico 40%</translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate 60%</source>
+        <translation>Tasa de contraataque mágico 60%</translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate 80%</source>
+        <translation>Tasa de contraataque mágico 80%</translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate 100%</source>
+        <translation>Tasa de contraataque mágico 100%</translation>
+    </message>
 </context>
 <context>
     <name>Materia_Stats</name>
@@ -5896,10 +5896,6 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>HP:-5% MP:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation>PG:-5% PM:+5% Fue:-2 Vit:-1 Mag:+2 Esp:+1</translation>
-    </message>
-    <message>
-        <source>HP:-5% MP:+5% Str:-2 Vit -1 Mag:+2 Spi:+1</source>
         <translation>PG:-5% PM:+5% Fue:-2 Vit:-1 Mag:+2 Esp:+1</translation>
     </message>
     <message>

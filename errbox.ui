@@ -9,12 +9,12 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>371</width>
-    <height>206</height>
+    <width>314</width>
+    <height>188</height>
    </rect>
   </property>
   <property name="sizePolicy">
-   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
     <horstretch>0</horstretch>
     <verstretch>0</verstretch>
    </sizepolicy>
@@ -27,9 +27,9 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget{background-color: rgba(10,10,10,16);font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);}
+   <string notr="true">QWidget{background-color: rgba(10,10,10,16);font-color:rgb(255,255,255);}
 
-QWidget:disabled,QLabel:disabled{font: 9pt &quot;Ubuntu&quot;;color:rgb(74, 80, 73);background-color:rgba(48, 47, 47,128);}
+QWidget:disabled,QLabel:disabled{font-color:rgb(74, 80, 73);background-color:rgba(48, 47, 47,128);}
 
 QDialog{
 background-color:rgb(48,47,47);
@@ -127,7 +127,7 @@ QPushButton:enabled {
        <item>
         <widget class="QPushButton" name="btn_prev">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
