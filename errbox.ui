@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>314</width>
-    <height>188</height>
+    <width>312</width>
+    <height>186</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -27,9 +27,9 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget{background-color: rgba(10,10,10,16);font-color:rgb(255,255,255);}
+   <string notr="true">QWidget{background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);}
 
-QWidget:disabled,QLabel:disabled{font-color:rgb(74, 80, 73);background-color:rgba(48, 47, 47,128);}
+QWidget:disabled,QLabel:disabled{font:;color:rgb(74, 80, 73);background-color:rgba(48, 47, 47,128);}
 
 QDialog{
 background-color:rgb(48,47,47);
