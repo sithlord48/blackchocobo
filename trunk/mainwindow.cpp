@@ -34,6 +34,11 @@ QString filename;
 MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    if(!settings.value("font-size").toString().isEmpty()){QApplication::setFont(QFont(QApplication::font().family(),settings.value("font-size").toInt(),-1,false));}
+    if(!settings.value("font-family").toString().isEmpty()){QApplication::setFont(QFont(settings.value("font-family").toString(),QApplication::font().pointSize(),-1,false));}
+
+
     for (int i=0; i<256; i++)
     {
         for (int j=255; j>=0; j--)
@@ -2090,37 +2095,22 @@ ui->a_m_s7_frame->setFrameStyle(0);
 ui->a_m_s8_frame->setFrameStyle(0);
 switch(mslotsel)
 {
-case 0: ui->w_m_s1_frame->setFrameStyle(1);    break;
-
-case 1: ui->w_m_s2_frame->setFrameStyle(1);    break;
-
-case 2: ui->w_m_s3_frame->setFrameStyle(1);    break;
-
-case 3: ui->w_m_s4_frame->setFrameStyle(1);    break;
-
-case 4: ui->w_m_s5_frame->setFrameStyle(1);    break;
-
-case 5: ui->w_m_s6_frame->setFrameStyle(1);    break;
-
-case 6: ui->w_m_s7_frame->setFrameStyle(1);    break;
-
-case 7: ui->w_m_s8_frame->setFrameStyle(1);    break;
-
-case 8: ui->a_m_s1_frame->setFrameStyle(1);    break;
-
-case 9: ui->a_m_s2_frame->setFrameStyle(1);    break;
-
-case 10:ui->a_m_s3_frame->setFrameStyle(1);    break;
-
-case 11:ui->a_m_s4_frame->setFrameStyle(1);    break;
-
-case 12:ui->a_m_s5_frame->setFrameStyle(1);    break;
-
-case 13:ui->a_m_s6_frame->setFrameStyle(1);    break;
-
-case 14:ui->a_m_s7_frame->setFrameStyle(1);    break;
-
-case 15:ui->a_m_s8_frame->setFrameStyle(1);    break;
+    case 0: ui->w_m_s1_frame->setFrameStyle(1);    break;
+    case 1: ui->w_m_s2_frame->setFrameStyle(1);    break;
+    case 2: ui->w_m_s3_frame->setFrameStyle(1);    break;
+    case 3: ui->w_m_s4_frame->setFrameStyle(1);    break;
+    case 4: ui->w_m_s5_frame->setFrameStyle(1);    break;
+    case 5: ui->w_m_s6_frame->setFrameStyle(1);    break;
+    case 6: ui->w_m_s7_frame->setFrameStyle(1);    break;
+    case 7: ui->w_m_s8_frame->setFrameStyle(1);    break;
+    case 8: ui->a_m_s1_frame->setFrameStyle(1);    break;
+    case 9: ui->a_m_s2_frame->setFrameStyle(1);    break;
+    case 10:ui->a_m_s3_frame->setFrameStyle(1);    break;
+    case 11:ui->a_m_s4_frame->setFrameStyle(1);    break;
+    case 12:ui->a_m_s5_frame->setFrameStyle(1);    break;
+    case 13:ui->a_m_s6_frame->setFrameStyle(1);    break;
+    case 14:ui->a_m_s7_frame->setFrameStyle(1);    break;
+    case 15:ui->a_m_s8_frame->setFrameStyle(1);    break;
 }
 
 if(current_id == 0xFF) //if the slot is empty take some precautions
@@ -2310,8 +2300,8 @@ void MainWindow::materiaupdate(void)
     QTableWidgetItem *newItem;
     int j= ui->tbl_materia->currentRow();
     ui->tbl_materia->reset();
-    ui->tbl_materia->setColumnWidth(0,145);
-    ui->tbl_materia->setColumnWidth(1,64);
+    ui->tbl_materia->setColumnWidth(0,(ui->tbl_materia->width()-80));
+    ui->tbl_materia->setColumnWidth(1,60);
     ui->tbl_materia->setRowCount(200);
 
     for(int mat=0;mat<200;mat++)// partys materias
@@ -2533,7 +2523,7 @@ void MainWindow::itemupdate()
     QTableWidgetItem *newItem;
     int j= ui->tbl_itm->currentRow();
     ui->tbl_itm->reset(); // just incase
-    ui->tbl_itm->setColumnWidth(0,145);
+    ui->tbl_itm->setColumnWidth(0,ui->tbl_itm->width()-52);
     ui->tbl_itm->setColumnWidth(1,32);
     ui->tbl_itm->setRowCount(320);
     for (int i=0;i<320;i++) // set up items
@@ -2775,8 +2765,8 @@ void MainWindow::guirefresh(void)
 /*~~~~~Stolen Materia~~~~~~~*/
     QTableWidgetItem *newItem;
     ui->tbl_materia_2->reset();
-    ui->tbl_materia_2->setColumnWidth(0,145);
-    ui->tbl_materia_2->setColumnWidth(1,64);
+    ui->tbl_materia_2->setColumnWidth(0,ui->tbl_materia_2->width()-80);
+    ui->tbl_materia_2->setColumnWidth(1,60);
     ui->tbl_materia_2->setRowCount(48);
     for(int mat=0;mat<48;mat++) //materias stolen by yuffie
     {

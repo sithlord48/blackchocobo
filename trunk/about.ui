@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>379</width>
-    <height>406</height>
+    <width>377</width>
+    <height>404</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -463,6 +463,11 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>New: Basic Setting of World Locations In Debug</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New: Set Font For Program</string>
           </property>
          </item>
          <item>
@@ -1245,8 +1250,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>349</width>
-            <height>390</height>
+            <width>138</width>
+            <height>740</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">

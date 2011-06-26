@@ -65,6 +65,14 @@ private slots:
     void on_slide_c3_r_valueChanged(int value);
     void on_reset_default_save_location_clicked();
     void on_reset_char_stat_folder_clicked();
+    void on_combo_font_currentIndexChanged(QString );
+    void on_reset_font_clicked();
+    void on_btn_9pt_clicked(bool checked);
+    void on_btn_10pt_clicked(bool checked);
+    void on_btn_11pt_clicked(bool checked);
+    void on_btn_12pt_clicked(bool checked);
+    void on_btn_13pt_clicked(bool checked);
+    void on_btn_14pt_clicked(bool checked);
 };
 
 #endif // OPTIONS_H
