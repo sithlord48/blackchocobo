@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>377</width>
-    <height>404</height>
+    <width>375</width>
+    <height>402</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -635,7 +635,7 @@ p, li { white-space: pre-wrap; }
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>0</y>
+            <y>-176</y>
             <width>349</width>
             <height>392</height>
            </rect>
@@ -1047,7 +1047,7 @@ p, li { white-space: pre-wrap; }
                <item>
                 <widget class="QLabel" name="label_21">
                  <property name="text">
-                  <string notr="true">Myst6re + SL1982 </string>
+                  <string notr="true">Myst6re + SL1982 +Vgr </string>
                  </property>
                 </widget>
                </item>

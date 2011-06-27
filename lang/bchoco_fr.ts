@@ -77,7 +77,7 @@
     </message>
     <message>
         <source>Hero Drink</source>
-        <translation>Boisson des Héros</translation>
+        <translation>Boisson de héro</translation>
     </message>
     <message>
         <source>Vaccine</source>
@@ -101,7 +101,7 @@
     </message>
     <message>
         <source>Kiss of Death</source>
-        <translation>Baiser de la mort</translation>
+        <translation>Baiser de mort</translation>
     </message>
     <message>
         <source>Spider Web</source>
@@ -137,7 +137,7 @@
     </message>
     <message>
         <source>Ice Crystal</source>
-        <translation>Cristal de Galce</translation>
+        <translation>Cristal de Glace</translation>
     </message>
     <message>
         <source>Bolt Plume</source>
@@ -225,7 +225,7 @@
     </message>
     <message>
         <source>8 Inch Cannon</source>
-        <translation>Cannon 8 pouces</translation>
+        <translation>Canon 203 mm</translation>
     </message>
     <message>
         <source>Graviball</source>
@@ -241,11 +241,11 @@
     </message>
     <message>
         <source>Dazers</source>
-        <translation>Epine paralysie</translation>
+        <translation>Épine Paralysie</translation>
     </message>
     <message>
         <source>Dragon Fang</source>
-        <translation>Dent de dragon</translation>
+        <translation>Griffe de Dragon</translation>
     </message>
     <message>
         <source>Cauldron</source>
@@ -289,7 +289,7 @@
     </message>
     <message>
         <source>Power Source</source>
-        <translation>Source de Force</translation>
+        <translation>Source de Pouvoir</translation>
     </message>
     <message>
         <source>Guard Source</source>
@@ -365,7 +365,7 @@
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation>Grand Vangile</translation>
+        <translation>Grand Évangile</translation>
     </message>
     <message>
         <source>Cosmo Memory</source>
@@ -393,7 +393,7 @@
     </message>
     <message>
         <source>Masamune Blade</source>
-        <translation>Masamune Blade</translation>
+        <translation>Lame Masamune</translation>
     </message>
     <message>
         <source>Save Crystal</source>
@@ -425,7 +425,7 @@
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation>Ne pas utiliser</translation>
+        <translation>NE PAS UTILISER</translation>
     </message>
     <message>
         <source>Buster Sword</source>
@@ -617,7 +617,7 @@
     </message>
     <message>
         <source>Missing Score</source>
-        <translation>Manuscrit Manquant</translation>
+        <translation>Manuscrit Absent</translation>
     </message>
     <message>
         <source>Mythril Clip</source>
@@ -685,7 +685,7 @@
     </message>
     <message>
         <source>Full Metal Staff</source>
-        <translation>Baton Metalque</translation>
+        <translation>Baton Métalique</translation>
     </message>
     <message>
         <source>Striking Staff</source>
@@ -925,11 +925,11 @@
     </message>
     <message>
         <source>Supershot ST</source>
-        <translation>Supercoup ST</translation>
+        <translation>Outsider</translation>
     </message>
     <message>
         <source>Outsider</source>
-        <translation>Outsider</translation>
+        <translation>Supercoup ST</translation>
     </message>
     <message>
         <source>Death Penalty</source>
@@ -973,7 +973,7 @@
     </message>
     <message>
         <source>Crystal Bangle</source>
-        <translation>bijou Cristal</translation>
+        <translation>Bijou Cristal</translation>
     </message>
     <message>
         <source>Platinum Bangle</source>
@@ -1005,7 +1005,7 @@
     </message>
     <message>
         <source>Aegis Armlet</source>
-        <translation>Bracelet  Aegis</translation>
+        <translation>Bracelet Aegis</translation>
     </message>
     <message>
         <source>Fourth Bracelet</source>
@@ -1145,7 +1145,7 @@
     </message>
     <message>
         <source>Fire Ring</source>
-        <translation>Annaau Feu</translation>
+        <translation>Anneau Feu</translation>
     </message>
     <message>
         <source>Ice Ring</source>
@@ -1240,7 +1240,7 @@
     </message>
     <message>
         <source>Click On A Char To edit ===========&gt;</source>
-        <translation>Cliquez sur un perso pour l&apos;éditer =======&gt;</translation>
+        <translation>Cliquez sur un perso pour l&apos;éditer =====&gt;</translation>
     </message>
     <message>
         <source>Stats Tab</source>
@@ -1313,6 +1313,10 @@
     <message>
         <source>Sadness</source>
         <translation>Triste</translation>
+    </message>
+    <message>
+        <source>Exp:</source>
+        <translation>Exp:</translation>
     </message>
     <message>
         <source>Kills</source>
@@ -1508,7 +1512,7 @@
     </message>
     <message>
         <source>QTY:</source>
-        <translation>QTÉ :</translation>
+        <translation>QTÉ:</translation>
     </message>
     <message>
         <source>Key Items</source>
@@ -1596,19 +1600,19 @@
     </message>
     <message>
         <source>Huge Materia:Fort Condor</source>
-        <translation>Méga-Matéria : Fort Condor</translation>
+        <translation>Méga-Matéria: Fort Condor</translation>
     </message>
     <message>
         <source>Huge Materia:Corel</source>
-        <translation>Méga-Matéria : Corel</translation>
+        <translation>Méga-Matéria: Corel</translation>
     </message>
     <message>
         <source>Huge Materia:Underwater</source>
-        <translation>Méga-Matéria : Sous-marin</translation>
+        <translation>Méga-Matéria: Sous-marin</translation>
     </message>
     <message>
         <source>Huge Materia:Rocket</source>
-        <translation>Méga-Matéria : Fusée</translation>
+        <translation>Méga-Matéria: Fusée</translation>
     </message>
     <message>
         <source>Key To Ancients</source>
@@ -1772,7 +1776,7 @@
     </message>
     <message>
         <source>Fed ?</source>
-        <translation></translation>
+        <translation>Nourri ?</translation>
     </message>
     <message>
         <source>Coop</source>
@@ -1856,7 +1860,7 @@
     </message>
     <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
-        <translation type="unfinished">Set Replay Mission-dessus pour régler le jeu de retour de cette mission. This Will automatiquement configurer votre emplacement de sauvegarde et le disque # ainsi que Quest vars progression. Ne pas écraser votre COURANT SAVE, lorsque vous utilisez cette fonction, je ne peux pas promettre que vous serez en mesure de jouer de toute rediffusion jusqu&apos;à la fin de l&apos;game.Or C&apos;est Any Given Replay fonctionnera dans votre Save, ce domaine est en lourd de développement</translation>
+        <translation>Sélectionnez la reprise de mission ci-dessus afin de ramener de le jeu à cette mission.  Cette option va automatiquement mettre votre emplacement de sauvegarde, le # du disque et les variable de progression du jeu. N&apos;EFFACEZ PAS VOTRE SAUVEGARDE ACTUELLE en utilisant cette fonction,je ne peux garantir que vous serez en mesure de rejouer à partir de cet événement jusqu&apos;à la fin du jeu. Ou bien que n&apos;importe quelle reprise de missions va fonctionner dans votre sauvegarde, cette section est en cours de développement</translation>
     </message>
     <message>
         <source>&amp;Export From Current Slot</source>
@@ -1868,11 +1872,19 @@
     </message>
     <message>
         <source>Alt+Q</source>
-        <translation></translation>
+        <translation>Alt+Q</translation>
+    </message>
+    <message>
+        <source>&amp;Open Save File</source>
+        <translation>&amp;Ouvrir sauvegarde</translation>
     </message>
     <message>
         <source>Ctrl+O</source>
-        <translation></translation>
+        <translation>Ctrl+O</translation>
+    </message>
+    <message>
+        <source>F2</source>
+        <translation>F2</translation>
     </message>
     <message>
         <source>Export PC Save</source>
@@ -1955,6 +1967,10 @@
         <translation>Temps de jeu</translation>
     </message>
     <message>
+        <source>M</source>
+        <translation>M</translation>
+    </message>
+    <message>
         <source>Sec</source>
         <translation>Sec</translation>
     </message>
@@ -2024,7 +2040,7 @@
     </message>
     <message>
         <source>0x0B</source>
-        <translation></translation>
+        <translation>0x0B</translation>
     </message>
     <message>
         <source>-Empty-</source>
@@ -2037,6 +2053,10 @@
     <message>
         <source>HP</source>
         <translation>HP</translation>
+    </message>
+    <message>
+        <source>      Next</source>
+        <translation>      Suivant</translation>
     </message>
     <message>
         <source>Char&apos;s Limits</source>
@@ -2152,19 +2172,19 @@
     </message>
     <message>
         <source>Type Filter</source>
-        <translation type="unfinished">Type Filtre</translation>
+        <translation>Type Filtre</translation>
     </message>
     <message>
         <source>Clear Materia Slot</source>
-        <translation>Effacer le Matérias slot</translation>
+        <translation>Effacer le slot Matéria</translation>
     </message>
     <message>
         <source>Materia Skills</source>
-        <translation type="unfinished">Matéria Compétence</translation>
+        <translation>Matéria Compétence</translation>
     </message>
     <message>
         <source>Materia Stat Changes</source>
-        <translation type="unfinished">Matéria Statistique Transformer</translation>
+        <translation>Matéria Statistique Transformer</translation>
     </message>
     <message>
         <source>Othe&amp;r</source>
@@ -2320,7 +2340,7 @@
     </message>
     <message>
         <source>map</source>
-        <translation>map</translation>
+        <translation>carte</translation>
     </message>
     <message>
         <source>loc</source>
@@ -2560,7 +2580,7 @@
     </message>
     <message>
         <source>Beginner&apos;s Hall</source>
-        <translation>Hall du débutant</translation>
+        <translation>Hall des débutants</translation>
     </message>
     <message>
         <source>149</source>
@@ -2744,15 +2764,15 @@
     </message>
     <message>
         <source>&amp;Game Progress</source>
-        <translation type="unfinished">Jeux pro&amp;grès</translation>
+        <translation>Pro&amp;gression du jeu</translation>
     </message>
     <message>
         <source>Main Progress Var</source>
-        <translation type="unfinished">Var principaux progrès</translation>
+        <translation>Variables de progression principales</translation>
     </message>
     <message>
         <source>Bombing Mission Progress</source>
-        <translation>Jeu progrès</translation>
+        <translation>Progression de la mission d&apos;explosion</translation>
     </message>
     <message>
         <source>0x0C85</source>
@@ -2768,23 +2788,23 @@
     </message>
     <message>
         <source>Bombing Mission</source>
-        <translation type="unfinished">Bombe Mission</translation>
+        <translation>Mission d&apos;explosion</translation>
     </message>
     <message>
         <source>Cloud&apos;s Flashback</source>
-        <translation>Flashback Du Cloud</translation>
+        <translation>Flashback de Cloud</translation>
     </message>
     <message>
         <source>The Date Scene</source>
-        <translation>La Scène Date</translation>
+        <translation>Rendez-Vous</translation>
     </message>
     <message>
         <source>Replay Mission</source>
-        <translation type="unfinished">Rejouer Mission</translation>
+        <translation>Rejouer Mission</translation>
     </message>
     <message>
         <source>         INFO ON CURRENTLY SELECTED REPLAY MISSION</source>
-        <translation type="unfinished">               INFO SUR actuellement sélectionné MISSION REPLAY</translation>
+        <translation>               INFO SUR LA MISSION ACTUELLEMENT SÉLECTIONNÉE</translation>
     </message>
     <message>
         <source>Game Op&amp;tions</source>
@@ -2799,12 +2819,20 @@
         <translation>Copier slot courant</translation>
     </message>
     <message>
+        <source>Alt+C</source>
+        <translation>Alt+C</translation>
+    </message>
+    <message>
+        <source>Alt+V</source>
+        <translation>Alt+V</translation>
+    </message>
+    <message>
         <source>Clear Slot</source>
         <translation>Effacer le slot</translation>
     </message>
     <message>
         <source>Alt+Del</source>
-        <translation></translation>
+        <translation>Alt+Suppr</translation>
     </message>
     <message>
         <source>Previous Slot</source>
@@ -2812,7 +2840,7 @@
     </message>
     <message>
         <source>Alt+Left</source>
-        <translation></translation>
+        <translation>Alt+Gauche</translation>
     </message>
     <message>
         <source>Next Slot</source>
@@ -2820,7 +2848,7 @@
     </message>
     <message>
         <source>Alt+Right</source>
-        <translation></translation>
+        <translation>Alt+Droite</translation>
     </message>
     <message>
         <source>65</source>
@@ -2876,7 +2904,7 @@
     </message>
     <message>
         <source>Fort Condor</source>
-        <translation></translation>
+        <translation>Fort Condor</translation>
     </message>
     <message>
         <source>355</source>
@@ -2932,7 +2960,7 @@
     </message>
     <message>
         <source>Cosmo Canyon</source>
-        <translation></translation>
+        <translation>Canyon Cosmo</translation>
     </message>
     <message>
         <source>529</source>
@@ -2980,7 +3008,7 @@
     </message>
     <message>
         <source>Mt. Corel</source>
-        <translation></translation>
+        <translation>Mont Corel</translation>
     </message>
     <message>
         <source>63498</source>
@@ -3008,11 +3036,11 @@
     </message>
     <message>
         <source>Debug - English</source>
-        <translation></translation>
+        <translation>Debug - Anglais</translation>
     </message>
     <message>
         <source>Reactor No. 5 </source>
-        <translation>Reacteur n°5</translation>
+        <translation>Réacteur n°5</translation>
     </message>
     <message>
         <source>131</source>
@@ -3072,7 +3100,7 @@
     </message>
     <message>
         <source>Vestibule</source>
-        <translation></translation>
+        <translation>Vestiaire</translation>
     </message>
     <message>
         <source>65157</source>
@@ -3112,7 +3140,7 @@
     </message>
     <message>
         <source>Sector 8, Underground</source>
-        <translation>Secteur 8 - Sous-sols</translation>
+        <translation>Secteur 8 - Égoûts</translation>
     </message>
     <message>
         <source>733</source>
@@ -3351,6 +3379,10 @@
         <translation>&amp;Quitter</translation>
     </message>
     <message>
+        <source>&amp;Save File</source>
+        <translation>Enregi&amp;strer fichier</translation>
+    </message>
+    <message>
         <source>Ctrl+S</source>
         <translation>Ctrl+S</translation>
     </message>
@@ -3360,7 +3392,7 @@
     </message>
     <message>
         <source>F1</source>
-        <translation></translation>
+        <translation>F1</translation>
     </message>
     <message>
         <source>About Qt</source>
@@ -3384,19 +3416,19 @@
     </message>
     <message>
         <source>Replay the bombing mission from right after you get off the first train, game might crash after the mission right before jessie talks to you about midgar.</source>
-        <translation type="unfinished">Replay la mission de bombardement de la droite après vous descendez le premier train, jeu peut se bloquer après le droit mission avant que les pourparlers jessie à vous au sujet de Midgar.</translation>
+        <translation>Rejouer la mission d&apos;explosion immédiatement après être descendu du premier train, le jeu peut se comporter bizarrement après que jessie vous ait parlé au sujet de midgar.</translation>
     </message>
     <message>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent, if you wish to edit cloud or vincent after selecting this replay then change the box to the first(blank) entry and then when you have set those chars as you wish reselect this replay from the combobox.</source>
-        <translation type="unfinished">Cadre cette copie Cloud est de nuage jeunes (fente de Caitsith). stats sephiroth viendra directement de Vincent, si vous souhaitez modifier nuage ou Vincent après la sélection de cette relecture, puis modifiez la zone à la première (en blanc) d&apos;entrée et puis quand vous avez défini les caractères que vous souhaitez sélectionner à nouveau cette relecture de la liste déroulante.</translation>
+        <translation>Activer ceci va copier Clad tel quel dans le slot de jeune Clad (slot de CaitSith). Les stats de Sephiroth vont être copiés directement de Vincent, si vous désirez éditer Clad ou Vincent après avoir sélectionné cette reprise, simplement changez la boîte à la première (vide) entrée et lorsque vous allez avoir mis ces personnages comme vous le désirez, sélectionnez cette reprise à partir de la boîte de sélection.</translation>
     </message>
     <message>
         <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
-        <translation type="unfinished">Rejouer la scène Date, votre emplacement sera mis à la station des remontées mécaniques, Parlez à l&apos;homme par le tramway de démarrer cette compétition, si vous cherchez pour une spéciale Date assurez-vous de définir vos points d&apos;amour aussi.</translation>
+        <translation>Rejouer la scène du rendez-vous, votre emplacement sera mis à la station téléphérique. Parlez à l&apos;homme près du tramway afin de démarrer cette scène, si vous cherchez pour un rendez-vous spécifique assurez-vous d&apos;ajuster vos points d&apos;affection.</translation>
     </message>
     <message>
         <source>Replay the death of Aerith.This option Will remove Aerith from your PHS</source>
-        <translation type="unfinished">Replay la mort de l&apos;option Aerith.This Ostera Aerith de votre PHS</translation>
+        <translation>Rejouer la mort d&apos;Aerith. Cette option retirera Aerith du PHS</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSX Save</source>
@@ -3451,24 +3483,24 @@
     <message>
         <source>Cannot write file %1:
 %2.</source>
-        <translation type="unfinished">Impossible d&apos;écrire dans le fichier %1:
+        <translation>Impossible d&apos;écrire le fichier %1:
 %2.</translation>
     </message>
     <message>
         <source>0x34</source>
-        <translation></translation>
+        <translation>0x34</translation>
     </message>
     <message>
         <source>0x35</source>
-        <translation></translation>
+        <translation>0x35</translation>
     </message>
     <message>
         <source>0x36</source>
-        <translation></translation>
+        <translation>0x36</translation>
     </message>
     <message>
         <source>0x37</source>
-        <translation></translation>
+        <translation>0x37</translation>
     </message>
     <message>
         <source>Hour</source>
@@ -3480,31 +3512,31 @@
     </message>
     <message>
         <source>Visible In PHS</source>
-        <translation type="unfinished">Visible Dans PHS</translation>
+        <translation>Visible Dans PHS</translation>
     </message>
     <message>
         <source>Visible Menu Items</source>
-        <translation type="unfinished">éléments de menu visible</translation>
+        <translation>Éléments de menu visible</translation>
     </message>
     <message>
         <source>Equip</source>
-        <translation type="unfinished">Équiper</translation>
+        <translation>Équiper</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished">Statut</translation>
+        <translation>Statut</translation>
     </message>
     <message>
         <source>Order</source>
-        <translation type="unfinished">Ordre</translation>
+        <translation>Ordre</translation>
     </message>
     <message>
         <source>Limit</source>
-        <translation type="unfinished">Limite</translation>
+        <translation>Limite</translation>
     </message>
     <message>
         <source>Config</source>
-        <translation></translation>
+        <translation>Config</translation>
     </message>
     <message>
         <source>P.H.S</source>
@@ -3512,39 +3544,39 @@
     </message>
     <message>
         <source>Save</source>
-        <translation type="unfinished">Sauvegarder</translation>
+        <translation>Sauvegarder</translation>
     </message>
     <message>
         <source>Locked Menu Items</source>
-        <translation type="unfinished">Éléments de menu verrouillé</translation>
+        <translation>Éléments de menu verrouillé</translation>
     </message>
     <message>
         <source>Coaster Shooter High Scores</source>
-        <translation type="unfinished">Partitions Shooter Coaster haut</translation>
+        <translation>Partitions Shooter Coaster haut</translation>
     </message>
     <message>
         <source>1st</source>
-        <translation type="unfinished">1er</translation>
+        <translation>1er</translation>
     </message>
     <message>
         <source>2nd</source>
-        <translation type="unfinished">2émé</translation>
+        <translation>2éme</translation>
     </message>
     <message>
         <source>3rd</source>
-        <translation type="unfinished">3émé</translation>
+        <translation>3éme</translation>
     </message>
     <message>
         <source>Materia Caves Empty</source>
-        <translation type="unfinished">Grottes Materia Vide</translation>
+        <translation>Grottes Materia Vide</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation type="unfinished">mimer</translation>
+        <translation>Mimer</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation type="unfinished">HP &lt;-&gt; MP</translation>
+        <translation>HP &lt;-&gt; MP</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
@@ -3552,31 +3584,31 @@
     </message>
     <message>
         <source>KOTR</source>
-        <translation></translation>
+        <translation>CDLTR</translation>
     </message>
     <message>
         <source>Test Data</source>
-        <translation type="unfinished">Test Donnée</translation>
+        <translation>Test Donnée</translation>
     </message>
     <message>
         <source>Tutorials Seen</source>
-        <translation type="unfinished">Tutoriels Vu</translation>
+        <translation>Tutoriels Vu</translation>
     </message>
     <message>
         <source>Controling the Sub</source>
-        <translation type="unfinished">Contrôle du sous-mari</translation>
+        <translation>Contrôle du sous-marin</translation>
     </message>
     <message>
         <source>Saving on the World Map</source>
-        <translation type="unfinished">Sauver sur la Carte du Monde</translation>
+        <translation>Sauver sur la Carte du Monde</translation>
     </message>
     <message>
         <source>Battle Love Points</source>
-        <translation type="unfinished">Combat Points D&apos;affection</translation>
+        <translation>Points de soutien (combat)</translation>
     </message>
     <message>
         <source>Remove ALL</source>
-        <translation type="unfinished">Supprimer Toutes</translation>
+        <translation>Supprimer TOUT</translation>
     </message>
     <message>
         <source>Items</source>
@@ -3584,221 +3616,222 @@
     </message>
     <message>
         <source>Materia </source>
-        <translation type="unfinished">Matéria</translation>
+        <translation>Matéria</translation>
     </message>
     <message>
         <source>Stolen Materia</source>
-        <translation type="unfinished">Matérias volées</translation>
+        <translation>Matérias volées</translation>
     </message>
     <message>
         <source>Ultimate Weapons Hp</source>
-        <translation type="unfinished">Armes Ultimate Hp</translation>
+        <translation>HP Dernière Arme</translation>
     </message>
     <message>
         <source>Secret Chars Unlocked</source>
-        <translation type="unfinished">Personnages secrets débloqué</translation>
+        <translation>Personnages secrets débloqués</translation>
     </message>
     <message>
         <source>0xBD4 (itemmasks_1)</source>
-        <translation></translation>
+        <translatorcomment>Non, ce n&apos;est pas une erreur, itemmasks_1 est une variable et ne peut pas être traduite</translatorcomment>
+        <translation>0xBD4 (itemmasks_1)</translation>
     </message>
     <message>
         <source>0x01 Potion On MD8_3</source>
-        <translation type="unfinished">0x01 Potion sur MD8_3</translation>
+        <translation>0x01 Potion sur MD8_3</translation>
     </message>
     <message>
         <source>0x02</source>
-        <translation></translation>
+        <translation>0x02</translation>
     </message>
     <message>
         <source>0x04</source>
-        <translation></translation>
+        <translation>0x04</translation>
     </message>
     <message>
         <source>0x08</source>
-        <translation></translation>
+        <translation>0x08</translation>
     </message>
     <message>
         <source>0x10</source>
-        <translation></translation>
+        <translation>0x10</translation>
     </message>
     <message>
         <source>0x20</source>
-        <translation></translation>
+        <translation>0x20</translation>
     </message>
     <message>
         <source>0x40</source>
-        <translation></translation>
+        <translation>0x40</translation>
     </message>
     <message>
         <source>0x80</source>
-        <translation></translation>
+        <translation>0x80</translation>
     </message>
     <message>
         <source>Mystery Ninja </source>
-        <translation type="unfinished">Mystère Ninja</translation>
+        <translation>Ninja Mystère</translation>
     </message>
     <message>
         <source>Can Fight Yuffie in Forests</source>
-        <translation type="unfinished">lutte Yuffie dans les forêts</translation>
+        <translation>Possibilité d&apos;affronter Youfie dans les forêts</translation>
     </message>
     <message>
         <source>0x01 Talked to Bigs</source>
-        <translation type="unfinished">0x01 Parlé à Biggs</translation>
+        <translation>0x01 Parlé à Biggs</translation>
     </message>
     <message>
         <source>0x02 Talked to Wedge twice</source>
-        <translation type="unfinished">Parlé à deux reprises Wedge</translation>
+        <translation>0x02 Parlé à deux reprises Wedge</translation>
     </message>
     <message>
         <source>0x04 Talked to Jessie Before Looking At Map</source>
-        <translation type="unfinished">Parlé à Jessie avant de regarder la carte</translation>
+        <translation>0x04 Parlé à Jessie avant de regarder la carte</translation>
     </message>
     <message>
         <source>Region String</source>
-        <translation type="unfinished">Région</translation>
+        <translation>Région</translation>
     </message>
     <message>
         <source>Countdown Timer</source>
-        <translation type="unfinished">Compte à rebours</translation>
+        <translation>Compte à rebours</translation>
     </message>
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will trigger showing that tutorial</source>
-        <translation>Lorsque la boîte est partiellement Checked (&quot;-&quot;) il déclenchera montrant que tutoriel</translation>
+        <translation>Lorsque la boîte est partiellement cochée (&quot;-&quot;)le tutoriel va se déclencher</translation>
     </message>
     <message>
         <source>Y.Cloud</source>
-        <translation></translation>
+        <translation>J.Clad</translation>
     </message>
     <message>
         <source>Sephiroth</source>
-        <translation></translation>
+        <translation>Sephiroth</translation>
     </message>
     <message>
         <source>Slot Region</source>
-        <translation type="unfinished">Slot Région</translation>
+        <translation>Slot Région</translation>
     </message>
     <message>
         <source>Debug Mode</source>
-        <translation type="unfinished">Debug Mode</translation>
+        <translation>Debug Mode</translation>
     </message>
     <message>
         <source>USA (BASLUS-94163)</source>
-        <translation></translation>
+        <translation>USA (BASLUS-94163)</translation>
     </message>
     <message>
         <source>PAL (BESCES-00867)</source>
-        <translation></translation>
+        <translation>PAL (BESCES-00867)</translation>
     </message>
     <message>
         <source>PAL (BESCES-00869)</source>
-        <translation></translation>
+        <translation>PAL (BESCES-00869)</translation>
     </message>
     <message>
         <source>PAL (BESCES-00900)</source>
-        <translation></translation>
+        <translation>PAL (BESCES-00900)</translation>
     </message>
     <message>
         <source>JPN (BISLPS-00700)</source>
-        <translation></translation>
+        <translation>JPN (BISLPS-00700)</translation>
     </message>
     <message>
         <source>JPN (BISLPS-01057)</source>
-        <translation></translation>
+        <translation>JPN (BISLPS-01057)</translation>
     </message>
     <message>
         <source>Black Chocobo - </source>
-        <translation type="unfinished">Black Chocobo - </translation>
+        <translation>Black Chocobo - </translation>
     </message>
     <message>
         <source>PSP Save Notice</source>
-        <translation type="unfinished">PSP Enregistrer un avis</translation>
+        <translation>Note de sauvegarde PSP</translation>
     </message>
     <message>
         <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
-        <translation></translation>
+        <translation>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</translation>
     </message>
     <message>
         <source>Bad Psx Save Name</source>
-        <translation type="unfinished">PSX Bad Enregistrer le nom</translation>
+        <translation>PSX Mauvais nom de sauvegarde</translation>
     </message>
     <message>
         <source>Export MC File</source>
-        <translation type="unfinished">Exporter Sauvegarde MC</translation>
+        <translation>Exporter Sauvegarde MC</translation>
     </message>
     <message>
         <source> Bombing Mission Start Flag</source>
-        <translation type="unfinished">Bombing Drapeau début de la mission</translation>
+        <translation>Variable de démarrage de la mission d&apos;explosion</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
-        <translation type="unfinished">Aid&amp;e</translation>
+        <translation>Aid&amp;e</translation>
     </message>
     <message>
         <source>Vie&amp;w</source>
-        <translation type="unfinished">V&amp;ue</translation>
+        <translation>V&amp;ue</translation>
     </message>
     <message>
         <source>&amp;Edit</source>
-        <translation type="unfinished">Modifi&amp;er</translation>
+        <translation>Modifi&amp;er</translation>
     </message>
     <message>
         <source>Paste Slot</source>
-        <translation type="unfinished">Coller Slot</translation>
+        <translation>Coller Slot</translation>
     </message>
     <message>
         <source>More Options...</source>
-        <translation type="unfinished">Plus d&apos;options....</translation>
+        <translation>Plus d&apos;options....</translation>
     </message>
     <message>
         <source>New Game</source>
-        <translation type="unfinished">New Game</translation>
+        <translation>New Game</translation>
     </message>
     <message>
         <source>Alt+Ins</source>
-        <translation></translation>
+        <translation>Alt+Ins</translation>
     </message>
     <message>
         <source>New Game+ </source>
-        <translation type="unfinished">New Game +</translation>
+        <translation>New Game +</translation>
     </message>
     <message>
         <source>Alt+Shift+Ins</source>
-        <translation></translation>
+        <translation>Alt+Shift+Ins</translation>
     </message>
     <message>
         <source>Export Current Character</source>
-        <translation type="unfinished">Exporter le caractère en cours</translation>
+        <translation>Exporter le personnage actuel</translation>
     </message>
     <message>
         <source>Import Current Character</source>
-        <translation type="unfinished">Importer le caractère en cours</translation>
+        <translation>Importer le personnage actuel</translation>
     </message>
     <message>
         <source>Select FF7 Character Stat File</source>
-        <translation type="unfinished">Sélectionnez Fichier FF7 Stat caractères</translation>
+        <translation>Sélectionnez fichier de stats FF7 personnages</translation>
     </message>
     <message>
         <source>%1:
 %2 is Not a FF7 Character Stat File.</source>
-        <translation type="unfinished">Impossible de lire le fichier %1:
-%2.</translation>
+        <translation>%1:
+%2 n&apos;est pas un fichier de stats personnages FF7.</translation>
     </message>
     <message>
         <source>Save FF7 Character File</source>
-        <translation type="unfinished">Ajoutez le fichier à caractère FF7</translation>
+        <translation>Sauvegarder le fichier de stats personnages FF7</translation>
     </message>
     <message>
         <source>Import  PSV Save</source>
-        <translation type="unfinished">Importer PSV Enregistrer</translation>
+        <translation>Importer sauvegarde PSV</translation>
     </message>
     <message>
         <source>FF7 Character Stat File(*.char)</source>
-        <translation type="unfinished">FF7 Character Stat File(*.char)</translation>
+        <translation>Fichier de stat personnage FF7 (*.char)</translation>
     </message>
     <message>
         <source>In-game Dialog Preview</source>
-        <translation type="unfinished">Dans le jeu de dialogue de prévisualisation</translation>
+        <translation>Aperçu de dialogue dans le jeu</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -3806,113 +3839,122 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Verdana&apos;; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Verdana&apos;; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>0xD83 Midgar Train Flags (tin_1)</source>
-        <translation type="unfinished"></translation>
+        <translation>0xD83 Midgar Train Variable (tin_1)</translation>
+    </message>
+    <message>
+        <source>Show Extra Information During Battle</source>
+        <translation>Afficher les informations supplémentaires pendant les combats</translation>
     </message>
     <message>
         <source>Export Raw PSX Save</source>
-        <translation type="unfinished">Exporter PSX Raw Enregistrer</translation>
+        <translation>Exporter Sauvegarde PSX non-identifiée</translation>
     </message>
     <message>
         <source>Import  Raw PSX Save</source>
-        <translation type="unfinished">Importer Raw PSX enregistrer</translation>
+        <translation>Importer Sauvegarde PSX non-identifiée</translation>
     </message>
     <message>
         <source>Raw PSX FF7 SaveGame (*-S*)</source>
-        <translation type="unfinished">Raw PSX FF7 SaveGame (*-S*)</translation>
+        <translation>FF7 sauvegarde non-identifiée PSX (*-S*)</translation>
     </message>
     <message>
         <source>FF7 Raw PSX SaveGame(*-S*)</source>
-        <translation type="unfinished">FF7 Raw PSX SaveGame(*-S*)</translation>
+        <translation>FF7 sauvegarde non-identifiée PSX (*-S*)</translation>
     </message>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PSP.</source>
-        <translation type="unfinished">Ce fichier n&apos;a pas une mise à jour Checksum.It ne fonctionnera pas sur votre PSP.</translation>
+        <translation>Ce fichier n&apos;a pas de mise à jour Checksum.It ne fonctionnera pas sur votre PSP.</translation>
     </message>
     <message>
         <source>Cannot read file %1:
 %2 Be Sure its is a Raw PSX Save</source>
-        <translation type="unfinished">Impossible de lire le fichier%1:
-%2., s&apos;assurer qu&apos;il est un PSX Raw Enregistrer</translation>
+        <translation>Impossible de lire le fichier%1:
+%2., s&apos;assurer qu&apos;il est une sauvegarde PSX non-identifiée</translation>
     </message>
     <message>
         <source>Cannot read file %1:
 %2., Be Sure its is a Raw PSX Save</source>
-        <translation type="unfinished">Impossible de lire le fichier%1:
-%2., s&apos;assurer qu&apos;il est un PSX Raw Enregistrer</translation>
+        <translation>Impossible de lire le fichier%1:
+%2., s&apos;assurer qu&apos;il est une sauvegarde PSX non-identifiée</translation>
     </message>
     <message>
         <source>Unknown Filetype</source>
-        <translation type="unfinished">Type de fichier inconnu</translation>
+        <translation>Type de fichier inconnu</translation>
     </message>
     <message>
         <source>File: %1 
 is not a FF7 SaveGame.</source>
-        <translation type="unfinished">Fichier:%1 n&apos;est pas un jeu FF7 Enregistrer.</translation>
+        <translation>Fichier:%1 n&apos;est pas une sauvegarde FF7.</translation>
     </message>
     <message>
         <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
-        <translation type="unfinished">Ne peut pas décider Qu&apos;est-tête à écrire, S&apos;il vous plaît Ajouter le suffixe-SXX (où x = 01-15, avec un 0 si &lt;10) Un en-tête de ce numéro d&apos;emplacement sera écrit dans la sauvegarde</translation>
+        <translation>Ne peut pas décider Quel en-tête écrire, veuillez ajouter le suffixe-SXX (où x = 01-15, avec un 0 si &lt;10) Un en-tête de ce numéro d&apos;emplacement sera écrit dans la sauvegarde</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation type="unfinished">Ne pas utiliser</translation>
+        <translation>NE PAS UTILISER</translation>
     </message>
     <message>
         <source>Empty Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>Matéria Vide</translation>
     </message>
     <message>
         <source>Place holder Materia Detected
  Remember 16777215 AP = master</source>
-        <translation type="unfinished"></translation>
+        <translation>Espace réservé de Matéria détecté
+ N&apos;oubliez pas 16777215 AP = Maître</translation>
     </message>
     <message>
         <source>New Game +</source>
-        <translation type="unfinished"></translation>
+        <translation>New Game +</translation>
     </message>
     <message>
         <source>Young Cloud</source>
-        <translation type="unfinished"></translation>
+        <translation>Jeune Clad</translation>
     </message>
     <message>
         <source>===Empty Slot===</source>
-        <translation type="unfinished"></translation>
+        <translation>=Emplacement Vide=</translation>
     </message>
     <message>
         <source>Empty Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Emplacement Vide</translation>
     </message>
     <message>
         <source>NO CAP</source>
-        <translation type="unfinished"></translation>
+        <translation>AUCUNE LIMITE</translation>
     </message>
     <message>
         <source>Braver</source>
-        <translation type="unfinished"></translation>
+        <translation>Bravoure</translation>
     </message>
     <message>
         <source>Cross-Slash</source>
-        <translation type="unfinished"></translation>
+        <translation>Contre-Taillade</translation>
     </message>
     <message>
         <source>Blade Beam</source>
-        <translation type="unfinished"></translation>
+        <translation>Coup Tranchant</translation>
     </message>
     <message>
         <source>Climhazzard</source>
-        <translation type="unfinished"></translation>
+        <translation>DangerMétéo</translation>
     </message>
     <message>
         <source>Meteorain</source>
-        <translation type="unfinished"></translation>
+        <translation>PluieMétéores</translation>
     </message>
     <message>
         <source>Finishing Touch</source>
-        <translation type="unfinished"></translation>
+        <translation>Finition</translation>
     </message>
     <message>
         <source>OmniSlash</source>
@@ -3920,27 +3962,27 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Big Shot</source>
-        <translation type="unfinished"></translation>
+        <translation>Grand Coup</translation>
     </message>
     <message>
         <source>Mindblow</source>
-        <translation type="unfinished"></translation>
+        <translation>Souffle</translation>
     </message>
     <message>
         <source>Grenade Bomb</source>
-        <translation type="unfinished"></translation>
+        <translation>Bombe Grenade</translation>
     </message>
     <message>
         <source>Hammerblow</source>
-        <translation type="unfinished"></translation>
+        <translation>Frappe Lourde</translation>
     </message>
     <message>
         <source>Satellite Beam</source>
-        <translation type="unfinished"></translation>
+        <translation>Rayon Satellite</translation>
     </message>
     <message>
         <source>Angermax</source>
-        <translation type="unfinished"></translation>
+        <translation>Furamax</translation>
     </message>
     <message>
         <source>Catastrophe</source>
@@ -3948,27 +3990,27 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Beat Rush</source>
-        <translation type="unfinished"></translation>
+        <translation>Coup Vif</translation>
     </message>
     <message>
         <source>SomerSault</source>
-        <translation type="unfinished"></translation>
+        <translation>Culbute</translation>
     </message>
     <message>
         <source>Waterkick</source>
-        <translation type="unfinished"></translation>
+        <translation>Coup d&apos;eau</translation>
     </message>
     <message>
         <source>Meteodrive</source>
-        <translation type="unfinished"></translation>
+        <translation>Météodrive</translation>
     </message>
     <message>
         <source>Dolphin Blow</source>
-        <translation type="unfinished"></translation>
+        <translation>Coup de dauphin</translation>
     </message>
     <message>
         <source>Meteor Strike</source>
-        <translation type="unfinished"></translation>
+        <translation>Coup de météore</translation>
     </message>
     <message>
         <source>Final Heaven</source>
@@ -3976,55 +4018,55 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Healing Wind</source>
-        <translation type="unfinished"></translation>
+        <translation>Vent guérisseur</translation>
     </message>
     <message>
         <source>Seal Evil</source>
-        <translation type="unfinished"></translation>
+        <translation>Sceller le mal</translation>
     </message>
     <message>
         <source>Breath of the Earth</source>
-        <translation type="unfinished"></translation>
+        <translation>Souffle terrien</translation>
     </message>
     <message>
         <source>Fury Brand</source>
-        <translation type="unfinished"></translation>
+        <translation>Marque de furie</translation>
     </message>
     <message>
         <source>Planet Protector</source>
-        <translation type="unfinished"></translation>
+        <translation>Protecteur planétaire</translation>
     </message>
     <message>
         <source>Pulse of Life</source>
-        <translation type="unfinished"></translation>
+        <translation>Battement de vie</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation>Grand Vangile</translation>
+        <translation>Grand Évangile</translation>
     </message>
     <message>
         <source>Sled Fang</source>
-        <translation type="unfinished"></translation>
+        <translation>Coup de griffe</translation>
     </message>
     <message>
         <source>Lunatic High</source>
-        <translation type="unfinished"></translation>
+        <translation>Haut dément</translation>
     </message>
     <message>
         <source>Blood Fang</source>
-        <translation type="unfinished"></translation>
+        <translation>Dent de sang</translation>
     </message>
     <message>
         <source>Stardust Ray</source>
-        <translation type="unfinished"></translation>
+        <translation>Rayon d&apos;étoiles</translation>
     </message>
     <message>
         <source>Howling Moon</source>
-        <translation type="unfinished"></translation>
+        <translation>Lune hurlante</translation>
     </message>
     <message>
         <source>Earth Rave</source>
-        <translation type="unfinished"></translation>
+        <translation>Tempête terrienne</translation>
     </message>
     <message>
         <source>Cosmo Memory</source>
@@ -4032,27 +4074,27 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Greased Lightning</source>
-        <translation type="unfinished"></translation>
+        <translation>Eclair d&apos;huile</translation>
     </message>
     <message>
         <source>Clear Tranquil</source>
-        <translation type="unfinished"></translation>
+        <translation>Tranquille clair</translation>
     </message>
     <message>
         <source>Landscaper</source>
-        <translation type="unfinished"></translation>
+        <translation>Gratte-terre</translation>
     </message>
     <message>
         <source>Bloodfest</source>
-        <translation type="unfinished"></translation>
+        <translation>Buffet sanglant</translation>
     </message>
     <message>
         <source>Gauntlet</source>
-        <translation type="unfinished"></translation>
+        <translation>Gantelet</translation>
     </message>
     <message>
         <source>Doom of the Living</source>
-        <translation type="unfinished"></translation>
+        <translation>Sort des vivants</translation>
     </message>
     <message>
         <source>All Creation</source>
@@ -4060,23 +4102,23 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Dice</source>
-        <translation type="unfinished"></translation>
+        <translation>Dé</translation>
     </message>
     <message>
         <source>Slots</source>
-        <translation type="unfinished"></translation>
+        <translation>Roulette</translation>
     </message>
     <message>
         <source>Gallian Beast</source>
-        <translation type="unfinished"></translation>
+        <translation>Bête Galienne</translation>
     </message>
     <message>
         <source>Death Gigas</source>
-        <translation type="unfinished"></translation>
+        <translation>Gigas de la mort</translation>
     </message>
     <message>
         <source>Hellmasker</source>
-        <translation type="unfinished"></translation>
+        <translation>Masque Infernal</translation>
     </message>
     <message>
         <source>Chaos</source>
@@ -4084,391 +4126,51 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Boost Jump</source>
-        <translation type="unfinished"></translation>
+        <translation>Propulsion</translation>
     </message>
     <message>
         <source>Dynamite</source>
-        <translation type="unfinished"></translation>
+        <translation>Dynamite</translation>
     </message>
     <message>
         <source>Hyper Jump</source>
-        <translation type="unfinished"></translation>
+        <translation>Super Saut</translation>
     </message>
     <message>
         <source>Dragon</source>
-        <translation type="unfinished"></translation>
+        <translation>Dragon</translation>
     </message>
     <message>
         <source>Dragon Dive</source>
-        <translation type="unfinished"></translation>
+        <translation>Plongeon de Dragon</translation>
     </message>
     <message>
         <source>Big Brawl</source>
-        <translation type="unfinished"></translation>
+        <translation>Grand Rixe</translation>
     </message>
     <message>
         <source>Highwind</source>
         <translation>Hautvent</translation>
     </message>
     <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.mcr *.mcd *.mc *.ddf *.ps *.psm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mc *.ddf *.ps *.psm);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</source>
+        <translation>Types connus de sauvegardes FF7 (*.ff7 *-S* *.psv *.vmp *.mcr *.mcd *.mc *.ddf *.ps *.psm);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mc *.ddf *.ps *.psm);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp)</translation>
+    </message>
+    <message>
+        <source>FF7 MC SaveGame(*.mcr *.mcd *.mc *.ddf *.ps *.psm)</source>
+        <translation>FF7 MC Sauvegarde(*.mcr *.mcd *.mc *.ddf *.ps *.psm)</translation>
+    </message>
+    <message>
         <source>Ingoring Non FF7 Save</source>
-        <translation type="unfinished">Ignorant non FF7 Enregistrer</translation>
+        <translation>Ignorer sauvegarde non-FF7</translation>
     </message>
     <message>
         <source>Be Cautious This Might Not Work.</source>
-        <translation type="unfinished">Soyez prudent cela ne fonctionne pas.</translation>
+        <translation>Soyez prudent cela peut ne pas fonctionner.</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S01</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S02</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S03</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S04</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S05</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S06</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S07</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S08</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S09</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S10</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S11</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S12</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S13</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S14</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>S15</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Open</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save As</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt+Shift+S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt+F1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Export VGS File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Export Dex-Drive File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7  VGS SaveGame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7 VGS SaveGame(*.vgs *.mem)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7  Dex-Drive SaveGame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7 VGS SaveGame(*.gme)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 VGS SaveGame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7 MC SaveGame(*.vgs *.mem)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 Dex-Drive SaveGame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7 MC SaveGame(*.gme)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>No Save File Loaded</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The Filename is empty</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Region Detect Error</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>-------EMPTY--------</source>
-        <translation type="unfinished">-------Vide----------</translation>
-    </message>
-    <message>
-        <source>Region Can&apos;t be Automaticly Detected, You Must Set it Manually</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ID </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Total Exp:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Next</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show Battle Target Labels</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show Battle Help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Show Field Help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0xC1E tut_sub</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x01</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x02 </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x04 - Played Sub Tutorial</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x40 - Battle Targets</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Weapons Killed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ruby</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Emerald</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Misc</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>World</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Party leader</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>X</source>
-        <translation type="unfinished">x</translation>
-    </message>
-    <message>
-        <source>Y</source>
-        <translation type="unfinished">y</translation>
-    </message>
-    <message>
-        <source>Z</source>
-        <translation type="unfinished">z</translation>
-    </message>
-    <message>
-        <source>angle</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>id</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Tiny Bronco / Chocobo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Buggy / Highwind</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sub</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ultimate Weapon ?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ruby Weapon ?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Emerlad Weapon ?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Buggy Or Highwind</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x00-NONE</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x01-Buggy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x10-Highwind</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>sliders show </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Party Leader</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TinyBronco/Chocobo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Buggy/Highwind</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ultimate Weapon?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ruby Weapon?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Emerald Weapon?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Place Leader</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Place Tiny Bronco/Chocobo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Place Buggy/Highwind</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Place Sub</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Place Ultimate Weapon?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Place Ruby Weapon?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Place Emerald Weapon?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>PSV Save Notice</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>This File Does Not Have An Updated Checksum.It will not work on your PS3.</source>
-        <translation type="unfinished"></translation>
+        <translation>Talents de l&apos;ennemi</translation>
     </message>
 </context>
 <context>
@@ -4499,7 +4201,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Gil Plus</source>
-        <translation>Super Gils</translation>
+        <translation>Super Gil</translation>
     </message>
     <message>
         <source>Enemy Away</source>
@@ -4539,7 +4241,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Cover</source>
-        <translation>Converture</translation>
+        <translation>Couverture</translation>
     </message>
     <message>
         <source>Underwater</source>
@@ -4551,7 +4253,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation>Magie W</translation>
+        <translation>Magie-W</translation>
     </message>
     <message>
         <source>W-Summon</source>
@@ -4559,11 +4261,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>W-Item</source>
-        <translation>Elément-W</translation>
+        <translation>Élément-W</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation>Ne pas utiliser</translation>
+        <translation>NE PAS UTILISER</translation>
     </message>
     <message>
         <source>All</source>
@@ -4603,7 +4305,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Final Attack</source>
-        <translation>Attack Fanale</translation>
+        <translation>Attaque Fanale</translation>
     </message>
     <message>
         <source>Added Cut</source>
@@ -4635,7 +4337,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>DeathBlow</source>
-        <translation>Coup Mortel</translation>
+        <translation>CoupM</translation>
     </message>
     <message>
         <source>Manipulate</source>
@@ -4647,7 +4349,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation>Talent de L&apos;ennemi</translation>
+        <translation>Talents de l&apos;Ennemi</translation>
     </message>
     <message>
         <source>Master Command</source>
@@ -4675,7 +4377,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Heal</source>
-        <translation>Guérir</translation>
+        <translation>Guerir</translation>
     </message>
     <message>
         <source>Revive</source>
@@ -4727,7 +4429,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>FullCure</source>
-        <translation>Guérison Max</translation>
+        <translation>Guerison Max</translation>
     </message>
     <message>
         <source>Shield</source>
@@ -4767,7 +4469,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Leviathan</source>
-        <translation>Léviathan</translation>
+        <translation>Leviathan</translation>
     </message>
     <message>
         <source>Bahamut</source>
@@ -4783,27 +4485,27 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Phoenix</source>
-        <translation>Phénix</translation>
+        <translation>Phenix</translation>
     </message>
     <message>
         <source>Neo Bahamut</source>
-        <translation>Néo Bahamut</translation>
+        <translation>Neo Bahamut</translation>
     </message>
     <message>
         <source>Hades</source>
-        <translation>Hadès</translation>
+        <translation>Hades</translation>
     </message>
     <message>
         <source>Typhoon</source>
-        <translation>Typoon</translation>
+        <translation>Typhoon</translation>
     </message>
     <message>
         <source>Bahamut ZERO</source>
-        <translation>Bahamut ZÉRO</translation>
+        <translation>Bahamut ZERO</translation>
     </message>
     <message>
         <source>Knights of Round</source>
-        <translation>Chevaliers de la Table Ronde</translation>
+        <translation>Chevalier de la table Ronde</translation>
     </message>
     <message>
         <source>Master Summon</source>
@@ -4922,7 +4624,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Mastered</source>
-        <translation>Masterisé</translation>
+        <translation>Maître</translation>
     </message>
     <message>
         <source>Gil Plus +50%</source>
@@ -5038,31 +4740,31 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>2x-Cut</source>
-        <translation>2x</translation>
+        <translation>2xAttaque</translation>
     </message>
     <message>
         <source>4x-Cut</source>
-        <translation>4x</translation>
+        <translation>4xAttaque</translation>
     </message>
     <message>
         <source>Cover +20%</source>
-        <translation>Converture +20%</translation>
+        <translation>Couverture +20%</translation>
     </message>
     <message>
         <source>Cover +40%</source>
-        <translation>Converture +40%</translation>
+        <translation>Couverture +40%</translation>
     </message>
     <message>
         <source>Cover +60%</source>
-        <translation>Converture +60%</translation>
+        <translation>Couverture +60%</translation>
     </message>
     <message>
         <source>Cover +80%</source>
-        <translation>Converture +80%</translation>
+        <translation>Couverture +80%</translation>
     </message>
     <message>
         <source>Cover +100%</source>
-        <translation>Converture +100%</translation>
+        <translation>Couverture +100%</translation>
     </message>
     <message>
         <source>Underwater</source>
@@ -5074,15 +4776,15 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation>Magie W</translation>
+        <translation>Magie-W</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation>Invoq-W</translation>
+        <translation>Invocation-W</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation>Elém-W</translation>
+        <translation>Élément-W</translation>
     </message>
     <message>
         <source>All x1</source>
@@ -5103,6 +4805,46 @@ is not a FF7 SaveGame.</source>
     <message>
         <source>All x5</source>
         <translation>Tout x5</translation>
+    </message>
+    <message>
+        <source>Counter Rate %20</source>
+        <translation>Contre-Attaque %20</translation>
+    </message>
+    <message>
+        <source>Counter Rate %40</source>
+        <translation>Contre-Attaque %40</translation>
+    </message>
+    <message>
+        <source>Counter Rate %60</source>
+        <translation>Contre-Attaque %60</translation>
+    </message>
+    <message>
+        <source>Counter Rate %80</source>
+        <translation>Contre-Attaque %80</translation>
+    </message>
+    <message>
+        <source>Counter Rate %100</source>
+        <translation>Contre-Attaque %100</translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate %30</source>
+        <translation>Contre-Attaque Magique %30</translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate %40</source>
+        <translation>Contre-Attaque Magique %40</translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate %60</source>
+        <translation>Contre-Attaque Magique %60</translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate %80</source>
+        <translation>Contre-Attaque Magique %80</translation>
+    </message>
+    <message>
+        <source>Magic Counter Rate %100</source>
+        <translation>Contre-Attaque Magique %100</translation>
     </message>
     <message>
         <source>MP Turbo 10%</source>
@@ -5170,23 +4912,23 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Final Attack x1</source>
-        <translation>Attack Fanale x1</translation>
+        <translation>Attack Finale x1</translation>
     </message>
     <message>
         <source>Final Attack x2</source>
-        <translation>Attack Fanale x2</translation>
+        <translation>Attack Finale x2</translation>
     </message>
     <message>
         <source>Final Attack x3</source>
-        <translation>Attack Fanale x3</translation>
+        <translation>Attack Finale x3</translation>
     </message>
     <message>
         <source>Final Attack x4</source>
-        <translation>Attack Fanale x4</translation>
+        <translation>Attack Finale x4</translation>
     </message>
     <message>
         <source>Final Attack x5</source>
-        <translation>Attack Fanale x5</translation>
+        <translation>Attack Finale x5</translation>
     </message>
     <message>
         <source>Added Cut</source>
@@ -5246,7 +4988,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Manipulate</source>
-        <translation>Manip</translation>
+        <translation>Manipuler</translation>
     </message>
     <message>
         <source>Mime</source>
@@ -5254,7 +4996,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation>TalentE</translation>
+        <translation>Talents de l&apos;ennemi</translation>
     </message>
     <message>
         <source>Master Command</source>
@@ -5305,12 +5047,20 @@ is not a FF7 SaveGame.</source>
         <translation>Eclair2 (22mp)</translation>
     </message>
     <message>
+        <source>Bolt3(52mp)</source>
+        <translation>Eclair3 (52mp)</translation>
+    </message>
+    <message>
         <source>Cure (5mp)</source>
         <translation>Guéri (5mp)</translation>
     </message>
     <message>
         <source>Cure2 (24mp)</source>
         <translation>Guéri2 (24mp)</translation>
+    </message>
+    <message>
+        <source>Regen(30mp)</source>
+        <translation>Regen(30mp)</translation>
     </message>
     <message>
         <source>Cure3 (64mp)</source>
@@ -5326,7 +5076,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Resist (120mp)</source>
-        <translation>Résist. (120mp)</translation>
+        <translation>Résist (120mp)</translation>
     </message>
     <message>
         <source>Life (34mp)</source>
@@ -5338,7 +5088,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Sleepel (8mp)</source>
-        <translation>Slipel (8mp)</translation>
+        <translation>Sleepel (8mp)</translation>
     </message>
     <message>
         <source>Silence (24mp)</source>
@@ -5349,16 +5099,20 @@ is not a FF7 SaveGame.</source>
         <translation>Confus (18mp)</translation>
     </message>
     <message>
+        <source>Berserk (24mp)</source>
+        <translation>Folie (24mp)</translation>
+    </message>
+    <message>
         <source>Mini (10mp)</source>
         <translation>Mini (10mp)</translation>
     </message>
     <message>
         <source>Toad (14mp)</source>
-        <translation>Crapaud (14mp)</translation>
+        <translation>Grenouille (14mp)</translation>
     </message>
     <message>
         <source>Exit (16mp)</source>
-        <translation>Escapade (16mp)</translation>
+        <translation>Quitter (16mp)</translation>
     </message>
     <message>
         <source>Remove (99mp)</source>
@@ -5370,7 +5124,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Bio2 (36mp)</source>
-        <translation>Bio2 (36mp)</translation>
+        <translation>Bio2(36mp)</translation>
     </message>
     <message>
         <source>Bio3 (80mp)</source>
@@ -5378,7 +5132,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Demi (14mp)</source>
-        <translation>Demi (14mp)</translation>
+        <translation>Demi (14 mp)</translation>
     </message>
     <message>
         <source>Demi2 (33mp)</source>
@@ -5394,7 +5148,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Magic Barrier (24mp)</source>
-        <translation>BarrM (24mp)</translation>
+        <translation>Barrière Magique (24mp)</translation>
     </message>
     <message>
         <source>Reflect (30mp)</source>
@@ -5449,6 +5203,10 @@ is not a FF7 SaveGame.</source>
         <translation>Tornade (90mp)</translation>
     </message>
     <message>
+        <source>Flare(100mp)</source>
+        <translation>Eclat (100mp)</translation>
+    </message>
+    <message>
         <source>Full Cure (99mp)</source>
         <translation>GuériMax (99mp)</translation>
     </message>
@@ -5466,406 +5224,350 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Summon Choco/Mog x1 (14mp)</source>
-        <translation type="unfinished">Invocation Choco/Mog (14mp)</translation>
+        <translation>Invoque Choco/Mog x1 (14mp)</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x2 (14mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Choco/Mog x2 (14mp)</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x3 (14mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Choco/Mog x3 (14mp)</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x4 (14mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Choco/Mog x4 (14mp)</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x5 (14mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Choco/Mog x5 (14mp)</translation>
+    </message>
+    <message>
+        <source>Summon Shiva x1 (34mp)</source>
+        <translation>Invoque Shiva x1 (34mp)</translation>
+    </message>
+    <message>
+        <source>Summon Shiva x2 (34mp)</source>
+        <translation>Invoque Shiva x2 (34mp)</translation>
+    </message>
+    <message>
+        <source>Summon Shiva x3 (34mp)</source>
+        <translation>Invoque Shiva x3 (34mp)</translation>
+    </message>
+    <message>
+        <source>Summon Shiva x4 (34mp)</source>
+        <translation>Invoque Shiva x4 (34mp)</translation>
+    </message>
+    <message>
+        <source>Summon Shiva x5 (34mp)</source>
+        <translation>Invoque Shiva x5 (34mp)</translation>
     </message>
     <message>
         <source>Summon Ifrit x1 (34mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Ifrit x1 (34mp)</translation>
     </message>
     <message>
         <source>Summon Ifrit x2 (34mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Ifrit x2 (34mp)</translation>
     </message>
     <message>
         <source>Summon Ifrit x3 (34mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Ifrit x3 (34mp)</translation>
     </message>
     <message>
         <source>Summon Ifrit x4 (34mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Ifrit x4 (34mp)</translation>
     </message>
     <message>
         <source>Summon Ifrit x5 (34mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Ifrit x5 (34mp)</translation>
     </message>
     <message>
         <source>Summon Ramuh x1 (40mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Ramuh x1 (40mp)</translation>
     </message>
     <message>
         <source>Summon Ramuh x2 (40mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Ramuh x2 (40mp)</translation>
     </message>
     <message>
         <source>Summon Ramuh x3 (40mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Ramuh x3 (40mp)</translation>
     </message>
     <message>
         <source>Summon Ramuh x4 (40mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Ramuh x4 (40mp)</translation>
     </message>
     <message>
         <source>Summon Ramuh x5 (40mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Ramuh x5 (40mp)</translation>
     </message>
     <message>
         <source>Summon Titan x1 (46mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Titan x1 (46mp)</translation>
     </message>
     <message>
         <source>Summon Titan x2 (46mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Titan x2 (46mp)</translation>
     </message>
     <message>
         <source>Summon Titan x3 (46mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Titan x3 (46mp)</translation>
     </message>
     <message>
         <source>Summon Titan x4 (46mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Titan x4 (46mp)</translation>
     </message>
     <message>
         <source>Summon Titan x5 (46mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Titan x5 (46mp)</translation>
     </message>
     <message>
         <source>Summon Odin x1 (80mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Odin x1 (80mp)</translation>
     </message>
     <message>
         <source>Summon Odin x2 (80mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Odin x2 (80mp)</translation>
     </message>
     <message>
         <source>Summon Odin x3 (80mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Odin x3 (80mp)</translation>
     </message>
     <message>
         <source>Summon Odin x4 (80mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Odin x4 (80mp)</translation>
     </message>
     <message>
         <source>Summon Odin x5 (80mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Odin x5 (80mp)</translation>
     </message>
     <message>
         <source>Summon Leviathan x1 (78mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Leviathan x1 (78mp)</translation>
     </message>
     <message>
         <source>Summon Leviathan x2 (78mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Leviathan x2 (78mp)</translation>
     </message>
     <message>
         <source>Summon Leviathan x3 (78mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Leviathan x3 (78mp)</translation>
     </message>
     <message>
         <source>Summon Leviathan x4 (78mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Leviathan x4 (78mp)</translation>
     </message>
     <message>
         <source>Summon Leviathan x5 (78mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Leviathan x5 (78mp)</translation>
     </message>
     <message>
         <source>Summon Bahamut x1 (100mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Bahamut x1 (100mp)</translation>
     </message>
     <message>
         <source>Summon Bahamut x2 (100mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Bahamut x2(100mp)</translation>
     </message>
     <message>
         <source>Summon Bahamut x3 (100mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Bahamut x3 (100mp)</translation>
     </message>
     <message>
         <source>Summon Bahamut x4 (100mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Bahamut x4 (100mp)</translation>
     </message>
     <message>
         <source>Summon Bahamut x5 (100mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Bahamut x5 (100mp)</translation>
     </message>
     <message>
         <source>Summon Kujata x1 (110mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Kjata x1 (110mp)</translation>
     </message>
     <message>
         <source>Summon Kujata x2 (110mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Kjata x2 (110mp)</translation>
     </message>
     <message>
         <source>Summon Kujata x3 (110mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Kjata x3 (110mp)</translation>
     </message>
     <message>
         <source>Summon Kujata x4 (110mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Kjata x4 (110mp)</translation>
     </message>
     <message>
         <source>Summon Kujata x5 (110mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Kjata x5 (110mp)</translation>
     </message>
     <message>
         <source>Summon Alexander x1 (120mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Alexandre x1 (120mp)</translation>
     </message>
     <message>
         <source>Summon Alexander x2 (120mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Alexandre x2 (120mp)</translation>
     </message>
     <message>
         <source>Summon Alexander x3 (120mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Alexandre x3 (120mp)</translation>
     </message>
     <message>
         <source>Summon Alexander x4 (120mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Alexandre x4 (120mp)</translation>
     </message>
     <message>
         <source>Summon Alexander x5 (120mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Alexandre x5 (120mp)</translation>
     </message>
     <message>
         <source>Summon Phoenix x1 (180mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Phénix x1 (180mp)</translation>
     </message>
     <message>
         <source>Summon Phoenix x2 (180mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Phénix x2 (180mp)</translation>
     </message>
     <message>
         <source>Summon Phoenix x3 (180mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Phénix x3 (180mp)</translation>
     </message>
     <message>
         <source>Summon Phoenix x4 (180mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Phénix x4 (180mp)</translation>
     </message>
     <message>
         <source>Summon Phoenix x5 (180mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Phénix x5 (180mp)</translation>
     </message>
     <message>
         <source>Summon Neo Bahamut x1 (140mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Néo Bahamut x1 (140mp)</translation>
     </message>
     <message>
         <source>Summon Neo Bahamut x2 (140mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Néo Bahamut x2 (140mp)</translation>
     </message>
     <message>
         <source>Summon Neo Bahamut x3 (140mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Néo Bahamut x3 (140mp)</translation>
     </message>
     <message>
         <source>Summon Neo Bahamut x4 (140mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Néo Bahamut x4 (140mp)</translation>
     </message>
     <message>
         <source>Summon Neo Bahamut x5 (140mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Néo Bahamut x5 (140mp)</translation>
     </message>
     <message>
         <source>Summon Hades x1 (150mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Hadès x1 (150mp)</translation>
     </message>
     <message>
         <source>Summon Hades x2 (150mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Hadès x2 (150mp)</translation>
     </message>
     <message>
         <source>Summon Hades x3 (150mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Hadès x3 (150mp)</translation>
     </message>
     <message>
         <source>Summon Hades x4 (150mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Hadès x4 (150mp)</translation>
     </message>
     <message>
         <source>Summon Hades x5 (150mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Hadès x5 (150mp)</translation>
     </message>
     <message>
         <source>Summon Typhoon x1 (160mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Typhon x1 (160mp)</translation>
     </message>
     <message>
         <source>Summon Typhoon x2 (160mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Typhon x2 (160mp)</translation>
     </message>
     <message>
         <source>Summon Typhoon x3 (160mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Typhon x3 (160mp)</translation>
     </message>
     <message>
         <source>Summon Typhoon x4 (160mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Typhon x4 (160mp)</translation>
     </message>
     <message>
         <source>Summon Typhoon x5 (160mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Typhon x5 (160mp)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x1 (180mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Bahamut ZERO x1 (180mp)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x2 (180mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Bahamut ZERO x2 (180mp)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x3 (180mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Bahamut ZERO x3 (180mp)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x4 (180mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Bahamut ZERO x4 (180mp)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x5 (180mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque Bahamut ZERO x5 (180mp)</translation>
     </message>
     <message>
         <source>Summon KOTR x1 (250mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque CDLTR x1 (250mp)</translation>
     </message>
     <message>
         <source>Summon KOTR x2 (250mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque CDLTR x2 (250mp)</translation>
     </message>
     <message>
         <source>Summon KOTR x3 (250mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque CDLTR x3 (250mp)</translation>
     </message>
     <message>
         <source>Summon KOTR x4 (250mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque CDLTR x4 (250mp)</translation>
     </message>
     <message>
         <source>Summon KOTR x5 (250mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Invoque CDLTR x5 (250mp)</translation>
     </message>
     <message>
         <source>Master Summon</source>
         <translation>Invocation Maître</translation>
-    </message>
-    <message>
-        <source>Bolt3 (52mp)</source>
-        <translation>Eclair3 (52mp)</translation>
-    </message>
-    <message>
-        <source>Regen (30mp)</source>
-        <translation>Regen (30mp)</translation>
-    </message>
-    <message>
-        <source>Flare (100mp)</source>
-        <translation>Eclat (100mp)</translation>
-    </message>
-    <message>
-        <source>Berserk (28mp)</source>
-        <translation>Folie (28mp)</translation>
-    </message>
-    <message>
-        <source>Summon Shiva x1 (32mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Shiva x2 (32mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Shiva x3 (32mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Shiva x4 (32mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Shiva x5 (32mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Counter Rate 20%</source>
-        <translation>Contre 20%</translation>
-    </message>
-    <message>
-        <source>Counter Rate 40%</source>
-        <translation>Contre 40%</translation>
-    </message>
-    <message>
-        <source>Counter Rate 60%</source>
-        <translation>Contre 60%</translation>
-    </message>
-    <message>
-        <source>Counter Rate 80%</source>
-        <translation>Contre 80%</translation>
-    </message>
-    <message>
-        <source>Counter Rate 100%</source>
-        <translation>Contre 100%</translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate 30%</source>
-        <translation>Magie Contre 30%</translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate 40%</source>
-        <translation>Magie Contre 40%</translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate 60%</source>
-        <translation>Magie Contre 60%</translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate 80%</source>
-        <translation>Magie Contre 80%</translation>
-    </message>
-    <message>
-        <source>Magic Counter Rate 100%</source>
-        <translation>Magie Contre 100%</translation>
     </message>
 </context>
 <context>
     <name>Materia_Stats</name>
     <message>
         <source>MP:+% depending on level</source>
-        <translation type="unfinished"></translation>
+        <translation>MP:+% dépendant du niveau</translation>
     </message>
     <message>
         <source>HP:+% depending on level</source>
-        <translation type="unfinished"></translation>
+        <translation>HP:+% dépendant du niveau</translation>
     </message>
     <message>
         <source>Dex:+% depending on level</source>
-        <translation type="unfinished"></translation>
+        <translation>Vts:+% dépendant du niveau</translation>
     </message>
     <message>
         <source>Mag:+% depending on level</source>
-        <translation type="unfinished"></translation>
+        <translation>Mag:+% dépendant du niveau</translation>
     </message>
     <message>
         <source>Lck:+% depending on level</source>
-        <translation type="unfinished"></translation>
+        <translation>Chc:+% dépendant du niveau</translation>
     </message>
     <message>
         <source>Lck:+1</source>
@@ -5877,7 +5579,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Dex:+2</source>
-        <translation>Dex:+2</translation>
+        <translation>Vts:+2</translation>
     </message>
     <message>
         <source>Vit:+1</source>
@@ -5885,11 +5587,15 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>HP:-2% MP:+2% Str:-1 Mag:+1</source>
-        <translation>HP: -2% MP+2% FRC:-1 MAG +1</translation>
+        <translation>HP:-2% MP:+2% Frc:-1 Mag:+1</translation>
     </message>
     <message>
         <source>HP:-5% MP:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation>HP:-5% MP:+5% Frc:-2 Dfs:-1 Mag:+2 Esp:+1</translation>
+        <translation>HP:-5% MP:+5% Str:-2 Dfs:-1 Mag:+2 Esp:+1</translation>
+    </message>
+    <message>
+        <source>HP:-5% MP:+5% Str:-2 Vit -1 Mag:+2 Spi:+1</source>
+        <translation>HP:-5% MP:+5% Dfs:-2 Dfs -1 Mag:+2 Esp:+1</translation>
     </message>
     <message>
         <source>HP:-10% MP:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
@@ -5924,63 +5630,67 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Select A Directory To Save FF7 PC Saves</source>
-        <translation type="unfinished">Sélectionnez un répertoire pour enregistrer FF7 PC Sauvegarde</translation>
+        <translation>Sélectionnez un répertoire pour enregistrer FF7 PC Sauvegarde</translation>
     </message>
     <message>
         <source>Select A Directory To Save mcd/mcr saves</source>
-        <translation type="unfinished">Sélectionnez un répertoire pour enregistrer mcd / MCR permet d&apos;économiser</translation>
+        <translation>Sélectionnez un répertoire pour enregistrer les sauvegardes mcd / MCR</translation>
     </message>
     <message>
         <source>Select A Directory To Load FF7 PC Saves From</source>
-        <translation type="unfinished">Sélectionnez un répertoire à la charge FF7 PC évite de</translation>
+        <translation>Sélectionnez un répertoire pour charger les sauvegardes FF7 PC</translation>
     </message>
     <message>
         <source>Select A Directory To Export FF7 PC Saves</source>
-        <translation type="unfinished">Sélectionnez un répertoire à exporter FF7 Enregistre PC</translation>
+        <translation>Sélectionnez un répertoire pour sauvegarder les sauvegardes FF7 PC</translation>
     </message>
     <message>
         <source>Pc Save Options</source>
-        <translation type="unfinished">PC Enregistrer les options</translation>
+        <translation>Sauvegarde PC Options</translation>
     </message>
     <message>
         <source>Set Load And Save Paths.</source>
-        <translation type="unfinished">Charge définir et enregistrer des chemins.</translation>
+        <translation>Définir les emplacements de chargement et de sauvegarde.</translation>
     </message>
     <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
-        <translation type="unfinished">Sélectionnez un enregistrement par défaut du jeu (PSX Enregistrer seulement)</translation>
+        <translation>Sélectionnez une sauvegarde par défaut (Doit être PSX non-identifiée)</translation>
     </message>
     <message>
         <source>Stats / New Game </source>
-        <translation type="unfinished">Stats / Nouveau Jeu</translation>
+        <translation>Stats / Nouvelle partie</translation>
     </message>
     <message>
         <source>File To load When &quot;New Game&quot; is used</source>
-        <translation type="unfinished">Fichier à charger lorsque &quot;New Game &quot; est utilisée</translation>
+        <translation>Fichier à charger lorsque &quot;New Game &quot; est utilisée</translation>
     </message>
     <message>
         <source>Location To Save Character Stat Files</source>
-        <translation type="unfinished">Emplacement pour enregistrer les fichiers de caractères Stat</translation>
+        <translation>Emplacement pour enregistrer les fichiers de stats de personnages</translation>
     </message>
     <message>
         <source>Select A Location To Save Character Stat Files</source>
-        <translation type="unfinished">Sélectionnez un emplacement pour enregistrer les fichiers de caractères Stat</translation>
+        <translation>Sélectionnez un emplacement pour charger les fichiers de stats de personnages</translation>
     </message>
     <message>
         <source> Save Options</source>
-        <translation type="unfinished"> Options Enregistrer</translation>
+        <translation> Options de sauvegarde</translation>
     </message>
     <message>
         <source> Folder To Load FF7 Saves (all types) from</source>
-        <translation type="unfinished">Dossier pour charger Enregistre FF7 (tous types) à partir de</translation>
+        <translation>Dossier pour charger les sauvegardes FF7 (tout types) à partir de</translation>
+    </message>
+    <message>
+        <source> Folder To Load/Save Emulator Cards (.mcd/.mcr) </source>
+        <translation>Dossier pour charger / sauvegarder les sauvegardes émulateur (.mcd / .mcr)</translation>
     </message>
     <message>
         <source>Folder To Save Pc (.ff7) Save Games</source>
-        <translation type="unfinished">Dossier pour sauvegarder Pc (. FF7) Sauvegarder Jeux</translation>
+        <translation>Dossier pour importer les sauvegardes PC (.FF7)</translation>
     </message>
     <message>
         <source>Folder To Export Pc (.ff7) Save Games</source>
-        <translation type="unfinished">Dossier à exporter Pc (. FF7) Sauvegarder Jeux</translation>
+        <translation>Dossier pour exporter les sauvegardes PC (.FF7)</translation>
     </message>
     <message>
         <source>&amp;Ok</source>
@@ -5988,11 +5698,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Main Window Background Color</source>
-        <translation type="unfinished">Couleur principale de fond de la fenêtre</translation>
+        <translation>Couleur principale de fond de la fenêtre</translation>
     </message>
     <message>
         <source>preview</source>
-        <translation type="unfinished">extrait</translation>
+        <translation>extrait</translation>
     </message>
     <message>
         <source>Color 1</source>
@@ -6021,38 +5731,6 @@ is not a FF7 SaveGame.</source>
     <message>
         <source>Reset to Default</source>
         <translation>Réinitialiser</translation>
-    </message>
-    <message>
-        <source> Folder To Load/Save Emulator Memory Cards  </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set Applications Font</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>9Pt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>10Pt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>11Pt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>12Pt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>13Pt</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>14Pt</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6158,7 +5836,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>The Final Fantasy VII Save Game Editor</source>
-        <translation>L&apos;Éditeur de jeu sauvé FF7</translation>
+        <translation>L&apos;Éditeur de sauvegardes FF7</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -6202,35 +5880,55 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: This Fancy About Dialog</source>
-        <translation>Nouveau: ce dialogue a propos géniale</translation>
+        <translation>Nouveau: Ce nouveau dialogue &quot;À propos de&quot;</translation>
     </message>
     <message>
         <source>New: Main Window Resizeable</source>
-        <translation>Nouveau: vitre principale redimmensionable</translation>
+        <translation>Nouveau: Fenêtre principale redimensionable</translation>
     </message>
     <message>
         <source>New: Psx Icons Show In Region Info</source>
-        <translation>Nouveau: icônes PSX apparaisent dans l&apos;info de région</translation>
+        <translation>Nouveau: Icônes PSX apparaisent dans l&apos;info de région</translation>
     </message>
     <message>
         <source>New: Some Options have Ability to reset to default</source>
-        <translation>Nouveau: des options peuvent remettre à défaut</translation>
+        <translation>Nouveau: Des options peuvent être remises à défaut</translation>
     </message>
     <message>
         <source>Fixed: No longer export non ff7 slots to pc</source>
-        <translation>Réparé: n&apos;exporte plus des slot pas appartenant à FF7 vers le PC</translation>
+        <translation>Réparé: N&apos;exporte plus de sauvegardes non-FF7 vers PC</translation>
     </message>
     <message>
         <source>Fixed: Pc Header Mask Aware</source>
-        <translation>Réparé: Masque-tête Pc Aware</translation>
+        <translation>Réparé: Prévu pour le cache en-tête</translation>
     </message>
     <message>
         <source>Fixed: Saves Will Display Slots Correctly</source>
-        <translation>Réparé: Sauvegarde Will Afficher Slots correctement</translation>
+        <translation>Réparé: Sauvegardes affichent les slots correctement</translation>
     </message>
     <message>
         <source>License</source>
         <translation>License</translation>
+    </message>
+    <message>
+        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;This program is free software: you can redistribute it and/or modify&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;it under the terms of the GNU General Public License as published by&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;the Free Software Foundation, either version 3 of the License, or&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;(at your option) any later version.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;This program is distributed in the hope that it will be useful,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;but WITHOUT ANY WARRANTY; without even the implied warranty of&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;GNU General Public License for more details.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;You should have received a copy of the GNU General Public License&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;along with this program.  If not, see &lt;/span&gt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt; text-decoration: underline; color:#508ed8;&quot;&gt;&amp;lt;http://www.gnu.org/licenses/&amp;gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation></translation>
     </message>
     <message>
         <source>&amp;Close</source>
@@ -6257,20 +5955,24 @@ p, li { white-space: pre-wrap; }
         <translation>Programmeur principal</translation>
     </message>
     <message>
+        <source>checksuming fix, initial stages of psx load/save</source>
+        <translation>fix de checksum, stages initiaux du chargement/sauvegarde psx</translation>
+    </message>
+    <message>
         <source>Bug Testers</source>
         <translation>Bug Testeurs</translation>
     </message>
     <message>
         <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation type="unfinished"></translation>
+        <translation>Principal testeur de bugs pour win/gnome + en jeu</translation>
     </message>
     <message>
         <source>Mac Os Tester</source>
-        <translation type="unfinished"></translation>
+        <translation>Tester Mac Os</translation>
     </message>
     <message>
         <source>Windows Tester</source>
-        <translation type="unfinished"></translation>
+        <translation>Tester Windows</translation>
     </message>
     <message>
         <source>Translators</source>
@@ -6290,7 +5992,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Buff Icons (and one or two more) by </source>
-        <translation type="unfinished"></translation>
+        <translation>Icônes spéciaux (et un ou deux de plus) par </translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -6306,7 +6008,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Thanks To</source>
-        <translation>Merci Pour</translation>
+        <translation>Merci À</translation>
     </message>
     <message>
         <source>A Big Thank You  To:</source>
@@ -6314,208 +6016,132 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct,item/materia lists  and string conversion function. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation>Merci d &apos;avoir, en fournissant la source de Jenova. Ce programme utilise des versions modifiées de savefile Jenova struct, les listes d&apos;articles materia / et la fonction de conversion de chaîne. L&apos;accès au code source, il a sauvé beaucoup de temps durant les premiers stades de développement.</translation>
+        <translation>Merci pour avoir donné la source de Jenova. Ce programme utilise des versions modifiées de la structure de sauvegarde de Jenova, les listes des élément/matérias et la fonction de conversion des strings. L&apos;accès au code source m&apos;a sauvé énormément de temps durant les premières phases de développement.</translation>
     </message>
     <message>
         <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
-        <translation>Merci d &apos;avoir, toute l&apos;aide Avec Chocobo Noir. Traduire, les tests de bogues, w aider / data trouver dans le savemap. essais thème, etc, il fait beaucoup pour aider.</translation>
+        <translation>Merci pour toute l&apos;aide avec Black Chocobo. Traduction , Test de bugs, aide pour trouver des données dans la savemap. Test des thèmes, etc. il fait beaucoup pour aider.</translation>
     </message>
     <message>
         <source>Thank You For, the old checksum program</source>
-        <translation>Merci d &apos;avoir, le programme de contrôle vieux</translation>
+        <translation>Merci pour, l&apos;ancien programme de checksum</translation>
     </message>
     <message>
         <source>Thank You For, Helping me see the light of stupid errors. </source>
-        <translation>Merci d &apos;avoir, à me rendre la lumière des erreurs stupides.</translation>
+        <translation>Merci pour m&apos;avoir montré la solution à des erreurs stupides.</translation>
     </message>
     <message>
         <source>Thank You For, Providing a Better understanding of Qt&apos;s Functions When the help files failed.</source>
-        <translation>Merci d &apos;avoir, une meilleure compréhension des fonctions de Qt Lorsque les fichiers d&apos;aide ont échoué.</translation>
+        <translation>Merci pour m&apos;avoir donné une meilleure compréhension des fonctions de Qt lorsque les fichiers d&apos;aide se sont avérés inutiles.</translation>
     </message>
     <message>
         <source>Cause She&apos;s Just Awesome!</source>
-        <translation>Parce qu&apos;elle est juste impressionnant!</translation>
+        <translation>Parce qu&apos;elle est tout simplement incroyable!</translation>
     </message>
     <message>
         <source>Early Win32 Tester</source>
-        <translation type="unfinished"></translation>
+        <translation>Testeur Win32 de début</translation>
     </message>
     <message>
         <source>save icon class used to make the psx icon</source>
-        <translation type="unfinished"></translation>
+        <translation>la classe des icônes de sauvegardes pour faire l&apos;icône psx</translation>
     </message>
     <message>
         <source>New: Using Myst6re SaveIcon Class</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Utilisation de la classe des icônes de sauvegarde de Myst6re</translation>
     </message>
     <message>
         <source>Fixed: Items/Materia Names And Skill Now Translated</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fixed: Titan/Ramuh Stats Backward.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Save and Save as are now both allowed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Change Slot Posin in Debug mode (MC only) </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Support for .vgs .mem and .gme formats</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Fancy Character Materia on Equipment tab</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Toggle Field Help and Battle Target Labels</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Revive Ruby Weapon &amp; Emerald Weapon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Basic Setting of World Locations In Debug</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Added .bin .mc .mci .ps .psm .dff  to mcr/mcd list</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fixed: Psx and Psv Region Detection</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Previous Versions</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>inital psx save/load; fixed checksum</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fixed: Materia Slots Display Left To Right (see ingame)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;This program is free software: you can redistribute it and/or modify&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;it under the terms of the GNU General Public License as published by&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;the Free Software Foundation, either version 3 of the License, or&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;(at your option) any later version.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;This program is distributed in the hope that it will be useful,&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;but WITHOUT ANY WARRANTY; without even the implied warranty of&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;GNU General Public License for more details.&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;You should have received a copy of the GNU General Public License&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;along with this program.  If not, see &lt;/span&gt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt; text-decoration: underline; color:#508ed8;&quot;&gt;&amp;lt;http://www.gnu.org/licenses/&amp;gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Set Font For Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Corrigé: Les noms des Matérias/Éléments et capacités maintenant traduits</translation>
     </message>
 </context>
 <context>
     <name>errbox</name>
     <message>
         <source>Non Final Fantasy VII Slot Detected</source>
-        <translation type="unfinished"></translation>
+        <translation>Aucun slot de Final Fantasy VII détecté</translation>
     </message>
     <message>
         <source>Please Select An Action To Continue</source>
-        <translation type="unfinished">S&apos;il vous plaît sélectionner une action à poursuivre</translation>
+        <translation>Veuillez sélectionner une action afin de poursuivre</translation>
     </message>
     <message>
         <source>Slot Preview</source>
-        <translation type="unfinished"></translation>
+        <translation>Prévisionnement du slot</translation>
     </message>
     <message>
         <source>Region String</source>
-        <translation type="unfinished">Région</translation>
+        <translation>Région</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Texte</translation>
     </message>
     <message>
         <source>&amp;Previous Slot</source>
-        <translation type="unfinished">Slot &amp;Précédent</translation>
+        <translation>Slot &amp;Précédent</translation>
     </message>
     <message>
         <source>View Anyway </source>
-        <translation type="unfinished"></translation>
+        <translation>Visionner malgré tout</translation>
     </message>
     <message>
         <source>    &amp;Next Slot</source>
-        <translation type="unfinished">Slot Suiva&amp;nt</translation>
+        <translation>Slot Suiva&amp;nt</translation>
     </message>
     <message>
         <source>&amp;Export As Raw PSX</source>
-        <translation type="unfinished">Sauv&amp;egarde PSX</translation>
+        <translation>&amp;Exporter en tant que Sauvegarde PSX</translation>
     </message>
     <message>
         <source>Your At Slot 1</source>
-        <translation type="unfinished">Votre À Slot 1</translation>
+        <translation>Vous êtes au Slot 1</translation>
     </message>
     <message>
         <source>Sorry There is no Previous Slot</source>
-        <translation type="unfinished">Désolé, il n&apos;y a pas de logement précédent</translation>
+        <translation>Désolé, il n&apos;y a pas de slot précédent</translation>
     </message>
     <message>
         <source>Save Raw PSX File</source>
-        <translation type="unfinished">Enregistrer le fichier Raw PSX</translation>
+        <translation>Enregistrer le fichier Raw PSX</translation>
     </message>
     <message>
         <source>All Files(*)</source>
-        <translation type="unfinished">Tous les fichiers(*)</translation>
+        <translation>Tous les fichiers(*)</translation>
     </message>
     <message>
         <source>Black Chocobo</source>
-        <translation type="unfinished">Black Chocobo</translation>
+        <translation>Black Chocobo</translation>
     </message>
     <message>
         <source>Cannot write file %1:
 %2.</source>
-        <translation type="unfinished">Impossible d&apos;écrire dans le fichier %1:
+        <translation>Impossible d&apos;écrire dans le fichier %1:
 %2.</translation>
     </message>
     <message>
         <source>Save Successfully</source>
-        <translation type="unfinished">Ajoutez le succès</translation>
+        <translation>Enregistré avec succès</translation>
     </message>
     <message>
         <source>File Saved Successfully, Going Back To The Selection Dialog</source>
-        <translation type="unfinished">Fichier enregistré avec succès, pour revenir à la boîte de sélection</translation>
+        <translation>Fichier enregistré avec succès, retour à la boîte de sélection</translation>
     </message>
     <message>
         <source>Your At Slot 15</source>
-        <translation type="unfinished">Votre niveau de la fente 15</translation>
+        <translation>Vous êtes au slot 15</translation>
     </message>
     <message>
         <source>Sorry There is no Next Slot</source>
-        <translation type="unfinished">Désolé, il n&apos;y a pas de case suivante</translation>
+        <translation>Désolé, il n&apos;y a pas de slot suivant</translation>
     </message>
     <message>
         <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Gauche</translation>
     </message>
     <message>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Alt+Droite</translation>
     </message>
 </context>
 </TS>
