@@ -4387,7 +4387,7 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Ultimate Weapon ?</source>
-        <translation>¿ Arma Últma ?</translation>
+        <translation>¿ Arma Última ?</translation>
     </message>
     <message>
         <source>Emerlad Weapon ?</source>
@@ -4463,19 +4463,19 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby / Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Diamante / Última / Rubí / Arma</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Arma Diamante / Última / Rubí</translation>
     </message>
     <message>
         <source>Place UNKNOWN</source>
-        <translation type="unfinished"></translation>
+        <translation>Colocar INDEFINIDO</translation>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Colocar Arma Diamante / Última / Rubí</translation>
     </message>
 </context>
 <context>
@@ -5465,7 +5465,7 @@ no es una partida guardada de FF7</translation>
     </message>
     <message>
         <source>Ultima (130mp)</source>
-        <translation>Ultima (130pm)</translation>
+        <translation>Última (130pm)</translation>
     </message>
     <message>
         <source>Master Magic</source>
