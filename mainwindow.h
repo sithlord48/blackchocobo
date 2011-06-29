@@ -478,11 +478,11 @@ private slots:
     void on_sub_y_valueChanged(int);
     void on_sub_z_valueChanged(int);
 
-    void on_rw_x_valueChanged(int);
-    void on_rw_y_valueChanged(int);
-    void on_rw_z_valueChanged(int);
-    void on_rw_id_valueChanged(int);
-    void on_rw_angle_valueChanged(int);
+    void on_durw_x_valueChanged(int);
+    void on_durw_y_valueChanged(int);
+    void on_durw_z_valueChanged(int);
+    void on_durw_id_valueChanged(int);
+    void on_durw_angle_valueChanged(int);
 
     void on_uw_x_valueChanged(int);
     void on_uw_y_valueChanged(int);

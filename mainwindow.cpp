@@ -4547,8 +4547,8 @@ void MainWindow::testdata_refresh()
     case 4: ui->slide_world_x->setValue(ff7.slot[s].uw_world & 0x7FFFF);
             ui->slide_world_y->setValue(ff7.slot[s].uw_world2& 0x3FFFF);
             break;
-    case 5: ui->slide_world_x->setValue(ff7.slot[s].rw_world & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].rw_world2& 0x3FFFF);
+    case 5: ui->slide_world_x->setValue(ff7.slot[s].durw_world & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].durw_world2& 0x3FFFF);
             break;
     case 6: ui->slide_world_x->setValue(ff7.slot[s].ew_world & 0x7FFFF);
             ui->slide_world_y->setValue(ff7.slot[s].ew_world2& 0x3FFFF);
@@ -4561,11 +4561,11 @@ void MainWindow::testdata_refresh()
     ui->leader_y->setValue((ff7.slot[s].l_world2) & 0x3FFFF);
     ui->leader_z->setValue((ff7.slot[s].l_world2) >> 18);
 
-    ui->rw_x->setValue((ff7.slot[s].rw_world) & 0x7FFFF);
-    ui->rw_id->setValue((ff7.slot[s].rw_world >> 19)&0x1F);
-    ui->rw_angle->setValue((ff7.slot[s].rw_world) >> 24);
-    ui->rw_y->setValue((ff7.slot[s].rw_world2) & 0x3FFFF);
-    ui->rw_z->setValue((ff7.slot[s].rw_world2) >> 18);
+    ui->durw_x->setValue((ff7.slot[s].durw_world) & 0x7FFFF);
+    ui->durw_id->setValue((ff7.slot[s].durw_world >> 19)&0x1F);
+    ui->durw_angle->setValue((ff7.slot[s].durw_world) >> 24);
+    ui->durw_y->setValue((ff7.slot[s].durw_world2) & 0x3FFFF);
+    ui->durw_z->setValue((ff7.slot[s].durw_world2) >> 18);
 
     ui->ew_x->setValue((ff7.slot[s].ew_world) & 0x7FFFF);
     ui->ew_id->setValue((ff7.slot[s].ew_world >> 19)&0x1F);
@@ -5069,17 +5069,17 @@ void MainWindow::on_sub_y_valueChanged(int value)
 }}
 
 //Ruby world stuff 4
-void MainWindow::on_rw_id_valueChanged(int value){if(!load){ff7.slot[s].rw_world = (ui->rw_x->value()  | value << 19 | ui->rw_angle->value() <<24);}}
-void MainWindow::on_rw_angle_valueChanged(int value){if(!load){ff7.slot[s].rw_world = (ui->rw_x->value()  | ui->rw_id->value() << 19 | value <<24);}}
-void MainWindow::on_rw_z_valueChanged(int value){if(!load){ff7.slot[s].rw_world2 = (ui->rw_y->value() | value << 18);}}
-void MainWindow::on_rw_x_valueChanged(int value)
+void MainWindow::on_durw_id_valueChanged(int value){if(!load){ff7.slot[s].durw_world = (ui->durw_x->value()  | value << 19 | ui->durw_angle->value() <<24);}}
+void MainWindow::on_durw_angle_valueChanged(int value){if(!load){ff7.slot[s].durw_world = (ui->durw_x->value()  | ui->durw_id->value() << 19 | value <<24);}}
+void MainWindow::on_durw_z_valueChanged(int value){if(!load){ff7.slot[s].durw_world2 = (ui->durw_y->value() | value << 18);}}
+void MainWindow::on_durw_x_valueChanged(int value)
 {if(!load){
-    ff7.slot[s].rw_world = (value | ui->rw_id->value() << 19 | ui->rw_angle->value() << 24);
+    ff7.slot[s].durw_world = (value | ui->durw_id->value() << 19 | ui->durw_angle->value() << 24);
      if(ui->combo_map_controls->currentIndex()==4){load=true;ui->slide_world_x->setValue(value);load=false;}
 }}
-void MainWindow::on_rw_y_valueChanged(int value)
+void MainWindow::on_durw_y_valueChanged(int value)
 {if(!load){
-    ff7.slot[s].rw_world2 = (value | ui->rw_z->value() << 18);
+    ff7.slot[s].durw_world2 = (value | ui->durw_z->value() << 18);
      if(ui->combo_map_controls->currentIndex()==4){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
 //emerald world 5
@@ -5130,8 +5130,8 @@ void MainWindow::on_combo_map_controls_currentIndexChanged(int index)
     case 4: ui->slide_world_x->setValue(ff7.slot[s].uw_world  & 0x7FFFF);
             ui->slide_world_y->setValue(ff7.slot[s].uw_world2 & 0x3FFFF);
             break;
-    case 5: ui->slide_world_x->setValue(ff7.slot[s].rw_world  & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].rw_world2 & 0x3FFFF);
+    case 5: ui->slide_world_x->setValue(ff7.slot[s].durw_world  & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].durw_world2 & 0x3FFFF);
             break;
     case 6: ui->slide_world_x->setValue(ff7.slot[s].ew_world  & 0x7FFFF);
             ui->slide_world_y->setValue(ff7.slot[s].ew_world2 & 0x3FFFF);
@@ -5148,7 +5148,7 @@ void MainWindow::on_slide_world_x_valueChanged(int value)
     case 2: ui->bh_x->setValue(value);      break;
     case 3: ui->sub_x->setValue(value);     break;
     case 4: ui->uw_x->setValue(value);      break;
-    case 5: ui->rw_x->setValue(value);      break;
+    case 5: ui->durw_x->setValue(value);      break;
     case 6: ui->ew_x->setValue(value);      break;
     }
 }}
@@ -5162,7 +5162,7 @@ void MainWindow::on_slide_world_y_valueChanged(int value)
     case 2: ui->bh_y->setValue(value);      break;
     case 3: ui->sub_y->setValue(value);     break;
     case 4: ui->uw_y->setValue(value);      break;
-    case 5: ui->rw_y->setValue(value);      break;
+    case 5: ui->durw_y->setValue(value);      break;
     case 6: ui->ew_y->setValue(value);      break;
     }
 
@@ -5176,8 +5176,8 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
     menu.addAction(tr("Place Tiny Bronco/Chocobo"));
     menu.addAction(tr("Place Buggy/Highwind"));
     menu.addAction(tr("Place Sub"));
-    menu.addAction(tr("Place Ultimate Weapon?"));
-    menu.addAction(tr("Place Ruby Weapon?"));
+    menu.addAction(tr("Place UNKNOWN"));
+    menu.addAction(tr("Place Diamond/Ultimate/Ruby Weapon"));
     menu.addAction(tr("Place Emerald Weapon?"));
     sel = menu.exec(ui->world_map_view->mapToGlobal(pos));
     if(sel==0){return;}
@@ -5201,15 +5201,15 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
          ui->sub_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
          ui->sub_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
     }
-    else if(sel->text()==tr("Place Ultimate Weapon?"))
+    else if(sel->text()==tr("Place UNKNOWN"))
     {
          ui->uw_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
          ui->uw_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
     }
-    else if(sel->text()==tr("Place Ruby Weapon?"))
+    else if(sel->text()==tr("Place Diamond/Ultimate/Ruby Weapon"))
     {
-         ui->rw_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
-         ui->rw_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
+         ui->durw_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
+         ui->durw_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
     }
     else if(sel->text()==tr("Place Emerald Weapon?"))
     {

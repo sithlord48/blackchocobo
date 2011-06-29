@@ -4390,10 +4390,6 @@ no es una partida guardada de FF7</translation>
         <translation>¿ Arma Últma ?</translation>
     </message>
     <message>
-        <source>Ruby Weapon ?</source>
-        <translation>¿ Arma Rubí ?</translation>
-    </message>
-    <message>
         <source>Emerlad Weapon ?</source>
         <translation>¿ Arma Esmeralda ?</translation>
     </message>
@@ -4434,10 +4430,6 @@ no es una partida guardada de FF7</translation>
         <translation>¿Arma Última?</translation>
     </message>
     <message>
-        <source>Ruby Weapon?</source>
-        <translation>¿Arma Rubí?</translation>
-    </message>
-    <message>
         <source>Emerald Weapon?</source>
         <translation>¿Arma Esmeralda?</translation>
     </message>
@@ -4458,14 +4450,6 @@ no es una partida guardada de FF7</translation>
         <translation>Colocar Submarino</translation>
     </message>
     <message>
-        <source>Place Ultimate Weapon?</source>
-        <translation>¿Colocar Arma Última?</translation>
-    </message>
-    <message>
-        <source>Place Ruby Weapon?</source>
-        <translation>¿Colocar Arma Rubí?</translation>
-    </message>
-    <message>
         <source>Place Emerald Weapon?</source>
         <translation>¿Colocar Arma Esmeralda?</translation>
     </message>
@@ -4476,6 +4460,22 @@ no es una partida guardada de FF7</translation>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PS3.</source>
         <translation>Este archivo no tiene un checksum actualizado. No funcionará en tu PS3.</translation>
+    </message>
+    <message>
+        <source>Diamond / Ultimate / Ruby / Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diamond / Ultimate / Ruby Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place UNKNOWN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place Diamond/Ultimate/Ruby Weapon</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

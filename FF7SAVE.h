@@ -443,20 +443,20 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 z_32[52];            // [0x0EF5] UNKNOWN DATA
     quint8 tut_save;            // [0x0F29] Have we seen save tut ? 0x3A true , 0x32 false
     quint8 z_33[50];            // [0x0F2A] UNKNOWN DATA
-    quint32 l_world;            // [0x0F5C] coords of the leader on the world map part 1 z ad model id + angle
-    quint32 l_world2;           // [0x0F60] leader coords part 2
-    quint32 uw_world;           // [0x0F64] ultimate weapon? coords part 1
-    quint32 uw_world2;          // [0x0F68] ultimate weapon? coords part2
+    quint32 l_world;            // [0x0F5C] coords of the leader on the world map part 1 (X, id, angle)
+    quint32 l_world2;           // [0x0F60] leader coords part 2 (Y,Z)
+    quint32 uw_world;           // [0x0F64] unknown? coords part 1
+    quint32 uw_world2;          // [0x0F68] unknown weapon? coords part2
     quint32 tc_world;           // [0x0F6C] tiny bronco/chocobo coords part 1
     quint32 tc_world2;          // [0x0F70] tiny bronco/chocobo coords part2
     quint32 bh_world;           // [0x0F74] Bronco / highwind coords 1
     quint32 bh_world2;          // [0x0F78] brono /highwind coords 2
     quint32 sub_world;          // [0x0F7C] sub on world part 1
     quint32 sub_world2;         // [0x0F80] sub on world part 2
-    quint32 rw_world;         // [0x0F84] ruby?
-    quint32 rw_world2;        // [0x0F8C] ruby2
-    quint32 ew_world;      // [0x0F90] emerald?
-    quint32 ew_world2;     // [0x0F94] emerald2?
+    quint32 durw_world;         // [0x0F84] Diamond/ Ultimate And Ruby Weapons Coords.
+    quint32 durw_world2;        // [0x0F8C] Diamond/ Ultimate And Ruby Weapons Coords.
+    quint32 ew_world;           // [0x0F90] emerald?
+    quint32 ew_world2;          // [0x0F94] emerald2?
     quint8 z_55[240];           // [0x0F84] UNKNOWN (Start of more coords.. )
     FF7CHOCOBO choco56[2];      // [0x1084] Chocobo slots 5-6
     quint16 phsmask;            // [0x10A4] who is allowed in the phs
