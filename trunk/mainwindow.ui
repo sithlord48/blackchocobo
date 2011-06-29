@@ -4534,8 +4534,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>443</width>
-             <height>436</height>
+             <width>401</width>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="label">
@@ -23432,7 +23432,7 @@ p, li { white-space: pre-wrap; }
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>0</y>
+                 <y>-66</y>
                  <width>256</width>
                  <height>584</height>
                 </rect>
@@ -24410,7 +24410,7 @@ p, li { white-space: pre-wrap; }
                    </size>
                   </property>
                   <property name="title">
-                   <string>Ruby Weapon ?</string>
+                   <string>Diamond / Ultimate / Ruby / Weapon</string>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_8">
                    <property name="topMargin">
@@ -24435,7 +24435,7 @@ p, li { white-space: pre-wrap; }
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="rw_x">
+                      <widget class="QSpinBox" name="durw_x">
                        <property name="minimumSize">
                         <size>
                          <width>62</width>
@@ -24477,7 +24477,7 @@ p, li { white-space: pre-wrap; }
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="rw_y">
+                      <widget class="QSpinBox" name="durw_y">
                        <property name="minimumSize">
                         <size>
                          <width>62</width>
@@ -24519,7 +24519,7 @@ p, li { white-space: pre-wrap; }
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="rw_z">
+                      <widget class="QSpinBox" name="durw_z">
                        <property name="minimumSize">
                         <size>
                          <width>36</width>
@@ -24555,7 +24555,7 @@ p, li { white-space: pre-wrap; }
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="rw_angle">
+                      <widget class="QSpinBox" name="durw_angle">
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -24576,7 +24576,7 @@ p, li { white-space: pre-wrap; }
                       </widget>
                      </item>
                      <item>
-                      <widget class="QSpinBox" name="rw_id">
+                      <widget class="QSpinBox" name="durw_id">
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -24845,7 +24845,7 @@ p, li { white-space: pre-wrap; }
                     </item>
                     <item>
                      <property name="text">
-                      <string>Ruby Weapon?</string>
+                      <string>Diamond / Ultimate / Ruby Weapon</string>
                      </property>
                     </item>
                     <item>

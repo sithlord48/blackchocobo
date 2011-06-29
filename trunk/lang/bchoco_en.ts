@@ -4378,10 +4378,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ruby Weapon ?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Emerlad Weapon ?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4422,10 +4418,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ruby Weapon?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Emerald Weapon?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4446,14 +4438,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Place Ultimate Weapon?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Place Ruby Weapon?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Place Emerald Weapon?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4463,6 +4447,22 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PS3.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diamond / Ultimate / Ruby / Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diamond / Ultimate / Ruby Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place UNKNOWN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Place Diamond/Ultimate/Ruby Weapon</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
