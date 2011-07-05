@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>375</width>
-    <height>402</height>
+    <width>373</width>
+    <height>400</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -462,6 +462,41 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>Updated: World Map ruby-&gt;diamond/ulitmate/ruby</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fixed: Gil Sb Limit Corrected</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fixed: Missing Keycard 66 in keyitems list</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Update:Almost All Spinboxes now &quot;Wrapping&quot;</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Previous Versions</string>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="textAlignment">
+           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New: Basic Setting of World Locations In Debug</string>
           </property>
          </item>
@@ -528,21 +563,6 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>Fixed: Items/Materia Names And Skill Now Translated</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Previous Versions</string>
-          </property>
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <underline>true</underline>
-           </font>
-          </property>
-          <property name="textAlignment">
-           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
           </property>
          </item>
          <item>
@@ -635,7 +655,7 @@ p, li { white-space: pre-wrap; }
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-176</y>
+            <y>0</y>
             <width>349</width>
             <height>392</height>
            </rect>

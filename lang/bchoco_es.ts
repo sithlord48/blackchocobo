@@ -3861,7 +3861,7 @@ p, li { white-space: pre-wrap; }
         <source>File: %1 
 is not a FF7 SaveGame.</source>
         <translation>El archivo %1 
-no es una partida guardada de FF7</translation>
+no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
@@ -4246,24 +4246,12 @@ no es una partida guardada de FF7</translation>
         <translation>Guardar archivo de guardado deFinal Fantasy 7 unidad Dex</translation>
     </message>
     <message>
-        <source>FF7 VGS SaveGame(*.gme)</source>
-        <translation>Archivo de guardado FF7 VGS(*.gme)</translation>
-    </message>
-    <message>
         <source>Save Final Fantasy 7 VGS SaveGame</source>
         <translation>Guardar archivo de guardado Final Fantasy 7 VGS</translation>
     </message>
     <message>
-        <source>FF7 MC SaveGame(*.vgs *.mem)</source>
-        <translation>Archivo de guardado FF7 MC(*.vgs *.mem)</translation>
-    </message>
-    <message>
         <source>Save Final Fantasy 7 Dex-Drive SaveGame</source>
         <translation>Guardar archivo de guardado Final Fantasy 7 unidad Dex</translation>
-    </message>
-    <message>
-        <source>FF7 MC SaveGame(*.gme)</source>
-        <translation>Archivo de guardado FF7 MC (*.gme)</translation>
     </message>
     <message>
         <source>No Save File Loaded</source>
@@ -4476,6 +4464,14 @@ no es una partida guardada de FF7</translation>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
         <translation>Colocar Arma Diamante / Última / Rubí</translation>
+    </message>
+    <message>
+        <source>Keycard 66</source>
+        <translation>Tarjeta Llave 66</translation>
+    </message>
+    <message>
+        <source>FF7 Dex SaveGame(*.gme)</source>
+        <translation>Archivo de guardado FF7 Dex(*.gme)</translation>
     </message>
 </context>
 <context>
@@ -6454,6 +6450,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>New: Set Font For Program</source>
         <translation>Nuevo: Establecer fuente Para el Programa</translation>
+    </message>
+    <message>
+        <source>Updated: World Map ruby-&gt;diamond/ulitmate/ruby</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Gil Sb Limit Corrected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Missing Keycard 66 in keyitems list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update:Almost All Spinboxes now &quot;Wrapping&quot;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

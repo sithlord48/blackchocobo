@@ -557,7 +557,7 @@ void MainWindow::on_actionSave_File_As_activated()
     {
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7  Dex-Drive SaveGame"), "",
-        tr("FF7 VGS SaveGame(*.gme)"));
+        tr("FF7 Dex SaveGame(*.gme)"));
         fix_vmc_header();
     }
     else {QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot save This Type of File"));return;}
@@ -851,7 +851,7 @@ void MainWindow::on_actionExport_VGS_triggered()
 
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 VGS SaveGame"), settings.value("save_emu_path").toString(),
-    tr("FF7 MC SaveGame(*.vgs *.mem)"));
+    tr("FF7 VGS SaveGame(*.vgs *.mem)"));
     if(fileName.isEmpty()){return;}
     if(ff7.SG_TYPE != "VGS")
     {
@@ -885,7 +885,7 @@ void MainWindow::on_actionExport_DEX_triggered()
 {
 
     QString fileName = QFileDialog::getSaveFileName(this,
-        tr("Save Final Fantasy 7 Dex-Drive SaveGame"), settings.value("save_emu_path").toString(),tr("FF7 MC SaveGame(*.gme)"));
+        tr("Save Final Fantasy 7 Dex-Drive SaveGame"), settings.value("save_emu_path").toString(),tr("FF7 Dex SaveGame(*.gme)"));
     if(fileName.isEmpty()){return;}
     if(ff7.SG_TYPE != "DEX")
     {
