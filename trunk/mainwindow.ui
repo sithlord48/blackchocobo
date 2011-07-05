@@ -1109,6 +1109,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <property name="layoutDirection">
                     <enum>Qt::LeftToRight</enum>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                    </property>
@@ -1122,7 +1125,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                    </property>
                    <property name="maximum">
-                    <number>999999999</number>
+                    <number>2147483647</number>
                    </property>
                    <property name="value">
                     <number>0</number>
@@ -1180,6 +1183,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>92</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1271,6 +1277,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -1336,6 +1345,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>16777215</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -1827,6 +1839,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <height>24</height>
                      </size>
                     </property>
+                    <property name="wrapping">
+                     <bool>true</bool>
+                    </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
                     </property>
@@ -1902,6 +1917,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <height>24</height>
                    </size>
                   </property>
+                  <property name="wrapping">
+                   <bool>true</bool>
+                  </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
                   </property>
@@ -1957,6 +1975,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <width>75</width>
                     <height>24</height>
                    </size>
+                  </property>
+                  <property name="wrapping">
+                   <bool>true</bool>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -2050,6 +2071,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <height>24</height>
                    </size>
                   </property>
+                  <property name="wrapping">
+                   <bool>true</bool>
+                  </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
                   </property>
@@ -2102,6 +2126,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <width>75</width>
                     <height>24</height>
                    </size>
+                  </property>
+                  <property name="wrapping">
+                   <bool>true</bool>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -2188,6 +2215,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <width>75</width>
                     <height>24</height>
                    </size>
+                  </property>
+                  <property name="wrapping">
+                   <bool>true</bool>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -2584,6 +2614,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <height>18</height>
                       </size>
                      </property>
+                     <property name="wrapping">
+                      <bool>true</bool>
+                     </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
                      </property>
@@ -2591,7 +2624,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <enum>QAbstractSpinBox::UpDownArrows</enum>
                      </property>
                      <property name="correctionMode">
-                      <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                      <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
                      </property>
                      <property name="maximum">
                       <number>999999999</number>
@@ -3014,6 +3047,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <height>24</height>
                       </size>
                      </property>
+                     <property name="wrapping">
+                      <bool>true</bool>
+                     </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
                      </property>
@@ -3076,6 +3112,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <width>75</width>
                        <height>24</height>
                       </size>
+                     </property>
+                     <property name="wrapping">
+                      <bool>true</bool>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
@@ -3140,6 +3179,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <height>24</height>
                       </size>
                      </property>
+                     <property name="wrapping">
+                      <bool>true</bool>
+                     </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
                      </property>
@@ -3202,6 +3244,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </property>
                      <property name="toolTip">
                       <string/>
+                     </property>
+                     <property name="wrapping">
+                      <bool>true</bool>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
@@ -3311,6 +3356,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -3372,6 +3420,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <width>48</width>
                          <height>18</height>
                         </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -3442,6 +3493,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -3503,6 +3557,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <width>48</width>
                          <height>18</height>
                         </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -3573,6 +3630,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -3634,6 +3694,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <width>48</width>
                          <height>18</height>
                         </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -3704,6 +3767,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -3765,6 +3831,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <width>75</width>
                          <height>18</height>
                         </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -3868,6 +3937,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <height>24</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -3923,6 +3995,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <width>48</width>
                          <height>24</height>
                         </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -3987,6 +4062,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <height>24</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -4042,6 +4120,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <width>48</width>
                          <height>24</height>
                         </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -4106,6 +4187,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <height>24</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -4161,6 +4245,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <width>48</width>
                          <height>24</height>
                         </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -6704,6 +6791,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                           <height>24</height>
                          </size>
                         </property>
+                        <property name="wrapping">
+                         <bool>false</bool>
+                        </property>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
                         </property>
@@ -7923,6 +8013,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <height>24</height>
                  </size>
                 </property>
+                <property name="wrapping">
+                 <bool>true</bool>
+                </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
                 </property>
@@ -8464,7 +8557,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </item>
              <item>
               <property name="text">
-               <string>Keycard 68</string>
+               <string>Keycard 66</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
@@ -8472,7 +8565,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </item>
              <item>
               <property name="text">
-               <string>Midgar Parts</string>
+               <string>Keycard 68</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
@@ -9427,6 +9520,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <height>24</height>
                  </size>
                 </property>
+                <property name="wrapping">
+                 <bool>false</bool>
+                </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
                 </property>
@@ -10024,6 +10120,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <height>24</height>
               </size>
              </property>
+             <property name="wrapping">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
              </property>
@@ -10082,6 +10181,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <width>30</width>
                <height>24</height>
               </size>
+             </property>
+             <property name="wrapping">
+              <bool>true</bool>
              </property>
              <property name="alignment">
               <set>Qt::AlignCenter</set>
@@ -10463,6 +10565,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -10525,6 +10630,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -10585,6 +10693,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -10643,6 +10754,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>100</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -10704,6 +10818,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -10753,6 +10870,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -10820,6 +10940,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -10869,6 +10992,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -10933,6 +11059,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -10982,6 +11111,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -11369,6 +11501,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -11427,6 +11562,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>100</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -11488,6 +11626,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -11546,6 +11687,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>100</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -11607,6 +11751,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -11656,6 +11803,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -11720,6 +11870,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -11769,6 +11922,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -11830,6 +11986,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -11879,6 +12038,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -12257,6 +12419,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -12315,6 +12480,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>100</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -12376,6 +12544,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -12434,6 +12605,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>100</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -12495,6 +12669,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -12544,6 +12721,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -12608,6 +12788,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -12657,6 +12840,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -12718,6 +12904,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -12767,6 +12956,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -13152,6 +13344,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -13210,6 +13405,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>100</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -13271,6 +13469,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -13329,6 +13530,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>100</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -13390,6 +13594,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -13439,6 +13646,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -13503,6 +13713,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -13552,6 +13765,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -13613,6 +13829,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -13662,6 +13881,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -14040,6 +14262,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -14098,6 +14323,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>100</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -14159,6 +14387,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -14217,6 +14448,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>100</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -14278,6 +14512,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -14327,6 +14564,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -14391,6 +14631,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -14440,6 +14683,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -14501,6 +14747,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -14550,6 +14799,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -14928,6 +15180,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -14986,6 +15241,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>100</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -15047,6 +15305,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -15105,6 +15366,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>100</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -15166,6 +15430,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -15215,6 +15482,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -15279,6 +15549,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -15328,6 +15601,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -15389,6 +15665,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>24</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
@@ -15438,6 +15717,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <width>75</width>
                      <height>24</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -17666,6 +17948,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <height>18</height>
                  </size>
                 </property>
+                <property name="wrapping">
+                 <bool>true</bool>
+                </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
                 </property>
@@ -17704,6 +17989,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <width>16777215</width>
                   <height>18</height>
                  </size>
+                </property>
+                <property name="wrapping">
+                 <bool>true</bool>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -17746,6 +18034,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <width>16777215</width>
                   <height>18</height>
                  </size>
+                </property>
+                <property name="wrapping">
+                 <bool>true</bool>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -17795,6 +18086,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <height>18</height>
                  </size>
                 </property>
+                <property name="wrapping">
+                 <bool>true</bool>
+                </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
                 </property>
@@ -17836,6 +18130,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <width>16777215</width>
                   <height>18</height>
                  </size>
+                </property>
+                <property name="wrapping">
+                 <bool>true</bool>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -17953,6 +18250,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <height>24</height>
                  </size>
                 </property>
+                <property name="wrapping">
+                 <bool>true</bool>
+                </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
                 </property>
@@ -18042,6 +18342,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <height>24</height>
                 </size>
                </property>
+               <property name="wrapping">
+                <bool>true</bool>
+               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -18102,6 +18405,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <height>24</height>
                 </size>
                </property>
+               <property name="wrapping">
+                <bool>true</bool>
+               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -18135,6 +18441,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <width>75</width>
                  <height>24</height>
                 </size>
+               </property>
+               <property name="wrapping">
+                <bool>true</bool>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -18311,6 +18620,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <width>41</width>
                   <height>18</height>
                  </size>
+                </property>
+                <property name="wrapping">
+                 <bool>true</bool>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
@@ -19640,6 +19952,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <height>16777215</height>
               </size>
              </property>
+             <property name="wrapping">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
              </property>
@@ -19677,6 +19992,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <height>16777215</height>
               </size>
              </property>
+             <property name="wrapping">
+              <bool>true</bool>
+             </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
              </property>
@@ -19710,6 +20028,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <width>50</width>
                <height>16777215</height>
               </size>
+             </property>
+             <property name="wrapping">
+              <bool>true</bool>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -19747,6 +20068,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </property>
              <property name="layoutDirection">
               <enum>Qt::LeftToRight</enum>
+             </property>
+             <property name="wrapping">
+              <bool>true</bool>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -19834,6 +20158,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="wrapping">
+                  <bool>true</bool>
+                 </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
                  </property>
@@ -19887,6 +20214,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <width>16777215</width>
                    <height>16777215</height>
                   </size>
+                 </property>
+                 <property name="wrapping">
+                  <bool>true</bool>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -19947,6 +20277,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <width>16777215</width>
                    <height>16777215</height>
                   </size>
+                 </property>
+                 <property name="wrapping">
+                  <bool>true</bool>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -20038,6 +20371,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="wrapping">
+                  <bool>true</bool>
+                 </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
                  </property>
@@ -20095,6 +20431,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="wrapping">
+                  <bool>true</bool>
+                 </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
                  </property>
@@ -20151,6 +20490,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <width>100</width>
                    <height>16777215</height>
                   </size>
+                 </property>
+                 <property name="wrapping">
+                  <bool>true</bool>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
@@ -22317,7 +22659,7 @@ p, li { white-space: pre-wrap; }
            <enum>QTabWidget::West</enum>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="tab_3">
            <attribute name="title">
@@ -22497,6 +22839,9 @@ p, li { white-space: pre-wrap; }
                      <height>23</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                    </property>
@@ -22528,6 +22873,9 @@ p, li { white-space: pre-wrap; }
                      <height>23</height>
                     </size>
                    </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
+                   </property>
                    <property name="alignment">
                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                    </property>
@@ -22555,6 +22903,9 @@ p, li { white-space: pre-wrap; }
                      <width>51</width>
                      <height>23</height>
                     </size>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -22586,6 +22937,9 @@ p, li { white-space: pre-wrap; }
                    </property>
                    <property name="layoutDirection">
                     <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="wrapping">
+                    <bool>true</bool>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -22958,6 +23312,9 @@ p, li { white-space: pre-wrap; }
                          <height>16777215</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -23022,6 +23379,9 @@ p, li { white-space: pre-wrap; }
                          <height>16777215</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -23085,6 +23445,9 @@ p, li { white-space: pre-wrap; }
                          <width>100</width>
                          <height>16777215</height>
                         </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -23432,7 +23795,7 @@ p, li { white-space: pre-wrap; }
                <property name="geometry">
                 <rect>
                  <x>0</x>
-                 <y>-66</y>
+                 <y>0</y>
                  <width>256</width>
                  <height>584</height>
                 </rect>
@@ -23503,6 +23866,9 @@ p, li { white-space: pre-wrap; }
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -23544,6 +23910,9 @@ p, li { white-space: pre-wrap; }
                          <width>62</width>
                          <height>18</height>
                         </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -23587,6 +23956,9 @@ p, li { white-space: pre-wrap; }
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -23611,6 +23983,9 @@ p, li { white-space: pre-wrap; }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="leader_angle">
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -23632,6 +24007,9 @@ p, li { white-space: pre-wrap; }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="leader_id">
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -23692,6 +24070,9 @@ p, li { white-space: pre-wrap; }
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -23733,6 +24114,9 @@ p, li { white-space: pre-wrap; }
                          <width>62</width>
                          <height>18</height>
                         </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -23776,6 +24160,9 @@ p, li { white-space: pre-wrap; }
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -23800,6 +24187,9 @@ p, li { white-space: pre-wrap; }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="tc_angle">
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -23821,6 +24211,9 @@ p, li { white-space: pre-wrap; }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="tc_id">
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -23881,6 +24274,9 @@ p, li { white-space: pre-wrap; }
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -23922,6 +24318,9 @@ p, li { white-space: pre-wrap; }
                          <width>62</width>
                          <height>18</height>
                         </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -23965,6 +24364,9 @@ p, li { white-space: pre-wrap; }
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -23989,6 +24391,9 @@ p, li { white-space: pre-wrap; }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="bh_angle">
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -24010,6 +24415,9 @@ p, li { white-space: pre-wrap; }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="bh_id">
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -24070,6 +24478,9 @@ p, li { white-space: pre-wrap; }
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -24111,6 +24522,9 @@ p, li { white-space: pre-wrap; }
                          <width>62</width>
                          <height>18</height>
                         </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -24154,6 +24568,9 @@ p, li { white-space: pre-wrap; }
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -24178,6 +24595,9 @@ p, li { white-space: pre-wrap; }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="sub_angle">
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -24199,6 +24619,9 @@ p, li { white-space: pre-wrap; }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="sub_id">
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -24259,6 +24682,9 @@ p, li { white-space: pre-wrap; }
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -24300,6 +24726,9 @@ p, li { white-space: pre-wrap; }
                          <width>62</width>
                          <height>18</height>
                         </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -24343,6 +24772,9 @@ p, li { white-space: pre-wrap; }
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -24367,6 +24799,9 @@ p, li { white-space: pre-wrap; }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="uw_angle">
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -24388,6 +24823,9 @@ p, li { white-space: pre-wrap; }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="uw_id">
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -24448,6 +24886,9 @@ p, li { white-space: pre-wrap; }
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -24489,6 +24930,9 @@ p, li { white-space: pre-wrap; }
                          <width>62</width>
                          <height>18</height>
                         </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -24532,6 +24976,9 @@ p, li { white-space: pre-wrap; }
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -24556,6 +25003,9 @@ p, li { white-space: pre-wrap; }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="durw_angle">
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -24577,6 +25027,9 @@ p, li { white-space: pre-wrap; }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="durw_id">
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -24637,6 +25090,9 @@ p, li { white-space: pre-wrap; }
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
@@ -24678,6 +25134,9 @@ p, li { white-space: pre-wrap; }
                          <width>62</width>
                          <height>18</height>
                         </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
@@ -24721,6 +25180,9 @@ p, li { white-space: pre-wrap; }
                          <height>18</height>
                         </size>
                        </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -24745,6 +25207,9 @@ p, li { white-space: pre-wrap; }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="ew_angle">
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -24766,6 +25231,9 @@ p, li { white-space: pre-wrap; }
                      </item>
                      <item>
                       <widget class="QSpinBox" name="ew_id">
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -25043,6 +25511,9 @@ p, li { white-space: pre-wrap; }
                   </item>
                   <item>
                    <widget class="QSpinBox" name="sb_u_weapon_hp">
+                    <property name="wrapping">
+                     <bool>true</bool>
+                    </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
                     </property>

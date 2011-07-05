@@ -4234,23 +4234,11 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FF7 VGS SaveGame(*.gme)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Save Final Fantasy 7 VGS SaveGame</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FF7 MC SaveGame(*.vgs *.mem)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Save Final Fantasy 7 Dex-Drive SaveGame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7 MC SaveGame(*.gme)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4463,6 +4451,14 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Keycard 66</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7 Dex SaveGame(*.gme)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6409,6 +6405,22 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Set Font For Program</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Updated: World Map ruby-&gt;diamond/ulitmate/ruby</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Gil Sb Limit Corrected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Missing Keycard 66 in keyitems list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update:Almost All Spinboxes now &quot;Wrapping&quot;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

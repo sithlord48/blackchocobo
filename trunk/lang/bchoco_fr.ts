@@ -4141,64 +4141,68 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Keycard 66</source>
+        <translation>Carte 66</translation>
+    </message>
+    <message>
         <source>S01</source>
-        <translation type="unfinished"></translation>
+        <translation>S01</translation>
     </message>
     <message>
         <source>S02</source>
-        <translation type="unfinished"></translation>
+        <translation>S02</translation>
     </message>
     <message>
         <source>S03</source>
-        <translation type="unfinished"></translation>
+        <translation>S03</translation>
     </message>
     <message>
         <source>S04</source>
-        <translation type="unfinished"></translation>
+        <translation>S04</translation>
     </message>
     <message>
         <source>S05</source>
-        <translation type="unfinished"></translation>
+        <translation>S05</translation>
     </message>
     <message>
         <source>S06</source>
-        <translation type="unfinished"></translation>
+        <translation>S06</translation>
     </message>
     <message>
         <source>S07</source>
-        <translation type="unfinished"></translation>
+        <translation>S07</translation>
     </message>
     <message>
         <source>S08</source>
-        <translation type="unfinished"></translation>
+        <translation>S08</translation>
     </message>
     <message>
         <source>S09</source>
-        <translation type="unfinished"></translation>
+        <translation>S09</translation>
     </message>
     <message>
         <source>S10</source>
-        <translation type="unfinished"></translation>
+        <translation>S10</translation>
     </message>
     <message>
         <source>S11</source>
-        <translation type="unfinished"></translation>
+        <translation>S11</translation>
     </message>
     <message>
         <source>S12</source>
-        <translation type="unfinished"></translation>
+        <translation>S12</translation>
     </message>
     <message>
         <source>S13</source>
-        <translation type="unfinished"></translation>
+        <translation>S13</translation>
     </message>
     <message>
         <source>S14</source>
-        <translation type="unfinished"></translation>
+        <translation>S14</translation>
     </message>
     <message>
         <source>S15</source>
-        <translation type="unfinished"></translation>
+        <translation>S15</translation>
     </message>
     <message>
         <source>Weapons Killed</source>
@@ -4410,30 +4414,18 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>FF7 VGS SaveGame(*.vgs *.mem)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarde FF7 VGS (*.vgs *.mem)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7  Dex-Drive SaveGame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7 VGS SaveGame(*.gme)</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer sauvegarde Final Fantasy 7 DEX</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 VGS SaveGame</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FF7 MC SaveGame(*.vgs *.mem)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Save Final Fantasy 7 Dex-Drive SaveGame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FF7 MC SaveGame(*.gme)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4474,6 +4466,10 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Place Emerald Weapon?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7 Dex SaveGame(*.gme)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5816,7 +5812,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Bolt3 (52mp)</source>
-        <translation type="unfinished">Eclair3 (52mp) {3 (52m?}</translation>
+        <translation>Eclair3 (52mp)</translation>
     </message>
     <message>
         <source>Regen (30mp)</source>
@@ -5824,7 +5820,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Berserk (28mp)</source>
-        <translation type="unfinished">Folie (24mp) {28m?}</translation>
+        <translation>Folie (24mp)</translation>
     </message>
     <message>
         <source>Flare (100mp)</source>
@@ -5832,23 +5828,23 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Summon Shiva x1 (32mp)</source>
-        <translation type="unfinished">Invoque Shiva x5 (34mp) {1 (32m?}</translation>
+        <translation>Invoque Shiva x1 (32mp)</translation>
     </message>
     <message>
         <source>Summon Shiva x2 (32mp)</source>
-        <translation type="unfinished">Invoque Shiva x5 (34mp) {2 (32m?}</translation>
+        <translation>Invoque Shiva x2 (32mp)</translation>
     </message>
     <message>
         <source>Summon Shiva x3 (32mp)</source>
-        <translation type="unfinished">Invoque Shiva x5 (34mp) {3 (32m?}</translation>
+        <translation>Invoque Shiva x3 (32mp)</translation>
     </message>
     <message>
         <source>Summon Shiva x4 (32mp)</source>
-        <translation type="unfinished">Invoque Shiva x5 (34mp) {4 (32m?}</translation>
+        <translation>Invoque Shiva x4 (32mp)</translation>
     </message>
     <message>
         <source>Summon Shiva x5 (32mp)</source>
-        <translation type="unfinished">Invoque Shiva x5 (34mp) {5 (32m?}</translation>
+        <translation>Invoque Shiva x5 (32mp)</translation>
     </message>
 </context>
 <context>
@@ -6379,6 +6375,26 @@ p, li { white-space: pre-wrap; }
         <translation>Corrigé: Les noms des Matérias/Éléments et capacités maintenant traduits</translation>
     </message>
     <message>
+        <source>Updated: World Map ruby-&gt;diamond/ulitmate/ruby</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Gil Sb Limit Corrected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Missing Keycard 66 in keyitems list</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update:Almost All Spinboxes now &quot;Wrapping&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Previous Versions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>New: Basic Setting of World Locations In Debug</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6424,10 +6440,6 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Titan/Ramuh Stats Backward.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Previous Versions</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
