@@ -41,7 +41,6 @@
   <property name="styleSheet">
    <string notr="true">/*GENERIC ITEM RULES (qwidget, qabstract area,etc.)*/
 QWidget{background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);}
-
 QWidget:disabled,QLabel:disabled{font:;color:rgb(74, 80, 73);background-color:rgba(48, 47, 47,128);}
 
 QDialog{
@@ -71,7 +70,6 @@ selection-color: rgb(255,255,255);
 }
 QLabel:enabled{
 background-color:rgba(255,255,255,0);
-
 }
 QToolBox::tab{
 	background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(106, 106, 106, 32), stop:1 rgba(67, 67, 67, 128));
@@ -102,6 +100,7 @@ selection-background-color:rgba(34, 201, 247, 255);selection-color: rgb(255,255,
 
 QMenu::item:disabled{
 	background-color: rgb(38, 38, 38);
+	font:;color:rgb(74, 80, 73);
 }
 
 /*End OF Menu*/
@@ -109,7 +108,7 @@ QMenu::item:disabled{
 
 QComboBox:disabled,QPushButton:disabled,QLineEdit:disabled,QSpinBox:disabled,QTableWidget:disabled,QListWidget:disabled{
 background-color:rgba(48, 47, 47,16);
-
+font:;color:rgb(74, 80, 73);
 }
 
 QTableWidget:enabled,QListWidget:enabled{
@@ -181,7 +180,7 @@ QListWidget::indicator:enabled:unchecked:hover,QCheckBox::indicator:enabled:unch
 QListWidget::indicator:enabled:indeterminate:hover,QCheckBox::indicator:enabled:indeterminate:hover{image: url(:/icon/checkbox_indeterminate_hover);}
 
 /*Checkboxes-disabled*/
-QLIstWidget:disabled,QCheckBox:disabled{background-color: rgb(32,31,31,0);}
+QLIstWidget:disabled,QCheckBox:disabled{background-color: rgb(32,31,31,0);font:;color:rgb(74, 80, 73);}
 QListWidget::indicator:disabled:checked,QCheckBox::indicator:disabled:checked {image: url(:/icon/checkbox_checked_disabled);}
 QListWidget::indicator:disabled:unchecked,QCheckBox::indicator:disabled:unchecked {image: url(:/icon/checkbox_unchecked_disabled);}
 QListWidget::indicator:disabled:indeterminate,QCheckBox::indicator:disabled:indeterminate{image: url(:/icon/checkbox_indeterminate_disabled);}
@@ -574,7 +573,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
        <bool>false</bool>
       </property>
       <property name="styleSheet">
-       <string notr="true"/>
+       <string notr="true">disbled{font:;color: rgb(74, 80, 73);}</string>
       </property>
       <property name="tabPosition">
        <enum>QTabWidget::North</enum>
@@ -1721,8 +1720,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>435</width>
-             <height>441</height>
+             <width>443</width>
+             <height>436</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -4622,7 +4621,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>401</width>
-             <height>413</height>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="label">
@@ -8405,7 +8404,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </item>
              <item>
               <property name="text">
-               <string>Mystery Panties</string>
+               <string>Mystery panties</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
@@ -8413,7 +8412,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </item>
              <item>
               <property name="text">
-               <string>Bikini Briefs</string>
+               <string>Bikini briefs</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
@@ -8485,7 +8484,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </item>
              <item>
               <property name="text">
-               <string>Key To Ancients</string>
+               <string>Key to Ancients</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
@@ -8493,7 +8492,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </item>
              <item>
               <property name="text">
-               <string>Letter To A Daughter</string>
+               <string>Letter to a Daughter</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
@@ -8501,7 +8500,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </item>
              <item>
               <property name="text">
-               <string>Letter To A Wife</string>
+               <string>Letter to a Wife</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
@@ -8573,7 +8572,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </item>
              <item>
               <property name="text">
-               <string>Midgar Parts</string>
+               <string>Midgar parts</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
@@ -8581,7 +8580,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </item>
              <item>
               <property name="text">
-               <string>Midgar Parts</string>
+               <string>Midgar parts</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
@@ -8589,7 +8588,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </item>
              <item>
               <property name="text">
-               <string>Midgar Parts</string>
+               <string>Midgar parts</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
@@ -8597,7 +8596,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </item>
              <item>
               <property name="text">
-               <string>Midgar Parts</string>
+               <string>Midgar parts</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
@@ -8605,7 +8604,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </item>
              <item>
               <property name="text">
-               <string>Midgar Parts</string>
+               <string>Midgar parts</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
@@ -17690,7 +17689,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="42" column="0">
            <property name="text">
-            <string>Whilwind Maze </string>
+            <string>Whirlwind Maze</string>
            </property>
           </item>
           <item row="42" column="1">
@@ -21456,7 +21455,7 @@ p, li { white-space: pre-wrap; }
                  </property>
                  <item>
                   <property name="text">
-                   <string>Default</string>
+                   <string>Normal</string>
                   </property>
                  </item>
                  <item>
@@ -22628,8 +22627,14 @@ p, li { white-space: pre-wrap; }
        </layout>
       </widget>
       <widget class="QWidget" name="tab_test">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">:disabled{font:;color:rgb(74, 80, 73);}</string>
+       </property>
        <attribute name="title">
-        <string>Test Data</string>
+        <string/>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_151">
         <property name="spacing">
@@ -23319,7 +23324,7 @@ p, li { white-space: pre-wrap; }
                         <set>Qt::AlignCenter</set>
                        </property>
                        <property name="maximum">
-                        <number>4660</number>
+                        <number>255</number>
                        </property>
                        <property name="value">
                         <number>0</number>
@@ -25544,7 +25549,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>774</width>
-     <height>19</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
