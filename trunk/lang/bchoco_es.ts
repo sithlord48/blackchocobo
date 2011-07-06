@@ -92,10 +92,6 @@
         <translation>Metralla</translation>
     </message>
     <message>
-        <source>Right Arm</source>
-        <translation>Brazo derecho</translation>
-    </message>
-    <message>
         <source>Hourglass</source>
         <translation>Reloj de arena</translation>
     </message>
@@ -224,10 +220,6 @@
         <translation>Mina S</translation>
     </message>
     <message>
-        <source>8 Inch Cannon</source>
-        <translation>Cañón 20 cm.</translation>
-    </message>
-    <message>
         <source>Graviball</source>
         <translation>Gravibola</translation>
     </message>
@@ -332,10 +324,6 @@
         <translation>Nuez Lasan</translation>
     </message>
     <message>
-        <source>Sahara Nut</source>
-        <translation>Nuez Sahara</translation>
-    </message>
-    <message>
         <source>Luchile Nut</source>
         <translation>Nuez Luchile</translation>
     </message>
@@ -382,10 +370,6 @@
     <message>
         <source>Highwind</source>
         <translation>Gran Viento</translation>
-    </message>
-    <message>
-        <source>1/35 Soldier</source>
-        <translation>Soldado 1/35</translation>
     </message>
     <message>
         <source>Super Sweeper</source>
@@ -584,10 +568,6 @@
         <translation>Microlaser</translation>
     </message>
     <message>
-        <source>A-M Cannon</source>
-        <translation>Cañón A-M</translation>
-    </message>
-    <message>
         <source>W Machine Gun</source>
         <translation>Metralleta W</translation>
     </message>
@@ -646,10 +626,6 @@
     <message>
         <source>Magic Comb</source>
         <translation>Peine Mágico</translation>
-    </message>
-    <message>
-        <source>Plus Barette</source>
-        <translation>Barreta Plus</translation>
     </message>
     <message>
         <source>Centclip</source>
@@ -1196,6 +1172,30 @@
         <source>HypnoCrown</source>
         <translation>Hipnocorona</translation>
     </message>
+    <message>
+        <source>Right arm</source>
+        <translation>Brazo derecho</translation>
+    </message>
+    <message>
+        <source>8-inch Cannon</source>
+        <translation>Cañón 20 cm</translation>
+    </message>
+    <message>
+        <source>Saraha Nut</source>
+        <translation>Nuez Sahara</translation>
+    </message>
+    <message>
+        <source>1/35 soldier</source>
+        <translation>Soldado 1/35</translation>
+    </message>
+    <message>
+        <source>AâªM Cannon</source>
+        <translation>Cañón A-M</translation>
+    </message>
+    <message>
+        <source>Plus Barrette</source>
+        <translation>Barreta Plus</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -1568,14 +1568,6 @@
         <translation>Lencería</translation>
     </message>
     <message>
-        <source>Mystery Panties</source>
-        <translation>Bragas Misterio</translation>
-    </message>
-    <message>
-        <source>Bikini Briefs</source>
-        <translation>Bragas Bikini</translation>
-    </message>
-    <message>
         <source>Pharmacy Coupons</source>
         <translation>Cupón Farmacia</translation>
     </message>
@@ -1608,18 +1600,6 @@
         <translation>Materia Enorme:Cohete</translation>
     </message>
     <message>
-        <source>Key To Ancients</source>
-        <translation>Clave a los Ancianos</translation>
-    </message>
-    <message>
-        <source>Letter To A Daughter</source>
-        <translation>Carta a una Hija</translation>
-    </message>
-    <message>
-        <source>Letter To A Wife</source>
-        <translation>Carta a una Mujer</translation>
-    </message>
-    <message>
         <source>Lunar Harp</source>
         <translation>Harpa Lunar</translation>
     </message>
@@ -1646,10 +1626,6 @@
     <message>
         <source>Keycard 68</source>
         <translation>Tarjeta Llave 68</translation>
-    </message>
-    <message>
-        <source>Midgar Parts</source>
-        <translation>Partes de Midgar</translation>
     </message>
     <message>
         <source>PHS</source>
@@ -2996,10 +2972,6 @@
         <translation>65401</translation>
     </message>
     <message>
-        <source>Whilwind Maze </source>
-        <translation>Mazo Torbellino</translation>
-    </message>
-    <message>
         <source>703</source>
         <translation>703</translation>
     </message>
@@ -3134,10 +3106,6 @@
     <message>
         <source>Controller Setting</source>
         <translation>Ajustes de Control</translation>
-    </message>
-    <message>
-        <source>Default</source>
-        <translation>Por Defecto</translation>
     </message>
     <message>
         <source>Custom</source>
@@ -3922,10 +3890,6 @@ no es una partida guardada de FF7.</translation>
         <translation>Toque Final</translation>
     </message>
     <message>
-        <source>OmniSlash</source>
-        <translation>Omnilátigo</translation>
-    </message>
-    <message>
         <source>Big Shot</source>
         <translation>Gran Tiro</translation>
     </message>
@@ -3956,10 +3920,6 @@ no es una partida guardada de FF7.</translation>
     <message>
         <source>Beat Rush</source>
         <translation>Golpe Veloz</translation>
-    </message>
-    <message>
-        <source>SomerSault</source>
-        <translation>Salto Mortal</translation>
     </message>
     <message>
         <source>Waterkick</source>
@@ -4072,10 +4032,6 @@ no es una partida guardada de FF7.</translation>
     <message>
         <source>Slots</source>
         <translation>Ranuras</translation>
-    </message>
-    <message>
-        <source>Gallian Beast</source>
-        <translation>Bestia Galiana</translation>
     </message>
     <message>
         <source>Death Gigas</source>
@@ -4473,6 +4429,46 @@ no es una partida guardada de FF7.</translation>
         <source>FF7 Dex SaveGame(*.gme)</source>
         <translation>Archivo de guardado FF7 Dex(*.gme)</translation>
     </message>
+    <message>
+        <source>Mystery panties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bikini briefs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Key to Ancients</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Letter to a Daughter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Letter to a Wife</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Midgar parts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Omnislash</source>
+        <translation>Omnilátigo</translation>
+    </message>
+    <message>
+        <source>Somersault</source>
+        <translation>Salto Mortal</translation>
+    </message>
+    <message>
+        <source>Galian Beast</source>
+        <translation>Bestia Galiana</translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -4637,10 +4633,6 @@ no es una partida guardada de FF7.</translation>
         <translation>Morfo</translation>
     </message>
     <message>
-        <source>DeathBlow</source>
-        <translation>Golpe mortal</translation>
-    </message>
-    <message>
         <source>Manipulate</source>
         <translation>Manipular</translation>
     </message>
@@ -4703,10 +4695,6 @@ no es una partida guardada de FF7.</translation>
     <message>
         <source>Poison</source>
         <translation>Envenenar</translation>
-    </message>
-    <message>
-        <source>Demi</source>
-        <translation>Gravedad</translation>
     </message>
     <message>
         <source>Barrier</source>
@@ -4797,10 +4785,6 @@ no es una partida guardada de FF7.</translation>
         <translation>Hades</translation>
     </message>
     <message>
-        <source>Typhoon</source>
-        <translation>Typhoon</translation>
-    </message>
-    <message>
         <source>Bahamut ZERO</source>
         <translation>Bahamut CERO</translation>
     </message>
@@ -4811,6 +4795,18 @@ no es una partida guardada de FF7.</translation>
     <message>
         <source>Master Summon</source>
         <translation>Invocación mestra</translation>
+    </message>
+    <message>
+        <source>Deathblow</source>
+        <translation>Golpe mortal</translation>
+    </message>
+    <message>
+        <source>Gravity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Typhon</source>
+        <translation>Typhon</translation>
     </message>
 </context>
 <context>
@@ -5196,10 +5192,6 @@ no es una partida guardada de FF7.</translation>
         <translation>Corte añadido</translation>
     </message>
     <message>
-        <source>Steal-As-Well</source>
-        <translation>Robo simultáneo</translation>
-    </message>
-    <message>
         <source>Quadra Magic x1</source>
         <translation>Cuadrimagia x1</translation>
     </message>
@@ -5226,10 +5218,6 @@ no es una partida guardada de FF7.</translation>
     <message>
         <source>Mug</source>
         <translation>Toma</translation>
-    </message>
-    <message>
-        <source>Sence</source>
-        <translation>Sentr</translation>
     </message>
     <message>
         <source>Throw</source>
@@ -5348,10 +5336,6 @@ no es una partida guardada de FF7.</translation>
         <translation>Silencio (24pm)</translation>
     </message>
     <message>
-        <source>Confuse (18mp)</source>
-        <translation>Confu (18pm)</translation>
-    </message>
-    <message>
         <source>Mini (10mp)</source>
         <translation>Pequeño (10pm)</translation>
     </message>
@@ -5394,10 +5378,6 @@ no es una partida guardada de FF7.</translation>
     <message>
         <source>Barrier (16mp)</source>
         <translation>Barrera (16pm)</translation>
-    </message>
-    <message>
-        <source>Magic Barrier (24mp)</source>
-        <translation>BarreraM (24pm)</translation>
     </message>
     <message>
         <source>Reflect (30mp)</source>
@@ -5847,17 +5827,25 @@ no es una partida guardada de FF7.</translation>
         <source>Magic Counter Rate 100%</source>
         <translation>Tasa de contraataque mágico 100%</translation>
     </message>
+    <message>
+        <source>Steal as well</source>
+        <translation>Robo simultáneo</translation>
+    </message>
+    <message>
+        <source>Sense</source>
+        <translation>Sentir</translation>
+    </message>
+    <message>
+        <source>Confu (18mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>M-Barrier (24mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Stats</name>
-    <message>
-        <source>MP:+% depending on level</source>
-        <translation>PM:+% dependiendo del nivel</translation>
-    </message>
-    <message>
-        <source>HP:+% depending on level</source>
-        <translation>PG:+% dependiendo del nivel</translation>
-    </message>
     <message>
         <source>Dex:+% depending on level</source>
         <translation>Des:+% dependiendo del nivel</translation>
@@ -5887,36 +5875,44 @@ no es una partida guardada de FF7.</translation>
         <translation>Vit:+1</translation>
     </message>
     <message>
-        <source>HP:-2% MP:+2% Str:-1 Mag:+1</source>
-        <translation>PG:-2% PM:+2% Fue:-1 Mag:+1</translation>
+        <source>Maxp:+% depending on level</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP:-5% MP:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation>PG:-5% PM:+5% Fue:-2 Vit:-1 Mag:+2 Esp:+1</translation>
+        <source>MaxHp:+% depending on level</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP:-10% MP:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
-        <translation>PG:-10% PM:+10% Fue:-4 Vit:-2 Mag:+4 Esp:+2</translation>
+        <source>MaxHp:-2% Maxp:+2% Str:-1 Mag:+1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP:-2% MP:+2% Mag:+1</source>
-        <translation>PG:-2% PM:+2% Mag:+1</translation>
+        <source>MaxHp:-5% Maxp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP:-5% MP:+5% Mag:+1 Spi:+1</source>
-        <translation>PG:-5% PM:+5% Mag:+1 Esp:+1</translation>
+        <source>MaxHp:-10% Maxp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP:-10% MP:+10% Mag:+2 Spi:+2</source>
-        <translation>PG:-10% PM:+10% Mag:+2 Esp:+2</translation>
+        <source>MaxHp:-2% Maxp:+2% Mag:+1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP:-10% MP:+15% Mag:+4 Spi:+4</source>
-        <translation>PG:-10% PM:+15% Mag:+1 Esp:+4</translation>
+        <source>MaxHp:-5% Maxp:+5% Mag:+1 Spi:+1</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP:-10% MP:+20% Mag:+8 Spi:+8</source>
-        <translation>PG:-10% PM:+20% Mag:+8 Esp:+8</translation>
+        <source>MaxHp:-10% Maxp:+10% Mag:+2 Spi:+2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MaxHp:-10% Maxp:+15% Mag:+4 Spi:+4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MaxHp:-10% Maxp:+20% Mag:+8 Spi:+8</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6452,19 +6448,35 @@ p, li { white-space: pre-wrap; }
         <translation>Nuevo: Establecer fuente Para el Programa</translation>
     </message>
     <message>
-        <source>Updated: World Map ruby-&gt;diamond/ulitmate/ruby</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fixed: Gil Sb Limit Corrected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Fixed: Missing Keycard 66 in keyitems list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Update:Almost All Spinboxes now &quot;Wrapping&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Empty Chocobos Now Start W/ empty names.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Typos Lots of Typos..</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: &quot;Time Bug&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: &quot;Gravity&quot; Materia Bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

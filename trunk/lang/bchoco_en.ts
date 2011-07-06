@@ -92,10 +92,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Right Arm</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Hourglass</source>
         <translation type="unfinished"></translation>
     </message>
@@ -224,10 +220,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>8 Inch Cannon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Graviball</source>
         <translation type="unfinished"></translation>
     </message>
@@ -332,10 +324,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Sahara Nut</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Luchile Nut</source>
         <translation type="unfinished"></translation>
     </message>
@@ -381,10 +369,6 @@
     </message>
     <message>
         <source>Highwind</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1/35 Soldier</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -584,10 +568,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>A-M Cannon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>W Machine Gun</source>
         <translation type="unfinished"></translation>
     </message>
@@ -645,10 +625,6 @@
     </message>
     <message>
         <source>Magic Comb</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Plus Barette</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1195,6 +1171,30 @@
         <source>HypnoCrown</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Right arm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>8-inch Cannon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Saraha Nut</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>1/35 soldier</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>AâªM Cannon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plus Barrette</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -1599,14 +1599,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Mystery Panties</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Bikini Briefs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Pharmacy Coupons</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1639,18 +1631,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Key To Ancients</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Letter To A Daughter</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Letter To A Wife</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Lunar Harp</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1676,10 +1656,6 @@
     </message>
     <message>
         <source>Keycard 68</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Midgar Parts</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3091,10 +3067,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Whilwind Maze </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>703</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3236,10 +3208,6 @@
     </message>
     <message>
         <source>Controller Setting</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Default</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3910,10 +3878,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>OmniSlash</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Big Shot</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3943,10 +3907,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Beat Rush</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SomerSault</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4059,10 +4019,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Slots</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gallian Beast</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4461,6 +4417,46 @@ is not a FF7 SaveGame.</source>
         <source>FF7 Dex SaveGame(*.gme)</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Mystery panties</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bikini briefs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Key to Ancients</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Letter to a Daughter</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Letter to a Wife</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Midgar parts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Normal</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Omnislash</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Somersault</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Galian Beast</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -4625,10 +4621,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>DeathBlow</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Manipulate</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4690,10 +4682,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Poison</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Demi</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4785,10 +4773,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Typhoon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Bahamut ZERO</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4798,6 +4782,18 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Master Summon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Deathblow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gravity</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Typhon</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5184,10 +5180,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Steal-As-Well</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Quadra Magic x1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5213,10 +5205,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Mug</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sence</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5336,10 +5324,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Confuse (18mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Mini (10mp)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5381,10 +5365,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Barrier (16mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Magic Barrier (24mp)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5835,17 +5815,25 @@ is not a FF7 SaveGame.</source>
         <source>Magic Counter Rate 100%</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Steal as well</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sense</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Confu (18mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>M-Barrier (24mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Stats</name>
-    <message>
-        <source>MP:+% depending on level</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>HP:+% depending on level</source>
-        <translation type="unfinished"></translation>
-    </message>
     <message>
         <source>Dex:+% depending on level</source>
         <translation type="unfinished"></translation>
@@ -5875,35 +5863,43 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP:-2% MP:+2% Str:-1 Mag:+1</source>
+        <source>Maxp:+% depending on level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP:-5% MP:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
+        <source>MaxHp:+% depending on level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP:-10% MP:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
+        <source>MaxHp:-2% Maxp:+2% Str:-1 Mag:+1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP:-2% MP:+2% Mag:+1</source>
+        <source>MaxHp:-5% Maxp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP:-5% MP:+5% Mag:+1 Spi:+1</source>
+        <source>MaxHp:-10% Maxp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP:-10% MP:+10% Mag:+2 Spi:+2</source>
+        <source>MaxHp:-2% Maxp:+2% Mag:+1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP:-10% MP:+15% Mag:+4 Spi:+4</source>
+        <source>MaxHp:-5% Maxp:+5% Mag:+1 Spi:+1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>HP:-10% MP:+20% Mag:+8 Spi:+8</source>
+        <source>MaxHp:-10% Maxp:+10% Mag:+2 Spi:+2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MaxHp:-10% Maxp:+15% Mag:+4 Spi:+4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MaxHp:-10% Maxp:+20% Mag:+8 Spi:+8</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6408,19 +6404,35 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Updated: World Map ruby-&gt;diamond/ulitmate/ruby</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fixed: Gil Sb Limit Corrected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Fixed: Missing Keycard 66 in keyitems list</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Update:Almost All Spinboxes now &quot;Wrapping&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Empty Chocobos Now Start W/ empty names.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Typos Lots of Typos..</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: &quot;Time Bug&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: &quot;Gravity&quot; Materia Bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

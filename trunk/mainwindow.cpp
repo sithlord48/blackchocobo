@@ -1050,8 +1050,8 @@ void MainWindow::on_action_show_test_data_toggled()
 {
     if(ui->action_show_test_data->isChecked())
     {
-        ui->tab_test->setEnabled(true);
         ui->tabWidget->setTabEnabled(8,1);
+        ui->tabWidget->setTabText(8,tr("Test Data"));
         ui->lbl_0x34->setVisible(true);
         ui->lbl_0x35->setVisible(true);
         ui->lbl_0x36->setVisible(true);
@@ -1073,8 +1073,8 @@ void MainWindow::on_action_show_test_data_toggled()
 
     else
     {
-        ui->tab_test->setEnabled(false);
         ui->tabWidget->setTabEnabled(8,0);
+        ui->tabWidget->setTabText(8,tr(""));
         ui->lbl_0x34->setVisible(false);
         ui->lbl_0x35->setVisible(false);
         ui->lbl_0x36->setVisible(false);
@@ -1521,7 +1521,7 @@ void MainWindow::charupdate(void)
         ui->limit_2b->setText(tr("Climhazzard"));
         ui->limit_3a->setText(tr("Meteorain"));
         ui->limit_3b->setText(tr("Finishing Touch"));
-        ui->limit_4->setText(tr("OmniSlash"));
+        ui->limit_4->setText(tr("Omnislash"));
         //label weapons then set current...
         for(int i=128;i<144;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),names.ItemNames(i));}
         ui->combo_weapon->setCurrentIndex(ff7.slot[s].chars[curchar].weapon);
@@ -1544,7 +1544,7 @@ void MainWindow::charupdate(void)
         ui->lbl_avatar->setPixmap(QPixmap(":/icon/tifa_icon"));
         //label boxes
         ui->limit_1a->setText(tr("Beat Rush"));
-        ui->limit_1b->setText(tr("SomerSault"));
+        ui->limit_1b->setText(tr("Somersault"));
         ui->limit_2a->setText(tr("Waterkick"));
         ui->limit_2b->setText(tr("Meteodrive"));
         ui->limit_3a->setText(tr("Dolphin Blow"));
@@ -1612,7 +1612,7 @@ void MainWindow::charupdate(void)
     case 7://vincent
         ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));
         //label boxes
-        ui->limit_1a->setText(tr("Gallian Beast"));
+        ui->limit_1a->setText(tr("Galian Beast"));
         ui->limit_1b->setText("");
         ui->limit_2a->setText(tr("Death Gigas"));
         ui->limit_2b->setText("");
@@ -2126,6 +2126,9 @@ if(current_id == 0xFF) //if the slot is empty take some precautions
     ui->lcd_ap_master_slot->display(0);
     ui->sb_addap_slot->setValue(0);
     ui->sb_addap_slot->setMaximum(0);
+    ff7.slot[s].chars[curchar].materias[mslotsel].ap[0]=0xFF;//Just incase so the ap is set correct
+    ff7.slot[s].chars[curchar].materias[mslotsel].ap[1]=0xFF;//This will avoid the possiblity of
+    ff7.slot[s].chars[curchar].materias[mslotsel].ap[2]=0xFF;//the "gravity" bug dlpb found.
 }
 
 else if(names.MateriaNames(current_id) == tr("DON'T USE")) //this is a placeholder materia.
@@ -2152,8 +2155,6 @@ else // make the materia look nice
     if(Materias[current_id].levels>1){ui->sb_addap_slot->setMaximum(masterap);}
     else{ui->sb_addap_slot->setMaximum(16777215);}
     ui->sb_addap_slot->setValue(aptemp);
-    //ui->combo_mat_type->setCurrentIndex(Materias[current_id].type);
-    //ui->combo_add_mat_slot->setCurrentIndex(ff7.slot[s].chars[curchar].materias[mslotsel].id);
     //Show levels stars
     int level=0;
     QString e_icon;
@@ -2327,6 +2328,9 @@ void MainWindow::materiaupdate(void)
         else
         {
             newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
+            ff7.slot[s].materias[mat].ap[0]=0xFF;//just incase the empty slot has 0 ap
+            ff7.slot[s].materias[mat].ap[1]=0xFF;//this will fix the "gravity" bug
+            ff7.slot[s].materias[mat].ap[2]=0xFF;//that was reported by dlpb
             ui->tbl_materia->setItem(mat,0,newItem);
             newItem = new QTableWidgetItem("",0);
             ui->tbl_materia->setItem(mat,1,newItem);
@@ -2888,6 +2892,7 @@ void MainWindow::chocobo_refresh()
         if(chPC[ff7.slot[s].chocobonames[0][n]] =='\0'){break;}
         else{this->ui->line_c1_name->setText( ui->line_c1_name->text() + chPC[ff7.slot[s].chocobonames[0][n]]);}
     }
+    if(ui->line_c1_name->text()=="      "){ui->line_c1_name->clear();}
     //ui->cb_c1_personality->setCurrentIndex(ff7.slot[s].chocobos[0].personality); //need more data for this.
     ui->sb_c1_sprint->setValue(ff7.slot[s].chocobos[0].sprintspd);
     ui->sb_c1_maxsprint->setValue(ff7.slot[s].chocobos[0].maxsprintspd);
@@ -2909,6 +2914,7 @@ void MainWindow::chocobo_refresh()
         if(chPC[ff7.slot[s].chocobonames[1][n]] =='\0'){break;}
         else{this->ui->line_c2_name->setText( ui->line_c2_name->text() + chPC[ff7.slot[s].chocobonames[1][n]]);}
     }
+    if(ui->line_c2_name->text()=="      "){ui->line_c2_name->clear();}
     //ui->cb_c2_personality->setCurrentIndex(ff7.slot[s].chocobos[1].personality); //need more data for this.
     ui->sb_c2_sprint->setValue(ff7.slot[s].chocobos[1].sprintspd);
     ui->sb_c2_maxsprint->setValue(ff7.slot[s].chocobos[1].maxsprintspd);
@@ -2929,6 +2935,7 @@ void MainWindow::chocobo_refresh()
         if(chPC[ff7.slot[s].chocobonames[2][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
         else{this->ui->line_c3_name->setText( ui->line_c3_name->text() + chPC[ff7.slot[s].chocobonames[2][n]]);}
     }
+    if(ui->line_c3_name->text()=="      "){ui->line_c3_name->clear();}
     //ui->cb_c3_personality->setCurrentIndex(ff7.slot[s].chocobos[2].personality); //need more data for this.
     ui->sb_c3_sprint->setValue(ff7.slot[s].chocobos[2].sprintspd);
     ui->sb_c3_maxsprint->setValue(ff7.slot[s].chocobos[2].maxsprintspd);
@@ -2949,6 +2956,7 @@ void MainWindow::chocobo_refresh()
         if(chPC[ff7.slot[s].chocobonames[3][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
         else{this->ui->line_c4_name->setText( ui->line_c4_name->text() + chPC[ff7.slot[s].chocobonames[3][n]]);}
     }
+    if(ui->line_c4_name->text()=="      "){ui->line_c4_name->clear();}
     //ui->cb_c4_personality->setCurrentIndex(ff7.slot[s].chocobos[3].personality); //need more data for this.
     ui->sb_c4_sprint->setValue(ff7.slot[s].chocobos[3].sprintspd);
     ui->sb_c4_maxsprint->setValue(ff7.slot[s].chocobos[3].maxsprintspd);
@@ -2969,6 +2977,7 @@ void MainWindow::chocobo_refresh()
         if(chPC[ff7.slot[s].chocobonames[4][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
         else{this->ui->line_c5_name->setText( ui->line_c5_name->text() + chPC[ff7.slot[s].chocobonames[4][n]]);}
     }
+    if(ui->line_c5_name->text()=="      "){ui->line_c5_name->clear();}
     //ui->cb_c5_personality->setCurrentIndex(ff7.slot[s].choco56[0].personality); //need more data for this.
     ui->sb_c5_sprint->setValue(ff7.slot[s].choco56[0].sprintspd);
     ui->sb_c5_maxsprint->setValue(ff7.slot[s].choco56[0].maxsprintspd);
@@ -2989,6 +2998,7 @@ void MainWindow::chocobo_refresh()
         if(chPC[ff7.slot[s].chocobonames[5][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
         else{this->ui->line_c6_name->setText( ui->line_c6_name->text() + chPC[ff7.slot[s].chocobonames[5][n]]);}
     }
+    if(ui->line_c6_name->text()=="      "){ui->line_c6_name->clear();}
     //ui->cb_c6_personality->setCurrentIndex(ff7.slot[s].choco56[1].personality); //need more data for this.
     ui->sb_c6_sprint->setValue(ff7.slot[s].choco56[1].sprintspd);
     ui->sb_c6_maxsprint->setValue(ff7.slot[s].choco56[1].maxsprintspd);
@@ -3037,7 +3047,7 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
     if(index == 12) //empty char slot?
     {
         ff7.slot[s].party[0] = 0xFF;
-        //whipe all desc data if noone is there
+        //wipe all desc data if noone is there
         ff7.slot[s].desc.party[0]=ff7.slot[s].party[0];
         ff7.slot[s].desc.curHP =0;
         ff7.slot[s].desc.maxHP =0;
@@ -3251,7 +3261,7 @@ void MainWindow::on_sb_time_min_valueChanged(int value)
 
 void MainWindow::on_sb_time_sec_valueChanged(int value)
 {
-    if(!load){ff7.slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60) + (value)); ff7.slot[s].desc.time = ff7.slot[s].time;}
+    if(!load){ff7.slot[s].time = ((ui->sb_time_hour->value()*3600) + (ui->sb_time_min->value()*60) + (value)); ff7.slot[s].desc.time = ff7.slot[s].time;}
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -3320,7 +3330,7 @@ void MainWindow::on_tbl_itm_currentCellChanged(int row)
 
 void MainWindow::on_tbl_materia_currentCellChanged(int row)
 {if(!load){
-    if(ff7.slot[s].materias[row].id == 0x2C)
+    if(ff7.slot[s].materias[row].id == 0x2C)//E.Skill Materia
     {
        ui->eskill_group->setVisible(true);
        geteskills(row);
@@ -4701,7 +4711,7 @@ void MainWindow::on_sb_coster_3_valueChanged(int value){if(!load){ff7.slot[s].co
 void MainWindow::on_combo_id_currentIndexChanged(int index){if(!load){ff7.slot[s].chars[curchar].id=index; charupdate();}}
 void MainWindow::on_sb_timer_time_hour_valueChanged(int value){if(!load){ff7.slot[s].timer[0] = value;}}
 void MainWindow::on_sb_timer_time_min_valueChanged(int value){if(!load){ff7.slot[s].timer[1] = value;}}
-void MainWindow::on_sb_timer_time_sec_valueChanged(int value){ if(!load){ff7.slot[s].timer[2] = value;}}
+void MainWindow::on_sb_timer_time_sec_valueChanged(int value){if(!load){ff7.slot[s].timer[2] = value;}}
 
 void MainWindow::on_list_menu_visible_itemChanged()
 {if(!load){

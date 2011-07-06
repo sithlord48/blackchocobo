@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>373</width>
-    <height>400</height>
+    <width>369</width>
+    <height>396</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -462,17 +462,37 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
-           <string>Updated: World Map ruby-&gt;diamond/ulitmate/ruby</string>
+           <string>Fixed: Empty Chocobos Now Start W/ empty names.</string>
           </property>
          </item>
          <item>
           <property name="text">
-           <string>Fixed: Gil Sb Limit Corrected</string>
+           <string>Fixed: Typos Lots of Typos..</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fixed: &quot;Time Bug&quot;</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fixed: &quot;Gravity&quot; Materia Bug</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</string>
           </property>
          </item>
          <item>
           <property name="text">
            <string>Fixed: Missing Keycard 66 in keyitems list</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Update: World Map ruby-&gt;diamond/ulitmate/ruby</string>
           </property>
          </item>
          <item>
