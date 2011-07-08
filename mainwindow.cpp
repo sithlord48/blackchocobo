@@ -22,6 +22,8 @@
 bool load =false; //used for checking if data is initial load (to block some overrights when gui objects change)
 extern FF7 ff7; // our save file struct
 extern int s; //keeps track of our slot globally
+extern quint32 charlvls[11][99];
+extern quint32 chartnls[11][99];
 FF7SLOT bufferslot; // a buffer slot to keep copied slots in
 ff7names names; //class of strings used in ff7
 QString buffer_region; //keep track of the region of any copied slots.
@@ -94,7 +96,9 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
         ui->action_show_test_data->setChecked(1);
         ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
     }
+
    //are any empty? if so set them accordingly.
+   if(settings.value("autochargrowth").isNull()){settings.setValue("autochargrowth",1);}
    if(settings.value("default_save_file").isNull()){settings.setValue("default_save_file",QString(QCoreApplication::applicationDirPath()) + "/"+ "save0");}
    if(settings.value("load_path").isNull()){settings.setValue("load_path",QDir::homePath());}
    if(settings.value("char_stat_folder").isNull()){settings.setValue("char_stat_folder",settings.value("load_path").toString());}
@@ -128,6 +132,12 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
    tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
 
    ui->tbl_location_field->horizontalHeader()->setStyleSheet(tablestyle);
+
+   if(settings.value("autochargrowth").toBool())
+   {
+       ui->action_auto_char_growth->setChecked(1);
+       ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_checked"));
+   }
 
    /* LANGUAGE SELECT */
    if(settings.value("lang").toString() == "en")
@@ -1045,6 +1055,11 @@ void MainWindow::on_actionPaste_Slot_activated()
     }
     guirefresh();
 }
+void MainWindow::on_action_auto_char_growth_triggered(bool checked)
+{
+    if(checked){settings.setValue("autochargrowth",1);if(!load){setchar_growth(0);}ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_checked"));}
+    else{settings.setValue("autochargrowth",0);ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_unchecked"));}
+}
 
 void MainWindow::on_action_show_test_data_toggled()
 {
@@ -1415,17 +1430,19 @@ void MainWindow::charupdate(void)
         else{ui->cb_id->setChecked(0);}
     }
 
+    ui->combo_id->setCurrentIndex(ff7.slot[s].chars[curchar].id);
     for (int n=0;n<12;n++)
     {
         if(chPC[ff7.slot[s].chars[curchar].name[n]] =='\0'){break;}
         else{this->ui->line_name->setText( this->ui->line_name->text() + chPC[ff7.slot[s].chars[curchar].name[n]]);}
     }
-
-    ui->combo_id->setCurrentIndex(ff7.slot[s].chars[curchar].id);
     ui->sb_exp->setValue(ff7.slot[s].chars[curchar].exp);
+
     //ui->sb_next->setValue(ff7.slot[s].chars[curchar].expNext);
+    ui->pbar_level->setValue(ff7.slot[s].chars[curchar].flags[2]);
     ui->lcd_next->display(double(ff7.slot[s].chars[curchar].expNext));
     ui->sb_lvl->setValue(ff7.slot[s].chars[curchar].level);
+
     ui->sb_curhp->setValue(ff7.slot[s].chars[curchar].curHP);
     ui->sb_curmp->setValue(ff7.slot[s].chars[curchar].curMP);
     ui->sb_maxhp->setValue(ff7.slot[s].chars[curchar].maxHP);
@@ -1453,7 +1470,6 @@ void MainWindow::charupdate(void)
     ui->sb_sprbonus->setValue(ff7.slot[s].chars[curchar].spirit_bonus);
     ui->sb_dexbonus->setValue(ff7.slot[s].chars[curchar].dexterity_bonus);
     ui->sb_lckbonus->setValue(ff7.slot[s].chars[curchar].luck_bonus);
-    ui->pbar_level->setValue(ff7.slot[s].chars[curchar].flags[2]);
     ui->lcd_0x34->display(ff7.slot[s].chars[curchar].z_4[0]);
     ui->lcd_0x35->display(ff7.slot[s].chars[curchar].z_4[1]);
     ui->lcd_0x36->display(ff7.slot[s].chars[curchar].z_4[2]);
@@ -1662,8 +1678,41 @@ void MainWindow::charupdate(void)
     ui->btn_cid->setStyleSheet(avatar_style(ff7.slot[s].chars[8].id));
     load=false;
     materiaupdate_slot();
+    if(settings.value("autochargrowh").toBool()){setchar_growth(0);}
 }
 /*~~~~~~~END Char Update~~~~~~~~*/
+void MainWindow::setchar_growth(int caller)
+{
+
+    load=true;
+    if(caller==2){ff7.slot[s].chars[curchar].exp = charlvls[curchar][ui->sb_lvl->value()-1];ui->sb_exp->setValue(ff7.slot[s].chars[curchar].exp);}
+
+    for (int i=1;i<100;i++)
+    {
+        if(ff7.slot[s].chars[curchar].exp>=charlvls[curchar][i]){if(i==99){ui->sb_lvl->setValue(i);}}
+        else{ui->sb_lvl->setValue(i);break;}
+    }
+
+    if(caller==1){ff7.slot[s].chars[curchar].level=ui->sb_lvl->value();if(curchar==ff7.slot[s].party[0]){ff7.slot[s].desc.level = ui->sb_lvl->value();}}
+
+    QString numvalue;
+    if(ui->sb_lvl->value()!=99)
+    {
+       if(ff7.slot[s].chars[curchar].exp==charlvls[curchar][ui->sb_lvl->value()]){ff7.slot[s].chars[curchar].expNext=chartnls[curchar][ui->sb_lvl->value()];}
+       ff7.slot[s].chars[curchar].expNext= charlvls[curchar][ui->sb_lvl->value()]- ui->sb_exp->value();
+       ui->pbar_level->setValue(((chartnls[curchar][ui->sb_lvl->value()]-ff7.slot[s].chars[curchar].expNext)*62)/(chartnls[curchar][ui->sb_lvl->value()]));//level progress is in 62 parts.
+       ff7.slot[s].chars[curchar].flags[2]=ui->pbar_level->value();
+       if(ui->pbar_level->value()<4){ui->pbar_level->setValue(0);}//ff7 ingores the value if its <4 (but we don't save this)
+    }
+
+    else
+    {
+        ff7.slot[s].chars[curchar].expNext=0;
+    }
+    numvalue.setNum(ff7.slot[s].chars[curchar].expNext);
+    ui->lcd_next->display(numvalue);
+    load=false;
+}
 /*~~~~~~~~~Armor/Weapon Update~~~~~~~~~~*/
 void MainWindow::setarmorslots(void)
 {
@@ -3558,7 +3607,15 @@ void MainWindow::on_line_name_lostFocus()
 void MainWindow::on_sb_lvl_valueChanged()
 {if(!load){
     ff7.slot[s].chars[curchar].level = ui->sb_lvl->value();
-    ff7.slot[s].desc.level = ui->sb_lvl->value();
+    if(curchar==ff7.slot[s].party[0]){ff7.slot[s].desc.level = ui->sb_lvl->value();}  
+    if(settings.value("autochargrowth").toBool()){setchar_growth(2);}
+}}
+
+void MainWindow::on_sb_exp_valueChanged()
+{if(!load)
+    {
+        ff7.slot[s].chars[curchar].exp = ui->sb_exp->value();
+        if(settings.value("autochargrowth").toBool()){setchar_growth(1);}
 }}
 
 void MainWindow::on_sb_curhp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].curHP = ui->sb_curhp->value();}}
@@ -3567,7 +3624,6 @@ void MainWindow::on_sb_maxhp_valueChanged(){if(!load){ff7.slot[s].chars[curchar]
 void MainWindow::on_sb_maxmp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].maxMP =ui->sb_maxmp->value();}}
 void MainWindow::on_sb_hp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].baseHP = ui->sb_hp->value();}}
 void MainWindow::on_sb_mp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].baseMP = ui->sb_mp->value();}}
-void MainWindow::on_sb_exp_valueChanged(){if(!load){ff7.slot[s].chars[curchar].exp = ui->sb_exp->value();}}
 void MainWindow::on_sb_kills_valueChanged(){if(!load){ff7.slot[s].chars[curchar].kills = ui->sb_kills->value();}}
 void MainWindow::on_sb_str_valueChanged(){if(!load){ff7.slot[s].chars[curchar].strength = ui->sb_str->value();}}
 void MainWindow::on_sb_dex_valueChanged(){if(!load){ff7.slot[s].chars[curchar].dexterity = ui->sb_dex->value();}}
@@ -5228,3 +5284,4 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
     }
     else{return;}
 }//End Of Map Context Menu
+
