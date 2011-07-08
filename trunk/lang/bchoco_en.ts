@@ -4457,6 +4457,10 @@ is not a FF7 SaveGame.</source>
         <source>Galian Beast</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Automatic Exp &lt;-&gt; Lvl</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -6433,6 +6437,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

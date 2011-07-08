@@ -173,10 +173,10 @@ QSlider#slide_battlespeed::handle,QSlider#slide_fieldmspeed::handle,QSlider#slid
 /*Checkboxes-enabled*/
 QLIstWidget:enabled,QCheckBox:enabled{background-color: rgba(32,31,31,0);}
 QListWidget::indicator:enabled:checked,QCheckBox::indicator:enabled:checked {image: url(:/icon/checkbox_checked);}
-QListWidget::indicator:enabled:unchecked,QCheckBox::indicator:enabled:unchecked {image: url(:/icon/checkbox_unchecked);}
+QListWidget::indicator:enabled:unchecked,QCheckBox::indicator:enabled:unchecked{image: url(:/icon/checkbox_unchecked);}
 QListWidget::indicator:enabled:indeterminate,QCheckBox::indicator:enabled:indeterminate{image: url(:/icon/checkbox_indeterminate);}
-QListWidget::indicator:enabled:checked:hover,QCheckBox::indicator:enabled:checked:hover {image: url(:/icon/checkbox_checked_hover);}
-QListWidget::indicator:enabled:unchecked:hover,QCheckBox::indicator:enabled:unchecked:hover {image: url(:/icon/checkbox_unchecked_hover);}
+QListWidget::indicator:enabled:checked:hover,QCheckBox::indicator:enabled:checked:hover{image: url(:/icon/checkbox_checked_hover);}
+QListWidget::indicator:enabled:unchecked:hover,QCheckBox::indicator:enabled:unchecked:hover{image: url(:/icon/checkbox_unchecked_hover);}
 QListWidget::indicator:enabled:indeterminate:hover,QCheckBox::indicator:enabled:indeterminate:hover{image: url(:/icon/checkbox_indeterminate_hover);}
 
 /*Checkboxes-disabled*/
@@ -417,8 +417,8 @@ QProgressBar {
 		border-bottom-color: rgb(172, 172, 172);
 		border-top-color: rgb(172, 172, 172);
   border-radius: 5px;
-	background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));	
- }
+background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));
+	 }
  QProgressBar::chunk {
 	background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87, 255), stop:0.505682 rgba(209, 128, 173, 255), stop:0.931818 rgba(209, 44, 136, 255));
   width:1px;
@@ -1851,10 +1851,10 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                     </property>
                     <property name="minimum">
-                     <number>0</number>
+                     <number>1</number>
                     </property>
                     <property name="value">
-                     <number>0</number>
+                     <number>1</number>
                     </property>
                    </widget>
                   </item>
@@ -2741,7 +2741,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          </size>
                         </property>
                         <property name="maximum">
-                         <number>255</number>
+                         <number>61</number>
                         </property>
                         <property name="value">
                          <number>0</number>
@@ -25651,6 +25651,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="action_Lang_es"/>
      <addaction name="action_Lang_fr"/>
     </widget>
+    <addaction name="action_auto_char_growth"/>
     <addaction name="action_show_test_data"/>
     <addaction name="separator"/>
     <addaction name="menuLang"/>
@@ -26375,6 +26376,21 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Export Dex-Drive File</string>
+   </property>
+  </action>
+  <action name="action_auto_char_growth">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/checkbox_unchecked</normaloff>:/icon/checkbox_unchecked</iconset>
+   </property>
+   <property name="text">
+    <string>Automatic Exp &lt;-&gt; Lvl</string>
    </property>
   </action>
  </widget>

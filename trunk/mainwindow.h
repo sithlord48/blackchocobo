@@ -301,6 +301,7 @@ private slots:
     void setarmorslots(void);
     void setweaponslots(void);
     void charupdate(void);
+    void setchar_growth(int caller);
     void materiaupdate_slot(void);
     void materiaupdate(void);
     void itemupdate();
@@ -499,5 +500,6 @@ private slots:
     void on_slide_world_x_valueChanged(int value);
     void on_slide_world_y_valueChanged(int value);
     void on_world_map_view_customContextMenuRequested(QPoint pos);
+    void on_action_auto_char_growth_triggered(bool checked);
 };
 #endif // MAINWINDOW_H
