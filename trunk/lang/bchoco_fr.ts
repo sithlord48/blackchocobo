@@ -1823,10 +1823,6 @@
         <translation>&amp;Zone Sauvegarde</translation>
     </message>
     <message>
-        <source>Aerith&apos;s Death</source>
-        <translation>La Mort de Aerith</translation>
-    </message>
-    <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
         <translation>Sélectionnez la reprise de mission ci-dessus afin de ramener de le jeu à cette mission.  Cette option va automatiquement mettre votre emplacement de sauvegarde, le # du disque et les variable de progression du jeu. N&apos;EFFACEZ PAS VOTRE SAUVEGARDE ACTUELLE en utilisant cette fonction,je ne peux garantir que vous serez en mesure de rejouer à partir de cet événement jusqu&apos;à la fin du jeu. Ou bien que n&apos;importe quelle reprise de missions va fonctionner dans votre sauvegarde, cette section est en cours de développement</translation>
     </message>
@@ -2221,10 +2217,6 @@
     <message>
         <source>29</source>
         <translation>29</translation>
-    </message>
-    <message>
-        <source>New Row</source>
-        <translation>Nouvelle ligne</translation>
     </message>
     <message>
         <source>30</source>
@@ -4480,6 +4472,54 @@ is not a FF7 SaveGame.</source>
         <source>Clear All Items</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Clear Key Items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>47</source>
+        <translation type="unfinished">47</translation>
+    </message>
+    <message>
+        <source>48</source>
+        <translation type="unfinished">48</translation>
+    </message>
+    <message>
+        <source>church in the slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>183</source>
+        <translation type="unfinished">183</translation>
+    </message>
+    <message>
+        <source>65463</source>
+        <translation type="unfinished">65463</translation>
+    </message>
+    <message>
+        <source>400</source>
+        <translation type="unfinished">400</translation>
+    </message>
+    <message>
+        <source>Aeris Turks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Church In The Slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Aeris Death</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>chruch in the slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replay The Church In The Slums</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -6472,6 +6512,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Flashback  Chruch in the slums</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
