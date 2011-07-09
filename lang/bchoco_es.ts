@@ -1500,10 +1500,6 @@
         <translation>Cant.</translation>
     </message>
     <message>
-        <source>Edit Selected Item Slot</source>
-        <translation>Editar Ranura de Elemento Seleccionada</translation>
-    </message>
-    <message>
         <source>QTY:</source>
         <translation>CANT:</translation>
     </message>
@@ -4471,6 +4467,18 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Automatic Exp &lt;-&gt; Lvl</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;---Edit Selected Item Slot</source>
+        <translation>&lt;---Editar Ranura de Elemento Seleccionada</translation>
+    </message>
+    <message>
+        <source>Add Max Of All Items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear All Items</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

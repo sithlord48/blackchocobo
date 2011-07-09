@@ -1503,10 +1503,6 @@
         <translation>Qté</translation>
     </message>
     <message>
-        <source>Edit Selected Item Slot</source>
-        <translation>Modifier l&apos;objet sélectionné</translation>
-    </message>
-    <message>
         <source>QTY:</source>
         <translation>QTÉ:</translation>
     </message>
@@ -4470,6 +4466,18 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Automatic Exp &lt;-&gt; Lvl</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;---Edit Selected Item Slot</source>
+        <translation type="unfinished">&lt;---Modifier l&apos;objet sélectionné</translation>
+    </message>
+    <message>
+        <source>Add Max Of All Items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear All Items</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
