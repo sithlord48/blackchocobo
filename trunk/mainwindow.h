@@ -501,5 +501,7 @@ private slots:
     void on_slide_world_y_valueChanged(int value);
     void on_world_map_view_customContextMenuRequested(QPoint pos);
     void on_action_auto_char_growth_triggered(bool checked);
+    void on_btn_item_add_each_item_clicked();
+    void on_btn_remove_all_items_2_clicked();
 };
 #endif // MAINWINDOW_H

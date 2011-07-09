@@ -5285,3 +5285,37 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
     else{return;}
 }//End Of Map Context Menu
 
+void MainWindow::on_btn_item_add_each_item_clicked()
+{
+    ui->btn_remove_all_items->click();
+    for(int i=0;i<320;i++)
+    {
+        if(names.ItemNames(i)!=tr("DON'T USE"))
+        {
+            if(i<106)
+            {
+                ff7.slot[s].items[i].id = i;
+                if(i<256){ ff7.slot[s].items[i].qty = 254;}
+                else {ff7.slot[s].items[i].qty=255;}
+            }
+            else// after the block of empty items shift up 23 spots.
+            {
+                ff7.slot[s].items[i-23].id = i;
+                if(i<256){ ff7.slot[s].items[i-23].qty = 254;}
+                else {ff7.slot[s].items[i-23].qty=255;}
+            }
+        }
+        else{ff7.slot[s].items[i].id=0xFF;ff7.slot[s].items[i].qty=0xFF;}//exclude the test items
+    if(i>296){ff7.slot[s].items[i].id=0xFF;ff7.slot[s].items[i].qty=0xFF;}//replace the shifted ones w/ empty slots
+    }
+    guirefresh();
+}
+
+void MainWindow::on_btn_remove_all_items_2_clicked()
+{
+    for(int i=0;i<320;i++)
+    {
+        ff7.slot[s].items[i].id =0xFF;
+        ff7.slot[s].items[i].qty=0xFF;
+    }
+}
