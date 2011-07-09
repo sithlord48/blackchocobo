@@ -48,7 +48,6 @@ switch(s)
 {
 case 0: newheader[4]=0x00; break;
 case 1: newheader[4]=0x01; break;
-
 default:newheader[4]= (16 * (s-2))+2; break;
 };
 //calc 0x05 of the header (slots 1-8 empty?)
@@ -61,7 +60,6 @@ for(int i=0;i<8;i++)
     mask |= (1<<i);
     }
 }
-
 newheader[5]=mask;
 mask=0;// reset for the next byte
 //calc 0x06 of the header (slot 9-15 empty?)
@@ -91,7 +89,7 @@ void fix_psx_header(int i)
 }
 
 void fix_vmc_header(void)
-{
+{//Set The Index Section Up.
     QByteArray mc_header_2;
     int index=2;
 
@@ -103,12 +101,12 @@ void fix_vmc_header(void)
     if(ff7.savetype==3){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_mc[k+index]);}}
     if(ff7.savetype==5){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_psp[k+index]);}}
     if(ff7.savetype==6){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_vgs[k+index]);}}
-    if(ff7.savetype==6){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_dex[k+index]);}}
+    if(ff7.savetype==7){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_dex[k+index]);}}
     xor_byte= 0x00;
     if(ff7.savetype==3){for(int x=0;x<127;x++){xor_byte^=mc_header_2[x];}}
     if(ff7.savetype==5){for(int x=128;x<256;x++){xor_byte^=mc_header_2[x];}}
     if(ff7.savetype==6){for(int x=64;x<192;x++){xor_byte^=mc_header_2[x];}}
-    if(ff7.savetype==6){for(int x=0xF40;x<0x1000;x++){xor_byte^=mc_header_2[x];}}
+    if(ff7.savetype==7){for(int x=0xF40;x<0x1000;x++){xor_byte^=mc_header_2[x];}}
     //write xor byte..
     mc_header_2.append(xor_byte);
     // thats a normal header
@@ -264,8 +262,6 @@ void fix_vmc_header(void)
             if(ff7.savetype==5){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_psp[index+j]);}}   //write what ever is in the header.(NOT FF7 SAVE)
             if(ff7.savetype==6){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_vgs[index+j]);}}   //write what ever is in the header.(NOT FF7 SAVE)
             if(ff7.savetype==7){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_dex[index+j]);}}   //write what ever is in the header.(NOT FF7 SAVE)
-
-
         }
     }
 

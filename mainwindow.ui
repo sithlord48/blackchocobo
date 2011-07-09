@@ -4620,8 +4620,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>401</width>
-             <height>414</height>
+             <width>443</width>
+             <height>436</height>
             </rect>
            </property>
            <attribute name="label">
@@ -8274,9 +8274,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            <string>Key Items</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_4">
-           <property name="margin">
-            <number>0</number>
-           </property>
            <item>
             <widget class="QListWidget" name="list_keyitems">
              <property name="minimumSize">
@@ -8742,6 +8739,17 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
              </item>
             </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_163">
+             <item>
+              <widget class="QPushButton" name="btn_clear_keyitems">
+               <property name="text">
+                <string>Clear Key Items</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
            </item>
           </layout>
          </widget>
@@ -10070,7 +10078,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <enum>Qt::Vertical</enum>
             </property>
             <property name="sizeType">
-             <enum>QSizePolicy::Fixed</enum>
+             <enum>QSizePolicy::Expanding</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -16354,7 +16362,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </row>
           <row>
            <property name="text">
-            <string>New Row</string>
+            <string>47</string>
+           </property>
+          </row>
+          <row>
+           <property name="text">
+            <string>48</string>
            </property>
           </row>
           <row>
@@ -17399,7 +17412,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="31" column="0">
            <property name="text">
-            <string>Boat</string>
+            <string>church in the slums</string>
            </property>
           </item>
           <item row="31" column="1">
@@ -17409,27 +17422,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="31" column="2">
            <property name="text">
-            <string>436</string>
+            <string>183</string>
            </property>
           </item>
           <item row="31" column="3">
            <property name="text">
-            <string>65430</string>
+            <string>65463</string>
            </property>
           </item>
           <item row="31" column="4">
            <property name="text">
-            <string>64368</string>
+            <string>400</string>
            </property>
           </item>
           <item row="31" column="5">
            <property name="text">
-            <string>46</string>
+            <string>8</string>
            </property>
           </item>
           <item row="32" column="0">
            <property name="text">
-            <string>Lower Sector 4 Plate</string>
+            <string>Boat</string>
            </property>
           </item>
           <item row="32" column="1">
@@ -17439,27 +17452,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="32" column="2">
            <property name="text">
-            <string>169</string>
+            <string>436</string>
            </property>
           </item>
           <item row="32" column="3">
            <property name="text">
-            <string>65422</string>
+            <string>65430</string>
            </property>
           </item>
           <item row="32" column="4">
            <property name="text">
-            <string>468</string>
+            <string>64368</string>
            </property>
           </item>
           <item row="32" column="5">
            <property name="text">
-            <string>36</string>
+            <string>46</string>
            </property>
           </item>
           <item row="33" column="0">
            <property name="text">
-            <string>Mt. Corel</string>
+            <string>Lower Sector 4 Plate</string>
            </property>
           </item>
           <item row="33" column="1">
@@ -17469,27 +17482,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="33" column="2">
            <property name="text">
-            <string>462</string>
+            <string>169</string>
            </property>
           </item>
           <item row="33" column="3">
            <property name="text">
-            <string>63498</string>
+            <string>65422</string>
            </property>
           </item>
           <item row="33" column="4">
            <property name="text">
-            <string>65531</string>
+            <string>468</string>
            </property>
           </item>
           <item row="33" column="5">
            <property name="text">
-            <string>220</string>
+            <string>36</string>
            </property>
           </item>
           <item row="34" column="0">
            <property name="text">
-            <string>Sector 5 - Slums</string>
+            <string>Mt. Corel</string>
            </property>
           </item>
           <item row="34" column="1">
@@ -17499,27 +17512,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="34" column="2">
            <property name="text">
-            <string>173</string>
+            <string>462</string>
            </property>
           </item>
           <item row="34" column="3">
            <property name="text">
-            <string>64997</string>
+            <string>63498</string>
            </property>
           </item>
           <item row="34" column="4">
            <property name="text">
-            <string>135</string>
+            <string>65531</string>
            </property>
           </item>
           <item row="34" column="5">
            <property name="text">
-            <string>78</string>
+            <string>220</string>
            </property>
           </item>
           <item row="35" column="0">
            <property name="text">
-            <string>Debug - English</string>
+            <string>Sector 5 - Slums</string>
            </property>
           </item>
           <item row="35" column="1">
@@ -17529,27 +17542,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="35" column="2">
            <property name="text">
-            <string>94</string>
+            <string>173</string>
            </property>
           </item>
           <item row="35" column="3">
            <property name="text">
-            <string>0</string>
+            <string>64997</string>
            </property>
           </item>
           <item row="35" column="4">
            <property name="text">
-            <string>0</string>
+            <string>135</string>
            </property>
           </item>
           <item row="35" column="5">
            <property name="text">
-            <string>0</string>
+            <string>78</string>
            </property>
           </item>
           <item row="36" column="0">
            <property name="text">
-            <string>Reactor No. 5 </string>
+            <string>Debug - English</string>
            </property>
           </item>
           <item row="36" column="1">
@@ -17559,27 +17572,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="36" column="2">
            <property name="text">
-            <string>131</string>
+            <string>94</string>
            </property>
           </item>
           <item row="36" column="3">
            <property name="text">
-            <string>34</string>
+            <string>0</string>
            </property>
           </item>
           <item row="36" column="4">
            <property name="text">
-            <string>1617</string>
+            <string>0</string>
            </property>
           </item>
           <item row="36" column="5">
            <property name="text">
-            <string>36</string>
+            <string>0</string>
            </property>
           </item>
           <item row="37" column="0">
            <property name="text">
-            <string>Ropeway Station</string>
+            <string>Reactor No. 5 </string>
            </property>
           </item>
           <item row="37" column="1">
@@ -17589,27 +17602,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="37" column="2">
            <property name="text">
-            <string>496</string>
+            <string>131</string>
            </property>
           </item>
           <item row="37" column="3">
            <property name="text">
-            <string>64767</string>
+            <string>34</string>
            </property>
           </item>
           <item row="37" column="4">
            <property name="text">
-            <string>95</string>
+            <string>1617</string>
            </property>
           </item>
           <item row="37" column="5">
            <property name="text">
-            <string>26</string>
+            <string>36</string>
            </property>
           </item>
           <item row="38" column="0">
            <property name="text">
-            <string>Junon Way</string>
+            <string>Ropeway Station</string>
            </property>
           </item>
           <item row="38" column="1">
@@ -17619,27 +17632,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="38" column="2">
            <property name="text">
-            <string>394</string>
+            <string>496</string>
            </property>
           </item>
           <item row="38" column="3">
            <property name="text">
-            <string>2184</string>
+            <string>64767</string>
            </property>
           </item>
           <item row="38" column="4">
            <property name="text">
-            <string>64947</string>
+            <string>95</string>
            </property>
           </item>
           <item row="38" column="5">
            <property name="text">
-            <string>24</string>
+            <string>26</string>
            </property>
           </item>
           <item row="39" column="0">
            <property name="text">
-            <string>Junon Airport Path</string>
+            <string>Junon Way</string>
            </property>
           </item>
           <item row="39" column="1">
@@ -17649,27 +17662,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="39" column="2">
            <property name="text">
-            <string>386</string>
+            <string>394</string>
            </property>
           </item>
           <item row="39" column="3">
            <property name="text">
-            <string>64902</string>
+            <string>2184</string>
            </property>
           </item>
           <item row="39" column="4">
            <property name="text">
-            <string>65203</string>
+            <string>64947</string>
            </property>
           </item>
           <item row="39" column="5">
            <property name="text">
-            <string>31</string>
+            <string>24</string>
            </property>
           </item>
           <item row="40" column="0">
            <property name="text">
-            <string>Vestibule</string>
+            <string>Junon Airport Path</string>
            </property>
           </item>
           <item row="40" column="1">
@@ -17679,27 +17692,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="40" column="2">
            <property name="text">
-            <string>88</string>
+            <string>386</string>
            </property>
           </item>
           <item row="40" column="3">
            <property name="text">
-            <string>65157</string>
+            <string>64902</string>
            </property>
           </item>
           <item row="40" column="4">
            <property name="text">
-            <string>44</string>
+            <string>65203</string>
            </property>
           </item>
           <item row="40" column="5">
            <property name="text">
-            <string>13</string>
+            <string>31</string>
            </property>
           </item>
           <item row="41" column="0">
            <property name="text">
-            <string>Forgotten Captial</string>
+            <string>Vestibule</string>
            </property>
           </item>
           <item row="41" column="1">
@@ -17709,27 +17722,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="41" column="2">
            <property name="text">
-            <string>633</string>
+            <string>88</string>
            </property>
           </item>
           <item row="41" column="3">
            <property name="text">
-            <string>65402</string>
+            <string>65157</string>
            </property>
           </item>
           <item row="41" column="4">
            <property name="text">
-            <string>65401</string>
+            <string>44</string>
            </property>
           </item>
           <item row="41" column="5">
            <property name="text">
-            <string>40</string>
+            <string>13</string>
            </property>
           </item>
           <item row="42" column="0">
            <property name="text">
-            <string>Whirlwind Maze</string>
+            <string>Forgotten Captial</string>
            </property>
           </item>
           <item row="42" column="1">
@@ -17739,27 +17752,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="42" column="2">
            <property name="text">
-            <string>703</string>
+            <string>633</string>
            </property>
           </item>
           <item row="42" column="3">
            <property name="text">
-            <string>65170</string>
+            <string>65402</string>
            </property>
           </item>
           <item row="42" column="4">
            <property name="text">
-            <string>64488</string>
+            <string>65401</string>
            </property>
           </item>
           <item row="42" column="5">
            <property name="text">
-            <string>44</string>
+            <string>40</string>
            </property>
           </item>
           <item row="43" column="0">
            <property name="text">
-            <string>Sector 8, Underground</string>
+            <string>Whirlwind Maze</string>
            </property>
           </item>
           <item row="43" column="1">
@@ -17769,27 +17782,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="43" column="2">
            <property name="text">
-            <string>733</string>
+            <string>703</string>
            </property>
           </item>
           <item row="43" column="3">
            <property name="text">
-            <string>65264</string>
+            <string>65170</string>
            </property>
           </item>
           <item row="43" column="4">
            <property name="text">
-            <string>1614</string>
+            <string>64488</string>
            </property>
           </item>
           <item row="43" column="5">
            <property name="text">
-            <string>116</string>
+            <string>44</string>
            </property>
           </item>
           <item row="44" column="0">
            <property name="text">
-            <string>Shinra Bldg.</string>
+            <string>Sector 8, Underground</string>
            </property>
           </item>
           <item row="44" column="1">
@@ -17799,27 +17812,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="44" column="2">
            <property name="text">
-            <string>227</string>
+            <string>733</string>
            </property>
           </item>
           <item row="44" column="3">
            <property name="text">
-            <string>512</string>
+            <string>65264</string>
            </property>
           </item>
           <item row="44" column="4">
            <property name="text">
-            <string>63074</string>
+            <string>1614</string>
            </property>
           </item>
           <item row="44" column="5">
            <property name="text">
-            <string>105</string>
+            <string>116</string>
            </property>
           </item>
           <item row="45" column="0">
            <property name="text">
-            <string>Wutai</string>
+            <string>Shinra Bldg.</string>
            </property>
           </item>
           <item row="45" column="1">
@@ -17829,27 +17842,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="45" column="2">
            <property name="text">
-            <string>579</string>
+            <string>227</string>
            </property>
           </item>
           <item row="45" column="3">
            <property name="text">
-            <string>64961</string>
+            <string>512</string>
            </property>
           </item>
           <item row="45" column="4">
            <property name="text">
-            <string>1101</string>
+            <string>63074</string>
            </property>
           </item>
           <item row="45" column="5">
            <property name="text">
-            <string>34</string>
+            <string>105</string>
            </property>
           </item>
           <item row="46" column="0">
            <property name="text">
-            <string>Forgotten City</string>
+            <string>Wutai</string>
            </property>
           </item>
           <item row="46" column="1">
@@ -17859,20 +17872,50 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item row="46" column="2">
            <property name="text">
-            <string>646</string>
+            <string>579</string>
            </property>
           </item>
           <item row="46" column="3">
            <property name="text">
-            <string>641</string>
+            <string>64961</string>
            </property>
           </item>
           <item row="46" column="4">
            <property name="text">
-            <string>793</string>
+            <string>1101</string>
            </property>
           </item>
           <item row="46" column="5">
+           <property name="text">
+            <string>34</string>
+           </property>
+          </item>
+          <item row="47" column="0">
+           <property name="text">
+            <string>Forgotten City</string>
+           </property>
+          </item>
+          <item row="47" column="1">
+           <property name="text">
+            <string>1</string>
+           </property>
+          </item>
+          <item row="47" column="2">
+           <property name="text">
+            <string>646</string>
+           </property>
+          </item>
+          <item row="47" column="3">
+           <property name="text">
+            <string>641</string>
+           </property>
+          </item>
+          <item row="47" column="4">
+           <property name="text">
+            <string>793</string>
+           </property>
+          </item>
+          <item row="47" column="5">
            <property name="text">
             <string>243</string>
            </property>
@@ -18234,19 +18277,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_64">
         <item>
-         <spacer name="verticalSpacer_14">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>69</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
          <layout class="QHBoxLayout" name="horizontalLayout_128">
           <item>
            <spacer name="horizontalSpacer_113">
@@ -18602,22 +18632,24 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </widget>
             </item>
             <item>
-             <layout class="QVBoxLayout" name="verticalLayout_60"/>
+             <layout class="QVBoxLayout" name="verticalLayout_60">
+              <item>
+               <layout class="QHBoxLayout" name="horizontalLayout_162">
+                <item>
+                 <widget class="QLabel" name="label_229">
+                  <property name="text">
+                   <string>Aeris Turks</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QSpinBox" name="sb_turkschruch"/>
+                </item>
+               </layout>
+              </item>
+             </layout>
             </item>
            </layout>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_108">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
           </item>
           <item>
            <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -18711,6 +18743,11 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </item>
                  <item>
                   <property name="text">
+                   <string>The Church In The Slums</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
                    <string>Cloud's Flashback</string>
                   </property>
                  </item>
@@ -18721,7 +18758,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </item>
                  <item>
                   <property name="text">
-                   <string>Aerith's Death</string>
+                   <string>Aeris Death</string>
                   </property>
                  </item>
                 </widget>
@@ -18776,7 +18813,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
          </widget>
         </item>
         <item>
-         <spacer name="verticalSpacer_15">
+         <spacer name="verticalSpacer_14">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>

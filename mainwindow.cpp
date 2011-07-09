@@ -94,8 +94,9 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     if(settings.value("show_test").toBool())
     {
         ui->action_show_test_data->setChecked(1);
-        ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
+    ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
     }
+    else{ui->action_show_test_data->setChecked(0);}
 
    //are any empty? if so set them accordingly.
    if(settings.value("autochargrowth").isNull()){settings.setValue("autochargrowth",1);}
@@ -138,7 +139,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
        ui->action_auto_char_growth->setChecked(1);
        ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_checked"));
    }
-
+   else{ui->action_auto_char_growth->setChecked(0);}
    /* LANGUAGE SELECT */
    if(settings.value("lang").toString() == "en")
    {
@@ -1057,13 +1058,22 @@ void MainWindow::on_actionPaste_Slot_activated()
 }
 void MainWindow::on_action_auto_char_growth_triggered(bool checked)
 {
-    if(checked){settings.setValue("autochargrowth",1);if(!load){setchar_growth(0);}ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_checked"));}
-    else{settings.setValue("autochargrowth",0);ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_unchecked"));}
+    if(checked)
+    {
+        settings.setValue("autochargrowth",1);
+        ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_checked"));
+        if(!load){setchar_growth(0);}
+    }
+    else
+    {
+        settings.setValue("autochargrowth",0);
+        ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_unchecked"));
+    }
 }
 
-void MainWindow::on_action_show_test_data_toggled()
+void MainWindow::on_action_show_test_data_toggled(bool checked)
 {
-    if(ui->action_show_test_data->isChecked())
+    if(checked)
     {
         ui->tabWidget->setTabEnabled(8,1);
         ui->tabWidget->setTabText(8,tr("Test Data"));
@@ -1109,9 +1119,10 @@ void MainWindow::on_action_show_test_data_toggled()
     }
 }
 /*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_USA_triggered()
+
+void MainWindow::on_action_Region_USA_triggered(bool checked)
 {if(!load){
-    if(!ui->action_Region_USA->isChecked())
+    if(!checked)
     {
         ff7.SG_Region_String[s].clear();
         ui->lbl_sg_region->clear();
@@ -1153,9 +1164,9 @@ void MainWindow::on_action_Region_USA_triggered()
     }
 }}
 /*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_PAL_Generic_triggered()
+void MainWindow::on_action_Region_PAL_Generic_triggered(bool checked)
 {if(!load){
-    if(!ui->action_Region_PAL_Generic->isChecked())
+    if(!checked)
     {
         ff7.SG_Region_String[s].clear();
         ui->lbl_sg_region->clear();
@@ -1197,9 +1208,9 @@ void MainWindow::on_action_Region_PAL_Generic_triggered()
     }
 }}
 /*~~~~~~~~~~~~~SET PAL_German MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_PAL_German_triggered()
+void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
 {if(!load){
-    if(!ui->action_Region_PAL_German->isChecked())
+    if(!checked)
     {
         ff7.SG_Region_String[s].clear();
         ui->lbl_sg_region->clear();
@@ -1241,9 +1252,9 @@ void MainWindow::on_action_Region_PAL_German_triggered()
     }
 }}
 /*~~~~~~~~~~~~~SET PAL_Spanish MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_PAL_Spanish_triggered()
+void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
 {if(!load){
-    if(!ui->action_Region_PAL_Spanish->isChecked())
+    if(!checked)
     {
         ff7.SG_Region_String[s].clear();
         ui->lbl_sg_region->clear();
@@ -1285,9 +1296,9 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered()
     }
 }}
 /*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_JPN_triggered()
+void MainWindow::on_action_Region_JPN_triggered(bool checked)
 {if(!load){
-    if(!ui->action_Region_JPN->isChecked())
+    if(!checked)
     {
         ff7.SG_Region_String[s].clear();
         ui->lbl_sg_region->clear();
@@ -1329,9 +1340,9 @@ void MainWindow::on_action_Region_JPN_triggered()
     }
 }}
 /*~~~~~~~~~~~~~SET JPN_International MC HEADER~~~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Region_JPN_International_triggered()
+void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
 {if(!load){
-    if(!ui->action_Region_JPN_International->isChecked())
+    if(!checked)
     {
         ff7.SG_Region_String[s].clear();
         ui->lbl_sg_region->clear();
@@ -2655,6 +2666,9 @@ void MainWindow::guirefresh(void)
     QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
     //make the preview nice
+
+
+    ui->sb_turkschruch->setValue(ff7.slot[s].aeris_chruch);
     //Clear all check boxes and index's
     ui->cb_replay->setCurrentIndex(0);
     ui->cb_bombing_int->setChecked(Qt::Unchecked);
@@ -2766,12 +2780,8 @@ void MainWindow::guirefresh(void)
         else{ui->list_menu_locked->currentItem()->setCheckState(Qt::Unchecked);}
         ui->list_menu_locked->setCurrentRow(-1);
     }
+    ui->btn_clear_keyitems->click();
 
-    for(int i=0;i<51;i++)// be sure to clear key items first..
-    {
-        ui->list_keyitems->setCurrentRow(i);
-        ui->list_keyitems->currentItem()->setCheckState(Qt::Unchecked);
-    }
 
     for (int i=0;i<51;i++)// key items
     {
@@ -3339,6 +3349,14 @@ void MainWindow::on_clearItem_clicked()
     ff7.slot[s].items[ui->tbl_itm->currentRow()].id = 0xFF;
     ff7.slot[s].items[ui->tbl_itm->currentRow()].qty = 0xFF;
     itemupdate();
+}
+void MainWindow::on_btn_clear_keyitems_clicked()
+{
+    for(int i=0;i<51;i++)// be sure to clear key items first..
+    {
+        ui->list_keyitems->setCurrentRow(i);
+        ui->list_keyitems->currentItem()->setCheckState(Qt::Unchecked);
+    }
 }
 
 void MainWindow::on_combo_additem_currentIndexChanged(int index)
@@ -4444,8 +4462,28 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_coordz->setValue(25);
         ui->label_replaynote->setText(tr("Replay the bombing mission from right after you get off the first train, game might crash after the mission right before jessie talks to you about midgar."));
     }
+    else if(index == 2) // The Church In The Slums
+    {
+        ui->sb_curdisc->setValue(1);
+        ui->sb_mprogress->setValue(130);
+        ui->sb_turkschruch->setValue(0);
+        ui->sb_bm_progress1->setValue(120);
+        ui->sb_bm_progress2->setValue(198);
+        ui->sb_bm_progress3->setValue(3);
+        ui->cb_bombing_int->setChecked(0);
+        ui->line_location->setText(tr("chruch in the slums"));
+        ui->sb_map_id->setValue(1);
+        ui->sb_loc_id->setValue(183);
+        ui->sb_coordx->setValue(65463);
+        ui->sb_coordy->setValue(400);
+        ui->sb_coordz->setValue(8);
+        ui->combo_party1->setCurrentIndex(0);
+        ui->combo_party2->setCurrentIndex(12);
+        ui->combo_party3->setCurrentIndex(12);
+        ui->label_replaynote->setText(tr("Replay The Church In The Slums"));
 
-    else if (index ==2)// Flash back
+    }
+    else if (index ==3)// Flash back
     {
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(341);
@@ -4517,8 +4555,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->label_replaynote->setText(tr("Setting This Will Copy Cloud as is to young cloud (caitsith's slot). sephiroth's stats will come directly from vincent, if you wish to edit cloud or vincent after selecting this replay then change the box to the first(blank) entry and then when you have set those chars as you wish reselect this replay from the combobox."));
     }
 
-
-    else if(index == 3) // The Date Scene
+    else if(index == 4) // The Date Scene
     {
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(583);
@@ -4535,7 +4572,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too."));
     }
 
-    else if (index == 4)//Aerith Death
+    else if (index == 5)//Aerith Death
     {
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(664);
@@ -5319,3 +5356,8 @@ void MainWindow::on_btn_remove_all_items_2_clicked()
         ff7.slot[s].items[i].qty=0xFF;
     }
 }
+
+void MainWindow::on_sb_turkschruch_valueChanged(int value)
+{if(!load){
+    ff7.slot[s].aeris_chruch=value;
+}}

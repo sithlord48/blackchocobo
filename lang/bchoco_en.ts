@@ -2179,10 +2179,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New Row</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>30</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3176,10 +3172,6 @@
     </message>
     <message>
         <source>z</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Aerith&apos;s Death</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4467,6 +4459,54 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Clear All Items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear Key Items</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>47</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>48</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>church in the slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>183</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>65463</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>400</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Aeris Turks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Church In The Slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Aeris Death</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>chruch in the slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replay The Church In The Slums</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6449,6 +6489,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Flashback  Chruch in the slums</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

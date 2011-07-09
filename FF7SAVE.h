@@ -405,7 +405,9 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 z_16[97];            // [0x0C24] UNKNOWN DATA
     quint8 bm_progress1;        // [0x0C85] Bombing Mission Flag 1
     quint8 bm_progress2;        // [0x0C86] Bombing Mission Flag 2
-    quint8 z_17[95];            // [0X0C87] UNKNOWN DATA
+    quint8 z_17[45];            // [0X0C87] UNKNOWN DATA 45 50
+    quint8 aeris_chruch;        // [0x0CB4] aeris chruch
+    quint8 z_1222[49];          // [0x0CB5] UNKNOWN
     quint8 bm_progress3;        // [0X0CE6] Bombing mission flag 3
     quint8 z_18[7];             // [0X0CE7] UNKNOWN DATA
     quint16 gp;                 // [0x0CEE] Party GP (0-10000)
