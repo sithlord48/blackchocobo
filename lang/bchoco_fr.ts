@@ -4520,6 +4520,22 @@ is not a FF7 SaveGame.</source>
         <source>Replay The Church In The Slums</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Don_prog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New Row</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Address</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Value</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>

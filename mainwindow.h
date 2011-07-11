@@ -515,5 +515,6 @@ private slots:
     void on_world_map_view_customContextMenuRequested(QPoint pos);
 
     void on_btn_clear_keyitems_clicked();
+    void on_sb_donprog_valueChanged(int );
 };
 #endif // MAINWINDOW_H
