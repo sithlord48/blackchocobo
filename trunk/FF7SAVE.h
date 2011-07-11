@@ -400,51 +400,53 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 z_14[28];            // [0x0C02] UNKNOWN DATA
     quint8 tut_sub;             // [0x0C1E] Have we seen the sub tutorial 0x04 =on Show Battle Targets Label 0x40=on
     quint8 ruby_emerald;        // [0x0C1F] WEAPONS ALIVE? 0x05=both 0x1D =non 0x0D = emerald
-    quint8 z_15[3];                // [0x0C20] UNKNOWN DATA
+    quint8 z_15[3];             // [0x0C20] UNKNOWN DATA
     quint8 highwind_buggy;      // [0x0C23] 0x10 for highwind 0x01 buggy? (needs coords to work)
     quint8 z_16[97];            // [0x0C24] UNKNOWN DATA
     quint8 bm_progress1;        // [0x0C85] Bombing Mission Flag 1
     quint8 bm_progress2;        // [0x0C86] Bombing Mission Flag 2
     quint8 z_17[45];            // [0X0C87] UNKNOWN DATA 45 50
     quint8 aeris_chruch;        // [0x0CB4] aeris chruch
-    quint8 z_1222[49];          // [0x0CB5] UNKNOWN
+    quint8 z_18[49];            // [0x0CB5] UNKNOWN
     quint8 bm_progress3;        // [0X0CE6] Bombing mission flag 3
-    quint8 z_18[7];             // [0X0CE7] UNKNOWN DATA
+    quint8 z_19[7];             // [0X0CE7] UNKNOWN DATA
     quint16 gp;                 // [0x0CEE] Party GP (0-10000)
-    quint8 z_19[12];            // [0x0CF0] UNKNOWN DATA
+    quint8 z_20[12];            // [0x0CF0] UNKNOWN DATA
     qint8 stables;              // [0x0CFC] Number of chocobo stables owned
     qint8 stablesoccupied;      // [0x0CFD] Number of occupied stables //genereated incorrectly ?
-    quint8 z_20;                // [0x0CFE] UNKNOWN DATA
+    quint8 z_21;                // [0x0CFE] UNKNOWN DATA
     qint8 chocobomask;          // [0x0CFF] Mask of occupied stables//genereated incorrectly ?
     quint8 chocoborn;           // [0x0D00] what stall a choco was just born in.
-    quint8 z_21[40];            // [0x0D01] UNKNOWN DATA
+    quint8 z_22[40];            // [0x0D01] UNKNOWN DATA
     quint8 yuffieforest;        // [0x0D29] yuffie in forest if bit1 = 1 then yes.. others here too?
-    quint8 z_22[60];            // [0x0D30] UNKNOWN DATA
+    quint8 z_23[28];            // [0x0D2A] UNKNOWN DATA
+    quint8 donprogress;         // [0x0D46] don's progress var. 00 - 03 when done
+    quint8 z_24[31];            // [0x0D47] UNKNOWN DATA
     quint8 turtleflyers;        // [0x0D66] turtles paradice flyers.
-    quint8 z_23[12];            // [0X0D67] UNKNOWN DATA
+    quint8 z_25[12];            // [0X0D67] UNKNOWN DATA
     quint8 reg_yuffie;          // [0x0D73] yuffie regular? 0x6F=yes 0x6E=no
-    quint8 z_24[15];            // [0x0D74] UNKNOWN DATA
+    quint8 z_26[15];            // [0x0D74] UNKNOWN DATA
     quint8 midgartrainflags;    // [0x0D83] Midgar Train Flags.
-    quint8 z_25[64];            // [0x0D84] UNKNOWN DATA
+    quint8 z_27[64];            // [0x0D84] UNKNOWN DATA
     FF7CHOCOBO chocobos[4];     // [0x0DC4] Chocobo slots
-    quint8 z_26[32];            // [0x0E04] UNKNOWN DATA
+    quint8 z_28[32];            // [0x0E04] UNKNOWN DATA
     quint16 coster_2;           // [0x0E24] Coster 2nd place score
     quint16 coster_3;           // [0x0E26] Coster 3rd place score
-    quint8 z_27[17];            // [0x0E28] UNKNOWN DATA
+    quint8 z_29[17];            // [0x0E28] UNKNOWN DATA
     quint16 coster_1;           // [0x0E39] Coster 1st place
-    quint8 z_28[105];           // [0x0E3C] UNKNOWN DATA
+    quint8 z_30[105];           // [0x0E3C] UNKNOWN DATA
     qint8 disc;                 // [0x0EA4] Current CD
-    quint8 z_29[1];             // [0x0EA5] UNKNOWN DATA
+    quint8 z_31;                // [0x0EA5] UNKNOWN DATA
     quint8 intbombing;          // [0x0EA6] 0x14 On Start of Bombing Mission , 0x56 On first Save..
-    quint8 z_30[27];            // [0x0EA7] UNKNOWN DATA
+    quint8 z_32[27];            // [0x0EA7] UNKNOWN DATA
     quint8 field_help;          // [0x0EC2] Show field hand 1=on 0=off
-    quint8 z_31;                // [0x0EC3] UNKNOWN
+    quint8 z_33;                // [0x0EC3] UNKNOWN
     quint8 chocobonames[6][6];  // [0x0EC4] <-OK Chocobo names
     quint16 chocostaminas[6];   // [0x0EE8] Chocobo staminas 12 bytes
     quint8 reg_vinny;           // [0x0EF4] 0xFF for true 0xFB false (vincent a regualar?)
-    quint8 z_32[52];            // [0x0EF5] UNKNOWN DATA
+    quint8 z_34[52];            // [0x0EF5] UNKNOWN DATA
     quint8 tut_save;            // [0x0F29] Have we seen save tut ? 0x3A true , 0x32 false
-    quint8 z_33[50];            // [0x0F2A] UNKNOWN DATA
+    quint8 z_35[50];            // [0x0F2A] UNKNOWN DATA
     quint32 l_world;            // [0x0F5C] coords of the leader on the world map part 1 (X, id, angle)
     quint32 l_world2;           // [0x0F60] leader coords part 2 (Y,Z)
     quint32 uw_world;           // [0x0F64] unknown? coords part 1
@@ -459,18 +461,18 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint32 durw_world2;        // [0x0F8C] Diamond/ Ultimate And Ruby Weapons Coords.
     quint32 ew_world;           // [0x0F90] emerald?
     quint32 ew_world2;          // [0x0F94] emerald2?
-    quint8 z_55[240];           // [0x0F84] UNKNOWN (Start of more coords.. )
+    quint8 z_36[240];           // [0x0F84] UNKNOWN (Start of more coords.. )
     FF7CHOCOBO choco56[2];      // [0x1084] Chocobo slots 5-6
     quint16 phsmask;            // [0x10A4] who is allowed in the phs
     quint16 unlockedchars;      // [0x10A6] who is visible in the phs
-    quint8 z_34[48];            // [0x10A8] UNKNOWN DATA
+    quint8 z_37[48];            // [0x10A8] UNKNOWN DATA
     quint8 battlespeed;         // [0x10D8] Battle Speed
     quint8 battlemspeed;        // [0x10D9] Battle Message Speed
     quint8 options1;            // [0x10DA] Options 1
     quint8 options2;            // [0x10DB] Options 2
     quint8 controller_map[16];  // [0x10DC] controller mapping?
     quint8 fieldmspeed;         // [0x10EC] Message Speed On field
-    quint8 z_35[7];             // [0x10ED] UNKNOWN DATA
+    quint8 z_38[7];             // [0x10ED] UNKNOWN DATA
 }__attribute__((__packed__));
 /* FF7HEADFOOT FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
     struct FF7HEADFOOT {

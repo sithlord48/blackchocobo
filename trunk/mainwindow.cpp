@@ -76,6 +76,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     //testing stuff.
 
     ui->tabWidget->setTabEnabled(8,0);
+    ui->tabWidget->setTabEnabled(9,0);
     ui->lbl_0x34->setVisible(false);
     ui->lbl_0x35->setVisible(false);
     ui->lbl_0x36->setVisible(false);
@@ -1077,6 +1078,7 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
     {
         ui->tabWidget->setTabEnabled(8,1);
         ui->tabWidget->setTabText(8,tr("Test Data"));
+        ui->tabWidget->setTabEnabled(9,1);
         ui->lbl_0x34->setVisible(true);
         ui->lbl_0x35->setVisible(true);
         ui->lbl_0x36->setVisible(true);
@@ -1100,6 +1102,7 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
     {
         ui->tabWidget->setTabEnabled(8,0);
         ui->tabWidget->setTabText(8,tr(""));
+        ui->tabWidget->setTabEnabled(9,0);
         ui->lbl_0x34->setVisible(false);
         ui->lbl_0x35->setVisible(false);
         ui->lbl_0x36->setVisible(false);
@@ -1694,7 +1697,6 @@ void MainWindow::charupdate(void)
 /*~~~~~~~END Char Update~~~~~~~~*/
 void MainWindow::setchar_growth(int caller)
 {
-
     load=true;
     if(caller==2){ff7.slot[s].chars[curchar].exp = charlvls[curchar][ui->sb_lvl->value()-1];ui->sb_exp->setValue(ff7.slot[s].chars[curchar].exp);}
 
@@ -1711,15 +1713,16 @@ void MainWindow::setchar_growth(int caller)
     {
        if(ff7.slot[s].chars[curchar].exp==charlvls[curchar][ui->sb_lvl->value()]){ff7.slot[s].chars[curchar].expNext=chartnls[curchar][ui->sb_lvl->value()];}
        ff7.slot[s].chars[curchar].expNext= charlvls[curchar][ui->sb_lvl->value()]- ui->sb_exp->value();
-       ui->pbar_level->setValue(((chartnls[curchar][ui->sb_lvl->value()]-ff7.slot[s].chars[curchar].expNext)*62)/(chartnls[curchar][ui->sb_lvl->value()]));//level progress is in 62 parts.
-       ff7.slot[s].chars[curchar].flags[2]=ui->pbar_level->value();
-       if(ui->pbar_level->value()<4){ui->pbar_level->setValue(0);}//ff7 ingores the value if its <4 (but we don't save this)
+       ff7.slot[s].chars[curchar].flags[2]=((chartnls[curchar][ui->sb_lvl->value()]-ff7.slot[s].chars[curchar].expNext)*62)/(chartnls[curchar][ui->sb_lvl->value()]);//level progress is in 62 parts.
     }
 
     else
     {
         ff7.slot[s].chars[curchar].expNext=0;
+        ff7.slot[s].chars[curchar].flags[2]=0;
     }
+    ui->pbar_level->setValue(ff7.slot[s].chars[curchar].flags[2]);
+    if(ui->pbar_level->value()<4){ui->pbar_level->setValue(0);}//ff7 ingores the value if its <4 (but we don't save this)
     numvalue.setNum(ff7.slot[s].chars[curchar].expNext);
     ui->lcd_next->display(numvalue);
     load=false;
@@ -2668,7 +2671,11 @@ void MainWindow::guirefresh(void)
     //make the preview nice
 
 
+
     ui->sb_turkschruch->setValue(ff7.slot[s].aeris_chruch);
+    ui->sb_donprog->setValue(ff7.slot[s].donprogress);
+    //
+
     //Clear all check boxes and index's
     ui->cb_replay->setCurrentIndex(0);
     ui->cb_bombing_int->setChecked(Qt::Unchecked);
@@ -4633,6 +4640,21 @@ void MainWindow::testdata_refresh()
 {
     load=true;
 
+    QTableWidgetItem *newItem;
+    //int j= ui->tbl_unknown->currentRow();
+    ui->tbl_unknown->reset();
+    QString text;
+    for(int i=0;i<sizeof(ff7.slot[s].z_23);i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        text.setNum(ff7.slot[s].z_23[i]);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+    }
+
     switch(ui->combo_map_controls->currentIndex())
     {
     case 0: ui->slide_world_x->setValue(ff7.slot[s].l_world & 0x7FFFF);
@@ -5360,4 +5382,9 @@ void MainWindow::on_btn_remove_all_items_2_clicked()
 void MainWindow::on_sb_turkschruch_valueChanged(int value)
 {if(!load){
     ff7.slot[s].aeris_chruch=value;
+}}
+
+void MainWindow::on_sb_donprog_valueChanged(int value)
+{if(!load){
+    ff7.slot[s].donprogress=value;
 }}
