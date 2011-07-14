@@ -37,9 +37,6 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
 {
     ui->setupUi(this);
 
-    if(!settings.value("font-size").toString().isEmpty()){QApplication::setFont(QFont(QApplication::font().family(),settings.value("font-size").toInt(),-1,false));}
-    if(!settings.value("font-family").toString().isEmpty()){QApplication::setFont(QFont(settings.value("font-family").toString(),QApplication::font().pointSize(),-1,false));}
-
 
     for (int i=0; i<256; i++)
     {
@@ -76,7 +73,6 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     //testing stuff.
 
     ui->tabWidget->setTabEnabled(8,0);
-    ui->tabWidget->setTabEnabled(9,0);
     ui->lbl_0x34->setVisible(false);
     ui->lbl_0x35->setVisible(false);
     ui->lbl_0x36->setVisible(false);
@@ -95,11 +91,13 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     if(settings.value("show_test").toBool())
     {
         ui->action_show_test_data->setChecked(1);
-    ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
+        ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
     }
     else{ui->action_show_test_data->setChecked(0);}
 
    //are any empty? if so set them accordingly.
+   if(!settings.value("font-size").toString().isEmpty()){QApplication::setFont(QFont(QApplication::font().family(),settings.value("font-size").toInt(),-1,false));}
+   if(!settings.value("font-family").toString().isEmpty()){QApplication::setFont(QFont(settings.value("font-family").toString(),QApplication::font().pointSize(),-1,false));}
    if(settings.value("autochargrowth").isNull()){settings.setValue("autochargrowth",1);}
    if(settings.value("default_save_file").isNull()){settings.setValue("default_save_file",QString(QCoreApplication::applicationDirPath()) + "/"+ "save0");}
    if(settings.value("load_path").isNull()){settings.setValue("load_path",QDir::homePath());}
@@ -180,6 +178,10 @@ void MainWindow::on_actionOpen_Save_File_activated()
     tr("Open Final Fantasy 7 Save"),settings.value("load_path").toString(),
     tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme)"));
     if (!fileName.isEmpty()) loadFileFull(fileName);
+    //why does Qt reset the name?
+    if(settings.value("show_test").toBool()){ui->tabWidget->setTabText(8,tr("Test Data"));}
+    else{ui->tabWidget->setTabText(8,"");}
+
 }
 /*~~~~~~~~~~~~~~~~~Load Full ~~~~~~~~~~~~~~~~~~*/
 void MainWindow::loadFileFull(const QString &fileName)
@@ -393,6 +395,7 @@ void MainWindow::on_actionFrom_PSX_Slot_activated()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Select Final Fantasy 7 PSX Save"),(""),tr("Raw PSX FF7 SaveGame (*-S*)"));
+
     if(fileName.isEmpty()){return;}
     else
     {
@@ -1078,7 +1081,6 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
     {
         ui->tabWidget->setTabEnabled(8,1);
         ui->tabWidget->setTabText(8,tr("Test Data"));
-        ui->tabWidget->setTabEnabled(9,1);
         ui->lbl_0x34->setVisible(true);
         ui->lbl_0x35->setVisible(true);
         ui->lbl_0x36->setVisible(true);
@@ -1102,7 +1104,6 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
     {
         ui->tabWidget->setTabEnabled(8,0);
         ui->tabWidget->setTabText(8,tr(""));
-        ui->tabWidget->setTabEnabled(9,0);
         ui->lbl_0x34->setVisible(false);
         ui->lbl_0x35->setVisible(false);
         ui->lbl_0x36->setVisible(false);
@@ -4639,22 +4640,6 @@ void MainWindow::on_btn_remove_all_stolen_clicked()
 void MainWindow::testdata_refresh()
 {
     load=true;
-
-    QTableWidgetItem *newItem;
-    //int j= ui->tbl_unknown->currentRow();
-    ui->tbl_unknown->reset();
-    QString text;
-    for(int i=0;i<sizeof(ff7.slot[s].z_23);i++)
-    {
-        text.setNum(i);
-        newItem = new QTableWidgetItem(text,0);
-        ui->tbl_unknown->setItem(i,0,newItem);
-
-        text.setNum(ff7.slot[s].z_23[i]);
-        newItem = new QTableWidgetItem(text,0);
-        ui->tbl_unknown->setItem(i,1,newItem);
-    }
-
     switch(ui->combo_map_controls->currentIndex())
     {
     case 0: ui->slide_world_x->setValue(ff7.slot[s].l_world & 0x7FFFF);
@@ -5388,3 +5373,782 @@ void MainWindow::on_sb_donprog_valueChanged(int value)
 {if(!load){
     ff7.slot[s].donprogress=value;
 }}
+
+void MainWindow::on_combo_z_var_currentIndexChanged(int z)
+{
+ load=true;
+ QString text;
+ int rows=0;
+ QTableWidgetItem *newItem;
+ quint8 value=0;
+ ui->tbl_unknown->reset();
+
+ switch(z)
+ {
+ case 0: break;
+ case 1:
+    rows=sizeof(ff7.slot[s].z_1);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_1[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 2:
+    rows=sizeof(ff7.slot[s].z_2);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_2[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 3:
+    rows=sizeof(ff7.slot[s].z_3);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_3[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 4:
+    rows=sizeof(ff7.slot[s].z_4);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_4[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 5:
+    rows=sizeof(ff7.slot[s].z_5);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_5[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 6:
+    rows=sizeof(ff7.slot[s].z_6);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_6[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 7:
+    rows=sizeof(ff7.slot[s].z_7);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_7[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 8:
+    rows=sizeof(ff7.slot[s].z_8);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_8[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 9:
+    rows=sizeof(ff7.slot[s].z_9);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_9[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 10:
+    rows=sizeof(ff7.slot[s].z_10);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_10[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 11:
+    rows=sizeof(ff7.slot[s].z_11);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_11[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 12:
+    rows=sizeof(ff7.slot[s].z_12);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_12[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 13:
+    rows=sizeof(ff7.slot[s].z_13);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_13[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 14:
+    rows=sizeof(ff7.slot[s].z_14);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_14[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 15:
+    rows=sizeof(ff7.slot[s].z_15);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_15[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 16:
+    rows=sizeof(ff7.slot[s].z_16);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_16[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 17:
+    rows=sizeof(ff7.slot[s].z_17);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_17[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 18:
+    rows=sizeof(ff7.slot[s].z_18);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_18[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 19:
+    rows=sizeof(ff7.slot[s].z_19);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_19[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 20:
+    rows=sizeof(ff7.slot[s].z_20);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_20[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 21:
+    rows=sizeof(ff7.slot[s].z_21);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_21[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 22:
+    rows=sizeof(ff7.slot[s].z_22);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_22[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 23:
+    rows=sizeof(ff7.slot[s].z_23);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_23[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 24:
+    rows=sizeof(ff7.slot[s].z_24);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_24[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 25:
+    rows=sizeof(ff7.slot[s].z_25);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_25[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 26:
+    rows=sizeof(ff7.slot[s].z_26);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_26[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 27:
+    rows=sizeof(ff7.slot[s].z_27);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_27[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 28:
+    rows=sizeof(ff7.slot[s].z_28);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_28[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 29:
+    rows=sizeof(ff7.slot[s].z_29);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_29[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 30:
+    rows=sizeof(ff7.slot[s].z_30);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_30[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 31:
+    rows=sizeof(ff7.slot[s].z_31);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_31[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 32:
+    rows=sizeof(ff7.slot[s].z_32);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_32[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 33:
+    rows=sizeof(ff7.slot[s].z_33);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_33[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 34:
+    rows=sizeof(ff7.slot[s].z_34);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_34[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 35:
+    rows=sizeof(ff7.slot[s].z_35);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_35[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 36:
+    rows=sizeof(ff7.slot[s].z_36);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_36[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 37:
+    rows=sizeof(ff7.slot[s].z_37);
+    ui->tbl_unknown->setRowCount(rows);
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_37[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+ case 38:
+    rows=sizeof(ff7.slot[s].z_38);
+    ui->tbl_unknown->setRowCount(rows);
+
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_38[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+    }
+    break;
+
+ };
+    load=false;
+}

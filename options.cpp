@@ -549,8 +549,8 @@ void Options::on_reset_char_stat_folder_clicked()
 void Options::on_reset_font_clicked()
 {
     QApplication::setFont(QFont("ubuntu",9,-1,false)); QApplication::font().setFamily("ubuntu");
-    ui->btn_9pt->setChecked(Qt::Checked);
     ui->combo_font->setCurrentFont(QFont("ubuntu",9,-1,false));
+    ui->btn_9pt->click();
     bchoco_settings.remove("font-family"); bchoco_settings.remove("font-size");
 }
 
