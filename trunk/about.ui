@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>365</width>
-    <height>392</height>
+    <width>388</width>
+    <height>388</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -507,6 +507,11 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>Fixed: Missing Keycard 66 in keyitems list</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Update: Location Tab; Both Save &amp; World Locations</string>
           </property>
          </item>
          <item>
@@ -1309,8 +1314,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>138</width>
-            <height>740</height>
+            <width>358</width>
+            <height>390</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">

@@ -2787,10 +2787,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Save &amp;Location</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>3</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4266,10 +4262,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>World</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Party leader</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4306,27 +4298,7 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ultimate Weapon ?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Emerlad Weapon ?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Buggy Or Highwind</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x00-NONE</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x01-Buggy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x10-Highwind</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4514,15 +4486,211 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New Row</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Value</source>
+        <source>&amp;Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Worldmap Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shown On Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Buggy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right Click  On The Map To Set On Map To Easily Set Locations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown  Vars</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Var:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_9</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_11</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_12</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_13</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_14</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_15</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_16</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_17</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_18</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_19</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_20</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_21</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_22</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_23</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_24</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_25</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_26</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_27</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_28</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_29</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_30</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_31</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_32</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_33</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_34</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_35</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_36</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_37</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_38</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>HEX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>INT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>BINARY</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6509,6 +6677,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Flashback  Chruch in the slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update: Location Tab; Both Save &amp; World Locations</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

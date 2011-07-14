@@ -516,5 +516,6 @@ private slots:
 
     void on_btn_clear_keyitems_clicked();
     void on_sb_donprog_valueChanged(int );
+    void on_combo_z_var_currentIndexChanged(int);
 };
 #endif // MAINWINDOW_H

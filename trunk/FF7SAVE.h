@@ -364,7 +364,7 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 colors[4][3];	// [0x0048] Window colors (RGB)
     FF7CHAR chars[9];		// [0x0054:84] The nine characters (Cl,Ba,Ti,Ae,Re,Yu,Ca,Vi,Ci)
     qint8 party[3];		// [0x04F8] Party members
-    quint8 z_2;                 // [0x04FB] always 0xFF
+    quint8 z_2[1];              // [0x04FB] always 0xFF
     item items[320];		// [0x04FC] Items (320 slots)
     materia materias[200];	// [0x077C] Materia (200 slots)
     materia stolen[48];         // [0x0A9C] materia stolen by yuffie.
@@ -379,7 +379,7 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     FF7XYZ coord;		// [0x0B9A] Current coordinates (world map)
     quint8 z_6[4];              // [0x0BA0] UNKNOWN DATA
     quint16 mprogress;          // [0x0BA4] Main Progress var
-    quint8 z_7;                 // [0x0BA6] UNKNOWN DATA
+    quint8 z_7[1];              // [0x0BA6] UNKNOWN DATA
     LOVE love;                  // [0X0BA7] Main love points.
     quint8 z_8[17];             // [0x0BAB] UNKNOWN DATA
     quint16 battles;            // [0x0BBC] Number of battle
@@ -393,7 +393,7 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 keyitems[8];         // [0x0BE4] Key items
     quint8 z_11[8];             // [0x0BEC] UNKNOWN DATA
     LOVE b_love;                // [0x0BF4] Battle Love Points
-    quint8 z_12;                // [0x0BF8] UNKNOWN DATA
+    quint8 z_12[1];             // [0x0BF8] UNKNOWN DATA
     qint8 pennedchocos[4];      // [0x0BF9] chocos in fenced area at farm rating
     quint8 z_13[2];             // [0x0BFD] UNKNOWN DATA
     quint8 u_weapon_hp[3];      // [0x0BFF] Ultimate Weapons Remaining Hp
@@ -414,7 +414,7 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 z_20[12];            // [0x0CF0] UNKNOWN DATA
     qint8 stables;              // [0x0CFC] Number of chocobo stables owned
     qint8 stablesoccupied;      // [0x0CFD] Number of occupied stables //genereated incorrectly ?
-    quint8 z_21;                // [0x0CFE] UNKNOWN DATA
+    quint8 z_21[1];             // [0x0CFE] UNKNOWN DATA
     qint8 chocobomask;          // [0x0CFF] Mask of occupied stables//genereated incorrectly ?
     quint8 chocoborn;           // [0x0D00] what stall a choco was just born in.
     quint8 z_22[40];            // [0x0D01] UNKNOWN DATA
@@ -436,11 +436,11 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint16 coster_1;           // [0x0E39] Coster 1st place
     quint8 z_30[105];           // [0x0E3C] UNKNOWN DATA
     qint8 disc;                 // [0x0EA4] Current CD
-    quint8 z_31;                // [0x0EA5] UNKNOWN DATA
+    quint8 z_31[1];             // [0x0EA5] UNKNOWN DATA
     quint8 intbombing;          // [0x0EA6] 0x14 On Start of Bombing Mission , 0x56 On first Save..
     quint8 z_32[27];            // [0x0EA7] UNKNOWN DATA
     quint8 field_help;          // [0x0EC2] Show field hand 1=on 0=off
-    quint8 z_33;                // [0x0EC3] UNKNOWN
+    quint8 z_33[1];             // [0x0EC3] UNKNOWN
     quint8 chocobonames[6][6];  // [0x0EC4] <-OK Chocobo names
     quint16 chocostaminas[6];   // [0x0EE8] Chocobo staminas 12 bytes
     quint8 reg_vinny;           // [0x0EF4] 0xFF for true 0xFB false (vincent a regualar?)

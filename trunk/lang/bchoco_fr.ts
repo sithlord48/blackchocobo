@@ -1819,10 +1819,6 @@
         <translation>Étable 6</translation>
     </message>
     <message>
-        <source>Save &amp;Location</source>
-        <translation>&amp;Zone Sauvegarde</translation>
-    </message>
-    <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
         <translation>Sélectionnez la reprise de mission ci-dessus afin de ramener de le jeu à cette mission.  Cette option va automatiquement mettre votre emplacement de sauvegarde, le # du disque et les variable de progression du jeu. N&apos;EFFACEZ PAS VOTRE SAUVEGARDE ACTUELLE en utilisant cette fonction,je ne peux garantir que vous serez en mesure de rejouer à partir de cet événement jusqu&apos;à la fin du jeu. Ou bien que n&apos;importe quelle reprise de missions va fonctionner dans votre sauvegarde, cette section est en cours de développement</translation>
     </message>
@@ -4197,10 +4193,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>World</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Party leader</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4237,10 +4229,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ultimate Weapon ?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Diamond / Ultimate / Ruby / Weapon</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4274,22 +4262,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Emerald Weapon?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Buggy Or Highwind</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x00-NONE</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x01-Buggy</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x10-Highwind</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4525,15 +4497,211 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New Row</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Address</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Value</source>
+        <source>&amp;Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Worldmap Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shown On Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Buggy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right Click  On The Map To Set On Map To Easily Set Locations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown  Vars</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Var:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_9</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_11</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_12</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_13</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_14</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_15</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_16</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_17</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_18</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_19</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_20</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_21</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_22</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_23</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_24</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_25</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_26</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_27</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_28</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_29</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_30</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_31</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_32</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_33</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_34</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_35</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_36</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_37</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_38</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>HEX</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>INT</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>BINARY</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6532,6 +6700,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Flashback  Chruch in the slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update: Location Tab; Both Save &amp; World Locations</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
