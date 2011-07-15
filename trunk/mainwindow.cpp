@@ -5362,6 +5362,7 @@ void MainWindow::on_btn_remove_all_items_2_clicked()
         ff7.slot[s].items[i].id =0xFF;
         ff7.slot[s].items[i].qty=0xFF;
     }
+    itemupdate();
 }
 
 void MainWindow::on_sb_turkschruch_valueChanged(int value)
