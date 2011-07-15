@@ -1720,8 +1720,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>447</width>
-             <height>436</height>
+             <width>443</width>
+             <height>440</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -4625,7 +4625,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>401</width>
-             <height>414</height>
+             <height>413</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -16163,8 +16163,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>721</width>
-             <height>281</height>
+             <width>756</width>
+             <height>438</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -18280,8 +18280,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>736</width>
-             <height>418</height>
+             <width>756</width>
+             <height>438</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -18769,6 +18769,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <string>Buggy / Highwind</string>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_9">
+                   <property name="margin">
+                    <number>3</number>
+                   </property>
                    <item row="0" column="0">
                     <layout class="QHBoxLayout" name="horizontalLayout_92">
                      <item>
@@ -18961,6 +18964,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </item>
                    <item row="2" column="2" colspan="2">
                     <widget class="QComboBox" name="combo_highwind_buggy">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>16</height>
+                      </size>
+                     </property>
                      <property name="currentIndex">
                       <number>0</number>
                      </property>
@@ -25941,7 +25950,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>774</width>
-     <height>22</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
