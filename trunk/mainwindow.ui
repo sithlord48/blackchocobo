@@ -26019,6 +26019,7 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionPrevious_Slot"/>
     <addaction name="actionNext_Slot"/>
     <addaction name="separator"/>
+    <addaction name="actionNew_Window"/>
     <addaction name="actionShow_Selection_Dialog"/>
     <addaction name="separator"/>
     <addaction name="actionSlot_01"/>
@@ -26792,6 +26793,23 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Automatic Exp &lt;-&gt; Lvl</string>
+   </property>
+  </action>
+  <action name="actionOnline_Help">
+   <property name="text">
+    <string>Online help</string>
+   </property>
+   <property name="iconText">
+    <string>&lt;url=http://www.pro100usa.com&gt;Online Help&lt;/url&gt;</string>
+   </property>
+  </action>
+  <action name="actionNew_Window">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/new_window</normaloff>:/icon/new_window</iconset>
+   </property>
+   <property name="text">
+    <string>New Window</string>
    </property>
   </action>
  </widget>

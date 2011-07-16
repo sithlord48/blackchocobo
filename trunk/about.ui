@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>388</width>
-    <height>388</height>
+    <width>364</width>
+    <height>380</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -123,6 +123,9 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
    <bool>true</bool>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
+   <property name="margin">
+    <number>3</number>
+   </property>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
@@ -312,6 +315,9 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
        <string>&amp;About</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_6">
+       <property name="spacing">
+        <number>-1</number>
+       </property>
        <property name="leftMargin">
         <number>3</number>
        </property>
@@ -326,6 +332,12 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
        </property>
        <item>
         <widget class="QLabel" name="ff7editor">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>18</height>
+          </size>
+         </property>
          <property name="text">
           <string>The Final Fantasy VII Save Game Editor</string>
          </property>
@@ -339,6 +351,12 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
        </item>
        <item>
         <widget class="QLabel" name="copyleft">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>18</height>
+          </size>
+         </property>
          <property name="text">
           <string notr="true">(C) 2010,2011 Chris Rizzitello</string>
          </property>
@@ -349,6 +367,12 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
        </item>
        <item>
         <widget class="QLabel" name="link_gpl">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>18</height>
+          </size>
+         </property>
          <property name="text">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -366,6 +390,12 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QLabel" name="link_web">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>18</height>
+          </size>
+         </property>
          <property name="text">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -383,6 +413,12 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QLabel" name="link_guide">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>18</height>
+          </size>
+         </property>
          <property name="text">
           <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
@@ -400,6 +436,12 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QLabel" name="lbl_features">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>18</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <underline>true</underline>
@@ -424,16 +466,22 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QListWidget" name="list_newest">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="minimumSize">
           <size>
            <width>0</width>
-           <height>110</height>
+           <height>0</height>
           </size>
          </property>
          <property name="maximumSize">
           <size>
            <width>16777215</width>
-           <height>110</height>
+           <height>16777215</height>
           </size>
          </property>
          <property name="frameShape">
@@ -463,12 +511,25 @@ p, li { white-space: pre-wrap; }
          <property name="isWrapping" stdset="0">
           <bool>false</bool>
          </property>
+         <property name="resizeMode">
+          <enum>QListView::Fixed</enum>
+         </property>
          <property name="layoutMode">
           <enum>QListView::Batched</enum>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
          </property>
+         <item>
+          <property name="text">
+           <string>New: Spawn New Windows. (mainly for testing)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New: Unknown Var  Tracker in Test Data (very basic atm)</string>
+          </property>
+         </item>
          <item>
           <property name="text">
            <string>New: Flashback  Chruch in the slums</string>
@@ -670,6 +731,12 @@ p, li { white-space: pre-wrap; }
        </property>
        <item>
         <widget class="QLabel" name="label_5">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>18</height>
+          </size>
+         </property>
          <property name="text">
           <string>Giving Credit Where Credit is Due</string>
          </property>
@@ -1284,6 +1351,12 @@ p, li { white-space: pre-wrap; }
        </property>
        <item>
         <widget class="QLabel" name="label_29">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>18</height>
+          </size>
+         </property>
          <property name="font">
           <font>
            <family>ubuntu</family>
@@ -1314,8 +1387,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>358</width>
-            <height>390</height>
+            <width>138</width>
+            <height>740</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">

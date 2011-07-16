@@ -4693,6 +4693,18 @@ is not a FF7 SaveGame.</source>
         <source>BINARY</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Online help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;url=http://www.pro100usa.com&gt;Online Help&lt;/url&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New Window</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -6681,6 +6693,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Update: Location Tab; Both Save &amp; World Locations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Spawn New Windows. (mainly for testing)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Unknown Var  Tracker in Test Data (very basic atm)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -136,5 +136,6 @@
         <file alias="dex">icon/dex.png</file>
         <file alias="world_map">icon/world_map.png</file>
         <file alias="slider_up">icon/slider_up.png</file>
+        <file alias="new_window">icon/window-new.png</file>
     </qresource>
 </RCC>
