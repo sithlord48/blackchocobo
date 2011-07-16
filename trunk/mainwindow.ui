@@ -40,8 +40,8 @@
   </property>
   <property name="styleSheet">
    <string notr="true">/*GENERIC ITEM RULES (qwidget, qabstract area,etc.)*/
-QWidget{background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);}
-QWidget:disabled,QLabel:disabled{font:;color:rgb(74, 80, 73);background-color:rgba(48, 47, 47,128);}
+QWidget,QLabel:enabled{background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);}
+QWidget:disabled,QLabel:disabled{background-color:rgba(48, 47, 47,128);font:;color:rgb(74, 80, 16);}
 
 QDialog{
 background-color:rgb(48,47,47);
@@ -1720,8 +1720,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>443</width>
-             <height>440</height>
+             <width>447</width>
+             <height>436</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -4625,7 +4625,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>401</width>
-             <height>413</height>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -16163,8 +16163,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>756</width>
-             <height>438</height>
+             <width>721</width>
+             <height>281</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -18280,8 +18280,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>756</width>
-             <height>438</height>
+             <width>736</width>
+             <height>418</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -24524,7 +24524,7 @@ p, li { white-space: pre-wrap; }
         <string notr="true">:disabled{font:;color:rgb(74, 80, 73);}</string>
        </property>
        <attribute name="title">
-        <string/>
+        <string>Test Data</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_151">
         <property name="spacing">
@@ -25677,7 +25677,7 @@ p, li { white-space: pre-wrap; }
            <attribute name="title">
             <string>Unknown  Vars</string>
            </attribute>
-           <widget class="QWidget" name="layoutWidget">
+           <widget class="QWidget" name="layoutWidge34t">
             <property name="geometry">
              <rect>
               <x>5</x>
@@ -25950,7 +25950,7 @@ p, li { white-space: pre-wrap; }
      <x>0</x>
      <y>0</y>
      <width>774</width>
-     <height>19</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
