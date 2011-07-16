@@ -169,7 +169,11 @@ void MainWindow::changeEvent(QEvent *e)
         break;
     };
 }
-
+void MainWindow::on_actionNew_Window_triggered()
+{
+    MainWindow *newWindow = new MainWindow;
+    newWindow->show();
+}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionOpen_Save_File_activated()
 {
@@ -6139,3 +6143,4 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
  };
     load=false;
 }
+
