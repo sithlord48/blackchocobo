@@ -126,7 +126,6 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
    style.append(settings.value("color3_b").toString());   style.append(", 255));}");
    ui->centralWidget->setStyleSheet(style);
 
-
    QString tablestyle = "::section{background-color:rgba(10,10,10,128);color: white;padding-left:4px;border:1px solid #6c6c6c;}";
    tablestyle.append("QHeaderView:down-arrow{image: url(:/icon/arrow_down);min-width:9px;}");
    tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
@@ -168,7 +167,7 @@ void MainWindow::changeEvent(QEvent *e)
         break;
     default:
         break;
-    }
+    };
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -178,10 +177,6 @@ void MainWindow::on_actionOpen_Save_File_activated()
     tr("Open Final Fantasy 7 Save"),settings.value("load_path").toString(),
     tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme)"));
     if (!fileName.isEmpty()) loadFileFull(fileName);
-    //why does Qt reset the name?
-    if(settings.value("show_test").toBool()){ui->tabWidget->setTabText(8,tr("Test Data"));}
-    else{ui->tabWidget->setTabText(8,"");}
-
 }
 /*~~~~~~~~~~~~~~~~~Load Full ~~~~~~~~~~~~~~~~~~*/
 void MainWindow::loadFileFull(const QString &fileName)
@@ -349,14 +344,14 @@ void MainWindow::loadFileFull(const QString &fileName)
     else if (ff7.savetype == 2)// PSx save
     {
         s=0;
-             if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
-                (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")))
-             {
-                 QString string;
-                 string = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
-                 ff7.SG_Region_String[s]= string.mid(string.lastIndexOf("BA")-1,string.lastIndexOf("FF7-S")+8);
-             }
-             else {ff7.SG_Region_String[s].clear();}
+        if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
+           (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")))
+        {
+            QString string;
+            string = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
+            ff7.SG_Region_String[s]= string.mid(string.lastIndexOf("BA")-1,string.lastIndexOf("FF7-S")+8);
+        }
+        else {ff7.SG_Region_String[s].clear();}
 
         for(int i=1;i<14;i++){clearslot(i);}
     }
@@ -1080,7 +1075,6 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
     if(checked)
     {
         ui->tabWidget->setTabEnabled(8,1);
-        ui->tabWidget->setTabText(8,tr("Test Data"));
         ui->lbl_0x34->setVisible(true);
         ui->lbl_0x35->setVisible(true);
         ui->lbl_0x36->setVisible(true);
@@ -1103,7 +1097,6 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
     else
     {
         ui->tabWidget->setTabEnabled(8,0);
-        ui->tabWidget->setTabText(8,tr(""));
         ui->lbl_0x34->setVisible(false);
         ui->lbl_0x35->setVisible(false);
         ui->lbl_0x36->setVisible(false);
@@ -4993,13 +4986,6 @@ void MainWindow::on_cb_midgartrain_8_toggled(bool checked)
     if(checked){ff7.slot[s].midgartrainflags |= (1<<7);}
     else{ff7.slot[s].midgartrainflags &= ~(1<<7);}
     ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}}
-
-void MainWindow::on_cb_tut_sub_stateChanged(bool checked)
-{if(!load){
-    if(checked){ff7.slot[s].tut_sub |= (1<<3);}
-    else{ff7.slot[s].tut_sub &= ~(1<<3);}
-    testdata_refresh();
 }}
 
 void MainWindow::on_cb_tut_worldsave_stateChanged(int value)

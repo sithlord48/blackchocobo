@@ -60,7 +60,6 @@ private slots:
     void on_cb_tut_sub_2_toggled(bool);
     void on_cb_tut_sub_1_toggled(bool);
     void on_cb_tut_sub_toggled(bool checked);
-    void on_cb_tut_sub_stateChanged(bool checked);
     void on_cb_bombing_int_stateChanged(int);
     void on_cb_tut_worldsave_stateChanged(int);
     void on_sb_timer_time_sec_valueChanged(int);
