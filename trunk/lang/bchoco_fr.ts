@@ -4154,11 +4154,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>0x01</source>
-        <translation type="unfinished">0x01 {0x?}</translation>
+        <translation>0x01</translation>
     </message>
     <message>
         <source>0x02 </source>
-        <translation type="unfinished">0x02  {0x?}</translation>
+        <translation>0x02</translation>
     </message>
     <message>
         <source>0x04 - Played Sub Tutorial</source>
@@ -4302,7 +4302,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Save Final Fantasy 7  VGS SaveGame</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner sauvegarde Final Fantasy 7 VGS</translation>
     </message>
     <message>
         <source>FF7 VGS SaveGame(*.vgs *.mem)</source>
@@ -4314,11 +4314,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Save Final Fantasy 7 VGS SaveGame</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer sauvegarde Final Fantasy 7 VGS</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 Dex-Drive SaveGame</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer sauvegarde Final Fantasy 7 DEX</translation>
     </message>
     <message>
         <source>Region Detect Error</source>
@@ -5038,7 +5038,7 @@ Although you can edit table Contents these changes will not be saved</source>
     </message>
     <message>
         <source>Deathblow</source>
-        <translation type="unfinished"></translation>
+        <translation>CoupM</translation>
     </message>
     <message>
         <source>Gravity</source>
@@ -6115,43 +6115,43 @@ Although you can edit table Contents these changes will not be saved</source>
         <translation>Dfs:+1</translation>
     </message>
     <message>
-        <source>Maxp:+% depending on level</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>MaxHp:+% depending on level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>MaxHp:-2% Maxp:+2% Str:-1 Mag:+1</source>
+        <source>MaxMp:+% depending on level</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>MaxHp:-5% Maxp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
+        <source>MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>MaxHp:-10% Maxp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
+        <source>MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>MaxHp:-2% Maxp:+2% Mag:+1</source>
+        <source>MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>MaxHp:-5% Maxp:+5% Mag:+1 Spi:+1</source>
+        <source>MaxHp:-2% MaxMp:+2% Mag:+1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>MaxHp:-10% Maxp:+10% Mag:+2 Spi:+2</source>
+        <source>MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>MaxHp:-10% Maxp:+15% Mag:+4 Spi:+4</source>
+        <source>MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>MaxHp:-10% Maxp:+20% Mag:+8 Spi:+8</source>
+        <source>MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
