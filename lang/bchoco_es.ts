@@ -2257,7 +2257,7 @@
     </message>
     <message>
         <source>Shinra Bldg 67F.</source>
-        <translation>Edif. Shinra P65</translation>
+        <translation type="unfinished">Edif. Shinra P65.</translation>
     </message>
     <message>
         <source>256</source>
@@ -2325,7 +2325,7 @@
     </message>
     <message>
         <source>Shinra Bldg 69F.</source>
-        <translation>Edif. Shinra P69</translation>
+        <translation type="unfinished">Edif. Shinra P69.</translation>
     </message>
     <message>
         <source>264</source>
@@ -2549,7 +2549,7 @@
     </message>
     <message>
         <source>Shinra Bldg. 64F.</source>
-        <translation>Edif. Shinra P64</translation>
+        <translation type="unfinished">Edif. Shinra P64.</translation>
     </message>
     <message>
         <source>247</source>
@@ -4691,7 +4691,7 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
-        <translation>Activando esto se copiará Cloud a Cloud joven (en el sitio de Cait Sith). Los stats de Sephiroth vendrán directamente de Vincent</translation>
+        <translation>Activando esto se copiará Cloud a Cloud joven (en el sitio de Cait Sith). Los stats de Sephiroth vendrán directamente de Vincent.</translation>
     </message>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
@@ -6118,7 +6118,7 @@ Aunque puedes editar la tabla de contenidos, estos cambios no serán guardados</
     </message>
     <message>
         <source>Maxp:+% depending on level</source>
-        <translation>PMMax:+% dependiendo del nivel</translation>
+        <translation type="obsolete">PMMax:+% dependiendo del nivel</translation>
     </message>
     <message>
         <source>MaxHp:+% depending on level</source>
@@ -6126,34 +6126,70 @@ Aunque puedes editar la tabla de contenidos, estos cambios no serán guardados</
     </message>
     <message>
         <source>MaxHp:-2% Maxp:+2% Str:-1 Mag:+1</source>
-        <translation>PGMax: -2% PMMax: +2% Fue:-1 Mag:+1</translation>
+        <translation type="obsolete">PGMax: -2% PMMax: +2% Fue:-1 Mag:+1</translation>
     </message>
     <message>
         <source>MaxHp:-5% Maxp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation>PGMax: -5% PMMax: +5% Fue:-2 Vit:-1 Mag:+2 Esp:+1</translation>
+        <translation type="obsolete">PGMax: -5% PMMax: +5% Fue:-2 Vit:-1 Mag:+2 Esp:+1</translation>
     </message>
     <message>
         <source>MaxHp:-10% Maxp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
-        <translation>PGMax: -10% PMMax: +10% Fue:-4 Vit:-2 Mag:+4 Esp:+2</translation>
+        <translation type="obsolete">PGMax: -10% PMMax: +10% Fue:-4 Vit:-2 Mag:+4 Esp:+2</translation>
     </message>
     <message>
         <source>MaxHp:-2% Maxp:+2% Mag:+1</source>
-        <translation>PGMax: -2% PMMax: +2%Mag:+1</translation>
+        <translation type="obsolete">PGMax: -2% PMMax: +2%Mag:+1</translation>
     </message>
     <message>
         <source>MaxHp:-5% Maxp:+5% Mag:+1 Spi:+1</source>
-        <translation>PGMax: -5% PMMax: +5% Mag:+1 Esp:+1</translation>
+        <translation type="obsolete">PGMax: -5% PMMax: +5% Mag:+1 Esp:+1</translation>
     </message>
     <message>
         <source>MaxHp:-10% Maxp:+10% Mag:+2 Spi:+2</source>
-        <translation>PGMax: -10% PMMax: +10%  Mag:+2 Esp:+2</translation>
+        <translation type="obsolete">PGMax: -10% PMMax: +10%  Mag:+2 Esp:+2</translation>
     </message>
     <message>
         <source>MaxHp:-10% Maxp:+15% Mag:+4 Spi:+4</source>
-        <translation>PGMax: -10% PMMax: +15% Mag:+24Esp:+4</translation>
+        <translation type="obsolete">PGMax: -10% PMMax: +15% Mag:+24Esp:+4</translation>
     </message>
     <message>
         <source>MaxHp:-10% Maxp:+20% Mag:+8 Spi:+8</source>
+        <translation type="obsolete">PGMax: -10% PMMax: +20% Mag:+8 Esp:+8</translation>
+    </message>
+    <message>
+        <source>MaxMp:+% depending on level</source>
+        <translation>PGMax: +% dependiendo del nivel</translation>
+    </message>
+    <message>
+        <source>MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1</source>
+        <translation>PGMax: -2% PMMax: +2% Fue:-1 Mag:+1</translation>
+    </message>
+    <message>
+        <source>MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
+        <translation>PGMax: -5% PMMax: +5% Fue:-2 Vit:-1 Mag:+2 Esp:+1</translation>
+    </message>
+    <message>
+        <source>MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
+        <translation>PGMax: -10% PMMax: +10% Fue:-4 Vit:-2 Mag:+4 Esp:+2</translation>
+    </message>
+    <message>
+        <source>MaxHp:-2% MaxMp:+2% Mag:+1</source>
+        <translation>PGMax: -2% PMMax: +2%Mag:+1</translation>
+    </message>
+    <message>
+        <source>MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1</source>
+        <translation>PGMax: -5% PMMax: +5% Mag:+1 Esp:+1</translation>
+    </message>
+    <message>
+        <source>MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2</source>
+        <translation>PGMax: -10% PMMax: +10%  Mag:+2 Esp:+2</translation>
+    </message>
+    <message>
+        <source>MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4</source>
+        <translation>PGMax: -10% PMMax: +15% Mag:+24Esp:+4</translation>
+    </message>
+    <message>
+        <source>MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8</source>
         <translation>PGMax: -10% PMMax: +20% Mag:+8 Esp:+8</translation>
     </message>
 </context>
@@ -6599,7 +6635,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Titan/Ramuh Stats Backward.</source>
-        <translation>Arreglado: Stats de Titan/Ramuh al revés</translation>
+        <translation>Arreglado: Stats de Titan/Ramuh al revés.</translation>
     </message>
     <message>
         <source>New: Save and Save as are now both allowed</source>
@@ -6699,11 +6735,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Empty Chocobos Now Start W/ empty names.</source>
-        <translation>Arreglado: Los chocobos nuevos empiezan ahora con nombres vacíos</translation>
+        <translation>Arreglado: Los chocobos nuevos empiezan ahora con nombres vacíos.</translation>
     </message>
     <message>
         <source>Fixed: Typos Lots of Typos..</source>
-        <translation>Arreglado: Muchas muchas erratas...</translation>
+        <translation>Arreglado: Muchas muchas erratas..</translation>
     </message>
     <message>
         <source>Fixed: &quot;Time Bug&quot;</source>
@@ -6715,7 +6751,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</source>
-        <translation>Arreglado: Limites de Gil, Exp, Puntos de la montaña rusa, y otros Spinboxes</translation>
+        <translation>Arreglado: Limites de Gil, Exp, Puntos de la montaña rusa, y otros Spinboxes.</translation>
     </message>
     <message>
         <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
