@@ -4391,31 +4391,31 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Mystery panties</source>
-        <translation type="unfinished"></translation>
+        <translation>Bragas Misterio</translation>
     </message>
     <message>
         <source>Bikini briefs</source>
-        <translation type="unfinished"></translation>
+        <translation>Bragas de bikini</translation>
     </message>
     <message>
         <source>Key to Ancients</source>
-        <translation type="unfinished"></translation>
+        <translation>Clave de los Ancianos</translation>
     </message>
     <message>
         <source>Letter to a Daughter</source>
-        <translation type="unfinished"></translation>
+        <translation>Carta a una hija</translation>
     </message>
     <message>
         <source>Letter to a Wife</source>
-        <translation type="unfinished"></translation>
+        <translation>Carta a una esposa</translation>
     </message>
     <message>
         <source>Midgar parts</source>
-        <translation type="unfinished"></translation>
+        <translation>Partes de Midgar</translation>
     </message>
     <message>
         <source>Normal</source>
-        <translation type="unfinished"></translation>
+        <translation>Normal</translation>
     </message>
     <message>
         <source>Omnislash</source>
@@ -4431,7 +4431,7 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Automatic Exp &lt;-&gt; Lvl</source>
-        <translation type="unfinished"></translation>
+        <translation>Exp automática &lt;-&gt; Nvl</translation>
     </message>
     <message>
         <source>&lt;---Edit Selected Item Slot</source>
@@ -4439,295 +4439,295 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Add Max Of All Items</source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir el máximo de todos los objetos</translation>
     </message>
     <message>
         <source>Clear All Items</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar todos los objetos</translation>
     </message>
     <message>
         <source>Clear Key Items</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar todos los objetos clave</translation>
     </message>
     <message>
         <source>47</source>
-        <translation type="unfinished">47</translation>
+        <translation>47</translation>
     </message>
     <message>
         <source>48</source>
-        <translation type="unfinished">48</translation>
+        <translation>48</translation>
     </message>
     <message>
         <source>church in the slums</source>
-        <translation type="unfinished"></translation>
+        <translation>church in the slums</translation>
     </message>
     <message>
         <source>183</source>
-        <translation type="unfinished">183</translation>
+        <translation>183</translation>
     </message>
     <message>
         <source>65463</source>
-        <translation type="unfinished">65463</translation>
+        <translation>65463</translation>
     </message>
     <message>
         <source>400</source>
-        <translation type="unfinished">400</translation>
+        <translation>400</translation>
     </message>
     <message>
         <source>Aeris Turks</source>
-        <translation type="unfinished"></translation>
+        <translation>Aeris turcos</translation>
     </message>
     <message>
         <source>The Church In The Slums</source>
-        <translation type="unfinished"></translation>
+        <translation>The Church In The Slums</translation>
     </message>
     <message>
         <source>Aeris Death</source>
-        <translation type="unfinished"></translation>
+        <translation>Muerte de Aeris</translation>
     </message>
     <message>
         <source>Don_prog</source>
-        <translation type="unfinished"></translation>
+        <translation>Don_prog</translation>
     </message>
     <message>
         <source>Address</source>
-        <translation type="unfinished"></translation>
+        <translation>Dirección</translation>
     </message>
     <message>
         <source>&amp;Location</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Localización</translation>
     </message>
     <message>
         <source>Save Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Lugar de guardado</translation>
     </message>
     <message>
         <source>Worldmap Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Localización en el mundo</translation>
     </message>
     <message>
         <source>Shown On Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Mostrados en el mapa</translation>
     </message>
     <message>
         <source>None</source>
-        <translation type="unfinished">Nada</translation>
+        <translation>Nada</translation>
     </message>
     <message>
         <source>Buggy</source>
-        <translation type="unfinished">Buggy</translation>
+        <translation>Buggy</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
+        <translation>Indefinido</translation>
     </message>
     <message>
         <source>Right Click  On The Map To Set On Map To Easily Set Locations</source>
-        <translation type="unfinished"></translation>
+        <translation>Boton derecho sobre el mapa para colocar fácilmente los lugares</translation>
     </message>
     <message>
         <source>Unknown  Vars</source>
-        <translation type="unfinished"></translation>
+        <translation>Variables indefinidas</translation>
     </message>
     <message>
         <source>Var:</source>
-        <translation type="unfinished"></translation>
+        <translation>Var:</translation>
     </message>
     <message>
         <source>z_1</source>
-        <translation type="unfinished"></translation>
+        <translation>z_1</translation>
     </message>
     <message>
         <source>z_2</source>
-        <translation type="unfinished"></translation>
+        <translation>z_2</translation>
     </message>
     <message>
         <source>z_3</source>
-        <translation type="unfinished"></translation>
+        <translation>z_3</translation>
     </message>
     <message>
         <source>z_4</source>
-        <translation type="unfinished"></translation>
+        <translation>z_4</translation>
     </message>
     <message>
         <source>z_5</source>
-        <translation type="unfinished"></translation>
+        <translation>z_5</translation>
     </message>
     <message>
         <source>z_6</source>
-        <translation type="unfinished"></translation>
+        <translation>z_6</translation>
     </message>
     <message>
         <source>z_7</source>
-        <translation type="unfinished"></translation>
+        <translation>z_7</translation>
     </message>
     <message>
         <source>z_8</source>
-        <translation type="unfinished"></translation>
+        <translation>z_8</translation>
     </message>
     <message>
         <source>z_9</source>
-        <translation type="unfinished"></translation>
+        <translation>z_9</translation>
     </message>
     <message>
         <source>z_10</source>
-        <translation type="unfinished"></translation>
+        <translation>z_10</translation>
     </message>
     <message>
         <source>z_11</source>
-        <translation type="unfinished"></translation>
+        <translation>z_11</translation>
     </message>
     <message>
         <source>z_12</source>
-        <translation type="unfinished"></translation>
+        <translation>z_12</translation>
     </message>
     <message>
         <source>z_13</source>
-        <translation type="unfinished"></translation>
+        <translation>z_13</translation>
     </message>
     <message>
         <source>z_14</source>
-        <translation type="unfinished"></translation>
+        <translation>z_14</translation>
     </message>
     <message>
         <source>z_15</source>
-        <translation type="unfinished"></translation>
+        <translation>z_15</translation>
     </message>
     <message>
         <source>z_16</source>
-        <translation type="unfinished"></translation>
+        <translation>z_16</translation>
     </message>
     <message>
         <source>z_17</source>
-        <translation type="unfinished"></translation>
+        <translation>z_17</translation>
     </message>
     <message>
         <source>z_18</source>
-        <translation type="unfinished"></translation>
+        <translation>z_18</translation>
     </message>
     <message>
         <source>z_19</source>
-        <translation type="unfinished"></translation>
+        <translation>z_19</translation>
     </message>
     <message>
         <source>z_20</source>
-        <translation type="unfinished"></translation>
+        <translation>z_20</translation>
     </message>
     <message>
         <source>z_21</source>
-        <translation type="unfinished"></translation>
+        <translation>z_21</translation>
     </message>
     <message>
         <source>z_22</source>
-        <translation type="unfinished"></translation>
+        <translation>z_22</translation>
     </message>
     <message>
         <source>z_23</source>
-        <translation type="unfinished"></translation>
+        <translation>z_23</translation>
     </message>
     <message>
         <source>z_24</source>
-        <translation type="unfinished"></translation>
+        <translation>z_24</translation>
     </message>
     <message>
         <source>z_25</source>
-        <translation type="unfinished"></translation>
+        <translation>z_25</translation>
     </message>
     <message>
         <source>z_26</source>
-        <translation type="unfinished"></translation>
+        <translation>z_26</translation>
     </message>
     <message>
         <source>z_27</source>
-        <translation type="unfinished"></translation>
+        <translation>z_27</translation>
     </message>
     <message>
         <source>z_28</source>
-        <translation type="unfinished"></translation>
+        <translation>z_28</translation>
     </message>
     <message>
         <source>z_29</source>
-        <translation type="unfinished"></translation>
+        <translation>z_29</translation>
     </message>
     <message>
         <source>z_30</source>
-        <translation type="unfinished"></translation>
+        <translation>z_30</translation>
     </message>
     <message>
         <source>z_31</source>
-        <translation type="unfinished"></translation>
+        <translation>z_31</translation>
     </message>
     <message>
         <source>z_32</source>
-        <translation type="unfinished"></translation>
+        <translation>z_32</translation>
     </message>
     <message>
         <source>z_33</source>
-        <translation type="unfinished"></translation>
+        <translation>z_33</translation>
     </message>
     <message>
         <source>z_34</source>
-        <translation type="unfinished"></translation>
+        <translation>z_34</translation>
     </message>
     <message>
         <source>z_35</source>
-        <translation type="unfinished"></translation>
+        <translation>z_35</translation>
     </message>
     <message>
         <source>z_36</source>
-        <translation type="unfinished"></translation>
+        <translation>z_36</translation>
     </message>
     <message>
         <source>z_37</source>
-        <translation type="unfinished"></translation>
+        <translation>z_37</translation>
     </message>
     <message>
         <source>z_38</source>
-        <translation type="unfinished"></translation>
+        <translation>z_38</translation>
     </message>
     <message>
         <source>HEX</source>
-        <translation type="unfinished"></translation>
+        <translation>HEX</translation>
     </message>
     <message>
         <source>INT</source>
-        <translation type="unfinished"></translation>
+        <translation>INT</translation>
     </message>
     <message>
         <source>BINARY</source>
-        <translation type="unfinished"></translation>
+        <translation>BINARIO</translation>
     </message>
     <message>
         <source>Online help</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayuda online</translation>
     </message>
     <message>
         <source>&lt;url=http://www.pro100usa.com&gt;Online Help&lt;/url&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;url=http://www.pro100usa.com&gt;Ayuda online&lt;/url&gt;</translation>
     </message>
     <message>
         <source>New Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Nueva ventana</translation>
     </message>
     <message>
         <source>Replay the bombing mission from right after you get off the train.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rejugar bombing mission desde el momento que te bajas del tren.</translation>
     </message>
     <message>
         <source>Chruch in the Slums</source>
-        <translation type="unfinished"></translation>
+        <translation>Church in the slums</translation>
     </message>
     <message>
         <source>Replay The Church in the Slums</source>
-        <translation type="unfinished"></translation>
+        <translation>Rejugar Church in the slums</translation>
     </message>
     <message>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
-        <translation type="unfinished"></translation>
+        <translation>Activando esto se copiará Cloud a Cloud joven (en el sitio de Cait Sith). Los stats de Sephiroth vendrán directamente de Vincent</translation>
     </message>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
-        <translation type="unfinished"></translation>
+        <translation>Rejugar la escena de la muerte de Aeris. Esta opción quitará a Aeris de tu PHS</translation>
     </message>
 </context>
 <context>
@@ -5062,7 +5062,7 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Gravity</source>
-        <translation type="unfinished"></translation>
+        <translation>Gravedad</translation>
     </message>
     <message>
         <source>Typhon</source>
@@ -6097,11 +6097,11 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Confu (18mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>Confu (18pm)</translation>
     </message>
     <message>
         <source>M-Barrier (24mp)</source>
-        <translation type="unfinished"></translation>
+        <translation>BarreraM (24pm)</translation>
     </message>
 </context>
 <context>
@@ -6136,43 +6136,43 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Maxp:+% depending on level</source>
-        <translation type="unfinished"></translation>
+        <translation>PMMax:+% dependiendo del nivel</translation>
     </message>
     <message>
         <source>MaxHp:+% depending on level</source>
-        <translation type="unfinished"></translation>
+        <translation>PGMax: +% dependiendo del nivel</translation>
     </message>
     <message>
         <source>MaxHp:-2% Maxp:+2% Str:-1 Mag:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>PGMax: -2% PMMax: +2% Fue:-1 Mag:+1</translation>
     </message>
     <message>
         <source>MaxHp:-5% Maxp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>PGMax: -5% PMMax: +5% Fue:-2 Vit:-1 Mag:+2 Esp:+1</translation>
     </message>
     <message>
         <source>MaxHp:-10% Maxp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
-        <translation type="unfinished"></translation>
+        <translation>PGMax: -10% PMMax: +10% Fue:-4 Vit:-2 Mag:+4 Esp:+2</translation>
     </message>
     <message>
         <source>MaxHp:-2% Maxp:+2% Mag:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>PGMax: -2% PMMax: +2%Mag:+1</translation>
     </message>
     <message>
         <source>MaxHp:-5% Maxp:+5% Mag:+1 Spi:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>PGMax: -5% PMMax: +5% Mag:+1 Esp:+1</translation>
     </message>
     <message>
         <source>MaxHp:-10% Maxp:+10% Mag:+2 Spi:+2</source>
-        <translation type="unfinished"></translation>
+        <translation>PGMax: -10% PMMax: +10%  Mag:+2 Esp:+2</translation>
     </message>
     <message>
         <source>MaxHp:-10% Maxp:+15% Mag:+4 Spi:+4</source>
-        <translation type="unfinished"></translation>
+        <translation>PGMax: -10% PMMax: +15% Mag:+24Esp:+4</translation>
     </message>
     <message>
         <source>MaxHp:-10% Maxp:+20% Mag:+8 Spi:+8</source>
-        <translation type="unfinished"></translation>
+        <translation>PGMax: -10% PMMax: +20% Mag:+8 Esp:+8</translation>
     </message>
 </context>
 <context>
@@ -6709,59 +6709,59 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Missing Keycard 66 in keyitems list</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: LLave 66 faltante de los objetos clave</translation>
     </message>
     <message>
         <source>Update:Almost All Spinboxes now &quot;Wrapping&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizado: Casi todas las Spinboxes ahora se &apos;enrollan&apos;</translation>
     </message>
     <message>
         <source>Fixed: Empty Chocobos Now Start W/ empty names.</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Los chocobos nuevos empiezan ahora con nombres vacíos</translation>
     </message>
     <message>
         <source>Fixed: Typos Lots of Typos..</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Muchas muchas erratas...</translation>
     </message>
     <message>
         <source>Fixed: &quot;Time Bug&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Error en el tiempo</translation>
     </message>
     <message>
         <source>Fixed: &quot;Gravity&quot; Materia Bug</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Error con la materia gravedad</translation>
     </message>
     <message>
         <source>Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Limites de Gil, Exp, Puntos de la montaña rusa, y otros Spinboxes</translation>
     </message>
     <message>
         <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizado: Rubí en el mapa del mundo -&gt; diamante/última/rubí</translation>
     </message>
     <message>
         <source>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Opción de experiencia automática con el nivel (activado por defecto)</translation>
     </message>
     <message>
         <source>New: Flashback  Chruch in the slums</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Flashback de Church in the slums</translation>
     </message>
     <message>
         <source>Update: Location Tab; Both Save &amp; World Locations</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizado: La pestaña de Localización ahora guarda puntos de guardado y puntos en el mapa del mundo</translation>
     </message>
     <message>
         <source>New: Spawn New Windows. (mainly for testing)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Abrir varias ventanas (principalmente de prueba)</translation>
     </message>
     <message>
         <source>New: Unknown Var  Tracker in Test Data (very basic atm)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Visor de variables indefinidas en la pestaña de test (muy básico de momento)</translation>
     </message>
     <message>
         <source>Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Actualizado: Los establos en la pestaña de chocobo están ahora en un mismo submenú</translation>
     </message>
 </context>
 <context>
