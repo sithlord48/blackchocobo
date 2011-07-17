@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>774</width>
+    <width>772</width>
     <height>580</height>
    </rect>
   </property>
@@ -1720,7 +1720,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>447</width>
+             <width>445</width>
              <height>436</height>
             </rect>
            </property>
@@ -7128,12 +7128,20 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          </property>
                         </widget>
                        </item>
+                       <item>
+                        <spacer name="horizontalSpacer_47">
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                         <property name="sizeHint" stdset="0">
+                          <size>
+                           <width>40</width>
+                           <height>20</height>
+                          </size>
+                         </property>
+                        </spacer>
+                       </item>
                       </layout>
-                      <zorder>btn_m_lvl2_slot</zorder>
-                      <zorder>btn_m_lvl3_slot</zorder>
-                      <zorder>btn_m_lvl4_slot</zorder>
-                      <zorder>btn_m_lvl5_slot</zorder>
-                      <zorder>btn_m_lvl1_slot</zorder>
                      </widget>
                     </item>
                    </layout>
@@ -8253,7 +8261,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </widget>
              </item>
              <item>
-              <widget class="QPushButton" name="btn_remove_all_items_2">
+              <widget class="QPushButton" name="btn_remove_all_items">
                <property name="text">
                 <string>Clear All Items</string>
                </property>
@@ -10271,40 +10279,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
          </widget>
         </item>
         <item>
-         <widget class="QTabWidget" name="tabWidget_2">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
+         <widget class="QScrollArea" name="scrollArea_2">
+          <property name="horizontalScrollBarPolicy">
+           <enum>Qt::ScrollBarAsNeeded</enum>
           </property>
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
+          <property name="widgetResizable">
+           <bool>true</bool>
           </property>
-          <property name="maximumSize">
-           <size>
-            <width>16777215</width>
-            <height>16777215</height>
-           </size>
-          </property>
-          <property name="tabPosition">
-           <enum>QTabWidget::East</enum>
-          </property>
-          <property name="currentIndex">
-           <number>0</number>
-          </property>
-          <widget class="QWidget" name="tab">
-           <attribute name="title">
-            <string>Stables 1-3</string>
-           </attribute>
-           <layout class="QHBoxLayout" name="horizontalLayout_125">
+          <widget class="QWidget" name="scrollAreaWidgetContents_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>1638</width>
+             <height>331</height>
+            </rect>
+           </property>
+           <layout class="QHBoxLayout" name="horizontalLayout_158">
             <item>
              <widget class="QGroupBox" name="box_stable1">
               <property name="enabled">
-               <bool>true</bool>
+               <bool>false</bool>
               </property>
               <property name="minimumSize">
                <size>
@@ -10352,7 +10347,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <widget class="QLineEdit" name="line_c1_name">
                    <property name="enabled">
-                    <bool>true</bool>
+                    <bool>false</bool>
                    </property>
                    <property name="minimumSize">
                     <size>
@@ -10600,7 +10595,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <widget class="QSpinBox" name="sb_c1_speed">
                    <property name="enabled">
-                    <bool>true</bool>
+                    <bool>false</bool>
                    </property>
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -11237,7 +11232,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <item>
              <widget class="QGroupBox" name="box_stable2">
               <property name="enabled">
-               <bool>true</bool>
+               <bool>false</bool>
               </property>
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -11288,7 +11283,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <widget class="QLineEdit" name="line_c2_name">
                    <property name="enabled">
-                    <bool>true</bool>
+                    <bool>false</bool>
                    </property>
                    <property name="minimumSize">
                     <size>
@@ -12164,7 +12159,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <item>
              <widget class="QGroupBox" name="box_stable3">
               <property name="enabled">
-               <bool>true</bool>
+               <bool>false</bool>
               </property>
               <property name="minimumSize">
                <size>
@@ -12209,7 +12204,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <widget class="QLineEdit" name="line_c3_name">
                    <property name="enabled">
-                    <bool>true</bool>
+                    <bool>false</bool>
                    </property>
                    <property name="minimumSize">
                     <size>
@@ -13079,17 +13074,10 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </layout>
              </widget>
             </item>
-           </layout>
-          </widget>
-          <widget class="QWidget" name="tab_2">
-           <attribute name="title">
-            <string>Stables 4-6</string>
-           </attribute>
-           <layout class="QHBoxLayout" name="horizontalLayout_126">
             <item>
              <widget class="QGroupBox" name="box_stable4">
               <property name="enabled">
-               <bool>true</bool>
+               <bool>false</bool>
               </property>
               <property name="minimumSize">
                <size>
@@ -13134,7 +13122,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <widget class="QLineEdit" name="line_c4_name">
                    <property name="enabled">
-                    <bool>true</bool>
+                    <bool>false</bool>
                    </property>
                    <property name="minimumSize">
                     <size>
@@ -14007,7 +13995,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <item>
              <widget class="QGroupBox" name="box_stable5">
               <property name="enabled">
-               <bool>true</bool>
+               <bool>false</bool>
               </property>
               <property name="minimumSize">
                <size>
@@ -14052,7 +14040,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <widget class="QLineEdit" name="line_c5_name">
                    <property name="enabled">
-                    <bool>true</bool>
+                    <bool>false</bool>
                    </property>
                    <property name="minimumSize">
                     <size>
@@ -14925,7 +14913,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <item>
              <widget class="QGroupBox" name="box_stable6">
               <property name="enabled">
-               <bool>true</bool>
+               <bool>false</bool>
               </property>
               <property name="minimumSize">
                <size>
@@ -14970,7 +14958,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <widget class="QLineEdit" name="line_c6_name">
                    <property name="enabled">
-                    <bool>true</bool>
+                    <bool>false</bool>
                    </property>
                    <property name="minimumSize">
                     <size>
@@ -16163,8 +16151,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>721</width>
-             <height>281</height>
+             <width>760</width>
+             <height>434</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -20058,6 +20046,22 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_64">
         <item>
+         <spacer name="verticalSpacer_5">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
          <layout class="QHBoxLayout" name="horizontalLayout_128">
           <item>
            <spacer name="horizontalSpacer_113">
@@ -20626,14 +20630,17 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
          </widget>
         </item>
         <item>
-         <spacer name="verticalSpacer_14">
+         <spacer name="verticalSpacer_6">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::Preferred</enum>
           </property>
           <property name="sizeHint" stdset="0">
            <size>
             <width>20</width>
-            <height>69</height>
+            <height>40</height>
            </size>
           </property>
          </spacer>
@@ -21475,6 +21482,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </property>
              <item>
               <widget class="QLabel" name="lbl_sg_region">
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -21602,6 +21612,18 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <width>16</width>
                  <height>16</height>
                 </size>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::NoFrame</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Plain</enum>
+               </property>
+               <property name="lineWidth">
+                <number>1</number>
+               </property>
+               <property name="midLineWidth">
+                <number>0</number>
                </property>
                <property name="text">
                 <string/>
@@ -24887,22 +24909,6 @@ p, li { white-space: pre-wrap; }
                   <number>2</number>
                  </property>
                  <item>
-                  <widget class="QPushButton" name="btn_remove_all_items">
-                   <property name="enabled">
-                    <bool>true</bool>
-                   </property>
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="text">
-                    <string>Items</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
                   <widget class="QPushButton" name="btn_remove_all_materia">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -25949,7 +25955,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>774</width>
+     <width>772</width>
      <height>22</height>
     </rect>
    </property>
@@ -26000,6 +26006,7 @@ p, li { white-space: pre-wrap; }
      <addaction name="separator"/>
      <addaction name="actionImport_char"/>
     </widget>
+    <addaction name="actionNew_Window"/>
     <addaction name="actionOpen_Save_File"/>
     <addaction name="action_Save"/>
     <addaction name="actionSave_File_As"/>
@@ -26019,7 +26026,6 @@ p, li { white-space: pre-wrap; }
     <addaction name="actionPrevious_Slot"/>
     <addaction name="actionNext_Slot"/>
     <addaction name="separator"/>
-    <addaction name="actionNew_Window"/>
     <addaction name="actionShow_Selection_Dialog"/>
     <addaction name="separator"/>
     <addaction name="actionSlot_01"/>
@@ -26946,7 +26952,6 @@ p, li { white-space: pre-wrap; }
   <tabstop>combo_pen3</tabstop>
   <tabstop>combo_pen2</tabstop>
   <tabstop>combo_pen4</tabstop>
-  <tabstop>tabWidget_2</tabstop>
   <tabstop>line_c4_name</tabstop>
   <tabstop>cb_c4_born</tabstop>
   <tabstop>cb_c4_type</tabstop>
@@ -27073,7 +27078,6 @@ p, li { white-space: pre-wrap; }
   <tabstop>cb_midgartrain_8</tabstop>
   <tabstop>cb_reg_vinny</tabstop>
   <tabstop>cb_reg_yuffie</tabstop>
-  <tabstop>btn_remove_all_items</tabstop>
   <tabstop>btn_remove_all_materia</tabstop>
   <tabstop>btn_remove_all_stolen</tabstop>
   <tabstop>combo_add_mat</tabstop>

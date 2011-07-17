@@ -1811,10 +1811,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Stables 1-3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Stable 1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1940,10 +1936,6 @@
     </message>
     <message>
         <source>Speed Values Are The Raw Values , the km/h speeds are calculated while playing </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stables 4-6</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3360,19 +3352,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Replay the bombing mission from right after you get off the first train, game might crash after the mission right before jessie talks to you about midgar.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent, if you wish to edit cloud or vincent after selecting this replay then change the box to the first(blank) entry and then when you have set those chars as you wish reselect this replay from the combobox.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Replay the death of Aerith.This option Will remove Aerith from your PHS</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3521,10 +3501,6 @@
     </message>
     <message>
         <source>Remove ALL</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Items</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4474,14 +4450,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>chruch in the slums</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Replay The Church In The Slums</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Don_prog</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4703,6 +4671,26 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>New Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replay the bombing mission from right after you get off the train.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chruch in the Slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replay The Church in the Slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6701,6 +6689,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Unknown Var  Tracker in Test Data (very basic atm)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

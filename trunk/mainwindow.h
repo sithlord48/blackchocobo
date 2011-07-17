@@ -120,7 +120,6 @@ private slots:
     void on_slide_ul_g_valueChanged(int value);
     void on_slide_ul_r_valueChanged(int value);
     void on_btn_remove_all_materia_clicked();
-    void on_btn_remove_all_items_clicked();
     void on_btn_remove_all_stolen_clicked();
 
     //wip functions
@@ -178,7 +177,7 @@ private slots:
     void on_sb_addqty_valueChanged(int);
     void on_clearItem_clicked();
     void on_btn_item_add_each_item_clicked();
-    void on_btn_remove_all_items_2_clicked();
+    void on_btn_remove_all_items_clicked();
 
     // Materia Tab
     void on_tbl_materia_currentCellChanged(int row);
@@ -303,12 +302,16 @@ private slots:
     //menu actions
 
     //load save items
+    void on_actionNew_Window_triggered();
+
     void on_actionOpen_Save_File_activated();
     void loadFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
+
     void on_actionImport_char_triggered();
     void on_actionFrom_PSX_Slot_activated();
     void on_actionFrom_PSV_Slot_activated();
 
+    void on_action_Save_activated();
     void on_actionSave_File_As_activated();
     void saveFileFull(QString);//(Vegeta_Ss4) v0.8.3
     void on_actionExport_MC_triggered();
@@ -360,10 +363,6 @@ private slots:
     void on_actionSlot_13_activated();
     void on_actionSlot_14_activated();
     void on_actionSlot_15_activated();
-
-
-
-
 
     //party tab
     void on_btn_cloud_clicked();
@@ -458,7 +457,6 @@ private slots:
     void on_btn_m_lvl2_slot_clicked();
     void on_btn_m_lvl1_slot_clicked();
     void on_list_eskill_2_itemChanged();
-    void on_action_Save_activated();
     void on_cb_Region_Slot_currentIndexChanged();
     void on_combo_id_currentIndexChanged(int index);
     void on_cb_ruby_dead_toggled(bool checked);
@@ -516,6 +514,6 @@ private slots:
     void on_btn_clear_keyitems_clicked();
     void on_sb_donprog_valueChanged(int );
     void on_combo_z_var_currentIndexChanged(int);
-    void on_actionNew_Window_triggered();
+
 };
 #endif // MAINWINDOW_H
