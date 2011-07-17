@@ -36,8 +36,6 @@ QString filename;
 MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
-
     for (int i=0; i<256; i++)
     {
         for (int j=255; j>=0; j--)
@@ -95,65 +93,63 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     }
     else{ui->action_show_test_data->setChecked(0);}
 
-   //are any empty? if so set them accordingly.
-   if(!settings.value("font-size").toString().isEmpty()){QApplication::setFont(QFont(QApplication::font().family(),settings.value("font-size").toInt(),-1,false));}
-   if(!settings.value("font-family").toString().isEmpty()){QApplication::setFont(QFont(settings.value("font-family").toString(),QApplication::font().pointSize(),-1,false));}
-   if(settings.value("autochargrowth").isNull()){settings.setValue("autochargrowth",1);}
-   if(settings.value("default_save_file").isNull()){settings.setValue("default_save_file",QString(QCoreApplication::applicationDirPath()) + "/"+ "save0");}
-   if(settings.value("load_path").isNull()){settings.setValue("load_path",QDir::homePath());}
-   if(settings.value("char_stat_folder").isNull()){settings.setValue("char_stat_folder",settings.value("load_path").toString());}
-   if(settings.value("color1_r").isNull()){settings.setValue("color1_r","7");}
-   if(settings.value("color1_g").isNull()){settings.setValue("color1_g","6");}
-   if(settings.value("color1_b").isNull()){settings.setValue("color1_b","6");}
+    //are any empty? if so set them accordingly.
+    if(!settings.value("font-size").toString().isEmpty()){QApplication::setFont(QFont(QApplication::font().family(),settings.value("font-size").toInt(),-1,false));}
+    if(!settings.value("font-family").toString().isEmpty()){QApplication::setFont(QFont(settings.value("font-family").toString(),QApplication::font().pointSize(),-1,false));}
+    if(settings.value("autochargrowth").isNull()){settings.setValue("autochargrowth",1);}
+    if(settings.value("default_save_file").isNull()){settings.setValue("default_save_file",QString(QCoreApplication::applicationDirPath()) + "/"+ "save0");}
+    if(settings.value("load_path").isNull()){settings.setValue("load_path",QDir::homePath());}
+    if(settings.value("char_stat_folder").isNull()){settings.setValue("char_stat_folder",settings.value("load_path").toString());}
+    if(settings.value("color1_r").isNull()){settings.setValue("color1_r","7");}
+    if(settings.value("color1_g").isNull()){settings.setValue("color1_g","6");}
+    if(settings.value("color1_b").isNull()){settings.setValue("color1_b","6");}
+    if(settings.value("color2_r").isNull()){settings.setValue("color2_r","35");}
+    if(settings.value("color2_g").isNull()){settings.setValue("color2_g","33");}
+    if(settings.value("color2_b").isNull()){settings.setValue("color2_b","33");}
+    if(settings.value("color3_r").isNull()){settings.setValue("color3_r","65");}
+    if(settings.value("color3_g").isNull()){settings.setValue("color3_g","65");}
+    if(settings.value("color3_b").isNull()){settings.setValue("color3_b","65");}
 
-   if(settings.value("color2_r").isNull()){settings.setValue("color2_r","35");}
-   if(settings.value("color2_g").isNull()){settings.setValue("color2_g","33");}
-   if(settings.value("color2_b").isNull()){settings.setValue("color2_b","33");}
+    QString style="QWidget#centralWidget{background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
+    style.append(settings.value("color1_r").toString());   style.append(",");
+    style.append(settings.value("color1_g").toString());   style.append(",");
+    style.append(settings.value("color1_b").toString());   style.append(", 255), stop:0.215909 rgba(");
+    style.append(settings.value("color2_r").toString());   style.append(",");
+    style.append(settings.value("color2_g").toString());   style.append(",");
+    style.append(settings.value("color2_b").toString());   style.append(", 255), stop:0.818182 rgba(");
+    style.append(settings.value("color3_r").toString());   style.append(",");
+    style.append(settings.value("color3_g").toString());   style.append(",");
+    style.append(settings.value("color3_b").toString());   style.append(", 255));}");
+    ui->centralWidget->setStyleSheet(style);
 
-   if(settings.value("color3_r").isNull()){settings.setValue("color3_r","65");}
-   if(settings.value("color3_g").isNull()){settings.setValue("color3_g","65");}
-   if(settings.value("color3_b").isNull()){settings.setValue("color3_b","65");}
+    QString tablestyle = "::section{background-color:rgba(10,10,10,128);color: white;padding-left:4px;border:1px solid #6c6c6c;}";
+    tablestyle.append("QHeaderView:down-arrow{image: url(:/icon/arrow_down);min-width:9px;}");
+    tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
 
-   QString style="QWidget#centralWidget{background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
-   style.append(settings.value("color1_r").toString());   style.append(",");
-   style.append(settings.value("color1_g").toString());   style.append(",");
-   style.append(settings.value("color1_b").toString());   style.append(", 255), stop:0.215909 rgba(");
-   style.append(settings.value("color2_r").toString());   style.append(",");
-   style.append(settings.value("color2_g").toString());   style.append(",");
-   style.append(settings.value("color2_b").toString());   style.append(", 255), stop:0.818182 rgba(");
-   style.append(settings.value("color3_r").toString());   style.append(",");
-   style.append(settings.value("color3_g").toString());   style.append(",");
-   style.append(settings.value("color3_b").toString());   style.append(", 255));}");
-   ui->centralWidget->setStyleSheet(style);
+    ui->tbl_location_field->horizontalHeader()->setStyleSheet(tablestyle);
 
-   QString tablestyle = "::section{background-color:rgba(10,10,10,128);color: white;padding-left:4px;border:1px solid #6c6c6c;}";
-   tablestyle.append("QHeaderView:down-arrow{image: url(:/icon/arrow_down);min-width:9px;}");
-   tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
-
-   ui->tbl_location_field->horizontalHeader()->setStyleSheet(tablestyle);
-
-   if(settings.value("autochargrowth").toBool())
-   {
-       ui->action_auto_char_growth->setChecked(1);
-       ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_checked"));
-   }
-   else{ui->action_auto_char_growth->setChecked(0);}
-   /* LANGUAGE SELECT */
-   if(settings.value("lang").toString() == "en")
-   {
-       ui->action_Lang_en->setChecked(1);
-       ui->action_Lang_en->setIcon(QIcon(":/icon/us_sel"));
-   }
-   else if(settings.value("lang").toString() == "es")
-   {
-       ui->action_Lang_es->setChecked(1);
-       ui->action_Lang_es->setIcon(QIcon(":/icon/es_sel"));
-   }
-   else if(settings.value("lang").toString() == "fr")
-   {
-       ui->action_Lang_fr->setChecked(1);
-       ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_sel"));
-   }
+    if(settings.value("autochargrowth").toBool())
+    {
+        ui->action_auto_char_growth->setChecked(1);
+        ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_checked"));
+    }
+    else{ui->action_auto_char_growth->setChecked(0);}
+    /* LANGUAGE SELECT */
+    if(settings.value("lang").toString() == "en")
+    {
+        ui->action_Lang_en->setChecked(1);
+        ui->action_Lang_en->setIcon(QIcon(":/icon/us_sel"));
+    }
+    else if(settings.value("lang").toString() == "es")
+    {
+        ui->action_Lang_es->setChecked(1);
+        ui->action_Lang_es->setIcon(QIcon(":/icon/es_sel"));
+    }
+    else if(settings.value("lang").toString() == "fr")
+    {
+        ui->action_Lang_fr->setChecked(1);
+        ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_sel"));
+    }
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
 MainWindow::~MainWindow(){delete ui;}
@@ -163,7 +159,7 @@ void MainWindow::changeEvent(QEvent *e)
     QMainWindow::changeEvent(e);
     switch (e->type()) {
     case QEvent::LanguageChange:
-         ui->retranslateUi(this);
+        ui->retranslateUi(this);
         break;
     default:
         break;
@@ -4465,7 +4461,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_coordx->setValue(3655);
         ui->sb_coordy->setValue(27432);
         ui->sb_coordz->setValue(25);
-        ui->label_replaynote->setText(tr("Replay the bombing mission from right after you get off the first train, game might crash after the mission right before jessie talks to you about midgar."));
+        ui->label_replaynote->setText(tr("Replay the bombing mission from right after you get off the train."));
     }
     else if(index == 2) // The Church In The Slums
     {
@@ -4476,7 +4472,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_bm_progress2->setValue(198);
         ui->sb_bm_progress3->setValue(3);
         ui->cb_bombing_int->setChecked(0);
-        ui->line_location->setText(tr("chruch in the slums"));
+        ui->line_location->setText(tr("Chruch in the Slums"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(183);
         ui->sb_coordx->setValue(65463);
@@ -4485,7 +4481,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->combo_party1->setCurrentIndex(0);
         ui->combo_party2->setCurrentIndex(12);
         ui->combo_party3->setCurrentIndex(12);
-        ui->label_replaynote->setText(tr("Replay The Church In The Slums"));
+        ui->label_replaynote->setText(tr("Replay The Church in the Slums"));
 
     }
     else if (index ==3)// Flash back
@@ -4557,7 +4553,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7.slot[s].chars[7].name[7] = chFF7['t'];
         ff7.slot[s].chars[7].name[8] = chFF7['h'];
         for (int i=9; i<12;i++){ff7.slot[s].chars[7].name[i] = 0xFF;}
-        ui->label_replaynote->setText(tr("Setting This Will Copy Cloud as is to young cloud (caitsith's slot). sephiroth's stats will come directly from vincent, if you wish to edit cloud or vincent after selecting this replay then change the box to the first(blank) entry and then when you have set those chars as you wish reselect this replay from the combobox."));
+        ui->label_replaynote->setText(tr("Setting This Will Copy Cloud as is to young cloud (caitsith's slot). sephiroth's stats will come directly from vincent."));
     }
 
     else if(index == 4) // The Date Scene
@@ -4577,7 +4573,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->label_replaynote->setText(tr("Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too."));
     }
 
-    else if (index == 5)//Aerith Death
+    else if (index == 5)//Aeris Death
     {
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(664);
@@ -4593,7 +4589,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_coordz->setValue(243);
         ui->list_chars_unlocked->item(3)->setCheckState(Qt::Unchecked);
         ui->list_phs_chars->item(3)->setCheckState(Qt::Unchecked);
-        ui->label_replaynote->setText(tr("Replay the death of Aerith.This option Will remove Aerith from your PHS"));
+        ui->label_replaynote->setText(tr("Replay the death of Aeris.This option Will remove Aeris from your PHS"));
     }
 
     else {ui->label_replaynote->setText(tr("         INFO ON CURRENTLY SELECTED REPLAY MISSION"));}
@@ -4607,7 +4603,7 @@ void MainWindow::on_btn_remove_all_items_clicked() //used for testing
         ff7.slot[s].items[i].id=0xFF;
         ff7.slot[s].items[i].qty=0xFF;
     }
-    guirefresh();
+    itemupdate();
 }
 
 void MainWindow::on_btn_remove_all_materia_clicked()
@@ -4619,7 +4615,7 @@ void MainWindow::on_btn_remove_all_materia_clicked()
         ff7.slot[s].materias[i].ap[1]=0xFF;
         ff7.slot[s].materias[i].ap[2]=0xFF;
     }
-    guirefresh();
+    materiaupdate();
 }
 
 void MainWindow::on_btn_remove_all_stolen_clicked()
@@ -5182,7 +5178,7 @@ void MainWindow::on_durw_y_valueChanged(int value)
     ff7.slot[s].durw_world2 = (value | ui->durw_z->value() << 18);
      if(ui->combo_map_controls->currentIndex()==4){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
-//emerald world 5
+//emerald world 5?
 void MainWindow::on_ew_id_valueChanged(int value){if(!load){ff7.slot[s].ew_world = (ui->ew_x->value()  | value << 19 | ui->ew_angle->value() <<24);}}
 void MainWindow::on_ew_z_valueChanged(int value){if(!load){ff7.slot[s].ew_world2 = (ui->ew_y->value() | value << 18);}}
 void MainWindow::on_ew_angle_valueChanged(int value){if(!load){ff7.slot[s].ew_world = (ui->ew_x->value()  | ui->ew_id->value() << 19 | value <<24);}}
@@ -5196,7 +5192,7 @@ void MainWindow::on_ew_y_valueChanged(int value)
     ff7.slot[s].ew_world2 = (value | ui->ew_z->value() << 18);
      if(ui->combo_map_controls->currentIndex()==5){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
-//ultimate weapon 6
+//ultimate weapon 6?
 void MainWindow::on_uw_id_valueChanged(int value){if(!load){ff7.slot[s].uw_world = (ui->uw_x->value()  | value << 19 | ui->uw_angle->value() <<24);}}
 void MainWindow::on_uw_angle_valueChanged(int value){if(!load){ff7.slot[s].uw_world = (ui->uw_x->value()  | ui->uw_id->value() << 19 | value <<24);}}
 void MainWindow::on_uw_z_valueChanged(int value){if(!load){ff7.slot[s].uw_world2 = (ui->uw_y->value() | value << 18);}}
@@ -5343,16 +5339,6 @@ void MainWindow::on_btn_item_add_each_item_clicked()
     if(i>296){ff7.slot[s].items[i].id=0xFF;ff7.slot[s].items[i].qty=0xFF;}//replace the shifted ones w/ empty slots
     }
     guirefresh();
-}
-
-void MainWindow::on_btn_remove_all_items_2_clicked()
-{
-    for(int i=0;i<320;i++)
-    {
-        ff7.slot[s].items[i].id =0xFF;
-        ff7.slot[s].items[i].qty=0xFF;
-    }
-    itemupdate();
 }
 
 void MainWindow::on_sb_turkschruch_valueChanged(int value)
@@ -6143,4 +6129,3 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
  };
     load=false;
 }
-

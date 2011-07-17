@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>364</width>
-    <height>380</height>
+    <width>362</width>
+    <height>378</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -573,6 +573,11 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>Update: Location Tab; Both Save &amp; World Locations</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Update: Chocobo tab's Chocobo Stables Now In Scroll Area</string>
           </property>
          </item>
          <item>

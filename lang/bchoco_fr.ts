@@ -1672,7 +1672,7 @@
     </message>
     <message>
         <source>Stables 1-3</source>
-        <translation>Étables 1-3</translation>
+        <translation type="obsolete">Étables 1-3</translation>
     </message>
     <message>
         <source>Stable 1</source>
@@ -1804,7 +1804,7 @@
     </message>
     <message>
         <source>Stables 4-6</source>
-        <translation>Étables 4-6</translation>
+        <translation type="obsolete">Étables 4-6</translation>
     </message>
     <message>
         <source>Stable 4</source>
@@ -3336,11 +3336,11 @@
     </message>
     <message>
         <source>Replay the bombing mission from right after you get off the first train, game might crash after the mission right before jessie talks to you about midgar.</source>
-        <translation>Rejouer la mission d&apos;explosion immédiatement après être descendu du premier train, le jeu peut se comporter bizarrement après que jessie vous ait parlé au sujet de midgar.</translation>
+        <translation type="obsolete">Rejouer la mission d&apos;explosion immédiatement après être descendu du premier train, le jeu peut se comporter bizarrement après que jessie vous ait parlé au sujet de midgar.</translation>
     </message>
     <message>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent, if you wish to edit cloud or vincent after selecting this replay then change the box to the first(blank) entry and then when you have set those chars as you wish reselect this replay from the combobox.</source>
-        <translation>Activer ceci va copier Clad tel quel dans le slot de jeune Clad (slot de CaitSith). Les stats de Sephiroth vont être copiés directement de Vincent, si vous désirez éditer Clad ou Vincent après avoir sélectionné cette reprise, simplement changez la boîte à la première (vide) entrée et lorsque vous allez avoir mis ces personnages comme vous le désirez, sélectionnez cette reprise à partir de la boîte de sélection.</translation>
+        <translation type="obsolete">Activer ceci va copier Clad tel quel dans le slot de jeune Clad (slot de CaitSith). Les stats de Sephiroth vont être copiés directement de Vincent, si vous désirez éditer Clad ou Vincent après avoir sélectionné cette reprise, simplement changez la boîte à la première (vide) entrée et lorsque vous allez avoir mis ces personnages comme vous le désirez, sélectionnez cette reprise à partir de la boîte de sélection.</translation>
     </message>
     <message>
         <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
@@ -3348,7 +3348,7 @@
     </message>
     <message>
         <source>Replay the death of Aerith.This option Will remove Aerith from your PHS</source>
-        <translation>Rejouer la mort d&apos;Aerith. Cette option retirera Aerith du PHS</translation>
+        <translation type="obsolete">Rejouer la mort d&apos;Aerith. Cette option retirera Aerith du PHS</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSX Save</source>
@@ -3532,7 +3532,7 @@
     </message>
     <message>
         <source>Items</source>
-        <translation>Objets</translation>
+        <translation type="obsolete">Objets</translation>
     </message>
     <message>
         <source>Materia </source>
@@ -4485,14 +4485,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>chruch in the slums</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Replay The Church In The Slums</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Don_prog</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4714,6 +4706,26 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>New Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replay the bombing mission from right after you get off the train.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chruch in the Slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replay The Church in the Slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6724,6 +6736,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Unknown Var  Tracker in Test Data (very basic atm)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
