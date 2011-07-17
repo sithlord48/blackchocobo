@@ -4699,16 +4699,17 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Church in the slums</source>
-        <translation type="unfinished"></translation>
+        <translation>Church in the slums</translation>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s location.</source>
-        <translation type="unfinished"></translation>
+        <translation>Boton derecho sobre el mapa para colocar la posición de un elemento.</translation>
     </message>
     <message>
         <source>Table is only updated when the Var is changed. 
 Although you can edit table Contents these changes will not be saved</source>
-        <translation type="unfinished"></translation>
+        <translation>La tabla sólo se actualiza cuando la variable se cambia.
+Aunque puedes editar la tabla de contenidos, estos cambios no serán guardados</translation>
     </message>
 </context>
 <context>
