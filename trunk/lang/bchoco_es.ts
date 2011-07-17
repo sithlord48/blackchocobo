@@ -1668,10 +1668,6 @@
         <translation>Snowboard</translation>
     </message>
     <message>
-        <source>Stables 1-3</source>
-        <translation type="obsolete">Establos 1-3</translation>
-    </message>
-    <message>
         <source>Stable 1</source>
         <translation>Establo 1</translation>
     </message>
@@ -1798,10 +1794,6 @@
     <message>
         <source>Speed Values Are The Raw Values , the km/h speeds are calculated while playing </source>
         <translation>Los valores de velocidad son valores directos, la velocidad en km/h se calcula durante el juego</translation>
-    </message>
-    <message>
-        <source>Stables 4-6</source>
-        <translation type="obsolete">Establos 4-6</translation>
     </message>
     <message>
         <source>Stable 4</source>
@@ -3364,20 +3356,8 @@
         <translation>Partida Guardada de FF7 PSP(*.vmp)</translation>
     </message>
     <message>
-        <source>Replay the bombing mission from right after you get off the first train, game might crash after the mission right before jessie talks to you about midgar.</source>
-        <translation type="obsolete">Rejugar bombing mission justo después de que te bajes del primer tren, el juego puede que se cuelgue después de la misión justo antes de que Jessie te hable sobre Midgar.</translation>
-    </message>
-    <message>
-        <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent, if you wish to edit cloud or vincent after selecting this replay then change the box to the first(blank) entry and then when you have set those chars as you wish reselect this replay from the combobox.</source>
-        <translation type="obsolete">Activando esto se copiará Cloud como Cloud joven (en la ranura de Cait Sith) los stats de sephiroth vendrán directamente de Vincent, si quieres editar a Cloud o Vincent después de seleccionar este replay entonces cambia la caja a la primera (en blanco) y cuando hayas puesto los personajes a tu gusto, vuelve a seleccionar este replay en la &apos;cajacombo&apos;.</translation>
-    </message>
-    <message>
         <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
         <translation>Rejugar la Escena de la Cita, Tu situación se pondrá en la Estación Ropeway, Habla con el Hombre al lado del Tranvía para empezar el evento, Si buscas una cita en especial asegúrate de que has puesto los puntos de amor.</translation>
-    </message>
-    <message>
-        <source>Replay the death of Aerith.This option Will remove Aerith from your PHS</source>
-        <translation type="obsolete">Rejugar la muerte de Aerith. Esta opción eliminará a Aerith de tu PHS</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSX Save</source>
@@ -3538,10 +3518,6 @@
     <message>
         <source>Remove ALL</source>
         <translation>Eliminar TODO</translation>
-    </message>
-    <message>
-        <source>Items</source>
-        <translation type="obsolete">Objetos</translation>
     </message>
     <message>
         <source>Materia </source>
@@ -4458,10 +4434,6 @@ no es una partida guardada de FF7.</translation>
         <translation>48</translation>
     </message>
     <message>
-        <source>church in the slums</source>
-        <translation>church in the slums</translation>
-    </message>
-    <message>
         <source>183</source>
         <translation>183</translation>
     </message>
@@ -4520,10 +4492,6 @@ no es una partida guardada de FF7.</translation>
     <message>
         <source>Unknown</source>
         <translation>Indefinido</translation>
-    </message>
-    <message>
-        <source>Right Click  On The Map To Set On Map To Easily Set Locations</source>
-        <translation>Boton derecho sobre el mapa para colocar fácilmente los lugares</translation>
     </message>
     <message>
         <source>Unknown  Vars</source>
@@ -4728,6 +4696,19 @@ no es una partida guardada de FF7.</translation>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
         <translation>Rejugar la escena de la muerte de Aeris. Esta opción quitará a Aeris de tu PHS</translation>
+    </message>
+    <message>
+        <source>Church in the slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right click on map to easily set an item&apos;s location.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Table is only updated when the Var is changed. 
+Although you can edit table Contents these changes will not be saved</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

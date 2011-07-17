@@ -1671,10 +1671,6 @@
         <translation>Surf des neiges</translation>
     </message>
     <message>
-        <source>Stables 1-3</source>
-        <translation type="obsolete">Étables 1-3</translation>
-    </message>
-    <message>
         <source>Stable 1</source>
         <translation>Étable 1</translation>
     </message>
@@ -1801,10 +1797,6 @@
     <message>
         <source>Speed Values Are The Raw Values , the km/h speeds are calculated while playing </source>
         <translation>Les vitesses sont ici des valeurs brutes, les km/h sont calculés dans le jeu</translation>
-    </message>
-    <message>
-        <source>Stables 4-6</source>
-        <translation type="obsolete">Étables 4-6</translation>
     </message>
     <message>
         <source>Stable 4</source>
@@ -3335,20 +3327,8 @@
         <translation>Enregistrer sauvegarde Final Fantasy 7 MC</translation>
     </message>
     <message>
-        <source>Replay the bombing mission from right after you get off the first train, game might crash after the mission right before jessie talks to you about midgar.</source>
-        <translation type="obsolete">Rejouer la mission d&apos;explosion immédiatement après être descendu du premier train, le jeu peut se comporter bizarrement après que jessie vous ait parlé au sujet de midgar.</translation>
-    </message>
-    <message>
-        <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent, if you wish to edit cloud or vincent after selecting this replay then change the box to the first(blank) entry and then when you have set those chars as you wish reselect this replay from the combobox.</source>
-        <translation type="obsolete">Activer ceci va copier Clad tel quel dans le slot de jeune Clad (slot de CaitSith). Les stats de Sephiroth vont être copiés directement de Vincent, si vous désirez éditer Clad ou Vincent après avoir sélectionné cette reprise, simplement changez la boîte à la première (vide) entrée et lorsque vous allez avoir mis ces personnages comme vous le désirez, sélectionnez cette reprise à partir de la boîte de sélection.</translation>
-    </message>
-    <message>
         <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
         <translation>Rejouer la scène du rendez-vous, votre emplacement sera mis à la station téléphérique. Parlez à l&apos;homme près du tramway afin de démarrer cette scène, si vous cherchez pour un rendez-vous spécifique assurez-vous d&apos;ajuster vos points d&apos;affection.</translation>
-    </message>
-    <message>
-        <source>Replay the death of Aerith.This option Will remove Aerith from your PHS</source>
-        <translation type="obsolete">Rejouer la mort d&apos;Aerith. Cette option retirera Aerith du PHS</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSX Save</source>
@@ -3529,10 +3509,6 @@
     <message>
         <source>Remove ALL</source>
         <translation>Supprimer TOUT</translation>
-    </message>
-    <message>
-        <source>Items</source>
-        <translation type="obsolete">Objets</translation>
     </message>
     <message>
         <source>Materia </source>
@@ -4354,7 +4330,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>-------EMPTY--------</source>
-        <translation type="unfinished"></translation>
+        <translation>--------Vide--------</translation>
     </message>
     <message>
         <source>Place Leader</source>
@@ -4390,27 +4366,27 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Mystery panties</source>
-        <translation type="unfinished">Slips mystère</translation>
+        <translation>Slips mystère</translation>
     </message>
     <message>
         <source>Bikini briefs</source>
-        <translation type="unfinished">Slips bikinis</translation>
+        <translation>Slips bikinis</translation>
     </message>
     <message>
         <source>Key to Ancients</source>
-        <translation type="unfinished">Clef des Anciens</translation>
+        <translation>Clef des Anciens</translation>
     </message>
     <message>
         <source>Letter to a Daughter</source>
-        <translation type="unfinished">À ma fille</translation>
+        <translation>À ma fille</translation>
     </message>
     <message>
         <source>Letter to a Wife</source>
-        <translation type="unfinished">À ma femme</translation>
+        <translation>À ma femme</translation>
     </message>
     <message>
         <source>Midgar parts</source>
-        <translation type="unfinished">Secteur de Midgar</translation>
+        <translation>Secteur de Midgar</translation>
     </message>
     <message>
         <source>Normal</source>
@@ -4418,15 +4394,15 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Omnislash</source>
-        <translation type="unfinished">Omnislash</translation>
+        <translation>Omnislash</translation>
     </message>
     <message>
         <source>Somersault</source>
-        <translation type="unfinished">Culbute</translation>
+        <translation>Culbute</translation>
     </message>
     <message>
         <source>Galian Beast</source>
-        <translation type="unfinished">Bête Galienne</translation>
+        <translation>Bête Galienne</translation>
     </message>
     <message>
         <source>Automatic Exp &lt;-&gt; Lvl</source>
@@ -4434,7 +4410,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>&lt;---Edit Selected Item Slot</source>
-        <translation type="unfinished">&lt;---Modifier l&apos;objet sélectionné</translation>
+        <translation>&lt;---Modifier l&apos;objet sélectionné</translation>
     </message>
     <message>
         <source>Add Max Of All Items</source>
@@ -4450,27 +4426,23 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>47</source>
-        <translation type="unfinished">47</translation>
+        <translation>47</translation>
     </message>
     <message>
         <source>48</source>
-        <translation type="unfinished">48</translation>
-    </message>
-    <message>
-        <source>church in the slums</source>
-        <translation type="unfinished"></translation>
+        <translation>48</translation>
     </message>
     <message>
         <source>183</source>
-        <translation type="unfinished">183</translation>
+        <translation>183</translation>
     </message>
     <message>
         <source>65463</source>
-        <translation type="unfinished">65463</translation>
+        <translation>65463</translation>
     </message>
     <message>
         <source>400</source>
-        <translation type="unfinished">400</translation>
+        <translation>400</translation>
     </message>
     <message>
         <source>Aeris Turks</source>
@@ -4521,10 +4493,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Right Click  On The Map To Set On Map To Easily Set Locations</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Unknown  Vars</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4534,155 +4502,155 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>z_1</source>
-        <translation type="unfinished"></translation>
+        <translation>z_1</translation>
     </message>
     <message>
         <source>z_2</source>
-        <translation type="unfinished"></translation>
+        <translation>z_2</translation>
     </message>
     <message>
         <source>z_3</source>
-        <translation type="unfinished"></translation>
+        <translation>z_3</translation>
     </message>
     <message>
         <source>z_4</source>
-        <translation type="unfinished"></translation>
+        <translation>z_4</translation>
     </message>
     <message>
         <source>z_5</source>
-        <translation type="unfinished"></translation>
+        <translation>z_5</translation>
     </message>
     <message>
         <source>z_6</source>
-        <translation type="unfinished"></translation>
+        <translation>z_6</translation>
     </message>
     <message>
         <source>z_7</source>
-        <translation type="unfinished"></translation>
+        <translation>z_7</translation>
     </message>
     <message>
         <source>z_8</source>
-        <translation type="unfinished"></translation>
+        <translation>z_8</translation>
     </message>
     <message>
         <source>z_9</source>
-        <translation type="unfinished"></translation>
+        <translation>z_9</translation>
     </message>
     <message>
         <source>z_10</source>
-        <translation type="unfinished"></translation>
+        <translation>z_10</translation>
     </message>
     <message>
         <source>z_11</source>
-        <translation type="unfinished"></translation>
+        <translation>z_11</translation>
     </message>
     <message>
         <source>z_12</source>
-        <translation type="unfinished"></translation>
+        <translation>z_12</translation>
     </message>
     <message>
         <source>z_13</source>
-        <translation type="unfinished"></translation>
+        <translation>z_13</translation>
     </message>
     <message>
         <source>z_14</source>
-        <translation type="unfinished"></translation>
+        <translation>z_14</translation>
     </message>
     <message>
         <source>z_15</source>
-        <translation type="unfinished"></translation>
+        <translation>z_15</translation>
     </message>
     <message>
         <source>z_16</source>
-        <translation type="unfinished"></translation>
+        <translation>z_16</translation>
     </message>
     <message>
         <source>z_17</source>
-        <translation type="unfinished"></translation>
+        <translation>z_17</translation>
     </message>
     <message>
         <source>z_18</source>
-        <translation type="unfinished"></translation>
+        <translation>z_18</translation>
     </message>
     <message>
         <source>z_19</source>
-        <translation type="unfinished"></translation>
+        <translation>z_19</translation>
     </message>
     <message>
         <source>z_20</source>
-        <translation type="unfinished"></translation>
+        <translation>z_20</translation>
     </message>
     <message>
         <source>z_21</source>
-        <translation type="unfinished"></translation>
+        <translation>z_21</translation>
     </message>
     <message>
         <source>z_22</source>
-        <translation type="unfinished"></translation>
+        <translation>z_22</translation>
     </message>
     <message>
         <source>z_23</source>
-        <translation type="unfinished"></translation>
+        <translation>z_23</translation>
     </message>
     <message>
         <source>z_24</source>
-        <translation type="unfinished"></translation>
+        <translation>z_24</translation>
     </message>
     <message>
         <source>z_25</source>
-        <translation type="unfinished"></translation>
+        <translation>z_25</translation>
     </message>
     <message>
         <source>z_26</source>
-        <translation type="unfinished"></translation>
+        <translation>z_26</translation>
     </message>
     <message>
         <source>z_27</source>
-        <translation type="unfinished"></translation>
+        <translation>z_27</translation>
     </message>
     <message>
         <source>z_28</source>
-        <translation type="unfinished"></translation>
+        <translation>z_28</translation>
     </message>
     <message>
         <source>z_29</source>
-        <translation type="unfinished"></translation>
+        <translation>z_29</translation>
     </message>
     <message>
         <source>z_30</source>
-        <translation type="unfinished"></translation>
+        <translation>z_30</translation>
     </message>
     <message>
         <source>z_31</source>
-        <translation type="unfinished"></translation>
+        <translation>z_31</translation>
     </message>
     <message>
         <source>z_32</source>
-        <translation type="unfinished"></translation>
+        <translation>z_32</translation>
     </message>
     <message>
         <source>z_33</source>
-        <translation type="unfinished"></translation>
+        <translation>z_33</translation>
     </message>
     <message>
         <source>z_34</source>
-        <translation type="unfinished"></translation>
+        <translation>z_34</translation>
     </message>
     <message>
         <source>z_35</source>
-        <translation type="unfinished"></translation>
+        <translation>z_35</translation>
     </message>
     <message>
         <source>z_36</source>
-        <translation type="unfinished"></translation>
+        <translation>z_36</translation>
     </message>
     <message>
         <source>z_37</source>
-        <translation type="unfinished"></translation>
+        <translation>z_37</translation>
     </message>
     <message>
         <source>z_38</source>
-        <translation type="unfinished"></translation>
+        <translation>z_38</translation>
     </message>
     <message>
         <source>HEX</source>
@@ -4710,7 +4678,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Replay the bombing mission from right after you get off the train.</source>
-        <translation type="unfinished"></translation>
+        <translation>Rejouer la mission d&apos;explosion immédiatement après être descendu du premier train.</translation>
     </message>
     <message>
         <source>Chruch in the Slums</source>
@@ -4722,10 +4690,23 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
-        <translation type="unfinished"></translation>
+        <translation>Activer ceci va copier Clad tel quel dans le slot de jeune Clad (slot de CaitSith). Les stats de Sephiroth vont être copiés directement de Vincent.</translation>
     </message>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
+        <translation>Rejouer la mort d&apos;Aerith. Cette option retirera Aerith du PHS</translation>
+    </message>
+    <message>
+        <source>Church in the slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right click on map to easily set an item&apos;s location.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Table is only updated when the Var is changed. 
+Although you can edit table Contents these changes will not be saved</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6088,11 +6069,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Steal as well</source>
-        <translation type="unfinished"></translation>
+        <translation>Vol Simultané</translation>
     </message>
     <message>
         <source>Sense</source>
-        <translation type="unfinished">Sentir</translation>
+        <translation>Sentir</translation>
     </message>
     <message>
         <source>Confu (18mp)</source>
@@ -6290,27 +6271,27 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>9Pt</source>
-        <translation type="unfinished">1er {9P?}</translation>
+        <translation>9Pt</translation>
     </message>
     <message>
         <source>10Pt</source>
-        <translation type="unfinished">1er {10P?}</translation>
+        <translation>10Pt</translation>
     </message>
     <message>
         <source>11Pt</source>
-        <translation type="unfinished">1er {11P?}</translation>
+        <translation>11Pt</translation>
     </message>
     <message>
         <source>12Pt</source>
-        <translation type="unfinished">1er {12P?}</translation>
+        <translation>12Pt</translation>
     </message>
     <message>
         <source>13Pt</source>
-        <translation type="unfinished">1er {13P?}</translation>
+        <translation>13Pt</translation>
     </message>
     <message>
         <source>14Pt</source>
-        <translation type="unfinished">1er {14P?}</translation>
+        <translation>14Pt</translation>
     </message>
 </context>
 <context>

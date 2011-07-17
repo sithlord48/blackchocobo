@@ -4422,10 +4422,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>church in the slums</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>183</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4483,10 +4479,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Unknown</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Right Click  On The Map To Set On Map To Easily Set Locations</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4691,6 +4683,19 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Church in the slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right click on map to easily set an item&apos;s location.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Table is only updated when the Var is changed. 
+Although you can edit table Contents these changes will not be saved</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
