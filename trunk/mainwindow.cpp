@@ -1412,7 +1412,6 @@ void MainWindow::charupdate(void)
 {
     load=true;
     //clear everthing.
-    //mslotsel=0;
     ui->cb_id->setText("");
     ui->cb_id->setChecked(false);
     ui->cb_id->setVisible(false);
@@ -1421,7 +1420,6 @@ void MainWindow::charupdate(void)
     ui->cb_fury->setChecked(0);
     ui->cb_front->setChecked(0);
     ui->combo_weapon->clear();
-
     if(curchar== 6)
     {
         ui->cb_id->setText(tr("Young Cloud"));
@@ -1445,12 +1443,9 @@ void MainWindow::charupdate(void)
         else{this->ui->line_name->setText( this->ui->line_name->text() + chPC[ff7.slot[s].chars[curchar].name[n]]);}
     }
     ui->sb_exp->setValue(ff7.slot[s].chars[curchar].exp);
-
-    //ui->sb_next->setValue(ff7.slot[s].chars[curchar].expNext);
     ui->pbar_level->setValue(ff7.slot[s].chars[curchar].flags[2]);
     ui->lcd_next->display(double(ff7.slot[s].chars[curchar].expNext));
     ui->sb_lvl->setValue(ff7.slot[s].chars[curchar].level);
-
     ui->sb_curhp->setValue(ff7.slot[s].chars[curchar].curHP);
     ui->sb_curmp->setValue(ff7.slot[s].chars[curchar].curMP);
     ui->sb_maxhp->setValue(ff7.slot[s].chars[curchar].maxHP);
@@ -1671,8 +1666,6 @@ void MainWindow::charupdate(void)
     //Equipment Tab Stuff.
     ui->combo_armor->setCurrentIndex(ff7.slot[s].chars[curchar].armor);
     ui->combo_acc->setCurrentIndex(ff7.slot[s].chars[curchar].accessory);
-    setarmorslots();
-    setweaponslots();
 
     //Set up char buttons.
     ui->btn_cloud->setStyleSheet(avatar_style(ff7.slot[s].chars[0].id));
@@ -1685,18 +1678,21 @@ void MainWindow::charupdate(void)
     ui->btn_vincent->setStyleSheet(avatar_style(ff7.slot[s].chars[7].id));
     ui->btn_cid->setStyleSheet(avatar_style(ff7.slot[s].chars[8].id));
     load=false;
+    setarmorslots();
+    setweaponslots();
     materiaupdate_slot();
-    if(settings.value("autochargrowh").toBool()){setchar_growth(0);}
+    if(ui->action_auto_char_growth->isChecked()){setchar_growth(0);}
 }
 /*~~~~~~~END Char Update~~~~~~~~*/
 void MainWindow::setchar_growth(int caller)
 {
     load=true;
-    if(caller==2){ff7.slot[s].chars[curchar].exp = charlvls[curchar][ui->sb_lvl->value()-1];ui->sb_exp->setValue(ff7.slot[s].chars[curchar].exp);}
+
+    if(caller==2){ff7.slot[s].chars[curchar].exp = charlvls[ff7.slot[s].chars[curchar].id][ui->sb_lvl->value()-1];ui->sb_exp->setValue(ff7.slot[s].chars[curchar].exp);}
 
     for (int i=1;i<100;i++)
     {
-        if(ff7.slot[s].chars[curchar].exp>=charlvls[curchar][i]){if(i==99){ui->sb_lvl->setValue(i);}}
+        if(ff7.slot[s].chars[curchar].exp>=charlvls[ff7.slot[s].chars[curchar].id][i]){if(i==99){ui->sb_lvl->setValue(i);}}
         else{ui->sb_lvl->setValue(i);break;}
     }
 
@@ -1705,9 +1701,8 @@ void MainWindow::setchar_growth(int caller)
     QString numvalue;
     if(ui->sb_lvl->value()!=99)
     {
-       if(ff7.slot[s].chars[curchar].exp==charlvls[curchar][ui->sb_lvl->value()]){ff7.slot[s].chars[curchar].expNext=chartnls[curchar][ui->sb_lvl->value()];}
-       ff7.slot[s].chars[curchar].expNext= charlvls[curchar][ui->sb_lvl->value()]- ui->sb_exp->value();
-       ff7.slot[s].chars[curchar].flags[2]=((chartnls[curchar][ui->sb_lvl->value()]-ff7.slot[s].chars[curchar].expNext)*62)/(chartnls[curchar][ui->sb_lvl->value()]);//level progress is in 62 parts.
+       ff7.slot[s].chars[curchar].expNext= charlvls[ff7.slot[s].chars[curchar].id][ui->sb_lvl->value()]- ui->sb_exp->value();
+       ff7.slot[s].chars[curchar].flags[2]=((chartnls[ff7.slot[s].chars[curchar].id][ui->sb_lvl->value()]-ff7.slot[s].chars[curchar].expNext)*62)/(chartnls[ff7.slot[s].chars[curchar].id][ui->sb_lvl->value()]);//level progress is in 62 parts.
     }
 
     else
@@ -1724,6 +1719,7 @@ void MainWindow::setchar_growth(int caller)
 /*~~~~~~~~~Armor/Weapon Update~~~~~~~~~~*/
 void MainWindow::setarmorslots(void)
 {
+    load=true;
     ui->a_m_l1->setPixmap(QPixmap(""));
     ui->a_m_l2->setPixmap(QPixmap(""));
     ui->a_m_l3->setPixmap(QPixmap(""));
@@ -1756,9 +1752,11 @@ void MainWindow::setarmorslots(void)
     case 3:{ui->a_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
     case 4:{ui->a_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
     }
+    load=false;
 }
 void MainWindow::setweaponslots(void)
 {
+    load=true;
     ui->w_m_l1->setPixmap(QPixmap(""));
     ui->w_m_l2->setPixmap(QPixmap(""));
     ui->w_m_l3->setPixmap(QPixmap(""));
@@ -1995,6 +1993,7 @@ void MainWindow::setweaponslots(void)
             break;
         }
     }
+    load=false;
 }
 /*~~~~~End Armor/Weapon Update~~~~*/
 /*~~~~~~~~Set Menu Items~~~~~~~~~~*/

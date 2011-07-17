@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>772</width>
+    <width>770</width>
     <height>580</height>
    </rect>
   </property>
@@ -1720,7 +1720,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>445</width>
+             <width>443</width>
              <height>436</height>
             </rect>
            </property>
@@ -10292,7 +10292,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>1638</width>
-             <height>331</height>
+             <height>254</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16151,8 +16151,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>760</width>
-             <height>434</height>
+             <width>721</width>
+             <height>281</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -25941,6 +25941,23 @@ p, li { white-space: pre-wrap; }
              </item>
             </layout>
            </widget>
+           <widget class="QLabel" name="label_228">
+            <property name="geometry">
+             <rect>
+              <x>420</x>
+              <y>5</y>
+              <width>316</width>
+              <height>111</height>
+             </rect>
+            </property>
+            <property name="text">
+             <string>Table is only updated when the Var is changed. 
+Although you can edit table Contents these changes will not be saved</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
           </widget>
          </widget>
         </item>
@@ -25955,7 +25972,7 @@ p, li { white-space: pre-wrap; }
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>772</width>
+     <width>770</width>
      <height>22</height>
     </rect>
    </property>
