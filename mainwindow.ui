@@ -4624,8 +4624,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>443</width>
-             <height>436</height>
+             <width>401</width>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -16151,8 +16151,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>758</width>
-             <height>434</height>
+             <width>721</width>
+             <height>281</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -18268,8 +18268,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>758</width>
-             <height>434</height>
+             <width>736</width>
+             <height>418</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -20941,7 +20941,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </item>
                  <item>
                   <property name="text">
-                   <string>Vincent</string>
+                   <string>Cait Sith</string>
                   </property>
                   <property name="checkState">
                    <enum>Unchecked</enum>
@@ -20952,7 +20952,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </item>
                  <item>
                   <property name="text">
-                   <string>Cait Sith</string>
+                   <string>Vincent</string>
                   </property>
                   <property name="checkState">
                    <enum>Unchecked</enum>
@@ -21104,7 +21104,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </item>
                  <item>
                   <property name="text">
-                   <string>Vincent</string>
+                   <string>Cait Sith</string>
                   </property>
                   <property name="checkState">
                    <enum>Unchecked</enum>
@@ -21115,7 +21115,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </item>
                  <item>
                   <property name="text">
-                   <string>Cait Sith</string>
+                   <string>Vincent</string>
                   </property>
                   <property name="checkState">
                    <enum>Unchecked</enum>
