@@ -1719,7 +1719,6 @@ void MainWindow::setchar_growth(int caller)
 /*~~~~~~~~~Armor/Weapon Update~~~~~~~~~~*/
 void MainWindow::setarmorslots(void)
 {
-    load=true;
     ui->a_m_l1->setPixmap(QPixmap(""));
     ui->a_m_l2->setPixmap(QPixmap(""));
     ui->a_m_l3->setPixmap(QPixmap(""));
@@ -1752,11 +1751,9 @@ void MainWindow::setarmorslots(void)
     case 3:{ui->a_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
     case 4:{ui->a_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->a_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
     }
-    load=false;
 }
 void MainWindow::setweaponslots(void)
 {
-    load=true;
     ui->w_m_l1->setPixmap(QPixmap(""));
     ui->w_m_l2->setPixmap(QPixmap(""));
     ui->w_m_l3->setPixmap(QPixmap(""));
@@ -1993,7 +1990,6 @@ void MainWindow::setweaponslots(void)
             break;
         }
     }
-    load=false;
 }
 /*~~~~~End Armor/Weapon Update~~~~*/
 /*~~~~~~~~Set Menu Items~~~~~~~~~~*/
@@ -3090,15 +3086,15 @@ void MainWindow::clearslot(int rmslot)
     ff7.SG_Region_String[rmslot].clear();
 }
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
-void MainWindow::on_btn_cloud_clicked()     {curchar=0; charupdate();ui->btn_cloud->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
-void MainWindow::on_btn_barret_clicked()    {curchar=1; charupdate();ui->btn_barret->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
-void MainWindow::on_btn_tifa_clicked()      {curchar=2; charupdate();ui->btn_tifa->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
-void MainWindow::on_btn_aeris_clicked()     {curchar=3; charupdate();ui->btn_aeris->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
-void MainWindow::on_btn_red_clicked()       {curchar=4; charupdate();ui->btn_red->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
-void MainWindow::on_btn_yuffie_clicked()    {curchar=5; charupdate();ui->btn_yuffie->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
-void MainWindow::on_btn_cait_clicked()      {curchar=6; charupdate();ui->btn_cait->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
-void MainWindow::on_btn_vincent_clicked()   {curchar=7; charupdate();ui->btn_vincent->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
-void MainWindow::on_btn_cid_clicked()       {curchar=8; charupdate();ui->btn_cid->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
+void MainWindow::on_btn_cloud_clicked()     {curchar=0; ui->btn_cloud->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));  charupdate();}
+void MainWindow::on_btn_barret_clicked()    {curchar=1; ui->btn_barret->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id)); charupdate();}
+void MainWindow::on_btn_tifa_clicked()      {curchar=2; ui->btn_tifa->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));   charupdate();}
+void MainWindow::on_btn_aeris_clicked()     {curchar=3; ui->btn_aeris->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));  charupdate();}
+void MainWindow::on_btn_red_clicked()       {curchar=4; ui->btn_red->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));    charupdate();}
+void MainWindow::on_btn_yuffie_clicked()    {curchar=5; ui->btn_yuffie->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id)); charupdate();}
+void MainWindow::on_btn_cait_clicked()      {curchar=6; ui->btn_cait->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));   charupdate();}
+void MainWindow::on_btn_vincent_clicked()   {curchar=7; ui->btn_vincent->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));charupdate();}
+void MainWindow::on_btn_cid_clicked()       {curchar=8; ui->btn_cid->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));    charupdate();}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_sb_gil_valueChanged(){if(!load){ff7.slot[s].gil = ui->sb_gil->value();   ff7.slot[s].desc.gil = ff7.slot[s].gil;}}
 void MainWindow::on_combo_party1_currentIndexChanged(int index)
