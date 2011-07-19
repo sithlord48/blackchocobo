@@ -6700,6 +6700,18 @@ p, li { white-space: pre-wrap; }
         <source>Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Fixed: New Window Now Via Detached Process</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Limit Boxes Not Always Showing Data Correctly</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Cait/ Vincent Reversed in PHS Boxes</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>errbox</name>
