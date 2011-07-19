@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>362</width>
-    <height>378</height>
+    <width>360</width>
+    <height>376</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -522,6 +522,36 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>Fixed: New Window Now Via Detached Process</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fixed: Limit Boxes Not Always Showing Data Correctly</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fixed: Cait/ Vincent Reversed in PHS Boxes</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Previous Versions</string>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="textAlignment">
+           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New: Spawn New Windows. (mainly for testing)</string>
           </property>
          </item>
@@ -588,21 +618,6 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>Update:Almost All Spinboxes now &quot;Wrapping&quot;</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Previous Versions</string>
-          </property>
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <underline>true</underline>
-           </font>
-          </property>
-          <property name="textAlignment">
-           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
           </property>
          </item>
          <item>

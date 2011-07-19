@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>770</width>
+    <width>768</width>
     <height>580</height>
    </rect>
   </property>
@@ -1720,7 +1720,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>443</width>
+             <width>441</width>
              <height>436</height>
             </rect>
            </property>
@@ -6650,6 +6650,28 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </widget>
                  </item>
                  <item>
+                  <widget class="QComboBox" name="combo_add_mat_slot">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>23</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>120</width>
+                     <height>23</height>
+                    </size>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
                   <spacer name="horizontalSpacer_58">
                    <property name="orientation">
                     <enum>Qt::Horizontal</enum>
@@ -6713,28 +6735,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </size>
                  </property>
                 </spacer>
-               </item>
-               <item>
-                <widget class="QComboBox" name="combo_add_mat_slot">
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>120</width>
-                   <height>20</height>
-                  </size>
-                 </property>
-                </widget>
                </item>
                <item>
                 <widget class="QFrame" name="slot_materia_info">
@@ -8898,116 +8898,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <string/>
              </property>
             </widget>
-            <widget class="QComboBox" name="combo_add_mat_2">
-             <property name="geometry">
-              <rect>
-               <x>140</x>
-               <y>35</y>
-               <width>165</width>
-               <height>23</height>
-              </rect>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>165</width>
-               <height>23</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>23</height>
-              </size>
-             </property>
-            </widget>
-            <widget class="QComboBox" name="combo_mat_type">
-             <property name="geometry">
-              <rect>
-               <x>10</x>
-               <y>35</y>
-               <width>124</width>
-               <height>23</height>
-              </rect>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>124</width>
-               <height>23</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>16777215</width>
-               <height>23</height>
-              </size>
-             </property>
-             <property name="iconSize">
-              <size>
-               <width>16</width>
-               <height>16</height>
-              </size>
-             </property>
-             <item>
-              <property name="text">
-               <string>All</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normalon>:/icon/all_materia</normalon>
-               </iconset>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Magic</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normalon>:/icon/magic</normalon>
-               </iconset>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Summon</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normalon>:/icon/summon</normalon>
-               </iconset>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Independent</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normalon>:/icon/independent</normalon>
-               </iconset>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Support</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normalon>:/icon/support</normalon>
-               </iconset>
-              </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Command</string>
-              </property>
-              <property name="icon">
-               <iconset>
-                <normalon>:/icon/command</normalon>
-               </iconset>
-              </property>
-             </item>
-            </widget>
             <widget class="QLabel" name="label_175">
              <property name="geometry">
               <rect>
@@ -9658,6 +9548,141 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
              </layout>
             </widget>
+            <widget class="QWidget" name="layoutWidget">
+             <property name="geometry">
+              <rect>
+               <x>5</x>
+               <y>35</y>
+               <width>369</width>
+               <height>25</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_125">
+              <item>
+               <widget class="QComboBox" name="combo_mat_type">
+                <property name="minimumSize">
+                 <size>
+                  <width>124</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="iconSize">
+                 <size>
+                  <width>16</width>
+                  <height>16</height>
+                 </size>
+                </property>
+                <item>
+                 <property name="text">
+                  <string>All</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normalon>:/icon/all_materia</normalon>
+                  </iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Magic</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normalon>:/icon/magic</normalon>
+                  </iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Summon</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normalon>:/icon/summon</normalon>
+                  </iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Independent</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normalon>:/icon/independent</normalon>
+                  </iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Support</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normalon>:/icon/support</normalon>
+                  </iconset>
+                 </property>
+                </item>
+                <item>
+                 <property name="text">
+                  <string>Command</string>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normalon>:/icon/command</normalon>
+                  </iconset>
+                 </property>
+                </item>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="combo_add_mat_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>165</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>23</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QComboBox" name="combo_add_mat">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>23</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>23</height>
+                 </size>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
            </widget>
           </item>
           <item>
@@ -9717,25 +9742,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            </spacer>
           </item>
          </layout>
-        </item>
-        <item>
-         <widget class="QComboBox" name="combo_add_mat">
-          <property name="enabled">
-           <bool>false</bool>
-          </property>
-          <property name="minimumSize">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
-          </property>
-          <property name="maximumSize">
-           <size>
-            <width>0</width>
-            <height>0</height>
-           </size>
-          </property>
-         </widget>
         </item>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_69">
@@ -25972,7 +25978,7 @@ Although you can edit table Contents these changes will not be saved</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>770</width>
+     <width>768</width>
      <height>22</height>
     </rect>
    </property>
@@ -27097,7 +27103,6 @@ Although you can edit table Contents these changes will not be saved</string>
   <tabstop>cb_reg_yuffie</tabstop>
   <tabstop>btn_remove_all_materia</tabstop>
   <tabstop>btn_remove_all_stolen</tabstop>
-  <tabstop>combo_add_mat</tabstop>
   <tabstop>combo_id</tabstop>
   <tabstop>sb_exp</tabstop>
   <tabstop>slide_limit</tabstop>

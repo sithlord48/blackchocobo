@@ -20,8 +20,8 @@
 
 /*~~~~~GLOBALS~~~~~~*/
 bool load =false; //used for checking if data is initial load (to block some overrights when gui objects change)
-extern FF7 ff7; // our save file struct
-extern int s; //keeps track of our slot globally
+FF7 ff7; // our save file struct
+int s; //keeps track of our slot globally
 extern quint32 charlvls[11][99];
 extern quint32 chartnls[11][99];
 FF7SLOT bufferslot; // a buffer slot to keep copied slots in
@@ -134,6 +134,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
         ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_checked"));
     }
     else{ui->action_auto_char_growth->setChecked(0);}
+
     /* LANGUAGE SELECT */
     if(settings.value("lang").toString() == "en")
     {
@@ -167,8 +168,7 @@ void MainWindow::changeEvent(QEvent *e)
 }
 void MainWindow::on_actionNew_Window_triggered()
 {
-    MainWindow *newWindow = new MainWindow;
-    newWindow->show();
+QProcess::startDetached(QCoreApplication::applicationFilePath());
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionOpen_Save_File_activated()
@@ -495,12 +495,12 @@ void MainWindow::on_action_Save_activated()
 {
     if(!filename.isEmpty())
     {
-        if(ff7.savetype==1){fix_pc_bytemask();}
-        else if(ff7.savetype==2){fix_psx_header(s);}
+        if(ff7.savetype==1){fix_pc_bytemask(ff7,s);}
+        else if(ff7.savetype==2){fix_psx_header(ff7,s);}
 
         else if(ff7.savetype==3 || ff7.savetype==5 || ff7.savetype==6 || ff7.savetype ==7)
         {
-            fix_vmc_header();
+            fix_vmc_header(ff7);
             if(ff7.savetype==5){QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PSP."));}
         }
 
@@ -523,21 +523,21 @@ void MainWindow::on_actionSave_File_As_activated()
         tr("Save Final Fantasy 7 PC SaveGame"), settings.value("save_pc_path").toString(),
         tr("FF7 PC SaveGame(*.ff7)"));
 
-        fix_pc_bytemask();// adjust the bytemask so the correct slots are shown
+        fix_pc_bytemask(ff7,s);// adjust the bytemask so the correct slots are shown
     }
     else if(ff7.savetype==2)
     {
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 PSX SaveGame"), ff7.SG_Region_String[s],
         tr("FF7 Raw PSX SaveGame(*-S*)"));
-        fix_psx_header(s);
+        fix_psx_header(ff7,s);
     }
     else if(ff7.savetype==3)
     {
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 MC SaveGame"), settings.value("save_emu_path").toString(),
         tr("FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)"));
-        fix_vmc_header();
+        fix_vmc_header(ff7);
 
     }
     else if(ff7.savetype==4)
@@ -552,7 +552,7 @@ void MainWindow::on_actionSave_File_As_activated()
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7  PSP SaveGame"), "",
         tr("FF7 PSP SaveGame(*.vmp)"));
-        fix_vmc_header();
+        fix_vmc_header(ff7);
         QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PSP."));
 
     }
@@ -561,14 +561,14 @@ void MainWindow::on_actionSave_File_As_activated()
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7  VGS SaveGame"), "",
         tr("FF7 VGS SaveGame(*.vgs *.mem)"));
-        fix_vmc_header();
+        fix_vmc_header(ff7);
     }
     else if(ff7.savetype==7)
     {
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7  Dex-Drive SaveGame"), "",
         tr("FF7 Dex SaveGame(*.gme)"));
-        fix_vmc_header();
+        fix_vmc_header(ff7);
     }
     else {QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot save This Type of File"));return;}
     if(fileName.isEmpty()){return;}
@@ -740,7 +740,7 @@ void MainWindow::on_actionExport_PC_Save_activated()
         // Add File Header
         for(int i=0;i<9;i++){ff7.file_header_pc[i]= PC_SAVE_GAME_FILE_HEADER[i];}
     }
-    fix_pc_bytemask();
+    fix_pc_bytemask(ff7,s);
     for(int si=0;si<15;si++)
     {
         if(ff7.SG_Region_String[si].contains("00867") || ff7.SG_Region_String[si].contains("00869") ||
@@ -853,7 +853,7 @@ void MainWindow::on_actionExport_MC_triggered()
         ff7.savetype         = 3;
         //No Special Header Treatment Needed
     }
-    fix_vmc_header();
+    fix_vmc_header(ff7);
     saveFileFull(fileName);
 }
 void MainWindow::on_actionExport_VGS_triggered()
@@ -888,7 +888,7 @@ void MainWindow::on_actionExport_VGS_triggered()
         ff7.file_header_vgs[8] =0x01;
         ff7.file_header_vgs[12] =0x01;
     }
-    fix_vmc_header();
+    fix_vmc_header(ff7);
     saveFileFull(fileName);
 }
 void MainWindow::on_actionExport_DEX_triggered()
@@ -932,7 +932,7 @@ void MainWindow::on_actionExport_DEX_triggered()
         for(int i=0x17;i<0x25;i++){ff7.file_header_dex[i]=0xA0;}
         ff7.file_header_dex[38]=0xFF;
     }
-    fix_vmc_header();
+    fix_vmc_header(ff7);
     saveFileFull(fileName);
 }
 
@@ -5003,7 +5003,7 @@ void MainWindow::on_cb_Region_Slot_currentIndexChanged()
     new_regionString.append(ui->cb_Region_Slot->currentText().toAscii());
     ff7.SG_Region_String[s].clear();
     ff7.SG_Region_String[s].append(&new_regionString);
-    if(ff7.savetype==3 || ff7.savetype==5|| ff7.savetype==6 || ff7.savetype ==7){fix_vmc_header(); guirefresh();}
+    if(ff7.savetype==3 || ff7.savetype==5|| ff7.savetype==6 || ff7.savetype ==7){fix_vmc_header(ff7); guirefresh();}
 }}}
 
 void MainWindow::on_cb_field_help_toggled(bool checked)
