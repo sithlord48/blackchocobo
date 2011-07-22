@@ -254,11 +254,11 @@ void fix_vmc_header(FF7 &ff7)
            fix_psx_header(ff7,i);//here ff7 is already a pointer to ff7 in mainwindow.
         } // write string if found
         else
-        {
+        {//Write What Ever is in the Header (Non ff7 data)
             if(ff7.savetype==3){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}}
-            if(ff7.savetype==5){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_psp[index+j]);}}   //write what ever is in the header.(NOT FF7 SAVE)
-            if(ff7.savetype==6){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_vgs[index+j]);}}   //write what ever is in the header.(NOT FF7 SAVE)
-            if(ff7.savetype==7){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_dex[index+j]);}}   //write what ever is in the header.(NOT FF7 SAVE)
+            if(ff7.savetype==5){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_psp[index+j]);}}
+            if(ff7.savetype==6){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_vgs[index+j]);}}
+            if(ff7.savetype==7){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_dex[index+j]);}}
         }
     }
 
@@ -288,6 +288,7 @@ void fix_vmc_header(FF7 &ff7)
         memcpy(&ff7.file_header_psp,mc_header_2,0x2F40);
     }
 }
+
 QString avatar_style(int id)
 {
     QString style;
@@ -329,9 +330,9 @@ QString avatar_style(int id)
       }
     return style;
 }
-
+/* STATIC STRINGS FOR TRANSLATION */
 static const char *itemNames[]=
-{
+{   // 0-105 "normal" items
     QT_TRANSLATE_NOOP("Items","Potion"),QT_TRANSLATE_NOOP("Items","Hi-Potion"),QT_TRANSLATE_NOOP("Items","X-Potion"),QT_TRANSLATE_NOOP("Items","Ether"),QT_TRANSLATE_NOOP("Items","Turbo Ether"),QT_TRANSLATE_NOOP("Items","Elixir"),QT_TRANSLATE_NOOP("Items","Megalixir"),QT_TRANSLATE_NOOP("Items","Phoenix Down"),
     QT_TRANSLATE_NOOP("Items","Antidote"),QT_TRANSLATE_NOOP("Items","Soft"),QT_TRANSLATE_NOOP("Items","Maiden's Kiss"),QT_TRANSLATE_NOOP("Items","Cornucopia"),QT_TRANSLATE_NOOP("Items","Echo screen"),QT_TRANSLATE_NOOP("Items","Hyper"),QT_TRANSLATE_NOOP("Items","Tranquilizer"),QT_TRANSLATE_NOOP("Items","Remedy"),
     QT_TRANSLATE_NOOP("Items","Smoke Bomb"),QT_TRANSLATE_NOOP("Items","Speed Drink"),QT_TRANSLATE_NOOP("Items","Hero Drink"),QT_TRANSLATE_NOOP("Items","Vaccine"),QT_TRANSLATE_NOOP("Items","Grenade"),QT_TRANSLATE_NOOP("Items","Shrapnel"),QT_TRANSLATE_NOOP("Items","Right arm"),QT_TRANSLATE_NOOP("Items","Hourglass"),
@@ -384,7 +385,7 @@ static const char *itemNames[]=
     QT_TRANSLATE_NOOP("Items","Crystal Bangle"),QT_TRANSLATE_NOOP("Items","Platinum Bangle"),QT_TRANSLATE_NOOP("Items","Rune Armlet"),QT_TRANSLATE_NOOP("Items","Edincoat"),QT_TRANSLATE_NOOP("Items","Wizard Bracelet"),QT_TRANSLATE_NOOP("Items","Adaman Bangle"),QT_TRANSLATE_NOOP("Items","Gigas Armlet"),QT_TRANSLATE_NOOP("Items","Imperial Guard"),
     QT_TRANSLATE_NOOP("Items","Aegis Armlet"),QT_TRANSLATE_NOOP("Items","Fourth Bracelet"),QT_TRANSLATE_NOOP("Items","Warrior Bangle"),QT_TRANSLATE_NOOP("Items","Shinra Beta"),QT_TRANSLATE_NOOP("Items","Shinra Alpha"),QT_TRANSLATE_NOOP("Items","Four Slots"),QT_TRANSLATE_NOOP("Items","Fire Armlet"),QT_TRANSLATE_NOOP("Items","Aurora Armlet"),
     QT_TRANSLATE_NOOP("Items","Bolt Armlet"),QT_TRANSLATE_NOOP("Items","Dragon Armlet"),QT_TRANSLATE_NOOP("Items","Minerva Band"),QT_TRANSLATE_NOOP("Items","Escort Guard"),QT_TRANSLATE_NOOP("Items","Mystile"),QT_TRANSLATE_NOOP("Items","Ziedrich"),QT_TRANSLATE_NOOP("Items","Precious Watch"),QT_TRANSLATE_NOOP("Items","Chocobracelet"),
-                //accessorys 288-319
+    //accessorys 288-319
     QT_TRANSLATE_NOOP("Items","Power Wrist"),QT_TRANSLATE_NOOP("Items","Protect Vest"),QT_TRANSLATE_NOOP("Items","Earring"),QT_TRANSLATE_NOOP("Items","Talisman"),QT_TRANSLATE_NOOP("Items","Choco Feather"),QT_TRANSLATE_NOOP("Items","Amulet"),QT_TRANSLATE_NOOP("Items","Champion Belt"),QT_TRANSLATE_NOOP("Items","Poison Ring"),
     QT_TRANSLATE_NOOP("Items","Tough Ring"),QT_TRANSLATE_NOOP("Items","Circlet"),QT_TRANSLATE_NOOP("Items","Star Pendant"),QT_TRANSLATE_NOOP("Items","Silver Glasses"),QT_TRANSLATE_NOOP("Items","Headband"),QT_TRANSLATE_NOOP("Items","Fairy Ring"),QT_TRANSLATE_NOOP("Items","Jem Ring"),QT_TRANSLATE_NOOP("Items","White Cape"),
     QT_TRANSLATE_NOOP("Items","Sprint Shoes"),QT_TRANSLATE_NOOP("Items","Peace Ring"),QT_TRANSLATE_NOOP("Items","Ribbon"),QT_TRANSLATE_NOOP("Items","Fire Ring"),QT_TRANSLATE_NOOP("Items","Ice Ring"),QT_TRANSLATE_NOOP("Items","Bolt Ring"),QT_TRANSLATE_NOOP("Items","Tetra Elemental"),QT_TRANSLATE_NOOP("Items","Safety Bit"),
@@ -493,6 +494,7 @@ QString ff7names::MateriaNames(int i){return qApp->translate("Materia_Names",mat
 QString ff7names::MateriaStats(int i){return qApp->translate("Materia_Stats",materiaStats[i]);}
 QString ff7names::MateriaSkills(int i,int l){return qApp->translate("Materia_Skills",materiaSkills[i][l]);}
 
+/*LEVEL CHART */
 quint32 charlvls[11][99]=
 {
     {0,6,33,94,202,372,616,949,1384,1934,2614,3588,4610,5809,7200,8797,10614,12665,14965,17528,20368,24161,27694,31555,35759,40321,45255,50576,56299,62438,69008,77066,84643,92701,101255,110320,119910,130040,140725,151980,163820,176259,189312,202994,217320,232305,247963,264309,281358,299125,317625,336872,356881,377667,399245,421630,444836,468878,493771,519530,546170,581467,610297,640064,670784,702471,735141,768808,803488,839195,875945,913752,952632,992599,1033669,1075856,1119176,1163643,1209273,1256080,1304080,1389359,1441133,1494178,1548509,1604141,1661090,1719371,1778999,1839990,1902360,1966123,2031295,2097892,2165929,2235421,2306384,2378833,2452783},
