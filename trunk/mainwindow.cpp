@@ -22,8 +22,6 @@
 bool load =false; //used for checking if data is initial load (to block some overrights when gui objects change)
 FF7 ff7; // our save file struct
 int s; //keeps track of our slot globally
-extern quint32 charlvls[11][99];
-extern quint32 chartnls[11][99];
 FF7SLOT bufferslot; // a buffer slot to keep copied slots in
 ff7names names; //class of strings used in ff7
 QString buffer_region; //keep track of the region of any copied slots.
@@ -31,7 +29,10 @@ char chFF7[256];  // char arrary for converting to ff7 chars , so far not used.
 int curchar =0; //keeps track of current character displayed
 int mslotsel = 0; //keeps track of materia slot on char selected
 QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
-QString filename;
+QString filename; //holds file name
+/*~~~~~~EXTERNS~~~~~~~~*/
+extern quint32 chartnls[11][99]; //  Chars tnl Table (cloud - sephiroth)
+extern quint32 charlvls[11][99]; //  Chars lvl Table
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindow)
 {

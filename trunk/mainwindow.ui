@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>768</width>
+    <width>766</width>
     <height>580</height>
    </rect>
   </property>
@@ -1720,7 +1720,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>441</width>
+             <width>439</width>
              <height>436</height>
             </rect>
            </property>
@@ -3255,13 +3255,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <set>Qt::AlignCenter</set>
                      </property>
                      <property name="minimum">
-                      <number>0</number>
+                      <number>1</number>
                      </property>
                      <property name="maximum">
                       <number>4</number>
                      </property>
                      <property name="value">
-                      <number>0</number>
+                      <number>1</number>
                      </property>
                     </widget>
                    </item>
@@ -4624,8 +4624,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>401</width>
-             <height>414</height>
+             <width>439</width>
+             <height>436</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -25978,7 +25978,7 @@ Although you can edit table Contents these changes will not be saved</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>768</width>
+     <width>766</width>
      <height>22</height>
     </rect>
    </property>
