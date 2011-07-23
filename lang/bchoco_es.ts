@@ -4707,9 +4707,9 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Table is only updated when the Var is changed. 
-Although you can edit table Contents these changes will not be saved</source>
-        <translation>La tabla sólo se actualiza cuando la variable se cambia.
-Aunque puedes editar la tabla de contenidos, estos cambios no serán guardados</translation>
+ You Can Edit These Values, Thru The INT Column
+ Values can Range From 0 - 255</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6117,44 +6117,8 @@ Aunque puedes editar la tabla de contenidos, estos cambios no serán guardados</
         <translation>Vit:+1</translation>
     </message>
     <message>
-        <source>Maxp:+% depending on level</source>
-        <translation type="obsolete">PMMax:+% dependiendo del nivel</translation>
-    </message>
-    <message>
         <source>MaxHp:+% depending on level</source>
         <translation>PGMax: +% dependiendo del nivel</translation>
-    </message>
-    <message>
-        <source>MaxHp:-2% Maxp:+2% Str:-1 Mag:+1</source>
-        <translation type="obsolete">PGMax: -2% PMMax: +2% Fue:-1 Mag:+1</translation>
-    </message>
-    <message>
-        <source>MaxHp:-5% Maxp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation type="obsolete">PGMax: -5% PMMax: +5% Fue:-2 Vit:-1 Mag:+2 Esp:+1</translation>
-    </message>
-    <message>
-        <source>MaxHp:-10% Maxp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
-        <translation type="obsolete">PGMax: -10% PMMax: +10% Fue:-4 Vit:-2 Mag:+4 Esp:+2</translation>
-    </message>
-    <message>
-        <source>MaxHp:-2% Maxp:+2% Mag:+1</source>
-        <translation type="obsolete">PGMax: -2% PMMax: +2%Mag:+1</translation>
-    </message>
-    <message>
-        <source>MaxHp:-5% Maxp:+5% Mag:+1 Spi:+1</source>
-        <translation type="obsolete">PGMax: -5% PMMax: +5% Mag:+1 Esp:+1</translation>
-    </message>
-    <message>
-        <source>MaxHp:-10% Maxp:+10% Mag:+2 Spi:+2</source>
-        <translation type="obsolete">PGMax: -10% PMMax: +10%  Mag:+2 Esp:+2</translation>
-    </message>
-    <message>
-        <source>MaxHp:-10% Maxp:+15% Mag:+4 Spi:+4</source>
-        <translation type="obsolete">PGMax: -10% PMMax: +15% Mag:+24Esp:+4</translation>
-    </message>
-    <message>
-        <source>MaxHp:-10% Maxp:+20% Mag:+8 Spi:+8</source>
-        <translation type="obsolete">PGMax: -10% PMMax: +20% Mag:+8 Esp:+8</translation>
     </message>
     <message>
         <source>MaxMp:+% depending on level</source>
@@ -6791,6 +6755,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Cait/ Vincent Reversed in PHS Boxes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Editable Unknown Vars</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

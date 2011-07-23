@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>360</width>
-    <height>376</height>
+    <width>358</width>
+    <height>374</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -520,6 +520,11 @@ p, li { white-space: pre-wrap; }
          <property name="wordWrap">
           <bool>true</bool>
          </property>
+         <item>
+          <property name="text">
+           <string>New: Editable Unknown Vars</string>
+          </property>
+         </item>
          <item>
           <property name="text">
            <string>Fixed: New Window Now Via Detached Process</string>

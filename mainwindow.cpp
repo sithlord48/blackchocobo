@@ -167,10 +167,8 @@ void MainWindow::changeEvent(QEvent *e)
         break;
     };
 }
-void MainWindow::on_actionNew_Window_triggered()
-{
-QProcess::startDetached(QCoreApplication::applicationFilePath());
-}
+/*~~~~~ New Window ~~~~~*/
+void MainWindow::on_actionNew_Window_triggered(){QProcess::startDetached(QCoreApplication::applicationFilePath());}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionOpen_Save_File_activated()
 {
@@ -5378,6 +5376,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 2:
@@ -5398,6 +5401,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 3:
@@ -5418,6 +5426,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 4:
@@ -5438,6 +5451,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 5:
@@ -5458,6 +5476,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 6:
@@ -5478,6 +5501,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 7:
@@ -5498,6 +5526,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 8:
@@ -5518,6 +5551,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 9:
@@ -5538,6 +5576,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 10:
@@ -5558,6 +5601,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 11:
@@ -5578,6 +5626,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 12:
@@ -5598,6 +5651,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 13:
@@ -5618,6 +5676,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 14:
@@ -5638,6 +5701,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 15:
@@ -5658,6 +5726,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 16:
@@ -5678,6 +5751,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 17:
@@ -5698,6 +5776,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 18:
@@ -5718,6 +5801,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 19:
@@ -5738,6 +5826,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 20:
@@ -5758,6 +5851,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 21:
@@ -5778,6 +5876,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 22:
@@ -5798,6 +5901,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 23:
@@ -5818,6 +5926,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 24:
@@ -5838,6 +5951,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 25:
@@ -5858,6 +5976,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 26:
@@ -5878,6 +6001,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 27:
@@ -5898,6 +6026,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 28:
@@ -5918,6 +6051,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 29:
@@ -5938,6 +6076,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 30:
@@ -5958,6 +6101,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 31:
@@ -5978,6 +6126,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 32:
@@ -5998,6 +6151,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 33:
@@ -6018,6 +6176,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 34:
@@ -6038,6 +6201,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 35:
@@ -6058,6 +6226,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 36:
@@ -6078,6 +6251,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 37:
@@ -6098,6 +6276,11 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
  case 38:
@@ -6119,9 +6302,60 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        ui->tbl_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+        ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
+        ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
     }
     break;
 
  };
     load=false;
 }
+
+void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
+{if(!load && (item->column()==2)){
+switch (ui->combo_z_var->currentIndex())
+  {
+  case 0: break;
+  case 1: ff7.slot[s].z_1[item->row()]= item->text().toInt();
+  case 2: ff7.slot[s].z_2[item->row()]= item->text().toInt();
+  case 3: ff7.slot[s].z_3[item->row()]= item->text().toInt();
+  case 4: ff7.slot[s].z_4[item->row()]= item->text().toInt();
+  case 5: ff7.slot[s].z_5[item->row()]= item->text().toInt();
+  case 6: ff7.slot[s].z_6[item->row()]= item->text().toInt();
+  case 7: ff7.slot[s].z_7[item->row()]= item->text().toInt();
+  case 8: ff7.slot[s].z_8[item->row()]= item->text().toInt();
+  case 9: ff7.slot[s].z_9[item->row()]= item->text().toInt();
+  case 10: ff7.slot[s].z_10[item->row()]= item->text().toInt();
+  case 11: ff7.slot[s].z_11[item->row()]= item->text().toInt();
+  case 12: ff7.slot[s].z_12[item->row()]= item->text().toInt();
+  case 13: ff7.slot[s].z_13[item->row()]= item->text().toInt();
+  case 14: ff7.slot[s].z_14[item->row()]= item->text().toInt();
+  case 15: ff7.slot[s].z_15[item->row()]= item->text().toInt();
+  case 16: ff7.slot[s].z_16[item->row()]= item->text().toInt();
+  case 17: ff7.slot[s].z_17[item->row()]= item->text().toInt();
+  case 18: ff7.slot[s].z_18[item->row()]= item->text().toInt();
+  case 19: ff7.slot[s].z_19[item->row()]= item->text().toInt();
+  case 20: ff7.slot[s].z_20[item->row()]= item->text().toInt();
+  case 21: ff7.slot[s].z_21[item->row()]= item->text().toInt();
+  case 22: ff7.slot[s].z_22[item->row()]= item->text().toInt();
+  case 23: ff7.slot[s].z_23[item->row()]= item->text().toInt();
+  case 24: ff7.slot[s].z_24[item->row()]= item->text().toInt();
+  case 25: ff7.slot[s].z_25[item->row()]= item->text().toInt();
+  case 26: ff7.slot[s].z_26[item->row()]= item->text().toInt();
+  case 27: ff7.slot[s].z_27[item->row()]= item->text().toInt();
+  case 28: ff7.slot[s].z_28[item->row()]= item->text().toInt();
+  case 29: ff7.slot[s].z_29[item->row()]= item->text().toInt();
+  case 30: ff7.slot[s].z_30[item->row()]= item->text().toInt();
+  case 31: ff7.slot[s].z_31[item->row()]= item->text().toInt();
+  case 32: ff7.slot[s].z_32[item->row()]= item->text().toInt();
+  case 33: ff7.slot[s].z_33[item->row()]= item->text().toInt();
+  case 34: ff7.slot[s].z_34[item->row()]= item->text().toInt();
+  case 35: ff7.slot[s].z_35[item->row()]= item->text().toInt();
+  case 36: ff7.slot[s].z_36[item->row()]= item->text().toInt();
+  case 37: ff7.slot[s].z_37[item->row()]= item->text().toInt();
+  case 38: ff7.slot[s].z_38[item->row()]= item->text().toInt();
+  }
+}}
