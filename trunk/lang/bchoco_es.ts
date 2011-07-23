@@ -4666,14 +4666,6 @@ no es una partida guardada de FF7.</translation>
         <translation>BINARIO</translation>
     </message>
     <message>
-        <source>Online help</source>
-        <translation>Ayuda online</translation>
-    </message>
-    <message>
-        <source>&lt;url=http://www.pro100usa.com&gt;Online Help&lt;/url&gt;</source>
-        <translation>&lt;url=http://www.pro100usa.com&gt;Ayuda online&lt;/url&gt;</translation>
-    </message>
-    <message>
         <source>New Window</source>
         <translation>Nueva ventana</translation>
     </message>
@@ -4684,10 +4676,6 @@ no es una partida guardada de FF7.</translation>
     <message>
         <source>Chruch in the Slums</source>
         <translation>Church in the slums</translation>
-    </message>
-    <message>
-        <source>Replay The Church in the Slums</source>
-        <translation>Rejugar Church in the slums</translation>
     </message>
     <message>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
@@ -4706,9 +4694,13 @@ no es una partida guardada de FF7.</translation>
         <translation>Boton derecho sobre el mapa para colocar la posición de un elemento.</translation>
     </message>
     <message>
-        <source>Table is only updated when the Var is changed. 
- You Can Edit These Values, Thru The INT Column
- Values can Range From 0 - 255</source>
+        <source>Table is updated when the Combobox&apos;s index  is changed.
+ You Can Edit These Values By Changing  The INT Column&apos;s Value.
+Values can Range From 0 - 255</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Meeting Aeris</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

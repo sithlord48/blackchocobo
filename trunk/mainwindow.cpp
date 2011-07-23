@@ -4475,7 +4475,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->combo_party1->setCurrentIndex(0);
         ui->combo_party2->setCurrentIndex(12);
         ui->combo_party3->setCurrentIndex(12);
-        ui->label_replaynote->setText(tr("Replay The Church in the Slums"));
+        ui->label_replaynote->setText(tr("Meeting Aeris"));
 
     }
     else if (index ==3)// Flash back
