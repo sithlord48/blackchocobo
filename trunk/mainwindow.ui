@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>766</width>
+    <width>764</width>
     <height>580</height>
    </rect>
   </property>
@@ -1720,7 +1720,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>439</width>
+             <width>437</width>
              <height>436</height>
             </rect>
            </property>
@@ -4624,7 +4624,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>439</width>
+             <width>437</width>
              <height>436</height>
             </rect>
            </property>
@@ -10298,7 +10298,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>1638</width>
-             <height>254</height>
+             <height>331</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16157,8 +16157,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>721</width>
-             <height>281</height>
+             <width>752</width>
+             <height>434</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -25958,7 +25958,8 @@ p, li { white-space: pre-wrap; }
             </property>
             <property name="text">
              <string>Table is only updated when the Var is changed. 
-Although you can edit table Contents these changes will not be saved</string>
+ You Can Edit These Values, Thru The INT Column
+ Values can Range From 0 - 255</string>
             </property>
             <property name="wordWrap">
              <bool>true</bool>
@@ -25978,7 +25979,7 @@ Although you can edit table Contents these changes will not be saved</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>766</width>
+     <width>764</width>
      <height>22</height>
     </rect>
    </property>

@@ -4706,7 +4706,8 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Table is only updated when the Var is changed. 
-Although you can edit table Contents these changes will not be saved</source>
+ You Can Edit These Values, Thru The INT Column
+ Values can Range From 0 - 255</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6733,6 +6734,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Cait/ Vincent Reversed in PHS Boxes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Editable Unknown Vars</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
