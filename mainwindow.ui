@@ -4624,8 +4624,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>437</width>
-             <height>436</height>
+             <width>401</width>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -10298,7 +10298,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>1638</width>
-             <height>331</height>
+             <height>254</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -25957,9 +25957,9 @@ p, li { white-space: pre-wrap; }
              </rect>
             </property>
             <property name="text">
-             <string>Table is only updated when the Var is changed. 
- You Can Edit These Values, Thru The INT Column
- Values can Range From 0 - 255</string>
+             <string>Table is updated when the Combobox's index  is changed.
+ You Can Edit These Values By Changing  The INT Column's Value.
+Values can Range From 0 - 255</string>
             </property>
             <property name="wordWrap">
              <bool>true</bool>
@@ -26823,14 +26823,6 @@ p, li { white-space: pre-wrap; }
    </property>
    <property name="text">
     <string>Automatic Exp &lt;-&gt; Lvl</string>
-   </property>
-  </action>
-  <action name="actionOnline_Help">
-   <property name="text">
-    <string>Online help</string>
-   </property>
-   <property name="iconText">
-    <string>&lt;url=http://www.pro100usa.com&gt;Online Help&lt;/url&gt;</string>
    </property>
   </action>
   <action name="actionNew_Window">

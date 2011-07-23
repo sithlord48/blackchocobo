@@ -4654,27 +4654,19 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>HEX</source>
-        <translation type="unfinished"></translation>
+        <translation>HEX</translation>
     </message>
     <message>
         <source>INT</source>
-        <translation type="unfinished"></translation>
+        <translation>DEC</translation>
     </message>
     <message>
         <source>BINARY</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Online help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;url=http://www.pro100usa.com&gt;Online Help&lt;/url&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>Binaire</translation>
     </message>
     <message>
         <source>New Window</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouvelle Fenêtre</translation>
     </message>
     <message>
         <source>Replay the bombing mission from right after you get off the train.</source>
@@ -4682,11 +4674,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Chruch in the Slums</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Replay The Church in the Slums</source>
-        <translation type="unfinished"></translation>
+        <translation>Église - Taudis</translation>
     </message>
     <message>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
@@ -4698,17 +4686,21 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Church in the slums</source>
-        <translation type="unfinished"></translation>
+        <translation>Église - Taudis</translation>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s location.</source>
+        <translation>Clic droit pour facilement choisir l&apos;emplacement d&apos;un objet.</translation>
+    </message>
+    <message>
+        <source>Table is updated when the Combobox&apos;s index  is changed.
+ You Can Edit These Values By Changing  The INT Column&apos;s Value.
+Values can Range From 0 - 255</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Table is only updated when the Var is changed. 
- You Can Edit These Values, Thru The INT Column
- Values can Range From 0 - 255</source>
-        <translation type="unfinished"></translation>
+        <source>Meeting Aeris</source>
+        <translation>Rencontre d&apos;Aéris</translation>
     </message>
 </context>
 <context>

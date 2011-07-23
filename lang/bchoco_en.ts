@@ -4654,14 +4654,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Online help</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;url=http://www.pro100usa.com&gt;Online Help&lt;/url&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>New Window</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4671,10 +4663,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Chruch in the Slums</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Replay The Church in the Slums</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4694,9 +4682,13 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Table is only updated when the Var is changed. 
- You Can Edit These Values, Thru The INT Column
- Values can Range From 0 - 255</source>
+        <source>Table is updated when the Combobox&apos;s index  is changed.
+ You Can Edit These Values By Changing  The INT Column&apos;s Value.
+Values can Range From 0 - 255</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Meeting Aeris</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
