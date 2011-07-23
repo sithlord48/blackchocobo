@@ -5910,26 +5910,6 @@ Values can Range From 0 - 255</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Summon Typhoon x1 (160mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Typhoon x2 (160mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Typhoon x3 (160mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Typhoon x4 (160mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Typhoon x5 (160mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Summon Bahamut ZERO x1 (180mp)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6063,6 +6043,26 @@ Values can Range From 0 - 255</source>
     </message>
     <message>
         <source>M-Barrier (24mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Summon Typhon x1 (160mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Summon Typhon x2 (160mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Summon Typhon x3 (160mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Summon Typhon x4 (160mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Summon Typhon x5 (160mp)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
