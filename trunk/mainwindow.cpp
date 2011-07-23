@@ -2078,7 +2078,7 @@ void MainWindow::setmenu(void)
     else if(ff7.SG_Region_String[s].contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_sel"));}
     else if(ff7.SG_Region_String[s].contains("01057")){ui->action_Region_JPN_International->setChecked(Qt::Checked);ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_sel"));}
     else if(ff7.SG_Region_String[s].isEmpty()){/*do nothing*/}
-    else{QMessageBox::information(this,tr("Region Detect Error"),tr("Region Can't be Automaticly Detected, You Must Set it Manually"));}
+    else{QMessageBox::information(this,tr("Region Detect Error"),tr("Region Cannot be Automatically Detected, You Must Set it Manually"));}
     /*~~End Detected Region~~*/
     load=false;
 }

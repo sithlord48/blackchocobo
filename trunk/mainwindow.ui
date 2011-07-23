@@ -18274,8 +18274,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>736</width>
-             <height>418</height>
+             <width>752</width>
+             <height>434</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -19407,7 +19407,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </size>
                   </property>
                   <property name="title">
-                   <string>Diamond / Ultimate / Ruby / Weapon</string>
+                   <string>Diamond / Ultimate / Ruby  Weapon</string>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_8">
                    <property name="topMargin">
@@ -19611,7 +19611,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </size>
                   </property>
                   <property name="title">
-                   <string>Emerlad Weapon ?</string>
+                   <string>Emerald Weapon ?</string>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_12">
                    <property name="topMargin">

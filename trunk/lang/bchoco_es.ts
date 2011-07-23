@@ -4186,10 +4186,6 @@ no es una partida guardada de FF7.</translation>
         <translation>-------VACIO-------</translation>
     </message>
     <message>
-        <source>Region Can&apos;t be Automaticly Detected, You Must Set it Manually</source>
-        <translation>La región no se puede detectar automáticamente, Debes ponerla manualmente</translation>
-    </message>
-    <message>
         <source>ID </source>
         <translation>ID</translation>
     </message>
@@ -4286,10 +4282,6 @@ no es una partida guardada de FF7.</translation>
         <translation>Submarino</translation>
     </message>
     <message>
-        <source>Emerlad Weapon ?</source>
-        <translation>¿ Arma Esmeralda ?</translation>
-    </message>
-    <message>
         <source>sliders show </source>
         <translation>Mostrar controles deslizantes</translation>
     </message>
@@ -4340,10 +4332,6 @@ no es una partida guardada de FF7.</translation>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PS3.</source>
         <translation>Este archivo no tiene un checksum actualizado. No funcionará en tu PS3.</translation>
-    </message>
-    <message>
-        <source>Diamond / Ultimate / Ruby / Weapon</source>
-        <translation>Diamante / Última / Rubí / Arma</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
@@ -4702,6 +4690,18 @@ Values can Range From 0 - 255</source>
     <message>
         <source>Meeting Aeris</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diamond / Ultimate / Ruby  Weapon</source>
+        <translation>Arma Diamante / Última / Rubí</translation>
+    </message>
+    <message>
+        <source>Emerald Weapon ?</source>
+        <translation>¿Arma Esmeralda?</translation>
+    </message>
+    <message>
+        <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
+        <translation>La región no se puede detectar automáticamente, Debes ponerla manualmente</translation>
     </message>
 </context>
 <context>
@@ -5920,26 +5920,6 @@ Values can Range From 0 - 255</source>
     <message>
         <source>Summon Hades x5 (150mp)</source>
         <translation>Invoca Hades x5 (150mp)</translation>
-    </message>
-    <message>
-        <source>Summon Typhoon x1 (160mp)</source>
-        <translation type="obsolete">Invoca Typhoon x1 (160mp)</translation>
-    </message>
-    <message>
-        <source>Summon Typhoon x2 (160mp)</source>
-        <translation type="obsolete">Invoca Typhoon x2 (160mp)</translation>
-    </message>
-    <message>
-        <source>Summon Typhoon x3 (160mp)</source>
-        <translation type="obsolete">Invoca Typhoon x3 (160mp)</translation>
-    </message>
-    <message>
-        <source>Summon Typhoon x4 (160mp)</source>
-        <translation type="obsolete">Invoca Typhoon x4 (160mp)</translation>
-    </message>
-    <message>
-        <source>Summon Typhoon x5 (160mp)</source>
-        <translation type="obsolete">Invoca Typhoon x5 (160mp)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x1 (180mp)</source>

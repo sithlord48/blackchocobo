@@ -4174,10 +4174,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Region Can&apos;t be Automaticly Detected, You Must Set it Manually</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>ID </source>
         <translation type="unfinished"></translation>
     </message>
@@ -4274,10 +4270,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Emerlad Weapon ?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>sliders show </source>
         <translation type="unfinished"></translation>
     </message>
@@ -4327,10 +4319,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PS3.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Diamond / Ultimate / Ruby / Weapon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4689,6 +4677,18 @@ Values can Range From 0 - 255</source>
     </message>
     <message>
         <source>Meeting Aeris</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diamond / Ultimate / Ruby  Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Emerald Weapon ?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
