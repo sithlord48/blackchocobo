@@ -5923,23 +5923,23 @@ Values can Range From 0 - 255</source>
     </message>
     <message>
         <source>Summon Typhoon x1 (160mp)</source>
-        <translation>Invoca Typhoon x1 (160mp)</translation>
+        <translation type="obsolete">Invoca Typhoon x1 (160mp)</translation>
     </message>
     <message>
         <source>Summon Typhoon x2 (160mp)</source>
-        <translation>Invoca Typhoon x2 (160mp)</translation>
+        <translation type="obsolete">Invoca Typhoon x2 (160mp)</translation>
     </message>
     <message>
         <source>Summon Typhoon x3 (160mp)</source>
-        <translation>Invoca Typhoon x3 (160mp)</translation>
+        <translation type="obsolete">Invoca Typhoon x3 (160mp)</translation>
     </message>
     <message>
         <source>Summon Typhoon x4 (160mp)</source>
-        <translation>Invoca Typhoon x4 (160mp)</translation>
+        <translation type="obsolete">Invoca Typhoon x4 (160mp)</translation>
     </message>
     <message>
         <source>Summon Typhoon x5 (160mp)</source>
-        <translation>Invoca Typhoon x5 (160mp)</translation>
+        <translation type="obsolete">Invoca Typhoon x5 (160mp)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x1 (180mp)</source>
@@ -6076,6 +6076,26 @@ Values can Range From 0 - 255</source>
     <message>
         <source>M-Barrier (24mp)</source>
         <translation>BarreraM (24pm)</translation>
+    </message>
+    <message>
+        <source>Summon Typhon x1 (160mp)</source>
+        <translation>Invoca Typhon x1 (160mp)</translation>
+    </message>
+    <message>
+        <source>Summon Typhon x2 (160mp)</source>
+        <translation>Invoca Typhon x2 (160mp)</translation>
+    </message>
+    <message>
+        <source>Summon Typhon x3 (160mp)</source>
+        <translation>Invoca Typhon x3 (160mp)</translation>
+    </message>
+    <message>
+        <source>Summon Typhon x4 (160mp)</source>
+        <translation>Invoca Typhon x4 (160mp)</translation>
+    </message>
+    <message>
+        <source>Summon Typhon x5 (160mp)</source>
+        <translation>Invoca Typhon x5 (160mp)</translation>
     </message>
 </context>
 <context>

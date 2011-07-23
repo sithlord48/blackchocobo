@@ -4696,7 +4696,9 @@ is not a FF7 SaveGame.</source>
         <source>Table is updated when the Combobox&apos;s index  is changed.
  You Can Edit These Values By Changing  The INT Column&apos;s Value.
 Values can Range From 0 - 255</source>
-        <translation type="unfinished"></translation>
+        <translation>Les données sont mises à jour lorsque la case est cochée.
+Vous pouvez changer ces données en changeant la valeur de la colonne DEC.
+Les valeurs peuvent varier de 0 à 255</translation>
     </message>
     <message>
         <source>Meeting Aeris</source>
@@ -5035,11 +5037,11 @@ Values can Range From 0 - 255</source>
     </message>
     <message>
         <source>Gravity</source>
-        <translation type="unfinished"></translation>
+        <translation>Gravité</translation>
     </message>
     <message>
         <source>Typhon</source>
-        <translation type="unfinished"></translation>
+        <translation>Typhon</translation>
     </message>
 </context>
 <context>
@@ -5922,23 +5924,23 @@ Values can Range From 0 - 255</source>
     </message>
     <message>
         <source>Summon Typhoon x1 (160mp)</source>
-        <translation>Invoque Typhon x1 (160mp)</translation>
+        <translation type="obsolete">Invoque Typhon x1 (160mp)</translation>
     </message>
     <message>
         <source>Summon Typhoon x2 (160mp)</source>
-        <translation>Invoque Typhon x2 (160mp)</translation>
+        <translation type="obsolete">Invoque Typhon x2 (160mp)</translation>
     </message>
     <message>
         <source>Summon Typhoon x3 (160mp)</source>
-        <translation>Invoque Typhon x3 (160mp)</translation>
+        <translation type="obsolete">Invoque Typhon x3 (160mp)</translation>
     </message>
     <message>
         <source>Summon Typhoon x4 (160mp)</source>
-        <translation>Invoque Typhon x4 (160mp)</translation>
+        <translation type="obsolete">Invoque Typhon x4 (160mp)</translation>
     </message>
     <message>
         <source>Summon Typhoon x5 (160mp)</source>
-        <translation>Invoque Typhon x5 (160mp)</translation>
+        <translation type="obsolete">Invoque Typhon x5 (160mp)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x1 (180mp)</source>
@@ -6075,6 +6077,26 @@ Values can Range From 0 - 255</source>
     <message>
         <source>M-Barrier (24mp)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Summon Typhon x1 (160mp)</source>
+        <translation>Invoque Typhon x1 (160mp)</translation>
+    </message>
+    <message>
+        <source>Summon Typhon x2 (160mp)</source>
+        <translation>Invoque Typhon x2 (160mp)</translation>
+    </message>
+    <message>
+        <source>Summon Typhon x3 (160mp)</source>
+        <translation>Invoque Typhon x3 (160mp)</translation>
+    </message>
+    <message>
+        <source>Summon Typhon x4 (160mp)</source>
+        <translation>Invoque Typhon x4 (160mp)</translation>
+    </message>
+    <message>
+        <source>Summon Typhon x5 (160mp)</source>
+        <translation>Invoque Typhon x5 (160mp)</translation>
     </message>
 </context>
 <context>
