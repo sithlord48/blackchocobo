@@ -4299,7 +4299,7 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Ultimate Weapon?</source>
-        <translation>¿Arma Última?</translation>
+        <translation type="obsolete">¿Arma Última?</translation>
     </message>
     <message>
         <source>Emerald Weapon?</source>

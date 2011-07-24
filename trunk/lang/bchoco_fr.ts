@@ -4222,7 +4222,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Ultimate Weapon?</source>
-        <translation>Dernière Arme?</translation>
+        <translation type="obsolete">Dernière Arme?</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>

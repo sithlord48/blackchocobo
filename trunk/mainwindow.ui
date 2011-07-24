@@ -2402,13 +2402,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </property>
                      <property name="minimumSize">
                       <size>
-                       <width>50</width>
+                       <width>45</width>
                        <height>27</height>
                       </size>
                      </property>
                      <property name="maximumSize">
                       <size>
-                       <width>50</width>
+                       <width>45</width>
                        <height>27</height>
                       </size>
                      </property>
@@ -2420,8 +2420,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </property>
                      <property name="iconSize">
                       <size>
-                       <width>26</width>
-                       <height>23</height>
+                       <width>20</width>
+                       <height>24</height>
                       </size>
                      </property>
                      <property name="frame">
@@ -2429,7 +2429,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </property>
                      <item>
                       <property name="text">
-                       <string notr="true"/>
+                       <string/>
                       </property>
                       <property name="icon">
                        <iconset resource="images.qrc">
@@ -2438,7 +2438,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </item>
                      <item>
                       <property name="text">
-                       <string notr="true"/>
+                       <string/>
                       </property>
                       <property name="icon">
                        <iconset resource="images.qrc">
@@ -2527,6 +2527,22 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       </property>
                      </item>
                     </widget>
+                   </item>
+                   <item>
+                    <spacer name="horizontalSpacer_50">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeType">
+                      <enum>QSizePolicy::Fixed</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>10</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
                    </item>
                   </layout>
                  </item>
@@ -4624,8 +4640,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>401</width>
-             <height>414</height>
+             <width>437</width>
+             <height>436</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -6660,13 +6676,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
-                     <height>23</height>
+                     <height>0</height>
                     </size>
                    </property>
                    <property name="maximumSize">
                     <size>
-                     <width>120</width>
-                     <height>23</height>
+                     <width>0</width>
+                     <height>0</height>
                     </size>
                    </property>
                   </widget>
@@ -9424,7 +9440,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <bool>true</bool>
              </property>
             </widget>
-            <widget class="QWidget" name="layoutWidget">
+            <widget class="QWidget" name="layoutWidget5">
              <property name="geometry">
               <rect>
                <x>79</x>
@@ -9553,7 +9569,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <rect>
                <x>5</x>
                <y>35</y>
-               <width>369</width>
+               <width>316</width>
                <height>25</height>
               </rect>
              </property>
@@ -9670,13 +9686,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
-                  <height>23</height>
+                  <height>0</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>16777215</width>
-                  <height>23</height>
+                  <width>0</width>
+                  <height>0</height>
                  </size>
                 </property>
                </widget>
@@ -10298,7 +10314,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>1638</width>
-             <height>254</height>
+             <height>331</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16146,7 +16162,22 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
        <attribute name="title">
         <string>&amp;Location</string>
        </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout_127">
+       <layout class="QVBoxLayout" name="verticalLayout_94">
+        <property name="spacing">
+         <number>-1</number>
+        </property>
+        <property name="leftMargin">
+         <number>0</number>
+        </property>
+        <property name="topMargin">
+         <number>3</number>
+        </property>
+        <property name="rightMargin">
+         <number>0</number>
+        </property>
+        <property name="bottomMargin">
+         <number>3</number>
+        </property>
         <item>
          <widget class="QToolBox" name="toolBox_2">
           <property name="currentIndex">
@@ -16157,8 +16188,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>752</width>
-             <height>434</height>
+             <width>764</width>
+             <height>440</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -16169,6 +16200,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <string>Save Location</string>
            </attribute>
            <layout class="QHBoxLayout" name="horizontalLayout_165">
+            <property name="margin">
+             <number>3</number>
+            </property>
             <item>
              <widget class="QTableWidget" name="tbl_location_field">
               <property name="sizePolicy">
@@ -18274,8 +18308,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>752</width>
-             <height>434</height>
+             <width>764</width>
+             <height>440</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -18285,7 +18319,10 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            <attribute name="label">
             <string>Worldmap Location</string>
            </attribute>
-           <layout class="QHBoxLayout" name="horizontalLayout_168">
+           <layout class="QHBoxLayout" name="horizontalLayout_127">
+            <property name="margin">
+             <number>3</number>
+            </property>
             <item>
              <widget class="QScrollArea" name="scrollArea">
               <property name="sizePolicy">
@@ -18334,8 +18371,17 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <property name="spacing">
                  <number>-1</number>
                 </property>
-                <property name="margin">
-                 <number>3</number>
+                <property name="leftMargin">
+                 <number>0</number>
+                </property>
+                <property name="topMargin">
+                 <number>2</number>
+                </property>
+                <property name="rightMargin">
+                 <number>0</number>
+                </property>
+                <property name="bottomMargin">
+                 <number>2</number>
                 </property>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box">
@@ -18355,10 +18401,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <string>Party leader</string>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_7">
-                   <property name="topMargin">
-                    <number>3</number>
-                   </property>
-                   <property name="bottomMargin">
+                   <property name="margin">
                     <number>3</number>
                    </property>
                    <item row="0" column="0">
@@ -18559,10 +18602,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <string>Tiny Bronco / Chocobo</string>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_10">
-                   <property name="topMargin">
-                    <number>3</number>
-                   </property>
-                   <property name="bottomMargin">
+                   <property name="margin">
                     <number>3</number>
                    </property>
                    <item row="0" column="0">
@@ -19410,10 +19450,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <string>Diamond / Ultimate / Ruby  Weapon</string>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_8">
-                   <property name="topMargin">
-                    <number>3</number>
-                   </property>
-                   <property name="bottomMargin">
+                   <property name="margin">
                     <number>3</number>
                    </property>
                    <item row="0" column="0">
@@ -19614,10 +19651,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <string>Emerald Weapon ?</string>
                   </property>
                   <layout class="QGridLayout" name="gridLayout_12">
-                   <property name="topMargin">
-                    <number>3</number>
-                   </property>
-                   <property name="bottomMargin">
+                   <property name="margin">
                     <number>3</number>
                    </property>
                    <item row="0" column="0">
@@ -19813,216 +19847,246 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <item>
              <layout class="QVBoxLayout" name="verticalLayout_96">
               <item>
-               <widget class="QFrame" name="world_map_frame">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>446</width>
-                  <height>381</height>
-                 </size>
-                </property>
-                <widget class="QWidget" name="layoutWidget4_2">
-                 <property name="geometry">
-                  <rect>
-                   <x>15</x>
-                   <y>5</y>
-                   <width>411</width>
-                   <height>25</height>
-                  </rect>
-                 </property>
-                 <layout class="QHBoxLayout" name="horizontalLayout_166">
-                  <item>
-                   <widget class="QLabel" name="label_231">
-                    <property name="text">
-                     <string>sliders show </string>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
-                   <widget class="QComboBox" name="combo_map_controls">
+               <layout class="QHBoxLayout" name="horizontalLayout_126">
+                <item>
+                 <spacer name="horizontalSpacer_48">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+                <item>
+                 <widget class="QFrame" name="world_map_frame">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
+                   <size>
+                    <width>446</width>
+                    <height>381</height>
+                   </size>
+                  </property>
+                  <widget class="QWidget" name="layoutWidget4_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>15</x>
+                     <y>5</y>
+                     <width>411</width>
+                     <height>25</height>
+                    </rect>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_166">
                     <item>
-                     <property name="text">
-                      <string>Party Leader</string>
-                     </property>
+                     <widget class="QLabel" name="label_231">
+                      <property name="text">
+                       <string>sliders show </string>
+                      </property>
+                     </widget>
                     </item>
                     <item>
-                     <property name="text">
-                      <string>TinyBronco/Chocobo</string>
-                     </property>
+                     <widget class="QComboBox" name="combo_map_controls">
+                      <item>
+                       <property name="text">
+                        <string>Party Leader</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>TinyBronco/Chocobo</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Buggy/Highwind</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Sub</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Unknown</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Diamond / Ultimate / Ruby Weapon</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>Emerald Weapon?</string>
+                       </property>
+                      </item>
+                     </widget>
                     </item>
-                    <item>
-                     <property name="text">
-                      <string>Buggy/Highwind</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Sub</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Ultimate Weapon?</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Diamond / Ultimate / Ruby Weapon</string>
-                     </property>
-                    </item>
-                    <item>
-                     <property name="text">
-                      <string>Emerald Weapon?</string>
-                     </property>
-                    </item>
-                   </widget>
-                  </item>
-                 </layout>
-                </widget>
-                <widget class="QLabel" name="world_map_view">
-                 <property name="geometry">
-                  <rect>
-                   <x>5</x>
-                   <y>32</y>
-                   <width>432</width>
-                   <height>336</height>
-                  </rect>
-                 </property>
-                 <property name="cursor">
-                  <cursorShape>CrossCursor</cursorShape>
-                 </property>
-                 <property name="contextMenuPolicy">
-                  <enum>Qt::CustomContextMenu</enum>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="scaledContents">
-                  <bool>false</bool>
-                 </property>
-                 <property name="textInteractionFlags">
-                  <set>Qt::NoTextInteraction</set>
-                 </property>
-                </widget>
-                <widget class="QSlider" name="slide_world_x">
-                 <property name="geometry">
-                  <rect>
-                   <x>-1</x>
-                   <y>369</y>
-                   <width>443</width>
-                   <height>10</height>
-                  </rect>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>443</width>
-                   <height>10</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>443</width>
-                   <height>10</height>
-                  </size>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true"/>
-                 </property>
-                 <property name="maximum">
-                  <number>295000</number>
-                 </property>
-                 <property name="singleStep">
-                  <number>100</number>
-                 </property>
-                 <property name="pageStep">
-                  <number>1000</number>
-                 </property>
-                 <property name="value">
-                  <number>0</number>
-                 </property>
-                 <property name="tracking">
-                  <bool>true</bool>
-                 </property>
-                 <property name="orientation">
-                  <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="tickPosition">
-                  <enum>QSlider::NoTicks</enum>
-                 </property>
-                 <property name="tickInterval">
-                  <number>150000</number>
-                 </property>
-                 <property name="regular" stdset="0">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-                <widget class="QSlider" name="slide_world_y">
-                 <property name="geometry">
-                  <rect>
-                   <x>437</x>
-                   <y>26</y>
-                   <width>10</width>
-                   <height>347</height>
-                  </rect>
-                 </property>
-                 <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                   <horstretch>0</horstretch>
-                   <verstretch>0</verstretch>
-                  </sizepolicy>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>10</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>10</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="cursor">
-                  <cursorShape>ArrowCursor</cursorShape>
-                 </property>
-                 <property name="maximum">
-                  <number>230000</number>
-                 </property>
-                 <property name="singleStep">
-                  <number>100</number>
-                 </property>
-                 <property name="pageStep">
-                  <number>1000</number>
-                 </property>
-                 <property name="value">
-                  <number>0</number>
-                 </property>
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="invertedAppearance">
-                  <bool>true</bool>
-                 </property>
-                 <property name="invertedControls">
-                  <bool>false</bool>
-                 </property>
-                 <property name="tickPosition">
-                  <enum>QSlider::NoTicks</enum>
-                 </property>
-                 <property name="tickInterval">
-                  <number>1500</number>
-                 </property>
-                 <property name="regular" stdset="0">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </widget>
+                   </layout>
+                  </widget>
+                  <widget class="QLabel" name="world_map_view">
+                   <property name="geometry">
+                    <rect>
+                     <x>5</x>
+                     <y>32</y>
+                     <width>432</width>
+                     <height>336</height>
+                    </rect>
+                   </property>
+                   <property name="cursor">
+                    <cursorShape>CrossCursor</cursorShape>
+                   </property>
+                   <property name="contextMenuPolicy">
+                    <enum>Qt::CustomContextMenu</enum>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="scaledContents">
+                    <bool>false</bool>
+                   </property>
+                   <property name="textInteractionFlags">
+                    <set>Qt::NoTextInteraction</set>
+                   </property>
+                  </widget>
+                  <widget class="QSlider" name="slide_world_x">
+                   <property name="geometry">
+                    <rect>
+                     <x>-1</x>
+                     <y>369</y>
+                     <width>443</width>
+                     <height>10</height>
+                    </rect>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>443</width>
+                     <height>10</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>443</width>
+                     <height>10</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="maximum">
+                    <number>295000</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>100</number>
+                   </property>
+                   <property name="pageStep">
+                    <number>1000</number>
+                   </property>
+                   <property name="value">
+                    <number>0</number>
+                   </property>
+                   <property name="tracking">
+                    <bool>true</bool>
+                   </property>
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="tickPosition">
+                    <enum>QSlider::NoTicks</enum>
+                   </property>
+                   <property name="tickInterval">
+                    <number>150000</number>
+                   </property>
+                   <property name="regular" stdset="0">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                  <widget class="QSlider" name="slide_world_y">
+                   <property name="geometry">
+                    <rect>
+                     <x>437</x>
+                     <y>26</y>
+                     <width>10</width>
+                     <height>347</height>
+                    </rect>
+                   </property>
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>10</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>10</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="cursor">
+                    <cursorShape>ArrowCursor</cursorShape>
+                   </property>
+                   <property name="maximum">
+                    <number>230000</number>
+                   </property>
+                   <property name="singleStep">
+                    <number>100</number>
+                   </property>
+                   <property name="pageStep">
+                    <number>1000</number>
+                   </property>
+                   <property name="value">
+                    <number>0</number>
+                   </property>
+                   <property name="orientation">
+                    <enum>Qt::Vertical</enum>
+                   </property>
+                   <property name="invertedAppearance">
+                    <bool>true</bool>
+                   </property>
+                   <property name="invertedControls">
+                    <bool>false</bool>
+                   </property>
+                   <property name="tickPosition">
+                    <enum>QSlider::NoTicks</enum>
+                   </property>
+                   <property name="tickInterval">
+                    <number>1500</number>
+                   </property>
+                   <property name="regular" stdset="0">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </widget>
+                </item>
+                <item>
+                 <spacer name="horizontalSpacer_49">
+                  <property name="orientation">
+                   <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="sizeHint" stdset="0">
+                   <size>
+                    <width>40</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </spacer>
+                </item>
+               </layout>
               </item>
               <item>
                <layout class="QHBoxLayout" name="horizontalLayout_167">
@@ -25692,9 +25756,9 @@ p, li { white-space: pre-wrap; }
            <widget class="QWidget" name="layoutWidge34t">
             <property name="geometry">
              <rect>
-              <x>5</x>
+              <x>30</x>
               <y>5</y>
-              <width>406</width>
+              <width>311</width>
               <height>486</height>
              </rect>
             </property>
@@ -25911,8 +25975,11 @@ p, li { white-space: pre-wrap; }
              </item>
              <item>
               <widget class="QTableWidget" name="tbl_unknown">
+               <property name="horizontalScrollBarPolicy">
+                <enum>Qt::ScrollBarAlwaysOff</enum>
+               </property>
                <attribute name="horizontalHeaderDefaultSectionSize">
-                <number>100</number>
+                <number>75</number>
                </attribute>
                <attribute name="horizontalHeaderHighlightSections">
                 <bool>false</bool>
@@ -25950,10 +26017,10 @@ p, li { white-space: pre-wrap; }
            <widget class="QLabel" name="label_228">
             <property name="geometry">
              <rect>
-              <x>420</x>
+              <x>350</x>
               <y>5</y>
-              <width>316</width>
-              <height>111</height>
+              <width>386</width>
+              <height>61</height>
              </rect>
             </property>
             <property name="text">
