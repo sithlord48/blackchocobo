@@ -4299,7 +4299,7 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Ultimate Weapon?</source>
-        <translation type="obsolete">¿Arma Última?</translation>
+        <translation>¿Arma Última?</translation>
     </message>
     <message>
         <source>Emerald Weapon?</source>
@@ -4685,11 +4685,13 @@ no es una partida guardada de FF7.</translation>
         <source>Table is updated when the Combobox&apos;s index  is changed.
  You Can Edit These Values By Changing  The INT Column&apos;s Value.
 Values can Range From 0 - 255</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">La tabla sólo se actualiza cuando cambia el index del select.
+ Podes editar estos valores cambiando el valor de la columna INT
+ El rango de los valores es 0 - 255</translation>
     </message>
     <message>
         <source>Meeting Aeris</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Conociendo a Aeris</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
@@ -6739,19 +6741,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: New Window Now Via Detached Process</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arreglado: Ahora la nueva ventana a través de procesos independiente</translation>
     </message>
     <message>
         <source>Fixed: Limit Boxes Not Always Showing Data Correctly</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arreglado: Cajas límite no siempre muestra los datos correctamente</translation>
     </message>
     <message>
         <source>Fixed: Cait/ Vincent Reversed in PHS Boxes</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arreglado:Cuadro PHS de Cait / Vicente invertidos</translation>
     </message>
     <message>
         <source>New: Editable Unknown Vars</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nuevo: Variables desconocido editables</translation>
     </message>
 </context>
 <context>
