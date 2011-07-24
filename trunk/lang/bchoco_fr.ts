@@ -4270,7 +4270,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme)</source>
-        <translation type="unfinished"></translation>
+        <translation>Types de sauvegarde FF7 connus (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Sauvegarde FF7 PC (*.ff7);;Sauvegarde FF7 PSX (*-S*);;Sauvegarde MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Sauvegarde PSV(*.psv);;Sauvegarde PSP(*.vmp);;Sauvegarde VGS(*.vgs *.mem);;Sauvegarde DEX(*.gme)</translation>
     </message>
     <message>
         <source>PSV Save Notice</source>
@@ -4290,7 +4290,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarde FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7  VGS SaveGame</source>
@@ -4350,7 +4350,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>FF7 Dex SaveGame(*.gme)</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarde FF7 Dex(*.gme)</translation>
     </message>
     <message>
         <source>Mystery panties</source>
@@ -6111,43 +6111,43 @@ Les valeurs peuvent varier de 0 à 255</translation>
     </message>
     <message>
         <source>MaxHp:+% depending on level</source>
-        <translation type="unfinished"></translation>
+        <translation>HpMax:+% dépendant du niveau</translation>
     </message>
     <message>
         <source>MaxMp:+% depending on level</source>
-        <translation type="unfinished"></translation>
+        <translation>MpMax:+% dépendant du niveau</translation>
     </message>
     <message>
         <source>MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>HpMax:-2% MpMax:+2% Frc:-1 Mag:+1</translation>
     </message>
     <message>
         <source>MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>HpMax:-5% MpMax:+5% Frc:-2 Dfs:-1 Mag:+2 Esp:+1</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
-        <translation type="unfinished"></translation>
+        <translation>HpMax:-10% MpMax:+10% Frc:-4 Dfs:-2 Mag:+4 Esp:+2</translation>
     </message>
     <message>
         <source>MaxHp:-2% MaxMp:+2% Mag:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>HpMax:-2% MpMax:+2% Mag:+1</translation>
     </message>
     <message>
         <source>MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>HpMax:-5% MpMax:+5% Mag:+1 Esp:+1</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2</source>
-        <translation type="unfinished"></translation>
+        <translation>HpMax:-10% MpMax:+10% Mag:+2 Esp:+2</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4</source>
-        <translation type="unfinished"></translation>
+        <translation>HpMax:-10% MpMax:+15% Mag:+4 Esp:+4</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8</source>
-        <translation type="unfinished"></translation>
+        <translation>HpMax:-10% MpMax:+20% Mag:+8 Esp:+8</translation>
     </message>
 </context>
 <context>
@@ -6258,11 +6258,11 @@ Les valeurs peuvent varier de 0 à 255</translation>
     </message>
     <message>
         <source> Folder To Load/Save Emulator Memory Cards  </source>
-        <translation type="unfinished"></translation>
+        <translation>ossier pour charger/sauvegarder les cartes mémoires émulateur</translation>
     </message>
     <message>
         <source>Set Applications Font</source>
-        <translation type="unfinished">Polices d&apos;applications Set</translation>
+        <translation>Polices d&apos;applications Set</translation>
     </message>
     <message>
         <source>9Pt</source>
@@ -6608,7 +6608,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Missing Keycard 66 in keyitems list</source>
-        <translation type="unfinished"></translation>
+        <translation>Résolu : Carte-clé 66 dans les objet-clés</translation>
     </message>
     <message>
         <source>Update:Almost All Spinboxes now &quot;Wrapping&quot;</source>
