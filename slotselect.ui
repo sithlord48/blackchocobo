@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>625</width>
-    <height>490</height>
+    <height>486</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -179,16 +179,9 @@ image: url(:/icon/mslot);
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_4">
-          <item row="0" column="0" colspan="3">
-           <widget class="QPushButton" name="btn_s1">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <property name="text">
-             <string>Load Slot 1</string>
-            </property>
-           </widget>
-          </item>
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item row="1" column="0" rowspan="3">
            <layout class="QHBoxLayout" name="horizontalLayout">
             <property name="spacing">
@@ -445,6 +438,22 @@ image: url(:/icon/mslot);
             </property>
            </widget>
           </item>
+          <item row="0" column="0" colspan="3">
+           <widget class="QPushButton" name="btn_s1">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Load Slot 1</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </item>
@@ -469,6 +478,9 @@ image: url(:/icon/mslot);
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_5">
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s2">
             <property name="styleSheet">
@@ -762,6 +774,9 @@ image: url(:/icon/mslot);
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_6">
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s3">
             <property name="styleSheet">
@@ -1046,6 +1061,9 @@ image: url(:/icon/mslot);
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_9">
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s4">
             <property name="styleSheet">
@@ -1330,6 +1348,9 @@ image: url(:/icon/mslot);
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_11">
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s5">
             <property name="styleSheet">
@@ -1614,6 +1635,9 @@ image: url(:/icon/mslot);
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_7">
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s6">
             <property name="styleSheet">
@@ -1898,6 +1922,9 @@ image: url(:/icon/mslot);
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_21">
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s7">
             <property name="styleSheet">
@@ -2182,6 +2209,9 @@ image: url(:/icon/mslot);
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_23">
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s8">
             <property name="styleSheet">
@@ -2466,6 +2496,9 @@ image: url(:/icon/mslot);
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_19">
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s9">
             <property name="styleSheet">
@@ -2750,6 +2783,9 @@ image: url(:/icon/mslot);
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_13">
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s10">
             <property name="styleSheet">
@@ -3034,6 +3070,9 @@ image: url(:/icon/mslot);
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_15">
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s11">
             <property name="styleSheet">
@@ -3318,6 +3357,9 @@ image: url(:/icon/mslot);
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_17">
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s12">
             <property name="styleSheet">
@@ -3602,6 +3644,9 @@ image: url(:/icon/mslot);
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_29">
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s13">
             <property name="styleSheet">
@@ -3886,6 +3931,9 @@ image: url(:/icon/mslot);
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_25">
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s14">
             <property name="styleSheet">
@@ -4170,6 +4218,9 @@ image: url(:/icon/mslot);
           <string/>
          </property>
          <layout class="QGridLayout" name="gridLayout_27">
+          <property name="margin">
+           <number>0</number>
+          </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s15">
             <property name="styleSheet">

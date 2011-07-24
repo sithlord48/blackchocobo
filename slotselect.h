@@ -41,9 +41,6 @@ private slots:
 
 
 private slots:
-
-  //  void on_btn_next_clicked();
-  //  void on_btn_prev_clicked();
     void on_btn_s1_clicked();
     void on_btn_s2_clicked();
     void on_btn_s3_clicked();
@@ -59,7 +56,6 @@ private slots:
     void on_btn_s13_clicked();
     void on_btn_s14_clicked();
     void on_btn_s15_clicked();
-
 };
 
 #endif // SLOTSELECT_H

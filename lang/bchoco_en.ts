@@ -4286,10 +4286,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ultimate Weapon?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Emerald Weapon?</source>
         <translation type="unfinished"></translation>
     </message>
