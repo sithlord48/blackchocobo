@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>625</width>
-    <height>486</height>
+    <height>484</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -50,73 +50,7 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QScrollArea{
-background-color: rgb(48, 47, 47);
-}
-QDialog,QGroupBox{
-background-color:rgb(48, 47, 47);
-}
-QLabel{
-font: 75 14pt &quot;Verdana&quot;;color:rgb(255, 255, 255)
-}
-
-QPushButton:enabled {  border:3px solid; 
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: rgb(172, 172, 172);
-	border-top-color: rgb(172, 172, 172);
-    background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(32, 31, 31, 255));
-	font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
-}
-/* Vertical scroll bar */
-
-QScrollBar:vertical{
-    border:1px solid grey;
-	background-color:rgb(47,47,47);
-	width:14px;
-	margin: 16px 0px 16px 0px ;
-
-}
- QScrollBar::add-line:vertical{
-     border: 1px solid grey;
-     height: 14px;
-     subcontrol-position:bottom;
-	subcontrol-origin:margin;
- }
-
- QScrollBar::sub-line:vertical{
-     border: 1px solid grey;
-     height: 14px;
-    subcontrol-position: top;
-	subcontrol-origin:margin;
- }
-QScrollBar::up-arrow:vertical{
-	image:url(:/icon/arrow_up);
-	width:12px;
-}
-
-QScrollBar::handle:vertical{
-	image: url(:/icon/scroll_handle_v) 1 ;
-	border:2px solid;	
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: rgb(172, 172, 172);
-	border-top-color: rgb(172, 172, 172);
-}
-QScrollBar::down-arrow:vertical{
-image: url(:/icon/arrow_down);
-width:12px;
-}
-QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical{
-background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(67, 67, 67, 255));
-}
-QPushButton[mslot=&quot;true&quot;]{
-border: 0px;
-border-radius:12px;
-image: url(:/icon/mslot);
-	height:32px;	
-	width:32px;
-}</string>
+   <string notr="true"/>
   </property>
   <property name="sizeGripEnabled">
    <bool>false</bool>
@@ -153,7 +87,7 @@ image: url(:/icon/mslot);
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>603</width>
+        <width>602</width>
         <height>2346</height>
        </rect>
       </property>
@@ -267,7 +201,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -290,6 +224,9 @@ image: url(:/icon/mslot);
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="2" rowspan="2">
@@ -298,6 +235,9 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="label">
               <property name="text">
                <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -313,7 +253,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -323,6 +263,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -334,6 +277,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1" colspan="3">
@@ -343,6 +289,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -354,6 +303,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="0" column="3">
@@ -363,6 +315,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -376,7 +331,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -386,6 +341,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -403,6 +361,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -413,7 +374,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -435,6 +396,9 @@ image: url(:/icon/mslot);
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -576,7 +540,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -596,6 +560,9 @@ image: url(:/icon/mslot);
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="2" rowspan="2">
@@ -604,6 +571,9 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="label_5">
               <property name="text">
                <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -619,7 +589,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -629,6 +599,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -640,6 +613,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1" colspan="3">
@@ -649,6 +625,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -666,6 +645,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="0" column="3">
@@ -675,6 +657,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -688,7 +673,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -698,6 +683,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -715,6 +703,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -725,7 +716,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -747,6 +738,9 @@ image: url(:/icon/mslot);
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -872,7 +866,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -892,6 +886,9 @@ image: url(:/icon/mslot);
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="2" rowspan="2">
@@ -900,6 +897,9 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="label_9">
               <property name="text">
                <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -915,7 +915,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -925,6 +925,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -936,6 +939,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1" colspan="3">
@@ -945,6 +951,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -956,6 +965,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="0" column="3">
@@ -965,6 +977,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -978,7 +993,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -988,6 +1003,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1005,6 +1023,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -1015,7 +1036,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -1034,6 +1055,9 @@ image: url(:/icon/mslot);
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -1159,7 +1183,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -1179,6 +1203,9 @@ image: url(:/icon/mslot);
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="2" rowspan="2">
@@ -1187,6 +1214,9 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="label_17">
               <property name="text">
                <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1202,7 +1232,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -1212,6 +1242,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1223,6 +1256,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1" colspan="3">
@@ -1232,6 +1268,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1243,6 +1282,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="0" column="3">
@@ -1252,6 +1294,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1265,7 +1310,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -1275,6 +1320,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1292,6 +1340,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -1302,7 +1353,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -1321,6 +1372,9 @@ image: url(:/icon/mslot);
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -1446,7 +1500,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -1466,6 +1520,9 @@ image: url(:/icon/mslot);
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="2" rowspan="2">
@@ -1474,6 +1531,9 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="label_21">
               <property name="text">
                <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1489,7 +1549,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -1499,6 +1559,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1510,6 +1573,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1" colspan="3">
@@ -1519,6 +1585,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1530,6 +1599,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="0" column="3">
@@ -1539,6 +1611,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1552,7 +1627,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -1562,6 +1637,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1579,6 +1657,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -1589,7 +1670,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -1608,6 +1689,9 @@ image: url(:/icon/mslot);
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -1733,7 +1817,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -1753,6 +1837,9 @@ image: url(:/icon/mslot);
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="2" rowspan="2">
@@ -1761,6 +1848,9 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="label_13">
               <property name="text">
                <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1776,7 +1866,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -1786,6 +1876,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1797,6 +1890,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1" colspan="3">
@@ -1806,6 +1902,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1817,6 +1916,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="0" column="3">
@@ -1826,6 +1928,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1839,7 +1944,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -1849,6 +1954,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -1866,6 +1974,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -1876,7 +1987,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -1895,6 +2006,9 @@ image: url(:/icon/mslot);
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -2020,7 +2134,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -2040,6 +2154,9 @@ image: url(:/icon/mslot);
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="2" rowspan="2">
@@ -2048,6 +2165,9 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="label_41">
               <property name="text">
                <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2063,7 +2183,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -2073,6 +2193,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2084,6 +2207,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1" colspan="3">
@@ -2093,6 +2219,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2104,6 +2233,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="0" column="3">
@@ -2113,6 +2245,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2126,7 +2261,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -2136,6 +2271,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2153,6 +2291,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -2163,7 +2304,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -2182,6 +2323,9 @@ image: url(:/icon/mslot);
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -2307,7 +2451,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -2327,6 +2471,9 @@ image: url(:/icon/mslot);
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="2" rowspan="2">
@@ -2335,6 +2482,9 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="label_45">
               <property name="text">
                <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2350,7 +2500,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -2360,6 +2510,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2371,6 +2524,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1" colspan="3">
@@ -2380,6 +2536,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2391,6 +2550,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="0" column="3">
@@ -2400,6 +2562,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2413,7 +2578,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -2423,6 +2588,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2440,6 +2608,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -2450,7 +2621,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -2469,6 +2640,9 @@ image: url(:/icon/mslot);
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -2594,7 +2768,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -2614,6 +2788,9 @@ image: url(:/icon/mslot);
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="2" rowspan="2">
@@ -2622,6 +2799,9 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="label_37">
               <property name="text">
                <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2637,7 +2817,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -2647,6 +2827,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2658,6 +2841,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1" colspan="3">
@@ -2667,6 +2853,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2678,6 +2867,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="0" column="3">
@@ -2687,6 +2879,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2700,7 +2895,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -2710,6 +2905,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2727,6 +2925,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -2737,7 +2938,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -2756,6 +2957,9 @@ image: url(:/icon/mslot);
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -2881,7 +3085,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -2901,6 +3105,9 @@ image: url(:/icon/mslot);
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="2" rowspan="2">
@@ -2909,6 +3116,9 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="label_25">
               <property name="text">
                <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2924,7 +3134,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -2934,6 +3144,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2945,6 +3158,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1" colspan="3">
@@ -2954,6 +3170,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2965,6 +3184,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="0" column="3">
@@ -2974,6 +3196,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -2987,7 +3212,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -2997,6 +3222,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3014,6 +3242,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -3024,7 +3255,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -3043,6 +3274,9 @@ image: url(:/icon/mslot);
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -3168,7 +3402,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -3188,6 +3422,9 @@ image: url(:/icon/mslot);
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="2" rowspan="2">
@@ -3196,6 +3433,9 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="label_29">
               <property name="text">
                <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3211,7 +3451,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -3221,6 +3461,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3232,6 +3475,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1" colspan="3">
@@ -3241,6 +3487,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3252,6 +3501,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="0" column="3">
@@ -3261,6 +3513,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3274,7 +3529,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -3284,6 +3539,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3301,6 +3559,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -3311,7 +3572,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -3330,6 +3591,9 @@ image: url(:/icon/mslot);
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -3401,6 +3665,9 @@ image: url(:/icon/mslot);
               <property name="scaledContents">
                <bool>true</bool>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item>
@@ -3421,6 +3688,9 @@ image: url(:/icon/mslot);
                <string/>
               </property>
               <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+              <property name="slot_select_label" stdset="0">
                <bool>true</bool>
               </property>
              </widget>
@@ -3445,6 +3715,9 @@ image: url(:/icon/mslot);
               <property name="scaledContents">
                <bool>true</bool>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -3455,7 +3728,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -3475,6 +3748,9 @@ image: url(:/icon/mslot);
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="2" rowspan="2">
@@ -3483,6 +3759,9 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="label_33">
               <property name="text">
                <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3498,7 +3777,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -3508,6 +3787,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3519,6 +3801,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1" colspan="3">
@@ -3528,6 +3813,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3539,6 +3827,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="0" column="3">
@@ -3548,6 +3839,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3561,7 +3855,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -3571,6 +3865,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3588,6 +3885,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -3598,7 +3898,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -3617,6 +3917,9 @@ image: url(:/icon/mslot);
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -3742,7 +4045,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -3762,6 +4065,9 @@ image: url(:/icon/mslot);
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="2" rowspan="2">
@@ -3770,6 +4076,9 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="label_57">
               <property name="text">
                <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3785,7 +4094,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -3795,6 +4104,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3806,6 +4118,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1" colspan="3">
@@ -3815,6 +4130,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3826,6 +4144,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="0" column="3">
@@ -3835,6 +4156,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3848,7 +4172,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -3858,6 +4182,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -3875,6 +4202,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -3885,7 +4215,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -3904,6 +4234,9 @@ image: url(:/icon/mslot);
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -4029,7 +4362,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -4049,6 +4382,9 @@ image: url(:/icon/mslot);
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="2" rowspan="2">
@@ -4057,6 +4393,9 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="label_49">
               <property name="text">
                <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -4072,7 +4411,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -4082,6 +4421,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -4093,6 +4435,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1" colspan="3">
@@ -4102,6 +4447,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -4113,6 +4461,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="0" column="3">
@@ -4122,6 +4473,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -4135,7 +4489,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -4145,6 +4499,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -4162,6 +4519,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -4172,7 +4532,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -4191,6 +4551,9 @@ image: url(:/icon/mslot);
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>
@@ -4316,7 +4679,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -4336,6 +4699,9 @@ image: url(:/icon/mslot);
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
+            </property>
            </widget>
           </item>
           <item row="1" column="2" rowspan="2">
@@ -4344,6 +4710,9 @@ image: url(:/icon/mslot);
              <widget class="QLabel" name="label_53">
               <property name="text">
                <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -4359,7 +4728,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -4369,6 +4738,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -4380,6 +4752,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="1" column="1" colspan="3">
@@ -4389,6 +4764,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -4400,6 +4778,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
             <item row="0" column="3">
@@ -4409,6 +4790,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -4422,7 +4806,7 @@ image: url(:/icon/mslot);
                <font>
                 <family>Verdana</family>
                 <pointsize>14</pointsize>
-                <weight>9</weight>
+                <weight>50</weight>
                 <italic>false</italic>
                 <bold>false</bold>
                </font>
@@ -4432,6 +4816,9 @@ image: url(:/icon/mslot);
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
               </property>
              </widget>
             </item>
@@ -4449,6 +4836,9 @@ image: url(:/icon/mslot);
               <property name="alignment">
                <set>Qt::AlignCenter</set>
               </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
              </widget>
             </item>
            </layout>
@@ -4459,7 +4849,7 @@ image: url(:/icon/mslot);
              <font>
               <family>Verdana</family>
               <pointsize>14</pointsize>
-              <weight>9</weight>
+              <weight>50</weight>
               <italic>false</italic>
               <bold>false</bold>
              </font>
@@ -4478,6 +4868,9 @@ image: url(:/icon/mslot);
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+            </property>
+            <property name="slot_select_label" stdset="0">
+             <bool>true</bool>
             </property>
            </widget>
           </item>

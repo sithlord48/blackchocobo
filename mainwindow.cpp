@@ -68,7 +68,14 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->combo_add_mat_slot->setVisible(false);
     ui->combo_id->setVisible(false);
     ui->lbl_id->setVisible(false);
-
+    //
+    //chocobo boxes
+    ui->box_stable1->setEnabled(false);
+    ui->box_stable2->setEnabled(false);
+    ui->box_stable3->setEnabled(false);
+    ui->box_stable4->setEnabled(false);
+    ui->box_stable5->setEnabled(false);
+    ui->box_stable6->setEnabled(false);
     //testing stuff.
 
     ui->tabWidget->setTabEnabled(8,0);
@@ -337,8 +344,7 @@ void MainWindow::loadFileFull(const QString &fileName)
         if(ff7.slot[12].checksum != 0x0000 && ff7.slot[12].checksum != 0x4D1D){ff7.SG_Region_String[12]= "BASCUS-94163FF7-S13";} else {ff7.SG_Region_String[12].clear();}
         if(ff7.slot[13].checksum != 0x0000 && ff7.slot[13].checksum != 0x4D1D){ff7.SG_Region_String[13]= "BASCUS-94163FF7-S14";} else {ff7.SG_Region_String[13].clear();}
         if(ff7.slot[14].checksum != 0x0000 && ff7.slot[14].checksum != 0x4D1D){ff7.SG_Region_String[14]= "BASCUS-94163FF7-S15";} else {ff7.SG_Region_String[14].clear();}
-        SlotSelect slotselect;
-        s=slotselect.exec();
+        on_actionShow_Selection_Dialog_activated();
     }
 
     else if (ff7.savetype == 2)// PSx save
@@ -376,8 +382,7 @@ void MainWindow::loadFileFull(const QString &fileName)
             index = (128*i) +138;
             ff7.SG_Region_String[i] = QString(mc_header.mid(index,19));
         }
-        SlotSelect slotselect;
-        s=slotselect.exec();
+        on_actionShow_Selection_Dialog_activated();
     }
     else{s=0;for(int i=1;i<14;i++){clearslot(i);}}
     this->setWindowTitle(tr("Black Chocobo - ") + fileName); //eslava this is for you :)
@@ -987,7 +992,7 @@ void MainWindow::on_actionSlot_12_activated(){s=11; guirefresh();}
 void MainWindow::on_actionSlot_13_activated(){s=12; guirefresh();}
 void MainWindow::on_actionSlot_14_activated(){s=13; guirefresh();}
 void MainWindow::on_actionSlot_15_activated(){s=14; guirefresh();}
-void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect; s=slotselect.exec(); guirefresh();}
+void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect;slotselect.setStyleSheet(this->styleSheet()); s=slotselect.exec(); guirefresh();}
 void MainWindow::on_actionClear_Slot_activated(){clearslot(s);  guirefresh();}
 void MainWindow::on_actionPrevious_Slot_activated(){if (s > 0) {s--; guirefresh();}}
 void MainWindow::on_actionNext_Slot_activated(){if (s<14){s++; guirefresh();}}
@@ -1685,9 +1690,11 @@ void MainWindow::charupdate(void)
 }
 /*~~~~~~~END Char Update~~~~~~~~*/
 void MainWindow::setchar_growth(int caller)
-{
-    load=true;
+{ /* This Function only gets called if automatic exp<->lvl is enabled.*/
+  /* caller can be 0==just read, 1==exp_changed, 2==lvl_changed */
 
+    load=true;
+    //if the lvl changed we need to set the exp correctly before we continue
     if(caller==2){ff7.slot[s].chars[curchar].exp = charlvls[ff7.slot[s].chars[curchar].id][ui->sb_lvl->value()-1];ui->sb_exp->setValue(ff7.slot[s].chars[curchar].exp);}
 
     for (int i=1;i<100;i++)
@@ -1695,7 +1702,7 @@ void MainWindow::setchar_growth(int caller)
         if(ff7.slot[s].chars[curchar].exp>=charlvls[ff7.slot[s].chars[curchar].id][i]){if(i==99){ui->sb_lvl->setValue(i);}}
         else{ui->sb_lvl->setValue(i);break;}
     }
-
+    //if the exp was changed make sure the lvl is set correctly.
     if(caller==1){ff7.slot[s].chars[curchar].level=ui->sb_lvl->value();if(curchar==ff7.slot[s].party[0]){ff7.slot[s].desc.level = ui->sb_lvl->value();}}
 
     QString numvalue;
@@ -1708,7 +1715,7 @@ void MainWindow::setchar_growth(int caller)
     else
     {
         ff7.slot[s].chars[curchar].expNext=0;
-        ff7.slot[s].chars[curchar].flags[2]=0;
+        ff7.slot[s].chars[curchar].flags[2]=0x3D;
     }
     ui->pbar_level->setValue(ff7.slot[s].chars[curchar].flags[2]);
     if(ui->pbar_level->value()<4){ui->pbar_level->setValue(0);}//ff7 ingores the value if its <4 (but we don't save this)
@@ -2630,6 +2637,7 @@ void MainWindow::guirefresh(void)
         else
         {
             errbox error;
+            error.setStyleSheet(this->styleSheet());
             switch(error.exec())
             {
             case 0://View Anyway..
@@ -2640,10 +2648,8 @@ void MainWindow::guirefresh(void)
                 guirefresh();
                 break;
 
-            case 2://export as psx
-                SlotSelect selector;
-                s=selector.exec();
-                guirefresh();
+            case 2://exported as psx
+                on_actionShow_Selection_Dialog_activated();
                 break;
             }
         }//NOT FF7
@@ -2893,6 +2899,7 @@ void MainWindow::chocobo_refresh()
             ui->box_stable4->setEnabled(false);
             ui->box_stable5->setEnabled(false);
             ui->box_stable6->setEnabled(false);
+            //ui->line_c1_name->setEnabled(true);
         break;
 
         case 2:
@@ -2902,6 +2909,8 @@ void MainWindow::chocobo_refresh()
             ui->box_stable4->setEnabled(false);
             ui->box_stable5->setEnabled(false);
             ui->box_stable6->setEnabled(false);
+            //ui->line_c1_name->setEnabled(true);
+            //ui->line_c2_name->setEnabled(true);
             break;
 
         case 3:
@@ -2911,6 +2920,9 @@ void MainWindow::chocobo_refresh()
             ui->box_stable4->setEnabled(false);
             ui->box_stable5->setEnabled(false);
             ui->box_stable6->setEnabled(false);
+            //ui->line_c1_name->setEnabled(true);
+            //ui->line_c2_name->setEnabled(true);
+            //ui->line_c3_name->setEnabled(true);
             break;
 
         case 4:
@@ -2920,6 +2932,10 @@ void MainWindow::chocobo_refresh()
             ui->box_stable4->setEnabled(true);
             ui->box_stable5->setEnabled(false);
             ui->box_stable6->setEnabled(false);
+            //ui->line_c1_name->setEnabled(true);
+            //ui->line_c2_name->setEnabled(true);
+            //ui->line_c3_name->setEnabled(true);
+            //ui->line_c4_name->setEnabled(true);
             break;
 
         case 5:
@@ -2929,6 +2945,11 @@ void MainWindow::chocobo_refresh()
             ui->box_stable4->setEnabled(true);
             ui->box_stable5->setEnabled(true);
             ui->box_stable6->setEnabled(false);
+            //ui->line_c1_name->setEnabled(true);
+            //ui->line_c2_name->setEnabled(true);
+            //ui->line_c3_name->setEnabled(true);
+            //ui->line_c4_name->setEnabled(true);
+            //ui->line_c5_name->setEnabled(true);
             break;
 
         case 6:
@@ -2938,8 +2959,26 @@ void MainWindow::chocobo_refresh()
             ui->box_stable4->setEnabled(true);
             ui->box_stable5->setEnabled(true);
             ui->box_stable6->setEnabled(true);
+            //ui->line_c1_name->setEnabled(true);
+            //ui->line_c2_name->setEnabled(true);
+            //ui->line_c3_name->setEnabled(true);
+            //ui->line_c4_name->setEnabled(true);
+            //ui->line_c5_name->setEnabled(true);
+            //ui->line_c6_name->setEnabled(true);
             break;
     }
+    if((ff7.slot[s].chocomated)& (1<<0)){ui->cb_c1_mated->setChecked(1);}
+    else{ui->cb_c1_mated->setChecked(0);}
+    if((ff7.slot[s].chocomated)& (1<<1)){ui->cb_c2_mated->setChecked(1);}
+    else{ui->cb_c2_mated->setChecked(0);}
+    if((ff7.slot[s].chocomated)& (1<<2)){ui->cb_c3_mated->setChecked(1);}
+    else{ui->cb_c3_mated->setChecked(0);}
+    if((ff7.slot[s].chocomated)& (1<<3)){ui->cb_c4_mated->setChecked(1);}
+    else{ui->cb_c4_mated->setChecked(0);}
+    if((ff7.slot[s].chocomated)& (1<<4)){ui->cb_c5_mated->setChecked(1);}
+    else{ui->cb_c5_mated->setChecked(0);}
+    if((ff7.slot[s].chocomated)& (1<<5)){ui->cb_c6_mated->setChecked(1);}
+    else{ui->cb_c6_mated->setChecked(0);}
 
     ui->line_c1_name->clear();
     for (int n=0;n<6;n++)
@@ -3148,16 +3187,12 @@ void MainWindow::on_sb_runs_valueChanged(){if(!load){ff7.slot[s].runs = ui->sb_r
 void MainWindow::on_sb_battles_valueChanged(){if(!load){ff7.slot[s].battles = ui->sb_battles->value();}}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~Chocobo Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-//set data for pens outside
-void MainWindow::on_combo_pen1_currentIndexChanged(int index){if(!load){ff7.slot[s].pennedchocos[0]=index;}}
-void MainWindow::on_combo_pen2_currentIndexChanged(int index){if(!load){ff7.slot[s].pennedchocos[1]=index;}}
-void MainWindow::on_combo_pen3_currentIndexChanged(int index){if(!load){ff7.slot[s].pennedchocos[2]=index;}}
-void MainWindow::on_combo_pen4_currentIndexChanged(int index){if(!load){ff7.slot[s].pennedchocos[3]=index;}}
+
 //set data for stables inside
-void MainWindow::on_sb_stables_owned_valueChanged()
+void MainWindow::on_sb_stables_owned_valueChanged(int value)
 {if(!load){
-    ff7.slot[s].stables = ui->sb_stables_owned->value();
-    if(ui->sb_stables_occupied->value() > ui->sb_stables_owned->value()){ui->sb_stables_occupied->setValue(ui->sb_stables_owned->value());}
+    ff7.slot[s].stables = value;
+    if(ui->sb_stables_occupied->value() > value){ui->sb_stables_occupied->setValue(value);}
 }}
 void MainWindow::on_sb_stables_occupied_valueChanged(int value)
 {if(!load){
@@ -3180,109 +3215,144 @@ void MainWindow::on_line_c1_name_lostFocus()
         for (int i=0;i<6;i++){ff7.slot[s].chocobonames[0][i] =0xFF;}
         for (int i=0;i<ui->line_c1_name->text().size();i++){ff7.slot[s].chocobonames[0][i] = chFF7[ui->line_c1_name->text().at(i).toAscii()];}
 }}
-void MainWindow::on_sb_c1_stamina_valueChanged(){if(!load){ff7.slot[s].chocostaminas[0] = ui->sb_c1_stamina->value();}}
+void MainWindow::on_sb_c1_stamina_valueChanged(int value){if(!load){ff7.slot[s].chocostaminas[0] = value;}}
 void MainWindow::on_sb_c1_speed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].speed = value;}}
 void MainWindow::on_sb_c1_maxspeed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].maxspeed = value;}}
 void MainWindow::on_sb_c1_sprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].sprintspd = value;}}
 void MainWindow::on_sb_c1_maxsprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].maxsprintspd = value;}}
 void MainWindow::on_cb_c1_sex_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[0].sex = index;}}
 void MainWindow::on_cb_c1_type_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[0].type = index;}}
-void MainWindow::on_sb_c1_coop_valueChanged(){if(!load){ff7.slot[s].chocobos[0].coop= ui->sb_c1_coop->value();}}
-void MainWindow::on_sb_c1_accel_valueChanged(){if(!load){ff7.slot[s].chocobos[0].accel= ui->sb_c1_accel->value();}}
-void MainWindow::on_sb_c1_intel_valueChanged(){if(!load){ff7.slot[s].chocobos[0].intelligence = ui->sb_c1_intel->value();}}
-void MainWindow::on_sb_c1_raceswon_valueChanged(){if(!load){ff7.slot[s].chocobos[0].raceswon = ui->sb_c1_raceswon->value();}}
-void MainWindow::on_sb_c1_pcount_valueChanged(){if(!load){ff7.slot[s].chocobos[0].pcount= ui->sb_c1_pcount->value();}}
+void MainWindow::on_sb_c1_coop_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].coop= value;}}
+void MainWindow::on_sb_c1_accel_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].accel= value;}}
+void MainWindow::on_sb_c1_intel_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].intelligence = value;}}
+void MainWindow::on_sb_c1_raceswon_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].raceswon = value;}}
+void MainWindow::on_sb_c1_pcount_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].pcount= value;}}
+void MainWindow::on_cb_c1_mated_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].chocomated |= (1<<0);}
+    else{ff7.slot[s].chocomated &= ~(1<<0);}
+}}
 
 void MainWindow::on_line_c2_name_lostFocus()
 {if(!load){
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[1][i] =0xFF;}
     for (int i=0;i<ui->line_c2_name->text().size();i++){ff7.slot[s].chocobonames[1][i] = chFF7[ui->line_c2_name->text().at(i).toAscii()];}
 }}
-void MainWindow::on_sb_c2_stamina_valueChanged(){if(!load){ff7.slot[s].chocostaminas[1] = ui->sb_c2_stamina->value();}}
+void MainWindow::on_sb_c2_stamina_valueChanged(int value){if(!load){ff7.slot[s].chocostaminas[1] = value;}}
 void MainWindow::on_sb_c2_speed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].speed = value;}}
 void MainWindow::on_sb_c2_maxspeed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].maxspeed = value;}}
 void MainWindow::on_sb_c2_sprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].sprintspd = value;}}
 void MainWindow::on_sb_c2_maxsprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].maxsprintspd = value;}}
 void MainWindow::on_cb_c2_sex_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[1].sex = index;}}
 void MainWindow::on_cb_c2_type_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[1].type = index;}}
-void MainWindow::on_sb_c2_coop_valueChanged(){if(!load){ff7.slot[s].chocobos[1].coop= ui->sb_c2_coop->value();}}
-void MainWindow::on_sb_c2_accel_valueChanged(){if(!load){ff7.slot[s].chocobos[1].accel= ui->sb_c2_accel->value();}}
-void MainWindow::on_sb_c2_intel_valueChanged(){if(!load){ff7.slot[s].chocobos[1].intelligence = ui->sb_c2_intel->value();}}
-void MainWindow::on_sb_c2_raceswon_valueChanged(){if(!load){ff7.slot[s].chocobos[1].raceswon = ui->sb_c2_raceswon->value();}}
-void MainWindow::on_sb_c2_pcount_valueChanged(){if(!load){ff7.slot[s].chocobos[1].pcount= ui->sb_c2_pcount->value();}}
+void MainWindow::on_sb_c2_coop_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].coop= value;}}
+void MainWindow::on_sb_c2_accel_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].accel= value;}}
+void MainWindow::on_sb_c2_intel_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].intelligence = value;}}
+void MainWindow::on_sb_c2_raceswon_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].raceswon = value;}}
+void MainWindow::on_sb_c2_pcount_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].pcount= value;}}
+void MainWindow::on_cb_c2_mated_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].chocomated |= (1<<1);}
+    else{ff7.slot[s].chocomated &= ~(1<<1);}
+}}
 
 void MainWindow::on_line_c3_name_lostFocus()
 {if(!load){
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[2][i] =0xFF;}
     for (int i=0;i<ui->line_c3_name->text().size();i++){ff7.slot[s].chocobonames[2][i] = chFF7[ui->line_c3_name->text().at(i).toAscii()];}
 }}
-void MainWindow::on_sb_c3_stamina_valueChanged(){if(!load){ff7.slot[s].chocostaminas[2] = ui->sb_c3_stamina->value();}}
+void MainWindow::on_sb_c3_stamina_valueChanged(int value){if(!load){ff7.slot[s].chocostaminas[2] =value;}}
 void MainWindow::on_sb_c3_speed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].speed = value;}}
 void MainWindow::on_sb_c3_maxspeed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].maxspeed = value;}}
 void MainWindow::on_sb_c3_sprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].sprintspd = value;}}
 void MainWindow::on_sb_c3_maxsprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].maxsprintspd = value;}}
 void MainWindow::on_cb_c3_sex_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[2].sex = index;}}
 void MainWindow::on_cb_c3_type_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[2].type = index;}}
-void MainWindow::on_sb_c3_coop_valueChanged(){if(!load){ff7.slot[s].chocobos[2].coop= ui->sb_c3_coop->value();}}
-void MainWindow::on_sb_c3_accel_valueChanged(){if(!load){ff7.slot[s].chocobos[2].accel= ui->sb_c3_accel->value();}}
-void MainWindow::on_sb_c3_intel_valueChanged(){if(!load){ff7.slot[s].chocobos[2].intelligence = ui->sb_c3_intel->value();}}
-void MainWindow::on_sb_c3_raceswon_valueChanged(){if(!load){ff7.slot[s].chocobos[2].raceswon = ui->sb_c3_raceswon->value();}}
-void MainWindow::on_sb_c3_pcount_valueChanged(){if(!load){ff7.slot[s].chocobos[2].pcount= ui->sb_c3_pcount->value();}}
+void MainWindow::on_sb_c3_coop_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].coop= value;}}
+void MainWindow::on_sb_c3_accel_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].accel= value;}}
+void MainWindow::on_sb_c3_intel_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].intelligence = value;}}
+void MainWindow::on_sb_c3_raceswon_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].raceswon = value;}}
+void MainWindow::on_sb_c3_pcount_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].pcount= value;}}
+void MainWindow::on_cb_c3_mated_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].chocomated |= (1<<2);}
+    else{ff7.slot[s].chocomated &= ~(1<<2);}
+}}
 
 void MainWindow::on_line_c4_name_lostFocus()
 {if(!load){
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[3][i] =0xFF;}
     for (int i=0;i<ui->line_c4_name->text().size();i++){ff7.slot[s].chocobonames[3][i] = chFF7[ui->line_c4_name->text().at(i).toAscii()];}
 }}
-void MainWindow::on_sb_c4_stamina_valueChanged(){if(!load){ff7.slot[s].chocostaminas[3] = ui->sb_c4_stamina->value();}}
+void MainWindow::on_sb_c4_stamina_valueChanged(int value){if(!load){ff7.slot[s].chocostaminas[3] = value;}}
 void MainWindow::on_sb_c4_speed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].speed = value;}}
 void MainWindow::on_sb_c4_maxspeed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].maxspeed = value;}}
 void MainWindow::on_sb_c4_sprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].sprintspd = value;}}
 void MainWindow::on_sb_c4_maxsprint_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].maxsprintspd = value;}}
 void MainWindow::on_cb_c4_sex_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[3].sex = index;}}
 void MainWindow::on_cb_c4_type_currentIndexChanged(int index){if(!load){ff7.slot[s].chocobos[3].type = index;}}
-void MainWindow::on_sb_c4_coop_valueChanged(){if(!load){ff7.slot[s].chocobos[3].coop= ui->sb_c4_coop->value();}}
-void MainWindow::on_sb_c4_accel_valueChanged(){if(!load){ff7.slot[s].chocobos[3].accel= ui->sb_c4_accel->value();}}
-void MainWindow::on_sb_c4_intel_valueChanged(){if(!load){ff7.slot[s].chocobos[3].intelligence = ui->sb_c4_intel->value();}}
-void MainWindow::on_sb_c4_raceswon_valueChanged(){if(!load){ff7.slot[s].chocobos[3].raceswon = ui->sb_c4_raceswon->value();}}
-void MainWindow::on_sb_c4_pcount_valueChanged(){if(!load){ff7.slot[s].chocobos[3].pcount= ui->sb_c4_pcount->value();}}
+void MainWindow::on_sb_c4_coop_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].coop= value;}}
+void MainWindow::on_sb_c4_accel_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].accel= value;}}
+void MainWindow::on_sb_c4_intel_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].intelligence = value;}}
+void MainWindow::on_sb_c4_raceswon_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].raceswon = value;}}
+void MainWindow::on_sb_c4_pcount_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].pcount= value;}}
+void MainWindow::on_cb_c4_mated_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].chocomated |= (1<<3);}
+    else{ff7.slot[s].chocomated &= ~(1<<3);}
+}}
 
 void MainWindow::on_line_c5_name_lostFocus()
 {if(!load){
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[4][i] =0xFF;}
     for (int i=0;i<ui->line_c5_name->text().size();i++){ff7.slot[s].chocobonames[4][i] = chFF7[ui->line_c5_name->text().at(i).toAscii()];}
 }}
-void MainWindow::on_sb_c5_stamina_valueChanged(){if(!load){ff7.slot[s].chocostaminas[4] = ui->sb_c5_stamina->value();}}
+void MainWindow::on_sb_c5_stamina_valueChanged(int value){if(!load){ff7.slot[s].chocostaminas[4] = value;}}
 void MainWindow::on_sb_c5_speed_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].speed = value;}}
 void MainWindow::on_sb_c5_maxspeed_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].maxspeed = value;}}
 void MainWindow::on_sb_c5_sprint_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].sprintspd = value;}}
 void MainWindow::on_sb_c5_maxsprint_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].maxsprintspd = value;}}
 void MainWindow::on_cb_c5_sex_currentIndexChanged(int index){if(!load){ff7.slot[s].choco56[0].sex = index;}}
 void MainWindow::on_cb_c5_type_currentIndexChanged(int index){if(!load){ff7.slot[s].choco56[0].type = index;}}
-void MainWindow::on_sb_c5_coop_valueChanged(){if(!load){ff7.slot[s].choco56[0].coop= ui->sb_c5_coop->value();}}
-void MainWindow::on_sb_c5_accel_valueChanged(){if(!load){ff7.slot[s].choco56[0].accel= ui->sb_c5_accel->value();}}
-void MainWindow::on_sb_c5_intel_valueChanged(){if(!load){ff7.slot[s].choco56[0].intelligence = ui->sb_c5_intel->value();}}
-void MainWindow::on_sb_c5_raceswon_valueChanged(){ if(!load){ff7.slot[s].choco56[0].raceswon = ui->sb_c5_raceswon->value();}}
-void MainWindow::on_sb_c5_pcount_valueChanged(){if(!load){ff7.slot[s].choco56[0].pcount= ui->sb_c5_pcount->value();}}
+void MainWindow::on_sb_c5_coop_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].coop= value;}}
+void MainWindow::on_sb_c5_accel_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].accel= value;}}
+void MainWindow::on_sb_c5_intel_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].intelligence = value;}}
+void MainWindow::on_sb_c5_raceswon_valueChanged(int value){ if(!load){ff7.slot[s].choco56[0].raceswon = value;}}
+void MainWindow::on_sb_c5_pcount_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].pcount= value;}}
+void MainWindow::on_cb_c5_mated_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].chocomated |= (1<<4);}
+    else{ff7.slot[s].chocomated &= ~(1<<4);}
+}}
 
 void MainWindow::on_line_c6_name_lostFocus()
 {if(!load){
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[5][i] =0xFF;}
     for (int i=0;i<ui->line_c6_name->text().size();i++){ff7.slot[s].chocobonames[5][i] = chFF7[ui->line_c6_name->text().at(i).toAscii()];}
 }}
-void MainWindow::on_sb_c6_stamina_valueChanged(){if(!load){ff7.slot[s].chocostaminas[5] = ui->sb_c6_stamina->value();}}
+void MainWindow::on_sb_c6_stamina_valueChanged(int value){if(!load){ff7.slot[s].chocostaminas[5] = value;}}
 void MainWindow::on_sb_c6_speed_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].speed = value;}}
 void MainWindow::on_sb_c6_maxspeed_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].maxspeed = value;}}
 void MainWindow::on_sb_c6_sprint_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].sprintspd = value;}}
 void MainWindow::on_sb_c6_maxsprint_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].maxsprintspd = value;}}
 void MainWindow::on_cb_c6_sex_currentIndexChanged(int index){if(!load){ff7.slot[s].choco56[1].sex = index;}}
 void MainWindow::on_cb_c6_type_currentIndexChanged(int index){if(!load){ff7.slot[s].choco56[1].type = index;}}
-void MainWindow::on_sb_c6_coop_valueChanged(){if(!load){ff7.slot[s].choco56[1].coop= ui->sb_c6_coop->value();}}
-void MainWindow::on_sb_c6_accel_valueChanged(){if(!load){ff7.slot[s].choco56[1].accel= ui->sb_c6_accel->value();}}
-void MainWindow::on_sb_c6_intel_valueChanged(){if(!load){ff7.slot[s].choco56[1].intelligence = ui->sb_c6_intel->value();}}
-void MainWindow::on_sb_c6_raceswon_valueChanged(){if(!load){ff7.slot[s].choco56[1].raceswon = ui->sb_c6_raceswon->value();}}
-void MainWindow::on_sb_c6_pcount_valueChanged(){if(!load){ff7.slot[s].choco56[1].pcount= ui->sb_c6_pcount->value();}}
+void MainWindow::on_sb_c6_coop_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].coop= value;}}
+void MainWindow::on_sb_c6_accel_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].accel= value;}}
+void MainWindow::on_sb_c6_intel_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].intelligence = value;}}
+void MainWindow::on_sb_c6_raceswon_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].raceswon = value;}}
+void MainWindow::on_sb_c6_pcount_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].pcount= value;}}
+void MainWindow::on_cb_c6_mated_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].chocomated |= (1<<5);}
+    else{ff7.slot[s].chocomated &= ~(1<<5);}
+}}
 
+//set data for pens outside
+void MainWindow::on_combo_pen1_currentIndexChanged(int index){if(!load){ff7.slot[s].pennedchocos[0]=index;}}
+void MainWindow::on_combo_pen2_currentIndexChanged(int index){if(!load){ff7.slot[s].pennedchocos[1]=index;}}
+void MainWindow::on_combo_pen3_currentIndexChanged(int index){if(!load){ff7.slot[s].pennedchocos[2]=index;}}
+void MainWindow::on_combo_pen4_currentIndexChanged(int index){if(!load){ff7.slot[s].pennedchocos[3]=index;}}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_list_phs_chars_itemChanged()
@@ -4420,13 +4490,6 @@ void MainWindow::setoptions_two()
 }
 
 /*--------WIP Section PLACE ALL NEW FUNCTIONS HERE  untill tested them move to proper section-------*/
-
-void MainWindow::on_cb_c2_born_toggled(bool checked) // not working correctly.
-{
-    if(checked== Qt::Checked){ff7.slot[s].chocoborn |= (1<<1);}
-    else{ff7.slot[s].chocoborn |= (0<<1);}
-}
-
 void MainWindow::on_sb_mprogress_valueChanged(){if(!load){ff7.slot[s].mprogress = ui->sb_mprogress->value();}}
 void MainWindow::on_sb_bm_progress1_valueChanged(int value){if(!load){ff7.slot[s].bm_progress1 =value;}}
 void MainWindow::on_sb_bm_progress2_valueChanged(int value){if(!load){ff7.slot[s].bm_progress2 =value;}}

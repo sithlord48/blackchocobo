@@ -1679,10 +1679,6 @@
         <translation>Nom</translation>
     </message>
     <message>
-        <source>Just Born</source>
-        <translation>Nouveau né</translation>
-    </message>
-    <message>
         <source>Type</source>
         <translation>Type</translation>
     </message>
@@ -4221,10 +4217,6 @@ is not a FF7 SaveGame.</source>
         <translation>Buggy/Hautvent</translation>
     </message>
     <message>
-        <source>Ultimate Weapon?</source>
-        <translation type="obsolete">Dernière Arme?</translation>
-    </message>
-    <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
         <translation>Arme Diamant / Dernière / Rubis</translation>
     </message>
@@ -4703,6 +4695,14 @@ Les valeurs peuvent varier de 0 à 255</translation>
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
         <translation></translation>
+    </message>
+    <message>
+        <source>Unable to Mate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Char</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6732,6 +6732,22 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Editable Unknown Vars</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Toggle &quot;unable to mate&quot; flag for chocobos</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SlotSelect + Errbox Dialogs Inherit style from caller</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Use the Action for showing Slot select dialog.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Chocobo Name Editable again</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -1676,10 +1676,6 @@
         <translation>Nombre</translation>
     </message>
     <message>
-        <source>Just Born</source>
-        <translation>Recién nacido</translation>
-    </message>
-    <message>
         <source>Type</source>
         <translation>Tipo</translation>
     </message>
@@ -4298,10 +4294,6 @@ no es una partida guardada de FF7.</translation>
         <translation>Buggy/Viento Fuerte</translation>
     </message>
     <message>
-        <source>Ultimate Weapon?</source>
-        <translation>¿Arma Última?</translation>
-    </message>
-    <message>
         <source>Emerald Weapon?</source>
         <translation>¿Arma Esmeralda?</translation>
     </message>
@@ -4704,6 +4696,14 @@ Values can Range From 0 - 255</source>
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
         <translation>La región no se puede detectar automáticamente, Debes ponerla manualmente</translation>
+    </message>
+    <message>
+        <source>Unable to Mate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Char</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6754,6 +6754,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>New: Editable Unknown Vars</source>
         <translation type="unfinished">Nuevo: Variables desconocido editables</translation>
+    </message>
+    <message>
+        <source>New: Toggle &quot;unable to mate&quot; flag for chocobos</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>SlotSelect + Errbox Dialogs Inherit style from caller</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Use the Action for showing Slot select dialog.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Chocobo Name Editable again</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
