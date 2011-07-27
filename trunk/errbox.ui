@@ -27,7 +27,7 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget{background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);}
+   <string notr="true">/*QLabel:enabled,QGroupBox:enabled{background-color: rgba(10,10,10,16);font:;color:rgb(255,255,255);}
 
 QWidget:disabled,QLabel:disabled{font:;color:rgb(74, 80, 73);background-color:rgba(48, 47, 47,128);}
 
@@ -44,7 +44,8 @@ QPushButton:enabled {
 	border-top-color: rgba(172, 172, 172,192);
     background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 128), stop:0.5 rgba(106, 106, 106, 128), stop:1 rgba(32, 31, 31,128));
 	border-radius: 5px;
-}</string>
+	font::;color:rgb(255,255,255);
+}*/</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
    <item>

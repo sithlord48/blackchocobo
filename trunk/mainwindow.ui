@@ -405,6 +405,7 @@ QPushButton[stars=&quot;true&quot;]{
 border: 0px;
 background:none;
 }
+QLabel[slot_select_label=&quot;true&quot;]{font: 75 14pt &quot;Verdana&quot;;color:rgb(255, 255, 255);}
 
 QPushButton[stars=&quot;true&quot;]:hover{
 border: 0px;
@@ -1793,13 +1794,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="minimumSize">
                    <size>
                     <width>110</width>
-                    <height>18</height>
+                    <height>22</height>
                    </size>
                   </property>
                   <property name="maximumSize">
                    <size>
                     <width>110</width>
-                    <height>18</height>
+                    <height>22</height>
+                   </size>
+                  </property>
+                  <property name="sizeIncrement">
+                   <size>
+                    <width>0</width>
+                    <height>0</height>
                    </size>
                   </property>
                   <property name="maxLength">
@@ -4640,8 +4647,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>437</width>
-             <height>436</height>
+             <width>401</width>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -10313,7 +10320,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1638</width>
+             <width>1458</width>
              <height>331</height>
             </rect>
            </property>
@@ -10321,7 +10328,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <item>
              <widget class="QGroupBox" name="box_stable1">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="minimumSize">
                <size>
@@ -10369,7 +10376,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <widget class="QLineEdit" name="line_c1_name">
                    <property name="enabled">
-                    <bool>false</bool>
+                    <bool>true</bool>
                    </property>
                    <property name="minimumSize">
                     <size>
@@ -10388,28 +10395,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </property>
                    <property name="readOnly">
                     <bool>false</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QCheckBox" name="cb_c1_born">
-                   <property name="enabled">
-                    <bool>false</bool>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>22</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16</width>
-                     <height>22</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>Just Born</string>
                    </property>
                   </widget>
                  </item>
@@ -10617,7 +10602,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <widget class="QSpinBox" name="sb_c1_speed">
                    <property name="enabled">
-                    <bool>false</bool>
+                    <bool>true</bool>
                    </property>
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -11201,6 +11186,34 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 </layout>
                </item>
                <item>
+                <widget class="QCheckBox" name="cb_c1_mated">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>22</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Unable to Mate</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
                 <layout class="QHBoxLayout" name="personality_box1">
                  <property name="leftMargin">
                   <number>6</number>
@@ -11254,7 +11267,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <item>
              <widget class="QGroupBox" name="box_stable2">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -11305,7 +11318,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <widget class="QLineEdit" name="line_c2_name">
                    <property name="enabled">
-                    <bool>false</bool>
+                    <bool>true</bool>
                    </property>
                    <property name="minimumSize">
                     <size>
@@ -11324,28 +11337,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </property>
                    <property name="readOnly">
                     <bool>false</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QCheckBox" name="cb_c2_born">
-                   <property name="enabled">
-                    <bool>false</bool>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>22</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16</width>
-                     <height>22</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>Just Born</string>
                    </property>
                   </widget>
                  </item>
@@ -12128,6 +12119,34 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 </layout>
                </item>
                <item>
+                <widget class="QCheckBox" name="cb_c2_mated">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>22</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Unable to Mate</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
                 <layout class="QHBoxLayout" name="personality_box2">
                  <property name="leftMargin">
                   <number>6</number>
@@ -12181,7 +12200,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <item>
              <widget class="QGroupBox" name="box_stable3">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="minimumSize">
                <size>
@@ -12226,7 +12245,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <widget class="QLineEdit" name="line_c3_name">
                    <property name="enabled">
-                    <bool>false</bool>
+                    <bool>true</bool>
                    </property>
                    <property name="minimumSize">
                     <size>
@@ -12245,28 +12264,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </property>
                    <property name="readOnly">
                     <bool>false</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QCheckBox" name="cb_c3_born">
-                   <property name="enabled">
-                    <bool>false</bool>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>22</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16</width>
-                     <height>22</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>Just Born</string>
                    </property>
                   </widget>
                  </item>
@@ -13046,6 +13043,34 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 </layout>
                </item>
                <item>
+                <widget class="QCheckBox" name="cb_c3_mated">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>22</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Unable to Mate</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
                 <layout class="QHBoxLayout" name="personality_box3">
                  <property name="leftMargin">
                   <number>6</number>
@@ -13099,7 +13124,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <item>
              <widget class="QGroupBox" name="box_stable4">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="minimumSize">
                <size>
@@ -13144,7 +13169,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <widget class="QLineEdit" name="line_c4_name">
                    <property name="enabled">
-                    <bool>false</bool>
+                    <bool>true</bool>
                    </property>
                    <property name="minimumSize">
                     <size>
@@ -13163,28 +13188,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </property>
                    <property name="readOnly">
                     <bool>false</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QCheckBox" name="cb_c4_born">
-                   <property name="enabled">
-                    <bool>false</bool>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>22</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16</width>
-                     <height>22</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>Just Born</string>
                    </property>
                   </widget>
                  </item>
@@ -13964,6 +13967,34 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 </layout>
                </item>
                <item>
+                <widget class="QCheckBox" name="cb_c4_mated">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>22</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Unable to Mate</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_41">
                  <property name="leftMargin">
                   <number>6</number>
@@ -14017,7 +14048,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <item>
              <widget class="QGroupBox" name="box_stable5">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="minimumSize">
                <size>
@@ -14062,7 +14093,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <widget class="QLineEdit" name="line_c5_name">
                    <property name="enabled">
-                    <bool>false</bool>
+                    <bool>true</bool>
                    </property>
                    <property name="minimumSize">
                     <size>
@@ -14081,28 +14112,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </property>
                    <property name="readOnly">
                     <bool>false</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QCheckBox" name="cb_c5_born">
-                   <property name="enabled">
-                    <bool>false</bool>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>22</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16</width>
-                     <height>22</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>Just Born</string>
                    </property>
                   </widget>
                  </item>
@@ -14882,6 +14891,34 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 </layout>
                </item>
                <item>
+                <widget class="QCheckBox" name="cb_c5_mated">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>22</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Unable to Mate</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_49">
                  <property name="leftMargin">
                   <number>6</number>
@@ -14935,7 +14972,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <item>
              <widget class="QGroupBox" name="box_stable6">
               <property name="enabled">
-               <bool>false</bool>
+               <bool>true</bool>
               </property>
               <property name="minimumSize">
                <size>
@@ -14980,7 +15017,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <widget class="QLineEdit" name="line_c6_name">
                    <property name="enabled">
-                    <bool>false</bool>
+                    <bool>true</bool>
                    </property>
                    <property name="minimumSize">
                     <size>
@@ -14999,28 +15036,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </property>
                    <property name="readOnly">
                     <bool>false</bool>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QCheckBox" name="cb_c6_born">
-                   <property name="enabled">
-                    <bool>false</bool>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>22</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16</width>
-                     <height>22</height>
-                    </size>
-                   </property>
-                   <property name="text">
-                    <string>Just Born</string>
                    </property>
                   </widget>
                  </item>
@@ -15798,6 +15813,34 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </widget>
                  </item>
                 </layout>
+               </item>
+               <item>
+                <widget class="QCheckBox" name="cb_c6_mated">
+                 <property name="enabled">
+                  <bool>true</bool>
+                 </property>
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>22</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>16777215</width>
+                   <height>16777215</height>
+                  </size>
+                 </property>
+                 <property name="text">
+                  <string>Unable to Mate</string>
+                 </property>
+                </widget>
                </item>
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayout_33">
@@ -18308,8 +18351,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>764</width>
-             <height>440</height>
+             <width>744</width>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -25758,7 +25801,7 @@ p, li { white-space: pre-wrap; }
              <rect>
               <x>30</x>
               <y>5</y>
-              <width>311</width>
+              <width>381</width>
               <height>486</height>
              </rect>
             </property>
@@ -26010,6 +26053,11 @@ p, li { white-space: pre-wrap; }
                  <string>BINARY</string>
                 </property>
                </column>
+               <column>
+                <property name="text">
+                 <string>Char</string>
+                </property>
+               </column>
               </widget>
              </item>
             </layout>
@@ -26017,10 +26065,10 @@ p, li { white-space: pre-wrap; }
            <widget class="QLabel" name="label_228">
             <property name="geometry">
              <rect>
-              <x>350</x>
+              <x>440</x>
               <y>5</y>
-              <width>386</width>
-              <height>61</height>
+              <width>296</width>
+              <height>76</height>
              </rect>
             </property>
             <property name="text">
@@ -26987,7 +27035,6 @@ Values can Range From 0 - 255</string>
   <tabstop>sb_stables_owned</tabstop>
   <tabstop>sb_stables_occupied</tabstop>
   <tabstop>line_c1_name</tabstop>
-  <tabstop>cb_c1_born</tabstop>
   <tabstop>cb_c1_type</tabstop>
   <tabstop>cb_c1_sex</tabstop>
   <tabstop>sb_c1_speed</tabstop>
@@ -27002,7 +27049,6 @@ Values can Range From 0 - 255</string>
   <tabstop>sb_c1_intel</tabstop>
   <tabstop>sb_c1_personality</tabstop>
   <tabstop>line_c2_name</tabstop>
-  <tabstop>cb_c2_born</tabstop>
   <tabstop>cb_c2_type</tabstop>
   <tabstop>cb_c2_sex</tabstop>
   <tabstop>sb_c2_speed</tabstop>
@@ -27017,7 +27063,6 @@ Values can Range From 0 - 255</string>
   <tabstop>sb_c2_intel</tabstop>
   <tabstop>sb_c2_personality</tabstop>
   <tabstop>line_c3_name</tabstop>
-  <tabstop>cb_c3_born</tabstop>
   <tabstop>cb_c3_type</tabstop>
   <tabstop>cb_c3_sex</tabstop>
   <tabstop>sb_c3_speed</tabstop>
@@ -27036,7 +27081,6 @@ Values can Range From 0 - 255</string>
   <tabstop>combo_pen2</tabstop>
   <tabstop>combo_pen4</tabstop>
   <tabstop>line_c4_name</tabstop>
-  <tabstop>cb_c4_born</tabstop>
   <tabstop>cb_c4_type</tabstop>
   <tabstop>cb_c4_sex</tabstop>
   <tabstop>sb_c4_speed</tabstop>
@@ -27051,7 +27095,6 @@ Values can Range From 0 - 255</string>
   <tabstop>sb_c4_intel</tabstop>
   <tabstop>sb_c4_personality</tabstop>
   <tabstop>line_c5_name</tabstop>
-  <tabstop>cb_c5_born</tabstop>
   <tabstop>cb_c5_type</tabstop>
   <tabstop>cb_c5_sex</tabstop>
   <tabstop>sb_c5_speed</tabstop>
@@ -27066,7 +27109,6 @@ Values can Range From 0 - 255</string>
   <tabstop>sb_c5_intel</tabstop>
   <tabstop>sb_c5_personality</tabstop>
   <tabstop>line_c6_name</tabstop>
-  <tabstop>cb_c6_born</tabstop>
   <tabstop>cb_c6_type</tabstop>
   <tabstop>cb_c6_sex</tabstop>
   <tabstop>sb_c6_speed</tabstop>

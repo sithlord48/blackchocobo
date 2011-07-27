@@ -129,7 +129,6 @@ private slots:
     void on_sb_bm_progress2_valueChanged(int);
     void on_sb_bm_progress3_valueChanged(int);
     void on_sb_mprogress_valueChanged();
-    void on_cb_c2_born_toggled(bool checked);
 
     // game options tab
     void setoptions_one();
@@ -197,93 +196,106 @@ private slots:
     void on_btn_m_lvl1_clicked();
 
     //chocobo tab
-    void on_sb_stables_owned_valueChanged();
+
+    void on_sb_stables_owned_valueChanged(int);
     void on_sb_stables_occupied_valueChanged(int);
+
     void on_line_c1_name_lostFocus();
-    void on_line_c2_name_lostFocus();
-    void on_line_c3_name_lostFocus();
-    void on_line_c4_name_lostFocus();
-    void on_line_c5_name_lostFocus();
-    void on_line_c6_name_lostFocus();
-    void on_sb_c1_stamina_valueChanged();
-    void on_sb_c2_stamina_valueChanged();
-    void on_sb_c3_stamina_valueChanged();
-    void on_sb_c4_stamina_valueChanged();
-    void on_sb_c5_stamina_valueChanged();
-    void on_sb_c6_stamina_valueChanged();
-    void on_sb_c1_raceswon_valueChanged();
-    void on_sb_c2_raceswon_valueChanged();
-    void on_sb_c3_raceswon_valueChanged();
-    void on_sb_c4_raceswon_valueChanged();
-    void on_sb_c5_raceswon_valueChanged();
-    void on_sb_c6_raceswon_valueChanged();
-    void on_sb_c1_pcount_valueChanged();
-    void on_sb_c2_pcount_valueChanged();
-    void on_sb_c3_pcount_valueChanged();
-    void on_sb_c4_pcount_valueChanged();
-    void on_sb_c5_pcount_valueChanged();
-    void on_sb_c6_pcount_valueChanged();
-    void on_sb_c1_intel_valueChanged();
-    void on_sb_c2_intel_valueChanged();
-    void on_sb_c3_intel_valueChanged();
-    void on_sb_c4_intel_valueChanged();
-    void on_sb_c5_intel_valueChanged();
-    void on_sb_c6_intel_valueChanged();
-    void on_sb_c1_accel_valueChanged();
-    void on_sb_c2_accel_valueChanged();
-    void on_sb_c3_accel_valueChanged();
-    void on_sb_c4_accel_valueChanged();
-    void on_sb_c5_accel_valueChanged();
-    void on_sb_c6_accel_valueChanged();
-    void on_sb_c1_coop_valueChanged();
-    void on_sb_c2_coop_valueChanged();
-    void on_sb_c3_coop_valueChanged();
-    void on_sb_c4_coop_valueChanged();
-    void on_sb_c5_coop_valueChanged();
-    void on_sb_c6_coop_valueChanged();
-    void on_cb_c1_type_currentIndexChanged(int index);
-    void on_cb_c2_type_currentIndexChanged(int index);
-    void on_cb_c3_type_currentIndexChanged(int index);
-    void on_cb_c4_type_currentIndexChanged(int index);
-    void on_cb_c5_type_currentIndexChanged(int index);
-    void on_cb_c6_type_currentIndexChanged(int index);
-    void on_cb_c1_sex_currentIndexChanged(int index);
-    void on_cb_c2_sex_currentIndexChanged(int index);
-    void on_cb_c3_sex_currentIndexChanged(int index);
-    void on_cb_c4_sex_currentIndexChanged(int index);
-    void on_cb_c5_sex_currentIndexChanged(int index);
-    void on_cb_c6_sex_currentIndexChanged(int index);
-    void on_sb_c1_maxsprint_valueChanged(int);
-    void on_sb_c1_sprint_valueChanged(int);
-    void on_sb_c1_maxspeed_valueChanged(int);
+    void on_sb_c1_stamina_valueChanged(int);
     void on_sb_c1_speed_valueChanged(int);
-    void on_sb_c2_maxsprint_valueChanged(int);
-    void on_sb_c2_sprint_valueChanged(int);
-    void on_sb_c2_maxspeed_valueChanged(int);
+    void on_sb_c1_maxspeed_valueChanged(int);
+    void on_sb_c1_sprint_valueChanged(int);
+    void on_sb_c1_maxsprint_valueChanged(int);
+    void on_cb_c1_sex_currentIndexChanged(int index);
+    void on_cb_c1_type_currentIndexChanged(int index);
+    void on_sb_c1_coop_valueChanged(int);
+    void on_sb_c1_accel_valueChanged(int);
+    void on_sb_c1_intel_valueChanged(int);
+    void on_sb_c1_raceswon_valueChanged(int);
+    void on_sb_c1_pcount_valueChanged(int);
+    void on_cb_c1_mated_toggled(bool checked);
+
+    void on_line_c2_name_lostFocus();
+    void on_sb_c2_stamina_valueChanged(int);
     void on_sb_c2_speed_valueChanged(int);
-    void on_sb_c3_maxsprint_valueChanged(int);
-    void on_sb_c3_sprint_valueChanged(int);
-    void on_sb_c3_maxspeed_valueChanged(int);
+    void on_sb_c2_maxspeed_valueChanged(int);
+    void on_sb_c2_sprint_valueChanged(int);
+    void on_sb_c2_maxsprint_valueChanged(int);
+    void on_cb_c2_sex_currentIndexChanged(int index);
+    void on_cb_c2_type_currentIndexChanged(int index);
+    void on_sb_c2_coop_valueChanged(int);
+    void on_sb_c2_accel_valueChanged(int);
+    void on_sb_c2_intel_valueChanged(int);
+    void on_sb_c2_raceswon_valueChanged(int);
+    void on_sb_c2_pcount_valueChanged(int);
+    void on_cb_c2_mated_toggled(bool checked);
+
+    void on_line_c3_name_lostFocus();
+    void on_sb_c3_stamina_valueChanged(int);
     void on_sb_c3_speed_valueChanged(int);
-    void on_sb_c4_maxsprint_valueChanged(int);
-    void on_sb_c4_sprint_valueChanged(int);
-    void on_sb_c4_maxspeed_valueChanged(int);
+    void on_sb_c3_maxspeed_valueChanged(int);
+    void on_sb_c3_sprint_valueChanged(int);
+    void on_sb_c3_maxsprint_valueChanged(int);
+    void on_cb_c3_sex_currentIndexChanged(int index);
+    void on_cb_c3_type_currentIndexChanged(int index);
+    void on_sb_c3_coop_valueChanged(int);
+    void on_sb_c3_accel_valueChanged(int);
+    void on_sb_c3_intel_valueChanged(int);
+    void on_sb_c3_raceswon_valueChanged(int);
+    void on_sb_c3_pcount_valueChanged(int);
+    void on_cb_c3_mated_toggled(bool checked);
+
+    void on_line_c4_name_lostFocus();
+    void on_sb_c4_stamina_valueChanged(int);
     void on_sb_c4_speed_valueChanged(int);
-    void on_sb_c5_maxsprint_valueChanged(int);
-    void on_sb_c5_sprint_valueChanged(int);
-    void on_sb_c5_maxspeed_valueChanged(int);
+    void on_sb_c4_maxspeed_valueChanged(int);
+    void on_sb_c4_sprint_valueChanged(int);
+    void on_sb_c4_maxsprint_valueChanged(int);
+    void on_cb_c4_sex_currentIndexChanged(int index);
+    void on_cb_c4_type_currentIndexChanged(int index);
+    void on_sb_c4_coop_valueChanged(int);
+    void on_sb_c4_accel_valueChanged(int);
+    void on_sb_c4_intel_valueChanged(int);
+    void on_sb_c4_raceswon_valueChanged(int);
+    void on_sb_c4_pcount_valueChanged(int);
+    void on_cb_c4_mated_toggled(bool checked);
+
+    void on_line_c5_name_lostFocus();
+    void on_sb_c5_stamina_valueChanged(int);
     void on_sb_c5_speed_valueChanged(int);
-    void on_sb_c6_maxsprint_valueChanged(int);
-    void on_sb_c6_sprint_valueChanged(int);
-    void on_sb_c6_maxspeed_valueChanged(int);
+    void on_sb_c5_maxspeed_valueChanged(int);
+    void on_sb_c5_sprint_valueChanged(int);
+    void on_sb_c5_maxsprint_valueChanged(int);
+    void on_cb_c5_sex_currentIndexChanged(int index);
+    void on_cb_c5_type_currentIndexChanged(int index);
+    void on_sb_c5_coop_valueChanged(int);
+    void on_sb_c5_accel_valueChanged(int);
+    void on_sb_c5_intel_valueChanged(int);
+    void on_sb_c5_raceswon_valueChanged(int);
+    void on_sb_c5_pcount_valueChanged(int);
+    void on_cb_c5_mated_toggled(bool checked);
+
+    void on_line_c6_name_lostFocus();
+    void on_sb_c6_stamina_valueChanged(int);
     void on_sb_c6_speed_valueChanged(int);
+    void on_sb_c6_maxspeed_valueChanged(int);
+    void on_sb_c6_sprint_valueChanged(int);
+    void on_sb_c6_maxsprint_valueChanged(int);
+    void on_cb_c6_sex_currentIndexChanged(int index);
+    void on_cb_c6_type_currentIndexChanged(int index);
+    void on_sb_c6_coop_valueChanged(int);
+    void on_sb_c6_accel_valueChanged(int);
+    void on_sb_c6_intel_valueChanged(int);
+    void on_sb_c6_raceswon_valueChanged(int);
+    void on_sb_c6_pcount_valueChanged(int);
+    void on_cb_c6_mated_toggled(bool checked);
 
     //The Chocobo pens.
     void on_combo_pen1_currentIndexChanged(int index);
     void on_combo_pen2_currentIndexChanged(int index);
     void on_combo_pen3_currentIndexChanged(int index);
     void on_combo_pen4_currentIndexChanged(int index);
-
+/* END CHOCOBO TAB */
 
     // gui functions functions
     void guirefresh(void);
@@ -515,5 +527,6 @@ private slots:
     void on_sb_donprog_valueChanged(int );
     void on_combo_z_var_currentIndexChanged(int);
     void on_tbl_unknown_itemChanged(QTableWidgetItem* item);
+
 };
 #endif // MAINWINDOW_H

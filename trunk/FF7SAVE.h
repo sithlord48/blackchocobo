@@ -416,7 +416,7 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     qint8 stablesoccupied;      // [0x0CFD] Number of occupied stables //genereated incorrectly ?
     quint8 z_21[1];             // [0x0CFE] UNKNOWN DATA
     qint8 chocobomask;          // [0x0CFF] Mask of occupied stables//genereated incorrectly ?
-    quint8 chocoborn;           // [0x0D00] what stall a choco was just born in.
+    quint8 chocomated;          // [0x0D00] what stalls can't mate
     quint8 z_22[40];            // [0x0D01] UNKNOWN DATA
     quint8 yuffieforest;        // [0x0D29] yuffie in forest if bit1 = 1 then yes.. others here too?
     quint8 z_23[28];            // [0x0D2A] UNKNOWN DATA
