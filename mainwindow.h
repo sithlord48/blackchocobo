@@ -103,7 +103,7 @@ private slots:
     void on_list_menu_visible_itemChanged();
 
     void on_sb_turkschruch_valueChanged(int );
-    void on_actionEdit_Paths_triggered();
+
 
     void on_cb_id_toggled(bool checked);
 
@@ -346,6 +346,7 @@ private slots:
     void on_actionAbout_activated();
     void on_actionAbout_Qt_activated();
 
+    void on_actionShow_Options_triggered();
     void on_action_auto_char_growth_triggered(bool checked);
     void on_action_show_test_data_toggled(bool checked);
 

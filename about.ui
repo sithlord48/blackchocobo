@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>356</width>
-    <height>372</height>
+    <width>374</width>
+    <height>388</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -42,7 +42,7 @@
    <double>1.000000000000000</double>
   </property>
   <property name="styleSheet">
-   <string notr="true">QDialog{
+   <string notr="true">/*QDialog{
 background-color: rgb(48, 47, 47);
 font: ;color:rgb(255,255,255);
 }
@@ -76,7 +76,7 @@ QPushButton:enabled {  border:2px solid;
     background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(32, 31, 31, 255));
 	font: ;color:rgb(255,255,255);
 }
-/* Vertical scroll bar */
+/* Vertical scroll bar 
 QScrollBar:vertical{
     border:1px solid grey;
 	background-color:rgb(47,47,47);
@@ -117,7 +117,7 @@ width:12px;
 QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical{
 background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(67, 67, 67, 255));
 }
-</string>
+*/</string>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -167,14 +167,14 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
            <height>24</height>
           </size>
          </property>
-         <property name="styleSheet">
-          <string notr="true">font: 12pt;</string>
-         </property>
          <property name="text">
           <string>Black Chocobo </string>
          </property>
          <property name="alignment">
           <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
+         </property>
+         <property name="program_name" stdset="0">
+          <bool>true</bool>
          </property>
         </widget>
        </item>
@@ -182,33 +182,21 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
         <layout class="QHBoxLayout" name="horizontalLayout_3">
          <item>
           <widget class="QLabel" name="label1">
-           <property name="font">
-            <font>
-             <family>ubuntu</family>
-             <pointsize>8</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
            <property name="text">
             <string>Version:</string>
+           </property>
+           <property name="smaller_text" stdset="0">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QLabel" name="lbl_bc_version">
-           <property name="font">
-            <font>
-             <family>ubuntu</family>
-             <pointsize>8</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
            <property name="text">
             <string notr="true">##</string>
+           </property>
+           <property name="smaller_text" stdset="0">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -231,33 +219,21 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
         <layout class="QHBoxLayout" name="horizontalLayout_2">
          <item>
           <widget class="QLabel" name="label2">
-           <property name="font">
-            <font>
-             <family>ubuntu</family>
-             <pointsize>8</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
            <property name="text">
             <string>Using Qt:</string>
+           </property>
+           <property name="smaller_text" stdset="0">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QLabel" name="lbl_qt_version">
-           <property name="font">
-            <font>
-             <family>ubuntu</family>
-             <pointsize>8</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
            <property name="text">
             <string notr="true">##</string>
+           </property>
+           <property name="smaller_text" stdset="0">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -527,7 +503,7 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <property name="text">
-           <string>SlotSelect + Errbox Dialogs Inherit style from caller</string>
+           <string>Fixed: Dialogs Inherit style.</string>
           </property>
          </item>
          <item>
@@ -811,7 +787,7 @@ p, li { white-space: pre-wrap; }
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>0</y>
+            <y>-174</y>
             <width>349</width>
             <height>392</height>
            </rect>
@@ -1432,8 +1408,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>138</width>
-            <height>740</height>
+            <width>349</width>
+            <height>390</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">
