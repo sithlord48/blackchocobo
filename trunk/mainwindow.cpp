@@ -996,7 +996,7 @@ void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselec
 void MainWindow::on_actionClear_Slot_activated(){clearslot(s);  guirefresh();}
 void MainWindow::on_actionPrevious_Slot_activated(){if (s > 0) {s--; guirefresh();}}
 void MainWindow::on_actionNext_Slot_activated(){if (s<14){s++; guirefresh();}}
-void MainWindow::on_actionAbout_activated(){about adialog; adialog.exec();}
+void MainWindow::on_actionAbout_activated(){about adialog;  adialog.setStyleSheet(this->styleSheet()); adialog.exec();}
 void MainWindow::on_actionAbout_Qt_activated(){qApp->aboutQt();}
 
 /*~~~~~~~~~~~~LANGUAGE ACTIONS~~~~~~~~~~~~~~*/
@@ -1386,28 +1386,19 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
     }
 }}
 
-void MainWindow::on_actionEdit_Paths_triggered()
+void MainWindow::on_actionShow_Options_triggered()
 {
-    Options odialog; odialog.exec();
+    Options odialog;  odialog.setStyleSheet(this->styleSheet());    odialog.exec();
     QString style="QWidget#centralWidget{background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
-    style.append(settings.value("color1_r").toString());
-    style.append(",");
-    style.append(settings.value("color1_g").toString());
-    style.append(",");
-    style.append(settings.value("color1_b").toString());
-    style.append(", 255), stop:0.215909 rgba(");
-    style.append(settings.value("color2_r").toString());
-    style.append(",");
-    style.append(settings.value("color2_g").toString());
-    style.append(",");
-    style.append(settings.value("color2_b").toString());
-    style.append(", 255), stop:0.818182 rgba(");
-    style.append(settings.value("color3_r").toString());
-    style.append(",");
-    style.append(settings.value("color3_g").toString());
-    style.append(",");
-    style.append(settings.value("color3_b").toString());
-    style.append(", 255));}");
+    style.append(settings.value("color1_r").toString());    style.append(",");
+    style.append(settings.value("color1_g").toString());    style.append(",");
+    style.append(settings.value("color1_b").toString());    style.append(", 255), stop:0.215909 rgba(");
+    style.append(settings.value("color2_r").toString());    style.append(",");
+    style.append(settings.value("color2_g").toString());    style.append(",");
+    style.append(settings.value("color2_b").toString());    style.append(", 255), stop:0.818182 rgba(");
+    style.append(settings.value("color3_r").toString());    style.append(",");
+    style.append(settings.value("color3_g").toString());    style.append(",");
+    style.append(settings.value("color3_b").toString());    style.append(", 255));}");
     ui->centralWidget->setStyleSheet(style);
 }
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/

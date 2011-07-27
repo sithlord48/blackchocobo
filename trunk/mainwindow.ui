@@ -53,9 +53,27 @@ QWidget#tab_party,QWidget#tab_items,QWidget#tab_materia,QWidget#tab_chocobos,QWi
 	selection-background-color: rgba(34, 201, 247, 128);
 	selection-color: rgb(255,255,255);
 }
+QWidget#tab_gpl,QWidget#tab_programmers,QWidget#tab_about,QWidget#tabWidget{
+	background-color: qlineargradient(spread:pad, x1:0.404, y1:0, x2:0, y2:1, stop:0 rgba(48, 47, 47, 32), stop:1 rgba(65, 65, 65, 32));
+	selection-background-color: rgba(34, 201, 247, 128);
+	selection-color: rgb(255,255,255);
+}
 QLabel#lbl_avatar{
 border:2px solid grey;
 border-radius: 5px;
+}
+QLabel[smaller_text=&quot;true&quot;]{font-size: 8pt;}
+QLabel[Heading=&quot;true&quot;]{text-decoration: underline;}
+QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
+
+QPushButton[font_size=&quot;true&quot;]:checked {  
+    border:3px solid; 
+	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 255, 255), stop:1 rgba(172, 172, 255, 255));
+	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 255, 255), stop:1 rgba(172, 172, 255, 255));
+	border-bottom-color: rgb(172, 172, 255);
+	border-top-color: rgb(172, 172, 255);
+    background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(32, 31, 31, 255));
+	font:;color:rgb(255,255,255);
 }
 QListView,QTreeView,QTableView,QColumnView{
 background-color:rgba(10,10,10,64);
@@ -126,19 +144,19 @@ background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1
 QSlider#slide_limit::add-pageQSlider#slide_battlespeed:add-page,QSlider#slide_fieldmspeed:add-page,QSlider#slide_battlemspeed:add-page {
  background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));
  }
-QSlider#slide_ul_r::groove,QSlider#slide_ur_r::groove,QSlider#slide_ll_r::groove,QSlider#slide_lr_r::groove{
+QSlider[slider_red=&quot;true&quot;]::groove{
 height:12px;
 background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255,0,0, 255));
 }
-QSlider#slide_ul_g::groove,QSlider#slide_ur_g::groove,QSlider#slide_ll_g::groove,QSlider#slide_lr_g::groove{
+QSlider[slider_green=&quot;true&quot;]::groove{
 height:12px;
 background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(0,255, 0, 255));
 }
-QSlider#slide_ul_b::groove,QSlider#slide_ur_b::groove,QSlider#slide_ll_b::groove,QSlider#slide_lr_b::groove{
+QSlider[slider_blue=&quot;true&quot;]::groove{
 height:12px;
 background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(0,0,255, 255));
 }
-QSlider#slide_ul_b::handle,QSlider#slide_ul_g::handle,QSlider#slide_ul_r::handle,QSlider#slide_ur_b::handle,QSlider#slide_ur_g::handle,QSlider#slide_ur_r::handle,QSlider#slide_ll_b::handle,QSlider#slide_ll_g::handle,QSlider#slide_ll_r::handle,QSlider#slide_lr_b::handle,QSlider#slide_lr_g::handle,QSlider#slide_lr_r::handle{
+QSlider[slider_red=&quot;true&quot;]::handle,[slider_green=&quot;true&quot;]::handle,[slider_blue=&quot;true&quot;]::handle{
      background: rgba(172, 172, 172,0);
      border: 2px solid #5c5c5c;
      width: 3px;
@@ -4647,8 +4665,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>401</width>
-             <height>414</height>
+             <width>437</width>
+             <height>436</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -22838,6 +22856,9 @@ p, li { white-space: pre-wrap; }
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
+                  <property name="slider_red" stdset="0">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="1" column="0">
@@ -22867,6 +22888,9 @@ p, li { white-space: pre-wrap; }
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
+                  <property name="slider_green" stdset="0">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="2" column="0">
@@ -22895,6 +22919,9 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="slider_blue" stdset="0">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -22958,6 +22985,9 @@ p, li { white-space: pre-wrap; }
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
+                  <property name="slider_red" stdset="0">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="1" column="0">
@@ -22987,6 +23017,9 @@ p, li { white-space: pre-wrap; }
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
+                  <property name="slider_green" stdset="0">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="2" column="0">
@@ -23015,6 +23048,9 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="slider_blue" stdset="0">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -23084,6 +23120,9 @@ p, li { white-space: pre-wrap; }
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
+                  <property name="slider_red" stdset="0">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="1" column="0">
@@ -23119,6 +23158,9 @@ p, li { white-space: pre-wrap; }
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
+                  <property name="slider_green" stdset="0">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="2" column="0">
@@ -23153,6 +23195,9 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="slider_blue" stdset="0">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -23216,6 +23261,9 @@ p, li { white-space: pre-wrap; }
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
+                  <property name="slider_red" stdset="0">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="1" column="0">
@@ -23245,6 +23293,9 @@ p, li { white-space: pre-wrap; }
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
                   </property>
+                  <property name="slider_green" stdset="0">
+                   <bool>true</bool>
+                  </property>
                  </widget>
                 </item>
                 <item row="2" column="0">
@@ -23273,6 +23324,9 @@ p, li { white-space: pre-wrap; }
                   </property>
                   <property name="orientation">
                    <enum>Qt::Horizontal</enum>
+                  </property>
+                  <property name="slider_blue" stdset="0">
+                   <bool>true</bool>
                   </property>
                  </widget>
                 </item>
@@ -26203,7 +26257,7 @@ Values can Range From 0 - 255</string>
     <addaction name="separator"/>
     <addaction name="menuLang"/>
     <addaction name="separator"/>
-    <addaction name="actionEdit_Paths"/>
+    <addaction name="actionShow_Options"/>
    </widget>
    <widget class="QMenu" name="menu_Edit">
     <property name="title">
@@ -26739,7 +26793,7 @@ Values can Range From 0 - 255</string>
     <string notr="true">Francais</string>
    </property>
   </action>
-  <action name="actionEdit_Paths">
+  <action name="actionShow_Options">
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/icon/config</normaloff>:/icon/config</iconset>

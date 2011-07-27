@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>696</width>
-    <height>511</height>
+    <width>782</width>
+    <height>512</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -33,81 +33,7 @@
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QGroupBox,QLabel:enabled,QDialog{
-background-color:rgb(48, 47, 47);
-font: ;color:rgb(255,255,255);
-}
-
-QLineEdit:enabled{
-background-color: rgb(32, 31, 31);
-selection-background-color: rgb(24, 72, 128);
-selection-color: rgb(255,255,255);
-font: ;color:rgb(255,255,255);
-}
-
-QPushButton:enabled {  
-    border:3px solid; 
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: rgb(172, 172, 172);
-	border-top-color: rgb(172, 172, 172);
-    background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(32, 31, 31, 255));
-	font:;color:rgb(255,255,255);
-}
-QPushButton:checked {  
-    border:3px solid; 
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 255, 255), stop:1 rgba(172, 172, 255, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 255, 255), stop:1 rgba(172, 172, 255, 255));
-	border-bottom-color: rgb(172, 172, 255);
-	border-top-color: rgb(172, 172, 255);
-    background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(32, 31, 31, 255), stop:0.5 rgba(106, 106, 106, 255), stop:1 rgba(32, 31, 31, 255));
-	font:;color:rgb(255,255,255);
-}
-QPushButton:disabled,QLineEdit:disabled,QSpinBox:disabled,QTableWidget:disabled,QListWidget:disabled{
-background-color:rgb(48, 47, 47);
-font:;color:rgb(74, 80, 73);
-}
-
-
-QSlider#slide_c1_r::groove,QSlider#slide_c2_r::groove,QSlider#slide_c3_r::groove{
-height:12px;
-background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255,0,0, 255));
-}
-QSlider#slide_c1_g::groove,QSlider#slide_c2_g::groove,QSlider#slide_c3_g::groove{
-height:12px;
-background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(0,255, 0, 255));
-}
-QSlider#slide_c1_b::groove,QSlider#slide_c2_b::groove,QSlider#slide_c3_b::groove{
-height:12px;
-background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(0,0,255, 255));
-}
-QSlider#slide_c1_b::handle,QSlider#slide_c1_g::handle,QSlider#slide_c1_r::handle,QSlider#slide_c2_b::handle,QSlider#slide_c2_g::handle,QSlider#slide_c2_r::handle,QSlider#slide_c3_b::handle,QSlider#slide_c3_g::handle,QSlider#slide_c3_r::handle{
-     background: rgba(172, 172, 172,0);
-     border: 2px solid #5c5c5c;
-     width: 3px;
-     border-radius: 2px;
- }
-
-QSlider{
-   border:3px solid; 
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
-	border-bottom-color: rgb(172, 172, 172);
-	border-top-color: rgb(172, 172, 172);
-	border-radius: 5px;
-}
-QLCDNumber:enabled{
-	border:2px solid;
-	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
-	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 192), stop:1 rgba(172, 172, 172, 192));
-	border-bottom-color: rgba(172, 172, 172,192);
-	border-top-color: rgba(172, 172, 172,192);
-	background-color: rgba(32, 31, 31,96);
-	selection-background-color:rgba(34, 201, 247, 128);
-	selection-color: rgb(255,255,255);
-	border-radius: 5px;
-}
-</string>
+   <string notr="true"/>
   </property>
   <property name="modal">
    <bool>true</bool>
@@ -746,6 +672,9 @@ QLCDNumber:enabled{
           <property name="autoExclusive">
            <bool>true</bool>
           </property>
+          <property name="font_size" stdset="0">
+           <bool>true</bool>
+          </property>
          </widget>
         </item>
         <item>
@@ -766,6 +695,9 @@ QLCDNumber:enabled{
            <bool>true</bool>
           </property>
           <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+          <property name="font_size" stdset="0">
            <bool>true</bool>
           </property>
          </widget>
@@ -793,6 +725,9 @@ QLCDNumber:enabled{
           <property name="autoExclusive">
            <bool>true</bool>
           </property>
+          <property name="font_size" stdset="0">
+           <bool>true</bool>
+          </property>
          </widget>
         </item>
         <item>
@@ -815,6 +750,9 @@ QLCDNumber:enabled{
           <property name="autoExclusive">
            <bool>true</bool>
           </property>
+          <property name="font_size" stdset="0">
+           <bool>true</bool>
+          </property>
          </widget>
         </item>
         <item>
@@ -835,6 +773,9 @@ QLCDNumber:enabled{
            <bool>true</bool>
           </property>
           <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+          <property name="font_size" stdset="0">
            <bool>true</bool>
           </property>
          </widget>
@@ -860,6 +801,9 @@ QLCDNumber:enabled{
            <bool>false</bool>
           </property>
           <property name="autoExclusive">
+           <bool>true</bool>
+          </property>
+          <property name="font_size" stdset="0">
            <bool>true</bool>
           </property>
          </widget>
@@ -1063,6 +1007,9 @@ QLCDNumber:enabled{
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
+           <property name="slider_red" stdset="0">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item row="1" column="0">
@@ -1098,6 +1045,9 @@ QLCDNumber:enabled{
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
+           <property name="slider_green" stdset="0">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item row="2" column="0">
@@ -1132,6 +1082,9 @@ QLCDNumber:enabled{
            </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="slider_blue" stdset="0">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -1201,6 +1154,9 @@ QLCDNumber:enabled{
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
+           <property name="slider_red" stdset="0">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item row="1" column="0">
@@ -1236,6 +1192,9 @@ QLCDNumber:enabled{
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
+           <property name="slider_green" stdset="0">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item row="2" column="0">
@@ -1270,6 +1229,9 @@ QLCDNumber:enabled{
            </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="slider_blue" stdset="0">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
@@ -1339,6 +1301,9 @@ QLCDNumber:enabled{
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
+           <property name="slider_red" stdset="0">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item row="1" column="0">
@@ -1374,6 +1339,9 @@ QLCDNumber:enabled{
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
+           <property name="slider_green" stdset="0">
+            <bool>true</bool>
+           </property>
           </widget>
          </item>
          <item row="2" column="0">
@@ -1408,6 +1376,9 @@ QLCDNumber:enabled{
            </property>
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="slider_blue" stdset="0">
+            <bool>true</bool>
            </property>
           </widget>
          </item>
