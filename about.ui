@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>374</width>
-    <height>388</height>
+    <width>372</width>
+    <height>386</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -503,6 +503,11 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <property name="text">
+           <string>New: Optionally Correct Psx PAL Time Bug</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>Fixed: Dialogs Inherit style.</string>
           </property>
          </item>
@@ -787,7 +792,7 @@ p, li { white-space: pre-wrap; }
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-174</y>
+            <y>0</y>
             <width>349</width>
             <height>392</height>
            </rect>
@@ -1408,8 +1413,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>349</width>
-            <height>390</height>
+            <width>138</width>
+            <height>740</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">

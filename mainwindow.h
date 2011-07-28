@@ -29,7 +29,6 @@
 #include <QSettings>
 #include <SaveIcon.h>
 
-void fix_sum(const QString &fileName);
 
 
 namespace Ui {
@@ -50,19 +49,221 @@ private:
 
 public slots:
 
-private slots:
+private slots://try to keep these in the same order as the .cpp file
+  
+  /*Loading and Saving related Functions*/  
+    void on_actionNew_Window_triggered();
+    void on_actionOpen_Save_File_activated();
+    void loadFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
+    void on_actionFrom_PSX_Slot_activated();
+    void on_actionFrom_PSV_Slot_activated();
+    void on_actionImport_char_triggered();
+    void on_actionExport_char_triggered();
+    void on_action_Save_activated();
+    void on_actionSave_File_As_activated();
+    void saveFileFull(QString);//(Vegeta_Ss4) v0.8.3
+    void on_actionNew_Game_triggered();
+    void on_actionNew_Game_Plus_triggered();
+    void on_actionExport_PC_Save_activated();
+    void on_actionExport_PSX_activated();
+    void on_actionExport_MC_triggered();
+    void on_actionExport_VGS_triggered();
+    void on_actionExport_DEX_triggered();  
+    void fix_sum(const QString &fileName);
+  /*Simple Menu Actions */
+    void on_actionSlot_01_activated();
+    void on_actionSlot_02_activated();
+    void on_actionSlot_03_activated();
+    void on_actionSlot_04_activated();
+    void on_actionSlot_05_activated();
+    void on_actionSlot_06_activated();
+    void on_actionSlot_07_activated();
+    void on_actionSlot_08_activated();
+    void on_actionSlot_09_activated();
+    void on_actionSlot_10_activated();
+    void on_actionSlot_11_activated();
+    void on_actionSlot_12_activated();
+    void on_actionSlot_13_activated();
+    void on_actionSlot_14_activated();
+    void on_actionSlot_15_activated();
+    void on_actionShow_Selection_Dialog_activated();
+    void on_actionClear_Slot_activated();
+    void on_actionPrevious_Slot_activated();
+    void on_actionNext_Slot_activated();
+    void on_actionAbout_activated();
+    void on_actionAbout_Qt_activated();
+    void on_actionCopy_Slot_activated();
+    void on_actionPaste_Slot_activated();
+    void on_actionFix_PSX_PAL_Time_triggered();
+    void on_actionShow_Options_triggered();
+    void on_action_auto_char_growth_triggered(bool checked);
+    void on_action_show_test_data_toggled(bool checked);
+    /*Language and Region Data*/
+    void on_action_Lang_en_triggered();
+    void on_action_Lang_es_triggered();
+    void on_action_Lang_fr_triggered();
+    void on_action_Region_USA_triggered(bool checked);
+    void on_action_Region_PAL_Generic_triggered(bool checked);
+    void on_action_Region_PAL_German_triggered(bool checked);
+    void on_action_Region_PAL_Spanish_triggered(bool checked);
+    void on_action_Region_JPN_triggered(bool checked);
+    void on_action_Region_JPN_International_triggered(bool checked);
+    /*GuiFunctions*/
+    void charupdate(void);
+    void setchar_growth(int caller);
+    void setarmorslots(void);
+    void setweaponslots(void);
+    void setmenu(void);
+    void materiaupdate_slot(void);
+    void materiaupdate(void);
+    void itemupdate(void);
+    void guirefresh(void);
+    void chocobo_refresh(void);
+    void clearslot(int rmslot);
+    void testdata_refresh(void);    
+    /*CharButtons*/
+    void on_btn_cloud_clicked();
+    void on_btn_barret_clicked();
+    void on_btn_tifa_clicked();
+    void on_btn_aeris_clicked();
+    void on_btn_red_clicked();
+    void on_btn_yuffie_clicked();
+    void on_btn_cait_clicked();
+    void on_btn_vincent_clicked();
+    void on_btn_cid_clicked();
+    /*PARTY TAB*/
+    void on_sb_gil_valueChanged(int);
+    void on_sb_gp_valueChanged(int);
+    void on_sb_battles_valueChanged(int);
+    void on_sb_runs_valueChanged(int);
+    void on_combo_party1_currentIndexChanged(int index);
+    void on_combo_party2_currentIndexChanged(int index);
+    void on_combo_party3_currentIndexChanged(int index);
+    /*Chocobo Tab*/
+    void on_sb_stables_owned_valueChanged(int);
+    void on_sb_stables_occupied_valueChanged(int);
+    /*Chocobo Stall #1*/
+    void on_line_c1_name_lostFocus();
+    void on_sb_c1_stamina_valueChanged(int);
+    void on_sb_c1_speed_valueChanged(int);
+    void on_sb_c1_maxspeed_valueChanged(int);
+    void on_sb_c1_sprint_valueChanged(int);
+    void on_sb_c1_maxsprint_valueChanged(int);
+    void on_cb_c1_sex_currentIndexChanged(int index);
+    void on_cb_c1_type_currentIndexChanged(int index);
+    void on_sb_c1_coop_valueChanged(int);
+    void on_sb_c1_accel_valueChanged(int);
+    void on_sb_c1_intel_valueChanged(int);
+    void on_sb_c1_raceswon_valueChanged(int);
+    void on_sb_c1_pcount_valueChanged(int);
+    void on_cb_c1_mated_toggled(bool checked);
+    /*Chocobo Stall #2*/
+    void on_line_c2_name_lostFocus();
+    void on_sb_c2_stamina_valueChanged(int);
+    void on_sb_c2_speed_valueChanged(int);
+    void on_sb_c2_maxspeed_valueChanged(int);
+    void on_sb_c2_sprint_valueChanged(int);
+    void on_sb_c2_maxsprint_valueChanged(int);
+    void on_cb_c2_sex_currentIndexChanged(int index);
+    void on_cb_c2_type_currentIndexChanged(int index);
+    void on_sb_c2_coop_valueChanged(int);
+    void on_sb_c2_accel_valueChanged(int);
+    void on_sb_c2_intel_valueChanged(int);
+    void on_sb_c2_raceswon_valueChanged(int);
+    void on_sb_c2_pcount_valueChanged(int);
+    void on_cb_c2_mated_toggled(bool checked);
+    /*Chocobo Stall #3*/
+    void on_line_c3_name_lostFocus();
+    void on_sb_c3_stamina_valueChanged(int);
+    void on_sb_c3_speed_valueChanged(int);
+    void on_sb_c3_maxspeed_valueChanged(int);
+    void on_sb_c3_sprint_valueChanged(int);
+    void on_sb_c3_maxsprint_valueChanged(int);
+    void on_cb_c3_sex_currentIndexChanged(int index);
+    void on_cb_c3_type_currentIndexChanged(int index);
+    void on_sb_c3_coop_valueChanged(int);
+    void on_sb_c3_accel_valueChanged(int);
+    void on_sb_c3_intel_valueChanged(int);
+    void on_sb_c3_raceswon_valueChanged(int);
+    void on_sb_c3_pcount_valueChanged(int);
+    void on_cb_c3_mated_toggled(bool checked);
+    /*Chocobo Stall #4*/
+    void on_line_c4_name_lostFocus();
+    void on_sb_c4_stamina_valueChanged(int);
+    void on_sb_c4_speed_valueChanged(int);
+    void on_sb_c4_maxspeed_valueChanged(int);
+    void on_sb_c4_sprint_valueChanged(int);
+    void on_sb_c4_maxsprint_valueChanged(int);
+    void on_cb_c4_sex_currentIndexChanged(int index);
+    void on_cb_c4_type_currentIndexChanged(int index);
+    void on_sb_c4_coop_valueChanged(int);
+    void on_sb_c4_accel_valueChanged(int);
+    void on_sb_c4_intel_valueChanged(int);
+    void on_sb_c4_raceswon_valueChanged(int);
+    void on_sb_c4_pcount_valueChanged(int);
+    void on_cb_c4_mated_toggled(bool checked);
+    /*Chocobo Stall #5*/
+    void on_line_c5_name_lostFocus();
+    void on_sb_c5_stamina_valueChanged(int);
+    void on_sb_c5_speed_valueChanged(int);
+    void on_sb_c5_maxspeed_valueChanged(int);
+    void on_sb_c5_sprint_valueChanged(int);
+    void on_sb_c5_maxsprint_valueChanged(int);
+    void on_cb_c5_sex_currentIndexChanged(int index);
+    void on_cb_c5_type_currentIndexChanged(int index);
+    void on_sb_c5_coop_valueChanged(int);
+    void on_sb_c5_accel_valueChanged(int);
+    void on_sb_c5_intel_valueChanged(int);
+    void on_sb_c5_raceswon_valueChanged(int);
+    void on_sb_c5_pcount_valueChanged(int);
+    void on_cb_c5_mated_toggled(bool checked);
+    /*Chocobo Stall #6*/
+    void on_line_c6_name_lostFocus();
+    void on_sb_c6_stamina_valueChanged(int);
+    void on_sb_c6_speed_valueChanged(int);
+    void on_sb_c6_maxspeed_valueChanged(int);
+    void on_sb_c6_sprint_valueChanged(int);
+    void on_sb_c6_maxsprint_valueChanged(int);
+    void on_cb_c6_sex_currentIndexChanged(int index);
+    void on_cb_c6_type_currentIndexChanged(int index);
+    void on_sb_c6_coop_valueChanged(int);
+    void on_sb_c6_accel_valueChanged(int);
+    void on_sb_c6_intel_valueChanged(int);
+    void on_sb_c6_raceswon_valueChanged(int);
+    void on_sb_c6_pcount_valueChanged(int);
+    void on_cb_c6_mated_toggled(bool checked);
+
+    //The Chocobo pens.
+    void on_combo_pen1_currentIndexChanged(int index);
+    void on_combo_pen2_currentIndexChanged(int index);
+    void on_combo_pen3_currentIndexChanged(int index);
+    void on_combo_pen4_currentIndexChanged(int index);
+    /* Others Tab */    
+    void on_list_phs_chars_itemChanged();
+    void on_list_chars_unlocked_itemChanged();
+    void on_sb_curdisc_valueChanged(int);
+    void on_sb_love_yuffie_valueChanged(int);
+    void on_sb_love_tifa_valueChanged(int);
+    void on_sb_love_aeris_valueChanged(int);
+    void on_sb_love_barret_valueChanged(int);
+    void on_sb_time_sec_valueChanged(int);
+    void on_sb_time_min_valueChanged(int);
+    void on_sb_time_hour_valueChanged(int);
+
+
+//NOT IN ORDER FROM HERE DOWN
     void on_cb_tut_sub_8_toggled(bool);
     void on_cb_tut_sub_7_toggled(bool);
     void on_cb_tut_sub_6_toggled(bool);
     void on_cb_tut_sub_5_toggled(bool);
     void on_cb_tut_sub_4_toggled(bool);
     void on_cb_tut_sub_3_toggled(bool);
-    void on_cb_tut_sub_2_toggled(bool);
-    void on_cb_tut_sub_1_toggled(bool);
-    void on_cb_tut_sub_toggled(bool checked);
-    void on_cb_bombing_int_stateChanged(int);
-    void on_cb_tut_worldsave_stateChanged(int);
     void on_sb_timer_time_sec_valueChanged(int);
+    void on_cb_tut_worldsave_stateChanged(int);
+    void on_cb_bombing_int_stateChanged(int);
+    void on_cb_tut_sub_toggled(bool checked);
+    void on_cb_tut_sub_1_toggled(bool);
+    void on_cb_tut_sub_2_toggled(bool);
     void on_sb_timer_time_min_valueChanged(int);
     void on_sb_timer_time_hour_valueChanged(int);
     void on_cb_midgartrain_8_toggled(bool);
@@ -147,26 +348,14 @@ private slots:
     void on_slide_battlespeed_valueChanged(int value);
 
     //save location tab
-    void on_sb_coordz_valueChanged();
-    void on_sb_coordy_valueChanged();
-    void on_sb_coordx_valueChanged();
-    void on_line_location_textChanged();
-    void on_sb_loc_id_valueChanged();
-    void on_sb_map_id_valueChanged();
+    void on_sb_map_id_valueChanged(int);
+    void on_sb_loc_id_valueChanged(int);
+    void on_sb_coordx_valueChanged(int);
+    void on_sb_coordy_valueChanged(int);
+    void on_sb_coordz_valueChanged(int);
+    void on_line_location_textChanged(QString);
     void on_tbl_location_field_itemSelectionChanged();
 
-
-    //other tab
-    void on_list_chars_unlocked_itemChanged();
-    void on_list_phs_chars_itemChanged();
-    void on_sb_curdisc_valueChanged();
-    void on_sb_love_yuffie_valueChanged();
-    void on_sb_love_tifa_valueChanged();
-    void on_sb_love_aeris_valueChanged();
-    void on_sb_love_barret_valueChanged();
-    void on_sb_time_sec_valueChanged(int);
-    void on_sb_time_min_valueChanged(int);
-    void on_sb_time_hour_valueChanged(int);
 
     //items tab
     void on_list_flyers_itemChanged();
@@ -195,208 +384,7 @@ private slots:
     void on_btn_m_lvl2_clicked();
     void on_btn_m_lvl1_clicked();
 
-    //chocobo tab
-
-    void on_sb_stables_owned_valueChanged(int);
-    void on_sb_stables_occupied_valueChanged(int);
-
-    void on_line_c1_name_lostFocus();
-    void on_sb_c1_stamina_valueChanged(int);
-    void on_sb_c1_speed_valueChanged(int);
-    void on_sb_c1_maxspeed_valueChanged(int);
-    void on_sb_c1_sprint_valueChanged(int);
-    void on_sb_c1_maxsprint_valueChanged(int);
-    void on_cb_c1_sex_currentIndexChanged(int index);
-    void on_cb_c1_type_currentIndexChanged(int index);
-    void on_sb_c1_coop_valueChanged(int);
-    void on_sb_c1_accel_valueChanged(int);
-    void on_sb_c1_intel_valueChanged(int);
-    void on_sb_c1_raceswon_valueChanged(int);
-    void on_sb_c1_pcount_valueChanged(int);
-    void on_cb_c1_mated_toggled(bool checked);
-
-    void on_line_c2_name_lostFocus();
-    void on_sb_c2_stamina_valueChanged(int);
-    void on_sb_c2_speed_valueChanged(int);
-    void on_sb_c2_maxspeed_valueChanged(int);
-    void on_sb_c2_sprint_valueChanged(int);
-    void on_sb_c2_maxsprint_valueChanged(int);
-    void on_cb_c2_sex_currentIndexChanged(int index);
-    void on_cb_c2_type_currentIndexChanged(int index);
-    void on_sb_c2_coop_valueChanged(int);
-    void on_sb_c2_accel_valueChanged(int);
-    void on_sb_c2_intel_valueChanged(int);
-    void on_sb_c2_raceswon_valueChanged(int);
-    void on_sb_c2_pcount_valueChanged(int);
-    void on_cb_c2_mated_toggled(bool checked);
-
-    void on_line_c3_name_lostFocus();
-    void on_sb_c3_stamina_valueChanged(int);
-    void on_sb_c3_speed_valueChanged(int);
-    void on_sb_c3_maxspeed_valueChanged(int);
-    void on_sb_c3_sprint_valueChanged(int);
-    void on_sb_c3_maxsprint_valueChanged(int);
-    void on_cb_c3_sex_currentIndexChanged(int index);
-    void on_cb_c3_type_currentIndexChanged(int index);
-    void on_sb_c3_coop_valueChanged(int);
-    void on_sb_c3_accel_valueChanged(int);
-    void on_sb_c3_intel_valueChanged(int);
-    void on_sb_c3_raceswon_valueChanged(int);
-    void on_sb_c3_pcount_valueChanged(int);
-    void on_cb_c3_mated_toggled(bool checked);
-
-    void on_line_c4_name_lostFocus();
-    void on_sb_c4_stamina_valueChanged(int);
-    void on_sb_c4_speed_valueChanged(int);
-    void on_sb_c4_maxspeed_valueChanged(int);
-    void on_sb_c4_sprint_valueChanged(int);
-    void on_sb_c4_maxsprint_valueChanged(int);
-    void on_cb_c4_sex_currentIndexChanged(int index);
-    void on_cb_c4_type_currentIndexChanged(int index);
-    void on_sb_c4_coop_valueChanged(int);
-    void on_sb_c4_accel_valueChanged(int);
-    void on_sb_c4_intel_valueChanged(int);
-    void on_sb_c4_raceswon_valueChanged(int);
-    void on_sb_c4_pcount_valueChanged(int);
-    void on_cb_c4_mated_toggled(bool checked);
-
-    void on_line_c5_name_lostFocus();
-    void on_sb_c5_stamina_valueChanged(int);
-    void on_sb_c5_speed_valueChanged(int);
-    void on_sb_c5_maxspeed_valueChanged(int);
-    void on_sb_c5_sprint_valueChanged(int);
-    void on_sb_c5_maxsprint_valueChanged(int);
-    void on_cb_c5_sex_currentIndexChanged(int index);
-    void on_cb_c5_type_currentIndexChanged(int index);
-    void on_sb_c5_coop_valueChanged(int);
-    void on_sb_c5_accel_valueChanged(int);
-    void on_sb_c5_intel_valueChanged(int);
-    void on_sb_c5_raceswon_valueChanged(int);
-    void on_sb_c5_pcount_valueChanged(int);
-    void on_cb_c5_mated_toggled(bool checked);
-
-    void on_line_c6_name_lostFocus();
-    void on_sb_c6_stamina_valueChanged(int);
-    void on_sb_c6_speed_valueChanged(int);
-    void on_sb_c6_maxspeed_valueChanged(int);
-    void on_sb_c6_sprint_valueChanged(int);
-    void on_sb_c6_maxsprint_valueChanged(int);
-    void on_cb_c6_sex_currentIndexChanged(int index);
-    void on_cb_c6_type_currentIndexChanged(int index);
-    void on_sb_c6_coop_valueChanged(int);
-    void on_sb_c6_accel_valueChanged(int);
-    void on_sb_c6_intel_valueChanged(int);
-    void on_sb_c6_raceswon_valueChanged(int);
-    void on_sb_c6_pcount_valueChanged(int);
-    void on_cb_c6_mated_toggled(bool checked);
-
-    //The Chocobo pens.
-    void on_combo_pen1_currentIndexChanged(int index);
-    void on_combo_pen2_currentIndexChanged(int index);
-    void on_combo_pen3_currentIndexChanged(int index);
-    void on_combo_pen4_currentIndexChanged(int index);
-/* END CHOCOBO TAB */
-
-    // gui functions functions
-    void guirefresh(void);
-    void charupdate(void);
-    void setarmorslots(void);
-    void setweaponslots(void);
-    void setchar_growth(int caller);
-    void materiaupdate_slot(void);
-    void materiaupdate(void);
-    void itemupdate(void);
-    void chocobo_refresh(void);
-    void clearslot(int rmslot);
-    void setmenu(void);
-    void testdata_refresh(void);
-
-    //menu actions
-
-    //load save items
-    void on_actionNew_Window_triggered();
-
-    void on_actionOpen_Save_File_activated();
-    void loadFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
-
-    void on_actionImport_char_triggered();
-    void on_actionFrom_PSX_Slot_activated();
-    void on_actionFrom_PSV_Slot_activated();
-
-    void on_action_Save_activated();
-    void on_actionSave_File_As_activated();
-    void saveFileFull(QString);//(Vegeta_Ss4) v0.8.3
-    void on_actionExport_MC_triggered();
-    void on_actionExport_VGS_triggered();
-    void on_actionExport_DEX_triggered();
-    void on_actionExport_PC_Save_activated();
-    void on_actionExport_PSX_activated();
-    void on_actionExport_char_triggered();
-
-    void on_actionCopy_Slot_activated();
-    void on_actionPaste_Slot_activated();
-    void on_actionClear_Slot_activated();
-    void on_actionNext_Slot_activated();
-    void on_actionPrevious_Slot_activated();
-    void on_actionShow_Selection_Dialog_activated();
-
-    void on_actionNew_Game_triggered();
-    void on_actionNew_Game_Plus_triggered();
-
-    void on_actionAbout_activated();
-    void on_actionAbout_Qt_activated();
-
-    void on_actionShow_Options_triggered();
-    void on_action_auto_char_growth_triggered(bool checked);
-    void on_action_show_test_data_toggled(bool checked);
-
-    void on_action_Lang_fr_triggered();
-    void on_action_Lang_es_triggered();
-    void on_action_Lang_en_triggered();
-
-    void on_action_Region_JPN_triggered(bool checked);
-    void on_action_Region_JPN_International_triggered(bool checked);
-    void on_action_Region_PAL_Generic_triggered(bool checked);
-    void on_action_Region_PAL_German_triggered(bool checked);
-    void on_action_Region_PAL_Spanish_triggered(bool checked);
-    void on_action_Region_USA_triggered(bool checked);
-
-    void on_actionSlot_01_activated();
-    void on_actionSlot_02_activated();
-    void on_actionSlot_03_activated();
-    void on_actionSlot_04_activated();
-    void on_actionSlot_05_activated();
-    void on_actionSlot_06_activated();
-    void on_actionSlot_07_activated();
-    void on_actionSlot_08_activated();
-    void on_actionSlot_09_activated();
-    void on_actionSlot_10_activated();
-    void on_actionSlot_11_activated();
-    void on_actionSlot_12_activated();
-    void on_actionSlot_13_activated();
-    void on_actionSlot_14_activated();
-    void on_actionSlot_15_activated();
-
-    //party tab
-    void on_btn_cloud_clicked();
-    void on_btn_barret_clicked();
-    void on_btn_tifa_clicked();
-    void on_btn_aeris_clicked();
-    void on_btn_red_clicked();
-    void on_btn_cait_clicked();
-    void on_btn_cid_clicked();
-    void on_btn_yuffie_clicked();
-    void on_btn_vincent_clicked();
-    void on_combo_party1_currentIndexChanged(int index);
-    void on_combo_party2_currentIndexChanged(int index);
-    void on_combo_party3_currentIndexChanged(int index);
-    void on_sb_battles_valueChanged();
-    void on_sb_runs_valueChanged();
-    void on_sb_gp_valueChanged();
-    void on_sb_gil_valueChanged();
-
-    //char stats
-   // void on_cb_id_clicked(bool checked);
+//char stats
     void on_line_name_lostFocus();
     void on_sb_lvl_valueChanged();
     void on_sb_exp_valueChanged();

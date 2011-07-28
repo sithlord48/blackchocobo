@@ -518,7 +518,8 @@ void MainWindow::on_action_Save_activated()
         saveFileFull(filename);
     }
     else{QMessageBox::warning(this,tr("No Save File Loaded"),tr("The Filename is empty"));}
-}//END ACTION_SAVE_ACTIVATED()
+}
+
 void MainWindow::on_actionSave_File_As_activated()
 {QString fileName;
 // check for the type of save loaded and set the output type so we don't save the wrong type, all conversion opperations should be done via an Export function.
@@ -942,7 +943,7 @@ void MainWindow::on_actionExport_DEX_triggered()
 }
 
 /*~~~~~~~~~~~ START CHECKSUM VEGETA~~~~~~~~~~~*/
-void fix_sum(const QString &fileName)
+void MainWindow::fix_sum(const QString &fileName)
 {
     void * memory;
     long file_size;
@@ -992,49 +993,14 @@ void MainWindow::on_actionSlot_12_activated(){s=11; guirefresh();}
 void MainWindow::on_actionSlot_13_activated(){s=12; guirefresh();}
 void MainWindow::on_actionSlot_14_activated(){s=13; guirefresh();}
 void MainWindow::on_actionSlot_15_activated(){s=14; guirefresh();}
+
 void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect;slotselect.setStyleSheet(this->styleSheet()); s=slotselect.exec(); guirefresh();}
 void MainWindow::on_actionClear_Slot_activated(){clearslot(s);  guirefresh();}
 void MainWindow::on_actionPrevious_Slot_activated(){if (s > 0) {s--; guirefresh();}}
 void MainWindow::on_actionNext_Slot_activated(){if (s<14){s++; guirefresh();}}
 void MainWindow::on_actionAbout_activated(){about adialog;  adialog.setStyleSheet(this->styleSheet()); adialog.exec();}
 void MainWindow::on_actionAbout_Qt_activated(){qApp->aboutQt();}
-
-/*~~~~~~~~~~~~LANGUAGE ACTIONS~~~~~~~~~~~~~~*/
-void MainWindow::on_action_Lang_en_triggered()
-{
-    //clear other lang
-    ui->action_Lang_es->setIcon(QIcon(":/icon/es_unsel"));
-    ui->action_Lang_es->setChecked(0);
-    ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
-    ui->action_Lang_fr->setChecked(0);
-    settings.setValue("lang","en");
-    ui->action_Lang_en->setIcon(QIcon(":/icon/us_sel"));
-    QMessageBox::information(this,"Language Changed","You Must Restart For The Language to Change");
-}
-void MainWindow::on_action_Lang_es_triggered()
-{
-    ui->action_Lang_en->setChecked(0);
-    ui->action_Lang_en->setIcon(QIcon(":/icon/us_unsel"));
-    ui->action_Lang_fr->setChecked(0);
-    ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
-    settings.setValue("lang","es");
-    ui->action_Lang_es->setIcon(QIcon(":/icon/es_sel"));
-    QMessageBox::information(this,"Idioma Cambiado","Debe reiniciar Para el cambio de idioma");
-}
-void MainWindow::on_action_Lang_fr_triggered()
-{
-    ui->action_Lang_en->setChecked(0);
-    ui->action_Lang_en->setIcon(QIcon(":/icon/us_unsel"));
-    ui->action_Lang_es->setChecked(0);
-    ui->action_Lang_es->setIcon(QIcon(":/icon/es_unsel"));
-    settings.setValue("lang","fr");
-    ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_sel"));
-    QMessageBox::information(this,"Langue Modifiée","Vous Devez Redemarrer Pour Changer la Langue");
-}
-/*~~~~~~~~~~~END LANGUAGE ACTIONS~~~~~~~~~~*/
-
 void MainWindow::on_actionCopy_Slot_activated(){memcpy(&bufferslot,&ff7.slot[s],0x10f4); buffer_region = ff7.SG_Region_String[s];}
-
 void MainWindow::on_actionPaste_Slot_activated()
 {
     memcpy(&ff7.slot[s],&bufferslot,0x10f4);
@@ -1060,6 +1026,30 @@ void MainWindow::on_actionPaste_Slot_activated()
     }
     guirefresh();
 }
+void MainWindow::on_actionFix_PSX_PAL_Time_triggered()
+{
+    int result=QMessageBox::question(this,tr("Are You Sure?"),tr("The game timer in the PAL version of the game runs at 50/60 the correct speed. This will correct the timer back into real-time.\n You should only do this if you plan to export to pc or ntsc and only once."),QMessageBox::Yes,QMessageBox::Cancel);
+    switch(result)
+    {
+    case QMessageBox::Yes: ff7.slot[s].time = (ff7.slot[s].time*1.2); ff7.slot[s].desc.time = ff7.slot[s].time; break;
+    case QMessageBox::Cancel:break;
+    }
+}
+void MainWindow::on_actionShow_Options_triggered()
+{
+    Options odialog;  odialog.setStyleSheet(this->styleSheet());    odialog.exec();
+    QString style="QWidget#centralWidget{background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
+    style.append(settings.value("color1_r").toString());    style.append(",");
+    style.append(settings.value("color1_g").toString());    style.append(",");
+    style.append(settings.value("color1_b").toString());    style.append(", 255), stop:0.215909 rgba(");
+    style.append(settings.value("color2_r").toString());    style.append(",");
+    style.append(settings.value("color2_g").toString());    style.append(",");
+    style.append(settings.value("color2_b").toString());    style.append(", 255), stop:0.818182 rgba(");
+    style.append(settings.value("color3_r").toString());    style.append(",");
+    style.append(settings.value("color3_g").toString());    style.append(",");
+    style.append(settings.value("color3_b").toString());    style.append(", 255));}");
+    ui->centralWidget->setStyleSheet(style);
+}
 void MainWindow::on_action_auto_char_growth_triggered(bool checked)
 {
     if(checked)
@@ -1074,7 +1064,6 @@ void MainWindow::on_action_auto_char_growth_triggered(bool checked)
         ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_unchecked"));
     }
 }
-
 void MainWindow::on_action_show_test_data_toggled(bool checked)
 {
     if(checked)
@@ -1120,8 +1109,40 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
         ui->action_show_test_data->setIcon(QIcon(":/icon/debug_unsel"));
     }
 }
-/*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
 
+/*~~~~~~~~~~~~LANGUAGE & REGION ACTIONS~~~~~~~~~~~~~~*/
+void MainWindow::on_action_Lang_en_triggered()
+{
+    //clear other lang
+    ui->action_Lang_es->setIcon(QIcon(":/icon/es_unsel"));
+    ui->action_Lang_es->setChecked(0);
+    ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
+    ui->action_Lang_fr->setChecked(0);
+    settings.setValue("lang","en");
+    ui->action_Lang_en->setIcon(QIcon(":/icon/us_sel"));
+    QMessageBox::information(this,"Language Changed","You Must Restart For The Language to Change");
+}
+void MainWindow::on_action_Lang_es_triggered()
+{
+    ui->action_Lang_en->setChecked(0);
+    ui->action_Lang_en->setIcon(QIcon(":/icon/us_unsel"));
+    ui->action_Lang_fr->setChecked(0);
+    ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
+    settings.setValue("lang","es");
+    ui->action_Lang_es->setIcon(QIcon(":/icon/es_sel"));
+    QMessageBox::information(this,"Idioma Cambiado","Debe reiniciar Para el cambio de idioma");
+}
+void MainWindow::on_action_Lang_fr_triggered()
+{
+    ui->action_Lang_en->setChecked(0);
+    ui->action_Lang_en->setIcon(QIcon(":/icon/us_unsel"));
+    ui->action_Lang_es->setChecked(0);
+    ui->action_Lang_es->setIcon(QIcon(":/icon/es_unsel"));
+    settings.setValue("lang","fr");
+    ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_sel"));
+    QMessageBox::information(this,"Langue Modifiée","Vous Devez Redemarrer Pour Changer la Langue");
+}
+/*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_USA_triggered(bool checked)
 {if(!load){
     if(!checked)
@@ -1385,22 +1406,6 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
         ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
     }
 }}
-
-void MainWindow::on_actionShow_Options_triggered()
-{
-    Options odialog;  odialog.setStyleSheet(this->styleSheet());    odialog.exec();
-    QString style="QWidget#centralWidget{background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
-    style.append(settings.value("color1_r").toString());    style.append(",");
-    style.append(settings.value("color1_g").toString());    style.append(",");
-    style.append(settings.value("color1_b").toString());    style.append(", 255), stop:0.215909 rgba(");
-    style.append(settings.value("color2_r").toString());    style.append(",");
-    style.append(settings.value("color2_g").toString());    style.append(",");
-    style.append(settings.value("color2_b").toString());    style.append(", 255), stop:0.818182 rgba(");
-    style.append(settings.value("color3_r").toString());    style.append(",");
-    style.append(settings.value("color3_g").toString());    style.append(",");
-    style.append(settings.value("color3_b").toString());    style.append(", 255));}");
-    ui->centralWidget->setStyleSheet(style);
-}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GUI FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~Char Update~~~~~~~~~~*/
@@ -2731,8 +2736,8 @@ void MainWindow::guirefresh(void)
     ui->line_location->clear();
     for (int loc=0; loc<32;loc++)
     {
-        if (chPC[ff7.slot[s].desc.location[loc]]=='\0'){break;}
-        else{ui->line_location->setText( ui->line_location->text() + QString(chPC[ff7.slot[s].desc.location[loc]]));}
+        if (chPC[ff7.slot[s].location[loc]]=='\0'){break;}
+        else{ui->line_location->setText( ui->line_location->text() + QString(chPC[ff7.slot[s].location[loc]]));}
     }
     ui->sb_map_id->setValue(ff7.slot[s].mapid);
     ui->sb_loc_id->setValue(ff7.slot[s].locationid);
@@ -3115,6 +3120,170 @@ void MainWindow::clearslot(int rmslot)
     memcpy(&ff7.hf[rmslot].sl_footer,temp,ff7.SG_SLOT_FOOTER);// clear the footer..
     ff7.SG_Region_String[rmslot].clear();
 }
+/*~~~~~~~~~Test Data~~~~~~~~~~~*/
+void MainWindow::testdata_refresh()
+{
+    load=true;
+    switch(ui->combo_map_controls->currentIndex())
+    {
+    case 0: ui->slide_world_x->setValue(ff7.slot[s].l_world & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].l_world2& 0x3FFFF);
+            break;
+    case 1: ui->slide_world_x->setValue(ff7.slot[s].tc_world & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].tc_world2& 0x3FFFF);
+            break;
+    case 2: ui->slide_world_x->setValue(ff7.slot[s].bh_world & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].bh_world2& 0x3FFFF);
+            break;
+    case 3: ui->slide_world_x->setValue(ff7.slot[s].sub_world & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].sub_world2& 0x3FFFF);
+            break;
+    case 4: ui->slide_world_x->setValue(ff7.slot[s].uw_world & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].uw_world2& 0x3FFFF);
+            break;
+    case 5: ui->slide_world_x->setValue(ff7.slot[s].durw_world & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].durw_world2& 0x3FFFF);
+            break;
+    case 6: ui->slide_world_x->setValue(ff7.slot[s].ew_world & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].ew_world2& 0x3FFFF);
+            break;
+    }
+    //WORLD TAB
+    ui->leader_x->setValue((ff7.slot[s].l_world) & 0x7FFFF);
+    ui->leader_id->setValue((ff7.slot[s].l_world >> 19)&0x1F);
+    ui->leader_angle->setValue((ff7.slot[s].l_world) >> 24);
+    ui->leader_y->setValue((ff7.slot[s].l_world2) & 0x3FFFF);
+    ui->leader_z->setValue((ff7.slot[s].l_world2) >> 18);
+
+    ui->durw_x->setValue((ff7.slot[s].durw_world) & 0x7FFFF);
+    ui->durw_id->setValue((ff7.slot[s].durw_world >> 19)&0x1F);
+    ui->durw_angle->setValue((ff7.slot[s].durw_world) >> 24);
+    ui->durw_y->setValue((ff7.slot[s].durw_world2) & 0x3FFFF);
+    ui->durw_z->setValue((ff7.slot[s].durw_world2) >> 18);
+
+    ui->ew_x->setValue((ff7.slot[s].ew_world) & 0x7FFFF);
+    ui->ew_id->setValue((ff7.slot[s].ew_world >> 19)&0x1F);
+    ui->ew_angle->setValue((ff7.slot[s].ew_world) >> 24);
+    ui->ew_y->setValue((ff7.slot[s].ew_world2) & 0x3FFFF);
+    ui->ew_z->setValue((ff7.slot[s].ew_world2) >> 18);
+
+    ui->uw_x->setValue((ff7.slot[s].uw_world) & 0x7FFFF);
+    ui->uw_id->setValue((ff7.slot[s].uw_world >> 19)&0x1F);
+    ui->uw_angle->setValue((ff7.slot[s].uw_world) >> 24);
+    ui->uw_y->setValue((ff7.slot[s].uw_world2) & 0x3FFFF);
+    ui->uw_z->setValue((ff7.slot[s].uw_world2) >> 18);
+
+    ui->tc_x->setValue((ff7.slot[s].tc_world) & 0x7FFFF);
+    ui->tc_id->setValue((ff7.slot[s].tc_world >> 19)&0x1F);
+    ui->tc_angle->setValue((ff7.slot[s].tc_world) >> 24);
+    ui->tc_y->setValue((ff7.slot[s].tc_world2) & 0x3FFFF);
+    ui->tc_z->setValue((ff7.slot[s].tc_world2) >> 18);
+
+    ui->bh_x->setValue((ff7.slot[s].bh_world) & 0x7FFFF);
+    ui->bh_id->setValue((ff7.slot[s].bh_world >> 19)&0x1F);
+    ui->bh_angle->setValue((ff7.slot[s].bh_world) >> 24);
+    ui->bh_y->setValue((ff7.slot[s].bh_world2) & 0x3FFFF);
+    ui->bh_z->setValue((ff7.slot[s].bh_world2) >> 18);
+
+    ui->sub_x->setValue((ff7.slot[s].sub_world) & 0x7FFFF);
+    ui->sub_id->setValue((ff7.slot[s].sub_world >> 19)&0x1F);
+    ui->sub_angle->setValue((ff7.slot[s].sub_world) >> 24);
+    ui->sub_y->setValue((ff7.slot[s].sub_world2) & 0x3FFFF);
+    ui->sub_z->setValue((ff7.slot[s].sub_world2) >> 18);
+
+   //TEST TAB
+
+    ui->cb_tut_sub->setChecked(Qt::Unchecked);
+    ui->sb_timer_time_hour->setValue(ff7.slot[s].timer[0]);
+    ui->sb_timer_time_min->setValue(ff7.slot[s].timer[1]);
+    ui->sb_timer_time_sec->setValue(ff7.slot[s].timer[2]);
+
+    ui->sb_b_love_aeris->setValue(ff7.slot[s].b_love.aeris);
+    ui->sb_b_love_tifa->setValue(ff7.slot[s].b_love.tifa);
+    ui->sb_b_love_yuffie->setValue(ff7.slot[s].b_love.yuffie);
+    ui->sb_b_love_barret->setValue(ff7.slot[s].b_love.barret);
+    ui->sb_u_weapon_hp->setValue(ff7.slot[s].u_weapon_hp[0] |(ff7.slot[s].u_weapon_hp[1] << 8) | (ff7.slot[s].u_weapon_hp[2] << 16));
+
+    if((ff7.slot[s].tut_sub)&(1<<2)){ui->cb_tut_sub->setChecked(Qt::Checked);}
+
+    ui->lcdNumber_6->display(ff7.slot[s].tut_sub);
+
+
+
+    if(ff7.slot[s].tut_save == 0x3A){ui->cb_tut_worldsave->setCheckState(Qt::Checked);}
+    else if(ff7.slot[s].tut_save ==0x32){ui->cb_tut_worldsave->setCheckState(Qt::PartiallyChecked);}
+    else{ui->cb_tut_worldsave->setCheckState(Qt::Unchecked);}
+    ui->lcdNumber_7->display(ff7.slot[s].tut_save);
+
+    ui->cb_reg_vinny->setChecked(Qt::Unchecked);
+    if(ff7.slot[s].reg_vinny == 0xFF){ui->cb_reg_vinny->setChecked(Qt::Checked);}
+    ui->lcdNumber_8->display(ff7.slot[s].reg_vinny);
+
+    ui->cb_reg_yuffie->setChecked(Qt::Unchecked);
+    if(ff7.slot[s].reg_yuffie == 0x6F){ui->cb_reg_yuffie->setChecked(Qt::Checked);}
+    ui->lcdNumber_9->display(ff7.slot[s].reg_yuffie);
+
+    if((ff7.slot[s].itemsmask_1)& (1<<0)){ui->cb_itemmask1_1->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_1->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].itemsmask_1)& (1<<1)){ui->cb_itemmask1_2->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_2->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].itemsmask_1)& (1<<2)){ui->cb_itemmask1_3->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_3->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].itemsmask_1)& (1<<3)){ui->cb_itemmask1_4->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_4->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].itemsmask_1)& (1<<4)){ui->cb_itemmask1_5->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_5->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].itemsmask_1)& (1<<5)){ui->cb_itemmask1_6->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_6->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].itemsmask_1)& (1<<6)){ui->cb_itemmask1_7->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_7->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].itemsmask_1)& (1<<7)){ui->cb_itemmask1_8->setChecked(Qt::Checked);}
+    else{ui->cb_itemmask1_8->setChecked(Qt::Unchecked);}
+    ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
+
+
+    if((ff7.slot[s].midgartrainflags)& (1<<0)){ui->cb_midgartrain_1->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_1->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].midgartrainflags)& (1<<1)){ui->cb_midgartrain_2->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_2->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].midgartrainflags)& (1<<2)){ui->cb_midgartrain_3->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_3->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].midgartrainflags)& (1<<3)){ui->cb_midgartrain_4->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_4->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].midgartrainflags)& (1<<4)){ui->cb_midgartrain_5->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_5->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].midgartrainflags)& (1<<5)){ui->cb_midgartrain_6->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_6->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].midgartrainflags)& (1<<6)){ui->cb_midgartrain_7->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_7->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].midgartrainflags)& (1<<7)){ui->cb_midgartrain_8->setChecked(Qt::Checked);}
+    else{ui->cb_midgartrain_8->setChecked(Qt::Unchecked);}
+    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
+
+    if((ff7.slot[s].tut_sub)& (1<<0)){ui->cb_tut_sub_1->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_1->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].tut_sub)& (1<<1)){ui->cb_tut_sub_2->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_2->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].tut_sub)& (1<<2)){ui->cb_tut_sub_3->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_3->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].tut_sub)& (1<<3)){ui->cb_tut_sub_4->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_4->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].tut_sub)& (1<<4)){ui->cb_tut_sub_5->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_5->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].tut_sub)& (1<<5)){ui->cb_tut_sub_6->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_6->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].tut_sub)& (1<<6)){ui->cb_tut_sub_7->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_7->setChecked(Qt::Unchecked);}
+    if((ff7.slot[s].tut_sub)& (1<<7)){ui->cb_tut_sub_8->setChecked(Qt::Checked);}
+    else{ui->cb_tut_sub_8->setChecked(Qt::Unchecked);}
+    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
+
+         if(ff7.slot[s].highwind_buggy ==0x00){ui->combo_highwind_buggy->setCurrentIndex(0);}
+    else if(ff7.slot[s].highwind_buggy ==0x01){ui->combo_highwind_buggy->setCurrentIndex(1);}
+    else if(ff7.slot[s].highwind_buggy ==0x10){ui->combo_highwind_buggy->setCurrentIndex(2);}
+
+    load=false;
+}
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
 void MainWindow::on_btn_cloud_clicked()     {curchar=0; charupdate();ui->btn_cloud->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
 void MainWindow::on_btn_barret_clicked()    {curchar=1; charupdate();ui->btn_barret->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
@@ -3126,7 +3295,10 @@ void MainWindow::on_btn_cait_clicked()      {curchar=6; charupdate();ui->btn_cai
 void MainWindow::on_btn_vincent_clicked()   {curchar=7; charupdate();ui->btn_vincent->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
 void MainWindow::on_btn_cid_clicked()       {curchar=8; charupdate();ui->btn_cid->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_sb_gil_valueChanged(){if(!load){ff7.slot[s].gil = ui->sb_gil->value();   ff7.slot[s].desc.gil = ff7.slot[s].gil;}}
+void MainWindow::on_sb_gil_valueChanged(int value){if(!load){ff7.slot[s].gil = value;   ff7.slot[s].desc.gil = value;}}
+void MainWindow::on_sb_gp_valueChanged(int value){if(!load){ff7.slot[s].gp = value;}}
+void MainWindow::on_sb_battles_valueChanged(int value){if(!load){ff7.slot[s].battles = value;}}
+void MainWindow::on_sb_runs_valueChanged(int value){if(!load){ff7.slot[s].runs = value;}}
 void MainWindow::on_combo_party1_currentIndexChanged(int index)
 {if(!load){
     if(index == 12) //empty char slot?
@@ -3173,9 +3345,6 @@ void MainWindow::on_combo_party3_currentIndexChanged(int index)
     else{ff7.slot[s].party[2] = index;}
     ff7.slot[s].desc.party[2]=ff7.slot[s].party[2];
 }}
-void MainWindow::on_sb_gp_valueChanged(){if(!load){ff7.slot[s].gp = ui->sb_gp->value();}}
-void MainWindow::on_sb_runs_valueChanged(){if(!load){ff7.slot[s].runs = ui->sb_runs->value();}}
-void MainWindow::on_sb_battles_valueChanged(){if(!load){ff7.slot[s].battles = ui->sb_battles->value();}}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~Chocobo Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -3359,11 +3528,11 @@ void MainWindow::on_list_chars_unlocked_itemChanged()
     if(ui->list_chars_unlocked->currentItem()->checkState() ==Qt::Checked){ff7.slot[s].unlockedchars |= (1<<j);}
     else{ff7.slot[s].unlockedchars &= ~(1<<j);}
 }}
-void MainWindow::on_sb_curdisc_valueChanged(){if(!load){ff7.slot[s].disc = ui->sb_curdisc->value();}}
-void MainWindow::on_sb_love_barret_valueChanged(){if(!load){ff7.slot[s].love.barret = ui->sb_love_barret->value();}}
-void MainWindow::on_sb_love_aeris_valueChanged(){if(!load){ff7.slot[s].love.aeris = ui->sb_love_aeris->value();}}
-void MainWindow::on_sb_love_tifa_valueChanged(){if(!load){ff7.slot[s].love.tifa = ui->sb_love_tifa->value();}}
-void MainWindow::on_sb_love_yuffie_valueChanged(){if(!load){ff7.slot[s].love.yuffie = ui->sb_love_yuffie->value();}}
+void MainWindow::on_sb_curdisc_valueChanged(int value){if(!load){ff7.slot[s].disc = value;}}
+void MainWindow::on_sb_love_barret_valueChanged(int value){if(!load){ff7.slot[s].love.barret = value;}}
+void MainWindow::on_sb_love_aeris_valueChanged(int value){if(!load){ff7.slot[s].love.aeris = value;}}
+void MainWindow::on_sb_love_tifa_valueChanged(int value){if(!load){ff7.slot[s].love.tifa = value;}}
+void MainWindow::on_sb_love_yuffie_valueChanged(int value){if(!load){ff7.slot[s].love.yuffie = value;}}
 
 void MainWindow::on_sb_time_hour_valueChanged(int value)
 {
@@ -3520,7 +3689,7 @@ void MainWindow::on_combo_add_mat_currentIndexChanged(int index)
     if(ui->combo_add_mat->currentText() ==tr("DON'T USE"))// this is a placeholder materia
     {
         QMessageBox::information(this,tr("Empty Materia"),tr("Place holder Materia Detected\n Remember 16777215 AP = master"));
-        guirefresh();// clean up the gui.
+        materiaupdate();//clean up the materia.
         return; //we are done here.
     }
         ui->combo_mat_type->setCurrentIndex(Materias[index].type);
@@ -3639,16 +3808,19 @@ void MainWindow::on_tbl_location_field_itemSelectionChanged()
     ui->tbl_location_field->setCurrentCell(ui->tbl_location_field->currentRow(),5);
     ui->sb_coordz->setValue(ui->tbl_location_field->currentItem()->text().toInt());
 }
-void MainWindow::on_sb_map_id_valueChanged(){if(!load){ff7.slot[s].mapid= ui->sb_map_id->value();}}
-void MainWindow::on_sb_loc_id_valueChanged(){if(!load){ff7.slot[s].locationid = ui->sb_loc_id->value();}}
-void MainWindow::on_sb_coordx_valueChanged(){if(!load){ff7.slot[s].coord.x = ui->sb_coordx->value();}}
-void MainWindow::on_sb_coordy_valueChanged(){if(!load){ff7.slot[s].coord.y = ui->sb_coordy->value();}}
-void MainWindow::on_sb_coordz_valueChanged(){if(!load){ff7.slot[s].coord.z = ui->sb_coordz->value();}}
+void MainWindow::on_sb_map_id_valueChanged(int value){if(!load){ff7.slot[s].mapid= value;}}
+void MainWindow::on_sb_loc_id_valueChanged(int value){if(!load){ff7.slot[s].locationid = value;}}
+void MainWindow::on_sb_coordx_valueChanged(int value){if(!load){ff7.slot[s].coord.x = value;}}
+void MainWindow::on_sb_coordy_valueChanged(int value){if(!load){ff7.slot[s].coord.y = value;}}
+void MainWindow::on_sb_coordz_valueChanged(int value){if(!load){ff7.slot[s].coord.z = value;}}
 
-void MainWindow::on_line_location_textChanged()
+void MainWindow::on_line_location_textChanged(QString text)
 {if (!load){
+    for (int i=0;i<24;i++){ff7.slot[s].location[i] =0xFF;}
+    for (int i=0;i<text.size();i++){ff7.slot[s].location[i] = chFF7[text.at(i).toAscii()];}
+    //and the description.
     for (int i=0;i<32;i++){ff7.slot[s].desc.location[i] =0xFF;}
-    for (int i=0;i<ui->line_location->text().size();i++){ff7.slot[s].desc.location[i] = chFF7[ui->line_location->text().at(i).toAscii()];}
+    for (int i=0;i<text.size();i++){ff7.slot[s].desc.location[i] = chFF7[text.at(i).toAscii()];}
 }}
 
 //char stats tab
@@ -4679,170 +4851,6 @@ void MainWindow::on_btn_remove_all_stolen_clicked()
     guirefresh();
 }
 
-void MainWindow::testdata_refresh()
-{
-    load=true;
-    switch(ui->combo_map_controls->currentIndex())
-    {
-    case 0: ui->slide_world_x->setValue(ff7.slot[s].l_world & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].l_world2& 0x3FFFF);
-            break;
-    case 1: ui->slide_world_x->setValue(ff7.slot[s].tc_world & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].tc_world2& 0x3FFFF);
-            break;
-    case 2: ui->slide_world_x->setValue(ff7.slot[s].bh_world & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].bh_world2& 0x3FFFF);
-            break;
-    case 3: ui->slide_world_x->setValue(ff7.slot[s].sub_world & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].sub_world2& 0x3FFFF);
-            break;
-    case 4: ui->slide_world_x->setValue(ff7.slot[s].uw_world & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].uw_world2& 0x3FFFF);
-            break;
-    case 5: ui->slide_world_x->setValue(ff7.slot[s].durw_world & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].durw_world2& 0x3FFFF);
-            break;
-    case 6: ui->slide_world_x->setValue(ff7.slot[s].ew_world & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].ew_world2& 0x3FFFF);
-            break;
-    }
-    //WORLD TAB
-    ui->leader_x->setValue((ff7.slot[s].l_world) & 0x7FFFF);
-    ui->leader_id->setValue((ff7.slot[s].l_world >> 19)&0x1F);
-    ui->leader_angle->setValue((ff7.slot[s].l_world) >> 24);
-    ui->leader_y->setValue((ff7.slot[s].l_world2) & 0x3FFFF);
-    ui->leader_z->setValue((ff7.slot[s].l_world2) >> 18);
-
-    ui->durw_x->setValue((ff7.slot[s].durw_world) & 0x7FFFF);
-    ui->durw_id->setValue((ff7.slot[s].durw_world >> 19)&0x1F);
-    ui->durw_angle->setValue((ff7.slot[s].durw_world) >> 24);
-    ui->durw_y->setValue((ff7.slot[s].durw_world2) & 0x3FFFF);
-    ui->durw_z->setValue((ff7.slot[s].durw_world2) >> 18);
-
-    ui->ew_x->setValue((ff7.slot[s].ew_world) & 0x7FFFF);
-    ui->ew_id->setValue((ff7.slot[s].ew_world >> 19)&0x1F);
-    ui->ew_angle->setValue((ff7.slot[s].ew_world) >> 24);
-    ui->ew_y->setValue((ff7.slot[s].ew_world2) & 0x3FFFF);
-    ui->ew_z->setValue((ff7.slot[s].ew_world2) >> 18);
-
-    ui->uw_x->setValue((ff7.slot[s].uw_world) & 0x7FFFF);
-    ui->uw_id->setValue((ff7.slot[s].uw_world >> 19)&0x1F);
-    ui->uw_angle->setValue((ff7.slot[s].uw_world) >> 24);
-    ui->uw_y->setValue((ff7.slot[s].uw_world2) & 0x3FFFF);
-    ui->uw_z->setValue((ff7.slot[s].uw_world2) >> 18);
-
-    ui->tc_x->setValue((ff7.slot[s].tc_world) & 0x7FFFF);
-    ui->tc_id->setValue((ff7.slot[s].tc_world >> 19)&0x1F);
-    ui->tc_angle->setValue((ff7.slot[s].tc_world) >> 24);
-    ui->tc_y->setValue((ff7.slot[s].tc_world2) & 0x3FFFF);
-    ui->tc_z->setValue((ff7.slot[s].tc_world2) >> 18);
-
-    ui->bh_x->setValue((ff7.slot[s].bh_world) & 0x7FFFF);
-    ui->bh_id->setValue((ff7.slot[s].bh_world >> 19)&0x1F);
-    ui->bh_angle->setValue((ff7.slot[s].bh_world) >> 24);
-    ui->bh_y->setValue((ff7.slot[s].bh_world2) & 0x3FFFF);
-    ui->bh_z->setValue((ff7.slot[s].bh_world2) >> 18);
-
-    ui->sub_x->setValue((ff7.slot[s].sub_world) & 0x7FFFF);
-    ui->sub_id->setValue((ff7.slot[s].sub_world >> 19)&0x1F);
-    ui->sub_angle->setValue((ff7.slot[s].sub_world) >> 24);
-    ui->sub_y->setValue((ff7.slot[s].sub_world2) & 0x3FFFF);
-    ui->sub_z->setValue((ff7.slot[s].sub_world2) >> 18);
-
-   //TEST TAB
-
-    ui->cb_tut_sub->setChecked(Qt::Unchecked);
-    ui->sb_timer_time_hour->setValue(ff7.slot[s].timer[0]);
-    ui->sb_timer_time_min->setValue(ff7.slot[s].timer[1]);
-    ui->sb_timer_time_sec->setValue(ff7.slot[s].timer[2]);
-
-    ui->sb_b_love_aeris->setValue(ff7.slot[s].b_love.aeris);
-    ui->sb_b_love_tifa->setValue(ff7.slot[s].b_love.tifa);
-    ui->sb_b_love_yuffie->setValue(ff7.slot[s].b_love.yuffie);
-    ui->sb_b_love_barret->setValue(ff7.slot[s].b_love.barret);
-    ui->sb_u_weapon_hp->setValue(ff7.slot[s].u_weapon_hp[0] |(ff7.slot[s].u_weapon_hp[1] << 8) | (ff7.slot[s].u_weapon_hp[2] << 16));
-
-    if((ff7.slot[s].tut_sub)&(1<<2)){ui->cb_tut_sub->setChecked(Qt::Checked);}
-
-    ui->lcdNumber_6->display(ff7.slot[s].tut_sub);
-
-
-
-    if(ff7.slot[s].tut_save == 0x3A){ui->cb_tut_worldsave->setCheckState(Qt::Checked);}
-    else if(ff7.slot[s].tut_save ==0x32){ui->cb_tut_worldsave->setCheckState(Qt::PartiallyChecked);}
-    else{ui->cb_tut_worldsave->setCheckState(Qt::Unchecked);}
-    ui->lcdNumber_7->display(ff7.slot[s].tut_save);
-
-    ui->cb_reg_vinny->setChecked(Qt::Unchecked);
-    if(ff7.slot[s].reg_vinny == 0xFF){ui->cb_reg_vinny->setChecked(Qt::Checked);}
-    ui->lcdNumber_8->display(ff7.slot[s].reg_vinny);
-
-    ui->cb_reg_yuffie->setChecked(Qt::Unchecked);
-    if(ff7.slot[s].reg_yuffie == 0x6F){ui->cb_reg_yuffie->setChecked(Qt::Checked);}
-    ui->lcdNumber_9->display(ff7.slot[s].reg_yuffie);
-
-    if((ff7.slot[s].itemsmask_1)& (1<<0)){ui->cb_itemmask1_1->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_1->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].itemsmask_1)& (1<<1)){ui->cb_itemmask1_2->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_2->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].itemsmask_1)& (1<<2)){ui->cb_itemmask1_3->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_3->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].itemsmask_1)& (1<<3)){ui->cb_itemmask1_4->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_4->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].itemsmask_1)& (1<<4)){ui->cb_itemmask1_5->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_5->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].itemsmask_1)& (1<<5)){ui->cb_itemmask1_6->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_6->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].itemsmask_1)& (1<<6)){ui->cb_itemmask1_7->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_7->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].itemsmask_1)& (1<<7)){ui->cb_itemmask1_8->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_8->setChecked(Qt::Unchecked);}
-    ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-
-
-    if((ff7.slot[s].midgartrainflags)& (1<<0)){ui->cb_midgartrain_1->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_1->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].midgartrainflags)& (1<<1)){ui->cb_midgartrain_2->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_2->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].midgartrainflags)& (1<<2)){ui->cb_midgartrain_3->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_3->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].midgartrainflags)& (1<<3)){ui->cb_midgartrain_4->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_4->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].midgartrainflags)& (1<<4)){ui->cb_midgartrain_5->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_5->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].midgartrainflags)& (1<<5)){ui->cb_midgartrain_6->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_6->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].midgartrainflags)& (1<<6)){ui->cb_midgartrain_7->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_7->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].midgartrainflags)& (1<<7)){ui->cb_midgartrain_8->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_8->setChecked(Qt::Unchecked);}
-    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-
-    if((ff7.slot[s].tut_sub)& (1<<0)){ui->cb_tut_sub_1->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_1->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].tut_sub)& (1<<1)){ui->cb_tut_sub_2->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_2->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].tut_sub)& (1<<2)){ui->cb_tut_sub_3->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_3->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].tut_sub)& (1<<3)){ui->cb_tut_sub_4->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_4->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].tut_sub)& (1<<4)){ui->cb_tut_sub_5->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_5->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].tut_sub)& (1<<5)){ui->cb_tut_sub_6->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_6->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].tut_sub)& (1<<6)){ui->cb_tut_sub_7->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_7->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].tut_sub)& (1<<7)){ui->cb_tut_sub_8->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_8->setChecked(Qt::Unchecked);}
-    ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
-
-         if(ff7.slot[s].highwind_buggy ==0x00){ui->combo_highwind_buggy->setCurrentIndex(0);}
-    else if(ff7.slot[s].highwind_buggy ==0x01){ui->combo_highwind_buggy->setCurrentIndex(1);}
-    else if(ff7.slot[s].highwind_buggy ==0x10){ui->combo_highwind_buggy->setCurrentIndex(2);}
-
-    load=false;
-}//end of testdata_refresh()
-
 void MainWindow::on_sb_b_love_aeris_valueChanged(int value){if(!load){ff7.slot[s].b_love.aeris = value;}}
 void MainWindow::on_sb_b_love_tifa_valueChanged(int value){if(!load){ff7.slot[s].b_love.tifa = value;}}
 void MainWindow::on_sb_b_love_yuffie_valueChanged(int value){if(!load){ff7.slot[s].b_love.yuffie = value;}}
@@ -5431,6 +5439,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 2:
@@ -5451,6 +5462,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 3:
@@ -5471,6 +5485,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 4:
@@ -5491,6 +5508,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 5:
@@ -5511,6 +5531,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 6:
@@ -5531,6 +5554,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 7:
@@ -5551,6 +5577,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 8:
@@ -5571,6 +5600,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 9:
@@ -5591,6 +5623,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 10:
@@ -5611,6 +5646,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 11:
@@ -5631,6 +5669,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 12:
@@ -5651,6 +5692,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 13:
@@ -5671,6 +5715,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 14:
@@ -5691,6 +5738,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 15:
@@ -5711,6 +5761,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 16:
@@ -5731,6 +5784,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 17:
@@ -5751,6 +5807,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 18:
@@ -5771,6 +5830,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 19:
@@ -5791,6 +5853,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 20:
@@ -5811,6 +5876,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 21:
@@ -5831,6 +5899,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 22:
@@ -5851,6 +5922,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 23:
@@ -5871,6 +5945,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 24:
@@ -5891,6 +5968,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 25:
@@ -5911,6 +5991,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 26:
@@ -5931,6 +6014,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 27:
@@ -5951,6 +6037,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 28:
@@ -5971,6 +6060,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 29:
@@ -5991,6 +6083,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 30:
@@ -6011,6 +6106,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 31:
@@ -6031,6 +6129,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 32:
@@ -6051,6 +6152,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 33:
@@ -6071,6 +6175,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 34:
@@ -6091,6 +6198,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 35:
@@ -6111,6 +6221,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 36:
@@ -6131,6 +6244,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 37:
@@ -6151,6 +6267,9 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  case 38:
@@ -6172,6 +6291,33 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
+    }
+    break;
+ case 39:
+    rows=sizeof(ff7.slot[s].z_39);
+    ui->tbl_unknown->setRowCount(rows);
+
+    for(int i=0;i<rows;i++)
+    {
+        text.setNum(i);
+        newItem = new QTableWidgetItem(text,0);
+        ui->tbl_unknown->setItem(i,0,newItem);
+
+        value = ff7.slot[s].z_39[i];
+        newItem = new QTableWidgetItem(text.number(value,16),0);
+        ui->tbl_unknown->setItem(i,1,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_unknown->setItem(i,2,newItem);
+
+        newItem = new QTableWidgetItem(text.number(value,2),0);
+        ui->tbl_unknown->setItem(i,3,newItem);
+
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_unknown->setItem(i,4,newItem);
     }
     break;
  };
@@ -6181,6 +6327,7 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
      ui->tbl_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
      ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
      ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+     ui->tbl_unknown->item(i,4)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
  }
     load=false;
 }
@@ -6228,5 +6375,6 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
       case 36: ff7.slot[s].z_36[item->row()]= item->text().toInt(); break;
       case 37: ff7.slot[s].z_37[item->row()]= item->text().toInt(); break;
       case 38: ff7.slot[s].z_38[item->row()]= item->text().toInt(); break;
+      case 39: ff7.slot[s].z_39[item->row()]= item->text().toInt(); break;
       }
 }}
