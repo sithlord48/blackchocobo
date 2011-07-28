@@ -444,9 +444,11 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 chocobonames[6][6];  // [0x0EC4] <-OK Chocobo names
     quint16 chocostaminas[6];   // [0x0EE8] Chocobo staminas 12 bytes
     quint8 reg_vinny;           // [0x0EF4] 0xFF for true 0xFB false (vincent a regualar?)
-    quint8 z_34[52];            // [0x0EF5] UNKNOWN DATA
+    quint8 z_34[23];            // [0x0EF5] UNKNOWN DATA
+    quint8 location[24];        // [0x0F0C] Location String
+    quint8 z_35[5];             // [0x0F24] UNKNOWN DATA
     quint8 tut_save;            // [0x0F29] Have we seen save tut ? 0x3A true , 0x32 false
-    quint8 z_35[50];            // [0x0F2A] UNKNOWN DATA
+    quint8 z_36[50];            // [0x0F2A] UNKNOWN DATA
     quint32 l_world;            // [0x0F5C] coords of the leader on the world map part 1 (X, id, angle)
     quint32 l_world2;           // [0x0F60] leader coords part 2 (Y,Z)
     quint32 uw_world;           // [0x0F64] unknown? coords part 1
@@ -461,18 +463,18 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint32 durw_world2;        // [0x0F8C] Diamond/ Ultimate And Ruby Weapons Coords.
     quint32 ew_world;           // [0x0F90] emerald?
     quint32 ew_world2;          // [0x0F94] emerald2?
-    quint8 z_36[240];           // [0x0F84] UNKNOWN (Start of more coords.. )
+    quint8 z_37[240];           // [0x0F84] UNKNOWN (Start of more coords.. )
     FF7CHOCOBO choco56[2];      // [0x1084] Chocobo slots 5-6
     quint16 phsmask;            // [0x10A4] who is allowed in the phs
     quint16 unlockedchars;      // [0x10A6] who is visible in the phs
-    quint8 z_37[48];            // [0x10A8] UNKNOWN DATA
+    quint8 z_38[48];            // [0x10A8] UNKNOWN DATA
     quint8 battlespeed;         // [0x10D8] Battle Speed
     quint8 battlemspeed;        // [0x10D9] Battle Message Speed
     quint8 options1;            // [0x10DA] Options 1
     quint8 options2;            // [0x10DB] Options 2
     quint8 controller_map[16];  // [0x10DC] controller mapping?
     quint8 fieldmspeed;         // [0x10EC] Message Speed On field
-    quint8 z_38[7];             // [0x10ED] UNKNOWN DATA
+    quint8 z_39[7];             // [0x10ED] UNKNOWN DATA
 }__attribute__((__packed__));
 /* FF7HEADFOOT FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
     struct FF7HEADFOOT {

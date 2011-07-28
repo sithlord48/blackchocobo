@@ -4705,6 +4705,23 @@ Values can Range From 0 - 255</source>
         <source>Char</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>z_39</source>
+        <translation type="unfinished">z_39</translation>
+    </message>
+    <message>
+        <source>Fix PSX PAL Time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Are You Sure?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The game timer in the PAL version of the game runs at 50/60 the correct speed. This will correct the timer back into real-time.
+ You should only do this if you plan to export to pc or ntsc and only once.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -6760,15 +6777,19 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>SlotSelect + Errbox Dialogs Inherit style from caller</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Fixed: Use the Action for showing Slot select dialog.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Fixed: Chocobo Name Editable again</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Optionally Correct Psx PAL Time Bug</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Dialogs Inherit style.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

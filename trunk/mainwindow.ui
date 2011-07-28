@@ -22404,7 +22404,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <property name="minimumSize">
                   <size>
                    <width>57</width>
-                   <height>18</height>
+                   <height>16</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -26066,6 +26066,11 @@ p, li { white-space: pre-wrap; }
                    <string>z_38</string>
                   </property>
                  </item>
+                 <item>
+                  <property name="text">
+                   <string>z_39</string>
+                  </property>
+                 </item>
                 </widget>
                </item>
               </layout>
@@ -26254,6 +26259,7 @@ Values can Range From 0 - 255</string>
     </widget>
     <addaction name="action_auto_char_growth"/>
     <addaction name="action_show_test_data"/>
+    <addaction name="actionFix_PSX_PAL_Time"/>
     <addaction name="separator"/>
     <addaction name="menuLang"/>
     <addaction name="separator"/>
@@ -27001,6 +27007,15 @@ Values can Range From 0 - 255</string>
    </property>
    <property name="text">
     <string>New Window</string>
+   </property>
+  </action>
+  <action name="actionFix_PSX_PAL_Time">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/fix_time</normaloff>:/icon/fix_time</iconset>
+   </property>
+   <property name="text">
+    <string>Fix PSX PAL Time</string>
    </property>
   </action>
  </widget>
