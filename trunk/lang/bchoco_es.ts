@@ -1964,10 +1964,6 @@
         <translation>Media</translation>
     </message>
     <message>
-        <source>Add Chocobos To Stables In Order!</source>
-        <translation>¡Añade en orden los chocobos en los establos!</translation>
-    </message>
-    <message>
         <source>Stables Owned</source>
         <translation>Establos en Posesión</translation>
     </message>
@@ -3512,18 +3508,6 @@
         <translation>Puntos de pelea de amor</translation>
     </message>
     <message>
-        <source>Remove ALL</source>
-        <translation>Eliminar TODO</translation>
-    </message>
-    <message>
-        <source>Materia </source>
-        <translation>Materia</translation>
-    </message>
-    <message>
-        <source>Stolen Materia</source>
-        <translation>Materia Robada</translation>
-    </message>
-    <message>
         <source>Ultimate Weapons Hp</source>
         <translation>PG de Arma Última</translation>
     </message>
@@ -4720,6 +4704,22 @@ Values can Range From 0 - 255</source>
     <message>
         <source>The game timer in the PAL version of the game runs at 50/60 the correct speed. This will correct the timer back into real-time.
  You should only do this if you plan to export to pc or ntsc and only once.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add One Of Each Mastered Materia </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove ALL Materia </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checked Stables Are Occupied Uncheck Stable to Empty Stable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear All Stolen Materia</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

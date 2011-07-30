@@ -141,7 +141,12 @@ private slots://try to keep these in the same order as the .cpp file
     void on_combo_party3_currentIndexChanged(int index);
     /*Chocobo Tab*/
     void on_sb_stables_owned_valueChanged(int);
-    void on_sb_stables_occupied_valueChanged(int);
+    void on_box_stable1_toggled(bool checked);
+    void on_box_stable2_toggled(bool checked);
+    void on_box_stable3_toggled(bool checked);
+    void on_box_stable4_toggled(bool checked);
+    void on_box_stable5_toggled(bool checked);
+    void on_box_stable6_toggled(bool checked);
     /*Chocobo Stall #1*/
     void on_line_c1_name_lostFocus();
     void on_sb_c1_stamina_valueChanged(int);
@@ -516,6 +521,8 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_donprog_valueChanged(int );
     void on_combo_z_var_currentIndexChanged(int);
     void on_tbl_unknown_itemChanged(QTableWidgetItem* item);
+
+    void on_btn_add_all_materia_clicked();
 
 };
 #endif // MAINWINDOW_H
