@@ -161,6 +161,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_c1_intel_valueChanged(int);
     void on_sb_c1_raceswon_valueChanged(int);
     void on_sb_c1_pcount_valueChanged(int);
+    void on_sb_c1_personality_valueChanged(int);
     void on_cb_c1_mated_toggled(bool checked);
     /*Chocobo Stall #2*/
     void on_line_c2_name_lostFocus();
@@ -176,6 +177,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_c2_intel_valueChanged(int);
     void on_sb_c2_raceswon_valueChanged(int);
     void on_sb_c2_pcount_valueChanged(int);
+    void on_sb_c2_personality_valueChanged(int);
     void on_cb_c2_mated_toggled(bool checked);
     /*Chocobo Stall #3*/
     void on_line_c3_name_lostFocus();
@@ -191,6 +193,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_c3_intel_valueChanged(int);
     void on_sb_c3_raceswon_valueChanged(int);
     void on_sb_c3_pcount_valueChanged(int);
+    void on_sb_c3_personality_valueChanged(int);
     void on_cb_c3_mated_toggled(bool checked);
     /*Chocobo Stall #4*/
     void on_line_c4_name_lostFocus();
@@ -206,6 +209,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_c4_intel_valueChanged(int);
     void on_sb_c4_raceswon_valueChanged(int);
     void on_sb_c4_pcount_valueChanged(int);
+    void on_sb_c4_personality_valueChanged(int);
     void on_cb_c4_mated_toggled(bool checked);
     /*Chocobo Stall #5*/
     void on_line_c5_name_lostFocus();
@@ -221,6 +225,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_c5_intel_valueChanged(int);
     void on_sb_c5_raceswon_valueChanged(int);
     void on_sb_c5_pcount_valueChanged(int);
+    void on_sb_c5_personality_valueChanged(int);
     void on_cb_c5_mated_toggled(bool checked);
     /*Chocobo Stall #6*/
     void on_line_c6_name_lostFocus();
@@ -236,6 +241,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_c6_intel_valueChanged(int);
     void on_sb_c6_raceswon_valueChanged(int);
     void on_sb_c6_pcount_valueChanged(int);
+    void on_sb_c6_personality_valueChanged(int);
     void on_cb_c6_mated_toggled(bool checked);
 
     //The Chocobo pens.
@@ -523,6 +529,5 @@ private slots://try to keep these in the same order as the .cpp file
     void on_tbl_unknown_itemChanged(QTableWidgetItem* item);
 
     void on_btn_add_all_materia_clicked();
-
 };
 #endif // MAINWINDOW_H

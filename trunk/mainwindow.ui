@@ -10353,7 +10353,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>1458</width>
-             <height>331</height>
+             <height>328</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -11288,7 +11288,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="sb_c1_personality">
+                  <widget class="QComboBox" name="cb_c1_personality">
                    <property name="enabled">
                     <bool>false</bool>
                    </property>
@@ -11305,6 +11305,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                   </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="sb_c1_personality"/>
                  </item>
                 </layout>
                </item>
@@ -12230,7 +12233,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="sb_c2_personality">
+                  <widget class="QComboBox" name="cb_c2_personality">
                    <property name="enabled">
                     <bool>false</bool>
                    </property>
@@ -12247,6 +12250,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                   </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="sb_c2_personality"/>
                  </item>
                 </layout>
                </item>
@@ -13163,7 +13169,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="sb_c3_personality">
+                  <widget class="QComboBox" name="cb_c3_personality">
                    <property name="enabled">
                     <bool>false</bool>
                    </property>
@@ -13180,6 +13186,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                   </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="sb_c3_personality"/>
                  </item>
                 </layout>
                </item>
@@ -14096,7 +14105,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="sb_c4_personality">
+                  <widget class="QComboBox" name="cb_c4_personality">
                    <property name="enabled">
                     <bool>false</bool>
                    </property>
@@ -14113,6 +14122,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                   </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="sb_c4_personality"/>
                  </item>
                 </layout>
                </item>
@@ -15032,7 +15044,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="sb_c5_personality">
+                  <widget class="QComboBox" name="cb_c5_personality">
                    <property name="enabled">
                     <bool>false</bool>
                    </property>
@@ -15049,6 +15061,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                   </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="sb_c5_personality"/>
                  </item>
                 </layout>
                </item>
@@ -15968,7 +15983,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="sb_c6_personality">
+                  <widget class="QComboBox" name="cb_c6_personality">
                    <property name="enabled">
                     <bool>false</bool>
                    </property>
@@ -15985,6 +16000,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                   </widget>
+                 </item>
+                 <item>
+                  <widget class="QSpinBox" name="sb_c6_personality"/>
                  </item>
                 </layout>
                </item>
@@ -16647,6 +16665,11 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <row>
                <property name="text">
                 <string>46</string>
+               </property>
+              </row>
+              <row>
+               <property name="text">
+                <string>47</string>
                </property>
               </row>
               <column>
@@ -18117,6 +18140,36 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <item row="47" column="5">
                <property name="text">
                 <string>243</string>
+               </property>
+              </item>
+              <item row="48" column="0">
+               <property name="text">
+                <string>Chocobo Ranch</string>
+               </property>
+              </item>
+              <item row="48" column="1">
+               <property name="text">
+                <string>1</string>
+               </property>
+              </item>
+              <item row="48" column="2">
+               <property name="text">
+                <string>345</string>
+               </property>
+              </item>
+              <item row="48" column="3">
+               <property name="text">
+                <string>65535</string>
+               </property>
+              </item>
+              <item row="48" column="4">
+               <property name="text">
+                <string>64960</string>
+               </property>
+              </item>
+              <item row="48" column="5">
+               <property name="text">
+                <string>61</string>
                </property>
               </item>
              </widget>
@@ -27163,7 +27216,7 @@ Values can Range From 0 - 255</string>
   <tabstop>sb_c1_pcount</tabstop>
   <tabstop>sb_c1_coop</tabstop>
   <tabstop>sb_c1_intel</tabstop>
-  <tabstop>sb_c1_personality</tabstop>
+  <tabstop>cb_c1_personality</tabstop>
   <tabstop>line_c2_name</tabstop>
   <tabstop>cb_c2_type</tabstop>
   <tabstop>cb_c2_sex</tabstop>
@@ -27177,7 +27230,7 @@ Values can Range From 0 - 255</string>
   <tabstop>sb_c2_pcount</tabstop>
   <tabstop>sb_c2_coop</tabstop>
   <tabstop>sb_c2_intel</tabstop>
-  <tabstop>sb_c2_personality</tabstop>
+  <tabstop>cb_c2_personality</tabstop>
   <tabstop>line_c3_name</tabstop>
   <tabstop>cb_c3_type</tabstop>
   <tabstop>cb_c3_sex</tabstop>
@@ -27191,7 +27244,7 @@ Values can Range From 0 - 255</string>
   <tabstop>sb_c3_pcount</tabstop>
   <tabstop>sb_c3_coop</tabstop>
   <tabstop>sb_c3_intel</tabstop>
-  <tabstop>sb_c3_personality</tabstop>
+  <tabstop>cb_c3_personality</tabstop>
   <tabstop>combo_pen1</tabstop>
   <tabstop>combo_pen3</tabstop>
   <tabstop>combo_pen2</tabstop>
@@ -27209,7 +27262,7 @@ Values can Range From 0 - 255</string>
   <tabstop>sb_c4_pcount</tabstop>
   <tabstop>sb_c4_coop</tabstop>
   <tabstop>sb_c4_intel</tabstop>
-  <tabstop>sb_c4_personality</tabstop>
+  <tabstop>cb_c4_personality</tabstop>
   <tabstop>line_c5_name</tabstop>
   <tabstop>cb_c5_type</tabstop>
   <tabstop>cb_c5_sex</tabstop>
@@ -27223,7 +27276,7 @@ Values can Range From 0 - 255</string>
   <tabstop>sb_c5_pcount</tabstop>
   <tabstop>sb_c5_coop</tabstop>
   <tabstop>sb_c5_intel</tabstop>
-  <tabstop>sb_c5_personality</tabstop>
+  <tabstop>cb_c5_personality</tabstop>
   <tabstop>line_c6_name</tabstop>
   <tabstop>cb_c6_type</tabstop>
   <tabstop>cb_c6_sex</tabstop>
@@ -27237,7 +27290,7 @@ Values can Range From 0 - 255</string>
   <tabstop>sb_c6_pcount</tabstop>
   <tabstop>sb_c6_coop</tabstop>
   <tabstop>sb_c6_intel</tabstop>
-  <tabstop>sb_c6_personality</tabstop>
+  <tabstop>cb_c6_personality</tabstop>
   <tabstop>line_location</tabstop>
   <tabstop>sb_map_id</tabstop>
   <tabstop>sb_loc_id</tabstop>

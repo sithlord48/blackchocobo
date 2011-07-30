@@ -4722,6 +4722,26 @@ Values can Range From 0 - 255</source>
         <source>Clear All Stolen Materia</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Chocobo Ranch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>345</source>
+        <translation type="unfinished">345</translation>
+    </message>
+    <message>
+        <source>65535</source>
+        <translation type="unfinished">65535</translation>
+    </message>
+    <message>
+        <source>64960</source>
+        <translation type="unfinished">64960</translation>
+    </message>
+    <message>
+        <source>61</source>
+        <translation type="unfinished">61</translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -6790,6 +6810,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Dialogs Inherit style.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Toggle Each Stable Occupied Flag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Location &quot;Chocobo Ranch&quot;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
