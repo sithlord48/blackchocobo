@@ -2356,8 +2356,8 @@ void MainWindow::materiaupdate(void)
     QTableWidgetItem *newItem;
     int j= ui->tbl_materia->currentRow();
     ui->tbl_materia->reset();
-    ui->tbl_materia->setColumnWidth(0,(ui->tbl_materia->width()-80));
-    ui->tbl_materia->setColumnWidth(1,60);
+    ui->tbl_materia->setColumnWidth(0,(ui->tbl_materia->width()*.65));
+    ui->tbl_materia->setColumnWidth(1,(ui->tbl_materia->width()*.25));
     ui->tbl_materia->setRowCount(200);
 
     for(int mat=0;mat<200;mat++)// partys materias
@@ -2582,7 +2582,7 @@ void MainWindow::itemupdate()
     QTableWidgetItem *newItem;
     int j= ui->tbl_itm->currentRow();
     ui->tbl_itm->reset(); // just incase
-    ui->tbl_itm->setColumnWidth(0,ui->tbl_itm->width()-52);
+    ui->tbl_itm->setColumnWidth(0,ui->tbl_itm->width()-54);
     ui->tbl_itm->setColumnWidth(1,32);
     ui->tbl_itm->setRowCount(320);
     for (int i=0;i<320;i++) // set up items
@@ -2789,7 +2789,8 @@ void MainWindow::guirefresh(void)
             ui->list_keyitems->currentItem()->setCheckState(Qt::Checked);
         }
     }
-    ui->list_keyitems->setCurrentRow(-1);
+    ui->list_keyitems->setCurrentRow(0);//move list up totop
+    ui->list_keyitems->setCurrentRow(-1);//unselect list
 
 /*~~~~~party combo boxes (checking for empty slots)~~~*/
     if (ff7.slot[s].party[0] >= 0x0C){ui->combo_party1->setCurrentIndex(12);}
@@ -2826,8 +2827,8 @@ void MainWindow::guirefresh(void)
 /*~~~~~Stolen Materia~~~~~~~*/
     QTableWidgetItem *newItem;
     ui->tbl_materia_2->reset();
-    ui->tbl_materia_2->setColumnWidth(0,ui->tbl_materia_2->width()-80);
-    ui->tbl_materia_2->setColumnWidth(1,60);
+    ui->tbl_materia_2->setColumnWidth(0,(ui->tbl_materia_2->width()*.65));
+    ui->tbl_materia_2->setColumnWidth(1,(ui->tbl_materia_2->width()*.25));
     ui->tbl_materia_2->setRowCount(48);
     for(int mat=0;mat<48;mat++) //materias stolen by yuffie
     {
@@ -2875,7 +2876,6 @@ void MainWindow::chocobo_refresh()
 {
     load=true;
     ui->sb_stables_owned->setValue(ff7.slot[s].stables);
-    //ui->sb_stables_occupied->setValue(ff7.slot[s].stablesoccupied);
     ui->lcd_stables_occupied->display(ff7.slot[s].stablesoccupied);
 
     if((ff7.slot[s].chocobomask)& (1<<0)){ui->box_stable1->setChecked(1);}
@@ -2923,6 +2923,7 @@ void MainWindow::chocobo_refresh()
     ui->sb_c1_pcount->setValue(ff7.slot[s].chocobos[0].pcount);
     ui->sb_c1_raceswon->setValue(ff7.slot[s].chocobos[0].raceswon);
     ui->sb_c1_stamina->setValue(ff7.slot[s].chocostaminas[0]);//Bug fixed Before was chocostaminas[0]*10 and (999*10 != 9999), is 9990 (Vegeta_Ss4) v0.8.3
+    ui->sb_c1_personality->setValue(ff7.slot[s].chocobos[0].personality);
     // end choco 1
 
     ui->line_c2_name->clear();
@@ -2945,7 +2946,9 @@ void MainWindow::chocobo_refresh()
     ui->sb_c2_pcount->setValue(ff7.slot[s].chocobos[1].pcount);
     ui->sb_c2_raceswon->setValue(ff7.slot[s].chocobos[1].raceswon);
     ui->sb_c2_stamina->setValue(ff7.slot[s].chocostaminas[1]);//Bug fix (Vegeta_Ss4) v0.8.3
+    ui->sb_c2_personality->setValue(ff7.slot[s].chocobos[1].personality);
     //end Choco 2
+
     ui->line_c3_name->clear();
     for (int n=0;n<6;n++)
     {
@@ -2966,7 +2969,9 @@ void MainWindow::chocobo_refresh()
     ui->sb_c3_pcount->setValue(ff7.slot[s].chocobos[2].pcount);
     ui->sb_c3_raceswon->setValue(ff7.slot[s].chocobos[2].raceswon);
     ui->sb_c3_stamina->setValue(ff7.slot[s].chocostaminas[2]);//Bug fix (Vegeta_Ss4) v0.8.3
+    ui->sb_c3_personality->setValue(ff7.slot[s].chocobos[2].personality);
     // end choco 3
+
     ui->line_c4_name->clear();
     for (int n=0;n<6;n++)
     {
@@ -2987,7 +2992,9 @@ void MainWindow::chocobo_refresh()
     ui->sb_c4_pcount->setValue(ff7.slot[s].chocobos[3].pcount);
     ui->sb_c4_raceswon->setValue(ff7.slot[s].chocobos[3].raceswon);
     ui->sb_c4_stamina->setValue(ff7.slot[s].chocostaminas[3]);//Bug fix (Vegeta_Ss4) v0.8.3
+    ui->sb_c4_personality->setValue(ff7.slot[s].chocobos[3].personality);
     // end choco 4
+
     ui->line_c5_name->clear();
     for (int n=0;n<6;n++)
     {
@@ -3008,6 +3015,7 @@ void MainWindow::chocobo_refresh()
     ui->sb_c5_pcount->setValue(ff7.slot[s].choco56[0].pcount);
     ui->sb_c5_raceswon->setValue(ff7.slot[s].choco56[0].raceswon);
     ui->sb_c5_stamina->setValue(ff7.slot[s].chocostaminas[4]);//Bug fix (Vegeta_Ss4) v0.8.3
+    ui->sb_c5_personality->setValue(ff7.slot[s].choco56[0].personality);
     // end choco 5
     ui->line_c6_name->clear();
     for (int n=0;n<6;n++)
@@ -3029,6 +3037,7 @@ void MainWindow::chocobo_refresh()
     ui->sb_c6_pcount->setValue(ff7.slot[s].choco56[1].pcount);
     ui->sb_c6_raceswon->setValue(ff7.slot[s].choco56[1].raceswon);
     ui->sb_c6_stamina->setValue(ff7.slot[s].chocostaminas[5]);//Bug fix (Vegeta_Ss4) v0.8.3
+    ui->sb_c6_personality->setValue(ff7.slot[s].choco56[1].personality);
     // end choco 6
     //set the penned chocobos
     ui->combo_pen1->setCurrentIndex(ff7.slot[s].pennedchocos[0]);
@@ -3400,6 +3409,7 @@ void MainWindow::on_sb_c1_accel_valueChanged(int value){if(!load){ff7.slot[s].ch
 void MainWindow::on_sb_c1_intel_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].intelligence = value;}}
 void MainWindow::on_sb_c1_raceswon_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].raceswon = value;}}
 void MainWindow::on_sb_c1_pcount_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].pcount= value;}}
+void MainWindow::on_sb_c1_personality_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].personality=value;}}
 void MainWindow::on_cb_c1_mated_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].chocomated |= (1<<0);}
@@ -3423,6 +3433,7 @@ void MainWindow::on_sb_c2_accel_valueChanged(int value){if(!load){ff7.slot[s].ch
 void MainWindow::on_sb_c2_intel_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].intelligence = value;}}
 void MainWindow::on_sb_c2_raceswon_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].raceswon = value;}}
 void MainWindow::on_sb_c2_pcount_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].pcount= value;}}
+void MainWindow::on_sb_c2_personality_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].personality=value;}}
 void MainWindow::on_cb_c2_mated_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].chocomated |= (1<<1);}
@@ -3446,6 +3457,7 @@ void MainWindow::on_sb_c3_accel_valueChanged(int value){if(!load){ff7.slot[s].ch
 void MainWindow::on_sb_c3_intel_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].intelligence = value;}}
 void MainWindow::on_sb_c3_raceswon_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].raceswon = value;}}
 void MainWindow::on_sb_c3_pcount_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].pcount= value;}}
+void MainWindow::on_sb_c3_personality_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].personality=value;}}
 void MainWindow::on_cb_c3_mated_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].chocomated |= (1<<2);}
@@ -3469,6 +3481,7 @@ void MainWindow::on_sb_c4_accel_valueChanged(int value){if(!load){ff7.slot[s].ch
 void MainWindow::on_sb_c4_intel_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].intelligence = value;}}
 void MainWindow::on_sb_c4_raceswon_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].raceswon = value;}}
 void MainWindow::on_sb_c4_pcount_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].pcount= value;}}
+void MainWindow::on_sb_c4_personality_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].personality=value;}}
 void MainWindow::on_cb_c4_mated_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].chocomated |= (1<<3);}
@@ -3492,6 +3505,7 @@ void MainWindow::on_sb_c5_accel_valueChanged(int value){if(!load){ff7.slot[s].ch
 void MainWindow::on_sb_c5_intel_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].intelligence = value;}}
 void MainWindow::on_sb_c5_raceswon_valueChanged(int value){ if(!load){ff7.slot[s].choco56[0].raceswon = value;}}
 void MainWindow::on_sb_c5_pcount_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].pcount= value;}}
+void MainWindow::on_sb_c5_personality_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].personality=value;}}
 void MainWindow::on_cb_c5_mated_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].chocomated |= (1<<4);}
@@ -3515,6 +3529,7 @@ void MainWindow::on_sb_c6_accel_valueChanged(int value){if(!load){ff7.slot[s].ch
 void MainWindow::on_sb_c6_intel_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].intelligence = value;}}
 void MainWindow::on_sb_c6_raceswon_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].raceswon = value;}}
 void MainWindow::on_sb_c6_pcount_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].pcount= value;}}
+void MainWindow::on_sb_c6_personality_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].personality=value;}}
 void MainWindow::on_cb_c6_mated_toggled(bool checked)
 {if(!load){
     if(checked){ff7.slot[s].chocomated |= (1<<5);}
@@ -3596,6 +3611,8 @@ void MainWindow::on_btn_clear_keyitems_clicked()
         ui->list_keyitems->setCurrentRow(i);
         ui->list_keyitems->currentItem()->setCheckState(Qt::Unchecked);
     }
+    ui->list_keyitems->setCurrentRow(0);
+    ui->list_keyitems->setCurrentRow(-1);
 }
 
 void MainWindow::on_combo_additem_currentIndexChanged(int index)

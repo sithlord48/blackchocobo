@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>372</width>
-    <height>386</height>
+    <width>377</width>
+    <height>391</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -496,6 +496,16 @@ p, li { white-space: pre-wrap; }
          <property name="wordWrap">
           <bool>true</bool>
          </property>
+         <item>
+          <property name="text">
+           <string>New: Toggle Each Stable Occupied Flag</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New: Location &quot;Chocobo Ranch&quot;</string>
+          </property>
+         </item>
          <item>
           <property name="text">
            <string>New: Toggle &quot;unable to mate&quot; flag for chocobos</string>
