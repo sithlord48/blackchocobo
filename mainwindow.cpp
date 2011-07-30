@@ -2875,94 +2875,21 @@ void MainWindow::chocobo_refresh()
 {
     load=true;
     ui->sb_stables_owned->setValue(ff7.slot[s].stables);
-    ui->sb_stables_occupied->setValue(ff7.slot[s].stablesoccupied);
+    //ui->sb_stables_occupied->setValue(ff7.slot[s].stablesoccupied);
+    ui->lcd_stables_occupied->display(ff7.slot[s].stablesoccupied);
 
-    switch(ui->sb_stables_occupied->value())
-    {
-        case 0:
-            ui->box_stable1->setEnabled(false);
-            ui->box_stable2->setEnabled(false);
-            ui->box_stable3->setEnabled(false);
-            ui->box_stable4->setEnabled(false);
-            ui->box_stable5->setEnabled(false);
-            ui->box_stable6->setEnabled(false);
-            break;
-
-        case 1:
-            ui->box_stable1->setEnabled(true);
-            ui->box_stable2->setEnabled(false);
-            ui->box_stable3->setEnabled(false);
-            ui->box_stable4->setEnabled(false);
-            ui->box_stable5->setEnabled(false);
-            ui->box_stable6->setEnabled(false);
-            //ui->line_c1_name->setEnabled(true);
-        break;
-
-        case 2:
-            ui->box_stable1->setEnabled(true);
-            ui->box_stable2->setEnabled(true);
-            ui->box_stable3->setEnabled(false);
-            ui->box_stable4->setEnabled(false);
-            ui->box_stable5->setEnabled(false);
-            ui->box_stable6->setEnabled(false);
-            //ui->line_c1_name->setEnabled(true);
-            //ui->line_c2_name->setEnabled(true);
-            break;
-
-        case 3:
-            ui->box_stable1->setEnabled(true);
-            ui->box_stable2->setEnabled(true);
-            ui->box_stable3->setEnabled(true);
-            ui->box_stable4->setEnabled(false);
-            ui->box_stable5->setEnabled(false);
-            ui->box_stable6->setEnabled(false);
-            //ui->line_c1_name->setEnabled(true);
-            //ui->line_c2_name->setEnabled(true);
-            //ui->line_c3_name->setEnabled(true);
-            break;
-
-        case 4:
-            ui->box_stable1->setEnabled(true);
-            ui->box_stable2->setEnabled(true);
-            ui->box_stable3->setEnabled(true);
-            ui->box_stable4->setEnabled(true);
-            ui->box_stable5->setEnabled(false);
-            ui->box_stable6->setEnabled(false);
-            //ui->line_c1_name->setEnabled(true);
-            //ui->line_c2_name->setEnabled(true);
-            //ui->line_c3_name->setEnabled(true);
-            //ui->line_c4_name->setEnabled(true);
-            break;
-
-        case 5:
-            ui->box_stable1->setEnabled(true);
-            ui->box_stable2->setEnabled(true);
-            ui->box_stable3->setEnabled(true);
-            ui->box_stable4->setEnabled(true);
-            ui->box_stable5->setEnabled(true);
-            ui->box_stable6->setEnabled(false);
-            //ui->line_c1_name->setEnabled(true);
-            //ui->line_c2_name->setEnabled(true);
-            //ui->line_c3_name->setEnabled(true);
-            //ui->line_c4_name->setEnabled(true);
-            //ui->line_c5_name->setEnabled(true);
-            break;
-
-        case 6:
-            ui->box_stable1->setEnabled(true);
-            ui->box_stable2->setEnabled(true);
-            ui->box_stable3->setEnabled(true);
-            ui->box_stable4->setEnabled(true);
-            ui->box_stable5->setEnabled(true);
-            ui->box_stable6->setEnabled(true);
-            //ui->line_c1_name->setEnabled(true);
-            //ui->line_c2_name->setEnabled(true);
-            //ui->line_c3_name->setEnabled(true);
-            //ui->line_c4_name->setEnabled(true);
-            //ui->line_c5_name->setEnabled(true);
-            //ui->line_c6_name->setEnabled(true);
-            break;
-    }
+    if((ff7.slot[s].chocobomask)& (1<<0)){ui->box_stable1->setChecked(1);}
+    else{ui->box_stable1->setChecked(0);}
+    if((ff7.slot[s].chocobomask)& (1<<1)){ui->box_stable2->setChecked(1);}
+    else{ui->box_stable2->setChecked(0);}
+    if((ff7.slot[s].chocobomask)& (1<<2)){ui->box_stable3->setChecked(1);}
+    else{ui->box_stable3->setChecked(0);}
+    if((ff7.slot[s].chocobomask)& (1<<3)){ui->box_stable4->setChecked(1);}
+    else{ui->box_stable4->setChecked(0);}
+    if((ff7.slot[s].chocobomask)& (1<<4)){ui->box_stable5->setChecked(1);}
+    else{ui->box_stable5->setChecked(0);}
+    if((ff7.slot[s].chocobomask)& (1<<5)){ui->box_stable6->setChecked(1);}
+    else{ui->box_stable6->setChecked(0);}
     if((ff7.slot[s].chocomated)& (1<<0)){ui->cb_c1_mated->setChecked(1);}
     else{ui->cb_c1_mated->setChecked(0);}
     if((ff7.slot[s].chocomated)& (1<<1)){ui->cb_c2_mated->setChecked(1);}
@@ -3350,25 +3277,111 @@ void MainWindow::on_combo_party3_currentIndexChanged(int index)
 
 //set data for stables inside
 void MainWindow::on_sb_stables_owned_valueChanged(int value)
-{if(!load){
-    ff7.slot[s].stables = value;
-    if(ui->sb_stables_occupied->value() > value){ui->sb_stables_occupied->setValue(value);}
-}}
-void MainWindow::on_sb_stables_occupied_valueChanged(int value)
-{if(!load){
-    if (value <= ui->sb_stables_owned->value())
+{
+    if(!load){ff7.slot[s].stables = value;}
+    switch(value)
     {
-        ff7.slot[s].chocobomask = 0;
-        for (int i=0;i<value;i++)
-        {
-            ff7.slot[s].chocobomask |= (1<<i);
-        }
-        ff7.slot[s].stablesoccupied = value;
-        chocobo_refresh();
-    }
-    else {ui->sb_stables_occupied->setValue(ui->sb_stables_owned->value());}
-}}
+        case 0:
+            ui->box_stable1->setEnabled(false);
+            ui->box_stable2->setEnabled(false);
+            ui->box_stable3->setEnabled(false);
+            ui->box_stable4->setEnabled(false);
+            ui->box_stable5->setEnabled(false);
+            ui->box_stable6->setEnabled(false);
+            break;
 
+        case 1:
+            ui->box_stable1->setEnabled(true);
+            ui->box_stable2->setEnabled(false);
+            ui->box_stable3->setEnabled(false);
+            ui->box_stable4->setEnabled(false);
+            ui->box_stable5->setEnabled(false);
+            ui->box_stable6->setEnabled(false);
+        break;
+
+        case 2:
+            ui->box_stable1->setEnabled(true);
+            ui->box_stable2->setEnabled(true);
+            ui->box_stable3->setEnabled(false);
+            ui->box_stable4->setEnabled(false);
+            ui->box_stable5->setEnabled(false);
+            ui->box_stable6->setEnabled(false);
+            break;
+
+        case 3:
+            ui->box_stable1->setEnabled(true);
+            ui->box_stable2->setEnabled(true);
+            ui->box_stable3->setEnabled(true);
+            ui->box_stable4->setEnabled(false);
+            ui->box_stable5->setEnabled(false);
+            ui->box_stable6->setEnabled(false);
+            break;
+
+        case 4:
+            ui->box_stable1->setEnabled(true);
+            ui->box_stable2->setEnabled(true);
+            ui->box_stable3->setEnabled(true);
+            ui->box_stable4->setEnabled(true);
+            ui->box_stable5->setEnabled(false);
+            ui->box_stable6->setEnabled(false);
+            break;
+
+        case 5:
+            ui->box_stable1->setEnabled(true);
+            ui->box_stable2->setEnabled(true);
+            ui->box_stable3->setEnabled(true);
+            ui->box_stable4->setEnabled(true);
+            ui->box_stable5->setEnabled(true);
+            ui->box_stable6->setEnabled(false);
+            break;
+
+        case 6:
+            ui->box_stable1->setEnabled(true);
+            ui->box_stable2->setEnabled(true);
+            ui->box_stable3->setEnabled(true);
+            ui->box_stable4->setEnabled(true);
+            ui->box_stable5->setEnabled(true);
+            ui->box_stable6->setEnabled(true);
+            break;
+    }
+}
+/*~~~~~~~~~Occupied~~~~~~~~~~~*/
+void MainWindow::on_box_stable1_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].chocobomask |= (1<<0);ui->lcd_stables_occupied->display(ui->lcd_stables_occupied->value()+1);}
+    else{ff7.slot[s].chocobomask &= ~(1<<0);ui->lcd_stables_occupied->display(ui->lcd_stables_occupied->value()-1);}
+    ff7.slot[s].stablesoccupied=ui->lcd_stables_occupied->value();
+}}
+void MainWindow::on_box_stable2_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].chocobomask |= (1<<1);ui->lcd_stables_occupied->display(ui->lcd_stables_occupied->value()+1);}
+    else{ff7.slot[s].chocobomask &= ~(1<<1);ui->lcd_stables_occupied->display(ui->lcd_stables_occupied->value()-1);}
+    ff7.slot[s].stablesoccupied=ui->lcd_stables_occupied->value();
+}}
+void MainWindow::on_box_stable3_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].chocobomask |= (1<<2);ui->lcd_stables_occupied->display(ui->lcd_stables_occupied->value()+1);}
+    else{ff7.slot[s].chocobomask &= ~(1<<2);ui->lcd_stables_occupied->display(ui->lcd_stables_occupied->value()-1);}
+    ff7.slot[s].stablesoccupied=ui->lcd_stables_occupied->value();
+}}
+void MainWindow::on_box_stable4_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].chocobomask |= (1<<3);ui->lcd_stables_occupied->display(ui->lcd_stables_occupied->value()+1);}
+    else{ff7.slot[s].chocobomask &= ~(1<<3);ui->lcd_stables_occupied->display(ui->lcd_stables_occupied->value()-1);}
+    ff7.slot[s].stablesoccupied=ui->lcd_stables_occupied->value();
+}}
+void MainWindow::on_box_stable5_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].chocobomask |= (1<<4);ui->lcd_stables_occupied->display(ui->lcd_stables_occupied->value()+1);}
+    else{ff7.slot[s].chocobomask &= ~(1<<4);ui->lcd_stables_occupied->display(ui->lcd_stables_occupied->value()-1);}
+    ff7.slot[s].stablesoccupied=ui->lcd_stables_occupied->value();
+}}
+void MainWindow::on_box_stable6_toggled(bool checked)
+{if(!load){
+    if(checked){ff7.slot[s].chocobomask |= (1<<5);ui->lcd_stables_occupied->display(ui->lcd_stables_occupied->value()+1);}
+    else{ff7.slot[s].chocobomask &= ~(1<<5);ui->lcd_stables_occupied->display(ui->lcd_stables_occupied->value()-1);}
+    ff7.slot[s].stablesoccupied=ui->lcd_stables_occupied->value();
+}}
 /*~~~~~ChocoboStats~~~~~*/
 void MainWindow::on_line_c1_name_lostFocus()
 {if(!load){
@@ -3792,6 +3805,27 @@ void MainWindow::on_btn_eskillclear_clicked()
     ui->list_eskill->setCurrentRow(-1);
 }
 
+void MainWindow::on_btn_add_all_materia_clicked()
+{
+    for(int i=0;i<83;i++)
+    {//add each materia in order (id order)
+        ui->tbl_materia->setCurrentCell(i,0);
+        ui->combo_mat_type->setCurrentIndex(0);
+        if(i==0){ui->combo_add_mat_2->setCurrentIndex(1);}
+        ui->combo_add_mat_2->setCurrentIndex(i);
+        ui->sb_addap->setValue(ui->sb_addap->maximum());
+    }
+    for(int i=83;i<200;i++)
+    {//empty the remaining slots
+     ui->tbl_materia->setCurrentCell(i,0);
+     ui->clearMateria->click();//remove materia also calls materiaupdate()
+    }
+    ui->tbl_materia->setCurrentCell(0,0);
+    //reset it all now..
+    ui->tbl_materia->setCurrentCell(-1,-1);//unselect the table
+    ui->combo_mat_type->setCurrentIndex(-1);
+    ui->combo_add_mat->setCurrentIndex(-1);
+}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SAVE LOCATION TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_tbl_location_field_itemSelectionChanged()
 {

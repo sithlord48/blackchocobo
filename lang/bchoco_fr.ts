@@ -2059,10 +2059,6 @@
         <translation>Moyenne</translation>
     </message>
     <message>
-        <source>Add Chocobos To Stables In Order!</source>
-        <translation>Ajoutez les chocobos dans l&apos;ordre dans les écuries !</translation>
-    </message>
-    <message>
         <source>Stables Owned</source>
         <translation>Étables possédées</translation>
     </message>
@@ -3503,18 +3499,6 @@
         <translation>Points de soutien (combat)</translation>
     </message>
     <message>
-        <source>Remove ALL</source>
-        <translation>Supprimer TOUT</translation>
-    </message>
-    <message>
-        <source>Materia </source>
-        <translation>Matéria</translation>
-    </message>
-    <message>
-        <source>Stolen Materia</source>
-        <translation>Matérias volées</translation>
-    </message>
-    <message>
         <source>Ultimate Weapons Hp</source>
         <translation>HP Dernière Arme</translation>
     </message>
@@ -4719,6 +4703,22 @@ Les valeurs peuvent varier de 0 à 255</translation>
     <message>
         <source>The game timer in the PAL version of the game runs at 50/60 the correct speed. This will correct the timer back into real-time.
  You should only do this if you plan to export to pc or ntsc and only once.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add One Of Each Mastered Materia </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Remove ALL Materia </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Checked Stables Are Occupied Uncheck Stable to Empty Stable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear All Stolen Materia</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
