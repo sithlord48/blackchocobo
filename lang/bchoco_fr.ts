@@ -4425,10 +4425,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Address</source>
-        <translation type="unfinished">Adresse</translation>
-    </message>
-    <message>
         <source>&amp;Location</source>
         <translation type="unfinished">&amp;Lieu</translation>
     </message>
@@ -4621,14 +4617,6 @@ is not a FF7 SaveGame.</source>
         <translation>HEX</translation>
     </message>
     <message>
-        <source>INT</source>
-        <translation>DEC</translation>
-    </message>
-    <message>
-        <source>BINARY</source>
-        <translation>Binaire</translation>
-    </message>
-    <message>
         <source>New Window</source>
         <translation>Nouvelle Fenêtre</translation>
     </message>
@@ -4657,14 +4645,6 @@ is not a FF7 SaveGame.</source>
         <translation>Clic droit pour facilement choisir l&apos;emplacement d&apos;un objet.</translation>
     </message>
     <message>
-        <source>Table is updated when the Combobox&apos;s index  is changed.
- You Can Edit These Values By Changing  The INT Column&apos;s Value.
-Values can Range From 0 - 255</source>
-        <translation>Les données sont mises à jour lorsque la case est cochée.
-Vous pouvez changer ces données en changeant la valeur de la colonne DEC.
-Les valeurs peuvent varier de 0 à 255</translation>
-    </message>
-    <message>
         <source>Meeting Aeris</source>
         <translation>Rencontre d&apos;Aéris</translation>
     </message>
@@ -4682,10 +4662,6 @@ Les valeurs peuvent varier de 0 à 255</translation>
     </message>
     <message>
         <source>Unable to Mate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Char</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4740,6 +4716,38 @@ Les valeurs peuvent varier de 0 à 255</translation>
     <message>
         <source>61</source>
         <translation type="unfinished">61</translation>
+    </message>
+    <message>
+        <source>Offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DEC</source>
+        <translation type="unfinished">DEC</translation>
+    </message>
+    <message>
+        <source>BIN</source>
+        <translation type="unfinished">BIN</translation>
+    </message>
+    <message>
+        <source>Ascii</source>
+        <translation type="unfinished">Ascii</translation>
+    </message>
+    <message>
+        <source>Table is updated when the Combobox&apos;s index  is changed.
+ You Can Edit These Values By Changing  The DEC Column&apos;s Value.
+Values can Range From 0 - 255</source>
+        <translation type="unfinished">Les données sont mises à jour lorsque la case est cochée.
+Vous pouvez changer ces données en changeant la valeur de la colonne DEC.
+Les valeurs peuvent varier de 0 à 255</translation>
+    </message>
+    <message>
+        <source>Reload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>F5</source>
+        <translation type="unfinished">F5</translation>
     </message>
 </context>
 <context>
@@ -5190,10 +5198,6 @@ Les valeurs peuvent varier de 0 à 255</translation>
     <message>
         <source>Exp Plus +100%</source>
         <translation>Super Exp +100%</translation>
-    </message>
-    <message>
-        <source>Mastered</source>
-        <translation>Maître</translation>
     </message>
     <message>
         <source>Gil Plus +50%</source>
@@ -6797,6 +6801,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Location &quot;Chocobo Ranch&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Reload Feature</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

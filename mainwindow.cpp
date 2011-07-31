@@ -183,11 +183,12 @@ void MainWindow::on_actionOpen_Save_File_activated()
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Open Final Fantasy 7 Save"),settings.value("load_path").toString(),
     tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme)"));
-    if (!fileName.isEmpty()) loadFileFull(fileName);
+    if (!fileName.isEmpty()){loadFileFull(fileName,0);}
 }
+void MainWindow::on_actionReload_triggered(){if(!filename.isEmpty()){loadFileFull(filename,1);}}
 /*~~~~~~~~~~~~~~~~~Load Full ~~~~~~~~~~~~~~~~~~*/
-void MainWindow::loadFileFull(const QString &fileName)
-{
+void MainWindow::loadFileFull(const QString &fileName,int reload)
+{//if called from reload then int reload ==1 (don't call slot select)
     load=true;
     QFile file(fileName);
     if (!file.open(QFile::ReadOnly ))
@@ -344,7 +345,7 @@ void MainWindow::loadFileFull(const QString &fileName)
         if(ff7.slot[12].checksum != 0x0000 && ff7.slot[12].checksum != 0x4D1D){ff7.SG_Region_String[12]= "BASCUS-94163FF7-S13";} else {ff7.SG_Region_String[12].clear();}
         if(ff7.slot[13].checksum != 0x0000 && ff7.slot[13].checksum != 0x4D1D){ff7.SG_Region_String[13]= "BASCUS-94163FF7-S14";} else {ff7.SG_Region_String[13].clear();}
         if(ff7.slot[14].checksum != 0x0000 && ff7.slot[14].checksum != 0x4D1D){ff7.SG_Region_String[14]= "BASCUS-94163FF7-S15";} else {ff7.SG_Region_String[14].clear();}
-        on_actionShow_Selection_Dialog_activated();
+        if(!reload){on_actionShow_Selection_Dialog_activated();}
     }
 
     else if (ff7.savetype == 2)// PSx save
@@ -382,7 +383,7 @@ void MainWindow::loadFileFull(const QString &fileName)
             index = (128*i) +138;
             ff7.SG_Region_String[i] = QString(mc_header.mid(index,19));
         }
-        on_actionShow_Selection_Dialog_activated();
+        if(!reload){on_actionShow_Selection_Dialog_activated();}
     }
     else{s=0;for(int i=1;i<14;i++){clearslot(i);}}
     this->setWindowTitle(tr("Black Chocobo - ") + fileName); //eslava this is for you :)
@@ -1999,7 +2000,7 @@ void MainWindow::setweaponslots(void)
 void MainWindow::setmenu(void)
 {
     load=true;
-    /*~~Clear All Menu Items~~*/
+    /*~~Disable All Items that are dependent on File Type~~*/
     ui->actionSlot_01->setChecked(0);ui->actionSlot_01->setIcon(QIcon(":icon/1_unsel"));
     ui->actionSlot_02->setChecked(0);ui->actionSlot_02->setIcon(QIcon(":icon/2_unsel"));
     ui->actionSlot_03->setChecked(0);ui->actionSlot_03->setIcon(QIcon(":icon/3_unsel"));
@@ -2050,7 +2051,7 @@ void MainWindow::setmenu(void)
     }
     /*~~~~End Current Slot~~~~~*/
     /*~~~~~~~Set Actions By Type~~~~~~~*/
-    //For first file load.
+    //For first file load.Don't Bother to disable these again.
     ui->actionExport_PC_Save->setEnabled(1);    ui->actionExport_PSX->setEnabled(1);
     ui->actionExport_MC->setEnabled(1);         ui->actionExport_VGS->setEnabled(1);
     ui->actionExport_DEX->setEnabled(1);        ui->actionCopy_Slot->setEnabled(1);
@@ -2058,7 +2059,7 @@ void MainWindow::setmenu(void)
     ui->actionSave_File_As->setEnabled(1);      ui->actionFrom_PSV_Slot->setEnabled(1);
     ui->actionNew_Game_Plus->setEnabled(1);     ui->actionImport_char->setEnabled(1);
     ui->actionSave_File_As->setEnabled(1);      ui->actionFrom_PSX_Slot->setEnabled(1);
-    ui->actionPaste_Slot->setEnabled(1);
+    ui->actionPaste_Slot->setEnabled(1);        ui->actionReload->setEnabled(1);
     //
     if (ff7.savetype !=2 && ff7.savetype !=4) //more then one slot
     {
@@ -6429,3 +6430,4 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
       case 39: ff7.slot[s].z_39[item->row()]= item->text().toInt(); break;
       }
 }}
+

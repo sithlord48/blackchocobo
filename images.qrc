@@ -138,5 +138,6 @@
         <file alias="slider_up">icon/slider_up.png</file>
         <file alias="new_window">icon/window-new.png</file>
         <file alias="fix_time">icon/fix_time.png</file>
+        <file alias="refresh">icon/refresh.png</file>
     </qresource>
 </RCC>

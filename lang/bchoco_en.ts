@@ -4414,10 +4414,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Address</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&amp;Location</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4610,14 +4606,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>INT</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>BINARY</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>New Window</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4646,12 +4634,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Table is updated when the Combobox&apos;s index  is changed.
- You Can Edit These Values By Changing  The INT Column&apos;s Value.
-Values can Range From 0 - 255</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Meeting Aeris</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4669,10 +4651,6 @@ Values can Range From 0 - 255</source>
     </message>
     <message>
         <source>Unable to Mate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Char</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4726,6 +4704,36 @@ Values can Range From 0 - 255</source>
     </message>
     <message>
         <source>61</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Offset</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>DEC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>BIN</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ascii</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Table is updated when the Combobox&apos;s index  is changed.
+ You Can Edit These Values By Changing  The DEC Column&apos;s Value.
+Values can Range From 0 - 255</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reload</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>F5</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5176,10 +5184,6 @@ Values can Range From 0 - 255</source>
     </message>
     <message>
         <source>Exp Plus +100%</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mastered</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6772,6 +6776,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Location &quot;Chocobo Ranch&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Reload Feature</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
