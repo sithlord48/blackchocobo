@@ -54,7 +54,8 @@ private slots://try to keep these in the same order as the .cpp file
   /*Loading and Saving related Functions*/  
     void on_actionNew_Window_triggered();
     void on_actionOpen_Save_File_activated();
-    void loadFileFull(const QString &fileName);//(Vegeta_Ss4) v0.8.3
+    void on_actionReload_triggered();
+    void loadFileFull(const QString &fileName,int reload);//(Vegeta_Ss4) v0.8.3
     void on_actionFrom_PSX_Slot_activated();
     void on_actionFrom_PSV_Slot_activated();
     void on_actionImport_char_triggered();

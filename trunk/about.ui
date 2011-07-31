@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>377</width>
-    <height>391</height>
+    <width>375</width>
+    <height>389</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -499,6 +499,11 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>New: Toggle Each Stable Occupied Flag</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New: Reload Feature</string>
           </property>
          </item>
          <item>
