@@ -49,6 +49,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     //set up comboboxes.
     for (int i=256;i<288;i++){ui->combo_armor->addItem(QIcon(Items[i].image),names.ItemNames(i));}
     for (int i=288;i<320;i++){ui->combo_acc->addItem(QIcon(Items[i].image),names.ItemNames(i));}
+                                ui->combo_acc->addItem(QIcon(Items[288].image),tr("-None-"));//add clear opton for accessory
     for (int i=0;i<320;i++){ui->combo_additem->addItem(QIcon(Items[i].image),names.ItemNames(i));}
     for (int i=0;i<0x5b;i++){ui->combo_add_mat->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
     for (int i=0;i<0x5b;i++){ui->combo_add_mat_slot->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
@@ -4001,7 +4002,7 @@ void MainWindow::on_limit_4_toggled(){if(!load) {limitapply();}}
 
 void MainWindow::on_combo_armor_currentIndexChanged(int index){if(!load){ff7.slot[s].chars[curchar].armor = index;    setarmorslots();}}
 void MainWindow::on_combo_weapon_currentIndexChanged(){setweaponslots();}
-void MainWindow::on_combo_acc_currentIndexChanged(int index){if(!load){ff7.slot[s].chars[curchar].accessory = index;}}
+void MainWindow::on_combo_acc_currentIndexChanged(int index){if(!load){if(index==32){index=0xFF;} ff7.slot[s].chars[curchar].accessory = index;}}
 
 void MainWindow::on_combo_weapon_activated(int index)
 {
