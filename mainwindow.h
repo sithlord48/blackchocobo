@@ -95,7 +95,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_actionAbout_Qt_activated();
     void on_actionCopy_Slot_activated();
     void on_actionPaste_Slot_activated();
-    void on_actionFix_PSX_PAL_Time_triggered();
     void on_actionShow_Options_triggered();
     void on_action_auto_char_growth_triggered(bool checked);
     void on_action_show_test_data_toggled(bool checked);

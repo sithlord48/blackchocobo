@@ -4658,19 +4658,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Fix PSX PAL Time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Are You Sure?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The game timer in the PAL version of the game runs at 50/60 the correct speed. This will correct the timer back into real-time.
- You should only do this if you plan to export to pc or ntsc and only once.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Add One Of Each Mastered Materia </source>
         <translation type="unfinished"></translation>
     </message>
@@ -4734,6 +4721,60 @@ Values can Range From 0 - 255</source>
     </message>
     <message>
         <source>F5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>72</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>65533</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>62949</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>99</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-None-</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:%1 Contains A PAL region save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PAL PSX runs at 50/60 speed
+This results in an incorrect playtime
+Would you like to correct the playtime?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PAL Slot Detected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Always Correct</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Never Correct</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PAL -&gt; NTSC Conversion Detected</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Would You Like To Update the Play time</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NTSC -&gt; PAL Conversion Detected</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

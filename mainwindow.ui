@@ -10352,7 +10352,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1452</width>
+             <width>1458</width>
              <height>282</height>
             </rect>
            </property>
@@ -16350,8 +16350,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>764</width>
-             <height>440</height>
+             <width>715</width>
+             <height>275</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -26386,7 +26386,6 @@ Values can Range From 0 - 255</string>
     </widget>
     <addaction name="action_auto_char_growth"/>
     <addaction name="action_show_test_data"/>
-    <addaction name="actionFix_PSX_PAL_Time"/>
     <addaction name="separator"/>
     <addaction name="menuLang"/>
     <addaction name="separator"/>
@@ -27134,15 +27133,6 @@ Values can Range From 0 - 255</string>
    </property>
    <property name="text">
     <string>New Window</string>
-   </property>
-  </action>
-  <action name="actionFix_PSX_PAL_Time">
-   <property name="icon">
-    <iconset resource="images.qrc">
-     <normaloff>:/icon/fix_time</normaloff>:/icon/fix_time</iconset>
-   </property>
-   <property name="text">
-    <string>Fix PSX PAL Time</string>
    </property>
   </action>
   <action name="actionReload">

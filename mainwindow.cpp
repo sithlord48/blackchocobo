@@ -749,12 +749,37 @@ void MainWindow::on_actionExport_PC_Save_activated()
         for(int i=0;i<9;i++){ff7.file_header_pc[i]= PC_SAVE_GAME_FILE_HEADER[i];}
     }
     fix_pc_bytemask(ff7,s);
-    for(int si=0;si<15;si++)
+    int result=0;
+    for(int si=0;si<15;si++)//clean up non ff7 saves and fix time for Pal Saves.
     {
-        if(ff7.SG_Region_String[si].contains("00867") || ff7.SG_Region_String[si].contains("00869") ||
-           ff7.SG_Region_String[si].contains("00900") || ff7.SG_Region_String[si].contains("94163") ||
-           ff7.SG_Region_String[si].contains("00700") || ff7.SG_Region_String[si].contains("01057"))
-            {/*FF7FILE*/}
+        if (ff7.SG_Region_String[si].contains("94163") || ff7.SG_Region_String[si].contains("00700") || ff7.SG_Region_String[si].contains("01057")){/*FF7File AND NTSC*/}
+        else if(ff7.SG_Region_String[si].contains("00867") || ff7.SG_Region_String[si].contains("00869") || ff7.SG_Region_String[si].contains("00900"))
+        {/*PAL, Correct Time?*/
+            if((result==QMessageBox::YesToAll) || (result==QMessageBox::NoToAll)){/*Already Chosen Yes/No to all*/}
+            else
+            {//Show the Dialog
+                QMessageBox fixtime(this);
+                fixtime.setIconPixmap(QPixmap(":/icon/fix_time"));
+                fixtime.setText(tr("Slot:%1 Contains A PAL region save").arg(QString::number(si+1)));
+                fixtime.setInformativeText(tr("PAL PSX runs at 50/60 speed\nThis results in an incorrect playtime\nWould you like to correct the playtime?"));
+                fixtime.setWindowTitle(tr("PAL Slot Detected"));
+                fixtime.addButton(QMessageBox::Yes);
+                fixtime.addButton(QMessageBox::YesToAll);
+                fixtime.addButton(QMessageBox::No);
+                fixtime.addButton(QMessageBox::NoToAll);
+                fixtime.setButtonText( QMessageBox::YesToAll,tr("Always Correct"));
+                fixtime.setButtonText( QMessageBox::NoToAll,tr("Never Correct"));
+                fixtime.setDefaultButton(QMessageBox::YesToAll);
+                result=fixtime.exec();
+            }
+            switch(result)
+            {
+            case QMessageBox::No:break;
+            case QMessageBox::NoToAll:break;
+            default:ff7.slot[si].time = (ff7.slot[si].time*1.2); ff7.slot[si].desc.time = ff7.slot[si].time;break;
+            }
+        }
+
         else{clearslot(si);}
     }
     saveFileFull(fileName);
@@ -1028,15 +1053,6 @@ void MainWindow::on_actionPaste_Slot_activated()
     }
     guirefresh();
 }
-void MainWindow::on_actionFix_PSX_PAL_Time_triggered()
-{
-    int result=QMessageBox::question(this,tr("Are You Sure?"),tr("The game timer in the PAL version of the game runs at 50/60 the correct speed. This will correct the timer back into real-time.\n You should only do this if you plan to export to pc or ntsc and only once."),QMessageBox::Yes,QMessageBox::Cancel);
-    switch(result)
-    {
-    case QMessageBox::Yes: ff7.slot[s].time = (ff7.slot[s].time*1.2); ff7.slot[s].desc.time = ff7.slot[s].time; break;
-    case QMessageBox::Cancel:break;
-    }
-}
 void MainWindow::on_actionShow_Options_triggered()
 {
     Options odialog;  odialog.setStyleSheet(this->styleSheet());    odialog.exec();
@@ -1155,6 +1171,22 @@ void MainWindow::on_action_Region_USA_triggered(bool checked)
     }
     else
     {
+        if((ff7.SG_Region_String[s].contains("BESCES-00869"))||(ff7.SG_Region_String[s].contains("BESCES-00867"))||(ff7.SG_Region_String[s].contains("BESCES-00900")))
+        {
+           int result=QMessageBox::question(this,tr("PAL -> NTSC Conversion Detected"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
+           switch(result)
+           {
+            case QMessageBox::Yes:
+               ff7.slot[s].time = (ff7.slot[s].time*1.2); ff7.slot[s].desc.time = ff7.slot[s].time;
+               load=true;
+               ui->sb_time_hour->setValue(ff7.slot[s].time / 3600);
+               ui->sb_time_min->setValue(ff7.slot[s].time/60%60);
+               ui->sb_time_sec->setValue(ff7.slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+               load=false;
+               break;
+            case QMessageBox::Cancel:break;
+           }
+        }
         switch(s)
         {
             case 0:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01"; break;
@@ -1199,6 +1231,22 @@ void MainWindow::on_action_Region_PAL_Generic_triggered(bool checked)
     }
     else
     {
+        if((ff7.SG_Region_String[s].contains("BASCUS-94163"))||(ff7.SG_Region_String[s].contains("BISLPS-00700"))||(ff7.SG_Region_String[s].contains("BISLPS-01057")))
+        {
+           int result=QMessageBox::question(this,tr("NTSC -> PAL Conversion Detected"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
+           switch(result)
+           {
+           case QMessageBox::Yes:
+              ff7.slot[s].time = (ff7.slot[s].time/1.2); ff7.slot[s].desc.time = ff7.slot[s].time;
+              load=true;
+              ui->sb_time_hour->setValue(ff7.slot[s].time / 3600);
+              ui->sb_time_min->setValue(ff7.slot[s].time/60%60);
+              ui->sb_time_sec->setValue(ff7.slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+              load=false;
+              break;
+           case QMessageBox::Cancel:break;
+           }
+        }
         switch(s)
         {
             case 0:ff7.SG_Region_String[s] = "BESCES-00867FF7-S01"; break;
@@ -1243,6 +1291,22 @@ void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
     }
     else
     {
+        if((ff7.SG_Region_String[s].contains("BASCUS-94163"))||(ff7.SG_Region_String[s].contains("BISLPS-00700"))||(ff7.SG_Region_String[s].contains("BISLPS-01057")))
+        {
+           int result=QMessageBox::question(this,tr("NTSC -> PAL Conversion Detected"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
+           switch(result)
+           {
+           case QMessageBox::Yes:
+              ff7.slot[s].time = (ff7.slot[s].time/1.2); ff7.slot[s].desc.time = ff7.slot[s].time;
+              load=true;
+              ui->sb_time_hour->setValue(ff7.slot[s].time / 3600);
+              ui->sb_time_min->setValue(ff7.slot[s].time/60%60);
+              ui->sb_time_sec->setValue(ff7.slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+              load=false;
+              break;
+           case QMessageBox::Cancel:break;
+           }
+        }
         switch(s)
         {
             case 0:ff7.SG_Region_String[s] = "BESCES-00869FF7-S01"; break;
@@ -1287,6 +1351,22 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
     }
     else
     {
+        if((ff7.SG_Region_String[s].contains("BASCUS-94163"))||(ff7.SG_Region_String[s].contains("BISLPS-00700"))||(ff7.SG_Region_String[s].contains("BISLPS-01057")))
+        {
+           int result=QMessageBox::question(this,tr("NTSC -> PAL Conversion Detected"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
+           switch(result)
+           {
+           case QMessageBox::Yes:
+              ff7.slot[s].time = (ff7.slot[s].time/1.2); ff7.slot[s].desc.time = ff7.slot[s].time;
+              load=true;
+              ui->sb_time_hour->setValue(ff7.slot[s].time / 3600);
+              ui->sb_time_min->setValue(ff7.slot[s].time/60%60);
+              ui->sb_time_sec->setValue(ff7.slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+              load=false;
+              break;
+           case QMessageBox::Cancel:break;
+           }
+        }
         switch(s)
         {
             case 0:ff7.SG_Region_String[s] = "BESCES-00900FF7-S01"; break;
@@ -1324,13 +1404,29 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
 void MainWindow::on_action_Region_JPN_triggered(bool checked)
 {if(!load){
     if(!checked)
-    {
+    {        
         ff7.SG_Region_String[s].clear();
         ui->lbl_sg_region->clear();
         ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
     }
     else
-    {
+    {//First Check If Coming From PAL
+        if((ff7.SG_Region_String[s].contains("BESCES-00869"))||(ff7.SG_Region_String[s].contains("BESCES-00867"))||(ff7.SG_Region_String[s].contains("BESCES-00900")))
+        {
+           int result=QMessageBox::question(this,tr("PAL -> NTSC Conversion Detected"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
+           switch(result)
+           {
+           case QMessageBox::Yes:
+              ff7.slot[s].time = (ff7.slot[s].time*1.2); ff7.slot[s].desc.time = ff7.slot[s].time;
+              load=true;
+              ui->sb_time_hour->setValue(ff7.slot[s].time / 3600);
+              ui->sb_time_min->setValue(ff7.slot[s].time/60%60);
+              ui->sb_time_sec->setValue(ff7.slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+              load=false;
+              break;
+           case QMessageBox::Cancel:break;
+           }
+        }
         switch(s)
         {
             case 0:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01"; break;
@@ -1375,6 +1471,22 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
     }
     else
     {
+        if((ff7.SG_Region_String[s].contains("BESCES-00869"))||(ff7.SG_Region_String[s].contains("BESCES-00867"))||(ff7.SG_Region_String[s].contains("BESCES-00900")))
+        {
+           int result=QMessageBox::question(this,tr("PAL -> NTSC Conversion Detected"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
+           switch(result)
+           {
+           case QMessageBox::Yes:
+              ff7.slot[s].time = (ff7.slot[s].time*1.2); ff7.slot[s].desc.time = ff7.slot[s].time;
+              load=true;
+              ui->sb_time_hour->setValue(ff7.slot[s].time / 3600);
+              ui->sb_time_min->setValue(ff7.slot[s].time/60%60);
+              ui->sb_time_sec->setValue(ff7.slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+              load=false;
+              break;
+           case QMessageBox::Cancel:break;
+           }
+        }
         switch(s)
         {
             case 0:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01"; break;
