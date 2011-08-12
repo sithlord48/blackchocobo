@@ -1173,7 +1173,7 @@ void MainWindow::on_action_Region_USA_triggered(bool checked)
     {
         if((ff7.SG_Region_String[s].contains("BESCES-00869"))||(ff7.SG_Region_String[s].contains("BESCES-00867"))||(ff7.SG_Region_String[s].contains("BESCES-00900")))
         {
-           int result=QMessageBox::question(this,tr("PAL -> NTSC Conversion Detected"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
+           int result=QMessageBox::question(this,tr("PAL -> NTSC Conversion"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
            switch(result)
            {
             case QMessageBox::Yes:
@@ -1233,7 +1233,7 @@ void MainWindow::on_action_Region_PAL_Generic_triggered(bool checked)
     {
         if((ff7.SG_Region_String[s].contains("BASCUS-94163"))||(ff7.SG_Region_String[s].contains("BISLPS-00700"))||(ff7.SG_Region_String[s].contains("BISLPS-01057")))
         {
-           int result=QMessageBox::question(this,tr("NTSC -> PAL Conversion Detected"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
+           int result=QMessageBox::question(this,tr("NTSC -> PAL Conversion"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
            switch(result)
            {
            case QMessageBox::Yes:
@@ -1293,7 +1293,7 @@ void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
     {
         if((ff7.SG_Region_String[s].contains("BASCUS-94163"))||(ff7.SG_Region_String[s].contains("BISLPS-00700"))||(ff7.SG_Region_String[s].contains("BISLPS-01057")))
         {
-           int result=QMessageBox::question(this,tr("NTSC -> PAL Conversion Detected"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
+           int result=QMessageBox::question(this,tr("NTSC -> PAL Conversion"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
            switch(result)
            {
            case QMessageBox::Yes:
@@ -1353,7 +1353,7 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
     {
         if((ff7.SG_Region_String[s].contains("BASCUS-94163"))||(ff7.SG_Region_String[s].contains("BISLPS-00700"))||(ff7.SG_Region_String[s].contains("BISLPS-01057")))
         {
-           int result=QMessageBox::question(this,tr("NTSC -> PAL Conversion Detected"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
+           int result=QMessageBox::question(this,tr("NTSC -> PAL Conversion"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
            switch(result)
            {
            case QMessageBox::Yes:
@@ -1413,7 +1413,7 @@ void MainWindow::on_action_Region_JPN_triggered(bool checked)
     {//First Check If Coming From PAL
         if((ff7.SG_Region_String[s].contains("BESCES-00869"))||(ff7.SG_Region_String[s].contains("BESCES-00867"))||(ff7.SG_Region_String[s].contains("BESCES-00900")))
         {
-           int result=QMessageBox::question(this,tr("PAL -> NTSC Conversion Detected"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
+           int result=QMessageBox::question(this,tr("PAL -> NTSC Conversion"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
            switch(result)
            {
            case QMessageBox::Yes:
@@ -1473,7 +1473,7 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
     {
         if((ff7.SG_Region_String[s].contains("BESCES-00869"))||(ff7.SG_Region_String[s].contains("BESCES-00867"))||(ff7.SG_Region_String[s].contains("BESCES-00900")))
         {
-           int result=QMessageBox::question(this,tr("PAL -> NTSC Conversion Detected"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
+           int result=QMessageBox::question(this,tr("PAL -> NTSC Conversion"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
            switch(result)
            {
            case QMessageBox::Yes:

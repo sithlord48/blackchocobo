@@ -508,7 +508,7 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <property name="text">
-           <string>New: Location &quot;Chocobo Ranch&quot;</string>
+           <string>New: Locations &quot;Chocobo Ranch&quot; And &quot;Highwind&quot;</string>
           </property>
          </item>
          <item>
@@ -518,7 +518,7 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <property name="text">
-           <string>New: Optionally Correct Psx PAL Time Bug</string>
+           <string>New: NTSC &lt;=&gt; PAL Time Conversion (prompts when needed)</string>
           </property>
          </item>
          <item>
@@ -1428,8 +1428,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>138</width>
-            <height>740</height>
+            <width>121</width>
+            <height>700</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">

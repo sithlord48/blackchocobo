@@ -4766,15 +4766,15 @@ Would you like to correct the playtime?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>PAL -&gt; NTSC Conversion Detected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Would You Like To Update the Play time</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>NTSC -&gt; PAL Conversion Detected</source>
+        <source>PAL -&gt; NTSC Conversion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NTSC -&gt; PAL Conversion</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6804,10 +6804,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New: Optionally Correct Psx PAL Time Bug</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Fixed: Dialogs Inherit style.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6816,11 +6812,15 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New: Location &quot;Chocobo Ranch&quot;</source>
+        <source>New: Reload Feature</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New: Reload Feature</source>
+        <source>New: Locations &quot;Chocobo Ranch&quot; And &quot;Highwind&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: NTSC &lt;=&gt; PAL Time Conversion (prompts when needed)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
