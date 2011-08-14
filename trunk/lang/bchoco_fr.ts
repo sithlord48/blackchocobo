@@ -4457,10 +4457,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished">vars inconnu</translation>
     </message>
     <message>
-        <source>Var:</source>
-        <translation type="unfinished">Var:</translation>
-    </message>
-    <message>
         <source>z_1</source>
         <translation>z_1</translation>
     </message>
@@ -4613,10 +4609,6 @@ is not a FF7 SaveGame.</source>
         <translation>z_38</translation>
     </message>
     <message>
-        <source>HEX</source>
-        <translation>HEX</translation>
-    </message>
-    <message>
         <source>New Window</source>
         <translation>Nouvelle Fenêtre</translation>
     </message>
@@ -4705,30 +4697,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished">61</translation>
     </message>
     <message>
-        <source>Offset</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>DEC</source>
-        <translation type="unfinished">DEC</translation>
-    </message>
-    <message>
-        <source>BIN</source>
-        <translation type="unfinished">BIN</translation>
-    </message>
-    <message>
-        <source>Ascii</source>
-        <translation type="unfinished">Ascii</translation>
-    </message>
-    <message>
-        <source>Table is updated when the Combobox&apos;s index  is changed.
- You Can Edit These Values By Changing  The DEC Column&apos;s Value.
-Values can Range From 0 - 255</source>
-        <translation type="unfinished">Les données sont mises à jour lorsque la case est cochée.
-Vous pouvez changer ces données en changeant la valeur de la colonne DEC.
-Les valeurs peuvent varier de 0 à 255</translation>
-    </message>
-    <message>
         <source>Reload</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4788,6 +4756,36 @@ Would you like to correct the playtime?</source>
     </message>
     <message>
         <source>NTSC -&gt; PAL Conversion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown Var:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>#</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dec</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bin</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You Can Edit These Values By Changing The DEC Column&apos;s Value.
+ Values can Range From 0 - 255
+ Choose A Slot On The Right To Compair will be read only and if using multi slot save type.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compaired To Slot</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6846,6 +6844,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: NTSC &lt;=&gt; PAL Time Conversion (prompts when needed)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Better Unknown Var Tab.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

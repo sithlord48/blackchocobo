@@ -120,7 +120,9 @@ private slots://try to keep these in the same order as the .cpp file
     void guirefresh(void);
     void chocobo_refresh(void);
     void clearslot(int rmslot);
-    void testdata_refresh(void);    
+    void testdata_refresh(void);
+    void unknown_refresh(int);
+
     /*CharButtons*/
     void on_btn_cloud_clicked();
     void on_btn_barret_clicked();
@@ -529,5 +531,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_tbl_unknown_itemChanged(QTableWidgetItem* item);
 
     void on_btn_add_all_materia_clicked();
+    void on_combo_compair_slot_currentIndexChanged(void);
 };
 #endif // MAINWINDOW_H
