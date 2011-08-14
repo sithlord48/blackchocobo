@@ -69,7 +69,8 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->combo_add_mat_slot->setVisible(false);
     ui->combo_id->setVisible(false);
     ui->lbl_id->setVisible(false);
-    //
+    ui->compair_table->setEnabled(false);
+
     //chocobo boxes
     ui->box_stable1->setEnabled(false);
     ui->box_stable2->setEnabled(false);
@@ -137,6 +138,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
 
     ui->tbl_location_field->horizontalHeader()->setStyleSheet(tablestyle);
     ui->tbl_unknown->horizontalHeader()->setStyleSheet(tablestyle);
+    ui->tbl_compair_unknown->horizontalHeader()->setStyleSheet(tablestyle);
 
     if(settings.value("autochargrowth").toBool())
     {
@@ -2141,7 +2143,7 @@ void MainWindow::setmenu(void)
     ui->actionSlot_06->setEnabled(0);ui->actionSlot_07->setEnabled(0);ui->actionSlot_08->setEnabled(0);
     ui->actionSlot_09->setEnabled(0);ui->actionSlot_10->setEnabled(0);ui->actionSlot_11->setEnabled(0);
     ui->actionSlot_12->setEnabled(0);ui->actionSlot_13->setEnabled(0);ui->actionSlot_14->setEnabled(0);
-    ui->actionSlot_15->setEnabled(0);ui->actionNew_Game->setEnabled(0);
+    ui->actionSlot_15->setEnabled(0);ui->actionNew_Game->setEnabled(0);ui->compair_table->setEnabled(0);
     /*~~End Clear Menu Items~~*/
     /*~~~~~~Current Slot~~~~~~*/
     switch(s)
@@ -2186,6 +2188,7 @@ void MainWindow::setmenu(void)
         ui->actionSlot_10->setEnabled(1);   ui->actionSlot_11->setEnabled(1);
         ui->actionSlot_12->setEnabled(1);   ui->actionSlot_13->setEnabled(1);
         ui->actionSlot_14->setEnabled(1);   ui->actionSlot_15->setEnabled(1);
+        ui->compair_table->setEnabled(1);
     }
     /*~~~End Set Actions By Type~~~*/
     /*~~Set Detected Region ~~*/
@@ -5563,17 +5566,10 @@ void MainWindow::on_btn_item_add_each_item_clicked()
     guirefresh();
 }
 
-void MainWindow::on_sb_turkschruch_valueChanged(int value)
-{if(!load){
-    ff7.slot[s].aeris_chruch=value;
-}}
+void MainWindow::on_sb_turkschruch_valueChanged(int value){if(!load){ff7.slot[s].aeris_chruch=value;}}
+void MainWindow::on_sb_donprog_valueChanged(int value){if(!load){ff7.slot[s].donprogress=value;}}
 
-void MainWindow::on_sb_donprog_valueChanged(int value)
-{if(!load){
-    ff7.slot[s].donprogress=value;
-}}
-
-void MainWindow::on_combo_z_var_currentIndexChanged(int z)
+void MainWindow::unknown_refresh(int z)
 {
  load=true;
  QString text;
@@ -5581,13 +5577,28 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
  QTableWidgetItem *newItem;
  quint8 value=0;
  ui->tbl_unknown->reset();
+ ui->tbl_unknown->setColumnWidth(0,40);
+ ui->tbl_unknown->setColumnWidth(1,40);
+ ui->tbl_unknown->setColumnWidth(2,40);
+ ui->tbl_unknown->setColumnWidth(3,70);
+ ui->tbl_unknown->setColumnWidth(4,20);
 
+ if(ui->combo_compair_slot->currentIndex()!=0)
+ {
+     ui->tbl_compair_unknown->reset();
+     ui->tbl_compair_unknown->setColumnWidth(0,40);
+     ui->tbl_compair_unknown->setColumnWidth(1,40);
+     ui->tbl_compair_unknown->setColumnWidth(2,40);
+     ui->tbl_compair_unknown->setColumnWidth(3,70);
+     ui->tbl_compair_unknown->setColumnWidth(4,20);
+}
  switch(z)
  {
  case 0: break;
  case 1:
     rows=sizeof(ff7.slot[s].z_1);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5607,11 +5618,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_1[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 2:
     rows=sizeof(ff7.slot[s].z_2);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5630,11 +5662,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_2[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 3:
     rows=sizeof(ff7.slot[s].z_3);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5653,11 +5706,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_3[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 4:
     rows=sizeof(ff7.slot[s].z_4);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5676,11 +5750,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_4[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 5:
     rows=sizeof(ff7.slot[s].z_5);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5699,11 +5794,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_5[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 6:
     rows=sizeof(ff7.slot[s].z_6);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5722,11 +5838,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_6[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 7:
     rows=sizeof(ff7.slot[s].z_7);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5745,11 +5882,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_7[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 8:
     rows=sizeof(ff7.slot[s].z_8);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5768,11 +5926,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_8[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 9:
     rows=sizeof(ff7.slot[s].z_9);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5791,11 +5970,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_9[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 10:
     rows=sizeof(ff7.slot[s].z_10);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5814,11 +6014,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_10[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 11:
     rows=sizeof(ff7.slot[s].z_11);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5837,11 +6058,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_11[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 12:
     rows=sizeof(ff7.slot[s].z_12);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5860,11 +6102,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_12[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 13:
     rows=sizeof(ff7.slot[s].z_13);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5883,11 +6146,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_13[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 14:
     rows=sizeof(ff7.slot[s].z_14);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5906,11 +6190,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_14[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 15:
     rows=sizeof(ff7.slot[s].z_15);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5929,11 +6234,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_15[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 16:
     rows=sizeof(ff7.slot[s].z_16);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5952,11 +6278,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_16[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 17:
     rows=sizeof(ff7.slot[s].z_17);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5975,11 +6322,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_17[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 18:
     rows=sizeof(ff7.slot[s].z_18);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -5998,11 +6366,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_18[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 19:
     rows=sizeof(ff7.slot[s].z_19);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6021,11 +6410,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_19[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 20:
     rows=sizeof(ff7.slot[s].z_20);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6044,11 +6454,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_20[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 21:
     rows=sizeof(ff7.slot[s].z_21);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6067,11 +6498,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_21[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 22:
     rows=sizeof(ff7.slot[s].z_22);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6090,11 +6542,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_22[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 23:
     rows=sizeof(ff7.slot[s].z_23);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6113,11 +6586,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_23[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 24:
     rows=sizeof(ff7.slot[s].z_24);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6136,11 +6630,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_24[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 25:
     rows=sizeof(ff7.slot[s].z_25);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6159,11 +6674,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_25[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 26:
     rows=sizeof(ff7.slot[s].z_26);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6182,11 +6718,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_26[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 27:
     rows=sizeof(ff7.slot[s].z_27);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6205,11 +6762,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_27[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 28:
     rows=sizeof(ff7.slot[s].z_28);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6228,11 +6806,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_28[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 29:
     rows=sizeof(ff7.slot[s].z_29);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6251,11 +6850,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_29[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 30:
     rows=sizeof(ff7.slot[s].z_30);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6274,11 +6894,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_30[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 31:
     rows=sizeof(ff7.slot[s].z_31);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6297,11 +6938,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_31[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 32:
     rows=sizeof(ff7.slot[s].z_32);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6320,11 +6982,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_32[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 33:
     rows=sizeof(ff7.slot[s].z_33);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6343,11 +7026,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_33[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 34:
     rows=sizeof(ff7.slot[s].z_34);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6366,11 +7070,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_34[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 35:
     rows=sizeof(ff7.slot[s].z_35);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6389,11 +7114,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_35[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 36:
     rows=sizeof(ff7.slot[s].z_36);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6412,11 +7158,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_36[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 37:
     rows=sizeof(ff7.slot[s].z_37);
     ui->tbl_unknown->setRowCount(rows);
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6435,12 +7202,32 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_37[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 38:
     rows=sizeof(ff7.slot[s].z_38);
     ui->tbl_unknown->setRowCount(rows);
-
+    if(ui->combo_compair_slot->currentIndex()!=0){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6459,12 +7246,31 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_38[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  case 39:
     rows=sizeof(ff7.slot[s].z_39);
     ui->tbl_unknown->setRowCount(rows);
-
+    if(ui->combo_compair_slot->currentIndex()-1-1!=15){ui->tbl_compair_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
     {
         text.setNum(i);
@@ -6483,6 +7289,26 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
 
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_unknown->setItem(i,4,newItem);
+
+        if(ui->combo_compair_slot->currentIndex()!=0)
+        {
+
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compair_unknown->setItem(i,0,newItem);
+
+            value = ff7.slot[ui->combo_compair_slot->currentIndex()-1].z_39[i];
+            newItem = new QTableWidgetItem(text.number(value,16),0);
+            ui->tbl_compair_unknown->setItem(i,1,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compair_unknown->setItem(i,2,newItem);
+
+            newItem = new QTableWidgetItem(text.number(value,2),0);
+            ui->tbl_compair_unknown->setItem(i,3,newItem);
+
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compair_unknown->setItem(i,4,newItem);
+        }
     }
     break;
  };
@@ -6493,54 +7319,64 @@ void MainWindow::on_combo_z_var_currentIndexChanged(int z)
      ui->tbl_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable| Qt::ItemIsEditable);
      ui->tbl_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
      ui->tbl_unknown->item(i,4)->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable);
+
+     if(ui->combo_compair_slot->currentIndex()!=0)
+     {
+         ui->tbl_compair_unknown->item(i,0)->setFlags(Qt::ItemIsEnabled);
+         ui->tbl_compair_unknown->item(i,1)->setFlags(Qt::ItemIsEnabled);
+         ui->tbl_compair_unknown->item(i,2)->setFlags(Qt::ItemIsEnabled);
+         ui->tbl_compair_unknown->item(i,3)->setFlags(Qt::ItemIsEnabled);
+         ui->tbl_compair_unknown->item(i,4)->setFlags(Qt::ItemIsEnabled);
+     }
  }
     load=false;
 }
+void MainWindow::on_combo_z_var_currentIndexChanged(int z){unknown_refresh(z);}
+void MainWindow::on_combo_compair_slot_currentIndexChanged(void){unknown_refresh(ui->combo_z_var->currentIndex());}
 
 void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
 {if(!load && (item->column()==2)){//only if not load and column 2 selected
     switch (ui->combo_z_var->currentIndex())
       {
       case 0: break;
-      case 1: ff7.slot[s].z_1[item->row()]= item->text().toInt();   break;
-      case 2: ff7.slot[s].z_2[item->row()]= item->text().toInt();   break;
-      case 3: ff7.slot[s].z_3[item->row()]= item->text().toInt();   break;
-      case 4: ff7.slot[s].z_4[item->row()]= item->text().toInt();   break;
-      case 5: ff7.slot[s].z_5[item->row()]= item->text().toInt();   break;
-      case 6: ff7.slot[s].z_6[item->row()]= item->text().toInt();   break;
-      case 7: ff7.slot[s].z_7[item->row()]= item->text().toInt();   break;
-      case 8: ff7.slot[s].z_8[item->row()]= item->text().toInt();   break;
-      case 9: ff7.slot[s].z_9[item->row()]= item->text().toInt();   break;
-      case 10: ff7.slot[s].z_10[item->row()]= item->text().toInt(); break;
-      case 11: ff7.slot[s].z_11[item->row()]= item->text().toInt(); break;
-      case 12: ff7.slot[s].z_12[item->row()]= item->text().toInt(); break;
-      case 13: ff7.slot[s].z_13[item->row()]= item->text().toInt(); break;
-      case 14: ff7.slot[s].z_14[item->row()]= item->text().toInt(); break;
-      case 15: ff7.slot[s].z_15[item->row()]= item->text().toInt(); break;
-      case 16: ff7.slot[s].z_16[item->row()]= item->text().toInt(); break;
-      case 17: ff7.slot[s].z_17[item->row()]= item->text().toInt(); break;
-      case 18: ff7.slot[s].z_18[item->row()]= item->text().toInt(); break;
-      case 19: ff7.slot[s].z_19[item->row()]= item->text().toInt(); break;
-      case 20: ff7.slot[s].z_20[item->row()]= item->text().toInt(); break;
-      case 21: ff7.slot[s].z_21[item->row()]= item->text().toInt(); break;
-      case 22: ff7.slot[s].z_22[item->row()]= item->text().toInt(); break;
-      case 23: ff7.slot[s].z_23[item->row()]= item->text().toInt(); break;
-      case 24: ff7.slot[s].z_24[item->row()]= item->text().toInt(); break;
-      case 25: ff7.slot[s].z_25[item->row()]= item->text().toInt(); break;
-      case 26: ff7.slot[s].z_26[item->row()]= item->text().toInt(); break;
-      case 27: ff7.slot[s].z_27[item->row()]= item->text().toInt(); break;
-      case 28: ff7.slot[s].z_28[item->row()]= item->text().toInt(); break;
-      case 29: ff7.slot[s].z_29[item->row()]= item->text().toInt(); break;
-      case 30: ff7.slot[s].z_30[item->row()]= item->text().toInt(); break;
-      case 31: ff7.slot[s].z_31[item->row()]= item->text().toInt(); break;
-      case 32: ff7.slot[s].z_32[item->row()]= item->text().toInt(); break;
-      case 33: ff7.slot[s].z_33[item->row()]= item->text().toInt(); break;
-      case 34: ff7.slot[s].z_34[item->row()]= item->text().toInt(); break;
-      case 35: ff7.slot[s].z_35[item->row()]= item->text().toInt(); break;
-      case 36: ff7.slot[s].z_36[item->row()]= item->text().toInt(); break;
-      case 37: ff7.slot[s].z_37[item->row()]= item->text().toInt(); break;
-      case 38: ff7.slot[s].z_38[item->row()]= item->text().toInt(); break;
-      case 39: ff7.slot[s].z_39[item->row()]= item->text().toInt(); break;
+      case 1: ff7.slot[s].z_1[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 2: ff7.slot[s].z_2[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 3: ff7.slot[s].z_3[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 4: ff7.slot[s].z_4[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 5: ff7.slot[s].z_5[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 6: ff7.slot[s].z_6[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 7: ff7.slot[s].z_7[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 8: ff7.slot[s].z_8[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 9: ff7.slot[s].z_9[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 10: ff7.slot[s].z_10[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 11: ff7.slot[s].z_11[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 12: ff7.slot[s].z_12[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 13: ff7.slot[s].z_13[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 14: ff7.slot[s].z_14[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 15: ff7.slot[s].z_15[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 16: ff7.slot[s].z_16[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 17: ff7.slot[s].z_17[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 18: ff7.slot[s].z_18[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 19: ff7.slot[s].z_19[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 20: ff7.slot[s].z_20[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 21: ff7.slot[s].z_21[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 22: ff7.slot[s].z_22[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 23: ff7.slot[s].z_23[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 24: ff7.slot[s].z_24[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 25: ff7.slot[s].z_25[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 26: ff7.slot[s].z_26[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 27: ff7.slot[s].z_27[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 28: ff7.slot[s].z_28[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 29: ff7.slot[s].z_29[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 30: ff7.slot[s].z_30[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 31: ff7.slot[s].z_31[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 32: ff7.slot[s].z_32[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 33: ff7.slot[s].z_33[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 34: ff7.slot[s].z_34[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 35: ff7.slot[s].z_35[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 36: ff7.slot[s].z_36[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 37: ff7.slot[s].z_37[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 38: ff7.slot[s].z_38[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 39: ff7.slot[s].z_39[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
       }
 }}
-

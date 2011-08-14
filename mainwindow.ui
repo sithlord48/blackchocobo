@@ -189,7 +189,7 @@ QSlider#slide_battlespeed::handle,QSlider#slide_fieldmspeed::handle,QSlider#slid
  }
 
 /*Checkboxes-enabled*/
-QGroupBox:enabled,QListWidget:enabled,QCheckBox:enabled{background-color: rgba(32,31,31,0);}
+/*QGroupBox:enabled,QListWidget:enabled,*/QCheckBox:enabled{background-color: rgba(32,31,31,0);}
 /*QGroupBox::indicator:enabled:checked,*/QListWidget::indicator:enabled:checked,QCheckBox::indicator:enabled:checked {image: url(:/icon/checkbox_checked);}
 /*QGroupBox::indicator:enabled:unchecked,*/QListWidget::indicator:enabled:unchecked,QCheckBox::indicator:enabled:unchecked{image: url(:/icon/checkbox_unchecked);}
 /*QGroupBox::indicator:enabled:indeterminate,*/QListWidget::indicator:enabled:indeterminate,QCheckBox::indicator:enabled:indeterminate{image: url(:/icon/checkbox_indeterminate);}
@@ -198,7 +198,7 @@ QGroupBox:enabled,QListWidget:enabled,QCheckBox:enabled{background-color: rgba(3
 /*QGroupBox::indicator:enabled:indeterminate:hover,*/QListWidget::indicator:enabled:indeterminate:hover,QCheckBox::indicator:enabled:indeterminate:hover{image: url(:/icon/checkbox_indeterminate_hover);}
 
 /*Checkboxes-disabled*/
-QGroupBox:disabled,QListWidget:disabled,QCheckBox:disabled{background-color: rgb(32,31,31,0);font:;color:rgb(74, 80, 73);}
+/*QGroupBox:disabled,QListWidget:disabled,*/QCheckBox:disabled{background-color: rgb(32,31,31,0);font:;color:rgb(74, 80, 73);}
 QGroupBox::indicator:disabled:checked,QListWidget::indicator:disabled:checked,QCheckBox::indicator:disabled:checked {image: url(:/icon/checkbox_checked_disabled);}
 QGroupBox::indicator:disabled:unchecked,QListWidget::indicator:disabled:unchecked,QCheckBox::indicator:disabled:unchecked {image: url(:/icon/checkbox_unchecked_disabled);}
 QGroupBox::indicator:disabled:indeterminate,QListWidget::indicator:disabled:indeterminate,QCheckBox::indicator:disabled:indeterminate{image: url(:/icon/checkbox_indeterminate_disabled);}
@@ -601,7 +601,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>8</number>
       </property>
       <property name="usesScrollButtons">
        <bool>false</bool>
@@ -4665,8 +4665,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>401</width>
-             <height>414</height>
+             <width>437</width>
+             <height>436</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -10353,7 +10353,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>1458</width>
-             <height>282</height>
+             <height>328</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16350,8 +16350,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>715</width>
-             <height>275</height>
+             <width>764</width>
+             <height>440</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -20972,27 +20972,33 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <item>
               <widget class="QTableWidget" name="tbl_materia_2">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+                <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>230</width>
+                 <width>0</width>
                  <height>0</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>230</width>
+                 <width>16777215</width>
                  <height>16777215</height>
                 </size>
+               </property>
+               <property name="verticalScrollBarPolicy">
+                <enum>Qt::ScrollBarAsNeeded</enum>
                </property>
                <property name="editTriggers">
                 <set>QAbstractItemView::NoEditTriggers</set>
                </property>
                <property name="showDropIndicator" stdset="0">
+                <bool>false</bool>
+               </property>
+               <property name="alternatingRowColors">
                 <bool>false</bool>
                </property>
                <property name="selectionMode">
@@ -24910,7 +24916,7 @@ p, li { white-space: pre-wrap; }
            <enum>QTabWidget::West</enum>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="tab_3">
            <attribute name="title">
@@ -25976,295 +25982,508 @@ p, li { white-space: pre-wrap; }
            <attribute name="title">
             <string>Unknown  Vars</string>
            </attribute>
-           <widget class="QWidget" name="layoutWidge34t">
-            <property name="geometry">
-             <rect>
-              <x>10</x>
-              <y>5</y>
-              <width>381</width>
-              <height>486</height>
-             </rect>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_92">
-             <item>
-              <layout class="QHBoxLayout" name="horizontalLayout_154">
+           <layout class="QHBoxLayout" name="horizontalLayout_168">
+            <item>
+             <widget class="QFrame" name="table_unknown">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_92">
+               <property name="margin">
+                <number>0</number>
+               </property>
                <item>
-                <widget class="QLabel" name="label_227">
-                 <property name="text">
-                  <string>Var:</string>
+                <layout class="QHBoxLayout" name="horizontalLayout_154">
+                 <property name="spacing">
+                  <number>0</number>
                  </property>
-                </widget>
+                 <item>
+                  <widget class="QLabel" name="label_227">
+                   <property name="maximumSize">
+                    <size>
+                     <width>75</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Unknown Var:</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="combo_z_var">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>80</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>-None-</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_1</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_2</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_3</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_4</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_5</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_6</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_7</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_8</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_9</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_10</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_11</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_12</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_13</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_14</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_15</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_16</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_17</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_18</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_19</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_20</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_21</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_22</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_23</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_24</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_25</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_26</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_27</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_28</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_29</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_30</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_31</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_32</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_33</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_34</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_35</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_36</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_37</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_38</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>z_39</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
                </item>
                <item>
-                <widget class="QComboBox" name="combo_z_var">
-                 <item>
+                <widget class="QTableWidget" name="tbl_unknown">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="horizontalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                 </property>
+                 <attribute name="horizontalHeaderDefaultSectionSize">
+                  <number>32</number>
+                 </attribute>
+                 <attribute name="horizontalHeaderHighlightSections">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderVisible">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderDefaultSectionSize">
+                  <number>16</number>
+                 </attribute>
+                 <column>
+                  <property name="text">
+                   <string>#</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Hex</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Dec</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Bin</string>
+                  </property>
+                 </column>
+                 <column>
                   <property name="text">
                    <string/>
                   </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_1</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_2</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_3</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_4</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_5</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_6</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_7</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_8</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_9</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_10</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_11</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_12</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_13</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_14</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_15</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_16</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_17</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_18</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_19</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_20</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_21</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_22</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_23</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_24</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_25</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_26</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_27</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_28</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_29</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_30</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_31</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_32</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_33</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_34</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_35</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_36</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_37</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_38</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>z_39</string>
-                  </property>
-                 </item>
+                 </column>
                 </widget>
                </item>
               </layout>
-             </item>
-             <item>
-              <widget class="QTableWidget" name="tbl_unknown">
-               <property name="horizontalScrollBarPolicy">
-                <enum>Qt::ScrollBarAlwaysOff</enum>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label_228">
+              <property name="text">
+               <string>You Can Edit These Values By Changing The DEC Column's Value.
+ Values can Range From 0 - 255
+ Choose A Slot On The Right To Compair will be read only and if using multi slot save type.</string>
+              </property>
+              <property name="wordWrap">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QFrame" name="compair_table">
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_32">
+               <property name="margin">
+                <number>0</number>
                </property>
-               <attribute name="horizontalHeaderDefaultSectionSize">
-                <number>75</number>
-               </attribute>
-               <attribute name="horizontalHeaderHighlightSections">
-                <bool>false</bool>
-               </attribute>
-               <attribute name="verticalHeaderVisible">
-                <bool>false</bool>
-               </attribute>
-               <attribute name="verticalHeaderDefaultSectionSize">
-                <number>16</number>
-               </attribute>
-               <column>
-                <property name="text">
-                 <string>Offset</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>HEX</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>DEC</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>BIN</string>
-                </property>
-               </column>
-               <column>
-                <property name="text">
-                 <string>Ascii</string>
-                </property>
-               </column>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-           <widget class="QLabel" name="label_228">
-            <property name="geometry">
-             <rect>
-              <x>395</x>
-              <y>15</y>
-              <width>336</width>
-              <height>476</height>
-             </rect>
-            </property>
-            <property name="text">
-             <string>Table is updated when the Combobox's index  is changed.
- You Can Edit These Values By Changing  The DEC Column's Value.
-Values can Range From 0 - 255</string>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
-            </property>
-           </widget>
+               <item>
+                <layout class="QHBoxLayout" name="horizontalLayout_164">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QLabel" name="label_234">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="text">
+                    <string>Compaired To Slot</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QComboBox" name="combo_compair_slot">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>80</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="currentIndex">
+                    <number>0</number>
+                   </property>
+                   <property name="insertPolicy">
+                    <enum>QComboBox::InsertAtTop</enum>
+                   </property>
+                   <item>
+                    <property name="text">
+                     <string>-None-</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>1</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>2</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>3</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>4</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>5</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>6</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>7</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>8</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>9</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>10</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>11</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>12</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>13</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>14</string>
+                    </property>
+                   </item>
+                   <item>
+                    <property name="text">
+                     <string>15</string>
+                    </property>
+                   </item>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QTableWidget" name="tbl_compair_unknown">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <property name="horizontalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                 </property>
+                 <attribute name="horizontalHeaderDefaultSectionSize">
+                  <number>32</number>
+                 </attribute>
+                 <attribute name="horizontalHeaderHighlightSections">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderVisible">
+                  <bool>false</bool>
+                 </attribute>
+                 <attribute name="verticalHeaderDefaultSectionSize">
+                  <number>16</number>
+                 </attribute>
+                 <column>
+                  <property name="text">
+                   <string>#</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Hex</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Dec</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string>Bin</string>
+                  </property>
+                 </column>
+                 <column>
+                  <property name="text">
+                   <string/>
+                  </property>
+                 </column>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
           </widget>
          </widget>
         </item>
