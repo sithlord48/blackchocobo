@@ -4780,13 +4780,22 @@ Would you like to correct the playtime?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>You Can Edit These Values By Changing The DEC Column&apos;s Value.
- Values can Range From 0 - 255
- Choose A Slot On The Right To Compair will be read only and if using multi slot save type.</source>
+        <source>Compaired To Slot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Compaired To Slot</source>
+        <source>&lt;------Left Table------
+Select Unknown Var To View
+Edit By Changing Dec Value
+Valid Range 0-255</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>------Right Table------&gt;
+Select A Slot To Compair
+Table is Read Only
+Var And Scrolling Synced To Left Table
+</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
