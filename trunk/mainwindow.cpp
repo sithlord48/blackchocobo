@@ -2772,6 +2772,7 @@ void MainWindow::guirefresh(void)
     }
     /*~~~~ END Type Check~~~~*/
     //dialog preview
+    //make the preview nice
     QImage image(2, 2, QImage::Format_ARGB32);
     image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
     image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
@@ -2779,9 +2780,77 @@ void MainWindow::guirefresh(void)
     image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
     QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
     ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
-    //make the preview nice
 
+    switch(ui->combo_map_controls->currentIndex())
+    {
+    case 0: ui->slide_world_x->setValue(ff7.slot[s].l_world & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].l_world2& 0x3FFFF);
+            break;
+    case 1: ui->slide_world_x->setValue(ff7.slot[s].tc_world & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].tc_world2& 0x3FFFF);
+            break;
+    case 2: ui->slide_world_x->setValue(ff7.slot[s].bh_world & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].bh_world2& 0x3FFFF);
+            break;
+    case 3: ui->slide_world_x->setValue(ff7.slot[s].sub_world & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].sub_world2& 0x3FFFF);
+            break;
+    case 4: ui->slide_world_x->setValue(ff7.slot[s].uw_world & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].uw_world2& 0x3FFFF);
+            break;
+    case 5: ui->slide_world_x->setValue(ff7.slot[s].durw_world & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].durw_world2& 0x3FFFF);
+            break;
+    case 6: ui->slide_world_x->setValue(ff7.slot[s].ew_world & 0x7FFFF);
+            ui->slide_world_y->setValue(ff7.slot[s].ew_world2& 0x3FFFF);
+            break;
+    }
+    //WORLD TAB
+    ui->leader_x->setValue((ff7.slot[s].l_world) & 0x7FFFF);
+    ui->leader_id->setValue((ff7.slot[s].l_world >> 19)&0x1F);
+    ui->leader_angle->setValue((ff7.slot[s].l_world) >> 24);
+    ui->leader_y->setValue((ff7.slot[s].l_world2) & 0x3FFFF);
+    ui->leader_z->setValue((ff7.slot[s].l_world2) >> 18);
 
+    ui->durw_x->setValue((ff7.slot[s].durw_world) & 0x7FFFF);
+    ui->durw_id->setValue((ff7.slot[s].durw_world >> 19)&0x1F);
+    ui->durw_angle->setValue((ff7.slot[s].durw_world) >> 24);
+    ui->durw_y->setValue((ff7.slot[s].durw_world2) & 0x3FFFF);
+    ui->durw_z->setValue((ff7.slot[s].durw_world2) >> 18);
+
+    ui->ew_x->setValue((ff7.slot[s].ew_world) & 0x7FFFF);
+    ui->ew_id->setValue((ff7.slot[s].ew_world >> 19)&0x1F);
+    ui->ew_angle->setValue((ff7.slot[s].ew_world) >> 24);
+    ui->ew_y->setValue((ff7.slot[s].ew_world2) & 0x3FFFF);
+    ui->ew_z->setValue((ff7.slot[s].ew_world2) >> 18);
+
+    ui->uw_x->setValue((ff7.slot[s].uw_world) & 0x7FFFF);
+    ui->uw_id->setValue((ff7.slot[s].uw_world >> 19)&0x1F);
+    ui->uw_angle->setValue((ff7.slot[s].uw_world) >> 24);
+    ui->uw_y->setValue((ff7.slot[s].uw_world2) & 0x3FFFF);
+    ui->uw_z->setValue((ff7.slot[s].uw_world2) >> 18);
+
+    ui->tc_x->setValue((ff7.slot[s].tc_world) & 0x7FFFF);
+    ui->tc_id->setValue((ff7.slot[s].tc_world >> 19)&0x1F);
+    ui->tc_angle->setValue((ff7.slot[s].tc_world) >> 24);
+    ui->tc_y->setValue((ff7.slot[s].tc_world2) & 0x3FFFF);
+    ui->tc_z->setValue((ff7.slot[s].tc_world2) >> 18);
+
+    ui->bh_x->setValue((ff7.slot[s].bh_world) & 0x7FFFF);
+    ui->bh_id->setValue((ff7.slot[s].bh_world >> 19)&0x1F);
+    ui->bh_angle->setValue((ff7.slot[s].bh_world) >> 24);
+    ui->bh_y->setValue((ff7.slot[s].bh_world2) & 0x3FFFF);
+    ui->bh_z->setValue((ff7.slot[s].bh_world2) >> 18);
+
+    ui->sub_x->setValue((ff7.slot[s].sub_world) & 0x7FFFF);
+    ui->sub_id->setValue((ff7.slot[s].sub_world >> 19)&0x1F);
+    ui->sub_angle->setValue((ff7.slot[s].sub_world) >> 24);
+    ui->sub_y->setValue((ff7.slot[s].sub_world2) & 0x3FFFF);
+    ui->sub_z->setValue((ff7.slot[s].sub_world2) >> 18);
+
+        if(ff7.slot[s].highwind_buggy ==0x00){ui->combo_highwind_buggy->setCurrentIndex(0);}
+    else if(ff7.slot[s].highwind_buggy ==0x01){ui->combo_highwind_buggy->setCurrentIndex(1);}
+    else if(ff7.slot[s].highwind_buggy ==0x10){ui->combo_highwind_buggy->setCurrentIndex(2);}
 
     ui->sb_turkschruch->setValue(ff7.slot[s].aeris_chruch);
     ui->sb_donprog->setValue(ff7.slot[s].donprogress);
@@ -3180,72 +3249,6 @@ void MainWindow::clearslot(int rmslot)
 void MainWindow::testdata_refresh()
 {
     load=true;
-    switch(ui->combo_map_controls->currentIndex())
-    {
-    case 0: ui->slide_world_x->setValue(ff7.slot[s].l_world & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].l_world2& 0x3FFFF);
-            break;
-    case 1: ui->slide_world_x->setValue(ff7.slot[s].tc_world & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].tc_world2& 0x3FFFF);
-            break;
-    case 2: ui->slide_world_x->setValue(ff7.slot[s].bh_world & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].bh_world2& 0x3FFFF);
-            break;
-    case 3: ui->slide_world_x->setValue(ff7.slot[s].sub_world & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].sub_world2& 0x3FFFF);
-            break;
-    case 4: ui->slide_world_x->setValue(ff7.slot[s].uw_world & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].uw_world2& 0x3FFFF);
-            break;
-    case 5: ui->slide_world_x->setValue(ff7.slot[s].durw_world & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].durw_world2& 0x3FFFF);
-            break;
-    case 6: ui->slide_world_x->setValue(ff7.slot[s].ew_world & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7.slot[s].ew_world2& 0x3FFFF);
-            break;
-    }
-    //WORLD TAB
-    ui->leader_x->setValue((ff7.slot[s].l_world) & 0x7FFFF);
-    ui->leader_id->setValue((ff7.slot[s].l_world >> 19)&0x1F);
-    ui->leader_angle->setValue((ff7.slot[s].l_world) >> 24);
-    ui->leader_y->setValue((ff7.slot[s].l_world2) & 0x3FFFF);
-    ui->leader_z->setValue((ff7.slot[s].l_world2) >> 18);
-
-    ui->durw_x->setValue((ff7.slot[s].durw_world) & 0x7FFFF);
-    ui->durw_id->setValue((ff7.slot[s].durw_world >> 19)&0x1F);
-    ui->durw_angle->setValue((ff7.slot[s].durw_world) >> 24);
-    ui->durw_y->setValue((ff7.slot[s].durw_world2) & 0x3FFFF);
-    ui->durw_z->setValue((ff7.slot[s].durw_world2) >> 18);
-
-    ui->ew_x->setValue((ff7.slot[s].ew_world) & 0x7FFFF);
-    ui->ew_id->setValue((ff7.slot[s].ew_world >> 19)&0x1F);
-    ui->ew_angle->setValue((ff7.slot[s].ew_world) >> 24);
-    ui->ew_y->setValue((ff7.slot[s].ew_world2) & 0x3FFFF);
-    ui->ew_z->setValue((ff7.slot[s].ew_world2) >> 18);
-
-    ui->uw_x->setValue((ff7.slot[s].uw_world) & 0x7FFFF);
-    ui->uw_id->setValue((ff7.slot[s].uw_world >> 19)&0x1F);
-    ui->uw_angle->setValue((ff7.slot[s].uw_world) >> 24);
-    ui->uw_y->setValue((ff7.slot[s].uw_world2) & 0x3FFFF);
-    ui->uw_z->setValue((ff7.slot[s].uw_world2) >> 18);
-
-    ui->tc_x->setValue((ff7.slot[s].tc_world) & 0x7FFFF);
-    ui->tc_id->setValue((ff7.slot[s].tc_world >> 19)&0x1F);
-    ui->tc_angle->setValue((ff7.slot[s].tc_world) >> 24);
-    ui->tc_y->setValue((ff7.slot[s].tc_world2) & 0x3FFFF);
-    ui->tc_z->setValue((ff7.slot[s].tc_world2) >> 18);
-
-    ui->bh_x->setValue((ff7.slot[s].bh_world) & 0x7FFFF);
-    ui->bh_id->setValue((ff7.slot[s].bh_world >> 19)&0x1F);
-    ui->bh_angle->setValue((ff7.slot[s].bh_world) >> 24);
-    ui->bh_y->setValue((ff7.slot[s].bh_world2) & 0x3FFFF);
-    ui->bh_z->setValue((ff7.slot[s].bh_world2) >> 18);
-
-    ui->sub_x->setValue((ff7.slot[s].sub_world) & 0x7FFFF);
-    ui->sub_id->setValue((ff7.slot[s].sub_world >> 19)&0x1F);
-    ui->sub_angle->setValue((ff7.slot[s].sub_world) >> 24);
-    ui->sub_y->setValue((ff7.slot[s].sub_world2) & 0x3FFFF);
-    ui->sub_z->setValue((ff7.slot[s].sub_world2) >> 18);
 
    //TEST TAB
 
@@ -3263,8 +3266,6 @@ void MainWindow::testdata_refresh()
     if((ff7.slot[s].tut_sub)&(1<<2)){ui->cb_tut_sub->setChecked(Qt::Checked);}
 
     ui->lcdNumber_6->display(ff7.slot[s].tut_sub);
-
-
 
     if(ff7.slot[s].tut_save == 0x3A){ui->cb_tut_worldsave->setCheckState(Qt::Checked);}
     else if(ff7.slot[s].tut_save ==0x32){ui->cb_tut_worldsave->setCheckState(Qt::PartiallyChecked);}
@@ -3333,12 +3334,9 @@ void MainWindow::testdata_refresh()
     if((ff7.slot[s].tut_sub)& (1<<7)){ui->cb_tut_sub_8->setChecked(Qt::Checked);}
     else{ui->cb_tut_sub_8->setChecked(Qt::Unchecked);}
     ui->lcd_tut_sub->display(ff7.slot[s].tut_sub);
-
-         if(ff7.slot[s].highwind_buggy ==0x00){ui->combo_highwind_buggy->setCurrentIndex(0);}
-    else if(ff7.slot[s].highwind_buggy ==0x01){ui->combo_highwind_buggy->setCurrentIndex(1);}
-    else if(ff7.slot[s].highwind_buggy ==0x10){ui->combo_highwind_buggy->setCurrentIndex(2);}
-
     load=false;
+
+    unknown_refresh(ui->combo_z_var->currentIndex());
 }
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
 void MainWindow::on_btn_cloud_clicked()     {curchar=0; charupdate();ui->btn_cloud->setStyleSheet(avatar_style(ff7.slot[s].chars[curchar].id));}
@@ -5586,15 +5584,15 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
   ui->tbl_unknown->setColumnWidth(3,70);
   ui->tbl_unknown->setColumnWidth(4,20);
 
-  if(ui->combo_compair_slot->currentIndex()!=0)//these calls are only if we have a slot to compair to selected.
-  {
+  //if(ui->combo_compair_slot->currentIndex()!=0)//these calls are only if we have a slot to compair to selected.
+  //{
     ui->tbl_compair_unknown->reset();
     ui->tbl_compair_unknown->setColumnWidth(0,40);
     ui->tbl_compair_unknown->setColumnWidth(1,40);
     ui->tbl_compair_unknown->setColumnWidth(2,40);
     ui->tbl_compair_unknown->setColumnWidth(3,70);
     ui->tbl_compair_unknown->setColumnWidth(4,20);
-  }
+  //}
   switch(z)//how many rows
   {
     case 0: break;
@@ -5749,12 +5747,37 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
         }
         newItem = new QTableWidgetItem(text.number(value,16),0);
         ui->tbl_compair_unknown->setItem(i,1,newItem);
+
         newItem = new QTableWidgetItem(text.number(value,10),0);
         ui->tbl_compair_unknown->setItem(i,2,newItem);
         newItem = new QTableWidgetItem(text.number(value,2),0);
         ui->tbl_compair_unknown->setItem(i,3,newItem);
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_compair_unknown->setItem(i,4,newItem);
+        //color the diff's ;)
+        if(ui->tbl_compair_unknown->item(i,1)->text()!=ui->tbl_unknown->item(i,1)->text())
+        {
+        ui->tbl_compair_unknown->item(i,0)->setBackgroundColor(Qt::yellow);
+        ui->tbl_compair_unknown->item(i,1)->setBackgroundColor(Qt::yellow);
+        ui->tbl_compair_unknown->item(i,2)->setBackgroundColor(Qt::yellow);
+        ui->tbl_compair_unknown->item(i,3)->setBackgroundColor(Qt::yellow);
+        ui->tbl_compair_unknown->item(i,4)->setBackgroundColor(Qt::yellow);
+        ui->tbl_compair_unknown->item(i,0)->setTextColor(Qt::red);
+        ui->tbl_compair_unknown->item(i,1)->setTextColor(Qt::red);
+        ui->tbl_compair_unknown->item(i,2)->setTextColor(Qt::red);
+        ui->tbl_compair_unknown->item(i,3)->setTextColor(Qt::red);
+        ui->tbl_compair_unknown->item(i,4)->setTextColor(Qt::red);
+        ui->tbl_unknown->item(i,0)->setBackgroundColor(Qt::yellow);
+        ui->tbl_unknown->item(i,1)->setBackgroundColor(Qt::yellow);
+        ui->tbl_unknown->item(i,2)->setBackgroundColor(Qt::yellow);
+        ui->tbl_unknown->item(i,3)->setBackgroundColor(Qt::yellow);
+        ui->tbl_unknown->item(i,4)->setBackgroundColor(Qt::yellow);
+        ui->tbl_unknown->item(i,0)->setTextColor(Qt::red);
+        ui->tbl_unknown->item(i,1)->setTextColor(Qt::red);
+        ui->tbl_unknown->item(i,2)->setTextColor(Qt::red);
+        ui->tbl_unknown->item(i,3)->setTextColor(Qt::red);
+        ui->tbl_unknown->item(i,4)->setTextColor(Qt::red);
+        }
       }
   }
   for(int i=0;i<rows;i++)//set up the item flags
@@ -5778,7 +5801,11 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 }
 
 void MainWindow::on_combo_z_var_currentIndexChanged(int z){unknown_refresh(z);}
-void MainWindow::on_combo_compair_slot_currentIndexChanged(void){unknown_refresh(ui->combo_z_var->currentIndex());}
+void MainWindow::on_combo_compair_slot_currentIndexChanged(void)
+{
+if(ui->combo_compair_slot->currentIndex()==0){ui->tbl_compair_unknown->clearContents();ui->tbl_compair_unknown->setRowCount(0);}
+else{unknown_refresh(ui->combo_z_var->currentIndex());}
+}
 
 void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
 {if(!load && (item->column()==2)){//only if not load and column 2 selected
