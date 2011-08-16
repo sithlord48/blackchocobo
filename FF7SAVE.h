@@ -413,9 +413,9 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint16 gp;                 // [0x0CEE] Party GP (0-10000)
     quint8 z_20[12];            // [0x0CF0] UNKNOWN DATA
     qint8 stables;              // [0x0CFC] Number of chocobo stables owned
-    qint8 stablesoccupied;      // [0x0CFD] Number of occupied stables //genereated incorrectly ?
+    qint8 stablesoccupied;      // [0x0CFD] Number of occupied stables
     quint8 z_21[1];             // [0x0CFE] UNKNOWN DATA
-    qint8 chocobomask;          // [0x0CFF] Mask of occupied stables//genereated incorrectly ?
+    qint8 chocobomask;          // [0x0CFF] Mask of occupied stables
     quint8 chocomated;          // [0x0D00] what stalls can't mate
     quint8 z_22[40];            // [0x0D01] UNKNOWN DATA
     quint8 yuffieforest;        // [0x0D29] yuffie in forest if bit1 = 1 then yes.. others here too?
@@ -463,7 +463,7 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint32 durw_world2;        // [0x0F8C] Diamond/ Ultimate And Ruby Weapons Coords.
     quint32 ew_world;           // [0x0F90] emerald?
     quint32 ew_world2;          // [0x0F94] emerald2?
-    quint8 z_37[240];           // [0x0F84] UNKNOWN (Start of more coords.. )
+    quint8 z_37[240];           // [0x0F98] UNKNOWN (Start of more coords.. )
     FF7CHOCOBO choco56[2];      // [0x1084] Chocobo slots 5-6
     quint16 phsmask;            // [0x10A4] who is allowed in the phs
     quint16 unlockedchars;      // [0x10A6] who is visible in the phs
