@@ -5584,15 +5584,13 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
   ui->tbl_unknown->setColumnWidth(3,70);
   ui->tbl_unknown->setColumnWidth(4,20);
 
-  //if(ui->combo_compair_slot->currentIndex()!=0)//these calls are only if we have a slot to compair to selected.
-  //{
-    ui->tbl_compair_unknown->reset();
-    ui->tbl_compair_unknown->setColumnWidth(0,40);
-    ui->tbl_compair_unknown->setColumnWidth(1,40);
-    ui->tbl_compair_unknown->setColumnWidth(2,40);
-    ui->tbl_compair_unknown->setColumnWidth(3,70);
-    ui->tbl_compair_unknown->setColumnWidth(4,20);
-  //}
+  ui->tbl_compair_unknown->reset();
+  ui->tbl_compair_unknown->setColumnWidth(0,40);
+  ui->tbl_compair_unknown->setColumnWidth(1,40);
+  ui->tbl_compair_unknown->setColumnWidth(2,40);
+  ui->tbl_compair_unknown->setColumnWidth(3,70);
+  ui->tbl_compair_unknown->setColumnWidth(4,20);
+
   switch(z)//how many rows
   {
     case 0: break;
@@ -5754,29 +5752,17 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
         ui->tbl_compair_unknown->setItem(i,3,newItem);
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_compair_unknown->setItem(i,4,newItem);
-        //color the diff's ;)
+
         if(ui->tbl_compair_unknown->item(i,1)->text()!=ui->tbl_unknown->item(i,1)->text())
         {
-        ui->tbl_compair_unknown->item(i,0)->setBackgroundColor(Qt::yellow);
-        ui->tbl_compair_unknown->item(i,1)->setBackgroundColor(Qt::yellow);
-        ui->tbl_compair_unknown->item(i,2)->setBackgroundColor(Qt::yellow);
-        ui->tbl_compair_unknown->item(i,3)->setBackgroundColor(Qt::yellow);
-        ui->tbl_compair_unknown->item(i,4)->setBackgroundColor(Qt::yellow);
-        ui->tbl_compair_unknown->item(i,0)->setTextColor(Qt::red);
-        ui->tbl_compair_unknown->item(i,1)->setTextColor(Qt::red);
-        ui->tbl_compair_unknown->item(i,2)->setTextColor(Qt::red);
-        ui->tbl_compair_unknown->item(i,3)->setTextColor(Qt::red);
-        ui->tbl_compair_unknown->item(i,4)->setTextColor(Qt::red);
-        ui->tbl_unknown->item(i,0)->setBackgroundColor(Qt::yellow);
-        ui->tbl_unknown->item(i,1)->setBackgroundColor(Qt::yellow);
-        ui->tbl_unknown->item(i,2)->setBackgroundColor(Qt::yellow);
-        ui->tbl_unknown->item(i,3)->setBackgroundColor(Qt::yellow);
-        ui->tbl_unknown->item(i,4)->setBackgroundColor(Qt::yellow);
-        ui->tbl_unknown->item(i,0)->setTextColor(Qt::red);
-        ui->tbl_unknown->item(i,1)->setTextColor(Qt::red);
-        ui->tbl_unknown->item(i,2)->setTextColor(Qt::red);
-        ui->tbl_unknown->item(i,3)->setTextColor(Qt::red);
-        ui->tbl_unknown->item(i,4)->setTextColor(Qt::red);
+            for (int c=0;c<5;c++)
+            {//color the diffs ;)
+                ui->tbl_compair_unknown->item(i,c)->setBackgroundColor(Qt::yellow);
+                ui->tbl_compair_unknown->item(i,c)->setTextColor(Qt::red);
+                ui->tbl_unknown->item(i,c)->setBackgroundColor(Qt::yellow);
+                ui->tbl_unknown->item(i,c)->setTextColor(Qt::red);
+            }
+            //more diff related stuff here
         }
       }
   }
