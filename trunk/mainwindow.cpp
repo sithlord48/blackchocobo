@@ -70,6 +70,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->combo_id->setVisible(false);
     ui->lbl_id->setVisible(false);
     ui->compair_table->setEnabled(false);
+    ui->tbl_diff->setVisible(0);
 
     //chocobo boxes
     ui->box_stable1->setEnabled(false);
@@ -139,6 +140,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->tbl_location_field->horizontalHeader()->setStyleSheet(tablestyle);
     ui->tbl_unknown->horizontalHeader()->setStyleSheet(tablestyle);
     ui->tbl_compair_unknown->horizontalHeader()->setStyleSheet(tablestyle);
+    ui->tbl_diff->horizontalHeader()->setStyleSheet(tablestyle);
 
     if(settings.value("autochargrowth").toBool())
     {
@@ -5575,8 +5577,10 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
   load=true;
   QString text;
   int rows=0;
+  int num_diff=0;
   QTableWidgetItem *newItem;
   quint8 value=0;
+  qint16 diff=0;
   ui->tbl_unknown->reset();
   ui->tbl_unknown->setColumnWidth(0,40);
   ui->tbl_unknown->setColumnWidth(1,40);
@@ -5590,6 +5594,11 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
   ui->tbl_compair_unknown->setColumnWidth(2,40);
   ui->tbl_compair_unknown->setColumnWidth(3,70);
   ui->tbl_compair_unknown->setColumnWidth(4,20);
+
+  ui->tbl_diff->reset();
+  ui->tbl_diff->setColumnWidth(0,40);
+  ui->tbl_diff->setColumnWidth(1,40);
+  ui->tbl_diff->setColumnWidth(22,40);
 
   switch(z)//how many rows
   {
@@ -5762,8 +5771,23 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
                 ui->tbl_unknown->item(i,c)->setBackgroundColor(Qt::yellow);
                 ui->tbl_unknown->item(i,c)->setTextColor(Qt::red);
             }
-            //more diff related stuff here
+            //more diff related stuff here only dec for now
+            num_diff++;
+            ui->tbl_diff->setRowCount(num_diff);
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_diff->setItem(num_diff-1,0,newItem);
+            diff= ui->tbl_unknown->item(i,2)->text().toInt() - ui->tbl_compair_unknown->item(i,2)->text().toInt() ;
+            newItem = new QTableWidgetItem(text.number(diff,10),0);
+            ui->tbl_diff->setItem(num_diff-1,1,newItem);
+            //set properites for the table and its items
+            ui->tbl_diff->setVisible(1);
+            ui->tbl_diff->item(num_diff-1,0)->setFlags(Qt::ItemIsEnabled);
+            ui->tbl_diff->item(num_diff-1,1)->setFlags(Qt::ItemIsEnabled);
+            ui->tbl_diff->setRowHeight(num_diff-1,20);
+            if(num_diff<16){ui->tbl_diff->setFixedHeight((num_diff*21)+20);ui->tbl_diff->setFixedWidth(85);}
+            else{ui->tbl_diff->setFixedHeight((15*21)+23);ui->tbl_diff->setFixedWidth(100);}
         }
+      if(num_diff ==0){ui->tbl_diff->clearContents();ui->tbl_diff->setRowCount(0);ui->tbl_diff->setVisible(0);}
       }
   }
   for(int i=0;i<rows;i++)//set up the item flags
