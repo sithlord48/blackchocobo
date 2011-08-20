@@ -4768,10 +4768,6 @@ Would you like to correct the playtime?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Compaired To Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Edit By Changing Dec Value
@@ -4779,11 +4775,19 @@ Valid Range 0-255</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Diff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>------Right Table------&gt;
-Select A Slot To Compair
+Select A Slot To Compare
 Table is Read Only
 Var And Scrolling Synced To Left Table
 </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compare To Slot</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6829,11 +6833,11 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New: NTSC &lt;=&gt; PAL Time Conversion (prompts when needed)</source>
+        <source>New: Better Unknown Var Tab.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New: Better Unknown Var Tab.</source>
+        <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
