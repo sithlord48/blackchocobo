@@ -4793,7 +4793,7 @@ Rango válido 0-255</translation>
     </message>
     <message>
         <source>Diff</source>
-        <translation type="unfinished"></translation>
+        <translation>Diff</translation>
     </message>
     <message>
         <source>------Right Table------&gt;
@@ -4801,11 +4801,14 @@ Select A Slot To Compare
 Table is Read Only
 Var And Scrolling Synced To Left Table
 </source>
-        <translation type="unfinished"></translation>
+        <translation>-----Tabla derecha-----&gt;
+Seleccionar una ranura para comparar
+Esta tabla es de sólo lectura
+Var y navegación sincronizadas con la tabla izquierda</translation>
     </message>
     <message>
         <source>Compare To Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Comparar con la ranura</translation>
     </message>
 </context>
 <context>
@@ -6887,7 +6890,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Conversión de tiempo NTSC &lt;=&gt; PAL</translation>
     </message>
 </context>
 <context>
