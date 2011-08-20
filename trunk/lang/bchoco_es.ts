@@ -2249,7 +2249,7 @@
     </message>
     <message>
         <source>Shinra Bldg 67F.</source>
-        <translation type="unfinished">Edif. Shinra P65.</translation>
+        <translation>Edif. Shinra P65.</translation>
     </message>
     <message>
         <source>256</source>
@@ -2317,7 +2317,7 @@
     </message>
     <message>
         <source>Shinra Bldg 69F.</source>
-        <translation type="unfinished">Edif. Shinra P69.</translation>
+        <translation>Edif. Shinra P69.</translation>
     </message>
     <message>
         <source>264</source>
@@ -2541,7 +2541,7 @@
     </message>
     <message>
         <source>Shinra Bldg. 64F.</source>
-        <translation type="unfinished">Edif. Shinra P64.</translation>
+        <translation>Edif. Shinra P64.</translation>
     </message>
     <message>
         <source>247</source>
@@ -4639,7 +4639,7 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Meeting Aeris</source>
-        <translation type="unfinished">Conociendo a Aeris</translation>
+        <translation>Conociendo a Aeris</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
@@ -4655,140 +4655,145 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Unable to Mate</source>
-        <translation type="unfinished"></translation>
+        <translation>Imposible cruzar</translation>
     </message>
     <message>
         <source>z_39</source>
-        <translation type="unfinished">z_39</translation>
+        <translation>z_39</translation>
     </message>
     <message>
         <source>Add One Of Each Mastered Materia </source>
-        <translation type="unfinished"></translation>
+        <translation>Añadir una materia maestra de cada</translation>
     </message>
     <message>
         <source>Remove ALL Materia </source>
-        <translation type="unfinished"></translation>
+        <translation>Quitar TODA la materia</translation>
     </message>
     <message>
         <source>Checked Stables Are Occupied Uncheck Stable to Empty Stable</source>
-        <translation type="unfinished"></translation>
+        <translation>Los establos marcados estan ocupados, desmarcar para vaciar el establo</translation>
     </message>
     <message>
         <source>Clear All Stolen Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>Quitar toda la materia robada</translation>
     </message>
     <message>
         <source>Chocobo Ranch</source>
-        <translation type="unfinished"></translation>
+        <translation>Rancho chocobo</translation>
     </message>
     <message>
         <source>345</source>
-        <translation type="unfinished">345</translation>
+        <translation>345</translation>
     </message>
     <message>
         <source>65535</source>
-        <translation type="unfinished">65535</translation>
+        <translation>65535</translation>
     </message>
     <message>
         <source>64960</source>
-        <translation type="unfinished">64960</translation>
+        <translation>64960</translation>
     </message>
     <message>
         <source>61</source>
-        <translation type="unfinished">61</translation>
+        <translation>61</translation>
     </message>
     <message>
         <source>Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>Recargar</translation>
     </message>
     <message>
         <source>F5</source>
-        <translation type="unfinished">F5</translation>
+        <translation>F5</translation>
     </message>
     <message>
         <source>72</source>
-        <translation type="unfinished">72</translation>
+        <translation>72</translation>
     </message>
     <message>
         <source>65533</source>
-        <translation type="unfinished">65533</translation>
+        <translation>65533</translation>
     </message>
     <message>
         <source>62949</source>
-        <translation type="unfinished">62949</translation>
+        <translation>62949</translation>
     </message>
     <message>
         <source>99</source>
-        <translation type="unfinished">99</translation>
+        <translation>99</translation>
     </message>
     <message>
         <source>-None-</source>
-        <translation type="unfinished"></translation>
+        <translation>-Ninguno-</translation>
     </message>
     <message>
         <source>Slot:%1 Contains A PAL region save</source>
-        <translation type="unfinished"></translation>
+        <translation>Ranura:%1 Contiene una partida de región PAL</translation>
     </message>
     <message>
         <source>PAL PSX runs at 50/60 speed
 This results in an incorrect playtime
 Would you like to correct the playtime?</source>
-        <translation type="unfinished"></translation>
+        <translation>PSX PAL corre a una velocidad de 50/60
+Esto resulta en tiempos de juego incorrectos
+¿Quieres corregir el tiempo de juego?</translation>
     </message>
     <message>
         <source>PAL Slot Detected</source>
-        <translation type="unfinished"></translation>
+        <translation>Ranura PAL detectada</translation>
     </message>
     <message>
         <source>Always Correct</source>
-        <translation type="unfinished"></translation>
+        <translation>Corregir siempre</translation>
     </message>
     <message>
         <source>Never Correct</source>
-        <translation type="unfinished"></translation>
+        <translation>Corregir nunca</translation>
     </message>
     <message>
         <source>Would You Like To Update the Play time</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Quieres actualizar el tiempo de juego?</translation>
     </message>
     <message>
         <source>PAL -&gt; NTSC Conversion</source>
-        <translation type="unfinished"></translation>
+        <translation>Conversión PAL-&gt;NTSC</translation>
     </message>
     <message>
         <source>NTSC -&gt; PAL Conversion</source>
-        <translation type="unfinished"></translation>
+        <translation>Conversión NTSC-&gt;PAL</translation>
     </message>
     <message>
         <source>Unknown Var:</source>
-        <translation type="unfinished"></translation>
+        <translation>Var indefinida:</translation>
     </message>
     <message>
         <source>#</source>
-        <translation type="unfinished"></translation>
+        <translation>#</translation>
     </message>
     <message>
         <source>Hex</source>
-        <translation type="unfinished"></translation>
+        <translation>Hex</translation>
     </message>
     <message>
         <source>Dec</source>
-        <translation type="unfinished"></translation>
+        <translation>Dec</translation>
     </message>
     <message>
         <source>Bin</source>
-        <translation type="unfinished"></translation>
+        <translation>Bin</translation>
     </message>
     <message>
         <source>Compaired To Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>Comparado a la ranura</translation>
     </message>
     <message>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Edit By Changing Dec Value
 Valid Range 0-255</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;----Tabla izquierda----
+Seleccionar var indefinida para ver
+Editar cambiando el valor en dec
+Rango válido 0-255</translation>
     </message>
     <message>
         <source>------Right Table------&gt;
@@ -4796,7 +4801,10 @@ Select A Slot To Compair
 Table is Read Only
 Var And Scrolling Synced To Left Table
 </source>
-        <translation type="unfinished"></translation>
+        <translation>-----Tabla derecha-----&gt;
+Seleccionar ranura para comparar
+La tabla es de sólo lectura
+Var y navegación sincronizadas con la tabla izquierda</translation>
     </message>
 </context>
 <context>
@@ -6830,55 +6838,55 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: New Window Now Via Detached Process</source>
-        <translation type="unfinished">Arreglado: Ahora la nueva ventana a través de procesos independiente</translation>
+        <translation>Arreglado: Ahora la nueva ventana a través de procesos independiente</translation>
     </message>
     <message>
         <source>Fixed: Limit Boxes Not Always Showing Data Correctly</source>
-        <translation type="unfinished">Arreglado: Cajas límite no siempre muestra los datos correctamente</translation>
+        <translation>Arreglado: Cajas límite no siempre muestra los datos correctamente</translation>
     </message>
     <message>
         <source>Fixed: Cait/ Vincent Reversed in PHS Boxes</source>
-        <translation type="unfinished">Arreglado:Cuadro PHS de Cait / Vicente invertidos</translation>
+        <translation>Arreglado:Cuadro PHS de Cait / Vicente invertidos</translation>
     </message>
     <message>
         <source>New: Editable Unknown Vars</source>
-        <translation type="unfinished">Nuevo: Variables desconocido editables</translation>
+        <translation>Nuevo: Variables desconocido editables</translation>
     </message>
     <message>
         <source>New: Toggle &quot;unable to mate&quot; flag for chocobos</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Bandera &quot;Imposible cruzar&quot; para chocobos</translation>
     </message>
     <message>
         <source>Fixed: Use the Action for showing Slot select dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Uso de Acción para mostrar el diálogo de selección de ranura.</translation>
     </message>
     <message>
         <source>Fixed: Chocobo Name Editable again</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Nombres de chocobo editables otra vez</translation>
     </message>
     <message>
         <source>Fixed: Dialogs Inherit style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Estilo de diálogos interno.</translation>
     </message>
     <message>
         <source>New: Toggle Each Stable Occupied Flag</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Bandera para poner cada establo ocupado</translation>
     </message>
     <message>
         <source>New: Reload Feature</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Función de recargar</translation>
     </message>
     <message>
         <source>New: Locations &quot;Chocobo Ranch&quot; And &quot;Highwind&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Lugares &quot;Rancho chocobo&quot; y &quot;Vientofuerte&quot;</translation>
     </message>
     <message>
         <source>New: NTSC &lt;=&gt; PAL Time Conversion (prompts when needed)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Conversión de tiempo NTSC &lt;==&gt; PAL (Avisa cuando es necesario)</translation>
     </message>
     <message>
         <source>New: Better Unknown Var Tab.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Pestaña de var desconocidas mejorada.</translation>
     </message>
 </context>
 <context>
