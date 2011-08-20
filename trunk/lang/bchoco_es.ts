@@ -4782,10 +4782,6 @@ Esto resulta en tiempos de juego incorrectos
         <translation>Bin</translation>
     </message>
     <message>
-        <source>Compaired To Slot</source>
-        <translation>Comparado a la ranura</translation>
-    </message>
-    <message>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Edit By Changing Dec Value
@@ -4796,15 +4792,20 @@ Editar cambiando el valor en dec
 Rango válido 0-255</translation>
     </message>
     <message>
+        <source>Diff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>------Right Table------&gt;
-Select A Slot To Compair
+Select A Slot To Compare
 Table is Read Only
 Var And Scrolling Synced To Left Table
 </source>
-        <translation>-----Tabla derecha-----&gt;
-Seleccionar ranura para comparar
-La tabla es de sólo lectura
-Var y navegación sincronizadas con la tabla izquierda</translation>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Compare To Slot</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6881,12 +6882,12 @@ p, li { white-space: pre-wrap; }
         <translation>Nuevo: Lugares &quot;Rancho chocobo&quot; y &quot;Vientofuerte&quot;</translation>
     </message>
     <message>
-        <source>New: NTSC &lt;=&gt; PAL Time Conversion (prompts when needed)</source>
-        <translation>Nuevo: Conversión de tiempo NTSC &lt;==&gt; PAL (Avisa cuando es necesario)</translation>
-    </message>
-    <message>
         <source>New: Better Unknown Var Tab.</source>
         <translation>Nuevo: Pestaña de var desconocidas mejorada.</translation>
+    </message>
+    <message>
+        <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

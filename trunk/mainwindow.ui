@@ -601,7 +601,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
        <enum>QTabWidget::Rounded</enum>
       </property>
       <property name="currentIndex">
-       <number>8</number>
+       <number>0</number>
       </property>
       <property name="usesScrollButtons">
        <bool>false</bool>
@@ -4665,8 +4665,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>437</width>
-             <height>436</height>
+             <width>401</width>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -10193,6 +10193,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
         <string>C&amp;hocobo</string>
        </attribute>
        <layout class="QVBoxLayout" name="verticalLayout_57">
+        <property name="margin">
+         <number>3</number>
+        </property>
         <item>
          <widget class="QFrame" name="choco_stables_frame">
           <property name="sizePolicy">
@@ -10203,7 +10206,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </property>
           <layout class="QHBoxLayout" name="horizontalLayout_51">
            <property name="leftMargin">
-            <number>6</number>
+            <number>3</number>
            </property>
            <property name="rightMargin">
             <number>6</number>
@@ -10352,11 +10355,14 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1458</width>
-             <height>328</height>
+             <width>1446</width>
+             <height>276</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
+            <property name="margin">
+             <number>3</number>
+            </property>
             <item>
              <widget class="QGroupBox" name="box_stable1">
               <property name="enabled">
@@ -16350,8 +16356,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>764</width>
-             <height>440</height>
+             <width>714</width>
+             <height>275</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -24916,7 +24922,7 @@ p, li { white-space: pre-wrap; }
            <enum>QTabWidget::West</enum>
           </property>
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <widget class="QWidget" name="tab_3">
            <attribute name="title">
@@ -26410,7 +26416,7 @@ Valid Range 0-255</string>
                <widget class="QLabel" name="label_235">
                 <property name="text">
                  <string>------Right Table------&gt;
-Select A Slot To Compair
+Select A Slot To Compare
 Table is Read Only
 Var And Scrolling Synced To Left Table
 </string>
@@ -26426,7 +26432,7 @@ Var And Scrolling Synced To Left Table
              </layout>
             </item>
             <item>
-             <widget class="QFrame" name="compair_table">
+             <widget class="QFrame" name="compare_table">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                 <horstretch>0</horstretch>
@@ -26469,12 +26475,12 @@ Var And Scrolling Synced To Left Table
                     </size>
                    </property>
                    <property name="text">
-                    <string>Compaired To Slot</string>
+                    <string>Compare To Slot</string>
                    </property>
                   </widget>
                  </item>
                  <item>
-                  <widget class="QComboBox" name="combo_compair_slot">
+                  <widget class="QComboBox" name="combo_compare_slot">
                    <property name="sizePolicy">
                     <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                      <horstretch>0</horstretch>
@@ -26578,7 +26584,7 @@ Var And Scrolling Synced To Left Table
                 </layout>
                </item>
                <item>
-                <widget class="QTableWidget" name="tbl_compair_unknown">
+                <widget class="QTableWidget" name="tbl_compare_unknown">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
                    <horstretch>0</horstretch>

@@ -531,6 +531,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_tbl_unknown_itemChanged(QTableWidgetItem* item);
 
     void on_btn_add_all_materia_clicked();
-    void on_combo_compair_slot_currentIndexChanged(void);
+    void on_combo_compare_slot_currentIndexChanged(void);
 };
 #endif // MAINWINDOW_H
