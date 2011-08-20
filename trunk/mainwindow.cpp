@@ -5472,7 +5472,7 @@ void MainWindow::on_slide_world_x_valueChanged(int value)
     case 2: ui->bh_x->setValue(value);      break;
     case 3: ui->sub_x->setValue(value);     break;
     case 4: ui->uw_x->setValue(value);      break;
-    case 5: ui->durw_x->setValue(value);      break;
+    case 5: ui->durw_x->setValue(value);    break;
     case 6: ui->ew_x->setValue(value);      break;
     }
 }}
@@ -5486,7 +5486,7 @@ void MainWindow::on_slide_world_y_valueChanged(int value)
     case 2: ui->bh_y->setValue(value);      break;
     case 3: ui->sub_y->setValue(value);     break;
     case 4: ui->uw_y->setValue(value);      break;
-    case 5: ui->durw_y->setValue(value);      break;
+    case 5: ui->durw_y->setValue(value);    break;
     case 6: ui->ew_y->setValue(value);      break;
     }
 
@@ -5577,10 +5577,8 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
   load=true;
   QString text;
   int rows=0;
-  int num_diff=0;
   QTableWidgetItem *newItem;
   quint8 value=0;
-  qint16 diff=0;
   ui->tbl_unknown->reset();
   ui->tbl_unknown->setColumnWidth(0,40);
   ui->tbl_unknown->setColumnWidth(1,40);
@@ -5595,10 +5593,8 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
   ui->tbl_compare_unknown->setColumnWidth(3,70);
   ui->tbl_compare_unknown->setColumnWidth(4,20);
 
-  ui->tbl_diff->reset();
-  ui->tbl_diff->setColumnWidth(0,40);
-  ui->tbl_diff->setColumnWidth(1,40);
-  ui->tbl_diff->setColumnWidth(22,40);
+  if(ui->combo_compare_slot->currentIndex()==0){ui->btn_all_z_diffs->setEnabled(0);}
+  else {ui->btn_all_z_diffs->setEnabled(1);}
 
   switch(z)//how many rows
   {
@@ -5771,23 +5767,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
                 ui->tbl_unknown->item(i,c)->setBackgroundColor(Qt::yellow);
                 ui->tbl_unknown->item(i,c)->setTextColor(Qt::red);
             }
-            //more diff related stuff here only dec for now
-            num_diff++;
-            ui->tbl_diff->setRowCount(num_diff);
-            newItem = new QTableWidgetItem(text,0);
-            ui->tbl_diff->setItem(num_diff-1,0,newItem);
-            diff= ui->tbl_unknown->item(i,2)->text().toInt() - ui->tbl_compare_unknown->item(i,2)->text().toInt() ;
-            newItem = new QTableWidgetItem(text.number(diff,10),0);
-            ui->tbl_diff->setItem(num_diff-1,1,newItem);
-            //set properites for the table and its items
-            ui->tbl_diff->setVisible(1);
-            ui->tbl_diff->item(num_diff-1,0)->setFlags(Qt::ItemIsEnabled);
-            ui->tbl_diff->item(num_diff-1,1)->setFlags(Qt::ItemIsEnabled);
-            ui->tbl_diff->setRowHeight(num_diff-1,20);
-            if(num_diff<16){ui->tbl_diff->setFixedHeight((num_diff*21)+20);ui->tbl_diff->setFixedWidth(85);}
-            else{ui->tbl_diff->setFixedHeight((15*21)+23);ui->tbl_diff->setFixedWidth(100);}
         }
-      if(num_diff ==0){ui->tbl_diff->clearContents();ui->tbl_diff->setRowCount(0);ui->tbl_diff->setVisible(0);}
       }
   }
   for(int i=0;i<rows;i++)//set up the item flags
@@ -5813,8 +5793,16 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 void MainWindow::on_combo_z_var_currentIndexChanged(int z){unknown_refresh(z);}
 void MainWindow::on_combo_compare_slot_currentIndexChanged(void)
 {
-if(ui->combo_compare_slot->currentIndex()==0){ui->tbl_compare_unknown->clearContents();ui->tbl_compare_unknown->setRowCount(0);}
+if(ui->combo_compare_slot->currentIndex()==0)
+{
+    ui->tbl_compare_unknown->clearContents();
+    ui->tbl_compare_unknown->setRowCount(0);
+    ui->tbl_diff->clearContents();
+    ui->tbl_diff->setRowCount(0);
+    ui->btn_all_z_diffs->setEnabled(0);
+}
 else{unknown_refresh(ui->combo_z_var->currentIndex());}
+ui->tbl_diff->setVisible(0);
 }
 
 void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
@@ -5863,3 +5851,50 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
       case 39: ff7.slot[s].z_39[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
       }
 }}
+
+void MainWindow::on_btn_all_z_diffs_clicked()
+{
+    ui->tbl_diff->reset();
+
+    int num_diff=0;
+    quint16 diff =0;
+    QString text;
+    QTableWidgetItem *newItem;
+    int z_index= ui->combo_z_var->currentIndex();
+    for(int z=0;z<ui->combo_z_var->count();z++)
+    {
+        ui->combo_z_var->setCurrentIndex(z);
+        for(int i=0;i<ui->tbl_unknown->rowCount();i++)
+        {
+            if(ui->tbl_compare_unknown->item(i,1)->text()!=ui->tbl_unknown->item(i,1)->text())
+            {
+                num_diff++;
+                ui->tbl_diff->setRowCount(num_diff);
+                text.clear();
+                text.append("z_");  text.append(QString::number(z));
+                text.append(":");   text.append(QString::number(i));
+                newItem = new QTableWidgetItem(text,0);
+                ui->tbl_diff->setItem(num_diff-1,0,newItem);
+                diff= ui->tbl_unknown->item(i,2)->text().toInt() - ui->tbl_compare_unknown->item(i,2)->text().toInt() ;
+                newItem = new QTableWidgetItem(text.number(diff,10),0);
+                ui->tbl_diff->setItem(num_diff-1,1,newItem);
+                newItem = new QTableWidgetItem(text.number(diff,2),0);
+                ui->tbl_diff->setItem(num_diff-1,2,newItem);
+                //set properites for the tableitems
+                ui->tbl_diff->setVisible(1);
+                ui->tbl_diff->item(num_diff-1,0)->setFlags(Qt::ItemIsEnabled);
+                ui->tbl_diff->item(num_diff-1,1)->setFlags(Qt::ItemIsEnabled);
+                ui->tbl_diff->item(num_diff-1,2)->setFlags(Qt::ItemIsEnabled);
+                ui->tbl_diff->setRowHeight(num_diff-1,20);
+            }
+        }
+    }
+    ui->tbl_diff->setColumnWidth(0,70);
+    ui->tbl_diff->setColumnWidth(1,40);
+    ui->tbl_diff->setColumnWidth(2,70);
+    ui->tbl_diff->setVisible(1);
+    if(num_diff<16){ui->tbl_diff->setFixedHeight((num_diff*21)+20);ui->tbl_diff->setFixedWidth(185);}
+    else{ui->tbl_diff->setFixedHeight((15*21)+23);ui->tbl_diff->setFixedWidth(200);}
+    ui->combo_z_var->setCurrentIndex(z_index);
+    if(num_diff ==0){ui->tbl_diff->clearContents();ui->tbl_diff->setRowCount(0);ui->tbl_diff->setVisible(0);}
+}

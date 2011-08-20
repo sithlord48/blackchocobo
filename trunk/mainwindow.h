@@ -532,5 +532,6 @@ private slots://try to keep these in the same order as the .cpp file
 
     void on_btn_add_all_materia_clicked();
     void on_combo_compare_slot_currentIndexChanged(void);
+    void on_btn_all_z_diffs_clicked();
 };
 #endif // MAINWINDOW_H
