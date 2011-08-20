@@ -4796,19 +4796,22 @@ Rango válido 0-255</translation>
         <translation>Diff</translation>
     </message>
     <message>
+        <source>Compare To Slot</source>
+        <translation>Comparar con la ranura</translation>
+    </message>
+    <message>
+        <source>Show All &apos;Z&apos; Changes</source>
+        <translation>Mostrar Todos &apos;z&apos; Cambios</translation>
+    </message>
+    <message>
         <source>------Right Table------&gt;
 Select A Slot To Compare
 Table is Read Only
-Var And Scrolling Synced To Left Table
-</source>
+Var And Scrolling Synced To Left Table</source>
         <translation>-----Tabla derecha-----&gt;
 Seleccionar una ranura para comparar
 Esta tabla es de sólo lectura
 Var y navegación sincronizadas con la tabla izquierda</translation>
-    </message>
-    <message>
-        <source>Compare To Slot</source>
-        <translation>Comparar con la ranura</translation>
     </message>
 </context>
 <context>

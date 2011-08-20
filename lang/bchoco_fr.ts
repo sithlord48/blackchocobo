@@ -4298,31 +4298,31 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Place Leader</source>
-        <translation type="unfinished">Placer Leader</translation>
+        <translation>Placer Personnage</translation>
     </message>
     <message>
         <source>Place Tiny Bronco/Chocobo</source>
-        <translation type="unfinished">Placer  Tiny Bronco/Chocobo</translation>
+        <translation>Placer Tiny Bronco/Chocobo</translation>
     </message>
     <message>
         <source>Place Buggy/Highwind</source>
-        <translation type="unfinished">Placer Buggy/Hautvent</translation>
+        <translation>Placer Buggy/Hautvent</translation>
     </message>
     <message>
         <source>Place Sub</source>
-        <translation type="unfinished">Placer Sous</translation>
+        <translation>Placer Sous-marin</translation>
     </message>
     <message>
         <source>Place UNKNOWN</source>
-        <translation type="unfinished">Placer Inconnue</translation>
+        <translation>Placer INCONNU</translation>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
-        <translation type="unfinished">Placer Arme Diamant / Dernière / Rubis</translation>
+        <translation>Placer Dernière Arme/Diamant/Rubis</translation>
     </message>
     <message>
         <source>Place Emerald Weapon?</source>
-        <translation type="unfinished">Placer Arme Émeraude?</translation>
+        <translation>Placer Arme Émeraude?</translation>
     </message>
     <message>
         <source>FF7 Dex SaveGame(*.gme)</source>
@@ -4370,7 +4370,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Automatic Exp &lt;-&gt; Lvl</source>
-        <translation type="unfinished">Automatique Exp &lt;-&gt; Lvl</translation>
+        <translation>Exp &lt;-&gt; Nv Automatique</translation>
     </message>
     <message>
         <source>&lt;---Edit Selected Item Slot</source>
@@ -4378,15 +4378,15 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Add Max Of All Items</source>
-        <translation type="unfinished">Ajouter Max de tous les articles</translation>
+        <translation>Ajouter tous les éléments</translation>
     </message>
     <message>
         <source>Clear All Items</source>
-        <translation type="unfinished">Effacer tous les articles</translation>
+        <translation>Effacer tous les éléments</translation>
     </message>
     <message>
         <source>Clear Key Items</source>
-        <translation type="unfinished">Effacer les éléments clés</translation>
+        <translation>Effacer les éléments clés</translation>
     </message>
     <message>
         <source>47</source>
@@ -4410,51 +4410,51 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Aeris Turks</source>
-        <translation type="unfinished"></translation>
+        <translation>Turcs et Aéris</translation>
     </message>
     <message>
         <source>The Church In The Slums</source>
-        <translation type="unfinished">Le Chruch Dans les bidonvilles</translation>
+        <translation>Église dans les taudis</translation>
     </message>
     <message>
         <source>Aeris Death</source>
-        <translation type="unfinished"></translation>
+        <translation>Mort d&apos;Aéris</translation>
     </message>
     <message>
         <source>Don_prog</source>
-        <translation type="unfinished"></translation>
+        <translation>Don_Cornéo_progression</translation>
     </message>
     <message>
         <source>&amp;Location</source>
-        <translation type="unfinished">&amp;Lieu</translation>
+        <translation>&amp;Lieu</translation>
     </message>
     <message>
         <source>Save Location</source>
-        <translation type="unfinished">Enregistrer la position</translation>
+        <translation>Enregistrer la position</translation>
     </message>
     <message>
         <source>Worldmap Location</source>
-        <translation type="unfinished">Carte du monde Lieu</translation>
+        <translation>Emplacement sur la carte du monde</translation>
     </message>
     <message>
         <source>Shown On Map</source>
-        <translation type="unfinished">Indiquées sur la carte</translation>
+        <translation>Indiqués sur la carte</translation>
     </message>
     <message>
         <source>None</source>
-        <translation type="unfinished">aucune</translation>
+        <translation>Rien</translation>
     </message>
     <message>
         <source>Buggy</source>
-        <translation type="unfinished">Buggy</translation>
+        <translation>Buggy</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation type="unfinished">inconnue</translation>
+        <translation>Inconnu</translation>
     </message>
     <message>
         <source>Unknown  Vars</source>
-        <translation type="unfinished">vars inconnu</translation>
+        <translation>Variables inconnues</translation>
     </message>
     <message>
         <source>z_1</source>
@@ -4654,152 +4654,163 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Unable to Mate</source>
-        <translation type="unfinished"></translation>
+        <translation>Incapacité à accoupler</translation>
     </message>
     <message>
         <source>z_39</source>
-        <translation type="unfinished">z_39</translation>
+        <translation>z_39</translation>
     </message>
     <message>
         <source>Add One Of Each Mastered Materia </source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter un exemplaire de chaque matéria maître</translation>
     </message>
     <message>
         <source>Remove ALL Materia </source>
-        <translation type="unfinished"></translation>
+        <translation>Enlever TOUTE la Matéria</translation>
     </message>
     <message>
         <source>Checked Stables Are Occupied Uncheck Stable to Empty Stable</source>
-        <translation type="unfinished"></translation>
+        <translation>Les étables cochées sont occupées, décochez les étables pour les vider</translation>
     </message>
     <message>
         <source>Clear All Stolen Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>Effacer toutes la Matéria volée</translation>
     </message>
     <message>
         <source>Chocobo Ranch</source>
-        <translation type="unfinished"></translation>
+        <translation>Ranch Chocobo</translation>
     </message>
     <message>
         <source>345</source>
-        <translation type="unfinished">345</translation>
+        <translation>345</translation>
     </message>
     <message>
         <source>65535</source>
-        <translation type="unfinished">65535</translation>
+        <translation>65535</translation>
     </message>
     <message>
         <source>64960</source>
-        <translation type="unfinished">64960</translation>
+        <translation>64960</translation>
     </message>
     <message>
         <source>61</source>
-        <translation type="unfinished">61</translation>
+        <translation>61</translation>
     </message>
     <message>
         <source>Reload</source>
-        <translation type="unfinished"></translation>
+        <translation>Recharger</translation>
     </message>
     <message>
         <source>F5</source>
-        <translation type="unfinished">F5</translation>
+        <translation>F5</translation>
     </message>
     <message>
         <source>72</source>
-        <translation type="unfinished">72</translation>
+        <translation>72</translation>
     </message>
     <message>
         <source>65533</source>
-        <translation type="unfinished">65533</translation>
+        <translation>65533</translation>
     </message>
     <message>
         <source>62949</source>
-        <translation type="unfinished">62949</translation>
+        <translation>62949</translation>
     </message>
     <message>
         <source>99</source>
-        <translation type="unfinished">99</translation>
+        <translation>99</translation>
     </message>
     <message>
         <source>-None-</source>
-        <translation type="unfinished"></translation>
+        <translation>-Rien-</translation>
     </message>
     <message>
         <source>Slot:%1 Contains A PAL region save</source>
-        <translation type="unfinished"></translation>
+        <translation>Fente %1 contien une sauvegarde PAL</translation>
     </message>
     <message>
         <source>PAL PSX runs at 50/60 speed
 This results in an incorrect playtime
 Would you like to correct the playtime?</source>
-        <translation type="unfinished"></translation>
+        <translation>PAL PSX fonctionne à la vitesse 50/60
+Cela résulte en un temps de jeu incorrect
+Voulez-vous corrigez ceci?</translation>
     </message>
     <message>
         <source>PAL Slot Detected</source>
-        <translation type="unfinished"></translation>
+        <translation>Fente PAL détectée</translation>
     </message>
     <message>
         <source>Always Correct</source>
-        <translation type="unfinished"></translation>
+        <translation>Toujours Correct</translation>
     </message>
     <message>
         <source>Never Correct</source>
-        <translation type="unfinished"></translation>
+        <translation>Jamais Correct</translation>
     </message>
     <message>
         <source>Would You Like To Update the Play time</source>
-        <translation type="unfinished"></translation>
+        <translation>Voulez-vous mettre à jour le temps de jeu</translation>
     </message>
     <message>
         <source>PAL -&gt; NTSC Conversion</source>
-        <translation type="unfinished"></translation>
+        <translation>Conversion PAL -&gt; NTSC</translation>
     </message>
     <message>
         <source>NTSC -&gt; PAL Conversion</source>
-        <translation type="unfinished"></translation>
+        <translation>Conversion NTSC -&gt; Pal</translation>
     </message>
     <message>
         <source>Unknown Var:</source>
-        <translation type="unfinished"></translation>
+        <translation>Variable Inconnue:</translation>
     </message>
     <message>
         <source>#</source>
-        <translation type="unfinished"></translation>
+        <translation>#</translation>
     </message>
     <message>
         <source>Hex</source>
-        <translation type="unfinished"></translation>
+        <translation>Hex</translation>
     </message>
     <message>
         <source>Dec</source>
-        <translation type="unfinished"></translation>
+        <translation>Déc</translation>
     </message>
     <message>
         <source>Bin</source>
-        <translation type="unfinished"></translation>
+        <translation>Bin</translation>
     </message>
     <message>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Edit By Changing Dec Value
 Valid Range 0-255</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;------Tableau de gauche------
+Sélectionnez une variable inconnue à visualiser
+Modifiez en changeant la valeur décimale
+Valeurs valables 0-255</translation>
     </message>
     <message>
         <source>Diff</source>
-        <translation type="unfinished"></translation>
+        <translation>Diff</translation>
+    </message>
+    <message>
+        <source>Compare To Slot</source>
+        <translation>Compare à l&apos;emplacement</translation>
+    </message>
+    <message>
+        <source>Show All &apos;Z&apos; Changes</source>
+        <translation>Afficher tous &apos;z&apos; Modifications</translation>
     </message>
     <message>
         <source>------Right Table------&gt;
 Select A Slot To Compare
 Table is Read Only
-Var And Scrolling Synced To Left Table
-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Compare To Slot</source>
-        <translation type="unfinished"></translation>
+Var And Scrolling Synced To Left Table</source>
+        <translation>------Tableau de droite-------&gt;
+Sélectionnez un emplacement à comparer
+Le tableau est uniquement pour visualiser
+Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
 </context>
 <context>
@@ -6061,43 +6072,43 @@ Var And Scrolling Synced To Left Table
     </message>
     <message>
         <source>Counter Rate 20%</source>
-        <translation type="unfinished">Taux Contre 20%</translation>
+        <translation>Chance de Contre-Attaque 20%</translation>
     </message>
     <message>
         <source>Counter Rate 40%</source>
-        <translation type="unfinished">Taux Contre 40%</translation>
+        <translation>Chance de Contre-Attaque 40%</translation>
     </message>
     <message>
         <source>Counter Rate 60%</source>
-        <translation type="unfinished">Taux Contre 60%</translation>
+        <translation>Chance de Contre-Attaque 60%</translation>
     </message>
     <message>
         <source>Counter Rate 80%</source>
-        <translation type="unfinished">Taux Contre 80%</translation>
+        <translation>Chance de Contre-Attaque 80%</translation>
     </message>
     <message>
         <source>Counter Rate 100%</source>
-        <translation type="unfinished">Taux Contre 100%</translation>
+        <translation>Chance de Contre-Attaque 100%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 30%</source>
-        <translation type="unfinished">Taux magique contre 30%</translation>
+        <translation>Chance de Contre-Attaque Magique 30%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 40%</source>
-        <translation type="unfinished">Taux magique contre 40%</translation>
+        <translation>Chance de Contre-Attaque Magique 40%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 60%</source>
-        <translation type="unfinished">Taux magique contre 60%</translation>
+        <translation>Chance de Contre-Attaque Magique 60%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 80%</source>
-        <translation type="unfinished">Taux magique contre 80%</translation>
+        <translation>Chance de Contre-Attaque Magique 80%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 100%</source>
-        <translation type="unfinished">Taux magique contre 100%</translation>
+        <translation>Chance de Contre-Attaque Magique 100%</translation>
     </message>
     <message>
         <source>Bolt3 (52mp)</source>
@@ -6669,7 +6680,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Thank You For, the old checksum program</source>
-        <translation>Merci pour, l&apos;ancien programme de checksum</translation>
+        <translation>Merci pour l&apos;ancien programme de checksum</translation>
     </message>
     <message>
         <source>Thank You For, Helping me see the light of stupid errors. </source>
@@ -6705,163 +6716,165 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Update:Almost All Spinboxes now &quot;Wrapping&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Mise à jour:Presque toutes les cases défilantes peuvent changer d&apos;extrême</translation>
     </message>
     <message>
         <source>Previous Versions</source>
-        <translation type="unfinished"></translation>
+        <translation>Versions Précédentes</translation>
     </message>
     <message>
         <source>New: Basic Setting of World Locations In Debug</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Toutes les options de la carte du monde en Debug</translation>
     </message>
     <message>
         <source>New: Set Font For Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Sélectionnez la couleur de fond pour le programme</translation>
     </message>
     <message>
         <source>New: Revive Ruby Weapon &amp; Emerald Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Ranimer les Armes Rubis &amp; Émeraude</translation>
     </message>
     <message>
         <source>New: Toggle Field Help and Battle Target Labels</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Modifier l&apos;aide de terrain et les tags de cible en combat</translation>
     </message>
     <message>
         <source>New: Fancy Character Materia on Equipment tab</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Pas sûr pour Fantaisiste</translatorcomment>
+        <translation>Nouveau: Matéria des personnages &quot;Fantaisiste&quot; sur l&apos;onglet Équipement</translation>
     </message>
     <message>
         <source>New: Save and Save as are now both allowed</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Sauvegarder et Sauvegarder Sous sont maintenant toutes les deux autorisées</translation>
     </message>
     <message>
         <source>New: Change Slot Posin in Debug mode (MC only) </source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Chnager la position de la Fente en mode Debug (MC only)</translation>
     </message>
     <message>
         <source>New: Support for .vgs .mem and .gme formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Support for les formats .vgs .mem and .gme</translation>
     </message>
     <message>
         <source>New: Added .bin .mc .mci .ps .psm .dff  to mcr/mcd list</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Ajouté .bin .mc .mci .ps .psm .dff aux listes mcr/mcd</translation>
     </message>
     <message>
         <source>Fixed: Materia Slots Display Left To Right (see ingame)</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixé: Les emplacements de Matéria s&apos;affichent correctement à la droite (voir en jeu)</translation>
     </message>
     <message>
         <source>Fixed: Psx and Psv Region Detection</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixé: Détection de la région PSX et PSV</translation>
     </message>
     <message>
         <source>Fixed: Titan/Ramuh Stats Backward.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixé: Titan/Ramuh Statistiques en arrière.</translation>
     </message>
     <message>
         <source>inital psx save/load; fixed checksum</source>
-        <translation type="unfinished"></translation>
+        <translation>PSX Sauvegarder/Charger initial, fixé le Checksum</translation>
     </message>
     <message>
         <source>Fixed: Empty Chocobos Now Start W/ empty names.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixé: Les Chocobos vident commencent maintenant sans nom.</translation>
     </message>
     <message>
         <source>Fixed: Typos Lots of Typos..</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixé: Des fautes, plein de fautes..</translation>
     </message>
     <message>
         <source>Fixed: &quot;Time Bug&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixé: Le &quot;Bug du temps&quot;</translation>
     </message>
     <message>
         <source>Fixed: &quot;Gravity&quot; Materia Bug</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixé: Le bug de la Matéria &quot;Gravité&quot;</translation>
     </message>
     <message>
         <source>Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixé: Les limites de Gils, Exp, Points au Coaster et quelques autres cases glissantes.</translation>
     </message>
     <message>
         <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
-        <translation type="unfinished"></translation>
+        <translation>Mise à jour: Les armes sur la carte du monde</translation>
     </message>
     <message>
         <source>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Option automatique de Exp &lt;-&gt; Nv (Défaut:On)</translation>
     </message>
     <message>
         <source>New: Flashback  Chruch in the slums</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Flashback de l&apos;église dans les taudis</translation>
     </message>
     <message>
         <source>Update: Location Tab; Both Save &amp; World Locations</source>
-        <translation type="unfinished"></translation>
+        <translation>Mise à jour: Onglets d&apos;emplacement, Emplacements de sauvegarde &amp; de la carte du monde</translation>
     </message>
     <message>
         <source>New: Spawn New Windows. (mainly for testing)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Nouvelles fenêtres (surtout pour tester)</translation>
     </message>
     <message>
         <source>New: Unknown Var  Tracker in Test Data (very basic atm)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Variables Inconnues dans le mode de test (très basique présentement)</translation>
     </message>
     <message>
         <source>Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Mise à jour: Les onglets des étables de Chocobo maintenant dans l&apos;aire de glissage</translation>
     </message>
     <message>
         <source>Fixed: New Window Now Via Detached Process</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixé: Nouvelles fenêtres maintenant via Processus détaché</translation>
     </message>
     <message>
         <source>Fixed: Limit Boxes Not Always Showing Data Correctly</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixé: Case de limites n&apos;affichant pas toujours les données correctement</translation>
     </message>
     <message>
         <source>Fixed: Cait/ Vincent Reversed in PHS Boxes</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixé: Cait/Vincent réversibles dans la case PHS</translation>
     </message>
     <message>
         <source>New: Editable Unknown Vars</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Variables Inconnues Éditables</translation>
     </message>
     <message>
         <source>New: Toggle &quot;unable to mate&quot; flag for chocobos</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Change la Variable &quot;Impossible d&apos;accoupler&quot; pour les Chocobos</translation>
     </message>
     <message>
         <source>Fixed: Use the Action for showing Slot select dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixé: Utiliser l&apos;action qui montre la sélection de dialogue.</translation>
     </message>
     <message>
         <source>Fixed: Chocobo Name Editable again</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixé: Les noms des Chocobos à nouveau éditables</translation>
     </message>
     <message>
         <source>Fixed: Dialogs Inherit style.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Pas sûr pour Inhérité</translatorcomment>
+        <translation>Fixé: Dialogues de style &quot;Inhérité&quot;.</translation>
     </message>
     <message>
         <source>New: Toggle Each Stable Occupied Flag</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Change chaque varible d&apos;étable occupée</translation>
     </message>
     <message>
         <source>New: Reload Feature</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Fonction de rechargement</translation>
     </message>
     <message>
         <source>New: Locations &quot;Chocobo Ranch&quot; And &quot;Highwind&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Locations du &quot;Ranch Chocobo&quot; et du &quot;Hautvent&quot;</translation>
     </message>
     <message>
         <source>New: Better Unknown Var Tab.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Meilleur Tableau de Variables.</translation>
     </message>
     <message>
         <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: NTSC &lt;=&gt; PAL Conversion de temps</translation>
     </message>
 </context>
 <context>

@@ -4779,15 +4779,18 @@ Valid Range 0-255</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>------Right Table------&gt;
-Select A Slot To Compare
-Table is Read Only
-Var And Scrolling Synced To Left Table
-</source>
+        <source>Compare To Slot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Compare To Slot</source>
+        <source>Show All &apos;Z&apos; Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>------Right Table------&gt;
+Select A Slot To Compare
+Table is Read Only
+Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
