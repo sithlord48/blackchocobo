@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>371</width>
-    <height>385</height>
+    <width>369</width>
+    <height>383</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -498,6 +498,26 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>New: Edit number of steps taken</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Previous Versions</string>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="textAlignment">
+           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New: Better Unknown Var Tab.</string>
           </property>
          </item>
@@ -539,21 +559,6 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>Fixed: Chocobo Name Editable again</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Previous Versions</string>
-          </property>
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <underline>true</underline>
-           </font>
-          </property>
-          <property name="textAlignment">
-           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
           </property>
          </item>
          <item>

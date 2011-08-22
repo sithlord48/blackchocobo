@@ -3051,7 +3051,7 @@ void MainWindow::guirefresh(void)
     else{ui->cb_materiacave_4->setChecked(Qt::Unchecked);}
     if((ff7.slot[s].yuffieforest)& (1<<0)){ui->cb_yuffieforest->setChecked(Qt::Checked);}
     else{ui->cb_yuffieforest->setChecked(Qt::Unchecked);}
-
+    ui->sb_steps->setValue(ff7.slot[s].steps);
     load =false; // all functions should set load on their own.
     /*~~~~~Call External Functions~~~~~~~*/
     setmenu();
@@ -3696,6 +3696,11 @@ void MainWindow::on_sb_time_sec_valueChanged(int value)
 {
     if(!load){ff7.slot[s].time = ((ui->sb_time_hour->value()*3600) + (ui->sb_time_min->value()*60) + (value)); ff7.slot[s].desc.time = ff7.slot[s].time;}
 }
+
+void MainWindow::on_sb_steps_valueChanged(int steps)
+{if(!load){
+  ff7.slot[s].steps = steps;
+}}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -5638,6 +5643,8 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
     case 37: rows=sizeof(ff7.slot[s].z_37); break;
     case 38: rows=sizeof(ff7.slot[s].z_38); break;
     case 39: rows=sizeof(ff7.slot[s].z_39); break;
+    case 40: rows=sizeof(ff7.slot[s].z_40); break;
+
   }
   ui->tbl_unknown->setRowCount(rows);
   if(ui->combo_compare_slot->currentIndex()!=0){ui->tbl_compare_unknown->setRowCount(rows);}
@@ -5688,6 +5695,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
         case 37: value = ff7.slot[s].z_37[i]; break;
         case 38: value = ff7.slot[s].z_38[i]; break;
         case 39: value = ff7.slot[s].z_39[i]; break;
+        case 40: value = ff7.slot[s].z_40[i]; break;
       }
       //Write Hex
       newItem = new QTableWidgetItem(text.number(value,16),0);
@@ -5747,6 +5755,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
           case 37: value = ff7.slot[ui->combo_compare_slot->currentIndex()-1].z_37[i]; break;
           case 38: value = ff7.slot[ui->combo_compare_slot->currentIndex()-1].z_38[i]; break;
           case 39: value = ff7.slot[ui->combo_compare_slot->currentIndex()-1].z_39[i]; break;
+          case 40: value = ff7.slot[ui->combo_compare_slot->currentIndex()-1].z_40[i]; break;
         }
         newItem = new QTableWidgetItem(text.number(value,16),0);
         ui->tbl_compare_unknown->setItem(i,1,newItem);
@@ -5849,6 +5858,7 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
       case 37: ff7.slot[s].z_37[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
       case 38: ff7.slot[s].z_38[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
       case 39: ff7.slot[s].z_39[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+      case 40: ff7.slot[s].z_40[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
       }
 }}
 
@@ -5857,7 +5867,7 @@ void MainWindow::on_btn_all_z_diffs_clicked()
     ui->tbl_diff->reset();
 
     int num_diff=0;
-    quint16 diff =0;
+    qint16 diff =0;
     QString text;
     QTableWidgetItem *newItem;
     int z_index= ui->combo_z_var->currentIndex();
