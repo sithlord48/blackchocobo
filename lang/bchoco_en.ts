@@ -4793,6 +4793,18 @@ Table is Read Only
 Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Steps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Number Steps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_40</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -6841,6 +6853,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Edit number of steps taken</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

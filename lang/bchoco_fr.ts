@@ -4812,6 +4812,18 @@ Sélectionnez un emplacement à comparer
 Le tableau est uniquement pour visualiser
 Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
+    <message>
+        <source>Steps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Number Steps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_40</source>
+        <translation type="unfinished">z_40</translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -6875,6 +6887,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
         <translation>Nouveau: NTSC &lt;=&gt; PAL Conversion de temps</translation>
+    </message>
+    <message>
+        <source>New: Edit number of steps taken</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

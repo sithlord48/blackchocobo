@@ -4813,6 +4813,18 @@ Seleccionar una ranura para comparar
 Esta tabla es de sólo lectura
 Var y navegación sincronizadas con la tabla izquierda</translation>
     </message>
+    <message>
+        <source>Steps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Number Steps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_40</source>
+        <translation type="unfinished">z_40</translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -6894,6 +6906,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
         <translation>Nuevo: Conversión de tiempo NTSC &lt;=&gt; PAL</translation>
+    </message>
+    <message>
+        <source>New: Edit number of steps taken</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
