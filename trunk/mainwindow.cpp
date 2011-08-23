@@ -2478,6 +2478,7 @@ void MainWindow::materiaupdate(void)
     QTableWidgetItem *newItem;
     int j= ui->tbl_materia->currentRow();
     ui->tbl_materia->reset();
+    ui->tbl_materia->clearContents();
     ui->tbl_materia->setColumnWidth(0,(ui->tbl_materia->width()*.65));
     ui->tbl_materia->setColumnWidth(1,(ui->tbl_materia->width()*.25));
     ui->tbl_materia->setRowCount(200);
@@ -2704,6 +2705,7 @@ void MainWindow::itemupdate()
     QTableWidgetItem *newItem;
     int j= ui->tbl_itm->currentRow();
     ui->tbl_itm->reset(); // just incase
+    ui->tbl_itm->clearContents();
     ui->tbl_itm->setColumnWidth(0,ui->tbl_itm->width()-54);
     ui->tbl_itm->setColumnWidth(1,32);
     ui->tbl_itm->setRowCount(320);
@@ -3018,6 +3020,7 @@ void MainWindow::guirefresh(void)
 /*~~~~~Stolen Materia~~~~~~~*/
     QTableWidgetItem *newItem;
     ui->tbl_materia_2->reset();
+    ui->tbl_materia_2->clearContents();
     ui->tbl_materia_2->setColumnWidth(0,(ui->tbl_materia_2->width()*.65));
     ui->tbl_materia_2->setColumnWidth(1,(ui->tbl_materia_2->width()*.25));
     ui->tbl_materia_2->setRowCount(48);
