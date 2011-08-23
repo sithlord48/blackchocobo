@@ -4665,8 +4665,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>401</width>
-             <height>414</height>
+             <width>437</width>
+             <height>436</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -10356,7 +10356,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>1452</width>
-             <height>276</height>
+             <height>334</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16356,8 +16356,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>715</width>
-             <height>275</height>
+             <width>764</width>
+             <height>440</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -20991,8 +20991,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>0</width>
-                 <height>0</height>
+                 <width>231</width>
+                 <height>236</height>
                 </size>
                </property>
                <property name="maximumSize">

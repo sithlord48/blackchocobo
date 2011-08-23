@@ -6290,20 +6290,8 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
         <translation>Selecciona un directorio para exportar las partidas de FF7 PC</translation>
     </message>
     <message>
-        <source>Pc Save Options</source>
-        <translation>Opciones de guardado PC</translation>
-    </message>
-    <message>
-        <source>Set Load And Save Paths.</source>
-        <translation>Configurar rutas de cargado y guardado.</translation>
-    </message>
-    <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
         <translation>Seleccionar una partida guardada por defecto (Debe ser Raw PSX)</translation>
-    </message>
-    <message>
-        <source>Stats / New Game </source>
-        <translation>Stats / Nuevo Juego </translation>
     </message>
     <message>
         <source>File To load When &quot;New Game&quot; is used</source>
@@ -6318,10 +6306,6 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
         <translation>Selecciona un lugar para guardar los archivos de stat de personaje</translation>
     </message>
     <message>
-        <source> Save Options</source>
-        <translation> Opciones de guardado</translation>
-    </message>
-    <message>
         <source> Folder To Load FF7 Saves (all types) from</source>
         <translation> Carpeta de la que cargar las partidas guardadas de FF7 (todos los tipos)</translation>
     </message>
@@ -6332,10 +6316,6 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     <message>
         <source>Folder To Export Pc (.ff7) Save Games</source>
         <translation>Carpeta para exportar partidas de PC (.ff7)</translation>
-    </message>
-    <message>
-        <source>&amp;Ok</source>
-        <translation>&amp;Aceptar</translation>
     </message>
     <message>
         <source>Main Window Background Color</source>
@@ -6404,6 +6384,18 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     <message>
         <source>14Pt</source>
         <translation>14pt</translation>
+    </message>
+    <message>
+        <source>Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Load And Save Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation type="unfinished">&amp;Cerrar</translation>
     </message>
 </context>
 <context>

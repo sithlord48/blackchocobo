@@ -6270,19 +6270,7 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Pc Save Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set Load And Save Paths.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stats / New Game </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6298,10 +6286,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source> Save Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source> Folder To Load FF7 Saves (all types) from</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6311,10 +6295,6 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Folder To Export Pc (.ff7) Save Games</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Ok</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6383,6 +6363,18 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>14Pt</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Load And Save Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -6289,20 +6289,8 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
         <translation>Sélectionnez un répertoire pour sauvegarder les sauvegardes FF7 PC</translation>
     </message>
     <message>
-        <source>Pc Save Options</source>
-        <translation>Sauvegarde PC Options</translation>
-    </message>
-    <message>
-        <source>Set Load And Save Paths.</source>
-        <translation>Définir les emplacements de chargement et de sauvegarde.</translation>
-    </message>
-    <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
         <translation>Sélectionnez une sauvegarde par défaut (Doit être PSX non-identifiée)</translation>
-    </message>
-    <message>
-        <source>Stats / New Game </source>
-        <translation>Stats / Nouvelle partie</translation>
     </message>
     <message>
         <source>File To load When &quot;New Game&quot; is used</source>
@@ -6317,10 +6305,6 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
         <translation>Sélectionnez un emplacement pour charger les fichiers de stats de personnages</translation>
     </message>
     <message>
-        <source> Save Options</source>
-        <translation> Options de sauvegarde</translation>
-    </message>
-    <message>
         <source> Folder To Load FF7 Saves (all types) from</source>
         <translation>Dossier pour charger les sauvegardes FF7 (tout types) à partir de</translation>
     </message>
@@ -6331,10 +6315,6 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     <message>
         <source>Folder To Export Pc (.ff7) Save Games</source>
         <translation>Dossier pour exporter les sauvegardes PC (.FF7)</translation>
-    </message>
-    <message>
-        <source>&amp;Ok</source>
-        <translation>&amp;Ok</translation>
     </message>
     <message>
         <source>Main Window Background Color</source>
@@ -6403,6 +6383,18 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     <message>
         <source>14Pt</source>
         <translation>14Pt</translation>
+    </message>
+    <message>
+        <source>Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Load And Save Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation type="unfinished">&amp;Fermer</translation>
     </message>
 </context>
 <context>

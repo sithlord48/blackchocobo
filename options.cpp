@@ -24,8 +24,6 @@ Options::Options(QWidget *parent) :
     ui(new Ui::Options)
 {
     ui->setupUi(this);
-    ui->lcd_font_size->setHidden(1);
-    ui->lcd_font_size->display(int(QApplication::font().pointSize()));
     ui->combo_font->setFont(QApplication::font().family());
     set_path_lbls();
     ui->slide_c1_r->setValue(bchoco_settings.value("color1_r").toInt());
@@ -37,7 +35,7 @@ Options::Options(QWidget *parent) :
     ui->slide_c3_r->setValue(bchoco_settings.value("color3_r").toInt());
     ui->slide_c3_g->setValue(bchoco_settings.value("color3_g").toInt());
     ui->slide_c3_b->setValue(bchoco_settings.value("color3_b").toInt());
-    switch(int(ui->lcd_font_size->value()))
+    switch(int(QApplication::font().pointSize()))
     {
     case 9: ui->btn_9pt->setChecked(Qt::Checked); break;
     case 10: ui->btn_10pt->setChecked(Qt::Checked); break;
@@ -175,42 +173,36 @@ void Options::on_btn_set_char_stat_folder_clicked()
 void Options::on_combo_font_currentIndexChanged(QString family)
 {
     bchoco_settings.setValue("font-family",family);
-    QApplication::setFont(QFont(family,int(ui->lcd_font_size->value()),-1,false));
+    QApplication::setFont(QFont(family,int(QApplication::font().pointSize()),-1,false));
 }
 void Options::on_btn_9pt_clicked(bool checked)
 {if(checked){
     bchoco_settings.setValue("font-size",9);
-    ui->lcd_font_size->display(9);
     QApplication::setFont(QFont(ui->combo_font->currentText(),9,-1,false));
 }}
 void Options::on_btn_10pt_clicked(bool checked)
 {if(checked){
     bchoco_settings.setValue("font-size",10);
-    ui->lcd_font_size->display(10);
     QApplication::setFont(QFont(ui->combo_font->currentText(),10,-1,false));
 }}
 void Options::on_btn_11pt_clicked(bool checked)
 {if(checked){
     bchoco_settings.setValue("font-size",11);
-    ui->lcd_font_size->display(11);
     QApplication::setFont(QFont(ui->combo_font->currentText(),11,-1,false));
 }}
 void Options::on_btn_12pt_clicked(bool checked)
 {if(checked){
     bchoco_settings.setValue("font-size",12);
-    ui->lcd_font_size->display(12);
     QApplication::setFont(QFont(ui->combo_font->currentText(),12,-1,false));
 }}
 void Options::on_btn_13pt_clicked(bool checked)
 {if(checked){
     bchoco_settings.setValue("font-size",13);
-    ui->lcd_font_size->display(13);
     QApplication::setFont(QFont(ui->combo_font->currentText(),13,-1,false));
 }}
 void Options::on_btn_14pt_clicked(bool checked)
 {if(checked){
     bchoco_settings.setValue("font-size",14);
-    ui->lcd_font_size->display(14);
     QApplication::setFont(QFont(ui->combo_font->currentText(),14,-1,false));
 }}
 /*~~~~~~~~~~~~~~~~~~Color sliders~~~~~~~~~~~~~~~~~~*/
