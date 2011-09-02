@@ -2670,6 +2670,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <property name="correctionMode">
                       <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
                      </property>
+                     <property name="suffix">
+                      <string/>
+                     </property>
                      <property name="maximum">
                       <number>2147483647</number>
                      </property>
@@ -3344,11 +3347,14 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <property name="spacing">
                     <number>0</number>
                    </property>
+                   <property name="leftMargin">
+                    <number>2</number>
+                   </property>
                    <property name="topMargin">
                     <number>0</number>
                    </property>
                    <property name="rightMargin">
-                    <number>6</number>
+                    <number>2</number>
                    </property>
                    <property name="bottomMargin">
                     <number>0</number>
@@ -3359,28 +3365,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <number>-1</number>
                      </property>
                      <item>
-                      <widget class="QLabel" name="label_14">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>STR</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
                       <widget class="QSpinBox" name="sb_str">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -3390,13 +3374,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>40</width>
+                         <width>64</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>48</width>
+                         <width>16777215</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3411,6 +3395,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                       </property>
+                       <property name="prefix">
+                        <string>Str: </string>
                        </property>
                        <property name="minimum">
                         <number>0</number>
@@ -3424,28 +3411,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLabel" name="label_16">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>VIT</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
                       <widget class="QSpinBox" name="sb_vit">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -3455,13 +3420,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>40</width>
+                         <width>64</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>48</width>
+                         <width>16777215</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3476,6 +3441,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                       </property>
+                       <property name="prefix">
+                        <string>Vit: </string>
                        </property>
                        <property name="minimum">
                         <number>0</number>
@@ -3496,28 +3464,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <number>-1</number>
                      </property>
                      <item>
-                      <widget class="QLabel" name="label_13">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>MAG</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
                       <widget class="QSpinBox" name="sb_mag">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -3527,13 +3473,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>40</width>
+                         <width>64</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>48</width>
+                         <width>16777215</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3548,6 +3494,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                       </property>
+                       <property name="prefix">
+                        <string>Mag: </string>
                        </property>
                        <property name="minimum">
                         <number>0</number>
@@ -3561,28 +3510,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLabel" name="label_18">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>SPR</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
                       <widget class="QSpinBox" name="sb_spr">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -3592,13 +3519,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>40</width>
+                         <width>64</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>48</width>
+                         <width>16777215</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3613,6 +3540,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                       </property>
+                       <property name="prefix">
+                        <string>Spr: </string>
                        </property>
                        <property name="minimum">
                         <number>0</number>
@@ -3633,28 +3563,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <number>-1</number>
                      </property>
                      <item>
-                      <widget class="QLabel" name="label_15">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>DEX</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
                       <widget class="QSpinBox" name="sb_dex">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -3664,13 +3572,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>40</width>
+                         <width>64</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>48</width>
+                         <width>16777215</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3685,6 +3593,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                       </property>
+                       <property name="prefix">
+                        <string>Dex: </string>
                        </property>
                        <property name="minimum">
                         <number>0</number>
@@ -3698,28 +3609,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLabel" name="label_17">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>LCK</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
                       <widget class="QSpinBox" name="sb_lck">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -3729,13 +3618,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>40</width>
+                         <width>64</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>48</width>
+                         <width>16777215</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3750,6 +3639,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                       </property>
+                       <property name="prefix">
+                        <string>Lck: </string>
                        </property>
                        <property name="minimum">
                         <number>0</number>
@@ -3770,28 +3662,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <number>-1</number>
                      </property>
                      <item>
-                      <widget class="QLabel" name="label_20">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>HP</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
                       <widget class="QSpinBox" name="sb_hp">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -3801,13 +3671,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>50</width>
+                         <width>75</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>75</width>
+                         <width>16777215</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3822,6 +3692,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                       </property>
+                       <property name="prefix">
+                        <string>Hp: </string>
                        </property>
                        <property name="minimum">
                         <number>0</number>
@@ -3835,28 +3708,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       </widget>
                      </item>
                      <item>
-                      <widget class="QLabel" name="label_19">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>MP</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
                       <widget class="QSpinBox" name="sb_mp">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -3866,13 +3717,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>50</width>
+                         <width>75</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>75</width>
+                         <width>16777215</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -3887,6 +3738,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                       </property>
+                       <property name="prefix">
+                        <string>Mp: </string>
                        </property>
                        <property name="minimum">
                         <number>0</number>
@@ -3928,8 +3782,14 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <property name="spacing">
                     <number>0</number>
                    </property>
+                   <property name="leftMargin">
+                    <number>2</number>
+                   </property>
                    <property name="topMargin">
                     <number>0</number>
+                   </property>
+                   <property name="rightMargin">
+                    <number>2</number>
                    </property>
                    <property name="bottomMargin">
                     <number>3</number>
@@ -3940,28 +3800,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <number>-1</number>
                      </property>
                      <item>
-                      <widget class="QLabel" name="label_22">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>STR</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
                       <widget class="QSpinBox" name="sb_strbonus">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -3971,13 +3809,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>40</width>
+                         <width>64</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>48</width>
+                         <width>16777215</width>
                          <height>24</height>
                         </size>
                        </property>
@@ -3993,30 +3831,11 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                        </property>
+                       <property name="prefix">
+                        <string>Str: </string>
+                       </property>
                        <property name="maximum">
                         <number>255</number>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_53">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>VIT </string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
                        </property>
                       </widget>
                      </item>
@@ -4030,13 +3849,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>40</width>
+                         <width>64</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>48</width>
+                         <width>16777215</width>
                          <height>24</height>
                         </size>
                        </property>
@@ -4051,6 +3870,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                       </property>
+                       <property name="prefix">
+                        <string>Vit: </string>
                        </property>
                        <property name="maximum">
                         <number>255</number>
@@ -4065,28 +3887,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <number>-1</number>
                      </property>
                      <item>
-                      <widget class="QLabel" name="label_45">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>16777215</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>MAG</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
                       <widget class="QSpinBox" name="sb_magbonus">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -4096,13 +3896,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>40</width>
+                         <width>64</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>48</width>
+                         <width>16777215</width>
                          <height>24</height>
                         </size>
                        </property>
@@ -4118,30 +3918,11 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                        </property>
+                       <property name="prefix">
+                        <string>Mag: </string>
+                       </property>
                        <property name="maximum">
                         <number>255</number>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_52">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>SPR</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
                        </property>
                       </widget>
                      </item>
@@ -4155,13 +3936,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>40</width>
+                         <width>64</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>48</width>
+                         <width>16777215</width>
                          <height>24</height>
                         </size>
                        </property>
@@ -4176,6 +3957,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                       </property>
+                       <property name="prefix">
+                        <string>Spr: </string>
                        </property>
                        <property name="maximum">
                         <number>255</number>
@@ -4190,28 +3974,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <number>-1</number>
                      </property>
                      <item>
-                      <widget class="QLabel" name="label_43">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>DEX</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
                       <widget class="QSpinBox" name="sb_dexbonus">
                        <property name="sizePolicy">
                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -4221,13 +3983,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>40</width>
+                         <width>64</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>48</width>
+                         <width>16777215</width>
                          <height>24</height>
                         </size>
                        </property>
@@ -4243,30 +4005,11 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                        </property>
+                       <property name="prefix">
+                        <string>Dex: </string>
+                       </property>
                        <property name="maximum">
                         <number>255</number>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_44">
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>LCK</string>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
                        </property>
                       </widget>
                      </item>
@@ -4280,13 +4023,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="minimumSize">
                         <size>
-                         <width>40</width>
+                         <width>64</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>48</width>
+                         <width>16777215</width>
                          <height>24</height>
                         </size>
                        </property>
@@ -4301,6 +4044,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                       </property>
+                       <property name="prefix">
+                        <string>Lck: </string>
                        </property>
                        <property name="maximum">
                         <number>255</number>
@@ -18309,7 +18055,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </property>
                     <property name="maximumSize">
                      <size>
-                      <width>16777215</width>
+                      <width>67</width>
                       <height>18</height>
                      </size>
                     </property>
@@ -18345,7 +18091,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </property>
                     <property name="minimumSize">
                      <size>
-                      <width>0</width>
+                      <width>75</width>
                       <height>18</height>
                      </size>
                     </property>
@@ -18374,29 +18120,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <item row="2" column="0">
                  <layout class="QHBoxLayout" name="horizontalLayout_56">
                   <item>
-                   <widget class="QLabel" name="label_72">
-                    <property name="text">
-                     <string>x</string>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignCenter</set>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
                    <widget class="QSpinBox" name="sb_coordx">
                     <property name="enabled">
                      <bool>true</bool>
                     </property>
                     <property name="minimumSize">
                      <size>
-                      <width>75</width>
+                      <width>96</width>
                       <height>18</height>
                      </size>
                     </property>
                     <property name="maximumSize">
                      <size>
-                      <width>16777215</width>
+                      <width>96</width>
                       <height>18</height>
                      </size>
                     </property>
@@ -18408,6 +18144,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </property>
                     <property name="readOnly">
                      <bool>false</bool>
+                    </property>
+                    <property name="prefix">
+                     <string notr="true">X: </string>
                     </property>
                     <property name="maximum">
                      <number>650000</number>
@@ -18419,35 +18158,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <item row="2" column="1" colspan="2">
                  <layout class="QHBoxLayout" name="horizontalLayout_57">
                   <item>
-                   <widget class="QLabel" name="label_73">
-                    <property name="maximumSize">
-                     <size>
-                      <width>7</width>
-                      <height>16777215</height>
-                     </size>
-                    </property>
-                    <property name="text">
-                     <string>y</string>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignCenter</set>
-                    </property>
-                   </widget>
-                  </item>
-                  <item>
                    <widget class="QSpinBox" name="sb_coordy">
                     <property name="enabled">
                      <bool>true</bool>
                     </property>
                     <property name="minimumSize">
                      <size>
-                      <width>75</width>
+                      <width>96</width>
                       <height>18</height>
                      </size>
                     </property>
                     <property name="maximumSize">
                      <size>
-                      <width>16777215</width>
+                      <width>112</width>
                       <height>18</height>
                      </size>
                     </property>
@@ -18460,6 +18183,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <property name="readOnly">
                      <bool>false</bool>
                     </property>
+                    <property name="prefix">
+                     <string notr="true">Y: </string>
+                    </property>
                     <property name="maximum">
                      <number>650000</number>
                     </property>
@@ -18469,16 +18195,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 </item>
                 <item row="2" column="3">
                  <layout class="QHBoxLayout" name="horizontalLayout_58">
-                  <item>
-                   <widget class="QLabel" name="label_74">
-                    <property name="text">
-                     <string>z</string>
-                    </property>
-                    <property name="alignment">
-                     <set>Qt::AlignCenter</set>
-                    </property>
-                   </widget>
-                  </item>
                   <item>
                    <widget class="QSpinBox" name="sb_coordz">
                     <property name="enabled">
@@ -18505,8 +18221,14 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <property name="readOnly">
                      <bool>false</bool>
                     </property>
+                    <property name="prefix">
+                     <string notr="true">Z: </string>
+                    </property>
                     <property name="maximum">
                      <number>650000</number>
+                    </property>
+                    <property name="value">
+                     <number>0</number>
                     </property>
                    </widget>
                   </item>
@@ -18546,8 +18268,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>744</width>
-             <height>414</height>
+             <width>764</width>
+             <height>440</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -18638,36 +18360,23 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="title">
                    <string>Party leader</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_7">
+                  <layout class="QVBoxLayout" name="verticalLayout_64">
                    <property name="margin">
-                    <number>3</number>
+                    <number>2</number>
                    </property>
-                   <item row="0" column="0">
-                    <layout class="QHBoxLayout" name="horizontalLayout_53">
-                     <item>
-                      <widget class="QLabel" name="label_194">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>X</string>
-                       </property>
-                      </widget>
-                     </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_52">
                      <item>
                       <widget class="QSpinBox" name="leader_x">
                        <property name="minimumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -18676,6 +18385,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="prefix">
+                        <string notr="true">X: </string>
                        </property>
                        <property name="maximum">
                         <number>295000</number>
@@ -18685,34 +18397,17 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="0" column="1" colspan="2">
-                    <layout class="QHBoxLayout" name="horizontalLayout_52">
-                     <item>
-                      <widget class="QLabel" name="label_195">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>Y</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item>
                       <widget class="QSpinBox" name="leader_y">
                        <property name="minimumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -18722,6 +18417,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
+                       <property name="prefix">
+                        <string>Y: </string>
+                       </property>
                        <property name="maximum">
                         <number>230000</number>
                        </property>
@@ -18730,39 +18428,28 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="0" column="3">
-                    <layout class="QHBoxLayout" name="horizontalLayout_60">
-                     <item>
-                      <widget class="QLabel" name="label_174">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>Z</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item>
                       <widget class="QSpinBox" name="leader_z">
                        <property name="minimumSize">
                         <size>
-                         <width>36</width>
+                         <width>48</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>36</width>
+                         <width>48</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="wrapping">
                         <bool>true</bool>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="prefix">
+                        <string notr="true">Z: </string>
                        </property>
                        <property name="minimum">
                         <number>0</number>
@@ -18777,8 +18464,21 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </item>
                     </layout>
                    </item>
-                   <item row="1" column="0" colspan="2">
+                   <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_61">
+                     <item>
+                      <spacer name="horizontalSpacer_56">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                      <item>
                       <widget class="QLabel" name="label_193">
                        <property name="text">
@@ -18791,18 +18491,33 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
+                       <property name="suffix">
+                        <string notr="true">°</string>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
                        <property name="maximum">
                         <number>360</number>
                        </property>
+                       <property name="value">
+                        <number>0</number>
+                       </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="1" column="2">
-                    <layout class="QHBoxLayout" name="horizontalLayout_62">
+                     <item>
+                      <spacer name="horizontalSpacer_70">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                      <item>
                       <widget class="QLabel" name="label_196">
                        <property name="text">
@@ -18823,6 +18538,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
+                     <item>
+                      <spacer name="horizontalSpacer_74">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                     </layout>
                    </item>
                   </layout>
@@ -18839,36 +18567,23 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="title">
                    <string>Tiny Bronco / Chocobo</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_10">
+                  <layout class="QVBoxLayout" name="verticalLayout_99">
                    <property name="margin">
-                    <number>3</number>
+                    <number>2</number>
                    </property>
-                   <item row="0" column="0">
-                    <layout class="QHBoxLayout" name="horizontalLayout_111">
-                     <item>
-                      <widget class="QLabel" name="label_207">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>X</string>
-                       </property>
-                      </widget>
-                     </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_53">
                      <item>
                       <widget class="QSpinBox" name="tc_x">
                        <property name="minimumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -18877,6 +18592,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="prefix">
+                        <string notr="true">X: </string>
                        </property>
                        <property name="maximum">
                         <number>295000</number>
@@ -18886,34 +18604,17 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="0" column="1" colspan="2">
-                    <layout class="QHBoxLayout" name="horizontalLayout_114">
-                     <item>
-                      <widget class="QLabel" name="label_208">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>Y</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item>
                       <widget class="QSpinBox" name="tc_y">
                        <property name="minimumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -18923,6 +18624,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
+                       <property name="prefix">
+                        <string>Y: </string>
+                       </property>
                        <property name="maximum">
                         <number>230000</number>
                        </property>
@@ -18931,39 +18635,28 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="0" column="3">
-                    <layout class="QHBoxLayout" name="horizontalLayout_115">
-                     <item>
-                      <widget class="QLabel" name="label_209">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>Z</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item>
                       <widget class="QSpinBox" name="tc_z">
                        <property name="minimumSize">
                         <size>
-                         <width>36</width>
+                         <width>48</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>36</width>
+                         <width>48</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="wrapping">
                         <bool>true</bool>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="prefix">
+                        <string notr="true">Z: </string>
                        </property>
                        <property name="minimum">
                         <number>0</number>
@@ -18978,8 +18671,21 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </item>
                     </layout>
                    </item>
-                   <item row="1" column="0" colspan="2">
+                   <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_131">
+                     <item>
+                      <spacer name="horizontalSpacer_59">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                      <item>
                       <widget class="QLabel" name="label_210">
                        <property name="text">
@@ -18992,6 +18698,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
+                       <property name="suffix">
+                        <string notr="true">°</string>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -19000,10 +18709,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="1" column="2">
-                    <layout class="QHBoxLayout" name="horizontalLayout_132">
+                     <item>
+                      <spacer name="horizontalSpacer_71">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                      <item>
                       <widget class="QLabel" name="label_211">
                        <property name="text">
@@ -19024,6 +18742,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
+                     <item>
+                      <spacer name="horizontalSpacer_73">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                     </layout>
                    </item>
                   </layout>
@@ -19040,36 +18771,23 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="title">
                    <string>Buggy / Highwind</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_9">
+                  <layout class="QVBoxLayout" name="verticalLayout_100">
                    <property name="margin">
-                    <number>3</number>
+                    <number>2</number>
                    </property>
-                   <item row="0" column="0">
-                    <layout class="QHBoxLayout" name="horizontalLayout_92">
-                     <item>
-                      <widget class="QLabel" name="label_202">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>X</string>
-                       </property>
-                      </widget>
-                     </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_60">
                      <item>
                       <widget class="QSpinBox" name="bh_x">
                        <property name="minimumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -19078,6 +18796,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="prefix">
+                        <string notr="true">X: </string>
                        </property>
                        <property name="maximum">
                         <number>295000</number>
@@ -19087,34 +18808,17 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="0" column="1" colspan="2">
-                    <layout class="QHBoxLayout" name="horizontalLayout_93">
-                     <item>
-                      <widget class="QLabel" name="label_203">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>Y</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item>
                       <widget class="QSpinBox" name="bh_y">
                        <property name="minimumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -19124,6 +18828,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
+                       <property name="prefix">
+                        <string>Y: </string>
+                       </property>
                        <property name="maximum">
                         <number>230000</number>
                        </property>
@@ -19132,39 +18839,28 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="0" column="3">
-                    <layout class="QHBoxLayout" name="horizontalLayout_94">
-                     <item>
-                      <widget class="QLabel" name="label_204">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>Z</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item>
                       <widget class="QSpinBox" name="bh_z">
                        <property name="minimumSize">
                         <size>
-                         <width>36</width>
+                         <width>48</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>36</width>
+                         <width>48</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="wrapping">
                         <bool>true</bool>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="prefix">
+                        <string notr="true">Z: </string>
                        </property>
                        <property name="minimum">
                         <number>0</number>
@@ -19179,8 +18875,21 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </item>
                     </layout>
                    </item>
-                   <item row="1" column="0" colspan="2">
+                   <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_95">
+                     <item>
+                      <spacer name="horizontalSpacer_57">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                      <item>
                       <widget class="QLabel" name="label_205">
                        <property name="text">
@@ -19193,6 +18902,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
+                       <property name="suffix">
+                        <string notr="true">°</string>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -19201,10 +18913,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="1" column="2" colspan="2">
-                    <layout class="QHBoxLayout" name="horizontalLayout_96">
+                     <item>
+                      <spacer name="horizontalSpacer_72">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                      <item>
                       <widget class="QLabel" name="label_206">
                        <property name="text">
@@ -19225,45 +18946,62 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
+                     <item>
+                      <spacer name="horizontalSpacer_75">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                     </layout>
                    </item>
-                   <item row="2" column="0" colspan="2">
-                    <widget class="QLabel" name="label_232">
-                     <property name="text">
-                      <string>Shown On Map</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item row="2" column="2" colspan="2">
-                    <widget class="QComboBox" name="combo_highwind_buggy">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>16</height>
-                      </size>
-                     </property>
-                     <property name="currentIndex">
-                      <number>0</number>
-                     </property>
-                     <property name="maxVisibleItems">
-                      <number>10</number>
-                     </property>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_96">
                      <item>
-                      <property name="text">
-                       <string>None</string>
-                      </property>
+                      <widget class="QLabel" name="label_232">
+                       <property name="text">
+                        <string>Shown On Map</string>
+                       </property>
+                      </widget>
                      </item>
                      <item>
-                      <property name="text">
-                       <string>Buggy</string>
-                      </property>
+                      <widget class="QComboBox" name="combo_highwind_buggy">
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>16</height>
+                        </size>
+                       </property>
+                       <property name="currentIndex">
+                        <number>0</number>
+                       </property>
+                       <property name="maxVisibleItems">
+                        <number>10</number>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>None</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Buggy</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Highwind</string>
+                        </property>
+                       </item>
+                      </widget>
                      </item>
-                     <item>
-                      <property name="text">
-                       <string>Highwind</string>
-                      </property>
-                     </item>
-                    </widget>
+                    </layout>
                    </item>
                   </layout>
                  </widget>
@@ -19279,39 +19017,23 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="title">
                    <string>Sub</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_11">
-                   <property name="topMargin">
-                    <number>3</number>
+                  <layout class="QVBoxLayout" name="verticalLayout_102">
+                   <property name="margin">
+                    <number>2</number>
                    </property>
-                   <property name="bottomMargin">
-                    <number>3</number>
-                   </property>
-                   <item row="0" column="0">
-                    <layout class="QHBoxLayout" name="horizontalLayout_133">
-                     <item>
-                      <widget class="QLabel" name="label_212">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>X</string>
-                       </property>
-                      </widget>
-                     </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_62">
                      <item>
                       <widget class="QSpinBox" name="sub_x">
                        <property name="minimumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -19320,6 +19042,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="prefix">
+                        <string notr="true">X: </string>
                        </property>
                        <property name="maximum">
                         <number>295000</number>
@@ -19329,34 +19054,17 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="0" column="1" colspan="2">
-                    <layout class="QHBoxLayout" name="horizontalLayout_134">
-                     <item>
-                      <widget class="QLabel" name="label_213">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>Y</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item>
                       <widget class="QSpinBox" name="sub_y">
                        <property name="minimumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -19366,6 +19074,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
+                       <property name="prefix">
+                        <string>Y: </string>
+                       </property>
                        <property name="maximum">
                         <number>230000</number>
                        </property>
@@ -19374,39 +19085,28 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="0" column="3">
-                    <layout class="QHBoxLayout" name="horizontalLayout_135">
-                     <item>
-                      <widget class="QLabel" name="label_214">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>Z</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item>
                       <widget class="QSpinBox" name="sub_z">
                        <property name="minimumSize">
                         <size>
-                         <width>36</width>
+                         <width>48</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>36</width>
+                         <width>48</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="wrapping">
                         <bool>true</bool>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="prefix">
+                        <string notr="true">Z: </string>
                        </property>
                        <property name="minimum">
                         <number>0</number>
@@ -19421,8 +19121,21 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </item>
                     </layout>
                    </item>
-                   <item row="1" column="0" colspan="2">
+                   <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_136">
+                     <item>
+                      <spacer name="horizontalSpacer_60">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                      <item>
                       <widget class="QLabel" name="label_215">
                        <property name="text">
@@ -19435,6 +19148,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
+                       <property name="suffix">
+                        <string notr="true">°</string>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -19443,10 +19159,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="1" column="2">
-                    <layout class="QHBoxLayout" name="horizontalLayout_137">
+                     <item>
+                      <spacer name="horizontalSpacer_82">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                      <item>
                       <widget class="QLabel" name="label_216">
                        <property name="text">
@@ -19467,6 +19192,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
+                     <item>
+                      <spacer name="horizontalSpacer_83">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                     </layout>
                    </item>
                   </layout>
@@ -19483,39 +19221,23 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="title">
                    <string>Unknown</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_15">
-                   <property name="topMargin">
-                    <number>3</number>
+                  <layout class="QVBoxLayout" name="verticalLayout_101">
+                   <property name="margin">
+                    <number>2</number>
                    </property>
-                   <property name="bottomMargin">
-                    <number>3</number>
-                   </property>
-                   <item row="0" column="0">
-                    <layout class="QHBoxLayout" name="horizontalLayout_143">
-                     <item>
-                      <widget class="QLabel" name="label_222">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>X</string>
-                       </property>
-                      </widget>
-                     </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_73">
                      <item>
                       <widget class="QSpinBox" name="uw_x">
                        <property name="minimumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -19524,6 +19246,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="prefix">
+                        <string notr="true">X: </string>
                        </property>
                        <property name="maximum">
                         <number>295000</number>
@@ -19533,34 +19258,17 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="0" column="1" colspan="2">
-                    <layout class="QHBoxLayout" name="horizontalLayout_144">
-                     <item>
-                      <widget class="QLabel" name="label_223">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>Y</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item>
                       <widget class="QSpinBox" name="uw_y">
                        <property name="minimumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -19570,6 +19278,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
+                       <property name="prefix">
+                        <string>Y: </string>
+                       </property>
                        <property name="maximum">
                         <number>230000</number>
                        </property>
@@ -19578,39 +19289,28 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="0" column="3">
-                    <layout class="QHBoxLayout" name="horizontalLayout_145">
-                     <item>
-                      <widget class="QLabel" name="label_224">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>Z</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item>
                       <widget class="QSpinBox" name="uw_z">
                        <property name="minimumSize">
                         <size>
-                         <width>36</width>
+                         <width>48</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>36</width>
+                         <width>48</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="wrapping">
                         <bool>true</bool>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="prefix">
+                        <string notr="true">Z: </string>
                        </property>
                        <property name="minimum">
                         <number>0</number>
@@ -19625,8 +19325,21 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </item>
                     </layout>
                    </item>
-                   <item row="1" column="0" colspan="2">
+                   <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_146">
+                     <item>
+                      <spacer name="horizontalSpacer_67">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                      <item>
                       <widget class="QLabel" name="label_225">
                        <property name="text">
@@ -19639,6 +19352,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
+                       <property name="suffix">
+                        <string notr="true">°</string>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -19647,10 +19363,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="1" column="2">
-                    <layout class="QHBoxLayout" name="horizontalLayout_150">
+                     <item>
+                      <spacer name="horizontalSpacer_78">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                      <item>
                       <widget class="QLabel" name="label_226">
                        <property name="text">
@@ -19671,6 +19396,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
+                     <item>
+                      <spacer name="horizontalSpacer_81">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                     </layout>
                    </item>
                   </layout>
@@ -19687,36 +19425,23 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="title">
                    <string>Diamond / Ultimate / Ruby  Weapon</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_8">
+                  <layout class="QVBoxLayout" name="verticalLayout_103">
                    <property name="margin">
-                    <number>3</number>
+                    <number>2</number>
                    </property>
-                   <item row="0" column="0">
-                    <layout class="QHBoxLayout" name="horizontalLayout_73">
-                     <item>
-                      <widget class="QLabel" name="label_197">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>X</string>
-                       </property>
-                      </widget>
-                     </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_75">
                      <item>
                       <widget class="QSpinBox" name="durw_x">
                        <property name="minimumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -19725,6 +19450,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="prefix">
+                        <string notr="true">X: </string>
                        </property>
                        <property name="maximum">
                         <number>295000</number>
@@ -19734,34 +19462,17 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="0" column="1" colspan="2">
-                    <layout class="QHBoxLayout" name="horizontalLayout_75">
-                     <item>
-                      <widget class="QLabel" name="label_198">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>Y</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item>
                       <widget class="QSpinBox" name="durw_y">
                        <property name="minimumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -19771,6 +19482,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
+                       <property name="prefix">
+                        <string>Y: </string>
+                       </property>
                        <property name="maximum">
                         <number>230000</number>
                        </property>
@@ -19779,39 +19493,28 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="0" column="3">
-                    <layout class="QHBoxLayout" name="horizontalLayout_89">
-                     <item>
-                      <widget class="QLabel" name="label_199">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>Z</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item>
                       <widget class="QSpinBox" name="durw_z">
                        <property name="minimumSize">
                         <size>
-                         <width>36</width>
+                         <width>48</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>36</width>
+                         <width>48</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="wrapping">
                         <bool>true</bool>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="prefix">
+                        <string notr="true">Z: </string>
                        </property>
                        <property name="minimum">
                         <number>0</number>
@@ -19826,8 +19529,21 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </item>
                     </layout>
                    </item>
-                   <item row="1" column="0" colspan="2">
+                   <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_90">
+                     <item>
+                      <spacer name="horizontalSpacer_68">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                      <item>
                       <widget class="QLabel" name="label_200">
                        <property name="text">
@@ -19840,6 +19556,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
+                       <property name="suffix">
+                        <string notr="true">°</string>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -19848,10 +19567,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="1" column="2">
-                    <layout class="QHBoxLayout" name="horizontalLayout_91">
+                     <item>
+                      <spacer name="horizontalSpacer_84">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                      <item>
                       <widget class="QLabel" name="label_201">
                        <property name="text">
@@ -19872,6 +19600,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
+                     <item>
+                      <spacer name="horizontalSpacer_86">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                     </layout>
                    </item>
                   </layout>
@@ -19888,36 +19629,23 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="title">
                    <string>Emerald Weapon ?</string>
                   </property>
-                  <layout class="QGridLayout" name="gridLayout_12">
+                  <layout class="QVBoxLayout" name="verticalLayout_104">
                    <property name="margin">
-                    <number>3</number>
+                    <number>2</number>
                    </property>
-                   <item row="0" column="0">
-                    <layout class="QHBoxLayout" name="horizontalLayout_138">
-                     <item>
-                      <widget class="QLabel" name="label_217">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>X</string>
-                       </property>
-                      </widget>
-                     </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_89">
                      <item>
                       <widget class="QSpinBox" name="ew_x">
                        <property name="minimumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -19926,6 +19654,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="prefix">
+                        <string notr="true">X: </string>
                        </property>
                        <property name="maximum">
                         <number>295000</number>
@@ -19935,34 +19666,17 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="0" column="1" colspan="2">
-                    <layout class="QHBoxLayout" name="horizontalLayout_139">
-                     <item>
-                      <widget class="QLabel" name="label_218">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>Y</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item>
                       <widget class="QSpinBox" name="ew_y">
                        <property name="minimumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>62</width>
+                         <width>96</width>
                          <height>18</height>
                         </size>
                        </property>
@@ -19972,6 +19686,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
+                       <property name="prefix">
+                        <string>Y: </string>
+                       </property>
                        <property name="maximum">
                         <number>230000</number>
                        </property>
@@ -19980,39 +19697,28 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="0" column="3">
-                    <layout class="QHBoxLayout" name="horizontalLayout_140">
-                     <item>
-                      <widget class="QLabel" name="label_219">
-                       <property name="maximumSize">
-                        <size>
-                         <width>16</width>
-                         <height>16</height>
-                        </size>
-                       </property>
-                       <property name="text">
-                        <string>Z</string>
-                       </property>
-                      </widget>
-                     </item>
                      <item>
                       <widget class="QSpinBox" name="ew_z">
                        <property name="minimumSize">
                         <size>
-                         <width>36</width>
+                         <width>48</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="maximumSize">
                         <size>
-                         <width>36</width>
+                         <width>48</width>
                          <height>18</height>
                         </size>
                        </property>
                        <property name="wrapping">
                         <bool>true</bool>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="prefix">
+                        <string notr="true">Z: </string>
                        </property>
                        <property name="minimum">
                         <number>0</number>
@@ -20027,8 +19733,21 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </item>
                     </layout>
                    </item>
-                   <item row="1" column="0" colspan="2">
+                   <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_141">
+                     <item>
+                      <spacer name="horizontalSpacer_69">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                      <item>
                       <widget class="QLabel" name="label_220">
                        <property name="text">
@@ -20041,6 +19760,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
+                       <property name="suffix">
+                        <string notr="true">°</string>
+                       </property>
                        <property name="minimum">
                         <number>0</number>
                        </property>
@@ -20049,10 +19771,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
-                    </layout>
-                   </item>
-                   <item row="1" column="2">
-                    <layout class="QHBoxLayout" name="horizontalLayout_142">
+                     <item>
+                      <spacer name="horizontalSpacer_85">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
                      <item>
                       <widget class="QLabel" name="label_221">
                        <property name="text">
@@ -20072,6 +19803,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         <number>255</number>
                        </property>
                       </widget>
+                     </item>
+                     <item>
+                      <spacer name="horizontalSpacer_87">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
                      </item>
                     </layout>
                    </item>
@@ -20352,63 +20096,127 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
        <attribute name="title">
         <string>&amp;Game Progress</string>
        </attribute>
-       <layout class="QVBoxLayout" name="verticalLayout_64">
-        <item>
-         <spacer name="verticalSpacer_5">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Preferred</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <layout class="QHBoxLayout" name="horizontalLayout_128">
-          <item>
-           <spacer name="horizontalSpacer_113">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+       <widget class="QLabel" name="label_172">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>411</y>
+          <width>752</width>
+          <height>86</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_11">
+        <property name="geometry">
+         <rect>
+          <x>10</x>
+          <y>75</y>
+          <width>221</width>
+          <height>306</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Event</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_60">
+         <item>
+          <widget class="QScrollArea" name="scrollArea_3">
+           <property name="widgetResizable">
+            <bool>true</bool>
+           </property>
+           <widget class="QWidget" name="scrollAreaWidgetContents_3">
+            <property name="geometry">
+             <rect>
+              <x>0</x>
+              <y>0</y>
+              <width>201</width>
+              <height>271</height>
+             </rect>
             </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
-           <layout class="QVBoxLayout" name="verticalLayout_61">
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_77">
-              <item>
-               <widget class="QLabel" name="label_167">
+            <layout class="QVBoxLayout" name="verticalLayout_62">
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_162">
+               <item>
+                <widget class="QLabel" name="label_229">
+                 <property name="text">
+                  <string>Aeris Turks</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sb_turkschruch"/>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_159">
+               <item>
+                <widget class="QLabel" name="label_230">
+                 <property name="text">
+                  <string>Don_prog</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sb_donprog">
+                 <property name="maximum">
+                  <number>255</number>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+             <item>
+              <widget class="QGroupBox" name="groupBox_25">
+               <property name="minimumSize">
+                <size>
+                 <width>181</width>
+                 <height>201</height>
+                </size>
+               </property>
+               <property name="title">
+                <string>Bombing Mission Progress</string>
+               </property>
+               <widget class="QLabel" name="label_168">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>20</y>
+                  <width>59</width>
+                  <height>17</height>
+                 </rect>
+                </property>
                 <property name="text">
-                 <string>Main Progress Var</string>
+                 <string>0x0C85</string>
                 </property>
                </widget>
-              </item>
-              <item>
-               <widget class="QSpinBox" name="sb_mprogress">
+               <widget class="QSpinBox" name="sb_bm_progress1">
                 <property name="enabled">
                  <bool>true</bool>
                 </property>
+                <property name="geometry">
+                 <rect>
+                  <x>80</x>
+                  <y>20</y>
+                  <width>58</width>
+                  <height>18</height>
+                 </rect>
+                </property>
                 <property name="minimumSize">
                  <size>
-                  <width>50</width>
+                  <width>0</width>
                   <height>18</height>
                  </size>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>120</width>
+                  <width>75</width>
                   <height>24</height>
                  </size>
                 </property>
@@ -20418,379 +20226,51 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
                 </property>
+                <property name="correctionMode">
+                 <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+                </property>
                 <property name="maximum">
-                 <number>1000000000</number>
-                </property>
-                <property name="value">
-                 <number>0</number>
+                 <number>256</number>
                 </property>
                </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <widget class="QLCDNumber" name="lcdNumber_5">
-              <property name="minimumSize">
-               <size>
-                <width>163</width>
-                <height>24</height>
-               </size>
-              </property>
-              <property name="maximumSize">
-               <size>
-                <width>16777215</width>
-                <height>24</height>
-               </size>
-              </property>
-              <property name="numDigits">
-               <number>16</number>
-              </property>
-              <property name="digitCount">
-               <number>16</number>
-              </property>
-              <property name="mode">
-               <enum>QLCDNumber::Bin</enum>
-              </property>
-              <property name="segmentStyle">
-               <enum>QLCDNumber::Flat</enum>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QGroupBox" name="groupBox_25">
-              <property name="minimumSize">
-               <size>
-                <width>181</width>
-                <height>201</height>
-               </size>
-              </property>
-              <property name="title">
-               <string>Bombing Mission Progress</string>
-              </property>
-              <widget class="QLabel" name="label_168">
-               <property name="geometry">
-                <rect>
-                 <x>10</x>
-                 <y>20</y>
-                 <width>59</width>
-                 <height>17</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>0x0C85</string>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="sb_bm_progress1">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
-               <property name="geometry">
-                <rect>
-                 <x>80</x>
-                 <y>20</y>
-                 <width>58</width>
-                 <height>18</height>
-                </rect>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>18</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>75</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="wrapping">
-                <bool>true</bool>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="correctionMode">
-                <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
-               </property>
-               <property name="maximum">
-                <number>256</number>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_169">
-               <property name="geometry">
-                <rect>
-                 <x>10</x>
-                 <y>80</y>
-                 <width>59</width>
-                 <height>17</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>0x0C86</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_170">
-               <property name="geometry">
-                <rect>
-                 <x>10</x>
-                 <y>140</y>
-                 <width>59</width>
-                 <height>17</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>0x0CE6</string>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="sb_bm_progress2">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
-               <property name="geometry">
-                <rect>
-                 <x>80</x>
-                 <y>80</y>
-                 <width>58</width>
-                 <height>18</height>
-                </rect>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>18</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>75</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="wrapping">
-                <bool>true</bool>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="correctionMode">
-                <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
-               </property>
-               <property name="maximum">
-                <number>256</number>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="sb_bm_progress3">
-               <property name="enabled">
-                <bool>true</bool>
-               </property>
-               <property name="geometry">
-                <rect>
-                 <x>80</x>
-                 <y>140</y>
-                 <width>58</width>
-                 <height>18</height>
-                </rect>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>18</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>75</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="wrapping">
-                <bool>true</bool>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="correctionMode">
-                <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
-               </property>
-               <property name="maximum">
-                <number>256</number>
-               </property>
-              </widget>
-              <widget class="QLCDNumber" name="lcdNumber_2">
-               <property name="geometry">
-                <rect>
-                 <x>23</x>
-                 <y>170</y>
-                 <width>151</width>
-                 <height>24</height>
-                </rect>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="numDigits">
-                <number>8</number>
-               </property>
-               <property name="mode">
-                <enum>QLCDNumber::Bin</enum>
-               </property>
-               <property name="segmentStyle">
-                <enum>QLCDNumber::Flat</enum>
-               </property>
-              </widget>
-              <widget class="QLCDNumber" name="lcdNumber_3">
-               <property name="geometry">
-                <rect>
-                 <x>20</x>
-                 <y>110</y>
-                 <width>151</width>
-                 <height>24</height>
-                </rect>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="numDigits">
-                <number>8</number>
-               </property>
-               <property name="mode">
-                <enum>QLCDNumber::Bin</enum>
-               </property>
-               <property name="segmentStyle">
-                <enum>QLCDNumber::Flat</enum>
-               </property>
-              </widget>
-              <widget class="QLCDNumber" name="lcdNumber_4">
-               <property name="geometry">
-                <rect>
-                 <x>20</x>
-                 <y>50</y>
-                 <width>151</width>
-                 <height>24</height>
-                </rect>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>24</height>
-                </size>
-               </property>
-               <property name="inputMethodHints">
-                <set>Qt::ImhNone</set>
-               </property>
-               <property name="numDigits">
-                <number>8</number>
-               </property>
-               <property name="mode">
-                <enum>QLCDNumber::Bin</enum>
-               </property>
-               <property name="segmentStyle">
-                <enum>QLCDNumber::Flat</enum>
-               </property>
-              </widget>
-              <zorder>sb_bm_progress1</zorder>
-              <zorder>label_169</zorder>
-              <zorder>label_170</zorder>
-              <zorder>sb_bm_progress2</zorder>
-              <zorder>sb_bm_progress3</zorder>
-              <zorder>lcdNumber_2</zorder>
-              <zorder>lcdNumber_3</zorder>
-              <zorder>lcdNumber_4</zorder>
-              <zorder>label_168</zorder>
-             </widget>
-            </item>
-            <item>
-             <layout class="QVBoxLayout" name="verticalLayout_60">
-              <item>
-               <layout class="QHBoxLayout" name="horizontalLayout_162">
-                <item>
-                 <widget class="QLabel" name="label_229">
-                  <property name="text">
-                   <string>Aeris Turks</string>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QSpinBox" name="sb_turkschruch"/>
-                </item>
-               </layout>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_159">
-              <item>
-               <widget class="QLabel" name="label_230">
+               <widget class="QLabel" name="label_169">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>80</y>
+                  <width>59</width>
+                  <height>17</height>
+                 </rect>
+                </property>
                 <property name="text">
-                 <string>Don_prog</string>
+                 <string>0x0C86</string>
                 </property>
                </widget>
-              </item>
-              <item>
-               <widget class="QSpinBox" name="sb_donprog">
-                <property name="maximum">
-                 <number>255</number>
+               <widget class="QLabel" name="label_170">
+                <property name="geometry">
+                 <rect>
+                  <x>10</x>
+                  <y>140</y>
+                  <width>59</width>
+                  <height>17</height>
+                 </rect>
                 </property>
-               </widget>
-              </item>
-             </layout>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <layout class="QVBoxLayout" name="verticalLayout_62">
-            <item>
-             <layout class="QHBoxLayout" name="horizontalLayout_64">
-              <property name="spacing">
-               <number>-1</number>
-              </property>
-              <item>
-               <spacer name="horizontalSpacer_109">
-                <property name="orientation">
-                 <enum>Qt::Horizontal</enum>
-                </property>
-                <property name="sizeHint" stdset="0">
-                 <size>
-                  <width>40</width>
-                  <height>20</height>
-                 </size>
-                </property>
-               </spacer>
-              </item>
-              <item>
-               <widget class="QLabel" name="label_150">
                 <property name="text">
-                 <string>Current Disc</string>
+                 <string>0x0CE6</string>
                 </property>
                </widget>
-              </item>
-              <item>
-               <widget class="QSpinBox" name="sb_curdisc">
+               <widget class="QSpinBox" name="sb_bm_progress2">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="geometry">
+                 <rect>
+                  <x>80</x>
+                  <y>80</y>
+                  <width>58</width>
+                  <height>18</height>
+                 </rect>
+                </property>
                 <property name="minimumSize">
                  <size>
                   <width>0</width>
@@ -20799,8 +20279,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 </property>
                 <property name="maximumSize">
                  <size>
-                  <width>41</width>
-                  <height>18</height>
+                  <width>75</width>
+                  <height>24</height>
                  </size>
                 </property>
                 <property name="wrapping">
@@ -20809,137 +20289,333 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
                 </property>
-                <property name="minimum">
-                 <number>1</number>
+                <property name="correctionMode">
+                 <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
                 </property>
                 <property name="maximum">
-                 <number>3</number>
+                 <number>256</number>
                 </property>
                </widget>
-              </item>
-             </layout>
-            </item>
-            <item>
-             <widget class="QGroupBox" name="groupBox_4">
-              <property name="title">
-               <string>Replay Mission</string>
-              </property>
-              <layout class="QVBoxLayout" name="verticalLayout_59">
-               <item>
-                <widget class="QComboBox" name="cb_replay">
-                 <property name="enabled">
-                  <bool>true</bool>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>124</width>
-                   <height>23</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>16777215</width>
-                   <height>23</height>
-                  </size>
-                 </property>
-                 <item>
-                  <property name="text">
-                   <string/>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Bombing Mission</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>The Church In The Slums</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Cloud's Flashback</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>The Date Scene</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>Aeris Death</string>
-                  </property>
-                 </item>
-                </widget>
-               </item>
-               <item>
-                <widget class="QLabel" name="label_replaynote">
-                 <property name="minimumSize">
-                  <size>
-                   <width>391</width>
-                   <height>181</height>
-                  </size>
-                 </property>
-                 <property name="frameShape">
-                  <enum>QFrame::StyledPanel</enum>
-                 </property>
-                 <property name="text">
-                  <string>         INFO ON CURRENTLY SELECTED REPLAY MISSION</string>
-                 </property>
-                 <property name="wordWrap">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <spacer name="horizontalSpacer_107">
-            <property name="orientation">
-             <enum>Qt::Horizontal</enum>
+               <widget class="QSpinBox" name="sb_bm_progress3">
+                <property name="enabled">
+                 <bool>true</bool>
+                </property>
+                <property name="geometry">
+                 <rect>
+                  <x>80</x>
+                  <y>140</y>
+                  <width>58</width>
+                  <height>18</height>
+                 </rect>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>18</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>75</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="wrapping">
+                 <bool>true</bool>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="correctionMode">
+                 <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+                </property>
+                <property name="maximum">
+                 <number>256</number>
+                </property>
+               </widget>
+               <widget class="QLCDNumber" name="lcdNumber_2">
+                <property name="geometry">
+                 <rect>
+                  <x>23</x>
+                  <y>170</y>
+                  <width>151</width>
+                  <height>24</height>
+                 </rect>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="numDigits">
+                 <number>8</number>
+                </property>
+                <property name="mode">
+                 <enum>QLCDNumber::Bin</enum>
+                </property>
+                <property name="segmentStyle">
+                 <enum>QLCDNumber::Flat</enum>
+                </property>
+               </widget>
+               <widget class="QLCDNumber" name="lcdNumber_3">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>110</y>
+                  <width>151</width>
+                  <height>24</height>
+                 </rect>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="numDigits">
+                 <number>8</number>
+                </property>
+                <property name="mode">
+                 <enum>QLCDNumber::Bin</enum>
+                </property>
+                <property name="segmentStyle">
+                 <enum>QLCDNumber::Flat</enum>
+                </property>
+               </widget>
+               <widget class="QLCDNumber" name="lcdNumber_4">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>50</y>
+                  <width>151</width>
+                  <height>24</height>
+                 </rect>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>24</height>
+                 </size>
+                </property>
+                <property name="inputMethodHints">
+                 <set>Qt::ImhNone</set>
+                </property>
+                <property name="numDigits">
+                 <number>8</number>
+                </property>
+                <property name="mode">
+                 <enum>QLCDNumber::Bin</enum>
+                </property>
+                <property name="segmentStyle">
+                 <enum>QLCDNumber::Flat</enum>
+                </property>
+               </widget>
+               <zorder>sb_bm_progress1</zorder>
+               <zorder>label_169</zorder>
+               <zorder>label_170</zorder>
+               <zorder>sb_bm_progress2</zorder>
+               <zorder>sb_bm_progress3</zorder>
+               <zorder>lcdNumber_2</zorder>
+               <zorder>lcdNumber_3</zorder>
+               <zorder>lcdNumber_4</zorder>
+               <zorder>label_168</zorder>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_13">
+        <property name="geometry">
+         <rect>
+          <x>5</x>
+          <y>15</y>
+          <width>271</width>
+          <height>41</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Global Progress</string>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_64">
+         <property name="margin">
+          <number>2</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label_167">
+           <property name="text">
+            <string>Main Progression</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sb_mprogress">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>50</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>120</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="wrapping">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="maximum">
+            <number>2000</number>
+           </property>
+           <property name="value">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="sb_curdisc">
+           <property name="minimumSize">
+            <size>
+             <width>0</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>65</width>
+             <height>18</height>
+            </size>
+           </property>
+           <property name="wrapping">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+           <property name="prefix">
+            <string>Disk  #</string>
+           </property>
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>3</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+       <widget class="QGroupBox" name="groupBox_4">
+        <property name="geometry">
+         <rect>
+          <x>300</x>
+          <y>80</y>
+          <width>407</width>
+          <height>241</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Replay Mission</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_59">
+         <item>
+          <widget class="QComboBox" name="cb_replay">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>124</width>
+             <height>23</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>16777215</width>
+             <height>23</height>
+            </size>
+           </property>
+           <item>
+            <property name="text">
+             <string/>
             </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>40</width>
-              <height>20</height>
-             </size>
+           </item>
+           <item>
+            <property name="text">
+             <string>Bombing Mission</string>
             </property>
-           </spacer>
-          </item>
-         </layout>
-        </item>
-        <item>
-         <widget class="QLabel" name="label_172">
-          <property name="text">
-           <string> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</string>
-          </property>
-          <property name="wordWrap">
-           <bool>true</bool>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="verticalSpacer_6">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeType">
-           <enum>QSizePolicy::Preferred</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-       </layout>
+           </item>
+           <item>
+            <property name="text">
+             <string>The Church In The Slums</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Cloud's Flashback</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>The Date Scene</string>
+            </property>
+           </item>
+           <item>
+            <property name="text">
+             <string>Aeris Death</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_replaynote">
+           <property name="minimumSize">
+            <size>
+             <width>391</width>
+             <height>181</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::StyledPanel</enum>
+           </property>
+           <property name="text">
+            <string>         INFO ON CURRENTLY SELECTED REPLAY MISSION</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
       </widget>
       <widget class="QWidget" name="tab_other">
        <attribute name="title">
@@ -27805,8 +27481,6 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>sb_coordx</tabstop>
   <tabstop>sb_coordy</tabstop>
   <tabstop>sb_coordz</tabstop>
-  <tabstop>sb_curdisc</tabstop>
-  <tabstop>sb_mprogress</tabstop>
   <tabstop>sb_bm_progress1</tabstop>
   <tabstop>sb_bm_progress2</tabstop>
   <tabstop>sb_bm_progress3</tabstop>
@@ -27949,22 +27623,6 @@ Var And Scrolling Synced To Left Table</string>
     <hint type="destinationlabel">
      <x>95</x>
      <y>279</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>sb_mprogress</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>lcdNumber_5</receiver>
-   <slot>display(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>74</x>
-     <y>103</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>170</x>
-     <y>109</y>
     </hint>
    </hints>
   </connection>

@@ -1247,35 +1247,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>STR</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>VIT</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>MAG</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>DEX</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>SPR</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>LCK</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Stat Bonuses</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>VIT </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1356,10 +1328,6 @@
     </message>
     <message>
         <source>Base Stats</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>HP</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1988,10 +1956,6 @@
     </message>
     <message>
         <source>Wutai - In Front Of Trap Room</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Current Disc</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2652,10 +2616,6 @@
     </message>
     <message>
         <source>&amp;Game Progress</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Main Progress Var</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4218,18 +4178,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>X</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Y</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Z</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>angle</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4803,6 +4751,58 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>z_40</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Str: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vit: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mag: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spr: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dex: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lck: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hp: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mp: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Y: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Event</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Global Progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Main Progression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disk  #</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

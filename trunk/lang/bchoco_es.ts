@@ -1249,11 +1249,11 @@
     </message>
     <message>
         <source>STR</source>
-        <translation>FUE</translation>
+        <translation type="obsolete">FUE</translation>
     </message>
     <message>
         <source>VIT</source>
-        <translation>VIT</translation>
+        <translation type="obsolete">VIT</translation>
     </message>
     <message>
         <source>P&amp;arty</source>
@@ -1261,19 +1261,19 @@
     </message>
     <message>
         <source>MAG</source>
-        <translation>MAG</translation>
+        <translation type="obsolete">MAG</translation>
     </message>
     <message>
         <source>DEX</source>
-        <translation>DES</translation>
+        <translation type="obsolete">DES</translation>
     </message>
     <message>
         <source>SPR</source>
-        <translation>ESP</translation>
+        <translation type="obsolete">ESP</translation>
     </message>
     <message>
         <source>LCK</source>
-        <translation>SUE</translation>
+        <translation type="obsolete">SUE</translation>
     </message>
     <message>
         <source>Stat Bonuses</source>
@@ -1281,7 +1281,7 @@
     </message>
     <message>
         <source>VIT </source>
-        <translation>VIT</translation>
+        <translation type="obsolete">VIT</translation>
     </message>
     <message>
         <source>CheckBox</source>
@@ -1849,7 +1849,7 @@
     </message>
     <message>
         <source>Current Disc</source>
-        <translation>Disco Actual</translation>
+        <translation type="obsolete">Disco Actual</translation>
     </message>
     <message>
         <source>Upper Left</source>
@@ -1893,7 +1893,7 @@
     </message>
     <message>
         <source>HP</source>
-        <translation>PG</translation>
+        <translation type="obsolete">PG</translation>
     </message>
     <message>
         <source>Char&apos;s Limits</source>
@@ -2605,7 +2605,7 @@
     </message>
     <message>
         <source>Main Progress Var</source>
-        <translation>Variable de Progreso General</translation>
+        <translation type="obsolete">Variable de Progreso General</translation>
     </message>
     <message>
         <source>Bombing Mission Progress</source>
@@ -4231,15 +4231,15 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>X</source>
-        <translation>X</translation>
+        <translation type="obsolete">X</translation>
     </message>
     <message>
         <source>Y</source>
-        <translation>Y</translation>
+        <translation type="obsolete">Y</translation>
     </message>
     <message>
         <source>Z</source>
-        <translation>Z</translation>
+        <translation type="obsolete">Z</translation>
     </message>
     <message>
         <source>angle</source>
@@ -4824,6 +4824,58 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     <message>
         <source>z_40</source>
         <translation type="unfinished">z_40</translation>
+    </message>
+    <message>
+        <source>Str: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vit: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mag: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spr: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dex: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lck: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hp: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mp: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Y: </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Event</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Global Progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Main Progression</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Disk  #</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
