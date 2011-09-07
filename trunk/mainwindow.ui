@@ -7747,7 +7747,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           <item>
            <widget class="QGroupBox" name="groupBox_22">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -7755,21 +7755,30 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>0</height>
+              <height>132</height>
              </size>
             </property>
             <property name="maximumSize">
              <size>
               <width>16777215</width>
-              <height>16777215</height>
+              <height>150</height>
              </size>
             </property>
             <property name="title">
              <string>Turtle Paradise Flyers Collected</string>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_16">
-             <property name="margin">
+            <layout class="QVBoxLayout" name="verticalLayout_16" stretch="0">
+             <property name="leftMargin">
               <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
              </property>
              <item>
               <widget class="QListWidget" name="list_flyers">
@@ -7811,6 +7820,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                </property>
                <property name="movement">
                 <enum>QListView::Static</enum>
+               </property>
+               <property name="resizeMode">
+                <enum>QListView::Adjust</enum>
+               </property>
+               <property name="layoutMode">
+                <enum>QListView::SinglePass</enum>
                </property>
                <property name="viewMode">
                 <enum>QListView::ListMode</enum>
@@ -20115,16 +20130,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
        <widget class="QGroupBox" name="groupBox_11">
         <property name="geometry">
          <rect>
-          <x>10</x>
-          <y>75</y>
-          <width>221</width>
-          <height>306</height>
+          <x>5</x>
+          <y>60</y>
+          <width>276</width>
+          <height>371</height>
          </rect>
         </property>
         <property name="title">
          <string>Event</string>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_60">
+         <property name="margin">
+          <number>3</number>
+         </property>
          <item>
           <widget class="QScrollArea" name="scrollArea_3">
            <property name="widgetResizable">
@@ -20135,8 +20153,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <rect>
               <x>0</x>
               <y>0</y>
-              <width>201</width>
-              <height>271</height>
+              <width>245</width>
+              <height>505</height>
              </rect>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -20174,270 +20192,205 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </item>
              <item>
               <widget class="QGroupBox" name="groupBox_25">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="minimumSize">
                 <size>
                  <width>181</width>
-                 <height>201</height>
+                 <height>0</height>
                 </size>
                </property>
                <property name="title">
                 <string>Bombing Mission Progress</string>
                </property>
-               <widget class="QLabel" name="label_168">
-                <property name="geometry">
-                 <rect>
-                  <x>10</x>
-                  <y>20</y>
-                  <width>59</width>
-                  <height>17</height>
-                 </rect>
+               <layout class="QVBoxLayout" name="verticalLayout_106">
+                <property name="leftMargin">
+                 <number>3</number>
                 </property>
-                <property name="text">
-                 <string>0x0C85</string>
+                <property name="rightMargin">
+                 <number>3</number>
                 </property>
-               </widget>
-               <widget class="QSpinBox" name="sb_bm_progress1">
-                <property name="enabled">
-                 <bool>true</bool>
-                </property>
-                <property name="geometry">
-                 <rect>
-                  <x>80</x>
-                  <y>20</y>
-                  <width>58</width>
-                  <height>18</height>
-                 </rect>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>18</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>75</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="wrapping">
-                 <bool>true</bool>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="correctionMode">
-                 <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
-                </property>
-                <property name="maximum">
-                 <number>256</number>
-                </property>
-               </widget>
-               <widget class="QLabel" name="label_169">
-                <property name="geometry">
-                 <rect>
-                  <x>10</x>
-                  <y>80</y>
-                  <width>59</width>
-                  <height>17</height>
-                 </rect>
-                </property>
-                <property name="text">
-                 <string>0x0C86</string>
-                </property>
-               </widget>
-               <widget class="QLabel" name="label_170">
-                <property name="geometry">
-                 <rect>
-                  <x>10</x>
-                  <y>140</y>
-                  <width>59</width>
-                  <height>17</height>
-                 </rect>
-                </property>
-                <property name="text">
-                 <string>0x0CE6</string>
-                </property>
-               </widget>
-               <widget class="QSpinBox" name="sb_bm_progress2">
-                <property name="enabled">
-                 <bool>true</bool>
-                </property>
-                <property name="geometry">
-                 <rect>
-                  <x>80</x>
-                  <y>80</y>
-                  <width>58</width>
-                  <height>18</height>
-                 </rect>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>18</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>75</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="wrapping">
-                 <bool>true</bool>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="correctionMode">
-                 <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
-                </property>
-                <property name="maximum">
-                 <number>256</number>
-                </property>
-               </widget>
-               <widget class="QSpinBox" name="sb_bm_progress3">
-                <property name="enabled">
-                 <bool>true</bool>
-                </property>
-                <property name="geometry">
-                 <rect>
-                  <x>80</x>
-                  <y>140</y>
-                  <width>58</width>
-                  <height>18</height>
-                 </rect>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>18</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>75</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="wrapping">
-                 <bool>true</bool>
-                </property>
-                <property name="alignment">
-                 <set>Qt::AlignCenter</set>
-                </property>
-                <property name="correctionMode">
-                 <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
-                </property>
-                <property name="maximum">
-                 <number>256</number>
-                </property>
-               </widget>
-               <widget class="QLCDNumber" name="lcdNumber_2">
-                <property name="geometry">
-                 <rect>
-                  <x>23</x>
-                  <y>170</y>
-                  <width>151</width>
-                  <height>24</height>
-                 </rect>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="numDigits">
-                 <number>8</number>
-                </property>
-                <property name="mode">
-                 <enum>QLCDNumber::Bin</enum>
-                </property>
-                <property name="segmentStyle">
-                 <enum>QLCDNumber::Flat</enum>
-                </property>
-               </widget>
-               <widget class="QLCDNumber" name="lcdNumber_3">
-                <property name="geometry">
-                 <rect>
-                  <x>20</x>
-                  <y>110</y>
-                  <width>151</width>
-                  <height>24</height>
-                 </rect>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="numDigits">
-                 <number>8</number>
-                </property>
-                <property name="mode">
-                 <enum>QLCDNumber::Bin</enum>
-                </property>
-                <property name="segmentStyle">
-                 <enum>QLCDNumber::Flat</enum>
-                </property>
-               </widget>
-               <widget class="QLCDNumber" name="lcdNumber_4">
-                <property name="geometry">
-                 <rect>
-                  <x>20</x>
-                  <y>50</y>
-                  <width>151</width>
-                  <height>24</height>
-                 </rect>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>24</height>
-                 </size>
-                </property>
-                <property name="inputMethodHints">
-                 <set>Qt::ImhNone</set>
-                </property>
-                <property name="numDigits">
-                 <number>8</number>
-                </property>
-                <property name="mode">
-                 <enum>QLCDNumber::Bin</enum>
-                </property>
-                <property name="segmentStyle">
-                 <enum>QLCDNumber::Flat</enum>
-                </property>
-               </widget>
-               <zorder>sb_bm_progress1</zorder>
-               <zorder>label_169</zorder>
-               <zorder>label_170</zorder>
-               <zorder>sb_bm_progress2</zorder>
-               <zorder>sb_bm_progress3</zorder>
-               <zorder>lcdNumber_2</zorder>
-               <zorder>lcdNumber_3</zorder>
-               <zorder>lcdNumber_4</zorder>
-               <zorder>label_168</zorder>
+                <item>
+                 <widget class="QCheckBox" name="cb_bombing_int">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="text">
+                   <string> Bombing Mission Start Flag</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="cb_bm2_2">
+                  <property name="text">
+                   <string>Elevator Door Open</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="cb_bm1_1">
+                  <property name="text">
+                   <string>Elevator On Top Floor</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="cb_bm1_4">
+                  <property name="text">
+                   <string>1st Door Open</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="cb_bm1_5">
+                  <property name="text">
+                   <string>2nd Door Opened</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="cb_bm2_3">
+                  <property name="text">
+                   <string>paned to reactor core in feild</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="cb_bm1_6">
+                  <property name="text">
+                   <string>Jessie Has Been Unstuck</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="cb_bm1_7">
+                  <property name="text">
+                   <string>The Bomb Was Set</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QCheckBox" name="cb_bm1_8">
+                  <property name="text">
+                   <string>Trigger Game Over</string>
+                  </property>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="bm_unknown">
+                  <property name="title">
+                   <string>Unknowns</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_105">
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm2_1">
+                     <property name="text">
+                      <string>bm2_1</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm1_2">
+                     <property name="text">
+                      <string>bm1_2</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm1_3">
+                     <property name="text">
+                      <string>bm_3</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm2_4">
+                     <property name="text">
+                      <string>bm2_4</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm2_5">
+                     <property name="text">
+                      <string>bm2_5</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm2_6">
+                     <property name="text">
+                      <string>bm2_6</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm2_7">
+                     <property name="text">
+                      <string>bm2_7</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm2_8">
+                     <property name="text">
+                      <string>bm2_8</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <layout class="QHBoxLayout" name="horizontalLayout_77">
+                     <item>
+                      <widget class="QLabel" name="label_170">
+                       <property name="text">
+                        <string>0x0CE6</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QSpinBox" name="sb_bm_progress3">
+                       <property name="enabled">
+                        <bool>true</bool>
+                       </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>18</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>75</width>
+                         <height>24</height>
+                        </size>
+                       </property>
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                       <property name="correctionMode">
+                        <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
+                       </property>
+                       <property name="maximum">
+                        <number>256</number>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+               </layout>
               </widget>
              </item>
             </layout>
@@ -20536,10 +20489,10 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
        <widget class="QGroupBox" name="groupBox_4">
         <property name="geometry">
          <rect>
-          <x>300</x>
-          <y>80</y>
-          <width>407</width>
-          <height>241</height>
+          <x>291</x>
+          <y>20</y>
+          <width>451</width>
+          <height>406</height>
          </rect>
         </property>
         <property name="title">
@@ -24986,19 +24939,6 @@ p, li { white-space: pre-wrap; }
                 </property>
                </widget>
               </item>
-              <item>
-               <widget class="QCheckBox" name="cb_bombing_int">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="text">
-                 <string> Bombing Mission Start Flag</string>
-                </property>
-               </widget>
-              </item>
              </layout>
             </item>
             <item>
@@ -27372,7 +27312,6 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>cb_Region_Slot</tabstop>
   <tabstop>tbl_itm</tabstop>
   <tabstop>clearItem</tabstop>
-  <tabstop>list_flyers</tabstop>
   <tabstop>list_keyitems</tabstop>
   <tabstop>tbl_materia</tabstop>
   <tabstop>combo_mat_type</tabstop>
@@ -27481,8 +27420,6 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>sb_coordx</tabstop>
   <tabstop>sb_coordy</tabstop>
   <tabstop>sb_coordz</tabstop>
-  <tabstop>sb_bm_progress1</tabstop>
-  <tabstop>sb_bm_progress2</tabstop>
   <tabstop>sb_bm_progress3</tabstop>
   <tabstop>cb_replay</tabstop>
   <tabstop>tbl_materia_2</tabstop>
@@ -27575,54 +27512,6 @@ Var And Scrolling Synced To Left Table</string>
     <hint type="destinationlabel">
      <x>364</x>
      <y>264</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>sb_bm_progress1</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>lcdNumber_4</receiver>
-   <slot>display(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>111</x>
-     <y>123</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>106</x>
-     <y>159</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>sb_bm_progress2</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>lcdNumber_3</receiver>
-   <slot>display(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>128</x>
-     <y>183</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>132</x>
-     <y>219</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>sb_bm_progress3</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>lcdNumber_2</receiver>
-   <slot>display(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>96</x>
-     <y>243</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>95</x>
-     <y>279</y>
     </hint>
    </hints>
   </connection>

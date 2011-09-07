@@ -119,6 +119,7 @@ private slots://try to keep these in the same order as the .cpp file
     void itemupdate(void);
     void guirefresh(void);
     void chocobo_refresh(void);
+    void progress_update(void);
     void clearslot(int rmslot);
     void testdata_refresh(void);
     void unknown_refresh(int);
@@ -336,13 +337,27 @@ private slots://try to keep these in the same order as the .cpp file
     void on_btn_remove_all_materia_clicked();
     void on_btn_remove_all_stolen_clicked();
 
-    //wip functions
+    //progress functions
 
     void on_cb_replay_currentIndexChanged(int index);
-    void on_sb_bm_progress1_valueChanged(int);
-    void on_sb_bm_progress2_valueChanged(int);
-    void on_sb_bm_progress3_valueChanged(int);
-    void on_sb_mprogress_valueChanged();
+    void on_sb_bm_progress3_valueChanged(int value);
+    void on_sb_mprogress_valueChanged(int value);
+    void on_cb_bm1_1_toggled(bool checked);
+    void on_cb_bm1_2_toggled(bool checked);
+    void on_cb_bm1_3_toggled(bool checked);
+    void on_cb_bm1_4_toggled(bool checked);
+    void on_cb_bm1_5_toggled(bool checked);
+    void on_cb_bm1_6_toggled(bool checked);
+    void on_cb_bm1_7_toggled(bool checked);
+    void on_cb_bm1_8_toggled(bool checked);
+    void on_cb_bm2_1_toggled(bool checked);
+    void on_cb_bm2_2_toggled(bool checked);
+    void on_cb_bm2_3_toggled(bool checked);
+    void on_cb_bm2_4_toggled(bool checked);
+    void on_cb_bm2_5_toggled(bool checked);
+    void on_cb_bm2_6_toggled(bool checked);
+    void on_cb_bm2_7_toggled(bool checked);
+    void on_cb_bm2_8_toggled(bool checked);
 
     // game options tab
     void setoptions_one();
