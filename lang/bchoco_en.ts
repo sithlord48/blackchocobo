@@ -2623,14 +2623,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>0x0C85</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x0C86</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>0x0CE6</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4803,6 +4795,74 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Disk  #</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Elevator Door Open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Elevator On Top Floor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>1st Door Open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>2nd Door Opened</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>paned to reactor core in feild</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Jessie Has Been Unstuck</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Bomb Was Set</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trigger Game Over</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknowns</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm2_1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm1_2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm_3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm2_4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm2_5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm2_6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm2_7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm2_8</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

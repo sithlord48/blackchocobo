@@ -71,6 +71,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->lbl_id->setVisible(false);
     ui->compare_table->setEnabled(false);
     ui->tbl_diff->setVisible(0);
+    ui->bm_unknown->setVisible(0);
 
     //chocobo boxes
     ui->box_stable1->setEnabled(false);
@@ -90,8 +91,6 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->lcd_0x35->setVisible(false);
     ui->lcd_0x36->setVisible(false);
     ui->lcd_0x37->setVisible(false);
-    ui->sb_bm_progress1->setEnabled(false);
-    ui->sb_bm_progress2->setEnabled(false);
     ui->sb_bm_progress3->setEnabled(false);
     ui->cb_Region_Slot->setEnabled(false);
     load=false;
@@ -1102,12 +1101,11 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
         ui->lcd_0x35->setVisible(true);
         ui->lcd_0x36->setVisible(true);
         ui->lcd_0x37->setVisible(true);
-        ui->sb_bm_progress1->setEnabled(true);
-        ui->sb_bm_progress2->setEnabled(true);
         ui->sb_bm_progress3->setEnabled(true);
         ui->cb_Region_Slot->setEnabled(true);
         ui->combo_id->setVisible(true);
         ui->lbl_id->setVisible(true);
+        ui->bm_unknown->setVisible(true);
         settings.setValue("show_test",1);
         ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
         testdata_refresh();
@@ -1124,12 +1122,11 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
         ui->lcd_0x35->setVisible(false);
         ui->lcd_0x36->setVisible(false);
         ui->lcd_0x37->setVisible(false);
-        ui->sb_bm_progress1->setEnabled(false);
-        ui->sb_bm_progress2->setEnabled(false);
         ui->sb_bm_progress3->setEnabled(false);
         ui->cb_Region_Slot->setEnabled(false);
         ui->combo_id->setVisible(false);
         ui->lbl_id->setVisible(false);
+        ui->bm_unknown->setVisible(false);
         settings.setValue("show_test",0);
         ui->action_show_test_data->setIcon(QIcon(":/icon/debug_unsel"));
     }
@@ -2775,6 +2772,7 @@ void MainWindow::guirefresh(void)
         }//NOT FF7
     }
     /*~~~~ END Type Check~~~~*/
+
     //dialog preview
     //make the preview nice
     QImage image(2, 2, QImage::Format_ARGB32);
@@ -2856,10 +2854,6 @@ void MainWindow::guirefresh(void)
     else if(ff7.slot[s].highwind_buggy ==0x01){ui->combo_highwind_buggy->setCurrentIndex(1);}
     else if(ff7.slot[s].highwind_buggy ==0x10){ui->combo_highwind_buggy->setCurrentIndex(2);}
 
-    ui->sb_turkschruch->setValue(ff7.slot[s].aeris_chruch);
-    ui->sb_donprog->setValue(ff7.slot[s].donprogress);
-    //
-
     //Clear all check boxes and index's
     ui->cb_replay->setCurrentIndex(0);
     ui->cb_bombing_int->setChecked(Qt::Unchecked);
@@ -2872,12 +2866,6 @@ void MainWindow::guirefresh(void)
     if((ff7.slot[s].ruby_emerald)& (1<<4)){ui->cb_emerald_dead->setChecked(Qt::Checked);}
     if((ff7.slot[s].field_help)& (1<<0)){ui->cb_field_help->setChecked(Qt::Checked);}
     if((ff7.slot[s].tut_sub)& (1<<6)){ui->cb_battle_targets->setChecked(Qt::Checked);}
-
-    ui->sb_bm_progress1->setValue(ff7.slot[s].bm_progress1);
-    ui->sb_bm_progress2->setValue(ff7.slot[s].bm_progress2);
-    ui->sb_bm_progress3->setValue(ff7.slot[s].bm_progress3);
-    ui->sb_mprogress->setValue(ff7.slot[s].mprogress);
-    if(ff7.slot[s].intbombing == 0x14){ui->cb_bombing_int->setChecked(Qt::Checked);}
 
     /*~~~~Set Region info and icon~~~~*/
     ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
@@ -2918,7 +2906,7 @@ void MainWindow::guirefresh(void)
     else{ui->cb_battle_help->setCheckState(Qt::Unchecked);}
 /*~~~~~End Options Loading~~~~~*/
 
-    ui->sb_curdisc->setValue(ff7.slot[s].disc);
+
     ui->sb_coster_1->setValue(ff7.slot[s].coster_1);
     ui->sb_coster_2->setValue(ff7.slot[s].coster_2);
     ui->sb_coster_3->setValue(ff7.slot[s].coster_3);
@@ -3043,7 +3031,6 @@ void MainWindow::guirefresh(void)
         }
     }
 
-/*~~~~~End Stolen Materia~~~~*/
     if((ff7.slot[s].materiacaves)& (1<<0)){ui->cb_materiacave_1->setChecked(Qt::Checked);}
     else{ui->cb_materiacave_1->setChecked(Qt::Unchecked);}
     if((ff7.slot[s].materiacaves)& (1<<1)){ui->cb_materiacave_2->setChecked(Qt::Checked);}
@@ -3055,6 +3042,10 @@ void MainWindow::guirefresh(void)
     if((ff7.slot[s].yuffieforest)& (1<<0)){ui->cb_yuffieforest->setChecked(Qt::Checked);}
     else{ui->cb_yuffieforest->setChecked(Qt::Unchecked);}
     ui->sb_steps->setValue(ff7.slot[s].steps);
+
+/*~~~~~Game Progress~~~~*/
+
+
     load =false; // all functions should set load on their own.
     /*~~~~~Call External Functions~~~~~~~*/
     setmenu();
@@ -3062,9 +3053,58 @@ void MainWindow::guirefresh(void)
     chocobo_refresh();
     charupdate();
     materiaupdate();
+    progress_update();
     if(ui->action_show_test_data->isChecked()){testdata_refresh();}
     ui->w_m_s1->click();
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
+void MainWindow::progress_update()
+{
+load=true;
+
+ui->sb_curdisc->setValue(ff7.slot[s].disc);
+ui->sb_turkschruch->setValue(ff7.slot[s].aeris_chruch);
+ui->sb_donprog->setValue(ff7.slot[s].donprogress);
+ui->sb_bm_progress3->setValue(ff7.slot[s].bm_progress3);
+ui->sb_mprogress->setValue(ff7.slot[s].mprogress);
+
+if(ff7.slot[s].intbombing == 0x14){ui->cb_bombing_int->setChecked(Qt::Checked);}
+
+if((ff7.slot[s].bm_progress1)& (1<<0)){ui->cb_bm1_1->setChecked(Qt::Checked);}
+else{ui->cb_bm1_1->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress1)& (1<<1)){ui->cb_bm1_2->setChecked(Qt::Checked);}
+else{ui->cb_bm1_2->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress1)& (1<<2)){ui->cb_bm1_3->setChecked(Qt::Checked);}
+else{ui->cb_bm1_3->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress1)& (1<<3)){ui->cb_bm1_4->setChecked(Qt::Checked);}
+else{ui->cb_bm1_4->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress1)& (1<<4)){ui->cb_bm1_5->setChecked(Qt::Checked);}
+else{ui->cb_bm1_5->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress1)& (1<<5)){ui->cb_bm1_6->setChecked(Qt::Checked);}
+else{ui->cb_bm1_6->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress1)& (1<<6)){ui->cb_bm1_7->setChecked(Qt::Checked);}
+else{ui->cb_bm1_7->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress1)& (1<<7)){ui->cb_bm1_8->setChecked(Qt::Checked);}
+else{ui->cb_bm1_8->setChecked(Qt::Unchecked);}
+
+if((ff7.slot[s].bm_progress2)& (1<<0)){ui->cb_bm2_1->setChecked(Qt::Checked);}
+else{ui->cb_bm2_1->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress2)& (1<<1)){ui->cb_bm2_2->setChecked(Qt::Checked);}
+else{ui->cb_bm2_2->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress2)& (1<<2)){ui->cb_bm2_3->setChecked(Qt::Checked);}
+else{ui->cb_bm2_3->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress2)& (1<<3)){ui->cb_bm2_4->setChecked(Qt::Checked);}
+else{ui->cb_bm2_4->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress2)& (1<<4)){ui->cb_bm2_5->setChecked(Qt::Checked);}
+else{ui->cb_bm2_5->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress2)& (1<<5)){ui->cb_bm2_6->setChecked(Qt::Checked);}
+else{ui->cb_bm2_6->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress2)& (1<<6)){ui->cb_bm2_7->setChecked(Qt::Checked);}
+else{ui->cb_bm2_7->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress2)& (1<<7)){ui->cb_bm2_8->setChecked(Qt::Checked);}
+else{ui->cb_bm2_8->setChecked(Qt::Unchecked);}
+
+load=false;
+}
 /*~~~~~~~~~~~~~~~~~~~~Chocobo Refresh~~~~~~~~~~~~~~~~*/
 void MainWindow::chocobo_refresh()
 {
@@ -3679,7 +3719,7 @@ void MainWindow::on_list_chars_unlocked_itemChanged()
     if(ui->list_chars_unlocked->currentItem()->checkState() ==Qt::Checked){ff7.slot[s].unlockedchars |= (1<<j);}
     else{ff7.slot[s].unlockedchars &= ~(1<<j);}
 }}
-void MainWindow::on_sb_curdisc_valueChanged(int value){if(!load){ff7.slot[s].disc = value;}}
+
 void MainWindow::on_sb_love_barret_valueChanged(int value){if(!load){ff7.slot[s].love.barret = value;}}
 void MainWindow::on_sb_love_aeris_valueChanged(int value){if(!load){ff7.slot[s].love.aeris = value;}}
 void MainWindow::on_sb_love_tifa_valueChanged(int value){if(!load){ff7.slot[s].love.tifa = value;}}
@@ -4831,11 +4871,36 @@ void MainWindow::setoptions_two()
     load=false;
 }
 
-/*--------WIP Section PLACE ALL NEW FUNCTIONS HERE  untill tested them move to proper section-------*/
-void MainWindow::on_sb_mprogress_valueChanged(){if(!load){ff7.slot[s].mprogress = ui->sb_mprogress->value();}}
-void MainWindow::on_sb_bm_progress1_valueChanged(int value){if(!load){ff7.slot[s].bm_progress1 =value;}}
-void MainWindow::on_sb_bm_progress2_valueChanged(int value){if(!load){ff7.slot[s].bm_progress2 =value;}}
+/*--------GAME PROGRESS-------*/
+void MainWindow::on_sb_curdisc_valueChanged(int value){if(!load){ff7.slot[s].disc = value;}}
+void MainWindow::on_sb_mprogress_valueChanged(int value){if(!load){ff7.slot[s].mprogress = value;}}
 void MainWindow::on_sb_bm_progress3_valueChanged(int value){if(!load){ff7.slot[s].bm_progress3 =value;}}
+void MainWindow::on_sb_turkschruch_valueChanged(int value){if(!load){ff7.slot[s].aeris_chruch=value;}}
+void MainWindow::on_sb_donprog_valueChanged(int value){if(!load){ff7.slot[s].donprogress=value;}}
+
+void MainWindow::on_cb_bm1_1_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress1 |= (1<<0);}else{ff7.slot[s].bm_progress1 &= ~(1<<0);}}}
+void MainWindow::on_cb_bm1_2_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress1 |= (1<<1);}else{ff7.slot[s].bm_progress1 &= ~(1<<1);}}}
+void MainWindow::on_cb_bm1_3_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress1 |= (1<<2);}else{ff7.slot[s].bm_progress1 &= ~(1<<2);}}}
+void MainWindow::on_cb_bm1_4_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress1 |= (1<<3);}else{ff7.slot[s].bm_progress1 &= ~(1<<3);}}}
+void MainWindow::on_cb_bm1_5_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress1 |= (1<<4);}else{ff7.slot[s].bm_progress1 &= ~(1<<4);}}}
+void MainWindow::on_cb_bm1_6_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress1 |= (1<<5);}else{ff7.slot[s].bm_progress1 &= ~(1<<5);}}}
+void MainWindow::on_cb_bm1_7_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress1 |= (1<<6);}else{ff7.slot[s].bm_progress1 &= ~(1<<6);}}}
+void MainWindow::on_cb_bm1_8_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress1 |= (1<<7);}else{ff7.slot[s].bm_progress1 &= ~(1<<7);}}}
+
+void MainWindow::on_cb_bm2_1_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress2 |= (1<<0);}else{ff7.slot[s].bm_progress2 &= ~(1<<0);}}}
+void MainWindow::on_cb_bm2_2_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress2 |= (1<<1);}else{ff7.slot[s].bm_progress2 &= ~(1<<1);}}}
+void MainWindow::on_cb_bm2_3_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress2 |= (1<<2);}else{ff7.slot[s].bm_progress2 &= ~(1<<2);}}}
+void MainWindow::on_cb_bm2_4_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress2 |= (1<<3);}else{ff7.slot[s].bm_progress2 &= ~(1<<3);}}}
+void MainWindow::on_cb_bm2_5_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress2 |= (1<<4);}else{ff7.slot[s].bm_progress2 &= ~(1<<4);}}}
+void MainWindow::on_cb_bm2_6_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress2 |= (1<<5);}else{ff7.slot[s].bm_progress2 &= ~(1<<5);}}}
+void MainWindow::on_cb_bm2_7_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress2 |= (1<<6);}else{ff7.slot[s].bm_progress2 &= ~(1<<6);}}}
+void MainWindow::on_cb_bm2_8_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress2 |= (1<<7);}else{ff7.slot[s].bm_progress2 &= ~(1<<7);}}}
+
+void MainWindow::on_cb_bombing_int_stateChanged(int checked)
+{if(!load){
+    if(checked == Qt::Checked){ff7.slot[s].intbombing =0x14;}
+    else{ff7.slot[s].intbombing =0x56;}
+}}
 
 void MainWindow::on_cb_replay_currentIndexChanged(int index)
 {
@@ -4843,9 +4908,9 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     {
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(1);
-        ui->sb_bm_progress1->setValue(0);
-        ui->sb_bm_progress2->setValue(0);
-        ui->sb_bm_progress3->setValue(0);
+        ff7.slot[s].bm_progress1=0;
+        ff7.slot[s].bm_progress2=0;
+        ff7.slot[s].bm_progress3=0;
         ui->cb_bombing_int->setChecked(1);
         ui->cb_midgartrain_1->setChecked(0);
         ui->cb_midgartrain_2->setChecked(0);
@@ -4868,9 +4933,9 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(130);
         ui->sb_turkschruch->setValue(0);
-        ui->sb_bm_progress1->setValue(120);
-        ui->sb_bm_progress2->setValue(198);
-        ui->sb_bm_progress3->setValue(3);
+        ff7.slot[s].bm_progress1=120;
+        ff7.slot[s].bm_progress2=198;
+        ff7.slot[s].bm_progress3=3;
         ui->cb_bombing_int->setChecked(0);
         ui->line_location->setText(tr("Chruch in the Slums"));
         ui->sb_map_id->setValue(1);
@@ -4888,9 +4953,9 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     {
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(341);
-        ui->sb_bm_progress1->setValue(120);
-        ui->sb_bm_progress2->setValue(198);
-        ui->sb_bm_progress3->setValue(3);
+        ff7.slot[s].bm_progress1=120;
+        ff7.slot[s].bm_progress2=198;
+        ff7.slot[s].bm_progress3=3;
         ui->cb_bombing_int->setChecked(0);
         ui->line_location->setText(tr("Kalm Inn"));
         ui->sb_map_id->setValue(1);
@@ -4960,9 +5025,9 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     {
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(583);
-        ui->sb_bm_progress1->setValue(120);
-        ui->sb_bm_progress2->setValue(198);
-        ui->sb_bm_progress3->setValue(3);
+        ff7.slot[s].bm_progress1=120;
+        ff7.slot[s].bm_progress2=198;
+        ff7.slot[s].bm_progress3=3;
         ui->cb_bombing_int->setChecked(0);
         ui->line_location->setText(tr("Ropeway Station"));
         ui->sb_map_id->setValue(1);
@@ -4977,9 +5042,9 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     {
         ui->sb_curdisc->setValue(1);
         ui->sb_mprogress->setValue(664);
-        ui->sb_bm_progress1->setValue(120);
-        ui->sb_bm_progress2->setValue(198);
-        ui->sb_bm_progress3->setValue(3);
+        ff7.slot[s].bm_progress1=120;
+        ff7.slot[s].bm_progress2=198;
+        ff7.slot[s].bm_progress3=3;
         ui->cb_bombing_int->setChecked(0);
         ui->line_location->setText(tr("Forgotten City"));
         ui->sb_map_id->setValue(1);
@@ -4993,6 +5058,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
     }
 
     else {ui->label_replaynote->setText(tr("         INFO ON CURRENTLY SELECTED REPLAY MISSION"));}
+    if(!load){progress_update();}
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS FOR TESTING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -5230,12 +5296,6 @@ void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
     else if(value ==1){ff7.slot[s].tut_save =0x32;}
     else if(value ==2){ff7.slot[s].tut_save=0x3A;}
     testdata_refresh();
-}}
-
-void MainWindow::on_cb_bombing_int_stateChanged(int checked)
-{if(!load){
-    if(checked == Qt::Checked){ff7.slot[s].intbombing =0x14;}
-    else{ff7.slot[s].intbombing =0x56;}
 }}
 
 void MainWindow::on_cb_Region_Slot_currentIndexChanged()
@@ -5577,8 +5637,6 @@ void MainWindow::on_btn_item_add_each_item_clicked()
     guirefresh();
 }
 
-void MainWindow::on_sb_turkschruch_valueChanged(int value){if(!load){ff7.slot[s].aeris_chruch=value;}}
-void MainWindow::on_sb_donprog_valueChanged(int value){if(!load){ff7.slot[s].donprogress=value;}}
 
 void MainWindow::unknown_refresh(int z)//remember to add/remove case statments in all 3 switches when number of z vars changes.
 {//for updating the unknown table(s)
