@@ -91,7 +91,6 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->lcd_0x35->setVisible(false);
     ui->lcd_0x36->setVisible(false);
     ui->lcd_0x37->setVisible(false);
-    ui->sb_bm_progress3->setEnabled(false);
     ui->cb_Region_Slot->setEnabled(false);
     load=false;
 
@@ -1101,7 +1100,6 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
         ui->lcd_0x35->setVisible(true);
         ui->lcd_0x36->setVisible(true);
         ui->lcd_0x37->setVisible(true);
-        ui->sb_bm_progress3->setEnabled(true);
         ui->cb_Region_Slot->setEnabled(true);
         ui->combo_id->setVisible(true);
         ui->lbl_id->setVisible(true);
@@ -1122,7 +1120,6 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
         ui->lcd_0x35->setVisible(false);
         ui->lcd_0x36->setVisible(false);
         ui->lcd_0x37->setVisible(false);
-        ui->sb_bm_progress3->setEnabled(false);
         ui->cb_Region_Slot->setEnabled(false);
         ui->combo_id->setVisible(false);
         ui->lbl_id->setVisible(false);
@@ -3064,7 +3061,6 @@ load=true;
 ui->sb_curdisc->setValue(ff7.slot[s].disc);
 ui->sb_turkschruch->setValue(ff7.slot[s].aeris_chruch);
 ui->sb_donprog->setValue(ff7.slot[s].donprogress);
-ui->sb_bm_progress3->setValue(ff7.slot[s].bm_progress3);
 ui->sb_mprogress->setValue(ff7.slot[s].mprogress);
 
 if(ff7.slot[s].intbombing == 0x14){ui->cb_bombing_int->setChecked(Qt::Checked);}
@@ -3102,6 +3098,75 @@ if((ff7.slot[s].bm_progress2)& (1<<6)){ui->cb_bm2_7->setChecked(Qt::Checked);}
 else{ui->cb_bm2_7->setChecked(Qt::Unchecked);}
 if((ff7.slot[s].bm_progress2)& (1<<7)){ui->cb_bm2_8->setChecked(Qt::Checked);}
 else{ui->cb_bm2_8->setChecked(Qt::Unchecked);}
+
+if((ff7.slot[s].bm_progress3)& (1<<0)){ui->cb_bm3_1->setChecked(Qt::Checked);}
+else{ui->cb_bm3_1->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress3)& (1<<1)){ui->cb_bm3_2->setChecked(Qt::Checked);}
+else{ui->cb_bm3_2->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress3)& (1<<2)){ui->cb_bm3_3->setChecked(Qt::Checked);}
+else{ui->cb_bm3_3->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress3)& (1<<3)){ui->cb_bm3_4->setChecked(Qt::Checked);}
+else{ui->cb_bm3_4->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress3)& (1<<4)){ui->cb_bm3_5->setChecked(Qt::Checked);}
+else{ui->cb_bm3_5->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress3)& (1<<5)){ui->cb_bm3_6->setChecked(Qt::Checked);}
+else{ui->cb_bm3_6->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress3)& (1<<6)){ui->cb_bm3_7->setChecked(Qt::Checked);}
+else{ui->cb_bm3_7->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].bm_progress3)& (1<<7)){ui->cb_bm3_8->setChecked(Qt::Checked);}
+else{ui->cb_bm3_8->setChecked(Qt::Unchecked);}
+
+if((ff7.slot[s].z_26[0])& (1<<0)){ui->cb_s7pl_1->setChecked(Qt::Checked);}
+else{ui->cb_s7pl_1->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_26[0])& (1<<1)){ui->cb_s7pl_2->setChecked(Qt::Checked);}
+else{ui->cb_s7pl_2->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_26[0])& (1<<2)){ui->cb_s7pl_3->setChecked(Qt::Checked);}
+else{ui->cb_s7pl_3->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_26[0])& (1<<3)){ui->cb_s7pl_4->setChecked(Qt::Checked);}
+else{ui->cb_s7pl_4->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_26[0])& (1<<4)){ui->cb_s7pl_5->setChecked(Qt::Checked);}
+else{ui->cb_s7pl_5->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_26[0])& (1<<5)){ui->cb_s7pl_6->setChecked(Qt::Checked);}
+else{ui->cb_s7pl_6->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_26[0])& (1<<6)){ui->cb_s7pl_7->setChecked(Qt::Checked);}
+else{ui->cb_s7pl_7->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_26[0])& (1<<7)){ui->cb_s7pl_8->setChecked(Qt::Checked);}
+else{ui->cb_s7pl_8->setChecked(Qt::Unchecked);}
+
+if((ff7.slot[s].z_26[8])& (1<<0)){ui->cb_s7ts_1->setChecked(Qt::Checked);}
+else{ui->cb_s7ts_1->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_26[8])& (1<<1)){ui->cb_s7ts_2->setChecked(Qt::Checked);}
+else{ui->cb_s7ts_2->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_26[8])& (1<<2)){ui->cb_s7ts_3->setChecked(Qt::Checked);}
+else{ui->cb_s7ts_3->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_26[8])& (1<<3)){ui->cb_s7ts_4->setChecked(Qt::Checked);}
+else{ui->cb_s7ts_4->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_26[8])& (1<<4)){ui->cb_s7ts_5->setChecked(Qt::Checked);}
+else{ui->cb_s7ts_5->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_26[8])& (1<<5)){ui->cb_s7ts_6->setChecked(Qt::Checked);}
+else{ui->cb_s7ts_6->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_26[8])& (1<<6)){ui->cb_s7ts_7->setChecked(Qt::Checked);}
+else{ui->cb_s7ts_7->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_26[8])& (1<<7)){ui->cb_s7ts_8->setChecked(Qt::Checked);}
+else{ui->cb_s7ts_8->setChecked(Qt::Unchecked);}
+
+if((ff7.slot[s].midgartrainflags)& (1<<0)){ui->cb_midgartrain_1->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_1->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].midgartrainflags)& (1<<1)){ui->cb_midgartrain_2->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_2->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].midgartrainflags)& (1<<2)){ui->cb_midgartrain_3->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_3->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].midgartrainflags)& (1<<3)){ui->cb_midgartrain_4->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_4->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].midgartrainflags)& (1<<4)){ui->cb_midgartrain_5->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_5->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].midgartrainflags)& (1<<5)){ui->cb_midgartrain_6->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_6->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].midgartrainflags)& (1<<6)){ui->cb_midgartrain_7->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_7->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].midgartrainflags)& (1<<7)){ui->cb_midgartrain_8->setChecked(Qt::Checked);}
+else{ui->cb_midgartrain_8->setChecked(Qt::Unchecked);}
+
 
 load=false;
 }
@@ -3342,25 +3407,6 @@ void MainWindow::testdata_refresh()
     if((ff7.slot[s].itemsmask_1)& (1<<7)){ui->cb_itemmask1_8->setChecked(Qt::Checked);}
     else{ui->cb_itemmask1_8->setChecked(Qt::Unchecked);}
     ui->lcd_itemmask_1->display(ff7.slot[s].itemsmask_1);
-
-
-    if((ff7.slot[s].midgartrainflags)& (1<<0)){ui->cb_midgartrain_1->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_1->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].midgartrainflags)& (1<<1)){ui->cb_midgartrain_2->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_2->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].midgartrainflags)& (1<<2)){ui->cb_midgartrain_3->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_3->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].midgartrainflags)& (1<<3)){ui->cb_midgartrain_4->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_4->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].midgartrainflags)& (1<<4)){ui->cb_midgartrain_5->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_5->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].midgartrainflags)& (1<<5)){ui->cb_midgartrain_6->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_6->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].midgartrainflags)& (1<<6)){ui->cb_midgartrain_7->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_7->setChecked(Qt::Unchecked);}
-    if((ff7.slot[s].midgartrainflags)& (1<<7)){ui->cb_midgartrain_8->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_8->setChecked(Qt::Unchecked);}
-    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
 
     if((ff7.slot[s].tut_sub)& (1<<0)){ui->cb_tut_sub_1->setChecked(Qt::Checked);}
     else{ui->cb_tut_sub_1->setChecked(Qt::Unchecked);}
@@ -4874,7 +4920,6 @@ void MainWindow::setoptions_two()
 /*--------GAME PROGRESS-------*/
 void MainWindow::on_sb_curdisc_valueChanged(int value){if(!load){ff7.slot[s].disc = value;}}
 void MainWindow::on_sb_mprogress_valueChanged(int value){if(!load){ff7.slot[s].mprogress = value;}}
-void MainWindow::on_sb_bm_progress3_valueChanged(int value){if(!load){ff7.slot[s].bm_progress3 =value;}}
 void MainWindow::on_sb_turkschruch_valueChanged(int value){if(!load){ff7.slot[s].aeris_chruch=value;}}
 void MainWindow::on_sb_donprog_valueChanged(int value){if(!load){ff7.slot[s].donprogress=value;}}
 
@@ -4895,6 +4940,33 @@ void MainWindow::on_cb_bm2_5_toggled(bool checked){if(!load){if(checked){ff7.slo
 void MainWindow::on_cb_bm2_6_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress2 |= (1<<5);}else{ff7.slot[s].bm_progress2 &= ~(1<<5);}}}
 void MainWindow::on_cb_bm2_7_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress2 |= (1<<6);}else{ff7.slot[s].bm_progress2 &= ~(1<<6);}}}
 void MainWindow::on_cb_bm2_8_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress2 |= (1<<7);}else{ff7.slot[s].bm_progress2 &= ~(1<<7);}}}
+
+void MainWindow::on_cb_bm3_1_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress3 |= (1<<0);}else{ff7.slot[s].bm_progress3 &= ~(1<<0);}}}
+void MainWindow::on_cb_bm3_2_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress3 |= (1<<1);}else{ff7.slot[s].bm_progress3 &= ~(1<<1);}}}
+void MainWindow::on_cb_bm3_3_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress3 |= (1<<2);}else{ff7.slot[s].bm_progress3 &= ~(1<<2);}}}
+void MainWindow::on_cb_bm3_4_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress3 |= (1<<3);}else{ff7.slot[s].bm_progress3 &= ~(1<<3);}}}
+void MainWindow::on_cb_bm3_5_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress3 |= (1<<4);}else{ff7.slot[s].bm_progress3 &= ~(1<<4);}}}
+void MainWindow::on_cb_bm3_6_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress3 |= (1<<5);}else{ff7.slot[s].bm_progress3 &= ~(1<<5);}}}
+void MainWindow::on_cb_bm3_7_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress3 |= (1<<6);}else{ff7.slot[s].bm_progress3 &= ~(1<<6);}}}
+void MainWindow::on_cb_bm3_8_toggled(bool checked){if(!load){if(checked){ff7.slot[s].bm_progress3 |= (1<<7);}else{ff7.slot[s].bm_progress3 &= ~(1<<7);}}}
+
+void MainWindow::on_cb_s7pl_1_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[0] |= (1<<0);}else{ff7.slot[s].z_26[0] &= ~(1<<0);}}}
+void MainWindow::on_cb_s7pl_2_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[0] |= (1<<1);}else{ff7.slot[s].z_26[0] &= ~(1<<1);}}}
+void MainWindow::on_cb_s7pl_3_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[0] |= (1<<2);}else{ff7.slot[s].z_26[0] &= ~(1<<2);}}}
+void MainWindow::on_cb_s7pl_4_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[0] |= (1<<3);}else{ff7.slot[s].z_26[0] &= ~(1<<3);}}}
+void MainWindow::on_cb_s7pl_5_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[0] |= (1<<4);}else{ff7.slot[s].z_26[0] &= ~(1<<4);}}}
+void MainWindow::on_cb_s7pl_6_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[0] |= (1<<5);}else{ff7.slot[s].z_26[0] &= ~(1<<5);}}}
+void MainWindow::on_cb_s7pl_7_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[0] |= (1<<6);}else{ff7.slot[s].z_26[0] &= ~(1<<6);}}}
+void MainWindow::on_cb_s7pl_8_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[0] |= (1<<7);}else{ff7.slot[s].z_26[0] &= ~(1<<7);}}}
+
+void MainWindow::on_cb_s7ts_1_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[8] |= (1<<0);}else{ff7.slot[s].z_26[8] &= ~(1<<0);}}}
+void MainWindow::on_cb_s7ts_2_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[8] |= (1<<1);}else{ff7.slot[s].z_26[8] &= ~(1<<1);}}}
+void MainWindow::on_cb_s7ts_3_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[8] |= (1<<2);}else{ff7.slot[s].z_26[8] &= ~(1<<2);}}}
+void MainWindow::on_cb_s7ts_4_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[8] |= (1<<3);}else{ff7.slot[s].z_26[8] &= ~(1<<3);}}}
+void MainWindow::on_cb_s7ts_5_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[8] |= (1<<4);}else{ff7.slot[s].z_26[8] &= ~(1<<4);}}}
+void MainWindow::on_cb_s7ts_6_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[8] |= (1<<5);}else{ff7.slot[s].z_26[8] &= ~(1<<5);}}}
+void MainWindow::on_cb_s7ts_7_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[8] |= (1<<6);}else{ff7.slot[s].z_26[8] &= ~(1<<6);}}}
+void MainWindow::on_cb_s7ts_8_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[8] |= (1<<7);}else{ff7.slot[s].z_26[8] &= ~(1<<7);}}}
 
 void MainWindow::on_cb_bombing_int_stateChanged(int checked)
 {if(!load){
@@ -5234,61 +5306,14 @@ void MainWindow::on_cb_yuffieforest_toggled(bool checked)
     else{ff7.slot[s].yuffieforest &= ~(1<<0);}
 }}
 
-void MainWindow::on_cb_midgartrain_1_toggled(bool checked)
-{if(!load){
-    if(checked){ff7.slot[s].midgartrainflags |= (1<<0);}
-    else{ff7.slot[s].midgartrainflags &= ~(1<<0);}
-    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}}
-
-void MainWindow::on_cb_midgartrain_2_toggled(bool checked)
-{if(!load){
-    if(checked){ff7.slot[s].midgartrainflags |= (1<<1);}
-    else{ff7.slot[s].midgartrainflags &= ~(1<<1);}
-    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}}
-
-void MainWindow::on_cb_midgartrain_3_toggled(bool checked)
-{if(!load){
-    if(checked){ff7.slot[s].midgartrainflags |= (1<<2);}
-    else{ff7.slot[s].midgartrainflags &= ~(1<<2);}
-    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}}
-
-void MainWindow::on_cb_midgartrain_4_toggled(bool checked)
-{if(!load){
-    if(checked){ff7.slot[s].midgartrainflags |= (1<<3);}
-    else{ff7.slot[s].midgartrainflags &= ~(1<<3);}
-    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}}
-
-void MainWindow::on_cb_midgartrain_5_toggled(bool checked)
-{if(!load){
-    if(checked){ff7.slot[s].midgartrainflags |= (1<<4);}
-    else{ff7.slot[s].midgartrainflags &= ~(1<<4);}
-    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}}
-
-void MainWindow::on_cb_midgartrain_6_toggled(bool checked)
-{if(!load){
-    if(checked){ff7.slot[s].midgartrainflags |= (1<<5);}
-    else{ff7.slot[s].midgartrainflags &= ~(1<<5);}
-    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}}
-
-void MainWindow::on_cb_midgartrain_7_toggled(bool checked)
-{if(!load){
-    if(checked){ff7.slot[s].midgartrainflags |= (1<<6);}
-    else{ff7.slot[s].midgartrainflags &= ~(1<<6);}
-    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}}
-
-void MainWindow::on_cb_midgartrain_8_toggled(bool checked)
-{if(!load){
-    if(checked){ff7.slot[s].midgartrainflags |= (1<<7);}
-    else{ff7.slot[s].midgartrainflags &= ~(1<<7);}
-    ui->lcd_midgartrain->display(ff7.slot[s].midgartrainflags);
-}}
+void MainWindow::on_cb_midgartrain_1_toggled(bool checked){if(!load){if(checked){ff7.slot[s].midgartrainflags |= (1<<0);}else{ff7.slot[s].midgartrainflags &= ~(1<<0);}}}
+void MainWindow::on_cb_midgartrain_2_toggled(bool checked){if(!load){if(checked){ff7.slot[s].midgartrainflags |= (1<<1);}else{ff7.slot[s].midgartrainflags &= ~(1<<1);}}}
+void MainWindow::on_cb_midgartrain_3_toggled(bool checked){if(!load){if(checked){ff7.slot[s].midgartrainflags |= (1<<2);}else{ff7.slot[s].midgartrainflags &= ~(1<<2);}}}
+void MainWindow::on_cb_midgartrain_4_toggled(bool checked){if(!load){if(checked){ff7.slot[s].midgartrainflags |= (1<<3);}else{ff7.slot[s].midgartrainflags &= ~(1<<3);}}}
+void MainWindow::on_cb_midgartrain_5_toggled(bool checked){if(!load){if(checked){ff7.slot[s].midgartrainflags |= (1<<4);}else{ff7.slot[s].midgartrainflags &= ~(1<<4);}}}
+void MainWindow::on_cb_midgartrain_6_toggled(bool checked){if(!load){if(checked){ff7.slot[s].midgartrainflags |= (1<<5);}else{ff7.slot[s].midgartrainflags &= ~(1<<5);}}}
+void MainWindow::on_cb_midgartrain_7_toggled(bool checked){if(!load){if(checked){ff7.slot[s].midgartrainflags |= (1<<6);}else{ff7.slot[s].midgartrainflags &= ~(1<<6);}}}
+void MainWindow::on_cb_midgartrain_8_toggled(bool checked){if(!load){if(checked){ff7.slot[s].midgartrainflags |= (1<<7);}else{ff7.slot[s].midgartrainflags &= ~(1<<7);}}}
 
 void MainWindow::on_cb_tut_worldsave_stateChanged(int value)
 {if(!load){
