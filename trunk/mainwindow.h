@@ -340,7 +340,6 @@ private slots://try to keep these in the same order as the .cpp file
     //progress functions
 
     void on_cb_replay_currentIndexChanged(int index);
-    void on_sb_bm_progress3_valueChanged(int value);
     void on_sb_mprogress_valueChanged(int value);
     void on_cb_bm1_1_toggled(bool checked);
     void on_cb_bm1_2_toggled(bool checked);
@@ -358,6 +357,32 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_bm2_6_toggled(bool checked);
     void on_cb_bm2_7_toggled(bool checked);
     void on_cb_bm2_8_toggled(bool checked);
+    void on_cb_bm3_1_toggled(bool checked);
+    void on_cb_bm3_2_toggled(bool checked);
+    void on_cb_bm3_3_toggled(bool checked);
+    void on_cb_bm3_4_toggled(bool checked);
+    void on_cb_bm3_5_toggled(bool checked);
+    void on_cb_bm3_6_toggled(bool checked);
+    void on_cb_bm3_7_toggled(bool checked);
+    void on_cb_bm3_8_toggled(bool checked);
+
+    void on_cb_s7pl_1_toggled(bool checked);
+    void on_cb_s7pl_2_toggled(bool checked);
+    void on_cb_s7pl_3_toggled(bool checked);
+    void on_cb_s7pl_4_toggled(bool checked);
+    void on_cb_s7pl_5_toggled(bool checked);
+    void on_cb_s7pl_6_toggled(bool checked);
+    void on_cb_s7pl_7_toggled(bool checked);
+    void on_cb_s7pl_8_toggled(bool checked);
+
+    void on_cb_s7ts_1_toggled(bool checked);
+    void on_cb_s7ts_2_toggled(bool checked);
+    void on_cb_s7ts_3_toggled(bool checked);
+    void on_cb_s7ts_4_toggled(bool checked);
+    void on_cb_s7ts_5_toggled(bool checked);
+    void on_cb_s7ts_6_toggled(bool checked);
+    void on_cb_s7ts_7_toggled(bool checked);
+    void on_cb_s7ts_8_toggled(bool checked);
 
     // game options tab
     void setoptions_one();

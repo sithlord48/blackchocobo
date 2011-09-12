@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>369</width>
-    <height>383</height>
+    <width>367</width>
+    <height>381</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -499,6 +499,11 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>New: Edit number of steps taken</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New: Better Organized Progression Tab.</string>
           </property>
          </item>
          <item>

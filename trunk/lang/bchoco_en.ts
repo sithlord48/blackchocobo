@@ -2623,10 +2623,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>0x0CE6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Bombing Mission</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3496,18 +3492,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>0x01 Talked to Bigs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x02 Talked to Wedge twice</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x04 Talked to Jessie Before Looking At Map</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Region String</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3658,10 +3642,6 @@
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Verdana&apos;; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0xD83 Midgar Train Flags (tin_1)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4746,43 +4726,7 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Str: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Vit: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mag: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Spr: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dex: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lck: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hp: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mp: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Y: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Event</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4830,19 +4774,11 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unknowns</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>bm2_1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>bm1_2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm_3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4863,6 +4799,190 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>bm2_8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Str</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spr</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lck</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>HP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Event Progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Escape From Reactor </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Post Pan MD8_2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Post Pan MD8_3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Midgar Train Flags</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Talked to Bigs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Talked to Wedge Twice</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Talked to Jessie Before Looking At Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> Played Video on Train?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknowns / Unused</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm1_3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm3_3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm3_4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm3_5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm3_6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm3_7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm3_8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mt_5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mt_6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mt_7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mt_8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 7 Trainstation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Team Avalanche Had Meeting after Bombing Mission</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Talked To Trainman 3 times</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pair At Station agree</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set To Reactor 5 Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>s7ts_5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>s7ts_6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>s7ts_7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>s7ts_8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 7 Pillar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Team Avalanche Has Run To Hideout</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Can Show Pillar Pan Video</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Barret called us</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Post Pillar Pan Video</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Talked To soldier two times</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>s7pl_6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>s7pl_7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>s7pl_8</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6909,6 +7029,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Edit number of steps taken</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Better Organized Progression Tab.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
