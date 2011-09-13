@@ -9,11 +9,11 @@
     </message>
     <message>
         <source>Hi-Potion</source>
-        <translation>Super Potion</translation>
+        <translation>Super potion</translation>
     </message>
     <message>
         <source>X-Potion</source>
-        <translation>Potion X</translation>
+        <translation>Potion-X</translation>
     </message>
     <message>
         <source>Ether</source>
@@ -21,7 +21,7 @@
     </message>
     <message>
         <source>Turbo Ether</source>
-        <translation>Ether Turbo</translation>
+        <translation>Ether turbo</translation>
     </message>
     <message>
         <source>Elixir</source>
@@ -29,7 +29,7 @@
     </message>
     <message>
         <source>Megalixir</source>
-        <translation>Megalixir</translation>
+        <translation>Mégalixir</translation>
     </message>
     <message>
         <source>Phoenix Down</source>
@@ -45,7 +45,7 @@
     </message>
     <message>
         <source>Maiden&apos;s Kiss</source>
-        <translation>Baiser de Vierge</translation>
+        <translation>Baiser de vierge</translation>
     </message>
     <message>
         <source>Cornucopia</source>
@@ -53,7 +53,7 @@
     </message>
     <message>
         <source>Echo screen</source>
-        <translation>Ecran Sonore</translation>
+        <translation>Ecran sonore</translation>
     </message>
     <message>
         <source>Hyper</source>
@@ -77,7 +77,7 @@
     </message>
     <message>
         <source>Hero Drink</source>
-        <translation>Boisson de héro</translation>
+        <translation>Boisson de héros</translation>
     </message>
     <message>
         <source>Vaccine</source>
@@ -97,7 +97,7 @@
     </message>
     <message>
         <source>Kiss of Death</source>
-        <translation>Baiser de mort</translation>
+        <translation>Baiser de la mort</translation>
     </message>
     <message>
         <source>Spider Web</source>
@@ -105,27 +105,27 @@
     </message>
     <message>
         <source>Dream Powder</source>
-        <translation>Poussière de Rêve</translation>
+        <translation>Poussière de rêve</translation>
     </message>
     <message>
         <source>Mute Mask</source>
-        <translation>Masque Muet</translation>
+        <translation>Masque muet</translation>
     </message>
     <message>
         <source>War Gong</source>
-        <translation>Gong de Guerre</translation>
+        <translation>Gong de guerre</translation>
     </message>
     <message>
         <source>Loco weed</source>
-        <translation>Graine de Fou</translation>
+        <translation>Graine de fou</translation>
     </message>
     <message>
         <source>Fire Fang</source>
-        <translation>Dent de Feu</translation>
+        <translation>Dent de feu</translation>
     </message>
     <message>
         <source>Fire Veil</source>
-        <translation>Voile de Feu</translation>
+        <translation>Voile de feu</translation>
     </message>
     <message>
         <source>Antarctic Wind</source>
@@ -133,7 +133,7 @@
     </message>
     <message>
         <source>Ice Crystal</source>
-        <translation>Cristal de Glace</translation>
+        <translation>Cristal de glace</translation>
     </message>
     <message>
         <source>Bolt Plume</source>
@@ -145,19 +145,19 @@
     </message>
     <message>
         <source>Earth Drum</source>
-        <translation>Tambour Terrien</translation>
+        <translation>Tambour terrien</translation>
     </message>
     <message>
         <source>Earth Mallet</source>
-        <translation>Maillet Terrien</translation>
+        <translation>Maillet terrien</translation>
     </message>
     <message>
         <source>Deadly Waste</source>
-        <translation>Matière à Risque</translation>
+        <translation>Matière à risque</translation>
     </message>
     <message>
         <source>M-Tentacles</source>
-        <translation>Tentacules-M</translation>
+        <translation>TentaculesM.</translation>
     </message>
     <message>
         <source>Stardust</source>
@@ -165,23 +165,23 @@
     </message>
     <message>
         <source>Vampire Fang</source>
-        <translation>Canine de Vampire</translation>
+        <translation>Canine de vampire</translation>
     </message>
     <message>
         <source>Ghost Hand</source>
-        <translation>Main de Fantôme</translation>
+        <translation>Main de fantôme</translation>
     </message>
     <message>
         <source>Vagyrisk Claw</source>
-        <translation>Griffe de Vagrisk</translation>
+        <translation>Griffe de vagyrisk</translation>
     </message>
     <message>
         <source>Light Curtain</source>
-        <translation>Rideau Clair</translation>
+        <translation>Rideau clair</translation>
     </message>
     <message>
         <source>Lunar Curtain</source>
-        <translation>Rideau Lunaire</translation>
+        <translation>Rideau lunaire</translation>
     </message>
     <message>
         <source>Mirror</source>
@@ -189,7 +189,7 @@
     </message>
     <message>
         <source>Holy Torch</source>
-        <translation>Torche Sacrée</translation>
+        <translation>Torche sacrée</translation>
     </message>
     <message>
         <source>Bird Wing</source>
@@ -233,11 +233,11 @@
     </message>
     <message>
         <source>Dazers</source>
-        <translation>Épine Paralysie</translation>
+        <translation>Epine paralysie</translation>
     </message>
     <message>
         <source>Dragon Fang</source>
-        <translation>Griffe de Dragon</translation>
+        <translation>Dent de dragon</translation>
     </message>
     <message>
         <source>Cauldron</source>
@@ -245,35 +245,35 @@
     </message>
     <message>
         <source>Sylkis Greens</source>
-        <translation>Légume Sylkis</translation>
+        <translation>Légumes Sylkis</translation>
     </message>
     <message>
         <source>Reagan Greens</source>
-        <translation>Légume Reaan</translation>
+        <translation>Légumes Reagan</translation>
     </message>
     <message>
         <source>Mimett Greens</source>
-        <translation>Légume Mimett</translation>
+        <translation>Légumes Mimett</translation>
     </message>
     <message>
         <source>Curiel Greens</source>
-        <translation>Légume Curiel</translation>
+        <translation>Légumes Curiel</translation>
     </message>
     <message>
         <source>Pahsana Greens</source>
-        <translation>Légume Pahsana</translation>
+        <translation>Légumes Pahsana</translation>
     </message>
     <message>
         <source>Tantal Greens</source>
-        <translation>Légume Tantal</translation>
+        <translation>Légumes Tantal</translation>
     </message>
     <message>
         <source>Krakka Greens</source>
-        <translation>Légume Krakka</translation>
+        <translation>Légumes Krakka</translation>
     </message>
     <message>
         <source>Gysahl Greens</source>
-        <translation>Légume Gysahl</translation>
+        <translation>Légumes Gysahl</translation>
     </message>
     <message>
         <source>Tent</source>
@@ -281,27 +281,27 @@
     </message>
     <message>
         <source>Power Source</source>
-        <translation>Source de Pouvoir</translation>
+        <translation>Source de pouvoir</translation>
     </message>
     <message>
         <source>Guard Source</source>
-        <translation>Source de Vitalité</translation>
+        <translation>Source de protection</translation>
     </message>
     <message>
         <source>Magic Source</source>
-        <translation>Source de Magie</translation>
+        <translation>Source de magie</translation>
     </message>
     <message>
         <source>Mind Source</source>
-        <translation>Source d&apos;esprit</translation>
+        <translation>Source spirituelle</translation>
     </message>
     <message>
         <source>Speed Source</source>
-        <translation>Source de Vitesse</translation>
+        <translation>Source de rapidité</translation>
     </message>
     <message>
         <source>Luck Source</source>
-        <translation>Source de Chance</translation>
+        <translation>Source de chance</translation>
     </message>
     <message>
         <source>Zeio Nut</source>
@@ -309,7 +309,7 @@
     </message>
     <message>
         <source>Carob Nut</source>
-        <translation>Noix de Carob</translation>
+        <translation>Noix de Caroube</translation>
     </message>
     <message>
         <source>Porov Nut</source>
@@ -329,7 +329,7 @@
     </message>
     <message>
         <source>Pepio Nut</source>
-        <translation>Noix de Pepio</translation>
+        <translation>Noix de Pépio</translation>
     </message>
     <message>
         <source>Battery</source>
@@ -349,11 +349,11 @@
     </message>
     <message>
         <source>Final Heaven</source>
-        <translation>Dernier Paradis</translation>
+        <translation>Dernier paradis</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation>Grand Évangile</translation>
+        <translation>Grand évangile</translation>
     </message>
     <message>
         <source>Cosmo Memory</source>
@@ -361,7 +361,7 @@
     </message>
     <message>
         <source>All Creation</source>
-        <translation>Tout Création</translation>
+        <translation>Tout création</translation>
     </message>
     <message>
         <source>Chaos</source>
@@ -373,7 +373,7 @@
     </message>
     <message>
         <source>Super Sweeper</source>
-        <translation>Super Sweeper</translation>
+        <translation>Sweeper super</translation>
     </message>
     <message>
         <source>Masamune Blade</source>
@@ -381,11 +381,11 @@
     </message>
     <message>
         <source>Save Crystal</source>
-        <translation>Cristal Sauf</translation>
+        <translation>Cristal sauf</translation>
     </message>
     <message>
         <source>Combat Diary</source>
-        <translation>Carnet de Combat</translation>
+        <translation>Carnet de combat</translation>
     </message>
     <message>
         <source>Autograph</source>
@@ -397,11 +397,11 @@
     </message>
     <message>
         <source>Desert Rose</source>
-        <translation>Rose du Désert</translation>
+        <translation>Rose du désert</translation>
     </message>
     <message>
         <source>Earth Harp</source>
-        <translation>Harpe Terrestre</translation>
+        <translation>Harpe terrestre</translation>
     </message>
     <message>
         <source>Guide Book</source>
@@ -413,11 +413,11 @@
     </message>
     <message>
         <source>Buster Sword</source>
-        <translation>Epée Broyante</translation>
+        <translation>Epée broyante</translation>
     </message>
     <message>
         <source>Mythril Saber</source>
-        <translation>Sabre Mythril</translation>
+        <translation>Sabre mythril</translation>
     </message>
     <message>
         <source>Hardedge</source>
@@ -425,11 +425,11 @@
     </message>
     <message>
         <source>Butterfly Edge</source>
-        <translation>Bord de Papillon</translation>
+        <translation>Bord de papillon</translation>
     </message>
     <message>
         <source>Enhance Sword</source>
-        <translation>Super Épée</translation>
+        <translation>Super épée</translation>
     </message>
     <message>
         <source>Organics</source>
@@ -437,15 +437,15 @@
     </message>
     <message>
         <source>Crystal Sword</source>
-        <translation>Epée crystal</translation>
+        <translation>Epée cristal</translation>
     </message>
     <message>
         <source>Force Stealer</source>
-        <translation>Voleur Fou</translation>
+        <translation>Voleur fou</translation>
     </message>
     <message>
         <source>Rune Blade</source>
-        <translation>Sabre Rune</translation>
+        <translation>Sabre rune</translation>
     </message>
     <message>
         <source>Murasame</source>
@@ -465,7 +465,7 @@
     </message>
     <message>
         <source>Heaven&apos;s Cloud</source>
-        <translation>Nuage du Paradis</translation>
+        <translation>Nuage du paradis</translation>
     </message>
     <message>
         <source>Ragnarok</source>
@@ -473,39 +473,39 @@
     </message>
     <message>
         <source>Ultima Weapon</source>
-        <translation>Dernière Arme</translation>
+        <translation>Dernière arme</translation>
     </message>
     <message>
         <source>Leather Glove</source>
-        <translation>Gant de Cuir</translation>
+        <translation>Gant de cuir</translation>
     </message>
     <message>
         <source>Metal Knuckle</source>
-        <translation>Poing Metallique</translation>
+        <translation>Poing métallique</translation>
     </message>
     <message>
         <source>Mythril Claw</source>
-        <translation>Griffe Mythril</translation>
+        <translation>Griffe mythril</translation>
     </message>
     <message>
         <source>Grand Glove</source>
-        <translation>Gant Majestueux</translation>
+        <translation>Gant majestueux</translation>
     </message>
     <message>
         <source>Tiger Fang</source>
-        <translation>Canine de Tigre</translation>
+        <translation>Canine de tigre</translation>
     </message>
     <message>
         <source>Diamond Knuckle</source>
-        <translation>Poing de Diamant</translation>
+        <translation>Poing de diamant</translation>
     </message>
     <message>
         <source>Dragon Claw</source>
-        <translation>Griffe de Dragon</translation>
+        <translation>Griffe de dragon</translation>
     </message>
     <message>
         <source>Crystal Glove</source>
-        <translation>Gant Cristal</translation>
+        <translation>Gant cristal</translation>
     </message>
     <message>
         <source>Motor Drive</source>
@@ -513,7 +513,7 @@
     </message>
     <message>
         <source>Platinum Fist</source>
-        <translation>Poing de Platine</translation>
+        <translation>Poing de platine</translation>
     </message>
     <message>
         <source>Kaiser Knuckle</source>
@@ -521,47 +521,47 @@
     </message>
     <message>
         <source>Work Glove</source>
-        <translation>Gant de Travail</translation>
+        <translation>Gant de travail</translation>
     </message>
     <message>
         <source>Powersoul</source>
-        <translation>Arme de Pouvoir</translation>
+        <translation>Arme de pouvoir</translation>
     </message>
     <message>
         <source>Master Fist</source>
-        <translation>Poing Maître</translation>
+        <translation>Poing maître</translation>
     </message>
     <message>
         <source>God&apos;s Hand</source>
-        <translation>Main Divine</translation>
+        <translation>Main divine</translation>
     </message>
     <message>
         <source>Premium Heart</source>
-        <translation>Super coeur</translation>
+        <translation>Super cœur</translation>
     </message>
     <message>
         <source>Gatling Gun</source>
-        <translation>Fusil Automatique</translation>
+        <translation>Fusil automatique</translation>
     </message>
     <message>
         <source>Assault Gun</source>
-        <translation>Fusil d&apos;Attaque</translation>
+        <translation>Fusil d&apos;attaque</translation>
     </message>
     <message>
         <source>Cannon Ball</source>
-        <translation>Boulet Cannon</translation>
+        <translation>Boulet canon</translation>
     </message>
     <message>
         <source>Atomic Scissors</source>
-        <translation>Ciseau Atomique</translation>
+        <translation>Ciseau atomique</translation>
     </message>
     <message>
         <source>Heavy Vulcan</source>
-        <translation>Volcan Lourd</translation>
+        <translation>Volcan lourd</translation>
     </message>
     <message>
         <source>Chainsaw</source>
-        <translation>Tronconneuse</translation>
+        <translation>Tronçonneuse</translation>
     </message>
     <message>
         <source>Microlaser</source>
@@ -573,19 +573,19 @@
     </message>
     <message>
         <source>Drill Arm</source>
-        <translation>Bras Vis</translation>
+        <translation>Bras vis</translation>
     </message>
     <message>
         <source>Solid Bazooka</source>
-        <translation>Bazooka Solide</translation>
+        <translation>Bazooka solide</translation>
     </message>
     <message>
         <source>Rocket Punch</source>
-        <translation>Punch Foudroyant</translation>
+        <translation>Punch foudroyant</translation>
     </message>
     <message>
         <source>Enemy Launcher</source>
-        <translation>Lanceur Ennemi</translation>
+        <translation>Lanceur ennemi</translation>
     </message>
     <message>
         <source>Pile Banger</source>
@@ -593,19 +593,19 @@
     </message>
     <message>
         <source>Max Ray</source>
-        <translation>Rayon Maxi</translation>
+        <translation>Rayon maximum</translation>
     </message>
     <message>
         <source>Missing Score</source>
-        <translation>Manuscrit Absent</translation>
+        <translation>Manuscrit absent</translation>
     </message>
     <message>
         <source>Mythril Clip</source>
-        <translation>Broche Mythril</translation>
+        <translation>Broche mythril</translation>
     </message>
     <message>
         <source>Diamond Pin</source>
-        <translation>Broche Diamant</translation>
+        <translation>Broche diamant</translation>
     </message>
     <message>
         <source>Silver Barette</source>
@@ -621,11 +621,11 @@
     </message>
     <message>
         <source>Crystal Comb</source>
-        <translation>Peigne Crystal</translation>
+        <translation>Peigne cristal</translation>
     </message>
     <message>
         <source>Magic Comb</source>
-        <translation>Peigne Magique</translation>
+        <translation>Peigne magique</translation>
     </message>
     <message>
         <source>Centclip</source>
@@ -633,15 +633,15 @@
     </message>
     <message>
         <source>Hairpin</source>
-        <translation>Epingle Cheveux</translation>
+        <translation>Epingle cheveux</translation>
     </message>
     <message>
         <source>Seraph Comb</source>
-        <translation>Peigne Seraphin</translation>
+        <translation>Peigne séraphin</translation>
     </message>
     <message>
         <source>Behemoth Horn</source>
-        <translation>Corne Behemoth</translation>
+        <translation>Corne béhémoth</translation>
     </message>
     <message>
         <source>Spring Gun Clip</source>
@@ -649,43 +649,43 @@
     </message>
     <message>
         <source>Limited Moon</source>
-        <translation>Lune Limitée</translation>
+        <translation>Lune limitée</translation>
     </message>
     <message>
         <source>Guard Stick</source>
-        <translation>Baton de Garde</translation>
+        <translation>Bâton de garde</translation>
     </message>
     <message>
         <source>Mythril Rod</source>
-        <translation>Baton de Mythril</translation>
+        <translation>Bâton de mythril</translation>
     </message>
     <message>
         <source>Full Metal Staff</source>
-        <translation>Baton Métalique</translation>
+        <translation>Bâton métallique</translation>
     </message>
     <message>
         <source>Striking Staff</source>
-        <translation>Baton de Frappe</translation>
+        <translation>Bâton de frappe</translation>
     </message>
     <message>
         <source>Prism Staff</source>
-        <translation>Baton Prisme</translation>
+        <translation>Bâton prisme</translation>
     </message>
     <message>
         <source>Aurora Rod</source>
-        <translation>Baton Aurore</translation>
+        <translation>Bâton aurore</translation>
     </message>
     <message>
         <source>Wizard Staff</source>
-        <translation>Baton Magicien</translation>
+        <translation>Bâton magicien</translation>
     </message>
     <message>
         <source>Wizer Staff</source>
-        <translation>Baton de Sage</translation>
+        <translation>Bâton de sage</translation>
     </message>
     <message>
         <source>Fairy Tale</source>
-        <translation>Conte de Fée</translation>
+        <translation>Conte de fées</translation>
     </message>
     <message>
         <source>Umbrella</source>
@@ -693,7 +693,7 @@
     </message>
     <message>
         <source>Princess Guard</source>
-        <translation>Garde de Princesse</translation>
+        <translation>Garde de princesse</translation>
     </message>
     <message>
         <source>Spear</source>
@@ -701,7 +701,7 @@
     </message>
     <message>
         <source>Slash Lance</source>
-        <translation>Lance taillade</translation>
+        <translation>Lance-taillade</translation>
     </message>
     <message>
         <source>Trident</source>
@@ -709,7 +709,7 @@
     </message>
     <message>
         <source>Mast Ax</source>
-        <translation>Hache Maîtresse</translation>
+        <translation>Hache maîtresse</translation>
     </message>
     <message>
         <source>Partisan</source>
@@ -717,7 +717,7 @@
     </message>
     <message>
         <source>Viper Halberd</source>
-        <translation>Vipère Hallebarde</translation>
+        <translation>Vipère hallebarde</translation>
     </message>
     <message>
         <source>Javelin</source>
@@ -725,7 +725,7 @@
     </message>
     <message>
         <source>Grow Lance</source>
-        <translation>Lance croissante</translation>
+        <translation>Lance croissance</translation>
     </message>
     <message>
         <source>Mop</source>
@@ -733,7 +733,7 @@
     </message>
     <message>
         <source>Dragoon Lance</source>
-        <translation>Lance de Dragon</translation>
+        <translation>Lance de dragon</translation>
     </message>
     <message>
         <source>Scimitar</source>
@@ -745,11 +745,11 @@
     </message>
     <message>
         <source>Spirit Lance</source>
-        <translation>Lance Spirituelle</translation>
+        <translation>Lance spirituelle</translation>
     </message>
     <message>
         <source>Venus Gospel</source>
-        <translation>Evangile de Venus</translation>
+        <translation>Evangile de Vénus</translation>
     </message>
     <message>
         <source>4-point Shuriken</source>
@@ -765,23 +765,23 @@
     </message>
     <message>
         <source>Razor Ring</source>
-        <translation>Anneau Rasoir</translation>
+        <translation>Anneau rasoir</translation>
     </message>
     <message>
         <source>Hawkeye</source>
-        <translation>Regard d&apos;Aigle</translation>
+        <translation>Regard d&apos;aigle</translation>
     </message>
     <message>
         <source>Crystal Cross</source>
-        <translation>Croix Cristal</translation>
+        <translation>Croix cristal</translation>
     </message>
     <message>
         <source>Wind Slash</source>
-        <translation>Tailleur de Vent</translation>
+        <translation>Tailleur de vent</translation>
     </message>
     <message>
         <source>Twin Viper</source>
-        <translation>Vipère Jumelle</translation>
+        <translation>Vipère jumelle</translation>
     </message>
     <message>
         <source>Spiral Shuriken</source>
@@ -793,11 +793,11 @@
     </message>
     <message>
         <source>Magic Shuriken</source>
-        <translation>Shuriken Magique</translation>
+        <translation>Shuriken magique</translation>
     </message>
     <message>
         <source>Rising Sun</source>
-        <translation>Soleil Levant</translation>
+        <translation>Soleil levant</translation>
     </message>
     <message>
         <source>Oritsuru</source>
@@ -809,35 +809,35 @@
     </message>
     <message>
         <source>Yellow M-phone</source>
-        <translation>Mphone Jaune</translation>
+        <translation>Mégaphone jaune</translation>
     </message>
     <message>
         <source>Green M-phone</source>
-        <translation>Mphone Vert</translation>
+        <translation>Mégaphone vert</translation>
     </message>
     <message>
         <source>Blue M-phone</source>
-        <translation>Mphone Blue</translation>
+        <translation>Mégaphone bleu</translation>
     </message>
     <message>
         <source>Red M-phone</source>
-        <translation>Mphone Rouge</translation>
+        <translation>Mégaphone rouge</translation>
     </message>
     <message>
         <source>Crystal M-phone</source>
-        <translation>Mphone Cristal</translation>
+        <translation>Mégaphone cristal</translation>
     </message>
     <message>
         <source>White M-phone</source>
-        <translation>Mphone Blanc</translation>
+        <translation>Mégaphone blanc</translation>
     </message>
     <message>
         <source>Black M-phone</source>
-        <translation>Mphone Noir</translation>
+        <translation>Mégaphone noir</translation>
     </message>
     <message>
         <source>Silver M-phone</source>
-        <translation>Mphone Argent</translation>
+        <translation>Mégaphone argent</translation>
     </message>
     <message>
         <source>Trumpet Shell</source>
@@ -845,15 +845,15 @@
     </message>
     <message>
         <source>Gold M-phone</source>
-        <translation>Mphone or</translation>
+        <translation>Mégaphone or</translation>
     </message>
     <message>
         <source>Battle Trumpet</source>
-        <translation>Bugle de Combat</translation>
+        <translation>Bugle de combat</translation>
     </message>
     <message>
         <source>Starlight Phone</source>
-        <translation>Tel. d&apos;étoiles</translation>
+        <translation>Téléphone d&apos;étoiles</translation>
     </message>
     <message>
         <source>HP Shout</source>
@@ -865,11 +865,11 @@
     </message>
     <message>
         <source>Shotgun</source>
-        <translation>Fusil Chasse</translation>
+        <translation>Fusil chasse</translation>
     </message>
     <message>
         <source>Shortbarrel</source>
-        <translation>Petit Tonneau</translation>
+        <translation>PetitTonneau</translation>
     </message>
     <message>
         <source>Lariat</source>
@@ -889,15 +889,15 @@
     </message>
     <message>
         <source>Long Barrel R</source>
-        <translation>Long Tonneau R</translation>
+        <translation>Long tonneau R</translation>
     </message>
     <message>
         <source>Silver Rifle</source>
-        <translation>Fusil Argent</translation>
+        <translation>Fusil argent</translation>
     </message>
     <message>
         <source>Sniper CR</source>
-        <translation>CR d&apos;Embuscade</translation>
+        <translation>CR d&apos;embuscade</translation>
     </message>
     <message>
         <source>Supershot ST</source>
@@ -909,7 +909,7 @@
     </message>
     <message>
         <source>Death Penalty</source>
-        <translation>Peine de Mort</translation>
+        <translation>Peine de mort</translation>
     </message>
     <message>
         <source>Masamune</source>
@@ -917,7 +917,7 @@
     </message>
     <message>
         <source>Bronze Bangle</source>
-        <translation>Bijou de Brouze</translation>
+        <translation>Bijou de bronze</translation>
     </message>
     <message>
         <source>Iron Bangle</source>
@@ -929,39 +929,39 @@
     </message>
     <message>
         <source>Mythril Armlet</source>
-        <translation>Cercle Mythril</translation>
+        <translation>Cercle mythril</translation>
     </message>
     <message>
         <source>Carbon Bangle</source>
-        <translation>Bijou Charbon</translation>
+        <translation>Bijou de charbon</translation>
     </message>
     <message>
         <source>Silver Armlet</source>
-        <translation>Bracelet Argent</translation>
+        <translation>Bracelet argent</translation>
     </message>
     <message>
         <source>Gold Armlet</source>
-        <translation>Braclet or</translation>
+        <translation>Bracelet or</translation>
     </message>
     <message>
         <source>Diamond Bangle</source>
-        <translation>Bijou Diamant</translation>
+        <translation>Bijou diamant</translation>
     </message>
     <message>
         <source>Crystal Bangle</source>
-        <translation>Bijou Cristal</translation>
+        <translation>Bijou cristal</translation>
     </message>
     <message>
         <source>Platinum Bangle</source>
-        <translation>Bijou Platine</translation>
+        <translation>Bijou platine</translation>
     </message>
     <message>
         <source>Rune Armlet</source>
-        <translation>Braclet de Rune</translation>
+        <translation>Bracelet de rune</translation>
     </message>
     <message>
         <source>Edincoat</source>
-        <translation>Vest d&apos;Eden</translation>
+        <translation>Veste d&apos;éden</translation>
     </message>
     <message>
         <source>Wizard Bracelet</source>
@@ -977,23 +977,23 @@
     </message>
     <message>
         <source>Imperial Guard</source>
-        <translation>Garde Imperiale</translation>
+        <translation>Garde impérial</translation>
     </message>
     <message>
         <source>Aegis Armlet</source>
-        <translation>Bracelet Aegis</translation>
+        <translation>Bracelet Aégis</translation>
     </message>
     <message>
         <source>Fourth Bracelet</source>
-        <translation>4ème Bracelet</translation>
+        <translation>4ème bracelet</translation>
     </message>
     <message>
         <source>Warrior Bangle</source>
-        <translation>Bijou de Guerrier</translation>
+        <translation>Bijou de guerrier</translation>
     </message>
     <message>
         <source>Shinra Beta</source>
-        <translation>Beta Shinra</translation>
+        <translation>Bêta Shinra</translation>
     </message>
     <message>
         <source>Shinra Alpha</source>
@@ -1001,11 +1001,11 @@
     </message>
     <message>
         <source>Four Slots</source>
-        <translation>4 Orifices</translation>
+        <translation>Quatre orifices</translation>
     </message>
     <message>
         <source>Fire Armlet</source>
-        <translation>Bracelet Feu</translation>
+        <translation>Bracelet feu</translation>
     </message>
     <message>
         <source>Aurora Armlet</source>
@@ -1013,19 +1013,19 @@
     </message>
     <message>
         <source>Bolt Armlet</source>
-        <translation>Bracelet Eclair</translation>
+        <translation>Bracelet éclair</translation>
     </message>
     <message>
         <source>Dragon Armlet</source>
-        <translation>Bracelet Dragon</translation>
+        <translation>Bracelet dragon</translation>
     </message>
     <message>
         <source>Minerva Band</source>
-        <translation>Cerclle Minerve</translation>
+        <translation>Cercle Minerve</translation>
     </message>
     <message>
         <source>Escort Guard</source>
-        <translation>Garde d&apos;Escorte</translation>
+        <translation>Garde d&apos;escorte</translation>
     </message>
     <message>
         <source>Mystile</source>
@@ -1037,7 +1037,7 @@
     </message>
     <message>
         <source>Precious Watch</source>
-        <translation>Montre Precieuse</translation>
+        <translation>Montre précieuse</translation>
     </message>
     <message>
         <source>Chocobracelet</source>
@@ -1045,15 +1045,15 @@
     </message>
     <message>
         <source>Power Wrist</source>
-        <translation>Super Poignet</translation>
+        <translation>Super poignet</translation>
     </message>
     <message>
         <source>Protect Vest</source>
-        <translation>Gilet Protection</translation>
+        <translation>Gilet protection</translation>
     </message>
     <message>
         <source>Earring</source>
-        <translation>Boucle d&apos;Oreille</translation>
+        <translation>Boucle d&apos;oreille</translation>
     </message>
     <message>
         <source>Talisman</source>
@@ -1061,7 +1061,7 @@
     </message>
     <message>
         <source>Choco Feather</source>
-        <translation>Plume Chocobo</translation>
+        <translation>Plume chocobo</translation>
     </message>
     <message>
         <source>Amulet</source>
@@ -1069,27 +1069,27 @@
     </message>
     <message>
         <source>Champion Belt</source>
-        <translation>Echarpe Champion</translation>
+        <translation>Echarpe champion</translation>
     </message>
     <message>
         <source>Poison Ring</source>
-        <translation>Anneau Poison</translation>
+        <translation>Anneau poison</translation>
     </message>
     <message>
         <source>Tough Ring</source>
-        <translation>Anneau Resistant</translation>
+        <translation>Anneau résistant</translation>
     </message>
     <message>
         <source>Circlet</source>
-        <translation>Bandeau</translation>
+        <translation>Brassard</translation>
     </message>
     <message>
         <source>Star Pendant</source>
-        <translation>Pendentif Étoilé</translation>
+        <translation>Pendentif étoilé</translation>
     </message>
     <message>
         <source>Silver Glasses</source>
-        <translation>Lunettes Argent</translation>
+        <translation>Lunettes argent</translation>
     </message>
     <message>
         <source>Headband</source>
@@ -1097,15 +1097,15 @@
     </message>
     <message>
         <source>Fairy Ring</source>
-        <translation>Anneau Fée</translation>
+        <translation>Anneau fée</translation>
     </message>
     <message>
         <source>Jem Ring</source>
-        <translation>Anneau de Pierres</translation>
+        <translation>Anneau de pierres</translation>
     </message>
     <message>
         <source>White Cape</source>
-        <translation>Cape Blanche</translation>
+        <translation>Cape blanche</translation>
     </message>
     <message>
         <source>Sprint Shoes</source>
@@ -1113,7 +1113,7 @@
     </message>
     <message>
         <source>Peace Ring</source>
-        <translation>Anneau de la Paix</translation>
+        <translation>Anneau de paix</translation>
     </message>
     <message>
         <source>Ribbon</source>
@@ -1121,51 +1121,51 @@
     </message>
     <message>
         <source>Fire Ring</source>
-        <translation>Anneau Feu</translation>
+        <translation>Anneau feu</translation>
     </message>
     <message>
         <source>Ice Ring</source>
-        <translation>Anneau Glace</translation>
+        <translation>Anneau glace</translation>
     </message>
     <message>
         <source>Bolt Ring</source>
-        <translation>Anneau Eclair</translation>
+        <translation>Anneau éclair</translation>
     </message>
     <message>
         <source>Tetra Elemental</source>
-        <translation>Tetra Élémentaire</translation>
+        <translation>Tétra élémentaire</translation>
     </message>
     <message>
         <source>Safety Bit</source>
-        <translation>Bit de Sureté</translation>
+        <translation>Bit de sûreté</translation>
     </message>
     <message>
         <source>Fury Ring</source>
-        <translation>Anneau Furie</translation>
+        <translation>Anneau de furie</translation>
     </message>
     <message>
         <source>Curse Ring</source>
-        <translation>Anneau Maudit</translation>
+        <translation>Anneau maudit</translation>
     </message>
     <message>
         <source>Protect Ring</source>
-        <translation>Anneau Protecteur</translation>
+        <translation>Anneau protecteur</translation>
     </message>
     <message>
         <source>Cat&apos;s Bell</source>
-        <translation>Clochette de Chat</translation>
+        <translation>Clochette de chat</translation>
     </message>
     <message>
         <source>Reflect Ring</source>
-        <translation>Anneau Reflet</translation>
+        <translation>Anneau reflet</translation>
     </message>
     <message>
         <source>Water Ring</source>
-        <translation>Cercle d&apos;Eau</translation>
+        <translation>Cercle d&apos;eau</translation>
     </message>
     <message>
         <source>Sneak Glove</source>
-        <translation>Gant de Voleur</translation>
+        <translation>Gant de voleur</translation>
     </message>
     <message>
         <source>HypnoCrown</source>
@@ -1181,15 +1181,15 @@
     </message>
     <message>
         <source>Saraha Nut</source>
-        <translation>Noix de Sahara</translation>
+        <translation>Noix de Saraha</translation>
     </message>
     <message>
         <source>1/35 soldier</source>
-        <translation>Soldats 1/35</translation>
+        <translation>Soldat 1/35</translation>
     </message>
     <message>
         <source>AâªM Cannon</source>
-        <translation>A-M Cannon</translation>
+        <translation>A·M canon</translation>
     </message>
     <message>
         <source>Plus Barrette</source>
@@ -1208,7 +1208,7 @@
     </message>
     <message>
         <source>Cloud</source>
-        <translation>Clad</translation>
+        <translation>Cloud</translation>
     </message>
     <message>
         <source>Barret</source>
@@ -1252,7 +1252,7 @@
     </message>
     <message>
         <source>Stat Bonuses</source>
-        <translation>Bonus d&apos;aptitude</translation>
+        <translation>Bonus</translation>
     </message>
     <message>
         <source>CheckBox</source>
@@ -1260,7 +1260,7 @@
     </message>
     <message>
         <source> HP</source>
-        <translation>HP</translation>
+        <translation>HP </translation>
     </message>
     <message>
         <source>/</source>
@@ -1268,7 +1268,7 @@
     </message>
     <message>
         <source>MP</source>
-        <translation>MP</translation>
+        <translation>MP </translation>
     </message>
     <message>
         <source>Level</source>
@@ -1284,11 +1284,11 @@
     </message>
     <message>
         <source>Sadness</source>
-        <translation>Triste</translation>
+        <translation>Tristesse</translation>
     </message>
     <message>
         <source>Kills</source>
-        <translation>Tués</translation>
+        <translation>Tués </translation>
     </message>
     <message>
         <source> Uses of Limit 1-1</source>
@@ -1316,7 +1316,7 @@
     </message>
     <message>
         <source>Limit Bar</source>
-        <translation>Barre de limite</translation>
+        <translation>Jauge de limite </translation>
     </message>
     <message>
         <source>Fights</source>
@@ -1356,7 +1356,7 @@
     </message>
     <message>
         <source>Edit Selected Materia Slot</source>
-        <translation>Modifier la matéria sélectionnée</translation>
+        <translation>Modifier la Matéria sélectionnée</translation>
     </message>
     <message>
         <source>Enemy Skill&apos;s</source>
@@ -1460,7 +1460,7 @@
     </message>
     <message>
         <source>All</source>
-        <translation>Tout</translation>
+        <translation>Tous</translation>
     </message>
     <message>
         <source>Inventory</source>
@@ -1468,7 +1468,7 @@
     </message>
     <message>
         <source>Item</source>
-        <translation>Objet</translation>
+        <translation>Elément</translation>
     </message>
     <message>
         <source>Qty</source>
@@ -1476,11 +1476,11 @@
     </message>
     <message>
         <source>QTY:</source>
-        <translation>QTÉ:</translation>
+        <translation>Quantité</translation>
     </message>
     <message>
         <source>Key Items</source>
-        <translation>Éléments-clé</translation>
+        <translation>Eléments-clé</translation>
     </message>
     <message>
         <source>Cotton Dress</source>
@@ -1556,19 +1556,19 @@
     </message>
     <message>
         <source>Huge Materia:Fort Condor</source>
-        <translation>Méga-Matéria: Fort Condor</translation>
+        <translation>Méga-Matéria : Fort Condor</translation>
     </message>
     <message>
         <source>Huge Materia:Corel</source>
-        <translation>Méga-Matéria: Corel</translation>
+        <translation>Méga-Matéria : Corel</translation>
     </message>
     <message>
         <source>Huge Materia:Underwater</source>
-        <translation>Méga-Matéria: Sous-marin</translation>
+        <translation>Méga-Matéria : Sous-marin</translation>
     </message>
     <message>
         <source>Huge Materia:Rocket</source>
-        <translation>Méga-Matéria: Fusée</translation>
+        <translation>Méga-Matéria : Fusée</translation>
     </message>
     <message>
         <source>Lunar Harp</source>
@@ -1612,7 +1612,7 @@
     </message>
     <message>
         <source>Leviathan Scales</source>
-        <translation>Écailles-Léviathan</translation>
+        <translation>Ecailles-Léviathan</translation>
     </message>
     <message>
         <source>Glacier Map</source>
@@ -1632,7 +1632,7 @@
     </message>
     <message>
         <source>Black Materia</source>
-        <translation>Matéria noire</translation>
+        <translation>Matéria Noire</translation>
     </message>
     <message>
         <source>Mythril</source>
@@ -1652,7 +1652,7 @@
     </message>
     <message>
         <source>Type</source>
-        <translation>Type</translation>
+        <translation>Type </translation>
     </message>
     <message>
         <source>Yellow</source>
@@ -1676,7 +1676,7 @@
     </message>
     <message>
         <source>Sex</source>
-        <translation>Sexe</translation>
+        <translation>Sexe </translation>
     </message>
     <message>
         <source>Male</source>
@@ -1688,15 +1688,15 @@
     </message>
     <message>
         <source>Run Speed</source>
-        <translation>Vitesse course</translation>
+        <translation>Sprint</translation>
     </message>
     <message>
         <source>Sprint </source>
-        <translation>Course</translation>
+        <translation>Vitesse</translation>
     </message>
     <message>
         <source>Accel</source>
-        <translation>Accél</translation>
+        <translation>Accélération</translation>
     </message>
     <message>
         <source> Wins</source>
@@ -1708,7 +1708,7 @@
     </message>
     <message>
         <source>Fed ?</source>
-        <translation>Nourri ?</translation>
+        <translation>Sagesse</translation>
     </message>
     <message>
         <source>Coop</source>
@@ -1716,7 +1716,7 @@
     </message>
     <message>
         <source>Personality</source>
-        <translation>Personalité</translation>
+        <translation>Personnalité</translation>
     </message>
     <message>
         <source>Stable 2</source>
@@ -1728,7 +1728,7 @@
     </message>
     <message>
         <source>Fenced Chocobos</source>
-        <translation>Chocobos en clôture</translation>
+        <translation>Chocobos dans l&apos;enclos</translation>
     </message>
     <message>
         <source>Empty</source>
@@ -1764,7 +1764,7 @@
     </message>
     <message>
         <source>Speed Values Are The Raw Values , the km/h speeds are calculated while playing </source>
-        <translation>Les vitesses sont ici des valeurs brutes, les km/h sont calculés dans le jeu</translation>
+        <translation>Les vitesses sont ici des valeurs brutes, les km/h sont calculés en jeu</translation>
     </message>
     <message>
         <source>Stable 4</source>
@@ -1780,7 +1780,7 @@
     </message>
     <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
-        <translation>Sélectionnez la reprise de mission ci-dessus afin de ramener de le jeu à cette mission.  Cette option va automatiquement mettre votre emplacement de sauvegarde, le # du disque et les variable de progression du jeu. N&apos;EFFACEZ PAS VOTRE SAUVEGARDE ACTUELLE en utilisant cette fonction,je ne peux garantir que vous serez en mesure de rejouer à partir de cet événement jusqu&apos;à la fin du jeu. Ou bien que n&apos;importe quelle reprise de missions va fonctionner dans votre sauvegarde, cette section est en cours de développement</translation>
+        <translation>Sélectionnez la scène à refaire ci-dessus afin de ramener le jeu à cette scène. Cette option va automatiquement modifier votre sauvegarde, le n° du disque et la variable de progression du jeu. N&apos;EFFACEZ PAS VOTRE SAUVEGARDE ACTUELLE. En utilisant cette option, je ne peux pas garantir que vous serez en mesure de rejouer à partir de cette scène jusqu&apos;à la fin du jeu, ni même si toutes les scènes fonctionneront avec votre sauvegarde actuelle. Cette section est en cours de développement.</translation>
     </message>
     <message>
         <source>&amp;Export From Current Slot</source>
@@ -1788,7 +1788,7 @@
     </message>
     <message>
         <source>&amp;Import To Current Slot</source>
-        <translation>&amp;Importer le slot de</translation>
+        <translation>&amp;Importer un slot</translation>
     </message>
     <message>
         <source>Alt+Q</source>
@@ -1880,7 +1880,7 @@
     </message>
     <message>
         <source>Sec</source>
-        <translation>Sec</translation>
+        <translation>Secondes</translation>
     </message>
     <message>
         <source>Love Points</source>
@@ -1888,27 +1888,27 @@
     </message>
     <message>
         <source>Allowed In PHS</source>
-        <translation>Débloqués dans le PHS</translation>
+        <translation>Débloqué dans le PHS</translation>
     </message>
     <message>
         <source>Sector 7 Slums</source>
-        <translation>Secteur 7 Taudis</translation>
+        <translation>Taudis du Secteur 7</translation>
     </message>
     <message>
         <source>1st Floor Shinra Building</source>
-        <translation>1er étage bât Shinra</translation>
+        <translation>Bâtiment Shinra, 1er étage</translation>
     </message>
     <message>
         <source>Gold Saucer - Ghost Hotel</source>
-        <translation>Gold Saucer Ghost Square</translation>
+        <translation>Gold Saucer - Ghost Square</translation>
     </message>
     <message>
         <source>Cosmo Canyon - Inn 2nd Floor</source>
-        <translation>Cosmo Canyon - Hôtel 2e étage</translation>
+        <translation>Canyon Cosmo - Auberge</translation>
     </message>
     <message>
         <source>Cosmo Canyon - Near Shop</source>
-        <translation>Cosmo Canyon - Magasins</translation>
+        <translation>Canyon Cosmo - Magasin d&apos;armes</translation>
     </message>
     <message>
         <source>Wutai - In Front Of Trap Room</source>
@@ -1916,7 +1916,7 @@
     </message>
     <message>
         <source>Upper Left</source>
-        <translation>Haut Gauche</translation>
+        <translation>Haut / Gauche</translation>
     </message>
     <message>
         <source>R</source>
@@ -1932,15 +1932,15 @@
     </message>
     <message>
         <source>Upper Right</source>
-        <translation>Haut Droit</translation>
+        <translation>Haut / Droite</translation>
     </message>
     <message>
         <source>Lower Left</source>
-        <translation>Bas Gauche</translation>
+        <translation>Bas / Gauche</translation>
     </message>
     <message>
         <source>Lower Right</source>
-        <translation>Bas Droit</translation>
+        <translation>Bas / Droite</translation>
     </message>
     <message>
         <source>0x0B</source>
@@ -1956,7 +1956,7 @@
     </message>
     <message>
         <source>HP</source>
-        <translation type="unfinished">HP</translation>
+        <translation>HP</translation>
     </message>
     <message>
         <source>Char&apos;s Limits</source>
@@ -1968,7 +1968,7 @@
     </message>
     <message>
         <source>Level Progress</source>
-        <translation>Progression du niveau</translation>
+        <translation>Progression du Niveau</translation>
     </message>
     <message>
         <source>Equipment Tab</source>
@@ -1980,15 +1980,15 @@
     </message>
     <message>
         <source>Clear</source>
-        <translation>Effacer</translation>
+        <translation>Enlever</translation>
     </message>
     <message>
         <source>AP:</source>
-        <translation>AP:</translation>
+        <translation>AP </translation>
     </message>
     <message>
         <source>Accessory:</source>
-        <translation>Accessoire:</translation>
+        <translation>Accessoire</translation>
     </message>
     <message>
         <source>&amp;Materia</source>
@@ -1996,35 +1996,35 @@
     </message>
     <message>
         <source>Lvl 1</source>
-        <translation>Nv 1</translation>
+        <translation>Niv.1 :</translation>
     </message>
     <message>
         <source>Lvl 2</source>
-        <translation>Nv 2</translation>
+        <translation>Niv.2 :</translation>
     </message>
     <message>
         <source>Lvl 3</source>
-        <translation>Nv 3</translation>
+        <translation>Niv.3 :</translation>
     </message>
     <message>
         <source>Lvl 4</source>
-        <translation>Nv 4</translation>
+        <translation>Niv.4 :</translation>
     </message>
     <message>
         <source>Lvl 5</source>
-        <translation>Nv 5</translation>
+        <translation>Niv.5 :</translation>
     </message>
     <message>
         <source>C&amp;hocobo</source>
-        <translation>C&amp;hocobo</translation>
+        <translation>C&amp;hocobos</translation>
     </message>
     <message>
         <source>Intel</source>
-        <translation>Intel</translation>
+        <translation>Intelligence</translation>
     </message>
     <message>
         <source>Average</source>
-        <translation>Moyenne</translation>
+        <translation>Relativement moyen</translation>
     </message>
     <message>
         <source>Stables Owned</source>
@@ -2036,15 +2036,15 @@
     </message>
     <message>
         <source>Turtle Paradise Flyers Collected</source>
-        <translation>Affiches du Turtle Paradise collectées</translation>
+        <translation>Affiches du Turtle&apos;s Paradise collectées</translation>
     </message>
     <message>
         <source>Aerith</source>
-        <translation>Aerith</translation>
+        <translation>Aeris</translation>
     </message>
     <message>
         <source>Selected Materia Skills and Stat Info</source>
-        <translation>Information et le niveau de la materia sélectionnée</translation>
+        <translation>Niveau et compétences de la Matéria sélectionnée</translation>
     </message>
     <message>
         <source>Magic</source>
@@ -2056,11 +2056,11 @@
     </message>
     <message>
         <source>Independent</source>
-        <translation>Indépendant</translation>
+        <translation>Indépendante</translation>
     </message>
     <message>
         <source>Support</source>
-        <translation>Support</translation>
+        <translation>Soutien</translation>
     </message>
     <message>
         <source>Command</source>
@@ -2068,19 +2068,19 @@
     </message>
     <message>
         <source>Type Filter</source>
-        <translation>Type Filtre</translation>
+        <translation>Type</translation>
     </message>
     <message>
         <source>Clear Materia Slot</source>
-        <translation>Effacer le slot Matéria</translation>
+        <translation>Supprimer la Matéria de l&apos;emplacement</translation>
     </message>
     <message>
         <source>Materia Skills</source>
-        <translation>Matéria Compétence</translation>
+        <translation>Compétences de la Matéria</translation>
     </message>
     <message>
         <source>Materia Stat Changes</source>
-        <translation>Matéria Statistique Transformer</translation>
+        <translation>Statistiques modifiées par la Matéria</translation>
     </message>
     <message>
         <source>Othe&amp;r</source>
@@ -2088,7 +2088,7 @@
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation>Cait Sith Et Vincent doit pas être activé s&apos;ils sont handicapés dans l&apos;onglet Groupe.</translation>
+        <translation>Cait Sith et Vincent ne doivent pas être débloqués s&apos;ils sont désactivés dans l&apos;onglet Équipe.</translation>
     </message>
     <message>
         <source>0</source>
@@ -2232,7 +2232,7 @@
     </message>
     <message>
         <source>map</source>
-        <translation>carte</translation>
+        <translation>écran</translation>
     </message>
     <message>
         <source>loc</source>
@@ -2288,7 +2288,7 @@
     </message>
     <message>
         <source>Midgar Sector 8</source>
-        <translation>Midgar Secteur 8</translation>
+        <translation>Midgar, Secteur 8</translation>
     </message>
     <message>
         <source>732</source>
@@ -2304,7 +2304,7 @@
     </message>
     <message>
         <source>Shinra Bldg 67F.</source>
-        <translation>Bât. Shinra 67e ét.</translation>
+        <translation>Bât. Shinra 67ème ét.</translation>
     </message>
     <message>
         <source>256</source>
@@ -2356,7 +2356,7 @@
     </message>
     <message>
         <source>Junon Office F2</source>
-        <translation>Bureau de Junon 2e étage</translation>
+        <translation>Bureaux de Junon, 2ème étage</translation>
     </message>
     <message>
         <source>397</source>
@@ -2372,7 +2372,7 @@
     </message>
     <message>
         <source>Shinra Bldg 69F.</source>
-        <translation>Bât. Shinra 69e ét.</translation>
+        <translation>Bât. Shinra 69ème ét.</translation>
     </message>
     <message>
         <source>264</source>
@@ -2440,7 +2440,7 @@
     </message>
     <message>
         <source>North Crater</source>
-        <translation>Cratère nord</translation>
+        <translation>Cratère Nord</translation>
     </message>
     <message>
         <source>749</source>
@@ -2524,7 +2524,7 @@
     </message>
     <message>
         <source>Mt. Nibel</source>
-        <translation>Mt. Nibel</translation>
+        <translation>Mont Nibel</translation>
     </message>
     <message>
         <source>317</source>
@@ -2544,7 +2544,7 @@
     </message>
     <message>
         <source>Gaeas Cliff Base</source>
-        <translation>Falaise de Gaea - abords</translation>
+        <translation>Falaise de Gaea, abords</translation>
     </message>
     <message>
         <source>687</source>
@@ -2596,7 +2596,7 @@
     </message>
     <message>
         <source>Shinra Bldg. 64F.</source>
-        <translation>Bât. Shinra 64e ét.</translation>
+        <translation>Bât. Shinra 64ème ét.</translation>
     </message>
     <message>
         <source>247</source>
@@ -2660,27 +2660,27 @@
     </message>
     <message>
         <source>Bombing Mission Progress</source>
-        <translation>Progression de la mission d&apos;explosion</translation>
+        <translation>Progression de la mission n°1</translation>
     </message>
     <message>
         <source>Bombing Mission</source>
-        <translation>Mission d&apos;explosion</translation>
+        <translation>Début du jeu</translation>
     </message>
     <message>
         <source>Cloud&apos;s Flashback</source>
-        <translation>Flashback de Cloud</translation>
+        <translation>Flash-back de Cloud</translation>
     </message>
     <message>
         <source>The Date Scene</source>
-        <translation>Rendez-Vous</translation>
+        <translation>Le rendez-vous</translation>
     </message>
     <message>
         <source>Replay Mission</source>
-        <translation>Rejouer Mission</translation>
+        <translation>Rejouer une scène</translation>
     </message>
     <message>
         <source>         INFO ON CURRENTLY SELECTED REPLAY MISSION</source>
-        <translation>               INFO SUR LA MISSION ACTUELLEMENT SÉLECTIONNÉE</translation>
+        <translation>               INFO SUR LA SCÈNE SÉLECTIONNÉE</translation>
     </message>
     <message>
         <source>Game Op&amp;tions</source>
@@ -2692,11 +2692,11 @@
     </message>
     <message>
         <source>Copy Current Slot</source>
-        <translation>Copier slot courant</translation>
+        <translation>Copier slot actuel</translation>
     </message>
     <message>
         <source>Clear Slot</source>
-        <translation>Effacer le slot</translation>
+        <translation>Vider le slot</translation>
     </message>
     <message>
         <source>Alt+Del</source>
@@ -2704,7 +2704,7 @@
     </message>
     <message>
         <source>Previous Slot</source>
-        <translation>Slot Précédent</translation>
+        <translation>Slot précédent</translation>
     </message>
     <message>
         <source>Alt+Left</source>
@@ -2712,7 +2712,7 @@
     </message>
     <message>
         <source>Next Slot</source>
-        <translation>Slot Suivant</translation>
+        <translation>Slot suivant</translation>
     </message>
     <message>
         <source>Alt+Right</source>
@@ -2768,7 +2768,7 @@
     </message>
     <message>
         <source>Aerith&apos;s House</source>
-        <translation>Maison d&apos;Aerith</translation>
+        <translation>Maison d&apos;Aeris</translation>
     </message>
     <message>
         <source>Fort Condor</source>
@@ -2844,7 +2844,7 @@
     </message>
     <message>
         <source>Boat</source>
-        <translation>Bateau</translation>
+        <translation>Cargo</translation>
     </message>
     <message>
         <source>436</source>
@@ -2904,7 +2904,7 @@
     </message>
     <message>
         <source>Debug - English</source>
-        <translation>Debug - Anglais</translation>
+        <translation>Debug Room - Anglais</translation>
     </message>
     <message>
         <source>Reactor No. 5 </source>
@@ -2920,7 +2920,7 @@
     </message>
     <message>
         <source>Ropeway Station</source>
-        <translation>Station téléphérique</translation>
+        <translation>Station de téléphérique</translation>
     </message>
     <message>
         <source>496</source>
@@ -2936,7 +2936,7 @@
     </message>
     <message>
         <source>Junon Way</source>
-        <translation>Route de Junon</translation>
+        <translation>Chemin de Junon</translation>
     </message>
     <message>
         <source>394</source>
@@ -3004,7 +3004,7 @@
     </message>
     <message>
         <source>Sector 8, Underground</source>
-        <translation>Secteur 8 - Égoûts</translation>
+        <translation>Secteur 8 - Souterrains</translation>
     </message>
     <message>
         <source>733</source>
@@ -3020,7 +3020,7 @@
     </message>
     <message>
         <source>Shinra Bldg.</source>
-        <translation>Bât. Shinra.</translation>
+        <translation>Bât. Shinra</translation>
     </message>
     <message>
         <source>227</source>
@@ -3076,11 +3076,11 @@
     </message>
     <message>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</source>
-        <translation>Cliquez sur une ligne pour paramétrer les champs ci-dessous OU configurez les coordonnées manuellement</translation>
+        <translation>Cliquez sur une ligne pour paramétrer les champs ci-dessous ou configurez les coordonnées manuellement.</translation>
     </message>
     <message>
         <source>Have Fun With This Feature, But Don&apos;t Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</source>
-        <translation>Amusez-vous avec cette fonction, mais attention si vous mettez des valeurs supérieures, le jeu peut se comporter plus ou moins bizarrement en fonction de la valeur de l&apos;avancement de votre quête.</translation>
+        <translation>Amusez-vous avec cette fonction, mais attention : si vous mettez des valeurs supérieures, le jeu peut se comporter plus ou moins bizarrement en fonction de la valeur de l&apos;avancement de votre quête.</translation>
     </message>
     <message>
         <source>Location Name</source>
@@ -3088,11 +3088,11 @@
     </message>
     <message>
         <source>Map ID</source>
-        <translation>Écran ID</translation>
+        <translation>ID.écran</translation>
     </message>
     <message>
         <source>Location ID</source>
-        <translation>Zone ID</translation>
+        <translation>ID du lieu</translation>
     </message>
     <message>
         <source>x</source>
@@ -3120,7 +3120,7 @@
     </message>
     <message>
         <source>Stereo</source>
-        <translation>Stereo</translation>
+        <translation>Stéréo</translation>
     </message>
     <message>
         <source>Controller Setting</source>
@@ -3172,35 +3172,35 @@
     </message>
     <message>
         <source>Magic Order</source>
-        <translation>Ordre de magie</translation>
+        <translation>Ordre des magies</translation>
     </message>
     <message>
         <source>Restore,Attack,Indirect</source>
-        <translation>Restaurer Attaque Indirect</translation>
+        <translation>Restaurer, Attaque, Indirect</translation>
     </message>
     <message>
         <source>Restore,Indirect,Attack</source>
-        <translation>Restaurer Indirect Attaque</translation>
+        <translation>Restaurer, Indirect, Attaque</translation>
     </message>
     <message>
         <source>Attack,Indirect,Restore</source>
-        <translation>Attaque Indirect Restaurer</translation>
+        <translation>Attaque, Indirect, Restaurer</translation>
     </message>
     <message>
         <source>Attack,Restore,Indirect</source>
-        <translation>Attaque Restaurer Indirect</translation>
+        <translation>Attaque, Restaurer, Indirect</translation>
     </message>
     <message>
         <source>Indirect,Restore,Attack</source>
-        <translation>Indirect Restaurer Attaque</translation>
+        <translation>Indirect, Restaurer, Attaque</translation>
     </message>
     <message>
         <source>Indirect,Attack,Restore</source>
-        <translation>Indirect Attaque Restaurer</translation>
+        <translation>Indirect, Attaque, Restaurer</translation>
     </message>
     <message>
         <source>Battle Speed:</source>
-        <translation>Vitesse de combat :</translation>
+        <translation>Vitesse de combat</translation>
     </message>
     <message>
         <source>Fast</source>
@@ -3212,11 +3212,11 @@
     </message>
     <message>
         <source>Battle Message Speed:</source>
-        <translation>Vitesse message combats :</translation>
+        <translation>Vitesse des messages de combat</translation>
     </message>
     <message>
         <source>Field Message Speed:</source>
-        <translation>Vitesse messages terrain :</translation>
+        <translation>Vitesse des dialogues</translation>
     </message>
     <message>
         <source>Dialog Color</source>
@@ -3224,7 +3224,7 @@
     </message>
     <message>
         <source>Current Slot:</source>
-        <translation>Slot courant :</translation>
+        <translation>Slot actuel :</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -3272,7 +3272,7 @@
     </message>
     <message>
         <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
-        <translation>Rejouer la scène du rendez-vous, votre emplacement sera mis à la station téléphérique. Parlez à l&apos;homme près du tramway afin de démarrer cette scène, si vous cherchez pour un rendez-vous spécifique assurez-vous d&apos;ajuster vos points d&apos;affection.</translation>
+        <translation>Rejouer la scène du rendez-vous au Gold Saucer : votre emplacement de sauvegarde sera à la station de téléphérique. Parlez à l&apos;homme près du tramway afin de démarrer cette scène. Si vous cherchez à obtenir un rendez-vous spécifique, assurez-vous d&apos;ajuster les points d&apos;affection des personnages.</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSX Save</source>
@@ -3348,31 +3348,31 @@
     </message>
     <message>
         <source>Hour</source>
-        <translation>Heure</translation>
+        <translation>Heures</translation>
     </message>
     <message>
         <source>Min</source>
-        <translation>Min</translation>
+        <translation>Minutes</translation>
     </message>
     <message>
         <source>Visible In PHS</source>
-        <translation>Visible Dans PHS</translation>
+        <translation>Visible dans le PHS</translation>
     </message>
     <message>
         <source>Visible Menu Items</source>
-        <translation>Éléments de menu visible</translation>
+        <translation>Sous-menus débloqués</translation>
     </message>
     <message>
         <source>Equip</source>
-        <translation>Équiper</translation>
+        <translation>Equiper</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation>Statut</translation>
+        <translation>Etat</translation>
     </message>
     <message>
         <source>Order</source>
-        <translation>Ordre</translation>
+        <translation>Placer</translation>
     </message>
     <message>
         <source>Limit</source>
@@ -3384,19 +3384,19 @@
     </message>
     <message>
         <source>P.H.S</source>
-        <translation>P.H.S</translation>
+        <translation>PHS</translation>
     </message>
     <message>
         <source>Save</source>
-        <translation>Sauvegarder</translation>
+        <translation>Enregistrer</translation>
     </message>
     <message>
         <source>Locked Menu Items</source>
-        <translation>Éléments de menu verrouillé</translation>
+        <translation>Sous-menus verrouillés</translation>
     </message>
     <message>
         <source>Coaster Shooter High Scores</source>
-        <translation>Partitions Shooter Coaster haut</translation>
+        <translation>Meilleurs scores du Speed Square</translation>
     </message>
     <message>
         <source>1st</source>
@@ -3404,15 +3404,15 @@
     </message>
     <message>
         <source>2nd</source>
-        <translation>2éme</translation>
+        <translation>2ème</translation>
     </message>
     <message>
         <source>3rd</source>
-        <translation>3éme</translation>
+        <translation>3ème</translation>
     </message>
     <message>
         <source>Materia Caves Empty</source>
-        <translation>Grottes Materia Vide</translation>
+        <translation>Grottes à Matéria vides</translation>
     </message>
     <message>
         <source>Mime</source>
@@ -3428,15 +3428,15 @@
     </message>
     <message>
         <source>KOTR</source>
-        <translation>CDLTR</translation>
+        <translation>Chevaliers de la Table Ronde</translation>
     </message>
     <message>
         <source>Test Data</source>
-        <translation>Test Donnée</translation>
+        <translation>Variables diverses</translation>
     </message>
     <message>
         <source>Tutorials Seen</source>
-        <translation>Tutoriels Vu</translation>
+        <translation>Tutoriels vus</translation>
     </message>
     <message>
         <source>Controling the Sub</source>
@@ -3452,7 +3452,7 @@
     </message>
     <message>
         <source>Ultimate Weapons Hp</source>
-        <translation>HP Dernière Arme</translation>
+        <translation>HP de Dernière Arme</translation>
     </message>
     <message>
         <source>Secret Chars Unlocked</source>
@@ -3497,11 +3497,11 @@
     </message>
     <message>
         <source>Mystery Ninja </source>
-        <translation>Ninja Mystère</translation>
+        <translation>Ninja mystère</translation>
     </message>
     <message>
         <source>Can Fight Yuffie in Forests</source>
-        <translation>Possibilité d&apos;affronter Youfie dans les forêts</translation>
+        <translation>Pouvoir affronter Youfie dans les forêts</translation>
     </message>
     <message>
         <source>Region String</source>
@@ -3513,11 +3513,11 @@
     </message>
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will trigger showing that tutorial</source>
-        <translation>Lorsque la boîte est partiellement cochée (&quot;-&quot;)le tutoriel va se déclencher</translation>
+        <translation>Lorsque la boîte est partiellement cochée (&quot;-&quot;)le tutoriel se déclenche</translation>
     </message>
     <message>
         <source>Y.Cloud</source>
-        <translation>J.Clad</translation>
+        <translation>J.Cloud</translation>
     </message>
     <message>
         <source>Sephiroth</source>
@@ -3525,7 +3525,7 @@
     </message>
     <message>
         <source>Slot Region</source>
-        <translation>Slot Région</translation>
+        <translation>Format du slot</translation>
     </message>
     <message>
         <source>Debug Mode</source>
@@ -3577,7 +3577,7 @@
     </message>
     <message>
         <source> Bombing Mission Start Flag</source>
-        <translation>Variable de démarrage de la mission d&apos;explosion</translation>
+        <translation>Variable de démarrage de la mission n°1</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
@@ -3593,15 +3593,15 @@
     </message>
     <message>
         <source>Paste Slot</source>
-        <translation>Coller Slot</translation>
+        <translation>Coller slot</translation>
     </message>
     <message>
         <source>More Options...</source>
-        <translation>Plus d&apos;options....</translation>
+        <translation>Plus d&apos;options...</translation>
     </message>
     <message>
         <source>New Game</source>
-        <translation>New Game</translation>
+        <translation>Nouvelle partie</translation>
     </message>
     <message>
         <source>Alt+Ins</source>
@@ -3609,7 +3609,7 @@
     </message>
     <message>
         <source>New Game+ </source>
-        <translation>New Game +</translation>
+        <translation>Nouvelle partie +</translation>
     </message>
     <message>
         <source>Alt+Shift+Ins</source>
@@ -3647,7 +3647,7 @@
     </message>
     <message>
         <source>In-game Dialog Preview</source>
-        <translation>Aperçu de dialogue dans le jeu</translation>
+        <translation>Aperçu d&apos;une fenêtre de dialogue en jeu</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -3712,29 +3712,29 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Empty Materia</source>
-        <translation>Matéria Vide</translation>
+        <translation>Matéria vide</translation>
     </message>
     <message>
         <source>Place holder Materia Detected
  Remember 16777215 AP = master</source>
-        <translation>Espace réservé de Matéria détecté
- N&apos;oubliez pas 16777215 AP = Maître</translation>
+        <translation>Emplacement réservé à une Matéria détecté
+ N&apos;oubliez pas que 16777215 AP = Maître</translation>
     </message>
     <message>
         <source>New Game +</source>
-        <translation>New Game +</translation>
+        <translation>Nouvelle partie +</translation>
     </message>
     <message>
         <source>Young Cloud</source>
-        <translation>Jeune Clad</translation>
+        <translation>Jeune Cloud</translation>
     </message>
     <message>
         <source>===Empty Slot===</source>
-        <translation>=Emplacement Vide=</translation>
+        <translation>==Emplacement vide==</translation>
     </message>
     <message>
         <source>Empty Slot</source>
-        <translation>Emplacement Vide</translation>
+        <translation>Emplacement vide</translation>
     </message>
     <message>
         <source>NO CAP</source>
@@ -3746,11 +3746,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Cross-Slash</source>
-        <translation>Contre-Taillade</translation>
+        <translation>Contre-taillade</translation>
     </message>
     <message>
         <source>Blade Beam</source>
-        <translation>Coup Tranchant</translation>
+        <translation>Coup tranchant</translation>
     </message>
     <message>
         <source>Climhazzard</source>
@@ -3766,7 +3766,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Big Shot</source>
-        <translation>Grand Coup</translation>
+        <translation>Grand coup</translation>
     </message>
     <message>
         <source>Mindblow</source>
@@ -3774,15 +3774,15 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Grenade Bomb</source>
-        <translation>Bombe Grenade</translation>
+        <translation>Bombe grenade</translation>
     </message>
     <message>
         <source>Hammerblow</source>
-        <translation>Frappe Lourde</translation>
+        <translation>Frappe lourde</translation>
     </message>
     <message>
         <source>Satellite Beam</source>
-        <translation>Rayon Satellite</translation>
+        <translation>Rayon satellite</translation>
     </message>
     <message>
         <source>Angermax</source>
@@ -3794,7 +3794,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Beat Rush</source>
-        <translation>Coup Vif</translation>
+        <translation>Coup vif</translation>
     </message>
     <message>
         <source>Waterkick</source>
@@ -3814,7 +3814,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Final Heaven</source>
-        <translation>Dernier Paradis</translation>
+        <translation>Dernier paradis</translation>
     </message>
     <message>
         <source>Healing Wind</source>
@@ -3842,11 +3842,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation>Grand Évangile</translation>
+        <translation>Grand évangile</translation>
     </message>
     <message>
         <source>Sled Fang</source>
-        <translation>Coup de griffe</translation>
+        <translation>Coups de griffe</translation>
     </message>
     <message>
         <source>Lunatic High</source>
@@ -3898,7 +3898,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>All Creation</source>
-        <translation>Tout Création</translation>
+        <translation>Tout-création</translation>
     </message>
     <message>
         <source>Dice</source>
@@ -3914,7 +3914,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Hellmasker</source>
-        <translation>Masque Infernal</translation>
+        <translation>Masque infernal</translation>
     </message>
     <message>
         <source>Chaos</source>
@@ -3930,7 +3930,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Hyper Jump</source>
-        <translation>Super Saut</translation>
+        <translation>Super saut</translation>
     </message>
     <message>
         <source>Dragon</source>
@@ -3938,11 +3938,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Dragon Dive</source>
-        <translation>Plongeon de Dragon</translation>
+        <translation>Plongeon de dragon</translation>
     </message>
     <message>
         <source>Big Brawl</source>
-        <translation>Grand Rixe</translation>
+        <translation>Grande rixe</translation>
     </message>
     <message>
         <source>Highwind</source>
@@ -3966,11 +3966,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Total Exp:</source>
-        <translation>Exp Total:</translation>
+        <translation>EXP totale</translation>
     </message>
     <message>
         <source>Next</source>
-        <translation>Nv. Suivant</translation>
+        <translation>Niveau suivant</translation>
     </message>
     <message>
         <source>Keycard 66</source>
@@ -4038,7 +4038,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Weapons Killed</source>
-        <translation>Armes Tuées</translation>
+        <translation>Armes tuées</translation>
     </message>
     <message>
         <source>Ruby</source>
@@ -4050,15 +4050,15 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Show Battle Target Labels</source>
-        <translation>Montrer les flèches de cibles</translation>
+        <translation>Activer les flèches de cibles en combat</translation>
     </message>
     <message>
         <source>Show Battle Help</source>
-        <translation>Montrer l&apos;aide de combat</translation>
+        <translation>Activer l&apos;aide en combat</translation>
     </message>
     <message>
         <source>Show Field Help</source>
-        <translation>Montrer l&apos;aide de terrain</translation>
+        <translation>Activer l&apos;aide sur les écrans</translation>
     </message>
     <message>
         <source>Misc</source>
@@ -4110,7 +4110,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>sliders show </source>
-        <translation>curseurs montrent</translation>
+        <translation>Les curseurs montrent</translation>
     </message>
     <message>
         <source>Party Leader</source>
@@ -4118,7 +4118,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>TinyBronco/Chocobo</source>
-        <translation>Tiny Bronco/Chocobo</translation>
+        <translation>Tiny Bronco / Chocobo</translation>
     </message>
     <message>
         <source>Buggy/Highwind</source>
@@ -4126,11 +4126,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
-        <translation>Arme Diamant / Dernière / Rubis</translation>
+        <translation>Arme de diamant / Dernière Arme / Arme de Rubis</translation>
     </message>
     <message>
         <source>Emerald Weapon?</source>
-        <translation>Arme Émeraude?</translation>
+        <translation>Arme d&apos;émeraude (?)</translation>
     </message>
     <message>
         <source>&amp;Open</source>
@@ -4182,7 +4182,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>No Save File Loaded</source>
-        <translation>Aucun Fichier Enregistrer Loaded</translation>
+        <translation>Aucun fichier de sauvegarde chargé</translation>
     </message>
     <message>
         <source>The Filename is empty</source>
@@ -4222,19 +4222,19 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Place Leader</source>
-        <translation>Placer Personnage</translation>
+        <translation>Placer le chef d&apos;équipe</translation>
     </message>
     <message>
         <source>Place Tiny Bronco/Chocobo</source>
-        <translation>Placer Tiny Bronco/Chocobo</translation>
+        <translation>Placer le Tiny Bronco / un Chocobo</translation>
     </message>
     <message>
         <source>Place Buggy/Highwind</source>
-        <translation>Placer Buggy/Hautvent</translation>
+        <translation>Placer le Buggy / le Hautvent</translation>
     </message>
     <message>
         <source>Place Sub</source>
-        <translation>Placer Sous-marin</translation>
+        <translation>Placer le sous-marin</translation>
     </message>
     <message>
         <source>Place UNKNOWN</source>
@@ -4242,11 +4242,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
-        <translation>Placer Dernière Arme/Diamant/Rubis</translation>
+        <translation>Placer Dernière Arme / Diamant / Rubis</translation>
     </message>
     <message>
         <source>Place Emerald Weapon?</source>
-        <translation>Placer Arme Émeraude?</translation>
+        <translation>Placer Arme d&apos;émeraude (?)</translation>
     </message>
     <message>
         <source>FF7 Dex SaveGame(*.gme)</source>
@@ -4290,11 +4290,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Galian Beast</source>
-        <translation>Bête Galienne</translation>
+        <translation>Bête galienne</translation>
     </message>
     <message>
         <source>Automatic Exp &lt;-&gt; Lvl</source>
-        <translation>Exp &lt;-&gt; Nv Automatique</translation>
+        <translation>Conversion Niveau&lt;-&gt;EXP</translation>
     </message>
     <message>
         <source>&lt;---Edit Selected Item Slot</source>
@@ -4306,11 +4306,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Clear All Items</source>
-        <translation>Effacer tous les éléments</translation>
+        <translation>Supprimer tous les éléments</translation>
     </message>
     <message>
         <source>Clear Key Items</source>
-        <translation>Effacer les éléments clés</translation>
+        <translation>Retirer tous les éléments-clé</translation>
     </message>
     <message>
         <source>47</source>
@@ -4334,19 +4334,19 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Aeris Turks</source>
-        <translation>Turcs et Aéris</translation>
+        <translation>Turks et Aeris</translation>
     </message>
     <message>
         <source>The Church In The Slums</source>
-        <translation>Église dans les taudis</translation>
+        <translation>Eglise dans les taudis</translation>
     </message>
     <message>
         <source>Aeris Death</source>
-        <translation>Mort d&apos;Aéris</translation>
+        <translation>Mort d&apos;Aeris</translation>
     </message>
     <message>
         <source>Don_prog</source>
-        <translation>Don_Cornéo_progression</translation>
+        <translation>Rencontre avec Don Cornéo</translation>
     </message>
     <message>
         <source>&amp;Location</source>
@@ -4534,11 +4534,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>New Window</source>
-        <translation>Nouvelle Fenêtre</translation>
+        <translation>Nouvelle fenêtre</translation>
     </message>
     <message>
         <source>Replay the bombing mission from right after you get off the train.</source>
-        <translation>Rejouer la mission d&apos;explosion immédiatement après être descendu du premier train.</translation>
+        <translation>Rejouer la mission du Réacteur n°1 juste après être descendu du train.</translation>
     </message>
     <message>
         <source>Chruch in the Slums</source>
@@ -4546,11 +4546,12 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
-        <translation>Activer ceci va copier Clad tel quel dans le slot de jeune Clad (slot de CaitSith). Les stats de Sephiroth vont être copiés directement de Vincent.</translation>
+        <translation>Activer ceci remplacera Cloud par Jeune Cloud (slot de Cait Sith).
+Les stats de Sephiroth proviendront directement de celles de Vincent.</translation>
     </message>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
-        <translation>Rejouer la mort d&apos;Aerith. Cette option retirera Aerith du PHS</translation>
+        <translation>Rejouer la mort d&apos;Aeris. Cette option retirera Aeris du PHS.</translation>
     </message>
     <message>
         <source>Church in the slums</source>
@@ -4558,19 +4559,19 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s location.</source>
-        <translation>Clic droit pour facilement choisir l&apos;emplacement d&apos;un objet.</translation>
+        <translation>Cliquez droit pour facilement choisir l&apos;emplacement d&apos;un objet.</translation>
     </message>
     <message>
         <source>Meeting Aeris</source>
-        <translation>Rencontre d&apos;Aéris</translation>
+        <translation>Rencontre avec Aeris.</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
-        <translation>Arme Diamant / Dernière / Rubis</translation>
+        <translation>Arme de diamant / Dernière Arme / Arme de Rubis</translation>
     </message>
     <message>
         <source>Emerald Weapon ?</source>
-        <translation>Arme Émeraude?</translation>
+        <translation>Arme d&apos;émeraude (?)</translation>
     </message>
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
@@ -4578,7 +4579,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Unable to Mate</source>
-        <translation>Incapacité à accoupler</translation>
+        <translation>Incapacité à s&apos;accoupler</translation>
     </message>
     <message>
         <source>z_39</source>
@@ -4586,11 +4587,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Add One Of Each Mastered Materia </source>
-        <translation>Ajouter un exemplaire de chaque matéria maître</translation>
+        <translation>Ajouter un exemplaire de chaque Matéria au niveau maître</translation>
     </message>
     <message>
         <source>Remove ALL Materia </source>
-        <translation>Enlever TOUTE la Matéria</translation>
+        <translation>Supprimer toutes les Matérias</translation>
     </message>
     <message>
         <source>Checked Stables Are Occupied Uncheck Stable to Empty Stable</source>
@@ -4598,11 +4599,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Clear All Stolen Materia</source>
-        <translation>Effacer toutes la Matéria volée</translation>
+        <translation>Vider la liste des Matérias volées</translation>
     </message>
     <message>
         <source>Chocobo Ranch</source>
-        <translation>Ranch Chocobo</translation>
+        <translation>Ferme de chocobos</translation>
     </message>
     <message>
         <source>345</source>
@@ -4657,8 +4658,8 @@ is not a FF7 SaveGame.</source>
 This results in an incorrect playtime
 Would you like to correct the playtime?</source>
         <translation>PAL PSX fonctionne à la vitesse 50/60
-Cela résulte en un temps de jeu incorrect
-Voulez-vous corrigez ceci?</translation>
+Cela rend le temps de jeu incorrect
+Voulez-vous corriger ceci ?</translation>
     </message>
     <message>
         <source>PAL Slot Detected</source>
@@ -4670,11 +4671,11 @@ Voulez-vous corrigez ceci?</translation>
     </message>
     <message>
         <source>Never Correct</source>
-        <translation>Jamais Correct</translation>
+        <translation>Jamais correct</translation>
     </message>
     <message>
         <source>Would You Like To Update the Play time</source>
-        <translation>Voulez-vous mettre à jour le temps de jeu</translation>
+        <translation>Voulez-vous mettre à jour le temps de jeu ?</translation>
     </message>
     <message>
         <source>PAL -&gt; NTSC Conversion</source>
@@ -4686,7 +4687,7 @@ Voulez-vous corrigez ceci?</translation>
     </message>
     <message>
         <source>Unknown Var:</source>
-        <translation>Variable Inconnue:</translation>
+        <translation>Variable inconnue:</translation>
     </message>
     <message>
         <source>#</source>
@@ -4720,11 +4721,11 @@ Valeurs valables 0-255</translation>
     </message>
     <message>
         <source>Compare To Slot</source>
-        <translation>Compare à l&apos;emplacement</translation>
+        <translation>Comparer deux slots</translation>
     </message>
     <message>
         <source>Show All &apos;Z&apos; Changes</source>
-        <translation>Afficher tous &apos;z&apos; Modifications</translation>
+        <translation>Afficher toutes les modifications</translation>
     </message>
     <message>
         <source>------Right Table------&gt;
@@ -4738,271 +4739,271 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Steps</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas</translation>
     </message>
     <message>
         <source>Number Steps</source>
-        <translation type="unfinished"></translation>
+        <translation>Nombre de pas</translation>
     </message>
     <message>
         <source>z_40</source>
-        <translation type="unfinished">z_40</translation>
+        <translation>z_40</translation>
     </message>
     <message>
         <source>Y: </source>
-        <translation type="unfinished">Y: </translation>
+        <translation>Y: </translation>
     </message>
     <message>
         <source>Global Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Progression globale</translation>
     </message>
     <message>
         <source>Main Progression</source>
-        <translation type="unfinished"></translation>
+        <translation>Valeur de la variable de progression</translation>
     </message>
     <message>
         <source>Disk  #</source>
-        <translation type="unfinished"></translation>
+        <translation>Disque </translation>
     </message>
     <message>
         <source>Elevator Door Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Porte de l&apos;ascenseur ouverte</translation>
     </message>
     <message>
         <source>Elevator On Top Floor</source>
-        <translation type="unfinished"></translation>
+        <translation>Ascenseur arrivé à l&apos;étage</translation>
     </message>
     <message>
         <source>1st Door Open</source>
-        <translation type="unfinished"></translation>
+        <translation>1ère porte ouverte</translation>
     </message>
     <message>
         <source>2nd Door Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>2ème porte ouvertre</translation>
     </message>
     <message>
         <source>paned to reactor core in feild</source>
-        <translation type="unfinished"></translation>
+        <translation>Se rendre au coeur du réacteur</translation>
     </message>
     <message>
         <source>Jessie Has Been Unstuck</source>
-        <translation type="unfinished"></translation>
+        <translation>Jambe de Jesse décoincée</translation>
     </message>
     <message>
         <source>The Bomb Was Set</source>
-        <translation type="unfinished"></translation>
+        <translation>Bombe placée</translation>
     </message>
     <message>
         <source>Trigger Game Over</source>
-        <translation type="unfinished"></translation>
+        <translation>Lancer la Fin de partie</translation>
     </message>
     <message>
         <source>bm2_1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>bm1_2</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>bm2_4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>bm2_5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>bm2_6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>bm2_7</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>bm2_8</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Str</source>
-        <translation type="unfinished"></translation>
+        <translation>FRC</translation>
     </message>
     <message>
         <source>Vit</source>
-        <translation type="unfinished"></translation>
+        <translation>VIT</translation>
     </message>
     <message>
         <source>Mag</source>
-        <translation type="unfinished"></translation>
+        <translation>MAG</translation>
     </message>
     <message>
         <source>Spr</source>
-        <translation type="unfinished"></translation>
+        <translation>ESP</translation>
     </message>
     <message>
         <source>Dex</source>
-        <translation type="unfinished"></translation>
+        <translation>DEX</translation>
     </message>
     <message>
         <source>Lck</source>
-        <translation type="unfinished"></translation>
+        <translation>CHC</translation>
     </message>
     <message>
         <source>Event Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Progression évènementielle</translation>
     </message>
     <message>
         <source>Escape From Reactor </source>
-        <translation type="unfinished"></translation>
+        <translation>Fuite du réacteur</translation>
     </message>
     <message>
         <source>Post Pan MD8_2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ecran MD8_2 passé</translation>
     </message>
     <message>
         <source>Post Pan MD8_3</source>
-        <translation type="unfinished"></translation>
+        <translation>Ecran MD8_3 passé</translation>
     </message>
     <message>
         <source>Midgar Train Flags</source>
-        <translation type="unfinished"></translation>
+        <translation>Evènements du train</translation>
     </message>
     <message>
         <source>Talked to Bigs</source>
-        <translation type="unfinished"></translation>
+        <translation>Parler à Biggs</translation>
     </message>
     <message>
         <source>Talked to Wedge Twice</source>
-        <translation type="unfinished"></translation>
+        <translation>Parler à Wedge deux fois</translation>
     </message>
     <message>
         <source>Talked to Jessie Before Looking At Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Parler à Jesse avant de regarder la carte</translation>
     </message>
     <message>
         <source> Played Video on Train?</source>
-        <translation type="unfinished"></translation>
+        <translation>Regarder le moniteur vidéo</translation>
     </message>
     <message>
         <source>Unknowns / Unused</source>
-        <translation type="unfinished"></translation>
+        <translation>Inconnu / Inutilisé</translation>
     </message>
     <message>
         <source>bm1_3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>bm3_3</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>bm3_4</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>bm3_5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>bm3_6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>bm3_7</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>bm3_8</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>mt_5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>mt_6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>mt_7</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>mt_8</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Sector 7 Trainstation</source>
-        <translation type="unfinished"></translation>
+        <translation>Gare du Secteur 7</translation>
     </message>
     <message>
         <source>Team Avalanche Had Meeting after Bombing Mission</source>
-        <translation type="unfinished"></translation>
+        <translation>Mini-réunion avec AVALANCHE</translation>
     </message>
     <message>
         <source>Talked To Trainman 3 times</source>
-        <translation type="unfinished"></translation>
+        <translation>Parler au contrôleur 3 fois</translation>
     </message>
     <message>
         <source>Pair At Station agree</source>
-        <translation type="unfinished"></translation>
+        <translation>Parler au couple</translation>
     </message>
     <message>
         <source>Set To Reactor 5 Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Activer la mission du Réacteur n°5</translation>
     </message>
     <message>
         <source>s7ts_5</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>s7ts_6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>s7ts_7</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>s7ts_8</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Sector 7 Pillar</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilier du Secteur 7</translation>
     </message>
     <message>
         <source>Team Avalanche Has Run To Hideout</source>
-        <translation type="unfinished"></translation>
+        <translation>AVALANCHE s&apos;est dirigée vers la planque</translation>
     </message>
     <message>
         <source>Can Show Pillar Pan Video</source>
-        <translation type="unfinished"></translation>
+        <translation>Activer la vidéo du pilier</translation>
     </message>
     <message>
         <source>Barret called us</source>
-        <translation type="unfinished"></translation>
+        <translation>Appel de Barret</translation>
     </message>
     <message>
         <source>Post Pillar Pan Video</source>
-        <translation type="unfinished"></translation>
+        <translation>Après la vidéo du pilier</translation>
     </message>
     <message>
         <source>Talked To soldier two times</source>
-        <translation type="unfinished"></translation>
+        <translation>Parler aux gardes 2 fois</translation>
     </message>
     <message>
         <source>s7pl_6</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>s7pl_7</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>s7pl_8</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
 </context>
 <context>
@@ -5017,19 +5018,19 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Speed Plus</source>
-        <translation>Super Vitesse</translation>
+        <translation>Super vitesse</translation>
     </message>
     <message>
         <source>Magic Plus</source>
-        <translation>Super Magie</translation>
+        <translation>Super magie</translation>
     </message>
     <message>
         <source>Luck Plus</source>
-        <translation>Super Chance</translation>
+        <translation>Super chance</translation>
     </message>
     <message>
         <source>EXP Plus</source>
-        <translation>Super Exp</translation>
+        <translation>Super EXP</translation>
     </message>
     <message>
         <source>Gil Plus</source>
@@ -5037,31 +5038,31 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Enemy Away</source>
-        <translation>Repousse Ennemi</translation>
+        <translation>Repousse-ennemi</translation>
     </message>
     <message>
         <source>Enemy Lure</source>
-        <translation>Appat Ennemi</translation>
+        <translation>Appât-ennemi</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
-        <translation>Appat Chocobo</translation>
+        <translation>Appât-chocobo</translation>
     </message>
     <message>
         <source>Pre-emptive</source>
-        <translation>Prevention</translation>
+        <translation>Prévention</translation>
     </message>
     <message>
         <source>Long Range</source>
-        <translation>Longue Portée</translation>
+        <translation>Longue portée</translation>
     </message>
     <message>
         <source>Mega All</source>
-        <translation>Mega Tout</translation>
+        <translation>Méga tous</translation>
     </message>
     <message>
         <source>Counter Attack</source>
-        <translation>Contre Attaque</translation>
+        <translation>Contre-attaque</translation>
     </message>
     <message>
         <source>Slash-All</source>
@@ -5069,7 +5070,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Double Cut</source>
-        <translation>Attaque Double</translation>
+        <translation>Attaque double</translation>
     </message>
     <message>
         <source>Cover</source>
@@ -5077,7 +5078,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Underwater</source>
-        <translation>Sous marin</translation>
+        <translation>Sous-marin</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
@@ -5093,7 +5094,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation>Élément-W</translation>
+        <translation>Elément-W</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -5125,11 +5126,11 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Elemental</source>
-        <translation>Elément de Base</translation>
+        <translation>El.Base</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation>Effet Suppl</translation>
+        <translation>Effet suppl.</translation>
     </message>
     <message>
         <source>Sneak Attack</source>
@@ -5137,15 +5138,15 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Final Attack</source>
-        <translation>Attaque Fanale</translation>
+        <translation>Attaque Finale</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation>Coupure Suppl</translation>
+        <translation>Coupure suppl.</translation>
     </message>
     <message>
         <source>Steal-As-Well</source>
-        <translation>Vol Simultané</translation>
+        <translation>Vol simultané</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
@@ -5165,7 +5166,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation>Trans</translation>
+        <translation>Trans.</translation>
     </message>
     <message>
         <source>Manipulate</source>
@@ -5177,11 +5178,11 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation>Talents de l&apos;Ennemi</translation>
+        <translation>Talent de l&apos;ennemi</translation>
     </message>
     <message>
         <source>Master Command</source>
-        <translation>Commande Maître</translation>
+        <translation>Commande maître</translation>
     </message>
     <message>
         <source>Fire</source>
@@ -5205,7 +5206,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Heal</source>
-        <translation>Guerir</translation>
+        <translation>Guérir</translation>
     </message>
     <message>
         <source>Revive</source>
@@ -5253,7 +5254,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>FullCure</source>
-        <translation>Guerison Max</translation>
+        <translation>Guérison Max</translation>
     </message>
     <message>
         <source>Shield</source>
@@ -5265,7 +5266,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Master Magic</source>
-        <translation>Magie Maîtresse</translation>
+        <translation>Magie maîtresse</translation>
     </message>
     <message>
         <source>Choco/Mog</source>
@@ -5293,7 +5294,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Leviathan</source>
-        <translation>Leviathan</translation>
+        <translation>Léviathan</translation>
     </message>
     <message>
         <source>Bahamut</source>
@@ -5309,31 +5310,31 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Phoenix</source>
-        <translation>Phenix</translation>
+        <translation>Phénix</translation>
     </message>
     <message>
         <source>Neo Bahamut</source>
-        <translation>Neo Bahamut</translation>
+        <translation>Néo Bahamut</translation>
     </message>
     <message>
         <source>Hades</source>
-        <translation>Hades</translation>
+        <translation>Hadès</translation>
     </message>
     <message>
         <source>Bahamut ZERO</source>
-        <translation>Bahamut ZERO</translation>
+        <translation>Bahamut ZÉRO</translation>
     </message>
     <message>
         <source>Knights of Round</source>
-        <translation>Chevalier de la table Ronde</translation>
+        <translation>Chevaliers de la Table Ronde</translation>
     </message>
     <message>
         <source>Master Summon</source>
-        <translation>Invocation Maître</translation>
+        <translation>Invocation maître</translation>
     </message>
     <message>
         <source>Deathblow</source>
-        <translation>CoupM</translation>
+        <translation>Coup mortel</translation>
     </message>
     <message>
         <source>Gravity</source>
@@ -5341,222 +5342,222 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Typhon</source>
-        <translation>Typhon</translation>
+        <translation>Typoon</translation>
     </message>
 </context>
 <context>
     <name>Materia_Skills</name>
     <message>
         <source>MP Plus +10%</source>
-        <translation>Super MP +10%</translation>
+        <translation>MP max +10%</translation>
     </message>
     <message>
         <source>MP Plus +20%</source>
-        <translation>Super MP +20%</translation>
+        <translation>MP max +20%</translation>
     </message>
     <message>
         <source>MP Plus +30%</source>
-        <translation>Super MP +30%</translation>
+        <translation>MP max +30%</translation>
     </message>
     <message>
         <source>MP Plus +40%</source>
-        <translation>Super MP +40%</translation>
+        <translation>MP max +40%</translation>
     </message>
     <message>
         <source>MP Plus +50%</source>
-        <translation>Super MP +50%</translation>
+        <translation>MP max +50%</translation>
     </message>
     <message>
         <source>HP Plus +10%</source>
-        <translation>Super HP +10%</translation>
+        <translation>HP max +10%</translation>
     </message>
     <message>
         <source>HP Plus +20%</source>
-        <translation>Super HP +20%</translation>
+        <translation>HP max +20%</translation>
     </message>
     <message>
         <source>HP Plus +30%</source>
-        <translation>Super HP +30%</translation>
+        <translation>HP max +30%</translation>
     </message>
     <message>
         <source>HP Plus +40%</source>
-        <translation>Super HP +40%</translation>
+        <translation>HP max +40%</translation>
     </message>
     <message>
         <source>HP Plus +50%</source>
-        <translation>Super HP +50%</translation>
+        <translation>HP max +50%</translation>
     </message>
     <message>
         <source>Speed Plus +10%</source>
-        <translation>Super Vitesse +10%</translation>
+        <translation>Dextérité +10%</translation>
     </message>
     <message>
         <source>Speed Plus +20%</source>
-        <translation>Super Vitesse +20%</translation>
+        <translation>Dextérité +20%</translation>
     </message>
     <message>
         <source>Speed Plus +30%</source>
-        <translation>Super Vitesse +30%</translation>
+        <translation>Dextérité +30%</translation>
     </message>
     <message>
         <source>Speed Plus +40%</source>
-        <translation>Super Vitesse +40%</translation>
+        <translation>Dextérité +40%</translation>
     </message>
     <message>
         <source>Speed Plus +50%</source>
-        <translation>Super Vitesse +50%</translation>
+        <translation>Dextérité +50%</translation>
     </message>
     <message>
         <source>Magic Plus +10%</source>
-        <translation>Super Magie +10%</translation>
+        <translation>Magie +10%</translation>
     </message>
     <message>
         <source>Magic Plus +20%</source>
-        <translation>Super Magie +20%</translation>
+        <translation>Magie +20%</translation>
     </message>
     <message>
         <source>Magic Plus +30%</source>
-        <translation>Super Magie +30%</translation>
+        <translation>Magie +30%</translation>
     </message>
     <message>
         <source>Magic Plus +40%</source>
-        <translation>Super Magie +40%</translation>
+        <translation>Magie +40%</translation>
     </message>
     <message>
         <source>Magic Plus +50%</source>
-        <translation>Super Magie +50%</translation>
+        <translation>Magie +50%</translation>
     </message>
     <message>
         <source>Luck Plus +10%</source>
-        <translation>Super Chance +10%</translation>
+        <translation>Chance +10%</translation>
     </message>
     <message>
         <source>Luck Plus +20%</source>
-        <translation>Super Chance +20%</translation>
+        <translation>Chance +20%</translation>
     </message>
     <message>
         <source>Luck Plus +30%</source>
-        <translation>Super Chance+30</translation>
+        <translation>Chance +30%</translation>
     </message>
     <message>
         <source>Luck Plus +40%</source>
-        <translation>Super Chance +40%</translation>
+        <translation>Chance +40%</translation>
     </message>
     <message>
         <source>Luck Plus +50%</source>
-        <translation>Super Chance +50%</translation>
+        <translation>Chance +50%</translation>
     </message>
     <message>
         <source>Exp Plus +50%</source>
-        <translation>Super Exp +50%</translation>
+        <translation>EXP gagnée +50%</translation>
     </message>
     <message>
         <source>Exp Plus +100%</source>
-        <translation>Super Exp +100%</translation>
+        <translation>EXP gagnée +100%</translation>
     </message>
     <message>
         <source>Gil Plus +50%</source>
-        <translation>Super Gils +50%</translation>
+        <translation>Gils gagnés +50%</translation>
     </message>
     <message>
         <source>Gil Plus +100%</source>
-        <translation>Super Gils +100%</translation>
+        <translation>Gils gagnés +100%</translation>
     </message>
     <message>
         <source>Encounter Rate -50%</source>
-        <translation>Rencontre Taux -50%</translation>
+        <translation>Fréquence de combat -44%</translation>
     </message>
     <message>
         <source>Encounter Rate -75%</source>
-        <translation>Rencontre Taux -75%</translation>
+        <translation>Fréquence de combat -88%</translation>
     </message>
     <message>
         <source>Encounter Rate +50%</source>
-        <translation>Rencontre Taux +50%</translation>
+        <translation>Fréquence de combat +44%</translation>
     </message>
     <message>
         <source>Encounter Rate +100%</source>
-        <translation>Rencontre Taux +100%</translation>
+        <translation>Fréquence de combat +88%</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
-        <translation>Appat Chocobo</translation>
+        <translation>Appât-chocobo</translation>
     </message>
     <message>
         <source>Chocobo Lure +50%</source>
-        <translation>Appat Chocobo +50%</translation>
+        <translation>Appât-chocobo +8</translation>
     </message>
     <message>
         <source>Chocobo Lure +100%</source>
-        <translation>Appat Chocobo +100%</translation>
+        <translation>Appât-chocobo +12</translation>
     </message>
     <message>
         <source>Chocobo Lure +200%</source>
-        <translation>Appat Chocobo +200%</translation>
+        <translation>Appât-chocobo +16</translation>
     </message>
     <message>
         <source>Pre-emptive +6%</source>
-        <translation>Prevention +6%</translation>
+        <translation>Prévention +6%</translation>
     </message>
     <message>
         <source>Pre-emptive +12%</source>
-        <translation>Prevention +12%</translation>
+        <translation>Prévention +12%</translation>
     </message>
     <message>
         <source>Pre-emptive +24%</source>
-        <translation>Prevention +24%</translation>
+        <translation>Prévention +24%</translation>
     </message>
     <message>
         <source>Pre-emptive +36%</source>
-        <translation>Prevention +36%</translation>
+        <translation>Prévention +36%</translation>
     </message>
     <message>
         <source>Pre-emptive +48%</source>
-        <translation>Prevention +48%</translation>
+        <translation>Prévention +48%</translation>
     </message>
     <message>
         <source>Long Range</source>
-        <translation>Longue Portée</translation>
+        <translation>Longue portée</translation>
     </message>
     <message>
         <source>Mega-all x1</source>
-        <translation>Mega Tout x1</translation>
+        <translation>Méga tous x1</translation>
     </message>
     <message>
         <source>Mega-all x2</source>
-        <translation>Mega Tout x2</translation>
+        <translation>Méga tous x2</translation>
     </message>
     <message>
         <source>Mega-all x3</source>
-        <translation>Mega Tout x3</translation>
+        <translation>Méga tous x3</translation>
     </message>
     <message>
         <source>Mega-all x4</source>
-        <translation>Mega Tout x4</translation>
+        <translation>Méga tous x4</translation>
     </message>
     <message>
         <source>Mega-all x5</source>
-        <translation>Mega Tout x5</translation>
+        <translation>Méga tous x5</translation>
     </message>
     <message>
         <source>Counter Attack 20%</source>
-        <translation>Contre Attaque 20%</translation>
+        <translation>20% de chance</translation>
     </message>
     <message>
         <source>Counter Attack 40%</source>
-        <translation>Contre Attaque 40%</translation>
+        <translation>40% de chance</translation>
     </message>
     <message>
         <source>Counter Attack 60%</source>
-        <translation>Contre Attaque 60%</translation>
+        <translation>60% de chance</translation>
     </message>
     <message>
         <source>Counter Attack 80%</source>
-        <translation>Contre Attaque 80%</translation>
+        <translation>80% de chance</translation>
     </message>
     <message>
         <source>Counter Attack 100%</source>
-        <translation>Contre Attaque 100%</translation>
+        <translation>100% de chance</translation>
     </message>
     <message>
         <source>Slash-All</source>
@@ -5568,11 +5569,11 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>2x-Cut</source>
-        <translation>2xAttaque</translation>
+        <translation>2x</translation>
     </message>
     <message>
         <source>4x-Cut</source>
-        <translation>4xAttaque</translation>
+        <translation>4x</translation>
     </message>
     <message>
         <source>Cover +20%</source>
@@ -5596,7 +5597,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Underwater</source>
-        <translation>Sous marin</translation>
+        <translation>Sous-marin</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
@@ -5608,11 +5609,11 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation>Invocation-W</translation>
+        <translation>Invoq-W</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation>Élément-W</translation>
+        <translation>Elém-W</translation>
     </message>
     <message>
         <source>All x1</source>
@@ -5636,23 +5637,23 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>MP Turbo 10%</source>
-        <translation>Turbo MP 10%</translation>
+        <translation>Turbo MP +10%</translation>
     </message>
     <message>
         <source>Mp Turbo 20%</source>
-        <translation>Turbo MP 20%</translation>
+        <translation>Turbo MP +20%</translation>
     </message>
     <message>
         <source>Mp Turbo 30%</source>
-        <translation>Turbo MP 30%</translation>
+        <translation>Turbo MP +30%</translation>
     </message>
     <message>
         <source>Mp Turbo 40%</source>
-        <translation>Turbo MP 40%</translation>
+        <translation>Turbo MP +40%</translation>
     </message>
     <message>
         <source>Mp Turbo 50%</source>
-        <translation>Turbo MP 50%</translation>
+        <translation>Turbo MP +50%</translation>
     </message>
     <message>
         <source>MP Absorb</source>
@@ -5664,63 +5665,63 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Elemental 50%</source>
-        <translation>Elément de Base 50%</translation>
+        <translation>Dégâts élémentaires -50%</translation>
     </message>
     <message>
         <source>Elemental 100%</source>
-        <translation>Elément de Base 100%</translation>
+        <translation>Dégâts élémentaires -100%</translation>
     </message>
     <message>
         <source>Elemental 200%</source>
-        <translation>Elément de Base 200%</translation>
+        <translation>Dégâts élémentaires -200%</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation>Effet Suppl</translation>
+        <translation>Effet supplémentaire</translation>
     </message>
     <message>
         <source>Sneak Attack 20%</source>
-        <translation>Attaque Furtive 20%</translation>
+        <translation>20% de chance</translation>
     </message>
     <message>
         <source>Sneak Attack 35%</source>
-        <translation>Attaque Furtive 35%</translation>
+        <translation>35% de chance</translation>
     </message>
     <message>
         <source>Sneak Attack 50%</source>
-        <translation>Attaque Furtive 50%</translation>
+        <translation>50% de chance</translation>
     </message>
     <message>
         <source>Sneak Attack 65%</source>
-        <translation>Attaque Furtive 65%</translation>
+        <translation>65% de chance</translation>
     </message>
     <message>
         <source>Sneak Attack 80%</source>
-        <translation>Attaque Furtive 80%</translation>
+        <translation>80% de chance</translation>
     </message>
     <message>
         <source>Final Attack x1</source>
-        <translation>Attack Finale x1</translation>
+        <translation>Attaque Finale x1</translation>
     </message>
     <message>
         <source>Final Attack x2</source>
-        <translation>Attack Finale x2</translation>
+        <translation>Attaque Finale x2</translation>
     </message>
     <message>
         <source>Final Attack x3</source>
-        <translation>Attack Finale x3</translation>
+        <translation>Attaque Finale x3</translation>
     </message>
     <message>
         <source>Final Attack x4</source>
-        <translation>Attack Finale x4</translation>
+        <translation>Attaque Finale x4</translation>
     </message>
     <message>
         <source>Final Attack x5</source>
-        <translation>Attack Finale x5</translation>
+        <translation>Attaque Finale x5</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation>Coupure Suppl</translation>
+        <translation>Coupure supplémentaire</translation>
     </message>
     <message>
         <source>Quadra Magic x1</source>
@@ -5760,7 +5761,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation>Trans</translation>
+        <translation>Trans.</translation>
     </message>
     <message>
         <source>DeathBlow</source>
@@ -5768,7 +5769,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Manipulate</source>
-        <translation>Manipuler</translation>
+        <translation>Manip.</translation>
     </message>
     <message>
         <source>Mime</source>
@@ -5776,571 +5777,571 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation>Talents de l&apos;ennemi</translation>
+        <translation>TalentE</translation>
     </message>
     <message>
         <source>Master Command</source>
-        <translation>Commande Maître</translation>
+        <translation>Commande maître</translation>
     </message>
     <message>
         <source>Fire (4mp)</source>
-        <translation>Feu (4mp)</translation>
+        <translation>Feu (4 MP)</translation>
     </message>
     <message>
         <source>Fire2 (22mp)</source>
-        <translation>Feu2 (22mp)</translation>
+        <translation>Feu2 (22 MP)</translation>
     </message>
     <message>
         <source>Fire3 (52mp)</source>
-        <translation>Feu3 (52mp)</translation>
+        <translation>Feu3 (52 MP)</translation>
     </message>
     <message>
         <source>Ice (4mp)</source>
-        <translation>Glace (4mp)</translation>
+        <translation>Glace (4 MP)</translation>
     </message>
     <message>
         <source>Ice2 (22mp)</source>
-        <translation>Glace2 (22mp)</translation>
+        <translation>Glace2 (22 MP)</translation>
     </message>
     <message>
         <source>Ice3 (52mp)</source>
-        <translation>Glace3 (52mp)</translation>
+        <translation>Glace3 (52 MP)</translation>
     </message>
     <message>
         <source>Quake (6mp)</source>
-        <translation>Trembl (6mp)</translation>
+        <translation>Trembl (6 MP)</translation>
     </message>
     <message>
         <source>Quake2 (28mp)</source>
-        <translation>Trembl2 (28mp)</translation>
+        <translation>Trembl2 (28 MP)</translation>
     </message>
     <message>
         <source>Quake3 (68mp)</source>
-        <translation>Trembl3 (68mp)</translation>
+        <translation>Trembl3 (68 MP)</translation>
     </message>
     <message>
         <source>Bolt (4mp)</source>
-        <translation>Eclair (4mp)</translation>
+        <translation>Eclair (4 MP)</translation>
     </message>
     <message>
         <source>Bolt2 (22mp)</source>
-        <translation>Eclair2 (22mp)</translation>
+        <translation>Eclair2 (22 MP)</translation>
     </message>
     <message>
         <source>Cure (5mp)</source>
-        <translation>Guéri (5mp)</translation>
+        <translation>Guéri (5 MP)</translation>
     </message>
     <message>
         <source>Cure2 (24mp)</source>
-        <translation>Guéri2 (24mp)</translation>
+        <translation>Guéri2 (24 MP)</translation>
     </message>
     <message>
         <source>Cure3 (64mp)</source>
-        <translation>Guéri3 (64mp)</translation>
+        <translation>Guéri3 (64 MP)</translation>
     </message>
     <message>
         <source>Poisona (3mp)</source>
-        <translation>Poisona (3mp)</translation>
+        <translation>Poisona (3 MP)</translation>
     </message>
     <message>
         <source>Esuna (15mp)</source>
-        <translation>Esuna (15mp)</translation>
+        <translation>Esuna (15 MP)</translation>
     </message>
     <message>
         <source>Resist (120mp)</source>
-        <translation>Résist (120mp)</translation>
+        <translation>Résist. (120 MP)</translation>
     </message>
     <message>
         <source>Life (34mp)</source>
-        <translation>Vie (34mp)</translation>
+        <translation>Vie (34 MP)</translation>
     </message>
     <message>
         <source>Life2 (100mp)</source>
-        <translation>Vie2 (100mp)</translation>
+        <translation>Vie2 (100 MP)</translation>
     </message>
     <message>
         <source>Sleepel (8mp)</source>
-        <translation>Sleepel (8mp)</translation>
+        <translation>Sommeil (8 MP)</translation>
     </message>
     <message>
         <source>Silence (24mp)</source>
-        <translation>Silence (24mp)</translation>
+        <translation>Silence (24 MP)</translation>
     </message>
     <message>
         <source>Mini (10mp)</source>
-        <translation>Mini (10mp)</translation>
+        <translation>Mini (10 MP)</translation>
     </message>
     <message>
         <source>Toad (14mp)</source>
-        <translation>Grenouille (14mp)</translation>
+        <translation>Crapaud (14 MP)</translation>
     </message>
     <message>
         <source>Exit (16mp)</source>
-        <translation>Quitter (16mp)</translation>
+        <translation>Quitter (16 MP)</translation>
     </message>
     <message>
         <source>Remove (99mp)</source>
-        <translation>Retrait (99mp)</translation>
+        <translation>Retrait (99 MP)</translation>
     </message>
     <message>
         <source>Bio (8mp)</source>
-        <translation>Bio (8mp)</translation>
+        <translation>Bio (8 MP)</translation>
     </message>
     <message>
         <source>Bio2 (36mp)</source>
-        <translation>Bio2(36mp)</translation>
+        <translation>Bio2 (36 MP)</translation>
     </message>
     <message>
         <source>Bio3 (80mp)</source>
-        <translation>Bio3 (80mp)</translation>
+        <translation>Bio3 (80 MP)</translation>
     </message>
     <message>
         <source>Demi (14mp)</source>
-        <translation>Demi (14 mp)</translation>
+        <translation>Demi (14 MP)</translation>
     </message>
     <message>
         <source>Demi2 (33mp)</source>
-        <translation>Demi2 (33mp)</translation>
+        <translation>Demi2 (33 MP)</translation>
     </message>
     <message>
         <source>Demi3 (48mp)</source>
-        <translation>Demi3 (48mp)</translation>
+        <translation>Demi3 (48 MP)</translation>
     </message>
     <message>
         <source>Barrier (16mp)</source>
-        <translation>Barrière (16mp)</translation>
+        <translation>Barrière (16 MP)</translation>
     </message>
     <message>
         <source>Reflect (30mp)</source>
-        <translation>Reflet (30mp)</translation>
+        <translation>Reflet (30 MP)</translation>
     </message>
     <message>
         <source>Wall (58mp)</source>
-        <translation>Mur (58mp)</translation>
+        <translation>Mur (58 MP)</translation>
     </message>
     <message>
         <source>Comet (70mp)</source>
-        <translation>Comète (70mp)</translation>
+        <translation>Comète (70 MP)</translation>
     </message>
     <message>
         <source>Comet2 (110mp)</source>
-        <translation>Comète2 (110mp)</translation>
+        <translation>Comète2 (110 MP)</translation>
     </message>
     <message>
         <source>Haste (18mp)</source>
-        <translation>Hâte (18mp)</translation>
+        <translation>Hâte (18 MP)</translation>
     </message>
     <message>
         <source>Slow (20mp)</source>
-        <translation>Lent (20mp)</translation>
+        <translation>Lent (20 MP)</translation>
     </message>
     <message>
         <source>Stop (34mp)</source>
-        <translation>Stop (34mp)</translation>
+        <translation>Arrêt (34 MP)</translation>
     </message>
     <message>
         <source>DeBarrier (12mp)</source>
-        <translation>AntiBarr (12mp)</translation>
+        <translation>AntiBarr (12 MP)</translation>
     </message>
     <message>
         <source>DeSpell (20mp)</source>
-        <translation>AntiSort (20mp)</translation>
+        <translation>AntiSort (20 MP)</translation>
     </message>
     <message>
         <source>Death (30mp)</source>
-        <translation>Mort (30mp)</translation>
+        <translation>Mort (30 MP)</translation>
     </message>
     <message>
         <source>Freeze (82mp)</source>
-        <translation>Gel (82mp)</translation>
+        <translation>Gel (82 MP)</translation>
     </message>
     <message>
         <source>Break (86mp)</source>
-        <translation>Rupture (86mp)</translation>
+        <translation>Rupture (86 MP)</translation>
     </message>
     <message>
         <source>Tornado (90mp)</source>
-        <translation>Tornade (90mp)</translation>
+        <translation>Tornade (90 MP)</translation>
     </message>
     <message>
         <source>Full Cure (99mp)</source>
-        <translation>GuériMax (99mp)</translation>
+        <translation>GuériMax (99 MP)</translation>
     </message>
     <message>
         <source>Shield (180mp)</source>
-        <translation>Bouclier (180mp)</translation>
+        <translation>Bouclier (180 MP)</translation>
     </message>
     <message>
         <source>Ultima (130mp)</source>
-        <translation>Ultima (130mp)</translation>
+        <translation>Ultima (130 MP)</translation>
     </message>
     <message>
         <source>Master Magic</source>
-        <translation>Magie Maîtresse</translation>
+        <translation>Magie maîtresse</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x1 (14mp)</source>
-        <translation>Invoque Choco/Mog x1 (14mp)</translation>
+        <translation>Invoquer Choco/Mog 1x (14 MP)</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x2 (14mp)</source>
-        <translation>Invoque Choco/Mog x2 (14mp)</translation>
+        <translation>Invoquer Choco/Mog 2x (14 MP)</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x3 (14mp)</source>
-        <translation>Invoque Choco/Mog x3 (14mp)</translation>
+        <translation>Invoquer Choco/Mog 3x (14 MP)</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x4 (14mp)</source>
-        <translation>Invoque Choco/Mog x4 (14mp)</translation>
+        <translation>Invoquer Choco/Mog 4x (14 MP)</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x5 (14mp)</source>
-        <translation>Invoque Choco/Mog x5 (14mp)</translation>
+        <translation>Invoquer Choco/Mog 5x (14 MP)</translation>
     </message>
     <message>
         <source>Summon Ifrit x1 (34mp)</source>
-        <translation>Invoque Ifrit x1 (34mp)</translation>
+        <translation>Invoquer Ifrit 1x (34 MP)</translation>
     </message>
     <message>
         <source>Summon Ifrit x2 (34mp)</source>
-        <translation>Invoque Ifrit x2 (34mp)</translation>
+        <translation>Invoquer Ifrit 2x (34 MP)</translation>
     </message>
     <message>
         <source>Summon Ifrit x3 (34mp)</source>
-        <translation>Invoque Ifrit x3 (34mp)</translation>
+        <translation>Invoquer Ifrit 3x (34 MP)</translation>
     </message>
     <message>
         <source>Summon Ifrit x4 (34mp)</source>
-        <translation>Invoque Ifrit x4 (34mp)</translation>
+        <translation>Invoquer Ifrit 4x (34 MP)</translation>
     </message>
     <message>
         <source>Summon Ifrit x5 (34mp)</source>
-        <translation>Invoque Ifrit x5 (34mp)</translation>
+        <translation>Invoquer Ifrit 5x (34 MP)</translation>
     </message>
     <message>
         <source>Summon Ramuh x1 (40mp)</source>
-        <translation>Invoque Ramuh x1 (40mp)</translation>
+        <translation>Invoquer Ramuh 1x (40 MP)</translation>
     </message>
     <message>
         <source>Summon Ramuh x2 (40mp)</source>
-        <translation>Invoque Ramuh x2 (40mp)</translation>
+        <translation>Invoquer Ramuh 2x (40 MP)</translation>
     </message>
     <message>
         <source>Summon Ramuh x3 (40mp)</source>
-        <translation>Invoque Ramuh x3 (40mp)</translation>
+        <translation>Invoquer Ramuh 3x (40 MP)</translation>
     </message>
     <message>
         <source>Summon Ramuh x4 (40mp)</source>
-        <translation>Invoque Ramuh x4 (40mp)</translation>
+        <translation>Invoquer Ramuh 4x (40 MP)</translation>
     </message>
     <message>
         <source>Summon Ramuh x5 (40mp)</source>
-        <translation>Invoque Ramuh x5 (40mp)</translation>
+        <translation>Invoquer Ramuh 5x (40 MP)</translation>
     </message>
     <message>
         <source>Summon Titan x1 (46mp)</source>
-        <translation>Invoque Titan x1 (46mp)</translation>
+        <translation>Invoquer Titan 1x (46 MP)</translation>
     </message>
     <message>
         <source>Summon Titan x2 (46mp)</source>
-        <translation>Invoque Titan x2 (46mp)</translation>
+        <translation>Invoquer Titan 2x (46 MP)</translation>
     </message>
     <message>
         <source>Summon Titan x3 (46mp)</source>
-        <translation>Invoque Titan x3 (46mp)</translation>
+        <translation>Invoquer Titan 3x (46 MP)</translation>
     </message>
     <message>
         <source>Summon Titan x4 (46mp)</source>
-        <translation>Invoque Titan x4 (46mp)</translation>
+        <translation>Invoquer Titan 4x (46 MP)</translation>
     </message>
     <message>
         <source>Summon Titan x5 (46mp)</source>
-        <translation>Invoque Titan x5 (46mp)</translation>
+        <translation>Invoquer Titan 5x (46 MP)</translation>
     </message>
     <message>
         <source>Summon Odin x1 (80mp)</source>
-        <translation>Invoque Odin x1 (80mp)</translation>
+        <translation>Invoquer Odin 1x (80 MP)</translation>
     </message>
     <message>
         <source>Summon Odin x2 (80mp)</source>
-        <translation>Invoque Odin x2 (80mp)</translation>
+        <translation>Invoquer Odin 2x (80 MP)</translation>
     </message>
     <message>
         <source>Summon Odin x3 (80mp)</source>
-        <translation>Invoque Odin x3 (80mp)</translation>
+        <translation>Invoquer Odin 3x (80 MP)</translation>
     </message>
     <message>
         <source>Summon Odin x4 (80mp)</source>
-        <translation>Invoque Odin x4 (80mp)</translation>
+        <translation>Invoquer Odin 4x (80 MP)</translation>
     </message>
     <message>
         <source>Summon Odin x5 (80mp)</source>
-        <translation>Invoque Odin x5 (80mp)</translation>
+        <translation>Invoquer Odin 5x (80 MP)</translation>
     </message>
     <message>
         <source>Summon Leviathan x1 (78mp)</source>
-        <translation>Invoque Leviathan x1 (78mp)</translation>
+        <translation>Invoquer Léviathan 1x (78 MP)</translation>
     </message>
     <message>
         <source>Summon Leviathan x2 (78mp)</source>
-        <translation>Invoque Leviathan x2 (78mp)</translation>
+        <translation>Invoquer Léviathan 2x (78 MP)</translation>
     </message>
     <message>
         <source>Summon Leviathan x3 (78mp)</source>
-        <translation>Invoque Leviathan x3 (78mp)</translation>
+        <translation>Invoquer Léviathan 3x (78 MP)</translation>
     </message>
     <message>
         <source>Summon Leviathan x4 (78mp)</source>
-        <translation>Invoque Leviathan x4 (78mp)</translation>
+        <translation>Invoquer Léviathan 4x (78 MP)</translation>
     </message>
     <message>
         <source>Summon Leviathan x5 (78mp)</source>
-        <translation>Invoque Leviathan x5 (78mp)</translation>
+        <translation>Invoquer Léviathan 5x (78 MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut x1 (100mp)</source>
-        <translation>Invoque Bahamut x1 (100mp)</translation>
+        <translation>Invoquer Bahamut 1x (100 MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut x2 (100mp)</source>
-        <translation>Invoque Bahamut x2(100mp)</translation>
+        <translation>Invoquer Bahamut 2x (100 MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut x3 (100mp)</source>
-        <translation>Invoque Bahamut x3 (100mp)</translation>
+        <translation>Invoquer Bahamut 3x (100 MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut x4 (100mp)</source>
-        <translation>Invoque Bahamut x4 (100mp)</translation>
+        <translation>Invoquer Bahamut 4x (100 MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut x5 (100mp)</source>
-        <translation>Invoque Bahamut x5 (100mp)</translation>
+        <translation>Invoquer Bahamut 5x (100 MP)</translation>
     </message>
     <message>
         <source>Summon Kujata x1 (110mp)</source>
-        <translation>Invoque Kjata x1 (110mp)</translation>
+        <translation>Invoquer Kjata 1x (110 MP)</translation>
     </message>
     <message>
         <source>Summon Kujata x2 (110mp)</source>
-        <translation>Invoque Kjata x2 (110mp)</translation>
+        <translation>Invoquer Kjata 2x (110 MP)</translation>
     </message>
     <message>
         <source>Summon Kujata x3 (110mp)</source>
-        <translation>Invoque Kjata x3 (110mp)</translation>
+        <translation>Invoquer Kjata 3x (110 MP)</translation>
     </message>
     <message>
         <source>Summon Kujata x4 (110mp)</source>
-        <translation>Invoque Kjata x4 (110mp)</translation>
+        <translation>Invoquer Kjata 4x (110 MP)</translation>
     </message>
     <message>
         <source>Summon Kujata x5 (110mp)</source>
-        <translation>Invoque Kjata x5 (110mp)</translation>
+        <translation>Invoquer Kjata 5x (110 MP)</translation>
     </message>
     <message>
         <source>Summon Alexander x1 (120mp)</source>
-        <translation>Invoque Alexandre x1 (120mp)</translation>
+        <translation>Invoquer Alexandre 1x (120 MP)</translation>
     </message>
     <message>
         <source>Summon Alexander x2 (120mp)</source>
-        <translation>Invoque Alexandre x2 (120mp)</translation>
+        <translation>Invoquer Alexandre 2x (120 MP)</translation>
     </message>
     <message>
         <source>Summon Alexander x3 (120mp)</source>
-        <translation>Invoque Alexandre x3 (120mp)</translation>
+        <translation>Invoquer Alexandre 3x (120 MP)</translation>
     </message>
     <message>
         <source>Summon Alexander x4 (120mp)</source>
-        <translation>Invoque Alexandre x4 (120mp)</translation>
+        <translation>Invoquer Alexandre 4x (120 MP)</translation>
     </message>
     <message>
         <source>Summon Alexander x5 (120mp)</source>
-        <translation>Invoque Alexandre x5 (120mp)</translation>
+        <translation>Invoquer Alexandre 5x (120 MP)</translation>
     </message>
     <message>
         <source>Summon Phoenix x1 (180mp)</source>
-        <translation>Invoque Phénix x1 (180mp)</translation>
+        <translation>Invoquer Phénix 1x (180 MP)</translation>
     </message>
     <message>
         <source>Summon Phoenix x2 (180mp)</source>
-        <translation>Invoque Phénix x2 (180mp)</translation>
+        <translation>Invoquer Phénix 2x (180 MP)</translation>
     </message>
     <message>
         <source>Summon Phoenix x3 (180mp)</source>
-        <translation>Invoque Phénix x3 (180mp)</translation>
+        <translation>Invoquer Phénix 3x (180 MP)</translation>
     </message>
     <message>
         <source>Summon Phoenix x4 (180mp)</source>
-        <translation>Invoque Phénix x4 (180mp)</translation>
+        <translation>Invoquer Phénix 4x (180 MP)</translation>
     </message>
     <message>
         <source>Summon Phoenix x5 (180mp)</source>
-        <translation>Invoque Phénix x5 (180mp)</translation>
+        <translation>Invoquer Phénix 5x (180 MP)</translation>
     </message>
     <message>
         <source>Summon Neo Bahamut x1 (140mp)</source>
-        <translation>Invoque Néo Bahamut x1 (140mp)</translation>
+        <translation>Invoquer Néo Bahamut 1x (140 MP)</translation>
     </message>
     <message>
         <source>Summon Neo Bahamut x2 (140mp)</source>
-        <translation>Invoque Néo Bahamut x2 (140mp)</translation>
+        <translation>Invoquer Néo Bahamut 2x (140 MP)</translation>
     </message>
     <message>
         <source>Summon Neo Bahamut x3 (140mp)</source>
-        <translation>Invoque Néo Bahamut x3 (140mp)</translation>
+        <translation>Invoquer Néo Bahamut 3x (140 MP)</translation>
     </message>
     <message>
         <source>Summon Neo Bahamut x4 (140mp)</source>
-        <translation>Invoque Néo Bahamut x4 (140mp)</translation>
+        <translation>Invoquer Néo Bahamut 4x (140 MP)</translation>
     </message>
     <message>
         <source>Summon Neo Bahamut x5 (140mp)</source>
-        <translation>Invoque Néo Bahamut x5 (140mp)</translation>
+        <translation>Invoquer Néo Bahamut 5x (140 MP)</translation>
     </message>
     <message>
         <source>Summon Hades x1 (150mp)</source>
-        <translation>Invoque Hadès x1 (150mp)</translation>
+        <translation>Invoquer Hadès 1x (150 MP)</translation>
     </message>
     <message>
         <source>Summon Hades x2 (150mp)</source>
-        <translation>Invoque Hadès x2 (150mp)</translation>
+        <translation>Invoquer Hadès 2x (150 MP)</translation>
     </message>
     <message>
         <source>Summon Hades x3 (150mp)</source>
-        <translation>Invoque Hadès x3 (150mp)</translation>
+        <translation>Invoquer Hadès 3x (150 MP)</translation>
     </message>
     <message>
         <source>Summon Hades x4 (150mp)</source>
-        <translation>Invoque Hadès x4 (150mp)</translation>
+        <translation>Invoquer Hadès 4x (150 MP)</translation>
     </message>
     <message>
         <source>Summon Hades x5 (150mp)</source>
-        <translation>Invoque Hadès x5 (150mp)</translation>
+        <translation>Invoquer Hadès 5x (150 MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x1 (180mp)</source>
-        <translation>Invoque Bahamut ZERO x1 (180mp)</translation>
+        <translation>Invoquer Bahamut ZÉRO 1x (180 MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x2 (180mp)</source>
-        <translation>Invoque Bahamut ZERO x2 (180mp)</translation>
+        <translation>Invoquer Bahamut ZÉRO 2x (180 MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x3 (180mp)</source>
-        <translation>Invoque Bahamut ZERO x3 (180mp)</translation>
+        <translation>Invoquer Bahamut ZÉRO 3x (180 MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x4 (180mp)</source>
-        <translation>Invoque Bahamut ZERO x4 (180mp)</translation>
+        <translation>Invoquer Bahamut ZÉRO 4x (180 MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x5 (180mp)</source>
-        <translation>Invoque Bahamut ZERO x5 (180mp)</translation>
+        <translation>Invoquer Bahamut ZÉRO 5x (180 MP)</translation>
     </message>
     <message>
         <source>Summon KOTR x1 (250mp)</source>
-        <translation>Invoque CDLTR x1 (250mp)</translation>
+        <translation>Invoquer Chevaliers de la Table Ronde 1x (250 MP)</translation>
     </message>
     <message>
         <source>Summon KOTR x2 (250mp)</source>
-        <translation>Invoque CDLTR x2 (250mp)</translation>
+        <translation>Invoquer Chevaliers de la Table Ronde 2x (250 MP)</translation>
     </message>
     <message>
         <source>Summon KOTR x3 (250mp)</source>
-        <translation>Invoque CDLTR x3 (250mp)</translation>
+        <translation>Invoquer Chevaliers de la Table Ronde 3x (250 MP)</translation>
     </message>
     <message>
         <source>Summon KOTR x4 (250mp)</source>
-        <translation>Invoque CDLTR x4 (250mp)</translation>
+        <translation>Invoquer Chevaliers de la Table Ronde 4x (250 MP)</translation>
     </message>
     <message>
         <source>Summon KOTR x5 (250mp)</source>
-        <translation>Invoque CDLTR x5 (250mp)</translation>
+        <translation>Invoquer Chevaliers de la Table Ronde 5x (250 MP)</translation>
     </message>
     <message>
         <source>Master Summon</source>
-        <translation>Invocation Maître</translation>
+        <translation>Invocation maître</translation>
     </message>
     <message>
         <source>Counter Rate 20%</source>
-        <translation>Chance de Contre-Attaque 20%</translation>
+        <translation>30% de chance</translation>
     </message>
     <message>
         <source>Counter Rate 40%</source>
-        <translation>Chance de Contre-Attaque 40%</translation>
+        <translation>40% de chance</translation>
     </message>
     <message>
         <source>Counter Rate 60%</source>
-        <translation>Chance de Contre-Attaque 60%</translation>
+        <translation>60% de chance</translation>
     </message>
     <message>
         <source>Counter Rate 80%</source>
-        <translation>Chance de Contre-Attaque 80%</translation>
+        <translation>80% de chance</translation>
     </message>
     <message>
         <source>Counter Rate 100%</source>
-        <translation>Chance de Contre-Attaque 100%</translation>
+        <translation>100% de chance</translation>
     </message>
     <message>
         <source>Magic Counter Rate 30%</source>
-        <translation>Chance de Contre-Attaque Magique 30%</translation>
+        <translation>30% de chance</translation>
     </message>
     <message>
         <source>Magic Counter Rate 40%</source>
-        <translation>Chance de Contre-Attaque Magique 40%</translation>
+        <translation>40% de chance</translation>
     </message>
     <message>
         <source>Magic Counter Rate 60%</source>
-        <translation>Chance de Contre-Attaque Magique 60%</translation>
+        <translation>60% de chance</translation>
     </message>
     <message>
         <source>Magic Counter Rate 80%</source>
-        <translation>Chance de Contre-Attaque Magique 80%</translation>
+        <translation>80% de chance</translation>
     </message>
     <message>
         <source>Magic Counter Rate 100%</source>
-        <translation>Chance de Contre-Attaque Magique 100%</translation>
+        <translation>100% de chance</translation>
     </message>
     <message>
         <source>Bolt3 (52mp)</source>
-        <translation>Eclair3 (52mp)</translation>
+        <translation>Eclair3 (52 MP)</translation>
     </message>
     <message>
         <source>Regen (30mp)</source>
-        <translation>Regen (30mp)</translation>
+        <translation>Regen (30 MP)</translation>
     </message>
     <message>
         <source>Berserk (28mp)</source>
-        <translation>Folie (24mp)</translation>
+        <translation>Folie (24 MP)</translation>
     </message>
     <message>
         <source>Flare (100mp)</source>
-        <translation>Eclat (100mp)</translation>
+        <translation>Eclat (100 MP)</translation>
     </message>
     <message>
         <source>Summon Shiva x1 (32mp)</source>
-        <translation>Invoque Shiva x1 (32mp)</translation>
+        <translation>Invoquer Shiva 1x (32 MP)</translation>
     </message>
     <message>
         <source>Summon Shiva x2 (32mp)</source>
-        <translation>Invoque Shiva x2 (32mp)</translation>
+        <translation>Invoquer Shiva 2x (32 MP)</translation>
     </message>
     <message>
         <source>Summon Shiva x3 (32mp)</source>
-        <translation>Invoque Shiva x3 (32mp)</translation>
+        <translation>Invoquer Shiva 3x (32 MP)</translation>
     </message>
     <message>
         <source>Summon Shiva x4 (32mp)</source>
-        <translation>Invoque Shiva x4 (32mp)</translation>
+        <translation>Invoquer Shiva 4x (32 MP)</translation>
     </message>
     <message>
         <source>Summon Shiva x5 (32mp)</source>
-        <translation>Invoque Shiva x5 (32mp)</translation>
+        <translation>Invoquer Shiva 5x (32 MP)</translation>
     </message>
     <message>
         <source>Steal as well</source>
-        <translation>Vol Simultané</translation>
+        <translation>Vol simultané</translation>
     </message>
     <message>
         <source>Sense</source>
@@ -6348,102 +6349,102 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Confu (18mp)</source>
-        <translation>Confus (18mp)</translation>
+        <translation>Confus (18 MP)</translation>
     </message>
     <message>
         <source>M-Barrier (24mp)</source>
-        <translation>BarrM (24mp)</translation>
+        <translation>BarrM (24 MP)</translation>
     </message>
     <message>
         <source>Summon Typhon x1 (160mp)</source>
-        <translation>Invoque Typhon x1 (160mp)</translation>
+        <translation>Invoquer Typoon 1x (160 MP)</translation>
     </message>
     <message>
         <source>Summon Typhon x2 (160mp)</source>
-        <translation>Invoque Typhon x2 (160mp)</translation>
+        <translation>Invoquer Typoon 2x (160 MP)</translation>
     </message>
     <message>
         <source>Summon Typhon x3 (160mp)</source>
-        <translation>Invoque Typhon x3 (160mp)</translation>
+        <translation>Invoquer Typoon 3x (160 MP)</translation>
     </message>
     <message>
         <source>Summon Typhon x4 (160mp)</source>
-        <translation>Invoque Typhon x4 (160mp)</translation>
+        <translation>Invoquer Typoon 4x (160 MP)</translation>
     </message>
     <message>
         <source>Summon Typhon x5 (160mp)</source>
-        <translation>Invoque Typhon x5 (160mp)</translation>
+        <translation>Invoquer Typoon 5x (160 MP)</translation>
     </message>
 </context>
 <context>
     <name>Materia_Stats</name>
     <message>
         <source>Dex:+% depending on level</source>
-        <translation>Vts:+% dépendant du niveau</translation>
+        <translation>DEX +% dépendant du niveau</translation>
     </message>
     <message>
         <source>Mag:+% depending on level</source>
-        <translation>Mag:+% dépendant du niveau</translation>
+        <translation>MAG +% dépendant du niveau</translation>
     </message>
     <message>
         <source>Lck:+% depending on level</source>
-        <translation>Chc:+% dépendant du niveau</translation>
+        <translation>CHC +% dépendant du niveau</translation>
     </message>
     <message>
         <source>Lck:+1</source>
-        <translation>Chc:+1</translation>
+        <translation>CHC +1</translation>
     </message>
     <message>
         <source>Lck:-1</source>
-        <translation>Chc:-1</translation>
+        <translation>CHC -1</translation>
     </message>
     <message>
         <source>Dex:+2</source>
-        <translation>Vts:+2</translation>
+        <translation>DEX +2</translation>
     </message>
     <message>
         <source>Vit:+1</source>
-        <translation>Dfs:+1</translation>
+        <translation>VIT +1</translation>
     </message>
     <message>
         <source>MaxHp:+% depending on level</source>
-        <translation>HpMax:+% dépendant du niveau</translation>
+        <translation>HP max +% dépendant du niveau</translation>
     </message>
     <message>
         <source>MaxMp:+% depending on level</source>
-        <translation>MpMax:+% dépendant du niveau</translation>
+        <translation>MP max +% dépendant du niveau</translation>
     </message>
     <message>
         <source>MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1</source>
-        <translation>HpMax:-2% MpMax:+2% Frc:-1 Mag:+1</translation>
+        <translation>HP max -2%, MP max +2%, FRC -1, MAG +1</translation>
     </message>
     <message>
         <source>MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation>HpMax:-5% MpMax:+5% Frc:-2 Dfs:-1 Mag:+2 Esp:+1</translation>
+        <translation>HP max -5%, MP max +5%, FRC -2, VIT -1, MAG +2, ESP +1</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
-        <translation>HpMax:-10% MpMax:+10% Frc:-4 Dfs:-2 Mag:+4 Esp:+2</translation>
+        <translation>HP max -10%, MP max +10%, FRC -4, VIT -2, MAG +4, ESP +2</translation>
     </message>
     <message>
         <source>MaxHp:-2% MaxMp:+2% Mag:+1</source>
-        <translation>HpMax:-2% MpMax:+2% Mag:+1</translation>
+        <translation>HP max -2%, MP max +2%, MAG +1</translation>
     </message>
     <message>
         <source>MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1</source>
-        <translation>HpMax:-5% MpMax:+5% Mag:+1 Esp:+1</translation>
+        <translation>HP max -5%, MP max +5%, MAG +1, ESP +1</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2</source>
-        <translation>HpMax:-10% MpMax:+10% Mag:+2 Esp:+2</translation>
+        <translation>HP max -10%, MP max +10%, MAG +2, ESP +2</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4</source>
-        <translation>HpMax:-10% MpMax:+15% Mag:+4 Esp:+4</translation>
+        <translation>HP max -10%, MP max +15%, MAG +4, ESP +4</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8</source>
-        <translation>HpMax:-10% MpMax:+20% Mag:+8 Esp:+8</translation>
+        <translation>HP max -10%, MP max +20%, MAG +8, ESP +8</translation>
     </message>
 </context>
 <context>
@@ -6474,7 +6475,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>File To load When &quot;New Game&quot; is used</source>
-        <translation>Fichier à charger lorsque &quot;New Game &quot; est utilisée</translation>
+        <translation>Fichier à charger lors d&apos;une &quot;Nouvelle partie&quot;</translation>
     </message>
     <message>
         <source>Location To Save Character Stat Files</source>
@@ -6486,23 +6487,23 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source> Folder To Load FF7 Saves (all types) from</source>
-        <translation>Dossier pour charger les sauvegardes FF7 (tout types) à partir de</translation>
+        <translation>Dossier d&apos;importation de sauvegardes FF7 (tous types)</translation>
     </message>
     <message>
         <source>Folder To Save Pc (.ff7) Save Games</source>
-        <translation>Dossier pour importer les sauvegardes PC (.FF7)</translation>
+        <translation>Dossier d&apos;importation de sauvegardes PC (.ff7)</translation>
     </message>
     <message>
         <source>Folder To Export Pc (.ff7) Save Games</source>
-        <translation>Dossier pour exporter les sauvegardes PC (.FF7)</translation>
+        <translation>Dossier d&apos;exportation de sauvegardes PC (.ff7)</translation>
     </message>
     <message>
         <source>Main Window Background Color</source>
-        <translation>Couleur principale de fond de la fenêtre</translation>
+        <translation>Couleur de fond de la fenêtre principale</translation>
     </message>
     <message>
         <source>preview</source>
-        <translation>extrait</translation>
+        <translation>Aperçu</translation>
     </message>
     <message>
         <source>Color 1</source>
@@ -6534,7 +6535,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source> Folder To Load/Save Emulator Memory Cards  </source>
-        <translation>ossier pour charger/sauvegarder les cartes mémoires émulateur</translation>
+        <translation>Dossier de cartes mémoires d&apos;émulateurs</translation>
     </message>
     <message>
         <source>Set Applications Font</source>
@@ -6566,15 +6567,15 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Set Load And Save Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Choisir les emplacements de chargement et d&apos;enregistrement des sauvegardes</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation type="unfinished">&amp;Fermer</translation>
+        <translation>&amp;Fermer</translation>
     </message>
 </context>
 <context>
@@ -6680,7 +6681,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>The Final Fantasy VII Save Game Editor</source>
-        <translation>L&apos;Éditeur de sauvegardes FF7</translation>
+        <translation>L&apos;éditeur de sauvegardes FF7</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -6780,7 +6781,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Using Qt:</source>
-        <translation>Utilisation Qt:</translation>
+        <translation>Utilisation de Qt:</translation>
     </message>
     <message>
         <source>Credits</source>
@@ -6820,7 +6821,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Spanish Translation:</source>
-        <translation>Traduction Espagnole:</translation>
+        <translation>Traduction espagnole:</translation>
     </message>
     <message>
         <source>French Translation:</source>
@@ -6848,7 +6849,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Thanks To</source>
-        <translation>Merci À</translation>
+        <translation>Merci à</translation>
     </message>
     <message>
         <source>A Big Thank You  To:</source>
@@ -6856,11 +6857,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct,item/materia lists  and string conversion function. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation>Merci pour avoir donné la source de Jenova. Ce programme utilise des versions modifiées de la structure de sauvegarde de Jenova, les listes des élément/matérias et la fonction de conversion des strings. L&apos;accès au code source m&apos;a sauvé énormément de temps durant les premières phases de développement.</translation>
+        <translation>Merci pour avoir donné la source de Jenova. Ce programme utilise des versions modifiées de la structure de sauvegarde de Jenova, les listes des élément/Matérias et la fonction de conversion des strings. L&apos;accès au code source m&apos;a sauvé énormément de fois durant les premières phases de développement.</translation>
     </message>
     <message>
         <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
-        <translation>Merci pour toute l&apos;aide avec Black Chocobo. Traduction , Test de bugs, aide pour trouver des données dans la savemap. Test des thèmes, etc. il fait beaucoup pour aider.</translation>
+        <translation>Merci pour toute l&apos;aide avec Black Chocobo. Traduction , Test de bugs, Aide pour trouver des données dans la savemap. Test des thèmes, etc. il a fait beaucoup pour aider.</translation>
     </message>
     <message>
         <source>Thank You For, the old checksum program</source>
@@ -6900,7 +6901,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Update:Almost All Spinboxes now &quot;Wrapping&quot;</source>
-        <translation>Mise à jour:Presque toutes les cases défilantes peuvent changer d&apos;extrême</translation>
+        <translation>Mise à jour: Presque toutes les cases défilantes peuvent changer d&apos;extrême</translation>
     </message>
     <message>
         <source>Previous Versions</source>
@@ -6981,7 +6982,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
-        <translation>Mise à jour: Les armes sur la carte du monde</translation>
+        <translation>Mise à jour: Les Armes sur la carte du monde</translation>
     </message>
     <message>
         <source>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</source>
@@ -6993,7 +6994,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Update: Location Tab; Both Save &amp; World Locations</source>
-        <translation>Mise à jour: Onglets d&apos;emplacement, Emplacements de sauvegarde &amp; de la carte du monde</translation>
+        <translation>Mise à jour: Onglets d&apos;emplacement, emplacements de sauvegarde &amp; de la carte du monde</translation>
     </message>
     <message>
         <source>New: Spawn New Windows. (mainly for testing)</source>
@@ -7005,7 +7006,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</source>
-        <translation>Mise à jour: Les onglets des étables de Chocobo maintenant dans l&apos;aire de glissage</translation>
+        <translation>Mise à jour: Les onglets des écuries chocobos sont maintenant dans l&apos;aire de glissage</translation>
     </message>
     <message>
         <source>Fixed: New Window Now Via Detached Process</source>
@@ -7077,11 +7078,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Please Select An Action To Continue</source>
-        <translation>Veuillez sélectionner une action afin de poursuivre</translation>
+        <translation>Veuillez sélectionner une action pour poursuivre</translation>
     </message>
     <message>
         <source>Slot Preview</source>
-        <translation>Prévisionnement du slot</translation>
+        <translation>Prévisionnage du slot</translation>
     </message>
     <message>
         <source>Region String</source>
@@ -7093,15 +7094,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>&amp;Previous Slot</source>
-        <translation>Slot &amp;Précédent</translation>
+        <translation>Slot &amp;précédent</translation>
     </message>
     <message>
         <source>View Anyway </source>
-        <translation>Visionner malgré tout</translation>
+        <translation>Visionner quand même</translation>
     </message>
     <message>
         <source>    &amp;Next Slot</source>
-        <translation>Slot Suiva&amp;nt</translation>
+        <translation>Slot suiva&amp;nt</translation>
     </message>
     <message>
         <source>&amp;Export As Raw PSX</source>
@@ -7109,7 +7110,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Your At Slot 1</source>
-        <translation>Vous êtes au Slot 1</translation>
+        <translation>Vous êtes au slot 1</translation>
     </message>
     <message>
         <source>Sorry There is no Previous Slot</source>
@@ -7121,7 +7122,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>All Files(*)</source>
-        <translation>Tous les fichiers(*)</translation>
+        <translation>Tous les fichiers (*)</translation>
     </message>
     <message>
         <source>Black Chocobo</source>
