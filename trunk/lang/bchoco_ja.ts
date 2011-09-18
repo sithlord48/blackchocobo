@@ -1219,10 +1219,6 @@
         <translation>ティファ</translation>
     </message>
     <message>
-        <source>Aeris</source>
-        <translation type="obsolete">エアリス</translation>
-    </message>
-    <message>
         <source>Red XIII</source>
         <translation>レッドXIII</translation>
     </message>
@@ -1251,36 +1247,8 @@
         <translation>ステータス タブ</translation>
     </message>
     <message>
-        <source>STR</source>
-        <translation type="obsolete">ちから</translation>
-    </message>
-    <message>
-        <source>VIT</source>
-        <translation type="obsolete">たいりょく</translation>
-    </message>
-    <message>
-        <source>MAG</source>
-        <translation type="obsolete">まりょく</translation>
-    </message>
-    <message>
-        <source>DEX</source>
-        <translation type="obsolete">すばやさ</translation>
-    </message>
-    <message>
-        <source>SPR</source>
-        <translation type="obsolete">せいしん</translation>
-    </message>
-    <message>
-        <source>LCK</source>
-        <translation type="obsolete">うん</translation>
-    </message>
-    <message>
         <source>Stat Bonuses</source>
         <translation>ステータス ボーナス</translation>
-    </message>
-    <message>
-        <source>VIT </source>
-        <translation type="obsolete">たいりょく</translation>
     </message>
     <message>
         <source>CheckBox</source>
@@ -2014,10 +1982,6 @@
         <translation>ウータイ・仕掛け部屋の前</translation>
     </message>
     <message>
-        <source>Current Disc</source>
-        <translation type="obsolete">現在のディスク</translation>
-    </message>
-    <message>
         <source>Upper Left</source>
         <translation>左上</translation>
     </message>
@@ -2680,25 +2644,9 @@
         <translation>ゲームの進捗(&amp;G)</translation>
     </message>
     <message>
-        <source>Main Progress Var</source>
-        <translation type="obsolete">メイン進捗変数</translation>
-    </message>
-    <message>
         <source>Bombing Mission Progress</source>
         <translatorcomment>(C) Bombing Mission progress - these spinboxes allow you to change the varibles associated with bombing mission, its recommended that you do not touch these items.</translatorcomment>
         <translation>魔晄炉爆破ミッションの進捗</translation>
-    </message>
-    <message>
-        <source>0x0C85</source>
-        <translation type="obsolete">0x0C85</translation>
-    </message>
-    <message>
-        <source>0x0C86</source>
-        <translation type="obsolete">0x0C86</translation>
-    </message>
-    <message>
-        <source>0x0CE6</source>
-        <translation type="obsolete">0x0CE6</translation>
     </message>
     <message>
         <source>Bombing Mission</source>
@@ -3538,11 +3486,6 @@ Tip: Setting Location here will not change your world map location.</translatorc
         <translation>0xBD4 (itemmasks_1)</translation>
     </message>
     <message>
-        <source>0x01 Potion On MD8_3</source>
-        <translatorcomment>(H) 0xBD4 - this byte that contains all item mask bits only the 0x1 bit is known to be the potion on MD8_3 (right after you meet aeris the first time). The rest are unknown</translatorcomment>
-        <translation>0x01 MD8_3 のポーション</translation>
-    </message>
-    <message>
         <source>0x02</source>
         <translation>0x02</translation>
     </message>
@@ -3577,18 +3520,6 @@ Tip: Setting Location here will not change your world map location.</translatorc
     <message>
         <source>Can Fight Yuffie in Forests</source>
         <translation>森でユフィとバトル可能に</translation>
-    </message>
-    <message>
-        <source>0x01 Talked to Bigs</source>
-        <translation type="obsolete">0x01 ビッグスに話しかけた</translation>
-    </message>
-    <message>
-        <source>0x02 Talked to Wedge twice</source>
-        <translation type="obsolete">0x02 ウェッジに話しかけた</translation>
-    </message>
-    <message>
-        <source>0x04 Talked to Jessie Before Looking At Map</source>
-        <translation type="obsolete">0x04 地図を見る前にジェシーに話しかけた</translation>
     </message>
     <message>
         <source>Region String</source>
@@ -3747,11 +3678,6 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Verdana&apos;; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>0xD83 Midgar Train Flags (tin_1)</source>
-        <translatorcomment>(I) 0xD83 - Flags for the train after you blow up sector 1 reactor. Known items noted.</translatorcomment>
-        <translation type="obsolete">0xD83 ミッドガル列車フラグ (tin_1)</translation>
     </message>
     <message>
         <source>Cannot write file %1:
@@ -4264,18 +4190,6 @@ is not a FF7 SaveGame.</source>
     <message>
         <source>Party leader</source>
         <translation>パーティ リーダー</translation>
-    </message>
-    <message>
-        <source>X</source>
-        <translation type="obsolete">X</translation>
-    </message>
-    <message>
-        <source>Y</source>
-        <translation type="obsolete">Y</translation>
-    </message>
-    <message>
-        <source>Z</source>
-        <translation type="obsolete">Z</translation>
     </message>
     <message>
         <source>angle</source>
@@ -4908,19 +4822,11 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Elevator On Top Floor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>1st Door Open</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>2nd Door Opened</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>paned to reactor core in feild</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4932,19 +4838,11 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Trigger Game Over</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Escape From Reactor </source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Post Pan MD8_2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Post Pan MD8_3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5129,6 +5027,50 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Japanese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Field Items Picked Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MDSTIN: Potion 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MDSTIN: Potion 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NMKIN_3: Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NMKIN_1: Phoenix Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MD8_3: Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Elevator On 2nd Floor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Post Pan NMKIN_5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trigger Game Over (countdown timer out)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Post Electrical Effect MD8_3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x01 Potion On MD8_3 (see item tab)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6596,20 +6538,8 @@ Var And Scrolling Synced To Left Table</source>
         <translation>FF7 PC セーブをエクスポートするディレクトリの選択</translation>
     </message>
     <message>
-        <source>Pc Save Options</source>
-        <translation type="obsolete">PC セーブのオプション</translation>
-    </message>
-    <message>
-        <source>Set Load And Save Paths.</source>
-        <translation type="obsolete">ロード/セーブ パスを設定.</translation>
-    </message>
-    <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
         <translation>ゲーム セーブのデフォルト スロットを選択 (Raw PSX)</translation>
-    </message>
-    <message>
-        <source>Stats / New Game </source>
-        <translation type="obsolete">ステータス / New Game </translation>
     </message>
     <message>
         <source>File To load When &quot;New Game&quot; is used</source>
@@ -6624,10 +6554,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation>キャラクター ステータス ファイルの保存場所を選択</translation>
     </message>
     <message>
-        <source> Save Options</source>
-        <translation type="obsolete">セーブのオプション</translation>
-    </message>
-    <message>
         <source> Folder To Load FF7 Saves (all types) from</source>
         <translation>FF7 セーブ (すべての種類) のロード用フォルダ</translation>
     </message>
@@ -6638,10 +6564,6 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Folder To Export Pc (.ff7) Save Games</source>
         <translation>PC (.ff7) セ－ブのエクスポート フォルダ</translation>
-    </message>
-    <message>
-        <source>&amp;Ok</source>
-        <translation type="obsolete">&amp;OK</translation>
     </message>
     <message>
         <source>Main Window Background Color</source>
@@ -7231,6 +7153,18 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Better Organized Progression Tab.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Japanese Translation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Japanese Translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Field Items Picked Up</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
