@@ -163,6 +163,11 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
         ui->action_Lang_fr->setChecked(1);
         ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_sel"));
     }
+    else if(settings.value("lang").toString() == "jp")
+    {
+        ui->action_Lang_jp->setChecked(1);
+        ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_sel"));
+    }
     // Connect the unknown and unknown compare scrolling.
     connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );
     connect( ui->tbl_compare_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_unknown->verticalScrollBar(), SLOT(setValue(int)) );
@@ -1133,10 +1138,12 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
 void MainWindow::on_action_Lang_en_triggered()
 {
     //clear other lang
-    ui->action_Lang_es->setIcon(QIcon(":/icon/es_unsel"));
     ui->action_Lang_es->setChecked(0);
-    ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
+    ui->action_Lang_es->setIcon(QIcon(":/icon/es_unsel"));
     ui->action_Lang_fr->setChecked(0);
+    ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
+    ui->action_Lang_jp->setChecked(0);
+    ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_unsel"));
     settings.setValue("lang","en");
     ui->action_Lang_en->setIcon(QIcon(":/icon/us_sel"));
     QMessageBox::information(this,"Language Changed","You Must Restart For The Language to Change");
@@ -1147,6 +1154,8 @@ void MainWindow::on_action_Lang_es_triggered()
     ui->action_Lang_en->setIcon(QIcon(":/icon/us_unsel"));
     ui->action_Lang_fr->setChecked(0);
     ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
+    ui->action_Lang_jp->setChecked(0);
+    ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_unsel"));
     settings.setValue("lang","es");
     ui->action_Lang_es->setIcon(QIcon(":/icon/es_sel"));
     QMessageBox::information(this,"Idioma Cambiado","Debe reiniciar Para el cambio de idioma");
@@ -1157,9 +1166,23 @@ void MainWindow::on_action_Lang_fr_triggered()
     ui->action_Lang_en->setIcon(QIcon(":/icon/us_unsel"));
     ui->action_Lang_es->setChecked(0);
     ui->action_Lang_es->setIcon(QIcon(":/icon/es_unsel"));
+    ui->action_Lang_jp->setChecked(0);
+    ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_unsel"));
     settings.setValue("lang","fr");
     ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_sel"));
     QMessageBox::information(this,"Langue Modifiée","Vous Devez Redemarrer Pour Changer la Langue");
+}
+void MainWindow::on_action_Lang_jp_triggered()
+{
+    ui->action_Lang_en->setChecked(0);
+    ui->action_Lang_en->setIcon(QIcon(":/icon/us_unsel"));
+    ui->action_Lang_es->setChecked(0);
+    ui->action_Lang_es->setIcon(QIcon(":/icon/es_unsel"));
+    ui->action_Lang_fr->setChecked(0);
+    ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
+    settings.setValue("lang","ja");
+    ui->action_Lang_fr->setIcon(QIcon(":/icon/jp_sel"));
+    QMessageBox::information(this,"Lang changed","Restart For Language Change");
 }
 /*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_USA_triggered(bool checked)

@@ -5005,6 +5005,10 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
         <source>s7pl_8</source>
         <translation></translation>
     </message>
+    <message>
+        <source>Japanese</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>

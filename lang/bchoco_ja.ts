@@ -1,1267 +1,1295 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_ES">
+<TS version="2.0" language="ja" sourcelanguage="en_US">
 <context>
     <name>Items</name>
     <message>
         <source>Potion</source>
-        <translation>Poción</translation>
+        <translation>ポーション</translation>
     </message>
     <message>
         <source>Hi-Potion</source>
-        <translation>Poción S</translation>
+        <translation>ハイポーション</translation>
     </message>
     <message>
         <source>X-Potion</source>
-        <translation>Poción X</translation>
+        <translation>エクスポーション</translation>
     </message>
     <message>
         <source>Ether</source>
-        <translation>Éter</translation>
+        <translation>エーテル</translation>
     </message>
     <message>
         <source>Turbo Ether</source>
-        <translation>Éter Turbo</translation>
+        <translation>エーテルターボ</translation>
     </message>
     <message>
         <source>Elixir</source>
-        <translation>Elixir</translation>
+        <translation>エリクサー</translation>
     </message>
     <message>
         <source>Megalixir</source>
-        <translation>Megaelixir</translation>
+        <translation>ラストエリクサー</translation>
     </message>
     <message>
         <source>Phoenix Down</source>
-        <translation>Plumaje Fénix</translation>
+        <translation>フェニックスの尾</translation>
     </message>
     <message>
         <source>Antidote</source>
-        <translation>Antídoto</translation>
+        <translation>毒消し</translation>
     </message>
     <message>
         <source>Soft</source>
-        <translation>Blando</translation>
+        <translation>金の針</translation>
     </message>
     <message>
         <source>Maiden&apos;s Kiss</source>
-        <translation>Beso doncella</translation>
+        <translation>乙女のキッス</translation>
     </message>
     <message>
         <source>Cornucopia</source>
-        <translation>Cornucopia</translation>
+        <translation>うちでのこづち</translation>
     </message>
     <message>
         <source>Echo screen</source>
-        <translation>Pantalla sonora</translation>
+        <translation>やまびこえんまく</translation>
     </message>
     <message>
         <source>Hyper</source>
-        <translation>Híper</translation>
+        <translation>興奮剤</translation>
     </message>
     <message>
         <source>Tranquilizer</source>
-        <translation>Tranquilizante</translation>
+        <translation>鎮静剤</translation>
     </message>
     <message>
         <source>Remedy</source>
-        <translation>Remedio</translation>
+        <translation>万能薬</translation>
     </message>
     <message>
         <source>Smoke Bomb</source>
-        <translation>Bomba humo</translation>
+        <translation>けむりだま</translation>
     </message>
     <message>
         <source>Speed Drink</source>
-        <translation>Bebida Velocidad</translation>
+        <translation>スピードドリンク</translation>
     </message>
     <message>
         <source>Hero Drink</source>
-        <translation>Bebida Héroe</translation>
+        <translation>英雄の薬</translation>
     </message>
     <message>
         <source>Vaccine</source>
-        <translation>Vacuna</translation>
+        <translation>ワクチン</translation>
     </message>
     <message>
         <source>Grenade</source>
-        <translation>Granada</translation>
+        <translation>手榴弾</translation>
     </message>
     <message>
         <source>Shrapnel</source>
-        <translation>Metralla</translation>
+        <translation>ボムのかけら</translation>
     </message>
     <message>
         <source>Hourglass</source>
-        <translation>Reloj de arena</translation>
+        <translation>金の砂時計</translation>
     </message>
     <message>
         <source>Kiss of Death</source>
-        <translation>Beso mortal</translation>
+        <translation>死神のキッス</translation>
     </message>
     <message>
         <source>Spider Web</source>
-        <translation>Telaraña</translation>
+        <translation>クモの糸</translation>
     </message>
     <message>
         <source>Dream Powder</source>
-        <translation>Polvo dormir</translation>
+        <translation>ドリームパウダー</translation>
     </message>
     <message>
         <source>Mute Mask</source>
-        <translation>Máscara silencio</translation>
+        <translation>サイレントマスク</translation>
     </message>
     <message>
         <source>War Gong</source>
-        <translation>Gong</translation>
+        <translation>戦いのゴング</translation>
     </message>
     <message>
         <source>Loco weed</source>
-        <translation>Hierbas</translation>
+        <translation>惑わし草</translation>
     </message>
     <message>
         <source>Fire Fang</source>
-        <translation>Colmillo fuego</translation>
+        <translation>火龍の牙</translation>
     </message>
     <message>
         <source>Fire Veil</source>
-        <translation>Velo fuego</translation>
+        <translation>火とん</translation>
     </message>
     <message>
         <source>Antarctic Wind</source>
-        <translation>Viento antártico</translation>
+        <translation>南極の風</translation>
     </message>
     <message>
         <source>Ice Crystal</source>
-        <translation>Cristal hielo</translation>
+        <translation>冷気の結晶</translation>
     </message>
     <message>
         <source>Bolt Plume</source>
-        <translation>Pluma rayo</translation>
+        <translation>電撃鳥の角</translation>
     </message>
     <message>
         <source>Swift Bolt</source>
-        <translation>Rayo rápido</translation>
+        <translation>雷迅</translation>
     </message>
     <message>
         <source>Earth Drum</source>
-        <translation>Tambor tierra</translation>
+        <translation>大地のドラム</translation>
     </message>
     <message>
         <source>Earth Mallet</source>
-        <translation>Mazo tierra</translation>
+        <translation>大地のハンマー</translation>
     </message>
     <message>
         <source>Deadly Waste</source>
-        <translation>Basura letal</translation>
+        <translation>有害物質</translation>
     </message>
     <message>
         <source>M-Tentacles</source>
-        <translation>M-Tentáculos</translation>
+        <translation>モルボルの触手</translation>
     </message>
     <message>
         <source>Stardust</source>
-        <translation>Polvo estelar</translation>
+        <translation>星の砂</translation>
     </message>
     <message>
         <source>Vampire Fang</source>
-        <translation>Colmillo vampiro</translation>
+        <translation>バンパイアの牙</translation>
     </message>
     <message>
         <source>Ghost Hand</source>
-        <translation>Mano fantasma</translation>
+        <translation>ゴーストハンド</translation>
     </message>
     <message>
         <source>Vagyrisk Claw</source>
-        <translation>Garra Vagyrisk</translation>
+        <translation>バジリスクの爪</translation>
     </message>
     <message>
         <source>Light Curtain</source>
-        <translation>Cortina de luz</translation>
+        <translation>光のカーテン</translation>
     </message>
     <message>
         <source>Lunar Curtain</source>
-        <translation>Cortina lunar</translation>
+        <translation>月のカーテン</translation>
     </message>
     <message>
         <source>Mirror</source>
-        <translation>Espejo</translation>
+        <translation>反射ミラー</translation>
     </message>
     <message>
         <source>Holy Torch</source>
-        <translation>Antorcha sagrada</translation>
+        <translation>聖なるトーチ</translation>
     </message>
     <message>
         <source>Bird Wing</source>
-        <translation>Ala pájaro</translation>
+        <translation>巨鳥のハネ</translation>
     </message>
     <message>
         <source>Dragon Scales</source>
-        <translation>Escamas dragón</translation>
+        <translation>海龍のウロコ</translation>
     </message>
     <message>
         <source>Impaler</source>
-        <translation>Empalar</translation>
+        <translation>モズのはやにえ</translation>
     </message>
     <message>
         <source>Shrivel</source>
-        <translation>Secado</translation>
+        <translation>チヂマール</translation>
     </message>
     <message>
         <source>Eye drop</source>
-        <translation>Colirio</translation>
+        <translation>目薬</translation>
     </message>
     <message>
         <source>Molotov</source>
-        <translation>Molotov</translation>
+        <translation>ファイアカクテル</translation>
     </message>
     <message>
         <source>S-mine</source>
-        <translation>Mina S</translation>
+        <translation>Sマイン</translation>
     </message>
     <message>
         <source>Graviball</source>
-        <translation>Gravibola</translation>
+        <translation>重力球</translation>
     </message>
     <message>
         <source>T/S Bomb</source>
-        <translation>Bomba T/S</translation>
+        <translation>時空弾</translation>
     </message>
     <message>
         <source>Ink</source>
-        <translation>Tinta</translation>
+        <translation>イカスミ</translation>
     </message>
     <message>
         <source>Dazers</source>
-        <translation>Aturdidor</translation>
+        <translation>しびれ針</translation>
     </message>
     <message>
         <source>Dragon Fang</source>
-        <translation>Colmillo dragón</translation>
+        <translation>双龍の牙</translation>
     </message>
     <message>
         <source>Cauldron</source>
-        <translation>Caldera</translation>
+        <translation>魔女の大釜</translation>
     </message>
     <message>
         <source>Sylkis Greens</source>
-        <translation>Verduras Sylkis</translation>
+        <translation>シルキスの野菜</translation>
     </message>
     <message>
         <source>Reagan Greens</source>
-        <translation>Verduras Reagan</translation>
+        <translation>レイゲンの野菜</translation>
     </message>
     <message>
         <source>Mimett Greens</source>
-        <translation>Verduras Mimett</translation>
+        <translation>ミメットの野菜</translation>
     </message>
     <message>
         <source>Curiel Greens</source>
-        <translation>Verduras Curiel</translation>
+        <translation>クリーエの野菜</translation>
     </message>
     <message>
         <source>Pahsana Greens</source>
-        <translation>Verduras Pahsana</translation>
+        <translation>パサーナの野菜</translation>
     </message>
     <message>
         <source>Tantal Greens</source>
-        <translation>Verduras Tantal</translation>
+        <translation>タンタルの野菜</translation>
     </message>
     <message>
         <source>Krakka Greens</source>
-        <translation>Verduras Krakka</translation>
+        <translation>クラッカの野菜</translation>
     </message>
     <message>
         <source>Gysahl Greens</source>
-        <translation>Verduras Gyshal</translation>
+        <translation>ギザールの野菜</translation>
     </message>
     <message>
         <source>Tent</source>
-        <translation>Carpa</translation>
+        <translation>テント</translation>
     </message>
     <message>
         <source>Power Source</source>
-        <translation>Fuente Potencia</translation>
+        <translation>パワーアップ</translation>
     </message>
     <message>
         <source>Guard Source</source>
-        <translation>Fuente guardia</translation>
+        <translation>ガードアップ</translation>
     </message>
     <message>
         <source>Magic Source</source>
-        <translation>Fuente Magia</translation>
+        <translation>マジックアップ</translation>
     </message>
     <message>
         <source>Mind Source</source>
-        <translation>Fuente espíritu</translation>
+        <translation>マインドアップ</translation>
     </message>
     <message>
         <source>Speed Source</source>
-        <translation>Fuente veloc.</translation>
+        <translation>スピードアップ</translation>
     </message>
     <message>
         <source>Luck Source</source>
-        <translation>Fuente Suerte</translation>
+        <translation>ラックアップ</translation>
     </message>
     <message>
         <source>Zeio Nut</source>
-        <translation>Nuez Zeio</translation>
+        <translation>ゼイオの実</translation>
     </message>
     <message>
         <source>Carob Nut</source>
-        <translation>Nuez Carob</translation>
+        <translation>カラブの実</translation>
     </message>
     <message>
         <source>Porov Nut</source>
-        <translation>Nuez Porov</translation>
+        <translation>ポロフの実</translation>
     </message>
     <message>
         <source>Pram Nut</source>
-        <translation>Nuez Pram</translation>
+        <translation>パラムの実</translation>
     </message>
     <message>
         <source>Lasan Nut</source>
-        <translation>Nuez Lasan</translation>
+        <translation>ラサンの実</translation>
     </message>
     <message>
         <source>Luchile Nut</source>
-        <translation>Nuez Luchile</translation>
+        <translation>ルチルの実</translation>
     </message>
     <message>
         <source>Pepio Nut</source>
-        <translation>Nuez Pepio</translation>
+        <translation>ピピオの実</translation>
     </message>
     <message>
         <source>Battery</source>
-        <translation>Batería</translation>
+        <translation>ジンクバッテリー</translation>
     </message>
     <message>
         <source>Tissue</source>
-        <translation>Pañuelo</translation>
+        <translation>ポケットティッシュ</translation>
     </message>
     <message>
         <source>Omnislash</source>
-        <translation>Omnilátigo</translation>
+        <translation>超究武神覇斬</translation>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation>Catástrofe</translation>
+        <translation>カタストロフィ</translation>
     </message>
     <message>
         <source>Final Heaven</source>
-        <translation>Cielo Final</translation>
+        <translation>ファイナルヘヴン</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation>Gran Evangelio</translation>
+        <translation>大いなる福音</translation>
     </message>
     <message>
         <source>Cosmo Memory</source>
-        <translation>Memoria Cósmica</translation>
+        <translation>コスモメモリー</translation>
     </message>
     <message>
         <source>All Creation</source>
-        <translation>Toda Creación</translation>
+        <translation>森羅万象</translation>
     </message>
     <message>
         <source>Chaos</source>
-        <translation>Caos</translation>
+        <translation>カオス</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation>Gran Viento</translation>
+        <translation>ハイウインド</translation>
     </message>
     <message>
         <source>Super Sweeper</source>
-        <translation>Super barredor</translation>
+        <translation>超合金スイーパー</translation>
     </message>
     <message>
         <source>Masamune Blade</source>
-        <translation>Espada Masamune</translation>
+        <translation>マサムネブレード</translation>
     </message>
     <message>
         <source>Save Crystal</source>
-        <translation>Cristal salvador</translation>
+        <translation>セーブクリスタル</translation>
     </message>
     <message>
         <source>Combat Diary</source>
-        <translation>Diario de combate</translation>
+        <translation>ディオ激闘日記</translation>
     </message>
     <message>
         <source>Autograph</source>
-        <translation>Autógrafo</translation>
+        <translation>サイン色紙</translation>
     </message>
     <message>
         <source>Gambler</source>
-        <translation>Jugador</translation>
+        <translation>人生バクチ打ち</translation>
     </message>
     <message>
         <source>Desert Rose</source>
-        <translation>Rosa del desierto</translation>
+        <translation>デザートローズ</translation>
     </message>
     <message>
         <source>Earth Harp</source>
-        <translation>Arpa tierra</translation>
+        <translation>アースハープ</translation>
     </message>
     <message>
         <source>Guide Book</source>
-        <translation>Guía</translation>
+        <translation>ガイドブック</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation>NO USAR</translation>
+        <translation>使用不可</translation>
     </message>
     <message>
         <source>Buster Sword</source>
-        <translation>Espada Mortal</translation>
+        <translation>バスターソード</translation>
     </message>
     <message>
         <source>Mythril Saber</source>
-        <translation>Sable Mitrilo</translation>
+        <translation>ミスリルセイバー</translation>
     </message>
     <message>
         <source>Hardedge</source>
-        <translation>Borde Duro</translation>
+        <translation>ハードブレイカー</translation>
     </message>
     <message>
         <source>Butterfly Edge</source>
-        <translation>Borde Mariposa</translation>
+        <translation>バタフライエッジ</translation>
     </message>
     <message>
         <source>Enhance Sword</source>
-        <translation>Super Espada</translation>
+        <translation>エンハンスソード</translation>
     </message>
     <message>
         <source>Organics</source>
-        <translation>Orgánica</translation>
+        <translation>オーガニクス</translation>
     </message>
     <message>
         <source>Crystal Sword</source>
-        <translation>Espada Cristal</translation>
+        <translation>クリスタルソード</translation>
     </message>
     <message>
         <source>Force Stealer</source>
-        <translation>Ladrón</translation>
+        <translation>フォースイーター</translation>
     </message>
     <message>
         <source>Rune Blade</source>
-        <translation>Hoja Runa</translation>
+        <translation>ルーンブレイド</translation>
     </message>
     <message>
         <source>Murasame</source>
-        <translation>Murasame</translation>
+        <translation>村雨</translation>
     </message>
     <message>
         <source>Nail Bat</source>
-        <translation>Garra</translation>
+        <translation>釘バット</translation>
     </message>
     <message>
         <source>Yoshiyuki</source>
-        <translation>Yoshiyuki</translation>
+        <translation>陸奥守吉行</translation>
     </message>
     <message>
         <source>Apocalypse</source>
-        <translation>Apocalipsis</translation>
+        <translation>アポカリプス</translation>
     </message>
     <message>
         <source>Heaven&apos;s Cloud</source>
-        <translation>Nubecielo</translation>
+        <translation>天の叢雲</translation>
     </message>
     <message>
         <source>Ragnarok</source>
-        <translation>Ragnarok</translation>
+        <translation>ラグナロク</translation>
     </message>
     <message>
         <source>Ultima Weapon</source>
-        <translation>Arma Última</translation>
+        <translation>アルテマウェポン</translation>
     </message>
     <message>
         <source>Leather Glove</source>
-        <translation>Guante de Piel</translation>
+        <translation>レザーグローブ</translation>
     </message>
     <message>
         <source>Metal Knuckle</source>
-        <translation>Nudillo Metal</translation>
+        <translation>メタルナックル</translation>
     </message>
     <message>
         <source>Mythril Claw</source>
-        <translation>Garra Mitrilo</translation>
+        <translation>ミスリルクロー</translation>
     </message>
     <message>
         <source>Grand Glove</source>
-        <translation>Gran Guante</translation>
+        <translation>グランドグラブ</translation>
     </message>
     <message>
         <source>Tiger Fang</source>
-        <translation>Colmillo Tigre</translation>
+        <translation>タイガーファング</translation>
     </message>
     <message>
         <source>Diamond Knuckle</source>
-        <translation>Nudillo Diamante</translation>
+        <translation>ダイアナックル</translation>
     </message>
     <message>
         <source>Dragon Claw</source>
-        <translation>Garra Dragón</translation>
+        <translation>ドラゴンクロー</translation>
     </message>
     <message>
         <source>Crystal Glove</source>
-        <translation>Guante Cristal</translation>
+        <translation>クリスタルグラブ</translation>
     </message>
     <message>
         <source>Motor Drive</source>
-        <translation>Fuerza Motor</translation>
+        <translation>モータードライブ</translation>
     </message>
     <message>
         <source>Platinum Fist</source>
-        <translation>Puño Platino</translation>
+        <translation>プラチナフィスト</translation>
     </message>
     <message>
         <source>Kaiser Knuckle</source>
-        <translation>Nudillo Kaiser</translation>
+        <translation>カイザーナックル</translation>
     </message>
     <message>
         <source>Work Glove</source>
-        <translation>Guante de Trabajo</translation>
+        <translation>軍手</translation>
     </message>
     <message>
         <source>Powersoul</source>
-        <translation>Alma Poder</translation>
+        <translation>オーバーソウル</translation>
     </message>
     <message>
         <source>Master Fist</source>
-        <translation>Puño Principal</translation>
+        <translation>マスターフィスト</translation>
     </message>
     <message>
         <source>God&apos;s Hand</source>
-        <translation>Mano de Diós</translation>
+        <translation>ゴッドハンド</translation>
     </message>
     <message>
         <source>Premium Heart</source>
-        <translation>Corazón</translation>
+        <translation>プレミアムハート</translation>
     </message>
     <message>
         <source>Gatling Gun</source>
-        <translation>Arma Abrir</translation>
+        <translation>ガトリングガン</translation>
     </message>
     <message>
         <source>Assault Gun</source>
-        <translation>Arma Asalto</translation>
+        <translation>アサルトガン</translation>
     </message>
     <message>
         <source>Cannon Ball</source>
-        <translation>Bala Cañón</translation>
+        <translation>キャノンボール</translation>
     </message>
     <message>
         <source>Atomic Scissors</source>
-        <translation>Tijera Atómica</translation>
+        <translation>アトミックシザー</translation>
     </message>
     <message>
         <source>Heavy Vulcan</source>
-        <translation>Vulcano Pesado</translation>
+        <translation>ハードバルカン</translation>
     </message>
     <message>
         <source>Chainsaw</source>
-        <translation>Motosierra</translation>
+        <translation>チェーンソー</translation>
     </message>
     <message>
         <source>Microlaser</source>
-        <translation>Microlaser</translation>
+        <translation>マイクロレーザー</translation>
     </message>
     <message>
         <source>W Machine Gun</source>
-        <translation>Metralleta W</translation>
+        <translation>Wマシンガン</translation>
     </message>
     <message>
         <source>Drill Arm</source>
-        <translation>Taladro</translation>
+        <translation>ドリルアーム</translation>
     </message>
     <message>
         <source>Solid Bazooka</source>
-        <translation>Bazuka Solida</translation>
+        <translation>ソリッドバズーカ</translation>
     </message>
     <message>
         <source>Rocket Punch</source>
-        <translation>Golpe Cohete</translation>
+        <translation>ロケットパンチ</translation>
     </message>
     <message>
         <source>Enemy Launcher</source>
-        <translation>Lanza Enemigos</translation>
+        <translation>エネミーランチャ</translation>
     </message>
     <message>
         <source>Pile Banger</source>
-        <translation>Pila Banger</translation>
+        <translation>パイルバンカー</translation>
     </message>
     <message>
         <source>Max Ray</source>
-        <translation>Rayo Máximo</translation>
+        <translation>マキシマムレイ</translation>
     </message>
     <message>
         <source>Missing Score</source>
-        <translation>Punto Errado</translation>
+        <translation>ミッシングスコア</translation>
     </message>
     <message>
         <source>Mythril Clip</source>
-        <translation>Clip Mitrilo</translation>
+        <translation>ミスリルクリップ</translation>
     </message>
     <message>
         <source>Diamond Pin</source>
-        <translation>Aguja Diamantada</translation>
+        <translation>ギヤマンヘアピン</translation>
     </message>
     <message>
         <source>Silver Barette</source>
-        <translation>Barreta Plata</translation>
+        <translation>シルバーバレッタ</translation>
     </message>
     <message>
         <source>Gold Barette</source>
-        <translation>Barreta Oro</translation>
+        <translation>ゴールドバレッタ</translation>
     </message>
     <message>
         <source>Adaman Clip</source>
-        <translation>Clip Adaman</translation>
+        <translation>アダマンクリップ</translation>
     </message>
     <message>
         <source>Crystal Comb</source>
-        <translation>Peine Cristal</translation>
+        <translation>クリスタルコーム</translation>
     </message>
     <message>
         <source>Magic Comb</source>
-        <translation>Peine Mágico</translation>
+        <translation>マジックコーム</translation>
     </message>
     <message>
         <source>Centclip</source>
-        <translation>Centclip</translation>
+        <translation>セントクリップ</translation>
     </message>
     <message>
         <source>Hairpin</source>
-        <translation>Horquilla</translation>
+        <translation>かんざし</translation>
     </message>
     <message>
         <source>Seraph Comb</source>
-        <translation>Peine Seraf</translation>
+        <translation>セラフコーム</translation>
     </message>
     <message>
         <source>Behemoth Horn</source>
-        <translation>Cuerno Behemot</translation>
+        <translation>ベヒーモスホーン</translation>
     </message>
     <message>
         <source>Spring Gun Clip</source>
-        <translation>Clip Pistola</translation>
+        <translation>スプリガンクリップ</translation>
     </message>
     <message>
         <source>Limited Moon</source>
-        <translation>Luna Limitada</translation>
+        <translation>リミテッドムーン</translation>
     </message>
     <message>
         <source>Guard Stick</source>
-        <translation>Porra</translation>
+        <translation>ガードロッド</translation>
     </message>
     <message>
         <source>Mythril Rod</source>
-        <translation>Vara Mitrilo</translation>
+        <translation>ミスリルロッド</translation>
     </message>
     <message>
         <source>Full Metal Staff</source>
-        <translation>Vara Metal</translation>
+        <translation>フルメタルロッド</translation>
     </message>
     <message>
         <source>Striking Staff</source>
-        <translation>Vara Golpeadora</translation>
+        <translation>ストライクロッド</translation>
     </message>
     <message>
         <source>Prism Staff</source>
-        <translation>Vara Prisma</translation>
+        <translation>プリズムロッド</translation>
     </message>
     <message>
         <source>Aurora Rod</source>
-        <translation>Vara Aurora</translation>
+        <translation>オーロラロッド</translation>
     </message>
     <message>
         <source>Wizard Staff</source>
-        <translation>Vara Mágica</translation>
+        <translation>ウィザードロッド</translation>
     </message>
     <message>
         <source>Wizer Staff</source>
-        <translation>Vara Wizer</translation>
+        <translation>ワイザーロッド</translation>
     </message>
     <message>
         <source>Fairy Tale</source>
-        <translation>Cuento</translation>
+        <translation>フェアリーテイル</translation>
     </message>
     <message>
         <source>Umbrella</source>
-        <translation>Paraguas</translation>
+        <translation>アンブレラ</translation>
     </message>
     <message>
         <source>Princess Guard</source>
-        <translation>Guardia Princesa</translation>
+        <translation>プリンセスガード</translation>
     </message>
     <message>
         <source>Spear</source>
-        <translation>Lanza</translation>
+        <translation>スピア</translation>
     </message>
     <message>
         <source>Slash Lance</source>
-        <translation>Lanza Mortal</translation>
+        <translation>スラッシュパイク</translation>
     </message>
     <message>
         <source>Trident</source>
-        <translation>Tridente</translation>
+        <translation>トライデント</translation>
     </message>
     <message>
         <source>Mast Ax</source>
-        <translation>Hacha</translation>
+        <translation>ポールアックス</translation>
     </message>
     <message>
         <source>Partisan</source>
-        <translation>Partisano</translation>
+        <translation>パルチザン</translation>
     </message>
     <message>
         <source>Viper Halberd</source>
-        <translation>Víbora Halberd</translation>
+        <translation>蛇矛</translation>
     </message>
     <message>
         <source>Javelin</source>
-        <translation>Jabalina</translation>
+        <translation>ジャベリン</translation>
     </message>
     <message>
         <source>Grow Lance</source>
-        <translation>Lanza Crecimiento</translation>
+        <translation>グローランス</translation>
     </message>
     <message>
         <source>Mop</source>
-        <translation>Fregador</translation>
+        <translation>モップ</translation>
     </message>
     <message>
         <source>Dragoon Lance</source>
-        <translation>Lanza Dragón</translation>
+        <translation>ドラグーンランス</translation>
     </message>
     <message>
         <source>Scimitar</source>
-        <translation>Cimitarra</translation>
+        <translation>青龍偃月刀</translation>
     </message>
     <message>
         <source>Flayer</source>
-        <translation>Cruel</translation>
+        <translation>方天画戟</translation>
     </message>
     <message>
         <source>Spirit Lance</source>
-        <translation>Lanza Espíritu</translation>
+        <translation>ロンギヌス</translation>
     </message>
     <message>
         <source>Venus Gospel</source>
-        <translation>Evangelio Venus</translation>
+        <translation>ビーナスゴスペル</translation>
     </message>
     <message>
         <source>4-point Shuriken</source>
-        <translation>Shuriken 4 Puntos</translation>
+        <translation>十字手裏剣</translation>
     </message>
     <message>
         <source>Boomerang</source>
-        <translation>Bumerán</translation>
+        <translation>ブーメラン</translation>
     </message>
     <message>
         <source>Pinwheel</source>
-        <translation>Molinillo</translation>
+        <translation>風車</translation>
     </message>
     <message>
         <source>Razor Ring</source>
-        <translation>Anillo Corte</translation>
+        <translation>円月輪</translation>
     </message>
     <message>
         <source>Hawkeye</source>
-        <translation>Halcón</translation>
+        <translation>ホークアイ</translation>
     </message>
     <message>
         <source>Crystal Cross</source>
-        <translation>Cruz de Cristal</translation>
+        <translation>クリスタルクロス</translation>
     </message>
     <message>
         <source>Wind Slash</source>
-        <translation>Ventolera</translation>
+        <translation>風斬り</translation>
     </message>
     <message>
         <source>Twin Viper</source>
-        <translation>Serpiente Bicéfala</translation>
+        <translation>ツインヴァイパー</translation>
     </message>
     <message>
         <source>Spiral Shuriken</source>
-        <translation>Shuriken Espiral</translation>
+        <translation>卍手裏剣</translation>
     </message>
     <message>
         <source>Superball</source>
-        <translation>Superbola</translation>
+        <translation>スーパーボール</translation>
     </message>
     <message>
         <source>Magic Shuriken</source>
-        <translation>Shuriken Mágico</translation>
+        <translation>風魔手裏剣</translation>
     </message>
     <message>
         <source>Rising Sun</source>
-        <translatorcomment>Not Present on The Site  Used google.</translatorcomment>
-        <translation>Sol Naciente</translation>
+        <translation>ライジングサン</translation>
     </message>
     <message>
         <source>Oritsuru</source>
-        <translation>Oritsuru</translation>
+        <translation>折り鶴</translation>
     </message>
     <message>
         <source>Conformer</source>
-        <translation>Conformar</translation>
+        <translation>不倶戴天</translation>
     </message>
     <message>
         <source>Yellow M-phone</source>
-        <translation>M-Fono Amarillo</translation>
+        <translation>イエローメガホン</translation>
     </message>
     <message>
         <source>Green M-phone</source>
-        <translation>M-Fono Verde</translation>
+        <translation>グリーンメガホン</translation>
     </message>
     <message>
         <source>Blue M-phone</source>
-        <translation>M-Fono Azul</translation>
+        <translation>ブルーメガホン</translation>
     </message>
     <message>
         <source>Red M-phone</source>
-        <translation>M-Fono Rojo</translation>
+        <translation>レッドメガホン</translation>
     </message>
     <message>
         <source>Crystal M-phone</source>
-        <translation>M-Fono Cristal</translation>
+        <translation>クリスタルメガホン</translation>
     </message>
     <message>
         <source>White M-phone</source>
-        <translation>M-Fono Blanco</translation>
+        <translation>ホワイトメガホン</translation>
     </message>
     <message>
         <source>Black M-phone</source>
-        <translation>M-Fono Negro</translation>
+        <translation>ブラックメガホン</translation>
     </message>
     <message>
         <source>Silver M-phone</source>
-        <translation>M-Fono Plata</translation>
+        <translation>シルバーメガホン</translation>
     </message>
     <message>
         <source>Trumpet Shell</source>
-        <translation>Armazón</translation>
+        <translation>法螺貝</translation>
     </message>
     <message>
         <source>Gold M-phone</source>
-        <translation>M-Fono Oro</translation>
+        <translation>ゴールドメガホン</translation>
     </message>
     <message>
         <source>Battle Trumpet</source>
-        <translation>Trompeta</translation>
+        <translation>突撃ラッパ</translation>
     </message>
     <message>
         <source>Starlight Phone</source>
-        <translation>Fono de Luz</translation>
+        <translation>スターライトホン</translation>
     </message>
     <message>
         <source>HP Shout</source>
-        <translation>Grito de PG</translation>
+        <translation>マーベラスチアー</translation>
     </message>
     <message>
         <source>Quicksilver</source>
-        <translation>Mercurio</translation>
+        <translation>クイックシルバー</translation>
     </message>
     <message>
         <source>Shotgun</source>
-        <translation>Escopeta</translation>
+        <translation>スパス</translation>
     </message>
     <message>
         <source>Shortbarrel</source>
-        <translation>Cañón Corto</translation>
+        <translation>ランダル</translation>
     </message>
     <message>
         <source>Lariat</source>
-        <translation>Lazo</translation>
+        <translation>ライアット</translation>
     </message>
     <message>
         <source>Winchester</source>
-        <translation>Winchester</translation>
+        <translation>ウィンチェスター</translation>
     </message>
     <message>
         <source>Peacemaker</source>
-        <translation>Pacificador</translation>
+        <translation>ピースメーカー</translation>
     </message>
     <message>
         <source>Buntline</source>
-        <translation>Línea</translation>
+        <translation>バントライン</translation>
     </message>
     <message>
         <source>Long Barrel R</source>
-        <translation>Cañón Largo R</translation>
+        <translation>ロングバレルR</translation>
     </message>
     <message>
         <source>Silver Rifle</source>
-        <translation>Rifle</translation>
+        <translation>銀玉鉄砲</translation>
     </message>
     <message>
         <source>Sniper CR</source>
-        <translation>CR Francotirador</translation>
+        <translation>スナイパーCR</translation>
     </message>
     <message>
         <source>Supershot ST</source>
-        <translation>Super ST</translation>
+        <translation>ハイブロウST</translation>
     </message>
     <message>
         <source>Outsider</source>
-        <translation>Forastero</translation>
+        <translation>アウトサイダー</translation>
     </message>
     <message>
         <source>Death Penalty</source>
-        <translation>Pena de Muerte </translation>
+        <translation>デスペナルティ</translation>
     </message>
     <message>
         <source>Masamune</source>
-        <translation>Masamune</translation>
+        <translation>正宗</translation>
     </message>
     <message>
         <source>Bronze Bangle</source>
-        <translation>Aro de Bronce</translation>
+        <translation>ブロンズバングル</translation>
     </message>
     <message>
         <source>Iron Bangle</source>
-        <translation>Aro de Hierro</translation>
+        <translation>アイアンバングル</translation>
     </message>
     <message>
         <source>Titan Bangle</source>
-        <translation>Aro de Titanio</translation>
+        <translation>チタンバングル</translation>
     </message>
     <message>
         <source>Mythril Armlet</source>
-        <translation>Aro de Mitrilo</translation>
+        <translation>ミスリルの腕輪</translation>
     </message>
     <message>
         <source>Carbon Bangle</source>
-        <translation>Aro de Carbono</translation>
+        <translation>カーボンバングル</translation>
     </message>
     <message>
         <source>Silver Armlet</source>
-        <translation>Aro de Plata</translation>
+        <translation>銀の腕輪</translation>
     </message>
     <message>
         <source>Gold Armlet</source>
-        <translation>Aro de Oro</translation>
+        <translation>金の腕輪</translation>
     </message>
     <message>
         <source>Diamond Bangle</source>
-        <translation>Aro de Diamante</translation>
+        <translation>ダイアバングル</translation>
     </message>
     <message>
         <source>Crystal Bangle</source>
-        <translation>Aro de Cristal</translation>
+        <translation>クリスタルバングル</translation>
     </message>
     <message>
         <source>Platinum Bangle</source>
-        <translation>Aro de Platino</translation>
+        <translation>プラチナバングル</translation>
     </message>
     <message>
         <source>Rune Armlet</source>
-        <translation>Aro de runa</translation>
+        <translation>ルーンの腕輪</translation>
     </message>
     <message>
         <source>Edincoat</source>
-        <translation>Abrigo</translation>
+        <translation>エジンコート</translation>
     </message>
     <message>
         <source>Wizard Bracelet</source>
-        <translation>Aro de mago</translation>
+        <translation>ウィザードブレス</translation>
     </message>
     <message>
         <source>Adaman Bangle</source>
-        <translation>Aro de adamán</translation>
+        <translation>アダマンバングル</translation>
     </message>
     <message>
         <source>Gigas Armlet</source>
-        <translation>Aro de Gigas</translation>
+        <translation>ギガースの腕輪</translation>
     </message>
     <message>
         <source>Imperial Guard</source>
-        <translation>Guardia Imperial</translation>
+        <translation>インペリアルガード</translation>
     </message>
     <message>
         <source>Aegis Armlet</source>
-        <translation>Aro de Aegis</translation>
+        <translation>エイジスの腕輪</translation>
     </message>
     <message>
         <source>Fourth Bracelet</source>
-        <translation>Cuarto aro</translation>
+        <translation>フォースブレス</translation>
     </message>
     <message>
         <source>Warrior Bangle</source>
-        <translation>Aro de guerrero</translation>
+        <translation>ウォーリアバングル</translation>
     </message>
     <message>
         <source>Shinra Beta</source>
-        <translation>Beta Shinra</translation>
+        <translation>神羅安式防具</translation>
     </message>
     <message>
         <source>Shinra Alpha</source>
-        <translation>Alfa Shinra</translation>
+        <translation>神羅甲型防具改</translation>
     </message>
     <message>
         <source>Four Slots</source>
-        <translation>4 ranuras</translation>
+        <translation>フォウスロット</translation>
     </message>
     <message>
         <source>Fire Armlet</source>
-        <translation>Aro de Fuego</translation>
+        <translation>烈火の腕輪</translation>
     </message>
     <message>
         <source>Aurora Armlet</source>
-        <translation>Aro de Aurora</translation>
+        <translation>極光の腕輪</translation>
     </message>
     <message>
         <source>Bolt Armlet</source>
-        <translation>Aro de Rayo</translation>
+        <translation>天雷の腕輪</translation>
     </message>
     <message>
         <source>Dragon Armlet</source>
-        <translation>Aro de Dragón</translation>
+        <translation>ドラゴンの腕輪</translation>
     </message>
     <message>
         <source>Minerva Band</source>
-        <translation>Aro de Minerva</translation>
+        <translation>ミネルバブレス</translation>
     </message>
     <message>
         <source>Escort Guard</source>
-        <translation>Guardia Escolta</translation>
+        <translation>エスコートガード</translation>
     </message>
     <message>
         <source>Mystile</source>
-        <translation>Mitrilo</translation>
+        <translation>ミスティール</translation>
     </message>
     <message>
         <source>Ziedrich</source>
-        <translation>Cesador</translation>
+        <translation>ザイドリッツ</translation>
     </message>
     <message>
         <source>Precious Watch</source>
-        <translation>Reloj Precioso</translation>
+        <translation>高級腕時計</translation>
     </message>
     <message>
         <source>Chocobracelet</source>
-        <translation>Choco-Aro</translation>
+        <translation>チョコボの腕輪</translation>
     </message>
     <message>
         <source>Power Wrist</source>
-        <translation>Muñeca Poder</translation>
+        <translation>パワーリスト</translation>
     </message>
     <message>
         <source>Protect Vest</source>
-        <translation>Protector</translation>
+        <translation>防弾チョッキ</translation>
     </message>
     <message>
         <source>Earring</source>
-        <translation>Arete</translation>
+        <translation>イヤリング</translation>
     </message>
     <message>
         <source>Talisman</source>
-        <translation>Talismán</translation>
+        <translation>タリスマン</translation>
     </message>
     <message>
         <source>Choco Feather</source>
-        <translation>Pluma Choco</translation>
+        <translation>チョコボのはね</translation>
     </message>
     <message>
         <source>Amulet</source>
-        <translation>Amuleto</translation>
+        <translation>お守り</translation>
     </message>
     <message>
         <source>Champion Belt</source>
-        <translation>Cinturón Campeón</translation>
+        <translation>チャンピオンベルト</translation>
     </message>
     <message>
         <source>Poison Ring</source>
-        <translation>Anillo Veneno</translation>
+        <translation>ポイズンリング</translation>
     </message>
     <message>
         <source>Tough Ring</source>
-        <translation>Anillo fuerte</translation>
+        <translation>タフネスリング</translation>
     </message>
     <message>
         <source>Circlet</source>
-        <translation>Círculo</translation>
+        <translation>サークレット</translation>
     </message>
     <message>
         <source>Star Pendant</source>
-        <translation>Medallón Estrella</translation>
+        <translation>星のペンダント</translation>
     </message>
     <message>
         <source>Silver Glasses</source>
-        <translation>Vasos Plata</translation>
+        <translation>銀縁メガネ</translation>
     </message>
     <message>
         <source>Headband</source>
-        <translation>Diadema</translation>
+        <translation>ハチマキ</translation>
     </message>
     <message>
         <source>Fairy Ring</source>
-        <translation>Anillo Hada</translation>
+        <translation>フェアリーリング</translation>
     </message>
     <message>
         <source>Jem Ring</source>
-        <translation>Anillo Gema</translation>
+        <translation>ジュエルリング</translation>
     </message>
     <message>
         <source>White Cape</source>
-        <translation>Capa Blanca</translation>
+        <translation>ホワイトケープ</translation>
     </message>
     <message>
         <source>Sprint Shoes</source>
-        <translation>Zapatillas</translation>
+        <translation>エルメスのくつ</translation>
     </message>
     <message>
         <source>Peace Ring</source>
-        <translation>Anillo Paz</translation>
+        <translation>安らぎの指輪</translation>
     </message>
     <message>
         <source>Ribbon</source>
-        <translation>Cinta</translation>
+        <translation>リボン</translation>
     </message>
     <message>
         <source>Fire Ring</source>
-        <translation>Anillo Fuego</translation>
+        <translation>炎の指輪</translation>
     </message>
     <message>
         <source>Ice Ring</source>
-        <translation>Anillo Hielo</translation>
+        <translation>冷気の指輪</translation>
     </message>
     <message>
         <source>Bolt Ring</source>
-        <translation>Anillo Rayo</translation>
+        <translation>雷の指輪</translation>
     </message>
     <message>
         <source>Tetra Elemental</source>
-        <translation>Tetra Elemental</translation>
+        <translation>テトラエレメンタル</translation>
     </message>
     <message>
         <source>Safety Bit</source>
-        <translation>Trozo Seguridad</translation>
+        <translation>セーフティビット</translation>
     </message>
     <message>
         <source>Fury Ring</source>
-        <translation>Anillo Furia</translation>
+        <translation>怒りの指輪</translation>
     </message>
     <message>
         <source>Curse Ring</source>
-        <translation>Anillo mala suerte</translation>
+        <translation>呪いの指輪</translation>
     </message>
     <message>
         <source>Protect Ring</source>
-        <translation>Anillo protector</translation>
+        <translation>守りの指輪</translation>
     </message>
     <message>
         <source>Cat&apos;s Bell</source>
-        <translation>Cascabel</translation>
+        <translation>タマのすず</translation>
     </message>
     <message>
         <source>Reflect Ring</source>
-        <translation>Anillo Reflejo</translation>
+        <translation>リフレクトリング</translation>
     </message>
     <message>
         <source>Water Ring</source>
-        <translation>Anillo Agua</translation>
+        <translation>水の指輪</translation>
     </message>
     <message>
         <source>Sneak Glove</source>
-        <translation>Guante Furtivo</translation>
+        <translation>盗族の小手</translation>
     </message>
     <message>
         <source>HypnoCrown</source>
-        <translation>Hipnocorona</translation>
+        <translation>ヒュプノクラウン</translation>
     </message>
     <message>
         <source>Right arm</source>
-        <translation>Brazo derecho</translation>
+        <translation>ボムの右腕</translation>
     </message>
     <message>
         <source>8-inch Cannon</source>
-        <translation>Cañón 20 cm</translation>
+        <translation>203ミリ砲弾</translation>
     </message>
     <message>
         <source>Saraha Nut</source>
-        <translation>Nuez Sahara</translation>
+        <translation>サラハの実</translation>
     </message>
     <message>
         <source>1/35 soldier</source>
-        <translation>Soldado 1/35</translation>
+        <translation>1/35神羅兵</translation>
     </message>
     <message>
         <source>AâªM Cannon</source>
-        <translation>Cañón A-M</translation>
+        <translation>A・Mキャノン</translation>
     </message>
     <message>
         <source>Plus Barrette</source>
-        <translation>Barreta Plus</translation>
+        <translation>プラチナバレッタ</translation>
     </message>
 </context>
 <context>
     <name>MainWindow</name>
     <message>
         <source>Black Chocobo</source>
-        <translation>Chocobo Negro</translation>
+        <translation>Black Chocobo</translation>
     </message>
     <message>
         <source>In Party</source>
-        <translation>En El Grupo</translation>
+        <translation>パーティ メンバー</translation>
     </message>
     <message>
         <source>Cloud</source>
-        <translation>Cloud</translation>
+        <translation>クラウド</translation>
     </message>
     <message>
         <source>Barret</source>
-        <translation>Barret</translation>
+        <translation>バレット</translation>
     </message>
     <message>
         <source>Tifa</source>
-        <translation>Tifa</translation>
+        <translation>ティファ</translation>
+    </message>
+    <message>
+        <source>Aeris</source>
+        <translation type="obsolete">エアリス</translation>
     </message>
     <message>
         <source>Red XIII</source>
-        <translation>Red XIII</translation>
+        <translation>レッドXIII</translation>
     </message>
     <message>
         <source>Yuffie</source>
-        <translation>Yuffie</translation>
+        <translation>ユフィ</translation>
     </message>
     <message>
         <source>Cait Sith</source>
-        <translation>Cait Sith</translation>
+        <translation>ケット・シー</translation>
     </message>
     <message>
         <source>Vincent</source>
-        <translation>Vincent</translation>
+        <translation>ヴィンセント</translation>
     </message>
     <message>
         <source>Cid</source>
-        <translation>Cid</translation>
+        <translation>シド</translation>
     </message>
     <message>
         <source>Click On A Char To edit ===========&gt;</source>
-        <translation>Click En Un Personaje Para editar =====&gt;</translation>
+        <translation>クリックでキャラクターを編集 ===========&gt;</translation>
     </message>
     <message>
         <source>Stats Tab</source>
-        <translation>Pestaña De Estado</translation>
+        <translation>ステータス タブ</translation>
     </message>
     <message>
-        <source>P&amp;arty</source>
-        <translation>G&amp;rupo</translation>
+        <source>STR</source>
+        <translation type="obsolete">ちから</translation>
+    </message>
+    <message>
+        <source>VIT</source>
+        <translation type="obsolete">たいりょく</translation>
+    </message>
+    <message>
+        <source>MAG</source>
+        <translation type="obsolete">まりょく</translation>
+    </message>
+    <message>
+        <source>DEX</source>
+        <translation type="obsolete">すばやさ</translation>
+    </message>
+    <message>
+        <source>SPR</source>
+        <translation type="obsolete">せいしん</translation>
+    </message>
+    <message>
+        <source>LCK</source>
+        <translation type="obsolete">うん</translation>
     </message>
     <message>
         <source>Stat Bonuses</source>
-        <translation>Bonus A Stats</translation>
+        <translation>ステータス ボーナス</translation>
+    </message>
+    <message>
+        <source>VIT </source>
+        <translation type="obsolete">たいりょく</translation>
     </message>
     <message>
         <source>CheckBox</source>
-        <translation>Casilla</translation>
+        <translatorcomment>起動時に表示されファイルを開けばケットシー, ヴィンセントのみクラウド/昔, セフィロスに、他キャラは非表示●●●●●●</translatorcomment>
+        <translation>[CheckBox]</translation>
     </message>
     <message>
         <source> HP</source>
-        <translation>PG</translation>
+        <translation>HP</translation>
     </message>
     <message>
         <source>/</source>
@@ -1269,47 +1297,47 @@
     </message>
     <message>
         <source>MP</source>
-        <translation>PM</translation>
+        <translation>MP</translation>
     </message>
     <message>
         <source>Level</source>
-        <translation>Nivel</translation>
+        <translation>LV</translation>
     </message>
     <message>
         <source>Front Row</source>
-        <translation>Primera Fila</translation>
+        <translation>前列配置</translation>
     </message>
     <message>
         <source>Fury</source>
-        <translation>Furia</translation>
+        <translation>いかり</translation>
     </message>
     <message>
         <source>Sadness</source>
-        <translation>Tristeza</translation>
+        <translation>かなしい</translation>
     </message>
     <message>
         <source>Kills</source>
-        <translation>Muertes</translation>
+        <translation>倒した敵:</translation>
     </message>
     <message>
         <source> Uses of Limit 1-1</source>
-        <translation>Usos de Límites 1-1</translation>
+        <translation>リミット 1-1 の使用回数</translation>
     </message>
     <message>
         <source> Uses of Limit 2-1</source>
-        <translation>Usos de Límites 1-1</translation>
+        <translation>リミット 2-1 の使用回数</translation>
     </message>
     <message>
         <source> Uses of Limit 3-1</source>
-        <translation>Usos de Límites 3-1</translation>
+        <translation>リミット 3-1 の使用回数</translation>
     </message>
     <message>
         <source>Weapon</source>
-        <translation>Arma</translation>
+        <translation>ぶき:</translation>
     </message>
     <message>
         <source>Armor</source>
-        <translation>Armadura</translation>
+        <translation>ぼうぐ:</translation>
     </message>
     <message>
         <source>AP</source>
@@ -1317,283 +1345,321 @@
     </message>
     <message>
         <source>Limit Bar</source>
-        <translation>Barra de Límite</translation>
+        <translation>リミットゲージ</translation>
+    </message>
+    <message>
+        <source>P&amp;arty</source>
+        <translation>パーティ(&amp;A)</translation>
+    </message>
+    <message>
+        <source>0x0B</source>
+        <translation>0x0B</translation>
+    </message>
+    <message>
+        <source>-Empty-</source>
+        <translation>-なし-</translation>
+    </message>
+    <message>
+        <source>Base Stats</source>
+        <translation>基本ステータス</translation>
+    </message>
+    <message>
+        <source>HP</source>
+        <translatorcomment>HP2</translatorcomment>
+        <translation>HP</translation>
+    </message>
+    <message>
+        <source>Char&apos;s Limits</source>
+        <translation>キャラクターのリミット</translation>
+    </message>
+    <message>
+        <source>Level Progress</source>
+        <translation>レベルの進捗</translation>
+    </message>
+    <message>
+        <source>Equipment Tab</source>
+        <translation>装備タグ</translation>
     </message>
     <message>
         <source>Fights</source>
-        <translation>Peleas</translation>
+        <translation>バトル</translation>
     </message>
     <message>
         <source>Battles</source>
-        <translation>Batallas</translation>
+        <translation>バトル回数</translation>
     </message>
     <message>
         <source>Runs</source>
-        <translation>Huídas</translation>
+        <translation>逃走回数</translation>
     </message>
     <message>
         <source>Money</source>
-        <translation>Dinero</translation>
+        <translation>資金</translation>
     </message>
     <message>
         <source>Gil</source>
-        <translation>Gil</translation>
+        <translation>ギル</translation>
     </message>
     <message>
         <source>GP</source>
         <translation>GP</translation>
     </message>
     <message>
-        <source>&amp;Items</source>
-        <translation>&amp;Objetos</translation>
-    </message>
-    <message>
         <source>Party&apos;s Materia Stock</source>
-        <translation>Stock de Materia del Grupo</translation>
+        <translation>パーティのストック マテリア</translation>
     </message>
     <message>
         <source>Materia</source>
-        <translation>Materia</translation>
+        <translation>マテリア</translation>
     </message>
     <message>
         <source>Edit Selected Materia Slot</source>
-        <translation>Editar Ranura de Materia Seleccionada</translation>
+        <translation>選択マテリア スロットの編集</translation>
     </message>
     <message>
         <source>Enemy Skill&apos;s</source>
-        <translation>Habilidades Enemigas</translation>
+        <translation>てきのわざ</translation>
     </message>
     <message>
         <source>Frog Song</source>
-        <translation>Canto de Rana</translation>
+        <translation>カエルのうた</translation>
     </message>
     <message>
         <source>L4 Suicide</source>
-        <translation>Suicida Nv4</translation>
+        <translation>レベル4自爆</translation>
     </message>
     <message>
         <source>Magic Hammer</source>
-        <translation>Martillo Mágico</translation>
+        <translation>マジックハンマー</translation>
     </message>
     <message>
         <source>White Wind</source>
-        <translation>Viento Albo</translation>
+        <translation>ホワイトウィンド</translation>
     </message>
     <message>
         <source>Big Guard</source>
-        <translation>En Guardia</translation>
+        <translation>マイティガード</translation>
     </message>
     <message>
         <source>Angel Whisper</source>
-        <translation>Susurro del Ángel</translation>
+        <translation>天使のささやき</translation>
     </message>
     <message>
         <source>Dragon Force</source>
-        <translation>FuerzaDragón</translation>
+        <translation>ドラゴンフォース</translation>
     </message>
     <message>
         <source>Death Force</source>
-        <translation>FuerzaMortal</translation>
+        <translation>デスフォース</translation>
     </message>
     <message>
         <source>Flame Thrower</source>
-        <translation>Lanzallamas</translation>
+        <translation>火炎放射</translation>
     </message>
     <message>
         <source>Laser</source>
-        <translation>Láser</translation>
+        <translation>レーザー</translation>
     </message>
     <message>
         <source>Matra Magic</source>
-        <translation>Magia de Matra</translation>
+        <translation>マトラマジック</translation>
     </message>
     <message>
         <source>Bad Breath</source>
-        <translation>Mal Aliento</translation>
+        <translation>臭い息</translation>
     </message>
     <message>
         <source>Beta</source>
-        <translation>Beta</translation>
+        <translation>ベータ</translation>
     </message>
     <message>
         <source>Aqualung</source>
-        <translation>Aqualung</translation>
+        <translation>アクアブレス</translation>
     </message>
     <message>
         <source>Trine</source>
-        <translation>Trino</translation>
+        <translation>トライン</translation>
     </message>
     <message>
         <source>Magic Breath</source>
-        <translation>Aliento Mágico</translation>
+        <translation>マジカルブレス</translation>
     </message>
     <message>
         <source>????</source>
-        <translation>????</translation>
+        <translation>？？？？</translation>
     </message>
     <message>
         <source>Goblin Punch</source>
-        <translation>Golpe Aletazo</translation>
+        <translation>ゴブリンパンチ</translation>
     </message>
     <message>
         <source>Chocobuckle</source>
-        <translation>Chocohebilla</translation>
+        <translation>チョコボックル</translation>
     </message>
     <message>
         <source>L5 Death</source>
-        <translation>Muerte Nv5</translation>
+        <translation>レベル5デス</translation>
     </message>
     <message>
         <source>Death Sentence</source>
-        <translation>Pena Capital</translation>
+        <translation>死の宣告</translation>
     </message>
     <message>
         <source>Roulette</source>
-        <translation>Ruleta</translation>
+        <translation>死のルーレット</translation>
     </message>
     <message>
         <source>Shadow Flare</source>
-        <translation>Flama de Sombra</translation>
+        <translation>シャドウフレア</translation>
     </message>
     <message>
         <source>Pandora&apos;s Box</source>
-        <translation>Caja de Pandora</translation>
+        <translation>なんとか？？？</translation>
+    </message>
+    <message>
+        <source>Master</source>
+        <translation>MASTER</translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation>クリア</translation>
     </message>
     <message>
         <source>Inventory</source>
-        <translation>Inventario</translation>
+        <translation>所持アイテム</translation>
     </message>
     <message>
         <source>Item</source>
-        <translation>Elemento</translation>
+        <translation>アイテム</translation>
     </message>
     <message>
         <source>Qty</source>
-        <translation>Cant.</translation>
+        <translatorcomment>どこに使われているか分からない●●●●●</translatorcomment>
+        <translation type="unfinished">個数</translation>
     </message>
     <message>
         <source>QTY:</source>
-        <translation>CANT:</translation>
+        <translation>個数:</translation>
     </message>
     <message>
         <source>Key Items</source>
-        <translation>Elementos Clave</translation>
+        <translation>キーアイテム</translation>
     </message>
     <message>
         <source>Cotton Dress</source>
-        <translation>Vestido de Algodón</translation>
+        <translation>コットンのドレス</translation>
     </message>
     <message>
         <source>Satin Dress</source>
-        <translation>Vestido Satén</translation>
+        <translation>サテンのドレス</translation>
     </message>
     <message>
         <source>Silk Dress</source>
-        <translation>Vestido de Seda</translation>
+        <translation>シルクのドレス</translation>
     </message>
     <message>
         <source>Wig</source>
-        <translation>Peluca</translation>
+        <translation>クセゲのかつら</translation>
     </message>
     <message>
         <source>Dyed Wig</source>
-        <translation>Peluca Teñida</translation>
+        <translation>チャバツのかつら</translation>
     </message>
     <message>
         <source>Blonde Wig</source>
-        <translation>Peluca Rubia</translation>
+        <translation>ブロンドのかつら</translation>
     </message>
     <message>
         <source>Glass Tiara</source>
-        <translation>Diadema Cristal</translation>
+        <translation>ガラスのティアラ</translation>
     </message>
     <message>
         <source>Ruby Tiara</source>
-        <translation>Diadema Rubí</translation>
+        <translation>ルビーのティアラ</translation>
     </message>
     <message>
         <source>Diamond Tiara</source>
-        <translation>Diadema Diamante</translation>
+        <translation>ダイヤのティアラ</translation>
     </message>
     <message>
         <source>Cologne</source>
-        <translation>Colonia</translation>
+        <translation>コロン</translation>
     </message>
     <message>
         <source>Flower Cologne</source>
-        <translation>Colonia de Flores</translation>
+        <translation>フラワーコロン</translation>
     </message>
     <message>
         <source>Sexy Cologne</source>
-        <translation>Colonia Sexy</translation>
+        <translation>セクシーコロン</translation>
     </message>
     <message>
         <source>Member&apos;s Card</source>
-        <translation>Tarjeta de Miembro</translation>
+        <translation>会員カード</translation>
     </message>
     <message>
         <source>Lingerie</source>
-        <translation>Lencería</translation>
+        <translation>ランジェリー</translation>
     </message>
     <message>
         <source>Pharmacy Coupons</source>
-        <translation>Cupón Farmacia</translation>
+        <translation>薬屋商品クーポン</translation>
     </message>
     <message>
         <source>Disinfectant</source>
-        <translation>Desinfectante</translation>
+        <translation>消毒薬</translation>
     </message>
     <message>
         <source>Deodorant</source>
-        <translation>Desodorante</translation>
+        <translation>消臭薬</translation>
     </message>
     <message>
         <source>Digestive</source>
-        <translation>Digestivo</translation>
+        <translation>消化薬</translation>
     </message>
     <message>
         <source>Huge Materia:Fort Condor</source>
-        <translation>Materia Enorme:Fuerte Cóndor</translation>
+        <translation>ヒュージマテリア・コンドルフォート</translation>
     </message>
     <message>
         <source>Huge Materia:Corel</source>
-        <translation>Materia Enorme:Corel</translation>
+        <translation>ヒュージマテリア・コレル</translation>
     </message>
     <message>
         <source>Huge Materia:Underwater</source>
-        <translation>Materia Enorme:Submarina</translation>
+        <translation>ヒュージマテリア・海底</translation>
     </message>
     <message>
         <source>Huge Materia:Rocket</source>
-        <translation>Materia Enorme:Cohete</translation>
+        <translation>ヒュージマテリア・ロケット</translation>
     </message>
     <message>
         <source>Lunar Harp</source>
-        <translation>Harpa Lunar</translation>
+        <translation>ルナハープ</translation>
     </message>
     <message>
         <source>Basement Key</source>
-        <translation>Llave Sótano</translation>
+        <translation>地下室の鍵</translation>
     </message>
     <message>
         <source>Key To Sector 5</source>
-        <translation>Llave Sector 5</translation>
+        <translation>5番街ゲートの鍵</translation>
     </message>
     <message>
         <source>Keycard 60</source>
-        <translation>Tarjeta Llave 60</translation>
+        <translation>カードキー60</translation>
     </message>
     <message>
         <source>Keycard 62</source>
-        <translation>Tarjeta Llave 62</translation>
+        <translation>カードキー62</translation>
     </message>
     <message>
         <source>Keycard 65</source>
-        <translation>Tarjeta Llave 65</translation>
+        <translation>カードキー65</translation>
     </message>
     <message>
         <source>Keycard 68</source>
-        <translation>Tarjeta Llave 68</translation>
+        <translation>カードキー68</translation>
     </message>
     <message>
         <source>PHS</source>
@@ -1601,227 +1667,359 @@
     </message>
     <message>
         <source>Gold Ticket</source>
-        <translation>Ticket de Oro</translation>
+        <translation>ゴールドチケット</translation>
     </message>
     <message>
         <source>Keystone</source>
-        <translation>Piedra Angular</translation>
+        <translation>キーストーン</translation>
     </message>
     <message>
         <source>Leviathan Scales</source>
-        <translation>Escamas Leviatán</translation>
+        <translation>水神様のうろこ</translation>
     </message>
     <message>
         <source>Glacier Map</source>
-        <translation>Mapa Glaciar</translation>
+        <translation>大氷河の地図</translation>
     </message>
     <message>
         <source>A Coupon</source>
-        <translation>Cupón A</translation>
+        <translation>Aクーポン</translation>
     </message>
     <message>
         <source>B Coupon</source>
-        <translation>Cupón B</translation>
+        <translation>Bクーポン</translation>
     </message>
     <message>
         <source>C Coupon</source>
-        <translation>Cupón C</translation>
+        <translation>Cクーポン</translation>
     </message>
     <message>
         <source>Black Materia</source>
-        <translation>Materia Negra</translation>
+        <translation>黒マテリア</translation>
     </message>
     <message>
         <source>Mythril</source>
-        <translation>Mitrilo</translation>
+        <translation>ミスリル</translation>
     </message>
     <message>
         <source>Snowboard</source>
-        <translation>Snowboard</translation>
+        <translation>スノーボード</translation>
+    </message>
+    <message>
+        <source>C&amp;hocobo</source>
+        <translation>チョコボ(&amp;C)</translation>
+    </message>
+    <message>
+        <source>Intel</source>
+        <translation>知能</translation>
+    </message>
+    <message>
+        <source>Average</source>
+        <translation>普通のチョコボ</translation>
+    </message>
+    <message>
+        <source>Stables Owned</source>
+        <translation>所有チョコ房</translation>
+    </message>
+    <message>
+        <source>Materia Stolen By Yuffie</source>
+        <translation>ユフィに盗まれたマテリア</translation>
+    </message>
+    <message>
+        <source>Turtle Paradise Flyers Collected</source>
+        <translation type="unfinished">&apos;かめ道楽 通信&apos; の閲読</translation>
+    </message>
+    <message>
+        <source>&amp;Export From Current Slot</source>
+        <translation>現在のスロットをエクスポート(&amp;E)</translation>
+    </message>
+    <message>
+        <source>&amp;Import To Current Slot</source>
+        <translation>現在のスロットにインポート(&amp;I)</translation>
+    </message>
+    <message>
+        <source>Alt+Q</source>
+        <translation>Alt+Q</translation>
+    </message>
+    <message>
+        <source>Ctrl+O</source>
+        <translation>Ctrl+O</translation>
+    </message>
+    <message>
+        <source>Export PC Save</source>
+        <translation>PC セーブのエクスポート</translation>
+    </message>
+    <message>
+        <source>Export PSX or MCR Save As a PC Save</source>
+        <translation>PSX, MCR セーブを PC セーブでエクスポート</translation>
+    </message>
+    <message>
+        <source>Slot-01</source>
+        <translation>スロット-01</translation>
+    </message>
+    <message>
+        <source>Slot-02</source>
+        <translation>スロット-02</translation>
+    </message>
+    <message>
+        <source>Slot-03</source>
+        <translation>スロット-03</translation>
+    </message>
+    <message>
+        <source>Slot-04</source>
+        <translation>スロット-04</translation>
+    </message>
+    <message>
+        <source>Slot-05</source>
+        <translation>スロット-05</translation>
+    </message>
+    <message>
+        <source>Slot-06</source>
+        <translation>スロット-06</translation>
+    </message>
+    <message>
+        <source>Slot-07</source>
+        <translation>スロット-07</translation>
+    </message>
+    <message>
+        <source>Slot-08</source>
+        <translation>スロット-08</translation>
+    </message>
+    <message>
+        <source>Slot-09</source>
+        <translation>スロット-09</translation>
+    </message>
+    <message>
+        <source>Slot-10</source>
+        <translation>スロット-10</translation>
+    </message>
+    <message>
+        <source>Slot-11</source>
+        <translation>スロット-11</translation>
+    </message>
+    <message>
+        <source>Slot-12</source>
+        <translation>スロット-12</translation>
+    </message>
+    <message>
+        <source>Slot-13</source>
+        <translation>スロット-13</translation>
+    </message>
+    <message>
+        <source>Slot-14</source>
+        <translation>スロット-14</translation>
+    </message>
+    <message>
+        <source>Slot-15</source>
+        <translation>スロット-15</translation>
+    </message>
+    <message>
+        <source>Show Selection Dialog</source>
+        <translation>選択ダイアログを表示</translation>
     </message>
     <message>
         <source>Stable 1</source>
-        <translation>Establo 1</translation>
+        <translation>チョコ房 1</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation>Nombre</translation>
+        <translation>名前</translation>
     </message>
     <message>
         <source>Type</source>
-        <translation>Tipo</translation>
+        <translation>タイプ</translation>
     </message>
     <message>
         <source>Yellow</source>
-        <translation>Amarillo</translation>
+        <translation>チョコボ</translation>
     </message>
     <message>
         <source>Green</source>
-        <translation>Verde</translation>
+        <translation>山チョコボ</translation>
     </message>
     <message>
         <source>Blue</source>
-        <translation>Azul</translation>
+        <translation>川チョコボ</translation>
     </message>
     <message>
         <source>Black</source>
-        <translation>Negro</translation>
+        <translation>山川チョコボ</translation>
     </message>
     <message>
         <source>Gold</source>
-        <translation>Dorado</translation>
+        <translation>海チョコボ</translation>
     </message>
     <message>
         <source>Sex</source>
-        <translation>Sexo</translation>
+        <translation>性別</translation>
     </message>
     <message>
         <source>Male</source>
-        <translation>Macho</translation>
+        <translation>オス</translation>
     </message>
     <message>
         <source>Female</source>
-        <translation>Hembra</translation>
+        <translation>メス</translation>
     </message>
     <message>
         <source>Run Speed</source>
-        <translation>Velocidad</translation>
+        <translatorcomment>(G) Run speed - the chocobos run speed normal/max vars. </translatorcomment>
+        <translation>スピード</translation>
     </message>
     <message>
         <source>Sprint </source>
-        <translation>Sprint</translation>
+        <translatorcomment>(H) Sprint Speed - the chocobos Sprint Speed normal/max vars</translatorcomment>
+        <translation>スパート</translation>
     </message>
     <message>
         <source>Accel</source>
-        <translation>Aceleración</translation>
+        <translatorcomment>(I) Acceleration - the chocobos acceleration</translatorcomment>
+        <translation>加速</translation>
     </message>
     <message>
         <source> Wins</source>
-        <translation>Ganados</translation>
+        <translation>優勝数</translation>
     </message>
     <message>
         <source>Stamina</source>
-        <translation>Resistencia</translation>
+        <translatorcomment>(K) Stamina - how much stamina the chocobo has (item is 10x value shown in game). </translatorcomment>
+        <translation>スタミナ</translation>
     </message>
     <message>
         <source>Fed ?</source>
-        <translation>Alimentado ?</translation>
+        <translatorcomment>(L) Fed? - we think this shows how many times you have fed the chocobo. </translatorcomment>
+        <translation>給餌 ?</translation>
     </message>
     <message>
         <source>Coop</source>
-        <translation>Cooperación</translation>
+        <translatorcomment>(M) CoOp - the cooperation value of the chocobo</translatorcomment>
+        <translation>協調性</translation>
     </message>
     <message>
         <source>Personality</source>
-        <translation>Personalidad</translation>
+        <translatorcomment>(P) Personality - not much is known about this for now you can change it with the spin box but it is there to be monitored so we can learn how it works.</translatorcomment>
+        <translation>性格</translation>
     </message>
     <message>
         <source>Stable 2</source>
-        <translation>Establo 2</translation>
+        <translation>チョコ房 2</translation>
     </message>
     <message>
         <source>Stable 3</source>
-        <translation>Establo 3</translation>
+        <translation>チョコ房 3</translation>
     </message>
     <message>
         <source>Fenced Chocobos</source>
-        <translation>Chocobos en Corral</translation>
+        <translatorcomment>(Q) Fenced chocobos - The last menu of the tab offers a simple way to edit the chocobos fenced outside the stables.The four scrollable menus correspond to each of the four possible chocobos slots that can be fenced. Each Menu Contains a menu of the possible quality chocobos you can catch</translatorcomment>
+        <translation>サクのチョコボ</translation>
     </message>
     <message>
         <source>Empty</source>
-        <translation>Vacío</translation>
+        <translation>なし</translation>
     </message>
     <message>
         <source>Wonderful</source>
-        <translation>Maravilloso</translation>
+        <translatorcomment>『Ａ：す、すごいチョコボだよ、これ！』
+『Ｂ：すごくいいチョコボだよ』
+『Ｃ：うん、いい感じのチョコボだね』
+『Ｄ：まあまあのチョコボだね』
+『Ｅ：普通のチョコボだと思うよ』
+『Ｆ：うーん、わるいチョコボではないけどね』
+『Ｇ：あまり、いい感じのチョコボじゃないね』
+『Ｈ：ちょっと、おすすめできないかな』</translatorcomment>
+        <translation>す、すごいチョコボ！</translation>
     </message>
     <message>
         <source>Great</source>
-        <translation>Fantástico</translation>
+        <translation>すごくいいチョコボ</translation>
     </message>
     <message>
         <source>Good</source>
-        <translation>Bueno</translation>
+        <translation>いい感じのチョコボ</translation>
     </message>
     <message>
         <source>Fair</source>
-        <translation>Pasable</translation>
+        <translation>まあまあのチョコボ</translation>
     </message>
     <message>
         <source>Poor</source>
-        <translation>Pobre</translation>
+        <translation>わるくないチョコボ</translation>
     </message>
     <message>
         <source>Bad</source>
-        <translation>Malo</translation>
+        <translation>いい感じじゃないチョコボ</translation>
     </message>
     <message>
         <source>Terrible</source>
-        <translation>Terrible</translation>
+        <translation>おすすめできないチョコボ</translation>
     </message>
     <message>
         <source>Speed Values Are The Raw Values , the km/h speeds are calculated while playing </source>
-        <translation>Los valores de velocidad son valores directos, la velocidad en km/h se calcula durante el juego</translation>
+        <translation>スピードは未加工の値です。 ゲーム上で表示される速度 (km/h) はプレイ中に算出されます </translation>
     </message>
     <message>
         <source>Stable 4</source>
-        <translation>Establo 4</translation>
+        <translation>チョコ房 4</translation>
     </message>
     <message>
         <source>Stable 5</source>
-        <translation>Establo 5</translation>
+        <translation>チョコ房 5</translation>
     </message>
     <message>
         <source>Stable 6</source>
-        <translation>Establo 6</translation>
+        <translation>チョコ房 6</translation>
     </message>
     <message>
         <source>Stables Occupied</source>
-        <translation>Establos Ocupados</translation>
+        <translation>使用中のチョコ房</translation>
     </message>
     <message>
         <source>Time Played</source>
-        <translation>Tiempo de Juego</translation>
+        <translation>プレイ時間</translation>
     </message>
     <message>
         <source>Sec</source>
-        <translation>Sec</translation>
+        <translation>秒</translation>
     </message>
     <message>
         <source>Love Points</source>
-        <translation>Puntos de Amor</translation>
+        <translation>好感度</translation>
     </message>
     <message>
         <source>Allowed In PHS</source>
-        <translation>Permitidos en PHS</translation>
+        <translation>PHS で入替え許可</translation>
     </message>
     <message>
         <source>Sector 7 Slums</source>
-        <translation>Suburbios del Sector 7</translation>
+        <translation>7番街スラム</translation>
     </message>
     <message>
         <source>1st Floor Shinra Building</source>
-        <translation>Edificio Shinra 1er piso</translation>
+        <translation>神羅ビル ・1階</translation>
     </message>
     <message>
         <source>Gold Saucer - Ghost Hotel</source>
-        <translation>Gold Saucer - Hotel Fantasma</translation>
+        <translation>ゴールドソーサー・ゴーストホテル</translation>
     </message>
     <message>
         <source>Cosmo Canyon - Inn 2nd Floor</source>
-        <translation>Cañón Cosmo - 2do piso de la posada</translation>
+        <translation>コスモキャニオン・宿屋 2階</translation>
     </message>
     <message>
         <source>Cosmo Canyon - Near Shop</source>
-        <translation>Cañón Cosmo - Cerca de la Tienda</translation>
+        <translation>コスモキャニオン・武器屋</translation>
     </message>
     <message>
         <source>Wutai - In Front Of Trap Room</source>
-        <translation>Wutai - Enfrente de la Habitación Trampa</translation>
+        <translation>ウータイ・仕掛け部屋の前</translation>
+    </message>
+    <message>
+        <source>Current Disc</source>
+        <translation type="obsolete">現在のディスク</translation>
     </message>
     <message>
         <source>Upper Left</source>
-        <translation>Superior Izquierda</translation>
+        <translation>左上</translation>
     </message>
     <message>
         <source>R</source>
@@ -1837,55 +2035,23 @@
     </message>
     <message>
         <source>Upper Right</source>
-        <translation>Superior Derecha</translation>
+        <translation>右上</translation>
     </message>
     <message>
         <source>Lower Left</source>
-        <translation>Inferior Izquierda</translation>
+        <translation>左下</translation>
     </message>
     <message>
         <source>Lower Right</source>
-        <translation>Inferior Derecha</translation>
+        <translation>右下</translation>
     </message>
     <message>
-        <source>0x0B</source>
-        <translation>0x0B</translation>
-    </message>
-    <message>
-        <source>-Empty-</source>
-        <translation>-Vacío-</translation>
-    </message>
-    <message>
-        <source>Base Stats</source>
-        <translation>Stats Base</translation>
-    </message>
-    <message>
-        <source>HP</source>
-        <translation type="unfinished">PG</translation>
-    </message>
-    <message>
-        <source>Char&apos;s Limits</source>
-        <translation>Límites del Personaje</translation>
+        <source>Aerith</source>
+        <translation>エアリス</translation>
     </message>
     <message>
         <source>Limit Level</source>
-        <translation>Nivel de Límite</translation>
-    </message>
-    <message>
-        <source>Level Progress</source>
-        <translation>Progreso de Nivel</translation>
-    </message>
-    <message>
-        <source>Equipment Tab</source>
-        <translation>Pestaña de Equipamiento</translation>
-    </message>
-    <message>
-        <source>Master</source>
-        <translation>Maestro</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation>Limpiar</translation>
+        <translation>リミット レベル</translation>
     </message>
     <message>
         <source>AP:</source>
@@ -1893,115 +2059,55 @@
     </message>
     <message>
         <source>Accessory:</source>
-        <translation>Accesorio:</translation>
-    </message>
-    <message>
-        <source>&amp;Materia</source>
-        <translation>&amp;Materia</translation>
-    </message>
-    <message>
-        <source>Lvl 1</source>
-        <translation>Nv 1</translation>
-    </message>
-    <message>
-        <source>Lvl 2</source>
-        <translation>Nv 2</translation>
-    </message>
-    <message>
-        <source>Lvl 3</source>
-        <translation>Nv 3</translation>
-    </message>
-    <message>
-        <source>Lvl 4</source>
-        <translation>Nv 4</translation>
-    </message>
-    <message>
-        <source>Lvl 5</source>
-        <translation>Nv 5</translation>
-    </message>
-    <message>
-        <source>C&amp;hocobo</source>
-        <translation>C&amp;hocobo</translation>
-    </message>
-    <message>
-        <source>Intel</source>
-        <translation>Intel</translation>
-    </message>
-    <message>
-        <source>Average</source>
-        <translation>Media</translation>
-    </message>
-    <message>
-        <source>Stables Owned</source>
-        <translation>Establos en Posesión</translation>
-    </message>
-    <message>
-        <source>Materia Stolen By Yuffie</source>
-        <translation>Materia Robada por Yuffie</translation>
-    </message>
-    <message>
-        <source>Turtle Paradise Flyers Collected</source>
-        <translation>Octavillas del Paraíso de las Tortugas Coleccionadas</translation>
-    </message>
-    <message>
-        <source>Aerith</source>
-        <translation>Aerith</translation>
+        <translation>アクセサリ:</translation>
     </message>
     <message>
         <source>Selected Materia Skills and Stat Info</source>
-        <translation>Info de Habilidades y Stats de la Materia Seleccionada</translation>
+        <translation>選択マテリアのスキルとステータス情報</translation>
     </message>
     <message>
         <source>All</source>
-        <translation>Todo</translation>
+        <translation>すべて</translation>
     </message>
     <message>
         <source>Magic</source>
-        <translation>Magia</translation>
+        <translation>まほう</translation>
     </message>
     <message>
         <source>Summon</source>
-        <translation>Invocación</translation>
+        <translation>しょうかん</translation>
     </message>
     <message>
         <source>Independent</source>
-        <translation>Independiente</translation>
+        <translation>どくりつ</translation>
     </message>
     <message>
         <source>Support</source>
-        <translation>Soporte</translation>
+        <translation>しえん</translation>
     </message>
     <message>
         <source>Command</source>
-        <translation>Comando</translation>
+        <translation>コマンド</translation>
     </message>
     <message>
         <source>Type Filter</source>
-        <translation>Filtro por Tipo</translation>
+        <translation>タイプのフィルター</translation>
     </message>
     <message>
         <source>Clear Materia Slot</source>
-        <translation>Vaciar la ranura de materia</translation>
+        <translation>選択マテリア スロットをクリア</translation>
     </message>
     <message>
         <source>Materia Skills</source>
-        <translation>Habilidades de la Materia</translation>
+        <translation>マテリアのスキル</translation>
     </message>
     <message>
         <source>Materia Stat Changes</source>
-        <translation>Cambios de Stats de la Materia</translation>
-    </message>
-    <message>
-        <source>Sephiroth</source>
-        <translation>Sefirot</translation>
-    </message>
-    <message>
-        <source>Young Cloud</source>
-        <translation>Cloud Joven</translation>
+        <translation>マテリアによるステータス変化</translation>
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation>Cait Sith y Vincent no deberían ser desbloqueados si estan deshabilitados en la pestaña de grupo. </translation>
+        <translation>パーティ タブでケット・シーとヴィンセントが無効化されている場合は使用できません。</translation>
     </message>
     <message>
         <source>0</source>
@@ -2145,15 +2251,15 @@
     </message>
     <message>
         <source>map</source>
-        <translation>Mapa</translation>
+        <translation>map</translation>
     </message>
     <message>
         <source>loc</source>
-        <translation>Ubic</translation>
+        <translation>loc</translation>
     </message>
     <message>
         <source>Platform</source>
-        <translation>Plataforma</translation>
+        <translation>1番街駅ホーム</translation>
     </message>
     <message>
         <source>116</source>
@@ -2169,7 +2275,7 @@
     </message>
     <message>
         <source>Tunnel</source>
-        <translation>Túnel</translation>
+        <translation>螺旋トンネル</translation>
     </message>
     <message>
         <source>736</source>
@@ -2189,7 +2295,7 @@
     </message>
     <message>
         <source>Junon Inn</source>
-        <translation>Posada Junon</translation>
+        <translation>ジュノン・場末の宿屋</translation>
     </message>
     <message>
         <source>376</source>
@@ -2201,7 +2307,7 @@
     </message>
     <message>
         <source>Midgar Sector 8</source>
-        <translation>Midgar Sector 8</translation>
+        <translation>ミッドガル8番街</translation>
     </message>
     <message>
         <source>732</source>
@@ -2217,7 +2323,7 @@
     </message>
     <message>
         <source>Shinra Bldg 67F.</source>
-        <translation>Edif. Shinra P65.</translation>
+        <translation>神羅ビル・67階</translation>
     </message>
     <message>
         <source>256</source>
@@ -2237,7 +2343,7 @@
     </message>
     <message>
         <source>Train Graveyard</source>
-        <translation>Cementerio de Trenes</translation>
+        <translation>列車墓場</translation>
     </message>
     <message>
         <source>144</source>
@@ -2257,7 +2363,7 @@
     </message>
     <message>
         <source>Underwater Reactor</source>
-        <translation>Reactor Submarino</translation>
+        <translation>海底魔晄炉</translation>
     </message>
     <message>
         <source>422</source>
@@ -2269,7 +2375,7 @@
     </message>
     <message>
         <source>Junon Office F2</source>
-        <translation>Oficina Junon P2</translation>
+        <translation>ジュノン支社2階</translation>
     </message>
     <message>
         <source>397</source>
@@ -2285,7 +2391,7 @@
     </message>
     <message>
         <source>Shinra Bldg 69F.</source>
-        <translation>Edif. Shinra P69.</translation>
+        <translation>神羅ビル・69階</translation>
     </message>
     <message>
         <source>264</source>
@@ -2305,7 +2411,7 @@
     </message>
     <message>
         <source>Kalm Inn</source>
-        <translation>Posada Kalm</translation>
+        <translation>カーム・宿屋2階</translation>
     </message>
     <message>
         <source>332</source>
@@ -2321,7 +2427,7 @@
     </message>
     <message>
         <source>Reactor No. 5</source>
-        <translation>Reactor No. 5</translation>
+        <translation>5番魔晄炉</translation>
     </message>
     <message>
         <source>128</source>
@@ -2353,7 +2459,7 @@
     </message>
     <message>
         <source>North Crater</source>
-        <translation>Cráter del Norte</translation>
+        <translation>大空洞内部</translation>
     </message>
     <message>
         <source>749</source>
@@ -2365,7 +2471,7 @@
     </message>
     <message>
         <source>Wall Market</source>
-        <translation>Mercado Muro</translation>
+        <translation>ウォールマーケット</translation>
     </message>
     <message>
         <source>195</source>
@@ -2385,7 +2491,7 @@
     </message>
     <message>
         <source>Beginner&apos;s Hall</source>
-        <translation>Hall de los Principiantes</translation>
+        <translation>初心者の館</translation>
     </message>
     <message>
         <source>149</source>
@@ -2401,7 +2507,7 @@
     </message>
     <message>
         <source>Whirlwind Maze</source>
-        <translation>Mazo Torbellino</translation>
+        <translation>竜巻の迷宮</translation>
     </message>
     <message>
         <source>705</source>
@@ -2421,7 +2527,8 @@
     </message>
     <message>
         <source>Gaeas Cliff</source>
-        <translation>Acantilado de Gaea</translation>
+        <translatorcomment>ガイアの絶壁・絶壁内部</translatorcomment>
+        <translation>絶壁内部</translation>
     </message>
     <message>
         <source>699</source>
@@ -2437,7 +2544,7 @@
     </message>
     <message>
         <source>Mt. Nibel</source>
-        <translation>Mt. Nibel</translation>
+        <translation>ニブル山</translation>
     </message>
     <message>
         <source>317</source>
@@ -2457,7 +2564,7 @@
     </message>
     <message>
         <source>Gaeas Cliff Base</source>
-        <translation>Case del Acantilado de Gaea</translation>
+        <translation>絶壁のふもと</translation>
     </message>
     <message>
         <source>687</source>
@@ -2485,11 +2592,11 @@
     </message>
     <message>
         <source>Test Fight</source>
-        <translation>Pelea de Prueba</translation>
+        <translation>バトル テスト</translation>
     </message>
     <message>
         <source>Sector 7 - Slums</source>
-        <translation>Suburbios del Sector 7</translation>
+        <translation>7番街スラム</translation>
     </message>
     <message>
         <source>156</source>
@@ -2509,7 +2616,7 @@
     </message>
     <message>
         <source>Shinra Bldg. 64F.</source>
-        <translation>Edif. Shinra P64.</translation>
+        <translation>神羅ビル.・64階</translation>
     </message>
     <message>
         <source>247</source>
@@ -2529,7 +2636,8 @@
     </message>
     <message>
         <source>Reactor No.1</source>
-        <translation>Reactor No. 1</translation>
+        <translatorcomment>5番魔晄炉●●Reactor No.1</translatorcomment>
+        <translation>1番魔晄炉 (進捗により5番.)</translation>
     </message>
     <message>
         <source>124</source>
@@ -2545,7 +2653,7 @@
     </message>
     <message>
         <source>Corel Prison</source>
-        <translation>Prisión de Corel</translation>
+        <translation>コレルプリズン</translation>
     </message>
     <message>
         <source>473</source>
@@ -2565,71 +2673,128 @@
     </message>
     <message>
         <source>Debug Room</source>
-        <translation>Debug Room</translation>
+        <translation>デバッグ ルーム</translation>
     </message>
     <message>
         <source>&amp;Game Progress</source>
-        <translation>&amp;Progreso en el Juego</translation>
+        <translation>ゲームの進捗(&amp;G)</translation>
+    </message>
+    <message>
+        <source>Main Progress Var</source>
+        <translation type="obsolete">メイン進捗変数</translation>
     </message>
     <message>
         <source>Bombing Mission Progress</source>
-        <translation>Progreso de &apos;Bombing Mission&apos;</translation>
+        <translatorcomment>(C) Bombing Mission progress - these spinboxes allow you to change the varibles associated with bombing mission, its recommended that you do not touch these items.</translatorcomment>
+        <translation>魔晄炉爆破ミッションの進捗</translation>
+    </message>
+    <message>
+        <source>0x0C85</source>
+        <translation type="obsolete">0x0C85</translation>
+    </message>
+    <message>
+        <source>0x0C86</source>
+        <translation type="obsolete">0x0C86</translation>
+    </message>
+    <message>
+        <source>0x0CE6</source>
+        <translation type="obsolete">0x0CE6</translation>
     </message>
     <message>
         <source>Bombing Mission</source>
-        <translation>Bombing Mission</translation>
+        <translation>魔晄炉爆破ミッション</translation>
     </message>
     <message>
         <source>Cloud&apos;s Flashback</source>
-        <translation>Flashback de Cloud</translation>
+        <translation>クラウドのフラッシュバック</translation>
     </message>
     <message>
         <source>The Date Scene</source>
-        <translation>La Escena de la Cita</translation>
+        <translation>デート イベント</translation>
     </message>
     <message>
         <source>Replay Mission</source>
-        <translation>Rejugar Misión</translation>
+        <translation>ミッションのリプレイ</translation>
     </message>
     <message>
         <source>         INFO ON CURRENTLY SELECTED REPLAY MISSION</source>
-        <translation>INFO SOBRE LA MISIÓN REJUGABLE ACTUALMENTE SELECCIONADA</translation>
+        <translation>         選択中のミッション リプレイの情報</translation>
     </message>
     <message>
         <source>Game Op&amp;tions</source>
-        <translation>Opciones de Ju&amp;ego</translation>
+        <translation>ゲーム オプション(&amp;T)</translation>
+    </message>
+    <message>
+        <source>&amp;Options</source>
+        <translation>オプション(&amp;O)</translation>
+    </message>
+    <message>
+        <source>Lang</source>
+        <translation>言語</translation>
     </message>
     <message>
         <source>Copy Current Slot</source>
-        <translation>Copiar Ranura Actual</translation>
+        <translation>現在のスロットをコピー</translation>
     </message>
     <message>
         <source>Clear Slot</source>
-        <translation>Borrar Ranura</translation>
+        <translation>スロットのクリア</translation>
     </message>
     <message>
         <source>Alt+Del</source>
-        <translation>Alt+Supr</translation>
+        <translation>Alt+Del</translation>
     </message>
     <message>
         <source>Previous Slot</source>
-        <translation>Ranura Anterior</translation>
+        <translation>前のスロット</translation>
     </message>
     <message>
         <source>Alt+Left</source>
-        <translation>Alt+Izq.</translation>
+        <translation>Alt + ←</translation>
     </message>
     <message>
         <source>Next Slot</source>
-        <translation>Ranura Siguente</translation>
+        <translation>次のスロット</translation>
     </message>
     <message>
         <source>Alt+Right</source>
-        <translation>Alt+Derecha</translation>
+        <translation>Alt + →</translation>
     </message>
     <message>
         <source>65</source>
         <translation>65</translation>
+    </message>
+    <message>
+        <source>&amp;Items</source>
+        <translation>アイテム(&amp;I)</translation>
+    </message>
+    <message>
+        <source>&amp;Materia</source>
+        <translation>マテリア(&amp;M)</translation>
+    </message>
+    <message>
+        <source>Lvl 1</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Lvl 2</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Lvl 3</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Lvl 4</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Lvl 5</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Othe&amp;r</source>
+        <translation>その他(&amp;R)</translation>
     </message>
     <message>
         <source>3</source>
@@ -2677,11 +2842,11 @@
     </message>
     <message>
         <source>Aerith&apos;s House</source>
-        <translation>Casa de Aerith</translation>
+        <translation>エアリスの家</translation>
     </message>
     <message>
         <source>Fort Condor</source>
-        <translation>Fuerte Cóndor</translation>
+        <translation>コンドルフォート</translation>
     </message>
     <message>
         <source>355</source>
@@ -2697,7 +2862,7 @@
     </message>
     <message>
         <source>Inside Submarine</source>
-        <translation>Interior Submarino</translation>
+        <translation>潜水艦内部</translation>
     </message>
     <message>
         <source>408</source>
@@ -2725,7 +2890,8 @@
     </message>
     <message>
         <source>Hallway</source>
-        <translation>Pasillo</translation>
+        <translatorcomment>3 神羅飛空挺・通路</translatorcomment>
+        <translation>神羅飛空挺・通路</translation>
     </message>
     <message>
         <source>88</source>
@@ -2737,7 +2903,7 @@
     </message>
     <message>
         <source>Cosmo Canyon</source>
-        <translation>Cañón Cosmo</translation>
+        <translation>コスモキャニオン</translation>
     </message>
     <message>
         <source>529</source>
@@ -2753,7 +2919,7 @@
     </message>
     <message>
         <source>Boat</source>
-        <translation>Barco</translation>
+        <translation>運搬船</translation>
     </message>
     <message>
         <source>436</source>
@@ -2769,7 +2935,8 @@
     </message>
     <message>
         <source>Lower Sector 4 Plate</source>
-        <translation>Placa Bajo el Sector 4</translation>
+        <translatorcomment>バグ 空中に居て操作不能 場所不明</translatorcomment>
+        <translation>4番街プレート下部</translation>
     </message>
     <message>
         <source>169</source>
@@ -2785,7 +2952,7 @@
     </message>
     <message>
         <source>Mt. Corel</source>
-        <translation>Mt. Corel</translation>
+        <translation>コレル山・西</translation>
     </message>
     <message>
         <source>63498</source>
@@ -2797,7 +2964,7 @@
     </message>
     <message>
         <source>Sector 5 - Slums</source>
-        <translation>Suburbios del Sector 5</translation>
+        <translation>5番街スラム</translation>
     </message>
     <message>
         <source>64997</source>
@@ -2813,11 +2980,11 @@
     </message>
     <message>
         <source>Debug - English</source>
-        <translation>Debug - Inglés</translation>
+        <translation>デバッグ - イージータイプ</translation>
     </message>
     <message>
         <source>Reactor No. 5 </source>
-        <translation>Reactor No. 5</translation>
+        <translation>5番魔晄炉 (進捗により1番)</translation>
     </message>
     <message>
         <source>131</source>
@@ -2829,7 +2996,7 @@
     </message>
     <message>
         <source>Ropeway Station</source>
-        <translation>Estación Ropeway</translation>
+        <translation>ロープウェイ乗り場</translation>
     </message>
     <message>
         <source>496</source>
@@ -2845,7 +3012,7 @@
     </message>
     <message>
         <source>Junon Way</source>
-        <translation>Camino de Junon</translation>
+        <translation>海底魔晄炉への通路</translation>
     </message>
     <message>
         <source>394</source>
@@ -2861,7 +3028,7 @@
     </message>
     <message>
         <source>Junon Airport Path</source>
-        <translation>Camino del Aeropuerto de Junon</translation>
+        <translation>ジュノン空港通路</translation>
     </message>
     <message>
         <source>386</source>
@@ -2877,7 +3044,8 @@
     </message>
     <message>
         <source>Vestibule</source>
-        <translation>Vestíbulo</translation>
+        <translatorcomment>●●●●</translatorcomment>
+        <translation>神羅飛空挺・通路</translation>
     </message>
     <message>
         <source>65157</source>
@@ -2885,7 +3053,7 @@
     </message>
     <message>
         <source>Forgotten Captial</source>
-        <translation>Capital Olvidada</translation>
+        <translation>忘らるる都</translation>
     </message>
     <message>
         <source>633</source>
@@ -2913,7 +3081,7 @@
     </message>
     <message>
         <source>Sector 8, Underground</source>
-        <translation>Sector 8, Subterráneo</translation>
+        <translation>ミッドガル8番街地下</translation>
     </message>
     <message>
         <source>733</source>
@@ -2929,7 +3097,7 @@
     </message>
     <message>
         <source>Shinra Bldg.</source>
-        <translation>Edif. Shinra</translation>
+        <translation>神羅ビル.</translation>
     </message>
     <message>
         <source>227</source>
@@ -2949,7 +3117,7 @@
     </message>
     <message>
         <source>Wutai</source>
-        <translation>Wutai</translation>
+        <translation>ウータイ</translation>
     </message>
     <message>
         <source>579</source>
@@ -2965,7 +3133,7 @@
     </message>
     <message>
         <source>Forgotten City</source>
-        <translation>Ciudad Olvidada</translation>
+        <translation>忘らるる都 (水)</translation>
     </message>
     <message>
         <source>646</source>
@@ -2985,23 +3153,25 @@
     </message>
     <message>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</source>
-        <translation>Click en una Fila Para &quot;Teletransportar&quot; tu partida ahí O fija tu posición en el mapa con x y z manualmente</translation>
+        <translation>リストの場所をクリックすればゲーム上でセーブを行ったポイントとしてセットされます。マップ上の座標 x, y, x を手動で設定することもできます</translation>
     </message>
     <message>
         <source>Have Fun With This Feature, But Don&apos;t Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</source>
-        <translation>Diviertete Con Esta Función, Pero No Pongas Los Valores A Lo Loco Ya Que Pueden Causar Algunas Anomalías En El Juego Dependiendo De Los Valores De La Progresión De Tus Misiones.</translation>
+        <translation>この機能をお楽しみください。設定によってはストーリーの進捗との不整合により、不具合を引き起こすことがあります。</translation>
     </message>
     <message>
         <source>Location Name</source>
-        <translation>Nombre del Lugar</translation>
+        <translatorcomment>メモリーのロード メニューに表示されるのみTip: The location name can be any sentence as it will appear only in the save selection menu.
+Tip: Setting Location here will not change your world map location.</translatorcomment>
+        <translation>場所名</translation>
     </message>
     <message>
         <source>Map ID</source>
-        <translation>ID Mapa</translation>
+        <translation>マップの ID</translation>
     </message>
     <message>
         <source>Location ID</source>
-        <translation>ID Ubicación</translation>
+        <translation>場所の ID</translation>
     </message>
     <message>
         <source>x</source>
@@ -3016,236 +3186,136 @@
         <translation>z</translation>
     </message>
     <message>
+        <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
+        <translation>ミッションのリプレイをセットすれば、そのミッションまでゲームを巻き戻すことができます。 クエストの進行に合わせてセーブの場所とディスク番号が自動的にセットされます。 すべてのリプレイがゲームの終了までを確実にプレイ可能かどうか、 選択したリプレイがセーブ上で正しく機能するかどうかは保障することができません。 これはいまだ安定していない開発途上の機能です</translation>
+    </message>
+    <message>
         <source>General Config</source>
-        <translation>Config. General</translation>
+        <translation>コンフィグ</translation>
     </message>
     <message>
         <source>Sound Mode</source>
-        <translation>Modo de Sonido</translation>
+        <translation>サウンド</translation>
     </message>
     <message>
         <source>Mono</source>
-        <translation>Mono</translation>
+        <translation>モノラル</translation>
     </message>
     <message>
         <source>Stereo</source>
-        <translation>Estéreo</translation>
+        <translation>ステレオ</translation>
     </message>
     <message>
         <source>Controller Setting</source>
-        <translation>Ajustes de Control</translation>
+        <translation>コントローラ</translation>
     </message>
     <message>
         <source>Custom</source>
-        <translation>Personalizado</translation>
+        <translation>カスタム</translation>
     </message>
     <message>
         <source>Cursor Type</source>
-        <translation>Tipo de Cursor</translation>
+        <translation>カーソル</translation>
     </message>
     <message>
         <source>Initial</source>
-        <translation>Inicial</translation>
+        <translation>初期</translation>
     </message>
     <message>
         <source>Memory</source>
-        <translation>Memoria</translation>
+        <translation>記憶</translation>
     </message>
     <message>
         <source>ATB Style</source>
-        <translation>Estilo de ATB</translation>
+        <translation>ATB</translation>
     </message>
     <message>
         <source>Active</source>
-        <translation>Activo</translation>
+        <translation>アクティブ</translation>
     </message>
     <message>
         <source>Recommended</source>
-        <translation>Recomendado</translation>
+        <translation>おすすめ</translation>
     </message>
     <message>
         <source>Wait</source>
-        <translation>Espera</translation>
+        <translation>ウェイト</translation>
     </message>
     <message>
         <source>Camera</source>
-        <translation>Cámara</translation>
+        <translation>カメラアングル</translation>
     </message>
     <message>
         <source>Automatic</source>
-        <translation>Automático</translation>
+        <translation>オート</translation>
     </message>
     <message>
         <source>Fixed View</source>
-        <translation>Vista Fija</translation>
+        <translation>固定</translation>
     </message>
     <message>
         <source>Magic Order</source>
-        <translation>Orden de Magia</translation>
+        <translation>まほうのならびかた</translation>
     </message>
     <message>
         <source>Restore,Attack,Indirect</source>
-        <translation>Cura, Ataque, Indirecto</translation>
+        <translation>かいふく こうげき かんせつ</translation>
     </message>
     <message>
         <source>Restore,Indirect,Attack</source>
-        <translation>Cura, Indirecto, Ataque</translation>
+        <translation>かいふく かんせつ こうげき</translation>
     </message>
     <message>
         <source>Attack,Indirect,Restore</source>
-        <translation> Ataque, Indirecto, Cura</translation>
+        <translation>こうげき かんせつ かいふく</translation>
     </message>
     <message>
         <source>Attack,Restore,Indirect</source>
-        <translation>Ataque, Cura, Indirecto</translation>
+        <translation>こうげき かいふく かんせつ</translation>
     </message>
     <message>
         <source>Indirect,Restore,Attack</source>
-        <translation>Indirecto, Cura, Ataque</translation>
+        <translation>かんせつ かいふく こうげき</translation>
     </message>
     <message>
         <source>Indirect,Attack,Restore</source>
-        <translation>Indirecto, Ataque, Cura</translation>
+        <translation>かんせつ こうげき かいふく</translation>
     </message>
     <message>
         <source>Battle Speed:</source>
-        <translation>Velocidad de Batalla:</translation>
+        <translation>バトルスピード:</translation>
     </message>
     <message>
         <source>Fast</source>
-        <translation>Rápido</translation>
+        <translation>はやい</translation>
     </message>
     <message>
         <source>Slow</source>
-        <translation>Lento</translation>
+        <translation>おそい</translation>
     </message>
     <message>
         <source>Battle Message Speed:</source>
-        <translation>Velocidad de Mensaje en Batalla:</translation>
+        <translation>バトルメッセージ:</translation>
     </message>
     <message>
         <source>Field Message Speed:</source>
-        <translation>Velocidad de Mensaje fuera de Batalla:</translation>
+        <translation>フィールドメッセージ:</translation>
     </message>
     <message>
         <source>Dialog Color</source>
-        <translation>Color de Diálogos</translation>
+        <translation>ウィンドウカラー</translation>
     </message>
     <message>
         <source>Current Slot:</source>
-        <translation>Ranura Actual:</translation>
+        <translation>現在のスロット:</translation>
     </message>
     <message>
         <source>&amp;File</source>
-        <translation>&amp;Archivo</translation>
-    </message>
-    <message>
-        <source>&amp;Export From Current Slot</source>
-        <translation>&amp;Exportar Desde Ranura Actual</translation>
-    </message>
-    <message>
-        <source>&amp;Import To Current Slot</source>
-        <translation>&amp;Importar A La Ranura Actual</translation>
-    </message>
-    <message>
-        <source>&amp;Options</source>
-        <translation>&amp;Opciones</translation>
-    </message>
-    <message>
-        <source>Lang</source>
-        <translation>Idioma</translation>
+        <translation>ファイル(&amp;F)</translation>
     </message>
     <message>
         <source>&amp;Quit</source>
-        <translation>&amp;Salir</translation>
-    </message>
-    <message>
-        <source>Alt+Q</source>
-        <translation>Alt+Q</translation>
-    </message>
-    <message>
-        <source>Export PC Save</source>
-        <translation>Exportar Guardado de PC</translation>
-    </message>
-    <message>
-        <source>Export PSX or MCR Save As a PC Save</source>
-        <translation>Exportar Guardado de PSX o MCR Como Guardado de PC</translation>
-    </message>
-    <message>
-        <source>Slot-01</source>
-        <translation>Ranura-01</translation>
-    </message>
-    <message>
-        <source>Slot-02</source>
-        <translation>Ranura-02</translation>
-    </message>
-    <message>
-        <source>Slot-03</source>
-        <translation>Ranura-03</translation>
-    </message>
-    <message>
-        <source>Slot-04</source>
-        <translation>Ranura-04</translation>
-    </message>
-    <message>
-        <source>Slot-05</source>
-        <translation>Ranura-05</translation>
-    </message>
-    <message>
-        <source>Slot-06</source>
-        <translation>Ranura-06</translation>
-    </message>
-    <message>
-        <source>Slot-07</source>
-        <translation>Ranura-07</translation>
-    </message>
-    <message>
-        <source>Slot-08</source>
-        <translation>Ranura-08</translation>
-    </message>
-    <message>
-        <source>Slot-09</source>
-        <translation>Ranura-09</translation>
-    </message>
-    <message>
-        <source>Slot-10</source>
-        <translation>Ranura-10</translation>
-    </message>
-    <message>
-        <source>Slot-11</source>
-        <translation>Ranura-11</translation>
-    </message>
-    <message>
-        <source>Slot-12</source>
-        <translation>Ranura-12</translation>
-    </message>
-    <message>
-        <source>Slot-13</source>
-        <translation>Ranura-13</translation>
-    </message>
-    <message>
-        <source>Slot-14</source>
-        <translation>Ranura-14</translation>
-    </message>
-    <message>
-        <source>Slot-15</source>
-        <translation>Ranura-15</translation>
-    </message>
-    <message>
-        <source>Show Selection Dialog</source>
-        <translation>Mostrar Menú de Selección</translation>
-    </message>
-    <message>
-        <source>Othe&amp;r</source>
-        <translation>Ot&amp;ros</translation>
-    </message>
-    <message>
-        <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
-        <translation> Fija la misión rejugable más arriba para poner el juego de vuelta otra vez en esa misión. Esto pondrá automáticamente tu sitio de guardado y el número de disco asi como las variables de progreso de misión. NO SOBREESCRIBAS TU GUARDADO ACTUAL, cuando uses esta función, no puedo prometerte que podrás jugar desde cualquier punto hasta el final del juego. O que una misión rejugable dada funcione con tu partida guardada, este área esta bajo desarrollo intenso</translation>
-    </message>
-    <message>
-        <source>Ctrl+O</source>
-        <translation>Ctrl+O</translation>
+        <translation>終了(&amp;Q)</translation>
     </message>
     <message>
         <source>Ctrl+S</source>
@@ -3253,7 +3323,7 @@
     </message>
     <message>
         <source>About Black Chocobo</source>
-        <translation>Acerca de Chocobo Negro</translation>
+        <translation>Black Chocobo について</translation>
     </message>
     <message>
         <source>F1</source>
@@ -3261,83 +3331,78 @@
     </message>
     <message>
         <source>About Qt</source>
-        <translation>Acerca de Qt</translation>
+        <translation>Qt について</translation>
     </message>
     <message>
         <source>Open Final Fantasy 7 Save</source>
-        <translation>Abrir Archivo de Guardado de Final Fantasy 7</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 PC SaveGame</source>
-        <translation>Guardar Archivo de Guardado de Final Fantasy 7 PC</translation>
-    </message>
-    <message>
-        <source>FF7 PC SaveGame(*.ff7)</source>
-        <translation>Juego Guardado de FF7 PC (*.ff7)</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 PSX SaveGame</source>
-        <translation>Guardar Archivo de Guardado de Final Fantasy 7 PSX</translation>
-    </message>
-    <message>
-        <source>Save Final Fantasy 7 MC SaveGame</source>
-        <translation>Guardar Archivo de Guardado de Final Fantasy 7 MC</translation>
+        <translation>Final Fantasy 7 セーブを開く</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 PSV SaveGame</source>
-        <translation>Guardar Archivo de Partida Guardada de FF7 PSV</translation>
+        <translation>Final Fantasy 7 PSV セーブの保存</translation>
     </message>
     <message>
         <source>FF7 PSV SaveGame(*.psv)</source>
-        <translation>Partida Guardada FF7 PSV(*.psv)</translation>
+        <translation>FF7 PSV セーブ (*.psv) の保存</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7  PSP SaveGame</source>
-        <translation>Guardar Archivo de guardado de FF7 PSP</translation>
+        <translation>Final Fantasy 7 PSP セーブの保存</translation>
     </message>
     <message>
         <source>FF7 PSP SaveGame(*.vmp)</source>
-        <translation>Partida Guardada de FF7 PSP(*.vmp)</translation>
-    </message>
-    <message>
-        <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
-        <translation>Rejugar la Escena de la Cita, Tu situación se pondrá en la Estación Ropeway, Habla con el Hombre al lado del Tranvía para empezar el evento, Si buscas una cita en especial asegúrate de que has puesto los puntos de amor.</translation>
-    </message>
-    <message>
-        <source>Select Final Fantasy 7 PSX Save</source>
-        <translation>Selecciona Una Partida Guardada de Final Fantasy 7 PSX</translation>
-    </message>
-    <message>
-        <source>Select Final Fantasy 7 PSV Save</source>
-        <translation>Selecciona Una Partida Guardada de Final Fantasy 7 PSV</translation>
-    </message>
-    <message>
-        <source>PSX FF7 SaveGame (*.psv)</source>
-        <translation>Partida Guardada FF7 PSX (*.psv)</translation>
-    </message>
-    <message>
-        <source>Cannot save This Type of File</source>
-        <translation>No se Puede Guardar este Tipo de Archivo</translation>
+        <translation>FF7 PSP セーブ (*.vmp)</translation>
     </message>
     <message>
         <source>Cannot read file %1:
 %2.</source>
-        <translation>No se puede leer el archivo%1:
+        <translation>ファイル %1 が読み込めません:
 %2.</translation>
+    </message>
+    <message>
+        <source>Save Final Fantasy 7 PC SaveGame</source>
+        <translation>Final Fantasy 7 PC セーブの保存</translation>
+    </message>
+    <message>
+        <source>FF7 PC SaveGame(*.ff7)</source>
+        <translation>FF7 PC セーブ (*.ff7)</translation>
+    </message>
+    <message>
+        <source>Save Final Fantasy 7 PSX SaveGame</source>
+        <translation>Final Fantasy 7 PSX セーブの保存</translation>
+    </message>
+    <message>
+        <source>Save Final Fantasy 7 MC SaveGame</source>
+        <translation>Final Fantasy 7 MC セーブの保存</translation>
+    </message>
+    <message>
+        <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
+        <translatorcomment>好感度</translatorcomment>
+        <translation>デートイベントのリプレイ。ロープウェイの駅からスタートします。駅員に話しかけるとイベントが始まります。特殊なデート イベントを始めるには好感度も設定する必要があります。</translation>
+    </message>
+    <message>
+        <source>Select Final Fantasy 7 PSX Save</source>
+        <translation>Final Fantasy 7 PSX セーブの選択</translation>
+    </message>
+    <message>
+        <source>Select Final Fantasy 7 PSV Save</source>
+        <translation>Final Fantasy 7 PSV セーブの選択</translation>
+    </message>
+    <message>
+        <source>PSX FF7 SaveGame (*.psv)</source>
+        <translation>PSX FF7 セーブ (*.psv)</translation>
+    </message>
+    <message>
+        <source>Cannot save This Type of File</source>
+        <translation>このタイプのファイルは保存できません</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 SaveGame</source>
-        <translation>Guardar Archivo de Guardado de Final Fantasy 7</translation>
+        <translation>Final Fantasy 7 セーブの保存</translation>
     </message>
     <message>
         <source>FF7 SaveGame(*.ff7)</source>
-        <translation>Juego Guardado de FF7 (*.ff7)</translation>
-    </message>
-    <message>
-        <source>Cannot write file %1:
-%2.</source>
-        <translation>No se puede escribir el archivo%1:
-%2.</translation>
+        <translation>FF7 セーブ (*.ff7)</translation>
     </message>
     <message>
         <source>0x34</source>
@@ -3357,39 +3422,39 @@
     </message>
     <message>
         <source>Hour</source>
-        <translation>Hora</translation>
+        <translation>時間</translation>
     </message>
     <message>
         <source>Min</source>
-        <translation>Min</translation>
+        <translation>分</translation>
     </message>
     <message>
         <source>Visible In PHS</source>
-        <translation>Visible en PHS</translation>
+        <translation>PHS に表示</translation>
     </message>
     <message>
         <source>Visible Menu Items</source>
-        <translation>Items en el Menú Visibles</translation>
+        <translation>メニュー 項目の表示</translation>
     </message>
     <message>
         <source>Equip</source>
-        <translation>Equipamiento</translation>
+        <translation>そうび</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation>Estado</translation>
+        <translation>ステータス</translation>
     </message>
     <message>
         <source>Order</source>
-        <translation>Orden</translation>
+        <translation>たいけい</translation>
     </message>
     <message>
         <source>Limit</source>
-        <translation>Límite</translation>
+        <translation>リミット</translation>
     </message>
     <message>
         <source>Config</source>
-        <translation>Config</translation>
+        <translation>コンフィグ</translation>
     </message>
     <message>
         <source>P.H.S</source>
@@ -3397,83 +3462,85 @@
     </message>
     <message>
         <source>Save</source>
-        <translation>Guardar</translation>
+        <translation>セーブ</translation>
     </message>
     <message>
         <source>Locked Menu Items</source>
-        <translation>Items del Menú Bloqueados</translation>
+        <translation>メニュー項目のロック</translation>
     </message>
     <message>
         <source>Coaster Shooter High Scores</source>
-        <translation>Puntuación Minijuego Montaña Rusa</translation>
+        <translation>スピードスクェアのハイスコア</translation>
     </message>
     <message>
         <source>1st</source>
-        <translation>1º</translation>
+        <translation>1</translation>
     </message>
     <message>
         <source>2nd</source>
-        <translation>2º</translation>
+        <translation>2</translation>
     </message>
     <message>
         <source>3rd</source>
-        <translation>3º</translation>
+        <translation>3</translation>
     </message>
     <message>
         <source>Materia Caves Empty</source>
-        <translation>Cuevas de Materia Vacías</translation>
+        <translation>マテリアの洞窟から入手済み</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation>Gesto</translation>
+        <translation>ものまね</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation>PG &lt;-&gt; PM</translation>
+        <translation>ＨＰＭＰいれかえ</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
-        <translation>Cuadrimagia</translation>
+        <translation>まほうみだれうち</translation>
     </message>
     <message>
         <source>KOTR</source>
-        <translation>Caballeros de la Tabla Redonda</translation>
+        <translation type="unfinished">ナイツオブラウンド</translation>
     </message>
     <message>
         <source>Test Data</source>
-        <translation>Datos de Test</translation>
+        <translation type="unfinished">テスト データ</translation>
     </message>
     <message>
         <source>Tutorials Seen</source>
-        <translation>Tutoriales Vistos</translation>
+        <translation>チュートリアルを見た</translation>
     </message>
     <message>
         <source>Controling the Sub</source>
-        <translation>Controlar el Submarino</translation>
+        <translation>潜水艦の操作方法</translation>
     </message>
     <message>
         <source>Saving on the World Map</source>
-        <translation>Guardar en el Mapa del Mundo</translation>
+        <translation>ワールド マップ上のセーブ</translation>
     </message>
     <message>
         <source>Battle Love Points</source>
-        <translation>Puntos de pelea de amor</translation>
+        <translation>バトル好感度</translation>
     </message>
     <message>
         <source>Ultimate Weapons Hp</source>
-        <translation>PG de Arma Última</translation>
+        <translation>アルテマウェポン HP</translation>
     </message>
     <message>
         <source>Secret Chars Unlocked</source>
-        <translation>Pers Secretos Desbloqueados</translation>
+        <translation>隠しキャラのロックを解除</translation>
     </message>
     <message>
         <source>0xBD4 (itemmasks_1)</source>
+        <translatorcomment>(H) 0xBD4 - this byte that contains all item mask bits only the 0x1 bit is known to be the potion on MD8_3 (right after you meet aeris the first time). The rest are unknown</translatorcomment>
         <translation>0xBD4 (itemmasks_1)</translation>
     </message>
     <message>
         <source>0x01 Potion On MD8_3</source>
-        <translation>0x01 Potion On MD8_3</translation>
+        <translatorcomment>(H) 0xBD4 - this byte that contains all item mask bits only the 0x1 bit is known to be the potion on MD8_3 (right after you meet aeris the first time). The rest are unknown</translatorcomment>
+        <translation>0x01 MD8_3 のポーション</translation>
     </message>
     <message>
         <source>0x02</source>
@@ -3505,35 +3572,51 @@
     </message>
     <message>
         <source>Mystery Ninja </source>
-        <translation>Ninja Misterioso</translation>
+        <translation>謎のニンジャ</translation>
     </message>
     <message>
         <source>Can Fight Yuffie in Forests</source>
-        <translation>Se puede luchar contra Yuffie en los bosques</translation>
+        <translation>森でユフィとバトル可能に</translation>
+    </message>
+    <message>
+        <source>0x01 Talked to Bigs</source>
+        <translation type="obsolete">0x01 ビッグスに話しかけた</translation>
+    </message>
+    <message>
+        <source>0x02 Talked to Wedge twice</source>
+        <translation type="obsolete">0x02 ウェッジに話しかけた</translation>
+    </message>
+    <message>
+        <source>0x04 Talked to Jessie Before Looking At Map</source>
+        <translation type="obsolete">0x04 地図を見る前にジェシーに話しかけた</translation>
     </message>
     <message>
         <source>Region String</source>
-        <translation>String de Región</translation>
+        <translation>リージョン情報</translation>
     </message>
     <message>
         <source>Countdown Timer</source>
-        <translation>Cronómetro de cuenta atrás</translation>
+        <translation>カウントダウン タイマー</translation>
     </message>
     <message>
         <source>When Box is Partally Checked (&quot;-&quot;)it will trigger showing that tutorial</source>
-        <translation>Cuando la caja está marcada parcialmente (&quot;-&quot;) se activará el mostrado de ese tutorial</translation>
+        <translation>半チェック (&quot;-&quot;) の場合はチュートリアルを表示するフラグになります</translation>
     </message>
     <message>
         <source>Y.Cloud</source>
-        <translation>Cloud Joven</translation>
+        <translation>クラウド/昔</translation>
+    </message>
+    <message>
+        <source>Sephiroth</source>
+        <translation>セフィロス</translation>
     </message>
     <message>
         <source>Slot Region</source>
-        <translation>Región de la ranura</translation>
+        <translation>スロットのリージョン</translation>
     </message>
     <message>
         <source>Debug Mode</source>
-        <translation>Modo Test</translation>
+        <translation>デバッグ モード</translation>
     </message>
     <message>
         <source>USA (BASLUS-94163)</source>
@@ -3561,11 +3644,11 @@
     </message>
     <message>
         <source>Black Chocobo - </source>
-        <translation>Chocobo Negro - </translation>
+        <translation>Black Chocobo - </translation>
     </message>
     <message>
         <source>PSP Save Notice</source>
-        <translation>Advertencia de guardado de PSP</translation>
+        <translation>PSP セーブの警告</translation>
     </message>
     <message>
         <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
@@ -3573,39 +3656,39 @@
     </message>
     <message>
         <source>Bad Psx Save Name</source>
-        <translation>Nombre de partida de Psx incorrecto</translation>
+        <translation>無効な PSX セーブの名称</translation>
     </message>
     <message>
         <source>Export MC File</source>
-        <translation>Exportar archivo MC</translation>
+        <translation>MC ファイルのエクスポート</translation>
     </message>
     <message>
         <source> Bombing Mission Start Flag</source>
-        <translation> Bandera de comienzo de&apos; Bombing Mission&apos;</translation>
+        <translation>魔晄炉爆破ミッションの開始フラグ</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
-        <translation>Ayud&amp;a</translation>
+        <translation>ヘルプ(&amp;H)</translation>
     </message>
     <message>
         <source>Vie&amp;w</source>
-        <translation>Ve&amp;r</translation>
+        <translation>表示(&amp;V)</translation>
     </message>
     <message>
         <source>&amp;Edit</source>
-        <translation>&amp;Editar</translation>
+        <translation>編集(&amp;E)</translation>
     </message>
     <message>
         <source>Paste Slot</source>
-        <translation>Pegar Ranura</translation>
+        <translation>スロットの貼り付け</translation>
     </message>
     <message>
         <source>More Options...</source>
-        <translation>Más Opciones...</translation>
+        <translation>拡張オプション...</translation>
     </message>
     <message>
         <source>New Game</source>
-        <translation>Nuevo Juego</translation>
+        <translation>新規ゲーム</translation>
     </message>
     <message>
         <source>Alt+Ins</source>
@@ -3613,7 +3696,7 @@
     </message>
     <message>
         <source>New Game+ </source>
-        <translation>Nuevo Juego+</translation>
+        <translation>新規ゲーム＋</translation>
     </message>
     <message>
         <source>Alt+Shift+Ins</source>
@@ -3621,37 +3704,37 @@
     </message>
     <message>
         <source>Export Current Character</source>
-        <translation>Exportar personaje actual</translation>
+        <translation>現在のキャラクターをエクスポート</translation>
     </message>
     <message>
         <source>Import Current Character</source>
-        <translation>Importar personaje actual</translation>
+        <translation>現在のキャラクターにインポート</translation>
     </message>
     <message>
         <source>Select FF7 Character Stat File</source>
-        <translation>Selecciona un archivo de stats de personaje de FF7</translation>
+        <translation>FF7 キャラクター ステータス ファイルの選択</translation>
     </message>
     <message>
         <source>%1:
 %2 is Not a FF7 Character Stat File.</source>
         <translation>%1:
-%2 no es un archivo de stats de personaje de FF7.</translation>
+%2 は FF7 キャラクター ステータス ファイルではありません。</translation>
     </message>
     <message>
         <source>Save FF7 Character File</source>
-        <translation>Guardar archivo de personaje de FF7</translation>
+        <translation>FF7 キャラクター ステータス ファイルの保存</translation>
     </message>
     <message>
         <source>Import  PSV Save</source>
-        <translation>Importar partida guardada PSV</translation>
+        <translation>PSV セーブのインポート</translation>
     </message>
     <message>
         <source>FF7 Character Stat File(*.char)</source>
-        <translation>Archivo de stats de personaje de FF7(*.char)</translation>
+        <translation>FF7 キャラクター ステータス ファイル (*.char)</translation>
     </message>
     <message>
         <source>In-game Dialog Preview</source>
-        <translation>Pantalla de diálogo del juego</translation>
+        <translation>ゲーム上のダイアログのプレビュー</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -3666,300 +3749,316 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
+        <source>0xD83 Midgar Train Flags (tin_1)</source>
+        <translatorcomment>(I) 0xD83 - Flags for the train after you blow up sector 1 reactor. Known items noted.</translatorcomment>
+        <translation type="obsolete">0xD83 ミッドガル列車フラグ (tin_1)</translation>
+    </message>
+    <message>
+        <source>Cannot write file %1:
+%2.</source>
+        <translation>ファイル %1に書き込めません:
+%2.</translation>
+    </message>
+    <message>
         <source>Export Raw PSX Save</source>
-        <translation>Exportar archivo de guardado PSX (Raw)</translation>
+        <translation>Raw PSX セーブのエクスポート</translation>
     </message>
     <message>
         <source>Import  Raw PSX Save</source>
-        <translation>Importar archivo de guardado PSX (Raw)</translation>
+        <translation>Raw PSX セーブのインポート</translation>
     </message>
     <message>
         <source>Raw PSX FF7 SaveGame (*-S*)</source>
-        <translation>Partida guardada FF7 PSX (Raw) (*-S*)</translation>
+        <translation>Raw PSX FF7 セーブ (*-S*)</translation>
     </message>
     <message>
         <source>FF7 Raw PSX SaveGame(*-S*)</source>
-        <translation>Partida guardada FF7 PSX (Raw) (*-S*)</translation>
+        <translation>FF7 Raw PSX セーブ (*-S*)</translation>
     </message>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PSP.</source>
-        <translation>Este archivo no tiene un checksum actualizado. No funcionará en tu PSP</translation>
+        <translation>このファイルのチェックサムは更新されていません。 PSP では機能しません。</translation>
     </message>
     <message>
         <source>Cannot read file %1:
 %2 Be Sure its is a Raw PSX Save</source>
-        <translation>No se puede leer el archivo %1:
-%2 Asegúrate de que es una partida guardada PSX (Raw)</translation>
+        <translation>ファイル %1は読み込めません:
+%2 Raw PSX セーブかどうか確認してください</translation>
     </message>
     <message>
         <source>Cannot read file %1:
 %2., Be Sure its is a Raw PSX Save</source>
-        <translation>No se puede leer el archivo %1:
-%2., Asegúrate de que es una partida guardada PSX (Raw)</translation>
+        <translation>ファイル %1は読み込めません:
+%2., Raw PSX セーブかどうか確認してください</translation>
     </message>
     <message>
         <source>Unknown Filetype</source>
-        <translation>Tipo de archivo desconocido</translation>
+        <translation>不明なファイル タイプ</translation>
     </message>
     <message>
         <source>File: %1 
 is not a FF7 SaveGame.</source>
-        <translation>El archivo %1 
-no es una partida guardada de FF7.</translation>
+        <translation>ファイル: %1 
+は FF7 セーブではありません。</translation>
     </message>
     <message>
         <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
-        <translation>No se puede decidir en que cabecera escribir, por favor añade el sufijo SXX (donde x= 01-15, empezando con 0 si &lt; 10) Una cabecera con ese número de ranura se escribirá en el archivo</translation>
+        <translation>ヘッダーが決定できません。接尾辞 -SXX を追加してください。これはスロット番号としてセーブに書き込まれるヘッダーです。(XX = 01～15, 10 以下の場合は 0 を加えて二桁に)</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation>NO USAR</translation>
+        <translatorcomment>●●どこに使用？</translatorcomment>
+        <translation>使用不可</translation>
     </message>
     <message>
         <source>Empty Materia</source>
-        <translation>Vaciar materia</translation>
+        <translation>空のマテリア</translation>
     </message>
     <message>
         <source>Place holder Materia Detected
  Remember 16777215 AP = master</source>
-        <translation>Materia de relleno detectada
- Recuerda 16777215 AP = maestro</translation>
+        <translation>プレース ホルダー マテリアを検出しました
+マスター化には 16777215 AP が必要です</translation>
     </message>
     <message>
         <source>New Game +</source>
-        <translation>Nuevo juego +</translation>
+        <translation>新規ゲーム＋</translation>
+    </message>
+    <message>
+        <source>Young Cloud</source>
+        <translation type="unfinished">クラウド/昔</translation>
     </message>
     <message>
         <source>===Empty Slot===</source>
-        <translation>===Ranura vacía===</translation>
+        <translation>===空きスロット===</translation>
     </message>
     <message>
         <source>Empty Slot</source>
-        <translation>Ranura vacía</translation>
+        <translation>空きスロット</translation>
     </message>
     <message>
         <source>NO CAP</source>
-        <translation>SIN TOPE</translation>
+        <translation type="unfinished">制限なし.</translation>
     </message>
     <message>
         <source>Braver</source>
-        <translation>Bravura</translation>
+        <translation>ブレイバー</translation>
     </message>
     <message>
         <source>Cross-Slash</source>
-        <translation>Corte Cruzado</translation>
+        <translation>凶斬り</translation>
     </message>
     <message>
         <source>Blade Beam</source>
-        <translation>Haz Espada</translation>
+        <translation>破晄撃</translation>
     </message>
     <message>
         <source>Climhazzard</source>
-        <translation>Aerolito</translation>
+        <translation>クライムハザード</translation>
     </message>
     <message>
         <source>Meteorain</source>
-        <translation>Lluvia de Meteoritos</translation>
+        <translation>メテオレイン</translation>
     </message>
     <message>
         <source>Finishing Touch</source>
-        <translation>Toque Final</translation>
+        <translation>画龍点睛</translation>
     </message>
     <message>
         <source>Big Shot</source>
-        <translation>Gran Tiro</translation>
+        <translation>ヘビーショット</translation>
     </message>
     <message>
         <source>Mindblow</source>
-        <translation>Aluci.</translation>
+        <translation>マインドブレイク</translation>
     </message>
     <message>
         <source>Grenade Bomb</source>
-        <translation>Granada</translation>
+        <translation>グレネードボム</translation>
     </message>
     <message>
         <source>Hammerblow</source>
-        <translation>Golpe de Martillo</translation>
+        <translation>ハンマーブロウ</translation>
     </message>
     <message>
         <source>Satellite Beam</source>
-        <translation>Haz del Satélite</translation>
+        <translation>サテライトビーム</translation>
     </message>
     <message>
         <source>Angermax</source>
-        <translation>Ungarmax</translation>
+        <translation>アンガーマックス</translation>
     </message>
     <message>
         <source>Catastrophe</source>
-        <translation>Catástrofe</translation>
+        <translation>カタストロフィ</translation>
     </message>
     <message>
         <source>Beat Rush</source>
-        <translation>Golpe Veloz</translation>
+        <translation>掌打ラッシュ</translation>
     </message>
     <message>
         <source>Waterkick</source>
-        <translation>Golpeagua</translation>
+        <translation>水面蹴り</translation>
     </message>
     <message>
         <source>Meteodrive</source>
-        <translation>Meteobatida</translation>
+        <translation>メテオドライヴ</translation>
     </message>
     <message>
         <source>Dolphin Blow</source>
-        <translation>Golpe de Delfín</translation>
+        <translation>ドルフィンブロウ</translation>
     </message>
     <message>
         <source>Meteor Strike</source>
-        <translation>Ataque Meteorito</translation>
+        <translation>メテオストライク</translation>
     </message>
     <message>
         <source>Final Heaven</source>
-        <translation>Cielo Final</translation>
+        <translation>ファイナルヘヴン</translation>
     </message>
     <message>
         <source>Healing Wind</source>
-        <translation>Ala Sanadora</translation>
+        <translation>癒しの風</translation>
     </message>
     <message>
         <source>Seal Evil</source>
-        <translation>Sello Maldito</translation>
+        <translation>邪気封印</translation>
     </message>
     <message>
         <source>Breath of the Earth</source>
-        <translation>Aliento de la Tierra</translation>
+        <translation>大地の息吹</translation>
     </message>
     <message>
         <source>Fury Brand</source>
-        <translation>Marca Furia</translation>
+        <translation>怒りの烙印</translation>
     </message>
     <message>
         <source>Planet Protector</source>
-        <translation>Protector del Planeta</translation>
+        <translation>星の守護</translation>
     </message>
     <message>
         <source>Pulse of Life</source>
-        <translation>Pulso Vital</translation>
+        <translation>生命の波動</translation>
     </message>
     <message>
         <source>Great Gospel</source>
-        <translation>Gran Evangelio</translation>
+        <translation>大いなる福音</translation>
     </message>
     <message>
         <source>Sled Fang</source>
-        <translation>Colmillo Trineo</translation>
+        <translation>スレッドファング</translation>
     </message>
     <message>
         <source>Lunatic High</source>
-        <translation>Marea Luna</translation>
+        <translation>ルナティックハイ</translation>
     </message>
     <message>
         <source>Blood Fang</source>
-        <translation>Colmillo Sangrante</translation>
+        <translation>ブラッドファング</translation>
     </message>
     <message>
         <source>Stardust Ray</source>
-        <translation>Rayo Estelar</translation>
+        <translation>スターダストレイ</translation>
     </message>
     <message>
         <source>Howling Moon</source>
-        <translation>Luna Aullando</translation>
+        <translation>ハウリングムーン</translation>
     </message>
     <message>
         <source>Earth Rave</source>
-        <translation>Tempestad</translation>
+        <translation>アースレイヴ</translation>
     </message>
     <message>
         <source>Cosmo Memory</source>
-        <translation>Memoria Cósmica</translation>
+        <translation>コスモメモリー</translation>
     </message>
     <message>
         <source>Greased Lightning</source>
-        <translation>Relámpago Robótico</translation>
+        <translation>疾風迅雷</translation>
     </message>
     <message>
         <source>Clear Tranquil</source>
-        <translation>Serenidad</translation>
+        <translation>明鏡止水</translation>
     </message>
     <message>
         <source>Landscaper</source>
-        <translation>Rascacielos</translation>
+        <translation>抜山蓋世</translation>
     </message>
     <message>
         <source>Bloodfest</source>
-        <translation>Carnicería</translation>
+        <translation>血祭</translation>
     </message>
     <message>
         <source>Gauntlet</source>
-        <translation>Guante</translation>
+        <translation>鎧袖一触</translation>
     </message>
     <message>
         <source>Doom of the Living</source>
-        <translation>Hado de los Vivos</translation>
+        <translation>生者必滅</translation>
     </message>
     <message>
         <source>All Creation</source>
-        <translation>Toda Creación</translation>
+        <translation>森羅万象</translation>
     </message>
     <message>
         <source>Dice</source>
-        <translation>Dados</translation>
+        <translation>ダイス</translation>
     </message>
     <message>
         <source>Slots</source>
-        <translation>Ranuras</translation>
+        <translation>スロット</translation>
     </message>
     <message>
         <source>Death Gigas</source>
-        <translation>Gigante Mortal</translation>
+        <translation>デスギガス</translation>
     </message>
     <message>
         <source>Hellmasker</source>
-        <translation>Máscara Infernal</translation>
+        <translation>ヘルマスカー</translation>
     </message>
     <message>
         <source>Chaos</source>
-        <translation>Caos</translation>
+        <translation>カオス</translation>
     </message>
     <message>
         <source>Boost Jump</source>
-        <translation>Gran Salto</translation>
+        <translation>ブーストジャンプ</translation>
     </message>
     <message>
         <source>Dynamite</source>
-        <translation>Dinamita</translation>
+        <translation>ダイナマイト</translation>
     </message>
     <message>
         <source>Hyper Jump</source>
-        <translation>Super Salto</translation>
+        <translation>ハイパージャンプ</translation>
     </message>
     <message>
         <source>Dragon</source>
-        <translation>Dragón</translation>
+        <translation>ドラゴンモッド</translation>
     </message>
     <message>
         <source>Dragon Dive</source>
-        <translation>Salto Dragón</translation>
+        <translation>ドラゴンダイブ</translation>
     </message>
     <message>
         <source>Big Brawl</source>
-        <translation>Gran Alboroto</translation>
+        <translation>大乱闘</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation>Gran Viento</translation>
+        <translation>ハイウインド</translation>
     </message>
     <message>
         <source>Ingoring Non FF7 Save</source>
-        <translation>Ignorando partida guardada No-FF7</translation>
+        <translation>FF7 以外のセーブを無視</translation>
     </message>
     <message>
         <source>Be Cautious This Might Not Work.</source>
-        <translation>Cuidado, puede que no funcione.</translation>
+        <translation>警告: 正常に操作できません。</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation>Habil. Enem</translation>
+        <translation>てきのわざ</translation>
     </message>
     <message>
         <source>S01</source>
@@ -4023,15 +4122,15 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>&amp;Open</source>
-        <translation>&amp;Abrir</translation>
+        <translation>開く(&amp;O)</translation>
     </message>
     <message>
         <source>Save As</source>
-        <translation>Guardar Como</translation>
+        <translation>名前を付けて保存</translation>
     </message>
     <message>
         <source>Alt+Shift+S</source>
-        <translation>Alt+Shift+S</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Alt+F1</source>
@@ -4047,86 +4146,87 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>&amp;Save</source>
-        <translation>&amp;Guardar</translation>
+        <translation>保存(&amp;S)</translation>
     </message>
     <message>
         <source>Export VGS File</source>
-        <translation>Exportar archivo VGS</translation>
+        <translation>VGS ファイルのエクスポート</translation>
     </message>
     <message>
         <source>Export Dex-Drive File</source>
-        <translation>Exportar archivo de unidad Dex</translation>
+        <translation>Dex-Drive ファイルのエクスポート</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme)</source>
-        <translation>Tipos de archivo FF7 conocidos (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Archivo de guardado FF7 PC (*.ff7);;Archivo de guardado Raw PSX FF7 (*-S*);;Archivo de guardado MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Archivo de guardado PSV (*.psv);;Archivo de guardado PSP (*.vmp);;Archivo de guardado VGS (*.vgs *.mem);;Archivo de guardado de unidad Dex-(*.gme)</translation>
+        <translation>対応可能な FF7 のセーブ (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 セーブ (*.ff7);;Raw PSX FF7 セーブ (*-S*);;MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV セーブ (*.psv);;PSP セーブ (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive セーブ (*.gme)</translation>
     </message>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</source>
-        <translation>Archivos de guardado FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</translation>
+        <translation>FF7 MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7  VGS SaveGame</source>
-        <translation>Guardar archivo de guardado Final Fantasy 7</translation>
+        <translation>Final Fantasy 7  VGS セーブの保存</translation>
     </message>
     <message>
         <source>FF7 VGS SaveGame(*.vgs *.mem)</source>
-        <translation>Archivo de guardado FF7 VGS (*.vgs *.mem)</translation>
+        <translation>FF7 VGS セーブ (*.vgs *.mem)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7  Dex-Drive SaveGame</source>
-        <translation>Guardar archivo de guardado deFinal Fantasy 7 unidad Dex</translation>
+        <translation>Final Fantasy 7 Dex-Drive セーブの保存</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 VGS SaveGame</source>
-        <translation>Guardar archivo de guardado Final Fantasy 7 VGS</translation>
+        <translation>Final Fantasy 7 VGS セーブの保存</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 Dex-Drive SaveGame</source>
-        <translation>Guardar archivo de guardado Final Fantasy 7 unidad Dex</translation>
+        <translation>Final Fantasy 7 Dex-Drive セーブの保存</translation>
     </message>
     <message>
         <source>No Save File Loaded</source>
-        <translation>No se ha cargado un archivo de guardado</translation>
+        <translation>セーブ ファイルがロードされていません</translation>
     </message>
     <message>
         <source>The Filename is empty</source>
-        <translation>El nombre del archivo está vacío</translation>
+        <translation>ファイル名が未指定です</translation>
     </message>
     <message>
         <source>Region Detect Error</source>
-        <translation>Error en la detección de región</translation>
+        <translation>リージョンの検出エラー</translation>
     </message>
     <message>
         <source>-------EMPTY--------</source>
-        <translation>-------VACIO-------</translation>
+        <translation>-------EMPTY--------</translation>
     </message>
     <message>
         <source>ID </source>
-        <translation>ID</translation>
+        <translation>ID </translation>
     </message>
     <message>
         <source>Total Exp:</source>
-        <translation>Exp Total:</translation>
+        <translation>経験値:</translation>
     </message>
     <message>
         <source>Next</source>
-        <translation>Siguiente</translation>
+        <translation>次へ</translation>
     </message>
     <message>
         <source>Show Battle Target Labels</source>
-        <translation>Mostrar etiquetas de los objetivos en batalla</translation>
+        <translation>バトル ターゲットの表示</translation>
     </message>
     <message>
         <source>Show Battle Help</source>
-        <translation>Mostrar ayuda de batalla</translation>
+        <translation>バトル ヘルプの表示</translation>
     </message>
     <message>
         <source>Show Field Help</source>
-        <translation>Mostrar mapa del mundo</translation>
+        <translation>フィールド ヘルプの表示</translation>
     </message>
     <message>
         <source>0xC1E tut_sub</source>
+        <translatorcomment>G) Tut sub - the byte that the sub tutoral seen var is stored in to find more in that byte</translatorcomment>
         <translation>0xC1E tut_sub</translation>
     </message>
     <message>
@@ -4135,39 +4235,51 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>0x02 </source>
-        <translation>0x02</translation>
+        <translation>0x02 </translation>
     </message>
     <message>
         <source>0x04 - Played Sub Tutorial</source>
-        <translation>0x04 - Tutorial del submarino jugado</translation>
+        <translation>0x04 - 潜水艦の説明を表示済み</translation>
     </message>
     <message>
         <source>0x40 - Battle Targets</source>
-        <translation>0x40 - Objetivos de batalla</translation>
+        <translation>0x40 - バトル ターゲット</translation>
     </message>
     <message>
         <source>Weapons Killed</source>
-        <translation>Armas muertas</translation>
+        <translation>ウェポンに勝利</translation>
     </message>
     <message>
         <source>Ruby</source>
-        <translation>Rubí</translation>
+        <translation>ルビー</translation>
     </message>
     <message>
         <source>Emerald</source>
-        <translation>Esmeralda</translation>
+        <translation>エメラルド</translation>
     </message>
     <message>
         <source>Misc</source>
-        <translation>Misc</translation>
+        <translation>各種</translation>
     </message>
     <message>
         <source>Party leader</source>
-        <translation>Líder del grupo</translation>
+        <translation>パーティ リーダー</translation>
+    </message>
+    <message>
+        <source>X</source>
+        <translation type="obsolete">X</translation>
+    </message>
+    <message>
+        <source>Y</source>
+        <translation type="obsolete">Y</translation>
+    </message>
+    <message>
+        <source>Z</source>
+        <translation type="obsolete">Z</translation>
     </message>
     <message>
         <source>angle</source>
-        <translation>ángulo</translation>
+        <translation>角度</translation>
     </message>
     <message>
         <source>id</source>
@@ -4175,143 +4287,143 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Tiny Bronco / Chocobo</source>
-        <translation>Tiny Bronco / Chocobo</translation>
+        <translation>タイニーブロンコ / チョコボ</translation>
     </message>
     <message>
         <source>Buggy / Highwind</source>
-        <translation>Buggy / Viento Fuerte</translation>
+        <translation>バギー / ハイウィンド</translation>
     </message>
     <message>
         <source>Sub</source>
-        <translation>Submarino</translation>
+        <translation>潜水艦</translation>
     </message>
     <message>
         <source>sliders show </source>
-        <translation>Mostrar controles deslizantes</translation>
+        <translation>スライダー表示</translation>
     </message>
     <message>
         <source>Party Leader</source>
-        <translation>Líder de grupo</translation>
+        <translation>パーティ リーダー</translation>
     </message>
     <message>
         <source>TinyBronco/Chocobo</source>
-        <translation>Tiny Bronco/Chocobo</translation>
+        <translation>タイニーブロンコ/チョコボ</translation>
     </message>
     <message>
         <source>Buggy/Highwind</source>
-        <translation>Buggy/Viento Fuerte</translation>
+        <translation>バギー/ハイウィンド</translation>
     </message>
     <message>
         <source>Emerald Weapon?</source>
-        <translation>¿Arma Esmeralda?</translation>
+        <translation>エメラルド ウェポン ?</translation>
     </message>
     <message>
         <source>Place Leader</source>
-        <translation>Colocar Líder</translation>
+        <translation>リーダーを配置</translation>
     </message>
     <message>
         <source>Place Tiny Bronco/Chocobo</source>
-        <translation>Colocar Tiny Bronco/Chocobo</translation>
+        <translation>タイニーブロンコ/チョコボを配置</translation>
     </message>
     <message>
         <source>Place Buggy/Highwind</source>
-        <translation>Colocar Buggy/Viento Fuerte</translation>
+        <translation>バギー/ハイウィンドを配置</translation>
     </message>
     <message>
         <source>Place Sub</source>
-        <translation>Colocar Submarino</translation>
+        <translation>潜水艦を配置</translation>
     </message>
     <message>
         <source>Place Emerald Weapon?</source>
-        <translation>¿Colocar Arma Esmeralda?</translation>
+        <translation>エメラルド ウェポン (?) を配置</translation>
     </message>
     <message>
         <source>PSV Save Notice</source>
-        <translation>Aviso de guardado PSV</translation>
+        <translation>PSV セーブ: 警告</translation>
     </message>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PS3.</source>
-        <translation>Este archivo no tiene un checksum actualizado. No funcionará en tu PS3.</translation>
+        <translation>このファイルのチェックサムは更新されていません。 PS3 では正しく機能できません。</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
-        <translation>Arma Diamante / Última / Rubí</translation>
+        <translation>ダイヤ / アルテマ / ルビー ウェポン</translation>
     </message>
     <message>
         <source>Place UNKNOWN</source>
-        <translation>Colocar INDEFINIDO</translation>
+        <translation>詳細不明を配置</translation>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
-        <translation>Colocar Arma Diamante / Última / Rubí</translation>
+        <translation>ダイアモンド/アルテマ/ルビー ウェポンを配置</translation>
     </message>
     <message>
         <source>Keycard 66</source>
-        <translation>Tarjeta Llave 66</translation>
+        <translation>カードキー66</translation>
     </message>
     <message>
         <source>FF7 Dex SaveGame(*.gme)</source>
-        <translation>Archivo de guardado FF7 Dex(*.gme)</translation>
+        <translation>FF7 Dex Drive セーブ (*.gme)</translation>
     </message>
     <message>
         <source>Mystery panties</source>
-        <translation>Bragas Misterio</translation>
+        <translation>入手先不明パンツ</translation>
     </message>
     <message>
         <source>Bikini briefs</source>
-        <translation>Bragas de bikini</translation>
+        <translation>ビキニパンツ</translation>
     </message>
     <message>
         <source>Key to Ancients</source>
-        <translation>Clave de los Ancianos</translation>
+        <translation>古代種の鍵</translation>
     </message>
     <message>
         <source>Letter to a Daughter</source>
-        <translation>Carta a una hija</translation>
+        <translation>娘への手紙</translation>
     </message>
     <message>
         <source>Letter to a Wife</source>
-        <translation>Carta a una esposa</translation>
+        <translation>奥さんへの手紙</translation>
     </message>
     <message>
         <source>Midgar parts</source>
-        <translation>Partes de Midgar</translation>
+        <translation>ミッドガルパーツ</translation>
     </message>
     <message>
         <source>Normal</source>
-        <translation>Normal</translation>
+        <translation>ノーマル</translation>
     </message>
     <message>
         <source>Omnislash</source>
-        <translation>Omnilátigo</translation>
+        <translation>超究武神覇斬</translation>
     </message>
     <message>
         <source>Somersault</source>
-        <translation>Salto Mortal</translation>
+        <translation>サマーソルト</translation>
     </message>
     <message>
         <source>Galian Beast</source>
-        <translation>Bestia Galiana</translation>
+        <translation>ガリアンビースト</translation>
     </message>
     <message>
         <source>Automatic Exp &lt;-&gt; Lvl</source>
-        <translation>Exp automática &lt;-&gt; Nvl</translation>
+        <translation>Exp &lt;-&gt; Lvl 自動変換</translation>
     </message>
     <message>
         <source>&lt;---Edit Selected Item Slot</source>
-        <translation>&lt;---Editar Ranura de Elemento Seleccionada</translation>
+        <translation>&lt;---選択アイテムスロットの編集</translation>
     </message>
     <message>
         <source>Add Max Of All Items</source>
-        <translation>Añadir el máximo de todos los objetos</translation>
+        <translation type="unfinished">すべてのアイテムを最大数追加</translation>
     </message>
     <message>
         <source>Clear All Items</source>
-        <translation>Eliminar todos los objetos</translation>
+        <translation>すべてのアイテムをクリア</translation>
     </message>
     <message>
         <source>Clear Key Items</source>
-        <translation>Eliminar todos los objetos clave</translation>
+        <translation>キーアイテムをクリア</translation>
     </message>
     <message>
         <source>47</source>
@@ -4335,51 +4447,61 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Aeris Turks</source>
-        <translation>Aeris turcos</translation>
+        <translatorcomment>教会に配置したときる
+0: クラウドが落下した直後、夢-エアリストとの会話から
+1, :レノの最後のセリフが流れ教会奥マップから脱出クエストが始まる
+2: :レノの最後のセリフが流れ教会奥マップから脱出クエストが始まる
+3: クラウドが落下した直後、夢-エアリストとの会話から
+4レノの最後のセリフが流れ教会奥マップから脱出クエストが始まる：
+5
+Aeris_Turks - this is a helper variable for when you meet aeris in the chruch.</translatorcomment>
+        <translation type="unfinished">エアリス_タークス_教会フラグ.</translation>
     </message>
     <message>
         <source>The Church In The Slums</source>
-        <translation>The Church In The Slums</translation>
+        <translatorcomment>Disc1 スラム街の教会・ Disc 3 教会奥 Aeris Turks の値に依存か？</translatorcomment>
+        <translation>スラム街の教会</translation>
     </message>
     <message>
         <source>Aeris Death</source>
-        <translation>Muerte de Aeris</translation>
+        <translation>エアリスの死</translation>
     </message>
     <message>
         <source>Don_prog</source>
-        <translation>Don_prog</translation>
+        <translatorcomment>ドン・コルネオとのイベントの進捗　 this is a helper variable that helps to control the progression of the Don Corneo mansion scene</translatorcomment>
+        <translation type="unfinished">コルネオ邸_イベント進捗.</translation>
     </message>
     <message>
         <source>&amp;Location</source>
-        <translation>&amp;Localización</translation>
+        <translation>場所(&amp;L)</translation>
     </message>
     <message>
         <source>Save Location</source>
-        <translation>Lugar de guardado</translation>
+        <translation type="unfinished">セーブの現在地</translation>
     </message>
     <message>
         <source>Worldmap Location</source>
-        <translation>Localización en el mundo</translation>
+        <translation type="unfinished">ワールドマップ上の配置位置</translation>
     </message>
     <message>
         <source>Shown On Map</source>
-        <translation>Mostrados en el mapa</translation>
+        <translation>マップ上に表示</translation>
     </message>
     <message>
         <source>None</source>
-        <translation>Nada</translation>
+        <translation>なし</translation>
     </message>
     <message>
         <source>Buggy</source>
-        <translation>Buggy</translation>
+        <translation>バギー</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation>Indefinido</translation>
+        <translation>詳細不明</translation>
     </message>
     <message>
         <source>Unknown  Vars</source>
-        <translation>Variables indefinidas</translation>
+        <translation>詳細不明の変数</translation>
     </message>
     <message>
         <source>z_1</source>
@@ -4535,51 +4657,51 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>New Window</source>
-        <translation>Nueva ventana</translation>
+        <translation>新規ウィンドウ</translation>
     </message>
     <message>
         <source>Replay the bombing mission from right after you get off the train.</source>
-        <translation>Rejugar bombing mission desde el momento que te bajas del tren.</translation>
+        <translation>魔晄炉爆破ミッションのリプレイは列車を降りた直後から開始されます。</translation>
     </message>
     <message>
         <source>Chruch in the Slums</source>
-        <translation>Church in the slums</translation>
+        <translation>スラム街の教会</translation>
     </message>
     <message>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
-        <translation>Activando esto se copiará Cloud a Cloud joven (en el sitio de Cait Sith). Los stats de Sephiroth vendrán directamente de Vincent.</translation>
+        <translation>クラウドのステータスがそのまま昔のクラウドにコピーされます (ケット・シーのスロット)。セフィロスにはヴィンセントのステータスがそのまま適用されます。</translation>
     </message>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
-        <translation>Rejugar la escena de la muerte de Aeris. Esta opción quitará a Aeris de tu PHS</translation>
+        <translation>&apos;エアリスの死&apos; のリプレイは PHS からエアリスを削除します</translation>
     </message>
     <message>
         <source>Church in the slums</source>
-        <translation>Church in the slums</translation>
+        <translation>スラム街の教会</translation>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s location.</source>
-        <translation>Boton derecho sobre el mapa para colocar la posición de un elemento.</translation>
+        <translation>マップ上の右クリック メニューから簡単に配置できます。</translation>
     </message>
     <message>
         <source>Meeting Aeris</source>
-        <translation>Conociendo a Aeris</translation>
+        <translation>エアリスとの出会い</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
-        <translation>Arma Diamante / Última / Rubí</translation>
+        <translation>ダイヤ / アルテマ / ルビー  ウェポン</translation>
     </message>
     <message>
         <source>Emerald Weapon ?</source>
-        <translation>¿Arma Esmeralda?</translation>
+        <translation>エメラルド ウェポン ?</translation>
     </message>
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
-        <translation>La región no se puede detectar automáticamente, Debes ponerla manualmente</translation>
+        <translation>リージョンが検出できません。手動で選択してください</translation>
     </message>
     <message>
         <source>Unable to Mate</source>
-        <translation>Imposible cruzar</translation>
+        <translation>カップリング不可</translation>
     </message>
     <message>
         <source>z_39</source>
@@ -4587,23 +4709,23 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Add One Of Each Mastered Materia </source>
-        <translation>Añadir una materia maestra de cada</translation>
+        <translation>すべての MASTER マテリアを一個づつ追加</translation>
     </message>
     <message>
         <source>Remove ALL Materia </source>
-        <translation>Quitar TODA la materia</translation>
+        <translation>すべてのマテリアを削除</translation>
     </message>
     <message>
         <source>Checked Stables Are Occupied Uncheck Stable to Empty Stable</source>
-        <translation>Los establos marcados estan ocupados, desmarcar para vaciar el establo</translation>
+        <translation>チェックのあるチョコ房は使用中です。チェックをはずせば空き房に</translation>
     </message>
     <message>
         <source>Clear All Stolen Materia</source>
-        <translation>Quitar toda la materia robada</translation>
+        <translation>すべての盗まれたマテリアをクリア</translation>
     </message>
     <message>
         <source>Chocobo Ranch</source>
-        <translation>Rancho chocobo</translation>
+        <translation>チョコボ牧場</translation>
     </message>
     <message>
         <source>345</source>
@@ -4623,7 +4745,7 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Reload</source>
-        <translation>Recargar</translation>
+        <translation>再読み込み</translation>
     </message>
     <message>
         <source>F5</source>
@@ -4647,47 +4769,47 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>-None-</source>
-        <translation>-Ninguno-</translation>
+        <translation>-なし-</translation>
     </message>
     <message>
         <source>Slot:%1 Contains A PAL region save</source>
-        <translation>Ranura:%1 Contiene una partida de región PAL</translation>
+        <translation>スロットt:%1 のセーブは PAL 方式です</translation>
     </message>
     <message>
         <source>PAL PSX runs at 50/60 speed
 This results in an incorrect playtime
 Would you like to correct the playtime?</source>
-        <translation>PSX PAL corre a una velocidad de 50/60
-Esto resulta en tiempos de juego incorrectos
-¿Quieres corregir el tiempo de juego?</translation>
+        <translation>PAL PSX は速度 50/60 で実行されます。
+このプレイ時間は不正確なものです。
+プレイ時間を修正しますか ?</translation>
     </message>
     <message>
         <source>PAL Slot Detected</source>
-        <translation>Ranura PAL detectada</translation>
+        <translation>PAL スロットを検出</translation>
     </message>
     <message>
         <source>Always Correct</source>
-        <translation>Corregir siempre</translation>
+        <translation>つねに修正</translation>
     </message>
     <message>
         <source>Never Correct</source>
-        <translation>Corregir nunca</translation>
+        <translation>修正しない</translation>
     </message>
     <message>
         <source>Would You Like To Update the Play time</source>
-        <translation>¿Quieres actualizar el tiempo de juego?</translation>
+        <translation>プレイ時間を変更しますか？</translation>
     </message>
     <message>
         <source>PAL -&gt; NTSC Conversion</source>
-        <translation>Conversión PAL-&gt;NTSC</translation>
+        <translation>PAL -&gt; NTSC 変換</translation>
     </message>
     <message>
         <source>NTSC -&gt; PAL Conversion</source>
-        <translation>Conversión NTSC-&gt;PAL</translation>
+        <translation>NTSC -&gt; PAL 変換</translation>
     </message>
     <message>
         <source>Unknown Var:</source>
-        <translation>Var indefinida:</translation>
+        <translation>詳細不明な変数:</translation>
     </message>
     <message>
         <source>#</source>
@@ -4695,59 +4817,71 @@ Esto resulta en tiempos de juego incorrectos
     </message>
     <message>
         <source>Hex</source>
-        <translation>Hex</translation>
+        <translation>16進</translation>
     </message>
     <message>
         <source>Dec</source>
-        <translation>Dec</translation>
+        <translation>10進</translation>
     </message>
     <message>
         <source>Bin</source>
-        <translation>Bin</translation>
+        <translation>2進</translation>
     </message>
     <message>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Edit By Changing Dec Value
 Valid Range 0-255</source>
-        <translation>&lt;----Tabla izquierda----
-Seleccionar var indefinida para ver
-Editar cambiando el valor en dec
-Rango válido 0-255</translation>
+        <translation>&lt;------左のテーブル------
+表示する変数を選択
+10進数値を変更して編集
+有効な値の範囲: 0-255</translation>
     </message>
     <message>
         <source>Diff</source>
-        <translation>Diff</translation>
+        <translation>差分</translation>
     </message>
     <message>
         <source>Compare To Slot</source>
-        <translation>Comparar con la ranura</translation>
+        <translation>スロットの比較</translation>
     </message>
     <message>
         <source>Show All &apos;Z&apos; Changes</source>
-        <translation>Mostrar Todos &apos;z&apos; Cambios</translation>
+        <translation>すべての &apos;Z&apos; の変更を表示</translation>
     </message>
     <message>
         <source>------Right Table------&gt;
 Select A Slot To Compare
 Table is Read Only
 Var And Scrolling Synced To Left Table</source>
-        <translation>-----Tabla derecha-----&gt;
-Seleccionar una ranura para comparar
-Esta tabla es de sólo lectura
-Var y navegación sincronizadas con la tabla izquierda</translation>
+        <translation>------右のテーブル------&gt;
+比較するスロットを選択
+テーブルの変数は編集できません
+左テーブルと同期してスクロール</translation>
     </message>
     <message>
-        <source>Steps</source>
+        <source>Str</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Number Steps</source>
+        <source>Vit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>z_40</source>
-        <translation type="unfinished">z_40</translation>
+        <source>Mag</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spr</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lck</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Y: </source>
@@ -4763,6 +4897,10 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     </message>
     <message>
         <source>Disk  #</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Event Progress</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4795,62 +4933,6 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     </message>
     <message>
         <source>Trigger Game Over</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm1_2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Str</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Vit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mag</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Spr</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dex</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lck</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Event Progress</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4890,7 +4972,35 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>bm1_2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>bm1_3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm2_1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm2_4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm2_5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm2_6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm2_7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>bm2_8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5006,6 +5116,18 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Steps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Number Steps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>z_40</source>
+        <translation type="unfinished">z_40</translation>
+    </message>
+    <message>
         <source>Japanese</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5014,1441 +5136,1441 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     <name>Materia_Names</name>
     <message>
         <source>MP Plus</source>
-        <translation>Super PM</translation>
+        <translation>ＭＰアップ</translation>
     </message>
     <message>
         <source>HP Plus</source>
-        <translation>Super PG</translation>
+        <translation>ＨＰアップ</translation>
     </message>
     <message>
         <source>Speed Plus</source>
-        <translation>Super velocidad</translation>
+        <translation>スピード</translation>
     </message>
     <message>
         <source>Magic Plus</source>
-        <translation>Super magia</translation>
+        <translation>マジカル</translation>
     </message>
     <message>
         <source>Luck Plus</source>
-        <translation>Super suerte</translation>
+        <translation>ラッキー</translation>
     </message>
     <message>
         <source>EXP Plus</source>
-        <translation>Super EXP</translation>
+        <translation>けいけんちアップ</translation>
     </message>
     <message>
         <source>Gil Plus</source>
-        <translation>Super Gil</translation>
+        <translation>ギルアップ</translation>
     </message>
     <message>
         <source>Enemy Away</source>
-        <translation>Enemigo alejado</translation>
+        <translation>てきよけ</translation>
     </message>
     <message>
         <source>Enemy Lure</source>
-        <translation>Atrae Enemigo</translation>
+        <translation>てきよせ</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
-        <translation>Atrae chocobo</translation>
+        <translation>チョコボよせ</translation>
     </message>
     <message>
         <source>Pre-emptive</source>
-        <translation>Prevacio</translation>
+        <translation>せんせいこうげき</translation>
     </message>
     <message>
         <source>Long Range</source>
-        <translation>Larga fila</translation>
+        <translation>えんきょりこうげき</translation>
     </message>
     <message>
         <source>Mega All</source>
-        <translation>Mega todo</translation>
+        <translation>すべてぜんたいか</translation>
     </message>
     <message>
         <source>Counter Attack</source>
-        <translation>Contraataque</translation>
+        <translation>カウンター</translation>
     </message>
     <message>
         <source>Slash-All</source>
-        <translation>Fulminar a todos</translation>
+        <translation>ぜんたいぎり</translation>
     </message>
     <message>
         <source>Double Cut</source>
-        <translation>Corte Doble</translation>
+        <translation>れんぞくぎり</translation>
     </message>
     <message>
         <source>Cover</source>
-        <translation>Cubrir</translation>
+        <translation>かばう</translation>
     </message>
     <message>
         <source>Underwater</source>
-        <translation>Subacuática</translation>
+        <translation>せんすい</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation>PG/PM</translation>
+        <translation>ＨＰＭＰいれかえ</translation>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation>Magia W</translation>
+        <translation>Ｗまほう</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation>Invocación W</translation>
+        <translation>Ｗしょうかん</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation>Objeto W</translation>
+        <translation>Ｗアイテム</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation>NO USAR</translation>
+        <translation>使用不可</translation>
     </message>
     <message>
         <source>All</source>
-        <translation>Todo</translation>
+        <translation>ぜんたいか</translation>
     </message>
     <message>
         <source>Counter</source>
-        <translation>Contar</translation>
+        <translation>コマンドカウンター</translation>
     </message>
     <message>
         <source>Magic Counter</source>
-        <translation>Oposición mágica</translation>
+        <translation>まほうカウンター</translation>
     </message>
     <message>
         <source>MP Turbo</source>
-        <translation>Turbo PM</translation>
+        <translation>ＭＰターボ</translation>
     </message>
     <message>
         <source>MP Absorb</source>
-        <translation>Absorber PM</translation>
+        <translation>ＭＰきゅうしゅう</translation>
     </message>
     <message>
         <source>HP Absorb</source>
-        <translation>Absorber PG</translation>
+        <translation>ＨＰきゅうしゅう</translation>
     </message>
     <message>
         <source>Elemental</source>
-        <translation>Elemento Básico</translation>
+        <translation>ぞくせい</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation>Efecto añaddo</translation>
+        <translation>ついかこうか</translation>
     </message>
     <message>
         <source>Sneak Attack</source>
-        <translation>Aqtaque furtivo</translation>
+        <translation>ふいうち</translation>
     </message>
     <message>
         <source>Final Attack</source>
-        <translation>Ataque final</translation>
+        <translation>ファイナルアタック</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation>Corte añadido</translation>
+        <translation>ついかぎり</translation>
     </message>
     <message>
         <source>Steal-As-Well</source>
-        <translation>Robo simultáneo</translation>
+        <translation>ついでにぬすむ</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
-        <translation>Cuadrimagia</translation>
+        <translation>まほうみだれうち</translation>
     </message>
     <message>
         <source>Steal</source>
-        <translation>Robar</translation>
+        <translation>ぬすむ</translation>
     </message>
     <message>
         <source>Sense</source>
-        <translation>Sentir</translation>
+        <translation>みやぶる</translation>
     </message>
     <message>
         <source>Throw</source>
-        <translation>Lanzar</translation>
+        <translation>なげる</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation>Morfo</translation>
+        <translation>へんか</translation>
     </message>
     <message>
         <source>Manipulate</source>
-        <translation>Manipular</translation>
+        <translation>あやつる</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation>Gesticular</translation>
+        <translation>ものまね</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation>Habil. Enem</translation>
+        <translation>てきのわざ</translation>
     </message>
     <message>
         <source>Master Command</source>
-        <translation>Comando maestro</translation>
+        <translation>マスターコマンド</translation>
     </message>
     <message>
         <source>Fire</source>
-        <translation>Fuego</translation>
+        <translation>ほのお</translation>
     </message>
     <message>
         <source>Ice</source>
-        <translation>Hielo</translation>
+        <translation>れいき</translation>
     </message>
     <message>
         <source>Earth</source>
-        <translation>Tierra</translation>
+        <translation>だいち</translation>
     </message>
     <message>
         <source>Lightning</source>
-        <translation>Rayo</translation>
+        <translation>いかずち</translation>
     </message>
     <message>
         <source>Restore</source>
-        <translation>Recuperar</translation>
+        <translation>かいふく</translation>
     </message>
     <message>
         <source>Heal</source>
-        <translation>Sanar</translation>
+        <translation>ちりょう</translation>
     </message>
     <message>
         <source>Revive</source>
-        <translation>Revivir</translation>
+        <translation>そせい</translation>
     </message>
     <message>
         <source>Seal</source>
-        <translation>Sellar</translation>
+        <translation>ふうじる</translation>
     </message>
     <message>
         <source>Mystify</source>
-        <translation>Mistificar</translation>
+        <translation>まどわす</translation>
     </message>
     <message>
         <source>Transform</source>
-        <translation>Transformar</translation>
+        <translation>へんしん</translation>
     </message>
     <message>
         <source>Exit</source>
-        <translation>Salir</translation>
+        <translation>りだつ</translation>
     </message>
     <message>
         <source>Poison</source>
-        <translation>Envenenar</translation>
+        <translation>どく</translation>
     </message>
     <message>
         <source>Barrier</source>
-        <translation>Barrera</translation>
+        <translation>バリア</translation>
     </message>
     <message>
         <source>Comet</source>
-        <translation>Cometa</translation>
+        <translation>いんせき</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation>Tiempo</translation>
+        <translation>じかん</translation>
     </message>
     <message>
         <source>Destruct</source>
-        <translation>Destruir</translation>
+        <translation>しょうめつ</translation>
     </message>
     <message>
         <source>Contain</source>
-        <translation>Contener</translation>
+        <translation>ふういん</translation>
     </message>
     <message>
         <source>FullCure</source>
-        <translation>Cura Total</translation>
+        <translation>フルケア</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation>Escudo</translation>
+        <translation>シールド</translation>
     </message>
     <message>
         <source>Ultima</source>
-        <translation>Última</translation>
+        <translation>アルテマ</translation>
     </message>
     <message>
         <source>Master Magic</source>
-        <translation>Magia maestra</translation>
+        <translation>マスターまほう</translation>
     </message>
     <message>
         <source>Choco/Mog</source>
-        <translation>Choco/Mog</translation>
+        <translation>チョコボ＆モーグリ</translation>
     </message>
     <message>
         <source>Shiva</source>
-        <translation>Shiva</translation>
+        <translation>シヴァ</translation>
     </message>
     <message>
         <source>Ifrit</source>
-        <translation>Ifrit</translation>
+        <translation>イフリート</translation>
     </message>
     <message>
         <source>Ramuh</source>
-        <translation>Ramuh</translation>
+        <translation>ラムウ</translation>
     </message>
     <message>
         <source>Titan</source>
-        <translation>Titán</translation>
+        <translation>タイタン</translation>
     </message>
     <message>
         <source>Odin</source>
-        <translation>Odín</translation>
+        <translation>オーディーン</translation>
     </message>
     <message>
         <source>Leviathan</source>
-        <translation>Leviatán</translation>
+        <translation>リヴァイアサン</translation>
     </message>
     <message>
         <source>Bahamut</source>
-        <translation>Bahamut</translation>
+        <translation>バハムート</translation>
     </message>
     <message>
         <source>Kujata</source>
-        <translation>Kjata</translation>
+        <translation>クジャタ</translation>
     </message>
     <message>
         <source>Alexander</source>
-        <translation>Alejandro</translation>
+        <translation>アレクサンダー</translation>
     </message>
     <message>
         <source>Phoenix</source>
-        <translation>Fénix</translation>
+        <translation>フェニックス</translation>
     </message>
     <message>
         <source>Neo Bahamut</source>
-        <translation>Neo Bahamut</translation>
+        <translation>バハムート改</translation>
     </message>
     <message>
         <source>Hades</source>
-        <translation>Hades</translation>
+        <translation>ハーデス</translation>
     </message>
     <message>
         <source>Bahamut ZERO</source>
-        <translation>Bahamut CERO</translation>
+        <translation>バハムート零式</translation>
     </message>
     <message>
         <source>Knights of Round</source>
-        <translation>Cab. de la mesa R.</translation>
+        <translation>ナイツオブラウンド</translation>
     </message>
     <message>
         <source>Master Summon</source>
-        <translation>Invocación mestra</translation>
+        <translation>マスターしょうかん</translation>
     </message>
     <message>
         <source>Deathblow</source>
-        <translation>Golpe mortal</translation>
+        <translation>ひっさつ</translation>
     </message>
     <message>
         <source>Gravity</source>
-        <translation>Gravedad</translation>
+        <translation>じゅうりょく</translation>
     </message>
     <message>
         <source>Typhon</source>
-        <translation>Typhon</translation>
+        <translation>テュポーン</translation>
     </message>
 </context>
 <context>
     <name>Materia_Skills</name>
     <message>
         <source>MP Plus +10%</source>
-        <translation>Super PM +10%</translation>
+        <translation>MP +10%</translation>
     </message>
     <message>
         <source>MP Plus +20%</source>
-        <translation>Super PM +20%</translation>
+        <translation>MP +20%</translation>
     </message>
     <message>
         <source>MP Plus +30%</source>
-        <translation>Super PM +30%</translation>
+        <translation>MP +30%</translation>
     </message>
     <message>
         <source>MP Plus +40%</source>
-        <translation>Super PM +40%</translation>
+        <translation>MP +40%</translation>
     </message>
     <message>
         <source>MP Plus +50%</source>
-        <translation>Super PM +50%</translation>
+        <translation>MP +50%</translation>
     </message>
     <message>
         <source>HP Plus +10%</source>
-        <translation>Super PG +10%</translation>
+        <translation>HP +10%</translation>
     </message>
     <message>
         <source>HP Plus +20%</source>
-        <translation>Super PG +20%</translation>
+        <translation>HP +20%</translation>
     </message>
     <message>
         <source>HP Plus +30%</source>
-        <translation>Super PG +30%</translation>
+        <translation>HP +30%</translation>
     </message>
     <message>
         <source>HP Plus +40%</source>
-        <translation>Super PG +40%</translation>
+        <translation>HP +40%</translation>
     </message>
     <message>
         <source>HP Plus +50%</source>
-        <translation>Super PG +50%</translation>
+        <translation>HP +50%</translation>
     </message>
     <message>
         <source>Speed Plus +10%</source>
-        <translation>Super velocidad +10%</translation>
+        <translation>スピード +10%</translation>
     </message>
     <message>
         <source>Speed Plus +20%</source>
-        <translation>Super velocidad +20%</translation>
+        <translation>スピード +20%</translation>
     </message>
     <message>
         <source>Speed Plus +30%</source>
-        <translation>Super velocidad +30%</translation>
+        <translation>スピード +30%</translation>
     </message>
     <message>
         <source>Speed Plus +40%</source>
-        <translation>Super velocidad +40%</translation>
+        <translation>スピード +40%</translation>
     </message>
     <message>
         <source>Speed Plus +50%</source>
-        <translation>Super velocidad +50%</translation>
+        <translation>スピード +50%</translation>
     </message>
     <message>
         <source>Magic Plus +10%</source>
-        <translation>Super magia +10%</translation>
+        <translation>魔力 +10%</translation>
     </message>
     <message>
         <source>Magic Plus +20%</source>
-        <translation>Super magia +20%</translation>
+        <translation>魔力 +20%</translation>
     </message>
     <message>
         <source>Magic Plus +30%</source>
-        <translation>Super magia +30%</translation>
+        <translation>魔力 +30%</translation>
     </message>
     <message>
         <source>Magic Plus +40%</source>
-        <translation>Super magia +40%</translation>
+        <translation>魔力 +40%</translation>
     </message>
     <message>
         <source>Magic Plus +50%</source>
-        <translation>Super magia +50%</translation>
+        <translation>魔力 +50%</translation>
     </message>
     <message>
         <source>Luck Plus +10%</source>
-        <translation>Super suerte+10%</translation>
+        <translation>運 +10%</translation>
     </message>
     <message>
         <source>Luck Plus +20%</source>
-        <translation>Super suerte+20%</translation>
+        <translation>運 +20%</translation>
     </message>
     <message>
         <source>Luck Plus +30%</source>
-        <translation>Super suerte+30%</translation>
+        <translation>運 +30%</translation>
     </message>
     <message>
         <source>Luck Plus +40%</source>
-        <translation>Super suerte+40%</translation>
+        <translation>運 +40%</translation>
     </message>
     <message>
         <source>Luck Plus +50%</source>
-        <translation>Super suerte+50%</translation>
+        <translation>運 +50%</translation>
     </message>
     <message>
         <source>Exp Plus +50%</source>
-        <translation>Super EXP +50%</translation>
+        <translation>経験値 +50%</translation>
     </message>
     <message>
         <source>Exp Plus +100%</source>
-        <translation>Super EXP +100%</translation>
+        <translation>経験値 +100%</translation>
     </message>
     <message>
         <source>Gil Plus +50%</source>
-        <translation>Super Gil +50%</translation>
+        <translation>ギル +50%</translation>
     </message>
     <message>
         <source>Gil Plus +100%</source>
-        <translation>Super Gil +100%</translation>
+        <translation>ギル +100%</translation>
     </message>
     <message>
         <source>Encounter Rate -50%</source>
-        <translation>Tasa de encuentros -50%</translation>
+        <translation>エンカウント率 -50%</translation>
     </message>
     <message>
         <source>Encounter Rate -75%</source>
-        <translation>Tasa de encuentros -75%</translation>
+        <translation>エンカウント率 -75%</translation>
     </message>
     <message>
         <source>Encounter Rate +50%</source>
-        <translation>Tasa de encuentros +50%</translation>
+        <translation>エンカウント率 +50%</translation>
     </message>
     <message>
         <source>Encounter Rate +100%</source>
-        <translation>Tasa de encuentros +100%</translation>
+        <translation>エンカウント率 +100%</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
-        <translation>Atrae chocobo</translation>
+        <translation>チョコボよせ</translation>
     </message>
     <message>
         <source>Chocobo Lure +50%</source>
-        <translation>Atrae chocobo +50%</translation>
+        <translation>チョコボよせ +50%</translation>
     </message>
     <message>
         <source>Chocobo Lure +100%</source>
-        <translation>Atrae chocobo +100%</translation>
+        <translation>チョコボよせ +100%</translation>
     </message>
     <message>
         <source>Chocobo Lure +200%</source>
-        <translation>Atrae chocobo +200%</translation>
+        <translation>チョコボよせ +200%</translation>
     </message>
     <message>
         <source>Pre-emptive +6%</source>
-        <translation>Prevacio +6%</translation>
+        <translation>先制攻撃 +6%</translation>
     </message>
     <message>
         <source>Pre-emptive +12%</source>
-        <translation>Prevacio +12%</translation>
+        <translation>先制攻撃 +12%</translation>
     </message>
     <message>
         <source>Pre-emptive +24%</source>
-        <translation>Prevacio +24%</translation>
+        <translation>先制攻撃 +24%</translation>
     </message>
     <message>
         <source>Pre-emptive +36%</source>
-        <translation>Prevacio +36%</translation>
+        <translation>先制攻撃 +36%</translation>
     </message>
     <message>
         <source>Pre-emptive +48%</source>
-        <translation>Prevacio +48%</translation>
+        <translation>先制攻撃 +48%</translation>
     </message>
     <message>
         <source>Long Range</source>
-        <translation>Larga fila</translation>
+        <translation>えんきょりこうげき</translation>
     </message>
     <message>
         <source>Mega-all x1</source>
-        <translation>Mega todo x1</translation>
+        <translation>すべてぜんたいか x1</translation>
     </message>
     <message>
         <source>Mega-all x2</source>
-        <translation>Mega todo x2</translation>
+        <translation>すべてぜんたいか x2</translation>
     </message>
     <message>
         <source>Mega-all x3</source>
-        <translation>Mega todo x3</translation>
+        <translation>すべてぜんたいか x3</translation>
     </message>
     <message>
         <source>Mega-all x4</source>
-        <translation>Mega todo x4</translation>
+        <translation>すべてぜんたいか x4</translation>
     </message>
     <message>
         <source>Mega-all x5</source>
-        <translation>Mega todo x5</translation>
+        <translation>すべてぜんたいか x5</translation>
     </message>
     <message>
         <source>Counter Attack 20%</source>
-        <translation>Contraataque 20%</translation>
+        <translation>カウンター 20%</translation>
     </message>
     <message>
         <source>Counter Attack 40%</source>
-        <translation>Contraataque 40%</translation>
+        <translation>カウンター 40%</translation>
     </message>
     <message>
         <source>Counter Attack 60%</source>
-        <translation>Contraataque 60%</translation>
+        <translation>カウンター 60%</translation>
     </message>
     <message>
         <source>Counter Attack 80%</source>
-        <translation>Contraataque 80%</translation>
+        <translation>カウンター 80%</translation>
     </message>
     <message>
         <source>Counter Attack 100%</source>
-        <translation>Contraataque 100%</translation>
+        <translation>カウンター 100%</translation>
     </message>
     <message>
         <source>Slash-All</source>
-        <translation>Fulminar a todos</translation>
+        <translation>ぜんたいぎり</translation>
     </message>
     <message>
         <source>Flash</source>
-        <translation>Flash</translation>
+        <translation>いあいぬき</translation>
     </message>
     <message>
         <source>2x-Cut</source>
-        <translation>2x Corte</translation>
+        <translation>れんぞくぎり</translation>
     </message>
     <message>
         <source>4x-Cut</source>
-        <translation>4x Corte</translation>
+        <translation>みだれうち</translation>
     </message>
     <message>
         <source>Cover +20%</source>
-        <translation>Cubrir +20%</translation>
+        <translation>かばう +20%</translation>
     </message>
     <message>
         <source>Cover +40%</source>
-        <translation>Cubrir +40%</translation>
+        <translation>かばう +40%</translation>
     </message>
     <message>
         <source>Cover +60%</source>
-        <translation>Cubrir +60%</translation>
+        <translation>かばう +60%</translation>
     </message>
     <message>
         <source>Cover +80%</source>
-        <translation>Cubrir +80%</translation>
+        <translation>かばう +80%</translation>
     </message>
     <message>
         <source>Cover +100%</source>
-        <translation>Cubrir +100%</translation>
+        <translation>かばう +100%</translation>
     </message>
     <message>
         <source>Underwater</source>
-        <translation>Subacuática</translation>
+        <translation>せんすい</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation>PG/PM</translation>
+        <translation>ＨＰＭＰいれかえ</translation>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation>Magia W</translation>
+        <translation>W-まほう</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation>Invocación W</translation>
+        <translation>W-しょうかん</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation>Objeto W</translation>
+        <translation>W-アイテム</translation>
     </message>
     <message>
         <source>All x1</source>
-        <translation>Todo x1</translation>
+        <translation>ぜんたいか x1</translation>
     </message>
     <message>
         <source>All x2</source>
-        <translation>Todo x2</translation>
+        <translation>ぜんたいか x2</translation>
     </message>
     <message>
         <source>All x3</source>
-        <translation>Todo x3</translation>
+        <translation>ぜんたいか x3</translation>
     </message>
     <message>
         <source>All x4</source>
-        <translation>Todo x4</translation>
+        <translation>ぜんたいか x4</translation>
     </message>
     <message>
         <source>All x5</source>
-        <translation>Todo x5</translation>
+        <translation>ぜんたいか x5</translation>
     </message>
     <message>
         <source>MP Turbo 10%</source>
-        <translation>Turbo PM 10%</translation>
+        <translation>MPターボ 10%</translation>
     </message>
     <message>
         <source>Mp Turbo 20%</source>
-        <translation>Turbo PM 20%</translation>
+        <translation>MPターボ 20%</translation>
     </message>
     <message>
         <source>Mp Turbo 30%</source>
-        <translation>Turbo PM 30%</translation>
+        <translation>MPターボ 30%</translation>
     </message>
     <message>
         <source>Mp Turbo 40%</source>
-        <translation>Turbo PM 40%</translation>
+        <translation>MPターボ 40%</translation>
     </message>
     <message>
         <source>Mp Turbo 50%</source>
-        <translation>Turbo PM 50%</translation>
+        <translation>MPターボ 50%</translation>
     </message>
     <message>
         <source>MP Absorb</source>
-        <translation>Absorber PM</translation>
+        <translation>MPきゅうしゅう</translation>
     </message>
     <message>
         <source>HP Absorb</source>
-        <translation>Absorber PG</translation>
+        <translation>HPきゅうしゅう</translation>
     </message>
     <message>
         <source>Elemental 50%</source>
-        <translation>Elemento Básico 50%</translation>
+        <translation>属性 50%</translation>
     </message>
     <message>
         <source>Elemental 100%</source>
-        <translation>Elemento Básico 100%</translation>
+        <translation>属性 100%</translation>
     </message>
     <message>
         <source>Elemental 200%</source>
-        <translation>Elemento Básico 200%</translation>
+        <translation>属性 200%</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation>Efecto añaddo</translation>
+        <translation>追加効果</translation>
     </message>
     <message>
         <source>Sneak Attack 20%</source>
-        <translation>Ataque furtivo 20%</translation>
+        <translation>ふいうち 20%</translation>
     </message>
     <message>
         <source>Sneak Attack 35%</source>
-        <translation>Ataque furtivo 35%</translation>
+        <translation>ふいうち 35%</translation>
     </message>
     <message>
         <source>Sneak Attack 50%</source>
-        <translation>Ataque furtivo 50%</translation>
+        <translation>ふいうち 50%</translation>
     </message>
     <message>
         <source>Sneak Attack 65%</source>
-        <translation>Ataque furtivo 65%</translation>
+        <translation>ふいうち 65%</translation>
     </message>
     <message>
         <source>Sneak Attack 80%</source>
-        <translation>Ataque furtivo 80%</translation>
+        <translation>ふいうち 80%</translation>
     </message>
     <message>
         <source>Final Attack x1</source>
-        <translation>Ataque final x1</translation>
+        <translation>ファイナルアタック x1</translation>
     </message>
     <message>
         <source>Final Attack x2</source>
-        <translation>Ataque final x2</translation>
+        <translation>ファイナルアタック x2</translation>
     </message>
     <message>
         <source>Final Attack x3</source>
-        <translation>Ataque final x3</translation>
+        <translation>ファイナルアタック x3</translation>
     </message>
     <message>
         <source>Final Attack x4</source>
-        <translation>Ataque final x4</translation>
+        <translation>ファイナルアタック x4</translation>
     </message>
     <message>
         <source>Final Attack x5</source>
-        <translation>Ataque final x5</translation>
+        <translation>ファイナルアタック x5</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation>Corte añadido</translation>
+        <translation>ついかぎり</translation>
     </message>
     <message>
         <source>Quadra Magic x1</source>
-        <translation>Cuadrimagia x1</translation>
+        <translation>まほうみだれうち x1</translation>
     </message>
     <message>
         <source>Quadra Magic x2</source>
-        <translation>Cuadrimagia x2</translation>
+        <translation>まほうみだれうち x2</translation>
     </message>
     <message>
         <source>Quadra Magic x3</source>
-        <translation>Cuadrimagia x3</translation>
+        <translation>まほうみだれうち x3</translation>
     </message>
     <message>
         <source>Quadra Magic x4</source>
-        <translation>Cuadrimagia x4</translation>
+        <translation>まほうみだれうち x4</translation>
     </message>
     <message>
         <source>Quadra Magic x5</source>
-        <translation>Cuadrimagia x5</translation>
+        <translation>まほうみだれうち x5</translation>
     </message>
     <message>
         <source>Steal</source>
-        <translation>Robar</translation>
+        <translation>ぬすむ</translation>
     </message>
     <message>
         <source>Mug</source>
-        <translation>Toma</translation>
+        <translation>ぶんどる</translation>
     </message>
     <message>
         <source>Throw</source>
-        <translation>Lanzar</translation>
+        <translation>なげる</translation>
     </message>
     <message>
         <source>Coin</source>
-        <translation>Mon.</translation>
+        <translation>ぜになげ</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation>Morfo</translation>
+        <translation>へんか</translation>
     </message>
     <message>
         <source>DeathBlow</source>
-        <translation>Golpe mortal</translation>
+        <translation>ひっさつ</translation>
     </message>
     <message>
         <source>Manipulate</source>
-        <translation>Manipular</translation>
+        <translation>あやつる</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation>Gesto</translation>
+        <translation>ものまね</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation>Habil. Enem</translation>
+        <translation>てきのわざ</translation>
     </message>
     <message>
         <source>Master Command</source>
-        <translation>Comando maestro</translation>
+        <translation>マスターコマンド</translation>
     </message>
     <message>
         <source>Fire (4mp)</source>
-        <translation>Fuego (4pm)</translation>
+        <translation>ファイア (4MP)</translation>
     </message>
     <message>
         <source>Fire2 (22mp)</source>
-        <translation>Fuego2 (22pm)</translation>
+        <translation>ファイラ (22MP)</translation>
     </message>
     <message>
         <source>Fire3 (52mp)</source>
-        <translation>Fuego3 (52pm)</translation>
+        <translation>ファイガ (52MP)</translation>
     </message>
     <message>
         <source>Ice (4mp)</source>
-        <translation>Hielo (4pm)</translation>
+        <translation>ブリザド (4MP)</translation>
     </message>
     <message>
         <source>Ice2 (22mp)</source>
-        <translation>Hielo2 (22pm)</translation>
+        <translation>ブリザラ (22MP)</translation>
     </message>
     <message>
         <source>Ice3 (52mp)</source>
-        <translation>Hielo3 (52pm)</translation>
+        <translation>ブリザガ (52MP)</translation>
     </message>
     <message>
         <source>Quake (6mp)</source>
-        <translation>Sismo (6pm)</translation>
+        <translation>クエイク (6MP)</translation>
     </message>
     <message>
         <source>Quake2 (28mp)</source>
-        <translation>Sismo2 (28pm)</translation>
+        <translation>クエイラ (28MP)</translation>
     </message>
     <message>
         <source>Quake3 (68mp)</source>
-        <translation>Sismo3 (68pm)</translation>
+        <translation>クエイガ (68MP)</translation>
     </message>
     <message>
         <source>Bolt (4mp)</source>
-        <translation>Rayo (4pm)</translation>
+        <translation>サンダー (4MP)</translation>
     </message>
     <message>
         <source>Bolt2 (22mp)</source>
-        <translation>Rayo2 (22pm)</translation>
+        <translation>サンダラ (22MP)</translation>
     </message>
     <message>
         <source>Cure (5mp)</source>
-        <translation>Cura (5pm)</translation>
+        <translation>ケアル (5MP)</translation>
     </message>
     <message>
         <source>Cure2 (24mp)</source>
-        <translation>Cura2 (24pm)</translation>
+        <translation>ケアルラ (24MP)</translation>
     </message>
     <message>
         <source>Cure3 (64mp)</source>
-        <translation>Cura3 (64pm)</translation>
+        <translation>ケアルガ (64MP)</translation>
     </message>
     <message>
         <source>Poisona (3mp)</source>
-        <translation>Veneno (3pm)</translation>
+        <translation>ポイゾナ (3MP)</translation>
     </message>
     <message>
         <source>Esuna (15mp)</source>
-        <translation>Esuna (15pm)</translation>
+        <translation>エスナ (15MP)</translation>
     </message>
     <message>
         <source>Resist (120mp)</source>
-        <translation>Resistencia (120pm)</translation>
+        <translation>レジスト (120MP)</translation>
     </message>
     <message>
         <source>Life (34mp)</source>
-        <translation>Vida (34pm)</translation>
+        <translation>レイズ (34MP)</translation>
     </message>
     <message>
         <source>Life2 (100mp)</source>
-        <translation>Vida2 (100pm)</translation>
+        <translation>アレイズ (100MP)</translation>
     </message>
     <message>
         <source>Sleepel (8mp)</source>
-        <translation>Sueño (8pm)</translation>
+        <translation>スリプル (8MP)</translation>
     </message>
     <message>
         <source>Silence (24mp)</source>
-        <translation>Silencio (24pm)</translation>
+        <translation>サイレス (24MP)</translation>
     </message>
     <message>
         <source>Mini (10mp)</source>
-        <translation>Pequeño (10pm)</translation>
+        <translation>ミニマム (10MP)</translation>
     </message>
     <message>
         <source>Toad (14mp)</source>
-        <translation>Rana (14pm)</translation>
+        <translation>トード (14MP)</translation>
     </message>
     <message>
         <source>Exit (16mp)</source>
-        <translation>Fuga (16pm)</translation>
+        <translation>エスケプ (16MP)</translation>
     </message>
     <message>
         <source>Remove (99mp)</source>
-        <translation>Elimin. (99pm)</translation>
+        <translation>デジョン (99MP)</translation>
     </message>
     <message>
         <source>Bio (8mp)</source>
-        <translation>Bio (8pm)</translation>
+        <translation>バイオ (8MP)</translation>
     </message>
     <message>
         <source>Bio2 (36mp)</source>
-        <translation>Bio2 (36pm)</translation>
+        <translation>バイオラ (36MP)</translation>
     </message>
     <message>
         <source>Bio3 (80mp)</source>
-        <translation>Bio3 (80pm)</translation>
+        <translation>バイオガ (80MP)</translation>
     </message>
     <message>
         <source>Demi (14mp)</source>
-        <translation>Semi (14pm)</translation>
+        <translation>グラビデ (14MP)</translation>
     </message>
     <message>
         <source>Demi2 (33mp)</source>
-        <translation>Semi2 (33pm)</translation>
+        <translation>グラビラ (33MP)</translation>
     </message>
     <message>
         <source>Demi3 (48mp)</source>
-        <translation>Semi3 (48pm)</translation>
+        <translation>グラビガ (48MP)</translation>
     </message>
     <message>
         <source>Barrier (16mp)</source>
-        <translation>Barrera (16pm)</translation>
+        <translation>バリア (16MP)</translation>
     </message>
     <message>
         <source>Reflect (30mp)</source>
-        <translation>Reflejo (30pm)</translation>
+        <translation>リフレク (30MP)</translation>
     </message>
     <message>
         <source>Wall (58mp)</source>
-        <translation>Muro (58pm)</translation>
+        <translation>ウォール (58MP)</translation>
     </message>
     <message>
         <source>Comet (70mp)</source>
-        <translation>Cometa (70pm)</translation>
+        <translation>コメット (70MP)</translation>
     </message>
     <message>
         <source>Comet2 (110mp)</source>
-        <translation>Cometa2 (110pm)</translation>
+        <translation>コメテオ (110MP)</translation>
     </message>
     <message>
         <source>Haste (18mp)</source>
-        <translation>Prisa (18pm)</translation>
+        <translation>ヘイスト (18MP)</translation>
     </message>
     <message>
         <source>Slow (20mp)</source>
-        <translation>Lento (20pm)</translation>
+        <translation>スロウ (20MP)</translation>
     </message>
     <message>
         <source>Stop (34mp)</source>
-        <translation>Alto (34pm)</translation>
+        <translation>ストップ (34MP)</translation>
     </message>
     <message>
         <source>DeBarrier (12mp)</source>
-        <translation>Bar Mrte. (12pm)</translation>
+        <translation>デバリア (12MP)</translation>
     </message>
     <message>
         <source>DeSpell (20mp)</source>
-        <translation>Hec Mrte.(20pm)</translation>
+        <translation>デスペル (20MP)</translation>
     </message>
     <message>
         <source>Death (30mp)</source>
-        <translation>Muerte (30pm)</translation>
+        <translation>デス (30MP)</translation>
     </message>
     <message>
         <source>Freeze (82mp)</source>
-        <translation>Congl. (82pm)</translation>
+        <translation>フリーズ (82MP)</translation>
     </message>
     <message>
         <source>Break (86mp)</source>
-        <translation>Romper (86pm)</translation>
+        <translation>ブレイク (86MP)</translation>
     </message>
     <message>
         <source>Tornado (90mp)</source>
-        <translation>Tornado (90pm)</translation>
+        <translation>トルネド (90MP)</translation>
     </message>
     <message>
         <source>Full Cure (99mp)</source>
-        <translation>Cura Total (99pm)</translation>
+        <translation>フルケア (99MP)</translation>
     </message>
     <message>
         <source>Shield (180mp)</source>
-        <translation>Escudo (180pm)</translation>
+        <translation>シールド (180MP)</translation>
     </message>
     <message>
         <source>Ultima (130mp)</source>
-        <translation>Última (130pm)</translation>
+        <translation>アルテマ (130MP)</translation>
     </message>
     <message>
         <source>Master Magic</source>
-        <translation>Magia maestra</translation>
+        <translation>マスターまほう</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x1 (14mp)</source>
-        <translation>Invoca Choco/Mog x1 (14pm)</translation>
+        <translation>チョコボ＆モーグリ x1 (14MP)</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x2 (14mp)</source>
-        <translation>Invoca Choco/Mog x2 (14pm)</translation>
+        <translation>チョコボ＆モーグリ x2 (14MP)</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x3 (14mp)</source>
-        <translation>Invoca Choco/Mog x3 (14pm)</translation>
+        <translation>チョコボ＆モーグリ x3 (14MP)</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x4 (14mp)</source>
-        <translation>Invoca Choco/Mog x4 (14pm)</translation>
+        <translation>チョコボ＆モーグリ x4 (14MP)</translation>
     </message>
     <message>
         <source>Summon Choco/Mog x5 (14mp)</source>
-        <translation>Invoca Choco/Mog x5 (14pm)</translation>
+        <translation>チョコボ＆モーグリ x5 (14MP)</translation>
     </message>
     <message>
         <source>Summon Ifrit x1 (34mp)</source>
-        <translation>Invoca Ifrit x1 (34pm)</translation>
+        <translation>イフリート x1 (34MP)</translation>
     </message>
     <message>
         <source>Summon Ifrit x2 (34mp)</source>
-        <translation>Invoca Ifrit x2(34pm)</translation>
+        <translation>イフリート x2 (34MP)</translation>
     </message>
     <message>
         <source>Summon Ifrit x3 (34mp)</source>
-        <translation>Invoca Ifrit x3(34pm)</translation>
+        <translation>イフリート x3 (34MP)</translation>
     </message>
     <message>
         <source>Summon Ifrit x4 (34mp)</source>
-        <translation>Invoca Ifrit x4(34pm)</translation>
+        <translation>イフリート x4 (34MP)</translation>
     </message>
     <message>
         <source>Summon Ifrit x5 (34mp)</source>
-        <translation>Invoca Ifrit x5(34pm)</translation>
+        <translation>イフリート x5 (34MP)</translation>
     </message>
     <message>
         <source>Summon Ramuh x1 (40mp)</source>
-        <translation>Invoca Ramuh x1 (40pm)</translation>
+        <translation>ラムウ x1 (40MP)</translation>
     </message>
     <message>
         <source>Summon Ramuh x2 (40mp)</source>
-        <translation>Invoca Ramuh x2 (40pm)</translation>
+        <translation>ラムウ x2 (40MP)</translation>
     </message>
     <message>
         <source>Summon Ramuh x3 (40mp)</source>
-        <translation>Invoca Ramuh x3 (40pm)</translation>
+        <translation>ラムウ x3 (40MP)</translation>
     </message>
     <message>
         <source>Summon Ramuh x4 (40mp)</source>
-        <translation>Invoca Ramuh x4 (40pm)</translation>
+        <translation>ラムウ x4 (40MP)</translation>
     </message>
     <message>
         <source>Summon Ramuh x5 (40mp)</source>
-        <translation>Invoca Ramuh x5 (40pm)</translation>
+        <translation>ラムウ x5 (40MP)</translation>
     </message>
     <message>
         <source>Summon Titan x1 (46mp)</source>
-        <translation>Invoca Titán x1 (46pm)</translation>
+        <translation>タイタン x1 (46MP)</translation>
     </message>
     <message>
         <source>Summon Titan x2 (46mp)</source>
-        <translation>Invoca Titán x2 (46pm)</translation>
+        <translation>タイタン x2 (46MP)</translation>
     </message>
     <message>
         <source>Summon Titan x3 (46mp)</source>
-        <translation>Invoca Titán x3 (46pm)</translation>
+        <translation>タイタン x3 (46MP)</translation>
     </message>
     <message>
         <source>Summon Titan x4 (46mp)</source>
-        <translation>Invoca Titán x4 (46pm)</translation>
+        <translation>タイタン x4 (46MP)</translation>
     </message>
     <message>
         <source>Summon Titan x5 (46mp)</source>
-        <translation>Invoca Titán x5 (46pm)</translation>
+        <translation>タイタン x5 (46MP)</translation>
     </message>
     <message>
         <source>Summon Odin x1 (80mp)</source>
-        <translation>Invoca Odín x1 (80pm)</translation>
+        <translation>オーディーン x1 (80MP)</translation>
     </message>
     <message>
         <source>Summon Odin x2 (80mp)</source>
-        <translation>Invoca Odín x2 (80pm)</translation>
+        <translation>オーディーン x2 (80MP)</translation>
     </message>
     <message>
         <source>Summon Odin x3 (80mp)</source>
-        <translation>Invoca Odín x3 (80pm)</translation>
+        <translation>オーディーン x3 (80MP)</translation>
     </message>
     <message>
         <source>Summon Odin x4 (80mp)</source>
-        <translation>Invoca Odín x4 (80pm)</translation>
+        <translation>オーディーン x4 (80MP)</translation>
     </message>
     <message>
         <source>Summon Odin x5 (80mp)</source>
-        <translation>Invoca Odín x5 (80pm)</translation>
+        <translation>オーディーン x5 (80MP)</translation>
     </message>
     <message>
         <source>Summon Leviathan x1 (78mp)</source>
-        <translation>Invoca Leviatán x1 (78pm)</translation>
+        <translation>リヴァイアサン x1 (78MP)</translation>
     </message>
     <message>
         <source>Summon Leviathan x2 (78mp)</source>
-        <translation>Invoca Leviatán x2 (78pm)</translation>
+        <translation>リヴァイアサン x2 (78MP)</translation>
     </message>
     <message>
         <source>Summon Leviathan x3 (78mp)</source>
-        <translation>Invoca Leviatán x3 (78pm)</translation>
+        <translation>リヴァイアサン x3 (78MP)</translation>
     </message>
     <message>
         <source>Summon Leviathan x4 (78mp)</source>
-        <translation>Invoca Leviatán x4 (78pm)</translation>
+        <translation>リヴァイアサン x4 (78MP)</translation>
     </message>
     <message>
         <source>Summon Leviathan x5 (78mp)</source>
-        <translation>Invoca Leviatán x5 (78pm)</translation>
+        <translation>リヴァイアサン x5 (78MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut x1 (100mp)</source>
-        <translation>Invoca Bahamut x1 (100pm)</translation>
+        <translation>バハムート x1 (100MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut x2 (100mp)</source>
-        <translation>Invoca Bahamut x2 (100pm)</translation>
+        <translation>バハムート x2 (100MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut x3 (100mp)</source>
-        <translation>Invoca Bahamut x3 (100pm)</translation>
+        <translation>バハムート x3 (100MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut x4 (100mp)</source>
-        <translation>Invoca Bahamut x4 (100pm)</translation>
+        <translation>バハムート x4 (100MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut x5 (100mp)</source>
-        <translation>Invoca Bahamut x5 (100pm)</translation>
+        <translation>バハムート x5 (100MP)</translation>
     </message>
     <message>
         <source>Summon Kujata x1 (110mp)</source>
-        <translation>Invoca Kjata x1 (110pm)</translation>
+        <translation>Kujata x1 (110MP)</translation>
     </message>
     <message>
         <source>Summon Kujata x2 (110mp)</source>
-        <translation>Invoca Kjata x2 (110pm)</translation>
+        <translation>Kujata x2 (110MP)</translation>
     </message>
     <message>
         <source>Summon Kujata x3 (110mp)</source>
-        <translation>Invoca Kjata x3 (110pm)</translation>
+        <translation>Kujata x3 (110MP)</translation>
     </message>
     <message>
         <source>Summon Kujata x4 (110mp)</source>
-        <translation>Invoca Kjata x4 (110pm)</translation>
+        <translation>Kujata x4 (110MP)</translation>
     </message>
     <message>
         <source>Summon Kujata x5 (110mp)</source>
-        <translation>Invoca Kjata x5 (110pm)</translation>
+        <translation>Kujata x5 (110MP)</translation>
     </message>
     <message>
         <source>Summon Alexander x1 (120mp)</source>
-        <translation>Invoca Alejandro x1 (120pm)</translation>
+        <translation>アレクサンダー x1 (120MP)</translation>
     </message>
     <message>
         <source>Summon Alexander x2 (120mp)</source>
-        <translation>Invoca Alejandro x2 (120pm)</translation>
+        <translation>アレクサンダー x2 (120MP)</translation>
     </message>
     <message>
         <source>Summon Alexander x3 (120mp)</source>
-        <translation>Invoca Alejandro x3 (120pm)</translation>
+        <translation>アレクサンダー x3 (120MP)</translation>
     </message>
     <message>
         <source>Summon Alexander x4 (120mp)</source>
-        <translation>Invoca Alejandro x4 (120pm)</translation>
+        <translation>アレクサンダー x4 (120MP)</translation>
     </message>
     <message>
         <source>Summon Alexander x5 (120mp)</source>
-        <translation>Invoca Alejandro x5 (120pm)</translation>
+        <translation>アレクサンダー x5 (120MP)</translation>
     </message>
     <message>
         <source>Summon Phoenix x1 (180mp)</source>
-        <translation>Invoca Fénix x1 (180pm)</translation>
+        <translation>フェニックス x1 (180MP)</translation>
     </message>
     <message>
         <source>Summon Phoenix x2 (180mp)</source>
-        <translation>Invoca Fénix x2 (180pm)</translation>
+        <translation>フェニックス x2 (180MP)</translation>
     </message>
     <message>
         <source>Summon Phoenix x3 (180mp)</source>
-        <translation>Invoca Fénix x3 (180pm)</translation>
+        <translation>フェニックス x3 (180MP)</translation>
     </message>
     <message>
         <source>Summon Phoenix x4 (180mp)</source>
-        <translation>Invoca Fénix x4 (180pm)</translation>
+        <translation>フェニックス x4 (180MP)</translation>
     </message>
     <message>
         <source>Summon Phoenix x5 (180mp)</source>
-        <translation>Invoca Fénix x5 (180pm)</translation>
+        <translation>フェニックス x5 (180MP)</translation>
     </message>
     <message>
         <source>Summon Neo Bahamut x1 (140mp)</source>
-        <translation>Invoca Neo Bahamut x1 (140mp)</translation>
+        <translation>バハムート改 x1 (140MP)</translation>
     </message>
     <message>
         <source>Summon Neo Bahamut x2 (140mp)</source>
-        <translation>Invoca Neo Bahamut x2 (140mp)</translation>
+        <translation>バハムート改 x2 (140MP)</translation>
     </message>
     <message>
         <source>Summon Neo Bahamut x3 (140mp)</source>
-        <translation>Invoca Neo Bahamut x3 (140mp)</translation>
+        <translation>バハムート改 x3 (140MP)</translation>
     </message>
     <message>
         <source>Summon Neo Bahamut x4 (140mp)</source>
-        <translation>Invoca Neo Bahamut x4 (140mp)</translation>
+        <translation>バハムート改 x4 (140MP)</translation>
     </message>
     <message>
         <source>Summon Neo Bahamut x5 (140mp)</source>
-        <translation>Invoca Neo Bahamut x5 (140mp)</translation>
+        <translation>バハムート改 x5 (140MP)</translation>
     </message>
     <message>
         <source>Summon Hades x1 (150mp)</source>
-        <translation>Invoca Hades x1 (150mp)</translation>
+        <translation>ハーデス x1 (150MP)</translation>
     </message>
     <message>
         <source>Summon Hades x2 (150mp)</source>
-        <translation>Invoca Hades x2 (150mp)</translation>
+        <translation>ハーデス x2 (150MP)</translation>
     </message>
     <message>
         <source>Summon Hades x3 (150mp)</source>
-        <translation>Invoca Hades x3 (150mp)</translation>
+        <translation>ハーデス x3 (150MP)</translation>
     </message>
     <message>
         <source>Summon Hades x4 (150mp)</source>
-        <translation>Invoca Hades x4 (150mp)</translation>
+        <translation>ハーデス x4 (150MP)</translation>
     </message>
     <message>
         <source>Summon Hades x5 (150mp)</source>
-        <translation>Invoca Hades x5 (150mp)</translation>
+        <translation>ハーデス x5 (150MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x1 (180mp)</source>
-        <translation>Invoca Bahamut CERO x1 (180pm)</translation>
+        <translation>バハムート零式 x1 (180MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x2 (180mp)</source>
-        <translation>Invoca Bahamut CERO x2 (180pm)</translation>
+        <translation>バハムート零式 x2 (180MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x3 (180mp)</source>
-        <translation>Invoca Bahamut CERO x3 (180pm)</translation>
+        <translation>バハムート零式 x3 (180MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x4 (180mp)</source>
-        <translation>Invoca Bahamut CERO x4 (180pm)</translation>
+        <translation>バハムート零式 x4 (180MP)</translation>
     </message>
     <message>
         <source>Summon Bahamut ZERO x5 (180mp)</source>
-        <translation>Invoca Bahamut CERO x5 (180pm)</translation>
+        <translation>バハムート零式 x5 (180MP)</translation>
     </message>
     <message>
         <source>Summon KOTR x1 (250mp)</source>
-        <translation>Invoca Cab. de la mesa R. x1 (250pm)</translation>
+        <translation>ナイツオブラウンド x1 (250MP)</translation>
     </message>
     <message>
         <source>Summon KOTR x2 (250mp)</source>
-        <translation>Invoca Cab. de la mesa R. x2 (250pm)</translation>
+        <translation>ナイツオブラウンド x2 (250MP)</translation>
     </message>
     <message>
         <source>Summon KOTR x3 (250mp)</source>
-        <translation>Invoca Cab. de la mesa R. x3 (250pm)</translation>
+        <translation>ナイツオブラウンド x3 (250MP)</translation>
     </message>
     <message>
         <source>Summon KOTR x4 (250mp)</source>
-        <translation>Invoca Cab. de la mesa R. x4 (250pm)</translation>
+        <translation>ナイツオブラウンド x4 (250MP)</translation>
     </message>
     <message>
         <source>Summon KOTR x5 (250mp)</source>
-        <translation>Invoca Cab. de la mesa R. x5 (250pm)</translation>
+        <translation>ナイツオブラウンド x5 (250MP)</translation>
     </message>
     <message>
         <source>Master Summon</source>
-        <translation>Invocación mestra</translation>
+        <translation>マスターしょうかん</translation>
     </message>
     <message>
         <source>Bolt3 (52mp)</source>
-        <translation>Rayo3 (52pm)</translation>
+        <translation>サンダガ (52MP)</translation>
     </message>
     <message>
         <source>Regen (30mp)</source>
-        <translation>Regenerar (30pm)</translation>
+        <translation>リジェネ (30MP)</translation>
     </message>
     <message>
         <source>Flare (100mp)</source>
-        <translation>Flama (100pm)</translation>
+        <translation>フレア (100MP)</translation>
     </message>
     <message>
         <source>Berserk (28mp)</source>
-        <translation>Locura (28pm)</translation>
+        <translation>バーサク (28MP)</translation>
     </message>
     <message>
         <source>Summon Shiva x1 (32mp)</source>
-        <translation>Invoca Shiva x1 (32pm)</translation>
+        <translation>シヴァ x1 (32MP)</translation>
     </message>
     <message>
         <source>Summon Shiva x2 (32mp)</source>
-        <translation>Invoca Shiva x2 (32pm)</translation>
+        <translation>シヴァ x2 (32MP)</translation>
     </message>
     <message>
         <source>Summon Shiva x3 (32mp)</source>
-        <translation>Invoca Shiva x3 (32pm)</translation>
+        <translation>シヴァ x3 (32MP)</translation>
     </message>
     <message>
         <source>Summon Shiva x4 (32mp)</source>
-        <translation>Invoca Shiva x4 (32pm)</translation>
+        <translation>シヴァ x4 (32MP)</translation>
     </message>
     <message>
         <source>Summon Shiva x5 (32mp)</source>
-        <translation>Invoca Shiva x5 (32pm)</translation>
+        <translation>シヴァ x5 (32MP)</translation>
     </message>
     <message>
         <source>Counter Rate 20%</source>
-        <translation>Tasa de contraataque 20%</translation>
+        <translation>コマンドカウンター率 20%</translation>
     </message>
     <message>
         <source>Counter Rate 40%</source>
-        <translation>Tasa de contraataque 40%</translation>
+        <translation>コマンドカウンター率 40%</translation>
     </message>
     <message>
         <source>Counter Rate 60%</source>
-        <translation>Tasa de contraataque 60%</translation>
+        <translation>コマンドカウンター率 60%</translation>
     </message>
     <message>
         <source>Counter Rate 80%</source>
-        <translation>Tasa de contraataque 80%</translation>
+        <translation>コマンドカウンター率 80%</translation>
     </message>
     <message>
         <source>Counter Rate 100%</source>
-        <translation>Tasa de contraataque 100%</translation>
+        <translation>コマンドカウンター率 100%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 30%</source>
-        <translation>Tasa de contraataque mágico 30%</translation>
+        <translation>まほうカウンター率 30%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 40%</source>
-        <translation>Tasa de contraataque mágico 40%</translation>
+        <translation>まほうカウンター率 40%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 60%</source>
-        <translation>Tasa de contraataque mágico 60%</translation>
+        <translation>まほうカウンター率 60%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 80%</source>
-        <translation>Tasa de contraataque mágico 80%</translation>
+        <translation>まほうカウンター率 80%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 100%</source>
-        <translation>Tasa de contraataque mágico 100%</translation>
+        <translation>まほうカウンター率 100%</translation>
     </message>
     <message>
         <source>Steal as well</source>
-        <translation>Robo simultáneo</translation>
+        <translation>ついでにぬすむ</translation>
     </message>
     <message>
         <source>Sense</source>
-        <translation>Sentir</translation>
+        <translation>みやぶる</translation>
     </message>
     <message>
         <source>Confu (18mp)</source>
-        <translation>Confu (18pm)</translation>
+        <translation>コンフュ (18MP)</translation>
     </message>
     <message>
         <source>M-Barrier (24mp)</source>
-        <translation>BarreraM (24pm)</translation>
+        <translation>マバリア (24MP)</translation>
     </message>
     <message>
         <source>Summon Typhon x1 (160mp)</source>
-        <translation>Invoca Typhon x1 (160mp)</translation>
+        <translation>テュポーン x1 (160MP)</translation>
     </message>
     <message>
         <source>Summon Typhon x2 (160mp)</source>
-        <translation>Invoca Typhon x2 (160mp)</translation>
+        <translation>テュポーン x2 (160MP)</translation>
     </message>
     <message>
         <source>Summon Typhon x3 (160mp)</source>
-        <translation>Invoca Typhon x3 (160mp)</translation>
+        <translation>テュポーン x3 (160MP)</translation>
     </message>
     <message>
         <source>Summon Typhon x4 (160mp)</source>
-        <translation>Invoca Typhon x4 (160mp)</translation>
+        <translation>テュポーン x4 (160MP)</translation>
     </message>
     <message>
         <source>Summon Typhon x5 (160mp)</source>
-        <translation>Invoca Typhon x5 (160mp)</translation>
+        <translation>テュポーン x5 (160MP)</translation>
     </message>
 </context>
 <context>
     <name>Materia_Stats</name>
     <message>
         <source>Dex:+% depending on level</source>
-        <translation>Des:+% dependiendo del nivel</translation>
+        <translation>素早さ: + レベルに比例 (%)</translation>
     </message>
     <message>
         <source>Mag:+% depending on level</source>
-        <translation>Mag:+% dependiendo del nivel</translation>
+        <translation>魔力: + レベルに比例 (%)</translation>
     </message>
     <message>
         <source>Lck:+% depending on level</source>
-        <translation>Sue:+% dependiendo del nivel</translation>
+        <translation>運: + レベルに比例 (%)</translation>
     </message>
     <message>
         <source>Lck:+1</source>
-        <translation>Sue:+1</translation>
+        <translation>運 + 1</translation>
     </message>
     <message>
         <source>Lck:-1</source>
-        <translation>Sue:-1</translation>
+        <translation>運 - 1</translation>
     </message>
     <message>
         <source>Dex:+2</source>
-        <translation>Des:+2</translation>
+        <translation>素早さ + 2</translation>
     </message>
     <message>
         <source>Vit:+1</source>
-        <translation>Vit:+1</translation>
+        <translation>体力 + 1</translation>
     </message>
     <message>
         <source>MaxHp:+% depending on level</source>
-        <translation>PGMax: +% dependiendo del nivel</translation>
+        <translation>最大HP: + レベルに比例 (%)</translation>
     </message>
     <message>
         <source>MaxMp:+% depending on level</source>
-        <translation>PGMax: +% dependiendo del nivel</translation>
+        <translation>最大MP: + レベルに比例 (%)</translation>
     </message>
     <message>
         <source>MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1</source>
-        <translation>PGMax: -2% PMMax: +2% Fue:-1 Mag:+1</translation>
+        <translation>最大HP-2% 最大MP:+2% 力:-1 魔力:+1</translation>
     </message>
     <message>
         <source>MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation>PGMax: -5% PMMax: +5% Fue:-2 Vit:-1 Mag:+2 Esp:+1</translation>
+        <translation>最大HP:-5% 最大MP:+5% 力:-2 体力:-1 魔力:+2 魔防:+1</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
-        <translation>PGMax: -10% PMMax: +10% Fue:-4 Vit:-2 Mag:+4 Esp:+2</translation>
+        <translation>最大HP:-10% 最大MP:+10% 力:-4 体力:-2 魔力:+4 魔防:+2</translation>
     </message>
     <message>
         <source>MaxHp:-2% MaxMp:+2% Mag:+1</source>
-        <translation>PGMax: -2% PMMax: +2%Mag:+1</translation>
+        <translation>最大HP:-2% 最大MP:+2% 魔力:+1</translation>
     </message>
     <message>
         <source>MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1</source>
-        <translation>PGMax: -5% PMMax: +5% Mag:+1 Esp:+1</translation>
+        <translation>最大HP:-5% 最大MP:+5% 魔力:+1 魔防:+1</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2</source>
-        <translation>PGMax: -10% PMMax: +10%  Mag:+2 Esp:+2</translation>
+        <translation>最大HP:-10% 最大MP:+10% 魔力:+2 魔防:+2</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4</source>
-        <translation>PGMax: -10% PMMax: +15% Mag:+24Esp:+4</translation>
+        <translation>最大HP:-10% 最大MP:+15% 魔力:+4 魔防:+4</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8</source>
-        <translation>PGMax: -10% PMMax: +20% Mag:+8 Esp:+8</translation>
+        <translation>最大HP:-10% 最大MP:+20% 魔力:+8 魔防:+8</translation>
     </message>
 </context>
 <context>
@@ -6459,59 +6581,79 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     </message>
     <message>
         <source>Select A Directory To Save FF7 PC Saves</source>
-        <translation>Selecciona un directorio para guardar las partidas de FF7 PC</translation>
+        <translation>FF7 PC セーブの保存ディレクトリを選択</translation>
     </message>
     <message>
         <source>Select A Directory To Save mcd/mcr saves</source>
-        <translation>Selecciona un directorio para guardar las partidas mcd/mcr</translation>
+        <translation>mcd/mcr セーブの保存ディレクトリを選択</translation>
     </message>
     <message>
         <source>Select A Directory To Load FF7 PC Saves From</source>
-        <translation>Selecciona un directorio para cargar las partidas de FF7 PC</translation>
+        <translation>FF7 PC セーブをロードするディレクトリの選択</translation>
     </message>
     <message>
         <source>Select A Directory To Export FF7 PC Saves</source>
-        <translation>Selecciona un directorio para exportar las partidas de FF7 PC</translation>
+        <translation>FF7 PC セーブをエクスポートするディレクトリの選択</translation>
+    </message>
+    <message>
+        <source>Pc Save Options</source>
+        <translation type="obsolete">PC セーブのオプション</translation>
+    </message>
+    <message>
+        <source>Set Load And Save Paths.</source>
+        <translation type="obsolete">ロード/セーブ パスを設定.</translation>
     </message>
     <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
-        <translation>Seleccionar una partida guardada por defecto (Debe ser Raw PSX)</translation>
+        <translation>ゲーム セーブのデフォルト スロットを選択 (Raw PSX)</translation>
+    </message>
+    <message>
+        <source>Stats / New Game </source>
+        <translation type="obsolete">ステータス / New Game </translation>
     </message>
     <message>
         <source>File To load When &quot;New Game&quot; is used</source>
-        <translation>Archivo a cargar cuando se usa &apos;Nuevo Juego&apos;</translation>
+        <translation>&quot;New Game&quot; でロードするファイル</translation>
     </message>
     <message>
         <source>Location To Save Character Stat Files</source>
-        <translation>Lugar para guardar los archivos de stat de personaje</translation>
+        <translation>キャラクター ステータス ファイルの保存場所</translation>
     </message>
     <message>
         <source>Select A Location To Save Character Stat Files</source>
-        <translation>Selecciona un lugar para guardar los archivos de stat de personaje</translation>
+        <translation>キャラクター ステータス ファイルの保存場所を選択</translation>
+    </message>
+    <message>
+        <source> Save Options</source>
+        <translation type="obsolete">セーブのオプション</translation>
     </message>
     <message>
         <source> Folder To Load FF7 Saves (all types) from</source>
-        <translation> Carpeta de la que cargar las partidas guardadas de FF7 (todos los tipos)</translation>
+        <translation>FF7 セーブ (すべての種類) のロード用フォルダ</translation>
     </message>
     <message>
         <source>Folder To Save Pc (.ff7) Save Games</source>
-        <translation>Carpeta para guardar partidas de PC (.ff7)</translation>
+        <translation>PC (.ff7) セ－ブの保存フォルダ</translation>
     </message>
     <message>
         <source>Folder To Export Pc (.ff7) Save Games</source>
-        <translation>Carpeta para exportar partidas de PC (.ff7)</translation>
+        <translation>PC (.ff7) セ－ブのエクスポート フォルダ</translation>
+    </message>
+    <message>
+        <source>&amp;Ok</source>
+        <translation type="obsolete">&amp;OK</translation>
     </message>
     <message>
         <source>Main Window Background Color</source>
-        <translation>Color de fondo de la ventana principal</translation>
+        <translation>メイン ウィンドウの背景色</translation>
     </message>
     <message>
         <source>preview</source>
-        <translation>Vista previa</translation>
+        <translation>プレビュー</translation>
     </message>
     <message>
         <source>Color 1</source>
-        <translation>Color 1</translation>
+        <translation>カラー 1</translation>
     </message>
     <message>
         <source>R</source>
@@ -6527,47 +6669,47 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     </message>
     <message>
         <source>Color 2</source>
-        <translation>Color 2</translation>
+        <translation>カラー 2</translation>
     </message>
     <message>
         <source>Color 3</source>
-        <translation>Color 3</translation>
+        <translation>カラー 3</translation>
     </message>
     <message>
         <source>Reset to Default</source>
-        <translation>Resetear a lvalores predeterminados</translation>
+        <translation>デフォルトにリセット</translation>
     </message>
     <message>
         <source> Folder To Load/Save Emulator Memory Cards  </source>
-        <translation> Carpeta donde cargar/guardar Memory Cards del emulador  </translation>
+        <translation>エミュレーターのメモリー カードのロード/保存フォルダ</translation>
     </message>
     <message>
         <source>Set Applications Font</source>
-        <translation>Conjunto de Aplicaciones de Fuente</translation>
+        <translation>アプリケーションのフォント設定</translation>
     </message>
     <message>
         <source>9Pt</source>
-        <translation>9pt</translation>
+        <translation>9Pt</translation>
     </message>
     <message>
         <source>10Pt</source>
-        <translation>10pt</translation>
+        <translation>10Pt</translation>
     </message>
     <message>
         <source>11Pt</source>
-        <translation>11pt</translation>
+        <translation>11Pt</translation>
     </message>
     <message>
         <source>12Pt</source>
-        <translation>12pt</translation>
+        <translation>12Pt</translation>
     </message>
     <message>
         <source>13Pt</source>
-        <translation>13pt</translation>
+        <translation>13Pt</translation>
     </message>
     <message>
         <source>14Pt</source>
-        <translation>14pt</translation>
+        <translation>14Pt</translation>
     </message>
     <message>
         <source>Options</source>
@@ -6579,18 +6721,18 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation type="unfinished">&amp;Cerrar</translation>
+        <translation type="unfinished">閉じる(&amp;C)</translation>
     </message>
 </context>
 <context>
     <name>SlotSelect</name>
     <message>
         <source>Select A Save Slot</source>
-        <translation>Selecciona una Ranura de Guardado</translation>
+        <translation>スロットの選択</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation>Tiempo</translation>
+        <translation>時間</translation>
     </message>
     <message>
         <source>:</source>
@@ -6598,94 +6740,94 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     </message>
     <message>
         <source>Gil</source>
-        <translation>Gil</translation>
+        <translation>ギル</translation>
     </message>
     <message>
         <source>Level</source>
-        <translation>nivel</translation>
+        <translation>レベル</translation>
     </message>
     <message>
         <source>Load Slot 1</source>
-        <translation>Cargar Ranura 1</translation>
+        <translation>スロット 1 をロード</translation>
     </message>
     <message>
         <source>Load Slot 2</source>
-        <translation>Cargar Ranura 2</translation>
+        <translation>スロット 2 をロード</translation>
     </message>
     <message>
         <source>Load Slot 3</source>
-        <translation>Cargar Ranura 3</translation>
+        <translation>スロット 3 をロード</translation>
     </message>
     <message>
         <source>Load Slot 5</source>
-        <translation>Cargar Ranura 5</translation>
+        <translation>スロット 5 をロード</translation>
     </message>
     <message>
         <source>Load Slot 6</source>
-        <translation>Cargar Ranura 6</translation>
+        <translation>スロット 6 をロード</translation>
     </message>
     <message>
         <source>Load Slot 4</source>
-        <translation>Cargar Ranura 4</translation>
+        <translation>スロット 4 をロード</translation>
     </message>
     <message>
         <source>Load Slot 8</source>
-        <translation>Cargar Ranura 8</translation>
+        <translation>スロット 8 をロード</translation>
     </message>
     <message>
         <source>Load Slot 9</source>
-        <translation>Cargar Ranura 9</translation>
+        <translation>スロット 9 をロード</translation>
     </message>
     <message>
         <source>Load Slot 7</source>
-        <translation>Cargar Ranura 7</translation>
+        <translation>スロット 7 をロード</translation>
     </message>
     <message>
         <source>Load Slot 11</source>
-        <translation>Cargar Ranura 11</translation>
+        <translation>スロット 11 をロード</translation>
     </message>
     <message>
         <source>Load Slot 12</source>
-        <translation>Cargar Ranura 12</translation>
+        <translation>スロット 12 をロード</translation>
     </message>
     <message>
         <source>Load Slot 10</source>
-        <translation>Cargar Ranura 10</translation>
+        <translation>スロット 10 をロード</translation>
     </message>
     <message>
         <source>Load Slot 14</source>
-        <translation>Cargar Ranura 14</translation>
+        <translation>スロット 14 をロード</translation>
     </message>
     <message>
         <source>Load Slot 15</source>
-        <translation>Cargar Ranura 15</translation>
+        <translation>スロット 15 をロード</translation>
     </message>
     <message>
         <source>Load Slot 13</source>
-        <translation>Cargar Ranura 13</translation>
+        <translation>スロット 13 をロード</translation>
     </message>
 </context>
 <context>
     <name>about</name>
     <message>
         <source>About Black Chocobo</source>
-        <translation>Acerca de Chocobo Negro</translation>
+        <translation>Black Chocobo について</translation>
     </message>
     <message>
         <source>Black Chocobo </source>
-        <translation>Chocobo Negro</translation>
+        <translation>Black Chocobo </translation>
     </message>
     <message>
         <source>Version:</source>
-        <translation>Versión:</translation>
+        <translation type="unfinished">Version:</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation>&amp;Acerca de</translation>
+        <translation type="unfinished">&amp;About</translation>
     </message>
     <message>
         <source>The Final Fantasy VII Save Game Editor</source>
-        <translation>El editor de partidas guardadas de Final Fantasy VII</translation>
+        <translation type="unfinished">The Final Fantasy VII Save Game Editor</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -6693,11 +6835,11 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Licencia: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -6705,11 +6847,11 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Página del proyecto&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -6717,107 +6859,107 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;View User Guide&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Ver la guía de usuario&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;View User Guide&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Newest Features</source>
-        <translation>Características Recientes</translation>
+        <translation type="unfinished">Newest Features</translation>
     </message>
     <message>
         <source>New: This Fancy About Dialog</source>
-        <translation>Nuevo: Esta ventana &apos;Acerca de&apos;</translation>
+        <translation type="unfinished">New: This Fancy About Dialog</translation>
     </message>
     <message>
         <source>New: Main Window Resizeable</source>
-        <translation>Nuevo: Ventana principal escalable</translation>
+        <translation type="unfinished">New: Main Window Resizeable</translation>
     </message>
     <message>
         <source>New: Psx Icons Show In Region Info</source>
-        <translation>Nuevo: Los iconos de PSX muestran información de región</translation>
+        <translation type="unfinished">New: Psx Icons Show In Region Info</translation>
     </message>
     <message>
         <source>New: Some Options have Ability to reset to default</source>
-        <translation>Nuevo: Algunas opciones se pueden resetear a valores predeterminados</translation>
+        <translation type="unfinished">New: Some Options have Ability to reset to default</translation>
     </message>
     <message>
         <source>Fixed: No longer export non ff7 slots to pc</source>
-        <translation>Arreglado: Ya no se exportan ranuras no FF7 a PC</translation>
+        <translation type="unfinished">Fixed: No longer export non ff7 slots to pc</translation>
     </message>
     <message>
         <source>Fixed: Pc Header Mask Aware</source>
-        <translation>Areglado: Máscara de cabecera de PC</translation>
+        <translation type="unfinished">Fixed: Pc Header Mask Aware</translation>
     </message>
     <message>
         <source>Fixed: Saves Will Display Slots Correctly</source>
-        <translation>Arreglado: Las partidas mostrarán las renuras correctamente</translation>
+        <translation type="unfinished">Fixed: Saves Will Display Slots Correctly</translation>
     </message>
     <message>
         <source>License</source>
-        <translation>Licencia</translation>
+        <translation type="unfinished">License</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation>&amp;Cerrar</translation>
+        <translation>閉じる(&amp;C)</translation>
     </message>
     <message>
         <source>Using Qt:</source>
-        <translation>Usando Qt:</translation>
+        <translation type="unfinished">Using Qt:</translation>
     </message>
     <message>
         <source>Credits</source>
-        <translation>Reconocimientos</translation>
+        <translation type="unfinished">Credits</translation>
     </message>
     <message>
         <source>Giving Credit Where Credit is Due</source>
-        <translation>Dando méritos donde hay que darlos</translation>
+        <translation type="unfinished">Giving Credit Where Credit is Due</translation>
     </message>
     <message>
         <source>Programmers</source>
-        <translation>Programadores</translation>
+        <translation type="unfinished">Programmers</translation>
     </message>
     <message>
         <source>Main Programmer</source>
-        <translation>Programador principal</translation>
+        <translation type="unfinished">Main Programmer</translation>
     </message>
     <message>
         <source>Bug Testers</source>
-        <translation>Probadores de fallos</translation>
+        <translation type="unfinished">Bug Testers</translation>
     </message>
     <message>
         <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation>Probador de fallos principal, para windos/gnome + dentro del juego</translation>
+        <translation type="unfinished">Main Bug Tester, for win/gnome + ingame</translation>
     </message>
     <message>
         <source>Mac Os Tester</source>
-        <translation>Probador para Mac Os</translation>
+        <translation type="unfinished">Mac Os Tester</translation>
     </message>
     <message>
         <source>Windows Tester</source>
-        <translation>Probador de Windows</translation>
+        <translation type="unfinished">Windows Tester</translation>
     </message>
     <message>
         <source>Translators</source>
-        <translation>Traductores</translation>
+        <translation type="unfinished">Translators</translation>
     </message>
     <message>
         <source>Spanish Translation:</source>
-        <translation>Traducción española:</translation>
+        <translation type="unfinished">Spanish Translation:</translation>
     </message>
     <message>
         <source>French Translation:</source>
-        <translation>Traducción francesa:</translation>
+        <translation type="unfinished">French Translation:</translation>
     </message>
     <message>
         <source>Icons Used In this Program</source>
-        <translation>Iconos usados en el programa</translation>
+        <translation type="unfinished">Icons Used In this Program</translation>
     </message>
     <message>
         <source>Buff Icons (and one or two more) by </source>
-        <translation>Iconos Buff (y dos o tres más) por </translation>
+        <translation type="unfinished">Buff Icons (and one or two more) by </translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -6825,7 +6967,7 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://mattahan.deviantart.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Mattahan@deviantart&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
@@ -6833,107 +6975,107 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>FF7 Program Icon</source>
-        <translation>Icono de programa FF7</translation>
+        <translation type="unfinished">FF7 Program Icon</translation>
     </message>
     <message>
         <source>Thanks To</source>
-        <translation>Gracias A</translation>
+        <translation type="unfinished">Thanks To</translation>
     </message>
     <message>
         <source>A Big Thank You  To:</source>
-        <translation>Muchas gracias a:</translation>
+        <translation type="unfinished">A Big Thank You  To:</translation>
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct,item/materia lists  and string conversion function. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation>Gracias por dejarme la fuente de Jenova. Este programa usa versiones modificadas de la estructura de guardado, listas de objetos/materia y funciones de conversión de cadenas de Jenova. Poder acceder al código fuente ayudó mucho en las fases iniciales de desarrollo.</translation>
+        <translation type="unfinished"> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct,item/materia lists  and string conversion function. Access to it&apos;s source code saved a lot of time during the early stages of development.</translation>
     </message>
     <message>
         <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
-        <translation>Gracias por, toda la ayuda con Chocobo Negro. Traduciendo, probando, ayudando buscando datos en el mapa de guardado, probando temas, etc. Hace bastante por ayudar.</translation>
+        <translation type="unfinished">Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</translation>
     </message>
     <message>
         <source>Thank You For, the old checksum program</source>
-        <translation>Gracias por, el programa viejo de checksum</translation>
+        <translation type="unfinished">Thank You For, the old checksum program</translation>
     </message>
     <message>
         <source>Thank You For, Helping me see the light of stupid errors. </source>
-        <translation>Gracias por, ayudarme a ver la luz de errores estúpidos. </translation>
+        <translation type="unfinished">Thank You For, Helping me see the light of stupid errors. </translation>
     </message>
     <message>
         <source>Thank You For, Providing a Better understanding of Qt&apos;s Functions When the help files failed.</source>
-        <translation>Gracias por, darme un mejor entendimiento de las funciones de Qt cuando los archivos de ayuda fallaban.</translation>
+        <translation type="unfinished">Thank You For, Providing a Better understanding of Qt&apos;s Functions When the help files failed.</translation>
     </message>
     <message>
         <source>Cause She&apos;s Just Awesome!</source>
-        <translation>Porque simplemente es maravillosa!</translation>
+        <translation type="unfinished">Cause She&apos;s Just Awesome!</translation>
     </message>
     <message>
         <source>Early Win32 Tester</source>
-        <translation>Probador de Win32</translation>
+        <translation type="unfinished">Early Win32 Tester</translation>
     </message>
     <message>
         <source>save icon class used to make the psx icon</source>
-        <translation>guardar tipo de icono usado para el icono de psx</translation>
+        <translation type="unfinished">save icon class used to make the psx icon</translation>
     </message>
     <message>
         <source>New: Using Myst6re SaveIcon Class</source>
-        <translation>Nuevo: Usar tipo de icono de guardado de Myst6re</translation>
+        <translation type="unfinished">New: Using Myst6re SaveIcon Class</translation>
     </message>
     <message>
         <source>Fixed: Items/Materia Names And Skill Now Translated</source>
-        <translation>Arreglado: nombres y habilidades de objetos/materia traducidos</translation>
+        <translation type="unfinished">Fixed: Items/Materia Names And Skill Now Translated</translation>
     </message>
     <message>
         <source>Fixed: Titan/Ramuh Stats Backward.</source>
-        <translation>Arreglado: Stats de Titan/Ramuh al revés.</translation>
+        <translation type="unfinished">Fixed: Titan/Ramuh Stats Backward.</translation>
     </message>
     <message>
         <source>New: Save and Save as are now both allowed</source>
-        <translation>Nuevo: Guardar y guardar como ambos disponibles</translation>
+        <translation type="unfinished">New: Save and Save as are now both allowed</translation>
     </message>
     <message>
         <source>New: Change Slot Posin in Debug mode (MC only) </source>
-        <translation>Nuevo: Cambiar la posición de slot en modo Debug (sólo MC) </translation>
+        <translation type="unfinished">New: Change Slot Posin in Debug mode (MC only) </translation>
     </message>
     <message>
         <source>New: Support for .vgs .mem and .gme formats</source>
-        <translation>Nuevo: Compatibilidad para los formatos gme y vgs</translation>
+        <translation type="unfinished">New: Support for .vgs .mem and .gme formats</translation>
     </message>
     <message>
         <source>New: Fancy Character Materia on Equipment tab</source>
-        <translation>Nuevo:Submenu de materia en el equipo</translation>
+        <translation type="unfinished">New: Fancy Character Materia on Equipment tab</translation>
     </message>
     <message>
         <source>New: Toggle Field Help and Battle Target Labels</source>
-        <translation>Nuevo: Activar ayuda de campo y etiquetas de objetivos en batallas</translation>
+        <translation type="unfinished">New: Toggle Field Help and Battle Target Labels</translation>
     </message>
     <message>
         <source>New: Revive Ruby Weapon &amp; Emerald Weapon</source>
-        <translation>Nuevo: Revivir a arma rubí y arma esmeralda</translation>
+        <translation type="unfinished">New: Revive Ruby Weapon &amp; Emerald Weapon</translation>
     </message>
     <message>
         <source>New: Basic Setting of World Locations In Debug</source>
-        <translation>Nuevo: Opciones básicas de lugares del mundo en modo prueba</translation>
+        <translation type="unfinished">New: Basic Setting of World Locations In Debug</translation>
     </message>
     <message>
         <source>New: Added .bin .mc .mci .ps .psm .dff  to mcr/mcd list</source>
-        <translation>Nuevo: añadidos .bin .mc .mci .ps .psm .dff a la lista mcr/mcd</translation>
+        <translation type="unfinished">New: Added .bin .mc .mci .ps .psm .dff  to mcr/mcd list</translation>
     </message>
     <message>
         <source>Fixed: Psx and Psv Region Detection</source>
-        <translation>Arreglado: Detección de región para Psx y Psv</translation>
+        <translation type="unfinished">Fixed: Psx and Psv Region Detection</translation>
     </message>
     <message>
         <source>Previous Versions</source>
-        <translation>Versiones anteriores</translation>
+        <translation type="unfinished">Previous Versions</translation>
     </message>
     <message>
         <source>inital psx save/load; fixed checksum</source>
-        <translation>Guardado/Cargado psx inicial; checksum arreglado</translation>
+        <translation type="unfinished">inital psx save/load; fixed checksum</translation>
     </message>
     <message>
         <source>Fixed: Materia Slots Display Left To Right (see ingame)</source>
-        <translation>Arreglado: Las ranuras de materia se muestran de izquierda a derecha (ver dentro del juego)</translation>
+        <translation type="unfinished">Fixed: Materia Slots Display Left To Right (see ingame)</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -6953,135 +7095,135 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;You should have received a copy of the GNU General Public License&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;along with this program.  If not, see &lt;/span&gt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt; text-decoration: underline; color:#508ed8;&quot;&gt;&amp;lt;http://www.gnu.org/licenses/&amp;gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;Este programa es software libre, se puede distribuir y/o modificar&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;bajo los términos de GNU General Public License publicados por&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;La Fundación de Software Libre, ya sea la versión 3 de la Licencia o&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;(opcionalmente) cualquier versión posterior.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;This program is free software: you can redistribute it and/or modify&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;it under the terms of the GNU General Public License as published by&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;the Free Software Foundation, either version 3 of the License, or&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;(at your option) any later version.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;Este programa es distribuido con la esperanza de que sea útil,&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;pero SIN NINGUNA GARANTÍA; ni siquiera la garantía implícita de&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;COMERCIABILIDAD o IDONEIDAD PARA UN PROPÓSITO PARTICULAR. Ver el&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;GNU General Public License para más detalles.&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;This program is distributed in the hope that it will be useful,&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;but WITHOUT ANY WARRANTY; without even the implied warranty of&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;GNU General Public License for more details.&lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;Usted debería haber recibido una copia del GNU General Public License&lt;/span&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;junto a este programa.  Si no, ver &lt;/span&gt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt; text-decoration: underline; color:#508ed8;&quot;&gt;&amp;lt;http://www.gnu.org/licenses/&amp;gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;You should have received a copy of the GNU General Public License&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt;&quot;&gt;along with this program.  If not, see &lt;/span&gt;&lt;a href=&quot;http://www.gnu.org/licenses/&quot;&gt;&lt;span style=&quot; font-family:&apos;Courier New,courier&apos;; font-size:10pt; text-decoration: underline; color:#508ed8;&quot;&gt;&amp;lt;http://www.gnu.org/licenses/&amp;gt;&lt;/span&gt;&lt;/a&gt;&lt;span style=&quot; font-family:&apos;Sans Serif&apos;; font-size:10pt;&quot;&gt; &lt;/span&gt;&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px; font-family:&apos;Sans Serif&apos;; font-size:10pt; font-weight:600;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>New: Set Font For Program</source>
-        <translation>Nuevo: Establecer fuente Para el Programa</translation>
+        <translation type="unfinished">New: Set Font For Program</translation>
     </message>
     <message>
         <source>Fixed: Missing Keycard 66 in keyitems list</source>
-        <translation>Arreglado: LLave 66 faltante de los objetos clave</translation>
+        <translation type="unfinished">Fixed: Missing Keycard 66 in keyitems list</translation>
     </message>
     <message>
         <source>Update:Almost All Spinboxes now &quot;Wrapping&quot;</source>
-        <translation>Actualizado: Casi todas las Spinboxes ahora se &apos;enrollan&apos;</translation>
+        <translation type="unfinished">Update:Almost All Spinboxes now &quot;Wrapping&quot;</translation>
     </message>
     <message>
         <source>Fixed: Empty Chocobos Now Start W/ empty names.</source>
-        <translation>Arreglado: Los chocobos nuevos empiezan ahora con nombres vacíos.</translation>
+        <translation type="unfinished">Fixed: Empty Chocobos Now Start W/ empty names.</translation>
     </message>
     <message>
         <source>Fixed: Typos Lots of Typos..</source>
-        <translation>Arreglado: Muchas muchas erratas..</translation>
+        <translation type="unfinished">Fixed: Typos Lots of Typos..</translation>
     </message>
     <message>
         <source>Fixed: &quot;Time Bug&quot;</source>
-        <translation>Arreglado: Error en el tiempo</translation>
+        <translation type="unfinished">Fixed: &quot;Time Bug&quot;</translation>
     </message>
     <message>
         <source>Fixed: &quot;Gravity&quot; Materia Bug</source>
-        <translation>Arreglado: Error con la materia gravedad</translation>
+        <translation type="unfinished">Fixed: &quot;Gravity&quot; Materia Bug</translation>
     </message>
     <message>
         <source>Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</source>
-        <translation>Arreglado: Limites de Gil, Exp, Puntos de la montaña rusa, y otros Spinboxes.</translation>
+        <translation type="unfinished">Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</translation>
     </message>
     <message>
         <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
-        <translation>Actualizado: Rubí en el mapa del mundo -&gt; diamante/última/rubí</translation>
+        <translation type="unfinished">Update: World Map ruby-&gt;diamond/ulitmate/ruby</translation>
     </message>
     <message>
         <source>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</source>
-        <translation>Nuevo: Opción de experiencia automática con el nivel (activado por defecto)</translation>
+        <translation type="unfinished">New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</translation>
     </message>
     <message>
         <source>New: Flashback  Chruch in the slums</source>
-        <translation>Nuevo: Flashback de Church in the slums</translation>
+        <translation type="unfinished">New: Flashback  Chruch in the slums</translation>
     </message>
     <message>
         <source>Update: Location Tab; Both Save &amp; World Locations</source>
-        <translation>Actualizado: La pestaña de Localización ahora guarda puntos de guardado y puntos en el mapa del mundo</translation>
+        <translation type="unfinished">Update: Location Tab; Both Save &amp; World Locations</translation>
     </message>
     <message>
         <source>New: Spawn New Windows. (mainly for testing)</source>
-        <translation>Nuevo: Abrir varias ventanas (principalmente de prueba)</translation>
+        <translation type="unfinished">New: Spawn New Windows. (mainly for testing)</translation>
     </message>
     <message>
         <source>New: Unknown Var  Tracker in Test Data (very basic atm)</source>
-        <translation>Nuevo: Visor de variables indefinidas en la pestaña de test (muy básico de momento)</translation>
+        <translation type="unfinished">New: Unknown Var  Tracker in Test Data (very basic atm)</translation>
     </message>
     <message>
         <source>Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</source>
-        <translation>Actualizado: Los establos en la pestaña de chocobo están ahora en un mismo submenú</translation>
+        <translation type="unfinished">Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</translation>
     </message>
     <message>
         <source>Fixed: New Window Now Via Detached Process</source>
-        <translation>Arreglado: Ahora la nueva ventana a través de procesos independiente</translation>
+        <translation type="unfinished">Fixed: New Window Now Via Detached Process</translation>
     </message>
     <message>
         <source>Fixed: Limit Boxes Not Always Showing Data Correctly</source>
-        <translation>Arreglado: Cajas límite no siempre muestra los datos correctamente</translation>
+        <translation type="unfinished">Fixed: Limit Boxes Not Always Showing Data Correctly</translation>
     </message>
     <message>
         <source>Fixed: Cait/ Vincent Reversed in PHS Boxes</source>
-        <translation>Arreglado:Cuadro PHS de Cait / Vicente invertidos</translation>
+        <translation type="unfinished">Fixed: Cait/ Vincent Reversed in PHS Boxes</translation>
     </message>
     <message>
         <source>New: Editable Unknown Vars</source>
-        <translation>Nuevo: Variables desconocido editables</translation>
+        <translation type="unfinished">New: Editable Unknown Vars</translation>
     </message>
     <message>
         <source>New: Toggle &quot;unable to mate&quot; flag for chocobos</source>
-        <translation>Nuevo: Bandera &quot;Imposible cruzar&quot; para chocobos</translation>
+        <translation type="unfinished">New: Toggle &quot;unable to mate&quot; flag for chocobos</translation>
     </message>
     <message>
         <source>Fixed: Use the Action for showing Slot select dialog.</source>
-        <translation>Arreglado: Uso de Acción para mostrar el diálogo de selección de ranura.</translation>
+        <translation type="unfinished">Fixed: Use the Action for showing Slot select dialog.</translation>
     </message>
     <message>
         <source>Fixed: Chocobo Name Editable again</source>
-        <translation>Arreglado: Nombres de chocobo editables otra vez</translation>
+        <translation type="unfinished">Fixed: Chocobo Name Editable again</translation>
     </message>
     <message>
         <source>Fixed: Dialogs Inherit style.</source>
-        <translation>Arreglado: Estilo de diálogos interno.</translation>
+        <translation type="unfinished">Fixed: Dialogs Inherit style.</translation>
     </message>
     <message>
         <source>New: Toggle Each Stable Occupied Flag</source>
-        <translation>Nuevo: Bandera para poner cada establo ocupado</translation>
+        <translation type="unfinished">New: Toggle Each Stable Occupied Flag</translation>
     </message>
     <message>
         <source>New: Reload Feature</source>
-        <translation>Nuevo: Función de recargar</translation>
+        <translation type="unfinished">New: Reload Feature</translation>
     </message>
     <message>
         <source>New: Locations &quot;Chocobo Ranch&quot; And &quot;Highwind&quot;</source>
-        <translation>Nuevo: Lugares &quot;Rancho chocobo&quot; y &quot;Vientofuerte&quot;</translation>
+        <translation type="unfinished">New: Locations &quot;Chocobo Ranch&quot; And &quot;Highwind&quot;</translation>
     </message>
     <message>
         <source>New: Better Unknown Var Tab.</source>
-        <translation>Nuevo: Pestaña de var desconocidas mejorada.</translation>
+        <translation type="unfinished">New: Better Unknown Var Tab.</translation>
     </message>
     <message>
         <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
-        <translation>Nuevo: Conversión de tiempo NTSC &lt;=&gt; PAL</translation>
+        <translation type="unfinished">New: NTSC &lt;=&gt; PAL Time Conversion</translation>
     </message>
     <message>
         <source>New: Edit number of steps taken</source>
@@ -7096,89 +7238,89 @@ p, li { white-space: pre-wrap; }
     <name>errbox</name>
     <message>
         <source>Non Final Fantasy VII Slot Detected</source>
-        <translation>Detectada ranura no Final Fantasy VII</translation>
+        <translation>Final Fantasy VII のスロットではありません</translation>
     </message>
     <message>
         <source>Please Select An Action To Continue</source>
-        <translation>Por favor selecciona una acción para continuar</translation>
+        <translation>操作を選択してください</translation>
     </message>
     <message>
         <source>Slot Preview</source>
-        <translation>Previsualización de ranura</translation>
+        <translation>スロットのプレビュー</translation>
     </message>
     <message>
         <source>Region String</source>
-        <translation>String de Región</translation>
+        <translation>リージョン情報</translation>
     </message>
     <message>
         <source>TextLabel</source>
-        <translation>TextLabel</translation>
+        <translation type="unfinished">TextLabel</translation>
     </message>
     <message>
         <source>&amp;Previous Slot</source>
-        <translation>&amp;Ranura Anterior</translation>
+        <translation>前のスロット(&amp;P)</translation>
     </message>
     <message>
         <source>View Anyway </source>
-        <translation>Ver de todas formas </translation>
+        <translation>かまわず表示</translation>
     </message>
     <message>
         <source>    &amp;Next Slot</source>
-        <translation>    &amp;Ranura siguiente</translation>
+        <translation>次のスロット(&amp;P)</translation>
     </message>
     <message>
         <source>&amp;Export As Raw PSX</source>
-        <translation>&amp;Exportar como PSX Raw</translation>
+        <translation>Raw PSX でエクスポート(&amp;E)</translation>
     </message>
     <message>
         <source>Your At Slot 1</source>
-        <translation>Estás en la ranura 1</translation>
+        <translation>スロット 1: 最初のスロット</translation>
     </message>
     <message>
         <source>Sorry There is no Previous Slot</source>
-        <translation>Lo siento no hay ranura anterior</translation>
+        <translation>これより前のスロットはありません</translation>
     </message>
     <message>
         <source>Save Raw PSX File</source>
-        <translation>Guardar archivo PSX RAW</translation>
+        <translation>Raw PSX ファイルの保存</translation>
     </message>
     <message>
         <source>All Files(*)</source>
-        <translation>Todos los archivos(*)</translation>
+        <translation>すべてのファイル (*.*)</translation>
     </message>
     <message>
         <source>Black Chocobo</source>
-        <translation>Chocobo Negro</translation>
+        <translation>Black Chocobo</translation>
     </message>
     <message>
         <source>Cannot write file %1:
 %2.</source>
-        <translation>No se puede escribir el archivo%1:
+        <translation>ファイル %1 に書き込めません:
 %2.</translation>
     </message>
     <message>
         <source>Save Successfully</source>
-        <translation>Guardado con éxito</translation>
+        <translation>保存を完了</translation>
     </message>
     <message>
         <source>File Saved Successfully, Going Back To The Selection Dialog</source>
-        <translation>Archivo guardado con éxito, Volviendo a la pantalla de selección</translation>
+        <translation>保存を完了しました。選択ダイアログに戻ります</translation>
     </message>
     <message>
         <source>Your At Slot 15</source>
-        <translation>Estás en la ranura 15</translation>
+        <translation>スロット 15: 最後のスロット</translation>
     </message>
     <message>
         <source>Sorry There is no Next Slot</source>
-        <translation>Lo siento no hay ranura siguiente</translation>
+        <translation>これより後のスロットはありません</translation>
     </message>
     <message>
         <source>Alt+Left</source>
-        <translation>Alt+Izq.</translation>
+        <translation>Alt + ←</translation>
     </message>
     <message>
         <source>Alt+Right</source>
-        <translation>Alt+Derecha</translation>
+        <translation>Alt + →</translation>
     </message>
 </context>
 </TS>

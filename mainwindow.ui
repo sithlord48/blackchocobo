@@ -1739,8 +1739,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>419</width>
-             <height>451</height>
+             <width>437</width>
+             <height>436</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -4501,7 +4501,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>401</width>
-             <height>413</height>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -10205,8 +10205,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1388</width>
-             <height>263</height>
+             <width>1446</width>
+             <height>276</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16206,8 +16206,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>714</width>
-             <height>238</height>
+             <width>720</width>
+             <height>275</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -18372,8 +18372,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>738</width>
-             <height>410</height>
+             <width>744</width>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -20462,8 +20462,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>350</width>
-                 <height>1085</height>
+                 <width>334</width>
+                 <height>1245</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -26653,7 +26653,7 @@ Var And Scrolling Synced To Left Table</string>
      <x>0</x>
      <y>0</y>
      <width>764</width>
-     <height>19</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
@@ -26756,6 +26756,7 @@ Var And Scrolling Synced To Left Table</string>
      <addaction name="action_Lang_en"/>
      <addaction name="action_Lang_es"/>
      <addaction name="action_Lang_fr"/>
+     <addaction name="action_Lang_jp"/>
     </widget>
     <addaction name="action_auto_char_growth"/>
     <addaction name="action_show_test_data"/>
@@ -27524,6 +27525,15 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
+   </property>
+  </action>
+  <action name="action_Lang_jp">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/jp_unsel</normaloff>:/icon/jp_unsel</iconset>
+   </property>
+   <property name="text">
+    <string>Japanese</string>
    </property>
   </action>
  </widget>

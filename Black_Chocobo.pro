@@ -43,7 +43,8 @@ FORMS += mainwindow.ui \
 RESOURCES += images.qrc
 TRANSLATIONS += lang/bchoco_en.ts \
     lang/bchoco_es.ts \
-    lang/bchoco_fr.ts
+    lang/bchoco_fr.ts \
+    lang/bchoco_ja.ts
 macx:ICON = icon/bchoco_icon_osx.icns
 win32:RC_FILE = bchoco.rc
 
