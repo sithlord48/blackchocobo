@@ -3452,10 +3452,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>0x01 Potion On MD8_3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>0x02</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4746,10 +4742,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Elevator On Top Floor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>1st Door Open</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4758,19 +4750,11 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>paned to reactor core in feild</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Jessie Has Been Unstuck</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>The Bomb Was Set</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Trigger Game Over</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4839,10 +4823,6 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Post Pan MD8_2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Post Pan MD8_3</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4987,6 +4967,50 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Japanese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Field Items Picked Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MDSTIN: Potion 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MDSTIN: Potion 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NMKIN_3: Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NMKIN_1: Phoenix Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MD8_3: Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Elevator On 2nd Floor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Post Pan NMKIN_5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trigger Game Over (countdown timer out)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Post Electrical Effect MD8_3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x01 Potion On MD8_3 (see item tab)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7037,6 +7061,18 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Better Organized Progression Tab.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Japanese Translation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Japanese Translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Field Items Picked Up</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

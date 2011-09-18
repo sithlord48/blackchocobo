@@ -3464,10 +3464,6 @@
         <translation>0xBD4 (itemmasks_1)</translation>
     </message>
     <message>
-        <source>0x01 Potion On MD8_3</source>
-        <translation>0x01 Potion sur MD8_3</translation>
-    </message>
-    <message>
         <source>0x02</source>
         <translation>0x02</translation>
     </message>
@@ -4770,10 +4766,6 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
         <translation>Porte de l&apos;ascenseur ouverte</translation>
     </message>
     <message>
-        <source>Elevator On Top Floor</source>
-        <translation>Ascenseur arrivé à l&apos;étage</translation>
-    </message>
-    <message>
         <source>1st Door Open</source>
         <translation>1ère porte ouverte</translation>
     </message>
@@ -4782,20 +4774,12 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
         <translation>2ème porte ouvertre</translation>
     </message>
     <message>
-        <source>paned to reactor core in feild</source>
-        <translation>Se rendre au coeur du réacteur</translation>
-    </message>
-    <message>
         <source>Jessie Has Been Unstuck</source>
         <translation>Jambe de Jesse décoincée</translation>
     </message>
     <message>
         <source>The Bomb Was Set</source>
         <translation>Bombe placée</translation>
-    </message>
-    <message>
-        <source>Trigger Game Over</source>
-        <translation>Lancer la Fin de partie</translation>
     </message>
     <message>
         <source>bm2_1</source>
@@ -4860,10 +4844,6 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     <message>
         <source>Post Pan MD8_2</source>
         <translation>Ecran MD8_2 passé</translation>
-    </message>
-    <message>
-        <source>Post Pan MD8_3</source>
-        <translation>Ecran MD8_3 passé</translation>
     </message>
     <message>
         <source>Midgar Train Flags</source>
@@ -5007,6 +4987,50 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Japanese</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Field Items Picked Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MDSTIN: Potion 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MDSTIN: Potion 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NMKIN_3: Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>NMKIN_1: Phoenix Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MD8_3: Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Elevator On 2nd Floor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Post Pan NMKIN_5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Trigger Game Over (countdown timer out)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Post Electrical Effect MD8_3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x01 Potion On MD8_3 (see item tab)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7071,6 +7095,18 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Better Organized Progression Tab.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Japanese Translation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Japanese Translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Field Items Picked Up</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -163,7 +163,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
         ui->action_Lang_fr->setChecked(1);
         ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_sel"));
     }
-    else if(settings.value("lang").toString() == "jp")
+    else if(settings.value("lang").toString() == "ja")
     {
         ui->action_Lang_jp->setChecked(1);
         ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_sel"));
@@ -1181,8 +1181,8 @@ void MainWindow::on_action_Lang_jp_triggered()
     ui->action_Lang_fr->setChecked(0);
     ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
     settings.setValue("lang","ja");
-    ui->action_Lang_fr->setIcon(QIcon(":/icon/jp_sel"));
-    QMessageBox::information(this,"Lang changed","Restart For Language Change");
+    ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_sel"));
+    QMessageBox::information(this,"Language Changed","You Must Restart For The Language to Change");
 }
 /*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_USA_triggered(bool checked)
@@ -2758,6 +2758,17 @@ void MainWindow::itemupdate()
         }
     }
     ui->tbl_itm->setCurrentCell(j,0);
+
+    load=true;
+    if((ff7.slot[s].z_38[48])&(1<<0)){ui->cb_bm_items_1->setChecked(1);}
+        else{ui->cb_bm_items_1->setChecked(0);}
+    if((ff7.slot[s].z_38[48])&(1<<1)){ui->cb_bm_items_2->setChecked(1);}
+        else{ui->cb_bm_items_2->setChecked(0);}
+    if((ff7.slot[s].z_38[48])&(1<<2)){ui->cb_bm_items_3->setChecked(1);}
+        else{ui->cb_bm_items_3->setChecked(0);}
+    if((ff7.slot[s].z_38[48])&(1<<3)){ui->cb_bm_items_4->setChecked(1);}
+        else{ui->cb_bm_items_4->setChecked(0);}
+    load=false;
 }
 /*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::guirefresh(void)
@@ -3834,6 +3845,11 @@ void MainWindow::on_list_keyitems_itemChanged()
     if (ui->list_keyitems->currentItem()->checkState() == Qt::Checked){ff7.slot[s].keyitems[j/8] |= (1<<j%8);}
     else{ff7.slot[s].keyitems[j/8] &= ~(1<<j%8);}
 }}
+
+void MainWindow::on_cb_bm_items_1_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_38[48] |= (1<<0);}else{ff7.slot[s].z_38[48] &= ~(1<<0);}}}
+void MainWindow::on_cb_bm_items_2_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_38[48] |= (1<<1);}else{ff7.slot[s].z_38[48] &= ~(1<<1);}}}
+void MainWindow::on_cb_bm_items_3_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_38[48] |= (1<<2);}else{ff7.slot[s].z_38[48] &= ~(1<<2);}}}
+void MainWindow::on_cb_bm_items_4_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_38[48] |= (1<<3);}else{ff7.slot[s].z_38[48] &= ~(1<<3);}}}
 
 void MainWindow::on_clearItem_clicked()
 {

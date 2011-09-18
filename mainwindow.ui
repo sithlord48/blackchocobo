@@ -7994,12 +7994,94 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            </widget>
           </item>
           <item>
+           <spacer name="verticalSpacer_14">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeType">
+             <enum>QSizePolicy::Maximum</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_26">
+            <property name="title">
+             <string>Field Items Picked Up</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_110">
+             <property name="margin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QScrollArea" name="scrollArea_4">
+               <property name="widgetResizable">
+                <bool>true</bool>
+               </property>
+               <widget class="QWidget" name="scrollAreaWidgetContents_4">
+                <property name="geometry">
+                 <rect>
+                  <x>0</x>
+                  <y>0</y>
+                  <width>245</width>
+                  <height>117</height>
+                 </rect>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_111">
+                 <item>
+                  <widget class="QCheckBox" name="cb_bm_items_1">
+                   <property name="text">
+                    <string>MDSTIN: Potion 1</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_bm_items_2">
+                   <property name="text">
+                    <string>MDSTIN: Potion 2</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_bm_items_3">
+                   <property name="text">
+                    <string>NMKIN_3: Potion</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_bm_items_4">
+                   <property name="text">
+                    <string>NMKIN_1: Phoenix Down</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_itemmask1_1">
+                   <property name="text">
+                    <string>MD8_3: Potion</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
            <spacer name="verticalSpacer_9">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
             <property name="sizeType">
-             <enum>QSizePolicy::Expanding</enum>
+             <enum>QSizePolicy::Maximum</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
@@ -20514,7 +20596,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <item>
                     <widget class="QCheckBox" name="cb_bm1_1">
                      <property name="text">
-                      <string>Elevator On Top Floor</string>
+                      <string>Elevator On 2nd Floor</string>
                      </property>
                     </widget>
                    </item>
@@ -20535,14 +20617,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <item>
                     <widget class="QCheckBox" name="cb_bm2_3">
                      <property name="text">
-                      <string>paned to reactor core in feild</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_bm1_6">
-                     <property name="text">
-                      <string>Jessie Has Been Unstuck</string>
+                      <string>Post Pan NMKIN_5</string>
                      </property>
                     </widget>
                    </item>
@@ -20554,9 +20629,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </widget>
                    </item>
                    <item>
+                    <widget class="QCheckBox" name="cb_bm1_6">
+                     <property name="text">
+                      <string>Jessie Has Been Unstuck</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
                     <widget class="QCheckBox" name="cb_bm1_8">
                      <property name="text">
-                      <string>Trigger Game Over</string>
+                      <string>Trigger Game Over (countdown timer out)</string>
                      </property>
                     </widget>
                    </item>
@@ -20579,7 +20661,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <item>
                        <widget class="QCheckBox" name="cb_bm3_2">
                         <property name="text">
-                         <string>Post Pan MD8_3</string>
+                         <string>Post Electrical Effect MD8_3</string>
                         </property>
                        </widget>
                       </item>
@@ -25847,9 +25929,12 @@ p, li { white-space: pre-wrap; }
                     <number>3</number>
                    </property>
                    <item>
-                    <widget class="QCheckBox" name="cb_itemmask1_1">
+                    <widget class="QCheckBox" name="cb_itemmask1_1_2">
+                     <property name="enabled">
+                      <bool>false</bool>
+                     </property>
                      <property name="text">
-                      <string>0x01 Potion On MD8_3</string>
+                      <string>0x01 Potion On MD8_3 (see item tab)</string>
                      </property>
                     </widget>
                    </item>
@@ -27528,6 +27613,9 @@ Var And Scrolling Synced To Left Table</string>
    </property>
   </action>
   <action name="action_Lang_jp">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
    <property name="icon">
     <iconset resource="images.qrc">
      <normaloff>:/icon/jp_unsel</normaloff>:/icon/jp_unsel</iconset>
@@ -27763,7 +27851,7 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>sb_timer_time_hour</tabstop>
   <tabstop>sb_timer_time_min</tabstop>
   <tabstop>sb_timer_time_sec</tabstop>
-  <tabstop>cb_itemmask1_1</tabstop>
+  <tabstop>cb_itemmask1_1_2</tabstop>
   <tabstop>cb_itemmask1_2</tabstop>
   <tabstop>cb_itemmask1_3</tabstop>
   <tabstop>cb_itemmask1_4</tabstop>

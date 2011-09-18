@@ -420,6 +420,10 @@ private slots://try to keep these in the same order as the .cpp file
     void on_clearItem_clicked();
     void on_btn_item_add_each_item_clicked();
     void on_btn_remove_all_items_clicked();
+    void on_cb_bm_items_1_toggled(bool checked);
+    void on_cb_bm_items_2_toggled(bool checked);
+    void on_cb_bm_items_3_toggled(bool checked);
+    void on_cb_bm_items_4_toggled(bool checked);
 
     // Materia Tab
     void on_tbl_materia_currentCellChanged(int row);
