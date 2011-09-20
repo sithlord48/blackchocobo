@@ -1219,6 +1219,10 @@
         <translation>ティファ</translation>
     </message>
     <message>
+        <source>Aeris</source>
+        <translation>エアリス</translation>
+    </message>
+    <message>
         <source>Red XIII</source>
         <translation>レッドXIII</translation>
     </message>
@@ -1247,8 +1251,36 @@
         <translation>ステータス タブ</translation>
     </message>
     <message>
+        <source>STR</source>
+        <translation>ちから</translation>
+    </message>
+    <message>
+        <source>VIT</source>
+        <translation>たいりょく</translation>
+    </message>
+    <message>
+        <source>MAG</source>
+        <translation>まりょく</translation>
+    </message>
+    <message>
+        <source>DEX</source>
+        <translation>すばやさ</translation>
+    </message>
+    <message>
+        <source>SPR</source>
+        <translation>せいしん</translation>
+    </message>
+    <message>
+        <source>LCK</source>
+        <translation>うん</translation>
+    </message>
+    <message>
         <source>Stat Bonuses</source>
         <translation>ステータス ボーナス</translation>
+    </message>
+    <message>
+        <source>VIT </source>
+        <translation>たいりょく</translation>
     </message>
     <message>
         <source>CheckBox</source>
@@ -1332,17 +1364,12 @@
         <translation>基本ステータス</translation>
     </message>
     <message>
-        <source>HP</source>
-        <translatorcomment>HP2</translatorcomment>
-        <translation>HP</translation>
-    </message>
-    <message>
         <source>Char&apos;s Limits</source>
         <translation>キャラクターのリミット</translation>
     </message>
     <message>
         <source>Level Progress</source>
-        <translation>レベルの進捗</translation>
+        <translation>レベル アップの進捗</translation>
     </message>
     <message>
         <source>Equipment Tab</source>
@@ -1502,12 +1529,12 @@
     </message>
     <message>
         <source>Qty</source>
-        <translatorcomment>どこに使われているか分からない●●●●●</translatorcomment>
-        <translation type="unfinished">個数</translation>
+        <translatorcomment>どこに使われているか分からない</translatorcomment>
+        <translation>個数</translation>
     </message>
     <message>
         <source>QTY:</source>
-        <translation>個数:</translation>
+        <translation>所持数:</translation>
     </message>
     <message>
         <source>Key Items</source>
@@ -1587,19 +1614,19 @@
     </message>
     <message>
         <source>Huge Materia:Fort Condor</source>
-        <translation>ヒュージマテリア・コンドルフォート</translation>
+        <translation>ヒュージマテリア (コンドルフォート)</translation>
     </message>
     <message>
         <source>Huge Materia:Corel</source>
-        <translation>ヒュージマテリア・コレル</translation>
+        <translation>ヒュージマテリア (コレル)</translation>
     </message>
     <message>
         <source>Huge Materia:Underwater</source>
-        <translation>ヒュージマテリア・海底</translation>
+        <translation>ヒュージマテリア (海底)</translation>
     </message>
     <message>
         <source>Huge Materia:Rocket</source>
-        <translation>ヒュージマテリア・ロケット</translation>
+        <translation>ヒュージマテリア (ロケット)</translation>
     </message>
     <message>
         <source>Lunar Harp</source>
@@ -1691,11 +1718,12 @@
     </message>
     <message>
         <source>Materia Stolen By Yuffie</source>
+        <translatorcomment>(A) Materia Stolen By Yuffie Box - This box shows what materia Yuffie will steal when the quest in Wutai triggers. Table is read only but you can use the button to empty slots. </translatorcomment>
         <translation>ユフィに盗まれたマテリア</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyers Collected</source>
-        <translation type="unfinished">&apos;かめ道楽 通信&apos; の閲読</translation>
+        <translation>&apos;かめ道楽 通信&apos; の閲読</translation>
     </message>
     <message>
         <source>&amp;Export From Current Slot</source>
@@ -1887,14 +1915,14 @@
     </message>
     <message>
         <source>Wonderful</source>
-        <translatorcomment>『Ａ：す、すごいチョコボだよ、これ！』
-『Ｂ：すごくいいチョコボだよ』
-『Ｃ：うん、いい感じのチョコボだね』
-『Ｄ：まあまあのチョコボだね』
-『Ｅ：普通のチョコボだと思うよ』
-『Ｆ：うーん、わるいチョコボではないけどね』
-『Ｇ：あまり、いい感じのチョコボじゃないね』
-『Ｈ：ちょっと、おすすめできないかな』</translatorcomment>
+        <translatorcomment>1. す、すごいチョコボだよ、これ！
+2 すごくいいチョコボだよ
+3 うん、いい感じのチョコボだね
+4 まあまあのチョコボだね
+5 普通のチョコボだと思うよ
+6 うーん、わるいチョコボではないけどね
+7 あまり、いい感じのチョコボじゃないね
+7 ちょっと、おすすめできないかな</translatorcomment>
         <translation>す、すごいチョコボ！</translation>
     </message>
     <message>
@@ -1911,7 +1939,7 @@
     </message>
     <message>
         <source>Poor</source>
-        <translation>わるくないチョコボ</translation>
+        <translation>わるくはないチョコボ</translation>
     </message>
     <message>
         <source>Bad</source>
@@ -1963,7 +1991,7 @@
     </message>
     <message>
         <source>1st Floor Shinra Building</source>
-        <translation>神羅ビル ・1階</translation>
+        <translation>神羅ビル・1階ロビー</translation>
     </message>
     <message>
         <source>Gold Saucer - Ghost Hotel</source>
@@ -1971,7 +1999,7 @@
     </message>
     <message>
         <source>Cosmo Canyon - Inn 2nd Floor</source>
-        <translation>コスモキャニオン・宿屋 2階</translation>
+        <translation>コスモキャニオン・宿屋 フロント</translation>
     </message>
     <message>
         <source>Cosmo Canyon - Near Shop</source>
@@ -1980,6 +2008,10 @@
     <message>
         <source>Wutai - In Front Of Trap Room</source>
         <translation>ウータイ・仕掛け部屋の前</translation>
+    </message>
+    <message>
+        <source>Current Disc</source>
+        <translation>現在のディスク</translation>
     </message>
     <message>
         <source>Upper Left</source>
@@ -2071,7 +2103,7 @@
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation>パーティ タブでケット・シーとヴィンセントが無効化されている場合は使用できません。</translation>
+        <translation type="unfinished">ケット・シー, ヴィンセントをパーティ タブで無効化している場合、ここで彼らを有効化しないでください。</translation>
     </message>
     <message>
         <source>0</source>
@@ -2580,7 +2612,7 @@
     </message>
     <message>
         <source>Shinra Bldg. 64F.</source>
-        <translation>神羅ビル.・64階</translation>
+        <translation>神羅ビル・64階</translation>
     </message>
     <message>
         <source>247</source>
@@ -2600,8 +2632,8 @@
     </message>
     <message>
         <source>Reactor No.1</source>
-        <translatorcomment>5番魔晄炉●●Reactor No.1</translatorcomment>
-        <translation>1番魔晄炉 (進捗により5番.)</translation>
+        <translatorcomment>ストーリーの進捗により5番魔晄炉●●Reactor No.1</translatorcomment>
+        <translation>1番魔晄炉 (進捗に依存.)</translation>
     </message>
     <message>
         <source>124</source>
@@ -2644,9 +2676,25 @@
         <translation>ゲームの進捗(&amp;G)</translation>
     </message>
     <message>
+        <source>Main Progress Var</source>
+        <translation>メイン進捗変数</translation>
+    </message>
+    <message>
         <source>Bombing Mission Progress</source>
         <translatorcomment>(C) Bombing Mission progress - these spinboxes allow you to change the varibles associated with bombing mission, its recommended that you do not touch these items.</translatorcomment>
         <translation>魔晄炉爆破ミッションの進捗</translation>
+    </message>
+    <message>
+        <source>0x0C85</source>
+        <translation>0x0C85</translation>
+    </message>
+    <message>
+        <source>0x0C86</source>
+        <translation>0x0C86</translation>
+    </message>
+    <message>
+        <source>0x0CE6</source>
+        <translation>0x0CE6</translation>
     </message>
     <message>
         <source>Bombing Mission</source>
@@ -2932,7 +2980,8 @@
     </message>
     <message>
         <source>Reactor No. 5 </source>
-        <translation>5番魔晄炉 (進捗により1番)</translation>
+        <translatorcomment>ストーリーの進捗により 1番魔晄炉になることがあるが、そのマップから出ると5番魔晄炉になったりする</translatorcomment>
+        <translation>5番魔晄炉 (進捗に依存)</translation>
     </message>
     <message>
         <source>131</source>
@@ -3045,7 +3094,7 @@
     </message>
     <message>
         <source>Shinra Bldg.</source>
-        <translation>神羅ビル.</translation>
+        <translation>神羅ビル</translation>
     </message>
     <message>
         <source>227</source>
@@ -3081,7 +3130,7 @@
     </message>
     <message>
         <source>Forgotten City</source>
-        <translation>忘らるる都 (水)</translation>
+        <translation>忘らるる都 (湖)</translation>
     </message>
     <message>
         <source>646</source>
@@ -3101,7 +3150,7 @@
     </message>
     <message>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</source>
-        <translation>リストの場所をクリックすればゲーム上でセーブを行ったポイントとしてセットされます。マップ上の座標 x, y, x を手動で設定することもできます</translation>
+        <translation>リストの場所のクリックでセーブ地点を &apos;ワープ&apos; させます。マップ, 場所, 座標を手動で設定することもできます</translation>
     </message>
     <message>
         <source>Have Fun With This Feature, But Don&apos;t Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</source>
@@ -3115,7 +3164,7 @@ Tip: Setting Location here will not change your world map location.</translatorc
     </message>
     <message>
         <source>Map ID</source>
-        <translation>マップの ID</translation>
+        <translation>マップ ID</translation>
     </message>
     <message>
         <source>Location ID</source>
@@ -3434,7 +3483,9 @@ Tip: Setting Location here will not change your world map location.</translatorc
     </message>
     <message>
         <source>Materia Caves Empty</source>
-        <translation>マテリアの洞窟から入手済み</translation>
+        <translatorcomment>(I) Materia Caves Empty - Check the boxes to make the materia in each cave disappear as the game will think they have already taken. 
+Note: The materias checked simply disappear from the caves, they don&apos;t go to the materia menu.</translatorcomment>
+        <translation>マテリアの洞窟を入手済みに</translation>
     </message>
     <message>
         <source>Mime</source>
@@ -3450,11 +3501,11 @@ Tip: Setting Location here will not change your world map location.</translatorc
     </message>
     <message>
         <source>KOTR</source>
-        <translation type="unfinished">ナイツオブラウンド</translation>
+        <translation>ナイツオブラウンド</translation>
     </message>
     <message>
         <source>Test Data</source>
-        <translation type="unfinished">テスト データ</translation>
+        <translation>テスト データ</translation>
     </message>
     <message>
         <source>Tutorials Seen</source>
@@ -3484,6 +3535,11 @@ Tip: Setting Location here will not change your world map location.</translatorc
         <source>0xBD4 (itemmasks_1)</source>
         <translatorcomment>(H) 0xBD4 - this byte that contains all item mask bits only the 0x1 bit is known to be the potion on MD8_3 (right after you meet aeris the first time). The rest are unknown</translatorcomment>
         <translation>0xBD4 (itemmasks_1)</translation>
+    </message>
+    <message>
+        <source>0x01 Potion On MD8_3</source>
+        <translatorcomment>(H) 0xBD4 - this byte that contains all item mask bits only the 0x1 bit is known to be the potion on MD8_3 (right after you meet aeris the first time). The rest are unknown</translatorcomment>
+        <translation>0x01 MD8_3 のポーション</translation>
     </message>
     <message>
         <source>0x02</source>
@@ -3520,6 +3576,18 @@ Tip: Setting Location here will not change your world map location.</translatorc
     <message>
         <source>Can Fight Yuffie in Forests</source>
         <translation>森でユフィとバトル可能に</translation>
+    </message>
+    <message>
+        <source>0x01 Talked to Bigs</source>
+        <translation>0x01 ビッグスに話しかけた</translation>
+    </message>
+    <message>
+        <source>0x02 Talked to Wedge twice</source>
+        <translation>0x02 ウェッジに話しかけた</translation>
+    </message>
+    <message>
+        <source>0x04 Talked to Jessie Before Looking At Map</source>
+        <translation>0x04 地図を見る前にジェシーに話しかけた</translation>
     </message>
     <message>
         <source>Region String</source>
@@ -3595,7 +3663,7 @@ Tip: Setting Location here will not change your world map location.</translatorc
     </message>
     <message>
         <source> Bombing Mission Start Flag</source>
-        <translation>魔晄炉爆破ミッションの開始フラグ</translation>
+        <translation>魔晄炉爆破ミッション開始フラグ</translation>
     </message>
     <message>
         <source>Hel&amp;p</source>
@@ -3680,6 +3748,11 @@ p, li { white-space: pre-wrap; }
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
+        <source>0xD83 Midgar Train Flags (tin_1)</source>
+        <translatorcomment>(I) 0xD83 - Flags for the train after you blow up sector 1 reactor. Known items noted.</translatorcomment>
+        <translation type="unfinished">0xD83 ミッドガル列車フラグ (tin_1)</translation>
+    </message>
+    <message>
         <source>Cannot write file %1:
 %2.</source>
         <translation>ファイル %1に書き込めません:
@@ -3752,7 +3825,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Young Cloud</source>
-        <translation type="unfinished">クラウド/昔</translation>
+        <translation>クラウド/昔</translation>
     </message>
     <message>
         <source>===Empty Slot===</source>
@@ -3764,7 +3837,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>NO CAP</source>
-        <translation type="unfinished">制限なし.</translation>
+        <translation>制限なし</translation>
     </message>
     <message>
         <source>Braver</source>
@@ -4136,7 +4209,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Next</source>
-        <translation>次へ</translation>
+        <translation type="unfinished">次のレベルまで</translation>
     </message>
     <message>
         <source>Show Battle Target Labels</source>
@@ -4190,6 +4263,18 @@ is not a FF7 SaveGame.</source>
     <message>
         <source>Party leader</source>
         <translation>パーティ リーダー</translation>
+    </message>
+    <message>
+        <source>X</source>
+        <translation>X</translation>
+    </message>
+    <message>
+        <source>Y</source>
+        <translation>Y</translation>
+    </message>
+    <message>
+        <source>Z</source>
+        <translation>Z</translation>
     </message>
     <message>
         <source>angle</source>
@@ -4325,11 +4410,11 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>&lt;---Edit Selected Item Slot</source>
-        <translation>&lt;---選択アイテムスロットの編集</translation>
+        <translation>&lt;---選択アイテム スロットの編集</translation>
     </message>
     <message>
         <source>Add Max Of All Items</source>
-        <translation type="unfinished">すべてのアイテムを最大数追加</translation>
+        <translation>すべてのアイテムを最大数追加</translation>
     </message>
     <message>
         <source>Clear All Items</source>
@@ -4369,7 +4454,7 @@ is not a FF7 SaveGame.</source>
 4レノの最後のセリフが流れ教会奥マップから脱出クエストが始まる：
 5
 Aeris_Turks - this is a helper variable for when you meet aeris in the chruch.</translatorcomment>
-        <translation type="unfinished">エアリス_タークス_教会フラグ.</translation>
+        <translation>エアリス_タークス_教会フラグ</translation>
     </message>
     <message>
         <source>The Church In The Slums</source>
@@ -4383,7 +4468,7 @@ Aeris_Turks - this is a helper variable for when you meet aeris in the chruch.</
     <message>
         <source>Don_prog</source>
         <translatorcomment>ドン・コルネオとのイベントの進捗　 this is a helper variable that helps to control the progression of the Don Corneo mansion scene</translatorcomment>
-        <translation type="unfinished">コルネオ邸_イベント進捗.</translation>
+        <translation>コルネオ邸_イベント進捗</translation>
     </message>
     <message>
         <source>&amp;Location</source>
@@ -4391,11 +4476,11 @@ Aeris_Turks - this is a helper variable for when you meet aeris in the chruch.</
     </message>
     <message>
         <source>Save Location</source>
-        <translation type="unfinished">セーブの現在地</translation>
+        <translation>セーブの現在地</translation>
     </message>
     <message>
         <source>Worldmap Location</source>
-        <translation type="unfinished">ワールドマップ上の配置位置</translation>
+        <translation>ワールドマップ上の配置位置</translation>
     </message>
     <message>
         <source>Shown On Map</source>
@@ -4774,304 +4859,316 @@ Var And Scrolling Synced To Left Table</source>
 左テーブルと同期してスクロール</translation>
     </message>
     <message>
-        <source>Str</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Vit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mag</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Spr</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dex</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lck</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Y: </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Global Progress</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Main Progression</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Disk  #</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Event Progress</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Elevator Door Open</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1st Door Open</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>2nd Door Opened</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Jessie Has Been Unstuck</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The Bomb Was Set</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Escape From Reactor </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Post Pan MD8_2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Midgar Train Flags</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Talked to Bigs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Talked to Wedge Twice</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Talked to Jessie Before Looking At Map</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source> Played Video on Train?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Unknowns / Unused</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm1_2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm1_3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>mt_5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>mt_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>mt_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>mt_8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sector 7 Trainstation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Team Avalanche Had Meeting after Bombing Mission</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Talked To Trainman 3 times</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Pair At Station agree</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set To Reactor 5 Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7ts_5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7ts_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7ts_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7ts_8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sector 7 Pillar</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Team Avalanche Has Run To Hideout</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Can Show Pillar Pan Video</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Barret called us</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Post Pillar Pan Video</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Talked To soldier two times</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7pl_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7pl_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7pl_8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Steps</source>
-        <translation type="unfinished"></translation>
+        <translation>ステップ</translation>
     </message>
     <message>
         <source>Number Steps</source>
-        <translation type="unfinished"></translation>
+        <translation>ステップ番号</translation>
     </message>
     <message>
         <source>z_40</source>
-        <translation type="unfinished">z_40</translation>
+        <translation>z_40</translation>
+    </message>
+    <message>
+        <source>Y: </source>
+        <translation>Y: </translation>
+    </message>
+    <message>
+        <source>Global Progress</source>
+        <translation>全体の進捗</translation>
+    </message>
+    <message>
+        <source>Main Progression</source>
+        <translation>メイン進捗</translation>
+    </message>
+    <message>
+        <source>Disk  #</source>
+        <translation>ディスク  #</translation>
+    </message>
+    <message>
+        <source>Elevator Door Open</source>
+        <translation>エレベーターを開く</translation>
+    </message>
+    <message>
+        <source>1st Door Open</source>
+        <translation>最初のドアを開く</translation>
+    </message>
+    <message>
+        <source>2nd Door Opened</source>
+        <translation>2番目のドアが開いた</translation>
+    </message>
+    <message>
+        <source>Jessie Has Been Unstuck</source>
+        <translation>ジェシーを助けた</translation>
+    </message>
+    <message>
+        <source>The Bomb Was Set</source>
+        <translation>爆弾をセット</translation>
+    </message>
+    <message>
+        <source>bm2_1</source>
+        <translation>bm2_1</translation>
+    </message>
+    <message>
+        <source>bm1_2</source>
+        <translation>bm1_2</translation>
+    </message>
+    <message>
+        <source>bm2_4</source>
+        <translation>bm2_4</translation>
+    </message>
+    <message>
+        <source>bm2_5</source>
+        <translation>bm2_5</translation>
+    </message>
+    <message>
+        <source>bm2_6</source>
+        <translation>bm2_6</translation>
+    </message>
+    <message>
+        <source>bm2_7</source>
+        <translation>bm2_7</translation>
+    </message>
+    <message>
+        <source>bm2_8</source>
+        <translation>bm2_8</translation>
+    </message>
+    <message>
+        <source>Str</source>
+        <translation>ちから</translation>
+    </message>
+    <message>
+        <source>Vit</source>
+        <translation>たいりょく</translation>
+    </message>
+    <message>
+        <source>Mag</source>
+        <translation>まりょく</translation>
+    </message>
+    <message>
+        <source>Spr</source>
+        <translation>せいしん</translation>
+    </message>
+    <message>
+        <source>Dex</source>
+        <translation>すばやさ</translation>
+    </message>
+    <message>
+        <source>Lck</source>
+        <translation>うん</translation>
+    </message>
+    <message>
+        <source>HP</source>
+        <translation>HP</translation>
+    </message>
+    <message>
+        <source>Event Progress</source>
+        <translation>イベントの進捗</translation>
+    </message>
+    <message>
+        <source>Escape From Reactor </source>
+        <translation>魔晄炉からの脱出</translation>
+    </message>
+    <message>
+        <source>Post Pan MD8_2</source>
+        <translation>MD8_2 の全景後</translation>
+    </message>
+    <message>
+        <source>Midgar Train Flags</source>
+        <translation>ミッドガル列車フラク</translation>
+    </message>
+    <message>
+        <source>Talked to Bigs</source>
+        <translation>ビッグスと会話</translation>
+    </message>
+    <message>
+        <source>Talked to Wedge Twice</source>
+        <translation>ウェッジと二度会話</translation>
+    </message>
+    <message>
+        <source>Talked to Jessie Before Looking At Map</source>
+        <translation>マップを見る前にジェシーと会話</translation>
+    </message>
+    <message>
+        <source> Played Video on Train?</source>
+        <translation>列車に飛び乗るビデオを再生 (?)</translation>
+    </message>
+    <message>
+        <source>Unknowns / Unused</source>
+        <translation>不明 / 未使用</translation>
+    </message>
+    <message>
+        <source>bm1_3</source>
+        <translation>bm1_3</translation>
+    </message>
+    <message>
+        <source>bm3_3</source>
+        <translation>bm3_3</translation>
+    </message>
+    <message>
+        <source>bm3_4</source>
+        <translation>bm3_4</translation>
+    </message>
+    <message>
+        <source>bm3_5</source>
+        <translation>bm3_5</translation>
+    </message>
+    <message>
+        <source>bm3_6</source>
+        <translation>bm3_6</translation>
+    </message>
+    <message>
+        <source>bm3_7</source>
+        <translation>bm3_7</translation>
+    </message>
+    <message>
+        <source>bm3_8</source>
+        <translation>bm3_8</translation>
+    </message>
+    <message>
+        <source>mt_5</source>
+        <translation>mt_5</translation>
+    </message>
+    <message>
+        <source>mt_6</source>
+        <translation>mt_6</translation>
+    </message>
+    <message>
+        <source>mt_7</source>
+        <translation>mt_7</translation>
+    </message>
+    <message>
+        <source>mt_8</source>
+        <translation>mt_8</translation>
+    </message>
+    <message>
+        <source>Sector 7 Trainstation</source>
+        <translation>7番街スラム駅</translation>
+    </message>
+    <message>
+        <source>Team Avalanche Had Meeting after Bombing Mission</source>
+        <translation>爆破ミッション後のアバランチの集合</translation>
+    </message>
+    <message>
+        <source>Talked To Trainman 3 times</source>
+        <translation>駅員と3回会話</translation>
+    </message>
+    <message>
+        <source>Pair At Station agree</source>
+        <translation type="unfinished">駅のカップルの意見が合う</translation>
+    </message>
+    <message>
+        <source>Set To Reactor 5 Mode</source>
+        <translation>5番魔晄炉モードをセット</translation>
+    </message>
+    <message>
+        <source>s7ts_5</source>
+        <translation>s7ts_5</translation>
+    </message>
+    <message>
+        <source>s7ts_6</source>
+        <translation>s7ts_6</translation>
+    </message>
+    <message>
+        <source>s7ts_7</source>
+        <translation>s7ts_7</translation>
+    </message>
+    <message>
+        <source>s7ts_8</source>
+        <translation>s7ts_8</translation>
+    </message>
+    <message>
+        <source>Sector 7 Pillar</source>
+        <translation>7番街支柱</translation>
+    </message>
+    <message>
+        <source>Team Avalanche Has Run To Hideout</source>
+        <translation>アバランチの面々が逃走</translation>
+    </message>
+    <message>
+        <source>Can Show Pillar Pan Video</source>
+        <translation type="unfinished">支柱の全景ビデオを再生可能</translation>
+    </message>
+    <message>
+        <source>Barret called us</source>
+        <translation>バレットが全員に命令</translation>
+    </message>
+    <message>
+        <source>Post Pillar Pan Video</source>
+        <translation type="unfinished">支柱の全景ビデオを再生後</translation>
+    </message>
+    <message>
+        <source>Talked To soldier two times</source>
+        <translation>神羅兵との会話 二度</translation>
+    </message>
+    <message>
+        <source>s7pl_6</source>
+        <translation>s7pl_6</translation>
+    </message>
+    <message>
+        <source>s7pl_7</source>
+        <translation>s7pl_7</translation>
+    </message>
+    <message>
+        <source>s7pl_8</source>
+        <translation>s7pl_8</translation>
     </message>
     <message>
         <source>Japanese</source>
-        <translation type="unfinished"></translation>
+        <translation>Japanese (日本語)</translation>
     </message>
     <message>
         <source>Field Items Picked Up</source>
-        <translation type="unfinished"></translation>
+        <translation>フィールド アイテムの取得</translation>
     </message>
     <message>
         <source>MDSTIN: Potion 1</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>1番街駅ホーム:ポーション 1</translatorcomment>
+        <translation>MDSTIN: ポーション 1</translation>
     </message>
     <message>
         <source>MDSTIN: Potion 2</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>1番街駅ホーム:ポーション 2</translatorcomment>
+        <translation>MDSTIN: ポーション 2</translation>
     </message>
     <message>
         <source>NMKIN_3: Potion</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>1番魔晄炉 3: ポーション</translatorcomment>
+        <translation>NMKIN_3: ポーション</translation>
     </message>
     <message>
         <source>NMKIN_1: Phoenix Down</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>1番魔晄炉 1 フェニックスの尾</translatorcomment>
+        <translation>NMKIN_1: フェニックスの尾</translation>
     </message>
     <message>
         <source>MD8_3: Potion</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>8番街 3 ポーション</translatorcomment>
+        <translation>MD8_3: ポーション</translation>
     </message>
     <message>
         <source>Elevator On 2nd Floor</source>
-        <translation type="unfinished"></translation>
+        <translation>2階 エレベーター</translation>
     </message>
     <message>
         <source>Post Pan NMKIN_5</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>1番魔晄炉 5 全景後</translatorcomment>
+        <translation>NMKIN_5 全景後</translation>
     </message>
     <message>
         <source>Trigger Game Over (countdown timer out)</source>
-        <translation type="unfinished"></translation>
+        <translation>ゲーム オーバー トリガー (カウントダウン終了)</translation>
     </message>
     <message>
         <source>Post Electrical Effect MD8_3</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>8番街_3 の放電発生後</translatorcomment>
+        <translation>MD8_3 放電発生後</translation>
     </message>
     <message>
         <source>0x01 Potion On MD8_3 (see item tab)</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>0x01 8番街 3 ポーション (アイテム タブを参照)</translatorcomment>
+        <translation>0x01 MD8: ポーション (アイテム タブを参照)</translation>
     </message>
 </context>
 <context>
@@ -6538,8 +6635,20 @@ Var And Scrolling Synced To Left Table</source>
         <translation>FF7 PC セーブをエクスポートするディレクトリの選択</translation>
     </message>
     <message>
+        <source>Pc Save Options</source>
+        <translation>PC セーブのオプション</translation>
+    </message>
+    <message>
+        <source>Set Load And Save Paths.</source>
+        <translation>ロード/セーブ パスを設定.</translation>
+    </message>
+    <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
         <translation>ゲーム セーブのデフォルト スロットを選択 (Raw PSX)</translation>
+    </message>
+    <message>
+        <source>Stats / New Game </source>
+        <translation>ステータス / New Game </translation>
     </message>
     <message>
         <source>File To load When &quot;New Game&quot; is used</source>
@@ -6554,6 +6663,10 @@ Var And Scrolling Synced To Left Table</source>
         <translation>キャラクター ステータス ファイルの保存場所を選択</translation>
     </message>
     <message>
+        <source> Save Options</source>
+        <translation>セーブのオプション</translation>
+    </message>
+    <message>
         <source> Folder To Load FF7 Saves (all types) from</source>
         <translation>FF7 セーブ (すべての種類) のロード用フォルダ</translation>
     </message>
@@ -6564,6 +6677,10 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Folder To Export Pc (.ff7) Save Games</source>
         <translation>PC (.ff7) セ－ブのエクスポート フォルダ</translation>
+    </message>
+    <message>
+        <source>&amp;Ok</source>
+        <translation>&amp;OK</translation>
     </message>
     <message>
         <source>Main Window Background Color</source>
@@ -6603,7 +6720,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source> Folder To Load/Save Emulator Memory Cards  </source>
-        <translation>エミュレーターのメモリー カードのロード/保存フォルダ</translation>
+        <translation>エミュレーター用メモリー カードのロード/保存フォルダ</translation>
     </message>
     <message>
         <source>Set Applications Font</source>
@@ -6632,18 +6749,6 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>14Pt</source>
         <translation>14Pt</translation>
-    </message>
-    <message>
-        <source>Options</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Set Load And Save Paths</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&amp;Close</source>
-        <translation type="unfinished">閉じる(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -7147,26 +7252,6 @@ p, li { white-space: pre-wrap; }
         <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
         <translation type="unfinished">New: NTSC &lt;=&gt; PAL Time Conversion</translation>
     </message>
-    <message>
-        <source>New: Edit number of steps taken</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Better Organized Progression Tab.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Japanese Translation:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Japanese Translation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Field Items Picked Up</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>errbox</name>
@@ -7250,11 +7335,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Alt+Left</source>
-        <translation>Alt + ←</translation>
+        <translation>Alt+Left</translation>
     </message>
     <message>
         <source>Alt+Right</source>
-        <translation>Alt + →</translation>
+        <translation>Alt+Right</translation>
     </message>
 </context>
 </TS>
