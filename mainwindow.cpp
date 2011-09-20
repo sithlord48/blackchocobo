@@ -1182,7 +1182,7 @@ void MainWindow::on_action_Lang_jp_triggered()
     ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
     settings.setValue("lang","ja");
     ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_sel"));
-    QMessageBox::information(this,"Language Changed","You Must Restart For The Language to Change");
+    QMessageBox::information(this,"言語の変更","プログラムを再起動して言語の変更を適用してください");
 }
 /*~~~~~~~~~~~~~SET USA MC HEADER~~~~~~~~~~~~~~~~*/
 void MainWindow::on_action_Region_USA_triggered(bool checked)
