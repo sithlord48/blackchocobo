@@ -1158,7 +1158,7 @@ void MainWindow::on_action_Lang_es_triggered()
     ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_unsel"));
     settings.setValue("lang","es");
     ui->action_Lang_es->setIcon(QIcon(":/icon/es_sel"));
-    QMessageBox::information(this,"Idioma Cambiado","Debe reiniciar Para el cambio de idioma");
+    QMessageBox::information(this,QString::fromUtf8("Idioma Cambiado"),QString::fromUtf8("Debe reiniciar Para el cambio de idioma"));
 }
 void MainWindow::on_action_Lang_fr_triggered()
 {
@@ -1170,7 +1170,7 @@ void MainWindow::on_action_Lang_fr_triggered()
     ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_unsel"));
     settings.setValue("lang","fr");
     ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_sel"));
-    QMessageBox::information(this,"Langue Modifiée","Vous Devez Redemarrer Pour Changer la Langue");
+    QMessageBox::information(this,QString::fromUtf8("Langue Modifiée"),QString::fromUtf8("Vous Devez Redemarrer Pour Changer la Langue"));
 }
 void MainWindow::on_action_Lang_jp_triggered()
 {
