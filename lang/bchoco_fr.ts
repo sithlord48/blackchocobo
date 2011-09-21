@@ -4986,10 +4986,6 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
         <translation></translation>
     </message>
     <message>
-        <source>Japanese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Field Items Picked Up</source>
         <translation type="unfinished"></translation>
     </message>

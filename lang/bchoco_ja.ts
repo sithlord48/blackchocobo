@@ -1219,10 +1219,6 @@
         <translation>ティファ</translation>
     </message>
     <message>
-        <source>Aeris</source>
-        <translation>エアリス</translation>
-    </message>
-    <message>
         <source>Red XIII</source>
         <translation>レッドXIII</translation>
     </message>
@@ -1251,36 +1247,8 @@
         <translation>ステータス タブ</translation>
     </message>
     <message>
-        <source>STR</source>
-        <translation>ちから</translation>
-    </message>
-    <message>
-        <source>VIT</source>
-        <translation>たいりょく</translation>
-    </message>
-    <message>
-        <source>MAG</source>
-        <translation>まりょく</translation>
-    </message>
-    <message>
-        <source>DEX</source>
-        <translation>すばやさ</translation>
-    </message>
-    <message>
-        <source>SPR</source>
-        <translation>せいしん</translation>
-    </message>
-    <message>
-        <source>LCK</source>
-        <translation>うん</translation>
-    </message>
-    <message>
         <source>Stat Bonuses</source>
         <translation>ステータス ボーナス</translation>
-    </message>
-    <message>
-        <source>VIT </source>
-        <translation>たいりょく</translation>
     </message>
     <message>
         <source>CheckBox</source>
@@ -2010,10 +1978,6 @@
         <translation>ウータイ・仕掛け部屋の前</translation>
     </message>
     <message>
-        <source>Current Disc</source>
-        <translation>現在のディスク</translation>
-    </message>
-    <message>
         <source>Upper Left</source>
         <translation>左上</translation>
     </message>
@@ -2676,25 +2640,9 @@
         <translation>ゲームの進捗(&amp;G)</translation>
     </message>
     <message>
-        <source>Main Progress Var</source>
-        <translation>メイン進捗変数</translation>
-    </message>
-    <message>
         <source>Bombing Mission Progress</source>
         <translatorcomment>(C) Bombing Mission progress - these spinboxes allow you to change the varibles associated with bombing mission, its recommended that you do not touch these items.</translatorcomment>
         <translation>魔晄炉爆破ミッションの進捗</translation>
-    </message>
-    <message>
-        <source>0x0C85</source>
-        <translation>0x0C85</translation>
-    </message>
-    <message>
-        <source>0x0C86</source>
-        <translation>0x0C86</translation>
-    </message>
-    <message>
-        <source>0x0CE6</source>
-        <translation>0x0CE6</translation>
     </message>
     <message>
         <source>Bombing Mission</source>
@@ -3537,11 +3485,6 @@ Note: The materias checked simply disappear from the caves, they don&apos;t go t
         <translation>0xBD4 (itemmasks_1)</translation>
     </message>
     <message>
-        <source>0x01 Potion On MD8_3</source>
-        <translatorcomment>(H) 0xBD4 - this byte that contains all item mask bits only the 0x1 bit is known to be the potion on MD8_3 (right after you meet aeris the first time). The rest are unknown</translatorcomment>
-        <translation>0x01 MD8_3 のポーション</translation>
-    </message>
-    <message>
         <source>0x02</source>
         <translation>0x02</translation>
     </message>
@@ -3576,18 +3519,6 @@ Note: The materias checked simply disappear from the caves, they don&apos;t go t
     <message>
         <source>Can Fight Yuffie in Forests</source>
         <translation>森でユフィとバトル可能に</translation>
-    </message>
-    <message>
-        <source>0x01 Talked to Bigs</source>
-        <translation>0x01 ビッグスに話しかけた</translation>
-    </message>
-    <message>
-        <source>0x02 Talked to Wedge twice</source>
-        <translation>0x02 ウェッジに話しかけた</translation>
-    </message>
-    <message>
-        <source>0x04 Talked to Jessie Before Looking At Map</source>
-        <translation>0x04 地図を見る前にジェシーに話しかけた</translation>
     </message>
     <message>
         <source>Region String</source>
@@ -3746,11 +3677,6 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Verdana&apos;; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
-    </message>
-    <message>
-        <source>0xD83 Midgar Train Flags (tin_1)</source>
-        <translatorcomment>(I) 0xD83 - Flags for the train after you blow up sector 1 reactor. Known items noted.</translatorcomment>
-        <translation type="unfinished">0xD83 ミッドガル列車フラグ (tin_1)</translation>
     </message>
     <message>
         <source>Cannot write file %1:
@@ -4263,18 +4189,6 @@ is not a FF7 SaveGame.</source>
     <message>
         <source>Party leader</source>
         <translation>パーティ リーダー</translation>
-    </message>
-    <message>
-        <source>X</source>
-        <translation>X</translation>
-    </message>
-    <message>
-        <source>Y</source>
-        <translation>Y</translation>
-    </message>
-    <message>
-        <source>Z</source>
-        <translation>Z</translation>
     </message>
     <message>
         <source>angle</source>
@@ -5113,10 +5027,6 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>s7pl_8</source>
         <translation>s7pl_8</translation>
-    </message>
-    <message>
-        <source>Japanese</source>
-        <translation>Japanese (日本語)</translation>
     </message>
     <message>
         <source>Field Items Picked Up</source>
@@ -6635,20 +6545,8 @@ Var And Scrolling Synced To Left Table</source>
         <translation>FF7 PC セーブをエクスポートするディレクトリの選択</translation>
     </message>
     <message>
-        <source>Pc Save Options</source>
-        <translation>PC セーブのオプション</translation>
-    </message>
-    <message>
-        <source>Set Load And Save Paths.</source>
-        <translation>ロード/セーブ パスを設定.</translation>
-    </message>
-    <message>
         <source>Select A Default Save Game (Must Be Raw PSX)</source>
         <translation>ゲーム セーブのデフォルト スロットを選択 (Raw PSX)</translation>
-    </message>
-    <message>
-        <source>Stats / New Game </source>
-        <translation>ステータス / New Game </translation>
     </message>
     <message>
         <source>File To load When &quot;New Game&quot; is used</source>
@@ -6663,10 +6561,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation>キャラクター ステータス ファイルの保存場所を選択</translation>
     </message>
     <message>
-        <source> Save Options</source>
-        <translation>セーブのオプション</translation>
-    </message>
-    <message>
         <source> Folder To Load FF7 Saves (all types) from</source>
         <translation>FF7 セーブ (すべての種類) のロード用フォルダ</translation>
     </message>
@@ -6677,10 +6571,6 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Folder To Export Pc (.ff7) Save Games</source>
         <translation>PC (.ff7) セ－ブのエクスポート フォルダ</translation>
-    </message>
-    <message>
-        <source>&amp;Ok</source>
-        <translation>&amp;OK</translation>
     </message>
     <message>
         <source>Main Window Background Color</source>
@@ -6749,6 +6639,18 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>14Pt</source>
         <translation>14Pt</translation>
+    </message>
+    <message>
+        <source>Options</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Set Load And Save Paths</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Close</source>
+        <translation type="unfinished">閉じる(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -7251,6 +7153,26 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
         <translation type="unfinished">New: NTSC &lt;=&gt; PAL Time Conversion</translation>
+    </message>
+    <message>
+        <source>New: Japanese Translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Field Items Picked Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Edit number of steps taken</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Better Organized Progression Tab.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Japanese Translation:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

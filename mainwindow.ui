@@ -8028,8 +8028,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>245</width>
-                  <height>117</height>
+                  <width>168</width>
+                  <height>111</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -27621,7 +27621,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/jp_unsel</normaloff>:/icon/jp_unsel</iconset>
    </property>
    <property name="text">
-    <string>Japanese</string>
+    <string notr="true">日本語</string>
    </property>
   </action>
  </widget>
