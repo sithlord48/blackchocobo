@@ -4986,10 +4986,6 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Japanese</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Field Items Picked Up</source>
         <translation type="unfinished"></translation>
     </message>
