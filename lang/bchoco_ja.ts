@@ -1248,11 +1248,11 @@
     </message>
     <message>
         <source>Stat Bonuses</source>
-        <translation>ステータス ボーナス</translation>
+        <translation>能力値ボーナス</translation>
     </message>
     <message>
         <source>CheckBox</source>
-        <translatorcomment>起動時に表示されファイルを開けばケットシー, ヴィンセントのみクラウド/昔, セフィロスに、他キャラは非表示●●●●●●</translatorcomment>
+        <translatorcomment>起動時に表示されるがファイルを開けばケットシー, ヴィンセントのみクラウド/昔, セフィロスに、他キャラは非表示●●●●●●</translatorcomment>
         <translation>[CheckBox]</translation>
     </message>
     <message>
@@ -1833,7 +1833,7 @@
     <message>
         <source>Sprint </source>
         <translatorcomment>(H) Sprint Speed - the chocobos Sprint Speed normal/max vars</translatorcomment>
-        <translation>スパート</translation>
+        <translation>ラスト スパート</translation>
     </message>
     <message>
         <source>Accel</source>
@@ -1883,14 +1883,7 @@
     </message>
     <message>
         <source>Wonderful</source>
-        <translatorcomment>1. す、すごいチョコボだよ、これ！
-2 すごくいいチョコボだよ
-3 うん、いい感じのチョコボだね
-4 まあまあのチョコボだね
-5 普通のチョコボだと思うよ
-6 うーん、わるいチョコボではないけどね
-7 あまり、いい感じのチョコボじゃないね
-7 ちょっと、おすすめできないかな</translatorcomment>
+        <translatorcomment>1. す、すごいチョコボだよ、これ！ 2 すごくいいチョコボだよ 3 うん、いい感じのチョコボだね 4 まあまあのチョコボだね 5 普通のチョコボだと思うよ 6 うーん、わるいチョコボではないけどね 7 あまり、いい感じのチョコボじゃないね 7 ちょっと、おすすめできないかな</translatorcomment>
         <translation>す、すごいチョコボ！</translation>
     </message>
     <message>
@@ -2067,7 +2060,7 @@
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation type="unfinished">ケット・シー, ヴィンセントをパーティ タブで無効化している場合、ここで彼らを有効化しないでください。</translation>
+        <translation>ケット・シー, ヴィンセントをパーティ タブで無効化している場合、ここで彼らを有効化しないでください。</translation>
     </message>
     <message>
         <source>0</source>
@@ -3431,8 +3424,7 @@ Tip: Setting Location here will not change your world map location.</translatorc
     </message>
     <message>
         <source>Materia Caves Empty</source>
-        <translatorcomment>(I) Materia Caves Empty - Check the boxes to make the materia in each cave disappear as the game will think they have already taken. 
-Note: The materias checked simply disappear from the caves, they don&apos;t go to the materia menu.</translatorcomment>
+        <translatorcomment>(I) Materia Caves Empty - Check the boxes to make the materia in each cave disappear as the game will think they have already taken. Note: The materias checked simply disappear from the caves, they don&apos;t go to the materia menu.</translatorcomment>
         <translation>マテリアの洞窟を入手済みに</translation>
     </message>
     <message>
@@ -3732,7 +3724,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translatorcomment>●●どこに使用？</translatorcomment>
         <translation>使用不可</translation>
     </message>
     <message>
@@ -3743,7 +3734,7 @@ is not a FF7 SaveGame.</source>
         <source>Place holder Materia Detected
  Remember 16777215 AP = master</source>
         <translation>プレース ホルダー マテリアを検出しました
-マスター化には 16777215 AP が必要です</translation>
+MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>New Game +</source>
@@ -4135,7 +4126,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Next</source>
-        <translation type="unfinished">次のレベルまで</translation>
+        <translation>次のレベルまで</translation>
     </message>
     <message>
         <source>Show Battle Target Labels</source>
@@ -4361,12 +4352,8 @@ is not a FF7 SaveGame.</source>
     <message>
         <source>Aeris Turks</source>
         <translatorcomment>教会に配置したときる
-0: クラウドが落下した直後、夢-エアリストとの会話から
-1, :レノの最後のセリフが流れ教会奥マップから脱出クエストが始まる
-2: :レノの最後のセリフが流れ教会奥マップから脱出クエストが始まる
-3: クラウドが落下した直後、夢-エアリストとの会話から
-4レノの最後のセリフが流れ教会奥マップから脱出クエストが始まる：
-5
+0, 3: クラウドが落下した直後、夢-エアリストとの会話から
+1, 2, 4:レノの最後のセリフが流れ教会奥マップから脱出クエストが始まる
 Aeris_Turks - this is a helper variable for when you meet aeris in the chruch.</translatorcomment>
         <translation>エアリス_タークス_教会フラグ</translation>
     </message>
@@ -4886,11 +4873,12 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Post Pan MD8_2</source>
-        <translation>MD8_2 の全景後</translation>
+        <translatorcomment>8番街_2 </translatorcomment>
+        <translation>MD8_2 パン映像後</translation>
     </message>
     <message>
         <source>Midgar Train Flags</source>
-        <translation>ミッドガル列車フラク</translation>
+        <translation>ミッドガル列車フラグ</translation>
     </message>
     <message>
         <source>Talked to Bigs</source>
@@ -4970,7 +4958,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Pair At Station agree</source>
-        <translation type="unfinished">駅のカップルの意見が合う</translation>
+        <translation>駅のカップルの会話</translation>
     </message>
     <message>
         <source>Set To Reactor 5 Mode</source>
@@ -4994,7 +4982,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Sector 7 Pillar</source>
-        <translation>7番街支柱</translation>
+        <translation>7番街機械塔</translation>
     </message>
     <message>
         <source>Team Avalanche Has Run To Hideout</source>
@@ -5002,7 +4990,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Can Show Pillar Pan Video</source>
-        <translation type="unfinished">支柱の全景ビデオを再生可能</translation>
+        <translation>機械塔パン映像再生可能</translation>
     </message>
     <message>
         <source>Barret called us</source>
@@ -5010,11 +4998,11 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Post Pillar Pan Video</source>
-        <translation type="unfinished">支柱の全景ビデオを再生後</translation>
+        <translation>機械塔パン映像再生後</translation>
     </message>
     <message>
         <source>Talked To soldier two times</source>
-        <translation>神羅兵との会話 二度</translation>
+        <translation>神羅兵との二度の会話</translation>
     </message>
     <message>
         <source>s7pl_6</source>
@@ -5064,7 +5052,7 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Post Pan NMKIN_5</source>
         <translatorcomment>1番魔晄炉 5 全景後</translatorcomment>
-        <translation>NMKIN_5 全景後</translation>
+        <translation>NMKIN_5 パン映像後</translation>
     </message>
     <message>
         <source>Trigger Game Over (countdown timer out)</source>
@@ -6642,15 +6630,15 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>オプション</translation>
     </message>
     <message>
         <source>Set Load And Save Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>ロード/保存パスの設定</translation>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation type="unfinished">閉じる(&amp;C)</translation>
+        <translation>閉じる(&amp;C)</translation>
     </message>
 </context>
 <context>
@@ -7155,24 +7143,24 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished">New: NTSC &lt;=&gt; PAL Time Conversion</translation>
     </message>
     <message>
-        <source>New: Japanese Translation</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New: Field Items Picked Up</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>New: Edit number of steps taken</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">New: Edit number of steps taken</translation>
     </message>
     <message>
         <source>New: Better Organized Progression Tab.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">New: Better Organized Progression Tab.</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Japanese Translation:</translation>
+    </message>
+    <message>
+        <source>New: Japanese Translation</source>
+        <translation type="unfinished">New: Japanese Translation</translation>
+    </message>
+    <message>
+        <source>New: Field Items Picked Up</source>
+        <translation type="unfinished">New: Field Items Picked Up</translation>
     </message>
 </context>
 <context>
