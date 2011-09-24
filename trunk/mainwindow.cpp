@@ -5822,6 +5822,25 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
         case 39: value = ff7.slot[s].z_39[i]; break;
         case 40: value = ff7.slot[s].z_40[i]; break;
       }
+
+      //Write Hex
+      //newItem = new QTableWidgetItem(text.number(value,16),0); //Old format ex: c
+      QString hex_str = QString("%1").arg(value,2,16,QChar('0')).toUpper(); //New format ex: 0C | Vegeta_Ss4 Hex mod
+      newItem = new QTableWidgetItem(hex_str,0);
+      ui->tbl_unknown->setItem(i,1,newItem);
+      //Write Dec
+      newItem = new QTableWidgetItem(text.number(value,10),0);
+      ui->tbl_unknown->setItem(i,2,newItem);
+      //Write Bin
+      //newItem = new QTableWidgetItem(text.number(value,2),0); //Old format ex: 111
+      QString binary_str = QString("%1").arg(value,8,2,QChar('0')); //New format ex: 00000111 | Vegeta_Ss4 Bin mod
+      newItem = new QTableWidgetItem(binary_str,0);
+      ui->tbl_unknown->setItem(i,3,newItem);
+      //Write Char
+      newItem = new QTableWidgetItem(QChar(value),0);
+      ui->tbl_unknown->setItem(i,4,newItem);
+
+      /* Replaced (to be deleted if everything goes well) Vegeta_Ss4
       //Write Hex
       newItem = new QTableWidgetItem(text.number(value,16),0);
       ui->tbl_unknown->setItem(i,1,newItem);
@@ -5834,6 +5853,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
       //Write Char
       newItem = new QTableWidgetItem(QChar(value),0);
       ui->tbl_unknown->setItem(i,4,newItem);
+      */
 
       if(ui->combo_compare_slot->currentIndex()!=0)
       {//do the same for the compare slot if one has been selected.
@@ -5882,6 +5902,23 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
           case 39: value = ff7.slot[ui->combo_compare_slot->currentIndex()-1].z_39[i]; break;
           case 40: value = ff7.slot[ui->combo_compare_slot->currentIndex()-1].z_40[i]; break;
         }
+
+        //Write Hex
+        QString hex_str = QString("%1").arg(value,2,16,QChar('0')).toUpper(); //New format ex: 0C | Vegeta_Ss4 Hex mod
+        newItem = new QTableWidgetItem(hex_str,0);
+        ui->tbl_compare_unknown->setItem(i,1,newItem);
+        //Write Dec
+        newItem = new QTableWidgetItem(text.number(value,10),0);
+        ui->tbl_compare_unknown->setItem(i,2,newItem);
+        //Write Bin
+        QString binary_str = QString("%1").arg(value,8,2,QChar('0')); //New format ex: 00000111 | Vegeta_Ss4 Bin mod
+        newItem = new QTableWidgetItem(binary_str,0);
+        ui->tbl_compare_unknown->setItem(i,3,newItem);
+        //Write Char
+        newItem = new QTableWidgetItem(QChar(value),0);
+        ui->tbl_compare_unknown->setItem(i,4,newItem);
+
+        /* Replaced (to be deleted if everything goes well) Vegeta_Ss4
         newItem = new QTableWidgetItem(text.number(value,16),0);
         ui->tbl_compare_unknown->setItem(i,1,newItem);
 
@@ -5891,6 +5928,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
         ui->tbl_compare_unknown->setItem(i,3,newItem);
         newItem = new QTableWidgetItem(QChar(value),0);
         ui->tbl_compare_unknown->setItem(i,4,newItem);
+        */
 
         if(ui->tbl_compare_unknown->item(i,1)->text()!=ui->tbl_unknown->item(i,1)->text())
         {
@@ -6013,8 +6051,14 @@ void MainWindow::on_btn_all_z_diffs_clicked()
                 diff= ui->tbl_unknown->item(i,2)->text().toInt() - ui->tbl_compare_unknown->item(i,2)->text().toInt() ;
                 newItem = new QTableWidgetItem(text.number(diff,10),0);
                 ui->tbl_diff->setItem(num_diff-1,1,newItem);
+                //Write Bin
+                QString binary_str = QString("%1").arg(qAbs(diff),8,2,QChar('0')); //New format ex: 00000111 | Vegeta_Ss4 Bin mod
+                newItem = new QTableWidgetItem(binary_str,0);
+                ui->tbl_diff->setItem(num_diff-1,2,newItem);
+                /* Replaced (to be deleted if everything goes well) Vegeta_Ss4
                 newItem = new QTableWidgetItem(text.number(diff,2),0);
                 ui->tbl_diff->setItem(num_diff-1,2,newItem);
+                */
                 //set properites for the tableitems
                 ui->tbl_diff->setVisible(1);
                 ui->tbl_diff->item(num_diff-1,0)->setFlags(Qt::ItemIsEnabled);
