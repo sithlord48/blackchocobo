@@ -7075,6 +7075,10 @@ p, li { white-space: pre-wrap; }
         <source>New: Field Items Picked Up</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Fixed: Optimized Slotselect Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>errbox</name>

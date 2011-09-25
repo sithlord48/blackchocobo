@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>365</width>
-    <height>379</height>
+    <width>363</width>
+    <height>377</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -518,6 +518,11 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <property name="text">
+           <string>Fixed: Optimized Slotselect Dialog</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>Previous Versions</string>
           </property>
           <property name="font">
@@ -832,7 +837,7 @@ p, li { white-space: pre-wrap; }
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-185</y>
+            <y>0</y>
             <width>349</width>
             <height>392</height>
            </rect>
