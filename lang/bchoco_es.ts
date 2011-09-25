@@ -6684,6 +6684,10 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
         <source>Load Slot 13</source>
         <translation>Cargar Ranura 13</translation>
     </message>
+    <message>
+        <source>Empty Slot</source>
+        <translation type="unfinished">Ranura vacía</translation>
+    </message>
 </context>
 <context>
     <name>about</name>

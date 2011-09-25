@@ -6664,6 +6664,10 @@ Var And Scrolling Synced To Left Table</source>
         <source>Load Slot 13</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Empty Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>about</name>

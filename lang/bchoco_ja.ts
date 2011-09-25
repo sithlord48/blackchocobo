@@ -6723,6 +6723,10 @@ Var And Scrolling Synced To Left Table</source>
         <source>Load Slot 13</source>
         <translation>スロット 13 をロード</translation>
     </message>
+    <message>
+        <source>Empty Slot</source>
+        <translation type="unfinished">空きスロット</translation>
+    </message>
 </context>
 <context>
     <name>about</name>
