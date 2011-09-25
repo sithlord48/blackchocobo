@@ -92,6 +92,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     ui->lcd_0x36->setVisible(false);
     ui->lcd_0x37->setVisible(false);
     ui->cb_Region_Slot->setEnabled(false);
+    ui->group_controller_mapping->setVisible(false);
     load=false;
 
     // load settings
@@ -2804,15 +2805,8 @@ void MainWindow::guirefresh(void)
     }
     /*~~~~ END Type Check~~~~*/
 
-    //dialog preview
-    //make the preview nice
-    QImage image(2, 2, QImage::Format_ARGB32);
-    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
-    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
-    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
-    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
-    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+    // above stuff belongs in setings
+
 
     switch(ui->combo_map_controls->currentIndex())
     {
@@ -2909,6 +2903,7 @@ void MainWindow::guirefresh(void)
         ui->lbl_slot_icon->setPixmap(ico.icon().scaledToHeight(64,Qt::SmoothTransformation));
     }
     /*~~~~~Load Game Options~~~~~*/
+
     if((ff7.slot[s].options1)& (1<<0)){ui->combo_sound->setCurrentIndex(1);}
     else{ui->combo_sound->setCurrentIndex(0);}
 
@@ -2935,7 +2930,39 @@ void MainWindow::guirefresh(void)
     else{ui->combo_magic_order->setCurrentIndex(0);}
     if((ff7.slot[s].options2)&(1<<6)){ui->cb_battle_help->setCheckState(Qt::Checked);}
     else{ui->cb_battle_help->setCheckState(Qt::Unchecked);}
-/*~~~~~End Options Loading~~~~~*/
+
+    //CONTROLLER MAPPING
+    ui->combo_button_1->setCurrentIndex(ff7.slot[s].controller_map[0]);
+    ui->combo_button_2->setCurrentIndex(ff7.slot[s].controller_map[1]);
+    ui->combo_button_3->setCurrentIndex(ff7.slot[s].controller_map[2]);
+    ui->combo_button_4->setCurrentIndex(ff7.slot[s].controller_map[3]);
+    ui->combo_button_5->setCurrentIndex(ff7.slot[s].controller_map[4]);
+    ui->combo_button_6->setCurrentIndex(ff7.slot[s].controller_map[5]);
+    ui->combo_button_7->setCurrentIndex(ff7.slot[s].controller_map[6]);
+    ui->combo_button_8->setCurrentIndex(ff7.slot[s].controller_map[7]);
+    ui->combo_button_9->setCurrentIndex(ff7.slot[s].controller_map[8]);
+    ui->combo_button_10->setCurrentIndex(ff7.slot[s].controller_map[9]);
+    ui->combo_button_11->setCurrentIndex(ff7.slot[s].controller_map[10]);
+    ui->combo_button_12->setCurrentIndex(ff7.slot[s].controller_map[11]);
+    ui->combo_button_13->setCurrentIndex(ff7.slot[s].controller_map[12]);
+    ui->combo_button_14->setCurrentIndex(ff7.slot[s].controller_map[13]);
+    ui->combo_button_15->setCurrentIndex(ff7.slot[s].controller_map[14]);
+    ui->combo_button_16->setCurrentIndex(ff7.slot[s].controller_map[15]);
+    //hide buttons config if not debug or non pc save
+    if(ff7.savetype !=1 || ui->action_show_test_data->isChecked()){ui->group_controller_mapping->setVisible(1);}
+    else{ui->group_controller_mapping->setVisible(0);}
+
+    //dialog preview
+    //make the preview nice
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
+    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
+    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
+    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
+    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+
+    /*~~~~~End Options Loading~~~~~*/
 
 
     ui->sb_coster_1->setValue(ff7.slot[s].coster_1);
@@ -6144,3 +6171,20 @@ void MainWindow::on_btn_all_z_diffs_clicked()
     ui->combo_z_var->setCurrentIndex(z_index);
     if(num_diff ==0){ui->tbl_diff->clearContents();ui->tbl_diff->setRowCount(0);ui->tbl_diff->setVisible(0);}
 }
+
+void MainWindow::on_combo_button_1_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[0]=index;}}
+void MainWindow::on_combo_button_2_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[1]=index;}}
+void MainWindow::on_combo_button_3_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[2]=index;}}
+void MainWindow::on_combo_button_4_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[3]=index;}}
+void MainWindow::on_combo_button_5_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[4]=index;}}
+void MainWindow::on_combo_button_6_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[5]=index;}}
+void MainWindow::on_combo_button_7_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[6]=index;}}
+void MainWindow::on_combo_button_8_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[7]=index;}}
+void MainWindow::on_combo_button_9_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[8]=index;}}
+void MainWindow::on_combo_button_10_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[9]=index;}}
+void MainWindow::on_combo_button_11_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[10]=index;}}
+void MainWindow::on_combo_button_12_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[11]=index;}}
+void MainWindow::on_combo_button_13_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[12]=index;}}
+void MainWindow::on_combo_button_14_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[13]=index;}}
+void MainWindow::on_combo_button_15_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[14]=index;}}
+void MainWindow::on_combo_button_16_currentIndexChanged(int index){if(!load){ff7.slot[s].controller_map[15]=index;}}

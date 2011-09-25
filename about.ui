@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>363</width>
-    <height>377</height>
+    <width>361</width>
+    <height>375</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -514,6 +514,11 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>New: Better Organized Progression Tab.</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New: Edit Controller Mapping (non pc saves)</string>
           </property>
          </item>
          <item>

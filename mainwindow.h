@@ -579,5 +579,21 @@ private slots://try to keep these in the same order as the .cpp file
     void on_combo_compare_slot_currentIndexChanged(void);
     void on_btn_all_z_diffs_clicked();
     void on_sb_steps_valueChanged(int );
+    void on_combo_button_1_currentIndexChanged(int index);
+    void on_combo_button_2_currentIndexChanged(int index);
+    void on_combo_button_3_currentIndexChanged(int index);
+    void on_combo_button_4_currentIndexChanged(int index);
+    void on_combo_button_5_currentIndexChanged(int index);
+    void on_combo_button_6_currentIndexChanged(int index);
+    void on_combo_button_7_currentIndexChanged(int index);
+    void on_combo_button_8_currentIndexChanged(int index);
+    void on_combo_button_9_currentIndexChanged(int index);
+    void on_combo_button_10_currentIndexChanged(int index);
+    void on_combo_button_11_currentIndexChanged(int index);
+    void on_combo_button_12_currentIndexChanged(int index);
+    void on_combo_button_13_currentIndexChanged(int index);
+    void on_combo_button_14_currentIndexChanged(int index);
+    void on_combo_button_15_currentIndexChanged(int index);
+    void on_combo_button_16_currentIndexChanged(int index);
 };
 #endif // MAINWINDOW_H
