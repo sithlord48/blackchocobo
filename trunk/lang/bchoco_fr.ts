@@ -6684,6 +6684,10 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
         <source>Load Slot 13</source>
         <translation>Charger Slot 13</translation>
     </message>
+    <message>
+        <source>Empty Slot</source>
+        <translation type="unfinished">Emplacement vide</translation>
+    </message>
 </context>
 <context>
     <name>about</name>
