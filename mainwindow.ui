@@ -4500,8 +4500,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>401</width>
-             <height>414</height>
+             <width>437</width>
+             <height>436</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8028,8 +8028,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>168</width>
-                  <height>111</height>
+                  <width>228</width>
+                  <height>279</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -8065,6 +8065,62 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <widget class="QCheckBox" name="cb_itemmask1_1">
                    <property name="text">
                     <string>MD8_3: Potion</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_s7tg_items_3">
+                   <property name="text">
+                    <string>MDS7ST1:Hi-Potion.(In Train 2)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_s7tg_items_4">
+                   <property name="text">
+                    <string>MDS7ST1:Hi-Potion.(Roof Train 1)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_s7tg_items_8">
+                   <property name="text">
+                    <string>MDS7ST1:Hi-Potion.(Barrel 1)</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_s7tg_items_7">
+                   <property name="text">
+                    <string>MDS7ST1:Echo Screen</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_s7tg_items_2">
+                   <property name="text">
+                    <string>MDS7ST1:Potion</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_s7tg_items_1">
+                   <property name="text">
+                    <string>MDS7ST2:Hi-Potion</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_s7tg_items_5">
+                   <property name="text">
+                    <string>MDS7ST2:Ether</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_s7tg_items_6">
+                   <property name="text">
+                    <string>MDS7ST2:Potion</string>
                    </property>
                   </widget>
                  </item>
@@ -9521,7 +9577,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="layoutWidget">
+            <widget class="QWidget" name="layoutWidget1">
              <property name="geometry">
               <rect>
                <x>5</x>
@@ -10287,8 +10343,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1446</width>
-             <height>276</height>
+             <width>1452</width>
+             <height>334</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16288,8 +16344,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>720</width>
-             <height>275</height>
+             <width>764</width>
+             <height>440</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -20393,7 +20449,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
          </item>
         </layout>
        </widget>
-       <widget class="QWidget" name="layoutWidget">
+       <widget class="QWidget" name="layoutWidget1000">
         <property name="geometry">
          <rect>
           <x>5</x>
@@ -20544,7 +20600,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>334</width>
+                 <width>349</width>
                  <height>1245</height>
                 </rect>
                </property>
