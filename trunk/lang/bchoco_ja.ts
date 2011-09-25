@@ -5068,6 +5068,70 @@ Var And Scrolling Synced To Left Table</source>
         <translatorcomment>0x01 8番街 3 ポーション (アイテム タブを参照)</translatorcomment>
         <translation>0x01 MD8: ポーション (アイテム タブを参照)</translation>
     </message>
+    <message>
+        <source>Custom Controller Mapping(PSX Only)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Right</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Menu</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ok</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Switch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Target</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Page Up</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Page Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Help</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pause</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown (9)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown (10)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -7168,6 +7232,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Optimized Slotselect Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Edit Controller Mapping (non pc saves)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
