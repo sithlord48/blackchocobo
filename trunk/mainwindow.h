@@ -425,6 +425,15 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_bm_items_3_toggled(bool checked);
     void on_cb_bm_items_4_toggled(bool checked);
 
+    void on_cb_s7tg_items_1_toggled(bool checked);
+    void on_cb_s7tg_items_2_toggled(bool checked);
+    void on_cb_s7tg_items_3_toggled(bool checked);
+    void on_cb_s7tg_items_4_toggled(bool checked);
+    void on_cb_s7tg_items_5_toggled(bool checked);
+    void on_cb_s7tg_items_6_toggled(bool checked);
+    void on_cb_s7tg_items_7_toggled(bool checked);
+    void on_cb_s7tg_items_8_toggled(bool checked);
+
     // Materia Tab
     void on_tbl_materia_currentCellChanged(int row);
     void on_clearMateria_clicked();

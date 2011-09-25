@@ -5093,6 +5093,38 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
         <source>Unknown (10)</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>MDS7ST1:Hi-Potion.(In Train 2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MDS7ST1:Hi-Potion.(Roof Train 1)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MDS7ST1:Hi-Potion.(Barrel 1)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MDS7ST1:Echo Screen</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MDS7ST1:Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MDS7ST2:Hi-Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MDS7ST2:Ether</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MDS7ST2:Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
