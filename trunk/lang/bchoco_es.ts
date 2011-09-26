@@ -4294,10 +4294,6 @@ no es una partida guardada de FF7.</translation>
         <translation>Exp automática &lt;-&gt; Nvl</translation>
     </message>
     <message>
-        <source>&lt;---Edit Selected Item Slot</source>
-        <translation type="obsolete">&lt;---Editar Ranura de Elemento Seleccionada</translation>
-    </message>
-    <message>
         <source>Add Max Of All Items</source>
         <translation>Añadir el máximo de todos los objetos</translation>
     </message>
@@ -4700,16 +4696,6 @@ Esto resulta en tiempos de juego incorrectos
     <message>
         <source>Bin</source>
         <translation>Bin</translation>
-    </message>
-    <message>
-        <source>&lt;------Left Table------
-Select Unknown Var To View
-Edit By Changing Dec Value
-Valid Range 0-255</source>
-        <translation>&lt;----Tabla izquierda----
-Seleccionar var indefinida para ver
-Editar cambiando el valor en dec
-Rango válido 0-255</translation>
     </message>
     <message>
         <source>Diff</source>
@@ -5128,6 +5114,12 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     <message>
         <source>Edit Selected Item Slot</source>
         <translation>Editar Ranura de Elemento Seleccionada</translation>
+    </message>
+    <message>
+        <source>&lt;------Left Table------
+Select Unknown Var To View
+Table Entries are Editable</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

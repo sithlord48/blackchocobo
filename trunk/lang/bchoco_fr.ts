@@ -4293,10 +4293,6 @@ is not a FF7 SaveGame.</source>
         <translation>Conversion Niveau&lt;-&gt;EXP</translation>
     </message>
     <message>
-        <source>&lt;---Edit Selected Item Slot</source>
-        <translation type="obsolete">&lt;---Modifier l&apos;objet sélectionné</translation>
-    </message>
-    <message>
         <source>Add Max Of All Items</source>
         <translation>Ajouter tous les éléments</translation>
     </message>
@@ -4700,16 +4696,6 @@ Voulez-vous corriger ceci ?</translation>
     <message>
         <source>Bin</source>
         <translation>Bin</translation>
-    </message>
-    <message>
-        <source>&lt;------Left Table------
-Select Unknown Var To View
-Edit By Changing Dec Value
-Valid Range 0-255</source>
-        <translation>&lt;------Tableau de gauche------
-Sélectionnez une variable inconnue à visualiser
-Modifiez en changeant la valeur décimale
-Valeurs valables 0-255</translation>
     </message>
     <message>
         <source>Diff</source>
@@ -5128,6 +5114,12 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     <message>
         <source>Edit Selected Item Slot</source>
         <translation>Modifier l&apos;objet sélectionné</translation>
+    </message>
+    <message>
+        <source>&lt;------Left Table------
+Select Unknown Var To View
+Table Entries are Editable</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

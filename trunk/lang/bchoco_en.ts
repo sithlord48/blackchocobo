@@ -4680,13 +4680,6 @@ Would you like to correct the playtime?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;------Left Table------
-Select Unknown Var To View
-Edit By Changing Dec Value
-Valid Range 0-255</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Diff</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5103,6 +5096,12 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Edit Selected Item Slot</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&lt;------Left Table------
+Select Unknown Var To View
+Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
