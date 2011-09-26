@@ -4295,7 +4295,7 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>&lt;---Edit Selected Item Slot</source>
-        <translation>&lt;---Editar Ranura de Elemento Seleccionada</translation>
+        <translation type="obsolete">&lt;---Editar Ranura de Elemento Seleccionada</translation>
     </message>
     <message>
         <source>Add Max Of All Items</source>
@@ -5124,6 +5124,10 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     <message>
         <source>MDS7ST2:Potion</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit Selected Item Slot</source>
+        <translation>Editar Ranura de Elemento Seleccionada</translation>
     </message>
 </context>
 <context>

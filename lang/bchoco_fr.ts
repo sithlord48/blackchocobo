@@ -4294,7 +4294,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>&lt;---Edit Selected Item Slot</source>
-        <translation>&lt;---Modifier l&apos;objet sélectionné</translation>
+        <translation type="obsolete">&lt;---Modifier l&apos;objet sélectionné</translation>
     </message>
     <message>
         <source>Add Max Of All Items</source>
@@ -5124,6 +5124,10 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     <message>
         <source>MDS7ST2:Potion</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit Selected Item Slot</source>
+        <translation>Modifier l&apos;objet sélectionné</translation>
     </message>
 </context>
 <context>
