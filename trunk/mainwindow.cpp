@@ -1110,6 +1110,7 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
         ui->combo_id->setVisible(true);
         ui->lbl_id->setVisible(true);
         ui->bm_unknown->setVisible(true);
+        ui->group_controller_mapping->setVisible(true);
         settings.setValue("show_test",1);
         ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
         testdata_refresh();
@@ -1130,6 +1131,7 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
         ui->combo_id->setVisible(false);
         ui->lbl_id->setVisible(false);
         ui->bm_unknown->setVisible(false);
+        ui->group_controller_mapping->setVisible(false);
         settings.setValue("show_test",0);
         ui->action_show_test_data->setIcon(QIcon(":/icon/debug_unsel"));
     }

@@ -4315,7 +4315,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>&lt;---Edit Selected Item Slot</source>
-        <translation>&lt;---選択アイテム スロットの編集</translation>
+        <translation type="obsolete">&lt;---選択アイテム スロットの編集</translation>
     </message>
     <message>
         <source>Add Max Of All Items</source>
@@ -5163,6 +5163,10 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>MDS7ST2:Potion</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit Selected Item Slot</source>
+        <translation type="unfinished">選択アイテム スロットの編集</translation>
     </message>
 </context>
 <context>

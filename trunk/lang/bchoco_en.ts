@@ -4278,10 +4278,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>&lt;---Edit Selected Item Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Add Max Of All Items</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5103,6 +5099,10 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>MDS7ST2:Potion</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Edit Selected Item Slot</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
