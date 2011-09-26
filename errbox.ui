@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>312</width>
-    <height>186</height>
+    <width>342</width>
+    <height>192</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -106,7 +106,7 @@ QPushButton:enabled {
         <item>
          <widget class="QLabel" name="lbl_regionstring">
           <property name="text">
-           <string>TextLabel</string>
+           <string notr="true">TextLabel</string>
           </property>
           <property name="indent">
            <number>10</number>
