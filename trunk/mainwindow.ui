@@ -778,7 +778,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                </item>
                <item>
                 <property name="text">
-                 <string>0x0B</string>
+                 <string notr="true">0x0B</string>
                 </property>
                </item>
                <item>
@@ -908,7 +908,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                </item>
                <item>
                 <property name="text">
-                 <string>0x0B</string>
+                 <string notr="true">0x0B</string>
                 </property>
                </item>
                <item>
@@ -1035,7 +1035,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                </item>
                <item>
                 <property name="text">
-                 <string>0x0B</string>
+                 <string notr="true">0x0B</string>
                 </property>
                </item>
                <item>
@@ -1977,7 +1977,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </font>
                   </property>
                   <property name="text">
-                   <string>/</string>
+                   <string notr="true">/</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -2128,7 +2128,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </font>
                   </property>
                   <property name="text">
-                   <string>/</string>
+                   <string notr="true">/</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -2454,7 +2454,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </property>
                      <item>
                       <property name="text">
-                       <string/>
+                       <string notr="true"/>
                       </property>
                       <property name="icon">
                        <iconset resource="images.qrc">
@@ -2463,7 +2463,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </item>
                      <item>
                       <property name="text">
-                       <string/>
+                       <string notr="true"/>
                       </property>
                       <property name="icon">
                        <iconset resource="images.qrc">
@@ -4290,7 +4290,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </size>
                     </property>
                     <property name="text">
-                     <string>0x34</string>
+                     <string notr="true">0x34</string>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
@@ -4341,7 +4341,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </size>
                     </property>
                     <property name="text">
-                     <string>0x35</string>
+                     <string notr="true">0x35</string>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
@@ -4398,7 +4398,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </size>
                     </property>
                     <property name="text">
-                     <string>0x36</string>
+                     <string notr="true">0x36</string>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
@@ -4452,7 +4452,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </size>
                     </property>
                     <property name="text">
-                     <string>0x37</string>
+                     <string notr="true">0x37</string>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
@@ -4500,8 +4500,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>437</width>
-             <height>436</height>
+             <width>401</width>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -6712,7 +6712,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <number>1</number>
                         </property>
                         <property name="text">
-                         <string>/</string>
+                         <string notr="true">/</string>
                         </property>
                         <property name="textFormat">
                          <enum>Qt::AutoText</enum>
@@ -8184,8 +8184,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>242</width>
-                  <height>330</height>
+                  <width>212</width>
+                  <height>267</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -9549,7 +9549,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <number>1</number>
                 </property>
                 <property name="text">
-                 <string>/</string>
+                 <string notr="true">/</string>
                 </property>
                 <property name="textFormat">
                  <enum>Qt::AutoText</enum>
@@ -10713,7 +10713,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                    <property name="text">
-                    <string>/</string>
+                    <string notr="true">/</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -10838,7 +10838,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                    <property name="text">
-                    <string>/</string>
+                    <string notr="true">/</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -11664,7 +11664,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                    <property name="text">
-                    <string>/</string>
+                    <string notr="true">/</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -11789,7 +11789,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                    <property name="text">
-                    <string>/</string>
+                    <string notr="true">/</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -12600,7 +12600,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                    <property name="text">
-                    <string>/</string>
+                    <string notr="true">/</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -12725,7 +12725,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                    <property name="text">
-                    <string>/</string>
+                    <string notr="true">/</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -13536,7 +13536,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                    <property name="text">
-                    <string>/</string>
+                    <string notr="true">/</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -13661,7 +13661,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                    <property name="text">
-                    <string>/</string>
+                    <string notr="true">/</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -14475,7 +14475,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                    <property name="text">
-                    <string>/</string>
+                    <string notr="true">/</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -14600,7 +14600,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                    <property name="text">
-                    <string>/</string>
+                    <string notr="true">/</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -15414,7 +15414,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                    <property name="text">
-                    <string>/</string>
+                    <string notr="true">/</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -15539,7 +15539,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </size>
                    </property>
                    <property name="text">
-                    <string>/</string>
+                    <string notr="true">/</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
@@ -16720,27 +16720,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="0" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="0" column="2">
                <property name="text">
-                <string>116</string>
+                <string notr="true">116</string>
                </property>
               </item>
               <item row="0" column="3">
                <property name="text">
-                <string>3655</string>
+                <string notr="true">3655</string>
                </property>
               </item>
               <item row="0" column="4">
                <property name="text">
-                <string>27432</string>
+                <string notr="true">27432</string>
                </property>
               </item>
               <item row="0" column="5">
                <property name="text">
-                <string>25</string>
+                <string notr="true">25</string>
                </property>
               </item>
               <item row="1" column="0">
@@ -16750,27 +16750,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="1" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="1" column="2">
                <property name="text">
-                <string>736</string>
+                <string notr="true">736</string>
                </property>
               </item>
               <item row="1" column="3">
                <property name="text">
-                <string>65453</string>
+                <string notr="true">65453</string>
                </property>
               </item>
               <item row="1" column="4">
                <property name="text">
-                <string>65237</string>
+                <string notr="true">65237</string>
                </property>
               </item>
               <item row="1" column="5">
                <property name="text">
-                <string>215</string>
+                <string notr="true">215</string>
                </property>
               </item>
               <item row="2" column="0">
@@ -16780,27 +16780,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="2" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="2" column="2">
                <property name="text">
-                <string>376</string>
+                <string notr="true">376</string>
                </property>
               </item>
               <item row="2" column="3">
                <property name="text">
-                <string>45</string>
+                <string notr="true">45</string>
                </property>
               </item>
               <item row="2" column="4">
                <property name="text">
-                <string>197</string>
+                <string notr="true">197</string>
                </property>
               </item>
               <item row="2" column="5">
                <property name="text">
-                <string>21</string>
+                <string notr="true">21</string>
                </property>
               </item>
               <item row="3" column="0">
@@ -16810,27 +16810,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="3" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="3" column="2">
                <property name="text">
-                <string>732</string>
+                <string notr="true">732</string>
                </property>
               </item>
               <item row="3" column="3">
                <property name="text">
-                <string>265</string>
+                <string notr="true">265</string>
                </property>
               </item>
               <item row="3" column="4">
                <property name="text">
-                <string>65332</string>
+                <string notr="true">65332</string>
                </property>
               </item>
               <item row="3" column="5">
                <property name="text">
-                <string>24</string>
+                <string notr="true">24</string>
                </property>
               </item>
               <item row="4" column="0">
@@ -16840,27 +16840,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="4" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="4" column="2">
                <property name="text">
-                <string>256</string>
+                <string notr="true">256</string>
                </property>
               </item>
               <item row="4" column="3">
                <property name="text">
-                <string>65426</string>
+                <string notr="true">65426</string>
                </property>
               </item>
               <item row="4" column="4">
                <property name="text">
-                <string>797</string>
+                <string notr="true">797</string>
                </property>
               </item>
               <item row="4" column="5">
                <property name="text">
-                <string>283</string>
+                <string notr="true">283</string>
                </property>
               </item>
               <item row="5" column="0">
@@ -16870,27 +16870,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="5" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="5" column="2">
                <property name="text">
-                <string>144</string>
+                <string notr="true">144</string>
                </property>
               </item>
               <item row="5" column="3">
                <property name="text">
-                <string>1981</string>
+                <string notr="true">1981</string>
                </property>
               </item>
               <item row="5" column="4">
                <property name="text">
-                <string>62327</string>
+                <string notr="true">62327</string>
                </property>
               </item>
               <item row="5" column="5">
                <property name="text">
-                <string>71</string>
+                <string notr="true">71</string>
                </property>
               </item>
               <item row="6" column="0">
@@ -16900,27 +16900,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="6" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="6" column="2">
                <property name="text">
-                <string>422</string>
+                <string notr="true">422</string>
                </property>
               </item>
               <item row="6" column="3">
                <property name="text">
-                <string>34</string>
+                <string notr="true">34</string>
                </property>
               </item>
               <item row="6" column="4">
                <property name="text">
-                <string>426</string>
+                <string notr="true">426</string>
                </property>
               </item>
               <item row="6" column="5">
                <property name="text">
-                <string>14</string>
+                <string notr="true">14</string>
                </property>
               </item>
               <item row="7" column="0">
@@ -16930,27 +16930,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="7" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="7" column="2">
                <property name="text">
-                <string>397</string>
+                <string notr="true">397</string>
                </property>
               </item>
               <item row="7" column="3">
                <property name="text">
-                <string>65162</string>
+                <string notr="true">65162</string>
                </property>
               </item>
               <item row="7" column="4">
                <property name="text">
-                <string>65236</string>
+                <string notr="true">65236</string>
                </property>
               </item>
               <item row="7" column="5">
                <property name="text">
-                <string>8</string>
+                <string notr="true">8</string>
                </property>
               </item>
               <item row="8" column="0">
@@ -16960,27 +16960,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="8" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="8" column="2">
                <property name="text">
-                <string>264</string>
+                <string notr="true">264</string>
                </property>
               </item>
               <item row="8" column="3">
                <property name="text">
-                <string>150</string>
+                <string notr="true">150</string>
                </property>
               </item>
               <item row="8" column="4">
                <property name="text">
-                <string>65102</string>
+                <string notr="true">65102</string>
                </property>
               </item>
               <item row="8" column="5">
                <property name="text">
-                <string>226</string>
+                <string notr="true">226</string>
                </property>
               </item>
               <item row="9" column="0">
@@ -16990,27 +16990,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="9" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="9" column="2">
                <property name="text">
-                <string>332</string>
+                <string notr="true">332</string>
                </property>
               </item>
               <item row="9" column="3">
                <property name="text">
-                <string>267</string>
+                <string notr="true">267</string>
                </property>
               </item>
               <item row="9" column="4">
                <property name="text">
-                <string>65429</string>
+                <string notr="true">65429</string>
                </property>
               </item>
               <item row="9" column="5">
                <property name="text">
-                <string>15</string>
+                <string notr="true">15</string>
                </property>
               </item>
               <item row="10" column="0">
@@ -17020,27 +17020,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="10" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="10" column="2">
                <property name="text">
-                <string>128</string>
+                <string notr="true">128</string>
                </property>
               </item>
               <item row="10" column="3">
                <property name="text">
-                <string>64035</string>
+                <string notr="true">64035</string>
                </property>
               </item>
               <item row="10" column="4">
                <property name="text">
-                <string>2546</string>
+                <string notr="true">2546</string>
                </property>
               </item>
               <item row="10" column="5">
                <property name="text">
-                <string>20</string>
+                <string notr="true">20</string>
                </property>
               </item>
               <item row="11" column="0">
@@ -17050,27 +17050,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="11" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="11" column="2">
                <property name="text">
-                <string>187</string>
+                <string notr="true">187</string>
                </property>
               </item>
               <item row="11" column="3">
                <property name="text">
-                <string>175</string>
+                <string notr="true">175</string>
                </property>
               </item>
               <item row="11" column="4">
                <property name="text">
-                <string>65330</string>
+                <string notr="true">65330</string>
                </property>
               </item>
               <item row="11" column="5">
                <property name="text">
-                <string>138</string>
+                <string notr="true">138</string>
                </property>
               </item>
               <item row="12" column="0">
@@ -17080,27 +17080,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="12" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="12" column="2">
                <property name="text">
-                <string>749</string>
+                <string notr="true">749</string>
                </property>
               </item>
               <item row="12" column="3">
                <property name="text">
-                <string>65344</string>
+                <string notr="true">65344</string>
                </property>
               </item>
               <item row="12" column="4">
                <property name="text">
-                <string>16</string>
+                <string notr="true">16</string>
                </property>
               </item>
               <item row="12" column="5">
                <property name="text">
-                <string>35</string>
+                <string notr="true">35</string>
                </property>
               </item>
               <item row="13" column="0">
@@ -17110,27 +17110,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="13" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="13" column="2">
                <property name="text">
-                <string>195</string>
+                <string notr="true">195</string>
                </property>
               </item>
               <item row="13" column="3">
                <property name="text">
-                <string>462</string>
+                <string notr="true">462</string>
                </property>
               </item>
               <item row="13" column="4">
                <property name="text">
-                <string>1080</string>
+                <string notr="true">1080</string>
                </property>
               </item>
               <item row="13" column="5">
                <property name="text">
-                <string>58</string>
+                <string notr="true">58</string>
                </property>
               </item>
               <item row="14" column="0">
@@ -17140,27 +17140,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="14" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="14" column="2">
                <property name="text">
-                <string>149</string>
+                <string notr="true">149</string>
                </property>
               </item>
               <item row="14" column="3">
                <property name="text">
-                <string>220</string>
+                <string notr="true">220</string>
                </property>
               </item>
               <item row="14" column="4">
                <property name="text">
-                <string>65371</string>
+                <string notr="true">65371</string>
                </property>
               </item>
               <item row="14" column="5">
                <property name="text">
-                <string>71</string>
+                <string notr="true">71</string>
                </property>
               </item>
               <item row="15" column="0">
@@ -17170,27 +17170,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="15" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="15" column="2">
                <property name="text">
-                <string>705</string>
+                <string notr="true">705</string>
                </property>
               </item>
               <item row="15" column="3">
                <property name="text">
-                <string>94</string>
+                <string notr="true">94</string>
                </property>
               </item>
               <item row="15" column="4">
                <property name="text">
-                <string>1168</string>
+                <string notr="true">1168</string>
                </property>
               </item>
               <item row="15" column="5">
                <property name="text">
-                <string>173</string>
+                <string notr="true">173</string>
                </property>
               </item>
               <item row="16" column="0">
@@ -17200,27 +17200,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="16" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="16" column="2">
                <property name="text">
-                <string>699</string>
+                <string notr="true">699</string>
                </property>
               </item>
               <item row="16" column="3">
                <property name="text">
-                <string>65424</string>
+                <string notr="true">65424</string>
                </property>
               </item>
               <item row="16" column="4">
                <property name="text">
-                <string>240</string>
+                <string notr="true">240</string>
                </property>
               </item>
               <item row="16" column="5">
                <property name="text">
-                <string>17</string>
+                <string notr="true">17</string>
                </property>
               </item>
               <item row="17" column="0">
@@ -17230,27 +17230,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="17" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="17" column="2">
                <property name="text">
-                <string>317</string>
+                <string notr="true">317</string>
                </property>
               </item>
               <item row="17" column="3">
                <property name="text">
-                <string>667</string>
+                <string notr="true">667</string>
                </property>
               </item>
               <item row="17" column="4">
                <property name="text">
-                <string>65035</string>
+                <string notr="true">65035</string>
                </property>
               </item>
               <item row="17" column="5">
                <property name="text">
-                <string>261</string>
+                <string notr="true">261</string>
                </property>
               </item>
               <item row="18" column="0">
@@ -17260,27 +17260,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="18" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="18" column="2">
                <property name="text">
-                <string>687</string>
+                <string notr="true">687</string>
                </property>
               </item>
               <item row="18" column="3">
                <property name="text">
-                <string>165</string>
+                <string notr="true">165</string>
                </property>
               </item>
               <item row="18" column="4">
                <property name="text">
-                <string>51</string>
+                <string notr="true">51</string>
                </property>
               </item>
               <item row="18" column="5">
                <property name="text">
-                <string>5</string>
+                <string notr="true">5</string>
                </property>
               </item>
               <item row="19" column="0">
@@ -17290,27 +17290,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="19" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="19" column="2">
                <property name="text">
-                <string>693</string>
+                <string notr="true">693</string>
                </property>
               </item>
               <item row="19" column="3">
                <property name="text">
-                <string>65384</string>
+                <string notr="true">65384</string>
                </property>
               </item>
               <item row="19" column="4">
                <property name="text">
-                <string>1104</string>
+                <string notr="true">1104</string>
                </property>
               </item>
               <item row="19" column="5">
                <property name="text">
-                <string>65</string>
+                <string notr="true">65</string>
                </property>
               </item>
               <item row="20" column="0">
@@ -17320,27 +17320,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="20" column="1">
                <property name="text">
-                <string>2</string>
+                <string notr="true">2</string>
                </property>
               </item>
               <item row="20" column="2">
                <property name="text">
-                <string>0</string>
+                <string notr="true">0</string>
                </property>
               </item>
               <item row="20" column="3">
                <property name="text">
-                <string>0</string>
+                <string notr="true">0</string>
                </property>
               </item>
               <item row="20" column="4">
                <property name="text">
-                <string>0</string>
+                <string notr="true">0</string>
                </property>
               </item>
               <item row="20" column="5">
                <property name="text">
-                <string>0</string>
+                <string notr="true">0</string>
                </property>
               </item>
               <item row="21" column="0">
@@ -17350,27 +17350,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="21" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="21" column="2">
                <property name="text">
-                <string>156</string>
+                <string notr="true">156</string>
                </property>
               </item>
               <item row="21" column="3">
                <property name="text">
-                <string>65185</string>
+                <string notr="true">65185</string>
                </property>
               </item>
               <item row="21" column="4">
                <property name="text">
-                <string>636</string>
+                <string notr="true">636</string>
                </property>
               </item>
               <item row="21" column="5">
                <property name="text">
-                <string>231</string>
+                <string notr="true">231</string>
                </property>
               </item>
               <item row="22" column="0">
@@ -17380,27 +17380,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="22" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="22" column="2">
                <property name="text">
-                <string>247</string>
+                <string notr="true">247</string>
                </property>
               </item>
               <item row="22" column="3">
                <property name="text">
-                <string>64386</string>
+                <string notr="true">64386</string>
                </property>
               </item>
               <item row="22" column="4">
                <property name="text">
-                <string>65253</string>
+                <string notr="true">65253</string>
                </property>
               </item>
               <item row="22" column="5">
                <property name="text">
-                <string>245</string>
+                <string notr="true">245</string>
                </property>
               </item>
               <item row="23" column="0">
@@ -17410,27 +17410,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="23" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="23" column="2">
                <property name="text">
-                <string>124</string>
+                <string notr="true">124</string>
                </property>
               </item>
               <item row="23" column="3">
                <property name="text">
-                <string>37</string>
+                <string notr="true">37</string>
                </property>
               </item>
               <item row="23" column="4">
                <property name="text">
-                <string>1579</string>
+                <string notr="true">1579</string>
                </property>
               </item>
               <item row="23" column="5">
                <property name="text">
-                <string>36</string>
+                <string notr="true">36</string>
                </property>
               </item>
               <item row="24" column="0">
@@ -17440,27 +17440,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="24" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="24" column="2">
                <property name="text">
-                <string>473</string>
+                <string notr="true">473</string>
                </property>
               </item>
               <item row="24" column="3">
                <property name="text">
-                <string>876</string>
+                <string notr="true">876</string>
                </property>
               </item>
               <item row="24" column="4">
                <property name="text">
-                <string>1471</string>
+                <string notr="true">1471</string>
                </property>
               </item>
               <item row="24" column="5">
                <property name="text">
-                <string>74</string>
+                <string notr="true">74</string>
                </property>
               </item>
               <item row="25" column="0">
@@ -17470,27 +17470,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="25" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="25" column="2">
                <property name="text">
-                <string>65</string>
+                <string notr="true">65</string>
                </property>
               </item>
               <item row="25" column="3">
                <property name="text">
-                <string>0</string>
+                <string notr="true">0</string>
                </property>
               </item>
               <item row="25" column="4">
                <property name="text">
-                <string>0</string>
+                <string notr="true">0</string>
                </property>
               </item>
               <item row="25" column="5">
                <property name="text">
-                <string>0</string>
+                <string notr="true">0</string>
                </property>
               </item>
               <item row="26" column="0">
@@ -17500,27 +17500,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="26" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="26" column="2">
                <property name="text">
-                <string>355</string>
+                <string notr="true">355</string>
                </property>
               </item>
               <item row="26" column="3">
                <property name="text">
-                <string>1118</string>
+                <string notr="true">1118</string>
                </property>
               </item>
               <item row="26" column="4">
                <property name="text">
-                <string>391</string>
+                <string notr="true">391</string>
                </property>
               </item>
               <item row="26" column="5">
                <property name="text">
-                <string>12</string>
+                <string notr="true">12</string>
                </property>
               </item>
               <item row="27" column="0">
@@ -17530,27 +17530,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="27" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="27" column="2">
                <property name="text">
-                <string>408</string>
+                <string notr="true">408</string>
                </property>
               </item>
               <item row="27" column="3">
                <property name="text">
-                <string>65484</string>
+                <string notr="true">65484</string>
                </property>
               </item>
               <item row="27" column="4">
                <property name="text">
-                <string>433</string>
+                <string notr="true">433</string>
                </property>
               </item>
               <item row="27" column="5">
                <property name="text">
-                <string>7</string>
+                <string notr="true">7</string>
                </property>
               </item>
               <item row="28" column="0">
@@ -17560,27 +17560,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="28" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="28" column="2">
                <property name="text">
-                <string>739</string>
+                <string notr="true">739</string>
                </property>
               </item>
               <item row="28" column="3">
                <property name="text">
-                <string>61439</string>
+                <string notr="true">61439</string>
                </property>
               </item>
               <item row="28" column="4">
                <property name="text">
-                <string>18394</string>
+                <string notr="true">18394</string>
                </property>
               </item>
               <item row="28" column="5">
                <property name="text">
-                <string>34</string>
+                <string notr="true">34</string>
                </property>
               </item>
               <item row="29" column="0">
@@ -17590,27 +17590,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="29" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="29" column="2">
                <property name="text">
-                <string>88</string>
+                <string notr="true">88</string>
                </property>
               </item>
               <item row="29" column="3">
                <property name="text">
-                <string>65141</string>
+                <string notr="true">65141</string>
                </property>
               </item>
               <item row="29" column="4">
                <property name="text">
-                <string>34</string>
+                <string notr="true">34</string>
                </property>
               </item>
               <item row="29" column="5">
                <property name="text">
-                <string>13</string>
+                <string notr="true">13</string>
                </property>
               </item>
               <item row="30" column="0">
@@ -17620,27 +17620,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="30" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="30" column="2">
                <property name="text">
-                <string>529</string>
+                <string notr="true">529</string>
                </property>
               </item>
               <item row="30" column="3">
                <property name="text">
-                <string>128</string>
+                <string notr="true">128</string>
                </property>
               </item>
               <item row="30" column="4">
                <property name="text">
-                <string>65215</string>
+                <string notr="true">65215</string>
                </property>
               </item>
               <item row="30" column="5">
                <property name="text">
-                <string>79</string>
+                <string notr="true">79</string>
                </property>
               </item>
               <item row="31" column="0">
@@ -17650,27 +17650,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="31" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="31" column="2">
                <property name="text">
-                <string>183</string>
+                <string notr="true">183</string>
                </property>
               </item>
               <item row="31" column="3">
                <property name="text">
-                <string>65463</string>
+                <string notr="true">65463</string>
                </property>
               </item>
               <item row="31" column="4">
                <property name="text">
-                <string>400</string>
+                <string notr="true">400</string>
                </property>
               </item>
               <item row="31" column="5">
                <property name="text">
-                <string>8</string>
+                <string notr="true">8</string>
                </property>
               </item>
               <item row="32" column="0">
@@ -17680,27 +17680,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="32" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="32" column="2">
                <property name="text">
-                <string>436</string>
+                <string notr="true">436</string>
                </property>
               </item>
               <item row="32" column="3">
                <property name="text">
-                <string>65430</string>
+                <string notr="true">65430</string>
                </property>
               </item>
               <item row="32" column="4">
                <property name="text">
-                <string>64368</string>
+                <string notr="true">64368</string>
                </property>
               </item>
               <item row="32" column="5">
                <property name="text">
-                <string>46</string>
+                <string notr="true">46</string>
                </property>
               </item>
               <item row="33" column="0">
@@ -17710,27 +17710,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="33" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="33" column="2">
                <property name="text">
-                <string>169</string>
+                <string notr="true">169</string>
                </property>
               </item>
               <item row="33" column="3">
                <property name="text">
-                <string>65422</string>
+                <string notr="true">65422</string>
                </property>
               </item>
               <item row="33" column="4">
                <property name="text">
-                <string>468</string>
+                <string notr="true">468</string>
                </property>
               </item>
               <item row="33" column="5">
                <property name="text">
-                <string>36</string>
+                <string notr="true">36</string>
                </property>
               </item>
               <item row="34" column="0">
@@ -17740,27 +17740,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="34" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="34" column="2">
                <property name="text">
-                <string>462</string>
+                <string notr="true">462</string>
                </property>
               </item>
               <item row="34" column="3">
                <property name="text">
-                <string>63498</string>
+                <string notr="true">63498</string>
                </property>
               </item>
               <item row="34" column="4">
                <property name="text">
-                <string>65531</string>
+                <string notr="true">65531</string>
                </property>
               </item>
               <item row="34" column="5">
                <property name="text">
-                <string>220</string>
+                <string notr="true">220</string>
                </property>
               </item>
               <item row="35" column="0">
@@ -17770,27 +17770,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="35" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="35" column="2">
                <property name="text">
-                <string>173</string>
+                <string notr="true">173</string>
                </property>
               </item>
               <item row="35" column="3">
                <property name="text">
-                <string>64997</string>
+                <string notr="true">64997</string>
                </property>
               </item>
               <item row="35" column="4">
                <property name="text">
-                <string>135</string>
+                <string notr="true">135</string>
                </property>
               </item>
               <item row="35" column="5">
                <property name="text">
-                <string>78</string>
+                <string notr="true">78</string>
                </property>
               </item>
               <item row="36" column="0">
@@ -17800,27 +17800,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="36" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="36" column="2">
                <property name="text">
-                <string>94</string>
+                <string notr="true">94</string>
                </property>
               </item>
               <item row="36" column="3">
                <property name="text">
-                <string>0</string>
+                <string notr="true">0</string>
                </property>
               </item>
               <item row="36" column="4">
                <property name="text">
-                <string>0</string>
+                <string notr="true">0</string>
                </property>
               </item>
               <item row="36" column="5">
                <property name="text">
-                <string>0</string>
+                <string notr="true">0</string>
                </property>
               </item>
               <item row="37" column="0">
@@ -17830,27 +17830,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="37" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="37" column="2">
                <property name="text">
-                <string>131</string>
+                <string notr="true">131</string>
                </property>
               </item>
               <item row="37" column="3">
                <property name="text">
-                <string>34</string>
+                <string notr="true">34</string>
                </property>
               </item>
               <item row="37" column="4">
                <property name="text">
-                <string>1617</string>
+                <string notr="true">1617</string>
                </property>
               </item>
               <item row="37" column="5">
                <property name="text">
-                <string>36</string>
+                <string notr="true">36</string>
                </property>
               </item>
               <item row="38" column="0">
@@ -17860,27 +17860,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="38" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="38" column="2">
                <property name="text">
-                <string>496</string>
+                <string notr="true">496</string>
                </property>
               </item>
               <item row="38" column="3">
                <property name="text">
-                <string>64767</string>
+                <string notr="true">64767</string>
                </property>
               </item>
               <item row="38" column="4">
                <property name="text">
-                <string>95</string>
+                <string notr="true">95</string>
                </property>
               </item>
               <item row="38" column="5">
                <property name="text">
-                <string>26</string>
+                <string notr="true">26</string>
                </property>
               </item>
               <item row="39" column="0">
@@ -17890,27 +17890,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="39" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="39" column="2">
                <property name="text">
-                <string>394</string>
+                <string notr="true">394</string>
                </property>
               </item>
               <item row="39" column="3">
                <property name="text">
-                <string>2184</string>
+                <string notr="true">2184</string>
                </property>
               </item>
               <item row="39" column="4">
                <property name="text">
-                <string>64947</string>
+                <string notr="true">64947</string>
                </property>
               </item>
               <item row="39" column="5">
                <property name="text">
-                <string>24</string>
+                <string notr="true">24</string>
                </property>
               </item>
               <item row="40" column="0">
@@ -17920,27 +17920,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="40" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="40" column="2">
                <property name="text">
-                <string>386</string>
+                <string notr="true">386</string>
                </property>
               </item>
               <item row="40" column="3">
                <property name="text">
-                <string>64902</string>
+                <string notr="true">64902</string>
                </property>
               </item>
               <item row="40" column="4">
                <property name="text">
-                <string>65203</string>
+                <string notr="true">65203</string>
                </property>
               </item>
               <item row="40" column="5">
                <property name="text">
-                <string>31</string>
+                <string notr="true">31</string>
                </property>
               </item>
               <item row="41" column="0">
@@ -17950,27 +17950,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="41" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="41" column="2">
                <property name="text">
-                <string>88</string>
+                <string notr="true">88</string>
                </property>
               </item>
               <item row="41" column="3">
                <property name="text">
-                <string>65157</string>
+                <string notr="true">65157</string>
                </property>
               </item>
               <item row="41" column="4">
                <property name="text">
-                <string>44</string>
+                <string notr="true">44</string>
                </property>
               </item>
               <item row="41" column="5">
                <property name="text">
-                <string>13</string>
+                <string notr="true">13</string>
                </property>
               </item>
               <item row="42" column="0">
@@ -17980,27 +17980,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="42" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="42" column="2">
                <property name="text">
-                <string>633</string>
+                <string notr="true">633</string>
                </property>
               </item>
               <item row="42" column="3">
                <property name="text">
-                <string>65402</string>
+                <string notr="true">65402</string>
                </property>
               </item>
               <item row="42" column="4">
                <property name="text">
-                <string>65401</string>
+                <string notr="true">65401</string>
                </property>
               </item>
               <item row="42" column="5">
                <property name="text">
-                <string>40</string>
+                <string notr="true">40</string>
                </property>
               </item>
               <item row="43" column="0">
@@ -18010,27 +18010,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="43" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="43" column="2">
                <property name="text">
-                <string>703</string>
+                <string notr="true">703</string>
                </property>
               </item>
               <item row="43" column="3">
                <property name="text">
-                <string>65170</string>
+                <string notr="true">65170</string>
                </property>
               </item>
               <item row="43" column="4">
                <property name="text">
-                <string>64488</string>
+                <string notr="true">64488</string>
                </property>
               </item>
               <item row="43" column="5">
                <property name="text">
-                <string>44</string>
+                <string notr="true">44</string>
                </property>
               </item>
               <item row="44" column="0">
@@ -18040,27 +18040,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="44" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="44" column="2">
                <property name="text">
-                <string>733</string>
+                <string notr="true">733</string>
                </property>
               </item>
               <item row="44" column="3">
                <property name="text">
-                <string>65264</string>
+                <string notr="true">65264</string>
                </property>
               </item>
               <item row="44" column="4">
                <property name="text">
-                <string>1614</string>
+                <string notr="true">1614</string>
                </property>
               </item>
               <item row="44" column="5">
                <property name="text">
-                <string>116</string>
+                <string notr="true">116</string>
                </property>
               </item>
               <item row="45" column="0">
@@ -18070,27 +18070,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="45" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="45" column="2">
                <property name="text">
-                <string>227</string>
+                <string notr="true">227</string>
                </property>
               </item>
               <item row="45" column="3">
                <property name="text">
-                <string>512</string>
+                <string notr="true">512</string>
                </property>
               </item>
               <item row="45" column="4">
                <property name="text">
-                <string>63074</string>
+                <string notr="true">63074</string>
                </property>
               </item>
               <item row="45" column="5">
                <property name="text">
-                <string>105</string>
+                <string notr="true">105</string>
                </property>
               </item>
               <item row="46" column="0">
@@ -18100,27 +18100,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="46" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="46" column="2">
                <property name="text">
-                <string>579</string>
+                <string notr="true">579</string>
                </property>
               </item>
               <item row="46" column="3">
                <property name="text">
-                <string>64961</string>
+                <string notr="true">64961</string>
                </property>
               </item>
               <item row="46" column="4">
                <property name="text">
-                <string>1101</string>
+                <string notr="true">1101</string>
                </property>
               </item>
               <item row="46" column="5">
                <property name="text">
-                <string>34</string>
+                <string notr="true">34</string>
                </property>
               </item>
               <item row="47" column="0">
@@ -18130,27 +18130,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="47" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="47" column="2">
                <property name="text">
-                <string>646</string>
+                <string notr="true">646</string>
                </property>
               </item>
               <item row="47" column="3">
                <property name="text">
-                <string>641</string>
+                <string notr="true">641</string>
                </property>
               </item>
               <item row="47" column="4">
                <property name="text">
-                <string>793</string>
+                <string notr="true">793</string>
                </property>
               </item>
               <item row="47" column="5">
                <property name="text">
-                <string>243</string>
+                <string notr="true">243</string>
                </property>
               </item>
               <item row="48" column="0">
@@ -18160,27 +18160,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="48" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="48" column="2">
                <property name="text">
-                <string>345</string>
+                <string notr="true">345</string>
                </property>
               </item>
               <item row="48" column="3">
                <property name="text">
-                <string>65535</string>
+                <string notr="true">65535</string>
                </property>
               </item>
               <item row="48" column="4">
                <property name="text">
-                <string>64960</string>
+                <string notr="true">64960</string>
                </property>
               </item>
               <item row="48" column="5">
                <property name="text">
-                <string>61</string>
+                <string notr="true">61</string>
                </property>
               </item>
               <item row="49" column="0">
@@ -18190,27 +18190,27 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item row="49" column="1">
                <property name="text">
-                <string>1</string>
+                <string notr="true">1</string>
                </property>
               </item>
               <item row="49" column="2">
                <property name="text">
-                <string>72</string>
+                <string notr="true">72</string>
                </property>
               </item>
               <item row="49" column="3">
                <property name="text">
-                <string>65533</string>
+                <string notr="true">65533</string>
                </property>
               </item>
               <item row="49" column="4">
                <property name="text">
-                <string>62949</string>
+                <string notr="true">62949</string>
                </property>
               </item>
               <item row="49" column="5">
                <property name="text">
-                <string>99</string>
+                <string notr="true">99</string>
                </property>
               </item>
              </widget>
@@ -18519,8 +18519,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>744</width>
-             <height>414</height>
+             <width>764</width>
+             <height>440</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -20610,10 +20610,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <x>0</x>
                  <y>0</y>
                  <width>349</width>
-                 <height>1245</height>
+                 <height>1239</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_62">
+                <property name="margin">
+                 <number>3</number>
+                </property>
                 <item>
                  <widget class="QGroupBox" name="groupBox_25">
                   <property name="sizePolicy">
@@ -20860,83 +20863,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </property>
                     </widget>
                    </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_s7ts_6">
-                     <property name="text">
-                      <string>s7ts_6</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_s7ts_5">
-                     <property name="text">
-                      <string>s7ts_5</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_midgartrain_5">
-                     <property name="text">
-                      <string>mt_5</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_midgartrain_8">
-                     <property name="text">
-                      <string>mt_8</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_s7ts_7">
-                     <property name="text">
-                      <string>s7ts_7</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_midgartrain_7">
-                     <property name="text">
-                      <string>mt_7</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_midgartrain_6">
-                     <property name="text">
-                      <string>mt_6</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_s7ts_8">
-                     <property name="text">
-                      <string>s7ts_8</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_s7pl_7">
-                     <property name="text">
-                      <string>s7pl_7</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_s7pl_6">
-                     <property name="text">
-                      <string>s7pl_6</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_s7pl_8">
-                     <property name="text">
-                      <string>s7pl_8</string>
-                     </property>
-                    </widget>
-                   </item>
                   </layout>
                  </widget>
                 </item>
@@ -20984,98 +20910,175 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <item>
                     <widget class="QCheckBox" name="cb_bm1_2">
                      <property name="text">
-                      <string>bm1_2</string>
+                      <string notr="true">bm1_2</string>
                      </property>
                     </widget>
                    </item>
                    <item>
                     <widget class="QCheckBox" name="cb_bm1_3">
                      <property name="text">
-                      <string>bm1_3</string>
+                      <string notr="true">bm1_3</string>
                      </property>
                     </widget>
                    </item>
                    <item>
                     <widget class="QCheckBox" name="cb_bm2_1">
                      <property name="text">
-                      <string>bm2_1</string>
+                      <string notr="true">bm2_1</string>
                      </property>
                     </widget>
                    </item>
                    <item>
                     <widget class="QCheckBox" name="cb_bm2_4">
                      <property name="text">
-                      <string>bm2_4</string>
+                      <string notr="true">bm2_4</string>
                      </property>
                     </widget>
                    </item>
                    <item>
                     <widget class="QCheckBox" name="cb_bm2_5">
                      <property name="text">
-                      <string>bm2_5</string>
+                      <string notr="true">bm2_5</string>
                      </property>
                     </widget>
                    </item>
                    <item>
                     <widget class="QCheckBox" name="cb_bm2_6">
                      <property name="text">
-                      <string>bm2_6</string>
+                      <string notr="true">bm2_6</string>
                      </property>
                     </widget>
                    </item>
                    <item>
                     <widget class="QCheckBox" name="cb_bm2_7">
                      <property name="text">
-                      <string>bm2_7</string>
+                      <string notr="true">bm2_7</string>
                      </property>
                     </widget>
                    </item>
                    <item>
                     <widget class="QCheckBox" name="cb_bm2_8">
                      <property name="text">
-                      <string>bm2_8</string>
+                      <string notr="true">bm2_8</string>
                      </property>
                     </widget>
                    </item>
                    <item>
                     <widget class="QCheckBox" name="cb_bm3_3">
                      <property name="text">
-                      <string>bm3_3</string>
+                      <string notr="true">bm3_3</string>
                      </property>
                     </widget>
                    </item>
                    <item>
                     <widget class="QCheckBox" name="cb_bm3_4">
                      <property name="text">
-                      <string>bm3_4</string>
+                      <string notr="true">bm3_4</string>
                      </property>
                     </widget>
                    </item>
                    <item>
                     <widget class="QCheckBox" name="cb_bm3_5">
                      <property name="text">
-                      <string>bm3_5</string>
+                      <string notr="true">bm3_5</string>
                      </property>
                     </widget>
                    </item>
                    <item>
                     <widget class="QCheckBox" name="cb_bm3_6">
                      <property name="text">
-                      <string>bm3_6</string>
+                      <string notr="true">bm3_6</string>
                      </property>
                     </widget>
                    </item>
                    <item>
                     <widget class="QCheckBox" name="cb_bm3_7">
                      <property name="text">
-                      <string>bm3_7</string>
+                      <string notr="true">bm3_7</string>
                      </property>
                     </widget>
                    </item>
                    <item>
                     <widget class="QCheckBox" name="cb_bm3_8">
                      <property name="text">
-                      <string>bm3_8</string>
+                      <string notr="true">bm3_8</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_midgartrain_5">
+                     <property name="text">
+                      <string notr="true">mt_5</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_midgartrain_6">
+                     <property name="text">
+                      <string notr="true">mt_6</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_midgartrain_7">
+                     <property name="text">
+                      <string notr="true">mt_7</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_midgartrain_8">
+                     <property name="text">
+                      <string notr="true">mt_8</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s7ts_5">
+                     <property name="text">
+                      <string notr="true">s7ts_5</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s7ts_6">
+                     <property name="text">
+                      <string notr="true">s7ts_6</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s7ts_7">
+                     <property name="text">
+                      <string notr="true">s7ts_7</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s7ts_8">
+                     <property name="text">
+                      <string notr="true">s7ts_8</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s7pl_6">
+                     <property name="text">
+                      <string notr="true">s7pl_6</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s7pl_7">
+                     <property name="text">
+                      <string notr="true">s7pl_7</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s7pl_8">
+                     <property name="text">
+                      <string notr="true">s7pl_8</string>
                      </property>
                     </widget>
                    </item>
@@ -21351,7 +21354,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_3">
                <property name="spacing">
-                <number>1</number>
+                <number>-1</number>
                </property>
                <property name="leftMargin">
                 <number>3</number>
@@ -21514,7 +21517,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_13">
                <property name="spacing">
-                <number>1</number>
+                <number>-1</number>
                </property>
                <property name="leftMargin">
                 <number>3</number>
@@ -23752,7 +23755,7 @@ p, li { white-space: pre-wrap; }
               <property name="geometry">
                <rect>
                 <x>0</x>
-                <y>0</y>
+                <y>-11</y>
                 <width>727</width>
                 <height>475</height>
                </rect>
@@ -28976,202 +28979,202 @@ p, li { white-space: pre-wrap; }
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_1</string>
+                     <string notr="true">z_1</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_2</string>
+                     <string notr="true">z_2</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_3</string>
+                     <string notr="true">z_3</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_4</string>
+                     <string notr="true">z_4</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_5</string>
+                     <string notr="true">z_5</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_6</string>
+                     <string notr="true">z_6</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_7</string>
+                     <string notr="true">z_7</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_8</string>
+                     <string notr="true">z_8</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_9</string>
+                     <string notr="true">z_9</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_10</string>
+                     <string notr="true">z_10</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_11</string>
+                     <string notr="true">z_11</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_12</string>
+                     <string notr="true">z_12</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_13</string>
+                     <string notr="true">z_13</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_14</string>
+                     <string notr="true">z_14</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_15</string>
+                     <string notr="true">z_15</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_16</string>
+                     <string notr="true">z_16</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_17</string>
+                     <string notr="true">z_17</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_18</string>
+                     <string notr="true">z_18</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_19</string>
+                     <string notr="true">z_19</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_20</string>
+                     <string notr="true">z_20</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_21</string>
+                     <string notr="true">z_21</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_22</string>
+                     <string notr="true">z_22</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_23</string>
+                     <string notr="true">z_23</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_24</string>
+                     <string notr="true">z_24</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_25</string>
+                     <string notr="true">z_25</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_26</string>
+                     <string notr="true">z_26</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_27</string>
+                     <string notr="true">z_27</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_28</string>
+                     <string notr="true">z_28</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_29</string>
+                     <string notr="true">z_29</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_30</string>
+                     <string notr="true">z_30</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_31</string>
+                     <string notr="true">z_31</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_32</string>
+                     <string notr="true">z_32</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_33</string>
+                     <string notr="true">z_33</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_34</string>
+                     <string notr="true">z_34</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_35</string>
+                     <string notr="true">z_35</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_36</string>
+                     <string notr="true">z_36</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_37</string>
+                     <string notr="true">z_37</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_38</string>
+                     <string notr="true">z_38</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_39</string>
+                     <string notr="true">z_39</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>z_40</string>
+                     <string notr="true">z_40</string>
                     </property>
                    </item>
                   </widget>
@@ -29454,77 +29457,77 @@ Var And Scrolling Synced To Left Table</string>
                    </item>
                    <item>
                     <property name="text">
-                     <string>1</string>
+                     <string notr="true">1</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>2</string>
+                     <string notr="true">2</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>3</string>
+                     <string notr="true">3</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>4</string>
+                     <string notr="true">4</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>5</string>
+                     <string notr="true">5</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>6</string>
+                     <string notr="true">6</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>7</string>
+                     <string notr="true">7</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>8</string>
+                     <string notr="true">8</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>9</string>
+                     <string notr="true">9</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>10</string>
+                     <string notr="true">10</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>11</string>
+                     <string notr="true">11</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>12</string>
+                     <string notr="true">12</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>13</string>
+                     <string notr="true">13</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>14</string>
+                     <string notr="true">14</string>
                     </property>
                    </item>
                    <item>
                     <property name="text">
-                     <string>15</string>
+                     <string notr="true">15</string>
                     </property>
                    </item>
                   </widget>

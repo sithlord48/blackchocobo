@@ -1264,10 +1264,6 @@
         <translation>PG</translation>
     </message>
     <message>
-        <source>/</source>
-        <translation>/</translation>
-    </message>
-    <message>
         <source>MP</source>
         <translation>PM</translation>
     </message>
@@ -1848,10 +1844,6 @@
         <translation>Inferior Derecha</translation>
     </message>
     <message>
-        <source>0x0B</source>
-        <translation>0x0B</translation>
-    </message>
-    <message>
         <source>-Empty-</source>
         <translation>-Vacío-</translation>
     </message>
@@ -2156,332 +2148,72 @@
         <translation>Plataforma</translation>
     </message>
     <message>
-        <source>116</source>
-        <translation>116</translation>
-    </message>
-    <message>
-        <source>3655</source>
-        <translation>3655</translation>
-    </message>
-    <message>
-        <source>27432</source>
-        <translation>27432</translation>
-    </message>
-    <message>
         <source>Tunnel</source>
         <translation>Túnel</translation>
-    </message>
-    <message>
-        <source>736</source>
-        <translation>736</translation>
-    </message>
-    <message>
-        <source>65453</source>
-        <translation>65453</translation>
-    </message>
-    <message>
-        <source>65237</source>
-        <translation>65237</translation>
-    </message>
-    <message>
-        <source>215</source>
-        <translation>215</translation>
     </message>
     <message>
         <source>Junon Inn</source>
         <translation>Posada Junon</translation>
     </message>
     <message>
-        <source>376</source>
-        <translation>376</translation>
-    </message>
-    <message>
-        <source>197</source>
-        <translation>197</translation>
-    </message>
-    <message>
         <source>Midgar Sector 8</source>
         <translation>Midgar Sector 8</translation>
-    </message>
-    <message>
-        <source>732</source>
-        <translation>732</translation>
-    </message>
-    <message>
-        <source>265</source>
-        <translation>265</translation>
-    </message>
-    <message>
-        <source>65332</source>
-        <translation>65332</translation>
     </message>
     <message>
         <source>Shinra Bldg 67F.</source>
         <translation>Edif. Shinra P65.</translation>
     </message>
     <message>
-        <source>256</source>
-        <translation>256</translation>
-    </message>
-    <message>
-        <source>65426</source>
-        <translation>65426</translation>
-    </message>
-    <message>
-        <source>797</source>
-        <translation>797</translation>
-    </message>
-    <message>
-        <source>283</source>
-        <translation>283</translation>
-    </message>
-    <message>
         <source>Train Graveyard</source>
         <translation>Cementerio de Trenes</translation>
-    </message>
-    <message>
-        <source>144</source>
-        <translation>144</translation>
-    </message>
-    <message>
-        <source>1981</source>
-        <translation>1981</translation>
-    </message>
-    <message>
-        <source>62327</source>
-        <translation>62327</translation>
-    </message>
-    <message>
-        <source>71</source>
-        <translation>71</translation>
     </message>
     <message>
         <source>Underwater Reactor</source>
         <translation>Reactor Submarino</translation>
     </message>
     <message>
-        <source>422</source>
-        <translation>422</translation>
-    </message>
-    <message>
-        <source>426</source>
-        <translation>426</translation>
-    </message>
-    <message>
         <source>Junon Office F2</source>
         <translation>Oficina Junon P2</translation>
-    </message>
-    <message>
-        <source>397</source>
-        <translation>397</translation>
-    </message>
-    <message>
-        <source>65162</source>
-        <translation>65162</translation>
-    </message>
-    <message>
-        <source>65236</source>
-        <translation>65236</translation>
     </message>
     <message>
         <source>Shinra Bldg 69F.</source>
         <translation>Edif. Shinra P69.</translation>
     </message>
     <message>
-        <source>264</source>
-        <translation>264</translation>
-    </message>
-    <message>
-        <source>150</source>
-        <translation>150</translation>
-    </message>
-    <message>
-        <source>65102</source>
-        <translation>65102</translation>
-    </message>
-    <message>
-        <source>226</source>
-        <translation>226</translation>
-    </message>
-    <message>
         <source>Kalm Inn</source>
         <translation>Posada Kalm</translation>
-    </message>
-    <message>
-        <source>332</source>
-        <translation>332</translation>
-    </message>
-    <message>
-        <source>267</source>
-        <translation>267</translation>
-    </message>
-    <message>
-        <source>65429</source>
-        <translation>65429</translation>
     </message>
     <message>
         <source>Reactor No. 5</source>
         <translation>Reactor No. 5</translation>
     </message>
     <message>
-        <source>128</source>
-        <translation>128</translation>
-    </message>
-    <message>
-        <source>64035</source>
-        <translation>64035</translation>
-    </message>
-    <message>
-        <source>2546</source>
-        <translation>2546</translation>
-    </message>
-    <message>
-        <source>187</source>
-        <translation>187</translation>
-    </message>
-    <message>
-        <source>175</source>
-        <translation>175</translation>
-    </message>
-    <message>
-        <source>65330</source>
-        <translation>65330</translation>
-    </message>
-    <message>
-        <source>138</source>
-        <translation>138</translation>
-    </message>
-    <message>
         <source>North Crater</source>
         <translation>Cráter del Norte</translation>
-    </message>
-    <message>
-        <source>749</source>
-        <translation>749</translation>
-    </message>
-    <message>
-        <source>65344</source>
-        <translation>65344</translation>
     </message>
     <message>
         <source>Wall Market</source>
         <translation>Mercado Muro</translation>
     </message>
     <message>
-        <source>195</source>
-        <translation>195</translation>
-    </message>
-    <message>
-        <source>462</source>
-        <translation>462</translation>
-    </message>
-    <message>
-        <source>1080</source>
-        <translation>1080</translation>
-    </message>
-    <message>
-        <source>58</source>
-        <translation>58</translation>
-    </message>
-    <message>
         <source>Beginner&apos;s Hall</source>
         <translation>Hall de los Principiantes</translation>
-    </message>
-    <message>
-        <source>149</source>
-        <translation>149</translation>
-    </message>
-    <message>
-        <source>220</source>
-        <translation>220</translation>
-    </message>
-    <message>
-        <source>65371</source>
-        <translation>65371</translation>
     </message>
     <message>
         <source>Whirlwind Maze</source>
         <translation>Mazo Torbellino</translation>
     </message>
     <message>
-        <source>705</source>
-        <translation>705</translation>
-    </message>
-    <message>
-        <source>94</source>
-        <translation>94</translation>
-    </message>
-    <message>
-        <source>1168</source>
-        <translation>1168</translation>
-    </message>
-    <message>
-        <source>173</source>
-        <translation>173</translation>
-    </message>
-    <message>
         <source>Gaeas Cliff</source>
         <translation>Acantilado de Gaea</translation>
-    </message>
-    <message>
-        <source>699</source>
-        <translation>699</translation>
-    </message>
-    <message>
-        <source>65424</source>
-        <translation>65424</translation>
-    </message>
-    <message>
-        <source>240</source>
-        <translation>240</translation>
     </message>
     <message>
         <source>Mt. Nibel</source>
         <translation>Mt. Nibel</translation>
     </message>
     <message>
-        <source>317</source>
-        <translation>317</translation>
-    </message>
-    <message>
-        <source>667</source>
-        <translation>667</translation>
-    </message>
-    <message>
-        <source>65035</source>
-        <translation>65035</translation>
-    </message>
-    <message>
-        <source>261</source>
-        <translation>261</translation>
-    </message>
-    <message>
         <source>Gaeas Cliff Base</source>
         <translation>Case del Acantilado de Gaea</translation>
-    </message>
-    <message>
-        <source>687</source>
-        <translation>687</translation>
-    </message>
-    <message>
-        <source>165</source>
-        <translation>165</translation>
-    </message>
-    <message>
-        <source>51</source>
-        <translation>51</translation>
-    </message>
-    <message>
-        <source>693</source>
-        <translation>693</translation>
-    </message>
-    <message>
-        <source>65384</source>
-        <translation>65384</translation>
-    </message>
-    <message>
-        <source>1104</source>
-        <translation>1104</translation>
     </message>
     <message>
         <source>Test Fight</source>
@@ -2492,76 +2224,16 @@
         <translation>Suburbios del Sector 7</translation>
     </message>
     <message>
-        <source>156</source>
-        <translation>156</translation>
-    </message>
-    <message>
-        <source>65185</source>
-        <translation>65185</translation>
-    </message>
-    <message>
-        <source>636</source>
-        <translation>636</translation>
-    </message>
-    <message>
-        <source>231</source>
-        <translation>231</translation>
-    </message>
-    <message>
         <source>Shinra Bldg. 64F.</source>
         <translation>Edif. Shinra P64.</translation>
-    </message>
-    <message>
-        <source>247</source>
-        <translation>247</translation>
-    </message>
-    <message>
-        <source>64386</source>
-        <translation>64386</translation>
-    </message>
-    <message>
-        <source>65253</source>
-        <translation>65253</translation>
-    </message>
-    <message>
-        <source>245</source>
-        <translation>245</translation>
     </message>
     <message>
         <source>Reactor No.1</source>
         <translation>Reactor No. 1</translation>
     </message>
     <message>
-        <source>124</source>
-        <translation>124</translation>
-    </message>
-    <message>
-        <source>1579</source>
-        <translation>1579</translation>
-    </message>
-    <message>
-        <source>36</source>
-        <translation>36</translation>
-    </message>
-    <message>
         <source>Corel Prison</source>
         <translation>Prisión de Corel</translation>
-    </message>
-    <message>
-        <source>473</source>
-        <translation>473</translation>
-    </message>
-    <message>
-        <source>876</source>
-        <translation>876</translation>
-    </message>
-    <message>
-        <source>1471</source>
-        <translation>1471</translation>
-    </message>
-    <message>
-        <source>74</source>
-        <translation>74</translation>
     </message>
     <message>
         <source>Debug Room</source>
@@ -2628,10 +2300,6 @@
         <translation>Alt+Derecha</translation>
     </message>
     <message>
-        <source>65</source>
-        <translation>65</translation>
-    </message>
-    <message>
         <source>3</source>
         <translation>3</translation>
     </message>
@@ -2684,132 +2352,32 @@
         <translation>Fuerte Cóndor</translation>
     </message>
     <message>
-        <source>355</source>
-        <translation>355</translation>
-    </message>
-    <message>
-        <source>1118</source>
-        <translation>1118</translation>
-    </message>
-    <message>
-        <source>391</source>
-        <translation>391</translation>
-    </message>
-    <message>
         <source>Inside Submarine</source>
         <translation>Interior Submarino</translation>
-    </message>
-    <message>
-        <source>408</source>
-        <translation>408</translation>
-    </message>
-    <message>
-        <source>65484</source>
-        <translation>65484</translation>
-    </message>
-    <message>
-        <source>433</source>
-        <translation>433</translation>
-    </message>
-    <message>
-        <source>739</source>
-        <translation>739</translation>
-    </message>
-    <message>
-        <source>61439</source>
-        <translation>61439</translation>
-    </message>
-    <message>
-        <source>18394</source>
-        <translation>18394</translation>
     </message>
     <message>
         <source>Hallway</source>
         <translation>Pasillo</translation>
     </message>
     <message>
-        <source>88</source>
-        <translation>88</translation>
-    </message>
-    <message>
-        <source>65141</source>
-        <translation>65141</translation>
-    </message>
-    <message>
         <source>Cosmo Canyon</source>
         <translation>Cañón Cosmo</translation>
-    </message>
-    <message>
-        <source>529</source>
-        <translation>529</translation>
-    </message>
-    <message>
-        <source>65215</source>
-        <translation>65215</translation>
-    </message>
-    <message>
-        <source>79</source>
-        <translation>79</translation>
     </message>
     <message>
         <source>Boat</source>
         <translation>Barco</translation>
     </message>
     <message>
-        <source>436</source>
-        <translation>436</translation>
-    </message>
-    <message>
-        <source>65430</source>
-        <translation>65430</translation>
-    </message>
-    <message>
-        <source>64368</source>
-        <translation>64368</translation>
-    </message>
-    <message>
         <source>Lower Sector 4 Plate</source>
         <translation>Placa Bajo el Sector 4</translation>
-    </message>
-    <message>
-        <source>169</source>
-        <translation>169</translation>
-    </message>
-    <message>
-        <source>65422</source>
-        <translation>65422</translation>
-    </message>
-    <message>
-        <source>468</source>
-        <translation>468</translation>
     </message>
     <message>
         <source>Mt. Corel</source>
         <translation>Mt. Corel</translation>
     </message>
     <message>
-        <source>63498</source>
-        <translation>63498</translation>
-    </message>
-    <message>
-        <source>65531</source>
-        <translation>65531</translation>
-    </message>
-    <message>
         <source>Sector 5 - Slums</source>
         <translation>Suburbios del Sector 5</translation>
-    </message>
-    <message>
-        <source>64997</source>
-        <translation>64997</translation>
-    </message>
-    <message>
-        <source>135</source>
-        <translation>135</translation>
-    </message>
-    <message>
-        <source>78</source>
-        <translation>78</translation>
     </message>
     <message>
         <source>Debug - English</source>
@@ -2820,168 +2388,40 @@
         <translation>Reactor No. 5</translation>
     </message>
     <message>
-        <source>131</source>
-        <translation>131</translation>
-    </message>
-    <message>
-        <source>1617</source>
-        <translation>1617</translation>
-    </message>
-    <message>
         <source>Ropeway Station</source>
         <translation>Estación Ropeway</translation>
-    </message>
-    <message>
-        <source>496</source>
-        <translation>496</translation>
-    </message>
-    <message>
-        <source>64767</source>
-        <translation>64767</translation>
-    </message>
-    <message>
-        <source>95</source>
-        <translation>95</translation>
     </message>
     <message>
         <source>Junon Way</source>
         <translation>Camino de Junon</translation>
     </message>
     <message>
-        <source>394</source>
-        <translation>394</translation>
-    </message>
-    <message>
-        <source>2184</source>
-        <translation>2184</translation>
-    </message>
-    <message>
-        <source>64947</source>
-        <translation>64947</translation>
-    </message>
-    <message>
         <source>Junon Airport Path</source>
         <translation>Camino del Aeropuerto de Junon</translation>
-    </message>
-    <message>
-        <source>386</source>
-        <translation>386</translation>
-    </message>
-    <message>
-        <source>64902</source>
-        <translation>64902</translation>
-    </message>
-    <message>
-        <source>65203</source>
-        <translation>65203</translation>
     </message>
     <message>
         <source>Vestibule</source>
         <translation>Vestíbulo</translation>
     </message>
     <message>
-        <source>65157</source>
-        <translation>65157</translation>
-    </message>
-    <message>
         <source>Forgotten Captial</source>
         <translation>Capital Olvidada</translation>
-    </message>
-    <message>
-        <source>633</source>
-        <translation>633</translation>
-    </message>
-    <message>
-        <source>65402</source>
-        <translation>65402</translation>
-    </message>
-    <message>
-        <source>65401</source>
-        <translation>65401</translation>
-    </message>
-    <message>
-        <source>703</source>
-        <translation>703</translation>
-    </message>
-    <message>
-        <source>65170</source>
-        <translation>65170</translation>
-    </message>
-    <message>
-        <source>64488</source>
-        <translation>64488</translation>
     </message>
     <message>
         <source>Sector 8, Underground</source>
         <translation>Sector 8, Subterráneo</translation>
     </message>
     <message>
-        <source>733</source>
-        <translation>733</translation>
-    </message>
-    <message>
-        <source>65264</source>
-        <translation>65264</translation>
-    </message>
-    <message>
-        <source>1614</source>
-        <translation>1614</translation>
-    </message>
-    <message>
         <source>Shinra Bldg.</source>
         <translation>Edif. Shinra</translation>
-    </message>
-    <message>
-        <source>227</source>
-        <translation>227</translation>
-    </message>
-    <message>
-        <source>512</source>
-        <translation>512</translation>
-    </message>
-    <message>
-        <source>63074</source>
-        <translation>63074</translation>
-    </message>
-    <message>
-        <source>105</source>
-        <translation>105</translation>
     </message>
     <message>
         <source>Wutai</source>
         <translation>Wutai</translation>
     </message>
     <message>
-        <source>579</source>
-        <translation>579</translation>
-    </message>
-    <message>
-        <source>64961</source>
-        <translation>64961</translation>
-    </message>
-    <message>
-        <source>1101</source>
-        <translation>1101</translation>
-    </message>
-    <message>
         <source>Forgotten City</source>
         <translation>Ciudad Olvidada</translation>
-    </message>
-    <message>
-        <source>646</source>
-        <translation>646</translation>
-    </message>
-    <message>
-        <source>641</source>
-        <translation>641</translation>
-    </message>
-    <message>
-        <source>793</source>
-        <translation>793</translation>
-    </message>
-    <message>
-        <source>243</source>
-        <translation>243</translation>
     </message>
     <message>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</source>
@@ -3338,22 +2778,6 @@
 %2.</source>
         <translation>No se puede escribir el archivo%1:
 %2.</translation>
-    </message>
-    <message>
-        <source>0x34</source>
-        <translation>0x34</translation>
-    </message>
-    <message>
-        <source>0x35</source>
-        <translation>0x35</translation>
-    </message>
-    <message>
-        <source>0x36</source>
-        <translation>0x36</translation>
-    </message>
-    <message>
-        <source>0x37</source>
-        <translation>0x37</translation>
     </message>
     <message>
         <source>Hour</source>
@@ -4314,18 +3738,6 @@ no es una partida guardada de FF7.</translation>
         <translation>48</translation>
     </message>
     <message>
-        <source>183</source>
-        <translation>183</translation>
-    </message>
-    <message>
-        <source>65463</source>
-        <translation>65463</translation>
-    </message>
-    <message>
-        <source>400</source>
-        <translation>400</translation>
-    </message>
-    <message>
         <source>Aeris Turks</source>
         <translation>Aeris turcos</translation>
     </message>
@@ -4372,158 +3784,6 @@ no es una partida guardada de FF7.</translation>
     <message>
         <source>Unknown  Vars</source>
         <translation>Variables indefinidas</translation>
-    </message>
-    <message>
-        <source>z_1</source>
-        <translation>z_1</translation>
-    </message>
-    <message>
-        <source>z_2</source>
-        <translation>z_2</translation>
-    </message>
-    <message>
-        <source>z_3</source>
-        <translation>z_3</translation>
-    </message>
-    <message>
-        <source>z_4</source>
-        <translation>z_4</translation>
-    </message>
-    <message>
-        <source>z_5</source>
-        <translation>z_5</translation>
-    </message>
-    <message>
-        <source>z_6</source>
-        <translation>z_6</translation>
-    </message>
-    <message>
-        <source>z_7</source>
-        <translation>z_7</translation>
-    </message>
-    <message>
-        <source>z_8</source>
-        <translation>z_8</translation>
-    </message>
-    <message>
-        <source>z_9</source>
-        <translation>z_9</translation>
-    </message>
-    <message>
-        <source>z_10</source>
-        <translation>z_10</translation>
-    </message>
-    <message>
-        <source>z_11</source>
-        <translation>z_11</translation>
-    </message>
-    <message>
-        <source>z_12</source>
-        <translation>z_12</translation>
-    </message>
-    <message>
-        <source>z_13</source>
-        <translation>z_13</translation>
-    </message>
-    <message>
-        <source>z_14</source>
-        <translation>z_14</translation>
-    </message>
-    <message>
-        <source>z_15</source>
-        <translation>z_15</translation>
-    </message>
-    <message>
-        <source>z_16</source>
-        <translation>z_16</translation>
-    </message>
-    <message>
-        <source>z_17</source>
-        <translation>z_17</translation>
-    </message>
-    <message>
-        <source>z_18</source>
-        <translation>z_18</translation>
-    </message>
-    <message>
-        <source>z_19</source>
-        <translation>z_19</translation>
-    </message>
-    <message>
-        <source>z_20</source>
-        <translation>z_20</translation>
-    </message>
-    <message>
-        <source>z_21</source>
-        <translation>z_21</translation>
-    </message>
-    <message>
-        <source>z_22</source>
-        <translation>z_22</translation>
-    </message>
-    <message>
-        <source>z_23</source>
-        <translation>z_23</translation>
-    </message>
-    <message>
-        <source>z_24</source>
-        <translation>z_24</translation>
-    </message>
-    <message>
-        <source>z_25</source>
-        <translation>z_25</translation>
-    </message>
-    <message>
-        <source>z_26</source>
-        <translation>z_26</translation>
-    </message>
-    <message>
-        <source>z_27</source>
-        <translation>z_27</translation>
-    </message>
-    <message>
-        <source>z_28</source>
-        <translation>z_28</translation>
-    </message>
-    <message>
-        <source>z_29</source>
-        <translation>z_29</translation>
-    </message>
-    <message>
-        <source>z_30</source>
-        <translation>z_30</translation>
-    </message>
-    <message>
-        <source>z_31</source>
-        <translation>z_31</translation>
-    </message>
-    <message>
-        <source>z_32</source>
-        <translation>z_32</translation>
-    </message>
-    <message>
-        <source>z_33</source>
-        <translation>z_33</translation>
-    </message>
-    <message>
-        <source>z_34</source>
-        <translation>z_34</translation>
-    </message>
-    <message>
-        <source>z_35</source>
-        <translation>z_35</translation>
-    </message>
-    <message>
-        <source>z_36</source>
-        <translation>z_36</translation>
-    </message>
-    <message>
-        <source>z_37</source>
-        <translation>z_37</translation>
-    </message>
-    <message>
-        <source>z_38</source>
-        <translation>z_38</translation>
     </message>
     <message>
         <source>New Window</source>
@@ -4574,10 +3834,6 @@ no es una partida guardada de FF7.</translation>
         <translation>Imposible cruzar</translation>
     </message>
     <message>
-        <source>z_39</source>
-        <translation>z_39</translation>
-    </message>
-    <message>
         <source>Add One Of Each Mastered Materia </source>
         <translation>Añadir una materia maestra de cada</translation>
     </message>
@@ -4598,44 +3854,12 @@ no es una partida guardada de FF7.</translation>
         <translation>Rancho chocobo</translation>
     </message>
     <message>
-        <source>345</source>
-        <translation>345</translation>
-    </message>
-    <message>
-        <source>65535</source>
-        <translation>65535</translation>
-    </message>
-    <message>
-        <source>64960</source>
-        <translation>64960</translation>
-    </message>
-    <message>
-        <source>61</source>
-        <translation>61</translation>
-    </message>
-    <message>
         <source>Reload</source>
         <translation>Recargar</translation>
     </message>
     <message>
         <source>F5</source>
         <translation>F5</translation>
-    </message>
-    <message>
-        <source>72</source>
-        <translation>72</translation>
-    </message>
-    <message>
-        <source>65533</source>
-        <translation>65533</translation>
-    </message>
-    <message>
-        <source>62949</source>
-        <translation>62949</translation>
-    </message>
-    <message>
-        <source>99</source>
-        <translation>99</translation>
     </message>
     <message>
         <source>-None-</source>
@@ -4728,10 +3952,6 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>z_40</source>
-        <translation type="unfinished">z_40</translation>
-    </message>
-    <message>
         <source>Y: </source>
         <translation type="unfinished"></translation>
     </message>
@@ -4765,34 +3985,6 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     </message>
     <message>
         <source>The Bomb Was Set</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm1_2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4856,50 +4048,6 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>bm1_3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>mt_5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>mt_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>mt_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>mt_8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Sector 7 Trainstation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4917,22 +4065,6 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     </message>
     <message>
         <source>Set To Reactor 5 Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7ts_5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7ts_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7ts_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7ts_8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4957,18 +4089,6 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     </message>
     <message>
         <source>Talked To soldier two times</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7pl_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7pl_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7pl_8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6566,10 +5686,6 @@ Table Entries are Editable</source>
 <context>
     <name>Options</name>
     <message>
-        <source>...</source>
-        <translation>...</translation>
-    </message>
-    <message>
         <source>Select A Directory To Save FF7 PC Saves</source>
         <translation>Selecciona un directorio para guardar las partidas de FF7 PC</translation>
     </message>
@@ -6683,7 +5799,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Options</source>
-        <translation type="unfinished"></translation>
+        <translation>Opciones</translation>
     </message>
     <message>
         <source>Set Load And Save Paths</source>
@@ -6691,7 +5807,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation type="unfinished">&amp;Cerrar</translation>
+        <translation>&amp;Cerrar</translation>
     </message>
 </context>
 <context>
@@ -6703,10 +5819,6 @@ Table Entries are Editable</source>
     <message>
         <source>Time</source>
         <translation>Tiempo</translation>
-    </message>
-    <message>
-        <source>:</source>
-        <translation>:</translation>
     </message>
     <message>
         <source>Gil</source>
@@ -6778,7 +5890,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Empty Slot</source>
-        <translation type="unfinished">Ranura vacía</translation>
+        <translation>Ranura vacía</translation>
     </message>
 </context>
 <context>
@@ -6934,18 +6046,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Buff Icons (and one or two more) by </source>
         <translation>Iconos Buff (y dos o tres más) por </translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://mattahan.deviantart.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Mattahan@deviantart&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://mattahan.deviantart.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Mattahan@deviantart&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>FF7 Program Icon</source>
@@ -7245,10 +6345,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Region String</source>
         <translation>String de Región</translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
-        <translation>TextLabel</translation>
     </message>
     <message>
         <source>&amp;Previous Slot</source>

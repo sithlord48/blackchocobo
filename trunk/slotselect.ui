@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>625</width>
-    <height>484</height>
+    <height>482</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -87,7 +87,7 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>602</width>
+        <width>599</width>
         <height>2346</height>
        </rect>
       </property>
@@ -219,7 +219,7 @@
              <number>-7</number>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -259,7 +259,7 @@
                </font>
               </property>
               <property name="text">
-               <string>:</string>
+               <string notr="true">:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -392,7 +392,7 @@
              <number>1</number>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -555,7 +555,7 @@
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -595,7 +595,7 @@
                </font>
               </property>
               <property name="text">
-               <string>:</string>
+               <string notr="true">:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -734,7 +734,7 @@
              <number>1</number>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -881,7 +881,7 @@
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -921,7 +921,7 @@
                </font>
               </property>
               <property name="text">
-               <string>:</string>
+               <string notr="true">:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -1051,7 +1051,7 @@
              <enum>QFrame::Plain</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1198,7 +1198,7 @@
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1238,7 +1238,7 @@
                </font>
               </property>
               <property name="text">
-               <string>:</string>
+               <string notr="true">:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -1368,7 +1368,7 @@
              <enum>QFrame::Plain</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1515,7 +1515,7 @@
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1555,7 +1555,7 @@
                </font>
               </property>
               <property name="text">
-               <string>:</string>
+               <string notr="true">:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -1685,7 +1685,7 @@
              <enum>QFrame::Plain</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1832,7 +1832,7 @@
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1872,7 +1872,7 @@
                </font>
               </property>
               <property name="text">
-               <string>:</string>
+               <string notr="true">:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -2002,7 +2002,7 @@
              <enum>QFrame::Plain</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2149,7 +2149,7 @@
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2189,7 +2189,7 @@
                </font>
               </property>
               <property name="text">
-               <string>:</string>
+               <string notr="true">:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -2319,7 +2319,7 @@
              <enum>QFrame::Plain</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2466,7 +2466,7 @@
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2506,7 +2506,7 @@
                </font>
               </property>
               <property name="text">
-               <string>:</string>
+               <string notr="true">:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -2636,7 +2636,7 @@
              <enum>QFrame::Plain</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2783,7 +2783,7 @@
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -2823,7 +2823,7 @@
                </font>
               </property>
               <property name="text">
-               <string>:</string>
+               <string notr="true">:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -2953,7 +2953,7 @@
              <enum>QFrame::Plain</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3100,7 +3100,7 @@
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -3140,7 +3140,7 @@
                </font>
               </property>
               <property name="text">
-               <string>:</string>
+               <string notr="true">:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -3270,7 +3270,7 @@
              <enum>QFrame::Plain</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3417,7 +3417,7 @@
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -3457,7 +3457,7 @@
                </font>
               </property>
               <property name="text">
-               <string>:</string>
+               <string notr="true">:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -3587,7 +3587,7 @@
              <enum>QFrame::Plain</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3743,7 +3743,7 @@
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -3783,7 +3783,7 @@
                </font>
               </property>
               <property name="text">
-               <string>:</string>
+               <string notr="true">:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -3913,7 +3913,7 @@
              <enum>QFrame::Plain</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -4060,7 +4060,7 @@
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -4100,7 +4100,7 @@
                </font>
               </property>
               <property name="text">
-               <string>:</string>
+               <string notr="true">:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -4230,7 +4230,7 @@
              <enum>QFrame::Plain</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -4377,7 +4377,7 @@
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -4417,7 +4417,7 @@
                </font>
               </property>
               <property name="text">
-               <string>:</string>
+               <string notr="true">:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -4547,7 +4547,7 @@
              <enum>QFrame::Plain</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -4694,7 +4694,7 @@
              <enum>QFrame::Sunken</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -4734,7 +4734,7 @@
                </font>
               </property>
               <property name="text">
-               <string>:</string>
+               <string notr="true">:</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
@@ -4864,7 +4864,7 @@
              <enum>QFrame::Plain</enum>
             </property>
             <property name="text">
-             <string/>
+             <string notr="true"/>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

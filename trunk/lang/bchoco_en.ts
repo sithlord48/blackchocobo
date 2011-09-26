@@ -1259,10 +1259,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>/</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>MP</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1316,10 +1312,6 @@
     </message>
     <message>
         <source>P&amp;arty</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x0B</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2203,35 +2195,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>116</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>3655</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>27432</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Tunnel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>736</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65453</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65237</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>215</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2239,27 +2203,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>376</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>197</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Midgar Sector 8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>732</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>265</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65332</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2267,39 +2211,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>256</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65426</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>797</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>283</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Train Graveyard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>144</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1981</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>62327</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>71</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2307,27 +2219,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>422</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>426</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Junon Office F2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>397</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65162</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65236</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2335,35 +2227,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>264</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>150</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65102</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>226</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Kalm Inn</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>332</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>267</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65429</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2371,43 +2235,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>128</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>64035</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>2546</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>187</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>175</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65330</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>138</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>North Crater</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>749</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65344</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2415,35 +2243,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>195</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>462</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1080</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>58</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Beginner&apos;s Hall</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>149</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>220</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65371</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2451,35 +2251,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>705</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>94</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1168</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>173</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Gaeas Cliff</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>699</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65424</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>240</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2487,47 +2259,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>317</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>667</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65035</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>261</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Gaeas Cliff Base</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>687</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>165</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>51</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>693</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65384</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1104</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2539,39 +2271,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>156</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65185</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>636</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>231</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Shinra Bldg. 64F.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>247</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>64386</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65253</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>245</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2579,35 +2279,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>124</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1579</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>36</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Corel Prison</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>473</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>876</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1471</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>74</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2680,10 +2352,6 @@
     </message>
     <message>
         <source>Alt+Right</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2771,43 +2439,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>355</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1118</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>391</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Inside Submarine</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>408</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65484</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>433</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>739</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>61439</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>18394</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2815,27 +2447,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>88</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65141</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Cosmo Canyon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>529</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65215</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>79</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2843,31 +2455,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>436</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65430</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>64368</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Lower Sector 4 Plate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>169</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65422</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>468</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2875,27 +2463,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>63498</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65531</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Sector 5 - Slums</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>64997</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>135</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>78</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2907,27 +2475,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>131</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1617</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Ropeway Station</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>496</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>64767</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>95</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2935,31 +2483,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>394</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>2184</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>64947</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Junon Airport Path</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>386</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>64902</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65203</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2967,35 +2491,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>65157</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Forgotten Captial</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>633</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65402</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65401</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>703</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65170</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>64488</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3003,35 +2499,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>733</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65264</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1614</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Shinra Bldg.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>227</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>512</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>63074</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>105</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3039,35 +2507,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>579</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>64961</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1101</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Forgotten City</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>646</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>641</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>793</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>243</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3317,22 +2757,6 @@
     </message>
     <message>
         <source>FF7 SaveGame(*.ff7)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x34</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x35</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x36</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x37</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4298,18 +3722,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>183</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65463</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>400</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Aeris Turks</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4355,158 +3767,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Unknown  Vars</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_9</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_10</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_11</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_12</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_13</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_14</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_15</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_16</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_17</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_18</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_19</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_20</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_21</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_22</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_23</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_24</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_25</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_26</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_27</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_28</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_29</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_30</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_31</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_32</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_33</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_34</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_35</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_36</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_37</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>z_38</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4558,10 +3818,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>z_39</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Add One Of Each Mastered Materia </source>
         <translation type="unfinished"></translation>
     </message>
@@ -4582,43 +3838,11 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>345</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65535</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>64960</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>61</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Reload</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>F5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>72</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>65533</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>62949</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>99</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4707,10 +3931,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>z_40</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Y: </source>
         <translation type="unfinished"></translation>
     </message>
@@ -4744,34 +3964,6 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>The Bomb Was Set</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm1_2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm2_8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4839,50 +4031,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>bm1_3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>bm3_8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>mt_5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>mt_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>mt_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>mt_8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Sector 7 Trainstation</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4900,22 +4048,6 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Set To Reactor 5 Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7ts_5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7ts_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7ts_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7ts_8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4940,18 +4072,6 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Talked To soldier two times</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7pl_6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7pl_7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>s7pl_8</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6549,10 +5669,6 @@ Table Entries are Editable</source>
 <context>
     <name>Options</name>
     <message>
-        <source>...</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Select A Directory To Save FF7 PC Saves</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6685,10 +5801,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6904,14 +6016,6 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Buff Icons (and one or two more) by </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://mattahan.deviantart.com/&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Mattahan@deviantart&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7195,10 +6299,6 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Region String</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>TextLabel</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
