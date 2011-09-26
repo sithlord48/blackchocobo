@@ -7729,7 +7729,10 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
        <attribute name="title">
         <string>&amp;Items</string>
        </attribute>
-       <layout class="QHBoxLayout" name="horizontalLayout_122">
+       <layout class="QHBoxLayout" name="horizontalLayout_113">
+        <property name="margin">
+         <number>3</number>
+        </property>
         <item>
          <widget class="QGroupBox" name="group_items">
           <property name="sizePolicy">
@@ -7740,13 +7743,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </property>
           <property name="minimumSize">
            <size>
-            <width>235</width>
-            <height>492</height>
+            <width>0</width>
+            <height>0</height>
            </size>
           </property>
           <property name="maximumSize">
            <size>
-            <width>240</width>
+            <width>16777215</width>
             <height>16777215</height>
            </size>
           </property>
@@ -7779,13 +7782,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </property>
              <property name="minimumSize">
               <size>
-               <width>230</width>
+               <width>0</width>
                <height>0</height>
               </size>
              </property>
              <property name="maximumSize">
               <size>
-               <width>230</width>
+               <width>16777215</width>
                <height>16777215</height>
               </size>
              </property>
@@ -7852,6 +7855,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <string>Edit Selected Item Slot</string>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_95">
+              <property name="spacing">
+               <number>-1</number>
+              </property>
+              <property name="margin">
+               <number>3</number>
+              </property>
               <item>
                <widget class="QComboBox" name="combo_additem">
                 <property name="sizePolicy">
@@ -7922,9 +7931,15 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 </item>
                 <item>
                  <widget class="QPushButton" name="clearItem">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
-                    <width>80</width>
+                    <width>0</width>
                     <height>0</height>
                    </size>
                   </property>
@@ -7947,6 +7962,38 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 </item>
                </layout>
               </item>
+              <item>
+               <widget class="QPushButton" name="btn_item_add_each_item">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="sizeIncrement">
+                 <size>
+                  <width>2</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string>Add Max Of All Items</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btn_remove_all_items">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
+                <property name="text">
+                 <string>Clear All Items</string>
+                </property>
+               </widget>
+              </item>
              </layout>
             </widget>
            </item>
@@ -7954,11 +8001,11 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
          </widget>
         </item>
         <item>
-         <layout class="QVBoxLayout" name="Item_middle">
+         <layout class="QVBoxLayout" name="verticalLayout_51">
           <item>
            <widget class="QGroupBox" name="groupBox_22">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
@@ -7966,7 +8013,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>132</height>
+              <height>135</height>
              </size>
             </property>
             <property name="maximumSize">
@@ -7978,23 +8025,14 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <property name="title">
              <string>Turtle Paradise Flyers Collected</string>
             </property>
-            <layout class="QVBoxLayout" name="verticalLayout_16" stretch="0">
-             <property name="leftMargin">
+            <layout class="QVBoxLayout" name="verticalLayout_16">
+             <property name="margin">
               <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>3</number>
-             </property>
-             <property name="rightMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
-              <number>3</number>
              </property>
              <item>
               <widget class="QListWidget" name="list_flyers">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
@@ -8002,13 +8040,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <property name="minimumSize">
                 <size>
                  <width>0</width>
-                 <height>0</height>
+                 <height>120</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
                  <width>16777215</width>
-                 <height>16777215</height>
+                 <height>120</height>
                 </size>
                </property>
                <property name="frameShape">
@@ -8037,6 +8075,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                </property>
                <property name="layoutMode">
                 <enum>QListView::SinglePass</enum>
+               </property>
+               <property name="spacing">
+                <number>1</number>
                </property>
                <property name="viewMode">
                 <enum>QListView::ListMode</enum>
@@ -8116,27 +8157,20 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            </widget>
           </item>
           <item>
-           <spacer name="verticalSpacer_14">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Maximum</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
-          <item>
            <widget class="QGroupBox" name="groupBox_26">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="title">
              <string>Field Items Picked Up</string>
             </property>
             <layout class="QVBoxLayout" name="verticalLayout_110">
+             <property name="spacing">
+              <number>0</number>
+             </property>
              <property name="margin">
               <number>0</number>
              </property>
@@ -8150,16 +8184,25 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>250</width>
-                  <height>265</height>
+                  <width>242</width>
+                  <height>330</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_111">
                  <property name="spacing">
+                  <number>-1</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>3</number>
+                 </property>
+                 <property name="topMargin">
                   <number>0</number>
                  </property>
-                 <property name="margin">
+                 <property name="rightMargin">
                   <number>3</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
                  </property>
                  <item>
                   <widget class="QCheckBox" name="cb_bm_items_1">
@@ -8259,36 +8302,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             </layout>
            </widget>
           </item>
-          <item>
-           <widget class="QPushButton" name="btn_item_add_each_item">
-            <property name="text">
-             <string>Add Max Of All Items</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QPushButton" name="btn_remove_all_items">
-            <property name="text">
-             <string>Clear All Items</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <spacer name="verticalSpacer_9">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeType">
-             <enum>QSizePolicy::Maximum</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>20</height>
-             </size>
-            </property>
-           </spacer>
-          </item>
          </layout>
         </item>
         <item>
@@ -8309,6 +8322,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            <string>Key Items</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_4">
+           <property name="leftMargin">
+            <number>3</number>
+           </property>
+           <property name="rightMargin">
+            <number>3</number>
+           </property>
            <item>
             <widget class="QListWidget" name="list_keyitems">
              <property name="minimumSize">
@@ -20688,208 +20707,70 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </property>
                     </widget>
                    </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="groupBox_40">
+                  <property name="title">
+                   <string>Escape From Reactor </string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_108">
+                   <property name="margin">
+                    <number>3</number>
+                   </property>
                    <item>
-                    <widget class="QGroupBox" name="groupBox_40">
-                     <property name="title">
-                      <string>Escape From Reactor </string>
+                    <widget class="QCheckBox" name="cb_bm3_1">
+                     <property name="text">
+                      <string>Post Pan MD8_2</string>
                      </property>
-                     <layout class="QVBoxLayout" name="verticalLayout_108">
-                      <property name="margin">
-                       <number>3</number>
-                      </property>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm3_1">
-                        <property name="text">
-                         <string>Post Pan MD8_2</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm3_2">
-                        <property name="text">
-                         <string>Post Electrical Effect MD8_3</string>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QGroupBox" name="groupBox_36">
-                     <property name="title">
-                      <string>Midgar Train Flags</string>
+                    <widget class="QCheckBox" name="cb_bm3_2">
+                     <property name="text">
+                      <string>Post Electrical Effect MD8_3</string>
                      </property>
-                     <layout class="QVBoxLayout" name="verticalLayout_38">
-                      <property name="margin">
-                       <number>3</number>
-                      </property>
-                      <item>
-                       <widget class="QCheckBox" name="cb_midgartrain_1">
-                        <property name="text">
-                         <string>Talked to Bigs</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_midgartrain_2">
-                        <property name="text">
-                         <string>Talked to Wedge Twice</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_midgartrain_3">
-                        <property name="text">
-                         <string>Talked to Jessie Before Looking At Map</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_midgartrain_4">
-                        <property name="text">
-                         <string> Played Video on Train?</string>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="groupBox_36">
+                  <property name="title">
+                   <string>Midgar Train Flags</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_38">
+                   <property name="margin">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <widget class="QCheckBox" name="cb_midgartrain_1">
+                     <property name="text">
+                      <string>Talked to Bigs</string>
+                     </property>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QGroupBox" name="bm_unknown">
-                     <property name="title">
-                      <string>Unknowns / Unused</string>
+                    <widget class="QCheckBox" name="cb_midgartrain_2">
+                     <property name="text">
+                      <string>Talked to Wedge Twice</string>
                      </property>
-                     <layout class="QVBoxLayout" name="verticalLayout_105">
-                      <property name="margin">
-                       <number>3</number>
-                      </property>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm1_2">
-                        <property name="text">
-                         <string>bm1_2</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm1_3">
-                        <property name="text">
-                         <string>bm1_3</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm2_1">
-                        <property name="text">
-                         <string>bm2_1</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm2_4">
-                        <property name="text">
-                         <string>bm2_4</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm2_5">
-                        <property name="text">
-                         <string>bm2_5</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm2_6">
-                        <property name="text">
-                         <string>bm2_6</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm2_7">
-                        <property name="text">
-                         <string>bm2_7</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm2_8">
-                        <property name="text">
-                         <string>bm2_8</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm3_3">
-                        <property name="text">
-                         <string>bm3_3</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm3_4">
-                        <property name="text">
-                         <string>bm3_4</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm3_5">
-                        <property name="text">
-                         <string>bm3_5</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm3_6">
-                        <property name="text">
-                         <string>bm3_6</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm3_7">
-                        <property name="text">
-                         <string>bm3_7</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_bm3_8">
-                        <property name="text">
-                         <string>bm3_8</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_midgartrain_5">
-                        <property name="text">
-                         <string>mt_5</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_midgartrain_6">
-                        <property name="text">
-                         <string>mt_6</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_midgartrain_7">
-                        <property name="text">
-                         <string>mt_7</string>
-                        </property>
-                       </widget>
-                      </item>
-                      <item>
-                       <widget class="QCheckBox" name="cb_midgartrain_8">
-                        <property name="text">
-                         <string>mt_8</string>
-                        </property>
-                       </widget>
-                      </item>
-                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_midgartrain_3">
+                     <property name="text">
+                      <string>Talked to Jessie Before Looking At Map</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_midgartrain_4">
+                     <property name="text">
+                      <string> Played Video on Train?</string>
+                     </property>
                     </widget>
                    </item>
                   </layout>
@@ -20929,34 +20810,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <widget class="QCheckBox" name="cb_s7ts_4">
                      <property name="text">
                       <string>Set To Reactor 5 Mode</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_s7ts_5">
-                     <property name="text">
-                      <string>s7ts_5</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_s7ts_6">
-                     <property name="text">
-                      <string>s7ts_6</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_s7ts_7">
-                     <property name="text">
-                      <string>s7ts_7</string>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_s7ts_8">
-                     <property name="text">
-                      <string>s7ts_8</string>
                      </property>
                     </widget>
                    </item>
@@ -21008,9 +20861,58 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     </widget>
                    </item>
                    <item>
-                    <widget class="QCheckBox" name="cb_s7pl_6">
+                    <widget class="QCheckBox" name="cb_s7ts_6">
                      <property name="text">
-                      <string>s7pl_6</string>
+                      <string>s7ts_6</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s7ts_5">
+                     <property name="text">
+                      <string>s7ts_5</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_midgartrain_5">
+                     <property name="text">
+                      <string>mt_5</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_midgartrain_8">
+                     <property name="text">
+                      <string>mt_8</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s7ts_7">
+                     <property name="text">
+                      <string>s7ts_7</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_midgartrain_7">
+                     <property name="text">
+                      <string>mt_7</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_midgartrain_6">
+                     <property name="text">
+                      <string>mt_6</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s7ts_8">
+                     <property name="text">
+                      <string>s7ts_8</string>
                      </property>
                     </widget>
                    </item>
@@ -21018,6 +20920,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <widget class="QCheckBox" name="cb_s7pl_7">
                      <property name="text">
                       <string>s7pl_7</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s7pl_6">
+                     <property name="text">
+                      <string>s7pl_6</string>
                      </property>
                     </widget>
                    </item>
@@ -21062,6 +20971,116 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </widget>
                   </item>
                  </layout>
+                </item>
+                <item>
+                 <widget class="QGroupBox" name="bm_unknown">
+                  <property name="title">
+                   <string>Unknowns / Unused</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_105">
+                   <property name="margin">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm1_2">
+                     <property name="text">
+                      <string>bm1_2</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm1_3">
+                     <property name="text">
+                      <string>bm1_3</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm2_1">
+                     <property name="text">
+                      <string>bm2_1</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm2_4">
+                     <property name="text">
+                      <string>bm2_4</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm2_5">
+                     <property name="text">
+                      <string>bm2_5</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm2_6">
+                     <property name="text">
+                      <string>bm2_6</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm2_7">
+                     <property name="text">
+                      <string>bm2_7</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm2_8">
+                     <property name="text">
+                      <string>bm2_8</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm3_3">
+                     <property name="text">
+                      <string>bm3_3</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm3_4">
+                     <property name="text">
+                      <string>bm3_4</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm3_5">
+                     <property name="text">
+                      <string>bm3_5</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm3_6">
+                     <property name="text">
+                      <string>bm3_6</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm3_7">
+                     <property name="text">
+                      <string>bm3_7</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_bm3_8">
+                     <property name="text">
+                      <string>bm3_8</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
                 </item>
                </layout>
               </widget>
@@ -29240,8 +29259,7 @@ p, li { white-space: pre-wrap; }
                 <property name="text">
                  <string>&lt;------Left Table------
 Select Unknown Var To View
-Edit By Changing Dec Value
-Valid Range 0-255</string>
+Table Entries are Editable</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>

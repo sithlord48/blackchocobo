@@ -4314,10 +4314,6 @@ MASTER = 16777215 AP です</translation>
         <translation>Exp &lt;-&gt; Lvl 自動変換</translation>
     </message>
     <message>
-        <source>&lt;---Edit Selected Item Slot</source>
-        <translation type="obsolete">&lt;---選択アイテム スロットの編集</translation>
-    </message>
-    <message>
         <source>Add Max Of All Items</source>
         <translation>すべてのアイテムを最大数追加</translation>
     </message>
@@ -4726,16 +4722,6 @@ Would you like to correct the playtime?</source>
     <message>
         <source>Bin</source>
         <translation>2進</translation>
-    </message>
-    <message>
-        <source>&lt;------Left Table------
-Select Unknown Var To View
-Edit By Changing Dec Value
-Valid Range 0-255</source>
-        <translation>&lt;------左のテーブル------
-表示する変数を選択
-10進数値を変更して編集
-有効な値の範囲: 0-255</translation>
     </message>
     <message>
         <source>Diff</source>
@@ -5167,6 +5153,12 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Edit Selected Item Slot</source>
         <translation type="unfinished">選択アイテム スロットの編集</translation>
+    </message>
+    <message>
+        <source>&lt;------Left Table------
+Select Unknown Var To View
+Table Entries are Editable</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
