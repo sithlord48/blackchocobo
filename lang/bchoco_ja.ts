@@ -1204,7 +1204,7 @@
     </message>
     <message>
         <source>In Party</source>
-        <translation>パーティ メンバー</translation>
+        <translation>パーティ編成</translation>
     </message>
     <message>
         <source>Cloud</source>
@@ -1258,6 +1258,10 @@
     <message>
         <source> HP</source>
         <translation>HP</translation>
+    </message>
+    <message>
+        <source>/</source>
+        <translation>/</translation>
     </message>
     <message>
         <source>MP</source>
@@ -2052,7 +2056,7 @@
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation>ケット・シー, ヴィンセントをパーティ タブで無効化している場合、ここで彼らを有効化しないでください。</translation>
+        <translation>ケット・シー, ヴィンセントがパーティ タブで無効になっている場合、ここで彼らを有効化しないでください。</translation>
     </message>
     <message>
         <source>0</source>
@@ -2359,7 +2363,7 @@
     </message>
     <message>
         <source>Alt+Left</source>
-        <translation>Alt + ←</translation>
+        <translation>Alt+Left</translation>
     </message>
     <message>
         <source>Next Slot</source>
@@ -2367,7 +2371,7 @@
     </message>
     <message>
         <source>Alt+Right</source>
-        <translation>Alt + →</translation>
+        <translation>Alt+Right</translation>
     </message>
     <message>
         <source>&amp;Items</source>
@@ -2485,7 +2489,7 @@
     </message>
     <message>
         <source>Debug - English</source>
-        <translation>デバッグ - イージータイプ</translation>
+        <translation>デバッグ - イージタイプ！</translation>
     </message>
     <message>
         <source>Reactor No. 5 </source>
@@ -2539,8 +2543,7 @@
     </message>
     <message>
         <source>Location Name</source>
-        <translatorcomment>メモリーのロード メニューに表示されるのみTip: The location name can be any sentence as it will appear only in the save selection menu.
-Tip: Setting Location here will not change your world map location.</translatorcomment>
+        <translatorcomment>メモリーのロード メニューに表示されるのみ Tip: The location name can be any sentence as it will appear only in the save selection menu. Tip: Setting Location here will not change your world map location.</translatorcomment>
         <translation>場所名</translation>
     </message>
     <message>
@@ -3759,10 +3762,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Aeris Turks</source>
-        <translatorcomment>教会に配置したときる
-0, 3: クラウドが落下した直後、夢-エアリストとの会話から
-1, 2, 4:レノの最後のセリフが流れ教会奥マップから脱出クエストが始まる
-Aeris_Turks - this is a helper variable for when you meet aeris in the chruch.</translatorcomment>
+        <translatorcomment>教会に配置したとき、0, 3: クラウドが落下した直後、夢-エアリストとの会話から 1, 2, 4:レノの最後のセリフが流れ教会奥マップから脱出クエストが始まる Aeris_Turks - this is a helper variable for when you meet aeris in the chruch.</translatorcomment>
         <translation>エアリス_タークス_教会フラグ</translation>
     </message>
     <message>
@@ -3899,7 +3899,7 @@ Aeris_Turks - this is a helper variable for when you meet aeris in the chruch.</
         <source>PAL PSX runs at 50/60 speed
 This results in an incorrect playtime
 Would you like to correct the playtime?</source>
-        <translation>PAL PSX は速度 50/60 で実行されます。
+        <translation>PAL PSX は 50/60 の速度で実行されます。
 このプレイ時間は不正確なものです。
 プレイ時間を修正しますか ?</translation>
     </message>
@@ -3966,7 +3966,7 @@ Table is Read Only
 Var And Scrolling Synced To Left Table</source>
         <translation>------右のテーブル------&gt;
 比較するスロットを選択
-テーブルの変数は編集できません
+テーブルは編集できません
 左テーブルと同期してスクロール</translation>
     </message>
     <message>
@@ -3999,15 +3999,15 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>1st Door Open</source>
-        <translation>最初のドアを開く</translation>
+        <translation>最初のドアが開く</translation>
     </message>
     <message>
         <source>2nd Door Opened</source>
-        <translation>2番目のドアが開いた</translation>
+        <translation>2番目のドアが開く</translation>
     </message>
     <message>
         <source>Jessie Has Been Unstuck</source>
-        <translation>ジェシーを助けた</translation>
+        <translation>ジェシーを助ける</translation>
     </message>
     <message>
         <source>The Bomb Was Set</source>
@@ -4100,7 +4100,8 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Sector 7 Pillar</source>
-        <translation>7番街機械塔</translation>
+        <translatorcomment>プレート支柱</translatorcomment>
+        <translation>7番街プレート支柱</translation>
     </message>
     <message>
         <source>Team Avalanche Has Run To Hideout</source>
@@ -4108,6 +4109,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Can Show Pillar Pan Video</source>
+        <translatorcomment>プレート支柱</translatorcomment>
         <translation>機械塔パン映像再生可能</translation>
     </message>
     <message>
@@ -4116,6 +4118,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Post Pillar Pan Video</source>
+        <translatorcomment>プレート支柱</translatorcomment>
         <translation>機械塔パン映像再生後</translation>
     </message>
     <message>
@@ -4172,113 +4175,115 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>0x01 Potion On MD8_3 (see item tab)</source>
         <translatorcomment>0x01 8番街 3 ポーション (アイテム タブを参照)</translatorcomment>
-        <translation>0x01 MD8: ポーション (アイテム タブを参照)</translation>
+        <translation>0x01 MD8: ポーション (アイテム タブ参照)</translation>
     </message>
     <message>
         <source>Custom Controller Mapping(PSX Only)</source>
-        <translation type="unfinished"></translation>
+        <translation>カスタム コントローラー (PSX のみ)</translation>
     </message>
     <message>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>↑</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>→</translation>
     </message>
     <message>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>↓</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>←</translation>
     </message>
     <message>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>メニュー</translation>
     </message>
     <message>
         <source>Ok</source>
-        <translation type="unfinished"></translation>
+        <translation>けってい</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>キャンセル</translation>
     </message>
     <message>
         <source>Switch</source>
-        <translation type="unfinished"></translation>
+        <translation>ＥＸＴ</translation>
     </message>
     <message>
         <source>Target</source>
-        <translation type="unfinished"></translation>
+        <translation>ターゲットマーク</translation>
     </message>
     <message>
         <source>Page Up</source>
-        <translation type="unfinished"></translation>
+        <translation>ページ順送り</translation>
     </message>
     <message>
         <source>Page Down</source>
-        <translation type="unfinished"></translation>
+        <translation>ページ逆送り</translation>
     </message>
     <message>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>ヘルプ</translation>
     </message>
     <message>
         <source>Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>ポーズ</translation>
     </message>
     <message>
         <source>Unknown (9)</source>
-        <translation type="unfinished"></translation>
+        <translation>不明 (9)</translation>
     </message>
     <message>
         <source>Unknown (10)</source>
-        <translation type="unfinished"></translation>
+        <translation>不明 (10)</translation>
     </message>
     <message>
         <source>MDS7ST1:Hi-Potion.(In Train 2)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MDS7ST1: ハイポーション (列車2内部)</translation>
     </message>
     <message>
         <source>MDS7ST1:Hi-Potion.(Roof Train 1)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MDS7ST1: ハイポーション (列車1屋根)</translation>
     </message>
     <message>
         <source>MDS7ST1:Hi-Potion.(Barrel 1)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MDS7ST1: ハイポーション (ドラム缶1)</translation>
     </message>
     <message>
         <source>MDS7ST1:Echo Screen</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MDS7ST1: やまびこえんまく</translation>
     </message>
     <message>
         <source>MDS7ST1:Potion</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MDS7ST1: ポーション</translation>
     </message>
     <message>
         <source>MDS7ST2:Hi-Potion</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MDS7ST2: ハイポーション</translation>
     </message>
     <message>
         <source>MDS7ST2:Ether</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MDS7ST2: ハイポーション</translation>
     </message>
     <message>
         <source>MDS7ST2:Potion</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">MDS7ST2: ポーション</translation>
     </message>
     <message>
         <source>Edit Selected Item Slot</source>
-        <translation type="unfinished">選択アイテム スロットの編集</translation>
+        <translation>選択アイテム スロットの編集</translation>
     </message>
     <message>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Table Entries are Editable</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;------左のテーブル------
+表示する不明な変数を選択
+テーブルの値は編集可能</translation>
     </message>
 </context>
 <context>
@@ -6320,11 +6325,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Optimized Slotselect Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fixed: Optimized Slotselect Dialog</translation>
     </message>
     <message>
         <source>New: Edit Controller Mapping (non pc saves)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">New: Edit Controller Mapping (non pc saves)</translation>
     </message>
 </context>
 <context>
