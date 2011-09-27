@@ -5768,6 +5768,8 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
   int rows=0;
   QTableWidgetItem *newItem;
   quint8 value=0;
+  QByteArray temp;
+
   ui->tbl_unknown->reset();
   ui->tbl_unknown->setColumnWidth(0,40);
   ui->tbl_unknown->setColumnWidth(1,40);
@@ -5828,15 +5830,25 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
     case 38: rows=sizeof(ff7.slot[s].z_38); break;
     case 39: rows=sizeof(ff7.slot[s].z_39); break;
     case 40: rows=sizeof(ff7.slot[s].z_40); break;
+    case 41: rows=sizeof(ff7.slot[s]); break;
 
   }
   ui->tbl_unknown->setRowCount(rows);
   if(ui->combo_compare_slot->currentIndex()!=0){ui->tbl_compare_unknown->setRowCount(rows);}
   for(int i=0;i<rows;i++)
   {
-      text.setNum(i);
-      newItem = new QTableWidgetItem(text,0);
-      ui->tbl_unknown->setItem(i,0,newItem);
+      if(ui->combo_z_var->currentText()=="SLOT")
+      {
+          QString hex_str = QString("%1").arg(i,4,16,QChar('0')); //format ex: 000C
+          newItem = new QTableWidgetItem(hex_str,0);
+          ui->tbl_unknown->setItem(i,0,newItem);
+      }
+      else
+      {
+          text.setNum(i);
+          newItem = new QTableWidgetItem(text,0);
+          ui->tbl_unknown->setItem(i,0,newItem);
+      }
 
       switch(z)//what is the items data one byte at a time
       {
@@ -5880,11 +5892,15 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
         case 38: value = ff7.slot[s].z_38[i]; break;
         case 39: value = ff7.slot[s].z_39[i]; break;
         case 40: value = ff7.slot[s].z_40[i]; break;
+        //Always Last Case FULL FILE DIFF
+        case 41: temp.setRawData(reinterpret_cast<char *>(&ff7.slot[s]),rows);
+                 value = temp.at(i);
+                 break;
       }
 
       //Write Hex
       //newItem = new QTableWidgetItem(text.number(value,16),0); //Old format ex: c
-      QString hex_str = QString("%1").arg(value,2,16,QChar('0')).toUpper(); //New format ex: 0C | Vegeta_Ss4 Hex mod
+      QString hex_str = QString("%1").arg(value,2,16,QChar('0')); //New format ex: 0C | Vegeta_Ss4 Hex mod
       newItem = new QTableWidgetItem(hex_str,0);
       ui->tbl_unknown->setItem(i,1,newItem);
       //Write Dec
@@ -5902,8 +5918,16 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 
       if(ui->combo_compare_slot->currentIndex()!=0)
       {//do the same for the compare slot if one has been selected.
-        newItem = new QTableWidgetItem(text,0);
-        ui->tbl_compare_unknown->setItem(i,0,newItem);
+          if(ui->combo_z_var->currentText()=="SLOT")
+          {
+            newItem = new QTableWidgetItem(hex_str,0);
+            ui->tbl_compare_unknown->setItem(i,0,newItem);
+          }
+          else
+          {
+            newItem = new QTableWidgetItem(text,0);
+            ui->tbl_compare_unknown->setItem(i,0,newItem);
+          }
         switch(z)
         {
           case 1: value = ff7.slot[ui->combo_compare_slot->currentIndex()-1].z_1[i]; break;
@@ -5946,10 +5970,14 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
           case 38: value = ff7.slot[ui->combo_compare_slot->currentIndex()-1].z_38[i]; break;
           case 39: value = ff7.slot[ui->combo_compare_slot->currentIndex()-1].z_39[i]; break;
           case 40: value = ff7.slot[ui->combo_compare_slot->currentIndex()-1].z_40[i]; break;
-        }
+          //Always Last Case FULL FILE DIFF
+          case 41: temp.setRawData(reinterpret_cast<char *>(&ff7.slot[ui->combo_compare_slot->currentIndex()-1]),rows);
+                   value = temp.at(i);
+                   break;
+         }
 
         //Write Hex
-        QString hex_str = QString("%1").arg(value,2,16,QChar('0')).toUpper(); //New format ex: 0C | Vegeta_Ss4 Hex mod
+        QString hex_str = QString("%1").arg(value,2,16,QChar('0')); //New format ex: 0C | Vegeta_Ss4 Hex mod
         newItem = new QTableWidgetItem(hex_str,0);
         ui->tbl_compare_unknown->setItem(i,1,newItem);
         //Write Dec
@@ -5998,20 +6026,21 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 void MainWindow::on_combo_z_var_currentIndexChanged(int z){unknown_refresh(z);}
 void MainWindow::on_combo_compare_slot_currentIndexChanged(void)
 {
-if(ui->combo_compare_slot->currentIndex()==0)
-{
-    ui->tbl_compare_unknown->clearContents();
-    ui->tbl_compare_unknown->setRowCount(0);
-    ui->tbl_diff->clearContents();
-    ui->tbl_diff->setRowCount(0);
-    ui->btn_all_z_diffs->setEnabled(0);
-}
-else{unknown_refresh(ui->combo_z_var->currentIndex());}
-ui->tbl_diff->setVisible(0);
+    if(ui->combo_compare_slot->currentIndex()==0)
+    {
+        ui->tbl_compare_unknown->clearContents();
+        ui->tbl_compare_unknown->setRowCount(0);
+        ui->tbl_diff->clearContents();
+        ui->tbl_diff->setRowCount(0);
+        ui->btn_all_z_diffs->setEnabled(0);
+    }
+    else{unknown_refresh(ui->combo_z_var->currentIndex());}
+    ui->tbl_diff->setVisible(0);
 }
 
 void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
 {if(!load){
+    QByteArray temp;
     if(item->column()==1)
     {//column 1 selected
         switch (ui->combo_z_var->currentIndex())
@@ -6057,6 +6086,12 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
             case 38: ff7.slot[s].z_38[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
             case 39: ff7.slot[s].z_39[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
             case 40: ff7.slot[s].z_40[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+            //ALWAYS LAST CASE WHOLE SLOT
+            case 41: temp.setRawData(reinterpret_cast<char *>(&ff7.slot[s]),sizeof(ff7.slot[s]));
+                     temp[item->row()]=item->text().toInt(0,16);
+                     memcpy(&ff7.slot[s],temp,sizeof(ff7.slot[s]));
+                     unknown_refresh(ui->combo_z_var->currentIndex());
+                     break;
         }
     }
     if(item->column()==2)
@@ -6104,6 +6139,12 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
             case 38: ff7.slot[s].z_38[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
             case 39: ff7.slot[s].z_39[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
             case 40: ff7.slot[s].z_40[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+            //ALWAYS LAST CASE WHOLE SLOT
+            case 41: temp.setRawData(reinterpret_cast<char *>(&ff7.slot[s]),sizeof(ff7.slot[s]));
+                     temp[item->row()]=item->text().toInt();
+                     memcpy(&ff7.slot[s],temp,sizeof(ff7.slot[s]));
+                     unknown_refresh(ui->combo_z_var->currentIndex());
+                     break;
         }
     }
     if(item->column()==3)
@@ -6151,6 +6192,12 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
             case 38: ff7.slot[s].z_38[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
             case 39: ff7.slot[s].z_39[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
             case 40: ff7.slot[s].z_40[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
+            //ALWAYS LAST CASE WHOLE SLOT
+            case 41: temp.setRawData(reinterpret_cast<char *>(&ff7.slot[s]),sizeof(ff7.slot[s]));
+                     temp[item->row()]=item->text().toInt(0,2);
+                     memcpy(&ff7.slot[s],temp,sizeof(ff7.slot[s]));
+                     unknown_refresh(ui->combo_z_var->currentIndex());
+                     break;
         }
     }
 }}
@@ -6163,9 +6210,8 @@ void MainWindow::on_btn_all_z_diffs_clicked()
     QString text;
     QTableWidgetItem *newItem;
     int z_index= ui->combo_z_var->currentIndex();
-    for(int z=0;z<ui->combo_z_var->count();z++)
-    {
-        ui->combo_z_var->setCurrentIndex(z);
+    if(z_index==ui->combo_z_var->count()-1)
+    {//if last item in list (SLOT mode)
         for(int i=0;i<ui->tbl_unknown->rowCount();i++)
         {
             if(ui->tbl_compare_unknown->item(i,1)->text()!=ui->tbl_unknown->item(i,1)->text())
@@ -6173,13 +6219,15 @@ void MainWindow::on_btn_all_z_diffs_clicked()
                 num_diff++;
                 ui->tbl_diff->setRowCount(num_diff);
                 text.clear();
-                text.append("z_");  text.append(QString::number(z));
-                text.append(":");   text.append(QString::number(i));
-                newItem = new QTableWidgetItem(text,0);
+                //Offset
+                QString hex_str = QString("%1").arg(i,4,16,QChar('0')); //Format: 0000C
+                newItem = new QTableWidgetItem(hex_str,0);
                 ui->tbl_diff->setItem(num_diff-1,0,newItem);
+                //Decimal
                 diff= ui->tbl_unknown->item(i,2)->text().toInt() - ui->tbl_compare_unknown->item(i,2)->text().toInt() ;
                 newItem = new QTableWidgetItem(text.number(diff,10),0);
                 ui->tbl_diff->setItem(num_diff-1,1,newItem);
+
                 //Write Bin
                 QString binary_str = QString("%1").arg(qAbs(diff),8,2,QChar('0')); //New format ex: 00000111 | Vegeta_Ss4 Bin mod
                 newItem = new QTableWidgetItem(binary_str,0);
@@ -6191,6 +6239,40 @@ void MainWindow::on_btn_all_z_diffs_clicked()
                 ui->tbl_diff->item(num_diff-1,1)->setFlags(Qt::ItemIsEnabled);
                 ui->tbl_diff->item(num_diff-1,2)->setFlags(Qt::ItemIsEnabled);
                 ui->tbl_diff->setRowHeight(num_diff-1,20);
+            }
+        }
+    }
+    else
+    {
+        for(int z=0;z<ui->combo_z_var->count()-1;z++)
+        {
+            ui->combo_z_var->setCurrentIndex(z);
+            for(int i=0;i<ui->tbl_unknown->rowCount();i++)
+            {
+                if(ui->tbl_compare_unknown->item(i,1)->text()!=ui->tbl_unknown->item(i,1)->text())
+                {
+                    num_diff++;
+                    ui->tbl_diff->setRowCount(num_diff);
+                    text.clear();
+                    text.append("z_");  text.append(QString::number(z));
+                    text.append(":");   text.append(QString::number(i));
+                    newItem = new QTableWidgetItem(text,0);
+                    ui->tbl_diff->setItem(num_diff-1,0,newItem);
+                    diff= ui->tbl_unknown->item(i,2)->text().toInt() - ui->tbl_compare_unknown->item(i,2)->text().toInt() ;
+                    newItem = new QTableWidgetItem(text.number(diff,10),0);
+                    ui->tbl_diff->setItem(num_diff-1,1,newItem);
+                    //Write Bin
+                    QString binary_str = QString("%1").arg(qAbs(diff),8,2,QChar('0')); //New format ex: 00000111 | Vegeta_Ss4 Bin mod
+                    newItem = new QTableWidgetItem(binary_str,0);
+                    ui->tbl_diff->setItem(num_diff-1,2,newItem);
+
+                    //set properites for the tableitems
+                    ui->tbl_diff->setVisible(1);
+                    ui->tbl_diff->item(num_diff-1,0)->setFlags(Qt::ItemIsEnabled);
+                    ui->tbl_diff->item(num_diff-1,1)->setFlags(Qt::ItemIsEnabled);
+                    ui->tbl_diff->item(num_diff-1,2)->setFlags(Qt::ItemIsEnabled);
+                    ui->tbl_diff->setRowHeight(num_diff-1,20);
+                }
             }
         }
     }
