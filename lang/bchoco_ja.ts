@@ -1260,10 +1260,6 @@
         <translation>HP</translation>
     </message>
     <message>
-        <source>/</source>
-        <translation>/</translation>
-    </message>
-    <message>
         <source>MP</source>
         <translation>MP</translation>
     </message>
@@ -4242,10 +4238,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation>不明 (10)</translation>
     </message>
     <message>
-        <source>MDS7ST1:Hi-Potion.(In Train 2)</source>
-        <translation type="unfinished">MDS7ST1: ハイポーション (列車2内部)</translation>
-    </message>
-    <message>
         <source>MDS7ST1:Hi-Potion.(Roof Train 1)</source>
         <translation type="unfinished">MDS7ST1: ハイポーション (列車1屋根)</translation>
     </message>
@@ -4284,6 +4276,10 @@ Table Entries are Editable</source>
         <translation>&lt;------左のテーブル------
 表示する不明な変数を選択
 テーブルの値は編集可能</translation>
+    </message>
+    <message>
+        <source>MDS7ST1:Potion.(In Train 2)</source>
+        <translation type="unfinished">MDS7ST1: ポーション (列車2内部)</translation>
     </message>
 </context>
 <context>
