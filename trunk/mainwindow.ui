@@ -8184,8 +8184,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>212</width>
-                  <height>267</height>
+                  <width>242</width>
+                  <height>330</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -8242,7 +8242,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <widget class="QCheckBox" name="cb_s7tg_items_3">
                    <property name="text">
-                    <string>MDS7ST1:Hi-Potion.(In Train 2)</string>
+                    <string>MDS7ST1:Potion.(In Train 2)</string>
                    </property>
                   </widget>
                  </item>

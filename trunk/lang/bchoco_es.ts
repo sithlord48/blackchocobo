@@ -4200,10 +4200,6 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>MDS7ST1:Hi-Potion.(In Train 2)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>MDS7ST1:Hi-Potion.(Roof Train 1)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4239,6 +4235,10 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Table Entries are Editable</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MDS7ST1:Potion.(In Train 2)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
