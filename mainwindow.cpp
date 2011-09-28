@@ -5916,7 +5916,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
                     break;
         }
         //Write Hex
-        QString hex_str = QString("%1").arg(value,2,16,QChar('0')).toUpper(); //New format ex: 0C | Vegeta_Ss4 Hex mod
+        QString hex_str = QString("%1").arg(value,2,16,QChar('0')).toUpper(); //Format: 000C
         newItem = new QTableWidgetItem(hex_str,0);
         ui->tbl_unknown->setItem(i,1,newItem);
         //Write Dec
@@ -5934,6 +5934,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
         {//do the same for the compare slot if one has been selected.
             if(ui->combo_z_var->currentText()=="SLOT")
             {
+                QString hex_str = QString("%1").arg(i,4,16,QChar('0')).toUpper();
                 newItem = new QTableWidgetItem(hex_str,0);
                 ui->tbl_compare_unknown->setItem(i,0,newItem);
             }
