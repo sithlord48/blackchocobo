@@ -48,7 +48,7 @@ public:
 };
 
 struct LOCATION {//Location Table Stuff
-    char *location;
+    QString location;
     QString map_id;
     QString loc_id;
     QString x;

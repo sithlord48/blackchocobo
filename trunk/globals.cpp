@@ -490,7 +490,8 @@ static const char *materiaSkills[91][5]=
     {QT_TRANSLATE_NOOP("Materia_Skills","Master Summon"),"","","",""}
 };
 
- static LOCATION Locations[]={
+ static LOCATION Locations[]=
+ {
      {QT_TRANSLATE_NOOP("Locations","Platform"),"1","116","3655","27432","25"},
      {QT_TRANSLATE_NOOP("Locations","Reactor No.1"),"1","124","37","1579","36"},
      {QT_TRANSLATE_NOOP("Locations","Reactor No. 5"),"1","128","64035","2546","20"},
@@ -512,16 +513,15 @@ static const char *materiaSkills[91][5]=
      {QT_TRANSLATE_NOOP("Locations","Shinra Bldg 64F."),"1","247","64386","65253","245"},
      {QT_TRANSLATE_NOOP("Locations","Shinra Bldg 67F."),"1","256","65426","797","283"},
      {QT_TRANSLATE_NOOP("Locations","Shinra Bldg 69F."),"1","264","150","65102","226"},
-     {QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","705","94","1168","173"},
      {QT_TRANSLATE_NOOP("Locations","Junon Inn"),"1","376","45","197","21"},
      {QT_TRANSLATE_NOOP("Locations","Junon Office F2"),"1","397","65162","65236","8"},
      {QT_TRANSLATE_NOOP("Locations","Junon Way"),"1","394","2184","64947","24"},
      {QT_TRANSLATE_NOOP("Locations","Junon Airport Path"),"1","386","64902","65203","31"},
-     {QT_TRANSLATE_NOOP("Locations","Mt. Nibel"),"1","317","667","65035","261"},
-     {QT_TRANSLATE_NOOP("Locations","North Crater"),"1","749","65344","16","35"},
      {QT_TRANSLATE_NOOP("Locations","Gaeas Cliff"),"1","699","65424","240","17"},
      {QT_TRANSLATE_NOOP("Locations","Gaeas Cliff"),"1","693","65384","1104","65"},
      {QT_TRANSLATE_NOOP("Locations","Gaeas Cliff Base"),"1","687","165","51","5"},
+     {QT_TRANSLATE_NOOP("Locations","Mt. Nibel"),"1","317","667","65035","261"},
+     {QT_TRANSLATE_NOOP("Locations","North Crater"),"1","749","65344","16","35"},
      {QT_TRANSLATE_NOOP("Locations","Corel Prison"),"1","473","876","1471","74"},
      {QT_TRANSLATE_NOOP("Locations","Fort Condor"),"1","355","1118","391","12"},
      {QT_TRANSLATE_NOOP("Locations","Underwater Reactor"),"1","422","34","426","14"},
@@ -533,15 +533,16 @@ static const char *materiaSkills[91][5]=
      {QT_TRANSLATE_NOOP("Locations","Ropeway Station"),"1","496","64767","95","26"},
      {QT_TRANSLATE_NOOP("Locations","Forgotten Captial"),"1","633","65402","65401","40"},
      {QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","703","65170","64488","44"},
+     {QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","705","94","1168","173"},
      {QT_TRANSLATE_NOOP("Locations","Wutai"),"1","579","64961","1101","34"},
      {QT_TRANSLATE_NOOP("Locations","Forgotten City"),"1","646","641","793","243"},
      {QT_TRANSLATE_NOOP("Locations","Chocobo Ranch"),"1","345","65535","64960","61"},
      {QT_TRANSLATE_NOOP("Locations","Highwind"),"1","72","65533","62949","99"},
-     {QT_TRANSLATE_NOOP("Locations","Debug Room [ja]"),"1","65","0","0","0"},
      {QT_TRANSLATE_NOOP("Locations","Debug Room [en]"),"1","94","0","0","0"},
+     {QT_TRANSLATE_NOOP("Locations","Debug Room [ja]"),"1","65","0","0","0"},
      {QT_TRANSLATE_NOOP("Locations","Test Fight"),"2","0","0","0","0"}
-};
-QString locations::loc_name(int i){return qApp->translate("Locations",Locations[i].location);}
+ };
+QString locations::loc_name(int i){return qApp->translate("Locations",Locations[i].location.toAscii());}
 QString locations::map_id(int i){return Locations[i].map_id;}
 QString locations::loc_id(int i){return Locations[i].loc_id;}
 QString locations::x(int i){return Locations[i].y;}
