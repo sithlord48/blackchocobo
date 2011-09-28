@@ -1197,6 +1197,189 @@
     </message>
 </context>
 <context>
+    <name>Locations</name>
+    <message>
+        <source>Platform</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tunnel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Junon Inn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Midgar Sector 8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Train Graveyard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Underwater Reactor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Junon Office F2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Kalm Inn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reactor No. 5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Aerith&apos;s House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>North Crater</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wall Market</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Beginner&apos;s Hall</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Whirlwind Maze</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mt. Nibel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg 69F.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg 67F.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gaeas Cliff</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gaeas Cliff Base</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 7 - Slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Reactor No.1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corel Prison</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fort Condor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inside Submarine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hallway</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cosmo Canyon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Church in the slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Boat</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lower Sector 4 Plate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mt. Corel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 5 - Slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Debug Room [ja]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Debug Room [en]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Test Fight</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ropeway Station</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Junon Way</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Junon Airport Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Forgotten Captial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 8, Underground</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wutai</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Forgotten City</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chocobo Ranch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg 64F.</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>MainWindow</name>
     <message>
         <source>Black Chocobo</source>
@@ -2043,146 +2226,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>0</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>14</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>15</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>16</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>17</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>18</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>19</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>20</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>21</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>22</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>23</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>24</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>25</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>26</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>27</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>28</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>29</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>30</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>31</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>32</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>33</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>34</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>35</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>37</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>38</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>39</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>40</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>41</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>42</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>43</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>44</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>45</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>46</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>map</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2195,95 +2238,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Tunnel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Junon Inn</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Midgar Sector 8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shinra Bldg 67F.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Train Graveyard</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Underwater Reactor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Junon Office F2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shinra Bldg 69F.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Kalm Inn</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reactor No. 5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>North Crater</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wall Market</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Beginner&apos;s Hall</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Whirlwind Maze</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gaeas Cliff</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mt. Nibel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gaeas Cliff Base</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Test Fight</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sector 7 - Slums</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shinra Bldg. 64F.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reactor No.1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Corel Prison</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Debug Room</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2387,123 +2342,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>9</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>10</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>11</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>12</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>13</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Aerith&apos;s House</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fort Condor</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inside Submarine</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Hallway</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cosmo Canyon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Boat</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lower Sector 4 Plate</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mt. Corel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sector 5 - Slums</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Debug - English</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Reactor No. 5 </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Ropeway Station</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Junon Way</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Junon Airport Path</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Vestibule</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Forgotten Captial</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sector 8, Underground</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shinra Bldg.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wutai</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3714,14 +3553,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>47</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>48</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Aeris Turks</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3790,10 +3621,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Church in the slums</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Right click on map to easily set an item&apos;s location.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3831,10 +3658,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Clear All Stolen Materia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Chocobo Ranch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

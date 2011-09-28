@@ -28,16 +28,33 @@ void fix_pc_bytemask(FF7&,int);
 void fix_psx_header(FF7&,int);
 void fix_vmc_header(FF7&);
 QString avatar_style(int);
+class locations
+{
+public:
+    QString loc_name(int);
+    QString map_id(int);
+    QString loc_id(int);
+    QString x(int);
+    QString y(int);
+    QString z(int);
+};
 class ff7names
 {
 public:
-
-QString ItemNames(int);
-QString MateriaNames(int);
-QString MateriaStats(int);
-QString MateriaSkills(int,int);
+    QString ItemNames(int);
+    QString MateriaNames(int);
+    QString MateriaStats(int);
+    QString MateriaSkills(int,int);
 };
 
+struct LOCATION {//Location Table Stuff
+    char *location;
+    QString map_id;
+    QString loc_id;
+    QString x;
+    QString y;
+    QString z;
+};
 static ITEM Items[]=
  {//ITEMS 0-105,
   {":/icon/item",0,0},{":/icon/item",0,0},{":/icon/item",0,0},{":/icon/item",0,0},{":/icon/item",0,0},

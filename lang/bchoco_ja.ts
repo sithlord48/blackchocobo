@@ -1197,6 +1197,189 @@
     </message>
 </context>
 <context>
+    <name>Locations</name>
+    <message>
+        <source>Platform</source>
+        <translation type="unfinished">1番街駅ホーム</translation>
+    </message>
+    <message>
+        <source>Tunnel</source>
+        <translation type="unfinished">螺旋トンネル</translation>
+    </message>
+    <message>
+        <source>Junon Inn</source>
+        <translation type="unfinished">ジュノン・場末の宿屋</translation>
+    </message>
+    <message>
+        <source>Midgar Sector 8</source>
+        <translation type="unfinished">ミッドガル8番街</translation>
+    </message>
+    <message>
+        <source>Train Graveyard</source>
+        <translation type="unfinished">列車墓場</translation>
+    </message>
+    <message>
+        <source>Underwater Reactor</source>
+        <translation type="unfinished">海底魔晄炉</translation>
+    </message>
+    <message>
+        <source>Junon Office F2</source>
+        <translation type="unfinished">ジュノン支社2階</translation>
+    </message>
+    <message>
+        <source>Kalm Inn</source>
+        <translation type="unfinished">カーム・宿屋2階</translation>
+    </message>
+    <message>
+        <source>Reactor No. 5</source>
+        <translation type="unfinished">5番魔晄炉</translation>
+    </message>
+    <message>
+        <source>Aerith&apos;s House</source>
+        <translation type="unfinished">エアリスの家</translation>
+    </message>
+    <message>
+        <source>North Crater</source>
+        <translation type="unfinished">大空洞内部</translation>
+    </message>
+    <message>
+        <source>Wall Market</source>
+        <translation type="unfinished">ウォールマーケット</translation>
+    </message>
+    <message>
+        <source>Beginner&apos;s Hall</source>
+        <translation type="unfinished">初心者の館</translation>
+    </message>
+    <message>
+        <source>Whirlwind Maze</source>
+        <translation type="unfinished">竜巻の迷宮</translation>
+    </message>
+    <message>
+        <source>Mt. Nibel</source>
+        <translation type="unfinished">ニブル山</translation>
+    </message>
+    <message>
+        <source>Shinra Bldg 69F.</source>
+        <translation type="unfinished">神羅ビル・69階</translation>
+    </message>
+    <message>
+        <source>Shinra Bldg 67F.</source>
+        <translation type="unfinished">神羅ビル・67階</translation>
+    </message>
+    <message>
+        <source>Gaeas Cliff</source>
+        <translation type="unfinished">絶壁内部</translation>
+    </message>
+    <message>
+        <source>Gaeas Cliff Base</source>
+        <translation type="unfinished">絶壁のふもと</translation>
+    </message>
+    <message>
+        <source>Sector 7 - Slums</source>
+        <translation type="unfinished">7番街スラム</translation>
+    </message>
+    <message>
+        <source>Reactor No.1</source>
+        <translation type="unfinished">1番魔晄炉 (進捗に依存.)</translation>
+    </message>
+    <message>
+        <source>Corel Prison</source>
+        <translation type="unfinished">コレルプリズン</translation>
+    </message>
+    <message>
+        <source>Fort Condor</source>
+        <translation type="unfinished">コンドルフォート</translation>
+    </message>
+    <message>
+        <source>Inside Submarine</source>
+        <translation type="unfinished">潜水艦内部</translation>
+    </message>
+    <message>
+        <source>Hallway</source>
+        <translation type="unfinished">神羅飛空挺・通路</translation>
+    </message>
+    <message>
+        <source>Cosmo Canyon</source>
+        <translation type="unfinished">コスモキャニオン</translation>
+    </message>
+    <message>
+        <source>Church in the slums</source>
+        <translation type="unfinished">スラム街の教会</translation>
+    </message>
+    <message>
+        <source>Boat</source>
+        <translation type="unfinished">運搬船</translation>
+    </message>
+    <message>
+        <source>Lower Sector 4 Plate</source>
+        <translation type="unfinished">4番街プレート下部</translation>
+    </message>
+    <message>
+        <source>Mt. Corel</source>
+        <translation type="unfinished">コレル山・西</translation>
+    </message>
+    <message>
+        <source>Sector 5 - Slums</source>
+        <translation type="unfinished">5番街スラム</translation>
+    </message>
+    <message>
+        <source>Debug Room [ja]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Debug Room [en]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Test Fight</source>
+        <translation type="unfinished">バトル テスト</translation>
+    </message>
+    <message>
+        <source>Ropeway Station</source>
+        <translation type="unfinished">ロープウェイ乗り場</translation>
+    </message>
+    <message>
+        <source>Junon Way</source>
+        <translation type="unfinished">海底魔晄炉への通路</translation>
+    </message>
+    <message>
+        <source>Junon Airport Path</source>
+        <translation type="unfinished">ジュノン空港通路</translation>
+    </message>
+    <message>
+        <source>Forgotten Captial</source>
+        <translation type="unfinished">忘らるる都</translation>
+    </message>
+    <message>
+        <source>Sector 8, Underground</source>
+        <translation type="unfinished">ミッドガル8番街地下</translation>
+    </message>
+    <message>
+        <source>Shinra Bldg.</source>
+        <translation type="unfinished">神羅ビル</translation>
+    </message>
+    <message>
+        <source>Wutai</source>
+        <translation type="unfinished">ウータイ</translation>
+    </message>
+    <message>
+        <source>Forgotten City</source>
+        <translation type="unfinished">忘らるる都 (湖)</translation>
+    </message>
+    <message>
+        <source>Chocobo Ranch</source>
+        <translation type="unfinished">チョコボ牧場</translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation type="unfinished">ハイウインド</translation>
+    </message>
+    <message>
+        <source>Shinra Bldg 64F.</source>
+        <translation type="unfinished">神羅ビル・69階 {64F?}</translation>
+    </message>
+</context>
+<context>
     <name>MainWindow</name>
     <message>
         <source>Black Chocobo</source>
@@ -2055,146 +2238,6 @@
         <translation>ケット・シー, ヴィンセントがパーティ タブで無効になっている場合、ここで彼らを有効化しないでください。</translation>
     </message>
     <message>
-        <source>0</source>
-        <translation>0</translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation>1</translation>
-    </message>
-    <message>
-        <source>2</source>
-        <translation>2</translation>
-    </message>
-    <message>
-        <source>14</source>
-        <translation>14</translation>
-    </message>
-    <message>
-        <source>15</source>
-        <translation>15</translation>
-    </message>
-    <message>
-        <source>16</source>
-        <translation>16</translation>
-    </message>
-    <message>
-        <source>17</source>
-        <translation>17</translation>
-    </message>
-    <message>
-        <source>18</source>
-        <translation>18</translation>
-    </message>
-    <message>
-        <source>19</source>
-        <translation>19</translation>
-    </message>
-    <message>
-        <source>20</source>
-        <translation>20</translation>
-    </message>
-    <message>
-        <source>21</source>
-        <translation>21</translation>
-    </message>
-    <message>
-        <source>22</source>
-        <translation>22</translation>
-    </message>
-    <message>
-        <source>23</source>
-        <translation>23</translation>
-    </message>
-    <message>
-        <source>24</source>
-        <translation>24</translation>
-    </message>
-    <message>
-        <source>25</source>
-        <translation>25</translation>
-    </message>
-    <message>
-        <source>26</source>
-        <translation>26</translation>
-    </message>
-    <message>
-        <source>27</source>
-        <translation>27</translation>
-    </message>
-    <message>
-        <source>28</source>
-        <translation>28</translation>
-    </message>
-    <message>
-        <source>29</source>
-        <translation>29</translation>
-    </message>
-    <message>
-        <source>30</source>
-        <translation>30</translation>
-    </message>
-    <message>
-        <source>31</source>
-        <translation>31</translation>
-    </message>
-    <message>
-        <source>32</source>
-        <translation>32</translation>
-    </message>
-    <message>
-        <source>33</source>
-        <translation>33</translation>
-    </message>
-    <message>
-        <source>34</source>
-        <translation>34</translation>
-    </message>
-    <message>
-        <source>35</source>
-        <translation>35</translation>
-    </message>
-    <message>
-        <source>37</source>
-        <translation>37</translation>
-    </message>
-    <message>
-        <source>38</source>
-        <translation>38</translation>
-    </message>
-    <message>
-        <source>39</source>
-        <translation>39</translation>
-    </message>
-    <message>
-        <source>40</source>
-        <translation>40</translation>
-    </message>
-    <message>
-        <source>41</source>
-        <translation>41</translation>
-    </message>
-    <message>
-        <source>42</source>
-        <translation>42</translation>
-    </message>
-    <message>
-        <source>43</source>
-        <translation>43</translation>
-    </message>
-    <message>
-        <source>44</source>
-        <translation>44</translation>
-    </message>
-    <message>
-        <source>45</source>
-        <translation>45</translation>
-    </message>
-    <message>
-        <source>46</source>
-        <translation>46</translation>
-    </message>
-    <message>
         <source>map</source>
         <translation>map</translation>
     </message>
@@ -2207,98 +2250,8 @@
         <translation>1番街駅ホーム</translation>
     </message>
     <message>
-        <source>Tunnel</source>
-        <translation>螺旋トンネル</translation>
-    </message>
-    <message>
-        <source>Junon Inn</source>
-        <translation>ジュノン・場末の宿屋</translation>
-    </message>
-    <message>
-        <source>Midgar Sector 8</source>
-        <translation>ミッドガル8番街</translation>
-    </message>
-    <message>
-        <source>Shinra Bldg 67F.</source>
-        <translation>神羅ビル・67階</translation>
-    </message>
-    <message>
-        <source>Train Graveyard</source>
-        <translation>列車墓場</translation>
-    </message>
-    <message>
-        <source>Underwater Reactor</source>
-        <translation>海底魔晄炉</translation>
-    </message>
-    <message>
-        <source>Junon Office F2</source>
-        <translation>ジュノン支社2階</translation>
-    </message>
-    <message>
-        <source>Shinra Bldg 69F.</source>
-        <translation>神羅ビル・69階</translation>
-    </message>
-    <message>
         <source>Kalm Inn</source>
         <translation>カーム・宿屋2階</translation>
-    </message>
-    <message>
-        <source>Reactor No. 5</source>
-        <translation>5番魔晄炉</translation>
-    </message>
-    <message>
-        <source>North Crater</source>
-        <translation>大空洞内部</translation>
-    </message>
-    <message>
-        <source>Wall Market</source>
-        <translation>ウォールマーケット</translation>
-    </message>
-    <message>
-        <source>Beginner&apos;s Hall</source>
-        <translation>初心者の館</translation>
-    </message>
-    <message>
-        <source>Whirlwind Maze</source>
-        <translation>竜巻の迷宮</translation>
-    </message>
-    <message>
-        <source>Gaeas Cliff</source>
-        <translatorcomment>ガイアの絶壁・絶壁内部</translatorcomment>
-        <translation>絶壁内部</translation>
-    </message>
-    <message>
-        <source>Mt. Nibel</source>
-        <translation>ニブル山</translation>
-    </message>
-    <message>
-        <source>Gaeas Cliff Base</source>
-        <translation>絶壁のふもと</translation>
-    </message>
-    <message>
-        <source>Test Fight</source>
-        <translation>バトル テスト</translation>
-    </message>
-    <message>
-        <source>Sector 7 - Slums</source>
-        <translation>7番街スラム</translation>
-    </message>
-    <message>
-        <source>Shinra Bldg. 64F.</source>
-        <translation>神羅ビル・64階</translation>
-    </message>
-    <message>
-        <source>Reactor No.1</source>
-        <translatorcomment>ストーリーの進捗により5番魔晄炉●●Reactor No.1</translatorcomment>
-        <translation>1番魔晄炉 (進捗に依存.)</translation>
-    </message>
-    <message>
-        <source>Corel Prison</source>
-        <translation>コレルプリズン</translation>
-    </message>
-    <message>
-        <source>Debug Room</source>
-        <translation>デバッグ ルーム</translation>
     </message>
     <message>
         <source>&amp;Game Progress</source>
@@ -2402,128 +2355,8 @@
         <translation>その他(&amp;R)</translation>
     </message>
     <message>
-        <source>3</source>
-        <translation>3</translation>
-    </message>
-    <message>
-        <source>4</source>
-        <translation>4</translation>
-    </message>
-    <message>
-        <source>5</source>
-        <translation>5</translation>
-    </message>
-    <message>
-        <source>6</source>
-        <translation>6</translation>
-    </message>
-    <message>
-        <source>7</source>
-        <translation>7</translation>
-    </message>
-    <message>
-        <source>8</source>
-        <translation>8</translation>
-    </message>
-    <message>
-        <source>9</source>
-        <translation>9</translation>
-    </message>
-    <message>
-        <source>10</source>
-        <translation>10</translation>
-    </message>
-    <message>
-        <source>11</source>
-        <translation>11</translation>
-    </message>
-    <message>
-        <source>12</source>
-        <translation>12</translation>
-    </message>
-    <message>
-        <source>13</source>
-        <translation>13</translation>
-    </message>
-    <message>
-        <source>Aerith&apos;s House</source>
-        <translation>エアリスの家</translation>
-    </message>
-    <message>
-        <source>Fort Condor</source>
-        <translation>コンドルフォート</translation>
-    </message>
-    <message>
-        <source>Inside Submarine</source>
-        <translation>潜水艦内部</translation>
-    </message>
-    <message>
-        <source>Hallway</source>
-        <translatorcomment>3 神羅飛空挺・通路</translatorcomment>
-        <translation>神羅飛空挺・通路</translation>
-    </message>
-    <message>
-        <source>Cosmo Canyon</source>
-        <translation>コスモキャニオン</translation>
-    </message>
-    <message>
-        <source>Boat</source>
-        <translation>運搬船</translation>
-    </message>
-    <message>
-        <source>Lower Sector 4 Plate</source>
-        <translatorcomment>バグ 空中に居て操作不能 場所不明</translatorcomment>
-        <translation>4番街プレート下部</translation>
-    </message>
-    <message>
-        <source>Mt. Corel</source>
-        <translation>コレル山・西</translation>
-    </message>
-    <message>
-        <source>Sector 5 - Slums</source>
-        <translation>5番街スラム</translation>
-    </message>
-    <message>
-        <source>Debug - English</source>
-        <translation>デバッグ - イージタイプ！</translation>
-    </message>
-    <message>
-        <source>Reactor No. 5 </source>
-        <translatorcomment>ストーリーの進捗により 1番魔晄炉になることがあるが、そのマップから出ると5番魔晄炉になったりする</translatorcomment>
-        <translation>5番魔晄炉 (進捗に依存)</translation>
-    </message>
-    <message>
         <source>Ropeway Station</source>
         <translation>ロープウェイ乗り場</translation>
-    </message>
-    <message>
-        <source>Junon Way</source>
-        <translation>海底魔晄炉への通路</translation>
-    </message>
-    <message>
-        <source>Junon Airport Path</source>
-        <translation>ジュノン空港通路</translation>
-    </message>
-    <message>
-        <source>Vestibule</source>
-        <translatorcomment>●●●●</translatorcomment>
-        <translation>神羅飛空挺・通路</translation>
-    </message>
-    <message>
-        <source>Forgotten Captial</source>
-        <translation>忘らるる都</translation>
-    </message>
-    <message>
-        <source>Sector 8, Underground</source>
-        <translation>ミッドガル8番街地下</translation>
-    </message>
-    <message>
-        <source>Shinra Bldg.</source>
-        <translation>神羅ビル</translation>
-    </message>
-    <message>
-        <source>Wutai</source>
-        <translation>ウータイ</translation>
     </message>
     <message>
         <source>Forgotten City</source>
@@ -3749,14 +3582,6 @@ MASTER = 16777215 AP です</translation>
         <translation>キーアイテムをクリア</translation>
     </message>
     <message>
-        <source>47</source>
-        <translation>47</translation>
-    </message>
-    <message>
-        <source>48</source>
-        <translation>48</translation>
-    </message>
-    <message>
         <source>Aeris Turks</source>
         <translatorcomment>教会に配置したとき、0, 3: クラウドが落下した直後、夢-エアリストとの会話から 1, 2, 4:レノの最後のセリフが流れ教会奥マップから脱出クエストが始まる Aeris_Turks - this is a helper variable for when you meet aeris in the chruch.</translatorcomment>
         <translation>エアリス_タークス_教会フラグ</translation>
@@ -3828,10 +3653,6 @@ MASTER = 16777215 AP です</translation>
         <translation>&apos;エアリスの死&apos; のリプレイは PHS からエアリスを削除します</translation>
     </message>
     <message>
-        <source>Church in the slums</source>
-        <translation>スラム街の教会</translation>
-    </message>
-    <message>
         <source>Right click on map to easily set an item&apos;s location.</source>
         <translation>マップ上の右クリック メニューから簡単に配置できます。</translation>
     </message>
@@ -3870,10 +3691,6 @@ MASTER = 16777215 AP です</translation>
     <message>
         <source>Clear All Stolen Materia</source>
         <translation>すべての盗まれたマテリアをクリア</translation>
-    </message>
-    <message>
-        <source>Chocobo Ranch</source>
-        <translation>チョコボ牧場</translation>
     </message>
     <message>
         <source>Reload</source>
