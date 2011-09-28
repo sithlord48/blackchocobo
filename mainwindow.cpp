@@ -50,7 +50,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     //set up comboboxes.
     for (int i=256;i<288;i++){ui->combo_armor->addItem(QIcon(Items[i].image),names.ItemNames(i));}
     for (int i=288;i<320;i++){ui->combo_acc->addItem(QIcon(Items[i].image),names.ItemNames(i));}
-                                ui->combo_acc->addItem(QIcon(Items[288].image),tr("-None-"));//add clear opton for accessory
+                                ui->combo_acc->addItem(QIcon(Items[288].image),tr("-None-"));//add clear option for accessories
     for (int i=0;i<320;i++){ui->combo_additem->addItem(QIcon(Items[i].image),names.ItemNames(i));}
     for (int i=0;i<0x5b;i++){ui->combo_add_mat->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
     for (int i=0;i<0x5b;i++){ui->combo_add_mat_slot->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
@@ -66,8 +66,8 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
 
     QTableWidgetItem *newItem;
     locations Locations;
-    ui->tbl_location_field->setRowCount(48);
-    for (int i=0;i<49;i++)
+    ui->tbl_location_field->setRowCount(49);
+    for (int i=0;i<ui->tbl_location_field->rowCount();i++)
     {
         newItem = new QTableWidgetItem(Locations.loc_name(i),0);
         ui->tbl_location_field->setItem(i,0,newItem);
@@ -1005,7 +1005,6 @@ void MainWindow::on_actionExport_DEX_triggered()
 void MainWindow::fix_sum(const QString &fileName)
 {
     void * memory;
-    long file_size;
     QFile file(fileName);
     if (!file.open(QFile::ReadWrite )){return;}
     QDataStream out (&file);
@@ -1013,7 +1012,6 @@ void MainWindow::fix_sum(const QString &fileName)
     file.seek(0);//Set pointer to the Beggining
     QByteArray ff7savefile;
     ff7savefile = file.readAll(); //put all data in temp raw file
-    file_size = file.size();//Get File Size
     memory = (void*) malloc(ff7.SG_SIZE);//Memory Allocation
     if (!memory){return;}
     file.seek(0);
