@@ -24,6 +24,7 @@ FF7 ff7; // our save file struct
 int s; //keeps track of our slot globally
 FF7SLOT bufferslot; // a buffer slot to keep copied slots in
 ff7names names; //class of strings used in ff7
+
 QString buffer_region; //keep track of the region of any copied slots.
 char chFF7[256];  // char arrary for converting to ff7 chars , so far not used.
 int curchar =0; //keeps track of current character displayed
@@ -55,12 +56,32 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     for (int i=0;i<0x5b;i++){ui->combo_add_mat_slot->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
     for (int i=0;i<0x5b;i++){if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}}
     for (int i=0;i<0x5b;i++){if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_slot_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}}
+
     //set up tables..
     ui->tbl_location_field->setColumnWidth(0,147);
     ui->tbl_location_field->setColumnWidth(1,50);
     ui->tbl_location_field->setColumnWidth(2,50);
     ui->tbl_location_field->setColumnWidth(3,50);
     ui->tbl_location_field->setColumnWidth(4,50);
+
+    QTableWidgetItem *newItem;
+    locations Locations;
+    ui->tbl_location_field->setRowCount(48);
+    for (int i=0;i<49;i++)
+    {
+        newItem = new QTableWidgetItem(Locations.loc_name(i),0);
+        ui->tbl_location_field->setItem(i,0,newItem);
+        newItem = new QTableWidgetItem(Locations.map_id(i),0);
+        ui->tbl_location_field->setItem(i,1,newItem);
+        newItem = new QTableWidgetItem(Locations.loc_id(i),0);
+        ui->tbl_location_field->setItem(i,2,newItem);
+        newItem = new QTableWidgetItem(Locations.x(i),0);
+        ui->tbl_location_field->setItem(i,3,newItem);
+        newItem = new QTableWidgetItem(Locations.y(i),0);
+        ui->tbl_location_field->setItem(i,4,newItem);
+        newItem = new QTableWidgetItem(Locations.z(i),0);
+        ui->tbl_location_field->setItem(i,5,newItem);
+    }
 
     //Hide the stuff that needs to be hidden.
     ui->eskill_group->setVisible(false);

@@ -1197,6 +1197,189 @@
     </message>
 </context>
 <context>
+    <name>Locations</name>
+    <message>
+        <source>Platform</source>
+        <translation type="unfinished">Plate-forme</translation>
+    </message>
+    <message>
+        <source>Tunnel</source>
+        <translation type="unfinished">Tunnel</translation>
+    </message>
+    <message>
+        <source>Junon Inn</source>
+        <translation type="unfinished">Auberge de Junon</translation>
+    </message>
+    <message>
+        <source>Midgar Sector 8</source>
+        <translation type="unfinished">Midgar, Secteur 8</translation>
+    </message>
+    <message>
+        <source>Train Graveyard</source>
+        <translation type="unfinished">Cimetière des trains</translation>
+    </message>
+    <message>
+        <source>Underwater Reactor</source>
+        <translation type="unfinished">Réacteur sous-marin</translation>
+    </message>
+    <message>
+        <source>Junon Office F2</source>
+        <translation type="unfinished">Bureaux de Junon, 2ème étage</translation>
+    </message>
+    <message>
+        <source>Kalm Inn</source>
+        <translation type="unfinished">Auberge de Kalm</translation>
+    </message>
+    <message>
+        <source>Reactor No. 5</source>
+        <translation type="unfinished">Réacteur n°5</translation>
+    </message>
+    <message>
+        <source>Aerith&apos;s House</source>
+        <translation type="unfinished">Maison d&apos;Aeris</translation>
+    </message>
+    <message>
+        <source>North Crater</source>
+        <translation type="unfinished">Cratère Nord</translation>
+    </message>
+    <message>
+        <source>Wall Market</source>
+        <translation type="unfinished">Wall Market</translation>
+    </message>
+    <message>
+        <source>Beginner&apos;s Hall</source>
+        <translation type="unfinished">Hall des débutants</translation>
+    </message>
+    <message>
+        <source>Whirlwind Maze</source>
+        <translation type="unfinished">Labyrinthe Tornade</translation>
+    </message>
+    <message>
+        <source>Mt. Nibel</source>
+        <translation type="unfinished">Mont Nibel</translation>
+    </message>
+    <message>
+        <source>Shinra Bldg 69F.</source>
+        <translation type="unfinished">Bât. Shinra 69ème ét.</translation>
+    </message>
+    <message>
+        <source>Shinra Bldg 67F.</source>
+        <translation type="unfinished">Bât. Shinra 67ème ét.</translation>
+    </message>
+    <message>
+        <source>Gaeas Cliff</source>
+        <translation type="unfinished">Falaise de Gaea</translation>
+    </message>
+    <message>
+        <source>Gaeas Cliff Base</source>
+        <translation type="unfinished">Falaise de Gaea, abords</translation>
+    </message>
+    <message>
+        <source>Sector 7 - Slums</source>
+        <translation type="unfinished">Secteur 7 - Taudis</translation>
+    </message>
+    <message>
+        <source>Reactor No.1</source>
+        <translation type="unfinished">Réacteur n°1</translation>
+    </message>
+    <message>
+        <source>Corel Prison</source>
+        <translation type="unfinished">Prison de Corel</translation>
+    </message>
+    <message>
+        <source>Fort Condor</source>
+        <translation type="unfinished">Fort Condor</translation>
+    </message>
+    <message>
+        <source>Inside Submarine</source>
+        <translation type="unfinished">À l&apos;intérieur du sous-marin</translation>
+    </message>
+    <message>
+        <source>Hallway</source>
+        <translation type="unfinished">Couloir</translation>
+    </message>
+    <message>
+        <source>Cosmo Canyon</source>
+        <translation type="unfinished">Canyon Cosmo</translation>
+    </message>
+    <message>
+        <source>Church in the slums</source>
+        <translation type="unfinished">Église - Taudis</translation>
+    </message>
+    <message>
+        <source>Boat</source>
+        <translation type="unfinished">Cargo</translation>
+    </message>
+    <message>
+        <source>Lower Sector 4 Plate</source>
+        <translation type="unfinished">Sous la plaque du Secteur 4</translation>
+    </message>
+    <message>
+        <source>Mt. Corel</source>
+        <translation type="unfinished">Mont Corel</translation>
+    </message>
+    <message>
+        <source>Sector 5 - Slums</source>
+        <translation type="unfinished">Secteur 5 - Taudis</translation>
+    </message>
+    <message>
+        <source>Debug Room [ja]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Debug Room [en]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Test Fight</source>
+        <translation type="unfinished">Combat test</translation>
+    </message>
+    <message>
+        <source>Ropeway Station</source>
+        <translation type="unfinished">Station de téléphérique</translation>
+    </message>
+    <message>
+        <source>Junon Way</source>
+        <translation type="unfinished">Chemin de Junon</translation>
+    </message>
+    <message>
+        <source>Junon Airport Path</source>
+        <translation type="unfinished">Junon - Chemin vers l&apos;aéroport</translation>
+    </message>
+    <message>
+        <source>Forgotten Captial</source>
+        <translation type="unfinished">Cité perdue</translation>
+    </message>
+    <message>
+        <source>Sector 8, Underground</source>
+        <translation type="unfinished">Secteur 8 - Souterrains</translation>
+    </message>
+    <message>
+        <source>Shinra Bldg.</source>
+        <translation type="unfinished">Bât. Shinra</translation>
+    </message>
+    <message>
+        <source>Wutai</source>
+        <translation type="unfinished">Utai</translation>
+    </message>
+    <message>
+        <source>Forgotten City</source>
+        <translation type="unfinished">Cité perdue</translation>
+    </message>
+    <message>
+        <source>Chocobo Ranch</source>
+        <translation type="unfinished">Ferme de chocobos</translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation type="unfinished">Hautvent</translation>
+    </message>
+    <message>
+        <source>Shinra Bldg 64F.</source>
+        <translation type="unfinished">Bât. Shinra 69ème ét. {64F?}</translation>
+    </message>
+</context>
+<context>
     <name>MainWindow</name>
     <message>
         <source>Black Chocobo</source>
@@ -2083,146 +2266,6 @@
         <translation>Cait Sith et Vincent ne doivent pas être débloqués s&apos;ils sont désactivés dans l&apos;onglet Équipe.</translation>
     </message>
     <message>
-        <source>0</source>
-        <translation>0</translation>
-    </message>
-    <message>
-        <source>1</source>
-        <translation>1</translation>
-    </message>
-    <message>
-        <source>2</source>
-        <translation>2</translation>
-    </message>
-    <message>
-        <source>14</source>
-        <translation>14</translation>
-    </message>
-    <message>
-        <source>15</source>
-        <translation>15</translation>
-    </message>
-    <message>
-        <source>16</source>
-        <translation>16</translation>
-    </message>
-    <message>
-        <source>17</source>
-        <translation>17</translation>
-    </message>
-    <message>
-        <source>18</source>
-        <translation>18</translation>
-    </message>
-    <message>
-        <source>19</source>
-        <translation>19</translation>
-    </message>
-    <message>
-        <source>20</source>
-        <translation>20</translation>
-    </message>
-    <message>
-        <source>21</source>
-        <translation>21</translation>
-    </message>
-    <message>
-        <source>22</source>
-        <translation>22</translation>
-    </message>
-    <message>
-        <source>23</source>
-        <translation>23</translation>
-    </message>
-    <message>
-        <source>24</source>
-        <translation>24</translation>
-    </message>
-    <message>
-        <source>25</source>
-        <translation>25</translation>
-    </message>
-    <message>
-        <source>26</source>
-        <translation>26</translation>
-    </message>
-    <message>
-        <source>27</source>
-        <translation>27</translation>
-    </message>
-    <message>
-        <source>28</source>
-        <translation>28</translation>
-    </message>
-    <message>
-        <source>29</source>
-        <translation>29</translation>
-    </message>
-    <message>
-        <source>30</source>
-        <translation>30</translation>
-    </message>
-    <message>
-        <source>31</source>
-        <translation>31</translation>
-    </message>
-    <message>
-        <source>32</source>
-        <translation>32</translation>
-    </message>
-    <message>
-        <source>33</source>
-        <translation>33</translation>
-    </message>
-    <message>
-        <source>34</source>
-        <translation>34</translation>
-    </message>
-    <message>
-        <source>35</source>
-        <translation>35</translation>
-    </message>
-    <message>
-        <source>37</source>
-        <translation>37</translation>
-    </message>
-    <message>
-        <source>38</source>
-        <translation>38</translation>
-    </message>
-    <message>
-        <source>39</source>
-        <translation>39</translation>
-    </message>
-    <message>
-        <source>40</source>
-        <translation>40</translation>
-    </message>
-    <message>
-        <source>41</source>
-        <translation>41</translation>
-    </message>
-    <message>
-        <source>42</source>
-        <translation>42</translation>
-    </message>
-    <message>
-        <source>43</source>
-        <translation>43</translation>
-    </message>
-    <message>
-        <source>44</source>
-        <translation>44</translation>
-    </message>
-    <message>
-        <source>45</source>
-        <translation>45</translation>
-    </message>
-    <message>
-        <source>46</source>
-        <translation>46</translation>
-    </message>
-    <message>
         <source>map</source>
         <translation>écran</translation>
     </message>
@@ -2235,96 +2278,8 @@
         <translation>Plate-forme</translation>
     </message>
     <message>
-        <source>Tunnel</source>
-        <translation>Tunnel</translation>
-    </message>
-    <message>
-        <source>Junon Inn</source>
-        <translation>Auberge de Junon</translation>
-    </message>
-    <message>
-        <source>Midgar Sector 8</source>
-        <translation>Midgar, Secteur 8</translation>
-    </message>
-    <message>
-        <source>Shinra Bldg 67F.</source>
-        <translation>Bât. Shinra 67ème ét.</translation>
-    </message>
-    <message>
-        <source>Train Graveyard</source>
-        <translation>Cimetière des trains</translation>
-    </message>
-    <message>
-        <source>Underwater Reactor</source>
-        <translation>Réacteur sous-marin</translation>
-    </message>
-    <message>
-        <source>Junon Office F2</source>
-        <translation>Bureaux de Junon, 2ème étage</translation>
-    </message>
-    <message>
-        <source>Shinra Bldg 69F.</source>
-        <translation>Bât. Shinra 69ème ét.</translation>
-    </message>
-    <message>
         <source>Kalm Inn</source>
         <translation>Auberge de Kalm</translation>
-    </message>
-    <message>
-        <source>Reactor No. 5</source>
-        <translation>Réacteur n°5</translation>
-    </message>
-    <message>
-        <source>North Crater</source>
-        <translation>Cratère Nord</translation>
-    </message>
-    <message>
-        <source>Wall Market</source>
-        <translation>Wall Market</translation>
-    </message>
-    <message>
-        <source>Beginner&apos;s Hall</source>
-        <translation>Hall des débutants</translation>
-    </message>
-    <message>
-        <source>Whirlwind Maze</source>
-        <translation>Labyrinthe Tornade</translation>
-    </message>
-    <message>
-        <source>Gaeas Cliff</source>
-        <translation>Falaise de Gaea</translation>
-    </message>
-    <message>
-        <source>Mt. Nibel</source>
-        <translation>Mont Nibel</translation>
-    </message>
-    <message>
-        <source>Gaeas Cliff Base</source>
-        <translation>Falaise de Gaea, abords</translation>
-    </message>
-    <message>
-        <source>Test Fight</source>
-        <translation>Combat test</translation>
-    </message>
-    <message>
-        <source>Sector 7 - Slums</source>
-        <translation>Secteur 7 - Taudis</translation>
-    </message>
-    <message>
-        <source>Shinra Bldg. 64F.</source>
-        <translation>Bât. Shinra 64ème ét.</translation>
-    </message>
-    <message>
-        <source>Reactor No.1</source>
-        <translation>Réacteur n°1</translation>
-    </message>
-    <message>
-        <source>Corel Prison</source>
-        <translation>Prison de Corel</translation>
-    </message>
-    <message>
-        <source>Debug Room</source>
-        <translation>Debug Room</translation>
     </message>
     <message>
         <source>&amp;Game Progress</source>
@@ -2391,124 +2346,8 @@
         <translation>Alt+Droite</translation>
     </message>
     <message>
-        <source>3</source>
-        <translation>3</translation>
-    </message>
-    <message>
-        <source>4</source>
-        <translation>4</translation>
-    </message>
-    <message>
-        <source>5</source>
-        <translation>5</translation>
-    </message>
-    <message>
-        <source>6</source>
-        <translation>6</translation>
-    </message>
-    <message>
-        <source>7</source>
-        <translation>7</translation>
-    </message>
-    <message>
-        <source>8</source>
-        <translation>8</translation>
-    </message>
-    <message>
-        <source>9</source>
-        <translation>9</translation>
-    </message>
-    <message>
-        <source>10</source>
-        <translation>10</translation>
-    </message>
-    <message>
-        <source>11</source>
-        <translation>11</translation>
-    </message>
-    <message>
-        <source>12</source>
-        <translation>12</translation>
-    </message>
-    <message>
-        <source>13</source>
-        <translation>13</translation>
-    </message>
-    <message>
-        <source>Aerith&apos;s House</source>
-        <translation>Maison d&apos;Aeris</translation>
-    </message>
-    <message>
-        <source>Fort Condor</source>
-        <translation>Fort Condor</translation>
-    </message>
-    <message>
-        <source>Inside Submarine</source>
-        <translation>À l&apos;intérieur du sous-marin</translation>
-    </message>
-    <message>
-        <source>Hallway</source>
-        <translation>Couloir</translation>
-    </message>
-    <message>
-        <source>Cosmo Canyon</source>
-        <translation>Canyon Cosmo</translation>
-    </message>
-    <message>
-        <source>Boat</source>
-        <translation>Cargo</translation>
-    </message>
-    <message>
-        <source>Lower Sector 4 Plate</source>
-        <translation>Sous la plaque du Secteur 4</translation>
-    </message>
-    <message>
-        <source>Mt. Corel</source>
-        <translation>Mont Corel</translation>
-    </message>
-    <message>
-        <source>Sector 5 - Slums</source>
-        <translation>Secteur 5 - Taudis</translation>
-    </message>
-    <message>
-        <source>Debug - English</source>
-        <translation>Debug Room - Anglais</translation>
-    </message>
-    <message>
-        <source>Reactor No. 5 </source>
-        <translation>Réacteur n°5</translation>
-    </message>
-    <message>
         <source>Ropeway Station</source>
         <translation>Station de téléphérique</translation>
-    </message>
-    <message>
-        <source>Junon Way</source>
-        <translation>Chemin de Junon</translation>
-    </message>
-    <message>
-        <source>Junon Airport Path</source>
-        <translation>Junon - Chemin vers l&apos;aéroport</translation>
-    </message>
-    <message>
-        <source>Vestibule</source>
-        <translation>Vestiaire</translation>
-    </message>
-    <message>
-        <source>Forgotten Captial</source>
-        <translation>Cité perdue</translation>
-    </message>
-    <message>
-        <source>Sector 8, Underground</source>
-        <translation>Secteur 8 - Souterrains</translation>
-    </message>
-    <message>
-        <source>Shinra Bldg.</source>
-        <translation>Bât. Shinra</translation>
-    </message>
-    <message>
-        <source>Wutai</source>
-        <translation>Utai</translation>
     </message>
     <message>
         <source>Forgotten City</source>
@@ -3729,14 +3568,6 @@ is not a FF7 SaveGame.</source>
         <translation>Retirer tous les éléments-clé</translation>
     </message>
     <message>
-        <source>47</source>
-        <translation>47</translation>
-    </message>
-    <message>
-        <source>48</source>
-        <translation>48</translation>
-    </message>
-    <message>
         <source>Aeris Turks</source>
         <translation>Turks et Aeris</translation>
     </message>
@@ -3806,10 +3637,6 @@ Les stats de Sephiroth proviendront directement de celles de Vincent.</translati
         <translation>Rejouer la mort d&apos;Aeris. Cette option retirera Aeris du PHS.</translation>
     </message>
     <message>
-        <source>Church in the slums</source>
-        <translation>Église - Taudis</translation>
-    </message>
-    <message>
         <source>Right click on map to easily set an item&apos;s location.</source>
         <translation>Cliquez droit pour facilement choisir l&apos;emplacement d&apos;un objet.</translation>
     </message>
@@ -3848,10 +3675,6 @@ Les stats de Sephiroth proviendront directement de celles de Vincent.</translati
     <message>
         <source>Clear All Stolen Materia</source>
         <translation>Vider la liste des Matérias volées</translation>
-    </message>
-    <message>
-        <source>Chocobo Ranch</source>
-        <translation>Ferme de chocobos</translation>
     </message>
     <message>
         <source>Reload</source>
