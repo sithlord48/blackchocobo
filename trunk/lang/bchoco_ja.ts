@@ -1188,7 +1188,7 @@
         <translation>1/35神羅兵</translation>
     </message>
     <message>
-        <source>AâªM Cannon</source>
+        <source>Aﾃ｢ﾂ鳴ｪM Cannon</source>
         <translation>A・Mキャノン</translation>
     </message>
     <message>
@@ -1200,183 +1200,186 @@
     <name>Locations</name>
     <message>
         <source>Platform</source>
-        <translation type="unfinished">1番街駅ホーム</translation>
+        <translation>1番街駅ホーム</translation>
     </message>
     <message>
         <source>Tunnel</source>
-        <translation type="unfinished">螺旋トンネル</translation>
+        <translation>螺旋トンネル</translation>
     </message>
     <message>
         <source>Junon Inn</source>
-        <translation type="unfinished">ジュノン・場末の宿屋</translation>
+        <translation>ジュノン・場末の宿屋</translation>
     </message>
     <message>
         <source>Midgar Sector 8</source>
-        <translation type="unfinished">ミッドガル8番街</translation>
+        <translation>ミッドガル8番街</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
-        <translation type="unfinished">列車墓場</translation>
+        <translation>列車墓場</translation>
     </message>
     <message>
         <source>Underwater Reactor</source>
-        <translation type="unfinished">海底魔晄炉</translation>
+        <translation>海底魔晄炉</translation>
     </message>
     <message>
         <source>Junon Office F2</source>
-        <translation type="unfinished">ジュノン支社2階</translation>
+        <translation>ジュノン支社2階</translation>
     </message>
     <message>
         <source>Kalm Inn</source>
-        <translation type="unfinished">カーム・宿屋2階</translation>
+        <translation>カーム・宿屋2階</translation>
     </message>
     <message>
         <source>Reactor No. 5</source>
-        <translation type="unfinished">5番魔晄炉</translation>
+        <translation>5番魔晄炉</translation>
     </message>
     <message>
         <source>Aerith&apos;s House</source>
-        <translation type="unfinished">エアリスの家</translation>
+        <translation>エアリスの家</translation>
     </message>
     <message>
         <source>North Crater</source>
-        <translation type="unfinished">大空洞内部</translation>
+        <translation>大空洞内部</translation>
     </message>
     <message>
         <source>Wall Market</source>
-        <translation type="unfinished">ウォールマーケット</translation>
+        <translation>ウォールマーケット</translation>
     </message>
     <message>
         <source>Beginner&apos;s Hall</source>
-        <translation type="unfinished">初心者の館</translation>
+        <translation>初心者の館</translation>
     </message>
     <message>
         <source>Whirlwind Maze</source>
-        <translation type="unfinished">竜巻の迷宮</translation>
+        <translation>竜巻の迷宮</translation>
     </message>
     <message>
         <source>Mt. Nibel</source>
-        <translation type="unfinished">ニブル山</translation>
+        <translation>ニブル山</translation>
     </message>
     <message>
         <source>Shinra Bldg 69F.</source>
-        <translation type="unfinished">神羅ビル・69階</translation>
+        <translation>神羅ビル・69階</translation>
     </message>
     <message>
         <source>Shinra Bldg 67F.</source>
-        <translation type="unfinished">神羅ビル・67階</translation>
+        <translation>神羅ビル・67階</translation>
     </message>
     <message>
         <source>Gaeas Cliff</source>
-        <translation type="unfinished">絶壁内部</translation>
+        <translation>絶壁内部</translation>
     </message>
     <message>
         <source>Gaeas Cliff Base</source>
-        <translation type="unfinished">絶壁のふもと</translation>
+        <translation>絶壁のふもと</translation>
     </message>
     <message>
         <source>Sector 7 - Slums</source>
-        <translation type="unfinished">7番街スラム</translation>
+        <translation>7番街スラム</translation>
     </message>
     <message>
         <source>Reactor No.1</source>
-        <translation type="unfinished">1番魔晄炉 (進捗に依存.)</translation>
+        <translatorcomment>ストーリーの進捗により5番魔晄炉●●Reactor No.1</translatorcomment>
+        <translation>1番魔晄炉</translation>
     </message>
     <message>
         <source>Corel Prison</source>
-        <translation type="unfinished">コレルプリズン</translation>
+        <translation>コレルプリズン</translation>
     </message>
     <message>
         <source>Fort Condor</source>
-        <translation type="unfinished">コンドルフォート</translation>
+        <translation>コンドルフォート</translation>
     </message>
     <message>
         <source>Inside Submarine</source>
-        <translation type="unfinished">潜水艦内部</translation>
+        <translation>潜水艦内部</translation>
     </message>
     <message>
         <source>Hallway</source>
-        <translation type="unfinished">神羅飛空挺・通路</translation>
+        <translatorcomment>神羅飛空挺・通路</translatorcomment>
+        <translation>神羅飛空挺・通路</translation>
     </message>
     <message>
         <source>Cosmo Canyon</source>
-        <translation type="unfinished">コスモキャニオン</translation>
+        <translation>コスモキャニオン</translation>
     </message>
     <message>
         <source>Church in the slums</source>
-        <translation type="unfinished">スラム街の教会</translation>
+        <translation>スラム街の教会</translation>
     </message>
     <message>
         <source>Boat</source>
-        <translation type="unfinished">運搬船</translation>
+        <translation>運搬船</translation>
     </message>
     <message>
         <source>Lower Sector 4 Plate</source>
-        <translation type="unfinished">4番街プレート下部</translation>
+        <translation>4番街プレート下部</translation>
     </message>
     <message>
         <source>Mt. Corel</source>
-        <translation type="unfinished">コレル山・西</translation>
+        <translation>コレル山・西</translation>
     </message>
     <message>
         <source>Sector 5 - Slums</source>
-        <translation type="unfinished">5番街スラム</translation>
+        <translation>5番街スラム</translation>
     </message>
     <message>
         <source>Debug Room [ja]</source>
-        <translation type="unfinished"></translation>
+        <translation>デバッグ ルーム</translation>
     </message>
     <message>
         <source>Debug Room [en]</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Debug Room [en]</translatorcomment>
+        <translation>デバッグ・イージタイプ！</translation>
     </message>
     <message>
         <source>Test Fight</source>
-        <translation type="unfinished">バトル テスト</translation>
+        <translation>バトル テスト</translation>
     </message>
     <message>
         <source>Ropeway Station</source>
-        <translation type="unfinished">ロープウェイ乗り場</translation>
+        <translation>ロープウェイ乗り場</translation>
     </message>
     <message>
         <source>Junon Way</source>
-        <translation type="unfinished">海底魔晄炉への通路</translation>
+        <translation>海底魔晄炉への通路</translation>
     </message>
     <message>
         <source>Junon Airport Path</source>
-        <translation type="unfinished">ジュノン空港通路</translation>
+        <translation>ジュノン空港通路</translation>
     </message>
     <message>
         <source>Forgotten Captial</source>
-        <translation type="unfinished">忘らるる都</translation>
+        <translation>忘らるる都</translation>
     </message>
     <message>
         <source>Sector 8, Underground</source>
-        <translation type="unfinished">ミッドガル8番街地下</translation>
+        <translation>ミッドガル8番街地下</translation>
     </message>
     <message>
         <source>Shinra Bldg.</source>
-        <translation type="unfinished">神羅ビル</translation>
+        <translation>神羅ビル</translation>
     </message>
     <message>
         <source>Wutai</source>
-        <translation type="unfinished">ウータイ</translation>
+        <translation>ウータイ</translation>
     </message>
     <message>
         <source>Forgotten City</source>
-        <translation type="unfinished">忘らるる都 (湖)</translation>
+        <translation>忘らるる都・湖</translation>
     </message>
     <message>
         <source>Chocobo Ranch</source>
-        <translation type="unfinished">チョコボ牧場</translation>
+        <translation>チョコボ牧場</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation type="unfinished">ハイウインド</translation>
+        <translation>ハイウインド</translation>
     </message>
     <message>
         <source>Shinra Bldg 64F.</source>
-        <translation type="unfinished">神羅ビル・69階 {64F?}</translation>
+        <translation>神羅ビル・64階</translation>
     </message>
 </context>
 <context>
@@ -1387,7 +1390,7 @@
     </message>
     <message>
         <source>In Party</source>
-        <translation>パーティ編成</translation>
+        <translation>パーティ メンバー</translation>
     </message>
     <message>
         <source>Cloud</source>
@@ -2191,7 +2194,7 @@
     </message>
     <message>
         <source>Selected Materia Skills and Stat Info</source>
-        <translation>選択マテリアのスキルとステータス情報</translation>
+        <translation>選択マテリアのアビリティと装備効果</translation>
     </message>
     <message>
         <source>All</source>
@@ -2231,7 +2234,7 @@
     </message>
     <message>
         <source>Materia Stat Changes</source>
-        <translation>マテリアによるステータス変化</translation>
+        <translation>マテリアの装備効果</translation>
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
@@ -2332,23 +2335,23 @@
     </message>
     <message>
         <source>Lvl 1</source>
-        <translation></translation>
+        <translation>Lv. 1</translation>
     </message>
     <message>
         <source>Lvl 2</source>
-        <translation></translation>
+        <translation>Lv. 2</translation>
     </message>
     <message>
         <source>Lvl 3</source>
-        <translation></translation>
+        <translation>Lv. 3</translation>
     </message>
     <message>
         <source>Lvl 4</source>
-        <translation></translation>
+        <translation>Lv 4</translation>
     </message>
     <message>
         <source>Lvl 5</source>
-        <translation></translation>
+        <translation>Lv. 5</translation>
     </message>
     <message>
         <source>Othe&amp;r</source>
@@ -2360,7 +2363,7 @@
     </message>
     <message>
         <source>Forgotten City</source>
-        <translation>忘らるる都 (湖)</translation>
+        <translation>忘らるる都・湖</translation>
     </message>
     <message>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</source>
@@ -2368,7 +2371,7 @@
     </message>
     <message>
         <source>Have Fun With This Feature, But Don&apos;t Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</source>
-        <translation>この機能をお楽しみください。設定によってはストーリーの進捗との不整合により、不具合を引き起こすことがあります。</translation>
+        <translation>この機能をお楽しみください。設定によってはストーリーの進捗との齟齬により、不具合を引き起こすことがあります。</translation>
     </message>
     <message>
         <source>Location Name</source>
@@ -3582,6 +3585,14 @@ MASTER = 16777215 AP です</translation>
         <translation>キーアイテムをクリア</translation>
     </message>
     <message>
+        <source>47</source>
+        <translation>47</translation>
+    </message>
+    <message>
+        <source>48</source>
+        <translation>48</translation>
+    </message>
+    <message>
         <source>Aeris Turks</source>
         <translatorcomment>教会に配置したとき、0, 3: クラウドが落下した直後、夢-エアリストとの会話から 1, 2, 4:レノの最後のセリフが流れ教会奥マップから脱出クエストが始まる Aeris_Turks - this is a helper variable for when you meet aeris in the chruch.</translatorcomment>
         <translation>エアリス_タークス_教会フラグ</translation>
@@ -3651,6 +3662,10 @@ MASTER = 16777215 AP です</translation>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
         <translation>&apos;エアリスの死&apos; のリプレイは PHS からエアリスを削除します</translation>
+    </message>
+    <message>
+        <source>Church in the slums</source>
+        <translation>スラム街の教会</translation>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s location.</source>
@@ -3881,7 +3896,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Talked to Jessie Before Looking At Map</source>
-        <translation>マップを見る前にジェシーと会話</translation>
+        <translation>マップを見る前のジェシーとの会話</translation>
     </message>
     <message>
         <source> Played Video on Train?</source>
@@ -3927,7 +3942,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Barret called us</source>
-        <translation>バレットが全員に命令</translation>
+        <translation>バレットが全員に指示</translation>
     </message>
     <message>
         <source>Post Pillar Pan Video</source>
@@ -3936,7 +3951,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Talked To soldier two times</source>
-        <translation>神羅兵との二度の会話</translation>
+        <translation>神羅兵と二度の会話</translation>
     </message>
     <message>
         <source>Field Items Picked Up</source>
@@ -3996,19 +4011,19 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Up</source>
-        <translation>↑</translation>
+        <translation>上</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation>→</translation>
+        <translation>右</translation>
     </message>
     <message>
         <source>Down</source>
-        <translation>↓</translation>
+        <translation>下</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation>←</translation>
+        <translation>左</translation>
     </message>
     <message>
         <source>Menu</source>
@@ -4056,31 +4071,31 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>MDS7ST1:Hi-Potion.(Roof Train 1)</source>
-        <translation type="unfinished">MDS7ST1: ハイポーション (列車1屋根)</translation>
+        <translation>MDS7ST1: ハイポーション (列車1屋根)</translation>
     </message>
     <message>
         <source>MDS7ST1:Hi-Potion.(Barrel 1)</source>
-        <translation type="unfinished">MDS7ST1: ハイポーション (ドラム缶1)</translation>
+        <translation>MDS7ST1: ハイポーション (ドラム缶1)</translation>
     </message>
     <message>
         <source>MDS7ST1:Echo Screen</source>
-        <translation type="unfinished">MDS7ST1: やまびこえんまく</translation>
+        <translation>MDS7ST1: やまびこえんまく</translation>
     </message>
     <message>
         <source>MDS7ST1:Potion</source>
-        <translation type="unfinished">MDS7ST1: ポーション</translation>
+        <translation>MDS7ST1: ポーション</translation>
     </message>
     <message>
         <source>MDS7ST2:Hi-Potion</source>
-        <translation type="unfinished">MDS7ST2: ハイポーション</translation>
+        <translation>MDS7ST2: ハイポーション</translation>
     </message>
     <message>
         <source>MDS7ST2:Ether</source>
-        <translation type="unfinished">MDS7ST2: ハイポーション</translation>
+        <translation>MDS7ST2: ハイポーション</translation>
     </message>
     <message>
         <source>MDS7ST2:Potion</source>
-        <translation type="unfinished">MDS7ST2: ポーション</translation>
+        <translation>MDS7ST2: ポーション</translation>
     </message>
     <message>
         <source>Edit Selected Item Slot</source>
@@ -4096,7 +4111,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>MDS7ST1:Potion.(In Train 2)</source>
-        <translation type="unfinished">MDS7ST1: ポーション (列車2内部)</translation>
+        <translation>MDS7ST1: ハイポーション (列車2内部)</translation>
     </message>
 </context>
 <context>
@@ -4442,135 +4457,135 @@ Table Entries are Editable</source>
     <name>Materia_Skills</name>
     <message>
         <source>MP Plus +10%</source>
-        <translation>MP +10%</translation>
+        <translation>MAXMP 10%UP</translation>
     </message>
     <message>
         <source>MP Plus +20%</source>
-        <translation>MP +20%</translation>
+        <translation>MAXMP 20%UP</translation>
     </message>
     <message>
         <source>MP Plus +30%</source>
-        <translation>MP +30%</translation>
+        <translation>MAXMP 30%UP</translation>
     </message>
     <message>
         <source>MP Plus +40%</source>
-        <translation>MP +40%</translation>
+        <translation>MAXMP 40%UP</translation>
     </message>
     <message>
         <source>MP Plus +50%</source>
-        <translation>MP +50%</translation>
+        <translation>MAXMP 50%UP</translation>
     </message>
     <message>
         <source>HP Plus +10%</source>
-        <translation>HP +10%</translation>
+        <translation>MAXHP 10%UP</translation>
     </message>
     <message>
         <source>HP Plus +20%</source>
-        <translation>HP +20%</translation>
+        <translation>MAXHP 20%UP</translation>
     </message>
     <message>
         <source>HP Plus +30%</source>
-        <translation>HP +30%</translation>
+        <translation>MAXHP 30%UP</translation>
     </message>
     <message>
         <source>HP Plus +40%</source>
-        <translation>HP +40%</translation>
+        <translation>MAXHP 40%UP</translation>
     </message>
     <message>
         <source>HP Plus +50%</source>
-        <translation>HP +50%</translation>
+        <translation>MAXHP 50%UP</translation>
     </message>
     <message>
         <source>Speed Plus +10%</source>
-        <translation>スピード +10%</translation>
+        <translation>すばやさ 10%UP</translation>
     </message>
     <message>
         <source>Speed Plus +20%</source>
-        <translation>スピード +20%</translation>
+        <translation>すばやさ 20%UP</translation>
     </message>
     <message>
         <source>Speed Plus +30%</source>
-        <translation>スピード +30%</translation>
+        <translation>すばやさ 30%UP</translation>
     </message>
     <message>
         <source>Speed Plus +40%</source>
-        <translation>スピード +40%</translation>
+        <translation>すばやさ 40%UP</translation>
     </message>
     <message>
         <source>Speed Plus +50%</source>
-        <translation>スピード +50%</translation>
+        <translation>すばやさ 50%UP</translation>
     </message>
     <message>
         <source>Magic Plus +10%</source>
-        <translation>魔力 +10%</translation>
+        <translation>まりょく 10%UP</translation>
     </message>
     <message>
         <source>Magic Plus +20%</source>
-        <translation>魔力 +20%</translation>
+        <translation>まりょく 20%UP</translation>
     </message>
     <message>
         <source>Magic Plus +30%</source>
-        <translation>魔力 +30%</translation>
+        <translation>まりょく 30%UP</translation>
     </message>
     <message>
         <source>Magic Plus +40%</source>
-        <translation>魔力 +40%</translation>
+        <translation>まりょく 40%UP</translation>
     </message>
     <message>
         <source>Magic Plus +50%</source>
-        <translation>魔力 +50%</translation>
+        <translation>まりょく 50%UP</translation>
     </message>
     <message>
         <source>Luck Plus +10%</source>
-        <translation>運 +10%</translation>
+        <translation>うん 10%UP</translation>
     </message>
     <message>
         <source>Luck Plus +20%</source>
-        <translation>運 +20%</translation>
+        <translation>うん 20%UP</translation>
     </message>
     <message>
         <source>Luck Plus +30%</source>
-        <translation>運 +30%</translation>
+        <translation>うん 30%UP</translation>
     </message>
     <message>
         <source>Luck Plus +40%</source>
-        <translation>運 +40%</translation>
+        <translation>うん 40%UP</translation>
     </message>
     <message>
         <source>Luck Plus +50%</source>
-        <translation>運 +50%</translation>
+        <translation>うん 50%UP</translation>
     </message>
     <message>
         <source>Exp Plus +50%</source>
-        <translation>経験値 +50%</translation>
+        <translation>けいけんち 50%UP</translation>
     </message>
     <message>
         <source>Exp Plus +100%</source>
-        <translation>経験値 +100%</translation>
+        <translation>けいけんち 100%UP</translation>
     </message>
     <message>
         <source>Gil Plus +50%</source>
-        <translation>ギル +50%</translation>
+        <translation>ギルUP 50%</translation>
     </message>
     <message>
         <source>Gil Plus +100%</source>
-        <translation>ギル +100%</translation>
+        <translation>ギルUP 100%</translation>
     </message>
     <message>
         <source>Encounter Rate -50%</source>
-        <translation>エンカウント率 -50%</translation>
+        <translation>エンカウントりつDOWN 50%</translation>
     </message>
     <message>
         <source>Encounter Rate -75%</source>
-        <translation>エンカウント率 -75%</translation>
+        <translation>エンカウントりつDOWN 75%</translation>
     </message>
     <message>
         <source>Encounter Rate +50%</source>
-        <translation>エンカウント率 +50%</translation>
+        <translation>エンカウントりつUP 50%</translation>
     </message>
     <message>
         <source>Encounter Rate +100%</source>
-        <translation>エンカウント率 +100%</translation>
+        <translation>エンカウントりつUP 100%</translation>
     </message>
     <message>
         <source>Chocobo Lure</source>
@@ -4578,35 +4593,35 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Chocobo Lure +50%</source>
-        <translation>チョコボよせ +50%</translation>
+        <translation>チョコボにあえる 50%UP</translation>
     </message>
     <message>
         <source>Chocobo Lure +100%</source>
-        <translation>チョコボよせ +100%</translation>
+        <translation>チョコボにあえる 100%UP</translation>
     </message>
     <message>
         <source>Chocobo Lure +200%</source>
-        <translation>チョコボよせ +200%</translation>
+        <translation>チョコボにあえる 200%UP</translation>
     </message>
     <message>
         <source>Pre-emptive +6%</source>
-        <translation>先制攻撃 +6%</translation>
+        <translation>せんせいりつUP 6%</translation>
     </message>
     <message>
         <source>Pre-emptive +12%</source>
-        <translation>先制攻撃 +12%</translation>
+        <translation>せんせいりつUP 12%</translation>
     </message>
     <message>
         <source>Pre-emptive +24%</source>
-        <translation>先制攻撃 +24%</translation>
+        <translation>せんせいりつUP 24%</translation>
     </message>
     <message>
         <source>Pre-emptive +36%</source>
-        <translation>先制攻撃 +36%</translation>
+        <translation>せんせいりつUP 36%</translation>
     </message>
     <message>
         <source>Pre-emptive +48%</source>
-        <translation>先制攻撃 +48%</translation>
+        <translation>せんせいりつUP 48%</translation>
     </message>
     <message>
         <source>Long Range</source>
@@ -4614,43 +4629,43 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Mega-all x1</source>
-        <translation>すべてぜんたいか x1</translation>
+        <translation>ぜんたいこうげき x1</translation>
     </message>
     <message>
         <source>Mega-all x2</source>
-        <translation>すべてぜんたいか x2</translation>
+        <translation>ぜんたいこうげき x2</translation>
     </message>
     <message>
         <source>Mega-all x3</source>
-        <translation>すべてぜんたいか x3</translation>
+        <translation>ぜんたいこうげき x3</translation>
     </message>
     <message>
         <source>Mega-all x4</source>
-        <translation>すべてぜんたいか x4</translation>
+        <translation>ぜんたいこうげき x4</translation>
     </message>
     <message>
         <source>Mega-all x5</source>
-        <translation>すべてぜんたいか x5</translation>
+        <translation>ぜんたいこうげき x5</translation>
     </message>
     <message>
         <source>Counter Attack 20%</source>
-        <translation>カウンター 20%</translation>
+        <translation>たたかうカウンター 20%</translation>
     </message>
     <message>
         <source>Counter Attack 40%</source>
-        <translation>カウンター 40%</translation>
+        <translation>たたかうカウンター 40%</translation>
     </message>
     <message>
         <source>Counter Attack 60%</source>
-        <translation>カウンター 60%</translation>
+        <translation>たたかうカウンター 60%</translation>
     </message>
     <message>
         <source>Counter Attack 80%</source>
-        <translation>カウンター 80%</translation>
+        <translation>たたかうカウンター 80%</translation>
     </message>
     <message>
         <source>Counter Attack 100%</source>
-        <translation>カウンター 100%</translation>
+        <translation>たたかうカウンター 100%</translation>
     </message>
     <message>
         <source>Slash-All</source>
@@ -4670,23 +4685,23 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Cover +20%</source>
-        <translation>かばう +20%</translation>
+        <translation>かばう 20%UP</translation>
     </message>
     <message>
         <source>Cover +40%</source>
-        <translation>かばう +40%</translation>
+        <translation>かばう 40%UP</translation>
     </message>
     <message>
         <source>Cover +60%</source>
-        <translation>かばう +60%</translation>
+        <translation>かばう 60%UP</translation>
     </message>
     <message>
         <source>Cover +80%</source>
-        <translation>かばう +80%</translation>
+        <translation>かばう 80%UP</translation>
     </message>
     <message>
         <source>Cover +100%</source>
-        <translation>かばう +100%</translation>
+        <translation>かばう 100%UP</translation>
     </message>
     <message>
         <source>Underwater</source>
@@ -4698,15 +4713,15 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>W-Magic</source>
-        <translation>W-まほう</translation>
+        <translation>Ｗまほう</translation>
     </message>
     <message>
         <source>W-Summon</source>
-        <translation>W-しょうかん</translation>
+        <translation>Ｗしょうかん</translation>
     </message>
     <message>
         <source>W-Item</source>
-        <translation>W-アイテム</translation>
+        <translation>Ｗアイテム</translation>
     </message>
     <message>
         <source>All x1</source>
@@ -4730,47 +4745,47 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>MP Turbo 10%</source>
-        <translation>MPターボ 10%</translation>
+        <translation>ＭＰターボ 10%</translation>
     </message>
     <message>
         <source>Mp Turbo 20%</source>
-        <translation>MPターボ 20%</translation>
+        <translation>ＭＰターボ 20%</translation>
     </message>
     <message>
         <source>Mp Turbo 30%</source>
-        <translation>MPターボ 30%</translation>
+        <translation>ＭＰターボ 30%</translation>
     </message>
     <message>
         <source>Mp Turbo 40%</source>
-        <translation>MPターボ 40%</translation>
+        <translation>ＭＰターボ 40%</translation>
     </message>
     <message>
         <source>Mp Turbo 50%</source>
-        <translation>MPターボ 50%</translation>
+        <translation>ＭＰターボ 50%</translation>
     </message>
     <message>
         <source>MP Absorb</source>
-        <translation>MPきゅうしゅう</translation>
+        <translation>ＭＰきゅうしゅう</translation>
     </message>
     <message>
         <source>HP Absorb</source>
-        <translation>HPきゅうしゅう</translation>
+        <translation>ＨＰきゅうしゅう</translation>
     </message>
     <message>
         <source>Elemental 50%</source>
-        <translation>属性 50%</translation>
+        <translation>ぞくせい 50%</translation>
     </message>
     <message>
         <source>Elemental 100%</source>
-        <translation>属性 100%</translation>
+        <translation>ぞくせい 100%</translation>
     </message>
     <message>
         <source>Elemental 200%</source>
-        <translation>属性 200%</translation>
+        <translation>ぞくせい 200%</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation>追加効果</translation>
+        <translation>ついかこうか</translation>
     </message>
     <message>
         <source>Sneak Attack 20%</source>
@@ -5214,23 +5229,23 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Summon Kujata x1 (110mp)</source>
-        <translation>Kujata x1 (110MP)</translation>
+        <translation>クジャタ x1 (110MP)</translation>
     </message>
     <message>
         <source>Summon Kujata x2 (110mp)</source>
-        <translation>Kujata x2 (110MP)</translation>
+        <translation>クジャタ x2 (110MP)</translation>
     </message>
     <message>
         <source>Summon Kujata x3 (110mp)</source>
-        <translation>Kujata x3 (110MP)</translation>
+        <translation>クジャタ x3 (110MP)</translation>
     </message>
     <message>
         <source>Summon Kujata x4 (110mp)</source>
-        <translation>Kujata x4 (110MP)</translation>
+        <translation>クジャタ x4 (110MP)</translation>
     </message>
     <message>
         <source>Summon Kujata x5 (110mp)</source>
-        <translation>Kujata x5 (110MP)</translation>
+        <translation>クジャタ x5 (110MP)</translation>
     </message>
     <message>
         <source>Summon Alexander x1 (120mp)</source>
@@ -5394,43 +5409,43 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Counter Rate 20%</source>
-        <translation>コマンドカウンター率 20%</translation>
+        <translation>コマンドカウンターりつ 20%</translation>
     </message>
     <message>
         <source>Counter Rate 40%</source>
-        <translation>コマンドカウンター率 40%</translation>
+        <translation>コマンドカウンターりつ 40%</translation>
     </message>
     <message>
         <source>Counter Rate 60%</source>
-        <translation>コマンドカウンター率 60%</translation>
+        <translation>コマンドカウンターりつ 60%</translation>
     </message>
     <message>
         <source>Counter Rate 80%</source>
-        <translation>コマンドカウンター率 80%</translation>
+        <translation>コマンドカウンターりつ 80%</translation>
     </message>
     <message>
         <source>Counter Rate 100%</source>
-        <translation>コマンドカウンター率 100%</translation>
+        <translation>コマンドカウンターりつ 100%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 30%</source>
-        <translation>まほうカウンター率 30%</translation>
+        <translation>まほうカウンターりつ 30%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 40%</source>
-        <translation>まほうカウンター率 40%</translation>
+        <translation>まほうカウンターりつ 40%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 60%</source>
-        <translation>まほうカウンター率 60%</translation>
+        <translation>まほうカウンターりつ 60%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 80%</source>
-        <translation>まほうカウンター率 80%</translation>
+        <translation>まほうカウンターりつ 80%</translation>
     </message>
     <message>
         <source>Magic Counter Rate 100%</source>
-        <translation>まほうカウンター率 100%</translation>
+        <translation>まほうカウンターりつ 100%</translation>
     </message>
     <message>
         <source>Steal as well</source>
@@ -5473,15 +5488,15 @@ Table Entries are Editable</source>
     <name>Materia_Stats</name>
     <message>
         <source>Dex:+% depending on level</source>
-        <translation>素早さ: + レベルに比例 (%)</translation>
+        <translation>素早さ: レベルに比例 (%) UP</translation>
     </message>
     <message>
         <source>Mag:+% depending on level</source>
-        <translation>魔力: + レベルに比例 (%)</translation>
+        <translation>魔力: レベルに比例 (%) UP</translation>
     </message>
     <message>
         <source>Lck:+% depending on level</source>
-        <translation>運: + レベルに比例 (%)</translation>
+        <translation>運: レベルに比例 (%) UP</translation>
     </message>
     <message>
         <source>Lck:+1</source>
@@ -5501,43 +5516,43 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>MaxHp:+% depending on level</source>
-        <translation>最大HP: + レベルに比例 (%)</translation>
+        <translation>MAXHP: レベルに比例 (%) UP</translation>
     </message>
     <message>
         <source>MaxMp:+% depending on level</source>
-        <translation>最大MP: + レベルに比例 (%)</translation>
+        <translation>MAXMP: レベルに比例 (%) UP</translation>
     </message>
     <message>
         <source>MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1</source>
-        <translation>最大HP-2% 最大MP:+2% 力:-1 魔力:+1</translation>
+        <translation>MAXHP:-2% MAXMP:+2% 力:-1 魔力:+1</translation>
     </message>
     <message>
         <source>MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation>最大HP:-5% 最大MP:+5% 力:-2 体力:-1 魔力:+2 魔防:+1</translation>
+        <translation>MAXHP:-5% MAXMP:+5% 力:-2 体力:-1 魔力:+2 魔防:+1</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
-        <translation>最大HP:-10% 最大MP:+10% 力:-4 体力:-2 魔力:+4 魔防:+2</translation>
+        <translation>MAXHP:-10% MAXMP:+10% 力:-4 体力:-2 魔力:+4 魔防:+2</translation>
     </message>
     <message>
         <source>MaxHp:-2% MaxMp:+2% Mag:+1</source>
-        <translation>最大HP:-2% 最大MP:+2% 魔力:+1</translation>
+        <translation>MAXHP:-2% MAXMP:+2% 魔力:+1</translation>
     </message>
     <message>
         <source>MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1</source>
-        <translation>最大HP:-5% 最大MP:+5% 魔力:+1 魔防:+1</translation>
+        <translation>MAXHP:-5% MAXMP:+5% 魔力:+1 魔防:+1</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2</source>
-        <translation>最大HP:-10% 最大MP:+10% 魔力:+2 魔防:+2</translation>
+        <translation>MAXHP:-10% MAXMP:+10% 魔力:+2 魔防:+2</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4</source>
-        <translation>最大HP:-10% 最大MP:+15% 魔力:+4 魔防:+4</translation>
+        <translation>MAXHP:-10% MAXMP:+15% 魔力:+4 魔防:+4</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8</source>
-        <translation>最大HP:-10% 最大MP:+20% 魔力:+8 魔防:+8</translation>
+        <translation>MAXHP:-10% MAXMP:+20% 魔力:+8 魔防:+8</translation>
     </message>
 </context>
 <context>
