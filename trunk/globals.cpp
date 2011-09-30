@@ -490,6 +490,11 @@ static const char *materiaSkills[91][5]=
     {QT_TRANSLATE_NOOP("Materia_Skills","Master Summon"),"","","",""}
 };
 
+QString ff7names::ItemNames(int i){return qApp->translate("Items",itemNames[i]);}
+QString ff7names::MateriaNames(int i){return qApp->translate("Materia_Names",materiaNames[i]);}
+QString ff7names::MateriaStats(int i){return qApp->translate("Materia_Stats",materiaStats[i]);}
+QString ff7names::MateriaSkills(int i,int l){return qApp->translate("Materia_Skills",materiaSkills[i][l]);}
+
  static LOCATION Locations[]=
  {
      {QT_TRANSLATE_NOOP("Locations","Platform"),"1","116","3655","27432","25"},
@@ -542,18 +547,13 @@ static const char *materiaSkills[91][5]=
      {QT_TRANSLATE_NOOP("Locations","Debug Room [ja]"),"1","65","0","0","0"},
      {QT_TRANSLATE_NOOP("Locations","Test Fight"),"2","0","0","0","0"}
  };
+
 QString locations::loc_name(int i){return qApp->translate("Locations",Locations[i].location.toAscii());}
 QString locations::map_id(int i){return Locations[i].map_id;}
 QString locations::loc_id(int i){return Locations[i].loc_id;}
 QString locations::x(int i){return Locations[i].y;}
 QString locations::y(int i){return Locations[i].x;}
 QString locations::z(int i){return Locations[i].z;}
-
-
-QString ff7names::ItemNames(int i){return qApp->translate("Items",itemNames[i]);}
-QString ff7names::MateriaNames(int i){return qApp->translate("Materia_Names",materiaNames[i]);}
-QString ff7names::MateriaStats(int i){return qApp->translate("Materia_Stats",materiaStats[i]);}
-QString ff7names::MateriaSkills(int i,int l){return qApp->translate("Materia_Skills",materiaSkills[i][l]);}
 
 /*LEVEL CHART */
 quint32 charlvls[11][99]=

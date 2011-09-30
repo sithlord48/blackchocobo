@@ -1063,24 +1063,7 @@ void MainWindow::on_actionPaste_Slot_activated()
     memcpy(&ff7.slot[s],&bufferslot,0x10f4);
     ff7.SG_Region_String[s] = buffer_region;
     ff7.SG_Region_String[s].chop(2);
-    switch(s)
-    {
-        case 0:ff7.SG_Region_String[s].append("01"); break;
-        case 1:ff7.SG_Region_String[s].append("02"); break;
-        case 2:ff7.SG_Region_String[s].append("03"); break;
-        case 3:ff7.SG_Region_String[s].append("04"); break;
-        case 4:ff7.SG_Region_String[s].append("05"); break;
-        case 5:ff7.SG_Region_String[s].append("06"); break;
-        case 6:ff7.SG_Region_String[s].append("07"); break;
-        case 7:ff7.SG_Region_String[s].append("08"); break;
-        case 8:ff7.SG_Region_String[s].append("09"); break;
-        case 9:ff7.SG_Region_String[s].append("10"); break;
-        case 10:ff7.SG_Region_String[s].append("11"); break;
-        case 11:ff7.SG_Region_String[s].append("12"); break;
-        case 12:ff7.SG_Region_String[s].append("13"); break;
-        case 13:ff7.SG_Region_String[s].append("14"); break;
-        case 14:ff7.SG_Region_String[s].append("15"); break;
-    }
+    ff7.SG_Region_String[s].append(QString::number(s+1));
     guirefresh();
 }
 void MainWindow::on_actionShow_Options_triggered()
@@ -6109,7 +6092,7 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
                      break;
         }
     }
-    if(item->column()==2)
+    else if(item->column()==2)
     {//column 2 selected
         switch (ui->combo_z_var->currentIndex())
         {
@@ -6162,7 +6145,7 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
                      break;
         }
     }
-    if(item->column()==3)
+    else if(item->column()==3)
     {//column 3 selected
         switch (ui->combo_z_var->currentIndex())
         {
@@ -6215,6 +6198,7 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
                      break;
         }
     }
+    else {/*do nothing*/}
 }}
 void MainWindow::on_btn_all_z_diffs_clicked()
 {
