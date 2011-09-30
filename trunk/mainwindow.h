@@ -52,6 +52,7 @@ public slots:
 private slots://try to keep these in the same order as the .cpp file
   
   /*Loading and Saving related Functions*/  
+
     void on_actionNew_Window_triggered();
     void on_actionOpen_Save_File_activated();
     void on_actionReload_triggered();
@@ -70,7 +71,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_actionExport_MC_triggered();
     void on_actionExport_VGS_triggered();
     void on_actionExport_DEX_triggered();  
-    void fix_sum(const QString &fileName);
   /*Simple Menu Actions */
     void on_actionSlot_01_activated();
     void on_actionSlot_02_activated();
@@ -110,6 +110,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_action_Region_JPN_triggered(bool checked);
     void on_action_Region_JPN_International_triggered(bool checked);
     /*GuiFunctions*/
+    void fix_sum(const QString &fileName);
     void charupdate(void);
     void setchar_growth(int caller);
     void setarmorslots(void);
@@ -124,6 +125,8 @@ private slots://try to keep these in the same order as the .cpp file
     void clearslot(int rmslot);
     void testdata_refresh(void);
     void unknown_refresh(int);
+    void set_ntsc_time(void);
+    void set_pal_time(void);
 
     /*CharButtons*/
     void on_btn_cloud_clicked();

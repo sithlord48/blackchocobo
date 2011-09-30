@@ -1188,12 +1188,12 @@
         <translation>1/35神羅兵</translation>
     </message>
     <message>
-        <source>Aﾃ｢ﾂ鳴ｪM Cannon</source>
-        <translation>A・Mキャノン</translation>
-    </message>
-    <message>
         <source>Plus Barrette</source>
         <translation>プラチナバレッタ</translation>
+    </message>
+    <message>
+        <source>AâªM Cannon</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3585,14 +3585,6 @@ MASTER = 16777215 AP です</translation>
         <translation>キーアイテムをクリア</translation>
     </message>
     <message>
-        <source>47</source>
-        <translation>47</translation>
-    </message>
-    <message>
-        <source>48</source>
-        <translation>48</translation>
-    </message>
-    <message>
         <source>Aeris Turks</source>
         <translatorcomment>教会に配置したとき、0, 3: クラウドが落下した直後、夢-エアリストとの会話から 1, 2, 4:レノの最後のセリフが流れ教会奥マップから脱出クエストが始まる Aeris_Turks - this is a helper variable for when you meet aeris in the chruch.</translatorcomment>
         <translation>エアリス_タークス_教会フラグ</translation>
@@ -3662,10 +3654,6 @@ MASTER = 16777215 AP です</translation>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
         <translation>&apos;エアリスの死&apos; のリプレイは PHS からエアリスを削除します</translation>
-    </message>
-    <message>
-        <source>Church in the slums</source>
-        <translation>スラム街の教会</translation>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s location.</source>
@@ -3742,10 +3730,6 @@ Would you like to correct the playtime?</source>
     <message>
         <source>Never Correct</source>
         <translation>修正しない</translation>
-    </message>
-    <message>
-        <source>Would You Like To Update the Play time</source>
-        <translation>プレイ時間を変更しますか？</translation>
     </message>
     <message>
         <source>PAL -&gt; NTSC Conversion</source>
@@ -4112,6 +4096,18 @@ Table Entries are Editable</source>
     <message>
         <source>MDS7ST1:Potion.(In Train 2)</source>
         <translation>MDS7ST1: ハイポーション (列車2内部)</translation>
+    </message>
+    <message>
+        <source>Would you like to correct the play time?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>In this region the game runs 60hz</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>In this region the game runs 50hz</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

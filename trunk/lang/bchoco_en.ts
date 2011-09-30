@@ -3695,10 +3695,6 @@ Would you like to correct the playtime?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Would You Like To Update the Play time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>PAL -&gt; NTSC Conversion</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4045,6 +4041,18 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>MDS7ST1:Potion.(In Train 2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Would you like to correct the play time?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>In this region the game runs 60hz</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>In this region the game runs 50hz</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

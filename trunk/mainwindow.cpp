@@ -639,6 +639,38 @@ void MainWindow::saveFileFull(QString fileName)
     fclose(pfile);
     fix_sum(fileName);
 }
+
+/*~~~~~~~~~~~ START CHECKSUM VEGETA~~~~~~~~~~~*/
+void MainWindow::fix_sum(const QString &fileName)
+{
+    void * memory;
+    QFile file(fileName);
+    if (!file.open(QFile::ReadWrite )){return;}
+    QDataStream out (&file);
+    out.setByteOrder(QDataStream::LittleEndian);
+    file.seek(0);//Set pointer to the Beggining
+    QByteArray ff7savefile;
+    ff7savefile = file.readAll(); //put all data in temp raw file
+    memory = (void*) malloc(ff7.SG_SIZE);//Memory Allocation
+    if (!memory){return;}
+    file.seek(0);
+    memcpy(memory,ff7savefile.mid(0x00000,ff7.SG_SIZE),ff7.SG_SIZE);
+    //Do checksum foreach slot
+    for(int i=0, checksum=0; i<ff7.SG_SLOT_NUMBER; i++)
+    {
+        char * data_pointer = ((char*)memory + ff7.SG_HEADER + ff7.SG_SLOT_SIZE*i + ff7.SG_SLOT_HEADER + 0x04);
+        checksum = ff7__checksum(data_pointer); //2 Bytes checksum (a 16-bit Byte checksum)
+        if(checksum != 0x4D1D) //if is a blank slot don't write checksum!
+        {
+            int index = ff7.SG_HEADER + ff7.SG_SLOT_SIZE*i + ff7.SG_SLOT_HEADER;
+            file.seek(index);
+            out << checksum;
+        }
+    }
+    file.close();
+    free(memory);
+}
+/*~~~~~~~~~~~~ END CHECKSUM VEGETA~~~~~~~~~~~*/
 /*~~~~~~~~END SHORT SAVE~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~New_Game~~~~~~~~~~~*/
 void MainWindow::on_actionNew_Game_triggered()
@@ -1001,37 +1033,6 @@ void MainWindow::on_actionExport_DEX_triggered()
     saveFileFull(fileName);
 }
 
-/*~~~~~~~~~~~ START CHECKSUM VEGETA~~~~~~~~~~~*/
-void MainWindow::fix_sum(const QString &fileName)
-{
-    void * memory;
-    QFile file(fileName);
-    if (!file.open(QFile::ReadWrite )){return;}
-    QDataStream out (&file);
-    out.setByteOrder(QDataStream::LittleEndian);
-    file.seek(0);//Set pointer to the Beggining
-    QByteArray ff7savefile;
-    ff7savefile = file.readAll(); //put all data in temp raw file
-    memory = (void*) malloc(ff7.SG_SIZE);//Memory Allocation
-    if (!memory){return;}
-    file.seek(0);
-    memcpy(memory,ff7savefile.mid(0x00000,ff7.SG_SIZE),ff7.SG_SIZE);
-    //Do checksum foreach slot
-    for(int i=0, checksum=0; i<ff7.SG_SLOT_NUMBER; i++)
-    {
-        char * data_pointer = ((char*)memory + ff7.SG_HEADER + ff7.SG_SLOT_SIZE*i + ff7.SG_SLOT_HEADER + 0x04);
-        checksum = ff7__checksum(data_pointer); //2 Bytes checksum (a 16-bit Byte checksum)
-        if(checksum != 0x4D1D) //if is a blank slot don't write checksum!
-        {
-            int index = ff7.SG_HEADER + ff7.SG_SLOT_SIZE*i + ff7.SG_SLOT_HEADER;
-            file.seek(index);
-            out << checksum;
-        }
-    }
-    file.close();
-    free(memory);
-}
-/*~~~~~~~~~~~~ END CHECKSUM VEGETA~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~Simple Menu Stuff~~~~~~~~~~~~~~~~*/
@@ -1201,21 +1202,7 @@ void MainWindow::on_action_Region_USA_triggered(bool checked)
     else
     {
         if((ff7.SG_Region_String[s].contains("BESCES-00869"))||(ff7.SG_Region_String[s].contains("BESCES-00867"))||(ff7.SG_Region_String[s].contains("BESCES-00900")))
-        {
-           int result=QMessageBox::question(this,tr("PAL -> NTSC Conversion"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
-           switch(result)
-           {
-            case QMessageBox::Yes:
-               ff7.slot[s].time = (ff7.slot[s].time*1.2); ff7.slot[s].desc.time = ff7.slot[s].time;
-               load=true;
-               ui->sb_time_hour->setValue(ff7.slot[s].time / 3600);
-               ui->sb_time_min->setValue(ff7.slot[s].time/60%60);
-               ui->sb_time_sec->setValue(ff7.slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
-               load=false;
-               break;
-            case QMessageBox::Cancel:break;
-           }
-        }
+            {set_ntsc_time();}//Call RegionTime Convertor
         switch(s)
         {
             case 0:ff7.SG_Region_String[s] = "BASCUS-94163FF7-S01"; break;
@@ -1261,21 +1248,7 @@ void MainWindow::on_action_Region_PAL_Generic_triggered(bool checked)
     else
     {
         if((ff7.SG_Region_String[s].contains("BASCUS-94163"))||(ff7.SG_Region_String[s].contains("BISLPS-00700"))||(ff7.SG_Region_String[s].contains("BISLPS-01057")))
-        {
-           int result=QMessageBox::question(this,tr("NTSC -> PAL Conversion"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
-           switch(result)
-           {
-           case QMessageBox::Yes:
-              ff7.slot[s].time = (ff7.slot[s].time/1.2); ff7.slot[s].desc.time = ff7.slot[s].time;
-              load=true;
-              ui->sb_time_hour->setValue(ff7.slot[s].time / 3600);
-              ui->sb_time_min->setValue(ff7.slot[s].time/60%60);
-              ui->sb_time_sec->setValue(ff7.slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
-              load=false;
-              break;
-           case QMessageBox::Cancel:break;
-           }
-        }
+            {set_pal_time();}//Call RegionTime Convertor
         switch(s)
         {
             case 0:ff7.SG_Region_String[s] = "BESCES-00867FF7-S01"; break;
@@ -1321,21 +1294,7 @@ void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
     else
     {
         if((ff7.SG_Region_String[s].contains("BASCUS-94163"))||(ff7.SG_Region_String[s].contains("BISLPS-00700"))||(ff7.SG_Region_String[s].contains("BISLPS-01057")))
-        {
-           int result=QMessageBox::question(this,tr("NTSC -> PAL Conversion"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
-           switch(result)
-           {
-           case QMessageBox::Yes:
-              ff7.slot[s].time = (ff7.slot[s].time/1.2); ff7.slot[s].desc.time = ff7.slot[s].time;
-              load=true;
-              ui->sb_time_hour->setValue(ff7.slot[s].time / 3600);
-              ui->sb_time_min->setValue(ff7.slot[s].time/60%60);
-              ui->sb_time_sec->setValue(ff7.slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
-              load=false;
-              break;
-           case QMessageBox::Cancel:break;
-           }
-        }
+            {set_pal_time();}//Call RegionTime Convertor
         switch(s)
         {
             case 0:ff7.SG_Region_String[s] = "BESCES-00869FF7-S01"; break;
@@ -1381,21 +1340,7 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
     else
     {
         if((ff7.SG_Region_String[s].contains("BASCUS-94163"))||(ff7.SG_Region_String[s].contains("BISLPS-00700"))||(ff7.SG_Region_String[s].contains("BISLPS-01057")))
-        {
-           int result=QMessageBox::question(this,tr("NTSC -> PAL Conversion"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
-           switch(result)
-           {
-           case QMessageBox::Yes:
-              ff7.slot[s].time = (ff7.slot[s].time/1.2); ff7.slot[s].desc.time = ff7.slot[s].time;
-              load=true;
-              ui->sb_time_hour->setValue(ff7.slot[s].time / 3600);
-              ui->sb_time_min->setValue(ff7.slot[s].time/60%60);
-              ui->sb_time_sec->setValue(ff7.slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
-              load=false;
-              break;
-           case QMessageBox::Cancel:break;
-           }
-        }
+            {set_pal_time();}//Call RegionTime Convertor
         switch(s)
         {
             case 0:ff7.SG_Region_String[s] = "BESCES-00900FF7-S01"; break;
@@ -1441,21 +1386,7 @@ void MainWindow::on_action_Region_JPN_triggered(bool checked)
     else
     {//First Check If Coming From PAL
         if((ff7.SG_Region_String[s].contains("BESCES-00869"))||(ff7.SG_Region_String[s].contains("BESCES-00867"))||(ff7.SG_Region_String[s].contains("BESCES-00900")))
-        {
-           int result=QMessageBox::question(this,tr("PAL -> NTSC Conversion"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
-           switch(result)
-           {
-           case QMessageBox::Yes:
-              ff7.slot[s].time = (ff7.slot[s].time*1.2); ff7.slot[s].desc.time = ff7.slot[s].time;
-              load=true;
-              ui->sb_time_hour->setValue(ff7.slot[s].time / 3600);
-              ui->sb_time_min->setValue(ff7.slot[s].time/60%60);
-              ui->sb_time_sec->setValue(ff7.slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
-              load=false;
-              break;
-           case QMessageBox::Cancel:break;
-           }
-        }
+            {set_ntsc_time();}//Call RegionTime Convertor
         switch(s)
         {
             case 0:ff7.SG_Region_String[s] = "BISLPS-00700FF7-S01"; break;
@@ -1501,21 +1432,7 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
     else
     {
         if((ff7.SG_Region_String[s].contains("BESCES-00869"))||(ff7.SG_Region_String[s].contains("BESCES-00867"))||(ff7.SG_Region_String[s].contains("BESCES-00900")))
-        {
-           int result=QMessageBox::question(this,tr("PAL -> NTSC Conversion"),tr("Would You Like To Update the Play time"),QMessageBox::Yes,QMessageBox::Cancel);
-           switch(result)
-           {
-           case QMessageBox::Yes:
-              ff7.slot[s].time = (ff7.slot[s].time*1.2); ff7.slot[s].desc.time = ff7.slot[s].time;
-              load=true;
-              ui->sb_time_hour->setValue(ff7.slot[s].time / 3600);
-              ui->sb_time_min->setValue(ff7.slot[s].time/60%60);
-              ui->sb_time_sec->setValue(ff7.slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
-              load=false;
-              break;
-           case QMessageBox::Cancel:break;
-           }
-        }
+            {set_ntsc_time();}//Call RegionTime Convertor
         switch(s)
         {
             case 0:ff7.SG_Region_String[s] = "BISLPS-01057FF7-S01"; break;
@@ -2494,6 +2411,56 @@ else // make the materia look nice
 load=false;
 }
 /*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
+void MainWindow::set_ntsc_time(void)
+{
+    int result;
+    QMessageBox fixtime(this);
+    fixtime.setIconPixmap(QPixmap(":/icon/fix_time"));
+    fixtime.setText(tr("Would you like to correct the play time?"));
+    fixtime.setInformativeText(tr("In this region the game runs 60hz"));
+    fixtime.setWindowTitle(tr("PAL -> NTSC Conversion"));
+    fixtime.addButton(QMessageBox::Yes);
+    fixtime.addButton(QMessageBox::No);
+    result=fixtime.exec();
+
+    switch(result)
+    {
+        case QMessageBox::Yes:
+            ff7.slot[s].time = (ff7.slot[s].time*1.2); ff7.slot[s].desc.time = ff7.slot[s].time;
+            load=true;
+            ui->sb_time_hour->setValue(ff7.slot[s].time / 3600);
+            ui->sb_time_min->setValue(ff7.slot[s].time/60%60);
+            ui->sb_time_sec->setValue(ff7.slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+            load=false;
+        break;
+        case QMessageBox::Cancel:break;
+    }
+}
+void MainWindow::set_pal_time(void)
+{
+    int result;
+    QMessageBox fixtime(this);
+    fixtime.setIconPixmap(QPixmap(":/icon/fix_time"));
+    fixtime.setText(tr("Would you like to correct the play time?"));
+    fixtime.setInformativeText(tr("In this region the game runs 50hz"));
+    fixtime.setWindowTitle(tr("NTSC -> PAL Conversion"));
+    fixtime.addButton(QMessageBox::Yes);
+    fixtime.addButton(QMessageBox::No);
+    result=fixtime.exec();
+
+    switch(result)
+    {
+        case QMessageBox::Yes:
+            ff7.slot[s].time = (ff7.slot[s].time/1.2); ff7.slot[s].desc.time = ff7.slot[s].time;
+            load=true;
+            ui->sb_time_hour->setValue(ff7.slot[s].time / 3600);
+            ui->sb_time_min->setValue(ff7.slot[s].time/60%60);
+            ui->sb_time_sec->setValue(ff7.slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+            load=false;
+        break;
+        case QMessageBox::Cancel:break;
+    }
+}
 void MainWindow::materiaupdate(void)
 {
     load=true;
