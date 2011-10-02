@@ -2135,6 +2135,16 @@ void MainWindow::setmenu(void)
     /*~~End Detected Region~~*/
     load=false;
 }
+void MainWindow::setPreviewColors()
+{
+    QImage image(2, 2, QImage::Format_ARGB32);
+    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
+    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
+    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
+    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
+    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+}
 void MainWindow::materiaupdate_slot(void)
 {
 load=true;
@@ -2891,14 +2901,6 @@ void MainWindow::guirefresh(void)
 
     //dialog preview
     //make the preview nice
-    QImage image(2, 2, QImage::Format_ARGB32);
-    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
-    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
-    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
-    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
-    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
-
     /*~~~~~End Options Loading~~~~~*/
 
 
@@ -2954,9 +2956,8 @@ void MainWindow::guirefresh(void)
         else{ui->list_menu_locked->currentItem()->setCheckState(Qt::Unchecked);}
         ui->list_menu_locked->setCurrentRow(-1);
     }
+
     ui->btn_clear_keyitems->click();
-
-
     for (int i=0;i<51;i++)// key items
     {
         if (ff7.slot[s].keyitems[i/8] & (1 << (i%8)))
@@ -3049,6 +3050,7 @@ void MainWindow::guirefresh(void)
     charupdate();
     materiaupdate();
     progress_update();
+    setPreviewColors();
     if(ui->action_show_test_data->isChecked()){testdata_refresh();}
     ui->w_m_s1->click();
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
@@ -3147,6 +3149,23 @@ if((ff7.slot[s].z_26[8])& (1<<6)){ui->cb_s7ts_7->setChecked(Qt::Checked);}
 else{ui->cb_s7ts_7->setChecked(Qt::Unchecked);}
 if((ff7.slot[s].z_26[8])& (1<<7)){ui->cb_s7ts_8->setChecked(Qt::Checked);}
 else{ui->cb_s7ts_8->setChecked(Qt::Unchecked);}
+
+if((ff7.slot[s].z_23[26])& (1<<0)){ui->cb_s5_1->setChecked(Qt::Checked);}
+else{ui->cb_s5_1->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_23[26])& (1<<1)){ui->cb_s5_2->setChecked(Qt::Checked);}
+else{ui->cb_s5_2->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_23[26])& (1<<2)){ui->cb_s5_3->setChecked(Qt::Checked);}
+else{ui->cb_s5_3->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_23[26])& (1<<3)){ui->cb_s5_4->setChecked(Qt::Checked);}
+else{ui->cb_s5_4->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_23[26])& (1<<4)){ui->cb_s5_5->setChecked(Qt::Checked);}
+else{ui->cb_s5_5->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_23[26])& (1<<5)){ui->cb_s5_6->setChecked(Qt::Checked);}
+else{ui->cb_s5_6->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_23[26])& (1<<6)){ui->cb_s5_7->setChecked(Qt::Checked);}
+else{ui->cb_s5_7->setChecked(Qt::Unchecked);}
+if((ff7.slot[s].z_23[26])& (1<<7)){ui->cb_s5_8->setChecked(Qt::Checked);}
+else{ui->cb_s5_8->setChecked(Qt::Unchecked);}
 
 if((ff7.slot[s].midgartrainflags)& (1<<0)){ui->cb_midgartrain_1->setChecked(Qt::Checked);}
 else{ui->cb_midgartrain_1->setChecked(Qt::Unchecked);}
@@ -4421,513 +4440,283 @@ void MainWindow::on_slide_ul_r_valueChanged(int value)
     if(!load){ff7.slot[s].colors[0][0] = value;}
 
     QString g_style = "QSlider#slide_ul_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    g_style.append(QString::number(ui->slide_ul_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(0));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_ul_b->value()));
-    g_style.append(", 255), stop:1 rgba(");
-    g_style.append(QString::number(ui->slide_ul_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(255));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_ul_b->value()));
-    g_style.append(",255));}");
+    g_style.append(QString::number(ui->slide_ul_r->value()));   g_style.append(",");
+    g_style.append(QString::number(0));                         g_style.append(",");
+    g_style.append(QString::number(ui->slide_ul_b->value()));   g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_ul_r->value()));   g_style.append(",");
+    g_style.append(QString::number(255));                       g_style.append(",");
+    g_style.append(QString::number(ui->slide_ul_b->value()));   g_style.append(",255));}");
 
     QString b_style =  "QSlider#slide_ul_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    b_style.append(QString::number(ui->slide_ul_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_ul_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(0));
-    b_style.append(", 255), stop:1 rgba(");
-    b_style.append(QString::number(ui->slide_ul_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_ul_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(255));
-    b_style.append(",255));}");
+    b_style.append(QString::number(ui->slide_ul_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_ul_g->value()));   b_style.append(",");
+    b_style.append(QString::number(0));                         b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_ul_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_ul_g->value()));   b_style.append(",");
+    b_style.append(QString::number(255));                       b_style.append(",255));}");
 
     ui->slide_ul_g->setStyleSheet(g_style);
     ui->slide_ul_b->setStyleSheet(b_style);
-
-    QImage image(2, 2, QImage::Format_ARGB32);
-    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
-    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
-    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
-    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
-    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+    setPreviewColors();
 }
 void MainWindow::on_slide_ul_g_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[0][1] = value;}
 
     QString r_style = "QSlider#slide_ul_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    r_style.append(QString::number(0));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ul_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ul_b->value()));
-    r_style.append(", 255), stop:1 rgba(");
-    r_style.append(QString::number(255));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ul_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ul_b->value()));
-    r_style.append(",255));}");
+    r_style.append(QString::number(0));                         r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_b->value()));   r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));                       r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_b->value()));   r_style.append(",255));}");
 
     QString b_style =  "QSlider#slide_ul_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    b_style.append(QString::number(ui->slide_ul_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_ul_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(0));
-    b_style.append(", 255), stop:1 rgba(");
-    b_style.append(QString::number(ui->slide_ul_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_ul_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(255));
-    b_style.append(",255));}");
+    b_style.append(QString::number(ui->slide_ul_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_ul_g->value()));   b_style.append(",");
+    b_style.append(QString::number(0));                         b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_ul_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_ul_g->value()));   b_style.append(",");
+    b_style.append(QString::number(255));                       b_style.append(",255));}");
 
     ui->slide_ul_r->setStyleSheet(r_style);
     ui->slide_ul_b->setStyleSheet(b_style);
-
-    QImage image(2, 2, QImage::Format_ARGB32);
-    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
-    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
-    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
-    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
-    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+    setPreviewColors();
 }
 void MainWindow::on_slide_ul_b_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[0][2] = value;}
 
     QString r_style = "QSlider#slide_ul_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    r_style.append(QString::number(0));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ul_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ul_b->value()));
-    r_style.append(", 255), stop:1 rgba(");
-    r_style.append(QString::number(255));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ul_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ul_b->value()));
-    r_style.append(",255));}");
+    r_style.append(QString::number(0));                         r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_b->value()));   r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));                       r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_ul_b->value()));   r_style.append(",255));}");
 
     QString g_style = "QSlider#slide_ul_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    g_style.append(QString::number(ui->slide_ul_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(0));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_ul_b->value()));
-    g_style.append(", 255), stop:1 rgba(");
-    g_style.append(QString::number(ui->slide_ul_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(255));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_ul_b->value()));
-    g_style.append(",255));}");
+    g_style.append(QString::number(ui->slide_ul_r->value()));   g_style.append(",");
+    g_style.append(QString::number(0));                         g_style.append(",");
+    g_style.append(QString::number(ui->slide_ul_b->value()));   g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_ul_r->value()));   g_style.append(",");
+    g_style.append(QString::number(255));                       g_style.append(",");
+    g_style.append(QString::number(ui->slide_ul_b->value()));   g_style.append(",255));}");
 
     ui->slide_ul_r->setStyleSheet(r_style);
     ui->slide_ul_g->setStyleSheet(g_style);
-
-    QImage image(2, 2, QImage::Format_ARGB32);
-    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
-    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
-    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
-    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
-    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+    setPreviewColors();
 }
 
 void MainWindow::on_slide_ur_r_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[1][0] = value;}
     QString g_style = "QSlider#slide_ur_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    g_style.append(QString::number(ui->slide_ur_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(0));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_ur_b->value()));
-    g_style.append(", 255), stop:1 rgba(");
-    g_style.append(QString::number(ui->slide_ur_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(255));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_ur_b->value()));
-    g_style.append(",255));}");
+    g_style.append(QString::number(ui->slide_ur_r->value()));   g_style.append(",");
+    g_style.append(QString::number(0));                         g_style.append(",");
+    g_style.append(QString::number(ui->slide_ur_b->value()));   g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_ur_r->value()));   g_style.append(",");
+    g_style.append(QString::number(255));                       g_style.append(",");
+    g_style.append(QString::number(ui->slide_ur_b->value()));   g_style.append(",255));}");
 
     QString b_style =  "QSlider#slide_ur_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    b_style.append(QString::number(ui->slide_ur_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_ur_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(0));
-    b_style.append(", 255), stop:1 rgba(");
-    b_style.append(QString::number(ui->slide_ur_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_ur_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(255));
-    b_style.append(",255));}");
+    b_style.append(QString::number(ui->slide_ur_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_ur_g->value()));   b_style.append(",");
+    b_style.append(QString::number(0));                         b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_ur_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_ur_g->value()));   b_style.append(",");
+    b_style.append(QString::number(255));                       b_style.append(",255));}");
 
     ui->slide_ur_g->setStyleSheet(g_style);
     ui->slide_ur_b->setStyleSheet(b_style);
-
-    QImage image(2, 2, QImage::Format_ARGB32);
-    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
-    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
-    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
-    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
-    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
-
+    setPreviewColors();
 }
 void MainWindow::on_slide_ur_g_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[1][1] = value;}
     QString r_style = "QSlider#slide_ur_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    r_style.append(QString::number(0));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ur_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ur_b->value()));
-    r_style.append(", 255), stop:1 rgba(");
-    r_style.append(QString::number(255));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ur_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ur_b->value()));
-    r_style.append(",255));}");
+    r_style.append(QString::number(0));                         r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_b->value()));   r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));                       r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_b->value()));   r_style.append(",255));}");
 
     QString b_style =  "QSlider#slide_ur_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    b_style.append(QString::number(ui->slide_ur_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_ur_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(0));
-    b_style.append(", 255), stop:1 rgba(");
-    b_style.append(QString::number(ui->slide_ur_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_ur_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(255));
-    b_style.append(",255));}");
+    b_style.append(QString::number(ui->slide_ur_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_ur_g->value()));   b_style.append(",");
+    b_style.append(QString::number(0));                         b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_ur_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_ur_g->value()));   b_style.append(",");
+    b_style.append(QString::number(255));                       b_style.append(",255));}");
 
     ui->slide_ur_r->setStyleSheet(r_style);
     ui->slide_ur_b->setStyleSheet(b_style);
-
-    QImage image(2, 2, QImage::Format_ARGB32);
-    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
-    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
-    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
-    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
-    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+    setPreviewColors();
 }
 void MainWindow::on_slide_ur_b_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[1][2] = value;}
     QString r_style = "QSlider#slide_ur_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    r_style.append(QString::number(0));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ur_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ur_b->value()));
-    r_style.append(", 255), stop:1 rgba(");
-    r_style.append(QString::number(255));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ur_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ur_b->value()));
-    r_style.append(",255));}");
+    r_style.append(QString::number(0));                         r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_b->value()));   r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));                       r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_ur_b->value()));   r_style.append(",255));}");
 
     QString g_style = "QSlider#slide_ur_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    g_style.append(QString::number(ui->slide_ur_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(0));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_ur_b->value()));
-    g_style.append(", 255), stop:1 rgba(");
-    g_style.append(QString::number(ui->slide_ur_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(255));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_ur_b->value()));
-    g_style.append(",255));}");
+    g_style.append(QString::number(ui->slide_ur_r->value()));   g_style.append(",");
+    g_style.append(QString::number(0));                         g_style.append(",");
+    g_style.append(QString::number(ui->slide_ur_b->value()));   g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_ur_r->value()));   g_style.append(",");
+    g_style.append(QString::number(255));                       g_style.append(",");
+    g_style.append(QString::number(ui->slide_ur_b->value()));   g_style.append(",255));}");
 
     ui->slide_ur_r->setStyleSheet(r_style);
     ui->slide_ur_g->setStyleSheet(g_style);
-
-    QImage image(2, 2, QImage::Format_ARGB32);
-    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
-    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
-    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
-    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
-    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+    setPreviewColors();
 }
 
 void MainWindow::on_slide_ll_r_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[2][0] = value;}
     QString g_style = "QSlider#slide_ll_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    g_style.append(QString::number(ui->slide_ll_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(0));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_ll_b->value()));
-    g_style.append(", 255), stop:1 rgba(");
-    g_style.append(QString::number(ui->slide_ll_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(255));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_ll_b->value()));
-    g_style.append(",255));}");
+    g_style.append(QString::number(ui->slide_ll_r->value()));   g_style.append(",");
+    g_style.append(QString::number(0));                         g_style.append(",");
+    g_style.append(QString::number(ui->slide_ll_b->value()));   g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_ll_r->value()));   g_style.append(",");
+    g_style.append(QString::number(255));                       g_style.append(",");
+    g_style.append(QString::number(ui->slide_ll_b->value()));   g_style.append(",255));}");
 
     QString b_style =  "QSlider#slide_ll_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    b_style.append(QString::number(ui->slide_ll_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_ll_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(0));
-    b_style.append(", 255), stop:1 rgba(");
-    b_style.append(QString::number(ui->slide_ll_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_ll_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(255));
-    b_style.append(",255));}");
+    b_style.append(QString::number(ui->slide_ll_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_ll_g->value()));   b_style.append(",");
+    b_style.append(QString::number(0));                         b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_ll_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_ll_g->value()));   b_style.append(",");
+    b_style.append(QString::number(255));                       b_style.append(",255));}");
 
     ui->slide_ll_g->setStyleSheet(g_style);
     ui->slide_ll_b->setStyleSheet(b_style);
-
-    QImage image(2, 2, QImage::Format_ARGB32);
-    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
-    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
-    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
-    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
-    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
-
+    setPreviewColors();
 }
 void MainWindow::on_slide_ll_g_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[2][1] = value;}
     QString r_style = "QSlider#slide_ll_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    r_style.append(QString::number(0));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ll_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ll_b->value()));
-    r_style.append(", 255), stop:1 rgba(");
-    r_style.append(QString::number(255));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ll_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ll_b->value()));
-    r_style.append(",255));}");
+    r_style.append(QString::number(0));                         r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_b->value()));   r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));                       r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_b->value()));   r_style.append(",255));}");
 
     QString b_style =  "QSlider#slide_ll_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    b_style.append(QString::number(ui->slide_ll_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_ll_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(0));
-    b_style.append(", 255), stop:1 rgba(");
-    b_style.append(QString::number(ui->slide_ll_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_ll_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(255));
-    b_style.append(",255));}");
+    b_style.append(QString::number(ui->slide_ll_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_ll_g->value()));   b_style.append(",");
+    b_style.append(QString::number(0));                         b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_ll_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_ll_g->value()));   b_style.append(",");
+    b_style.append(QString::number(255));                       b_style.append(",255));}");
 
     ui->slide_ll_r->setStyleSheet(r_style);
     ui->slide_ll_b->setStyleSheet(b_style);
-
-    QImage image(2, 2, QImage::Format_ARGB32);
-    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
-    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
-    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
-    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
-    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+    setPreviewColors();
 }
 void MainWindow::on_slide_ll_b_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[2][2] = value;}
     QString r_style = "QSlider#slide_ll_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    r_style.append(QString::number(0));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ll_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ll_b->value()));
-    r_style.append(", 255), stop:1 rgba(");
-    r_style.append(QString::number(255));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ll_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_ll_b->value()));
-    r_style.append(",255));}");
+    r_style.append(QString::number(0));                         r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_b->value()));   r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));                       r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_ll_b->value()));   r_style.append(",255));}");
 
     QString g_style = "QSlider#slide_ll_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    g_style.append(QString::number(ui->slide_ll_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(0));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_ll_b->value()));
-    g_style.append(", 255), stop:1 rgba(");
-    g_style.append(QString::number(ui->slide_ll_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(255));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_ll_b->value()));
-    g_style.append(",255));}");
+    g_style.append(QString::number(ui->slide_ll_r->value()));   g_style.append(",");
+    g_style.append(QString::number(0));                         g_style.append(",");
+    g_style.append(QString::number(ui->slide_ll_b->value()));   g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_ll_r->value()));   g_style.append(",");
+    g_style.append(QString::number(255));                       g_style.append(",");
+    g_style.append(QString::number(ui->slide_ll_b->value()));   g_style.append(",255));}");
 
     ui->slide_ll_r->setStyleSheet(r_style);
     ui->slide_ll_g->setStyleSheet(g_style);
-
-    QImage image(2, 2, QImage::Format_ARGB32);
-    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
-    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
-    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
-    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
-    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+    setPreviewColors();
 }
 
 void MainWindow::on_slide_lr_r_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[3][0] = value;}
     QString g_style = "QSlider#slide_lr_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    g_style.append(QString::number(ui->slide_lr_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(0));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_lr_b->value()));
-    g_style.append(", 255), stop:1 rgba(");
-    g_style.append(QString::number(ui->slide_lr_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(255));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_lr_b->value()));
-    g_style.append(",255));}");
+    g_style.append(QString::number(ui->slide_lr_r->value()));   g_style.append(",");
+    g_style.append(QString::number(0));                         g_style.append(",");
+    g_style.append(QString::number(ui->slide_lr_b->value()));   g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_lr_r->value()));   g_style.append(",");
+    g_style.append(QString::number(255));                       g_style.append(",");
+    g_style.append(QString::number(ui->slide_lr_b->value()));   g_style.append(",255));}");
 
     QString b_style =  "QSlider#slide_lr_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    b_style.append(QString::number(ui->slide_lr_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_lr_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(0));
-    b_style.append(", 255), stop:1 rgba(");
-    b_style.append(QString::number(ui->slide_lr_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_lr_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(255));
-    b_style.append(",255));}");
+    b_style.append(QString::number(ui->slide_lr_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_lr_g->value()));   b_style.append(",");
+    b_style.append(QString::number(0));                         b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_lr_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_lr_g->value()));   b_style.append(",");
+    b_style.append(QString::number(255));                       b_style.append(",255));}");
 
     ui->slide_lr_g->setStyleSheet(g_style);
     ui->slide_lr_b->setStyleSheet(b_style);
-
-    QImage image(2, 2, QImage::Format_ARGB32);
-    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
-    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
-    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
-    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
-    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+    setPreviewColors();
 
 }
 void MainWindow::on_slide_lr_g_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[3][1] = value;}
     QString r_style = "QSlider#slide_lr_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    r_style.append(QString::number(0));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_lr_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_lr_b->value()));
-    r_style.append(", 255), stop:1 rgba(");
-    r_style.append(QString::number(255));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_lr_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_lr_b->value()));
-    r_style.append(",255));}");
+    r_style.append(QString::number(0));                         r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_b->value()));   r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));                       r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_b->value()));   r_style.append(",255));}");
 
     QString b_style =  "QSlider#slide_lr_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    b_style.append(QString::number(ui->slide_lr_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_lr_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(0));
-    b_style.append(", 255), stop:1 rgba(");
-    b_style.append(QString::number(ui->slide_lr_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_lr_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(255));
-    b_style.append(",255));}");
+    b_style.append(QString::number(ui->slide_lr_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_lr_g->value()));   b_style.append(",");
+    b_style.append(QString::number(0));                         b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_lr_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_lr_g->value()));   b_style.append(",");
+    b_style.append(QString::number(255));                       b_style.append(",255));}");
 
     ui->slide_lr_r->setStyleSheet(r_style);
     ui->slide_lr_b->setStyleSheet(b_style);
-
-    QImage image(2, 2, QImage::Format_ARGB32);
-    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
-    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
-    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
-    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
-    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+    setPreviewColors();
 }
 void MainWindow::on_slide_lr_b_valueChanged(int value)
 {
     if(!load){ff7.slot[s].colors[3][2] = value;}
     QString r_style = "QSlider#slide_lr_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    r_style.append(QString::number(0));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_lr_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_lr_b->value()));
-    r_style.append(", 255), stop:1 rgba(");
-    r_style.append(QString::number(255));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_lr_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_lr_b->value()));
-    r_style.append(",255));}");
+    r_style.append(QString::number(0));                         r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_b->value()));   r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));                       r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_lr_b->value()));   r_style.append(",255));}");
 
     QString g_style = "QSlider#slide_lr_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    g_style.append(QString::number(ui->slide_lr_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(0));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_lr_b->value()));
-    g_style.append(", 255), stop:1 rgba(");
-    g_style.append(QString::number(ui->slide_lr_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(255));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_lr_b->value()));
-    g_style.append(",255));}");
+    g_style.append(QString::number(ui->slide_lr_r->value()));   g_style.append(",");
+    g_style.append(QString::number(0));                         g_style.append(",");
+    g_style.append(QString::number(ui->slide_lr_b->value()));   g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_lr_r->value()));   g_style.append(",");
+    g_style.append(QString::number(255));                       g_style.append(",");
+    g_style.append(QString::number(ui->slide_lr_b->value()));   g_style.append(",255));}");
 
     ui->slide_lr_r->setStyleSheet(r_style);
     ui->slide_lr_g->setStyleSheet(g_style);
-
-    QImage image(2, 2, QImage::Format_ARGB32);
-    image.setPixel(0, 0, QColor(int(ff7.slot[s].colors[0][0]),int(ff7.slot[s].colors[0][1]),int(ff7.slot[s].colors[0][2])).rgb());
-    image.setPixel(1, 0, QColor(int(ff7.slot[s].colors[1][0]),int(ff7.slot[s].colors[1][1]),int(ff7.slot[s].colors[1][2])).rgb());
-    image.setPixel(0, 1, QColor(int(ff7.slot[s].colors[2][0]),int(ff7.slot[s].colors[2][1]),int(ff7.slot[s].colors[2][2])).rgb());
-    image.setPixel(1, 1, QColor(int(ff7.slot[s].colors[3][0]),int(ff7.slot[s].colors[3][1]),int(ff7.slot[s].colors[3][2])).rgb());
-    QImage gradient = image.scaled(ui->lbl_window_preview->width(),ui->lbl_window_preview->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
-    ui->lbl_window_preview->setPixmap(QPixmap::fromImage(gradient));
+    setPreviewColors();
 }
 
 /*end of color sliders*/
@@ -5020,6 +4809,15 @@ void MainWindow::on_cb_s7ts_6_toggled(bool checked){if(!load){if(checked){ff7.sl
 void MainWindow::on_cb_s7ts_7_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[8] |= (1<<6);}else{ff7.slot[s].z_26[8] &= ~(1<<6);}}}
 void MainWindow::on_cb_s7ts_8_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_26[8] |= (1<<7);}else{ff7.slot[s].z_26[8] &= ~(1<<7);}}}
 
+void MainWindow::on_cb_s5_1_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_23[26] |= (1<<0);}else{ff7.slot[s].z_23[26] &= ~(1<<0);}}}
+void MainWindow::on_cb_s5_2_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_23[26] |= (1<<1);}else{ff7.slot[s].z_23[26] &= ~(1<<1);}}}
+void MainWindow::on_cb_s5_3_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_23[26] |= (1<<2);}else{ff7.slot[s].z_23[26] &= ~(1<<2);}}}
+void MainWindow::on_cb_s5_4_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_23[26] |= (1<<3);}else{ff7.slot[s].z_23[26] &= ~(1<<3);}}}
+void MainWindow::on_cb_s5_5_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_23[26] |= (1<<4);}else{ff7.slot[s].z_23[26] &= ~(1<<4);}}}
+void MainWindow::on_cb_s5_6_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_23[26] |= (1<<5);}else{ff7.slot[s].z_23[26] &= ~(1<<5);}}}
+void MainWindow::on_cb_s5_7_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_23[26] |= (1<<6);}else{ff7.slot[s].z_23[26] &= ~(1<<6);}}}
+void MainWindow::on_cb_s5_8_toggled(bool checked){if(!load){if(checked){ff7.slot[s].z_23[26] |= (1<<7);}else{ff7.slot[s].z_23[26] &= ~(1<<7);}}}
+
 void MainWindow::on_cb_bombing_int_stateChanged(int checked)
 {if(!load){
     if(checked == Qt::Checked){ff7.slot[s].intbombing =0x14;}
@@ -5061,6 +4859,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7.slot[s].bm_progress2=198;
         ff7.slot[s].bm_progress3=3;
         ui->cb_bombing_int->setChecked(0);
+        ui->cb_s5_7->setChecked(0);//show aeris on roof of chruch durring script
         ui->line_location->setText(tr("Chruch in the Slums"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(183);

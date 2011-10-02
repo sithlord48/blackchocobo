@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>375</width>
-    <height>406</height>
+    <width>373</width>
+    <height>404</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -499,6 +499,11 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>New: Japanese Translation</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New: Materia Buffer , copy/paste materias</string>
           </property>
          </item>
          <item>
@@ -1494,8 +1499,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>347</width>
-            <height>390</height>
+            <width>138</width>
+            <height>740</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">

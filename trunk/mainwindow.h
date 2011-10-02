@@ -51,8 +51,8 @@ public slots:
 
 private slots://try to keep these in the same order as the .cpp file
   
-  /*Loading and Saving related Functions*/  
-
+    /*Loading and Saving related Functions*/
+    void setPreviewColors();
     void on_actionNew_Window_triggered();
     void on_actionOpen_Save_File_activated();
     void on_actionReload_triggered();
@@ -345,6 +345,7 @@ private slots://try to keep these in the same order as the .cpp file
 
     void on_cb_replay_currentIndexChanged(int index);
     void on_sb_mprogress_valueChanged(int value);
+
     void on_cb_bm1_1_toggled(bool checked);
     void on_cb_bm1_2_toggled(bool checked);
     void on_cb_bm1_3_toggled(bool checked);
@@ -353,6 +354,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_bm1_6_toggled(bool checked);
     void on_cb_bm1_7_toggled(bool checked);
     void on_cb_bm1_8_toggled(bool checked);
+
     void on_cb_bm2_1_toggled(bool checked);
     void on_cb_bm2_2_toggled(bool checked);
     void on_cb_bm2_3_toggled(bool checked);
@@ -361,6 +363,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_bm2_6_toggled(bool checked);
     void on_cb_bm2_7_toggled(bool checked);
     void on_cb_bm2_8_toggled(bool checked);
+
     void on_cb_bm3_1_toggled(bool checked);
     void on_cb_bm3_2_toggled(bool checked);
     void on_cb_bm3_3_toggled(bool checked);
@@ -387,6 +390,15 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_s7ts_6_toggled(bool checked);
     void on_cb_s7ts_7_toggled(bool checked);
     void on_cb_s7ts_8_toggled(bool checked);
+
+    void on_cb_s5_1_toggled(bool checked);
+    void on_cb_s5_2_toggled(bool checked);
+    void on_cb_s5_3_toggled(bool checked);
+    void on_cb_s5_4_toggled(bool checked);
+    void on_cb_s5_5_toggled(bool checked);
+    void on_cb_s5_6_toggled(bool checked);
+    void on_cb_s5_7_toggled(bool checked);
+    void on_cb_s5_8_toggled(bool checked);
 
     // game options tab
     void setoptions_one();
