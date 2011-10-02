@@ -2155,10 +2155,6 @@
         <translation>Filtro por Tipo</translation>
     </message>
     <message>
-        <source>Clear Materia Slot</source>
-        <translation>Vaciar la ranura de materia</translation>
-    </message>
-    <message>
         <source>Materia Skills</source>
         <translation>Habilidades de la Materia</translation>
     </message>
@@ -2293,10 +2289,6 @@
     <message>
         <source>z</source>
         <translation>z</translation>
-    </message>
-    <message>
-        <source>General Config</source>
-        <translation>Config. General</translation>
     </message>
     <message>
         <source>Sound Mode</source>
@@ -4070,6 +4062,26 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>In this region the game runs 50hz</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ctrl+C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ctrl+V</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Del</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Materia Slot Actions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Copy Slot</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

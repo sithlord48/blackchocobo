@@ -90,20 +90,20 @@ void fix_vmc_header(FF7 &ff7)
     QByteArray mc_header_2;
     int index=2;
 
-    if(ff7.savetype==5){for(int i=0; i<0x80; i++){mc_header_2.append(ff7.file_header_psp[i]);} index=0x82;}
-    if(ff7.savetype==6){for(int i=0; i<0x40; i++){mc_header_2.append(ff7.file_header_vgs[i]);} index=0x42;}
-    if(ff7.savetype==7){for(int i=0; i<0xF40; i++){mc_header_2.append(ff7.file_header_vgs[i]);} index=0xF42;}
+    if(ff7.SG_TYPE =="PSP"){for(int i=0; i<0x80; i++){mc_header_2.append(ff7.file_header_psp[i]);} index=0x82;}
+    if(ff7.SG_TYPE =="VGS"){for(int i=0; i<0x40; i++){mc_header_2.append(ff7.file_header_vgs[i]);} index=0x42;}
+    if(ff7.SG_TYPE =="DEX"){for(int i=0; i<0xF40; i++){mc_header_2.append(ff7.file_header_vgs[i]);} index=0xF42;}
     quint8 xor_byte = 0x00;
     mc_header_2.append("MC");
-    if(ff7.savetype==3){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_mc[k+index]);}}
-    if(ff7.savetype==5){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_psp[k+index]);}}
-    if(ff7.savetype==6){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_vgs[k+index]);}}
-    if(ff7.savetype==7){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_dex[k+index]);}}
+    if(ff7.SG_TYPE =="MC"){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_mc[k+index]);}}
+    if(ff7.SG_TYPE =="PSP"){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_psp[k+index]);}}
+    if(ff7.SG_TYPE =="VGS"){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_vgs[k+index]);}}
+    if(ff7.SG_TYPE =="DEX"){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_dex[k+index]);}}
     xor_byte= 0x00;
-    if(ff7.savetype==3){for(int x=0;x<127;x++){xor_byte^=mc_header_2[x];}}
-    if(ff7.savetype==5){for(int x=128;x<256;x++){xor_byte^=mc_header_2[x];}}
-    if(ff7.savetype==6){for(int x=64;x<192;x++){xor_byte^=mc_header_2[x];}}
-    if(ff7.savetype==7){for(int x=0xF40;x<0x1000;x++){xor_byte^=mc_header_2[x];}}
+    if(ff7.SG_TYPE =="MC"){for(int x=0;x<127;x++){xor_byte^=mc_header_2[x];}}
+    if(ff7.SG_TYPE =="PSP"){for(int x=128;x<256;x++){xor_byte^=mc_header_2[x];}}
+    if(ff7.SG_TYPE =="VGS"){for(int x=64;x<192;x++){xor_byte^=mc_header_2[x];}}
+    if(ff7.SG_TYPE =="DEX"){for(int x=0xF40;x<0x1000;x++){xor_byte^=mc_header_2[x];}}
     //write xor byte..
     mc_header_2.append(xor_byte);
     // thats a normal header
@@ -111,9 +111,9 @@ void fix_vmc_header(FF7 &ff7)
     {
         //calc xor byte..
         index= (128 +(128*i));
-        if(ff7.savetype==5){index+=0x80;}
-        if(ff7.savetype==6){index+=0x40;}
-        if(ff7.savetype==7){index+=0xF40;}
+        if(ff7.SG_TYPE =="PSP"){index+=0x80;}
+        if(ff7.SG_TYPE =="VGS"){index+=0x40;}
+        if(ff7.SG_TYPE =="DEX"){index+=0xF40;}
         if(ff7.SG_Region_String[i].contains("00867") ||ff7.SG_Region_String[i].contains("00869") ||
            ff7.SG_Region_String[i].contains("00900") ||ff7.SG_Region_String[i].contains("94163") ||
            ff7.SG_Region_String[i].contains("00700") ||ff7.SG_Region_String[i].contains("01057"))
@@ -255,33 +255,33 @@ void fix_vmc_header(FF7 &ff7)
         } // write string if found
         else
         {//Write What Ever is in the Header (Non ff7 data)
-            if(ff7.savetype==3){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}}
-            if(ff7.savetype==5){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_psp[index+j]);}}
-            if(ff7.savetype==6){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_vgs[index+j]);}}
-            if(ff7.savetype==7){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_dex[index+j]);}}
+            if(ff7.SG_TYPE =="MC"){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}}
+            if(ff7.SG_TYPE =="PSP"){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_psp[index+j]);}}
+            if(ff7.SG_TYPE =="VGS"){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_vgs[index+j]);}}
+            if(ff7.SG_TYPE =="DEX"){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_dex[index+j]);}}
         }
     }
 
-    if(ff7.savetype==3)
+    if(ff7.SG_TYPE =="MC")
     {
         index=2048;
         for(int i=0;i<6143;i++){mc_header_2.append(ff7.file_header_mc[index+i]);}// fill the remainder
         memcpy(&ff7.file_header_mc,mc_header_2,0x2000);
     }
-    if(ff7.savetype==5)
+    if(ff7.SG_TYPE =="PSP")
     {
         index=2048+0x80;
         for(int i=0;i<6143;i++){mc_header_2.append(ff7.file_header_psp[index+i]);}// fill the remainder
         memcpy(&ff7.file_header_psp,mc_header_2,0x2080);
         //PUT PSP CHECKSUMING HERE ..
     }
-    if(ff7.savetype==6)
+    if(ff7.SG_TYPE =="VGS")
     {
         index=2048+0x40;
         for(int i=0;i<6143;i++){mc_header_2.append(ff7.file_header_vgs[index+i]);}// fill the remainder
         memcpy(&ff7.file_header_psp,mc_header_2,0x2040);
     }
-    if(ff7.savetype==7)
+    if(ff7.SG_TYPE =="DEX")
     {
         index=2048+0xF40;
         for(int i=0;i<6143;i++){mc_header_2.append(ff7.file_header_dex[index+i]);}// fill the remainder
@@ -391,22 +391,7 @@ static const char *itemNames[]=
     QT_TRANSLATE_NOOP("Items","Sprint Shoes"),QT_TRANSLATE_NOOP("Items","Peace Ring"),QT_TRANSLATE_NOOP("Items","Ribbon"),QT_TRANSLATE_NOOP("Items","Fire Ring"),QT_TRANSLATE_NOOP("Items","Ice Ring"),QT_TRANSLATE_NOOP("Items","Bolt Ring"),QT_TRANSLATE_NOOP("Items","Tetra Elemental"),QT_TRANSLATE_NOOP("Items","Safety Bit"),
     QT_TRANSLATE_NOOP("Items","Fury Ring"),QT_TRANSLATE_NOOP("Items","Curse Ring"),QT_TRANSLATE_NOOP("Items","Protect Ring"),QT_TRANSLATE_NOOP("Items","Cat's Bell"),QT_TRANSLATE_NOOP("Items","Reflect Ring"),QT_TRANSLATE_NOOP("Items","Water Ring"),QT_TRANSLATE_NOOP("Items","Sneak Glove"),QT_TRANSLATE_NOOP("Items","HypnoCrown")
 };
-static const char *materiaNames[]=
-{
-    QT_TRANSLATE_NOOP("Materia_Names","MP Plus"),QT_TRANSLATE_NOOP("Materia_Names","HP Plus"),QT_TRANSLATE_NOOP("Materia_Names","Speed Plus"),QT_TRANSLATE_NOOP("Materia_Names","Magic Plus"),QT_TRANSLATE_NOOP("Materia_Names","Luck Plus"),QT_TRANSLATE_NOOP("Materia_Names","EXP Plus"),QT_TRANSLATE_NOOP("Materia_Names","Gil Plus"),
-    QT_TRANSLATE_NOOP("Materia_Names","Enemy Away"),QT_TRANSLATE_NOOP("Materia_Names","Enemy Lure"),QT_TRANSLATE_NOOP("Materia_Names","Chocobo Lure"),QT_TRANSLATE_NOOP("Materia_Names","Pre-emptive"),QT_TRANSLATE_NOOP("Materia_Names","Long Range"),    QT_TRANSLATE_NOOP("Materia_Names","Mega All"),QT_TRANSLATE_NOOP("Materia_Names","Counter Attack"),
-    QT_TRANSLATE_NOOP("Materia_Names","Slash-All"),QT_TRANSLATE_NOOP("Materia_Names","Double Cut"),QT_TRANSLATE_NOOP("Materia_Names","Cover"),QT_TRANSLATE_NOOP("Materia_Names","Underwater"),QT_TRANSLATE_NOOP("Materia_Names","HP <-> MP"),QT_TRANSLATE_NOOP("Materia_Names","W-Magic"),QT_TRANSLATE_NOOP("Materia_Names","W-Summon"),
-    QT_TRANSLATE_NOOP("Materia_Names","W-Item"),QT_TRANSLATE_NOOP("Materia_Names","DON'T USE"),QT_TRANSLATE_NOOP("Materia_Names","All"),QT_TRANSLATE_NOOP("Materia_Names","Counter"),QT_TRANSLATE_NOOP("Materia_Names","Magic Counter"),QT_TRANSLATE_NOOP("Materia_Names","MP Turbo"),QT_TRANSLATE_NOOP("Materia_Names","MP Absorb"),
-    QT_TRANSLATE_NOOP("Materia_Names","HP Absorb"),QT_TRANSLATE_NOOP("Materia_Names","Elemental"),QT_TRANSLATE_NOOP("Materia_Names","Added Effect"),QT_TRANSLATE_NOOP("Materia_Names","Sneak Attack"),QT_TRANSLATE_NOOP("Materia_Names","Final Attack"),QT_TRANSLATE_NOOP("Materia_Names","Added Cut"),QT_TRANSLATE_NOOP("Materia_Names","Steal-As-Well"),
-    QT_TRANSLATE_NOOP("Materia_Names","Quadra Magic"),QT_TRANSLATE_NOOP("Materia_Names","Steal"),QT_TRANSLATE_NOOP("Materia_Names","Sense"),QT_TRANSLATE_NOOP("Materia_Names","DON'T USE"),QT_TRANSLATE_NOOP("Materia_Names","Throw"),QT_TRANSLATE_NOOP("Materia_Names","Morph"),QT_TRANSLATE_NOOP("Materia_Names","Deathblow"),
-    QT_TRANSLATE_NOOP("Materia_Names","Manipulate"),QT_TRANSLATE_NOOP("Materia_Names","Mime"),QT_TRANSLATE_NOOP("Materia_Names","Enemy Skill"),QT_TRANSLATE_NOOP("Materia_Names","DON'T USE"),QT_TRANSLATE_NOOP("Materia_Names","DON'T USE"),QT_TRANSLATE_NOOP("Materia_Names","DON'T USE"),QT_TRANSLATE_NOOP("Materia_Names","Master Command"),
-    QT_TRANSLATE_NOOP("Materia_Names","Fire"),QT_TRANSLATE_NOOP("Materia_Names","Ice"),QT_TRANSLATE_NOOP("Materia_Names","Earth"),QT_TRANSLATE_NOOP("Materia_Names","Lightning"),QT_TRANSLATE_NOOP("Materia_Names","Restore"),QT_TRANSLATE_NOOP("Materia_Names","Heal"),QT_TRANSLATE_NOOP("Materia_Names","Revive"),QT_TRANSLATE_NOOP("Materia_Names","Seal"),
-    QT_TRANSLATE_NOOP("Materia_Names","Mystify"),QT_TRANSLATE_NOOP("Materia_Names","Transform"),QT_TRANSLATE_NOOP("Materia_Names","Exit"),QT_TRANSLATE_NOOP("Materia_Names","Poison"),QT_TRANSLATE_NOOP("Materia_Names","Gravity"),QT_TRANSLATE_NOOP("Materia_Names","Barrier"),QT_TRANSLATE_NOOP("Materia_Names","DON'T USE"),
-    QT_TRANSLATE_NOOP("Materia_Names","Comet"),QT_TRANSLATE_NOOP("Materia_Names","Time"),QT_TRANSLATE_NOOP("Materia_Names","DON'T USE"),QT_TRANSLATE_NOOP("Materia_Names","DON'T USE"),QT_TRANSLATE_NOOP("Materia_Names","Destruct"),QT_TRANSLATE_NOOP("Materia_Names","Contain"),QT_TRANSLATE_NOOP("Materia_Names","FullCure"),
-    QT_TRANSLATE_NOOP("Materia_Names","Shield"),QT_TRANSLATE_NOOP("Materia_Names","Ultima"),QT_TRANSLATE_NOOP("Materia_Names","Master Magic"),QT_TRANSLATE_NOOP("Materia_Names","Choco/Mog"),QT_TRANSLATE_NOOP("Materia_Names","Shiva"),QT_TRANSLATE_NOOP("Materia_Names","Ifrit"),QT_TRANSLATE_NOOP("Materia_Names","Ramuh"),
-    QT_TRANSLATE_NOOP("Materia_Names","Titan"),QT_TRANSLATE_NOOP("Materia_Names","Odin"),QT_TRANSLATE_NOOP("Materia_Names","Leviathan"),QT_TRANSLATE_NOOP("Materia_Names","Bahamut"),QT_TRANSLATE_NOOP("Materia_Names","Kujata"),QT_TRANSLATE_NOOP("Materia_Names","Alexander"),QT_TRANSLATE_NOOP("Materia_Names","Phoenix"),
-    QT_TRANSLATE_NOOP("Materia_Names","Neo Bahamut"),QT_TRANSLATE_NOOP("Materia_Names","Hades"),QT_TRANSLATE_NOOP("Materia_Names","Typhon"),QT_TRANSLATE_NOOP("Materia_Names","Bahamut ZERO"),QT_TRANSLATE_NOOP("Materia_Names","Knights of Round"),QT_TRANSLATE_NOOP("Materia_Names","Master Summon")
-};
+
 static const char *materiaStats[]=
 {
     QT_TRANSLATE_NOOP("Materia_Stats","MaxMp:+% depending on level"),QT_TRANSLATE_NOOP("Materia_Stats","MaxHp:+% depending on level"),QT_TRANSLATE_NOOP("Materia_Stats","Dex:+% depending on level"),QT_TRANSLATE_NOOP("Materia_Stats","Mag:+% depending on level"),QT_TRANSLATE_NOOP("Materia_Stats","Lck:+% depending on level"),
@@ -491,7 +476,7 @@ static const char *materiaSkills[91][5]=
 };
 
 QString ff7names::ItemNames(int i){return qApp->translate("Items",itemNames[i]);}
-QString ff7names::MateriaNames(int i){return qApp->translate("Materia_Names",materiaNames[i]);}
+QString ff7names::MateriaNames(int i){return qApp->translate("Materia_Names",Materias[i].name.toAscii());}
 QString ff7names::MateriaStats(int i){return qApp->translate("Materia_Stats",materiaStats[i]);}
 QString ff7names::MateriaSkills(int i,int l){return qApp->translate("Materia_Skills",materiaSkills[i][l]);}
 

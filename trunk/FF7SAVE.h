@@ -505,7 +505,6 @@ struct FF7 {				// [0xFE55]
         quint8 file_footer_psp[0x0000];
         FF7HEADFOOT hf[15];             // [0x0009] The 15 save slots header/footer
 
-        int savetype;                   //0=unknown,1=pc,2=psx,3=mc,4=psv,5=vmp
         int SG_SIZE;
         int SG_HEADER;
         int SG_FOOTER;
@@ -527,6 +526,7 @@ struct ITEM {
 };
 
 struct MATERIA { //use MateriaNames,MateriaSkills or MateriaStats for text data.
+    QString name;
     QString image;
     quint8 id;
     //struct {qint8 hp,mp,str,vit,dex,lck,mag,spi;}stats;//for use in hp/mp/char stat calculations (maybe later)

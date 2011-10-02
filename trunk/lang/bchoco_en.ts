@@ -2210,10 +2210,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Clear Materia Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Materia Skills</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2383,10 +2379,6 @@
     </message>
     <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>General Config</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4053,6 +4045,26 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>In this region the game runs 50hz</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ctrl+C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ctrl+V</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Del</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Materia Slot Actions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Copy Slot</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

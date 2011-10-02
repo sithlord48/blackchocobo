@@ -1297,7 +1297,6 @@
     </message>
     <message>
         <source>Hallway</source>
-        <translatorcomment>神羅飛空挺・通路</translatorcomment>
         <translation>神羅飛空挺・通路</translation>
     </message>
     <message>
@@ -1330,7 +1329,6 @@
     </message>
     <message>
         <source>Debug Room [en]</source>
-        <translatorcomment>Debug Room [en]</translatorcomment>
         <translation>デバッグ・イージタイプ！</translation>
     </message>
     <message>
@@ -1438,7 +1436,7 @@
     </message>
     <message>
         <source>CheckBox</source>
-        <translatorcomment>起動時に表示されるがファイルを開けばケットシー, ヴィンセントのみクラウド/昔, セフィロスに、他キャラは非表示●●●●●●</translatorcomment>
+        <translatorcomment>起動時に表示されるが、ファイルを開けばケットシー, ヴィンセントのみクラウド/昔, セフィロスに、他キャラは非表示</translatorcomment>
         <translation>[CheckBox]</translation>
     </message>
     <message>
@@ -1507,7 +1505,7 @@
     </message>
     <message>
         <source>Base Stats</source>
-        <translation>基本ステータス</translation>
+        <translation>基本能力値</translation>
     </message>
     <message>
         <source>Char&apos;s Limits</source>
@@ -2030,7 +2028,7 @@
     <message>
         <source>Fed ?</source>
         <translatorcomment>(L) Fed? - we think this shows how many times you have fed the chocobo. </translatorcomment>
-        <translation>給餌 ?</translation>
+        <translation>給餌 (?)</translation>
     </message>
     <message>
         <source>Coop</source>
@@ -2052,7 +2050,6 @@
     </message>
     <message>
         <source>Fenced Chocobos</source>
-        <translatorcomment>(Q) Fenced chocobos - The last menu of the tab offers a simple way to edit the chocobos fenced outside the stables.The four scrollable menus correspond to each of the four possible chocobos slots that can be fenced. Each Menu Contains a menu of the possible quality chocobos you can catch</translatorcomment>
         <translation>サクのチョコボ</translation>
     </message>
     <message>
@@ -2061,7 +2058,6 @@
     </message>
     <message>
         <source>Wonderful</source>
-        <translatorcomment>1. す、すごいチョコボだよ、これ！ 2 すごくいいチョコボだよ 3 うん、いい感じのチョコボだね 4 まあまあのチョコボだね 5 普通のチョコボだと思うよ 6 うーん、わるいチョコボではないけどね 7 あまり、いい感じのチョコボじゃないね 7 ちょっと、おすすめできないかな</translatorcomment>
         <translation>す、すごいチョコボ！</translation>
     </message>
     <message>
@@ -2225,10 +2221,6 @@
         <translation>タイプのフィルター</translation>
     </message>
     <message>
-        <source>Clear Materia Slot</source>
-        <translation>選択マテリア スロットをクリア</translation>
-    </message>
-    <message>
         <source>Materia Skills</source>
         <translation>マテリアのスキル</translation>
     </message>
@@ -2303,7 +2295,7 @@
     </message>
     <message>
         <source>Clear Slot</source>
-        <translation>スロットのクリア</translation>
+        <translation>スロット クリア</translation>
     </message>
     <message>
         <source>Alt+Del</source>
@@ -2375,7 +2367,7 @@
     </message>
     <message>
         <source>Location Name</source>
-        <translatorcomment>メモリーのロード メニューに表示されるのみ Tip: The location name can be any sentence as it will appear only in the save selection menu. Tip: Setting Location here will not change your world map location.</translatorcomment>
+        <translatorcomment>ゲーム上でスロットのロード メニューに表示されるのみ Tip: The location name can be any sentence as it will appear only in the save selection menu. Tip: Setting Location here will not change your world map location.</translatorcomment>
         <translation>場所名</translation>
     </message>
     <message>
@@ -2401,10 +2393,6 @@
     <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
         <translation>ミッションのリプレイをセットすれば、そのミッションまでゲームを巻き戻すことができます。 クエストの進行に合わせてセーブの場所とディスク番号が自動的にセットされます。 すべてのリプレイがゲームの終了までを確実にプレイ可能かどうか、 選択したリプレイがセーブ上で正しく機能するかどうかは保障することができません。 これはいまだ安定していない開発途上の機能です</translation>
-    </message>
-    <message>
-        <source>General Config</source>
-        <translation>コンフィグ</translation>
     </message>
     <message>
         <source>Sound Mode</source>
@@ -2590,8 +2578,7 @@
     </message>
     <message>
         <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
-        <translatorcomment>好感度</translatorcomment>
-        <translation>デートイベントのリプレイ。ロープウェイの駅からスタートします。駅員に話しかけるとイベントが始まります。特殊なデート イベントを始めるには好感度も設定する必要があります。</translation>
+        <translation>デート イベントをリプレイします。 ロープウェイの駅からスタートします。 画面右の係員に話しかけるとイベントが始まります。 レアなデート イベントを始めるには好感度も設定する必要があります。</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSX Save</source>
@@ -2684,7 +2671,7 @@
     <message>
         <source>Materia Caves Empty</source>
         <translatorcomment>(I) Materia Caves Empty - Check the boxes to make the materia in each cave disappear as the game will think they have already taken. Note: The materias checked simply disappear from the caves, they don&apos;t go to the materia menu.</translatorcomment>
-        <translation>マテリアの洞窟を入手済みに</translation>
+        <translation>マテリアの洞窟を空（から）に</translation>
     </message>
     <message>
         <source>Mime</source>
@@ -2953,7 +2940,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PSP.</source>
-        <translation>このファイルのチェックサムは更新されていません。 PSP では機能しません。</translation>
+        <translation>このファイルのチェックサムは更新されていません。 PSP では正しく機能しません。</translation>
     </message>
     <message>
         <source>Cannot read file %1:
@@ -3462,7 +3449,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>sliders show </source>
-        <translation>スライダー表示</translation>
+        <translation>スライダーの表示対象 :</translation>
     </message>
     <message>
         <source>Party Leader</source>
@@ -3506,7 +3493,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PS3.</source>
-        <translation>このファイルのチェックサムは更新されていません。 PS3 では正しく機能できません。</translation>
+        <translation>このファイルのチェックサムは更新されていません。 PS3 では正しく機能しません。</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
@@ -3518,7 +3505,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
-        <translation>ダイアモンド/アルテマ/ルビー ウェポンを配置</translation>
+        <translation>ダイヤ/アルテマ/ルビー ウェポンを配置</translation>
     </message>
     <message>
         <source>Keycard 66</source>
@@ -3641,7 +3628,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Replay the bombing mission from right after you get off the train.</source>
-        <translation>魔晄炉爆破ミッションのリプレイは列車を降りた直後から開始されます。</translation>
+        <translation>魔晄炉爆破ミッションのリプレイは列車を降りた直後から始まります。</translation>
     </message>
     <message>
         <source>Chruch in the Slums</source>
@@ -3649,11 +3636,11 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
-        <translation>クラウドのステータスがそのまま昔のクラウドにコピーされます (ケット・シーのスロット)。セフィロスにはヴィンセントのステータスがそのまま適用されます。</translation>
+        <translation>現在のクラウドがそのまま昔のクラウド (ケット・シーのスロット) にコピーされます。セフィロスにはヴィンセントの能力値が適用されます。</translation>
     </message>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
-        <translation>&apos;エアリスの死&apos; のリプレイは PHS からエアリスを削除します</translation>
+        <translation>&apos;エアリスの死&apos; をリプレイします。このリプレイはエアリスを PHS から消去します。</translation>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s location.</source>
@@ -3661,7 +3648,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Meeting Aeris</source>
-        <translation>エアリスとの出会い</translation>
+        <translation>教会でのエアリスとのイベントをリプレイします。</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
@@ -3669,7 +3656,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Emerald Weapon ?</source>
-        <translation>エメラルド ウェポン ?</translation>
+        <translation>エメラルド ウェポン (?)</translation>
     </message>
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
@@ -3868,56 +3855,67 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Midgar Train Flags</source>
-        <translation>ミッドガル列車フラグ</translation>
+        <translatorcomment>ミッドガル発最終列車列車フラグ</translatorcomment>
+        <translation>ミッドガル発最終列車列車フラグ</translation>
     </message>
     <message>
         <source>Talked to Bigs</source>
+        <translatorcomment>0x01: when we talk to Biggs on way to sector 7.</translatorcomment>
         <translation>ビッグスと会話</translation>
     </message>
     <message>
         <source>Talked to Wedge Twice</source>
+        <translatorcomment>0x02: when we talk to Wedge twice on way to sector 7.</translatorcomment>
         <translation>ウェッジと二度会話</translation>
     </message>
     <message>
         <source>Talked to Jessie Before Looking At Map</source>
-        <translation>マップを見る前のジェシーとの会話</translation>
+        <translatorcomment>0x04: when talk to Jessie, before look at map.</translatorcomment>
+        <translation>マップを見る時のジェシーとの会話</translation>
     </message>
     <message>
         <source> Played Video on Train?</source>
-        <translation>列車に飛び乗るビデオを再生 (?)</translation>
+        <translatorcomment>ここかどうかわからない(?? 0x10: this bit is checked on ROOTMAP, though it doesn&apos;t use ingame.) </translatorcomment>
+        <translation>列車のビデオを再生 (?)</translation>
     </message>
     <message>
         <source>Unknowns / Unused</source>
+        <translatorcomment>ここかどうかわからない(?? z_27 Unknown (ENDS @ 0xDC4 32 bytes in to next bank) )</translatorcomment>
         <translation>不明 / 未使用</translation>
     </message>
     <message>
         <source>Sector 7 Trainstation</source>
+        <translatorcomment>MDS7ST3 event flags.</translatorcomment>
         <translation>7番街スラム駅</translation>
     </message>
     <message>
         <source>Team Avalanche Had Meeting after Bombing Mission</source>
-        <translation>爆破ミッション後のアバランチの集合</translation>
+        <translation>爆破ミッション後のアバランチの会話</translation>
     </message>
     <message>
         <source>Talked To Trainman 3 times</source>
+        <translatorcomment>0x02: when trainman tells you about war (3 talk).</translatorcomment>
         <translation>駅員と3回会話</translation>
     </message>
     <message>
         <source>Pair At Station agree</source>
-        <translation>駅のカップルの会話</translation>
+        <translatorcomment>0x04: when pair on station agreed with each other.</translatorcomment>
+        <translation>駅のカップルの意見が一致</translation>
     </message>
     <message>
         <source>Set To Reactor 5 Mode</source>
-        <translation>5番魔晄炉モードをセット</translation>
+        <translatorcomment>0x08: when Jessie, Biggs and Wedge run into train. </translatorcomment>
+        <translation>5番魔晄炉モードのセット</translation>
     </message>
     <message>
         <source>Sector 7 Pillar</source>
-        <translatorcomment>プレート支柱</translatorcomment>
+        <translatorcomment>MDS7PLR1 event flags.</translatorcomment>
         <translation>7番街プレート支柱</translation>
     </message>
     <message>
         <source>Team Avalanche Has Run To Hideout</source>
-        <translation>アバランチの面々が逃走</translation>
+        <translatorcomment>0x01: when everyone run to hideout.</translatorcomment>
+        <translation>アバランチ チームが散開</translation>
     </message>
     <message>
         <source>Can Show Pillar Pan Video</source>
@@ -3926,7 +3924,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Barret called us</source>
-        <translation>バレットが全員に指示</translation>
+        <translation>バレットに呼ばれる</translation>
     </message>
     <message>
         <source>Post Pillar Pan Video</source>
@@ -3935,7 +3933,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Talked To soldier two times</source>
-        <translation>神羅兵と二度の会話</translation>
+        <translation>警備兵と二度の会話</translation>
     </message>
     <message>
         <source>Field Items Picked Up</source>
@@ -4099,14 +4097,34 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Would you like to correct the play time?</source>
-        <translation type="unfinished"></translation>
+        <translation>プレイ時間を修正しますか？</translation>
     </message>
     <message>
         <source>In this region the game runs 60hz</source>
-        <translation type="unfinished"></translation>
+        <translation>このリージョンのゲームは 60Hz で実行されます</translation>
     </message>
     <message>
         <source>In this region the game runs 50hz</source>
+        <translation>このリージョンのゲームは 50Hz で実行されます</translation>
+    </message>
+    <message>
+        <source>Ctrl+C</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ctrl+V</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Del</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Materia Slot Actions</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>&amp;Copy Slot</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6184,7 +6202,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>    &amp;Next Slot</source>
-        <translation>次のスロット(&amp;P)</translation>
+        <translation> 次のスロット(&amp;P)</translation>
     </message>
     <message>
         <source>&amp;Export As Raw PSX</source>

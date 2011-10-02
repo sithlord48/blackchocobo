@@ -607,5 +607,9 @@ private slots://try to keep these in the same order as the .cpp file
     void on_combo_button_14_currentIndexChanged(int index);
     void on_combo_button_15_currentIndexChanged(int index);
     void on_combo_button_16_currentIndexChanged(int index);
+    void on_btn_copy_materia_clicked();
+    void on_btn_paste_materia_clicked();
+    void on_btn_copy_materia_slot_clicked();
+    void on_btn_paste_materia_slot_clicked();
 };
 #endif // MAINWINDOW_H
