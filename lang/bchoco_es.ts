@@ -4084,6 +4084,42 @@ Table Entries are Editable</source>
         <source>&amp;Copy Slot</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Sector 5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Talked with Sick Man</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Aeris Talked About Sick Man</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stole The Kids 5 Gil</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>After Aeris Chruch Scene</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cb_s5_1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cb_s5_2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cb_s5_5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cb_s5_7</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -6128,6 +6164,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Edit Controller Mapping (non pc saves)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Materia Buffer , copy/paste materias</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

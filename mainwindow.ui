@@ -4526,8 +4526,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>437</width>
-             <height>436</height>
+             <width>401</width>
+             <height>420</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8261,8 +8261,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>242</width>
-                  <height>330</height>
+                  <width>212</width>
+                  <height>267</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -10489,7 +10489,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>1452</width>
-             <height>334</height>
+             <height>276</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16494,8 +16494,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>764</width>
-             <height>440</height>
+             <width>720</width>
+             <height>275</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -18858,7 +18858,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           <x>5</x>
           <y>5</y>
           <width>376</width>
-          <height>501</height>
+          <height>486</height>
          </rect>
         </property>
         <layout class="QVBoxLayout" name="verticalLayout_109">
@@ -19004,7 +19004,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <x>0</x>
                  <y>0</y>
                  <width>349</width>
-                 <height>1239</height>
+                 <height>1432</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -19261,6 +19261,46 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </widget>
                 </item>
                 <item>
+                 <widget class="QGroupBox" name="groupBox_24">
+                  <property name="title">
+                   <string>Sector 5</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_17">
+                   <property name="margin">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s5_3">
+                     <property name="text">
+                      <string>Talked with Sick Man</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s5_4">
+                     <property name="text">
+                      <string>Aeris Talked About Sick Man</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s5_6">
+                     <property name="text">
+                      <string>Stole The Kids 5 Gil</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s5_8">
+                     <property name="text">
+                      <string>After Aeris Chruch Scene</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
+                <item>
                  <layout class="QHBoxLayout" name="horizontalLayout_162">
                   <item>
                    <widget class="QLabel" name="label_229">
@@ -19473,6 +19513,34 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <widget class="QCheckBox" name="cb_s7pl_8">
                      <property name="text">
                       <string notr="true">s7pl_8</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s5_1">
+                     <property name="text">
+                      <string>cb_s5_1</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s5_2">
+                     <property name="text">
+                      <string>cb_s5_2</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s5_5">
+                     <property name="text">
+                      <string>cb_s5_5</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_s5_7">
+                     <property name="text">
+                      <string>cb_s5_7</string>
                      </property>
                     </widget>
                    </item>
@@ -21457,7 +21525,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>737</width>
+             <width>733</width>
              <height>664</height>
             </rect>
            </property>
