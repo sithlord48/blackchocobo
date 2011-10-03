@@ -1188,12 +1188,12 @@
         <translation>1/35神羅兵</translation>
     </message>
     <message>
-        <source>Plus Barrette</source>
-        <translation>プラチナバレッタ</translation>
+        <source>Aﾃ｢ﾂ鳴ｪM Cannon</source>
+        <translation>A・Mキャノン</translation>
     </message>
     <message>
-        <source>AâªM Cannon</source>
-        <translation type="unfinished"></translation>
+        <source>Plus Barrette</source>
+        <translation>プラチナバレッタ</translation>
     </message>
 </context>
 <context>
@@ -1280,7 +1280,6 @@
     </message>
     <message>
         <source>Reactor No.1</source>
-        <translatorcomment>ストーリーの進捗により5番魔晄炉●●Reactor No.1</translatorcomment>
         <translation>1番魔晄炉</translation>
     </message>
     <message>
@@ -1424,7 +1423,7 @@
     </message>
     <message>
         <source>Click On A Char To edit ===========&gt;</source>
-        <translation>クリックでキャラクターを編集 ===========&gt;</translation>
+        <translation>編集するキャラクターをクリック ===========&gt;</translation>
     </message>
     <message>
         <source>Stats Tab</source>
@@ -1449,7 +1448,7 @@
     </message>
     <message>
         <source>Level</source>
-        <translation>LV</translation>
+        <translation>レベル</translation>
     </message>
     <message>
         <source>Front Row</source>
@@ -2234,11 +2233,11 @@
     </message>
     <message>
         <source>map</source>
-        <translation>map</translation>
+        <translation>マップ</translation>
     </message>
     <message>
         <source>loc</source>
-        <translation>loc</translation>
+        <translation>場所</translation>
     </message>
     <message>
         <source>Platform</source>
@@ -2295,7 +2294,7 @@
     </message>
     <message>
         <source>Clear Slot</source>
-        <translation>スロット クリア</translation>
+        <translation>スロットのクリア</translation>
     </message>
     <message>
         <source>Alt+Del</source>
@@ -2359,7 +2358,7 @@
     </message>
     <message>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</source>
-        <translation>リストの場所のクリックでセーブ地点を &apos;ワープ&apos; させます。マップ, 場所, 座標を手動で設定することもできます</translation>
+        <translation>リストのクリックでセーブ地点を &apos;ワープ&apos; させます。マップ, 場所, 座標を手動で設定することもできます。</translation>
     </message>
     <message>
         <source>Have Fun With This Feature, But Don&apos;t Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</source>
@@ -2392,7 +2391,7 @@
     </message>
     <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
-        <translation>ミッションのリプレイをセットすれば、そのミッションまでゲームを巻き戻すことができます。 クエストの進行に合わせてセーブの場所とディスク番号が自動的にセットされます。 すべてのリプレイがゲームの終了までを確実にプレイ可能かどうか、 選択したリプレイがセーブ上で正しく機能するかどうかは保障することができません。 これはいまだ安定していない開発途上の機能です</translation>
+        <translation>ミッションのリプレイをセットすれば、そのミッションまでゲームを巻き戻すことができます。 クエストの進行に合わせてセーブの場所とディスク番号が自動的にセットされます。 すべてのリプレイがゲームの終了までを確実にプレイ可能かどうか、 選択したリプレイがセーブ上で正しく機能するかどうかは保障できません。 これは、いまだ開発途上の機能です</translation>
     </message>
     <message>
         <source>Sound Mode</source>
@@ -2703,7 +2702,7 @@
     </message>
     <message>
         <source>Saving on the World Map</source>
-        <translation>ワールド マップ上のセーブ</translation>
+        <translation>ワールド マップ上でのセーブ</translation>
     </message>
     <message>
         <source>Battle Love Points</source>
@@ -2720,7 +2719,7 @@
     <message>
         <source>0xBD4 (itemmasks_1)</source>
         <translatorcomment>(H) 0xBD4 - this byte that contains all item mask bits only the 0x1 bit is known to be the potion on MD8_3 (right after you meet aeris the first time). The rest are unknown</translatorcomment>
-        <translation>0xBD4 (itemmasks_1)</translation>
+        <translation>0xBD4 (アイテムマスク_1)</translation>
     </message>
     <message>
         <source>0x02</source>
@@ -2848,7 +2847,7 @@
     </message>
     <message>
         <source>Paste Slot</source>
-        <translation>スロットの貼り付け</translation>
+        <translation>スロット貼り付け</translation>
     </message>
     <message>
         <source>More Options...</source>
@@ -2966,7 +2965,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
-        <translation>ヘッダーが決定できません。接尾辞 -SXX を追加してください。これはスロット番号としてセーブに書き込まれるヘッダーです。(XX = 01～15, 10 以下の場合は 0 を加えて二桁に)</translation>
+        <translation>ヘッダーが決定できません。接尾辞 -SXX を追加してください。これはスロット番号としてセーブに書き込まれるヘッダーです。(XX = 01～15, 10 以下の場合は 0 を接頭して二桁に)</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -3389,7 +3388,7 @@ MASTER = 16777215 AP です</translation>
     <message>
         <source>0xC1E tut_sub</source>
         <translatorcomment>G) Tut sub - the byte that the sub tutoral seen var is stored in to find more in that byte</translatorcomment>
-        <translation>0xC1E tut_sub</translation>
+        <translation>0xC1E 潜水艦チュートリアル</translation>
     </message>
     <message>
         <source>0x01</source>
@@ -3485,7 +3484,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Place Emerald Weapon?</source>
-        <translation>エメラルド ウェポン (?) を配置</translation>
+        <translation>エメラルド ウェポンを配置 (?)</translation>
     </message>
     <message>
         <source>PSV Save Notice</source>
@@ -3557,7 +3556,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Automatic Exp &lt;-&gt; Lvl</source>
-        <translation>Exp &lt;-&gt; Lvl 自動変換</translation>
+        <translation>経験値 &lt;-&gt; レベルの自動変換</translation>
     </message>
     <message>
         <source>Add Max Of All Items</source>
@@ -3668,7 +3667,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Add One Of Each Mastered Materia </source>
-        <translation>すべての MASTER マテリアを一個づつ追加</translation>
+        <translation>すべての MASTER マテリアを一個ずつ追加</translation>
     </message>
     <message>
         <source>Remove ALL Materia </source>
@@ -3786,7 +3785,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Main Progression</source>
-        <translation>メイン進捗</translation>
+        <translation>メイン進捗度</translation>
     </message>
     <message>
         <source>Disk  #</source>
@@ -3794,11 +3793,11 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Elevator Door Open</source>
-        <translation>エレベーターを開く</translation>
+        <translation>エレベーターが開く</translation>
     </message>
     <message>
         <source>1st Door Open</source>
-        <translation>最初のドアが開く</translation>
+        <translation>最初のドアを開ける</translation>
     </message>
     <message>
         <source>2nd Door Opened</source>
@@ -3851,12 +3850,12 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Post Pan MD8_2</source>
         <translatorcomment>8番街_2 </translatorcomment>
-        <translation>MD8_2 パン映像後</translation>
+        <translation>MD8_2 パン映像再生後</translation>
     </message>
     <message>
         <source>Midgar Train Flags</source>
         <translatorcomment>ミッドガル発最終列車列車フラグ</translatorcomment>
-        <translation>ミッドガル発最終列車列車フラグ</translation>
+        <translation>ミッドガル発最終列車フラグ</translation>
     </message>
     <message>
         <source>Talked to Bigs</source>
@@ -3866,7 +3865,7 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Talked to Wedge Twice</source>
         <translatorcomment>0x02: when we talk to Wedge twice on way to sector 7.</translatorcomment>
-        <translation>ウェッジと二度会話</translation>
+        <translation>ウェッジと二回の会話</translation>
     </message>
     <message>
         <source>Talked to Jessie Before Looking At Map</source>
@@ -3881,7 +3880,7 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Unknowns / Unused</source>
         <translatorcomment>ここかどうかわからない(?? z_27 Unknown (ENDS @ 0xDC4 32 bytes in to next bank) )</translatorcomment>
-        <translation>不明 / 未使用</translation>
+        <translation>詳細不明 / 未使用</translation>
     </message>
     <message>
         <source>Sector 7 Trainstation</source>
@@ -3895,7 +3894,7 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Talked To Trainman 3 times</source>
         <translatorcomment>0x02: when trainman tells you about war (3 talk).</translatorcomment>
-        <translation>駅員と3回会話</translation>
+        <translation>駅員と三回の会話</translation>
     </message>
     <message>
         <source>Pair At Station agree</source>
@@ -3915,12 +3914,12 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Team Avalanche Has Run To Hideout</source>
         <translatorcomment>0x01: when everyone run to hideout.</translatorcomment>
-        <translation>アバランチ チームが散開</translation>
+        <translation>アバランチ チームの散開</translation>
     </message>
     <message>
         <source>Can Show Pillar Pan Video</source>
         <translatorcomment>プレート支柱</translatorcomment>
-        <translation>機械塔パン映像再生可能</translation>
+        <translation>機械塔パン映像を再生可能</translation>
     </message>
     <message>
         <source>Barret called us</source>
@@ -3933,7 +3932,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Talked To soldier two times</source>
-        <translation>警備兵と二度の会話</translation>
+        <translation>警備兵との二回の会話</translation>
     </message>
     <message>
         <source>Field Items Picked Up</source>
@@ -3966,12 +3965,12 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Elevator On 2nd Floor</source>
-        <translation>2階 エレベーター</translation>
+        <translation>2階のエレベーター</translation>
     </message>
     <message>
         <source>Post Pan NMKIN_5</source>
         <translatorcomment>1番魔晄炉 5 全景後</translatorcomment>
-        <translation>NMKIN_5 パン映像後</translation>
+        <translation>NMKIN_5 パン映像再生後</translation>
     </message>
     <message>
         <source>Trigger Game Over (countdown timer out)</source>
@@ -3984,8 +3983,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>0x01 Potion On MD8_3 (see item tab)</source>
-        <translatorcomment>0x01 8番街 3 ポーション (アイテム タブを参照)</translatorcomment>
-        <translation>0x01 MD8: ポーション (アイテム タブ参照)</translation>
+        <translation>0x01 MD8_3 ポーション (アイテム タブを参照)</translation>
     </message>
     <message>
         <source>Custom Controller Mapping(PSX Only)</source>
@@ -4109,59 +4107,59 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Del</translation>
     </message>
     <message>
         <source>Materia Slot Actions</source>
-        <translation type="unfinished"></translation>
+        <translation>マテリア スロットの操作</translation>
     </message>
     <message>
         <source>&amp;Copy Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット コピー(&amp;C)</translation>
     </message>
     <message>
         <source>Sector 5</source>
-        <translation type="unfinished"></translation>
+        <translation>5番街</translation>
     </message>
     <message>
         <source>Talked with Sick Man</source>
-        <translation type="unfinished"></translation>
+        <translation>土管の病人と会話</translation>
     </message>
     <message>
         <source>Aeris Talked About Sick Man</source>
-        <translation type="unfinished"></translation>
+        <translation>エアリスの病人に関する話</translation>
     </message>
     <message>
         <source>Stole The Kids 5 Gil</source>
-        <translation type="unfinished"></translation>
+        <translation>子供のへそくり 5 ギルを盗む</translation>
     </message>
     <message>
         <source>After Aeris Chruch Scene</source>
-        <translation type="unfinished"></translation>
+        <translation>エアリスとの教会イベント後</translation>
     </message>
     <message>
         <source>cb_s5_1</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_1</translation>
     </message>
     <message>
         <source>cb_s5_2</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_2</translation>
     </message>
     <message>
         <source>cb_s5_5</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_5</translation>
     </message>
     <message>
         <source>cb_s5_7</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_7</translation>
     </message>
 </context>
 <context>
@@ -5629,7 +5627,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>File To load When &quot;New Game&quot; is used</source>
-        <translation>&quot;New Game&quot; でロードするファイル</translation>
+        <translation>&quot;新規ゲーム&quot; でロードするファイル</translation>
     </message>
     <message>
         <source>Location To Save Character Stat Files</source>
@@ -5641,15 +5639,15 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source> Folder To Load FF7 Saves (all types) from</source>
-        <translation>FF7 セーブ (すべての種類) のロード用フォルダ</translation>
+        <translation>FF7 セーブ (全種類) のロード用フォルダ</translation>
     </message>
     <message>
         <source>Folder To Save Pc (.ff7) Save Games</source>
-        <translation>PC (.ff7) セ－ブの保存フォルダ</translation>
+        <translation>PC セ－ブ (.ff7) の保存フォルダ</translation>
     </message>
     <message>
         <source>Folder To Export Pc (.ff7) Save Games</source>
-        <translation>PC (.ff7) セ－ブのエクスポート フォルダ</translation>
+        <translation>PC セ－ブ (.ff7) のエクスポート フォルダ</translation>
     </message>
     <message>
         <source>Main Window Background Color</source>
@@ -5689,7 +5687,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source> Folder To Load/Save Emulator Memory Cards  </source>
-        <translation>エミュレーター用メモリー カードのロード/保存フォルダ</translation>
+        <translation>エミュレーター メモリー カードのロード/保存フォルダ</translation>
     </message>
     <message>
         <source>Set Applications Font</source>
@@ -5725,7 +5723,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Set Load And Save Paths</source>
-        <translation>ロード/保存パスの設定</translation>
+        <translation>ロード / 保存パスの設定</translation>
     </message>
     <message>
         <source>&amp;Close</source>
