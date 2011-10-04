@@ -33,6 +33,7 @@ int curchar =0; //keeps track of current character displayed
 int mslotsel = 0; //keeps track of materia slot on char selected
 QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
 QString filename; //holds file name
+bool skip_slot_mask = settings.value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
 /*~~~~~~EXTERNS~~~~~~~~*/
 extern quint32 chartnls[11][99]; //  Chars tnl Table (cloud - sephiroth)
 extern quint32 charlvls[11][99]; //  Chars lvl Table
@@ -528,7 +529,7 @@ void MainWindow::on_action_Save_activated()
 {
     if(!filename.isEmpty())
     {
-        if(ff7.SG_TYPE=="PC"){fix_pc_bytemask(ff7,s);}
+        if(ff7.SG_TYPE=="PC"){fix_pc_bytemask(ff7,s,skip_slot_mask);}
         else if(ff7.SG_TYPE=="PSX"){fix_psx_header(ff7,s);}
 
         else if(ff7.SG_TYPE=="MC" || ff7.SG_TYPE=="PSP" || ff7.SG_TYPE=="VGS" || ff7.SG_TYPE =="DEX")
@@ -557,7 +558,7 @@ void MainWindow::on_actionSave_File_As_activated()
         tr("Save Final Fantasy 7 PC SaveGame"), settings.value("save_pc_path").toString(),
         tr("FF7 PC SaveGame(*.ff7)"));
 
-        fix_pc_bytemask(ff7,s);// adjust the bytemask so the correct slots are shown
+        fix_pc_bytemask(ff7,s,skip_slot_mask);// adjust the bytemask so the correct slots are shown
     }
     else if(ff7.SG_TYPE == "PSX")
     {
@@ -805,7 +806,7 @@ void MainWindow::on_actionExport_PC_Save_activated()
         // Add File Header
         for(int i=0;i<9;i++){ff7.file_header_pc[i]= PC_SAVE_GAME_FILE_HEADER[i];}
     }
-    fix_pc_bytemask(ff7,s);
+    fix_pc_bytemask(ff7,s,skip_slot_mask);
     int result=0;
     for(int si=0;si<15;si++)//clean up non ff7 saves and fix time for Pal Saves.
     {
@@ -5497,14 +5498,14 @@ void MainWindow::on_btn_item_add_each_item_clicked()
             if(i<106)
             {
                 ff7.slot[s].items[i].id = i;
-                if(i<256){ ff7.slot[s].items[i].qty = 254;}
-                else {ff7.slot[s].items[i].qty=255;}
+                if(i<256){ ff7.slot[s].items[i].qty = 198;}//254
+                else {ff7.slot[s].items[i].qty=199;}//255
             }
             else// after the block of empty items shift up 23 spots.
             {
                 ff7.slot[s].items[i-23].id = i;
-                if(i<256){ ff7.slot[s].items[i-23].qty = 254;}
-                else {ff7.slot[s].items[i-23].qty=255;}
+                if(i<256){ ff7.slot[s].items[i-23].qty = 198;}
+                else {ff7.slot[s].items[i-23].qty=199;}
             }
         }
         else{ff7.slot[s].items[i].id=0xFF;ff7.slot[s].items[i].qty=0xFF;}//exclude the test items

@@ -1654,10 +1654,6 @@
         <translation>Qté</translation>
     </message>
     <message>
-        <source>QTY:</source>
-        <translation type="unfinished">Quantité</translation>
-    </message>
-    <message>
         <source>Key Items</source>
         <translation>Eléments-clé</translation>
     </message>
@@ -5687,6 +5683,10 @@ Table Entries are Editable</source>
     <message>
         <source>&amp;Close</source>
         <translation>&amp;Fermer</translation>
+    </message>
+    <message>
+        <source>skip_slot_mask (pc only)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

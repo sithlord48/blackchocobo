@@ -16,7 +16,7 @@
 
 #include "options.h"
 #include "ui_options.h"
-
+bool loading=false;
 QSettings bchoco_settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
 
 Options::Options(QWidget *parent) :
@@ -45,6 +45,12 @@ Options::Options(QWidget *parent) :
     case 14: ui->btn_14pt->setChecked(Qt::Checked); break;
     default: ui->btn_9pt->setChecked(Qt::Checked); break;
     }
+    if(bchoco_settings.value("show_test").toBool()){ui->cb_skip_slot_mask->setVisible(true);}
+    else{ui->cb_skip_slot_mask->setVisible(false);}
+    loading=true;
+    if(bchoco_settings.value("skip_slot_mask").toBool()){ui->cb_skip_slot_mask->setChecked(Qt::Checked);}
+    else{ui->cb_skip_slot_mask->setChecked(Qt::Unchecked);}
+    loading=false;
 }
 
 Options::~Options()
@@ -66,24 +72,15 @@ void Options::changeEvent(QEvent *e)
 void Options::set_preview()
 {
     QString style="background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
-    style.append(QString::number(ui->slide_c1_r->value()));
-    style.append(",");
-    style.append(QString::number(ui->slide_c1_g->value()));
-    style.append(",");
-    style.append(QString::number(ui->slide_c1_b->value()));
-    style.append(", 255), stop:0.215909 rgba(");
-    style.append(QString::number(ui->slide_c2_r->value()));
-    style.append(",");
-    style.append(QString::number(ui->slide_c2_g->value()));
-    style.append(",");
-    style.append(QString::number(ui->slide_c2_b->value()));
-    style.append(", 255), stop:0.818182 rgba(");
-    style.append(QString::number(ui->slide_c3_r->value()));
-    style.append(",");
-    style.append(QString::number(ui->slide_c3_g->value()));
-    style.append(",");
-    style.append(QString::number(ui->slide_c3_b->value()));
-    style.append(", 255));");
+    style.append(QString::number(ui->slide_c1_r->value()));    style.append(",");
+    style.append(QString::number(ui->slide_c1_g->value()));    style.append(",");
+    style.append(QString::number(ui->slide_c1_b->value()));    style.append(", 255), stop:0.215909 rgba(");
+    style.append(QString::number(ui->slide_c2_r->value()));    style.append(",");
+    style.append(QString::number(ui->slide_c2_g->value()));    style.append(",");
+    style.append(QString::number(ui->slide_c2_b->value()));    style.append(", 255), stop:0.818182 rgba(");
+    style.append(QString::number(ui->slide_c3_r->value()));    style.append(",");
+    style.append(QString::number(ui->slide_c3_g->value()));    style.append(",");
+    style.append(QString::number(ui->slide_c3_b->value()));    style.append(", 255));");
     ui->lbl_preview->setStyleSheet(style);
 }
 void Options::set_path_lbls()
@@ -209,32 +206,20 @@ void Options::on_btn_14pt_clicked(bool checked)
 void Options::on_slide_c1_r_valueChanged(int value)
 {
     QString g_style = "QSlider#slide_c1_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    g_style.append(QString::number(ui->slide_c1_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(0));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_c1_b->value()));
-    g_style.append(", 255), stop:1 rgba(");
-    g_style.append(QString::number(ui->slide_c1_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(255));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_c1_b->value()));
-    g_style.append(",255));}");
+    g_style.append(QString::number(ui->slide_c1_r->value()));   g_style.append(",");
+    g_style.append(QString::number(0));                         g_style.append(",");
+    g_style.append(QString::number(ui->slide_c1_b->value()));   g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_c1_r->value()));   g_style.append(",");
+    g_style.append(QString::number(255));                       g_style.append(",");
+    g_style.append(QString::number(ui->slide_c1_b->value()));   g_style.append(",255));}");
 
     QString b_style =  "QSlider#slide_c1_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    b_style.append(QString::number(ui->slide_c1_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_c1_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(0));
-    b_style.append(", 255), stop:1 rgba(");
-    b_style.append(QString::number(ui->slide_c1_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_c1_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(255));
-    b_style.append(",255));}");
+    b_style.append(QString::number(ui->slide_c1_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_c1_g->value()));   b_style.append(",");
+    b_style.append(QString::number(0));                         b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_c1_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_c1_g->value()));   b_style.append(",");
+    b_style.append(QString::number(255));                       b_style.append(",255));}");
 
     ui->slide_c1_g->setStyleSheet(g_style);
     ui->slide_c1_b->setStyleSheet(b_style);
@@ -244,32 +229,20 @@ void Options::on_slide_c1_r_valueChanged(int value)
 void Options::on_slide_c1_g_valueChanged(int value)
 {
     QString r_style = "QSlider#slide_c1_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    r_style.append(QString::number(0));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c1_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c1_b->value()));
-    r_style.append(", 255), stop:1 rgba(");
-    r_style.append(QString::number(255));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c1_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c1_b->value()));
-    r_style.append(",255));}");
+    r_style.append(QString::number(0));                         r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_b->value()));   r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));                       r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_b->value()));   r_style.append(",255));}");
 
     QString b_style =  "QSlider#slide_c1_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    b_style.append(QString::number(ui->slide_c1_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_c1_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(0));
-    b_style.append(", 255), stop:1 rgba(");
-    b_style.append(QString::number(ui->slide_c1_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_c1_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(255));
-    b_style.append(",255));}");
+    b_style.append(QString::number(ui->slide_c1_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_c1_g->value()));   b_style.append(",");
+    b_style.append(QString::number(0));                         b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_c1_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_c1_g->value()));   b_style.append(",");
+    b_style.append(QString::number(255));                       b_style.append(",255));}");
 
     ui->slide_c1_r->setStyleSheet(r_style);
     ui->slide_c1_b->setStyleSheet(b_style);
@@ -279,32 +252,20 @@ void Options::on_slide_c1_g_valueChanged(int value)
 void Options::on_slide_c1_b_valueChanged(int value)
 {
     QString r_style = "QSlider#slide_c1_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    r_style.append(QString::number(0));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c1_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c1_b->value()));
-    r_style.append(", 255), stop:1 rgba(");
-    r_style.append(QString::number(255));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c1_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c1_b->value()));
-    r_style.append(",255));}");
+    r_style.append(QString::number(0));                         r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_b->value()));   r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));                       r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_c1_b->value()));   r_style.append(",255));}");
 
     QString g_style = "QSlider#slide_c1_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    g_style.append(QString::number(ui->slide_c1_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(0));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_c1_b->value()));
-    g_style.append(", 255), stop:1 rgba(");
-    g_style.append(QString::number(ui->slide_c1_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(255));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_c1_b->value()));
-    g_style.append(",255));}");
+    g_style.append(QString::number(ui->slide_c1_r->value()));   g_style.append(",");
+    g_style.append(QString::number(0));                         g_style.append(",");
+    g_style.append(QString::number(ui->slide_c1_b->value()));   g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_c1_r->value()));   g_style.append(",");
+    g_style.append(QString::number(255));                       g_style.append(",");
+    g_style.append(QString::number(ui->slide_c1_b->value()));   g_style.append(",255));}");
 
     ui->slide_c1_r->setStyleSheet(r_style);
     ui->slide_c1_g->setStyleSheet(g_style);
@@ -315,32 +276,20 @@ void Options::on_slide_c1_b_valueChanged(int value)
 void Options::on_slide_c2_r_valueChanged(int value)
 {
     QString g_style = "QSlider#slide_c2_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    g_style.append(QString::number(ui->slide_c2_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(0));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_c2_b->value()));
-    g_style.append(", 255), stop:1 rgba(");
-    g_style.append(QString::number(ui->slide_c2_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(255));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_c2_b->value()));
-    g_style.append(",255));}");
+    g_style.append(QString::number(ui->slide_c2_r->value()));   g_style.append(",");
+    g_style.append(QString::number(0));                         g_style.append(",");
+    g_style.append(QString::number(ui->slide_c2_b->value()));   g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_c2_r->value()));   g_style.append(",");
+    g_style.append(QString::number(255));                       g_style.append(",");
+    g_style.append(QString::number(ui->slide_c2_b->value()));   g_style.append(",255));}");
 
     QString b_style =  "QSlider#slide_c2_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    b_style.append(QString::number(ui->slide_c2_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_c2_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(0));
-    b_style.append(", 255), stop:1 rgba(");
-    b_style.append(QString::number(ui->slide_c2_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_c2_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(255));
-    b_style.append(",255));}");
+    b_style.append(QString::number(ui->slide_c2_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_c2_g->value()));   b_style.append(",");
+    b_style.append(QString::number(0));                         b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_c2_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_c2_g->value()));   b_style.append(",");
+    b_style.append(QString::number(255));                       b_style.append(",255));}");
 
     ui->slide_c2_g->setStyleSheet(g_style);
     ui->slide_c2_b->setStyleSheet(b_style);
@@ -350,32 +299,20 @@ void Options::on_slide_c2_r_valueChanged(int value)
 void Options::on_slide_c2_g_valueChanged(int value)
 {
     QString r_style = "QSlider#slide_c2_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    r_style.append(QString::number(0));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c2_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c2_b->value()));
-    r_style.append(", 255), stop:1 rgba(");
-    r_style.append(QString::number(255));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c2_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c2_b->value()));
-    r_style.append(",255));}");
+    r_style.append(QString::number(0));                         r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_b->value()));   r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));                       r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_b->value()));   r_style.append(",255));}");
 
     QString b_style =  "QSlider#slide_c2_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    b_style.append(QString::number(ui->slide_c2_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_c2_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(0));
-    b_style.append(", 255), stop:1 rgba(");
-    b_style.append(QString::number(ui->slide_c2_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_c2_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(255));
-    b_style.append(",255));}");
+    b_style.append(QString::number(ui->slide_c2_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_c2_g->value()));   b_style.append(",");
+    b_style.append(QString::number(0));                         b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_c2_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_c2_g->value()));   b_style.append(",");
+    b_style.append(QString::number(255));                       b_style.append(",255));}");
 
     ui->slide_c2_r->setStyleSheet(r_style);
     ui->slide_c2_b->setStyleSheet(b_style);
@@ -385,32 +322,20 @@ void Options::on_slide_c2_g_valueChanged(int value)
 void Options::on_slide_c2_b_valueChanged(int value)
 {
     QString r_style = "QSlider#slide_c2_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    r_style.append(QString::number(0));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c2_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c2_b->value()));
-    r_style.append(", 255), stop:1 rgba(");
-    r_style.append(QString::number(255));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c2_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c2_b->value()));
-    r_style.append(",255));}");
+    r_style.append(QString::number(0));                         r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_b->value()));   r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));                       r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_c2_b->value()));   r_style.append(",255));}");
 
     QString g_style = "QSlider#slide_c2_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    g_style.append(QString::number(ui->slide_c2_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(0));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_c2_b->value()));
-    g_style.append(", 255), stop:1 rgba(");
-    g_style.append(QString::number(ui->slide_c2_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(255));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_c2_b->value()));
-    g_style.append(",255));}");
+    g_style.append(QString::number(ui->slide_c2_r->value()));   g_style.append(",");
+    g_style.append(QString::number(0));                         g_style.append(",");
+    g_style.append(QString::number(ui->slide_c2_b->value()));   g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_c2_r->value()));   g_style.append(",");
+    g_style.append(QString::number(255));                       g_style.append(",");
+    g_style.append(QString::number(ui->slide_c2_b->value()));   g_style.append(",255));}");
 
     ui->slide_c2_r->setStyleSheet(r_style);
     ui->slide_c2_g->setStyleSheet(g_style);
@@ -421,32 +346,20 @@ void Options::on_slide_c2_b_valueChanged(int value)
 void Options::on_slide_c3_r_valueChanged(int value)
 {
     QString g_style = "QSlider#slide_c3_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    g_style.append(QString::number(ui->slide_c3_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(0));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_c3_b->value()));
-    g_style.append(", 255), stop:1 rgba(");
-    g_style.append(QString::number(ui->slide_c3_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(255));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_c3_b->value()));
-    g_style.append(",255));}");
+    g_style.append(QString::number(ui->slide_c3_r->value()));   g_style.append(",");
+    g_style.append(QString::number(0));                         g_style.append(",");
+    g_style.append(QString::number(ui->slide_c3_b->value()));   g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_c3_r->value()));   g_style.append(",");
+    g_style.append(QString::number(255));                       g_style.append(",");
+    g_style.append(QString::number(ui->slide_c3_b->value()));   g_style.append(",255));}");
 
     QString b_style =  "QSlider#slide_c3_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    b_style.append(QString::number(ui->slide_c3_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_c3_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(0));
-    b_style.append(", 255), stop:1 rgba(");
-    b_style.append(QString::number(ui->slide_c3_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_c3_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(255));
-    b_style.append(",255));}");
+    b_style.append(QString::number(ui->slide_c3_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_c3_g->value()));   b_style.append(",");
+    b_style.append(QString::number(0));                         b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_c3_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_c3_g->value()));   b_style.append(",");
+    b_style.append(QString::number(255));                       b_style.append(",255));}");
 
     ui->slide_c3_g->setStyleSheet(g_style);
     ui->slide_c3_b->setStyleSheet(b_style);
@@ -457,32 +370,20 @@ void Options::on_slide_c3_g_valueChanged(int value)
 {
 
     QString r_style = "QSlider#slide_c3_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    r_style.append(QString::number(0));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c3_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c3_b->value()));
-    r_style.append(", 255), stop:1 rgba(");
-    r_style.append(QString::number(255));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c3_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c3_b->value()));
-    r_style.append(",255));}");
+    r_style.append(QString::number(0));                         r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_b->value()));   r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));                       r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_b->value()));   r_style.append(",255));}");
 
     QString b_style =  "QSlider#slide_c3_b::groove{background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    b_style.append(QString::number(ui->slide_c3_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_c3_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(0));
-    b_style.append(", 255), stop:1 rgba(");
-    b_style.append(QString::number(ui->slide_c3_r->value()));
-    b_style.append(",");
-    b_style.append(QString::number(ui->slide_c3_g->value()));
-    b_style.append(",");
-    b_style.append(QString::number(255));
-    b_style.append(",255));}");
+    b_style.append(QString::number(ui->slide_c3_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_c3_g->value()));   b_style.append(",");
+    b_style.append(QString::number(0));                         b_style.append(", 255), stop:1 rgba(");
+    b_style.append(QString::number(ui->slide_c3_r->value()));   b_style.append(",");
+    b_style.append(QString::number(ui->slide_c3_g->value()));   b_style.append(",");
+    b_style.append(QString::number(255));                       b_style.append(",255));}");
 
     ui->slide_c3_r->setStyleSheet(r_style);
     ui->slide_c3_b->setStyleSheet(b_style);
@@ -492,32 +393,20 @@ void Options::on_slide_c3_g_valueChanged(int value)
 void Options::on_slide_c3_b_valueChanged(int value)
 {
     QString r_style = "QSlider#slide_c3_r::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    r_style.append(QString::number(0));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c3_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c3_b->value()));
-    r_style.append(", 255), stop:1 rgba(");
-    r_style.append(QString::number(255));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c3_g->value()));
-    r_style.append(",");
-    r_style.append(QString::number(ui->slide_c3_b->value()));
-    r_style.append(",255));}");
+    r_style.append(QString::number(0));                         r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_b->value()));   r_style.append(", 255), stop:1 rgba(");
+    r_style.append(QString::number(255));                       r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_g->value()));   r_style.append(",");
+    r_style.append(QString::number(ui->slide_c3_b->value()));   r_style.append(",255));}");
 
     QString g_style = "QSlider#slide_c3_g::groove{height: 12px; background: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(";
-    g_style.append(QString::number(ui->slide_c3_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(0));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_c3_b->value()));
-    g_style.append(", 255), stop:1 rgba(");
-    g_style.append(QString::number(ui->slide_c3_r->value()));
-    g_style.append(",");
-    g_style.append(QString::number(255));
-    g_style.append(",");
-    g_style.append(QString::number(ui->slide_c3_b->value()));
-    g_style.append(",255));}");
+    g_style.append(QString::number(ui->slide_c3_r->value()));   g_style.append(",");
+    g_style.append(QString::number(0));                         g_style.append(",");
+    g_style.append(QString::number(ui->slide_c3_b->value()));   g_style.append(", 255), stop:1 rgba(");
+    g_style.append(QString::number(ui->slide_c3_r->value()));   g_style.append(",");
+    g_style.append(QString::number(255));                       g_style.append(",");
+    g_style.append(QString::number(ui->slide_c3_b->value()));   g_style.append(",255));}");
 
     ui->slide_c3_r->setStyleSheet(r_style);
     ui->slide_c3_g->setStyleSheet(g_style);
@@ -528,14 +417,14 @@ void Options::on_slide_c3_b_valueChanged(int value)
 /*~~~~~~~~~~~~~~~~~~RESET STUFF~~~~~~~~~~~~~~~~~~~*/
 void Options::on_reset_default_save_location_clicked()
 {
- bchoco_settings.setValue("default_save_file",QString(QCoreApplication::applicationDirPath()) + "/"+ "save0");
- set_path_lbls();
+    bchoco_settings.setValue("default_save_file",QString(QCoreApplication::applicationDirPath()) + "/"+ "save0");
+    set_path_lbls();
 }
 
 void Options::on_reset_char_stat_folder_clicked()
 {
- bchoco_settings.setValue("char_stat_folder",QString(QDir::homePath()));
- set_path_lbls();
+    bchoco_settings.setValue("char_stat_folder",QString(QDir::homePath()));
+    set_path_lbls();
 }
 
 void Options::on_reset_font_clicked()
@@ -546,5 +435,6 @@ void Options::on_reset_font_clicked()
     bchoco_settings.remove("font-family"); bchoco_settings.remove("font-size");
 }
 
+void Options::on_cb_skip_slot_mask_toggled(bool checked){if(!loading){bchoco_settings.setValue("skip_slot_mask",checked);}}
 /*~~~~~~~~~~~~~~~~CLOSE BUTTON~~~~~~~~~~~~~~~~~~*/
 void Options::on_pushButton_clicked(){this->close();}

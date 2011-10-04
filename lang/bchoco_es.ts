@@ -1651,10 +1651,6 @@
         <translation>Cant.</translation>
     </message>
     <message>
-        <source>QTY:</source>
-        <translation>CANT:</translation>
-    </message>
-    <message>
         <source>Key Items</source>
         <translation>Elementos Clave</translation>
     </message>
@@ -5687,6 +5683,10 @@ Table Entries are Editable</source>
     <message>
         <source>&amp;Close</source>
         <translation>&amp;Cerrar</translation>
+    </message>
+    <message>
+        <source>skip_slot_mask (pc only)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
