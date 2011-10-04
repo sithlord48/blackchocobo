@@ -73,6 +73,7 @@ private slots:
     void on_btn_12pt_clicked(bool checked);
     void on_btn_13pt_clicked(bool checked);
     void on_btn_14pt_clicked(bool checked);
+    void on_cb_skip_slot_mask_toggled(bool checked);
 };
 
 #endif // OPTIONS_H

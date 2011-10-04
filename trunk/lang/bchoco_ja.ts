@@ -1188,12 +1188,12 @@
         <translation>1/35神羅兵</translation>
     </message>
     <message>
-        <source>Aﾃ｢ﾂ鳴ｪM Cannon</source>
-        <translation>A・Mキャノン</translation>
-    </message>
-    <message>
         <source>Plus Barrette</source>
         <translation>プラチナバレッタ</translation>
+    </message>
+    <message>
+        <source>AâªM Cannon</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -1674,10 +1674,6 @@
         <source>Qty</source>
         <translatorcomment>どこに使われているか分からない</translatorcomment>
         <translation>個数</translation>
-    </message>
-    <message>
-        <source>QTY:</source>
-        <translation>所持数:</translation>
     </message>
     <message>
         <source>Key Items</source>
@@ -5728,6 +5724,10 @@ Table Entries are Editable</source>
     <message>
         <source>&amp;Close</source>
         <translation>閉じる(&amp;C)</translation>
+    </message>
+    <message>
+        <source>skip_slot_mask (pc only)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

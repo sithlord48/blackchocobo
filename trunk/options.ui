@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>764</width>
-    <height>446</height>
+    <height>471</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -566,7 +566,7 @@
        <number>3</number>
       </property>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_9">
+       <layout class="QHBoxLayout" name="horizontalLayout_11">
         <item>
          <widget class="QFontComboBox" name="combo_font">
           <property name="sizePolicy">
@@ -583,10 +583,6 @@
           </property>
          </widget>
         </item>
-       </layout>
-      </item>
-      <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_11">
         <item>
          <widget class="QPushButton" name="btn_9pt">
           <property name="sizePolicy">
@@ -791,6 +787,35 @@
       </item>
      </layout>
     </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="horizontalLayout_9">
+     <property name="spacing">
+      <number>0</number>
+     </property>
+     <property name="leftMargin">
+      <number>20</number>
+     </property>
+     <property name="topMargin">
+      <number>6</number>
+     </property>
+     <property name="bottomMargin">
+      <number>6</number>
+     </property>
+     <item>
+      <widget class="QCheckBox" name="cb_skip_slot_mask">
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string>skip_slot_mask (pc only)</string>
+       </property>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item>
     <widget class="QGroupBox" name="groupBox_4">

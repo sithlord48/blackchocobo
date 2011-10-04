@@ -7932,44 +7932,37 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <number>3</number>
               </property>
               <item>
-               <widget class="QComboBox" name="combo_additem">
-                <property name="sizePolicy">
-                 <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-                 </sizepolicy>
-                </property>
-                <property name="minimumSize">
-                 <size>
-                  <width>0</width>
-                  <height>0</height>
-                 </size>
-                </property>
-                <property name="maximumSize">
-                 <size>
-                  <width>16777215</width>
-                  <height>23</height>
-                 </size>
-                </property>
-               </widget>
-              </item>
-              <item>
                <layout class="QHBoxLayout" name="horizontalLayout_161">
                 <item>
-                 <widget class="QLabel" name="label_6">
-                  <property name="maximumSize">
+                 <widget class="QComboBox" name="combo_additem">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
+                  <property name="minimumSize">
                    <size>
-                    <width>60</width>
-                    <height>17</height>
+                    <width>0</width>
+                    <height>0</height>
                    </size>
                   </property>
-                  <property name="text">
-                   <string>QTY:</string>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>23</height>
+                   </size>
                   </property>
                  </widget>
                 </item>
                 <item>
                  <widget class="QSpinBox" name="sb_addqty">
+                  <property name="sizePolicy">
+                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                   </sizepolicy>
+                  </property>
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
@@ -7978,7 +7971,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <property name="maximumSize">
                    <size>
-                    <width>64</width>
+                    <width>54</width>
                     <height>24</height>
                    </size>
                   </property>
@@ -8002,7 +7995,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <item>
                  <widget class="QPushButton" name="clearItem">
                   <property name="sizePolicy">
-                   <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                     <horstretch>0</horstretch>
                     <verstretch>0</verstretch>
                    </sizepolicy>
@@ -8026,7 +8019,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </size>
                   </property>
                   <property name="text">
-                   <string>Clear Slot</string>
+                   <string/>
                   </property>
                   <property name="icon">
                    <iconset resource="images.qrc">
@@ -8261,8 +8254,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>212</width>
-                  <height>267</height>
+                  <width>242</width>
+                  <height>330</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -9910,7 +9903,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <normaloff>:/icon/quit</normaloff>:/icon/quit</iconset>
                  </property>
                  <property name="shortcut">
-                  <string notr="true">Del</string>
+                  <string>Del</string>
                  </property>
                  <property name="autoExclusive">
                   <bool>false</bool>
@@ -29031,7 +29024,6 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>btn_m_lvl4_slot</tabstop>
   <tabstop>btn_m_lvl5_slot</tabstop>
   <tabstop>cb_Region_Slot</tabstop>
-  <tabstop>clearItem</tabstop>
   <tabstop>list_keyitems</tabstop>
   <tabstop>tbl_materia</tabstop>
   <tabstop>combo_mat_type</tabstop>
