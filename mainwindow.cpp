@@ -55,10 +55,10 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     for (int i=288;i<320;i++){ui->combo_acc->addItem(QIcon(Items[i].image),names.ItemNames(i));}
                                 ui->combo_acc->addItem(QIcon(Items[288].image),tr("-None-"));//add clear option for accessories
     for (int i=0;i<320;i++){ui->combo_additem->addItem(QIcon(Items[i].image),names.ItemNames(i));}
-    for (int i=0;i<0x5b;i++){ui->combo_add_mat->addItem(QIcon(Materias[i].image),Materias[i].name);}
-    for (int i=0;i<0x5b;i++){ui->combo_add_mat_slot->addItem(QIcon(Materias[i].image),Materias[i].name);}
-    for (int i=0;i<0x5b;i++){if(Materias[i].name !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),Materias[i].name);}}
-    for (int i=0;i<0x5b;i++){if(Materias[i].name !=tr("DON'T USE")){ui->combo_add_mat_slot_2->addItem(QIcon(Materias[i].image),Materias[i].name);}}
+    for (int i=0;i<0x5b;i++){ui->combo_add_mat->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
+    for (int i=0;i<0x5b;i++){ui->combo_add_mat_slot->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
+    for (int i=0;i<0x5b;i++){if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}}
+    for (int i=0;i<0x5b;i++){if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_slot_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}}
 
     //set up tables..
     ui->tbl_location_field->setColumnWidth(0,147);
@@ -2236,7 +2236,7 @@ if(current_id == 0xFF) //if the slot is empty take some precautions
     ui->combo_add_mat_slot_2->clear();
     for(int i=0;i<0x5B;i++)
     {
-        if(Materias[i].name !=tr("DON'T USE")){ui->combo_add_mat_slot_2->addItem(QIcon(Materias[i].image),Materias[i].name);}
+        if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_slot_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
     }
     ui->combo_add_mat_slot->setCurrentIndex(0);
     ui->combo_mat_type_slot->setCurrentIndex(0);
@@ -3917,7 +3917,7 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row)
        ui->combo_add_mat_2->clear();
        for(int i=0;i<0x5B;i++)
        {
-           if(Materias[i].name !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),Materias[i].name);}
+           if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
        }
        ui->btn_m_lvl1->setVisible(0);
        ui->btn_m_lvl2->setVisible(0);
@@ -3990,10 +3990,10 @@ void MainWindow::on_combo_mat_type_currentIndexChanged(int index)
     {
         for(int i=0;i<0x5B;i++)
         {
-            if(Materias[i].name !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),Materias[i].name);}
+            if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
         }
     }
-    else{for(int i=0;i<0x5B;i++){if(index==Materias[i].type){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),Materias[i].name);}}}
+    else{for(int i=0;i<0x5B;i++){if(index==Materias[i].type){ui->combo_add_mat_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}}}
     load=false;
 }
 
@@ -4001,7 +4001,7 @@ void MainWindow::on_combo_add_mat_2_currentIndexChanged()
 {if(!load){//set combo_add_mat.setCurrentindex = selected materia.id
     for(int i=0;i<0x5B;i++)
     {
-        if(ui->combo_add_mat_2->currentText()== Materias[i].name){ui->combo_add_mat->setCurrentIndex(i);}
+        if(ui->combo_add_mat_2->currentText()== names.MateriaNames(i)){ui->combo_add_mat->setCurrentIndex(i);}
     }
 // if its eskill set it up right , or else do normal setup.
     if(ui->combo_add_mat_2->currentText()== tr("Enemy Skill")){ui->eskill_group->setVisible(true);ui->sb_addap->setEnabled(0);geteskills(ui->tbl_materia->currentRow());}
@@ -4322,10 +4322,10 @@ void MainWindow::on_combo_mat_type_slot_currentIndexChanged(int index)
     {
         for(int i=0;i<0x5B;i++)
         {
-            if(Materias[i].name !=tr("DON'T USE")){ui->combo_add_mat_slot_2->addItem(QIcon(Materias[i].image),Materias[i].name);}
+            if(names.MateriaNames(i) !=tr("DON'T USE")){ui->combo_add_mat_slot_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}
         }
     }
-    else{for(int i=0;i<0x5B;i++){if(index==Materias[i].type){ui->combo_add_mat_slot_2->addItem(QIcon(Materias[i].image),Materias[i].name);}}}
+    else{for(int i=0;i<0x5B;i++){if(index==Materias[i].type){ui->combo_add_mat_slot_2->addItem(QIcon(Materias[i].image),names.MateriaNames(i));}}}
     load=false;
 }
 void MainWindow::on_combo_add_mat_slot_currentIndexChanged(int index)
@@ -4349,7 +4349,7 @@ void MainWindow::on_combo_add_mat_slot_2_currentIndexChanged()
 {if(!load){//set combo_add_mat.setCurrentindex = selected materia.id
     for(int i=0;i<0x5B;i++)
     {
-        if(ui->combo_add_mat_slot_2->currentText()== Materias[i].name){ui->combo_add_mat_slot->setCurrentIndex(i);}
+        if(ui->combo_add_mat_slot_2->currentText()== names.MateriaNames(i)){ui->combo_add_mat_slot->setCurrentIndex(i);}
     }
 
     if(ff7.slot[s].chars[curchar].materias[mslotsel].id == 0x2C)
