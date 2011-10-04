@@ -1188,12 +1188,16 @@
         <translation>1/35神羅兵</translation>
     </message>
     <message>
+        <source>Aﾃ｢ﾂ鳴ｪM Cannon</source>
+        <translation>A・Mキャノン</translation>
+    </message>
+    <message>
         <source>Plus Barrette</source>
         <translation>プラチナバレッタ</translation>
     </message>
     <message>
         <source>AâªM Cannon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">A・Mキャノン</translation>
     </message>
 </context>
 <context>
@@ -1435,7 +1439,6 @@
     </message>
     <message>
         <source>CheckBox</source>
-        <translatorcomment>起動時に表示されるが、ファイルを開けばケットシー, ヴィンセントのみクラウド/昔, セフィロスに、他キャラは非表示</translatorcomment>
         <translation>[CheckBox]</translation>
     </message>
     <message>
@@ -1857,8 +1860,7 @@
     </message>
     <message>
         <source>Materia Stolen By Yuffie</source>
-        <translatorcomment>(A) Materia Stolen By Yuffie Box - This box shows what materia Yuffie will steal when the quest in Wutai triggers. Table is read only but you can use the button to empty slots. </translatorcomment>
-        <translation>ユフィに盗まれたマテリア</translation>
+        <translation>ユフィに盗まれるマテリア</translation>
     </message>
     <message>
         <source>Turtle Paradise Flyers Collected</source>
@@ -1998,17 +2000,14 @@
     </message>
     <message>
         <source>Run Speed</source>
-        <translatorcomment>(G) Run speed - the chocobos run speed normal/max vars. </translatorcomment>
         <translation>スピード</translation>
     </message>
     <message>
         <source>Sprint </source>
-        <translatorcomment>(H) Sprint Speed - the chocobos Sprint Speed normal/max vars</translatorcomment>
         <translation>ラスト スパート</translation>
     </message>
     <message>
         <source>Accel</source>
-        <translatorcomment>(I) Acceleration - the chocobos acceleration</translatorcomment>
         <translation>加速</translation>
     </message>
     <message>
@@ -2017,22 +2016,18 @@
     </message>
     <message>
         <source>Stamina</source>
-        <translatorcomment>(K) Stamina - how much stamina the chocobo has (item is 10x value shown in game). </translatorcomment>
         <translation>スタミナ</translation>
     </message>
     <message>
         <source>Fed ?</source>
-        <translatorcomment>(L) Fed? - we think this shows how many times you have fed the chocobo. </translatorcomment>
         <translation>給餌 (?)</translation>
     </message>
     <message>
         <source>Coop</source>
-        <translatorcomment>(M) CoOp - the cooperation value of the chocobo</translatorcomment>
         <translation>協調性</translation>
     </message>
     <message>
         <source>Personality</source>
-        <translatorcomment>(P) Personality - not much is known about this for now you can change it with the spin box but it is there to be monitored so we can learn how it works.</translatorcomment>
         <translation>性格</translation>
     </message>
     <message>
@@ -2225,7 +2220,7 @@
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation>ケット・シー, ヴィンセントがパーティ タブで無効になっている場合、ここで彼らを有効化しないでください。</translation>
+        <translation>ケット・シー, ヴィンセントがパーティ タブで無効になっているときは、ここで彼らを有効化しないでください。</translation>
     </message>
     <message>
         <source>map</source>
@@ -2249,7 +2244,6 @@
     </message>
     <message>
         <source>Bombing Mission Progress</source>
-        <translatorcomment>(C) Bombing Mission progress - these spinboxes allow you to change the varibles associated with bombing mission, its recommended that you do not touch these items.</translatorcomment>
         <translation>魔晄炉爆破ミッションの進捗</translation>
     </message>
     <message>
@@ -2322,23 +2316,23 @@
     </message>
     <message>
         <source>Lvl 1</source>
-        <translation>Lv. 1</translation>
+        <translation>LV. 1</translation>
     </message>
     <message>
         <source>Lvl 2</source>
-        <translation>Lv. 2</translation>
+        <translation>LV. 2</translation>
     </message>
     <message>
         <source>Lvl 3</source>
-        <translation>Lv. 3</translation>
+        <translation>LV. 3</translation>
     </message>
     <message>
         <source>Lvl 4</source>
-        <translation>Lv 4</translation>
+        <translation>LV. 4</translation>
     </message>
     <message>
         <source>Lvl 5</source>
-        <translation>Lv. 5</translation>
+        <translation>LV. 5</translation>
     </message>
     <message>
         <source>Othe&amp;r</source>
@@ -2358,11 +2352,10 @@
     </message>
     <message>
         <source>Have Fun With This Feature, But Don&apos;t Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</source>
-        <translation>この機能をお楽しみください。設定によってはストーリーの進捗との齟齬により、不具合を引き起こすことがあります。</translation>
+        <translation>この機能をお楽しみください。ただし、選択した設定とストーリーの進捗度やパーティ構成との齟齬により、不具合が引き起こされることがあります。</translation>
     </message>
     <message>
         <source>Location Name</source>
-        <translatorcomment>ゲーム上でスロットのロード メニューに表示されるのみ Tip: The location name can be any sentence as it will appear only in the save selection menu. Tip: Setting Location here will not change your world map location.</translatorcomment>
         <translation>場所名</translation>
     </message>
     <message>
@@ -2665,7 +2658,6 @@
     </message>
     <message>
         <source>Materia Caves Empty</source>
-        <translatorcomment>(I) Materia Caves Empty - Check the boxes to make the materia in each cave disappear as the game will think they have already taken. Note: The materias checked simply disappear from the caves, they don&apos;t go to the materia menu.</translatorcomment>
         <translation>マテリアの洞窟を空（から）に</translation>
     </message>
     <message>
@@ -2714,7 +2706,6 @@
     </message>
     <message>
         <source>0xBD4 (itemmasks_1)</source>
-        <translatorcomment>(H) 0xBD4 - this byte that contains all item mask bits only the 0x1 bit is known to be the potion on MD8_3 (right after you meet aeris the first time). The rest are unknown</translatorcomment>
         <translation>0xBD4 (アイテムマスク_1)</translation>
     </message>
     <message>
@@ -3355,7 +3346,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>-------EMPTY--------</source>
-        <translation>-------EMPTY--------</translation>
+        <translation>-------空き--------</translation>
     </message>
     <message>
         <source>ID </source>
@@ -3383,7 +3374,6 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>0xC1E tut_sub</source>
-        <translatorcomment>G) Tut sub - the byte that the sub tutoral seen var is stored in to find more in that byte</translatorcomment>
         <translation>0xC1E 潜水艦チュートリアル</translation>
     </message>
     <message>
@@ -3568,12 +3558,11 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Aeris Turks</source>
-        <translatorcomment>教会に配置したとき、0, 3: クラウドが落下した直後、夢-エアリストとの会話から 1, 2, 4:レノの最後のセリフが流れ教会奥マップから脱出クエストが始まる Aeris_Turks - this is a helper variable for when you meet aeris in the chruch.</translatorcomment>
+        <translatorcomment>教会に配置したとき、0, 3: クラウドが落下した直後のエアリストとの会話から 1, 2, 4:レノの最後のセリフが流れ教会奥マップから Aeris_Turks - this is a helper variable for when you meet aeris in the chruch.</translatorcomment>
         <translation>エアリス_タークス_教会フラグ</translation>
     </message>
     <message>
         <source>The Church In The Slums</source>
-        <translatorcomment>Disc1 スラム街の教会・ Disc 3 教会奥 Aeris Turks の値に依存か？</translatorcomment>
         <translation>スラム街の教会</translation>
     </message>
     <message>
@@ -3582,7 +3571,6 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Don_prog</source>
-        <translatorcomment>ドン・コルネオとのイベントの進捗　 this is a helper variable that helps to control the progression of the Don Corneo mansion scene</translatorcomment>
         <translation>コルネオ邸_イベント進捗</translation>
     </message>
     <message>
@@ -3615,7 +3603,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Unknown  Vars</source>
-        <translation>詳細不明の変数</translation>
+        <translation>詳細不明な変数</translation>
     </message>
     <message>
         <source>New Window</source>
@@ -3675,7 +3663,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Clear All Stolen Materia</source>
-        <translation>すべての盗まれたマテリアをクリア</translation>
+        <translation>盗まれるマテリアをすべてクリア</translation>
     </message>
     <message>
         <source>Reload</source>
@@ -3691,7 +3679,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Slot:%1 Contains A PAL region save</source>
-        <translation>スロットt:%1 のセーブは PAL 方式です</translation>
+        <translation>スロット:%1 のセーブは PAL 方式です</translation>
     </message>
     <message>
         <source>PAL PSX runs at 50/60 speed
@@ -3751,7 +3739,7 @@ Would you like to correct the playtime?</source>
     </message>
     <message>
         <source>Show All &apos;Z&apos; Changes</source>
-        <translation>すべての &apos;Z&apos; の変更を表示</translation>
+        <translation>&apos;Z&apos; の変更をすべて表示</translation>
     </message>
     <message>
         <source>------Right Table------&gt;
@@ -3765,11 +3753,11 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Steps</source>
-        <translation>ステップ</translation>
+        <translation>歩数</translation>
     </message>
     <message>
         <source>Number Steps</source>
-        <translation>ステップ番号</translation>
+        <translation>フィールドの総歩数</translation>
     </message>
     <message>
         <source>Y: </source>
@@ -3793,7 +3781,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>1st Door Open</source>
-        <translation>最初のドアを開ける</translation>
+        <translation>最初のドアが開く</translation>
     </message>
     <message>
         <source>2nd Door Opened</source>
@@ -3841,16 +3829,16 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Escape From Reactor </source>
-        <translation>魔晄炉からの脱出</translation>
+        <translation>魔晄炉からの脱出後</translation>
     </message>
     <message>
         <source>Post Pan MD8_2</source>
         <translatorcomment>8番街_2 </translatorcomment>
-        <translation>MD8_2 パン映像再生後</translation>
+        <translation>8番街_2パン映像再生後</translation>
     </message>
     <message>
         <source>Midgar Train Flags</source>
-        <translatorcomment>ミッドガル発最終列車列車フラグ</translatorcomment>
+        <translatorcomment>ミッドガル発最終列車フラグ</translatorcomment>
         <translation>ミッドガル発最終列車フラグ</translation>
     </message>
     <message>
@@ -3870,12 +3858,10 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source> Played Video on Train?</source>
-        <translatorcomment>ここかどうかわからない(?? 0x10: this bit is checked on ROOTMAP, though it doesn&apos;t use ingame.) </translatorcomment>
         <translation>列車のビデオを再生 (?)</translation>
     </message>
     <message>
         <source>Unknowns / Unused</source>
-        <translatorcomment>ここかどうかわからない(?? z_27 Unknown (ENDS @ 0xDC4 32 bytes in to next bank) )</translatorcomment>
         <translation>詳細不明 / 未使用</translation>
     </message>
     <message>
@@ -3910,7 +3896,7 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Team Avalanche Has Run To Hideout</source>
         <translatorcomment>0x01: when everyone run to hideout.</translatorcomment>
-        <translation>アバランチ チームの散開</translation>
+        <translation>アバランチ チームが散開</translation>
     </message>
     <message>
         <source>Can Show Pillar Pan Video</source>
@@ -3932,32 +3918,32 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Field Items Picked Up</source>
-        <translation>フィールド アイテムの取得</translation>
+        <translation>フィールド アイテムの入手</translation>
     </message>
     <message>
         <source>MDSTIN: Potion 1</source>
-        <translatorcomment>1番街駅ホーム:ポーション 1</translatorcomment>
-        <translation>MDSTIN: ポーション 1</translation>
+        <translatorcomment>1番街駅ホーム: ポーション1</translatorcomment>
+        <translation>1番街駅ホーム: ポーション1</translation>
     </message>
     <message>
         <source>MDSTIN: Potion 2</source>
-        <translatorcomment>1番街駅ホーム:ポーション 2</translatorcomment>
-        <translation>MDSTIN: ポーション 2</translation>
+        <translatorcomment>1番街駅ホーム: ポーション2</translatorcomment>
+        <translation>1番街駅ホーム: ポーション2</translation>
     </message>
     <message>
         <source>NMKIN_3: Potion</source>
         <translatorcomment>1番魔晄炉 3: ポーション</translatorcomment>
-        <translation>NMKIN_3: ポーション</translation>
+        <translation>1番魔晄炉_3: ポーション</translation>
     </message>
     <message>
         <source>NMKIN_1: Phoenix Down</source>
-        <translatorcomment>1番魔晄炉 1 フェニックスの尾</translatorcomment>
-        <translation>NMKIN_1: フェニックスの尾</translation>
+        <translatorcomment>1番魔晄炉 1: フェニックスの尾</translatorcomment>
+        <translation>1番魔晄炉_1: フェニックスの尾</translation>
     </message>
     <message>
         <source>MD8_3: Potion</source>
-        <translatorcomment>8番街 3 ポーション</translatorcomment>
-        <translation>MD8_3: ポーション</translation>
+        <translatorcomment>8番街 3; ポーション</translatorcomment>
+        <translation>8番街_3: ポーション</translation>
     </message>
     <message>
         <source>Elevator On 2nd Floor</source>
@@ -3966,7 +3952,7 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Post Pan NMKIN_5</source>
         <translatorcomment>1番魔晄炉 5 全景後</translatorcomment>
-        <translation>NMKIN_5 パン映像再生後</translation>
+        <translation>1番魔晄炉_5 魔晄炉パン映像再生後</translation>
     </message>
     <message>
         <source>Trigger Game Over (countdown timer out)</source>
@@ -3975,7 +3961,7 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Post Electrical Effect MD8_3</source>
         <translatorcomment>8番街_3 の放電発生後</translatorcomment>
-        <translation>MD8_3 放電発生後</translation>
+        <translation>MD8_3 8番街_3 放電発生後</translation>
     </message>
     <message>
         <source>0x01 Potion On MD8_3 (see item tab)</source>
@@ -4047,31 +4033,31 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>MDS7ST1:Hi-Potion.(Roof Train 1)</source>
-        <translation>MDS7ST1: ハイポーション (列車1屋根)</translation>
+        <translation>列車墓場1: ハイポーション (列車1 屋根)</translation>
     </message>
     <message>
         <source>MDS7ST1:Hi-Potion.(Barrel 1)</source>
-        <translation>MDS7ST1: ハイポーション (ドラム缶1)</translation>
+        <translation>列車墓場1: ハイポーション (ドラム缶1)</translation>
     </message>
     <message>
         <source>MDS7ST1:Echo Screen</source>
-        <translation>MDS7ST1: やまびこえんまく</translation>
+        <translation>列車墓場1: やまびこえんまく</translation>
     </message>
     <message>
         <source>MDS7ST1:Potion</source>
-        <translation>MDS7ST1: ポーション</translation>
+        <translation>列車墓場1: ポーション</translation>
     </message>
     <message>
         <source>MDS7ST2:Hi-Potion</source>
-        <translation>MDS7ST2: ハイポーション</translation>
+        <translation>列車墓場2: ハイポーション</translation>
     </message>
     <message>
         <source>MDS7ST2:Ether</source>
-        <translation>MDS7ST2: ハイポーション</translation>
+        <translation>列車墓場2: ハイポーション</translation>
     </message>
     <message>
         <source>MDS7ST2:Potion</source>
-        <translation>MDS7ST2: ポーション</translation>
+        <translation>列車墓場2: ポーション</translation>
     </message>
     <message>
         <source>Edit Selected Item Slot</source>
@@ -4082,12 +4068,12 @@ Var And Scrolling Synced To Left Table</source>
 Select Unknown Var To View
 Table Entries are Editable</source>
         <translation>&lt;------左のテーブル------
-表示する不明な変数を選択
+表示する変数を選択
 テーブルの値は編集可能</translation>
     </message>
     <message>
         <source>MDS7ST1:Potion.(In Train 2)</source>
-        <translation>MDS7ST1: ハイポーション (列車2内部)</translation>
+        <translation>列車墓場1: ハイポーション (列車2 内部)</translation>
     </message>
     <message>
         <source>Would you like to correct the play time?</source>
@@ -5727,7 +5713,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>skip_slot_mask (pc only)</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット マスクのスキップ (PC のみ)</translation>
     </message>
 </context>
 <context>
