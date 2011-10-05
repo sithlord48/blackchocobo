@@ -1188,16 +1188,12 @@
         <translation>1/35神羅兵</translation>
     </message>
     <message>
-        <source>Aﾃ｢ﾂ鳴ｪM Cannon</source>
-        <translation>A・Mキャノン</translation>
-    </message>
-    <message>
         <source>Plus Barrette</source>
         <translation>プラチナバレッタ</translation>
     </message>
     <message>
-        <source>AâªM Cannon</source>
-        <translation type="unfinished">A・Mキャノン</translation>
+        <source>A M Cannon</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5807,7 +5803,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Black Chocobo </source>
-        <translation>Black Chocobo </translation>
+        <translation>黒チョコボ </translation>
     </message>
     <message>
         <source>Version:</source>
@@ -5819,7 +5815,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>The Final Fantasy VII Save Game Editor</source>
-        <translation type="unfinished">The Final Fantasy VII Save Game Editor</translation>
+        <translation>Final Fantasy VII ゲーム セーブ エディター</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -6195,7 +6191,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Materia Buffer , copy/paste materias</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">New: Materia Buffer , copy/paste materias</translation>
     </message>
 </context>
 <context>

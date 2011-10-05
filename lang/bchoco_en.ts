@@ -1188,11 +1188,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>AâªM Cannon</source>
+        <source>Plus Barrette</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Plus Barrette</source>
+        <source>A M Cannon</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

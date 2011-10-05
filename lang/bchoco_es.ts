@@ -1189,12 +1189,12 @@
         <translation>Soldado 1/35</translation>
     </message>
     <message>
-        <source>AâªM Cannon</source>
-        <translation>Cañón A-M</translation>
-    </message>
-    <message>
         <source>Plus Barrette</source>
         <translation>Barreta Plus</translation>
+    </message>
+    <message>
+        <source>A M Cannon</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
