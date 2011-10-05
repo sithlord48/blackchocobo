@@ -362,7 +362,7 @@ static const char *itemNames[]=
     QT_TRANSLATE_NOOP("Items","Leather Glove"),QT_TRANSLATE_NOOP("Items","Metal Knuckle"),QT_TRANSLATE_NOOP("Items","Mythril Claw"),QT_TRANSLATE_NOOP("Items","Grand Glove"),QT_TRANSLATE_NOOP("Items","Tiger Fang"),QT_TRANSLATE_NOOP("Items","Diamond Knuckle"),QT_TRANSLATE_NOOP("Items","Dragon Claw"),QT_TRANSLATE_NOOP("Items","Crystal Glove"),
     QT_TRANSLATE_NOOP("Items","Motor Drive"),QT_TRANSLATE_NOOP("Items","Platinum Fist"),QT_TRANSLATE_NOOP("Items","Kaiser Knuckle"),QT_TRANSLATE_NOOP("Items","Work Glove"),QT_TRANSLATE_NOOP("Items","Powersoul"),QT_TRANSLATE_NOOP("Items","Master Fist"),QT_TRANSLATE_NOOP("Items","God's Hand"),QT_TRANSLATE_NOOP("Items","Premium Heart"),
     // barret's weapons 160-175
-    QT_TRANSLATE_NOOP("Items","Gatling Gun"),QT_TRANSLATE_NOOP("Items","Assault Gun"),QT_TRANSLATE_NOOP("Items","Cannon Ball"),QT_TRANSLATE_NOOP("Items","Atomic Scissors"),QT_TRANSLATE_NOOP("Items","Heavy Vulcan"),QT_TRANSLATE_NOOP("Items","Chainsaw"),QT_TRANSLATE_NOOP("Items","Microlaser"),QT_TRANSLATE_NOOP("Items","A▪M Cannon"),
+    QT_TRANSLATE_NOOP("Items","Gatling Gun"),QT_TRANSLATE_NOOP("Items","Assault Gun"),QT_TRANSLATE_NOOP("Items","Cannon Ball"),QT_TRANSLATE_NOOP("Items","Atomic Scissors"),QT_TRANSLATE_NOOP("Items","Heavy Vulcan"),QT_TRANSLATE_NOOP("Items","Chainsaw"),QT_TRANSLATE_NOOP("Items","Microlaser"),QT_TRANSLATE_NOOP("Items","A M Cannon"),
     QT_TRANSLATE_NOOP("Items","W Machine Gun"),QT_TRANSLATE_NOOP("Items","Drill Arm"),QT_TRANSLATE_NOOP("Items","Solid Bazooka"),QT_TRANSLATE_NOOP("Items","Rocket Punch"),QT_TRANSLATE_NOOP("Items","Enemy Launcher"),QT_TRANSLATE_NOOP("Items","Pile Banger"),QT_TRANSLATE_NOOP("Items","Max Ray"),QT_TRANSLATE_NOOP("Items","Missing Score"),
     //red's weapons 176-189
     QT_TRANSLATE_NOOP("Items","Mythril Clip"),QT_TRANSLATE_NOOP("Items","Diamond Pin"),QT_TRANSLATE_NOOP("Items","Silver Barette"),QT_TRANSLATE_NOOP("Items","Gold Barette"),QT_TRANSLATE_NOOP("Items","Adaman Clip"),QT_TRANSLATE_NOOP("Items","Crystal Comb"),QT_TRANSLATE_NOOP("Items","Magic Comb"),QT_TRANSLATE_NOOP("Items","Plus Barrette"),
@@ -540,8 +540,8 @@ QString ff7names::MateriaSkills(int i,int l){return qApp->translate("Materia_Ski
 QString locations::loc_name(int i){return qApp->translate("Locations",Locations[i].location.toAscii());}
 QString locations::map_id(int i){return Locations[i].map_id;}
 QString locations::loc_id(int i){return Locations[i].loc_id;}
-QString locations::x(int i){return Locations[i].y;}
-QString locations::y(int i){return Locations[i].x;}
+QString locations::x(int i){return Locations[i].x;}
+QString locations::y(int i){return Locations[i].y;}
 QString locations::z(int i){return Locations[i].z;}
 
 /*LEVEL CHART */
