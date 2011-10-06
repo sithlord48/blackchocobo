@@ -1193,14 +1193,14 @@
     </message>
     <message>
         <source>A M Cannon</source>
-        <translation type="unfinished"></translation>
+        <translation>Ａ・Ｍキャノン</translation>
     </message>
 </context>
 <context>
     <name>Locations</name>
     <message>
         <source>Platform</source>
-        <translation>1番街駅ホーム</translation>
+        <translation>１番街駅ホーム</translation>
     </message>
     <message>
         <source>Tunnel</source>
@@ -1212,7 +1212,7 @@
     </message>
     <message>
         <source>Midgar Sector 8</source>
-        <translation>ミッドガル8番街</translation>
+        <translation>ミッドガル８番街</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
@@ -1232,7 +1232,7 @@
     </message>
     <message>
         <source>Reactor No. 5</source>
-        <translation>5番魔晄炉</translation>
+        <translation>５番魔晄炉</translation>
     </message>
     <message>
         <source>Aerith&apos;s House</source>
@@ -1276,11 +1276,11 @@
     </message>
     <message>
         <source>Sector 7 - Slums</source>
-        <translation>7番街スラム</translation>
+        <translation>７番街スラム</translation>
     </message>
     <message>
         <source>Reactor No.1</source>
-        <translation>1番魔晄炉</translation>
+        <translation>１番魔晄炉</translation>
     </message>
     <message>
         <source>Corel Prison</source>
@@ -1312,7 +1312,7 @@
     </message>
     <message>
         <source>Lower Sector 4 Plate</source>
-        <translation>4番街プレート下部</translation>
+        <translation>４番街プレート下部</translation>
     </message>
     <message>
         <source>Mt. Corel</source>
@@ -1320,7 +1320,7 @@
     </message>
     <message>
         <source>Sector 5 - Slums</source>
-        <translation>5番街スラム</translation>
+        <translation>５番街スラム</translation>
     </message>
     <message>
         <source>Debug Room [ja]</source>
@@ -1352,7 +1352,7 @@
     </message>
     <message>
         <source>Sector 8, Underground</source>
-        <translation>ミッドガル8番街地下</translation>
+        <translation>ミッドガル８番街地下</translation>
     </message>
     <message>
         <source>Shinra Bldg.</source>
@@ -1776,7 +1776,7 @@
     </message>
     <message>
         <source>Key To Sector 5</source>
-        <translation>5番街ゲートの鍵</translation>
+        <translation>５番街ゲートの鍵</translation>
     </message>
     <message>
         <source>Keycard 60</source>
@@ -2108,7 +2108,7 @@
     </message>
     <message>
         <source>Sector 7 Slums</source>
-        <translation>7番街スラム</translation>
+        <translation>７番街スラム</translation>
     </message>
     <message>
         <source>1st Floor Shinra Building</source>
@@ -2228,7 +2228,7 @@
     </message>
     <message>
         <source>Platform</source>
-        <translation>1番街駅ホーム</translation>
+        <translation>１番街駅ホーム</translation>
     </message>
     <message>
         <source>Kalm Inn</source>
@@ -3781,7 +3781,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>2nd Door Opened</source>
-        <translation>2番目のドアが開く</translation>
+        <translation>二番目のドアが開く</translation>
     </message>
     <message>
         <source>Jessie Has Been Unstuck</source>
@@ -3830,7 +3830,7 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Post Pan MD8_2</source>
         <translatorcomment>8番街_2 </translatorcomment>
-        <translation>8番街_2パン映像再生後</translation>
+        <translation>８番街_2パン映像再生後</translation>
     </message>
     <message>
         <source>Midgar Train Flags</source>
@@ -3863,7 +3863,7 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Sector 7 Trainstation</source>
         <translatorcomment>MDS7ST3 event flags.</translatorcomment>
-        <translation>7番街スラム駅</translation>
+        <translation>７番街スラム駅</translation>
     </message>
     <message>
         <source>Team Avalanche Had Meeting after Bombing Mission</source>
@@ -3881,13 +3881,12 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Set To Reactor 5 Mode</source>
-        <translatorcomment>0x08: when Jessie, Biggs and Wedge run into train. </translatorcomment>
-        <translation>5番魔晄炉モードのセット</translation>
+        <translation>５番魔晄炉モードのセット</translation>
     </message>
     <message>
         <source>Sector 7 Pillar</source>
         <translatorcomment>MDS7PLR1 event flags.</translatorcomment>
-        <translation>7番街プレート支柱</translation>
+        <translation>７番街プレート支柱</translation>
     </message>
     <message>
         <source>Team Avalanche Has Run To Hideout</source>
@@ -3919,27 +3918,23 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>MDSTIN: Potion 1</source>
         <translatorcomment>1番街駅ホーム: ポーション1</translatorcomment>
-        <translation>1番街駅ホーム: ポーション1</translation>
+        <translation>１番街駅ホーム: ポーション1</translation>
     </message>
     <message>
         <source>MDSTIN: Potion 2</source>
-        <translatorcomment>1番街駅ホーム: ポーション2</translatorcomment>
-        <translation>1番街駅ホーム: ポーション2</translation>
+        <translation>１番街駅ホーム: ポーション2</translation>
     </message>
     <message>
         <source>NMKIN_3: Potion</source>
-        <translatorcomment>1番魔晄炉 3: ポーション</translatorcomment>
-        <translation>1番魔晄炉_3: ポーション</translation>
+        <translation>１番魔晄炉_3: ポーション</translation>
     </message>
     <message>
         <source>NMKIN_1: Phoenix Down</source>
-        <translatorcomment>1番魔晄炉 1: フェニックスの尾</translatorcomment>
-        <translation>1番魔晄炉_1: フェニックスの尾</translation>
+        <translation>１番魔晄炉_1: フェニックスの尾</translation>
     </message>
     <message>
         <source>MD8_3: Potion</source>
-        <translatorcomment>8番街 3; ポーション</translatorcomment>
-        <translation>8番街_3: ポーション</translation>
+        <translation>８番街_3: ポーション</translation>
     </message>
     <message>
         <source>Elevator On 2nd Floor</source>
@@ -3947,8 +3942,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Post Pan NMKIN_5</source>
-        <translatorcomment>1番魔晄炉 5 全景後</translatorcomment>
-        <translation>1番魔晄炉_5 魔晄炉パン映像再生後</translation>
+        <translation>１番魔晄炉_5 パン映像再生後</translation>
     </message>
     <message>
         <source>Trigger Game Over (countdown timer out)</source>
@@ -3956,12 +3950,11 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Post Electrical Effect MD8_3</source>
-        <translatorcomment>8番街_3 の放電発生後</translatorcomment>
-        <translation>MD8_3 8番街_3 放電発生後</translation>
+        <translation>８番街_3 放電発生後</translation>
     </message>
     <message>
         <source>0x01 Potion On MD8_3 (see item tab)</source>
-        <translation>0x01 MD8_3 ポーション (アイテム タブを参照)</translation>
+        <translation>0x01 ８番街_3 ポーション (アイテム タブを参照)</translation>
     </message>
     <message>
         <source>Custom Controller Mapping(PSX Only)</source>
@@ -4105,7 +4098,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Sector 5</source>
-        <translation>5番街</translation>
+        <translation>５番街</translation>
     </message>
     <message>
         <source>Talked with Sick Man</source>
