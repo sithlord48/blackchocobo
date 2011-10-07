@@ -2472,11 +2472,11 @@
     </message>
     <message>
         <source>Fast</source>
-        <translation>はやい</translation>
+        <translation>はやい </translation>
     </message>
     <message>
         <source>Slow</source>
-        <translation>おそい</translation>
+        <translation> おそい</translation>
     </message>
     <message>
         <source>Battle Message Speed:</source>
@@ -3298,7 +3298,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme)</source>
-        <translation>対応可能な FF7 のセーブ (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 セーブ (*.ff7);;Raw PSX FF7 セーブ (*-S*);;MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV セーブ (*.psv);;PSP セーブ (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive セーブ (*.gme)</translation>
+        <translation>対応済み FF7 セーブ (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 セーブ (*.ff7);;Raw PSX FF7 セーブ (*-S*);;MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV セーブ (*.psv);;PSP セーブ (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive セーブ (*.gme)</translation>
     </message>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</source>
@@ -3330,7 +3330,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>The Filename is empty</source>
-        <translation>ファイル名が未指定です</translation>
+        <translation>ファイルが未指定です</translation>
     </message>
     <message>
         <source>Region Detect Error</source>
@@ -3825,27 +3825,22 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Post Pan MD8_2</source>
-        <translatorcomment>8番街_2 </translatorcomment>
-        <translation>８番街_2パン映像再生後</translation>
+        <translation>８番街_2 パン映像再生後</translation>
     </message>
     <message>
         <source>Midgar Train Flags</source>
-        <translatorcomment>ミッドガル発最終列車フラグ</translatorcomment>
         <translation>ミッドガル発最終列車フラグ</translation>
     </message>
     <message>
         <source>Talked to Bigs</source>
-        <translatorcomment>0x01: when we talk to Biggs on way to sector 7.</translatorcomment>
         <translation>ビッグスと会話</translation>
     </message>
     <message>
         <source>Talked to Wedge Twice</source>
-        <translatorcomment>0x02: when we talk to Wedge twice on way to sector 7.</translatorcomment>
         <translation>ウェッジと二回の会話</translation>
     </message>
     <message>
         <source>Talked to Jessie Before Looking At Map</source>
-        <translatorcomment>0x04: when talk to Jessie, before look at map.</translatorcomment>
         <translation>マップを見る時のジェシーとの会話</translation>
     </message>
     <message>
@@ -3858,7 +3853,6 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Sector 7 Trainstation</source>
-        <translatorcomment>MDS7ST3 event flags.</translatorcomment>
         <translation>７番街スラム駅</translation>
     </message>
     <message>
@@ -3872,8 +3866,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Pair At Station agree</source>
-        <translatorcomment>0x04: when pair on station agreed with each other.</translatorcomment>
-        <translation>駅のカップルの意見が一致</translation>
+        <translation>駅のカップルの会話</translation>
     </message>
     <message>
         <source>Set To Reactor 5 Mode</source>
@@ -3881,17 +3874,14 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Sector 7 Pillar</source>
-        <translatorcomment>MDS7PLR1 event flags.</translatorcomment>
         <translation>７番街プレート支柱</translation>
     </message>
     <message>
         <source>Team Avalanche Has Run To Hideout</source>
-        <translatorcomment>0x01: when everyone run to hideout.</translatorcomment>
-        <translation>アバランチ チームが散開</translation>
+        <translation>アバランチ チームがアジトへ向かう</translation>
     </message>
     <message>
         <source>Can Show Pillar Pan Video</source>
-        <translatorcomment>プレート支柱</translatorcomment>
         <translation>機械塔パン映像を再生可能</translation>
     </message>
     <message>
@@ -3900,7 +3890,6 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Post Pillar Pan Video</source>
-        <translatorcomment>プレート支柱</translatorcomment>
         <translation>機械塔パン映像再生後</translation>
     </message>
     <message>
@@ -3913,7 +3902,6 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>MDSTIN: Potion 1</source>
-        <translatorcomment>1番街駅ホーム: ポーション1</translatorcomment>
         <translation>１番街駅ホーム: ポーション1</translation>
     </message>
     <message>
@@ -5796,11 +5784,11 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Version:</source>
-        <translation type="unfinished">Version:</translation>
+        <translation>バージョン:</translation>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation type="unfinished">&amp;About</translation>
+        <translation>バージョン情報(&amp;A)</translation>
     </message>
     <message>
         <source>The Final Fantasy VII Save Game Editor</source>
@@ -5812,11 +5800,11 @@ Table Entries are Editable</source>
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;License: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://www.gnu.org/licenses/gpl.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;ライセンス: GNU General Public License Version 3&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -5824,11 +5812,11 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;Project&apos;s Home Page&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://blackchocobo.sourceforge.net&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;プロジェクト ホーム ページ&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
@@ -5836,43 +5824,43 @@ p, li { white-space: pre-wrap; }
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;View User Guide&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+        <translation>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Ubuntu&apos;; font-size:9pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;View User Guide&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;a href=&quot;http://sourceforge.net/apps/mediawiki/blackchocobo/index.php?title=User_Guide&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#508ed8;&quot;&gt;ユーザー ガイドの表示&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Newest Features</source>
-        <translation type="unfinished">Newest Features</translation>
+        <translation>最新の変更</translation>
     </message>
     <message>
         <source>New: This Fancy About Dialog</source>
-        <translation type="unfinished">New: This Fancy About Dialog</translation>
+        <translation>追加: この瀟洒なダイアログ</translation>
     </message>
     <message>
         <source>New: Main Window Resizeable</source>
-        <translation type="unfinished">New: Main Window Resizeable</translation>
+        <translation>追加: メイン ウィンドウのリサイズ</translation>
     </message>
     <message>
         <source>New: Psx Icons Show In Region Info</source>
-        <translation type="unfinished">New: Psx Icons Show In Region Info</translation>
+        <translation>追加: リージョン情報に PSX アイコンを表示</translation>
     </message>
     <message>
         <source>New: Some Options have Ability to reset to default</source>
-        <translation type="unfinished">New: Some Options have Ability to reset to default</translation>
+        <translation>追加: いくつかのオプションをデフォルトへリセット可能に</translation>
     </message>
     <message>
         <source>Fixed: No longer export non ff7 slots to pc</source>
-        <translation type="unfinished">Fixed: No longer export non ff7 slots to pc</translation>
+        <translation>修正: ff7 以外のスロットが PC にエクスポート不能</translation>
     </message>
     <message>
         <source>Fixed: Pc Header Mask Aware</source>
-        <translation type="unfinished">Fixed: Pc Header Mask Aware</translation>
+        <translation>修正: PC ヘッダーの書き込み</translation>
     </message>
     <message>
         <source>Fixed: Saves Will Display Slots Correctly</source>
-        <translation type="unfinished">Fixed: Saves Will Display Slots Correctly</translation>
+        <translation>修正: セーブのスロット表示</translation>
     </message>
     <message>
         <source>&amp;Close</source>
@@ -5884,7 +5872,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Credits</source>
-        <translation type="unfinished">Credits</translation>
+        <translation>クレジット</translation>
     </message>
     <message>
         <source>Giving Credit Where Credit is Due</source>
@@ -5940,7 +5928,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Thanks To</source>
-        <translation type="unfinished">Thanks To</translation>
+        <translation>謝辞</translation>
     </message>
     <message>
         <source>A Big Thank You  To:</source>
@@ -5980,55 +5968,55 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Using Myst6re SaveIcon Class</source>
-        <translation type="unfinished">New: Using Myst6re SaveIcon Class</translation>
+        <translation>追加: Myst6re セーブ アイコン クラスの使用</translation>
     </message>
     <message>
         <source>Fixed: Items/Materia Names And Skill Now Translated</source>
-        <translation type="unfinished">Fixed: Items/Materia Names And Skill Now Translated</translation>
+        <translation>修正: アイテム, マテリアの名称とスキルが翻訳I可能に</translation>
     </message>
     <message>
         <source>Fixed: Titan/Ramuh Stats Backward.</source>
-        <translation type="unfinished">Fixed: Titan/Ramuh Stats Backward.</translation>
+        <translation>修正: タイタン/ラムウの位置のズレ</translation>
     </message>
     <message>
         <source>New: Save and Save as are now both allowed</source>
-        <translation type="unfinished">New: Save and Save as are now both allowed</translation>
+        <translation>追加: 保存. 名前を付けて保存 の両方が可能に</translation>
     </message>
     <message>
         <source>New: Change Slot Posin in Debug mode (MC only) </source>
-        <translation type="unfinished">New: Change Slot Posin in Debug mode (MC only) </translation>
+        <translation>追加: デバッグ モードのスロット変更 (MC のみ) </translation>
     </message>
     <message>
         <source>New: Support for .vgs .mem and .gme formats</source>
-        <translation type="unfinished">New: Support for .vgs .mem and .gme formats</translation>
+        <translation>追加: VGS, MEM, GME フォーマットに対応</translation>
     </message>
     <message>
         <source>New: Fancy Character Materia on Equipment tab</source>
-        <translation type="unfinished">New: Fancy Character Materia on Equipment tab</translation>
+        <translation>追加: 装備タブのお洒落なマテリア表示</translation>
     </message>
     <message>
         <source>New: Toggle Field Help and Battle Target Labels</source>
-        <translation type="unfinished">New: Toggle Field Help and Battle Target Labels</translation>
+        <translation>追加: フィールド ヘルプ, バトル ターゲットの切り替え</translation>
     </message>
     <message>
         <source>New: Revive Ruby Weapon &amp; Emerald Weapon</source>
-        <translation type="unfinished">New: Revive Ruby Weapon &amp; Emerald Weapon</translation>
+        <translation>追加: ルビーウェポン, エメラルドウェポンと再戦可能に</translation>
     </message>
     <message>
         <source>New: Basic Setting of World Locations In Debug</source>
-        <translation type="unfinished">New: Basic Setting of World Locations In Debug</translation>
+        <translation>追加: Basic Setting of World Locations In Debug</translation>
     </message>
     <message>
         <source>New: Added .bin .mc .mci .ps .psm .dff  to mcr/mcd list</source>
-        <translation type="unfinished">New: Added .bin .mc .mci .ps .psm .dff  to mcr/mcd list</translation>
+        <translation>追加: BIN, MC, MCI, PS, PSM, DFF を MCR/MCD リストに追加</translation>
     </message>
     <message>
         <source>Fixed: Psx and Psv Region Detection</source>
-        <translation type="unfinished">Fixed: Psx and Psv Region Detection</translation>
+        <translation>修正: PSX, PSV のリージョン検出</translation>
     </message>
     <message>
         <source>Previous Versions</source>
-        <translation type="unfinished">Previous Versions</translation>
+        <translation>前のバージョン</translation>
     </message>
     <message>
         <source>inital psx save/load; fixed checksum</source>
@@ -6036,127 +6024,127 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Materia Slots Display Left To Right (see ingame)</source>
-        <translation type="unfinished">Fixed: Materia Slots Display Left To Right (see ingame)</translation>
+        <translation>修正: マテリア スロットを左から右へ表示 (ゲーム同様に)</translation>
     </message>
     <message>
         <source>New: Set Font For Program</source>
-        <translation type="unfinished">New: Set Font For Program</translation>
+        <translation>追加: プログラムのフォント設定</translation>
     </message>
     <message>
         <source>Fixed: Missing Keycard 66 in keyitems list</source>
-        <translation type="unfinished">Fixed: Missing Keycard 66 in keyitems list</translation>
+        <translation>修正: キーアイテム リストのキーカード</translation>
     </message>
     <message>
         <source>Update:Almost All Spinboxes now &quot;Wrapping&quot;</source>
-        <translation type="unfinished">Update:Almost All Spinboxes now &quot;Wrapping&quot;</translation>
+        <translation>変更: 大半のスピンボックスをラップ可能に</translation>
     </message>
     <message>
         <source>Fixed: Empty Chocobos Now Start W/ empty names.</source>
-        <translation type="unfinished">Fixed: Empty Chocobos Now Start W/ empty names.</translation>
+        <translation>修正: 空のチョコ房は名前欄も空欄で始める</translation>
     </message>
     <message>
         <source>Fixed: Typos Lots of Typos..</source>
-        <translation type="unfinished">Fixed: Typos Lots of Typos..</translation>
+        <translation>修正: タイプミスの修正</translation>
     </message>
     <message>
         <source>Fixed: &quot;Time Bug&quot;</source>
-        <translation type="unfinished">Fixed: &quot;Time Bug&quot;</translation>
+        <translation>修正: &quot;時間のバグ&quot;</translation>
     </message>
     <message>
         <source>Fixed: &quot;Gravity&quot; Materia Bug</source>
-        <translation type="unfinished">Fixed: &quot;Gravity&quot; Materia Bug</translation>
+        <translation>修正: &quot;じゅうりょく&quot; マテリアのバグ</translation>
     </message>
     <message>
         <source>Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</source>
-        <translation type="unfinished">Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</translation>
+        <translation>修正: Gil,Exp,CoasterScore, その他 スピンボックスの大文字</translation>
     </message>
     <message>
         <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
-        <translation type="unfinished">Update: World Map ruby-&gt;diamond/ulitmate/ruby</translation>
+        <translation>変更: ワールドマップのルビーをダイヤ/アルテマ/ルビー ウエポンに</translation>
     </message>
     <message>
         <source>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</source>
-        <translation type="unfinished">New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</translation>
+        <translation>追加: &quot;経験値 &lt;-&gt; レベル&quot; 自動変換 (初期状態: 有効)</translation>
     </message>
     <message>
         <source>New: Flashback  Chruch in the slums</source>
-        <translation type="unfinished">New: Flashback  Chruch in the slums</translation>
+        <translation>追加: スラム街の教会のフラッシュバック</translation>
     </message>
     <message>
         <source>Update: Location Tab; Both Save &amp; World Locations</source>
-        <translation type="unfinished">Update: Location Tab; Both Save &amp; World Locations</translation>
+        <translation>変更: 場所タブ; フィールド, ワールド両方のセーブを可能に</translation>
     </message>
     <message>
         <source>New: Spawn New Windows. (mainly for testing)</source>
-        <translation type="unfinished">New: Spawn New Windows. (mainly for testing)</translation>
+        <translation>追加: 新規ウィンドウを開く (主にテスト用)</translation>
     </message>
     <message>
         <source>New: Unknown Var  Tracker in Test Data (very basic atm)</source>
-        <translation type="unfinished">New: Unknown Var  Tracker in Test Data (very basic atm)</translation>
+        <translation>追加: テスト データの詳細不明な変数の調査 (基本的な事柄)</translation>
     </message>
     <message>
         <source>Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</source>
-        <translation type="unfinished">Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</translation>
+        <translation>更新: チョコボ タブのチョコ房パートをスクロール可能に</translation>
     </message>
     <message>
         <source>Fixed: New Window Now Via Detached Process</source>
-        <translation type="unfinished">Fixed: New Window Now Via Detached Process</translation>
+        <translation>修正: 新規ウィンドウを独立した別のプロセスに</translation>
     </message>
     <message>
         <source>Fixed: Limit Boxes Not Always Showing Data Correctly</source>
-        <translation type="unfinished">Fixed: Limit Boxes Not Always Showing Data Correctly</translation>
+        <translation>修正: リミット ボックスのデータ表示の不具合</translation>
     </message>
     <message>
         <source>Fixed: Cait/ Vincent Reversed in PHS Boxes</source>
-        <translation type="unfinished">Fixed: Cait/ Vincent Reversed in PHS Boxes</translation>
+        <translation>修正: PHS のケット・シー/ヴィンセントの配置順</translation>
     </message>
     <message>
         <source>New: Editable Unknown Vars</source>
-        <translation type="unfinished">New: Editable Unknown Vars</translation>
+        <translation>追加: 詳細不明な変数を編集可能に</translation>
     </message>
     <message>
         <source>New: Toggle &quot;unable to mate&quot; flag for chocobos</source>
-        <translation type="unfinished">New: Toggle &quot;unable to mate&quot; flag for chocobos</translation>
+        <translation>追加: チョコボの &quot;カップリング不可&quot; フラグの切り替え</translation>
     </message>
     <message>
         <source>Fixed: Use the Action for showing Slot select dialog.</source>
-        <translation type="unfinished">Fixed: Use the Action for showing Slot select dialog.</translation>
+        <translation>修正: スロット選択ダイアログの使用</translation>
     </message>
     <message>
         <source>Fixed: Chocobo Name Editable again</source>
-        <translation type="unfinished">Fixed: Chocobo Name Editable again</translation>
+        <translation>修正: チョコボの名前を再編集可能に</translation>
     </message>
     <message>
         <source>Fixed: Dialogs Inherit style.</source>
-        <translation type="unfinished">Fixed: Dialogs Inherit style.</translation>
+        <translation>修正: ダイアログ スタイルの共通化.</translation>
     </message>
     <message>
         <source>New: Toggle Each Stable Occupied Flag</source>
-        <translation type="unfinished">New: Toggle Each Stable Occupied Flag</translation>
+        <translation>追加: チョコ房使用フラグの個別切り替え</translation>
     </message>
     <message>
         <source>New: Reload Feature</source>
-        <translation type="unfinished">New: Reload Feature</translation>
+        <translation>追加: 再読み込み機能</translation>
     </message>
     <message>
         <source>New: Locations &quot;Chocobo Ranch&quot; And &quot;Highwind&quot;</source>
-        <translation type="unfinished">New: Locations &quot;Chocobo Ranch&quot; And &quot;Highwind&quot;</translation>
+        <translation>追加: セーブ地点に &quot;チョコ房&quot;, &quot;ハイウィンド&quot; を追加</translation>
     </message>
     <message>
         <source>New: Better Unknown Var Tab.</source>
-        <translation type="unfinished">New: Better Unknown Var Tab.</translation>
+        <translation>追加: 詳細不明な変数タブの調整.</translation>
     </message>
     <message>
         <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
-        <translation type="unfinished">New: NTSC &lt;=&gt; PAL Time Conversion</translation>
+        <translation>追加: NTSC &lt;=&gt; PAL 時間の変換</translation>
     </message>
     <message>
         <source>New: Edit number of steps taken</source>
-        <translation type="unfinished">New: Edit number of steps taken</translation>
+        <translation>追加: 歩数の編集</translation>
     </message>
     <message>
         <source>New: Better Organized Progression Tab.</source>
-        <translation type="unfinished">New: Better Organized Progression Tab.</translation>
+        <translation>追加: ゲームの進捗タブの再構成</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
@@ -6164,31 +6152,31 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Japanese Translation</source>
-        <translation type="unfinished">New: Japanese Translation</translation>
+        <translation>追加: 日本語翻訳</translation>
     </message>
     <message>
         <source>New: Field Items Picked Up</source>
-        <translation type="unfinished">New: Field Items Picked Up</translation>
+        <translation>追加: フィールド アイテムの取得情報</translation>
     </message>
     <message>
         <source>Fixed: Optimized Slotselect Dialog</source>
-        <translation type="unfinished">Fixed: Optimized Slotselect Dialog</translation>
+        <translation>修正: スロット選択ダイアログを調整</translation>
     </message>
     <message>
         <source>New: Edit Controller Mapping (non pc saves)</source>
-        <translation type="unfinished">New: Edit Controller Mapping (non pc saves)</translation>
+        <translation>追加: コントローラーの割り当て (PC セーブを除く)</translation>
     </message>
     <message>
         <source>New: Materia Buffer , copy/paste materias</source>
-        <translation type="unfinished">New: Materia Buffer , copy/paste materias</translation>
+        <translation>追加: マテリアのバッファ, コピー/貼り付け</translation>
     </message>
     <message>
         <source>New: Status Area</source>
-        <translation type="unfinished"></translation>
+        <translation>追加: ステータス バー</translation>
     </message>
     <message>
         <source>New: Takes a filename argument (open w/ a file)</source>
-        <translation type="unfinished"></translation>
+        <translation>追加: ファイル パスの取得 (ファイルを開くとき)</translation>
     </message>
 </context>
 <context>
