@@ -46,23 +46,36 @@ TRANSLATIONS += lang/bchoco_en.ts \
     lang/bchoco_fr.ts \
     lang/bchoco_ja.ts
 
+#Below Is OS Specific Stuff.
+
+#set program icon on mac os
 macx:ICON = icon/bchoco_icon_osx.icns
+
+#set up icon for windows
 win32:RC_FILE = bchoco.rc
 
+#all other *nix (except for symbian)
+#base for setting up deb packages(rpm too?).
+#becomes 'make install' when qmake generates the makefile
 unix:!macx:!symbian {
-system(lrelease Black_Chocobo.pro)
-target.path = /usr/bin/blackchocobo
-INSTALLS += target
-save0.path = /usr/bin/blackchocobo
+system(lrelease Black_Chocobo.pro) #call lrelease to make the qm files.
+target.path = /opt/blackchocobo #set the play to deploy the build target.
+
+save0.path = /opt/blackchocobo
 save0.files = save0
-INSTALLS += save0
-lang.path = /usr/bin/blackchocobo/lang
+
+lang.path = /opt/blackchocobo/lang
 lang.files = lang/*.qm
-INSTALLS += lang
+
 icon.path = /usr/share/pixmaps
 icon.files = icon/Black_Chocobo.png
-INSTALLS += icon
+
 desktop.path =/usr/share/applications/
 desktop.files = Black_Chocobo.desktop
-INSTALLS += desktop
+
+INSTALLS += target \
+    save0 \
+    lang  \
+    icon  \
+    desktop
 }

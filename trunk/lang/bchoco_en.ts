@@ -2791,10 +2791,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Black Chocobo - </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>PSP Save Notice</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6139,6 +6135,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Materia Buffer , copy/paste materias</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Status Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Takes a filename argument (open w/ a file)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

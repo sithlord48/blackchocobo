@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>764</width>
-    <height>580</height>
+    <width>766</width>
+    <height>578</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -22,7 +22,7 @@
   <property name="minimumSize">
    <size>
     <width>0</width>
-    <height>580</height>
+    <height>0</height>
    </size>
   </property>
   <property name="maximumSize">
@@ -119,10 +119,9 @@ QMenu::item:disabled{
 QToolBox::tab{
 	background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(106, 106, 106, 32), stop:1 rgba(67, 67, 67, 128));
 }
-/*QToolBox::tab:hover{
-	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));
- 	color: rgb(255,255,255);
-}*/
+QFrame#frame_status{
+	background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(106, 106, 106, 32), stop:1 rgba(67, 67, 67, 128));
+}
  QToolBox::tab:selected,QTabBar::tab:selected,QMenuBar::item:selected,QMenuBar::item:hover { 
 	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));
  	color: rgb(255,255,255);
@@ -467,7 +466,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <property name="sizePolicy">
-    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
      <horstretch>0</horstretch>
      <verstretch>0</verstretch>
     </sizepolicy>
@@ -477,94 +476,20 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout_53">
     <property name="spacing">
-     <number>-1</number>
-    </property>
-    <property name="margin">
      <number>0</number>
     </property>
-    <item>
-     <layout class="QHBoxLayout" name="horizontalLayout_112">
-      <item>
-       <spacer name="horizontalSpacer_76">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Expanding</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>40</width>
-          <height>16</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item>
-       <widget class="QLabel" name="label">
-        <property name="enabled">
-         <bool>true</bool>
-        </property>
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>18</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>16777215</width>
-          <height>18</height>
-         </size>
-        </property>
-        <property name="text">
-         <string>Current Slot:</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QLCDNumber" name="lcd_current_slot">
-        <property name="minimumSize">
-         <size>
-          <width>0</width>
-          <height>18</height>
-         </size>
-        </property>
-        <property name="maximumSize">
-         <size>
-          <width>45</width>
-          <height>18</height>
-         </size>
-        </property>
-        <property name="digitCount">
-         <number>2</number>
-        </property>
-        <property name="segmentStyle">
-         <enum>QLCDNumber::Flat</enum>
-        </property>
-        <property name="intValue" stdset="0">
-         <number>0</number>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <spacer name="horizontalSpacer_115">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <property name="sizeType">
-         <enum>QSizePolicy::Maximum</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>28</width>
-          <height>20</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-     </layout>
-    </item>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>3</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>3</number>
+    </property>
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="enabled">
@@ -617,7 +542,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
       </property>
       <widget class="QWidget" name="tab_party">
        <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Maximum">
+        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
          <horstretch>0</horstretch>
          <verstretch>0</verstretch>
         </sizepolicy>
@@ -632,6 +557,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
         <string>P&amp;arty</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_105">
+        <property name="spacing">
+         <number>0</number>
+        </property>
         <property name="leftMargin">
          <number>0</number>
         </property>
@@ -646,11 +574,14 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
         </property>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_23">
+          <property name="spacing">
+           <number>0</number>
+          </property>
           <property name="topMargin">
            <number>3</number>
           </property>
           <property name="bottomMargin">
-           <number>3</number>
+           <number>0</number>
           </property>
           <item>
            <widget class="QGroupBox" name="groupBox">
@@ -1063,7 +994,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_84">
             <property name="spacing">
-             <number>6</number>
+             <number>-1</number>
             </property>
             <item>
              <widget class="QGroupBox" name="groupBox_15">
@@ -1408,6 +1339,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item>
            <widget class="QGroupBox" name="groupBox_5">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="minimumSize">
              <size>
               <width>315</width>
@@ -1433,15 +1370,15 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <item row="0" column="0">
               <widget class="QPushButton" name="btn_cloud">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>75</width>
-                 <height>86</height>
+                 <width>100</width>
+                 <height>106</height>
                 </size>
                </property>
                <property name="maximumSize">
@@ -1464,15 +1401,15 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <item row="0" column="1">
               <widget class="QPushButton" name="btn_barret">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>75</width>
-                 <height>86</height>
+                 <width>100</width>
+                 <height>106</height>
                 </size>
                </property>
                <property name="maximumSize">
@@ -1495,15 +1432,15 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <item row="0" column="2">
               <widget class="QPushButton" name="btn_tifa">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>75</width>
-                 <height>86</height>
+                 <width>100</width>
+                 <height>106</height>
                 </size>
                </property>
                <property name="maximumSize">
@@ -1526,15 +1463,15 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <item row="1" column="0">
               <widget class="QPushButton" name="btn_aeris">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>75</width>
-                 <height>86</height>
+                 <width>100</width>
+                 <height>106</height>
                 </size>
                </property>
                <property name="maximumSize">
@@ -1560,15 +1497,15 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <bool>true</bool>
                </property>
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>75</width>
-                 <height>86</height>
+                 <width>100</width>
+                 <height>106</height>
                 </size>
                </property>
                <property name="maximumSize">
@@ -1591,15 +1528,15 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <item row="1" column="2">
               <widget class="QPushButton" name="btn_yuffie">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>75</width>
-                 <height>86</height>
+                 <width>100</width>
+                 <height>106</height>
                 </size>
                </property>
                <property name="maximumSize">
@@ -1622,15 +1559,15 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <item row="2" column="0">
               <widget class="QPushButton" name="btn_cait">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>75</width>
-                 <height>86</height>
+                 <width>100</width>
+                 <height>106</height>
                 </size>
                </property>
                <property name="maximumSize">
@@ -1653,15 +1590,15 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <item row="2" column="1">
               <widget class="QPushButton" name="btn_vincent">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>75</width>
-                 <height>86</height>
+                 <width>100</width>
+                 <height>106</height>
                 </size>
                </property>
                <property name="maximumSize">
@@ -1684,15 +1621,15 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <item row="2" column="2">
               <widget class="QPushButton" name="btn_cid">
                <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                  <horstretch>0</horstretch>
                  <verstretch>0</verstretch>
                 </sizepolicy>
                </property>
                <property name="minimumSize">
                 <size>
-                 <width>75</width>
-                 <height>86</height>
+                 <width>100</width>
+                 <height>106</height>
                 </size>
                </property>
                <property name="maximumSize">
@@ -1728,7 +1665,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           <property name="minimumSize">
            <size>
             <width>0</width>
-            <height>476</height>
+            <height>0</height>
            </size>
           </property>
           <property name="contextMenuPolicy">
@@ -1756,8 +1693,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>423</width>
-             <height>437</height>
+             <width>445</width>
+             <height>438</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -4526,8 +4463,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>401</width>
-             <height>420</height>
+             <width>445</width>
+             <height>438</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8254,8 +8191,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>242</width>
-                  <height>330</height>
+                  <width>240</width>
+                  <height>332</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -8384,7 +8321,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </property>
           <property name="maximumSize">
            <size>
-            <width>245</width>
+            <width>16777215</width>
             <height>16777215</height>
            </size>
           </property>
@@ -8392,11 +8329,11 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            <string>Key Items</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_4">
-           <property name="leftMargin">
-            <number>3</number>
+           <property name="spacing">
+            <number>0</number>
            </property>
-           <property name="rightMargin">
-            <number>3</number>
+           <property name="margin">
+            <number>0</number>
            </property>
            <item>
             <widget class="QListWidget" name="list_keyitems">
@@ -10482,7 +10419,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>1452</width>
-             <height>276</height>
+             <height>336</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16487,8 +16424,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>720</width>
-             <height>275</height>
+             <width>766</width>
+             <height>442</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -21518,7 +21455,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>733</width>
+             <width>739</width>
              <height>664</height>
             </rect>
            </property>
@@ -28067,6 +28004,165 @@ Var And Scrolling Synced To Left Table</string>
       </widget>
      </widget>
     </item>
+    <item>
+     <widget class="QFrame" name="frame_status">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>16777215</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_112">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="margin">
+        <number>0</number>
+       </property>
+       <item>
+        <spacer name="horizontalSpacer_95">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Fixed</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>14</width>
+           <height>18</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="lbl_fileName">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>18</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>18</height>
+          </size>
+         </property>
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_76">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Expanding</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>18</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="lbl_current_slot_txt">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>18</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>18</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lbl_current_slot_num">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>18</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>18</height>
+          </size>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="horizontalSpacer_115">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeType">
+          <enum>QSizePolicy::Maximum</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>14</width>
+           <height>18</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
@@ -28074,7 +28170,7 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>764</width>
+     <width>766</width>
      <height>22</height>
     </rect>
    </property>
