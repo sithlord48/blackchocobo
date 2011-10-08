@@ -1194,190 +1194,190 @@
     </message>
     <message>
         <source>A M Cannon</source>
-        <translation type="unfinished"></translation>
+        <translation>Cañón A-M</translation>
     </message>
 </context>
 <context>
     <name>Locations</name>
     <message>
         <source>Platform</source>
-        <translation type="unfinished">Plataforma</translation>
+        <translation>Plataforma</translation>
     </message>
     <message>
         <source>Tunnel</source>
-        <translation type="unfinished">Túnel</translation>
+        <translation>Túnel</translation>
     </message>
     <message>
         <source>Junon Inn</source>
-        <translation type="unfinished">Posada Junon</translation>
+        <translation>Posada Junon</translation>
     </message>
     <message>
         <source>Midgar Sector 8</source>
-        <translation type="unfinished">Midgar Sector 8</translation>
+        <translation>Midgar Sector 8</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
-        <translation type="unfinished">Cementerio de Trenes</translation>
+        <translation>Cementerio de Trenes</translation>
     </message>
     <message>
         <source>Underwater Reactor</source>
-        <translation type="unfinished">Reactor Submarino</translation>
+        <translation>Reactor Submarino</translation>
     </message>
     <message>
         <source>Junon Office F2</source>
-        <translation type="unfinished">Oficina Junon P2</translation>
+        <translation>Oficina Junon P2</translation>
     </message>
     <message>
         <source>Kalm Inn</source>
-        <translation type="unfinished">Posada Kalm</translation>
+        <translation>Posada Kalm</translation>
     </message>
     <message>
         <source>Reactor No. 5</source>
-        <translation type="unfinished">Reactor No. 5</translation>
+        <translation>Reactor No. 5</translation>
     </message>
     <message>
         <source>Aerith&apos;s House</source>
-        <translation type="unfinished">Casa de Aerith</translation>
+        <translation>Casa de Aerith</translation>
     </message>
     <message>
         <source>North Crater</source>
-        <translation type="unfinished">Cráter del Norte</translation>
+        <translation>Cráter del Norte</translation>
     </message>
     <message>
         <source>Wall Market</source>
-        <translation type="unfinished">Mercado Muro</translation>
+        <translation>Mercado Muro</translation>
     </message>
     <message>
         <source>Beginner&apos;s Hall</source>
-        <translation type="unfinished">Hall de los Principiantes</translation>
+        <translation>Sala del principiante</translation>
     </message>
     <message>
         <source>Whirlwind Maze</source>
-        <translation type="unfinished">Mazo Torbellino</translation>
+        <translation>Mazo Torbellino</translation>
     </message>
     <message>
         <source>Mt. Nibel</source>
-        <translation type="unfinished">Mt. Nibel</translation>
+        <translation>Mt. Nibel</translation>
     </message>
     <message>
         <source>Shinra Bldg 69F.</source>
-        <translation type="unfinished">Edif. Shinra P69.</translation>
+        <translation>Edif. Shinra P69.</translation>
     </message>
     <message>
         <source>Shinra Bldg 67F.</source>
-        <translation type="unfinished">Edif. Shinra P65.</translation>
+        <translation>Edif. Shinra P65.</translation>
     </message>
     <message>
         <source>Gaeas Cliff</source>
-        <translation type="unfinished">Acantilado de Gaea</translation>
+        <translation>Acantilado de Gaea</translation>
     </message>
     <message>
         <source>Gaeas Cliff Base</source>
-        <translation type="unfinished">Case del Acantilado de Gaea</translation>
+        <translation>Base del Acantilado de Gaea</translation>
     </message>
     <message>
         <source>Sector 7 - Slums</source>
-        <translation type="unfinished">Suburbios del Sector 7</translation>
+        <translation>Suburbios del Sector 7</translation>
     </message>
     <message>
         <source>Reactor No.1</source>
-        <translation type="unfinished">Reactor No. 1</translation>
+        <translation>Reactor No. 1</translation>
     </message>
     <message>
         <source>Corel Prison</source>
-        <translation type="unfinished">Prisión de Corel</translation>
+        <translation>Prisión de Corel</translation>
     </message>
     <message>
         <source>Fort Condor</source>
-        <translation type="unfinished">Fuerte Cóndor</translation>
+        <translation>Fuerte Cóndor</translation>
     </message>
     <message>
         <source>Inside Submarine</source>
-        <translation type="unfinished">Interior Submarino</translation>
+        <translation>Interior Submarino</translation>
     </message>
     <message>
         <source>Hallway</source>
-        <translation type="unfinished">Pasillo</translation>
+        <translation>Pasillo</translation>
     </message>
     <message>
         <source>Cosmo Canyon</source>
-        <translation type="unfinished">Cañón Cosmo</translation>
+        <translation>Cañón Cosmo</translation>
     </message>
     <message>
         <source>Church in the slums</source>
-        <translation type="unfinished">Church in the slums</translation>
+        <translation>Iglesia en los suburbios</translation>
     </message>
     <message>
         <source>Boat</source>
-        <translation type="unfinished">Barco</translation>
+        <translation>Barco</translation>
     </message>
     <message>
         <source>Lower Sector 4 Plate</source>
-        <translation type="unfinished">Placa Bajo el Sector 4</translation>
+        <translation>Placa Bajo el Sector 4</translation>
     </message>
     <message>
         <source>Mt. Corel</source>
-        <translation type="unfinished">Mt. Corel</translation>
+        <translation>Mt. Corel</translation>
     </message>
     <message>
         <source>Sector 5 - Slums</source>
-        <translation type="unfinished">Suburbios del Sector 5</translation>
+        <translation>Sector 5 tug.</translation>
     </message>
     <message>
         <source>Debug Room [ja]</source>
-        <translation type="unfinished"></translation>
+        <translation>Sala de test [ja]</translation>
     </message>
     <message>
         <source>Debug Room [en]</source>
-        <translation type="unfinished"></translation>
+        <translation>Sala de test [in]</translation>
     </message>
     <message>
         <source>Test Fight</source>
-        <translation type="unfinished">Pelea de Prueba</translation>
+        <translation>Pelea de Prueba</translation>
     </message>
     <message>
         <source>Ropeway Station</source>
-        <translation type="unfinished">Estación Ropeway</translation>
+        <translation>Estación Ropeway</translation>
     </message>
     <message>
         <source>Junon Way</source>
-        <translation type="unfinished">Camino de Junon</translation>
+        <translation>Camino de Junon</translation>
     </message>
     <message>
         <source>Junon Airport Path</source>
-        <translation type="unfinished">Camino del Aeropuerto de Junon</translation>
+        <translation>Camino del Aeropuerto de Junon</translation>
     </message>
     <message>
         <source>Forgotten Captial</source>
-        <translation type="unfinished">Capital Olvidada</translation>
+        <translation>Capital Olvidada</translation>
     </message>
     <message>
         <source>Sector 8, Underground</source>
-        <translation type="unfinished">Sector 8, Subterráneo</translation>
+        <translation>Sector 8, Subterráneo</translation>
     </message>
     <message>
         <source>Shinra Bldg.</source>
-        <translation type="unfinished">Edif. Shinra</translation>
+        <translation>Edif. Shinra</translation>
     </message>
     <message>
         <source>Wutai</source>
-        <translation type="unfinished">Wutai</translation>
+        <translation>Wutai</translation>
     </message>
     <message>
         <source>Forgotten City</source>
-        <translation type="unfinished">Ciudad Olvidada</translation>
+        <translation>Ciudad Olvidada</translation>
     </message>
     <message>
         <source>Chocobo Ranch</source>
-        <translation type="unfinished">Rancho chocobo</translation>
+        <translation>Rancho chocobo</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation type="unfinished">Gran Viento</translation>
+        <translation>Gran Viento</translation>
     </message>
     <message>
         <source>Shinra Bldg 64F.</source>
-        <translation type="unfinished">Edif. Shinra P69. {64F?}</translation>
+        <translation>Edif. Shinra P69.</translation>
     </message>
 </context>
 <context>
@@ -2032,7 +2032,7 @@
     </message>
     <message>
         <source>HP</source>
-        <translation type="unfinished">PG</translation>
+        <translation>PG</translation>
     </message>
     <message>
         <source>Char&apos;s Limits</source>
@@ -3748,287 +3748,287 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
     </message>
     <message>
         <source>Steps</source>
-        <translation type="unfinished"></translation>
+        <translation>Pasos</translation>
     </message>
     <message>
         <source>Number Steps</source>
-        <translation type="unfinished"></translation>
+        <translation>Número de pasos</translation>
     </message>
     <message>
         <source>Y: </source>
-        <translation type="unfinished"></translation>
+        <translation>Y:</translation>
     </message>
     <message>
         <source>Global Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Progreso Global</translation>
     </message>
     <message>
         <source>Main Progression</source>
-        <translation type="unfinished"></translation>
+        <translation>Progreso principal</translation>
     </message>
     <message>
         <source>Disk  #</source>
-        <translation type="unfinished"></translation>
+        <translation># de Disco</translation>
     </message>
     <message>
         <source>Elevator Door Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Puerta de ascensor abierta</translation>
     </message>
     <message>
         <source>1st Door Open</source>
-        <translation type="unfinished"></translation>
+        <translation>1ra puerta abierta</translation>
     </message>
     <message>
         <source>2nd Door Opened</source>
-        <translation type="unfinished"></translation>
+        <translation>2da puerta abierta</translation>
     </message>
     <message>
         <source>Jessie Has Been Unstuck</source>
-        <translation type="unfinished"></translation>
+        <translation>Jesse se ha desenganchado</translation>
     </message>
     <message>
         <source>The Bomb Was Set</source>
-        <translation type="unfinished"></translation>
+        <translation>La bomba ha sido puesta</translation>
     </message>
     <message>
         <source>Str</source>
-        <translation type="unfinished"></translation>
+        <translation>Fue</translation>
     </message>
     <message>
         <source>Vit</source>
-        <translation type="unfinished"></translation>
+        <translation>Vit</translation>
     </message>
     <message>
         <source>Mag</source>
-        <translation type="unfinished"></translation>
+        <translation>Mag</translation>
     </message>
     <message>
         <source>Spr</source>
-        <translation type="unfinished"></translation>
+        <translation>Esp</translation>
     </message>
     <message>
         <source>Dex</source>
-        <translation type="unfinished"></translation>
+        <translation>Des</translation>
     </message>
     <message>
         <source>Lck</source>
-        <translation type="unfinished"></translation>
+        <translation>Sue</translation>
     </message>
     <message>
         <source>Event Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Progreso de eventos</translation>
     </message>
     <message>
         <source>Escape From Reactor </source>
-        <translation type="unfinished"></translation>
+        <translation>Huida del reactor</translation>
     </message>
     <message>
         <source>Post Pan MD8_2</source>
-        <translation type="unfinished"></translation>
+        <translation>Post barrido MD8_2</translation>
     </message>
     <message>
         <source>Midgar Train Flags</source>
-        <translation type="unfinished"></translation>
+        <translation>Banderas del tren de Midgar</translation>
     </message>
     <message>
         <source>Talked to Bigs</source>
-        <translation type="unfinished"></translation>
+        <translation>Hablar con Biggs</translation>
     </message>
     <message>
         <source>Talked to Wedge Twice</source>
-        <translation type="unfinished"></translation>
+        <translation>Hablar dos veces con Wedge</translation>
     </message>
     <message>
         <source>Talked to Jessie Before Looking At Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Hablar con Jesse antes de mirar al mapa</translation>
     </message>
     <message>
         <source> Played Video on Train?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Se reprodujo el video en el tren?</translation>
     </message>
     <message>
         <source>Unknowns / Unused</source>
-        <translation type="unfinished"></translation>
+        <translation>Indefinidos/No usados</translation>
     </message>
     <message>
         <source>Sector 7 Trainstation</source>
-        <translation type="unfinished"></translation>
+        <translation>Estación de tren del Sector 7</translation>
     </message>
     <message>
         <source>Team Avalanche Had Meeting after Bombing Mission</source>
-        <translation type="unfinished"></translation>
+        <translation>Reunión de Avalancha despues de la Bombing Mission</translation>
     </message>
     <message>
         <source>Talked To Trainman 3 times</source>
-        <translation type="unfinished"></translation>
+        <translation>Hablar tres veces con el hombre del tren</translation>
     </message>
     <message>
         <source>Pair At Station agree</source>
-        <translation type="unfinished"></translation>
+        <translation>La pareja de la estación está de acuerdo</translation>
     </message>
     <message>
         <source>Set To Reactor 5 Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Poner en modo Reactor 5</translation>
     </message>
     <message>
         <source>Sector 7 Pillar</source>
-        <translation type="unfinished"></translation>
+        <translation>Pilar del Sector 7</translation>
     </message>
     <message>
         <source>Team Avalanche Has Run To Hideout</source>
-        <translation type="unfinished"></translation>
+        <translation>Avalancha huye al escondite</translation>
     </message>
     <message>
         <source>Can Show Pillar Pan Video</source>
-        <translation type="unfinished"></translation>
+        <translation>Es posible mostrar el video del pilar</translation>
     </message>
     <message>
         <source>Barret called us</source>
-        <translation type="unfinished"></translation>
+        <translation>Barret llama al equipo</translation>
     </message>
     <message>
         <source>Post Pillar Pan Video</source>
-        <translation type="unfinished"></translation>
+        <translation>Post video del pilar</translation>
     </message>
     <message>
         <source>Talked To soldier two times</source>
-        <translation type="unfinished"></translation>
+        <translation>Hablar con soldado dos veces</translation>
     </message>
     <message>
         <source>Field Items Picked Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Objetos de campo recogidos</translation>
     </message>
     <message>
         <source>MDSTIN: Potion 1</source>
-        <translation type="unfinished"></translation>
+        <translation>MDSTIN: Poción 1</translation>
     </message>
     <message>
         <source>MDSTIN: Potion 2</source>
-        <translation type="unfinished"></translation>
+        <translation>MDSTIN: Poción 2</translation>
     </message>
     <message>
         <source>NMKIN_3: Potion</source>
-        <translation type="unfinished"></translation>
+        <translation>NMKIN_3: Poción</translation>
     </message>
     <message>
         <source>NMKIN_1: Phoenix Down</source>
-        <translation type="unfinished"></translation>
+        <translation>NMKIN_1: Plumaje Fénix</translation>
     </message>
     <message>
         <source>MD8_3: Potion</source>
-        <translation type="unfinished"></translation>
+        <translation>MD8_3: Poción</translation>
     </message>
     <message>
         <source>Elevator On 2nd Floor</source>
-        <translation type="unfinished"></translation>
+        <translation>Ascensor del 2do piso</translation>
     </message>
     <message>
         <source>Post Pan NMKIN_5</source>
-        <translation type="unfinished"></translation>
+        <translation>Post barrido NMKIN_5</translation>
     </message>
     <message>
         <source>Trigger Game Over (countdown timer out)</source>
-        <translation type="unfinished"></translation>
+        <translation>Activar Game Over (reloj de cuenta atrás)</translation>
     </message>
     <message>
         <source>Post Electrical Effect MD8_3</source>
-        <translation type="unfinished"></translation>
+        <translation>Post efecto eléctrico MD8_3</translation>
     </message>
     <message>
         <source>0x01 Potion On MD8_3 (see item tab)</source>
-        <translation type="unfinished"></translation>
+        <translation>0x01 Poción en MD8_3 (Ver pestaña de objetos)</translation>
     </message>
     <message>
         <source>Custom Controller Mapping(PSX Only)</source>
-        <translation type="unfinished"></translation>
+        <translation>Mapeo de Controles Personalizado (sólo PSX)</translation>
     </message>
     <message>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Arriba</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Derecha</translation>
     </message>
     <message>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Abajo</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Izquierda</translation>
     </message>
     <message>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menú</translation>
     </message>
     <message>
         <source>Ok</source>
-        <translation type="unfinished"></translation>
+        <translation>Ok</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Cancelar</translation>
     </message>
     <message>
         <source>Switch</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambiar</translation>
     </message>
     <message>
         <source>Target</source>
-        <translation type="unfinished"></translation>
+        <translation>Blancos</translation>
     </message>
     <message>
         <source>Page Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Página arriba</translation>
     </message>
     <message>
         <source>Page Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Página abajo</translation>
     </message>
     <message>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Ayuda</translation>
     </message>
     <message>
         <source>Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Pausa</translation>
     </message>
     <message>
         <source>Unknown (9)</source>
-        <translation type="unfinished"></translation>
+        <translation>Indefinido (9)</translation>
     </message>
     <message>
         <source>Unknown (10)</source>
-        <translation type="unfinished"></translation>
+        <translation>Indefinido (10)</translation>
     </message>
     <message>
         <source>MDS7ST1:Hi-Potion.(Roof Train 1)</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST1: Poción S (Techo del tren 1)</translation>
     </message>
     <message>
         <source>MDS7ST1:Hi-Potion.(Barrel 1)</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST1: Poción S (Barril 1)</translation>
     </message>
     <message>
         <source>MDS7ST1:Echo Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST1: Pantalla eco</translation>
     </message>
     <message>
         <source>MDS7ST1:Potion</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST1: Poción</translation>
     </message>
     <message>
         <source>MDS7ST2:Hi-Potion</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST2: Poción S</translation>
     </message>
     <message>
         <source>MDS7ST2:Ether</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST2: Éter</translation>
     </message>
     <message>
         <source>MDS7ST2:Potion</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST2: Poción</translation>
     </message>
     <message>
         <source>Edit Selected Item Slot</source>
@@ -4038,79 +4038,81 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Table Entries are Editable</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;---- Tabla derecha----
+Seleccionar variable indefinida para ver
+Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>MDS7ST1:Potion.(In Train 2)</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST1: Poción (En tren 2)</translation>
     </message>
     <message>
         <source>Would you like to correct the play time?</source>
-        <translation type="unfinished"></translation>
+        <translation>¿Quieres corregir el tiempo de juego?</translation>
     </message>
     <message>
         <source>In this region the game runs 60hz</source>
-        <translation type="unfinished"></translation>
+        <translation>En esta región el juego va a 60hz</translation>
     </message>
     <message>
         <source>In this region the game runs 50hz</source>
-        <translation type="unfinished"></translation>
+        <translation>En esta región el juego va a 50hz</translation>
     </message>
     <message>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation>Supr</translation>
     </message>
     <message>
         <source>Materia Slot Actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Acciones de Ranura de Materia</translation>
     </message>
     <message>
         <source>&amp;Copy Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copiar Ranura</translation>
     </message>
     <message>
         <source>Sector 5</source>
-        <translation type="unfinished"></translation>
+        <translation>Sector 5</translation>
     </message>
     <message>
         <source>Talked with Sick Man</source>
-        <translation type="unfinished"></translation>
+        <translation>Hablar con hombre enfermo</translation>
     </message>
     <message>
         <source>Aeris Talked About Sick Man</source>
-        <translation type="unfinished"></translation>
+        <translation>Aeris habla sobre el hombre enfermo</translation>
     </message>
     <message>
         <source>Stole The Kids 5 Gil</source>
-        <translation type="unfinished"></translation>
+        <translation>Robar 5 Gil al niño</translation>
     </message>
     <message>
         <source>After Aeris Chruch Scene</source>
-        <translation type="unfinished"></translation>
+        <translation>Después de la escena de la iglesia de Aeris</translation>
     </message>
     <message>
         <source>cb_s5_1</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_1</translation>
     </message>
     <message>
         <source>cb_s5_2</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_2</translation>
     </message>
     <message>
         <source>cb_s5_5</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_5</translation>
     </message>
     <message>
         <source>cb_s5_7</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_7</translation>
     </message>
 </context>
 <context>
@@ -5674,7 +5676,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Set Load And Save Paths</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurar rutas de guardado y carga</translation>
     </message>
     <message>
         <source>&amp;Close</source>
@@ -5682,7 +5684,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>skip_slot_mask (pc only)</source>
-        <translation type="unfinished"></translation>
+        <translation>saltar_máscara_de_ranura (sólo pc)</translation>
     </message>
 </context>
 <context>
@@ -6136,43 +6138,43 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Edit number of steps taken</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Editar el número de pasos dados</translation>
     </message>
     <message>
         <source>New: Better Organized Progression Tab.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Pestaña de progresión mejor organizada.</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Traducción Japonesa:</translation>
     </message>
     <message>
         <source>New: Japanese Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Traducción Japonesa</translation>
     </message>
     <message>
         <source>New: Field Items Picked Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Objetos de campo recogidos</translation>
     </message>
     <message>
         <source>Fixed: Optimized Slotselect Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Dialogo de selección de ranura optimizado</translation>
     </message>
     <message>
         <source>New: Edit Controller Mapping (non pc saves)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Editar mapeo de controles (archivos no pc)</translation>
     </message>
     <message>
         <source>New: Materia Buffer , copy/paste materias</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Buffer de Materia, copiar/pegar materias</translation>
     </message>
     <message>
         <source>New: Status Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Area de estado</translation>
     </message>
     <message>
         <source>New: Takes a filename argument (open w/ a file)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Toma el argumento de nombre de archivo (abrir con un archivo)</translation>
     </message>
 </context>
 <context>
