@@ -1193,7 +1193,7 @@
     </message>
     <message>
         <source>A M Cannon</source>
-        <translation type="unfinished"></translation>
+        <translation>Canon AM</translation>
     </message>
 </context>
 <context>
@@ -1324,11 +1324,11 @@
     </message>
     <message>
         <source>Debug Room [ja]</source>
-        <translation type="unfinished"></translation>
+        <translation>Debug Room [Jap]</translation>
     </message>
     <message>
         <source>Debug Room [en]</source>
-        <translation type="unfinished"></translation>
+        <translation>Debug Room [an]</translation>
     </message>
     <message>
         <source>Test Fight</source>
@@ -3783,10 +3783,6 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
         <translation>2ème porte ouvertre</translation>
     </message>
     <message>
-        <source>Jessie Has Been Unstuck</source>
-        <translation>Jambe de Jesse décoincée</translation>
-    </message>
-    <message>
         <source>The Bomb Was Set</source>
         <translation>Bombe placée</translation>
     </message>
@@ -3831,16 +3827,8 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
         <translation>Evènements du train</translation>
     </message>
     <message>
-        <source>Talked to Bigs</source>
-        <translation>Parler à Biggs</translation>
-    </message>
-    <message>
         <source>Talked to Wedge Twice</source>
         <translation>Parler à Wedge deux fois</translation>
-    </message>
-    <message>
-        <source>Talked to Jessie Before Looking At Map</source>
-        <translation>Parler à Jesse avant de regarder la carte</translation>
     </message>
     <message>
         <source> Played Video on Train?</source>
@@ -3896,139 +3884,139 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Field Items Picked Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Éléments Trouvés sur le terrain</translation>
     </message>
     <message>
         <source>MDSTIN: Potion 1</source>
-        <translation type="unfinished"></translation>
+        <translation>MDSTIN: Potion 1</translation>
     </message>
     <message>
         <source>MDSTIN: Potion 2</source>
-        <translation type="unfinished"></translation>
+        <translation>MDSTIN: Potion 2</translation>
     </message>
     <message>
         <source>NMKIN_3: Potion</source>
-        <translation type="unfinished"></translation>
+        <translation>NMKIN_3: Potion</translation>
     </message>
     <message>
         <source>NMKIN_1: Phoenix Down</source>
-        <translation type="unfinished"></translation>
+        <translation>NMKIN_1: Queue de Phénix</translation>
     </message>
     <message>
         <source>MD8_3: Potion</source>
-        <translation type="unfinished"></translation>
+        <translation>MD8_3: Potion</translation>
     </message>
     <message>
         <source>Elevator On 2nd Floor</source>
-        <translation type="unfinished"></translation>
+        <translation>Ascenseur Au 2e étage</translation>
     </message>
     <message>
         <source>Post Pan NMKIN_5</source>
-        <translation type="unfinished"></translation>
+        <translation>Passé le zoom sur NMKIN_5</translation>
     </message>
     <message>
         <source>Trigger Game Over (countdown timer out)</source>
-        <translation type="unfinished"></translation>
+        <translation>Activer la Fin de Partie à 00:00</translation>
     </message>
     <message>
         <source>Post Electrical Effect MD8_3</source>
-        <translation type="unfinished"></translation>
+        <translation>Passé le courant électrique dans MD8_3</translation>
     </message>
     <message>
         <source>0x01 Potion On MD8_3 (see item tab)</source>
-        <translation type="unfinished"></translation>
+        <translation>MD8_3: Potion</translation>
     </message>
     <message>
         <source>Custom Controller Mapping(PSX Only)</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuration manuelle des boutons (psx seul.)</translation>
     </message>
     <message>
         <source>Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Haut</translation>
     </message>
     <message>
         <source>Right</source>
-        <translation type="unfinished"></translation>
+        <translation>Droite</translation>
     </message>
     <message>
         <source>Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Bas</translation>
     </message>
     <message>
         <source>Left</source>
-        <translation type="unfinished"></translation>
+        <translation>Gauche</translation>
     </message>
     <message>
         <source>Menu</source>
-        <translation type="unfinished"></translation>
+        <translation>Menu</translation>
     </message>
     <message>
         <source>Ok</source>
-        <translation type="unfinished"></translation>
+        <translation>Ok</translation>
     </message>
     <message>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <source>Switch</source>
-        <translation type="unfinished"></translation>
+        <translation>Changer</translation>
     </message>
     <message>
         <source>Target</source>
-        <translation type="unfinished"></translation>
+        <translation>Cible</translation>
     </message>
     <message>
         <source>Page Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Page Haut</translation>
     </message>
     <message>
         <source>Page Down</source>
-        <translation type="unfinished"></translation>
+        <translation>Page Bas</translation>
     </message>
     <message>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Aide</translation>
     </message>
     <message>
         <source>Pause</source>
-        <translation type="unfinished"></translation>
+        <translation>Pause</translation>
     </message>
     <message>
         <source>Unknown (9)</source>
-        <translation type="unfinished"></translation>
+        <translation>Inconnu (9)</translation>
     </message>
     <message>
         <source>Unknown (10)</source>
-        <translation type="unfinished"></translation>
+        <translation>Inconnu (10)</translation>
     </message>
     <message>
         <source>MDS7ST1:Hi-Potion.(Roof Train 1)</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST1:Super Potion (Toit du 1er train)</translation>
     </message>
     <message>
         <source>MDS7ST1:Hi-Potion.(Barrel 1)</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST1:Super Potion (Baril 1)</translation>
     </message>
     <message>
         <source>MDS7ST1:Echo Screen</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST1:Ecran sonore</translation>
     </message>
     <message>
         <source>MDS7ST1:Potion</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST1: Potion</translation>
     </message>
     <message>
         <source>MDS7ST2:Hi-Potion</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST2:Super Potion</translation>
     </message>
     <message>
         <source>MDS7ST2:Ether</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST2:Ether</translation>
     </message>
     <message>
         <source>MDS7ST2:Potion</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST2:Potion</translation>
     </message>
     <message>
         <source>Edit Selected Item Slot</source>
@@ -4038,79 +4026,93 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Table Entries are Editable</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;--Tableau de gauche--
+Sélect. une var. inconnue à visionner
+Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>MDS7ST1:Potion.(In Train 2)</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS7ST1:Potion (Dans le 2e train)</translation>
     </message>
     <message>
         <source>Would you like to correct the play time?</source>
-        <translation type="unfinished"></translation>
+        <translation>Voulez-vous corriger le temps de jeu?</translation>
     </message>
     <message>
         <source>In this region the game runs 60hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Dans cette région le jeu fonctionne à 60hz</translation>
     </message>
     <message>
         <source>In this region the game runs 50hz</source>
-        <translation type="unfinished"></translation>
+        <translation>Dans cette région le jeu fonctionne à 50hz</translation>
     </message>
     <message>
         <source>Ctrl+C</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ctrl+C</translation>
     </message>
     <message>
         <source>Ctrl+V</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ctrl+V</translation>
     </message>
     <message>
         <source>Del</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sppr</translation>
     </message>
     <message>
         <source>Materia Slot Actions</source>
-        <translation type="unfinished"></translation>
+        <translation>Actions sur les Matérias</translation>
     </message>
     <message>
         <source>&amp;Copy Slot</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Copier Emplacement</translation>
     </message>
     <message>
         <source>Sector 5</source>
-        <translation type="unfinished"></translation>
+        <translation>Secteur 5</translation>
     </message>
     <message>
         <source>Talked with Sick Man</source>
-        <translation type="unfinished"></translation>
+        <translation>Parlé avec l&apos;homme malade</translation>
     </message>
     <message>
         <source>Aeris Talked About Sick Man</source>
-        <translation type="unfinished"></translation>
+        <translation>Aéris vous a parlé de l&apos;homme malade</translation>
     </message>
     <message>
         <source>Stole The Kids 5 Gil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>After Aeris Chruch Scene</source>
-        <translation type="unfinished"></translation>
+        <translation>Volé les 5 gils de l&apos;enfant</translation>
     </message>
     <message>
         <source>cb_s5_1</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_1</translation>
     </message>
     <message>
         <source>cb_s5_2</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_2</translation>
     </message>
     <message>
         <source>cb_s5_5</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_5</translation>
     </message>
     <message>
         <source>cb_s5_7</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_7</translation>
+    </message>
+    <message>
+        <source>Jesse Has Been Unstuck</source>
+        <translation>Jambe de Jesse décoincée</translation>
+    </message>
+    <message>
+        <source>Talked to Biggs</source>
+        <translation>Parler à Biggs</translation>
+    </message>
+    <message>
+        <source>Talked to Jesse Before Looking At Map</source>
+        <translation>Parler à Jesse avant de regarder la carte</translation>
+    </message>
+    <message>
+        <source>After Aeris Church Scene</source>
+        <translation>Passé la scène de l&apos;église d&apos;Aéris</translation>
     </message>
 </context>
 <context>
@@ -5680,10 +5682,6 @@ Table Entries are Editable</source>
         <source>&amp;Close</source>
         <translation>&amp;Fermer</translation>
     </message>
-    <message>
-        <source>skip_slot_mask (pc only)</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SlotSelect</name>
@@ -6138,43 +6136,43 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Edit number of steps taken</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Modifier le nombre de pas</translation>
     </message>
     <message>
         <source>New: Better Organized Progression Tab.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Onglet de progression mieux arrangé.</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Traduction Japonaise:</translation>
     </message>
     <message>
         <source>New: Japanese Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Tranduction Japonaise</translation>
     </message>
     <message>
         <source>New: Field Items Picked Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Éléments Trouvés sur le terrain</translation>
     </message>
     <message>
         <source>Fixed: Optimized Slotselect Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixé: Fenêtre de sélection de sauvegarde amélioré</translation>
     </message>
     <message>
         <source>New: Edit Controller Mapping (non pc saves)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Modifier les contrôles (Sauvegardes PSX)</translation>
     </message>
     <message>
         <source>New: Materia Buffer , copy/paste materias</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Tampon Matéria, possibilité de copier/coller des Matérias</translation>
     </message>
     <message>
         <source>New: Status Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Zone d&apos;état</translation>
     </message>
     <message>
         <source>New: Takes a filename argument (open w/ a file)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Permet l&apos;ouverture de sauvegardes FF7 en ouvrant le fichier</translation>
     </message>
 </context>
 <context>

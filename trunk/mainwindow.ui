@@ -4464,8 +4464,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>443</width>
-             <height>436</height>
+             <width>401</width>
+             <height>420</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8192,8 +8192,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>239</width>
-                  <height>330</height>
+                  <width>212</width>
+                  <height>267</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -10419,8 +10419,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1452</width>
-             <height>334</height>
+             <width>1446</width>
+             <height>276</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16425,8 +16425,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>764</width>
-             <height>440</height>
+             <width>720</width>
+             <height>275</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -19024,7 +19024,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <item>
                     <widget class="QCheckBox" name="cb_bm1_6">
                      <property name="text">
-                      <string>Jessie Has Been Unstuck</string>
+                      <string>Jesse Has Been Unstuck</string>
                      </property>
                     </widget>
                    </item>
@@ -19076,7 +19076,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <item>
                     <widget class="QCheckBox" name="cb_midgartrain_1">
                      <property name="text">
-                      <string>Talked to Bigs</string>
+                      <string>Talked to Biggs</string>
                      </property>
                     </widget>
                    </item>
@@ -19090,7 +19090,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <item>
                     <widget class="QCheckBox" name="cb_midgartrain_3">
                      <property name="text">
-                      <string>Talked to Jessie Before Looking At Map</string>
+                      <string>Talked to Jesse Before Looking At Map</string>
                      </property>
                     </widget>
                    </item>
@@ -19224,7 +19224,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <item>
                     <widget class="QCheckBox" name="cb_s5_8">
                      <property name="text">
-                      <string>After Aeris Chruch Scene</string>
+                      <string>After Aeris Church Scene</string>
                      </property>
                     </widget>
                    </item>
@@ -21456,7 +21456,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>737</width>
+             <width>733</width>
              <height>664</height>
             </rect>
            </property>

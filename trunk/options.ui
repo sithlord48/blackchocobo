@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>764</width>
-    <height>471</height>
+    <width>765</width>
+    <height>483</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -811,7 +811,7 @@
         <bool>false</bool>
        </property>
        <property name="text">
-        <string>skip_slot_mask (pc only)</string>
+        <string notr="true">skip_slot_mask (pc only)</string>
        </property>
       </widget>
      </item>
