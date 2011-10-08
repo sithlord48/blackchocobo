@@ -3762,10 +3762,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Jessie Has Been Unstuck</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>The Bomb Was Set</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3814,15 +3810,7 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Talked to Bigs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Talked to Wedge Twice</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Talked to Jessie Before Looking At Map</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4076,10 +4064,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>After Aeris Chruch Scene</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>cb_s5_1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4093,6 +4077,22 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>cb_s5_7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Jesse Has Been Unstuck</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Talked to Biggs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Talked to Jesse Before Looking At Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>After Aeris Church Scene</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5661,10 +5661,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>&amp;Close</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>skip_slot_mask (pc only)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

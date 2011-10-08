@@ -3780,10 +3780,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation>二番目のドアが開く</translation>
     </message>
     <message>
-        <source>Jessie Has Been Unstuck</source>
-        <translation>ジェシーを助ける</translation>
-    </message>
-    <message>
         <source>The Bomb Was Set</source>
         <translation>爆弾をセット</translation>
     </message>
@@ -3832,16 +3828,8 @@ Var And Scrolling Synced To Left Table</source>
         <translation>ミッドガル発最終列車フラグ</translation>
     </message>
     <message>
-        <source>Talked to Bigs</source>
-        <translation>ビッグスと会話</translation>
-    </message>
-    <message>
         <source>Talked to Wedge Twice</source>
         <translation>ウェッジと二回の会話</translation>
-    </message>
-    <message>
-        <source>Talked to Jessie Before Looking At Map</source>
-        <translation>マップを見る時のジェシーとの会話</translation>
     </message>
     <message>
         <source> Played Video on Train?</source>
@@ -4097,10 +4085,6 @@ Table Entries are Editable</source>
         <translation>子供のへそくり５ギルを盗む</translation>
     </message>
     <message>
-        <source>After Aeris Chruch Scene</source>
-        <translation>エアリスとの教会イベント後</translation>
-    </message>
-    <message>
         <source>cb_s5_1</source>
         <translation>cb_s5_1</translation>
     </message>
@@ -4115,6 +4099,22 @@ Table Entries are Editable</source>
     <message>
         <source>cb_s5_7</source>
         <translation>cb_s5_7</translation>
+    </message>
+    <message>
+        <source>Jesse Has Been Unstuck</source>
+        <translation>ジェシーを助ける</translation>
+    </message>
+    <message>
+        <source>Talked to Biggs</source>
+        <translation>ビッグスと会話</translation>
+    </message>
+    <message>
+        <source>Talked to Jesse Before Looking At Map</source>
+        <translation>マップを見る時のジェシーとの会話</translation>
+    </message>
+    <message>
+        <source>After Aeris Church Scene</source>
+        <translation>エアリスとの教会イベント後</translation>
     </message>
 </context>
 <context>
@@ -5683,10 +5683,6 @@ Table Entries are Editable</source>
     <message>
         <source>&amp;Close</source>
         <translation>閉じる(&amp;C)</translation>
-    </message>
-    <message>
-        <source>skip_slot_mask (pc only)</source>
-        <translation>スロット マスクのスキップ (PC のみ)</translation>
     </message>
 </context>
 <context>

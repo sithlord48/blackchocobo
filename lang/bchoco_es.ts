@@ -3783,10 +3783,6 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
         <translation>2da puerta abierta</translation>
     </message>
     <message>
-        <source>Jessie Has Been Unstuck</source>
-        <translation>Jesse se ha desenganchado</translation>
-    </message>
-    <message>
         <source>The Bomb Was Set</source>
         <translation>La bomba ha sido puesta</translation>
     </message>
@@ -3831,16 +3827,8 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
         <translation>Banderas del tren de Midgar</translation>
     </message>
     <message>
-        <source>Talked to Bigs</source>
-        <translation>Hablar con Biggs</translation>
-    </message>
-    <message>
         <source>Talked to Wedge Twice</source>
         <translation>Hablar dos veces con Wedge</translation>
-    </message>
-    <message>
-        <source>Talked to Jessie Before Looking At Map</source>
-        <translation>Hablar con Jesse antes de mirar al mapa</translation>
     </message>
     <message>
         <source> Played Video on Train?</source>
@@ -4095,10 +4083,6 @@ Las entradas de la tabla son editables</translation>
         <translation>Robar 5 Gil al niño</translation>
     </message>
     <message>
-        <source>After Aeris Chruch Scene</source>
-        <translation>Después de la escena de la iglesia de Aeris</translation>
-    </message>
-    <message>
         <source>cb_s5_1</source>
         <translation>cb_s5_1</translation>
     </message>
@@ -4113,6 +4097,22 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>cb_s5_7</source>
         <translation>cb_s5_7</translation>
+    </message>
+    <message>
+        <source>Jesse Has Been Unstuck</source>
+        <translation>Jesse se ha desenganchado</translation>
+    </message>
+    <message>
+        <source>Talked to Biggs</source>
+        <translation>Hablar con Biggs</translation>
+    </message>
+    <message>
+        <source>Talked to Jesse Before Looking At Map</source>
+        <translation>Hablar con Jesse antes de mirar al mapa</translation>
+    </message>
+    <message>
+        <source>After Aeris Church Scene</source>
+        <translation>Después de la escena de la iglesia de Aeris</translation>
     </message>
 </context>
 <context>
@@ -5681,10 +5681,6 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>&amp;Close</source>
         <translation>&amp;Cerrar</translation>
-    </message>
-    <message>
-        <source>skip_slot_mask (pc only)</source>
-        <translation>saltar_máscara_de_ranura (sólo pc)</translation>
     </message>
 </context>
 <context>
