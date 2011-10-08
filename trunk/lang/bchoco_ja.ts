@@ -1435,7 +1435,7 @@
     </message>
     <message>
         <source>CheckBox</source>
-        <translation>[CheckBox]</translation>
+        <translation>[チェック ボックス]</translation>
     </message>
     <message>
         <source> HP</source>
@@ -4026,7 +4026,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>MDS7ST2:Ether</source>
-        <translation>列車墓場2: ハイポーション</translation>
+        <translation>列車墓場2: エーテル</translation>
     </message>
     <message>
         <source>MDS7ST2:Potion</source>
@@ -4046,7 +4046,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>MDS7ST1:Potion.(In Train 2)</source>
-        <translation>列車墓場1: ハイポーション (列車2 内部)</translation>
+        <translation>列車墓場1: ポーション (列車2 内部)</translation>
     </message>
     <message>
         <source>Would you like to correct the play time?</source>
@@ -4054,11 +4054,11 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>In this region the game runs 60hz</source>
-        <translation>このリージョンのゲームは 60Hz で実行されます</translation>
+        <translation>このリージョンは 60Hz でゲームが実行されます</translation>
     </message>
     <message>
         <source>In this region the game runs 50hz</source>
-        <translation>このリージョンのゲームは 50Hz で実行されます</translation>
+        <translation>このリージョンは 50Hz でゲームが実行されます</translation>
     </message>
     <message>
         <source>Ctrl+C</source>
@@ -4094,7 +4094,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Stole The Kids 5 Gil</source>
-        <translation>子供のへそくり 5 ギルを盗む</translation>
+        <translation>子供のへそくり５ギルを盗む</translation>
     </message>
     <message>
         <source>After Aeris Chruch Scene</source>
@@ -5868,7 +5868,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Using Qt:</source>
-        <translation type="unfinished">Using Qt:</translation>
+        <translation>開発環境・Qt:</translation>
     </message>
     <message>
         <source>Credits</source>
@@ -5876,55 +5876,55 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Giving Credit Where Credit is Due</source>
-        <translation type="unfinished">Giving Credit Where Credit is Due</translation>
+        <translation>然るべきクレジット</translation>
     </message>
     <message>
         <source>Programmers</source>
-        <translation type="unfinished">Programmers</translation>
+        <translation>プログラマー</translation>
     </message>
     <message>
         <source>Main Programmer</source>
-        <translation type="unfinished">Main Programmer</translation>
+        <translation>メイン プログラマー</translation>
     </message>
     <message>
         <source>Bug Testers</source>
-        <translation type="unfinished">Bug Testers</translation>
+        <translation>バグ テスター</translation>
     </message>
     <message>
         <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation type="unfinished">Main Bug Tester, for win/gnome + ingame</translation>
+        <translation>メイン バグ テスター, Win/Gnome + ゲーム内</translation>
     </message>
     <message>
         <source>Mac Os Tester</source>
-        <translation type="unfinished">Mac Os Tester</translation>
+        <translation>Mac OS テスター</translation>
     </message>
     <message>
         <source>Windows Tester</source>
-        <translation type="unfinished">Windows Tester</translation>
+        <translation>Windows テスター</translation>
     </message>
     <message>
         <source>Translators</source>
-        <translation type="unfinished">Translators</translation>
+        <translation>翻訳</translation>
     </message>
     <message>
         <source>Spanish Translation:</source>
-        <translation type="unfinished">Spanish Translation:</translation>
+        <translation>スペイン語翻訳:</translation>
     </message>
     <message>
         <source>French Translation:</source>
-        <translation type="unfinished">French Translation:</translation>
+        <translation>フランス語翻訳:</translation>
     </message>
     <message>
         <source>Icons Used In this Program</source>
-        <translation type="unfinished">Icons Used In this Program</translation>
+        <translation>プログラムの使用アイコン</translation>
     </message>
     <message>
         <source>Buff Icons (and one or two more) by </source>
-        <translation type="unfinished">Buff Icons (and one or two more) by </translation>
+        <translation>バフ アイコン (その他、諸々) の作成: </translation>
     </message>
     <message>
         <source>FF7 Program Icon</source>
-        <translation type="unfinished">FF7 Program Icon</translation>
+        <translation>FF7 プログラム アイコン</translation>
     </message>
     <message>
         <source>Thanks To</source>
@@ -5932,39 +5932,39 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>A Big Thank You  To:</source>
-        <translation type="unfinished">A Big Thank You  To:</translation>
+        <translation>大いなる感謝を:</translation>
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct,item/materia lists  and string conversion function. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation type="unfinished"> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct,item/materia lists  and string conversion function. Access to it&apos;s source code saved a lot of time during the early stages of development.</translation>
+        <translation> Jenova ソースコードの提供に感謝します。 このプログラムは Jenova のセーブファイル構造, アイテム/マテリア リスト, 文字列変換機能の修正バージョンを使用しています。 Jenova ソースコードの利用により開発初期段階の作業時間を大幅に短縮できました。</translation>
     </message>
     <message>
         <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
-        <translation type="unfinished">Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</translation>
+        <translation> 彼の Black Chocobo への支援のすべてに感謝します。翻訳, バグ テスト, セーブマップ データの調査, テーマのテスト, 等々。彼は多方面にわたりの支援してくれました。</translation>
     </message>
     <message>
         <source>Thank You For, the old checksum program</source>
-        <translation type="unfinished">Thank You For, the old checksum program</translation>
+        <translation>定番のチェックサム プログラムに感謝します。</translation>
     </message>
     <message>
         <source>Thank You For, Helping me see the light of stupid errors. </source>
-        <translation type="unfinished">Thank You For, Helping me see the light of stupid errors. </translation>
+        <translation>突拍子もないエラーに気づかせてくれたことに感謝します。</translation>
     </message>
     <message>
         <source>Thank You For, Providing a Better understanding of Qt&apos;s Functions When the help files failed.</source>
-        <translation type="unfinished">Thank You For, Providing a Better understanding of Qt&apos;s Functions When the help files failed.</translation>
+        <translation>Qt のヘルプ ファイルには記載のない機能について、より理解を深める手助けをしてくれました。</translation>
     </message>
     <message>
         <source>Cause She&apos;s Just Awesome!</source>
-        <translation type="unfinished">Cause She&apos;s Just Awesome!</translation>
+        <translation>ともかく彼女は素晴らしい！</translation>
     </message>
     <message>
         <source>Early Win32 Tester</source>
-        <translation type="unfinished">Early Win32 Tester</translation>
+        <translation>Win32 の初期テスター</translation>
     </message>
     <message>
         <source>save icon class used to make the psx icon</source>
-        <translation type="unfinished">save icon class used to make the psx icon</translation>
+        <translation>PSX アイコンに使用したセーブ アイコン クラス</translation>
     </message>
     <message>
         <source>New: Using Myst6re SaveIcon Class</source>
@@ -5980,7 +5980,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Save and Save as are now both allowed</source>
-        <translation>追加: 保存. 名前を付けて保存 の両方が可能に</translation>
+        <translation>追加: 保存, 名前を付けて保存 の両方が可能に</translation>
     </message>
     <message>
         <source>New: Change Slot Posin in Debug mode (MC only) </source>
@@ -6004,7 +6004,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Basic Setting of World Locations In Debug</source>
-        <translation>追加: Basic Setting of World Locations In Debug</translation>
+        <translation>追加: デバッグ内 ワールドマップ上の場所の基本的設定</translation>
     </message>
     <message>
         <source>New: Added .bin .mc .mci .ps .psm .dff  to mcr/mcd list</source>
@@ -6020,7 +6020,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>inital psx save/load; fixed checksum</source>
-        <translation type="unfinished">inital psx save/load; fixed checksum</translation>
+        <translation>初期 PSX の保存/ロード; チェックサム修正</translation>
     </message>
     <message>
         <source>Fixed: Materia Slots Display Left To Right (see ingame)</source>
@@ -6040,7 +6040,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Empty Chocobos Now Start W/ empty names.</source>
-        <translation>修正: 空のチョコ房は名前欄も空欄で始める</translation>
+        <translation>修正: 開始時に空きチョコ房の名前欄を空欄に</translation>
     </message>
     <message>
         <source>Fixed: Typos Lots of Typos..</source>
@@ -6056,7 +6056,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</source>
-        <translation>修正: Gil,Exp,CoasterScore, その他 スピンボックスの大文字</translation>
+        <translation>修正: Gil,Exp,CoasterScore, 等のスピンボックスの大文字</translation>
     </message>
     <message>
         <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
@@ -6116,7 +6116,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Dialogs Inherit style.</source>
-        <translation>修正: ダイアログ スタイルの共通化.</translation>
+        <translation>修正: ダイアログ スタイルの共通化</translation>
     </message>
     <message>
         <source>New: Toggle Each Stable Occupied Flag</source>
@@ -6132,7 +6132,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Better Unknown Var Tab.</source>
-        <translation>追加: 詳細不明な変数タブの調整.</translation>
+        <translation>追加: 詳細不明な変数タブの改善</translation>
     </message>
     <message>
         <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
@@ -6148,7 +6148,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Japanese Translation:</source>
-        <translation type="unfinished">Japanese Translation:</translation>
+        <translation>日本語翻訳:</translation>
     </message>
     <message>
         <source>New: Japanese Translation</source>
