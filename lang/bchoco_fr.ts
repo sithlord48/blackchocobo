@@ -1200,127 +1200,127 @@
     <name>Locations</name>
     <message>
         <source>Platform</source>
-        <translation type="unfinished">Plate-forme</translation>
+        <translation>Plate-forme</translation>
     </message>
     <message>
         <source>Tunnel</source>
-        <translation type="unfinished">Tunnel</translation>
+        <translation>Tunnel</translation>
     </message>
     <message>
         <source>Junon Inn</source>
-        <translation type="unfinished">Auberge de Junon</translation>
+        <translation>Auberge de Junon</translation>
     </message>
     <message>
         <source>Midgar Sector 8</source>
-        <translation type="unfinished">Midgar, Secteur 8</translation>
+        <translation>Midgar, Secteur 8</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
-        <translation type="unfinished">Cimetière des trains</translation>
+        <translation>Cimetière des trains</translation>
     </message>
     <message>
         <source>Underwater Reactor</source>
-        <translation type="unfinished">Réacteur sous-marin</translation>
+        <translation>Réacteur sous-marin</translation>
     </message>
     <message>
         <source>Junon Office F2</source>
-        <translation type="unfinished">Bureaux de Junon, 2ème étage</translation>
+        <translation>Bureaux de Junon, 2ème étage</translation>
     </message>
     <message>
         <source>Kalm Inn</source>
-        <translation type="unfinished">Auberge de Kalm</translation>
+        <translation>Auberge de Kalm</translation>
     </message>
     <message>
         <source>Reactor No. 5</source>
-        <translation type="unfinished">Réacteur n°5</translation>
+        <translation>Réacteur n°5</translation>
     </message>
     <message>
         <source>Aerith&apos;s House</source>
-        <translation type="unfinished">Maison d&apos;Aeris</translation>
+        <translation>Maison d&apos;Aeris</translation>
     </message>
     <message>
         <source>North Crater</source>
-        <translation type="unfinished">Cratère Nord</translation>
+        <translation>Cratère Nord</translation>
     </message>
     <message>
         <source>Wall Market</source>
-        <translation type="unfinished">Wall Market</translation>
+        <translation>Wall Market</translation>
     </message>
     <message>
         <source>Beginner&apos;s Hall</source>
-        <translation type="unfinished">Hall des débutants</translation>
+        <translation>Hall des débutants</translation>
     </message>
     <message>
         <source>Whirlwind Maze</source>
-        <translation type="unfinished">Labyrinthe Tornade</translation>
+        <translation>Labyrinthe Tornade</translation>
     </message>
     <message>
         <source>Mt. Nibel</source>
-        <translation type="unfinished">Mont Nibel</translation>
+        <translation>Mont Nibel</translation>
     </message>
     <message>
         <source>Shinra Bldg 69F.</source>
-        <translation type="unfinished">Bât. Shinra 69ème ét.</translation>
+        <translation>Bât. Shinra 69ème ét.</translation>
     </message>
     <message>
         <source>Shinra Bldg 67F.</source>
-        <translation type="unfinished">Bât. Shinra 67ème ét.</translation>
+        <translation>Bât. Shinra 67ème ét.</translation>
     </message>
     <message>
         <source>Gaeas Cliff</source>
-        <translation type="unfinished">Falaise de Gaea</translation>
+        <translation>Falaise de Gaea</translation>
     </message>
     <message>
         <source>Gaeas Cliff Base</source>
-        <translation type="unfinished">Falaise de Gaea, abords</translation>
+        <translation>Falaise de Gaea, abords</translation>
     </message>
     <message>
         <source>Sector 7 - Slums</source>
-        <translation type="unfinished">Secteur 7 - Taudis</translation>
+        <translation>Secteur 7 - Taudis</translation>
     </message>
     <message>
         <source>Reactor No.1</source>
-        <translation type="unfinished">Réacteur n°1</translation>
+        <translation>Réacteur n°1</translation>
     </message>
     <message>
         <source>Corel Prison</source>
-        <translation type="unfinished">Prison de Corel</translation>
+        <translation>Prison de Corel</translation>
     </message>
     <message>
         <source>Fort Condor</source>
-        <translation type="unfinished">Fort Condor</translation>
+        <translation>Fort Condor</translation>
     </message>
     <message>
         <source>Inside Submarine</source>
-        <translation type="unfinished">À l&apos;intérieur du sous-marin</translation>
+        <translation>À l&apos;intérieur du sous-marin</translation>
     </message>
     <message>
         <source>Hallway</source>
-        <translation type="unfinished">Couloir</translation>
+        <translation>Couloir</translation>
     </message>
     <message>
         <source>Cosmo Canyon</source>
-        <translation type="unfinished">Canyon Cosmo</translation>
+        <translation>Canyon Cosmo</translation>
     </message>
     <message>
         <source>Church in the slums</source>
-        <translation type="unfinished">Église - Taudis</translation>
+        <translation>Église - Taudis</translation>
     </message>
     <message>
         <source>Boat</source>
-        <translation type="unfinished">Cargo</translation>
+        <translation>Cargo</translation>
     </message>
     <message>
         <source>Lower Sector 4 Plate</source>
-        <translation type="unfinished">Sous la plaque du Secteur 4</translation>
+        <translation>Sous la plaque du Secteur 4</translation>
     </message>
     <message>
         <source>Mt. Corel</source>
-        <translation type="unfinished">Mont Corel</translation>
+        <translation>Mont Corel</translation>
     </message>
     <message>
         <source>Sector 5 - Slums</source>
-        <translation type="unfinished">Secteur 5 - Taudis</translation>
+        <translation>Secteur 5 - Taudis</translation>
     </message>
     <message>
         <source>Debug Room [ja]</source>
@@ -1332,51 +1332,51 @@
     </message>
     <message>
         <source>Test Fight</source>
-        <translation type="unfinished">Combat test</translation>
+        <translation>Combat test</translation>
     </message>
     <message>
         <source>Ropeway Station</source>
-        <translation type="unfinished">Station de téléphérique</translation>
+        <translation>Station de téléphérique</translation>
     </message>
     <message>
         <source>Junon Way</source>
-        <translation type="unfinished">Chemin de Junon</translation>
+        <translation>Chemin de Junon</translation>
     </message>
     <message>
         <source>Junon Airport Path</source>
-        <translation type="unfinished">Junon - Chemin vers l&apos;aéroport</translation>
+        <translation>Junon - Chemin vers l&apos;aéroport</translation>
     </message>
     <message>
         <source>Forgotten Captial</source>
-        <translation type="unfinished">Cité perdue</translation>
+        <translation>Cité perdue</translation>
     </message>
     <message>
         <source>Sector 8, Underground</source>
-        <translation type="unfinished">Secteur 8 - Souterrains</translation>
+        <translation>Secteur 8 - Souterrains</translation>
     </message>
     <message>
         <source>Shinra Bldg.</source>
-        <translation type="unfinished">Bât. Shinra</translation>
+        <translation>Bât. Shinra</translation>
     </message>
     <message>
         <source>Wutai</source>
-        <translation type="unfinished">Utai</translation>
+        <translation>Utai</translation>
     </message>
     <message>
         <source>Forgotten City</source>
-        <translation type="unfinished">Cité perdue</translation>
+        <translation>Cité perdue</translation>
     </message>
     <message>
         <source>Chocobo Ranch</source>
-        <translation type="unfinished">Ferme de chocobos</translation>
+        <translation>Ferme de chocobos</translation>
     </message>
     <message>
         <source>Highwind</source>
-        <translation type="unfinished">Hautvent</translation>
+        <translation>Hautvent</translation>
     </message>
     <message>
         <source>Shinra Bldg 64F.</source>
-        <translation type="unfinished">Bât. Shinra 69ème ét. {64F?}</translation>
+        <translation>Bât. Shinra 69ème ét. {64F?}</translation>
     </message>
 </context>
 <context>
