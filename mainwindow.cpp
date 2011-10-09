@@ -346,7 +346,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
         .arg(fileName));
         return;
     }
-
+    filename=fileName;
     /*~~~~~~~~~~Start Load~~~~~~~~~~*/
     memcpy(ff7.file_headerp,ff7file.mid(0x0000,ff7.SG_HEADER),ff7.SG_HEADER);// collect header (0x09) bytes (PC), (0x00) bytes (PSX), (0x2000) bytes (MC)
     for (int i=0;i<ff7.SG_SLOT_NUMBER;i++)
