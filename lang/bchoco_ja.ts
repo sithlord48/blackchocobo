@@ -1224,11 +1224,11 @@
     </message>
     <message>
         <source>Junon Office F2</source>
-        <translation>ジュノン支社2階</translation>
+        <translation>ジュノン支社２階</translation>
     </message>
     <message>
         <source>Kalm Inn</source>
-        <translation>カーム・宿屋2階</translation>
+        <translation>カーム・宿屋２階</translation>
     </message>
     <message>
         <source>Reactor No. 5</source>
@@ -1260,11 +1260,11 @@
     </message>
     <message>
         <source>Shinra Bldg 69F.</source>
-        <translation>神羅ビル・69階</translation>
+        <translation>神羅ビル・６９階</translation>
     </message>
     <message>
         <source>Shinra Bldg 67F.</source>
-        <translation>神羅ビル・67階</translation>
+        <translation>神羅ビル・６７階</translation>
     </message>
     <message>
         <source>Gaeas Cliff</source>
@@ -1376,7 +1376,7 @@
     </message>
     <message>
         <source>Shinra Bldg 64F.</source>
-        <translation>神羅ビル・64階</translation>
+        <translation>神羅ビル・６４階</translation>
     </message>
 </context>
 <context>
@@ -2112,7 +2112,7 @@
     </message>
     <message>
         <source>1st Floor Shinra Building</source>
-        <translation>神羅ビル・1階ロビー</translation>
+        <translation>神羅ビル・１階ロビー</translation>
     </message>
     <message>
         <source>Gold Saucer - Ghost Hotel</source>
@@ -2232,7 +2232,7 @@
     </message>
     <message>
         <source>Kalm Inn</source>
-        <translation>カーム・宿屋2階</translation>
+        <translation>カーム・宿屋２階</translation>
     </message>
     <message>
         <source>&amp;Game Progress</source>
@@ -2923,7 +2923,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Cannot read file %1:
 %2 Be Sure its is a Raw PSX Save</source>
-        <translation>ファイル %1は読み込めません:
+        <translation>ファイル %1 が読み込めません:
 %2 Raw PSX セーブかどうか確認してください</translation>
     </message>
     <message>
@@ -3910,7 +3910,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Elevator On 2nd Floor</source>
-        <translation>2階のエレベーター</translation>
+        <translation>２階のエレベーター</translation>
     </message>
     <message>
         <source>Post Pan NMKIN_5</source>
@@ -5932,11 +5932,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct,item/materia lists  and string conversion function. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation> Jenova ソースコードの提供に感謝します。 このプログラムは Jenova のセーブファイル構造, アイテム/マテリア リスト, 文字列変換機能の修正バージョンを使用しています。 Jenova ソースコードの利用により開発初期段階の作業時間を大幅に短縮できました。</translation>
+        <translation>Jenova ソースコードの提供に感謝します。 このプログラムは Jenova のセーブファイル構造, アイテム/マテリア リスト, 文字列変換機能の修正バージョンを使用しています。 Jenova ソースコードの利用により開発初期段階の作業時間を大幅に短縮できました。</translation>
     </message>
     <message>
         <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
-        <translation> 彼の Black Chocobo への支援のすべてに感謝します。翻訳, バグ テスト, セーブマップ データの調査, テーマのテスト, 等々。彼は多方面にわたりの支援してくれました。</translation>
+        <translation>彼の Black Chocobo への支援のすべてに感謝します。翻訳, バグ テスト, セーブマップ データの調査, テーマのテスト, 等々、彼の支援は多方面に及んでいます。</translation>
     </message>
     <message>
         <source>Thank You For, the old checksum program</source>
@@ -5972,7 +5972,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Titan/Ramuh Stats Backward.</source>
-        <translation>修正: タイタン/ラムウの位置のズレ</translation>
+        <translation>修正: タイタン/ラムウの値の入れ替り</translation>
     </message>
     <message>
         <source>New: Save and Save as are now both allowed</source>
@@ -6076,7 +6076,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Unknown Var  Tracker in Test Data (very basic atm)</source>
-        <translation>追加: テスト データの詳細不明な変数の調査 (基本的な事柄)</translation>
+        <translation>追加: 詳細不明な変数の調査 (今のところ単純な機能)</translation>
     </message>
     <message>
         <source>Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</source>
