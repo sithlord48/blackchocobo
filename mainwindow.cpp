@@ -25,10 +25,9 @@ int s; //keeps track of our slot globally
 FF7SLOT bufferslot; // a buffer slot to keep copied slots in
 MATERIA buffer_materia;
 ITEM butter_item;
+static Text chPC;
 ff7names FF7Strings; //class of strings used in ff7
-
 QString buffer_region; //keep track of the region of any copied slots.
-char chFF7[256];  // char arrary for converting to ff7 chars , so far not used.
 int curchar =0; //keeps track of current character displayed
 int mslotsel = 0; //keeps track of materia slot on char selected
 QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
@@ -41,21 +40,12 @@ extern quint32 charlvls[11][99]; //  Chars lvl Table
 MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    for (int i=0; i<256; i++)
-    {
-        for (int j=255; j>=0; j--)
-        {
-            if (chPC[j] == (char)i)
-            chFF7[i] = (char)j;
-        }
-    }
-
 
     load=true;
     //set up comboboxes.
     for (int i=256;i<288;i++){ui->combo_armor->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}
     for (int i=288;i<320;i++){ui->combo_acc->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}
-                                ui->combo_acc->addItem(QIcon(Items[288].image),tr("-None-"));//add clear option for accessories
+                              ui->combo_acc->addItem(QIcon(Items[288].image),tr("-None-"));//add clear option for accessories
     for (int i=0;i<320;i++){ui->combo_additem->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}
     for (int i=0;i<0x5b;i++){ui->combo_add_mat->addItem(QIcon(Materias[i].image),FF7Strings.MateriaNames(i));}
     for (int i=0;i<0x5b;i++){ui->combo_add_mat_slot->addItem(QIcon(Materias[i].image),FF7Strings.MateriaNames(i));}
@@ -1225,6 +1215,7 @@ void MainWindow::on_action_Region_USA_triggered(bool checked)
         ui->action_Region_USA->setIcon(QIcon(":/icon/us_sel"));
         ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
+        chPC.init(0);
     }
 }}
 /*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
@@ -1271,6 +1262,7 @@ void MainWindow::on_action_Region_PAL_Generic_triggered(bool checked)
         ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_sel"));
         ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
+        chPC.init(0);
     }
 }}
 /*~~~~~~~~~~~~~SET PAL_German MC HEADER~~~~~~~~~~~~~~~~*/
@@ -1317,6 +1309,7 @@ void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
         ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_sel"));
         ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
+        chPC.init(0);
     }
 }}
 /*~~~~~~~~~~~~~SET PAL_Spanish MC HEADER~~~~~~~~~~~~~~~~*/
@@ -1363,6 +1356,7 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
         ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_sel"));
         ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
+        chPC.init(0);
     }
 }}
 /*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
@@ -1409,6 +1403,7 @@ void MainWindow::on_action_Region_JPN_triggered(bool checked)
         ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_sel"));
         ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
+        chPC.init(1);
     }
 }}
 /*~~~~~~~~~~~~~SET JPN_International MC HEADER~~~~~~~~~~~~~~~~*/
@@ -1455,6 +1450,7 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
         ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_sel"));
         ui->lbl_sg_region->setText(ff7.SG_Region_String[s].mid(0,ff7.SG_Region_String[s].lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7.SG_Region_String[s].mid(ff7.SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
+        chPC.init(1);
     }
 }}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -1491,8 +1487,8 @@ void MainWindow::charupdate(void)
     ui->combo_id->setCurrentIndex(ff7.slot[s].chars[curchar].id);
     for (int n=0;n<12;n++)
     {
-        if(chPC[ff7.slot[s].chars[curchar].name[n]] =='\0'){break;}
-        else{this->ui->line_name->setText( this->ui->line_name->text() + chPC[ff7.slot[s].chars[curchar].name[n]]);}
+        if(ff7.slot[s].chars[curchar].name[n] ==0xFF){break;}
+        else{this->ui->line_name->setText( this->ui->line_name->text() + chPC.PC(ff7.slot[s].chars[curchar].name[n]));}
     }
     ui->sb_exp->setValue(ff7.slot[s].chars[curchar].exp);
     ui->pbar_level->setValue(ff7.slot[s].chars[curchar].flags[2]);
@@ -2758,8 +2754,8 @@ void MainWindow::guirefresh(void)
     /*~~~~ END Type Check~~~~*/
 
     // above stuff belongs in setings
-
-
+    if(ff7.SG_Region_String[s].contains("00700") || ff7.SG_Region_String[s].contains("01057")){chPC.init(1);}//Japanese
+    else{chPC.init(0);}// not japanese save.
     switch(ui->combo_map_controls->currentIndex())
     {
     case 0: ui->slide_world_x->setValue(ff7.slot[s].l_world & 0x7FFFF);
@@ -2919,8 +2915,8 @@ void MainWindow::guirefresh(void)
     ui->line_location->clear();
     for (int loc=0; loc<32;loc++)
     {
-        if (chPC[ff7.slot[s].location[loc]]=='\0'){break;}
-        else{ui->line_location->setText( ui->line_location->text() + QString(chPC[ff7.slot[s].location[loc]]));}
+        if (ff7.slot[s].location[loc]==0xFF){break;}
+        else{ui->line_location->setText( ui->line_location->text() + chPC.PC(ff7.slot[s].location[loc]));}
     }
     ui->sb_map_id->setValue(ff7.slot[s].mapid);
     ui->sb_loc_id->setValue(ff7.slot[s].locationid);
@@ -3227,8 +3223,8 @@ void MainWindow::chocobo_refresh()
     ui->line_c1_name->clear();
     for (int n=0;n<6;n++)
     {
-        if(chPC[ff7.slot[s].chocobonames[0][n]] =='\0'){break;}
-        else{this->ui->line_c1_name->setText( ui->line_c1_name->text() + chPC[ff7.slot[s].chocobonames[0][n]]);}
+        if(ff7.slot[s].chocobonames[0][n] ==0xFF){break;}
+        else{this->ui->line_c1_name->setText( ui->line_c1_name->text() + chPC.PC(ff7.slot[s].chocobonames[0][n]));}
     }
     if(ui->line_c1_name->text()=="      "){ui->line_c1_name->clear();}
     //ui->cb_c1_personality->setCurrentIndex(ff7.slot[s].chocobos[0].personality); //need more data for this.
@@ -3250,8 +3246,8 @@ void MainWindow::chocobo_refresh()
     ui->line_c2_name->clear();
     for (int n=0;n<6;n++)
     {
-        if(chPC[ff7.slot[s].chocobonames[1][n]] =='\0'){break;}
-        else{this->ui->line_c2_name->setText( ui->line_c2_name->text() + chPC[ff7.slot[s].chocobonames[1][n]]);}
+        if(ff7.slot[s].chocobonames[1][n] ==0xFF){break;}
+        else{this->ui->line_c2_name->setText( ui->line_c2_name->text() + chPC.PC(ff7.slot[s].chocobonames[1][n]));}
     }
     if(ui->line_c2_name->text()=="      "){ui->line_c2_name->clear();}
     //ui->cb_c2_personality->setCurrentIndex(ff7.slot[s].chocobos[1].personality); //need more data for this.
@@ -3273,8 +3269,8 @@ void MainWindow::chocobo_refresh()
     ui->line_c3_name->clear();
     for (int n=0;n<6;n++)
     {
-        if(chPC[ff7.slot[s].chocobonames[2][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
-        else{this->ui->line_c3_name->setText( ui->line_c3_name->text() + chPC[ff7.slot[s].chocobonames[2][n]]);}
+        if(ff7.slot[s].chocobonames[2][n] ==0xFF){break;}
+        else{this->ui->line_c3_name->setText( ui->line_c3_name->text() + chPC.PC(ff7.slot[s].chocobonames[2][n]));}
     }
     if(ui->line_c3_name->text()=="      "){ui->line_c3_name->clear();}
     //ui->cb_c3_personality->setCurrentIndex(ff7.slot[s].chocobos[2].personality); //need more data for this.
@@ -3296,8 +3292,8 @@ void MainWindow::chocobo_refresh()
     ui->line_c4_name->clear();
     for (int n=0;n<6;n++)
     {
-        if(chPC[ff7.slot[s].chocobonames[3][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
-        else{this->ui->line_c4_name->setText( ui->line_c4_name->text() + chPC[ff7.slot[s].chocobonames[3][n]]);}
+        if(ff7.slot[s].chocobonames[3][n] ==0xFF){break;}
+        else{this->ui->line_c4_name->setText( ui->line_c4_name->text() + chPC.PC(ff7.slot[s].chocobonames[3][n]));}
     }
     if(ui->line_c4_name->text()=="      "){ui->line_c4_name->clear();}
     //ui->cb_c4_personality->setCurrentIndex(ff7.slot[s].chocobos[3].personality); //need more data for this.
@@ -3319,8 +3315,8 @@ void MainWindow::chocobo_refresh()
     ui->line_c5_name->clear();
     for (int n=0;n<6;n++)
     {
-        if(chPC[ff7.slot[s].chocobonames[4][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
-        else{this->ui->line_c5_name->setText( ui->line_c5_name->text() + chPC[ff7.slot[s].chocobonames[4][n]]);}
+        if(ff7.slot[s].chocobonames[4][n] ==0xFF){break;}
+        else{this->ui->line_c5_name->setText( ui->line_c5_name->text() + chPC.PC(ff7.slot[s].chocobonames[4][n]));}
     }
     if(ui->line_c5_name->text()=="      "){ui->line_c5_name->clear();}
     //ui->cb_c5_personality->setCurrentIndex(ff7.slot[s].choco56[0].personality); //need more data for this.
@@ -3341,8 +3337,8 @@ void MainWindow::chocobo_refresh()
     ui->line_c6_name->clear();
     for (int n=0;n<6;n++)
     {
-        if(chPC[ff7.slot[s].chocobonames[5][n]] =='\0'){break;} //Bug Fixed before was pointing chocobonames[1][n] (Vegeta_Ss4) v0.8.3
-        else{this->ui->line_c6_name->setText( ui->line_c6_name->text() + chPC[ff7.slot[s].chocobonames[5][n]]);}
+        if(ff7.slot[s].chocobonames[5][n] ==0xFF){break;}
+        else{this->ui->line_c6_name->setText( ui->line_c6_name->text() + chPC.PC(ff7.slot[s].chocobonames[5][n]));}
     }
     if(ui->line_c6_name->text()=="      "){ui->line_c6_name->clear();}
     //ui->cb_c6_personality->setCurrentIndex(ff7.slot[s].choco56[1].personality); //need more data for this.
@@ -3411,7 +3407,6 @@ void MainWindow::testdata_refresh()
     ui->cb_reg_yuffie->setChecked(Qt::Unchecked);
     if(ff7.slot[s].reg_yuffie == 0x6F){ui->cb_reg_yuffie->setChecked(Qt::Checked);}
     ui->lcdNumber_9->display(ff7.slot[s].reg_yuffie);
-
 
     if((ff7.slot[s].itemsmask_1)& (1<<1)){ui->cb_itemmask1_2->setChecked(Qt::Checked);}
     else{ui->cb_itemmask1_2->setChecked(Qt::Unchecked);}
@@ -3625,7 +3620,7 @@ void MainWindow::on_box_stable6_toggled(bool checked)
 void MainWindow::on_line_c1_name_lostFocus()
 {if(!load){
         for (int i=0;i<6;i++){ff7.slot[s].chocobonames[0][i] =0xFF;}
-        for (int i=0;i<ui->line_c1_name->text().size();i++){ff7.slot[s].chocobonames[0][i] = chFF7[ui->line_c1_name->text().at(i).toAscii()];}
+        for (int i=0;i<ui->line_c1_name->text().size();i++){ff7.slot[s].chocobonames[0][i] = chPC.FF7(ui->line_c1_name->text().at(i).toAscii());}
 }}
 void MainWindow::on_sb_c1_stamina_valueChanged(int value){if(!load){ff7.slot[s].chocostaminas[0] = value;}}
 void MainWindow::on_sb_c1_speed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[0].speed = value;}}
@@ -3649,7 +3644,7 @@ void MainWindow::on_cb_c1_mated_toggled(bool checked)
 void MainWindow::on_line_c2_name_lostFocus()
 {if(!load){
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[1][i] =0xFF;}
-    for (int i=0;i<ui->line_c2_name->text().size();i++){ff7.slot[s].chocobonames[1][i] = chFF7[ui->line_c2_name->text().at(i).toAscii()];}
+    for (int i=0;i<ui->line_c2_name->text().size();i++){ff7.slot[s].chocobonames[1][i] = chPC.FF7(ui->line_c2_name->text().at(i).toAscii());}
 }}
 void MainWindow::on_sb_c2_stamina_valueChanged(int value){if(!load){ff7.slot[s].chocostaminas[1] = value;}}
 void MainWindow::on_sb_c2_speed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[1].speed = value;}}
@@ -3673,7 +3668,7 @@ void MainWindow::on_cb_c2_mated_toggled(bool checked)
 void MainWindow::on_line_c3_name_lostFocus()
 {if(!load){
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[2][i] =0xFF;}
-    for (int i=0;i<ui->line_c3_name->text().size();i++){ff7.slot[s].chocobonames[2][i] = chFF7[ui->line_c3_name->text().at(i).toAscii()];}
+    for (int i=0;i<ui->line_c3_name->text().size();i++){ff7.slot[s].chocobonames[2][i] = chPC.FF7(ui->line_c3_name->text().at(i).toAscii());}
 }}
 void MainWindow::on_sb_c3_stamina_valueChanged(int value){if(!load){ff7.slot[s].chocostaminas[2] =value;}}
 void MainWindow::on_sb_c3_speed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[2].speed = value;}}
@@ -3697,7 +3692,7 @@ void MainWindow::on_cb_c3_mated_toggled(bool checked)
 void MainWindow::on_line_c4_name_lostFocus()
 {if(!load){
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[3][i] =0xFF;}
-    for (int i=0;i<ui->line_c4_name->text().size();i++){ff7.slot[s].chocobonames[3][i] = chFF7[ui->line_c4_name->text().at(i).toAscii()];}
+    for (int i=0;i<ui->line_c4_name->text().size();i++){ff7.slot[s].chocobonames[3][i] = chPC.FF7(ui->line_c4_name->text().at(i).toAscii());}
 }}
 void MainWindow::on_sb_c4_stamina_valueChanged(int value){if(!load){ff7.slot[s].chocostaminas[3] = value;}}
 void MainWindow::on_sb_c4_speed_valueChanged(int value){if(!load){ff7.slot[s].chocobos[3].speed = value;}}
@@ -3721,7 +3716,7 @@ void MainWindow::on_cb_c4_mated_toggled(bool checked)
 void MainWindow::on_line_c5_name_lostFocus()
 {if(!load){
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[4][i] =0xFF;}
-    for (int i=0;i<ui->line_c5_name->text().size();i++){ff7.slot[s].chocobonames[4][i] = chFF7[ui->line_c5_name->text().at(i).toAscii()];}
+    for (int i=0;i<ui->line_c5_name->text().size();i++){ff7.slot[s].chocobonames[4][i] = chPC.FF7(ui->line_c5_name->text().at(i).toAscii());}
 }}
 void MainWindow::on_sb_c5_stamina_valueChanged(int value){if(!load){ff7.slot[s].chocostaminas[4] = value;}}
 void MainWindow::on_sb_c5_speed_valueChanged(int value){if(!load){ff7.slot[s].choco56[0].speed = value;}}
@@ -3745,7 +3740,7 @@ void MainWindow::on_cb_c5_mated_toggled(bool checked)
 void MainWindow::on_line_c6_name_lostFocus()
 {if(!load){
     for (int i=0;i<6;i++){ff7.slot[s].chocobonames[5][i] =0xFF;}
-    for (int i=0;i<ui->line_c6_name->text().size();i++){ff7.slot[s].chocobonames[5][i] = chFF7[ui->line_c6_name->text().at(i).toAscii()];}
+    for (int i=0;i<ui->line_c6_name->text().size();i++){ff7.slot[s].chocobonames[5][i] = chPC.FF7(ui->line_c6_name->text().at(i).toAscii());}
 }}
 void MainWindow::on_sb_c6_stamina_valueChanged(int value){if(!load){ff7.slot[s].chocostaminas[5] = value;}}
 void MainWindow::on_sb_c6_speed_valueChanged(int value){if(!load){ff7.slot[s].choco56[1].speed = value;}}
@@ -4142,10 +4137,10 @@ void MainWindow::on_sb_coordz_valueChanged(int value){if(!load){ff7.slot[s].coor
 void MainWindow::on_line_location_textChanged(QString text)
 {if (!load){
     for (int i=0;i<24;i++){ff7.slot[s].location[i] =0xFF;}
-    for (int i=0;i<text.size();i++){ff7.slot[s].location[i] = chFF7[text.at(i).toAscii()];}
+    for (int i=0;i<text.size();i++){ff7.slot[s].location[i] = chPC.FF7(text.at(i).toAscii());}
     //and the description.
     for (int i=0;i<32;i++){ff7.slot[s].desc.location[i] =0xFF;}
-    for (int i=0;i<text.size();i++){ff7.slot[s].desc.location[i] = chFF7[text.at(i).toAscii()];}
+    for (int i=0;i<text.size();i++){ff7.slot[s].desc.location[i] = chPC.FF7(text.at(i).toAscii());}
 }}
 
 //char stats tab
@@ -4168,11 +4163,11 @@ void MainWindow::on_cb_id_toggled(bool checked)
 void MainWindow::on_line_name_lostFocus()
 {if(!load){
     for (int i=0;i<12;i++){ff7.slot[s].chars[curchar].name[i] =0xFF;}
-    for (int i=0;i<ui->line_name->text().size();i++){ff7.slot[s].chars[curchar].name[i] = chFF7[ui->line_name->text().at(i).toAscii()];}
+    for (int i=0;i<ui->line_name->text().size();i++){ff7.slot[s].chars[curchar].name[i] = chPC.FF7(ui->line_name->text().at(i).toAscii());}
     if (curchar == ui->combo_party1->currentIndex())
     {
         for (int i=0;i<16;i++){ff7.slot[s].desc.name[i] =0xFF;}
-        for (int i=0;i<ui->line_name->text().size();i++){ff7.slot[s].desc.name[i] = chFF7[ui->line_name->text().at(i).toAscii()];}
+        for (int i=0;i<ui->line_name->text().size();i++){ff7.slot[s].desc.name[i] = chPC.FF7(ui->line_name->text().at(i).toAscii());}
     }
 }}
 
@@ -4936,16 +4931,28 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         for(int i=0;i<4;i++){ff7.slot[s].chars[6].z_4[i] = ff7.slot[s].chars[0].z_4[i];}
         //set up Sephiroth
         ff7.slot[s].chars[7].id=10;
-        ff7.slot[s].chars[7].name[0] = chFF7['S'];
-        ff7.slot[s].chars[7].name[1] = chFF7['e'];
-        ff7.slot[s].chars[7].name[2] = chFF7['p'];
-        ff7.slot[s].chars[7].name[3] = chFF7['h'];
-        ff7.slot[s].chars[7].name[4] = chFF7['i'];
-        ff7.slot[s].chars[7].name[5] = chFF7['r'];
-        ff7.slot[s].chars[7].name[6] = chFF7['o'];
-        ff7.slot[s].chars[7].name[7] = chFF7['t'];
-        ff7.slot[s].chars[7].name[8] = chFF7['h'];
-        for (int i=9; i<12;i++){ff7.slot[s].chars[7].name[i] = 0xFF;}
+        if(ff7.SG_Region_String[s].contains("00700") || ff7.SG_Region_String[s].contains("01057"))
+        {
+            ff7.slot[s].chars[7].name[0]=chPC.FF7(90);  //セ
+            ff7.slot[s].chars[7].name[1]=chPC.FF7(68);  //フ
+            ff7.slot[s].chars[7].name[2]=chPC.FF7(166); //ィ
+            ff7.slot[s].chars[7].name[3]=chPC.FF7(142); //ロ
+            ff7.slot[s].chars[7].name[4]=chPC.FF7(88);  //ス
+            for (int i=5; i<12;i++){ff7.slot[s].chars[7].name[i] = 0xFF;}
+        }
+        else
+        {
+            ff7.slot[s].chars[7].name[0] = chPC.FF7('S');
+            ff7.slot[s].chars[7].name[1] = chPC.FF7('e');
+            ff7.slot[s].chars[7].name[2] = chPC.FF7('p');
+            ff7.slot[s].chars[7].name[3] = chPC.FF7('h');
+            ff7.slot[s].chars[7].name[4] = chPC.FF7('i');
+            ff7.slot[s].chars[7].name[5] = chPC.FF7('r');
+            ff7.slot[s].chars[7].name[6] = chPC.FF7('o');
+            ff7.slot[s].chars[7].name[7] = chPC.FF7('t');
+            ff7.slot[s].chars[7].name[8] = chPC.FF7('h');
+            for (int i=9; i<12;i++){ff7.slot[s].chars[7].name[i] = 0xFF;}
+        }
         ui->label_replaynote->setText(tr("Setting This Will Copy Cloud as is to young cloud (caitsith's slot). sephiroth's stats will come directly from vincent."));
     }
 
