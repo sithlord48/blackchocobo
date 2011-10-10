@@ -18934,7 +18934,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>349</width>
+                 <width>328</width>
                  <height>1432</height>
                 </rect>
                </property>
@@ -28343,6 +28343,9 @@ Var And Scrolling Synced To Left Table</string>
    <property name="shortcut">
     <string>Ctrl+O</string>
    </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
   </action>
   <action name="actionSave_File_As">
    <property name="enabled">
@@ -28357,6 +28360,9 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="shortcut">
     <string>Alt+Shift+S</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
   <action name="actionAbout">
@@ -28373,6 +28379,9 @@ Var And Scrolling Synced To Left Table</string>
    <property name="shortcut">
     <string>F1</string>
    </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
   </action>
   <action name="actionAbout_Qt">
    <property name="icon">
@@ -28384,6 +28393,9 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="shortcut">
     <string>Alt+F1</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
   <action name="actionExport_PC_Save">
@@ -28700,6 +28712,9 @@ Var And Scrolling Synced To Left Table</string>
    <property name="shortcut">
     <string>Ctrl+Shift+C</string>
    </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
   </action>
   <action name="actionPaste_Slot">
    <property name="enabled">
@@ -28714,6 +28729,9 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+Shift+V</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
   <action name="actionClear_Slot">
@@ -28730,6 +28748,9 @@ Var And Scrolling Synced To Left Table</string>
    <property name="shortcut">
     <string>Alt+Del</string>
    </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
   </action>
   <action name="actionPrevious_Slot">
    <property name="enabled">
@@ -28745,6 +28766,9 @@ Var And Scrolling Synced To Left Table</string>
    <property name="shortcut">
     <string>Alt+Left</string>
    </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
   </action>
   <action name="actionNext_Slot">
    <property name="enabled">
@@ -28759,6 +28783,9 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="shortcut">
     <string>Alt+Right</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
   <action name="action_show_test_data">
@@ -28925,6 +28952,9 @@ Var And Scrolling Synced To Left Table</string>
    <property name="shortcut">
     <string>Alt+Ins</string>
    </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
+   </property>
   </action>
   <action name="actionNew_Game_Plus">
    <property name="enabled">
@@ -28939,6 +28969,9 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="shortcut">
     <string>Alt+Shift+Ins</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
   <action name="actionExport_char">
@@ -28978,6 +29011,9 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+S</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
   <action name="actionExport_VGS">
@@ -29026,6 +29062,9 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="text">
     <string>New Window</string>
+   </property>
+   <property name="shortcutContext">
+    <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
   <action name="actionReload">
