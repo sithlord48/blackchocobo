@@ -46,11 +46,24 @@ protected:
 
 private:
     Ui::MainWindow *ui;
+    bool skip_slot_mask;
+    bool load; // are we loading data? if so don't save it to the file.
+    //FF7 ff7; // our save file struct
+    //int s; //track slot
+    ff7names FF7Strings; //class of strings used in ff7
+    FF7SLOT bufferslot; // a buffer slot to keep copied slots in
+    QString buffer_region; //holds region data for bufferslot.
+    MATERIA buffer_materia; // buffer for a materia
+    //ITEM buffer_item;
+    QString filename; //holds file name
+    int curchar; //keeps track of current character displayed
+    int mslotsel; //keeps track of materia slot on char selected
+    Text chPC; //our sting conversion item.
 
 public slots:
     void loadFileFull(const QString &fileName,int reload);//(Vegeta_Ss4) v0.8.3
-private slots://try to keep these in the same order as the .cpp file
-  
+
+private slots://try to keep these in the same order as the .cpp file  
     /*Loading and Saving related Functions*/
     void setPreviewColors();
     void on_actionNew_Window_triggered();

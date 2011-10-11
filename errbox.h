@@ -43,6 +43,8 @@ private slots:
 
 private:
     Ui::errbox *ui;
+    SaveIcon sicon;
+    bool invalid;
 };
 
 #endif // ERRBOX_H

@@ -19,8 +19,7 @@
 #include <globals.h>
 
 extern FF7 ff7;
-SaveIcon icons[15];
-Text chPC;
+
 SlotSelect::SlotSelect(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SlotSelect)
