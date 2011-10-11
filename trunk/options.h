@@ -37,7 +37,7 @@ protected:
 
 private:
     Ui::Options *ui;
-
+    bool load;
 private slots:
     void on_line_char_stat_folder_editingFinished();
     void on_line_default_save_editingFinished();

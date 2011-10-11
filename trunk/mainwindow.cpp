@@ -19,29 +19,23 @@
 #include "ui_mainwindow.h"
 
 /*~~~~~GLOBALS~~~~~~*/
-bool load =false; //used for checking if data is initial load (to block some overrights when gui objects change)
-FF7 ff7; // our save file struct
-int s; //keeps track of our slot globally
-FF7SLOT bufferslot; // a buffer slot to keep copied slots in
-MATERIA buffer_materia;
-ITEM butter_item;
-static Text chPC;
-ff7names FF7Strings; //class of strings used in ff7
-QString buffer_region; //keep track of the region of any copied slots.
-int curchar =0; //keeps track of current character displayed
-int mslotsel = 0; //keeps track of materia slot on char selected
-QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
-QString filename; //holds file name
-bool skip_slot_mask = settings.value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
+//see the Header file private data members of the class.
+ FF7 ff7;//main data array,here untill it can be correctly passed to slotselect.
+ int s; //keeps track of our slot globally needs correct passage to error box
+/*~~~~~Static Vars~~~~~*/
+static QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
 /*~~~~~~EXTERNS~~~~~~~~*/
 extern quint32 chartnls[11][99]; //  Chars tnl Table (cloud - sephiroth)
 extern quint32 charlvls[11][99]; //  Chars lvl Table
 /*~~~~~~~~GUI Set Up~~~~~~~*/
+
 MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-
+    skip_slot_mask = settings.value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
     load=true;
+    curchar =0;
+    mslotsel=0;
     //set up comboboxes.
     for (int i=256;i<288;i++){ui->combo_armor->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}
     for (int i=288;i<320;i++){ui->combo_acc->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}

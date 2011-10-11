@@ -20,8 +20,7 @@
 /*~~~~~GLOBALS~~~~~~*/
 extern FF7 ff7; // our save file struct
 extern int s; //keeps track of our slot globally
-SaveIcon sicon;
-bool invalid=false;
+
 
 errbox::errbox(QWidget *parent) :
     QDialog(parent),
@@ -29,6 +28,7 @@ errbox::errbox(QWidget *parent) :
 {
     ui->setupUi(this);
     QByteArray data;
+    invalid=false;
     for(int i=0;i<0x200;i++){data.append(ff7.hf[s].sl_header[i]);}
 
     switch((quint8)data.at(2))

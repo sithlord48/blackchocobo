@@ -36,7 +36,8 @@ protected:
 
 private:
     Ui::SlotSelect *ui;
-
+    SaveIcon icons[15];
+    Text chPC;
 private slots:
 
 

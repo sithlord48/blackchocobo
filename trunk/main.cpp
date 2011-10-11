@@ -24,6 +24,11 @@
 
 int main(int argc, char *argv[])
 {
+    if(argc >1)
+    {//Check for and display help.to the console :D
+        if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h"){printf("Usage: blackchocobo [<filename>]\n");return 0;}
+    }
+
     QSettings setting(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
     Q_INIT_RESOURCE(images);
     QApplication a(argc, argv);
@@ -37,7 +42,9 @@ int main(int argc, char *argv[])
     translator.load(lang);
     a.installTranslator(&translator);
     MainWindow w;
+
     if(argc ==2){w.loadFileFull(QString(argv[1]),0);}// if command is run w/ a filename after it , load that file.
+
     w.show();
     return a.exec();
 }
