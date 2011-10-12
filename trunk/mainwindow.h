@@ -43,13 +43,14 @@ public:
 
 protected:
     void changeEvent(QEvent *e);
-
+    void aboutToClose();
 private:
     Ui::MainWindow *ui;
     bool skip_slot_mask;
     bool load; // are we loading data? if so don't save it to the file.
+    //bool file_changed; //if file changed after load.
     //FF7 ff7; // our save file struct
-    //int s; //track slot
+    int s; //track slot
     ff7names FF7Strings; //class of strings used in ff7
     FF7SLOT bufferslot; // a buffer slot to keep copied slots in
     QString buffer_region; //holds region data for bufferslot.
@@ -59,7 +60,6 @@ private:
     int curchar; //keeps track of current character displayed
     int mslotsel; //keeps track of materia slot on char selected
     Text chPC; //our sting conversion item.
-
 public slots:
     void loadFileFull(const QString &fileName,int reload);//(Vegeta_Ss4) v0.8.3
 

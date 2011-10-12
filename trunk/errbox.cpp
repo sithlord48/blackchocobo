@@ -18,31 +18,30 @@
 #include "ui_errbox.h"
 
 /*~~~~~GLOBALS~~~~~~*/
-extern FF7 ff7; // our save file struct
-extern int s; //keeps track of our slot globally
 
-
-errbox::errbox(QWidget *parent) :
+errbox::errbox(QWidget *parent,FF7 *ff7data,int slot) :
     QDialog(parent),
     ui(new Ui::errbox)
 {
     ui->setupUi(this);
     QByteArray data;
     invalid=false;
-    for(int i=0;i<0x200;i++){data.append(ff7.hf[s].sl_header[i]);}
+    s=slot;
+    ff7 = ff7data;
+    for(int i=0;i<0x200;i++){data.append(ff7->hf[s].sl_header[i]);}
 
     switch((quint8)data.at(2))
     {
         case 0x11://1 frame
-        sicon.setAll(data.mid(96,160));
+        save_icon.setAll(data.mid(96,160));
         break;
 
         case 0x12://2 frames
-        sicon.setAll(data.mid(96,288), 2);
+        save_icon.setAll(data.mid(96,288), 2);
         break;
 
         case 0x13://3 frames
-        sicon.setAll(data.mid(96,416), 3);
+        save_icon.setAll(data.mid(96,416), 3);
         break;
 
         default:
@@ -51,16 +50,13 @@ errbox::errbox(QWidget *parent) :
 
     if(!invalid)
     {
-        ui->lbl_icon->setPixmap(sicon.icon());
-        connect(&sicon, SIGNAL(nextIcon(QPixmap)), ui->lbl_icon, SLOT(setPixmap(QPixmap)));
+        ui->lbl_icon->setPixmap(save_icon.icon());
+        connect(&save_icon, SIGNAL(nextIcon(QPixmap)), ui->lbl_icon, SLOT(setPixmap(QPixmap)));
     }
-    ui->lbl_regionstring->setText(ff7.SG_Region_String[s].toAscii());
+    ui->lbl_regionstring->setText(ff7->SG_Region_String[s].toAscii());
 }
 
- errbox::~errbox()
-{
-    delete ui;
-}
+errbox::~errbox(){delete ui;}
 
 void errbox::on_btn_prev_clicked()
 {
@@ -70,28 +66,28 @@ void errbox::on_btn_prev_clicked()
 
 void errbox::on_btn_next_clicked()
 {
-    if(s<14){s++; this->done(1);}
+    if(s<14){s++; this->done(2);}
     else{QMessageBox::information(this,tr("Your At Slot 15"),tr("Sorry There is no Next Slot"));}
 }
 
 void errbox::on_btn_export_clicked()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
-    tr("Save Raw PSX File"), ff7.SG_Region_String[s],
+    tr("Save Raw PSX File"), ff7->SG_Region_String[s],
     tr("All Files(*)"));
     if(fileName ==""){return;}
 
-    ff7.SG_SIZE          = FF7_PSX_SAVE_GAME_SIZE;
-    ff7.SG_HEADER        = FF7_PSX_SAVE_GAME_HEADER;
-    ff7.SG_FOOTER        = FF7_PSX_SAVE_GAME_FOOTER;
-    ff7.SG_DATA_SIZE     = FF7_PSX_SAVE_GAME_DATA_SIZE;
-    ff7.SG_SLOT_HEADER   = FF7_PSX_SAVE_GAME_SLOT_HEADER;
-    ff7.SG_SLOT_FOOTER   = FF7_PSX_SAVE_GAME_SLOT_FOOTER;
-    ff7.SG_SLOT_SIZE     = FF7_PSX_SAVE_GAME_SLOT_SIZE;
-    ff7.SG_SLOT_NUMBER   = FF7_PSX_SAVE_GAME_SLOT_NUMBER;
-    ff7.SG_TYPE          = "PSX";
-    ff7.file_headerp     = ff7.file_header_psx;           //pointer to psx file header
-    ff7.file_footerp     = ff7.file_footer_psx;           //pointer to psx file footer
+    ff7->SG_SIZE          = FF7_PSX_SAVE_GAME_SIZE;
+    ff7->SG_HEADER        = FF7_PSX_SAVE_GAME_HEADER;
+    ff7->SG_FOOTER        = FF7_PSX_SAVE_GAME_FOOTER;
+    ff7->SG_DATA_SIZE     = FF7_PSX_SAVE_GAME_DATA_SIZE;
+    ff7->SG_SLOT_HEADER   = FF7_PSX_SAVE_GAME_SLOT_HEADER;
+    ff7->SG_SLOT_FOOTER   = FF7_PSX_SAVE_GAME_SLOT_FOOTER;
+    ff7->SG_SLOT_SIZE     = FF7_PSX_SAVE_GAME_SLOT_SIZE;
+    ff7->SG_SLOT_NUMBER   = FF7_PSX_SAVE_GAME_SLOT_NUMBER;
+    ff7->SG_TYPE          = "PSX";
+    ff7->file_headerp     = ff7->file_header_psx;           //pointer to psx file header
+    ff7->file_footerp     = ff7->file_footer_psx;           //pointer to psx file footer
 
     /*~~~~~~~ SHORT SAVE - SITHLORD48 ~~~~~~~~~*/
     QFile file(fileName);
@@ -105,16 +101,13 @@ void errbox::on_btn_export_clicked()
     }
     FILE *pfile; // this section is starting to work correctly!
     pfile = fopen(fileName.toAscii(),"wb");
-    fwrite(ff7.hf[s].sl_header,ff7.SG_SLOT_HEADER,1,pfile); // Write Header.
-    fwrite(&ff7.slot[s],ff7.SG_DATA_SIZE,1,pfile);
-    fwrite(ff7.hf[s].sl_footer,ff7.SG_SLOT_FOOTER,1,pfile);
-    fwrite(ff7.file_footerp,ff7.SG_FOOTER,1,pfile);
+    fwrite(ff7->hf[s].sl_header,ff7->SG_SLOT_HEADER,1,pfile); // Write Header.
+    fwrite(&ff7->slot[s],ff7->SG_DATA_SIZE,1,pfile);
+    fwrite(ff7->hf[s].sl_footer,ff7->SG_SLOT_FOOTER,1,pfile);
+    fwrite(ff7->file_footerp,ff7->SG_FOOTER,1,pfile);
     fclose(pfile);
     QMessageBox::information(this,tr("Save Successfully"),tr("File Saved Successfully, Going Back To The Selection Dialog"));
-this->done(2);
+    this->done(3);
 }
 
-void errbox::on_btn_view_clicked()
-{
-    this->done(0);
-}
+void errbox::on_btn_view_clicked(){this->done(0);}
