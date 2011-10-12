@@ -21,7 +21,7 @@
 /*~~~~~GLOBALS~~~~~~*/
 //see the Header file private data members of the class.
  FF7 ff7;//main data array,here untill it can be correctly passed to slotselect.
- int s; //keeps track of our slot globally needs correct passage to error box
+ //int s; //keeps track of our slot globally needs correct passage to error box
 /*~~~~~Static Vars~~~~~*/
 static QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
 /*~~~~~~EXTERNS~~~~~~~~*/
@@ -36,6 +36,7 @@ MainWindow::MainWindow(QWidget *parent):QMainWindow(parent),ui(new Ui::MainWindo
     load=true;
     curchar =0;
     mslotsel=0;
+    s=0;
     //set up comboboxes.
     for (int i=256;i<288;i++){ui->combo_armor->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}
     for (int i=288;i<320;i++){ui->combo_acc->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}
@@ -206,6 +207,7 @@ void MainWindow::on_actionOpen_Save_File_activated()
     tr("Open Final Fantasy 7 Save"),settings.value("load_path").toString(),
     tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme)"));
     if (!fileName.isEmpty()){loadFileFull(fileName,0);}
+
 }
 void MainWindow::on_actionReload_triggered(){if(!filename.isEmpty()){loadFileFull(filename,1);}}
 /*~~~~~~~~~~~~~~~~~Load Full ~~~~~~~~~~~~~~~~~~*/
@@ -1027,7 +1029,7 @@ void MainWindow::on_actionSlot_13_activated(){s=12; guirefresh();}
 void MainWindow::on_actionSlot_14_activated(){s=13; guirefresh();}
 void MainWindow::on_actionSlot_15_activated(){s=14; guirefresh();}
 
-void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect;slotselect.setStyleSheet(this->styleSheet()); s=slotselect.exec(); guirefresh();}
+void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect(0,&ff7);slotselect.setStyleSheet(this->styleSheet()); s=slotselect.exec(); guirefresh();}
 void MainWindow::on_actionClear_Slot_activated(){clearslot(s);  guirefresh();}
 void MainWindow::on_actionPrevious_Slot_activated(){if (s > 0) {s--; guirefresh();}}
 void MainWindow::on_actionNext_Slot_activated(){if (s<14){s++; guirefresh();}}
@@ -2727,7 +2729,7 @@ void MainWindow::guirefresh(void)
            ff7.SG_Region_String[s].isEmpty())    {/*FF7 Save Game*/ }
         else
         {
-            errbox error;
+            errbox error(0,&ff7,s);
             error.setStyleSheet(this->styleSheet());
             switch(error.exec())
             {
@@ -2735,11 +2737,17 @@ void MainWindow::guirefresh(void)
                 QMessageBox::information(this,tr("Ingoring Non FF7 Save"),tr("Be Cautious This Might Not Work."));
                 break;
 
-            case 1://Previous or next was clicked
+            case 1://Previous Clicked
+                s--;
                 guirefresh();
                 break;
 
-            case 2://exported as psx
+            case 2://Next Clicked
+                s++;
+                guirefresh();
+                break;
+
+            case 3://exported as psx
                 on_actionShow_Selection_Dialog_activated();
                 break;
             }
@@ -4927,11 +4935,11 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7.slot[s].chars[7].id=10;
         if(ff7.SG_Region_String[s].contains("00700") || ff7.SG_Region_String[s].contains("01057"))
         {
-            ff7.slot[s].chars[7].name[0]=chPC.FF7(90);  //セ
-            ff7.slot[s].chars[7].name[1]=chPC.FF7(68);  //フ
-            ff7.slot[s].chars[7].name[2]=chPC.FF7(166); //ィ
-            ff7.slot[s].chars[7].name[3]=chPC.FF7(142); //ロ
-            ff7.slot[s].chars[7].name[4]=chPC.FF7(88);  //ス
+            ff7.slot[s].chars[7].name[0]=90;  //セ
+            ff7.slot[s].chars[7].name[1]=68;  //フ
+            ff7.slot[s].chars[7].name[2]=166; //ィ
+            ff7.slot[s].chars[7].name[3]=142; //ロ
+            ff7.slot[s].chars[7].name[4]=88;  //ス
             for (int i=5; i<12;i++){ff7.slot[s].chars[7].name[i] = 0xFF;}
         }
         else
