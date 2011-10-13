@@ -1046,7 +1046,7 @@ void MainWindow::on_actionPaste_Slot_activated()
 }
 void MainWindow::on_actionShow_Options_triggered()
 {
-    Options odialog;  odialog.setStyleSheet(this->styleSheet());    odialog.exec();
+    Options odialog(0,settings);  odialog.setStyleSheet(this->styleSheet());    odialog.exec();
     QString style="QWidget#centralWidget{background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
     style.append(settings->value("color1_r").toString());    style.append(",");
     style.append(settings->value("color1_g").toString());    style.append(",");
