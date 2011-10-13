@@ -29,7 +29,7 @@ class Options : public QDialog
     Q_OBJECT
 
 public:
-    explicit Options(QWidget *parent = 0);
+    explicit Options(QWidget *parent = 0,QSettings *config_data=0);
     ~Options();
 
 protected:
@@ -38,6 +38,7 @@ protected:
 private:
     Ui::Options *ui;
     bool load;
+    QSettings *settings;
 private slots:
     void on_line_char_stat_folder_editingFinished();
     void on_line_default_save_editingFinished();

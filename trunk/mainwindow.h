@@ -38,7 +38,7 @@ namespace Ui {
 class MainWindow : public QMainWindow {
     Q_OBJECT
 public:
-    MainWindow(QWidget *parent = 0);
+    MainWindow(QWidget *parent = 0,FF7 *ff7data=0,QSettings *config_data=0);
     ~MainWindow();
 
 protected:
@@ -49,13 +49,14 @@ private:
     bool skip_slot_mask;
     bool load; // are we loading data? if so don't save it to the file.
     //bool file_changed; //if file changed after load.
-    //FF7 ff7; // our save file struct
+    FF7 *ff7; // our save file struct pointer.
+    QSettings *settings;
     int s; //track slot
     ff7names FF7Strings; //class of strings used in ff7
     FF7SLOT bufferslot; // a buffer slot to keep copied slots in
     QString buffer_region; //holds region data for bufferslot.
     MATERIA buffer_materia; // buffer for a materia
-    //ITEM buffer_item;
+    //ITEM buffer_item; // for use later
     QString filename; //holds file name
     int curchar; //keeps track of current character displayed
     int mslotsel; //keeps track of materia slot on char selected
