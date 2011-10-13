@@ -29,7 +29,7 @@ int main(int argc, char *argv[])
         if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h"){printf("Usage: blackchocobo [<filename>]\n");return 0;}
     }
 
-    QSettings setting(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
+    QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
     Q_INIT_RESOURCE(images);
     QApplication a(argc, argv);
     a.setApplicationName("Black Chocobo");
@@ -37,11 +37,12 @@ int main(int argc, char *argv[])
     a.setApplicationVersion("1.9.41");
     QTranslator translator;
     QString lang = QCoreApplication::applicationDirPath() +"/"+ "lang/bchoco_";
-    if(setting.value("lang").isNull()){setting.setValue("lang",QLocale::system().name().section('_',0,0));} //if no lang set it to os setting.
-    lang.append(setting.value("lang").toString());
+    if(settings.value("lang").isNull()){settings.setValue("lang",QLocale::system().name().section('_',0,0));} //if no lang set it to os setting.
+    lang.append(settings.value("lang").toString());
     translator.load(lang);
     a.installTranslator(&translator);
-    MainWindow w;
+    FF7 ff7; //main ff7 data
+    MainWindow w(0,&ff7,&settings);
 
     if(argc ==2){w.loadFileFull(QString(argv[1]),0);}// if command is run w/ a filename after it , load that file.
 

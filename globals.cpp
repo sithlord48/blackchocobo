@@ -35,7 +35,7 @@ int ff7__checksum( void* qw )
    return (r^0xFFFF)&0xFFFF;
 }
 
-void fix_pc_bytemask(FF7 &ff7,int s,bool skip_slot_mask)
+void fix_pc_bytemask(FF7 *ff7,int s,bool skip_slot_mask)
 {
     quint8 mask=0;
     quint8 newheader[0x09] = {0x71,0x73,0x27,0x06,0x00,0x00,0x00,0x00,0x00};
@@ -49,13 +49,13 @@ void fix_pc_bytemask(FF7 &ff7,int s,bool skip_slot_mask)
         default:newheader[4]= (16 * (s-2))+2; break;
         };
     }
-    else{newheader[4] = ff7.file_headerp[4];}
+    else{newheader[4] = ff7->file_headerp[4];}
     //calc 0x05 of the header (slots 1-8 empty?)
     for(int i=0;i<8;i++)
     {
-        if(ff7.SG_Region_String[i].contains("00867") || ff7.SG_Region_String[i].contains("00869") ||
-           ff7.SG_Region_String[i].contains("00900") || ff7.SG_Region_String[i].contains("94163") ||
-           ff7.SG_Region_String[i].contains("00700") || ff7.SG_Region_String[i].contains("01057"))
+        if(ff7->SG_Region_String[i].contains("00867") || ff7->SG_Region_String[i].contains("00869") ||
+           ff7->SG_Region_String[i].contains("00900") || ff7->SG_Region_String[i].contains("94163") ||
+           ff7->SG_Region_String[i].contains("00700") || ff7->SG_Region_String[i].contains("01057"))
         {
         mask |= (1<<i);
         }
@@ -65,48 +65,48 @@ void fix_pc_bytemask(FF7 &ff7,int s,bool skip_slot_mask)
     //calc 0x06 of the header (slot 9-15 empty?)
     for(int i=8;i<15;i++)
     {
-        if(ff7.SG_Region_String[i].contains("00867") || ff7.SG_Region_String[i].contains("00869") ||
-           ff7.SG_Region_String[i].contains("00900") || ff7.SG_Region_String[i].contains("94163") ||
-           ff7.SG_Region_String[i].contains("00700") || ff7.SG_Region_String[i].contains("01057"))
+        if(ff7->SG_Region_String[i].contains("00867") || ff7->SG_Region_String[i].contains("00869") ||
+           ff7->SG_Region_String[i].contains("00900") || ff7->SG_Region_String[i].contains("94163") ||
+           ff7->SG_Region_String[i].contains("00700") || ff7->SG_Region_String[i].contains("01057"))
         {
         mask |= (1<<(i-8));
         }
     }
     newheader[6]=mask;
-    memcpy(ff7.file_headerp,newheader,9);
+    memcpy(ff7->file_headerp,newheader,9);
 }
 
-void fix_psx_header(FF7 &ff7,int i)
+void fix_psx_header(FF7 *ff7,int i)
 {   //Time Has to be fixed in the header
-    if((ff7.slot[i].time/3600)>99){ff7.hf[i].sl_header[27]=0x58;ff7.hf[i].sl_header[29]=0x58;}
+    if((ff7->slot[i].time/3600)>99){ff7->hf[i].sl_header[27]=0x58;ff7->hf[i].sl_header[29]=0x58;}
     else
     {
-        ff7.hf[i].sl_header[27] = ((ff7.slot[i].time/3600)/10)+0x4F;
-        ff7.hf[i].sl_header[29] = ((ff7.slot[i].time/3600)%10)+0x4F;
+        ff7->hf[i].sl_header[27] = ((ff7->slot[i].time/3600)/10)+0x4F;
+        ff7->hf[i].sl_header[29] = ((ff7->slot[i].time/3600)%10)+0x4F;
     }
-    ff7.hf[i].sl_header[33] = ((ff7.slot[i].time/60%60)/10)+0x4F;
-    ff7.hf[i].sl_header[35] = ((ff7.slot[i].time/60%60)%10)+0x4F;
+    ff7->hf[i].sl_header[33] = ((ff7->slot[i].time/60%60)/10)+0x4F;
+    ff7->hf[i].sl_header[35] = ((ff7->slot[i].time/60%60)%10)+0x4F;
 }
 
-void fix_vmc_header(FF7 &ff7)
+void fix_vmc_header(FF7 *ff7)
 {//Set The Index Section Up.
     QByteArray mc_header_2;
     int index=2;
 
-    if(ff7.SG_TYPE =="PSP"){for(int i=0; i<0x80; i++){mc_header_2.append(ff7.file_header_psp[i]);} index=0x82;}
-    if(ff7.SG_TYPE =="VGS"){for(int i=0; i<0x40; i++){mc_header_2.append(ff7.file_header_vgs[i]);} index=0x42;}
-    if(ff7.SG_TYPE =="DEX"){for(int i=0; i<0xF40; i++){mc_header_2.append(ff7.file_header_vgs[i]);} index=0xF42;}
+    if(ff7->SG_TYPE =="PSP"){for(int i=0; i<0x80; i++){mc_header_2.append(ff7->file_header_psp[i]);} index=0x82;}
+    if(ff7->SG_TYPE =="VGS"){for(int i=0; i<0x40; i++){mc_header_2.append(ff7->file_header_vgs[i]);} index=0x42;}
+    if(ff7->SG_TYPE =="DEX"){for(int i=0; i<0xF40; i++){mc_header_2.append(ff7->file_header_vgs[i]);} index=0xF42;}
     quint8 xor_byte = 0x00;
     mc_header_2.append("MC");
-    if(ff7.SG_TYPE =="MC"){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_mc[k+index]);}}
-    if(ff7.SG_TYPE =="PSP"){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_psp[k+index]);}}
-    if(ff7.SG_TYPE =="VGS"){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_vgs[k+index]);}}
-    if(ff7.SG_TYPE =="DEX"){for(int k=0; k<125;k++){mc_header_2.append(ff7.file_header_dex[k+index]);}}
+    if(ff7->SG_TYPE =="MC"){for(int k=0; k<125;k++){mc_header_2.append(ff7->file_header_mc[k+index]);}}
+    if(ff7->SG_TYPE =="PSP"){for(int k=0; k<125;k++){mc_header_2.append(ff7->file_header_psp[k+index]);}}
+    if(ff7->SG_TYPE =="VGS"){for(int k=0; k<125;k++){mc_header_2.append(ff7->file_header_vgs[k+index]);}}
+    if(ff7->SG_TYPE =="DEX"){for(int k=0; k<125;k++){mc_header_2.append(ff7->file_header_dex[k+index]);}}
     xor_byte= 0x00;
-    if(ff7.SG_TYPE =="MC"){for(int x=0;x<127;x++){xor_byte^=mc_header_2[x];}}
-    if(ff7.SG_TYPE =="PSP"){for(int x=128;x<256;x++){xor_byte^=mc_header_2[x];}}
-    if(ff7.SG_TYPE =="VGS"){for(int x=64;x<192;x++){xor_byte^=mc_header_2[x];}}
-    if(ff7.SG_TYPE =="DEX"){for(int x=0xF40;x<0x1000;x++){xor_byte^=mc_header_2[x];}}
+    if(ff7->SG_TYPE =="MC"){for(int x=0;x<127;x++){xor_byte^=mc_header_2[x];}}
+    if(ff7->SG_TYPE =="PSP"){for(int x=128;x<256;x++){xor_byte^=mc_header_2[x];}}
+    if(ff7->SG_TYPE =="VGS"){for(int x=64;x<192;x++){xor_byte^=mc_header_2[x];}}
+    if(ff7->SG_TYPE =="DEX"){for(int x=0xF40;x<0x1000;x++){xor_byte^=mc_header_2[x];}}
     //write xor byte..
     mc_header_2.append(xor_byte);
     // thats a normal header
@@ -114,19 +114,19 @@ void fix_vmc_header(FF7 &ff7)
     {
         //calc xor byte..
         index= (128 +(128*i));
-        if(ff7.SG_TYPE =="PSP"){index+=0x80;}
-        if(ff7.SG_TYPE =="VGS"){index+=0x40;}
-        if(ff7.SG_TYPE =="DEX"){index+=0xF40;}
-        if(ff7.SG_Region_String[i].contains("00867") ||ff7.SG_Region_String[i].contains("00869") ||
-           ff7.SG_Region_String[i].contains("00900") ||ff7.SG_Region_String[i].contains("94163") ||
-           ff7.SG_Region_String[i].contains("00700") ||ff7.SG_Region_String[i].contains("01057"))
+        if(ff7->SG_TYPE =="PSP"){index+=0x80;}
+        if(ff7->SG_TYPE =="VGS"){index+=0x40;}
+        if(ff7->SG_TYPE =="DEX"){index+=0xF40;}
+        if(ff7->SG_Region_String[i].contains("00867") ||ff7->SG_Region_String[i].contains("00869") ||
+           ff7->SG_Region_String[i].contains("00900") ||ff7->SG_Region_String[i].contains("94163") ||
+           ff7->SG_Region_String[i].contains("00700") ||ff7->SG_Region_String[i].contains("01057"))
         {
            QByteArray temp;
            temp.resize(10);
            temp[0]=0x51;temp[1]=0x00;temp[2]=0x00;temp[3]=0x00;temp[4]=0x00;
            temp[5]=0x20;temp[6]=0x00;temp[7]=0x00;temp[8]=0xFF;temp[9]=0xFF;
            mc_header_2.append(temp);
-           mc_header_2.append(ff7.SG_Region_String[i]);
+           mc_header_2.append(ff7->SG_Region_String[i]);
            temp.resize(98);
            for(int f=0;f<98;f++){temp[f]=0x00;}
            mc_header_2.append(temp);
@@ -134,161 +134,161 @@ void fix_vmc_header(FF7 &ff7)
            for(int x=0;x<127;x++){xor_byte^=mc_header_2[x+index];}
            mc_header_2.append(xor_byte);
 
-           if(ff7.SG_Region_String[i].endsWith("S01"))
+           if(ff7->SG_Region_String[i].endsWith("S01"))
            {
                for(int P=0;P<512;P++)
                 {
-                    if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
-                    else{ff7.hf[i].sl_header[P]= 0x00;}
+                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
+                    else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7.SG_Region_String[i].endsWith("S02"))
+           if(ff7->SG_Region_String[i].endsWith("S02"))
            {
                 for(int P=0;P<512;P++)
                 {
-                    if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S02[P];}
-                    else{ff7.hf[i].sl_header[P]= 0x00;}
+                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S02[P];}
+                    else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7.SG_Region_String[i].endsWith("S03"))
+           if(ff7->SG_Region_String[i].endsWith("S03"))
            {
                 for(int P=0;P<512;P++)
                 {
-                    if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S03[P];}
-                    else{ff7.hf[i].sl_header[P]= 0x00;}
+                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S03[P];}
+                    else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7.SG_Region_String[i].endsWith("S04"))
+           if(ff7->SG_Region_String[i].endsWith("S04"))
            {
                 for(int P=0;P<512;P++)
                 {
-                    if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S04[P];}
-                    else{ff7.hf[i].sl_header[P]= 0x00;}
+                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S04[P];}
+                    else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7.SG_Region_String[i].endsWith("S05"))
+           if(ff7->SG_Region_String[i].endsWith("S05"))
            {
                for(int P=0;P<512;P++)
                 {
-                    if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S05[P];}
-                    else{ff7.hf[i].sl_header[P]= 0x00;}
+                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S05[P];}
+                    else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7.SG_Region_String[i].endsWith("S06"))
+           if(ff7->SG_Region_String[i].endsWith("S06"))
            {
                for(int P=0;P<512;P++)
                {
-                   if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S06[P];}
-                   else{ff7.hf[i].sl_header[P]= 0x00;}
+                   if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S06[P];}
+                   else{ff7->hf[i].sl_header[P]= 0x00;}
                }
            }
-           if(ff7.SG_Region_String[i].endsWith("S07"))
+           if(ff7->SG_Region_String[i].endsWith("S07"))
            {
                for(int P=0;P<512;P++)
                 {
-                    if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S07[P];}
-                    else{ff7.hf[i].sl_header[P]= 0x00;}
+                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S07[P];}
+                    else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7.SG_Region_String[i].endsWith("S08"))
+           if(ff7->SG_Region_String[i].endsWith("S08"))
            {
                 for(int P=0;P<512;P++)
                 {
-                    if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S08[P];}
-                    else{ff7.hf[i].sl_header[P]= 0x00;}
+                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S08[P];}
+                    else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7.SG_Region_String[i].endsWith("S09"))
+           if(ff7->SG_Region_String[i].endsWith("S09"))
            {
                 for(int P=0;P<512;P++)
                 {
-                    if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S09[P];}
-                    else{ff7.hf[i].sl_header[P]= 0x00;}
+                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S09[P];}
+                    else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7.SG_Region_String[i].endsWith("S10"))
+           if(ff7->SG_Region_String[i].endsWith("S10"))
            {
                 for(int P=0;P<512;P++)
                 {
-                    if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S10[P];}
-                    else{ff7.hf[i].sl_header[P]= 0x00;}
+                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S10[P];}
+                    else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7.SG_Region_String[i].endsWith("S11"))
+           if(ff7->SG_Region_String[i].endsWith("S11"))
            {
                for(int P=0;P<512;P++)
                 {
-                    if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S11[P];}
-                    else{ff7.hf[i].sl_header[P]= 0x00;}
+                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S11[P];}
+                    else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7.SG_Region_String[i].endsWith("S12"))
+           if(ff7->SG_Region_String[i].endsWith("S12"))
            {
                for(int P=0;P<512;P++)
                {
-                   if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S12[P];}
-                   else{ff7.hf[i].sl_header[P]= 0x00;}
+                   if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S12[P];}
+                   else{ff7->hf[i].sl_header[P]= 0x00;}
                }
            }
-           if(ff7.SG_Region_String[i].endsWith("S13"))
+           if(ff7->SG_Region_String[i].endsWith("S13"))
            {
                for(int P=0;P<512;P++)
                 {
-                    if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S13[P];}
-                    else{ff7.hf[i].sl_header[P]= 0x00;}
+                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S13[P];}
+                    else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7.SG_Region_String[i].endsWith("S14"))
+           if(ff7->SG_Region_String[i].endsWith("S14"))
            {
                for(int P=0;P<512;P++)
                {
-                   if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S14[P];}
-                   else{ff7.hf[i].sl_header[P]= 0x00;}
+                   if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S14[P];}
+                   else{ff7->hf[i].sl_header[P]= 0x00;}
                }
            }
-           if(ff7.SG_Region_String[i].endsWith("S15"))
+           if(ff7->SG_Region_String[i].endsWith("S15"))
            {
                for(int P=0;P<512;P++)
                {
-                   if(P<256){ff7.hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S15[P];}
-                   else{ff7.hf[i].sl_header[P]= 0x00;}
+                   if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S15[P];}
+                   else{ff7->hf[i].sl_header[P]= 0x00;}
                }
            }
            fix_psx_header(ff7,i);//here ff7 is already a pointer to ff7 in mainwindow.
         } // write string if found
         else
         {//Write What Ever is in the Header (Non ff7 data)
-            if(ff7.SG_TYPE =="MC"){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_mc[index+j]);}}
-            if(ff7.SG_TYPE =="PSP"){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_psp[index+j]);}}
-            if(ff7.SG_TYPE =="VGS"){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_vgs[index+j]);}}
-            if(ff7.SG_TYPE =="DEX"){for(int j=0;j<128;j++){mc_header_2.append(ff7.file_header_dex[index+j]);}}
+            if(ff7->SG_TYPE =="MC"){for(int j=0;j<128;j++){mc_header_2.append(ff7->file_header_mc[index+j]);}}
+            if(ff7->SG_TYPE =="PSP"){for(int j=0;j<128;j++){mc_header_2.append(ff7->file_header_psp[index+j]);}}
+            if(ff7->SG_TYPE =="VGS"){for(int j=0;j<128;j++){mc_header_2.append(ff7->file_header_vgs[index+j]);}}
+            if(ff7->SG_TYPE =="DEX"){for(int j=0;j<128;j++){mc_header_2.append(ff7->file_header_dex[index+j]);}}
         }
     }
 
-    if(ff7.SG_TYPE =="MC")
+    if(ff7->SG_TYPE =="MC")
     {
         index=2048;
-        for(int i=0;i<6143;i++){mc_header_2.append(ff7.file_header_mc[index+i]);}// fill the remainder
-        memcpy(&ff7.file_header_mc,mc_header_2,0x2000);
+        for(int i=0;i<6143;i++){mc_header_2.append(ff7->file_header_mc[index+i]);}// fill the remainder
+        memcpy(ff7->file_header_mc,mc_header_2,0x2000);
     }
-    if(ff7.SG_TYPE =="PSP")
+    if(ff7->SG_TYPE =="PSP")
     {
         index=2048+0x80;
-        for(int i=0;i<6143;i++){mc_header_2.append(ff7.file_header_psp[index+i]);}// fill the remainder
-        memcpy(&ff7.file_header_psp,mc_header_2,0x2080);
+        for(int i=0;i<6143;i++){mc_header_2.append(ff7->file_header_psp[index+i]);}// fill the remainder
+        memcpy(ff7->file_header_psp,mc_header_2,0x2080);
         //PUT PSP CHECKSUMING HERE ..
     }
-    if(ff7.SG_TYPE =="VGS")
+    if(ff7->SG_TYPE =="VGS")
     {
         index=2048+0x40;
-        for(int i=0;i<6143;i++){mc_header_2.append(ff7.file_header_vgs[index+i]);}// fill the remainder
-        memcpy(&ff7.file_header_psp,mc_header_2,0x2040);
+        for(int i=0;i<6143;i++){mc_header_2.append(ff7->file_header_vgs[index+i]);}// fill the remainder
+        memcpy(ff7->file_header_psp,mc_header_2,0x2040);
     }
-    if(ff7.SG_TYPE =="DEX")
+    if(ff7->SG_TYPE =="DEX")
     {
         index=2048+0xF40;
-        for(int i=0;i<6143;i++){mc_header_2.append(ff7.file_header_dex[index+i]);}// fill the remainder
-        memcpy(&ff7.file_header_psp,mc_header_2,0x2F40);
+        for(int i=0;i<6143;i++){mc_header_2.append(ff7->file_header_dex[index+i]);}// fill the remainder
+        memcpy(ff7->file_header_psp,mc_header_2,0x2F40);
     }
 }
 
