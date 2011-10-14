@@ -20,11 +20,12 @@
         #include "FF7SAVE.h"
     #endif
 #include <QCoreApplication>
+#include <QTextCodec>
 
 int ff7__checksum(void * qw );
-void fix_pc_bytemask(FF7*,int,bool);
-void fix_psx_header(FF7*,int);
-void fix_vmc_header(FF7*);
+void fix_pc_bytemask(FF7*ff7 ,int,bool);
+void fix_psx_header(FF7*ff7,int);
+void fix_vmc_header(FF7*ff7);
 QString avatar_style(int);
 
 class locations

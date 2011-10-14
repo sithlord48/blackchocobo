@@ -584,6 +584,7 @@ void Text::init(bool ja)
 {//set the proper mapping then set up the conversion back to ff7 encoding.
     if(ja)
     {//this table needs testing on a ja system suspect it to be wrong.
+
         Char_list=jap;
         for (int i=0; i<256; i++)
         {

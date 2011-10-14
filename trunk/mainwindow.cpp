@@ -334,14 +334,14 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
     }
     filename=fileName;
     /*~~~~~~~~~~Start Load~~~~~~~~~~*/
-    memcpy(&ff7->file_headerp,ff7file.mid(0x0000,ff7->SG_HEADER),ff7->SG_HEADER);// collect header (0x09) bytes (PC), (0x00) bytes (PSX), (0x2000) bytes (MC)
+    memcpy(ff7->file_headerp,ff7file.mid(0x0000,ff7->SG_HEADER),ff7->SG_HEADER);// collect header (0x09) bytes (PC), (0x00) bytes (PSX), (0x2000) bytes (MC)
     for (int i=0;i<ff7->SG_SLOT_NUMBER;i++)
     {
         int index = (ff7->SG_SLOT_SIZE*i) + ff7->SG_HEADER + ff7->SG_SLOT_HEADER;
-        memcpy(&ff7->hf[i].sl_header,ff7file.mid((ff7->SG_SLOT_SIZE*i) + (ff7->SG_HEADER + 0x0000),ff7->SG_SLOT_HEADER),ff7->SG_SLOT_HEADER);// collect slot header (0x00) bytes (PC), (0x0200) bytes (PSX), (0x0200) bytes (MC)
+        memcpy(ff7->hf[i].sl_header,ff7file.mid((ff7->SG_SLOT_SIZE*i) + (ff7->SG_HEADER + 0x0000),ff7->SG_SLOT_HEADER),ff7->SG_SLOT_HEADER);// collect slot header (0x00) bytes (PC), (0x0200) bytes (PSX), (0x0200) bytes (MC)
         temp = ff7file.mid(index,0x10f4);
         memcpy(&ff7->slot[i],temp,0x10f4);
-        memcpy(&ff7->hf[i].sl_footer,ff7file.mid((ff7->SG_SLOT_SIZE*i)+ (ff7->SG_HEADER+ff7->SG_SLOT_HEADER+ff7->SG_DATA_SIZE),ff7->SG_SLOT_FOOTER),ff7->SG_SLOT_FOOTER);// collect slot footer (0x00) bytes (PC), (0x0D0C) bytes (PSX), (0x0D0C) bytes (MC)
+        memcpy(ff7->hf[i].sl_footer,ff7file.mid((ff7->SG_SLOT_SIZE*i)+ (ff7->SG_HEADER+ff7->SG_SLOT_HEADER+ff7->SG_DATA_SIZE),ff7->SG_SLOT_FOOTER),ff7->SG_SLOT_FOOTER);// collect slot footer (0x00) bytes (PC), (0x0D0C) bytes (PSX), (0x0D0C) bytes (MC)
     }
     /*~~~~~~~End Load~~~~~~~~~~~~~~*/
     if (ff7->SG_TYPE == "PC")
@@ -382,7 +382,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
     else if (ff7->SG_TYPE =="PSV")
     {
         ff7->SG_Region_String[s] = QString(ff7file.mid(0x64,19));
-        for(int i=1;i<14;i++){clearslot(i);}
+        for(int i=1;i<15;i++){clearslot(i);}
     }
 
     else if (ff7->SG_TYPE == "MC" || ff7->SG_TYPE =="PSP" || ff7->SG_TYPE == "VGS" ||ff7->SG_TYPE=="DEX")

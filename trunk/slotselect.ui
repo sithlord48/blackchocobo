@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>625</width>
-    <height>482</height>
+    <width>651</width>
+    <height>479</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -21,13 +21,13 @@
   </property>
   <property name="minimumSize">
    <size>
-    <width>625</width>
+    <width>630</width>
     <height>172</height>
    </size>
   </property>
   <property name="maximumSize">
    <size>
-    <width>625</width>
+    <width>16777215</width>
     <height>16777215</height>
    </size>
   </property>
@@ -65,14 +65,14 @@
    <item>
     <widget class="QScrollArea" name="scrollArea">
      <property name="sizePolicy">
-      <sizepolicy hsizetype="Fixed" vsizetype="Expanding">
+      <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
        <horstretch>0</horstretch>
        <verstretch>0</verstretch>
       </sizepolicy>
      </property>
      <property name="minimumSize">
       <size>
-       <width>621</width>
+       <width>0</width>
        <height>125</height>
       </size>
      </property>
@@ -87,9 +87,15 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>599</width>
+        <width>629</width>
         <height>2346</height>
        </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
@@ -116,6 +122,22 @@
           <property name="margin">
            <number>0</number>
           </property>
+          <item row="0" column="0" colspan="3">
+           <widget class="QPushButton" name="btn_s1">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="styleSheet">
+             <string notr="true"/>
+            </property>
+            <property name="text">
+             <string>Load Slot 1</string>
+            </property>
+           </widget>
+          </item>
           <item row="1" column="0" rowspan="3">
            <layout class="QHBoxLayout" name="horizontalLayout">
             <property name="spacing">
@@ -195,44 +217,10 @@
             </item>
            </layout>
           </item>
-          <item row="1" column="1">
-           <widget class="QLabel" name="s1_lbl_name">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="lineWidth">
-             <number>-7</number>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-            </property>
-            <property name="slot_select_label" stdset="0">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="2" rowspan="2">
+          <item row="1" column="1" rowspan="3" colspan="2">
            <layout class="QGridLayout" name="gridLayout">
-            <item row="0" column="0">
-             <widget class="QLabel" name="label">
+            <item row="0" column="1">
+             <widget class="QLabel" name="s1_label_time">
               <property name="text">
                <string>Time</string>
               </property>
@@ -241,8 +229,8 @@
               </property>
              </widget>
             </item>
-            <item row="0" column="2">
-             <widget class="QLabel" name="label_3">
+            <item row="0" column="3">
+             <widget class="QLabel" name="s1_label_time_sept">
               <property name="maximumSize">
                <size>
                 <width>8</width>
@@ -269,8 +257,8 @@
               </property>
              </widget>
             </item>
-            <item row="1" column="0">
-             <widget class="QLabel" name="label_2">
+            <item row="1" column="1">
+             <widget class="QLabel" name="s1_label_gil">
               <property name="text">
                <string>Gil</string>
               </property>
@@ -282,77 +270,12 @@
               </property>
              </widget>
             </item>
-            <item row="1" column="1" colspan="3">
+            <item row="1" column="2" colspan="3">
              <widget class="QLabel" name="s1_lbl_gil">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-              <property name="slot_select_label" stdset="0">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="1">
-             <widget class="QLabel" name="s1_lbl_hr">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-              <property name="slot_select_label" stdset="0">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item row="0" column="3">
-             <widget class="QLabel" name="s1_lbl_min">
-              <property name="text">
-               <string/>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-              <property name="slot_select_label" stdset="0">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item row="2" column="1">
-           <layout class="QHBoxLayout" name="horizontalLayout_16">
-            <item>
-             <widget class="QLabel" name="label_4">
-              <property name="font">
-               <font>
-                <family>Verdana</family>
-                <pointsize>14</pointsize>
-                <weight>50</weight>
-                <italic>false</italic>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="text">
-               <string>Level</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-              <property name="slot_select_label" stdset="0">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="s1_lbl_lvl">
               <property name="minimumSize">
                <size>
-                <width>48</width>
-                <height>31</height>
+                <width>101</width>
+                <height>0</height>
                </size>
               </property>
               <property name="text">
@@ -366,57 +289,158 @@
               </property>
              </widget>
             </item>
+            <item row="0" column="2">
+             <widget class="QLabel" name="s1_lbl_hr">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="4">
+             <widget class="QLabel" name="s1_lbl_min">
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="s1_lbl_name">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>150</width>
+                <height>0</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Verdana</family>
+                <pointsize>14</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Sunken</enum>
+              </property>
+              <property name="lineWidth">
+               <number>-7</number>
+              </property>
+              <property name="text">
+               <string notr="true"/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item row="1" column="0">
+             <layout class="QHBoxLayout" name="horizontalLayout_16">
+              <item>
+               <widget class="QLabel" name="s1_label_level">
+                <property name="font">
+                 <font>
+                  <family>Verdana</family>
+                  <pointsize>14</pointsize>
+                  <weight>50</weight>
+                  <italic>false</italic>
+                  <bold>false</bold>
+                 </font>
+                </property>
+                <property name="text">
+                 <string>Level</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="slot_select_label" stdset="0">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="s1_lbl_lvl">
+                <property name="minimumSize">
+                 <size>
+                  <width>48</width>
+                  <height>31</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="slot_select_label" stdset="0">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </item>
+            <item row="2" column="0" colspan="5">
+             <widget class="QLabel" name="s1_lbl_loc">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Plain</enum>
+              </property>
+              <property name="lineWidth">
+               <number>1</number>
+              </property>
+              <property name="text">
+               <string notr="true"/>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
            </layout>
-          </item>
-          <item row="3" column="1" colspan="2">
-           <widget class="QLabel" name="s1_lbl_loc">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <property name="frameShape">
-             <enum>QFrame::StyledPanel</enum>
-            </property>
-            <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="lineWidth">
-             <number>1</number>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="slot_select_label" stdset="0">
-             <bool>true</bool>
-            </property>
-           </widget>
-          </item>
-          <item row="0" column="0" colspan="3">
-           <widget class="QPushButton" name="btn_s1">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
-            <property name="text">
-             <string>Load Slot 1</string>
-            </property>
-           </widget>
           </item>
          </layout>
         </widget>
@@ -568,7 +592,7 @@
           <item row="1" column="2" rowspan="2">
            <layout class="QGridLayout" name="gridLayout_2">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_5">
+             <widget class="QLabel" name="s2_label_time">
               <property name="text">
                <string>Time</string>
               </property>
@@ -578,7 +602,7 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_6">
+             <widget class="QLabel" name="s2_label_time_sept">
               <property name="maximumSize">
                <size>
                 <width>8</width>
@@ -606,7 +630,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_7">
+             <widget class="QLabel" name="s2_label_gil">
               <property name="text">
                <string>Gil</string>
               </property>
@@ -620,6 +644,12 @@
             </item>
             <item row="1" column="1" colspan="3">
              <widget class="QLabel" name="s2_lbl_gil">
+              <property name="minimumSize">
+               <size>
+                <width>101</width>
+                <height>0</height>
+               </size>
+              </property>
               <property name="text">
                <string/>
               </property>
@@ -668,7 +698,7 @@
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_17">
             <item>
-             <widget class="QLabel" name="label_8">
+             <widget class="QLabel" name="s2_label_level">
               <property name="font">
                <font>
                 <family>Verdana</family>
@@ -712,15 +742,6 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s2_lbl_loc">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -735,6 +756,9 @@
             </property>
             <property name="text">
              <string notr="true"/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -894,7 +918,7 @@
           <item row="1" column="2" rowspan="2">
            <layout class="QGridLayout" name="gridLayout_3">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_9">
+             <widget class="QLabel" name="s3_label_time">
               <property name="text">
                <string>Time</string>
               </property>
@@ -904,7 +928,7 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_10">
+             <widget class="QLabel" name="s3_label_time_sept">
               <property name="maximumSize">
                <size>
                 <width>8</width>
@@ -932,7 +956,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_11">
+             <widget class="QLabel" name="s3_label_gil">
               <property name="text">
                <string>Gil</string>
               </property>
@@ -988,7 +1012,7 @@
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_18">
             <item>
-             <widget class="QLabel" name="label_12">
+             <widget class="QLabel" name="s3_label_level">
               <property name="font">
                <font>
                 <family>Verdana</family>
@@ -1032,15 +1056,6 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s3_lbl_loc">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -1052,6 +1067,9 @@
             </property>
             <property name="text">
              <string notr="true"/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1211,7 +1229,7 @@
           <item row="1" column="2" rowspan="2">
            <layout class="QGridLayout" name="gridLayout_10">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_17">
+             <widget class="QLabel" name="s4_label_time">
               <property name="text">
                <string>Time</string>
               </property>
@@ -1221,7 +1239,7 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_18">
+             <widget class="QLabel" name="s4_label_time_sept">
               <property name="maximumSize">
                <size>
                 <width>8</width>
@@ -1249,7 +1267,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_19">
+             <widget class="QLabel" name="s4_label_gil">
               <property name="text">
                <string>Gil</string>
               </property>
@@ -1305,7 +1323,7 @@
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_20">
             <item>
-             <widget class="QLabel" name="label_20">
+             <widget class="QLabel" name="s4_label_level">
               <property name="font">
                <font>
                 <family>Verdana</family>
@@ -1349,15 +1367,6 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s4_lbl_loc">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -1369,6 +1378,9 @@
             </property>
             <property name="text">
              <string notr="true"/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1528,7 +1540,7 @@
           <item row="1" column="2" rowspan="2">
            <layout class="QGridLayout" name="gridLayout_12">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_21">
+             <widget class="QLabel" name="s5_label_time">
               <property name="text">
                <string>Time</string>
               </property>
@@ -1538,7 +1550,7 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_22">
+             <widget class="QLabel" name="s5_label_time_sept">
               <property name="maximumSize">
                <size>
                 <width>8</width>
@@ -1566,7 +1578,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_23">
+             <widget class="QLabel" name="s5_label_gil">
               <property name="text">
                <string>Gil</string>
               </property>
@@ -1622,7 +1634,7 @@
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_21">
             <item>
-             <widget class="QLabel" name="label_24">
+             <widget class="QLabel" name="s5_label_level">
               <property name="font">
                <font>
                 <family>Verdana</family>
@@ -1666,15 +1678,6 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s5_lbl_loc">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -1686,6 +1689,9 @@
             </property>
             <property name="text">
              <string notr="true"/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -1845,7 +1851,7 @@
           <item row="1" column="2" rowspan="2">
            <layout class="QGridLayout" name="gridLayout_8">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_13">
+             <widget class="QLabel" name="s6_label_time">
               <property name="text">
                <string>Time</string>
               </property>
@@ -1855,7 +1861,7 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_14">
+             <widget class="QLabel" name="s6_label_time_sept">
               <property name="maximumSize">
                <size>
                 <width>8</width>
@@ -1883,7 +1889,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_15">
+             <widget class="QLabel" name="s6_label_gil">
               <property name="text">
                <string>Gil</string>
               </property>
@@ -1939,7 +1945,7 @@
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_19">
             <item>
-             <widget class="QLabel" name="label_16">
+             <widget class="QLabel" name="s6_label_level">
               <property name="font">
                <font>
                 <family>Verdana</family>
@@ -1983,15 +1989,6 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s6_lbl_loc">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -2003,6 +2000,9 @@
             </property>
             <property name="text">
              <string notr="true"/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2162,7 +2162,7 @@
           <item row="1" column="2" rowspan="2">
            <layout class="QGridLayout" name="gridLayout_22">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_41">
+             <widget class="QLabel" name="s7_label_time">
               <property name="text">
                <string>Time</string>
               </property>
@@ -2172,7 +2172,7 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_42">
+             <widget class="QLabel" name="s7_label_time_sept">
               <property name="maximumSize">
                <size>
                 <width>8</width>
@@ -2200,7 +2200,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_43">
+             <widget class="QLabel" name="s7_label_gil">
               <property name="text">
                <string>Gil</string>
               </property>
@@ -2256,7 +2256,7 @@
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_26">
             <item>
-             <widget class="QLabel" name="label_44">
+             <widget class="QLabel" name="s7_label_level">
               <property name="font">
                <font>
                 <family>Verdana</family>
@@ -2300,15 +2300,6 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s7_lbl_loc">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -2320,6 +2311,9 @@
             </property>
             <property name="text">
              <string notr="true"/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2479,7 +2473,7 @@
           <item row="1" column="2" rowspan="2">
            <layout class="QGridLayout" name="gridLayout_24">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_45">
+             <widget class="QLabel" name="s8_label_time">
               <property name="text">
                <string>Time</string>
               </property>
@@ -2489,7 +2483,7 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_46">
+             <widget class="QLabel" name="s8_label_time_sept">
               <property name="maximumSize">
                <size>
                 <width>8</width>
@@ -2517,7 +2511,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_47">
+             <widget class="QLabel" name="s8_label_gil">
               <property name="text">
                <string>Gil</string>
               </property>
@@ -2573,7 +2567,7 @@
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_27">
             <item>
-             <widget class="QLabel" name="label_48">
+             <widget class="QLabel" name="s8_label_level">
               <property name="font">
                <font>
                 <family>Verdana</family>
@@ -2617,15 +2611,6 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s8_lbl_loc">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -2637,6 +2622,9 @@
             </property>
             <property name="text">
              <string notr="true"/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2796,7 +2784,7 @@
           <item row="1" column="2" rowspan="2">
            <layout class="QGridLayout" name="gridLayout_20">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_37">
+             <widget class="QLabel" name="s9_label_time">
               <property name="text">
                <string>Time</string>
               </property>
@@ -2806,7 +2794,7 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_38">
+             <widget class="QLabel" name="s9_label_time_sept">
               <property name="maximumSize">
                <size>
                 <width>8</width>
@@ -2834,7 +2822,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_39">
+             <widget class="QLabel" name="s9_label_gil">
               <property name="text">
                <string>Gil</string>
               </property>
@@ -2890,7 +2878,7 @@
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_25">
             <item>
-             <widget class="QLabel" name="label_40">
+             <widget class="QLabel" name="s9_label_level">
               <property name="font">
                <font>
                 <family>Verdana</family>
@@ -2934,15 +2922,6 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s9_lbl_loc">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -2954,6 +2933,9 @@
             </property>
             <property name="text">
              <string notr="true"/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3112,18 +3094,8 @@
           </item>
           <item row="1" column="2" rowspan="2">
            <layout class="QGridLayout" name="gridLayout_14">
-            <item row="0" column="0">
-             <widget class="QLabel" name="label_25">
-              <property name="text">
-               <string>Time</string>
-              </property>
-              <property name="slot_select_label" stdset="0">
-               <bool>true</bool>
-              </property>
-             </widget>
-            </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_26">
+             <widget class="QLabel" name="s10_label_time_sept">
               <property name="maximumSize">
                <size>
                 <width>8</width>
@@ -3151,7 +3123,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_27">
+             <widget class="QLabel" name="s10_label_gil">
               <property name="text">
                <string>Gil</string>
               </property>
@@ -3202,12 +3174,22 @@
               </property>
              </widget>
             </item>
+            <item row="0" column="0">
+             <widget class="QLabel" name="s10_label_time">
+              <property name="text">
+               <string>Time</string>
+              </property>
+              <property name="slot_select_label" stdset="0">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
            </layout>
           </item>
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_22">
             <item>
-             <widget class="QLabel" name="label_28">
+             <widget class="QLabel" name="s10_label_level">
               <property name="font">
                <font>
                 <family>Verdana</family>
@@ -3251,15 +3233,6 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s10_lbl_loc">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -3271,6 +3244,9 @@
             </property>
             <property name="text">
              <string notr="true"/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3430,7 +3406,7 @@
           <item row="1" column="2" rowspan="2">
            <layout class="QGridLayout" name="gridLayout_16">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_29">
+             <widget class="QLabel" name="s11_label_time">
               <property name="text">
                <string>Time</string>
               </property>
@@ -3440,7 +3416,7 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_30">
+             <widget class="QLabel" name="s11_label_time_sept">
               <property name="maximumSize">
                <size>
                 <width>8</width>
@@ -3468,7 +3444,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_31">
+             <widget class="QLabel" name="s11_label_gil">
               <property name="text">
                <string>Gil</string>
               </property>
@@ -3524,7 +3500,7 @@
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_23">
             <item>
-             <widget class="QLabel" name="label_32">
+             <widget class="QLabel" name="s11_label_level">
               <property name="font">
                <font>
                 <family>Verdana</family>
@@ -3568,15 +3544,6 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s11_lbl_loc">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -3588,6 +3555,9 @@
             </property>
             <property name="text">
              <string notr="true"/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -3756,7 +3726,7 @@
           <item row="1" column="2" rowspan="2">
            <layout class="QGridLayout" name="gridLayout_18">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_33">
+             <widget class="QLabel" name="s12_label_time">
               <property name="text">
                <string>Time</string>
               </property>
@@ -3766,7 +3736,7 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_34">
+             <widget class="QLabel" name="s12_label_time_sept">
               <property name="maximumSize">
                <size>
                 <width>8</width>
@@ -3794,7 +3764,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_35">
+             <widget class="QLabel" name="s12_label_gil">
               <property name="text">
                <string>Gil</string>
               </property>
@@ -3850,7 +3820,7 @@
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_24">
             <item>
-             <widget class="QLabel" name="label_36">
+             <widget class="QLabel" name="s12_label_level">
               <property name="font">
                <font>
                 <family>Verdana</family>
@@ -3894,15 +3864,6 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s12_lbl_loc">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -3914,6 +3875,9 @@
             </property>
             <property name="text">
              <string notr="true"/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -4073,7 +4037,7 @@
           <item row="1" column="2" rowspan="2">
            <layout class="QGridLayout" name="gridLayout_30">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_57">
+             <widget class="QLabel" name="s13_label_time">
               <property name="text">
                <string>Time</string>
               </property>
@@ -4083,7 +4047,7 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_58">
+             <widget class="QLabel" name="s13_label_time_sept">
               <property name="maximumSize">
                <size>
                 <width>8</width>
@@ -4111,7 +4075,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_59">
+             <widget class="QLabel" name="s13_label_gil">
               <property name="text">
                <string>Gil</string>
               </property>
@@ -4167,7 +4131,7 @@
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_30">
             <item>
-             <widget class="QLabel" name="label_60">
+             <widget class="QLabel" name="s13_label_level">
               <property name="font">
                <font>
                 <family>Verdana</family>
@@ -4211,15 +4175,6 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s13_lbl_loc">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -4231,6 +4186,9 @@
             </property>
             <property name="text">
              <string notr="true"/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -4390,7 +4348,7 @@
           <item row="1" column="2" rowspan="2">
            <layout class="QGridLayout" name="gridLayout_26">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_49">
+             <widget class="QLabel" name="s14_label_time">
               <property name="text">
                <string>Time</string>
               </property>
@@ -4400,7 +4358,7 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_50">
+             <widget class="QLabel" name="s14_label_time_sept">
               <property name="maximumSize">
                <size>
                 <width>8</width>
@@ -4428,7 +4386,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_51">
+             <widget class="QLabel" name="s14_label_gil">
               <property name="text">
                <string>Gil</string>
               </property>
@@ -4484,7 +4442,7 @@
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_28">
             <item>
-             <widget class="QLabel" name="label_52">
+             <widget class="QLabel" name="s14_label_level">
               <property name="font">
                <font>
                 <family>Verdana</family>
@@ -4528,15 +4486,6 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s14_lbl_loc">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -4548,6 +4497,9 @@
             </property>
             <property name="text">
              <string notr="true"/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -4707,7 +4659,7 @@
           <item row="1" column="2" rowspan="2">
            <layout class="QGridLayout" name="gridLayout_28">
             <item row="0" column="0">
-             <widget class="QLabel" name="label_53">
+             <widget class="QLabel" name="s15_label_time">
               <property name="text">
                <string>Time</string>
               </property>
@@ -4717,7 +4669,7 @@
              </widget>
             </item>
             <item row="0" column="2">
-             <widget class="QLabel" name="label_54">
+             <widget class="QLabel" name="s15_label_time_sept">
               <property name="maximumSize">
                <size>
                 <width>8</width>
@@ -4745,7 +4697,7 @@
              </widget>
             </item>
             <item row="1" column="0">
-             <widget class="QLabel" name="label_55">
+             <widget class="QLabel" name="s15_label_gil">
               <property name="text">
                <string>Gil</string>
               </property>
@@ -4801,7 +4753,7 @@
           <item row="2" column="1">
            <layout class="QHBoxLayout" name="horizontalLayout_29">
             <item>
-             <widget class="QLabel" name="label_56">
+             <widget class="QLabel" name="s15_label_level">
               <property name="font">
                <font>
                 <family>Verdana</family>
@@ -4845,15 +4797,6 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s15_lbl_loc">
-            <property name="font">
-             <font>
-              <family>Verdana</family>
-              <pointsize>14</pointsize>
-              <weight>50</weight>
-              <italic>false</italic>
-              <bold>false</bold>
-             </font>
-            </property>
             <property name="styleSheet">
              <string notr="true"/>
             </property>
@@ -4865,6 +4808,9 @@
             </property>
             <property name="text">
              <string notr="true"/>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

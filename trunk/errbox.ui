@@ -89,24 +89,12 @@ QPushButton:enabled {
       <item>
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
-         <widget class="QLabel" name="label_2">
-          <property name="font">
-           <font>
-            <underline>true</underline>
-           </font>
-          </property>
-          <property name="text">
-           <string>Region String</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
          <widget class="QLabel" name="lbl_regionstring">
           <property name="text">
            <string notr="true">TextLabel</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
           </property>
           <property name="indent">
            <number>10</number>
