@@ -358,6 +358,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
         {
             bool invalid =false;
             QByteArray data;
+
             for(int i=0;i<0x200;i++){data.append(ff7->hf[s].sl_header[i]);}
 
             switch((quint8)data.at(2))
@@ -377,85 +378,181 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 default:
                     invalid = true;
             }
+            /*Make The Names Nice*/
+            QByteArray desc;
+            QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
+            desc = data.mid(4,64);
+            int index;
+            if((index = desc.indexOf('\x00')) != -1) {desc.truncate(index);}
 
             if(!invalid)
             {
               switch(s)
               {
                 case 0:
-                  ui->s1_party2->setPixmap(icons[s].icon());
-                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s1_party2, SLOT(setPixmap(QPixmap)));
-                  ui->s1_lbl_loc->setText(ff7->SG_Region_String[s].toAscii());
+                  ui->s1_party1->setPixmap(icons[s].icon());
+                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s1_party1, SLOT(setPixmap(QPixmap)));
+                  ui->s1_party2->setHidden(1);                  ui->s1_party3->setHidden(1);
+                  ui->s1_lbl_name->setHidden(1);                ui->s1_lbl_gil->setHidden(1);
+                  ui->s1_lbl_hr->setHidden(1);                  ui->s1_lbl_min->setHidden(1);
+                  ui->s1_label_gil->setHidden(1);               ui->s1_label_level->setHidden(1);
+                  ui->s1_label_time->setHidden(1);              ui->s1_label_time_sept->setHidden(1);
+                  ui->s1_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s1_lbl_loc->setAlignment(Qt::AlignLeft);
                   break;
                 case 1:
-                  ui->s2_party2->setPixmap(icons[s].icon());
-                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s2_party2, SLOT(setPixmap(QPixmap)));
-                  ui->s2_lbl_loc->setText(ff7->SG_Region_String[s].toAscii());
+                  ui->s2_party1->setPixmap(icons[s].icon());
+                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s2_party1, SLOT(setPixmap(QPixmap)));
+                  ui->s2_party2->setHidden(1);                  ui->s2_party3->setHidden(1);
+                  ui->s2_lbl_name->setHidden(1);                ui->s2_lbl_gil->setHidden(1);
+                  ui->s2_lbl_hr->setHidden(1);                  ui->s2_lbl_min->setHidden(1);
+                  ui->s2_label_gil->setHidden(1);               ui->s2_label_level->setHidden(1);
+                  ui->s2_label_time->setHidden(1);              ui->s2_label_time_sept->setHidden(1);
+                  ui->s2_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s2_lbl_loc->setAlignment(Qt::AlignLeft);
                   break;
                 case 2:
-                  ui->s3_party2->setPixmap(icons[s].icon());
-                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s3_party2, SLOT(setPixmap(QPixmap)));
-                  ui->s3_lbl_loc->setText(ff7->SG_Region_String[s].toAscii());
+                  ui->s3_party1->setPixmap(icons[s].icon());
+                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s3_party1, SLOT(setPixmap(QPixmap)));
+                  ui->s3_party2->setHidden(1);                  ui->s3_party3->setHidden(1);
+                  ui->s3_lbl_name->setHidden(1);                ui->s3_lbl_gil->setHidden(1);
+                  ui->s3_lbl_hr->setHidden(1);                  ui->s3_lbl_min->setHidden(1);
+                  ui->s3_label_gil->setHidden(1);               ui->s3_label_level->setHidden(1);
+                  ui->s3_label_time->setHidden(1);              ui->s3_label_time_sept->setHidden(1);
+                  ui->s3_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s3_lbl_loc->setAlignment(Qt::AlignLeft);
                   break;
                 case 3:
-                  ui->s4_party2->setPixmap(icons[s].icon());
-                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s4_party2, SLOT(setPixmap(QPixmap)));
-                  ui->s4_lbl_loc->setText(ff7->SG_Region_String[s].toAscii());
+                  ui->s4_party1->setPixmap(icons[s].icon());
+                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s4_party1, SLOT(setPixmap(QPixmap)));
+                  ui->s4_party2->setHidden(1);                  ui->s4_party3->setHidden(1);
+                  ui->s4_lbl_name->setHidden(1);                ui->s4_lbl_gil->setHidden(1);
+                  ui->s4_lbl_hr->setHidden(1);                  ui->s4_lbl_min->setHidden(1);
+                  ui->s4_label_gil->setHidden(1);               ui->s4_label_level->setHidden(1);
+                  ui->s4_label_time->setHidden(1);              ui->s4_label_time_sept->setHidden(1);
+                  ui->s4_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s4_lbl_loc->setAlignment(Qt::AlignLeft);
                   break;
                 case 4:
-                  ui->s5_party2->setPixmap(icons[s].icon());
-                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s5_party2, SLOT(setPixmap(QPixmap)));
-                  ui->s5_lbl_loc->setText(ff7->SG_Region_String[s].toAscii());
+                  ui->s5_party1->setPixmap(icons[s].icon());
+                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s5_party1, SLOT(setPixmap(QPixmap)));
+                  ui->s5_party2->setHidden(1);                  ui->s5_party3->setHidden(1);
+                  ui->s5_lbl_name->setHidden(1);                ui->s5_lbl_gil->setHidden(1);
+                  ui->s5_lbl_hr->setHidden(1);                  ui->s5_lbl_min->setHidden(1);
+                  ui->s5_label_gil->setHidden(1);               ui->s5_label_level->setHidden(1);
+                  ui->s5_label_time->setHidden(1);              ui->s5_label_time_sept->setHidden(1);
+                  ui->s5_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s5_lbl_loc->setAlignment(Qt::AlignLeft);
                   break;
                 case 5:
-                  ui->s6_party2->setPixmap(icons[s].icon());
-                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s6_party2, SLOT(setPixmap(QPixmap)));
-                  ui->s6_lbl_loc->setText(ff7->SG_Region_String[s].toAscii());
+                  ui->s6_party1->setPixmap(icons[s].icon());
+                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s6_party1, SLOT(setPixmap(QPixmap)));
+                  ui->s6_party2->setHidden(1);                  ui->s6_party3->setHidden(1);
+                  ui->s6_lbl_name->setHidden(1);                ui->s6_lbl_gil->setHidden(1);
+                  ui->s6_lbl_hr->setHidden(1);                  ui->s6_lbl_min->setHidden(1);
+                  ui->s6_label_gil->setHidden(1);               ui->s6_label_level->setHidden(1);
+                  ui->s6_label_time->setHidden(1);              ui->s6_label_time_sept->setHidden(1);
+                  ui->s6_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s6_lbl_loc->setAlignment(Qt::AlignLeft);
                   break;
                 case 6:
-                  ui->s7_party2->setPixmap(icons[s].icon());
-                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s7_party2, SLOT(setPixmap(QPixmap)));
-                  ui->s7_lbl_loc->setText(ff7->SG_Region_String[s].toAscii());
+                  ui->s7_party1->setPixmap(icons[s].icon());
+                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s7_party1, SLOT(setPixmap(QPixmap)));
+                  ui->s7_party2->setHidden(1);                  ui->s7_party3->setHidden(1);
+                  ui->s7_lbl_name->setHidden(1);                ui->s7_lbl_gil->setHidden(1);
+                  ui->s7_lbl_hr->setHidden(1);                  ui->s7_lbl_min->setHidden(1);
+                  ui->s7_label_gil->setHidden(1);               ui->s7_label_level->setHidden(1);
+                  ui->s7_label_time->setHidden(1);              ui->s7_label_time_sept->setHidden(1);
+                  ui->s7_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s7_lbl_loc->setAlignment(Qt::AlignLeft);
                   break;
                 case 7:
-                  ui->s8_party2->setPixmap(icons[s].icon());
-                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s8_party2, SLOT(setPixmap(QPixmap)));
-                  ui->s8_lbl_loc->setText(ff7->SG_Region_String[s].toAscii());
+                  ui->s8_party1->setPixmap(icons[s].icon());
+                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s8_party1, SLOT(setPixmap(QPixmap)));
+                  ui->s8_party2->setHidden(1);                  ui->s8_party3->setHidden(1);
+                  ui->s8_lbl_name->setHidden(1);                ui->s8_lbl_gil->setHidden(1);
+                  ui->s8_lbl_hr->setHidden(1);                  ui->s8_lbl_min->setHidden(1);
+                  ui->s8_label_gil->setHidden(1);               ui->s8_label_level->setHidden(1);
+                  ui->s8_label_time->setHidden(1);              ui->s8_label_time_sept->setHidden(1);
+                  ui->s8_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s8_lbl_loc->setAlignment(Qt::AlignLeft);
                   break;
                 case 8:
-                  ui->s9_party2->setPixmap(icons[s].icon());
-                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s9_party2, SLOT(setPixmap(QPixmap)));
-                  ui->s9_lbl_loc->setText(ff7->SG_Region_String[s].toAscii());
+                  ui->s9_party1->setPixmap(icons[s].icon());
+                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s9_party1, SLOT(setPixmap(QPixmap)));
+                  ui->s9_party2->setHidden(1);                  ui->s9_party3->setHidden(1);
+                  ui->s9_lbl_name->setHidden(1);                ui->s9_lbl_gil->setHidden(1);
+                  ui->s9_lbl_hr->setHidden(1);                  ui->s9_lbl_min->setHidden(1);
+                  ui->s9_label_gil->setHidden(1);               ui->s9_label_level->setHidden(1);
+                  ui->s9_label_time->setHidden(1);              ui->s9_label_time_sept->setHidden(1);
+                  ui->s9_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s9_lbl_loc->setAlignment(Qt::AlignLeft);
                   break;
                 case 9:
-                  ui->s10_party2->setPixmap(icons[s].icon());
-                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s10_party2, SLOT(setPixmap(QPixmap)));
-                  ui->s10_lbl_loc->setText(ff7->SG_Region_String[s].toAscii());
+                  ui->s10_party1->setPixmap(icons[s].icon());
+                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s10_party1, SLOT(setPixmap(QPixmap)));
+                  ui->s10_party2->setHidden(1);                  ui->s10_party3->setHidden(1);
+                  ui->s10_lbl_name->setHidden(1);                ui->s10_lbl_gil->setHidden(1);
+                  ui->s10_lbl_hr->setHidden(1);                  ui->s10_lbl_min->setHidden(1);
+                  ui->s10_label_gil->setHidden(1);               ui->s10_label_level->setHidden(1);
+                  ui->s10_label_time->setHidden(1);              ui->s10_label_time_sept->setHidden(1);
+                  ui->s10_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s10_lbl_loc->setAlignment(Qt::AlignLeft);
                   break;
                 case 10:
-                  ui->s11_party2->setPixmap(icons[s].icon());
-                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s11_party2, SLOT(setPixmap(QPixmap)));
-                  ui->s11_lbl_loc->setText(ff7->SG_Region_String[s].toAscii());
+                  ui->s11_party1->setPixmap(icons[s].icon());
+                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s11_party1, SLOT(setPixmap(QPixmap)));
+                  ui->s11_party2->setHidden(1);                  ui->s11_party3->setHidden(1);
+                  ui->s11_lbl_name->setHidden(1);                ui->s11_lbl_gil->setHidden(1);
+                  ui->s11_lbl_hr->setHidden(1);                  ui->s11_lbl_min->setHidden(1);
+                  ui->s11_label_gil->setHidden(1);               ui->s11_label_level->setHidden(1);
+                  ui->s11_label_time->setHidden(1);              ui->s11_label_time_sept->setHidden(1);
+                  ui->s11_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s11_lbl_loc->setAlignment(Qt::AlignLeft);
                   break;
                 case 11:
-                  ui->s12_party2->setPixmap(icons[s].icon());
-                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s12_party2, SLOT(setPixmap(QPixmap)));
-                  ui->s12_lbl_loc->setText(ff7->SG_Region_String[s].toAscii());
+                  ui->s12_party1->setPixmap(icons[s].icon());
+                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s12_party1, SLOT(setPixmap(QPixmap)));
+                  ui->s12_party2->setHidden(1);                  ui->s12_party3->setHidden(1);
+                  ui->s1_lbl_name->setHidden(1);                ui->s12_lbl_gil->setHidden(1);
+                  ui->s12_lbl_hr->setHidden(1);                  ui->s12_lbl_min->setHidden(1);
+                  ui->s12_label_gil->setHidden(1);               ui->s12_label_level->setHidden(1);
+                  ui->s12_label_time->setHidden(1);              ui->s12_label_time_sept->setHidden(1);
+                  ui->s12_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s12_lbl_loc->setAlignment(Qt::AlignLeft);
                   break;
                 case 12:
-                  ui->s13_party2->setPixmap(icons[s].icon());
-                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s13_party2, SLOT(setPixmap(QPixmap)));
-                  ui->s13_lbl_loc->setText(ff7->SG_Region_String[s].toAscii());
+                  ui->s13_party1->setPixmap(icons[s].icon());
+                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s13_party1, SLOT(setPixmap(QPixmap)));
+                  ui->s13_party2->setHidden(1);                  ui->s13_party3->setHidden(1);
+                  ui->s13_lbl_name->setHidden(1);                ui->s13_lbl_gil->setHidden(1);
+                  ui->s13_lbl_hr->setHidden(1);                  ui->s13_lbl_min->setHidden(1);
+                  ui->s13_label_gil->setHidden(1);               ui->s13_label_level->setHidden(1);
+                  ui->s13_label_time->setHidden(1);              ui->s13_label_time_sept->setHidden(1);
+                  ui->s13_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s13_lbl_loc->setAlignment(Qt::AlignLeft);
                   break;
                 case 13:
-                  ui->s14_party2->setPixmap(icons[s].icon());
-                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s14_party2, SLOT(setPixmap(QPixmap)));
-                  ui->s14_lbl_loc->setText(ff7->SG_Region_String[s].toAscii());
+                  ui->s14_party1->setPixmap(icons[s].icon());
+                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s14_party1, SLOT(setPixmap(QPixmap)));
+                  ui->s14_party2->setHidden(1);                  ui->s14_party3->setHidden(1);
+                  ui->s14_lbl_name->setHidden(1);                ui->s14_lbl_gil->setHidden(1);
+                  ui->s14_lbl_hr->setHidden(1);                  ui->s14_lbl_min->setHidden(1);
+                  ui->s14_label_gil->setHidden(1);               ui->s14_label_level->setHidden(1);
+                  ui->s14_label_time->setHidden(1);              ui->s14_label_time_sept->setHidden(1);
+                  ui->s14_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s14_lbl_loc->setAlignment(Qt::AlignLeft);
                   break;
                 case 14:
-                  ui->s15_party2->setPixmap(icons[s].icon());
-                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s15_party2, SLOT(setPixmap(QPixmap)));
-                  ui->s15_lbl_loc->setText(ff7->SG_Region_String[s].toAscii());
+                  ui->s15_party1->setPixmap(icons[s].icon());
+                  connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s15_party1, SLOT(setPixmap(QPixmap)));
+                  ui->s15_party2->setHidden(1);                  ui->s15_party3->setHidden(1);
+                  ui->s15_lbl_name->setHidden(1);                ui->s15_lbl_gil->setHidden(1);
+                  ui->s15_lbl_hr->setHidden(1);                  ui->s15_lbl_min->setHidden(1);
+                  ui->s15_label_gil->setHidden(1);               ui->s15_label_level->setHidden(1);
+                  ui->s15_label_time->setHidden(1);              ui->s15_label_time_sept->setHidden(1);
+                  ui->s15_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s15_lbl_loc->setAlignment(Qt::AlignLeft);
                   break;
               }
             }

@@ -29,7 +29,6 @@ errbox::errbox(QWidget *parent,FF7 *ff7data,int slot) :
     s=slot;
     ff7 = ff7data;
     for(int i=0;i<0x200;i++){data.append(ff7->hf[s].sl_header[i]);}
-
     switch((quint8)data.at(2))
     {
         case 0x11://1 frame
@@ -53,7 +52,14 @@ errbox::errbox(QWidget *parent,FF7 *ff7data,int slot) :
         ui->lbl_icon->setPixmap(save_icon.icon());
         connect(&save_icon, SIGNAL(nextIcon(QPixmap)), ui->lbl_icon, SLOT(setPixmap(QPixmap)));
     }
-    ui->lbl_regionstring->setText(ff7->SG_Region_String[s].toAscii());
+    // Get the games desc string
+    QByteArray desc;
+    QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
+    desc = data.mid(4,64);
+    int index;
+    if((index = desc.indexOf('\x00')) != -1) {desc.truncate(index);}
+    ui->lbl_regionstring->setText(codec->toUnicode(desc));
+    //ui->lbl_regionstring->setText(ff7->SG_Region_String[s].toAscii());
 }
 
 errbox::~errbox(){delete ui;}
