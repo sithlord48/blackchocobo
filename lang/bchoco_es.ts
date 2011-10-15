@@ -6188,10 +6188,6 @@ p, li { white-space: pre-wrap; }
         <translation>Previsualización de ranura</translation>
     </message>
     <message>
-        <source>Region String</source>
-        <translation>String de Región</translation>
-    </message>
-    <message>
         <source>&amp;Previous Slot</source>
         <translation>&amp;Ranura Anterior</translation>
     </message>

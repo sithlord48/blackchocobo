@@ -6157,10 +6157,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Region String</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&amp;Previous Slot</source>
         <translation type="unfinished"></translation>
     </message>
