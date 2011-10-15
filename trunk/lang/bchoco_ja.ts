@@ -6190,10 +6190,6 @@ p, li { white-space: pre-wrap; }
         <translation>スロットのプレビュー</translation>
     </message>
     <message>
-        <source>Region String</source>
-        <translation>リージョン情報</translation>
-    </message>
-    <message>
         <source>&amp;Previous Slot</source>
         <translation>前のスロット(&amp;P)</translation>
     </message>

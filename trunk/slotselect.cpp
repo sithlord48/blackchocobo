@@ -33,21 +33,126 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
         {
             switch(s)
             {
-              case 0:   ui->s1_lbl_loc->setText(tr("Empty Slot"));  break;
-              case 1:   ui->s2_lbl_loc->setText(tr("Empty Slot"));  break;
-              case 2:   ui->s3_lbl_loc->setText(tr("Empty Slot"));  break;
-              case 3:   ui->s4_lbl_loc->setText(tr("Empty Slot"));  break;
-              case 4:   ui->s5_lbl_loc->setText(tr("Empty Slot"));  break;
-              case 5:   ui->s6_lbl_loc->setText(tr("Empty Slot"));  break;
-              case 6:   ui->s7_lbl_loc->setText(tr("Empty Slot"));  break;
-              case 7:   ui->s8_lbl_loc->setText(tr("Empty Slot"));  break;
-              case 8:   ui->s9_lbl_loc->setText(tr("Empty Slot"));  break;
-              case 9:   ui->s10_lbl_loc->setText(tr("Empty Slot")); break;
-              case 10:  ui->s11_lbl_loc->setText(tr("Empty Slot")); break;
-              case 11:  ui->s12_lbl_loc->setText(tr("Empty Slot")); break;
-              case 12:  ui->s13_lbl_loc->setText(tr("Empty Slot")); break;
-              case 13:  ui->s14_lbl_loc->setText(tr("Empty Slot")); break;
-              case 14:  ui->s15_lbl_loc->setText(tr("Empty Slot")); break;
+            case 0:
+                ui->s1_party1->setHidden(1);    ui->s1_party2->setHidden(1);    ui->s1_party3->setHidden(1);
+                ui->s1_lbl_name->setHidden(1);  ui->s1_lbl_gil->setHidden(1);   ui->s1_lbl_hr->setHidden(1);
+                ui->s1_lbl_min->setHidden(1);   ui->s1_label_gil->setHidden(1); ui->s1_label_level->setHidden(1);
+                ui->s1_label_time->setHidden(1);ui->s1_label_time_sept->setHidden(1);
+                ui->s1_lbl_loc->setAlignment(Qt::AlignLeft);
+                ui->s1_lbl_loc->setText(tr("Empty Slot"));
+                break;
+              case 1:
+                ui->s2_party1->setHidden(1);    ui->s2_party2->setHidden(1);    ui->s2_party3->setHidden(1);
+                ui->s2_lbl_name->setHidden(1);  ui->s2_lbl_gil->setHidden(1);   ui->s2_lbl_hr->setHidden(1);
+                ui->s2_lbl_min->setHidden(1);   ui->s2_label_gil->setHidden(1); ui->s2_label_level->setHidden(1);
+                ui->s2_label_time->setHidden(1);ui->s2_label_time_sept->setHidden(1);
+                ui->s2_lbl_loc->setAlignment(Qt::AlignLeft);
+                ui->s2_lbl_loc->setText(tr("Empty Slot"));
+                break;
+              case 2:
+                ui->s3_party1->setHidden(1);    ui->s3_party2->setHidden(1);    ui->s3_party3->setHidden(1);
+                ui->s3_lbl_name->setHidden(1);  ui->s3_lbl_gil->setHidden(1);   ui->s3_lbl_hr->setHidden(1);
+                ui->s3_lbl_min->setHidden(1);   ui->s3_label_gil->setHidden(1); ui->s3_label_level->setHidden(1);
+                ui->s3_label_time->setHidden(1);ui->s3_label_time_sept->setHidden(1);
+                ui->s3_lbl_loc->setAlignment(Qt::AlignLeft);
+                ui->s3_lbl_loc->setText(tr("Empty Slot"));
+                break;
+              case 3:
+                ui->s4_party1->setHidden(1);    ui->s4_party2->setHidden(1);    ui->s4_party3->setHidden(1);
+                ui->s4_lbl_name->setHidden(1);  ui->s4_lbl_gil->setHidden(1);   ui->s4_lbl_hr->setHidden(1);
+                ui->s4_lbl_min->setHidden(1);   ui->s4_label_gil->setHidden(1); ui->s4_label_level->setHidden(1);
+                ui->s4_label_time->setHidden(1);ui->s4_label_time_sept->setHidden(1);
+                ui->s4_lbl_loc->setAlignment(Qt::AlignLeft);
+                ui->s4_lbl_loc->setText(tr("Empty Slot"));
+                break;
+              case 4:
+                ui->s5_party1->setHidden(1);    ui->s5_party2->setHidden(1);    ui->s5_party3->setHidden(1);
+                ui->s5_lbl_name->setHidden(1);  ui->s5_lbl_gil->setHidden(1);   ui->s5_lbl_hr->setHidden(1);
+                ui->s5_lbl_min->setHidden(1);   ui->s5_label_gil->setHidden(1); ui->s5_label_level->setHidden(1);
+                ui->s5_label_time->setHidden(1);ui->s5_label_time_sept->setHidden(1);
+                ui->s5_lbl_loc->setAlignment(Qt::AlignLeft);
+                ui->s5_lbl_loc->setText(tr("Empty Slot"));
+                break;
+              case 5:
+                ui->s6_party1->setHidden(1);    ui->s6_party2->setHidden(1);    ui->s6_party3->setHidden(1);
+                ui->s6_lbl_name->setHidden(1);  ui->s6_lbl_gil->setHidden(1);   ui->s6_lbl_hr->setHidden(1);
+                ui->s6_lbl_min->setHidden(1);   ui->s6_label_gil->setHidden(1); ui->s6_label_level->setHidden(1);
+                ui->s6_label_time->setHidden(1);ui->s6_label_time_sept->setHidden(1);
+                ui->s6_lbl_loc->setAlignment(Qt::AlignLeft);
+                ui->s6_lbl_loc->setText(tr("Empty Slot"));
+                break;
+              case 6:
+                ui->s7_party1->setHidden(1);    ui->s7_party2->setHidden(1);    ui->s7_party3->setHidden(1);
+                ui->s7_lbl_name->setHidden(1);  ui->s7_lbl_gil->setHidden(1);   ui->s7_lbl_hr->setHidden(1);
+                ui->s7_lbl_min->setHidden(1);   ui->s7_label_gil->setHidden(1); ui->s7_label_level->setHidden(1);
+                ui->s7_label_time->setHidden(1);ui->s7_label_time_sept->setHidden(1);
+                ui->s7_lbl_loc->setAlignment(Qt::AlignLeft);
+                ui->s7_lbl_loc->setText(tr("Empty Slot"));
+                break;
+              case 7:
+                ui->s8_party1->setHidden(1);    ui->s8_party2->setHidden(1);    ui->s8_party3->setHidden(1);
+                ui->s8_lbl_name->setHidden(1);  ui->s8_lbl_gil->setHidden(1);   ui->s8_lbl_hr->setHidden(1);
+                ui->s8_lbl_min->setHidden(1);   ui->s8_label_gil->setHidden(1); ui->s8_label_level->setHidden(1);
+                ui->s8_label_time->setHidden(1);ui->s8_label_time_sept->setHidden(1);
+                ui->s8_lbl_loc->setAlignment(Qt::AlignLeft);
+                ui->s8_lbl_loc->setText(tr("Empty Slot"));
+                break;
+              case 8:
+                ui->s9_party1->setHidden(1);    ui->s9_party2->setHidden(1);    ui->s9_party3->setHidden(1);
+                ui->s9_lbl_name->setHidden(1);  ui->s9_lbl_gil->setHidden(1);   ui->s9_lbl_hr->setHidden(1);
+                ui->s9_lbl_min->setHidden(1);   ui->s9_label_gil->setHidden(1); ui->s9_label_level->setHidden(1);
+                ui->s9_label_time->setHidden(1);ui->s9_label_time_sept->setHidden(1);
+                ui->s9_lbl_loc->setAlignment(Qt::AlignLeft);
+                ui->s9_lbl_loc->setText(tr("Empty Slot"));
+                break;
+              case 9:
+                ui->s10_party1->setHidden(1);    ui->s10_party2->setHidden(1);    ui->s10_party3->setHidden(1);
+                ui->s10_lbl_name->setHidden(1);  ui->s10_lbl_gil->setHidden(1);   ui->s10_lbl_hr->setHidden(1);
+                ui->s10_lbl_min->setHidden(1);   ui->s10_label_gil->setHidden(1); ui->s10_label_level->setHidden(1);
+                ui->s10_label_time->setHidden(1);ui->s10_label_time_sept->setHidden(1);
+                ui->s10_lbl_loc->setAlignment(Qt::AlignLeft);
+                ui->s10_lbl_loc->setText(tr("Empty Slot"));
+                break;
+              case 10:
+                ui->s11_party1->setHidden(1);    ui->s11_party2->setHidden(1);    ui->s11_party3->setHidden(1);
+                ui->s11_lbl_name->setHidden(1);  ui->s11_lbl_gil->setHidden(1);   ui->s11_lbl_hr->setHidden(1);
+                ui->s11_lbl_min->setHidden(1);   ui->s11_label_gil->setHidden(1); ui->s11_label_level->setHidden(1);
+                ui->s11_label_time->setHidden(1);ui->s11_label_time_sept->setHidden(1);
+                ui->s11_lbl_loc->setAlignment(Qt::AlignLeft);
+                ui->s11_lbl_loc->setText(tr("Empty Slot"));
+                break;
+              case 11:
+                ui->s12_party1->setHidden(1);    ui->s12_party2->setHidden(1);    ui->s12_party3->setHidden(1);
+                ui->s12_lbl_name->setHidden(1);  ui->s12_lbl_gil->setHidden(1);   ui->s12_lbl_hr->setHidden(1);
+                ui->s12_lbl_min->setHidden(1);   ui->s12_label_gil->setHidden(1); ui->s12_label_level->setHidden(1);
+                ui->s12_label_time->setHidden(1);ui->s12_label_time_sept->setHidden(1);
+                ui->s12_lbl_loc->setAlignment(Qt::AlignLeft);
+                ui->s12_lbl_loc->setText(tr("Empty Slot"));
+                break;
+              case 12:
+                ui->s13_party1->setHidden(1);    ui->s13_party2->setHidden(1);    ui->s13_party3->setHidden(1);
+                ui->s13_lbl_name->setHidden(1);  ui->s13_lbl_gil->setHidden(1);   ui->s13_lbl_hr->setHidden(1);
+                ui->s13_lbl_min->setHidden(1);   ui->s13_label_gil->setHidden(1); ui->s13_label_level->setHidden(1);
+                ui->s13_label_time->setHidden(1);ui->s13_label_time_sept->setHidden(1);
+                ui->s13_lbl_loc->setAlignment(Qt::AlignLeft);
+                ui->s13_lbl_loc->setText(tr("Empty Slot"));
+                break;
+              case 13:
+                ui->s14_party1->setHidden(1);    ui->s14_party2->setHidden(1);    ui->s14_party3->setHidden(1);
+                ui->s14_lbl_name->setHidden(1);  ui->s14_lbl_gil->setHidden(1);   ui->s14_lbl_hr->setHidden(1);
+                ui->s14_lbl_min->setHidden(1);   ui->s14_label_gil->setHidden(1); ui->s14_label_level->setHidden(1);
+                ui->s14_label_time->setHidden(1);ui->s14_label_time_sept->setHidden(1);
+                ui->s14_lbl_loc->setAlignment(Qt::AlignLeft);
+                ui->s14_lbl_loc->setText(tr("Empty Slot"));
+                break;
+              case 14:
+                ui->s15_party1->setHidden(1);    ui->s15_party2->setHidden(1);    ui->s15_party3->setHidden(1);
+                ui->s15_lbl_name->setHidden(1);  ui->s15_lbl_gil->setHidden(1);   ui->s15_lbl_hr->setHidden(1);
+                ui->s15_lbl_min->setHidden(1);   ui->s15_label_gil->setHidden(1); ui->s15_label_level->setHidden(1);
+                ui->s15_label_time->setHidden(1);ui->s15_label_time_sept->setHidden(1);
+                ui->s15_lbl_loc->setAlignment(Qt::AlignLeft);
+                ui->s15_lbl_loc->setText(tr("Empty Slot"));
+                break;
             }
         }
         else if(ff7->SG_Region_String[s].contains("00867") ||ff7->SG_Region_String[s].contains("00869") ||

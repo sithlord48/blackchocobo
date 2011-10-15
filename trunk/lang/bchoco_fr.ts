@@ -6190,10 +6190,6 @@ p, li { white-space: pre-wrap; }
         <translation>Prévisionnage du slot</translation>
     </message>
     <message>
-        <source>Region String</source>
-        <translation>Région</translation>
-    </message>
-    <message>
         <source>&amp;Previous Slot</source>
         <translation>Slot &amp;précédent</translation>
     </message>
