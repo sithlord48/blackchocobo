@@ -5743,7 +5743,8 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Empty Slot</source>
+        <source>
+Empty</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5923,10 +5924,6 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Early Win32 Tester</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>save icon class used to make the psx icon</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6139,6 +6136,22 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Takes a filename argument (open w/ a file)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Text Conversion Class (based on myst6re&apos;s work) </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Save Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Improved: Slotselect handleing of non-ff7 and empty slots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Psx Icon Class &amp; PC string convertor for japanese</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

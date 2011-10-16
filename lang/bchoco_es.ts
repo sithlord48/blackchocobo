@@ -5762,8 +5762,9 @@ Las entradas de la tabla son editables</translation>
         <translation>Cargar Ranura 13</translation>
     </message>
     <message>
-        <source>Empty Slot</source>
-        <translation>Ranura vacía</translation>
+        <source>
+Empty</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5955,10 +5956,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Early Win32 Tester</source>
         <translation>Probador de Win32</translation>
-    </message>
-    <message>
-        <source>save icon class used to make the psx icon</source>
-        <translation>guardar tipo de icono usado para el icono de psx</translation>
     </message>
     <message>
         <source>New: Using Myst6re SaveIcon Class</source>
@@ -6171,6 +6168,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>New: Takes a filename argument (open w/ a file)</source>
         <translation>Nuevo: Toma el argumento de nombre de archivo (abrir con un archivo)</translation>
+    </message>
+    <message>
+        <source>New: Text Conversion Class (based on myst6re&apos;s work) </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Save Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Improved: Slotselect handleing of non-ff7 and empty slots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Psx Icon Class &amp; PC string convertor for japanese</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

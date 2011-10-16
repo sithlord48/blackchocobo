@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>371</width>
-    <height>402</height>
+    <width>377</width>
+    <height>396</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -498,6 +498,36 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>New: Text Conversion Class (based on myst6re's work) </string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fixed: Save Button</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Improved: Slotselect handleing of non-ff7 and empty slots</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Previous Versions</string>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="textAlignment">
+           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New: Japanese Translation</string>
           </property>
          </item>
@@ -539,21 +569,6 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>Fixed: Optimized Slotselect Dialog</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Previous Versions</string>
-          </property>
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <underline>true</underline>
-           </font>
-          </property>
-          <property name="textAlignment">
-           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
           </property>
          </item>
          <item>
@@ -980,7 +995,7 @@ p, li { white-space: pre-wrap; }
                <item>
                 <widget class="QLabel" name="label_37">
                  <property name="text">
-                  <string>save icon class used to make the psx icon</string>
+                  <string>Psx Icon Class &amp; PC string convertor for japanese</string>
                  </property>
                 </widget>
                </item>
