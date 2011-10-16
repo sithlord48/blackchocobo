@@ -3642,10 +3642,11 @@ void MainWindow::on_box_stable6_toggled(bool checked)
     ff7->slot[s].stablesoccupied=ui->lcd_stables_occupied->value();
 }}
 /*~~~~~ChocoboStats~~~~~*/
-void MainWindow::on_line_c1_name_lostFocus()
+void MainWindow::on_line_c1_name_textChanged(QString text)
 {if(!load){
+        QByteArray temp = chPC.FF7(text);
         for (int i=0;i<6;i++){ff7->slot[s].chocobonames[0][i] =0xFF;}
-        for (int i=0;i<ui->line_c1_name->text().size();i++){ff7->slot[s].chocobonames[0][i] = chPC.FF7(ui->line_c1_name->text().at(i).toAscii());}
+        memcpy(ff7->slot[s].chocobonames[0],temp,temp.length());
 }}
 void MainWindow::on_sb_c1_stamina_valueChanged(int value){if(!load){ff7->slot[s].chocostaminas[0] = value;}}
 void MainWindow::on_sb_c1_speed_valueChanged(int value){if(!load){ff7->slot[s].chocobos[0].speed = value;}}
@@ -3666,10 +3667,11 @@ void MainWindow::on_cb_c1_mated_toggled(bool checked)
     else{ff7->slot[s].chocomated &= ~(1<<0);}
 }}
 
-void MainWindow::on_line_c2_name_lostFocus()
+void MainWindow::on_line_c2_name_textChanged(QString text)
 {if(!load){
-    for (int i=0;i<6;i++){ff7->slot[s].chocobonames[1][i] =0xFF;}
-    for (int i=0;i<ui->line_c2_name->text().size();i++){ff7->slot[s].chocobonames[1][i] = chPC.FF7(ui->line_c2_name->text().at(i).toAscii());}
+        QByteArray temp = chPC.FF7(text);
+        for (int i=0;i<6;i++){ff7->slot[s].chocobonames[1][i] =0xFF;}
+        memcpy(ff7->slot[s].chocobonames[1],temp,temp.length());
 }}
 void MainWindow::on_sb_c2_stamina_valueChanged(int value){if(!load){ff7->slot[s].chocostaminas[1] = value;}}
 void MainWindow::on_sb_c2_speed_valueChanged(int value){if(!load){ff7->slot[s].chocobos[1].speed = value;}}
@@ -3690,10 +3692,11 @@ void MainWindow::on_cb_c2_mated_toggled(bool checked)
     else{ff7->slot[s].chocomated &= ~(1<<1);}
 }}
 
-void MainWindow::on_line_c3_name_lostFocus()
+void MainWindow::on_line_c3_name_textChanged(QString text)
 {if(!load){
-    for (int i=0;i<6;i++){ff7->slot[s].chocobonames[2][i] =0xFF;}
-    for (int i=0;i<ui->line_c3_name->text().size();i++){ff7->slot[s].chocobonames[2][i] = chPC.FF7(ui->line_c3_name->text().at(i).toAscii());}
+        QByteArray temp = chPC.FF7(text);
+        for (int i=0;i<6;i++){ff7->slot[s].chocobonames[2][i] =0xFF;}
+        memcpy(ff7->slot[s].chocobonames[2],temp,temp.length());
 }}
 void MainWindow::on_sb_c3_stamina_valueChanged(int value){if(!load){ff7->slot[s].chocostaminas[2] =value;}}
 void MainWindow::on_sb_c3_speed_valueChanged(int value){if(!load){ff7->slot[s].chocobos[2].speed = value;}}
@@ -3714,10 +3717,11 @@ void MainWindow::on_cb_c3_mated_toggled(bool checked)
     else{ff7->slot[s].chocomated &= ~(1<<2);}
 }}
 
-void MainWindow::on_line_c4_name_lostFocus()
+void MainWindow::on_line_c4_name_textChanged(QString text)
 {if(!load){
-    for (int i=0;i<6;i++){ff7->slot[s].chocobonames[3][i] =0xFF;}
-    for (int i=0;i<ui->line_c4_name->text().size();i++){ff7->slot[s].chocobonames[3][i] = chPC.FF7(ui->line_c4_name->text().at(i).toAscii());}
+        QByteArray temp = chPC.FF7(text);
+        for (int i=0;i<6;i++){ff7->slot[s].chocobonames[3][i] =0xFF;}
+        memcpy(ff7->slot[s].chocobonames[3],temp,temp.length());
 }}
 void MainWindow::on_sb_c4_stamina_valueChanged(int value){if(!load){ff7->slot[s].chocostaminas[3] = value;}}
 void MainWindow::on_sb_c4_speed_valueChanged(int value){if(!load){ff7->slot[s].chocobos[3].speed = value;}}
@@ -3738,10 +3742,11 @@ void MainWindow::on_cb_c4_mated_toggled(bool checked)
     else{ff7->slot[s].chocomated &= ~(1<<3);}
 }}
 
-void MainWindow::on_line_c5_name_lostFocus()
+void MainWindow::on_line_c5_name_textChanged(QString text)
 {if(!load){
-    for (int i=0;i<6;i++){ff7->slot[s].chocobonames[4][i] =0xFF;}
-    for (int i=0;i<ui->line_c5_name->text().size();i++){ff7->slot[s].chocobonames[4][i] = chPC.FF7(ui->line_c5_name->text().at(i).toAscii());}
+        QByteArray temp = chPC.FF7(text);
+        for (int i=0;i<6;i++){ff7->slot[s].chocobonames[4][i] =0xFF;}
+        memcpy(ff7->slot[s].chocobonames[4],temp,temp.length());
 }}
 void MainWindow::on_sb_c5_stamina_valueChanged(int value){if(!load){ff7->slot[s].chocostaminas[4] = value;}}
 void MainWindow::on_sb_c5_speed_valueChanged(int value){if(!load){ff7->slot[s].choco56[0].speed = value;}}
@@ -3762,10 +3767,11 @@ void MainWindow::on_cb_c5_mated_toggled(bool checked)
     else{ff7->slot[s].chocomated &= ~(1<<4);}
 }}
 
-void MainWindow::on_line_c6_name_lostFocus()
+void MainWindow::on_line_c6_name_textChanged(QString text)
 {if(!load){
-    for (int i=0;i<6;i++){ff7->slot[s].chocobonames[5][i] =0xFF;}
-    for (int i=0;i<ui->line_c6_name->text().size();i++){ff7->slot[s].chocobonames[5][i] = chPC.FF7(ui->line_c6_name->text().at(i).toAscii());}
+        QByteArray temp = chPC.FF7(text);
+        for (int i=0;i<6;i++){ff7->slot[s].chocobonames[5][i] =0xFF;}
+        memcpy(ff7->slot[s].chocobonames[5],temp,temp.length());
 }}
 void MainWindow::on_sb_c6_stamina_valueChanged(int value){if(!load){ff7->slot[s].chocostaminas[5] = value;}}
 void MainWindow::on_sb_c6_speed_valueChanged(int value){if(!load){ff7->slot[s].choco56[1].speed = value;}}
@@ -4162,10 +4168,11 @@ void MainWindow::on_sb_coordz_valueChanged(int value){if(!load){ff7->slot[s].coo
 void MainWindow::on_line_location_textChanged(QString text)
 {if (!load){
     for (int i=0;i<24;i++){ff7->slot[s].location[i] =0xFF;}
-    for (int i=0;i<text.size();i++){ff7->slot[s].location[i] = chPC.FF7(text.at(i).toAscii());}
+    QByteArray temp = chPC.FF7(text);
+    memcpy(ff7->slot[s].location,temp,temp.length());
     //and the description.
     for (int i=0;i<32;i++){ff7->slot[s].desc.location[i] =0xFF;}
-    for (int i=0;i<text.size();i++){ff7->slot[s].desc.location[i] = chPC.FF7(text.at(i).toAscii());}
+    memcpy(ff7->slot[s].desc.location,temp,temp.length());
 }}
 
 //char stats tab
@@ -4185,14 +4192,15 @@ void MainWindow::on_cb_id_toggled(bool checked)
     }
 }}
 
-void MainWindow::on_line_name_lostFocus()
+void MainWindow::on_line_name_textChanged(QString text)
 {if(!load){
     for (int i=0;i<12;i++){ff7->slot[s].chars[curchar].name[i] =0xFF;}
-    for (int i=0;i<ui->line_name->text().size();i++){ff7->slot[s].chars[curchar].name[i] = chPC.FF7(ui->line_name->text().at(i).toAscii());}
+    QByteArray temp = chPC.FF7(text);
+    memcpy(ff7->slot[s].chars[curchar].name,chPC.FF7(text),temp.length());
     if (curchar == ui->combo_party1->currentIndex())
     {
         for (int i=0;i<16;i++){ff7->slot[s].desc.name[i] =0xFF;}
-        for (int i=0;i<ui->line_name->text().size();i++){ff7->slot[s].desc.name[i] = chPC.FF7(ui->line_name->text().at(i).toAscii());}
+        memcpy(ff7->slot[s].desc.name,chPC.FF7(text),temp.length());
     }
 }}
 
@@ -4967,7 +4975,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         }
         else
         {
-            ff7->slot[s].chars[7].name[0] = chPC.FF7('S');
+            /*ff7->slot[s].chars[7].name[0] = chPC.FF7('S');
             ff7->slot[s].chars[7].name[1] = chPC.FF7('e');
             ff7->slot[s].chars[7].name[2] = chPC.FF7('p');
             ff7->slot[s].chars[7].name[3] = chPC.FF7('h');
@@ -4976,7 +4984,8 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
             ff7->slot[s].chars[7].name[6] = chPC.FF7('o');
             ff7->slot[s].chars[7].name[7] = chPC.FF7('t');
             ff7->slot[s].chars[7].name[8] = chPC.FF7('h');
-            for (int i=9; i<12;i++){ff7->slot[s].chars[7].name[i] = 0xFF;}
+            for (int i=9; i<12;i++){ff7->slot[s].chars[7].name[i] = 0xFF;}*/
+            memcpy(ff7->slot[s].chars[7].name,chPC.FF7("Sephiroth"),-1);
         }
         ui->label_replaynote->setText(tr("Setting This Will Copy Cloud as is to young cloud (caitsith's slot). sephiroth's stats will come directly from vincent."));
     }

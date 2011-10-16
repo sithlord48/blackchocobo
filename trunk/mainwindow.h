@@ -169,7 +169,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_box_stable5_toggled(bool checked);
     void on_box_stable6_toggled(bool checked);
     /*Chocobo Stall #1*/
-    void on_line_c1_name_lostFocus();
+    void on_line_c1_name_textChanged(QString text);
     void on_sb_c1_stamina_valueChanged(int);
     void on_sb_c1_speed_valueChanged(int);
     void on_sb_c1_maxspeed_valueChanged(int);
@@ -185,7 +185,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_c1_personality_valueChanged(int);
     void on_cb_c1_mated_toggled(bool checked);
     /*Chocobo Stall #2*/
-    void on_line_c2_name_lostFocus();
+    void on_line_c2_name_textChanged(QString text);
     void on_sb_c2_stamina_valueChanged(int);
     void on_sb_c2_speed_valueChanged(int);
     void on_sb_c2_maxspeed_valueChanged(int);
@@ -201,7 +201,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_c2_personality_valueChanged(int);
     void on_cb_c2_mated_toggled(bool checked);
     /*Chocobo Stall #3*/
-    void on_line_c3_name_lostFocus();
+    void on_line_c3_name_textChanged(QString text);
     void on_sb_c3_stamina_valueChanged(int);
     void on_sb_c3_speed_valueChanged(int);
     void on_sb_c3_maxspeed_valueChanged(int);
@@ -217,7 +217,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_c3_personality_valueChanged(int);
     void on_cb_c3_mated_toggled(bool checked);
     /*Chocobo Stall #4*/
-    void on_line_c4_name_lostFocus();
+    void on_line_c4_name_textChanged(QString text);
     void on_sb_c4_stamina_valueChanged(int);
     void on_sb_c4_speed_valueChanged(int);
     void on_sb_c4_maxspeed_valueChanged(int);
@@ -233,7 +233,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_c4_personality_valueChanged(int);
     void on_cb_c4_mated_toggled(bool checked);
     /*Chocobo Stall #5*/
-    void on_line_c5_name_lostFocus();
+    void on_line_c5_name_textChanged(QString text);
     void on_sb_c5_stamina_valueChanged(int);
     void on_sb_c5_speed_valueChanged(int);
     void on_sb_c5_maxspeed_valueChanged(int);
@@ -249,7 +249,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_c5_personality_valueChanged(int);
     void on_cb_c5_mated_toggled(bool checked);
     /*Chocobo Stall #6*/
-    void on_line_c6_name_lostFocus();
+    void on_line_c6_name_textChanged(QString text);
     void on_sb_c6_stamina_valueChanged(int);
     void on_sb_c6_speed_valueChanged(int);
     void on_sb_c6_maxspeed_valueChanged(int);
@@ -481,7 +481,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_btn_m_lvl1_clicked();
 
 //char stats
-    void on_line_name_lostFocus();
+    void on_line_name_textChanged(QString text);
     void on_sb_lvl_valueChanged();
     void on_sb_exp_valueChanged();
     void on_sb_kills_valueChanged();

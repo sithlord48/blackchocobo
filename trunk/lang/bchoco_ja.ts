@@ -5764,8 +5764,9 @@ Table Entries are Editable</source>
         <translation>スロット 13 をロード</translation>
     </message>
     <message>
-        <source>Empty Slot</source>
-        <translation>空きスロット</translation>
+        <source>
+Empty</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5957,10 +5958,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Early Win32 Tester</source>
         <translation>Win32 の初期テスター</translation>
-    </message>
-    <message>
-        <source>save icon class used to make the psx icon</source>
-        <translation>PSX アイコンに使用したセーブ アイコン クラス</translation>
     </message>
     <message>
         <source>New: Using Myst6re SaveIcon Class</source>
@@ -6173,6 +6170,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>New: Takes a filename argument (open w/ a file)</source>
         <translation>追加: ファイル パスの取得 (ファイルを開くとき)</translation>
+    </message>
+    <message>
+        <source>New: Text Conversion Class (based on myst6re&apos;s work) </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Save Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Improved: Slotselect handleing of non-ff7 and empty slots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Psx Icon Class &amp; PC string convertor for japanese</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

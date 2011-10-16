@@ -59,11 +59,13 @@ private:
     QString jap_fd;
     QString jap_fe;
     bool _ja;
+    QString character(quint8 ord, quint8 table);
 public:
     Text();
     void init(bool);
     QString PC(QByteArray text);
-    quint8 FF7(int);
+    //quint8 FF7(int);
+    QByteArray FF7(QString string);
 };
 
 struct LOCATION {//Location Table Stuff

@@ -685,4 +685,125 @@ QString Text::PC(QByteArray text)
         return String;
 }
 
-quint8 Text::FF7(int i){return FF7_list.at(i).toAscii();}//return to convert to ff7
+//quint8 Text::FF7(int i){return FF7_list.at(i).toAscii();}//return to convert to ff7
+QByteArray Text::FF7(QString string)
+{
+        QByteArray ff7str;
+        QChar comp/*, comp2*/;
+        int stringSize = string.size(), i, table;
+        bool ok, ok2;
+        ushort value, value2;
+
+        for(int c=0 ; c<stringSize ; ++c)
+        {
+                comp = string.at(c);
+                if(comp=='\n') {//\n{NewPage}\n,\n
+                        if(string.mid(c+1, 10).compare("{NewPage}\n", Qt::CaseInsensitive) == 0) {
+                                ff7str.append('\x01');
+                                c += 10;
+                        }
+                        else
+                                ff7str.append('\x02');
+                        continue;
+                }
+                else if(comp=='{') {
+
+                        QString rest = string.mid(c, 4);
+                        for(i=0xe8 ; i<=0xff ; ++i)
+                        {
+                                if(QString::compare(rest, character(i,0))==0)
+                                {
+                                        ff7str.append((char)i);
+                                        c += 3;
+                                        goto end;
+                                }
+                        }
+
+                        if(string.at(c+1)=='x') {
+                                if(string.at(c+6)=='}') {//{xffff}
+                                        value = string.mid(c+2,2).toUShort(&ok,16);
+                                        value2 = string.mid(c+4,2).toUShort(&ok2,16);
+                                        if(ok && ok2) {
+                                                ff7str.append((char)value);
+                                                ff7str.append((char)value2);
+                                                c += 6;
+                                                continue;
+                                        }
+                                }
+                                else if(string.at(c+4)=='}') {//{xff}
+                                        value = string.mid(c+2,2).toUShort(&ok,16);
+                                        if(ok) {
+                                                ff7str.append((char)value);
+                                                c += 4;
+                                                continue;
+                                        }
+                                }
+                        }
+
+                        continue;// character '{' is not in ff8 table
+                }
+
+                for(i=0 ; i<=0xff ; ++i)
+                {
+                        if(QString::compare(comp, character(i,0))==0)
+                        {
+                                ff7str.append((char)i);
+                                goto end;
+                        }
+                }
+                if(_ja) {
+                        for(table=2 ; table<7 ; ++table)
+                        {
+                                for(i=0 ; i<=0xff ; ++i)
+                                {
+                                        if(QString::compare(comp, character(i, table))==0)
+                                        {
+                                                switch(table) {
+                                                case 2:
+                                                        ff7str.append('\xFA');
+                                                        break;
+                                                case 3:
+                                                        ff7str.append('\xFB');
+                                                        break;
+                                                case 4:
+                                                        ff7str.append('\xFC');
+                                                        break;
+                                                case 5:
+                                                        ff7str.append('\xFD');
+                                                        break;
+                                                case 6:
+                                                        ff7str.append('\xFE');
+                                                        break;
+                                                }
+                                                ff7str.append((char)i);
+                                                goto end;
+                                        }
+                                }
+                        }
+                }
+
+                end:;
+        }
+
+        return ff7str;
+}
+
+QString Text::character(quint8 ord, quint8 table)
+{
+    switch(table) {
+    case 1:
+            return jap.at(ord);
+    case 2:
+            return jap_fa.at(ord);
+    case 3:
+            return jap_fb.at(ord);
+    case 4:
+            return jap_fc.at(ord);
+    case 5:
+            return jap_fd.at(ord);
+    case 6:
+            return jap_fe.at(ord);
+    default:
+            return eng.at(ord);
+    }
+}

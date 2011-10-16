@@ -5762,8 +5762,9 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation>Charger Slot 13</translation>
     </message>
     <message>
-        <source>Empty Slot</source>
-        <translation>Emplacement vide</translation>
+        <source>
+Empty</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5955,10 +5956,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Early Win32 Tester</source>
         <translation>Testeur Win32 de début</translation>
-    </message>
-    <message>
-        <source>save icon class used to make the psx icon</source>
-        <translation>la classe des icônes de sauvegardes pour faire l&apos;icône psx</translation>
     </message>
     <message>
         <source>New: Using Myst6re SaveIcon Class</source>
@@ -6173,6 +6170,22 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>New: Takes a filename argument (open w/ a file)</source>
         <translation>Nouveau: Permet l&apos;ouverture de sauvegardes FF7 en ouvrant le fichier</translation>
+    </message>
+    <message>
+        <source>New: Text Conversion Class (based on myst6re&apos;s work) </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Save Button</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Improved: Slotselect handleing of non-ff7 and empty slots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Psx Icon Class &amp; PC string convertor for japanese</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
