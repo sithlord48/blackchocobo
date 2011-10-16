@@ -3799,17 +3799,17 @@ void MainWindow::on_combo_pen3_currentIndexChanged(int index){if(!load){ff7->slo
 void MainWindow::on_combo_pen4_currentIndexChanged(int index){if(!load){ff7->slot[s].pennedchocos[3]=index;}}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::on_list_phs_chars_itemChanged()
+void MainWindow::on_list_phs_chars_itemChanged(QListWidgetItem * item)
 {if(!load){
-    int j = ui->list_phs_chars->currentRow();
-    if(ui->list_phs_chars->currentItem()->checkState() ==Qt::Unchecked){ff7->slot[s].phsmask |=(1 <<j);}
+    int j = item->listWidget()->currentRow();
+    if(item->checkState() ==Qt::Unchecked){ff7->slot[s].phsmask |=(1 <<j);}
     else{ff7->slot[s].phsmask &= ~(1<<j);}
 }}
 
-void MainWindow::on_list_chars_unlocked_itemChanged()
+void MainWindow::on_list_chars_unlocked_itemChanged(QListWidgetItem * item)
 {if(!load){
-    int j=ui->list_chars_unlocked->currentRow();
-    if(ui->list_chars_unlocked->currentItem()->checkState() ==Qt::Checked){ff7->slot[s].unlockedchars |= (1<<j);}
+    int j = item->listWidget()->currentRow();
+    if(item->checkState() ==Qt::Checked){ff7->slot[s].unlockedchars |= (1<<j);}
     else{ff7->slot[s].unlockedchars &= ~(1<<j);}
 }}
 
@@ -3840,22 +3840,17 @@ void MainWindow::on_sb_steps_valueChanged(int steps)
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::on_list_flyers_itemChanged()
+void MainWindow::on_list_flyers_itemChanged(QListWidgetItem * item)
 {if(!load){
-    int j=ui->list_flyers->currentRow();
-    ff7->slot[s].turtleflyers=0x40;
-    for (int i=0;i<6;i++)
-    {
-        ui->list_flyers->setCurrentRow(i);
-        if(ui->list_flyers->currentItem()->checkState() ==Qt::Checked){ff7->slot[s].turtleflyers |= (1 << i);}
-    }
-    ui->list_flyers->setCurrentRow(j);
-}}
+    int j=item->listWidget()->currentRow();
+    if(item->checkState() ==Qt::Checked){ff7->slot[s].turtleflyers |= (1 << j);}
+    else{ff7->slot[s].turtleflyers &= ~(1<<j);}
+ }}
 
-void MainWindow::on_list_keyitems_itemChanged()
+void MainWindow::on_list_keyitems_itemChanged(QListWidgetItem *item)
 {if(!load){
-    int j = ui->list_keyitems->currentRow();
-    if (ui->list_keyitems->currentItem()->checkState() == Qt::Checked){ff7->slot[s].keyitems[j/8] |= (1<<j%8);}
+    int j = item->listWidget()->currentRow();
+    if (item->checkState() == Qt::Checked){ff7->slot[s].keyitems[j/8] |= (1<<j%8);}
     else{ff7->slot[s].keyitems[j/8] &= ~(1<<j%8);}
 }}
 // Field Items Combos
@@ -4966,26 +4961,15 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->slot[s].chars[7].id=10;
         if(ff7->SG_Region_String[s].contains("00700") || ff7->SG_Region_String[s].contains("01057"))
         {
-            ff7->slot[s].chars[7].name[0]=90;  //セ
-            ff7->slot[s].chars[7].name[1]=68;  //フ
-            ff7->slot[s].chars[7].name[2]=166; //ィ
-            ff7->slot[s].chars[7].name[3]=142; //ロ
-            ff7->slot[s].chars[7].name[4]=88;  //ス
-            for (int i=5; i<12;i++){ff7->slot[s].chars[7].name[i] = 0xFF;}
+            for(int i=0;i<12;i++){ff7->slot[s].chars[7].name[i]=0xFF;}
+            QByteArray temp ="セフィロス";
+            memcpy(ff7->slot[s].chars[7].name,chPC.FF7(temp),temp.length());
         }
         else
         {
-            /*ff7->slot[s].chars[7].name[0] = chPC.FF7('S');
-            ff7->slot[s].chars[7].name[1] = chPC.FF7('e');
-            ff7->slot[s].chars[7].name[2] = chPC.FF7('p');
-            ff7->slot[s].chars[7].name[3] = chPC.FF7('h');
-            ff7->slot[s].chars[7].name[4] = chPC.FF7('i');
-            ff7->slot[s].chars[7].name[5] = chPC.FF7('r');
-            ff7->slot[s].chars[7].name[6] = chPC.FF7('o');
-            ff7->slot[s].chars[7].name[7] = chPC.FF7('t');
-            ff7->slot[s].chars[7].name[8] = chPC.FF7('h');
-            for (int i=9; i<12;i++){ff7->slot[s].chars[7].name[i] = 0xFF;}*/
-            memcpy(ff7->slot[s].chars[7].name,chPC.FF7("Sephiroth"),-1);
+            for(int i=0;i<12;i++){ff7->slot[s].chars[7].name[i]=0xFF;}
+            QByteArray temp = "Sephiroth";
+            memcpy(ff7->slot[s].chars[7].name,chPC.FF7(temp),temp.length());
         }
         ui->label_replaynote->setText(tr("Setting This Will Copy Cloud as is to young cloud (caitsith's slot). sephiroth's stats will come directly from vincent."));
     }
@@ -5077,17 +5061,17 @@ void MainWindow::on_sb_timer_time_hour_valueChanged(int value){if(!load){ff7->sl
 void MainWindow::on_sb_timer_time_min_valueChanged(int value){if(!load){ff7->slot[s].timer[1] = value;}}
 void MainWindow::on_sb_timer_time_sec_valueChanged(int value){if(!load){ff7->slot[s].timer[2] = value;}}
 
-void MainWindow::on_list_menu_visible_itemChanged()
+void MainWindow::on_list_menu_visible_itemChanged(QListWidgetItem *item)
 {if(!load){
-    int j=ui->list_menu_visible->currentRow();
-    if(ui->list_menu_visible->currentItem()->checkState() ==Qt::Checked){ff7->slot[s].menu_visible |= (1<<j);}
+    int j=item->listWidget()->currentRow();
+    if(item->checkState() ==Qt::Checked){ff7->slot[s].menu_visible |= (1<<j);}
     else{ff7->slot[s].menu_visible &= ~(1<<j);}
 }}
 
-void MainWindow::on_list_menu_locked_itemChanged()
+void MainWindow::on_list_menu_locked_itemChanged(QListWidgetItem *item)
 {if(!load){
-    int j=ui->list_menu_locked->currentRow();
-    if(ui->list_menu_locked->currentItem()->checkState() ==Qt::Checked){ff7->slot[s].menu_locked |= (1<<j);}
+    int j=item->listWidget()->currentRow();
+    if(item->checkState() ==Qt::Checked){ff7->slot[s].menu_locked |= (1<<j);}
     else{ff7->slot[s].menu_locked &= ~(1<<j);}
 }}
 

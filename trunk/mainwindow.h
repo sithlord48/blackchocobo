@@ -271,8 +271,8 @@ private slots://try to keep these in the same order as the .cpp file
     void on_combo_pen3_currentIndexChanged(int index);
     void on_combo_pen4_currentIndexChanged(int index);
     /* Others Tab */    
-    void on_list_phs_chars_itemChanged();
-    void on_list_chars_unlocked_itemChanged();
+    void on_list_phs_chars_itemChanged(QListWidgetItem*);
+    void on_list_chars_unlocked_itemChanged(QListWidgetItem*);
     void on_sb_curdisc_valueChanged(int);
     void on_sb_love_yuffie_valueChanged(int);
     void on_sb_love_tifa_valueChanged(int);
@@ -332,8 +332,8 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_b_love_yuffie_valueChanged(int);
     void on_sb_b_love_tifa_valueChanged(int);
     void on_sb_b_love_aeris_valueChanged(int);
-    void on_list_menu_locked_itemChanged();
-    void on_list_menu_visible_itemChanged();
+    void on_list_menu_locked_itemChanged(QListWidgetItem*);
+    void on_list_menu_visible_itemChanged(QListWidgetItem*);
 
     void on_sb_turkschruch_valueChanged(int );
 
@@ -441,8 +441,8 @@ private slots://try to keep these in the same order as the .cpp file
 
 
     //items tab
-    void on_list_flyers_itemChanged();
-    void on_list_keyitems_itemChanged();
+    void on_list_flyers_itemChanged(QListWidgetItem*);
+    void on_list_keyitems_itemChanged(QListWidgetItem*);
     void on_tbl_itm_currentCellChanged(int row);
     void on_combo_additem_currentIndexChanged(int);
     void on_sb_addqty_valueChanged(int);
