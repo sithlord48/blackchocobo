@@ -31,127 +31,218 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
     {
         if(ff7->SG_Region_String[s] == "")
         {
+            QVBoxLayout *layout = new QVBoxLayout;
             switch(s)
             {
             case 0:
-                ui->s1_party1->setHidden(1);    ui->s1_party2->setHidden(1);    ui->s1_party3->setHidden(1);
-                ui->s1_lbl_name->setHidden(1);  ui->s1_lbl_gil->setHidden(1);   ui->s1_lbl_hr->setHidden(1);
-                ui->s1_lbl_min->setHidden(1);   ui->s1_label_gil->setHidden(1); ui->s1_label_level->setHidden(1);
-                ui->s1_label_time->setHidden(1);ui->s1_label_time_sept->setHidden(1);
+                ui->s1_box->layout()->~QLayout();
+                //remove all the other stuff
+                ui->s1_lbl_name->~QFrame();
+                ui->s1_frame_avatar->~QWidget();
+                ui->s1_frame_level->~QWidget();
+                ui->s1_frame_time->~QWidget();
+                //set up new text and layout.
                 ui->s1_lbl_loc->setAlignment(Qt::AlignLeft);
-                ui->s1_lbl_loc->setText(tr("Empty Slot"));
+                ui->s1_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
+                ui->s1_lbl_loc->setText(tr("\nEmpty"));
+                layout->addWidget(ui->btn_s1);    layout->addWidget(ui->s1_lbl_loc);
+                ui->s1_box->setLayout(layout);
                 break;
               case 1:
-                ui->s2_party1->setHidden(1);    ui->s2_party2->setHidden(1);    ui->s2_party3->setHidden(1);
-                ui->s2_lbl_name->setHidden(1);  ui->s2_lbl_gil->setHidden(1);   ui->s2_lbl_hr->setHidden(1);
-                ui->s2_lbl_min->setHidden(1);   ui->s2_label_gil->setHidden(1); ui->s2_label_level->setHidden(1);
-                ui->s2_label_time->setHidden(1);ui->s2_label_time_sept->setHidden(1);
+                ui->s2_box->layout()->~QLayout();
+                //remove all the other stuff
+                ui->s2_lbl_name->~QFrame();
+                ui->s2_frame_avatar->~QWidget();
+                ui->s2_frame_level->~QWidget();
+                ui->s2_frame_time->~QWidget();
+                //set up new text and layout.
                 ui->s2_lbl_loc->setAlignment(Qt::AlignLeft);
-                ui->s2_lbl_loc->setText(tr("Empty Slot"));
+                ui->s2_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
+                ui->s2_lbl_loc->setText(tr("\nEmpty"));
+                layout->addWidget(ui->btn_s2);    layout->addWidget(ui->s2_lbl_loc);
+                ui->s2_box->setLayout(layout);
                 break;
               case 2:
-                ui->s3_party1->setHidden(1);    ui->s3_party2->setHidden(1);    ui->s3_party3->setHidden(1);
-                ui->s3_lbl_name->setHidden(1);  ui->s3_lbl_gil->setHidden(1);   ui->s3_lbl_hr->setHidden(1);
-                ui->s3_lbl_min->setHidden(1);   ui->s3_label_gil->setHidden(1); ui->s3_label_level->setHidden(1);
-                ui->s3_label_time->setHidden(1);ui->s3_label_time_sept->setHidden(1);
+                ui->s3_box->layout()->~QLayout();
+                //remove all the other stuff
+                ui->s3_lbl_name->~QFrame();
+                ui->s3_frame_avatar->~QWidget();
+                ui->s3_frame_level->~QWidget();
+                ui->s3_frame_time->~QWidget();
+                //set up new text and layout.
                 ui->s3_lbl_loc->setAlignment(Qt::AlignLeft);
-                ui->s3_lbl_loc->setText(tr("Empty Slot"));
+                ui->s3_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
+                ui->s3_lbl_loc->setText(tr("\nEmpty"));
+                layout->addWidget(ui->btn_s3);    layout->addWidget(ui->s3_lbl_loc);
+                ui->s3_box->setLayout(layout);
                 break;
               case 3:
-                ui->s4_party1->setHidden(1);    ui->s4_party2->setHidden(1);    ui->s4_party3->setHidden(1);
-                ui->s4_lbl_name->setHidden(1);  ui->s4_lbl_gil->setHidden(1);   ui->s4_lbl_hr->setHidden(1);
-                ui->s4_lbl_min->setHidden(1);   ui->s4_label_gil->setHidden(1); ui->s4_label_level->setHidden(1);
-                ui->s4_label_time->setHidden(1);ui->s4_label_time_sept->setHidden(1);
+                ui->s4_box->layout()->~QLayout();
+                //remove all the other stuff
+                ui->s4_lbl_name->~QFrame();
+                ui->s4_frame_avatar->~QWidget();
+                ui->s4_frame_level->~QWidget();
+                ui->s4_frame_time->~QWidget();
+                //set up new text and layout.
                 ui->s4_lbl_loc->setAlignment(Qt::AlignLeft);
-                ui->s4_lbl_loc->setText(tr("Empty Slot"));
+                ui->s4_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
+                ui->s4_lbl_loc->setText(tr("\nEmpty"));
+                layout->addWidget(ui->btn_s4);    layout->addWidget(ui->s4_lbl_loc);
+                ui->s4_box->setLayout(layout);
                 break;
               case 4:
-                ui->s5_party1->setHidden(1);    ui->s5_party2->setHidden(1);    ui->s5_party3->setHidden(1);
-                ui->s5_lbl_name->setHidden(1);  ui->s5_lbl_gil->setHidden(1);   ui->s5_lbl_hr->setHidden(1);
-                ui->s5_lbl_min->setHidden(1);   ui->s5_label_gil->setHidden(1); ui->s5_label_level->setHidden(1);
-                ui->s5_label_time->setHidden(1);ui->s5_label_time_sept->setHidden(1);
+                ui->s5_box->layout()->~QLayout();
+                //remove all the other stuff
+                ui->s5_lbl_name->~QFrame();
+                ui->s5_frame_avatar->~QWidget();
+                ui->s5_frame_level->~QWidget();
+                ui->s5_frame_time->~QWidget();
+                //set up new text and layout.
                 ui->s5_lbl_loc->setAlignment(Qt::AlignLeft);
-                ui->s5_lbl_loc->setText(tr("Empty Slot"));
+                ui->s5_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
+                ui->s5_lbl_loc->setText(tr("\nEmpty"));
+                layout->addWidget(ui->btn_s5);    layout->addWidget(ui->s5_lbl_loc);
+                ui->s5_box->setLayout(layout);
                 break;
               case 5:
-                ui->s6_party1->setHidden(1);    ui->s6_party2->setHidden(1);    ui->s6_party3->setHidden(1);
-                ui->s6_lbl_name->setHidden(1);  ui->s6_lbl_gil->setHidden(1);   ui->s6_lbl_hr->setHidden(1);
-                ui->s6_lbl_min->setHidden(1);   ui->s6_label_gil->setHidden(1); ui->s6_label_level->setHidden(1);
-                ui->s6_label_time->setHidden(1);ui->s6_label_time_sept->setHidden(1);
+                ui->s6_box->layout()->~QLayout();
+                //remove all the other stuff
+                ui->s6_lbl_name->~QFrame();
+                ui->s6_frame_avatar->~QWidget();
+                ui->s6_frame_level->~QWidget();
+                ui->s6_frame_time->~QWidget();
+                //set up new text and layout.
                 ui->s6_lbl_loc->setAlignment(Qt::AlignLeft);
-                ui->s6_lbl_loc->setText(tr("Empty Slot"));
+                ui->s6_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
+                ui->s6_lbl_loc->setText(tr("\nEmpty"));
+                layout->addWidget(ui->btn_s6);    layout->addWidget(ui->s6_lbl_loc);
+                ui->s6_box->setLayout(layout);
                 break;
               case 6:
-                ui->s7_party1->setHidden(1);    ui->s7_party2->setHidden(1);    ui->s7_party3->setHidden(1);
-                ui->s7_lbl_name->setHidden(1);  ui->s7_lbl_gil->setHidden(1);   ui->s7_lbl_hr->setHidden(1);
-                ui->s7_lbl_min->setHidden(1);   ui->s7_label_gil->setHidden(1); ui->s7_label_level->setHidden(1);
-                ui->s7_label_time->setHidden(1);ui->s7_label_time_sept->setHidden(1);
+                ui->s7_box->layout()->~QLayout();
+                //remove all the other stuff
+                ui->s7_lbl_name->~QFrame();
+                ui->s7_frame_avatar->~QWidget();
+                ui->s7_frame_level->~QWidget();
+                ui->s7_frame_time->~QWidget();
+                //set up new text and layout.
                 ui->s7_lbl_loc->setAlignment(Qt::AlignLeft);
-                ui->s7_lbl_loc->setText(tr("Empty Slot"));
+                ui->s7_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
+                ui->s7_lbl_loc->setText(tr("\nEmpty"));
+                layout->addWidget(ui->btn_s7);    layout->addWidget(ui->s7_lbl_loc);
+                ui->s7_box->setLayout(layout);
                 break;
               case 7:
-                ui->s8_party1->setHidden(1);    ui->s8_party2->setHidden(1);    ui->s8_party3->setHidden(1);
-                ui->s8_lbl_name->setHidden(1);  ui->s8_lbl_gil->setHidden(1);   ui->s8_lbl_hr->setHidden(1);
-                ui->s8_lbl_min->setHidden(1);   ui->s8_label_gil->setHidden(1); ui->s8_label_level->setHidden(1);
-                ui->s8_label_time->setHidden(1);ui->s8_label_time_sept->setHidden(1);
+                ui->s8_box->layout()->~QLayout();
+                //remove all the other stuff
+                ui->s8_lbl_name->~QFrame();
+                ui->s8_frame_avatar->~QWidget();
+                ui->s8_frame_level->~QWidget();
+                ui->s8_frame_time->~QWidget();
+                //set up new text and layout.
                 ui->s8_lbl_loc->setAlignment(Qt::AlignLeft);
-                ui->s8_lbl_loc->setText(tr("Empty Slot"));
+                ui->s8_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
+                ui->s8_lbl_loc->setText(tr("\nEmpty"));
+                layout->addWidget(ui->btn_s8);    layout->addWidget(ui->s8_lbl_loc);
+                ui->s8_box->setLayout(layout);
                 break;
               case 8:
-                ui->s9_party1->setHidden(1);    ui->s9_party2->setHidden(1);    ui->s9_party3->setHidden(1);
-                ui->s9_lbl_name->setHidden(1);  ui->s9_lbl_gil->setHidden(1);   ui->s9_lbl_hr->setHidden(1);
-                ui->s9_lbl_min->setHidden(1);   ui->s9_label_gil->setHidden(1); ui->s9_label_level->setHidden(1);
-                ui->s9_label_time->setHidden(1);ui->s9_label_time_sept->setHidden(1);
+                ui->s9_box->layout()->~QLayout();
+                //remove all the other stuff
+                ui->s9_lbl_name->~QFrame();
+                ui->s9_frame_avatar->~QWidget();
+                ui->s9_frame_level->~QWidget();
+                ui->s9_frame_time->~QWidget();
+                //set up new text and layout.
                 ui->s9_lbl_loc->setAlignment(Qt::AlignLeft);
-                ui->s9_lbl_loc->setText(tr("Empty Slot"));
+                ui->s9_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
+                ui->s9_lbl_loc->setText(tr("\nEmpty"));
+                layout->addWidget(ui->btn_s9);    layout->addWidget(ui->s9_lbl_loc);
+                ui->s9_box->setLayout(layout);
                 break;
               case 9:
-                ui->s10_party1->setHidden(1);    ui->s10_party2->setHidden(1);    ui->s10_party3->setHidden(1);
-                ui->s10_lbl_name->setHidden(1);  ui->s10_lbl_gil->setHidden(1);   ui->s10_lbl_hr->setHidden(1);
-                ui->s10_lbl_min->setHidden(1);   ui->s10_label_gil->setHidden(1); ui->s10_label_level->setHidden(1);
-                ui->s10_label_time->setHidden(1);ui->s10_label_time_sept->setHidden(1);
+                ui->s10_box->layout()->~QLayout();
+                //remove all the other stuff
+                ui->s10_lbl_name->~QFrame();
+                ui->s10_frame_avatar->~QWidget();
+                ui->s10_frame_level->~QWidget();
+                ui->s10_frame_time->~QWidget();
+                //set up new text and layout.
                 ui->s10_lbl_loc->setAlignment(Qt::AlignLeft);
-                ui->s10_lbl_loc->setText(tr("Empty Slot"));
+                ui->s10_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
+                ui->s10_lbl_loc->setText(tr("\nEmpty"));
+                layout->addWidget(ui->btn_s10);    layout->addWidget(ui->s10_lbl_loc);
+                ui->s10_box->setLayout(layout);
                 break;
               case 10:
-                ui->s11_party1->setHidden(1);    ui->s11_party2->setHidden(1);    ui->s11_party3->setHidden(1);
-                ui->s11_lbl_name->setHidden(1);  ui->s11_lbl_gil->setHidden(1);   ui->s11_lbl_hr->setHidden(1);
-                ui->s11_lbl_min->setHidden(1);   ui->s11_label_gil->setHidden(1); ui->s11_label_level->setHidden(1);
-                ui->s11_label_time->setHidden(1);ui->s11_label_time_sept->setHidden(1);
+                ui->s11_box->layout()->~QLayout();
+                //remove all the other stuff
+                ui->s11_lbl_name->~QFrame();
+                ui->s11_frame_avatar->~QWidget();
+                ui->s11_frame_level->~QWidget();
+                ui->s11_frame_time->~QWidget();
+                //set up new text and layout.
                 ui->s11_lbl_loc->setAlignment(Qt::AlignLeft);
-                ui->s11_lbl_loc->setText(tr("Empty Slot"));
+                ui->s11_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
+                ui->s11_lbl_loc->setText(tr("\nEmpty"));
+                layout->addWidget(ui->btn_s11);    layout->addWidget(ui->s11_lbl_loc);
+                ui->s11_box->setLayout(layout);
                 break;
               case 11:
-                ui->s12_party1->setHidden(1);    ui->s12_party2->setHidden(1);    ui->s12_party3->setHidden(1);
-                ui->s12_lbl_name->setHidden(1);  ui->s12_lbl_gil->setHidden(1);   ui->s12_lbl_hr->setHidden(1);
-                ui->s12_lbl_min->setHidden(1);   ui->s12_label_gil->setHidden(1); ui->s12_label_level->setHidden(1);
-                ui->s12_label_time->setHidden(1);ui->s12_label_time_sept->setHidden(1);
+                ui->s12_box->layout()->~QLayout();
+                //remove all the other stuff
+                ui->s12_lbl_name->~QFrame();
+                ui->s12_frame_avatar->~QWidget();
+                ui->s12_frame_level->~QWidget();
+                ui->s12_frame_time->~QWidget();
+                //set up new text and layout.
                 ui->s12_lbl_loc->setAlignment(Qt::AlignLeft);
-                ui->s12_lbl_loc->setText(tr("Empty Slot"));
+                ui->s12_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
+                ui->s12_lbl_loc->setText(tr("\nEmpty"));
+                layout->addWidget(ui->btn_s12);    layout->addWidget(ui->s12_lbl_loc);
+                ui->s12_box->setLayout(layout);
                 break;
               case 12:
-                ui->s13_party1->setHidden(1);    ui->s13_party2->setHidden(1);    ui->s13_party3->setHidden(1);
-                ui->s13_lbl_name->setHidden(1);  ui->s13_lbl_gil->setHidden(1);   ui->s13_lbl_hr->setHidden(1);
-                ui->s13_lbl_min->setHidden(1);   ui->s13_label_gil->setHidden(1); ui->s13_label_level->setHidden(1);
-                ui->s13_label_time->setHidden(1);ui->s13_label_time_sept->setHidden(1);
+                ui->s13_box->layout()->~QLayout();
+                //remove all the other stuff
+                ui->s13_lbl_name->~QFrame();
+                ui->s13_frame_avatar->~QWidget();
+                ui->s13_frame_level->~QWidget();
+                ui->s13_frame_time->~QWidget();
+                //set up new text and layout.
                 ui->s13_lbl_loc->setAlignment(Qt::AlignLeft);
-                ui->s13_lbl_loc->setText(tr("Empty Slot"));
+                ui->s13_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
+                ui->s13_lbl_loc->setText(tr("\nEmpty"));
+                layout->addWidget(ui->btn_s13);    layout->addWidget(ui->s13_lbl_loc);
+                ui->s13_box->setLayout(layout);
                 break;
               case 13:
-                ui->s14_party1->setHidden(1);    ui->s14_party2->setHidden(1);    ui->s14_party3->setHidden(1);
-                ui->s14_lbl_name->setHidden(1);  ui->s14_lbl_gil->setHidden(1);   ui->s14_lbl_hr->setHidden(1);
-                ui->s14_lbl_min->setHidden(1);   ui->s14_label_gil->setHidden(1); ui->s14_label_level->setHidden(1);
-                ui->s14_label_time->setHidden(1);ui->s14_label_time_sept->setHidden(1);
+                ui->s14_box->layout()->~QLayout();
+                //remove all the other stuff
+                ui->s14_lbl_name->~QFrame();
+                ui->s14_frame_avatar->~QWidget();
+                ui->s14_frame_level->~QWidget();
+                ui->s14_frame_time->~QWidget();
+                //set up new text and layout.
                 ui->s14_lbl_loc->setAlignment(Qt::AlignLeft);
-                ui->s14_lbl_loc->setText(tr("Empty Slot"));
+                ui->s14_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
+                ui->s14_lbl_loc->setText(tr("\nEmpty"));
+                layout->addWidget(ui->btn_s14);    layout->addWidget(ui->s14_lbl_loc);
+                ui->s14_box->setLayout(layout);
                 break;
               case 14:
-                ui->s15_party1->setHidden(1);    ui->s15_party2->setHidden(1);    ui->s15_party3->setHidden(1);
-                ui->s15_lbl_name->setHidden(1);  ui->s15_lbl_gil->setHidden(1);   ui->s15_lbl_hr->setHidden(1);
-                ui->s15_lbl_min->setHidden(1);   ui->s15_label_gil->setHidden(1); ui->s15_label_level->setHidden(1);
-                ui->s15_label_time->setHidden(1);ui->s15_label_time_sept->setHidden(1);
+                ui->s15_box->layout()->~QLayout();
+                //remove all the other stuff
+                ui->s15_lbl_name->~QFrame();
+                ui->s15_frame_avatar->~QWidget();
+                ui->s15_frame_level->~QWidget();
+                ui->s15_frame_time->~QWidget();
+                //set up new text and layout.
                 ui->s15_lbl_loc->setAlignment(Qt::AlignLeft);
-                ui->s15_lbl_loc->setText(tr("Empty Slot"));
+                ui->s15_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
+                ui->s15_lbl_loc->setText(tr("\nEmpty"));
+                layout->addWidget(ui->btn_s15);    layout->addWidget(ui->s15_lbl_loc);
+                ui->s15_box->setLayout(layout);
                 break;
             }
         }
@@ -492,175 +583,284 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
 
             if(!invalid)
             {
+            //QBoxLayout *layout = new QBoxLayout;
+            QHBoxLayout *hbox = new QHBoxLayout;
+            QVBoxLayout *vbox = new QVBoxLayout;
               switch(s)
               {
+
                 case 0:
                   ui->s1_party1->setPixmap(icons[s].icon());
                   connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s1_party1, SLOT(setPixmap(QPixmap)));
-                  ui->s1_party2->setHidden(1);                  ui->s1_party3->setHidden(1);
-                  ui->s1_lbl_name->setHidden(1);                ui->s1_lbl_gil->setHidden(1);
-                  ui->s1_lbl_hr->setHidden(1);                  ui->s1_lbl_min->setHidden(1);
-                  ui->s1_label_gil->setHidden(1);               ui->s1_label_level->setHidden(1);
-                  ui->s1_label_time->setHidden(1);              ui->s1_label_time_sept->setHidden(1);
-                  ui->s1_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s1_box->layout()->~QLayout();
+                  ui->s1_frame_avatar->setHidden(1);
+                  ui->s1_lbl_name->~QFrame();
+                  ui->s1_frame_level->~QWidget();
+                  ui->s1_frame_time->~QWidget();
+                  hbox->addWidget(ui->s1_party1);
+                  hbox->addWidget(ui->s1_lbl_loc);
+                  vbox->addWidget(ui->btn_s1);
+                  vbox->addItem(hbox);
+                  ui->s1_box->setLayout(vbox);
+                  ui->s1_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
                   ui->s1_lbl_loc->setAlignment(Qt::AlignLeft);
+                  ui->s1_lbl_loc->setStyleSheet("font-size: 10pt;");
+                  ui->s1_party1->show();
                   break;
                 case 1:
                   ui->s2_party1->setPixmap(icons[s].icon());
                   connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s2_party1, SLOT(setPixmap(QPixmap)));
-                  ui->s2_party2->setHidden(1);                  ui->s2_party3->setHidden(1);
-                  ui->s2_lbl_name->setHidden(1);                ui->s2_lbl_gil->setHidden(1);
-                  ui->s2_lbl_hr->setHidden(1);                  ui->s2_lbl_min->setHidden(1);
-                  ui->s2_label_gil->setHidden(1);               ui->s2_label_level->setHidden(1);
-                  ui->s2_label_time->setHidden(1);              ui->s2_label_time_sept->setHidden(1);
-                  ui->s2_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s2_box->layout()->~QLayout();
+                  ui->s2_frame_avatar->setHidden(1);
+                  ui->s2_lbl_name->~QFrame();
+                  ui->s2_frame_level->~QWidget();
+                  ui->s2_frame_time->~QWidget();
+                  hbox->addWidget(ui->s2_party1);
+                  hbox->addWidget(ui->s2_lbl_loc);
+                  vbox->addWidget(ui->btn_s2);
+                  vbox->addItem(hbox);
+                  ui->s2_box->setLayout(vbox);
+                  ui->s2_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
                   ui->s2_lbl_loc->setAlignment(Qt::AlignLeft);
+                  ui->s2_lbl_loc->setStyleSheet("font-size: 10pt;");
+                  ui->s2_party1->show();
                   break;
                 case 2:
                   ui->s3_party1->setPixmap(icons[s].icon());
                   connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s3_party1, SLOT(setPixmap(QPixmap)));
-                  ui->s3_party2->setHidden(1);                  ui->s3_party3->setHidden(1);
-                  ui->s3_lbl_name->setHidden(1);                ui->s3_lbl_gil->setHidden(1);
-                  ui->s3_lbl_hr->setHidden(1);                  ui->s3_lbl_min->setHidden(1);
-                  ui->s3_label_gil->setHidden(1);               ui->s3_label_level->setHidden(1);
-                  ui->s3_label_time->setHidden(1);              ui->s3_label_time_sept->setHidden(1);
-                  ui->s3_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s3_box->layout()->~QLayout();
+                  ui->s3_frame_avatar->setHidden(1);
+                  ui->s3_lbl_name->~QFrame();
+                  ui->s3_frame_level->~QWidget();
+                  ui->s3_frame_time->~QWidget();
+                  hbox->addWidget(ui->s3_party1);
+                  hbox->addWidget(ui->s3_lbl_loc);
+                  vbox->addWidget(ui->btn_s3);
+                  vbox->addItem(hbox);
+                  ui->s3_box->setLayout(vbox);
+                  ui->s3_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
                   ui->s3_lbl_loc->setAlignment(Qt::AlignLeft);
+                  ui->s3_lbl_loc->setStyleSheet("font-size: 10pt;");
+                  ui->s3_party1->show();
                   break;
                 case 3:
                   ui->s4_party1->setPixmap(icons[s].icon());
                   connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s4_party1, SLOT(setPixmap(QPixmap)));
-                  ui->s4_party2->setHidden(1);                  ui->s4_party3->setHidden(1);
-                  ui->s4_lbl_name->setHidden(1);                ui->s4_lbl_gil->setHidden(1);
-                  ui->s4_lbl_hr->setHidden(1);                  ui->s4_lbl_min->setHidden(1);
-                  ui->s4_label_gil->setHidden(1);               ui->s4_label_level->setHidden(1);
-                  ui->s4_label_time->setHidden(1);              ui->s4_label_time_sept->setHidden(1);
-                  ui->s4_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s4_box->layout()->~QLayout();
+                  ui->s4_frame_avatar->setHidden(1);
+                  ui->s4_lbl_name->~QFrame();
+                  ui->s4_frame_level->~QWidget();
+                  ui->s4_frame_time->~QWidget();
+                  hbox->addWidget(ui->s4_party1);
+                  hbox->addWidget(ui->s4_lbl_loc);
+                  vbox->addWidget(ui->btn_s4);
+                  vbox->addItem(hbox);
+                  ui->s4_box->setLayout(vbox);
+                  ui->s4_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
                   ui->s4_lbl_loc->setAlignment(Qt::AlignLeft);
+                  ui->s4_lbl_loc->setStyleSheet("font-size: 10pt;");
+                  ui->s4_party1->show();
                   break;
                 case 4:
                   ui->s5_party1->setPixmap(icons[s].icon());
                   connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s5_party1, SLOT(setPixmap(QPixmap)));
-                  ui->s5_party2->setHidden(1);                  ui->s5_party3->setHidden(1);
-                  ui->s5_lbl_name->setHidden(1);                ui->s5_lbl_gil->setHidden(1);
-                  ui->s5_lbl_hr->setHidden(1);                  ui->s5_lbl_min->setHidden(1);
-                  ui->s5_label_gil->setHidden(1);               ui->s5_label_level->setHidden(1);
-                  ui->s5_label_time->setHidden(1);              ui->s5_label_time_sept->setHidden(1);
-                  ui->s5_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s5_box->layout()->~QLayout();
+                  ui->s5_frame_avatar->setHidden(1);
+                  ui->s5_lbl_name->~QFrame();
+                  ui->s5_frame_level->~QWidget();
+                  ui->s5_frame_time->~QWidget();
+                  hbox->addWidget(ui->s5_party1);
+                  hbox->addWidget(ui->s5_lbl_loc);
+                  vbox->addWidget(ui->btn_s5);
+                  vbox->addItem(hbox);
+                  ui->s5_box->setLayout(vbox);
+                  ui->s5_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
                   ui->s5_lbl_loc->setAlignment(Qt::AlignLeft);
+                  ui->s5_lbl_loc->setStyleSheet("font-size: 10pt;");
+                  ui->s5_party1->show();
                   break;
                 case 5:
                   ui->s6_party1->setPixmap(icons[s].icon());
                   connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s6_party1, SLOT(setPixmap(QPixmap)));
-                  ui->s6_party2->setHidden(1);                  ui->s6_party3->setHidden(1);
-                  ui->s6_lbl_name->setHidden(1);                ui->s6_lbl_gil->setHidden(1);
-                  ui->s6_lbl_hr->setHidden(1);                  ui->s6_lbl_min->setHidden(1);
-                  ui->s6_label_gil->setHidden(1);               ui->s6_label_level->setHidden(1);
-                  ui->s6_label_time->setHidden(1);              ui->s6_label_time_sept->setHidden(1);
-                  ui->s6_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s6_box->layout()->~QLayout();
+                  ui->s6_frame_avatar->setHidden(1);
+                  ui->s6_lbl_name->~QFrame();
+                  ui->s6_frame_level->~QWidget();
+                  ui->s6_frame_time->~QWidget();
+                  hbox->addWidget(ui->s6_party1);
+                  hbox->addWidget(ui->s6_lbl_loc);
+                  vbox->addWidget(ui->btn_s6);
+                  vbox->addItem(hbox);
+                  ui->s6_box->setLayout(vbox);
+                  ui->s6_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
                   ui->s6_lbl_loc->setAlignment(Qt::AlignLeft);
+                  ui->s6_lbl_loc->setStyleSheet("font-size: 10pt;");
+                  ui->s6_party1->show();
                   break;
                 case 6:
                   ui->s7_party1->setPixmap(icons[s].icon());
                   connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s7_party1, SLOT(setPixmap(QPixmap)));
-                  ui->s7_party2->setHidden(1);                  ui->s7_party3->setHidden(1);
-                  ui->s7_lbl_name->setHidden(1);                ui->s7_lbl_gil->setHidden(1);
-                  ui->s7_lbl_hr->setHidden(1);                  ui->s7_lbl_min->setHidden(1);
-                  ui->s7_label_gil->setHidden(1);               ui->s7_label_level->setHidden(1);
-                  ui->s7_label_time->setHidden(1);              ui->s7_label_time_sept->setHidden(1);
-                  ui->s7_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s7_box->layout()->~QLayout();
+                  ui->s7_frame_avatar->setHidden(1);
+                  ui->s7_lbl_name->~QFrame();
+                  ui->s7_frame_level->~QWidget();
+                  ui->s7_frame_time->~QWidget();
+                  hbox->addWidget(ui->s7_party1);
+                  hbox->addWidget(ui->s7_lbl_loc);
+                  vbox->addWidget(ui->btn_s7);
+                  vbox->addItem(hbox);
+                  ui->s7_box->setLayout(vbox);
+                  ui->s7_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
                   ui->s7_lbl_loc->setAlignment(Qt::AlignLeft);
+                  ui->s7_lbl_loc->setStyleSheet("font-size: 10pt;");
+                  ui->s7_party1->show();
                   break;
                 case 7:
                   ui->s8_party1->setPixmap(icons[s].icon());
                   connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s8_party1, SLOT(setPixmap(QPixmap)));
-                  ui->s8_party2->setHidden(1);                  ui->s8_party3->setHidden(1);
-                  ui->s8_lbl_name->setHidden(1);                ui->s8_lbl_gil->setHidden(1);
-                  ui->s8_lbl_hr->setHidden(1);                  ui->s8_lbl_min->setHidden(1);
-                  ui->s8_label_gil->setHidden(1);               ui->s8_label_level->setHidden(1);
-                  ui->s8_label_time->setHidden(1);              ui->s8_label_time_sept->setHidden(1);
-                  ui->s8_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s8_box->layout()->~QLayout();
+                  ui->s8_frame_avatar->setHidden(1);
+                  ui->s8_lbl_name->~QFrame();
+                  ui->s8_frame_level->~QWidget();
+                  ui->s8_frame_time->~QWidget();
+                  hbox->addWidget(ui->s8_party1);
+                  hbox->addWidget(ui->s8_lbl_loc);
+                  vbox->addWidget(ui->btn_s8);
+                  vbox->addItem(hbox);
+                  ui->s8_box->setLayout(vbox);
+                  ui->s8_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
                   ui->s8_lbl_loc->setAlignment(Qt::AlignLeft);
+                  ui->s8_lbl_loc->setStyleSheet("font-size: 10pt;");
+                  ui->s8_party1->show();
                   break;
                 case 8:
                   ui->s9_party1->setPixmap(icons[s].icon());
                   connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s9_party1, SLOT(setPixmap(QPixmap)));
-                  ui->s9_party2->setHidden(1);                  ui->s9_party3->setHidden(1);
-                  ui->s9_lbl_name->setHidden(1);                ui->s9_lbl_gil->setHidden(1);
-                  ui->s9_lbl_hr->setHidden(1);                  ui->s9_lbl_min->setHidden(1);
-                  ui->s9_label_gil->setHidden(1);               ui->s9_label_level->setHidden(1);
-                  ui->s9_label_time->setHidden(1);              ui->s9_label_time_sept->setHidden(1);
-                  ui->s9_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s9_box->layout()->~QLayout();
+                  ui->s9_frame_avatar->setHidden(1);
+                  ui->s9_lbl_name->~QFrame();
+                  ui->s9_frame_level->~QWidget();
+                  ui->s9_frame_time->~QWidget();
+                  hbox->addWidget(ui->s9_party1);
+                  hbox->addWidget(ui->s9_lbl_loc);
+                  vbox->addWidget(ui->btn_s9);
+                  vbox->addItem(hbox);
+                  ui->s9_box->setLayout(vbox);
+                  ui->s9_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
                   ui->s9_lbl_loc->setAlignment(Qt::AlignLeft);
+                  ui->s9_lbl_loc->setStyleSheet("font-size: 10pt;");
+                  ui->s9_party1->show();
                   break;
                 case 9:
                   ui->s10_party1->setPixmap(icons[s].icon());
                   connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s10_party1, SLOT(setPixmap(QPixmap)));
-                  ui->s10_party2->setHidden(1);                  ui->s10_party3->setHidden(1);
-                  ui->s10_lbl_name->setHidden(1);                ui->s10_lbl_gil->setHidden(1);
-                  ui->s10_lbl_hr->setHidden(1);                  ui->s10_lbl_min->setHidden(1);
-                  ui->s10_label_gil->setHidden(1);               ui->s10_label_level->setHidden(1);
-                  ui->s10_label_time->setHidden(1);              ui->s10_label_time_sept->setHidden(1);
-                  ui->s10_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s10_box->layout()->~QLayout();
+                  ui->s10_frame_avatar->setHidden(1);
+                  ui->s10_lbl_name->~QFrame();
+                  ui->s10_frame_level->~QWidget();
+                  ui->s10_frame_time->~QWidget();
+                  hbox->addWidget(ui->s10_party1);
+                  hbox->addWidget(ui->s10_lbl_loc);
+                  vbox->addWidget(ui->btn_s10);
+                  vbox->addItem(hbox);
+                  ui->s10_box->setLayout(vbox);
+                  ui->s10_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
                   ui->s10_lbl_loc->setAlignment(Qt::AlignLeft);
+                  ui->s10_lbl_loc->setStyleSheet("font-size: 10pt;");
+                  ui->s10_party1->show();
                   break;
                 case 10:
                   ui->s11_party1->setPixmap(icons[s].icon());
                   connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s11_party1, SLOT(setPixmap(QPixmap)));
-                  ui->s11_party2->setHidden(1);                  ui->s11_party3->setHidden(1);
-                  ui->s11_lbl_name->setHidden(1);                ui->s11_lbl_gil->setHidden(1);
-                  ui->s11_lbl_hr->setHidden(1);                  ui->s11_lbl_min->setHidden(1);
-                  ui->s11_label_gil->setHidden(1);               ui->s11_label_level->setHidden(1);
-                  ui->s11_label_time->setHidden(1);              ui->s11_label_time_sept->setHidden(1);
-                  ui->s11_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s11_box->layout()->~QLayout();
+                  ui->s11_frame_avatar->setHidden(1);
+                  ui->s11_lbl_name->~QFrame();
+                  ui->s11_frame_level->~QWidget();
+                  ui->s11_frame_time->~QWidget();
+                  hbox->addWidget(ui->s11_party1);
+                  hbox->addWidget(ui->s11_lbl_loc);
+                  vbox->addWidget(ui->btn_s11);
+                  vbox->addItem(hbox);
+                  ui->s11_box->setLayout(vbox);
+                  ui->s11_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
                   ui->s11_lbl_loc->setAlignment(Qt::AlignLeft);
+                  ui->s11_lbl_loc->setStyleSheet("font-size: 10pt;");
+                  ui->s11_party1->show();
                   break;
                 case 11:
                   ui->s12_party1->setPixmap(icons[s].icon());
                   connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s12_party1, SLOT(setPixmap(QPixmap)));
-                  ui->s12_party2->setHidden(1);                  ui->s12_party3->setHidden(1);
-                  ui->s1_lbl_name->setHidden(1);                ui->s12_lbl_gil->setHidden(1);
-                  ui->s12_lbl_hr->setHidden(1);                  ui->s12_lbl_min->setHidden(1);
-                  ui->s12_label_gil->setHidden(1);               ui->s12_label_level->setHidden(1);
-                  ui->s12_label_time->setHidden(1);              ui->s12_label_time_sept->setHidden(1);
-                  ui->s12_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s12_box->layout()->~QLayout();
+                  ui->s12_frame_avatar->setHidden(1);
+                  ui->s12_lbl_name->~QFrame();
+                  ui->s12_frame_level->~QWidget();
+                  ui->s12_frame_time->~QWidget();
+                  hbox->addWidget(ui->s12_party1);
+                  hbox->addWidget(ui->s12_lbl_loc);
+                  vbox->addWidget(ui->btn_s12);
+                  vbox->addItem(hbox);
+                  ui->s12_box->setLayout(vbox);
+                  ui->s12_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
                   ui->s12_lbl_loc->setAlignment(Qt::AlignLeft);
+                  ui->s12_lbl_loc->setStyleSheet("font-size: 10pt;");
+                  ui->s12_party1->show();
                   break;
                 case 12:
                   ui->s13_party1->setPixmap(icons[s].icon());
                   connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s13_party1, SLOT(setPixmap(QPixmap)));
-                  ui->s13_party2->setHidden(1);                  ui->s13_party3->setHidden(1);
-                  ui->s13_lbl_name->setHidden(1);                ui->s13_lbl_gil->setHidden(1);
-                  ui->s13_lbl_hr->setHidden(1);                  ui->s13_lbl_min->setHidden(1);
-                  ui->s13_label_gil->setHidden(1);               ui->s13_label_level->setHidden(1);
-                  ui->s13_label_time->setHidden(1);              ui->s13_label_time_sept->setHidden(1);
-                  ui->s13_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s13_box->layout()->~QLayout();
+                  ui->s13_frame_avatar->setHidden(1);
+                  ui->s13_lbl_name->~QFrame();
+                  ui->s13_frame_level->~QWidget();
+                  ui->s13_frame_time->~QWidget();
+                  hbox->addWidget(ui->s13_party1);
+                  hbox->addWidget(ui->s13_lbl_loc);
+                  vbox->addWidget(ui->btn_s13);
+                  vbox->addItem(hbox);
+                  ui->s13_box->setLayout(vbox);
+                  ui->s13_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
                   ui->s13_lbl_loc->setAlignment(Qt::AlignLeft);
+                  ui->s13_lbl_loc->setStyleSheet("font-size: 10pt;");
+                  ui->s13_party1->show();
                   break;
                 case 13:
                   ui->s14_party1->setPixmap(icons[s].icon());
                   connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s14_party1, SLOT(setPixmap(QPixmap)));
-                  ui->s14_party2->setHidden(1);                  ui->s14_party3->setHidden(1);
-                  ui->s14_lbl_name->setHidden(1);                ui->s14_lbl_gil->setHidden(1);
-                  ui->s14_lbl_hr->setHidden(1);                  ui->s14_lbl_min->setHidden(1);
-                  ui->s14_label_gil->setHidden(1);               ui->s14_label_level->setHidden(1);
-                  ui->s14_label_time->setHidden(1);              ui->s14_label_time_sept->setHidden(1);
-                  ui->s14_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s14_box->layout()->~QLayout();
+                  ui->s14_frame_avatar->setHidden(1);
+                  ui->s14_lbl_name->~QFrame();
+                  ui->s14_frame_level->~QWidget();
+                  ui->s14_frame_time->~QWidget();
+                  hbox->addWidget(ui->s14_party1);
+                  hbox->addWidget(ui->s14_lbl_loc);
+                  vbox->addWidget(ui->btn_s14);
+                  vbox->addItem(hbox);
+                  ui->s14_box->setLayout(vbox);
+                  ui->s14_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
                   ui->s14_lbl_loc->setAlignment(Qt::AlignLeft);
+                  ui->s14_lbl_loc->setStyleSheet("font-size: 10pt;");
+                  ui->s14_party1->show();
                   break;
                 case 14:
                   ui->s15_party1->setPixmap(icons[s].icon());
                   connect(&icons[s], SIGNAL(nextIcon(QPixmap)), ui->s15_party1, SLOT(setPixmap(QPixmap)));
-                  ui->s15_party2->setHidden(1);                  ui->s15_party3->setHidden(1);
-                  ui->s15_lbl_name->setHidden(1);                ui->s15_lbl_gil->setHidden(1);
-                  ui->s15_lbl_hr->setHidden(1);                  ui->s15_lbl_min->setHidden(1);
-                  ui->s15_label_gil->setHidden(1);               ui->s15_label_level->setHidden(1);
-                  ui->s15_label_time->setHidden(1);              ui->s15_label_time_sept->setHidden(1);
-                  ui->s15_lbl_loc->setText(codec->toUnicode(desc));
+                  ui->s15_box->layout()->~QLayout();
+                  ui->s15_frame_avatar->setHidden(1);
+                  ui->s15_lbl_name->~QFrame();
+                  ui->s15_frame_level->~QWidget();
+                  ui->s15_frame_time->~QWidget();
+                  hbox->addWidget(ui->s15_party1);
+                  hbox->addWidget(ui->s15_lbl_loc);
+                  vbox->addWidget(ui->btn_s15);
+                  vbox->addItem(hbox);
+                  ui->s15_box->setLayout(vbox);
+                  ui->s15_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
                   ui->s15_lbl_loc->setAlignment(Qt::AlignLeft);
+                  ui->s15_lbl_loc->setStyleSheet("font-size: 10pt;");
+                  ui->s15_party1->show();
                   break;
               }
-            }
+           }
         }
     }
 }//end of new ui
