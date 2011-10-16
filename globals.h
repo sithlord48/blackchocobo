@@ -49,8 +49,6 @@ public:
 
 class Text{
 private:
-    QString Char_list;
-    QString FF7_list;
     QString eng;
     QString jap;
     QString jap_fa;
@@ -58,13 +56,12 @@ private:
     QString jap_fc;
     QString jap_fd;
     QString jap_fe;
-    bool _ja;
+    bool in_ja;
     QString character(quint8 ord, quint8 table);
 public:
     Text();
     void init(bool);
     QString PC(QByteArray text);
-    //quint8 FF7(int);
     QByteArray FF7(QString string);
 };
 
