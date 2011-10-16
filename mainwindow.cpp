@@ -21,7 +21,7 @@
 /*~~~~~GLOBALS~~~~~~*/
 //see the Header file private data members of the class.
 /*~~~~~~EXTERNS~~~~~~~~*/
-//these need to be part of the ff7names class at some point.
+//these should be part of the ff7names class at some point.
 extern quint32 chartnls[11][99]; //  Chars tnl Table (cloud - sephiroth)
 extern quint32 charlvls[11][99]; //  Chars lvl Table
 /*~~~~~~~~GUI Set Up~~~~~~~*/
@@ -1455,6 +1455,7 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
 void MainWindow::charupdate(void)
 {
     load=true;
+    QByteArray text;
     //clear everthing.
     ui->cb_id->setText("");
     ui->cb_id->setChecked(false);
@@ -1483,9 +1484,11 @@ void MainWindow::charupdate(void)
     ui->combo_id->setCurrentIndex(ff7->slot[s].chars[curchar].id);
     for (int n=0;n<12;n++)
     {
-        if(ff7->slot[s].chars[curchar].name[n] ==0xFF){break;}
-        else{this->ui->line_name->setText( this->ui->line_name->text() + chPC.PC(ff7->slot[s].chars[curchar].name[n]));}
+        text.append(ff7->slot[s].chars[curchar].name[n]);
+        //if(ff7->slot[s].chars[curchar].name[n] ==0xFF){break;}
+        //else{this->ui->line_name->setText( this->ui->line_name->text() + chPC.PC(ff7->slot[s].chars[curchar].name[n]));}
     }
+    ui->line_name->setText(chPC.PC(text));
     ui->sb_exp->setValue(ff7->slot[s].chars[curchar].exp);
     ui->pbar_level->setValue(ff7->slot[s].chars[curchar].flags[2]);
     ui->lcd_next->display(double(ff7->slot[s].chars[curchar].expNext));
@@ -2718,7 +2721,7 @@ void MainWindow::itemupdate()
 void MainWindow::guirefresh(void)
 {
     load = true; //used to cheat the removal of "apply buttons"
-
+    QByteArray text;
     /*~~~~Check for SG type and ff7~~~~*/
 
     if(ff7->SG_TYPE != "PC" && ff7->SG_TYPE !="PSX")
@@ -2917,9 +2920,11 @@ void MainWindow::guirefresh(void)
     ui->line_location->clear();
     for (int loc=0; loc<32;loc++)
     {
-        if (ff7->slot[s].location[loc]==0xFF){break;}
-        else{ui->line_location->setText( ui->line_location->text() + chPC.PC(ff7->slot[s].location[loc]));}
+        text.append(ff7->slot[s].location[loc]);
+        //if (ff7->slot[s].location[loc]==0xFF){break;}
+        //else{ui->line_location->setText( ui->line_location->text() + chPC.PC(ff7->slot[s].location[loc]));}
     }
+    ui->line_location->setText(chPC.PC(text));
     ui->sb_map_id->setValue(ff7->slot[s].mapid);
     ui->sb_loc_id->setValue(ff7->slot[s].locationid);
 
@@ -3194,6 +3199,7 @@ load=false;
 void MainWindow::chocobo_refresh()
 {
     load=true;
+    QByteArray text;
     ui->sb_stables_owned->setValue(ff7->slot[s].stables);
     ui->lcd_stables_occupied->display(ff7->slot[s].stablesoccupied);
 
@@ -3223,12 +3229,14 @@ void MainWindow::chocobo_refresh()
     else{ui->cb_c6_mated->setChecked(0);}
 
     ui->line_c1_name->clear();
+    text.clear();
     for (int n=0;n<6;n++)
-    {
-        if(ff7->slot[s].chocobonames[0][n] ==0xFF){break;}
-        else{this->ui->line_c1_name->setText( ui->line_c1_name->text() + chPC.PC(ff7->slot[s].chocobonames[0][n]));}
+    {   text.append(ff7->slot[s].chocobonames[0][n]);
+        //if(ff7->slot[s].chocobonames[0][n] ==0xFF){break;}
+        //else{this->ui->line_c1_name->setText( ui->line_c1_name->text() + chPC.PC(ff7->slot[s].chocobonames[0][n]));}
     }
-    if(ui->line_c1_name->text()=="      "){ui->line_c1_name->clear();}
+    //if(ui->line_c1_name->text()=="      "){ui->line_c1_name->clear();}
+    ui->line_c1_name->setText(chPC.PC(text));
     //ui->cb_c1_personality->setCurrentIndex(ff7->slot[s].chocobos[0].personality); //need more data for this.
     ui->sb_c1_sprint->setValue(ff7->slot[s].chocobos[0].sprintspd);
     ui->sb_c1_maxsprint->setValue(ff7->slot[s].chocobos[0].maxsprintspd);
@@ -3246,12 +3254,15 @@ void MainWindow::chocobo_refresh()
     // end choco 1
 
     ui->line_c2_name->clear();
+    text.clear();
     for (int n=0;n<6;n++)
     {
-        if(ff7->slot[s].chocobonames[1][n] ==0xFF){break;}
-        else{this->ui->line_c2_name->setText( ui->line_c2_name->text() + chPC.PC(ff7->slot[s].chocobonames[1][n]));}
+        text.append(ff7->slot[s].chocobonames[1][n]);
+        //if(ff7->slot[s].chocobonames[1][n] ==0xFF){break;}
+        //else{this->ui->line_c2_name->setText( ui->line_c2_name->text() + chPC.PC(ff7->slot[s].chocobonames[1][n]));}
     }
-    if(ui->line_c2_name->text()=="      "){ui->line_c2_name->clear();}
+    //if(ui->line_c2_name->text()=="      "){ui->line_c2_name->clear();}
+    ui->line_c2_name->setText(chPC.PC(text));
     //ui->cb_c2_personality->setCurrentIndex(ff7->slot[s].chocobos[1].personality); //need more data for this.
     ui->sb_c2_sprint->setValue(ff7->slot[s].chocobos[1].sprintspd);
     ui->sb_c2_maxsprint->setValue(ff7->slot[s].chocobos[1].maxsprintspd);
@@ -3269,12 +3280,15 @@ void MainWindow::chocobo_refresh()
     //end Choco 2
 
     ui->line_c3_name->clear();
+    text.clear();
     for (int n=0;n<6;n++)
     {
-        if(ff7->slot[s].chocobonames[2][n] ==0xFF){break;}
-        else{this->ui->line_c3_name->setText( ui->line_c3_name->text() + chPC.PC(ff7->slot[s].chocobonames[2][n]));}
+        text.append(ff7->slot[s].chocobonames[2][n]);
+        //if(ff7->slot[s].chocobonames[2][n] ==0xFF){break;}
+        //else{this->ui->line_c3_name->setText( ui->line_c3_name->text() + chPC.PC(ff7->slot[s].chocobonames[2][n]));}
     }
-    if(ui->line_c3_name->text()=="      "){ui->line_c3_name->clear();}
+    //if(ui->line_c3_name->text()=="      "){ui->line_c3_name->clear();}
+    ui->line_c3_name->setText(chPC.PC(text));
     //ui->cb_c3_personality->setCurrentIndex(ff7->slot[s].chocobos[2].personality); //need more data for this.
     ui->sb_c3_sprint->setValue(ff7->slot[s].chocobos[2].sprintspd);
     ui->sb_c3_maxsprint->setValue(ff7->slot[s].chocobos[2].maxsprintspd);
@@ -3292,12 +3306,15 @@ void MainWindow::chocobo_refresh()
     // end choco 3
 
     ui->line_c4_name->clear();
+    text.clear();
     for (int n=0;n<6;n++)
     {
-        if(ff7->slot[s].chocobonames[3][n] ==0xFF){break;}
-        else{this->ui->line_c4_name->setText( ui->line_c4_name->text() + chPC.PC(ff7->slot[s].chocobonames[3][n]));}
+        text.append(ff7->slot[s].chocobonames[3][n]);
+        //if(ff7->slot[s].chocobonames[3][n] ==0xFF){break;}
+        //else{this->ui->line_c4_name->setText( ui->line_c4_name->text() + chPC.PC(ff7->slot[s].chocobonames[3][n]));}
     }
-    if(ui->line_c4_name->text()=="      "){ui->line_c4_name->clear();}
+    //if(ui->line_c4_name->text()=="      "){ui->line_c4_name->clear();}
+    ui->line_c4_name->setText(chPC.PC(text));
     //ui->cb_c4_personality->setCurrentIndex(ff7->slot[s].chocobos[3].personality); //need more data for this.
     ui->sb_c4_sprint->setValue(ff7->slot[s].chocobos[3].sprintspd);
     ui->sb_c4_maxsprint->setValue(ff7->slot[s].chocobos[3].maxsprintspd);
@@ -3315,12 +3332,15 @@ void MainWindow::chocobo_refresh()
     // end choco 4
 
     ui->line_c5_name->clear();
+    text.clear();
     for (int n=0;n<6;n++)
     {
-        if(ff7->slot[s].chocobonames[4][n] ==0xFF){break;}
-        else{this->ui->line_c5_name->setText( ui->line_c5_name->text() + chPC.PC(ff7->slot[s].chocobonames[4][n]));}
+        text.append(ff7->slot[s].chocobonames[4][n]);
+        //if(ff7->slot[s].chocobonames[4][n] ==0xFF){break;}
+        //else{this->ui->line_c5_name->setText( ui->line_c5_name->text() + chPC.PC(ff7->slot[s].chocobonames[4][n]));}
     }
-    if(ui->line_c5_name->text()=="      "){ui->line_c5_name->clear();}
+    //if(ui->line_c5_name->text()=="      "){ui->line_c5_name->clear();}
+    ui->line_c5_name->setText(chPC.PC(text));
     //ui->cb_c5_personality->setCurrentIndex(ff7->slot[s].choco56[0].personality); //need more data for this.
     ui->sb_c5_sprint->setValue(ff7->slot[s].choco56[0].sprintspd);
     ui->sb_c5_maxsprint->setValue(ff7->slot[s].choco56[0].maxsprintspd);
@@ -3337,12 +3357,15 @@ void MainWindow::chocobo_refresh()
     ui->sb_c5_personality->setValue(ff7->slot[s].choco56[0].personality);
     // end choco 5
     ui->line_c6_name->clear();
+    text.clear();
     for (int n=0;n<6;n++)
     {
-        if(ff7->slot[s].chocobonames[5][n] ==0xFF){break;}
-        else{this->ui->line_c6_name->setText( ui->line_c6_name->text() + chPC.PC(ff7->slot[s].chocobonames[5][n]));}
+        text.append(ff7->slot[s].chocobonames[5][n]);
+        //if(ff7->slot[s].chocobonames[5][n] ==0xFF){break;}
+        //else{this->ui->line_c6_name->setText( ui->line_c6_name->text() + chPC.PC(ff7->slot[s].chocobonames[5][n]));}
     }
-    if(ui->line_c6_name->text()=="      "){ui->line_c6_name->clear();}
+    //if(ui->line_c6_name->text()=="      "){ui->line_c6_name->clear();}
+    ui->line_c6_name->setText(chPC.PC(text));
     //ui->cb_c6_personality->setCurrentIndex(ff7->slot[s].choco56[1].personality); //need more data for this.
     ui->sb_c6_sprint->setValue(ff7->slot[s].choco56[1].sprintspd);
     ui->sb_c6_maxsprint->setValue(ff7->slot[s].choco56[1].maxsprintspd);

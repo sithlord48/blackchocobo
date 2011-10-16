@@ -53,10 +53,16 @@ private:
     QString FF7_list;
     QString eng;
     QString jap;
+    QString jap_fa;
+    QString jap_fb;
+    QString jap_fc;
+    QString jap_fd;
+    QString jap_fe;
+    bool _ja;
 public:
     Text();
     void init(bool);
-    QString PC(int);
+    QString PC(QByteArray text);
     quint8 FF7(int);
 };
 
