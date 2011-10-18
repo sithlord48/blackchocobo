@@ -111,7 +111,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_actionPaste_Slot_activated();
     void on_actionShow_Options_triggered();
     void on_action_auto_char_growth_triggered(bool checked);
-    void on_action_show_test_data_toggled(bool checked);
+    void on_action_show_debug_toggled(bool checked);
     /*Language and Region Data*/
     void on_action_Lang_en_triggered();
     void on_action_Lang_es_triggered();

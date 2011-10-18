@@ -109,10 +109,10 @@ MainWindow::MainWindow(QWidget *parent,FF7 *ff7data,QSettings *config_data)
     // load settings
     if(settings->value("show_test").toBool())
     {
-        ui->action_show_test_data->setChecked(1);
-        ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
+        ui->action_show_debug->setChecked(1);
+        ui->action_show_debug->setIcon(QIcon(":/icon/debug_sel"));
     }
-    else{ui->action_show_test_data->setChecked(0);}
+    else{ui->action_show_debug->setChecked(0);}
 
     //are any empty? if so set them accordingly.
     if(!settings->value("font-size").toString().isEmpty()){QApplication::setFont(QFont(QApplication::font().family(),settings->value("font-size").toInt(),-1,false));}
@@ -1073,7 +1073,7 @@ void MainWindow::on_action_auto_char_growth_triggered(bool checked)
         ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_unchecked"));
     }
 }
-void MainWindow::on_action_show_test_data_toggled(bool checked)
+void MainWindow::on_action_show_debug_toggled(bool checked)
 {
     if(checked)
     {
@@ -1092,7 +1092,7 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
         ui->bm_unknown->setVisible(true);
         ui->group_controller_mapping->setVisible(true);
         settings->setValue("show_test",1);
-        ui->action_show_test_data->setIcon(QIcon(":/icon/debug_sel"));
+        ui->action_show_debug->setIcon(QIcon(":/icon/debug_sel"));
         testdata_refresh();
     }
 
@@ -1113,7 +1113,7 @@ void MainWindow::on_action_show_test_data_toggled(bool checked)
         ui->bm_unknown->setVisible(false);
         ui->group_controller_mapping->setVisible(false);
         settings->setValue("show_test",0);
-        ui->action_show_test_data->setIcon(QIcon(":/icon/debug_unsel"));
+        ui->action_show_debug->setIcon(QIcon(":/icon/debug_unsel"));
     }
 }
 
@@ -1456,6 +1456,7 @@ void MainWindow::charupdate(void)
 {
     load=true;
     QByteArray text;
+    quint8 char_weapon_offset=0;
     //clear everthing.
     ui->cb_id->setText("");
     ui->cb_id->setChecked(false);
@@ -1465,6 +1466,7 @@ void MainWindow::charupdate(void)
     ui->cb_fury->setChecked(0);
     ui->cb_front->setChecked(0);
     ui->combo_weapon->clear();
+
     if(curchar== 6)
     {
         ui->cb_id->setText(tr("Young Cloud"));
@@ -1482,13 +1484,10 @@ void MainWindow::charupdate(void)
     }
 
     ui->combo_id->setCurrentIndex(ff7->slot[s].chars[curchar].id);
-    for (int n=0;n<12;n++)
-    {
-        text.append(ff7->slot[s].chars[curchar].name[n]);
-        //if(ff7->slot[s].chars[curchar].name[n] ==0xFF){break;}
-        //else{this->ui->line_name->setText( this->ui->line_name->text() + chPC.PC(ff7->slot[s].chars[curchar].name[n]));}
-    }
+
+    for (int n=0;n<12;n++){text.append(ff7->slot[s].chars[curchar].name[n]);}
     ui->line_name->setText(chPC.PC(text));
+
     ui->sb_exp->setValue(ff7->slot[s].chars[curchar].exp);
     ui->pbar_level->setValue(ff7->slot[s].chars[curchar].flags[2]);
     ui->lcd_next->display(double(ff7->slot[s].chars[curchar].expNext));
@@ -1575,12 +1574,23 @@ void MainWindow::charupdate(void)
         break;
     }
     //Now Set Char Specific Things
+    switch (curchar)
+    {
+        case 0:char_weapon_offset=0;
+        case 1:char_weapon_offset=32;
+        case 2:char_weapon_offset=16;
+        case 3:char_weapon_offset=62;
+        case 4:char_weapon_offset=48;
+        case 5:char_weapon_offset=87;
+        case 6:char_weapon_offset=101;
+        case 7:char_weapon_offset=114;
+        case 8:char_weapon_offset=73;
+        case 9:char_weapon_offset=0;
+        case 10:char_weapon_offset=0;
+    }
     switch(ff7->slot[s].chars[curchar].id)
     {
     case 0: case 9://cloud
-        if(ff7->slot[s].chars[curchar].id ==0){ui->lbl_avatar->setPixmap(QPixmap(":/icon/cloud_icon"));}
-        else{ui->lbl_avatar->setPixmap(QPixmap(":/icon/y_cloud_icon"));}
-        //label boxes
         ui->limit_1a->setText(tr("Braver"));
         ui->limit_1b->setText(tr("Cross-Slash"));
         ui->limit_2a->setText(tr("Blade Beam"));
@@ -1588,13 +1598,10 @@ void MainWindow::charupdate(void)
         ui->limit_3a->setText(tr("Meteorain"));
         ui->limit_3b->setText(tr("Finishing Touch"));
         ui->limit_4->setText(tr("Omnislash"));
-        //label weapons then set current...
         for(int i=128;i<144;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}
-        ui->combo_weapon->setCurrentIndex(ff7->slot[s].chars[curchar].weapon);
+        //char_weapon_offset=0;
         break;
     case 1://barret
-        ui->lbl_avatar->setPixmap(QPixmap(":/icon/barret_icon"));
-        //label boxes
         ui->limit_1a->setText(tr("Big Shot"));
         ui->limit_1b->setText(tr("Mindblow"));
         ui->limit_2a->setText(tr("Grenade Bomb"));
@@ -1602,13 +1609,10 @@ void MainWindow::charupdate(void)
         ui->limit_3a->setText(tr("Satellite Beam"));
         ui->limit_3b->setText(tr("Angermax"));
         ui->limit_4->setText(tr("Catastrophe"));
-        //label then set current weapon
         for(int i=160;i<176;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}
-        ui->combo_weapon->setCurrentIndex((ff7->slot[s].chars[curchar].weapon)-32);
+        //char_weapon_offset=32;
         break;
     case 2://tifa
-        ui->lbl_avatar->setPixmap(QPixmap(":/icon/tifa_icon"));
-        //label boxes
         ui->limit_1a->setText(tr("Beat Rush"));
         ui->limit_1b->setText(tr("Somersault"));
         ui->limit_2a->setText(tr("Waterkick"));
@@ -1616,13 +1620,10 @@ void MainWindow::charupdate(void)
         ui->limit_3a->setText(tr("Dolphin Blow"));
         ui->limit_3b->setText(tr("Meteor Strike"));
         ui->limit_4->setText(tr("Final Heaven"));
-        // fill then set weapon
         for(int i=144;i<160;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}
-        ui->combo_weapon->setCurrentIndex(ff7->slot[s].chars[curchar].weapon-16);
+        //char_weapon_offset=16;
         break;
     case 3://aerith
-        ui->lbl_avatar->setPixmap(QPixmap(":/icon/aeris_icon"));
-        //label boxes
         ui->limit_1a->setText(tr("Healing Wind"));
         ui->limit_1b->setText(tr("Seal Evil"));
         ui->limit_2a->setText(tr("Breath of the Earth"));
@@ -1630,13 +1631,10 @@ void MainWindow::charupdate(void)
         ui->limit_3a->setText(tr("Planet Protector"));
         ui->limit_3b->setText(tr("Pulse of Life"));
         ui->limit_4->setText(tr("Great Gospel"));
-        //fill weapons and select current
         for(int i=190;i<201;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}
-        ui->combo_weapon->setCurrentIndex(ff7->slot[s].chars[curchar].weapon-62);
+        //char_weapon_offset=62;
         break;
     case 4://red
-        ui->lbl_avatar->setPixmap(QPixmap(":/icon/red_icon"));
-        //label boxes
         ui->limit_1a->setText(tr("Sled Fang"));
         ui->limit_1b->setText(tr("Lunatic High"));
         ui->limit_2a->setText(tr("Blood Fang"));
@@ -1644,13 +1642,10 @@ void MainWindow::charupdate(void)
         ui->limit_3a->setText(tr("Howling Moon"));
         ui->limit_3b->setText(tr("Earth Rave"));
         ui->limit_4->setText(tr("Cosmo Memory"));
-        //fill and set weapons
         for(int i=176;i<190;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}
-        ui->combo_weapon->setCurrentIndex(ff7->slot[s].chars[curchar].weapon-48);
+        //char_weapon_offset=48;
         break;
     case 5://yuffie
-        ui->lbl_avatar->setPixmap(QPixmap(":/icon/yuffie_icon"));
-        //label boxes
         ui->limit_1a->setText(tr("Greased Lightning"));
         ui->limit_1b->setText(tr("Clear Tranquil"));
         ui->limit_2a->setText(tr("Landscaper"));
@@ -1658,40 +1653,32 @@ void MainWindow::charupdate(void)
         ui->limit_3a->setText(tr("Gauntlet"));
         ui->limit_3b->setText(tr("Doom of the Living"));
         ui->limit_4->setText(tr("All Creation"));
-        //fill and set weapons
         for(int i=215;i<229;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}
-        ui->combo_weapon->setCurrentIndex(ff7->slot[s].chars[curchar].weapon-87);
+        //char_weapon_offset=87;
         break;
     case 6://cait
-        ui->lbl_avatar->setPixmap(QPixmap(":/icon/cait_icon"));
-        //label limits
         ui->limit_1a->setText(tr("Dice"));
-        ui->limit_1b->setText("");
         ui->limit_2a->setText(tr("Slots"));
-        ui->limit_2b->setText("");
-        ui->limit_3a->setText("");
-        ui->limit_3b->setText("");
-        ui->limit_4->setText("");
+        //ui->limit_1b->setText("");
+        //ui->limit_2b->setText("");
+        //ui->limit_3a->setText("");
+        //ui->limit_3b->setText("");
+        //ui->limit_4->setText("");
         for(int i=229;i<242;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}
-        ui->combo_weapon->setCurrentIndex(ff7->slot[s].chars[curchar].weapon-101);
+        //char_weapon_offset=101;
         break;
     case 7://vincent
-        ui->lbl_avatar->setPixmap(QPixmap(":/icon/vincent_icon"));
-        //label boxes
         ui->limit_1a->setText(tr("Galian Beast"));
-        ui->limit_1b->setText("");
+        //ui->limit_1b->setText("");
         ui->limit_2a->setText(tr("Death Gigas"));
-        ui->limit_2b->setText("");
+        //ui->limit_2b->setText("");
         ui->limit_3a->setText(tr("Hellmasker"));
-        ui->limit_3b->setText("");
+        //ui->limit_3b->setText("");
         ui->limit_4->setText(tr("Chaos"));
-        //fill and select weapon
         for(int i=242;i<255;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}
-        ui->combo_weapon->setCurrentIndex(ff7->slot[s].chars[curchar].weapon-114);
+        //char_weapon_offset =114;
         break;
     case 8://cid
-        ui->lbl_avatar->setPixmap(QPixmap(":/icon/cid_icon"));
-        //label boxes
         ui->limit_1a->setText(tr("Boost Jump"));
         ui->limit_1b->setText(tr("Dynamite"));
         ui->limit_2a->setText(tr("Hyper Jump"));
@@ -1699,22 +1686,21 @@ void MainWindow::charupdate(void)
         ui->limit_3a->setText(tr("Dragon Dive"));
         ui->limit_3b->setText(tr("Big Brawl"));
         ui->limit_4->setText(tr("Highwind"));
-        //fill and set weapon
         for(int i=201;i<215;i++){ui->combo_weapon->addItem(QIcon(Items[i].image),FF7Strings.ItemNames(i));}
-        ui->combo_weapon->setCurrentIndex(ff7->slot[s].chars[curchar].weapon-73);
+        //char_weapon_offset =73;
         break;
     case 10://sephiroth
-        ui->lbl_avatar->setPixmap(QPixmap(":/icon/sep_icon"));
         ui->combo_weapon->addItem(QIcon(Items[255].image),FF7Strings.ItemNames(255));
-        ui->combo_weapon->setCurrentIndex(0);
+        ui->combo_weapon->setCurrentIndex(0); //only set seppie's weapon cause he has only one.
         break;
     }
 
     //Equipment Tab Stuff.
+    if(ff7->slot[s].chars[curchar].id !=10){ui->combo_weapon->setCurrentIndex((ff7->slot[s].chars[curchar].weapon)-char_weapon_offset);}//if not seppie set the weapon
     ui->combo_armor->setCurrentIndex(ff7->slot[s].chars[curchar].armor);
     ui->combo_acc->setCurrentIndex(ff7->slot[s].chars[curchar].accessory);
-
-    //Set up char buttons.
+    //Set up char buttons and avatar icon.
+    ui->lbl_avatar->setStyleSheet(avatar_style(ff7->slot[s].chars[curchar].id));
     ui->btn_cloud->setStyleSheet(avatar_style(ff7->slot[s].chars[0].id));
     ui->btn_barret->setStyleSheet(avatar_style(ff7->slot[s].chars[1].id));
     ui->btn_tifa->setStyleSheet(avatar_style(ff7->slot[s].chars[2].id));
@@ -1725,8 +1711,8 @@ void MainWindow::charupdate(void)
     ui->btn_vincent->setStyleSheet(avatar_style(ff7->slot[s].chars[7].id));
     ui->btn_cid->setStyleSheet(avatar_style(ff7->slot[s].chars[8].id));
     load=false;
-    setarmorslots();
     setweaponslots();
+    setarmorslots();
     materiaupdate_slot();
     if(ui->action_auto_char_growth->isChecked()){setchar_growth(0);}
 }
@@ -1815,8 +1801,8 @@ void MainWindow::setweaponslots(void)
     ui->w_m_s6->setHidden(1);
     ui->w_m_s7->setHidden(1);
     ui->w_m_s8->setHidden(1);
-
-    switch(curchar)
+    switch(ff7->slot[s].chars[curchar].id)
+    //switch(curchar)
     {
     case 0:{
         clouds_weapons:
@@ -2902,7 +2888,7 @@ void MainWindow::guirefresh(void)
     ui->combo_button_15->setCurrentIndex(ff7->slot[s].controller_map[14]);
     ui->combo_button_16->setCurrentIndex(ff7->slot[s].controller_map[15]);
     //hide buttons config if not debug or non pc save
-    if(ff7->SG_TYPE !="PC" || ui->action_show_test_data->isChecked()){ui->group_controller_mapping->setVisible(1);}
+    if(ff7->SG_TYPE !="PC" || ui->action_show_debug->isChecked()){ui->group_controller_mapping->setVisible(1);}
     else{ui->group_controller_mapping->setVisible(0);}
 
     //dialog preview
@@ -3059,7 +3045,7 @@ void MainWindow::guirefresh(void)
     materiaupdate();
     progress_update();
     setPreviewColors();
-    if(ui->action_show_test_data->isChecked()){testdata_refresh();}
+    if(ui->action_show_debug->isChecked()){testdata_refresh();}
     ui->w_m_s1->click();
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 void MainWindow::progress_update()
