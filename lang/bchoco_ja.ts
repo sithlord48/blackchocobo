@@ -5766,7 +5766,7 @@ Table Entries are Editable</source>
     <message>
         <source>
 Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>空きスロット</translation>
     </message>
 </context>
 <context>
@@ -5849,7 +5849,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: No longer export non ff7 slots to pc</source>
-        <translation>修正: ff7 以外のスロットが PC にエクスポート不能</translation>
+        <translation>修正: FF7 以外のスロットが PC にエクスポート不能</translation>
     </message>
     <message>
         <source>Fixed: Pc Header Mask Aware</source>
@@ -5873,7 +5873,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Giving Credit Where Credit is Due</source>
-        <translation>然るべきクレジット</translation>
+        <translation>しかるべきクレジット</translation>
     </message>
     <message>
         <source>Programmers</source>
@@ -5901,7 +5901,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Translators</source>
-        <translation>翻訳</translation>
+        <translation>翻訳者</translation>
     </message>
     <message>
         <source>Spanish Translation:</source>
@@ -5949,7 +5949,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Thank You For, Providing a Better understanding of Qt&apos;s Functions When the help files failed.</source>
-        <translation>Qt のヘルプ ファイルには記載のない機能について、より理解を深める手助けをしてくれました。</translation>
+        <translation>Qt のヘルプ ファイルに不備のある関数について、より理解を深める手助けをしてくれました。</translation>
     </message>
     <message>
         <source>Cause She&apos;s Just Awesome!</source>
@@ -6009,7 +6009,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Previous Versions</source>
-        <translation>前のバージョン</translation>
+        <translation>以前のバージョン</translation>
     </message>
     <message>
         <source>inital psx save/load; fixed checksum</source>
@@ -6173,19 +6173,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Text Conversion Class (based on myst6re&apos;s work) </source>
-        <translation type="unfinished"></translation>
+        <translation>追加: テキスト変換クラス (myst6re 氏のコートに基づく)</translation>
     </message>
     <message>
         <source>Fixed: Save Button</source>
-        <translation type="unfinished"></translation>
+        <translation>修正: 保存ボタン</translation>
     </message>
     <message>
         <source>Improved: Slotselect handleing of non-ff7 and empty slots</source>
-        <translation type="unfinished"></translation>
+        <translation>調整: スロット選択時の非 FF7 / 空きスロットのハンドリング</translation>
     </message>
     <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
-        <translation type="unfinished"></translation>
+        <translation>PSX アイコン クラス &amp; 日本語 PC 文字列変換</translation>
     </message>
 </context>
 <context>
