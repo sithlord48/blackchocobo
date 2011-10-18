@@ -28278,7 +28278,7 @@ Var And Scrolling Synced To Left Table</string>
      <addaction name="action_Lang_jp"/>
     </widget>
     <addaction name="action_auto_char_growth"/>
-    <addaction name="action_show_test_data"/>
+    <addaction name="action_show_debug"/>
     <addaction name="separator"/>
     <addaction name="menuLang"/>
     <addaction name="separator"/>
@@ -28788,7 +28788,7 @@ Var And Scrolling Synced To Left Table</string>
     <enum>Qt::ApplicationShortcut</enum>
    </property>
   </action>
-  <action name="action_show_test_data">
+  <action name="action_show_debug">
    <property name="checkable">
     <bool>true</bool>
    </property>
