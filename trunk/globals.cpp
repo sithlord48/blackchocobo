@@ -14,6 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "globals.h"
+#include "QMessageBox"
 int ff7__checksum( void* qw )
 {
    int i = 0, t, d;
@@ -575,8 +576,8 @@ quint32 chartnls[11][99]=
 
 Text::Text()
 {
-    eng   =QString::fromUtf8(" !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÄÁÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü⌘°¢£ÙÛ¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂ΣΠπ⌡ªºΩæø¿¡¬√ƒ≈∆«»⋯ ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄¤‹›ﬁﬂ■▪‚„‰ÂÊËÁÈíîïìÓÔ ÒÙÛ             \t                               ");
-    jap   =QString::fromUtf8("バばビびブぶベべボぼガがギぎグぐゲげゴごザざジじズずゼぜゾぞダだヂぢヅづデでドどヴパぱピぴプぷペぺポぽ０１２３４５６７８９、。　ハはヒひフふヘへホほカかキきクくケけコこサさシしスすセせソそタたチちツつテてトとウうアあイいエえオおナなニにヌぬネねノのマまミみムむメめモもラらリりルるレれロろヤやユゆヨよワわンんヲをッっャゃュゅョょァぁィぃゥぅェぇォぉ！？『』．＋ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ・＊―～⋯％／：＆【】♥→αβ「」（）－＝¶¶¶⑬\n\n¶                      ");
+    eng   =QString::fromUtf8(" !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÄÁÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü⌘°¢£ÙÛ¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂ΣΠπ⌡ªºΩæø¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄¤‹›ﬁﬂ■▪‚„‰ÂÊËÁÈíîïìÓÔ ÒÙÛ             \t                               ");
+    jap   =QString::fromUtf8("バばビびブぶベべボぼガがギぎグぐゲげゴごザざジじズずゼぜゾぞダだヂぢヅづデでドどヴパぱピぴプぷペぺポぽ０１２３４５６７８９、。　ハはヒひフふヘへホほカかキきクくケけコこサさシしスすセせソそタたチちツつテてトとウうアあイいエえオおナなニにヌぬネねノのマまミみムむメめモもラらリりルるレれロろヤやユゆヨよワわンんヲをッっャゃュゅョょァぁィぃゥぅェぇォぉ！？『』．＋ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ・＊ー～⋯％／：＆【】♥→αβ「」（）－＝¶¶¶⑬\n\n¶                      ");
     jap_fa=QString::fromUtf8("必殺技地獄火炎裁雷大怒斬鉄剣槍海衝聖審判転生改暗黒釜天崩壊零式自爆使放射臭息死宣告凶破晄撃画龍晴点睛超究武神覇癒風邪気封印吹烙星守護命鼓動福音掌打水面蹴乱闘合体疾迅明鏡止抜山蓋世血祭鎧袖一触者滅森羅万象装備器攻魔法召喚獣呼出持相手物確率弱投付与変化片方行決定分直前真似覚列後位置防御発回連続敵全即効果尾毒消金針乙女興奮剤鎮静能薬英雄榴弾右腕砂時計糸戦惑草牙南極冷結晶電鳥角有害質爪光月反巨目砲重力球空双野菜実兵単毛茶色髪¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶");
     jap_fb=QString::fromUtf8("安香花会員蜂蜜館下着入先不子供屋商品景交換階模型部離場所仲間無制限殿様秘氷河図何材料雪上進事古代種鍵娘紙町住奥眠楽最初村雨釘陸吉揮叢雲軍異常通威父蛇矛青偃刀戟十字裏車円輪卍折鶴倶戴螺貝突銀玉正宗具甲烈属性吸収半減土高級状態縁闇睡石徐々的指混呪開始歩復盗小治理同速遅逃去視複味沈黙還倍数瀕取返人今差誰当拡散飛以外暴避振身中旋津波育機械擲炉新両本君洞内作警特殊板強穴隊族亡霊鎖足刃頭怪奇虫跳侍左首潜長親衛塔宝条像忍謎般見報充填完了銃元経験値終獲得名悲蛙操成費背切替割¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶");
     jap_fc=QString::fromUtf8("由閉記憶選番街底忘都過艇路運搬船墓心港末宿西道艦家乗竜巻迷宮絶壁支社久件想秒予多落受組余系標起迫日勝形引現解除磁互口廃棄汚染液活令副隠主斉登温泉百段熱走急降奪響嵐移危戻遠吠軟骨言葉震叫噴舞狩粉失敗眼激盤逆鱗踏喰盾叩食凍退木吐線魅押潰曲翼教皇太陽界案挑援赤往殴意東北参知聞来仕別集信用思毎悪枯考然張好伍早各独配腐話帰永救感故売浮市加流約宇礼束母男年待宙立残俺少精士私険関倒休我許郷助要問係旧固荒稼良議導夢追説声任柱満未顔旅¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶¶");
@@ -628,7 +629,7 @@ QString Text::PC(QByteArray text)
                 String += jap_fe[(quint8)text.at(i)];
                 break;
              default:
-                String += jap.at(index);
+                String.append(jap.at(index));
              break;
              }
          }
@@ -645,8 +646,8 @@ QString Text::PC(QByteArray text)
                 String += "¶";
                 break;
             default:
-                String += eng[index];
-            break;
+                String.append(eng.at(index));
+                break;
             }
         }
     }
@@ -656,13 +657,13 @@ QString Text::PC(QByteArray text)
 QByteArray Text::FF7(QString string)
 {
     QByteArray ff7str;
-    QChar comp/*, comp2*/;
+    QChar comp;
     int stringSize = string.size(), i, table;
 
     for(int c=0 ; c<stringSize ; ++c)
     {
         comp = string.at(c);
-        if(comp=='\n')
+        /*if(comp=='\n')
         {//\n{NewPage}\n,\n
             if(string.mid(c+1, 10).compare("{NewPage}\n", Qt::CaseInsensitive) == 0)
             {
@@ -670,7 +671,7 @@ QByteArray Text::FF7(QString string)
                 c += 10;
             }
         else {ff7str.append('\x02');continue;}
-        }
+        }*/
         for(i=0 ; i<=0xff ; ++i)
         {
             if(QString::compare(comp, character(i,0))==0)
@@ -687,7 +688,7 @@ QByteArray Text::FF7(QString string)
                 {
                     if(QString::compare(comp, character(i, table))==0)
                     {
-                        switch(table)
+                       switch(table)
                         {
                             case 1:break;
                             case 2:ff7str.append('\xFA');   break;
