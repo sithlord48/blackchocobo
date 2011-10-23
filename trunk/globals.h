@@ -47,7 +47,7 @@ public:
     QString MateriaSkills(int,int);
 };
 
-class Text{
+class TEXT{
 private:
     QString eng;
     QString jap;
@@ -59,10 +59,10 @@ private:
     bool in_ja;
     QString character(quint8 ord, quint8 table);
 public:
-    Text();
+    TEXT();
     void init(bool);
-    QString PC(QByteArray text);
-    QByteArray FF7(QString string);
+    QString toPC(QByteArray text);
+    QByteArray toFF7(QString string);
 };
 
 struct LOCATION {//Location Table Stuff

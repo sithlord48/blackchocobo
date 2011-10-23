@@ -60,7 +60,7 @@ private:
     QString filename; //holds file name
     int curchar; //keeps track of current character displayed
     int mslotsel; //keeps track of materia slot on char selected
-    Text chPC; //our sting conversion item.
+    TEXT Text; //our sting conversion item.
 public slots:
     void loadFileFull(const QString &fileName,int reload);//(Vegeta_Ss4) v0.8.3
 

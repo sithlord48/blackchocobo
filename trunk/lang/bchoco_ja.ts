@@ -3193,10 +3193,6 @@ MASTER = 16777215 AP です</translation>
         <translation>FF7 以外のセーブを無視</translation>
     </message>
     <message>
-        <source>Be Cautious This Might Not Work.</source>
-        <translation>警告: 正常に操作できません。</translation>
-    </message>
-    <message>
         <source>Enemy Skill</source>
         <translation>てきのわざ</translation>
     </message>
@@ -4115,6 +4111,10 @@ Table Entries are Editable</source>
     <message>
         <source>After Aeris Church Scene</source>
         <translation>エアリスとの教会イベント後</translation>
+    </message>
+    <message>
+        <source>Using Unknown Var Table To View Save</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
