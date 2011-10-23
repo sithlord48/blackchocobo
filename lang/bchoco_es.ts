@@ -3197,10 +3197,6 @@ no es una partida guardada de FF7.</translation>
         <translation>Ignorando partida guardada No-FF7</translation>
     </message>
     <message>
-        <source>Be Cautious This Might Not Work.</source>
-        <translation>Cuidado, puede que no funcione.</translation>
-    </message>
-    <message>
         <source>Enemy Skill</source>
         <translation>Habil. Enem</translation>
     </message>
@@ -4113,6 +4109,10 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>After Aeris Church Scene</source>
         <translation>Después de la escena de la iglesia de Aeris</translation>
+    </message>
+    <message>
+        <source>Using Unknown Var Table To View Save</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

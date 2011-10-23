@@ -59,20 +59,19 @@ errbox::errbox(QWidget *parent,FF7 *ff7data,int slot) :
     int index;
     if((index = desc.indexOf('\x00')) != -1) {desc.truncate(index);}
     ui->lbl_regionstring->setText(codec->toUnicode(desc));
-    //ui->lbl_regionstring->setText(ff7->SG_Region_String[s].toAscii());
 }
 
 errbox::~errbox(){delete ui;}
 
 void errbox::on_btn_prev_clicked()
 {
-    if(s>0){s--;this->done(1);}
+    if(s>0){this->done(1);}
     else{QMessageBox::information(this,tr("Your At Slot 1"),tr("Sorry There is no Previous Slot"));}
 }
 
 void errbox::on_btn_next_clicked()
 {
-    if(s<14){s++; this->done(2);}
+    if(s<14){this->done(2);}
     else{QMessageBox::information(this,tr("Your At Slot 15"),tr("Sorry There is no Next Slot"));}
 }
 

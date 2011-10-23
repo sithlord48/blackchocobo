@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>630</width>
-    <height>457</height>
+    <height>455</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -271,6 +271,21 @@
           <item row="1" column="2" rowspan="2">
            <widget class="QWidget" name="s1_frame_time" native="true">
             <layout class="QGridLayout" name="gridLayout_4">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="s1_label_time">
                <property name="text">
@@ -311,11 +326,23 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s1_label_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
@@ -324,9 +351,15 @@
              </item>
              <item row="1" column="1" colspan="3">
               <widget class="QLabel" name="s1_lbl_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="minimumSize">
                 <size>
-                 <width>101</width>
+                 <width>120</width>
                  <height>0</height>
                 </size>
                </property>
@@ -711,6 +744,21 @@
           <item row="1" column="2" rowspan="2">
            <widget class="QWidget" name="s2_frame_time" native="true">
             <layout class="QGridLayout" name="gridLayout_2">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="s2_label_time">
                <property name="text">
@@ -751,11 +799,23 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s2_label_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
@@ -764,9 +824,15 @@
              </item>
              <item row="1" column="1" colspan="3">
               <widget class="QLabel" name="s2_lbl_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
                <property name="minimumSize">
                 <size>
-                 <width>101</width>
+                 <width>120</width>
                  <height>0</height>
                 </size>
                </property>
@@ -1049,6 +1115,21 @@
           <item row="1" column="2" rowspan="2">
            <widget class="QWidget" name="s3_frame_time" native="true">
             <layout class="QGridLayout" name="gridLayout_3">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="s3_label_time">
                <property name="text">
@@ -1089,11 +1170,23 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s3_label_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
@@ -1102,6 +1195,12 @@
              </item>
              <item row="1" column="1" colspan="3">
               <widget class="QLabel" name="s3_lbl_gil">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -1247,6 +1346,21 @@
           <item row="1" column="2" rowspan="2">
            <widget class="QWidget" name="s4_frame_time" native="true">
             <layout class="QGridLayout" name="gridLayout_10">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="s4_label_time">
                <property name="text">
@@ -1287,11 +1401,23 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s4_label_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
@@ -1300,6 +1426,12 @@
              </item>
              <item row="1" column="1" colspan="3">
               <widget class="QLabel" name="s4_lbl_gil">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -1701,6 +1833,21 @@
           <item row="1" column="2" rowspan="2">
            <widget class="QWidget" name="s5_frame_time" native="true">
             <layout class="QGridLayout" name="gridLayout_12">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="s5_label_time">
                <property name="text">
@@ -1741,11 +1888,23 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s5_label_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
@@ -1754,6 +1913,12 @@
              </item>
              <item row="1" column="1" colspan="3">
               <widget class="QLabel" name="s5_lbl_gil">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -2027,6 +2192,21 @@
           <item row="1" column="2" rowspan="2">
            <widget class="QWidget" name="s6_frame_time" native="true">
             <layout class="QGridLayout" name="gridLayout_8">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="s6_label_time">
                <property name="text">
@@ -2067,11 +2247,23 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s6_label_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
@@ -2080,6 +2272,12 @@
              </item>
              <item row="1" column="1" colspan="3">
               <widget class="QLabel" name="s6_lbl_gil">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -2272,6 +2470,21 @@
           <item row="1" column="2" rowspan="2">
            <widget class="QWidget" name="s7_frame_time" native="true">
             <layout class="QGridLayout" name="gridLayout_22">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="s7_label_time">
                <property name="text">
@@ -2312,11 +2525,23 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s7_label_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
@@ -2325,6 +2550,12 @@
              </item>
              <item row="1" column="1" colspan="3">
               <widget class="QLabel" name="s7_lbl_gil">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -2598,6 +2829,21 @@
           <item row="1" column="2" rowspan="2">
            <widget class="QWidget" name="s8_frame_time" native="true">
             <layout class="QGridLayout" name="gridLayout_24">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="s8_label_time">
                <property name="text">
@@ -2638,11 +2884,23 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s8_label_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
@@ -2651,6 +2909,12 @@
              </item>
              <item row="1" column="1" colspan="3">
               <widget class="QLabel" name="s8_lbl_gil">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -2924,6 +3188,21 @@
           <item row="1" column="2" rowspan="2">
            <widget class="QWidget" name="s9_frame_time" native="true">
             <layout class="QGridLayout" name="gridLayout_20">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="s9_label_time">
                <property name="text">
@@ -2964,11 +3243,23 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s9_label_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
@@ -2977,6 +3268,12 @@
              </item>
              <item row="1" column="1" colspan="3">
               <widget class="QLabel" name="s9_lbl_gil">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -3331,6 +3628,21 @@
           <item row="1" column="2" rowspan="2">
            <widget class="QWidget" name="s10_frame_time" native="true">
             <layout class="QGridLayout" name="gridLayout_14">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
              <item row="0" column="2">
               <widget class="QLabel" name="s10_label_time_sept">
                <property name="maximumSize">
@@ -3361,11 +3673,23 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s10_label_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
@@ -3374,6 +3698,12 @@
              </item>
              <item row="1" column="1" colspan="3">
               <widget class="QLabel" name="s10_lbl_gil">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -3576,6 +3906,21 @@
           <item row="1" column="2" rowspan="2">
            <widget class="QWidget" name="s11_frame_time" native="true">
             <layout class="QGridLayout" name="gridLayout_16">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="s11_label_time">
                <property name="text">
@@ -3616,11 +3961,23 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s11_label_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
@@ -3629,6 +3986,12 @@
              </item>
              <item row="1" column="1" colspan="3">
               <widget class="QLabel" name="s11_lbl_gil">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -3992,6 +4355,21 @@
           <item row="1" column="2" rowspan="2">
            <widget class="QWidget" name="s12_frame_time" native="true">
             <layout class="QGridLayout" name="gridLayout_18">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="s12_label_time">
                <property name="text">
@@ -4032,11 +4410,23 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s12_label_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
@@ -4045,6 +4435,12 @@
              </item>
              <item row="1" column="1" colspan="3">
               <widget class="QLabel" name="s12_lbl_gil">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -4237,6 +4633,21 @@
           <item row="1" column="2" rowspan="2">
            <widget class="QWidget" name="s13_frame_time" native="true">
             <layout class="QGridLayout" name="gridLayout_30">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="s13_label_time">
                <property name="text">
@@ -4277,11 +4688,23 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s13_label_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
@@ -4290,6 +4713,12 @@
              </item>
              <item row="1" column="1" colspan="3">
               <widget class="QLabel" name="s13_lbl_gil">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -4516,6 +4945,21 @@
           <item row="1" column="2" rowspan="2">
            <widget class="QWidget" name="s14_frame_time" native="true">
             <layout class="QGridLayout" name="gridLayout_26">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="s14_label_time">
                <property name="text">
@@ -4556,11 +5000,23 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s14_label_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
@@ -4569,6 +5025,12 @@
              </item>
              <item row="1" column="1" colspan="3">
               <widget class="QLabel" name="s14_lbl_gil">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string/>
                </property>
@@ -4842,6 +5304,21 @@
           <item row="1" column="2" rowspan="2">
            <widget class="QWidget" name="s15_frame_time" native="true">
             <layout class="QGridLayout" name="gridLayout_28">
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>3</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>3</number>
+             </property>
+             <property name="horizontalSpacing">
+              <number>0</number>
+             </property>
              <item row="0" column="0">
               <widget class="QLabel" name="s15_label_time">
                <property name="text">
@@ -4882,11 +5359,23 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s15_label_gil">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
                <property name="alignment">
-                <set>Qt::AlignCenter</set>
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
@@ -4895,6 +5384,12 @@
              </item>
              <item row="1" column="1" colspan="3">
               <widget class="QLabel" name="s15_lbl_gil">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="text">
                 <string/>
                </property>

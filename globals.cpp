@@ -574,7 +574,7 @@ quint32 chartnls[11][99]=
     {0,6,27,61,108,170,244,333,435,550,680,974,1022,1199,1391,1597,1817,2051,2300,2563,2840,3793,3533,3861,4204,4562,4934,5321,5723,6139,6570,8058,7577,8058,8554,9065,9590,10130,10685,11255,11840,12439,13053,13682,14326,14985,15658,16346,17049,17767,18500,19247,20009,20786,21578,22385,23206,24042,24893,25759,26640,35297,28830,29767,30720,31687,32670,33667,34680,35707,36750,37807,38880,39967,41070,42187,43320,44467,45630,46807,48000,85279,51774,53045,54331,55632,56949,58281,59628,60991,62370,63763,65172,66597,68037,69492,70963,72449,73950}
 };
 
-Text::Text()
+TEXT::TEXT()
 {
     eng   =QString::fromUtf8(" !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÄÁÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü⌘°¢£ÙÛ¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂ΣΠπ⌡ªºΩæø¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄¤‹›ﬁﬂ■▪‚„‰ÂÊËÁÈíîïìÓÔ ÒÙÛ             \t                               ");
     jap   =QString::fromUtf8("バばビびブぶベべボぼガがギぎグぐゲげゴごザざジじズずゼぜゾぞダだヂぢヅづデでドどヴパぱピぴプぷペぺポぽ０１２３４５６７８９、。　ハはヒひフふヘへホほカかキきクくケけコこサさシしスすセせソそタたチちツつテてトとウうアあイいエえオおナなニにヌぬネねノのマまミみムむメめモもラらリりルるレれロろヤやユゆヨよワわンんヲをッっャゃュゅョょァぁィぃゥぅェぇォぉ！？『』．＋ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ・＊ー～⋯％／：＆【】♥→αβ「」（）－＝¶¶¶⑬\n\n¶                      ");
@@ -586,14 +586,14 @@ Text::Text()
     init(0);
 }
 
-void Text::init(bool ja)
+void TEXT::init(bool ja)
 {//are we using latin or japanese chars?
     if(ja){in_ja = 1;}
     else{in_ja=0;}
 }
 
 // the PC function is modified from Makou Reactor (thanks Myst6re)
-QString Text::PC(QByteArray text)
+QString TEXT::toPC(QByteArray text)
 {
     int txt;
     if((txt = text.indexOf('\xFF')) != -1){text.truncate(txt);}
@@ -654,7 +654,7 @@ QString Text::PC(QByteArray text)
     return String;
 }
 //This Convertor is Modified From Hyne (thanks Myst6re)
-QByteArray Text::FF7(QString string)
+QByteArray TEXT::toFF7(QString string)
 {
     QByteArray ff7str;
     QChar comp;
@@ -708,7 +708,7 @@ QByteArray Text::FF7(QString string)
     return ff7str;
 }
 
-QString Text::character(quint8 ord, quint8 table)
+QString TEXT::character(quint8 ord, quint8 table)
 {
     switch(table) {
     case 1:return jap.at(ord);

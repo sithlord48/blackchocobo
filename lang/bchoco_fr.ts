@@ -3196,10 +3196,6 @@ is not a FF7 SaveGame.</source>
         <translation>Ignorer sauvegarde non-FF7</translation>
     </message>
     <message>
-        <source>Be Cautious This Might Not Work.</source>
-        <translation>Soyez prudent cela peut ne pas fonctionner.</translation>
-    </message>
-    <message>
         <source>Enemy Skill</source>
         <translation>Talents de l&apos;ennemi</translation>
     </message>
@@ -4113,6 +4109,10 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>After Aeris Church Scene</source>
         <translation>Passé la scène de l&apos;église d&apos;Aéris</translation>
+    </message>
+    <message>
+        <source>Using Unknown Var Table To View Save</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

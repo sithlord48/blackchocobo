@@ -3181,10 +3181,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Be Cautious This Might Not Work.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Enemy Skill</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4093,6 +4089,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>After Aeris Church Scene</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Using Unknown Var Table To View Save</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
