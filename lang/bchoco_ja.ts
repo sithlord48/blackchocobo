@@ -1324,7 +1324,7 @@
     </message>
     <message>
         <source>Debug Room [ja]</source>
-        <translation>デバッグ ルーム</translation>
+        <translation>デバッグ・ルーム</translation>
     </message>
     <message>
         <source>Debug Room [en]</source>
@@ -1332,7 +1332,7 @@
     </message>
     <message>
         <source>Test Fight</source>
-        <translation>バトル テスト</translation>
+        <translation>バトル・テスト</translation>
     </message>
     <message>
         <source>Ropeway Station</source>
@@ -1368,7 +1368,7 @@
     </message>
     <message>
         <source>Chocobo Ranch</source>
-        <translation>チョコボ牧場</translation>
+        <translation>チョコボ小屋</translation>
     </message>
     <message>
         <source>Highwind</source>
@@ -3551,7 +3551,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>The Church In The Slums</source>
-        <translation>スラム街の教会</translation>
+        <translation>スラムの教会</translation>
     </message>
     <message>
         <source>Aeris Death</source>
@@ -3559,11 +3559,11 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Don_prog</source>
-        <translation>コルネオ邸_イベント進捗</translation>
+        <translation>コルネオの館_イベント進捗</translation>
     </message>
     <message>
         <source>&amp;Location</source>
-        <translation>場所(&amp;L)</translation>
+        <translation>現在地(&amp;L)</translation>
     </message>
     <message>
         <source>Save Location</source>
@@ -3846,11 +3846,11 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Talked To Trainman 3 times</source>
         <translatorcomment>0x02: when trainman tells you about war (3 talk).</translatorcomment>
-        <translation>駅員と三回の会話</translation>
+        <translation>駅員の話を三回聞く</translation>
     </message>
     <message>
         <source>Pair At Station agree</source>
-        <translation>駅のカップルの会話</translation>
+        <translation>駅のカップルの会話を最後まで聞く</translation>
     </message>
     <message>
         <source>Set To Reactor 5 Mode</source>
@@ -4114,7 +4114,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Using Unknown Var Table To View Save</source>
-        <translation type="unfinished"></translation>
+        <translation>詳細不明な変数テーブルを使ってセーブを表示</translation>
     </message>
 </context>
 <context>
@@ -5766,7 +5766,8 @@ Table Entries are Editable</source>
     <message>
         <source>
 Empty</source>
-        <translation>空きスロット</translation>
+        <translation>
+空きスロット</translation>
     </message>
 </context>
 <context>
@@ -6065,7 +6066,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Update: Location Tab; Both Save &amp; World Locations</source>
-        <translation>変更: 場所タブ; フィールド, ワールド両方のセーブを可能に</translation>
+        <translation>変更: 現在地タブ; フィールド, ワールド両方のセーブを可能に</translation>
     </message>
     <message>
         <source>New: Spawn New Windows. (mainly for testing)</source>
@@ -6121,7 +6122,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Locations &quot;Chocobo Ranch&quot; And &quot;Highwind&quot;</source>
-        <translation>追加: セーブ地点に &quot;チョコ房&quot;, &quot;ハイウィンド&quot; を追加</translation>
+        <translation>追加: セーブ地点に &quot;チョコ小屋&quot;, &quot;ハイウィンド&quot; を追加</translation>
     </message>
     <message>
         <source>New: Better Unknown Var Tab.</source>
@@ -6173,7 +6174,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Text Conversion Class (based on myst6re&apos;s work) </source>
-        <translation>追加: テキスト変換クラス (myst6re 氏のコートに基づく)</translation>
+        <translation>追加: テキスト変換クラス (myst6re 氏の資料に基づく)</translation>
     </message>
     <message>
         <source>Fixed: Save Button</source>
@@ -6181,7 +6182,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Improved: Slotselect handleing of non-ff7 and empty slots</source>
-        <translation>調整: スロット選択時の非 FF7 / 空きスロットのハンドリング</translation>
+        <translation>調整: スロット選択時の 空き/非 FF7 スロットのハンドリング</translation>
     </message>
     <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>

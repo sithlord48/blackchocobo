@@ -214,7 +214,6 @@ void MainWindow::on_actionReload_triggered(){if(!filename.isEmpty()){loadFileFul
 /*~~~~~~~~~~~~~~~~~Load Full ~~~~~~~~~~~~~~~~~~*/
 void MainWindow::loadFileFull(const QString &fileName,int reload)
 {//if called from reload then int reload ==1 (don't call slot select)
-    //load=true;
     QFile file(fileName);
     if (!file.open(QFile::ReadOnly ))
     {

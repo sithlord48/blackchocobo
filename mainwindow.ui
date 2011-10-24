@@ -18858,15 +18858,21 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             </item>
             <item>
              <widget class="QSpinBox" name="sb_curdisc">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
               <property name="minimumSize">
                <size>
-                <width>0</width>
+                <width>100</width>
                 <height>18</height>
                </size>
               </property>
               <property name="maximumSize">
                <size>
-                <width>65</width>
+                <width>16777215</width>
                 <height>18</height>
                </size>
               </property>
@@ -18934,7 +18940,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>328</width>
+                 <width>349</width>
                  <height>1432</height>
                 </rect>
                </property>
