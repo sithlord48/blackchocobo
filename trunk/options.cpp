@@ -37,16 +37,7 @@ Options::Options(QWidget *parent,QSettings *config_data) :
     ui->slide_c3_r->setValue(settings->value("color3_r").toInt());
     ui->slide_c3_g->setValue(settings->value("color3_g").toInt());
     ui->slide_c3_b->setValue(settings->value("color3_b").toInt());
-    switch(int(QApplication::font().pointSize()))
-    {
-    case 9: ui->btn_9pt->setChecked(Qt::Checked); break;
-    case 10: ui->btn_10pt->setChecked(Qt::Checked); break;
-    case 11: ui->btn_11pt->setChecked(Qt::Checked); break;
-    case 12: ui->btn_12pt->setChecked(Qt::Checked); break;
-    case 13: ui->btn_13pt->setChecked(Qt::Checked); break;
-    case 14: ui->btn_14pt->setChecked(Qt::Checked); break;
-    default: ui->btn_9pt->setChecked(Qt::Checked); break;
-    }
+    ui->combo_font_size->setCurrentIndex(QApplication::font().pointSize()-9);
     if(settings->value("show_test").toBool()){ui->cb_skip_slot_mask->setVisible(true);}
     else{ui->cb_skip_slot_mask->setVisible(false);}
     load=true;
@@ -174,36 +165,12 @@ void Options::on_combo_font_currentIndexChanged(QString family)
     settings->setValue("font-family",family);
     QApplication::setFont(QFont(family,int(QApplication::font().pointSize()),-1,false));
 }
-void Options::on_btn_9pt_clicked(bool checked)
-{if(checked){
-    settings->setValue("font-size",9);
-    QApplication::setFont(QFont(ui->combo_font->currentText(),9,-1,false));
-}}
-void Options::on_btn_10pt_clicked(bool checked)
-{if(checked){
-    settings->setValue("font-size",10);
-    QApplication::setFont(QFont(ui->combo_font->currentText(),10,-1,false));
-}}
-void Options::on_btn_11pt_clicked(bool checked)
-{if(checked){
-    settings->setValue("font-size",11);
-    QApplication::setFont(QFont(ui->combo_font->currentText(),11,-1,false));
-}}
-void Options::on_btn_12pt_clicked(bool checked)
-{if(checked){
-    settings->setValue("font-size",12);
-    QApplication::setFont(QFont(ui->combo_font->currentText(),12,-1,false));
-}}
-void Options::on_btn_13pt_clicked(bool checked)
-{if(checked){
-    settings->setValue("font-size",13);
-    QApplication::setFont(QFont(ui->combo_font->currentText(),13,-1,false));
-}}
-void Options::on_btn_14pt_clicked(bool checked)
-{if(checked){
-    settings->setValue("font-size",14);
-    QApplication::setFont(QFont(ui->combo_font->currentText(),14,-1,false));
-}}
+
+void Options::on_combo_font_size_currentIndexChanged(int index)
+{
+    settings->setValue("font-size",index+9);
+    QApplication::setFont(QFont(ui->combo_font->currentText(),index+9,-1,false));
+}
 /*~~~~~~~~~~~~~~~~~~Color sliders~~~~~~~~~~~~~~~~~~*/
 void Options::on_slide_c1_r_valueChanged(int value)
 {
@@ -431,9 +398,9 @@ void Options::on_reset_char_stat_folder_clicked()
 
 void Options::on_reset_font_clicked()
 {
-    QApplication::setFont(QFont("ubuntu",9,-1,false)); QApplication::font().setFamily("ubuntu");
+    //QApplication::setFont(QFont("ubuntu",9,-1,false)); QApplication::font().setFamily("ubuntu");
     ui->combo_font->setCurrentFont(QFont("ubuntu",9,-1,false));
-    ui->btn_9pt->click();
+    ui->combo_font_size->setCurrentIndex(0);
     settings->remove("font-family"); settings->remove("font-size");
 }
 
