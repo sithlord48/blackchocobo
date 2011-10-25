@@ -1304,7 +1304,7 @@
     </message>
     <message>
         <source>Church in the slums</source>
-        <translation>スラム街の教会</translation>
+        <translation>スラムの教会</translation>
     </message>
     <message>
         <source>Boat</source>
@@ -1380,11 +1380,11 @@
     </message>
     <message>
         <source>7th Heaven</source>
-        <translation type="unfinished"></translation>
+        <translation>セブンスヘブン</translation>
     </message>
     <message>
         <source>AVALANCHE Hideout</source>
-        <translation type="unfinished"></translation>
+        <translation>アバランチアジト</translation>
     </message>
 </context>
 <context>
@@ -2834,7 +2834,7 @@
     </message>
     <message>
         <source>Paste Slot</source>
-        <translation>スロット貼り付け</translation>
+        <translation>スロットの貼り付け</translation>
     </message>
     <message>
         <source>More Options...</source>
@@ -3599,7 +3599,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Unknown  Vars</source>
-        <translation>詳細不明な変数</translation>
+        <translation>未知の変数</translation>
     </message>
     <message>
         <source>New Window</source>
@@ -3707,7 +3707,7 @@ Would you like to correct the playtime?</source>
     </message>
     <message>
         <source>Unknown Var:</source>
-        <translation>詳細不明な変数:</translation>
+        <translation>未知の変数:</translation>
     </message>
     <message>
         <source>#</source>
@@ -3841,7 +3841,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Unknowns / Unused</source>
-        <translation>詳細不明 / 未使用</translation>
+        <translation>未知 / 未使用</translation>
     </message>
     <message>
         <source>Sector 7 Trainstation</source>
@@ -4070,7 +4070,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>&amp;Copy Slot</source>
-        <translation>スロット コピー(&amp;C)</translation>
+        <translation>スロットのコピー(&amp;C)</translation>
     </message>
     <message>
         <source>Sector 5</source>
@@ -4118,27 +4118,27 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Using Unknown Var Table To View Save</source>
-        <translation>詳細不明な変数テーブルを使ってセーブを表示</translation>
+        <translation>未知の変数のテーブルを使ってセーブを表示</translation>
     </message>
     <message>
         <source>Sector 7 - Slums Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>７番街スラム - 進捗</translation>
     </message>
     <message>
         <source>Initial Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>初期設定</translation>
     </message>
     <message>
         <source>Destroy the Sector 5 Reactor </source>
-        <translation type="unfinished"></translation>
+        <translation>５番魔晄炉の破壊</translation>
     </message>
     <message>
         <source>The Plate is Falling</source>
-        <translation type="unfinished"></translation>
+        <translation>プレートの落下</translation>
     </message>
     <message>
         <source>cb_s5_7 (aeris On roof)</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_7 （屋根の上のエアリス）</translation>
     </message>
 </context>
 <context>
@@ -5686,27 +5686,27 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>9 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>9 Pt.</translation>
     </message>
     <message>
         <source>10 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>10 Pt.</translation>
     </message>
     <message>
         <source>11 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>11 Pt.</translation>
     </message>
     <message>
         <source>12 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>12 Pt.</translation>
     </message>
     <message>
         <source>13 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>13 Pt.</translation>
     </message>
     <message>
         <source>14 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>14 Pt.</translation>
     </message>
 </context>
 <context>
@@ -5870,7 +5870,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Some Options have Ability to reset to default</source>
-        <translation>追加: いくつかのオプションをデフォルトへリセット可能に</translation>
+        <translation>追加: いくつかのオプションをリセット可能に</translation>
     </message>
     <message>
         <source>Fixed: No longer export non ff7 slots to pc</source>
@@ -6086,7 +6086,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Flashback  Chruch in the slums</source>
-        <translation>追加: スラム街の教会のフラッシュバック</translation>
+        <translation>追加: スラムの教会のフラッシュバック</translation>
     </message>
     <message>
         <source>Update: Location Tab; Both Save &amp; World Locations</source>
@@ -6098,7 +6098,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Unknown Var  Tracker in Test Data (very basic atm)</source>
-        <translation>追加: 詳細不明な変数の調査 (今のところ単純な機能)</translation>
+        <translation>追加: 未知の変数の調査 (今のところ単純な機能)</translation>
     </message>
     <message>
         <source>Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</source>
@@ -6118,7 +6118,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Editable Unknown Vars</source>
-        <translation>追加: 詳細不明な変数を編集可能に</translation>
+        <translation>追加: 未知の変数を編集可能に</translation>
     </message>
     <message>
         <source>New: Toggle &quot;unable to mate&quot; flag for chocobos</source>
@@ -6150,7 +6150,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Better Unknown Var Tab.</source>
-        <translation>追加: 詳細不明な変数タブの改善</translation>
+        <translation>追加: 未知の変数タブの改善</translation>
     </message>
     <message>
         <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
