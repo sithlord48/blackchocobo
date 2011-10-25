@@ -1379,6 +1379,14 @@
         <source>Shinra Bldg 64F.</source>
         <translation>Edif. Shinra P69.</translation>
     </message>
+    <message>
+        <source>7th Heaven</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>AVALANCHE Hideout</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -4091,10 +4099,6 @@ Las entradas de la tabla son editables</translation>
         <translation>cb_s5_5</translation>
     </message>
     <message>
-        <source>cb_s5_7</source>
-        <translation>cb_s5_7</translation>
-    </message>
-    <message>
         <source>Jesse Has Been Unstuck</source>
         <translation>Jesse se ha desenganchado</translation>
     </message>
@@ -4112,6 +4116,26 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Using Unknown Var Table To View Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 7 - Slums Progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Initial Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Destroy the Sector 5 Reactor </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Plate is Falling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cb_s5_7 (aeris On roof)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5647,30 +5671,6 @@ Las entradas de la tabla son editables</translation>
         <translation>Conjunto de Aplicaciones de Fuente</translation>
     </message>
     <message>
-        <source>9Pt</source>
-        <translation>9pt</translation>
-    </message>
-    <message>
-        <source>10Pt</source>
-        <translation>10pt</translation>
-    </message>
-    <message>
-        <source>11Pt</source>
-        <translation>11pt</translation>
-    </message>
-    <message>
-        <source>12Pt</source>
-        <translation>12pt</translation>
-    </message>
-    <message>
-        <source>13Pt</source>
-        <translation>13pt</translation>
-    </message>
-    <message>
-        <source>14Pt</source>
-        <translation>14pt</translation>
-    </message>
-    <message>
         <source>Options</source>
         <translation>Opciones</translation>
     </message>
@@ -5681,6 +5681,30 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>&amp;Close</source>
         <translation>&amp;Cerrar</translation>
+    </message>
+    <message>
+        <source>9 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>10 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>11 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>12 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>13 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>14 Pt.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

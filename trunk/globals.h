@@ -37,6 +37,7 @@ public:
     QString x(int);
     QString y(int);
     QString z(int);
+    int len(void);
 };
 class ff7names
 {

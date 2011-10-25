@@ -1378,6 +1378,14 @@
         <source>Shinra Bldg 64F.</source>
         <translation>Bât. Shinra 69ème ét. {64F?}</translation>
     </message>
+    <message>
+        <source>7th Heaven</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>AVALANCHE Hideout</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -4091,10 +4099,6 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation>cb_s5_5</translation>
     </message>
     <message>
-        <source>cb_s5_7</source>
-        <translation>cb_s5_7</translation>
-    </message>
-    <message>
         <source>Jesse Has Been Unstuck</source>
         <translation>Jambe de Jesse décoincée</translation>
     </message>
@@ -4112,6 +4116,26 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Using Unknown Var Table To View Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 7 - Slums Progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Initial Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Destroy the Sector 5 Reactor </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Plate is Falling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cb_s5_7 (aeris On roof)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5647,30 +5671,6 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation>Polices d&apos;applications Set</translation>
     </message>
     <message>
-        <source>9Pt</source>
-        <translation>9Pt</translation>
-    </message>
-    <message>
-        <source>10Pt</source>
-        <translation>10Pt</translation>
-    </message>
-    <message>
-        <source>11Pt</source>
-        <translation>11Pt</translation>
-    </message>
-    <message>
-        <source>12Pt</source>
-        <translation>12Pt</translation>
-    </message>
-    <message>
-        <source>13Pt</source>
-        <translation>13Pt</translation>
-    </message>
-    <message>
-        <source>14Pt</source>
-        <translation>14Pt</translation>
-    </message>
-    <message>
         <source>Options</source>
         <translation></translation>
     </message>
@@ -5681,6 +5681,30 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>&amp;Close</source>
         <translation>&amp;Fermer</translation>
+    </message>
+    <message>
+        <source>9 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>10 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>11 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>12 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>13 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>14 Pt.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

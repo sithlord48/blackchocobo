@@ -136,120 +136,106 @@ void fix_vmc_header(FF7 *ff7)
            mc_header_2.append(xor_byte);
 
            if(ff7->SG_Region_String[i].endsWith("S01"))
-           {
-               for(int P=0;P<512;P++)
-                {
+           {for(int P=0;P<512;P++)
+               {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
+
            if(ff7->SG_Region_String[i].endsWith("S02"))
-           {
-                for(int P=0;P<512;P++)
+           {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S02[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
            if(ff7->SG_Region_String[i].endsWith("S03"))
-           {
-                for(int P=0;P<512;P++)
+           {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S03[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
            if(ff7->SG_Region_String[i].endsWith("S04"))
-           {
-                for(int P=0;P<512;P++)
+           {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S04[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
            if(ff7->SG_Region_String[i].endsWith("S05"))
-           {
-               for(int P=0;P<512;P++)
+           {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S05[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
            if(ff7->SG_Region_String[i].endsWith("S06"))
-           {
-               for(int P=0;P<512;P++)
+           {for(int P=0;P<512;P++)
                {
                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S06[P];}
                    else{ff7->hf[i].sl_header[P]= 0x00;}
                }
            }
            if(ff7->SG_Region_String[i].endsWith("S07"))
-           {
-               for(int P=0;P<512;P++)
+           {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S07[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
            if(ff7->SG_Region_String[i].endsWith("S08"))
-           {
-                for(int P=0;P<512;P++)
+           {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S08[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
            if(ff7->SG_Region_String[i].endsWith("S09"))
-           {
-                for(int P=0;P<512;P++)
+           {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S09[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
            if(ff7->SG_Region_String[i].endsWith("S10"))
-           {
-                for(int P=0;P<512;P++)
+           {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S10[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
            if(ff7->SG_Region_String[i].endsWith("S11"))
-           {
-               for(int P=0;P<512;P++)
+           {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S11[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
            if(ff7->SG_Region_String[i].endsWith("S12"))
-           {
-               for(int P=0;P<512;P++)
+           {for(int P=0;P<512;P++)
                {
                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S12[P];}
                    else{ff7->hf[i].sl_header[P]= 0x00;}
                }
            }
            if(ff7->SG_Region_String[i].endsWith("S13"))
-           {
-               for(int P=0;P<512;P++)
+           {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S13[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
            if(ff7->SG_Region_String[i].endsWith("S14"))
-           {
-               for(int P=0;P<512;P++)
+           {for(int P=0;P<512;P++)
                {
                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S14[P];}
                    else{ff7->hf[i].sl_header[P]= 0x00;}
                }
            }
            if(ff7->SG_Region_String[i].endsWith("S15"))
-           {
-               for(int P=0;P<512;P++)
+           {for(int P=0;P<512;P++)
                {
                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S15[P];}
                    else{ff7->hf[i].sl_header[P]= 0x00;}
@@ -494,6 +480,8 @@ QString ff7names::MateriaSkills(int i,int l){return qApp->translate("Materia_Ski
      {QT_TRANSLATE_NOOP("Locations","Lower Sector 4 Plate"),"1","169","65422","468","11"},
      {QT_TRANSLATE_NOOP("Locations","Sector 5 - Slums"),"1","173","64997","135","78"},
      {QT_TRANSLATE_NOOP("Locations","Sector 7 - Slums"),"1","156","65185","636","231"},
+     {QT_TRANSLATE_NOOP("Locations","7th Heaven"),"1","154","67","6","26"},
+     {QT_TRANSLATE_NOOP("Locations","AVALANCHE Hideout"),"1","155","65346","65371","41"},
      {QT_TRANSLATE_NOOP("Locations","Midgar Sector 8"),"1","732","265","65332","24"},
      {QT_TRANSLATE_NOOP("Locations","Midgar Sector 8"),"1","739","61439","18394","34"},
      {QT_TRANSLATE_NOOP("Locations","Sector 8, Underground"),"1","733","65264","1614","116"},
@@ -543,7 +531,7 @@ QString locations::loc_id(int i){return Locations[i].loc_id;}
 QString locations::x(int i){return Locations[i].x;}
 QString locations::y(int i){return Locations[i].y;}
 QString locations::z(int i){return Locations[i].z;}
-
+int locations::len(){return 51;}// keep current num locations in list.
 /*LEVEL CHART */
 quint32 charlvls[11][99]=
 {
