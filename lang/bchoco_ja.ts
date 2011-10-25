@@ -1378,6 +1378,14 @@
         <source>Shinra Bldg 64F.</source>
         <translation>神羅ビル・６４階</translation>
     </message>
+    <message>
+        <source>7th Heaven</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>AVALANCHE Hideout</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -4093,10 +4101,6 @@ Table Entries are Editable</source>
         <translation>cb_s5_5</translation>
     </message>
     <message>
-        <source>cb_s5_7</source>
-        <translation>cb_s5_7</translation>
-    </message>
-    <message>
         <source>Jesse Has Been Unstuck</source>
         <translation>ジェシーを助ける</translation>
     </message>
@@ -4115,6 +4119,26 @@ Table Entries are Editable</source>
     <message>
         <source>Using Unknown Var Table To View Save</source>
         <translation>詳細不明な変数テーブルを使ってセーブを表示</translation>
+    </message>
+    <message>
+        <source>Sector 7 - Slums Progress</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Initial Settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Destroy the Sector 5 Reactor </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The Plate is Falling</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cb_s5_7 (aeris On roof)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5649,30 +5673,6 @@ Table Entries are Editable</source>
         <translation>アプリケーションのフォント設定</translation>
     </message>
     <message>
-        <source>9Pt</source>
-        <translation>9Pt</translation>
-    </message>
-    <message>
-        <source>10Pt</source>
-        <translation>10Pt</translation>
-    </message>
-    <message>
-        <source>11Pt</source>
-        <translation>11Pt</translation>
-    </message>
-    <message>
-        <source>12Pt</source>
-        <translation>12Pt</translation>
-    </message>
-    <message>
-        <source>13Pt</source>
-        <translation>13Pt</translation>
-    </message>
-    <message>
-        <source>14Pt</source>
-        <translation>14Pt</translation>
-    </message>
-    <message>
         <source>Options</source>
         <translation>オプション</translation>
     </message>
@@ -5683,6 +5683,30 @@ Table Entries are Editable</source>
     <message>
         <source>&amp;Close</source>
         <translation>閉じる(&amp;C)</translation>
+    </message>
+    <message>
+        <source>9 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>10 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>11 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>12 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>13 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>14 Pt.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

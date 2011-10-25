@@ -56,7 +56,7 @@ MainWindow::MainWindow(QWidget *parent,FF7 *ff7data,QSettings *config_data)
 
     QTableWidgetItem *newItem;
     locations Locations;
-    ui->tbl_location_field->setRowCount(49);
+    ui->tbl_location_field->setRowCount(Locations.len());
     for (int i=0;i<ui->tbl_location_field->rowCount();i++)
     {
         newItem = new QTableWidgetItem(Locations.loc_name(i),0);
@@ -3057,6 +3057,7 @@ ui->sb_curdisc->setValue(ff7->slot[s].disc);
 ui->sb_turkschruch->setValue(ff7->slot[s].aeris_chruch);
 ui->sb_donprog->setValue(ff7->slot[s].donprogress);
 ui->sb_mprogress->setValue(ff7->slot[s].mprogress);
+ui->combo_s7_slums->setCurrentIndex(0);
 
 if(ff7->slot[s].intbombing == 0x14){ui->cb_bombing_int->setChecked(Qt::Checked);}
 
@@ -3178,6 +3179,24 @@ if((ff7->slot[s].midgartrainflags)& (1<<6)){ui->cb_midgartrain_7->setChecked(Qt:
 else{ui->cb_midgartrain_7->setChecked(Qt::Unchecked);}
 if((ff7->slot[s].midgartrainflags)& (1<<7)){ui->cb_midgartrain_8->setChecked(Qt::Checked);}
 else{ui->cb_midgartrain_8->setChecked(Qt::Unchecked);}
+
+if(ff7->slot[s].z_26[1] ==0x00 &&
+   ff7->slot[s].z_26[2] ==0x00 &&
+   ff7->slot[s].z_26[3] ==0x00 &&
+   ff7->slot[s].z_26[4] ==0x00 &&
+   ff7->slot[s].z_26[5] ==0x00 &&
+   ff7->slot[s].z_26[6] ==0x00   )
+   {ui->combo_s7_slums->setCurrentIndex(1);}
+
+else if((ff7->slot[s].z_26[1] == 0xFF ||ff7->slot[s].z_26[1] == 0xBF) &&
+        (ff7->slot[s].z_26[2] == 0x03 ||ff7->slot[s].z_26[2] == 0x51) &&
+        (ff7->slot[s].z_26[3] == 0x04 ||ff7->slot[s].z_26[3] == 0x05) &&
+        (ff7->slot[s].z_26[4] == 0x0F ||ff7->slot[s].z_26[4] == 0x17) &&
+        (ff7->slot[s].z_26[5] == 0x1F ||ff7->slot[s].z_26[5] == 0x5D) &&
+        (ff7->slot[s].z_26[6] == 0x6F ||ff7->slot[s].z_26[6] == 0xEF)   )
+        {ui->combo_s7_slums->setCurrentIndex(2);}
+else if((ff7->slot[s].z_26[2]== 0x13)){ui->combo_s7_slums->setCurrentIndex(3);}
+else {ui->combo_s7_slums->setCurrentIndex(0);}
 
 
 load=false;
@@ -4822,6 +4841,9 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->cb_midgartrain_6->setChecked(0);
         ui->cb_midgartrain_7->setChecked(0);
         ui->cb_midgartrain_8->setChecked(0);
+        ui->combo_s7_slums->setCurrentIndex(1);
+        ui->cb_s5_7->setChecked(0);//show aeris on roof of chruch durring script
+        ui->cb_s5_8->setChecked(0);//not after chruch scene.
         ui->line_location->setText(tr("Platform"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(116);
@@ -4840,6 +4862,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->slot[s].bm_progress3=3;
         ui->cb_bombing_int->setChecked(0);
         ui->cb_s5_7->setChecked(0);//show aeris on roof of chruch durring script
+        ui->cb_s5_8->setChecked(0);//not after chruch scene.
         ui->line_location->setText(tr("Chruch in the Slums"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(183);
@@ -6059,3 +6082,37 @@ void MainWindow::on_btn_paste_materia_clicked()
         materiaupdate();
     }
 }
+
+void MainWindow::on_combo_s7_slums_currentIndexChanged(int index)
+{if(!load){
+        switch(index)
+        {
+        default: break; //do nothing
+        case 1: //initial slums setting
+            ff7->slot[s].z_26[1]=0x00;
+            ff7->slot[s].z_26[2]=0x00;
+            ff7->slot[s].z_26[3]=0x00;
+            ff7->slot[s].z_26[4]=0x00;
+            ff7->slot[s].z_26[5]=0x00;
+            ff7->slot[s].z_26[6]=0x00;
+            break;
+
+        case 2://after first scene. needs game global progress set to 105
+            ff7->slot[s].z_26[1]=0xBF;
+            ff7->slot[s].z_26[2]=0x03; //03
+            ff7->slot[s].z_26[3]=0x05;
+            ff7->slot[s].z_26[4]=0x17;//07
+            ff7->slot[s].z_26[5]=0x5D;
+            ff7->slot[s].z_26[6]=0xEF;
+            break;
+
+        case 3://plate falling
+            ff7->slot[s].z_26[1]=0xBF;
+            ff7->slot[s].z_26[2]=0x13; //Sky is falling
+            ff7->slot[s].z_26[3]=0x05;
+            ff7->slot[s].z_26[4]=0x17;//07
+            ff7->slot[s].z_26[5]=0x5D;
+            ff7->slot[s].z_26[6]=0xEF;
+            break;
+        }
+}}
