@@ -1694,8 +1694,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>429</width>
-             <height>437</height>
+             <width>423</width>
+             <height>457</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -4464,8 +4464,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>443</width>
-             <height>436</height>
+             <width>401</width>
+             <height>419</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8192,8 +8192,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>239</width>
-                  <height>330</height>
+                  <width>192</width>
+                  <height>217</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -10419,8 +10419,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1452</width>
-             <height>334</height>
+             <width>1388</width>
+             <height>263</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16425,8 +16425,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>764</width>
-             <height>440</height>
+             <width>714</width>
+             <height>238</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -16844,8 +16844,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>744</width>
-             <height>414</height>
+             <width>738</width>
+             <height>410</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -18828,8 +18828,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>390</width>
-                  <height>1492</height>
+                  <width>295</width>
+                  <height>1313</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -21528,8 +21528,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>737</width>
-             <height>664</height>
+             <width>733</width>
+             <height>648</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -28244,7 +28244,7 @@ Var And Scrolling Synced To Left Table</string>
      <x>0</x>
      <y>0</y>
      <width>764</width>
-     <height>22</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
@@ -28347,6 +28347,7 @@ Var And Scrolling Synced To Left Table</string>
      <addaction name="action_Lang_en"/>
      <addaction name="action_Lang_es"/>
      <addaction name="action_Lang_fr"/>
+     <addaction name="action_Lang_de"/>
      <addaction name="action_Lang_jp"/>
     </widget>
     <addaction name="action_auto_char_growth"/>
@@ -29167,6 +29168,15 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="text">
     <string notr="true">日本語</string>
+   </property>
+  </action>
+  <action name="action_Lang_de">
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/de_unsel</normaloff>:/icon/de_unsel</iconset>
+   </property>
+   <property name="text">
+    <string notr="true">Deutsch</string>
    </property>
   </action>
  </widget>
