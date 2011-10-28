@@ -116,6 +116,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_action_Lang_en_triggered();
     void on_action_Lang_es_triggered();
     void on_action_Lang_fr_triggered();
+    void on_action_Lang_de_triggered();
     void on_action_Lang_jp_triggered();
     void on_action_Region_USA_triggered(bool checked);
     void on_action_Region_PAL_Generic_triggered(bool checked);

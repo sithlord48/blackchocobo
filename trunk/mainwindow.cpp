@@ -181,6 +181,11 @@ MainWindow::MainWindow(QWidget *parent,FF7 *ff7data,QSettings *config_data)
         ui->action_Lang_jp->setChecked(1);
         ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_sel"));
     }
+    else if(settings->value("lang").toString() == "de")
+    {
+        ui->action_Lang_de->setChecked(1);
+        ui->action_Lang_de->setIcon(QIcon(":/icon/de_sel"));
+    }
     // Connect the unknown and unknown compare scrolling.
     connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );
     connect( ui->tbl_compare_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_unknown->verticalScrollBar(), SLOT(setValue(int)) );
@@ -1153,6 +1158,8 @@ void MainWindow::on_action_Lang_en_triggered()
     ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
     ui->action_Lang_jp->setChecked(0);
     ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_unsel"));
+    ui->action_Lang_de->setChecked(0);
+    ui->action_Lang_de->setIcon(QIcon(":/icon/de_unsel"));
     settings->setValue("lang","en");
     ui->action_Lang_en->setIcon(QIcon(":/icon/us_sel"));
     QMessageBox::information(this,"Language Changed","You Must Restart For The Language to Change");
@@ -1165,6 +1172,8 @@ void MainWindow::on_action_Lang_es_triggered()
     ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
     ui->action_Lang_jp->setChecked(0);
     ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_unsel"));
+    ui->action_Lang_de->setChecked(0);
+    ui->action_Lang_de->setIcon(QIcon(":/icon/de_unsel"));
     settings->setValue("lang","es");
     ui->action_Lang_es->setIcon(QIcon(":/icon/es_sel"));
     QMessageBox::information(this,QString::fromUtf8("Idioma Cambiado"),QString::fromUtf8("Debe reiniciar Para el cambio de idioma"));
@@ -1177,9 +1186,24 @@ void MainWindow::on_action_Lang_fr_triggered()
     ui->action_Lang_es->setIcon(QIcon(":/icon/es_unsel"));
     ui->action_Lang_jp->setChecked(0);
     ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_unsel"));
+    ui->action_Lang_de->setChecked(0);
+    ui->action_Lang_de->setIcon(QIcon(":/icon/de_unsel"));
     settings->setValue("lang","fr");
     ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_sel"));
     QMessageBox::information(this,QString::fromUtf8("Langue Modifiée"),QString::fromUtf8("Vous Devez Redemarrer Pour Changer la Langue"));
+}
+void MainWindow::on_action_Lang_de_triggered()
+{
+    ui->action_Lang_en->setChecked(0);
+    ui->action_Lang_en->setIcon(QIcon(":/icon/us_unsel"));
+    ui->action_Lang_es->setChecked(0);
+    ui->action_Lang_es->setIcon(QIcon(":/icon/es_unsel"));
+    ui->action_Lang_fr->setChecked(0);
+    ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
+    ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_unsel"));
+    settings->setValue("lang","de");
+    ui->action_Lang_de->setIcon(QIcon(":/icon/de_sel"));
+    QMessageBox::information(this,QString::fromUtf8("Die Spracheinstellung wurde geändert"),QString::fromUtf8("Sie müssen für die Sprache zu ändern Restart"));
 }
 void MainWindow::on_action_Lang_jp_triggered()
 {
@@ -1189,6 +1213,8 @@ void MainWindow::on_action_Lang_jp_triggered()
     ui->action_Lang_es->setIcon(QIcon(":/icon/es_unsel"));
     ui->action_Lang_fr->setChecked(0);
     ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_unsel"));
+    ui->action_Lang_de->setChecked(0);
+    ui->action_Lang_de->setIcon(QIcon(":/icon/de_unsel"));
     settings->setValue("lang","ja");
     ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_sel"));
     QMessageBox::information(this,QString::fromUtf8("言語の変更"),QString::fromUtf8("プログラムを再起動して言語の変更を適用してください"));
