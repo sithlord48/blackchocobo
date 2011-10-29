@@ -5,8 +5,7 @@
     <name>Items</name>
     <message>
         <source>Potion</source>
-        <translation>
-Trank</translation>
+        <translation>Trank</translation>
     </message>
     <message>
         <source>Hi-Potion</source>
@@ -1448,11 +1447,11 @@ Trank</translation>
     </message>
     <message>
         <source> HP</source>
-        <translation type="unfinished"></translation>
+        <translation> HP</translation>
     </message>
     <message>
         <source>MP</source>
-        <translation type="unfinished"></translation>
+        <translation>MP</translation>
     </message>
     <message>
         <source>Level</source>
@@ -1496,7 +1495,7 @@ Trank</translation>
     </message>
     <message>
         <source>AP</source>
-        <translation type="unfinished"></translation>
+        <translation>AP</translation>
     </message>
     <message>
         <source>Limit Bar</source>
@@ -1548,7 +1547,7 @@ Trank</translation>
     </message>
     <message>
         <source>GP</source>
-        <translation type="unfinished"></translation>
+        <translation>GP</translation>
     </message>
     <message>
         <source>Party&apos;s Materia Stock</source>
@@ -2176,7 +2175,7 @@ Trank</translation>
     </message>
     <message>
         <source>AP:</source>
-        <translation type="unfinished"></translation>
+        <translation>AP:</translation>
     </message>
     <message>
         <source>Accessory:</source>
@@ -2665,11 +2664,11 @@ Trank</translation>
     </message>
     <message>
         <source>Mime</source>
-        <translation type="unfinished"></translation>
+        <translation>Mimik</translation>
     </message>
     <message>
         <source>HP &lt;-&gt; MP</source>
-        <translation type="unfinished"></translation>
+        <translation>HP&lt;-&gt;MP</translation>
     </message>
     <message>
         <source>Quadra Magic</source>
@@ -3191,7 +3190,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation type="unfinished"></translation>
+        <translation>Feindtechnick</translation>
     </message>
     <message>
         <source>S01</source>
@@ -3697,7 +3696,7 @@ Would you like to correct the playtime?</source>
     </message>
     <message>
         <source>#</source>
-        <translation type="unfinished">#</translation>
+        <translation>#</translation>
     </message>
     <message>
         <source>Hex</source>
@@ -3796,7 +3795,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>HP</source>
-        <translation type="unfinished"></translation>
+        <translation>HP</translation>
     </message>
     <message>
         <source>Event Progress</source>
