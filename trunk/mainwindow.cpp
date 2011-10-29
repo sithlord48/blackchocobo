@@ -1203,7 +1203,7 @@ void MainWindow::on_action_Lang_de_triggered()
     ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_unsel"));
     settings->setValue("lang","de");
     ui->action_Lang_de->setIcon(QIcon(":/icon/de_sel"));
-    QMessageBox::information(this,QString::fromUtf8("Die Spracheinstellung wurde geändert"),QString::fromUtf8("Sie müssen für die Sprache zu ändern Restart"));
+    QMessageBox::information(this,QString::fromUtf8("Sprache geändert"),QString::fromUtf8("Neustarten um Sprache zu ändern"));
 }
 void MainWindow::on_action_Lang_jp_triggered()
 {
