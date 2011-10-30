@@ -4870,6 +4870,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->combo_s7_slums->setCurrentIndex(1);
         ui->cb_s5_7->setChecked(0);//show aeris on roof of chruch durring script
         ui->cb_s5_8->setChecked(0);//not after chruch scene.
+        ui->sb_turkschruch->setValue(0); // reset turks.
         ui->line_location->setText(tr("Platform"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(116);
