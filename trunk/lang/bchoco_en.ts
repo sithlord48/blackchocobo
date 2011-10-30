@@ -3782,10 +3782,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Spr</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Dex</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4117,6 +4113,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>cb_s5_7 (aeris On roof)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spi</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -1694,8 +1694,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>423</width>
-             <height>457</height>
+             <width>429</width>
+             <height>437</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -3500,7 +3500,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <item>
                       <widget class="QLabel" name="label_16">
                        <property name="text">
-                        <string>Spr</string>
+                        <string>Spi</string>
                        </property>
                       </widget>
                      </item>
@@ -3967,7 +3967,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         <item>
                          <widget class="QLabel" name="label_43">
                           <property name="text">
-                           <string>Spr</string>
+                           <string>Spi</string>
                           </property>
                          </widget>
                         </item>
@@ -4465,7 +4465,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>401</width>
-             <height>419</height>
+             <height>420</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8192,8 +8192,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>192</width>
-                  <height>217</height>
+                  <width>212</width>
+                  <height>267</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -10419,8 +10419,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1388</width>
-             <height>263</height>
+             <width>1446</width>
+             <height>276</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16425,8 +16425,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>714</width>
-             <height>238</height>
+             <width>720</width>
+             <height>275</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -16844,8 +16844,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>738</width>
-             <height>410</height>
+             <width>744</width>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -18828,8 +18828,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>295</width>
-                  <height>1313</height>
+                  <width>328</width>
+                  <height>1492</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -21529,7 +21529,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>733</width>
-             <height>648</height>
+             <height>664</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -28244,7 +28244,7 @@ Var And Scrolling Synced To Left Table</string>
      <x>0</x>
      <y>0</y>
      <width>764</width>
-     <height>19</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">

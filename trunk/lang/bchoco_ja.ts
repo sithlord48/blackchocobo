@@ -3800,10 +3800,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation>まりょく</translation>
     </message>
     <message>
-        <source>Spr</source>
-        <translation>せいしん</translation>
-    </message>
-    <message>
         <source>Dex</source>
         <translation>すばやさ</translation>
     </message>
@@ -4139,6 +4135,10 @@ Table Entries are Editable</source>
     <message>
         <source>cb_s5_7 (aeris On roof)</source>
         <translation>cb_s5_7 （屋根の上のエアリス）</translation>
+    </message>
+    <message>
+        <source>Spi</source>
+        <translation>せいしん</translation>
     </message>
 </context>
 <context>
