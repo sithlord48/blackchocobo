@@ -3803,10 +3803,6 @@ Var y navegación sincronizadas con la tabla izquierda</translation>
         <translation>Mag</translation>
     </message>
     <message>
-        <source>Spr</source>
-        <translation>Esp</translation>
-    </message>
-    <message>
         <source>Dex</source>
         <translation>Des</translation>
     </message>
@@ -4137,6 +4133,10 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>cb_s5_7 (aeris On roof)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spi</source>
+        <translation>Esp</translation>
     </message>
 </context>
 <context>

@@ -3803,10 +3803,6 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
         <translation>MAG</translation>
     </message>
     <message>
-        <source>Spr</source>
-        <translation>ESP</translation>
-    </message>
-    <message>
         <source>Dex</source>
         <translation>DEX</translation>
     </message>
@@ -4137,6 +4133,10 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>cb_s5_7 (aeris On roof)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spi</source>
+        <translation>ESP</translation>
     </message>
 </context>
 <context>

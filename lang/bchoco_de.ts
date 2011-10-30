@@ -1276,7 +1276,7 @@
     </message>
     <message>
         <source>Sector 7 - Slums</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sektor 7 - Slums</translation>
     </message>
     <message>
         <source>Reactor No.1</source>
@@ -1372,7 +1372,7 @@
     </message>
     <message>
         <source>Highwind</source>
-        <translation type="unfinished"></translation>
+        <translation>Highwind</translation>
     </message>
     <message>
         <source>Shinra Bldg 64F.</source>
@@ -1487,11 +1487,11 @@
     </message>
     <message>
         <source>Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Waffe</translation>
     </message>
     <message>
         <source>Armor</source>
-        <translation type="unfinished"></translation>
+        <translation>Rüstung</translation>
     </message>
     <message>
         <source>AP</source>
@@ -1555,7 +1555,7 @@
     </message>
     <message>
         <source>Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>Materia</translation>
     </message>
     <message>
         <source>Edit Selected Materia Slot</source>
@@ -1683,7 +1683,7 @@
     </message>
     <message>
         <source>Key Items</source>
-        <translation type="unfinished"></translation>
+        <translation>Schlüßelgegenstände</translation>
     </message>
     <message>
         <source>Cotton Dress</source>
@@ -1855,7 +1855,7 @@
     </message>
     <message>
         <source>Average</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Glatter Durchschnitt</translation>
     </message>
     <message>
         <source>Stables Owned</source>
@@ -2051,31 +2051,31 @@
     </message>
     <message>
         <source>Wonderful</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fabelhaft</translation>
     </message>
     <message>
         <source>Great</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sehr gut</translation>
     </message>
     <message>
         <source>Good</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gut</translation>
     </message>
     <message>
         <source>Fair</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ganz brauchbar</translation>
     </message>
     <message>
         <source>Poor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nicht übel</translation>
     </message>
     <message>
         <source>Bad</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nichts besonderes</translation>
     </message>
     <message>
         <source>Terrible</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nicht empfehlenswert</translation>
     </message>
     <message>
         <source>Speed Values Are The Raw Values , the km/h speeds are calculated while playing </source>
@@ -2115,27 +2115,27 @@
     </message>
     <message>
         <source>Sector 7 Slums</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Slums Sektor 7</translation>
     </message>
     <message>
         <source>1st Floor Shinra Building</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra Gebäude - Erdgeschoß</translation>
     </message>
     <message>
         <source>Gold Saucer - Ghost Hotel</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gold-Saucer Geisterhotel</translation>
     </message>
     <message>
         <source>Cosmo Canyon - Inn 2nd Floor</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cosmo Canyon - Herberge 1. Stock</translation>
     </message>
     <message>
         <source>Cosmo Canyon - Near Shop</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Cosmo Canyon - Waffengeschäft</translation>
     </message>
     <message>
         <source>Wutai - In Front Of Trap Room</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wutai - Keller vorm Fallenraum</translation>
     </message>
     <message>
         <source>Upper Left</source>
@@ -2179,7 +2179,7 @@
     </message>
     <message>
         <source>Accessory:</source>
-        <translation type="unfinished"></translation>
+        <translation>Zubehör:</translation>
     </message>
     <message>
         <source>Selected Materia Skills and Stat Info</source>
@@ -2187,7 +2187,7 @@
     </message>
     <message>
         <source>All</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Alle</translation>
     </message>
     <message>
         <source>Magic</source>
@@ -2311,11 +2311,11 @@
     </message>
     <message>
         <source>&amp;Items</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Items</translation>
     </message>
     <message>
         <source>&amp;Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;Materia</translation>
     </message>
     <message>
         <source>Lvl 1</source>
@@ -2371,15 +2371,15 @@
     </message>
     <message>
         <source>x</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">x</translation>
     </message>
     <message>
         <source>y</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">y</translation>
     </message>
     <message>
         <source>z</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">z</translation>
     </message>
     <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
@@ -2503,7 +2503,7 @@
     </message>
     <message>
         <source>&amp;File</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Datei</translation>
     </message>
     <message>
         <source>&amp;Quit</source>
@@ -2672,7 +2672,7 @@
     </message>
     <message>
         <source>Quadra Magic</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Quadra-Zauber</translation>
     </message>
     <message>
         <source>KOTR</source>
@@ -2945,7 +2945,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>DON&apos;T USE</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">DO NOT USE</translation>
     </message>
     <message>
         <source>Empty Materia</source>
@@ -3771,27 +3771,23 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Str</source>
-        <translation type="unfinished"></translation>
+        <translation>Stä</translation>
     </message>
     <message>
         <source>Vit</source>
-        <translation type="unfinished"></translation>
+        <translation>Gem</translation>
     </message>
     <message>
         <source>Mag</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Spr</source>
-        <translation type="unfinished"></translation>
+        <translation>Zau</translation>
     </message>
     <message>
         <source>Dex</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ges</translation>
     </message>
     <message>
         <source>Lck</source>
-        <translation type="unfinished"></translation>
+        <translation>Glü</translation>
     </message>
     <message>
         <source>HP</source>
@@ -4118,6 +4114,10 @@ Table Entries are Editable</source>
     <message>
         <source>cb_s5_7 (aeris On roof)</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spi</source>
+        <translation>Gem</translation>
     </message>
 </context>
 <context>
@@ -5506,19 +5506,19 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Lck:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Glü:+1</translation>
     </message>
     <message>
         <source>Lck:-1</source>
-        <translation type="unfinished"></translation>
+        <translation>Glü:-1</translation>
     </message>
     <message>
         <source>Dex:+2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ges:+2</translation>
     </message>
     <message>
         <source>Vit:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Vit:+1</translation>
     </message>
     <message>
         <source>MaxHp:+% depending on level</source>
@@ -5530,35 +5530,35 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>MaxHp:-2% MaxMp:+2% Str:-1 Mag:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Hp:-2% Mp:+2% Stä:-1 Zau:+1</translation>
     </message>
     <message>
         <source>MaxHp:-5% MaxMp:+5% Str:-2 Vit:-1 Mag:+2 Spi:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Hp:-5% Mp:+5% Stä:-2 Vit:-1 Zau:+2 Gem:+1</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+10% Str:-4 Vit:-2 Mag:+4 Spi:+2</source>
-        <translation type="unfinished"></translation>
+        <translation>Hp:-10% Mp:+10% Stä:-4 Vit:-2 Zau:+4 Gem:+2</translation>
     </message>
     <message>
         <source>MaxHp:-2% MaxMp:+2% Mag:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Hp:-2% Mp:+2% Zau:+1</translation>
     </message>
     <message>
         <source>MaxHp:-5% MaxMp:+5% Mag:+1 Spi:+1</source>
-        <translation type="unfinished"></translation>
+        <translation>Hp:-5% Mp:+5% Zau:+1 Gem:+1</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+10% Mag:+2 Spi:+2</source>
-        <translation type="unfinished"></translation>
+        <translation>Hp:-10% Mp:+10% Zau:+2 Gem:+2</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4</source>
-        <translation type="unfinished"></translation>
+        <translation>Hp:-10% Mp:+15%Zau:+4 Gem:+4</translation>
     </message>
     <message>
         <source>MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8</source>
-        <translation type="unfinished"></translation>
+        <translation>Hp:-10% Mp:+20% Zau:+8 Gem:+8</translation>
     </message>
 </context>
 <context>
@@ -5621,15 +5621,15 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>R</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>G</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>B</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Color 2</source>
@@ -5696,7 +5696,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Time</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zeit</translation>
     </message>
     <message>
         <source>Gil</source>
@@ -5788,7 +5788,7 @@ Empty</source>
     </message>
     <message>
         <source>&amp;About</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">&amp;Über</translation>
     </message>
     <message>
         <source>The Final Fantasy VII Save Game Editor</source>
