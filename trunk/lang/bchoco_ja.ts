@@ -1364,7 +1364,7 @@
     </message>
     <message>
         <source>Forgotten City</source>
-        <translation>忘らるる都・湖</translation>
+        <translation>忘らるる都＊</translation>
     </message>
     <message>
         <source>Chocobo Ranch</source>
@@ -1431,7 +1431,7 @@
     </message>
     <message>
         <source>Click On A Char To edit ===========&gt;</source>
-        <translation>編集するキャラクターをクリック ===========&gt;</translation>
+        <translation>編集するキャラクターをクリック =========&gt;</translation>
     </message>
     <message>
         <source>Stats Tab</source>
@@ -2348,15 +2348,15 @@
     </message>
     <message>
         <source>Forgotten City</source>
-        <translation>忘らるる都・湖</translation>
+        <translation>忘らるる都＊</translation>
     </message>
     <message>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</source>
-        <translation>リストのクリックでセーブ地点を &apos;ワープ&apos; させます。マップ, 場所, 座標を手動で設定することもできます。</translation>
+        <translation>リストのクリックでセーブ地点を &apos;ワープ&apos; させます。 マップ, 場所, 座標を手動で設定することもできます。</translation>
     </message>
     <message>
         <source>Have Fun With This Feature, But Don&apos;t Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</source>
-        <translation>この機能をお楽しみください。ただし、選択した設定とストーリーの進捗度やパーティ構成との齟齬により、不具合が引き起こされることがあります。</translation>
+        <translation>この機能をお楽しみください。 ただし、選択した設定とストーリーの進捗度やパーティ構成との齟齬により、不具合が引き起こされることがあります。 設定は慎重におこなってください。</translation>
     </message>
     <message>
         <source>Location Name</source>
@@ -2384,7 +2384,7 @@
     </message>
     <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
-        <translation>ミッションのリプレイをセットすれば、そのミッションまでゲームを巻き戻すことができます。 クエストの進行に合わせてセーブの場所とディスク番号が自動的にセットされます。 すべてのリプレイがゲームの終了までを確実にプレイ可能かどうか、 選択したリプレイがセーブ上で正しく機能するかどうかは保障できません。 これは、いまだ開発途上の機能です</translation>
+        <translation>ミッションのリプレイをセットすれば、そのミッションまでゲームを巻き戻すことができます。 クエストの進行に合わせてセーブ地点とディスク番号が自動的にセットされます。 すべてのリプレイがゲームの終了までを確実にプレイ可能かどうか、選択したリプレイがセーブ上で正しく機能するかどうかは保障できません。 これは、いまだ開発途上の機能です</translation>
     </message>
     <message>
         <source>Sound Mode</source>
@@ -3563,7 +3563,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>&amp;Location</source>
-        <translation>現在地(&amp;L)</translation>
+        <translation>セーブ地点(&amp;L)</translation>
     </message>
     <message>
         <source>Save Location</source>
@@ -4134,16 +4134,17 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Unsaved Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>変更は保存されませんでした</translation>
     </message>
     <message>
         <source>Save Changes to the File:
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>変更をファイルに保存:
+%1</translation>
     </message>
     <message>
         <source>Cannot Guess FileType To Write,abortingsave This Type of File</source>
-        <translation type="unfinished"></translation>
+        <translation>書き込むファイルのタイプが判別できません。保存を中止します</translation>
     </message>
 </context>
 <context>
@@ -5859,7 +5860,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Newest Features</source>
-        <translation>最新の変更</translation>
+        <translation>最新の変更点</translation>
     </message>
     <message>
         <source>New: This Fancy About Dialog</source>
@@ -5963,7 +5964,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct,item/materia lists  and string conversion function. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation>Jenova ソースコードの提供に感謝します。 このプログラムは Jenova のセーブファイル構造, アイテム/マテリア リスト, 文字列変換機能の修正バージョンを使用しています。 Jenova ソースコードの利用により開発初期段階の作業時間を大幅に短縮できました。</translation>
+        <translation> Jenova ソースコードの提供に感謝します。 このプログラムは Jenova のセーブファイル構造, アイテム/マテリア リスト, 文字列変換機能の修正バージョンを使用しています。 Jenova ソースコードの利用により、開発初期の作業時間を大幅に短縮できました。</translation>
     </message>
     <message>
         <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
@@ -6039,7 +6040,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Previous Versions</source>
-        <translation>以前のバージョン</translation>
+        <translation>以前のバージョンの変更点</translation>
     </message>
     <message>
         <source>inital psx save/load; fixed checksum</source>
@@ -6095,7 +6096,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Update: Location Tab; Both Save &amp; World Locations</source>
-        <translation>変更: 現在地タブ; フィールド, ワールド両方のセーブを可能に</translation>
+        <translation>変更: セーブ地点タブ; フィールド, ワールド両方のセーブを可能に</translation>
     </message>
     <message>
         <source>New: Spawn New Windows. (mainly for testing)</source>
@@ -6155,7 +6156,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Better Unknown Var Tab.</source>
-        <translation>追加: 未知の変数タブの改善</translation>
+        <translation>追加: 未知の変数タブの改良</translation>
     </message>
     <message>
         <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
@@ -6199,7 +6200,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Takes a filename argument (open w/ a file)</source>
-        <translation>追加: ファイル パスの取得 (ファイルを開くとき)</translation>
+        <translation>追加: ファイル パスの取得 (ファイルのオープン時)</translation>
     </message>
     <message>
         <source>New: Text Conversion Class (based on myst6re&apos;s work) </source>
@@ -6211,11 +6212,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Improved: Slotselect handleing of non-ff7 and empty slots</source>
-        <translation>調整: スロット選択時の 空き/非 FF7 スロットのハンドリング</translation>
+        <translation>調整: 空きスロット/FF7 以外のスロットのハンドリング</translation>
     </message>
     <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
-        <translation>PSX アイコン クラス &amp; 日本語 PC 文字列変換</translation>
+        <translation>PSX アイコン クラス &amp; 日本語文字列変換機能</translation>
     </message>
 </context>
 <context>
