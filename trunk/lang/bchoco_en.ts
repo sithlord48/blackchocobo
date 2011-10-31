@@ -3317,14 +3317,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No Save File Loaded</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The Filename is empty</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Region Detect Error</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4117,6 +4109,19 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Spi</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unsaved Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Changes to the File:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot Guess FileType To Write,abortingsave This Type of File</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

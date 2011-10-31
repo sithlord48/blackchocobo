@@ -3428,14 +3428,6 @@ is not a FF7 SaveGame.</source>
         <translation>Ce fichier n&apos;a pas un jour Checksum.It ne fonctionnera pas sur votre PS3.</translation>
     </message>
     <message>
-        <source>No Save File Loaded</source>
-        <translation>Aucun fichier de sauvegarde chargé</translation>
-    </message>
-    <message>
-        <source>The Filename is empty</source>
-        <translation>Le nom de fichier est vide</translation>
-    </message>
-    <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</source>
         <translation>Sauvegarde FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</translation>
     </message>
@@ -4137,6 +4129,19 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>Spi</source>
         <translation>ESP</translation>
+    </message>
+    <message>
+        <source>Unsaved Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Changes to the File:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot Guess FileType To Write,abortingsave This Type of File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -3329,14 +3329,6 @@ MASTER = 16777215 AP です</translation>
         <translation>Final Fantasy 7 Dex-Drive セーブの保存</translation>
     </message>
     <message>
-        <source>No Save File Loaded</source>
-        <translation>セーブ ファイルがロードされていません</translation>
-    </message>
-    <message>
-        <source>The Filename is empty</source>
-        <translation>ファイルが未指定です</translation>
-    </message>
-    <message>
         <source>Region Detect Error</source>
         <translation>リージョンの検出エラー</translation>
     </message>
@@ -4139,6 +4131,19 @@ Table Entries are Editable</source>
     <message>
         <source>Spi</source>
         <translation>せいしん</translation>
+    </message>
+    <message>
+        <source>Unsaved Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Changes to the File:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot Guess FileType To Write,abortingsave This Type of File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
