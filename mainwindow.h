@@ -43,12 +43,12 @@ public:
 
 protected:
     void changeEvent(QEvent *e);
-    void aboutToClose();
+    void closeEvent(QCloseEvent *event);
 private:
     Ui::MainWindow *ui;
     bool skip_slot_mask;
     bool load; // are we loading data? if so don't save it to the file.
-    //bool file_changed; //if file changed after load.
+    bool file_changed; //if file changed after load.
     FF7 *ff7; // our save file struct pointer.
     QSettings *settings;
     int s; //track slot

@@ -3333,14 +3333,6 @@ no es una partida guardada de FF7.</translation>
         <translation>Guardar archivo de guardado Final Fantasy 7 unidad Dex</translation>
     </message>
     <message>
-        <source>No Save File Loaded</source>
-        <translation>No se ha cargado un archivo de guardado</translation>
-    </message>
-    <message>
-        <source>The Filename is empty</source>
-        <translation>El nombre del archivo está vacío</translation>
-    </message>
-    <message>
         <source>Region Detect Error</source>
         <translation>Error en la detección de región</translation>
     </message>
@@ -4137,6 +4129,19 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>Spi</source>
         <translation>Esp</translation>
+    </message>
+    <message>
+        <source>Unsaved Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Changes to the File:
+%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cannot Guess FileType To Write,abortingsave This Type of File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
