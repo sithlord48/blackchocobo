@@ -17,7 +17,7 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-
+//#include <QInputDialog>
 /*~~~~~GLOBALS~~~~~~*/
 //see the Header file private data members of the class.
 /*~~~~~~EXTERNS~~~~~~~~*/
@@ -122,7 +122,7 @@ MainWindow::MainWindow(QWidget *parent,FF7 *ff7data,QSettings *config_data)
     if(settings->value("autochargrowth").isNull()){settings->setValue("autochargrowth",1);}
     if(settings->value("default_save_file").isNull()){settings->setValue("default_save_file",QString(QCoreApplication::applicationDirPath()) + "/"+ "save0");}
     if(settings->value("load_path").isNull()){settings->setValue("load_path",QDir::homePath());}
-    if(settings->value("char_stat_folder").isNull()){settings->setValue("char_stat_folder",settings->value("load_path").toString());}
+    if(settings->value("char_stat_folder").isNull()){settings->setValue("char_stat_folder",QDir::homePath());}
     if(settings->value("color1_r").isNull()){settings->setValue("color1_r","7");}
     if(settings->value("color1_g").isNull()){settings->setValue("color1_g","6");}
     if(settings->value("color1_b").isNull()){settings->setValue("color1_b","6");}
@@ -229,7 +229,7 @@ void MainWindow::on_actionOpen_Save_File_activated()
 {
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Open Final Fantasy 7 Save"),settings->value("load_path").toString(),
-    tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme)"));
+    tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
     if (!fileName.isEmpty()){loadFileFull(fileName,0);}
 
 }
@@ -250,7 +250,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
     QByteArray temp; // create a temp to be used when needed
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~Set File Type Vars ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     int file_size = file.size();
-    if(file_size == FF7_PC_SAVE_GAME_SIZE)
+    if((file_size == FF7_PC_SAVE_GAME_SIZE) && ff7file.startsWith("\x71\x73"))
     {
        ff7->SG_SIZE          = FF7_PC_SAVE_GAME_SIZE;
        ff7->SG_HEADER        = FF7_PC_SAVE_GAME_HEADER;
@@ -264,8 +264,8 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
        ff7->file_headerp     = ff7->file_header_pc;           //pointer to pc file header
        ff7->file_footerp     = ff7->file_footer_pc;           //pointer to pc file footer
     }
-    else if(file_size == FF7_PSX_SAVE_GAME_SIZE)
-    {
+    else if((file_size == FF7_PSX_SAVE_GAME_SIZE)&& ff7file.startsWith("\x53\x43\x11\x01\x82\x65\x82\x65\x82\x56\x81\x5E\x82\x72\x82\x60"))
+    {//This should catch just about any false positive named *-S*
        ff7->SG_SIZE          = FF7_PSX_SAVE_GAME_SIZE;
        ff7->SG_HEADER        = FF7_PSX_SAVE_GAME_HEADER;
        ff7->SG_FOOTER        = FF7_PSX_SAVE_GAME_FOOTER;
@@ -278,7 +278,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
        ff7->file_headerp     = ff7->file_header_psx;          //pointer to psx file header
        ff7->file_footerp     = ff7->file_footer_psx;          //pointer to psx file footer
     }
-    else if(file_size == FF7_MC_SAVE_GAME_SIZE)
+    else if((file_size == FF7_MC_SAVE_GAME_SIZE) && ff7file.startsWith("\x4D\x43"))
     {
        ff7->SG_SIZE          = FF7_MC_SAVE_GAME_SIZE;
        ff7->SG_HEADER        = FF7_MC_SAVE_GAME_HEADER;
@@ -292,8 +292,9 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
        ff7->file_headerp     = ff7->file_header_mc;           //pointer to mc file header
        ff7->file_footerp     = ff7->file_footer_mc;           //pointer to mc file footer
     }
-    else if(file_size == FF7_PSV_SAVE_GAME_SIZE)
-    {
+
+    else if((file_size == FF7_PSV_SAVE_GAME_SIZE) && ff7file.startsWith("\x00\x56\x53\x50"))
+    {//CAUTION: be sure we are loading the correct kind of psv, pSX uses the extension for it's state files.
        ff7->SG_SIZE          = FF7_PSV_SAVE_GAME_SIZE;
        ff7->SG_HEADER        = FF7_PSV_SAVE_GAME_HEADER;
        ff7->SG_FOOTER        = FF7_PSV_SAVE_GAME_FOOTER;
@@ -306,7 +307,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
        ff7->file_headerp     = ff7->file_header_psv;          //pointer to psv file header
        ff7->file_footerp     = ff7->file_footer_psv;          //pointer to psv file footer
     }
-    else if(file_size ==FF7_PSP_SAVE_GAME_SIZE)
+    else if((file_size ==FF7_PSP_SAVE_GAME_SIZE) && ff7file.startsWith("\x00\x50\x4D\x56"))
     {
         ff7->SG_SIZE          = FF7_PSP_SAVE_GAME_SIZE;
         ff7->SG_HEADER        = FF7_PSP_SAVE_GAME_HEADER;
@@ -320,7 +321,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
         ff7->file_headerp     = ff7->file_header_psp;          //pointer to psp file header
         ff7->file_footerp     = ff7->file_footer_psp;          //pointer to psp file footer
     }
-    else if(file_size ==FF7_VGS_SAVE_GAME_SIZE)
+    else if((file_size ==FF7_VGS_SAVE_GAME_SIZE) && ff7file.startsWith("\x56\x67\x73\x4D"))
     {
         ff7->SG_SIZE          = FF7_VGS_SAVE_GAME_SIZE;
         ff7->SG_HEADER        = FF7_VGS_SAVE_GAME_HEADER;
@@ -334,7 +335,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
         ff7->file_headerp     = ff7->file_header_vgs;          //pointer to vgs file header
         ff7->file_footerp     = ff7->file_footer_vgs;          //pointer to vgs file footer
     }
-    else if(file_size ==FF7_DEX_SAVE_GAME_SIZE)
+    else if((file_size ==FF7_DEX_SAVE_GAME_SIZE) && ff7file.startsWith("\x31\x32\x33\x2D\x34\x35\x36\x2D\x53\x54\x44"))
     {
         ff7->SG_SIZE          = FF7_DEX_SAVE_GAME_SIZE;
         ff7->SG_HEADER        = FF7_DEX_SAVE_GAME_HEADER;
@@ -433,9 +434,9 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
 }
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionFrom_PSX_Slot_activated()
-{
+{//should check better to be sure its a raw PSX SAVE. then make file filter *
     QString fileName = QFileDialog::getOpenFileName(this,
-    tr("Select Final Fantasy 7 PSX Save"),(""),tr("Raw PSX FF7 SaveGame (*-S*)"));
+    tr("Select Final Fantasy 7 PSX Save"),QDir::homePath(),tr("Raw PSX FF7 SaveGame (*)"));
 
     if(fileName.isEmpty()){return;}
     else
@@ -450,27 +451,32 @@ void MainWindow::on_actionFrom_PSX_Slot_activated()
             }
         QByteArray ff7file;
         ff7file = file.readAll(); //put all data in temp raw file
-        QByteArray temp; // create a temp to be used when needed
-        int index = 0x200;
-        temp = ff7file.mid(index,0x10f4);
-        memcpy(&ff7->slot[s],temp,0x10f4);
-        if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
-           (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")))
+
+        if((file.size() ==FF7_PSX_SAVE_GAME_SIZE) && ff7file.startsWith("\x53\x43\x11\x01\x82\x65\x82\x65\x82\x56\x81\x5E\x82\x72\x82\x60"))
         {
-            QString string;
-            string = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
-            ff7->SG_Region_String[s]= string.mid(string.lastIndexOf("BA")-1,string.lastIndexOf("FF7-S")+8);
+            QByteArray temp; // create a temp to be used when needed
+            int index = 0x200;
+            temp = ff7file.mid(index,0x10f4);
+            memcpy(&ff7->slot[s],temp,0x10f4);
+            if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
+                (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")))
+            {
+                QString string;
+                string = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
+                ff7->SG_Region_String[s]= string.mid(string.lastIndexOf("BA")-1,string.lastIndexOf("FF7-S")+8);
+            }
+            else {ff7->SG_Region_String[s].clear();}
         }
-        else {ff7->SG_Region_String[s].clear();}
+        else{QMessageBox::warning(this,tr("Black Chocobo"),tr("The File %1\n is NOT a PSX Save").arg(fileName));return;}
     }//Parse slot data....
     file_changed=true;
     guirefresh();
 }
 /*~~~~~~~~~~~~~~~~~IMPORT PSV~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionFrom_PSV_Slot_activated()
-{
+{//check beter to be sure its the correct PSV type file.
     QString fileName = QFileDialog::getOpenFileName(this,
-    tr("Select Final Fantasy 7 PSV Save"),(""),tr("PSX FF7 SaveGame (*.psv)"));
+    tr("Select Final Fantasy 7 PSV Save"),QDir::homePath(),tr("PSX FF7 SaveGame (*.psv)"));
     if (fileName.isEmpty()){return;}
     else
     {
@@ -485,16 +491,20 @@ void MainWindow::on_actionFrom_PSV_Slot_activated()
         QByteArray ff7file;
         ff7file = file.readAll(); //put all data in temp raw file
         QByteArray temp; // create a temp to be used when needed
-        int index = 0x284;
-        temp = ff7file.mid(index,0x10f4);
-        memcpy(&ff7->slot[s],temp,0x10f4);
-        if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
-           (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")))
-           {ff7->SG_Region_String[s] = QString(ff7file.mid(0x64,19));}
-        else {ff7->SG_Region_String[s].clear();}
-    }//Parse slot data....
+        if((file.size() ==FF7_PSV_SAVE_GAME_SIZE) && ff7file.startsWith("\x00\x56\x53\x50"))
+        {
+            int index = 0x284;
+            temp = ff7file.mid(index,0x10f4);
+            memcpy(&ff7->slot[s],temp,0x10f4);
+            if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
+                (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")))
+                {ff7->SG_Region_String[s] = QString(ff7file.mid(0x64,19));}
+            else {ff7->SG_Region_String[s].clear();}
+        }//Parse slot data....
+        else{QMessageBox::warning(this,tr("Black Chocobo"),tr("The File %1\n is NOT a PSV Save").arg(fileName)); return;}
     file_changed=true;
     guirefresh();
+    }
 }
 /*~~~~~~~~~~~~~~~~~IMPORT Char~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionImport_char_triggered()
@@ -561,8 +571,7 @@ void MainWindow::on_action_Save_activated()
         else {QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot save This Type of File"));return;}
         saveFileFull(filename);
     }
-    //else{QMessageBox::warning(this,tr("No Save File Loaded"),tr("The Filename is empty"));}
-    else{on_actionSave_File_As_activated();return;}
+    else{on_actionSave_File_As_activated();return;}//there is no filename we should get one from save as..
 }
 
 void MainWindow::on_actionSave_File_As_activated()
@@ -578,7 +587,7 @@ void MainWindow::on_actionSave_File_As_activated()
     else if(ff7->SG_TYPE == "PSX")
     {
         fileName = QFileDialog::getSaveFileName(this,
-        tr("Save Final Fantasy 7 PSX SaveGame"), ff7->SG_Region_String[s],
+        tr("Save Final Fantasy 7 PSX SaveGame"), QDir::homePath(),
         tr("FF7 Raw PSX SaveGame(*-S*)"));
         fix_psx_header(ff7,s);
     }
@@ -593,14 +602,14 @@ void MainWindow::on_actionSave_File_As_activated()
     else if(ff7->SG_TYPE == "PSV")
     {
         fileName = QFileDialog::getSaveFileName(this,
-        tr("Save Final Fantasy 7 PSV SaveGame"), "",
+        tr("Save Final Fantasy 7 PSV SaveGame"), QDir::homePath(),
         tr("FF7 PSV SaveGame(*.psv)"));
         QMessageBox::information(this,tr("PSV Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PS3."));
     }
     else if(ff7->SG_TYPE == "PSP")
     {
         fileName = QFileDialog::getSaveFileName(this,
-        tr("Save Final Fantasy 7  PSP SaveGame"), "",
+        tr("Save Final Fantasy 7  PSP SaveGame"), QDir::homePath(),
         tr("FF7 PSP SaveGame(*.vmp)"));
         fix_vmc_header(ff7);
         QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PSP."));
@@ -609,18 +618,33 @@ void MainWindow::on_actionSave_File_As_activated()
     else if(ff7->SG_TYPE == "VGS")
     {
         fileName = QFileDialog::getSaveFileName(this,
-        tr("Save Final Fantasy 7  VGS SaveGame"), "",
+        tr("Save Final Fantasy 7  VGS SaveGame"), settings->value("save_emu_path").toString(),
         tr("FF7 VGS SaveGame(*.vgs *.mem)"));
         fix_vmc_header(ff7);
     }
     else if(ff7->SG_TYPE == "DEX")
     {
         fileName = QFileDialog::getSaveFileName(this,
-        tr("Save Final Fantasy 7  Dex-Drive SaveGame"), "",
+        tr("Save Final Fantasy 7  Dex-Drive SaveGame"), settings->value("save_emu_path").toString(),
         tr("FF7 Dex SaveGame(*.gme)"));
         fix_vmc_header(ff7);
     }
-    else {QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot Guess FileType To Write,abortingsave This Type of File"));return;}
+    else
+    {//mystery type. make the user tell us user maybe used new game or made save manually.
+        QStringList types;
+        types << tr("PC")<<tr("Raw Psx Save")<<tr("Generic Emulator Memorycard")<<tr("PSP")<<tr("PS3")<<tr("Dex Drive Memorycard")<<tr("VGS Memorycard");
+        QString result = QInputDialog::getItem(this,tr("Save Error"),tr("Please Select A File Type To Save"),types,-1,0,0,0);
+        //check the string. and assign a type
+        if(result ==types.at(0)){ff7->SG_TYPE = "PC";}
+            else if(result ==types.at(1)){ff7->SG_TYPE = "PSX";}
+            else if(result ==types.at(2)){ff7->SG_TYPE = "MC";}
+            else if(result ==types.at(3)){ff7->SG_TYPE = "PSP";}
+            else if(result ==types.at(4)){ff7->SG_TYPE = "PSV";}
+            else if(result ==types.at(5)){ff7->SG_TYPE = "DEX";}
+            else if(result ==types.at(6)){ff7->SG_TYPE = "VGS";}
+            else{return;}
+            on_actionSave_File_As_activated(); //now that we have a type do again.
+    }
     if(fileName.isEmpty()){return;}
     saveFileFull(fileName); //reguardless save the file of course if its has a string.
 }
@@ -3895,7 +3919,7 @@ void MainWindow::on_clearItem_clicked()
     itemupdate();
 }
 void MainWindow::on_btn_clear_keyitems_clicked()
-{
+{file_changed=true;
     for(int i=0;i<51;i++)// be sure to clear key items first..
     {
         ui->list_keyitems->setCurrentRow(i);
@@ -3987,7 +4011,7 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row)
 }}
 
 void MainWindow::on_sb_addap_valueChanged(int value)
-{if(!load && ui->tbl_materia->currentRow() >-1){
+{if(!load && ui->tbl_materia->currentRow() >-1){file_changed=true;
     if(value == Materias[ui->combo_add_mat->currentIndex()].ap[Materias[ui->combo_add_mat->currentIndex()].levels -2] && Materias[ui->combo_add_mat->currentIndex()].levels >1)
     {
         for(int i=0;i<3;i++){ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[i] = 0xFF;}
@@ -4181,7 +4205,7 @@ void MainWindow::on_sb_coordy_valueChanged(int value){if(!load){file_changed=tru
 void MainWindow::on_sb_coordz_valueChanged(int value){if(!load){file_changed=true;ff7->slot[s].coord.z = value;}}
 
 void MainWindow::on_line_location_textChanged(QString text)
-{if (!load){
+{if (!load){file_changed=true;
     for (int i=0;i<24;i++){ff7->slot[s].location[i] =0xFF;}
     QByteArray temp = Text.toFF7(text);
     memcpy(ff7->slot[s].location,temp,temp.length());
@@ -4227,10 +4251,9 @@ void MainWindow::on_sb_lvl_valueChanged()
 }}
 
 void MainWindow::on_sb_exp_valueChanged()
-{if(!load)
-    {
-        ff7->slot[s].chars[curchar].exp = ui->sb_exp->value();
-        if(settings->value("autochargrowth").toBool()){setchar_growth(1);}
+{if(!load){file_changed=true;
+    ff7->slot[s].chars[curchar].exp = ui->sb_exp->value();
+    if(settings->value("autochargrowth").toBool()){setchar_growth(1);}
 }}
 
 void MainWindow::on_sb_curhp_valueChanged(){if(!load){file_changed=true;ff7->slot[s].chars[curchar].curHP = ui->sb_curhp->value();}}
@@ -4316,11 +4339,11 @@ void MainWindow::on_limit_4_toggled(){if(!load) {limitapply();}}
 //Char Equiptment Tab
 
 void MainWindow::on_combo_armor_currentIndexChanged(int index){if(!load){file_changed=true;ff7->slot[s].chars[curchar].armor = index;    setarmorslots();}}
-void MainWindow::on_combo_weapon_currentIndexChanged(){setweaponslots();}
+void MainWindow::on_combo_weapon_currentIndexChanged(){setweaponslots();} //no matter what we need to update materia slots.
 void MainWindow::on_combo_acc_currentIndexChanged(int index){if(!load){file_changed=true;if(index==32){index=0xFF;} ff7->slot[s].chars[curchar].accessory = index;}}
 
 void MainWindow::on_combo_weapon_activated(int index)
-{
+{if(!load){file_changed=true;
     switch(curchar)
     {
         case 0:{ff7->slot[s].chars[curchar].weapon = index;break;}
@@ -4333,7 +4356,7 @@ void MainWindow::on_combo_weapon_activated(int index)
         case 7:{ff7->slot[s].chars[curchar].weapon = index+114;break;}
         case 8:{ff7->slot[s].chars[curchar].weapon = index+73;break;}
     }
-}
+}}
 
 void MainWindow::on_sb_addap_slot_valueChanged(int value)
 {if(!load){file_changed=true;
@@ -4358,6 +4381,7 @@ void MainWindow::on_clearMateria_slot_clicked()
     ui->combo_mat_type_slot->setCurrentIndex(0);
     ff7->slot[s].chars[curchar].materias[mslotsel].id = 0xFF;
     ui->sb_addap_slot->setValue(0xFFFFFF);
+    file_changed=true;
     materiaupdate_slot();
 }
 
@@ -4427,6 +4451,7 @@ void MainWindow::on_btn_paste_materia_slot_clicked()
     ff7->slot[s].chars[curchar].materias[mslotsel].ap[0]= buffer_materia.ap[0];
     ff7->slot[s].chars[curchar].materias[mslotsel].ap[1]= buffer_materia.ap[1];
     ff7->slot[s].chars[curchar].materias[mslotsel].ap[2]= buffer_materia.ap[2];
+    file_changed=true;
     materiaupdate_slot();
 }
 
@@ -5047,6 +5072,7 @@ void MainWindow::on_btn_remove_all_items_clicked() //used for testing
         ff7->slot[s].items[i].id=0xFF;
         ff7->slot[s].items[i].qty=0xFF;
     }
+    file_changed=true;
     itemupdate();
 }
 
@@ -5059,6 +5085,7 @@ void MainWindow::on_btn_remove_all_materia_clicked()
         ff7->slot[s].materias[i].ap[1]=0xFF;
         ff7->slot[s].materias[i].ap[2]=0xFF;
     }
+    file_changed=true;
     materiaupdate();
 }
 
@@ -5071,6 +5098,7 @@ void MainWindow::on_btn_remove_all_stolen_clicked()
         ff7->slot[s].stolen[i].ap[1]=0xFF;
         ff7->slot[s].stolen[i].ap[2]=0xFF;
     }
+    file_changed=true;
     guirefresh();
 }
 
@@ -5504,6 +5532,7 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
     menu.addAction(tr("Place Emerald Weapon?"));
     sel = menu.exec(ui->world_map_view->mapToGlobal(pos));
     if(sel==0){return;}
+    file_changed=true;
     if(sel->text()==tr("Place Leader"))
     {
         ui->leader_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
@@ -5544,6 +5573,7 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
 
 void MainWindow::on_btn_item_add_each_item_clicked()
 {
+    file_changed=true;
     ui->btn_remove_all_items->click();
     for(int i=0;i<320;i++)
     {
