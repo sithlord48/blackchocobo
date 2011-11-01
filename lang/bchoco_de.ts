@@ -2909,10 +2909,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Raw PSX FF7 SaveGame (*-S*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>FF7 Raw PSX SaveGame(*-S*)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3286,10 +3282,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Export Dex-Drive File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4121,7 +4113,57 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot Guess FileType To Write,abortingsave This Type of File</source>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Raw PSX FF7 SaveGame (*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The File %1
+ is NOT a PSX Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>The File %1
+ is NOT a PSV Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PC</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Raw Psx Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Generic Emulator Memorycard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PS3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dex Drive Memorycard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>VGS Memorycard</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Please Select A File Type To Save</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
