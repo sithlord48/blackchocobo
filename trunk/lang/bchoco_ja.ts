@@ -1296,7 +1296,7 @@
     </message>
     <message>
         <source>Hallway</source>
-        <translation>神羅飛空挺・通路</translation>
+        <translation>神羅飛空艇・通路</translation>
     </message>
     <message>
         <source>Cosmo Canyon</source>
