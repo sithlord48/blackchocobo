@@ -18,14 +18,12 @@
 #include "ui_errbox.h"
 
 /*~~~~~GLOBALS~~~~~~*/
-
 errbox::errbox(QWidget *parent,FF7 *ff7data,int slot) :
     QDialog(parent),
     ui(new Ui::errbox)
 {
     ui->setupUi(this);
     QByteArray data;
-    invalid=false;
     s=slot;
     ff7 = ff7data;
     int numslots;
@@ -46,22 +44,20 @@ errbox::errbox(QWidget *parent,FF7 *ff7data,int slot) :
         save_icon.setAll(data.mid(96,416), 3);
         break;
 
-        default:
-        invalid = true;
+        default: //Black Box
+        QByteArray tmp;
+        tmp.fill(00,0x200);
+        save_icon.setAll(tmp);
+        break;
     }
 
-    if(!invalid)
-    {
-        ui->lbl_icon->setPixmap(save_icon.icon());
-        connect(&save_icon, SIGNAL(nextIcon(QPixmap)), ui->lbl_icon, SLOT(setPixmap(QPixmap)));
-    }
+    ui->lbl_icon->setPixmap(save_icon.icon());
+    connect(&save_icon, SIGNAL(nextIcon(QPixmap)), ui->lbl_icon, SLOT(setPixmap(QPixmap)));
     // Get the games desc string
     QByteArray desc;
     QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
     desc = data.mid(4,64);
     int index;
-    //int numslots;
-    //int nextslot;
     if((index = desc.indexOf('\x00')) != -1) {desc.truncate(index);}
     //assume NOT PC SAVE.
     index= 128+(128*s);
