@@ -4189,12 +4189,6 @@ Table Entries are Editable</source>
         <source>Please Select A File Type To Save</source>
         <translation>保存するファイルの種類を選択してください</translation>
     </message>
-    <message>
-        <source>Can&apos;t View Slot: %1 
-Block is a Mid or End Link</source>
-        <translation>このスロットは表示できません: %1 
-二番目または最後のリンク ブロックです</translation>
-    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -5850,21 +5844,27 @@ Empty</source>
     </message>
     <message>
         <source>
- Mid Linked Block; Next Block:%1%2</source>
-        <translation>
- 二番目のリンク ブロック; 次のブロック:%1%2</translation>
-    </message>
-    <message>
-        <source>
- Uses %1 Blocks; Next Block is %2%3</source>
-        <translation>
- %1 ブロック使用; 次のブロック %2%3</translation>
-    </message>
-    <message>
-        <source>
  End Of Linked Blocks</source>
         <translation>
  最後のリンク ブロック</translation>
+    </message>
+    <message>
+        <source>
+ Mid-Linked Block Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>(Deleted)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>
+ Game Uses %1 Save Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>s; Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6379,16 +6379,29 @@ p, li { white-space: pre-wrap; }
         <translation>Esc</translation>
     </message>
     <message>
-        <source>
- Uses %1 Blocks; Next Block is %2</source>
-        <translation>
- %1 ブロック使用; 次のブロック %2</translation>
+        <source>Mid-Linked Block </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>End Of Linked Data</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>(Deleted)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>
- End of Linked Blocks</source>
-        <translation>
- 最後のリンク ブロック</translation>
+ Game Uses %1 Save Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>s; Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

@@ -2832,14 +2832,39 @@ void MainWindow::guirefresh(void)
 
     }
     /*if empty and a Virtual memcard format and frame not empty must be link or mid link skip block!*/
-    else if(!ff7->SG_Region_String[s].contains("00867") && !ff7->SG_Region_String[s].contains("00869") &&
+    else if((!ff7->SG_Region_String[s].contains("00867") && !ff7->SG_Region_String[s].contains("00869") &&
             !ff7->SG_Region_String[s].contains("00900") && !ff7->SG_Region_String[s].contains("94163") &&
-            !ff7->SG_Region_String[s].contains("00700") && !ff7->SG_Region_String[s].contains("01057") &&
-            (ff7->SG_TYPE =="MC" || ff7->SG_TYPE =="VGS" ||ff7->SG_TYPE =="DEX" ||ff7->SG_TYPE =="PSP")
+            !ff7->SG_Region_String[s].contains("00700") && !ff7->SG_Region_String[s].contains("01057"))
+         && (ff7->SG_TYPE =="MC" || ff7->SG_TYPE =="VGS" ||ff7->SG_TYPE =="DEX" ||ff7->SG_TYPE =="PSP")
          && (ff7->file_headerp[reserve_start] !=0xA0))
         {
-            QMessageBox::information(this,tr("Black Chocobo"),tr("Can't View Slot: %1 \nBlock is a Mid or End Link").arg(QString::number(s+1)));
-            ui->actionShow_Selection_Dialog->trigger();
+            errbox error(0,ff7,s);
+            error.setStyleSheet(this->styleSheet());
+            switch(error.exec())
+            {
+
+             case 0://View Anyway..
+                QMessageBox::information(this,tr("Ingoring Non FF7 Save"),tr("Using Unknown Var Table To View Save"));
+                ui->tabWidget->setCurrentIndex(8);
+                ui->tabWidget_3->setCurrentIndex(1);
+                ui->tabWidget->setTabEnabled(8,1);
+                unknown_refresh(ui->combo_z_var->count()-1);
+                break;
+
+            case 1://Previous Clicked
+                s--;
+                guirefresh();
+                break;
+
+            case 2://Next Clicked
+                s++;
+                guirefresh();
+                break;
+
+            case 3://exported as psx
+                on_actionShow_Selection_Dialog_activated();
+                break;
+            }
         }
     //
     else
