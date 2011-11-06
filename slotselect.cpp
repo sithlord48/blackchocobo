@@ -27,23 +27,27 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
     ui->setupUi(this);
     ff7 = ff7data;
     bool not_pc = false;
+    int index=0;
     this->setWindowFlags(((this->windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close button
 /*~~~~~~~~~~SLOT 1~~~~~~~~~~*/
     for(int s=0;s<15;s++)
     {
     not_pc=false;
-    if(ff7->SG_TYPE!="PC"){not_pc=true;}
-        if(ff7->SG_Region_String[s] == "")//Empty Slot
+    if(ff7->SG_TYPE!="PC")
+    {
+        not_pc=true;
+        index= 128+(128*s);
+        if(ff7->SG_TYPE=="PSP"){index+=0x80;}
+        else if(ff7->SG_TYPE=="VGS"){index+=0x40;}
+        else if(ff7->SG_TYPE=="DEX"){index+=0xF40;}
+    }
+    if(ff7->SG_Region_String[s].isEmpty() || ff7->file_headerp[index]==0x52|| ff7->file_headerp[index]==0x53)//Empty Slot
         {
             QString Slottext =tr("\nEmpty");
             if(not_pc)
             {
-                int index= 128+(128*s);
-                if(ff7->SG_TYPE=="PSP"){index+=0x80;}
-                else if(ff7->SG_TYPE=="VGS"){index+=0x40;}
-                else if(ff7->SG_TYPE=="DEX"){index+=0xF40;}
 
-                if(ff7->file_headerp[index] == 0x52){Slottext =tr("\n Mid Linked Block; Next Block:%1%2").arg(QString::number(ff7->file_headerp[index+0x07]),QString::number(ff7->file_headerp[index+0x08]+1));}
+                if(ff7->file_headerp[index] == 0x52){Slottext =tr("\n Mid-Linked Block Next Data Chunk @ Slot:%1").arg(QString::number(ff7->file_headerp[index+0x08]+1));}
                 else if(ff7->file_headerp[index] == 0x53){Slottext =tr("\n End Of Linked Blocks");}
             }
             QVBoxLayout *layout = new QVBoxLayout;
@@ -486,19 +490,19 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
             QString Slottext ="\n\n" + codec->toUnicode(desc);
             if(not_pc)
             {
-                int index= 128+(128*s);
+            /*    int index= 128+(128*s);
                 if(ff7->SG_TYPE=="PSP"){index+=0x80;}
                 else if(ff7->SG_TYPE=="VGS"){index+=0x40;}
-                else if(ff7->SG_TYPE=="DEX"){index+=0xF40;}
+                else if(ff7->SG_TYPE=="DEX"){index+=0xF40;}*/
+                if(ff7->file_headerp[index]==0xA1){Slottext.append(tr("(Deleted)"));}
                 QByteArray temp;
                 temp.resize(3);
                 temp[0]=ff7->file_headerp[index+0x04];
                 temp[1]=ff7->file_headerp[index+0x05];
                 temp[2]=ff7->file_headerp[index+0x06];
                 qint32 value = temp[0] | (temp[1] << 8) | (temp[2] <<16);
-                if(value!= 0x2000){
-                    Slottext.append(tr("\n Uses %1 Blocks; Next Block is %2%3").arg(QString::number(value/0x2000),QString::number(ff7->file_headerp[index+0x07]),QString::number(ff7->file_headerp[index+0x08]+1)));
-                }
+                Slottext.append(tr("\n Game Uses %1 Save Block").arg(QString::number(value/0x2000)));
+                if(ff7->file_headerp[index+0x08]!=0xFF){Slottext.append(tr("s; Next Data Chunk @ Slot:%1").arg(QString::number(ff7->file_headerp[index+0x08]+1)));}
             }
             if(!invalid)
             {

@@ -63,29 +63,36 @@ errbox::errbox(QWidget *parent,FF7 *ff7data,int slot) :
     //int numslots;
     //int nextslot;
     if((index = desc.indexOf('\x00')) != -1) {desc.truncate(index);}
-    QString Slottext = codec->toUnicode(desc);
     //assume NOT PC SAVE.
     index= 128+(128*s);
     if(ff7->SG_TYPE=="PSP"){index+=0x80;}
     else if(ff7->SG_TYPE=="VGS"){index+=0x40;}
     else if(ff7->SG_TYPE=="DEX"){index+=0xF40;}
+    QString Slottext;
+    if(ff7->file_headerp[index] != 0x52 && ff7->file_headerp[index] != 0x53){Slottext= codec->toUnicode(desc);}
+    else if(ff7->file_headerp[index]==0x52){Slottext = tr("Mid-Linked Block ");}
+    else if(ff7->file_headerp[index]==0x53){Slottext = tr("End Of Linked Data");}
+
+    if(ff7->file_headerp[index] == 0xA1){Slottext.append(tr("(Deleted)"));}
     QByteArray temp;
     temp.resize(3);
     temp[0]=ff7->file_headerp[index+0x04];
     temp[1]=ff7->file_headerp[index+0x05];
     temp[2]=ff7->file_headerp[index+0x06];
     qint32 value = temp[0] | (temp[1] << 8) | (temp[2] <<16);
+    numslots= value/0x2000;
+    nextslot= ff7->file_headerp[index+0x08]+1;
+    if(ff7->file_headerp[index] != 0x52 && ff7->file_headerp[index] != 0x53){Slottext.append(tr("\n Game Uses %1 Save Block").arg(QString::number(numslots)));}
     if(value!= 0x2000)
     {
-        numslots= value/0x2000;
-        if(ff7->file_headerp[index+0x08]== 0xFF){nextslot =-1;}
-        else
-        {
-            nextslot= ff7->file_headerp[index+0x08]+1;
-            if(ff7->file_headerp[index+0x07] ==0x01) nextslot +=10;
-        }
-        if(nextslot !=-1){Slottext.append(tr("\n Uses %1 Blocks; Next Block is %2").arg(QString::number(numslots),QString::number(nextslot)));}
-        else{Slottext.append(tr("\n End of Linked Blocks"));}
+            if(ff7->file_headerp[index+0x08]!=0xFF)
+            {
+                if(ff7->file_headerp[index] != 0x52){Slottext.append(tr("s; Next Data Chunk @ Slot:%1").arg(QString::number(nextslot)));}
+                else{Slottext.append(tr("Next Data Chunk @ Slot:%1").arg(QString::number(nextslot)));}
+            }
+    }
+    if(ff7->file_headerp[index] == 0x52 || ff7->file_headerp[index] == 0x53 || numslots !=1)
+    {
         ui->btn_export->setDisabled(1);
         ui->btn_view->setDisabled(1);
     }
