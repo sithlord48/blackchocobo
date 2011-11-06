@@ -142,6 +142,9 @@ QPushButton:enabled {
           <iconset resource="images.qrc">
            <normaloff>:/icon/quit</normaloff>:/icon/quit</iconset>
          </property>
+         <property name="shortcut">
+          <string>Esc</string>
+         </property>
         </widget>
        </item>
        <item>

@@ -31,7 +31,8 @@ class errbox : public QDialog
 public:
     explicit errbox(QWidget *parent = 0,FF7 *ff7data=0,int slot=0);
     ~errbox();
-
+protected:
+    void keyPressEvent(QKeyEvent *e);
 private slots:
     void on_btn_prev_clicked();
     void on_btn_export_clicked();

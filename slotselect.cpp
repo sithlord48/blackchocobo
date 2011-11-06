@@ -26,14 +26,30 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
 {
     ui->setupUi(this);
     ff7 = ff7data;
+    bool not_pc = false;
+    this->setWindowFlags(((this->windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close button
 /*~~~~~~~~~~SLOT 1~~~~~~~~~~*/
     for(int s=0;s<15;s++)
     {
+    not_pc=false;
+    if(ff7->SG_TYPE!="PC"){not_pc=true;}
         if(ff7->SG_Region_String[s] == "")//Empty Slot
         {
+            QString Slottext =tr("\nEmpty");
+            if(not_pc)
+            {
+                int index= 128+(128*s);
+                if(ff7->SG_TYPE=="PSP"){index+=0x80;}
+                else if(ff7->SG_TYPE=="VGS"){index+=0x40;}
+                else if(ff7->SG_TYPE=="DEX"){index+=0xF40;}
+
+                if(ff7->file_headerp[index] == 0x52){Slottext =tr("\n Mid Linked Block; Next Block:%1%2").arg(QString::number(ff7->file_headerp[index+0x07]),QString::number(ff7->file_headerp[index+0x08]+1));}
+                else if(ff7->file_headerp[index] == 0x53){Slottext =tr("\n End Of Linked Blocks");}
+            }
             QVBoxLayout *layout = new QVBoxLayout;
             switch(s)
             {
+
             case 0:
                 ui->s1_box->layout()->~QLayout();
                 //remove all the other stuff
@@ -44,7 +60,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 //set up new text and layout.
                 ui->s1_lbl_loc->setAlignment(Qt::AlignLeft);
                 ui->s1_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
-                ui->s1_lbl_loc->setText(tr("\nEmpty"));
+                ui->s1_lbl_loc->setText(Slottext);;
                 layout->addWidget(ui->btn_s1);    layout->addWidget(ui->s1_lbl_loc);
                 ui->s1_box->setLayout(layout);
                 break;
@@ -58,7 +74,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 //set up new text and layout.
                 ui->s2_lbl_loc->setAlignment(Qt::AlignLeft);
                 ui->s2_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
-                ui->s2_lbl_loc->setText(tr("\nEmpty"));
+                ui->s2_lbl_loc->setText(Slottext);;
                 layout->addWidget(ui->btn_s2);    layout->addWidget(ui->s2_lbl_loc);
                 ui->s2_box->setLayout(layout);
                 break;
@@ -72,7 +88,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 //set up new text and layout.
                 ui->s3_lbl_loc->setAlignment(Qt::AlignLeft);
                 ui->s3_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
-                ui->s3_lbl_loc->setText(tr("\nEmpty"));
+                ui->s3_lbl_loc->setText(Slottext);;
                 layout->addWidget(ui->btn_s3);    layout->addWidget(ui->s3_lbl_loc);
                 ui->s3_box->setLayout(layout);
                 break;
@@ -86,7 +102,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 //set up new text and layout.
                 ui->s4_lbl_loc->setAlignment(Qt::AlignLeft);
                 ui->s4_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
-                ui->s4_lbl_loc->setText(tr("\nEmpty"));
+                ui->s4_lbl_loc->setText(Slottext);;
                 layout->addWidget(ui->btn_s4);    layout->addWidget(ui->s4_lbl_loc);
                 ui->s4_box->setLayout(layout);
                 break;
@@ -100,7 +116,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 //set up new text and layout.
                 ui->s5_lbl_loc->setAlignment(Qt::AlignLeft);
                 ui->s5_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
-                ui->s5_lbl_loc->setText(tr("\nEmpty"));
+                ui->s5_lbl_loc->setText(Slottext);;
                 layout->addWidget(ui->btn_s5);    layout->addWidget(ui->s5_lbl_loc);
                 ui->s5_box->setLayout(layout);
                 break;
@@ -114,7 +130,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 //set up new text and layout.
                 ui->s6_lbl_loc->setAlignment(Qt::AlignLeft);
                 ui->s6_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
-                ui->s6_lbl_loc->setText(tr("\nEmpty"));
+                ui->s6_lbl_loc->setText(Slottext);;
                 layout->addWidget(ui->btn_s6);    layout->addWidget(ui->s6_lbl_loc);
                 ui->s6_box->setLayout(layout);
                 break;
@@ -128,7 +144,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 //set up new text and layout.
                 ui->s7_lbl_loc->setAlignment(Qt::AlignLeft);
                 ui->s7_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
-                ui->s7_lbl_loc->setText(tr("\nEmpty"));
+                ui->s7_lbl_loc->setText(Slottext);;
                 layout->addWidget(ui->btn_s7);    layout->addWidget(ui->s7_lbl_loc);
                 ui->s7_box->setLayout(layout);
                 break;
@@ -142,7 +158,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 //set up new text and layout.
                 ui->s8_lbl_loc->setAlignment(Qt::AlignLeft);
                 ui->s8_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
-                ui->s8_lbl_loc->setText(tr("\nEmpty"));
+                ui->s8_lbl_loc->setText(Slottext);;
                 layout->addWidget(ui->btn_s8);    layout->addWidget(ui->s8_lbl_loc);
                 ui->s8_box->setLayout(layout);
                 break;
@@ -156,7 +172,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 //set up new text and layout.
                 ui->s9_lbl_loc->setAlignment(Qt::AlignLeft);
                 ui->s9_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
-                ui->s9_lbl_loc->setText(tr("\nEmpty"));
+                ui->s9_lbl_loc->setText(Slottext);;
                 layout->addWidget(ui->btn_s9);    layout->addWidget(ui->s9_lbl_loc);
                 ui->s9_box->setLayout(layout);
                 break;
@@ -170,7 +186,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 //set up new text and layout.
                 ui->s10_lbl_loc->setAlignment(Qt::AlignLeft);
                 ui->s10_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
-                ui->s10_lbl_loc->setText(tr("\nEmpty"));
+                ui->s10_lbl_loc->setText(Slottext);;
                 layout->addWidget(ui->btn_s10);    layout->addWidget(ui->s10_lbl_loc);
                 ui->s10_box->setLayout(layout);
                 break;
@@ -184,7 +200,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 //set up new text and layout.
                 ui->s11_lbl_loc->setAlignment(Qt::AlignLeft);
                 ui->s11_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
-                ui->s11_lbl_loc->setText(tr("\nEmpty"));
+                ui->s11_lbl_loc->setText(Slottext);;
                 layout->addWidget(ui->btn_s11);    layout->addWidget(ui->s11_lbl_loc);
                 ui->s11_box->setLayout(layout);
                 break;
@@ -198,7 +214,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 //set up new text and layout.
                 ui->s12_lbl_loc->setAlignment(Qt::AlignLeft);
                 ui->s12_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
-                ui->s12_lbl_loc->setText(tr("\nEmpty"));
+                ui->s12_lbl_loc->setText(Slottext);;
                 layout->addWidget(ui->btn_s12);    layout->addWidget(ui->s12_lbl_loc);
                 ui->s12_box->setLayout(layout);
                 break;
@@ -212,7 +228,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 //set up new text and layout.
                 ui->s13_lbl_loc->setAlignment(Qt::AlignLeft);
                 ui->s13_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
-                ui->s13_lbl_loc->setText(tr("\nEmpty"));
+                ui->s13_lbl_loc->setText(Slottext);;
                 layout->addWidget(ui->btn_s13);    layout->addWidget(ui->s13_lbl_loc);
                 ui->s13_box->setLayout(layout);
                 break;
@@ -226,7 +242,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 //set up new text and layout.
                 ui->s14_lbl_loc->setAlignment(Qt::AlignLeft);
                 ui->s14_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
-                ui->s14_lbl_loc->setText(tr("\nEmpty"));
+                ui->s14_lbl_loc->setText(Slottext);;
                 layout->addWidget(ui->btn_s14);    layout->addWidget(ui->s14_lbl_loc);
                 ui->s14_box->setLayout(layout);
                 break;
@@ -240,7 +256,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                 //set up new text and layout.
                 ui->s15_lbl_loc->setAlignment(Qt::AlignLeft);
                 ui->s15_lbl_loc->setStyleSheet("color:rgb(255,255,0);");
-                ui->s15_lbl_loc->setText(tr("\nEmpty"));
+                ui->s15_lbl_loc->setText(Slottext);;
                 layout->addWidget(ui->btn_s15);    layout->addWidget(ui->s15_lbl_loc);
                 ui->s15_box->setLayout(layout);
                 break;
@@ -436,6 +452,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
         }
         else//NOT FF7 Show Icon and Region String;
         {
+
             bool invalid =false;
             QByteArray data;
 
@@ -462,9 +479,27 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
             QByteArray desc;
             QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
             desc = data.mid(4,64);
+
             int index;
             if((index = desc.indexOf('\x00')) != -1) {desc.truncate(index);}
 
+            QString Slottext ="\n\n" + codec->toUnicode(desc);
+            if(not_pc)
+            {
+                int index= 128+(128*s);
+                if(ff7->SG_TYPE=="PSP"){index+=0x80;}
+                else if(ff7->SG_TYPE=="VGS"){index+=0x40;}
+                else if(ff7->SG_TYPE=="DEX"){index+=0xF40;}
+                QByteArray temp;
+                temp.resize(3);
+                temp[0]=ff7->file_headerp[index+0x04];
+                temp[1]=ff7->file_headerp[index+0x05];
+                temp[2]=ff7->file_headerp[index+0x06];
+                qint32 value = temp[0] | (temp[1] << 8) | (temp[2] <<16);
+                if(value!= 0x2000){
+                    Slottext.append(tr("\n Uses %1 Blocks; Next Block is %2%3").arg(QString::number(value/0x2000),QString::number(ff7->file_headerp[index+0x07]),QString::number(ff7->file_headerp[index+0x08]+1)));
+                }
+            }
             if(!invalid)
             {
             //QBoxLayout *layout = new QBoxLayout;
@@ -486,7 +521,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                   vbox->addWidget(ui->btn_s1);
                   vbox->addItem(hbox);
                   ui->s1_box->setLayout(vbox);
-                  ui->s1_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
+                  ui->s1_lbl_loc->setText(Slottext);
                   ui->s1_lbl_loc->setAlignment(Qt::AlignLeft);
                   ui->s1_lbl_loc->setStyleSheet("font-size: 10pt;");
                   ui->s1_party1->show();
@@ -504,7 +539,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                   vbox->addWidget(ui->btn_s2);
                   vbox->addItem(hbox);
                   ui->s2_box->setLayout(vbox);
-                  ui->s2_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
+                  ui->s2_lbl_loc->setText(Slottext);
                   ui->s2_lbl_loc->setAlignment(Qt::AlignLeft);
                   ui->s2_lbl_loc->setStyleSheet("font-size: 10pt;");
                   ui->s2_party1->show();
@@ -522,7 +557,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                   vbox->addWidget(ui->btn_s3);
                   vbox->addItem(hbox);
                   ui->s3_box->setLayout(vbox);
-                  ui->s3_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
+                  ui->s3_lbl_loc->setText(Slottext);
                   ui->s3_lbl_loc->setAlignment(Qt::AlignLeft);
                   ui->s3_lbl_loc->setStyleSheet("font-size: 10pt;");
                   ui->s3_party1->show();
@@ -540,7 +575,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                   vbox->addWidget(ui->btn_s4);
                   vbox->addItem(hbox);
                   ui->s4_box->setLayout(vbox);
-                  ui->s4_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
+                  ui->s4_lbl_loc->setText(Slottext);
                   ui->s4_lbl_loc->setAlignment(Qt::AlignLeft);
                   ui->s4_lbl_loc->setStyleSheet("font-size: 10pt;");
                   ui->s4_party1->show();
@@ -558,7 +593,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                   vbox->addWidget(ui->btn_s5);
                   vbox->addItem(hbox);
                   ui->s5_box->setLayout(vbox);
-                  ui->s5_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
+                  ui->s5_lbl_loc->setText(Slottext);
                   ui->s5_lbl_loc->setAlignment(Qt::AlignLeft);
                   ui->s5_lbl_loc->setStyleSheet("font-size: 10pt;");
                   ui->s5_party1->show();
@@ -576,7 +611,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                   vbox->addWidget(ui->btn_s6);
                   vbox->addItem(hbox);
                   ui->s6_box->setLayout(vbox);
-                  ui->s6_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
+                  ui->s6_lbl_loc->setText(Slottext);
                   ui->s6_lbl_loc->setAlignment(Qt::AlignLeft);
                   ui->s6_lbl_loc->setStyleSheet("font-size: 10pt;");
                   ui->s6_party1->show();
@@ -594,7 +629,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                   vbox->addWidget(ui->btn_s7);
                   vbox->addItem(hbox);
                   ui->s7_box->setLayout(vbox);
-                  ui->s7_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
+                  ui->s7_lbl_loc->setText(Slottext);
                   ui->s7_lbl_loc->setAlignment(Qt::AlignLeft);
                   ui->s7_lbl_loc->setStyleSheet("font-size: 10pt;");
                   ui->s7_party1->show();
@@ -612,7 +647,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                   vbox->addWidget(ui->btn_s8);
                   vbox->addItem(hbox);
                   ui->s8_box->setLayout(vbox);
-                  ui->s8_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
+                  ui->s8_lbl_loc->setText(Slottext);
                   ui->s8_lbl_loc->setAlignment(Qt::AlignLeft);
                   ui->s8_lbl_loc->setStyleSheet("font-size: 10pt;");
                   ui->s8_party1->show();
@@ -630,7 +665,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                   vbox->addWidget(ui->btn_s9);
                   vbox->addItem(hbox);
                   ui->s9_box->setLayout(vbox);
-                  ui->s9_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
+                  ui->s9_lbl_loc->setText(Slottext);
                   ui->s9_lbl_loc->setAlignment(Qt::AlignLeft);
                   ui->s9_lbl_loc->setStyleSheet("font-size: 10pt;");
                   ui->s9_party1->show();
@@ -648,7 +683,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                   vbox->addWidget(ui->btn_s10);
                   vbox->addItem(hbox);
                   ui->s10_box->setLayout(vbox);
-                  ui->s10_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
+                  ui->s10_lbl_loc->setText(Slottext);
                   ui->s10_lbl_loc->setAlignment(Qt::AlignLeft);
                   ui->s10_lbl_loc->setStyleSheet("font-size: 10pt;");
                   ui->s10_party1->show();
@@ -666,7 +701,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                   vbox->addWidget(ui->btn_s11);
                   vbox->addItem(hbox);
                   ui->s11_box->setLayout(vbox);
-                  ui->s11_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
+                  ui->s11_lbl_loc->setText(Slottext);
                   ui->s11_lbl_loc->setAlignment(Qt::AlignLeft);
                   ui->s11_lbl_loc->setStyleSheet("font-size: 10pt;");
                   ui->s11_party1->show();
@@ -684,7 +719,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                   vbox->addWidget(ui->btn_s12);
                   vbox->addItem(hbox);
                   ui->s12_box->setLayout(vbox);
-                  ui->s12_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
+                  ui->s12_lbl_loc->setText(Slottext);
                   ui->s12_lbl_loc->setAlignment(Qt::AlignLeft);
                   ui->s12_lbl_loc->setStyleSheet("font-size: 10pt;");
                   ui->s12_party1->show();
@@ -702,7 +737,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                   vbox->addWidget(ui->btn_s13);
                   vbox->addItem(hbox);
                   ui->s13_box->setLayout(vbox);
-                  ui->s13_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
+                  ui->s13_lbl_loc->setText(Slottext);
                   ui->s13_lbl_loc->setAlignment(Qt::AlignLeft);
                   ui->s13_lbl_loc->setStyleSheet("font-size: 10pt;");
                   ui->s13_party1->show();
@@ -720,7 +755,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                   vbox->addWidget(ui->btn_s14);
                   vbox->addItem(hbox);
                   ui->s14_box->setLayout(vbox);
-                  ui->s14_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
+                  ui->s14_lbl_loc->setText(Slottext);
                   ui->s14_lbl_loc->setAlignment(Qt::AlignLeft);
                   ui->s14_lbl_loc->setStyleSheet("font-size: 10pt;");
                   ui->s14_party1->show();
@@ -738,7 +773,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
                   vbox->addWidget(ui->btn_s15);
                   vbox->addItem(hbox);
                   ui->s15_box->setLayout(vbox);
-                  ui->s15_lbl_loc->setText("\n\n" + codec->toUnicode(desc));
+                  ui->s15_lbl_loc->setText(Slottext);
                   ui->s15_lbl_loc->setAlignment(Qt::AlignLeft);
                   ui->s15_lbl_loc->setStyleSheet("font-size: 10pt;");
                   ui->s15_party1->show();
@@ -764,7 +799,10 @@ void SlotSelect::changeEvent(QEvent *e)
         break;
     }
 }
-
+void SlotSelect::keyPressEvent(QKeyEvent *e)
+{
+    if(e->key()!=Qt::Key_Escape) QDialog::keyPressEvent(e);
+}
 void SlotSelect::on_btn_s1_clicked(){this->done(0);}
 void SlotSelect::on_btn_s2_clicked(){this->done(1);}
 void SlotSelect::on_btn_s3_clicked(){this->done(2);}

@@ -33,7 +33,7 @@ public:
 
 protected:
     void changeEvent(QEvent *e);
-
+    void keyPressEvent(QKeyEvent *e);
 private:
     Ui::SlotSelect *ui;
     SaveIcon icons[15];

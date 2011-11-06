@@ -4190,6 +4190,11 @@ Table Entries are Editable</source>
         <source>Please Select A File Type To Save</source>
         <translation>保存するファイルの種類を選択してください</translation>
     </message>
+    <message>
+        <source>Can&apos;t View Slot: %1 
+Block is a Mid or End Link</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -5843,6 +5848,21 @@ Empty</source>
         <translation>
 空きスロット</translation>
     </message>
+    <message>
+        <source>
+ Mid Linked Block; Next Block:%1%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>
+ Uses %1 Blocks; Next Block is %2%3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>
+ End Of Linked Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>about</name>
@@ -6262,6 +6282,14 @@ p, li { white-space: pre-wrap; }
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
         <translation>PSX アイコン クラス &amp; 日本語文字列変換機能</translation>
     </message>
+    <message>
+        <source>New: German Translation</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Improved: Detection of FF7 Types.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>errbox</name>
@@ -6342,6 +6370,20 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Alt+Right</source>
         <translation>Alt+Right</translation>
+    </message>
+    <message>
+        <source>Esc</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>
+ Uses %1 Blocks; Next Block is %2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>
+ End of Linked Blocks</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>
