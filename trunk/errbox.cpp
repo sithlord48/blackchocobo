@@ -28,6 +28,9 @@ errbox::errbox(QWidget *parent,FF7 *ff7data,int slot) :
     invalid=false;
     s=slot;
     ff7 = ff7data;
+    int numslots;
+    int nextslot;
+    this->setWindowFlags(((this->windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close
     for(int i=0;i<0x200;i++){data.append(ff7->hf[s].sl_header[i]);}
     switch((quint8)data.at(2))
     {
@@ -57,10 +60,42 @@ errbox::errbox(QWidget *parent,FF7 *ff7data,int slot) :
     QTextCodec *codec = QTextCodec::codecForName(QByteArray("Shift-JIS"));
     desc = data.mid(4,64);
     int index;
+    //int numslots;
+    //int nextslot;
     if((index = desc.indexOf('\x00')) != -1) {desc.truncate(index);}
-    ui->lbl_regionstring->setText(codec->toUnicode(desc));
+    QString Slottext = codec->toUnicode(desc);
+    //assume NOT PC SAVE.
+    index= 128+(128*s);
+    if(ff7->SG_TYPE=="PSP"){index+=0x80;}
+    else if(ff7->SG_TYPE=="VGS"){index+=0x40;}
+    else if(ff7->SG_TYPE=="DEX"){index+=0xF40;}
+    QByteArray temp;
+    temp.resize(3);
+    temp[0]=ff7->file_headerp[index+0x04];
+    temp[1]=ff7->file_headerp[index+0x05];
+    temp[2]=ff7->file_headerp[index+0x06];
+    qint32 value = temp[0] | (temp[1] << 8) | (temp[2] <<16);
+    if(value!= 0x2000)
+    {
+        numslots= value/0x2000;
+        if(ff7->file_headerp[index+0x08]== 0xFF){nextslot =-1;}
+        else
+        {
+            nextslot= ff7->file_headerp[index+0x08]+1;
+            if(ff7->file_headerp[index+0x07] ==0x01) nextslot +=10;
+        }
+        if(nextslot !=-1){Slottext.append(tr("\n Uses %1 Blocks; Next Block is %2").arg(QString::number(numslots),QString::number(nextslot)));}
+        else{Slottext.append(tr("\n End of Linked Blocks"));}
+        ui->btn_export->setDisabled(1);
+        ui->btn_view->setDisabled(1);
+    }
+    ui->lbl_regionstring->setText(Slottext);
 }
-
+void errbox::keyPressEvent(QKeyEvent *e)
+{//catch esc press and send it to view button
+    if(e->key()!=Qt::Key_Escape) QDialog::keyPressEvent(e);
+    else{ui->btn_view->click();}
+}
 errbox::~errbox(){delete ui;}
 
 void errbox::on_btn_prev_clicked()

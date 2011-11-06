@@ -1832,7 +1832,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </size>
                     </property>
                     <property name="wrapping">
-                     <bool>true</bool>
+                     <bool>false</bool>
                     </property>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
@@ -1844,10 +1844,10 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                     </property>
                     <property name="minimum">
-                     <number>1</number>
+                     <number>0</number>
                     </property>
                     <property name="value">
-                     <number>1</number>
+                     <number>0</number>
                     </property>
                    </widget>
                   </item>
@@ -3269,13 +3269,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <set>Qt::AlignCenter</set>
                      </property>
                      <property name="minimum">
-                      <number>1</number>
+                      <number>0</number>
                      </property>
                      <property name="maximum">
                       <number>4</number>
                      </property>
                      <property name="value">
-                      <number>1</number>
+                      <number>0</number>
                      </property>
                     </widget>
                    </item>
