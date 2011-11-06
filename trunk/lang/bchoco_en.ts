@@ -5819,16 +5819,6 @@ Empty</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>
- End Of Linked Blocks</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>
- Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>(Deleted)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5839,6 +5829,18 @@ Empty</source>
     </message>
     <message>
         <source>s; Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>
+
+ Mid-Linked Block Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>
+
+ End Of Linked Blocks</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

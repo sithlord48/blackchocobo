@@ -42,7 +42,6 @@ private slots:
 private:
     Ui::errbox *ui;
     SaveIcon save_icon;
-    bool invalid;
     int s;
     FF7 *ff7;
 };
