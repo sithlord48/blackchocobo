@@ -2686,7 +2686,7 @@
     </message>
     <message>
         <source>Tutorials Seen</source>
-        <translation>チュートリアルを見た</translation>
+        <translation>チュートリアルの表示</translation>
     </message>
     <message>
         <source>Controling the Sub</source>
@@ -2948,7 +2948,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
-        <translation>ヘッダーが決定できません。接尾辞 -SXX を追加してください。これはスロット番号としてセーブに書き込まれるヘッダーです。(XX = 01～15, 10 以下の場合は 0 を接頭して二桁に)</translation>
+        <translation>ヘッダーが決定できません。接尾辞 -SXX を追加してください。これはスロット番号としてセーブに書き込まれるヘッダーです。(XX = 01～15, 10 未満の場合は 0 を接頭して二桁に)</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -3538,7 +3538,6 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Aeris Turks</source>
-        <translatorcomment>教会に配置したとき、0, 3: クラウドが落下した直後のエアリストとの会話から 1, 2, 4:レノの最後のセリフが流れ教会奥マップから Aeris_Turks - this is a helper variable for when you meet aeris in the chruch.</translatorcomment>
         <translation>エアリス_タークス_教会フラグ</translation>
     </message>
     <message>
@@ -4131,7 +4130,7 @@ Table Entries are Editable</source>
     <message>
         <source>Save Changes to the File:
 %1</source>
-        <translation>変更をファイルに保存:
+        <translation>変更をファイルに保存する:
 %1</translation>
     </message>
     <message>
@@ -4146,13 +4145,13 @@ Table Entries are Editable</source>
         <source>The File %1
  is NOT a PSX Save</source>
         <translation>ファイル %1
- は PSX セーブではありません。</translation>
+ は PSX セーブではありません</translation>
     </message>
     <message>
         <source>The File %1
  is NOT a PSV Save</source>
         <translation>ファイル %1
- は PSV セーブではありません。</translation>
+ は PSV セーブではありません</translation>
     </message>
     <message>
         <source>PC</source>
@@ -4193,7 +4192,8 @@ Table Entries are Editable</source>
     <message>
         <source>Can&apos;t View Slot: %1 
 Block is a Mid or End Link</source>
-        <translation type="unfinished"></translation>
+        <translation>このスロットは表示できません: %1 
+二番目または最後のリンク ブロックです</translation>
     </message>
 </context>
 <context>
@@ -5851,17 +5851,20 @@ Empty</source>
     <message>
         <source>
  Mid Linked Block; Next Block:%1%2</source>
-        <translation type="unfinished"></translation>
+        <translation>
+ 二番目のリンク ブロック; 次のブロック:%1%2</translation>
     </message>
     <message>
         <source>
  Uses %1 Blocks; Next Block is %2%3</source>
-        <translation type="unfinished"></translation>
+        <translation>
+ %1 ブロック使用; 次のブロック %2%3</translation>
     </message>
     <message>
         <source>
  End Of Linked Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>
+ 最後のリンク ブロック</translation>
     </message>
 </context>
 <context>
@@ -6284,11 +6287,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: German Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>追加: ドイツ語翻訳</translation>
     </message>
     <message>
         <source>Improved: Detection of FF7 Types.</source>
-        <translation type="unfinished"></translation>
+        <translation>調整: FF7 のタイプの検出</translation>
     </message>
 </context>
 <context>
@@ -6373,17 +6376,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <source>
  Uses %1 Blocks; Next Block is %2</source>
-        <translation type="unfinished"></translation>
+        <translation>
+ %1 ブロック使用; 次のブロック %2</translation>
     </message>
     <message>
         <source>
  End of Linked Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>
+ 最後のリンク ブロック</translation>
     </message>
 </context>
 </TS>
