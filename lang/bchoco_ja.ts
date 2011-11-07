@@ -5844,28 +5844,33 @@ Empty</source>
     </message>
     <message>
         <source>(Deleted)</source>
-        <translation type="unfinished"></translation>
+        <translation>(削除済み)</translation>
     </message>
     <message>
         <source>
  Game Uses %1 Save Block</source>
-        <translation type="unfinished"></translation>
+        <translation>
+ ゲーム セーブに %1 ブロックを使用</translation>
     </message>
     <message>
         <source>s; Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>; 次のデータ チャンク @ スロット:%1</translation>
     </message>
     <message>
         <source>
 
  Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>
+
+ 第二ブロック 次のデータ チャンク @ スロット:%1</translation>
     </message>
     <message>
         <source>
 
  End Of Linked Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>
+
+ 最後のリンク ブロック</translation>
     </message>
 </context>
 <context>
@@ -6381,28 +6386,29 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Mid-Linked Block </source>
-        <translation type="unfinished"></translation>
+        <translation>第二リンク ブロック</translation>
     </message>
     <message>
         <source>End Of Linked Data</source>
-        <translation type="unfinished"></translation>
+        <translation>最後のリンク データ</translation>
     </message>
     <message>
         <source>(Deleted)</source>
-        <translation type="unfinished"></translation>
+        <translation>(削除済み)</translation>
     </message>
     <message>
         <source>
  Game Uses %1 Save Block</source>
-        <translation type="unfinished"></translation>
+        <translation>
+ ゲーム セーブに %1 ブロックを使用</translation>
     </message>
     <message>
         <source>s; Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>; 次のデータ チャンク @ スロット:%1</translation>
     </message>
     <message>
         <source>Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>; 次のデータ チャンク @ スロット:%1</translation>
     </message>
 </context>
 </TS>
