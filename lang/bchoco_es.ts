@@ -1381,11 +1381,11 @@
     </message>
     <message>
         <source>7th Heaven</source>
-        <translation type="unfinished"></translation>
+        <translation>Séptimo Cielo</translation>
     </message>
     <message>
         <source>AVALANCHE Hideout</source>
-        <translation type="unfinished"></translation>
+        <translation>Escondite AVALANCHA</translation>
     </message>
 </context>
 <context>
@@ -4096,27 +4096,27 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Using Unknown Var Table To View Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Usando la tabla de variables desconocidas para ver la partida guardada</translation>
     </message>
     <message>
         <source>Sector 7 - Slums Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Sector 7 - Progreso en los suburbios</translation>
     </message>
     <message>
         <source>Initial Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajustes iniciales</translation>
     </message>
     <message>
         <source>Destroy the Sector 5 Reactor </source>
-        <translation type="unfinished"></translation>
+        <translation>Destruir el reactor del sector 5</translation>
     </message>
     <message>
         <source>The Plate is Falling</source>
-        <translation type="unfinished"></translation>
+        <translation>La placa se cae</translation>
     </message>
     <message>
         <source>cb_s5_7 (aeris On roof)</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_7 (Aeris sobre el tejado)</translation>
     </message>
     <message>
         <source>Spi</source>
@@ -4124,66 +4124,69 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Unsaved Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambios sin guardar</translation>
     </message>
     <message>
         <source>Save Changes to the File:
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Guardar cambios al archivo:
+%1</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Tipos de archivo FF7 conocidos  (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Partida Guardada FF7 PC (*.ff7);; Partida Guardada FF7 Raw (*-S*);;Partida Guardada MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Partida Guardada PSV (*.psv);;Partida Guardada PSP (*.vmp);; Partida Guardada VGS (*.vgs *.mem);;Partida Guardada Dex-Drive (*.gme);;Todos los ARchivos(*)</translation>
     </message>
     <message>
         <source>Raw PSX FF7 SaveGame (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Partida Guardada FF7 PSX Raw (*)</translation>
     </message>
     <message>
         <source>The File %1
  is NOT a PSX Save</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo %1
+NO es un archivo de guardado PSX</translation>
     </message>
     <message>
         <source>The File %1
  is NOT a PSV Save</source>
-        <translation type="unfinished"></translation>
+        <translation>El archivo %1
+NO es un archivo de guardado PSV</translation>
     </message>
     <message>
         <source>PC</source>
-        <translation type="unfinished"></translation>
+        <translation>PC</translation>
     </message>
     <message>
         <source>Raw Psx Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Partida Guardada Psx Raw</translation>
     </message>
     <message>
         <source>Generic Emulator Memorycard</source>
-        <translation type="unfinished"></translation>
+        <translation>Memorycard de emulador genérica</translation>
     </message>
     <message>
         <source>PSP</source>
-        <translation type="unfinished"></translation>
+        <translation>PSP</translation>
     </message>
     <message>
         <source>PS3</source>
-        <translation type="unfinished"></translation>
+        <translation>PS3</translation>
     </message>
     <message>
         <source>Dex Drive Memorycard</source>
-        <translation type="unfinished"></translation>
+        <translation>Memorycard Dex-Drive</translation>
     </message>
     <message>
         <source>VGS Memorycard</source>
-        <translation type="unfinished"></translation>
+        <translation>Memorycard VGS</translation>
     </message>
     <message>
         <source>Save Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Error al Guardar</translation>
     </message>
     <message>
         <source>Please Select A File Type To Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Por favor seleccione un tipo de archivo para guardar</translation>
     </message>
 </context>
 <context>
@@ -5731,27 +5734,27 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>9 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>9 Pt.</translation>
     </message>
     <message>
         <source>10 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>10 Pt.</translation>
     </message>
     <message>
         <source>11 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>11 Pt.</translation>
     </message>
     <message>
         <source>12 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>12 Pt.</translation>
     </message>
     <message>
         <source>13 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>13 Pt.</translation>
     </message>
     <message>
         <source>14 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>14 Pt.</translation>
     </message>
 </context>
 <context>
@@ -5835,32 +5838,38 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>
 Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>
+Vacío</translation>
     </message>
     <message>
         <source>(Deleted)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Borrado)</translation>
     </message>
     <message>
         <source>
  Game Uses %1 Save Block</source>
-        <translation type="unfinished"></translation>
+        <translation>
+El juego usa el bloque de guardado %1 </translation>
     </message>
     <message>
         <source>s; Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>s; Siguiente trozo de datos en la ranura:%1</translation>
     </message>
     <message>
         <source>
 
  Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>
+
+ Bloque semi-enlazado, siguiente trozo de datos en la ranura:%1</translation>
     </message>
     <message>
         <source>
 
  End Of Linked Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>
+
+ Fin de los bloques enlazados</translation>
     </message>
 </context>
 <context>
@@ -6267,27 +6276,27 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Text Conversion Class (based on myst6re&apos;s work) </source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Clase de conversión de texto (Basado en el trabajo de myst6re)</translation>
     </message>
     <message>
         <source>Fixed: Save Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Botón de guardar</translation>
     </message>
     <message>
         <source>Improved: Slotselect handleing of non-ff7 and empty slots</source>
-        <translation type="unfinished"></translation>
+        <translation>Mejorado:Manejo de la selección de ranuras para ranuras vacías y no ff7</translation>
     </message>
     <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
-        <translation type="unfinished"></translation>
+        <translation>Conversor de dalse de cadenas de icono Psx y PC para el japonés</translation>
     </message>
     <message>
         <source>New: German Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Traducción Alemana</translation>
     </message>
     <message>
         <source>Improved: Detection of FF7 Types.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mejorado: Detección de tipos de FF7.</translation>
     </message>
 </context>
 <context>
@@ -6372,32 +6381,33 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <source>Mid-Linked Block </source>
-        <translation type="unfinished"></translation>
+        <translation>Bloque semi-enlazado</translation>
     </message>
     <message>
         <source>End Of Linked Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Fin de datos enlazados</translation>
     </message>
     <message>
         <source>(Deleted)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Borrado)</translation>
     </message>
     <message>
         <source>
  Game Uses %1 Save Block</source>
-        <translation type="unfinished"></translation>
+        <translation>
+El juego usa el bloque de guardado %1 </translation>
     </message>
     <message>
         <source>s; Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>s; Siguiente trozo de datos en la ranura:%1</translation>
     </message>
     <message>
         <source>Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Siguiente trozo de datos en la ranura:%1</translation>
     </message>
 </context>
 </TS>
