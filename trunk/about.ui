@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>375</width>
-    <height>394</height>
+    <width>371</width>
+    <height>390</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -503,6 +503,11 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <property name="text">
+           <string>New: Predict stat growth (if enabled)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New: German Translation</string>
           </property>
          </item>
@@ -518,7 +523,7 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <property name="text">
-           <string>Improved: Slotselect handleing of non-ff7 and empty slots</string>
+           <string>Improved: Slotselect handling of non-ff7 and empty slots</string>
           </property>
          </item>
          <item>
@@ -882,7 +887,7 @@ p, li { white-space: pre-wrap; }
           <property name="geometry">
            <rect>
             <x>0</x>
-            <y>-186</y>
+            <y>0</y>
             <width>349</width>
             <height>392</height>
            </rect>

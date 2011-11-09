@@ -469,6 +469,14 @@ QString ff7names::ItemNames(int i){return qApp->translate("Items",itemNames[i]);
 QString ff7names::MateriaNames(int i){return qApp->translate("Materia_Names",Materias[i].name.toAscii());}
 QString ff7names::MateriaStats(int i){return qApp->translate("Materia_Stats",materiaStats[i]);}
 QString ff7names::MateriaSkills(int i,int l){return qApp->translate("Materia_Skills",materiaSkills[i][l]);}
+qint8 ff7names::MateriaStats_Str(int i){return Materias[i].str;}
+qint8 ff7names::MateriaStats_Vit(int i){return Materias[i].vit;}
+qint8 ff7names::MateriaStats_Dex(int i){return Materias[i].dex;}
+qint8 ff7names::MateriaStats_Mag(int i){return Materias[i].mag;}
+qint8 ff7names::MateriaStats_Spr(int i){return Materias[i].spi;}
+qint8 ff7names::MateriaStats_Lck(int i){return Materias[i].lck;}
+qint8 ff7names::MateriaStats_Hp(int i){return Materias[i].hp;}
+qint8 ff7names::MateriaStats_Mp(int i){return Materias[i].mp;}
 
  static LOCATION Locations[]=
  {
@@ -562,6 +570,230 @@ quint32 chartnls[11][99]=
     {0,6,27,61,108,170,244,333,435,550,680,974,1022,1199,1391,1597,1817,2051,2300,2563,2840,3793,3533,3861,4204,4562,4934,5321,5723,6139,6570,8058,7577,8058,8554,9065,9590,10130,10685,11255,11840,12439,13053,13682,14326,14985,15658,16346,17049,17767,18500,19247,20009,20786,21578,22385,23206,24042,24893,25759,26640,35297,28830,29767,30720,31687,32670,33667,34680,35707,36750,37807,38880,39967,41070,42187,43320,44467,45630,46807,48000,85279,51774,53045,54331,55632,56949,58281,59628,60991,62370,63763,65172,66597,68037,69492,70963,72449,73950}
 };
 
+quint8 stat_grade[9][5]=
+{
+  {1,6,3,4,26},
+  {5,2,18,14,29},
+  {6,18,16,9,25},
+  {23,20,0,1,28},
+  {12,11,13,9,23},
+  {16,19,11,10,24},
+  {19,22,6,4,28},
+  {21,22,6,4,28},
+  {11,7,17,15,27}
+};
+int mp_base[9][8]=
+{
+    {12,0,-26,-58,-102,-102,-4,180},
+    {10,0,-20,-60,-108,-96,0,170},
+    {10,0,-28,-58,-98,-98,-26,136},
+    {16,0,-30,-68,-116,-96,-6,188},
+    {12,-6,-28,-60,-104,-126,-16,210},
+    {10,-2,-20,-58,-110,-130,20,126},
+    {12,-2,-20,-60,-104,-104,-20,178},
+    {12,-6,-26,-44,-60,-86,38,74},
+    {10,-12,-26,-38,-66,-116,69,140}
+};
+quint8 mp_gradent[9][8]=
+{
+    {64,78,90,101,112,112,96,73},
+    {57,67,77,90,102,100,84,63},
+    {60,70,84,94,104,104,92,72},
+    {70,84,99,112,124,120,105,82},
+    {58,75,86,97,108,112,94,66},
+    {58,72,80,93,106,110,85,72},
+    {60,75,83,97,108,108,94,70},
+    {63,80,90,96,100,105,97,84},
+    {54,75,83,87,94,104,89,69}
+};
+int hp_base[9][8]=
+{
+    {200,-40,-640,-1440,-2280,-3080,-2040,-200},
+    {200,0,-760,-1840,-2840,-2840,-1160,600},
+    {200,0,-520,-1520,-2520,-3000,-2160,-80},
+    {160,0,-560,-1400,-2240,-2880,-2080,-400},
+    {200,-40,-640,-1560,-2360,-2760,-1840,-80},
+    {200,0,-560,-1320,-2160,-2960,-2560,-520},
+    {200,-80,-640,-1640,-2760,-2600,-240,2000},
+    {160,-80,-600,-1160,-2120,-2800,-2640,-400},
+    {200,-40,-640,-1640,-2360,-2560,-1720,-0}
+};
+quint8 hp_gradent[9][8]=
+{
+    {19,42,72,100,121,137,120,98},
+    {22,45,82,118,143,143,115,95},
+    {19,38,64,96,121,131,117,92},
+    {17,36,65,93,114,126,113,93},
+    {21,45,75,105,126,134,119,97},
+    {18,37,64,89,111,127,120,96},
+    {24,51,80,111,141,138,99,72},
+    {18,41,67,86,110,123,120,92},
+    {23,44,73,107,125,129,115,93}
+};
+quint8 luck_base[9][8]=
+{
+    {15,16,16,17,17,17,18,19},
+    {14,15,15,15,16,17,18,20},
+    {14,15,15,16,17,17,17,20},
+    {14,15,15,16,16,18,17,17},
+    {14,15,15,16,16,18,17,17},
+    {16,17,17,17,18,18,18,19},
+    {14,15,15,16,17,17,17,20},
+    {14,15,15,16,17,17,17,20},
+    {14,15,15,15,16,17,18,20}
+};
+quint8 luck_gradent[9][8]=
+{
+    {20,10,10,8,8,8,7,6},
+    {15,8,8,7,6,5,4,3},
+    {20,10,10,9,9,10,10,6},
+    {18,8,8,8,8,5,7,7},
+    {18,8,8,8,8,5,7,7},
+    {20,10,10,10,8,10,10,9},
+    {20,10,10,9,9,10,10,6},
+    {20,10,10,9,9,10,10,6},
+    {15,8,8,7,6,5,4,3}
+};
+quint8 stat_base[30][8]=
+{
+    {12,9,9,21,44,50,57,73},
+    {13,12,11,11,17,43,53,80},
+    {12,10,11,21,32,42,56,73},
+    {12,13,11,15,33,40,51,69},
+    {10,9,8,8,30,33,40,61},
+    {12,12,14,14,23,49,55,62},
+    {10,8,5,17,17,30,50,61},
+    {11,10,11,16,27,33,37,58},
+    {12,9,10,11,29,34,49,58},
+    {9,8,8,8,26,29,42,48},
+    {9,9,7,8,11,26,48,53},
+    {11,10,12,17,21,49,48},
+    {9,9,6,8,29,51,57,62},
+    {10,9,7,16,22,43,45,54},
+    {8,9,11,13,16,18,40,60},
+    {9,9,11,15,23,32,48,62},
+    {10,9,10,16,22,28,49,55},
+    {10,10,10,13,21,39,45,57},
+    {10,10,9,11,21,35,51,57},
+    {9,8,9,17,32,37,42,47},
+    {10,9,8,11,29,39,47,53},
+    {8,7,4,20,31,36,37,46},
+    {9,9,10,15,21,28,35,53},
+    {9,9,8,14,18,25,44,50},
+    {8,9,12,13,22,29,38,55},
+    {7,7,1,8,13,20,42,46},
+    {6,7,6,6,10,19,36,37},
+    {6,9,8,6,7,13,31,37},
+    {5,6,7,7,9,18,38,38},
+    {5,6,4,9,14,20,24,30}
+};
+quint8 stat_gradent[30][8]=
+{
+    {130,160,160,120,70,60,50,30},
+    {120,130,133,135,120,72,55,21},
+    {130,140,140,110,90,70,48,27},
+    {130,140,140,110,90,79,53,32},
+    {120,128,130,130,77,72,61,35},
+    {120,125,117,118,93,52,44,35},
+    {110,130,145,110,100,95,44,31},
+    {120,135,130,110,85,70,60,35},
+    {100,130,125,120,77,67,43,31},
+    {110,120,122,123,80,75,55,44},
+    {100,115,124,118,107,78,42,36},
+    {110,120,115,102,91,37,40,40},
+    {100,122,140,135,83,40,30,25},
+    {110,122,130,98,83,45,44,33},
+    {110,105,104,102,93,87,51,25},
+    {115,127,121,108,86,68,41,24},
+    {114,118,114,95,82,71,37,30},
+    {112,115,111,103,83,48,39,25},
+    {100,108,115,108,83,55,31,24},
+    {100,111,112,87,53,45,39,34},
+    {100,108,114,106,63,45,33,26},
+    {100,110,127,77,50,41,40,31},
+    {100,102,101,88,70,57,45,24},
+    {100,100,107,85,77,60,30,24},
+    {95,90,88,85,62,52,39,18},
+    {80,85,115,92,78,64,27,21},
+    {72,69,76,77,68,50,22,21},
+    {70,53,63,70,69,58,28,20},
+    {70,70,70,71,67,48,16,16},
+    {65,63,76,61,49,36,28,20}
+};
+/*Stat Gain To Be Called once per stat when leveling up */
+int stat_gain(int who,int stat, int stat_amount, int next_lvl)
+{
+  int gain=0;//return this
+  int diff=0; //holds our dif
+  int lvl_bracket=0; //track what bracket in the gradent/base were looking at.
+  //0 str; 1 vit;2 mag; 3;spr ;4:dex; ; 5=luck; 6 hp;7mp
+  int grade=0;// whats our grade in the stat only used for str/vit/mag/spr/dex
+  int baseline_stat=0; // holds our baseline_stat calculation.
+  //first find out the level bracket
+  if(next_lvl>=2 && next_lvl<11){lvl_bracket=0;}
+  else if(next_lvl>=12 && next_lvl<21){lvl_bracket=1;}
+  else if(next_lvl>=22 && next_lvl<31){lvl_bracket=2;}
+  else if(next_lvl>=32 && next_lvl<41){lvl_bracket=3;}
+  else if(next_lvl>=42 && next_lvl<51){lvl_bracket=4;}
+  else if(next_lvl>=52 && next_lvl<61){lvl_bracket=5;}
+  else if(next_lvl>=62 && next_lvl<81){lvl_bracket=6;}
+  else if(next_lvl>=82 && next_lvl<99){lvl_bracket=7;}
+  //calculate the baseline to use.
+  if(stat <5)
+  {//calculating str,vit,mag,spr or dex
+    grade =stat_grade[who][stat];
+    baseline_stat= stat_base[grade][lvl_bracket]+((stat_gradent[grade][lvl_bracket]*next_lvl)/100);
+  }
+  else if(stat==5){baseline_stat = luck_base[who][lvl_bracket]+((luck_gradent[who][lvl_bracket])/100);}//
+  else if(stat==6){baseline_stat = hp_base[who][lvl_bracket] + (next_lvl -1) * hp_gradent[who][lvl_bracket];}
+  else if(stat==7){baseline_stat = mp_base[who][lvl_bracket] + ((next_lvl -1) * mp_gradent[who][lvl_bracket]/10);}
+  //now calc the diff, so we can send back a gain based on type
+  //QMessageBox::information(0,"BASE",QString::number(baseline_stat));
+  if(stat <6)
+  {//str, vit,mag, spr,dex or luck all calculated the same
+    diff = ((qrand() %8)+1) + (baseline_stat - stat_amount);
+    if(diff<4){gain=0;}
+    else if(diff<7){gain=1;}
+    else if(diff<10){gain=2;}
+    else {gain=3;}
+  }
+  else if(stat==6)
+  {// Base HP Gain
+      diff= ((qrand()%8)+1) + (100* baseline_stat/stat_amount)-100;
+      //QMessageBox::information(0,"DIFF",QString::number(diff));
+      if(diff ==0){gain = hp_gradent[who][lvl_bracket]*0.40;}
+      else if (diff==1){gain = hp_gradent[who][lvl_bracket]*.50;}
+      else if (diff==2){gain = hp_gradent[who][lvl_bracket]*.50;}
+      else if (diff==3){gain = hp_gradent[who][lvl_bracket]*.60;}
+      else if (diff==4){gain = hp_gradent[who][lvl_bracket]*.70;}
+      else if (diff==5){gain = hp_gradent[who][lvl_bracket]*.80;}
+      else if (diff==6){gain = hp_gradent[who][lvl_bracket]*.90;}
+      else if (diff==7){gain = hp_gradent[who][lvl_bracket]*1.00;}
+      else if (diff==8){gain = hp_gradent[who][lvl_bracket]*1.10;}
+      else if (diff==9){gain = hp_gradent[who][lvl_bracket]*1.20;}
+      else if (diff==10){gain = hp_gradent[who][lvl_bracket]*1.30;}
+      else if (diff>=11){gain = hp_gradent[who][lvl_bracket]*1.50;}
+  }
+  else if(stat==7)
+  {// Base MP Gain
+      diff= ((qrand()%8)+1) + (100* baseline_stat/stat_amount)-100;
+      //QMessageBox::information(0,"DIFF",QString::number(diff));
+      if(diff ==0){gain = ((next_lvl*mp_gradent[who][lvl_bracket]/10)-((next_lvl-1)*mp_gradent[who][lvl_bracket]/10))*0.20;}
+      else if (diff==1){gain = ((next_lvl*mp_gradent[who][lvl_bracket]/10)-((next_lvl-1)*mp_gradent[who][lvl_bracket]/10))*.30;}
+      else if (diff==2){gain = ((next_lvl*mp_gradent[who][lvl_bracket]/10)-((next_lvl-1)*mp_gradent[who][lvl_bracket]/10))*.30;}
+      else if (diff==3){gain = ((next_lvl*mp_gradent[who][lvl_bracket]/10)-((next_lvl-1)*mp_gradent[who][lvl_bracket]/10))*.50;}
+      else if (diff==4){gain = ((next_lvl*mp_gradent[who][lvl_bracket]/10)-((next_lvl-1)*mp_gradent[who][lvl_bracket]/10))*.70;}
+      else if (diff==5){gain = ((next_lvl*mp_gradent[who][lvl_bracket]/10)-((next_lvl-1)*mp_gradent[who][lvl_bracket]/10))*.80;}
+      else if (diff==6){gain = ((next_lvl*mp_gradent[who][lvl_bracket]/10)-((next_lvl-1)*mp_gradent[who][lvl_bracket]/10))*.90;}
+      else if (diff==7){gain = ((next_lvl*mp_gradent[who][lvl_bracket]/10)-((next_lvl-1)*mp_gradent[who][lvl_bracket]/10))*1.00;}
+      else if (diff==8){gain = ((next_lvl*mp_gradent[who][lvl_bracket]/10)-((next_lvl-1)*mp_gradent[who][lvl_bracket]/10))*1.10;}
+      else if (diff==9){gain = ((next_lvl*mp_gradent[who][lvl_bracket]/10)-((next_lvl-1)*mp_gradent[who][lvl_bracket]/10))*1.20;}
+      else if (diff==10){gain = ((next_lvl*mp_gradent[who][lvl_bracket]/10)-((next_lvl-1)*mp_gradent[who][lvl_bracket]/10))*1.40;}
+      else if (diff>=11){gain = ((next_lvl*mp_gradent[who][lvl_bracket]/10)-((next_lvl-1)*mp_gradent[who][lvl_bracket]/10))*1.60;}
+  }
+  return gain;
+}
+/*~~~~~~~~TEXT CLASS~~~~~~~~~*/
 TEXT::TEXT()
 {
     eng   =QString::fromUtf8(" !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÄÁÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü⌘°¢£ÙÛ¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂ΣΠπ⌡ªºΩæø¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄¤‹›ﬁﬂ■▪‚„‰ÂÊËÁÈíîïìÓÔ ÒÙÛ             \t                               ");
@@ -651,15 +883,6 @@ QByteArray TEXT::toFF7(QString string)
     for(int c=0 ; c<stringSize ; ++c)
     {
         comp = string.at(c);
-        /*if(comp=='\n')
-        {//\n{NewPage}\n,\n
-            if(string.mid(c+1, 10).compare("{NewPage}\n", Qt::CaseInsensitive) == 0)
-            {
-                ff7str.append('\x01');
-                c += 10;
-            }
-        else {ff7str.append('\x02');continue;}
-        }*/
         for(i=0 ; i<=0xff ; ++i)
         {
             if(QString::compare(comp, character(i,0))==0)

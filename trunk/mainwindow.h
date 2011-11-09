@@ -127,6 +127,7 @@ private slots://try to keep these in the same order as the .cpp file
     /*GuiFunctions*/
     void fix_sum(const QString &fileName);
     void charupdate(void);
+    void update_stat_totals(void);
     void setchar_growth(int caller);
     void setarmorslots(void);
     void setweaponslots(void);
@@ -406,6 +407,15 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_s7ts_7_toggled(bool checked);
     void on_cb_s7ts_8_toggled(bool checked);
 
+    void on_cb_farm_items_1_toggled(bool checked);
+    void on_cb_farm_items_2_toggled(bool checked);
+    void on_cb_farm_items_3_toggled(bool checked);
+    void on_cb_farm_items_4_toggled(bool checked);
+    void on_cb_farm_items_5_toggled(bool checked);
+    void on_cb_farm_items_6_toggled(bool checked);
+    void on_cb_farm_items_7_toggled(bool checked);
+    void on_cb_farm_items_8_toggled(bool checked);
+
     void on_cb_s5_1_toggled(bool checked);
     void on_cb_s5_2_toggled(bool checked);
     void on_cb_s5_3_toggled(bool checked);
@@ -482,8 +492,9 @@ private slots://try to keep these in the same order as the .cpp file
     void on_btn_m_lvl1_clicked();
 
 //char stats
+
     void on_line_name_textChanged(QString text);
-    void on_sb_lvl_valueChanged();
+    void on_sb_lvl_valueChanged(int value);
     void on_sb_exp_valueChanged();
     void on_sb_kills_valueChanged();
     void on_cb_front_clicked(bool checked);

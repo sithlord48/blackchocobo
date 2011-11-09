@@ -20,6 +20,7 @@
 #include "mainwindow.h"
 #include <QSettings>
 #include <QPlastiqueStyle>
+#include <QTime>
 
 int main(int argc, char *argv[])
 {
@@ -32,7 +33,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     a.setApplicationName("Black Chocobo");
     a.setStyle("Plastique");
-    a.setApplicationVersion("1.9.44");
+    a.setApplicationVersion("1.9.45");
     QTranslator translator;
     QString lang = QCoreApplication::applicationDirPath() +"/"+ "lang/bchoco_";
     if(settings.value("lang").isNull()){settings.setValue("lang",QLocale::system().name().section('_',0,0));} //if no lang set it to os setting.
@@ -40,6 +41,7 @@ int main(int argc, char *argv[])
     translator.load(lang);
     a.installTranslator(&translator);
     FF7 ff7; //main ff7 data
+    qsrand(QTime::currentTime().msec());
     MainWindow w(0,&ff7,&settings);
     if(argc ==2){w.loadFileFull(QString(argv[1]),0);}// if command is run w/ a filename after it , load that file.
     w.show();

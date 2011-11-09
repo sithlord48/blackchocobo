@@ -1438,10 +1438,6 @@
         <translation>ステータス タブ</translation>
     </message>
     <message>
-        <source>Stat Bonuses</source>
-        <translation>能力値ボーナス</translation>
-    </message>
-    <message>
         <source>CheckBox</source>
         <translation>[チェック ボックス]</translation>
     </message>
@@ -1508,10 +1504,6 @@
     <message>
         <source>-Empty-</source>
         <translation>-なし-</translation>
-    </message>
-    <message>
-        <source>Base Stats</source>
-        <translation>基本能力値</translation>
     </message>
     <message>
         <source>Char&apos;s Limits</source>
@@ -3521,10 +3513,6 @@ MASTER = 16777215 AP です</translation>
         <translation>ガリアンビースト</translation>
     </message>
     <message>
-        <source>Automatic Exp &lt;-&gt; Lvl</source>
-        <translation>経験値 &lt;-&gt; レベルの自動変換</translation>
-    </message>
-    <message>
         <source>Add Max Of All Items</source>
         <translation>すべてのアイテムを最大数追加</translation>
     </message>
@@ -4188,6 +4176,46 @@ Table Entries are Editable</source>
     <message>
         <source>Please Select A File Type To Save</source>
         <translation>保存するファイルの種類を選択してください</translation>
+    </message>
+    <message>
+        <source>Stats: Base+Bonus+Materia=Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Calculate Stats</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6284,10 +6312,6 @@ p, li { white-space: pre-wrap; }
         <translation>修正: 保存ボタン</translation>
     </message>
     <message>
-        <source>Improved: Slotselect handleing of non-ff7 and empty slots</source>
-        <translation>調整: 空きスロット/FF7 以外のスロットのハンドリング</translation>
-    </message>
-    <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
         <translation>PSX アイコン クラス &amp; 日本語文字列変換機能</translation>
     </message>
@@ -6298,6 +6322,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Improved: Detection of FF7 Types.</source>
         <translation>調整: FF7 のタイプの検出</translation>
+    </message>
+    <message>
+        <source>Improved: Slotselect handling of non-ff7 and empty slots</source>
+        <translation>調整: 空きスロット/FF7 以外のスロットのハンドリング</translation>
+    </message>
+    <message>
+        <source>New: Predict stat growth (if enabled)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
