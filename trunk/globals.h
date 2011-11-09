@@ -49,7 +49,7 @@ public:
     qint8 MateriaStats_Str(int);
     qint8 MateriaStats_Vit(int);
     qint8 MateriaStats_Mag(int);
-    qint8 MateriaStats_Spr(int);
+    qint8 MateriaStats_Spi(int);
     qint8 MateriaStats_Dex(int);
     qint8 MateriaStats_Lck(int);
     qint8 MateriaStats_Hp(int);
@@ -192,7 +192,7 @@ static ITEM Items[]=
   {":/icon/accessory",0,0},{":/icon/accessory",0,0}
 };
 
-static MATERIA Materias[91]=
+static MATERIA Materias[]=
 {                                                                               //ID   hp,mp,str,vit,dex,lck,mag,spi
     {QT_TRANSLATE_NOOP("Materia_Names","MP Plus"),          ":/icon/independent", 0x00,0,0,0,0,0,0,0,0,{10000,20000,30000,50000},3,5},
     {QT_TRANSLATE_NOOP("Materia_Names","HP Plus"),          ":/icon/independent", 0x01,0,0,0,0,0,0,0,0,{10000,20000,30000,50000},3,5},

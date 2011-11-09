@@ -3454,7 +3454,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <item>
                        <widget class="QLabel" name="lbl_str_mat">
                         <property name="text">
-                         <string notr="true">mat</string>
+                         <string notr="true"/>
                         </property>
                        </widget>
                       </item>
@@ -3468,7 +3468,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <item>
                        <widget class="QLabel" name="lbl_str_total">
                         <property name="text">
-                         <string notr="true">###</string>
+                         <string notr="true"/>
                         </property>
                        </widget>
                       </item>
@@ -3600,7 +3600,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <item>
                        <widget class="QLabel" name="lbl_vit_mat">
                         <property name="text">
-                         <string notr="true">mat</string>
+                         <string notr="true"/>
                         </property>
                        </widget>
                       </item>
@@ -3614,7 +3614,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <item>
                        <widget class="QLabel" name="lbl_vit_total">
                         <property name="text">
-                         <string notr="true">###</string>
+                         <string notr="true"/>
                         </property>
                        </widget>
                       </item>
@@ -3746,7 +3746,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <item>
                        <widget class="QLabel" name="lbl_mag_mat">
                         <property name="text">
-                         <string notr="true">mat</string>
+                         <string notr="true"/>
                         </property>
                        </widget>
                       </item>
@@ -3760,7 +3760,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <item>
                        <widget class="QLabel" name="lbl_mag_total">
                         <property name="text">
-                         <string notr="true">###</string>
+                         <string notr="true"/>
                         </property>
                        </widget>
                       </item>
@@ -3793,7 +3793,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QSpinBox" name="sb_spr">
+                       <widget class="QSpinBox" name="sb_spi">
                         <property name="sizePolicy">
                          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                           <horstretch>0</horstretch>
@@ -3846,7 +3846,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </widget>
                       </item>
                       <item>
-                       <widget class="QSpinBox" name="sb_sprbonus">
+                       <widget class="QSpinBox" name="sb_spibonus">
                         <property name="sizePolicy">
                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                           <horstretch>0</horstretch>
@@ -3892,7 +3892,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <item>
                        <widget class="QLabel" name="lbl_spi_mat">
                         <property name="text">
-                         <string notr="true">mat</string>
+                         <string notr="true"/>
                         </property>
                        </widget>
                       </item>
@@ -3906,7 +3906,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <item>
                        <widget class="QLabel" name="lbl_spi_total">
                         <property name="text">
-                         <string notr="true">###</string>
+                         <string notr="true"/>
                         </property>
                        </widget>
                       </item>
@@ -4038,7 +4038,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <item>
                        <widget class="QLabel" name="lbl_dex_mat">
                         <property name="text">
-                         <string notr="true">mat</string>
+                         <string notr="true"/>
                         </property>
                        </widget>
                       </item>
@@ -4052,7 +4052,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <item>
                        <widget class="QLabel" name="lbl_dex_total">
                         <property name="text">
-                         <string notr="true">###</string>
+                         <string notr="true"/>
                         </property>
                        </widget>
                       </item>
@@ -4184,7 +4184,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <item>
                        <widget class="QLabel" name="lbl_lck_mat">
                         <property name="text">
-                         <string notr="true">mat</string>
+                         <string notr="true"/>
                         </property>
                        </widget>
                       </item>
@@ -4198,7 +4198,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <item>
                        <widget class="QLabel" name="lbl_lck_total">
                         <property name="text">
-                         <string notr="true">###</string>
+                         <string notr="true"/>
                         </property>
                        </widget>
                       </item>
@@ -4266,7 +4266,14 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <item>
                       <widget class="QLabel" name="lbl_hp_mat">
                        <property name="text">
-                        <string notr="true">mat</string>
+                        <string notr="true"/>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="Line" name="line">
+                       <property name="orientation">
+                        <enum>Qt::Vertical</enum>
                        </property>
                       </widget>
                      </item>
@@ -4326,7 +4333,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <item>
                       <widget class="QLabel" name="lbl_mp_mat">
                        <property name="text">
-                        <string notr="true">mat</string>
+                        <string notr="true"/>
                        </property>
                       </widget>
                      </item>
@@ -4688,8 +4695,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>401</width>
-             <height>420</height>
+             <width>443</width>
+             <height>436</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8416,7 +8423,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>212</width>
+                  <width>222</width>
                   <height>435</height>
                  </rect>
                 </property>
@@ -10699,8 +10706,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1446</width>
-             <height>276</height>
+             <width>1452</width>
+             <height>334</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16705,8 +16712,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>720</width>
-             <height>275</height>
+             <width>764</width>
+             <height>440</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -19108,7 +19115,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>328</width>
+                  <width>390</width>
                   <height>1492</height>
                  </rect>
                 </property>
@@ -21808,7 +21815,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>733</width>
+             <width>737</width>
              <height>664</height>
             </rect>
            </property>
