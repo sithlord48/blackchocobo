@@ -1601,7 +1601,7 @@ void MainWindow::charupdate(void)
     ui->sb_str->setValue(ff7->slot[s].chars[curchar].strength);
     ui->sb_mag->setValue(ff7->slot[s].chars[curchar].magic);
     ui->sb_lck->setValue(ff7->slot[s].chars[curchar].luck);
-    ui->sb_spr->setValue(ff7->slot[s].chars[curchar].spirit);
+    ui->sb_spi->setValue(ff7->slot[s].chars[curchar].spirit);
     ui->sb_dex->setValue(ff7->slot[s].chars[curchar].dexterity);
     ui->sb_vit->setValue(ff7->slot[s].chars[curchar].vitality);
     ui->sb_hp->setValue(ff7->slot[s].chars[curchar].baseHP);
@@ -1618,7 +1618,7 @@ void MainWindow::charupdate(void)
     ui->sb_strbonus->setValue(ff7->slot[s].chars[curchar].strength_bonus);
     ui->sb_vitbonus->setValue(ff7->slot[s].chars[curchar].vitality_bonus);
     ui->sb_magbonus->setValue(ff7->slot[s].chars[curchar].magic_bonus);
-    ui->sb_sprbonus->setValue(ff7->slot[s].chars[curchar].spirit_bonus);
+    ui->sb_spibonus->setValue(ff7->slot[s].chars[curchar].spirit_bonus);
     ui->sb_dexbonus->setValue(ff7->slot[s].chars[curchar].dexterity_bonus);
     ui->sb_lckbonus->setValue(ff7->slot[s].chars[curchar].luck_bonus);
     ui->lcd_0x34->display(ff7->slot[s].chars[curchar].z_4[0]);
@@ -1805,56 +1805,122 @@ void MainWindow::charupdate(void)
 }
 void MainWindow::update_stat_totals(void)
 {
-    int materiabonus=0;  int stat_temp=0;
+    int strbonus=0;  int magbonus=0; int spibonus=0; int lckbonus=0; int stat_temp=0;
+    int vitbonus=0;  int dexbonus=0; int hpbonus=0; int mpbonus=0;
 
-    for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Str(ff7->slot[s].chars[curchar].materias[i].id);}}
-    stat_temp=ui->sb_str->value()+ui->sb_strbonus->value()+materiabonus;    if(stat_temp>256){stat_temp=255;}
+
+    for(int i=0;i<16;i++)
+    {//Check each materia slot and create a runing total for each stat.
+        if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF)
+        {
+            strbonus += FF7Strings.MateriaStats_Str(ff7->slot[s].chars[curchar].materias[i].id);
+
+            vitbonus += FF7Strings.MateriaStats_Vit(ff7->slot[s].chars[curchar].materias[i].id);
+            if(ff7->slot[s].chars[curchar].materias[i].id ==0x03)
+            {//Catch Magic Plus
+                int level=1;
+                int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
+                for(int m=0; m<Materias[1].levels;m++){if(aptemp >= Materias[1].ap[m]){level++;}}
+                magbonus += ff7->slot[s].chars[curchar].magic * (0.01*(level*10));
+            }
+            else{magbonus += FF7Strings.MateriaStats_Mag(ff7->slot[s].chars[curchar].materias[i].id);}
+
+            spibonus += FF7Strings.MateriaStats_Spi(ff7->slot[s].chars[curchar].materias[i].id);
+
+            if(ff7->slot[s].chars[curchar].materias[i].id ==0x02)
+            {//Catch Speed Plus
+                int level=1;
+                int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
+                for(int m=0; m<Materias[1].levels;m++){if(aptemp >= Materias[1].ap[m]){level++;}}
+                dexbonus += ff7->slot[s].chars[curchar].dexterity * (0.01*(level*10));
+            }
+            else{dexbonus += FF7Strings.MateriaStats_Dex(ff7->slot[s].chars[curchar].materias[i].id);}
+
+            if(ff7->slot[s].chars[curchar].materias[i].id ==0x04)
+            {//Catch Luck Plus
+                int level=1;
+                int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
+                for(int m=0; m<Materias[1].levels;m++){if(aptemp >= Materias[1].ap[m]){level++;}}
+                lckbonus += ff7->slot[s].chars[curchar].magic * (0.01*(level*10));
+            }
+            else{lckbonus += FF7Strings.MateriaStats_Lck(ff7->slot[s].chars[curchar].materias[i].id);}
+
+            if(ff7->slot[s].chars[curchar].materias[i].id ==0x01)
+            {//Catch HP Plus
+                int level=1;
+                int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
+                for(int m=0; m<Materias[1].levels;m++){if(aptemp >= Materias[1].ap[m]){level++;}}
+                hpbonus +=level*10;
+            }
+            else{hpbonus += FF7Strings.MateriaStats_Hp(ff7->slot[s].chars[curchar].materias[i].id);}
+
+            if(ff7->slot[s].chars[curchar].materias[i].id ==0x00)
+            {//Catch Mp Plus
+                int level=1;
+                int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
+                for(int m=0; m<Materias[0].levels;m++){if(aptemp >= Materias[0].ap[m]){level++;}}
+                mpbonus +=level*10;
+            }
+            else{mpbonus +=FF7Strings.MateriaStats_Mp(ff7->slot[s].chars[curchar].materias[i].id);}
+        }
+    }
+    //out of the loop need to check things like accessory and armor/weapon for modifiers.
+    if(ff7->slot[s].chars[curchar].accessory ==0x00) {strbonus +=10;} //power wrist
+    else if(ff7->slot[s].chars[curchar].accessory ==0x01) {vitbonus +=10;} //protect ring
+    else if(ff7->slot[s].chars[curchar].accessory ==0x02) {magbonus +=10;} //earing
+    else if(ff7->slot[s].chars[curchar].accessory ==0x03) {spibonus +=10;} //tailsman
+    else if(ff7->slot[s].chars[curchar].accessory ==0x04) {dexbonus +=10;} //choco-feather
+    else if(ff7->slot[s].chars[curchar].accessory ==0x05) {lckbonus += (ff7->slot[s].chars[curchar].luck*0.1);} //amulet +10%
+    else if(ff7->slot[s].chars[curchar].accessory ==0x06) {strbonus +=30; vitbonus +=30;} // champ's belt
+    else if(ff7->slot[s].chars[curchar].accessory ==0x08) {strbonus +=50; spibonus +=50;} // tough ring
+    else if(ff7->slot[s].chars[curchar].accessory ==0x09) {magbonus +=30; spibonus +=30;} // circlet
+    //end of accessories
+    if(ff7->slot[s].chars[curchar].weapon==12){spibonus+=13;}//apocalpse
+    else if(ff7->slot[s].chars[curchar].weapon==14){spibonus+=35;}//ragnarok
+    else if(ff7->slot[s].chars[curchar].weapon==15){spibonus+=24;}//Ultimate Weapon
+    else if(ff7->slot[s].chars[curchar].weapon==59){vitbonus +=35;spibonus +=18;}//behemoth horn
+    else if(ff7->slot[s].chars[curchar].weapon==62){vitbonus +=1; spibonus+=4;}//Guard Stick
+    else if(ff7->slot[s].chars[curchar].weapon==71){vitbonus +=20;}//Umbrella
+    else if(ff7->slot[s].chars[curchar].weapon==72){vitbonus +=12;spibonus +=20;}//Princess Guard
+    else if(ff7->slot[s].chars[curchar].weapon==85){spibonus +=20;}//Spirt Lance
+    else if(ff7->slot[s].chars[curchar].weapon==97){dexbonus +=10;}//Magic Shuriken
+    else if(ff7->slot[s].chars[curchar].weapon==112){vitbonus +=30;}//Starlight M Phone
+    //end weapons
+    if(ff7->slot[s].chars[curchar].armor==31){dexbonus +=30;lckbonus+=20;} //chocobobracelet
+    else if(ff7->slot[s].chars[curchar].armor==11){magbonus +=5;}//Enincoat
+    else if(ff7->slot[s].chars[curchar].armor==12){magbonus +=20;}//Wizard Bracelet
+    else if(ff7->slot[s].chars[curchar].armor==14){strbonus +=30;}//Gigas Armlet
+    else if(ff7->slot[s].chars[curchar].armor==17){magbonus +=20;}//Forth Braclet
+    else if(ff7->slot[s].chars[curchar].armor==18){strbonus +=20;}//Warrior Bangle
+    else if(ff7->slot[s].chars[curchar].armor==29){strbonus+=20; magbonus +=20;}//Ziedrich
+    //end armor
+    //set the labels for the bonuses.
+    ui->lbl_str_mat->setText(QString::number(strbonus));
+    ui->lbl_vit_mat->setText(QString::number(vitbonus));
+    ui->lbl_mag_mat->setText(QString::number(magbonus));
+    ui->lbl_spi_mat->setText(QString::number(spibonus));
+    ui->lbl_dex_mat->setText(QString::number(dexbonus));
+    ui->lbl_lck_mat->setText(QString::number(lckbonus));
+    ui->lbl_hp_mat->setText(QString::number(hpbonus)+ "%");
+    ui->lbl_mp_mat->setText(QString::number(mpbonus) + "%");
+    //do the math for the stat , if grater then 255 then ingore and use 255 instead.
+    stat_temp=ui->sb_str->value()+ui->sb_strbonus->value()+strbonus;    if(stat_temp>256){stat_temp=255;}
     ui->lbl_str_total->setText(QString::number(stat_temp));
-    ui->lbl_str_mat->setText(QString::number(materiabonus));
-
-    materiabonus=0;
-    for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Vit(ff7->slot[s].chars[curchar].materias[i].id);}}
-    stat_temp=ui->sb_vit->value()+ui->sb_vitbonus->value()+materiabonus;    if(stat_temp>256){stat_temp=255;}
+    stat_temp=ui->sb_vit->value()+ui->sb_vitbonus->value()+vitbonus;    if(stat_temp>256){stat_temp=255;}
     ui->lbl_vit_total->setText(QString::number(stat_temp));
-    ui->lbl_vit_mat->setText(QString::number(materiabonus));
-
-    materiabonus=0;
-    for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Mag(ff7->slot[s].chars[curchar].materias[i].id);}}
-    stat_temp=ui->sb_mag->value()+ui->sb_magbonus->value()+materiabonus;    if(stat_temp>256){stat_temp=255;}
+    stat_temp=ui->sb_mag->value()+ui->sb_magbonus->value()+magbonus;    if(stat_temp>256){stat_temp=255;}
     ui->lbl_mag_total->setText(QString::number(stat_temp));
-    ui->lbl_mag_mat->setText(QString::number(materiabonus));
-
-    materiabonus=0;
-    for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Spr(ff7->slot[s].chars[curchar].materias[i].id);}}
-    stat_temp=ui->sb_spr->value()+ui->sb_sprbonus->value()+materiabonus;    if(stat_temp>256){stat_temp=255;}
+    stat_temp=ui->sb_spi->value()+ui->sb_spibonus->value()+spibonus;    if(stat_temp>256){stat_temp=255;}
     ui->lbl_spi_total->setText(QString::number(stat_temp));
-    ui->lbl_spi_mat->setText(QString::number(materiabonus));
-
-    materiabonus=0;
-    for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Dex(ff7->slot[s].chars[curchar].materias[i].id);}}
-    stat_temp=ui->sb_dex->value()+ui->sb_dexbonus->value()+materiabonus;    if(stat_temp>256){stat_temp=255;}
+    stat_temp=ui->sb_dex->value()+ui->sb_dexbonus->value()+dexbonus;    if(stat_temp>256){stat_temp=255;}
     ui->lbl_dex_total->setText(QString::number(stat_temp));
-    ui->lbl_dex_mat->setText(QString::number(materiabonus));
-
-    materiabonus=0;
-    for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Lck(ff7->slot[s].chars[curchar].materias[i].id);}}
-    stat_temp=ui->sb_lck->value()+ui->sb_lckbonus->value()+materiabonus;    if(stat_temp>256){stat_temp=255;}
+    stat_temp=ui->sb_lck->value()+ui->sb_lckbonus->value()+lckbonus;    if(stat_temp>256){stat_temp=255;}
     ui->lbl_lck_total->setText(QString::number(stat_temp));
-    ui->lbl_lck_mat->setText(QString::number(materiabonus));
-
-
-
+    // hp/mp adjustment
     if(ui->action_auto_char_growth->isChecked())
     {
-        materiabonus=0;
-        for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Hp(ff7->slot[s].chars[curchar].materias[i].id);}}
-        ui->lbl_hp_mat->setText(QString::number(materiabonus)+ "%");
-        ui->sb_maxhp->setValue(ui->sb_hp->value() + (ui->sb_hp->value()*(materiabonus*0.01)));
-
-        materiabonus=0;
-        for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Mp(ff7->slot[s].chars[curchar].materias[i].id);}}
-        ui->lbl_mp_mat->setText(QString::number(materiabonus) + "%");
-        if(materiabonus>0){ui->sb_maxmp->setValue(ui->sb_mp->value() + (ui->sb_mp->value()*(materiabonus*0.01)));}
+        ui->sb_maxhp->setValue(ui->sb_hp->value() + (ui->sb_hp->value()*(hpbonus*0.01)));
+        ui->sb_maxmp->setValue(ui->sb_mp->value() + (ui->sb_mp->value()*(mpbonus*0.01)));
      }
 }
 /*~~~~~~~END Char Update~~~~~~~~*/
@@ -2512,6 +2578,7 @@ else // make the materia look nice
     }
 } //end of else
 load=false;
+update_stat_totals();
 }
 /*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
 void MainWindow::set_ntsc_time(void)
@@ -4397,7 +4464,7 @@ void MainWindow::on_sb_lvl_valueChanged(int value)
                 ui->sb_str->setValue(ui->sb_str->value() + stat_gain(ff7->slot[s].chars[curchar].id,0,ff7->slot[s].chars[curchar].strength,i+1));
                 ui->sb_vit->setValue(ui->sb_vit->value() + stat_gain(ff7->slot[s].chars[curchar].id,1,ff7->slot[s].chars[curchar].vitality,i+1));
                 ui->sb_mag->setValue(ui->sb_mag->value() + stat_gain(ff7->slot[s].chars[curchar].id,2,ff7->slot[s].chars[curchar].magic,i+1));
-                ui->sb_spr->setValue(ui->sb_spr->value() + stat_gain(ff7->slot[s].chars[curchar].id,3,ff7->slot[s].chars[curchar].spirit,i+1));
+                ui->sb_spi->setValue(ui->sb_spi->value() + stat_gain(ff7->slot[s].chars[curchar].id,3,ff7->slot[s].chars[curchar].spirit,i+1));
                 ui->sb_dex->setValue(ui->sb_dex->value() + stat_gain(ff7->slot[s].chars[curchar].id,4,ff7->slot[s].chars[curchar].dexterity,i+1));
                 ui->sb_lck->setValue(ui->sb_lck->value() + stat_gain(ff7->slot[s].chars[curchar].id,5,ff7->slot[s].chars[curchar].luck,i+1));
                 ui->sb_hp->setValue(ui->sb_hp->value() + stat_gain(ff7->slot[s].chars[curchar].id,6,ff7->slot[s].chars[curchar].baseHP,i+1));
@@ -4411,7 +4478,7 @@ void MainWindow::on_sb_lvl_valueChanged(int value)
                 ui->sb_str->setValue(ui->sb_str->value() - stat_gain(ff7->slot[s].chars[curchar].id,0,ff7->slot[s].chars[curchar].strength,i));
                 ui->sb_vit->setValue(ui->sb_vit->value() - stat_gain(ff7->slot[s].chars[curchar].id,1,ff7->slot[s].chars[curchar].vitality,i));
                 ui->sb_mag->setValue(ui->sb_mag->value() - stat_gain(ff7->slot[s].chars[curchar].id,2,ff7->slot[s].chars[curchar].magic,i));
-                ui->sb_spr->setValue(ui->sb_spr->value() - stat_gain(ff7->slot[s].chars[curchar].id,3,ff7->slot[s].chars[curchar].spirit,i));
+                ui->sb_spi->setValue(ui->sb_spi->value() - stat_gain(ff7->slot[s].chars[curchar].id,3,ff7->slot[s].chars[curchar].spirit,i));
                 ui->sb_dex->setValue(ui->sb_dex->value() - stat_gain(ff7->slot[s].chars[curchar].id,4,ff7->slot[s].chars[curchar].dexterity,i));
                 ui->sb_lck->setValue(ui->sb_lck->value() - stat_gain(ff7->slot[s].chars[curchar].id,5,ff7->slot[s].chars[curchar].luck,i));
                 ui->sb_hp->setValue(ui->sb_hp->value() - stat_gain(ff7->slot[s].chars[curchar].id,6,ff7->slot[s].chars[curchar].baseHP,i));
@@ -4439,13 +4506,13 @@ void MainWindow::on_sb_str_valueChanged(){if(!load){file_changed=true; ff7->slot
 void MainWindow::on_sb_dex_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].dexterity = ui->sb_dex->value();update_stat_totals();}}
 void MainWindow::on_sb_mag_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].magic = ui->sb_mag->value();update_stat_totals();}}
 void MainWindow::on_sb_vit_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].vitality = ui->sb_vit->value();update_stat_totals();}}
-void MainWindow::on_sb_spr_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].spirit = ui->sb_spr->value();update_stat_totals();}}
+void MainWindow::on_sb_spi_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].spirit = ui->sb_spi->value();update_stat_totals();}}
 void MainWindow::on_sb_lck_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].luck = ui->sb_lck->value();update_stat_totals();}}
 void MainWindow::on_sb_strbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].strength_bonus = ui->sb_strbonus->value();update_stat_totals();}}
 void MainWindow::on_sb_dexbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].dexterity_bonus = ui->sb_dexbonus->value();update_stat_totals();}}
 void MainWindow::on_sb_magbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].magic_bonus = ui->sb_magbonus->value();update_stat_totals();}}
 void MainWindow::on_sb_vitbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].vitality_bonus = ui->sb_vitbonus->value();update_stat_totals();}}
-void MainWindow::on_sb_sprbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].spirit_bonus = ui->sb_sprbonus->value();update_stat_totals();}}
+void MainWindow::on_sb_spibonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].spirit_bonus = ui->sb_spibonus->value();update_stat_totals();}}
 void MainWindow::on_sb_lckbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].luck_bonus = ui->sb_lckbonus->value();update_stat_totals();}}
 
 void MainWindow::on_cb_front_clicked(bool checked)
@@ -4510,9 +4577,9 @@ void MainWindow::on_limit_4_toggled(){if(!load) {limitapply();}}
 
 //Char Equiptment Tab
 
-void MainWindow::on_combo_armor_currentIndexChanged(int index){if(!load){file_changed=true; ff7->slot[s].chars[curchar].armor = index;    setarmorslots();}}
-void MainWindow::on_combo_weapon_currentIndexChanged(){setweaponslots();} //no matter what we need to update materia slots.
-void MainWindow::on_combo_acc_currentIndexChanged(int index){if(!load){file_changed=true; if(index==32){index=0xFF;} ff7->slot[s].chars[curchar].accessory = index;}}
+void MainWindow::on_combo_armor_currentIndexChanged(int index){if(!load){file_changed=true; ff7->slot[s].chars[curchar].armor = index;    setarmorslots(); update_stat_totals();}}
+void MainWindow::on_combo_weapon_currentIndexChanged(){setweaponslots();update_stat_totals();} //no matter what we need to update materia slots.
+void MainWindow::on_combo_acc_currentIndexChanged(int index){if(!load){file_changed=true; if(index==32){index=0xFF;} ff7->slot[s].chars[curchar].accessory = index;update_stat_totals();}}
 
 void MainWindow::on_combo_weapon_activated(int index)
 {if(!load){file_changed=true;
@@ -4572,14 +4639,14 @@ void MainWindow::on_combo_mat_type_slot_currentIndexChanged(int index)
     load=false;
 }
 void MainWindow::on_combo_add_mat_slot_currentIndexChanged(int index)
-{if(!load){
+{
     if(ui->combo_add_mat_slot->currentText() ==tr("DON'T USE"))// this is a placeholder materia
     {
         QMessageBox::information(this,tr("Empty Materia"),tr("Place holder Materia Detected\n Remember 16777215 AP = master"));
         guirefresh();// clean up the gui.
         return; //we are done here.
     }
-    file_changed=true;  /*Possibly unnessessary*/ QMessageBox::information(this,"FileChanged",QString("Called By ")+ __func__ + QString("\n Load:%1        ").arg(QString::number(load)));
+    if(!load){file_changed=true;}
     ff7->slot[s].chars[curchar].materias[mslotsel].id = Materias[index].id;
     ui->combo_mat_type_slot->setCurrentIndex(Materias[index].type);
     for(int i=0;i<ui->combo_add_mat_slot_2->count();i++)
@@ -4587,7 +4654,7 @@ void MainWindow::on_combo_add_mat_slot_currentIndexChanged(int index)
         if(ui->combo_add_mat_slot_2->itemText(i)==Materias[index].name){ui->combo_add_mat_slot_2->setCurrentIndex(i);}
     }
     materiaupdate_slot();
-}}
+}
 
 void MainWindow::on_combo_add_mat_slot_2_currentIndexChanged()
 {if(!load){//set combo_add_mat.setCurrentindex = selected materia.id
@@ -4628,7 +4695,7 @@ void MainWindow::on_btn_paste_materia_slot_clicked()
     materiaupdate_slot();
 }
 
-void MainWindow::on_w_m_s1_clicked(){mslotsel=0;    if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true; ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
+void MainWindow::on_w_m_s1_clicked(){mslotsel=0;    if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
 void MainWindow::on_w_m_s2_clicked(){mslotsel=1;    if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
 void MainWindow::on_w_m_s3_clicked(){mslotsel=2;    if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
 void MainWindow::on_w_m_s4_clicked(){mslotsel=3;    if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}

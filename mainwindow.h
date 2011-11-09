@@ -514,8 +514,8 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_magbonus_valueChanged();
     void on_sb_vit_valueChanged();
     void on_sb_vitbonus_valueChanged();
-    void on_sb_spr_valueChanged();
-    void on_sb_sprbonus_valueChanged();
+    void on_sb_spi_valueChanged();
+    void on_sb_spibonus_valueChanged();
     void on_sb_lck_valueChanged();
     void on_sb_lckbonus_valueChanged();
     void on_combo_mat_type_slot_currentIndexChanged(int);
