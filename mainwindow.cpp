@@ -1625,6 +1625,7 @@ void MainWindow::charupdate(void)
     ui->lcd_0x35->display(ff7->slot[s].chars[curchar].z_4[1]);
     ui->lcd_0x36->display(ff7->slot[s].chars[curchar].z_4[2]);
     ui->lcd_0x37->display(ff7->slot[s].chars[curchar].z_4[3]);
+
     //Set up Limit Boxes Clear and hide all
     ui->limit_1a->setChecked(0);    ui->limit_1a->setVisible(0);
     ui->limit_1b->setChecked(0);    ui->limit_1b->setVisible(0);
@@ -1799,19 +1800,71 @@ void MainWindow::charupdate(void)
     setweaponslots();
     setarmorslots();
     materiaupdate_slot();
+    update_stat_totals();
     if(ui->action_auto_char_growth->isChecked()){setchar_growth(0);}
+}
+void MainWindow::update_stat_totals(void)
+{
+    int materiabonus=0;  int stat_temp=0;
+
+    for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Str(ff7->slot[s].chars[curchar].materias[i].id);}}
+    stat_temp=ui->sb_str->value()+ui->sb_strbonus->value()+materiabonus;    if(stat_temp>256){stat_temp=255;}
+    ui->lbl_str_total->setText(QString::number(stat_temp));
+    ui->lbl_str_mat->setText(QString::number(materiabonus));
+
+    materiabonus=0;
+    for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Vit(ff7->slot[s].chars[curchar].materias[i].id);}}
+    stat_temp=ui->sb_vit->value()+ui->sb_vitbonus->value()+materiabonus;    if(stat_temp>256){stat_temp=255;}
+    ui->lbl_vit_total->setText(QString::number(stat_temp));
+    ui->lbl_vit_mat->setText(QString::number(materiabonus));
+
+    materiabonus=0;
+    for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Mag(ff7->slot[s].chars[curchar].materias[i].id);}}
+    stat_temp=ui->sb_mag->value()+ui->sb_magbonus->value()+materiabonus;    if(stat_temp>256){stat_temp=255;}
+    ui->lbl_mag_total->setText(QString::number(stat_temp));
+    ui->lbl_mag_mat->setText(QString::number(materiabonus));
+
+    materiabonus=0;
+    for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Spr(ff7->slot[s].chars[curchar].materias[i].id);}}
+    stat_temp=ui->sb_spr->value()+ui->sb_sprbonus->value()+materiabonus;    if(stat_temp>256){stat_temp=255;}
+    ui->lbl_spi_total->setText(QString::number(stat_temp));
+    ui->lbl_spi_mat->setText(QString::number(materiabonus));
+
+    materiabonus=0;
+    for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Dex(ff7->slot[s].chars[curchar].materias[i].id);}}
+    stat_temp=ui->sb_dex->value()+ui->sb_dexbonus->value()+materiabonus;    if(stat_temp>256){stat_temp=255;}
+    ui->lbl_dex_total->setText(QString::number(stat_temp));
+    ui->lbl_dex_mat->setText(QString::number(materiabonus));
+
+    materiabonus=0;
+    for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Lck(ff7->slot[s].chars[curchar].materias[i].id);}}
+    stat_temp=ui->sb_lck->value()+ui->sb_lckbonus->value()+materiabonus;    if(stat_temp>256){stat_temp=255;}
+    ui->lbl_lck_total->setText(QString::number(stat_temp));
+    ui->lbl_lck_mat->setText(QString::number(materiabonus));
+
+
+
+    if(ui->action_auto_char_growth->isChecked())
+    {
+        materiabonus=0;
+        for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Hp(ff7->slot[s].chars[curchar].materias[i].id);}}
+        ui->lbl_hp_mat->setText(QString::number(materiabonus)+ "%");
+        ui->sb_maxhp->setValue(ui->sb_hp->value() + (ui->sb_hp->value()*(materiabonus*0.01)));
+
+        materiabonus=0;
+        for(int i=0;i<16;i++){if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF){materiabonus += FF7Strings.MateriaStats_Mp(ff7->slot[s].chars[curchar].materias[i].id);}}
+        ui->lbl_mp_mat->setText(QString::number(materiabonus) + "%");
+        if(materiabonus>0){ui->sb_maxmp->setValue(ui->sb_mp->value() + (ui->sb_mp->value()*(materiabonus*0.01)));}
+     }
 }
 /*~~~~~~~END Char Update~~~~~~~~*/
 void MainWindow::setchar_growth(int caller)
 { /* This Function only gets called if automatic exp<->lvl is enabled.*/
   /* caller can be 0==just read, 1==exp_changed, 2==lvl_changed */
-
-    load=true;
     if(caller==0 && ff7->slot[s].chars[curchar].level==0){return;}//viewing a blank slot on slotchange lets keep it that way
-
+    load=true;
     //if the lvl changed we need to set the exp correctly before we continue
     if(caller==2){ff7->slot[s].chars[curchar].exp = charlvls[ff7->slot[s].chars[curchar].id][ui->sb_lvl->value()-1];ui->sb_exp->setValue(ff7->slot[s].chars[curchar].exp);}
-
     for (int i=1;i<100;i++)
     {
         if(ff7->slot[s].chars[curchar].exp>=charlvls[ff7->slot[s].chars[curchar].id][i]){if(i==99){ui->sb_lvl->setValue(i);}}
@@ -2787,6 +2840,22 @@ void MainWindow::itemupdate()
     if((ff7->slot[s].z_9[4])&(1<<7)){ui->cb_s7tg_items_8->setChecked(1);}
     else{ui->cb_s7tg_items_8->setChecked(0);}
 
+    if((ff7->slot[s].z_11[3])&(1<<0)){ui->cb_farm_items_1->setChecked(1);}
+    else{ui->cb_farm_items_1->setChecked(0);}
+    if((ff7->slot[s].z_11[3])&(1<<1)){ui->cb_farm_items_2->setChecked(1);}
+    else{ui->cb_farm_items_2->setChecked(0);}
+    if((ff7->slot[s].z_11[3])&(1<<2)){ui->cb_farm_items_3->setChecked(1);}
+    else{ui->cb_farm_items_3->setChecked(0);}
+    if((ff7->slot[s].z_11[3])&(1<<3)){ui->cb_farm_items_4->setChecked(1);}
+    else{ui->cb_farm_items_4->setChecked(0);}
+    if((ff7->slot[s].z_11[3])&(1<<4)){ui->cb_farm_items_5->setChecked(1);}
+    else{ui->cb_farm_items_5->setChecked(0);}
+    if((ff7->slot[s].z_11[3])&(1<<5)){ui->cb_farm_items_6->setChecked(1);}
+    else{ui->cb_farm_items_6->setChecked(0);}
+    if((ff7->slot[s].z_11[3])&(1<<6)){ui->cb_farm_items_7->setChecked(1);}
+    else{ui->cb_farm_items_7->setChecked(0);}
+    if((ff7->slot[s].z_11[3])&(1<<7)){ui->cb_farm_items_8->setChecked(1);}
+    else{ui->cb_farm_items_8->setChecked(0);}
     load=false;
 }
 /*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
@@ -3973,6 +4042,15 @@ void MainWindow::on_cb_s7tg_items_6_toggled(bool checked){if(!load){file_changed
 void MainWindow::on_cb_s7tg_items_7_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_9[4] |= (1<<6);}else{ff7->slot[s].z_9[4] &= ~(1<<6);}}}
 void MainWindow::on_cb_s7tg_items_8_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_9[4] |= (1<<7);}else{ff7->slot[s].z_9[4] &= ~(1<<7);}}}
 
+void MainWindow::on_cb_farm_items_1_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<0);}else{ff7->slot[s].z_11[3] &= ~(1<<0);}}}
+void MainWindow::on_cb_farm_items_2_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<1);}else{ff7->slot[s].z_11[3] &= ~(1<<1);}}}
+void MainWindow::on_cb_farm_items_3_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<2);}else{ff7->slot[s].z_11[3] &= ~(1<<2);}}}
+void MainWindow::on_cb_farm_items_4_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<3);}else{ff7->slot[s].z_11[3] &= ~(1<<3);}}}
+void MainWindow::on_cb_farm_items_5_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<4);}else{ff7->slot[s].z_11[3] &= ~(1<<4);}}}
+void MainWindow::on_cb_farm_items_6_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<5);}else{ff7->slot[s].z_11[3] &= ~(1<<5);}}}
+void MainWindow::on_cb_farm_items_7_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<6);}else{ff7->slot[s].z_11[3] &= ~(1<<6);}}}
+void MainWindow::on_cb_farm_items_8_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<7);}else{ff7->slot[s].z_11[3] &= ~(1<<7);}}}
+
 void MainWindow::on_clearItem_clicked()
 {
     ff7->slot[s].items[ui->tbl_itm->currentRow()].id = 0xFF;
@@ -4304,11 +4382,44 @@ void MainWindow::on_line_name_textChanged(QString text)
     }
 }}
 
-void MainWindow::on_sb_lvl_valueChanged()
+void MainWindow::on_sb_lvl_valueChanged(int value)
 {if(!load){file_changed=true;
-    ff7->slot[s].chars[curchar].level = ui->sb_lvl->value();
-    if(curchar==ff7->slot[s].party[0]){ff7->slot[s].desc.level = ui->sb_lvl->value();}
-    if(settings->value("autochargrowth").toBool()){setchar_growth(2);}
+    int pre_level =ff7->slot[s].chars[curchar].level;
+    ff7->slot[s].chars[curchar].level = value;
+    if(curchar==ff7->slot[s].party[0]){ff7->slot[s].desc.level = value;}
+    if(settings->value("autochargrowth").toBool())
+    {
+        setchar_growth(2);
+        if(pre_level < value)
+        {//level up
+            for(int i=pre_level;i<value;i++)
+            {// for stat_gain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp also use id incase of mods that could move a char.
+                ui->sb_str->setValue(ui->sb_str->value() + stat_gain(ff7->slot[s].chars[curchar].id,0,ff7->slot[s].chars[curchar].strength,i+1));
+                ui->sb_vit->setValue(ui->sb_vit->value() + stat_gain(ff7->slot[s].chars[curchar].id,1,ff7->slot[s].chars[curchar].vitality,i+1));
+                ui->sb_mag->setValue(ui->sb_mag->value() + stat_gain(ff7->slot[s].chars[curchar].id,2,ff7->slot[s].chars[curchar].magic,i+1));
+                ui->sb_spr->setValue(ui->sb_spr->value() + stat_gain(ff7->slot[s].chars[curchar].id,3,ff7->slot[s].chars[curchar].spirit,i+1));
+                ui->sb_dex->setValue(ui->sb_dex->value() + stat_gain(ff7->slot[s].chars[curchar].id,4,ff7->slot[s].chars[curchar].dexterity,i+1));
+                ui->sb_lck->setValue(ui->sb_lck->value() + stat_gain(ff7->slot[s].chars[curchar].id,5,ff7->slot[s].chars[curchar].luck,i+1));
+                ui->sb_hp->setValue(ui->sb_hp->value() + stat_gain(ff7->slot[s].chars[curchar].id,6,ff7->slot[s].chars[curchar].baseHP,i+1));
+                ui->sb_mp->setValue(ui->sb_mp->value() + stat_gain(ff7->slot[s].chars[curchar].id,7,ff7->slot[s].chars[curchar].baseMP,i+1));
+            }
+        }
+        else if(pre_level > value)
+        {//level down
+            for(int i=pre_level;i>value;i--)
+            {// for stat_gain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp
+                ui->sb_str->setValue(ui->sb_str->value() - stat_gain(ff7->slot[s].chars[curchar].id,0,ff7->slot[s].chars[curchar].strength,i));
+                ui->sb_vit->setValue(ui->sb_vit->value() - stat_gain(ff7->slot[s].chars[curchar].id,1,ff7->slot[s].chars[curchar].vitality,i));
+                ui->sb_mag->setValue(ui->sb_mag->value() - stat_gain(ff7->slot[s].chars[curchar].id,2,ff7->slot[s].chars[curchar].magic,i));
+                ui->sb_spr->setValue(ui->sb_spr->value() - stat_gain(ff7->slot[s].chars[curchar].id,3,ff7->slot[s].chars[curchar].spirit,i));
+                ui->sb_dex->setValue(ui->sb_dex->value() - stat_gain(ff7->slot[s].chars[curchar].id,4,ff7->slot[s].chars[curchar].dexterity,i));
+                ui->sb_lck->setValue(ui->sb_lck->value() - stat_gain(ff7->slot[s].chars[curchar].id,5,ff7->slot[s].chars[curchar].luck,i));
+                ui->sb_hp->setValue(ui->sb_hp->value() - stat_gain(ff7->slot[s].chars[curchar].id,6,ff7->slot[s].chars[curchar].baseHP,i));
+                ui->sb_mp->setValue(ui->sb_mp->value() - stat_gain(ff7->slot[s].chars[curchar].id,7,ff7->slot[s].chars[curchar].baseMP,i));
+            }
+        } //little broken when going down..
+        update_stat_totals();
+    }
 }}
 
 void MainWindow::on_sb_exp_valueChanged()
@@ -4321,21 +4432,21 @@ void MainWindow::on_sb_curhp_valueChanged(){if(!load){file_changed=true; ff7->sl
 void MainWindow::on_sb_curmp_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].curMP = ui->sb_curmp->value();}}
 void MainWindow::on_sb_maxhp_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].maxHP =ui->sb_maxhp->value();}}
 void MainWindow::on_sb_maxmp_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].maxMP =ui->sb_maxmp->value();}}
-void MainWindow::on_sb_hp_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].baseHP = ui->sb_hp->value();}}
-void MainWindow::on_sb_mp_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].baseMP = ui->sb_mp->value();}}
+void MainWindow::on_sb_hp_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].baseHP = ui->sb_hp->value(); update_stat_totals();}}
+void MainWindow::on_sb_mp_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].baseMP = ui->sb_mp->value(); update_stat_totals();}}
 void MainWindow::on_sb_kills_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].kills = ui->sb_kills->value();}}
-void MainWindow::on_sb_str_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].strength = ui->sb_str->value();}}
-void MainWindow::on_sb_dex_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].dexterity = ui->sb_dex->value();}}
-void MainWindow::on_sb_mag_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].magic = ui->sb_mag->value();}}
-void MainWindow::on_sb_vit_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].vitality = ui->sb_vit->value();}}
-void MainWindow::on_sb_spr_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].spirit = ui->sb_spr->value();}}
-void MainWindow::on_sb_lck_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].luck = ui->sb_lck->value();}}
-void MainWindow::on_sb_strbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].strength_bonus = ui->sb_strbonus->value();}}
-void MainWindow::on_sb_dexbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].dexterity_bonus = ui->sb_dexbonus->value();}}
-void MainWindow::on_sb_magbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].magic_bonus = ui->sb_magbonus->value();}}
-void MainWindow::on_sb_vitbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].vitality_bonus = ui->sb_vitbonus->value();}}
-void MainWindow::on_sb_sprbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].spirit_bonus = ui->sb_sprbonus->value();}}
-void MainWindow::on_sb_lckbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].luck_bonus = ui->sb_lckbonus->value();}}
+void MainWindow::on_sb_str_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].strength = ui->sb_str->value(); update_stat_totals();}}
+void MainWindow::on_sb_dex_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].dexterity = ui->sb_dex->value();update_stat_totals();}}
+void MainWindow::on_sb_mag_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].magic = ui->sb_mag->value();update_stat_totals();}}
+void MainWindow::on_sb_vit_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].vitality = ui->sb_vit->value();update_stat_totals();}}
+void MainWindow::on_sb_spr_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].spirit = ui->sb_spr->value();update_stat_totals();}}
+void MainWindow::on_sb_lck_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].luck = ui->sb_lck->value();update_stat_totals();}}
+void MainWindow::on_sb_strbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].strength_bonus = ui->sb_strbonus->value();update_stat_totals();}}
+void MainWindow::on_sb_dexbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].dexterity_bonus = ui->sb_dexbonus->value();update_stat_totals();}}
+void MainWindow::on_sb_magbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].magic_bonus = ui->sb_magbonus->value();update_stat_totals();}}
+void MainWindow::on_sb_vitbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].vitality_bonus = ui->sb_vitbonus->value();update_stat_totals();}}
+void MainWindow::on_sb_sprbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].spirit_bonus = ui->sb_sprbonus->value();update_stat_totals();}}
+void MainWindow::on_sb_lckbonus_valueChanged(){if(!load){file_changed=true; ff7->slot[s].chars[curchar].luck_bonus = ui->sb_lckbonus->value();update_stat_totals();}}
 
 void MainWindow::on_cb_front_clicked(bool checked)
 {if(!load){file_changed=true;

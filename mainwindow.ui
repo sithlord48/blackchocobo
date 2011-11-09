@@ -1694,8 +1694,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>429</width>
-             <height>437</height>
+             <width>443</width>
+             <height>436</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -3311,7 +3311,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </size>
                   </property>
                   <property name="title">
-                   <string>Base Stats</string>
+                   <string>Stats: Base+Bonus+Materia=Total</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
@@ -3327,343 +3327,883 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <number>3</number>
                    </property>
                    <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_104">
-                     <property name="spacing">
-                      <number>-1</number>
+                    <widget class="QFrame" name="frame_5">
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
                      </property>
-                     <item>
-                      <widget class="QLabel" name="label_13">
-                       <property name="text">
-                        <string>Str</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QSpinBox" name="sb_str">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="wrapping">
-                        <bool>true</bool>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="buttonSymbols">
-                        <enum>QAbstractSpinBox::UpDownArrows</enum>
-                       </property>
-                       <property name="correctionMode">
-                        <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-                       </property>
-                       <property name="prefix">
-                        <string/>
-                       </property>
-                       <property name="minimum">
-                        <number>0</number>
-                       </property>
-                       <property name="maximum">
-                        <number>255</number>
-                       </property>
-                       <property name="value">
-                        <number>0</number>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_14">
-                       <property name="text">
-                        <string>Vit</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QSpinBox" name="sb_vit">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="wrapping">
-                        <bool>true</bool>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="buttonSymbols">
-                        <enum>QAbstractSpinBox::UpDownArrows</enum>
-                       </property>
-                       <property name="correctionMode">
-                        <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-                       </property>
-                       <property name="prefix">
-                        <string/>
-                       </property>
-                       <property name="minimum">
-                        <number>0</number>
-                       </property>
-                       <property name="maximum">
-                        <number>255</number>
-                       </property>
-                       <property name="value">
-                        <number>0</number>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_122">
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_13">
+                        <property name="minimumSize">
+                         <size>
+                          <width>24</width>
+                          <height>0</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>Str</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="sb_str">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="wrapping">
+                         <bool>true</bool>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::UpDownArrows</enum>
+                        </property>
+                        <property name="correctionMode">
+                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                        </property>
+                        <property name="prefix">
+                         <string/>
+                        </property>
+                        <property name="minimum">
+                         <number>0</number>
+                        </property>
+                        <property name="maximum">
+                         <number>255</number>
+                        </property>
+                        <property name="value">
+                         <number>0</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_22">
+                        <property name="text">
+                         <string notr="true">+</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="sb_strbonus">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>24</height>
+                         </size>
+                        </property>
+                        <property name="wrapping">
+                         <bool>true</bool>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::UpDownArrows</enum>
+                        </property>
+                        <property name="correctionMode">
+                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                        </property>
+                        <property name="maximum">
+                         <number>255</number>
+                        </property>
+                        <property name="value">
+                         <number>0</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_213">
+                        <property name="text">
+                         <string notr="true">+</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="lbl_str_mat">
+                        <property name="text">
+                         <string notr="true">mat</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_45">
+                        <property name="text">
+                         <string notr="true">=</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="lbl_str_total">
+                        <property name="text">
+                         <string notr="true">###</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
                    </item>
                    <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_103">
-                     <property name="spacing">
-                      <number>-1</number>
+                    <widget class="QFrame" name="frame_3">
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
                      </property>
-                     <item>
-                      <widget class="QLabel" name="label_15">
-                       <property name="text">
-                        <string>Mag</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QSpinBox" name="sb_mag">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="wrapping">
-                        <bool>true</bool>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="buttonSymbols">
-                        <enum>QAbstractSpinBox::UpDownArrows</enum>
-                       </property>
-                       <property name="correctionMode">
-                        <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-                       </property>
-                       <property name="prefix">
-                        <string/>
-                       </property>
-                       <property name="minimum">
-                        <number>0</number>
-                       </property>
-                       <property name="maximum">
-                        <number>255</number>
-                       </property>
-                       <property name="value">
-                        <number>0</number>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_16">
-                       <property name="text">
-                        <string>Spi</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QSpinBox" name="sb_spr">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="wrapping">
-                        <bool>true</bool>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="buttonSymbols">
-                        <enum>QAbstractSpinBox::UpDownArrows</enum>
-                       </property>
-                       <property name="correctionMode">
-                        <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-                       </property>
-                       <property name="prefix">
-                        <string/>
-                       </property>
-                       <property name="minimum">
-                        <number>0</number>
-                       </property>
-                       <property name="maximum">
-                        <number>255</number>
-                       </property>
-                       <property name="value">
-                        <number>0</number>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_118">
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_14">
+                        <property name="minimumSize">
+                         <size>
+                          <width>24</width>
+                          <height>0</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>Vit</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="sb_vit">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="wrapping">
+                         <bool>true</bool>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::UpDownArrows</enum>
+                        </property>
+                        <property name="correctionMode">
+                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                        </property>
+                        <property name="prefix">
+                         <string/>
+                        </property>
+                        <property name="minimum">
+                         <number>0</number>
+                        </property>
+                        <property name="maximum">
+                         <number>255</number>
+                        </property>
+                        <property name="value">
+                         <number>0</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label">
+                        <property name="text">
+                         <string notr="true">+</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="sb_vitbonus">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>24</height>
+                         </size>
+                        </property>
+                        <property name="wrapping">
+                         <bool>true</bool>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::UpDownArrows</enum>
+                        </property>
+                        <property name="correctionMode">
+                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                        </property>
+                        <property name="maximum">
+                         <number>255</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_214">
+                        <property name="text">
+                         <string notr="true">+</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="lbl_vit_mat">
+                        <property name="text">
+                         <string notr="true">mat</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_6">
+                        <property name="text">
+                         <string notr="true">=</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="lbl_vit_total">
+                        <property name="text">
+                         <string notr="true">###</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
                    </item>
                    <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_102">
-                     <property name="spacing">
-                      <number>-1</number>
+                    <widget class="QFrame" name="frame_4">
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
                      </property>
-                     <item>
-                      <widget class="QLabel" name="label_17">
-                       <property name="text">
-                        <string>Dex</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QSpinBox" name="sb_dex">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="wrapping">
-                        <bool>true</bool>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="buttonSymbols">
-                        <enum>QAbstractSpinBox::UpDownArrows</enum>
-                       </property>
-                       <property name="correctionMode">
-                        <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-                       </property>
-                       <property name="prefix">
-                        <string/>
-                       </property>
-                       <property name="minimum">
-                        <number>0</number>
-                       </property>
-                       <property name="maximum">
-                        <number>255</number>
-                       </property>
-                       <property name="value">
-                        <number>0</number>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_20">
-                       <property name="text">
-                        <string>Lck</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QSpinBox" name="sb_lck">
-                       <property name="sizePolicy">
-                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                         <horstretch>0</horstretch>
-                         <verstretch>0</verstretch>
-                        </sizepolicy>
-                       </property>
-                       <property name="minimumSize">
-                        <size>
-                         <width>0</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>16777215</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="wrapping">
-                        <bool>true</bool>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="buttonSymbols">
-                        <enum>QAbstractSpinBox::UpDownArrows</enum>
-                       </property>
-                       <property name="correctionMode">
-                        <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-                       </property>
-                       <property name="prefix">
-                        <string/>
-                       </property>
-                       <property name="minimum">
-                        <number>0</number>
-                       </property>
-                       <property name="maximum">
-                        <number>255</number>
-                       </property>
-                       <property name="value">
-                        <number>0</number>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_104">
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_15">
+                        <property name="minimumSize">
+                         <size>
+                          <width>24</width>
+                          <height>0</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>Mag</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="sb_mag">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="wrapping">
+                         <bool>true</bool>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::UpDownArrows</enum>
+                        </property>
+                        <property name="correctionMode">
+                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                        </property>
+                        <property name="prefix">
+                         <string/>
+                        </property>
+                        <property name="minimum">
+                         <number>0</number>
+                        </property>
+                        <property name="maximum">
+                         <number>255</number>
+                        </property>
+                        <property name="value">
+                         <number>0</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_203">
+                        <property name="text">
+                         <string notr="true">+</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="sb_magbonus">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>24</height>
+                         </size>
+                        </property>
+                        <property name="wrapping">
+                         <bool>true</bool>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::UpDownArrows</enum>
+                        </property>
+                        <property name="correctionMode">
+                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                        </property>
+                        <property name="maximum">
+                         <number>255</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_217">
+                        <property name="text">
+                         <string notr="true">+</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="lbl_mag_mat">
+                        <property name="text">
+                         <string notr="true">mat</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_52">
+                        <property name="text">
+                         <string notr="true">=</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="lbl_mag_total">
+                        <property name="text">
+                         <string notr="true">###</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_6">
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_142">
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_16">
+                        <property name="minimumSize">
+                         <size>
+                          <width>24</width>
+                          <height>0</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>Spi</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="sb_spr">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="wrapping">
+                         <bool>true</bool>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::UpDownArrows</enum>
+                        </property>
+                        <property name="correctionMode">
+                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                        </property>
+                        <property name="prefix">
+                         <string/>
+                        </property>
+                        <property name="minimum">
+                         <number>0</number>
+                        </property>
+                        <property name="maximum">
+                         <number>255</number>
+                        </property>
+                        <property name="value">
+                         <number>0</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_208">
+                        <property name="text">
+                         <string notr="true">+</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="sb_sprbonus">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>24</height>
+                         </size>
+                        </property>
+                        <property name="wrapping">
+                         <bool>true</bool>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::UpDownArrows</enum>
+                        </property>
+                        <property name="correctionMode">
+                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                        </property>
+                        <property name="maximum">
+                         <number>255</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_218">
+                        <property name="text">
+                         <string notr="true">+</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="lbl_spi_mat">
+                        <property name="text">
+                         <string notr="true">mat</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_43">
+                        <property name="text">
+                         <string notr="true">=</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="lbl_spi_total">
+                        <property name="text">
+                         <string notr="true">###</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_7">
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_99">
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_17">
+                        <property name="minimumSize">
+                         <size>
+                          <width>24</width>
+                          <height>0</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>Dex</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="sb_dex">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="wrapping">
+                         <bool>true</bool>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::UpDownArrows</enum>
+                        </property>
+                        <property name="correctionMode">
+                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                        </property>
+                        <property name="prefix">
+                         <string/>
+                        </property>
+                        <property name="minimum">
+                         <number>0</number>
+                        </property>
+                        <property name="maximum">
+                         <number>255</number>
+                        </property>
+                        <property name="value">
+                         <number>0</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_209">
+                        <property name="text">
+                         <string notr="true">+</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="sb_dexbonus">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>24</height>
+                         </size>
+                        </property>
+                        <property name="wrapping">
+                         <bool>true</bool>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::UpDownArrows</enum>
+                        </property>
+                        <property name="correctionMode">
+                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                        </property>
+                        <property name="maximum">
+                         <number>255</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_219">
+                        <property name="text">
+                         <string notr="true">+</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="lbl_dex_mat">
+                        <property name="text">
+                         <string notr="true">mat</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_53">
+                        <property name="text">
+                         <string notr="true">=</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="lbl_dex_total">
+                        <property name="text">
+                         <string notr="true">###</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QFrame" name="frame_8">
+                     <property name="frameShape">
+                      <enum>QFrame::StyledPanel</enum>
+                     </property>
+                     <property name="frameShadow">
+                      <enum>QFrame::Raised</enum>
+                     </property>
+                     <layout class="QHBoxLayout" name="horizontalLayout_100">
+                      <property name="margin">
+                       <number>0</number>
+                      </property>
+                      <item>
+                       <widget class="QLabel" name="label_20">
+                        <property name="minimumSize">
+                         <size>
+                          <width>24</width>
+                          <height>0</height>
+                         </size>
+                        </property>
+                        <property name="text">
+                         <string>Lck</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="sb_lck">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="wrapping">
+                         <bool>true</bool>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::UpDownArrows</enum>
+                        </property>
+                        <property name="correctionMode">
+                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                        </property>
+                        <property name="prefix">
+                         <string/>
+                        </property>
+                        <property name="minimum">
+                         <number>0</number>
+                        </property>
+                        <property name="maximum">
+                         <number>255</number>
+                        </property>
+                        <property name="value">
+                         <number>0</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_212">
+                        <property name="text">
+                         <string notr="true">+</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QSpinBox" name="sb_lckbonus">
+                        <property name="sizePolicy">
+                         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                          <horstretch>0</horstretch>
+                          <verstretch>0</verstretch>
+                         </sizepolicy>
+                        </property>
+                        <property name="minimumSize">
+                         <size>
+                          <width>0</width>
+                          <height>18</height>
+                         </size>
+                        </property>
+                        <property name="maximumSize">
+                         <size>
+                          <width>16777215</width>
+                          <height>24</height>
+                         </size>
+                        </property>
+                        <property name="wrapping">
+                         <bool>true</bool>
+                        </property>
+                        <property name="alignment">
+                         <set>Qt::AlignCenter</set>
+                        </property>
+                        <property name="buttonSymbols">
+                         <enum>QAbstractSpinBox::UpDownArrows</enum>
+                        </property>
+                        <property name="correctionMode">
+                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
+                        </property>
+                        <property name="maximum">
+                         <number>255</number>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_222">
+                        <property name="text">
+                         <string notr="true">+</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="lbl_lck_mat">
+                        <property name="text">
+                         <string notr="true">mat</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="label_44">
+                        <property name="text">
+                         <string notr="true">=</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QLabel" name="lbl_lck_total">
+                        <property name="text">
+                         <string notr="true">###</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </widget>
                    </item>
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_101">
@@ -3724,6 +4264,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       </widget>
                      </item>
                      <item>
+                      <widget class="QLabel" name="lbl_hp_mat">
+                       <property name="text">
+                        <string notr="true">mat</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item>
                       <widget class="QLabel" name="label_19">
                        <property name="text">
                         <string>MP</string>
@@ -3776,337 +4323,14 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                       </widget>
                      </item>
+                     <item>
+                      <widget class="QLabel" name="lbl_mp_mat">
+                       <property name="text">
+                        <string notr="true">mat</string>
+                       </property>
+                      </widget>
+                     </item>
                     </layout>
-                   </item>
-                   <item>
-                    <widget class="QGroupBox" name="group_b_stats">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>0</height>
-                      </size>
-                     </property>
-                     <property name="maximumSize">
-                      <size>
-                       <width>16777215</width>
-                       <height>16777215</height>
-                      </size>
-                     </property>
-                     <property name="title">
-                      <string>Stat Bonuses</string>
-                     </property>
-                     <property name="alignment">
-                      <set>Qt::AlignCenter</set>
-                     </property>
-                     <property name="flat">
-                      <bool>true</bool>
-                     </property>
-                     <layout class="QVBoxLayout" name="verticalLayout_22">
-                      <property name="spacing">
-                       <number>3</number>
-                      </property>
-                      <property name="leftMargin">
-                       <number>3</number>
-                      </property>
-                      <property name="topMargin">
-                       <number>0</number>
-                      </property>
-                      <property name="rightMargin">
-                       <number>3</number>
-                      </property>
-                      <property name="bottomMargin">
-                       <number>0</number>
-                      </property>
-                      <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_100">
-                        <property name="spacing">
-                         <number>-1</number>
-                        </property>
-                        <item>
-                         <widget class="QLabel" name="label_45">
-                          <property name="text">
-                           <string>Str</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QSpinBox" name="sb_strbonus">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>18</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>16777215</width>
-                            <height>24</height>
-                           </size>
-                          </property>
-                          <property name="wrapping">
-                           <bool>true</bool>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                          <property name="buttonSymbols">
-                           <enum>QAbstractSpinBox::UpDownArrows</enum>
-                          </property>
-                          <property name="correctionMode">
-                           <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-                          </property>
-                          <property name="maximum">
-                           <number>255</number>
-                          </property>
-                          <property name="value">
-                           <number>0</number>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLabel" name="label_22">
-                          <property name="text">
-                           <string>Vit</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QSpinBox" name="sb_vitbonus">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>18</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>16777215</width>
-                            <height>24</height>
-                           </size>
-                          </property>
-                          <property name="wrapping">
-                           <bool>true</bool>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                          <property name="buttonSymbols">
-                           <enum>QAbstractSpinBox::UpDownArrows</enum>
-                          </property>
-                          <property name="correctionMode">
-                           <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-                          </property>
-                          <property name="maximum">
-                           <number>255</number>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </item>
-                      <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_99">
-                        <property name="spacing">
-                         <number>-1</number>
-                        </property>
-                        <item>
-                         <widget class="QLabel" name="label_52">
-                          <property name="text">
-                           <string>Mag</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QSpinBox" name="sb_magbonus">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>18</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>16777215</width>
-                            <height>24</height>
-                           </size>
-                          </property>
-                          <property name="wrapping">
-                           <bool>true</bool>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                          <property name="buttonSymbols">
-                           <enum>QAbstractSpinBox::UpDownArrows</enum>
-                          </property>
-                          <property name="correctionMode">
-                           <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-                          </property>
-                          <property name="maximum">
-                           <number>255</number>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLabel" name="label_43">
-                          <property name="text">
-                           <string>Spi</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QSpinBox" name="sb_sprbonus">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>18</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>16777215</width>
-                            <height>24</height>
-                           </size>
-                          </property>
-                          <property name="wrapping">
-                           <bool>true</bool>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                          <property name="buttonSymbols">
-                           <enum>QAbstractSpinBox::UpDownArrows</enum>
-                          </property>
-                          <property name="correctionMode">
-                           <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-                          </property>
-                          <property name="maximum">
-                           <number>255</number>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </item>
-                      <item>
-                       <layout class="QHBoxLayout" name="horizontalLayout_98">
-                        <property name="spacing">
-                         <number>-1</number>
-                        </property>
-                        <item>
-                         <widget class="QLabel" name="label_53">
-                          <property name="text">
-                           <string>Dex</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QSpinBox" name="sb_dexbonus">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>18</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>16777215</width>
-                            <height>24</height>
-                           </size>
-                          </property>
-                          <property name="wrapping">
-                           <bool>true</bool>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                          <property name="buttonSymbols">
-                           <enum>QAbstractSpinBox::UpDownArrows</enum>
-                          </property>
-                          <property name="correctionMode">
-                           <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-                          </property>
-                          <property name="maximum">
-                           <number>255</number>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QLabel" name="label_44">
-                          <property name="text">
-                           <string>Lck</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item>
-                         <widget class="QSpinBox" name="sb_lckbonus">
-                          <property name="sizePolicy">
-                           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                           </sizepolicy>
-                          </property>
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>18</height>
-                           </size>
-                          </property>
-                          <property name="maximumSize">
-                           <size>
-                            <width>16777215</width>
-                            <height>24</height>
-                           </size>
-                          </property>
-                          <property name="wrapping">
-                           <bool>true</bool>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                          </property>
-                          <property name="buttonSymbols">
-                           <enum>QAbstractSpinBox::UpDownArrows</enum>
-                          </property>
-                          <property name="correctionMode">
-                           <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
-                          </property>
-                          <property name="maximum">
-                           <number>255</number>
-                          </property>
-                         </widget>
-                        </item>
-                       </layout>
-                      </item>
-                     </layout>
-                    </widget>
                    </item>
                   </layout>
                  </widget>
@@ -4464,8 +4688,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>443</width>
-             <height>436</height>
+             <width>401</width>
+             <height>420</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8192,8 +8416,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>239</width>
-                  <height>330</height>
+                  <width>212</width>
+                  <height>435</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -8300,6 +8524,62 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <widget class="QCheckBox" name="cb_s7tg_items_3">
                    <property name="text">
                     <string>MDS7ST2:Potion</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_farm_items_1">
+                   <property name="text">
+                    <string>Farm:Choco Mog_1</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_farm_items_2">
+                   <property name="text">
+                    <string>Farm:Choco Mog_2</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_farm_items_3">
+                   <property name="text">
+                    <string>Farm:Choco Mog_3</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_farm_items_4">
+                   <property name="text">
+                    <string>Farm:Choco Mog_4</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_farm_items_5">
+                   <property name="text">
+                    <string>Farm:Choco Mog_5</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_farm_items_6">
+                   <property name="text">
+                    <string>Farm:Choco Mog_6</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_farm_items_7">
+                   <property name="text">
+                    <string>Farm:Choco Mog_7</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QCheckBox" name="cb_farm_items_8">
+                   <property name="text">
+                    <string>Farm:Choco Mog_8</string>
                    </property>
                   </widget>
                  </item>
@@ -10419,8 +10699,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1452</width>
-             <height>334</height>
+             <width>1446</width>
+             <height>276</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16425,8 +16705,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>764</width>
-             <height>440</height>
+             <width>720</width>
+             <height>275</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -18828,7 +19108,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>390</width>
+                  <width>328</width>
                   <height>1492</height>
                  </rect>
                 </property>
@@ -21528,7 +21808,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>737</width>
+             <width>733</width>
              <height>664</height>
             </rect>
            </property>
@@ -29125,7 +29405,7 @@ Var And Scrolling Synced To Left Table</string>
      <normaloff>:/icon/checkbox_unchecked</normaloff>:/icon/checkbox_unchecked</iconset>
    </property>
    <property name="text">
-    <string>Automatic Exp &lt;-&gt; Lvl</string>
+    <string>Calculate Stats</string>
    </property>
   </action>
   <action name="actionNew_Window">
@@ -29212,16 +29492,8 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>sb_used1</tabstop>
   <tabstop>sb_used2</tabstop>
   <tabstop>sb_used3</tabstop>
-  <tabstop>sb_str</tabstop>
-  <tabstop>sb_vit</tabstop>
-  <tabstop>sb_mag</tabstop>
-  <tabstop>sb_dex</tabstop>
-  <tabstop>sb_lck</tabstop>
   <tabstop>sb_hp</tabstop>
   <tabstop>sb_mp</tabstop>
-  <tabstop>sb_strbonus</tabstop>
-  <tabstop>sb_vitbonus</tabstop>
-  <tabstop>sb_lckbonus</tabstop>
   <tabstop>limit_1a</tabstop>
   <tabstop>limit_1b</tabstop>
   <tabstop>limit_2a</tabstop>

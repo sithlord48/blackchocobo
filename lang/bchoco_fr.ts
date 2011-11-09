@@ -1442,10 +1442,6 @@
         <translation>É&amp;quipe</translation>
     </message>
     <message>
-        <source>Stat Bonuses</source>
-        <translation>Bonus</translation>
-    </message>
-    <message>
         <source>CheckBox</source>
         <translation>CheckBox</translation>
     </message>
@@ -2128,10 +2124,6 @@
     <message>
         <source>-Empty-</source>
         <translation>-Vide-</translation>
-    </message>
-    <message>
-        <source>Base Stats</source>
-        <translation>Stats de base</translation>
     </message>
     <message>
         <source>HP</source>
@@ -3524,10 +3516,6 @@ is not a FF7 SaveGame.</source>
         <translation>Bête galienne</translation>
     </message>
     <message>
-        <source>Automatic Exp &lt;-&gt; Lvl</source>
-        <translation>Conversion Niveau&lt;-&gt;EXP</translation>
-    </message>
-    <message>
         <source>Add Max Of All Items</source>
         <translation>Ajouter tous les éléments</translation>
     </message>
@@ -4183,6 +4171,46 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Please Select A File Type To Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stats: Base+Bonus+Materia=Total</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Calculate Stats</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6276,10 +6304,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Improved: Slotselect handleing of non-ff7 and empty slots</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6289,6 +6313,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Improved: Detection of FF7 Types.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Improved: Slotselect handling of non-ff7 and empty slots</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Predict stat growth (if enabled)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
