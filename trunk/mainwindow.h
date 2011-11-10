@@ -131,11 +131,11 @@ private slots://try to keep these in the same order as the .cpp file
     void setchar_growth(int caller);
     void setarmorslots(void);
     void setweaponslots(void);
-    void setmenu(void);
+    void setmenu(bool newgame);
     void materiaupdate_slot(void);
     void materiaupdate(void);
     void itemupdate(void);
-    void guirefresh(void);
+    void guirefresh(bool newgame);
     void chocobo_refresh(void);
     void progress_update(void);
     void clearslot(int rmslot);

@@ -1671,7 +1671,6 @@
     </message>
     <message>
         <source>Qty</source>
-        <translatorcomment>どこに使われているか分からない</translatorcomment>
         <translation>個数</translation>
     </message>
     <message>
@@ -3760,27 +3759,33 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Str</source>
-        <translation>ちから</translation>
+        <translatorcomment>●</translatorcomment>
+        <translation>　力</translation>
     </message>
     <message>
         <source>Vit</source>
-        <translation>たいりょく</translation>
+        <translatorcomment>●</translatorcomment>
+        <translation>体力</translation>
     </message>
     <message>
         <source>Mag</source>
-        <translation>まりょく</translation>
+        <translatorcomment>●</translatorcomment>
+        <translation>魔力</translation>
     </message>
     <message>
         <source>Dex</source>
-        <translation>すばやさ</translation>
+        <translatorcomment>●</translatorcomment>
+        <translation>速さ</translation>
     </message>
     <message>
         <source>Lck</source>
-        <translation>うん</translation>
+        <translatorcomment>●</translatorcomment>
+        <translation>　運</translation>
     </message>
     <message>
         <source>HP</source>
-        <translation>HP</translation>
+        <translatorcomment>●</translatorcomment>
+        <translation>　HP</translation>
     </message>
     <message>
         <source>Event Progress</source>
@@ -3820,7 +3825,6 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Talked To Trainman 3 times</source>
-        <translatorcomment>0x02: when trainman tells you about war (3 talk).</translatorcomment>
         <translation>駅員の話を三回聞く</translation>
     </message>
     <message>
@@ -4085,7 +4089,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Using Unknown Var Table To View Save</source>
-        <translation>未知の変数のテーブルを使ってセーブを表示</translation>
+        <translation>未知の変数のテーブルを使ってセーブを表示します</translation>
     </message>
     <message>
         <source>Sector 7 - Slums Progress</source>
@@ -4109,7 +4113,8 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Spi</source>
-        <translation>せいしん</translation>
+        <translatorcomment>●</translatorcomment>
+        <translation>精神</translation>
     </message>
     <message>
         <source>Unsaved Changes</source>
@@ -4118,7 +4123,7 @@ Table Entries are Editable</source>
     <message>
         <source>Save Changes to the File:
 %1</source>
-        <translation>変更をファイルに保存する:
+        <translation>変更をファイルに保存しますか:
 %1</translation>
     </message>
     <message>
@@ -4179,7 +4184,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Stats: Base+Bonus+Materia=Total</source>
-        <translation type="unfinished"></translation>
+        <translation>能力: 基本 + ボーナス + マテリア = トータル</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_1</source>
@@ -4215,6 +4220,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Calculate Stats</source>
+        <translation>能力値を算出</translation>
+    </message>
+    <message>
+        <source>Can Not Export This Format</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5878,7 +5887,7 @@ Empty</source>
         <source>
  Game Uses %1 Save Block</source>
         <translation>
- ゲーム セーブに %1 ブロックを使用</translation>
+ セーブに %1 ブロックを使用</translation>
     </message>
     <message>
         <source>s; Next Data Chunk @ Slot:%1</source>
@@ -6329,7 +6338,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Predict stat growth (if enabled)</source>
-        <translation type="unfinished"></translation>
+        <translation>追加: 能力値の変化を推計 (有効化した場合)</translation>
     </message>
 </context>
 <context>
@@ -6432,7 +6441,7 @@ p, li { white-space: pre-wrap; }
         <source>
  Game Uses %1 Save Block</source>
         <translation>
- ゲーム セーブに %1 ブロックを使用</translation>
+ セーブに %1 ブロックを使用</translation>
     </message>
     <message>
         <source>s; Next Data Chunk @ Slot:%1</source>

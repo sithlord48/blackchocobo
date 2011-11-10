@@ -4194,6 +4194,10 @@ Table Entries are Editable</source>
         <source>Calculate Stats</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Can Not Export This Format</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
