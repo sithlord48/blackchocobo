@@ -190,6 +190,7 @@ MainWindow::MainWindow(QWidget *parent,FF7 *ff7data,QSettings *config_data)
     // Connect the unknown and unknown compare scrolling.
     connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );
     connect( ui->tbl_compare_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_unknown->verticalScrollBar(), SLOT(setValue(int)) );
+    file_changed=false;
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
 MainWindow::~MainWindow(){delete ui;}
@@ -215,7 +216,22 @@ void MainWindow::closeEvent(QCloseEvent *event)
         switch(result)
         {
             case QMessageBox::Yes:
-                    on_action_Save_activated();
+                    if(ui->action_Save->isEnabled()){on_action_Save_activated();}
+                    else
+                    {//user trying to save a file with no header.
+                        QStringList types;
+                        types << tr("PC")<<tr("Raw Psx Save")<<tr("Generic Emulator Memorycard")<<tr("PSP")<<tr("PS3")<<tr("Dex Drive Memorycard")<<tr("VGS Memorycard");
+                        QString result = QInputDialog::getItem(this,tr("Save Error"),tr("Please Select A File Type To Save"),types,-1,0,0,0);
+                        //check the string. and assign a type
+                        if(result ==types.at(0)){on_actionExport_PC_Save_activated();}
+                            else if(result ==types.at(1)){on_actionExport_PSX_activated();}
+                            else if(result ==types.at(2)){on_actionExport_MC_triggered();}
+                            else if(result ==types.at(3)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
+                            else if(result ==types.at(4)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
+                            else if(result ==types.at(5)){on_actionExport_DEX_triggered();}
+                            else if(result ==types.at(6)){on_actionExport_VGS_triggered();}
+                            else{return;}
+                    }
                     break;
             case QMessageBox::No:break;
         }
@@ -387,7 +403,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
         if(ff7->slot[12].checksum != 0x0000 && ff7->slot[12].checksum != 0x4D1D){ff7->SG_Region_String[12]= "BASCUS-94163FF7-S13";} else {ff7->SG_Region_String[12].clear();}
         if(ff7->slot[13].checksum != 0x0000 && ff7->slot[13].checksum != 0x4D1D){ff7->SG_Region_String[13]= "BASCUS-94163FF7-S14";} else {ff7->SG_Region_String[13].clear();}
         if(ff7->slot[14].checksum != 0x0000 && ff7->slot[14].checksum != 0x4D1D){ff7->SG_Region_String[14]= "BASCUS-94163FF7-S15";} else {ff7->SG_Region_String[14].clear();}
-        if(reload){guirefresh();}   else{on_actionShow_Selection_Dialog_activated();}
+        if(reload){guirefresh(0);}   else{on_actionShow_Selection_Dialog_activated();}
     }
 
     else if (ff7->SG_TYPE == "PSX")
@@ -402,7 +418,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
         }
         else {ff7->SG_Region_String[s].clear();}
         for(int i=1;i<14;i++){clearslot(i);}
-        guirefresh();
+        guirefresh(0);
     }
 
     else if (ff7->SG_TYPE =="PSV")
@@ -410,7 +426,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
         s=0;
         ff7->SG_Region_String[s] = QString(ff7file.mid(0x64,19));
         for(int i=1;i<14;i++){clearslot(i);}
-        guirefresh();
+        guirefresh(0);
     }
 
     else if (ff7->SG_TYPE == "MC" || ff7->SG_TYPE =="PSP" || ff7->SG_TYPE == "VGS" ||ff7->SG_TYPE=="DEX")
@@ -427,7 +443,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
             index = (128*i) +138;
             ff7->SG_Region_String[i] = QString(mc_header.mid(index,19));
         }
-        if(reload){guirefresh();}   else{on_actionShow_Selection_Dialog_activated();}
+        if(reload){guirefresh(0);}   else{on_actionShow_Selection_Dialog_activated();}
     }
     else{/*UNKNOWN FILETYPE*/}
     file_changed=false;
@@ -469,7 +485,7 @@ void MainWindow::on_actionFrom_PSX_Slot_activated()
         }
         else{QMessageBox::warning(this,tr("Black Chocobo"),tr("The File %1\n is NOT a PSX Save").arg(fileName));return;}
     }//Parse slot data....
-    guirefresh();
+    guirefresh(0);
     file_changed=true;
 
 }
@@ -504,7 +520,7 @@ void MainWindow::on_actionFrom_PSV_Slot_activated()
         }//Parse slot data....
         else{QMessageBox::warning(this,tr("Black Chocobo"),tr("The File %1\n is NOT a PSV Save").arg(fileName)); return;}
     file_changed=true;
-    guirefresh();
+    guirefresh(0);
     }
 }
 /*~~~~~~~~~~~~~~~~~IMPORT Char~~~~~~~~~~~~~~~~~*/
@@ -725,6 +741,7 @@ void MainWindow::on_actionNew_Game_triggered()
     int index = 0x200;
     temp = ff7file.mid(index,0x10f4);
     memcpy(&ff7->slot[s],temp,0x10f4);
+    //check for non english and set names accordingly.
     if(ff7->SG_Region_String[s].contains("00700") || ff7->SG_Region_String[s].contains("01057"))
     {
         for(int c=0;c<9;c++){for(int i=0;i<12;i++){ff7->slot[s].chars[c].name[i]=0xFF;}}
@@ -749,7 +766,7 @@ void MainWindow::on_actionNew_Game_triggered()
     }
     else if(ff7->SG_Region_String[s].isEmpty()){ff7->SG_Region_String[s] = "BASCUS-94163FF7-S01";}
     if(!load){file_changed=true;}
-    guirefresh();
+    guirefresh(1);
 }
 /*~~~~~~~~~~End New_Game~~~~~~~~~~~*/
 /*~~~~~~~~~~New Game + ~~~~~~~~~~~~*/
@@ -843,7 +860,7 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
     /*~~ buffer now ready to be copied~*/
     memcpy(&ff7->slot[s],&bufferslot,0x10f4); // copy buffer to the current slot.
     if(!load){file_changed=true;}
-    guirefresh();
+    guirefresh(0);
 }
 /*~~~~~~~~~~End New_Game +~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~EXPORT PC~~~~~~~~~~~~~~~~~~~*/
@@ -1090,27 +1107,27 @@ void MainWindow::on_actionExport_DEX_triggered()
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~Simple Menu Stuff~~~~~~~~~~~~~~~~*/
-void MainWindow::on_actionSlot_01_activated(){s=0; guirefresh();}
-void MainWindow::on_actionSlot_02_activated(){s=1; guirefresh();}
-void MainWindow::on_actionSlot_03_activated(){s=2; guirefresh();}
-void MainWindow::on_actionSlot_04_activated(){s=3; guirefresh();}
-void MainWindow::on_actionSlot_05_activated(){s=4; guirefresh();}
-void MainWindow::on_actionSlot_06_activated(){s=5; guirefresh();}
-void MainWindow::on_actionSlot_07_activated(){s=6; guirefresh();}
-void MainWindow::on_actionSlot_08_activated(){s=7; guirefresh();}
-void MainWindow::on_actionSlot_09_activated(){s=8; guirefresh();}
-void MainWindow::on_actionSlot_10_activated(){s=9; guirefresh();}
-void MainWindow::on_actionSlot_11_activated(){s=10; guirefresh();}
-void MainWindow::on_actionSlot_12_activated(){s=11; guirefresh();}
-void MainWindow::on_actionSlot_13_activated(){s=12; guirefresh();}
-void MainWindow::on_actionSlot_14_activated(){s=13; guirefresh();}
-void MainWindow::on_actionSlot_15_activated(){s=14; guirefresh();}
+void MainWindow::on_actionSlot_01_activated(){s=0; guirefresh(0);}
+void MainWindow::on_actionSlot_02_activated(){s=1; guirefresh(0);}
+void MainWindow::on_actionSlot_03_activated(){s=2; guirefresh(0);}
+void MainWindow::on_actionSlot_04_activated(){s=3; guirefresh(0);}
+void MainWindow::on_actionSlot_05_activated(){s=4; guirefresh(0);}
+void MainWindow::on_actionSlot_06_activated(){s=5; guirefresh(0);}
+void MainWindow::on_actionSlot_07_activated(){s=6; guirefresh(0);}
+void MainWindow::on_actionSlot_08_activated(){s=7; guirefresh(0);}
+void MainWindow::on_actionSlot_09_activated(){s=8; guirefresh(0);}
+void MainWindow::on_actionSlot_10_activated(){s=9; guirefresh(0);}
+void MainWindow::on_actionSlot_11_activated(){s=10; guirefresh(0);}
+void MainWindow::on_actionSlot_12_activated(){s=11; guirefresh(0);}
+void MainWindow::on_actionSlot_13_activated(){s=12; guirefresh(0);}
+void MainWindow::on_actionSlot_14_activated(){s=13; guirefresh(0);}
+void MainWindow::on_actionSlot_15_activated(){s=14; guirefresh(0);}
 
-void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect(0,ff7);slotselect.setStyleSheet(this->styleSheet()); s=slotselect.exec(); guirefresh();}
+void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect(0,ff7);slotselect.setStyleSheet(this->styleSheet()); s=slotselect.exec(); guirefresh(0);}
 
-void MainWindow::on_actionClear_Slot_activated(){clearslot(s);  guirefresh();}
-void MainWindow::on_actionPrevious_Slot_activated(){if (s > 0) {s--; guirefresh();}}
-void MainWindow::on_actionNext_Slot_activated(){if (s<14){s++; guirefresh();}}
+void MainWindow::on_actionClear_Slot_activated(){clearslot(s);  guirefresh(0);}
+void MainWindow::on_actionPrevious_Slot_activated(){if (s > 0) {s--; guirefresh(0);}}
+void MainWindow::on_actionNext_Slot_activated(){if (s<14){s++; guirefresh(0);}}
 void MainWindow::on_actionAbout_activated(){about adialog;  adialog.setStyleSheet(this->styleSheet()); adialog.exec();}
 void MainWindow::on_actionAbout_Qt_activated(){qApp->aboutQt();}
 void MainWindow::on_actionCopy_Slot_activated(){memcpy(&bufferslot,&ff7->slot[s],0x10f4); buffer_region = ff7->SG_Region_String[s];}
@@ -1121,7 +1138,7 @@ void MainWindow::on_actionPaste_Slot_activated()
     ff7->SG_Region_String[s].chop(2);
     ff7->SG_Region_String[s].append(QString::number(s+1));
     file_changed=true;
-    guirefresh();
+    guirefresh(0);
 }
 void MainWindow::on_actionShow_Options_triggered()
 {
@@ -2234,7 +2251,7 @@ void MainWindow::setweaponslots(void)
 }
 /*~~~~~End Armor/Weapon Update~~~~*/
 /*~~~~~~~~Set Menu Items~~~~~~~~~~*/
-void MainWindow::setmenu(void)
+void MainWindow::setmenu(bool newgame)
 {
     load=true;
     /*~~Disable All Items that are dependent on File Type~~*/
@@ -2290,15 +2307,20 @@ void MainWindow::setmenu(void)
     /*~~~~End Current Slot~~~~~*/
     /*~~~~~~~Set Actions By Type~~~~~~~*/
     //For first file load.Don't Bother to disable these again.
+    //new game should always be exported. no header...
+    if(!newgame)
+    {
+        ui->actionSave_File_As->setEnabled(1);
+        ui->action_Save->setEnabled(1);
+        ui->actionReload->setEnabled(1);
+    }
     ui->actionExport_PC_Save->setEnabled(1);    ui->actionExport_PSX->setEnabled(1);
     ui->actionExport_MC->setEnabled(1);         ui->actionExport_VGS->setEnabled(1);
     ui->actionExport_DEX->setEnabled(1);        ui->actionCopy_Slot->setEnabled(1);
-    ui->actionExport_char->setEnabled(1);       ui->action_Save->setEnabled(1);
-    ui->actionSave_File_As->setEnabled(1);      ui->actionFrom_PSV_Slot->setEnabled(1);
-    ui->actionNew_Game_Plus->setEnabled(1);     ui->actionImport_char->setEnabled(1);
-    ui->actionSave_File_As->setEnabled(1);      ui->actionFrom_PSX_Slot->setEnabled(1);
-    ui->actionPaste_Slot->setEnabled(1);        ui->actionReload->setEnabled(1);
-    //
+    ui->actionExport_char->setEnabled(1);       ui->actionFrom_PSX_Slot->setEnabled(1);
+    ui->actionFrom_PSV_Slot->setEnabled(1);     ui->actionNew_Game_Plus->setEnabled(1);
+    ui->actionImport_char->setEnabled(1);       ui->actionPaste_Slot->setEnabled(1);
+
     if (ff7->SG_TYPE!= "PSX" && ff7->SG_TYPE !="PSV") //more then one slot
     {
         ui->actionSlot_01->setEnabled(1);   ui->actionNext_Slot->setEnabled(1);
@@ -2434,6 +2456,7 @@ if(current_id == 0xFF) //if the slot is empty take some precautions
     ui->lcd_ap_master_slot->display(0);
     ui->sb_addap_slot->setValue(0);
     ui->sb_addap_slot->setMaximum(0);
+    ff7->slot[s].chars[curchar].materias[mslotsel].id =0xFF;
     ff7->slot[s].chars[curchar].materias[mslotsel].ap[0]=0xFF;//Just incase so the ap is set correct
     ff7->slot[s].chars[curchar].materias[mslotsel].ap[1]=0xFF;//This will avoid the possiblity of
     ff7->slot[s].chars[curchar].materias[mslotsel].ap[2]=0xFF;//the "gravity" bug dlpb found.
@@ -2926,7 +2949,7 @@ void MainWindow::itemupdate()
     load=false;
 }
 /*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::guirefresh(void)
+void MainWindow::guirefresh(bool newgame)
 {
     load=true;
     int reserve_start=128+(128*s);
@@ -2956,12 +2979,12 @@ void MainWindow::guirefresh(void)
 
         case 1://Previous Clicked
             s--;
-            guirefresh();
+            guirefresh(0);
             break;
 
         case 2://Next Clicked
             s++;
-            guirefresh();
+            guirefresh(0);
             break;
 
         case 3://exported as psx
@@ -2992,12 +3015,12 @@ void MainWindow::guirefresh(void)
 
             case 1://Previous Clicked
                 s--;
-                guirefresh();
+                guirefresh(0);
                 break;
 
             case 2://Next Clicked
                 s++;
-                guirefresh();
+                guirefresh(0);
                 break;
 
             case 3://exported as psx
@@ -3294,7 +3317,7 @@ void MainWindow::guirefresh(void)
         load=false;
         // all functions should set load on their own.
         /*~~~~~Call External Functions~~~~~~~*/
-        setmenu();
+        setmenu(newgame);
         itemupdate();
         chocobo_refresh();
         charupdate();
@@ -4618,6 +4641,7 @@ void MainWindow::on_sb_addap_slot_valueChanged(int value)
 void MainWindow::on_clearMateria_slot_clicked()
 {
     ui->combo_mat_type_slot->setCurrentIndex(0);
+    ui->combo_add_mat_slot->setCurrentIndex(0);
     ff7->slot[s].chars[curchar].materias[mslotsel].id = 0xFF;
     ui->sb_addap_slot->setValue(0xFFFFFF);
     if(!load){file_changed=true; }
@@ -4643,11 +4667,14 @@ void MainWindow::on_combo_add_mat_slot_currentIndexChanged(int index)
     if(ui->combo_add_mat_slot->currentText() ==tr("DON'T USE"))// this is a placeholder materia
     {
         QMessageBox::information(this,tr("Empty Materia"),tr("Place holder Materia Detected\n Remember 16777215 AP = master"));
-        guirefresh();// clean up the gui.
+        guirefresh(0);// clean up the gui.
         return; //we are done here.
     }
-    if(!load){file_changed=true;}
-    ff7->slot[s].chars[curchar].materias[mslotsel].id = Materias[index].id;
+    if(!load)
+    {
+        file_changed=true;
+        ff7->slot[s].chars[curchar].materias[mslotsel].id = Materias[index].id;
+    }
     ui->combo_mat_type_slot->setCurrentIndex(Materias[index].type);
     for(int i=0;i<ui->combo_add_mat_slot_2->count();i++)
     {
@@ -5339,7 +5366,7 @@ void MainWindow::on_btn_remove_all_stolen_clicked()
         ff7->slot[s].stolen[i].ap[2]=0xFF;
     }
     if(!load){file_changed=true; }
-    guirefresh();
+    guirefresh(0);
 }
 
 void MainWindow::on_sb_b_love_aeris_valueChanged(int value){if(!load){file_changed=true; ff7->slot[s].b_love.aeris = value;}}
@@ -5503,7 +5530,7 @@ void MainWindow::on_cb_Region_Slot_currentIndexChanged()
     new_regionString.append(ui->cb_Region_Slot->currentText().toAscii());
     ff7->SG_Region_String[s].clear();
     ff7->SG_Region_String[s].append(&new_regionString);
-    if(ff7->SG_TYPE== "MC"|| ff7->SG_TYPE=="PSP"|| ff7->SG_TYPE=="VGS" || ff7->SG_TYPE =="DEX"){fix_vmc_header(ff7); guirefresh();}
+    if(ff7->SG_TYPE== "MC"|| ff7->SG_TYPE=="PSP"|| ff7->SG_TYPE=="VGS" || ff7->SG_TYPE =="DEX"){fix_vmc_header(ff7); guirefresh(0);}
 }}}
 
 void MainWindow::on_cb_field_help_toggled(bool checked)
@@ -5835,7 +5862,7 @@ void MainWindow::on_btn_item_add_each_item_clicked()
         else{ff7->slot[s].items[i].id=0xFF;ff7->slot[s].items[i].qty=0xFF;}//exclude the test items
     if(i>296){ff7->slot[s].items[i].id=0xFF;ff7->slot[s].items[i].qty=0xFF;}//replace the shifted ones w/ empty slots
     }
-    guirefresh();
+    guirefresh(0);
 }
 
 
