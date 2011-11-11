@@ -4198,6 +4198,10 @@ Table Entries are Editable</source>
         <source>PSV FF7 SaveGame (*.psv)</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Filetype Unknown Aborting Slotselect Display</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>

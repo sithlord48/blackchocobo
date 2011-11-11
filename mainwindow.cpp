@@ -1120,8 +1120,16 @@ void MainWindow::on_actionSlot_13_activated(){s=12; guirefresh(0);}
 void MainWindow::on_actionSlot_14_activated(){s=13; guirefresh(0);}
 void MainWindow::on_actionSlot_15_activated(){s=14; guirefresh(0);}
 
-void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect(0,ff7);slotselect.setStyleSheet(this->styleSheet()); s=slotselect.exec(); guirefresh(0);}
-
+void MainWindow::on_actionShow_Selection_Dialog_activated()
+{
+    if(ff7->SG_TYPE == ""){QMessageBox::information(this,tr("Black Chocobo"),tr("Filetype Unknown Aborting Slotselect Display"));return;}
+    else{
+        SlotSelect slotselect(0,ff7);
+        slotselect.setStyleSheet(this->styleSheet());
+        s=slotselect.exec();
+        guirefresh(0);
+    }
+}
 void MainWindow::on_actionClear_Slot_activated(){clearslot(s);  guirefresh(0);}
 void MainWindow::on_actionPrevious_Slot_activated(){if (s > 0) {s--; guirefresh(0);}}
 void MainWindow::on_actionNext_Slot_activated(){if (s<14){s++; guirefresh(0);}}
