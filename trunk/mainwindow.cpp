@@ -30,6 +30,7 @@ MainWindow::MainWindow(QWidget *parent,FF7 *ff7data,QSettings *config_data)
     :QMainWindow(parent),ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    _init=true;
     ff7 =ff7data;
     settings = config_data;
     skip_slot_mask = settings->value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
@@ -381,6 +382,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
         memcpy(ff7->hf[i].sl_footer,ff7file.mid((ff7->SG_SLOT_SIZE*i)+ (ff7->SG_HEADER+ff7->SG_SLOT_HEADER+ff7->SG_DATA_SIZE),ff7->SG_SLOT_FOOTER),ff7->SG_SLOT_FOOTER);// collect slot footer (0x00) bytes (PC), (0x0D0C) bytes (PSX), (0x0D0C) bytes (MC)
     }
     /*~~~~~~~End Load~~~~~~~~~~~~~~*/
+    _init=false;//we have now loaded a file
     ui->lbl_fileName->setText(fileName); //set filename then type specific actions.
     //Call guirefresh when not using slot select dialog.
     if (ff7->SG_TYPE == "PC")
@@ -1119,20 +1121,11 @@ void MainWindow::on_actionSlot_12_activated(){s=11; guirefresh(0);}
 void MainWindow::on_actionSlot_13_activated(){s=12; guirefresh(0);}
 void MainWindow::on_actionSlot_14_activated(){s=13; guirefresh(0);}
 void MainWindow::on_actionSlot_15_activated(){s=14; guirefresh(0);}
-
-void MainWindow::on_actionShow_Selection_Dialog_activated()
-{
-    if(ff7->SG_TYPE == ""){QMessageBox::information(this,tr("Black Chocobo"),tr("Filetype Unknown Aborting Slotselect Display"));return;}
-    else{
-        SlotSelect slotselect(0,ff7);
-        slotselect.setStyleSheet(this->styleSheet());
-        s=slotselect.exec();
-        guirefresh(0);
-    }
-}
 void MainWindow::on_actionClear_Slot_activated(){clearslot(s);  guirefresh(0);}
-void MainWindow::on_actionPrevious_Slot_activated(){if (s > 0) {s--; guirefresh(0);}}
-void MainWindow::on_actionNext_Slot_activated(){if (s<14){s++; guirefresh(0);}}
+
+void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect(0,ff7);slotselect.setStyleSheet(this->styleSheet());s=slotselect.exec();guirefresh(0);}
+void MainWindow::on_actionPrevious_Slot_activated(){if(ff7->SG_TYPE==""){return;}else{if (s > 0) {s--; guirefresh(0);}}}
+void MainWindow::on_actionNext_Slot_activated(){if(ff7->SG_TYPE==""){return;}else{if (s<14){s++; guirefresh(0);}}}
 void MainWindow::on_actionAbout_activated(){about adialog;  adialog.setStyleSheet(this->styleSheet()); adialog.exec();}
 void MainWindow::on_actionAbout_Qt_activated(){qApp->aboutQt();}
 void MainWindow::on_actionCopy_Slot_activated(){memcpy(&bufferslot,&ff7->slot[s],0x10f4); buffer_region = ff7->SG_Region_String[s];}
@@ -2321,12 +2314,16 @@ void MainWindow::setmenu(bool newgame)
     }
     ui->actionExport_PC_Save->setEnabled(1);    ui->actionExport_PSX->setEnabled(1);
     ui->actionExport_MC->setEnabled(1);         ui->actionExport_VGS->setEnabled(1);
-    ui->actionExport_DEX->setEnabled(1);        ui->actionCopy_Slot->setEnabled(1);
-    ui->actionExport_char->setEnabled(1);       ui->actionFrom_PSX_Slot->setEnabled(1);
-    ui->actionFrom_PSV_Slot->setEnabled(1);     ui->actionNew_Game_Plus->setEnabled(1);
-    ui->actionImport_char->setEnabled(1);       ui->actionPaste_Slot->setEnabled(1);
+    ui->actionExport_DEX->setEnabled(1);        ui->actionExport_char->setEnabled(1);
+    ui->actionImport_char->setEnabled(1);
 
-    if (ff7->SG_TYPE!= "PSX" && ff7->SG_TYPE !="PSV") //more then one slot
+    if(!_init)
+    {//we haven't loaded a file yet.
+        ui->actionNew_Game_Plus->setEnabled(1); ui->actionFrom_PSV_Slot->setEnabled(1);
+        ui->actionFrom_PSX_Slot->setEnabled(1); ui->actionCopy_Slot->setEnabled(1);
+        ui->actionPaste_Slot->setEnabled(1);
+    }
+    if (ff7->SG_TYPE!= "PSX" && ff7->SG_TYPE !="PSV" && (!_init)) //more then one slot
     {
         ui->actionSlot_01->setEnabled(1);   ui->actionNext_Slot->setEnabled(1);
         ui->actionSlot_02->setEnabled(1);   ui->actionPrevious_Slot->setEnabled(1);

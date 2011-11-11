@@ -4220,10 +4220,6 @@ NO es un archivo de guardado PSV</translation>
         <source>PSV FF7 SaveGame (*.psv)</source>
         <translation>Partida Guardada FF7 PSV (*.psv)</translation>
     </message>
-    <message>
-        <source>Filetype Unknown Aborting Slotselect Display</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>Materia_Names</name>
