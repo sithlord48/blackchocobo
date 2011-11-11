@@ -1471,15 +1471,15 @@
     </message>
     <message>
         <source> Uses of Limit 1-1</source>
-        <translation>リミット 1-1 の使用回数</translation>
+        <translation>リミット１－１の使用回数</translation>
     </message>
     <message>
         <source> Uses of Limit 2-1</source>
-        <translation>リミット 2-1 の使用回数</translation>
+        <translation>リミット２－１の使用回数</translation>
     </message>
     <message>
         <source> Uses of Limit 3-1</source>
-        <translation>リミット 3-1 の使用回数</translation>
+        <translation>リミット３－１の使用回数</translation>
     </message>
     <message>
         <source>Weapon</source>
@@ -1563,7 +1563,7 @@
     </message>
     <message>
         <source>L4 Suicide</source>
-        <translation>レベル4自爆</translation>
+        <translation>レベル４自爆</translation>
     </message>
     <message>
         <source>Magic Hammer</source>
@@ -1635,7 +1635,7 @@
     </message>
     <message>
         <source>L5 Death</source>
-        <translation>レベル5デス</translation>
+        <translation>レベル５デス</translation>
     </message>
     <message>
         <source>Death Sentence</source>
@@ -3756,32 +3756,32 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>Str</source>
         <translatorcomment>●</translatorcomment>
-        <translation>　力</translation>
+        <translation>　　 力</translation>
     </message>
     <message>
         <source>Vit</source>
         <translatorcomment>●</translatorcomment>
-        <translation>体力</translation>
+        <translation>　体力</translation>
     </message>
     <message>
         <source>Mag</source>
         <translatorcomment>●</translatorcomment>
-        <translation>魔力</translation>
+        <translation>　魔力</translation>
     </message>
     <message>
         <source>Dex</source>
         <translatorcomment>●</translatorcomment>
-        <translation>速さ</translation>
+        <translation>素速さ</translation>
     </message>
     <message>
         <source>Lck</source>
         <translatorcomment>●</translatorcomment>
-        <translation>　運</translation>
+        <translation>　　 運</translation>
     </message>
     <message>
         <source>HP</source>
         <translatorcomment>●</translatorcomment>
-        <translation>　HP</translation>
+        <translation>　　HP </translation>
     </message>
     <message>
         <source>Event Progress</source>
@@ -4110,7 +4110,7 @@ Table Entries are Editable</source>
     <message>
         <source>Spi</source>
         <translatorcomment>●</translatorcomment>
-        <translation>精神</translation>
+        <translation>　精神</translation>
     </message>
     <message>
         <source>Unsaved Changes</source>
@@ -4180,38 +4180,46 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Stats: Base+Bonus+Materia=Total</source>
-        <translation>能力: 基本 + ボーナス + マテリア = トータル</translation>
+        <translation>能力値: 基本 + ボーナス + マテリア = トータル</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_1</source>
+        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_1</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Farm:Choco Mog_2</source>
+        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_2</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Farm:Choco Mog_3</source>
+        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_3</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Farm:Choco Mog_4</source>
+        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_4</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Farm:Choco Mog_5</source>
+        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_5</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Farm:Choco Mog_6</source>
+        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_6</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Farm:Choco Mog_7</source>
+        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_7</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Farm:Choco Mog_8</source>
+        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_8</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4220,7 +4228,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Can Not Export This Format</source>
-        <translation type="unfinished"></translation>
+        <translation>このフォーマットはエクスポートできません</translation>
     </message>
     <message>
         <source>PSV FF7 SaveGame (*.psv)</source>
@@ -6142,7 +6150,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Added .bin .mc .mci .ps .psm .dff  to mcr/mcd list</source>
-        <translation>追加: BIN, MC, MCI, PS, PSM, DFF を MCR/MCD リストに追加</translation>
+        <translation>追加: MCR/MCD リストに BIN,MC,MCI,PS,PSM,DFF を追加</translation>
     </message>
     <message>
         <source>Fixed: Psx and Psv Region Detection</source>
@@ -6158,7 +6166,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Materia Slots Display Left To Right (see ingame)</source>
-        <translation>修正: マテリア スロットを左から右へ表示 (ゲーム同様に)</translation>
+        <translation>修正: マテリア スロットを左から右へ表示 (ゲームと同様に)</translation>
     </message>
     <message>
         <source>New: Set Font For Program</source>
@@ -6194,7 +6202,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
-        <translation>変更: ワールドマップのルビーをダイヤ/アルテマ/ルビー ウエポンに</translation>
+        <translation>変更: ワールド マップのウェポン配置をダイヤ/アルテマ/ルビーに</translation>
     </message>
     <message>
         <source>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</source>
@@ -6206,7 +6214,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Update: Location Tab; Both Save &amp; World Locations</source>
-        <translation>変更: セーブ地点タブ; フィールド, ワールド両方のセーブを可能に</translation>
+        <translation>変更: フィールド, ワールド両方のセーブ地点を変更可能に</translation>
     </message>
     <message>
         <source>New: Spawn New Windows. (mainly for testing)</source>
