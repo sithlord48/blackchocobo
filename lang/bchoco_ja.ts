@@ -4234,10 +4234,6 @@ Table Entries are Editable</source>
         <source>PSV FF7 SaveGame (*.psv)</source>
         <translation>PSV FF7 セーブ (*.psv)</translation>
     </message>
-    <message>
-        <source>Filetype Unknown Aborting Slotselect Display</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>Materia_Names</name>
