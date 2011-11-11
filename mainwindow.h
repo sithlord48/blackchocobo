@@ -43,7 +43,8 @@ public:
 
 protected:
     void changeEvent(QEvent *e);
-    void closeEvent(QCloseEvent *event);
+    //void closeEvent(QCloseEvent *event);
+    void closeEvent();
 private:
     Ui::MainWindow *ui;
     bool skip_slot_mask;
@@ -66,6 +67,7 @@ public slots:
 
 private slots://try to keep these in the same order as the .cpp file  
     /*Loading and Saving related Functions*/
+    void save_changes();
     void setPreviewColors();
     void on_actionNew_Window_triggered();
     void on_actionOpen_Save_File_activated();

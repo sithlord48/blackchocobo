@@ -2579,10 +2579,6 @@
         <translation>Selecciona Una Partida Guardada de Final Fantasy 7 PSV</translation>
     </message>
     <message>
-        <source>PSX FF7 SaveGame (*.psv)</source>
-        <translation>Partida Guardada FF7 PSX (*.psv)</translation>
-    </message>
-    <message>
         <source>Cannot save This Type of File</source>
         <translation>No se Puede Guardar este Tipo de Archivo</translation>
     </message>
@@ -4219,6 +4215,10 @@ NO es un archivo de guardado PSV</translation>
     <message>
         <source>Can Not Export This Format</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSV FF7 SaveGame (*.psv)</source>
+        <translation>Partida Guardada FF7 PSV (*.psv)</translation>
     </message>
 </context>
 <context>

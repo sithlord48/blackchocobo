@@ -206,43 +206,40 @@ void MainWindow::changeEvent(QEvent *e)
         break;
     };
 }
-void MainWindow::closeEvent(QCloseEvent *event)
-{if(file_changed){
-    switch(event->type())
+void MainWindow::save_changes(void)
+{
+    int result;
+    result = QMessageBox::question(this,tr("Unsaved Changes"),tr("Save Changes to the File:\n%1").arg(filename),QMessageBox::Yes,QMessageBox::No);
+    switch(result)
     {
-    default:
-        int result;
-        result = QMessageBox::question(this,tr("Unsaved Changes"),tr("Save Changes to the File:\n%1").arg(filename),QMessageBox::Yes,QMessageBox::No);
-        switch(result)
-        {
-            case QMessageBox::Yes:
-                    if(ui->action_Save->isEnabled()){on_action_Save_activated();}
-                    else
-                    {//user trying to save a file with no header.
-                        QStringList types;
-                        types << tr("PC")<<tr("Raw Psx Save")<<tr("Generic Emulator Memorycard")<<tr("PSP")<<tr("PS3")<<tr("Dex Drive Memorycard")<<tr("VGS Memorycard");
-                        QString result = QInputDialog::getItem(this,tr("Save Error"),tr("Please Select A File Type To Save"),types,-1,0,0,0);
-                        //check the string. and assign a type
-                        if(result ==types.at(0)){on_actionExport_PC_Save_activated();}
-                            else if(result ==types.at(1)){on_actionExport_PSX_activated();}
-                            else if(result ==types.at(2)){on_actionExport_MC_triggered();}
-                            else if(result ==types.at(3)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
-                            else if(result ==types.at(4)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
-                            else if(result ==types.at(5)){on_actionExport_DEX_triggered();}
-                            else if(result ==types.at(6)){on_actionExport_VGS_triggered();}
-                            else{return;}
-                    }
-                    break;
-            case QMessageBox::No:break;
-        }
-    break;
+        case QMessageBox::Yes:
+                if(ui->action_Save->isEnabled()){on_action_Save_activated();}
+                else
+                {//user trying to save a file with no header.
+                    QStringList types;
+                    types << tr("PC")<<tr("Raw Psx Save")<<tr("Generic Emulator Memorycard")<<tr("PSP")<<tr("PS3")<<tr("Dex Drive Memorycard")<<tr("VGS Memorycard");
+                    QString result = QInputDialog::getItem(this,tr("Save Error"),tr("Please Select A File Type To Save"),types,-1,0,0,0);
+                    //check the string. and assign a type
+                    if(result ==types.at(0)){on_actionExport_PC_Save_activated();}
+                        else if(result ==types.at(1)){on_actionExport_PSX_activated();}
+                        else if(result ==types.at(2)){on_actionExport_MC_triggered();}
+                        else if(result ==types.at(3)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
+                        else if(result ==types.at(4)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
+                        else if(result ==types.at(5)){on_actionExport_DEX_triggered();}
+                        else if(result ==types.at(6)){on_actionExport_VGS_triggered();}
+                        else{return;}
+                }
+                break;
+        case QMessageBox::No:break;
     }
-}}
+}
+void MainWindow::closeEvent(){if(file_changed){save_changes();}}
 /*~~~~~ New Window ~~~~~*/
 void MainWindow::on_actionNew_Window_triggered(){QProcess::startDetached(QCoreApplication::applicationFilePath());}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionOpen_Save_File_activated()
 {
+    if(file_changed){save_changes();}
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Open Final Fantasy 7 Save"),settings->value("load_path").toString(),
     tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
@@ -493,7 +490,7 @@ void MainWindow::on_actionFrom_PSX_Slot_activated()
 void MainWindow::on_actionFrom_PSV_Slot_activated()
 {//check beter to be sure its the correct PSV type file.
     QString fileName = QFileDialog::getOpenFileName(this,
-    tr("Select Final Fantasy 7 PSV Save"),QDir::homePath(),tr("PSX FF7 SaveGame (*.psv)"));
+    tr("Select Final Fantasy 7 PSV Save"),QDir::homePath(),tr("PSV FF7 SaveGame (*.psv)"));
     if (fileName.isEmpty()){return;}
     else
     {
@@ -2452,6 +2449,7 @@ if(current_id == 0xFF) //if the slot is empty take some precautions
     }
     ui->combo_add_mat_slot->setCurrentIndex(0);
     ui->combo_mat_type_slot->setCurrentIndex(0);
+    load=true;//type calls reset load
     ui->lbl_mat_stats_slot->setText(tr("Empty Slot"));
     ui->lcd_ap_master_slot->display(0);
     ui->sb_addap_slot->setValue(0);
@@ -2477,6 +2475,7 @@ else if(Materias[current_id].name == tr("DON'T USE")) //this is a placeholder ma
 
 else // make the materia look nice
 {
+    load=true;
     qint32 masterap=0;
     ui->lbl_mat_stats_slot->setText(FF7Strings.MateriaStats(current_id));// set stat string..
     qint32 aptemp = ff7->slot[s].chars[curchar].materias[mslotsel].ap[0] |(ff7->slot[s].chars[curchar].materias[mslotsel].ap[1] << 8) | (ff7->slot[s].chars[curchar].materias[mslotsel].ap[2] << 16);
@@ -2493,7 +2492,7 @@ else // make the materia look nice
     if(Materias[current_id].type == 0){ e_icon ="\0";   f_icon= "\0";}
     else{e_icon= Materias[current_id].image +"_empty";  f_icon= Materias[current_id].image +"_full";}
     ui->combo_mat_type_slot->setCurrentIndex(Materias[current_id].type);
-    load=true;
+    load=true;//mat_type calls reset load.
     ui->combo_add_mat_slot->setCurrentIndex(Materias[current_id].id);
     load=false;
     for(int i=0; i<Materias[current_id].levels;i++){if(aptemp >= Materias[current_id].ap[i]){level++;}}
@@ -2711,8 +2710,10 @@ void MainWindow::materiaupdate(void)
 
     if(current_id == 0xFF) //if the slot is empty take some precautions
     {
+
         ui->combo_add_mat->setCurrentIndex(0);
         ui->combo_mat_type->setCurrentIndex(0);
+        load=true;
         ui->lbl_mat_stats->setText(tr("Empty Slot"));
         ui->lcd_ap_master->display(0);
         ui->sb_addap->setValue(0);
@@ -2725,10 +2726,12 @@ void MainWindow::materiaupdate(void)
         ui->lcd_ap_master->display(tr("NO CAP"));
         ui->sb_addap->setMaximum(16777215);
         qint32 aptemp = ff7->slot[s].materias[j].ap[0] |(ff7->slot[s].materias[j].ap[1] << 8) | (ff7->slot[s].materias[j].ap[2] << 16);
+        load=true;
         ui->sb_addap->setValue(aptemp);
         // Set the unknown skills
         ui->spell_lvl1_group->setVisible(1);    ui->combo_add_mat_slot->setCurrentIndex(0);
-        ui->combo_mat_type_slot->setCurrentIndex(0);
+        ui->combo_mat_type->setCurrentIndex(0);
+        load=true;
         ui->lbl_spell_lvl1->setText(FF7Strings.MateriaSkills(current_id,0));
     }
 
@@ -2742,6 +2745,7 @@ void MainWindow::materiaupdate(void)
         // Check Materia Max AP and Set the Spin Box's Max Value.
         if(Materias[current_id].levels>1){ui->sb_addap->setMaximum(masterap);}
         else{ui->sb_addap->setMaximum(16777215);}
+        load=true;
         ui->sb_addap->setValue(aptemp);
         //Show levels stars
         int level=0;
@@ -4173,7 +4177,7 @@ void MainWindow::on_sb_addqty_valueChanged(int value)
 }}
 
 void MainWindow::on_tbl_itm_currentCellChanged(int row)
-{if(!load){file_changed=true;
+{if(!load){//file_changed=true;
     if (ff7->slot[s].items[row].qty == 255 && ff7->slot[s].items[row].id == 255){/*empty slot.....do nothing*/}
     else
     {
@@ -4195,7 +4199,7 @@ void MainWindow::on_tbl_itm_currentCellChanged(int row)
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_tbl_materia_currentCellChanged(int row)
-{if(!load){file_changed=true;
+{if(!load){//file_changed=true;
     if(ff7->slot[s].materias[row].id == 0x2C)//E.Skill Materia
     {
        ui->eskill_group->setVisible(true);
@@ -4258,7 +4262,7 @@ void MainWindow::on_sb_addap_valueChanged(int value)
 }}
 
 void MainWindow::on_combo_add_mat_currentIndexChanged(int index)
-{if(!load){file_changed=true;
+{if(!load){
     if(ui->combo_add_mat->currentText() ==tr("DON'T USE"))// this is a placeholder materia
     {
         QMessageBox::information(this,tr("Empty Materia"),tr("Place holder Materia Detected\n Remember 16777215 AP = master"));
@@ -4266,10 +4270,12 @@ void MainWindow::on_combo_add_mat_currentIndexChanged(int index)
         return; //we are done here.
     }
         ui->combo_mat_type->setCurrentIndex(Materias[index].type);
+        load=true;
         for(int i=0;i<ui->combo_add_mat_2->count();i++)
         {
             if(ui->combo_add_mat_2->itemText(i)==Materias[index].name){ui->combo_add_mat_2->setCurrentIndex(i);}
         }
+        load=false;
     ff7->slot[s].materias[ui->tbl_materia->currentRow()].id = index;
     materiaupdate();
 }}
@@ -4296,7 +4302,7 @@ void MainWindow::on_combo_mat_type_currentIndexChanged(int index)
 }
 
 void MainWindow::on_combo_add_mat_2_currentIndexChanged()
-{if(!load){file_changed=true; //set combo_add_mat.setCurrentindex = selected materia.id
+{if(!load){//file_changed=true; //set combo_add_mat.setCurrentindex = selected materia.id
     for(int i=0;i<0x5B;i++)
     {
         if(ui->combo_add_mat_2->currentText()== FF7Strings.MateriaNames(i)){ui->combo_add_mat->setCurrentIndex(i);}
@@ -5731,6 +5737,7 @@ void MainWindow::on_uw_y_valueChanged(int value)
 
 void MainWindow::on_combo_map_controls_currentIndexChanged(int index)
 {
+    load=true;
     switch(index)
     {
     case 0: ui->slide_world_x->setValue(ff7->slot[s].l_world  & 0x7FFFF);
@@ -5755,6 +5762,7 @@ void MainWindow::on_combo_map_controls_currentIndexChanged(int index)
             ui->slide_world_y->setValue(ff7->slot[s].ew_world2 & 0x3FFFF);
             break;
     }
+    load=false;
 }
 
 void MainWindow::on_slide_world_x_valueChanged(int value)
