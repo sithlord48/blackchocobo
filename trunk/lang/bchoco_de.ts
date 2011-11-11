@@ -2571,10 +2571,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>PSX FF7 SaveGame (*.psv)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Cannot save This Type of File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4196,6 +4192,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Can Not Export This Format</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSV FF7 SaveGame (*.psv)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

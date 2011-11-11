@@ -1380,11 +1380,11 @@
     </message>
     <message>
         <source>7th Heaven</source>
-        <translation type="unfinished"></translation>
+        <translation>Septième Ciel</translation>
     </message>
     <message>
         <source>AVALANCHE Hideout</source>
-        <translation type="unfinished"></translation>
+        <translation>Cachette d&apos;AVALANCHE</translation>
     </message>
 </context>
 <context>
@@ -2564,10 +2564,6 @@
     <message>
         <source>Select Final Fantasy 7 PSV Save</source>
         <translation>Sélectionner sauvegarde Final Fantasy 7 PSV</translation>
-    </message>
-    <message>
-        <source>PSX FF7 SaveGame (*.psv)</source>
-        <translation>Sauvegarde FF7 PSX (*.psv)</translation>
     </message>
     <message>
         <source>Cannot save This Type of File</source>
@@ -4020,11 +4016,11 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Ctrl+C</source>
-        <translation type="unfinished">Ctrl+C</translation>
+        <translation>Ctrl+C</translation>
     </message>
     <message>
         <source>Ctrl+V</source>
-        <translation type="unfinished">Ctrl+V</translation>
+        <translation>Ctrl+V</translation>
     </message>
     <message>
         <source>Del</source>
@@ -4084,27 +4080,27 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Using Unknown Var Table To View Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Utilisation du tableau de variables inconnues pour visionner la sauvegarde</translation>
     </message>
     <message>
         <source>Sector 7 - Slums Progress</source>
-        <translation type="unfinished"></translation>
+        <translation>Secteur 7 - Progression des Taudis</translation>
     </message>
     <message>
         <source>Initial Settings</source>
-        <translation type="unfinished"></translation>
+        <translation>Progression Initiale</translation>
     </message>
     <message>
         <source>Destroy the Sector 5 Reactor </source>
-        <translation type="unfinished"></translation>
+        <translation>Détruire le Réacteur du Secteur 5</translation>
     </message>
     <message>
         <source>The Plate is Falling</source>
-        <translation type="unfinished"></translation>
+        <translation>La plaque tombe</translation>
     </message>
     <message>
         <source>cb_s5_7 (aeris On roof)</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_7 (Aéris sur le toit)</translation>
     </message>
     <message>
         <source>Spi</source>
@@ -4112,70 +4108,73 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Unsaved Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifications Inchangées</translation>
     </message>
     <message>
         <source>Save Changes to the File:
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer les changements au fichier 
+%1</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation type="unfinished"></translation>
+        <translation>Types de Sauvegarde connus de FF7 (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;&quot;Sauvegarde FF7 PC (*.ff7);;Sauvegardes FF7 PSX (*-S*);;Sauvegarde MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Sauvegarde PSV (*.psv);;Sauvegarde PSP (*.vmp);;Sauvegarde VGS(*.vgs *.mem);;Sauvegarde Dex-Drive(*.gme);;Tous les fichiers(*)</translation>
     </message>
     <message>
         <source>Raw PSX FF7 SaveGame (*)</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7 sauvegarde non-identifiée PSX (*)</translation>
     </message>
     <message>
         <source>The File %1
  is NOT a PSX Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Le fichier %1 
+N&apos;EST PAS une sauvegarde PSX</translation>
     </message>
     <message>
         <source>The File %1
  is NOT a PSV Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Le fichier %1 
+N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>PC</source>
-        <translation type="unfinished"></translation>
+        <translation>PC</translation>
     </message>
     <message>
         <source>Raw Psx Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarde RAW PSX</translation>
     </message>
     <message>
         <source>Generic Emulator Memorycard</source>
-        <translation type="unfinished"></translation>
+        <translation>Carte Mémoire d&apos;Émulateur (Générique)</translation>
     </message>
     <message>
         <source>PSP</source>
-        <translation type="unfinished"></translation>
+        <translation>PSP</translation>
     </message>
     <message>
         <source>PS3</source>
-        <translation type="unfinished"></translation>
+        <translation>PS3</translation>
     </message>
     <message>
         <source>Dex Drive Memorycard</source>
-        <translation type="unfinished"></translation>
+        <translation>Carte Mémoire Dex Drive</translation>
     </message>
     <message>
         <source>VGS Memorycard</source>
-        <translation type="unfinished"></translation>
+        <translation>Carte Mémoire VGS</translation>
     </message>
     <message>
         <source>Save Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur de sauvegarde</translation>
     </message>
     <message>
         <source>Please Select A File Type To Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Veuillez sélectionner un formet pour sauvegarder</translation>
     </message>
     <message>
         <source>Stats: Base+Bonus+Materia=Total</source>
-        <translation type="unfinished"></translation>
+        <translation>Stat: Base +Bonus +Matéria=Total</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_1</source>
@@ -4211,11 +4210,15 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Calculate Stats</source>
-        <translation type="unfinished"></translation>
+        <translation>Calculer les statistiques</translation>
     </message>
     <message>
         <source>Can Not Export This Format</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible d&apos;exporter dans ce format</translation>
+    </message>
+    <message>
+        <source>PSV FF7 SaveGame (*.psv)</source>
+        <translation>Sauvegarde FF7 PSV (*.psv)</translation>
     </message>
 </context>
 <context>
@@ -5867,32 +5870,38 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>
 Empty</source>
-        <translation type="unfinished"></translation>
+        <translation>
+Vide</translation>
     </message>
     <message>
         <source>(Deleted)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Supprimé)</translation>
     </message>
     <message>
         <source>
  Game Uses %1 Save Block</source>
-        <translation type="unfinished"></translation>
+        <translation>
+ Le jeu utilise %1 sauvegarde</translation>
     </message>
     <message>
         <source>s; Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>s; la prochaine sauvegarde est à l&apos;emplacement %1</translation>
     </message>
     <message>
         <source>
 
  Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>
+
+ Sauvegarde semi-reliée la prochaine sauvegarde est à l&apos;emplacement %1</translation>
     </message>
     <message>
         <source>
 
  End Of Linked Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>
+
+ Fin du lien de sauvegard</translation>
     </message>
 </context>
 <context>
@@ -6301,31 +6310,31 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Text Conversion Class (based on myst6re&apos;s work) </source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Classe de Conversion de Texte (basé sur le travail de myst6re)</translation>
     </message>
     <message>
         <source>Fixed: Save Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Fixé: Bouton de sauvegarde</translation>
     </message>
     <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
-        <translation type="unfinished"></translation>
+        <translation>Classe d&apos;icône PSX et convertisseur de japonais pour PC</translation>
     </message>
     <message>
         <source>New: German Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Traduction Allemande</translation>
     </message>
     <message>
         <source>Improved: Detection of FF7 Types.</source>
-        <translation type="unfinished"></translation>
+        <translation>Amélioré: Détection de fichiers de types FF7.</translation>
     </message>
     <message>
         <source>Improved: Slotselect handling of non-ff7 and empty slots</source>
-        <translation type="unfinished"></translation>
+        <translation>Amélioré: Gère la sélection de sauvegardes non-FF7 et vides</translation>
     </message>
     <message>
         <source>New: Predict stat growth (if enabled)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau: Prédit l&apos;augmentation des statistiques</translation>
     </message>
 </context>
 <context>
@@ -6410,32 +6419,34 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Esc</source>
-        <translation type="unfinished"></translation>
+        <translation>Esc</translation>
     </message>
     <message>
         <source>Mid-Linked Block </source>
-        <translation type="unfinished"></translation>
+        <translation>Sauvegarde semi-reliée</translation>
     </message>
     <message>
         <source>End Of Linked Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Fin du lien de sauvegarde</translation>
     </message>
     <message>
         <source>(Deleted)</source>
-        <translation type="unfinished"></translation>
+        <translation>(Supprimé)</translation>
     </message>
     <message>
         <source>
  Game Uses %1 Save Block</source>
-        <translation type="unfinished"></translation>
+        <translation>
+ Le jeu utilise %1 sauvegarde</translation>
     </message>
     <message>
         <source>s; Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>la prochaine sauvegarde est à l&apos;emplacement %1</translatorcomment>
+        <translation>s; la prochaine sauvegarde est à l&apos;emplacement %1</translation>
     </message>
     <message>
         <source>Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>la prochaine sauvegarde est à l&apos;emplacement %1</translation>
     </message>
 </context>
 </TS>

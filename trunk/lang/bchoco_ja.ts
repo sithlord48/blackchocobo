@@ -2572,10 +2572,6 @@
         <translation>Final Fantasy 7 PSV セーブの選択</translation>
     </message>
     <message>
-        <source>PSX FF7 SaveGame (*.psv)</source>
-        <translation>PSX FF7 セーブ (*.psv)</translation>
-    </message>
-    <message>
         <source>Cannot save This Type of File</source>
         <translation>このタイプのファイルは保存できません</translation>
     </message>
@@ -4225,6 +4221,10 @@ Table Entries are Editable</source>
     <message>
         <source>Can Not Export This Format</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PSV FF7 SaveGame (*.psv)</source>
+        <translation>PSV FF7 セーブ (*.psv)</translation>
     </message>
 </context>
 <context>
