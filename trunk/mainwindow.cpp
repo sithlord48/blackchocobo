@@ -1694,17 +1694,17 @@ void MainWindow::charupdate(void)
     //Now Set Char Specific Things
     switch (curchar)
     {
-        case 0:char_weapon_offset=0;
-        case 1:char_weapon_offset=32;
-        case 2:char_weapon_offset=16;
-        case 3:char_weapon_offset=62;
-        case 4:char_weapon_offset=48;
-        case 5:char_weapon_offset=87;
-        case 6:char_weapon_offset=101;
-        case 7:char_weapon_offset=114;
-        case 8:char_weapon_offset=73;
-        case 9:char_weapon_offset=0;
-        case 10:char_weapon_offset=0;
+        case 0:char_weapon_offset=0;    break;
+        case 1:char_weapon_offset=32;   break;
+        case 2:char_weapon_offset=16;   break;
+        case 3:char_weapon_offset=62;   break;
+        case 4:char_weapon_offset=48;   break;
+        case 5:char_weapon_offset=87;   break;
+        case 6:char_weapon_offset=101;  break;
+        case 7:char_weapon_offset=114;  break;
+        case 8:char_weapon_offset=73;   break;
+        case 9:char_weapon_offset=0;    break;
+        case 10:char_weapon_offset=0;   break;
     }
     switch(ff7->slot[s].chars[curchar].id)
     {
