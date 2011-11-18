@@ -269,7 +269,7 @@
     </message>
     <message>
         <source>Krakka Greens</source>
-        <translation>クラッカの野菜</translation>
+        <translation>カラッカの野菜</translation>
     </message>
     <message>
         <source>Gysahl Greens</source>
@@ -2403,15 +2403,15 @@
     </message>
     <message>
         <source>Initial</source>
-        <translation>初期</translation>
+        <translation>しょき</translation>
     </message>
     <message>
         <source>Memory</source>
-        <translation>記憶</translation>
+        <translation>きおく</translation>
     </message>
     <message>
         <source>ATB Style</source>
-        <translation>ATB</translation>
+        <translation>ＡＴＢ</translation>
     </message>
     <message>
         <source>Active</source>
@@ -3727,7 +3727,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Global Progress</source>
-        <translation>全体の進捗</translation>
+        <translation>ゲームの総体的進捗</translation>
     </message>
     <message>
         <source>Main Progression</source>
@@ -3739,7 +3739,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Elevator Door Open</source>
-        <translation>エレベーターが開く</translation>
+        <translation>エレベーターのドアが開く</translation>
     </message>
     <message>
         <source>1st Door Open</source>
@@ -3841,7 +3841,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Can Show Pillar Pan Video</source>
-        <translation>機械塔パン映像を再生可能</translation>
+        <translation>機械塔パン映像が再生可能に</translation>
     </message>
     <message>
         <source>Barret called us</source>
@@ -3881,7 +3881,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Elevator On 2nd Floor</source>
-        <translation>２階のエレベーター</translation>
+        <translation>エレベーターが上階にある</translation>
     </message>
     <message>
         <source>Post Pan NMKIN_5</source>
@@ -3889,7 +3889,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Trigger Game Over (countdown timer out)</source>
-        <translation>ゲーム オーバー トリガー (カウントダウン終了)</translation>
+        <translation>ゲーム オーバー トリガー (カウントダウン タイマー)</translation>
     </message>
     <message>
         <source>Post Electrical Effect MD8_3</source>
@@ -4049,7 +4049,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Aeris Talked About Sick Man</source>
-        <translation>エアリスの病人に関する話</translation>
+        <translation>エアリスの病人に関する話を聞く</translation>
     </message>
     <message>
         <source>Stole The Kids 5 Gil</source>
@@ -4077,11 +4077,11 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Talked to Jesse Before Looking At Map</source>
-        <translation>マップを見る時のジェシーとの会話</translation>
+        <translation>ジェシーと会話してマップを見る</translation>
     </message>
     <message>
         <source>After Aeris Church Scene</source>
-        <translation>エアリスとの教会イベント後</translation>
+        <translation>エアリスとの教会イベント完了後</translation>
     </message>
     <message>
         <source>Using Unknown Var Table To View Save</source>
@@ -4105,7 +4105,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>cb_s5_7 (aeris On roof)</source>
-        <translation>cb_s5_7 （屋根の上のエアリス）</translation>
+        <translation>cb_s5_7 （エアリスが屋根の上に？）</translation>
     </message>
     <message>
         <source>Spi</source>
@@ -5684,11 +5684,11 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Select A Directory To Save mcd/mcr saves</source>
-        <translation>mcd/mcr セーブの保存ディレクトリを選択</translation>
+        <translation>MCD/MCR セーブの保存ディレクトリを選択</translation>
     </message>
     <message>
         <source>Select A Directory To Load FF7 PC Saves From</source>
-        <translation>FF7 PC セーブをロードするディレクトリの選択</translation>
+        <translation>FF7 セーブをロードするディレクトリの選択</translation>
     </message>
     <message>
         <source>Select A Directory To Export FF7 PC Saves</source>
@@ -5704,15 +5704,15 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Location To Save Character Stat Files</source>
-        <translation>キャラクター ステータス ファイルの保存場所</translation>
+        <translation>キャラクター ステータス ファイルの保存フォルダ</translation>
     </message>
     <message>
         <source>Select A Location To Save Character Stat Files</source>
-        <translation>キャラクター ステータス ファイルの保存場所を選択</translation>
+        <translation>キャラクター ステータス ファイルの保存フォルダを選択</translation>
     </message>
     <message>
         <source> Folder To Load FF7 Saves (all types) from</source>
-        <translation>FF7 セーブ (全種類) のロード用フォルダ</translation>
+        <translation>すべての FF7 セーブのロード用フォルダ</translation>
     </message>
     <message>
         <source>Folder To Save Pc (.ff7) Save Games</source>
@@ -5760,7 +5760,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source> Folder To Load/Save Emulator Memory Cards  </source>
-        <translation>エミュレーター メモリー カードのロード/保存フォルダ</translation>
+        <translation>エミュレーター メモリー カードの保存フォルダ</translation>
     </message>
     <message>
         <source>Set Applications Font</source>
@@ -5885,7 +5885,7 @@ Table Entries are Editable</source>
         <source>
 Empty</source>
         <translation>
-空きスロット</translation>
+ＥＭＰＴＹ</translation>
     </message>
     <message>
         <source>(Deleted)</source>
@@ -5907,7 +5907,7 @@ Empty</source>
  Mid-Linked Block Next Data Chunk @ Slot:%1</source>
         <translation>
 
- 第二ブロック 次のデータ チャンク @ スロット:%1</translation>
+ 第二ブロック; 次のデータ チャンク @ スロット:%1</translation>
     </message>
     <message>
         <source>
@@ -6030,23 +6030,23 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Main Programmer</source>
-        <translation>メイン プログラマー</translation>
+        <translation> メイン プログラマー</translation>
     </message>
     <message>
         <source>Bug Testers</source>
-        <translation>バグ テスター</translation>
+        <translation> バグ テスター</translation>
     </message>
     <message>
         <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation>メイン バグ テスター, Win/Gnome + ゲーム内</translation>
+        <translation> メイン バグ テスター, Win/Gnome + ゲーム内</translation>
     </message>
     <message>
         <source>Mac Os Tester</source>
-        <translation>Mac OS テスター</translation>
+        <translation> Mac OS テスター</translation>
     </message>
     <message>
         <source>Windows Tester</source>
-        <translation>Windows テスター</translation>
+        <translation> Windows テスター</translation>
     </message>
     <message>
         <source>Translators</source>
@@ -6066,7 +6066,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Buff Icons (and one or two more) by </source>
-        <translation>バフ アイコン (その他、諸々) の作成: </translation>
+        <translation>バフ アイコン (その他・諸々) の作成: </translation>
     </message>
     <message>
         <source>FF7 Program Icon</source>
@@ -6202,7 +6202,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
-        <translation>変更: ワールド マップのウェポン配置をダイヤ/アルテマ/ルビーに</translation>
+        <translation>変更: ウェポンのワールド マップ配置をダイヤ/アルテマ/ルビーに</translation>
     </message>
     <message>
         <source>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</source>
