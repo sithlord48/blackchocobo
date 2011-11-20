@@ -207,10 +207,10 @@ void MainWindow::changeEvent(QEvent *e)
         break;
     };
 }
-void MainWindow::save_changes(void)
-{
-    int result;
-    result = QMessageBox::question(this,tr("Unsaved Changes"),tr("Save Changes to the File:\n%1").arg(filename),QMessageBox::Yes,QMessageBox::No);
+int MainWindow::save_changes(void)
+{//return 0 to ingore the event/ return 1 to process event.
+    int result; int rtn=0;
+    result = QMessageBox::question(this,tr("Unsaved Changes"),tr("Save Changes to the File:\n%1").arg(filename),QMessageBox::Yes,QMessageBox::No,QMessageBox::Cancel);
     switch(result)
     {
         case QMessageBox::Yes:
@@ -228,13 +228,23 @@ void MainWindow::save_changes(void)
                         else if(result ==types.at(4)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
                         else if(result ==types.at(5)){on_actionExport_DEX_triggered();}
                         else if(result ==types.at(6)){on_actionExport_VGS_triggered();}
-                        else{return;}
+                        else{return rtn;}
                 }
+                rtn=1;
                 break;
-        case QMessageBox::No:break;
+        case QMessageBox::No:rtn=1;break;
+        case QMessageBox::Cancel: rtn=0; break;
     }
+    return rtn;
 }
-void MainWindow::closeEvent(){if(file_changed){save_changes();}}
+void MainWindow::closeEvent(QCloseEvent *e)
+{if(file_changed){
+    switch(save_changes())
+    {
+        case 0: e->ignore(); break;
+        case 1: e->accept(); break;
+    }
+}}
 /*~~~~~ New Window ~~~~~*/
 void MainWindow::on_actionNew_Window_triggered(){QProcess::startDetached(QCoreApplication::applicationFilePath());}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
