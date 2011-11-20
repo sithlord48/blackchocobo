@@ -195,13 +195,13 @@ QSlider#slide_battlespeed::handle,QSlider#slide_fieldmspeed::handle,QSlider#slid
  }
 
 /*Checkboxes-enabled*/
-QGroupBox:enabled,QListWidget:enabled,QCheckBox:enabled{background-color: rgba(32,31,31,0);}
-/*QGroupBox::indicator:enabled:checked,*/QListWidget::indicator:enabled:checked,QCheckBox::indicator:enabled:checked {image: url(:/icon/checkbox_checked);}
-/*QGroupBox::indicator:enabled:unchecked,*/QListWidget::indicator:enabled:unchecked,QCheckBox::indicator:enabled:unchecked{image: url(:/icon/checkbox_unchecked);}
-/*QGroupBox::indicator:enabled:indeterminate,*/QListWidget::indicator:enabled:indeterminate,QCheckBox::indicator:enabled:indeterminate{image: url(:/icon/checkbox_indeterminate);}
-/*QGroupBox::indicator:enabled:checked:hover,*/QListWidget::indicator:enabled:checked:hover,QCheckBox::indicator:enabled:checked:hover{image: url(:/icon/checkbox_checked_hover);}
-/*QGroupBox::indicator:enabled:unchecked:hover,*/QListWidget::indicator:enabled:unchecked:hover,QCheckBox::indicator:enabled:unchecked:hover{image: url(:/icon/checkbox_unchecked_hover);}
-/*QGroupBox::indicator:enabled:indeterminate:hover,*/QListWidget::indicator:enabled:indeterminate:hover,QCheckBox::indicator:enabled:indeterminate:hover{image: url(:/icon/checkbox_indeterminate_hover);}
+/*QGroupBox:enabled,QListWidget:enabled,QCheckBox:enabled{background-color: rgba(32,31,31,0);}
+/*QGroupBox::indicator:checked,*/QListWidget::indicator:enabled:checked,QCheckBox::indicator:enabled:checked {image: url(:/icon/checkbox_checked);}
+/*QGroupBox::indicator:unchecked,*/QListWidget::indicator:enabled:unchecked,QCheckBox::indicator:enabled:unchecked{image: url(:/icon/checkbox_unchecked);}
+/*QGroupBox::indicator:indeterminate,*/QListWidget::indicator:enabled:indeterminate,QCheckBox::indicator:enabled:indeterminate{image: url(:/icon/checkbox_indeterminate);}
+/*QGroupBox::indicator:checked:hover,*/QListWidget::indicator:enabled:checked:hover,QCheckBox::indicator:enabled:checked:hover{image: url(:/icon/checkbox_checked_hover);}
+/*QGroupBox::indicator:unchecked:hover,*/QListWidget::indicator:enabled:unchecked:hover,QCheckBox::indicator:enabled:unchecked:hover{image: url(:/icon/checkbox_unchecked_hover);}
+/*QGroupBox::indicator:indeterminate:hover,*/QListWidget::indicator:enabled:indeterminate:hover,QCheckBox::indicator:enabled:indeterminate:hover{image: url(:/icon/checkbox_indeterminate_hover);}
 
 /*Checkboxes-disabled*/
 QGroupBox:disabled,QListWidget:disabled,QCheckBox:disabled{background-color: rgb(32,31,31,0);font:;color:rgb(74, 80, 73);}
@@ -7540,7 +7540,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       <number>-1</number>
                      </property>
                      <property name="margin">
-                      <number>3</number>
+                      <number>0</number>
                      </property>
                      <item>
                       <widget class="QListWidget" name="list_eskill_2">
@@ -7593,7 +7593,10 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         <enum>QListView::ListMode</enum>
                        </property>
                        <property name="uniformItemSizes">
-                        <bool>false</bool>
+                        <bool>true</bool>
+                       </property>
+                       <property name="batchSize">
+                        <number>100</number>
                        </property>
                        <property name="currentRow">
                         <number>-1</number>
@@ -8650,19 +8653,28 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <bool>false</bool>
              </property>
              <property name="dragDropMode">
-              <enum>QAbstractItemView::NoDragDrop</enum>
+              <enum>QAbstractItemView::DragOnly</enum>
              </property>
              <property name="selectionBehavior">
               <enum>QAbstractItemView::SelectItems</enum>
              </property>
              <property name="movement">
-              <enum>QListView::Static</enum>
+              <enum>QListView::Snap</enum>
              </property>
              <property name="flow">
               <enum>QListView::TopToBottom</enum>
              </property>
              <property name="isWrapping" stdset="0">
               <bool>false</bool>
+             </property>
+             <property name="resizeMode">
+              <enum>QListView::Fixed</enum>
+             </property>
+             <property name="layoutMode">
+              <enum>QListView::Batched</enum>
+             </property>
+             <property name="spacing">
+              <number>1</number>
              </property>
              <property name="viewMode">
               <enum>QListView::ListMode</enum>
@@ -8671,6 +8683,15 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <number>0</number>
              </property>
              <property name="uniformItemSizes">
+              <bool>false</bool>
+             </property>
+             <property name="batchSize">
+              <number>10</number>
+             </property>
+             <property name="wordWrap">
+              <bool>false</bool>
+             </property>
+             <property name="selectionRectVisible">
               <bool>false</bool>
              </property>
              <item>
@@ -10211,6 +10232,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <height>16777215</height>
                 </size>
                </property>
+               <property name="layoutMode">
+                <enum>QListView::Batched</enum>
+               </property>
+               <property name="spacing">
+                <number>0</number>
+               </property>
                <item>
                 <property name="text">
                  <string>Frog Song</string>
@@ -10479,6 +10506,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_155">
+               <property name="sizeConstraint">
+                <enum>QLayout::SetDefaultConstraint</enum>
+               </property>
                <item>
                 <widget class="QPushButton" name="btn_eskillall">
                  <property name="minimumSize">
@@ -10739,6 +10769,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+              </property>
+              <property name="flat">
+               <bool>false</bool>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -20143,6 +20176,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <property name="whatsThis">
                   <string/>
                  </property>
+                 <property name="layoutMode">
+                  <enum>QListView::SinglePass</enum>
+                 </property>
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
                  <item>
                   <property name="text">
                    <string>Cloud</string>
@@ -20305,6 +20344,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </property>
                  <property name="whatsThis">
                   <string/>
+                 </property>
+                 <property name="spacing">
+                  <number>0</number>
                  </property>
                  <item>
                   <property name="text">
@@ -20486,6 +20528,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
                  <item>
                   <property name="text">
                    <string>Item</string>
@@ -20626,6 +20671,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <width>16777215</width>
                    <height>16777215</height>
                   </size>
+                 </property>
+                 <property name="spacing">
+                  <number>0</number>
                  </property>
                  <item>
                   <property name="text">
