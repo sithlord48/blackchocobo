@@ -250,7 +250,14 @@ void MainWindow::on_actionNew_Window_triggered(){QProcess::startDetached(QCoreAp
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionOpen_Save_File_activated()
 {
-    if(file_changed){save_changes();}
+    if(file_changed)
+    {
+        switch(save_changes())
+        {
+            case 0: return;//cancel load.
+            case 1: break;//yes or no pressed..
+        }
+    }
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Open Final Fantasy 7 Save"),settings->value("load_path").toString(),
     tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
@@ -1808,8 +1815,11 @@ void MainWindow::charupdate(void)
 
     //Equipment Tab Stuff.
     if(ff7->slot[s].chars[curchar].id !=10){ui->combo_weapon->setCurrentIndex((ff7->slot[s].chars[curchar].weapon)-char_weapon_offset);}//if not seppie set the weapon
+
     ui->combo_armor->setCurrentIndex(ff7->slot[s].chars[curchar].armor);
+
     ui->combo_acc->setCurrentIndex(ff7->slot[s].chars[curchar].accessory);
+
     //Set up char buttons and avatar icon.
     ui->lbl_avatar->setStyleSheet(avatar_style(ff7->slot[s].chars[curchar].id));
     ui->btn_cloud->setStyleSheet(avatar_style(ff7->slot[s].chars[0].id));
@@ -1826,7 +1836,48 @@ void MainWindow::charupdate(void)
     setarmorslots();
     materiaupdate_slot();
     update_stat_totals();
+    weapon_stat();
     if(ui->action_auto_char_growth->isChecked()){setchar_growth(0);}
+}
+void MainWindow::weapon_stat(void)
+{
+    if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(140)){ui->lbl_weapon_bonus->setText(tr("spi +13"));}//apocalpse}
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(142)){ui->lbl_weapon_bonus->setText(tr("spi +35"));}//ragnarok
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(143)){ui->lbl_weapon_bonus->setText(tr("spi +24"));}//Ultimate Weapon
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(187)){ui->lbl_weapon_bonus->setText(tr("vit +35 spi +18"));}//behemoth horn
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(190)){ui->lbl_weapon_bonus->setText(tr("vit +1 spi +4"));}//Guard Stick
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(199)){ui->lbl_weapon_bonus->setText(tr("vit +20"));}//Umbrella
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(200)){ui->lbl_weapon_bonus->setText(tr("vit +12 spi +20"));}//Princess Guard
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(213)){ui->lbl_weapon_bonus->setText(tr("spi +20"));}//Spirt Lance
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(225)){ui->lbl_weapon_bonus->setText(tr("dex +10"));}//Magic Shuriken
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(240)){ui->lbl_weapon_bonus->setText(tr("vit +30"));}//Starlight M Phone
+    else{ui->lbl_weapon_bonus->setText("");}
+
+    switch(ff7->slot[s].chars[curchar].armor)
+    {
+        case 11:ui->lbl_armor_bonus->setText(tr("mag +5")); break;//Enincoat
+        case 12:ui->lbl_armor_bonus->setText(tr("mag +20")); break;//Wizard Bracelet
+        case 14:ui->lbl_armor_bonus->setText(tr("str +30")); break;//Gigas Armlet
+        case 17:ui->lbl_armor_bonus->setText(tr("mag +20")); break;//Forth Braclet
+        case 18:ui->lbl_armor_bonus->setText(tr("str +5")); break;//Warrior Bangle
+        case 29:ui->lbl_armor_bonus->setText(tr("str +20 mag +20")); break;//Ziedrich
+        case 31:ui->lbl_armor_bonus->setText(tr("dex +30 lck +20")); break;//chocobobracelet
+        default:ui->lbl_armor_bonus->setText(""); break;
+    }
+
+    switch(ff7->slot[s].chars[curchar].accessory)
+    {
+        case 0x00: ui->lbl_acc_bonus->setText(tr("str +10"));break;//power wrist
+        case 0x01: ui->lbl_acc_bonus->setText(tr("vit +10"));break;//protect ring
+        case 0x02: ui->lbl_acc_bonus->setText(tr("mag +10"));break;//earing
+        case 0x03: ui->lbl_acc_bonus->setText(tr("sti +10"));break;//tailsman
+        case 0x04: ui->lbl_acc_bonus->setText(tr("dex +10"));break;//choco-feather
+        case 0x05: ui->lbl_acc_bonus->setText(tr("lck +10%"));break;//amulet +10%
+        case 0x06: ui->lbl_acc_bonus->setText(tr("str +30 vit +30"));break;// champ's belt
+        case 0x08: ui->lbl_acc_bonus->setText(tr("str +50 spi +50"));break;// tough ring
+        case 0x09: ui->lbl_acc_bonus->setText(tr("mag +30 spi +30"));break;// circlet
+        default: ui->lbl_acc_bonus->setText("");break;
+    }
 }
 void MainWindow::update_stat_totals(void)
 {
@@ -1890,35 +1941,38 @@ void MainWindow::update_stat_totals(void)
         }
     }
     //out of the loop need to check things like accessory and armor/weapon for modifiers.
-    if(ff7->slot[s].chars[curchar].accessory ==0x00) {strbonus +=10;} //power wrist
-    else if(ff7->slot[s].chars[curchar].accessory ==0x01) {vitbonus +=10;} //protect ring
-    else if(ff7->slot[s].chars[curchar].accessory ==0x02) {magbonus +=10;} //earing
-    else if(ff7->slot[s].chars[curchar].accessory ==0x03) {spibonus +=10;} //tailsman
-    else if(ff7->slot[s].chars[curchar].accessory ==0x04) {dexbonus +=10;} //choco-feather
-    else if(ff7->slot[s].chars[curchar].accessory ==0x05) {lckbonus += (ff7->slot[s].chars[curchar].luck*0.1);} //amulet +10%
-    else if(ff7->slot[s].chars[curchar].accessory ==0x06) {strbonus +=30; vitbonus +=30;} // champ's belt
-    else if(ff7->slot[s].chars[curchar].accessory ==0x08) {strbonus +=50; spibonus +=50;} // tough ring
-    else if(ff7->slot[s].chars[curchar].accessory ==0x09) {magbonus +=30; spibonus +=30;} // circlet
+    if(ff7->slot[s].chars[curchar].accessory ==0x00) {strbonus+=10;ui->lbl_acc_bonus->setText(tr("str +10"));} //power wrist
+    else if(ff7->slot[s].chars[curchar].accessory ==0x01) {vitbonus+=10;ui->lbl_acc_bonus->setText(tr("vit +10"));} //protect ring
+    else if(ff7->slot[s].chars[curchar].accessory ==0x02) {magbonus+=10;ui->lbl_acc_bonus->setText(tr("mag +10"));} //earing
+    else if(ff7->slot[s].chars[curchar].accessory ==0x03) {spibonus+=10;ui->lbl_acc_bonus->setText(tr("spi +10"));} //tailsman
+    else if(ff7->slot[s].chars[curchar].accessory ==0x04) {dexbonus+=10;ui->lbl_acc_bonus->setText(tr("dex +10"));} //choco-feather
+    else if(ff7->slot[s].chars[curchar].accessory ==0x05) {lckbonus+= (ff7->slot[s].chars[curchar].luck*0.1);ui->lbl_acc_bonus->setText(tr("lck +") + QString::number(int(ff7->slot[s].chars[curchar].luck*0.1)));} //amulet +10%
+    else if(ff7->slot[s].chars[curchar].accessory ==0x06) {strbonus+=30; vitbonus+=30;ui->lbl_acc_bonus->setToolTip(tr("str +30 vit +30"));} // champ's belt
+    else if(ff7->slot[s].chars[curchar].accessory ==0x08) {strbonus+=50; spibonus+=50;ui->lbl_acc_bonus->setToolTip(tr("str +50 spi +50"));} // tough ring
+    else if(ff7->slot[s].chars[curchar].accessory ==0x09) {magbonus+=30; spibonus+=30;ui->lbl_acc_bonus->setToolTip(tr("mag +30 spi +30"));} // circlet
+    else{ui->lbl_acc_bonus->setText("");}
     //end of accessories
-    if(ff7->slot[s].chars[curchar].weapon==12){spibonus+=13;}//apocalpse
-    else if(ff7->slot[s].chars[curchar].weapon==14){spibonus+=35;}//ragnarok
-    else if(ff7->slot[s].chars[curchar].weapon==15){spibonus+=24;}//Ultimate Weapon
-    else if(ff7->slot[s].chars[curchar].weapon==59){vitbonus +=35;spibonus +=18;}//behemoth horn
-    else if(ff7->slot[s].chars[curchar].weapon==62){vitbonus +=1; spibonus+=4;}//Guard Stick
-    else if(ff7->slot[s].chars[curchar].weapon==71){vitbonus +=20;}//Umbrella
-    else if(ff7->slot[s].chars[curchar].weapon==72){vitbonus +=12;spibonus +=20;}//Princess Guard
-    else if(ff7->slot[s].chars[curchar].weapon==85){spibonus +=20;}//Spirt Lance
-    else if(ff7->slot[s].chars[curchar].weapon==97){dexbonus +=10;}//Magic Shuriken
-    else if(ff7->slot[s].chars[curchar].weapon==112){vitbonus +=30;}//Starlight M Phone
+    if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(140)){spibonus+=13;}//apocalpse}
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(142)){spibonus+=35;}//ragnarok
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(143)){spibonus+=24;}//Ultimate Weapon
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(187)){spibonus+=18;vitbonus+=35;}//behemoth horn
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(190)){vitbonus+=1; spibonus+=4;}//Guard Stick
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(199)){vitbonus+=20;}//Umbrella
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(200)){vitbonus+=12; spibonus+=20;}//Princess Guard
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(213)){spibonus+=20;}//Spirt Lance
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(225)){dexbonus+=10;}//Magic Shuriken
+    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(240)){vitbonus+=30;}//Starlight M Phone
+
     //end weapons
-    if(ff7->slot[s].chars[curchar].armor==31){dexbonus +=30;lckbonus+=20;} //chocobobracelet
-    else if(ff7->slot[s].chars[curchar].armor==11){magbonus +=5;}//Enincoat
-    else if(ff7->slot[s].chars[curchar].armor==12){magbonus +=20;}//Wizard Bracelet
-    else if(ff7->slot[s].chars[curchar].armor==14){strbonus +=30;}//Gigas Armlet
-    else if(ff7->slot[s].chars[curchar].armor==17){magbonus +=20;}//Forth Braclet
-    else if(ff7->slot[s].chars[curchar].armor==18){strbonus +=20;}//Warrior Bangle
-    else if(ff7->slot[s].chars[curchar].armor==29){strbonus+=20; magbonus +=20;}//Ziedrich
+    if(ff7->slot[s].chars[curchar].armor==31){dexbonus+=30;lckbonus+=20;} //chocobobracelet
+    else if(ff7->slot[s].chars[curchar].armor==11){magbonus+=5;}//Enincoat
+    else if(ff7->slot[s].chars[curchar].armor==12){magbonus+=20;}//Wizard Bracelet
+    else if(ff7->slot[s].chars[curchar].armor==14){strbonus+=30;}//Gigas Armlet
+    else if(ff7->slot[s].chars[curchar].armor==17){magbonus+=20;}//Forth Braclet
+    else if(ff7->slot[s].chars[curchar].armor==18){strbonus+=20;}//Warrior Bangle
+    else if(ff7->slot[s].chars[curchar].armor==29){strbonus+=20; magbonus+=20;}//Ziedrich
     //end armor
+
     //set the labels for the bonuses.
     ui->lbl_str_mat->setText(QString::number(strbonus));
     ui->lbl_vit_mat->setText(QString::number(vitbonus));
@@ -1928,6 +1982,7 @@ void MainWindow::update_stat_totals(void)
     ui->lbl_lck_mat->setText(QString::number(lckbonus));
     ui->lbl_hp_mat->setText(QString::number(hpbonus)+ "%");
     ui->lbl_mp_mat->setText(QString::number(mpbonus) + "%");
+
     //do the math for the stat , if grater then 255 then ingore and use 255 instead.
     stat_temp=ui->sb_str->value()+ui->sb_strbonus->value()+strbonus;    if(stat_temp>256){stat_temp=255;}
     ui->lbl_str_total->setText(QString::number(stat_temp));
@@ -4621,9 +4676,9 @@ void MainWindow::on_limit_4_toggled(){if(!load) {limitapply();}}
 
 //Char Equiptment Tab
 
-void MainWindow::on_combo_armor_currentIndexChanged(int index){if(!load){file_changed=true; ff7->slot[s].chars[curchar].armor = index;    setarmorslots(); update_stat_totals();}}
-void MainWindow::on_combo_weapon_currentIndexChanged(){setweaponslots();update_stat_totals();} //no matter what we need to update materia slots.
-void MainWindow::on_combo_acc_currentIndexChanged(int index){if(!load){file_changed=true; if(index==32){index=0xFF;} ff7->slot[s].chars[curchar].accessory = index;update_stat_totals();}}
+void MainWindow::on_combo_armor_currentIndexChanged(int index){if(!load){file_changed=true; ff7->slot[s].chars[curchar].armor = index;    setarmorslots(); update_stat_totals();weapon_stat();}}
+void MainWindow::on_combo_weapon_currentIndexChanged(){setweaponslots();update_stat_totals();weapon_stat();} //no matter what we need to update materia slots.
+void MainWindow::on_combo_acc_currentIndexChanged(int index){if(!load){file_changed=true; if(index==32){index=0xFF;} ff7->slot[s].chars[curchar].accessory = index;update_stat_totals();weapon_stat();}}
 
 void MainWindow::on_combo_weapon_activated(int index)
 {if(!load){file_changed=true;
