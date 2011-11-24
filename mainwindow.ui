@@ -4777,6 +4777,38 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </spacer>
                  </item>
                  <item>
+                  <widget class="QLabel" name="lbl_weapon_bonus">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_96">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>23</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>23</height>
+                    </size>
+                   </property>
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
                   <widget class="QComboBox" name="combo_weapon">
                    <property name="enabled">
                     <bool>true</bool>
@@ -5643,6 +5675,38 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <layout class="QHBoxLayout" name="horizontalLayout_70">
                  <item>
                   <spacer name="horizontalSpacer_7">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>23</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>23</height>
+                    </size>
+                   </property>
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="lbl_armor_bonus">
+                   <property name="text">
+                    <string/>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="horizontalSpacer_97">
                    <property name="minimumSize">
                     <size>
                      <width>0</width>
@@ -6544,6 +6608,26 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item>
                <spacer name="horizontalSpacer_118">
+                <property name="orientation">
+                 <enum>Qt::Horizontal</enum>
+                </property>
+                <property name="sizeHint" stdset="0">
+                 <size>
+                  <width>40</width>
+                  <height>20</height>
+                 </size>
+                </property>
+               </spacer>
+              </item>
+              <item>
+               <widget class="QLabel" name="lbl_acc_bonus">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <spacer name="horizontalSpacer_120">
                 <property name="orientation">
                  <enum>Qt::Horizontal</enum>
                 </property>
@@ -29556,7 +29640,6 @@ Var And Scrolling Synced To Left Table</string>
   <tabstop>limit_3a</tabstop>
   <tabstop>limit_3b</tabstop>
   <tabstop>limit_4</tabstop>
-  <tabstop>combo_weapon</tabstop>
   <tabstop>combo_armor</tabstop>
   <tabstop>combo_acc</tabstop>
   <tabstop>combo_mat_type_slot</tabstop>

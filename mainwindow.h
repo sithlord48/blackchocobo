@@ -131,6 +131,7 @@ private slots://try to keep these in the same order as the .cpp file
     void fix_sum(const QString &fileName);
     void charupdate(void);
     void update_stat_totals(void);
+    void weapon_stat(void);
     void setchar_growth(int caller);
     void setarmorslots(void);
     void setweaponslots(void);
