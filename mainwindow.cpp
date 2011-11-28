@@ -1870,7 +1870,7 @@ void MainWindow::weapon_stat(void)
         case 0x00: ui->lbl_acc_bonus->setText(tr("str +10"));break;//power wrist
         case 0x01: ui->lbl_acc_bonus->setText(tr("vit +10"));break;//protect ring
         case 0x02: ui->lbl_acc_bonus->setText(tr("mag +10"));break;//earing
-        case 0x03: ui->lbl_acc_bonus->setText(tr("sti +10"));break;//tailsman
+        case 0x03: ui->lbl_acc_bonus->setText(tr("spi +10"));break;//tailsman
         case 0x04: ui->lbl_acc_bonus->setText(tr("dex +10"));break;//choco-feather
         case 0x05: ui->lbl_acc_bonus->setText(tr("lck +10%"));break;//amulet +10%
         case 0x06: ui->lbl_acc_bonus->setText(tr("str +30 vit +30"));break;// champ's belt
@@ -5281,7 +5281,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->cb_bombing_int->setChecked(0);
         ui->cb_s5_7->setChecked(0);//show aeris on roof of chruch durring script
         ui->cb_s5_8->setChecked(0);//not after chruch scene.
-        ui->line_location->setText(tr("Chruch in the Slums"));
+        ui->line_location->setText(tr("Church in the Slums"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(183);
         ui->sb_coordx->setValue(65463);

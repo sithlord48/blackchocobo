@@ -3565,10 +3565,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Chruch in the Slums</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4196,6 +4192,110 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>PSV FF7 SaveGame (*.psv)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>spi +13</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>spi +35</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>spi +24</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>vit +35 spi +18</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>vit +1 spi +4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>vit +20</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>vit +12 spi +20</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>spi +20</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>dex +10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>vit +30</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mag +5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mag +20</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>str +30</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>str +5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>str +20 mag +20</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>dex +30 lck +20</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>str +10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>vit +10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mag +10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>lck +10%</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>str +30 vit +30</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>str +50 spi +50</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>mag +30 spi +30</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>spi +10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>lck +</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Church in the Slums</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
