@@ -2103,7 +2103,7 @@
     </message>
     <message>
         <source>Allowed In PHS</source>
-        <translation>PHS で入替え許可</translation>
+        <translation>ＰＨＳで入替え可能</translation>
     </message>
     <message>
         <source>Sector 7 Slums</source>
@@ -2343,7 +2343,7 @@
     </message>
     <message>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</source>
-        <translation>リストのクリックでセーブ地点を &apos;ワープ&apos; させます。 マップ, 場所, 座標を手動で設定することもできます。</translation>
+        <translation>リストのクリックでセーブ地点を 『ワープ』 させます。 マップ, 場所, 座標を手動で設定することもできます。</translation>
     </message>
     <message>
         <source>Have Fun With This Feature, But Don&apos;t Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</source>
@@ -2593,7 +2593,7 @@
     </message>
     <message>
         <source>Visible In PHS</source>
-        <translation>PHS に表示</translation>
+        <translation>ＰＨＳに表示</translation>
     </message>
     <message>
         <source>Visible Menu Items</source>
@@ -2621,7 +2621,7 @@
     </message>
     <message>
         <source>P.H.S</source>
-        <translation>P.H.S</translation>
+        <translation>ＰＨＳ</translation>
     </message>
     <message>
         <source>Save</source>
@@ -3549,7 +3549,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Shown On Map</source>
-        <translation>マップ上に表示</translation>
+        <translation>マップ上の配置</translation>
     </message>
     <message>
         <source>None</source>
@@ -3574,6 +3574,10 @@ MASTER = 16777215 AP です</translation>
     <message>
         <source>Replay the bombing mission from right after you get off the train.</source>
         <translation>魔晄炉爆破ミッションのリプレイは列車を降りた直後から始まります。</translation>
+    </message>
+    <message>
+        <source>Chruch in the Slums</source>
+        <translation>スラム街の教会</translation>
     </message>
     <message>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
@@ -3797,7 +3801,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Talked to Wedge Twice</source>
-        <translation>ウェッジと二回の会話</translation>
+        <translation>ウェッジと二回会話</translation>
     </message>
     <message>
         <source> Played Video on Train?</source>
@@ -3817,7 +3821,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Talked To Trainman 3 times</source>
-        <translation>駅員の話を三回聞く</translation>
+        <translation>駅員の話を最後まで聞く</translation>
     </message>
     <message>
         <source>Pair At Station agree</source>
@@ -3849,7 +3853,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Talked To soldier two times</source>
-        <translation>警備兵との二回の会話</translation>
+        <translation>警備兵と二回会話</translation>
     </message>
     <message>
         <source>Field Items Picked Up</source>
@@ -4077,7 +4081,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>After Aeris Church Scene</source>
-        <translation>エアリスとの教会イベント完了後</translation>
+        <translation>エアリスとの教会イベント完了</translation>
     </message>
     <message>
         <source>Using Unknown Var Table To View Save</source>
@@ -4181,42 +4185,42 @@ Table Entries are Editable</source>
     <message>
         <source>Farm:Choco Mog_1</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_1</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_1</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_2</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_2</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_2</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_3</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_3</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_3</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_4</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_4</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_4</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_5</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_5</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_5</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_6</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_6</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_6</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_7</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_7</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_7</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_8</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_8</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_8</translation>
     </message>
     <message>
         <source>Calculate Stats</source>
@@ -4232,103 +4236,104 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>spi +13</source>
-        <translation type="unfinished"></translation>
+        <translation>精神 + 13</translation>
     </message>
     <message>
         <source>spi +35</source>
-        <translation type="unfinished"></translation>
+        <translation>精神 + 35</translation>
     </message>
     <message>
         <source>spi +24</source>
-        <translation type="unfinished"></translation>
+        <translation>精神 + 24</translation>
     </message>
     <message>
         <source>vit +35 spi +18</source>
-        <translation type="unfinished"></translation>
+        <translation>体力 + 35, 精神 + 18</translation>
     </message>
     <message>
         <source>vit +1 spi +4</source>
-        <translation type="unfinished"></translation>
+        <translation>体力 + 1, 精神 + 4</translation>
     </message>
     <message>
         <source>vit +20</source>
-        <translation type="unfinished"></translation>
+        <translation>体力 + 20</translation>
     </message>
     <message>
         <source>vit +12 spi +20</source>
-        <translation type="unfinished"></translation>
+        <translation>体力 + 12, 精神 + 20</translation>
     </message>
     <message>
         <source>spi +20</source>
-        <translation type="unfinished"></translation>
+        <translation>精神 + 20</translation>
     </message>
     <message>
         <source>dex +10</source>
-        <translation type="unfinished"></translation>
+        <translation>素早さ + 10</translation>
     </message>
     <message>
         <source>vit +30</source>
-        <translation type="unfinished"></translation>
+        <translation>体力 + 30</translation>
     </message>
     <message>
         <source>mag +5</source>
-        <translation type="unfinished"></translation>
+        <translation>魔力 + 5</translation>
     </message>
     <message>
         <source>mag +20</source>
-        <translation type="unfinished"></translation>
+        <translation>魔力 + 20</translation>
     </message>
     <message>
         <source>str +30</source>
-        <translation type="unfinished"></translation>
+        <translation>力 + 30</translation>
     </message>
     <message>
         <source>str +5</source>
-        <translation type="unfinished"></translation>
+        <translation>力 + 5</translation>
     </message>
     <message>
         <source>str +20 mag +20</source>
-        <translation type="unfinished"></translation>
+        <translation>力 + 20, 魔力 + 20</translation>
     </message>
     <message>
         <source>dex +30 lck +20</source>
-        <translation type="unfinished"></translation>
+        <translation>速さ + 30, 運 + 20</translation>
     </message>
     <message>
         <source>str +10</source>
-        <translation type="unfinished"></translation>
+        <translation>力 + 10</translation>
     </message>
     <message>
         <source>vit +10</source>
-        <translation type="unfinished"></translation>
+        <translation>体力 + 10</translation>
     </message>
     <message>
         <source>mag +10</source>
-        <translation type="unfinished"></translation>
+        <translation>魔力 + 10</translation>
     </message>
     <message>
         <source>lck +10%</source>
-        <translation type="unfinished"></translation>
+        <translation>運 + 10%</translation>
     </message>
     <message>
         <source>str +30 vit +30</source>
-        <translation type="unfinished"></translation>
+        <translation>力 + 20, 体力 + 20</translation>
     </message>
     <message>
         <source>str +50 spi +50</source>
-        <translation type="unfinished"></translation>
+        <translation>力 + 50, 精神 + 50</translation>
     </message>
     <message>
         <source>mag +30 spi +30</source>
-        <translation type="unfinished"></translation>
+        <translation>魔力 + 30, 精神 + 30</translation>
     </message>
     <message>
         <source>spi +10</source>
-        <translation type="unfinished"></translation>
+        <translation>精神 + 10</translation>
     </message>
     <message>
         <source>lck +</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>placeholder after this</translatorcomment>
+        <translation>運 + </translation>
     </message>
     <message>
         <source>Church in the Slums</source>
@@ -6170,7 +6175,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>FF7 Program Icon</source>
-        <translation>FF7 プログラム アイコン</translation>
+        <translation> FF7 プログラム アイコン</translation>
     </message>
     <message>
         <source>Thanks To</source>
