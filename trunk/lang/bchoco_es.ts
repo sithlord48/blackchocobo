@@ -4170,7 +4170,7 @@ NO es un archivo de guardado PSV</translation>
     </message>
     <message>
         <source>Stats: Base+Bonus+Materia=Total</source>
-        <translation type="unfinished"></translation>
+        <translation>Stats: Base+Bonus+Materia=Total</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_1</source>
@@ -4206,11 +4206,11 @@ NO es un archivo de guardado PSV</translation>
     </message>
     <message>
         <source>Calculate Stats</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Calcular Estadísticas</translation>
     </message>
     <message>
         <source>Can Not Export This Format</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">No se puede exportar este formato</translation>
     </message>
     <message>
         <source>PSV FF7 SaveGame (*.psv)</source>
@@ -4218,103 +4218,103 @@ NO es un archivo de guardado PSV</translation>
     </message>
     <message>
         <source>spi +13</source>
-        <translation type="unfinished"></translation>
+        <translation>esp +13</translation>
     </message>
     <message>
         <source>spi +35</source>
-        <translation type="unfinished"></translation>
+        <translation>esp +35</translation>
     </message>
     <message>
         <source>spi +24</source>
-        <translation type="unfinished"></translation>
+        <translation>esp +24</translation>
     </message>
     <message>
         <source>vit +35 spi +18</source>
-        <translation type="unfinished"></translation>
+        <translation>vit +35 esp +18</translation>
     </message>
     <message>
         <source>vit +1 spi +4</source>
-        <translation type="unfinished"></translation>
+        <translation>vit +1 esp +4</translation>
     </message>
     <message>
         <source>vit +20</source>
-        <translation type="unfinished"></translation>
+        <translation>vit +20</translation>
     </message>
     <message>
         <source>vit +12 spi +20</source>
-        <translation type="unfinished"></translation>
+        <translation>vit +12 esp +20</translation>
     </message>
     <message>
         <source>spi +20</source>
-        <translation type="unfinished"></translation>
+        <translation>esp +20</translation>
     </message>
     <message>
         <source>dex +10</source>
-        <translation type="unfinished"></translation>
+        <translation>des +10</translation>
     </message>
     <message>
         <source>vit +30</source>
-        <translation type="unfinished"></translation>
+        <translation>vit +30</translation>
     </message>
     <message>
         <source>mag +5</source>
-        <translation type="unfinished"></translation>
+        <translation>mag +5</translation>
     </message>
     <message>
         <source>mag +20</source>
-        <translation type="unfinished"></translation>
+        <translation>mag +20</translation>
     </message>
     <message>
         <source>str +30</source>
-        <translation type="unfinished"></translation>
+        <translation>fue +30</translation>
     </message>
     <message>
         <source>str +5</source>
-        <translation type="unfinished"></translation>
+        <translation>fue +5</translation>
     </message>
     <message>
         <source>str +20 mag +20</source>
-        <translation type="unfinished"></translation>
+        <translation>fue +20 mag +20</translation>
     </message>
     <message>
         <source>dex +30 lck +20</source>
-        <translation type="unfinished"></translation>
+        <translation>des +30 seu +20</translation>
     </message>
     <message>
         <source>str +10</source>
-        <translation type="unfinished"></translation>
+        <translation>fue +10</translation>
     </message>
     <message>
         <source>vit +10</source>
-        <translation type="unfinished"></translation>
+        <translation>vit +10</translation>
     </message>
     <message>
         <source>mag +10</source>
-        <translation type="unfinished"></translation>
+        <translation>mag +10</translation>
     </message>
     <message>
         <source>lck +10%</source>
-        <translation type="unfinished"></translation>
+        <translation>sue +10%</translation>
     </message>
     <message>
         <source>str +30 vit +30</source>
-        <translation type="unfinished"></translation>
+        <translation>fue +30 vit +30</translation>
     </message>
     <message>
         <source>str +50 spi +50</source>
-        <translation type="unfinished"></translation>
+        <translation>fue +50 esp +50</translation>
     </message>
     <message>
         <source>mag +30 spi +30</source>
-        <translation type="unfinished"></translation>
+        <translation>mag +30 esp +30</translation>
     </message>
     <message>
         <source>spi +10</source>
-        <translation type="unfinished"></translation>
+        <translation>esp +10</translation>
     </message>
     <message>
         <source>lck +</source>
-        <translation type="unfinished"></translation>
+        <translation>sue +</translation>
     </message>
     <message>
         <source>Church in the Slums</source>
@@ -6432,7 +6432,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Predict stat growth (if enabled)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nuevo: Predecir el crecimiento stat (si está activado)</translation>
     </message>
 </context>
 <context>

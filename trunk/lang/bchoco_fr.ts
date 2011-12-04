@@ -5866,27 +5866,27 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>9 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>9 Pt.</translation>
     </message>
     <message>
         <source>10 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>10 Pt.</translation>
     </message>
     <message>
         <source>11 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>11 Pt.</translation>
     </message>
     <message>
         <source>12 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>12 Pt.</translation>
     </message>
     <message>
         <source>13 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>13 Pt.</translation>
     </message>
     <message>
         <source>14 Pt.</source>
-        <translation type="unfinished"></translation>
+        <translation>14 Pt.</translation>
     </message>
 </context>
 <context>
