@@ -26,13 +26,13 @@ extern quint32 chartnls[11][99]; //  Chars tnl Table (cloud - sephiroth)
 extern quint32 charlvls[11][99]; //  Chars lvl Table
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 
-MainWindow::MainWindow(QWidget *parent,FF7 *ff7data,QSettings *config_data)
+MainWindow::MainWindow(QWidget *parent,FF7 *ff7data,QSettings *configdata)
     :QMainWindow(parent),ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
     _init=true;
     ff7 =ff7data;
-    settings = config_data;
+    settings =configdata;
     skip_slot_mask = settings->value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
     file_changed=false;
     load=true;
@@ -107,6 +107,16 @@ MainWindow::MainWindow(QWidget *parent,FF7 *ff7data,QSettings *config_data)
     ui->cb_Region_Slot->setEnabled(false);
     ui->group_controller_mapping->setVisible(false);
     ui->actionNew_Window->setVisible(0);
+
+    // Temp hidden (show only via debug)
+    ui->cb_farm_items_1->setVisible(false);
+    ui->cb_farm_items_2->setVisible(false);
+    ui->cb_farm_items_3->setVisible(false);
+    ui->cb_farm_items_4->setVisible(false);
+    ui->cb_farm_items_5->setVisible(false);
+    ui->cb_farm_items_6->setVisible(false);
+    ui->cb_farm_items_7->setVisible(false);
+    ui->cb_farm_items_8->setVisible(false);
     load=false;
 
     // load settings
@@ -1202,9 +1212,17 @@ void MainWindow::on_action_show_debug_toggled(bool checked)
         ui->combo_id->setVisible(true);
         ui->lbl_id->setVisible(true);
         ui->bm_unknown->setVisible(true);
-        ui->group_controller_mapping->setVisible(true);
+        if(ff7->SG_TYPE == "PC"){ui->group_controller_mapping->setVisible(true);}
         settings->setValue("show_test",1);
         ui->action_show_debug->setIcon(QIcon(":/icon/debug_sel"));
+        ui->cb_farm_items_1->setVisible(true);
+        ui->cb_farm_items_2->setVisible(true);
+        ui->cb_farm_items_3->setVisible(true);
+        ui->cb_farm_items_4->setVisible(true);
+        ui->cb_farm_items_5->setVisible(true);
+        ui->cb_farm_items_6->setVisible(true);
+        ui->cb_farm_items_7->setVisible(true);
+        ui->cb_farm_items_8->setVisible(true);
         testdata_refresh();
     }
 
@@ -1224,9 +1242,17 @@ void MainWindow::on_action_show_debug_toggled(bool checked)
         ui->combo_id->setVisible(false);
         ui->lbl_id->setVisible(false);
         ui->bm_unknown->setVisible(false);
-        ui->group_controller_mapping->setVisible(false);
+        if(ff7->SG_TYPE =="PC"){ui->group_controller_mapping->setVisible(false);}
         settings->setValue("show_test",0);
         ui->action_show_debug->setIcon(QIcon(":/icon/debug_unsel"));
+        ui->cb_farm_items_1->setVisible(false);
+        ui->cb_farm_items_2->setVisible(false);
+        ui->cb_farm_items_3->setVisible(false);
+        ui->cb_farm_items_4->setVisible(false);
+        ui->cb_farm_items_5->setVisible(false);
+        ui->cb_farm_items_6->setVisible(false);
+        ui->cb_farm_items_7->setVisible(false);
+        ui->cb_farm_items_8->setVisible(false);
     }
 }
 
@@ -5712,6 +5738,7 @@ void MainWindow::on_leader_x_valueChanged(int value)
     ff7->slot[s].l_world = (value | ui->leader_id->value() << 19 | ui->leader_angle->value() << 24);
     if(ui->combo_map_controls->currentIndex()==0){load=true;ui->slide_world_x->setValue(value);load=false;}
 }}
+
 void MainWindow::on_leader_y_valueChanged(int value)
 {if(!load){file_changed=true;
     ff7->slot[s].l_world2 = (value | ui->leader_z->value() << 18);
