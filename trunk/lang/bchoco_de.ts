@@ -1348,8 +1348,7 @@
     </message>
     <message>
         <source>Forgotten Captial</source>
-        <translatorcomment>Warp here  and see what menu says you location is in the menu Use that . (field location where aeris gets killed)</translatorcomment>
-        <translation type="unfinished">Vergessene ...Was</translation>
+        <translation>Vergessene Stadt</translation>
     </message>
     <message>
         <source>Sector 8, Underground</source>
@@ -1524,8 +1523,7 @@
     </message>
     <message>
         <source>Battles</source>
-        <translatorcomment>Number of Total Battles fought ; &quot;Fights&quot; is the label on the container never noticed that is does not really make sence like that.</translatorcomment>
-        <translation type="unfinished">Schlachten</translation>
+        <translation>Anzahl der Kämpfe</translation>
     </message>
     <message>
         <source>Runs</source>
@@ -1674,8 +1672,7 @@
     </message>
     <message>
         <source>Qty</source>
-        <translatorcomment>? What&apos;s that? Abrevation for Quanity  &quot;how many&quot; </translatorcomment>
-        <translation type="unfinished">Qty</translation>
+        <translation>Stk</translation>
     </message>
     <message>
         <source>Key Items</source>
@@ -1847,8 +1844,7 @@
     </message>
     <message>
         <source>Intel</source>
-        <translatorcomment>What&apos;s that again? Inteligence</translatorcomment>
-        <translation type="unfinished">Intel</translation>
+        <translation>Intel</translation>
     </message>
     <message>
         <source>Average</source>
@@ -2024,8 +2020,7 @@
     </message>
     <message>
         <source>Coop</source>
-        <translatorcomment>What do you mean exactly or what is that? Cooperation (chocobo stat)</translatorcomment>
-        <translation type="unfinished">Coop</translation>
+        <translation>Koop</translation>
     </message>
     <message>
         <source>Personality</source>
@@ -2655,8 +2650,7 @@
     </message>
     <message>
         <source>Materia Caves Empty</source>
-        <translatorcomment>Caves? These are the places where you pick up the 4 special materia (knights of the round, hp&lt;-&gt;mp and the others) </translatorcomment>
-        <translation type="unfinished">Materia</translation>
+        <translation>Materia Fundorte Leer</translation>
     </message>
     <message>
         <source>Mime</source>
@@ -2976,8 +2970,7 @@ ist kein FF7 Spielstand.</translation>
     </message>
     <message>
         <source>NO CAP</source>
-        <translatorcomment>Cap as in limit. used for the ap limit for the &quot;don&apos;t use&quot; materias , will only be seen if using a non stock kernels save or something went very wrong.</translatorcomment>
-        <translation type="unfinished"></translation>
+        <translation>KEINE BEGRENZUNG</translation>
     </message>
     <message>
         <source>Braver</source>
@@ -3410,8 +3403,8 @@ ist kein FF7 Spielstand.</translation>
     </message>
     <message>
         <source>sliders show </source>
-        <translatorcomment>Sliders On The World Map Tab, There is a combo box next to this label,</translatorcomment>
-        <translation type="unfinished">Show</translation>
+        <translatorcomment>Want to see this part in the programm</translatorcomment>
+        <translation>sliders show</translation>
     </message>
     <message>
         <source>Party Leader</source>
@@ -3587,8 +3580,7 @@ ist kein FF7 Spielstand.</translation>
     </message>
     <message>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
-        <translatorcomment>Translation correct, if you mean that Cloud is going to replace young Cloud. Or do you mean Cloud&apos;s stats are going to replace young Clouds?</translatorcomment>
-        <translation type="unfinished">Diese Einstellung wird Cloud zum jungen Cloud kopieren (caitsith&apos;s Schacht). Sephiroth&apos;s stats werden direkt von Vincent übernommen.</translation>
+        <translation>Diese Einstellung wird Cloud zum jungen Cloud kopieren (caitsith&apos;s Schacht). Sephiroth&apos;s Stats werden direkt von Vincent übernommen.</translation>
     </message>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
@@ -3616,8 +3608,7 @@ ist kein FF7 Spielstand.</translation>
     </message>
     <message>
         <source>Unable to Mate</source>
-        <translatorcomment>Mate in meaning of friend? Something like &quot;Unable to be a friend of&quot;?</translatorcomment>
-        <translation type="unfinished">wut</translation>
+        <translation>Passt nicht zusammen</translation>
     </message>
     <message>
         <source>Add One Of Each Mastered Materia </source>
@@ -3716,8 +3707,7 @@ Möchtest du die Spielzeit korrigieren?</translation>
 Select A Slot To Compare
 Table is Read Only
 Var And Scrolling Synced To Left Table</source>
-        <translatorcomment>Correct if table = spreadsheet/chart; Also can&apos;t really translate the last sentence... Can you tell me this in other words?</translatorcomment>
-        <translation type="unfinished">------Rechte Tabelle------&gt;
+        <translation>------Rechte Tabelle------&gt;
 Wähle Steckplatz zum Vergleichen
 Tabelle ist nur lesbar
 Var und Scrollen zusammen zur linken Tabelle</translation>
@@ -3828,8 +3818,7 @@ Var und Scrollen zusammen zur linken Tabelle</translation>
     </message>
     <message>
         <source>Pair At Station agree</source>
-        <translatorcomment>Two People At The Train Station Have a conversation , this is set when they have talked.</translatorcomment>
-        <translation type="unfinished">Paar</translation>
+        <translation>Paar an der Station haben geredet</translation>
     </message>
     <message>
         <source>Set To Reactor 5 Mode</source>
@@ -3890,7 +3879,7 @@ Var und Scrollen zusammen zur linken Tabelle</translation>
     <message>
         <source>Post Pan NMKIN_5</source>
         <translatorcomment>After the camera has Paned on the field map named &quot;NMKIN_5&quot;</translatorcomment>
-        <translation type="unfinished">Post Pan NMKIN_5</translation>
+        <translation>Nach Kamera-Bewegung auf Karte NMKIN_5</translation>
     </message>
     <message>
         <source>Trigger Game Over (countdown timer out)</source>
@@ -3899,7 +3888,7 @@ Var und Scrollen zusammen zur linken Tabelle</translation>
     <message>
         <source>Post Electrical Effect MD8_3</source>
         <translatorcomment>After The spark shows on field map named &quot;MD8_3&quot;</translatorcomment>
-        <translation type="unfinished">Post Electrical Effect MD8_3</translation>
+        <translation>Nach Glitzer-Effekt auf Karte MD8_3</translation>
     </message>
     <message>
         <source>0x01 Potion On MD8_3 (see item tab)</source>
@@ -4006,9 +3995,9 @@ Var und Scrollen zusammen zur linken Tabelle</translation>
 Select Unknown Var To View
 Table Entries are Editable</source>
         <translatorcomment>Translation Needed See the Unknown Var Table for where its used.</translatorcomment>
-        <translation type="unfinished">&lt;------Left Table------
-Select Unknown Var To View
-Table Entries are Editable</translation>
+        <translation>&lt;------Linke Tabelle------
+Wähle unbekannte Var zum Anzeigen aus
+Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>MDS7ST1:Potion.(In Train 2)</source>
@@ -5997,32 +5986,28 @@ Leer</translation>
     <message>
         <source>
  Game Uses %1 Save Block</source>
-        <translatorcomment>SEE THIS LINE IN ERRBOX</translatorcomment>
-        <translation type="unfinished">
- Game Uses %1 Save Block</translation>
+        <translation>
+ Spiel benutzt %1 Speicherblöcke</translation>
     </message>
     <message>
         <source>s; Next Data Chunk @ Slot:%1</source>
-        <translatorcomment>SEE THIS LINE IN ERRBOX</translatorcomment>
-        <translation type="unfinished">s; Next Data Chunk @ Slot:%1</translation>
+        <translation>s; Nächstes Datenstück @ Steckplatz:%1</translation>
     </message>
     <message>
         <source>
 
  Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translatorcomment>SEE THIS LINE IN ERRBOX (here its a combo of two lines used only with a 3+ block psx save game)</translatorcomment>
-        <translation type="unfinished">
+        <translation>
 
- Mid-Linked Block Next Data Chunk @ Slot:%1</translation>
+ Mid-Linked Block Nächstes Datenstück @ Steckplatz:%1</translation>
     </message>
     <message>
         <source>
 
  End Of Linked Blocks</source>
-        <translatorcomment>Type of PSx Save Data Blocks(save data space of 8k) can be linked together to allow for games that need more then 8k space for their save game, this type of block will always be the last block if more then one block is needed.</translatorcomment>
-        <translation type="unfinished">
+        <translation>
 
- End Of Linked Blocks</translation>
+ Ende von Linked Blocks</translation>
     </message>
 </context>
 <context>
@@ -6089,31 +6074,31 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: This Fancy About Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Dieser tolle Über-Dialog</translation>
     </message>
     <message>
         <source>New: Main Window Resizeable</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Hauptfenster skalierbar</translation>
     </message>
     <message>
         <source>New: Psx Icons Show In Region Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: PSX-Symbole werden in Region Info angezeigt</translation>
     </message>
     <message>
         <source>New: Some Options have Ability to reset to default</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Einige Optionen können zurückgesetzt werden</translation>
     </message>
     <message>
         <source>Fixed: No longer export non ff7 slots to pc</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Nur noch ff7 Speicherstände werden zum PC exportiert</translation>
     </message>
     <message>
         <source>Fixed: Pc Header Mask Aware</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: PC Header Mask Aware</translation>
     </message>
     <message>
         <source>Fixed: Saves Will Display Slots Correctly</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Speicherstände werden korrekt angezeigt</translation>
     </message>
     <message>
         <source>&amp;Close</source>
@@ -6121,127 +6106,127 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Using Qt:</source>
-        <translation type="unfinished"></translation>
+        <translation>Benutze Qt:</translation>
     </message>
     <message>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Credits</translation>
     </message>
     <message>
         <source>Giving Credit Where Credit is Due</source>
-        <translation type="unfinished"></translation>
+        <translation>Giving Credit Where Credit is Due</translation>
     </message>
     <message>
         <source>Programmers</source>
-        <translation type="unfinished"></translation>
+        <translation>Programmierer</translation>
     </message>
     <message>
         <source>Main Programmer</source>
-        <translation type="unfinished"></translation>
+        <translation>Haupt-Programmierer</translation>
     </message>
     <message>
         <source>Bug Testers</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler-Tester</translation>
     </message>
     <message>
         <source>Main Bug Tester, for win/gnome + ingame</source>
-        <translation type="unfinished"></translation>
+        <translation>Haupt-Fehler-Tester, für win/gnome + ingame</translation>
     </message>
     <message>
         <source>Mac Os Tester</source>
-        <translation type="unfinished"></translation>
+        <translation>Mac Os Tester</translation>
     </message>
     <message>
         <source>Windows Tester</source>
-        <translation type="unfinished"></translation>
+        <translation>Windows Tester</translation>
     </message>
     <message>
         <source>Translators</source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzer</translation>
     </message>
     <message>
         <source>Spanish Translation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Spanische Übersetzung:</translation>
     </message>
     <message>
         <source>French Translation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Französische Übersetzung:</translation>
     </message>
     <message>
         <source>Icons Used In this Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Symbole benutzt in diesem Programm</translation>
     </message>
     <message>
         <source>Buff Icons (and one or two more) by </source>
-        <translation type="unfinished"></translation>
+        <translation>Buff Icons (eins mehr oder auch zwei) von </translation>
     </message>
     <message>
         <source>FF7 Program Icon</source>
-        <translation type="unfinished"></translation>
+        <translation>FF7 Programm Symbol</translation>
     </message>
     <message>
         <source>Thanks To</source>
-        <translation type="unfinished"></translation>
+        <translation>Danke An</translation>
     </message>
     <message>
         <source>A Big Thank You  To:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein großes Danke  an:</translation>
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct,item/materia lists  and string conversion function. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation type="unfinished"></translation>
+        <translation> Danke dir für die Freigabe des Jenova-Quellcodes. Dieses Programm benutzt veränderte Versionen von Jenova&apos;s Spielstand-Strukturen, Item-/Materia-Listen und die string-Konvertierungs-Funktion. Zugang zum Quellcode rettete viel Zeit in der Frühentwicklung.</translation>
     </message>
     <message>
         <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
-        <translation type="unfinished"></translation>
+        <translation>Danke dir für,  All die Hilfe mit Black Chocobo. Übersetzung , Fehler-Testen, Hilfe beim Suchen von Daten auf der savemap, Theme-Testen, etc. er tut viel, um helfen zu können.</translation>
     </message>
     <message>
         <source>Thank You For, the old checksum program</source>
-        <translation type="unfinished"></translation>
+        <translation>Danke Dir für das alte checksum-Programm</translation>
     </message>
     <message>
         <source>Thank You For, Helping me see the light of stupid errors. </source>
-        <translation type="unfinished"></translation>
+        <translation>Danke dir für das Sehen des Lichts bei dummen Fehlern. </translation>
     </message>
     <message>
         <source>Thank You For, Providing a Better understanding of Qt&apos;s Functions When the help files failed.</source>
-        <translation type="unfinished"></translation>
+        <translation>Danke dir für das Bereitstellen eines besseren Verständnisses der Qt-Funktionen, als die Dokumentationen versagten.</translation>
     </message>
     <message>
         <source>Cause She&apos;s Just Awesome!</source>
-        <translation type="unfinished"></translation>
+        <translation>Weil Sie einfach fantastisch ist!</translation>
     </message>
     <message>
         <source>Early Win32 Tester</source>
-        <translation type="unfinished"></translation>
+        <translation>Früher Win32 Tester</translation>
     </message>
     <message>
         <source>New: Using Myst6re SaveIcon Class</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Benutze Myst6re&apos;s SaveIcon-Klasse</translation>
     </message>
     <message>
         <source>Fixed: Items/Materia Names And Skill Now Translated</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Item-/Materia-Namen und Fähigkeiten nun übersetzt</translation>
     </message>
     <message>
         <source>Fixed: Titan/Ramuh Stats Backward.</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Titan/Ramuh Stats Verkerht.</translation>
     </message>
     <message>
         <source>New: Save and Save as are now both allowed</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Speichern und Speichern Als sind beide erlaubt</translation>
     </message>
     <message>
         <source>New: Change Slot Posin in Debug mode (MC only) </source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Wechsel Steckplatz-Position im Debug-Modus (nur MC)</translation>
     </message>
     <message>
         <source>New: Support for .vgs .mem and .gme formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Unterstützung für .vgs .mem und .gme Formate</translation>
     </message>
     <message>
         <source>New: Fancy Character Materia on Equipment tab</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Schicke Charakter-Materia im Equipment Tab</translation>
     </message>
     <message>
         <source>New: Toggle Field Help and Battle Target Labels</source>
@@ -6543,7 +6528,7 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Mid-Linked Block </source>
         <translatorcomment>Used for psx save &quot;blocks&quot; a mid link block is only seen when a psx save requires more then two save blocks on a memory card. a save that requires 3 blocks would have a &quot;Start Block &quot;, followed by a &quot;Mid link Block&quot; Then a &quot;End of link block&quot;</translatorcomment>
-        <translation type="unfinished">Mitte-</translation>
+        <translation>Mid Linked Block </translation>
     </message>
     <message>
         <source>End Of Linked Data</source>
@@ -6556,19 +6541,17 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>
  Game Uses %1 Save Block</source>
-        <translatorcomment>Translate as it reads , the &quot;%1&quot; is replaced with a number at run time. Save Block refers to the save block of a playstation one memory card. (1 card = 15 &quot;blocks&quot; of save data)</translatorcomment>
-        <translation type="unfinished">
- Game Uses %1 Save Block</translation>
+        <translation>
+ Spiel benutzt %1 Speicherblöcke</translation>
     </message>
     <message>
         <source>s; Next Data Chunk @ Slot:%1</source>
         <translatorcomment>this phrase will come up if the save uses more then one block making &quot;Save Block&quot;, &quot;Save Blocks&quot; in the previous line, at run time %1 will be replaced by a number </translatorcomment>
-        <translation type="unfinished">s; Next Data Chunk @ Slot:%1</translation>
+        <translation>s; Nächstes Datenstück @ Steckplatz:%1</translation>
     </message>
     <message>
         <source>Next Data Chunk @ Slot:%1</source>
-        <translatorcomment>shows location of next chunk of multi block psx save %1 will become a number at runtime.</translatorcomment>
-        <translation type="unfinished">Next Data Chunk @ Slot:%1</translation>
+        <translation>Nächstes Datenstück @ Steckplatz:%1</translation>
     </message>
 </context>
 </TS>
