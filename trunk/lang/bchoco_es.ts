@@ -4174,43 +4174,43 @@ NO es un archivo de guardado PSV</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_1</source>
-        <translation type="unfinished"></translation>
+        <translation>Granja: Choco Mog_1</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_2</source>
-        <translation type="unfinished"></translation>
+        <translation>Granja: Choco Mog_2</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_3</source>
-        <translation type="unfinished"></translation>
+        <translation>Granja: Choco Mog_3</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_4</source>
-        <translation type="unfinished"></translation>
+        <translation>Granja: Choco Mog_4</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_5</source>
-        <translation type="unfinished"></translation>
+        <translation>Granja: Choco Mog_5</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_6</source>
-        <translation type="unfinished"></translation>
+        <translation>Granja: Choco Mog_6</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_7</source>
-        <translation type="unfinished"></translation>
+        <translation>Granja: Choco Mog_7</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_8</source>
-        <translation type="unfinished"></translation>
+        <translation>Granja: Choco Mog_8</translation>
     </message>
     <message>
         <source>Calculate Stats</source>
-        <translation type="unfinished">Calcular Estadísticas</translation>
+        <translation>Calcular Stats</translation>
     </message>
     <message>
         <source>Can Not Export This Format</source>
-        <translation type="unfinished">No se puede exportar este formato</translation>
+        <translation>Este formato no se puede exportar </translation>
     </message>
     <message>
         <source>PSV FF7 SaveGame (*.psv)</source>
@@ -6432,7 +6432,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Predict stat growth (if enabled)</source>
-        <translation type="unfinished">Nuevo: Predecir el crecimiento stat (si está activado)</translation>
+        <translation>Nuevo: Predecir el crecimiento de stats (si está activado)</translation>
     </message>
 </context>
 <context>
