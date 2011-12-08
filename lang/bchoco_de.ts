@@ -3608,7 +3608,7 @@ ist kein FF7 Spielstand.</translation>
     </message>
     <message>
         <source>Unable to Mate</source>
-        <translation>Passt nicht zusammen</translation>
+        <translation>Paarungs-Unfähig</translation>
     </message>
     <message>
         <source>Add One Of Each Mastered Materia </source>
@@ -6230,215 +6230,216 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Toggle Field Help and Battle Target Labels</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Schalte um zwischen Feld-Hilfe und Kampf-Ziel Labels</translation>
     </message>
     <message>
         <source>New: Revive Ruby Weapon &amp; Emerald Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Wiederbelebe Ruby Weapon &amp; Emerald Weapon</translation>
     </message>
     <message>
         <source>New: Basic Setting of World Locations In Debug</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Basis-Einstellung von Welt-Orten im Debug</translation>
     </message>
     <message>
         <source>New: Added .bin .mc .mci .ps .psm .dff  to mcr/mcd list</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: .bin .mc .mci .ps .psm .dff  zur mcr/mcd Liste hinzugefügt</translation>
     </message>
     <message>
         <source>Fixed: Psx and Psv Region Detection</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: PSX und PSV Region-Erkennungs-Fehler</translation>
     </message>
     <message>
         <source>Previous Versions</source>
-        <translation type="unfinished"></translation>
+        <translation>Vorherige Versionen</translation>
     </message>
     <message>
         <source>inital psx save/load; fixed checksum</source>
-        <translation type="unfinished"></translation>
+        <translation>Anfangs-PSX speichern/laden; checksum-Fehler behoben</translation>
     </message>
     <message>
         <source>Fixed: Materia Slots Display Left To Right (see ingame)</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Materia-Schächte werden von Links nach Rechts angezeigt (siehe ingame)</translation>
     </message>
     <message>
         <source>New: Set Font For Program</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Setze Schriftart für Programm fest</translation>
     </message>
     <message>
         <source>Fixed: Missing Keycard 66 in keyitems list</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Fehlende Keycard 66 in Schlüsselitem-Liste</translation>
     </message>
     <message>
         <source>Update:Almost All Spinboxes now &quot;Wrapping&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Update: Fast alle Spinboxes werden nun &quot;Gewrappt&quot;</translation>
     </message>
     <message>
         <source>Fixed: Empty Chocobos Now Start W/ empty names.</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Leere Chocobos starten nun ohne leeren Namen.</translation>
     </message>
     <message>
         <source>Fixed: Typos Lots of Typos..</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Typos, jede Menge Typos..</translation>
     </message>
     <message>
         <source>Fixed: &quot;Time Bug&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: &quot;Zeit-Fehler&quot;</translation>
     </message>
     <message>
         <source>Fixed: &quot;Gravity&quot; Materia Bug</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: &quot;Schwerkraft&quot; Materia Fehler</translation>
     </message>
     <message>
         <source>Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Gil, Erfahrung, Achterbahn-Highscore und einige andere Spinbox Caps.</translation>
     </message>
     <message>
         <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
-        <translation type="unfinished"></translation>
+        <translation>Update: Weltkarte Ruby-&gt;Diamond/Ultimate/Ruby</translation>
     </message>
     <message>
         <source>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: &quot;Automatisch Erfahrung &lt;-&gt; Lvl&quot; Option (Standart:An)</translation>
     </message>
     <message>
         <source>New: Flashback  Chruch in the slums</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Again, I think it&apos;s called Church, not chruch :P</translatorcomment>
+        <translation>Neu: Rückblick: Kirche in den Slums</translation>
     </message>
     <message>
         <source>Update: Location Tab; Both Save &amp; World Locations</source>
-        <translation type="unfinished"></translation>
+        <translation>Update: Ort-Tab; Beide Speicher- &amp; Welt-Orte</translation>
     </message>
     <message>
         <source>New: Spawn New Windows. (mainly for testing)</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Erzeuge neue Fenster. (hauptsächlich zum testen)</translation>
     </message>
     <message>
         <source>New: Unknown Var  Tracker in Test Data (very basic atm)</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Unbekannte Var  Tracker in Test Data (sehr einfach im Moment)</translation>
     </message>
     <message>
         <source>Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Update: Chocobo-Ställe im Chocobo-Tab nun im-Scroll Bereich</translation>
     </message>
     <message>
         <source>Fixed: New Window Now Via Detached Process</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Neue Fenster nun via abgelösten Prozessen</translation>
     </message>
     <message>
         <source>Fixed: Limit Boxes Not Always Showing Data Correctly</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Limit Boxen zeigen nicht immer korrekte Daten an</translation>
     </message>
     <message>
         <source>Fixed: Cait/ Vincent Reversed in PHS Boxes</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Cait/Vincent aufgehoben in PHS-Boxen</translation>
     </message>
     <message>
         <source>New: Editable Unknown Vars</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Bearbeitbare unbekannte Variablen</translation>
     </message>
     <message>
         <source>New: Toggle &quot;unable to mate&quot; flag for chocobos</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Umschaltungsoption für &quot;Paarungs-Unfähig&quot; für Chocobos</translation>
     </message>
     <message>
         <source>Fixed: Use the Action for showing Slot select dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Benutze Aktion zum Anzeigen vom Zeige-Steckplatz-An-Dialog</translation>
     </message>
     <message>
         <source>Fixed: Chocobo Name Editable again</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Chocobo Namen wieder bearbeitbar</translation>
     </message>
     <message>
         <source>Fixed: Dialogs Inherit style.</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Dialoge im Erb-Stil.</translation>
     </message>
     <message>
         <source>New: Toggle Each Stable Occupied Flag</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Umschaltoption für jeden gemieteten Stall</translation>
     </message>
     <message>
         <source>New: Reload Feature</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Nachladen-Funktion</translation>
     </message>
     <message>
         <source>New: Locations &quot;Chocobo Ranch&quot; And &quot;Highwind&quot;</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Orte &quot;Chocobo-Farm&quot; und &quot;Highwind&quot;</translation>
     </message>
     <message>
         <source>New: Better Unknown Var Tab.</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Besserer Unbekannte-Variablen Tab.</translation>
     </message>
     <message>
         <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: NTSC &lt;=&gt; PAL Zeit Konvertierung</translation>
     </message>
     <message>
         <source>New: Edit number of steps taken</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Bearbeite Schrittanzahl</translation>
     </message>
     <message>
         <source>New: Better Organized Progression Tab.</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Besser organisierter Fortschritts-Tab.</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Japanische Übersetzung:</translation>
     </message>
     <message>
         <source>New: Japanese Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Japanische Übersetzung</translation>
     </message>
     <message>
         <source>New: Field Items Picked Up</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Feld-Items aufgenommen</translation>
     </message>
     <message>
         <source>Fixed: Optimized Slotselect Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Optimierter Steckplatz-Auswahl Dialog</translation>
     </message>
     <message>
         <source>New: Edit Controller Mapping (non pc saves)</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Bearbeitbares Controller-Mapping (Nicht-PC-Spielstände)</translation>
     </message>
     <message>
         <source>New: Materia Buffer , copy/paste materias</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Materia Buffer , kopiere/füge Materias ein</translation>
     </message>
     <message>
         <source>New: Status Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Status-Bereich</translation>
     </message>
     <message>
         <source>New: Takes a filename argument (open w/ a file)</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Nimmt ein Dateinamen-Argument (Öffne ohne Datei)</translation>
     </message>
     <message>
         <source>New: Text Conversion Class (based on myst6re&apos;s work) </source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Text Konvertierungs-Klasse (basierend auf myst6re&apos;s Arbeit)</translation>
     </message>
     <message>
         <source>Fixed: Save Button</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Speichern-Knopf</translation>
     </message>
     <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
-        <translation type="unfinished"></translation>
+        <translation>PSX-Symbol Klasse &amp; PC string Konvertierer für Japan</translation>
     </message>
     <message>
         <source>New: German Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Deutsche Übersetzung</translation>
     </message>
     <message>
         <source>Improved: Detection of FF7 Types.</source>
-        <translation type="unfinished"></translation>
+        <translation>Verbessert: Erkennung von FF7-Typen.</translation>
     </message>
     <message>
         <source>Improved: Slotselect handling of non-ff7 and empty slots</source>
-        <translation type="unfinished"></translation>
+        <translation>Verbessert: Steckplatzauswahl-Verhalten bei nicht-ff7- und leeren Steckplätzen</translation>
     </message>
     <message>
         <source>New: Predict stat growth (if enabled)</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Wachstumsvorhersage für Stats (Wenn aktiviert)</translation>
     </message>
 </context>
 <context>
