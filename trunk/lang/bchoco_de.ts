@@ -1391,7 +1391,7 @@
     <name>MainWindow</name>
     <message>
         <source>Black Chocobo</source>
-        <translation>Schwarzer Chocobo</translation>
+        <translation type="unfinished">Black Chocobo</translation>
     </message>
     <message>
         <source>In Party</source>
