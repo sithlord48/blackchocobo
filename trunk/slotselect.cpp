@@ -841,18 +841,16 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
             if((desc_end = desc.indexOf('\x00')) != -1) {desc.truncate(desc_end);}
 
             QString Slottext ="\n\n" + codec->toUnicode(desc);
-            if(not_pc)
-            {
-                if(ff7->file_headerp[index]==0xA1){Slottext.append(tr("(Deleted)"));}
-                QByteArray temp;
-                temp.resize(3);
-                temp[0]=ff7->file_headerp[index+0x04];
-                temp[1]=ff7->file_headerp[index+0x05];
-                temp[2]=ff7->file_headerp[index+0x06];
-                qint32 value = temp[0] | (temp[1] << 8) | (temp[2] <<16);
-                Slottext.append(tr("\n Game Uses %1 Save Block").arg(QString::number(value/0x2000)));
-                if(ff7->file_headerp[index+0x08]!=0xFF){Slottext.append(tr("s; Next Data Chunk @ Slot:%1").arg(QString::number(ff7->file_headerp[index+0x08]+1)));}
-            }
+            if(ff7->file_headerp[index]==0xA1){Slottext.append(tr("(Deleted)"));}
+            QByteArray temp;
+            temp.resize(3);
+            temp[0]=ff7->file_headerp[index+0x04];
+            temp[1]=ff7->file_headerp[index+0x05];
+            temp[2]=ff7->file_headerp[index+0x06];
+            qint32 value = temp[0] | (temp[1] << 8) | (temp[2] <<16);
+            Slottext.append(tr("\n Game Uses %1 Save Block").arg(QString::number(value/0x2000)));
+            if(ff7->file_headerp[index+0x08]!=0xFF){Slottext.append(tr("s; Next Data Chunk @ Slot:%1").arg(QString::number(ff7->file_headerp[index+0x08]+1)));}
+
             QHBoxLayout *hbox = new QHBoxLayout;
             QVBoxLayout *vbox = new QVBoxLayout;
 

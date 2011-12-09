@@ -3576,10 +3576,6 @@ MASTER = 16777215 AP です</translation>
         <translation>魔晄炉爆破ミッションのリプレイは列車を降りた直後から始まります。</translation>
     </message>
     <message>
-        <source>Chruch in the Slums</source>
-        <translation>スラム街の教会</translation>
-    </message>
-    <message>
         <source>Setting This Will Copy Cloud as is to young cloud (caitsith&apos;s slot). sephiroth&apos;s stats will come directly from vincent.</source>
         <translation>現在のクラウドがそのまま昔のクラウド (ケット・シーのスロット) にコピーされます。セフィロスにはヴィンセントの能力値が適用されます。</translation>
     </message>
@@ -5314,286 +5310,6 @@ Table Entries are Editable</source>
         <translation>マスターまほう</translation>
     </message>
     <message>
-        <source>Summon Choco/Mog x1 (14mp)</source>
-        <translation>チョコボ＆モーグリ x1 (14MP)</translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x2 (14mp)</source>
-        <translation>チョコボ＆モーグリ x2 (14MP)</translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x3 (14mp)</source>
-        <translation>チョコボ＆モーグリ x3 (14MP)</translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x4 (14mp)</source>
-        <translation>チョコボ＆モーグリ x4 (14MP)</translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x5 (14mp)</source>
-        <translation>チョコボ＆モーグリ x5 (14MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x1 (34mp)</source>
-        <translation>イフリート x1 (34MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x2 (34mp)</source>
-        <translation>イフリート x2 (34MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x3 (34mp)</source>
-        <translation>イフリート x3 (34MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x4 (34mp)</source>
-        <translation>イフリート x4 (34MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x5 (34mp)</source>
-        <translation>イフリート x5 (34MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x1 (40mp)</source>
-        <translation>ラムウ x1 (40MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x2 (40mp)</source>
-        <translation>ラムウ x2 (40MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x3 (40mp)</source>
-        <translation>ラムウ x3 (40MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x4 (40mp)</source>
-        <translation>ラムウ x4 (40MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x5 (40mp)</source>
-        <translation>ラムウ x5 (40MP)</translation>
-    </message>
-    <message>
-        <source>Summon Titan x1 (46mp)</source>
-        <translation>タイタン x1 (46MP)</translation>
-    </message>
-    <message>
-        <source>Summon Titan x2 (46mp)</source>
-        <translation>タイタン x2 (46MP)</translation>
-    </message>
-    <message>
-        <source>Summon Titan x3 (46mp)</source>
-        <translation>タイタン x3 (46MP)</translation>
-    </message>
-    <message>
-        <source>Summon Titan x4 (46mp)</source>
-        <translation>タイタン x4 (46MP)</translation>
-    </message>
-    <message>
-        <source>Summon Titan x5 (46mp)</source>
-        <translation>タイタン x5 (46MP)</translation>
-    </message>
-    <message>
-        <source>Summon Odin x1 (80mp)</source>
-        <translation>オーディーン x1 (80MP)</translation>
-    </message>
-    <message>
-        <source>Summon Odin x2 (80mp)</source>
-        <translation>オーディーン x2 (80MP)</translation>
-    </message>
-    <message>
-        <source>Summon Odin x3 (80mp)</source>
-        <translation>オーディーン x3 (80MP)</translation>
-    </message>
-    <message>
-        <source>Summon Odin x4 (80mp)</source>
-        <translation>オーディーン x4 (80MP)</translation>
-    </message>
-    <message>
-        <source>Summon Odin x5 (80mp)</source>
-        <translation>オーディーン x5 (80MP)</translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x1 (78mp)</source>
-        <translation>リヴァイアサン x1 (78MP)</translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x2 (78mp)</source>
-        <translation>リヴァイアサン x2 (78MP)</translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x3 (78mp)</source>
-        <translation>リヴァイアサン x3 (78MP)</translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x4 (78mp)</source>
-        <translation>リヴァイアサン x4 (78MP)</translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x5 (78mp)</source>
-        <translation>リヴァイアサン x5 (78MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x1 (100mp)</source>
-        <translation>バハムート x1 (100MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x2 (100mp)</source>
-        <translation>バハムート x2 (100MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x3 (100mp)</source>
-        <translation>バハムート x3 (100MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x4 (100mp)</source>
-        <translation>バハムート x4 (100MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x5 (100mp)</source>
-        <translation>バハムート x5 (100MP)</translation>
-    </message>
-    <message>
-        <source>Summon Kujata x1 (110mp)</source>
-        <translation>クジャタ x1 (110MP)</translation>
-    </message>
-    <message>
-        <source>Summon Kujata x2 (110mp)</source>
-        <translation>クジャタ x2 (110MP)</translation>
-    </message>
-    <message>
-        <source>Summon Kujata x3 (110mp)</source>
-        <translation>クジャタ x3 (110MP)</translation>
-    </message>
-    <message>
-        <source>Summon Kujata x4 (110mp)</source>
-        <translation>クジャタ x4 (110MP)</translation>
-    </message>
-    <message>
-        <source>Summon Kujata x5 (110mp)</source>
-        <translation>クジャタ x5 (110MP)</translation>
-    </message>
-    <message>
-        <source>Summon Alexander x1 (120mp)</source>
-        <translation>アレクサンダー x1 (120MP)</translation>
-    </message>
-    <message>
-        <source>Summon Alexander x2 (120mp)</source>
-        <translation>アレクサンダー x2 (120MP)</translation>
-    </message>
-    <message>
-        <source>Summon Alexander x3 (120mp)</source>
-        <translation>アレクサンダー x3 (120MP)</translation>
-    </message>
-    <message>
-        <source>Summon Alexander x4 (120mp)</source>
-        <translation>アレクサンダー x4 (120MP)</translation>
-    </message>
-    <message>
-        <source>Summon Alexander x5 (120mp)</source>
-        <translation>アレクサンダー x5 (120MP)</translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x1 (180mp)</source>
-        <translation>フェニックス x1 (180MP)</translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x2 (180mp)</source>
-        <translation>フェニックス x2 (180MP)</translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x3 (180mp)</source>
-        <translation>フェニックス x3 (180MP)</translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x4 (180mp)</source>
-        <translation>フェニックス x4 (180MP)</translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x5 (180mp)</source>
-        <translation>フェニックス x5 (180MP)</translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x1 (140mp)</source>
-        <translation>バハムート改 x1 (140MP)</translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x2 (140mp)</source>
-        <translation>バハムート改 x2 (140MP)</translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x3 (140mp)</source>
-        <translation>バハムート改 x3 (140MP)</translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x4 (140mp)</source>
-        <translation>バハムート改 x4 (140MP)</translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x5 (140mp)</source>
-        <translation>バハムート改 x5 (140MP)</translation>
-    </message>
-    <message>
-        <source>Summon Hades x1 (150mp)</source>
-        <translation>ハーデス x1 (150MP)</translation>
-    </message>
-    <message>
-        <source>Summon Hades x2 (150mp)</source>
-        <translation>ハーデス x2 (150MP)</translation>
-    </message>
-    <message>
-        <source>Summon Hades x3 (150mp)</source>
-        <translation>ハーデス x3 (150MP)</translation>
-    </message>
-    <message>
-        <source>Summon Hades x4 (150mp)</source>
-        <translation>ハーデス x4 (150MP)</translation>
-    </message>
-    <message>
-        <source>Summon Hades x5 (150mp)</source>
-        <translation>ハーデス x5 (150MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x1 (180mp)</source>
-        <translation>バハムート零式 x1 (180MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x2 (180mp)</source>
-        <translation>バハムート零式 x2 (180MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x3 (180mp)</source>
-        <translation>バハムート零式 x3 (180MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x4 (180mp)</source>
-        <translation>バハムート零式 x4 (180MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x5 (180mp)</source>
-        <translation>バハムート零式 x5 (180MP)</translation>
-    </message>
-    <message>
-        <source>Summon KOTR x1 (250mp)</source>
-        <translation>ナイツオブラウンド x1 (250MP)</translation>
-    </message>
-    <message>
-        <source>Summon KOTR x2 (250mp)</source>
-        <translation>ナイツオブラウンド x2 (250MP)</translation>
-    </message>
-    <message>
-        <source>Summon KOTR x3 (250mp)</source>
-        <translation>ナイツオブラウンド x3 (250MP)</translation>
-    </message>
-    <message>
-        <source>Summon KOTR x4 (250mp)</source>
-        <translation>ナイツオブラウンド x4 (250MP)</translation>
-    </message>
-    <message>
-        <source>Summon KOTR x5 (250mp)</source>
-        <translation>ナイツオブラウンド x5 (250MP)</translation>
-    </message>
-    <message>
         <source>Master Summon</source>
         <translation>マスターしょうかん</translation>
     </message>
@@ -5612,26 +5328,6 @@ Table Entries are Editable</source>
     <message>
         <source>Berserk (28mp)</source>
         <translation>バーサク (28MP)</translation>
-    </message>
-    <message>
-        <source>Summon Shiva x1 (32mp)</source>
-        <translation>シヴァ x1 (32MP)</translation>
-    </message>
-    <message>
-        <source>Summon Shiva x2 (32mp)</source>
-        <translation>シヴァ x2 (32MP)</translation>
-    </message>
-    <message>
-        <source>Summon Shiva x3 (32mp)</source>
-        <translation>シヴァ x3 (32MP)</translation>
-    </message>
-    <message>
-        <source>Summon Shiva x4 (32mp)</source>
-        <translation>シヴァ x4 (32MP)</translation>
-    </message>
-    <message>
-        <source>Summon Shiva x5 (32mp)</source>
-        <translation>シヴァ x5 (32MP)</translation>
     </message>
     <message>
         <source>Counter Rate 20%</source>
@@ -5690,24 +5386,324 @@ Table Entries are Editable</source>
         <translation>マバリア (24MP)</translation>
     </message>
     <message>
-        <source>Summon Typhon x1 (160mp)</source>
+        <source>Choco/Mog x1 (14mp)</source>
+        <translation>チョコボ＆モーグリ x1 (14MP)</translation>
+    </message>
+    <message>
+        <source>Choco/Mog x2 (14mp)</source>
+        <translation>チョコボ＆モーグリ x2 (14MP)</translation>
+    </message>
+    <message>
+        <source>Choco/Mog x3 (14mp)</source>
+        <translation>チョコボ＆モーグリ x3 (14MP)</translation>
+    </message>
+    <message>
+        <source>Choco/Mog x4 (14mp)</source>
+        <translation>チョコボ＆モーグリ x4 (14MP)</translation>
+    </message>
+    <message>
+        <source>Choco/Mog x5 (14mp)</source>
+        <translation>チョコボ＆モーグリ x5 (14MP)</translation>
+    </message>
+    <message>
+        <source>Shiva x1 (32mp)</source>
+        <translation>シヴァ x1 (32MP)</translation>
+    </message>
+    <message>
+        <source>Shiva x2 (32mp)</source>
+        <translation>シヴァ x2 (32MP)</translation>
+    </message>
+    <message>
+        <source>Shiva x3 (32mp)</source>
+        <translation>シヴァ x3 (32MP)</translation>
+    </message>
+    <message>
+        <source>Shiva x4 (32mp)</source>
+        <translation>シヴァ x4 (32MP)</translation>
+    </message>
+    <message>
+        <source>Shiva x5 (32mp)</source>
+        <translation>シヴァ x5 (32MP)</translation>
+    </message>
+    <message>
+        <source>Ifrit x1 (34mp)</source>
+        <translation>イフリート x1 (34MP)</translation>
+    </message>
+    <message>
+        <source>Ifrit x2 (34mp)</source>
+        <translation>イフリート x2 (34MP)</translation>
+    </message>
+    <message>
+        <source>Ifrit x3 (34mp)</source>
+        <translation>イフリート x3 (34MP)</translation>
+    </message>
+    <message>
+        <source>Ifrit x4 (34mp)</source>
+        <translation>イフリート x4 (34MP)</translation>
+    </message>
+    <message>
+        <source>Ifrit x5 (34mp)</source>
+        <translation>イフリート x5 (34MP)</translation>
+    </message>
+    <message>
+        <source>Ramuh x1 (40mp)</source>
+        <translation>ラムウ x1 (40MP)</translation>
+    </message>
+    <message>
+        <source>Ramuh x2 (40mp)</source>
+        <translation>ラムウ x2 (40MP)</translation>
+    </message>
+    <message>
+        <source>Ramuh x3 (40mp)</source>
+        <translation>ラムウ x3 (40MP)</translation>
+    </message>
+    <message>
+        <source>Ramuh x4 (40mp)</source>
+        <translation>ラムウ x4 (40MP)</translation>
+    </message>
+    <message>
+        <source>Ramuh x5 (40mp)</source>
+        <translation>ラムウ x5 (40MP)</translation>
+    </message>
+    <message>
+        <source>Titan x1 (46mp)</source>
+        <translation>タイタン x1 (46MP)</translation>
+    </message>
+    <message>
+        <source>Titan x2 (46mp)</source>
+        <translation>タイタン x2 (46MP)</translation>
+    </message>
+    <message>
+        <source>Titan x3 (46mp)</source>
+        <translation>タイタン x3 (46MP)</translation>
+    </message>
+    <message>
+        <source>Titan x4 (46mp)</source>
+        <translation>タイタン x4 (46MP)</translation>
+    </message>
+    <message>
+        <source>Titan x5 (46mp)</source>
+        <translation>タイタン x5 (46MP)</translation>
+    </message>
+    <message>
+        <source>Odin x1 (80mp)</source>
+        <translation>オーディーン x1 (80MP)</translation>
+    </message>
+    <message>
+        <source>Odin x2 (80mp)</source>
+        <translation>オーディーン x2 (80MP)</translation>
+    </message>
+    <message>
+        <source>Odin x3 (80mp)</source>
+        <translation>オーディーン x3 (80MP)</translation>
+    </message>
+    <message>
+        <source>Odin x4 (80mp)</source>
+        <translation>オーディーン x4 (80MP)</translation>
+    </message>
+    <message>
+        <source>Odin x5 (80mp)</source>
+        <translation>オーディーン x5 (80MP)</translation>
+    </message>
+    <message>
+        <source>Leviathan x1 (78mp)</source>
+        <translation>リヴァイアサン x1 (78MP)</translation>
+    </message>
+    <message>
+        <source>Leviathan x2 (78mp)</source>
+        <translation>リヴァイアサン x2 (78MP)</translation>
+    </message>
+    <message>
+        <source>Leviathan x3 (78mp)</source>
+        <translation>リヴァイアサン x3 (78MP)</translation>
+    </message>
+    <message>
+        <source>Leviathan x4 (78mp)</source>
+        <translation>リヴァイアサン x4 (78MP)</translation>
+    </message>
+    <message>
+        <source>Leviathan x5 (78mp)</source>
+        <translation>リヴァイアサン x5 (78MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut x1 (100mp)</source>
+        <translation>バハムート x1 (100MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut x2 (100mp)</source>
+        <translation>バハムート x2 (100MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut x3 (100mp)</source>
+        <translation>バハムート x3 (100MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut x4 (100mp)</source>
+        <translation>バハムート x4 (100MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut x5 (100mp)</source>
+        <translation>バハムート x5 (100MP)</translation>
+    </message>
+    <message>
+        <source>Kujata x1 (110mp)</source>
+        <translation>クジャタ x1 (110MP)</translation>
+    </message>
+    <message>
+        <source>Kujata x2 (110mp)</source>
+        <translation>クジャタ x2 (110MP)</translation>
+    </message>
+    <message>
+        <source>Kujata x3 (110mp)</source>
+        <translation>クジャタ x3 (110MP)</translation>
+    </message>
+    <message>
+        <source>Kujata x4 (110mp)</source>
+        <translation>クジャタ x4 (110MP)</translation>
+    </message>
+    <message>
+        <source>Kujata x5 (110mp)</source>
+        <translation>クジャタ x5 (110MP)</translation>
+    </message>
+    <message>
+        <source>Alexander x1 (120mp)</source>
+        <translation>アレクサンダー x1 (120MP)</translation>
+    </message>
+    <message>
+        <source>Alexander x2 (120mp)</source>
+        <translation>アレクサンダー x2 (120MP)</translation>
+    </message>
+    <message>
+        <source>Alexander x3 (120mp)</source>
+        <translation>アレクサンダー x3 (120MP)</translation>
+    </message>
+    <message>
+        <source>Alexander x4 (120mp)</source>
+        <translation>アレクサンダー x4 (120MP)</translation>
+    </message>
+    <message>
+        <source>Alexander x5 (120mp)</source>
+        <translation>アレクサンダー x5 (120MP)</translation>
+    </message>
+    <message>
+        <source>Phoenix x1 (180mp)</source>
+        <translation>フェニックス x1 (180MP)</translation>
+    </message>
+    <message>
+        <source>Phoenix x2 (180mp)</source>
+        <translation>フェニックス x2 (180MP)</translation>
+    </message>
+    <message>
+        <source>Phoenix x3 (180mp)</source>
+        <translation>フェニックス x3 (180MP)</translation>
+    </message>
+    <message>
+        <source>Phoenix x4 (180mp)</source>
+        <translation>フェニックス x4 (180MP)</translation>
+    </message>
+    <message>
+        <source>Phoenix x5 (180mp)</source>
+        <translation>フェニックス x5 (180MP)</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x1 (140mp)</source>
+        <translation>バハムート改 x1 (140MP)</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x2 (140mp)</source>
+        <translation>バハムート改 x2 (140MP)</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x3 (140mp)</source>
+        <translation>バハムート改 x3 (140MP)</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x4 (140mp)</source>
+        <translation>バハムート改 x4 (140MP)</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x5 (140mp)</source>
+        <translation>バハムート改 x5 (140MP)</translation>
+    </message>
+    <message>
+        <source>Hades x1 (150mp)</source>
+        <translation>ハーデス x1 (150MP)</translation>
+    </message>
+    <message>
+        <source>Hades x2 (150mp)</source>
+        <translation>ハーデス x2 (150MP)</translation>
+    </message>
+    <message>
+        <source>Hades x3 (150mp)</source>
+        <translation>ハーデス x3 (150MP)</translation>
+    </message>
+    <message>
+        <source>Hades x4 (150mp)</source>
+        <translation>ハーデス x4 (150MP)</translation>
+    </message>
+    <message>
+        <source>Hades x5 (150mp)</source>
+        <translation>ハーデス x5 (150MP)</translation>
+    </message>
+    <message>
+        <source>Typhon x1 (160mp)</source>
         <translation>テュポーン x1 (160MP)</translation>
     </message>
     <message>
-        <source>Summon Typhon x2 (160mp)</source>
+        <source>Typhon x2 (160mp)</source>
         <translation>テュポーン x2 (160MP)</translation>
     </message>
     <message>
-        <source>Summon Typhon x3 (160mp)</source>
+        <source>Typhon x3 (160mp)</source>
         <translation>テュポーン x3 (160MP)</translation>
     </message>
     <message>
-        <source>Summon Typhon x4 (160mp)</source>
+        <source>Typhon x4 (160mp)</source>
         <translation>テュポーン x4 (160MP)</translation>
     </message>
     <message>
-        <source>Summon Typhon x5 (160mp)</source>
+        <source>Typhon x5 (160mp)</source>
         <translation>テュポーン x5 (160MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x1 (180mp)</source>
+        <translation>バハムート零式 x1 (180MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x2 (180mp)</source>
+        <translation>バハムート零式 x2 (180MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x3 (180mp)</source>
+        <translation>バハムート零式 x3 (180MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x4 (180mp)</source>
+        <translation>バハムート零式 x4 (180MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x5 (180mp)</source>
+        <translation>バハムート零式 x5 (180MP)</translation>
+    </message>
+    <message>
+        <source>KOTR x1 (250mp)</source>
+        <translation>ナイツオブラウンド x1 (250MP)</translation>
+    </message>
+    <message>
+        <source>KOTR x2 (250mp)</source>
+        <translation>ナイツオブラウンド x2 (250MP)</translation>
+    </message>
+    <message>
+        <source>KOTR x3 (250mp)</source>
+        <translation>ナイツオブラウンド x3 (250MP)</translation>
+    </message>
+    <message>
+        <source>KOTR x4 (250mp)</source>
+        <translation>ナイツオブラウンド x4 (250MP)</translation>
+    </message>
+    <message>
+        <source>KOTR x5 (250mp)</source>
+        <translation>ナイツオブラウンド x5 (250MP)</translation>
     </message>
 </context>
 <context>
