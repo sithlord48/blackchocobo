@@ -5295,286 +5295,6 @@ N&apos;EST PAS une sauvegarde PSV</translation>
         <translation>Magie maîtresse</translation>
     </message>
     <message>
-        <source>Summon Choco/Mog x1 (14mp)</source>
-        <translation>Invoquer Choco/Mog 1x (14 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x2 (14mp)</source>
-        <translation>Invoquer Choco/Mog 2x (14 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x3 (14mp)</source>
-        <translation>Invoquer Choco/Mog 3x (14 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x4 (14mp)</source>
-        <translation>Invoquer Choco/Mog 4x (14 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x5 (14mp)</source>
-        <translation>Invoquer Choco/Mog 5x (14 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x1 (34mp)</source>
-        <translation>Invoquer Ifrit 1x (34 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x2 (34mp)</source>
-        <translation>Invoquer Ifrit 2x (34 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x3 (34mp)</source>
-        <translation>Invoquer Ifrit 3x (34 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x4 (34mp)</source>
-        <translation>Invoquer Ifrit 4x (34 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x5 (34mp)</source>
-        <translation>Invoquer Ifrit 5x (34 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x1 (40mp)</source>
-        <translation>Invoquer Ramuh 1x (40 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x2 (40mp)</source>
-        <translation>Invoquer Ramuh 2x (40 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x3 (40mp)</source>
-        <translation>Invoquer Ramuh 3x (40 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x4 (40mp)</source>
-        <translation>Invoquer Ramuh 4x (40 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x5 (40mp)</source>
-        <translation>Invoquer Ramuh 5x (40 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Titan x1 (46mp)</source>
-        <translation>Invoquer Titan 1x (46 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Titan x2 (46mp)</source>
-        <translation>Invoquer Titan 2x (46 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Titan x3 (46mp)</source>
-        <translation>Invoquer Titan 3x (46 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Titan x4 (46mp)</source>
-        <translation>Invoquer Titan 4x (46 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Titan x5 (46mp)</source>
-        <translation>Invoquer Titan 5x (46 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Odin x1 (80mp)</source>
-        <translation>Invoquer Odin 1x (80 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Odin x2 (80mp)</source>
-        <translation>Invoquer Odin 2x (80 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Odin x3 (80mp)</source>
-        <translation>Invoquer Odin 3x (80 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Odin x4 (80mp)</source>
-        <translation>Invoquer Odin 4x (80 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Odin x5 (80mp)</source>
-        <translation>Invoquer Odin 5x (80 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x1 (78mp)</source>
-        <translation>Invoquer Léviathan 1x (78 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x2 (78mp)</source>
-        <translation>Invoquer Léviathan 2x (78 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x3 (78mp)</source>
-        <translation>Invoquer Léviathan 3x (78 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x4 (78mp)</source>
-        <translation>Invoquer Léviathan 4x (78 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x5 (78mp)</source>
-        <translation>Invoquer Léviathan 5x (78 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x1 (100mp)</source>
-        <translation>Invoquer Bahamut 1x (100 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x2 (100mp)</source>
-        <translation>Invoquer Bahamut 2x (100 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x3 (100mp)</source>
-        <translation>Invoquer Bahamut 3x (100 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x4 (100mp)</source>
-        <translation>Invoquer Bahamut 4x (100 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x5 (100mp)</source>
-        <translation>Invoquer Bahamut 5x (100 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Kujata x1 (110mp)</source>
-        <translation>Invoquer Kjata 1x (110 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Kujata x2 (110mp)</source>
-        <translation>Invoquer Kjata 2x (110 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Kujata x3 (110mp)</source>
-        <translation>Invoquer Kjata 3x (110 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Kujata x4 (110mp)</source>
-        <translation>Invoquer Kjata 4x (110 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Kujata x5 (110mp)</source>
-        <translation>Invoquer Kjata 5x (110 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Alexander x1 (120mp)</source>
-        <translation>Invoquer Alexandre 1x (120 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Alexander x2 (120mp)</source>
-        <translation>Invoquer Alexandre 2x (120 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Alexander x3 (120mp)</source>
-        <translation>Invoquer Alexandre 3x (120 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Alexander x4 (120mp)</source>
-        <translation>Invoquer Alexandre 4x (120 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Alexander x5 (120mp)</source>
-        <translation>Invoquer Alexandre 5x (120 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x1 (180mp)</source>
-        <translation>Invoquer Phénix 1x (180 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x2 (180mp)</source>
-        <translation>Invoquer Phénix 2x (180 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x3 (180mp)</source>
-        <translation>Invoquer Phénix 3x (180 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x4 (180mp)</source>
-        <translation>Invoquer Phénix 4x (180 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x5 (180mp)</source>
-        <translation>Invoquer Phénix 5x (180 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x1 (140mp)</source>
-        <translation>Invoquer Néo Bahamut 1x (140 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x2 (140mp)</source>
-        <translation>Invoquer Néo Bahamut 2x (140 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x3 (140mp)</source>
-        <translation>Invoquer Néo Bahamut 3x (140 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x4 (140mp)</source>
-        <translation>Invoquer Néo Bahamut 4x (140 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x5 (140mp)</source>
-        <translation>Invoquer Néo Bahamut 5x (140 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Hades x1 (150mp)</source>
-        <translation>Invoquer Hadès 1x (150 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Hades x2 (150mp)</source>
-        <translation>Invoquer Hadès 2x (150 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Hades x3 (150mp)</source>
-        <translation>Invoquer Hadès 3x (150 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Hades x4 (150mp)</source>
-        <translation>Invoquer Hadès 4x (150 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Hades x5 (150mp)</source>
-        <translation>Invoquer Hadès 5x (150 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x1 (180mp)</source>
-        <translation>Invoquer Bahamut ZÉRO 1x (180 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x2 (180mp)</source>
-        <translation>Invoquer Bahamut ZÉRO 2x (180 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x3 (180mp)</source>
-        <translation>Invoquer Bahamut ZÉRO 3x (180 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x4 (180mp)</source>
-        <translation>Invoquer Bahamut ZÉRO 4x (180 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x5 (180mp)</source>
-        <translation>Invoquer Bahamut ZÉRO 5x (180 MP)</translation>
-    </message>
-    <message>
-        <source>Summon KOTR x1 (250mp)</source>
-        <translation>Invoquer Chevaliers de la Table Ronde 1x (250 MP)</translation>
-    </message>
-    <message>
-        <source>Summon KOTR x2 (250mp)</source>
-        <translation>Invoquer Chevaliers de la Table Ronde 2x (250 MP)</translation>
-    </message>
-    <message>
-        <source>Summon KOTR x3 (250mp)</source>
-        <translation>Invoquer Chevaliers de la Table Ronde 3x (250 MP)</translation>
-    </message>
-    <message>
-        <source>Summon KOTR x4 (250mp)</source>
-        <translation>Invoquer Chevaliers de la Table Ronde 4x (250 MP)</translation>
-    </message>
-    <message>
-        <source>Summon KOTR x5 (250mp)</source>
-        <translation>Invoquer Chevaliers de la Table Ronde 5x (250 MP)</translation>
-    </message>
-    <message>
         <source>Master Summon</source>
         <translation>Invocation maître</translation>
     </message>
@@ -5635,26 +5355,6 @@ N&apos;EST PAS une sauvegarde PSV</translation>
         <translation>Eclat (100 MP)</translation>
     </message>
     <message>
-        <source>Summon Shiva x1 (32mp)</source>
-        <translation>Invoquer Shiva 1x (32 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Shiva x2 (32mp)</source>
-        <translation>Invoquer Shiva 2x (32 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Shiva x3 (32mp)</source>
-        <translation>Invoquer Shiva 3x (32 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Shiva x4 (32mp)</source>
-        <translation>Invoquer Shiva 4x (32 MP)</translation>
-    </message>
-    <message>
-        <source>Summon Shiva x5 (32mp)</source>
-        <translation>Invoquer Shiva 5x (32 MP)</translation>
-    </message>
-    <message>
         <source>Steal as well</source>
         <translation>Vol simultané</translation>
     </message>
@@ -5671,24 +5371,324 @@ N&apos;EST PAS une sauvegarde PSV</translation>
         <translation>BarrM (24 MP)</translation>
     </message>
     <message>
-        <source>Summon Typhon x1 (160mp)</source>
-        <translation>Invoquer Typoon 1x (160 MP)</translation>
+        <source>Choco/Mog x1 (14mp)</source>
+        <translation>Choco/Mog 1x (14 MP)</translation>
     </message>
     <message>
-        <source>Summon Typhon x2 (160mp)</source>
-        <translation>Invoquer Typoon 2x (160 MP)</translation>
+        <source>Choco/Mog x2 (14mp)</source>
+        <translation>Choco/Mog 2x (14 MP)</translation>
     </message>
     <message>
-        <source>Summon Typhon x3 (160mp)</source>
-        <translation>Invoquer Typoon 3x (160 MP)</translation>
+        <source>Choco/Mog x3 (14mp)</source>
+        <translation>Choco/Mog 3x (14 MP)</translation>
     </message>
     <message>
-        <source>Summon Typhon x4 (160mp)</source>
-        <translation>Invoquer Typoon 4x (160 MP)</translation>
+        <source>Choco/Mog x4 (14mp)</source>
+        <translation>Choco/Mog 4x (14 MP)</translation>
     </message>
     <message>
-        <source>Summon Typhon x5 (160mp)</source>
-        <translation>Invoquer Typoon 5x (160 MP)</translation>
+        <source>Choco/Mog x5 (14mp)</source>
+        <translation>Choco/Mog 5x (14 MP)</translation>
+    </message>
+    <message>
+        <source>Shiva x1 (32mp)</source>
+        <translation>Shiva 1x (32 MP)</translation>
+    </message>
+    <message>
+        <source>Shiva x2 (32mp)</source>
+        <translation>Shiva 2x (32 MP)</translation>
+    </message>
+    <message>
+        <source>Shiva x3 (32mp)</source>
+        <translation>Shiva 3x (32 MP)</translation>
+    </message>
+    <message>
+        <source>Shiva x4 (32mp)</source>
+        <translation>Shiva 4x (32 MP)</translation>
+    </message>
+    <message>
+        <source>Shiva x5 (32mp)</source>
+        <translation>Shiva 5x (32 MP)</translation>
+    </message>
+    <message>
+        <source>Ifrit x1 (34mp)</source>
+        <translation>Ifrit 1x (34 MP)</translation>
+    </message>
+    <message>
+        <source>Ifrit x2 (34mp)</source>
+        <translation>Ifrit 2x (34 MP)</translation>
+    </message>
+    <message>
+        <source>Ifrit x3 (34mp)</source>
+        <translation>Ifrit 3x (34 MP)</translation>
+    </message>
+    <message>
+        <source>Ifrit x4 (34mp)</source>
+        <translation>Ifrit 4x (34 MP)</translation>
+    </message>
+    <message>
+        <source>Ifrit x5 (34mp)</source>
+        <translation>Ifrit 5x (34 MP)</translation>
+    </message>
+    <message>
+        <source>Ramuh x1 (40mp)</source>
+        <translation>Ramuh 1x (40 MP)</translation>
+    </message>
+    <message>
+        <source>Ramuh x2 (40mp)</source>
+        <translation>Ramuh 2x (40 MP)</translation>
+    </message>
+    <message>
+        <source>Ramuh x3 (40mp)</source>
+        <translation>Ramuh 3x (40 MP)</translation>
+    </message>
+    <message>
+        <source>Ramuh x4 (40mp)</source>
+        <translation>Ramuh 4x (40 MP)</translation>
+    </message>
+    <message>
+        <source>Ramuh x5 (40mp)</source>
+        <translation>Ramuh 5x (40 MP)</translation>
+    </message>
+    <message>
+        <source>Titan x1 (46mp)</source>
+        <translation>Titan 1x (46 MP)</translation>
+    </message>
+    <message>
+        <source>Titan x2 (46mp)</source>
+        <translation>Titan 2x (46 MP)</translation>
+    </message>
+    <message>
+        <source>Titan x3 (46mp)</source>
+        <translation>Titan 3x (46 MP)</translation>
+    </message>
+    <message>
+        <source>Titan x4 (46mp)</source>
+        <translation>Titan 4x (46 MP)</translation>
+    </message>
+    <message>
+        <source>Titan x5 (46mp)</source>
+        <translation>Titan 5x (46 MP)</translation>
+    </message>
+    <message>
+        <source>Odin x1 (80mp)</source>
+        <translation>Odin 1x (80 MP)</translation>
+    </message>
+    <message>
+        <source>Odin x2 (80mp)</source>
+        <translation>Odin 2x (80 MP)</translation>
+    </message>
+    <message>
+        <source>Odin x3 (80mp)</source>
+        <translation>Odin 3x (80 MP)</translation>
+    </message>
+    <message>
+        <source>Odin x4 (80mp)</source>
+        <translation>Odin 4x (80 MP)</translation>
+    </message>
+    <message>
+        <source>Odin x5 (80mp)</source>
+        <translation>Odin 5x (80 MP)</translation>
+    </message>
+    <message>
+        <source>Leviathan x1 (78mp)</source>
+        <translation>Léviathan 1x (78 MP)</translation>
+    </message>
+    <message>
+        <source>Leviathan x2 (78mp)</source>
+        <translation>Léviathan 2x (78 MP)</translation>
+    </message>
+    <message>
+        <source>Leviathan x3 (78mp)</source>
+        <translation>Léviathan 3x (78 MP)</translation>
+    </message>
+    <message>
+        <source>Leviathan x4 (78mp)</source>
+        <translation>Léviathan 4x (78 MP)</translation>
+    </message>
+    <message>
+        <source>Leviathan x5 (78mp)</source>
+        <translation>Léviathan 5x (78 MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut x1 (100mp)</source>
+        <translation>Bahamut 1x (100 MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut x2 (100mp)</source>
+        <translation>Bahamut 2x (100 MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut x3 (100mp)</source>
+        <translation>Bahamut 3x (100 MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut x4 (100mp)</source>
+        <translation>Bahamut 4x (100 MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut x5 (100mp)</source>
+        <translation>Bahamut 5x (100 MP)</translation>
+    </message>
+    <message>
+        <source>Kujata x1 (110mp)</source>
+        <translation>Kjata 1x (110 MP)</translation>
+    </message>
+    <message>
+        <source>Kujata x2 (110mp)</source>
+        <translation>Kjata 2x (110 MP)</translation>
+    </message>
+    <message>
+        <source>Kujata x3 (110mp)</source>
+        <translation>Kjata 3x (110 MP)</translation>
+    </message>
+    <message>
+        <source>Kujata x4 (110mp)</source>
+        <translation>Kjata 4x (110 MP)</translation>
+    </message>
+    <message>
+        <source>Kujata x5 (110mp)</source>
+        <translation>Kjata 5x (110 MP)</translation>
+    </message>
+    <message>
+        <source>Alexander x1 (120mp)</source>
+        <translation>Alexandre 1x (120 MP)</translation>
+    </message>
+    <message>
+        <source>Alexander x2 (120mp)</source>
+        <translation>Alexandre 2x (120 MP)</translation>
+    </message>
+    <message>
+        <source>Alexander x3 (120mp)</source>
+        <translation>Alexandre 3x (120 MP)</translation>
+    </message>
+    <message>
+        <source>Alexander x4 (120mp)</source>
+        <translation>Alexandre 4x (120 MP)</translation>
+    </message>
+    <message>
+        <source>Alexander x5 (120mp)</source>
+        <translation>Alexandre 5x (120 MP)</translation>
+    </message>
+    <message>
+        <source>Phoenix x1 (180mp)</source>
+        <translation>Phénix 1x (180 MP)</translation>
+    </message>
+    <message>
+        <source>Phoenix x2 (180mp)</source>
+        <translation>Phénix 2x (180 MP)</translation>
+    </message>
+    <message>
+        <source>Phoenix x3 (180mp)</source>
+        <translation>Phénix 3x (180 MP)</translation>
+    </message>
+    <message>
+        <source>Phoenix x4 (180mp)</source>
+        <translation>Phénix 4x (180 MP)</translation>
+    </message>
+    <message>
+        <source>Phoenix x5 (180mp)</source>
+        <translation>Phénix 5x (180 MP)</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x1 (140mp)</source>
+        <translation>Néo Bahamut 1x (140 MP)</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x2 (140mp)</source>
+        <translation>Néo Bahamut 2x (140 MP)</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x3 (140mp)</source>
+        <translation>Néo Bahamut 3x (140 MP)</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x4 (140mp)</source>
+        <translation>Néo Bahamut 4x (140 MP)</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x5 (140mp)</source>
+        <translation>Néo Bahamut 5x (140 MP)</translation>
+    </message>
+    <message>
+        <source>Hades x1 (150mp)</source>
+        <translation>Hadès 1x (150 MP)</translation>
+    </message>
+    <message>
+        <source>Hades x2 (150mp)</source>
+        <translation>Hadès 2x (150 MP)</translation>
+    </message>
+    <message>
+        <source>Hades x3 (150mp)</source>
+        <translation>Hadès 3x (150 MP)</translation>
+    </message>
+    <message>
+        <source>Hades x4 (150mp)</source>
+        <translation>Hadès 4x (150 MP)</translation>
+    </message>
+    <message>
+        <source>Hades x5 (150mp)</source>
+        <translation>Hadès 5x (150 MP)</translation>
+    </message>
+    <message>
+        <source>Typhon x1 (160mp)</source>
+        <translation>Typoon 1x (160 MP)</translation>
+    </message>
+    <message>
+        <source>Typhon x2 (160mp)</source>
+        <translation>Typoon 2x (160 MP)</translation>
+    </message>
+    <message>
+        <source>Typhon x3 (160mp)</source>
+        <translation>Typoon 3x (160 MP)</translation>
+    </message>
+    <message>
+        <source>Typhon x4 (160mp)</source>
+        <translation>Typoon 4x (160 MP)</translation>
+    </message>
+    <message>
+        <source>Typhon x5 (160mp)</source>
+        <translation>Typoon 5x (160 MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x1 (180mp)</source>
+        <translation>Bahamut ZÉRO 1x (180 MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x2 (180mp)</source>
+        <translation>Bahamut ZÉRO 2x (180 MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x3 (180mp)</source>
+        <translation>Bahamut ZÉRO 3x (180 MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x4 (180mp)</source>
+        <translation>Bahamut ZÉRO 4x (180 MP)</translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x5 (180mp)</source>
+        <translation>Bahamut ZÉRO 5x (180 MP)</translation>
+    </message>
+    <message>
+        <source>KOTR x1 (250mp)</source>
+        <translation>Chevaliers de la Table Ronde 1x (250 MP)</translation>
+    </message>
+    <message>
+        <source>KOTR x2 (250mp)</source>
+        <translation>Chevaliers de la Table Ronde 2x (250 MP)</translation>
+    </message>
+    <message>
+        <source>KOTR x3 (250mp)</source>
+        <translation>Chevaliers de la Table Ronde 3x (250 MP)</translation>
+    </message>
+    <message>
+        <source>KOTR x4 (250mp)</source>
+        <translation>Chevaliers de la Table Ronde 4x (250 MP)</translation>
+    </message>
+    <message>
+        <source>KOTR x5 (250mp)</source>
+        <translation>Chevaliers de la Table Ronde 5x (250 MP)</translation>
     </message>
 </context>
 <context>

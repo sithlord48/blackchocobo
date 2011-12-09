@@ -5295,286 +5295,6 @@ NO es un archivo de guardado PSV</translation>
         <translation>Magia maestra</translation>
     </message>
     <message>
-        <source>Summon Choco/Mog x1 (14mp)</source>
-        <translation>Invoca Choco/Mog x1 (14pm)</translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x2 (14mp)</source>
-        <translation>Invoca Choco/Mog x2 (14pm)</translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x3 (14mp)</source>
-        <translation>Invoca Choco/Mog x3 (14pm)</translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x4 (14mp)</source>
-        <translation>Invoca Choco/Mog x4 (14pm)</translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x5 (14mp)</source>
-        <translation>Invoca Choco/Mog x5 (14pm)</translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x1 (34mp)</source>
-        <translation>Invoca Ifrit x1 (34pm)</translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x2 (34mp)</source>
-        <translation>Invoca Ifrit x2(34pm)</translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x3 (34mp)</source>
-        <translation>Invoca Ifrit x3(34pm)</translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x4 (34mp)</source>
-        <translation>Invoca Ifrit x4(34pm)</translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x5 (34mp)</source>
-        <translation>Invoca Ifrit x5(34pm)</translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x1 (40mp)</source>
-        <translation>Invoca Ramuh x1 (40pm)</translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x2 (40mp)</source>
-        <translation>Invoca Ramuh x2 (40pm)</translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x3 (40mp)</source>
-        <translation>Invoca Ramuh x3 (40pm)</translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x4 (40mp)</source>
-        <translation>Invoca Ramuh x4 (40pm)</translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x5 (40mp)</source>
-        <translation>Invoca Ramuh x5 (40pm)</translation>
-    </message>
-    <message>
-        <source>Summon Titan x1 (46mp)</source>
-        <translation>Invoca Titán x1 (46pm)</translation>
-    </message>
-    <message>
-        <source>Summon Titan x2 (46mp)</source>
-        <translation>Invoca Titán x2 (46pm)</translation>
-    </message>
-    <message>
-        <source>Summon Titan x3 (46mp)</source>
-        <translation>Invoca Titán x3 (46pm)</translation>
-    </message>
-    <message>
-        <source>Summon Titan x4 (46mp)</source>
-        <translation>Invoca Titán x4 (46pm)</translation>
-    </message>
-    <message>
-        <source>Summon Titan x5 (46mp)</source>
-        <translation>Invoca Titán x5 (46pm)</translation>
-    </message>
-    <message>
-        <source>Summon Odin x1 (80mp)</source>
-        <translation>Invoca Odín x1 (80pm)</translation>
-    </message>
-    <message>
-        <source>Summon Odin x2 (80mp)</source>
-        <translation>Invoca Odín x2 (80pm)</translation>
-    </message>
-    <message>
-        <source>Summon Odin x3 (80mp)</source>
-        <translation>Invoca Odín x3 (80pm)</translation>
-    </message>
-    <message>
-        <source>Summon Odin x4 (80mp)</source>
-        <translation>Invoca Odín x4 (80pm)</translation>
-    </message>
-    <message>
-        <source>Summon Odin x5 (80mp)</source>
-        <translation>Invoca Odín x5 (80pm)</translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x1 (78mp)</source>
-        <translation>Invoca Leviatán x1 (78pm)</translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x2 (78mp)</source>
-        <translation>Invoca Leviatán x2 (78pm)</translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x3 (78mp)</source>
-        <translation>Invoca Leviatán x3 (78pm)</translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x4 (78mp)</source>
-        <translation>Invoca Leviatán x4 (78pm)</translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x5 (78mp)</source>
-        <translation>Invoca Leviatán x5 (78pm)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x1 (100mp)</source>
-        <translation>Invoca Bahamut x1 (100pm)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x2 (100mp)</source>
-        <translation>Invoca Bahamut x2 (100pm)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x3 (100mp)</source>
-        <translation>Invoca Bahamut x3 (100pm)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x4 (100mp)</source>
-        <translation>Invoca Bahamut x4 (100pm)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x5 (100mp)</source>
-        <translation>Invoca Bahamut x5 (100pm)</translation>
-    </message>
-    <message>
-        <source>Summon Kujata x1 (110mp)</source>
-        <translation>Invoca Kjata x1 (110pm)</translation>
-    </message>
-    <message>
-        <source>Summon Kujata x2 (110mp)</source>
-        <translation>Invoca Kjata x2 (110pm)</translation>
-    </message>
-    <message>
-        <source>Summon Kujata x3 (110mp)</source>
-        <translation>Invoca Kjata x3 (110pm)</translation>
-    </message>
-    <message>
-        <source>Summon Kujata x4 (110mp)</source>
-        <translation>Invoca Kjata x4 (110pm)</translation>
-    </message>
-    <message>
-        <source>Summon Kujata x5 (110mp)</source>
-        <translation>Invoca Kjata x5 (110pm)</translation>
-    </message>
-    <message>
-        <source>Summon Alexander x1 (120mp)</source>
-        <translation>Invoca Alejandro x1 (120pm)</translation>
-    </message>
-    <message>
-        <source>Summon Alexander x2 (120mp)</source>
-        <translation>Invoca Alejandro x2 (120pm)</translation>
-    </message>
-    <message>
-        <source>Summon Alexander x3 (120mp)</source>
-        <translation>Invoca Alejandro x3 (120pm)</translation>
-    </message>
-    <message>
-        <source>Summon Alexander x4 (120mp)</source>
-        <translation>Invoca Alejandro x4 (120pm)</translation>
-    </message>
-    <message>
-        <source>Summon Alexander x5 (120mp)</source>
-        <translation>Invoca Alejandro x5 (120pm)</translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x1 (180mp)</source>
-        <translation>Invoca Fénix x1 (180pm)</translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x2 (180mp)</source>
-        <translation>Invoca Fénix x2 (180pm)</translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x3 (180mp)</source>
-        <translation>Invoca Fénix x3 (180pm)</translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x4 (180mp)</source>
-        <translation>Invoca Fénix x4 (180pm)</translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x5 (180mp)</source>
-        <translation>Invoca Fénix x5 (180pm)</translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x1 (140mp)</source>
-        <translation>Invoca Neo Bahamut x1 (140mp)</translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x2 (140mp)</source>
-        <translation>Invoca Neo Bahamut x2 (140mp)</translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x3 (140mp)</source>
-        <translation>Invoca Neo Bahamut x3 (140mp)</translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x4 (140mp)</source>
-        <translation>Invoca Neo Bahamut x4 (140mp)</translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x5 (140mp)</source>
-        <translation>Invoca Neo Bahamut x5 (140mp)</translation>
-    </message>
-    <message>
-        <source>Summon Hades x1 (150mp)</source>
-        <translation>Invoca Hades x1 (150mp)</translation>
-    </message>
-    <message>
-        <source>Summon Hades x2 (150mp)</source>
-        <translation>Invoca Hades x2 (150mp)</translation>
-    </message>
-    <message>
-        <source>Summon Hades x3 (150mp)</source>
-        <translation>Invoca Hades x3 (150mp)</translation>
-    </message>
-    <message>
-        <source>Summon Hades x4 (150mp)</source>
-        <translation>Invoca Hades x4 (150mp)</translation>
-    </message>
-    <message>
-        <source>Summon Hades x5 (150mp)</source>
-        <translation>Invoca Hades x5 (150mp)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x1 (180mp)</source>
-        <translation>Invoca Bahamut CERO x1 (180pm)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x2 (180mp)</source>
-        <translation>Invoca Bahamut CERO x2 (180pm)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x3 (180mp)</source>
-        <translation>Invoca Bahamut CERO x3 (180pm)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x4 (180mp)</source>
-        <translation>Invoca Bahamut CERO x4 (180pm)</translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x5 (180mp)</source>
-        <translation>Invoca Bahamut CERO x5 (180pm)</translation>
-    </message>
-    <message>
-        <source>Summon KOTR x1 (250mp)</source>
-        <translation>Invoca Cab. de la mesa R. x1 (250pm)</translation>
-    </message>
-    <message>
-        <source>Summon KOTR x2 (250mp)</source>
-        <translation>Invoca Cab. de la mesa R. x2 (250pm)</translation>
-    </message>
-    <message>
-        <source>Summon KOTR x3 (250mp)</source>
-        <translation>Invoca Cab. de la mesa R. x3 (250pm)</translation>
-    </message>
-    <message>
-        <source>Summon KOTR x4 (250mp)</source>
-        <translation>Invoca Cab. de la mesa R. x4 (250pm)</translation>
-    </message>
-    <message>
-        <source>Summon KOTR x5 (250mp)</source>
-        <translation>Invoca Cab. de la mesa R. x5 (250pm)</translation>
-    </message>
-    <message>
         <source>Master Summon</source>
         <translation>Invocación mestra</translation>
     </message>
@@ -5593,26 +5313,6 @@ NO es un archivo de guardado PSV</translation>
     <message>
         <source>Berserk (28mp)</source>
         <translation>Locura (28pm)</translation>
-    </message>
-    <message>
-        <source>Summon Shiva x1 (32mp)</source>
-        <translation>Invoca Shiva x1 (32pm)</translation>
-    </message>
-    <message>
-        <source>Summon Shiva x2 (32mp)</source>
-        <translation>Invoca Shiva x2 (32pm)</translation>
-    </message>
-    <message>
-        <source>Summon Shiva x3 (32mp)</source>
-        <translation>Invoca Shiva x3 (32pm)</translation>
-    </message>
-    <message>
-        <source>Summon Shiva x4 (32mp)</source>
-        <translation>Invoca Shiva x4 (32pm)</translation>
-    </message>
-    <message>
-        <source>Summon Shiva x5 (32mp)</source>
-        <translation>Invoca Shiva x5 (32pm)</translation>
     </message>
     <message>
         <source>Counter Rate 20%</source>
@@ -5671,24 +5371,325 @@ NO es un archivo de guardado PSV</translation>
         <translation>BarreraM (24pm)</translation>
     </message>
     <message>
-        <source>Summon Typhon x1 (160mp)</source>
-        <translation>Invoca Typhon x1 (160mp)</translation>
+        <source>Choco/Mog x1 (14mp)</source>
+        <translation>Choco/Mog x1 (14pm)</translation>
     </message>
     <message>
-        <source>Summon Typhon x2 (160mp)</source>
-        <translation>Invoca Typhon x2 (160mp)</translation>
+        <source>Choco/Mog x2 (14mp)</source>
+        <translation>Choco/Mog x2 (14pm)</translation>
     </message>
     <message>
-        <source>Summon Typhon x3 (160mp)</source>
-        <translation>Invoca Typhon x3 (160mp)</translation>
+        <source>Choco/Mog x3 (14mp)</source>
+        <translation>Choco/Mog x3 (14pm)</translation>
     </message>
     <message>
-        <source>Summon Typhon x4 (160mp)</source>
-        <translation>Invoca Typhon x4 (160mp)</translation>
+        <source>Choco/Mog x4 (14mp)</source>
+        <translation>Choco/Mog x4 (14pm)</translation>
     </message>
     <message>
-        <source>Summon Typhon x5 (160mp)</source>
-        <translation>Invoca Typhon x5 (160mp)</translation>
+        <source>Choco/Mog x5 (14mp)</source>
+        <translation>Choco/Mog x5 (14pm)</translation>
+    </message>
+    <message>
+        <source>Shiva x1 (32mp)</source>
+        <translation>Shiva x1 (32pm)</translation>
+    </message>
+    <message>
+        <source>Shiva x2 (32mp)</source>
+        <translation>Shiva x2 (32pm)</translation>
+    </message>
+    <message>
+        <source>Shiva x3 (32mp)</source>
+        <translation>Shiva x3 (32pm)</translation>
+    </message>
+    <message>
+        <source>Shiva x4 (32mp)</source>
+        <translation>Shiva x4 (32pm)</translation>
+    </message>
+    <message>
+        <source>Shiva x5 (32mp)</source>
+        <translation>Shiva x5 (32pm)</translation>
+    </message>
+    <message>
+        <source>Ifrit x1 (34mp)</source>
+        <translation>Ifrit x1 (34pm)</translation>
+    </message>
+    <message>
+        <source>Ifrit x2 (34mp)</source>
+        <translation>Ifrit x2(34pm)</translation>
+    </message>
+    <message>
+        <source>Ifrit x3 (34mp)</source>
+        <translation>Ifrit x3(34pm)</translation>
+    </message>
+    <message>
+        <source>Ifrit x4 (34mp)</source>
+        <translation>Ifrit x4(34pm)</translation>
+    </message>
+    <message>
+        <source>Ifrit x5 (34mp)</source>
+        <translation>Ifrit x5(34pm)</translation>
+    </message>
+    <message>
+        <source>Ramuh x1 (40mp)</source>
+        <translation>Ramuh x1 (40pm)</translation>
+    </message>
+    <message>
+        <source>Ramuh x2 (40mp)</source>
+        <translation>Ramuh x2 (40pm)</translation>
+    </message>
+    <message>
+        <source>Ramuh x3 (40mp)</source>
+        <translation>Ramuh x3 (40pm)</translation>
+    </message>
+    <message>
+        <source>Ramuh x4 (40mp)</source>
+        <translation>Ramuh x4 (40pm)</translation>
+    </message>
+    <message>
+        <source>Ramuh x5 (40mp)</source>
+        <translation>Ramuh x5 (40pm)</translation>
+    </message>
+    <message>
+        <source>Titan x1 (46mp)</source>
+        <translation>Titán x1 (46pm)</translation>
+    </message>
+    <message>
+        <source>Titan x2 (46mp)</source>
+        <translation>Titán x2 (46pm)</translation>
+    </message>
+    <message>
+        <source>Titan x3 (46mp)</source>
+        <translation>Titán x3 (46pm)</translation>
+    </message>
+    <message>
+        <source>Titan x4 (46mp)</source>
+        <translation>Titán x4 (46pm)</translation>
+    </message>
+    <message>
+        <source>Titan x5 (46mp)</source>
+        <translation>Titán x5 (46pm)</translation>
+    </message>
+    <message>
+        <source>Odin x1 (80mp)</source>
+        <translation>Odín x1 (80pm)</translation>
+    </message>
+    <message>
+        <source>Odin x2 (80mp)</source>
+        <translation>Odín x2 (80pm)</translation>
+    </message>
+    <message>
+        <source>Odin x3 (80mp)</source>
+        <translation>Odín x3 (80pm)</translation>
+    </message>
+    <message>
+        <source>Odin x4 (80mp)</source>
+        <translation>Odín x4 (80pm)</translation>
+    </message>
+    <message>
+        <source>Odin x5 (80mp)</source>
+        <translation>Odín x5 (80pm)</translation>
+    </message>
+    <message>
+        <source>Leviathan x1 (78mp)</source>
+        <translation>Leviatán x1 (78pm)</translation>
+    </message>
+    <message>
+        <source>Leviathan x2 (78mp)</source>
+        <translation>Leviatán x2 (78pm)</translation>
+    </message>
+    <message>
+        <source>Leviathan x3 (78mp)</source>
+        <translation>Leviatán x3 (78pm)</translation>
+    </message>
+    <message>
+        <source>Leviathan x4 (78mp)</source>
+        <translation>Leviatán x4 (78pm)</translation>
+    </message>
+    <message>
+        <source>Leviathan x5 (78mp)</source>
+        <translation>Leviatán x5 (78pm)</translation>
+    </message>
+    <message>
+        <source>Bahamut x1 (100mp)</source>
+        <translation>Bahamut x1 (100pm)</translation>
+    </message>
+    <message>
+        <source>Bahamut x2 (100mp)</source>
+        <translation>Bahamut x2 (100pm)</translation>
+    </message>
+    <message>
+        <source>Bahamut x3 (100mp)</source>
+        <translation>Bahamut x3 (100pm)</translation>
+    </message>
+    <message>
+        <source>Bahamut x4 (100mp)</source>
+        <translation>Bahamut x4 (100pm)</translation>
+    </message>
+    <message>
+        <source>Bahamut x5 (100mp)</source>
+        <translation>Bahamut x5 (100pm)</translation>
+    </message>
+    <message>
+        <source>Kujata x1 (110mp)</source>
+        <translation>Kjata x1 (110pm)</translation>
+    </message>
+    <message>
+        <source>Kujata x2 (110mp)</source>
+        <translation>Kjata x2 (110pm)</translation>
+    </message>
+    <message>
+        <source>Kujata x3 (110mp)</source>
+        <translation>Kjata x3 (110pm)</translation>
+    </message>
+    <message>
+        <source>Kujata x4 (110mp)</source>
+        <translation>Kjata x4 (110pm)</translation>
+    </message>
+    <message>
+        <source>Kujata x5 (110mp)</source>
+        <translation>Kjata x5 (110pm)</translation>
+    </message>
+    <message>
+        <source>Alexander x1 (120mp)</source>
+        <translation>Alejandro x1 (120pm)</translation>
+    </message>
+    <message>
+        <source>Alexander x2 (120mp)</source>
+        <translation>Alejandro x2 (120pm)</translation>
+    </message>
+    <message>
+        <source>Alexander x3 (120mp)</source>
+        <translation>Alejandro x3 (120pm)</translation>
+    </message>
+    <message>
+        <source>Alexander x4 (120mp)</source>
+        <translation>Alejandro x4 (120pm)</translation>
+    </message>
+    <message>
+        <source>Alexander x5 (120mp)</source>
+        <translation>Alejandro x5 (120pm)</translation>
+    </message>
+    <message>
+        <source>Phoenix x1 (180mp)</source>
+        <translation>Fénix x1 (180pm)</translation>
+    </message>
+    <message>
+        <source>Phoenix x2 (180mp)</source>
+        <translation>Fénix x2 (180pm)</translation>
+    </message>
+    <message>
+        <source>Phoenix x3 (180mp)</source>
+        <translation>
+Fénix x3 (180pm)</translation>
+    </message>
+    <message>
+        <source>Phoenix x4 (180mp)</source>
+        <translation>Fénix x4 (180pm)</translation>
+    </message>
+    <message>
+        <source>Phoenix x5 (180mp)</source>
+        <translation>Fénix x5 (180pm)</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x1 (140mp)</source>
+        <translation>Neo Bahamut x1 (140mp)</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x2 (140mp)</source>
+        <translation>Neo Bahamut x2 (140mp)</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x3 (140mp)</source>
+        <translation>Neo Bahamut x3 (140mp)</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x4 (140mp)</source>
+        <translation>Neo Bahamut x4 (140mp)</translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x5 (140mp)</source>
+        <translation>Neo Bahamut x5 (140mp)</translation>
+    </message>
+    <message>
+        <source>Hades x1 (150mp)</source>
+        <translation>Hades x1 (150mp)</translation>
+    </message>
+    <message>
+        <source>Hades x2 (150mp)</source>
+        <translation>Hades x2 (150mp)</translation>
+    </message>
+    <message>
+        <source>Hades x3 (150mp)</source>
+        <translation>Hades x3 (150mp)</translation>
+    </message>
+    <message>
+        <source>Hades x4 (150mp)</source>
+        <translation>Hades x4 (150mp)</translation>
+    </message>
+    <message>
+        <source>Hades x5 (150mp)</source>
+        <translation>Hades x5 (150mp)</translation>
+    </message>
+    <message>
+        <source>Typhon x1 (160mp)</source>
+        <translation>Typhon x1 (160mp)</translation>
+    </message>
+    <message>
+        <source>Typhon x2 (160mp)</source>
+        <translation>Typhon x2 (160mp)</translation>
+    </message>
+    <message>
+        <source>Typhon x3 (160mp)</source>
+        <translation>Typhon x3 (160mp)</translation>
+    </message>
+    <message>
+        <source>Typhon x4 (160mp)</source>
+        <translation>Typhon x4 (160mp)</translation>
+    </message>
+    <message>
+        <source>Typhon x5 (160mp)</source>
+        <translation>Typhon x5 (160mp)</translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x1 (180mp)</source>
+        <translation>Bahamut CERO x1 (180pm)</translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x2 (180mp)</source>
+        <translation>Bahamut CERO x2 (180pm)</translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x3 (180mp)</source>
+        <translation>Bahamut CERO x3 (180pm)</translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x4 (180mp)</source>
+        <translation>Bahamut CERO x4 (180pm)</translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x5 (180mp)</source>
+        <translation>Bahamut CERO x5 (180pm)</translation>
+    </message>
+    <message>
+        <source>KOTR x1 (250mp)</source>
+        <translation>Cab. de la mesa R. x1 (250pm)</translation>
+    </message>
+    <message>
+        <source>KOTR x2 (250mp)</source>
+        <translation>Cab. de la mesa R. x2 (250pm)</translation>
+    </message>
+    <message>
+        <source>KOTR x3 (250mp)</source>
+        <translation>Cab. de la mesa R. x3 (250pm)</translation>
+    </message>
+    <message>
+        <source>KOTR x4 (250mp)</source>
+        <translation>Cab. de la mesa R. x4 (250pm)</translation>
+    </message>
+    <message>
+        <source>KOTR x5 (250mp)</source>
+        <translation>Cab. de la mesa R. x5 (250pm)</translation>
     </message>
 </context>
 <context>

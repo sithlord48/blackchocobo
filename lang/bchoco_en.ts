@@ -5273,286 +5273,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Summon Choco/Mog x1 (14mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x2 (14mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x3 (14mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x4 (14mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Choco/Mog x5 (14mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x1 (34mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x2 (34mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x3 (34mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x4 (34mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Ifrit x5 (34mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x1 (40mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x2 (40mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x3 (40mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x4 (40mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Ramuh x5 (40mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Titan x1 (46mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Titan x2 (46mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Titan x3 (46mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Titan x4 (46mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Titan x5 (46mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Odin x1 (80mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Odin x2 (80mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Odin x3 (80mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Odin x4 (80mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Odin x5 (80mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x1 (78mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x2 (78mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x3 (78mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x4 (78mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Leviathan x5 (78mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x1 (100mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x2 (100mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x3 (100mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x4 (100mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Bahamut x5 (100mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Kujata x1 (110mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Kujata x2 (110mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Kujata x3 (110mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Kujata x4 (110mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Kujata x5 (110mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Alexander x1 (120mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Alexander x2 (120mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Alexander x3 (120mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Alexander x4 (120mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Alexander x5 (120mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x1 (180mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x2 (180mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x3 (180mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x4 (180mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Phoenix x5 (180mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x1 (140mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x2 (140mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x3 (140mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x4 (140mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Neo Bahamut x5 (140mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Hades x1 (150mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Hades x2 (150mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Hades x3 (150mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Hades x4 (150mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Hades x5 (150mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x1 (180mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x2 (180mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x3 (180mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x4 (180mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Bahamut ZERO x5 (180mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon KOTR x1 (250mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon KOTR x2 (250mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon KOTR x3 (250mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon KOTR x4 (250mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon KOTR x5 (250mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Master Summon</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5570,26 +5290,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Berserk (28mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Shiva x1 (32mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Shiva x2 (32mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Shiva x3 (32mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Shiva x4 (32mp)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Summon Shiva x5 (32mp)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5649,23 +5349,323 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Summon Typhon x1 (160mp)</source>
+        <source>Choco/Mog x1 (14mp)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Summon Typhon x2 (160mp)</source>
+        <source>Choco/Mog x2 (14mp)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Summon Typhon x3 (160mp)</source>
+        <source>Choco/Mog x3 (14mp)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Summon Typhon x4 (160mp)</source>
+        <source>Choco/Mog x4 (14mp)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Summon Typhon x5 (160mp)</source>
+        <source>Choco/Mog x5 (14mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shiva x1 (32mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shiva x2 (32mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shiva x3 (32mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shiva x4 (32mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shiva x5 (32mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ifrit x1 (34mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ifrit x2 (34mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ifrit x3 (34mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ifrit x4 (34mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ifrit x5 (34mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ramuh x1 (40mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ramuh x2 (40mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ramuh x3 (40mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ramuh x4 (40mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ramuh x5 (40mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Titan x1 (46mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Titan x2 (46mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Titan x3 (46mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Titan x4 (46mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Titan x5 (46mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Odin x1 (80mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Odin x2 (80mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Odin x3 (80mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Odin x4 (80mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Odin x5 (80mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Leviathan x1 (78mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Leviathan x2 (78mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Leviathan x3 (78mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Leviathan x4 (78mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Leviathan x5 (78mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bahamut x1 (100mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bahamut x2 (100mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bahamut x3 (100mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bahamut x4 (100mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bahamut x5 (100mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Kujata x1 (110mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Kujata x2 (110mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Kujata x3 (110mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Kujata x4 (110mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Kujata x5 (110mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alexander x1 (120mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alexander x2 (120mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alexander x3 (120mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alexander x4 (120mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Alexander x5 (120mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Phoenix x1 (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Phoenix x2 (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Phoenix x3 (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Phoenix x4 (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Phoenix x5 (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x1 (140mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x2 (140mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x3 (140mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x4 (140mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Neo Bahamut x5 (140mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hades x1 (150mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hades x2 (150mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hades x3 (150mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hades x4 (150mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hades x5 (150mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Typhon x1 (160mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Typhon x2 (160mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Typhon x3 (160mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Typhon x4 (160mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Typhon x5 (160mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x1 (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x2 (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x3 (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x4 (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bahamut ZERO x5 (180mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KOTR x1 (250mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KOTR x2 (250mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KOTR x3 (250mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KOTR x4 (250mp)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>KOTR x5 (250mp)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
