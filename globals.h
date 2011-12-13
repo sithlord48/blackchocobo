@@ -287,5 +287,3 @@ static MATERIA Materias[]=
     {QT_TRANSLATE_NOOP("Materia_Names","Master Summon"),    ":/icon/summon",      0x5A,0,0,0,0,0,0,0,0,{0,0,0,0},2,1}
 };
 #endif // GLOBALS_H
-
-

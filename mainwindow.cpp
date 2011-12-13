@@ -4369,7 +4369,10 @@ void MainWindow::on_combo_add_mat_currentIndexChanged(int index)
         load=true;
         for(int i=0;i<ui->combo_add_mat_2->count();i++)
         {
-            if(ui->combo_add_mat_2->itemText(i)==Materias[index].name){ui->combo_add_mat_2->setCurrentIndex(i);}
+            if(ui->combo_add_mat_2->itemText(i)==FF7Strings.MateriaNames(index))
+            {
+                ui->combo_add_mat_2->setCurrentIndex(i);
+            }
         }
         load=false;
     ff7->slot[s].materias[ui->tbl_materia->currentRow()].id = index;
@@ -4780,7 +4783,7 @@ void MainWindow::on_combo_add_mat_slot_currentIndexChanged(int index)
     ui->combo_mat_type_slot->setCurrentIndex(Materias[index].type);
     for(int i=0;i<ui->combo_add_mat_slot_2->count();i++)
     {
-        if(ui->combo_add_mat_slot_2->itemText(i)==Materias[index].name){ui->combo_add_mat_slot_2->setCurrentIndex(i);}
+        if(ui->combo_add_mat_slot_2->itemText(i)==FF7Strings.MateriaNames(index)){ui->combo_add_mat_slot_2->setCurrentIndex(i);}
     }
     materiaupdate_slot();
 }
