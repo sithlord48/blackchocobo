@@ -4449,7 +4449,7 @@ NO es un archivo de guardado PSV</translation>
     </message>
     <message>
         <source>Sneak Attack</source>
-        <translation>Aqtaque furtivo</translation>
+        <translation>Ataque furtivo</translation>
     </message>
     <message>
         <source>Final Attack</source>
