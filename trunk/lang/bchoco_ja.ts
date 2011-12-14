@@ -2833,7 +2833,7 @@
     </message>
     <message>
         <source>Alt+Ins</source>
-        <translation>Alt+Ins</translation>
+        <translation type="obsolete">Alt+Ins</translation>
     </message>
     <message>
         <source>New Game+ </source>
@@ -4334,6 +4334,10 @@ Table Entries are Editable</source>
     <message>
         <source>Church in the Slums</source>
         <translation>スラムの教会</translation>
+    </message>
+    <message>
+        <source>PAL (BESCES-00868)</source>
+        <translation type="unfinished">PAL (BESCES-00900) {00868)?}</translation>
     </message>
 </context>
 <context>
@@ -6448,6 +6452,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>New: Predict stat growth (if enabled)</source>
         <translation>追加: 能力値の変化を推計 (有効化した場合)</translation>
+    </message>
+    <message>
+        <source>New: Added Support for French PSX (BASCES-00868)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -2831,10 +2831,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Alt+Ins</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>New Game+ </source>
         <translation type="unfinished"></translation>
     </message>
@@ -4296,6 +4292,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Church in the Slums</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>PAL (BESCES-00868)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6392,6 +6392,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Predict stat growth (if enabled)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Added Support for French PSX (BASCES-00868)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

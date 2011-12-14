@@ -2848,7 +2848,7 @@
     </message>
     <message>
         <source>Alt+Ins</source>
-        <translation>Alt+Ins</translation>
+        <translation type="obsolete">Alt+Ins</translation>
     </message>
     <message>
         <source>New Game+ </source>
@@ -4319,6 +4319,10 @@ NO es un archivo de guardado PSV</translation>
     <message>
         <source>Church in the Slums</source>
         <translation>Iglesia en los suburbios</translation>
+    </message>
+    <message>
+        <source>PAL (BESCES-00868)</source>
+        <translation type="unfinished">PAL (BESCES-00900) {00868)?}</translation>
     </message>
 </context>
 <context>
@@ -6434,6 +6438,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>New: Predict stat growth (if enabled)</source>
         <translation>Nuevo: Predecir el crecimiento de stats (si está activado)</translation>
+    </message>
+    <message>
+        <source>New: Added Support for French PSX (BASCES-00868)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

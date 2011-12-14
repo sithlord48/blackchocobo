@@ -1694,8 +1694,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>443</width>
-             <height>436</height>
+             <width>423</width>
+             <height>454</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -4695,8 +4695,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>443</width>
-             <height>436</height>
+             <width>423</width>
+             <height>419</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8510,8 +8510,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>222</width>
-                  <height>435</height>
+                  <width>224</width>
+                  <height>353</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -10820,8 +10820,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1452</width>
-             <height>334</height>
+             <width>1394</width>
+             <height>353</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16829,8 +16829,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>764</width>
-             <height>440</height>
+             <width>754</width>
+             <height>438</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -17248,8 +17248,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>744</width>
-             <height>414</height>
+             <width>738</width>
+             <height>410</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -19232,8 +19232,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>390</width>
-                  <height>1492</height>
+                  <width>391</width>
+                  <height>1313</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -21947,8 +21947,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>737</width>
-             <height>664</height>
+             <width>740</width>
+             <height>648</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -28663,7 +28663,7 @@ Var And Scrolling Synced To Left Table</string>
      <x>0</x>
      <y>0</y>
      <width>764</width>
-     <height>22</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
@@ -28790,6 +28790,7 @@ Var And Scrolling Synced To Left Table</string>
      <addaction name="action_Region_USA"/>
      <addaction name="separator"/>
      <addaction name="action_Region_PAL_Generic"/>
+     <addaction name="action_Region_PAL_French"/>
      <addaction name="action_Region_PAL_German"/>
      <addaction name="action_Region_PAL_Spanish"/>
      <addaction name="separator"/>
@@ -29596,6 +29597,18 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="text">
     <string notr="true">Deutsch</string>
+   </property>
+  </action>
+  <action name="action_Region_PAL_French">
+   <property name="checkable">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/fr_unsel</normaloff>:/icon/fr_unsel</iconset>
+   </property>
+   <property name="text">
+    <string>PAL (BESCES-00868)</string>
    </property>
   </action>
  </widget>
