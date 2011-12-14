@@ -594,7 +594,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
         }
         else if(ff7->SG_Region_String[s].contains("00867") ||ff7->SG_Region_String[s].contains("00869") ||
                 ff7->SG_Region_String[s].contains("00900") ||ff7->SG_Region_String[s].contains("94163") ||
-                ff7->SG_Region_String[s].contains("00700") ||ff7->SG_Region_String[s].contains("01057"))
+                ff7->SG_Region_String[s].contains("00700") ||ff7->SG_Region_String[s].contains("01057") ||
+                ff7->SG_Region_String[s].contains("00868"))
         {//FF7 Slot
             //theme the box
             QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
