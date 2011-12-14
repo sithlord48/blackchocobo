@@ -498,6 +498,26 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>New: Added Support for French PSX (BASCES-00868)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Previous Versions</string>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="textAlignment">
+           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New: Text Conversion Class (based on myst6re's work) </string>
           </property>
          </item>
@@ -524,21 +544,6 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>Improved: Slotselect handling of non-ff7 and empty slots</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Previous Versions</string>
-          </property>
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <underline>true</underline>
-           </font>
-          </property>
-          <property name="textAlignment">
-           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
           </property>
          </item>
          <item>
@@ -1539,8 +1544,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>138</width>
-            <height>740</height>
+            <width>121</width>
+            <height>700</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">

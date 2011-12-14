@@ -436,7 +436,8 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
     {
         s=0;
         if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
-           (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")))
+           (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")) ||
+           (fileName.contains("00868")) )
         {
             QString string;
             string = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
@@ -501,7 +502,7 @@ void MainWindow::on_actionFrom_PSX_Slot_activated()
             temp = ff7file.mid(index,0x10f4);
             memcpy(&ff7->slot[s],temp,0x10f4);
             if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
-                (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")))
+              (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")) || (fileName.contains("00868")))
             {
                 QString string;
                 string = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
@@ -540,7 +541,7 @@ void MainWindow::on_actionFrom_PSV_Slot_activated()
             temp = ff7file.mid(index,0x10f4);
             memcpy(&ff7->slot[s],temp,0x10f4);
             if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
-                (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")))
+               (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")) || (fileName.contains("00868")))
                 {ff7->SG_Region_String[s] = QString(ff7file.mid(0x64,19));}
             else {ff7->SG_Region_String[s].clear();}
         }//Parse slot data....
@@ -955,7 +956,7 @@ void MainWindow::on_actionExport_PSX_activated()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 SaveGame"), ff7->SG_Region_String[s],
-    tr("BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)"));
+    tr("BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)"));
     if(ff7->SG_TYPE != "PSX")
     {
         ui->combo_control->setCurrentIndex(0);
@@ -1338,7 +1339,7 @@ void MainWindow::on_action_Region_USA_triggered(bool checked)
     }
     else
     {
-        if((ff7->SG_Region_String[s].contains("BESCES-00869"))||(ff7->SG_Region_String[s].contains("BESCES-00867"))||(ff7->SG_Region_String[s].contains("BESCES-00900")))
+        if((ff7->SG_Region_String[s].contains("BESCES-00869"))||(ff7->SG_Region_String[s].contains("BESCES-00867"))||(ff7->SG_Region_String[s].contains("BESCES-00900"))||(ff7->SG_Region_String[s].contains("BESCES-00868")))
             {set_ntsc_time();}//Call RegionTime Convertor
         switch(s)
         {
@@ -1360,6 +1361,8 @@ void MainWindow::on_action_Region_USA_triggered(bool checked)
         }
         ui->action_Region_PAL_Generic->setChecked(false);
         ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+        ui->action_Region_PAL_French->setChecked(false);
+        ui->action_Region_PAL_French->setIcon(QIcon(":/icon/fr_unsel"));
         ui->action_Region_PAL_German->setChecked(false);
         ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
         ui->action_Region_PAL_Spanish->setChecked(false);
@@ -1409,6 +1412,8 @@ void MainWindow::on_action_Region_PAL_Generic_triggered(bool checked)
         ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
         ui->action_Region_PAL_German->setChecked(false);
         ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+        ui->action_Region_PAL_French->setChecked(false);
+        ui->action_Region_PAL_French->setIcon(QIcon(":/icon/fr_unsel"));
         ui->action_Region_PAL_Spanish->setChecked(false);
         ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
         ui->action_Region_JPN->setChecked(false);
@@ -1456,6 +1461,8 @@ void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
         ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
         ui->action_Region_PAL_Generic->setChecked(false);
         ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+        ui->action_Region_PAL_French->setChecked(false);
+        ui->action_Region_PAL_French->setIcon(QIcon(":/icon/fr_unsel"));
         ui->action_Region_PAL_Spanish->setChecked(false);
         ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
         ui->action_Region_JPN->setChecked(false);
@@ -1503,6 +1510,8 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
         ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
         ui->action_Region_PAL_Generic->setChecked(false);
         ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+        ui->action_Region_PAL_French->setChecked(false);
+        ui->action_Region_PAL_French->setIcon(QIcon(":/icon/fr_unsel"));
         ui->action_Region_PAL_German->setChecked(false);
         ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
         ui->action_Region_JPN->setChecked(false);
@@ -1510,6 +1519,55 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
         ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
         ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
         ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_sel"));
+        ui->lbl_sg_region->setText(ff7->SG_Region_String[s].mid(0,ff7->SG_Region_String[s].lastIndexOf("-")+1));
+        ui->cb_Region_Slot->setCurrentIndex(ff7->SG_Region_String[s].mid(ff7->SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
+        Text.init(0);
+    }
+}}
+/*~~~~~~~~~~~~~SET PAL_French MC HEADER~~~~~~~~~~~~~~~~*/
+void MainWindow::on_action_Region_PAL_French_triggered(bool checked)
+{if(!load){file_changed=true;
+    if(!checked)
+    {
+        ff7->SG_Region_String[s].clear();
+        ui->lbl_sg_region->clear();
+        ui->action_Region_PAL_French->setIcon(QIcon(":/icon/fr_unsel"));
+    }
+    else
+    {
+        if((ff7->SG_Region_String[s].contains("BASCUS-94163"))||(ff7->SG_Region_String[s].contains("BISLPS-00700"))||(ff7->SG_Region_String[s].contains("BISLPS-01057")))
+            {set_pal_time();}//Call RegionTime Convertor
+        switch(s)
+        {
+            case 0:ff7->SG_Region_String[s] = "BESCES-00868FF7-S01"; break;
+            case 1:ff7->SG_Region_String[s] = "BESCES-00868FF7-S02"; break;
+            case 2:ff7->SG_Region_String[s] = "BESCES-00868FF7-S03"; break;
+            case 3:ff7->SG_Region_String[s] = "BESCES-00868FF7-S04"; break;
+            case 4:ff7->SG_Region_String[s] = "BESCES-00868FF7-S05"; break;
+            case 5:ff7->SG_Region_String[s] = "BESCES-00868FF7-S06"; break;
+            case 6:ff7->SG_Region_String[s] = "BESCES-00868FF7-S07"; break;
+            case 7:ff7->SG_Region_String[s] = "BESCES-00868FF7-S08"; break;
+            case 8:ff7->SG_Region_String[s] = "BESCES-00868FF7-S09"; break;
+            case 9:ff7->SG_Region_String[s] = "BESCES-00868FF7-S10"; break;
+            case 10:ff7->SG_Region_String[s] = "BESCES-00868FF7-S11"; break;
+            case 11:ff7->SG_Region_String[s] = "BESCES-00868FF7-S12"; break;
+            case 12:ff7->SG_Region_String[s] = "BESCES-00868FF7-S13"; break;
+            case 13:ff7->SG_Region_String[s] = "BESCES-00868FF7-S14"; break;
+            case 14:ff7->SG_Region_String[s] = "BESCES-00868FF7-S15"; break;
+        }
+        ui->action_Region_USA->setChecked(false);
+        ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
+        ui->action_Region_PAL_Generic->setChecked(false);
+        ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+        ui->action_Region_PAL_Spanish->setChecked(false);
+        ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
+        ui->action_Region_PAL_German->setChecked(false);
+        ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+        ui->action_Region_JPN->setChecked(false);
+        ui->action_Region_JPN_International->setChecked(false);
+        ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
+        ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
+        ui->action_Region_PAL_French->setIcon(QIcon(":/icon/fr_sel"));
         ui->lbl_sg_region->setText(ff7->SG_Region_String[s].mid(0,ff7->SG_Region_String[s].lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->SG_Region_String[s].mid(ff7->SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
         Text.init(0);
@@ -1526,7 +1584,7 @@ void MainWindow::on_action_Region_JPN_triggered(bool checked)
     }
     else
     {//First Check If Coming From PAL
-        if((ff7->SG_Region_String[s].contains("BESCES-00869"))||(ff7->SG_Region_String[s].contains("BESCES-00867"))||(ff7->SG_Region_String[s].contains("BESCES-00900")))
+        if((ff7->SG_Region_String[s].contains("BESCES-00869"))||(ff7->SG_Region_String[s].contains("BESCES-00867"))||(ff7->SG_Region_String[s].contains("BESCES-00900"))||(ff7->SG_Region_String[s].contains("BESCES-00868")))
             {set_ntsc_time();}//Call RegionTime Convertor
         switch(s)
         {
@@ -1550,6 +1608,8 @@ void MainWindow::on_action_Region_JPN_triggered(bool checked)
         ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
         ui->action_Region_PAL_Generic->setChecked(false);
         ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+        ui->action_Region_PAL_French->setChecked(false);
+        ui->action_Region_PAL_French->setIcon(QIcon(":/icon/fr_unsel"));
         ui->action_Region_PAL_German->setChecked(false);
         ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
         ui->action_Region_PAL_Spanish->setChecked(false);
@@ -1573,7 +1633,7 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
     }
     else
     {
-        if((ff7->SG_Region_String[s].contains("BESCES-00869"))||(ff7->SG_Region_String[s].contains("BESCES-00867"))||(ff7->SG_Region_String[s].contains("BESCES-00900")))
+        if((ff7->SG_Region_String[s].contains("BESCES-00869"))||(ff7->SG_Region_String[s].contains("BESCES-00867"))||(ff7->SG_Region_String[s].contains("BESCES-00900"))||(ff7->SG_Region_String[s].contains("BESCES-00868")))
             {set_ntsc_time();}//Call RegionTime Convertor
         switch(s)
         {
@@ -1597,6 +1657,8 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
         ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
         ui->action_Region_PAL_Generic->setChecked(false);
         ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
+        ui->action_Region_PAL_French->setChecked(false);
+        ui->action_Region_PAL_French->setIcon(QIcon(":/icon/fr_unsel"));
         ui->action_Region_PAL_German->setChecked(false);
         ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
         ui->action_Region_PAL_Spanish->setChecked(false);
@@ -2433,6 +2495,7 @@ void MainWindow::setmenu(bool newgame)
     /*~~Set Detected Region ~~*/
     if(ff7->SG_Region_String[s].contains("94163")){ui->action_Region_USA->setChecked(Qt::Checked);ui->action_Region_USA->setIcon(QIcon(":/icon/us_sel"));}
     else if(ff7->SG_Region_String[s].contains("00867")){ui->action_Region_PAL_Generic->setChecked(Qt::Checked);ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_sel"));}
+    else if(ff7->SG_Region_String[s].contains("00868")){ui->action_Region_PAL_French->setChecked(Qt::Checked);ui->action_Region_PAL_French->setIcon(QIcon(":/icon/fr_sel"));}
     else if(ff7->SG_Region_String[s].contains("00869")){ui->action_Region_PAL_German->setChecked(Qt::Checked);ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_sel"));}
     else if(ff7->SG_Region_String[s].contains("00900")){ui->action_Region_PAL_Spanish->setChecked(Qt::Checked);ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_sel"));}
     else if(ff7->SG_Region_String[s].contains("00700")){ui->action_Region_JPN->setChecked(Qt::Checked);ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_sel"));}
@@ -3062,7 +3125,7 @@ void MainWindow::guirefresh(bool newgame)
     if(!ff7->SG_Region_String[s].contains("00867") && !ff7->SG_Region_String[s].contains("00869") &&
        !ff7->SG_Region_String[s].contains("00900") && !ff7->SG_Region_String[s].contains("94163") &&
        !ff7->SG_Region_String[s].contains("00700") && !ff7->SG_Region_String[s].contains("01057") &&
-       !ff7->SG_Region_String[s].isEmpty()  )
+       !ff7->SG_Region_String[s].contains("00868") && !ff7->SG_Region_String[s].isEmpty()  )
     {// NOT FF7
         errbox error(0,ff7,s);
         error.setStyleSheet(this->styleSheet());
@@ -3096,7 +3159,8 @@ void MainWindow::guirefresh(bool newgame)
     /*if empty and a Virtual memcard format and frame not empty must be link or mid link skip block!*/
     else if((!ff7->SG_Region_String[s].contains("00867") && !ff7->SG_Region_String[s].contains("00869") &&
             !ff7->SG_Region_String[s].contains("00900") && !ff7->SG_Region_String[s].contains("94163") &&
-            !ff7->SG_Region_String[s].contains("00700") && !ff7->SG_Region_String[s].contains("01057"))
+            !ff7->SG_Region_String[s].contains("00700") && !ff7->SG_Region_String[s].contains("01057") &&
+            !ff7->SG_Region_String[s].contains("00868"))
          && (ff7->SG_TYPE =="MC" || ff7->SG_TYPE =="VGS" ||ff7->SG_TYPE =="DEX" ||ff7->SG_TYPE =="PSP")
          && (ff7->file_headerp[reserve_start] !=0xA0))
         {
