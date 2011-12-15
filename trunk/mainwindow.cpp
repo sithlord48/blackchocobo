@@ -2423,7 +2423,8 @@ void MainWindow::setmenu(bool newgame)
     ui->actionSlot_15->setChecked(0);ui->actionSlot_15->setIcon(QIcon(":icon/15_unsel"));
     ui->action_Region_USA->setChecked(0);ui->action_Region_USA->setIcon(QIcon(":/icon/us_unsel"));
     ui->action_Region_PAL_Generic->setChecked(0);ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_unsel"));
-    ui->action_Region_PAL_German->setChecked(0);ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
+    ui->action_Region_PAL_German->setChecked(0);ui->action_Region_PAL_French->setIcon(QIcon(":/icon/fr_unsel"));
+    ui->action_Region_PAL_French->setChecked(0);ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_unsel"));
     ui->action_Region_PAL_Spanish->setChecked(0);ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_unsel"));
     ui->action_Region_JPN->setChecked(0);ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_unsel"));
     ui->action_Region_JPN_International->setChecked(0);ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_unsel"));
