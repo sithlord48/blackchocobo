@@ -56,7 +56,8 @@ void fix_pc_bytemask(FF7 *ff7,int s,bool skip_slot_mask)
     {
         if(ff7->SG_Region_String[i].contains("00867") || ff7->SG_Region_String[i].contains("00869") ||
            ff7->SG_Region_String[i].contains("00900") || ff7->SG_Region_String[i].contains("94163") ||
-           ff7->SG_Region_String[i].contains("00700") || ff7->SG_Region_String[i].contains("01057"))
+           ff7->SG_Region_String[i].contains("00700") || ff7->SG_Region_String[i].contains("01057") ||
+           ff7->SG_Region_String[i].contains("00868"))
         {
         mask |= (1<<i);
         }
@@ -68,7 +69,8 @@ void fix_pc_bytemask(FF7 *ff7,int s,bool skip_slot_mask)
     {
         if(ff7->SG_Region_String[i].contains("00867") || ff7->SG_Region_String[i].contains("00869") ||
            ff7->SG_Region_String[i].contains("00900") || ff7->SG_Region_String[i].contains("94163") ||
-           ff7->SG_Region_String[i].contains("00700") || ff7->SG_Region_String[i].contains("01057"))
+           ff7->SG_Region_String[i].contains("00700") || ff7->SG_Region_String[i].contains("01057") ||
+           ff7->SG_Region_String[i].contains("00868"))
         {
         mask |= (1<<(i-8));
         }
@@ -120,7 +122,8 @@ void fix_vmc_header(FF7 *ff7)
         if(ff7->SG_TYPE =="DEX"){index+=0xF40;}
         if(ff7->SG_Region_String[i].contains("00867") ||ff7->SG_Region_String[i].contains("00869") ||
            ff7->SG_Region_String[i].contains("00900") ||ff7->SG_Region_String[i].contains("94163") ||
-           ff7->SG_Region_String[i].contains("00700") ||ff7->SG_Region_String[i].contains("01057"))
+           ff7->SG_Region_String[i].contains("00700") ||ff7->SG_Region_String[i].contains("01057") ||
+           ff7->SG_Region_String[i].contains("00868"))
         {
            QByteArray temp;
            temp.resize(10);
