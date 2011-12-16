@@ -920,7 +920,7 @@ void MainWindow::on_actionExport_PC_Save_activated()
     for(int si=0;si<15;si++)//clean up non ff7 saves and fix time for Pal Saves.
     {
         if (ff7->SG_Region_String[si].contains("94163") || ff7->SG_Region_String[si].contains("00700") || ff7->SG_Region_String[si].contains("01057")){/*FF7File AND NTSC*/}
-        else if(ff7->SG_Region_String[si].contains("00867") || ff7->SG_Region_String[si].contains("00869") || ff7->SG_Region_String[si].contains("00900"))
+        else if(ff7->SG_Region_String[si].contains("00867") || ff7->SG_Region_String[si].contains("00868")|| ff7->SG_Region_String[si].contains("00869") || ff7->SG_Region_String[si].contains("00900"))
         {/*PAL, Correct Time?*/
             if((result==QMessageBox::YesToAll) || (result==QMessageBox::NoToAll)){/*Already Chosen Yes/No to all*/}
             else
@@ -1161,9 +1161,17 @@ void MainWindow::on_actionPaste_Slot_activated()
 {
     memcpy(&ff7->slot[s],&bufferslot,0x10f4);
     ff7->SG_Region_String[s] = buffer_region;
-    ff7->SG_Region_String[s].chop(2);
-    ff7->SG_Region_String[s].append(QString::number(s+1));
-    file_changed=true;
+    if(s<9)
+    {
+        ff7->SG_Region_String[s].chop(1);
+        ff7->SG_Region_String[s].append(QString::number(s+1));
+    }
+    if(s>9)
+    {
+        ff7->SG_Region_String[s].chop(2);
+        ff7->SG_Region_String[s].append(QString::number(s+1));
+    }
+        file_changed=true;
     guirefresh(0);
 }
 void MainWindow::on_actionShow_Options_triggered()

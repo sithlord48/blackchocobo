@@ -4695,7 +4695,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>423</width>
+             <width>401</width>
              <height>419</height>
             </rect>
            </property>
@@ -8510,7 +8510,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>224</width>
+                  <width>192</width>
                   <height>353</height>
                  </rect>
                 </property>
@@ -10820,8 +10820,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1394</width>
-             <height>353</height>
+             <width>1388</width>
+             <height>263</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16829,8 +16829,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>754</width>
-             <height>438</height>
+             <width>714</width>
+             <height>238</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -19232,7 +19232,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>391</width>
+                  <width>295</width>
                   <height>1313</height>
                  </rect>
                 </property>
@@ -21947,7 +21947,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>740</width>
+             <width>733</width>
              <height>648</height>
             </rect>
            </property>
@@ -28822,7 +28822,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>&amp;Quit</string>
    </property>
    <property name="shortcut">
-    <string>Alt+Q</string>
+    <string notr="true">Alt+Q</string>
    </property>
   </action>
   <action name="actionOpen_Save_File">
@@ -28852,7 +28852,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>Save As</string>
    </property>
    <property name="shortcut">
-    <string>Alt+Shift+S</string>
+    <string notr="true">Alt+Shift+S</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -28870,7 +28870,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>About Black Chocobo</string>
    </property>
    <property name="shortcut">
-    <string>F1</string>
+    <string notr="true">F1</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -28885,7 +28885,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>About Qt</string>
    </property>
    <property name="shortcut">
-    <string>Alt+F1</string>
+    <string notr="true">Alt+F1</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -29203,7 +29203,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>Copy Current Slot</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+Shift+C</string>
+    <string notr="true">Ctrl+Shift+C</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -29221,7 +29221,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>Paste Slot</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+Shift+V</string>
+    <string notr="true">Ctrl+Shift+V</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -29239,7 +29239,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>Clear Slot</string>
    </property>
    <property name="shortcut">
-    <string>Alt+Del</string>
+    <string notr="true">Alt+Del</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -29257,7 +29257,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>Previous Slot</string>
    </property>
    <property name="shortcut">
-    <string>Alt+Left</string>
+    <string notr="true">Alt+Left</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -29275,7 +29275,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>Next Slot</string>
    </property>
    <property name="shortcut">
-    <string>Alt+Right</string>
+    <string notr="true">Alt+Right</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -29443,7 +29443,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>New Game</string>
    </property>
    <property name="shortcut">
-    <string>Alt+Ins</string>
+    <string notr="true">Alt+Ins</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -29461,7 +29461,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>New Game+ </string>
    </property>
    <property name="shortcut">
-    <string>Alt+Shift+Ins</string>
+    <string notr="true">Alt+Shift+Ins</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -29503,7 +29503,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>&amp;Save</string>
    </property>
    <property name="shortcut">
-    <string>Ctrl+S</string>
+    <string notr="true">Ctrl+S</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>
@@ -29572,7 +29572,7 @@ Var And Scrolling Synced To Left Table</string>
     <string>Reload</string>
    </property>
    <property name="shortcut">
-    <string>F5</string>
+    <string notr="true">F5</string>
    </property>
    <property name="shortcutContext">
     <enum>Qt::ApplicationShortcut</enum>

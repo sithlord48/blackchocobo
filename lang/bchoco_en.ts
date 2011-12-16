@@ -1870,10 +1870,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Alt+Q</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Ctrl+O</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2282,23 +2278,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Alt+Del</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Previous Slot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Alt+Left</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Next Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt+Right</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2502,15 +2486,7 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ctrl+S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>About Black Chocobo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>F1</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2791,10 +2767,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Bad Psx Save Name</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2832,10 +2804,6 @@
     </message>
     <message>
         <source>New Game+ </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt+Shift+Ins</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3241,22 +3209,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Alt+Shift+S</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Alt+F1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+C</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+V</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&amp;Save</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3610,10 +3562,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Reload</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>F5</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4296,6 +4244,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>PAL (BESCES-00868)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
