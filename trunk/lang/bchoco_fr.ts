@@ -1970,10 +1970,6 @@
         <translation>&amp;Importer un slot</translation>
     </message>
     <message>
-        <source>Alt+Q</source>
-        <translation>Alt+Q</translation>
-    </message>
-    <message>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
@@ -2318,24 +2314,12 @@
         <translation>Vider le slot</translation>
     </message>
     <message>
-        <source>Alt+Del</source>
-        <translation>Alt+Suppr</translation>
-    </message>
-    <message>
         <source>Previous Slot</source>
         <translation>Slot précédent</translation>
     </message>
     <message>
-        <source>Alt+Left</source>
-        <translation>Alt+Gauche</translation>
-    </message>
-    <message>
         <source>Next Slot</source>
         <translation>Slot suivant</translation>
-    </message>
-    <message>
-        <source>Alt+Right</source>
-        <translation>Alt+Droite</translation>
     </message>
     <message>
         <source>Ropeway Station</source>
@@ -2506,16 +2490,8 @@
         <translation>&amp;Quitter</translation>
     </message>
     <message>
-        <source>Ctrl+S</source>
-        <translation>Ctrl+S</translation>
-    </message>
-    <message>
         <source>About Black Chocobo</source>
         <translation>À propos de Black Chocobo</translation>
-    </message>
-    <message>
-        <source>F1</source>
-        <translation>F1</translation>
     </message>
     <message>
         <source>About Qt</source>
@@ -2803,10 +2779,6 @@
         <translation>Note de sauvegarde PSP</translation>
     </message>
     <message>
-        <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
-        <translation>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</translation>
-    </message>
-    <message>
         <source>Bad Psx Save Name</source>
         <translation>PSX Mauvais nom de sauvegarde</translation>
     </message>
@@ -2843,16 +2815,8 @@
         <translation>Nouvelle partie</translation>
     </message>
     <message>
-        <source>Alt+Ins</source>
-        <translation type="obsolete">Alt+Ins</translation>
-    </message>
-    <message>
         <source>New Game+ </source>
         <translation>Nouvelle partie +</translation>
-    </message>
-    <message>
-        <source>Alt+Shift+Ins</source>
-        <translation>Alt+Shift+Ins</translation>
     </message>
     <message>
         <source>Export Current Character</source>
@@ -3372,22 +3336,6 @@ is not a FF7 SaveGame.</source>
         <translation>Enregistrer sous</translation>
     </message>
     <message>
-        <source>Alt+Shift+S</source>
-        <translation>Alt+Shift+S</translation>
-    </message>
-    <message>
-        <source>Alt+F1</source>
-        <translation>Alt+F1</translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+C</source>
-        <translation>Ctrl+Shift+C</translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+V</source>
-        <translation>Ctrl+Shift+V</translation>
-    </message>
-    <message>
         <source>&amp;Save</source>
         <translation>&amp;Enregistrer</translation>
     </message>
@@ -3631,10 +3579,6 @@ Les stats de Sephiroth proviendront directement de celles de Vincent.</translati
     <message>
         <source>Reload</source>
         <translation>Recharger</translation>
-    </message>
-    <message>
-        <source>F5</source>
-        <translation>F5</translation>
     </message>
     <message>
         <source>-None-</source>
@@ -4323,6 +4267,10 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     <message>
         <source>PAL (BESCES-00868)</source>
         <translation type="unfinished">PAL (BESCES-00900) {00868)?}</translation>
+    </message>
+    <message>
+        <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

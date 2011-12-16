@@ -1870,10 +1870,6 @@
         <translation>現在のスロットにインポート(&amp;I)</translation>
     </message>
     <message>
-        <source>Alt+Q</source>
-        <translation>Alt+Q</translation>
-    </message>
-    <message>
         <source>Ctrl+O</source>
         <translation>Ctrl+O</translation>
     </message>
@@ -2282,24 +2278,12 @@
         <translation>スロットのクリア</translation>
     </message>
     <message>
-        <source>Alt+Del</source>
-        <translation>Alt+Del</translation>
-    </message>
-    <message>
         <source>Previous Slot</source>
         <translation>前のスロット</translation>
     </message>
     <message>
-        <source>Alt+Left</source>
-        <translation>Alt+Left</translation>
-    </message>
-    <message>
         <source>Next Slot</source>
         <translation>次のスロット</translation>
-    </message>
-    <message>
-        <source>Alt+Right</source>
-        <translation>Alt+Right</translation>
     </message>
     <message>
         <source>&amp;Items</source>
@@ -2502,16 +2486,8 @@
         <translation>終了(&amp;Q)</translation>
     </message>
     <message>
-        <source>Ctrl+S</source>
-        <translation>Ctrl+S</translation>
-    </message>
-    <message>
         <source>About Black Chocobo</source>
         <translation>Black Chocobo について</translation>
-    </message>
-    <message>
-        <source>F1</source>
-        <translation>F1</translation>
     </message>
     <message>
         <source>About Qt</source>
@@ -2792,10 +2768,6 @@
         <translation>PSP セーブの警告</translation>
     </message>
     <message>
-        <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
-        <translation>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</translation>
-    </message>
-    <message>
         <source>Bad Psx Save Name</source>
         <translation>無効な PSX セーブの名称</translation>
     </message>
@@ -2832,16 +2804,8 @@
         <translation>新規ゲーム</translation>
     </message>
     <message>
-        <source>Alt+Ins</source>
-        <translation type="obsolete">Alt+Ins</translation>
-    </message>
-    <message>
         <source>New Game+ </source>
         <translation>新規ゲーム＋</translation>
-    </message>
-    <message>
-        <source>Alt+Shift+Ins</source>
-        <translation>Alt+Shift+Ins</translation>
     </message>
     <message>
         <source>Export Current Character</source>
@@ -3256,22 +3220,6 @@ MASTER = 16777215 AP です</translation>
         <translation>名前を付けて保存</translation>
     </message>
     <message>
-        <source>Alt+Shift+S</source>
-        <translation></translation>
-    </message>
-    <message>
-        <source>Alt+F1</source>
-        <translation>Alt+F1</translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+C</source>
-        <translation>Ctrl+Shift+C</translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+V</source>
-        <translation>Ctrl+Shift+V</translation>
-    </message>
-    <message>
         <source>&amp;Save</source>
         <translation>保存(&amp;S)</translation>
     </message>
@@ -3626,10 +3574,6 @@ MASTER = 16777215 AP です</translation>
     <message>
         <source>Reload</source>
         <translation>再読み込み</translation>
-    </message>
-    <message>
-        <source>F5</source>
-        <translation>F5</translation>
     </message>
     <message>
         <source>-None-</source>
@@ -4337,7 +4281,12 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>PAL (BESCES-00868)</source>
-        <translation type="unfinished">PAL (BESCES-00900) {00868)?}</translation>
+        <translatorcomment>PAL (BESCES-00900) {00868)?}</translatorcomment>
+        <translation type="unfinished">PAL (BESCES-00868)</translation>
+    </message>
+    <message>
+        <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6455,7 +6404,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Added Support for French PSX (BASCES-00868)</source>
-        <translation type="unfinished"></translation>
+        <translation>追加: 仏語版 PSX (BASCES-00868) に対応</translation>
     </message>
 </context>
 <context>

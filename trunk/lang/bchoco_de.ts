@@ -1871,10 +1871,6 @@
         <translation>&amp;Importiere zu jetzigem Steckplatz</translation>
     </message>
     <message>
-        <source>Alt+Q</source>
-        <translation>Alt+Q</translation>
-    </message>
-    <message>
         <source>Ctrl+O</source>
         <translation>Strg+O</translation>
     </message>
@@ -2283,24 +2279,12 @@
         <translation>Steckplatz Zurücksetzen</translation>
     </message>
     <message>
-        <source>Alt+Del</source>
-        <translation>Alt+Entf</translation>
-    </message>
-    <message>
         <source>Previous Slot</source>
         <translation>Vorheriger Steckplatz</translation>
     </message>
     <message>
-        <source>Alt+Left</source>
-        <translation>Alt+Links</translation>
-    </message>
-    <message>
         <source>Next Slot</source>
         <translation>Nächster Steckplatz</translation>
-    </message>
-    <message>
-        <source>Alt+Right</source>
-        <translation>Alt+Rechts</translation>
     </message>
     <message>
         <source>&amp;Items</source>
@@ -2503,16 +2487,8 @@
         <translation>&amp;Beenden</translation>
     </message>
     <message>
-        <source>Ctrl+S</source>
-        <translation>Strg+S</translation>
-    </message>
-    <message>
         <source>About Black Chocobo</source>
         <translation>Über Black Chocobo</translation>
-    </message>
-    <message>
-        <source>F1</source>
-        <translation>F1</translation>
     </message>
     <message>
         <source>About Qt</source>
@@ -2793,10 +2769,6 @@
         <translation>PSP Speicher Notiz</translation>
     </message>
     <message>
-        <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
-        <translation>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</translation>
-    </message>
-    <message>
         <source>Bad Psx Save Name</source>
         <translation>Schlechter PSX Spielstand Name</translation>
     </message>
@@ -2833,16 +2805,8 @@
         <translation>Neues Spiel</translation>
     </message>
     <message>
-        <source>Alt+Ins</source>
-        <translation type="obsolete">Alt+Einfg</translation>
-    </message>
-    <message>
         <source>New Game+ </source>
         <translation>Neues Spiel+ </translation>
-    </message>
-    <message>
-        <source>Alt+Shift+Ins</source>
-        <translation>Alt+Shift+Einfg</translation>
     </message>
     <message>
         <source>Export Current Character</source>
@@ -3257,22 +3221,6 @@ ist kein FF7 Spielstand.</translation>
         <translation>Speichern als</translation>
     </message>
     <message>
-        <source>Alt+Shift+S</source>
-        <translation>Alt+Shift+S</translation>
-    </message>
-    <message>
-        <source>Alt+F1</source>
-        <translation>Alt+F1</translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+C</source>
-        <translation>Strg+Shift+C</translation>
-    </message>
-    <message>
-        <source>Ctrl+Shift+V</source>
-        <translation>Strg+Shift+V</translation>
-    </message>
-    <message>
         <source>&amp;Save</source>
         <translation>&amp;Speichern</translation>
     </message>
@@ -3629,10 +3577,6 @@ ist kein FF7 Spielstand.</translation>
     <message>
         <source>Reload</source>
         <translation>Nachladen</translation>
-    </message>
-    <message>
-        <source>F5</source>
-        <translation>F5</translation>
     </message>
     <message>
         <source>-None-</source>
@@ -4329,6 +4273,10 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>PAL (BESCES-00868)</source>
         <translation type="unfinished">PAL (BESCES-00900) {00868)?}</translation>
+    </message>
+    <message>
+        <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
