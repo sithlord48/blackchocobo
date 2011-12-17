@@ -4282,11 +4282,11 @@ Table Entries are Editable</source>
     <message>
         <source>PAL (BESCES-00868)</source>
         <translatorcomment>PAL (BESCES-00900) {00868)?}</translatorcomment>
-        <translation type="unfinished">PAL (BESCES-00868)</translation>
+        <translation>PAL (BESCES-00868)</translation>
     </message>
     <message>
         <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
-        <translation type="unfinished"></translation>
+        <translation>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</translation>
     </message>
 </context>
 <context>
