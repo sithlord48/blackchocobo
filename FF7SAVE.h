@@ -401,7 +401,7 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 tut_sub;             // [0x0C1E] Have we seen the sub tutorial 0x04 =on Show Battle Targets Label 0x40=on
     quint8 ruby_emerald;        // [0x0C1F] WEAPONS ALIVE? 0x05=both 0x1D =non 0x0D = emerald
     quint8 z_15[3];             // [0x0C20] UNKNOWN DATA
-    quint8 highwind_buggy;      // [0x0C23] 0x10 for highwind 0x01 buggy? (needs coords to work)
+    quint8 world_map_vehicles;  // [0x0C23] what is vehicles are visible on world map 0x00 empty,0x01 buggy,0x04 tiny bronco,0x10 highwind (combineable; never 0x11)
     quint8 z_16[97];            // [0x0C24] UNKNOWN DATA
     quint8 bm_progress1;        // [0x0C85] Bombing Mission Flag 1
     quint8 bm_progress2;        // [0x0C86] Bombing Mission Flag 2

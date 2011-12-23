@@ -1694,8 +1694,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>423</width>
-             <height>454</height>
+             <width>443</width>
+             <height>436</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -4695,8 +4695,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>401</width>
-             <height>419</height>
+             <width>443</width>
+             <height>436</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8510,8 +8510,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>192</width>
-                  <height>353</height>
+                  <width>222</width>
+                  <height>435</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -10820,8 +10820,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1388</width>
-             <height>263</height>
+             <width>1452</width>
+             <height>334</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16829,8 +16829,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>714</width>
-             <height>238</height>
+             <width>764</width>
+             <height>440</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -17248,8 +17248,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>738</width>
-             <height>410</height>
+             <width>764</width>
+             <height>440</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -17323,6 +17323,72 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <property name="bottomMargin">
                  <number>2</number>
                 </property>
+                <item>
+                 <widget class="QGroupBox" name="groupBox_42">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>75</height>
+                   </size>
+                  </property>
+                  <property name="title">
+                   <string>Visible On World Map</string>
+                  </property>
+                  <layout class="QVBoxLayout" name="verticalLayout_22">
+                   <property name="topMargin">
+                    <number>3</number>
+                   </property>
+                   <property name="bottomMargin">
+                    <number>3</number>
+                   </property>
+                   <item>
+                    <widget class="QCheckBox" name="cb_visible_buggy">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>16</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>Buggy</string>
+                     </property>
+                     <property name="autoExclusive">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_visible_highwind">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>16</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>Highwind</string>
+                     </property>
+                     <property name="autoExclusive">
+                      <bool>true</bool>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QCheckBox" name="cb_visible_bronco">
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>16</height>
+                      </size>
+                     </property>
+                     <property name="text">
+                      <string>Tiny bronco</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </widget>
+                </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box">
                   <property name="sizePolicy">
@@ -17742,10 +17808,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 </item>
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_3">
+                  <property name="minimumSize">
+                   <size>
+                    <width>0</width>
+                    <height>70</height>
+                   </size>
+                  </property>
                   <property name="maximumSize">
                    <size>
                     <width>16777215</width>
-                    <height>100</height>
+                    <height>70</height>
                    </size>
                   </property>
                   <property name="title">
@@ -17862,9 +17934,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
                        <property name="sizeHint" stdset="0">
                         <size>
-                         <width>40</width>
+                         <width>10</width>
                          <height>20</height>
                         </size>
                        </property>
@@ -17898,60 +17973,25 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Fixed</enum>
+                       </property>
                        <property name="sizeHint" stdset="0">
                         <size>
-                         <width>40</width>
+                         <width>10</width>
                          <height>20</height>
                         </size>
                        </property>
                       </spacer>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_206">
-                       <property name="text">
-                        <string>id</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QSpinBox" name="bh_id">
-                       <property name="wrapping">
-                        <bool>true</bool>
-                       </property>
-                       <property name="minimum">
-                        <number>0</number>
-                       </property>
-                       <property name="maximum">
-                        <number>255</number>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <spacer name="horizontalSpacer_75">
-                       <property name="orientation">
-                        <enum>Qt::Horizontal</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                      </spacer>
-                     </item>
-                    </layout>
-                   </item>
-                   <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_96">
-                     <item>
-                      <widget class="QLabel" name="label_232">
-                       <property name="text">
-                        <string>Shown On Map</string>
-                       </property>
-                      </widget>
                      </item>
                      <item>
                       <widget class="QComboBox" name="combo_highwind_buggy">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
                        <property name="minimumSize">
                         <size>
                          <width>0</width>
@@ -17979,6 +18019,19 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <string>Highwind</string>
                         </property>
                        </item>
+                      </widget>
+                     </item>
+                     <item>
+                      <widget class="QSpinBox" name="bh_id">
+                       <property name="wrapping">
+                        <bool>true</bool>
+                       </property>
+                       <property name="minimum">
+                        <number>0</number>
+                       </property>
+                       <property name="maximum">
+                        <number>255</number>
+                       </property>
                       </widget>
                      </item>
                     </layout>
@@ -19232,8 +19285,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>295</width>
-                  <height>1313</height>
+                  <width>390</width>
+                  <height>1492</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -21947,8 +22000,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>733</width>
-             <height>648</height>
+             <width>737</width>
+             <height>664</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -28663,7 +28716,7 @@ Var And Scrolling Synced To Left Table</string>
      <x>0</x>
      <y>0</y>
      <width>764</width>
-     <height>19</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">

@@ -655,5 +655,8 @@ private slots://try to keep these in the same order as the .cpp file
     void on_btn_copy_materia_slot_clicked();
     void on_btn_paste_materia_slot_clicked();
     void on_combo_s7_slums_currentIndexChanged(int index);
+    void on_cb_visible_buggy_toggled(bool checked);
+    void on_cb_visible_bronco_toggled(bool checked);
+    void on_cb_visible_highwind_toggled(bool checked);
 };
 #endif // MAINWINDOW_H

@@ -85,6 +85,7 @@ MainWindow::MainWindow(QWidget *parent,FF7 *ff7data,QSettings *configdata)
     ui->compare_table->setEnabled(false);
     ui->tbl_diff->setVisible(0);
     ui->bm_unknown->setVisible(0);
+    ui->bh_id->setVisible(0);
 
     //chocobo boxes
     ui->box_stable1->setEnabled(false);
@@ -3230,6 +3231,9 @@ void MainWindow::guirefresh(bool newgame)
         ui->cb_battle_targets->setChecked(Qt::Unchecked);
         ui->cb_ruby_dead->setChecked(Qt::Unchecked);
         ui->cb_emerald_dead->setChecked(Qt::Unchecked);
+        ui->cb_visible_bronco->setChecked(Qt::Unchecked);
+        ui->cb_visible_buggy->setChecked(Qt::Unchecked);
+        ui->cb_visible_highwind->setChecked(Qt::Unchecked);
 
         if((ff7->slot[s].ruby_emerald) &(1<<3)){ui->cb_ruby_dead->setChecked(Qt::Checked);}
         if((ff7->slot[s].ruby_emerald)& (1<<4)){ui->cb_emerald_dead->setChecked(Qt::Checked);}
@@ -3365,6 +3369,14 @@ void MainWindow::guirefresh(bool newgame)
 
         ui->bh_x->setValue((ff7->slot[s].bh_world) & 0x7FFFF);
         ui->bh_id->setValue((ff7->slot[s].bh_world >> 19)&0x1F);
+
+        switch(ui->bh_id->value())
+        {
+            case 0:ui->combo_highwind_buggy->setCurrentIndex(0);break;//empty
+            case 6:ui->combo_highwind_buggy->setCurrentIndex(1);break;//buggy
+            case 3:ui->combo_highwind_buggy->setCurrentIndex(2);break;//highwind
+            default:QMessageBox::information(this,tr("Black Chocobo"),tr("Unknown Id in Buggy/Highwind Location"));break;
+        }
         ui->bh_angle->setValue((ff7->slot[s].bh_world) >> 24);
         ui->bh_y->setValue((ff7->slot[s].bh_world2) & 0x3FFFF);
         ui->bh_z->setValue((ff7->slot[s].bh_world2) >> 18);
@@ -3375,9 +3387,10 @@ void MainWindow::guirefresh(bool newgame)
         ui->sub_y->setValue((ff7->slot[s].sub_world2) & 0x3FFFF);
         ui->sub_z->setValue((ff7->slot[s].sub_world2) >> 18);
 
-        if(ff7->slot[s].highwind_buggy ==0x00){ui->combo_highwind_buggy->setCurrentIndex(0);}
-        else if(ff7->slot[s].highwind_buggy ==0x01){ui->combo_highwind_buggy->setCurrentIndex(1);}
-        else if(ff7->slot[s].highwind_buggy ==0x10){ui->combo_highwind_buggy->setCurrentIndex(2);}
+
+        if((1 << 0) & ff7->slot[s].world_map_vehicles){ui->cb_visible_buggy->setChecked(Qt::Checked);}
+        if((1 << 2) & ff7->slot[s].world_map_vehicles){ui->cb_visible_bronco->setChecked(Qt::Checked);}
+        if((1 << 4) & ff7->slot[s].world_map_vehicles){ui->cb_visible_highwind->setChecked(Qt::Checked);}
 
         for (int i=0;i<6;i++)//flyers
         {
@@ -5809,10 +5822,25 @@ void MainWindow::on_combo_highwind_buggy_currentIndexChanged(int index)
 {if(!load){file_changed=true;
   switch(index)
   {
-  case 0: ff7->slot[s].highwind_buggy =0x00; break;
-  case 1: ff7->slot[s].highwind_buggy =0x01; ui->bh_id->setValue(0x06);break;
-  case 2: ff7->slot[s].highwind_buggy =0x10; ui->bh_id->setValue(0x03);break;
+  case 1: ui->bh_id->setValue(0x06);ui->cb_visible_buggy->setChecked(Qt::Checked);break;//buggy
+  case 2: ui->bh_id->setValue(0x03);ui->cb_visible_highwind->setChecked(Qt::Checked);break;//highwind
+  default: break;
   }
+}}
+void MainWindow::on_cb_visible_buggy_toggled(bool checked)
+{if(!load){file_changed=true;
+        if(checked){ff7->slot[s].world_map_vehicles |= (1<<0);}
+        else{ff7->slot[s].world_map_vehicles &= ~(1<<0);}
+}}
+void MainWindow::on_cb_visible_bronco_toggled(bool checked)
+{if(!load){file_changed=true;
+        if(checked){ff7->slot[s].world_map_vehicles |= (1<<2);}
+        else{ff7->slot[s].world_map_vehicles &= ~(1<<2);}
+}}
+void MainWindow::on_cb_visible_highwind_toggled(bool checked)
+{if(!load){file_changed=true;
+        if(checked){ff7->slot[s].world_map_vehicles |= (1<<4);}
+        else{ff7->slot[s].world_map_vehicles &= ~(1<<4);}
 }}
 // Leader's world map stuff. 0
 void MainWindow::on_leader_id_valueChanged(int value){if(!load){file_changed=true; ff7->slot[s].l_world = (ui->leader_x->value()  | value << 19 | ui->leader_angle->value() <<24);}}
