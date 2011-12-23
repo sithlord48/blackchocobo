@@ -3385,7 +3385,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Place Emerald Weapon?</source>
-        <translation>エメラルド ウェポンを配置 (?)</translation>
+        <translation>エメラルド ウェポン (?) を配置</translation>
     </message>
     <message>
         <source>PSV Save Notice</source>
@@ -4121,42 +4121,42 @@ Table Entries are Editable</source>
     <message>
         <source>Farm:Choco Mog_1</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_1</translatorcomment>
-        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_1</translation>
+        <translation>チョコボ農場; チョコボ＆モーグリ_1</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_2</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_2</translatorcomment>
-        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_2</translation>
+        <translation>チョコボ農場; チョコボ＆モーグリ_2</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_3</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_3</translatorcomment>
-        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_3</translation>
+        <translation>チョコボ農場; チョコボ＆モーグリ_3</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_4</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_4</translatorcomment>
-        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_4</translation>
+        <translation>チョコボ農場; チョコボ＆モーグリ_4</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_5</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_5</translatorcomment>
-        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_5</translation>
+        <translation>チョコボ農場; チョコボ＆モーグリ_5</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_6</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_6</translatorcomment>
-        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_6</translation>
+        <translation>チョコボ農場; チョコボ＆モーグリ_6</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_7</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_7</translatorcomment>
-        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_7</translation>
+        <translation>チョコボ農場; チョコボ＆モーグリ_7</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_8</source>
         <translatorcomment>チョコボ農場; チョコボ＆モーグリ_8</translatorcomment>
-        <translation type="unfinished">チョコボ農場; チョコボ＆モーグリ_8</translation>
+        <translation>チョコボ農場; チョコボ＆モーグリ_8</translation>
     </message>
     <message>
         <source>Calculate Stats</source>
@@ -4286,15 +4286,15 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Visible On World Map</source>
-        <translation type="unfinished"></translation>
+        <translation>ワールドマップ上に配置</translation>
     </message>
     <message>
         <source>Tiny bronco</source>
-        <translation type="unfinished"></translation>
+        <translation>タイニーブロンコ</translation>
     </message>
     <message>
         <source>Unknown Id in Buggy/Highwind Location</source>
-        <translation type="unfinished"></translation>
+        <translation>バギー/ハイウィンド配置の不明な ID</translation>
     </message>
 </context>
 <context>
