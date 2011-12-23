@@ -3496,10 +3496,6 @@ MASTER = 16777215 AP です</translation>
         <translation>ワールドマップ上の配置位置</translation>
     </message>
     <message>
-        <source>Shown On Map</source>
-        <translation>マップ上の配置</translation>
-    </message>
-    <message>
         <source>None</source>
         <translation>なし</translation>
     </message>
@@ -4287,6 +4283,18 @@ Table Entries are Editable</source>
     <message>
         <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
         <translation>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</translation>
+    </message>
+    <message>
+        <source>Visible On World Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tiny bronco</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown Id in Buggy/Highwind Location</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

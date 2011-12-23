@@ -3485,10 +3485,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Shown On Map</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>None</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4248,6 +4244,18 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Visible On World Map</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tiny bronco</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown Id in Buggy/Highwind Location</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
