@@ -4300,11 +4300,11 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Green chocobo</source>
-        <translation type="unfinished">Grünes Chocobos</translation>
+        <translation type="unfinished">Grünes chocobo</translation>
     </message>
     <message>
         <source>Blue chocobo</source>
-        <translation type="unfinished">Blauer Chocobo</translation>
+        <translation type="unfinished">Blauer chocobo</translation>
     </message>
     <message>
         <source>Black chocobo</source>
@@ -4312,7 +4312,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Gold chocobo</source>
-        <translation type="unfinished">Gold-Chocobo</translation>
+        <translation type="unfinished">Gold chocobo</translation>
     </message>
 </context>
 <context>
