@@ -3234,6 +3234,12 @@ void MainWindow::guirefresh(bool newgame)
         ui->cb_visible_bronco->setChecked(Qt::Unchecked);
         ui->cb_visible_buggy->setChecked(Qt::Unchecked);
         ui->cb_visible_highwind->setChecked(Qt::Unchecked);
+        ui->cb_visible_savage_chocobo->setChecked(Qt::Unchecked);
+        ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
+        ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
+        ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
+        ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
+        ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
 
         if((ff7->slot[s].ruby_emerald) &(1<<3)){ui->cb_ruby_dead->setChecked(Qt::Checked);}
         if((ff7->slot[s].ruby_emerald)& (1<<4)){ui->cb_emerald_dead->setChecked(Qt::Checked);}
@@ -3391,6 +3397,15 @@ void MainWindow::guirefresh(bool newgame)
         if((1 << 0) & ff7->slot[s].world_map_vehicles){ui->cb_visible_buggy->setChecked(Qt::Checked);}
         if((1 << 2) & ff7->slot[s].world_map_vehicles){ui->cb_visible_bronco->setChecked(Qt::Checked);}
         if((1 << 4) & ff7->slot[s].world_map_vehicles){ui->cb_visible_highwind->setChecked(Qt::Checked);}
+
+        if((1 << 0) & ff7->slot[s].world_map_chocobos){ui->cb_visible_savage_chocobo->setChecked(Qt::Checked);}
+        if((1 << 2) & ff7->slot[s].world_map_chocobos){ui->cb_visible_yellow_chocobo->setChecked(Qt::Checked);}
+        if((1 << 3) & ff7->slot[s].world_map_chocobos){ui->cb_visible_green_chocobo->setChecked(Qt::Checked);}
+        if((1 << 4) & ff7->slot[s].world_map_chocobos){ui->cb_visible_blue_chocobo->setChecked(Qt::Checked);}
+        if((1 << 5) & ff7->slot[s].world_map_chocobos){ui->cb_visible_black_chocobo->setChecked(Qt::Checked);}
+        if((1 << 6) & ff7->slot[s].world_map_chocobos){ui->cb_visible_gold_chocobo->setChecked(Qt::Checked);}
+
+
 
         for (int i=0;i<6;i++)//flyers
         {
@@ -5841,6 +5856,68 @@ void MainWindow::on_cb_visible_highwind_toggled(bool checked)
 {if(!load){file_changed=true;
         if(checked){ff7->slot[s].world_map_vehicles |= (1<<4);}
         else{ff7->slot[s].world_map_vehicles &= ~(1<<4);}
+}}
+void MainWindow::on_cb_visible_savage_chocobo_toggled(bool checked)
+{if(!load){file_changed=true;
+        if(checked){ff7->slot[s].world_map_chocobos |= (1<<0);}
+        else{ff7->slot[s].world_map_chocobos &= ~(1<<0);}
+}}
+void MainWindow::on_cb_visible_yellow_chocobo_toggled(bool checked)
+{if(!load){file_changed=true;
+        if(checked){
+            ff7->slot[s].world_map_chocobos |= (1<<2);
+            ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
+        }
+        else{ff7->slot[s].world_map_chocobos &= ~(1<<2);}
+}}
+void MainWindow::on_cb_visible_green_chocobo_toggled(bool checked)
+{if(!load){file_changed=true;
+        if(checked){
+            ff7->slot[s].world_map_chocobos |= (1<<3);
+            ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
+        }
+        else{ff7->slot[s].world_map_chocobos &= ~(1<<3);}
+}}
+void MainWindow::on_cb_visible_blue_chocobo_toggled(bool checked)
+{if(!load){file_changed=true;
+        if(checked){
+            ff7->slot[s].world_map_chocobos |= (1<<4);
+            ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
+        }
+        else{ff7->slot[s].world_map_chocobos &= ~(1<<4);}
+}}
+
+void MainWindow::on_cb_visible_black_chocobo_toggled(bool checked)
+{if(!load){file_changed=true;
+        if(checked){
+            ff7->slot[s].world_map_chocobos |= (1<<5);
+            ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
+        }
+        else{ff7->slot[s].world_map_chocobos &= ~(1<<5);}
+}}
+
+void MainWindow::on_cb_visible_gold_chocobo_toggled(bool checked)
+{if(!load){file_changed=true;
+        if(checked){
+            ff7->slot[s].world_map_chocobos |= (1<<6);
+            ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
+            ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
+        }
+        else{ff7->slot[s].world_map_chocobos &= ~(1<<6);}
 }}
 // Leader's world map stuff. 0
 void MainWindow::on_leader_id_valueChanged(int value){if(!load){file_changed=true; ff7->slot[s].l_world = (ui->leader_x->value()  | value << 19 | ui->leader_angle->value() <<24);}}

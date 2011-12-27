@@ -3512,7 +3512,7 @@ ist kein FF7 Spielstand.</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation>Unbekannt</translation>
+        <translation type="obsolete">Unbekannt</translation>
     </message>
     <message>
         <source>Unknown  Vars</source>
@@ -4289,6 +4289,30 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>Unknown Id in Buggy/Highwind Location</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Savage chocobo</source>
+        <translation type="unfinished">Savage chocobo</translation>
+    </message>
+    <message>
+        <source>Yellow chocobo</source>
+        <translation type="unfinished">Gelbes chocobo</translation>
+    </message>
+    <message>
+        <source>Green chocobo</source>
+        <translation type="unfinished">Grünes Chocobos</translation>
+    </message>
+    <message>
+        <source>Blue chocobo</source>
+        <translation type="unfinished">Blauer Chocobo</translation>
+    </message>
+    <message>
+        <source>Black chocobo</source>
+        <translation type="unfinished">Schwarz chocobo</translation>
+    </message>
+    <message>
+        <source>Gold chocobo</source>
+        <translation type="unfinished">Gold-Chocobo</translation>
     </message>
 </context>
 <context>

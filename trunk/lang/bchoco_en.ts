@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0">
+<TS version="2.0" language="es_AR">
 <context>
     <name>Items</name>
     <message>
@@ -3497,10 +3497,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Unknown  Vars</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4260,6 +4256,30 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Unknown Id in Buggy/Highwind Location</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Savage chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Yellow chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Green chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Blue chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Black chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gold chocobo</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

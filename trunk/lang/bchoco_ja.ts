@@ -3509,7 +3509,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation>詳細不明</translation>
+        <translation type="obsolete">詳細不明</translation>
     </message>
     <message>
         <source>Unknown  Vars</source>
@@ -4299,6 +4299,30 @@ Table Entries are Editable</source>
     <message>
         <source>Unknown Id in Buggy/Highwind Location</source>
         <translation>バギー/ハイウィンド配置の不明な ID</translation>
+    </message>
+    <message>
+        <source>Savage chocobo</source>
+        <translation>サベージチョコボ</translation>
+    </message>
+    <message>
+        <source>Yellow chocobo</source>
+        <translation>サベージチョコボ</translation>
+    </message>
+    <message>
+        <source>Green chocobo</source>
+        <translation>グリーンチョコボ</translation>
+    </message>
+    <message>
+        <source>Blue chocobo</source>
+        <translation>ブルーチョコボ</translation>
+    </message>
+    <message>
+        <source>Black chocobo</source>
+        <translation>ブラックチョコボ</translation>
+    </message>
+    <message>
+        <source>Gold chocobo</source>
+        <translation>ゴールドチョコボ</translation>
     </message>
 </context>
 <context>

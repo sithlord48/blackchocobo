@@ -658,5 +658,11 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_visible_buggy_toggled(bool checked);
     void on_cb_visible_bronco_toggled(bool checked);
     void on_cb_visible_highwind_toggled(bool checked);
+    void on_cb_visible_savage_chocobo_toggled(bool checked);
+    void on_cb_visible_yellow_chocobo_toggled(bool checked);
+    void on_cb_visible_green_chocobo_toggled(bool checked);
+    void on_cb_visible_blue_chocobo_toggled(bool checked);
+    void on_cb_visible_black_chocobo_toggled(bool checked);
+    void on_cb_visible_gold_chocobo_toggled(bool checked);
 };
 #endif // MAINWINDOW_H
