@@ -3513,7 +3513,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Unknown</source>
-        <translation>Inconnu</translation>
+        <translation type="obsolete">Inconnu</translation>
     </message>
     <message>
         <source>Unknown  Vars</source>
@@ -4283,6 +4283,30 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     <message>
         <source>Unknown Id in Buggy/Highwind Location</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Savage chocobo</source>
+        <translation type="unfinished">Chocobo sauvage</translation>
+    </message>
+    <message>
+        <source>Yellow chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Green chocobo</source>
+        <translation type="unfinished">Vert chocobo</translation>
+    </message>
+    <message>
+        <source>Blue chocobo</source>
+        <translation type="unfinished">Bleu chocobo</translation>
+    </message>
+    <message>
+        <source>Black chocobo</source>
+        <translation type="unfinished">Noire chocobo</translation>
+    </message>
+    <message>
+        <source>Gold chocobo</source>
+        <translation type="unfinished">or chocobo</translation>
     </message>
 </context>
 <context>

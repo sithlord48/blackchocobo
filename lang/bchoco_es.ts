@@ -3514,7 +3514,7 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Unknown</source>
-        <translation>Indefinido</translation>
+        <translation type="obsolete">Indefinido</translation>
     </message>
     <message>
         <source>Unknown  Vars</source>
@@ -4274,15 +4274,39 @@ NO es un archivo de guardado PSV</translation>
     </message>
     <message>
         <source>Visible On World Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Visible en el Mapa del Mundo</translation>
     </message>
     <message>
         <source>Tiny bronco</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiny bronco</translation>
     </message>
     <message>
         <source>Unknown Id in Buggy/Highwind Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Id desconocida en Buggy/Viento Fuerte</translation>
+    </message>
+    <message>
+        <source>Savage chocobo</source>
+        <translation>Chocobo salvaje</translation>
+    </message>
+    <message>
+        <source>Yellow chocobo</source>
+        <translation>Chocobo amarillo</translation>
+    </message>
+    <message>
+        <source>Green chocobo</source>
+        <translation>Chocobo verde</translation>
+    </message>
+    <message>
+        <source>Blue chocobo</source>
+        <translation>Chocobo azul</translation>
+    </message>
+    <message>
+        <source>Black chocobo</source>
+        <translation>Chocobo negro</translation>
+    </message>
+    <message>
+        <source>Gold chocobo</source>
+        <translation>Chocobo dorado</translation>
     </message>
 </context>
 <context>

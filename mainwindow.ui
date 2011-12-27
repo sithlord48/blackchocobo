@@ -17298,7 +17298,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <x>0</x>
                  <y>0</y>
                  <width>256</width>
-                 <height>584</height>
+                 <height>660</height>
                 </rect>
                </property>
                <property name="sizePolicy">
@@ -17328,7 +17328,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>75</height>
+                    <height>111</height>
                    </size>
                   </property>
                   <property name="title">
@@ -17342,49 +17342,139 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <number>3</number>
                    </property>
                    <item>
-                    <widget class="QCheckBox" name="cb_visible_buggy">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>16</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>Buggy</string>
-                     </property>
-                     <property name="autoExclusive">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_visible_highwind">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>16</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>Highwind</string>
-                     </property>
-                     <property name="autoExclusive">
-                      <bool>true</bool>
-                     </property>
-                    </widget>
-                   </item>
-                   <item>
-                    <widget class="QCheckBox" name="cb_visible_bronco">
-                     <property name="minimumSize">
-                      <size>
-                       <width>0</width>
-                       <height>16</height>
-                      </size>
-                     </property>
-                     <property name="text">
-                      <string>Tiny bronco</string>
-                     </property>
-                    </widget>
+                    <layout class="QHBoxLayout" name="horizontalLayout_98">
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_121">
+                       <item>
+                        <widget class="QCheckBox" name="cb_visible_buggy">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Buggy</string>
+                         </property>
+                         <property name="autoExclusive">
+                          <bool>true</bool>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QCheckBox" name="cb_visible_bronco">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Tiny bronco</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QCheckBox" name="cb_visible_highwind">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Highwind</string>
+                         </property>
+                         <property name="autoExclusive">
+                          <bool>true</bool>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QCheckBox" name="cb_visible_savage_chocobo">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Savage chocobo</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QVBoxLayout" name="verticalLayout_122">
+                       <item>
+                        <widget class="QCheckBox" name="cb_visible_yellow_chocobo">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Yellow chocobo</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QCheckBox" name="cb_visible_green_chocobo">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Green chocobo</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QCheckBox" name="cb_visible_blue_chocobo">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Blue chocobo</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QCheckBox" name="cb_visible_black_chocobo">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Black chocobo</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QCheckBox" name="cb_visible_gold_chocobo">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>16</height>
+                          </size>
+                         </property>
+                         <property name="text">
+                          <string>Gold chocobo</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
                    </item>
                   </layout>
                  </widget>
@@ -23182,6 +23272,7 @@ p, li { white-space: pre-wrap; }
               </item>
               <item>
                <widget class="QComboBox" name="combo_camera">
+
                 <property name="enabled">
                  <bool>true</bool>
                 </property>
