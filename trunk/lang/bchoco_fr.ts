@@ -4290,23 +4290,23 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>Yellow chocobo</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Chocobo jaune</translation>
     </message>
     <message>
         <source>Green chocobo</source>
-        <translation type="unfinished">Vert chocobo</translation>
+        <translation type="unfinished">Chocobo vert </translation>
     </message>
     <message>
         <source>Blue chocobo</source>
-        <translation type="unfinished">Bleu chocobo</translation>
+        <translation type="unfinished">Chocobo Bleu</translation>
     </message>
     <message>
         <source>Black chocobo</source>
-        <translation type="unfinished">Noire chocobo</translation>
+        <translation type="unfinished">Chocobo Noire</translation>
     </message>
     <message>
         <source>Gold chocobo</source>
-        <translation type="unfinished">or chocobo</translation>
+        <translation type="unfinished">Chocobo or</translation>
     </message>
 </context>
 <context>
