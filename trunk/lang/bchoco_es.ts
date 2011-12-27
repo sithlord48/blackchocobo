@@ -3353,6 +3353,10 @@ no es una partida guardada de FF7.</translation>
         <translation>Submarino</translation>
     </message>
     <message>
+        <source>Savage Chocobo</source>
+        <translation>Chocobo Salvaje</translation>
+    </message>
+    <message>
         <source>sliders show </source>
         <translation>Mostrar controles deslizantes</translation>
     </message>
@@ -3405,8 +3409,8 @@ no es una partida guardada de FF7.</translation>
         <translation>Arma Diamante / Última / Rubí</translation>
     </message>
     <message>
-        <source>Place UNKNOWN</source>
-        <translation>Colocar INDEFINIDO</translation>
+        <source>Place Savage Chocobo</source>
+        <translation>Colocar Chocobo Salvaje</translation>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>

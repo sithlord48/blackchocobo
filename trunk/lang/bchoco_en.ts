@@ -3353,6 +3353,10 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
+        <source>Savage Chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Emerald Weapon?</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3389,7 +3393,7 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Place UNKNOWN</source>
+        <source>Place Savage Chocobo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

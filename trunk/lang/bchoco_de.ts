@@ -3367,6 +3367,10 @@ ist kein FF7 Spielstand.</translation>
         <translation>Buggy/Highwind</translation>
     </message>
     <message>
+        <source>Savage Chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>Emerald Weapon?</source>
         <translation>Emerald Weapon?</translation>
     </message>
@@ -3403,8 +3407,8 @@ ist kein FF7 Spielstand.</translation>
         <translation>Diamond / Ultimate / Ruby Weapon</translation>
     </message>
     <message>
-        <source>Place UNKNOWN</source>
-        <translation>Ort UNBEKANNT</translation>
+        <source>Place Savage Chocobo</source>
+        <translation>Platziere Savage Chocobo</translation>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
