@@ -18252,7 +18252,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </size>
                   </property>
                   <property name="title">
-                   <string>Unknown</string>
+                   <string>Savage Chocobo</string>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_101">
                    <property name="margin">
@@ -18931,7 +18931,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       </item>
                       <item>
                        <property name="text">
-                        <string>Unknown</string>
+                        <string>Savage Chocobo</string>
                        </property>
                       </item>
                       <item>

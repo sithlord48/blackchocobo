@@ -3364,6 +3364,10 @@ MASTER = 16777215 AP です</translation>
         <translation>バギー/ハイウィンド</translation>
     </message>
     <message>
+        <source>Savage Chocobo</source>
+        <translation type="unfinished">サベージ チョコボ</translation>
+    </message>
+    <message>
         <source>Emerald Weapon?</source>
         <translation>エメラルド ウェポン ?</translation>
     </message>
@@ -3400,8 +3404,8 @@ MASTER = 16777215 AP です</translation>
         <translation>ダイヤ / アルテマ / ルビー ウェポン</translation>
     </message>
     <message>
-        <source>Place UNKNOWN</source>
-        <translation>詳細不明を配置</translation>
+        <source>Place Savage Chocobo</source>
+        <translation type="unfinished">サベージ チョコボ を配置</translation>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>

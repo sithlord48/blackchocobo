@@ -6012,7 +6012,7 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
     menu.addAction(tr("Place Tiny Bronco/Chocobo"));
     menu.addAction(tr("Place Buggy/Highwind"));
     menu.addAction(tr("Place Sub"));
-    menu.addAction(tr("Place UNKNOWN"));
+    menu.addAction(tr("Place Savage Chocobo"));
     menu.addAction(tr("Place Diamond/Ultimate/Ruby Weapon"));
     menu.addAction(tr("Place Emerald Weapon?"));
     sel = menu.exec(ui->world_map_view->mapToGlobal(pos));
@@ -6038,7 +6038,7 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
          ui->sub_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
          ui->sub_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
     }
-    else if(sel->text()==tr("Place UNKNOWN"))
+    else if(sel->text()==tr("Place Savage Chocobo"))
     {
          ui->uw_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
          ui->uw_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));

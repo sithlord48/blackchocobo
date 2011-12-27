@@ -3320,6 +3320,10 @@ is not a FF7 SaveGame.</source>
         <translation>Buggy/Hautvent</translation>
     </message>
     <message>
+        <source>Savage Chocobo</source>
+        <translation type="unfinished">Chocobo Sauvage</translation>
+    </message>
+    <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
         <translation>Arme de diamant / Dernière Arme / Arme de Rubis</translation>
     </message>
@@ -3404,8 +3408,8 @@ is not a FF7 SaveGame.</source>
         <translation>Placer le sous-marin</translation>
     </message>
     <message>
-        <source>Place UNKNOWN</source>
-        <translation>Placer INCONNU</translation>
+        <source>Place Savage Chocobo</source>
+        <translation>Placer le Chocobo Sauvage</translation>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
