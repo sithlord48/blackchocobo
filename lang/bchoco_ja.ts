@@ -3337,7 +3337,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Tiny Bronco / Chocobo</source>
-        <translation>タイニーブロンコ / チョコボ</translation>
+        <translation>タイニー・ブロンコ / チョコボ</translation>
     </message>
     <message>
         <source>Buggy / Highwind</source>
@@ -3357,7 +3357,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>TinyBronco/Chocobo</source>
-        <translation>タイニーブロンコ/チョコボ</translation>
+        <translation>タイニー・ブロンコ/チョコボ</translation>
     </message>
     <message>
         <source>Buggy/Highwind</source>
@@ -3365,7 +3365,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Savage Chocobo</source>
-        <translation type="unfinished">サベージ チョコボ</translation>
+        <translation>野生のチョコボ</translation>
     </message>
     <message>
         <source>Emerald Weapon?</source>
@@ -3377,7 +3377,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Place Tiny Bronco/Chocobo</source>
-        <translation>タイニーブロンコ/チョコボを配置</translation>
+        <translation>タイニー・ブロンコ/チョコボを配置</translation>
     </message>
     <message>
         <source>Place Buggy/Highwind</source>
@@ -3405,7 +3405,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Place Savage Chocobo</source>
-        <translation type="unfinished">サベージ チョコボ を配置</translation>
+        <translation>野生のチョコボを配置</translation>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
@@ -4124,43 +4124,43 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Farm:Choco Mog_1</source>
-        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_1</translatorcomment>
-        <translation>チョコボ農場; チョコボ＆モーグリ_1</translation>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_1</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_1</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_2</source>
-        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_2</translatorcomment>
-        <translation>チョコボ農場; チョコボ＆モーグリ_2</translation>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_2</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_2</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_3</source>
-        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_3</translatorcomment>
-        <translation>チョコボ農場; チョコボ＆モーグリ_3</translation>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_3</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_3</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_4</source>
-        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_4</translatorcomment>
-        <translation>チョコボ農場; チョコボ＆モーグリ_4</translation>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_4</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_4</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_5</source>
-        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_5</translatorcomment>
-        <translation>チョコボ農場; チョコボ＆モーグリ_5</translation>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_5</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_5</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_6</source>
-        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_6</translatorcomment>
-        <translation>チョコボ農場; チョコボ＆モーグリ_6</translation>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_6</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_6</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_7</source>
-        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_7</translatorcomment>
-        <translation>チョコボ農場; チョコボ＆モーグリ_7</translation>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_7</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_7</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_8</source>
-        <translatorcomment>チョコボ農場; チョコボ＆モーグリ_8</translatorcomment>
-        <translation>チョコボ農場; チョコボ＆モーグリ_8</translation>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_8</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_8</translation>
     </message>
     <message>
         <source>Calculate Stats</source>
@@ -4294,7 +4294,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Tiny bronco</source>
-        <translation>タイニーブロンコ</translation>
+        <translation>タイニー・ブロンコ</translation>
     </message>
     <message>
         <source>Unknown Id in Buggy/Highwind Location</source>
@@ -4302,27 +4302,27 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Savage chocobo</source>
-        <translation>サベージチョコボ</translation>
+        <translation>野生のチョコボ</translation>
     </message>
     <message>
         <source>Yellow chocobo</source>
-        <translation>サベージチョコボ</translation>
+        <translation>チョコボ</translation>
     </message>
     <message>
         <source>Green chocobo</source>
-        <translation>グリーンチョコボ</translation>
+        <translation>山チョコボ</translation>
     </message>
     <message>
         <source>Blue chocobo</source>
-        <translation>ブルーチョコボ</translation>
+        <translation>川チョコボ</translation>
     </message>
     <message>
         <source>Black chocobo</source>
-        <translation>ブラックチョコボ</translation>
+        <translation>山川チョコボ</translation>
     </message>
     <message>
         <source>Gold chocobo</source>
-        <translation>ゴールドチョコボ</translation>
+        <translation>海チョコボ</translation>
     </message>
 </context>
 <context>
