@@ -1998,7 +1998,7 @@ void MainWindow::update_stat_totals(void)
             strbonus += FF7Strings.MateriaStats_Str(ff7->slot[s].chars[curchar].materias[i].id);
 
             vitbonus += FF7Strings.MateriaStats_Vit(ff7->slot[s].chars[curchar].materias[i].id);
-            if(ff7->slot[s].chars[curchar].materias[i].id ==0x03)
+            if(ff7->slot[s].chars[curchar].materias[i].id == 0x03)
             {//Catch Magic Plus
                 int level=1;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
@@ -2009,7 +2009,7 @@ void MainWindow::update_stat_totals(void)
 
             spibonus += FF7Strings.MateriaStats_Spi(ff7->slot[s].chars[curchar].materias[i].id);
 
-            if(ff7->slot[s].chars[curchar].materias[i].id ==0x02)
+            if(ff7->slot[s].chars[curchar].materias[i].id == 0x02)
             {//Catch Speed Plus
                 int level=1;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
@@ -2018,7 +2018,7 @@ void MainWindow::update_stat_totals(void)
             }
             else{dexbonus += FF7Strings.MateriaStats_Dex(ff7->slot[s].chars[curchar].materias[i].id);}
 
-            if(ff7->slot[s].chars[curchar].materias[i].id ==0x04)
+            if(ff7->slot[s].chars[curchar].materias[i].id == 0x04)
             {//Catch Luck Plus
                 int level=1;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
@@ -2027,7 +2027,7 @@ void MainWindow::update_stat_totals(void)
             }
             else{lckbonus += FF7Strings.MateriaStats_Lck(ff7->slot[s].chars[curchar].materias[i].id);}
 
-            if(ff7->slot[s].chars[curchar].materias[i].id ==0x01)
+            if(ff7->slot[s].chars[curchar].materias[i].id == 0x01)
             {//Catch HP Plus
                 int level=1;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
@@ -2047,36 +2047,36 @@ void MainWindow::update_stat_totals(void)
         }
     }
     //out of the loop need to check things like accessory and armor/weapon for modifiers.
-    if(ff7->slot[s].chars[curchar].accessory ==0x00) {strbonus+=10;ui->lbl_acc_bonus->setText(tr("str +10"));} //power wrist
-    else if(ff7->slot[s].chars[curchar].accessory ==0x01) {vitbonus+=10;ui->lbl_acc_bonus->setText(tr("vit +10"));} //protect ring
-    else if(ff7->slot[s].chars[curchar].accessory ==0x02) {magbonus+=10;ui->lbl_acc_bonus->setText(tr("mag +10"));} //earing
-    else if(ff7->slot[s].chars[curchar].accessory ==0x03) {spibonus+=10;ui->lbl_acc_bonus->setText(tr("spi +10"));} //tailsman
-    else if(ff7->slot[s].chars[curchar].accessory ==0x04) {dexbonus+=10;ui->lbl_acc_bonus->setText(tr("dex +10"));} //choco-feather
-    else if(ff7->slot[s].chars[curchar].accessory ==0x05) {lckbonus+= (ff7->slot[s].chars[curchar].luck*0.1);ui->lbl_acc_bonus->setText(tr("lck +") + QString::number(int(ff7->slot[s].chars[curchar].luck*0.1)));} //amulet +10%
-    else if(ff7->slot[s].chars[curchar].accessory ==0x06) {strbonus+=30; vitbonus+=30;ui->lbl_acc_bonus->setToolTip(tr("str +30 vit +30"));} // champ's belt
-    else if(ff7->slot[s].chars[curchar].accessory ==0x08) {strbonus+=50; spibonus+=50;ui->lbl_acc_bonus->setToolTip(tr("str +50 spi +50"));} // tough ring
-    else if(ff7->slot[s].chars[curchar].accessory ==0x09) {magbonus+=30; spibonus+=30;ui->lbl_acc_bonus->setToolTip(tr("mag +30 spi +30"));} // circlet
+    if(ff7->slot[s].chars[curchar].accessory == 0x00) {strbonus+=10;ui->lbl_acc_bonus->setText(tr("str +10"));} //power wrist
+    else if(ff7->slot[s].chars[curchar].accessory == 0x01) {vitbonus+=10;ui->lbl_acc_bonus->setText(tr("vit +10"));} //protect ring
+    else if(ff7->slot[s].chars[curchar].accessory == 0x02) {magbonus+=10;ui->lbl_acc_bonus->setText(tr("mag +10"));} //earing
+    else if(ff7->slot[s].chars[curchar].accessory == 0x03) {spibonus+=10;ui->lbl_acc_bonus->setText(tr("spi +10"));} //tailsman
+    else if(ff7->slot[s].chars[curchar].accessory == 0x04) {dexbonus+=10;ui->lbl_acc_bonus->setText(tr("dex +10"));} //choco-feather
+    else if(ff7->slot[s].chars[curchar].accessory == 0x05) {lckbonus+= (ff7->slot[s].chars[curchar].luck*0.1);ui->lbl_acc_bonus->setText(tr("lck +") + QString::number(int(ff7->slot[s].chars[curchar].luck*0.1)));} //amulet +10%
+    else if(ff7->slot[s].chars[curchar].accessory == 0x06) {strbonus+=30; vitbonus+=30;ui->lbl_acc_bonus->setToolTip(tr("str +30 vit +30"));} // champ's belt
+    else if(ff7->slot[s].chars[curchar].accessory == 0x08) {strbonus+=50; spibonus+=50;ui->lbl_acc_bonus->setToolTip(tr("str +50 spi +50"));} // tough ring
+    else if(ff7->slot[s].chars[curchar].accessory == 0x09) {magbonus+=30; spibonus+=30;ui->lbl_acc_bonus->setToolTip(tr("mag +30 spi +30"));} // circlet
     else{ui->lbl_acc_bonus->setText("");}
     //end of accessories
-    if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(140)){spibonus+=13;}//apocalpse}
-    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(142)){spibonus+=35;}//ragnarok
-    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(143)){spibonus+=24;}//Ultimate Weapon
-    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(187)){spibonus+=18;vitbonus+=35;}//behemoth horn
-    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(190)){vitbonus+=1; spibonus+=4;}//Guard Stick
-    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(199)){vitbonus+=20;}//Umbrella
-    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(200)){vitbonus+=12; spibonus+=20;}//Princess Guard
-    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(213)){spibonus+=20;}//Spirt Lance
-    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(225)){dexbonus+=10;}//Magic Shuriken
-    else if(ui->combo_weapon->currentText()==FF7Strings.ItemNames(240)){vitbonus+=30;}//Starlight M Phone
+    if(ui->combo_weapon->currentText() == FF7Strings.ItemNames(140)){spibonus+=13;}//apocalpse}
+    else if(ui->combo_weapon->currentText() == FF7Strings.ItemNames(142)){spibonus+=35;}//ragnarok
+    else if(ui->combo_weapon->currentText() == FF7Strings.ItemNames(143)){spibonus+=24;}//Ultimate Weapon
+    else if(ui->combo_weapon->currentText() == FF7Strings.ItemNames(187)){spibonus+=18;vitbonus+=35;}//behemoth horn
+    else if(ui->combo_weapon->currentText() == FF7Strings.ItemNames(190)){vitbonus+=1; spibonus+=4;}//Guard Stick
+    else if(ui->combo_weapon->currentText() == FF7Strings.ItemNames(199)){vitbonus+=20;}//Umbrella
+    else if(ui->combo_weapon->currentText() == FF7Strings.ItemNames(200)){vitbonus+=12; spibonus+=20;}//Princess Guard
+    else if(ui->combo_weapon->currentText() == FF7Strings.ItemNames(213)){spibonus+=20;}//Spirt Lance
+    else if(ui->combo_weapon->currentText() == FF7Strings.ItemNames(225)){dexbonus+=10;}//Magic Shuriken
+    else if(ui->combo_weapon->currentText() == FF7Strings.ItemNames(240)){vitbonus+=30;}//Starlight M Phone
 
     //end weapons
-    if(ff7->slot[s].chars[curchar].armor==31){dexbonus+=30;lckbonus+=20;} //chocobobracelet
-    else if(ff7->slot[s].chars[curchar].armor==11){magbonus+=5;}//Enincoat
-    else if(ff7->slot[s].chars[curchar].armor==12){magbonus+=20;}//Wizard Bracelet
-    else if(ff7->slot[s].chars[curchar].armor==14){strbonus+=30;}//Gigas Armlet
-    else if(ff7->slot[s].chars[curchar].armor==17){magbonus+=20;}//Forth Braclet
-    else if(ff7->slot[s].chars[curchar].armor==18){strbonus+=20;}//Warrior Bangle
-    else if(ff7->slot[s].chars[curchar].armor==29){strbonus+=20; magbonus+=20;}//Ziedrich
+    if(ff7->slot[s].chars[curchar].armor == 31){dexbonus+=30;lckbonus+=20;} //chocobobracelet
+    else if(ff7->slot[s].chars[curchar].armor == 11){magbonus+=5;}//Enincoat
+    else if(ff7->slot[s].chars[curchar].armor == 12){magbonus+=20;}//Wizard Bracelet
+    else if(ff7->slot[s].chars[curchar].armor == 14){strbonus+=30;}//Gigas Armlet
+    else if(ff7->slot[s].chars[curchar].armor == 17){magbonus+=20;}//Forth Braclet
+    else if(ff7->slot[s].chars[curchar].armor == 18){strbonus+=20;}//Warrior Bangle
+    else if(ff7->slot[s].chars[curchar].armor == 29){strbonus+=20; magbonus+=20;}//Ziedrich
     //end armor
 
     //set the labels for the bonuses.
@@ -2115,15 +2115,71 @@ void MainWindow::setchar_growth(int caller)
   /* caller can be 0==just read, 1==exp_changed, 2==lvl_changed */
     if(caller==0 && ff7->slot[s].chars[curchar].level==0){return;}//viewing a blank slot on slotchange lets keep it that way
     load=true;
+
+    //Update base Stats Var
+    int pre_level = ff7->slot[s].chars[curchar].level;
+
+
     //if the lvl changed we need to set the exp correctly before we continue
-    if(caller==2){ff7->slot[s].chars[curchar].exp = charlvls[ff7->slot[s].chars[curchar].id][ui->sb_lvl->value()-1];ui->sb_exp->setValue(ff7->slot[s].chars[curchar].exp);}
+    if(caller==2){
+        //Basic lv change
+        ff7->slot[s].chars[curchar].level = ui->sb_lvl->value();
+        if(curchar==ff7->slot[s].party[0]){ff7->slot[s].desc.level = ui->sb_lvl->value();}
+        //Exp calc
+        ff7->slot[s].chars[curchar].exp = charlvls[ff7->slot[s].chars[curchar].id][ui->sb_lvl->value()-1];
+        ui->sb_exp->setValue(ff7->slot[s].chars[curchar].exp);
+    }
     for (int i=1;i<100;i++)
     {
-        if(ff7->slot[s].chars[curchar].exp>=charlvls[ff7->slot[s].chars[curchar].id][i]){if(i==99){ui->sb_lvl->setValue(i);}}
-        else{ui->sb_lvl->setValue(i);break;}
+        if(ff7->slot[s].chars[curchar].exp>=charlvls[ff7->slot[s].chars[curchar].id][i]){
+            if(i==99){ui->sb_lvl->setValue(i);}
+        }
+        else{
+            ui->sb_lvl->setValue(i);break;
+        }
     }
     //if the exp was changed make sure the lvl is set correctly.
-    if(caller==1){ff7->slot[s].chars[curchar].level=ui->sb_lvl->value();if(curchar==ff7->slot[s].party[0]){ff7->slot[s].desc.level = ui->sb_lvl->value();}}
+    if(caller==1){
+        ff7->slot[s].chars[curchar].level=ui->sb_lvl->value();
+        if(curchar==ff7->slot[s].party[0]){
+            ff7->slot[s].desc.level = ui->sb_lvl->value();
+        }
+    }
+
+    //Update base Stats Code
+    int curlv = ui->sb_lvl->value();
+    if(caller==1 || caller==2)
+    {
+        if(pre_level < curlv)
+        {//level up
+            for(int i=pre_level;i<curlv;i++)
+            {// for stat_gain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp also use id incase of mods that could move a char.
+                ui->sb_str->setValue(ui->sb_str->value() + stat_gain(ff7->slot[s].chars[curchar].id,0,ff7->slot[s].chars[curchar].strength,i+1));
+                ui->sb_vit->setValue(ui->sb_vit->value() + stat_gain(ff7->slot[s].chars[curchar].id,1,ff7->slot[s].chars[curchar].vitality,i+1));
+                ui->sb_mag->setValue(ui->sb_mag->value() + stat_gain(ff7->slot[s].chars[curchar].id,2,ff7->slot[s].chars[curchar].magic,i+1));
+                ui->sb_spi->setValue(ui->sb_spi->value() + stat_gain(ff7->slot[s].chars[curchar].id,3,ff7->slot[s].chars[curchar].spirit,i+1));
+                ui->sb_dex->setValue(ui->sb_dex->value() + stat_gain(ff7->slot[s].chars[curchar].id,4,ff7->slot[s].chars[curchar].dexterity,i+1));
+                ui->sb_lck->setValue(ui->sb_lck->value() + stat_gain(ff7->slot[s].chars[curchar].id,5,ff7->slot[s].chars[curchar].luck,i+1));
+                ui->sb_hp->setValue(ui->sb_hp->value() + stat_gain(ff7->slot[s].chars[curchar].id,6,ff7->slot[s].chars[curchar].baseHP,i+1));
+                ui->sb_mp->setValue(ui->sb_mp->value() + stat_gain(ff7->slot[s].chars[curchar].id,7,ff7->slot[s].chars[curchar].baseMP,i+1));
+            }
+        }
+        else if(pre_level > curlv)
+        {//level down
+            for(int i=pre_level;i>curlv;i--)
+            {// for stat_gain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp
+                ui->sb_str->setValue(ui->sb_str->value() - stat_gain(ff7->slot[s].chars[curchar].id,0,ff7->slot[s].chars[curchar].strength,i));
+                ui->sb_vit->setValue(ui->sb_vit->value() - stat_gain(ff7->slot[s].chars[curchar].id,1,ff7->slot[s].chars[curchar].vitality,i));
+                ui->sb_mag->setValue(ui->sb_mag->value() - stat_gain(ff7->slot[s].chars[curchar].id,2,ff7->slot[s].chars[curchar].magic,i));
+                ui->sb_spi->setValue(ui->sb_spi->value() - stat_gain(ff7->slot[s].chars[curchar].id,3,ff7->slot[s].chars[curchar].spirit,i));
+                ui->sb_dex->setValue(ui->sb_dex->value() - stat_gain(ff7->slot[s].chars[curchar].id,4,ff7->slot[s].chars[curchar].dexterity,i));
+                ui->sb_lck->setValue(ui->sb_lck->value() - stat_gain(ff7->slot[s].chars[curchar].id,5,ff7->slot[s].chars[curchar].luck,i));
+                ui->sb_hp->setValue(ui->sb_hp->value() - stat_gain(ff7->slot[s].chars[curchar].id,6,ff7->slot[s].chars[curchar].baseHP,i));
+                ui->sb_mp->setValue(ui->sb_mp->value() - stat_gain(ff7->slot[s].chars[curchar].id,7,ff7->slot[s].chars[curchar].baseMP,i));
+            }
+        } //little broken when going down..
+        update_stat_totals();
+    }
 
     QString numvalue;
     if(ui->sb_lvl->value()!=99)
@@ -4689,41 +4745,11 @@ void MainWindow::on_line_name_textChanged(QString text)
 
 void MainWindow::on_sb_lvl_valueChanged(int value)
 {if(!load){file_changed=true;
-    int pre_level =ff7->slot[s].chars[curchar].level;
-    ff7->slot[s].chars[curchar].level = value;
-    if(curchar==ff7->slot[s].party[0]){ff7->slot[s].desc.level = value;}
-    if(settings->value("autochargrowth").toBool())
-    {
-        setchar_growth(2);
-        if(pre_level < value)
-        {//level up
-            for(int i=pre_level;i<value;i++)
-            {// for stat_gain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp also use id incase of mods that could move a char.
-                ui->sb_str->setValue(ui->sb_str->value() + stat_gain(ff7->slot[s].chars[curchar].id,0,ff7->slot[s].chars[curchar].strength,i+1));
-                ui->sb_vit->setValue(ui->sb_vit->value() + stat_gain(ff7->slot[s].chars[curchar].id,1,ff7->slot[s].chars[curchar].vitality,i+1));
-                ui->sb_mag->setValue(ui->sb_mag->value() + stat_gain(ff7->slot[s].chars[curchar].id,2,ff7->slot[s].chars[curchar].magic,i+1));
-                ui->sb_spi->setValue(ui->sb_spi->value() + stat_gain(ff7->slot[s].chars[curchar].id,3,ff7->slot[s].chars[curchar].spirit,i+1));
-                ui->sb_dex->setValue(ui->sb_dex->value() + stat_gain(ff7->slot[s].chars[curchar].id,4,ff7->slot[s].chars[curchar].dexterity,i+1));
-                ui->sb_lck->setValue(ui->sb_lck->value() + stat_gain(ff7->slot[s].chars[curchar].id,5,ff7->slot[s].chars[curchar].luck,i+1));
-                ui->sb_hp->setValue(ui->sb_hp->value() + stat_gain(ff7->slot[s].chars[curchar].id,6,ff7->slot[s].chars[curchar].baseHP,i+1));
-                ui->sb_mp->setValue(ui->sb_mp->value() + stat_gain(ff7->slot[s].chars[curchar].id,7,ff7->slot[s].chars[curchar].baseMP,i+1));
-            }
-        }
-        else if(pre_level > value)
-        {//level down
-            for(int i=pre_level;i>value;i--)
-            {// for stat_gain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp
-                ui->sb_str->setValue(ui->sb_str->value() - stat_gain(ff7->slot[s].chars[curchar].id,0,ff7->slot[s].chars[curchar].strength,i));
-                ui->sb_vit->setValue(ui->sb_vit->value() - stat_gain(ff7->slot[s].chars[curchar].id,1,ff7->slot[s].chars[curchar].vitality,i));
-                ui->sb_mag->setValue(ui->sb_mag->value() - stat_gain(ff7->slot[s].chars[curchar].id,2,ff7->slot[s].chars[curchar].magic,i));
-                ui->sb_spi->setValue(ui->sb_spi->value() - stat_gain(ff7->slot[s].chars[curchar].id,3,ff7->slot[s].chars[curchar].spirit,i));
-                ui->sb_dex->setValue(ui->sb_dex->value() - stat_gain(ff7->slot[s].chars[curchar].id,4,ff7->slot[s].chars[curchar].dexterity,i));
-                ui->sb_lck->setValue(ui->sb_lck->value() - stat_gain(ff7->slot[s].chars[curchar].id,5,ff7->slot[s].chars[curchar].luck,i));
-                ui->sb_hp->setValue(ui->sb_hp->value() - stat_gain(ff7->slot[s].chars[curchar].id,6,ff7->slot[s].chars[curchar].baseHP,i));
-                ui->sb_mp->setValue(ui->sb_mp->value() - stat_gain(ff7->slot[s].chars[curchar].id,7,ff7->slot[s].chars[curchar].baseMP,i));
-            }
-        } //little broken when going down..
-        update_stat_totals();
+    if(settings->value("autochargrowth").toBool()){setchar_growth(2);}
+    //Basic lv change
+    else{
+        ff7->slot[s].chars[curchar].level = value;
+        if(curchar==ff7->slot[s].party[0]){ff7->slot[s].desc.level = value;}
     }
 }}
 
