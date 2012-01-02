@@ -597,6 +597,23 @@ void MainWindow::on_actionExport_char_triggered()
 }
 void MainWindow::on_action_Save_activated()
 {
+    if(_init)//no file loaded user saving a New Game
+    {
+        QStringList types;
+        types << tr("PC")<<tr("Raw Psx Save")<<tr("Generic Emulator Memorycard")<<tr("PSP")<<tr("PS3")<<tr("Dex Drive Memorycard")<<tr("VGS Memorycard");
+        QString result = QInputDialog::getItem(this,tr("Save Error"),tr("Please Select A File Type To Save"),types,-1,0,0,0);
+        //check the string. and assign a type
+        if(result ==types.at(0)){on_actionExport_PC_Save_activated();}
+            else if(result ==types.at(1)){on_actionExport_PSX_activated();}
+            else if(result ==types.at(2)){on_actionExport_MC_triggered();}
+            else if(result ==types.at(3)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
+            else if(result ==types.at(4)){QMessageBox::information(this,tr("Black Chocobo"),tr("Can Not Export This Format"));}
+            else if(result ==types.at(5)){on_actionExport_DEX_triggered();}
+            else if(result ==types.at(6)){on_actionExport_VGS_triggered();}
+            else{}
+    return;//leave this function.
+    }
+
     if(!filename.isEmpty())
     {
         if(ff7->SG_TYPE=="PC"){fix_pc_bytemask(ff7,s,skip_slot_mask);}
@@ -692,6 +709,8 @@ void MainWindow::on_actionSave_File_As_activated()
     }
     if(fileName.isEmpty()){return;}
     saveFileFull(fileName); //reguardless save the file of course if its has a string.
+    filename=fileName;//update filename.
+    ui->lbl_fileName->setText(filename);//update bar..
 }
 /*~~~~~~~~~~~SHORT SAVE~~~~~~~~~~~~*/
 void MainWindow::saveFileFull(QString fileName)
@@ -718,6 +737,13 @@ void MainWindow::saveFileFull(QString fileName)
     fclose(pfile);
     fix_sum(fileName);
     file_changed=false;
+    if(_init)
+    {//if no save was loaded and new game was clicked be sure to act like a game was loaded.
+        filename=fileName;//update filename.
+        ui->lbl_fileName->setText(filename);//update bar..
+        _init=false;
+        guirefresh(0);
+    }
 }
 
 /*~~~~~~~~~~~ START CHECKSUM VEGETA~~~~~~~~~~~*/
@@ -974,57 +1000,24 @@ void MainWindow::on_actionExport_PSX_activated()
         ff7->file_headerp     = ff7->file_header_psx;           //pointer to psx file header
         ff7->file_footerp     = ff7->file_footer_psx;           //pointer to psx file footer
     }
-    /*~~~~~~~ SHORT SAVE - SITHLORD48 ~~~~~~~~~*/
-    QFile file(fileName);
-    if(!file.open(QFile::ReadWrite))
-    {
-        QMessageBox::warning(this, tr("Black Chocobo"),
-        tr("Cannot write file %1:\n%2.")
-            .arg(fileName)
-            .arg(file.errorString()));
-        return;
-    }
-    FILE *pfile;
-    pfile = fopen(fileName.toAscii(),"wb");
-
-    QByteArray temp; temp.resize(512);//
-
-         if(fileName.endsWith("S01")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S01[i];}}
-    else if(fileName.endsWith("S02")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S02[i];}}
-    else if(fileName.endsWith("S03")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S03[i];}}
-    else if(fileName.endsWith("S04")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S04[i];}}
-    else if(fileName.endsWith("S05")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S05[i];}}
-    else if(fileName.endsWith("S06")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S06[i];}}
-    else if(fileName.endsWith("S07")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S07[i];}}
-    else if(fileName.endsWith("S08")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S08[i];}}
-    else if(fileName.endsWith("S09")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S09[i];}}
-    else if(fileName.endsWith("S10")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S10[i];}}
-    else if(fileName.endsWith("S11")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S11[i];}}
-    else if(fileName.endsWith("S12")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S12[i];}}
-    else if(fileName.endsWith("S13")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S13[i];}}
-    else if(fileName.endsWith("S14")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S14[i];}}
-    else if(fileName.endsWith("S15")){for(int i=0;i<256;i++){temp[i] = PSX_SAVE_GAME_FILE_HEADER_S15[i];}}
+    if(fileName.endsWith("S01")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S01[i];}}
+    else if(fileName.endsWith("S02")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S02[i];}}
+    else if(fileName.endsWith("S03")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S03[i];}}
+    else if(fileName.endsWith("S04")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S04[i];}}
+    else if(fileName.endsWith("S05")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S05[i];}}
+    else if(fileName.endsWith("S06")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S06[i];}}
+    else if(fileName.endsWith("S07")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S07[i];}}
+    else if(fileName.endsWith("S08")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S08[i];}}
+    else if(fileName.endsWith("S09")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S09[i];}}
+    else if(fileName.endsWith("S10")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S10[i];}}
+    else if(fileName.endsWith("S11")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S11[i];}}
+    else if(fileName.endsWith("S12")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S12[i];}}
+    else if(fileName.endsWith("S13")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S13[i];}}
+    else if(fileName.endsWith("S14")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S14[i];}}
+    else if(fileName.endsWith("S15")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S15[i];}}
     else{QMessageBox::information(this,tr("Bad Psx Save Name"), tr("Can't Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if < 10) A Header for that slot number will be written to the save"));return;}
-
-    for(int i=256;i<512;i++){temp[i]= 0x00;}
-
-    if(ui->sb_time_hour->value()>99){temp[27]=0x58;temp[29]=0x58;}
-    else
-    {
-        temp[27] = (ui->sb_time_hour->value()/10)+0x4F;
-        temp[29] = (ui->sb_time_hour->value()%10)+0x4F;
-    }
-    temp[33] = (ui->sb_time_min->value()/10)+0x4F;
-    temp[35] = (ui->sb_time_min->value()%10)+0x4F;
-
-    fwrite(temp,512,1,pfile); // Write Header.
-
-    fwrite(&ff7->slot[s],ff7->SG_DATA_SIZE,1,pfile);
-    fwrite(ff7->hf[s].sl_footer,ff7->SG_SLOT_FOOTER,1,pfile);
-    fwrite(ff7->file_footerp,ff7->SG_FOOTER,1,pfile);
-    fclose(pfile);
-    fix_sum(fileName);
-    /*~~~~END NEW SHORT SAVE -SITHLORD48- V.1.4~~~~*/
+    fix_psx_header(ff7,0);
+    saveFileFull(fileName);
 }
 /*~~~~~Export Mcr/Mcd~~~~~~*/
 void MainWindow::on_actionExport_MC_triggered()
@@ -2537,13 +2530,12 @@ void MainWindow::setmenu(bool newgame)
     if(!newgame)
     {
         ui->actionSave_File_As->setEnabled(1);
-        ui->action_Save->setEnabled(1);
         ui->actionReload->setEnabled(1);
     }
     ui->actionExport_PC_Save->setEnabled(1);    ui->actionExport_PSX->setEnabled(1);
     ui->actionExport_MC->setEnabled(1);         ui->actionExport_VGS->setEnabled(1);
     ui->actionExport_DEX->setEnabled(1);        ui->actionExport_char->setEnabled(1);
-    ui->actionImport_char->setEnabled(1);
+    ui->actionImport_char->setEnabled(1);       ui->action_Save->setEnabled(1);
 
     if(!_init)
     {//we haven't loaded a file yet.
