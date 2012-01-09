@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010, 2011 Chris Rizzitello <sithlord48@gmail.com>          //
+//    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -94,6 +94,7 @@ errbox::errbox(QWidget *parent,FF7 *ff7data,int slot) :
     }
     ui->lbl_regionstring->setText(Slottext);
 }
+
 void errbox::keyPressEvent(QKeyEvent *e)
 {//catch esc press and send it to view button
     if(e->key()!=Qt::Key_Escape) QDialog::keyPressEvent(e);

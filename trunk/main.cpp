@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010, 2011 Chris Rizzitello <sithlord48@gmail.com>          //
+//    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -33,7 +33,7 @@ int main(int argc, char *argv[])
     QApplication a(argc, argv);
     a.setApplicationName("Black Chocobo");
     a.setStyle("Plastique");
-    a.setApplicationVersion("1.9.51");
+    a.setApplicationVersion("1.9.52");
     QTranslator translator;
     QString lang = QCoreApplication::applicationDirPath() +"/"+ "lang/bchoco_";
     if(settings.value("lang").isNull()){settings.setValue("lang",QLocale::system().name().section('_',0,0));} //if no lang set it to os setting.

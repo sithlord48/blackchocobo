@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010, 2011 Chris Rizzitello <sithlord48@gmail.com>          //
+//    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -519,29 +519,5 @@ struct FF7 {				// [0xFE55]
         quint8 * file_footerp;              //pointer to file footer
         QString SG_Region_String[15];       // Store Region String one per slot..
 };
-
-struct ITEM {
-        QString image;
-        qint8 mslots;
-        qint8 linked;
-};
-
-struct MATERIA { //use MateriaNames,MateriaSkills or MateriaStats for text data.
-    QString name;
-    QString image;
-    quint8 id;
-    qint8 hp;
-    qint8 mp;
-    qint8 str;
-    qint8 vit;
-    qint8 dex;
-    qint8 lck;
-    qint8 mag;
-    qint8 spi;//for use in hp/mp/char stat calculations (maybe later)
-    qint32 ap[4];
-    qint8 type; //1-magic,2-summon,3-independent,4-support,5-command,0-unknown
-    qint8 levels;
-};
-
 #endif // FF7SAVE_H
 

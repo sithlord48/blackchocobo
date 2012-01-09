@@ -1,5 +1,5 @@
 /****************************************************************************/
-//    copyright 2010, 2011 Chris Rizzitello <sithlord48@gmail.com>          //
+//    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
 //                                                                          //
 //    This file is part of Black Chocobo.                                   //
 //                                                                          //
@@ -54,7 +54,7 @@ private:
     FF7 *ff7; // our save file struct pointer.
     QSettings *settings;
     int s; //track slot
-    ff7names FF7Strings; //class of strings used in ff7
+    FF7StaticData FF7Strings; //class of strings used in ff7
     FF7SLOT bufferslot; // a buffer slot to keep copied slots in
     QString buffer_region; //holds region data for bufferslot.
     MATERIA buffer_materia; // buffer for a materia
