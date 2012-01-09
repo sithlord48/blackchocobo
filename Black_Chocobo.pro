@@ -1,5 +1,5 @@
 # /----------------------------------------------------------------------------/
-# //    copyright 2010 Chris Rizzitello <sithlord48@gmail.com>                //
+# //    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
 # //                                                                          //
 # //    This file is part of Black Chocobo.                                   //
 # //                                                                          //
@@ -26,7 +26,9 @@ SOURCES += main.cpp \
     about.cpp \
     options.cpp \
     SaveIcon.cpp \
-    errbox.cpp
+    errbox.cpp \
+    FF7Text.cpp \
+    FF7StaticData.cpp
 HEADERS += mainwindow.h \
     FF7SAVE.h \
     slotselect.h \
@@ -34,7 +36,9 @@ HEADERS += mainwindow.h \
     globals.h \
     options.h \
     SaveIcon.h \
-    errbox.h
+    errbox.h \
+    FF7Text.h \
+    FF7StaticData.h
 FORMS += mainwindow.ui \
     slotselect.ui \
     about.ui \

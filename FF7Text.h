@@ -13,51 +13,25 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
+#ifndef FF7TEXT_H
+  #define FF7TEXT_H
+#include <QObject>
 
-#ifndef SLOTSELECT_H
-#define SLOTSELECT_H
-
-#include <QDialog>
-#include "globals.h"
-#include "SaveIcon.h"
-#include "QMessageBox"
-namespace Ui {
-    class SlotSelect;
-}
-
-class SlotSelect : public QDialog {
-    Q_OBJECT
-public:
-    SlotSelect(QWidget *parent = 0, FF7 *ff7data=0);
-    ~SlotSelect();
-
-protected:
-    void changeEvent(QEvent *e);
-    void keyPressEvent(QKeyEvent *e);
+class TEXT{
 private:
-    Ui::SlotSelect *ui;
-    SaveIcon icons[15];
-    TEXT Text;
-    FF7 *ff7;
-private slots:
-
-
-private slots:
-    void on_btn_s1_clicked();
-    void on_btn_s2_clicked();
-    void on_btn_s3_clicked();
-    void on_btn_s4_clicked();
-    void on_btn_s5_clicked();
-    void on_btn_s6_clicked();
-    void on_btn_s7_clicked();
-    void on_btn_s8_clicked();
-    void on_btn_s9_clicked();
-    void on_btn_s10_clicked();
-    void on_btn_s11_clicked();
-    void on_btn_s12_clicked();
-    void on_btn_s13_clicked();
-    void on_btn_s14_clicked();
-    void on_btn_s15_clicked();
+    QString eng;
+    QString jap;
+    QString jap_fa;
+    QString jap_fb;
+    QString jap_fc;
+    QString jap_fd;
+    QString jap_fe;
+    bool in_ja;
+    QString character(quint8 ord, quint8 table);
+public:
+    TEXT();
+    void init(bool);
+    QString toPC(QByteArray text);
+    QByteArray toFF7(QString string);
 };
-
-#endif // SLOTSELECT_H
+#endif //FF7TEXT_H
