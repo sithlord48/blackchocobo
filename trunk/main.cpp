@@ -24,16 +24,18 @@
 
 int main(int argc, char *argv[])
 {
+    QString Version ="1.9.52";
     if(argc >1)
     {//Check for and display help to the console :D
         if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h"){printf("Usage: blackchocobo [<filename>]\n");return 0;}
+        else if(QString(argv[1]) == "--version"){printf("Black Chocobo Version:%s \n",Version.toAscii().constData());return 0;}
     }
     QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
     Q_INIT_RESOURCE(images);
     QApplication a(argc, argv);
     a.setApplicationName("Black Chocobo");
     a.setStyle("Plastique");
-    a.setApplicationVersion("1.9.52");
+    a.setApplicationVersion(Version);
     QTranslator translator;
     QString lang = QCoreApplication::applicationDirPath() +"/"+ "lang/bchoco_";
     if(settings.value("lang").isNull()){settings.setValue("lang",QLocale::system().name().section('_',0,0));} //if no lang set it to os setting.
