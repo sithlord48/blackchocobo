@@ -1808,7 +1808,7 @@ void MainWindow::charupdate(void)
         break;
     }
     //Now Set Char Specific Things
-    switch (curchar)
+    switch (ff7->slot[s].chars[curchar].id)
     {
         case 0:char_weapon_offset=0;    break;
         case 1:char_weapon_offset=32;   break;
@@ -2243,9 +2243,8 @@ void MainWindow::setweaponslots(void)
     ui->w_m_s7->setHidden(1);
     ui->w_m_s8->setHidden(1);
     switch(ff7->slot[s].chars[curchar].id)
-    //switch(curchar)
     {
-    case 0:{
+    case 0: case 9:{
         clouds_weapons:
             switch(Items[128 +ui->combo_weapon->currentIndex()].mslots)
             {
@@ -2434,12 +2433,7 @@ void MainWindow::setweaponslots(void)
                 case 3:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));break;}
                 case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
                 }
-            }
-            else //sephiroth has only one weapon.
-            {
-                ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);
-                ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));
-            }
+            }                       
             break;
         }
     case 8:{
@@ -2464,9 +2458,15 @@ void MainWindow::setweaponslots(void)
             case 4:{ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l4->setPixmap(QPixmap(":/icon/mlink"));break;}
            }
             break;
+           }
+    case 10:{//sephiroth has only one weapon.
+            ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);
+            ui->w_m_l1->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l2->setPixmap(QPixmap(":/icon/mlink"));ui->w_m_l3->setPixmap(QPixmap(":/icon/mlink"));
+            break;
         }
     }
 }
+//}
 /*~~~~~End Armor/Weapon Update~~~~*/
 /*~~~~~~~~Set Menu Items~~~~~~~~~~*/
 void MainWindow::setmenu(bool newgame)
