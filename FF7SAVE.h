@@ -470,7 +470,8 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint16 pole2_y;            // [0x0F92] 2nd Snow Pole Y Coordinate.
     quint16 pole3_x;            // [0x0F94] 3ed Snow Pole X Coordinate.
     quint16 pole3_y;            // [0x0F96] 3ed Snow Pole Y Coordinate.
-    quint8 z_38[240];           // [0x0F98] UNKNOWN (Start of more coords.. )
+    //quint8 z_38[240];           // [0x0F98] UNKNOWN (Start of more coords.. )
+    quint8 z_38[236];
     FF7CHOCOBO choco56[2];      // [0x1084] Chocobo slots 5-6
     quint16 phsmask;            // [0x10A4] who is allowed in the phs
     quint16 unlockedchars;      // [0x10A6] who is visible in the phs
