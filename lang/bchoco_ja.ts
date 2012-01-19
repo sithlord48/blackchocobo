@@ -3364,7 +3364,7 @@ MASTER = 16777215 AP です</translation>
         <translation>バギー/ハイウィンド</translation>
     </message>
     <message>
-        <source>Savage Chocobo</source>
+        <source>Wild Chocobo</source>
         <translation>野生のチョコボ</translation>
     </message>
     <message>
@@ -3404,7 +3404,7 @@ MASTER = 16777215 AP です</translation>
         <translation>ダイヤ / アルテマ / ルビー ウェポン</translation>
     </message>
     <message>
-        <source>Place Savage Chocobo</source>
+        <source>Place Wild Chocobo</source>
         <translation>野生のチョコボを配置</translation>
     </message>
     <message>
@@ -4301,7 +4301,7 @@ Table Entries are Editable</source>
         <translation>バギー/ハイウィンド配置の不明な ID</translation>
     </message>
     <message>
-        <source>Savage chocobo</source>
+        <source>Wild chocobo</source>
         <translation>野生のチョコボ</translation>
     </message>
     <message>

@@ -3282,7 +3282,7 @@ void MainWindow::guirefresh(bool newgame)
         ui->cb_visible_bronco->setChecked(Qt::Unchecked);
         ui->cb_visible_buggy->setChecked(Qt::Unchecked);
         ui->cb_visible_highwind->setChecked(Qt::Unchecked);
-        ui->cb_visible_savage_chocobo->setChecked(Qt::Unchecked);
+        ui->cb_visible_wild_chocobo->setChecked(Qt::Unchecked);
         ui->cb_visible_yellow_chocobo->setChecked(Qt::Unchecked);
         ui->cb_visible_green_chocobo->setChecked(Qt::Unchecked);
         ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
@@ -3386,8 +3386,10 @@ void MainWindow::guirefresh(bool newgame)
         case 5: ui->slide_world_x->setValue(ff7->slot[s].durw_world & 0x7FFFF);
                 ui->slide_world_y->setValue(ff7->slot[s].durw_world2& 0x3FFFF);
                 break;
-        case 6: ui->slide_world_x->setValue(ff7->slot[s].ew_world & 0x7FFFF);
+        case 6: /* Do Nothing. Don't know emerald weapon Coords
+                ui->slide_world_x->setValue(ff7->slot[s].ew_world & 0x7FFFF);
                 ui->slide_world_y->setValue(ff7->slot[s].ew_world2& 0x3FFFF);
+                */
                 break;
         }
         //WORLD TAB
@@ -3403,11 +3405,13 @@ void MainWindow::guirefresh(bool newgame)
         ui->durw_y->setValue((ff7->slot[s].durw_world2) & 0x3FFFF);
         ui->durw_z->setValue((ff7->slot[s].durw_world2) >> 18);
 
+        /* Do Nothing. Don't know emerald weapon Coords
         ui->ew_x->setValue((ff7->slot[s].ew_world) & 0x7FFFF);
         ui->ew_id->setValue((ff7->slot[s].ew_world >> 19)&0x1F);
         ui->ew_angle->setValue((ff7->slot[s].ew_world) >> 24);
         ui->ew_y->setValue((ff7->slot[s].ew_world2) & 0x3FFFF);
         ui->ew_z->setValue((ff7->slot[s].ew_world2) >> 18);
+        */
 
         ui->uw_x->setValue((ff7->slot[s].uw_world) & 0x7FFFF);
         ui->uw_id->setValue((ff7->slot[s].uw_world >> 19)&0x1F);
@@ -3446,7 +3450,7 @@ void MainWindow::guirefresh(bool newgame)
         if((1 << 2) & ff7->slot[s].world_map_vehicles){ui->cb_visible_bronco->setChecked(Qt::Checked);}
         if((1 << 4) & ff7->slot[s].world_map_vehicles){ui->cb_visible_highwind->setChecked(Qt::Checked);}
 
-        if((1 << 0) & ff7->slot[s].world_map_chocobos){ui->cb_visible_savage_chocobo->setChecked(Qt::Checked);}
+        if((1 << 0) & ff7->slot[s].world_map_chocobos){ui->cb_visible_wild_chocobo->setChecked(Qt::Checked);}
         if((1 << 2) & ff7->slot[s].world_map_chocobos){ui->cb_visible_yellow_chocobo->setChecked(Qt::Checked);}
         if((1 << 3) & ff7->slot[s].world_map_chocobos){ui->cb_visible_green_chocobo->setChecked(Qt::Checked);}
         if((1 << 4) & ff7->slot[s].world_map_chocobos){ui->cb_visible_blue_chocobo->setChecked(Qt::Checked);}
@@ -5875,7 +5879,7 @@ void MainWindow::on_cb_visible_highwind_toggled(bool checked)
         if(checked){ff7->slot[s].world_map_vehicles |= (1<<4);}
         else{ff7->slot[s].world_map_vehicles &= ~(1<<4);}
 }}
-void MainWindow::on_cb_visible_savage_chocobo_toggled(bool checked)
+void MainWindow::on_cb_visible_wild_chocobo_toggled(bool checked)
 {if(!load){file_changed=true;
         if(checked){ff7->slot[s].world_map_chocobos |= (1<<0);}
         else{ff7->slot[s].world_map_chocobos &= ~(1<<0);}
@@ -6012,6 +6016,7 @@ void MainWindow::on_durw_y_valueChanged(int value)
      if(ui->combo_map_controls->currentIndex()==4){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
 //emerald world 5?
+/* Do Nothing. Don't know emerald weapon Coords
 void MainWindow::on_ew_id_valueChanged(int value){if(!load){file_changed=true; ff7->slot[s].ew_world = (ui->ew_x->value()  | value << 19 | ui->ew_angle->value() <<24);}}
 void MainWindow::on_ew_z_valueChanged(int value){if(!load){file_changed=true; ff7->slot[s].ew_world2 = (ui->ew_y->value() | value << 18);}}
 void MainWindow::on_ew_angle_valueChanged(int value){if(!load){file_changed=true; ff7->slot[s].ew_world = (ui->ew_x->value()  | ui->ew_id->value() << 19 | value <<24);}}
@@ -6021,10 +6026,12 @@ void MainWindow::on_ew_x_valueChanged(int value)
      if(ui->combo_map_controls->currentIndex()==5){load=true;ui->slide_world_x->setValue(value);load=false;}
 }}
 void MainWindow::on_ew_y_valueChanged(int value)
-{if(!load){file_changed=true;
-    ff7->slot[s].ew_world2 = (value | ui->ew_z->value() << 18);
-     if(ui->combo_map_controls->currentIndex()==5){load=true;ui->slide_world_y->setValue(value);load=false;}
+{if(!load){
+        file_changed=true;
+        ff7->slot[s].ew_world2 = (value | ui->ew_z->value() << 18);
+        if(ui->combo_map_controls->currentIndex()==5){load=true;ui->slide_world_y->setValue(value);load=false;}
 }}
+*/
 //ultimate weapon 6?
 void MainWindow::on_uw_id_valueChanged(int value){if(!load){file_changed=true; ff7->slot[s].uw_world = (ui->uw_x->value()  | value << 19 | ui->uw_angle->value() <<24);}}
 void MainWindow::on_uw_angle_valueChanged(int value){if(!load){file_changed=true; ff7->slot[s].uw_world = (ui->uw_x->value()  | ui->uw_id->value() << 19 | value <<24);}}
@@ -6063,8 +6070,10 @@ void MainWindow::on_combo_map_controls_currentIndexChanged(int index)
     case 5: ui->slide_world_x->setValue(ff7->slot[s].durw_world  & 0x7FFFF);
             ui->slide_world_y->setValue(ff7->slot[s].durw_world2 & 0x3FFFF);
             break;
-    case 6: ui->slide_world_x->setValue(ff7->slot[s].ew_world  & 0x7FFFF);
+    case 6: /* Do Nothing. Don't know emerald weapon Coords
+            ui->slide_world_x->setValue(ff7->slot[s].ew_world  & 0x7FFFF);
             ui->slide_world_y->setValue(ff7->slot[s].ew_world2 & 0x3FFFF);
+            */
             break;
     }
     load=false;
@@ -6080,7 +6089,9 @@ void MainWindow::on_slide_world_x_valueChanged(int value)
     case 3: ui->sub_x->setValue(value);     break;
     case 4: ui->uw_x->setValue(value);      break;
     case 5: ui->durw_x->setValue(value);    break;
+    /* Do Nothing. Don't know emerald weapon Coords
     case 6: ui->ew_x->setValue(value);      break;
+    */
     }
 }}
 
@@ -6094,7 +6105,9 @@ void MainWindow::on_slide_world_y_valueChanged(int value)
     case 3: ui->sub_y->setValue(value);     break;
     case 4: ui->uw_y->setValue(value);      break;
     case 5: ui->durw_y->setValue(value);    break;
+    /* Do Nothing. Don't know emerald weapon Coords
     case 6: ui->ew_y->setValue(value);      break;
+    */
     }
 
 }}
@@ -6107,9 +6120,11 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
     menu.addAction(tr("Place Tiny Bronco/Chocobo"));
     menu.addAction(tr("Place Buggy/Highwind"));
     menu.addAction(tr("Place Sub"));
-    menu.addAction(tr("Place Savage Chocobo"));
+    menu.addAction(tr("Place Wild Chocobo"));
     menu.addAction(tr("Place Diamond/Ultimate/Ruby Weapon"));
+    /* Do Nothing. Don't know emerald weapon Coords
     menu.addAction(tr("Place Emerald Weapon?"));
+    */
     sel = menu.exec(ui->world_map_view->mapToGlobal(pos));
     if(sel==0){return;}
     file_changed=true;
@@ -6133,7 +6148,7 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
          ui->sub_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
          ui->sub_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
     }
-    else if(sel->text()==tr("Place Savage Chocobo"))
+    else if(sel->text()==tr("Place Wild Chocobo"))
     {
          ui->uw_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
          ui->uw_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
@@ -6145,8 +6160,10 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
     }
     else if(sel->text()==tr("Place Emerald Weapon?"))
     {
+         /* Do Nothing. Don't know emerald weapon Coords
          ui->ew_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
          ui->ew_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
+         */
     }
     else{return;}
 }//End Of Map Context Menu

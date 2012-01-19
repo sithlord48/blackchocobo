@@ -3320,7 +3320,7 @@ is not a FF7 SaveGame.</source>
         <translation>Buggy/Hautvent</translation>
     </message>
     <message>
-        <source>Savage Chocobo</source>
+        <source>Wild Chocobo</source>
         <translation type="unfinished">Chocobo Sauvage</translation>
     </message>
     <message>
@@ -3408,7 +3408,7 @@ is not a FF7 SaveGame.</source>
         <translation>Placer le sous-marin</translation>
     </message>
     <message>
-        <source>Place Savage Chocobo</source>
+        <source>Place Wild Chocobo</source>
         <translation>Placer le Chocobo Sauvage</translation>
     </message>
     <message>
@@ -4285,7 +4285,7 @@ N&apos;EST PAS une sauvegarde PSV</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Savage chocobo</source>
+        <source>Wild chocobo</source>
         <translation type="unfinished">Chocobo sauvage</translation>
     </message>
     <message>

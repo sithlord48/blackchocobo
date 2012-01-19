@@ -17273,7 +17273,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="minimumSize">
                <size>
-                <width>270</width>
+                <width>273</width>
                 <height>0</height>
                </size>
               </property>
@@ -17391,7 +17391,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QCheckBox" name="cb_visible_savage_chocobo">
+                        <widget class="QCheckBox" name="cb_visible_wild_chocobo">
                          <property name="minimumSize">
                           <size>
                            <width>0</width>
@@ -17399,7 +17399,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                           </size>
                          </property>
                          <property name="text">
-                          <string>Savage chocobo</string>
+                          <string>Wild chocobo</string>
                          </property>
                         </widget>
                        </item>
@@ -18342,7 +18342,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </size>
                   </property>
                   <property name="title">
-                   <string>Savage Chocobo</string>
+                   <string>Wild Chocobo</string>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_101">
                    <property name="margin">
@@ -18741,6 +18741,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </layout>
                  </widget>
                 </item>
+                <!--  Do Nothing. Don't know emerald weapon Coords
                 <item>
                  <widget class="QGroupBox" name="leaderonworld_box_6">
                   <property name="maximumSize">
@@ -18945,6 +18946,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </layout>
                  </widget>
                 </item>
+                -->
                </layout>
               </widget>
              </widget>
@@ -19021,7 +19023,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       </item>
                       <item>
                        <property name="text">
-                        <string>Savage Chocobo</string>
+                        <string>Wild Chocobo</string>
                        </property>
                       </item>
                       <item>
@@ -19029,11 +19031,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         <string>Diamond / Ultimate / Ruby Weapon</string>
                        </property>
                       </item>
+                      <!--  Do Nothing. Don't know emerald weapon Coords
                       <item>
                        <property name="text">
                         <string>Emerald Weapon?</string>
                        </property>
                       </item>
+                      -->
                      </widget>
                     </item>
                    </layout>
