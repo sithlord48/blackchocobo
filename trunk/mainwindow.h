@@ -615,11 +615,14 @@ private slots://try to keep these in the same order as the .cpp file
     void on_uw_id_valueChanged(int);
     void on_uw_angle_valueChanged(int);
 
+    /* Do Nothing. Don't know emerald weapon Coords
     void on_ew_x_valueChanged(int);
     void on_ew_y_valueChanged(int);
     void on_ew_z_valueChanged(int);
     void on_ew_id_valueChanged(int);
     void on_ew_angle_valueChanged(int);
+    */
+
     void on_combo_map_controls_currentIndexChanged(int index);
     void on_slide_world_x_valueChanged(int value);
     void on_slide_world_y_valueChanged(int value);
@@ -658,7 +661,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_visible_buggy_toggled(bool checked);
     void on_cb_visible_bronco_toggled(bool checked);
     void on_cb_visible_highwind_toggled(bool checked);
-    void on_cb_visible_savage_chocobo_toggled(bool checked);
+    void on_cb_visible_wild_chocobo_toggled(bool checked);
     void on_cb_visible_yellow_chocobo_toggled(bool checked);
     void on_cb_visible_green_chocobo_toggled(bool checked);
     void on_cb_visible_blue_chocobo_toggled(bool checked);

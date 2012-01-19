@@ -3367,7 +3367,7 @@ ist kein FF7 Spielstand.</translation>
         <translation>Buggy/Highwind</translation>
     </message>
     <message>
-        <source>Savage Chocobo</source>
+        <source>Wild Chocobo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3407,8 +3407,8 @@ ist kein FF7 Spielstand.</translation>
         <translation>Diamond / Ultimate / Ruby Weapon</translation>
     </message>
     <message>
-        <source>Place Savage Chocobo</source>
-        <translation>Platziere Savage Chocobo</translation>
+        <source>Place Wild Chocobo</source>
+        <translation>Platziere Wild Chocobo</translation>
     </message>
     <message>
         <source>Place Diamond/Ultimate/Ruby Weapon</source>
@@ -4291,8 +4291,8 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Savage chocobo</source>
-        <translation type="unfinished">Savage chocobo</translation>
+        <source>Wild chocobo</source>
+        <translation type="unfinished">Wild chocobo</translation>
     </message>
     <message>
         <source>Yellow chocobo</source>

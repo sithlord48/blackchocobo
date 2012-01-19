@@ -3353,7 +3353,7 @@ no es una partida guardada de FF7.</translation>
         <translation>Submarino</translation>
     </message>
     <message>
-        <source>Savage Chocobo</source>
+        <source>Wild Chocobo</source>
         <translation>Chocobo Salvaje</translation>
     </message>
     <message>
@@ -3409,7 +3409,7 @@ no es una partida guardada de FF7.</translation>
         <translation>Arma Diamante / Última / Rubí</translation>
     </message>
     <message>
-        <source>Place Savage Chocobo</source>
+        <source>Place Wild Chocobo</source>
         <translation>Colocar Chocobo Salvaje</translation>
     </message>
     <message>
@@ -4285,7 +4285,7 @@ NO es un archivo de guardado PSV</translation>
         <translation>Id desconocida en Buggy/Viento Fuerte</translation>
     </message>
     <message>
-        <source>Savage chocobo</source>
+        <source>Wild chocobo</source>
         <translation>Chocobo salvaje</translation>
     </message>
     <message>

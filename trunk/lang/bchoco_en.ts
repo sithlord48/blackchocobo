@@ -3353,7 +3353,7 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Savage Chocobo</source>
+        <source>Wild Chocobo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3393,7 +3393,7 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Place Savage Chocobo</source>
+        <source>Place Wild Chocobo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4259,7 +4259,7 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Savage chocobo</source>
+        <source>Wild chocobo</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

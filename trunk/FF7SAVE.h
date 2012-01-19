@@ -463,9 +463,13 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint32 sub_world;          // [0x0F7C] sub on world part 1
     quint32 sub_world2;         // [0x0F80] sub on world part 2
     quint32 durw_world;         // [0x0F84] Diamond/ Ultimate And Ruby Weapons Coords.
-    quint32 durw_world2;        // [0x0F8C] Diamond/ Ultimate And Ruby Weapons Coords.
-    quint32 ew_world;           // [0x0F90] emerald?
-    quint32 ew_world2;          // [0x0F94] emerald2?
+    quint32 durw_world2;        // [0x0F88] Diamond/ Ultimate And Ruby Weapons Coords.
+    quint16 pole1_x;            // [0x0F8C] 1st Snow Pole X Coordinate.
+    quint16 pole1_y;            // [0x0F8E] 1st Snow Pole Y Coordinate.
+    quint16 pole2_x;            // [0x0F90] 2nd Snow Pole X Coordinate.
+    quint16 pole2_y;            // [0x0F92] 2nd Snow Pole Y Coordinate.
+    quint16 pole3_x;            // [0x0F94] 3ed Snow Pole X Coordinate.
+    quint16 pole3_y;            // [0x0F96] 3ed Snow Pole Y Coordinate.
     quint8 z_38[240];           // [0x0F98] UNKNOWN (Start of more coords.. )
     FF7CHOCOBO choco56[2];      // [0x1084] Chocobo slots 5-6
     quint16 phsmask;            // [0x10A4] who is allowed in the phs
