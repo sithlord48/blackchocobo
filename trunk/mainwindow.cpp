@@ -2720,6 +2720,21 @@ else // make the materia look nice
     ui->combo_mat_type_slot->setCurrentIndex(Materias[current_id].type);
     load=true;//mat_type calls reset load.
     ui->combo_add_mat_slot->setCurrentIndex(Materias[current_id].id);
+
+    if(current_id == 0x2C)
+    {
+        ui->mskill_group->setVisible(false);
+        ui->eskill_group_2->setVisible(true);
+        ui->sb_addap_slot->setEnabled(false);
+        geteskills2(mslotsel);
+    }
+    else
+    {
+        ui->mskill_group->setVisible(true);
+        ui->eskill_group_2->setVisible(false);
+        ui->sb_addap_slot->setEnabled(true);
+    }
+
     load=false;
     for(int i=0; i<Materias[current_id].levels;i++){if(aptemp >= Materias[current_id].ap[i]){level++;}}
     switch (Materias[current_id].levels)
@@ -2979,6 +2994,9 @@ void MainWindow::materiaupdate(void)
         QString f_icon;
         if(Materias[current_id].type == 0){ e_icon ="\0";   f_icon= "\0";}
         else{e_icon= Materias[current_id].image +"_empty";  f_icon= Materias[current_id].image +"_full";}
+
+        if(current_id == 0x2C){ui->eskill_group->setVisible(true);ui->sb_addap->setEnabled(0);geteskills(j);}
+        else{ui->eskill_group->setVisible(false);ui->sb_addap->setEnabled(1);}
 
     for(int i=0; i<Materias[current_id].levels;i++){if(aptemp >= Materias[current_id].ap[i]){level++;}}
     switch (Materias[current_id].levels)
@@ -4569,8 +4587,6 @@ void MainWindow::on_combo_add_mat_2_currentIndexChanged()
         if(ui->combo_add_mat_2->currentText()== FF7Strings.MateriaNames(i)){ui->combo_add_mat->setCurrentIndex(i);}
     }
 // if its eskill set it up right , or else do normal setup.
-    if(ui->combo_add_mat_2->currentText()== tr("Enemy Skill")){ui->eskill_group->setVisible(true);ui->sb_addap->setEnabled(0);geteskills(ui->tbl_materia->currentRow());}
-    else{ui->eskill_group->setVisible(false);ui->sb_addap->setEnabled(1);}
 }}
 
 
@@ -4925,20 +4941,6 @@ void MainWindow::on_combo_add_mat_slot_2_currentIndexChanged()
     for(int i=0;i<0x5B;i++)
     {
         if(ui->combo_add_mat_slot_2->currentText()== FF7Strings.MateriaNames(i)){ui->combo_add_mat_slot->setCurrentIndex(i);}
-    }
-
-    if(ff7->slot[s].chars[curchar].materias[mslotsel].id == 0x2C)
-    {
-        ui->mskill_group->setVisible(false);
-        ui->eskill_group_2->setVisible(true);
-        geteskills2(mslotsel);
-        ui->sb_addap_slot->setEnabled(false);
-    }
-    else
-    {
-        ui->mskill_group->setVisible(true);
-        ui->eskill_group_2->setVisible(false);
-        ui->sb_addap_slot->setEnabled(true);
     }
 }}
 void MainWindow::on_btn_copy_materia_slot_clicked()
