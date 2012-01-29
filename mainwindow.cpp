@@ -292,7 +292,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
     QByteArray temp; // create a temp to be used when needed
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~Set File Type Vars ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
     int file_size = file.size();
-    if((file_size == FF7_PC_SAVE_GAME_SIZE) && ff7file.startsWith("\x71\x73"))
+    if((file_size == FF7_PC_SAVE_GAME_SIZE) && ff7file.startsWith(PC_SAVE_GAME_FILE_ID))
     {
        ff7->SG_SIZE          = FF7_PC_SAVE_GAME_SIZE;
        ff7->SG_HEADER        = FF7_PC_SAVE_GAME_HEADER;
@@ -306,7 +306,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
        ff7->file_headerp     = ff7->file_header_pc;           //pointer to pc file header
        ff7->file_footerp     = ff7->file_footer_pc;           //pointer to pc file footer
     }
-    else if((file_size == FF7_PSX_SAVE_GAME_SIZE)&& ff7file.startsWith("\x53\x43\x11\x01\x82\x65\x82\x65\x82\x56\x81\x5E\x82\x72\x82\x60"))
+    else if((file_size == FF7_PSX_SAVE_GAME_SIZE)&& ff7file.startsWith(PSX_SAVE_GAME_FILE_ID))
     {//This should catch just about any false positive named *-S*
        ff7->SG_SIZE          = FF7_PSX_SAVE_GAME_SIZE;
        ff7->SG_HEADER        = FF7_PSX_SAVE_GAME_HEADER;
@@ -320,7 +320,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
        ff7->file_headerp     = ff7->file_header_psx;          //pointer to psx file header
        ff7->file_footerp     = ff7->file_footer_psx;          //pointer to psx file footer
     }
-    else if((file_size == FF7_MC_SAVE_GAME_SIZE) && ff7file.startsWith("\x4D\x43"))
+    else if((file_size == FF7_MC_SAVE_GAME_SIZE) && ff7file.startsWith(MC_SAVE_GAME_FILE_ID))
     {
        ff7->SG_SIZE          = FF7_MC_SAVE_GAME_SIZE;
        ff7->SG_HEADER        = FF7_MC_SAVE_GAME_HEADER;
@@ -335,7 +335,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
        ff7->file_footerp     = ff7->file_footer_mc;           //pointer to mc file footer
     }
 
-    else if((file_size == FF7_PSV_SAVE_GAME_SIZE) && ff7file.startsWith("\x00\x56\x53\x50"))
+    else if((file_size == FF7_PSV_SAVE_GAME_SIZE) && ff7file.startsWith(PSV_SAVE_GAME_FILE_ID))
     {//CAUTION: be sure we are loading the correct kind of psv, pSX uses the extension for it's state files.
        ff7->SG_SIZE          = FF7_PSV_SAVE_GAME_SIZE;
        ff7->SG_HEADER        = FF7_PSV_SAVE_GAME_HEADER;
@@ -349,7 +349,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
        ff7->file_headerp     = ff7->file_header_psv;          //pointer to psv file header
        ff7->file_footerp     = ff7->file_footer_psv;          //pointer to psv file footer
     }
-    else if((file_size ==FF7_PSP_SAVE_GAME_SIZE) && ff7file.startsWith("\x00\x50\x4D\x56"))
+    else if((file_size ==FF7_PSP_SAVE_GAME_SIZE) && ff7file.startsWith(PSP_SAVE_GAME_FILE_ID))
     {
         ff7->SG_SIZE          = FF7_PSP_SAVE_GAME_SIZE;
         ff7->SG_HEADER        = FF7_PSP_SAVE_GAME_HEADER;
@@ -363,7 +363,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
         ff7->file_headerp     = ff7->file_header_psp;          //pointer to psp file header
         ff7->file_footerp     = ff7->file_footer_psp;          //pointer to psp file footer
     }
-    else if((file_size ==FF7_VGS_SAVE_GAME_SIZE) && ff7file.startsWith("\x56\x67\x73\x4D"))
+    else if((file_size ==FF7_VGS_SAVE_GAME_SIZE) && ff7file.startsWith(VGS_SAVE_GAME_FILE_ID))
     {
         ff7->SG_SIZE          = FF7_VGS_SAVE_GAME_SIZE;
         ff7->SG_HEADER        = FF7_VGS_SAVE_GAME_HEADER;
@@ -377,7 +377,7 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
         ff7->file_headerp     = ff7->file_header_vgs;          //pointer to vgs file header
         ff7->file_footerp     = ff7->file_footer_vgs;          //pointer to vgs file footer
     }
-    else if((file_size ==FF7_DEX_SAVE_GAME_SIZE) && ff7file.startsWith("\x31\x32\x33\x2D\x34\x35\x36\x2D\x53\x54\x44"))
+    else if((file_size ==FF7_DEX_SAVE_GAME_SIZE) && ff7file.startsWith(DEX_SAVE_GAME_FILE_ID))
     {
         ff7->SG_SIZE          = FF7_DEX_SAVE_GAME_SIZE;
         ff7->SG_HEADER        = FF7_DEX_SAVE_GAME_HEADER;

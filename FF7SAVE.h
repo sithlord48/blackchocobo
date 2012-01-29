@@ -30,6 +30,7 @@ const int FF7_PC_SAVE_GAME_SLOT_HEADER = 0x00;
 const int FF7_PC_SAVE_GAME_SLOT_FOOTER = 0x0000;
 const int FF7_PC_SAVE_GAME_SLOT_SIZE = 0x10F4;
 const int FF7_PC_SAVE_GAME_SLOT_NUMBER = 15;
+const char PC_SAVE_GAME_FILE_ID[] = "\x71\x73";
 const quint8 PC_SAVE_GAME_FILE_HEADER[0x09] = {0x71,0x73,0x27,0x06,0x00,0x00,0x00,0x00,0x00}; //PC HEADER (for when we need to create one)
 
 /*~~~~~~~~~~~~~~~~~~ Psx save file ~~~~~~~~~~~~~~~~*/
@@ -41,6 +42,7 @@ const int FF7_PSX_SAVE_GAME_SLOT_HEADER = 0x0200;
 const int FF7_PSX_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
 const int FF7_PSX_SAVE_GAME_SLOT_SIZE = 0x2000;
 const int FF7_PSX_SAVE_GAME_SLOT_NUMBER = 1;
+const char PSX_SAVE_GAME_FILE_ID[] = "\x53\x43\x11\x01\x82\x65\x82\x65\x82\x56\x81\x5E\x82\x72\x82\x60";
 
 //BELOW 1/2 HEADER DATA FOR EACH PSX SAVE SLOT, (NOTE: last 256 bytes are 0x00, no region data in this section)
 
@@ -218,6 +220,8 @@ const int FF7_PSV_SAVE_GAME_SLOT_HEADER = 0x0200;
 const int FF7_PSV_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
 const int FF7_PSV_SAVE_GAME_SLOT_SIZE = 0x2000;
 const int FF7_PSV_SAVE_GAME_SLOT_NUMBER = 1;
+const char PSV_SAVE_GAME_FILE_ID[] = "\x00\x56\x53\x50";
+
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Mem Card Format~~~~~~~~~~~~~~~~~~~*/
 const int FF7_MC_SAVE_GAME_SIZE = 0x20000;
 const int FF7_MC_SAVE_GAME_HEADER = 0x2000;
@@ -227,6 +231,7 @@ const int FF7_MC_SAVE_GAME_SLOT_HEADER = 0x0200;
 const int FF7_MC_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
 const int FF7_MC_SAVE_GAME_SLOT_SIZE = 0x2000;
 const int FF7_MC_SAVE_GAME_SLOT_NUMBER = 15;
+const char MC_SAVE_GAME_FILE_ID[] = "\x4D\x43";
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PSP SAVE FORMAT~~~~~~~~~~~~~~~~~~~*/
 const int FF7_PSP_SAVE_GAME_SIZE = 0x20080;
 const int FF7_PSP_SAVE_GAME_HEADER = 0x2080;
@@ -236,6 +241,7 @@ const int FF7_PSP_SAVE_GAME_SLOT_HEADER = 0x0200;
 const int FF7_PSP_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
 const int FF7_PSP_SAVE_GAME_SLOT_SIZE = 0x2000;
 const int FF7_PSP_SAVE_GAME_SLOT_NUMBER = 15;
+const char PSP_SAVE_GAME_FILE_ID[] = "\x00\x50\x4D\x56";
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~VGM SAVE FORMAT~~~~~~~~~~~~~~~~~~~~*/
 const int FF7_VGS_SAVE_GAME_SIZE = 0x20040;
 const int FF7_VGS_SAVE_GAME_HEADER = 0x2040;
@@ -245,6 +251,7 @@ const int FF7_VGS_SAVE_GAME_SLOT_HEADER = 0x0200;
 const int FF7_VGS_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
 const int FF7_VGS_SAVE_GAME_SLOT_SIZE = 0x2000;
 const int FF7_VGS_SAVE_GAME_SLOT_NUMBER = 15;
+const char VGS_SAVE_GAME_FILE_ID[] = "\x56\x67\x73\x4D";
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DEX SAVE FORMAT~~~~~~~~~~~~~~~~~~~~*/
 const int FF7_DEX_SAVE_GAME_SIZE = 0x20F40;
 const int FF7_DEX_SAVE_GAME_HEADER = 0x2F40;
@@ -254,6 +261,7 @@ const int FF7_DEX_SAVE_GAME_SLOT_HEADER = 0x0200;
 const int FF7_DEX_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
 const int FF7_DEX_SAVE_GAME_SLOT_SIZE = 0x2000;
 const int FF7_DEX_SAVE_GAME_SLOT_NUMBER = 15;
+const char DEX_SAVE_GAME_FILE_ID[] = "\x31\x32\x33\x2D\x34\x35\x36\x2D\x53\x54\x44";
 
 
 /* END FILE INFO */
