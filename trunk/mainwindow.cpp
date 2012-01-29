@@ -1971,9 +1971,9 @@ void MainWindow::weapon_stat(void)
         case 0x02: ui->lbl_acc_bonus->setText(tr("mag +10"));break;//earing
         case 0x03: ui->lbl_acc_bonus->setText(tr("spi +10"));break;//tailsman
         case 0x04: ui->lbl_acc_bonus->setText(tr("dex +10"));break;//choco-feather
-        case 0x05: ui->lbl_acc_bonus->setText(tr("lck +10%"));break;//amulet +10%
+        case 0x05: ui->lbl_acc_bonus->setText(tr("lck +10"));break;//amulet +10
         case 0x06: ui->lbl_acc_bonus->setText(tr("str +30 vit +30"));break;// champ's belt
-        case 0x08: ui->lbl_acc_bonus->setText(tr("str +50 spi +50"));break;// tough ring
+        case 0x08: ui->lbl_acc_bonus->setText(tr("vit +50 spi +50"));break;// tough ring
         case 0x09: ui->lbl_acc_bonus->setText(tr("mag +30 spi +30"));break;// circlet
         default: ui->lbl_acc_bonus->setText("");break;
     }
@@ -2045,9 +2045,9 @@ void MainWindow::update_stat_totals(void)
     else if(ff7->slot[s].chars[curchar].accessory == 0x02) {magbonus+=10;ui->lbl_acc_bonus->setText(tr("mag +10"));} //earing
     else if(ff7->slot[s].chars[curchar].accessory == 0x03) {spibonus+=10;ui->lbl_acc_bonus->setText(tr("spi +10"));} //tailsman
     else if(ff7->slot[s].chars[curchar].accessory == 0x04) {dexbonus+=10;ui->lbl_acc_bonus->setText(tr("dex +10"));} //choco-feather
-    else if(ff7->slot[s].chars[curchar].accessory == 0x05) {lckbonus+= (ff7->slot[s].chars[curchar].luck*0.1);ui->lbl_acc_bonus->setText(tr("lck +") + QString::number(int(ff7->slot[s].chars[curchar].luck*0.1)));} //amulet +10%
+    else if(ff7->slot[s].chars[curchar].accessory == 0x05) {lckbonus+=10;ui->lbl_acc_bonus->setText(tr("lck +10"));} //amulet +10
     else if(ff7->slot[s].chars[curchar].accessory == 0x06) {strbonus+=30; vitbonus+=30;ui->lbl_acc_bonus->setToolTip(tr("str +30 vit +30"));} // champ's belt
-    else if(ff7->slot[s].chars[curchar].accessory == 0x08) {strbonus+=50; spibonus+=50;ui->lbl_acc_bonus->setToolTip(tr("str +50 spi +50"));} // tough ring
+    else if(ff7->slot[s].chars[curchar].accessory == 0x08) {vitbonus+=50; spibonus+=50;ui->lbl_acc_bonus->setToolTip(tr("vit +50 spi +50"));} // tough ring
     else if(ff7->slot[s].chars[curchar].accessory == 0x09) {magbonus+=30; spibonus+=30;ui->lbl_acc_bonus->setToolTip(tr("mag +30 spi +30"));} // circlet
     else{ui->lbl_acc_bonus->setText("");}
     //end of accessories
