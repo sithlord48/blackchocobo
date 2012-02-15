@@ -3149,7 +3149,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation>てきのわざ</translation>
+        <translation type="obsolete">てきのわざ</translation>
     </message>
     <message>
         <source>S01</source>
@@ -3369,7 +3369,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Emerald Weapon?</source>
-        <translation>エメラルド ウェポン ?</translation>
+        <translation type="obsolete">エメラルド ウェポン ?</translation>
     </message>
     <message>
         <source>Place Leader</source>
@@ -3545,7 +3545,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Emerald Weapon ?</source>
-        <translation>エメラルド ウェポン (?)</translation>
+        <translation type="obsolete">エメラルド ウェポン (?)</translation>
     </message>
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
@@ -4252,7 +4252,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>lck +10%</source>
-        <translation>運 + 10%</translation>
+        <translation type="obsolete">運 + 10%</translation>
     </message>
     <message>
         <source>str +30 vit +30</source>
@@ -4260,7 +4260,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>str +50 spi +50</source>
-        <translation>力 + 50, 精神 + 50</translation>
+        <translation type="obsolete">力 + 50, 精神 + 50</translation>
     </message>
     <message>
         <source>mag +30 spi +30</source>
@@ -4273,7 +4273,7 @@ Table Entries are Editable</source>
     <message>
         <source>lck +</source>
         <translatorcomment>placeholder after this</translatorcomment>
-        <translation>運 + </translation>
+        <translation type="obsolete">運 + </translation>
     </message>
     <message>
         <source>Church in the Slums</source>
@@ -4323,6 +4323,14 @@ Table Entries are Editable</source>
     <message>
         <source>Gold chocobo</source>
         <translation>海チョコボ</translation>
+    </message>
+    <message>
+        <source>lck +10</source>
+        <translation>運 + 10</translation>
+    </message>
+    <message>
+        <source>vit +50 spi +50</source>
+        <translation>体力 + 50, 精神 + 50</translation>
     </message>
 </context>
 <context>

@@ -54,7 +54,9 @@ private:
     FF7 *ff7; // our save file struct pointer.
     QSettings *settings;
     int s; //track slot
-    FF7StaticData FF7Strings; //class of strings used in ff7
+    FF7Item Items; //FF7Item Static Data
+    FF7Materia Materias;//FF7Materia Static Data.
+    FF7Location Locations; // FF7 Location Data
     FF7SLOT bufferslot; // a buffer slot to keep copied slots in
     QString buffer_region; //holds region data for bufferslot.
     MATERIA buffer_materia; // buffer for a materia
@@ -109,7 +111,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_actionPrevious_Slot_activated();
     void on_actionNext_Slot_activated();
     void on_actionAbout_activated();
-    void on_actionAbout_Qt_activated();
     void on_actionCopy_Slot_activated();
     void on_actionPaste_Slot_activated();
     void on_actionShow_Options_triggered();

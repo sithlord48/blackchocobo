@@ -421,8 +421,8 @@ QPushButton[mslot=&quot;true&quot;]{
 border: 0px;
 border-radius:12px;
 image: url(:/icon/mslot);
-	height:32px;	
-	width:32px;
+height:32px;	
+width:32px;
 }
 
 QPushButton[stars=&quot;true&quot;]{
@@ -4700,7 +4700,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             </rect>
            </property>
            <attribute name="icon">
-            <iconset resource="images.qrc">
+            <iconset>
              <normaloff>:/icon/armor</normaloff>:/icon/armor</iconset>
            </attribute>
            <attribute name="label">
@@ -6735,66 +6735,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <height>16</height>
                     </size>
                    </property>
-                   <item>
-                    <property name="text">
-                     <string>All</string>
-                    </property>
-                    <property name="icon">
-                     <iconset>
-                      <normalon>:/icon/all_materia</normalon>
-                     </iconset>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Magic</string>
-                    </property>
-                    <property name="icon">
-                     <iconset>
-                      <normalon>:/icon/magic</normalon>
-                     </iconset>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Summon</string>
-                    </property>
-                    <property name="icon">
-                     <iconset>
-                      <normalon>:/icon/summon</normalon>
-                     </iconset>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Independent</string>
-                    </property>
-                    <property name="icon">
-                     <iconset>
-                      <normalon>:/icon/independent</normalon>
-                     </iconset>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Support</string>
-                    </property>
-                    <property name="icon">
-                     <iconset>
-                      <normalon>:/icon/support</normalon>
-                     </iconset>
-                    </property>
-                   </item>
-                   <item>
-                    <property name="text">
-                     <string>Command</string>
-                    </property>
-                    <property name="icon">
-                     <iconset>
-                      <normalon>:/icon/command</normalon>
-                     </iconset>
-                    </property>
-                   </item>
                   </widget>
                  </item>
                  <item>
@@ -10019,66 +9959,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <height>16</height>
                  </size>
                 </property>
-                <item>
-                 <property name="text">
-                  <string>All</string>
-                 </property>
-                 <property name="icon">
-                  <iconset>
-                   <normalon>:/icon/all_materia</normalon>
-                  </iconset>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Magic</string>
-                 </property>
-                 <property name="icon">
-                  <iconset>
-                   <normalon>:/icon/magic</normalon>
-                  </iconset>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Summon</string>
-                 </property>
-                 <property name="icon">
-                  <iconset>
-                   <normalon>:/icon/summon</normalon>
-                  </iconset>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Independent</string>
-                 </property>
-                 <property name="icon">
-                  <iconset>
-                   <normalon>:/icon/independent</normalon>
-                  </iconset>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Support</string>
-                 </property>
-                 <property name="icon">
-                  <iconset>
-                   <normalon>:/icon/support</normalon>
-                  </iconset>
-                 </property>
-                </item>
-                <item>
-                 <property name="text">
-                  <string>Command</string>
-                 </property>
-                 <property name="icon">
-                  <iconset>
-                   <normalon>:/icon/command</normalon>
-                  </iconset>
-                 </property>
-                </item>
                </widget>
               </item>
               <item>
@@ -17248,8 +17128,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>764</width>
-             <height>440</height>
+             <width>747</width>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -18741,212 +18621,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </layout>
                  </widget>
                 </item>
-                <!--  Do Nothing. Don't know emerald weapon Coords
-                <item>
-                 <widget class="QGroupBox" name="leaderonworld_box_6">
-                  <property name="maximumSize">
-                   <size>
-                    <width>16777215</width>
-                    <height>70</height>
-                   </size>
-                  </property>
-                  <property name="title">
-                   <string>Emerald Weapon ?</string>
-                  </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_104">
-                   <property name="margin">
-                    <number>2</number>
-                   </property>
-                   <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_89">
-                     <item>
-                      <widget class="QSpinBox" name="ew_x">
-                       <property name="minimumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="wrapping">
-                        <bool>true</bool>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="prefix">
-                        <string notr="true">X: </string>
-                       </property>
-                       <property name="maximum">
-                        <number>295000</number>
-                       </property>
-                       <property name="value">
-                        <number>0</number>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QSpinBox" name="ew_y">
-                       <property name="minimumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>96</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="wrapping">
-                        <bool>true</bool>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="prefix">
-                        <string>Y: </string>
-                       </property>
-                       <property name="maximum">
-                        <number>230000</number>
-                       </property>
-                       <property name="value">
-                        <number>0</number>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QSpinBox" name="ew_z">
-                       <property name="minimumSize">
-                        <size>
-                         <width>48</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="maximumSize">
-                        <size>
-                         <width>48</width>
-                         <height>18</height>
-                        </size>
-                       </property>
-                       <property name="wrapping">
-                        <bool>true</bool>
-                       </property>
-                       <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="prefix">
-                        <string notr="true">Z: </string>
-                       </property>
-                       <property name="minimum">
-                        <number>0</number>
-                       </property>
-                       <property name="maximum">
-                        <number>255</number>
-                       </property>
-                       <property name="value">
-                        <number>0</number>
-                       </property>
-                      </widget>
-                     </item>
-                    </layout>
-                   </item>
-                   <item>
-                    <layout class="QHBoxLayout" name="horizontalLayout_141">
-                     <item>
-                      <spacer name="horizontalSpacer_69">
-                       <property name="orientation">
-                        <enum>Qt::Horizontal</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                      </spacer>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_220">
-                       <property name="text">
-                        <string>angle</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QSpinBox" name="ew_angle">
-                       <property name="wrapping">
-                        <bool>true</bool>
-                       </property>
-                       <property name="suffix">
-                        <string notr="true">°</string>
-                       </property>
-                       <property name="minimum">
-                        <number>0</number>
-                       </property>
-                       <property name="maximum">
-                        <number>360</number>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <spacer name="horizontalSpacer_85">
-                       <property name="orientation">
-                        <enum>Qt::Horizontal</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                      </spacer>
-                     </item>
-                     <item>
-                      <widget class="QLabel" name="label_221">
-                       <property name="text">
-                        <string>id</string>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <widget class="QSpinBox" name="ew_id">
-                       <property name="wrapping">
-                        <bool>true</bool>
-                       </property>
-                       <property name="minimum">
-                        <number>0</number>
-                       </property>
-                       <property name="maximum">
-                        <number>255</number>
-                       </property>
-                      </widget>
-                     </item>
-                     <item>
-                      <spacer name="horizontalSpacer_87">
-                       <property name="orientation">
-                        <enum>Qt::Horizontal</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                      </spacer>
-                     </item>
-                    </layout>
-                   </item>
-                  </layout>
-                 </widget>
-                </item>
-                -->
                </layout>
               </widget>
              </widget>
@@ -19031,13 +18705,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         <string>Diamond / Ultimate / Ruby Weapon</string>
                        </property>
                       </item>
-                      <!--  Do Nothing. Don't know emerald weapon Coords
-                      <item>
-                       <property name="text">
-                        <string>Emerald Weapon?</string>
-                       </property>
-                      </item>
-                      -->
                      </widget>
                     </item>
                    </layout>
@@ -23276,7 +22943,6 @@ p, li { white-space: pre-wrap; }
               </item>
               <item>
                <widget class="QComboBox" name="combo_camera">
-
                 <property name="enabled">
                  <bool>true</bool>
                 </property>
@@ -28820,7 +28486,6 @@ Var And Scrolling Synced To Left Table</string>
     </property>
     <addaction name="separator"/>
     <addaction name="actionAbout"/>
-    <addaction name="actionAbout_Qt"/>
    </widget>
    <widget class="QMenu" name="menuFile">
     <property name="title">

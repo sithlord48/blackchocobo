@@ -3153,7 +3153,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation>Talents de l&apos;ennemi</translation>
+        <translation type="obsolete">Talents de l&apos;ennemi</translation>
     </message>
     <message>
         <source>ID </source>
@@ -3329,7 +3329,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Emerald Weapon?</source>
-        <translation>Arme d&apos;émeraude (?)</translation>
+        <translation type="obsolete">Arme d&apos;émeraude (?)</translation>
     </message>
     <message>
         <source>&amp;Open</source>
@@ -3550,7 +3550,7 @@ Les stats de Sephiroth proviendront directement de celles de Vincent.</translati
     </message>
     <message>
         <source>Emerald Weapon ?</source>
-        <translation>Arme d&apos;émeraude (?)</translation>
+        <translation type="obsolete">Arme d&apos;émeraude (?)</translation>
     </message>
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
@@ -4238,7 +4238,7 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>lck +10%</source>
-        <translation>chc +10%</translation>
+        <translation type="obsolete">chc +10%</translation>
     </message>
     <message>
         <source>str +30 vit +30</source>
@@ -4246,7 +4246,7 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>str +50 spi +50</source>
-        <translation>frc +50 esp +50</translation>
+        <translation type="obsolete">frc +50 esp +50</translation>
     </message>
     <message>
         <source>mag +30 spi +30</source>
@@ -4258,7 +4258,7 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>lck +</source>
-        <translation>chc +</translation>
+        <translation type="obsolete">chc +</translation>
     </message>
     <message>
         <source>Church in the Slums</source>
@@ -4266,11 +4266,11 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>PAL (BESCES-00868)</source>
-        <translation type="unfinished">PAL (BESCES-00900) {00868)?}</translation>
+        <translation>PAL (BESCES-00868)</translation>
     </message>
     <message>
         <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
-        <translation type="unfinished"></translation>
+        <translation>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</translation>
     </message>
     <message>
         <source>Visible On World Map</source>
@@ -4307,6 +4307,14 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     <message>
         <source>Gold chocobo</source>
         <translation type="unfinished">Chocobo or</translation>
+    </message>
+    <message>
+        <source>lck +10</source>
+        <translation>chc +10</translation>
+    </message>
+    <message>
+        <source>vit +50 spi +50</source>
+        <translation>vit +50 esp +50</translation>
     </message>
 </context>
 <context>

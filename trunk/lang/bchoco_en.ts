@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="es_AR">
+<TS version="2.0">
 <context>
     <name>Items</name>
     <message>
@@ -3137,10 +3137,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Enemy Skill</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>S01</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3357,10 +3353,6 @@ is not a FF7 SaveGame.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Emerald Weapon?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Place Leader</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3526,10 +3518,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Emerald Weapon ?</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4211,15 +4199,7 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>lck +10%</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>str +30 vit +30</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>str +50 spi +50</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4228,10 +4208,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>spi +10</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>lck +</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4280,6 +4256,14 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Gold chocobo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>lck +10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>vit +50 spi +50</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
