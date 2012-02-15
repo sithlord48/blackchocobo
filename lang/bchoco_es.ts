@@ -3154,7 +3154,7 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Enemy Skill</source>
-        <translation>Habil. Enem</translation>
+        <translation type="obsolete">Habil. Enem</translation>
     </message>
     <message>
         <source>S01</source>
@@ -3374,7 +3374,7 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Emerald Weapon?</source>
-        <translation>¿Arma Esmeralda?</translation>
+        <translation type="obsolete">¿Arma Esmeralda?</translation>
     </message>
     <message>
         <source>Place Leader</source>
@@ -3550,7 +3550,7 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Emerald Weapon ?</source>
-        <translation>¿Arma Esmeralda?</translation>
+        <translation type="obsolete">¿Arma Esmeralda?</translation>
     </message>
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
@@ -4238,7 +4238,7 @@ NO es un archivo de guardado PSV</translation>
     </message>
     <message>
         <source>lck +10%</source>
-        <translation>sue +10%</translation>
+        <translation type="obsolete">sue +10%</translation>
     </message>
     <message>
         <source>str +30 vit +30</source>
@@ -4246,7 +4246,7 @@ NO es un archivo de guardado PSV</translation>
     </message>
     <message>
         <source>str +50 spi +50</source>
-        <translation>fue +50 esp +50</translation>
+        <translation type="obsolete">fue +50 esp +50</translation>
     </message>
     <message>
         <source>mag +30 spi +30</source>
@@ -4258,7 +4258,7 @@ NO es un archivo de guardado PSV</translation>
     </message>
     <message>
         <source>lck +</source>
-        <translation>sue +</translation>
+        <translation type="obsolete">sue +</translation>
     </message>
     <message>
         <source>Church in the Slums</source>
@@ -4266,11 +4266,11 @@ NO es un archivo de guardado PSV</translation>
     </message>
     <message>
         <source>PAL (BESCES-00868)</source>
-        <translation type="unfinished">PAL (BESCES-00900) {00868)?}</translation>
+        <translation>PAL (BESCES-00868)</translation>
     </message>
     <message>
         <source>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</source>
-        <translation type="unfinished"></translation>
+        <translation>BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)</translation>
     </message>
     <message>
         <source>Visible On World Map</source>
@@ -4307,6 +4307,14 @@ NO es un archivo de guardado PSV</translation>
     <message>
         <source>Gold chocobo</source>
         <translation>Chocobo dorado</translation>
+    </message>
+    <message>
+        <source>lck +10</source>
+        <translation>sue +10</translation>
+    </message>
+    <message>
+        <source>vit +50 spi +50</source>
+        <translation>vit +50 esp +50</translation>
     </message>
 </context>
 <context>

@@ -1,36 +1,25 @@
 /****************************************************************************/
-//    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2012  Chris Rizzitello <sithlord48@gmail.com>               //
 //                                                                          //
-//    This file is part of Black Chocobo.                                   //
+//    This file is part of <UnNamedToolKit>                                 //
 //                                                                          //
-//    Black Chocobo is free software: you can redistribute it and/or modify //
+//  <UnNamedToolKit> is free software: you can redistribute it and/or modify//
 //    it under the terms of the GNU General Public License as published by  //
 //    the Free Software Foundation, either version 3 of the License, or     //
 //    (at your option) any later version.                                   //
 //                                                                          //
-//    Black Chocobo is distributed in the hope that it will be useful,      //
+// <UnNamedToolKit> is distributed in the hope that it will be useful,      //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-
-#ifndef GLOBALS_H
-#define GLOBALS_H
-    #ifndef FF7SAVE_H
-        #include "FF7SAVE.h"
-    #endif
+#include "FF7Location.h"
 #include <QCoreApplication>
-#include <QTextCodec>
-#include "FF7Text.h"
-//#include "FF7StaticData.h"
-#include "static_data/FF7Item.h"
-#include "static_data/FF7Materia.h"
-#include "static_data/FF7Location.h"
 
-int ff7__checksum(void * qw );
-void fix_pc_bytemask(FF7*ff7 ,int,bool);
-void fix_psx_header(FF7*ff7,int);
-void fix_vmc_header(FF7*ff7);
-QString avatar_style(int);
-int stat_gain(int who,int stat, int stat_amount, int next_lvl);
-#endif // GLOBALS_H
+QString FF7Location::loc_name(int i){return qApp->translate("Locations",Locations[i].location.toAscii());}
+QString FF7Location::map_id(int i){return Locations[i].map_id;}
+QString FF7Location::loc_id(int i){return Locations[i].loc_id;}
+QString FF7Location::x(int i){return Locations[i].x;}
+QString FF7Location::y(int i){return Locations[i].y;}
+QString FF7Location::z(int i){return Locations[i].z;}
+int FF7Location::len(){return 51;}// keep current num locations in list. 

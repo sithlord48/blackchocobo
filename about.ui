@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>371</width>
-    <height>390</height>
+    <width>369</width>
+    <height>388</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -496,6 +496,16 @@ p, li { white-space: pre-wrap; }
          <property name="wordWrap">
           <bool>true</bool>
          </property>
+         <item>
+          <property name="text">
+           <string>New: Show Item Descriptions in tooltip</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New: Static Data Classes</string>
+          </property>
+         </item>
          <item>
           <property name="text">
            <string>New: Added Support for French PSX (BASCES-00868)</string>
@@ -1544,8 +1554,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>121</width>
-            <height>700</height>
+            <width>138</width>
+            <height>740</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">
