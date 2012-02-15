@@ -2,6 +2,557 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="fr" sourcelanguage="en_US">
 <context>
+    <name>Item_desc</name>
+    <message>
+        <source>Restores 100 HP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restores 500 HP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restores all lost HP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restores 100 MP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restores all lost MP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fully Restores HP/MP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fully Restores all Members HP/MP</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restores life</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cures [Poison]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cures [Petrify]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cures [Frog]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cures [Small]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cures [Silence]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cures [Sadness]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cures [Fury]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cures abnormal status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Can escape from opponents during battle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Casts [Haste] on one ally</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Raises ability once during battle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Protects against transformations</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Explosive damage against one opponent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Explosive damage against all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stops all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Death] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slows all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Sleepel] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Silence] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Berserk] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Confu] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Fire2] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Fire3] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Ice2] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Ice3] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Bolt2] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Bolt3] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Quake2] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Quake3] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Bio2] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Bio3] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Comet2] on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drains HP out of one opponent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drains MP out of one opponent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Petrifies one opponent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Creates [Barrier] around all allies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Creates [MBarrier] around all allies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Reflect] on all allies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [DeSpell] on all allies</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses whirlwind on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Water damage on all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Changes one opponent to a frog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Mini] on one opponent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cures [Darkness]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fire damage on one opponent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Explosive damage on one opponent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Demi] against one opponent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Demi2] against one opponent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Darkness] against one opponent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paralyzes one opponent</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lightning damage against all opponents</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Uses [Poison/Confu/Sleepel/Silence/Small/Frog]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When you want a chocobo...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restores ally&apos;s max HP/MP. Use at Save Point.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Raises [Strength]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Raises [Vitality]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Raises [Magic Power]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Raises [Spirit]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Raises [Dexterity]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Raises [Luck]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>When you want to breed Chocobos...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Looks like it can start some sort of machine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>This one&apos;s a little tough...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [Omnislash]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [Catastrophe]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [Final Heaven]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [Great Gospel]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [Cosmo Memory]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [All Creation]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [Chaos]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Learn Limit Skill [Highwind]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra armored &apos;attack&apos; soldiers: 12 in the Set!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A new machine to protect the reactor!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A prefect copy of Sephiroth&apos;s sword!</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Use This to create a SAVE Point in the &apos;North Cave&apos;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A record of Master Dio&apos;s fiercest battles</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dio&apos;s autograph</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Second part of Dio&apos;s diary: The Gold Saucer years</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Blooms once every 1000 years</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Calms the hearts of all who hear it</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Map of another world. It Slumbers with sunken ships</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Initial equiping</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sword is used when an ally is down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Power up when [Near death]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Power up when condition changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Initial equip. Long Range Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Long Range Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Memento of father</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Raises Power when you need to protect others nearby</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drains [Fire] attacks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drains [Cold] attacks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drains [Lightning] attacks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drains 1/2 [Fire/Cold/Lightning] attack</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Women&apos;s Armlet nullifies [Fire/Cold/Gravity/Holy]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Man&apos;s Armlet nullifies [Lightning/Earth/Water/Poison]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Decreases all elemental attacks by 1/2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>A gorgeous watch</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Strength +10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vitality +10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic +10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Spirit +10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dexterity +10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Luck +10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Power &amp; Vitality +30</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drains [Poison] attacks, protects against [Poison]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Vitality &amp; Spirit +50</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic &amp; Spirit +30</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Protects against [Poison]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Protects against [Darkness]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Protects against [Sleep]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Protects against [Poison/Darkness]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Protects against [Paralyze/Petrify/Slow-numb]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Protects against [Frog/Small]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Automatically put you in [Haste]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Protects against [Berserk/Fury/Sadness]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Protects against all abnormal status</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nullifies [Fire] attacks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nullifies [Cold] attacks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nullifies [Lightning] attacks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drains [Fire/Cold/Lightning/Earth] attacks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Protects against [Sudden Death/Petrify/Slow-numb]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Automatically puts you in [Berserk]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>It increases each status but...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Automatically sets up [Barrier/MBarrier]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Restores HP as you walk</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Automatically sets up [Reflect]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Drains Water attacks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Increases Stealing rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Increases Manipulation rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>Items</name>
     <message>
         <source>Potion</source>
@@ -3152,10 +3703,6 @@ is not a FF7 SaveGame.</source>
         <translation>Ignorer sauvegarde non-FF7</translation>
     </message>
     <message>
-        <source>Enemy Skill</source>
-        <translation type="obsolete">Talents de l&apos;ennemi</translation>
-    </message>
-    <message>
         <source>ID </source>
         <translation>ID </translation>
     </message>
@@ -3326,10 +3873,6 @@ is not a FF7 SaveGame.</source>
     <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
         <translation>Arme de diamant / Dernière Arme / Arme de Rubis</translation>
-    </message>
-    <message>
-        <source>Emerald Weapon?</source>
-        <translation type="obsolete">Arme d&apos;émeraude (?)</translation>
     </message>
     <message>
         <source>&amp;Open</source>
@@ -3512,10 +4055,6 @@ is not a FF7 SaveGame.</source>
         <translation>Buggy</translation>
     </message>
     <message>
-        <source>Unknown</source>
-        <translation type="obsolete">Inconnu</translation>
-    </message>
-    <message>
         <source>Unknown  Vars</source>
         <translation>Variables inconnues</translation>
     </message>
@@ -3547,10 +4086,6 @@ Les stats de Sephiroth proviendront directement de celles de Vincent.</translati
     <message>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
         <translation>Arme de diamant / Dernière Arme / Arme de Rubis</translation>
-    </message>
-    <message>
-        <source>Emerald Weapon ?</source>
-        <translation type="obsolete">Arme d&apos;émeraude (?)</translation>
     </message>
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
@@ -4237,16 +4772,8 @@ N&apos;EST PAS une sauvegarde PSV</translation>
         <translation>mag +10</translation>
     </message>
     <message>
-        <source>lck +10%</source>
-        <translation type="obsolete">chc +10%</translation>
-    </message>
-    <message>
         <source>str +30 vit +30</source>
         <translation>frc +30 vit +30</translation>
-    </message>
-    <message>
-        <source>str +50 spi +50</source>
-        <translation type="obsolete">frc +50 esp +50</translation>
     </message>
     <message>
         <source>mag +30 spi +30</source>
@@ -4255,10 +4782,6 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     <message>
         <source>spi +10</source>
         <translation>esp +10</translation>
-    </message>
-    <message>
-        <source>lck +</source>
-        <translation type="obsolete">chc +</translation>
     </message>
     <message>
         <source>Church in the Slums</source>
@@ -6434,6 +6957,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Added Support for French PSX (BASCES-00868)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Show Item Descriptions in tooltip</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Static Data Classes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
