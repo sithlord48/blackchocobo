@@ -361,67 +361,67 @@
     </message>
     <message>
         <source>Initial equiping</source>
-        <translation type="unfinished"></translation>
+        <translation>Equipement de départ</translation>
     </message>
     <message>
         <source>Sword is used when an ally is down</source>
-        <translation type="unfinished"></translation>
+        <translation>Utiliser si allié abattu</translation>
     </message>
     <message>
         <source>Power up when [Near death]</source>
-        <translation type="unfinished"></translation>
+        <translation>Pouvoir quand [quasi-mort]</translation>
     </message>
     <message>
         <source>Power up when condition changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Pouvoir quand changement d&apos;état</translation>
     </message>
     <message>
         <source>Initial equip. Long Range Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Eqpt de départ. Arme Longue portée</translation>
     </message>
     <message>
         <source>Long Range Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Longue portée</translation>
     </message>
     <message>
         <source>Memento of father</source>
-        <translation type="unfinished"></translation>
+        <translation>Memento de père</translation>
     </message>
     <message>
         <source>Raises Power when you need to protect others nearby</source>
-        <translation type="unfinished"></translation>
+        <translation>Augmente Pouvoir de protection</translation>
     </message>
     <message>
         <source>Drains [Fire] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrête attaques de [Feu]</translation>
     </message>
     <message>
         <source>Drains [Cold] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrête attaques de [Glace]</translation>
     </message>
     <message>
         <source>Drains [Lightning] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrête attaques de [Foudre]</translation>
     </message>
     <message>
         <source>Drains 1/2 [Fire/Cold/Lightning] attack</source>
-        <translation type="unfinished"></translation>
+        <translation>Arrête attaques 1/2 [Feu/Glace/Foudre]</translation>
     </message>
     <message>
         <source>Women&apos;s Armlet nullifies [Fire/Cold/Gravity/Holy]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti [Feu/Glace/Gravité/Sacre]</translation>
     </message>
     <message>
         <source>Man&apos;s Armlet nullifies [Lightning/Earth/Water/Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti [Foudre/Terre/Eau/Poison]</translation>
     </message>
     <message>
         <source>Decreases all elemental attacks by 1/2</source>
-        <translation type="unfinished"></translation>
+        <translation>Atténue attaques éléments de 1/2</translation>
     </message>
     <message>
         <source>A gorgeous watch</source>
-        <translation type="unfinished"></translation>
+        <translation>Superbe montre</translation>
     </message>
     <message>
         <source>Strength +10</source>
@@ -453,7 +453,7 @@
     </message>
     <message>
         <source>Drains [Poison] attacks, protects against [Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>Dissipe/Anti [Poison]</translation>
     </message>
     <message>
         <source>Vitality &amp; Spirit +50</source>
@@ -465,91 +465,91 @@
     </message>
     <message>
         <source>Protects against [Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège de [Poison]</translation>
     </message>
     <message>
         <source>Protects against [Darkness]</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège de [Obscurité]</translation>
     </message>
     <message>
         <source>Protects against [Sleep]</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège de [Sommeil]</translation>
     </message>
     <message>
         <source>Protects against [Poison/Darkness]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti [Poison/Obscurité]</translation>
     </message>
     <message>
         <source>Protects against [Paralyze/Petrify/Slow-numb]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti [Paralysie/Pétrifier/Apt]</translation>
     </message>
     <message>
         <source>Protects against [Frog/Small]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti [Grenouille/Mini]</translation>
     </message>
     <message>
         <source>Automatically put you in [Haste]</source>
-        <translation type="unfinished"></translation>
+        <translation>Te place en [Hâte]</translation>
     </message>
     <message>
         <source>Protects against [Berserk/Fury/Sadness]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti [Folie/Furie/Tristesse]</translation>
     </message>
     <message>
         <source>Protects against all abnormal status</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti état anormal</translation>
     </message>
     <message>
         <source>Nullifies [Fire] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Contre attaques de [Feu]</translation>
     </message>
     <message>
         <source>Nullifies [Cold] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti attaque [Glace]</translation>
     </message>
     <message>
         <source>Nullifies [Lightning] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti attque [Foudre]</translation>
     </message>
     <message>
         <source>Drains [Fire/Cold/Lightning/Earth] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Diss. [Feu/Glace/Foudre/Terre]</translation>
     </message>
     <message>
         <source>Protects against [Sudden Death/Petrify/Slow-numb]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti [Mort/Pétrifier/Ap]</translation>
     </message>
     <message>
         <source>Automatically puts you in [Berserk]</source>
-        <translation type="unfinished"></translation>
+        <translation>Te mets en [Folie]</translation>
     </message>
     <message>
         <source>It increases each status but...</source>
-        <translation type="unfinished"></translation>
+        <translation>Amplifie état mais...</translation>
     </message>
     <message>
         <source>Automatically sets up [Barrier/MBarrier]</source>
-        <translation type="unfinished"></translation>
+        <translation>Bâtit [Barrière/BarrièreM]</translation>
     </message>
     <message>
         <source>Restores HP as you walk</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaure HP lorsque tu marches</translation>
     </message>
     <message>
         <source>Automatically sets up [Reflect]</source>
-        <translation type="unfinished"></translation>
+        <translation>Création [Reflet]</translation>
     </message>
     <message>
         <source>Drains Water attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Stoppe attaques d&apos;Eau</translation>
     </message>
     <message>
         <source>Increases Stealing rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Accroît capacité vol</translation>
     </message>
     <message>
         <source>Increases Manipulation rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Accroît capacité manipulation</translation>
     </message>
 </context>
 <context>
