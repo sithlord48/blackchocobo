@@ -1995,7 +1995,22 @@ void MainWindow::weapon_stat(void)
 void MainWindow::update_stat_totals(void)
 {
     int strbonus=0;  int magbonus=0; int spibonus=0; int lckbonus=0; int stat_temp=0;
-    int vitbonus=0;  int dexbonus=0; int hpbonus=0; int mpbonus=0;
+    int vitbonus=0;  int dexbonus=0; int hpbonus=0; int mpbonus=0; int char_weapon_offset=128;
+
+    switch (ff7->slot[s].chars[curchar].id)
+    {//needed to get correct item numbers for weapons later on.
+        case 0:char_weapon_offset+=0;    break;
+        case 1:char_weapon_offset+=32;   break;
+        case 2:char_weapon_offset+=16;   break;
+        case 3:char_weapon_offset+=62;   break;
+        case 4:char_weapon_offset+=48;   break;
+        case 5:char_weapon_offset+=87;   break;
+        case 6:char_weapon_offset+=101;  break;
+        case 7:char_weapon_offset+=114;  break;
+        case 8:char_weapon_offset+=73;   break;
+        case 9:char_weapon_offset+=0;    break;
+        case 10:char_weapon_offset=0;   break;
+    }
 
 
     for(int i=0;i<16;i++)
@@ -2005,11 +2020,12 @@ void MainWindow::update_stat_totals(void)
             strbonus += Materias.Stat_Str(ff7->slot[s].chars[curchar].materias[i].id);
 
             vitbonus += Materias.Stat_Vit(ff7->slot[s].chars[curchar].materias[i].id);
+
             if(ff7->slot[s].chars[curchar].materias[i].id == 0x03)
             {//Catch Magic Plus
                 int level=0;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
-                for(int m=0; m<Materias.Levels(1);m++){if(aptemp >= Materias.Ap(m,1)){level++;}}
+                for(int m=0; m<Materias.Levels(3);m++){if(aptemp >= Materias.Ap(3,m)){level++;}}
                 magbonus += ff7->slot[s].chars[curchar].magic * (0.01*(level*10));
             }
             else{magbonus += Materias.Stat_Mag(ff7->slot[s].chars[curchar].materias[i].id);}
@@ -2020,7 +2036,7 @@ void MainWindow::update_stat_totals(void)
             {//Catch Speed Plus
                 int level=0;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
-                for(int m=0; m<Materias.Levels(1);m++){if(aptemp >= Materias.Ap(m,1)){level++;}}
+                for(int m=0; m<Materias.Levels(2);m++){if(aptemp >= Materias.Ap(2,m)){level++;}}
                 dexbonus += ff7->slot[s].chars[curchar].dexterity * (0.01*(level*10));
             }
             else{dexbonus += Materias.Stat_Dex(ff7->slot[s].chars[curchar].materias[i].id);}
@@ -2029,7 +2045,7 @@ void MainWindow::update_stat_totals(void)
             {//Catch Luck Plus
                 int level=0;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
-                for(int m=0; m<Materias.Levels(1);m++){if(aptemp >= Materias.Ap(m,1)){level++;}}
+                for(int m=0; m<Materias.Levels(4);m++){if(aptemp >= Materias.Ap(4,m)){level++;}}
                 lckbonus += ff7->slot[s].chars[curchar].magic * (0.01*(level*10));
             }
             else{lckbonus += Materias.Stat_Lck(ff7->slot[s].chars[curchar].materias[i].id);}
@@ -2038,7 +2054,7 @@ void MainWindow::update_stat_totals(void)
             {//Catch HP Plus
                 int level=0;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
-                for(int m=0; m<Materias.Levels(1);m++){if(aptemp >= Materias.Ap(m,1)){level++;}}
+                for(int m=0; m<Materias.Levels(1);m++){if(aptemp >= Materias.Ap(1,m)){level++;}}
                 hpbonus +=level*10;
             }
             else{hpbonus += Materias.Stat_Hp(ff7->slot[s].chars[curchar].materias[i].id);}
@@ -2047,39 +2063,39 @@ void MainWindow::update_stat_totals(void)
             {//Catch Mp Plus
                 int level=0;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
-                for(int m=0; m<Materias.Levels(0);m++){if(aptemp >= Materias.Ap(m,0)){level++;}}
+                for(int m=0; m<Materias.Levels(0);m++){if(aptemp >= Materias.Ap(0,m)){level++;}}
                 mpbonus +=level*10;
             }
             else{mpbonus +=Materias.Stat_Mp(ff7->slot[s].chars[curchar].materias[i].id);}
         }
     }
     //out of the loop need to check things like accessory and armor/weapon for modifiers.
-    strbonus+=Items.Stat_str(ff7->slot[s].chars[curchar].accessory);
-    vitbonus+=Items.Stat_vit(ff7->slot[s].chars[curchar].accessory);
-    dexbonus+=Items.Stat_dex(ff7->slot[s].chars[curchar].accessory);
-    magbonus+=Items.Stat_mag(ff7->slot[s].chars[curchar].accessory);
-    spibonus+=Items.Stat_spi(ff7->slot[s].chars[curchar].accessory);
-    lckbonus+=Items.Stat_lck(ff7->slot[s].chars[curchar].accessory);
-    mpbonus+=Items.Stat_mp(ff7->slot[s].chars[curchar].accessory);
-    hpbonus+=Items.Stat_hp(ff7->slot[s].chars[curchar].accessory);
+    strbonus+=Items.Stat_str(ff7->slot[s].chars[curchar].accessory+288);
+    vitbonus+=Items.Stat_vit(ff7->slot[s].chars[curchar].accessory+288);
+    dexbonus+=Items.Stat_dex(ff7->slot[s].chars[curchar].accessory+288);
+    magbonus+=Items.Stat_mag(ff7->slot[s].chars[curchar].accessory+288);
+    spibonus+=Items.Stat_spi(ff7->slot[s].chars[curchar].accessory+288);
+    lckbonus+=Items.Stat_lck(ff7->slot[s].chars[curchar].accessory+288);
+    mpbonus+=Items.Stat_mp(ff7->slot[s].chars[curchar].accessory+288);
+    hpbonus+=Items.Stat_hp(ff7->slot[s].chars[curchar].accessory+288);
 
-    strbonus+=Items.Stat_str(ff7->slot[s].chars[curchar].weapon);
-    vitbonus+=Items.Stat_vit(ff7->slot[s].chars[curchar].weapon);
-    dexbonus+=Items.Stat_dex(ff7->slot[s].chars[curchar].weapon);
-    magbonus+=Items.Stat_mag(ff7->slot[s].chars[curchar].weapon);
-    spibonus+=Items.Stat_spi(ff7->slot[s].chars[curchar].weapon);
-    lckbonus+=Items.Stat_lck(ff7->slot[s].chars[curchar].weapon);
-    mpbonus+=Items.Stat_mp(ff7->slot[s].chars[curchar].weapon);
-    hpbonus+=Items.Stat_hp(ff7->slot[s].chars[curchar].weapon);
+    strbonus+=Items.Stat_str(ff7->slot[s].chars[curchar].weapon+char_weapon_offset);
+    vitbonus+=Items.Stat_vit(ff7->slot[s].chars[curchar].weapon+char_weapon_offset);
+    dexbonus+=Items.Stat_dex(ff7->slot[s].chars[curchar].weapon+char_weapon_offset);
+    magbonus+=Items.Stat_mag(ff7->slot[s].chars[curchar].weapon+char_weapon_offset);
+    spibonus+=Items.Stat_spi(ff7->slot[s].chars[curchar].weapon+char_weapon_offset);
+    lckbonus+=Items.Stat_lck(ff7->slot[s].chars[curchar].weapon+char_weapon_offset);
+    mpbonus+=Items.Stat_mp(ff7->slot[s].chars[curchar].weapon+char_weapon_offset);
+    hpbonus+=Items.Stat_hp(ff7->slot[s].chars[curchar].weapon+char_weapon_offset);
 
-    strbonus+=Items.Stat_str(ff7->slot[s].chars[curchar].armor);
-    vitbonus+=Items.Stat_vit(ff7->slot[s].chars[curchar].armor);
-    dexbonus+=Items.Stat_dex(ff7->slot[s].chars[curchar].armor);
-    magbonus+=Items.Stat_mag(ff7->slot[s].chars[curchar].armor);
-    spibonus+=Items.Stat_spi(ff7->slot[s].chars[curchar].armor);
-    lckbonus+=Items.Stat_lck(ff7->slot[s].chars[curchar].armor);
-    mpbonus+=Items.Stat_mp(ff7->slot[s].chars[curchar].armor);
-    hpbonus+=Items.Stat_hp(ff7->slot[s].chars[curchar].armor);
+    strbonus+=Items.Stat_str(ff7->slot[s].chars[curchar].armor+256);
+    vitbonus+=Items.Stat_vit(ff7->slot[s].chars[curchar].armor+256);
+    dexbonus+=Items.Stat_dex(ff7->slot[s].chars[curchar].armor+256);
+    magbonus+=Items.Stat_mag(ff7->slot[s].chars[curchar].armor+256);
+    spibonus+=Items.Stat_spi(ff7->slot[s].chars[curchar].armor+256);
+    lckbonus+=Items.Stat_lck(ff7->slot[s].chars[curchar].armor+256);
+    mpbonus+=Items.Stat_mp(ff7->slot[s].chars[curchar].armor+256);
+    hpbonus+=Items.Stat_hp(ff7->slot[s].chars[curchar].armor+256);
 
     //set accessory tooltip... (this can be done better later on..)
     if(ff7->slot[s].chars[curchar].accessory == 0x00) {ui->lbl_acc_bonus->setText(tr("str +10"));} //power wrist
@@ -2093,27 +2109,6 @@ void MainWindow::update_stat_totals(void)
     else if(ff7->slot[s].chars[curchar].accessory == 0x09) {ui->lbl_acc_bonus->setToolTip(tr("mag +30 spi +30"));} // circlet
     else{ui->lbl_acc_bonus->setText("");}
     //end of accessories
-    /*
-    if(ui->combo_weapon->currentText() == Items.Name(140)){spibonus+=13;}//apocalpse}
-    else if(ui->combo_weapon->currentText() == Items.Name(142)){spibonus+=35;}//ragnarok
-    else if(ui->combo_weapon->currentText() == Items.Name(143)){spibonus+=24;}//Ultimate Weapon
-    else if(ui->combo_weapon->currentText() == Items.Name(187)){spibonus+=18;vitbonus+=35;}//behemoth horn
-    else if(ui->combo_weapon->currentText() == Items.Name(190)){vitbonus+=1; spibonus+=4;}//Guard Stick
-    else if(ui->combo_weapon->currentText() == Items.Name(199)){vitbonus+=20;}//Umbrella
-    else if(ui->combo_weapon->currentText() == Items.Name(200)){vitbonus+=12; spibonus+=20;}//Princess Guard
-    else if(ui->combo_weapon->currentText() == Items.Name(213)){spibonus+=20;}//Spirt Lance
-    else if(ui->combo_weapon->currentText() == Items.Name(225)){dexbonus+=10;}//Magic Shuriken
-    else if(ui->combo_weapon->currentText() == Items.Name(240)){vitbonus+=30;}//Starlight M Phone
-    //end weapons
-    if(ff7->slot[s].chars[curchar].armor == 31){dexbonus+=30;lckbonus+=20;} //chocobobracelet
-    else if(ff7->slot[s].chars[curchar].armor == 11){magbonus+=5;}//Enincoat
-    else if(ff7->slot[s].chars[curchar].armor == 12){magbonus+=20;}//Wizard Bracelet
-    else if(ff7->slot[s].chars[curchar].armor == 14){strbonus+=30;}//Gigas Armlet
-    else if(ff7->slot[s].chars[curchar].armor == 17){magbonus+=20;}//Forth Braclet
-    else if(ff7->slot[s].chars[curchar].armor == 18){strbonus+=20;}//Warrior Bangle
-    else if(ff7->slot[s].chars[curchar].armor == 29){strbonus+=20; magbonus+=20;}//Ziedrich
-    */
-    //end armor
 
     //set the labels for the bonuses.
     ui->lbl_str_mat->setText(QString::number(strbonus));
@@ -2122,10 +2117,10 @@ void MainWindow::update_stat_totals(void)
     ui->lbl_spi_mat->setText(QString::number(spibonus));
     ui->lbl_dex_mat->setText(QString::number(dexbonus));
     ui->lbl_lck_mat->setText(QString::number(lckbonus));
-    ui->lbl_hp_mat->setText(QString::number(hpbonus)+ "%");
-    ui->lbl_mp_mat->setText(QString::number(mpbonus) + "%");
+    ui->lbl_hp_mat->setText(QString::number(hpbonus)+"%");
+    ui->lbl_mp_mat->setText(QString::number(mpbonus)+"%");
 
-    //do the math for the stat , if grater then 255 then ingore and use 255 instead.
+    //do the math for the stat, if greater then 255 then use 255 instead. like ff7 is going todo.
     stat_temp=ui->sb_str->value()+ui->sb_strbonus->value()+strbonus;    if(stat_temp>256){stat_temp=255;}
     ui->lbl_str_total->setText(QString::number(stat_temp));
     stat_temp=ui->sb_vit->value()+ui->sb_vitbonus->value()+vitbonus;    if(stat_temp>256){stat_temp=255;}
