@@ -1995,7 +1995,7 @@ void MainWindow::weapon_stat(void)
 void MainWindow::update_stat_totals(void)
 {
     int strbonus=0;  int magbonus=0; int spibonus=0; int lckbonus=0; int stat_temp=0;
-    int vitbonus=0;  int dexbonus=0; int hpbonus=0; int mpbonus=0; int char_weapon_offset=128;
+    int vitbonus=0;  int dexbonus=0; int hpbonus=0; int mpbonus=0; int char_weapon_offset=127;
 
     switch (ff7->slot[s].chars[curchar].id)
     {//needed to get correct item numbers for weapons later on.
