@@ -5,551 +5,551 @@
     <name>Item_desc</name>
     <message>
         <source>Restores 100 HP</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaura PG en 100</translation>
     </message>
     <message>
         <source>Restores 500 HP</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaura PG en 500</translation>
     </message>
     <message>
         <source>Restores all lost HP</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaura PG</translation>
     </message>
     <message>
         <source>Restores 100 MP</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaura PM en 100</translation>
     </message>
     <message>
         <source>Restores all lost MP</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaura PM</translation>
     </message>
     <message>
         <source>Fully Restores HP/MP</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaura PG/PM</translation>
     </message>
     <message>
         <source>Fully Restores all Members HP/MP</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaura PG/PM de bando</translation>
     </message>
     <message>
         <source>Restores life</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaura vida</translation>
     </message>
     <message>
         <source>Cures [Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>Cura [Veneno]</translation>
     </message>
     <message>
         <source>Cures [Petrify]</source>
-        <translation type="unfinished"></translation>
+        <translation>Cura [Petrif.]</translation>
     </message>
     <message>
         <source>Cures [Frog]</source>
-        <translation type="unfinished"></translation>
+        <translation>Cura [Rana]</translation>
     </message>
     <message>
         <source>Cures [Small]</source>
-        <translation type="unfinished"></translation>
+        <translation>Cura [Pequeño]</translation>
     </message>
     <message>
         <source>Cures [Silence]</source>
-        <translation type="unfinished"></translation>
+        <translation>Cura [Silencio]</translation>
     </message>
     <message>
         <source>Cures [Sadness]</source>
-        <translation type="unfinished"></translation>
+        <translation>Cura [Tristeza]</translation>
     </message>
     <message>
         <source>Cures [Fury]</source>
-        <translation type="unfinished"></translation>
+        <translation>Cura [Furia]</translation>
     </message>
     <message>
         <source>Cures abnormal status</source>
-        <translation type="unfinished"></translation>
+        <translation>Cura estado anormal</translation>
     </message>
     <message>
         <source>Can escape from opponents during battle</source>
-        <translation type="unfinished"></translation>
+        <translation>Para escapar</translation>
     </message>
     <message>
         <source>Casts [Haste] on one ally</source>
-        <translation type="unfinished"></translation>
+        <translation>[Prisa] a aliado</translation>
     </message>
     <message>
         <source>Raises ability once during battle</source>
-        <translation type="unfinished"></translation>
+        <translation>Una habilidad más</translation>
     </message>
     <message>
         <source>Protects against transformations</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti transformación</translation>
     </message>
     <message>
         <source>Explosive damage against one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>Daña al enemigo</translation>
     </message>
     <message>
         <source>Explosive damage against all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>Daña a enemigos</translation>
     </message>
     <message>
         <source>Stops all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>Detiene a enemigos</translation>
     </message>
     <message>
         <source>Uses [Death] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>Da &quot;Muerte&quot; a enemigos</translation>
     </message>
     <message>
         <source>Slows all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>Ralentiza a enemigo</translation>
     </message>
     <message>
         <source>Uses [Sleepel] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Sueño&quot; a enemigos</translation>
     </message>
     <message>
         <source>Uses [Silence] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Silencio&quot; a enemigos</translation>
     </message>
     <message>
         <source>Uses [Berserk] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Locura&quot; a enemigos</translation>
     </message>
     <message>
         <source>Uses [Confu] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Confusión&quot; a enemigos</translation>
     </message>
     <message>
         <source>Uses [Fire2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Fueg 2&quot; a enemigos</translation>
     </message>
     <message>
         <source>Uses [Fire3] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Fueg 3&quot; a enemigos</translation>
     </message>
     <message>
         <source>Uses [Ice2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Hiel 2&quot; a enemigos</translation>
     </message>
     <message>
         <source>Uses [Ice3] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Hiel 3&quot; a enemigos</translation>
     </message>
     <message>
         <source>Uses [Bolt2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Rayo 2&quot; a enemigos</translation>
     </message>
     <message>
         <source>Uses [Bolt3] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Rayo 3&quot; a enemigos</translation>
     </message>
     <message>
         <source>Uses [Quake2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Sismo 2&quot; a enemigos</translation>
     </message>
     <message>
         <source>Uses [Quake3] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Sismo 3&quot; a enemigos</translation>
     </message>
     <message>
         <source>Uses [Bio2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Bio 2&quot; a enemigos</translation>
     </message>
     <message>
         <source>Uses [Bio3] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Bio 3&quot; a enemigos</translation>
     </message>
     <message>
         <source>Uses [Comet2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Comet2&quot; a enemigos</translation>
     </message>
     <message>
         <source>Drains HP out of one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>Agota PG de enemigo</translation>
     </message>
     <message>
         <source>Drains MP out of one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>Agota PM de enemigo</translation>
     </message>
     <message>
         <source>Petrifies one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>Petrifica a enemigo</translation>
     </message>
     <message>
         <source>Creates [Barrier] around all allies</source>
-        <translation type="unfinished"></translation>
+        <translation>[Barr] rodea aliado</translation>
     </message>
     <message>
         <source>Creates [MBarrier] around all allies</source>
-        <translation type="unfinished"></translation>
+        <translation>[BarM] rodea aliado</translation>
     </message>
     <message>
         <source>Uses [Reflect] on all allies</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Reflejo&quot; en aliados</translation>
     </message>
     <message>
         <source>Uses [DeSpell] on all allies</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Hec Mrt&quot; a enemigo</translation>
     </message>
     <message>
         <source>Uses whirlwind on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>Produce torbellino</translation>
     </message>
     <message>
         <source>Water damage on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>Daño por agua</translation>
     </message>
     <message>
         <source>Changes one opponent to a frog</source>
-        <translation type="unfinished"></translation>
+        <translation>Transforma en rana</translation>
     </message>
     <message>
         <source>Uses [Mini] on one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>Transforma en peq</translation>
     </message>
     <message>
         <source>Cures [Darkness]</source>
-        <translation type="unfinished"></translation>
+        <translation>cura [Oscuridad]</translation>
     </message>
     <message>
         <source>Fire damage on one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>Daño por fuego</translation>
     </message>
     <message>
         <source>Explosive damage on one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>Daño a enemigo</translation>
     </message>
     <message>
         <source>Uses [Demi] against one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Semi&quot; a enemigo</translation>
     </message>
     <message>
         <source>Uses [Demi2] against one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Semi2&quot; a enemigo</translation>
     </message>
     <message>
         <source>Uses [Darkness] against one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>[Oscur] al enemigo</translation>
     </message>
     <message>
         <source>Paralyzes one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>Paraliza a enemigo</translation>
     </message>
     <message>
         <source>Lightning damage against all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>Saño por rayo</translation>
     </message>
     <message>
         <source>Uses [Poison/Confu/Sleepel/Silence/Small/Frog]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Ve/Co/Su/Si/Pe/Ra]</translation>
     </message>
     <message>
         <source>When you want a chocobo...</source>
-        <translation type="unfinished"></translation>
+        <translation>Si deseas un Chocobo...</translation>
     </message>
     <message>
         <source>Restores ally&apos;s max HP/MP. Use at Save Point.</source>
-        <translation type="unfinished"></translation>
+        <translation>Máx PG/PM (G. pto)</translation>
     </message>
     <message>
         <source>Raises [Strength]</source>
-        <translation type="unfinished"></translation>
+        <translation>Aumenta [Fuerza]</translation>
     </message>
     <message>
         <source>Raises [Vitality]</source>
-        <translation type="unfinished"></translation>
+        <translation>Aumenta [Vitalidad]</translation>
     </message>
     <message>
         <source>Raises [Magic Power]</source>
-        <translation type="unfinished"></translation>
+        <translation>Aumenta [Magia]</translation>
     </message>
     <message>
         <source>Raises [Spirit]</source>
-        <translation type="unfinished"></translation>
+        <translation>Aumenta [Espíritu]</translation>
     </message>
     <message>
         <source>Raises [Dexterity]</source>
-        <translation type="unfinished"></translation>
+        <translation>Aumenta [Destreza]</translation>
     </message>
     <message>
         <source>Raises [Luck]</source>
-        <translation type="unfinished"></translation>
+        <translation>Aumenta [Suerte]</translation>
     </message>
     <message>
         <source>When you want to breed Chocobos...</source>
-        <translation type="unfinished"></translation>
+        <translation>Para criar Chocobos...</translation>
     </message>
     <message>
         <source>Looks like it can start some sort of machine</source>
-        <translation type="unfinished"></translation>
+        <translation>Puede iniciar máquina</translation>
     </message>
     <message>
         <source>This one&apos;s a little tough...</source>
-        <translation type="unfinished"></translation>
+        <translation>Esto es difícil...</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Omnislash]</source>
-        <translation type="unfinished"></translation>
+        <translation>Hab lím &quot;Omnilátig&quot;</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Catastrophe]</source>
-        <translation type="unfinished"></translation>
+        <translation>Hab lím [Catástrof]</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Final Heaven]</source>
-        <translation type="unfinished"></translation>
+        <translation>Hab lím &quot;Cielo fin&quot;</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Great Gospel]</source>
-        <translation type="unfinished"></translation>
+        <translation>Hab lím &quot;G evangel&quot;</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Cosmo Memory]</source>
-        <translation type="unfinished"></translation>
+        <translation>Hab lím &quot;Me cósmic&quot;</translation>
     </message>
     <message>
         <source>Learn Limit Skill [All Creation]</source>
-        <translation type="unfinished"></translation>
+        <translation>Hab lím &quot;Creación&quot;</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Chaos]</source>
-        <translation type="unfinished"></translation>
+        <translation>Hab lím &quot;Caos&quot;</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Highwind]</source>
-        <translation type="unfinished"></translation>
+        <translation>Hab lím &quot;G viento&quot;</translation>
     </message>
     <message>
         <source>Shinra armored &apos;attack&apos; soldiers: 12 in the Set!</source>
-        <translation type="unfinished"></translation>
+        <translation>Shinra &apos;armds&apos;: 12</translation>
     </message>
     <message>
         <source>A new machine to protect the reactor!</source>
-        <translation type="unfinished"></translation>
+        <translation>Máq protege reactor</translation>
     </message>
     <message>
         <source>A prefect copy of Sephiroth&apos;s sword!</source>
-        <translation type="unfinished"></translation>
+        <translation>Espada de Sefirot</translation>
     </message>
     <message>
         <source>Use This to create a SAVE Point in the &apos;North Cave&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Guard pt &apos;Cav del N&apos;</translation>
     </message>
     <message>
         <source>A record of Master Dio&apos;s fiercest battles</source>
-        <translation type="unfinished"></translation>
+        <translation>Luchas de Dio</translation>
     </message>
     <message>
         <source>Dio&apos;s autograph</source>
-        <translation type="unfinished"></translation>
+        <translation>Autógrafo de Dio</translation>
     </message>
     <message>
         <source>Second part of Dio&apos;s diary: The Gold Saucer years</source>
-        <translation type="unfinished"></translation>
+        <translation>Vol 2: En Gold S</translation>
     </message>
     <message>
         <source>Blooms once every 1000 years</source>
-        <translation type="unfinished"></translation>
+        <translation>Florece cada 1000 años</translation>
     </message>
     <message>
         <source>Calms the hearts of all who hear it</source>
-        <translation type="unfinished"></translation>
+        <translation>Calma al que la oye</translation>
     </message>
     <message>
         <source>Map of another world. It Slumbers with sunken ships</source>
-        <translation type="unfinished"></translation>
+        <translation>Mapa en naufragios</translation>
     </message>
     <message>
         <source>Initial equiping</source>
-        <translation type="unfinished"></translation>
+        <translation>Equip. inicial</translation>
     </message>
     <message>
         <source>Sword is used when an ally is down</source>
-        <translation type="unfinished"></translation>
+        <translation>Espada de ayuda</translation>
     </message>
     <message>
         <source>Power up when [Near death]</source>
-        <translation type="unfinished"></translation>
+        <translation>Reanimar [Muerte cerca]</translation>
     </message>
     <message>
         <source>Power up when condition changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Reanimar cambio</translation>
     </message>
     <message>
         <source>Initial equip. Long Range Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Largo alcance</translation>
     </message>
     <message>
         <source>Long Range Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Largo alcance</translation>
     </message>
     <message>
         <source>Memento of father</source>
-        <translation type="unfinished"></translation>
+        <translation>REcuerdo paterno</translation>
     </message>
     <message>
         <source>Raises Power when you need to protect others nearby</source>
-        <translation type="unfinished"></translation>
+        <translation>Poder para proteger</translation>
     </message>
     <message>
         <source>Drains [Fire] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Desactiva [Fuego]</translation>
     </message>
     <message>
         <source>Drains [Cold] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Desactiva [Frío]</translation>
     </message>
     <message>
         <source>Drains [Lightning] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Desactiva [Rayo]</translation>
     </message>
     <message>
         <source>Drains 1/2 [Fire/Cold/Lightning] attack</source>
-        <translation type="unfinished"></translation>
+        <translation>1/2 [Fueg/Frío/Ray]</translation>
     </message>
     <message>
         <source>Women&apos;s Armlet nullifies [Fire/Cold/Gravity/Holy]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anula [Fu/Fr/Gr/Sa]</translation>
     </message>
     <message>
         <source>Man&apos;s Armlet nullifies [Lightning/Earth/Water/Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anula [Ra/Ti/Ag/Ve]</translation>
     </message>
     <message>
         <source>Decreases all elemental attacks by 1/2</source>
-        <translation type="unfinished"></translation>
+        <translation>Baja 1/2 ataq elem</translation>
     </message>
     <message>
         <source>A gorgeous watch</source>
-        <translation type="unfinished"></translation>
+        <translation>Reloj precioso</translation>
     </message>
     <message>
         <source>Strength +10</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Fuerza&quot; +10</translation>
     </message>
     <message>
         <source>Vitality +10</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Vitalidad&quot; +10</translation>
     </message>
     <message>
         <source>Magic +10</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Magia&quot; +10</translation>
     </message>
     <message>
         <source>Spirit +10</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Espíritu&quot; +10</translation>
     </message>
     <message>
         <source>Dexterity +10</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Destreza&quot; +10</translation>
     </message>
     <message>
         <source>Luck +10</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Suerte&quot; +10</translation>
     </message>
     <message>
         <source>Power &amp; Vitality +30</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Fuerza&quot;y&quot;Vital&quot; +30</translation>
     </message>
     <message>
         <source>Drains [Poison] attacks, protects against [Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>Baja [Ve] anti[Ve]</translation>
     </message>
     <message>
         <source>Vitality &amp; Spirit +50</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Vital&quot;y&quot;Espír&quot; +50</translation>
     </message>
     <message>
         <source>Magic &amp; Spirit +30</source>
-        <translation type="unfinished"></translation>
+        <translation>&quot;Magia&quot;y&quot;Espír&quot; +30</translation>
     </message>
     <message>
         <source>Protects against [Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>Protege conrta [Veneno]</translation>
     </message>
     <message>
         <source>Protects against [Darkness]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti [Oscuridad]</translation>
     </message>
     <message>
         <source>Protects against [Sleep]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti [Sueño]</translation>
     </message>
     <message>
         <source>Protects against [Poison/Darkness]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti [Ven/Osc]</translation>
     </message>
     <message>
         <source>Protects against [Paralyze/Petrify/Slow-numb]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti [Par/Pet/Ador]</translation>
     </message>
     <message>
         <source>Protects against [Frog/Small]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti [Rana/Peq]</translation>
     </message>
     <message>
         <source>Automatically put you in [Haste]</source>
-        <translation type="unfinished"></translation>
+        <translation>Estado [Prisa]</translation>
     </message>
     <message>
         <source>Protects against [Berserk/Fury/Sadness]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti [Co/Lo/Fur/Tr]</translation>
     </message>
     <message>
         <source>Protects against all abnormal status</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti anormalidad</translation>
     </message>
     <message>
         <source>Nullifies [Fire] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Anula [Fuego]</translation>
     </message>
     <message>
         <source>Nullifies [Cold] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Anula [Frío]</translation>
     </message>
     <message>
         <source>Nullifies [Lightning] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Anula [Rayo]</translation>
     </message>
     <message>
         <source>Drains [Fire/Cold/Lightning/Earth] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Baja [Fu/Fr/Ray/Ti]</translation>
     </message>
     <message>
         <source>Protects against [Sudden Death/Petrify/Slow-numb]</source>
-        <translation type="unfinished"></translation>
+        <translation>Anti [Mue/Pet/Ador]</translation>
     </message>
     <message>
         <source>Automatically puts you in [Berserk]</source>
-        <translation type="unfinished"></translation>
+        <translation>Da [Furia]</translation>
     </message>
     <message>
         <source>It increases each status but...</source>
-        <translation type="unfinished"></translation>
+        <translation>Sube cada estado pero...</translation>
     </message>
     <message>
         <source>Automatically sets up [Barrier/MBarrier]</source>
-        <translation type="unfinished"></translation>
+        <translation>Pone [Barr/BarrM]</translation>
     </message>
     <message>
         <source>Restores HP as you walk</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaura PG al andar</translation>
     </message>
     <message>
         <source>Automatically sets up [Reflect]</source>
-        <translation type="unfinished"></translation>
+        <translation>Pone [Reflejo]</translation>
     </message>
     <message>
         <source>Drains Water attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Agota ataque de agua</translation>
     </message>
     <message>
         <source>Increases Stealing rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Aumenta rapidez de robo</translation>
     </message>
     <message>
         <source>Increases Manipulation rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Más rapidez</translation>
     </message>
 </context>
 <context>
@@ -6956,15 +6956,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Added Support for French PSX (BASCES-00868)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Añadido Soporte para version francesa de PSX (BASCES 00868)</translation>
     </message>
     <message>
         <source>New: Show Item Descriptions in tooltip</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: La descripción de objetos se muestra al poner el ratón sobre los mismos</translation>
     </message>
     <message>
         <source>New: Static Data Classes</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Clases de datos estáticas</translation>
     </message>
 </context>
 <context>
