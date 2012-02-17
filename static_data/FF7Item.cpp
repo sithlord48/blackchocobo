@@ -21,7 +21,7 @@
 #include <QCoreApplication>
 
 QString FF7Item::Name(int i){return qApp->translate("Items",Items[i].name.toAscii());}
-QString FF7Item::Desc(int i){return qApp->translate("Items_desc",Items[i].desc.toAscii());}
+QString FF7Item::Desc(int i){return qApp->translate("Item_desc",Items[i].desc.toAscii());}
 qint8  FF7Item::Type(int i){return Items[i].type;}
 QImage FF7Item::Image(int i){return Items[i].image;}
 qint8 FF7Item::mslots(int i){return Items[i].mslots;}
