@@ -5,239 +5,239 @@
     <name>Item_desc</name>
     <message>
         <source>Restores 100 HP</source>
-        <translation type="unfinished"></translation>
+        <translation>Stellt 100HP wieder her</translation>
     </message>
     <message>
         <source>Restores 500 HP</source>
-        <translation type="unfinished"></translation>
+        <translation>Stellt 500HP wieder her</translation>
     </message>
     <message>
         <source>Restores all lost HP</source>
-        <translation type="unfinished"></translation>
+        <translation>Stellt HP wieder her</translation>
     </message>
     <message>
         <source>Restores 100 MP</source>
-        <translation type="unfinished"></translation>
+        <translation>Stellt 100MP wieder her</translation>
     </message>
     <message>
         <source>Restores all lost MP</source>
-        <translation type="unfinished"></translation>
+        <translation>Stellt MP wieder her</translation>
     </message>
     <message>
         <source>Fully Restores HP/MP</source>
-        <translation type="unfinished"></translation>
+        <translation>Stellt HP/MP wieder her</translation>
     </message>
     <message>
         <source>Fully Restores all Members HP/MP</source>
-        <translation type="unfinished"></translation>
+        <translation>Stellt HP/MP der kompletten Gruppe wieder her</translation>
     </message>
     <message>
         <source>Restores life</source>
-        <translation type="unfinished"></translation>
+        <translation>Gibt Leben zurück</translation>
     </message>
     <message>
         <source>Cures [Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>Neutralisiert [Gift]</translation>
     </message>
     <message>
         <source>Cures [Petrify]</source>
-        <translation type="unfinished"></translation>
+        <translation>Neutralisiert [Versteinerung]</translation>
     </message>
     <message>
         <source>Cures [Frog]</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuriert [Frosch] Zustand</translation>
     </message>
     <message>
         <source>Cures [Small]</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuriert [Zwerg] Zustand</translation>
     </message>
     <message>
         <source>Cures [Silence]</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuriert [Schweigen]</translation>
     </message>
     <message>
         <source>Cures [Sadness]</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuriert [Trauer]</translation>
     </message>
     <message>
         <source>Cures [Fury]</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuriert [Zorn]</translation>
     </message>
     <message>
         <source>Cures abnormal status</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuriert anormale Zustände</translation>
     </message>
     <message>
         <source>Can escape from opponents during battle</source>
-        <translation type="unfinished"></translation>
+        <translation>Ermöglicht Flucht</translation>
     </message>
     <message>
         <source>Casts [Haste] on one ally</source>
-        <translation type="unfinished"></translation>
+        <translation>Versetzt in [Hast]</translation>
     </message>
     <message>
         <source>Raises ability once during battle</source>
-        <translation type="unfinished"></translation>
+        <translation>Verstärkt Statuswerte im Kampf</translation>
     </message>
     <message>
         <source>Protects against transformations</source>
-        <translation type="unfinished"></translation>
+        <translation>Beugt anormalen Zuständen vor</translation>
     </message>
     <message>
         <source>Explosive damage against one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Schaden durch Explosion</translation>
     </message>
     <message>
         <source>Explosive damage against all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Schaden durch Explosion</translation>
     </message>
     <message>
         <source>Stops all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stoppt alle Gegner</translation>
     </message>
     <message>
         <source>Uses [Death] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>[Tod] auf alle Gegner</translation>
     </message>
     <message>
         <source>Slows all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Versetzt Gegner in [Gemach]</translation>
     </message>
     <message>
         <source>Uses [Sleepel] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>Versetzt Gegner in [Schlaf]</translation>
     </message>
     <message>
         <source>Uses [Silence] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>Hüllt alle Gegner in [Schweigen]</translation>
     </message>
     <message>
         <source>Uses [Berserk] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Gegner erleiden [Tobsucht]</translation>
     </message>
     <message>
         <source>Uses [Confu] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>[Psycho] auf alle Gegner</translation>
     </message>
     <message>
         <source>Uses [Fire2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>[Feuer2]-Zauber auf alle Gegner</translation>
     </message>
     <message>
         <source>Uses [Fire3] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>[Feuer3]-Zauber auf alle Gegner</translation>
     </message>
     <message>
         <source>Uses [Ice2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>[Eis2]-Zauber auf alle Gegner</translation>
     </message>
     <message>
         <source>Uses [Ice3] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>[Eis3]-Zauber auf alle Gegner</translation>
     </message>
     <message>
         <source>Uses [Bolt2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>[Blitz2]-Zauber auf alle Gegner</translation>
     </message>
     <message>
         <source>Uses [Bolt3] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>[Blitz3]-Zauber auf alle Gegner</translation>
     </message>
     <message>
         <source>Uses [Quake2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>[Beben2]-Zauber auf alle Gegner</translation>
     </message>
     <message>
         <source>Uses [Quake3] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>[Beben3]-Zauber auf alle Gegner</translation>
     </message>
     <message>
         <source>Uses [Bio2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>Uses [Bio2] on all opponents</translation>
     </message>
     <message>
         <source>Uses [Bio3] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>[Bio3]-Zauber auf alle Gegner</translation>
     </message>
     <message>
         <source>Uses [Comet2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>[Komet2]-Zauber auf alle Gegner</translation>
     </message>
     <message>
         <source>Drains HP out of one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbiert HP des Gegners</translation>
     </message>
     <message>
         <source>Drains MP out of one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbiert MP des Gegners</translation>
     </message>
     <message>
         <source>Petrifies one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>Versteinert einen Gegner</translation>
     </message>
     <message>
         <source>Creates [Barrier] around all allies</source>
-        <translation type="unfinished"></translation>
+        <translation>[Barriere] um die Gruppe</translation>
     </message>
     <message>
         <source>Creates [MBarrier] around all allies</source>
-        <translation type="unfinished"></translation>
+        <translation>[Z-Barriere] um die Gruppe</translation>
     </message>
     <message>
         <source>Uses [Reflect] on all allies</source>
-        <translation type="unfinished"></translation>
+        <translation>[Spiegel] um die Gruppe</translation>
     </message>
     <message>
         <source>Uses [DeSpell] on all allies</source>
-        <translation type="unfinished"></translation>
+        <translation>[Entzaubern] auf die Gruppe</translation>
     </message>
     <message>
         <source>Uses whirlwind on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">[Wirbelwind] auf alle Gegner</translation>
     </message>
     <message>
         <source>Water damage on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">[Wasser]-Zauber auf alle Gegner</translation>
     </message>
     <message>
         <source>Changes one opponent to a frog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">[Frosch]-Zustand auf einen Gegner</translation>
     </message>
     <message>
         <source>Uses [Mini] on one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>[Zwerg]-Zustand auf einen Gegner</translation>
     </message>
     <message>
         <source>Cures [Darkness]</source>
-        <translation type="unfinished"></translation>
+        <translation>Kuriert [Blind]-Zustand</translation>
     </message>
     <message>
         <source>Fire damage on one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">[Feuer]-Zauber</translation>
     </message>
     <message>
         <source>Explosive damage on one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Schaden durch Explosion</translation>
     </message>
     <message>
         <source>Uses [Demi] against one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">[Demi]-Zauber</translation>
     </message>
     <message>
         <source>Uses [Demi2] against one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">[Demi2]-Zauber</translation>
     </message>
     <message>
         <source>Uses [Darkness] against one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">[Blind] auf einen Gegner</translation>
     </message>
     <message>
         <source>Paralyzes one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lähmt einen Gegner</translation>
     </message>
     <message>
         <source>Lightning damage against all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">[Blitz]-Zauber</translation>
     </message>
     <message>
         <source>Uses [Poison/Confu/Sleepel/Silence/Small/Frog]</source>
@@ -249,139 +249,139 @@
     </message>
     <message>
         <source>Restores ally&apos;s max HP/MP. Use at Save Point.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stellt HP&amp;MP wieder her</translation>
     </message>
     <message>
         <source>Raises [Strength]</source>
-        <translation type="unfinished"></translation>
+        <translation>Erhöht [Stärke] Werte</translation>
     </message>
     <message>
         <source>Raises [Vitality]</source>
-        <translation type="unfinished"></translation>
+        <translation>Erhöht [Vitalität] Werte</translation>
     </message>
     <message>
         <source>Raises [Magic Power]</source>
-        <translation type="unfinished"></translation>
+        <translation>Erhöht [Zauber] Werte</translation>
     </message>
     <message>
         <source>Raises [Spirit]</source>
-        <translation type="unfinished"></translation>
+        <translation>Erhöht [Gemüts] Werte</translation>
     </message>
     <message>
         <source>Raises [Dexterity]</source>
-        <translation type="unfinished"></translation>
+        <translation>Erhöht [Geschick] Werte</translation>
     </message>
     <message>
         <source>Raises [Luck]</source>
-        <translation type="unfinished"></translation>
+        <translation>Erhöht [Glücks] Werte</translation>
     </message>
     <message>
         <source>When you want to breed Chocobos...</source>
-        <translation type="unfinished"></translation>
+        <translation>Wenn du Chocobos züchten willst...</translation>
     </message>
     <message>
         <source>Looks like it can start some sort of machine</source>
-        <translation type="unfinished"></translation>
+        <translation>Versorgt Geräte mit Strom</translation>
     </message>
     <message>
         <source>This one&apos;s a little tough...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Wozu mag das wohl gut sein...?</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Omnislash]</source>
-        <translation type="unfinished"></translation>
+        <translation>Limit Technik [Schwertwirbel]</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Catastrophe]</source>
-        <translation type="unfinished"></translation>
+        <translation>Limit Technik [Katastrophe]</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Final Heaven]</source>
-        <translation type="unfinished"></translation>
+        <translation>Limit Technik [Himmelsfaust]</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Great Gospel]</source>
-        <translation type="unfinished"></translation>
+        <translation>Limit Technik [Engels Chor]</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Cosmo Memory]</source>
-        <translation type="unfinished"></translation>
+        <translation>Limit Technik [Kosmo-Glut]</translation>
     </message>
     <message>
         <source>Learn Limit Skill [All Creation]</source>
-        <translation type="unfinished"></translation>
+        <translation>Limit Technik [Zorn der Götter]</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Chaos]</source>
-        <translation type="unfinished"></translation>
+        <translation>Limit Technik [Chaos]</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Highwind]</source>
-        <translation type="unfinished"></translation>
+        <translation>Limit Technik [Highwind]</translation>
     </message>
     <message>
         <source>Shinra armored &apos;attack&apos; soldiers: 12 in the Set!</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Spielzeugsoldaten im 12er Pack!</translation>
     </message>
     <message>
         <source>A new machine to protect the reactor!</source>
-        <translation type="unfinished"></translation>
+        <translation>Eine neue Waffe zum Schutz vor Reaktoren!</translation>
     </message>
     <message>
         <source>A prefect copy of Sephiroth&apos;s sword!</source>
-        <translation type="unfinished"></translation>
+        <translation>Eine perfekte Kopie von Sephiroth&apos;s Schwert!</translation>
     </message>
     <message>
         <source>Use This to create a SAVE Point in the &apos;North Cave&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>Erzeugt Speicherpunkte im &apos;Nordkrater&apos;</translation>
     </message>
     <message>
         <source>A record of Master Dio&apos;s fiercest battles</source>
-        <translation type="unfinished"></translation>
+        <translation>Dios Tagebuch: &apos;Aus dem Leben eines Kämpfers&apos;</translation>
     </message>
     <message>
         <source>Dio&apos;s autograph</source>
-        <translation type="unfinished"></translation>
+        <translation>Dios Autogramm</translation>
     </message>
     <message>
         <source>Second part of Dio&apos;s diary: The Gold Saucer years</source>
-        <translation type="unfinished"></translation>
+        <translation>Dios Tagebuch, Teil 2: &apos;Die Zocker-Jahre&apos;</translation>
     </message>
     <message>
         <source>Blooms once every 1000 years</source>
-        <translation type="unfinished"></translation>
+        <translation>Diese Blume blüht einmal alle 1000 Jahre</translation>
     </message>
     <message>
         <source>Calms the hearts of all who hear it</source>
-        <translation type="unfinished"></translation>
+        <translation>Ihre Töne wirken besänftigend</translation>
     </message>
     <message>
         <source>Map of another world. It Slumbers with sunken ships</source>
-        <translation type="unfinished"></translation>
+        <translation>Ein Reiseführer in eine fremde Welt</translation>
     </message>
     <message>
         <source>Initial equiping</source>
-        <translation type="unfinished"></translation>
+        <translation>Grundausrüstung</translation>
     </message>
     <message>
         <source>Sword is used when an ally is down</source>
-        <translation type="unfinished"></translation>
+        <translation>Dop. Schlagkraft, wenn Freunde Kampfunfähig</translation>
     </message>
     <message>
         <source>Power up when [Near death]</source>
-        <translation type="unfinished"></translation>
+        <translation>Doppelte Schlagkraft bei [Gefahr]</translation>
     </message>
     <message>
         <source>Power up when condition changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Vermehrte Schlagkraft bei anormalen Zuständen</translation>
     </message>
     <message>
         <source>Initial equip. Long Range Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Grundausrüstung. Fernkampfwaffe</translation>
     </message>
     <message>
         <source>Long Range Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Fernkampfwaffe</translation>
     </message>
     <message>
         <source>Memento of father</source>
@@ -389,167 +389,167 @@
     </message>
     <message>
         <source>Raises Power when you need to protect others nearby</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Dop. Schlagkraft, wenn Freunde Kampfunfähig</translation>
     </message>
     <message>
         <source>Drains [Fire] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbiert [Feuer]</translation>
     </message>
     <message>
         <source>Drains [Cold] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbiert [Eis]</translation>
     </message>
     <message>
         <source>Drains [Lightning] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbiert [Blitz]</translation>
     </message>
     <message>
         <source>Drains 1/2 [Fire/Cold/Lightning] attack</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbiert 1/2 [Feuer/Eis/Blitz]</translation>
     </message>
     <message>
         <source>Women&apos;s Armlet nullifies [Fire/Cold/Gravity/Holy]</source>
-        <translation type="unfinished"></translation>
+        <translation>Damenamulett: Neutr. [Feuer/Eis/Heilig/Schw.]</translation>
     </message>
     <message>
         <source>Man&apos;s Armlet nullifies [Lightning/Earth/Water/Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>Herrenamulett: Neutr. [Blitz/Erde/Wasser/Gift]</translation>
     </message>
     <message>
         <source>Decreases all elemental attacks by 1/2</source>
-        <translation type="unfinished"></translation>
+        <translation>Reduziert 1/2 Schaden bei Zaubersprüchen</translation>
     </message>
     <message>
         <source>A gorgeous watch</source>
-        <translation type="unfinished"></translation>
+        <translation>Eine tolle Uhr</translation>
     </message>
     <message>
         <source>Strength +10</source>
-        <translation type="unfinished"></translation>
+        <translation>Stärke +10</translation>
     </message>
     <message>
         <source>Vitality +10</source>
-        <translation type="unfinished"></translation>
+        <translation>Vitalität +10</translation>
     </message>
     <message>
         <source>Magic +10</source>
-        <translation type="unfinished"></translation>
+        <translation>Zauber +10</translation>
     </message>
     <message>
         <source>Spirit +10</source>
-        <translation type="unfinished"></translation>
+        <translation>Gemüt +10</translation>
     </message>
     <message>
         <source>Dexterity +10</source>
-        <translation type="unfinished"></translation>
+        <translation>Geschick +10</translation>
     </message>
     <message>
         <source>Luck +10</source>
-        <translation type="unfinished"></translation>
+        <translation>Glück +10</translation>
     </message>
     <message>
         <source>Power &amp; Vitality +30</source>
-        <translation type="unfinished"></translation>
+        <translation>Stärke &amp; Vitalität +30</translation>
     </message>
     <message>
         <source>Drains [Poison] attacks, protects against [Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbiert &amp; Schützt vor [Gift]-Zustand</translation>
     </message>
     <message>
         <source>Vitality &amp; Spirit +50</source>
-        <translation type="unfinished"></translation>
+        <translation>Vitalität &amp; Gemüt +50</translation>
     </message>
     <message>
         <source>Magic &amp; Spirit +30</source>
-        <translation type="unfinished"></translation>
+        <translation>Zauber &amp; Gemüt +30</translation>
     </message>
     <message>
         <source>Protects against [Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>Schutz vor [Gift]</translation>
     </message>
     <message>
         <source>Protects against [Darkness]</source>
-        <translation type="unfinished"></translation>
+        <translation>Schutz vor [Blind]</translation>
     </message>
     <message>
         <source>Protects against [Sleep]</source>
-        <translation type="unfinished"></translation>
+        <translation>Schutz vor [Schlaf]</translation>
     </message>
     <message>
         <source>Protects against [Poison/Darkness]</source>
-        <translation type="unfinished"></translation>
+        <translation>Schutz vor [Gift/Blind]</translation>
     </message>
     <message>
         <source>Protects against [Paralyze/Petrify/Slow-numb]</source>
-        <translation type="unfinished"></translation>
+        <translation>Schutz vor [Lähmung/Verst./all. Versteinerung]</translation>
     </message>
     <message>
         <source>Protects against [Frog/Small]</source>
-        <translation type="unfinished"></translation>
+        <translation>Schutz vor [Frosch/Zwerg]</translation>
     </message>
     <message>
         <source>Automatically put you in [Haste]</source>
-        <translation type="unfinished"></translation>
+        <translation>Versetzt dich automatisch in [Hast]-Zustand</translation>
     </message>
     <message>
         <source>Protects against [Berserk/Fury/Sadness]</source>
-        <translation type="unfinished"></translation>
+        <translation>Schutz vor [Tobsucht/Zorn/Trauer]</translation>
     </message>
     <message>
         <source>Protects against all abnormal status</source>
-        <translation type="unfinished"></translation>
+        <translation>Schutz vor sämtlichen anormalen Zuständen</translation>
     </message>
     <message>
         <source>Nullifies [Fire] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Schutz vor [Feuer]-Zauber</translation>
     </message>
     <message>
         <source>Nullifies [Cold] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Schutz vor [Eis]-Zauber</translation>
     </message>
     <message>
         <source>Nullifies [Lightning] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Schutz vor [Blitz]-Zauber</translation>
     </message>
     <message>
         <source>Drains [Fire/Cold/Lightning/Earth] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Schutz vor [Feuer/Eis/Erde/Blitz]-Zauber</translation>
     </message>
     <message>
         <source>Protects against [Sudden Death/Petrify/Slow-numb]</source>
-        <translation type="unfinished"></translation>
+        <translation>Schutz vor [Tod/Verst./all. Versteinerung]</translation>
     </message>
     <message>
         <source>Automatically puts you in [Berserk]</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisch [Tobsucht]</translation>
     </message>
     <message>
         <source>It increases each status but...</source>
-        <translation type="unfinished"></translation>
+        <translation>Verstärkt alle deine Statuswerte, aber...</translation>
     </message>
     <message>
         <source>Automatically sets up [Barrier/MBarrier]</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisch [Barriere/Z-Barriere]</translation>
     </message>
     <message>
         <source>Restores HP as you walk</source>
-        <translation type="unfinished"></translation>
+        <translation>Stellt mit jedem Schritt HP wieder her</translation>
     </message>
     <message>
         <source>Automatically sets up [Reflect]</source>
-        <translation type="unfinished"></translation>
+        <translation>Automatisch [Spiegel]</translation>
     </message>
     <message>
         <source>Drains Water attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbiert [Wasser]-Zauber</translation>
     </message>
     <message>
         <source>Increases Stealing rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Erhöht Erfolgsquote beim [Stehlen]</translation>
     </message>
     <message>
         <source>Increases Manipulation rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Erhöht Erfolgsquote beim [Manipulieren]</translation>
     </message>
 </context>
 <context>
