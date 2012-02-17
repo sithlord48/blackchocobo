@@ -5,551 +5,551 @@
     <name>Item_desc</name>
     <message>
         <source>Restores 100 HP</source>
-        <translation type="unfinished"></translation>
+        <translation>ＨＰを１００回復。</translation>
     </message>
     <message>
         <source>Restores 500 HP</source>
-        <translation type="unfinished"></translation>
+        <translation>ＨＰを５００回復。</translation>
     </message>
     <message>
         <source>Restores all lost HP</source>
-        <translation type="unfinished"></translation>
+        <translation>ＨＰを全回復。</translation>
     </message>
     <message>
         <source>Restores 100 MP</source>
-        <translation type="unfinished"></translation>
+        <translation>ＭＰを１００回復。</translation>
     </message>
     <message>
         <source>Restores all lost MP</source>
-        <translation type="unfinished"></translation>
+        <translation>ＭＰを全回復。</translation>
     </message>
     <message>
         <source>Fully Restores HP/MP</source>
-        <translation type="unfinished"></translation>
+        <translation>ＨＰ・ＭＰを全回復。</translation>
     </message>
     <message>
         <source>Fully Restores all Members HP/MP</source>
-        <translation type="unfinished"></translation>
+        <translation>全員のＨＰ・ＭＰを全回復。</translation>
     </message>
     <message>
         <source>Restores life</source>
-        <translation type="unfinished"></translation>
+        <translation>戦闘不能を回復。</translation>
     </message>
     <message>
         <source>Cures [Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>毒状態を治す。</translation>
     </message>
     <message>
         <source>Cures [Petrify]</source>
-        <translation type="unfinished"></translation>
+        <translation>石化状態を治す。</translation>
     </message>
     <message>
         <source>Cures [Frog]</source>
-        <translation type="unfinished"></translation>
+        <translation>カエル状態を治す。</translation>
     </message>
     <message>
         <source>Cures [Small]</source>
-        <translation type="unfinished"></translation>
+        <translation>ミニマム状態を治す。</translation>
     </message>
     <message>
         <source>Cures [Silence]</source>
-        <translation type="unfinished"></translation>
+        <translation>沈黙状態を治す。</translation>
     </message>
     <message>
         <source>Cures [Sadness]</source>
-        <translation type="unfinished"></translation>
+        <translation>いかり状態になる。</translation>
     </message>
     <message>
         <source>Cures [Fury]</source>
-        <translation type="unfinished"></translation>
+        <translation>かなしい状態になる。</translation>
     </message>
     <message>
         <source>Cures abnormal status</source>
-        <translation type="unfinished"></translation>
+        <translation>ステータス異常を治す。</translation>
     </message>
     <message>
         <source>Can escape from opponents during battle</source>
-        <translation type="unfinished"></translation>
+        <translation>戦闘中、敵から逃げられる。</translation>
     </message>
     <message>
         <source>Casts [Haste] on one ally</source>
-        <translation type="unfinished"></translation>
+        <translation>味方一体にヘイストの効果。</translation>
     </message>
     <message>
         <source>Raises ability once during battle</source>
-        <translation type="unfinished"></translation>
+        <translation>戦闘中、一時的に能力アップ。</translation>
     </message>
     <message>
         <source>Protects against transformations</source>
-        <translation type="unfinished"></translation>
+        <translation>ステータスを変化させなくする。</translation>
     </message>
     <message>
         <source>Explosive damage against one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>敵一体に爆発ダメージ。</translation>
     </message>
     <message>
         <source>Explosive damage against all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体に爆発ダメージ。</translation>
     </message>
     <message>
         <source>Stops all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にストップの効果。</translation>
     </message>
     <message>
         <source>Uses [Death] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にデスの効果。</translation>
     </message>
     <message>
         <source>Slows all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にスロウの効果。</translation>
     </message>
     <message>
         <source>Uses [Sleepel] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にスリプルの効果。</translation>
     </message>
     <message>
         <source>Uses [Silence] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にサイレスの効果。</translation>
     </message>
     <message>
         <source>Uses [Berserk] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にバーサクの効果。</translation>
     </message>
     <message>
         <source>Uses [Confu] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にコンフュの効果。</translation>
     </message>
     <message>
         <source>Uses [Fire2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にファイラの効果。</translation>
     </message>
     <message>
         <source>Uses [Fire3] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にファイガの効果。</translation>
     </message>
     <message>
         <source>Uses [Ice2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にブリザラの効果。</translation>
     </message>
     <message>
         <source>Uses [Ice3] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にブリザガの効果。</translation>
     </message>
     <message>
         <source>Uses [Bolt2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にサンダラの効果。</translation>
     </message>
     <message>
         <source>Uses [Bolt3] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にサンダガの効果。</translation>
     </message>
     <message>
         <source>Uses [Quake2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にクエイラの効果。</translation>
     </message>
     <message>
         <source>Uses [Quake3] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にクエイガの効果。</translation>
     </message>
     <message>
         <source>Uses [Bio2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にバイオラの効果。</translation>
     </message>
     <message>
         <source>Uses [Bio3] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にバイオガの効果。</translation>
     </message>
     <message>
         <source>Uses [Comet2] on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体にコメテオの効果。</translation>
     </message>
     <message>
         <source>Drains HP out of one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>敵一体のＨＰを吸収。</translation>
     </message>
     <message>
         <source>Drains MP out of one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>敵一体のＭＰを吸収。</translation>
     </message>
     <message>
         <source>Petrifies one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>敵一体に石化の効果。</translation>
     </message>
     <message>
         <source>Creates [Barrier] around all allies</source>
-        <translation type="unfinished"></translation>
+        <translation>味方全体にバリアの効果。</translation>
     </message>
     <message>
         <source>Creates [MBarrier] around all allies</source>
-        <translation type="unfinished"></translation>
+        <translation>味方全体にマバリアの効果。</translation>
     </message>
     <message>
         <source>Uses [Reflect] on all allies</source>
-        <translation type="unfinished"></translation>
+        <translation>味方全体にリフレクの効果。</translation>
     </message>
     <message>
         <source>Uses [DeSpell] on all allies</source>
-        <translation type="unfinished"></translation>
+        <translation>全体にデスペルの効果。</translation>
     </message>
     <message>
         <source>Uses whirlwind on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体に大旋風の効果。</translation>
     </message>
     <message>
         <source>Water damage on all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>味方全体に水属性のダメージ。</translation>
     </message>
     <message>
         <source>Changes one opponent to a frog</source>
-        <translation type="unfinished"></translation>
+        <translation>敵一体をカエルにする。</translation>
     </message>
     <message>
         <source>Uses [Mini] on one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>敵一体をミニマムにする。</translation>
     </message>
     <message>
         <source>Cures [Darkness]</source>
-        <translation type="unfinished"></translation>
+        <translation>暗闇状態ウを治す。</translation>
     </message>
     <message>
         <source>Fire damage on one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>敵一体に炎のダメージ。</translation>
     </message>
     <message>
         <source>Explosive damage on one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体に爆発ダメージ。</translation>
     </message>
     <message>
         <source>Uses [Demi] against one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>敵一体にグラビデの効果。</translation>
     </message>
     <message>
         <source>Uses [Demi2] against one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>敵一体にグラビラの効果。</translation>
     </message>
     <message>
         <source>Uses [Darkness] against one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>敵一体に暗闇の効果。</translation>
     </message>
     <message>
         <source>Paralyzes one opponent</source>
-        <translation type="unfinished"></translation>
+        <translation>敵一体にマヒの効果。</translation>
     </message>
     <message>
         <source>Lightning damage against all opponents</source>
-        <translation type="unfinished"></translation>
+        <translation>敵全体に雷のダメージ。</translation>
     </message>
     <message>
         <source>Uses [Poison/Confu/Sleepel/Silence/Small/Frog]</source>
-        <translation type="unfinished"></translation>
+        <translation>敵一体を毒・混乱・眠り・沈黙・ミニマムカエルにする。</translation>
     </message>
     <message>
         <source>When you want a chocobo...</source>
-        <translation type="unfinished"></translation>
+        <translation>チョコボに使うと……</translation>
     </message>
     <message>
         <source>Restores ally&apos;s max HP/MP. Use at Save Point.</source>
-        <translation type="unfinished"></translation>
+        <translation>全員のＨＰ・ＭＰが全回復。セーブできる場所でしか使えない。</translation>
     </message>
     <message>
         <source>Raises [Strength]</source>
-        <translation type="unfinished"></translation>
+        <translation>「ちから」を上げる。</translation>
     </message>
     <message>
         <source>Raises [Vitality]</source>
-        <translation type="unfinished"></translation>
+        <translation>「たいりょく」を上げる。</translation>
     </message>
     <message>
         <source>Raises [Magic Power]</source>
-        <translation type="unfinished"></translation>
+        <translation>「まりょく」を上げる。</translation>
     </message>
     <message>
         <source>Raises [Spirit]</source>
-        <translation type="unfinished"></translation>
+        <translation>「せいしん」を上げる。</translation>
     </message>
     <message>
         <source>Raises [Dexterity]</source>
-        <translation type="unfinished"></translation>
+        <translation>「すばやさ」を上げる。</translation>
     </message>
     <message>
         <source>Raises [Luck]</source>
-        <translation type="unfinished"></translation>
+        <translation>「うん」を上げる。</translation>
     </message>
     <message>
         <source>When you want to breed Chocobos...</source>
-        <translation type="unfinished"></translation>
+        <translation>チョコボを育てるときに……</translation>
     </message>
     <message>
         <source>Looks like it can start some sort of machine</source>
-        <translation type="unfinished"></translation>
+        <translation>なにかの機会を動かせそうだ。</translation>
     </message>
     <message>
         <source>This one&apos;s a little tough...</source>
-        <translation type="unfinished"></translation>
+        <translation>ちょっとせつない……</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Omnislash]</source>
-        <translation type="unfinished"></translation>
+        <translation>究極リミット技「超究武神覇斬」を覚える。</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Catastrophe]</source>
-        <translation type="unfinished"></translation>
+        <translation>究極リミット技「カタストロフィ」を覚える。</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Final Heaven]</source>
-        <translation type="unfinished"></translation>
+        <translation>究極リミット技「ファイナルヘブン」を覚える。</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Great Gospel]</source>
-        <translation type="unfinished"></translation>
+        <translation>究極リミット技「大いなる福音」を覚える。</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Cosmo Memory]</source>
-        <translation type="unfinished"></translation>
+        <translation>究極リミット技「コスモメモリー」を覚える。</translation>
     </message>
     <message>
         <source>Learn Limit Skill [All Creation]</source>
-        <translation type="unfinished"></translation>
+        <translation>究極リミット技「森羅万象」を覚える。</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Chaos]</source>
-        <translation type="unfinished"></translation>
+        <translation>究極リミット技「カオス」を覚える。</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Highwind]</source>
-        <translation type="unfinished"></translation>
+        <translation>究極リミット技「ハイウィンド」を覚える。</translation>
     </message>
     <message>
         <source>Shinra armored &apos;attack&apos; soldiers: 12 in the Set!</source>
-        <translation type="unfinished"></translation>
+        <translation>新羅軍装甲閃弾兵『突撃』セット 12体入。</translation>
     </message>
     <message>
         <source>A new machine to protect the reactor!</source>
-        <translation type="unfinished"></translation>
+        <translation>魔洸炉を守る最新メカ！ 両手からミサイルを発射！</translation>
     </message>
     <message>
         <source>A prefect copy of Sephiroth&apos;s sword!</source>
-        <translation type="unfinished"></translation>
+        <translation>本物そっくりな「セフィロス」の剣！ 君もソルジャー気分！</translation>
     </message>
     <message>
         <source>Use This to create a SAVE Point in the &apos;North Cave&apos;</source>
-        <translation type="unfinished"></translation>
+        <translation>メニューで使うと大空洞内部でセーブポイントを一回作れる。</translation>
     </message>
     <message>
         <source>A record of Master Dio&apos;s fiercest battles</source>
-        <translation type="unfinished"></translation>
+        <translation>熱血ディオ先生の激闘人生日記。</translation>
     </message>
     <message>
         <source>Dio&apos;s autograph</source>
-        <translation type="unfinished"></translation>
+        <translation>超人ディオ先生のサイン色紙。</translation>
     </message>
     <message>
         <source>Second part of Dio&apos;s diary: The Gold Saucer years</source>
-        <translation type="unfinished"></translation>
+        <translation>無敵ディオ先生の激闘日記PART2 ゴールドソーサー時代。</translation>
     </message>
     <message>
         <source>Blooms once every 1000 years</source>
-        <translation type="unfinished"></translation>
+        <translation>１０００年にいちど、砂ばくにさく花。</translation>
     </message>
     <message>
         <source>Calms the hearts of all who hear it</source>
-        <translation type="unfinished"></translation>
+        <translation>聞く者の心をおだやかにするハープ。</translation>
     </message>
     <message>
         <source>Map of another world. It Slumbers with sunken ships</source>
-        <translation type="unfinished"></translation>
+        <translation>沈んだ船とともに眠る、異世界の地図。</translation>
     </message>
     <message>
         <source>Initial equiping</source>
-        <translation type="unfinished"></translation>
+        <translation>最初から持っている剣。</translation>
     </message>
     <message>
         <source>Sword is used when an ally is down</source>
-        <translation type="unfinished"></translation>
+        <translation>味方が倒れると力を発揮。</translation>
     </message>
     <message>
         <source>Power up when [Near death]</source>
-        <translation type="unfinished"></translation>
+        <translation>瀕死時にパワーアップ。</translation>
     </message>
     <message>
         <source>Power up when condition changes</source>
-        <translation type="unfinished"></translation>
+        <translation>ステータス異常時にパワーアップ。</translation>
     </message>
     <message>
         <source>Initial equip. Long Range Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>最初から持っているガン。後列からでも通常の威力。</translation>
     </message>
     <message>
         <source>Long Range Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>後列からでも通常の威力。</translation>
     </message>
     <message>
         <source>Memento of father</source>
-        <translation type="unfinished"></translation>
+        <translation>父のかたみ。</translation>
     </message>
     <message>
         <source>Raises Power when you need to protect others nearby</source>
-        <translation type="unfinished"></translation>
+        <translation>守るべき者がいるとパワーアップ。</translation>
     </message>
     <message>
         <source>Drains [Fire] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>炎属性の攻撃を吸収する腕輪。</translation>
     </message>
     <message>
         <source>Drains [Cold] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>冷気属性の攻撃を吸収する腕輪。</translation>
     </message>
     <message>
         <source>Drains [Lightning] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>雷属性の攻撃を吸収する腕輪。</translation>
     </message>
     <message>
         <source>Drains 1/2 [Fire/Cold/Lightning] attack</source>
-        <translation type="unfinished"></translation>
+        <translation>炎、冷気、雷属性の攻撃を半減する腕輪。</translation>
     </message>
     <message>
         <source>Women&apos;s Armlet nullifies [Fire/Cold/Gravity/Holy]</source>
-        <translation type="unfinished"></translation>
+        <translation>炎、冷気、重力、聖属性の攻撃を無効にする女性用腕輪。</translation>
     </message>
     <message>
         <source>Man&apos;s Armlet nullifies [Lightning/Earth/Water/Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>雷、土、水、毒属性の攻撃を無効にする男性用腕輪。</translation>
     </message>
     <message>
         <source>Decreases all elemental attacks by 1/2</source>
-        <translation type="unfinished"></translation>
+        <translation>全ての属性の攻撃を半減にする腕輪。</translation>
     </message>
     <message>
         <source>A gorgeous watch</source>
-        <translation type="unfinished"></translation>
+        <translation>ゴージャスな腕時計。</translation>
     </message>
     <message>
         <source>Strength +10</source>
-        <translation type="unfinished"></translation>
+        <translation>「ちから」が１０アップ。</translation>
     </message>
     <message>
         <source>Vitality +10</source>
-        <translation type="unfinished"></translation>
+        <translation>「たいりょく」が１０アップ。</translation>
     </message>
     <message>
         <source>Magic +10</source>
-        <translation type="unfinished"></translation>
+        <translation>「まりょく」が１０アップ。</translation>
     </message>
     <message>
         <source>Spirit +10</source>
-        <translation type="unfinished"></translation>
+        <translation>「せいしん」が１０アップ。</translation>
     </message>
     <message>
         <source>Dexterity +10</source>
-        <translation type="unfinished"></translation>
+        <translation>「すばやさ」が１０アップ。</translation>
     </message>
     <message>
         <source>Luck +10</source>
-        <translation type="unfinished"></translation>
+        <translation>「うん」が１０アップ。</translation>
     </message>
     <message>
         <source>Power &amp; Vitality +30</source>
-        <translation type="unfinished"></translation>
+        <translation>「ちから」と「たいりょく」が３０アップ。</translation>
     </message>
     <message>
         <source>Drains [Poison] attacks, protects against [Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>毒属性の攻撃を吸収し、毒状態を防ぐ。</translation>
     </message>
     <message>
         <source>Vitality &amp; Spirit +50</source>
-        <translation type="unfinished"></translation>
+        <translation>「たいりょく」と「せいしん」が５０アップ。</translation>
     </message>
     <message>
         <source>Magic &amp; Spirit +30</source>
-        <translation type="unfinished"></translation>
+        <translation>「まりょく」と「せいしん」が３０アップ。</translation>
     </message>
     <message>
         <source>Protects against [Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>毒状態を防ぐ。</translation>
     </message>
     <message>
         <source>Protects against [Darkness]</source>
-        <translation type="unfinished"></translation>
+        <translation>暗闇状態を防ぐ。</translation>
     </message>
     <message>
         <source>Protects against [Sleep]</source>
-        <translation type="unfinished"></translation>
+        <translation>睡眠状態を防ぐ。</translation>
     </message>
     <message>
         <source>Protects against [Poison/Darkness]</source>
-        <translation type="unfinished"></translation>
+        <translation>毒・暗闇状態を防ぐ。</translation>
     </message>
     <message>
         <source>Protects against [Paralyze/Petrify/Slow-numb]</source>
-        <translation type="unfinished"></translation>
+        <translation>マヒ・石化・徐々に石化状態を防ぐ。</translation>
     </message>
     <message>
         <source>Protects against [Frog/Small]</source>
-        <translation type="unfinished"></translation>
+        <translation>カエル・ミニマム状態を防ぐ。</translation>
     </message>
     <message>
         <source>Automatically put you in [Haste]</source>
-        <translation type="unfinished"></translation>
+        <translation>戦闘時に自動的にヘイスト状態になる。</translation>
     </message>
     <message>
         <source>Protects against [Berserk/Fury/Sadness]</source>
-        <translation type="unfinished"></translation>
+        <translation>混乱・バーサク・いかり・かなしい状態を防ぐ。</translation>
     </message>
     <message>
         <source>Protects against all abnormal status</source>
-        <translation type="unfinished"></translation>
+        <translation>全てのステータス異常を防ぐ。</translation>
     </message>
     <message>
         <source>Nullifies [Fire] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>炎属性の攻撃を吸収する。</translation>
     </message>
     <message>
         <source>Nullifies [Cold] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>冷気属性の攻撃を吸収する。</translation>
     </message>
     <message>
         <source>Nullifies [Lightning] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>雷属性の攻撃を吸収する。</translation>
     </message>
     <message>
         <source>Drains [Fire/Cold/Lightning/Earth] attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>炎、冷気、雷、土属性の攻撃を吸収する。</translation>
     </message>
     <message>
         <source>Protects against [Sudden Death/Petrify/Slow-numb]</source>
-        <translation type="unfinished"></translation>
+        <translation>一撃死・石化・徐々に石化・死の宣告状態を防ぐ。</translation>
     </message>
     <message>
         <source>Automatically puts you in [Berserk]</source>
-        <translation type="unfinished"></translation>
+        <translation>戦闘時に自動的にバーサク状態になる。</translation>
     </message>
     <message>
         <source>It increases each status but...</source>
-        <translation type="unfinished"></translation>
+        <translation>全てのステータスがアップするが……</translation>
     </message>
     <message>
         <source>Automatically sets up [Barrier/MBarrier]</source>
-        <translation type="unfinished"></translation>
+        <translation>戦闘開始時に自動的にバリア・マバリア状態になる。</translation>
     </message>
     <message>
         <source>Restores HP as you walk</source>
-        <translation type="unfinished"></translation>
+        <translation>歩くとＨＰが回復「する。</translation>
     </message>
     <message>
         <source>Automatically sets up [Reflect]</source>
-        <translation type="unfinished"></translation>
+        <translation>戦闘時に自動的にリフレク状態になる。</translation>
     </message>
     <message>
         <source>Drains Water attacks</source>
-        <translation type="unfinished"></translation>
+        <translation>水属性の攻撃を吸収する。</translation>
     </message>
     <message>
         <source>Increases Stealing rate</source>
-        <translation type="unfinished"></translation>
+        <translation>盗む確率アップ。</translation>
     </message>
     <message>
         <source>Increases Manipulation rate</source>
-        <translation type="unfinished"></translation>
+        <translation>あやつりの確率アップ。</translation>
     </message>
 </context>
 <context>
@@ -6678,7 +6678,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>French Translation:</source>
-        <translation>フランス語翻訳:</translation>
+        <translation>フランス語翻訳: </translation>
     </message>
     <message>
         <source>Icons Used In this Program</source>
@@ -6974,11 +6974,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Show Item Descriptions in tooltip</source>
-        <translation type="unfinished"></translation>
+        <translation>追加: アイテムの説明をツールチップ表示</translation>
     </message>
     <message>
         <source>New: Static Data Classes</source>
-        <translation type="unfinished"></translation>
+        <translation>追加: スタチック データ クラス</translation>
     </message>
 </context>
 <context>
