@@ -16,16 +16,29 @@
 
 #ifndef GLOBALS_H
 #define GLOBALS_H
+
     #ifndef FF7SAVE_H
-        #include "FF7SAVE.h"
+    #include "FF7SAVE.h"
     #endif
+
+    #ifndef FF7ITEM_H
+    #include "static_data/FF7Item.h"
+    #endif
+
+    #ifndef FF7MATERIA_H
+    #include "static_data/FF7Materia.h"
+    #endif
+
+    #ifndef FF7LOCATION_H
+    #include "static_data/FF7Location.h"
+    #endif
+
+    #ifndef FF7TEXT_H
+    #include "static_data/FF7Text.h"
+    #endif
+
 #include <QCoreApplication>
 #include <QTextCodec>
-#include "FF7Text.h"
-//#include "FF7StaticData.h"
-#include "static_data/FF7Item.h"
-#include "static_data/FF7Materia.h"
-#include "static_data/FF7Location.h"
 
 int ff7__checksum(void * qw );
 void fix_pc_bytemask(FF7*ff7 ,int,bool);

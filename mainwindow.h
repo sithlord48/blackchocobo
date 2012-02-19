@@ -22,12 +22,13 @@
 #include <QMainWindow>
 #include <QWidget>
 #include <QMessageBox>
+#include <QSettings>
 #include "slotselect.h" // slot selection dialog stuff.
 #include "options.h" // contains the options dialog
 #include "about.h"      // about dialog stuff.
 #include "errbox.h" //non ff7 error box
-#include <QSettings>
 #include <SaveIcon.h>
+#include "widgets/ItemPreview.h"
 
 
 
@@ -65,6 +66,7 @@ private:
     int curchar; //keeps track of current character displayed
     int mslotsel; //keeps track of materia slot on char selected
     TEXT Text; //our sting conversion item.
+    ItemPreview *item_preview;
 public slots:
     void loadFileFull(const QString &fileName,int reload);//(Vegeta_Ss4) v0.8.3
 
