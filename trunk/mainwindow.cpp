@@ -25,7 +25,6 @@
 extern quint32 chartnls[11][99]; //  Chars tnl Table (cloud - sephiroth)
 extern quint32 charlvls[11][99]; //  Chars lvl Table
 /*~~~~~~~~GUI Set Up~~~~~~~*/
-
 MainWindow::MainWindow(QWidget *parent,FF7 *ff7data,QSettings *configdata)
     :QMainWindow(parent),ui(new Ui::MainWindow)
 {
@@ -70,6 +69,16 @@ MainWindow::MainWindow(QWidget *parent,FF7 *ff7data,QSettings *configdata)
     ui->tbl_location_field->setColumnWidth(2,50);
     ui->tbl_location_field->setColumnWidth(3,50);
     ui->tbl_location_field->setColumnWidth(4,50);
+
+    //Item Preview Stuff...
+
+    item_preview = new ItemPreview();
+    QVBoxLayout *item_preview_layout= new QVBoxLayout();
+    item_preview->setContentsMargins(0,0,0,0);
+    item_preview_layout->setContentsMargins(0,0,0,0);
+    item_preview_layout->addWidget(item_preview);
+    ui->box_item_preview->setLayout(item_preview_layout);
+    ui->box_item_preview->setContentsMargins(0,0,0,0);
 
     QTableWidgetItem *newItem;
     FF7Location Locations;
@@ -3000,6 +3009,15 @@ void MainWindow::itemupdate()
             newItem = new QTableWidgetItem("",0);
             ui->tbl_itm->setItem(i,1,newItem);
         }
+        else if(ff7->slot[s].items[i].qty %2 ==1 && (ff7->slot[s].items[i].id+256)>319)
+        {
+            newItem = new QTableWidgetItem(tr("-------BAD ID-------"),0);
+            newItem->setToolTip("");
+            ui->tbl_itm->setItem(i,0,newItem);
+            ui->tbl_itm->setRowHeight(i,22);
+            newItem = new QTableWidgetItem("",0);
+            ui->tbl_itm->setItem(i,1,newItem);
+        }
         else
         {
             QString qty;
@@ -3184,7 +3202,7 @@ void MainWindow::guirefresh(bool newgame)
         ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
         ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
         ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
-
+        item_preview->setItem(-1);//reset.
         if((ff7->slot[s].ruby_emerald) &(1<<3)){ui->cb_ruby_dead->setChecked(Qt::Checked);}
         if((ff7->slot[s].ruby_emerald)& (1<<4)){ui->cb_emerald_dead->setChecked(Qt::Checked);}
         if((ff7->slot[s].field_help)& (1<<0)){ui->cb_field_help->setChecked(Qt::Checked);}
@@ -4318,8 +4336,8 @@ void MainWindow::on_btn_clear_keyitems_clicked()
 
 void MainWindow::on_combo_additem_currentIndexChanged(int index)
 {if(!load){file_changed=true;    //we must also set the qty, since that determins how the table and the game will reconize the item and prevents bug#3014592.
-    if (index<256){ff7->slot[s].items[ui->tbl_itm->currentRow()].id = index;ff7->slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(ui->sb_addqty->value() * 2);}
-    else{ff7->slot[s].items[ui->tbl_itm->currentRow()].id = (index-256);ff7->slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(ui->sb_addqty->value()* 2) +1;}
+        if (index<256){ff7->slot[s].items[ui->tbl_itm->currentRow()].id = index;ff7->slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(ui->sb_addqty->value() * 2);item_preview->setItem(ff7->slot[s].items[ui->tbl_itm->currentRow()].id);}
+    else{ff7->slot[s].items[ui->tbl_itm->currentRow()].id = (index-256);ff7->slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(ui->sb_addqty->value()* 2) +1;item_preview->setItem(ff7->slot[s].items[ui->tbl_itm->currentRow()].id+256);}
     itemupdate();
 }}
 
@@ -4331,24 +4349,29 @@ void MainWindow::on_sb_addqty_valueChanged(int value)
 }}
 
 void MainWindow::on_tbl_itm_currentCellChanged(int row)
-{if(!load){//file_changed=true;
-    if (ff7->slot[s].items[row].qty == 255 && ff7->slot[s].items[row].id == 255){/*empty slot.....do nothing*/}
-    else
-    {
-        load=true;
-        if(ff7->slot[s].items[row].qty %2 ==0)
-        {
-            ui->combo_additem->setCurrentIndex(ff7->slot[s].items[row].id);
-            ui->sb_addqty->setValue(ff7->slot[s].items[row].qty/2);
-        }
+{
+    if(!load)
+    {//file_changed=true;
+        if (ff7->slot[s].items[row].qty == 255 && ff7->slot[s].items[row].id == 255){item_preview->setItem(-1);}
         else
         {
-            ui->combo_additem->setCurrentIndex(ff7->slot[s].items[row].id+256);
-            ui->sb_addqty->setValue(ff7->slot[s].items[row].qty/2);
+            load=true;
+            if(ff7->slot[s].items[row].qty %2 ==0)
+            {
+                ui->combo_additem->setCurrentIndex(ff7->slot[s].items[row].id);
+                ui->sb_addqty->setValue(ff7->slot[s].items[row].qty/2);
+            }
+            else
+            {
+                ui->combo_additem->setCurrentIndex(ff7->slot[s].items[row].id+256);
+                ui->sb_addqty->setValue(ff7->slot[s].items[row].qty/2);
+            }
+            load=false;
         }
-        load=false;
     }
-}}
+    if(ff7->slot[s].items[row].qty %2 ==0){item_preview->setItem(ff7->slot[s].items[row].id);}
+    else{item_preview->setItem(ff7->slot[s].items[row].id+256);}
+}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -6673,3 +6696,11 @@ void MainWindow::on_combo_s7_slums_currentIndexChanged(int index)
             break;
         }
 }}
+/*
+void MainWindow::on_tbl_itm_customContextMenuRequested(const QPoint &pos)
+{
+    ItemPreview menu(this);
+    menu.setItem(ff7->slot[s].items[ui->tbl_itm->currentRow()].id);
+    menu.exec(ui->tbl_itm->mapToGlobal(pos));
+}
+*/

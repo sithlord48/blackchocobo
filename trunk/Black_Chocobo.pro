@@ -25,24 +25,26 @@ SOURCES += main.cpp \
     globals.cpp \
     about.cpp \
     options.cpp \
-    SaveIcon.cpp \
     errbox.cpp \
-    FF7Text.cpp \
+    SaveIcon.cpp \
+    static_data/FF7Text.cpp \
     static_data/FF7Item.cpp \
     static_data/FF7Materia.cpp \
-    static_data/FF7Location.cpp
+    static_data/FF7Location.cpp \
+    widgets/ItemPreview.cpp
 HEADERS += mainwindow.h \
     FF7SAVE.h \
     slotselect.h \
     about.h \
     globals.h \
     options.h \
-    SaveIcon.h \
     errbox.h \
-    FF7Text.h \
+    SaveIcon.h \
+    static_data/FF7Text.h \
     static_data/FF7Item.h \
     static_data/FF7Materia.h \
-    static_data/FF7Location.h
+    static_data/FF7Location.h \
+    widgets/ItemPreview.h
 FORMS += mainwindow.ui \
     slotselect.ui \
     about.ui \
