@@ -29,7 +29,6 @@ class ItemPreview : public QWidget
 Q_OBJECT
   public:
   ItemPreview(QWidget *parent=0);
-  ~ItemPreview();
   void setItem(int);
   private:
   void setName(QString);

@@ -149,7 +149,6 @@ ItemPreview::ItemPreview(QWidget *parent) :QWidget(parent)
   effects_layout->setContentsMargins(0,0,0,0);
   effects_layout->addWidget(elemental_box);
   effects_layout->addWidget(status_box);
-  effects_layout->addSpacerItem(spacer);
   effects_layout->setSpacing(0);
 
   QHBoxLayout *top = new QHBoxLayout();
@@ -585,8 +584,4 @@ void ItemPreview::status_info(int id)
         else{status_box->setFixedSize(160,100);}
     }
     status_box->setVisible(show);
-}
-ItemPreview::~ItemPreview()
-{
-    delete this;
 }
