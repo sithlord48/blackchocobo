@@ -79,6 +79,7 @@ MainWindow::MainWindow(QWidget *parent,FF7 *ff7data,QSettings *configdata)
     item_preview_layout->addWidget(item_preview);
     ui->box_item_preview->setLayout(item_preview_layout);
     ui->box_item_preview->setContentsMargins(0,0,0,0);
+    item_preview->setItem(-1);
 
     QTableWidgetItem *newItem;
     FF7Location Locations;
@@ -228,7 +229,7 @@ MainWindow::MainWindow(QWidget *parent,FF7 *ff7data,QSettings *configdata)
     dialog_preview_layout->setContentsMargins(0,0,0,0);
     dialog_preview_layout->addWidget(dialog_preview);
     ui->dialog_preview_box->setLayout(dialog_preview_layout);
-    //ui->dialog_preview_box->setContentsMargins(0,0,0,0);
+    ui->dialog_preview_box->setContentsMargins(0,0,0,0);
 
     // Connect the unknown and unknown compare scrolling.
     connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );
@@ -3454,20 +3455,6 @@ void MainWindow::guirefresh(bool newgame)
         dialog_preview->SetLLeft (QColor(ff7->slot[s].colors[2][0],ff7->slot[s].colors[2][1],ff7->slot[s].colors[2][2]));
         dialog_preview->SetLRight(QColor(ff7->slot[s].colors[3][0],ff7->slot[s].colors[3][1],ff7->slot[s].colors[3][2]));
 
-        /*
-        ui->slide_ul_r->setValue(ff7->slot[s].colors[0][0]);
-        ui->slide_ul_g->setValue(ff7->slot[s].colors[0][1]);
-        ui->slide_ul_b->setValue(ff7->slot[s].colors[0][2]);
-        ui->slide_ur_r->setValue(ff7->slot[s].colors[1][0]);
-        ui->slide_ur_g->setValue(ff7->slot[s].colors[1][1]);
-        ui->slide_ur_b->setValue(ff7->slot[s].colors[1][2]);
-        ui->slide_ll_r->setValue(ff7->slot[s].colors[2][0]);
-        ui->slide_ll_g->setValue(ff7->slot[s].colors[2][1]);
-        ui->slide_ll_b->setValue(ff7->slot[s].colors[2][2]);
-        ui->slide_lr_r->setValue(ff7->slot[s].colors[3][0]);
-        ui->slide_lr_g->setValue(ff7->slot[s].colors[3][1]);
-        ui->slide_lr_b->setValue(ff7->slot[s].colors[3][2]);
-        */
         if((ff7->slot[s].materiacaves)& (1<<0)){ui->cb_materiacave_1->setChecked(Qt::Checked);}
         else{ui->cb_materiacave_1->setChecked(Qt::Unchecked);}
         if((ff7->slot[s].materiacaves)& (1<<1)){ui->cb_materiacave_2->setChecked(Qt::Checked);}
@@ -3479,30 +3466,30 @@ void MainWindow::guirefresh(bool newgame)
         if((ff7->slot[s].yuffieforest)& (1<<0)){ui->cb_yuffieforest->setChecked(Qt::Checked);}
         else{ui->cb_yuffieforest->setChecked(Qt::Unchecked);}
         /*~~~~~Stolen Materia~~~~~~~*/
-            QTableWidgetItem *newItem;
-            ui->tbl_materia_2->reset();
-            ui->tbl_materia_2->clearContents();
-            ui->tbl_materia_2->setColumnWidth(0,(ui->tbl_materia_2->width()*.65));
-            ui->tbl_materia_2->setColumnWidth(1,(ui->tbl_materia_2->width()*.25));
-            ui->tbl_materia_2->setRowCount(48);
-            for(int mat=0;mat<48;mat++) //materias stolen by yuffie
+        QTableWidgetItem *newItem;
+        ui->tbl_materia_2->reset();
+        ui->tbl_materia_2->clearContents();
+        ui->tbl_materia_2->setColumnWidth(0,(ui->tbl_materia_2->width()*.65));
+        ui->tbl_materia_2->setColumnWidth(1,(ui->tbl_materia_2->width()*.25));
+        ui->tbl_materia_2->setRowCount(48);
+        for(int mat=0;mat<48;mat++) //materias stolen by yuffie
+        {
+            int aptemp;
+            QString ap;
+            if (ff7->slot[s].stolen[mat].id !=0xff)
             {
-                int aptemp;
-                QString ap;
-                if (ff7->slot[s].stolen[mat].id !=0xff)
-                {
-                    newItem = new QTableWidgetItem(QPixmap::fromImage(Materias.Image(ff7->slot[s].stolen[mat].id)),Materias.Name(ff7->slot[s].stolen[mat].id),0);
-                    ui->tbl_materia_2->setItem(mat,0,newItem);
-                    aptemp = ff7->slot[s].stolen[mat].ap[0] |(ff7->slot[s].stolen[mat].ap[1] << 8) | (ff7->slot[s].stolen[mat].ap[2] << 16);
-                    if (aptemp == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia_2->setItem(mat,1,newItem);}
-                    else{newItem =new QTableWidgetItem(ap.setNum(aptemp));ui->tbl_materia_2->setItem(mat,1,newItem);}
-                }
-                else
-                {
-                    newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
-                    ui->tbl_materia_2->setItem(mat,0,newItem);
-                }
+                newItem = new QTableWidgetItem(QPixmap::fromImage(Materias.Image(ff7->slot[s].stolen[mat].id)),Materias.Name(ff7->slot[s].stolen[mat].id),0);
+                ui->tbl_materia_2->setItem(mat,0,newItem);
+                aptemp = ff7->slot[s].stolen[mat].ap[0] |(ff7->slot[s].stolen[mat].ap[1] << 8) | (ff7->slot[s].stolen[mat].ap[2] << 16);
+                if (aptemp == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia_2->setItem(mat,1,newItem);}
+                else{newItem =new QTableWidgetItem(ap.setNum(aptemp));ui->tbl_materia_2->setItem(mat,1,newItem);}
             }
+            else
+            {
+                newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
+                ui->tbl_materia_2->setItem(mat,0,newItem);
+            }
+        }
         load=false;
         // all functions should set load on their own.
         /*~~~~~Call External Functions~~~~~~~*/
@@ -3514,7 +3501,7 @@ void MainWindow::guirefresh(bool newgame)
         progress_update();
         if(ui->action_show_debug->isChecked()){testdata_refresh();}
         ui->w_m_s1->click();
-        }
+    }
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 void MainWindow::progress_update()
 {

@@ -110,7 +110,7 @@ ItemPreview::ItemPreview(QWidget *parent) :QWidget(parent)
 
   materia_slot_box = new QGroupBox();
   materia_slot_box->setContentsMargins(0,0,0,0);
-  materia_slot_box->setFixedSize(294,40);
+  materia_slot_box->setFixedSize(320,48);
 
   QHBoxLayout *materia_slots = new QHBoxLayout();
   materia_slots->setContentsMargins(0,0,0,0);
@@ -164,6 +164,7 @@ ItemPreview::ItemPreview(QWidget *parent) :QWidget(parent)
   main_layout->addWidget(lbl_desc);
   main_layout->addWidget(materia_slot_box);
   main_layout->addLayout(effects_layout);
+  this->adjustSize();
 }
 void ItemPreview::setName(QString text){lbl_name->setText(text);lbl_name->adjustSize();}
 void ItemPreview::setDesc(QString text){lbl_desc->setText(text);lbl_desc->adjustSize();}
@@ -312,7 +313,7 @@ void ItemPreview::elemental_info(int id)
         else{elemental_box->setFixedSize(160,100);}
    }//end of else
    elemental_box->setVisible(show);
-   this->adjustSize();
+   elemental_box->adjustSize();
 }//end of function
 
 void ItemPreview::status_info(int id)
@@ -371,5 +372,5 @@ void ItemPreview::status_info(int id)
         else{status_box->setFixedSize(160,100);}
     }//end of else
     status_box->setVisible(show);
-    this->adjustSize();
+    status_box->adjustSize();
 }//end of function
