@@ -16,595 +16,179 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Absorb:Restoration</source>
+        <source>Restoration</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Nullify:Restoration</source>
+        <source>Fire</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Halve:Restoration</source>
+        <source>Cold</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attack:Restoration</source>
+        <source>Lightning</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Absorb:Fire</source>
+        <source>Earth</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Nullify:Fire</source>
+        <source>Wind</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Halve:Fire</source>
+        <source>Water</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attack:Fire</source>
+        <source>Gravity</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Absorb:Cold</source>
+        <source>Holy</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Nullify:Cold</source>
+        <source>Poison</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Halve:Cold</source>
+        <source>Cut</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attack:Cold</source>
+        <source>Shoot</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Absorb:Lightning</source>
+        <source>Punch</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Nullify:Lightning</source>
+        <source>Hit</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Halve:Lightning</source>
+        <source>Absorb:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attack:Lightning</source>
+        <source>Nullify:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Absorb:Earth</source>
+        <source>Halve:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Nullify:Earth</source>
+        <source>Attack:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Halve:Earth</source>
+        <source>Death</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attack:Earth</source>
+        <source>Slow-Numb</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Absorb:Wind</source>
+        <source>Paralysis</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Nullify:Wind</source>
+        <source>Petrify</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Halve:Wind</source>
+        <source>Silence</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attack:Wind</source>
+        <source>Sleep</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Absorb:Water</source>
+        <source>Berserk</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Nullify:Water</source>
+        <source>Frog</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Halve:Water</source>
+        <source>Mini</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attack:Water</source>
+        <source>Fury</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Absorb:Gravity</source>
+        <source>Sadness</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Nullify:Gravity</source>
+        <source>Darkness</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Halve:Gravity</source>
+        <source>Haste</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attack:Gravity</source>
+        <source>Slow</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Absorb:Holy</source>
+        <source>Stop</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Nullify:Holy</source>
+        <source>Barrier</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Halve:Holy</source>
+        <source>M.Barrier</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attack:Holy</source>
+        <source>Reflect</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Absorb:Poison</source>
+        <source>Shield</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Nullify:Poison</source>
+        <source>Regen</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Halve:Poison</source>
+        <source>Protect:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attack:Poison</source>
+        <source>Remove:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Absorb:Cut</source>
+        <source>Inflict:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Nullify:Cut</source>
+        <source>OnBattle:</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Halve:Cut</source>
+        <source>Confusion</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Attack:Cut</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Absorb:Shoot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Nullify:Shoot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Halve:Shoot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Attack:Shoot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Absorb:Punch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Nullify:Punch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Halve:Punch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Attack:Punch</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Absorb:Hit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Nullify:Hit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Halve:Hit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Attack:Hit</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Death</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Death</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Death</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Death</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Slow-Numb</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Slow-Numb</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Slow-Numb</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Slow-Numb</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:D.Sentence</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:D.Sentence</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:D.Sentence</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:D.Sentence</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Paralysis</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Paralysis</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Paralysis</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Paralysis</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Petrify</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Petrify</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Petrify</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Petrify</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Silence</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Silence</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Silence</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Silence</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Sleep</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Sleep</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Sleep</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Sleep</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Confusion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Confusion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Confusion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Confusion</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Berserk</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Berserk</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Berserk</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Berserk</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Frog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Frog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Frog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Frog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Mini</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Mini</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Mini</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Mini</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Poison</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Poison</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Poison</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Poison</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Fury</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Fury</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Fury</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Fury</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Sadness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Sadness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Sadness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Sadness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Darkness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Darkness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Darkness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Darkness</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Haste</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Haste</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Haste</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Haste</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Slow</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Slow</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Slow</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Slow</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Stop</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Stop</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Stop</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Stop</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Barrier</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Barrier</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Barrier</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Barrier</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:M.Barrier</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:M.Barrier</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:M.Barrier</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:M.Barrier</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Reflect</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Reflect</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Reflect</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Reflect</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Regen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Regen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Regen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Regen</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Protect:Shield</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Remove:Shield</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inflict:Shield</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>OnBattle:Shield</source>
+        <source>D.Sentence</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

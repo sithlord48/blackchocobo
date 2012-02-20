@@ -110,7 +110,6 @@ ItemPreview::ItemPreview(QWidget *parent) :QWidget(parent)
 
   materia_slot_box = new QGroupBox();
   materia_slot_box->setContentsMargins(0,0,0,0);
-  materia_slot_box->setShown(0);
   materia_slot_box->setFixedSize(294,40);
 
   QHBoxLayout *materia_slots = new QHBoxLayout();
@@ -121,7 +120,9 @@ ItemPreview::ItemPreview(QWidget *parent) :QWidget(parent)
   materia_slots->addLayout(slots_3_and_4);
   materia_slots->addLayout(slots_1_and_2);
   materia_slots->setSpacing(12);
+
   materia_slot_box->setLayout(materia_slots);
+  materia_slot_box->setShown(0);
 
   elemental_effects = new QListWidget();
   QHBoxLayout *elemental = new QHBoxLayout();
@@ -132,6 +133,7 @@ ItemPreview::ItemPreview(QWidget *parent) :QWidget(parent)
   elemental_box->setContentsMargins(3,3,3,3);
   elemental_box->setLayout(elemental);
   elemental_box->setTitle(tr("Elemental Effects"));
+  elemental_box->setHidden(1);
 
   status_effects = new QListWidget();
   QHBoxLayout *status =new QHBoxLayout();
@@ -142,6 +144,7 @@ ItemPreview::ItemPreview(QWidget *parent) :QWidget(parent)
   status_box->setContentsMargins(3,3,3,3);
   status_box->setLayout(status);
   status_box->setTitle(tr("Status Effects"));
+  status_box->setHidden(1);
 
   QHBoxLayout *effects_layout =new QHBoxLayout();
   effects_layout->setContentsMargins(0,0,0,0);
@@ -161,8 +164,6 @@ ItemPreview::ItemPreview(QWidget *parent) :QWidget(parent)
   main_layout->addWidget(lbl_desc);
   main_layout->addWidget(materia_slot_box);
   main_layout->addLayout(effects_layout);
-  //Insure its all hidden..
-  this->setItem(-1);
 }
 void ItemPreview::setName(QString text){lbl_name->setText(text);lbl_name->adjustSize();}
 void ItemPreview::setDesc(QString text){lbl_desc->setText(text);lbl_desc->adjustSize();}
@@ -266,130 +267,54 @@ void ItemPreview::setItem(int id)
 }
 void ItemPreview::elemental_info(int id)
 {
-
     int y=20;
     bool show=false;
     elemental_effects->clear();
     if(id<0 || id>319){/*invalid number*/}
     else
     {
-        switch(data.element_restoration(id))
+        for(int i=0;i<14;i++)
         {
-        case -3: elemental_effects->addItem(tr("Absorb:Restoration")); show=true; y+=18; break;
-        case -2: elemental_effects->addItem(tr("Nullify:Restoration")); show=true; y+=18; break;
-        case -1: elemental_effects->addItem(tr("Halve:Restoration")); show=true; y+=18; break;
-        case  0: break;
-        case +1: elemental_effects->addItem(tr("Attack:Restoration")); show=true; y+=18;break;
-        };
-        switch(data.element_fire(id))
-        {
-        case -3: elemental_effects->addItem(tr("Absorb:Fire")); show=true; y+=18; break;
-        case -2: elemental_effects->addItem(tr("Nullify:Fire")); show=true; y+=18; break;
-        case -1: elemental_effects->addItem(tr("Halve:Fire")); show=true; y+=18; break;
-        case  0: break;
-        case +1: elemental_effects->addItem(tr("Attack:Fire")); show=true; y+=18;break;
-        };
-        switch(data.element_cold(id))
-        {
-        case -3: elemental_effects->addItem(tr("Absorb:Cold")); show=true; y+=18; break;
-        case -2: elemental_effects->addItem(tr("Nullify:Cold")); show=true; y+=18; break;
-        case -1: elemental_effects->addItem(tr("Halve:Cold")); show=true; y+=18; break;
-        case  0: break;
-        case +1: elemental_effects->addItem(tr("Attack:Cold")); show=true; y+=18;break;
-        };
-        switch(data.element_lightning(id))
-        {
-        case -3: elemental_effects->addItem(tr("Absorb:Lightning")); show=true; y+=18; break;
-        case -2: elemental_effects->addItem(tr("Nullify:Lightning")); show=true; y+=18; break;
-        case -1: elemental_effects->addItem(tr("Halve:Lightning")); show=true; y+=18; break;
-        case  0: break;
-        case +1: elemental_effects->addItem(tr("Attack:Lightning")); show=true; y+=18;break;
-        };
-        switch(data.element_earth(id))
-        {
-        case -3: elemental_effects->addItem(tr("Absorb:Earth")); show=true; y+=18; break;
-        case -2: elemental_effects->addItem(tr("Nullify:Earth")); show=true; y+=18; break;
-        case -1: elemental_effects->addItem(tr("Halve:Earth")); show=true; y+=18; break;
-        case  0: break;
-        case +1: elemental_effects->addItem(tr("Attack:Earth")); show=true; y+=18;break;
-        };
-        switch(data.element_wind(id))
-        {
-        case -3: elemental_effects->addItem(tr("Absorb:Wind")); show=true; y+=18; break;
-        case -2: elemental_effects->addItem(tr("Nullify:Wind")); show=true; y+=18; break;
-        case -1: elemental_effects->addItem(tr("Halve:Wind")); show=true; y+=18; break;
-        case  0: break;
-        case +1: elemental_effects->addItem(tr("Attack:Wind")); show=true; y+=18;break;
-        };
-        switch(data.element_water(id))
-        {
-        case -3: elemental_effects->addItem(tr("Absorb:Water")); show=true; y+=18; break;
-        case -2: elemental_effects->addItem(tr("Nullify:Water")); show=true; y+=18; break;
-        case -1: elemental_effects->addItem(tr("Halve:Water")); show=true; y+=18; break;
-        case  0: break;
-        case +1: elemental_effects->addItem(tr("Attack:Water")); show=true; y+=18;break;
-        };
-        switch(data.element_gravity(id))
-        {
-        case -3: elemental_effects->addItem(tr("Absorb:Gravity")); show=true; y+=18; break;
-        case -2: elemental_effects->addItem(tr("Nullify:Gravity")); show=true; y+=18; break;
-        case -1: elemental_effects->addItem(tr("Halve:Gravity")); show=true; y+=18; break;
-        case  0: break;
-        case +1: elemental_effects->addItem(tr("Attack:Gravity")); show=true; y+=18;break;
-        };
-        switch(data.element_holy(id))
-        {
-        case -3: elemental_effects->addItem(tr("Absorb:Holy")); show=true; y+=18; break;
-        case -2: elemental_effects->addItem(tr("Nullify:Holy")); show=true; y+=18; break;
-        case -1: elemental_effects->addItem(tr("Halve:Holy")); show=true; y+=18; break;
-        case  0: break;
-        case +1: elemental_effects->addItem(tr("Attack:Holy")); show=true; y+=18;break;
-        };
-        switch(data.element_poison(id))
-        {
-        case -3: elemental_effects->addItem(tr("Absorb:Poison")); show=true; y+=18; break;
-        case -2: elemental_effects->addItem(tr("Nullify:Poison")); show=true; y+=18; break;
-        case -1: elemental_effects->addItem(tr("Halve:Poison")); show=true; y+=18; break;
-        case  0: break;
-        case +1: elemental_effects->addItem(tr("Attack:Poison")); show=true; y+=18;break;
-        };
-        switch(data.element_cut(id))
-        {
-        case -3: elemental_effects->addItem(tr("Absorb:Cut")); show=true; y+=18; break;
-        case -2: elemental_effects->addItem(tr("Nullify:Cut")); show=true; y+=18; break;
-        case -1: elemental_effects->addItem(tr("Halve:Cut")); show=true; y+=18; break;
-        case  0: break;
-        case +1: elemental_effects->addItem(tr("Attack:Cut")); show=true; y+=18;break;
-        };
-        switch(data.element_shoot(id))
-        {
-        case -3: elemental_effects->addItem(tr("Absorb:Shoot")); show=true; y+=18; break;
-        case -2: elemental_effects->addItem(tr("Nullify:Shoot")); show=true; y+=18; break;
-        case -1: elemental_effects->addItem(tr("Halve:Shoot")); show=true; y+=18; break;
-        case  0: break;
-        case +1: elemental_effects->addItem(tr("Attack:Shoot")); show=true; y+=18;break;
-        };
-        switch(data.element_punch(id))
-        {
-        case -3: elemental_effects->addItem(tr("Absorb:Punch")); show=true; y+=18; break;
-        case -2: elemental_effects->addItem(tr("Nullify:Punch")); show=true; y+=18; break;
-        case -1: elemental_effects->addItem(tr("Halve:Punch")); show=true; y+=18; break;
-        case  0: break;
-        case +1: elemental_effects->addItem(tr("Attack:Punch")); show=true; y+=18;break;
-        };
-        switch(data.element_hit(id))
-        {
-        case -3: elemental_effects->addItem(tr("Absorb:Hit")); show=true; y+=18; break;
-        case -2: elemental_effects->addItem(tr("Nullify:Hit")); show=true; y+=18; break;
-        case -1: elemental_effects->addItem(tr("Halve:Hit")); show=true; y+=18; break;
-        case  0: break;
-        case +1: elemental_effects->addItem(tr("Attack:Hit")); show=true; y+=18;break;
-        };
+            QString effect;
+            int element=0;
+            switch(i)
+            {
+                case 0: element=data.element_restoration(id); effect.append(tr("Restoration"));break;
+                case 1: element=data.element_fire(id); effect.append(tr("Fire")); break;
+                case 2: element=data.element_cold(id); effect.append(tr("Cold")); break;
+                case 3: element=data.element_lightning(id); effect.append(tr("Lightning")); break;
+                case 4: element=data.element_earth(id); effect.append(tr("Earth")); break;
+                case 5: element=data.element_wind(id); effect.append(tr("Wind")); break;
+                case 6: element=data.element_water(id); effect.append(tr("Water")); break;
+                case 7: element=data.element_gravity(id); effect.append(tr("Gravity")); break;
+                case 8: element=data.element_holy(id); effect.append(tr("Holy")); break;
+                case 9: element=data.element_poison(id); effect.append(tr("Poison")); break;
+                case 10: element=data.element_cut(id); effect.append(tr("Cut")); break;
+                case 11: element=data.element_shoot(id); effect.append(tr("Shoot")); break;
+                case 12: element=data.element_punch(id); effect.append(tr("Punch")); break;
+                case 13: element=data.element_hit(id); effect.append(tr("Hit")); break;
+            }
+            switch(element)
+            {
+                case -3: effect.prepend(tr("Absorb:"));break;
+                case -2: effect.prepend(tr("Nullify:"));break;
+                case -1: effect.prepend(tr("Halve:"));break;
+                case  0: effect.clear();break;
+                case +1: effect.prepend(tr("Attack:"));break;
+            }
+            if(!effect.isNull())
+            {
+                elemental_effects->addItem(effect);
+                show=true; y+=18;
+            }
+        }//end of for Loop
         if(y<=100){elemental_box->setFixedSize(160,y);}
         else{elemental_box->setFixedSize(160,100);}
-    }
-    elemental_box->setVisible(show);
-}
+   }//end of else
+   elemental_box->setVisible(show);
+   this->adjustSize();
+}//end of function
+
 void ItemPreview::status_info(int id)
 {
     int y=20;
@@ -398,192 +323,53 @@ void ItemPreview::status_info(int id)
     if(id<0 || id>319){/*invalid number*/}
     else
     {
-        switch(data.status_death(id))
+        for(int i=0;i<23;i++)
         {
-        case -2: status_effects->addItem(tr("Protect:Death")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Death")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Death")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Death")); show=true; y+=18;break;
-        };
-        switch(data.status_slow_numb(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Slow-Numb")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Slow-Numb")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Slow-Numb")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Slow-Numb")); show=true; y+=18;break;
-        };
-        switch(data.status_d_sentence(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:D.Sentence")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:D.Sentence")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:D.Sentence")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:D.Sentence")); show=true; y+=18;break;
-        };
-        switch(data.status_paralysis(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Paralysis")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Paralysis")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Paralysis")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Paralysis")); show=true; y+=18;break;
-        };
-        switch(data.status_petrify(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Petrify")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Petrify")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Petrify")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Petrify")); show=true; y+=18;break;
-        };
-        switch(data.status_silence(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Silence")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Silence")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Silence")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Silence")); show=true; y+=18;break;
-        };
-        switch(data.status_sleep(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Sleep")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Sleep")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Sleep")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Sleep")); show=true; y+=18;break;
-        };
-        switch(data.status_confusion(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Confusion")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Confusion")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Confusion")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Confusion")); show=true; y+=18;break;
-        };
-        switch(data.status_berserk(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Berserk")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Berserk")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Berserk")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Berserk")); show=true; y+=18;break;
-        };
-        switch(data.status_frog(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Frog")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Frog")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Frog")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Frog")); show=true; y+=18;break;
-        };
-        switch(data.status_mini(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Mini")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Mini")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Mini")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Mini")); show=true; y+=18;break;
-        };
-        switch(data.status_poison(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Poison")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Poison")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Poison")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Poison")); show=true; y+=18;break;
-        };
-        switch(data.status_fury(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Fury")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Fury")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Fury")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Fury")); show=true; y+=18;break;
-        };
-        switch(data.status_sadness(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Sadness")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Sadness")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Sadness")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Sadness")); show=true; y+=18;break;
-        };
-        switch(data.status_darkness(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Darkness")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Darkness")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Darkness")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Darkness")); show=true; y+=18;break;
-        };
-        switch(data.status_haste(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Haste")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Haste")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Haste")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Haste")); show=true; y+=18;break;
-        };
-        switch(data.status_slow(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Slow")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Slow")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Slow")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Slow")); show=true; y+=18;break;
-        };
-        switch(data.status_stop(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Stop")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Stop")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Stop")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Stop")); show=true; y+=18;break;
-        };
-        switch(data.status_barrier(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Barrier")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Barrier")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Barrier")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Barrier")); show=true; y+=18;break;
-        };
-        switch(data.status_m_barrier(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:M.Barrier")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:M.Barrier")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:M.Barrier")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:M.Barrier")); show=true; y+=18;break;
-        };
-        switch(data.status_reflect(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Reflect")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Reflect")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Reflect")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Reflect")); show=true; y+=18;break;
-        };
-        switch(data.status_regen(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Regen")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Regen")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Regen")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Regen")); show=true; y+=18;break;
-        };
-        switch(data.status_shield(id))
-        {
-        case -2: status_effects->addItem(tr("Protect:Shield")); show=true; y+=18; break;
-        case -1: status_effects->addItem(tr("Remove:Shield")); show=true; y+=18; break;
-        case  0: break;
-        case +1: status_effects->addItem(tr("Inflict:Shield")); show=true; y+=18; break;
-        case +2: status_effects->addItem(tr("OnBattle:Shield")); show=true; y+=18;break;
-        };
+            QString effect;
+            int status=0;
+            switch(i)
+            {
+                case 0: status=data.status_death(id); effect.append(tr("Death"));break;
+                case 1: status=data.status_slow_numb(id); effect.append(tr("Slow-Numb"));break;
+                case 2: status=data.status_d_sentence(id); effect.append(tr("D.Sentence"));break;
+                case 3: status=data.status_paralysis(id); effect.append(tr("Paralysis"));break;
+                case 4: status=data.status_petrify(id); effect.append(tr("Petrify"));break;
+                case 5: status=data.status_silence(id); effect.append(tr("Silence"));break;
+                case 6: status=data.status_sleep(id); effect.append(tr("Sleep"));break;
+                case 7: status=data.status_confusion(id); effect.append(tr("Confusion"));break;
+                case 8: status=data.status_berserk(id); effect.append(tr("Berserk"));break;
+                case 9: status=data.status_frog(id); effect.append(tr("Frog"));break;
+                case 10: status=data.status_mini(id); effect.append(tr("Mini"));break;
+                case 11: status=data.status_poison(id); effect.append(tr("Poison"));break;
+                case 12: status=data.status_fury(id); effect.append(tr("Fury"));break;
+                case 13: status=data.status_sadness(id); effect.append(tr("Sadness"));break;
+                case 14: status=data.status_darkness(id); effect.append(tr("Darkness"));break;
+                case 15: status=data.status_haste(id); effect.append(tr("Haste"));break;
+                case 16: status=data.status_slow(id); effect.append(tr("Slow"));break;
+                case 17: status=data.status_stop(id); effect.append(tr("Stop"));break;
+                case 18: status=data.status_barrier(id); effect.append(tr("Barrier"));break;
+                case 19: status=data.status_m_barrier(id); effect.append(tr("M.Barrier"));break;
+                case 20: status=data.status_reflect(id); effect.append(tr("Reflect"));break;
+                case 21: status=data.status_shield(id); effect.append(tr("Shield"));break;
+                case 22: status=data.status_regen(id); effect.append(tr("Regen"));break;
+            }
+            switch(status)
+            {
+                case -2: effect.prepend(tr("Protect:")); break;
+                case -1: effect.prepend(tr("Remove:")); break;
+                case  0: effect.clear();break;
+                case +1: effect.prepend(tr("Inflict:")); break;
+                case +2: effect.prepend(tr("OnBattle:"));break;
+            }
+            if(!effect.isNull())
+            {
+                status_effects->addItem(effect);
+                show=true; y+=18;
+            }
+        }//end of for Loop
         if(y<=100){status_box->setFixedSize(160,y);}
         else{status_box->setFixedSize(160,100);}
-    }
+    }//end of else
     status_box->setVisible(show);
-}
+    this->adjustSize();
+}//end of function
