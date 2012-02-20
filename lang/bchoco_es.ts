@@ -5,607 +5,191 @@
     <name>ItemPreview</name>
     <message>
         <source>Elemental Effects</source>
-        <translation type="unfinished">Efectos Elementales</translation>
+        <translation>Efectos Elementales</translation>
     </message>
     <message>
         <source>Status Effects</source>
-        <translation type="unfinished">Efectos de Estado</translation>
+        <translation>Efectos de Estado</translation>
     </message>
     <message>
         <source>APx%1</source>
-        <translation type="unfinished">AP%1</translation>
+        <translation>APx%1</translation>
     </message>
     <message>
-        <source>Absorb:Restoration</source>
-        <translation type="unfinished">Absorber: Restauración</translation>
+        <source>Restoration</source>
+        <translation>Restauración</translation>
     </message>
     <message>
-        <source>Nullify:Restoration</source>
-        <translation type="unfinished">Anula: Restauración</translation>
+        <source>Fire</source>
+        <translation>Fuego</translation>
     </message>
     <message>
-        <source>Halve:Restoration</source>
-        <translation type="unfinished">1/2: Restauración</translation>
+        <source>Cold</source>
+        <translation>Frío</translation>
     </message>
     <message>
-        <source>Attack:Restoration</source>
-        <translation type="unfinished">Ataque: Restauración</translation>
+        <source>Lightning</source>
+        <translation>Rayo</translation>
     </message>
     <message>
-        <source>Absorb:Fire</source>
-        <translation type="unfinished">Absorbe: Fuego</translation>
+        <source>Earth</source>
+        <translation>Tierra</translation>
     </message>
     <message>
-        <source>Nullify:Fire</source>
-        <translation type="unfinished">Anula: Fuego</translation>
+        <source>Wind</source>
+        <translation>Viento</translation>
     </message>
     <message>
-        <source>Halve:Fire</source>
-        <translation type="unfinished">1/2:Fire</translation>
+        <source>Water</source>
+        <translation>Agua</translation>
     </message>
     <message>
-        <source>Attack:Fire</source>
-        <translation type="unfinished">Ataque: Fuego</translation>
+        <source>Gravity</source>
+        <translation>Gravedad</translation>
     </message>
     <message>
-        <source>Absorb:Cold</source>
-        <translation type="unfinished">Absorbe: Frío</translation>
+        <source>Holy</source>
+        <translation>Sagrado</translation>
     </message>
     <message>
-        <source>Nullify:Cold</source>
-        <translation type="unfinished">Anula: Frío</translation>
+        <source>Poison</source>
+        <translation>Envenenar</translation>
     </message>
     <message>
-        <source>Halve:Cold</source>
-        <translation type="unfinished">1/2: Frío</translation>
+        <source>Cut</source>
+        <translation>Corte</translation>
     </message>
     <message>
-        <source>Attack:Cold</source>
-        <translation type="unfinished">Ataque: Frío</translation>
+        <source>Shoot</source>
+        <translation>Disparo</translation>
     </message>
     <message>
-        <source>Absorb:Lightning</source>
-        <translation type="unfinished">Absorbe: Rayo</translation>
+        <source>Punch</source>
+        <translation>Puñetazo</translation>
     </message>
     <message>
-        <source>Nullify:Lightning</source>
-        <translation type="unfinished">Anula: Rayo</translation>
+        <source>Hit</source>
+        <translation>Golpe</translation>
     </message>
     <message>
-        <source>Halve:Lightning</source>
-        <translation type="unfinished">1/2: Rayo</translation>
+        <source>Absorb:</source>
+        <translation>Absorbe:</translation>
     </message>
     <message>
-        <source>Attack:Lightning</source>
-        <translation type="unfinished">Ataque: Rayo</translation>
+        <source>Nullify:</source>
+        <translation>Anula:</translation>
     </message>
     <message>
-        <source>Absorb:Earth</source>
-        <translation type="unfinished">Absorbe: Tierra</translation>
+        <source>Halve:</source>
+        <translation>1/2:</translation>
     </message>
     <message>
-        <source>Nullify:Earth</source>
-        <translation type="unfinished">Anula: Tierra</translation>
+        <source>Attack:</source>
+        <translation>Ataque:</translation>
     </message>
     <message>
-        <source>Halve:Earth</source>
-        <translation type="unfinished">1/2: Tierra</translation>
+        <source>Death</source>
+        <translation>Muerte</translation>
     </message>
     <message>
-        <source>Attack:Earth</source>
-        <translation type="unfinished">Ataque: Tierra</translation>
+        <source>Slow-Numb</source>
+        <translation>Ardor</translation>
     </message>
     <message>
-        <source>Absorb:Wind</source>
-        <translation type="unfinished">Absorbe: Viento</translation>
+        <source>Paralysis</source>
+        <translation>Parálisis</translation>
     </message>
     <message>
-        <source>Nullify:Wind</source>
-        <translation type="unfinished">Anula: Viento</translation>
+        <source>Petrify</source>
+        <translation>Petrif</translation>
     </message>
     <message>
-        <source>Halve:Wind</source>
-        <translation type="unfinished">1/2: Viento</translation>
+        <source>Silence</source>
+        <translation>Silencio</translation>
     </message>
     <message>
-        <source>Attack:Wind</source>
-        <translation type="unfinished">Ataque: Viento</translation>
+        <source>Sleep</source>
+        <translation>Sueño</translation>
     </message>
     <message>
-        <source>Absorb:Water</source>
-        <translation type="unfinished">Absorbe: Agua</translation>
+        <source>Berserk</source>
+        <translation>Locura</translation>
     </message>
     <message>
-        <source>Nullify:Water</source>
-        <translation type="unfinished">Anula: Agua</translation>
+        <source>Frog</source>
+        <translation>Rana</translation>
     </message>
     <message>
-        <source>Halve:Water</source>
-        <translation type="unfinished">1/2: Agua</translation>
+        <source>Mini</source>
+        <translation>Pequeño</translation>
     </message>
     <message>
-        <source>Attack:Water</source>
-        <translation type="unfinished">Ataque: Agua</translation>
+        <source>Fury</source>
+        <translation>Furia</translation>
     </message>
     <message>
-        <source>Absorb:Gravity</source>
-        <translation type="unfinished">Absorbe: Gravedad</translation>
+        <source>Sadness</source>
+        <translation>Tristeza</translation>
     </message>
     <message>
-        <source>Nullify:Gravity</source>
-        <translation type="unfinished">Anula: Gravedad</translation>
+        <source>Darkness</source>
+        <translation>Oscuridad</translation>
     </message>
     <message>
-        <source>Halve:Gravity</source>
-        <translation type="unfinished">1/2: Gravedad</translation>
+        <source>Haste</source>
+        <translation>Prisa</translation>
     </message>
     <message>
-        <source>Attack:Gravity</source>
-        <translation type="unfinished">Ataque: Gravedad</translation>
+        <source>Slow</source>
+        <translation>Lento</translation>
     </message>
     <message>
-        <source>Absorb:Holy</source>
-        <translation type="unfinished">Absorbe: Sagrado</translation>
+        <source>Stop</source>
+        <translation>Alto</translation>
     </message>
     <message>
-        <source>Nullify:Holy</source>
-        <translation type="unfinished">Anula: Sagrado</translation>
+        <source>Barrier</source>
+        <translation>Barrera</translation>
     </message>
     <message>
-        <source>Halve:Holy</source>
-        <translation type="unfinished">1/2: Sagrado</translation>
+        <source>M.Barrier</source>
+        <translation>BarreraM</translation>
     </message>
     <message>
-        <source>Attack:Holy</source>
-        <translation type="unfinished">Ataque: Sagrado</translation>
+        <source>Reflect</source>
+        <translation>Reflejo</translation>
     </message>
     <message>
-        <source>Absorb:Poison</source>
-        <translation type="unfinished">Absorbe: Veneno</translation>
+        <source>Shield</source>
+        <translation>Escudo</translation>
     </message>
     <message>
-        <source>Nullify:Poison</source>
-        <translation type="unfinished">Anula: Veneno</translation>
+        <source>Regen</source>
+        <translation>Regenerar</translation>
     </message>
     <message>
-        <source>Halve:Poison</source>
-        <translation type="unfinished">1/2: Veneno</translation>
+        <source>Protect:</source>
+        <translation>Proteje:</translation>
     </message>
     <message>
-        <source>Attack:Poison</source>
-        <translation type="unfinished">Ataque: Veneno</translation>
+        <source>Remove:</source>
+        <translation>Elimina:</translation>
     </message>
     <message>
-        <source>Absorb:Cut</source>
-        <translation type="unfinished">Absorbe: Corte</translation>
+        <source>Inflict:</source>
+        <translation>Infringe:</translation>
     </message>
     <message>
-        <source>Nullify:Cut</source>
-        <translation type="unfinished">Anula: Corte</translation>
+        <source>OnBattle:</source>
+        <translation>EnBatalla:</translation>
     </message>
     <message>
-        <source>Halve:Cut</source>
-        <translation type="unfinished">1/2: Corte</translation>
+        <source>Confusion</source>
+        <translation>Confusión</translation>
     </message>
     <message>
-        <source>Attack:Cut</source>
-        <translation type="unfinished">Ataque: Corte</translation>
-    </message>
-    <message>
-        <source>Absorb:Shoot</source>
-        <translation type="unfinished">Absorbe: Disparo</translation>
-    </message>
-    <message>
-        <source>Nullify:Shoot</source>
-        <translation type="unfinished">Anula: Disparo</translation>
-    </message>
-    <message>
-        <source>Halve:Shoot</source>
-        <translation type="unfinished">1/2: Disparo</translation>
-    </message>
-    <message>
-        <source>Attack:Shoot</source>
-        <translation type="unfinished">Ataque: Disparo</translation>
-    </message>
-    <message>
-        <source>Absorb:Punch</source>
-        <translation type="unfinished">Absorbe: Puñetazo</translation>
-    </message>
-    <message>
-        <source>Nullify:Punch</source>
-        <translation type="unfinished">Anula: Puñetazo</translation>
-    </message>
-    <message>
-        <source>Halve:Punch</source>
-        <translation type="unfinished">1/2: Puñetazo</translation>
-    </message>
-    <message>
-        <source>Attack:Punch</source>
-        <translation type="unfinished">Ataque: Puñetazo</translation>
-    </message>
-    <message>
-        <source>Absorb:Hit</source>
-        <translation type="unfinished">Absorbe: Golpe</translation>
-    </message>
-    <message>
-        <source>Nullify:Hit</source>
-        <translation type="unfinished">Anula: Golpe</translation>
-    </message>
-    <message>
-        <source>Halve:Hit</source>
-        <translation type="unfinished">1/2: Golpe</translation>
-    </message>
-    <message>
-        <source>Attack:Hit</source>
-        <translation type="unfinished">Ataque: Golpe</translation>
-    </message>
-    <message>
-        <source>Protect:Death</source>
-        <translation type="unfinished">Proteje: Muerte</translation>
-    </message>
-    <message>
-        <source>Remove:Death</source>
-        <translation type="unfinished">Elimina: Muerte</translation>
-    </message>
-    <message>
-        <source>Inflict:Death</source>
-        <translation type="unfinished">Infringe: Muerte</translation>
-    </message>
-    <message>
-        <source>OnBattle:Death</source>
-        <translation type="unfinished">EnBatalla: Muerte</translation>
-    </message>
-    <message>
-        <source>Protect:Slow-Numb</source>
-        <translation type="unfinished">Proteje: Ardor</translation>
-    </message>
-    <message>
-        <source>Remove:Slow-Numb</source>
-        <translation type="unfinished">Elimina: Ardor</translation>
-    </message>
-    <message>
-        <source>Inflict:Slow-Numb</source>
-        <translation type="unfinished">Infringe: Ardor</translation>
-    </message>
-    <message>
-        <source>OnBattle:Slow-Numb</source>
-        <translation type="unfinished">EnBatalla: Ardor</translation>
-    </message>
-    <message>
-        <source>Protect:D.Sentence</source>
-        <translation type="unfinished">Proteje: Pena Capital</translation>
-    </message>
-    <message>
-        <source>Remove:D.Sentence</source>
-        <translation type="unfinished">Elimina: Pena Capital</translation>
-    </message>
-    <message>
-        <source>Inflict:D.Sentence</source>
-        <translation type="unfinished">Infringe: Pena Capital</translation>
-    </message>
-    <message>
-        <source>OnBattle:D.Sentence</source>
-        <translation type="unfinished">EnBatalla: Pena Capital</translation>
-    </message>
-    <message>
-        <source>Protect:Paralysis</source>
-        <translation type="unfinished">Proteje: Parálisis</translation>
-    </message>
-    <message>
-        <source>Remove:Paralysis</source>
-        <translation type="unfinished">Elimina: Parálisis</translation>
-    </message>
-    <message>
-        <source>Inflict:Paralysis</source>
-        <translation type="unfinished">Infringe: Parálisis</translation>
-    </message>
-    <message>
-        <source>OnBattle:Paralysis</source>
-        <translation type="unfinished">EnBatalla: Parálisis</translation>
-    </message>
-    <message>
-        <source>Protect:Petrify</source>
-        <translation type="unfinished">Proteje: Petrif.</translation>
-    </message>
-    <message>
-        <source>Remove:Petrify</source>
-        <translation type="unfinished">Elimina: Petrif.</translation>
-    </message>
-    <message>
-        <source>Inflict:Petrify</source>
-        <translation type="unfinished">Infringe: Petrif.</translation>
-    </message>
-    <message>
-        <source>OnBattle:Petrify</source>
-        <translation type="unfinished">EnBatalla: Petrif.</translation>
-    </message>
-    <message>
-        <source>Protect:Silence</source>
-        <translation type="unfinished">Proteje: Silencio</translation>
-    </message>
-    <message>
-        <source>Remove:Silence</source>
-        <translation type="unfinished">Elimina: Silencio</translation>
-    </message>
-    <message>
-        <source>Inflict:Silence</source>
-        <translation type="unfinished">Infringe: Silencio</translation>
-    </message>
-    <message>
-        <source>OnBattle:Silence</source>
-        <translation type="unfinished">EnBatalla: Silencio</translation>
-    </message>
-    <message>
-        <source>Protect:Sleep</source>
-        <translation type="unfinished">Proteje: Sueño</translation>
-    </message>
-    <message>
-        <source>Remove:Sleep</source>
-        <translation type="unfinished">Elimina: Sueño</translation>
-    </message>
-    <message>
-        <source>Inflict:Sleep</source>
-        <translation type="unfinished">Infringe: Sueño</translation>
-    </message>
-    <message>
-        <source>OnBattle:Sleep</source>
-        <translation type="unfinished">EnBatalla: Sueño</translation>
-    </message>
-    <message>
-        <source>Protect:Confusion</source>
-        <translation type="unfinished">Proteje: Confusión</translation>
-    </message>
-    <message>
-        <source>Remove:Confusion</source>
-        <translation type="unfinished">Elimina: Confusión</translation>
-    </message>
-    <message>
-        <source>Inflict:Confusion</source>
-        <translation type="unfinished">Infringe: Confusión</translation>
-    </message>
-    <message>
-        <source>OnBattle:Confusion</source>
-        <translation type="unfinished">EnBatalla: Confusión</translation>
-    </message>
-    <message>
-        <source>Protect:Berserk</source>
-        <translation type="unfinished">Proteje: Locura</translation>
-    </message>
-    <message>
-        <source>Remove:Berserk</source>
-        <translation type="unfinished">Elimina: Locura</translation>
-    </message>
-    <message>
-        <source>Inflict:Berserk</source>
-        <translation type="unfinished">Infringe: Locura</translation>
-    </message>
-    <message>
-        <source>OnBattle:Berserk</source>
-        <translation type="unfinished">EnBatalla: Locura</translation>
-    </message>
-    <message>
-        <source>Protect:Frog</source>
-        <translation type="unfinished">Proteje: Rana</translation>
-    </message>
-    <message>
-        <source>Remove:Frog</source>
-        <translation type="unfinished">Elimina: Rana</translation>
-    </message>
-    <message>
-        <source>Inflict:Frog</source>
-        <translation type="unfinished">Infringe: Rana</translation>
-    </message>
-    <message>
-        <source>OnBattle:Frog</source>
-        <translation type="unfinished">EnBatalla: Rana</translation>
-    </message>
-    <message>
-        <source>Protect:Mini</source>
-        <translation type="unfinished">Proteje: Pequeño</translation>
-    </message>
-    <message>
-        <source>Remove:Mini</source>
-        <translation type="unfinished">Elimina: Pequeño</translation>
-    </message>
-    <message>
-        <source>Inflict:Mini</source>
-        <translation type="unfinished">Infringe: Pequeño</translation>
-    </message>
-    <message>
-        <source>OnBattle:Mini</source>
-        <translation type="unfinished">EnBatalla: Pequeño</translation>
-    </message>
-    <message>
-        <source>Protect:Poison</source>
-        <translation type="unfinished">Proteje: Veneno</translation>
-    </message>
-    <message>
-        <source>Remove:Poison</source>
-        <translation type="unfinished">Elimina: Veneno</translation>
-    </message>
-    <message>
-        <source>Inflict:Poison</source>
-        <translation type="unfinished">Infringe: Veneno</translation>
-    </message>
-    <message>
-        <source>OnBattle:Poison</source>
-        <translation type="unfinished">EnBatalla: Veneno</translation>
-    </message>
-    <message>
-        <source>Protect:Fury</source>
-        <translation type="unfinished">Proteje: Furia</translation>
-    </message>
-    <message>
-        <source>Remove:Fury</source>
-        <translation type="unfinished">Elimina: Furia</translation>
-    </message>
-    <message>
-        <source>Inflict:Fury</source>
-        <translation type="unfinished">Infringe: Furia</translation>
-    </message>
-    <message>
-        <source>OnBattle:Fury</source>
-        <translation type="unfinished">EnBatalla: Furia</translation>
-    </message>
-    <message>
-        <source>Protect:Sadness</source>
-        <translation type="unfinished">Proteje: Tristeza</translation>
-    </message>
-    <message>
-        <source>Remove:Sadness</source>
-        <translation type="unfinished">Elimina: Tristeza</translation>
-    </message>
-    <message>
-        <source>Inflict:Sadness</source>
-        <translation type="unfinished">Infringe: Tristeza</translation>
-    </message>
-    <message>
-        <source>OnBattle:Sadness</source>
-        <translation type="unfinished">EnBatalla: Tristeza</translation>
-    </message>
-    <message>
-        <source>Protect:Darkness</source>
-        <translation type="unfinished">Proteje: Oscuridad</translation>
-    </message>
-    <message>
-        <source>Remove:Darkness</source>
-        <translation type="unfinished">Elimina: Oscuridad</translation>
-    </message>
-    <message>
-        <source>Inflict:Darkness</source>
-        <translation type="unfinished">Infringe: Oscuridad</translation>
-    </message>
-    <message>
-        <source>OnBattle:Darkness</source>
-        <translation type="unfinished">EnBatalla: Oscuridad</translation>
-    </message>
-    <message>
-        <source>Protect:Haste</source>
-        <translation type="unfinished">Proteje: Prisa</translation>
-    </message>
-    <message>
-        <source>Remove:Haste</source>
-        <translation type="unfinished">Elimina: Prisa</translation>
-    </message>
-    <message>
-        <source>Inflict:Haste</source>
-        <translation type="unfinished">Infringe: Prisa</translation>
-    </message>
-    <message>
-        <source>OnBattle:Haste</source>
-        <translation type="unfinished">EnBatalla: Prisa</translation>
-    </message>
-    <message>
-        <source>Protect:Slow</source>
-        <translation type="unfinished">Proteje: Lento</translation>
-    </message>
-    <message>
-        <source>Remove:Slow</source>
-        <translation type="unfinished">Elimina: Lento</translation>
-    </message>
-    <message>
-        <source>Inflict:Slow</source>
-        <translation type="unfinished">Infringe: Lento</translation>
-    </message>
-    <message>
-        <source>OnBattle:Slow</source>
-        <translation type="unfinished">EnBatalla: Lento</translation>
-    </message>
-    <message>
-        <source>Protect:Stop</source>
-        <translation type="unfinished">Proteje: Alto</translation>
-    </message>
-    <message>
-        <source>Remove:Stop</source>
-        <translation type="unfinished">Elimina: Alto</translation>
-    </message>
-    <message>
-        <source>Inflict:Stop</source>
-        <translation type="unfinished">Infringe: Alto</translation>
-    </message>
-    <message>
-        <source>OnBattle:Stop</source>
-        <translation type="unfinished">EnBatalla: Alto</translation>
-    </message>
-    <message>
-        <source>Protect:Barrier</source>
-        <translation type="unfinished">Proteje: Barrera</translation>
-    </message>
-    <message>
-        <source>Remove:Barrier</source>
-        <translation type="unfinished">Elimina: Barrera</translation>
-    </message>
-    <message>
-        <source>Inflict:Barrier</source>
-        <translation type="unfinished">Infringe: Barrera</translation>
-    </message>
-    <message>
-        <source>OnBattle:Barrier</source>
-        <translation type="unfinished">EnBatalla: Barrera</translation>
-    </message>
-    <message>
-        <source>Protect:M.Barrier</source>
-        <translation type="unfinished">Proteje: BarreraM</translation>
-    </message>
-    <message>
-        <source>Remove:M.Barrier</source>
-        <translation type="unfinished">Elimina: BarreraM</translation>
-    </message>
-    <message>
-        <source>Inflict:M.Barrier</source>
-        <translation type="unfinished">Infringe: BarreraM</translation>
-    </message>
-    <message>
-        <source>OnBattle:M.Barrier</source>
-        <translation type="unfinished">EnBatalla: BarreraM</translation>
-    </message>
-    <message>
-        <source>Protect:Reflect</source>
-        <translation type="unfinished">Proteje: Reflejo</translation>
-    </message>
-    <message>
-        <source>Remove:Reflect</source>
-        <translation type="unfinished">Elimina: Reflejo</translation>
-    </message>
-    <message>
-        <source>Inflict:Reflect</source>
-        <translation type="unfinished">Infringe: Reflejo</translation>
-    </message>
-    <message>
-        <source>OnBattle:Reflect</source>
-        <translation type="unfinished">EnBatalla: Reflejo</translation>
-    </message>
-    <message>
-        <source>Protect:Regen</source>
-        <translation type="unfinished">Proteje: Regenerar</translation>
-    </message>
-    <message>
-        <source>Remove:Regen</source>
-        <translation type="unfinished">Elimina: Regenerar</translation>
-    </message>
-    <message>
-        <source>Inflict:Regen</source>
-        <translation type="unfinished">Infringe: Regenerar</translation>
-    </message>
-    <message>
-        <source>OnBattle:Regen</source>
-        <translation type="unfinished">EnBatalla: Regenerar</translation>
-    </message>
-    <message>
-        <source>Protect:Shield</source>
-        <translation type="unfinished">Proteje: Escudo</translation>
-    </message>
-    <message>
-        <source>Remove:Shield</source>
-        <translation type="unfinished">Elimina: Escudo</translation>
-    </message>
-    <message>
-        <source>Inflict:Shield</source>
-        <translation type="unfinished">Infringe: Escudo</translation>
-    </message>
-    <message>
-        <source>OnBattle:Shield</source>
-        <translation type="unfinished">EnBatalla: Escudo</translation>
+        <source>D.Sentence</source>
+        <translation>Pena Capital</translation>
     </message>
 </context>
 <context>

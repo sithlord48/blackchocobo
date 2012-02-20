@@ -16,596 +16,180 @@
         <translation>APx%1</translation>
     </message>
     <message>
-        <source>Absorb:Restoration</source>
-        <translation>Absorbe:Restauration</translation>
+        <source>Restoration</source>
+        <translation>Restauration</translation>
     </message>
     <message>
-        <source>Nullify:Restoration</source>
-        <translation>Annule:Restauration</translation>
+        <source>Fire</source>
+        <translation>Feu</translation>
     </message>
     <message>
-        <source>Halve:Restoration</source>
-        <translation>Moitié:Restauration</translation>
+        <source>Cold</source>
+        <translation>Glace</translation>
     </message>
     <message>
-        <source>Attack:Restoration</source>
-        <translation>Attaque:Restauration</translation>
+        <source>Lightning</source>
+        <translation>Foudre</translation>
     </message>
     <message>
-        <source>Absorb:Fire</source>
-        <translation>Absorbe:Feu</translation>
+        <source>Earth</source>
+        <translation>Terre</translation>
     </message>
     <message>
-        <source>Nullify:Fire</source>
-        <translation>Annule:Feu</translation>
+        <source>Wind</source>
+        <translation>Vent</translation>
     </message>
     <message>
-        <source>Halve:Fire</source>
-        <translation>Moitié:Feu</translation>
+        <source>Water</source>
+        <translation>Eau</translation>
     </message>
     <message>
-        <source>Attack:Fire</source>
-        <translation>Attaque:Feu</translation>
+        <source>Gravity</source>
+        <translation>Gravité</translation>
     </message>
     <message>
-        <source>Absorb:Cold</source>
-        <translation>Absorbe:Glace</translation>
+        <source>Holy</source>
+        <translation>Sacré</translation>
     </message>
     <message>
-        <source>Nullify:Cold</source>
-        <translation>Annule:Glace</translation>
+        <source>Poison</source>
+        <translation>Poison</translation>
     </message>
     <message>
-        <source>Halve:Cold</source>
-        <translation>Moitié:Glace</translation>
+        <source>Cut</source>
+        <translation>CoupLame</translation>
     </message>
     <message>
-        <source>Attack:Cold</source>
-        <translation>Attaque:Glace</translation>
+        <source>Shoot</source>
+        <translation>CoupFeu</translation>
     </message>
     <message>
-        <source>Absorb:Lightning</source>
-        <translation>Absorbe:Foudre</translation>
+        <source>Punch</source>
+        <translation>coupPoing</translation>
     </message>
     <message>
-        <source>Nullify:Lightning</source>
-        <translation>Annule:Foudre</translation>
+        <source>Hit</source>
+        <translation>Frapper</translation>
     </message>
     <message>
-        <source>Halve:Lightning</source>
-        <translation>Moitié:Foudre</translation>
+        <source>Absorb:</source>
+        <translation>Absorbe:</translation>
     </message>
     <message>
-        <source>Attack:Lightning</source>
-        <translation>Attaque:Foudre</translation>
+        <source>Nullify:</source>
+        <translation>Annule:</translation>
     </message>
     <message>
-        <source>Absorb:Earth</source>
-        <translation>Absorbe:Terre</translation>
+        <source>Halve:</source>
+        <translation>Moitié:</translation>
     </message>
     <message>
-        <source>Nullify:Earth</source>
-        <translation>Annule:Terre</translation>
+        <source>Attack:</source>
+        <translation>Attaque:</translation>
     </message>
     <message>
-        <source>Halve:Earth</source>
-        <translation>Moitié:Terre</translation>
+        <source>Death</source>
+        <translation>Mort</translation>
     </message>
     <message>
-        <source>Attack:Earth</source>
-        <translation>Attaque:Terre</translation>
+        <source>Slow-Numb</source>
+        <translation>Lente-apathie</translation>
     </message>
     <message>
-        <source>Absorb:Wind</source>
-        <translation>Absorbe:Vent</translation>
+        <source>Paralysis</source>
+        <translation>Paralysie</translation>
     </message>
     <message>
-        <source>Nullify:Wind</source>
-        <translation>Annule:Vent</translation>
+        <source>Petrify</source>
+        <translation>Pétrifier</translation>
     </message>
     <message>
-        <source>Halve:Wind</source>
-        <translation>Moitié:Vent</translation>
+        <source>Silence</source>
+        <translation>Silence</translation>
     </message>
     <message>
-        <source>Attack:Wind</source>
-        <translation>Attaque:Vent</translation>
+        <source>Sleep</source>
+        <translation>Sommeil</translation>
     </message>
     <message>
-        <source>Absorb:Water</source>
-        <translation>Absorbe:Eau</translation>
+        <source>Berserk</source>
+        <translation>Folie</translation>
     </message>
     <message>
-        <source>Nullify:Water</source>
-        <translation>Annule:Eau</translation>
+        <source>Frog</source>
+        <translation>Grenouille</translation>
     </message>
     <message>
-        <source>Halve:Water</source>
-        <translation>Moitié:Eau</translation>
+        <source>Mini</source>
+        <translation>Mini</translation>
     </message>
     <message>
-        <source>Attack:Water</source>
-        <translation>Attaque:Eau</translation>
+        <source>Fury</source>
+        <translation>Fureur</translation>
     </message>
     <message>
-        <source>Absorb:Gravity</source>
-        <translation>Absorbe:Gravité</translation>
+        <source>Sadness</source>
+        <translation>Tristesse</translation>
     </message>
     <message>
-        <source>Nullify:Gravity</source>
-        <translation>Annule:Gravité</translation>
+        <source>Darkness</source>
+        <translation>Obscurité</translation>
     </message>
     <message>
-        <source>Halve:Gravity</source>
-        <translation>Moitié:Gravité</translation>
+        <source>Haste</source>
+        <translation>Hâte</translation>
     </message>
     <message>
-        <source>Attack:Gravity</source>
-        <translation>Attaque:Gravité</translation>
+        <source>Slow</source>
+        <translation>Lent</translation>
     </message>
     <message>
-        <source>Absorb:Holy</source>
-        <translation>Absorbe:Sacré</translation>
+        <source>Stop</source>
+        <translation>Stop</translation>
     </message>
     <message>
-        <source>Nullify:Holy</source>
-        <translation>Annule:Sacré</translation>
+        <source>Barrier</source>
+        <translation>Barrière</translation>
     </message>
     <message>
-        <source>Halve:Holy</source>
-        <translation>Moitié:Sacré</translation>
+        <source>M.Barrier</source>
+        <translation>BarrM</translation>
     </message>
     <message>
-        <source>Attack:Holy</source>
-        <translation>Attaque:Sacré</translation>
+        <source>Reflect</source>
+        <translation>Reflet</translation>
     </message>
     <message>
-        <source>Absorb:Poison</source>
-        <translation>Absorbe:Poison</translation>
+        <source>Shield</source>
+        <translation>Bouclier</translation>
     </message>
     <message>
-        <source>Nullify:Poison</source>
-        <translation>Annule:Poison</translation>
+        <source>Regen</source>
+        <translation>Regen</translation>
     </message>
     <message>
-        <source>Halve:Poison</source>
-        <translation>Moitié:Poison</translation>
+        <source>Protect:</source>
+        <translation>Protège:</translation>
     </message>
     <message>
-        <source>Attack:Poison</source>
-        <translation>Attaque:Poison</translation>
+        <source>Remove:</source>
+        <translation>Enlève:</translation>
     </message>
     <message>
-        <source>Absorb:Cut</source>
-        <translation>Absorbe:CoupLame</translation>
+        <source>Inflict:</source>
+        <translation>Inflige:</translation>
     </message>
     <message>
-        <source>Nullify:Cut</source>
-        <translation>Annule:CoupLame</translation>
+        <source>OnBattle:</source>
+        <translation>EnCombat:</translation>
     </message>
     <message>
-        <source>Halve:Cut</source>
-        <translation>Moitié:CoupLame</translation>
+        <source>Confusion</source>
+        <translation>Confusion</translation>
     </message>
     <message>
-        <source>Attack:Cut</source>
-        <translation>Attaque:CoupLame</translation>
-    </message>
-    <message>
-        <source>Absorb:Shoot</source>
-        <translation>Absorbe:CoupFeu</translation>
-    </message>
-    <message>
-        <source>Nullify:Shoot</source>
-        <translation>Annule:CoupFeu</translation>
-    </message>
-    <message>
-        <source>Halve:Shoot</source>
-        <translation>Moitié:CoupFeu</translation>
-    </message>
-    <message>
-        <source>Attack:Shoot</source>
-        <translation>Attaque:CoupFeu</translation>
-    </message>
-    <message>
-        <source>Absorb:Punch</source>
-        <translation>Absorbe:coupPoing</translation>
-    </message>
-    <message>
-        <source>Nullify:Punch</source>
-        <translation>Annule:coupPoing</translation>
-    </message>
-    <message>
-        <source>Halve:Punch</source>
-        <translation>Moitié:coupPoing</translation>
-    </message>
-    <message>
-        <source>Attack:Punch</source>
-        <translation>Attaque:coupPoing</translation>
-    </message>
-    <message>
-        <source>Absorb:Hit</source>
-        <translation>Absorbe:Frapper</translation>
-    </message>
-    <message>
-        <source>Nullify:Hit</source>
-        <translation>Annule:Frapper</translation>
-    </message>
-    <message>
-        <source>Halve:Hit</source>
-        <translation>Moitié:Frapper</translation>
-    </message>
-    <message>
-        <source>Attack:Hit</source>
-        <translation>Attaque:Frapper</translation>
-    </message>
-    <message>
-        <source>Protect:Death</source>
-        <translation>Protège:Mort</translation>
-    </message>
-    <message>
-        <source>Remove:Death</source>
-        <translation>Enlève:Mort</translation>
-    </message>
-    <message>
-        <source>Inflict:Death</source>
-        <translation>Inflige:Mort</translation>
-    </message>
-    <message>
-        <source>OnBattle:Death</source>
-        <translation>EnCombat:Mort</translation>
-    </message>
-    <message>
-        <source>Protect:Slow-Numb</source>
-        <translation>Protège:Lente-apathie</translation>
-    </message>
-    <message>
-        <source>Remove:Slow-Numb</source>
-        <translation>Enlève:Lente-apathie</translation>
-    </message>
-    <message>
-        <source>Inflict:Slow-Numb</source>
-        <translation>Inflige:Lente-apathie</translation>
-    </message>
-    <message>
-        <source>OnBattle:Slow-Numb</source>
-        <translation>EnCombat:Lente-apathie</translation>
-    </message>
-    <message>
-        <source>Protect:D.Sentence</source>
-        <translation>Protège:PeineDeMort</translation>
-    </message>
-    <message>
-        <source>Remove:D.Sentence</source>
-        <translation>Enlève:PeineDeMort</translation>
-    </message>
-    <message>
-        <source>Inflict:D.Sentence</source>
-        <translation>Inflige:PeineDeMort</translation>
-    </message>
-    <message>
-        <source>OnBattle:D.Sentence</source>
-        <translation>EnCombat:PeineDeMort</translation>
-    </message>
-    <message>
-        <source>Protect:Paralysis</source>
-        <translation>Protège:Paralysie</translation>
-    </message>
-    <message>
-        <source>Remove:Paralysis</source>
-        <translation>Enlève:Paralysie</translation>
-    </message>
-    <message>
-        <source>Inflict:Paralysis</source>
-        <translation>Inflige:Paralysie</translation>
-    </message>
-    <message>
-        <source>OnBattle:Paralysis</source>
-        <translation>EnCombat:Paralysie</translation>
-    </message>
-    <message>
-        <source>Protect:Petrify</source>
-        <translation>Protège:Pétrifier</translation>
-    </message>
-    <message>
-        <source>Remove:Petrify</source>
-        <translation>Enlève:Pétrifier</translation>
-    </message>
-    <message>
-        <source>Inflict:Petrify</source>
-        <translation>Inflige:Pétrifier</translation>
-    </message>
-    <message>
-        <source>OnBattle:Petrify</source>
-        <translation>EnCombat:Pétrifier</translation>
-    </message>
-    <message>
-        <source>Protect:Silence</source>
-        <translation>Protège:Silence</translation>
-    </message>
-    <message>
-        <source>Remove:Silence</source>
-        <translation>Enlève:Silence</translation>
-    </message>
-    <message>
-        <source>Inflict:Silence</source>
-        <translation>Inflige:Silence</translation>
-    </message>
-    <message>
-        <source>OnBattle:Silence</source>
-        <translation>EnCombat:Silence</translation>
-    </message>
-    <message>
-        <source>Protect:Sleep</source>
-        <translation>Protège:Sommeil</translation>
-    </message>
-    <message>
-        <source>Remove:Sleep</source>
-        <translation>Enlève:Sommeil</translation>
-    </message>
-    <message>
-        <source>Inflict:Sleep</source>
-        <translation>Inflige:Sommeil</translation>
-    </message>
-    <message>
-        <source>OnBattle:Sleep</source>
-        <translation>EnCombat:Sommeil</translation>
-    </message>
-    <message>
-        <source>Protect:Confusion</source>
-        <translation>Protège:Confusion</translation>
-    </message>
-    <message>
-        <source>Remove:Confusion</source>
-        <translation>Enlève:Confusion</translation>
-    </message>
-    <message>
-        <source>Inflict:Confusion</source>
-        <translation>Inflige:Confusion</translation>
-    </message>
-    <message>
-        <source>OnBattle:Confusion</source>
-        <translation>EnCombat:Confusion</translation>
-    </message>
-    <message>
-        <source>Protect:Berserk</source>
-        <translation>Protège:Folie</translation>
-    </message>
-    <message>
-        <source>Remove:Berserk</source>
-        <translation>Enlève:Folie</translation>
-    </message>
-    <message>
-        <source>Inflict:Berserk</source>
-        <translation>Inflige:Folie</translation>
-    </message>
-    <message>
-        <source>OnBattle:Berserk</source>
-        <translation>EnCombat:Folie</translation>
-    </message>
-    <message>
-        <source>Protect:Frog</source>
-        <translation>Protège:Grenouille</translation>
-    </message>
-    <message>
-        <source>Remove:Frog</source>
-        <translation>Enlève:Grenouille</translation>
-    </message>
-    <message>
-        <source>Inflict:Frog</source>
-        <translation>Inflige:Grenouille</translation>
-    </message>
-    <message>
-        <source>OnBattle:Frog</source>
-        <translation>EnCombat:Grenouille</translation>
-    </message>
-    <message>
-        <source>Protect:Mini</source>
-        <translation>Protège:Mini</translation>
-    </message>
-    <message>
-        <source>Remove:Mini</source>
-        <translation>Enlève:Mini</translation>
-    </message>
-    <message>
-        <source>Inflict:Mini</source>
-        <translation>Inflige:Mini</translation>
-    </message>
-    <message>
-        <source>OnBattle:Mini</source>
-        <translation>EnCombat:Mini</translation>
-    </message>
-    <message>
-        <source>Protect:Poison</source>
-        <translation>Protège:Poison</translation>
-    </message>
-    <message>
-        <source>Remove:Poison</source>
-        <translation>Enlève:Poison</translation>
-    </message>
-    <message>
-        <source>Inflict:Poison</source>
-        <translation>Inflige:Poison</translation>
-    </message>
-    <message>
-        <source>OnBattle:Poison</source>
-        <translation>EnCombat:Poison</translation>
-    </message>
-    <message>
-        <source>Protect:Fury</source>
-        <translation>Protège:Fureur</translation>
-    </message>
-    <message>
-        <source>Remove:Fury</source>
-        <translation>Enlève:Fureur</translation>
-    </message>
-    <message>
-        <source>Inflict:Fury</source>
-        <translation>Inflige:Fureur</translation>
-    </message>
-    <message>
-        <source>OnBattle:Fury</source>
-        <translation>EnCombat:Fureur</translation>
-    </message>
-    <message>
-        <source>Protect:Sadness</source>
-        <translation>Protège:Tristesse</translation>
-    </message>
-    <message>
-        <source>Remove:Sadness</source>
-        <translation>Enlève:Tristesse</translation>
-    </message>
-    <message>
-        <source>Inflict:Sadness</source>
-        <translation>Inflige:Tristesse</translation>
-    </message>
-    <message>
-        <source>OnBattle:Sadness</source>
-        <translation>EnCombat:Tristesse</translation>
-    </message>
-    <message>
-        <source>Protect:Darkness</source>
-        <translation>Protège:Obscurité</translation>
-    </message>
-    <message>
-        <source>Remove:Darkness</source>
-        <translation>Enlève:Obscurité</translation>
-    </message>
-    <message>
-        <source>Inflict:Darkness</source>
-        <translation>Inflige:Obscurité</translation>
-    </message>
-    <message>
-        <source>OnBattle:Darkness</source>
-        <translation>EnCombat:Obscurité</translation>
-    </message>
-    <message>
-        <source>Protect:Haste</source>
-        <translation>Protège:Hâte</translation>
-    </message>
-    <message>
-        <source>Remove:Haste</source>
-        <translation>Enlève:Hâte</translation>
-    </message>
-    <message>
-        <source>Inflict:Haste</source>
-        <translation>Inflige:Hâte</translation>
-    </message>
-    <message>
-        <source>OnBattle:Haste</source>
-        <translation>EnCombat:Hâte</translation>
-    </message>
-    <message>
-        <source>Protect:Slow</source>
-        <translation>Protège:Lent</translation>
-    </message>
-    <message>
-        <source>Remove:Slow</source>
-        <translation>Enlève:Lent</translation>
-    </message>
-    <message>
-        <source>Inflict:Slow</source>
-        <translation>Inflige:Lent</translation>
-    </message>
-    <message>
-        <source>OnBattle:Slow</source>
-        <translation>EnCombat:Lent</translation>
-    </message>
-    <message>
-        <source>Protect:Stop</source>
-        <translation>Protège:Stop</translation>
-    </message>
-    <message>
-        <source>Remove:Stop</source>
-        <translation>Enlève:Stop</translation>
-    </message>
-    <message>
-        <source>Inflict:Stop</source>
-        <translation>Inflige:Stop</translation>
-    </message>
-    <message>
-        <source>OnBattle:Stop</source>
-        <translation>EnCombat:Stop</translation>
-    </message>
-    <message>
-        <source>Protect:Barrier</source>
-        <translation>Protège:Barrière</translation>
-    </message>
-    <message>
-        <source>Remove:Barrier</source>
-        <translation>Enlève:Barrière</translation>
-    </message>
-    <message>
-        <source>Inflict:Barrier</source>
-        <translation>Inflige:Barrière</translation>
-    </message>
-    <message>
-        <source>OnBattle:Barrier</source>
-        <translation>EnCombat:Barrière</translation>
-    </message>
-    <message>
-        <source>Protect:M.Barrier</source>
-        <translation>Protège:BarrM</translation>
-    </message>
-    <message>
-        <source>Remove:M.Barrier</source>
-        <translation>Enlève:BarrM</translation>
-    </message>
-    <message>
-        <source>Inflict:M.Barrier</source>
-        <translation>Inflige:BarrM</translation>
-    </message>
-    <message>
-        <source>OnBattle:M.Barrier</source>
-        <translation>EnCombat:BarrM</translation>
-    </message>
-    <message>
-        <source>Protect:Reflect</source>
-        <translation>Protège:Reflet</translation>
-    </message>
-    <message>
-        <source>Remove:Reflect</source>
-        <translation>Enlève:Reflet</translation>
-    </message>
-    <message>
-        <source>Inflict:Reflect</source>
-        <translation>Inflige:Reflet</translation>
-    </message>
-    <message>
-        <source>OnBattle:Reflect</source>
-        <translation>EnCombat:Reflet</translation>
-    </message>
-    <message>
-        <source>Protect:Regen</source>
-        <translation>Protège:Regen</translation>
-    </message>
-    <message>
-        <source>Remove:Regen</source>
-        <translation>Enlève:Regen</translation>
-    </message>
-    <message>
-        <source>Inflict:Regen</source>
-        <translation>Inflige:Regen</translation>
-    </message>
-    <message>
-        <source>OnBattle:Regen</source>
-        <translation>EnCombat:Regen</translation>
-    </message>
-    <message>
-        <source>Protect:Shield</source>
-        <translation>Protège:Bouclier</translation>
-    </message>
-    <message>
-        <source>Remove:Shield</source>
-        <translation>Enlève:Bouclier</translation>
-    </message>
-    <message>
-        <source>Inflict:Shield</source>
-        <translation>Inflige:Bouclier</translation>
-    </message>
-    <message>
-        <source>OnBattle:Shield</source>
-        <translation>EnCombat:Bouclier</translation>
+        <source>D.Sentence</source>
+        <translation>Peine de mort</translation>
     </message>
 </context>
 <context>
@@ -2534,7 +2118,7 @@
     </message>
     <message>
         <source>Shinra Bldg 64F.</source>
-        <translation>Bât. Shinra 69ème ét. {64F?}</translation>
+        <translation>Bât. Shinra 64ème ét.</translation>
     </message>
     <message>
         <source>7th Heaven</source>
