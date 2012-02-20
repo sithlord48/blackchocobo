@@ -14,49 +14,51 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 
-#ifndef ITEMPREVIEW_H
-#define ITEMPREVIEW_H
+#ifndef DIALOGPREVIEW_H
+#define DIALOGPREVIEW_H
 
-//Besure to set FF7Item Path!
-#include "static_data/FF7Item.h"
-#include <QtGui/QWidget>
 #include <QtGui/QLabel>
-#include <QtGui/QGroupBox>
-#include <QtGui/QHBoxLayout>
-#include <QtGui/QListWidget>
+#include <QtGui/QPushButton>
+#include <QColorDialog>
 
-class ItemPreview : public QWidget
+class DialogPreview : public QLabel
 {
-Q_OBJECT
-  public:
-    ItemPreview(QWidget *parent=0);
-    void setItem(int);
-  private:
-    void setName(QString);
-    void setDesc(QString);
-    void setIcon(QPixmap);
-    void elemental_info(int);
-    void status_info(int);
-    QLabel *lbl_name;
-    QLabel *lbl_desc;
-    QLabel *lbl_icon;
-    QLabel *lbl_slot_1;
-    QLabel *lbl_slot_2;
-    QLabel *lbl_slot_3;
-    QLabel *lbl_slot_4;
-    QLabel *lbl_slot_5;
-    QLabel *lbl_slot_6;
-    QLabel *lbl_slot_7;
-    QLabel *lbl_slot_8;
-    QLabel *lbl_m_link_1;
-    QLabel *lbl_m_link_2;
-    QLabel *lbl_m_link_3;
-    QLabel *lbl_m_link_4;
-    QGroupBox *materia_slot_box;
-    QGroupBox *elemental_box;
-    QGroupBox *status_box;
-    QListWidget *elemental_effects;
-    QListWidget *status_effects;
-    FF7Item data;
+    Q_OBJECT
+public:
+    DialogPreview(QWidget *parent = 0);
+    void SetLLeft(QColor);
+    void SetULeft(QColor);
+    void SetLRight(QColor);
+    void SetURight(QColor);
+    QColor ll();
+    QColor lr();
+    QColor ul();
+    QColor ur();
+    QPushButton *btn_ul;
+    QPushButton *btn_ur;
+    QPushButton *btn_ll;
+    QPushButton *btn_lr;
+private:
+    void draw();
+    QColor upper_left;
+    QColor upper_right;
+    QColor lower_left;
+    QColor lower_right;
+
+
+protected:
+    void resizeEvent(QResizeEvent*);
+private slots:
+     void btn_ul_clicked();
+     void btn_ur_clicked();
+     void btn_ll_clicked();
+     void btn_lr_clicked();
+signals:
+     void LL_ColorChanged(QColor color);
+     void LR_ColorChanged(QColor color);
+     void UL_ColorChanged(QColor color);
+     void UR_ColorChanged(QColor color);
+
 };
-#endif//ITEMPREVIEW_H
+
+#endif

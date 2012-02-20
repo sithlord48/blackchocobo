@@ -3284,34 +3284,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Upper Left</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>R</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>G</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>B</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Upper Right</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lower Left</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lower Right</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Aerith</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3625,10 +3597,6 @@
     </message>
     <message>
         <source>Field Message Speed:</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Dialog Color</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3995,14 +3963,6 @@
     </message>
     <message>
         <source>In-game Dialog Preview</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
-&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
-p, li { white-space: pre-wrap; }
-&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:&apos;Verdana&apos;; font-size:14pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p align=&quot;center&quot; style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
