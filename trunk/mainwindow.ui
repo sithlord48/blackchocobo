@@ -8131,7 +8131,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <number>3</number>
               </property>
               <item>
-               <widget class="QFrame" name="frame">
+               <widget class="QFrame" name="frame_1">
                 <layout class="QHBoxLayout" name="horizontalLayout_161">
                  <property name="margin">
                   <number>0</number>
