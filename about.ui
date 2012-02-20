@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>369</width>
-    <height>388</height>
+    <width>367</width>
+    <height>386</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -498,7 +498,12 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
-           <string>New: Show Item Descriptions in tooltip</string>
+           <string>New: Dialog Preview Widget</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>New: Item Preview Widget</string>
           </property>
          </item>
          <item>
@@ -509,6 +514,11 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>New: Added Support for French PSX (BASCES-00868)</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fixed: E.Skills not updating in some cases</string>
           </property>
          </item>
          <item>

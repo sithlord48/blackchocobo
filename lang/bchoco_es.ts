@@ -7530,12 +7530,20 @@ p, li { white-space: pre-wrap; }
         <translation>Nuevo: Añadido Soporte para version francesa de PSX (BASCES 00868)</translation>
     </message>
     <message>
-        <source>New: Show Item Descriptions in tooltip</source>
-        <translation>Nuevo: La descripción de objetos se muestra al poner el ratón sobre los mismos</translation>
-    </message>
-    <message>
         <source>New: Static Data Classes</source>
         <translation>Nuevo: Clases de datos estáticas</translation>
+    </message>
+    <message>
+        <source>New: Dialog Preview Widget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Item Preview Widget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: E.Skills not updating in some cases</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

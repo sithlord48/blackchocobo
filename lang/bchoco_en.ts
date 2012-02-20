@@ -7493,11 +7493,19 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New: Show Item Descriptions in tooltip</source>
+        <source>New: Static Data Classes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New: Static Data Classes</source>
+        <source>New: Dialog Preview Widget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Item Preview Widget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: E.Skills not updating in some cases</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
