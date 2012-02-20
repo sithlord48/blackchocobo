@@ -5,11 +5,11 @@
     <name>ItemPreview</name>
     <message>
         <source>Elemental Effects</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Efectos Elementales</translation>
     </message>
     <message>
         <source>Status Effects</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Efectos de Estado</translation>
     </message>
     <message>
         <source>APx%1</source>
@@ -5404,11 +5404,11 @@ NO es un archivo de guardado PSV</translation>
     </message>
     <message>
         <source>Selected Item Details</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Detalles del Item Seleccionado</translation>
     </message>
     <message>
         <source>-------BAD ID-------</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">-----ID ERRONEO-----</translation>
     </message>
 </context>
 <context>
@@ -7535,15 +7535,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Dialog Preview Widget</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nuevo: Widget de Vista Previa de Diálogos</translation>
     </message>
     <message>
         <source>New: Item Preview Widget</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Nuevo: Widget de Vista Previa de Items</translation>
     </message>
     <message>
         <source>Fixed: E.Skills not updating in some cases</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Arreglado: Habil. Enem no actualizaba en algunos casos</translation>
     </message>
 </context>
 <context>
