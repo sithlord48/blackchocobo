@@ -7544,12 +7544,20 @@ p, li { white-space: pre-wrap; }
         <translation>追加: 仏語版 PSX (BASCES-00868) に対応</translation>
     </message>
     <message>
-        <source>New: Show Item Descriptions in tooltip</source>
-        <translation>追加: アイテムの説明をツールチップ表示</translation>
-    </message>
-    <message>
         <source>New: Static Data Classes</source>
         <translation>追加: スタチック データ クラス</translation>
+    </message>
+    <message>
+        <source>New: Dialog Preview Widget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Item Preview Widget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: E.Skills not updating in some cases</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
