@@ -161,19 +161,19 @@
     </message>
     <message>
         <source>Absorb:Poison</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">:Poison</translation>
     </message>
     <message>
         <source>Nullify:Poison</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">:Poison</translation>
     </message>
     <message>
         <source>Halve:Poison</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">:Poison</translation>
     </message>
     <message>
         <source>Attack:Poison</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">:Poison</translation>
     </message>
     <message>
         <source>Absorb:Cut</source>
@@ -417,19 +417,19 @@
     </message>
     <message>
         <source>Protect:Poison</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">:Poison</translation>
     </message>
     <message>
         <source>Remove:Poison</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">:Poison</translation>
     </message>
     <message>
         <source>Inflict:Poison</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">:Poison</translation>
     </message>
     <message>
         <source>OnBattle:Poison</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">:Poison</translation>
     </message>
     <message>
         <source>Protect:Fury</source>
@@ -928,15 +928,15 @@
     </message>
     <message>
         <source>Shinra armored &apos;attack&apos; soldiers: 12 in the Set!</source>
-        <translation>Shinra a 12 &apos;soldats&apos;</translation>
+        <translation>Shinra a 12 &apos;soldats&apos;!</translation>
     </message>
     <message>
         <source>A new machine to protect the reactor!</source>
-        <translation>Pour protéger réacteur</translation>
+        <translation>Pour protéger réacteur!</translation>
     </message>
     <message>
         <source>A prefect copy of Sephiroth&apos;s sword!</source>
-        <translation>Copie épée Sephiroth</translation>
+        <translation>Copie épée Sephiroth!</translation>
     </message>
     <message>
         <source>Use This to create a SAVE Point in the &apos;North Cave&apos;</source>
@@ -1315,7 +1315,7 @@
     </message>
     <message>
         <source>M-Tentacles</source>
-        <translation>TentaculesM.</translation>
+        <translation>TentaculesM</translation>
     </message>
     <message>
         <source>Stardust</source>
@@ -3045,7 +3045,7 @@
     </message>
     <message>
         <source>Fed ?</source>
-        <translation>Sagesse</translation>
+        <translation>Sagesse?</translation>
     </message>
     <message>
         <source>Coop</source>
@@ -3117,7 +3117,7 @@
     </message>
     <message>
         <source> Set Replay Mission above To Set The Game Back To That Mission.  This Will automaticly set your save location and disk # as well as Quest Progression vars. DO NOT OVERWRITE YOUR CURRENT SAVE, when using this feature, i can not promise that you will be able to play from any replay untill the end of the game.Or That Any Given Replay Will Work In Your Save, This Area Is Under Heavy Development</source>
-        <translation>Sélectionnez la scène à refaire ci-dessus afin de ramener le jeu à cette scène. Cette option va automatiquement modifier votre sauvegarde, le n° du disque et la variable de progression du jeu. N&apos;EFFACEZ PAS VOTRE SAUVEGARDE ACTUELLE. En utilisant cette option, je ne peux pas garantir que vous serez en mesure de rejouer à partir de cette scène jusqu&apos;à la fin du jeu, ni même si toutes les scènes fonctionneront avec votre sauvegarde actuelle. Cette section est en cours de développement.</translation>
+        <translation>Sélectionnez la scène à refaire ci-dessus afin de ramener le jeu à cette scène. Cette option va automatiquement modifier votre sauvegarde, le n° du disque et la variable de progression du jeu. N&apos;EFFACEZ PAS VOTRE SAUVEGARDE ACTUELLE. En utilisant cette option, je ne peux pas garantir que vous serez en mesure de rejouer à partir de cette scène jusqu&apos;à la fin du jeu, ni même si toutes les scènes fonctionneront avec votre sauvegarde actuelle. Cette section est en cours de développement</translation>
     </message>
     <message>
         <source>&amp;Export From Current Slot</source>
@@ -3285,7 +3285,7 @@
     </message>
     <message>
         <source>Accessory:</source>
-        <translation>Accessoire</translation>
+        <translation>Accessoire:</translation>
     </message>
     <message>
         <source>&amp;Materia</source>
@@ -3293,23 +3293,23 @@
     </message>
     <message>
         <source>Lvl 1</source>
-        <translation>Niv.1 :</translation>
+        <translation>Niv.1</translation>
     </message>
     <message>
         <source>Lvl 2</source>
-        <translation>Niv.2 :</translation>
+        <translation>Niv.2</translation>
     </message>
     <message>
         <source>Lvl 3</source>
-        <translation>Niv.3 :</translation>
+        <translation>Niv.3</translation>
     </message>
     <message>
         <source>Lvl 4</source>
-        <translation>Niv.4 :</translation>
+        <translation>Niv.4</translation>
     </message>
     <message>
         <source>Lvl 5</source>
-        <translation>Niv.5 :</translation>
+        <translation>Niv.5</translation>
     </message>
     <message>
         <source>C&amp;hocobo</source>
@@ -3461,7 +3461,7 @@
     </message>
     <message>
         <source>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</source>
-        <translation>Cliquez sur une ligne pour paramétrer les champs ci-dessous ou configurez les coordonnées manuellement.</translation>
+        <translation>Cliquez sur une ligne pour paramétrer les champs ci-dessous ou configurez les coordonnées manuellement</translation>
     </message>
     <message>
         <source>Have Fun With This Feature, But Don&apos;t Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</source>
@@ -3581,7 +3581,7 @@
     </message>
     <message>
         <source>Battle Speed:</source>
-        <translation>Vitesse de combat</translation>
+        <translation>Vitesse de combat:</translation>
     </message>
     <message>
         <source>Fast</source>
@@ -3593,11 +3593,11 @@
     </message>
     <message>
         <source>Battle Message Speed:</source>
-        <translation>Vitesse des messages de combat</translation>
+        <translation>Vitesse des messages de combat:</translation>
     </message>
     <message>
         <source>Field Message Speed:</source>
-        <translation>Vitesse des dialogues</translation>
+        <translation>Vitesse des dialogues:</translation>
     </message>
     <message>
         <source>Current Slot:</source>
@@ -4271,7 +4271,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Total Exp:</source>
-        <translation>EXP totale</translation>
+        <translation>EXP totale:</translation>
     </message>
     <message>
         <source>Next</source>
@@ -4431,7 +4431,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Wild Chocobo</source>
-        <translation type="unfinished">Chocobo Sauvage</translation>
+        <translation>Chocobo Sauvage</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby Weapon</source>
@@ -4523,7 +4523,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>Place Emerald Weapon?</source>
-        <translation>Placer Arme d&apos;émeraude (?)</translation>
+        <translation>Placer Arme d&apos;émeraude ?</translation>
     </message>
     <message>
         <source>FF7 Dex SaveGame(*.gme)</source>
@@ -4636,7 +4636,7 @@ Les stats de Sephiroth proviendront directement de celles de Vincent.</translati
     </message>
     <message>
         <source>Replay the death of Aeris.This option Will remove Aeris from your PHS</source>
-        <translation>Rejouer la mort d&apos;Aeris. Cette option retirera Aeris du PHS.</translation>
+        <translation>Rejouer la mort d&apos;Aeris. Cette option retirera Aeris du PHS</translation>
     </message>
     <message>
         <source>Right click on map to easily set an item&apos;s location.</source>
@@ -4644,7 +4644,7 @@ Les stats de Sephiroth proviendront directement de celles de Vincent.</translati
     </message>
     <message>
         <source>Meeting Aeris</source>
-        <translation>Rencontre avec Aeris.</translation>
+        <translation>Rencontre avec Aeris</translation>
     </message>
     <message>
         <source>Diamond / Ultimate / Ruby  Weapon</source>
@@ -4838,7 +4838,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source> Played Video on Train?</source>
-        <translation>Regarder le moniteur vidéo</translation>
+        <translation>Regarder le moniteur vidéo?</translation>
     </message>
     <message>
         <source>Unknowns / Unused</source>
@@ -5062,7 +5062,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Del</source>
-        <translation type="unfinished">Sppr</translation>
+        <translation>Sppr</translation>
     </message>
     <message>
         <source>Materia Slot Actions</source>
@@ -5364,7 +5364,7 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>Tiny bronco</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiny bronco</translation>
     </message>
     <message>
         <source>Unknown Id in Buggy/Highwind Location</source>
@@ -5372,27 +5372,27 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>Wild chocobo</source>
-        <translation type="unfinished">Chocobo sauvage</translation>
+        <translation>Chocobo sauvage</translation>
     </message>
     <message>
         <source>Yellow chocobo</source>
-        <translation type="unfinished">Chocobo jaune</translation>
+        <translation>Chocobo jaune</translation>
     </message>
     <message>
         <source>Green chocobo</source>
-        <translation type="unfinished">Chocobo vert </translation>
+        <translation>Chocobo vert </translation>
     </message>
     <message>
         <source>Blue chocobo</source>
-        <translation type="unfinished">Chocobo Bleu</translation>
+        <translation>Chocobo Bleu</translation>
     </message>
     <message>
         <source>Black chocobo</source>
-        <translation type="unfinished">Chocobo Noire</translation>
+        <translation>Chocobo Noire</translation>
     </message>
     <message>
         <source>Gold chocobo</source>
-        <translation type="unfinished">Chocobo or</translation>
+        <translation>Chocobo or</translation>
     </message>
     <message>
         <source>lck +10</source>
@@ -5404,11 +5404,11 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>Selected Item Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Détails de l&apos;élément sélectionné</translation>
     </message>
     <message>
         <source>-------BAD ID-------</source>
-        <translation type="unfinished"></translation>
+        <translation>----MAUVAIS ID----</translation>
     </message>
 </context>
 <context>
@@ -5535,7 +5535,7 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation>Effet suppl.</translation>
+        <translation>Effet suppl</translation>
     </message>
     <message>
         <source>Sneak Attack</source>
@@ -5547,7 +5547,7 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>Added Cut</source>
-        <translation>Coupure suppl.</translation>
+        <translation>Coupure suppl</translation>
     </message>
     <message>
         <source>Steal-As-Well</source>
@@ -5571,7 +5571,7 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation>Trans.</translation>
+        <translation>Trans</translation>
     </message>
     <message>
         <source>Manipulate</source>
@@ -6166,7 +6166,7 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>Morph</source>
-        <translation>Trans.</translation>
+        <translation>Trans</translation>
     </message>
     <message>
         <source>DeathBlow</source>
@@ -7531,11 +7531,19 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New: Show Item Descriptions in tooltip</source>
+        <source>New: Static Data Classes</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>New: Static Data Classes</source>
+        <source>New: Dialog Preview Widget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Item Preview Widget</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: E.Skills not updating in some cases</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
