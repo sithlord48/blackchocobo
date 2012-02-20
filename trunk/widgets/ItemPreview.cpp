@@ -23,7 +23,7 @@ ItemPreview::ItemPreview(QWidget *parent) :QWidget(parent)
   lbl_icon=new QLabel();
   lbl_icon->setFixedSize(24,24);
   lbl_icon->setScaledContents(1);
-  spacer=new QSpacerItem(-1,-1,QSizePolicy::Expanding,QSizePolicy::Minimum);
+  QSpacerItem *spacer=new QSpacerItem(-1,-1,QSizePolicy::Expanding,QSizePolicy::Minimum);
   lbl_slot_1= new QLabel();
   lbl_slot_1->setFixedSize(24,24);
   lbl_slot_1->setScaledContents(1);
@@ -132,7 +132,6 @@ ItemPreview::ItemPreview(QWidget *parent) :QWidget(parent)
   elemental_box->setContentsMargins(3,3,3,3);
   elemental_box->setLayout(elemental);
   elemental_box->setTitle(tr("Elemental Effects"));
-  elemental_box->setHidden(1);
 
   status_effects = new QListWidget();
   QHBoxLayout *status =new QHBoxLayout();
@@ -143,12 +142,13 @@ ItemPreview::ItemPreview(QWidget *parent) :QWidget(parent)
   status_box->setContentsMargins(3,3,3,3);
   status_box->setLayout(status);
   status_box->setTitle(tr("Status Effects"));
-  status_box->setHidden(1);
 
   QHBoxLayout *effects_layout =new QHBoxLayout();
   effects_layout->setContentsMargins(0,0,0,0);
   effects_layout->addWidget(elemental_box);
   effects_layout->addWidget(status_box);
+  QSpacerItem *spacer2 = new QSpacerItem(-1,-1,QSizePolicy::Expanding,QSizePolicy::Minimum);
+  effects_layout->addSpacerItem(spacer2);
   effects_layout->setSpacing(0);
 
   QHBoxLayout *top = new QHBoxLayout();
@@ -161,6 +161,8 @@ ItemPreview::ItemPreview(QWidget *parent) :QWidget(parent)
   main_layout->addWidget(lbl_desc);
   main_layout->addWidget(materia_slot_box);
   main_layout->addLayout(effects_layout);
+  //Insure its all hidden..
+  this->setItem(-1);
 }
 void ItemPreview::setName(QString text){lbl_name->setText(text);lbl_name->adjustSize();}
 void ItemPreview::setDesc(QString text){lbl_desc->setText(text);lbl_desc->adjustSize();}

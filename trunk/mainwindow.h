@@ -29,6 +29,7 @@
 #include "errbox.h" //non ff7 error box
 #include <SaveIcon.h>
 #include "widgets/ItemPreview.h"
+#include "widgets/DialogPreview.h"
 
 
 
@@ -67,13 +68,13 @@ private:
     int mslotsel; //keeps track of materia slot on char selected
     TEXT Text; //our sting conversion item.
     ItemPreview *item_preview;
+    DialogPreview *dialog_preview;
 public slots:
     void loadFileFull(const QString &fileName,int reload);//(Vegeta_Ss4) v0.8.3
 
 private slots://try to keep these in the same order as the .cpp file  
     /*Loading and Saving related Functions*/
     int save_changes(); //return 1 to accept and 0 to ingore the event
-    void setPreviewColors();
     void on_actionNew_Window_triggered();
     void on_actionOpen_Save_File_activated();
     void on_actionReload_triggered();
@@ -350,18 +351,6 @@ private slots://try to keep these in the same order as the .cpp file
 
     void on_cb_id_toggled(bool checked);
 
-    void on_slide_lr_b_valueChanged(int value);
-    void on_slide_lr_g_valueChanged(int value);
-    void on_slide_lr_r_valueChanged(int value);
-    void on_slide_ll_b_valueChanged(int value);
-    void on_slide_ll_g_valueChanged(int value);
-    void on_slide_ll_r_valueChanged(int value);
-    void on_slide_ur_b_valueChanged(int value);
-    void on_slide_ur_g_valueChanged(int value);
-    void on_slide_ur_r_valueChanged(int value);
-    void on_slide_ul_b_valueChanged(int value);
-    void on_slide_ul_g_valueChanged(int value);
-    void on_slide_ul_r_valueChanged(int value);
     void on_btn_remove_all_materia_clicked();
     void on_btn_remove_all_stolen_clicked();
 
@@ -670,5 +659,11 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_visible_blue_chocobo_toggled(bool checked);
     void on_cb_visible_black_chocobo_toggled(bool checked);
     void on_cb_visible_gold_chocobo_toggled(bool checked);
+
+    void set_UL_Color(QColor color);
+    void set_UR_Color(QColor color);
+    void set_LR_Color(QColor color);
+    void set_LL_Color(QColor color);
+
 };
 #endif // MAINWINDOW_H
