@@ -5,607 +5,607 @@
     <name>ItemPreview</name>
     <message>
         <source>Elemental Effects</source>
-        <translation type="unfinished"></translation>
+        <translation>Effets élémentaux</translation>
     </message>
     <message>
         <source>Status Effects</source>
-        <translation type="unfinished"></translation>
+        <translation>Troubles mentaux</translation>
     </message>
     <message>
         <source>APx%1</source>
-        <translation type="unfinished"></translation>
+        <translation>APx%1</translation>
     </message>
     <message>
         <source>Absorb:Restoration</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbe:Restauration</translation>
     </message>
     <message>
         <source>Nullify:Restoration</source>
-        <translation type="unfinished"></translation>
+        <translation>Annule:Restauration</translation>
     </message>
     <message>
         <source>Halve:Restoration</source>
-        <translation type="unfinished"></translation>
+        <translation>Moitié:Restauration</translation>
     </message>
     <message>
         <source>Attack:Restoration</source>
-        <translation type="unfinished"></translation>
+        <translation>Attaque:Restauration</translation>
     </message>
     <message>
         <source>Absorb:Fire</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbe:Feu</translation>
     </message>
     <message>
         <source>Nullify:Fire</source>
-        <translation type="unfinished"></translation>
+        <translation>Annule:Feu</translation>
     </message>
     <message>
         <source>Halve:Fire</source>
-        <translation type="unfinished"></translation>
+        <translation>Moitié:Feu</translation>
     </message>
     <message>
         <source>Attack:Fire</source>
-        <translation type="unfinished"></translation>
+        <translation>Attaque:Feu</translation>
     </message>
     <message>
         <source>Absorb:Cold</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbe:Glace</translation>
     </message>
     <message>
         <source>Nullify:Cold</source>
-        <translation type="unfinished"></translation>
+        <translation>Annule:Glace</translation>
     </message>
     <message>
         <source>Halve:Cold</source>
-        <translation type="unfinished"></translation>
+        <translation>Moitié:Glace</translation>
     </message>
     <message>
         <source>Attack:Cold</source>
-        <translation type="unfinished"></translation>
+        <translation>Attaque:Glace</translation>
     </message>
     <message>
         <source>Absorb:Lightning</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbe:Foudre</translation>
     </message>
     <message>
         <source>Nullify:Lightning</source>
-        <translation type="unfinished"></translation>
+        <translation>Annule:Foudre</translation>
     </message>
     <message>
         <source>Halve:Lightning</source>
-        <translation type="unfinished"></translation>
+        <translation>Moitié:Foudre</translation>
     </message>
     <message>
         <source>Attack:Lightning</source>
-        <translation type="unfinished"></translation>
+        <translation>Attaque:Foudre</translation>
     </message>
     <message>
         <source>Absorb:Earth</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbe:Terre</translation>
     </message>
     <message>
         <source>Nullify:Earth</source>
-        <translation type="unfinished"></translation>
+        <translation>Annule:Terre</translation>
     </message>
     <message>
         <source>Halve:Earth</source>
-        <translation type="unfinished"></translation>
+        <translation>Moitié:Terre</translation>
     </message>
     <message>
         <source>Attack:Earth</source>
-        <translation type="unfinished"></translation>
+        <translation>Attaque:Terre</translation>
     </message>
     <message>
         <source>Absorb:Wind</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbe:Vent</translation>
     </message>
     <message>
         <source>Nullify:Wind</source>
-        <translation type="unfinished"></translation>
+        <translation>Annule:Vent</translation>
     </message>
     <message>
         <source>Halve:Wind</source>
-        <translation type="unfinished"></translation>
+        <translation>Moitié:Vent</translation>
     </message>
     <message>
         <source>Attack:Wind</source>
-        <translation type="unfinished"></translation>
+        <translation>Attaque:Vent</translation>
     </message>
     <message>
         <source>Absorb:Water</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbe:Eau</translation>
     </message>
     <message>
         <source>Nullify:Water</source>
-        <translation type="unfinished"></translation>
+        <translation>Annule:Eau</translation>
     </message>
     <message>
         <source>Halve:Water</source>
-        <translation type="unfinished"></translation>
+        <translation>Moitié:Eau</translation>
     </message>
     <message>
         <source>Attack:Water</source>
-        <translation type="unfinished"></translation>
+        <translation>Attaque:Eau</translation>
     </message>
     <message>
         <source>Absorb:Gravity</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbe:Gravité</translation>
     </message>
     <message>
         <source>Nullify:Gravity</source>
-        <translation type="unfinished"></translation>
+        <translation>Annule:Gravité</translation>
     </message>
     <message>
         <source>Halve:Gravity</source>
-        <translation type="unfinished"></translation>
+        <translation>Moitié:Gravité</translation>
     </message>
     <message>
         <source>Attack:Gravity</source>
-        <translation type="unfinished"></translation>
+        <translation>Attaque:Gravité</translation>
     </message>
     <message>
         <source>Absorb:Holy</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbe:Sacré</translation>
     </message>
     <message>
         <source>Nullify:Holy</source>
-        <translation type="unfinished"></translation>
+        <translation>Annule:Sacré</translation>
     </message>
     <message>
         <source>Halve:Holy</source>
-        <translation type="unfinished"></translation>
+        <translation>Moitié:Sacré</translation>
     </message>
     <message>
         <source>Attack:Holy</source>
-        <translation type="unfinished"></translation>
+        <translation>Attaque:Sacré</translation>
     </message>
     <message>
         <source>Absorb:Poison</source>
-        <translation type="unfinished">:Poison</translation>
+        <translation>Absorbe:Poison</translation>
     </message>
     <message>
         <source>Nullify:Poison</source>
-        <translation type="unfinished">:Poison</translation>
+        <translation>Annule:Poison</translation>
     </message>
     <message>
         <source>Halve:Poison</source>
-        <translation type="unfinished">:Poison</translation>
+        <translation>Moitié:Poison</translation>
     </message>
     <message>
         <source>Attack:Poison</source>
-        <translation type="unfinished">:Poison</translation>
+        <translation>Attaque:Poison</translation>
     </message>
     <message>
         <source>Absorb:Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbe:CoupLame</translation>
     </message>
     <message>
         <source>Nullify:Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Annule:CoupLame</translation>
     </message>
     <message>
         <source>Halve:Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Moitié:CoupLame</translation>
     </message>
     <message>
         <source>Attack:Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Attaque:CoupLame</translation>
     </message>
     <message>
         <source>Absorb:Shoot</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbe:CoupFeu</translation>
     </message>
     <message>
         <source>Nullify:Shoot</source>
-        <translation type="unfinished"></translation>
+        <translation>Annule:CoupFeu</translation>
     </message>
     <message>
         <source>Halve:Shoot</source>
-        <translation type="unfinished"></translation>
+        <translation>Moitié:CoupFeu</translation>
     </message>
     <message>
         <source>Attack:Shoot</source>
-        <translation type="unfinished"></translation>
+        <translation>Attaque:CoupFeu</translation>
     </message>
     <message>
         <source>Absorb:Punch</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbe:coupPoing</translation>
     </message>
     <message>
         <source>Nullify:Punch</source>
-        <translation type="unfinished"></translation>
+        <translation>Annule:coupPoing</translation>
     </message>
     <message>
         <source>Halve:Punch</source>
-        <translation type="unfinished"></translation>
+        <translation>Moitié:coupPoing</translation>
     </message>
     <message>
         <source>Attack:Punch</source>
-        <translation type="unfinished"></translation>
+        <translation>Attaque:coupPoing</translation>
     </message>
     <message>
         <source>Absorb:Hit</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbe:Frapper</translation>
     </message>
     <message>
         <source>Nullify:Hit</source>
-        <translation type="unfinished"></translation>
+        <translation>Annule:Frapper</translation>
     </message>
     <message>
         <source>Halve:Hit</source>
-        <translation type="unfinished"></translation>
+        <translation>Moitié:Frapper</translation>
     </message>
     <message>
         <source>Attack:Hit</source>
-        <translation type="unfinished"></translation>
+        <translation>Attaque:Frapper</translation>
     </message>
     <message>
         <source>Protect:Death</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Mort</translation>
     </message>
     <message>
         <source>Remove:Death</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Mort</translation>
     </message>
     <message>
         <source>Inflict:Death</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Mort</translation>
     </message>
     <message>
         <source>OnBattle:Death</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Mort</translation>
     </message>
     <message>
         <source>Protect:Slow-Numb</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Lente-apathie</translation>
     </message>
     <message>
         <source>Remove:Slow-Numb</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Lente-apathie</translation>
     </message>
     <message>
         <source>Inflict:Slow-Numb</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Lente-apathie</translation>
     </message>
     <message>
         <source>OnBattle:Slow-Numb</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Lente-apathie</translation>
     </message>
     <message>
         <source>Protect:D.Sentence</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:PeineDeMort</translation>
     </message>
     <message>
         <source>Remove:D.Sentence</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:PeineDeMort</translation>
     </message>
     <message>
         <source>Inflict:D.Sentence</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:PeineDeMort</translation>
     </message>
     <message>
         <source>OnBattle:D.Sentence</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:PeineDeMort</translation>
     </message>
     <message>
         <source>Protect:Paralysis</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Paralysie</translation>
     </message>
     <message>
         <source>Remove:Paralysis</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Paralysie</translation>
     </message>
     <message>
         <source>Inflict:Paralysis</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Paralysie</translation>
     </message>
     <message>
         <source>OnBattle:Paralysis</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Paralysie</translation>
     </message>
     <message>
         <source>Protect:Petrify</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Pétrifier</translation>
     </message>
     <message>
         <source>Remove:Petrify</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Pétrifier</translation>
     </message>
     <message>
         <source>Inflict:Petrify</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Pétrifier</translation>
     </message>
     <message>
         <source>OnBattle:Petrify</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Pétrifier</translation>
     </message>
     <message>
         <source>Protect:Silence</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Silence</translation>
     </message>
     <message>
         <source>Remove:Silence</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Silence</translation>
     </message>
     <message>
         <source>Inflict:Silence</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Silence</translation>
     </message>
     <message>
         <source>OnBattle:Silence</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Silence</translation>
     </message>
     <message>
         <source>Protect:Sleep</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Sommeil</translation>
     </message>
     <message>
         <source>Remove:Sleep</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Sommeil</translation>
     </message>
     <message>
         <source>Inflict:Sleep</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Sommeil</translation>
     </message>
     <message>
         <source>OnBattle:Sleep</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Sommeil</translation>
     </message>
     <message>
         <source>Protect:Confusion</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Confusion</translation>
     </message>
     <message>
         <source>Remove:Confusion</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Confusion</translation>
     </message>
     <message>
         <source>Inflict:Confusion</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Confusion</translation>
     </message>
     <message>
         <source>OnBattle:Confusion</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Confusion</translation>
     </message>
     <message>
         <source>Protect:Berserk</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Folie</translation>
     </message>
     <message>
         <source>Remove:Berserk</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Folie</translation>
     </message>
     <message>
         <source>Inflict:Berserk</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Folie</translation>
     </message>
     <message>
         <source>OnBattle:Berserk</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Folie</translation>
     </message>
     <message>
         <source>Protect:Frog</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Grenouille</translation>
     </message>
     <message>
         <source>Remove:Frog</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Grenouille</translation>
     </message>
     <message>
         <source>Inflict:Frog</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Grenouille</translation>
     </message>
     <message>
         <source>OnBattle:Frog</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Grenouille</translation>
     </message>
     <message>
         <source>Protect:Mini</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Mini</translation>
     </message>
     <message>
         <source>Remove:Mini</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Mini</translation>
     </message>
     <message>
         <source>Inflict:Mini</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Mini</translation>
     </message>
     <message>
         <source>OnBattle:Mini</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Mini</translation>
     </message>
     <message>
         <source>Protect:Poison</source>
-        <translation type="unfinished">:Poison</translation>
+        <translation>Protège:Poison</translation>
     </message>
     <message>
         <source>Remove:Poison</source>
-        <translation type="unfinished">:Poison</translation>
+        <translation>Enlève:Poison</translation>
     </message>
     <message>
         <source>Inflict:Poison</source>
-        <translation type="unfinished">:Poison</translation>
+        <translation>Inflige:Poison</translation>
     </message>
     <message>
         <source>OnBattle:Poison</source>
-        <translation type="unfinished">:Poison</translation>
+        <translation>EnCombat:Poison</translation>
     </message>
     <message>
         <source>Protect:Fury</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Fureur</translation>
     </message>
     <message>
         <source>Remove:Fury</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Fureur</translation>
     </message>
     <message>
         <source>Inflict:Fury</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Fureur</translation>
     </message>
     <message>
         <source>OnBattle:Fury</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Fureur</translation>
     </message>
     <message>
         <source>Protect:Sadness</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Tristesse</translation>
     </message>
     <message>
         <source>Remove:Sadness</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Tristesse</translation>
     </message>
     <message>
         <source>Inflict:Sadness</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Tristesse</translation>
     </message>
     <message>
         <source>OnBattle:Sadness</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Tristesse</translation>
     </message>
     <message>
         <source>Protect:Darkness</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Obscurité</translation>
     </message>
     <message>
         <source>Remove:Darkness</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Obscurité</translation>
     </message>
     <message>
         <source>Inflict:Darkness</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Obscurité</translation>
     </message>
     <message>
         <source>OnBattle:Darkness</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Obscurité</translation>
     </message>
     <message>
         <source>Protect:Haste</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Hâte</translation>
     </message>
     <message>
         <source>Remove:Haste</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Hâte</translation>
     </message>
     <message>
         <source>Inflict:Haste</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Hâte</translation>
     </message>
     <message>
         <source>OnBattle:Haste</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Hâte</translation>
     </message>
     <message>
         <source>Protect:Slow</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Lent</translation>
     </message>
     <message>
         <source>Remove:Slow</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Lent</translation>
     </message>
     <message>
         <source>Inflict:Slow</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Lent</translation>
     </message>
     <message>
         <source>OnBattle:Slow</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Lent</translation>
     </message>
     <message>
         <source>Protect:Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Stop</translation>
     </message>
     <message>
         <source>Remove:Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Stop</translation>
     </message>
     <message>
         <source>Inflict:Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Stop</translation>
     </message>
     <message>
         <source>OnBattle:Stop</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Stop</translation>
     </message>
     <message>
         <source>Protect:Barrier</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Barrière</translation>
     </message>
     <message>
         <source>Remove:Barrier</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Barrière</translation>
     </message>
     <message>
         <source>Inflict:Barrier</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Barrière</translation>
     </message>
     <message>
         <source>OnBattle:Barrier</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Barrière</translation>
     </message>
     <message>
         <source>Protect:M.Barrier</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:BarrM</translation>
     </message>
     <message>
         <source>Remove:M.Barrier</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:BarrM</translation>
     </message>
     <message>
         <source>Inflict:M.Barrier</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:BarrM</translation>
     </message>
     <message>
         <source>OnBattle:M.Barrier</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:BarrM</translation>
     </message>
     <message>
         <source>Protect:Reflect</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Reflet</translation>
     </message>
     <message>
         <source>Remove:Reflect</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Reflet</translation>
     </message>
     <message>
         <source>Inflict:Reflect</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Reflet</translation>
     </message>
     <message>
         <source>OnBattle:Reflect</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Reflet</translation>
     </message>
     <message>
         <source>Protect:Regen</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Regen</translation>
     </message>
     <message>
         <source>Remove:Regen</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Regen</translation>
     </message>
     <message>
         <source>Inflict:Regen</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Regen</translation>
     </message>
     <message>
         <source>OnBattle:Regen</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Regen</translation>
     </message>
     <message>
         <source>Protect:Shield</source>
-        <translation type="unfinished"></translation>
+        <translation>Protège:Bouclier</translation>
     </message>
     <message>
         <source>Remove:Shield</source>
-        <translation type="unfinished"></translation>
+        <translation>Enlève:Bouclier</translation>
     </message>
     <message>
         <source>Inflict:Shield</source>
-        <translation type="unfinished"></translation>
+        <translation>Inflige:Bouclier</translation>
     </message>
     <message>
         <source>OnBattle:Shield</source>
-        <translation type="unfinished"></translation>
+        <translation>EnCombat:Bouclier</translation>
     </message>
 </context>
 <context>
@@ -5216,35 +5216,35 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_1</source>
-        <translation type="unfinished"></translation>
+        <translation>Ferme : Choco Mog_1</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_2</source>
-        <translation type="unfinished"></translation>
+        <translation>Ferme : Choco Mog_2</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_3</source>
-        <translation type="unfinished"></translation>
+        <translation>Ferme : Choco Mog_3</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_4</source>
-        <translation type="unfinished"></translation>
+        <translation>Ferme : Choco Mog_4</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_5</source>
-        <translation type="unfinished"></translation>
+        <translation>Ferme : Choco Mog_5</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_6</source>
-        <translation type="unfinished"></translation>
+        <translation>Ferme : Choco Mog_6</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_7</source>
-        <translation type="unfinished"></translation>
+        <translation>Ferme : Choco Mog_7</translation>
     </message>
     <message>
         <source>Farm:Choco Mog_8</source>
-        <translation type="unfinished"></translation>
+        <translation>Ferme : Choco Mog_8</translation>
     </message>
     <message>
         <source>Calculate Stats</source>
@@ -5360,7 +5360,7 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>Visible On World Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Affiché sur la mappemonde</translation>
     </message>
     <message>
         <source>Tiny bronco</source>
@@ -5368,7 +5368,7 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>Unknown Id in Buggy/Highwind Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Id inconnu dans le placement Buggy/Highwind</translation>
     </message>
     <message>
         <source>Wild chocobo</source>
@@ -7286,11 +7286,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Using Myst6re SaveIcon Class</source>
-        <translation>Nouveau: Utilisation de la classe des icônes de sauvegarde de Myst6re</translation>
+        <translation>Nouveau : Utilisation de la classe des icônes de sauvegarde de Myst6re</translation>
     </message>
     <message>
         <source>Fixed: Items/Materia Names And Skill Now Translated</source>
-        <translation>Corrigé: Les noms des Matérias/Éléments et capacités maintenant traduits</translation>
+        <translation>Corrigé : Les noms des Matérias/Éléments et capacités maintenant traduits</translation>
     </message>
     <message>
         <source>Fixed: Missing Keycard 66 in keyitems list</source>
@@ -7298,7 +7298,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Update:Almost All Spinboxes now &quot;Wrapping&quot;</source>
-        <translation>Mise à jour: Presque toutes les cases défilantes peuvent changer d&apos;extrême</translation>
+        <translation>Mise à jour : Presque toutes les cases défilantes peuvent changer d&apos;extrême</translation>
     </message>
     <message>
         <source>Previous Versions</source>
@@ -7306,52 +7306,52 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Basic Setting of World Locations In Debug</source>
-        <translation>Nouveau: Toutes les options de la carte du monde en Debug</translation>
+        <translation>Nouveau : Toutes les options de la carte du monde en Debug</translation>
     </message>
     <message>
         <source>New: Set Font For Program</source>
-        <translation>Nouveau: Sélectionnez la couleur de fond pour le programme</translation>
+        <translation>Nouveau : Sélectionnez la couleur de fond pour le programme</translation>
     </message>
     <message>
         <source>New: Revive Ruby Weapon &amp; Emerald Weapon</source>
-        <translation>Nouveau: Ranimer les Armes Rubis &amp; Émeraude</translation>
+        <translation>Nouveau : Ranimer les Armes Rubis &amp; Émeraude</translation>
     </message>
     <message>
         <source>New: Toggle Field Help and Battle Target Labels</source>
-        <translation>Nouveau: Modifier l&apos;aide de terrain et les tags de cible en combat</translation>
+        <translation>Nouveau : Modifier l&apos;aide de terrain et les tags de cible en combat</translation>
     </message>
     <message>
         <source>New: Fancy Character Materia on Equipment tab</source>
         <translatorcomment>Pas sûr pour Fantaisiste</translatorcomment>
-        <translation>Nouveau: Matéria des personnages &quot;Fantaisiste&quot; sur l&apos;onglet Équipement</translation>
+        <translation>Nouveau : Matéria des personnages &quot;Fantaisiste&quot; sur l&apos;onglet Équipement</translation>
     </message>
     <message>
         <source>New: Save and Save as are now both allowed</source>
-        <translation>Nouveau: Sauvegarder et Sauvegarder Sous sont maintenant toutes les deux autorisées</translation>
+        <translation>Nouveau : Sauvegarder et Sauvegarder Sous sont maintenant toutes les deux autorisées</translation>
     </message>
     <message>
         <source>New: Change Slot Posin in Debug mode (MC only) </source>
-        <translation>Nouveau: Chnager la position de la Fente en mode Debug (MC only)</translation>
+        <translation>Nouveau : Chnager la position de la Fente en mode Debug (MC only)</translation>
     </message>
     <message>
         <source>New: Support for .vgs .mem and .gme formats</source>
-        <translation>Nouveau: Support for les formats .vgs .mem and .gme</translation>
+        <translation>Nouveau : Support for les formats .vgs .mem and .gme</translation>
     </message>
     <message>
         <source>New: Added .bin .mc .mci .ps .psm .dff  to mcr/mcd list</source>
-        <translation>Nouveau: Ajouté .bin .mc .mci .ps .psm .dff aux listes mcr/mcd</translation>
+        <translation>Nouveau : Ajouté .bin .mc .mci .ps .psm .dff aux listes mcr/mcd</translation>
     </message>
     <message>
         <source>Fixed: Materia Slots Display Left To Right (see ingame)</source>
-        <translation>Fixé: Les emplacements de Matéria s&apos;affichent correctement à la droite (voir en jeu)</translation>
+        <translation>Corrigé : Les emplacements de Matéria s&apos;affichent correctement à la droite (voir en jeu)</translation>
     </message>
     <message>
         <source>Fixed: Psx and Psv Region Detection</source>
-        <translation>Fixé: Détection de la région PSX et PSV</translation>
+        <translation>Corrigé : Détection de la région PSX et PSV</translation>
     </message>
     <message>
         <source>Fixed: Titan/Ramuh Stats Backward.</source>
-        <translation>Fixé: Titan/Ramuh Statistiques en arrière.</translation>
+        <translation>Corrigé : Titan/Ramuh Statistiques en arrière.</translation>
     </message>
     <message>
         <source>inital psx save/load; fixed checksum</source>
@@ -7359,152 +7359,152 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Empty Chocobos Now Start W/ empty names.</source>
-        <translation>Fixé: Les Chocobos vident commencent maintenant sans nom.</translation>
+        <translation>Corrigé : Les Chocobos vident commencent maintenant sans nom.</translation>
     </message>
     <message>
         <source>Fixed: Typos Lots of Typos..</source>
-        <translation>Fixé: Des fautes, plein de fautes..</translation>
+        <translation>Corrigé : Des fautes, plein de fautes..</translation>
     </message>
     <message>
         <source>Fixed: &quot;Time Bug&quot;</source>
-        <translation>Fixé: Le &quot;Bug du temps&quot;</translation>
+        <translation>Corrigé : Le &quot;Bug du temps&quot;</translation>
     </message>
     <message>
         <source>Fixed: &quot;Gravity&quot; Materia Bug</source>
-        <translation>Fixé: Le bug de la Matéria &quot;Gravité&quot;</translation>
+        <translation>Corrigé : Le bug de la Matéria &quot;Gravité&quot;</translation>
     </message>
     <message>
         <source>Fixed: Gil,Exp,CoasterScore, and Some Other Spinbox Caps.</source>
-        <translation>Fixé: Les limites de Gils, Exp, Points au Coaster et quelques autres cases glissantes.</translation>
+        <translation>Corrigé : Les limites de Gils, Exp, Points au Coaster et quelques autres cases glissantes.</translation>
     </message>
     <message>
         <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
-        <translation>Mise à jour: Les Armes sur la carte du monde</translation>
+        <translation>Mise à jour : Les Armes sur la carte du monde</translation>
     </message>
     <message>
         <source>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</source>
-        <translation>Nouveau: Option automatique de Exp &lt;-&gt; Nv (Défaut:On)</translation>
+        <translation>Nouveau : Option automatique de Exp &lt;-&gt; Nv (Défaut:On)</translation>
     </message>
     <message>
         <source>New: Flashback  Chruch in the slums</source>
-        <translation>Nouveau: Flashback de l&apos;église dans les taudis</translation>
+        <translation>Nouveau : Flashback de l&apos;église dans les taudis</translation>
     </message>
     <message>
         <source>Update: Location Tab; Both Save &amp; World Locations</source>
-        <translation>Mise à jour: Onglets d&apos;emplacement, emplacements de sauvegarde &amp; de la carte du monde</translation>
+        <translation>Mise à jour : Onglets d&apos;emplacement, emplacements de sauvegarde &amp; de la carte du monde</translation>
     </message>
     <message>
         <source>New: Spawn New Windows. (mainly for testing)</source>
-        <translation>Nouveau: Nouvelles fenêtres (surtout pour tester)</translation>
+        <translation>Nouveau : Nouvelles fenêtres (surtout pour tester)</translation>
     </message>
     <message>
         <source>New: Unknown Var  Tracker in Test Data (very basic atm)</source>
-        <translation>Nouveau: Variables Inconnues dans le mode de test (très basique présentement)</translation>
+        <translation>Nouveau : Variables Inconnues dans le mode de test (très basique présentement)</translation>
     </message>
     <message>
         <source>Update: Chocobo tab&apos;s Chocobo Stables Now In Scroll Area</source>
-        <translation>Mise à jour: Les onglets des écuries chocobos sont maintenant dans l&apos;aire de glissage</translation>
+        <translation>Mise à jour : Les onglets des écuries chocobos sont maintenant dans l&apos;aire de glissage</translation>
     </message>
     <message>
         <source>Fixed: New Window Now Via Detached Process</source>
-        <translation>Fixé: Nouvelles fenêtres maintenant via Processus détaché</translation>
+        <translation>Corrigé : Nouvelles fenêtres maintenant via Processus détaché</translation>
     </message>
     <message>
         <source>Fixed: Limit Boxes Not Always Showing Data Correctly</source>
-        <translation>Fixé: Case de limites n&apos;affichant pas toujours les données correctement</translation>
+        <translation>Corrigé : Case de limites n&apos;affichant pas toujours les données correctement</translation>
     </message>
     <message>
         <source>Fixed: Cait/ Vincent Reversed in PHS Boxes</source>
-        <translation>Fixé: Cait/Vincent réversibles dans la case PHS</translation>
+        <translation>Corrigé : Cait/Vincent réversibles dans la case PHS</translation>
     </message>
     <message>
         <source>New: Editable Unknown Vars</source>
-        <translation>Nouveau: Variables Inconnues Éditables</translation>
+        <translation>Nouveau : Variables Inconnues Éditables</translation>
     </message>
     <message>
         <source>New: Toggle &quot;unable to mate&quot; flag for chocobos</source>
-        <translation>Nouveau: Change la Variable &quot;Impossible d&apos;accoupler&quot; pour les Chocobos</translation>
+        <translation>Nouveau : Change la Variable &quot;Impossible d&apos;accoupler&quot; pour les Chocobos</translation>
     </message>
     <message>
         <source>Fixed: Use the Action for showing Slot select dialog.</source>
-        <translation>Fixé: Utiliser l&apos;action qui montre la sélection de dialogue.</translation>
+        <translation>Corrigé : Utiliser l&apos;action qui montre la sélection de dialogue.</translation>
     </message>
     <message>
         <source>Fixed: Chocobo Name Editable again</source>
-        <translation>Fixé: Les noms des Chocobos à nouveau éditables</translation>
+        <translation>Corrigé : Les noms des Chocobos à nouveau éditables</translation>
     </message>
     <message>
         <source>Fixed: Dialogs Inherit style.</source>
         <translatorcomment>Pas sûr pour Inhérité</translatorcomment>
-        <translation>Fixé: Dialogues de style &quot;Inhérité&quot;.</translation>
+        <translation>Corrigé : Dialogues de style &quot;Inhérité&quot;.</translation>
     </message>
     <message>
         <source>New: Toggle Each Stable Occupied Flag</source>
-        <translation>Nouveau: Change chaque varible d&apos;étable occupée</translation>
+        <translation>Nouveau : Change chaque varible d&apos;étable occupée</translation>
     </message>
     <message>
         <source>New: Reload Feature</source>
-        <translation>Nouveau: Fonction de rechargement</translation>
+        <translation>Nouveau : Fonction de rechargement</translation>
     </message>
     <message>
         <source>New: Locations &quot;Chocobo Ranch&quot; And &quot;Highwind&quot;</source>
-        <translation>Nouveau: Locations du &quot;Ranch Chocobo&quot; et du &quot;Hautvent&quot;</translation>
+        <translation>Nouveau : Locations du &quot;Ranch Chocobo&quot; et du &quot;Hautvent&quot;</translation>
     </message>
     <message>
         <source>New: Better Unknown Var Tab.</source>
-        <translation>Nouveau: Meilleur Tableau de Variables.</translation>
+        <translation>Nouveau : Meilleur Tableau de Variables.</translation>
     </message>
     <message>
         <source>New: NTSC &lt;=&gt; PAL Time Conversion</source>
-        <translation>Nouveau: NTSC &lt;=&gt; PAL Conversion de temps</translation>
+        <translation>Nouveau : NTSC &lt;=&gt; PAL Conversion de temps</translation>
     </message>
     <message>
         <source>New: Edit number of steps taken</source>
-        <translation>Nouveau: Modifier le nombre de pas</translation>
+        <translation>Nouveau : Modifier le nombre de pas</translation>
     </message>
     <message>
         <source>New: Better Organized Progression Tab.</source>
-        <translation>Nouveau: Onglet de progression mieux arrangé.</translation>
+        <translation>Nouveau : Onglet de progression mieux arrangé.</translation>
     </message>
     <message>
         <source>Japanese Translation:</source>
-        <translation>Traduction Japonaise:</translation>
+        <translation>Traduction Japonaise :</translation>
     </message>
     <message>
         <source>New: Japanese Translation</source>
-        <translation>Nouveau: Tranduction Japonaise</translation>
+        <translation>Nouveau : Tranduction Japonaise</translation>
     </message>
     <message>
         <source>New: Field Items Picked Up</source>
-        <translation>Nouveau: Éléments Trouvés sur le terrain</translation>
+        <translation>Nouveau : Éléments Trouvés sur le terrain</translation>
     </message>
     <message>
         <source>Fixed: Optimized Slotselect Dialog</source>
-        <translation>Fixé: Fenêtre de sélection de sauvegarde amélioré</translation>
+        <translation>Corrigé : Fenêtre de sélection de sauvegarde amélioré</translation>
     </message>
     <message>
         <source>New: Edit Controller Mapping (non pc saves)</source>
-        <translation>Nouveau: Modifier les contrôles (Sauvegardes PSX)</translation>
+        <translation>Nouveau : Modifier les contrôles (Sauvegardes PSX)</translation>
     </message>
     <message>
         <source>New: Materia Buffer , copy/paste materias</source>
-        <translation>Nouveau: Tampon Matéria, possibilité de copier/coller des Matérias</translation>
+        <translation>Nouveau : Tampon Matéria, possibilité de copier/coller des Matérias</translation>
     </message>
     <message>
         <source>New: Status Area</source>
-        <translation>Nouveau: Zone d&apos;état</translation>
+        <translation>Nouveau : Zone d&apos;état</translation>
     </message>
     <message>
         <source>New: Takes a filename argument (open w/ a file)</source>
-        <translation>Nouveau: Permet l&apos;ouverture de sauvegardes FF7 en ouvrant le fichier</translation>
+        <translation>Nouveau : Permet l&apos;ouverture de sauvegardes FF7 en ouvrant le fichier</translation>
     </message>
     <message>
         <source>New: Text Conversion Class (based on myst6re&apos;s work) </source>
-        <translation>Nouveau: Classe de Conversion de Texte (basé sur le travail de myst6re)</translation>
+        <translation>Nouveau : Classe de Conversion de Texte (basé sur le travail de myst6re)</translation>
     </message>
     <message>
         <source>Fixed: Save Button</source>
-        <translation>Fixé: Bouton de sauvegarde</translation>
+        <translation>Corrigé : Bouton de sauvegarde</translation>
     </message>
     <message>
         <source>Psx Icon Class &amp; PC string convertor for japanese</source>
@@ -7512,39 +7512,39 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: German Translation</source>
-        <translation>Nouveau: Traduction Allemande</translation>
+        <translation>Nouveau : Traduction Allemande</translation>
     </message>
     <message>
         <source>Improved: Detection of FF7 Types.</source>
-        <translation>Amélioré: Détection de fichiers de types FF7.</translation>
+        <translation>Amélioré : Détection de fichiers de types FF7.</translation>
     </message>
     <message>
         <source>Improved: Slotselect handling of non-ff7 and empty slots</source>
-        <translation>Amélioré: Gère la sélection de sauvegardes non-FF7 et vides</translation>
+        <translation>Amélioré : Gère la sélection de sauvegardes non-FF7 et vides</translation>
     </message>
     <message>
         <source>New: Predict stat growth (if enabled)</source>
-        <translation>Nouveau: Prédit l&apos;augmentation des statistiques</translation>
+        <translation>Nouveau : Prédit l&apos;augmentation des statistiques</translation>
     </message>
     <message>
         <source>New: Added Support for French PSX (BASCES-00868)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : Ajout du support de la version française PSX (BASCES-00868)</translation>
     </message>
     <message>
         <source>New: Static Data Classes</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : Classes de données statiques</translation>
     </message>
     <message>
         <source>New: Dialog Preview Widget</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : Dialog Preview Widget</translation>
     </message>
     <message>
         <source>New: Item Preview Widget</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : Item Preview Widget</translation>
     </message>
     <message>
         <source>Fixed: E.Skills not updating in some cases</source>
-        <translation type="unfinished"></translation>
+        <translation>Corrigé : TalentE pas mis à jour dans certains cas</translation>
     </message>
 </context>
 <context>
