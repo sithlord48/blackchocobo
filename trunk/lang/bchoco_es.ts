@@ -4988,11 +4988,11 @@ NO es un archivo de guardado PSV</translation>
     </message>
     <message>
         <source>Selected Item Details</source>
-        <translation type="unfinished">Detalles del Item Seleccionado</translation>
+        <translation>Detalles del Item Seleccionado</translation>
     </message>
     <message>
         <source>-------BAD ID-------</source>
-        <translation type="unfinished">-----ID ERRONEO-----</translation>
+        <translation>---ID ERRONEO---</translation>
     </message>
 </context>
 <context>
@@ -7119,15 +7119,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Dialog Preview Widget</source>
-        <translation type="unfinished">Nuevo: Widget de Vista Previa de Diálogos</translation>
+        <translation>Nuevo: Widget de Vista Previa de Diálogos</translation>
     </message>
     <message>
         <source>New: Item Preview Widget</source>
-        <translation type="unfinished">Nuevo: Widget de Vista Previa de Items</translation>
+        <translation>Nuevo: Widget de Vista Previa de Items</translation>
     </message>
     <message>
         <source>Fixed: E.Skills not updating in some cases</source>
-        <translation type="unfinished">Arreglado: Habil. Enem no actualizaba en algunos casos</translation>
+        <translation>Arreglado: Habil. Enem no actualizaba en algunos casos</translation>
     </message>
 </context>
 <context>
