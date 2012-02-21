@@ -71,6 +71,13 @@ win32:RC_FILE = bchoco.rc
 #base for setting up deb packages(rpm too?).
 #becomes 'make install' when qmake generates the makefile
 unix:!macx:!symbian {
+VERS = $$system(svn info -r HEAD . | grep 'Changed\ Rev' | cut -b 19-)
+{
+    #VERSION = 0.$${VERSION}
+
+VERSTR = '\\"$${VERS}\\"' # place quotes around the version string
+DEFINES += VER=\"$${VERSTR}\" # create a VER macro containing the version stringThen you can use the "VER" macro in your application to obtain the quoted version number:
+}
 system(lrelease Black_Chocobo.pro) #call lrelease to make the qm files.
 target.path = /opt/blackchocobo #set the play to deploy the build target.
 
