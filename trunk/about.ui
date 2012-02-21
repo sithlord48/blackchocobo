@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>367</width>
-    <height>386</height>
+    <width>361</width>
+    <height>380</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -205,13 +205,36 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Preferred</enum>
+           </property>
            <property name="sizeHint" stdset="0">
             <size>
-             <width>40</width>
+             <width>20</width>
              <height>20</height>
             </size>
            </property>
           </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbl_svn_lbl">
+           <property name="text">
+            <string>svn-</string>
+           </property>
+           <property name="smaller_text" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lbl_svn_version">
+           <property name="text">
+            <string/>
+           </property>
+           <property name="smaller_text" stdset="0">
+            <bool>true</bool>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
