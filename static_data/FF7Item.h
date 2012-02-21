@@ -33,7 +33,7 @@
 
 struct ITEM {
         QString name;
-	QString desc;
+        QString desc;
         qint8 type; //0-unknown 1-item 2-cloud 3-barret 4-tifa 5-red 6-aerith 7-cid 8-yuffie 9-cait 10-vincent 11-armor 12-accessory
         QImage image;
         qint8 mgrowth;
@@ -186,9 +186,9 @@ static ITEM Items[]=
     {QT_TRANSLATE_NOOP("Items","Soft"),QT_TRANSLATE_NOOP("Item_desc","Cures [Petrify]"),1,QImage(item_xpm),
      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
     {QT_TRANSLATE_NOOP("Items","Maiden's Kiss"),QT_TRANSLATE_NOOP("Item_desc","Cures [Frog]"),1,QImage(item_xpm),
-     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,+1,0,0,0,0,0,0,0,0,0,0,0,0,0},
+     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0,0},
     {QT_TRANSLATE_NOOP("Items","Cornucopia"),QT_TRANSLATE_NOOP("Item_desc","Cures [Small]"),1,QImage(item_xpm),
-     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,+1,0,0,0,0,0,0,0,0,0,0,0,0},
+     0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0},
     {QT_TRANSLATE_NOOP("Items","Echo screen"),QT_TRANSLATE_NOOP("Item_desc","Cures [Silence]"),1,QImage(item_xpm),
      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
     {QT_TRANSLATE_NOOP("Items","Hyper"),QT_TRANSLATE_NOOP("Item_desc","Cures [Sadness]"),1,QImage(item_xpm),
