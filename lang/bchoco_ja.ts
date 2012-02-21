@@ -73,20 +73,20 @@
     </message>
     <message>
         <source>Absorb:</source>
-        <translation>吸収: </translation>
+        <translation>吸収:</translation>
     </message>
     <message>
         <source>Nullify:</source>
-        <translation>無効化: </translation>
+        <translation>無効化:</translation>
     </message>
     <message>
         <source>Halve:</source>
-        <translation>半減: </translation>
+        <translation>半減:</translation>
     </message>
     <message>
         <source>Attack:</source>
         <translatorcomment>●●●●●</translatorcomment>
-        <translation type="unfinished">属性: </translation>
+        <translation>属性:</translation>
     </message>
     <message>
         <source>Death</source>
@@ -150,7 +150,7 @@
     </message>
     <message>
         <source>Barrier</source>
-        <translation>バリア:</translation>
+        <translation>バリア</translation>
     </message>
     <message>
         <source>M.Barrier</source>
@@ -170,19 +170,19 @@
     </message>
     <message>
         <source>Protect:</source>
-        <translation>無効化: </translation>
+        <translation>無効化:</translation>
     </message>
     <message>
         <source>Remove:</source>
-        <translation>解除: </translation>
+        <translation>解除:</translation>
     </message>
     <message>
         <source>Inflict:</source>
-        <translation>追加: </translation>
+        <translation>追加:</translation>
     </message>
     <message>
         <source>OnBattle:</source>
-        <translation>戦闘時: </translation>
+        <translation>戦闘時:</translation>
     </message>
     <message>
         <source>Confusion</source>
@@ -2227,12 +2227,12 @@
     <message>
         <source>Weapon</source>
         <translatorcomment>●</translatorcomment>
-        <translation type="unfinished">武器:</translation>
+        <translation>武器</translation>
     </message>
     <message>
         <source>Armor</source>
         <translatorcomment>●</translatorcomment>
-        <translation type="unfinished">防具:</translation>
+        <translation>防具</translation>
     </message>
     <message>
         <source>AP</source>
@@ -3143,37 +3143,37 @@
     <message>
         <source>Magic Order</source>
         <translatorcomment>●</translatorcomment>
-        <translation type="unfinished">魔法の並び方</translation>
+        <translation>魔法の並び方</translation>
     </message>
     <message>
         <source>Restore,Attack,Indirect</source>
         <translatorcomment>●</translatorcomment>
-        <translation type="unfinished">回復　攻撃　間接</translation>
+        <translation>回復　攻撃　間接</translation>
     </message>
     <message>
         <source>Restore,Indirect,Attack</source>
         <translatorcomment>●</translatorcomment>
-        <translation type="unfinished">回復　間接　攻撃</translation>
+        <translation>回復　間接　攻撃</translation>
     </message>
     <message>
         <source>Attack,Indirect,Restore</source>
         <translatorcomment>●</translatorcomment>
-        <translation type="unfinished">攻撃　間接　回復</translation>
+        <translation>攻撃　間接　回復</translation>
     </message>
     <message>
         <source>Attack,Restore,Indirect</source>
         <translatorcomment>●</translatorcomment>
-        <translation type="unfinished">攻撃　回復　間接</translation>
+        <translation>攻撃　回復　間接</translation>
     </message>
     <message>
         <source>Indirect,Restore,Attack</source>
         <translatorcomment>●</translatorcomment>
-        <translation type="unfinished">間接　回復　攻撃</translation>
+        <translation>間接　回復　攻撃</translation>
     </message>
     <message>
         <source>Indirect,Attack,Restore</source>
         <translatorcomment>●</translatorcomment>
-        <translation type="unfinished">間接　攻撃　回復</translation>
+        <translation>間接　攻撃　回復</translation>
     </message>
     <message>
         <source>Battle Speed:</source>
@@ -3182,12 +3182,12 @@
     <message>
         <source>Fast</source>
         <translatorcomment>●</translatorcomment>
-        <translation type="unfinished">速い　</translation>
+        <translation>速い　</translation>
     </message>
     <message>
         <source>Slow</source>
         <translatorcomment>●</translatorcomment>
-        <translation type="unfinished">　遅い</translation>
+        <translation>　遅い</translation>
     </message>
     <message>
         <source>Battle Message Speed:</source>
