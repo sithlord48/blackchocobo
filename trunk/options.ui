@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>763</width>
-    <height>438</height>
+    <width>761</width>
+    <height>436</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -612,6 +612,11 @@
       </item>
       <item>
        <widget class="QComboBox" name="combo_font_size">
+        <item>
+         <property name="text">
+          <string>8 Pt.</string>
+         </property>
+        </item>
         <item>
          <property name="text">
           <string>9 Pt.</string>

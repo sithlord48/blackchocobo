@@ -6544,6 +6544,10 @@ Table Entries are Editable</source>
         <source>14 Pt.</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>8 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SlotSelect</name>
