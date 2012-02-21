@@ -6562,6 +6562,10 @@ N&apos;EST PAS une sauvegarde PSV</translation>
         <source>14 Pt.</source>
         <translation>14 Pt.</translation>
     </message>
+    <message>
+        <source>8 Pt.</source>
+        <translation type="unfinished">14 Pt. {8 ?}</translation>
+    </message>
 </context>
 <context>
     <name>SlotSelect</name>

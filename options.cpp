@@ -37,7 +37,7 @@ Options::Options(QWidget *parent,QSettings *config_data) :
     ui->slide_c3_r->setValue(settings->value("color3_r").toInt());
     ui->slide_c3_g->setValue(settings->value("color3_g").toInt());
     ui->slide_c3_b->setValue(settings->value("color3_b").toInt());
-    ui->combo_font_size->setCurrentIndex(QApplication::font().pointSize()-9);
+    ui->combo_font_size->setCurrentIndex(QApplication::font().pointSize()-8);
     if(settings->value("show_test").toBool()){ui->cb_skip_slot_mask->setVisible(true);}
     else{ui->cb_skip_slot_mask->setVisible(false);}
     load=true;
@@ -168,8 +168,8 @@ void Options::on_combo_font_currentIndexChanged(QString family)
 
 void Options::on_combo_font_size_currentIndexChanged(int index)
 {
-    settings->setValue("font-size",index+9);
-    QApplication::setFont(QFont(ui->combo_font->currentText(),index+9,-1,false));
+    settings->setValue("font-size",index+8);
+    QApplication::setFont(QFont(ui->combo_font->currentText(),index+8,-1,false));
 }
 /*~~~~~~~~~~~~~~~~~~Color sliders~~~~~~~~~~~~~~~~~~*/
 void Options::on_slide_c1_r_valueChanged(int value)
