@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>361</width>
-    <height>380</height>
+    <width>383</width>
+    <height>384</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -123,9 +123,6 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
    <bool>true</bool>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_2">
-   <property name="margin">
-    <number>3</number>
-   </property>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout_4">
      <item>
@@ -206,7 +203,7 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
             <enum>Qt::Horizontal</enum>
            </property>
            <property name="sizeType">
-            <enum>QSizePolicy::Preferred</enum>
+            <enum>QSizePolicy::Fixed</enum>
            </property>
            <property name="sizeHint" stdset="0">
             <size>
@@ -217,24 +214,41 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
           </spacer>
          </item>
          <item>
-          <widget class="QLabel" name="lbl_svn_lbl">
-           <property name="text">
-            <string>svn-</string>
-           </property>
-           <property name="smaller_text" stdset="0">
-            <bool>true</bool>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="lbl_svn_version">
-           <property name="text">
-            <string/>
-           </property>
-           <property name="smaller_text" stdset="0">
-            <bool>true</bool>
-           </property>
-          </widget>
+          <layout class="QHBoxLayout" name="horizontalLayout_24">
+           <item>
+            <widget class="QLabel" name="lbl_svn_lbl">
+             <property name="text">
+              <string notr="true">svn-</string>
+             </property>
+             <property name="smaller_text" stdset="0">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="lbl_svn_version">
+             <property name="text">
+              <string/>
+             </property>
+             <property name="smaller_text" stdset="0">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
          </item>
         </layout>
        </item>
@@ -1587,8 +1601,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>138</width>
-            <height>740</height>
+            <width>349</width>
+            <height>390</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -1829,9 +1843,6 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
    </item>
   </layout>
  </widget>
- <tabstops>
-  <tabstop>pushButton</tabstop>
- </tabstops>
  <resources>
   <include location="images.qrc"/>
  </resources>
