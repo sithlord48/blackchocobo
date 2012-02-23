@@ -24,7 +24,12 @@
 
 int main(int argc, char *argv[])
 {
-    QString Version ="1.9.52";
+    QString Version = QString::number(VER_MAJOR);
+    Version.append(QString("."));
+    Version.append(QString::number(VER_MINOR));
+    Version.append(QString("."));
+    Version.append(QString::number(VER_SP));
+
     if(argc >1)
     {//Check for and display help to the console :D
         if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h"){printf("Usage: blackchocobo [<filename>]\n");return 0;}

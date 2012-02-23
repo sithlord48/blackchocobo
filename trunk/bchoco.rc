@@ -1,1 +1,76 @@
-    IDI_ICON1               ICON    DISCARDABLE     "icon/bchoco_icon_win.ico"
+/****************************************************************************/
+//    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
+//                        Black Chocobo Dev Team                            //
+//                                                                          //
+//    This file is part of Black Chocobo.                                   //
+//                                                                          //
+//    Black Chocobo is free software: you can redistribute it and/or modify //
+//    it under the terms of the GNU General Public License as published by  //
+//    the Free Software Foundation, either version 3 of the License, or     //
+//    (at your option) any later version.                                   //
+//                                                                          //
+//    Black Chocobo is distributed in the hope that it will be useful,      //
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
+//    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         //
+//    GNU General Public License for more details.                          //
+/****************************************************************************/
+
+// ----- global includes --- //
+#include "winver.h"
+
+// ----- local includes ---- //
+#include "svnversion.h"
+
+// ----- local includes ---- //
+#include "version.h"
+
+// ----- predefines -------- //
+#define STR(x)   #x
+#define STRINGIZE(x)  STR(x)
+
+// ----- Icon -------------- //
+IDI_ICON1               ICON    DISCARDABLE     "icon/bchoco_icon_win.ico"
+
+// ----- Version info ------ //
+#ifndef DEBUG
+#define VER_DEBUG                   0
+#else
+#define VER_DEBUG                   VS_FF_DEBUG
+#endif
+
+#ifndef SVNVERSION
+#define SVNVERSION                   0
+#endif
+
+VS_VERSION_INFO VERSIONINFO
+FILEVERSION    	VER_MAJOR,VER_MINOR,VER_SP,VER_BUILDNR
+PRODUCTVERSION 	VER_MAJOR,VER_MINOR,VER_SP,VER_BUILDNR
+FILEFLAGSMASK  	VS_FFI_FILEFLAGSMASK
+FILEFLAGS      	VS_FF_PRIVATEBUILD|VS_FF_PRERELEASE|VER_DEBUG
+FILEOS         	VOS_NT_WINDOWS32
+FILETYPE       	VFT_APP
+FILESUBTYPE    	VFT2_UNKNOWN
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904e4"
+        BEGIN
+            VALUE "CompanyName", "Black Chocobo Dev Team"
+            VALUE "FileDescription", "FF7 Save Game Editor"
+            VALUE "FileVersion", STRINGIZE(VER_MAJOR) "." STRINGIZE(VER_MINOR) "." STRINGIZE(VER_SP) "." STRINGIZE(VER_BUILDNR) "\0"
+            VALUE "InternalName", "BlackChocobo"
+            VALUE "LegalCopyright", "(C) 2010-2012 Chris Rizzitello"
+            /*VALUE "LegalTrademarks1", VER_LEGALTRADEMARKS1_STR*/
+            /*VALUE "LegalTrademarks2", VER_LEGALTRADEMARKS2_STR*/
+            VALUE "OriginalFilename", "BlackChocobo"
+            /*VALUE "PrivateBuild",  VER_PRIVATEBUILD_STR*/
+            VALUE "ProductName",      "Black Chocobo"
+            VALUE "ProductVersion",  STRINGIZE(VER_MAJOR) "." STRINGIZE(VER_MINOR) "." STRINGIZE(VER_SP) "\0"
+            /*VALUE "SpecialBuild",  VER_SPECIALBUILD_STR*/
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1252
+    END
+END
