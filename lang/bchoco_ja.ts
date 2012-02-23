@@ -57,7 +57,7 @@
     </message>
     <message>
         <source>Cut</source>
-        <translation type="unfinished">斬る</translation>
+        <translation>斬る</translation>
     </message>
     <message>
         <source>Shoot</source>
@@ -65,28 +65,27 @@
     </message>
     <message>
         <source>Punch</source>
-        <translation type="unfinished">突く</translation>
+        <translation>突く</translation>
     </message>
     <message>
         <source>Hit</source>
-        <translation type="unfinished">殴る</translation>
+        <translation>殴る</translation>
     </message>
     <message>
         <source>Absorb:</source>
-        <translation>吸収:</translation>
+        <translation>吸収：</translation>
     </message>
     <message>
         <source>Nullify:</source>
-        <translation>無効化:</translation>
+        <translation>無効化：</translation>
     </message>
     <message>
         <source>Halve:</source>
-        <translation>半減:</translation>
+        <translation>半減：</translation>
     </message>
     <message>
         <source>Attack:</source>
-        <translatorcomment>●●●●●</translatorcomment>
-        <translation>属性:</translation>
+        <translation>アタック タイプ：</translation>
     </message>
     <message>
         <source>Death</source>
@@ -170,19 +169,19 @@
     </message>
     <message>
         <source>Protect:</source>
-        <translation>無効化:</translation>
+        <translation>無効化：</translation>
     </message>
     <message>
         <source>Remove:</source>
-        <translation>解除:</translation>
+        <translation>解除：</translation>
     </message>
     <message>
         <source>Inflict:</source>
-        <translation>追加:</translation>
+        <translation>追加：</translation>
     </message>
     <message>
         <source>OnBattle:</source>
-        <translation>戦闘時:</translation>
+        <translation>戦闘時：</translation>
     </message>
     <message>
         <source>Confusion</source>
@@ -585,15 +584,15 @@
     </message>
     <message>
         <source>Drains [Fire] attacks</source>
-        <translation>炎属性の攻撃を無効化する腕輪</translation>
+        <translation>炎属性の攻撃を吸収する腕輪</translation>
     </message>
     <message>
         <source>Drains [Cold] attacks</source>
-        <translation>冷気属性の攻撃を無効化する腕輪</translation>
+        <translation>冷気属性の攻撃を吸収する腕輪</translation>
     </message>
     <message>
         <source>Drains [Lightning] attacks</source>
-        <translation>雷属性の攻撃を無効化する腕輪</translation>
+        <translation>雷属性の攻撃を吸収する腕輪</translation>
     </message>
     <message>
         <source>Drains 1/2 [Fire/Cold/Lightning] attack</source>
@@ -693,15 +692,15 @@
     </message>
     <message>
         <source>Nullifies [Fire] attacks</source>
-        <translation>炎属性の攻撃を吸収する</translation>
+        <translation>炎属性の攻撃を無効化する</translation>
     </message>
     <message>
         <source>Nullifies [Cold] attacks</source>
-        <translation>冷気属性の攻撃を吸収する</translation>
+        <translation>冷気属性の攻撃を無効化する</translation>
     </message>
     <message>
         <source>Nullifies [Lightning] attacks</source>
-        <translation>雷属性の攻撃を吸収する</translation>
+        <translation>雷属性の攻撃を無効化する</translation>
     </message>
     <message>
         <source>Drains [Fire/Cold/Lightning/Earth] attacks</source>
@@ -3105,12 +3104,12 @@
     <message>
         <source>Initial</source>
         <translatorcomment>●</translatorcomment>
-        <translation type="unfinished">初期</translation>
+        <translation>初期</translation>
     </message>
     <message>
         <source>Memory</source>
         <translatorcomment>●</translatorcomment>
-        <translation type="unfinished">記憶</translation>
+        <translation>記憶</translation>
     </message>
     <message>
         <source>ATB Style</source>
@@ -3394,6 +3393,10 @@
     <message>
         <source>Secret Chars Unlocked</source>
         <translation>隠しキャラのロックを解除</translation>
+    </message>
+    <message>
+        <source>0xBD4 (itemmasks_1)</source>
+        <translation>0xBD4 (アイテムマスク_1)</translation>
     </message>
     <message>
         <source>0x02</source>
@@ -4528,6 +4531,10 @@ Var And Scrolling Synced To Left Table</source>
         <translation>８番街_3 放電発生後</translation>
     </message>
     <message>
+        <source>0x01 Potion On MD8_3 (see item tab)</source>
+        <translation>0x01 ８番街_3 ポーション (アイテム タブを参照)</translation>
+    </message>
+    <message>
         <source>Custom Controller Mapping(PSX Only)</source>
         <translation>カスタム コントローラー (PSX のみ)</translation>
     </message>
@@ -4811,6 +4818,46 @@ Table Entries are Editable</source>
         <translation>能力値: 基本 + ボーナス + マテリア = トータル</translation>
     </message>
     <message>
+        <source>Farm:Choco Mog_1</source>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_1</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_1</translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_2</source>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_2</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_2</translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_3</source>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_3</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_3</translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_4</source>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_4</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_4</translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_5</source>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_5</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_5</translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_6</source>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_6</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_6</translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_7</source>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_7</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_7</translation>
+    </message>
+    <message>
+        <source>Farm:Choco Mog_8</source>
+        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_8</translatorcomment>
+        <translation>チョコボファーム; チョコボ＆モーグリ_8</translation>
+    </message>
+    <message>
         <source>Calculate Stats</source>
         <translation>能力値を算出</translation>
     </message>
@@ -4974,42 +5021,6 @@ Table Entries are Editable</source>
     <message>
         <source>-------BAD ID-------</source>
         <translation>------無効な ID------</translation>
-    </message>
-    <message>
-        <source>MDS6_2: Sense Materia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>EALS_1: Cover Materia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>EALS_1: Ether</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>CRCIN_2: Ramuh Materia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>FARM: Choco-Mog Materia</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>EALIN_1: Potion + Phoenix Down</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>ZZ1:Mythril</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0xBEF (farmitems)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>0x01 - After Choco mog picked up (again)?</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6927,11 +6938,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Basic Setting of World Locations In Debug</source>
-        <translation>追加: デバッグ内 ワールドマップ上の場所の基本的設定</translation>
+        <translation>追加: ワールドマップ上の場所の基本設定 (デバッグ)</translation>
     </message>
     <message>
         <source>New: Added .bin .mc .mci .ps .psm .dff  to mcr/mcd list</source>
-        <translation>追加: MCR/MCD リストに BIN,MC,MCI,PS,PSM,DFF を追加</translation>
+        <translation>追加: BIN,MC,MCI,PS,PSM,DFF を MCR/MCD に追加</translation>
     </message>
     <message>
         <source>Fixed: Psx and Psv Region Detection</source>
@@ -6983,7 +6994,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Update: World Map ruby-&gt;diamond/ulitmate/ruby</source>
-        <translation>変更: ウェポンのワールド マップ配置をダイヤ/アルテマ/ルビーに</translation>
+        <translation>変更: ワールドマップのウェポンをダイヤ/アルテマ/ルビーに</translation>
     </message>
     <message>
         <source>New: &quot;Automatic Exp &lt;-&gt; Lvl&quot; option (default:on)</source>
@@ -7148,10 +7159,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Fixed: E.Skills not updating in some cases</source>
         <translation>修正: てきのわざの適用と更新不具合</translation>
-    </message>
-    <message>
-        <source>German Translation:</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
