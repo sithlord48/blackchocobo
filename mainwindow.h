@@ -17,19 +17,20 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <QFileDialog> // for file dialogs
-#include <QDataStream> // for data manip
+#include <QFileDialog>              // for file dialogs
+#include <QDataStream>              // for data manip
 #include <QMainWindow>
 #include <QWidget>
 #include <QMessageBox>
 #include <QSettings>
-#include "slotselect.h" // slot selection dialog stuff.
-#include "options.h" // contains the options dialog
-#include "about.h"      // about dialog stuff.
-#include "errbox.h" //non ff7 error box
+#include "slotselect.h"             // slot selection dialog stuff.
+#include "options.h"                // contains the options dialog
+#include "about.h"                  // about dialog stuff.
+#include "errbox.h"                 // non ff7 error box
 #include <SaveIcon.h>
 #include "widgets/ItemPreview.h"
 #include "widgets/DialogPreview.h"
+#include "version.h"                // contains the program version
 
 
 
