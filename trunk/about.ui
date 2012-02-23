@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>388</width>
-    <height>362</height>
+    <width>389</width>
+    <height>360</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -951,7 +951,7 @@ p, li { white-space: pre-wrap; }
          <widget class="QWidget" name="scrollAreaWidgetContents">
           <property name="geometry">
            <rect>
-            <x>3</x>
+            <x>0</x>
             <y>0</y>
             <width>349</width>
             <height>392</height>
@@ -1638,8 +1638,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>138</width>
-            <height>740</height>
+            <width>122</width>
+            <height>698</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">
