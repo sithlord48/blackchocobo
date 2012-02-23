@@ -61,11 +61,19 @@ TRANSLATIONS += lang/bchoco_en.ts \
 
 #Below Is OS Specific Stuff.
 
-#set program icon on mac os
-macx:ICON = icon/bchoco_icon_osx.icns
+#set up for mac os
+macx:{
+    #set program icon on mac os
+    ICON = icon/bchoco_icon_osx.icns
+    DEFINES += SVNVERSION='\\"\\"'
+}
 
-#set up icon for windows
-win32:RC_FILE = bchoco.rc
+#set up for windows
+win32:{
+    #set up icon for windows
+    RC_FILE = bchoco.rc
+    system(SubWCRev $$PWD svnversion.hmake svnversion.h)
+}
 
 #all other *nix (except for symbian)
 #base for setting up deb packages(rpm too?).
@@ -76,8 +84,9 @@ VERS = $$system(svn info -r HEAD . | grep 'Changed\ Rev' | cut -b 19-)
     #VERSION = 0.$${VERSION}
 
 VERSTR = '\\"$${VERS}\\"' # place quotes around the version string
-DEFINES += VER=\"$${VERSTR}\" # create a VER macro containing the version stringThen you can use the "VER" macro in your application to obtain the quoted version number:
+DEFINES += SVNVERSION=\"$${VERSTR}\" # create a VER macro containing the version stringThen you can use the "VER" macro in your application to obtain the quoted version number:
 }
+
 system(lrelease Black_Chocobo.pro) #call lrelease to make the qm files.
 target.path = /opt/blackchocobo #set the play to deploy the build target.
 
