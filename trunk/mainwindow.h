@@ -30,7 +30,6 @@
 #include <SaveIcon.h>
 #include "widgets/ItemPreview.h"
 #include "widgets/DialogPreview.h"
-#include "version.h"                // contains the program version
 
 
 
