@@ -18,6 +18,7 @@
 #include <QLocale>
 #include <QTranslator>
 #include "mainwindow.h"
+#include "version.h"                // contains the program version
 #include <QSettings>
 #include <QPlastiqueStyle>
 #include <QTime>
