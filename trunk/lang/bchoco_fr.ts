@@ -3392,11 +3392,6 @@
         <translation>Personnages secrets débloqués</translation>
     </message>
     <message>
-        <source>0xBD4 (itemmasks_1)</source>
-        <translatorcomment>Non, ce n&apos;est pas une erreur, itemmasks_1 est une variable et ne peut pas être traduite</translatorcomment>
-        <translation>0xBD4 (itemmasks_1)</translation>
-    </message>
-    <message>
         <source>0x02</source>
         <translation>0x02</translation>
     </message>
@@ -4513,10 +4508,6 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
         <translation>Passé le courant électrique dans MD8_3</translation>
     </message>
     <message>
-        <source>0x01 Potion On MD8_3 (see item tab)</source>
-        <translation>MD8_3: Potion</translation>
-    </message>
-    <message>
         <source>Custom Controller Mapping(PSX Only)</source>
         <translation>Configuration manuelle des boutons (psx seul.)</translation>
     </message>
@@ -4799,38 +4790,6 @@ N&apos;EST PAS une sauvegarde PSV</translation>
         <translation>Stat: Base +Bonus +Matéria=Total</translation>
     </message>
     <message>
-        <source>Farm:Choco Mog_1</source>
-        <translation>Ferme : Choco Mog_1</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_2</source>
-        <translation>Ferme : Choco Mog_2</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_3</source>
-        <translation>Ferme : Choco Mog_3</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_4</source>
-        <translation>Ferme : Choco Mog_4</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_5</source>
-        <translation>Ferme : Choco Mog_5</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_6</source>
-        <translation>Ferme : Choco Mog_6</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_7</source>
-        <translation>Ferme : Choco Mog_7</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_8</source>
-        <translation>Ferme : Choco Mog_8</translation>
-    </message>
-    <message>
         <source>Calculate Stats</source>
         <translation>Calculer les statistiques</translation>
     </message>
@@ -4993,6 +4952,42 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     <message>
         <source>-------BAD ID-------</source>
         <translation>----MAUVAIS ID----</translation>
+    </message>
+    <message>
+        <source>MDS6_2: Sense Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>EALS_1: Cover Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>EALS_1: Ether</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CRCIN_2: Ramuh Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FARM: Choco-Mog Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>EALIN_1: Potion + Phoenix Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ZZ1:Mythril</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0xBEF (farmitems)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x01 - After Choco mog picked up (again)?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7133,6 +7128,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Fixed: E.Skills not updating in some cases</source>
         <translation>Corrigé : TalentE pas mis à jour dans certains cas</translation>
+    </message>
+    <message>
+        <source>German Translation:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

@@ -3396,10 +3396,6 @@
         <translation>隠しキャラのロックを解除</translation>
     </message>
     <message>
-        <source>0xBD4 (itemmasks_1)</source>
-        <translation>0xBD4 (アイテムマスク_1)</translation>
-    </message>
-    <message>
         <source>0x02</source>
         <translation>0x02</translation>
     </message>
@@ -4532,10 +4528,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation>８番街_3 放電発生後</translation>
     </message>
     <message>
-        <source>0x01 Potion On MD8_3 (see item tab)</source>
-        <translation>0x01 ８番街_3 ポーション (アイテム タブを参照)</translation>
-    </message>
-    <message>
         <source>Custom Controller Mapping(PSX Only)</source>
         <translation>カスタム コントローラー (PSX のみ)</translation>
     </message>
@@ -4819,46 +4811,6 @@ Table Entries are Editable</source>
         <translation>能力値: 基本 + ボーナス + マテリア = トータル</translation>
     </message>
     <message>
-        <source>Farm:Choco Mog_1</source>
-        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_1</translatorcomment>
-        <translation>チョコボファーム; チョコボ＆モーグリ_1</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_2</source>
-        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_2</translatorcomment>
-        <translation>チョコボファーム; チョコボ＆モーグリ_2</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_3</source>
-        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_3</translatorcomment>
-        <translation>チョコボファーム; チョコボ＆モーグリ_3</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_4</source>
-        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_4</translatorcomment>
-        <translation>チョコボファーム; チョコボ＆モーグリ_4</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_5</source>
-        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_5</translatorcomment>
-        <translation>チョコボファーム; チョコボ＆モーグリ_5</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_6</source>
-        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_6</translatorcomment>
-        <translation>チョコボファーム; チョコボ＆モーグリ_6</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_7</source>
-        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_7</translatorcomment>
-        <translation>チョコボファーム; チョコボ＆モーグリ_7</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_8</source>
-        <translatorcomment>チョコボファーム; チョコボ＆モーグリ_8</translatorcomment>
-        <translation>チョコボファーム; チョコボ＆モーグリ_8</translation>
-    </message>
-    <message>
         <source>Calculate Stats</source>
         <translation>能力値を算出</translation>
     </message>
@@ -5022,6 +4974,42 @@ Table Entries are Editable</source>
     <message>
         <source>-------BAD ID-------</source>
         <translation>------無効な ID------</translation>
+    </message>
+    <message>
+        <source>MDS6_2: Sense Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>EALS_1: Cover Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>EALS_1: Ether</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CRCIN_2: Ramuh Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FARM: Choco-Mog Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>EALIN_1: Potion + Phoenix Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ZZ1:Mythril</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0xBEF (farmitems)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x01 - After Choco mog picked up (again)?</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7160,6 +7148,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Fixed: E.Skills not updating in some cases</source>
         <translation>修正: てきのわざの適用と更新不具合</translation>
+    </message>
+    <message>
+        <source>German Translation:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
