@@ -3061,8 +3061,22 @@ void MainWindow::itemupdate()
     if((ff7->slot[s].z_38[48])&(1<<3)){ui->cb_bm_items_4->setChecked(1);}
     else{ui->cb_bm_items_4->setChecked(0);}
 
-    if((ff7->slot[s].itemsmask_1)& (1<<0)){ui->cb_itemmask1_1->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_1->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].itemsmask_1)& (1<<0)){ui->cb_itemmask1_1->setChecked(1);}
+    else{ui->cb_itemmask1_1->setChecked(0);}
+    if((ff7->slot[s].itemsmask_1)& (1<<1)){ui->cb_itemmask1_2->setChecked(1);}
+    else{ui->cb_itemmask1_2->setChecked(0);}
+    if((ff7->slot[s].itemsmask_1)& (1<<2)){ui->cb_itemmask1_3->setChecked(1);}
+    else{ui->cb_itemmask1_3->setChecked(0);}
+    if((ff7->slot[s].itemsmask_1)& (1<<3)){ui->cb_itemmask1_4->setChecked(1);}
+    else{ui->cb_itemmask1_4->setChecked(0);}
+    if((ff7->slot[s].itemsmask_1)& (1<<4)){ui->cb_itemmask1_5->setChecked(1);}
+    else{ui->cb_itemmask1_5->setChecked(0);}
+    if((ff7->slot[s].itemsmask_1)& (1<<5)){ui->cb_itemmask1_6->setChecked(1);}
+    else{ui->cb_itemmask1_6->setChecked(0);}
+    if((ff7->slot[s].itemsmask_1)& (1<<6)){ui->cb_itemmask1_7->setChecked(1);}
+    else{ui->cb_itemmask1_7->setChecked(0);}
+    if((ff7->slot[s].itemsmask_1)& (1<<7)){ui->cb_itemmask1_8->setChecked(1);}
+    else{ui->cb_itemmask1_8->setChecked(0);}
 
     if((ff7->slot[s].z_9[4])&(1<<0)){ui->cb_s7tg_items_1->setChecked(1);}
     else{ui->cb_s7tg_items_1->setChecked(0);}
@@ -3080,23 +3094,6 @@ void MainWindow::itemupdate()
     else{ui->cb_s7tg_items_7->setChecked(0);}
     if((ff7->slot[s].z_9[4])&(1<<7)){ui->cb_s7tg_items_8->setChecked(1);}
     else{ui->cb_s7tg_items_8->setChecked(0);}
-
-    if((ff7->slot[s].z_11[3])&(1<<0)){ui->cb_farm_items_1->setChecked(1);}
-    else{ui->cb_farm_items_1->setChecked(0);}
-    if((ff7->slot[s].z_11[3])&(1<<1)){ui->cb_farm_items_2->setChecked(1);}
-    else{ui->cb_farm_items_2->setChecked(0);}
-    if((ff7->slot[s].z_11[3])&(1<<2)){ui->cb_farm_items_3->setChecked(1);}
-    else{ui->cb_farm_items_3->setChecked(0);}
-    if((ff7->slot[s].z_11[3])&(1<<3)){ui->cb_farm_items_4->setChecked(1);}
-    else{ui->cb_farm_items_4->setChecked(0);}
-    if((ff7->slot[s].z_11[3])&(1<<4)){ui->cb_farm_items_5->setChecked(1);}
-    else{ui->cb_farm_items_5->setChecked(0);}
-    if((ff7->slot[s].z_11[3])&(1<<5)){ui->cb_farm_items_6->setChecked(1);}
-    else{ui->cb_farm_items_6->setChecked(0);}
-    if((ff7->slot[s].z_11[3])&(1<<6)){ui->cb_farm_items_7->setChecked(1);}
-    else{ui->cb_farm_items_7->setChecked(0);}
-    if((ff7->slot[s].z_11[3])&(1<<7)){ui->cb_farm_items_8->setChecked(1);}
-    else{ui->cb_farm_items_8->setChecked(0);}
     load=false;
 }
 /*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
@@ -3872,21 +3869,23 @@ void MainWindow::testdata_refresh()
     if(ff7->slot[s].reg_yuffie == 0x6F){ui->cb_reg_yuffie->setChecked(Qt::Checked);}
     ui->lcdNumber_9->display(ff7->slot[s].reg_yuffie);
 
-    if((ff7->slot[s].itemsmask_1)& (1<<1)){ui->cb_itemmask1_2->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_2->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].itemsmask_1)& (1<<2)){ui->cb_itemmask1_3->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_3->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].itemsmask_1)& (1<<3)){ui->cb_itemmask1_4->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_4->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].itemsmask_1)& (1<<4)){ui->cb_itemmask1_5->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_5->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].itemsmask_1)& (1<<5)){ui->cb_itemmask1_6->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_6->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].itemsmask_1)& (1<<6)){ui->cb_itemmask1_7->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_7->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].itemsmask_1)& (1<<7)){ui->cb_itemmask1_8->setChecked(Qt::Checked);}
-    else{ui->cb_itemmask1_8->setChecked(Qt::Unchecked);}
-    ui->lcd_itemmask_1->display(ff7->slot[s].itemsmask_1);
+    if((ff7->slot[s].z_11[3])&(1<<0)){ui->cb_farm_items_1->setChecked(1);}
+    else{ui->cb_farm_items_1->setChecked(0);}
+    if((ff7->slot[s].z_11[3])&(1<<1)){ui->cb_farm_items_2->setChecked(1);}
+    else{ui->cb_farm_items_2->setChecked(0);}
+    if((ff7->slot[s].z_11[3])&(1<<2)){ui->cb_farm_items_3->setChecked(1);}
+    else{ui->cb_farm_items_3->setChecked(0);}
+    if((ff7->slot[s].z_11[3])&(1<<3)){ui->cb_farm_items_4->setChecked(1);}
+    else{ui->cb_farm_items_4->setChecked(0);}
+    if((ff7->slot[s].z_11[3])&(1<<4)){ui->cb_farm_items_5->setChecked(1);}
+    else{ui->cb_farm_items_5->setChecked(0);}
+    if((ff7->slot[s].z_11[3])&(1<<5)){ui->cb_farm_items_6->setChecked(1);}
+    else{ui->cb_farm_items_6->setChecked(0);}
+    if((ff7->slot[s].z_11[3])&(1<<6)){ui->cb_farm_items_7->setChecked(1);}
+    else{ui->cb_farm_items_7->setChecked(0);}
+    if((ff7->slot[s].z_11[3])&(1<<7)){ui->cb_farm_items_8->setChecked(1);}
+    else{ui->cb_farm_items_8->setChecked(0);}
+
 
     if((ff7->slot[s].tut_sub)& (1<<0)){ui->cb_tut_sub_1->setChecked(Qt::Checked);}
     else{ui->cb_tut_sub_1->setChecked(Qt::Unchecked);}
@@ -4307,14 +4306,14 @@ void MainWindow::on_cb_s7tg_items_6_toggled(bool checked){if(!load){file_changed
 void MainWindow::on_cb_s7tg_items_7_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_9[4] |= (1<<6);}else{ff7->slot[s].z_9[4] &= ~(1<<6);}}}
 void MainWindow::on_cb_s7tg_items_8_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_9[4] |= (1<<7);}else{ff7->slot[s].z_9[4] &= ~(1<<7);}}}
 
-void MainWindow::on_cb_farm_items_1_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<0);}else{ff7->slot[s].z_11[3] &= ~(1<<0);}}}
-void MainWindow::on_cb_farm_items_2_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<1);}else{ff7->slot[s].z_11[3] &= ~(1<<1);}}}
-void MainWindow::on_cb_farm_items_3_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<2);}else{ff7->slot[s].z_11[3] &= ~(1<<2);}}}
-void MainWindow::on_cb_farm_items_4_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<3);}else{ff7->slot[s].z_11[3] &= ~(1<<3);}}}
-void MainWindow::on_cb_farm_items_5_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<4);}else{ff7->slot[s].z_11[3] &= ~(1<<4);}}}
-void MainWindow::on_cb_farm_items_6_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<5);}else{ff7->slot[s].z_11[3] &= ~(1<<5);}}}
-void MainWindow::on_cb_farm_items_7_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<6);}else{ff7->slot[s].z_11[3] &= ~(1<<6);}}}
-void MainWindow::on_cb_farm_items_8_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<7);}else{ff7->slot[s].z_11[3] &= ~(1<<7);}}}
+void MainWindow::on_cb_farm_items_1_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<0);}else{ff7->slot[s].z_11[3] &= ~(1<<0);}}ui->lcd_farm_items->display(ff7->slot[s].z_11[3]);}
+void MainWindow::on_cb_farm_items_2_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<1);}else{ff7->slot[s].z_11[3] &= ~(1<<1);}}ui->lcd_farm_items->display(ff7->slot[s].z_11[3]);}
+void MainWindow::on_cb_farm_items_3_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<2);}else{ff7->slot[s].z_11[3] &= ~(1<<2);}}ui->lcd_farm_items->display(ff7->slot[s].z_11[3]);}
+void MainWindow::on_cb_farm_items_4_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<3);}else{ff7->slot[s].z_11[3] &= ~(1<<3);}}ui->lcd_farm_items->display(ff7->slot[s].z_11[3]);}
+void MainWindow::on_cb_farm_items_5_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<4);}else{ff7->slot[s].z_11[3] &= ~(1<<4);}}ui->lcd_farm_items->display(ff7->slot[s].z_11[3]);}
+void MainWindow::on_cb_farm_items_6_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<5);}else{ff7->slot[s].z_11[3] &= ~(1<<5);}}ui->lcd_farm_items->display(ff7->slot[s].z_11[3]);}
+void MainWindow::on_cb_farm_items_7_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<6);}else{ff7->slot[s].z_11[3] &= ~(1<<6);}}ui->lcd_farm_items->display(ff7->slot[s].z_11[3]);}
+void MainWindow::on_cb_farm_items_8_toggled(bool checked){if(!load){file_changed=true; if(checked){ff7->slot[s].z_11[3] |= (1<<7);}else{ff7->slot[s].z_11[3] &= ~(1<<7);}}ui->lcd_farm_items->display(ff7->slot[s].z_11[3]);}
 
 void MainWindow::on_clearItem_clicked()
 {
@@ -5297,56 +5296,48 @@ void MainWindow::on_cb_itemmask1_1_toggled(bool checked)
 {if(!load){file_changed=true;
     if(checked){ff7->slot[s].itemsmask_1 |= (1<<0);}
     else{ff7->slot[s].itemsmask_1 &= ~(1<<0);}
-    ui->lcd_itemmask_1->display(ff7->slot[s].itemsmask_1);
 }}
 
 void MainWindow::on_cb_itemmask1_2_toggled(bool checked)
 {if(!load){file_changed=true;
     if(checked){ff7->slot[s].itemsmask_1 |= (1<<1);}
     else{ff7->slot[s].itemsmask_1 &= ~(1<<1);}
-    ui->lcd_itemmask_1->display(ff7->slot[s].itemsmask_1);
 }}
 
 void MainWindow::on_cb_itemmask1_3_toggled(bool checked)
 {if(!load){file_changed=true;
     if(checked){ff7->slot[s].itemsmask_1 |= (1<<2);}
     else{ff7->slot[s].itemsmask_1 &= ~(1<<2);}
-    ui->lcd_itemmask_1->display(ff7->slot[s].itemsmask_1);
 }}
 
 void MainWindow::on_cb_itemmask1_4_toggled(bool checked)
 {if(!load){file_changed=true;
     if(checked){ff7->slot[s].itemsmask_1 |= (1<<3);}
     else{ff7->slot[s].itemsmask_1 &= ~(1<<3);}
-    ui->lcd_itemmask_1->display(ff7->slot[s].itemsmask_1);
 }}
 
 void MainWindow::on_cb_itemmask1_5_toggled(bool checked)
 {if(!load){file_changed=true;
     if(checked){ff7->slot[s].itemsmask_1 |= (1<<4);}
     else{ff7->slot[s].itemsmask_1 &= ~(1<<4);}
-    ui->lcd_itemmask_1->display(ff7->slot[s].itemsmask_1);
 }}
 
 void MainWindow::on_cb_itemmask1_6_toggled(bool checked)
 {if(!load){file_changed=true;
     if(checked){ff7->slot[s].itemsmask_1 |= (1<<5);}
     else{ff7->slot[s].itemsmask_1 &= ~(1<<5);}
-    ui->lcd_itemmask_1->display(ff7->slot[s].itemsmask_1);
 }}
 
 void MainWindow::on_cb_itemmask1_7_toggled(bool checked)
 {if(!load){file_changed=true;
     if(checked){ff7->slot[s].itemsmask_1 |= (1<<6);}
     else{ff7->slot[s].itemsmask_1 &= ~(1<<6);}
-    ui->lcd_itemmask_1->display(ff7->slot[s].itemsmask_1);
 }}
 
 void MainWindow::on_cb_itemmask1_8_toggled(bool checked)
 {if(!load){file_changed=true;
     if(checked){ff7->slot[s].itemsmask_1 |= (1<<7);}
     else{ff7->slot[s].itemsmask_1 &= ~(1<<7);}
-    ui->lcd_itemmask_1->display(ff7->slot[s].itemsmask_1);
 }}
 
 void MainWindow::on_cb_materiacave_1_toggled(bool checked)

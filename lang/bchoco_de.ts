@@ -3383,10 +3383,6 @@
         <translation>Geheime Charaktere freigeschaltet</translation>
     </message>
     <message>
-        <source>0xBD4 (itemmasks_1)</source>
-        <translation>0xBD4 (itemmasks_1)</translation>
-    </message>
-    <message>
         <source>0x02</source>
         <translation>0x02</translation>
     </message>
@@ -4517,10 +4513,6 @@ Var und Scrollen zusammen zur linken Tabelle</translation>
         <translation>Nach Glitzer-Effekt auf Karte MD8_3</translation>
     </message>
     <message>
-        <source>0x01 Potion On MD8_3 (see item tab)</source>
-        <translation>0x01 Trank auf MD8_3 (Siehe Item Tab)</translation>
-    </message>
-    <message>
         <source>Custom Controller Mapping(PSX Only)</source>
         <translation>Eigenes Controller Mapping(Nur bei PSX)</translation>
     </message>
@@ -4805,38 +4797,6 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation>Stats: Basis+Bonus+Materia=Total</translation>
     </message>
     <message>
-        <source>Farm:Choco Mog_1</source>
-        <translation>Farm:Choco Mog_1</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_2</source>
-        <translation>Farm:Choco Mog_2</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_3</source>
-        <translation>Farm:Choco Mog_3</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_4</source>
-        <translation>Farm:Choco Mog_4</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_5</source>
-        <translation>Farm:Choco Mog_5</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_6</source>
-        <translation>Farm:Choco Mog_6</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_7</source>
-        <translation>Farm:Choco Mog_7</translation>
-    </message>
-    <message>
-        <source>Farm:Choco Mog_8</source>
-        <translation>Farm:Choco Mog_8</translation>
-    </message>
-    <message>
         <source>Calculate Stats</source>
         <translation>Berechne Stats</translation>
     </message>
@@ -4998,6 +4958,42 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>-------BAD ID-------</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MDS6_2: Sense Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>EALS_1: Cover Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>EALS_1: Ether</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>CRCIN_2: Ramuh Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FARM: Choco-Mog Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>EALIN_1: Potion + Phoenix Down</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ZZ1:Mythril</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0xBEF (farmitems)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x01 - After Choco mog picked up (again)?</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7137,6 +7133,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: E.Skills not updating in some cases</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>German Translation:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
