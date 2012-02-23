@@ -17,6 +17,10 @@
 #ifndef ABOUT_H
 #define ABOUT_H
 
+#ifndef SVNVERSION
+#include "svnversion.h"
+#endif
+
 #include <QDialog>
 
 namespace Ui {
