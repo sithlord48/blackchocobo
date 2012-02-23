@@ -65,7 +65,7 @@ TRANSLATIONS += lang/bchoco_en.ts \
 macx:{
     #set program icon on mac os
     ICON = icon/bchoco_icon_osx.icns
-    DEFINES += SVNVERSION='\\"\\"'
+    DEFINES += SVNVERSION=\"'\\"\\"'\"
 }
 
 #set up for windows
@@ -79,14 +79,10 @@ win32:{
 #base for setting up deb packages(rpm too?).
 #becomes 'make install' when qmake generates the makefile
 unix:!macx:!symbian {
-VERS = $$system(svn info -r HEAD . | grep 'Changed\ Rev' | cut -b 19-)
+VERS = $$system(svn info -r HEAD . | grep '"Changed Rev"' | cut -b 19-)
 {
-    #VERSION = 0.$${VERSION}
-
-VERSTR = '\\"$${VERS}\\"' # place quotes around the version string
-DEFINES += SVNVERSION=\"$${VERSTR}\" # create a VER macro containing the version stringThen you can use the "VER" macro in your application to obtain the quoted version number:
+DEFINES += SVNVERSION=\"'\\"$${VERS}\\"'\"
 }
-
 system(lrelease Black_Chocobo.pro) #call lrelease to make the qm files.
 target.path = /opt/blackchocobo #set the play to deploy the build target.
 
