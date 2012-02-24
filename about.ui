@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>389</width>
-    <height>360</height>
+    <width>387</width>
+    <height>362</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -533,6 +533,11 @@ p, li { white-space: pre-wrap; }
          <property name="wordWrap">
           <bool>true</bool>
          </property>
+         <item>
+          <property name="text">
+           <string>New: Added .VM1to list of VMC formats</string>
+          </property>
+         </item>
          <item>
           <property name="text">
            <string>New: Dialog Preview Widget</string>
@@ -1638,8 +1643,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>122</width>
-            <height>698</height>
+            <width>138</width>
+            <height>740</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">

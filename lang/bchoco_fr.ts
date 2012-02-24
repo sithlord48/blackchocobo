@@ -4730,10 +4730,6 @@ Les entrées dans le tableau sont modifiables</translation>
 %1</translation>
     </message>
     <message>
-        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation>Types de Sauvegarde connus de FF7 (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;&quot;Sauvegarde FF7 PC (*.ff7);;Sauvegardes FF7 PSX (*-S*);;Sauvegarde MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Sauvegarde PSV (*.psv);;Sauvegarde PSP (*.vmp);;Sauvegarde VGS(*.vgs *.mem);;Sauvegarde Dex-Drive(*.gme);;Tous les fichiers(*)</translation>
-    </message>
-    <message>
         <source>Raw PSX FF7 SaveGame (*)</source>
         <translation>FF7 sauvegarde non-identifiée PSX (*)</translation>
     </message>
@@ -4988,6 +4984,14 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     <message>
         <source>0x01 - After Choco mog picked up (again)?</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
+        <translation>Types de Sauvegarde connus de FF7 (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;&quot;Sauvegarde FF7 PC (*.ff7);;Sauvegardes FF7 PSX (*-S*);;Sauvegarde MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;Sauvegarde PSV (*.psv);;Sauvegarde PSP (*.vmp);;Sauvegarde VGS(*.vgs *.mem);;Sauvegarde Dex-Drive(*.gme);;Tous les fichiers(*)</translation>
+    </message>
+    <message>
+        <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
+        <translation>Sauvegarde FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
     </message>
 </context>
 <context>
@@ -7131,6 +7135,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>German Translation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Added .VM1to list of VMC formats</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

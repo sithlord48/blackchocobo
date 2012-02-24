@@ -4731,10 +4731,6 @@ Las entradas de la tabla son editables</translation>
 %1</translation>
     </message>
     <message>
-        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation>Tipos de archivo FF7 conocidos  (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Partida Guardada FF7 PC (*.ff7);; Partida Guardada FF7 Raw (*-S*);;Partida Guardada MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Partida Guardada PSV (*.psv);;Partida Guardada PSP (*.vmp);; Partida Guardada VGS (*.vgs *.mem);;Partida Guardada Dex-Drive (*.gme);;Todos los ARchivos(*)</translation>
-    </message>
-    <message>
         <source>Raw PSX FF7 SaveGame (*)</source>
         <translation>Partida Guardada FF7 PSX Raw (*)</translation>
     </message>
@@ -4989,6 +4985,14 @@ NO es un archivo de guardado PSV</translation>
     <message>
         <source>0x01 - After Choco mog picked up (again)?</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
+        <translation>Tipos de archivo FF7 conocidos  (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;Partida Guardada FF7 PC (*.ff7);; Partida Guardada FF7 Raw (*-S*);;Partida Guardada MC (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;Partida Guardada PSV (*.psv);;Partida Guardada PSP (*.vmp);; Partida Guardada VGS (*.vgs *.mem);;Partida Guardada Dex-Drive (*.gme);;Todos los ARchivos(*)</translation>
+    </message>
+    <message>
+        <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
+        <translation>Archivos de guardado FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
     </message>
 </context>
 <context>
@@ -7131,6 +7135,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>German Translation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Added .VM1to list of VMC formats</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

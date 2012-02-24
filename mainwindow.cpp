@@ -309,7 +309,7 @@ void MainWindow::on_actionOpen_Save_File_activated()
     }
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Open Final Fantasy 7 Save"),settings->value("load_path").toString(),
-    tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
+    tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
     if (!fileName.isEmpty()){loadFileFull(fileName,0);}
 
 }
@@ -695,7 +695,7 @@ void MainWindow::on_actionSave_File_As_activated()
     {
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 MC SaveGame"), settings->value("save_emu_path").toString(),
-        tr("FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)"));
+        tr("FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)"));
         fix_vmc_header(ff7);
 
     }

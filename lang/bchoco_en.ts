@@ -4715,10 +4715,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Raw PSX FF7 SaveGame (*)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4970,6 +4966,14 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>0x01 - After Choco mog picked up (again)?</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7094,6 +7098,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>German Translation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Added .VM1to list of VMC formats</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

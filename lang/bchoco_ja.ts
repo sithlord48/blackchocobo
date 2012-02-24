@@ -4750,10 +4750,6 @@ Table Entries are Editable</source>
 %1</translation>
     </message>
     <message>
-        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
-        <translation>対応済み FF7 セーブ (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 セーブ (*.ff7);;Raw PSX FF7 セーブ (*-S*);;MC ゲーム セ－ブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PSV セーブ (*.psv);;PSP セーブ (*.vmp);;VGS セーブ (*.vgs *.mem);;Dex-Drive セーブ (*.gme);;すべてのファイル (*)</translation>
-    </message>
-    <message>
         <source>Raw PSX FF7 SaveGame (*)</source>
         <translation>Raw PSX FF7 セーブ</translation>
     </message>
@@ -5009,6 +5005,14 @@ Table Entries are Editable</source>
     <message>
         <source>0x01 - After Choco mog picked up (again)?</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
+        <translation>対応済み FF7 セーブ (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin);;PC FF7 セーブ (*.ff7);;Raw PSX FF7 セーブ (*-S*);;MC ゲーム セ－ブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV セーブ (*.psv);;PSP セーブ (*.vmp);;VGS セーブ (*.vgs *.mem);;Dex-Drive セーブ (*.gme);;すべてのファイル (*)</translation>
+    </message>
+    <message>
+        <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
+        <translation>FF7 MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
     </message>
 </context>
 <context>
@@ -7150,6 +7154,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>German Translation:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Added .VM1to list of VMC formats</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
