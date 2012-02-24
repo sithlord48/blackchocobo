@@ -138,7 +138,7 @@ void fix_vmc_header(FF7 *ff7)
            for(int x=0;x<127;x++){xor_byte^=mc_header_2[x+index];}
            mc_header_2.append(xor_byte);
 
-           if(ff7->SG_Region_String[i].endsWith("S01"))
+           if(ff7->SG_Region_String[i].endsWith("FF7-S01"))
            {for(int P=0;P<512;P++)
                {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
@@ -146,98 +146,98 @@ void fix_vmc_header(FF7 *ff7)
                 }
            }
 
-           if(ff7->SG_Region_String[i].endsWith("S02"))
+           if(ff7->SG_Region_String[i].endsWith("FF7-S02"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S02[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7->SG_Region_String[i].endsWith("S03"))
+           if(ff7->SG_Region_String[i].endsWith("FF7-S03"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S03[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7->SG_Region_String[i].endsWith("S04"))
+           if(ff7->SG_Region_String[i].endsWith("FF7-S04"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S04[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7->SG_Region_String[i].endsWith("S05"))
+           if(ff7->SG_Region_String[i].endsWith("FF7-S05"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S05[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7->SG_Region_String[i].endsWith("S06"))
+           if(ff7->SG_Region_String[i].endsWith("FF7-S06"))
            {for(int P=0;P<512;P++)
                {
                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S06[P];}
                    else{ff7->hf[i].sl_header[P]= 0x00;}
                }
            }
-           if(ff7->SG_Region_String[i].endsWith("S07"))
+           if(ff7->SG_Region_String[i].endsWith("FF7-S07"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S07[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7->SG_Region_String[i].endsWith("S08"))
+           if(ff7->SG_Region_String[i].endsWith("FF7-S08"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S08[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7->SG_Region_String[i].endsWith("S09"))
+           if(ff7->SG_Region_String[i].endsWith("FF7-S09"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S09[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7->SG_Region_String[i].endsWith("S10"))
+           if(ff7->SG_Region_String[i].endsWith("FF7-S10"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S10[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7->SG_Region_String[i].endsWith("S11"))
+           if(ff7->SG_Region_String[i].endsWith("FF7-S11"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S11[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7->SG_Region_String[i].endsWith("S12"))
+           if(ff7->SG_Region_String[i].endsWith("FF7-S12"))
            {for(int P=0;P<512;P++)
                {
                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S12[P];}
                    else{ff7->hf[i].sl_header[P]= 0x00;}
                }
            }
-           if(ff7->SG_Region_String[i].endsWith("S13"))
+           if(ff7->SG_Region_String[i].endsWith("FF7-S13"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S13[P];}
                     else{ff7->hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(ff7->SG_Region_String[i].endsWith("S14"))
+           if(ff7->SG_Region_String[i].endsWith("FF7-S14"))
            {for(int P=0;P<512;P++)
                {
                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S14[P];}
                    else{ff7->hf[i].sl_header[P]= 0x00;}
                }
            }
-           if(ff7->SG_Region_String[i].endsWith("S15"))
+           if(ff7->SG_Region_String[i].endsWith("FF7-S15"))
            {for(int P=0;P<512;P++)
                {
                    if(P<256){ff7->hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S15[P];}
@@ -246,6 +246,12 @@ void fix_vmc_header(FF7 *ff7)
            }
            fix_psx_header(ff7,i);//here ff7 is already a pointer to ff7 in mainwindow.
         } // write string if found
+        else if(ff7->SG_Region_String[i].isEmpty() || ff7->SG_Region_String[i].isNull())
+        {   //QString empty_header = ;
+            mc_header_2.append("\xA0\x00\x00\x00\x00\x00\x00\x00\xFF\xFF",10);
+            for (int j=0;j<117;j++){mc_header_2.append('\x00');}
+            mc_header_2.append('\xA0');
+        }
         else
         {//Write What Ever is in the Header (Non ff7 data)
             if(ff7->SG_TYPE =="MC"){for(int j=0;j<128;j++){mc_header_2.append(ff7->file_header_mc[index+j]);}}
