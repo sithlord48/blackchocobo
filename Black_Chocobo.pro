@@ -66,7 +66,11 @@ TRANSLATIONS += lang/bchoco_en.ts \
 macx:{
     #set program icon on mac os
     ICON = icon/bchoco_icon_osx.icns
-    DEFINES += SVNVERSION=\"\"
+VERS = $$system(svn info -r HEAD . | grep '"Changed Rev"' | cut -b 19-)
+{
+isEmpty($${VERS}):DEFINES += SVNVERSION=\"0\"#svn rev not found set 0
+else:DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
+}
 }
 
 #set up for windows
@@ -83,7 +87,8 @@ win32:{
 unix:!macx:!symbian {
 VERS = $$system(svn info -r HEAD . | grep '"Changed Rev"' | cut -b 19-)
 {
-DEFINES += SVNVERSION=\"$${VERS}\"
+isEmpty($${VERS}):DEFINES += SVNVERSION=\"0\"#svn rev not found set 0
+else:DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
 }
 system(lrelease Black_Chocobo.pro) #call lrelease to make the qm files.
 target.path = /opt/blackchocobo #set the play to deploy the build target.
