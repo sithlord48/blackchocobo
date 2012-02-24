@@ -74,7 +74,7 @@ win32:{
     #set up icon for windows
     RC_FILE = bchoco.rc
     system(copy /y NUL svnversion.h >NUL)
-    #system(SubWCRev $$PWD svnversion.hmake svnversion.h)
+    system(SubWCRev $$PWD svnversion.hmake svnversion.h)
 }
 
 #all other *nix (except for symbian)
