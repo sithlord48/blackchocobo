@@ -4951,39 +4951,39 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>MDS6_2: Sense Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS6_2: Sentir Matéria</translation>
     </message>
     <message>
         <source>EALS_1: Cover Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>EALS_1:Couverture Matéria</translation>
     </message>
     <message>
         <source>EALS_1: Ether</source>
-        <translation type="unfinished"></translation>
+        <translation>EALS_1:Ether</translation>
     </message>
     <message>
         <source>CRCIN_2: Ramuh Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>CRCIN_2:Ramuh Matéria</translation>
     </message>
     <message>
         <source>FARM: Choco-Mog Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>FARM:Choco/Mog Matéria</translation>
     </message>
     <message>
         <source>EALIN_1: Potion + Phoenix Down</source>
-        <translation type="unfinished"></translation>
+        <translation>EALIN_1:Potion +Queue de Phénix</translation>
     </message>
     <message>
         <source>ZZ1:Mythril</source>
-        <translation type="unfinished"></translation>
+        <translation>ZZ1:Mythril</translation>
     </message>
     <message>
         <source>0xBEF (farmitems)</source>
-        <translation type="unfinished"></translation>
+        <translation>0xBEF (farmitems)</translation>
     </message>
     <message>
         <source>0x01 - After Choco mog picked up (again)?</source>
-        <translation type="unfinished"></translation>
+        <translation>0x01 - Après choco/mog ramassé (encore)?</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
@@ -6563,7 +6563,7 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>8 Pt.</source>
-        <translation type="unfinished">14 Pt. {8 ?}</translation>
+        <translation>8 Pt.</translation>
     </message>
 </context>
 <context>
@@ -7135,11 +7135,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>German Translation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Traduction Allemande:</translation>
     </message>
     <message>
         <source>New: Added .VM1to list of VMC formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : Ajout du format .VM1 à la liste des formats VMC</translation>
     </message>
 </context>
 <context>
