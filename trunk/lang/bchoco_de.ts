@@ -13,7 +13,7 @@
     </message>
     <message>
         <source>APx%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Apx%1</translation>
     </message>
     <message>
         <source>Restoration</source>
@@ -113,15 +113,15 @@
     </message>
     <message>
         <source>Berserk</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tobsucht</translation>
     </message>
     <message>
         <source>Frog</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Frosch</translation>
     </message>
     <message>
         <source>Mini</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zwerg</translation>
     </message>
     <message>
         <source>Fury</source>
@@ -133,15 +133,15 @@
     </message>
     <message>
         <source>Darkness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Blind</translation>
     </message>
     <message>
         <source>Haste</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hast</translation>
     </message>
     <message>
         <source>Slow</source>
-        <translation type="unfinished">Langsam</translation>
+        <translation type="unfinished">Gemach</translation>
     </message>
     <message>
         <source>Stop</source>
@@ -157,7 +157,7 @@
     </message>
     <message>
         <source>Reflect</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Spiegel</translation>
     </message>
     <message>
         <source>Shield</source>
@@ -185,11 +185,11 @@
     </message>
     <message>
         <source>Confusion</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Psycho</translation>
     </message>
     <message>
         <source>D.Sentence</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Todesurteil</translation>
     </message>
 </context>
 <context>
@@ -4910,7 +4910,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Tiny bronco</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiny Bronco</translation>
     </message>
     <message>
         <source>Unknown Id in Buggy/Highwind Location</source>
@@ -4958,35 +4958,35 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>MDS6_2: Sense Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>MDS6_2:Analyse Materia</translation>
     </message>
     <message>
         <source>EALS_1: Cover Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>EALS_1:Schutz Materia</translation>
     </message>
     <message>
         <source>EALS_1: Ether</source>
-        <translation type="unfinished"></translation>
+        <translation>EALS_1:Äther</translation>
     </message>
     <message>
         <source>CRCIN_2: Ramuh Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>CRCIN_2:Ramuh Materia</translation>
     </message>
     <message>
         <source>FARM: Choco-Mog Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>FARM:Choco/Mog Materia</translation>
     </message>
     <message>
         <source>EALIN_1: Potion + Phoenix Down</source>
-        <translation type="unfinished"></translation>
+        <translation>EALIN_1:Trank + Phönix Feder</translation>
     </message>
     <message>
         <source>ZZ1:Mythril</source>
-        <translation type="unfinished"></translation>
+        <translation>ZZ1:Mythril</translation>
     </message>
     <message>
         <source>0xBEF (farmitems)</source>
-        <translation type="unfinished"></translation>
+        <translation>0xBEF (farmitems)</translation>
     </message>
     <message>
         <source>0x01 - After Choco mog picked up (again)?</source>
@@ -6570,7 +6570,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>8 Pt.</source>
-        <translation type="unfinished">14 Pt. {8 ?}</translation>
+        <translation>8 Pt.</translation>
     </message>
 </context>
 <context>
@@ -7141,7 +7141,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>German Translation:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Deutsche Übersetzung:</translation>
     </message>
     <message>
         <source>New: Added .VM1to list of VMC formats</source>

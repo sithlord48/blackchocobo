@@ -2209,7 +2209,7 @@
     </message>
     <message>
         <source>Kills</source>
-        <translation>倒した敵:</translation>
+        <translation>倒した敵</translation>
     </message>
     <message>
         <source> Uses of Limit 1-1</source>
@@ -5000,7 +5000,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>0xBEF (farmitems)</source>
-        <translation type="unfinished"></translation>
+        <translation>0xBEF (farmitems)</translation>
     </message>
     <message>
         <source>0x01 - After Choco mog picked up (again)?</source>
