@@ -20,7 +20,7 @@
 #ifndef SVNVERSION
 #include "svnversion.h"
 #ifndef SVNVERSION
-#define SVNVERSION
+#define SVNVERSION 0
 #endif
 #endif
 
