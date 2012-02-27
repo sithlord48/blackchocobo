@@ -4972,31 +4972,31 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>MDS6_2: Sense Materia</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">６番街公園: マテリア みやぶる</translation>
     </message>
     <message>
         <source>EALS_1: Cover Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>エアリスの家: マテリア かばう</translation>
     </message>
     <message>
         <source>EALS_1: Ether</source>
-        <translation type="unfinished"></translation>
+        <translation>エアリスの家: エーテル</translation>
     </message>
     <message>
         <source>CRCIN_2: Ramuh Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>ひかえ室: マテリア ラムウ</translation>
     </message>
     <message>
         <source>FARM: Choco-Mog Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>チョコボファーム: マテリア チョコボ＆モーグリ</translation>
     </message>
     <message>
         <source>EALIN_1: Potion + Phoenix Down</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">エアリスの家２Ｆ:ポーション+フ + ニックスの尾</translation>
     </message>
     <message>
         <source>ZZ1:Mythril</source>
-        <translation type="unfinished"></translation>
+        <translation>オヤジ小屋: ミスリル</translation>
     </message>
     <message>
         <source>0xBEF (farmitems)</source>
@@ -5004,7 +5004,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>0x01 - After Choco mog picked up (again)?</source>
-        <translation type="unfinished"></translation>
+        <translation>0x01 - チョコボ＆モーグリ入手後 （再入手？）</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
@@ -7150,15 +7150,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: E.Skills not updating in some cases</source>
-        <translation>修正: てきのわざの適用と更新不具合</translation>
+        <translation>修正: てきのわざの更新適用の不具合</translation>
     </message>
     <message>
         <source>German Translation:</source>
-        <translation type="unfinished"></translation>
+        <translation>ドイツ語翻訳:</translation>
     </message>
     <message>
         <source>New: Added .VM1to list of VMC formats</source>
-        <translation type="unfinished"></translation>
+        <translation>追加: .VM1 を VMC フォーマットに追加</translation>
     </message>
 </context>
 <context>
