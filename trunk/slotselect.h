@@ -21,6 +21,10 @@
 #include "globals.h"
 #include "SaveIcon.h"
 #include "QMessageBox"
+
+#ifndef FF7TEXT_H
+#include "static_data/FF7Text.h"
+#endif
 namespace Ui {
     class SlotSelect;
 }

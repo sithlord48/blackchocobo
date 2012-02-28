@@ -28,6 +28,24 @@
 #include "about.h"                  // about dialog stuff.
 #include "errbox.h"                 // non ff7 error box
 #include <SaveIcon.h>
+
+
+#ifndef FF7ITEM_H
+#include "static_data/FF7Item.h"
+#endif
+
+#ifndef FF7MATERIA_H
+#include "static_data/FF7Materia.h"
+#endif
+
+#ifndef FF7LOCATION_H
+#include "static_data/FF7Location.h"
+#endif
+
+#ifndef FF7TEXT_H
+#include "static_data/FF7Text.h"
+#endif
+
 #include "widgets/ItemPreview.h"
 #include "widgets/DialogPreview.h"
 

@@ -20,7 +20,7 @@
     #ifndef FF7SAVE_H
     #include "FF7SAVE.h"
     #endif
-
+/*
     #ifndef FF7ITEM_H
     #include "static_data/FF7Item.h"
     #endif
@@ -36,7 +36,7 @@
     #ifndef FF7TEXT_H
     #include "static_data/FF7Text.h"
     #endif
-
+*/
 #include <QCoreApplication>
 #include <QTextCodec>
 
