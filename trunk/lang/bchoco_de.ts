@@ -21,39 +21,39 @@
     </message>
     <message>
         <source>Fire</source>
-        <translation type="unfinished">Hitze</translation>
+        <translation>Feuer</translation>
     </message>
     <message>
         <source>Cold</source>
-        <translation type="unfinished"></translation>
+        <translation>Kälte</translation>
     </message>
     <message>
         <source>Lightning</source>
-        <translation type="unfinished">Gewitter</translation>
+        <translation>Blitz</translation>
     </message>
     <message>
         <source>Earth</source>
-        <translation type="unfinished">Erde</translation>
+        <translation>Erde</translation>
     </message>
     <message>
         <source>Wind</source>
-        <translation type="unfinished"></translation>
+        <translation>Wind</translation>
     </message>
     <message>
         <source>Water</source>
-        <translation type="unfinished"></translation>
+        <translation>Wasser</translation>
     </message>
     <message>
         <source>Gravity</source>
-        <translation type="unfinished">Schwerkraft</translation>
+        <translation>Schwerkraft</translation>
     </message>
     <message>
         <source>Holy</source>
-        <translation type="unfinished"></translation>
+        <translation>Heilig</translation>
     </message>
     <message>
         <source>Poison</source>
-        <translation type="unfinished">Gift</translation>
+        <translation>Gift</translation>
     </message>
     <message>
         <source>Cut</source>
@@ -89,27 +89,27 @@
     </message>
     <message>
         <source>Death</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Tod</translation>
     </message>
     <message>
         <source>Slow-Numb</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Neher Tod</translation>
     </message>
     <message>
         <source>Paralysis</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Lähmung</translation>
     </message>
     <message>
         <source>Petrify</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Verstei</translation>
     </message>
     <message>
         <source>Silence</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stummheit</translation>
     </message>
     <message>
         <source>Sleep</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Schlaf</translation>
     </message>
     <message>
         <source>Berserk</source>
@@ -121,7 +121,7 @@
     </message>
     <message>
         <source>Mini</source>
-        <translation type="unfinished">Zwerg</translation>
+        <translation type="unfinished">Klein</translation>
     </message>
     <message>
         <source>Fury</source>
@@ -133,27 +133,27 @@
     </message>
     <message>
         <source>Darkness</source>
-        <translation type="unfinished">Blind</translation>
+        <translation type="unfinished">Dunkelheit</translation>
     </message>
     <message>
         <source>Haste</source>
-        <translation type="unfinished">Hast</translation>
+        <translation type="unfinished">Schnell</translation>
     </message>
     <message>
         <source>Slow</source>
-        <translation type="unfinished">Gemach</translation>
+        <translation>Langs.</translation>
     </message>
     <message>
         <source>Stop</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Stop</translation>
     </message>
     <message>
         <source>Barrier</source>
-        <translation type="unfinished">Schutz</translation>
+        <translation type="unfinished">Barriere</translation>
     </message>
     <message>
         <source>M.Barrier</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">ZBarriere</translation>
     </message>
     <message>
         <source>Reflect</source>
@@ -169,7 +169,7 @@
     </message>
     <message>
         <source>Protect:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anti:</translation>
     </message>
     <message>
         <source>Remove:</source>
@@ -185,7 +185,7 @@
     </message>
     <message>
         <source>Confusion</source>
-        <translation type="unfinished">Psycho</translation>
+        <translation type="unfinished">Verwirr.</translation>
     </message>
     <message>
         <source>D.Sentence</source>
@@ -196,31 +196,31 @@
     <name>Item_desc</name>
     <message>
         <source>Restores 100 HP</source>
-        <translation>Stellt 100HP wieder her</translation>
+        <translation>Erhöht HP um 100</translation>
     </message>
     <message>
         <source>Restores 500 HP</source>
-        <translation>Stellt 500HP wieder her</translation>
+        <translation>Erhöht HP um 500</translation>
     </message>
     <message>
         <source>Restores all lost HP</source>
-        <translation>Stellt HP wieder her</translation>
+        <translation>Stellt HP her</translation>
     </message>
     <message>
         <source>Restores 100 MP</source>
-        <translation>Stellt 100MP wieder her</translation>
+        <translation>Erhöht MP um 100</translation>
     </message>
     <message>
         <source>Restores all lost MP</source>
-        <translation>Stellt MP wieder her</translation>
+        <translation>Stellt MP her</translation>
     </message>
     <message>
         <source>Fully Restores HP/MP</source>
-        <translation>Stellt HP/MP wieder her</translation>
+        <translation>Stellt HP/MP her</translation>
     </message>
     <message>
         <source>Fully Restores all Members HP/MP</source>
-        <translation>Stellt HP/MP der kompletten Gruppe wieder her</translation>
+        <translation>HP/MP für alle neu</translation>
     </message>
     <message>
         <source>Restores life</source>
@@ -228,95 +228,95 @@
     </message>
     <message>
         <source>Cures [Poison]</source>
-        <translation>Neutralisiert [Gift]</translation>
+        <translation>Hebt [Vergift.] auf</translation>
     </message>
     <message>
         <source>Cures [Petrify]</source>
-        <translation>Neutralisiert [Versteinerung]</translation>
+        <translation>Hebt [Verstei.] auf</translation>
     </message>
     <message>
         <source>Cures [Frog]</source>
-        <translation>Kuriert [Frosch] Zustand</translation>
+        <translation>Hebt [Frosch] auf</translation>
     </message>
     <message>
         <source>Cures [Small]</source>
-        <translation>Kuriert [Zwerg] Zustand</translation>
+        <translation>Hebt [Klein] auf</translation>
     </message>
     <message>
         <source>Cures [Silence]</source>
-        <translation>Kuriert [Schweigen]</translation>
+        <translation>Hebt [Stummheit] auf</translation>
     </message>
     <message>
         <source>Cures [Sadness]</source>
-        <translation>Kuriert [Trauer]</translation>
+        <translation>Hebt [Trauer] auf</translation>
     </message>
     <message>
         <source>Cures [Fury]</source>
-        <translation>Kuriert [Zorn]</translation>
+        <translation>Hebt [Zorn] auf</translation>
     </message>
     <message>
         <source>Cures abnormal status</source>
-        <translation>Kuriert anormale Zustände</translation>
+        <translation>Hebt abnormal auf</translation>
     </message>
     <message>
         <source>Can escape from opponents during battle</source>
-        <translation>Ermöglicht Flucht</translation>
+        <translation>Entkommt Dem Gegner</translation>
     </message>
     <message>
         <source>Casts [Haste] on one ally</source>
-        <translation>Versetzt in [Hast]</translation>
+        <translation>1 Verb. [Schneller]</translation>
     </message>
     <message>
         <source>Raises ability once during battle</source>
-        <translation>Verstärkt Statuswerte im Kampf</translation>
+        <translation>Stärker in Schlacht</translation>
     </message>
     <message>
         <source>Protects against transformations</source>
-        <translation>Beugt anormalen Zuständen vor</translation>
+        <translation>Schutz Geg. Wandl</translation>
     </message>
     <message>
         <source>Explosive damage against one opponent</source>
-        <translation type="unfinished">Schaden durch Explosion</translation>
+        <translation>1 fällt in Explosion</translation>
     </message>
     <message>
         <source>Explosive damage against all opponents</source>
-        <translation type="unfinished">Schaden durch Explosion</translation>
+        <translation>Explosionsschaden</translation>
     </message>
     <message>
         <source>Stops all opponents</source>
-        <translation type="unfinished">Stoppt alle Gegner</translation>
+        <translation>Stoppt Gegner</translation>
     </message>
     <message>
         <source>Uses [Death] on all opponents</source>
-        <translation>[Tod] auf alle Gegner</translation>
+        <translation>[Tod] auf Gegner</translation>
     </message>
     <message>
         <source>Slows all opponents</source>
-        <translation type="unfinished">Versetzt Gegner in [Gemach]</translation>
+        <translation>Verlangsamt Gegner</translation>
     </message>
     <message>
         <source>Uses [Sleepel] on all opponents</source>
-        <translation>Versetzt Gegner in [Schlaf]</translation>
+        <translation>[Schlaf] für Gegner</translation>
     </message>
     <message>
         <source>Uses [Silence] on all opponents</source>
-        <translation>Hüllt alle Gegner in [Schweigen]</translation>
+        <translation>[Stummheit]</translation>
     </message>
     <message>
         <source>Uses [Berserk] on all opponents</source>
-        <translation>Alle Gegner erleiden [Tobsucht]</translation>
+        <translation>[Tobsucht]</translation>
     </message>
     <message>
         <source>Uses [Confu] on all opponents</source>
-        <translation>[Psycho] auf alle Gegner</translation>
+        <translation>[Verwirrung]</translation>
     </message>
     <message>
         <source>Uses [Fire2] on all opponents</source>
-        <translation>[Feuer2]-Zauber auf alle Gegner</translation>
+        <translation>[Feuer2] für Gegner</translation>
     </message>
     <message>
         <source>Uses [Fire3] on all opponents</source>
-        <translation>[Feuer3]-Zauber auf alle Gegner</translation>
+        <translation>[Feuer3] für Gegner</translation>
     </message>
     <message>
         <source>Uses [Ice2] on all opponents</source>
@@ -324,211 +324,211 @@
     </message>
     <message>
         <source>Uses [Ice3] on all opponents</source>
-        <translation>[Eis3]-Zauber auf alle Gegner</translation>
+        <translation>[Eis3] für Gegner</translation>
     </message>
     <message>
         <source>Uses [Bolt2] on all opponents</source>
-        <translation>[Blitz2]-Zauber auf alle Gegner</translation>
+        <translation>[Blitzstrahl2]</translation>
     </message>
     <message>
         <source>Uses [Bolt3] on all opponents</source>
-        <translation>[Blitz3]-Zauber auf alle Gegner</translation>
+        <translation>[Blitzstrahl3]</translation>
     </message>
     <message>
         <source>Uses [Quake2] on all opponents</source>
-        <translation>[Beben2]-Zauber auf alle Gegner</translation>
+        <translation>[Beben2] für Gegner</translation>
     </message>
     <message>
         <source>Uses [Quake3] on all opponents</source>
-        <translation>[Beben3]-Zauber auf alle Gegner</translation>
+        <translation>[Beben3] für Gegner</translation>
     </message>
     <message>
         <source>Uses [Bio2] on all opponents</source>
-        <translation>Uses [Bio2] on all opponents</translation>
+        <translation>[Bio2] für Gegner</translation>
     </message>
     <message>
         <source>Uses [Bio3] on all opponents</source>
-        <translation>[Bio3]-Zauber auf alle Gegner</translation>
+        <translation>[Bio3] für Gegner</translation>
     </message>
     <message>
         <source>Uses [Comet2] on all opponents</source>
-        <translation>[Komet2]-Zauber auf alle Gegner</translation>
+        <translation>[Komet2] für Gegner</translation>
     </message>
     <message>
         <source>Drains HP out of one opponent</source>
-        <translation>Absorbiert HP des Gegners</translation>
+        <translation>Entzieht 1 Gegner HP</translation>
     </message>
     <message>
         <source>Drains MP out of one opponent</source>
-        <translation>Absorbiert MP des Gegners</translation>
+        <translation>Entzieht 1 Gegner MP</translation>
     </message>
     <message>
         <source>Petrifies one opponent</source>
-        <translation>Versteinert einen Gegner</translation>
+        <translation>Versteinert 1 Gegner</translation>
     </message>
     <message>
         <source>Creates [Barrier] around all allies</source>
-        <translation>[Barriere] um die Gruppe</translation>
+        <translation>[Barriere] um Verb</translation>
     </message>
     <message>
         <source>Creates [MBarrier] around all allies</source>
-        <translation>[Z-Barriere] um die Gruppe</translation>
+        <translation>[ZBarriere] um Verb</translation>
     </message>
     <message>
         <source>Uses [Reflect] on all allies</source>
-        <translation>[Spiegel] um die Gruppe</translation>
+        <translation>[Reflekt.] f. Verb</translation>
     </message>
     <message>
         <source>Uses [DeSpell] on all allies</source>
-        <translation>[Entzaubern] auf die Gruppe</translation>
+        <translation>[Auflös] f. Verb</translation>
     </message>
     <message>
         <source>Uses whirlwind on all opponents</source>
-        <translation type="unfinished">[Wirbelwind] auf alle Gegner</translation>
+        <translation>Wirbelwind f. Gegn</translation>
     </message>
     <message>
         <source>Water damage on all opponents</source>
-        <translation type="unfinished">[Wasser]-Zauber auf alle Gegner</translation>
+        <translation>Wasserschaden</translation>
     </message>
     <message>
         <source>Changes one opponent to a frog</source>
-        <translation type="unfinished">[Frosch]-Zustand auf einen Gegner</translation>
+        <translation>1 Gegn. Wird Frosch</translation>
     </message>
     <message>
         <source>Uses [Mini] on one opponent</source>
-        <translation>[Zwerg]-Zustand auf einen Gegner</translation>
+        <translation>[Klein]</translation>
     </message>
     <message>
         <source>Cures [Darkness]</source>
-        <translation>Kuriert [Blind]-Zustand</translation>
+        <translation>Löscht [Dunkelheit]</translation>
     </message>
     <message>
         <source>Fire damage on one opponent</source>
-        <translation type="unfinished">[Feuer]-Zauber</translation>
+        <translation>feuerschaden</translation>
     </message>
     <message>
         <source>Explosive damage on one opponent</source>
-        <translation type="unfinished">Schaden durch Explosion</translation>
+        <translation>Explosionsschaden</translation>
     </message>
     <message>
         <source>Uses [Demi] against one opponent</source>
-        <translation type="unfinished">[Demi]-Zauber</translation>
+        <translation>[Demi] für 1 Gegner</translation>
     </message>
     <message>
         <source>Uses [Demi2] against one opponent</source>
-        <translation type="unfinished">[Demi2]-Zauber</translation>
+        <translation>[Demi2] für 1 Gegner</translation>
     </message>
     <message>
         <source>Uses [Darkness] against one opponent</source>
-        <translation type="unfinished">[Blind] auf einen Gegner</translation>
+        <translation>[Dunkelheit]</translation>
     </message>
     <message>
         <source>Paralyzes one opponent</source>
-        <translation type="unfinished">Lähmt einen Gegner</translation>
+        <translation>Lähmt 1 Gegner</translation>
     </message>
     <message>
         <source>Lightning damage against all opponents</source>
-        <translation type="unfinished">[Blitz]-Zauber</translation>
+        <translation>Blitzschaden</translation>
     </message>
     <message>
         <source>Uses [Poison/Confu/Sleepel/Silence/Small/Frog]</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>When you want a chocobo...</source>
-        <translation type="unfinished"></translation>
+        <translation>Für einen Chocobo...</translation>
     </message>
     <message>
         <source>Restores ally&apos;s max HP/MP. Use at Save Point.</source>
-        <translation type="unfinished">Stellt HP&amp;MP wieder her</translation>
+        <translation>Max. HP/MP.</translation>
     </message>
     <message>
         <source>Raises [Strength]</source>
-        <translation>Erhöht [Stärke] Werte</translation>
+        <translation>Erhöht [Stärke]</translation>
     </message>
     <message>
         <source>Raises [Vitality]</source>
-        <translation>Erhöht [Vitalität] Werte</translation>
+        <translation>Erhöht [Vitalität]</translation>
     </message>
     <message>
         <source>Raises [Magic Power]</source>
-        <translation>Erhöht [Zauber] Werte</translation>
+        <translation>Erhöht [Zauberkraft]</translation>
     </message>
     <message>
         <source>Raises [Spirit]</source>
-        <translation>Erhöht [Gemüts] Werte</translation>
+        <translation>Erhöht [Moral]</translation>
     </message>
     <message>
         <source>Raises [Dexterity]</source>
-        <translation>Erhöht [Geschick] Werte</translation>
+        <translation>Erhöht [Geschick]</translation>
     </message>
     <message>
         <source>Raises [Luck]</source>
-        <translation>Erhöht [Glücks] Werte</translation>
+        <translation>Erhöht [Glück]</translation>
     </message>
     <message>
         <source>When you want to breed Chocobos...</source>
-        <translation>Wenn du Chocobos züchten willst...</translation>
+        <translation>Für Deine Chocobos...</translation>
     </message>
     <message>
         <source>Looks like it can start some sort of machine</source>
-        <translation>Versorgt Geräte mit Strom</translation>
+        <translation>Startete Maschine</translation>
     </message>
     <message>
         <source>This one&apos;s a little tough...</source>
-        <translation type="unfinished">Wozu mag das wohl gut sein...?</translation>
+        <translation>Nicht ganz einfach...</translation>
     </message>
     <message>
         <source>Learn Limit Skill [Omnislash]</source>
-        <translation>Limit Technik [Schwertwirbel]</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Learn Limit Skill [Catastrophe]</source>
-        <translation>Limit Technik [Katastrophe]</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Learn Limit Skill [Final Heaven]</source>
-        <translation>Limit Technik [Himmelsfaust]</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Learn Limit Skill [Great Gospel]</source>
-        <translation>Limit Technik [Engels Chor]</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Learn Limit Skill [Cosmo Memory]</source>
-        <translation>Limit Technik [Kosmo-Glut]</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Learn Limit Skill [All Creation]</source>
-        <translation>Limit Technik [Zorn der Götter]</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Learn Limit Skill [Chaos]</source>
-        <translation>Limit Technik [Chaos]</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Learn Limit Skill [Highwind]</source>
-        <translation>Limit Technik [Highwind]</translation>
+        <translation></translation>
     </message>
     <message>
         <source>Shinra armored &apos;attack&apos; soldiers: 12 in the Set!</source>
-        <translation type="unfinished">Shinra-Spielzeugsoldaten im 12er Pack!</translation>
+        <translation>`Angriff ` - 12 Shinra!</translation>
     </message>
     <message>
         <source>A new machine to protect the reactor!</source>
-        <translation>Eine neue Waffe zum Schutz vor Reaktoren!</translation>
+        <translation>Reaktorschutz!</translation>
     </message>
     <message>
         <source>A prefect copy of Sephiroth&apos;s sword!</source>
-        <translation>Eine perfekte Kopie von Sephiroth&apos;s Schwert!</translation>
+        <translation>Sephiroths Schwert!</translation>
     </message>
     <message>
         <source>Use This to create a SAVE Point in the &apos;North Cave&apos;</source>
-        <translation>Erzeugt Speicherpunkte im &apos;Nordkrater&apos;</translation>
+        <translation>Speicherpkt. &apos;Nordh.&apos;</translation>
     </message>
     <message>
         <source>A record of Master Dio&apos;s fiercest battles</source>
-        <translation>Dios Tagebuch: &apos;Aus dem Leben eines Kämpfers&apos;</translation>
+        <translation>Dios Schlachten</translation>
     </message>
     <message>
         <source>Dio&apos;s autograph</source>
@@ -536,39 +536,39 @@
     </message>
     <message>
         <source>Second part of Dio&apos;s diary: The Gold Saucer years</source>
-        <translation>Dios Tagebuch, Teil 2: &apos;Die Zocker-Jahre&apos;</translation>
+        <translation>Tagebuch Teil II</translation>
     </message>
     <message>
         <source>Blooms once every 1000 years</source>
-        <translation>Diese Blume blüht einmal alle 1000 Jahre</translation>
+        <translation>In 1000 Jahren</translation>
     </message>
     <message>
         <source>Calms the hearts of all who hear it</source>
-        <translation>Ihre Töne wirken besänftigend</translation>
+        <translation>Herzenstrost</translation>
     </message>
     <message>
         <source>Map of another world. It Slumbers with sunken ships</source>
-        <translation>Ein Reiseführer in eine fremde Welt</translation>
+        <translation>Weltk. in Schiffen</translation>
     </message>
     <message>
         <source>Initial equiping</source>
-        <translation>Grundausrüstung</translation>
+        <translation>Anfangsausrüstung</translation>
     </message>
     <message>
         <source>Sword is used when an ally is down</source>
-        <translation>Dop. Schlagkraft, wenn Freunde Kampfunfähig</translation>
+        <translation>Nimm&apos;s Schwert</translation>
     </message>
     <message>
         <source>Power up when [Near death]</source>
-        <translation>Doppelte Schlagkraft bei [Gefahr]</translation>
+        <translation>Kraft Bei [nah. Tod]</translation>
     </message>
     <message>
         <source>Power up when condition changes</source>
-        <translation>Vermehrte Schlagkraft bei anormalen Zuständen</translation>
+        <translation>Kraft b. Zuständen</translation>
     </message>
     <message>
         <source>Initial equip. Long Range Weapon</source>
-        <translation type="unfinished">Grundausrüstung. Fernkampfwaffe</translation>
+        <translation>Ausrüst.: Kampfwaffe</translation>
     </message>
     <message>
         <source>Long Range Weapon</source>
@@ -576,39 +576,39 @@
     </message>
     <message>
         <source>Memento of father</source>
-        <translation type="unfinished"></translation>
+        <translation>Warnung Von Vater</translation>
     </message>
     <message>
         <source>Raises Power when you need to protect others nearby</source>
-        <translation type="unfinished">Dop. Schlagkraft, wenn Freunde Kampfunfähig</translation>
+        <translation>Mehr Kraft z. Schutz</translation>
     </message>
     <message>
         <source>Drains [Fire] attacks</source>
-        <translation>Absorbiert [Feuer]</translation>
+        <translation>Tilgt [Feuer]-Angr</translation>
     </message>
     <message>
         <source>Drains [Cold] attacks</source>
-        <translation>Absorbiert [Eis]</translation>
+        <translation>Tilgt [Kälte]-Angr</translation>
     </message>
     <message>
         <source>Drains [Lightning] attacks</source>
-        <translation>Absorbiert [Blitz]</translation>
+        <translation>Tilgt [Blitz]-Angr</translation>
     </message>
     <message>
         <source>Drains 1/2 [Fire/Cold/Lightning] attack</source>
-        <translation>Absorbiert 1/2 [Feuer/Eis/Blitz]</translation>
+        <translation>Verr. [Feu./Kä./Bl.]</translation>
     </message>
     <message>
         <source>Women&apos;s Armlet nullifies [Fire/Cold/Gravity/Holy]</source>
-        <translation>Damenamulett: Neutr. [Feuer/Eis/Heilig/Schw.]</translation>
+        <translation>Anti [F. /K./Schw./H.]</translation>
     </message>
     <message>
         <source>Man&apos;s Armlet nullifies [Lightning/Earth/Water/Poison]</source>
-        <translation>Herrenamulett: Neutr. [Blitz/Erde/Wasser/Gift]</translation>
+        <translation>Anti.[Bl./Er./Wa./Gi.]</translation>
     </message>
     <message>
         <source>Decreases all elemental attacks by 1/2</source>
-        <translation>Reduziert 1/2 Schaden bei Zaubersprüchen</translation>
+        <translation>Verr. E-Angriff 50%</translation>
     </message>
     <message>
         <source>A gorgeous watch</source>
@@ -628,7 +628,7 @@
     </message>
     <message>
         <source>Spirit +10</source>
-        <translation>Gemüt +10</translation>
+        <translation>Moral +10</translation>
     </message>
     <message>
         <source>Dexterity +10</source>
@@ -644,103 +644,103 @@
     </message>
     <message>
         <source>Drains [Poison] attacks, protects against [Poison]</source>
-        <translation>Absorbiert &amp; Schützt vor [Gift]-Zustand</translation>
+        <translation>Tilgt [Gift]-Angr</translation>
     </message>
     <message>
         <source>Vitality &amp; Spirit +50</source>
-        <translation>Vitalität &amp; Gemüt +50</translation>
+        <translation>Vitalität &amp; Moral +50</translation>
     </message>
     <message>
         <source>Magic &amp; Spirit +30</source>
-        <translation>Zauber &amp; Gemüt +30</translation>
+        <translation>Zauber &amp; Moral +30</translation>
     </message>
     <message>
         <source>Protects against [Poison]</source>
-        <translation>Schutz vor [Gift]</translation>
+        <translation>Anti [Gift]</translation>
     </message>
     <message>
         <source>Protects against [Darkness]</source>
-        <translation>Schutz vor [Blind]</translation>
+        <translation>Anti [Dunkelheit]</translation>
     </message>
     <message>
         <source>Protects against [Sleep]</source>
-        <translation>Schutz vor [Schlaf]</translation>
+        <translation>Anti [Schlaf]</translation>
     </message>
     <message>
         <source>Protects against [Poison/Darkness]</source>
-        <translation>Schutz vor [Gift/Blind]</translation>
+        <translation>Anti [Gift/Dunkelh.]</translation>
     </message>
     <message>
         <source>Protects against [Paralyze/Petrify/Slow-numb]</source>
-        <translation>Schutz vor [Lähmung/Verst./all. Versteinerung]</translation>
+        <translation>Anti [Läh./Ver./Ap.]</translation>
     </message>
     <message>
         <source>Protects against [Frog/Small]</source>
-        <translation>Schutz vor [Frosch/Zwerg]</translation>
+        <translation>Anti [Frosch/Klein]</translation>
     </message>
     <message>
         <source>Automatically put you in [Haste]</source>
-        <translation>Versetzt dich automatisch in [Hast]-Zustand</translation>
+        <translation>[Schnell]-Modus</translation>
     </message>
     <message>
         <source>Protects against [Berserk/Fury/Sadness]</source>
-        <translation>Schutz vor [Tobsucht/Zorn/Trauer]</translation>
+        <translation>Anti [V./To./Zo/Tr.]</translation>
     </message>
     <message>
         <source>Protects against all abnormal status</source>
-        <translation>Schutz vor sämtlichen anormalen Zuständen</translation>
+        <translation>Anti abnorm. Stat</translation>
     </message>
     <message>
         <source>Nullifies [Fire] attacks</source>
-        <translation>Schutz vor [Feuer]-Zauber</translation>
+        <translation>Anti [Feuer]-Angr</translation>
     </message>
     <message>
         <source>Nullifies [Cold] attacks</source>
-        <translation>Schutz vor [Eis]-Zauber</translation>
+        <translation>Anti [Kälte]-Angr</translation>
     </message>
     <message>
         <source>Nullifies [Lightning] attacks</source>
-        <translation>Schutz vor [Blitz]-Zauber</translation>
+        <translation>Anti [Blitz]-Angr</translation>
     </message>
     <message>
         <source>Drains [Fire/Cold/Lightning/Earth] attacks</source>
-        <translation>Schutz vor [Feuer/Eis/Erde/Blitz]-Zauber</translation>
+        <translation>Anti [Fe/Kä/Bl/Er]</translation>
     </message>
     <message>
         <source>Protects against [Sudden Death/Petrify/Slow-numb]</source>
-        <translation>Schutz vor [Tod/Verst./all. Versteinerung]</translation>
+        <translation>Anti [Tod/Ver/Apat.]</translation>
     </message>
     <message>
         <source>Automatically puts you in [Berserk]</source>
-        <translation>Automatisch [Tobsucht]</translation>
+        <translation>Verurs. [Tobsucht]</translation>
     </message>
     <message>
         <source>It increases each status but...</source>
-        <translation>Verstärkt alle deine Statuswerte, aber...</translation>
+        <translation>Mehr Status, aber...</translation>
     </message>
     <message>
         <source>Automatically sets up [Barrier/MBarrier]</source>
-        <translation>Automatisch [Barriere/Z-Barriere]</translation>
+        <translation>Autom. [Barr. /MBarr.]</translation>
     </message>
     <message>
         <source>Restores HP as you walk</source>
-        <translation>Stellt mit jedem Schritt HP wieder her</translation>
+        <translation>Stellt HP her</translation>
     </message>
     <message>
         <source>Automatically sets up [Reflect]</source>
-        <translation>Automatisch [Spiegel]</translation>
+        <translation>Autom. [Reflekt.]</translation>
     </message>
     <message>
         <source>Drains Water attacks</source>
-        <translation>Absorbiert [Wasser]-Zauber</translation>
+        <translation>Tilgt [Wasser]-Angr</translation>
     </message>
     <message>
         <source>Increases Stealing rate</source>
-        <translation>Erhöht Erfolgsquote beim [Stehlen]</translation>
+        <translation>Erhöht Stehlrate</translation>
     </message>
     <message>
         <source>Increases Manipulation rate</source>
-        <translation>Erhöht Erfolgsquote beim [Manipulieren]</translation>
+        <translation>Verstärkt Manipul</translation>
     </message>
 </context>
 <context>
@@ -771,7 +771,7 @@
     </message>
     <message>
         <source>Megalixir</source>
-        <translation>Mega-Elixier</translation>
+        <translation>Megalixier</translation>
     </message>
     <message>
         <source>Phoenix Down</source>
@@ -779,7 +779,7 @@
     </message>
     <message>
         <source>Antidote</source>
-        <translation>Gegengift</translation>
+        <translation>Gegenmittel</translation>
     </message>
     <message>
         <source>Soft</source>
@@ -787,11 +787,11 @@
     </message>
     <message>
         <source>Maiden&apos;s Kiss</source>
-        <translation>Jungfernkuss</translation>
+        <translation>Jungfernkuß</translation>
     </message>
     <message>
         <source>Cornucopia</source>
-        <translation>Schrumpfhorn</translation>
+        <translation>Füllhorn</translation>
     </message>
     <message>
         <source>Echo screen</source>
@@ -815,7 +815,7 @@
     </message>
     <message>
         <source>Speed Drink</source>
-        <translation>Turbo-Trank</translation>
+        <translation>Schnelltrank</translation>
     </message>
     <message>
         <source>Hero Drink</source>
@@ -835,23 +835,23 @@
     </message>
     <message>
         <source>Hourglass</source>
-        <translation>Goldene Sanduhr</translation>
+        <translation>Sanduhr</translation>
     </message>
     <message>
         <source>Kiss of Death</source>
-        <translation>Todeskuss</translation>
+        <translation>Todeskuß</translation>
     </message>
     <message>
         <source>Spider Web</source>
-        <translation>Spinnweben</translation>
+        <translation>Spinnennetz</translation>
     </message>
     <message>
         <source>Dream Powder</source>
-        <translation>Traumpuder</translation>
+        <translation>Traumpulver</translation>
     </message>
     <message>
         <source>Mute Mask</source>
-        <translation>Schweigemaske</translation>
+        <translation>Stumm-Maske</translation>
     </message>
     <message>
         <source>War Gong</source>
@@ -859,7 +859,7 @@
     </message>
     <message>
         <source>Loco weed</source>
-        <translation>Loco-Kraut</translation>
+        <translation>Locokraut</translation>
     </message>
     <message>
         <source>Fire Fang</source>
@@ -871,7 +871,7 @@
     </message>
     <message>
         <source>Antarctic Wind</source>
-        <translation>Arktischer Wind</translation>
+        <translation>Antarkt. Wind</translation>
     </message>
     <message>
         <source>Ice Crystal</source>
@@ -883,11 +883,11 @@
     </message>
     <message>
         <source>Swift Bolt</source>
-        <translation>Gewitterblitz</translation>
+        <translation>Blitzwind</translation>
     </message>
     <message>
         <source>Earth Drum</source>
-        <translation>Erdtrommel</translation>
+        <translation>Erdentrommel</translation>
     </message>
     <message>
         <source>Earth Mallet</source>
@@ -895,7 +895,7 @@
     </message>
     <message>
         <source>Deadly Waste</source>
-        <translation>Giftmüll</translation>
+        <translation>Tödl. Müll</translation>
     </message>
     <message>
         <source>M-Tentacles</source>
@@ -915,15 +915,15 @@
     </message>
     <message>
         <source>Vagyrisk Claw</source>
-        <translation>Basiliskenklaue</translation>
+        <translation>Vagyriskklaue</translation>
     </message>
     <message>
         <source>Light Curtain</source>
-        <translation>Lichtschleier</translation>
+        <translation>Lichtvorhang</translation>
     </message>
     <message>
         <source>Lunar Curtain</source>
-        <translation>Mondschleier</translation>
+        <translation>Mondvorhang</translation>
     </message>
     <message>
         <source>Mirror</source>
@@ -943,7 +943,7 @@
     </message>
     <message>
         <source>Impaler</source>
-        <translation>Aufspiesser</translation>
+        <translation>Aufspießer</translation>
     </message>
     <message>
         <source>Shrivel</source>
@@ -967,7 +967,7 @@
     </message>
     <message>
         <source>T/S Bomb</source>
-        <translation>Raum/Zeit Bombe</translation>
+        <translation>T/S Bombe</translation>
     </message>
     <message>
         <source>Ink</source>
@@ -975,7 +975,7 @@
     </message>
     <message>
         <source>Dazers</source>
-        <translation>Betäubungspfeil</translation>
+        <translation>Betäubungspfeile</translation>
     </message>
     <message>
         <source>Dragon Fang</source>
@@ -983,39 +983,39 @@
     </message>
     <message>
         <source>Cauldron</source>
-        <translation>Hexenkessel</translation>
+        <translation>Kessel</translation>
     </message>
     <message>
         <source>Sylkis Greens</source>
-        <translation>Sylkis Gemüse</translation>
+        <translation>Sylkisgemüse</translation>
     </message>
     <message>
         <source>Reagan Greens</source>
-        <translation>Reagan Gemüse</translation>
+        <translation>Reagangemüse</translation>
     </message>
     <message>
         <source>Mimett Greens</source>
-        <translation>Mimett Gemüse</translation>
+        <translation>Mimettgemüse</translation>
     </message>
     <message>
         <source>Curiel Greens</source>
-        <translation>Curiel Gemüse</translation>
+        <translation>Curielgemüse</translation>
     </message>
     <message>
         <source>Pahsana Greens</source>
-        <translation>Pahsan Gemüse</translation>
+        <translation>Pahsangemüse</translation>
     </message>
     <message>
         <source>Tantal Greens</source>
-        <translation>Tantal Gemüse</translation>
+        <translation>Tantalgemüse</translation>
     </message>
     <message>
         <source>Krakka Greens</source>
-        <translation>Krakka Gemüse</translation>
+        <translation>Krakkagemüse</translation>
     </message>
     <message>
         <source>Gysahl Greens</source>
-        <translation>Gysahl Gemüse</translation>
+        <translation>Gysahlgemüse</translation>
     </message>
     <message>
         <source>Tent</source>
@@ -1023,55 +1023,55 @@
     </message>
     <message>
         <source>Power Source</source>
-        <translation>Kraftkapsel</translation>
+        <translation>Kraft</translation>
     </message>
     <message>
         <source>Guard Source</source>
-        <translation>Abwehrkapsel</translation>
+        <translation>Wachsamkeit</translation>
     </message>
     <message>
         <source>Magic Source</source>
-        <translation>Zauberkapsel</translation>
+        <translation>Zauber</translation>
     </message>
     <message>
         <source>Mind Source</source>
-        <translation>Gemütskapsel</translation>
+        <translation>Geist</translation>
     </message>
     <message>
         <source>Speed Source</source>
-        <translation>Speed-Kapsel</translation>
+        <translation>Geschwindigkeit</translation>
     </message>
     <message>
         <source>Luck Source</source>
-        <translation>Glückskapsel</translation>
+        <translation>Glück</translation>
     </message>
     <message>
         <source>Zeio Nut</source>
-        <translation>Zeyo Nuss</translation>
+        <translation>Zeyonuß</translation>
     </message>
     <message>
         <source>Carob Nut</source>
-        <translation>Karob Nuss</translation>
+        <translation>Karobnuß</translation>
     </message>
     <message>
         <source>Porov Nut</source>
-        <translation>Porof Nuss</translation>
+        <translation>Porofnuß</translation>
     </message>
     <message>
         <source>Pram Nut</source>
-        <translation>Pram Nuss</translation>
+        <translation>Pramnuß</translation>
     </message>
     <message>
         <source>Lasan Nut</source>
-        <translation>Lasan Nuss</translation>
+        <translation>Lasannuß</translation>
     </message>
     <message>
         <source>Luchile Nut</source>
-        <translation>Luchil Nuss</translation>
+        <translation>Luchilnuß</translation>
     </message>
     <message>
         <source>Pepio Nut</source>
-        <translation>Pepio Nuss</translation>
+        <translation>Pepionuß</translation>
     </message>
     <message>
         <source>Battery</source>
@@ -1079,7 +1079,7 @@
     </message>
     <message>
         <source>Tissue</source>
-        <translation>Papiertuch</translation>
+        <translation>Tuch</translation>
     </message>
     <message>
         <source>Omnislash</source>
@@ -1091,7 +1091,7 @@
     </message>
     <message>
         <source>Final Heaven</source>
-        <translation>Endgültiger Himmel</translation>
+        <translation>Endgült. Himmel</translation>
     </message>
     <message>
         <source>Great Gospel</source>
@@ -1115,11 +1115,11 @@
     </message>
     <message>
         <source>Super Sweeper</source>
-        <translation>Supermetall Eraser</translation>
+        <translation>Superauslöscher</translation>
     </message>
     <message>
         <source>Masamune Blade</source>
-        <translation>Masamune</translation>
+        <translation>Masamune-Klinge</translation>
     </message>
     <message>
         <source>Save Crystal</source>
@@ -1127,7 +1127,7 @@
     </message>
     <message>
         <source>Combat Diary</source>
-        <translation>Tagebuch</translation>
+        <translation>Schlachttagebuch</translation>
     </message>
     <message>
         <source>Autograph</source>
@@ -1135,7 +1135,7 @@
     </message>
     <message>
         <source>Gambler</source>
-        <translation>Tagebuch 2</translation>
+        <translation>Spieler</translation>
     </message>
     <message>
         <source>Desert Rose</source>
@@ -1155,7 +1155,7 @@
     </message>
     <message>
         <source>Buster Sword</source>
-        <translation>Bastard-Schwert</translation>
+        <translation>Meisterschwert</translation>
     </message>
     <message>
         <source>Mythril Saber</source>
@@ -1167,7 +1167,7 @@
     </message>
     <message>
         <source>Butterfly Edge</source>
-        <translation>Schmetterlingsklinge</translation>
+        <translation>Schmetterlklinge</translation>
     </message>
     <message>
         <source>Enhance Sword</source>
@@ -1183,7 +1183,7 @@
     </message>
     <message>
         <source>Force Stealer</source>
-        <translation>Superdieb</translation>
+        <translation>Superstehler</translation>
     </message>
     <message>
         <source>Rune Blade</source>
@@ -1211,7 +1211,7 @@
     </message>
     <message>
         <source>Ragnarok</source>
-        <translation>Ragnarök</translation>
+        <translation>Ragnarok</translation>
     </message>
     <message>
         <source>Ultima Weapon</source>
@@ -1223,11 +1223,11 @@
     </message>
     <message>
         <source>Metal Knuckle</source>
-        <translation>Metallfaust</translation>
+        <translation>Metallhand</translation>
     </message>
     <message>
         <source>Mythril Claw</source>
-        <translation>Mythril-Kralle</translation>
+        <translation>Mythril-Klaue</translation>
     </message>
     <message>
         <source>Grand Glove</source>
@@ -1239,11 +1239,11 @@
     </message>
     <message>
         <source>Diamond Knuckle</source>
-        <translation>Diamantenfaust</translation>
+        <translation>Diamanthand</translation>
     </message>
     <message>
         <source>Dragon Claw</source>
-        <translation>Drachenkrall</translation>
+        <translation>Drachenklaue</translation>
     </message>
     <message>
         <source>Crystal Glove</source>
@@ -1259,7 +1259,7 @@
     </message>
     <message>
         <source>Kaiser Knuckle</source>
-        <translation>Kaiserfaust</translation>
+        <translation>Kaiserhand</translation>
     </message>
     <message>
         <source>Work Glove</source>
@@ -1267,19 +1267,19 @@
     </message>
     <message>
         <source>Powersoul</source>
-        <translation>Power-Soul</translation>
+        <translation>Powersoul</translation>
     </message>
     <message>
         <source>Master Fist</source>
-        <translation>Meisterfaust</translation>
+        <translation>Meister-Faust</translation>
     </message>
     <message>
         <source>God&apos;s Hand</source>
-        <translation>Hand Gottes</translation>
+        <translation>Gotteshand</translation>
     </message>
     <message>
         <source>Premium Heart</source>
-        <translation>Herz der Sehnsucht</translation>
+        <translation>Preminum-Herz</translation>
     </message>
     <message>
         <source>Gatling Gun</source>
@@ -1299,7 +1299,7 @@
     </message>
     <message>
         <source>Heavy Vulcan</source>
-        <translation>Vulkan-Blaster</translation>
+        <translation>Vulkanwaffe</translation>
     </message>
     <message>
         <source>Chainsaw</source>
@@ -1311,7 +1311,7 @@
     </message>
     <message>
         <source>W Machine Gun</source>
-        <translation>Doppel-MG</translation>
+        <translation>2x-Maschinenge</translation>
     </message>
     <message>
         <source>Drill Arm</source>
@@ -1327,19 +1327,19 @@
     </message>
     <message>
         <source>Enemy Launcher</source>
-        <translation>Feindschleuder</translation>
+        <translation>Feindeswerfer</translation>
     </message>
     <message>
         <source>Pile Banger</source>
-        <translation>Pfahlramme</translation>
+        <translation>Stapelschläger</translation>
     </message>
     <message>
         <source>Max Ray</source>
-        <translation>Max-Ray</translation>
+        <translation>Maxistrahl</translation>
     </message>
     <message>
         <source>Missing Score</source>
-        <translation>AP-Kollektor</translation>
+        <translation>Dragohieb</translation>
     </message>
     <message>
         <source>Mythril Clip</source>
@@ -1359,7 +1359,7 @@
     </message>
     <message>
         <source>Adaman Clip</source>
-        <translation>Diamantennadel</translation>
+        <translation>Diamantclip</translation>
     </message>
     <message>
         <source>Crystal Comb</source>
@@ -1371,7 +1371,7 @@
     </message>
     <message>
         <source>Centclip</source>
-        <translation>Cent-Clip</translation>
+        <translation>Centclip</translation>
     </message>
     <message>
         <source>Hairpin</source>
@@ -1387,15 +1387,15 @@
     </message>
     <message>
         <source>Spring Gun Clip</source>
-        <translation>Pistolen-Clip</translation>
+        <translation>Spriggewehr-Clip</translation>
     </message>
     <message>
         <source>Limited Moon</source>
-        <translation>Mondfinsternis</translation>
+        <translation>Begrenzter Mond</translation>
     </message>
     <message>
         <source>Guard Stick</source>
-        <translation>Schutzstab</translation>
+        <translation>Wachenstab</translation>
     </message>
     <message>
         <source>Mythril Rod</source>
@@ -1403,7 +1403,7 @@
     </message>
     <message>
         <source>Full Metal Staff</source>
-        <translation>Metallstock</translation>
+        <translation>Vollmetallstock</translation>
     </message>
     <message>
         <source>Striking Staff</source>
@@ -1411,11 +1411,11 @@
     </message>
     <message>
         <source>Prism Staff</source>
-        <translation>Prismenstab</translation>
+        <translation>Prismenstock</translation>
     </message>
     <message>
         <source>Aurora Rod</source>
-        <translation>Aurora-Stab</translation>
+        <translation>Aurorastange</translation>
     </message>
     <message>
         <source>Wizard Staff</source>
@@ -1423,27 +1423,27 @@
     </message>
     <message>
         <source>Wizer Staff</source>
-        <translation>Omni-Stab</translation>
+        <translation>Omnistab</translation>
     </message>
     <message>
         <source>Fairy Tale</source>
-        <translation>Märchen-Stab</translation>
+        <translation>Märchen</translation>
     </message>
     <message>
         <source>Umbrella</source>
-        <translation>Sonnenschirm</translation>
+        <translation>Schirm</translation>
     </message>
     <message>
         <source>Princess Guard</source>
-        <translation>Prinzess-Wächter</translation>
+        <translation>Prinzesswache</translation>
     </message>
     <message>
         <source>Spear</source>
-        <translation>Speer</translation>
+        <translation>Lanze</translation>
     </message>
     <message>
         <source>Slash Lance</source>
-        <translation>Lanze</translation>
+        <translation>Schlaglanze</translation>
     </message>
     <message>
         <source>Trident</source>
@@ -1451,7 +1451,7 @@
     </message>
     <message>
         <source>Mast Ax</source>
-        <translation>Frost-Axt</translation>
+        <translation>Mastaxt</translation>
     </message>
     <message>
         <source>Partisan</source>
@@ -1463,11 +1463,11 @@
     </message>
     <message>
         <source>Javelin</source>
-        <translation>Kurzspeer</translation>
+        <translation>Speer</translation>
     </message>
     <message>
         <source>Grow Lance</source>
-        <translation>Himmelsspeer</translation>
+        <translation>MegaLanze</translation>
     </message>
     <message>
         <source>Mop</source>
@@ -1491,7 +1491,7 @@
     </message>
     <message>
         <source>Venus Gospel</source>
-        <translation>Venushymne</translation>
+        <translation>Venuslehre</translation>
     </message>
     <message>
         <source>4-point Shuriken</source>
@@ -1503,7 +1503,7 @@
     </message>
     <message>
         <source>Pinwheel</source>
-        <translation>Windrad</translation>
+        <translation>Nadelrad</translation>
     </message>
     <message>
         <source>Razor Ring</source>
@@ -1519,7 +1519,7 @@
     </message>
     <message>
         <source>Wind Slash</source>
-        <translation>Windklinge</translation>
+        <translation>Windschwert</translation>
     </message>
     <message>
         <source>Twin Viper</source>
@@ -1531,7 +1531,7 @@
     </message>
     <message>
         <source>Superball</source>
-        <translation>Megaball</translation>
+        <translation>Superball</translation>
     </message>
     <message>
         <source>Magic Shuriken</source>
@@ -1539,7 +1539,7 @@
     </message>
     <message>
         <source>Rising Sun</source>
-        <translation>Aufgehende Sonne</translation>
+        <translation>Aufgehen. Sonne</translation>
     </message>
     <message>
         <source>Oritsuru</source>
@@ -1551,35 +1551,35 @@
     </message>
     <message>
         <source>Yellow M-phone</source>
-        <translation>Gelbes Megaphon</translation>
+        <translation>Gelbes Mphon</translation>
     </message>
     <message>
         <source>Green M-phone</source>
-        <translation>Grünes Megaphon</translation>
+        <translation>Grünes Mphon</translation>
     </message>
     <message>
         <source>Blue M-phone</source>
-        <translation>Blaues Megaphon</translation>
+        <translation>Blaues Mphon</translation>
     </message>
     <message>
         <source>Red M-phone</source>
-        <translation>Rotes Megaphon</translation>
+        <translation>Rotes Mphon</translation>
     </message>
     <message>
         <source>Crystal M-phone</source>
-        <translation>Kristall-Megaphon</translation>
+        <translation>Kristall-Mphon</translation>
     </message>
     <message>
         <source>White M-phone</source>
-        <translation>Weißes Megaphon</translation>
+        <translation>Weißes Mphon</translation>
     </message>
     <message>
         <source>Black M-phone</source>
-        <translation>Schwarz-Megaphon</translation>
+        <translation>Schwarzes Mphon</translation>
     </message>
     <message>
         <source>Silver M-phone</source>
-        <translation>Silbernes Megaphon</translation>
+        <translation>Silbernes Mphon</translation>
     </message>
     <message>
         <source>Trumpet Shell</source>
@@ -1587,15 +1587,15 @@
     </message>
     <message>
         <source>Gold M-phone</source>
-        <translation>Goldenes Megaphon</translation>
+        <translation>Goldenes Mphon</translation>
     </message>
     <message>
         <source>Battle Trumpet</source>
-        <translation>Kampftrompete</translation>
+        <translation>Schlachtrompete</translation>
     </message>
     <message>
         <source>Starlight Phone</source>
-        <translation>Sternen-Megaphon</translation>
+        <translation>Sternenmphon</translation>
     </message>
     <message>
         <source>HP Shout</source>
@@ -1627,7 +1627,7 @@
     </message>
     <message>
         <source>Buntline</source>
-        <translation>Mistra-Gewehr</translation>
+        <translation>Mistragewehr</translation>
     </message>
     <message>
         <source>Long Barrel R</source>
@@ -1639,11 +1639,11 @@
     </message>
     <message>
         <source>Sniper CR</source>
-        <translation>Heckenschützen-CR</translation>
+        <translation>Heckenschütz-CR</translation>
     </message>
     <message>
         <source>Supershot ST</source>
-        <translation>Superschuss-ST</translation>
+        <translation>Superschuβ-ST</translation>
     </message>
     <message>
         <source>Outsider</source>
@@ -1659,15 +1659,15 @@
     </message>
     <message>
         <source>Bronze Bangle</source>
-        <translation>Bronze-Reif</translation>
+        <translation>Bronzereif</translation>
     </message>
     <message>
         <source>Iron Bangle</source>
-        <translation>Eisen-Reif</translation>
+        <translation>Eisenreif</translation>
     </message>
     <message>
         <source>Titan Bangle</source>
-        <translation>Titan-Reif</translation>
+        <translation>Titanreif</translation>
     </message>
     <message>
         <source>Mythril Armlet</source>
@@ -1675,43 +1675,43 @@
     </message>
     <message>
         <source>Carbon Bangle</source>
-        <translation>Karbon-Reif</translation>
+        <translation>Karbonreif</translation>
     </message>
     <message>
         <source>Silver Armlet</source>
-        <translation>Silber-Armband</translation>
+        <translation>Silberarmband</translation>
     </message>
     <message>
         <source>Gold Armlet</source>
-        <translation>Gold-Armband</translation>
+        <translation>Goldarmband</translation>
     </message>
     <message>
         <source>Diamond Bangle</source>
-        <translation>Diamanten-Reif</translation>
+        <translation>Diamantenreif</translation>
     </message>
     <message>
         <source>Crystal Bangle</source>
-        <translation>Kristall-Reif</translation>
+        <translation>Kristallreif</translation>
     </message>
     <message>
         <source>Platinum Bangle</source>
-        <translation>Platin-Reif</translation>
+        <translation>Platinreif</translation>
     </message>
     <message>
         <source>Rune Armlet</source>
-        <translation>Runen-Armband</translation>
+        <translation>Runenarmband</translation>
     </message>
     <message>
         <source>Edincoat</source>
-        <translation>Edin-Reif</translation>
+        <translation>Edinmantel</translation>
     </message>
     <message>
         <source>Wizard Bracelet</source>
-        <translation>Magier-Armband</translation>
+        <translation>Zauberarmband</translation>
     </message>
     <message>
         <source>Adaman Bangle</source>
-        <translation>Adamant-Reif</translation>
+        <translation>Adamanreif</translation>
     </message>
     <message>
         <source>Gigas Armlet</source>
@@ -1719,7 +1719,7 @@
     </message>
     <message>
         <source>Imperial Guard</source>
-        <translation>Kaisergarde</translation>
+        <translation>Kaiserwache</translation>
     </message>
     <message>
         <source>Aegis Armlet</source>
@@ -1727,11 +1727,11 @@
     </message>
     <message>
         <source>Fourth Bracelet</source>
-        <translation>Zwangsreif</translation>
+        <translation>Viertes Armband</translation>
     </message>
     <message>
         <source>Warrior Bangle</source>
-        <translation>Krieger-Reif</translation>
+        <translation>Kriegerreif</translation>
     </message>
     <message>
         <source>Shinra Beta</source>
@@ -1743,11 +1743,11 @@
     </message>
     <message>
         <source>Four Slots</source>
-        <translation>Vier-Slots</translation>
+        <translation>Vier Schächte</translation>
     </message>
     <message>
         <source>Fire Armlet</source>
-        <translation>Feuer-Armband</translation>
+        <translation>Feuerarmband</translation>
     </message>
     <message>
         <source>Aurora Armlet</source>
@@ -1755,15 +1755,15 @@
     </message>
     <message>
         <source>Bolt Armlet</source>
-        <translation>Blitz-Armband</translation>
+        <translation>Blitzarmband</translation>
     </message>
     <message>
         <source>Dragon Armlet</source>
-        <translation>Drachen-Armband</translation>
+        <translation>Drachenarmband</translation>
     </message>
     <message>
         <source>Minerva Band</source>
-        <translation>Minerva-Reif</translation>
+        <translation>Minerva-Band</translation>
     </message>
     <message>
         <source>Escort Guard</source>
@@ -1779,15 +1779,15 @@
     </message>
     <message>
         <source>Precious Watch</source>
-        <translation>Kostbare Uhr</translation>
+        <translation>Wertvolle Uhr</translation>
     </message>
     <message>
         <source>Chocobracelet</source>
-        <translation>Chocobo-Armband</translation>
+        <translation>Choco-Armband</translation>
     </message>
     <message>
         <source>Power Wrist</source>
-        <translation>Kraftarmband</translation>
+        <translation>Power-Griff</translation>
     </message>
     <message>
         <source>Protect Vest</source>
@@ -1803,7 +1803,7 @@
     </message>
     <message>
         <source>Choco Feather</source>
-        <translation>Chocobo-Feder</translation>
+        <translation>Choco-Feder</translation>
     </message>
     <message>
         <source>Amulet</source>
@@ -1819,7 +1819,7 @@
     </message>
     <message>
         <source>Tough Ring</source>
-        <translation>Kraft-Ring</translation>
+        <translation>Touph-Ring</translation>
     </message>
     <message>
         <source>Circlet</source>
@@ -1827,7 +1827,7 @@
     </message>
     <message>
         <source>Star Pendant</source>
-        <translation>Sternen-Amulett</translation>
+        <translation>Sternenanhänger</translation>
     </message>
     <message>
         <source>Silver Glasses</source>
@@ -1843,7 +1843,7 @@
     </message>
     <message>
         <source>Jem Ring</source>
-        <translation>Smaragdring</translation>
+        <translation>Edelsteinring</translation>
     </message>
     <message>
         <source>White Cape</source>
@@ -1859,7 +1859,7 @@
     </message>
     <message>
         <source>Ribbon</source>
-        <translation>Schmuckband</translation>
+        <translation>Schleife</translation>
     </message>
     <message>
         <source>Fire Ring</source>
@@ -1879,11 +1879,11 @@
     </message>
     <message>
         <source>Safety Bit</source>
-        <translation>Sicherheits-Bit</translation>
+        <translation>Schutzbit</translation>
     </message>
     <message>
         <source>Fury Ring</source>
-        <translation>Furienring</translation>
+        <translation>Zornesring</translation>
     </message>
     <message>
         <source>Curse Ring</source>
@@ -1907,7 +1907,7 @@
     </message>
     <message>
         <source>Sneak Glove</source>
-        <translation>Räuberhandschuh</translation>
+        <translation>Stehlhandschuh</translation>
     </message>
     <message>
         <source>HypnoCrown</source>
@@ -1923,7 +1923,7 @@
     </message>
     <message>
         <source>Saraha Nut</source>
-        <translation>Saraha Nuss</translation>
+        <translation>Sarahanuß</translation>
     </message>
     <message>
         <source>1/35 soldier</source>
@@ -1931,11 +1931,11 @@
     </message>
     <message>
         <source>Plus Barrette</source>
-        <translation>Platinspange</translation>
+        <translation>Platinbarrett</translation>
     </message>
     <message>
         <source>A M Cannon</source>
-        <translation>A/M-Kanone</translation>
+        <translation>A M-Kanone</translation>
     </message>
 </context>
 <context>
