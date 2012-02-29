@@ -18,7 +18,7 @@
 #define ERRBOX_H
 
 #include <QDialog>
-#include "globals.h"    // contains checksumming functions
+#include "FF7SAVE.h"
 #include <SaveIcon.h>
 namespace Ui {
     class errbox;
