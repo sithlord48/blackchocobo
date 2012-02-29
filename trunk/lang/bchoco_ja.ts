@@ -4992,7 +4992,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>EALIN_1: Potion + Phoenix Down</source>
-        <translation type="unfinished">エアリスの家２Ｆ:ポーション+フ + ニックスの尾</translation>
+        <translation type="unfinished">エアリスの家２Ｆ: ポーション + フェニックスの尾</translation>
     </message>
     <message>
         <source>ZZ1:Mythril</source>
