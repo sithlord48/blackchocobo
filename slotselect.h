@@ -18,13 +18,11 @@
 #define SLOTSELECT_H
 
 #include <QDialog>
-#include "globals.h"
+#include <QMessageBox>
 #include "SaveIcon.h"
-#include "QMessageBox"
-
-#ifndef FF7TEXT_H
+#include "FF7SAVE.h"
 #include "static_data/FF7Text.h"
-#endif
+
 namespace Ui {
     class SlotSelect;
 }

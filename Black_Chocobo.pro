@@ -66,11 +66,11 @@ TRANSLATIONS += lang/bchoco_en.ts \
 macx:{
     #set program icon on mac os
     ICON = icon/bchoco_icon_osx.icns
-VERS = $$system(svn info -r HEAD . | grep '"Changed Rev"' | cut -b 19-)
-{
-isEmpty($${VERS}):DEFINES += SVNVERSION=\"0\"#svn rev not found set 0
-else:DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
-}
+    VERS = $$system(svn info -r HEAD . | grep '"Changed Rev"' | cut -b 19-)
+    {
+    DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
+    message("Using Svn Revision:$${VERS}")
+    }
 }
 
 #set up for windows
@@ -82,28 +82,28 @@ win32:{
 }
 
 #all other *nix (except for symbian)
+unix:!macx:!symbian {
+    VERS = $$system(svn info -r HEAD . | grep '"Changed Rev"' | cut -b 19-)
+    {
+    DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
+    message("Using Svn Revision:$${VERS}")
+    }
 #base for setting up deb packages(rpm too?).
 #becomes 'make install' when qmake generates the makefile
-unix:!macx:!symbian {
-VERS = $$system(svn info -r HEAD . | grep '"Changed Rev"' | cut -b 19-)
-{
-isEmpty($${VERS}):DEFINES += SVNVERSION=\"0\"#svn rev not found set 0
-else:DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
-}
 system(lrelease Black_Chocobo.pro) #call lrelease to make the qm files.
-target.path = /opt/blackchocobo #set the play to deploy the build target.
+target.path = /opt/blackchocobo #set the path to deploy the build target.
 
-save0.path = /opt/blackchocobo
+save0.path = /opt/blackchocobo #set path and include save0 (New Game)
 save0.files = save0
 
-lang.path = /opt/blackchocobo/lang
-lang.files = lang/*.qm
+lang.path = /opt/blackchocobo/lang #set path for lang folder
+lang.files = lang/*.qm  #grab All qm files
 
-icon.path = /usr/share/pixmaps
+icon.path = /usr/share/pixmaps       #system path icon.
 icon.files = icon/Black_Chocobo.png
 
-desktop.path =/usr/share/applications/
-desktop.files = Black_Chocobo.desktop
+desktop.path =/usr/share/applications/ #system path app dir
+desktop.files = Black_Chocobo.desktop  #
 
 INSTALLS += target \
     save0 \
