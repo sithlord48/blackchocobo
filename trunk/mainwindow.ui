@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>774</width>
-    <height>576</height>
+    <width>776</width>
+    <height>578</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -1694,8 +1694,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>453</width>
-             <height>436</height>
+             <width>455</width>
+             <height>438</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -21821,7 +21821,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>747</width>
+             <width>513</width>
              <height>683</height>
             </rect>
            </property>
@@ -27721,7 +27721,7 @@ Var And Scrolling Synced To Left Table</string>
     <item>
      <widget class="QFrame" name="frame_status">
       <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+       <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
         <horstretch>0</horstretch>
         <verstretch>0</verstretch>
        </sizepolicy>
@@ -27735,7 +27735,7 @@ Var And Scrolling Synced To Left Table</string>
       <property name="maximumSize">
        <size>
         <width>16777215</width>
-        <height>24</height>
+        <height>18</height>
        </size>
       </property>
       <layout class="QHBoxLayout" name="horizontalLayout_112">
@@ -27884,7 +27884,7 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>774</width>
+     <width>776</width>
      <height>22</height>
     </rect>
    </property>

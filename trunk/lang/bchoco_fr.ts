@@ -3253,7 +3253,7 @@
     </message>
     <message>
         <source>Cannot save This Type of File</source>
-        <translation>Impossible de sauvegarder ce type de fichier</translation>
+        <translation type="obsolete">Impossible de sauvegarder ce type de fichier</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 SaveGame</source>
@@ -3485,7 +3485,7 @@
     </message>
     <message>
         <source>Bad Psx Save Name</source>
-        <translation>PSX Mauvais nom de sauvegarde</translation>
+        <translation type="obsolete">PSX Mauvais nom de sauvegarde</translation>
     </message>
     <message>
         <source>Export MC File</source>
@@ -3587,16 +3587,16 @@
     </message>
     <message>
         <source>Unknown Filetype</source>
-        <translation>Type de fichier inconnu</translation>
+        <translation type="obsolete">Type de fichier inconnu</translation>
     </message>
     <message>
         <source>File: %1 
 is not a FF7 SaveGame.</source>
-        <translation>Fichier:%1 n&apos;est pas une sauvegarde FF7.</translation>
+        <translation type="obsolete">Fichier:%1 n&apos;est pas une sauvegarde FF7.</translation>
     </message>
     <message>
         <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
-        <translation>Ne peut pas décider Quel en-tête écrire, veuillez ajouter le suffixe-SXX (où x = 01-15, avec un 0 si &lt;10) Un en-tête de ce numéro d&apos;emplacement sera écrit dans la sauvegarde</translation>
+        <translation type="obsolete">Ne peut pas décider Quel en-tête écrire, veuillez ajouter le suffixe-SXX (où x = 01-15, avec un 0 si &lt;10) Un en-tête de ce numéro d&apos;emplacement sera écrit dans la sauvegarde</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -4263,27 +4263,27 @@ Les stats de Sephiroth proviendront directement de celles de Vincent.</translati
     </message>
     <message>
         <source>Slot:%1 Contains A PAL region save</source>
-        <translation>Fente %1 contien une sauvegarde PAL</translation>
+        <translation type="obsolete">Fente %1 contien une sauvegarde PAL</translation>
     </message>
     <message>
         <source>PAL PSX runs at 50/60 speed
 This results in an incorrect playtime
 Would you like to correct the playtime?</source>
-        <translation>PAL PSX fonctionne à la vitesse 50/60
+        <translation type="obsolete">PAL PSX fonctionne à la vitesse 50/60
 Cela rend le temps de jeu incorrect
 Voulez-vous corriger ceci ?</translation>
     </message>
     <message>
         <source>PAL Slot Detected</source>
-        <translation>Fente PAL détectée</translation>
+        <translation type="obsolete">Fente PAL détectée</translation>
     </message>
     <message>
         <source>Always Correct</source>
-        <translation>Toujours Correct</translation>
+        <translation type="obsolete">Toujours Correct</translation>
     </message>
     <message>
         <source>Never Correct</source>
-        <translation>Jamais correct</translation>
+        <translation type="obsolete">Jamais correct</translation>
     </message>
     <message>
         <source>PAL -&gt; NTSC Conversion</source>
@@ -4992,6 +4992,14 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
         <translation>Sauvegarde FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
+    </message>
+    <message>
+        <source>Load Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to Load File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7141,6 +7149,10 @@ p, li { white-space: pre-wrap; }
         <source>New: Added .VM1to list of VMC formats</source>
         <translation>Nouveau : Ajout du format .VM1 à la liste des formats VMC</translation>
     </message>
+    <message>
+        <source>Fixed: Bug In Dex and Vgs Header</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>errbox</name>
@@ -7190,12 +7202,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Black Chocobo</source>
-        <translation>Black Chocobo</translation>
+        <translation type="obsolete">Black Chocobo</translation>
     </message>
     <message>
         <source>Cannot write file %1:
 %2.</source>
-        <translation>Impossible d&apos;écrire dans le fichier %1:
+        <translation type="obsolete">Impossible d&apos;écrire dans le fichier %1:
 %2.</translation>
     </message>
     <message>
@@ -7252,6 +7264,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Next Data Chunk @ Slot:%1</source>
         <translation>la prochaine sauvegarde est à l&apos;emplacement %1</translation>
+    </message>
+    <message>
+        <source>Save Error</source>
+        <translation type="unfinished">Erreur de sauvegarde</translation>
+    </message>
+    <message>
+        <source>Error On File Save, Going Back To The Selection Dialog</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

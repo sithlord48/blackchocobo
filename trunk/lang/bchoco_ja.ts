@@ -3272,7 +3272,7 @@
     </message>
     <message>
         <source>Cannot save This Type of File</source>
-        <translation>このタイプのファイルは保存できません</translation>
+        <translation type="obsolete">このタイプのファイルは保存できません</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 SaveGame</source>
@@ -3488,7 +3488,7 @@
     </message>
     <message>
         <source>Bad Psx Save Name</source>
-        <translation>無効な PSX セーブの名称</translation>
+        <translation type="obsolete">無効な PSX セーブの名称</translation>
     </message>
     <message>
         <source>Export MC File</source>
@@ -3596,17 +3596,17 @@
     </message>
     <message>
         <source>Unknown Filetype</source>
-        <translation>不明なファイル タイプ</translation>
+        <translation type="obsolete">不明なファイル タイプ</translation>
     </message>
     <message>
         <source>File: %1 
 is not a FF7 SaveGame.</source>
-        <translation>ファイル: %1 
+        <translation type="obsolete">ファイル: %1 
 は FF7 セーブではありません。</translation>
     </message>
     <message>
         <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
-        <translation>ヘッダーが決定できません。接尾辞 -SXX を追加してください。これはスロット番号としてセーブに書き込まれるヘッダーです。(XX = 01～15, 10 未満の場合は 0 を接頭して二桁に)</translation>
+        <translation type="obsolete">ヘッダーが決定できません。接尾辞 -SXX を追加してください。これはスロット番号としてセーブに書き込まれるヘッダーです。(XX = 01～15, 10 未満の場合は 0 を接頭して二桁に)</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -4272,27 +4272,27 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Slot:%1 Contains A PAL region save</source>
-        <translation>スロット:%1 のセーブは PAL 方式です</translation>
+        <translation type="obsolete">スロット:%1 のセーブは PAL 方式です</translation>
     </message>
     <message>
         <source>PAL PSX runs at 50/60 speed
 This results in an incorrect playtime
 Would you like to correct the playtime?</source>
-        <translation>PAL PSX は 50/60 の速度で実行されます。
+        <translation type="obsolete">PAL PSX は 50/60 の速度で実行されます。
 このプレイ時間は不正確なものです。
 プレイ時間を修正しますか ?</translation>
     </message>
     <message>
         <source>PAL Slot Detected</source>
-        <translation>PAL スロットを検出</translation>
+        <translation type="obsolete">PAL スロットを検出</translation>
     </message>
     <message>
         <source>Always Correct</source>
-        <translation>つねに修正</translation>
+        <translation type="obsolete">つねに修正</translation>
     </message>
     <message>
         <source>Never Correct</source>
-        <translation>修正しない</translation>
+        <translation type="obsolete">修正しない</translation>
     </message>
     <message>
         <source>PAL -&gt; NTSC Conversion</source>
@@ -5013,6 +5013,14 @@ Table Entries are Editable</source>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
         <translation>FF7 MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
+    </message>
+    <message>
+        <source>Load Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to Load File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7160,6 +7168,10 @@ p, li { white-space: pre-wrap; }
         <source>New: Added .VM1to list of VMC formats</source>
         <translation>追加: .VM1 を VMC フォーマットに追加</translation>
     </message>
+    <message>
+        <source>Fixed: Bug In Dex and Vgs Header</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>errbox</name>
@@ -7209,12 +7221,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Black Chocobo</source>
-        <translation>Black Chocobo</translation>
+        <translation type="obsolete">Black Chocobo</translation>
     </message>
     <message>
         <source>Cannot write file %1:
 %2.</source>
-        <translation>ファイル %1 に書き込めません:
+        <translation type="obsolete">ファイル %1 に書き込めません:
 %2.</translation>
     </message>
     <message>
@@ -7270,6 +7282,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Next Data Chunk @ Slot:%1</source>
         <translation>; 次のデータ チャンク @ スロット:%1</translation>
+    </message>
+    <message>
+        <source>Save Error</source>
+        <translation type="unfinished">保存エラー</translation>
+    </message>
+    <message>
+        <source>Error On File Save, Going Back To The Selection Dialog</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

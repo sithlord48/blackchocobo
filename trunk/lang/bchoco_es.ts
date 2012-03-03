@@ -3266,7 +3266,7 @@
     </message>
     <message>
         <source>Cannot save This Type of File</source>
-        <translation>No se Puede Guardar este Tipo de Archivo</translation>
+        <translation type="obsolete">No se Puede Guardar este Tipo de Archivo</translation>
     </message>
     <message>
         <source>Cannot read file %1:
@@ -3490,7 +3490,7 @@
     </message>
     <message>
         <source>Bad Psx Save Name</source>
-        <translation>Nombre de partida de Psx incorrecto</translation>
+        <translation type="obsolete">Nombre de partida de Psx incorrecto</translation>
     </message>
     <message>
         <source>Export MC File</source>
@@ -3592,17 +3592,17 @@
     </message>
     <message>
         <source>Unknown Filetype</source>
-        <translation>Tipo de archivo desconocido</translation>
+        <translation type="obsolete">Tipo de archivo desconocido</translation>
     </message>
     <message>
         <source>File: %1 
 is not a FF7 SaveGame.</source>
-        <translation>El archivo %1 
+        <translation type="obsolete">El archivo %1 
 no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
-        <translation>No se puede decidir en que cabecera escribir, por favor añade el sufijo SXX (donde x= 01-15, empezando con 0 si &lt; 10) Una cabecera con ese número de ranura se escribirá en el archivo</translation>
+        <translation type="obsolete">No se puede decidir en que cabecera escribir, por favor añade el sufijo SXX (donde x= 01-15, empezando con 0 si &lt; 10) Una cabecera con ese número de ranura se escribirá en el archivo</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -4264,27 +4264,27 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>Slot:%1 Contains A PAL region save</source>
-        <translation>Ranura:%1 Contiene una partida de región PAL</translation>
+        <translation type="obsolete">Ranura:%1 Contiene una partida de región PAL</translation>
     </message>
     <message>
         <source>PAL PSX runs at 50/60 speed
 This results in an incorrect playtime
 Would you like to correct the playtime?</source>
-        <translation>PSX PAL corre a una velocidad de 50/60
+        <translation type="obsolete">PSX PAL corre a una velocidad de 50/60
 Esto resulta en tiempos de juego incorrectos
 ¿Quieres corregir el tiempo de juego?</translation>
     </message>
     <message>
         <source>PAL Slot Detected</source>
-        <translation>Ranura PAL detectada</translation>
+        <translation type="obsolete">Ranura PAL detectada</translation>
     </message>
     <message>
         <source>Always Correct</source>
-        <translation>Corregir siempre</translation>
+        <translation type="obsolete">Corregir siempre</translation>
     </message>
     <message>
         <source>Never Correct</source>
-        <translation>Corregir nunca</translation>
+        <translation type="obsolete">Corregir nunca</translation>
     </message>
     <message>
         <source>PAL -&gt; NTSC Conversion</source>
@@ -4993,6 +4993,14 @@ NO es un archivo de guardado PSV</translation>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
         <translation>Archivos de guardado FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
+    </message>
+    <message>
+        <source>Load Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to Load File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7141,6 +7149,10 @@ p, li { white-space: pre-wrap; }
         <source>New: Added .VM1to list of VMC formats</source>
         <translation>Nuevo: Añadido .VM1 a la lista de formatos VMC</translation>
     </message>
+    <message>
+        <source>Fixed: Bug In Dex and Vgs Header</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>errbox</name>
@@ -7190,12 +7202,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Black Chocobo</source>
-        <translation>Chocobo Negro</translation>
+        <translation type="obsolete">Chocobo Negro</translation>
     </message>
     <message>
         <source>Cannot write file %1:
 %2.</source>
-        <translation>No se puede escribir el archivo%1:
+        <translation type="obsolete">No se puede escribir el archivo%1:
 %2.</translation>
     </message>
     <message>
@@ -7251,6 +7263,14 @@ El juego usa el bloque de guardado %1 </translation>
     <message>
         <source>Next Data Chunk @ Slot:%1</source>
         <translation>Siguiente trozo de datos en la ranura:%1</translation>
+    </message>
+    <message>
+        <source>Save Error</source>
+        <translation type="unfinished">Error al Guardar</translation>
+    </message>
+    <message>
+        <source>Error On File Save, Going Back To The Selection Dialog</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

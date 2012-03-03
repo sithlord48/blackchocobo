@@ -3260,7 +3260,7 @@
     </message>
     <message>
         <source>Cannot save This Type of File</source>
-        <translation>Kann diesen Dateityp nicht speichern</translation>
+        <translation type="obsolete">Kann diesen Dateityp nicht speichern</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7 SaveGame</source>
@@ -3476,7 +3476,7 @@
     </message>
     <message>
         <source>Bad Psx Save Name</source>
-        <translation>Schlechter PSX Spielstand Name</translation>
+        <translation type="obsolete">Schlechter PSX Spielstand Name</translation>
     </message>
     <message>
         <source>Export MC File</source>
@@ -3584,17 +3584,17 @@
     </message>
     <message>
         <source>Unknown Filetype</source>
-        <translation>Unbekannter Dateityp</translation>
+        <translation type="obsolete">Unbekannter Dateityp</translation>
     </message>
     <message>
         <source>File: %1 
 is not a FF7 SaveGame.</source>
-        <translation>Datei: %1 
+        <translation type="obsolete">Datei: %1 
 ist kein FF7 Spielstand.</translation>
     </message>
     <message>
         <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
-        <translation>Kann nicht entscheiden auf welchem Header geschrieben werden muss, Bitte füge den Suffix hinzu -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</translation>
+        <translation type="obsolete">Kann nicht entscheiden auf welchem Header geschrieben werden muss, Bitte füge den Suffix hinzu -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -4262,27 +4262,27 @@ ist kein FF7 Spielstand.</translation>
     </message>
     <message>
         <source>Slot:%1 Contains A PAL region save</source>
-        <translation>Steckplatz:%1 Beinhaltet einen PAL Region Spielstand</translation>
+        <translation type="obsolete">Steckplatz:%1 Beinhaltet einen PAL Region Spielstand</translation>
     </message>
     <message>
         <source>PAL PSX runs at 50/60 speed
 This results in an incorrect playtime
 Would you like to correct the playtime?</source>
-        <translation>PAL PSX läuft bei 50/60 Geschwindigkeit
+        <translation type="obsolete">PAL PSX läuft bei 50/60 Geschwindigkeit
 Dies führt zu einer inkorrekten Spielzeit
 Möchtest du die Spielzeit korrigieren?</translation>
     </message>
     <message>
         <source>PAL Slot Detected</source>
-        <translation>PAL Steckplatz erkannt</translation>
+        <translation type="obsolete">PAL Steckplatz erkannt</translation>
     </message>
     <message>
         <source>Always Correct</source>
-        <translation>Korrigiere immer</translation>
+        <translation type="obsolete">Korrigiere immer</translation>
     </message>
     <message>
         <source>Never Correct</source>
-        <translation>Korrigiere nie</translation>
+        <translation type="obsolete">Korrigiere nie</translation>
     </message>
     <message>
         <source>PAL -&gt; NTSC Conversion</source>
@@ -4999,6 +4999,14 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
         <translation>FF7 MC Spielstand(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
+    </message>
+    <message>
+        <source>Load Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to Load File</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7147,6 +7155,10 @@ p, li { white-space: pre-wrap; }
         <source>New: Added .VM1to list of VMC formats</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Fixed: Bug In Dex and Vgs Header</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>errbox</name>
@@ -7196,12 +7208,12 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Black Chocobo</source>
-        <translation>Black Chocobo</translation>
+        <translation type="obsolete">Black Chocobo</translation>
     </message>
     <message>
         <source>Cannot write file %1:
 %2.</source>
-        <translation>Kann Datei nicht schreiben %1:
+        <translation type="obsolete">Kann Datei nicht schreiben %1:
 %2.</translation>
     </message>
     <message>
@@ -7259,6 +7271,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Next Data Chunk @ Slot:%1</source>
         <translation>Nächstes Datenstück @ Steckplatz:%1</translation>
+    </message>
+    <message>
+        <source>Save Error</source>
+        <translation type="unfinished">Speicher Fehler</translation>
+    </message>
+    <message>
+        <source>Error On File Save, Going Back To The Selection Dialog</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

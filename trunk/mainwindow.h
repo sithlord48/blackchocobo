@@ -46,7 +46,7 @@ namespace Ui {
 class MainWindow : public QMainWindow {
     Q_OBJECT
 public:
-    MainWindow(QWidget *parent = 0,FF7 *ff7data=0,QSettings *config_data=0);
+    MainWindow(QWidget *parent = 0,FF7Save *ff7data=0,QSettings *config_data=0);
     ~MainWindow();
 
 protected:
@@ -59,7 +59,7 @@ private:
     bool _init; //set true then false after a file load.
     bool load; // are we loading data? if so don't save it to the file.
     bool file_changed; //if file changed after load.
-    FF7 *ff7; // our save file struct pointer.
+    FF7Save *ff7; // our save file struct pointer.
     QSettings *settings;
     int s; //track slot
     FF7Item Items; //FF7Item Static Data
@@ -139,7 +139,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_action_Region_JPN_triggered(bool checked);
     void on_action_Region_JPN_International_triggered(bool checked);
     /*GuiFunctions*/
-    void fix_sum(const QString &fileName);
     void charupdate(void);
     void update_stat_totals(void);
     void weapon_stat(void);
@@ -153,7 +152,6 @@ private slots://try to keep these in the same order as the .cpp file
     void guirefresh(bool newgame);
     void chocobo_refresh(void);
     void progress_update(void);
-    void clearslot(int rmslot);
     void testdata_refresh(void);
     void unknown_refresh(int);
     void set_ntsc_time(void);

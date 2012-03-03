@@ -18,7 +18,7 @@
 #include "ui_slotselect.h"
 #include <globals.h>
 
-SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
+SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
     QDialog(parent),
     ui(new Ui::SlotSelect)
 {
@@ -31,13 +31,13 @@ SlotSelect::SlotSelect(QWidget *parent,FF7 *ff7data) :
     for(int s=0;s<15;s++)
     {
         not_pc=false;
-        if(ff7->SG_TYPE!="PC")
+        if(ff7->type()!="PC")
         {
             not_pc=true;
             index= 128+(128*s);
-            if(ff7->SG_TYPE=="PSP"){index+=0x80;}
-            else if(ff7->SG_TYPE=="VGS"){index+=0x40;}
-            else if(ff7->SG_TYPE=="DEX"){index+=0xF40;}
+            if(ff7->type()=="PSP"){index+=0x80;}
+            else if(ff7->type()=="VGS"){index+=0x40;}
+            else if(ff7->type()=="DEX"){index+=0xF40;}
         }
         if(not_pc && ((ff7->file_headerp[index]==0x52) || (ff7->file_headerp[index] ==0x53)))
         {// if not pc then we need to check if its a linked slot

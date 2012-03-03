@@ -20,7 +20,7 @@
 #include <QDialog>
 #include <QMessageBox>
 #include "SaveIcon.h"
-#include "FF7SAVE.h"
+#include "static_data/FF7Save.h"
 #include "static_data/FF7Text.h"
 
 namespace Ui {
@@ -30,7 +30,7 @@ namespace Ui {
 class SlotSelect : public QDialog {
     Q_OBJECT
 public:
-    SlotSelect(QWidget *parent = 0, FF7 *ff7data=0);
+    SlotSelect(QWidget *parent = 0, FF7Save *ff7data=0);
     ~SlotSelect();
 
 protected:
@@ -40,7 +40,7 @@ private:
     Ui::SlotSelect *ui;
     SaveIcon icons[15];
     TEXT Text;
-    FF7 *ff7;
+    FF7Save *ff7;
 private slots:
 
 
