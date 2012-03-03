@@ -18,13 +18,9 @@
 #define GLOBALS_H
 
 #ifndef FF7SAVE_H
-#include "FF7SAVE.h"
+#include "static_data/FF7Save.h"
 #endif
 
-int ff7__checksum(void * qw );
-void fix_pc_bytemask(FF7*ff7 ,int,bool);
-void fix_psx_header(FF7*ff7,int);
-void fix_vmc_header(FF7*ff7);
 QString avatar_style(int);
 int stat_gain(int who,int stat, int stat_amount, int next_lvl);
 #endif // GLOBALS_H

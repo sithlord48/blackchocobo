@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
     lang.append(settings.value("lang").toString());
     translator.load(lang);
     a.installTranslator(&translator);
-    FF7 ff7; //main ff7 data
+    FF7Save ff7; //main ff7 data
     qsrand(QTime::currentTime().msec());
     MainWindow w(0,&ff7,&settings);
     if(argc ==2){w.loadFileFull(QString(argv[1]),0);}// if command is run w/ a filename after it , load that file.

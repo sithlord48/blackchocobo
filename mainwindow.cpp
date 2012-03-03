@@ -25,7 +25,7 @@
 extern quint32 chartnls[11][99]; //  Chars tnl Table (cloud - sephiroth)
 extern quint32 charlvls[11][99]; //  Chars lvl Table
 /*~~~~~~~~GUI Set Up~~~~~~~*/
-MainWindow::MainWindow(QWidget *parent,FF7 *ff7data,QSettings *configdata)
+MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     :QMainWindow(parent),ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
@@ -325,194 +325,23 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
         .arg(fileName).arg(file.errorString()));
         return;
     }
-    QByteArray ff7file;
-    ff7file = file.readAll(); //put all data in temp raw file
-    QByteArray temp; // create a temp to be used when needed
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~Set File Type Vars ~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-    int file_size = file.size();
-    if((file_size == FF7_PC_SAVE_GAME_SIZE) && ff7file.startsWith(PC_SAVE_GAME_FILE_ID))
+    if(ff7->LoadFile(fileName))
     {
-       ff7->SG_SIZE          = FF7_PC_SAVE_GAME_SIZE;
-       ff7->SG_HEADER        = FF7_PC_SAVE_GAME_HEADER;
-       ff7->SG_FOOTER        = FF7_PC_SAVE_GAME_FOOTER;
-       ff7->SG_DATA_SIZE     = FF7_PC_SAVE_GAME_DATA_SIZE;
-       ff7->SG_SLOT_HEADER   = FF7_PC_SAVE_GAME_SLOT_HEADER;
-       ff7->SG_SLOT_FOOTER   = FF7_PC_SAVE_GAME_SLOT_FOOTER;
-       ff7->SG_SLOT_SIZE     = FF7_PC_SAVE_GAME_SLOT_SIZE;
-       ff7->SG_SLOT_NUMBER   = FF7_PC_SAVE_GAME_SLOT_NUMBER;
-       ff7->SG_TYPE          = "PC";
-       ff7->file_headerp     = ff7->file_header_pc;           //pointer to pc file header
-       ff7->file_footerp     = ff7->file_footer_pc;           //pointer to pc file footer
+        file_changed=false;
+        filename=fileName;
+        _init=false;//we have now loaded a file
+        ui->lbl_fileName->setText(fileName); //set filename then type specific actions.
     }
-    else if((file_size == FF7_PSX_SAVE_GAME_SIZE)&& ff7file.startsWith(PSX_SAVE_GAME_FILE_ID))
-    {//This should catch just about any false positive named *-S*
-       ff7->SG_SIZE          = FF7_PSX_SAVE_GAME_SIZE;
-       ff7->SG_HEADER        = FF7_PSX_SAVE_GAME_HEADER;
-       ff7->SG_FOOTER        = FF7_PSX_SAVE_GAME_FOOTER;
-       ff7->SG_DATA_SIZE     = FF7_PSX_SAVE_GAME_DATA_SIZE;
-       ff7->SG_SLOT_HEADER   = FF7_PSX_SAVE_GAME_SLOT_HEADER;
-       ff7->SG_SLOT_FOOTER   = FF7_PSX_SAVE_GAME_SLOT_FOOTER;
-       ff7->SG_SLOT_SIZE     = FF7_PSX_SAVE_GAME_SLOT_SIZE;
-       ff7->SG_SLOT_NUMBER   = FF7_PSX_SAVE_GAME_SLOT_NUMBER;
-       ff7->SG_TYPE          = "PSX";
-       ff7->file_headerp     = ff7->file_header_psx;          //pointer to psx file header
-       ff7->file_footerp     = ff7->file_footer_psx;          //pointer to psx file footer
-    }
-    else if((file_size == FF7_MC_SAVE_GAME_SIZE) && ff7file.startsWith(MC_SAVE_GAME_FILE_ID))
-    {
-       ff7->SG_SIZE          = FF7_MC_SAVE_GAME_SIZE;
-       ff7->SG_HEADER        = FF7_MC_SAVE_GAME_HEADER;
-       ff7->SG_FOOTER        = FF7_MC_SAVE_GAME_FOOTER;
-       ff7->SG_DATA_SIZE     = FF7_MC_SAVE_GAME_DATA_SIZE;
-       ff7->SG_SLOT_HEADER   = FF7_MC_SAVE_GAME_SLOT_HEADER;
-       ff7->SG_SLOT_FOOTER   = FF7_MC_SAVE_GAME_SLOT_FOOTER;
-       ff7->SG_SLOT_SIZE     = FF7_MC_SAVE_GAME_SLOT_SIZE;
-       ff7->SG_SLOT_NUMBER   = FF7_MC_SAVE_GAME_SLOT_NUMBER;
-       ff7->SG_TYPE          = "MC";
-       ff7->file_headerp     = ff7->file_header_mc;           //pointer to mc file header
-       ff7->file_footerp     = ff7->file_footer_mc;           //pointer to mc file footer
-    }
+    else{QMessageBox::information(this,tr("Load Failed"),tr("Failed to Load File"));return;}
 
-    else if((file_size == FF7_PSV_SAVE_GAME_SIZE) && ff7file.startsWith(PSV_SAVE_GAME_FILE_ID))
-    {//CAUTION: be sure we are loading the correct kind of psv, pSX uses the extension for it's state files.
-       ff7->SG_SIZE          = FF7_PSV_SAVE_GAME_SIZE;
-       ff7->SG_HEADER        = FF7_PSV_SAVE_GAME_HEADER;
-       ff7->SG_FOOTER        = FF7_PSV_SAVE_GAME_FOOTER;
-       ff7->SG_DATA_SIZE     = FF7_PSV_SAVE_GAME_DATA_SIZE;
-       ff7->SG_SLOT_HEADER   = FF7_PSV_SAVE_GAME_SLOT_HEADER;
-       ff7->SG_SLOT_FOOTER   = FF7_PSV_SAVE_GAME_SLOT_FOOTER;
-       ff7->SG_SLOT_SIZE     = FF7_PSV_SAVE_GAME_SLOT_SIZE;
-       ff7->SG_SLOT_NUMBER   = FF7_PSV_SAVE_GAME_SLOT_NUMBER;
-       ff7->SG_TYPE          = "PSV";
-       ff7->file_headerp     = ff7->file_header_psv;          //pointer to psv file header
-       ff7->file_footerp     = ff7->file_footer_psv;          //pointer to psv file footer
-    }
-    else if((file_size ==FF7_PSP_SAVE_GAME_SIZE) && ff7file.startsWith(PSP_SAVE_GAME_FILE_ID))
-    {
-        ff7->SG_SIZE          = FF7_PSP_SAVE_GAME_SIZE;
-        ff7->SG_HEADER        = FF7_PSP_SAVE_GAME_HEADER;
-        ff7->SG_FOOTER        = FF7_PSP_SAVE_GAME_FOOTER;
-        ff7->SG_DATA_SIZE     = FF7_PSP_SAVE_GAME_DATA_SIZE;
-        ff7->SG_SLOT_HEADER   = FF7_PSP_SAVE_GAME_SLOT_HEADER;
-        ff7->SG_SLOT_FOOTER   = FF7_PSP_SAVE_GAME_SLOT_FOOTER;
-        ff7->SG_SLOT_SIZE     = FF7_PSP_SAVE_GAME_SLOT_SIZE;
-        ff7->SG_SLOT_NUMBER   = FF7_PSP_SAVE_GAME_SLOT_NUMBER;
-        ff7->SG_TYPE          = "PSP";
-        ff7->file_headerp     = ff7->file_header_psp;          //pointer to psp file header
-        ff7->file_footerp     = ff7->file_footer_psp;          //pointer to psp file footer
-    }
-    else if((file_size ==FF7_VGS_SAVE_GAME_SIZE) && ff7file.startsWith(VGS_SAVE_GAME_FILE_ID))
-    {
-        ff7->SG_SIZE          = FF7_VGS_SAVE_GAME_SIZE;
-        ff7->SG_HEADER        = FF7_VGS_SAVE_GAME_HEADER;
-        ff7->SG_FOOTER        = FF7_VGS_SAVE_GAME_FOOTER;
-        ff7->SG_DATA_SIZE     = FF7_VGS_SAVE_GAME_DATA_SIZE;
-        ff7->SG_SLOT_HEADER   = FF7_VGS_SAVE_GAME_SLOT_HEADER;
-        ff7->SG_SLOT_FOOTER   = FF7_VGS_SAVE_GAME_SLOT_FOOTER;
-        ff7->SG_SLOT_SIZE     = FF7_VGS_SAVE_GAME_SLOT_SIZE;
-        ff7->SG_SLOT_NUMBER   = FF7_VGS_SAVE_GAME_SLOT_NUMBER;
-        ff7->SG_TYPE          = "VGS";
-        ff7->file_headerp     = ff7->file_header_vgs;          //pointer to vgs file header
-        ff7->file_footerp     = ff7->file_footer_vgs;          //pointer to vgs file footer
-    }
-    else if((file_size ==FF7_DEX_SAVE_GAME_SIZE) && ff7file.startsWith(DEX_SAVE_GAME_FILE_ID))
-    {
-        ff7->SG_SIZE          = FF7_DEX_SAVE_GAME_SIZE;
-        ff7->SG_HEADER        = FF7_DEX_SAVE_GAME_HEADER;
-        ff7->SG_FOOTER        = FF7_DEX_SAVE_GAME_FOOTER;
-        ff7->SG_DATA_SIZE     = FF7_DEX_SAVE_GAME_DATA_SIZE;
-        ff7->SG_SLOT_HEADER   = FF7_DEX_SAVE_GAME_SLOT_HEADER;
-        ff7->SG_SLOT_FOOTER   = FF7_DEX_SAVE_GAME_SLOT_FOOTER;
-        ff7->SG_SLOT_SIZE     = FF7_DEX_SAVE_GAME_SLOT_SIZE;
-        ff7->SG_SLOT_NUMBER   = FF7_DEX_SAVE_GAME_SLOT_NUMBER;
-        ff7->SG_TYPE          = "DEX";
-        ff7->file_headerp     = ff7->file_header_dex;          //pointer to dex file header
-        ff7->file_footerp     = ff7->file_footer_dex;          //pointer to dex file footer
-    }
-    else
-    {
-        QMessageBox::warning(this, tr("Unknown Filetype"),
-        tr("File: %1 \nis not a FF7 SaveGame.")
-        .arg(fileName));
-        return;
-    }
-    filename=fileName;
-    /*~~~~~~~~~~Start Load~~~~~~~~~~*/
-    memcpy(ff7->file_headerp,ff7file.mid(0x0000,ff7->SG_HEADER),ff7->SG_HEADER);// collect header (0x09) bytes (PC), (0x00) bytes (PSX), (0x2000) bytes (MC)
-    for (int i=0;i<ff7->SG_SLOT_NUMBER;i++)
-    {
-        int index = (ff7->SG_SLOT_SIZE*i) + ff7->SG_HEADER + ff7->SG_SLOT_HEADER;
-        memcpy(ff7->hf[i].sl_header,ff7file.mid((ff7->SG_SLOT_SIZE*i) + (ff7->SG_HEADER + 0x0000),ff7->SG_SLOT_HEADER),ff7->SG_SLOT_HEADER);// collect slot header (0x00) bytes (PC), (0x0200) bytes (PSX), (0x0200) bytes (MC)
-        temp = ff7file.mid(index,0x10f4);
-        memcpy(&ff7->slot[i],temp,0x10f4);
-        memcpy(ff7->hf[i].sl_footer,ff7file.mid((ff7->SG_SLOT_SIZE*i)+ (ff7->SG_HEADER+ff7->SG_SLOT_HEADER+ff7->SG_DATA_SIZE),ff7->SG_SLOT_FOOTER),ff7->SG_SLOT_FOOTER);// collect slot footer (0x00) bytes (PC), (0x0D0C) bytes (PSX), (0x0D0C) bytes (MC)
-    }
-    /*~~~~~~~End Load~~~~~~~~~~~~~~*/
-    _init=false;//we have now loaded a file
-    ui->lbl_fileName->setText(fileName); //set filename then type specific actions.
-    //Call guirefresh when not using slot select dialog.
-    if (ff7->SG_TYPE == "PC")
-    {
-        if(ff7->slot[0].checksum != 0x0000 && ff7->slot[0].checksum != 0x4D1D){ff7->SG_Region_String[0]= "BASCUS-94163FF7-S01";} else {ff7->SG_Region_String[0].clear();}
-        if(ff7->slot[1].checksum != 0x0000 && ff7->slot[1].checksum != 0x4D1D){ff7->SG_Region_String[1]= "BASCUS-94163FF7-S02";} else {ff7->SG_Region_String[1].clear();}
-        if(ff7->slot[2].checksum != 0x0000 && ff7->slot[2].checksum != 0x4D1D){ff7->SG_Region_String[2]= "BASCUS-94163FF7-S03";} else {ff7->SG_Region_String[2].clear();}
-        if(ff7->slot[3].checksum != 0x0000 && ff7->slot[3].checksum != 0x4D1D){ff7->SG_Region_String[3]= "BASCUS-94163FF7-S04";} else {ff7->SG_Region_String[3].clear();}
-        if(ff7->slot[4].checksum != 0x0000 && ff7->slot[4].checksum != 0x4D1D){ff7->SG_Region_String[4]= "BASCUS-94163FF7-S05";} else {ff7->SG_Region_String[4].clear();}
-        if(ff7->slot[5].checksum != 0x0000 && ff7->slot[5].checksum != 0x4D1D){ff7->SG_Region_String[5]= "BASCUS-94163FF7-S06";} else {ff7->SG_Region_String[5].clear();}
-        if(ff7->slot[6].checksum != 0x0000 && ff7->slot[6].checksum != 0x4D1D){ff7->SG_Region_String[6]= "BASCUS-94163FF7-S07";} else {ff7->SG_Region_String[6].clear();}
-        if(ff7->slot[7].checksum != 0x0000 && ff7->slot[7].checksum != 0x4D1D){ff7->SG_Region_String[7]= "BASCUS-94163FF7-S08";} else {ff7->SG_Region_String[7].clear();}
-        if(ff7->slot[8].checksum != 0x0000 && ff7->slot[8].checksum != 0x4D1D){ff7->SG_Region_String[8]= "BASCUS-94163FF7-S09";} else {ff7->SG_Region_String[8].clear();}
-        if(ff7->slot[9].checksum != 0x0000 && ff7->slot[9].checksum != 0x4D1D){ff7->SG_Region_String[9]= "BASCUS-94163FF7-S10";} else {ff7->SG_Region_String[9].clear();}
-        if(ff7->slot[10].checksum != 0x0000 && ff7->slot[10].checksum != 0x4D1D){ff7->SG_Region_String[10]= "BASCUS-94163FF7-S11";} else {ff7->SG_Region_String[10].clear();}
-        if(ff7->slot[11].checksum != 0x0000 && ff7->slot[11].checksum != 0x4D1D){ff7->SG_Region_String[11]= "BASCUS-94163FF7-S12";} else {ff7->SG_Region_String[11].clear();}
-        if(ff7->slot[12].checksum != 0x0000 && ff7->slot[12].checksum != 0x4D1D){ff7->SG_Region_String[12]= "BASCUS-94163FF7-S13";} else {ff7->SG_Region_String[12].clear();}
-        if(ff7->slot[13].checksum != 0x0000 && ff7->slot[13].checksum != 0x4D1D){ff7->SG_Region_String[13]= "BASCUS-94163FF7-S14";} else {ff7->SG_Region_String[13].clear();}
-        if(ff7->slot[14].checksum != 0x0000 && ff7->slot[14].checksum != 0x4D1D){ff7->SG_Region_String[14]= "BASCUS-94163FF7-S15";} else {ff7->SG_Region_String[14].clear();}
-        if(reload){guirefresh(0);}   else{on_actionShow_Selection_Dialog_activated();}
-    }
+    if (ff7->type() == "PC"){if(reload){guirefresh(0);}else{on_actionShow_Selection_Dialog_activated();}}
 
-    else if (ff7->SG_TYPE == "PSX")
-    {
-        s=0;
-        if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
-           (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")) ||
-           (fileName.contains("00868")) )
-        {
-            QString string;
-            string = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
-            ff7->SG_Region_String[s]= string.mid(string.lastIndexOf("BA")-1,string.lastIndexOf("FF7-S")+8);
-        }
-        else {ff7->SG_Region_String[s].clear();}
-        for(int i=1;i<14;i++){clearslot(i);}
-        guirefresh(0);
-    }
+    else if (ff7->type() == "PSX" || ff7->type() =="PSV"){s=0;guirefresh(0);}
 
-    else if (ff7->SG_TYPE =="PSV")
-    {
-        s=0;
-        ff7->SG_Region_String[s] = QString(ff7file.mid(0x64,19));
-        for(int i=1;i<14;i++){clearslot(i);}
-        guirefresh(0);
-    }
+    else if (ff7->type() == "MC" || ff7->type() =="PSP" || ff7->type() == "VGS" ||ff7->type()=="DEX")
+        {if(reload){guirefresh(0);}   else{on_actionShow_Selection_Dialog_activated();}}
 
-    else if (ff7->SG_TYPE == "MC" || ff7->SG_TYPE =="PSP" || ff7->SG_TYPE == "VGS" ||ff7->SG_TYPE=="DEX")
-    {
-        QByteArray mc_header;
-        int offset = 0;//raw psx card types
-        if(ff7->SG_TYPE =="PSP"){offset = 0x80;}
-        if(ff7->SG_TYPE =="VGS"){offset = 0x40;}
-        if(ff7->SG_TYPE =="DEX"){offset = 0xF40;}
-        mc_header = ff7file.mid(offset,ff7->SG_HEADER);
-        int index=0;
-        for(int i=0; i<15;i++)
-        {
-            index = (128*i) +138;
-            ff7->SG_Region_String[i] = QString(mc_header.mid(index,19));
-        }
-        if(reload){guirefresh(0);}   else{on_actionShow_Selection_Dialog_activated();}
-    }
     else{/*UNKNOWN FILETYPE*/}
-    file_changed=false;
 }
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionFrom_PSX_Slot_activated()
@@ -654,22 +483,16 @@ void MainWindow::on_action_Save_activated()
 
     if(!filename.isEmpty())
     {
-        if(ff7->SG_TYPE=="PC"){fix_pc_bytemask(ff7,s,skip_slot_mask);}
-        else if(ff7->SG_TYPE=="PSX"){fix_psx_header(ff7,s);}
-
-        else if(ff7->SG_TYPE=="MC" || ff7->SG_TYPE=="PSP" || ff7->SG_TYPE=="VGS" || ff7->SG_TYPE =="DEX")
+        if(ff7->type()=="PSP")
         {
-            fix_vmc_header(ff7);
-            if(ff7->SG_TYPE=="PSP"){QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PSP."));}
+            if(ff7->type()=="PSP"){QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PSP."));}
         }
 
-        else if(ff7->SG_TYPE=="PSV")
+        else if(ff7->type()=="PSV")
         {
-            /*FIX CHECKSUM FIRST!*/
             QMessageBox::information(this,tr("PSV Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PS3."));
         }
-        else {QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot save This Type of File"));return;}
-        saveFileFull(filename);
+        ff7->SaveFile(filename);
     }
     else{on_actionSave_File_As_activated();return;}//there is no filename we should get one from save as..
 }
@@ -677,57 +500,50 @@ void MainWindow::on_action_Save_activated()
 void MainWindow::on_actionSave_File_As_activated()
 {QString fileName;
 // check for the type of save loaded and set the output type so we don't save the wrong type, all conversion opperations should be done via an Export function.
-    if(ff7->SG_TYPE == "PC")
+    if(ff7->type() == "PC")
     {
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 PC SaveGame"), settings->value("save_pc_path").toString(),
         tr("FF7 PC SaveGame(*.ff7)"));
-        fix_pc_bytemask(ff7,s,skip_slot_mask);// adjust the bytemask so the correct slots are shown
     }
-    else if(ff7->SG_TYPE == "PSX")
+    else if(ff7->type() == "PSX")
     {
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 PSX SaveGame"), QDir::homePath(),
         tr("FF7 Raw PSX SaveGame(*-S*)"));
-        fix_psx_header(ff7,s);
     }
-    else if(ff7->SG_TYPE == "MC")
+    else if(ff7->type() == "MC")
     {
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 MC SaveGame"), settings->value("save_emu_path").toString(),
         tr("FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)"));
-        fix_vmc_header(ff7);
-
     }
-    else if(ff7->SG_TYPE == "PSV")
+    else if(ff7->type() == "PSV")
     {
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 PSV SaveGame"), QDir::homePath(),
         tr("FF7 PSV SaveGame(*.psv)"));
         QMessageBox::information(this,tr("PSV Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PS3."));
     }
-    else if(ff7->SG_TYPE == "PSP")
+    else if(ff7->type() == "PSP")
     {
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7  PSP SaveGame"), QDir::homePath(),
         tr("FF7 PSP SaveGame(*.vmp)"));
-        fix_vmc_header(ff7);
         QMessageBox::information(this,tr("PSP Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PSP."));
-
     }
-    else if(ff7->SG_TYPE == "VGS")
+    else if(ff7->type() == "VGS")
     {
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7  VGS SaveGame"), settings->value("save_emu_path").toString(),
         tr("FF7 VGS SaveGame(*.vgs *.mem)"));
-        fix_vmc_header(ff7);
     }
-    else if(ff7->SG_TYPE == "DEX")
+    else if(ff7->type() == "DEX")
     {
         fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7  Dex-Drive SaveGame"), settings->value("save_emu_path").toString(),
         tr("FF7 Dex SaveGame(*.gme)"));
-        fix_vmc_header(ff7);
+
     }
     else
     {//mystery type. make the user tell us user maybe used new game or made save manually.
@@ -735,13 +551,13 @@ void MainWindow::on_actionSave_File_As_activated()
         types << tr("PC")<<tr("Raw Psx Save")<<tr("Generic Emulator Memorycard")<<tr("PSP")<<tr("PS3")<<tr("Dex Drive Memorycard")<<tr("VGS Memorycard");
         QString result = QInputDialog::getItem(this,tr("Save Error"),tr("Please Select A File Type To Save"),types,-1,0,0,0);
         //check the string. and assign a type
-        if(result ==types.at(0)){ff7->SG_TYPE = "PC";}
-            else if(result ==types.at(1)){ff7->SG_TYPE = "PSX";}
-            else if(result ==types.at(2)){ff7->SG_TYPE = "MC";}
-            else if(result ==types.at(3)){ff7->SG_TYPE = "PSP";}
-            else if(result ==types.at(4)){ff7->SG_TYPE = "PSV";}
-            else if(result ==types.at(5)){ff7->SG_TYPE = "DEX";}
-            else if(result ==types.at(6)){ff7->SG_TYPE = "VGS";}
+        if(result ==types.at(0)){ff7->setType("PC");}
+        else if(result ==types.at(1)){ff7->setType("PSX");}
+        else if(result ==types.at(2)){ff7->setType("MC");}
+        else if(result ==types.at(3)){ff7->setType("PSP");}
+        else if(result ==types.at(4)){ff7->setType("PSV");}
+        else if(result ==types.at(5)){ff7->setType("DEX");}
+        else if(result ==types.at(6)){ff7->setType("VGS");}
             else{return;}
             on_actionSave_File_As_activated(); //now that we have a type do again.
     }
@@ -753,27 +569,7 @@ void MainWindow::on_actionSave_File_As_activated()
 /*~~~~~~~~~~~SHORT SAVE~~~~~~~~~~~~*/
 void MainWindow::saveFileFull(QString fileName)
 {
-    QFile file(fileName);
-    if(!file.open(QFile::ReadWrite))
-    {
-        QMessageBox::warning(this, tr("Black Chocobo"),
-        tr("Cannot write file %1:\n%2.")
-            .arg(fileName)
-            .arg(file.errorString()));
-        return;
-    }
-    FILE *pfile;
-    pfile = fopen(fileName.toAscii(),"wb");
-    fwrite(ff7->file_headerp,ff7->SG_HEADER,1,pfile);
-    for(int si=0;si<ff7->SG_SLOT_NUMBER;si++)
-    {
-        fwrite(ff7->hf[si].sl_header,ff7->SG_SLOT_HEADER,1,pfile);
-        fwrite(&ff7->slot[si],ff7->SG_DATA_SIZE,1,pfile);
-        fwrite(ff7->hf[si].sl_footer,ff7->SG_SLOT_FOOTER,1,pfile);
-    }
-    fwrite(ff7->file_footerp,ff7->SG_FOOTER,1,pfile);
-    fclose(pfile);
-    fix_sum(fileName);
+ ff7->SaveFile(fileName);
     file_changed=false;
     if(_init)
     {//if no save was loaded and new game was clicked be sure to act like a game was loaded.
@@ -783,39 +579,6 @@ void MainWindow::saveFileFull(QString fileName)
         guirefresh(0);
     }
 }
-
-/*~~~~~~~~~~~ START CHECKSUM VEGETA~~~~~~~~~~~*/
-void MainWindow::fix_sum(const QString &fileName)
-{
-    void * memory;
-    QFile file(fileName);
-    if (!file.open(QFile::ReadWrite )){return;}
-    QDataStream out (&file);
-    out.setByteOrder(QDataStream::LittleEndian);
-    file.seek(0);//Set pointer to the Beggining
-    QByteArray ff7savefile;
-    ff7savefile = file.readAll(); //put all data in temp raw file
-    memory = (void*) malloc(ff7->SG_SIZE);//Memory Allocation
-    if (!memory){return;}
-    file.seek(0);
-    memcpy(memory,ff7savefile.mid(0x00000,ff7->SG_SIZE),ff7->SG_SIZE);
-    //Do checksum foreach slot
-    for(int i=0, checksum=0; i<ff7->SG_SLOT_NUMBER; i++)
-    {
-        char * data_pointer = ((char*)memory + ff7->SG_HEADER + ff7->SG_SLOT_SIZE*i + ff7->SG_SLOT_HEADER + 0x04);
-        checksum = ff7__checksum(data_pointer); //2 Bytes checksum (a 16-bit Byte checksum)
-        if(checksum != 0x4D1D) //if is a blank slot don't write checksum!
-        {
-            int index = ff7->SG_HEADER + ff7->SG_SLOT_SIZE*i + ff7->SG_SLOT_HEADER;
-            file.seek(index);
-            out << checksum;
-        }
-    }
-    file.close();
-    free(memory);
-}
-/*~~~~~~~~~~~~ END CHECKSUM VEGETA~~~~~~~~~~~*/
-/*~~~~~~~~END SHORT SAVE~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~New_Game~~~~~~~~~~~*/
 void MainWindow::on_actionNew_Game_triggered()
 {
@@ -891,7 +654,7 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
             {
                     fileName.append(filename);
                     fileName.append("-cait_sith");
-                    if(ff7->SG_TYPE != "PSX" || ff7->SG_TYPE != "PSV")
+                    if(ff7->type() != "PSX" || ff7->type() != "PSV")
                     {
                         fileName.append("-");
                         QString str;
@@ -903,7 +666,7 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
                 {
                     fileName.append(filename);
                     fileName.append("-vincent");
-                    if(ff7->SG_TYPE != "PSX" || ff7->SG_TYPE != "PSV")
+                    if(ff7->type() != "PSX" || ff7->type() != "PSV")
                     {
                         fileName.append("-");
                         QString str;
@@ -962,59 +725,7 @@ void MainWindow::on_actionExport_PC_Save_activated()
     tr("Save Final Fantasy 7 SaveGame"),  settings->value("export_pc").toString() ,
     tr("FF7 SaveGame(*.ff7)")); // Only Allow PC save Since we are going to make one
     if (fileName.isEmpty()){return;}// catch if Cancel is pressed
-    if(ff7->SG_TYPE !="PC")
-    {
-        ui->combo_control->setCurrentIndex(0); // if not pc then chance of breaking controls.
-        // no need to change if its pc already.
-        ff7->SG_SIZE          = FF7_PC_SAVE_GAME_SIZE;
-        ff7->SG_HEADER        = FF7_PC_SAVE_GAME_HEADER;
-        ff7->SG_FOOTER        = FF7_PC_SAVE_GAME_FOOTER;
-        ff7->SG_DATA_SIZE     = FF7_PC_SAVE_GAME_DATA_SIZE;
-        ff7->SG_SLOT_HEADER   = FF7_PC_SAVE_GAME_SLOT_HEADER;
-        ff7->SG_SLOT_FOOTER   = FF7_PC_SAVE_GAME_SLOT_FOOTER;
-        ff7->SG_SLOT_SIZE     = FF7_PC_SAVE_GAME_SLOT_SIZE;
-        ff7->SG_SLOT_NUMBER   = FF7_PC_SAVE_GAME_SLOT_NUMBER;
-        ff7->SG_TYPE          = "PC";
-        ff7->file_headerp     = ff7->file_header_pc;           //pointer to pc file header
-        ff7->file_footerp     = ff7->file_footer_pc;           //pointer to pc file footer
-        // Add File Header
-        for(int i=0;i<9;i++){ff7->file_header_pc[i]= PC_SAVE_GAME_FILE_HEADER[i];}
-    }
-    fix_pc_bytemask(ff7,s,skip_slot_mask);
-    int result=0;
-    for(int si=0;si<15;si++)//clean up non ff7 saves and fix time for Pal Saves.
-    {
-        if (ff7->SG_Region_String[si].contains("94163") || ff7->SG_Region_String[si].contains("00700") || ff7->SG_Region_String[si].contains("01057")){/*FF7File AND NTSC*/}
-        else if(ff7->SG_Region_String[si].contains("00867") || ff7->SG_Region_String[si].contains("00868")|| ff7->SG_Region_String[si].contains("00869") || ff7->SG_Region_String[si].contains("00900"))
-        {/*PAL, Correct Time?*/
-            if((result==QMessageBox::YesToAll) || (result==QMessageBox::NoToAll)){/*Already Chosen Yes/No to all*/}
-            else
-            {//Show the Dialog
-                QMessageBox fixtime(this);
-                fixtime.setIconPixmap(QPixmap(":/icon/fix_time"));
-                fixtime.setText(tr("Slot:%1 Contains A PAL region save").arg(QString::number(si+1)));
-                fixtime.setInformativeText(tr("PAL PSX runs at 50/60 speed\nThis results in an incorrect playtime\nWould you like to correct the playtime?"));
-                fixtime.setWindowTitle(tr("PAL Slot Detected"));
-                fixtime.addButton(QMessageBox::Yes);
-                fixtime.addButton(QMessageBox::YesToAll);
-                fixtime.addButton(QMessageBox::No);
-                fixtime.addButton(QMessageBox::NoToAll);
-                fixtime.setButtonText( QMessageBox::YesToAll,tr("Always Correct"));
-                fixtime.setButtonText( QMessageBox::NoToAll,tr("Never Correct"));
-                fixtime.setDefaultButton(QMessageBox::YesToAll);
-                result=fixtime.exec();
-            }
-            switch(result)
-            {
-            case QMessageBox::No:break;
-            case QMessageBox::NoToAll:break;
-            default:ff7->slot[si].time = (ff7->slot[si].time*1.2); ff7->slot[si].desc.time = ff7->slot[si].time;break;
-            }
-        }
-
-        else{clearslot(si);}
-    }
-    saveFileFull(fileName);
+    else{ff7->Export_PC(fileName);}
 }
 /*~~~~~~~~~~~~~~~~~EXPORT PSX~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionExport_PSX_activated()
@@ -1022,40 +733,8 @@ void MainWindow::on_actionExport_PSX_activated()
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 SaveGame"), ff7->SG_Region_String[s],
     tr("BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)"));
-    if(ff7->SG_TYPE != "PSX")
-    {
-        ui->combo_control->setCurrentIndex(0);
-
-        ff7->SG_SIZE          = FF7_PSX_SAVE_GAME_SIZE;
-        ff7->SG_HEADER        = FF7_PSX_SAVE_GAME_HEADER;
-        ff7->SG_FOOTER        = FF7_PSX_SAVE_GAME_FOOTER;
-        ff7->SG_DATA_SIZE     = FF7_PSX_SAVE_GAME_DATA_SIZE;
-        ff7->SG_SLOT_HEADER   = FF7_PSX_SAVE_GAME_SLOT_HEADER;
-        ff7->SG_SLOT_FOOTER   = FF7_PSX_SAVE_GAME_SLOT_FOOTER;
-        ff7->SG_SLOT_SIZE     = FF7_PSX_SAVE_GAME_SLOT_SIZE;
-        ff7->SG_SLOT_NUMBER   = FF7_PSX_SAVE_GAME_SLOT_NUMBER;
-        ff7->SG_TYPE          = "PSX";
-        ff7->file_headerp     = ff7->file_header_psx;           //pointer to psx file header
-        ff7->file_footerp     = ff7->file_footer_psx;           //pointer to psx file footer
-    }
-    if(fileName.endsWith("S01")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S01[i];}}
-    else if(fileName.endsWith("S02")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S02[i];}}
-    else if(fileName.endsWith("S03")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S03[i];}}
-    else if(fileName.endsWith("S04")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S04[i];}}
-    else if(fileName.endsWith("S05")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S05[i];}}
-    else if(fileName.endsWith("S06")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S06[i];}}
-    else if(fileName.endsWith("S07")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S07[i];}}
-    else if(fileName.endsWith("S08")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S08[i];}}
-    else if(fileName.endsWith("S09")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S09[i];}}
-    else if(fileName.endsWith("S10")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S10[i];}}
-    else if(fileName.endsWith("S11")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S11[i];}}
-    else if(fileName.endsWith("S12")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S12[i];}}
-    else if(fileName.endsWith("S13")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S13[i];}}
-    else if(fileName.endsWith("S14")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S14[i];}}
-    else if(fileName.endsWith("S15")){for(int i=0;i<256;i++){ff7->hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S15[i];}}
-    else{QMessageBox::information(this,tr("Bad Psx Save Name"), tr("Can't Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if < 10) A Header for that slot number will be written to the save"));return;}
-    fix_psx_header(ff7,0);
-    saveFileFull(fileName);
+    if (fileName.isEmpty()){return;}// catch if Cancel is pressed
+    else{ff7->Export_PSX(fileName);}
 }
 /*~~~~~Export Mcr/Mcd~~~~~~*/
 void MainWindow::on_actionExport_MC_triggered()
@@ -1064,60 +743,16 @@ void MainWindow::on_actionExport_MC_triggered()
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 MC SaveGame"), settings->value("save_emu_path").toString(),
     tr("FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)"));
-
-        if(fileName.isEmpty()){return;}
-    if(ff7->SG_TYPE != "MC")
-    {
-        ui->combo_control->setCurrentIndex(0);
-
-        ff7->SG_SIZE          = FF7_MC_SAVE_GAME_SIZE;
-        ff7->SG_HEADER        = FF7_MC_SAVE_GAME_HEADER;
-        ff7->SG_FOOTER        = FF7_MC_SAVE_GAME_FOOTER;
-        ff7->SG_DATA_SIZE     = FF7_MC_SAVE_GAME_DATA_SIZE;
-        ff7->SG_SLOT_HEADER   = FF7_MC_SAVE_GAME_SLOT_HEADER;
-        ff7->SG_SLOT_FOOTER   = FF7_MC_SAVE_GAME_SLOT_FOOTER;
-        ff7->SG_SLOT_SIZE     = FF7_MC_SAVE_GAME_SLOT_SIZE;
-        ff7->SG_SLOT_NUMBER   = FF7_MC_SAVE_GAME_SLOT_NUMBER;
-        ff7->SG_TYPE          = "MC";
-        ff7->file_headerp     = ff7->file_header_mc;           //pointer to mc file header
-        ff7->file_footerp     = ff7->file_footer_mc;           //pointer to mc file footer
-    }
-    fix_vmc_header(ff7);
-    saveFileFull(fileName);
+    if(fileName.isEmpty()){return;}
+    else{ff7->Export_VMC(fileName);}
 }
 void MainWindow::on_actionExport_VGS_triggered()
 {
-
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 VGS SaveGame"), settings->value("save_emu_path").toString(),
     tr("FF7 VGS SaveGame(*.vgs *.mem)"));
     if(fileName.isEmpty()){return;}
-    if(ff7->SG_TYPE != "VGS")
-    {
-        ui->combo_control->setCurrentIndex(0);
-
-        ff7->SG_SIZE          = FF7_VGS_SAVE_GAME_SIZE;
-        ff7->SG_HEADER        = FF7_VGS_SAVE_GAME_HEADER;
-        ff7->SG_FOOTER        = FF7_VGS_SAVE_GAME_FOOTER;
-        ff7->SG_DATA_SIZE     = FF7_VGS_SAVE_GAME_DATA_SIZE;
-        ff7->SG_SLOT_HEADER   = FF7_VGS_SAVE_GAME_SLOT_HEADER;
-        ff7->SG_SLOT_FOOTER   = FF7_VGS_SAVE_GAME_SLOT_FOOTER;
-        ff7->SG_SLOT_SIZE     = FF7_VGS_SAVE_GAME_SLOT_SIZE;
-        ff7->SG_SLOT_NUMBER   = FF7_VGS_SAVE_GAME_SLOT_NUMBER;
-        ff7->SG_TYPE          = "VGS";
-        ff7->file_headerp     = ff7->file_header_vgs;           //pointer to mc file header
-        ff7->file_footerp     = ff7->file_footer_vgs;           //pointer to mc file footer
-        // Fill the Header With The Needed Default
-        ff7->file_header_vgs[0] =0x56;
-        ff7->file_header_vgs[1] =0x67;
-        ff7->file_header_vgs[2] =0x73;
-        ff7->file_header_vgs[3] =0x4D;
-        ff7->file_header_vgs[4] =0x01;
-        ff7->file_header_vgs[8] =0x01;
-        ff7->file_header_vgs[12] =0x01;
-    }
-    fix_vmc_header(ff7);
-    saveFileFull(fileName);
+    else{ff7->Export_VGS(fileName);}
 }
 void MainWindow::on_actionExport_DEX_triggered()
 {
@@ -1125,42 +760,7 @@ void MainWindow::on_actionExport_DEX_triggered()
     QString fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 Dex-Drive SaveGame"), settings->value("save_emu_path").toString(),tr("FF7 Dex SaveGame(*.gme)"));
     if(fileName.isEmpty()){return;}
-    if(ff7->SG_TYPE != "DEX")
-    {
-        ui->combo_control->setCurrentIndex(0);
-
-        ff7->SG_SIZE          = FF7_DEX_SAVE_GAME_SIZE;
-        ff7->SG_HEADER        = FF7_DEX_SAVE_GAME_HEADER;
-        ff7->SG_FOOTER        = FF7_DEX_SAVE_GAME_FOOTER;
-        ff7->SG_DATA_SIZE     = FF7_DEX_SAVE_GAME_DATA_SIZE;
-        ff7->SG_SLOT_HEADER   = FF7_DEX_SAVE_GAME_SLOT_HEADER;
-        ff7->SG_SLOT_FOOTER   = FF7_DEX_SAVE_GAME_SLOT_FOOTER;
-        ff7->SG_SLOT_SIZE     = FF7_DEX_SAVE_GAME_SLOT_SIZE;
-        ff7->SG_SLOT_NUMBER   = FF7_DEX_SAVE_GAME_SLOT_NUMBER;
-        ff7->SG_TYPE          = "DEX";
-        ff7->file_headerp     = ff7->file_header_dex;           //pointer to mc file header
-        ff7->file_footerp     = ff7->file_footer_dex;           //pointer to mc file footer
-        //default header..
-        ff7->file_header_dex[0]=0x31;
-        ff7->file_header_dex[1]=0x32;
-        ff7->file_header_dex[2]=0x33;
-        ff7->file_header_dex[3]=0x2D;
-        ff7->file_header_dex[4]=0x34;
-        ff7->file_header_dex[5]=0x35;
-        ff7->file_header_dex[6]=0x36;
-        ff7->file_header_dex[7]=0x2D;
-        ff7->file_header_dex[8]=0x53;
-        ff7->file_header_dex[9]=0x54;
-        ff7->file_header_dex[10]=0x44;
-        ff7->file_header_dex[18]=0x01;
-        ff7->file_header_dex[20]=0x01;
-        ff7->file_header_dex[21]=0x4D;
-        ff7->file_header_dex[22]=0x51;
-        for(int i=0x17;i<0x25;i++){ff7->file_header_dex[i]=0xA0;}
-        ff7->file_header_dex[38]=0xFF;
-    }
-    fix_vmc_header(ff7);
-    saveFileFull(fileName);
+    else{ff7->Export_DEX(fileName);}
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -1181,11 +781,11 @@ void MainWindow::on_actionSlot_12_activated(){s=11; guirefresh(0);}
 void MainWindow::on_actionSlot_13_activated(){s=12; guirefresh(0);}
 void MainWindow::on_actionSlot_14_activated(){s=13; guirefresh(0);}
 void MainWindow::on_actionSlot_15_activated(){s=14; guirefresh(0);}
-void MainWindow::on_actionClear_Slot_activated(){clearslot(s);  guirefresh(0);}
+void MainWindow::on_actionClear_Slot_activated(){ff7->clearslot(s);  guirefresh(0);}
 
 void MainWindow::on_actionShow_Selection_Dialog_activated(){SlotSelect slotselect(0,ff7);slotselect.setStyleSheet(this->styleSheet());s=slotselect.exec();guirefresh(0);}
-void MainWindow::on_actionPrevious_Slot_activated(){if(ff7->SG_TYPE==""){return;}else{if (s > 0) {s--; guirefresh(0);}}}
-void MainWindow::on_actionNext_Slot_activated(){if(ff7->SG_TYPE==""){return;}else{if (s<14){s++; guirefresh(0);}}}
+void MainWindow::on_actionPrevious_Slot_activated(){if(ff7->type()==""){return;}else{if (s > 0) {s--; guirefresh(0);}}}
+void MainWindow::on_actionNext_Slot_activated(){if(ff7->type()==""){return;}else{if (s<14){s++; guirefresh(0);}}}
 void MainWindow::on_actionAbout_activated(){about adialog;  adialog.setStyleSheet(this->styleSheet()); adialog.exec();}
 void MainWindow::on_actionCopy_Slot_activated(){memcpy(&bufferslot,&ff7->slot[s],0x10f4); buffer_region = ff7->SG_Region_String[s];}
 void MainWindow::on_actionPaste_Slot_activated()
@@ -1261,7 +861,7 @@ void MainWindow::on_action_show_debug_toggled(bool checked)
         ui->combo_id->setVisible(true);
         ui->lbl_id->setVisible(true);
         ui->bm_unknown->setVisible(true);
-        if(ff7->SG_TYPE == "PC"){ui->group_controller_mapping->setVisible(true);}
+        if(ff7->type() == "PC"){ui->group_controller_mapping->setVisible(true);}
         settings->setValue("show_test",1);
         ui->action_show_debug->setIcon(QIcon(":/icon/debug_sel"));
         ui->cb_farm_items_1->setVisible(true);
@@ -1291,7 +891,7 @@ void MainWindow::on_action_show_debug_toggled(bool checked)
         ui->combo_id->setVisible(false);
         ui->lbl_id->setVisible(false);
         ui->bm_unknown->setVisible(false);
-        if(ff7->SG_TYPE =="PC"){ui->group_controller_mapping->setVisible(false);}
+        if(ff7->type() =="PC"){ui->group_controller_mapping->setVisible(false);}
         settings->setValue("show_test",0);
         ui->action_show_debug->setIcon(QIcon(":/icon/debug_unsel"));
         ui->cb_farm_items_1->setVisible(false);
@@ -2046,7 +1646,7 @@ void MainWindow::update_stat_totals(void)
 
             if(ff7->slot[s].chars[curchar].materias[i].id == 0x03)
             {//Catch Magic Plus
-                int level=0;
+                int level=1;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
                 for(int m=0; m<Materias.Levels(3);m++){if(aptemp >= Materias.Ap(3,m)){level++;}}
                 magbonus += ff7->slot[s].chars[curchar].magic * (0.01*(level*10));
@@ -2057,7 +1657,7 @@ void MainWindow::update_stat_totals(void)
 
             if(ff7->slot[s].chars[curchar].materias[i].id == 0x02)
             {//Catch Speed Plus
-                int level=0;
+                int level=1;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
                 for(int m=0; m<Materias.Levels(2);m++){if(aptemp >= Materias.Ap(2,m)){level++;}}
                 dexbonus += ff7->slot[s].chars[curchar].dexterity * (0.01*(level*10));
@@ -2066,7 +1666,7 @@ void MainWindow::update_stat_totals(void)
 
             if(ff7->slot[s].chars[curchar].materias[i].id == 0x04)
             {//Catch Luck Plus
-                int level=0;
+                int level=1;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
                 for(int m=0; m<Materias.Levels(4);m++){if(aptemp >= Materias.Ap(4,m)){level++;}}
                 lckbonus += ff7->slot[s].chars[curchar].magic * (0.01*(level*10));
@@ -2075,7 +1675,7 @@ void MainWindow::update_stat_totals(void)
 
             if(ff7->slot[s].chars[curchar].materias[i].id == 0x01)
             {//Catch HP Plus
-                int level=0;
+                int level=1;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
                 for(int m=0; m<Materias.Levels(1);m++){if(aptemp >= Materias.Ap(1,m)){level++;}}
                 hpbonus +=level*10;
@@ -2084,7 +1684,7 @@ void MainWindow::update_stat_totals(void)
 
             if(ff7->slot[s].chars[curchar].materias[i].id ==0x00)
             {//Catch Mp Plus
-                int level=0;
+                int level=1;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
                 for(int m=0; m<Materias.Levels(0);m++){if(aptemp >= Materias.Ap(0,m)){level++;}}
                 mpbonus +=level*10;
@@ -2604,7 +2204,7 @@ void MainWindow::setmenu(bool newgame)
         ui->actionFrom_PSX_Slot->setEnabled(1); ui->actionCopy_Slot->setEnabled(1);
         ui->actionPaste_Slot->setEnabled(1);
     }
-    if (ff7->SG_TYPE!= "PSX" && ff7->SG_TYPE !="PSV" && (!_init)) //more then one slot
+    if (ff7->type()!= "PSX" && ff7->type() !="PSV" && (!_init)) //more then one slot
     {
         ui->actionSlot_01->setEnabled(1);   ui->actionNext_Slot->setEnabled(1);
         ui->actionSlot_02->setEnabled(1);   ui->actionPrevious_Slot->setEnabled(1);
@@ -3101,9 +2701,9 @@ void MainWindow::guirefresh(bool newgame)
 {
     load=true;
     int reserve_start=128+(128*s);
-    if (ff7->SG_TYPE =="PSP"){reserve_start+=0x80;}
-    else if (ff7->SG_TYPE =="VGS"){reserve_start+=0x40;}
-    else if (ff7->SG_TYPE =="DEX"){reserve_start+=0xF40;}
+    if (ff7->type() =="PSP"){reserve_start+=0x80;}
+    else if (ff7->type() =="VGS"){reserve_start+=0x40;}
+    else if (ff7->type() =="DEX"){reserve_start+=0xF40;}
     else {}
 
     /*~~~~Check for SG type and ff7~~~~*/
@@ -3146,7 +2746,7 @@ void MainWindow::guirefresh(bool newgame)
             !ff7->SG_Region_String[s].contains("00900") && !ff7->SG_Region_String[s].contains("94163") &&
             !ff7->SG_Region_String[s].contains("00700") && !ff7->SG_Region_String[s].contains("01057") &&
             !ff7->SG_Region_String[s].contains("00868"))
-         && (ff7->SG_TYPE =="MC" || ff7->SG_TYPE =="VGS" ||ff7->SG_TYPE =="DEX" ||ff7->SG_TYPE =="PSP")
+         && (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
          && (ff7->file_headerp[reserve_start] !=0xA0))
         {
             errbox error(0,ff7,s);
@@ -3181,10 +2781,10 @@ void MainWindow::guirefresh(bool newgame)
     {//IS FF7 Slot
         QByteArray text;
         if(ff7->SG_Region_String[s].isEmpty()
-           && (ff7->SG_TYPE =="MC" || ff7->SG_TYPE =="VGS" ||ff7->SG_TYPE =="DEX" ||ff7->SG_TYPE =="PSP")
+           && (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
            && ff7->file_headerp[reserve_start]==0xA0)
         {//if empty region string and a virtual memcard format and dir frame says empty.
-            clearslot(s); //file_changed=false;//checking only
+            ff7->clearslot(s); //file_changed=false;//checking only
         }
         if(ff7->SG_Region_String[s].contains("00700") || ff7->SG_Region_String[s].contains("01057")){Text.init(1);}//Japanese
         else{Text.init(0);}// not japanese save.
@@ -3215,7 +2815,7 @@ void MainWindow::guirefresh(bool newgame)
         /*~~~~Set Region info and icon~~~~*/
         ui->lbl_sg_region->setText(ff7->SG_Region_String[s].mid(0,ff7->SG_Region_String[s].lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->SG_Region_String[s].mid(ff7->SG_Region_String[s].lastIndexOf("S")+1,2).toInt()-1);
-        if (ff7->SG_TYPE != "PC") //we Display an icon. for all formats except for pc
+        if (ff7->type() != "PC") //we Display an icon. for all formats except for pc
         {
             QByteArray data;
             for(int i=0;i<0x200;i++){data.append(ff7->hf[s].sl_header[i]);}
@@ -3269,7 +2869,7 @@ void MainWindow::guirefresh(bool newgame)
         ui->combo_button_15->setCurrentIndex(ff7->slot[s].controller_map[14]);
         ui->combo_button_16->setCurrentIndex(ff7->slot[s].controller_map[15]);
         //hide buttons config if not debug or non pc save
-        if(ff7->SG_TYPE !="PC" || ui->action_show_debug->isChecked()){ui->group_controller_mapping->setVisible(1);}
+        if(ff7->type() !="PC" || ui->action_show_debug->isChecked()){ui->group_controller_mapping->setVisible(1);}
         else{ui->group_controller_mapping->setVisible(0);}
         /*~~~~~End Options Loading~~~~~*/
         ui->sb_coster_1->setValue(ff7->slot[s].coster_1);
@@ -3810,30 +3410,7 @@ void MainWindow::chocobo_refresh()
     ui->combo_pen4->setCurrentIndex(ff7->slot[s].pennedchocos[3]);
     load=false;
 }/*~~~~~~~~~~~End Chocobo Slots~~~~~~~~~*/
-/*~~~~~~~~~~~Clear Slots~~~~~~~~~~~~~~*/
-void MainWindow::clearslot(int rmslot)
-{
-    QByteArray temp;
-    temp.fill(0x00,0x10f4);
-    memcpy(ff7->hf[rmslot].sl_header,temp,ff7->SG_SLOT_HEADER);// clear the header..
-    memcpy(&ff7->slot[rmslot],temp,0x10f4);
-    memcpy(ff7->hf[rmslot].sl_footer,temp,ff7->SG_SLOT_FOOTER);// clear the footer..
-    ff7->SG_Region_String[rmslot].clear();
-    if(ff7->SG_TYPE =="MC" || ff7->SG_TYPE =="PSP" || ff7->SG_TYPE =="VGS" || ff7->SG_TYPE =="DEX")
-    {//clean the mem card header if needed.
-        int index = (128+(128*rmslot));
-        if (ff7->SG_TYPE == "PSP"){index +=0x80;}
-        else if (ff7->SG_TYPE == "VGS"){index +=0x40;}
-        else if (ff7->SG_TYPE == "DEX"){index +=0xF40;}
-        temp.resize(128);
-        temp.fill(0x00);
-        temp[0]=0xA0;
-        temp[8]=0xFF;
-        temp[9]=0xFF;
-        temp[0x7F]=0xA0;
-        memcpy(&ff7->file_headerp[index],temp,128);
-    }
-}
+
 /*~~~~~~~~~Test Data~~~~~~~~~~~*/
 void MainWindow::testdata_refresh()
 {
@@ -5400,7 +4977,7 @@ void MainWindow::on_cb_Region_Slot_currentIndexChanged()
     new_regionString.append(ui->cb_Region_Slot->currentText().toAscii());
     ff7->SG_Region_String[s].clear();
     ff7->SG_Region_String[s].append(&new_regionString);
-    if(ff7->SG_TYPE== "MC"|| ff7->SG_TYPE=="PSP"|| ff7->SG_TYPE=="VGS" || ff7->SG_TYPE =="DEX"){fix_vmc_header(ff7); guirefresh(0);}
+    if(ff7->type()== "MC"|| ff7->type()=="PSP"|| ff7->type()=="VGS" || ff7->type() =="DEX"){/*fix_vmc_header(ff7);*/ guirefresh(0);}
 }}}
 
 void MainWindow::on_cb_field_help_toggled(bool checked)

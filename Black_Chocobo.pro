@@ -27,6 +27,7 @@ SOURCES += main.cpp \
     options.cpp \
     errbox.cpp \
     SaveIcon.cpp \
+    static_data/FF7Save.cpp \
     static_data/FF7Text.cpp \
     static_data/FF7Item.cpp \
     static_data/FF7Materia.cpp \
@@ -34,13 +35,13 @@ SOURCES += main.cpp \
     widgets/ItemPreview.cpp \
     widgets/DialogPreview.cpp
 HEADERS += mainwindow.h \
-    FF7SAVE.h \
     slotselect.h \
     about.h \
     globals.h \
     options.h \
     errbox.h \
     SaveIcon.h \
+    static_data/FF7Save.h \
     static_data/FF7Text.h \
     static_data/FF7Item.h \
     static_data/FF7Materia.h \

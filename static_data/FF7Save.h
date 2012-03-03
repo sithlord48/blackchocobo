@@ -1,48 +1,43 @@
 /****************************************************************************/
-//    copyright 2010-2012 Chris Rizzitello <sithlord48@gmail.com>           //
+//    copyright 2012  Chris Rizzitello <sithlord48@gmail.com>               //
 //                                                                          //
-//    This file is part of Black Chocobo.                                   //
+//    This file is part of <UnNamedToolKit>                                 //
 //                                                                          //
-//    Black Chocobo is free software: you can redistribute it and/or modify //
+//  <UnNamedToolKit> is free software: you can redistribute it and/or modify//
 //    it under the terms of the GNU General Public License as published by  //
 //    the Free Software Foundation, either version 3 of the License, or     //
 //    (at your option) any later version.                                   //
 //                                                                          //
-//    Black Chocobo is distributed in the hope that it will be useful,      //
+// <UnNamedToolKit> is distributed in the hope that it will be useful,      //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-// This file is a modified verion of ff7file.h from Qhimm's jenova editor   //
-#ifndef FF7SAVE_H
-#define FF7SAVE_H
-
+#ifndef DEF_FF7SAVE
+#define DEF_FF7SAVE
 #include <QObject>
+/*~~~~~~~~~~~~~~~~~~PC Save File ~~~~~~~~~~~~*/
+  const int FF7_PC_SAVE_GAME_SIZE = 0xFE55;
+  const int FF7_PC_SAVE_GAME_HEADER = 0x09;
+  const int FF7_PC_SAVE_GAME_FOOTER = 0x0000;
+  const int FF7_PC_SAVE_GAME_DATA_SIZE = 0x10F4;
+  const int FF7_PC_SAVE_GAME_SLOT_HEADER = 0x00;
+  const int FF7_PC_SAVE_GAME_SLOT_FOOTER = 0x0000;
+  const int FF7_PC_SAVE_GAME_SLOT_SIZE = 0x10F4;
+  const int FF7_PC_SAVE_GAME_SLOT_NUMBER = 15;
+  const QByteArray PC_SAVE_GAME_FILE_ID = "\x71\x73";
+  const quint8 PC_SAVE_GAME_FILE_HEADER[0x09] = {0x71,0x73,0x27,0x06,0x00,0x00,0x00,0x00,0x00}; //PC HEADER (for when we need to create one)
 
-/* START FILE INFO (Vegeta_Ss4) v0.8.3*/
-
-/*~~~~~~~~~~~~~~~~~~ PC HEADER INFO ~~~~~~~~~~~~~~ */
-const int FF7_PC_SAVE_GAME_SIZE = 0xFE55;
-const int FF7_PC_SAVE_GAME_HEADER = 0x09;
-const int FF7_PC_SAVE_GAME_FOOTER = 0x0000;
-const int FF7_PC_SAVE_GAME_DATA_SIZE = 0x10F4;
-const int FF7_PC_SAVE_GAME_SLOT_HEADER = 0x00;
-const int FF7_PC_SAVE_GAME_SLOT_FOOTER = 0x0000;
-const int FF7_PC_SAVE_GAME_SLOT_SIZE = 0x10F4;
-const int FF7_PC_SAVE_GAME_SLOT_NUMBER = 15;
-const char PC_SAVE_GAME_FILE_ID[] = "\x71\x73";
-const quint8 PC_SAVE_GAME_FILE_HEADER[0x09] = {0x71,0x73,0x27,0x06,0x00,0x00,0x00,0x00,0x00}; //PC HEADER (for when we need to create one)
-
-/*~~~~~~~~~~~~~~~~~~ Psx save file ~~~~~~~~~~~~~~~~*/
-const int FF7_PSX_SAVE_GAME_SIZE = 0x2000;
-const int FF7_PSX_SAVE_GAME_HEADER = 0x0000;
-const int FF7_PSX_SAVE_GAME_FOOTER = 0x0000;
-const int FF7_PSX_SAVE_GAME_DATA_SIZE = 0x10F4;
-const int FF7_PSX_SAVE_GAME_SLOT_HEADER = 0x0200;
-const int FF7_PSX_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
-const int FF7_PSX_SAVE_GAME_SLOT_SIZE = 0x2000;
-const int FF7_PSX_SAVE_GAME_SLOT_NUMBER = 1;
-const char PSX_SAVE_GAME_FILE_ID[] = "\x53\x43\x11\x01\x82\x65\x82\x65\x82\x56\x81\x5E\x82\x72\x82\x60";
+  /*~~~~~~~~~~~~~~~~~~ Psx save file ~~~~~~~~~~~~~~~~*/
+  const int FF7_PSX_SAVE_GAME_SIZE = 0x2000;
+  const int FF7_PSX_SAVE_GAME_HEADER = 0x0000;
+  const int FF7_PSX_SAVE_GAME_FOOTER = 0x0000;
+  const int FF7_PSX_SAVE_GAME_DATA_SIZE = 0x10F4;
+  const int FF7_PSX_SAVE_GAME_SLOT_HEADER = 0x0200;
+  const int FF7_PSX_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
+  const int FF7_PSX_SAVE_GAME_SLOT_SIZE = 0x2000;
+  const int FF7_PSX_SAVE_GAME_SLOT_NUMBER = 1;
+  const QByteArray PSX_SAVE_GAME_FILE_ID = "\x53\x43\x11\x01\x82\x65\x82\x65\x82\x56\x81\x5E\x82\x72\x82\x60";
 
 //BELOW 1/2 HEADER DATA FOR EACH PSX SAVE SLOT, (NOTE: last 256 bytes are 0x00, no region data in this section)
 
@@ -220,7 +215,7 @@ const int FF7_PSV_SAVE_GAME_SLOT_HEADER = 0x0200;
 const int FF7_PSV_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
 const int FF7_PSV_SAVE_GAME_SLOT_SIZE = 0x2000;
 const int FF7_PSV_SAVE_GAME_SLOT_NUMBER = 1;
-const char PSV_SAVE_GAME_FILE_ID[] = "\x00\x56\x53\x50";
+const QByteArray PSV_SAVE_GAME_FILE_ID = "\x00\x56\x53\x50";
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Mem Card Format~~~~~~~~~~~~~~~~~~~*/
 const int FF7_MC_SAVE_GAME_SIZE = 0x20000;
@@ -231,7 +226,7 @@ const int FF7_MC_SAVE_GAME_SLOT_HEADER = 0x0200;
 const int FF7_MC_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
 const int FF7_MC_SAVE_GAME_SLOT_SIZE = 0x2000;
 const int FF7_MC_SAVE_GAME_SLOT_NUMBER = 15;
-const char MC_SAVE_GAME_FILE_ID[] = "\x4D\x43";
+const QByteArray MC_SAVE_GAME_FILE_ID = "\x4D\x43";
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~PSP SAVE FORMAT~~~~~~~~~~~~~~~~~~~*/
 const int FF7_PSP_SAVE_GAME_SIZE = 0x20080;
 const int FF7_PSP_SAVE_GAME_HEADER = 0x2080;
@@ -241,7 +236,7 @@ const int FF7_PSP_SAVE_GAME_SLOT_HEADER = 0x0200;
 const int FF7_PSP_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
 const int FF7_PSP_SAVE_GAME_SLOT_SIZE = 0x2000;
 const int FF7_PSP_SAVE_GAME_SLOT_NUMBER = 15;
-const char PSP_SAVE_GAME_FILE_ID[] = "\x00\x50\x4D\x56";
+const QByteArray PSP_SAVE_GAME_FILE_ID = "\x00\x50\x4D\x56";
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~VGM SAVE FORMAT~~~~~~~~~~~~~~~~~~~~*/
 const int FF7_VGS_SAVE_GAME_SIZE = 0x20040;
 const int FF7_VGS_SAVE_GAME_HEADER = 0x2040;
@@ -251,7 +246,7 @@ const int FF7_VGS_SAVE_GAME_SLOT_HEADER = 0x0200;
 const int FF7_VGS_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
 const int FF7_VGS_SAVE_GAME_SLOT_SIZE = 0x2000;
 const int FF7_VGS_SAVE_GAME_SLOT_NUMBER = 15;
-const char VGS_SAVE_GAME_FILE_ID[] = "\x56\x67\x73\x4D";
+const QByteArray VGS_SAVE_GAME_FILE_ID = "\x56\x67\x73\x4D";
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~DEX SAVE FORMAT~~~~~~~~~~~~~~~~~~~~*/
 const int FF7_DEX_SAVE_GAME_SIZE = 0x20F40;
 const int FF7_DEX_SAVE_GAME_HEADER = 0x2F40;
@@ -261,11 +256,8 @@ const int FF7_DEX_SAVE_GAME_SLOT_HEADER = 0x0200;
 const int FF7_DEX_SAVE_GAME_SLOT_FOOTER = 0x0D0C;
 const int FF7_DEX_SAVE_GAME_SLOT_SIZE = 0x2000;
 const int FF7_DEX_SAVE_GAME_SLOT_NUMBER = 15;
-const char DEX_SAVE_GAME_FILE_ID[] = "\x31\x32\x33\x2D\x34\x35\x36\x2D\x53\x54\x44";
+const QByteArray DEX_SAVE_GAME_FILE_ID= "\x31\x32\x33\x2D\x34\x35\x36\x2D\x53\x54\x44";
 
-
-/* END FILE INFO */
-// pack all structs if not your gonna have a bad time
 
 struct item{// sizeof 2
 quint8 id;// item id
@@ -497,39 +489,72 @@ struct FF7SLOT {		// Save slot - Length 0x10F4
     quint8 sl_footer[0x0D0C];       // [0x0000] Slot Footer
 }__attribute__((__packed__));
 
-struct FF7 {				// [0xFE55]
+class FF7Save{
 
-        FF7SLOT slot[15];		// [0x0009] The 15 save slots
+public:
+  bool LoadFile(const QString &fileName);
+  bool SaveFile(const QString &fileName);
+  bool Export_PC(const QString &fileName);
+  bool Export_PSX(const QString &fileName);
+  bool Export_VMC(const QString &fileName);
+  bool Export_DEX(const QString &fileName);
+  bool Export_VGS(const QString &fileName);
+  void clearslot(int);
+  //publicly accessable core data(for now)
+  FF7SLOT slot[15]; //core slot data.
+  QString SG_Region_String[15];
+  quint8 * file_headerp;              //pointer to file header
+  quint8 * file_footerp;              //pointer to file footer
+  FF7HEADFOOT hf[15]; //slot header and footer.
 
-        /*START FORMAT COMPATIBILITY (Vegeta_Ss4) v0.8.3*/
-        quint8 file_header_pc [0x0009];    // [0x0000] 0x06277371 this replace quint8 file_tag[9];
-        quint8 file_header_psx[0x0000];	// [0x0000] 0x06277371 this replace quint8 file_tag[9];
-        quint8 file_header_psv[0x0000];
-        quint8 file_header_psp[0x2080];
-        quint8 file_header_vgs[0x2040]; //header for vgs/mem ext format.
-        quint8 file_header_dex[0x2F40]; //header for gme (dex-drive format)
-        quint8 file_header_mc [0x2000];	// [0x0000] 0x06277371 this replace quint8 file_tag[9];
-        quint8 file_footer_pc [0x0000];	// [0x0000] 0x06277371
-        quint8 file_footer_psx[0x0000];	// [0x0000] 0x06277371
-        quint8 file_footer_psv[0x0000];
-        quint8 file_footer_vgs[0x0000];
-        quint8 file_footer_dex[0x0000];
-        quint8 file_footer_mc [0x0000];	// [0x0000] 0x06277371
-        quint8 file_footer_psp[0x0000];
-        FF7HEADFOOT hf[15];             // [0x0009] The 15 save slots header/footer
-
-        int SG_SIZE;
-        int SG_HEADER;
-        int SG_FOOTER;
-        int SG_DATA_SIZE;
-        int SG_SLOT_HEADER;
-        int SG_SLOT_FOOTER;
-        int SG_SLOT_SIZE;
-        int SG_SLOT_NUMBER;
-        QString SG_TYPE;
-        quint8 * file_headerp;              //pointer to file header
-        quint8 * file_footerp;              //pointer to file footer
-        QString SG_Region_String[15];       // Store Region String one per slot..
+  // Return File Info
+  int len_file(void);//Return File length.
+  int len_file_header(void);//Return File Header length
+  int len_file_footer(void);//Return File Footer length
+  int len_core_save(void);//Return Slot length (data portion)
+  int len_slot_header(void);//Return slot header length
+  int len_slot_footer(void);//Return slot footer length
+  int len_slot(void);//Return Slot length
+  int number_slots(void);//Return number of slots in the file_footer_dex
+  QString type(void);// Returns the file type loaded.
+  //Set Needed Info Stuffs
+  void setType(QString);//
+private:
+  //data members
+  //FF7SLOT slot[15];
+  quint8 file_header_pc [0x0009];    // [0x0000] 0x06277371 this replace quint8 file_tag[9];
+  quint8 file_header_psx[0x0000];	// [0x0000] 0x06277371 this replace quint8 file_tag[9];
+  quint8 file_header_psv[0x0000];
+  quint8 file_header_psp[0x2080];
+  quint8 file_header_vgs[0x2040]; //header for vgs/mem ext format.
+  quint8 file_header_dex[0x2F40]; //header for gme (dex-drive format)
+  quint8 file_header_mc [0x2000];	// [0x0000] 0x06277371 this replace quint8 file_tag[9];
+  quint8 file_footer_pc [0x0000];	// [0x0000] 0x06277371
+  quint8 file_footer_psx[0x0000];	// [0x0000] 0x06277371
+  quint8 file_footer_psv[0x0000];
+  quint8 file_footer_vgs[0x0000];
+  quint8 file_footer_dex[0x0000];
+  quint8 file_footer_mc [0x0000];	// [0x0000] 0x06277371
+  quint8 file_footer_psp[0x0000];
+  //QString SG_Region_String[15];
+  QString filename; // hold the currently opened file.
+  bool modified; //has been modified.
+  int SG_SIZE;
+  int SG_HEADER;
+  int SG_FOOTER;
+  int SG_DATA_SIZE;
+  int SG_SLOT_HEADER;
+  int SG_SLOT_FOOTER;
+  int SG_SLOT_SIZE;
+  int SG_SLOT_NUMBER;
+  QString SG_TYPE;
+  //private functions
+  void fix_sum(const QString &fileName);
+  int ff7__checksum(void * qw );
+  void fix_pc_bytemask(int s);
+  void fix_psx_header(int s);
+  void fix_vmc_header(void);
+  
 };
-#endif // FF7SAVE_H
 
+#endif //FF7Save

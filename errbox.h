@@ -18,7 +18,7 @@
 #define ERRBOX_H
 
 #include <QDialog>
-#include "FF7SAVE.h"
+#include "static_data/FF7Save.h"
 #include <SaveIcon.h>
 namespace Ui {
     class errbox;
@@ -29,7 +29,7 @@ class errbox : public QDialog
     Q_OBJECT
 
 public:
-    explicit errbox(QWidget *parent = 0,FF7 *ff7data=0,int slot=0);
+    explicit errbox(QWidget *parent = 0,FF7Save *ff7data=0,int slot=0);
     ~errbox();
 protected:
     void keyPressEvent(QKeyEvent *e);
@@ -43,7 +43,7 @@ private:
     Ui::errbox *ui;
     SaveIcon save_icon;
     int s;
-    FF7 *ff7;
+    FF7Save *ff7;
 };
 
 #endif // ERRBOX_H

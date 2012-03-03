@@ -3257,10 +3257,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot save This Type of File</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Save Final Fantasy 7 SaveGame</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3473,10 +3469,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Bad Psx Save Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Export MC File</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3574,19 +3566,6 @@
     <message>
         <source>Cannot read file %1:
 %2., Be Sure its is a Raw PSX Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Unknown Filetype</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>File: %1 
-is not a FF7 SaveGame.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4248,28 +4227,6 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>-None-</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Slot:%1 Contains A PAL region save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>PAL PSX runs at 50/60 speed
-This results in an incorrect playtime
-Would you like to correct the playtime?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>PAL Slot Detected</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Always Correct</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Never Correct</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4974,6 +4931,14 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Load Failed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Failed to Load File</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7104,6 +7069,10 @@ p, li { white-space: pre-wrap; }
         <source>New: Added .VM1to list of VMC formats</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Fixed: Bug In Dex and Vgs Header</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>errbox</name>
@@ -7149,15 +7118,6 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>All Files(*)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Black Chocobo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cannot write file %1:
-%2.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7211,6 +7171,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Save Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Error On File Save, Going Back To The Selection Dialog</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

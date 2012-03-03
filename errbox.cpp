@@ -18,7 +18,7 @@
 #include "ui_errbox.h"
 
 /*~~~~~GLOBALS~~~~~~*/
-errbox::errbox(QWidget *parent,FF7 *ff7data,int slot) :
+errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :
     QDialog(parent),
     ui(new Ui::errbox)
 {
@@ -61,9 +61,9 @@ errbox::errbox(QWidget *parent,FF7 *ff7data,int slot) :
     if((index = desc.indexOf('\x00')) != -1) {desc.truncate(index);}
     //assume NOT PC SAVE.
     index= 128+(128*s);
-    if(ff7->SG_TYPE=="PSP"){index+=0x80;}
-    else if(ff7->SG_TYPE=="VGS"){index+=0x40;}
-    else if(ff7->SG_TYPE=="DEX"){index+=0xF40;}
+    if(ff7->type()=="PSP"){index+=0x80;}
+    else if(ff7->type()=="VGS"){index+=0x40;}
+    else if(ff7->type()=="DEX"){index+=0xF40;}
     QString Slottext;
     if(ff7->file_headerp[index] != 0x52 && ff7->file_headerp[index] != 0x53){Slottext= codec->toUnicode(desc);}
     else if(ff7->file_headerp[index]==0x52){Slottext = tr("Mid-Linked Block ");}
@@ -119,39 +119,20 @@ void errbox::on_btn_export_clicked()
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Raw PSX File"), ff7->SG_Region_String[s],
     tr("All Files(*)"));
-    if(fileName ==""){return;}
-
-    ff7->SG_SIZE          = FF7_PSX_SAVE_GAME_SIZE;
-    ff7->SG_HEADER        = FF7_PSX_SAVE_GAME_HEADER;
-    ff7->SG_FOOTER        = FF7_PSX_SAVE_GAME_FOOTER;
-    ff7->SG_DATA_SIZE     = FF7_PSX_SAVE_GAME_DATA_SIZE;
-    ff7->SG_SLOT_HEADER   = FF7_PSX_SAVE_GAME_SLOT_HEADER;
-    ff7->SG_SLOT_FOOTER   = FF7_PSX_SAVE_GAME_SLOT_FOOTER;
-    ff7->SG_SLOT_SIZE     = FF7_PSX_SAVE_GAME_SLOT_SIZE;
-    ff7->SG_SLOT_NUMBER   = FF7_PSX_SAVE_GAME_SLOT_NUMBER;
-    ff7->SG_TYPE          = "PSX";
-    ff7->file_headerp     = ff7->file_header_psx;           //pointer to psx file header
-    ff7->file_footerp     = ff7->file_footer_psx;           //pointer to psx file footer
-
-    /*~~~~~~~ SHORT SAVE - SITHLORD48 ~~~~~~~~~*/
-    QFile file(fileName);
-    if(!file.open(QFile::ReadWrite))
+    if(fileName.isEmpty()){return;}
+    else
     {
-        QMessageBox::warning(this, tr("Black Chocobo"),
-        tr("Cannot write file %1:\n%2.")
-            .arg(fileName)
-            .arg(file.errorString()));
-        return;
+        if(ff7->Export_PSX(fileName))
+        {
+            QMessageBox::information(this,tr("Save Successfully"),tr("File Saved Successfully, Going Back To The Selection Dialog"));
+            this->done(3);
+        }
+        else
+        {
+            QMessageBox::information(this,tr("Save Error"),tr("Error On File Save, Going Back To The Selection Dialog"));
+            this->done(3);
+        }
     }
-    FILE *pfile; // this section is starting to work correctly!
-    pfile = fopen(fileName.toAscii(),"wb");
-    fwrite(ff7->hf[s].sl_header,ff7->SG_SLOT_HEADER,1,pfile); // Write Header.
-    fwrite(&ff7->slot[s],ff7->SG_DATA_SIZE,1,pfile);
-    fwrite(ff7->hf[s].sl_footer,ff7->SG_SLOT_FOOTER,1,pfile);
-    fwrite(ff7->file_footerp,ff7->SG_FOOTER,1,pfile);
-    fclose(pfile);
-    QMessageBox::information(this,tr("Save Successfully"),tr("File Saved Successfully, Going Back To The Selection Dialog"));
-    this->done(3);
 }
 
 void errbox::on_btn_view_clicked(){this->done(0);}
