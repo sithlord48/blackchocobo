@@ -18,6 +18,7 @@
 #include <QObject>
 #include <QFile>
 #include <QDataStream>
+
 bool FF7Save::LoadFile(const QString &fileName)
   {
     // Return true if File Loaded and false if file not loaded.
@@ -166,8 +167,8 @@ bool FF7Save::LoadFile(const QString &fileName)
     else if (SG_TYPE == "PSX")
     {
         if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
-           (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")) ||
-           (fileName.contains("00868")) )
+-           (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")) ||
+-           (fileName.contains("00868")) 
         {
             QString string;
             string = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
@@ -195,18 +196,23 @@ bool FF7Save::LoadFile(const QString &fileName)
         for(int i=0; i<15;i++)
         {
             index = (128*i) +138;
-            SG_Region_String[i] = QString(mc_header.mid(index,19));
+            setRegion(i,QString(mc_header.mid(index,19)));
         }
     }
     else{return false;}
-    filename = fileName;
-    modified = false;
     return true;
   }
 
  bool FF7Save::SaveFile(const QString &fileName)
  {
     if(fileName.isEmpty()){return false;}
+
+    //fix our headers before saving
+    if(type() =="PC"){/*FIX PC BYTEMASK SHOULD BE CALLED BY HOST*/}
+    else if(type() == "PSX"){fix_psx_header(0);}
+    else if(type() =="PSV"){fix_psv_header();}
+    else{fix_vmc_header();}
+    // write the file
     FILE *pfile;
     pfile = fopen(fileName.toAscii(),"wb");
     if(pfile == NULL){return false;}
@@ -220,7 +226,6 @@ bool FF7Save::LoadFile(const QString &fileName)
     fwrite(file_footerp,SG_FOOTER,1,pfile);
     fclose(pfile);
     fix_sum(fileName);
-    modified = false;
     return true;
 }
 void FF7Save::fix_sum(const QString &fileName)
@@ -309,26 +314,14 @@ void FF7Save::fix_pc_bytemask(int s)
     //calc 0x05 of the header (slots 1-8 empty?)
     for(int i=0;i<8;i++)
     {
-        if(SG_Region_String[i].contains("00867") || SG_Region_String[i].contains("00869") ||
-           SG_Region_String[i].contains("00900") || SG_Region_String[i].contains("94163") ||
-           SG_Region_String[i].contains("00700") || SG_Region_String[i].contains("01057") ||
-           SG_Region_String[i].contains("00868"))
-        {
-        mask |= (1<<i);
-        }
+        if(isFF7(i)){mask |= (1<<i);}
     }
     newheader[5]=mask;
     mask=0;// reset for the next byte
     //calc 0x06 of the header (slot 9-15 empty?)
     for(int i=8;i<15;i++)
     {
-        if(SG_Region_String[i].contains("00867") || SG_Region_String[i].contains("00869") ||
-           SG_Region_String[i].contains("00900") || SG_Region_String[i].contains("94163") ||
-           SG_Region_String[i].contains("00700") || SG_Region_String[i].contains("01057") ||
-           SG_Region_String[i].contains("00868"))
-        {
-        mask |= (1<<(i-8));
-        }
+        if(isFF7(i)){mask |= (1<<(i-8));}
     }
     newheader[6]=mask;
     memcpy(file_headerp,newheader,9);
@@ -343,6 +336,11 @@ void FF7Save::fix_psx_header(int s)
     }
     hf[s].sl_header[33] = ((slot[s].time/60%60)/10)+0x4F;
     hf[s].sl_header[35] = ((slot[s].time/60%60)%10)+0x4F;
+}
+void FF7Save::fix_psv_header(void)
+{
+ /*do signing stuff*/
+ fix_psx_header(0);//adjust time.
 }
 void FF7Save::fix_vmc_header(void)
 {//Set The Index Section Up.
@@ -373,17 +371,14 @@ void FF7Save::fix_vmc_header(void)
         if(SG_TYPE =="PSP"){index+=0x80;}
         if(SG_TYPE =="VGS"){index+=0x40;}
         if(SG_TYPE =="DEX"){index+=0xF40;}
-        if(SG_Region_String[i].contains("00867") ||SG_Region_String[i].contains("00869") ||
-           SG_Region_String[i].contains("00900") ||SG_Region_String[i].contains("94163") ||
-           SG_Region_String[i].contains("00700") ||SG_Region_String[i].contains("01057") ||
-           SG_Region_String[i].contains("00868"))
+        if(isFF7(i))
         {
            QByteArray temp;
            temp.resize(10);
            temp[0]=0x51;temp[1]=0x00;temp[2]=0x00;temp[3]=0x00;temp[4]=0x00;
            temp[5]=0x20;temp[6]=0x00;temp[7]=0x00;temp[8]=0xFF;temp[9]=0xFF;
            mc_header_2.append(temp);
-           mc_header_2.append(SG_Region_String[i]);
+           mc_header_2.append(region(i));
            temp.resize(98);
            for(int f=0;f<98;f++){temp[f]=0x00;}
            mc_header_2.append(temp);
@@ -391,7 +386,7 @@ void FF7Save::fix_vmc_header(void)
            for(int x=0;x<127;x++){xor_byte^=mc_header_2[x+index];}
            mc_header_2.append(xor_byte);
 
-           if(SG_Region_String[i].endsWith("FF7-S01"))
+           if(region(i).endsWith("FF7-S01"))
            {for(int P=0;P<512;P++)
                {
                     if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S01[P];}
@@ -399,98 +394,98 @@ void FF7Save::fix_vmc_header(void)
                 }
            }
 
-           if(SG_Region_String[i].endsWith("FF7-S02"))
+           if(region(i).endsWith("FF7-S02"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S02[P];}
                     else{hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(SG_Region_String[i].endsWith("FF7-S03"))
+           if(region(i).endsWith("FF7-S03"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S03[P];}
                     else{hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(SG_Region_String[i].endsWith("FF7-S04"))
+           if(region(i).endsWith("FF7-S04"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S04[P];}
                     else{hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(SG_Region_String[i].endsWith("FF7-S05"))
+           if(region(i).endsWith("FF7-S05"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S05[P];}
                     else{hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(SG_Region_String[i].endsWith("FF7-S06"))
+           if(region(i).endsWith("FF7-S06"))
            {for(int P=0;P<512;P++)
                {
                    if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S06[P];}
                    else{hf[i].sl_header[P]= 0x00;}
                }
            }
-           if(SG_Region_String[i].endsWith("FF7-S07"))
+           if(region(i).endsWith("FF7-S07"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S07[P];}
                     else{hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(SG_Region_String[i].endsWith("FF7-S08"))
+           if(region(i).endsWith("FF7-S08"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S08[P];}
                     else{hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(SG_Region_String[i].endsWith("FF7-S09"))
+           if(region(i).endsWith("FF7-S09"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S09[P];}
                     else{hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(SG_Region_String[i].endsWith("FF7-S10"))
+           if(region(i).endsWith("FF7-S10"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S10[P];}
                     else{hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(SG_Region_String[i].endsWith("FF7-S11"))
+           if(region(i).endsWith("FF7-S11"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S11[P];}
                     else{hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(SG_Region_String[i].endsWith("FF7-S12"))
+           if(region(i).endsWith("FF7-S12"))
            {for(int P=0;P<512;P++)
                {
                    if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S12[P];}
                    else{hf[i].sl_header[P]= 0x00;}
                }
            }
-           if(SG_Region_String[i].endsWith("FF7-S13"))
+           if(region(i).endsWith("FF7-S13"))
            {for(int P=0;P<512;P++)
                 {
                     if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S13[P];}
                     else{hf[i].sl_header[P]= 0x00;}
                 }
            }
-           if(SG_Region_String[i].endsWith("FF7-S14"))
+           if(region(i).endsWith("FF7-S14"))
            {for(int P=0;P<512;P++)
                {
                    if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S14[P];}
                    else{hf[i].sl_header[P]= 0x00;}
                }
            }
-           if(SG_Region_String[i].endsWith("FF7-S15"))
+           if(region(i).endsWith("FF7-S15"))
            {for(int P=0;P<512;P++)
                {
                    if(P<256){hf[i].sl_header[P]= PSX_SAVE_GAME_FILE_HEADER_S15[P];}
@@ -499,7 +494,7 @@ void FF7Save::fix_vmc_header(void)
            }
            fix_psx_header(i);//fix header in current psx slot
         } // write string if found
-        else if(SG_Region_String[i].isEmpty() || SG_Region_String[i].isNull())
+        else if(region(i).isEmpty() || region(i).isNull())
         {   //QString empty_header = ;
             mc_header_2.append("\xA0\x00\x00\x00\x00\x00\x00\x00\xFF\xFF",10);
             for (int j=0;j<117;j++){mc_header_2.append('\x00');}
@@ -560,23 +555,18 @@ bool FF7Save::Export_PC(const QString &fileName)
     file_footerp     = file_footer_pc;           //pointer to pc file footer
     // Add File Header
     for(int i=0;i<9;i++){file_header_pc[i]= PC_SAVE_GAME_FILE_HEADER[i];}
+    fix_pc_bytemask(0);//set first slot to 0
   }
-  for(int si=0;si<15;si++)//clean up saves and fix time for Pal Saves.
+  for(int i=0;i<15;i++)//clean up saves and fix time for Pal Saves.
   {
-    if (SG_Region_String[si].contains("94163") ||  SG_Region_String[si].contains("00700") || SG_Region_String[si].contains("01057"))
-    {//NTSC FF7 DATA.
-      fix_pc_bytemask(si);
-    }
+    if (isNTSC(i)){/*NTSC FF7 DATA.*/}
   
-    else if(SG_Region_String[si].contains("00867") || SG_Region_String[si].contains("00868") || 
-	    SG_Region_String[si].contains("00869") || SG_Region_String[si].contains("00900"))
+    else if(isPAL(i))
     {//PAL FF7 DATA , FIX PLAY TIME THEN SAVE
-      slot[si].time = (slot[si].time*1.2);
-      slot[si].desc.time = slot[si].time;
-      fix_pc_bytemask(si);
+      slot[i].time = (slot[i].time*1.2);
+      slot[i].desc.time = slot[i].time;
     }
-    
-    else{clearslot(si);}
+    else{clearslot(i);}
   }
     if(SaveFile(fileName)){return true;}
     else {return false;}
@@ -716,7 +706,211 @@ bool FF7Save::Export_DEX(const QString &fileName)
   if(SaveFile(fileName)){return true;}
   else{return false;}
 }
+QString FF7Save::region(int s){return SG_Region_String[s];}
 
+void FF7Save::setRegion(int s ,QString new_region)
+{
+    if( (new_region =="USA") || (new_region == "NTSC-U") || (new_region =="1") )
+    {
+        switch(s)
+        {
+            case 0: SG_Region_String[s] = "BASCUS-94163FF7-S01"; break;
+            case 1: SG_Region_String[s] = "BASCUS-94163FF7-S02"; break;
+            case 2: SG_Region_String[s] = "BASCUS-94163FF7-S03"; break;
+            case 3: SG_Region_String[s] = "BASCUS-94163FF7-S04"; break;
+            case 4: SG_Region_String[s] = "BASCUS-94163FF7-S05"; break;
+            case 5: SG_Region_String[s] = "BASCUS-94163FF7-S06"; break;
+            case 6: SG_Region_String[s] = "BASCUS-94163FF7-S07"; break;
+            case 7: SG_Region_String[s] = "BASCUS-94163FF7-S08"; break;
+            case 8: SG_Region_String[s] = "BASCUS-94163FF7-S09"; break;
+            case 9: SG_Region_String[s] = "BASCUS-94163FF7-S10"; break;
+            case 10: SG_Region_String[s] = "BASCUS-94163FF7-S11"; break;
+            case 11: SG_Region_String[s] = "BASCUS-94163FF7-S12"; break;
+            case 12: SG_Region_String[s] = "BASCUS-94163FF7-S13"; break;
+            case 13: SG_Region_String[s] = "BASCUS-94163FF7-S14"; break;
+            case 14: SG_Region_String[s] = "BASCUS-94163FF7-S15"; break;
+        }
+    }
+    else if( (new_region =="UK") || (new_region =="PAL-E") || (new_region =="2") )
+    {
+        switch(s)
+        {
+            case 0: SG_Region_String[s] = "BESCES-00867FF7-S01"; break;
+            case 1: SG_Region_String[s] = "BESCES-00867FF7-S02"; break;
+            case 2: SG_Region_String[s] = "BESCES-00867FF7-S03"; break;
+            case 3: SG_Region_String[s] = "BESCES-00867FF7-S04"; break;
+            case 4: SG_Region_String[s] = "BESCES-00867FF7-S05"; break;
+            case 5: SG_Region_String[s] = "BESCES-00867FF7-S06"; break;
+            case 6: SG_Region_String[s] = "BESCES-00867FF7-S07"; break;
+            case 7: SG_Region_String[s] = "BESCES-00867FF7-S08"; break;
+            case 8: SG_Region_String[s] = "BESCES-00867FF7-S09"; break;
+            case 9: SG_Region_String[s] = "BESCES-00867FF7-S10"; break;
+            case 10:SG_Region_String[s] = "BESCES-00867FF7-S11"; break;
+            case 11:SG_Region_String[s] = "BESCES-00867FF7-S12"; break;
+            case 12:SG_Region_String[s] = "BESCES-00867FF7-S13"; break;
+            case 13:SG_Region_String[s] = "BESCES-00867FF7-S14"; break;
+            case 14:SG_Region_String[s] = "BESCES-00867FF7-S15"; break;
+        }
+    }
+    else if( (new_region =="French") || (new_region =="PAL-FR") || (new_region =="3") )
+    {
+        switch(s)
+        {
+            case 0: SG_Region_String[s] = "BESCES-00868FF7-S01"; break;
+            case 1: SG_Region_String[s] = "BESCES-00868FF7-S02"; break;
+            case 2: SG_Region_String[s] = "BESCES-00868FF7-S03"; break;
+            case 3: SG_Region_String[s] = "BESCES-00868FF7-S04"; break;
+            case 4: SG_Region_String[s] = "BESCES-00868FF7-S05"; break;
+            case 5: SG_Region_String[s] = "BESCES-00868FF7-S06"; break;
+            case 6: SG_Region_String[s] = "BESCES-00868FF7-S07"; break;
+            case 7: SG_Region_String[s] = "BESCES-00868FF7-S08"; break;
+            case 8: SG_Region_String[s] = "BESCES-00868FF7-S09"; break;
+            case 9: SG_Region_String[s] = "BESCES-00868FF7-S10"; break;
+            case 10:SG_Region_String[s] = "BESCES-00868FF7-S11"; break;
+            case 11:SG_Region_String[s] = "BESCES-00868FF7-S12"; break;
+            case 12:SG_Region_String[s] = "BESCES-00868FF7-S13"; break;
+            case 13:SG_Region_String[s] = "BESCES-00868FF7-S14"; break;
+            case 14:SG_Region_String[s] = "BESCES-00868FF7-S15"; break;
+        }
+    }
+    else if( (new_region =="German") || (new_region =="PAL-DE") || (new_region =="4") )
+    {
+        switch(s)
+        {
+            case 0: SG_Region_String[s] = "BESCES-00869FF7-S01"; break;
+            case 1: SG_Region_String[s] = "BESCES-00869FF7-S02"; break;
+            case 2: SG_Region_String[s] = "BESCES-00869FF7-S03"; break;
+            case 3: SG_Region_String[s] = "BESCES-00869FF7-S04"; break;
+            case 4: SG_Region_String[s] = "BESCES-00869FF7-S05"; break;
+            case 5: SG_Region_String[s] = "BESCES-00869FF7-S06"; break;
+            case 6: SG_Region_String[s] = "BESCES-00869FF7-S07"; break;
+            case 7: SG_Region_String[s] = "BESCES-00869FF7-S08"; break;
+            case 8: SG_Region_String[s] = "BESCES-00869FF7-S09"; break;
+            case 9: SG_Region_String[s] = "BESCES-00869FF7-S10"; break;
+            case 10:SG_Region_String[s] = "BESCES-00869FF7-S11"; break;
+            case 11:SG_Region_String[s] = "BESCES-00869FF7-S12"; break;
+            case 12:SG_Region_String[s] = "BESCES-00869FF7-S13"; break;
+            case 13:SG_Region_String[s] = "BESCES-00869FF7-S14"; break;
+            case 14:SG_Region_String[s] = "BESCES-00869FF7-S15"; break;
+        }
+    }
+    else if( (new_region =="Spanish")||(new_region =="PAL-ES")||(new_region == "5") )
+    {
+        switch(s)
+        {
+            case 0: SG_Region_String[s] = "BESCES-00900FF7-S01"; break;
+            case 1: SG_Region_String[s] = "BESCES-00900FF7-S02"; break;
+            case 2: SG_Region_String[s] = "BESCES-00900FF7-S03"; break;
+            case 3: SG_Region_String[s] = "BESCES-00900FF7-S04"; break;
+            case 4: SG_Region_String[s] = "BESCES-00900FF7-S05"; break;
+            case 5: SG_Region_String[s] = "BESCES-00900FF7-S06"; break;
+            case 6: SG_Region_String[s] = "BESCES-00900FF7-S07"; break;
+            case 7: SG_Region_String[s] = "BESCES-00900FF7-S08"; break;
+            case 8: SG_Region_String[s] = "BESCES-00900FF7-S09"; break;
+            case 9: SG_Region_String[s] = "BESCES-00900FF7-S10"; break;
+            case 10:SG_Region_String[s] = "BESCES-00900FF7-S11"; break;
+            case 11:SG_Region_String[s] = "BESCES-00900FF7-S12"; break;
+            case 12:SG_Region_String[s] = "BESCES-00900FF7-S13"; break;
+            case 13:SG_Region_String[s] = "BESCES-00900FF7-S14"; break;
+            case 14:SG_Region_String[s] = "BESCES-00900FF7-S15"; break;
+        }
+    }
+    else if( (new_region =="Japanese")||(new_region =="NTSC-J")||(new_region =="6") )
+    {
+        switch(s)
+        {
+            case 0: SG_Region_String[s] = "BISLPS-00700FF7-S01"; break;
+            case 1: SG_Region_String[s] = "BISLPS-00700FF7-S02"; break;
+            case 2: SG_Region_String[s] = "BISLPS-00700FF7-S03"; break;
+            case 3: SG_Region_String[s] = "BISLPS-00700FF7-S04"; break;
+            case 4: SG_Region_String[s] = "BISLPS-00700FF7-S05"; break;
+            case 5: SG_Region_String[s] = "BISLPS-00700FF7-S06"; break;
+            case 6: SG_Region_String[s] = "BISLPS-00700FF7-S07"; break;
+            case 7: SG_Region_String[s] = "BISLPS-00700FF7-S08"; break;
+            case 8: SG_Region_String[s] = "BISLPS-00700FF7-S09"; break;
+            case 9: SG_Region_String[s] = "BISLPS-00700FF7-S10"; break;
+            case 10:SG_Region_String[s] = "BISLPS-00700FF7-S11"; break;
+            case 11:SG_Region_String[s] = "BISLPS-00700FF7-S12"; break;
+            case 12:SG_Region_String[s] = "BISLPS-00700FF7-S13"; break;
+            case 13:SG_Region_String[s] = "BISLPS-00700FF7-S14"; break;
+            case 14:SG_Region_String[s] = "BISLPS-00700FF7-S15"; break;
+        }
+    }
+    else if( (new_region =="International")||(new_region =="NTSC-JI")||(new_region =="7") )
+    {
+        switch(s)
+        {
+            case 0:SG_Region_String[s] = "BISLPS-01057FF7-S01"; break;
+            case 1:SG_Region_String[s] = "BISLPS-01057FF7-S02"; break;
+            case 2:SG_Region_String[s] = "BISLPS-01057FF7-S03"; break;
+            case 3:SG_Region_String[s] = "BISLPS-01057FF7-S04"; break;
+            case 4:SG_Region_String[s] = "BISLPS-01057FF7-S05"; break;
+            case 5:SG_Region_String[s] = "BISLPS-01057FF7-S06"; break;
+            case 6:SG_Region_String[s] = "BISLPS-01057FF7-S07"; break;
+            case 7:SG_Region_String[s] = "BISLPS-01057FF7-S08"; break;
+            case 8:SG_Region_String[s] = "BISLPS-01057FF7-S09"; break;
+            case 9:SG_Region_String[s] = "BISLPS-01057FF7-S10"; break;
+            case 10:SG_Region_String[s] = "BISLPS-01057FF7-S11"; break;
+            case 11:SG_Region_String[s] = "BISLPS-01057FF7-S12"; break;
+            case 12:SG_Region_String[s] = "BISLPS-01057FF7-S13"; break;
+            case 13:SG_Region_String[s] = "BISLPS-01057FF7-S14"; break;
+            case 14:SG_Region_String[s] = "BISLPS-01057FF7-S15"; break;
+        }
+    }
+    else{SG_Region_String[s]=new_region;}
+}
+void FF7Save::CopySlot(int s){memcpy(&buffer_slot,&slot[s],0x10f4); buffer_region = SG_Region_String[s];}
+void FF7Save::PasteSlot(int s)
+{
+    memcpy(&slot[s],&buffer_slot,0x10f4);
+    SG_Region_String[s]= buffer_region;
+    SG_Region_String[s].chop(2);
+    switch(s)
+    {
+        case 0: SG_Region_String[s].append("01"); break;
+        case 1: SG_Region_String[s].append("02"); break;
+        case 2: SG_Region_String[s].append("03"); break;
+        case 3: SG_Region_String[s].append("04"); break;
+        case 4: SG_Region_String[s].append("05"); break;
+        case 5: SG_Region_String[s].append("06"); break;
+        case 6: SG_Region_String[s].append("07"); break;
+        case 7: SG_Region_String[s].append("08"); break;
+        case 8: SG_Region_String[s].append("09"); break;
+        case 9: SG_Region_String[s].append("10"); break;
+        case 10:SG_Region_String[s].append("11"); break;
+        case 11:SG_Region_String[s].append("12"); break;
+        case 12:SG_Region_String[s].append("13"); break;
+        case 13:SG_Region_String[s].append("14"); break;
+        case 14:SG_Region_String[s].append("15"); break;
+    }
+}
+
+bool FF7Save::isEmpty(int s){return SG_Region_String[s].isEmpty();}
+
+bool FF7Save::isFF7(int s)
+{
+    if(region(s).contains("00867") || region(s).contains("00869") ||
+       region(s).contains("00900") || region(s).contains("94163") ||
+       region(s).contains("00700") || region(s).contains("01057") ||
+       region(s).contains("00868"))
+       {return true;}
+    else{return false;}
+}
+
+bool FF7Save::isPAL(int s)
+{
+    if(region(s).contains("00867") || region(s).contains("00869") ||
+       region(s).contains("00900") || region(s).contains("00868"))
+       {return true;}
+    else{return false;}
+}
+
+bool FF7Save::isNTSC(int s)
+{
+    if(region(s).contains("00700") || region(s).contains("94163") || region(s).contains("01057"))
+       {return true;}
+    else{return false;}
+}
 
 int FF7Save::len_file(void){return SG_SIZE;}
 int FF7Save::len_file_header(void){return SG_HEADER;}//Return File Header length

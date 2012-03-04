@@ -117,7 +117,7 @@ void errbox::on_btn_next_clicked()
 void errbox::on_btn_export_clicked()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
-    tr("Save Raw PSX File"), ff7->SG_Region_String[s],
+    tr("Save Raw PSX File"), ff7->region(s),
     tr("All Files(*)"));
     if(fileName.isEmpty()){return;}
     else

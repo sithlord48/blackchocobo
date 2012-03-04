@@ -499,13 +499,14 @@ public:
   bool Export_VMC(const QString &fileName);
   bool Export_DEX(const QString &fileName);
   bool Export_VGS(const QString &fileName);
-  void clearslot(int);
+  void clearslot(int s);
+  void CopySlot(int s);
+  void PasteSlot(int s);
   //publicly accessable core data(for now)
   FF7SLOT slot[15]; //core slot data.
-  QString SG_Region_String[15];
+  FF7HEADFOOT hf[15]; //slot header and footer.
   quint8 * file_headerp;              //pointer to file header
   quint8 * file_footerp;              //pointer to file footer
-  FF7HEADFOOT hf[15]; //slot header and footer.
 
   // Return File Info
   int len_file(void);//Return File length.
@@ -518,7 +519,17 @@ public:
   int number_slots(void);//Return number of slots in the file_footer_dex
   QString type(void);// Returns the file type loaded.
   //Set Needed Info Stuffs
-  void setType(QString);//
+  void setType(QString);//allows for slot change.
+  QString region(int s);
+  void setRegion(int s ,QString region);
+
+  bool isEmpty(int s);//empty slot?
+  bool isFF7(int s);//valid ff7 slot?
+  bool isPAL(int s);//PAL SLOT?
+  bool isNTSC(int s);//NTSC SLOT??
+
+  void fix_pc_bytemask(int s);// update so last slot is shown selected on load (must be public to set to currently viewed slot).
+
 private:
   //data members
   //FF7SLOT slot[15];
@@ -536,9 +547,11 @@ private:
   quint8 file_footer_dex[0x0000];
   quint8 file_footer_mc [0x0000];	// [0x0000] 0x06277371
   quint8 file_footer_psp[0x0000];
-  //QString SG_Region_String[15];
-  QString filename; // hold the currently opened file.
-  bool modified; //has been modified.
+
+  FF7SLOT buffer_slot;// hold a buffer slot
+  QString buffer_region; // hold the buffers region data.
+
+  QString SG_Region_String[15];
   int SG_SIZE;
   int SG_HEADER;
   int SG_FOOTER;
@@ -551,10 +564,9 @@ private:
   //private functions
   void fix_sum(const QString &fileName);
   int ff7__checksum(void * qw );
-  void fix_pc_bytemask(int s);
+  void fix_psv_header(void);
   void fix_psx_header(int s);
   void fix_vmc_header(void);
-  
 };
 
 #endif //FF7Save
