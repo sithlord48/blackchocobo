@@ -55,6 +55,7 @@ protected:
     //void closeEvent();
 private:
     Ui::MainWindow *ui;
+    void file_modified(bool);
     bool skip_slot_mask;
     bool _init; //set true then false after a file load.
     bool load; // are we loading data? if so don't save it to the file.
