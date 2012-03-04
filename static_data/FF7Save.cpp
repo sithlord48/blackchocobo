@@ -167,8 +167,8 @@ bool FF7Save::LoadFile(const QString &fileName)
     else if (SG_TYPE == "PSX")
     {
         if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
--           (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")) ||
--           (fileName.contains("00868")) 
+           (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")) ||
+           (fileName.contains("00868")))
         {
             QString string;
             string = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
