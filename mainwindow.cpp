@@ -559,44 +559,32 @@ void MainWindow::on_actionSave_File_As_activated()
     }
     if(fileName.isEmpty()){return;}
     saveFileFull(fileName); //reguardless save the file of course if its has a string.
-    filename=fileName;//update filename.
-    ui->lbl_fileName->setText(filename);//update bar..
+    //filename=fileName;//update filename.
+    //ui->lbl_fileName->setText(filename);//update bar..
 }
 /*~~~~~~~~~~~SHORT SAVE~~~~~~~~~~~~*/
 void MainWindow::saveFileFull(QString fileName)
 {
     if((ff7->type() =="PC") && !(settings->value("skip_slot_mask").toBool())){ff7->fix_pc_bytemask(s);}//fix starting slot on pc
+
     if(ff7->SaveFile(fileName))
     {
-        file_modified(false);
         if(_init)
         {//if no save was loaded and new game was clicked be sure to act like a game was loaded.
             filename=fileName;//update filename.
             _init=false;
-            guirefresh(0);
-            file_modified(false);
         }
+        filename =fileName;
+        file_modified(false);
+        guirefresh(0);
     }
     else{QMessageBox::information(this,tr("Save Error"),tr("Failed to save file\n%1").arg(fileName));}
 }
 /*~~~~~~~~~~~~~~~New_Game~~~~~~~~~~~*/
 void MainWindow::on_actionNew_Game_triggered()
 {
-    QFile file(settings->value("default_save_file").toString());
-    if(!file.open(QFile::ReadOnly))
-    {
-         QMessageBox::warning(this, tr("Black Chocobo"),
-             tr("Cannot read file %1:\n%2 Be Sure its is a Raw PSX Save")
-            .arg(settings->value("default_save_file").toString()).arg(file.errorString()));
-         return;
-    }
-    QByteArray ff7file;
-    ff7file = file.readAll(); //put all data in temp raw file
-    QByteArray temp; // create a temp to be used when needed
-    int index = 0x200;
-    temp = ff7file.mid(index,0x10f4);
-    memcpy(&ff7->slot[s],temp,0x10f4);
-    //check for non english and set names accordingly.
+    ff7->New_Game(s);
+
     if(ff7->region(s).contains("00700") || ff7->region(s).contains("01057"))
     {
         for(int c=0;c<9;c++){for(int i=0;i<12;i++){ff7->slot[s].chars[c].name[i]=0xFF;}}
@@ -619,7 +607,6 @@ void MainWindow::on_actionNew_Game_triggered()
         temp =Text.toFF7(QString::fromUtf8("シド"));
         memcpy(&ff7->slot[s].chars[8].name,temp,temp.length());
     }
-    else if(ff7->region(s).isEmpty()){ff7->setRegion(s,"BASCUS-94163FF7-S01");}
     if(!load){file_modified(true);}
     guirefresh(1);
 }
@@ -635,6 +622,7 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
         .arg(settings->value("default_save_file").toString()).arg(file.errorString()));
         return;
     }
+
     QByteArray ff7file;
     ff7file = file.readAll(); //put all data in temp raw file
     QByteArray temp; // create a temp to be used when needed

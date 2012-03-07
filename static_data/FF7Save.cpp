@@ -945,3 +945,22 @@ void FF7Save::setType(QString type)
         file_footerp     = file_footer_dex;          //pointer to dex file footer
     }
 }
+void FF7Save::New_Game(int s,QString fileName)
+{
+    if(fileName.isEmpty() || fileName.isNull())
+    {
+        memcpy(&slot[s],&default_save,0x10F4);
+    }
+    else
+    {
+        QFile file(fileName);
+        if(!file.open(QFile::ReadOnly)){return;}
+        QByteArray ff7file;
+        ff7file = file.readAll(); //put all data in temp raw file
+        QByteArray temp; // create a temp to be used when needed
+        int index = 0x200;
+        temp = ff7file.mid(index,0x10f4);
+        memcpy(&slot[s],temp,0x10f4);
+    }
+    if(region(s).isEmpty()){setRegion(s,"BASCUS-94163FF7-S01");}
+}
