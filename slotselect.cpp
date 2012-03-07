@@ -592,10 +592,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
             break;
             }
         }
-        else if(ff7->region(s).contains("00867") ||ff7->region(s).contains("00869") ||
-                ff7->region(s).contains("00900") ||ff7->region(s).contains("94163") ||
-                ff7->region(s).contains("00700") ||ff7->region(s).contains("01057") ||
-                ff7->region(s).contains("00868"))
+        else if(ff7->isFF7(s))
         {//FF7 Slot
             //theme the box
             QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
