@@ -1496,7 +1496,7 @@ void MainWindow::update_stat_totals(void)
 
             if(ff7->slot[s].chars[curchar].materias[i].id == 0x03)
             {//Catch Magic Plus
-                int level=1;
+                int level=0;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
                 for(int m=0; m<Materias.Levels(3);m++){if(aptemp >= Materias.Ap(3,m)){level++;}}
                 magbonus += ff7->slot[s].chars[curchar].magic * (0.01*(level*10));
@@ -1507,7 +1507,7 @@ void MainWindow::update_stat_totals(void)
 
             if(ff7->slot[s].chars[curchar].materias[i].id == 0x02)
             {//Catch Speed Plus
-                int level=1;
+                int level=0;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
                 for(int m=0; m<Materias.Levels(2);m++){if(aptemp >= Materias.Ap(2,m)){level++;}}
                 dexbonus += ff7->slot[s].chars[curchar].dexterity * (0.01*(level*10));
@@ -1516,7 +1516,7 @@ void MainWindow::update_stat_totals(void)
 
             if(ff7->slot[s].chars[curchar].materias[i].id == 0x04)
             {//Catch Luck Plus
-                int level=1;
+                int level=0;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
                 for(int m=0; m<Materias.Levels(4);m++){if(aptemp >= Materias.Ap(4,m)){level++;}}
                 lckbonus += ff7->slot[s].chars[curchar].magic * (0.01*(level*10));
@@ -1525,7 +1525,7 @@ void MainWindow::update_stat_totals(void)
 
             if(ff7->slot[s].chars[curchar].materias[i].id == 0x01)
             {//Catch HP Plus
-                int level=1;
+                int level=0;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
                 for(int m=0; m<Materias.Levels(1);m++){if(aptemp >= Materias.Ap(1,m)){level++;}}
                 hpbonus +=level*10;
@@ -1534,7 +1534,7 @@ void MainWindow::update_stat_totals(void)
 
             if(ff7->slot[s].chars[curchar].materias[i].id ==0x00)
             {//Catch Mp Plus
-                int level=1;
+                int level=0;
                 int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
                 for(int m=0; m<Materias.Levels(0);m++){if(aptemp >= Materias.Ap(0,m)){level++;}}
                 mpbonus +=level*10;
@@ -2563,7 +2563,7 @@ void MainWindow::guirefresh(bool newgame)
     else {}
 
     /*~~~~Check for SG type and ff7~~~~*/
-    if(!ff7->isFF7(s) && !ff7->isEmpty(s))
+    if(!ff7->isFF7(s) && !ff7->region(s).isEmpty())
     {// NOT FF7
         errbox error(0,ff7,s);
         error.setStyleSheet(this->styleSheet());
