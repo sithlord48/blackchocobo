@@ -583,8 +583,8 @@ void MainWindow::saveFileFull(QString fileName)
 /*~~~~~~~~~~~~~~~New_Game~~~~~~~~~~~*/
 void MainWindow::on_actionNew_Game_triggered()
 {
-    ff7->New_Game(s);
-
+    ff7->New_Game(s);//call the new game function
+    //detect region and fix names if needed.
     if(ff7->region(s).contains("00700") || ff7->region(s).contains("01057"))
     {
         for(int c=0;c<9;c++){for(int i=0;i<12;i++){ff7->slot[s].chars[c].name[i]=0xFF;}}
@@ -607,6 +607,7 @@ void MainWindow::on_actionNew_Game_triggered()
         temp =Text.toFF7(QString::fromUtf8("シド"));
         memcpy(&ff7->slot[s].chars[8].name,temp,temp.length());
     }
+    _init=false;
     if(!load){file_modified(true);}
     guirefresh(1);
 }
@@ -712,8 +713,12 @@ void MainWindow::on_actionExport_PC_Save_activated()
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 SaveGame"),  settings->value("export_pc").toString() ,
     tr("FF7 SaveGame(*.ff7)")); // Only Allow PC save Since we are going to make one
-    if (fileName.isEmpty()){return;}// catch if Cancel is pressed
-    else{ff7->Export_PC(fileName);}
+    if(fileName.isEmpty()){return;}// catch if Cancel is pressed
+    else
+    {
+        ui->combo_control->setCurrentIndex(0);
+        ff7->Export_PC(fileName);
+    }
 }
 /*~~~~~~~~~~~~~~~~~EXPORT PSX~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionExport_PSX_activated()
@@ -722,7 +727,11 @@ void MainWindow::on_actionExport_PSX_activated()
     tr("Save Final Fantasy 7 SaveGame"), ff7->region(s),
     tr("BASCUS-94163FF7-Sxx(*-S*);;BESCES-00867FF7-Sxx(*-S*);;BESCES-00868FF7-Sxx(*-S*);;BESCES-00869FF7-Sxx(*-S*);;BESCES-00900FF7-Sxx(*-S*);;BISLPS-00700FF7-Sxx(*-S*);;BISLPS-01057FF7-Sxx(*-S*)"));
     if (fileName.isEmpty()){return;}// catch if Cancel is pressed
-    else{ff7->Export_PSX(fileName);}
+    else
+    {
+        ui->combo_control->setCurrentIndex(0);
+        ff7->Export_PSX(fileName);
+    }
 }
 /*~~~~~Export Mcr/Mcd~~~~~~*/
 void MainWindow::on_actionExport_MC_triggered()
@@ -732,7 +741,11 @@ void MainWindow::on_actionExport_MC_triggered()
     tr("Save Final Fantasy 7 MC SaveGame"), settings->value("save_emu_path").toString(),
     tr("FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)"));
     if(fileName.isEmpty()){return;}
-    else{ff7->Export_VMC(fileName);}
+    else
+    {
+        ui->combo_control->setCurrentIndex(0);
+        ff7->Export_VMC(fileName);
+    }
 }
 void MainWindow::on_actionExport_VGS_triggered()
 {
@@ -740,7 +753,11 @@ void MainWindow::on_actionExport_VGS_triggered()
     tr("Save Final Fantasy 7 VGS SaveGame"), settings->value("save_emu_path").toString(),
     tr("FF7 VGS SaveGame(*.vgs *.mem)"));
     if(fileName.isEmpty()){return;}
-    else{ff7->Export_VGS(fileName);}
+    else
+    {
+        ui->combo_control->setCurrentIndex(0);
+        ff7->Export_VGS(fileName);
+    }
 }
 void MainWindow::on_actionExport_DEX_triggered()
 {
@@ -748,7 +765,11 @@ void MainWindow::on_actionExport_DEX_triggered()
     QString fileName = QFileDialog::getSaveFileName(this,
         tr("Save Final Fantasy 7 Dex-Drive SaveGame"), settings->value("save_emu_path").toString(),tr("FF7 Dex SaveGame(*.gme)"));
     if(fileName.isEmpty()){return;}
-    else{ff7->Export_DEX(fileName);}
+    else
+    {
+        ui->combo_control->setCurrentIndex(0);
+        ff7->Export_DEX(fileName);
+    }
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -1411,6 +1432,7 @@ void MainWindow::charupdate(void)
     materiaupdate_slot();
     update_stat_totals();
     weapon_stat();
+
     if(ui->action_auto_char_growth->isChecked()){setchar_growth(0);}
 }
 void MainWindow::weapon_stat(void)
@@ -2115,6 +2137,7 @@ if(ff7->slot[s].chars[curchar].materias[13].id != 0xFF){ui->a_m_s6->setToolTip(M
 if(ff7->slot[s].chars[curchar].materias[14].id != 0xFF){ui->a_m_s7->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[14].id));}else{ui->a_m_s7->setToolTip(QString(tr("Empty")));}
 if(ff7->slot[s].chars[curchar].materias[15].id != 0xFF){ui->a_m_s8->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[15].id));}else{ui->a_m_s8->setToolTip(QString(tr("Empty")));}
 
+
 quint8 current_id = ff7->slot[s].chars[curchar].materias[mslotsel].id;
 ui->btn_m_lvl1_slot->setVisible(0);
 ui->btn_m_lvl2_slot->setVisible(0);
@@ -2143,12 +2166,10 @@ ui->a_m_s5_frame->setFrameStyle(0);
 ui->a_m_s6_frame->setFrameStyle(0);
 ui->a_m_s7_frame->setFrameStyle(0);
 ui->a_m_s8_frame->setFrameStyle(0);
+
+
 //All Stars Set to empty for this materia
-ui->btn_m_lvl1_slot->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
-ui->btn_m_lvl2_slot->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
-ui->btn_m_lvl3_slot->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
-ui->btn_m_lvl4_slot->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
-ui->btn_m_lvl5_slot->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
+
 switch(mslotsel)
 {
     case 0: ui->w_m_s1_frame->setFrameStyle(1);    break;
@@ -2191,6 +2212,7 @@ if(current_id == 0xFF) //if the slot is empty take some precautions
 
 else if(Materias.Name(current_id) == tr("DON'T USE")) //this is a placeholder materia.
 {
+
     ui->lbl_mat_stats_slot->setText(Materias.Stat_String(current_id));
     ui->lcd_ap_master_slot->display(tr("NO CAP"));
     ui->sb_addap_slot->setMaximum(16777215);
@@ -2247,6 +2269,12 @@ else // make the materia look nice
 
     }
 //fill all stars needed..
+
+    ui->btn_m_lvl1_slot->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
+    ui->btn_m_lvl2_slot->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
+    ui->btn_m_lvl3_slot->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
+    ui->btn_m_lvl4_slot->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
+    ui->btn_m_lvl5_slot->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
     switch(level)
     {
         case 5: ui->spell_lvl5_group_slot->setVisible(1); ui->lbl_spell_lvl5_slot->setText(Materias.Skills(current_id,4));ui->btn_m_lvl5_slot->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
@@ -2617,6 +2645,7 @@ void MainWindow::guirefresh(bool newgame)
         }
     else
     {//IS FF7 Slot
+
         QByteArray text;
         if(ff7->region(s).isEmpty()
            && (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
@@ -2626,7 +2655,6 @@ void MainWindow::guirefresh(bool newgame)
         }
         if(ff7->region(s).contains("00700") || ff7->region(s).contains("01057")){Text.init(1);}//Japanese
         else{Text.init(0);}// not japanese save.
-
 
         //Clear all check boxes and index's
         ui->cb_replay->setCurrentIndex(0);
@@ -2644,12 +2672,11 @@ void MainWindow::guirefresh(bool newgame)
         ui->cb_visible_blue_chocobo->setChecked(Qt::Unchecked);
         ui->cb_visible_black_chocobo->setChecked(Qt::Unchecked);
         ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
-        item_preview->setItem(-1);//reset.
         if((ff7->slot[s].ruby_emerald) &(1<<3)){ui->cb_ruby_dead->setChecked(Qt::Checked);}
         if((ff7->slot[s].ruby_emerald)& (1<<4)){ui->cb_emerald_dead->setChecked(Qt::Checked);}
         if((ff7->slot[s].field_help)& (1<<0)){ui->cb_field_help->setChecked(Qt::Checked);}
         if((ff7->slot[s].tut_sub)& (1<<6)){ui->cb_battle_targets->setChecked(Qt::Checked);}
-
+        item_preview->setItem(-1);//reset.
         /*~~~~Set Region info and icon~~~~*/
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
@@ -2709,6 +2736,7 @@ void MainWindow::guirefresh(bool newgame)
         //hide buttons config if not debug or non pc save
         if(ff7->type() !="PC" || ui->action_show_debug->isChecked()){ui->group_controller_mapping->setVisible(1);}
         else{ui->group_controller_mapping->setVisible(0);}
+
         /*~~~~~End Options Loading~~~~~*/
         ui->sb_coster_1->setValue(ff7->slot[s].coster_1);
         ui->sb_coster_2->setValue(ff7->slot[s].coster_2);
@@ -2814,7 +2842,6 @@ void MainWindow::guirefresh(bool newgame)
         if((1 << 6) & ff7->slot[s].world_map_chocobos){ui->cb_visible_gold_chocobo->setChecked(Qt::Checked);}
 
 
-
         for (int i=0;i<6;i++)//flyers
         {
             ui->list_flyers->setCurrentRow(i);
@@ -2863,7 +2890,6 @@ void MainWindow::guirefresh(bool newgame)
         }
         ui->list_keyitems->setCurrentRow(0);//move list up totop
         ui->list_keyitems->setCurrentRow(-1);//unselect list
-
         /*~~~~~party combo boxes (checking for empty slots)~~~*/
         if (ff7->slot[s].party[0] >= 0x0C){ui->combo_party1->setCurrentIndex(12);}
         else{ui->combo_party1->setCurrentIndex(ff7->slot[s].party[0]);}
