@@ -67,10 +67,12 @@ TRANSLATIONS += lang/bchoco_en.ts \
 macx:{
     #set program icon on mac os
     ICON = icon/bchoco_icon_osx.icns
+    CONFIG += x86_64 x86
     VERS = $$system(svn info -r HEAD . | grep '"Changed Rev"' | cut -b 19-)
     {
     DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
     message("Using Svn Revision:$${VERS}")
+    system(lrelease Black_Chocobo.pro)
     }
 }
 
