@@ -4972,7 +4972,8 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>MDS6_2: Sense Materia</source>
-        <translation type="unfinished">６番街公園: マテリア みやぶる</translation>
+        <translatorcomment>○</translatorcomment>
+        <translation>６番街公園: マテリア みやぶる</translation>
     </message>
     <message>
         <source>EALS_1: Cover Materia</source>
@@ -4992,7 +4993,8 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>EALIN_1: Potion + Phoenix Down</source>
-        <translation type="unfinished">エアリスの家２Ｆ: ポーション + フェニックスの尾</translation>
+        <translatorcomment>○</translatorcomment>
+        <translation>エアリスの家２Ｆ: ポーション + フェニックスの尾</translation>
     </message>
     <message>
         <source>ZZ1:Mythril</source>
@@ -5016,16 +5018,17 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Load Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>読み込みに失敗</translation>
     </message>
     <message>
         <source>Failed to Load File</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルの読み込みに失敗しました</translation>
     </message>
     <message>
         <source>Failed to save file
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルの保存に失敗しました
+%1</translation>
     </message>
 </context>
 <context>
@@ -7175,7 +7178,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Bug In Dex and Vgs Header</source>
-        <translation type="unfinished"></translation>
+        <translation>修正: DEX, VGS ヘッダーのバグ</translation>
     </message>
 </context>
 <context>
@@ -7290,11 +7293,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Save Error</source>
-        <translation type="unfinished">保存エラー</translation>
+        <translation>保存エラー</translation>
     </message>
     <message>
         <source>Error On File Save, Going Back To The Selection Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>ファイルの保存エラー, 選択ダイアログに戻ります</translation>
     </message>
 </context>
 </TS>
