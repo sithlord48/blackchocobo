@@ -16,6 +16,7 @@
 #ifndef DEF_FF7SAVE
 #define DEF_FF7SAVE
 #include <QObject>
+#include <cstdlib>
 /*~~~~~~~~~~~~~~~~~~PC Save File ~~~~~~~~~~~~*/
   const int FF7_PC_SAVE_GAME_SIZE = 0xFE55;
   const int FF7_PC_SAVE_GAME_HEADER = 0x09;
