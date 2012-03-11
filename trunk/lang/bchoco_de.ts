@@ -2128,6 +2128,10 @@
         <source>AVALANCHE Hideout</source>
         <translation>AVALANCHE Versteck</translation>
     </message>
+    <message>
+        <source>Mideel,Clinic</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -3573,7 +3577,7 @@
     <message>
         <source>Cannot read file %1:
 %2 Be Sure its is a Raw PSX Save</source>
-        <translation>Kann Datei nicht lesen %1:
+        <translation type="obsolete">Kann Datei nicht lesen %1:
 %2 Gehe sicher, dass es ein Raw PSX Spielstand ist</translation>
     </message>
     <message>

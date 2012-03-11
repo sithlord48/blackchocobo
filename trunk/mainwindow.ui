@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>776</width>
-    <height>578</height>
+    <width>774</width>
+    <height>576</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -1694,8 +1694,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>455</width>
-             <height>438</height>
+             <width>453</width>
+             <height>436</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -4695,8 +4695,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>401</width>
-             <height>420</height>
+             <width>453</width>
+             <height>436</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8489,7 +8489,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>212</width>
+                   <width>235</width>
                    <height>414</height>
                   </rect>
                  </property>
@@ -10760,8 +10760,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1446</width>
-             <height>276</height>
+             <width>1452</width>
+             <height>334</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16769,8 +16769,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>720</width>
-             <height>275</height>
+             <width>774</width>
+             <height>440</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -17188,8 +17188,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>747</width>
-             <height>414</height>
+             <width>774</width>
+             <height>440</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -17430,7 +17430,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="maximumSize">
                    <size>
                     <width>16777215</width>
-                    <height>70</height>
+                    <height>75</height>
                    </size>
                   </property>
                   <property name="title">
@@ -17586,6 +17586,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="orientation">
                         <enum>Qt::Horizontal</enum>
                        </property>
+                       <property name="sizeType">
+                        <enum>QSizePolicy::Expanding</enum>
+                       </property>
                        <property name="sizeHint" stdset="0">
                         <size>
                          <width>40</width>
@@ -17595,14 +17598,56 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                       </spacer>
                      </item>
                      <item>
-                      <widget class="QLabel" name="label_196">
-                       <property name="text">
-                        <string>id</string>
+                      <widget class="QComboBox" name="cb_world_party_leader">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
                        </property>
+                       <property name="minimumSize">
+                        <size>
+                         <width>0</width>
+                         <height>24</height>
+                        </size>
+                       </property>
+                       <item>
+                        <property name="text">
+                         <string>Cloud</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="images.qrc">
+                          <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Tifa</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="images.qrc">
+                          <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Cid</string>
+                        </property>
+                        <property name="icon">
+                         <iconset resource="images.qrc">
+                          <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
+                        </property>
+                       </item>
                       </widget>
                      </item>
                      <item>
                       <widget class="QSpinBox" name="leader_id">
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
                        <property name="wrapping">
                         <bool>true</bool>
                        </property>
@@ -17613,19 +17658,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         <number>255</number>
                        </property>
                       </widget>
-                     </item>
-                     <item>
-                      <spacer name="horizontalSpacer_74">
-                       <property name="orientation">
-                        <enum>Qt::Horizontal</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                        <size>
-                         <width>40</width>
-                         <height>20</height>
-                        </size>
-                       </property>
-                      </spacer>
                      </item>
                     </layout>
                    </item>
@@ -19106,7 +19138,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>328</width>
+                  <width>390</width>
                   <height>1492</height>
                  </rect>
                 </property>
@@ -21821,7 +21853,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>513</width>
+             <width>747</width>
              <height>683</height>
             </rect>
            </property>
@@ -27884,7 +27916,7 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>776</width>
+     <width>774</width>
      <height>22</height>
     </rect>
    </property>
@@ -29064,12 +29096,44 @@ Var And Scrolling Synced To Left Table</string>
    <slot>display(int)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>476</x>
-     <y>331</y>
+     <x>517</x>
+     <y>307</y>
     </hint>
     <hint type="destinationlabel">
-     <x>548</x>
-     <y>334</y>
+     <x>563</x>
+     <y>307</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leader_id</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>cb_world_party_leader</receiver>
+   <slot>setCurrentIndex(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>242</x>
+     <y>376</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>166</x>
+     <y>380</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cb_world_party_leader</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>leader_id</receiver>
+   <slot>setValue(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>191</x>
+     <y>367</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>231</x>
+     <y>370</y>
     </hint>
    </hints>
   </connection>

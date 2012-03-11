@@ -88,6 +88,7 @@ static LOCATION Locations[]=
     {QT_TRANSLATE_NOOP("Locations","Highwind"),"1","72","65533","62949","99"},
     {QT_TRANSLATE_NOOP("Locations","Debug Room [en]"),"1","94","0","0","0"},
     {QT_TRANSLATE_NOOP("Locations","Debug Room [ja]"),"1","65","0","0","0"},
-    {QT_TRANSLATE_NOOP("Locations","Test Fight"),"2","0","0","0","0"}
+    {QT_TRANSLATE_NOOP("Locations","Test Fight"),"2","0","0","0","0"},
+    {QT_TRANSLATE_NOOP("Locations","Mideel,Clinic"),"1","720","151","65380","19"}
 };
 #endif //FF7LOCATION_H

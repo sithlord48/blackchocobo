@@ -111,6 +111,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     ui->tbl_diff->setVisible(0);
     ui->bm_unknown->setVisible(0);
     ui->bh_id->setVisible(0);
+    ui->leader_id->setVisible(false);
 
     //chocobo boxes
     ui->box_stable1->setEnabled(false);
@@ -846,6 +847,8 @@ void MainWindow::on_action_show_debug_toggled(bool checked)
         ui->combo_id->setVisible(true);
         ui->lbl_id->setVisible(true);
         ui->bm_unknown->setVisible(true);
+        ui->bh_id->setVisible(true);
+        ui->leader_id->setVisible(true);
         if(ff7->type() == "PC"){ui->group_controller_mapping->setVisible(true);}
         settings->setValue("show_test",1);
         ui->action_show_debug->setIcon(QIcon(":/icon/debug_sel"));
@@ -876,6 +879,8 @@ void MainWindow::on_action_show_debug_toggled(bool checked)
         ui->combo_id->setVisible(false);
         ui->lbl_id->setVisible(false);
         ui->bm_unknown->setVisible(false);
+        ui->bh_id->setVisible(false);
+        ui->leader_id->setVisible(false);
         if(ff7->type() =="PC"){ui->group_controller_mapping->setVisible(false);}
         settings->setValue("show_test",0);
         ui->action_show_debug->setIcon(QIcon(":/icon/debug_unsel"));

@@ -2128,6 +2128,10 @@
         <source>AVALANCHE Hideout</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Mideel,Clinic</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -3556,11 +3560,6 @@
     </message>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PSP.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cannot read file %1:
-%2 Be Sure its is a Raw PSX Save</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

@@ -2128,6 +2128,10 @@
         <source>AVALANCHE Hideout</source>
         <translation>Cachette d&apos;AVALANCHE</translation>
     </message>
+    <message>
+        <source>Mideel,Clinic</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -3576,7 +3580,7 @@
     <message>
         <source>Cannot read file %1:
 %2 Be Sure its is a Raw PSX Save</source>
-        <translation>Impossible de lire le fichier%1:
+        <translation type="obsolete">Impossible de lire le fichier%1:
 %2., s&apos;assurer qu&apos;il est une sauvegarde PSX non-identifiée</translation>
     </message>
     <message>
