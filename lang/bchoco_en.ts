@@ -4654,10 +4654,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>cb_s5_7 (aeris On roof)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Spi</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4943,6 +4939,14 @@ Table Entries are Editable</source>
     <message>
         <source>Failed to save file
 %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wutai - In Front Of Turtle Paradise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -2847,7 +2847,7 @@ void MainWindow::guirefresh(bool newgame)
         if((1 << 6) & ff7->slot[s].world_map_chocobos){ui->cb_visible_gold_chocobo->setChecked(Qt::Checked);}
 
 
-        for (int i=0;i<6;i++)//flyers
+        for (int i=0;i<7;i++)//flyers
         {
             ui->list_flyers->setCurrentRow(i);
             if ((1 << i) & ff7->slot[s].turtleflyers){ui->list_flyers->currentItem()->setCheckState(Qt::Checked);}
