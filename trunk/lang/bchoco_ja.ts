@@ -4736,7 +4736,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>cb_s5_7 (aeris On roof)</source>
-        <translation>cb_s5_7 （エアリスが屋根の上に？）</translation>
+        <translation type="obsolete">cb_s5_7 （エアリスが屋根の上に？）</translation>
     </message>
     <message>
         <source>Spi</source>
@@ -5033,6 +5033,14 @@ Table Entries are Editable</source>
 %1</source>
         <translation>ファイルの保存に失敗しました
 %1</translation>
+    </message>
+    <message>
+        <source>Wutai - In Front Of Turtle Paradise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

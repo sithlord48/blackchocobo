@@ -4717,7 +4717,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>cb_s5_7 (aeris On roof)</source>
-        <translation>cb_s5_7 (Aéris sur le toit)</translation>
+        <translation type="obsolete">cb_s5_7 (Aéris sur le toit)</translation>
     </message>
     <message>
         <source>Spi</source>
@@ -5008,6 +5008,14 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     <message>
         <source>Failed to save file
 %1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wutai - In Front Of Turtle Paradise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
