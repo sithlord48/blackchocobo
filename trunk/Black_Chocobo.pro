@@ -48,7 +48,9 @@ HEADERS += mainwindow.h \
     static_data/FF7Location.h \
     widgets/ItemPreview.h \
     widgets/DialogPreview.h \
-    version.h
+    version.h \
+    static_data/FF7Save_Const.h \
+    static_data/FF7Save_Types.h
 FORMS += mainwindow.ui \
     slotselect.ui \
     about.ui \

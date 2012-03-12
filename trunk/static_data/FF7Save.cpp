@@ -184,13 +184,9 @@ int FF7Save::ff7__checksum( void* qw )
    }
    return (r^0xFFFF)&0xFFFF;
 }
-qint16 FF7Save::itemdecode( quint16 itemraw )
+qint16 FF7Save::itemDecode( quint16 itemraw )
 {
     quint16 item;
-    //int item = (itemraw << 2) & 0x1ff;
-    //int item = (itemraw << 1) | (itemraw >> (16-1));
-    //int item = (itemraw >> 1) & 0x7FFF | (itemraw << (16 - 1);
-
     int one = 1;
     //Big endian
     //Do Nothing...Item Raw Format QQQQQQQXXXXXXXXX | Item Format QQQQQQQXXXXXXXXX
@@ -203,10 +199,17 @@ qint16 FF7Save::itemdecode( quint16 itemraw )
         //item = ((itemraw>>(1)%16) & (0x7FFF>>(-1+(1)%16))) | (itemraw<<(16-(1)%16));
         item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);
     }
-
+    /*
+    //Debug
+        QString itemsrawsq,itemsq;
+        itemsrawsq.setNum(itemraw, 2);
+        itemsq.setNum(item, 2);
+        qDebug() << "Item Decoded: " << itemsrawsq;
+        qDebug() << "Item Encoded: " << itemsq;
+    */
     return item;
 }
-qint16 FF7Save::itemencode( quint16 id, quint8 qty )
+qint16 FF7Save::itemEncode( quint16 id, quint8 qty )
 {
     quint16 item,itemraw;
     int one = 1;
@@ -222,25 +225,31 @@ qint16 FF7Save::itemencode( quint16 id, quint8 qty )
         item = ((id << 7) & 0xFF80) | (qty & 0x7F);
         itemraw = (item << 1) | (item >> (16 - 1));
     }
-
-    //quint16 item = ((itemraw>>(1)%16) & (0xFFFF>>(-1+(1)%16))) | (itemraw<<(16-(1)%16));
-
+    /*
+//Debug
+    QString itemsrawsq,itemsq;
+    itemsrawsq.setNum(itemraw, 2);
+    itemsq.setNum(item, 2);
+    qDebug() << "Item Encoded: " << itemsq;
+    qDebug() << "Item Decoded: " << itemsrawsq;
+*/
     return itemraw;
 }
-qint16 FF7Save::itemgetid( quint16 itemraw )
+void FF7Save::setItemId(int s,int item_num,quint16 new_id){slot[s].items[item_num]= itemEncode(new_id,itemQty(s,item_num));}
+
+void FF7Save::setItemQty(int s,int item_num,quint8 new_qty){slot[s].items[item_num]=itemEncode(itemId(s,item_num),new_qty);}
+
+quint16 FF7Save::itemId(int s,int item_num)
 {
-    quint16 item = itemdecode(itemraw);
-    //int id = (item & 0xFF80) >> 7;
-    int id = (item & 0x1FF);
+    quint16 item = itemDecode(slot[s].items[item_num]);
+    quint16 id = (item & 0x1FF);
     return id;
 }
-qint8 FF7Save::itemgetqty( quint16 itemraw )
+quint8 FF7Save::itemQty(int s,int item_num)
 {
-    quint16 item = itemdecode(itemraw);
-    int qty;
-    //qty = item & 0x7F;
+    quint16 item = itemDecode(slot[s].items[item_num]);
+    quint8 qty;
     qty = (item & 0xFE00) >> 9;
-
     return qty;
 }
 void FF7Save::clearslot(int rmslot)
