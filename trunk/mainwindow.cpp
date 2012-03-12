@@ -3847,7 +3847,7 @@ void MainWindow::on_sb_addqty_valueChanged(int value)
     if (ui->combo_additem->currentIndex()<256){ff7->slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(value * 2);}
     else{ff7->slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(value* 2) +1;}
 */
-    ff7->slot[s].items[ui->tbl_itm->currentRow()].itemraw = ff7->itemencode(ff7->itemgetid(ff7->slot[s].items[ui->tbl_itm->currentRow()].itemraw),ui->sb_addqty->value());
+    ff7->slot[s].items[ui->tbl_itm->currentRow()].itemraw = ff7->itemencode(ff7->itemgetid(ff7->slot[s].items[ui->tbl_itm->currentRow()].itemraw),quint8(value));
     itemupdate();
 }}
 
