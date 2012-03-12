@@ -184,7 +184,7 @@ int FF7Save::ff7__checksum( void* qw )
    }
    return (r^0xFFFF)&0xFFFF;
 }
-qint16 FF7Save::itemDecode( quint16 itemraw )
+quint16 FF7Save::itemDecode( quint16 itemraw )
 {
     quint16 item;
     int one = 1;
@@ -209,7 +209,7 @@ qint16 FF7Save::itemDecode( quint16 itemraw )
     */
     return item;
 }
-qint16 FF7Save::itemEncode( quint16 id, quint8 qty )
+quint16 FF7Save::itemEncode( quint16 id, quint8 qty )
 {
     quint16 item,itemraw;
     int one = 1;
