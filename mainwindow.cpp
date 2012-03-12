@@ -2482,9 +2482,44 @@ void MainWindow::itemupdate()
     ui->tbl_itm->setColumnWidth(0,ui->tbl_itm->width()-54);
     ui->tbl_itm->setColumnWidth(1,32);
     ui->tbl_itm->setRowCount(320);
+
+    int one = 1;
+    if (*(char *)&one) {
+        qDebug("Big endian");}
+    else {
+        qDebug("Little endian");
+    }
+
     for (int i=0;i<320;i++) // set up items
     {
-        if (ff7->slot[s].items[i].qty == 0xFF && ff7->slot[s].items[i].id == 0xFF)
+        /*
+        qDebug() << "index position: " << i;
+        qDebug() << "index id: " << std::hex << ff7->itemgetid(ff7->slot[s].items[i].itemraw);
+        qDebug() << "index qty: " << std::hex << ff7->itemgetqty(ff7->slot[s].items[i].itemraw);
+*/
+
+
+
+        QString itemsrawsq,itemsq;
+        //itemsrawsq.setByteOrder(QDataStream::LittleEndian);
+        //itemsq.setByteOrder(QDataStream::LittleEndian);
+        itemsrawsq.setNum(ff7->slot[s].items[i].itemraw, 2);
+        itemsq.setNum(ff7->itemdecode(ff7->slot[s].items[i].itemraw), 2);
+
+        QString ids,qtys;
+        ids.setNum(ff7->itemgetid(ff7->slot[s].items[i].itemraw), 2);
+        qtys.setNum(ff7->itemgetqty(ff7->slot[s].items[i].itemraw), 2);
+
+        qDebug() << "index position: " << i;
+        qDebug() << "Item Raw: " << itemsrawsq;
+        qDebug() << "Item shifted: " << itemsq;
+        qDebug("Item id: %#09X",ff7->itemgetid(ff7->slot[s].items[i].itemraw));
+        qDebug("Item qty: %#07X",ff7->itemgetqty(ff7->slot[s].items[i].itemraw));
+        qDebug() << "Item id: " << ids;
+        qDebug() << "Item qty: " << qtys;
+
+
+        if (ff7->itemgetqty(ff7->slot[s].items[i].itemraw) == 0x7F && ff7->itemgetid(ff7->slot[s].items[i].itemraw) == 0x1FF)
         {
             newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
             newItem->setToolTip("");
@@ -2493,7 +2528,8 @@ void MainWindow::itemupdate()
             newItem = new QTableWidgetItem("",0);
             ui->tbl_itm->setItem(i,1,newItem);
         }
-        else if(ff7->slot[s].items[i].qty %2 ==1 && (ff7->slot[s].items[i].id+256)>319)
+        //else if(ff7->slot[s].items[i].qty %2 == 1 && (ff7->slot[s].items[i].id+256)>319)
+        else if(ff7->itemgetid(ff7->slot[s].items[i].itemraw) > 319)
         {
             newItem = new QTableWidgetItem(tr("-------BAD ID-------"),0);
             newItem->setToolTip("");
@@ -2505,6 +2541,7 @@ void MainWindow::itemupdate()
         else
         {
             QString qty;
+/*          //Replaced by new item engine. (Vegeta_Ss4)
             if(ff7->slot[s].items[i].qty %2 ==0)
             {
                 newItem = new QTableWidgetItem(QPixmap::fromImage(Items.Image(ff7->slot[s].items[i].id)),Items.Name(ff7->slot[s].items[i].id),0);
@@ -2523,6 +2560,14 @@ void MainWindow::itemupdate()
                 newItem = new QTableWidgetItem(qty.setNum(ff7->slot[s].items[i].qty/2),0);
                 ui->tbl_itm->setItem(i,1,newItem);
             }
+*/
+            newItem = new QTableWidgetItem(QPixmap::fromImage(Items.Image(ff7->itemgetid(ff7->slot[s].items[i].itemraw))),Items.Name(ff7->itemgetid(ff7->slot[s].items[i].itemraw)),0);
+            newItem->setToolTip(Items.Desc(ff7->itemgetid(ff7->slot[s].items[i].itemraw)));
+            ui->tbl_itm->setItem(i,0, newItem);
+            ui->tbl_itm->setRowHeight(i,22);
+            newItem = new QTableWidgetItem(qty.setNum(ff7->itemgetqty(ff7->slot[s].items[i].itemraw)),0);
+            ui->tbl_itm->setItem(i,1,newItem);
+
         }
     }
     ui->tbl_itm->setCurrentCell(j,0);
@@ -2847,7 +2892,7 @@ void MainWindow::guirefresh(bool newgame)
         if((1 << 6) & ff7->slot[s].world_map_chocobos){ui->cb_visible_gold_chocobo->setChecked(Qt::Checked);}
 
 
-        for (int i=0;i<7;i++)//flyers
+        for (int i=0;i<6;i++)//flyers
         {
             ui->list_flyers->setCurrentRow(i);
             if ((1 << i) & ff7->slot[s].turtleflyers){ui->list_flyers->currentItem()->setCheckState(Qt::Checked);}
@@ -3763,8 +3808,7 @@ void MainWindow::on_cb_farm_items_8_toggled(bool checked){if(!load){file_modifie
 
 void MainWindow::on_clearItem_clicked()
 {
-    ff7->slot[s].items[ui->tbl_itm->currentRow()].id = 0xFF;
-    ff7->slot[s].items[ui->tbl_itm->currentRow()].qty = 0xFF;
+    ff7->slot[s].items[ui->tbl_itm->currentRow()].itemraw = 0xFFFF;
     itemupdate();
 }
 void MainWindow::on_btn_clear_keyitems_clicked()
@@ -3780,15 +3824,30 @@ void MainWindow::on_btn_clear_keyitems_clicked()
 
 void MainWindow::on_combo_additem_currentIndexChanged(int index)
 {if(!load){file_modified(true);    //we must also set the qty, since that determins how the table and the game will reconize the item and prevents bug#3014592.
-        if (index<256){ff7->slot[s].items[ui->tbl_itm->currentRow()].id = index;ff7->slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(ui->sb_addqty->value() * 2);item_preview->setItem(ff7->slot[s].items[ui->tbl_itm->currentRow()].id);}
-    else{ff7->slot[s].items[ui->tbl_itm->currentRow()].id = (index-256);ff7->slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(ui->sb_addqty->value()* 2) +1;item_preview->setItem(ff7->slot[s].items[ui->tbl_itm->currentRow()].id+256);}
+/*  //Replaced by new item engine. (Vegeta_Ss4)
+    if (index<256){
+        ff7->slot[s].items[ui->tbl_itm->currentRow()].id = index;
+        ff7->slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(ui->sb_addqty->value() * 2);
+        item_preview->setItem(ff7->slot[s].items[ui->tbl_itm->currentRow()].id);
+    }
+    else{
+        ff7->slot[s].items[ui->tbl_itm->currentRow()].id = (index-256);
+        ff7->slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(ui->sb_addqty->value()* 2) +1;
+        item_preview->setItem(ff7->slot[s].items[ui->tbl_itm->currentRow()].id+256);
+    }
+*/
+    ff7->slot[s].items[ui->tbl_itm->currentRow()].itemraw = ff7->itemencode(index,ui->sb_addqty->value());
+    item_preview->setItem(index);
     itemupdate();
 }}
 
 void MainWindow::on_sb_addqty_valueChanged(int value)
 {if(!load){file_modified(true);
+/*  //Replaced by new item engine. (Vegeta_Ss4)
     if (ui->combo_additem->currentIndex()<256){ff7->slot[s].items[ui->tbl_itm->currentRow()].qty = quint8(value * 2);}
     else{ff7->slot[s].items[ui->tbl_itm->currentRow()].qty  = quint8(value* 2) +1;}
+*/
+    ff7->slot[s].items[ui->tbl_itm->currentRow()].itemraw = ff7->itemencode(ff7->itemgetid(ff7->slot[s].items[ui->tbl_itm->currentRow()].itemraw),ui->sb_addqty->value());
     itemupdate();
 }}
 
@@ -3796,10 +3855,11 @@ void MainWindow::on_tbl_itm_currentCellChanged(int row)
 {
     if(!load)
     {//file_modified(true);
-        if (ff7->slot[s].items[row].qty == 255 && ff7->slot[s].items[row].id == 255){item_preview->setItem(-1);}
+        if (ff7->itemgetqty(ff7->slot[s].items[row].itemraw) == 0x7F && ff7->itemgetid(ff7->slot[s].items[row].itemraw) == 0x1FF){item_preview->setItem(-1);}
         else
         {
             load=true;
+            /* //Replaced by new item engine. (Vegeta_Ss4)
             if(ff7->slot[s].items[row].qty %2 ==0)
             {
                 ui->combo_additem->setCurrentIndex(ff7->slot[s].items[row].id);
@@ -3810,11 +3870,17 @@ void MainWindow::on_tbl_itm_currentCellChanged(int row)
                 ui->combo_additem->setCurrentIndex(ff7->slot[s].items[row].id+256);
                 ui->sb_addqty->setValue(ff7->slot[s].items[row].qty/2);
             }
+            */
+            ui->combo_additem->setCurrentIndex(ff7->itemgetid(ff7->slot[s].items[row].itemraw));
+            ui->sb_addqty->setValue(ff7->itemgetqty(ff7->slot[s].items[row].itemraw));
             load=false;
         }
     }
+    /* //Replaced by new item engine. (Vegeta_Ss4)
     if(ff7->slot[s].items[row].qty %2 ==0){item_preview->setItem(ff7->slot[s].items[row].id);}
     else{item_preview->setItem(ff7->slot[s].items[row].id+256);}
+    */
+    item_preview->setItem(ff7->itemgetid(ff7->slot[s].items[row].itemraw));
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -4660,8 +4726,11 @@ void MainWindow::on_btn_remove_all_items_clicked() //used for testing
 {
     for(int i=0;i<320;i++)
     {
+/*      //Replaced by new item engine. (Vegeta_Ss4)
         ff7->slot[s].items[i].id=0xFF;
-        ff7->slot[s].items[i].qty=0xFF;
+        ff7->slot[s].items[i].qty=0x7F;
+*/
+        ff7->slot[s].items[i].itemraw=0xFFFF;
     }
     if(!load){file_modified(true); }
     itemupdate();
@@ -5252,6 +5321,7 @@ void MainWindow::on_btn_item_add_each_item_clicked()
     ui->btn_remove_all_items->click();
     for(int i=0;i<320;i++)
     {
+/*      //Replaced by new item engine. (Vegeta_Ss4)
         if(Items.Name(i)!=tr("DON'T USE"))
         {
             if(i<106)
@@ -5268,7 +5338,27 @@ void MainWindow::on_btn_item_add_each_item_clicked()
             }
         }
         else{ff7->slot[s].items[i].id=0xFF;ff7->slot[s].items[i].qty=0xFF;}//exclude the test items
-    if(i>296){ff7->slot[s].items[i].id=0xFF;ff7->slot[s].items[i].qty=0xFF;}//replace the shifted ones w/ empty slots
+        if(i>296){ff7->slot[s].items[i].id=0xFF;ff7->slot[s].items[i].qty=0xFF;}//replace the shifted ones w/ empty slots
+*/
+
+        if(Items.Name(i)!=tr("DON'T USE"))
+        {
+            if(i<106)
+            {
+                ff7->slot[s].items[i].itemraw = ff7->itemencode(i,0x7F);
+            }
+            else// after the block of empty items shift up 23 spots.
+            {
+                ff7->slot[s].items[i-23].itemraw = ff7->itemencode(i,0x7F);
+            }
+        }
+        else{
+            ff7->slot[s].items[i].itemraw = ff7->itemencode(0x1FF,0x7F);
+        }//exclude the test items
+        if(i>296){
+            ff7->slot[s].items[i].itemraw = ff7->itemencode(0x1FF,0x7F);
+        }//replace the shifted ones w/ empty slots
+
     }
     guirefresh(0);
 }
