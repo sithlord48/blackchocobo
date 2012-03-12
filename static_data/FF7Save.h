@@ -104,8 +104,8 @@ private:
   void fix_psv_header(void);
   void fix_psx_header(int s);
   void fix_vmc_header(void);
-  qint16 itemDecode( quint16 itemraw );
-  qint16 itemEncode( quint16 id, quint8 qty );
+  quint16 itemDecode( quint16 itemraw );
+  quint16 itemEncode( quint16 id, quint8 qty );
 };
 
 #endif //FF7Save
