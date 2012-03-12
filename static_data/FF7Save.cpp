@@ -184,7 +184,7 @@ int FF7Save::ff7__checksum( void* qw )
    }
    return (r^0xFFFF)&0xFFFF;
 }
-int FF7Save::itemdecode( quint16 itemraw )
+qint16 FF7Save::itemdecode( quint16 itemraw )
 {
     quint16 item;
     //int item = (itemraw << 2) & 0x1ff;
@@ -206,14 +206,14 @@ int FF7Save::itemdecode( quint16 itemraw )
 
     return item;
 }
-int FF7Save::itemencode( quint16 id, quint8 qty )
+qint16 FF7Save::itemencode( quint16 id, quint8 qty )
 {
     quint16 item,itemraw;
     int one = 1;
     //Big endian
     //Do Nothing...Item Raw Format QQQQQQQXXXXXXXXX | Item Format QQQQQQQXXXXXXXXX
     if (*(char *)&one) {
-        item = ((qty & 0xFE00) << 9) | (id & 0x1FF);
+        item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
         itemraw = item;
     //Little endian
     //Do things....Item Raw Format XXXXXXXXQQQQQQQX | Item Format QQQQQQQXXXXXXXXX
@@ -227,14 +227,14 @@ int FF7Save::itemencode( quint16 id, quint8 qty )
 
     return itemraw;
 }
-int FF7Save::itemgetid( quint16 itemraw )
+qint16 FF7Save::itemgetid( quint16 itemraw )
 {
     quint16 item = itemdecode(itemraw);
     //int id = (item & 0xFF80) >> 7;
     int id = (item & 0x1FF);
     return id;
 }
-int FF7Save::itemgetqty( quint16 itemraw )
+qint8 FF7Save::itemgetqty( quint16 itemraw )
 {
     quint16 item = itemdecode(itemraw);
     int qty;

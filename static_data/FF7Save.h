@@ -504,10 +504,10 @@ public:
   void PasteSlot(int s);
   void New_Game(int s,QString fileName=""); //new game in slot s
   void New_Game_Plus(int s);
-  int itemdecode( quint16 itemraw );
-  int itemencode( quint16 id, quint8 qty );
-  int itemgetid( quint16 itemraw );
-  int itemgetqty( quint16 itemraw );
+  qint16 itemdecode( quint16 itemraw );
+  qint16 itemencode( quint16 id, quint8 qty );
+  qint16 itemgetid( quint16 itemraw );
+  qint8 itemgetqty( quint16 itemraw );
 
   //publicly accessable core data(for now)
   FF7SLOT slot[15]; //core slot data.
