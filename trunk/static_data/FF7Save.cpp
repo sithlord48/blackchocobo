@@ -184,6 +184,65 @@ int FF7Save::ff7__checksum( void* qw )
    }
    return (r^0xFFFF)&0xFFFF;
 }
+int FF7Save::itemdecode( quint16 itemraw )
+{
+    quint16 item;
+    //int item = (itemraw << 2) & 0x1ff;
+    //int item = (itemraw << 1) | (itemraw >> (16-1));
+    //int item = (itemraw >> 1) & 0x7FFF | (itemraw << (16 - 1);
+
+    int one = 1;
+    //Big endian
+    //Do Nothing...Item Raw Format QQQQQQQXXXXXXXXX | Item Format QQQQQQQXXXXXXXXX
+    if (*(char *)&one) {
+        item = itemraw;
+    //Little endian
+    //Do things....Item Raw Format XXXXXXXXQQQQQQQX | Item Format XXXXXXXXXQQQQQQQ
+    //Do things....Item Raw Format XXXXXXXXQQQQQQQX | Item Format QQQQQQQXXXXXXXXX
+    } else {
+        //item = ((itemraw>>(1)%16) & (0x7FFF>>(-1+(1)%16))) | (itemraw<<(16-(1)%16));
+        item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);
+    }
+
+    return item;
+}
+int FF7Save::itemencode( quint16 id, quint8 qty )
+{
+    quint16 item,itemraw;
+    int one = 1;
+    //Big endian
+    //Do Nothing...Item Raw Format QQQQQQQXXXXXXXXX | Item Format QQQQQQQXXXXXXXXX
+    if (*(char *)&one) {
+        item = ((qty & 0xFE00) << 9) | (id & 0x1FF);
+        itemraw = item;
+    //Little endian
+    //Do things....Item Raw Format XXXXXXXXQQQQQQQX | Item Format QQQQQQQXXXXXXXXX
+    } else {
+        //item = ((itemraw>>(1)%16) & (0x7FFF>>(-1+(1)%16))) | (itemraw<<(16-(1)%16));
+        item = ((id << 7) & 0xFF80) | (qty & 0x7F);
+        itemraw = (item << 1) | (item >> (16 - 1));
+    }
+
+    //quint16 item = ((itemraw>>(1)%16) & (0xFFFF>>(-1+(1)%16))) | (itemraw<<(16-(1)%16));
+
+    return itemraw;
+}
+int FF7Save::itemgetid( quint16 itemraw )
+{
+    quint16 item = itemdecode(itemraw);
+    //int id = (item & 0xFF80) >> 7;
+    int id = (item & 0x1FF);
+    return id;
+}
+int FF7Save::itemgetqty( quint16 itemraw )
+{
+    quint16 item = itemdecode(itemraw);
+    int qty;
+    //qty = item & 0x7F;
+    qty = (item & 0xFE00) >> 9;
+
+    return qty;
+}
 void FF7Save::clearslot(int rmslot)
 {
     QByteArray temp;

@@ -261,8 +261,7 @@ const QByteArray DEX_SAVE_GAME_FILE_ID= "\x31\x32\x33\x2D\x34\x35\x36\x2D\x53\x5
 
 
 struct item{// sizeof 2
-quint8 id;// item id
-quint8 qty;//
+quint16 itemraw;// item id&qty in raw format
 }__attribute__((__packed__));
 
 struct materia{// sizeof 4
@@ -505,6 +504,10 @@ public:
   void PasteSlot(int s);
   void New_Game(int s,QString fileName=""); //new game in slot s
   void New_Game_Plus(int s);
+  int itemdecode( quint16 itemraw );
+  int itemencode( quint16 id, quint8 qty );
+  int itemgetid( quint16 itemraw );
+  int itemgetqty( quint16 itemraw );
 
   //publicly accessable core data(for now)
   FF7SLOT slot[15]; //core slot data.
