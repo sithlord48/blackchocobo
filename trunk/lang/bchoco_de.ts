@@ -5,7 +5,7 @@
     <name>FF7Save</name>
     <message>
         <source>New Game +</source>
-        <translation type="unfinished">Neues Spiel +</translation>
+        <translation>Neues Spiel +</translation>
     </message>
 </context>
 <context>

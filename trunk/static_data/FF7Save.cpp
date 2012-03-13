@@ -1196,7 +1196,7 @@ void FF7Save::New_Game_Plus(int s,QString CharFileName,QString fileName)
     setLocation(s,QT_TRANSLATE_NOOP("FF7Save","New Game +"));
 }
 
-QByteArray FF7Save::slot_icon(int s)
+QByteArray FF7Save::slot_header(int s)
 {
     QByteArray icon;
     if (type() != "PC") //we could have an icon. for all formats except for pc

@@ -29,7 +29,7 @@ namespace Ui {
 class SlotSelect : public QDialog {
     Q_OBJECT
 public:
-    SlotSelect(QWidget *parent = 0, FF7Save *ff7data=0);
+    SlotSelect(QWidget *parent = 0, FF7Save *ff7=0);
     ~SlotSelect();
 
 protected:
@@ -38,7 +38,6 @@ protected:
 private:
     Ui::SlotSelect *ui;
     SaveIcon icons[15];
-    FF7Save *ff7;
 private slots:
 
 

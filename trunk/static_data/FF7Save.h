@@ -81,7 +81,7 @@ public:
   //Set Needed Info Stuffs
   void setType(QString);//allows for slot change.
   void setRegion(int s ,QString region);
-  QByteArray slot_icon(int s); //return slot icon.
+  QByteArray slot_header(int s); //return slot header.
 
   quint8 psx_block_type(int s);//mask of psx slot (used by index)
   quint8 psx_block_next(int s);// if using more then one block return location of next block

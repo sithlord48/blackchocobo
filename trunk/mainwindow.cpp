@@ -2511,7 +2511,7 @@ void MainWindow::guirefresh(bool newgame)
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
         if (ff7->type() != "PC") //we Display an icon. for all formats except for pc
         {
-            SaveIcon ico(ff7->slot_icon(s).mid(96,160));
+            SaveIcon ico(ff7->slot_header(s).mid(96,160));
             ui->lbl_slot_icon->setPixmap(ico.icon().scaledToHeight(64,Qt::SmoothTransformation));
         }
         /*~~~~~Load Game Options~~~~~*/

@@ -29,7 +29,7 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :
     int numslots;
     int nextslot;
     this->setWindowFlags(((this->windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close
-    data= ff7->slot_icon(s);
+    data= ff7->slot_header(s);
     switch((quint8)data.at(2))
     {
         case 0x11://1 frame
