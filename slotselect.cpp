@@ -18,12 +18,11 @@
 #include "ui_slotselect.h"
 #include <globals.h>
 
-SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
+SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
     QDialog(parent),
     ui(new Ui::SlotSelect)
 {
     ui->setupUi(this);
-    ff7 = ff7data;
     bool not_pc = false;
     this->setWindowFlags(((this->windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close button
 /*~~~~~~~~~~SLOT 1~~~~~~~~~~*/
@@ -34,7 +33,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
         if(not_pc && ( (ff7->psx_block_type(s)==0x52) || (ff7->psx_block_type(s) == 0x53) ) )
         {// if not pc then we need to check if its a linked slot
             QByteArray data;
-            data = ff7->slot_icon(s);
+            data = ff7->slot_header(s);
 
             switch((quint8)data.at(2))
             {
@@ -794,7 +793,7 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
         }
         else//NOT FF7 Show Icon and Region String;
         {
-            QByteArray data=ff7->slot_icon(s);
+            QByteArray data=ff7->slot_header(s);
 
             switch((quint8)data.at(2))
             {
