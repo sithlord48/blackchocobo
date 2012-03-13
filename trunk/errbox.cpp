@@ -29,7 +29,7 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :
     int numslots;
     int nextslot;
     this->setWindowFlags(((this->windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close
-    for(int i=0;i<0x200;i++){data.append(ff7->hf[s].sl_header[i]);}
+    data= ff7->slot_icon(s);
     switch((quint8)data.at(2))
     {
         case 0x11://1 frame
@@ -60,34 +60,25 @@ errbox::errbox(QWidget *parent,FF7Save *ff7data,int slot) :
     int index;
     if((index = desc.indexOf('\x00')) != -1) {desc.truncate(index);}
     //assume NOT PC SAVE.
-    index= 128+(128*s);
-    if(ff7->type()=="PSP"){index+=0x80;}
-    else if(ff7->type()=="VGS"){index+=0x40;}
-    else if(ff7->type()=="DEX"){index+=0xF40;}
-    QString Slottext;
-    if(ff7->file_headerp[index] != 0x52 && ff7->file_headerp[index] != 0x53){Slottext= codec->toUnicode(desc);}
-    else if(ff7->file_headerp[index]==0x52){Slottext = tr("Mid-Linked Block ");}
-    else if(ff7->file_headerp[index]==0x53){Slottext = tr("End Of Linked Data");}
 
-    if(ff7->file_headerp[index] == 0xA1){Slottext.append(tr("(Deleted)"));}
-    QByteArray temp;
-    temp.resize(3);
-    temp[0]=ff7->file_headerp[index+0x04];
-    temp[1]=ff7->file_headerp[index+0x05];
-    temp[2]=ff7->file_headerp[index+0x06];
-    qint32 value = temp[0] | (temp[1] << 8) | (temp[2] <<16);
-    numslots= value/0x2000;
-    nextslot= ff7->file_headerp[index+0x08]+1;
-    if(ff7->file_headerp[index] != 0x52 && ff7->file_headerp[index] != 0x53){Slottext.append(tr("\n Game Uses %1 Save Block").arg(QString::number(numslots)));}
-    if(value!= 0x2000)
+    QString Slottext;
+    if(ff7->psx_block_type(s) != 0x52 && ff7->psx_block_type(s) != 0x53){Slottext= codec->toUnicode(desc);}
+    else if(ff7->psx_block_type(s)==0x52){Slottext = tr("Mid-Linked Block ");}
+    else if(ff7->psx_block_type(s)==0x53){Slottext = tr("End Of Linked Data");}
+
+    if(ff7->psx_block_type(s) == 0xA1){Slottext.append(tr("(Deleted)"));}
+    numslots = ff7->psx_block_size(s);
+    nextslot= ff7->psx_block_next(s)+1;
+    if(ff7->psx_block_type(s) != 0x52 && ff7->psx_block_type(s) != 0x53){Slottext.append(tr("\n Game Uses %1 Save Block").arg(QString::number(numslots)));}
+    if(numslots !=1)
     {
-            if(ff7->file_headerp[index+0x08]!=0xFF)
+            if(ff7->psx_block_next(s)!=0xFF)
             {
-                if(ff7->file_headerp[index] != 0x52){Slottext.append(tr("s; Next Data Chunk @ Slot:%1").arg(QString::number(nextslot)));}
+                if(ff7->psx_block_type(s) != 0x52){Slottext.append(tr("s; Next Data Chunk @ Slot:%1").arg(QString::number(nextslot)));}
                 else{Slottext.append(tr("Next Data Chunk @ Slot:%1").arg(QString::number(nextslot)));}
             }
     }
-    if(ff7->file_headerp[index] == 0x52 || ff7->file_headerp[index] == 0x53 || numslots !=1)
+    if(ff7->psx_block_type(s) == 0x52 || ff7->psx_block_type(s) == 0x53 || numslots !=1)
     {
         ui->btn_export->setDisabled(1);
         ui->btn_view->setDisabled(1);

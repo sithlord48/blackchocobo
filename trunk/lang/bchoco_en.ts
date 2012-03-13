@@ -2,6 +2,13 @@
 <!DOCTYPE TS>
 <TS version="2.0">
 <context>
+    <name>FF7Save</name>
+    <message>
+        <source>New Game +</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ItemPreview</name>
     <message>
         <source>Elemental Effects</source>
@@ -3542,11 +3549,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot write file %1:
-%2.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Export Raw PSX Save</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3563,11 +3565,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cannot read file %1:
-%2., Be Sure its is a Raw PSX Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>DON&apos;T USE</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3578,10 +3575,6 @@
     <message>
         <source>Place holder Materia Detected
  Remember 16777215 AP = master</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New Game +</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

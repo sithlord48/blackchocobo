@@ -15,7 +15,7 @@
 /****************************************************************************/
 #include "FF7Text.h"
 /*~~~~~~~~TEXT CLASS~~~~~~~~~*/
-TEXT::TEXT()
+FF7TEXT::FF7TEXT()
 {
     eng   =QString::fromUtf8(" !\"#$%&\'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\\]^_`abcdefghijklmnopqrstuvwxyz{|}~ÄÁÇÉÑÖÜáàâäãåçéèêëíìîïñóòôöõúùûü⌘°¢£ÙÛ¶ß®©™´¨≠ÆØ∞±≤≥¥µ∂ΣΠπ⌡ªºΩæø¿¡¬√ƒ≈∆«»… ÀÃÕŒœ–—“”‘’÷◊ÿŸ⁄¤‹›ﬁﬂ■▪‚„‰ÂÊËÁÈíîïìÓÔ ÒÙÛ             \t                               ");
     jap   =QString::fromUtf8("バばビびブぶベべボぼガがギぎグぐゲげゴごザざジじズずゼぜゾぞダだヂぢヅづデでドどヴパぱピぴプぷペぺポぽ０１２３４５６７８９、。　ハはヒひフふヘへホほカかキきクくケけコこサさシしスすセせソそタたチちツつテてトとウうアあイいエえオおナなニにヌぬネねノのマまミみムむメめモもラらリりルるレれロろヤやユゆヨよワわンんヲをッっャゃュゅョょァぁィぃゥぅェぇォぉ！？『』．＋ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺ・＊ー～⋯％／：＆【】♥→αβ「」（）－＝¶¶¶⑬\n\n¶                      ");
@@ -27,14 +27,14 @@ TEXT::TEXT()
     init(0);
 }
 
-void TEXT::init(bool ja)
+void FF7TEXT::init(bool ja)
 {//are we using latin or japanese chars?
     if(ja){in_ja = 1;}
     else{in_ja=0;}
 }
 
 // the PC function is modified from Makou Reactor (thanks Myst6re)
-QString TEXT::toPC(QByteArray text)
+QString FF7TEXT::toPC(QByteArray text)
 {
     int txt;
     if((txt = text.indexOf('\xFF')) != -1){text.truncate(txt);}
@@ -95,7 +95,7 @@ QString TEXT::toPC(QByteArray text)
     return String;
 }
 //This Convertor is Modified From Hyne (thanks Myst6re)
-QByteArray TEXT::toFF7(QString string)
+QByteArray FF7TEXT::toFF7(QString string)
 {
     QByteArray ff7str;
     QChar comp;
@@ -140,7 +140,7 @@ QByteArray TEXT::toFF7(QString string)
     return ff7str;
 }
 
-QString TEXT::character(quint8 ord, quint8 table)
+QString FF7TEXT::character(quint8 ord, quint8 table)
 {
     switch(table) {
     case 1:return jap.at(ord);

@@ -135,6 +135,21 @@ bool FF7Save::LoadFile(const QString &fileName)
     fix_sum(fileName);
     return true;
 }
+
+ bool FF7Save::exportChar(int s,int char_num,QString fileName)
+ {
+     if (!fileName.isEmpty())
+     {
+         FILE *pfile;
+         pfile = fopen(fileName.toAscii(),"wb");
+         fwrite(&slot[s].chars[char_num],132,1,pfile);
+         fclose(pfile);
+         return true;
+     }
+     return false;
+ }
+void FF7Save::importChar(int s,int char_num,QByteArray new_char){memcpy(&slot[s].chars[char_num],new_char.data(),132);}
+
 void FF7Save::fix_sum(const QString &fileName)
 {
     void * memory;
@@ -190,23 +205,11 @@ quint16 FF7Save::itemDecode( quint16 itemraw )
     int one = 1;
     //Big endian
     //Do Nothing...Item Raw Format QQQQQQQXXXXXXXXX | Item Format QQQQQQQXXXXXXXXX
-    if (*(char *)&one) {
-        item = itemraw;
+    if (*(char *)&one){item = itemraw;}
     //Little endian
     //Do things....Item Raw Format XXXXXXXXQQQQQQQX | Item Format XXXXXXXXXQQQQQQQ
     //Do things....Item Raw Format XXXXXXXXQQQQQQQX | Item Format QQQQQQQXXXXXXXXX
-    } else {
-        //item = ((itemraw>>(1)%16) & (0x7FFF>>(-1+(1)%16))) | (itemraw<<(16-(1)%16));
-        item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);
-    }
-    /*
-    //Debug
-        QString itemsrawsq,itemsq;
-        itemsrawsq.setNum(itemraw, 2);
-        itemsq.setNum(item, 2);
-        qDebug() << "Item Decoded: " << itemsrawsq;
-        qDebug() << "Item Encoded: " << itemsq;
-    */
+    else {item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);}
     return item;
 }
 quint16 FF7Save::itemEncode( quint16 id, quint8 qty )
@@ -225,14 +228,6 @@ quint16 FF7Save::itemEncode( quint16 id, quint8 qty )
         item = ((id << 7) & 0xFF80) | (qty & 0x7F);
         itemraw = (item << 1) | (item >> (16 - 1));
     }
-    /*
-//Debug
-    QString itemsrawsq,itemsq;
-    itemsrawsq.setNum(itemraw, 2);
-    itemsq.setNum(item, 2);
-    qDebug() << "Item Encoded: " << itemsq;
-    qDebug() << "Item Decoded: " << itemsrawsq;
-*/
     return itemraw;
 }
 void FF7Save::setItemId(int s,int item_num,quint16 new_id){slot[s].items[item_num]= itemEncode(new_id,itemQty(s,item_num));}
@@ -860,8 +855,51 @@ void FF7Save::PasteSlot(int s)
     }
 }
 
-bool FF7Save::isEmpty(int s){return SG_Region_String[s].isEmpty();}
-
+quint8 FF7Save::psx_block_type(int s)
+{
+    if(type()!="PC")
+    {
+        int index=128+(128*s);
+        if (type() =="PSP"){index+=0x80;}
+        else if (type() =="VGS"){index+=0x40;}
+        else if (type() =="DEX"){index+=0xF40;}
+        else {}
+        return file_headerp[index];
+    }
+    else{return 0x00;}
+}
+quint8 FF7Save::psx_block_next(int s)
+{
+    if(type()!="PC")
+    {
+        int index=128+(128*s);
+        if (type() =="PSP"){index+=0x80;}
+        else if (type() =="VGS"){index+=0x40;}
+        else if (type() =="DEX"){index+=0xF40;}
+        else {}
+        return file_headerp[index+0x08];
+    }
+    else{return 0x00;}
+}
+quint8 FF7Save::psx_block_size(int s)
+{
+    if(type() !="PC")
+    {
+        QByteArray temp;
+        temp.resize(3);
+        int index=128+(128*s);
+        if (type() =="PSP"){index+=0x80;}
+        else if (type() =="VGS"){index+=0x40;}
+        else if (type() =="DEX"){index+=0xF40;}
+        else {}
+        temp[0]=file_headerp[index+0x04];
+        temp[1]=file_headerp[index+0x05];
+        temp[2]=file_headerp[index+0x06];
+        qint32 value = temp[0] | (temp[1] << 8) | (temp[2] <<16);
+        return value/0x2000;
+     }
+    else{return 0;}
+}
 bool FF7Save::isFF7(int s)
 {
     if(region(s).contains("00867") || region(s).contains("00869") ||
@@ -886,7 +924,11 @@ bool FF7Save::isNTSC(int s)
        {return true;}
     else{return false;}
 }
-
+bool FF7Save::isJPN(int s)
+{
+    if(region(s).contains("00700") || region(s).contains("01057")){return true;}
+    else{return false;}
+}
 int FF7Save::len_file(void){return SG_SIZE;}
 int FF7Save::len_file_header(void){return SG_HEADER;}//Return File Header length
 int FF7Save::len_file_footer(void){return SG_FOOTER;}//Return File Footer length
@@ -1030,5 +1072,202 @@ void FF7Save::New_Game(int s,QString fileName)
         temp = ff7file.mid(index,0x10f4);
         memcpy(&slot[s],temp,0x10f4);
     }
-    if(region(s).isEmpty()){setRegion(s,"BASCUS-94163FF7-S01");}
+    if(isJPN(s))
+    {
+        for(int c=0;c<9;c++){setCharName(s,c,"\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff\xff");}// clear all names.
+        Text.init(1);
+        setCharName(s,0,QString::fromUtf8("元ソルジャー"));
+        setCharName(s,1,QString::fromUtf8("バレット"));
+        setCharName(s,2,QString::fromUtf8("ティファ"));
+        setCharName(s,3,QString::fromUtf8("エアリス"));
+        setCharName(s,4,QString::fromUtf8("レッド⑬"));
+        setCharName(s,5,QString::fromUtf8("ユフィ"));
+        setCharName(s,6,QString::fromUtf8(""));
+        setCharName(s,7,QString::fromUtf8("セフィロス"));
+        setCharName(s,8,QString::fromUtf8("シド"));
+    }
+    else if(region(s).isEmpty()){setRegion(s,"BASCUS-94163FF7-S01");Text.init(0);}
+}
+
+void FF7Save::New_Game_Plus(int s,QString CharFileName,QString fileName)
+{
+    if(fileName.isEmpty() || fileName.isNull())
+    {
+        memcpy(&buffer_slot,&default_save,0x10F4);
+    }
+    else
+    {
+        QFile file(fileName);
+        if(!file.open(QFile::ReadOnly)){return;}
+        QByteArray ff7file;
+        ff7file = file.readAll(); //put all data in temp raw file
+        QByteArray temp; // create a temp to be used when needed
+        int index = 0x200;
+        temp = ff7file.mid(index,0x10f4);
+        memcpy(&buffer_slot,temp,0x10f4);
+    }
+    buffer_region = region(s);
+
+    memcpy(&buffer_slot.desc,&slot[s].desc,0x44); // keep a old preview
+    memcpy(&buffer_slot.colors,&slot[s].colors,12); // keep old colors.
+
+    for(int i=0;i<9;i++) // keep all old character info.
+    {
+        if((i==6)||(i==7))// except we have to export cait sith and vincent.the game needs y.cloud/seppie,for the flash back.
+        {
+            QString outFile;
+            if(i==6) //export cait sith. cait sith's stats are only generated when he joins the party.
+            {
+                    outFile.append(CharFileName);
+                    outFile.append("-cait_sith");
+                    if(type() != "PSX" || type() != "PSV")
+                    {
+                        outFile.append("-");
+                        QString str;
+                        str.setNum(s,10)+1;
+                        outFile.append(str);
+                    }
+                }
+            else if(i==7)// export vincent. vincent's stats are only generated when he joins the party.
+                {
+                    outFile.append(CharFileName);
+                    outFile.append("-vincent");
+                    if(type() != "PSX" || type() != "PSV")
+                    {
+                        outFile.append("-");
+                        QString str;
+                        str.setNum(s,10)+1;
+                        outFile.append(str);
+                    }
+                }
+            outFile.append(".char");
+            exportChar(s,i,outFile);
+
+        }
+        else{memcpy(&buffer_slot.chars[i],&slot[s].chars[i],0x84);} // normal character
+    }
+    memcpy(&buffer_slot.items,&slot[s].items,640);// copy items
+    memcpy(&buffer_slot.materias,&slot[s].materias,800); // copy materia
+    buffer_slot.gil = slot[s].gil; // copy gil
+    buffer_slot.battles = slot[s].battles; // copy battle count
+    buffer_slot.runs = slot[s].runs; // copy run count
+    buffer_slot.gp = slot[s].gp; // copy gp
+    //copy chocobo info.
+    buffer_slot.stables = slot[s].stables;
+    buffer_slot.stablesoccupied = slot[s].stablesoccupied;
+    for(int i=0;i<4;i++){memcpy(&buffer_slot.chocobos[i],&slot[s].chocobos[i],0x10);}
+    memcpy(&buffer_slot.chocobonames,slot[s].chocobonames,36);
+    memcpy(&buffer_slot.chocostaminas,slot[s].chocostaminas,12);
+    for(int i=0;i<2;i++){memcpy(&buffer_slot.choco56,slot[s].choco56,0x10);}
+    // copy options
+    buffer_slot.battlespeed =slot[s].battlespeed;
+    buffer_slot.battlemspeed =slot[s].battlemspeed;
+    buffer_slot.options1 = slot[s].options1;
+    buffer_slot.options2 = slot[s].options2;
+    memcpy(&buffer_slot.controller_map,slot[s].controller_map,16);
+    buffer_slot.fieldmspeed = slot[s].fieldmspeed;
+    //~~ buffer now ready to be copied~
+    slot[s]=buffer_slot;
+    setLocation(s,QT_TRANSLATE_NOOP("FF7Save","New Game +"));
+}
+
+QByteArray FF7Save::slot_icon(int s)
+{
+    QByteArray icon;
+    if (type() != "PC") //we could have an icon. for all formats except for pc
+    {
+        for(int i=0;i<0x200;i++){icon.append(hf[s].sl_header[i]);}
+    }
+    else{icon.fill(0x00,0x200);}//fill with nothing if pc
+    return icon;
+}
+QString FF7Save::charName(int s,int char_num)
+{
+    if(isJPN(s)){Text.init(1);}//Japanese
+    else{Text.init(0);}// not japanese save.
+    QByteArray text;
+    for (int n=0;n<12;n++){text.append(slot[s].chars[char_num].name[n]);}
+    return Text.toPC(text);
+}
+void FF7Save::setCharName(int s,int char_num,QString new_name)
+{
+    if(isJPN(s)){Text.init(1);}//Japanese
+    else{Text.init(0);}// not japanese save.
+    for (int i=0;i<12;i++){slot[s].chars[char_num].name[i] =0xFF;}
+    QByteArray temp = Text.toFF7(new_name);
+    memcpy(slot[s].chars[char_num].name,temp,temp.length());
+}
+
+QString FF7Save::descName(int s)
+{
+    if(isJPN(s)){Text.init(1);}//Japanese
+    else{Text.init(0);}// not japanese save.
+    QByteArray text;
+    for (int n=0;n<16;n++){text.append(slot[s].desc.name[n]);}
+    return Text.toPC(text);
+}
+void FF7Save::setDescName(int s,QString new_name)
+{
+    if(isJPN(s)){Text.init(1);}//Japanese
+    else{Text.init(0);}// not japanese save.
+    for (int i=0;i<16;i++){slot[s].desc.name[i] =0xFF;}
+    QByteArray temp = Text.toFF7(new_name);
+    memcpy(slot[s].desc.name,temp,temp.length());
+}
+
+QString FF7Save::location(int s)
+{
+
+    if(isJPN(s)){Text.init(1);}//Japanese
+    else{Text.init(0);}// not japanese save.
+    QByteArray text;
+    for (int n=0;n<24;n++){text.append(slot[s].location[n]);}
+    return Text.toPC(text);
+}
+void FF7Save::setLocation(int s, QString new_location)
+{
+    if(isJPN(s)){Text.init(1);}//Japanese
+    else{Text.init(0);}// not japanese save.
+    QByteArray text;
+    for (int i=0;i<24;i++){slot[s].location[i] =0xFF;}
+    QByteArray temp = Text.toFF7(new_location);
+    memcpy(slot[s].location,temp,temp.length());
+    //and the description.
+    setDescLocation(s,new_location);
+}
+
+QString FF7Save::descLocation(int s)
+{
+    if(isJPN(s)){Text.init(1);}//Japanese
+    else{Text.init(0);}// not japanese save.
+    QByteArray text;
+    for (int n=0;n<24;n++){text.append(slot[s].desc.location[n]);}
+    return Text.toPC(text);
+}
+
+void FF7Save::setDescLocation(int s, QString new_desc_location)
+{
+    if(isJPN(s)){Text.init(1);}//Japanese
+    else{Text.init(0);}// not japanese save.
+    QByteArray text;
+    for (int i=0;i<32;i++){slot[s].desc.location[i] =0xFF;}
+    QByteArray temp = Text.toFF7(new_desc_location);
+    memcpy(slot[s].desc.location,temp,temp.length());
+}
+
+QString FF7Save::chocoName(int s,int choco_num)
+{
+    if(isJPN(s)){Text.init(1);}//Japanese
+    else{Text.init(0);}// not japanese save.
+    QByteArray text;
+    for (int n=0;n<6;n++){text.append(slot[s].chocobonames[choco_num][n]);}
+    return Text.toPC(text);
+}
+void FF7Save::setChocoName(int s,int choco_num,QString new_name)
+{
+    if(isJPN(s)){Text.init(1);}//Japanese
+    else{Text.init(0);}// not japanese save.
+    QByteArray temp = Text.toFF7(new_name);
+    for (int i=0;i<6;i++){slot[s].chocobonames[choco_num][i] =0xFF;}
+    memcpy(slot[s].chocobonames[choco_num],temp,temp.length());
 }

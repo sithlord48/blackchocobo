@@ -17,12 +17,14 @@
 #define DEF_FF7SAVE
 #include "FF7Save_Const.h" //All consts placed here
 #include "FF7Save_Types.h" //All Custom Types for this class here.
+#include "FF7Text.h"
 #include <QObject>
 #include <cstdlib>
 
 class FF7Save{
 
 public:
+  //File Members
   bool LoadFile(const QString &fileName);
   bool SaveFile(const QString &fileName);
   bool Export_PC(const QString &fileName);
@@ -34,17 +36,36 @@ public:
   void CopySlot(int s);
   void PasteSlot(int s);
   void New_Game(int s,QString fileName=""); //new game in slot s
-  void New_Game_Plus(int s);
+  void New_Game_Plus(int s,QString CharFileName,QString fileName="");//new game + in slot s
+
+  bool exportChar(int s,int char_num,QString fileName);
+  void importChar(int s,int char_num,QByteArray new_char);
+  //Set/Get Data Parts.
   quint16 itemId(int s,int item_num);
   quint8 itemQty(int s,int item_num);
   void setItemId(int s,int item_num,quint16 new_id);
   void setItemQty(int s,int item_num,quint8 new_qty);
 
+  // String Functions.
+  QString charName(int s,int char_num);
+  void setCharName(int s,int char_num,QString new_name);
+
+  QString chocoName(int s,int choco_num);
+  void setChocoName(int s,int choco_num,QString new_name);
+
+  QString descName(int s);
+  void setDescName(int s,QString new_name);
+
+  QString location(int s);
+  void setLocation(int s, QString new_location);
+
+  QString descLocation(int s);
+  void setDescLocation(int s, QString new_desc_location);
+
   //publicly accessable core data(for now)
   FF7SLOT slot[15]; //core slot data.
-  FF7HEADFOOT hf[15]; //slot header and footer.
-  quint8 * file_headerp;              //pointer to file header
-  quint8 * file_footerp;              //pointer to file footer
+  //quint8 * file_headerp;              //pointer to file header
+ // quint8 * file_footerp;              //pointer to file footer
 
   // Return File Info
   int len_file(void);//Return File length.
@@ -56,21 +77,27 @@ public:
   int len_slot(void);//Return Slot length
   int number_slots(void);//Return number of slots in the file_footer_dex
   QString type(void);// Returns the file type loaded.
-  //Set Needed Info Stuffs
-  void setType(QString);//allows for slot change.
-  QString region(int s);
-  void setRegion(int s ,QString region);
-
-  bool isEmpty(int s);//empty slot?
   bool isFF7(int s);//valid ff7 slot?
   bool isPAL(int s);//PAL SLOT?
   bool isNTSC(int s);//NTSC SLOT??
+  bool isJPN(int s);//is a Japanese File
+  QString region(int s);// region string of slot s
+  //Set Needed Info Stuffs
+  void setType(QString);//allows for slot change.
+  void setRegion(int s ,QString region);
+  QByteArray slot_icon(int s); //return slot icon.
 
+  quint8 psx_block_type(int s);//mask of psx slot (used by index)
+  quint8 psx_block_next(int s);// if using more then one block return location of next block
+  quint8 psx_block_size(int s);//how many blocks save uses.
   void fix_pc_bytemask(int s);// update so last slot is shown selected on load (must be public to set to currently viewed slot).
 
 private:
   //data members
   //FF7SLOT slot[15];
+  FF7HEADFOOT hf[15]; //slot header and footer.
+  quint8 * file_headerp;              //pointer to file header
+  quint8 * file_footerp;              //pointer to file footer
   quint8 file_header_pc [0x0009];    // [0x0000] 0x06277371 this replace quint8 file_tag[9];
   quint8 file_header_psx[0x0000];	// [0x0000] 0x06277371 this replace quint8 file_tag[9];
   quint8 file_header_psv[0x0000];
@@ -89,6 +116,7 @@ private:
   FF7SLOT buffer_slot;// hold a buffer slot
   QString buffer_region; // hold the buffers region data.
   QString SG_Region_String[15];
+  FF7TEXT Text;
   int SG_SIZE;
   int SG_HEADER;
   int SG_FOOTER;

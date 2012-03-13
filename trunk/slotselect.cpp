@@ -25,24 +25,16 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
     ui->setupUi(this);
     ff7 = ff7data;
     bool not_pc = false;
-    int index=0;
     this->setWindowFlags(((this->windowFlags() | Qt::CustomizeWindowHint)& ~Qt::WindowCloseButtonHint));//remove close button
 /*~~~~~~~~~~SLOT 1~~~~~~~~~~*/
     for(int s=0;s<15;s++)
     {
         not_pc=false;
-        if(ff7->type()!="PC")
-        {
-            not_pc=true;
-            index= 128+(128*s);
-            if(ff7->type()=="PSP"){index+=0x80;}
-            else if(ff7->type()=="VGS"){index+=0x40;}
-            else if(ff7->type()=="DEX"){index+=0xF40;}
-        }
-        if(not_pc && ((ff7->file_headerp[index]==0x52) || (ff7->file_headerp[index] ==0x53)))
+        if(ff7->type()!="PC"){not_pc=true;}
+        if(not_pc && ( (ff7->psx_block_type(s)==0x52) || (ff7->psx_block_type(s) == 0x53) ) )
         {// if not pc then we need to check if its a linked slot
             QByteArray data;
-            for(int i=0;i<0x200;i++){data.append(ff7->hf[s].sl_header[i]);}
+            data = ff7->slot_icon(s);
 
             switch((quint8)data.at(2))
             {
@@ -65,8 +57,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 break;
             }
             QString Slottext;
-            if(ff7->file_headerp[index] == 0x52){Slottext =tr("\n\n Mid-Linked Block Next Data Chunk @ Slot:%1").arg(QString::number(ff7->file_headerp[index+0x08]+1));}
-            else if(ff7->file_headerp[index] == 0x53){Slottext =tr("\n\n End Of Linked Blocks");}
+            if(ff7->psx_block_type(s) == 0x52){Slottext =tr("\n\n Mid-Linked Block Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1));}
+            else if(ff7->psx_block_type(s) == 0x53){Slottext =tr("\n\n End Of Linked Blocks");}
             else{return;}
 
             QHBoxLayout *hbox = new QHBoxLayout;
@@ -603,12 +595,6 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
             style.append(QString::number(ff7->slot[s].colors[2][1]));    style.append(",");
             style.append(QString::number(ff7->slot[s].colors[2][2]));    style.append(", 255));");
 
-            if( ff7->region(s).contains("00700") || ff7->region(s).contains("01057") ) {Text.init(1);}//Japanese
-            else {Text.init(0);} // All others
-            QByteArray location_text;
-            QByteArray name_text;
-            for (int loc=0; loc<32;loc++){location_text.append(ff7->slot[s].desc.location[loc]);}
-            for (int n=0;n<16;n++){name_text.append(ff7->slot[s].desc.name[n]);}
             switch(s)
             {
             case 0:
@@ -620,8 +606,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 ui->s1_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s1_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
                 ui->s1_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
-                ui->s1_lbl_loc->setText(Text.toPC(location_text));
-                ui->s1_lbl_name->setText(Text.toPC(name_text));
+                ui->s1_lbl_loc->setText(ff7->descLocation(s));
+                ui->s1_lbl_name->setText(ff7->descName(s));
             break;
 
             case 1:
@@ -633,8 +619,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 ui->s2_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s2_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
                 ui->s2_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
-                ui->s2_lbl_loc->setText(Text.toPC(location_text));
-                ui->s2_lbl_name->setText(Text.toPC(name_text));
+                ui->s2_lbl_loc->setText(ff7->descLocation(s));
+                ui->s2_lbl_name->setText(ff7->descName(s));
             break;
 
             case 2:
@@ -646,8 +632,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 ui->s3_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s3_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
                 ui->s3_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
-                ui->s3_lbl_loc->setText(Text.toPC(location_text));
-                ui->s3_lbl_name->setText(Text.toPC(name_text));
+                ui->s3_lbl_loc->setText(ff7->descLocation(s));
+                ui->s3_lbl_name->setText(ff7->descName(s));
             break;
 
             case 3:
@@ -659,8 +645,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 ui->s4_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s4_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
                 ui->s4_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
-                ui->s4_lbl_loc->setText(Text.toPC(location_text));
-                ui->s4_lbl_name->setText(Text.toPC(name_text));
+                ui->s4_lbl_loc->setText(ff7->descLocation(s));
+                ui->s4_lbl_name->setText(ff7->descName(s));
             break;
 
             case 4:
@@ -672,8 +658,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 ui->s5_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s5_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
                 ui->s5_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
-                ui->s5_lbl_loc->setText(Text.toPC(location_text));
-                ui->s5_lbl_name->setText(Text.toPC(name_text));
+                ui->s5_lbl_loc->setText(ff7->descLocation(s));
+                ui->s5_lbl_name->setText(ff7->descName(s));
             break;
 
             case 5:
@@ -685,8 +671,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 ui->s6_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s6_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
                 ui->s6_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
-                ui->s6_lbl_loc->setText(Text.toPC(location_text));
-                ui->s6_lbl_name->setText(Text.toPC(name_text));
+                ui->s6_lbl_loc->setText(ff7->descLocation(s));
+                ui->s6_lbl_name->setText(ff7->descName(s));
             break;
 
             case 6:
@@ -698,8 +684,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 ui->s7_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s7_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
                 ui->s7_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
-                ui->s7_lbl_loc->setText(Text.toPC(location_text));
-                ui->s7_lbl_name->setText(Text.toPC(name_text));
+                ui->s7_lbl_loc->setText(ff7->descLocation(s));
+                ui->s7_lbl_name->setText(ff7->descName(s));
             break;
 
             case 7:
@@ -711,8 +697,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 ui->s8_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s8_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
                 ui->s8_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
-                ui->s8_lbl_loc->setText(Text.toPC(location_text));
-                ui->s8_lbl_name->setText(Text.toPC(name_text));
+                ui->s8_lbl_loc->setText(ff7->descLocation(s));
+                ui->s8_lbl_name->setText(ff7->descName(s));
             break;
 
             case 8:
@@ -724,8 +710,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 ui->s9_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s9_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
                 ui->s9_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
-                ui->s9_lbl_loc->setText(Text.toPC(location_text));
-                ui->s9_lbl_name->setText(Text.toPC(name_text));
+                ui->s9_lbl_loc->setText(ff7->descLocation(s));
+                ui->s9_lbl_name->setText(ff7->descName(s));
             break;
             case 9:
                 ui->s10_box->setStyleSheet(style);
@@ -736,8 +722,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 ui->s10_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s10_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
                 ui->s10_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
-                ui->s10_lbl_loc->setText(Text.toPC(location_text));
-                ui->s10_lbl_name->setText(Text.toPC(name_text));
+                ui->s10_lbl_loc->setText(ff7->descLocation(s));
+                ui->s10_lbl_name->setText(ff7->descName(s));
             break;
 
             case 10:
@@ -749,8 +735,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 ui->s11_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s11_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
                 ui->s11_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
-                ui->s11_lbl_loc->setText(Text.toPC(location_text));
-                ui->s11_lbl_name->setText(Text.toPC(name_text));
+                ui->s11_lbl_loc->setText(ff7->descLocation(s));
+                ui->s11_lbl_name->setText(ff7->descName(s));
             break;
 
             case 11:
@@ -762,8 +748,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 ui->s12_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s12_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
                 ui->s12_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
-                ui->s12_lbl_loc->setText(Text.toPC(location_text));
-                ui->s12_lbl_name->setText(Text.toPC(name_text));
+                ui->s12_lbl_loc->setText(ff7->descLocation(s));
+                ui->s12_lbl_name->setText(ff7->descName(s));
             break;
 
             case 12:
@@ -775,8 +761,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 ui->s13_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s13_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
                 ui->s13_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
-                ui->s13_lbl_loc->setText(Text.toPC(location_text));
-                ui->s13_lbl_name->setText(Text.toPC(name_text));
+                ui->s13_lbl_loc->setText(ff7->descLocation(s));
+                ui->s13_lbl_name->setText(ff7->descName(s));
             break;
 
             case 13:
@@ -788,8 +774,8 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 ui->s14_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s14_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
                 ui->s14_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
-                ui->s14_lbl_loc->setText(Text.toPC(location_text));
-                ui->s14_lbl_name->setText(Text.toPC(name_text));
+                ui->s14_lbl_loc->setText(ff7->descLocation(s));
+                ui->s14_lbl_name->setText(ff7->descName(s));
             break;
 
             case 14:
@@ -801,15 +787,15 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
                 ui->s15_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s15_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
                 ui->s15_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
-                ui->s15_lbl_loc->setText(Text.toPC(location_text));
-                ui->s15_lbl_name->setText(Text.toPC(name_text));
+                ui->s15_lbl_loc->setText(ff7->descLocation(s));
+                ui->s15_lbl_name->setText(ff7->descName(s));
             break;
             }
         }
         else//NOT FF7 Show Icon and Region String;
         {
-            QByteArray data;
-            for(int i=0;i<0x200;i++){data.append(ff7->hf[s].sl_header[i]);}
+            QByteArray data=ff7->slot_icon(s);
+
             switch((quint8)data.at(2))
             {
             case 0x11://1 frame
@@ -839,15 +825,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7data) :
             if((desc_end = desc.indexOf('\x00')) != -1) {desc.truncate(desc_end);}
 
             QString Slottext ="\n\n" + codec->toUnicode(desc);
-            if(ff7->file_headerp[index]==0xA1){Slottext.append(tr("(Deleted)"));}
-            QByteArray temp;
-            temp.resize(3);
-            temp[0]=ff7->file_headerp[index+0x04];
-            temp[1]=ff7->file_headerp[index+0x05];
-            temp[2]=ff7->file_headerp[index+0x06];
-            qint32 value = temp[0] | (temp[1] << 8) | (temp[2] <<16);
-            Slottext.append(tr("\n Game Uses %1 Save Block").arg(QString::number(value/0x2000)));
-            if(ff7->file_headerp[index+0x08]!=0xFF){Slottext.append(tr("s; Next Data Chunk @ Slot:%1").arg(QString::number(ff7->file_headerp[index+0x08]+1)));}
+            if(ff7->psx_block_type(s)==0xA1){Slottext.append(tr("(Deleted)"));}
+            Slottext.append(tr("\n Game Uses %1 Save Block").arg(QString::number(ff7->psx_block_size(s))));
+            if(ff7->psx_block_next(s)!=0xFF){Slottext.append(tr("s; Next Data Chunk @ Slot:%1").arg(QString::number(ff7->psx_block_next(s)+1)));}
 
             QHBoxLayout *hbox = new QHBoxLayout;
             QVBoxLayout *vbox = new QVBoxLayout;

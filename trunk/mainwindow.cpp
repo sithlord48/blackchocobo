@@ -438,9 +438,9 @@ void MainWindow::on_actionImport_char_triggered()
             .arg(fileName).arg(file.errorString()));
             return;
         }
-        QByteArray ff7file;
-        ff7file = file.readAll();
-        memcpy(&ff7->slot[s].chars[curchar],ff7file,132);
+        QByteArray new_char;
+        new_char = file.readAll();
+        ff7->importChar(s,curchar,new_char);
     }
     file_modified(true);
     charupdate();
@@ -451,13 +451,7 @@ void MainWindow::on_actionExport_char_triggered()
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save FF7 Character File"), settings->value("char_stat_folder").toString(),
     tr("FF7 Character Stat File(*.char)"));
-    if (!fileName.isEmpty())
-    {
-        FILE *pfile;
-        pfile = fopen(fileName.toAscii(),"wb");
-        fwrite(&ff7->slot[s].chars[curchar],132,1,pfile);
-        fclose(pfile);
-    }
+    if (!fileName.isEmpty()){ff7->exportChar(s,curchar,fileName);}
 }
 void MainWindow::on_action_Save_activated()
 {
@@ -586,28 +580,6 @@ void MainWindow::on_actionNew_Game_triggered()
 {
     ff7->New_Game(s);//call the new game function
     //detect region and fix names if needed.
-    if(ff7->region(s).contains("00700") || ff7->region(s).contains("01057"))
-    {
-        for(int c=0;c<9;c++){for(int i=0;i<12;i++){ff7->slot[s].chars[c].name[i]=0xFF;}}
-        QByteArray temp =Text.toFF7(QString::fromUtf8("元ソルジャー"));
-        memcpy(ff7->slot[s].chars[0].name,temp,temp.length());
-        temp =Text.toFF7(QString::fromUtf8("バレット"));
-        memcpy(&ff7->slot[s].chars[1].name,temp,temp.length());
-        temp =Text.toFF7(QString::fromUtf8("ティファ"));
-        memcpy(&ff7->slot[s].chars[2].name,temp,temp.length());
-        temp =Text.toFF7(QString::fromUtf8("エアリス"));
-        memcpy(&ff7->slot[s].chars[3].name,temp,temp.length());
-        temp =Text.toFF7(QString::fromUtf8("レッド⑬"));
-        memcpy(&ff7->slot[s].chars[4].name,temp,temp.length());
-        temp =Text.toFF7(QString::fromUtf8("ユフィ"));
-        memcpy(&ff7->slot[s].chars[5].name,temp,temp.length());
-        temp =Text.toFF7(QString::fromUtf8(""));
-        memcpy(&ff7->slot[s].chars[6].name,temp,temp.length());
-        temp =Text.toFF7(QString::fromUtf8("セフィロス"));
-        memcpy(&ff7->slot[s].chars[7].name,temp,temp.length());
-        temp =Text.toFF7(QString::fromUtf8("シド"));
-        memcpy(&ff7->slot[s].chars[8].name,temp,temp.length());
-    }
     _init=false;
     if(!load){file_modified(true);}
     guirefresh(1);
@@ -616,94 +588,97 @@ void MainWindow::on_actionNew_Game_triggered()
 /*~~~~~~~~~~New Game + ~~~~~~~~~~~~*/
 void MainWindow::on_actionNew_Game_Plus_triggered()
 {
-    QFile file(settings->value("default_save_file").toString());
-    if(!file.open(QFile::ReadOnly))
-    {
-        QMessageBox::warning(this, tr("Black Chocobo"),
-        tr("Cannot read file %1:\n%2., Be Sure its is a Raw PSX Save")
-        .arg(settings->value("default_save_file").toString()).arg(file.errorString()));
-        return;
-    }
-
-    QByteArray ff7file;
-    ff7file = file.readAll(); //put all data in temp raw file
-    QByteArray temp; // create a temp to be used when needed
-    int index = 0x200;
-    temp = ff7file.mid(index,0x10f4); // dump file -> temp
-    memcpy(&bufferslot,temp,0x10f4);  // copy temp to the buffer slot
-    buffer_region = ff7->region(s);
-    ui->line_location->setText(tr("New Game +"));
-    memcpy(&bufferslot.desc,&ff7->slot[s].desc,0x44); // keep a old preview
-    memcpy(&bufferslot.colors,&ff7->slot[s].colors,12); // keep old colors.
-    for(int i=0;i<9;i++) // keep all old character info.
-    {
-        if((i==6)||(i==7))// except we have to export cait sith and vincent.the game needs y.cloud/seppie,for the flash back.
+    /*
+        QFile file(settings->value("default_save_file").toString());
+        if(!file.open(QFile::ReadOnly))
         {
-            QString fileName;
-            if(i==6) //export cait sith. cait sith's stats are only generated when he joins the party.
-            {
-                    fileName.append(filename);
-                    fileName.append("-cait_sith");
-                    if(ff7->type() != "PSX" || ff7->type() != "PSV")
-                    {
-                        fileName.append("-");
-                        QString str;
-                        str.setNum(s,10)+1;
-                        fileName.append(str);
-                    }
-                }
-            else if(i==7)// export vincent. vincent's stats are only generated when he joins the party.
-                {
-                    fileName.append(filename);
-                    fileName.append("-vincent");
-                    if(ff7->type() != "PSX" || ff7->type() != "PSV")
-                    {
-                        fileName.append("-");
-                        QString str;
-                        str.setNum(s,10)+1;
-                        fileName.append(str);
-                    }
-                }
-            fileName.append(".char");
-            QFile file(fileName);
-            if(!file.open(QFile::ReadWrite))
-            {
-                QMessageBox::warning(this, tr("Black Chocobo"),
-                tr("Cannot write file %1:\n%2.")
-                    .arg(fileName)
-                    .arg(file.errorString()));
-                return;
-            }
-            FILE *pfile;
-            pfile = fopen(fileName.toAscii(),"wb");
-            fwrite(&ff7->slot[s].chars[i],132,1,pfile);
-            fclose(pfile);
-
+            QMessageBox::warning(this, tr("Black Chocobo"),
+            tr("Cannot read file %1:\n%2., Be Sure its is a Raw PSX Save")
+            .arg(settings->value("default_save_file").toString()).arg(file.errorString()));
+            return;
         }
-        else{memcpy(&bufferslot.chars[i],&ff7->slot[s].chars[i],0x84);} // normal character
-    }
-    memcpy(&bufferslot.items,ff7->slot[s].items,640);// copy items
-    memcpy(&bufferslot.materias,ff7->slot[s].materias,800); // copy materia
-    bufferslot.gil = ff7->slot[s].gil; // copy gil
-    bufferslot.battles = ff7->slot[s].battles; // copy battle count
-    bufferslot.runs = ff7->slot[s].runs; // copy run count
-    bufferslot.gp = ff7->slot[s].gp; // copy gp
-    //copy chocobo info.
-    bufferslot.stables = ff7->slot[s].stables;
-    bufferslot.stablesoccupied = ff7->slot[s].stablesoccupied;
-    for(int i=0;i<4;i++){memcpy(&bufferslot.chocobos[i],&ff7->slot[s].chocobos[i],0x10);}
-    memcpy(&bufferslot.chocobonames,ff7->slot[s].chocobonames,36);
-    memcpy(&bufferslot.chocostaminas,ff7->slot[s].chocostaminas,12);
-    for(int i=0;i<2;i++){memcpy(&bufferslot.choco56,ff7->slot[s].choco56,0x10);}
-    // copy options
-    bufferslot.battlespeed =ff7->slot[s].battlespeed;
-    bufferslot.battlemspeed =ff7->slot[s].battlemspeed;
-    bufferslot.options1 = ff7->slot[s].options1;
-    bufferslot.options2 = ff7->slot[s].options2;
-    memcpy(&bufferslot.controller_map,ff7->slot[s].controller_map,16);
-    bufferslot.fieldmspeed = ff7->slot[s].fieldmspeed;
-    /*~~ buffer now ready to be copied~*/
-    memcpy(&ff7->slot[s],&bufferslot,0x10f4); // copy buffer to the current slot.
+
+        QByteArray ff7file;
+        ff7file = file.readAll(); //put all data in temp raw file
+        QByteArray temp; // create a temp to be used when needed
+        int index = 0x200;
+        temp = ff7file.mid(index,0x10f4); // dump file -> temp
+        memcpy(&bufferslot,temp,0x10f4);  // copy temp to the buffer slot
+        buffer_region = ff7->region(s);
+        ui->line_location->setText(tr("New Game +"));
+        memcpy(&bufferslot.desc,&ff7->slot[s].desc,0x44); // keep a old preview
+        memcpy(&bufferslot.colors,&ff7->slot[s].colors,12); // keep old colors.
+        for(int i=0;i<9;i++) // keep all old character info.
+        {
+            if((i==6)||(i==7))// except we have to export cait sith and vincent.the game needs y.cloud/seppie,for the flash back.
+            {
+                QString fileName;
+                if(i==6) //export cait sith. cait sith's stats are only generated when he joins the party.
+                {
+                        fileName.append(filename);
+                        fileName.append("-cait_sith");
+                        if(ff7->type() != "PSX" || ff7->type() != "PSV")
+                        {
+                            fileName.append("-");
+                            QString str;
+                            str.setNum(s,10)+1;
+                            fileName.append(str);
+                        }
+                    }
+                else if(i==7)// export vincent. vincent's stats are only generated when he joins the party.
+                    {
+                        fileName.append(filename);
+                        fileName.append("-vincent");
+                        if(ff7->type() != "PSX" || ff7->type() != "PSV")
+                        {
+                            fileName.append("-");
+                            QString str;
+                            str.setNum(s,10)+1;
+                            fileName.append(str);
+                        }
+                    }
+                fileName.append(".char");
+                QFile file(fileName);
+                if(!file.open(QFile::ReadWrite))
+                {
+                    QMessageBox::warning(this, tr("Black Chocobo"),
+                    tr("Cannot write file %1:\n%2.")
+                        .arg(fileName)
+                        .arg(file.errorString()));
+                    return;
+                }
+                FILE *pfile;
+                pfile = fopen(fileName.toAscii(),"wb");
+                fwrite(&ff7->slot[s].chars[i],132,1,pfile);
+                fclose(pfile);
+
+            }
+            else{memcpy(&bufferslot.chars[i],&ff7->slot[s].chars[i],0x84);} // normal character
+        }
+        memcpy(&bufferslot.items,ff7->slot[s].items,640);// copy items
+        memcpy(&bufferslot.materias,ff7->slot[s].materias,800); // copy materia
+        bufferslot.gil = ff7->slot[s].gil; // copy gil
+        bufferslot.battles = ff7->slot[s].battles; // copy battle count
+        bufferslot.runs = ff7->slot[s].runs; // copy run count
+        bufferslot.gp = ff7->slot[s].gp; // copy gp
+        //copy chocobo info.
+        bufferslot.stables = ff7->slot[s].stables;
+        bufferslot.stablesoccupied = ff7->slot[s].stablesoccupied;
+        for(int i=0;i<4;i++){memcpy(&bufferslot.chocobos[i],&ff7->slot[s].chocobos[i],0x10);}
+        memcpy(&bufferslot.chocobonames,ff7->slot[s].chocobonames,36);
+        memcpy(&bufferslot.chocostaminas,ff7->slot[s].chocostaminas,12);
+        for(int i=0;i<2;i++){memcpy(&bufferslot.choco56,ff7->slot[s].choco56,0x10);}
+        // copy options
+        bufferslot.battlespeed =ff7->slot[s].battlespeed;
+        bufferslot.battlemspeed =ff7->slot[s].battlemspeed;
+        bufferslot.options1 = ff7->slot[s].options1;
+        bufferslot.options2 = ff7->slot[s].options2;
+        memcpy(&bufferslot.controller_map,ff7->slot[s].controller_map,16);
+        bufferslot.fieldmspeed = ff7->slot[s].fieldmspeed;
+        /*~~ buffer now ready to be copied~
+        memcpy(&ff7->slot[s],&bufferslot,0x10f4); // copy buffer to the current slot.
+        */
+    ff7->New_Game_Plus(s,filename,"");
     if(!load){file_modified(true);}
     guirefresh(0);
 }
@@ -994,7 +969,7 @@ void MainWindow::on_action_Region_USA_triggered(bool checked)
         ui->action_Region_USA->setIcon(QIcon(":/icon/us_sel"));
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-        Text.init(0);
+        //Text.init(0);
     }
 }}
 /*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
@@ -1025,7 +1000,7 @@ void MainWindow::on_action_Region_PAL_Generic_triggered(bool checked)
         ui->action_Region_PAL_Generic->setIcon(QIcon(":/icon/eu_sel"));
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-        Text.init(0);
+        //Text.init(0);
     }
 }}
 /*~~~~~~~~~~~~~SET PAL_German MC HEADER~~~~~~~~~~~~~~~~*/
@@ -1056,7 +1031,7 @@ void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
         ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_sel"));
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-        Text.init(0);
+        //Text.init(0);
     }
 }}
 /*~~~~~~~~~~~~~SET PAL_Spanish MC HEADER~~~~~~~~~~~~~~~~*/
@@ -1087,7 +1062,7 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
         ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_sel"));
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-        Text.init(0);
+        //Text.init(0);
     }
 }}
 /*~~~~~~~~~~~~~SET PAL_French MC HEADER~~~~~~~~~~~~~~~~*/
@@ -1118,7 +1093,7 @@ void MainWindow::on_action_Region_PAL_French_triggered(bool checked)
         ui->action_Region_PAL_French->setIcon(QIcon(":/icon/fr_sel"));
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-        Text.init(0);
+        //Text.init(0);
     }
 }}
 /*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
@@ -1149,7 +1124,7 @@ void MainWindow::on_action_Region_JPN_triggered(bool checked)
         ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_sel"));
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-        Text.init(1);
+        //Text.init(1);
     }
 }}
 /*~~~~~~~~~~~~~SET JPN_International MC HEADER~~~~~~~~~~~~~~~~*/
@@ -1180,7 +1155,7 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
         ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_sel"));
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-        Text.init(1);
+        //Text.init(1);
     }
 }}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -1189,7 +1164,7 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
 void MainWindow::charupdate(void)
 {
     load=true;
-    QByteArray text;
+    //QByteArray text;
     quint8 char_weapon_offset=0;
     //clear everthing.
     ui->cb_id->setText("");
@@ -1218,10 +1193,11 @@ void MainWindow::charupdate(void)
     }
 
     ui->combo_id->setCurrentIndex(ff7->slot[s].chars[curchar].id);
-
+/*
     for (int n=0;n<12;n++){text.append(ff7->slot[s].chars[curchar].name[n]);}
     ui->line_name->setText(Text.toPC(text));
-
+*/
+    ui->line_name->setText(ff7->charName(s,curchar));
     ui->sb_exp->setValue(ff7->slot[s].chars[curchar].exp);
     ui->pbar_level->setValue(ff7->slot[s].chars[curchar].flags[2]);
     ui->lcd_next->display(double(ff7->slot[s].chars[curchar].expNext));
@@ -2483,27 +2459,9 @@ void MainWindow::itemupdate()
     ui->tbl_itm->setColumnWidth(1,32);
     ui->tbl_itm->setRowCount(320);
 
-    int one = 1;
-    if (*(char *)&one) {
-        qDebug("Big endian");}
-    else {
-        qDebug("Little endian");
-    }
 
     for (int i=0;i<320;i++) // set up items
     {
-
-        QString ids,qtys;
-        ids.setNum(ff7->itemId(s,i), 2);
-        qtys.setNum(ff7->itemQty(s,i), 2);
-
-        qDebug() << "index position: " << i;
-        qDebug("Item id: %#09X",ff7->itemId(s,i));
-        qDebug("Item qty: %#07X",ff7->itemQty(s,i));
-        qDebug() << "Item id: " << ids;
-        qDebug() << "Item qty: " << qtys;
-
-
         if (ff7->itemQty(s,i) == 0x7F && ff7->itemId(s,i) == 0x1FF)
         {
             newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
@@ -2587,12 +2545,6 @@ void MainWindow::itemupdate()
 void MainWindow::guirefresh(bool newgame)
 {
     load=true;
-    int reserve_start=128+(128*s);
-    if (ff7->type() =="PSP"){reserve_start+=0x80;}
-    else if (ff7->type() =="VGS"){reserve_start+=0x40;}
-    else if (ff7->type() =="DEX"){reserve_start+=0xF40;}
-    else {}
-
     /*~~~~Check for SG type and ff7~~~~*/
     if(!ff7->isFF7(s) && !ff7->region(s).isEmpty())
     {// NOT FF7
@@ -2628,7 +2580,7 @@ void MainWindow::guirefresh(bool newgame)
     /*if empty and a Virtual memcard format and frame not empty must be link or mid link skip block!*/
     else if((!ff7->isFF7(s))
                  && (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
-                 && (ff7->file_headerp[reserve_start] !=0xA0))
+            && (ff7->psx_block_type(s) !=0xA0))
         {
             errbox error(0,ff7,s);
             error.setStyleSheet(this->styleSheet());
@@ -2664,12 +2616,12 @@ void MainWindow::guirefresh(bool newgame)
         QByteArray text;
         if(ff7->region(s).isEmpty()
            && (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
-           && ff7->file_headerp[reserve_start]==0xA0)
+           && ff7->psx_block_type(s)==0xA0)
         {//if empty region string and a virtual memcard format and dir frame says empty.
             ff7->clearslot(s); //file_modified(false);//checking only
         }
-        if(ff7->region(s).contains("00700") || ff7->region(s).contains("01057")){Text.init(1);}//Japanese
-        else{Text.init(0);}// not japanese save.
+    //    if(ff7->region(s).contains("00700") || ff7->region(s).contains("01057")){Text.init(1);}//Japanese
+    //    else{Text.init(0);}// not japanese save.
 
         //Clear all check boxes and index's
         ui->cb_replay->setCurrentIndex(0);
@@ -2697,9 +2649,7 @@ void MainWindow::guirefresh(bool newgame)
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
         if (ff7->type() != "PC") //we Display an icon. for all formats except for pc
         {
-            QByteArray data;
-            for(int i=0;i<0x200;i++){data.append(ff7->hf[s].sl_header[i]);}
-            SaveIcon ico(data.mid(96,160));
+            SaveIcon ico(ff7->slot_icon(s).mid(96,160));
             ui->lbl_slot_icon->setPixmap(ico.icon().scaledToHeight(64,Qt::SmoothTransformation));
         }
         /*~~~~~Load Game Options~~~~~*/
@@ -2761,8 +2711,9 @@ void MainWindow::guirefresh(bool newgame)
         ui->sb_coordy->setValue(ff7->slot[s].coord.y);
         ui->sb_coordz->setValue(ff7->slot[s].coord.z);
         ui->line_location->clear();
-        for (int loc=0; loc<32;loc++){text.append(ff7->slot[s].location[loc]);}
-        ui->line_location->setText(Text.toPC(text));
+
+        ui->line_location->setText(ff7->location(s));
+
         ui->sb_map_id->setValue(ff7->slot[s].mapid);
         ui->sb_loc_id->setValue(ff7->slot[s].locationid);
         switch(ui->combo_map_controls->currentIndex())
@@ -3135,7 +3086,6 @@ void MainWindow::progress_update()
 void MainWindow::chocobo_refresh()
 {
     load=true;
-    QByteArray text;
     ui->sb_stables_owned->setValue(ff7->slot[s].stables);
     ui->lcd_stables_occupied->display(ff7->slot[s].stablesoccupied);
 
@@ -3165,9 +3115,7 @@ void MainWindow::chocobo_refresh()
     else{ui->cb_c6_mated->setChecked(0);}
 
     ui->line_c1_name->clear();
-    text.clear();
-    for (int n=0;n<6;n++){text.append(ff7->slot[s].chocobonames[0][n]);}
-    ui->line_c1_name->setText(Text.toPC(text));
+    ui->line_c1_name->setText(ff7->chocoName(s,0));
     //ui->cb_c1_personality->setCurrentIndex(ff7->slot[s].chocobos[0].personality); //need more data for this.
     ui->sb_c1_sprint->setValue(ff7->slot[s].chocobos[0].sprintspd);
     ui->sb_c1_maxsprint->setValue(ff7->slot[s].chocobos[0].maxsprintspd);
@@ -3185,9 +3133,7 @@ void MainWindow::chocobo_refresh()
     // end choco 1
 
     ui->line_c2_name->clear();
-    text.clear();
-    for (int n=0;n<6;n++){text.append(ff7->slot[s].chocobonames[1][n]);}
-    ui->line_c2_name->setText(Text.toPC(text));
+    ui->line_c2_name->setText(ff7->chocoName(s,1));
     //ui->cb_c2_personality->setCurrentIndex(ff7->slot[s].chocobos[1].personality); //need more data for this.
     ui->sb_c2_sprint->setValue(ff7->slot[s].chocobos[1].sprintspd);
     ui->sb_c2_maxsprint->setValue(ff7->slot[s].chocobos[1].maxsprintspd);
@@ -3205,9 +3151,7 @@ void MainWindow::chocobo_refresh()
     //end Choco 2
 
     ui->line_c3_name->clear();
-    text.clear();
-    for (int n=0;n<6;n++){text.append(ff7->slot[s].chocobonames[2][n]);}
-    ui->line_c3_name->setText(Text.toPC(text));
+    ui->line_c3_name->setText(ff7->chocoName(s,2));
     //ui->cb_c3_personality->setCurrentIndex(ff7->slot[s].chocobos[2].personality); //need more data for this.
     ui->sb_c3_sprint->setValue(ff7->slot[s].chocobos[2].sprintspd);
     ui->sb_c3_maxsprint->setValue(ff7->slot[s].chocobos[2].maxsprintspd);
@@ -3225,9 +3169,7 @@ void MainWindow::chocobo_refresh()
     // end choco 3
 
     ui->line_c4_name->clear();
-    text.clear();
-    for (int n=0;n<6;n++){text.append(ff7->slot[s].chocobonames[3][n]);}
-    ui->line_c4_name->setText(Text.toPC(text));
+    ui->line_c4_name->setText(ff7->chocoName(s,3));
     //ui->cb_c4_personality->setCurrentIndex(ff7->slot[s].chocobos[3].personality); //need more data for this.
     ui->sb_c4_sprint->setValue(ff7->slot[s].chocobos[3].sprintspd);
     ui->sb_c4_maxsprint->setValue(ff7->slot[s].chocobos[3].maxsprintspd);
@@ -3245,9 +3187,7 @@ void MainWindow::chocobo_refresh()
     // end choco 4
 
     ui->line_c5_name->clear();
-    text.clear();
-    for (int n=0;n<6;n++){text.append(ff7->slot[s].chocobonames[4][n]);}
-    ui->line_c5_name->setText(Text.toPC(text));
+    ui->line_c5_name->setText(ff7->chocoName(s,4));
     //ui->cb_c5_personality->setCurrentIndex(ff7->slot[s].choco56[0].personality); //need more data for this.
     ui->sb_c5_sprint->setValue(ff7->slot[s].choco56[0].sprintspd);
     ui->sb_c5_maxsprint->setValue(ff7->slot[s].choco56[0].maxsprintspd);
@@ -3264,9 +3204,7 @@ void MainWindow::chocobo_refresh()
     ui->sb_c5_personality->setValue(ff7->slot[s].choco56[0].personality);
     // end choco 5
     ui->line_c6_name->clear();
-    text.clear();
-    for (int n=0;n<6;n++){text.append(ff7->slot[s].chocobonames[5][n]);}
-    ui->line_c6_name->setText(Text.toPC(text));
+    ui->line_c6_name->setText(ff7->chocoName(s,5));
     //ui->cb_c6_personality->setCurrentIndex(ff7->slot[s].choco56[1].personality); //need more data for this.
     ui->sb_c6_sprint->setValue(ff7->slot[s].choco56[1].sprintspd);
     ui->sb_c6_maxsprint->setValue(ff7->slot[s].choco56[1].maxsprintspd);
@@ -3536,12 +3474,7 @@ void MainWindow::on_box_stable6_toggled(bool checked)
     ff7->slot[s].stablesoccupied=ui->lcd_stables_occupied->value();
 }}
 /*~~~~~ChocoboStats~~~~~*/
-void MainWindow::on_line_c1_name_textChanged(QString text)
-{if(!load){file_modified(true);
-        QByteArray temp = Text.toFF7(text);
-        for (int i=0;i<6;i++){ff7->slot[s].chocobonames[0][i] =0xFF;}
-        memcpy(ff7->slot[s].chocobonames[0],temp,temp.length());
-}}
+void MainWindow::on_line_c1_name_textChanged(QString text){if(!load){file_modified(true);ff7->setChocoName(s,0,text);}}
 void MainWindow::on_sb_c1_stamina_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].chocostaminas[0] = value;}}
 void MainWindow::on_sb_c1_speed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].chocobos[0].speed = value;}}
 void MainWindow::on_sb_c1_maxspeed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].chocobos[0].maxspeed = value;}}
@@ -3561,12 +3494,7 @@ void MainWindow::on_cb_c1_mated_toggled(bool checked)
     else{ff7->slot[s].chocomated &= ~(1<<0);}
 }}
 
-void MainWindow::on_line_c2_name_textChanged(QString text)
-{if(!load){file_modified(true);
-        QByteArray temp = Text.toFF7(text);
-        for (int i=0;i<6;i++){ff7->slot[s].chocobonames[1][i] =0xFF;}
-        memcpy(ff7->slot[s].chocobonames[1],temp,temp.length());
-}}
+void MainWindow::on_line_c2_name_textChanged(QString text){if(!load){file_modified(true); ff7->setChocoName(s,1,text);}}
 void MainWindow::on_sb_c2_stamina_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].chocostaminas[1] = value;}}
 void MainWindow::on_sb_c2_speed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].chocobos[1].speed = value;}}
 void MainWindow::on_sb_c2_maxspeed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].chocobos[1].maxspeed = value;}}
@@ -3586,12 +3514,7 @@ void MainWindow::on_cb_c2_mated_toggled(bool checked)
     else{ff7->slot[s].chocomated &= ~(1<<1);}
 }}
 
-void MainWindow::on_line_c3_name_textChanged(QString text)
-{if(!load){file_modified(true);
-        QByteArray temp = Text.toFF7(text);
-        for (int i=0;i<6;i++){ff7->slot[s].chocobonames[2][i] =0xFF;}
-        memcpy(ff7->slot[s].chocobonames[2],temp,temp.length());
-}}
+void MainWindow::on_line_c3_name_textChanged(QString text){if(!load){file_modified(true); ff7->setChocoName(s,2,text);}}
 void MainWindow::on_sb_c3_stamina_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].chocostaminas[2] =value;}}
 void MainWindow::on_sb_c3_speed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].chocobos[2].speed = value;}}
 void MainWindow::on_sb_c3_maxspeed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].chocobos[2].maxspeed = value;}}
@@ -3611,12 +3534,7 @@ void MainWindow::on_cb_c3_mated_toggled(bool checked)
     else{ff7->slot[s].chocomated &= ~(1<<2);}
 }}
 
-void MainWindow::on_line_c4_name_textChanged(QString text)
-{if(!load){file_modified(true);
-        QByteArray temp = Text.toFF7(text);
-        for (int i=0;i<6;i++){ff7->slot[s].chocobonames[3][i] =0xFF;}
-        memcpy(ff7->slot[s].chocobonames[3],temp,temp.length());
-}}
+void MainWindow::on_line_c4_name_textChanged(QString text){if(!load){file_modified(true); ff7->setChocoName(s,3,text);}}
 void MainWindow::on_sb_c4_stamina_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].chocostaminas[3] = value;}}
 void MainWindow::on_sb_c4_speed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].chocobos[3].speed = value;}}
 void MainWindow::on_sb_c4_maxspeed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].chocobos[3].maxspeed = value;}}
@@ -3636,12 +3554,7 @@ void MainWindow::on_cb_c4_mated_toggled(bool checked)
     else{ff7->slot[s].chocomated &= ~(1<<3);}
 }}
 
-void MainWindow::on_line_c5_name_textChanged(QString text)
-{if(!load){file_modified(true);
-        QByteArray temp = Text.toFF7(text);
-        for (int i=0;i<6;i++){ff7->slot[s].chocobonames[4][i] =0xFF;}
-        memcpy(ff7->slot[s].chocobonames[4],temp,temp.length());
-}}
+void MainWindow::on_line_c5_name_textChanged(QString text){if(!load){file_modified(true); ff7->setChocoName(s,4,text);}}
 void MainWindow::on_sb_c5_stamina_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].chocostaminas[4] = value;}}
 void MainWindow::on_sb_c5_speed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].choco56[0].speed = value;}}
 void MainWindow::on_sb_c5_maxspeed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].choco56[0].maxspeed = value;}}
@@ -3661,12 +3574,7 @@ void MainWindow::on_cb_c5_mated_toggled(bool checked)
     else{ff7->slot[s].chocomated &= ~(1<<4);}
 }}
 
-void MainWindow::on_line_c6_name_textChanged(QString text)
-{if(!load){file_modified(true);
-        QByteArray temp = Text.toFF7(text);
-        for (int i=0;i<6;i++){ff7->slot[s].chocobonames[5][i] =0xFF;}
-        memcpy(ff7->slot[s].chocobonames[5],temp,temp.length());
-}}
+void MainWindow::on_line_c6_name_textChanged(QString text){if(!load){file_modified(true); ff7->setChocoName(s,5,text);}}
 void MainWindow::on_sb_c6_stamina_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].chocostaminas[5] = value;}}
 void MainWindow::on_sb_c6_speed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].choco56[1].speed = value;}}
 void MainWindow::on_sb_c6_maxspeed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].choco56[1].maxspeed = value;}}
@@ -4065,15 +3973,7 @@ void MainWindow::on_sb_coordx_valueChanged(int value){if(!load){file_modified(tr
 void MainWindow::on_sb_coordy_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].coord.y = value;}}
 void MainWindow::on_sb_coordz_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].coord.z = value;}}
 
-void MainWindow::on_line_location_textChanged(QString text)
-{if (!load){file_modified(true);
-    for (int i=0;i<24;i++){ff7->slot[s].location[i] =0xFF;}
-    QByteArray temp = Text.toFF7(text);
-    memcpy(ff7->slot[s].location,temp,temp.length());
-    //and the description.
-    for (int i=0;i<32;i++){ff7->slot[s].desc.location[i] =0xFF;}
-    memcpy(ff7->slot[s].desc.location,temp,temp.length());
-}}
+void MainWindow::on_line_location_textChanged(QString text){if (!load){file_modified(true);ff7->setLocation(s,text);}}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~CHARACTER TAB~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_cb_id_toggled(bool checked)
@@ -4094,14 +3994,8 @@ void MainWindow::on_cb_id_toggled(bool checked)
 
 void MainWindow::on_line_name_textChanged(QString text)
 {if(!load){file_modified(true);
-    for (int i=0;i<12;i++){ff7->slot[s].chars[curchar].name[i] =0xFF;}
-    QByteArray temp = Text.toFF7(text);
-    memcpy(ff7->slot[s].chars[curchar].name,temp,temp.length());
-    if (curchar == ui->combo_party1->currentIndex())
-    {
-        for (int i=0;i<16;i++){ff7->slot[s].desc.name[i] =0xFF;}
-        memcpy(ff7->slot[s].desc.name,temp,temp.length());
-    }
+    ff7->setCharName(s,curchar,text);
+    if (curchar == ui->combo_party1->currentIndex()){ff7->setDescName(s,text);}
 }}
 
 void MainWindow::on_sb_lvl_valueChanged(int value)
@@ -4605,17 +4499,9 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         //set up Sephiroth
         ff7->slot[s].chars[7].id=10;
         if(ff7->region(s).contains("00700") || ff7->region(s).contains("01057"))
-        {
-            for(int i=0;i<12;i++){ff7->slot[s].chars[7].name[i]=0xFF;}
-            QByteArray temp =Text.toFF7(QString::fromUtf8("セフィロス"));
-            memcpy(ff7->slot[s].chars[7].name,temp,temp.length());
+        {        ff7->setCharName(s,7,QString::fromUtf8("セフィロス"));
         }
-        else
-        {
-            for(int i=0;i<12;i++){ff7->slot[s].chars[7].name[i]=0xFF;}
-            QByteArray temp = Text.toFF7("Sephiroth");
-            memcpy(ff7->slot[s].chars[7].name,temp,temp.length());
-        }
+        else{ff7->setCharName(s,7,QString::fromUtf8("Sephiroth"));}
         ui->label_replaynote->setText(tr("Setting This Will Copy Cloud as is to young cloud (caitsith's slot). sephiroth's stats will come directly from vincent."));
     }
 
