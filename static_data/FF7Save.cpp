@@ -20,9 +20,9 @@
 #include <QDataStream>
 
 bool FF7Save::LoadFile(const QString &fileName)
-  {
+{
     // Return true if File Loaded and false if file not loaded.
-    // This Class should contain NO Gui Parts 
+    // This Class should contain NO Gui Parts
     if(fileName.isEmpty()){return false;}// bail on empty string.
     QFile file(fileName);
     if(!file.open(QIODevice::ReadOnly)){return false;}
@@ -108,12 +108,10 @@ bool FF7Save::LoadFile(const QString &fileName)
     }
     else{return false;}
     return true;
-  }
-
- bool FF7Save::SaveFile(const QString &fileName)
- {
+}
+bool FF7Save::SaveFile(const QString &fileName)
+{
     if(fileName.isEmpty()){return false;}
-
     //fix our headers before saving
     if(type() =="PC"){/*FIX PC BYTEMASK SHOULD BE CALLED BY HOST*/}
     else if(type() == "PSX"){fix_psx_header(0);}
@@ -135,19 +133,253 @@ bool FF7Save::LoadFile(const QString &fileName)
     fix_sum(fileName);
     return true;
 }
-
- bool FF7Save::exportChar(int s,int char_num,QString fileName)
- {
-     if (!fileName.isEmpty())
-     {
-         FILE *pfile;
-         pfile = fopen(fileName.toAscii(),"wb");
-         fwrite(&slot[s].chars[char_num],132,1,pfile);
-         fclose(pfile);
-         return true;
+bool FF7Save::Export_PC(const QString &fileName)
+{
+    if(fileName.isEmpty()){return false;}
+    QString prev_type = SG_TYPE;
+    if(SG_TYPE !="PC")
+    {
+      /*RESET CONTROLLS LATER WHEN IMPLIMENTED!!!*/
+      setType("PC");
+      // Add File Header
+      for(int i=0;i<9;i++){file_header_pc[i]= PC_SAVE_GAME_FILE_HEADER[i];}
+      fix_pc_bytemask(0);//set first slot to 0
+    }
+    for(int i=0;i<15;i++)//clean up saves and fix time for Pal Saves.
+    {
+      if (isNTSC(i)){/*NTSC FF7 DATA.*/}
+      else if(isPAL(i))
+      {//PAL FF7 DATA , FIX PLAY TIME THEN SAVE
+        slot[i].time = (slot[i].time*1.2);
+        slot[i].desc.time = slot[i].time;
+      }
+      else{clearslot(i);}
+    }
+    if(SaveFile(fileName))
+    {
+        setType(prev_type);
+        return true;
+    }
+    else
+    {
+        setType(prev_type);
+        return false;
+    }
+}
+bool FF7Save::Export_PSX(const QString &fileName)
+{
+    if(fileName.isEmpty()){return false;}
+    QString prev_type = SG_TYPE;
+    if(SG_TYPE != "PSX")
+    {
+        /*RESET CONTROLLS LATER WHEN IMPLIMENTED!!!*/
+        setType("PSX");
+    }
+    if(fileName.contains("00867") || fileName.contains("00869") ||
+       fileName.contains("00900") || fileName.contains("94163") ||
+       fileName.contains("00700") || fileName.contains("01057") ||
+       fileName.contains("00868"))
+    {
+        if(fileName.endsWith("S01")){for(int i=0;i<256;i++)	  {hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S01[i];}}
+        else if(fileName.endsWith("S02")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S02[i];}}
+        else if(fileName.endsWith("S03")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S03[i];}}
+        else if(fileName.endsWith("S04")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S04[i];}}
+        else if(fileName.endsWith("S05")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S05[i];}}
+        else if(fileName.endsWith("S06")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S06[i];}}
+        else if(fileName.endsWith("S07")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S07[i];}}
+        else if(fileName.endsWith("S08")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S08[i];}}
+        else if(fileName.endsWith("S09")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S09[i];}}
+        else if(fileName.endsWith("S10")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S10[i];}}
+        else if(fileName.endsWith("S11")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S11[i];}}
+        else if(fileName.endsWith("S12")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S12[i];}}
+        else if(fileName.endsWith("S13")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S13[i];}}
+        else if(fileName.endsWith("S14")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S14[i];}}
+        else if(fileName.endsWith("S15")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S15[i];}}
+        else{/*user ERROR*/}
+        for(int i=0; i<SG_SLOT_FOOTER;i++){hf[0].sl_footer[i] =0x00;} //CLEAN FOOTER
+    }
+    fix_psx_header(0);
+    if(SaveFile(fileName))
+    {
+        setType(prev_type);
+        return true;
+    }
+    else
+    {
+        setType(prev_type);
+        return false;
+    }
+}
+bool FF7Save::Export_VMC(const QString &fileName)
+{
+  if(fileName.isEmpty()){return false;}
+  QString prev_type = SG_TYPE;
+  if(SG_TYPE != "MC")
+  {
+    /* RESET CONTROLS LATER WHEN IMPLIMENTED!!!!!!*/
+    setType("MC");
+  }
+  fix_vmc_header();
+  if(SaveFile(fileName))
+  {
+      setType(prev_type);
+      return true;
+  }
+  else
+  {
+      setType(prev_type);
+      return false;
+  }
+}
+bool FF7Save::Export_VGS(const QString &fileName)
+{
+  if(fileName.isEmpty()){return false;}
+  QString prev_type = SG_TYPE;
+  if(SG_TYPE != "VGS")
+  {
+    /* RESET CONTROLS LATER WHEN IMPLIMENTED!!!!!!*/
+    setType("VGS");//fill the Header With The Needed Default
+    file_header_vgs[0] =0x56;
+    file_header_vgs[1] =0x67;
+    file_header_vgs[2] =0x73;
+    file_header_vgs[3] =0x4D;
+    file_header_vgs[4] =0x01;
+    file_header_vgs[8] =0x01;
+    file_header_vgs[12] =0x01;
+  }
+  fix_vmc_header();
+  if(SaveFile(fileName))
+  {
+      setType(prev_type);
+      return true;
+  }
+  else
+  {
+      setType(prev_type);
+      return false;
+  }
+}
+bool FF7Save::Export_DEX(const QString &fileName)
+{
+  if(fileName.isEmpty()){return false;}
+  QString prev_type = SG_TYPE;
+  if(SG_TYPE != "DEX")
+  {
+    /* RESET CONTROLS LATER WHEN IMPLIMENTED!!!!!!*/
+      setType("DEX");
+    //default header..
+    file_header_dex[0]=0x31;
+    file_header_dex[1]=0x32;
+    file_header_dex[2]=0x33;
+    file_header_dex[3]=0x2D;
+    file_header_dex[4]=0x34;
+    file_header_dex[5]=0x35;
+    file_header_dex[6]=0x36;
+    file_header_dex[7]=0x2D;
+    file_header_dex[8]=0x53;
+    file_header_dex[9]=0x54;
+    file_header_dex[10]=0x44;
+    file_header_dex[18]=0x01;
+    file_header_dex[20]=0x01;
+    file_header_dex[21]=0x4D;
+    file_header_dex[22]=0x51;
+    for(int i=0x17;i<0x25;i++){file_header_dex[i]=0xA0;}
+    file_header_dex[38]=0xFF;
+  }
+  fix_vmc_header();
+  if(SaveFile(fileName))
+  {
+      setType(prev_type);
+      return true;
+  }
+  else
+  {
+      setType(prev_type);
+      return false;
+  }
+}
+void FF7Save::Import_PSX(int s,const QString &fileName)
+{
+    if(fileName.isEmpty()){return;}
+    else
+    {
+        QFile file(fileName);
+        if(!file.open(QFile::ReadOnly)){return;}
+        QByteArray ff7file;
+        ff7file = file.readAll(); //put all data in temp raw file
+        if((file.size() ==FF7_PSX_SAVE_GAME_SIZE) && ff7file.startsWith(PSX_SAVE_GAME_FILE_ID))
+        {
+            QByteArray temp; // create a temp to be used when needed
+            int index = 0x200;
+            temp = ff7file.mid(index,0x10f4);
+            memcpy(&slot[s],temp,0x10f4);
+            if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
+              (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")) || (fileName.contains("00868")))
+            {
+                QString string;
+                string = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
+                setRegion(s,string.mid(string.lastIndexOf("BA")-1,string.lastIndexOf("FF7-S")+8));
+            }
+            else {setRegion(s,"");}
+         }
+         else{return;}
      }
-     return false;
- }
+}
+void FF7Save::Import_PSV(int s,const QString &fileName)
+{
+    if(fileName.isEmpty()){return;}
+    else
+    {
+        QFile file(fileName);
+        if(!file.open(QFile::ReadOnly)){return;}
+        QByteArray ff7file;
+        ff7file = file.readAll(); //put all data in temp raw file
+        QByteArray temp; // create a temp to be used when needed
+        if((file.size() ==FF7_PSV_SAVE_GAME_SIZE) && ff7file.startsWith(PSV_SAVE_GAME_FILE_ID))
+        {
+            int index = 0x284;
+            temp = ff7file.mid(index,0x10f4);
+            memcpy(&slot[s],temp,0x10f4);
+            setRegion(s,QString(ff7file.mid(0x64,19)));
+        }//Parse slot data....
+        else{return;}
+    }
+}
+void FF7Save::clearslot(int rmslot)
+{
+    QByteArray temp;
+    temp.fill(0x00,0x10f4);
+    memcpy(hf[rmslot].sl_header,temp,SG_SLOT_HEADER);// clear the header..
+    memcpy(&slot[rmslot],temp,0x10f4);
+    memcpy(hf[rmslot].sl_footer,temp,SG_SLOT_FOOTER);// clear the footer..
+    SG_Region_String[rmslot].clear();
+    if(SG_TYPE =="MC" || SG_TYPE =="PSP" || SG_TYPE =="VGS" || SG_TYPE =="DEX")
+    {//clean the mem card header if needed.
+        int index = (128+(128*rmslot));
+        if (SG_TYPE == "PSP"){index +=0x80;}
+        else if (SG_TYPE == "VGS"){index +=0x40;}
+        else if (SG_TYPE == "DEX"){index +=0xF40;}
+        temp.resize(128);
+        temp.fill(0x00);
+        temp[0]=0xA0;
+        temp[8]=0xFF;
+        temp[9]=0xFF;
+        temp[0x7F]=0xA0;
+        memcpy(&file_headerp[index],temp,128);
+    }
+}
+bool FF7Save::exportChar(int s,int char_num,QString fileName)
+{
+    if (!fileName.isEmpty())
+    {
+        FILE *pfile;
+        pfile = fopen(fileName.toAscii(),"wb");
+        fwrite(&slot[s].chars[char_num],132,1,pfile);
+        fclose(pfile);
+        return true;
+    }
+    return false;
+}
 void FF7Save::importChar(int s,int char_num,QByteArray new_char){memcpy(&slot[s].chars[char_num],new_char.data(),132);}
 
 void FF7Save::fix_sum(const QString &fileName)
@@ -247,29 +479,7 @@ quint8 FF7Save::itemQty(int s,int item_num)
     qty = (item & 0xFE00) >> 9;
     return qty;
 }
-void FF7Save::clearslot(int rmslot)
-{
-    QByteArray temp;
-    temp.fill(0x00,0x10f4);
-    memcpy(hf[rmslot].sl_header,temp,SG_SLOT_HEADER);// clear the header..
-    memcpy(&slot[rmslot],temp,0x10f4);
-    memcpy(hf[rmslot].sl_footer,temp,SG_SLOT_FOOTER);// clear the footer..
-    SG_Region_String[rmslot].clear();
-    if(SG_TYPE =="MC" || SG_TYPE =="PSP" || SG_TYPE =="VGS" || SG_TYPE =="DEX")
-    {//clean the mem card header if needed.
-        int index = (128+(128*rmslot));
-        if (SG_TYPE == "PSP"){index +=0x80;}
-        else if (SG_TYPE == "VGS"){index +=0x40;}
-        else if (SG_TYPE == "DEX"){index +=0xF40;}
-        temp.resize(128);
-        temp.fill(0x00);
-        temp[0]=0xA0;
-        temp[8]=0xFF;
-        temp[9]=0xFF;
-        temp[0x7F]=0xA0;
-        memcpy(&file_headerp[index],temp,128);
-    }
-}
+
 void FF7Save::fix_pc_bytemask(int s)
 {
     quint8 mask=0;
@@ -506,176 +716,6 @@ void FF7Save::fix_vmc_header(void)
     }
 }  
 
-bool FF7Save::Export_PC(const QString &fileName)
-{
-  if(fileName.isEmpty()){return false;}
-  QString prev_type = SG_TYPE;
-  if(SG_TYPE !="PC")
-  {
-    /*RESET CONTROLLS LATER WHEN IMPLIMENTED!!!*/
-    setType("PC");
-    // Add File Header
-    for(int i=0;i<9;i++){file_header_pc[i]= PC_SAVE_GAME_FILE_HEADER[i];}
-    fix_pc_bytemask(0);//set first slot to 0
-  }
-  for(int i=0;i<15;i++)//clean up saves and fix time for Pal Saves.
-  {
-    if (isNTSC(i)){/*NTSC FF7 DATA.*/}
-  
-    else if(isPAL(i))
-    {//PAL FF7 DATA , FIX PLAY TIME THEN SAVE
-      slot[i].time = (slot[i].time*1.2);
-      slot[i].desc.time = slot[i].time;
-    }
-    else{clearslot(i);}
-  }
-    if(SaveFile(fileName))
-    {
-        setType(prev_type);
-        return true;
-    }
-    else
-    {
-        setType(prev_type);
-        return false;
-    }
-}
-
-bool FF7Save::Export_PSX(const QString &fileName)
-{
-    if(fileName.isEmpty()){return false;}
-    QString prev_type = SG_TYPE;
-    if(SG_TYPE != "PSX")
-    {
-        /*RESET CONTROLLS LATER WHEN IMPLIMENTED!!!*/
-        setType("PSX");
-    }
-    if(fileName.contains("00867") || fileName.contains("00869") ||
-       fileName.contains("00900") || fileName.contains("94163") ||
-       fileName.contains("00700") || fileName.contains("01057") ||
-       fileName.contains("00868"))
-    {
-        if(fileName.endsWith("S01")){for(int i=0;i<256;i++)	  {hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S01[i];}}
-        else if(fileName.endsWith("S02")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S02[i];}}
-        else if(fileName.endsWith("S03")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S03[i];}}
-        else if(fileName.endsWith("S04")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S04[i];}}
-        else if(fileName.endsWith("S05")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S05[i];}}
-        else if(fileName.endsWith("S06")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S06[i];}}
-        else if(fileName.endsWith("S07")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S07[i];}}
-        else if(fileName.endsWith("S08")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S08[i];}}
-        else if(fileName.endsWith("S09")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S09[i];}}
-        else if(fileName.endsWith("S10")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S10[i];}}
-        else if(fileName.endsWith("S11")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S11[i];}}
-        else if(fileName.endsWith("S12")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S12[i];}}
-        else if(fileName.endsWith("S13")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S13[i];}}
-        else if(fileName.endsWith("S14")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S14[i];}}
-        else if(fileName.endsWith("S15")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S15[i];}}
-        else{/*user ERROR*/}
-        for(int i=0; i<SG_SLOT_FOOTER;i++){hf[0].sl_footer[i] =0x00;} //CLEAN FOOTER
-    }
-    fix_psx_header(0);
-    if(SaveFile(fileName))
-    {
-        setType(prev_type);
-        return true;
-    }
-    else
-    {
-        setType(prev_type);
-        return false;
-    }
-}
-
-bool FF7Save::Export_VMC(const QString &fileName)
-{
-  if(fileName.isEmpty()){return false;}
-  QString prev_type = SG_TYPE;
-  if(SG_TYPE != "MC")
-  {
-    /* RESET CONTROLS LATER WHEN IMPLIMENTED!!!!!!*/
-    setType("MC");
-  }
-  fix_vmc_header();
-  if(SaveFile(fileName))
-  {
-      setType(prev_type);
-      return true;
-  }
-  else
-  {
-      setType(prev_type);
-      return false;
-  }
-}
-
-bool FF7Save::Export_VGS(const QString &fileName)
-{
-  if(fileName.isEmpty()){return false;}
-  QString prev_type = SG_TYPE;
-  if(SG_TYPE != "VGS")
-  {
-    /* RESET CONTROLS LATER WHEN IMPLIMENTED!!!!!!*/
-    setType("VGS");//fill the Header With The Needed Default
-    file_header_vgs[0] =0x56;
-    file_header_vgs[1] =0x67;
-    file_header_vgs[2] =0x73;
-    file_header_vgs[3] =0x4D;
-    file_header_vgs[4] =0x01;
-    file_header_vgs[8] =0x01;
-    file_header_vgs[12] =0x01;
-  }
-  fix_vmc_header();
-  if(SaveFile(fileName))
-  {
-      setType(prev_type);
-      return true;
-  }
-  else
-  {
-      setType(prev_type);
-      return false;
-  }
-}
-
-bool FF7Save::Export_DEX(const QString &fileName)
-{
-  if(fileName.isEmpty()){return false;}
-  QString prev_type = SG_TYPE;
-  if(SG_TYPE != "DEX")
-  {
-    /* RESET CONTROLS LATER WHEN IMPLIMENTED!!!!!!*/
-      setType("DEX");
-    //default header..
-    file_header_dex[0]=0x31;
-    file_header_dex[1]=0x32;
-    file_header_dex[2]=0x33;
-    file_header_dex[3]=0x2D;
-    file_header_dex[4]=0x34;
-    file_header_dex[5]=0x35;
-    file_header_dex[6]=0x36;
-    file_header_dex[7]=0x2D;
-    file_header_dex[8]=0x53;
-    file_header_dex[9]=0x54;
-    file_header_dex[10]=0x44;
-    file_header_dex[18]=0x01;
-    file_header_dex[20]=0x01;
-    file_header_dex[21]=0x4D;
-    file_header_dex[22]=0x51;
-    for(int i=0x17;i<0x25;i++){file_header_dex[i]=0xA0;}
-    file_header_dex[38]=0xFF;
-  }
-  fix_vmc_header();
-  if(SaveFile(fileName))
-  {
-      setType(prev_type);
-      return true;
-  }
-  else
-  {
-      setType(prev_type);
-      return false;
-  }
-}
 QString FF7Save::region(int s){return SG_Region_String[s];}
 
 void FF7Save::setRegion(int s ,QString new_region)
@@ -999,20 +1039,6 @@ void FF7Save::setType(QString type)
     }
     else if(type=="PSP")
     {
-        SG_SIZE          = FF7_PSV_SAVE_GAME_SIZE;
-        SG_HEADER        = FF7_PSV_SAVE_GAME_HEADER;
-        SG_FOOTER        = FF7_PSV_SAVE_GAME_FOOTER;
-        SG_DATA_SIZE     = FF7_PSV_SAVE_GAME_DATA_SIZE;
-        SG_SLOT_HEADER   = FF7_PSV_SAVE_GAME_SLOT_HEADER;
-        SG_SLOT_FOOTER   = FF7_PSV_SAVE_GAME_SLOT_FOOTER;
-        SG_SLOT_SIZE     = FF7_PSV_SAVE_GAME_SLOT_SIZE;
-        SG_SLOT_NUMBER   = FF7_PSV_SAVE_GAME_SLOT_NUMBER;
-        SG_TYPE          = "PSV";
-        file_headerp     = file_header_psv;          //pointer to psv file header
-        file_footerp     = file_footer_psv;          //pointer to psv file footer
-    }
-    else if(type=="PSP")
-    {
         SG_SIZE          = FF7_PSP_SAVE_GAME_SIZE;
         SG_HEADER        = FF7_PSP_SAVE_GAME_HEADER;
         SG_FOOTER        = FF7_PSP_SAVE_GAME_FOOTER;
@@ -1025,7 +1051,6 @@ void FF7Save::setType(QString type)
         file_headerp     = file_header_psp;          //pointer to psp file header
         file_footerp     = file_footer_psp;          //pointer to psp file footer
     }
-
     else if(type=="VGS")
     {
         SG_SIZE          = FF7_VGS_SAVE_GAME_SIZE;
