@@ -32,14 +32,16 @@ public:
   bool Export_VMC(const QString &fileName);
   bool Export_DEX(const QString &fileName);
   bool Export_VGS(const QString &fileName);
+  void Import_PSX(int s,const QString &fileName);
+  void Import_PSV(int s,const QString &fileName);
   void clearslot(int s);
   void CopySlot(int s);
   void PasteSlot(int s);
-  void New_Game(int s,QString fileName=""); //new game in slot s
-  void New_Game_Plus(int s,QString CharFileName,QString fileName="");//new game + in slot s
+  void New_Game(int s,QString fileName=""); //new game in slot s (over load default w/ fileName must be RAW PSX)
+  void New_Game_Plus(int s,QString CharFileName,QString fileName="");//new game + in slot s (over load default w/ fileName must be RAW PSX)
 
-  bool exportChar(int s,int char_num,QString fileName);
-  void importChar(int s,int char_num,QByteArray new_char);
+  bool exportChar(int s,int char_num,QString fileName);// Write slot[s].char[char_num] to fileName
+  void importChar(int s,int char_num,QByteArray new_char);//import new_char to slot[s].char[char_num]
   //Set/Get Data Parts.
   quint16 itemId(int s,int item_num);
   quint8 itemQty(int s,int item_num);
@@ -47,25 +49,19 @@ public:
   void setItemQty(int s,int item_num,quint8 new_qty);
 
   // String Functions.
-  QString charName(int s,int char_num);
-  void setCharName(int s,int char_num,QString new_name);
-
-  QString chocoName(int s,int choco_num);
-  void setChocoName(int s,int choco_num,QString new_name);
-
-  QString descName(int s);
-  void setDescName(int s,QString new_name);
-
-  QString location(int s);
-  void setLocation(int s, QString new_location);
-
-  QString descLocation(int s);
-  void setDescLocation(int s, QString new_desc_location);
+  QString charName(int s,int char_num);//Return Char name
+  void setCharName(int s,int char_num,QString new_name);//write char_num 's new_name to slot s
+  QString chocoName(int s,int choco_num);//return choco_num's name.
+  void setChocoName(int s,int choco_num,QString new_name);//write choco_num 's new_name to slot s
+  QString location(int s);// return save location string
+  void setLocation(int s, QString new_location);//set save location string to new_location
+  QString descName(int s);//return the name in the description
+  void setDescName(int s,QString new_name);// desc name = new_name
+  QString descLocation(int s);//return the location string used in the description
+  void setDescLocation(int s, QString new_desc_location);//write new desc location string called from setLocation
 
   //publicly accessable core data(for now)
   FF7SLOT slot[15]; //core slot data.
-  //quint8 * file_headerp;              //pointer to file header
- // quint8 * file_footerp;              //pointer to file footer
 
   // Return File Info
   int len_file(void);//Return File length.

@@ -348,41 +348,13 @@ void MainWindow::on_actionFrom_PSX_Slot_activated()
 {//should check better to be sure its a raw PSX SAVE. then make file filter *
     QString fileName = QFileDialog::getOpenFileName(this,
     tr("Select Final Fantasy 7 PSX Save"),QDir::homePath(),tr("Raw PSX FF7 SaveGame (*)"));
-
     if(fileName.isEmpty()){return;}
     else
     {
-            QFile file(fileName);
-            if(!file.open(QFile::ReadOnly))
-            {
-                QMessageBox::warning(this, tr("Black Chocobo"),
-                tr("Cannot read file %1:\n%2.")
-                .arg(fileName).arg(file.errorString()));
-                return;
-            }
-        QByteArray ff7file;
-        ff7file = file.readAll(); //put all data in temp raw file
-
-        if((file.size() ==FF7_PSX_SAVE_GAME_SIZE) && ff7file.startsWith("\x53\x43\x11\x01\x82\x65\x82\x65\x82\x56\x81\x5E\x82\x72\x82\x60"))
-        {
-            QByteArray temp; // create a temp to be used when needed
-            int index = 0x200;
-            temp = ff7file.mid(index,0x10f4);
-            memcpy(&ff7->slot[s],temp,0x10f4);
-            if((fileName.contains("00867")) || (fileName.contains("00869")) || (fileName.contains("00900")) ||
-              (fileName.contains("94163")) || (fileName.contains("00700")) || (fileName.contains("01057")) || (fileName.contains("00868")))
-            {
-                QString string;
-                string = fileName.mid(fileName.lastIndexOf("/")+1,fileName.lastIndexOf(".")-1-fileName.lastIndexOf("/"));
-                ff7->setRegion(s,string.mid(string.lastIndexOf("BA")-1,string.lastIndexOf("FF7-S")+8));
-            }
-            else {ff7->setRegion(s,"");}
-        }
-        else{QMessageBox::warning(this,tr("Black Chocobo"),tr("The File %1\n is NOT a PSX Save").arg(fileName));return;}
-    }//Parse slot data....
-    guirefresh(0);
-    file_modified(true);
-
+        ff7->Import_PSX(s,fileName);
+        guirefresh(0);
+        file_modified(true);
+    }
 }
 /*~~~~~~~~~~~~~~~~~IMPORT PSV~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionFrom_PSV_Slot_activated()
@@ -392,27 +364,9 @@ void MainWindow::on_actionFrom_PSV_Slot_activated()
     if (fileName.isEmpty()){return;}
     else
     {
-        QFile file(fileName);
-        if(!file.open(QFile::ReadOnly))
-        {
-            QMessageBox::warning(this, tr("Black Chocobo"),
-            tr("Cannot read file %1:\n%2.")
-            .arg(fileName).arg(file.errorString()));
-            return;
-        }
-        QByteArray ff7file;
-        ff7file = file.readAll(); //put all data in temp raw file
-        QByteArray temp; // create a temp to be used when needed
-        if((file.size() ==FF7_PSV_SAVE_GAME_SIZE) && ff7file.startsWith("\x00\x56\x53\x50"))
-        {
-            int index = 0x284;
-            temp = ff7file.mid(index,0x10f4);
-            memcpy(&ff7->slot[s],temp,0x10f4);
-            ff7->setRegion(s,QString(ff7file.mid(0x64,19)));
-        }//Parse slot data....
-        else{QMessageBox::warning(this,tr("Black Chocobo"),tr("The File %1\n is NOT a PSV Save").arg(fileName)); return;}
-    file_modified(true);
-    guirefresh(0);
+        ff7->Import_PSV(s,fileName);
+        file_modified(true);
+        guirefresh(0);
     }
 }
 /*~~~~~~~~~~~~~~~~~IMPORT Char~~~~~~~~~~~~~~~~~*/
@@ -554,8 +508,6 @@ void MainWindow::on_actionSave_File_As_activated()
     }
     if(fileName.isEmpty()){return;}
     saveFileFull(fileName); //reguardless save the file of course if its has a string.
-    //filename=fileName;//update filename.
-    //ui->lbl_fileName->setText(filename);//update bar..
 }
 /*~~~~~~~~~~~SHORT SAVE~~~~~~~~~~~~*/
 void MainWindow::saveFileFull(QString fileName)
@@ -588,97 +540,7 @@ void MainWindow::on_actionNew_Game_triggered()
 /*~~~~~~~~~~New Game + ~~~~~~~~~~~~*/
 void MainWindow::on_actionNew_Game_Plus_triggered()
 {
-    /*
-        QFile file(settings->value("default_save_file").toString());
-        if(!file.open(QFile::ReadOnly))
-        {
-            QMessageBox::warning(this, tr("Black Chocobo"),
-            tr("Cannot read file %1:\n%2., Be Sure its is a Raw PSX Save")
-            .arg(settings->value("default_save_file").toString()).arg(file.errorString()));
-            return;
-        }
-
-        QByteArray ff7file;
-        ff7file = file.readAll(); //put all data in temp raw file
-        QByteArray temp; // create a temp to be used when needed
-        int index = 0x200;
-        temp = ff7file.mid(index,0x10f4); // dump file -> temp
-        memcpy(&bufferslot,temp,0x10f4);  // copy temp to the buffer slot
-        buffer_region = ff7->region(s);
-        ui->line_location->setText(tr("New Game +"));
-        memcpy(&bufferslot.desc,&ff7->slot[s].desc,0x44); // keep a old preview
-        memcpy(&bufferslot.colors,&ff7->slot[s].colors,12); // keep old colors.
-        for(int i=0;i<9;i++) // keep all old character info.
-        {
-            if((i==6)||(i==7))// except we have to export cait sith and vincent.the game needs y.cloud/seppie,for the flash back.
-            {
-                QString fileName;
-                if(i==6) //export cait sith. cait sith's stats are only generated when he joins the party.
-                {
-                        fileName.append(filename);
-                        fileName.append("-cait_sith");
-                        if(ff7->type() != "PSX" || ff7->type() != "PSV")
-                        {
-                            fileName.append("-");
-                            QString str;
-                            str.setNum(s,10)+1;
-                            fileName.append(str);
-                        }
-                    }
-                else if(i==7)// export vincent. vincent's stats are only generated when he joins the party.
-                    {
-                        fileName.append(filename);
-                        fileName.append("-vincent");
-                        if(ff7->type() != "PSX" || ff7->type() != "PSV")
-                        {
-                            fileName.append("-");
-                            QString str;
-                            str.setNum(s,10)+1;
-                            fileName.append(str);
-                        }
-                    }
-                fileName.append(".char");
-                QFile file(fileName);
-                if(!file.open(QFile::ReadWrite))
-                {
-                    QMessageBox::warning(this, tr("Black Chocobo"),
-                    tr("Cannot write file %1:\n%2.")
-                        .arg(fileName)
-                        .arg(file.errorString()));
-                    return;
-                }
-                FILE *pfile;
-                pfile = fopen(fileName.toAscii(),"wb");
-                fwrite(&ff7->slot[s].chars[i],132,1,pfile);
-                fclose(pfile);
-
-            }
-            else{memcpy(&bufferslot.chars[i],&ff7->slot[s].chars[i],0x84);} // normal character
-        }
-        memcpy(&bufferslot.items,ff7->slot[s].items,640);// copy items
-        memcpy(&bufferslot.materias,ff7->slot[s].materias,800); // copy materia
-        bufferslot.gil = ff7->slot[s].gil; // copy gil
-        bufferslot.battles = ff7->slot[s].battles; // copy battle count
-        bufferslot.runs = ff7->slot[s].runs; // copy run count
-        bufferslot.gp = ff7->slot[s].gp; // copy gp
-        //copy chocobo info.
-        bufferslot.stables = ff7->slot[s].stables;
-        bufferslot.stablesoccupied = ff7->slot[s].stablesoccupied;
-        for(int i=0;i<4;i++){memcpy(&bufferslot.chocobos[i],&ff7->slot[s].chocobos[i],0x10);}
-        memcpy(&bufferslot.chocobonames,ff7->slot[s].chocobonames,36);
-        memcpy(&bufferslot.chocostaminas,ff7->slot[s].chocostaminas,12);
-        for(int i=0;i<2;i++){memcpy(&bufferslot.choco56,ff7->slot[s].choco56,0x10);}
-        // copy options
-        bufferslot.battlespeed =ff7->slot[s].battlespeed;
-        bufferslot.battlemspeed =ff7->slot[s].battlemspeed;
-        bufferslot.options1 = ff7->slot[s].options1;
-        bufferslot.options2 = ff7->slot[s].options2;
-        memcpy(&bufferslot.controller_map,ff7->slot[s].controller_map,16);
-        bufferslot.fieldmspeed = ff7->slot[s].fieldmspeed;
-        /*~~ buffer now ready to be copied~
-        memcpy(&ff7->slot[s],&bufferslot,0x10f4); // copy buffer to the current slot.
-        */
-    ff7->New_Game_Plus(s,filename,"");
+    ff7->New_Game_Plus(s,filename);
     if(!load){file_modified(true);}
     guirefresh(0);
 }
