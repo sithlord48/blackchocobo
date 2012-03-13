@@ -33,7 +33,6 @@
 #include "static_data/FF7Item.h"
 #include "static_data/FF7Materia.h"
 #include "static_data/FF7Location.h"
-#include "static_data/FF7Text.h"
 #include "widgets/ItemPreview.h"
 #include "widgets/DialogPreview.h"
 
@@ -73,7 +72,6 @@ private:
     QString filename; //holds file name
     int curchar; //keeps track of current character displayed
     int mslotsel; //keeps track of materia slot on char selected
-    TEXT Text; //our sting conversion item.
     ItemPreview *item_preview;
     DialogPreview *dialog_preview;
 public slots:

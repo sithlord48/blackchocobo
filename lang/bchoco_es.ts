@@ -2,6 +2,13 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="es_ES">
 <context>
+    <name>FF7Save</name>
+    <message>
+        <source>New Game +</source>
+        <translation type="unfinished">Nuevo juego +</translation>
+    </message>
+</context>
+<context>
     <name>ItemPreview</name>
     <message>
         <source>Elemental Effects</source>
@@ -3289,7 +3296,7 @@
     <message>
         <source>Cannot write file %1:
 %2.</source>
-        <translation>No se puede escribir el archivo%1:
+        <translation type="obsolete">No se puede escribir el archivo%1:
 %2.</translation>
     </message>
     <message>
@@ -3591,7 +3598,7 @@
     <message>
         <source>Cannot read file %1:
 %2., Be Sure its is a Raw PSX Save</source>
-        <translation>No se puede leer el archivo %1:
+        <translation type="obsolete">No se puede leer el archivo %1:
 %2., Asegúrate de que es una partida guardada PSX (Raw)</translation>
     </message>
     <message>
@@ -3624,7 +3631,7 @@ no es una partida guardada de FF7.</translation>
     </message>
     <message>
         <source>New Game +</source>
-        <translation>Nuevo juego +</translation>
+        <translation type="obsolete">Nuevo juego +</translation>
     </message>
     <message>
         <source>===Empty Slot===</source>

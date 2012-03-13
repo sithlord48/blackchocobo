@@ -2,6 +2,13 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="ja" sourcelanguage="en_US">
 <context>
+    <name>FF7Save</name>
+    <message>
+        <source>New Game +</source>
+        <translation type="unfinished">新規ゲーム＋</translation>
+    </message>
+</context>
+<context>
     <name>ItemPreview</name>
     <message>
         <source>Elemental Effects</source>
@@ -3567,7 +3574,7 @@
     <message>
         <source>Cannot write file %1:
 %2.</source>
-        <translation>ファイル %1に書き込めません:
+        <translation type="obsolete">ファイル %1に書き込めません:
 %2.</translation>
     </message>
     <message>
@@ -3595,7 +3602,7 @@
     <message>
         <source>Cannot read file %1:
 %2., Be Sure its is a Raw PSX Save</source>
-        <translation>ファイル %1は読み込めません:
+        <translation type="obsolete">ファイル %1は読み込めません:
 %2., Raw PSX セーブかどうか確認してください</translation>
     </message>
     <message>
@@ -3628,7 +3635,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>New Game +</source>
-        <translation>新規ゲーム＋</translation>
+        <translation type="obsolete">新規ゲーム＋</translation>
     </message>
     <message>
         <source>Young Cloud</source>

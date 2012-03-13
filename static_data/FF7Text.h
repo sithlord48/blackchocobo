@@ -17,7 +17,7 @@
   #define FF7TEXT_H
 #include <QObject>
 
-class TEXT{
+class FF7TEXT{
 private:
     QString eng;
     QString jap;
@@ -29,7 +29,7 @@ private:
     bool in_ja;
     QString character(quint8 ord, quint8 table);
 public:
-    TEXT();
+    FF7TEXT();
     void init(bool);
     QString toPC(QByteArray text);
     QByteArray toFF7(QString string);

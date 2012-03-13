@@ -2,6 +2,13 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="fr" sourcelanguage="en_US">
 <context>
+    <name>FF7Save</name>
+    <message>
+        <source>New Game +</source>
+        <translation type="unfinished">Nouvelle partie +</translation>
+    </message>
+</context>
+<context>
     <name>ItemPreview</name>
     <message>
         <source>Elemental Effects</source>
@@ -3280,7 +3287,7 @@
     <message>
         <source>Cannot write file %1:
 %2.</source>
-        <translation>Impossible d&apos;écrire le fichier %1:
+        <translation type="obsolete">Impossible d&apos;écrire le fichier %1:
 %2.</translation>
     </message>
     <message>
@@ -3586,7 +3593,7 @@
     <message>
         <source>Cannot read file %1:
 %2., Be Sure its is a Raw PSX Save</source>
-        <translation>Impossible de lire le fichier%1:
+        <translation type="obsolete">Impossible de lire le fichier%1:
 %2., s&apos;assurer qu&apos;il est une sauvegarde PSX non-identifiée</translation>
     </message>
     <message>
@@ -3618,7 +3625,7 @@ is not a FF7 SaveGame.</source>
     </message>
     <message>
         <source>New Game +</source>
-        <translation>Nouvelle partie +</translation>
+        <translation type="obsolete">Nouvelle partie +</translation>
     </message>
     <message>
         <source>Young Cloud</source>

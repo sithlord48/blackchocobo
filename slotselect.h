@@ -21,7 +21,6 @@
 #include <QMessageBox>
 #include "SaveIcon.h"
 #include "static_data/FF7Save.h"
-#include "static_data/FF7Text.h"
 
 namespace Ui {
     class SlotSelect;
@@ -39,7 +38,6 @@ protected:
 private:
     Ui::SlotSelect *ui;
     SaveIcon icons[15];
-    TEXT Text;
     FF7Save *ff7;
 private slots:
 
