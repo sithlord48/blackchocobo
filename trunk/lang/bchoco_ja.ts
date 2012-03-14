@@ -5,7 +5,7 @@
     <name>FF7Save</name>
     <message>
         <source>New Game +</source>
-        <translation>新規ゲーム＋</translation>
+        <translation type="unfinished">新規ゲーム＋</translation>
     </message>
 </context>
 <context>
@@ -2858,7 +2858,7 @@
     </message>
     <message>
         <source>Sector 7 Slums</source>
-        <translation>７番街スラム</translation>
+        <translation type="obsolete">７番街スラム</translation>
     </message>
     <message>
         <source>1st Floor Shinra Building</source>
@@ -4767,13 +4767,13 @@ Table Entries are Editable</source>
     <message>
         <source>The File %1
  is NOT a PSX Save</source>
-        <translation>ファイル %1
+        <translation type="obsolete">ファイル %1
  は PSX セーブではありません</translation>
     </message>
     <message>
         <source>The File %1
  is NOT a PSV Save</source>
-        <translation>ファイル %1
+        <translation type="obsolete">ファイル %1
  は PSV セーブではありません</translation>
     </message>
     <message>
@@ -5040,6 +5040,10 @@ Table Entries are Editable</source>
 %1</source>
         <translation>ファイルの保存に失敗しました
 %1</translation>
+    </message>
+    <message>
+        <source>2nd Floor Sector 5 House</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Wutai - In Front Of Turtle Paradise</source>
@@ -6515,7 +6519,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>File To load When &quot;New Game&quot; is used</source>
-        <translation>&quot;新規ゲーム&quot; でロードするファイル</translation>
+        <translation type="obsolete">&quot;新規ゲーム&quot; でロードするファイル</translation>
     </message>
     <message>
         <source>Location To Save Character Stat Files</source>
@@ -6620,6 +6624,10 @@ Table Entries are Editable</source>
     <message>
         <source>8 Pt.</source>
         <translation>8 Pt.</translation>
+    </message>
+    <message>
+        <source>Override Default Save with Following File (raw psx only)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

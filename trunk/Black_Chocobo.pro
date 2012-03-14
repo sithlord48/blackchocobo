@@ -98,9 +98,6 @@ unix:!macx:!symbian {
 system(lrelease Black_Chocobo.pro) #call lrelease to make the qm files.
 target.path = /opt/blackchocobo #set the path to deploy the build target.
 
-save0.path = /opt/blackchocobo #set path and include save0 (New Game)
-save0.files = save0
-
 lang.path = /opt/blackchocobo/lang #set path for lang folder
 lang.files = lang/*.qm  #grab All qm files
 
@@ -111,7 +108,6 @@ desktop.path =/usr/share/applications/ #system path app dir
 desktop.files = Black_Chocobo.desktop  #
 
 INSTALLS += target \
-    save0 \
     lang  \
     icon  \
     desktop

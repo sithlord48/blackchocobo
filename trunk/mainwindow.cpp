@@ -530,7 +530,9 @@ void MainWindow::saveFileFull(QString fileName)
 /*~~~~~~~~~~~~~~~New_Game~~~~~~~~~~~*/
 void MainWindow::on_actionNew_Game_triggered()
 {
-    ff7->New_Game(s);//call the new game function
+    QString save_name ="";
+    if(settings->value("override_default_save").toBool()){save_name = settings->value("default_save_file").toString();}
+    ff7->New_Game(s,save_name);//call the new game function
     //detect region and fix names if needed.
     _init=false;
     if(!load){file_modified(true);}
@@ -540,7 +542,10 @@ void MainWindow::on_actionNew_Game_triggered()
 /*~~~~~~~~~~New Game + ~~~~~~~~~~~~*/
 void MainWindow::on_actionNew_Game_Plus_triggered()
 {
-    ff7->New_Game_Plus(s,filename);
+    QString save_name ="";
+    if(settings->value("override_default_save").toBool())
+    {save_name = settings->value("default_save_file").toString();}
+    ff7->New_Game_Plus(s,filename,save_name);
     if(!load){file_modified(true);}
     guirefresh(0);
 }

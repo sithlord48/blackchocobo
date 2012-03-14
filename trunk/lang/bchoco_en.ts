@@ -2855,10 +2855,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Sector 7 Slums</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>1st Floor Shinra Building</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4664,16 +4660,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>The File %1
- is NOT a PSX Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>The File %1
- is NOT a PSV Save</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>PC</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4940,6 +4926,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>2nd Floor Sector 5 House</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6407,10 +6397,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>File To load When &quot;New Game&quot; is used</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Location To Save Character Stat Files</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6512,6 +6498,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>8 Pt.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Override Default Save with Following File (raw psx only)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

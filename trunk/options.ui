@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>761</width>
-    <height>436</height>
+    <width>755</width>
+    <height>430</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -326,11 +326,11 @@
        </layout>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_5">
+       <layout class="QHBoxLayout" name="save_over_ride_layout">
         <item>
-         <widget class="QLabel" name="label_5">
+         <widget class="QCheckBox" name="cb_override_def_save">
           <property name="text">
-           <string>File To load When &quot;New Game&quot; is used</string>
+           <string>Override Default Save with Following File (raw psx only)</string>
           </property>
          </widget>
         </item>

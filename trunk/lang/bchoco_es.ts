@@ -2729,7 +2729,7 @@
     </message>
     <message>
         <source>Sector 7 Slums</source>
-        <translation>Suburbios del Sector 7</translation>
+        <translation type="obsolete">Suburbios del Sector 7</translation>
     </message>
     <message>
         <source>1st Floor Shinra Building</source>
@@ -4748,13 +4748,13 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>The File %1
  is NOT a PSX Save</source>
-        <translation>El archivo %1
+        <translation type="obsolete">El archivo %1
 NO es un archivo de guardado PSX</translation>
     </message>
     <message>
         <source>The File %1
  is NOT a PSV Save</source>
-        <translation>El archivo %1
+        <translation type="obsolete">El archivo %1
 NO es un archivo de guardado PSV</translation>
     </message>
     <message>
@@ -5024,6 +5024,10 @@ NO es un archivo de guardado PSV</translation>
     </message>
     <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>2nd Floor Sector 5 House</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6493,7 +6497,7 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>File To load When &quot;New Game&quot; is used</source>
-        <translation>Archivo a cargar cuando se usa &apos;Nuevo Juego&apos;</translation>
+        <translation type="obsolete">Archivo a cargar cuando se usa &apos;Nuevo Juego&apos;</translation>
     </message>
     <message>
         <source>Location To Save Character Stat Files</source>
@@ -6598,6 +6602,10 @@ Fénix x3 (180pm)</translation>
     <message>
         <source>8 Pt.</source>
         <translation>8 Pt.</translation>
+    </message>
+    <message>
+        <source>Override Default Save with Following File (raw psx only)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7290,7 +7298,7 @@ El juego usa el bloque de guardado %1 </translation>
     </message>
     <message>
         <source>Save Error</source>
-        <translation type="unfinished">Error al Guardar</translation>
+        <translation>Error al Guardar</translation>
     </message>
     <message>
         <source>Error On File Save, Going Back To The Selection Dialog</source>
