@@ -2857,7 +2857,7 @@
     </message>
     <message>
         <source>Sector 7 Slums</source>
-        <translation>Sektor 7 - Slums</translation>
+        <translation type="obsolete">Sektor 7 - Slums</translation>
     </message>
     <message>
         <source>1st Floor Shinra Building</source>
@@ -4754,13 +4754,13 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>The File %1
  is NOT a PSX Save</source>
-        <translation>Die Datei %1
+        <translation type="obsolete">Die Datei %1
  ist KEIN PSX Spielstand</translation>
     </message>
     <message>
         <source>The File %1
  is NOT a PSV Save</source>
-        <translation>Die Datei %1
+        <translation type="obsolete">Die Datei %1
  ist KEIN PSV Spielstand</translation>
     </message>
     <message>
@@ -5030,6 +5030,10 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>2nd Floor Sector 5 House</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6498,7 +6502,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>File To load When &quot;New Game&quot; is used</source>
-        <translation>Datei, die geladen werden soll bei &quot;Neues Spiel&quot;</translation>
+        <translation type="obsolete">Datei, die geladen werden soll bei &quot;Neues Spiel&quot;</translation>
     </message>
     <message>
         <source>Location To Save Character Stat Files</source>
@@ -6603,6 +6607,10 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>8 Pt.</source>
         <translation>8 Pt.</translation>
+    </message>
+    <message>
+        <source>Override Default Save with Following File (raw psx only)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
