@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>774</width>
-    <height>576</height>
+    <height>574</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -1695,7 +1695,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>453</width>
-             <height>436</height>
+             <height>440</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -4695,8 +4695,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>453</width>
-             <height>436</height>
+             <width>401</width>
+             <height>419</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8394,7 +8394,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <number>1</number>
                 </property>
                 <property name="viewMode">
-                 <enum>QListView::IconMode</enum>
+                 <enum>QListView::ListMode</enum>
                 </property>
                 <property name="modelColumn">
                  <number>0</number>
@@ -8513,7 +8513,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <x>0</x>
                    <y>0</y>
                    <width>235</width>
-                   <height>414</height>
+                   <height>354</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -10783,8 +10783,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1452</width>
-             <height>334</height>
+             <width>1410</width>
+             <height>268</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16792,8 +16792,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>774</width>
-             <height>440</height>
+             <width>720</width>
+             <height>251</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -17212,7 +17212,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>747</width>
-             <height>414</height>
+             <height>411</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -19161,8 +19161,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>390</width>
-                  <height>1492</height>
+                  <width>303</width>
+                  <height>1294</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -21876,8 +21876,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>747</width>
-             <height>683</height>
+             <width>497</width>
+             <height>680</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -27940,7 +27940,7 @@ Var And Scrolling Synced To Left Table</string>
      <x>0</x>
      <y>0</y>
      <width>774</width>
-     <height>22</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">

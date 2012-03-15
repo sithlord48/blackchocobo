@@ -12,19 +12,19 @@
     <name>ItemPreview</name>
     <message>
         <source>Elemental Effects</source>
-        <translation type="unfinished"></translation>
+        <translation>Elementar Effekte</translation>
     </message>
     <message>
         <source>Status Effects</source>
-        <translation type="unfinished"></translation>
+        <translation>Status Effekte</translation>
     </message>
     <message>
         <source>APx%1</source>
-        <translation type="unfinished">Apx%1</translation>
+        <translation>Apx%1</translation>
     </message>
     <message>
         <source>Restoration</source>
-        <translation type="unfinished"></translation>
+        <translation>Wiederherstellung</translation>
     </message>
     <message>
         <source>Fire</source>
@@ -64,139 +64,139 @@
     </message>
     <message>
         <source>Cut</source>
-        <translation type="unfinished"></translation>
+        <translation>Schnitt</translation>
     </message>
     <message>
         <source>Shoot</source>
-        <translation type="unfinished"></translation>
+        <translation>Schuß</translation>
     </message>
     <message>
         <source>Punch</source>
-        <translation type="unfinished"></translation>
+        <translation>Schlag</translation>
     </message>
     <message>
         <source>Hit</source>
-        <translation type="unfinished"></translation>
+        <translation>Treffer</translation>
     </message>
     <message>
         <source>Absorb:</source>
-        <translation type="unfinished"></translation>
+        <translation>Absorbieren:</translation>
     </message>
     <message>
         <source>Nullify:</source>
-        <translation type="unfinished"></translation>
+        <translation>Vernichten:</translation>
     </message>
     <message>
         <source>Halve:</source>
-        <translation type="unfinished"></translation>
+        <translation>Halbieren:</translation>
     </message>
     <message>
         <source>Attack:</source>
-        <translation type="unfinished"></translation>
+        <translation>Angreifen:</translation>
     </message>
     <message>
         <source>Death</source>
-        <translation type="unfinished">Tod</translation>
+        <translation>Tod</translation>
     </message>
     <message>
         <source>Slow-Numb</source>
-        <translation type="unfinished">Neher Tod</translation>
+        <translation>Naher Tod</translation>
     </message>
     <message>
         <source>Paralysis</source>
-        <translation type="unfinished">Lähmung</translation>
+        <translation>Lähmung</translation>
     </message>
     <message>
         <source>Petrify</source>
-        <translation type="unfinished">Verstei</translation>
+        <translation>Versteinerung</translation>
     </message>
     <message>
         <source>Silence</source>
-        <translation type="unfinished">Stummheit</translation>
+        <translation>Stummheit</translation>
     </message>
     <message>
         <source>Sleep</source>
-        <translation type="unfinished">Schlaf</translation>
+        <translation>Schlaf</translation>
     </message>
     <message>
         <source>Berserk</source>
-        <translation type="unfinished">Tobsucht</translation>
+        <translation>Tobsucht</translation>
     </message>
     <message>
         <source>Frog</source>
-        <translation type="unfinished">Frosch</translation>
+        <translation>Frosch</translation>
     </message>
     <message>
         <source>Mini</source>
-        <translation type="unfinished">Klein</translation>
+        <translation>Klein</translation>
     </message>
     <message>
         <source>Fury</source>
-        <translation type="unfinished">Zorn</translation>
+        <translation>Wahnsinn</translation>
     </message>
     <message>
         <source>Sadness</source>
-        <translation type="unfinished">Traurigkeit</translation>
+        <translation>Traurigkeit</translation>
     </message>
     <message>
         <source>Darkness</source>
-        <translation type="unfinished">Dunkelheit</translation>
+        <translation>Dunkelheit</translation>
     </message>
     <message>
         <source>Haste</source>
-        <translation type="unfinished">Schnell</translation>
+        <translation>Schnell</translation>
     </message>
     <message>
         <source>Slow</source>
-        <translation>Langs.</translation>
+        <translation>Langsam</translation>
     </message>
     <message>
         <source>Stop</source>
-        <translation type="unfinished">Stop</translation>
+        <translation>Stop</translation>
     </message>
     <message>
         <source>Barrier</source>
-        <translation type="unfinished">Barriere</translation>
+        <translation>Barriere</translation>
     </message>
     <message>
         <source>M.Barrier</source>
-        <translation type="unfinished">ZBarriere</translation>
+        <translation>Z.Barriere</translation>
     </message>
     <message>
         <source>Reflect</source>
-        <translation type="unfinished">Spiegel</translation>
+        <translation>Spiegel</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation type="unfinished">Schild</translation>
+        <translation>Schild</translation>
     </message>
     <message>
         <source>Regen</source>
-        <translation type="unfinished"></translation>
+        <translation>Regenerieren</translation>
     </message>
     <message>
         <source>Protect:</source>
-        <translation type="unfinished">Anti:</translation>
+        <translation>Schutz:</translation>
     </message>
     <message>
         <source>Remove:</source>
-        <translation type="unfinished"></translation>
+        <translation>Entfernen:</translation>
     </message>
     <message>
         <source>Inflict:</source>
-        <translation type="unfinished"></translation>
+        <translation>Strafe:</translation>
     </message>
     <message>
         <source>OnBattle:</source>
-        <translation type="unfinished"></translation>
+        <translation>Im Kampf:</translation>
     </message>
     <message>
         <source>Confusion</source>
-        <translation type="unfinished">Verwirr.</translation>
+        <translation>Verwirrung</translation>
     </message>
     <message>
         <source>D.Sentence</source>
-        <translation type="unfinished">Todesurteil</translation>
+        <translation>Todesurteil</translation>
     </message>
 </context>
 <context>
@@ -2009,11 +2009,11 @@
     </message>
     <message>
         <source>Shinra Bldg 69F.</source>
-        <translation>Shinra HQ 69. Etage</translation>
+        <translation>Shinra HQ 69. Stockwerk.</translation>
     </message>
     <message>
         <source>Shinra Bldg 67F.</source>
-        <translation>Shinra HQ 67. Etage</translation>
+        <translation>Shinra HQ 67. Stockwerk.</translation>
     </message>
     <message>
         <source>Gaeas Cliff</source>
@@ -2105,7 +2105,7 @@
     </message>
     <message>
         <source>Shinra Bldg.</source>
-        <translation>Shinra Gebäude</translation>
+        <translation>Shinra HQ.</translation>
     </message>
     <message>
         <source>Wutai</source>
@@ -2125,7 +2125,7 @@
     </message>
     <message>
         <source>Shinra Bldg 64F.</source>
-        <translation>Shinra HQ 64.Etage</translation>
+        <translation>Shinra HQ 64. Stockwerk.</translation>
     </message>
     <message>
         <source>7th Heaven</source>
@@ -4069,7 +4069,7 @@ ist kein FF7 Spielstand.</translation>
     </message>
     <message>
         <source>Wild Chocobo</source>
-        <translation type="unfinished"></translation>
+        <translation>Wilder Chocobo</translation>
     </message>
     <message>
         <source>Place Leader</source>
@@ -4917,7 +4917,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Visible On World Map</source>
-        <translation type="unfinished"></translation>
+        <translation>Auf der Weltkarte sichtbar</translation>
     </message>
     <message>
         <source>Tiny bronco</source>
@@ -4925,31 +4925,31 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Unknown Id in Buggy/Highwind Location</source>
-        <translation type="unfinished"></translation>
+        <translation>Unbekannte ID im Buggy/Highwind Standort</translation>
     </message>
     <message>
         <source>Wild chocobo</source>
-        <translation type="unfinished">Wild chocobo</translation>
+        <translation>Wilder Chocobo</translation>
     </message>
     <message>
         <source>Yellow chocobo</source>
-        <translation type="unfinished">Gelbes chocobo</translation>
+        <translation>Gelber Chocobo</translation>
     </message>
     <message>
         <source>Green chocobo</source>
-        <translation type="unfinished">Grünes chocobo</translation>
+        <translation>Grüner Chocobo</translation>
     </message>
     <message>
         <source>Blue chocobo</source>
-        <translation type="unfinished">Blauer chocobo</translation>
+        <translation>Blauer Chocobo</translation>
     </message>
     <message>
         <source>Black chocobo</source>
-        <translation type="unfinished">Schwarz chocobo</translation>
+        <translation>Schwarzer Chocobo</translation>
     </message>
     <message>
         <source>Gold chocobo</source>
-        <translation type="unfinished">Gold chocobo</translation>
+        <translation>Goldener Chocobo</translation>
     </message>
     <message>
         <source>lck +10</source>
@@ -4961,11 +4961,11 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Selected Item Details</source>
-        <translation type="unfinished"></translation>
+        <translation>Details der ausgewählten Gegenstände</translation>
     </message>
     <message>
         <source>-------BAD ID-------</source>
-        <translation type="unfinished"></translation>
+        <translation>-------Fehlerhafte ID-------</translation>
     </message>
     <message>
         <source>MDS6_2: Sense Materia</source>
@@ -5001,7 +5001,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>0x01 - After Choco mog picked up (again)?</source>
-        <translation type="unfinished"></translation>
+        <translation>0x01 - Nachdem Choco/Mog erhalten wurde (noch einmal) ?</translation>
     </message>
     <message>
         <source>Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)</source>
@@ -5010,6 +5010,18 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</source>
         <translation>FF7 MC Spielstand(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin)</translation>
+    </message>
+    <message>
+        <source>2nd Floor Sector 5 House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wutai - In Front Of Turtle Paradise</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Load Failed</source>
@@ -5022,18 +5034,6 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>Failed to save file
 %1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Wutai - In Front Of Turtle Paradise</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>2nd Floor Sector 5 House</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7061,7 +7061,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Use the Action for showing Slot select dialog.</source>
-        <translation>Behoben: Benutze Aktion zum Anzeigen vom Zeige-Steckplatz-An-Dialog</translation>
+        <translation>Behoben: Benutze Aktion zum Anzeigen vom Steckplatzauswahl-Dialog.</translation>
     </message>
     <message>
         <source>Fixed: Chocobo Name Editable again</source>
@@ -7161,31 +7161,31 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Added Support for French PSX (BASCES-00868)</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Unterstützung der französischen PSX Version (BASCES-00868)</translation>
     </message>
     <message>
         <source>New: Static Data Classes</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Statische Daten-Klassen</translation>
     </message>
     <message>
         <source>New: Dialog Preview Widget</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Symbol (Widget) für die Vorschau von Dialogen</translation>
     </message>
     <message>
         <source>New: Item Preview Widget</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: Symbol (Widget) für die Vorschau von Gegenständen</translation>
     </message>
     <message>
         <source>Fixed: E.Skills not updating in some cases</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Die Fähigkeiten der Feinde ( E.Skills) wurden in manchen Fällen nicht aktualisiert</translation>
     </message>
     <message>
         <source>German Translation:</source>
-        <translation type="unfinished">Deutsche Übersetzung:</translation>
+        <translation>Deutsche Übersetzung:</translation>
     </message>
     <message>
         <source>New: Added .VM1to list of VMC formats</source>
-        <translation type="unfinished"></translation>
+        <translation>Neu: .VM1 hinzugefügt um VMC Formate auflisten zu können</translation>
     </message>
     <message>
         <source>Fixed: Bug In Dex and Vgs Header</source>
