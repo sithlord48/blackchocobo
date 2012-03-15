@@ -2137,7 +2137,7 @@
     </message>
     <message>
         <source>Mideel,Clinic</source>
-        <translation type="unfinished"></translation>
+        <translation>Mideel, Klinik</translation>
     </message>
 </context>
 <context>
@@ -5013,28 +5013,29 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>2nd Floor Sector 5 House</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Haus im Sektor 5, 2. Stockwerk</translation>
     </message>
     <message>
         <source>Wutai - In Front Of Turtle Paradise</source>
-        <translation type="unfinished"></translation>
+        <translation>Wutai - Vor dem Schildkrötenparadies</translation>
     </message>
     <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_7 (Turbo Äther vom Kind in &quot;Haus 2. Stockwerk 5min1_2)</translation>
     </message>
     <message>
         <source>Load Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Laden gescheitert</translation>
     </message>
     <message>
         <source>Failed to Load File</source>
-        <translation type="unfinished"></translation>
+        <translation>Datei konnte nicht geladen werden</translation>
     </message>
     <message>
         <source>Failed to save file
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim Speichern von
+%1</translation>
     </message>
 </context>
 <context>
@@ -6610,7 +6611,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Override Default Save with Following File (raw psx only)</source>
-        <translation type="unfinished"></translation>
+        <translation>Standard Speichern bei folgender Datei übergehen (nur für RAW PSX Format)</translation>
     </message>
 </context>
 <context>
@@ -7189,7 +7190,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Bug In Dex and Vgs Header</source>
-        <translation type="unfinished"></translation>
+        <translation>Behoben: Fehler in der Kopfzeile von Dex und Vgs</translation>
     </message>
 </context>
 <context>
@@ -7306,11 +7307,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Save Error</source>
-        <translation type="unfinished">Speicher Fehler</translation>
+        <translation>Fehler beim Speichern</translation>
     </message>
     <message>
         <source>Error On File Save, Going Back To The Selection Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim Speichern der Datei, zurück zum Auswahl-Dialog</translation>
     </message>
 </context>
 </TS>
