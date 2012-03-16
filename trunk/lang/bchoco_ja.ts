@@ -5,7 +5,7 @@
     <name>FF7Save</name>
     <message>
         <source>New Game +</source>
-        <translation type="unfinished">新規ゲーム＋</translation>
+        <translation>新規ゲーム＋</translation>
     </message>
 </context>
 <context>
@@ -2137,7 +2137,7 @@
     </message>
     <message>
         <source>Mideel,Clinic</source>
-        <translation type="unfinished"></translation>
+        <translation>ミディール　治療所</translation>
     </message>
 </context>
 <context>
@@ -3455,7 +3455,7 @@
     </message>
     <message>
         <source>Y.Cloud</source>
-        <translation>クラウド/昔</translation>
+        <translation>昔のクラウド</translation>
     </message>
     <message>
         <source>Sephiroth</source>
@@ -4762,7 +4762,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Raw PSX FF7 SaveGame (*)</source>
-        <translation>Raw PSX FF7 セーブ</translation>
+        <translation>Raw PSX FF7 セーブ (*)</translation>
     </message>
     <message>
         <source>The File %1
@@ -5005,7 +5005,7 @@ Table Entries are Editable</source>
     <message>
         <source>EALIN_1: Potion + Phoenix Down</source>
         <translatorcomment>○</translatorcomment>
-        <translation>エアリスの家２Ｆ: ポーション + フェニックスの尾</translation>
+        <translation>エアリスの家２Ｆ: ポーション＆フェニックスの尾</translation>
     </message>
     <message>
         <source>ZZ1:Mythril</source>
@@ -5043,15 +5043,15 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>2nd Floor Sector 5 House</source>
-        <translation type="unfinished"></translation>
+        <translation>５番街・民家２階</translation>
     </message>
     <message>
         <source>Wutai - In Front Of Turtle Paradise</source>
-        <translation type="unfinished"></translation>
+        <translation>ウータイ・かめ道楽の前</translation>
     </message>
     <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_7 (エーテルターボ・５番街民家２階の子供)</translation>
     </message>
 </context>
 <context>
@@ -6627,7 +6627,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Override Default Save with Following File (raw psx only)</source>
-        <translation type="unfinished"></translation>
+        <translation>デフォルトのセーブに指定のファイルを適用 (RAW PSX のみ)</translation>
     </message>
 </context>
 <context>
