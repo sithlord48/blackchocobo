@@ -17,13 +17,7 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-//#include <QInputDialog>
-/*~~~~~GLOBALS~~~~~~*/
-//see the Header file private data members of the class.
-/*~~~~~~EXTERNS~~~~~~~~*/
-//these should be part of the ff7names class at some point.
-extern quint32 chartnls[11][99]; //  Chars tnl Table (cloud - sephiroth)
-extern quint32 charlvls[11][99]; //  Chars lvl Table
+
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     :QMainWindow(parent),ui(new Ui::MainWindow)
@@ -1027,6 +1021,47 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
 }}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GUI FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+QString MainWindow::avatar_style(int id)
+{
+    QString style;
+    switch(id)
+    {
+      case 0:
+        style="image: url(:/icon/cloud_icon)";
+        break;
+      case 1:
+        style="image: url(:/icon/barret_icon)";
+        break;
+      case 2:
+        style="image: url(:/icon/tifa_icon)";
+        break;
+      case 3:
+        style="image: url(:/icon/aeris_icon)";
+        break;
+      case 4:
+        style="image: url(:/icon/red_icon)";
+        break;
+      case 5:
+        style="image: url(:/icon/yuffie_icon)";
+        break;
+      case 6:
+        style="image: url(:/icon/cait_icon)";
+        break;
+      case 7:
+        style="image: url(:/icon/vincent_icon)";
+        break;
+      case 8:
+        style="image: url(:/icon/cid_icon)";
+        break;
+      case 9:
+        style="image: url(:/icon/y_cloud_icon)";
+        break;
+      case 10:
+        style="image: url(:/icon/sep_icon)";
+        break;
+      }
+    return style;
+}
 /*~~~~~~~~~Char Update~~~~~~~~~~*/
 void MainWindow::charupdate(void)
 {
@@ -1516,28 +1551,28 @@ void MainWindow::setchar_growth(int caller)
         {//level up
             for(int i=pre_level;i<curlv;i++)
             {// for stat_gain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp also use id incase of mods that could move a char.
-                ui->sb_str->setValue(ui->sb_str->value() + stat_gain(ff7->slot[s].chars[curchar].id,0,ff7->slot[s].chars[curchar].strength,i+1));
-                ui->sb_vit->setValue(ui->sb_vit->value() + stat_gain(ff7->slot[s].chars[curchar].id,1,ff7->slot[s].chars[curchar].vitality,i+1));
-                ui->sb_mag->setValue(ui->sb_mag->value() + stat_gain(ff7->slot[s].chars[curchar].id,2,ff7->slot[s].chars[curchar].magic,i+1));
-                ui->sb_spi->setValue(ui->sb_spi->value() + stat_gain(ff7->slot[s].chars[curchar].id,3,ff7->slot[s].chars[curchar].spirit,i+1));
-                ui->sb_dex->setValue(ui->sb_dex->value() + stat_gain(ff7->slot[s].chars[curchar].id,4,ff7->slot[s].chars[curchar].dexterity,i+1));
-                ui->sb_lck->setValue(ui->sb_lck->value() + stat_gain(ff7->slot[s].chars[curchar].id,5,ff7->slot[s].chars[curchar].luck,i+1));
-                ui->sb_hp->setValue(ui->sb_hp->value() + stat_gain(ff7->slot[s].chars[curchar].id,6,ff7->slot[s].chars[curchar].baseHP,i+1));
-                ui->sb_mp->setValue(ui->sb_mp->value() + stat_gain(ff7->slot[s].chars[curchar].id,7,ff7->slot[s].chars[curchar].baseMP,i+1));
+                ui->sb_str->setValue(ui->sb_str->value() + ff7->stat_gain(ff7->slot[s].chars[curchar].id,0,ff7->slot[s].chars[curchar].strength,i+1));
+                ui->sb_vit->setValue(ui->sb_vit->value() + ff7->stat_gain(ff7->slot[s].chars[curchar].id,1,ff7->slot[s].chars[curchar].vitality,i+1));
+                ui->sb_mag->setValue(ui->sb_mag->value() + ff7->stat_gain(ff7->slot[s].chars[curchar].id,2,ff7->slot[s].chars[curchar].magic,i+1));
+                ui->sb_spi->setValue(ui->sb_spi->value() + ff7->stat_gain(ff7->slot[s].chars[curchar].id,3,ff7->slot[s].chars[curchar].spirit,i+1));
+                ui->sb_dex->setValue(ui->sb_dex->value() + ff7->stat_gain(ff7->slot[s].chars[curchar].id,4,ff7->slot[s].chars[curchar].dexterity,i+1));
+                ui->sb_lck->setValue(ui->sb_lck->value() + ff7->stat_gain(ff7->slot[s].chars[curchar].id,5,ff7->slot[s].chars[curchar].luck,i+1));
+                ui->sb_hp->setValue(ui->sb_hp->value() + ff7->stat_gain(ff7->slot[s].chars[curchar].id,6,ff7->slot[s].chars[curchar].baseHP,i+1));
+                ui->sb_mp->setValue(ui->sb_mp->value() + ff7->stat_gain(ff7->slot[s].chars[curchar].id,7,ff7->slot[s].chars[curchar].baseMP,i+1));
             }
         }
         else if(pre_level > curlv)
         {//level down
             for(int i=pre_level;i>curlv;i--)
             {// for stat_gain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp
-                ui->sb_str->setValue(ui->sb_str->value() - stat_gain(ff7->slot[s].chars[curchar].id,0,ff7->slot[s].chars[curchar].strength,i));
-                ui->sb_vit->setValue(ui->sb_vit->value() - stat_gain(ff7->slot[s].chars[curchar].id,1,ff7->slot[s].chars[curchar].vitality,i));
-                ui->sb_mag->setValue(ui->sb_mag->value() - stat_gain(ff7->slot[s].chars[curchar].id,2,ff7->slot[s].chars[curchar].magic,i));
-                ui->sb_spi->setValue(ui->sb_spi->value() - stat_gain(ff7->slot[s].chars[curchar].id,3,ff7->slot[s].chars[curchar].spirit,i));
-                ui->sb_dex->setValue(ui->sb_dex->value() - stat_gain(ff7->slot[s].chars[curchar].id,4,ff7->slot[s].chars[curchar].dexterity,i));
-                ui->sb_lck->setValue(ui->sb_lck->value() - stat_gain(ff7->slot[s].chars[curchar].id,5,ff7->slot[s].chars[curchar].luck,i));
-                ui->sb_hp->setValue(ui->sb_hp->value() - stat_gain(ff7->slot[s].chars[curchar].id,6,ff7->slot[s].chars[curchar].baseHP,i));
-                ui->sb_mp->setValue(ui->sb_mp->value() - stat_gain(ff7->slot[s].chars[curchar].id,7,ff7->slot[s].chars[curchar].baseMP,i));
+                ui->sb_str->setValue(ui->sb_str->value() - ff7->stat_gain(ff7->slot[s].chars[curchar].id,0,ff7->slot[s].chars[curchar].strength,i));
+                ui->sb_vit->setValue(ui->sb_vit->value() - ff7->stat_gain(ff7->slot[s].chars[curchar].id,1,ff7->slot[s].chars[curchar].vitality,i));
+                ui->sb_mag->setValue(ui->sb_mag->value() - ff7->stat_gain(ff7->slot[s].chars[curchar].id,2,ff7->slot[s].chars[curchar].magic,i));
+                ui->sb_spi->setValue(ui->sb_spi->value() - ff7->stat_gain(ff7->slot[s].chars[curchar].id,3,ff7->slot[s].chars[curchar].spirit,i));
+                ui->sb_dex->setValue(ui->sb_dex->value() - ff7->stat_gain(ff7->slot[s].chars[curchar].id,4,ff7->slot[s].chars[curchar].dexterity,i));
+                ui->sb_lck->setValue(ui->sb_lck->value() - ff7->stat_gain(ff7->slot[s].chars[curchar].id,5,ff7->slot[s].chars[curchar].luck,i));
+                ui->sb_hp->setValue(ui->sb_hp->value() - ff7->stat_gain(ff7->slot[s].chars[curchar].id,6,ff7->slot[s].chars[curchar].baseHP,i));
+                ui->sb_mp->setValue(ui->sb_mp->value() - ff7->stat_gain(ff7->slot[s].chars[curchar].id,7,ff7->slot[s].chars[curchar].baseMP,i));
             }
         } //little broken when going down..
         update_stat_totals();
