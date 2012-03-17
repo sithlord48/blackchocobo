@@ -16,7 +16,6 @@
 
 #include "slotselect.h"
 #include "ui_slotselect.h"
-#include <globals.h>
 
 SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
     QDialog(parent),
@@ -1156,3 +1155,45 @@ void SlotSelect::on_btn_s12_clicked(){this->done(11);}
 void SlotSelect::on_btn_s13_clicked(){this->done(12);}
 void SlotSelect::on_btn_s14_clicked(){this->done(13);}
 void SlotSelect::on_btn_s15_clicked(){this->done(14);}
+
+QString SlotSelect::avatar_style(int id)
+{
+    QString style;
+    switch(id)
+    {
+      case 0:
+        style="image: url(:/icon/cloud_icon)";
+        break;
+      case 1:
+        style="image: url(:/icon/barret_icon)";
+        break;
+      case 2:
+        style="image: url(:/icon/tifa_icon)";
+        break;
+      case 3:
+        style="image: url(:/icon/aeris_icon)";
+        break;
+      case 4:
+        style="image: url(:/icon/red_icon)";
+        break;
+      case 5:
+        style="image: url(:/icon/yuffie_icon)";
+        break;
+      case 6:
+        style="image: url(:/icon/cait_icon)";
+        break;
+      case 7:
+        style="image: url(:/icon/vincent_icon)";
+        break;
+      case 8:
+        style="image: url(:/icon/cid_icon)";
+        break;
+      case 9:
+        style="image: url(:/icon/y_cloud_icon)";
+        break;
+      case 10:
+        style="image: url(:/icon/sep_icon)";
+        break;
+      }
+    return style;
+}

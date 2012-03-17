@@ -57,6 +57,7 @@ private slots:
     void on_btn_s13_clicked();
     void on_btn_s14_clicked();
     void on_btn_s15_clicked();
+    QString avatar_style(int);
 };
 
 #endif // SLOTSELECT_H

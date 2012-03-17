@@ -31,11 +31,11 @@
 #include <SaveIcon.h>
 
 #include "static_data/FF7Item.h"
+#include "static_data/FF7Save.h"
 #include "static_data/FF7Materia.h"
 #include "static_data/FF7Location.h"
 #include "widgets/ItemPreview.h"
 #include "widgets/DialogPreview.h"
-
 
 
 namespace Ui {
@@ -155,6 +155,7 @@ private slots://try to keep these in the same order as the .cpp file
     void unknown_refresh(int);
     void set_ntsc_time(void);
     void set_pal_time(void);
+    QString avatar_style(int);
 
     /*CharButtons*/
     void on_btn_cloud_clicked();

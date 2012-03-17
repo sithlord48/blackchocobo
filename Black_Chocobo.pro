@@ -22,7 +22,6 @@ TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \
     slotselect.cpp \
-    globals.cpp \
     about.cpp \
     options.cpp \
     errbox.cpp \
@@ -37,7 +36,6 @@ SOURCES += main.cpp \
 HEADERS += mainwindow.h \
     slotselect.h \
     about.h \
-    globals.h \
     options.h \
     errbox.h \
     SaveIcon.h \
