@@ -2931,10 +2931,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>map</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4930,6 +4926,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>2nd Floor Sector 5 House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7062,6 +7062,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Bug In Dex and Vgs Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

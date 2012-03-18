@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>774</width>
-    <height>574</height>
+    <height>576</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -1695,7 +1695,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>453</width>
-             <height>440</height>
+             <height>436</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -4696,7 +4696,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>401</width>
-             <height>419</height>
+             <height>420</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -7589,6 +7589,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="autoScroll">
                         <bool>false</bool>
                        </property>
+                       <property name="editTriggers">
+                        <set>QAbstractItemView::NoEditTriggers</set>
+                       </property>
                        <property name="showDropIndicator" stdset="0">
                         <bool>false</bool>
                        </property>
@@ -7636,7 +7639,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7647,7 +7650,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7658,7 +7661,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7669,7 +7672,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7680,7 +7683,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7691,7 +7694,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7702,7 +7705,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7713,7 +7716,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7724,7 +7727,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7735,7 +7738,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7746,7 +7749,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7757,7 +7760,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7768,7 +7771,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7779,7 +7782,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7790,7 +7793,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7801,7 +7804,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7812,7 +7815,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7823,7 +7826,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7834,7 +7837,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7845,7 +7848,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7856,7 +7859,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7867,7 +7870,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7878,7 +7881,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                        <item>
@@ -7889,7 +7892,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <enum>Unchecked</enum>
                         </property>
                         <property name="flags">
-                         <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                         <set>ItemIsUserCheckable|ItemIsEnabled</set>
                         </property>
                        </item>
                       </widget>
@@ -8370,7 +8373,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>QFrame::Sunken</enum>
                 </property>
                 <property name="editTriggers">
-                 <set>QAbstractItemView::SelectedClicked</set>
+                 <set>QAbstractItemView::NoEditTriggers</set>
                 </property>
                 <property name="showDropIndicator" stdset="0">
                  <bool>false</bool>
@@ -8391,13 +8394,16 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>QListView::SinglePass</enum>
                 </property>
                 <property name="spacing">
-                 <number>1</number>
+                 <number>0</number>
                 </property>
                 <property name="viewMode">
                  <enum>QListView::ListMode</enum>
                 </property>
                 <property name="modelColumn">
                  <number>0</number>
+                </property>
+                <property name="batchSize">
+                 <number>10</number>
                 </property>
                 <item>
                  <property name="text">
@@ -8407,7 +8413,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <enum>Unchecked</enum>
                  </property>
                  <property name="flags">
-                  <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
                  </property>
                 </item>
                 <item>
@@ -8418,7 +8424,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <enum>Unchecked</enum>
                  </property>
                  <property name="flags">
-                  <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
                  </property>
                 </item>
                 <item>
@@ -8429,7 +8435,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <enum>Unchecked</enum>
                  </property>
                  <property name="flags">
-                  <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
                  </property>
                 </item>
                 <item>
@@ -8440,7 +8446,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <enum>Unchecked</enum>
                  </property>
                  <property name="flags">
-                  <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
                  </property>
                 </item>
                 <item>
@@ -8451,7 +8457,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <enum>Unchecked</enum>
                  </property>
                  <property name="flags">
-                  <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
                  </property>
                 </item>
                 <item>
@@ -8462,7 +8468,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <enum>Unchecked</enum>
                  </property>
                  <property name="flags">
-                  <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
                  </property>
                 </item>
                 <item>
@@ -8471,6 +8477,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </property>
                  <property name="checkState">
                   <enum>Unchecked</enum>
+                 </property>
+                 <property name="flags">
+                  <set>ItemIsUserCheckable|ItemIsEnabled</set>
                  </property>
                 </item>
                </widget>
@@ -8513,12 +8522,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <x>0</x>
                    <y>0</y>
                    <width>235</width>
-                   <height>354</height>
+                   <height>319</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_111">
                   <property name="spacing">
-                   <number>-1</number>
+                   <number>1</number>
                   </property>
                   <property name="leftMargin">
                    <number>3</number>
@@ -8534,6 +8543,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <item>
                    <widget class="QCheckBox" name="cb_bm_items_1">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>MDSTIN: Potion 1</string>
                     </property>
@@ -8541,6 +8556,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_bm_items_2">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>MDSTIN: Potion 2</string>
                     </property>
@@ -8548,6 +8569,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_bm_items_3">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>NMKIN_3: Potion</string>
                     </property>
@@ -8555,6 +8582,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_bm_items_4">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>NMKIN_1: Phoenix Down</string>
                     </property>
@@ -8562,6 +8595,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_itemmask1_1">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>MD8_3: Potion</string>
                     </property>
@@ -8569,6 +8608,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_s7tg_items_6">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>MDS7ST1:Potion.(In Train 2)</string>
                     </property>
@@ -8576,6 +8621,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_s7tg_items_5">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>MDS7ST1:Hi-Potion.(Roof Train 1)</string>
                     </property>
@@ -8583,6 +8634,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_s7tg_items_1">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>MDS7ST1:Hi-Potion.(Barrel 1)</string>
                     </property>
@@ -8590,6 +8647,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_s7tg_items_2">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>MDS7ST1:Echo Screen</string>
                     </property>
@@ -8597,6 +8660,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_s7tg_items_7">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>MDS7ST1:Potion</string>
                     </property>
@@ -8604,6 +8673,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_s7tg_items_8">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>MDS7ST2:Hi-Potion</string>
                     </property>
@@ -8611,6 +8686,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_s7tg_items_4">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>MDS7ST2:Ether</string>
                     </property>
@@ -8618,6 +8699,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_s7tg_items_3">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>MDS7ST2:Potion</string>
                     </property>
@@ -8625,6 +8712,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_itemmask1_6">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>MDS6_2: Sense Materia</string>
                     </property>
@@ -8632,6 +8725,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_itemmask1_4">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>EALS_1: Cover Materia</string>
                     </property>
@@ -8639,6 +8738,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_itemmask1_3">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>EALS_1: Ether</string>
                     </property>
@@ -8646,6 +8751,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_itemmask1_7">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>CRCIN_2: Ramuh Materia</string>
                     </property>
@@ -8653,6 +8764,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_itemmask1_5">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>FARM: Choco-Mog Materia</string>
                     </property>
@@ -8660,6 +8777,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_itemmask1_2">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>EALIN_1: Potion + Phoenix Down</string>
                     </property>
@@ -8667,6 +8790,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QCheckBox" name="cb_itemmask1_8">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string>ZZ1:Mythril</string>
                     </property>
@@ -8751,52 +8880,25 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <property name="frameShadow">
               <enum>QFrame::Sunken</enum>
              </property>
+             <property name="autoScroll">
+              <bool>true</bool>
+             </property>
              <property name="editTriggers">
-              <set>QAbstractItemView::SelectedClicked</set>
+              <set>QAbstractItemView::NoEditTriggers</set>
              </property>
              <property name="showDropIndicator" stdset="0">
               <bool>false</bool>
              </property>
              <property name="dragDropMode">
-              <enum>QAbstractItemView::DragDrop</enum>
+              <enum>QAbstractItemView::DropOnly</enum>
              </property>
              <property name="selectionBehavior">
               <enum>QAbstractItemView::SelectItems</enum>
-             </property>
-             <property name="movement">
-              <enum>QListView::Snap</enum>
              </property>
              <property name="flow">
               <enum>QListView::TopToBottom</enum>
              </property>
              <property name="isWrapping" stdset="0">
-              <bool>false</bool>
-             </property>
-             <property name="resizeMode">
-              <enum>QListView::Fixed</enum>
-             </property>
-             <property name="layoutMode">
-              <enum>QListView::Batched</enum>
-             </property>
-             <property name="spacing">
-              <number>1</number>
-             </property>
-             <property name="viewMode">
-              <enum>QListView::ListMode</enum>
-             </property>
-             <property name="modelColumn">
-              <number>0</number>
-             </property>
-             <property name="uniformItemSizes">
-              <bool>false</bool>
-             </property>
-             <property name="batchSize">
-              <number>10</number>
-             </property>
-             <property name="wordWrap">
-              <bool>false</bool>
-             </property>
-             <property name="selectionRectVisible">
               <bool>false</bool>
              </property>
              <item>
@@ -8807,7 +8909,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <enum>Unchecked</enum>
               </property>
               <property name="flags">
-               <set>ItemIsSelectable|ItemIsEditable|ItemIsUserCheckable|ItemIsEnabled</set>
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -8817,6 +8919,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -8824,6 +8929,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -8833,6 +8941,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -8840,6 +8951,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -8849,6 +8963,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -8856,6 +8973,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -8865,6 +8985,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -8872,6 +8995,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -8881,6 +9007,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -8888,6 +9017,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -8897,6 +9029,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -8904,6 +9039,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -8913,6 +9051,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -8920,6 +9061,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -8929,6 +9073,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -8936,6 +9083,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -8945,6 +9095,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -8952,6 +9105,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -8961,6 +9117,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -8968,6 +9127,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -8977,6 +9139,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -8984,6 +9149,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -8993,6 +9161,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -9000,6 +9171,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -9009,6 +9183,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -9016,6 +9193,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -9025,6 +9205,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -9032,6 +9215,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -9041,6 +9227,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -9048,6 +9237,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -9057,6 +9249,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -9064,6 +9259,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -9073,6 +9271,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -9081,13 +9282,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Midgar parts</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
+              <property name="flags">
+               <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -9097,13 +9293,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
-             </item>
-             <item>
-              <property name="text">
-               <string>Midgar parts</string>
-              </property>
-              <property name="checkState">
-               <enum>Unchecked</enum>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -9113,6 +9304,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -9120,6 +9314,31 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Midgar parts</string>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>Midgar parts</string>
+              </property>
+              <property name="checkState">
+               <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -9129,6 +9348,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -9136,6 +9358,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -9145,6 +9370,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -9152,6 +9380,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -9161,6 +9392,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -9168,6 +9402,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -9177,6 +9414,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -9184,6 +9424,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -9193,6 +9436,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="checkState">
                <enum>Unchecked</enum>
               </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
+              </property>
              </item>
              <item>
               <property name="text">
@@ -9200,6 +9446,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <property name="checkState">
                <enum>Unchecked</enum>
+              </property>
+              <property name="flags">
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
              <item>
@@ -9210,7 +9459,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <enum>Unchecked</enum>
               </property>
               <property name="flags">
-               <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+               <set>ItemIsUserCheckable|ItemIsEnabled</set>
               </property>
              </item>
             </widget>
@@ -10293,7 +10542,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10304,7 +10553,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10315,7 +10564,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10326,7 +10575,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsDragEnabled|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10337,7 +10586,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10348,7 +10597,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10359,7 +10608,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10370,7 +10619,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10381,7 +10630,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10392,7 +10641,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10403,7 +10652,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10414,7 +10663,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10425,7 +10674,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10436,7 +10685,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10447,7 +10696,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10458,7 +10707,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10469,7 +10718,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10480,7 +10729,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10491,7 +10740,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10502,7 +10751,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10513,7 +10762,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10524,7 +10773,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10535,7 +10784,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
                <item>
@@ -10546,7 +10795,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <enum>Unchecked</enum>
                 </property>
                 <property name="flags">
-                 <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                 <set>ItemIsUserCheckable|ItemIsEnabled</set>
                 </property>
                </item>
               </widget>
@@ -10783,8 +11032,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1410</width>
-             <height>268</height>
+             <width>1452</width>
+             <height>334</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -16792,8 +17041,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>720</width>
-             <height>251</height>
+             <width>774</width>
+             <height>440</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -17212,7 +17461,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>747</width>
-             <height>411</height>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -19161,8 +19410,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>303</width>
-                  <height>1294</height>
+                  <width>390</width>
+                  <height>1492</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -20135,7 +20384,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="minimumSize">
                <size>
                 <width>121</width>
-                <height>160</height>
+                <height>0</height>
                </size>
               </property>
               <property name="maximumSize">
@@ -20150,9 +20399,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="title">
                <string>Allowed In PHS</string>
               </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
               <layout class="QVBoxLayout" name="verticalLayout_3">
                <property name="spacing">
-                <number>-1</number>
+                <number>0</number>
                </property>
                <property name="leftMargin">
                 <number>3</number>
@@ -20169,7 +20421,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <item>
                 <widget class="QListWidget" name="list_phs_chars">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -20177,7 +20429,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <property name="minimumSize">
                   <size>
                    <width>111</width>
-                   <height>140</height>
+                   <height>0</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -20188,6 +20440,18 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </property>
                  <property name="whatsThis">
                   <string/>
+                 </property>
+                 <property name="verticalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                 </property>
+                 <property name="editTriggers">
+                  <set>QAbstractItemView::NoEditTriggers</set>
+                 </property>
+                 <property name="showDropIndicator" stdset="0">
+                  <bool>false</bool>
+                 </property>
+                 <property name="movement">
+                  <enum>QListView::Static</enum>
                  </property>
                  <property name="layoutMode">
                   <enum>QListView::SinglePass</enum>
@@ -20203,7 +20467,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20214,7 +20478,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20225,7 +20489,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20236,7 +20500,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20247,7 +20511,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20258,7 +20522,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20269,7 +20533,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20280,7 +20544,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20291,7 +20555,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                 </widget>
@@ -20304,7 +20568,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="minimumSize">
                <size>
                 <width>121</width>
-                <height>160</height>
+                <height>0</height>
                </size>
               </property>
               <property name="maximumSize">
@@ -20319,9 +20583,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="title">
                <string>Visible In PHS</string>
               </property>
+              <property name="flat">
+               <bool>false</bool>
+              </property>
               <layout class="QVBoxLayout" name="verticalLayout_13">
                <property name="spacing">
-                <number>-1</number>
+                <number>0</number>
                </property>
                <property name="leftMargin">
                 <number>3</number>
@@ -20338,7 +20605,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <item>
                 <widget class="QListWidget" name="list_chars_unlocked">
                  <property name="sizePolicy">
-                  <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+                  <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                    <horstretch>0</horstretch>
                    <verstretch>0</verstretch>
                   </sizepolicy>
@@ -20346,7 +20613,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <property name="minimumSize">
                   <size>
                    <width>111</width>
-                   <height>140</height>
+                   <height>0</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -20358,8 +20625,29 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <property name="whatsThis">
                   <string/>
                  </property>
-                 <property name="spacing">
+                 <property name="verticalScrollBarPolicy">
+                  <enum>Qt::ScrollBarAlwaysOff</enum>
+                 </property>
+                 <property name="editTriggers">
+                  <set>QAbstractItemView::NoEditTriggers</set>
+                 </property>
+                 <property name="showDropIndicator" stdset="0">
+                  <bool>false</bool>
+                 </property>
+                 <property name="flow">
+                  <enum>QListView::TopToBottom</enum>
+                 </property>
+                 <property name="layoutMode">
+                  <enum>QListView::SinglePass</enum>
+                 </property>
+                 <property name="viewMode">
+                  <enum>QListView::ListMode</enum>
+                 </property>
+                 <property name="modelColumn">
                   <number>0</number>
+                 </property>
+                 <property name="uniformItemSizes">
+                  <bool>false</bool>
                  </property>
                  <item>
                   <property name="text">
@@ -20369,7 +20657,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20380,7 +20668,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20391,7 +20679,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20402,7 +20690,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20413,7 +20701,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20424,7 +20712,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20435,7 +20723,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20446,7 +20734,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20457,7 +20745,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <enum>Unchecked</enum>
                   </property>
                   <property name="flags">
-                   <set>ItemIsSelectable|ItemIsUserCheckable|ItemIsEnabled</set>
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                 </widget>
@@ -20468,12 +20756,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            </layout>
           </item>
           <item>
-           <widget class="QLabel" name="label_178">
+           <widget class="QLabel" name="label_25">
             <property name="text">
-             <string>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </string>
-            </property>
-            <property name="textFormat">
-             <enum>Qt::PlainText</enum>
+             <string>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</string>
             </property>
             <property name="wordWrap">
              <bool>true</bool>
@@ -20496,7 +20781,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="minimumSize">
                <size>
                 <width>121</width>
-                <height>175</height>
+                <height>0</height>
                </size>
               </property>
               <property name="maximumSize">
@@ -20532,7 +20817,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <property name="minimumSize">
                   <size>
                    <width>121</width>
-                   <height>155</height>
+                   <height>0</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -20541,8 +20826,14 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="editTriggers">
+                  <set>QAbstractItemView::NoEditTriggers</set>
+                 </property>
+                 <property name="showDropIndicator" stdset="0">
+                  <bool>true</bool>
+                 </property>
                  <property name="spacing">
-                  <number>0</number>
+                  <number>-1</number>
                  </property>
                  <item>
                   <property name="text">
@@ -20550,6 +20841,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <property name="checkState">
                    <enum>Unchecked</enum>
+                  </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20559,6 +20853,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="checkState">
                    <enum>Unchecked</enum>
                   </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                  </property>
                  </item>
                  <item>
                   <property name="text">
@@ -20566,6 +20863,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <property name="checkState">
                    <enum>Unchecked</enum>
+                  </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20575,6 +20875,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="checkState">
                    <enum>Unchecked</enum>
                   </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                  </property>
                  </item>
                  <item>
                   <property name="text">
@@ -20582,6 +20885,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <property name="checkState">
                    <enum>Unchecked</enum>
+                  </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20591,6 +20897,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="checkState">
                    <enum>Unchecked</enum>
                   </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                  </property>
                  </item>
                  <item>
                   <property name="text">
@@ -20598,6 +20907,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <property name="checkState">
                    <enum>Unchecked</enum>
+                  </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20607,6 +20919,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="checkState">
                    <enum>Unchecked</enum>
                   </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                  </property>
                  </item>
                  <item>
                   <property name="text">
@@ -20615,6 +20930,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="checkState">
                    <enum>Unchecked</enum>
                   </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                  </property>
                  </item>
                  <item>
                   <property name="text">
@@ -20622,6 +20940,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <property name="checkState">
                    <enum>Unchecked</enum>
+                  </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                 </widget>
@@ -20640,7 +20961,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="minimumSize">
                <size>
                 <width>126</width>
-                <height>175</height>
+                <height>0</height>
                </size>
               </property>
               <property name="maximumSize">
@@ -20676,7 +20997,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <property name="minimumSize">
                   <size>
                    <width>121</width>
-                   <height>155</height>
+                   <height>0</height>
                   </size>
                  </property>
                  <property name="maximumSize">
@@ -20685,8 +21006,14 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <height>16777215</height>
                   </size>
                  </property>
+                 <property name="editTriggers">
+                  <set>QAbstractItemView::NoEditTriggers</set>
+                 </property>
+                 <property name="showDropIndicator" stdset="0">
+                  <bool>false</bool>
+                 </property>
                  <property name="spacing">
-                  <number>0</number>
+                  <number>-1</number>
                  </property>
                  <item>
                   <property name="text">
@@ -20694,6 +21021,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <property name="checkState">
                    <enum>Unchecked</enum>
+                  </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20703,6 +21033,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="checkState">
                    <enum>Unchecked</enum>
                   </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                  </property>
                  </item>
                  <item>
                   <property name="text">
@@ -20710,6 +21043,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <property name="checkState">
                    <enum>Unchecked</enum>
+                  </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20719,6 +21055,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="checkState">
                    <enum>Unchecked</enum>
                   </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                  </property>
                  </item>
                  <item>
                   <property name="text">
@@ -20726,6 +21065,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <property name="checkState">
                    <enum>Unchecked</enum>
+                  </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20735,6 +21077,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="checkState">
                    <enum>Unchecked</enum>
                   </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                  </property>
                  </item>
                  <item>
                   <property name="text">
@@ -20742,6 +21087,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <property name="checkState">
                    <enum>Unchecked</enum>
+                  </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                  <item>
@@ -20751,6 +21099,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="checkState">
                    <enum>Unchecked</enum>
                   </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                  </property>
                  </item>
                  <item>
                   <property name="text">
@@ -20759,6 +21110,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="checkState">
                    <enum>Unchecked</enum>
                   </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
+                  </property>
                  </item>
                  <item>
                   <property name="text">
@@ -20766,6 +21120,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <property name="checkState">
                    <enum>Unchecked</enum>
+                  </property>
+                  <property name="flags">
+                   <set>ItemIsUserCheckable|ItemIsEnabled</set>
                   </property>
                  </item>
                 </widget>
@@ -21876,8 +22233,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>497</width>
-             <height>680</height>
+             <width>747</width>
+             <height>683</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -27940,7 +28297,7 @@ Var And Scrolling Synced To Left Table</string>
      <x>0</x>
      <y>0</y>
      <width>774</width>
-     <height>19</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
