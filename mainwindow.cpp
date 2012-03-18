@@ -2712,47 +2712,33 @@ void MainWindow::guirefresh(bool newgame)
 
         for (int i=0;i<6;i++)//flyers
         {
-            ui->list_flyers->setCurrentRow(i);
-            if ((1 << i) & ff7->slot[s].turtleflyers){ui->list_flyers->currentItem()->setCheckState(Qt::Checked);}
-            else{ui->list_flyers->currentItem()->setCheckState(Qt::Unchecked);}
-            ui->list_flyers->setCurrentRow(-1);
+            if ((1 << i) & ff7->slot[s].turtleflyers){ui->list_flyers->item(i)->setCheckState(Qt::Checked);}
+            else{ui->list_flyers->item(i)->setCheckState(Qt::Unchecked);}
         }
 
         for (int i=0;i<9;i++)//phsmask
         {
-            ui->list_phs_chars->setCurrentRow(i);
-            if ((1 << i) & ff7->slot[s].phsmask){ui->list_phs_chars->currentItem()->setCheckState(Qt::Unchecked);}
-            else{ui->list_phs_chars->currentItem()->setCheckState(Qt::Checked);}
-            ui->list_phs_chars->setCurrentRow(-1);
+            if ((1 << i) & ff7->slot[s].phsmask){ui->list_phs_chars->item(i)->setCheckState(Qt::Unchecked);}
+            else{ui->list_phs_chars->item(i)->setCheckState(Qt::Checked);}
         }
         for (int i=0;i<9;i++)//unlocked
         {
-            ui->list_chars_unlocked->setCurrentRow(i);
-            if ((1 << i) & ff7->slot[s].unlockedchars){ui->list_chars_unlocked->currentItem()->setCheckState(Qt::Checked);}
-            else{ui->list_chars_unlocked->currentItem()->setCheckState(Qt::Unchecked);}
-            ui->list_chars_unlocked->setCurrentRow(-1);
+            if ((1 << i) & ff7->slot[s].unlockedchars){ui->list_chars_unlocked->item(i)->setCheckState(Qt::Checked);}
+            else{ui->list_chars_unlocked->item(i)->setCheckState(Qt::Unchecked);}
         }
         for (int i=0;i<10;i++)//visible_menu
         {
-            ui->list_menu_visible->setCurrentRow(i);
-            if ((1 << i) & ff7->slot[s].menu_visible){ui->list_menu_visible->currentItem()->setCheckState(Qt::Checked);}
-            else{ui->list_menu_visible->currentItem()->setCheckState(Qt::Unchecked);}
-            ui->list_menu_visible->setCurrentRow(-1);
+            if ((1 << i) & ff7->slot[s].menu_visible){ui->list_menu_visible->item(i)->setCheckState(Qt::Checked);}
+            else{ui->list_menu_visible->item(i)->setCheckState(Qt::Unchecked);}
         }
         for (int i=0;i<10;i++)//menu_locked
         {
-            ui->list_menu_locked->setCurrentRow(i);
-            if ((1 << i) & ff7->slot[s].menu_locked){ui->list_menu_locked->currentItem()->setCheckState(Qt::Checked);}
-            else{ui->list_menu_locked->currentItem()->setCheckState(Qt::Unchecked);}
-            ui->list_menu_locked->setCurrentRow(-1);
+            if ((1 << i) & ff7->slot[s].menu_locked){ui->list_menu_locked->item(i)->setCheckState(Qt::Checked);}
+            else{ui->list_menu_locked->item(i)->setCheckState(Qt::Unchecked);}
         }
-        ui->btn_clear_keyitems->click();
         for (int i=0;i<51;i++)// key items
         {
-            if (ff7->slot[s].keyitems[i/8] & (1 << (i%8)))
-            {
-                ui->list_keyitems->item(i)->setCheckState(Qt::Checked);
-            }
+            if (ff7->slot[s].keyitems[i/8] & (1 << (i%8))){ui->list_keyitems->item(i)->setCheckState(Qt::Checked);}
             else{ ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);}
         }
         /*~~~~~party combo boxes (checking for empty slots)~~~*/
