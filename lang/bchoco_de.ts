@@ -2937,7 +2937,7 @@
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation>Cait Sith und Vincent sollten nicht aktiviert werden, wenn sie im Truppen-Tab deaktiviert wurden. </translation>
+        <translation type="obsolete">Cait Sith und Vincent sollten nicht aktiviert werden, wenn sie im Truppen-Tab deaktiviert wurden. </translation>
     </message>
     <message>
         <source>map</source>
@@ -5036,6 +5036,10 @@ Tabellen Einträge sind bearbeitbar</translation>
 %1</source>
         <translation>Fehler beim Speichern von
 %1</translation>
+    </message>
+    <message>
+        <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
+        <translation>Cait Sith und Vincent sollten nicht aktiviert werden, wenn sie im Truppen-Tab deaktiviert wurden. </translation>
     </message>
 </context>
 <context>
@@ -7191,6 +7195,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Fixed: Bug In Dex and Vgs Header</source>
         <translation>Behoben: Fehler in der Kopfzeile von Dex und Vgs</translation>
+    </message>
+    <message>
+        <source>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

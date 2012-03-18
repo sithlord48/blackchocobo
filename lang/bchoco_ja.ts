@@ -2938,7 +2938,7 @@
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation>ケット・シー, ヴィンセントがパーティ タブで無効になっているときは、ここで彼らを有効化しないでください。</translation>
+        <translation type="obsolete">ケット・シー, ヴィンセントがパーティ タブで無効になっているときは、ここで彼らを有効化しないでください。</translation>
     </message>
     <message>
         <source>map</source>
@@ -5052,6 +5052,10 @@ Table Entries are Editable</source>
     <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
         <translation>cb_s5_7 (エーテルターボ・５番街民家２階の子供)</translation>
+    </message>
+    <message>
+        <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
+        <translation>ケット・シー, ヴィンセントがパーティ タブで無効になっているときは、ここで彼らを有効化しないでください。</translation>
     </message>
 </context>
 <context>
@@ -7206,6 +7210,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Fixed: Bug In Dex and Vgs Header</source>
         <translation>修正: DEX, VGS ヘッダーのバグ</translation>
+    </message>
+    <message>
+        <source>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

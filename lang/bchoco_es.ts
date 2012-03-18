@@ -2893,7 +2893,7 @@
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation>Cait Sith y Vincent no deberían ser desbloqueados si estan deshabilitados en la pestaña de grupo. </translation>
+        <translation type="obsolete">Cait Sith y Vincent no deberían ser desbloqueados si estan deshabilitados en la pestaña de grupo. </translation>
     </message>
     <message>
         <source>map</source>
@@ -5029,6 +5029,10 @@ NO es un archivo de guardado PSV</translation>
     <message>
         <source>2nd Floor Sector 5 House</source>
         <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
+        <translation>Cait Sith y Vincent no deberían ser desbloqueados si estan deshabilitados en la pestaña de grupo. </translation>
     </message>
 </context>
 <context>
@@ -7183,6 +7187,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Bug In Dex and Vgs Header</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

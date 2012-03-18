@@ -2746,18 +2746,15 @@ void MainWindow::guirefresh(bool newgame)
             else{ui->list_menu_locked->currentItem()->setCheckState(Qt::Unchecked);}
             ui->list_menu_locked->setCurrentRow(-1);
         }
-
         ui->btn_clear_keyitems->click();
         for (int i=0;i<51;i++)// key items
         {
             if (ff7->slot[s].keyitems[i/8] & (1 << (i%8)))
             {
-                ui->list_keyitems->setCurrentRow(i);
-                ui->list_keyitems->currentItem()->setCheckState(Qt::Checked);
+                ui->list_keyitems->item(i)->setCheckState(Qt::Checked);
             }
+            else{ ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);}
         }
-        ui->list_keyitems->setCurrentRow(0);//move list up totop
-        ui->list_keyitems->setCurrentRow(-1);//unselect list
         /*~~~~~party combo boxes (checking for empty slots)~~~*/
         if (ff7->slot[s].party[0] >= 0x0C){ui->combo_party1->setCurrentIndex(12);}
         else{ui->combo_party1->setCurrentIndex(ff7->slot[s].party[0]);}
@@ -3503,20 +3500,19 @@ void MainWindow::on_combo_pen3_currentIndexChanged(int index){if(!load){file_mod
 void MainWindow::on_combo_pen4_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].pennedchocos[3]=index;}}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::on_list_phs_chars_itemChanged(QListWidgetItem * item)
+void MainWindow::on_list_phs_chars_clicked(const QModelIndex &index)
 {if(!load){file_modified(true);
-    int j = item->listWidget()->currentRow();
-    if(item->checkState() ==Qt::Unchecked){ff7->slot[s].phsmask |=(1 <<j);}
-    else{ff7->slot[s].phsmask &= ~(1<<j);}
+        int j = index.row();
+        if(ui->list_phs_chars->item(j)->checkState() ==Qt::Unchecked){ff7->slot[s].phsmask |=(1 <<j);}
+        else{ff7->slot[s].phsmask &= ~(1<<j);}
 }}
 
-void MainWindow::on_list_chars_unlocked_itemChanged(QListWidgetItem * item)
+void MainWindow::on_list_chars_unlocked_clicked(const QModelIndex &index)
 {if(!load){file_modified(true);
-    int j = item->listWidget()->currentRow();
-    if(item->checkState() ==Qt::Checked){ff7->slot[s].unlockedchars |= (1<<j);}
+    int j = index.row();
+    if(ui->list_chars_unlocked->item(j)->checkState() ==Qt::Checked){ff7->slot[s].unlockedchars |= (1<<j);}
     else{ff7->slot[s].unlockedchars &= ~(1<<j);}
 }}
-
 void MainWindow::on_sb_love_barret_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].love.barret = value;}}
 void MainWindow::on_sb_love_aeris_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].love.aeris = value;}}
 void MainWindow::on_sb_love_tifa_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].love.tifa = value;}}
@@ -3544,19 +3540,19 @@ void MainWindow::on_sb_steps_valueChanged(int value)
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::on_list_flyers_itemChanged(QListWidgetItem * item)
+void MainWindow::on_list_flyers_clicked(const QModelIndex &index)
 {if(!load){file_modified(true);
-    int j=item->listWidget()->currentRow();
-    if(item->checkState() ==Qt::Checked){ff7->slot[s].turtleflyers |= (1 << j);}
+    int j=index.row();
+    if(ui->list_flyers->item(j)->checkState() ==Qt::Checked){ff7->slot[s].turtleflyers |= (1 << j);}
     else{ff7->slot[s].turtleflyers &= ~(1<<j);}
- }}
-
-void MainWindow::on_list_keyitems_itemChanged(QListWidgetItem *item)
+}}
+void MainWindow::on_list_keyitems_clicked(const QModelIndex &index)
 {if(!load){file_modified(true);
-    int j = item->listWidget()->currentRow();
-    if (item->checkState() == Qt::Checked){ff7->slot[s].keyitems[j/8] |= (1<<j%8);}
+    int j = index.row();
+    if (ui->list_keyitems->item(j)->checkState() == Qt::Checked){ff7->slot[s].keyitems[j/8] |= (1<<j%8);}
     else{ff7->slot[s].keyitems[j/8] &= ~(1<<j%8);}
 }}
+
 // Field Items Combos
 void MainWindow::on_cb_bm_items_1_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].z_38[48] |= (1<<0);}else{ff7->slot[s].z_38[48] &= ~(1<<0);}}}
 void MainWindow::on_cb_bm_items_2_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].z_38[48] |= (1<<1);}else{ff7->slot[s].z_38[48] &= ~(1<<1);}}}
@@ -3588,14 +3584,11 @@ void MainWindow::on_clearItem_clicked()
     itemupdate();
 }
 void MainWindow::on_btn_clear_keyitems_clicked()
-{if(!load){file_modified(true); }//used in other functions
+{if(!load){file_modified(true);}//used in other functions
     for(int i=0;i<51;i++)// be sure to clear key items first..
     {
-        ui->list_keyitems->setCurrentRow(i);
-        ui->list_keyitems->currentItem()->setCheckState(Qt::Unchecked);
+        ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);
     }
-    ui->list_keyitems->setCurrentRow(0);
-    ui->list_keyitems->setCurrentRow(-1);
 }
 
 void MainWindow::on_combo_additem_currentIndexChanged(int index)
@@ -3760,10 +3753,8 @@ void MainWindow::on_btn_eskillall_clicked()
 {
     for (int i=0;i<24;i++)
     {
-        ui->list_eskill->setCurrentRow(i);
-        ui->list_eskill->currentItem()->setCheckState(Qt::Checked);
+        ui->list_eskill->item(i)->setCheckState(Qt::Checked);
     }
-    ui->list_eskill->setCurrentRow(-1);
 }
 
 void MainWindow::geteskills(int row)
@@ -3771,40 +3762,31 @@ void MainWindow::geteskills(int row)
     load=true;
     quint32 temp = ff7->slot[s].materias[row].ap[0] |(ff7->slot[s].materias[row].ap[1] << 8) | (ff7->slot[s].materias[row].ap[2] << 16);
     ui->sb_addap->setValue(temp);// no one cares cause there is no ap really..
-    on_btn_eskillclear_clicked();
     for (int i=0;i<24;i++)
     {
-        ui->list_eskill->setCurrentRow(i);
-        if ((1 << i) & temp){ui->list_eskill->currentItem()->setCheckState(Qt::Checked);}
+        if (ff7->slot[s].materias[row].ap[i/8] & (1 << (i%8))){ui->list_eskill->item(i)->setCheckState(Qt::Checked);}
+        else{ui->list_eskill->item(i)->setCheckState(Qt::Unchecked);}
     }
-    ui->list_eskill->setCurrentRow(-1);
     load=false;
 }
-
-void MainWindow::on_list_eskill_itemChanged()
+void MainWindow::on_list_eskill_clicked(const QModelIndex &index)
 {if(!load){file_modified(true);
+    int j = index.row();
+    if (ui->list_eskill->item(j)->checkState() == Qt::Checked){ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[j/8] |= (1<< (j%8));}
+    else{ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[j/8] &= ~(1<<(j%8));}
+
     quint32 temp = ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[0] |(ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[1] << 8) | (ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[2] << 16);
-    if(ui->list_eskill->currentItem()->checkState()){temp |= (1 << ui->list_eskill->currentRow());}
-    else{temp &= ~(1<<ui->list_eskill->currentRow());}
     load=true;
     ui->sb_addap->setValue(temp);
     load=false;
-    int a = (temp & 0xff);
-    int b = (temp & 0xff00) >> 8;
-    int c = (temp & 0xff0000) >> 16;
-    ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[0] = a;
-    ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[1] = b;
-    ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[2] = c;
 }}
 
 void MainWindow::on_btn_eskillclear_clicked()
 {
     for (int i=0;i<24;i++)
     {
-        ui->list_eskill->setCurrentRow(i);
-        ui->list_eskill->currentItem()->setCheckState(Qt::Unchecked);
+        ui->list_eskill->item(i)->setCheckState(Qt::Unchecked);
     }//loop thru and uncheck no need to apply each one should thrown an itemChanged() event
-    ui->list_eskill->setCurrentRow(-1);
 }
 
 void MainWindow::on_btn_add_all_materia_clicked()
@@ -4133,26 +4115,22 @@ void MainWindow::geteskills2(int row)
     load=true;
     quint32 temp = ff7->slot[s].chars[curchar].materias[row].ap[0] |(ff7->slot[s].chars[curchar].materias[row].ap[1] << 8) | (ff7->slot[s].chars[curchar].materias[row].ap[2] << 16);
     ui->sb_addap_slot->setValue(temp);
+
     for (int i=0;i<24;i++)
     {
-        ui->list_eskill_2->setCurrentRow(i);
-        if ((1 << i) & temp){ui->list_eskill_2->currentItem()->setCheckState(Qt::Checked);}
-        else{ui->list_eskill_2->currentItem()->setCheckState(Qt::Unchecked);}
+        if (ff7->slot[s].chars[curchar].materias[row].ap[i/8] & (1 << (i%8))){ui->list_eskill_2->item(i)->setCheckState(Qt::Checked);}
+        else{ui->list_eskill_2->item(i)->setCheckState(Qt::Unchecked);}
     }
-    ui->list_eskill_2->setCurrentRow(-1);
     load=false;
 }
-void MainWindow::on_list_eskill_2_itemChanged()
+void MainWindow::on_list_eskill_2_clicked(const QModelIndex &index)
 {if(!load){file_modified(true);
+
+    int j = index.row();
+    if (ui->list_eskill_2->item(j)->checkState() == Qt::Checked){ff7->slot[s].chars[curchar].materias[mslotsel].ap[j/8] |= (1<< (j%8));}
+    else{ff7->slot[s].chars[curchar].materias[mslotsel].ap[j/8] &= ~(1<<(j%8));}
+
     quint32 temp = ff7->slot[s].chars[curchar].materias[mslotsel].ap[0] |(ff7->slot[s].chars[curchar].materias[mslotsel].ap[1] << 8) | (ff7->slot[s].chars[curchar].materias[mslotsel].ap[2] << 16);
-    if(ui->list_eskill_2->currentItem()->checkState()){temp |= (1 << ui->list_eskill_2->currentRow());}
-    else{temp &= ~(1<<ui->list_eskill_2->currentRow());}
-    int a = (temp & 0xff);
-    int b = (temp & 0xff00) >> 8;
-    int c = (temp & 0xff0000) >> 16;
-    ff7->slot[s].chars[curchar].materias[mslotsel].ap[0] = a;
-    ff7->slot[s].chars[curchar].materias[mslotsel].ap[1] = b;
-    ff7->slot[s].chars[curchar].materias[mslotsel].ap[2] = c;
     load=true;
     ui->sb_addap_slot->setValue(temp);
     load=false;
@@ -4497,18 +4475,18 @@ void MainWindow::on_sb_timer_time_hour_valueChanged(int value){if(!load){file_mo
 void MainWindow::on_sb_timer_time_min_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].timer[1] = value;}}
 void MainWindow::on_sb_timer_time_sec_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].timer[2] = value;}}
 
-void MainWindow::on_list_menu_visible_itemChanged(QListWidgetItem *item)
+void MainWindow::on_list_menu_visible_clicked(const QModelIndex &index)
 {if(!load){file_modified(true);
-    int j=item->listWidget()->currentRow();
-    if(item->checkState() ==Qt::Checked){ff7->slot[s].menu_visible |= (1<<j);}
-    else{ff7->slot[s].menu_visible &= ~(1<<j);}
+        int j=index.row();
+        if(ui->list_menu_visible->item(j)->checkState() ==Qt::Checked){ff7->slot[s].menu_visible |= (1<<j);}
+        else{ff7->slot[s].menu_visible &= ~(1<<j);}
 }}
 
-void MainWindow::on_list_menu_locked_itemChanged(QListWidgetItem *item)
+void MainWindow::on_list_menu_locked_clicked(const QModelIndex &index)
 {if(!load){file_modified(true);
-    int j=item->listWidget()->currentRow();
-    if(item->checkState() ==Qt::Checked){ff7->slot[s].menu_locked |= (1<<j);}
-    else{ff7->slot[s].menu_locked &= ~(1<<j);}
+        int j=index.row();
+        if(ui->list_menu_locked->item(j)->checkState() ==Qt::Checked){ff7->slot[s].menu_locked |= (1<<j);}
+        else{ff7->slot[s].menu_locked &= ~(1<<j);}
 }}
 
 void MainWindow::on_sb_u_weapon_hp_valueChanged(int value)

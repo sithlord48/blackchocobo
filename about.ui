@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>385</width>
+    <width>383</width>
     <height>362</height>
    </rect>
   </property>
@@ -566,6 +566,11 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>Fixed: Bug In Dex and Vgs Header</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</string>
           </property>
          </item>
          <item>

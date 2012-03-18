@@ -27,7 +27,6 @@
 #include "options.h"                // contains the options dialog
 #include "about.h"                  // about dialog stuff.
 #include "errbox.h"                 // non ff7 error box
-#include "globals.h"
 #include <SaveIcon.h>
 
 #include "static_data/FF7Item.h"
@@ -286,8 +285,8 @@ private slots://try to keep these in the same order as the .cpp file
     void on_combo_pen3_currentIndexChanged(int index);
     void on_combo_pen4_currentIndexChanged(int index);
     /* Others Tab */    
-    void on_list_phs_chars_itemChanged(QListWidgetItem*);
-    void on_list_chars_unlocked_itemChanged(QListWidgetItem*);
+    void on_list_phs_chars_clicked(const QModelIndex &index);
+    void on_list_chars_unlocked_clicked(const QModelIndex &index);
     void on_sb_curdisc_valueChanged(int);
     void on_sb_love_yuffie_valueChanged(int);
     void on_sb_love_tifa_valueChanged(int);
@@ -347,8 +346,9 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_b_love_yuffie_valueChanged(int);
     void on_sb_b_love_tifa_valueChanged(int);
     void on_sb_b_love_aeris_valueChanged(int);
-    void on_list_menu_locked_itemChanged(QListWidgetItem*);
-    void on_list_menu_visible_itemChanged(QListWidgetItem*);
+
+    void on_list_menu_visible_clicked(const QModelIndex &index);
+    void on_list_menu_locked_clicked(const QModelIndex &index);
 
     void on_sb_turkschruch_valueChanged(int );
 
@@ -453,8 +453,8 @@ private slots://try to keep these in the same order as the .cpp file
 
 
     //items tab
-    void on_list_flyers_itemChanged(QListWidgetItem*);
-    void on_list_keyitems_itemChanged(QListWidgetItem*);
+    void on_list_flyers_clicked(const QModelIndex &index);
+    void on_list_keyitems_clicked(const QModelIndex &index);
     void on_tbl_itm_currentCellChanged(int row);
     void on_combo_additem_currentIndexChanged(int);
     void on_sb_addqty_valueChanged(int);
@@ -483,7 +483,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_btn_eskillall_clicked();
     void geteskills(int row);
     void on_btn_eskillclear_clicked();
-    void on_list_eskill_itemChanged();
+    void on_list_eskill_clicked(const QModelIndex &index);
     void on_combo_add_mat_2_currentIndexChanged();
     void on_combo_mat_type_currentIndexChanged(int index);
     void on_btn_m_lvl5_clicked();
@@ -566,7 +566,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_btn_m_lvl3_slot_clicked();
     void on_btn_m_lvl2_slot_clicked();
     void on_btn_m_lvl1_slot_clicked();
-    void on_list_eskill_2_itemChanged();
+    void on_list_eskill_2_clicked(const QModelIndex &index);
     void on_cb_Region_Slot_currentIndexChanged();
     void on_combo_id_currentIndexChanged(int index);
     void on_cb_ruby_dead_toggled(bool checked);
@@ -668,6 +668,7 @@ private slots://try to keep these in the same order as the .cpp file
     void set_UR_Color(QColor color);
     void set_LR_Color(QColor color);
     void set_LL_Color(QColor color);
+
 
 };
 #endif // MAINWINDOW_H
