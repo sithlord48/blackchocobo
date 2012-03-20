@@ -10,26 +10,8 @@
     <x>0</x>
     <y>0</y>
     <width>774</width>
-    <height>576</height>
+    <height>572</height>
    </rect>
-  </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>0</width>
-    <height>0</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>16777215</width>
-    <height>16777215</height>
-   </size>
   </property>
   <property name="windowTitle">
    <string>Black Chocobo</string>
@@ -462,19 +444,7 @@ QSlider#slide_world_y::handle{image: url(:/icon/prev);}
 QSlider#slide_world_x::handle{image: url(:/icon/slider_up);}
 QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
   </property>
-  <property name="unifiedTitleAndToolBarOnMac">
-   <bool>false</bool>
-  </property>
   <widget class="QWidget" name="centralWidget">
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
-   </property>
-   <property name="styleSheet">
-    <string notr="true"/>
-   </property>
    <layout class="QVBoxLayout" name="verticalLayout_53">
     <property name="spacing">
      <number>0</number>
@@ -496,24 +466,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
       <property name="enabled">
        <bool>true</bool>
       </property>
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
-      </property>
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="maximumSize">
-       <size>
-        <width>16777215</width>
-        <height>16777215</height>
-       </size>
-      </property>
       <property name="baseSize">
        <size>
         <width>0</width>
@@ -526,12 +478,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
       <property name="styleSheet">
        <string notr="true">disbled{font:;color: rgb(74, 80, 73);}</string>
       </property>
-      <property name="tabPosition">
-       <enum>QTabWidget::North</enum>
-      </property>
-      <property name="tabShape">
-       <enum>QTabWidget::Rounded</enum>
-      </property>
       <property name="currentIndex">
        <number>0</number>
       </property>
@@ -542,17 +488,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
        <bool>true</bool>
       </property>
       <widget class="QWidget" name="tab_party">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
        <property name="focusPolicy">
         <enum>Qt::NoFocus</enum>
-       </property>
-       <property name="toolTip">
-        <string extracomment="Edit Party And Characters"/>
        </property>
        <attribute name="title">
         <string>P&amp;arty</string>
@@ -994,9 +931,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_84">
-            <property name="spacing">
-             <number>-1</number>
-            </property>
             <item>
              <widget class="QGroupBox" name="groupBox_15">
               <property name="minimumSize">
@@ -1077,9 +1011,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <property name="alignment">
                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                    </property>
-                   <property name="buttonSymbols">
-                    <enum>QAbstractSpinBox::UpDownArrows</enum>
-                   </property>
                    <property name="accelerated">
                     <bool>true</bool>
                    </property>
@@ -1152,9 +1083,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <property name="alignment">
                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                    </property>
-                   <property name="buttonSymbols">
-                    <enum>QAbstractSpinBox::UpDownArrows</enum>
-                   </property>
                    <property name="accelerated">
                     <bool>true</bool>
                    </property>
@@ -1192,9 +1120,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <string>Fights</string>
               </property>
               <layout class="QVBoxLayout" name="verticalLayout_43">
-               <property name="spacing">
-                <number>-1</number>
-               </property>
                <property name="margin">
                 <number>3</number>
                </property>
@@ -1245,9 +1170,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
                    </property>
-                   <property name="buttonSymbols">
-                    <enum>QAbstractSpinBox::UpDownArrows</enum>
-                   </property>
                    <property name="accelerated">
                     <bool>true</bool>
                    </property>
@@ -1268,18 +1190,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <layout class="QHBoxLayout" name="horizontalLayout_81">
                  <item>
                   <widget class="QLabel" name="label_37">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>16</height>
-                    </size>
-                   </property>
                    <property name="text">
                     <string>Runs</string>
                    </property>
@@ -1290,12 +1200,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </item>
                  <item>
                   <widget class="QSpinBox" name="sb_runs">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
                    <property name="minimumSize">
                     <size>
                      <width>75</width>
@@ -1313,9 +1217,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                    </property>
                    <property name="alignment">
                     <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="buttonSymbols">
-                    <enum>QAbstractSpinBox::UpDownArrows</enum>
                    </property>
                    <property name="accelerated">
                     <bool>true</bool>
@@ -1365,9 +1266,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <property name="margin">
               <number>0</number>
              </property>
-             <property name="spacing">
-              <number>6</number>
-             </property>
              <item row="0" column="0">
               <widget class="QPushButton" name="btn_cloud">
                <property name="sizePolicy">
@@ -1380,21 +1278,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <size>
                  <width>100</width>
                  <height>106</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>101</width>
-                 <height>114</height>
                 </size>
                </property>
               </widget>
@@ -1413,21 +1296,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <height>106</height>
                 </size>
                </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>75</width>
-                 <height>86</height>
-                </size>
-               </property>
               </widget>
              </item>
              <item row="0" column="2">
@@ -1444,21 +1312,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <height>106</height>
                 </size>
                </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>75</width>
-                 <height>86</height>
-                </size>
-               </property>
               </widget>
              </item>
              <item row="1" column="0">
@@ -1473,21 +1326,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <size>
                  <width>100</width>
                  <height>106</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>75</width>
-                 <height>86</height>
                 </size>
                </property>
               </widget>
@@ -1509,21 +1347,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <height>106</height>
                 </size>
                </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>75</width>
-                 <height>86</height>
-                </size>
-               </property>
               </widget>
              </item>
              <item row="1" column="2">
@@ -1538,21 +1361,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <size>
                  <width>100</width>
                  <height>106</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>75</width>
-                 <height>86</height>
                 </size>
                </property>
               </widget>
@@ -1571,21 +1379,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <height>106</height>
                 </size>
                </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>75</width>
-                 <height>86</height>
-                </size>
-               </property>
               </widget>
              </item>
              <item row="2" column="1">
@@ -1602,21 +1395,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <height>106</height>
                 </size>
                </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>75</width>
-                 <height>86</height>
-                </size>
-               </property>
               </widget>
              </item>
              <item row="2" column="2">
@@ -1631,21 +1409,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <size>
                  <width>100</width>
                  <height>106</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>16777215</width>
-                 <height>16777215</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>75</width>
-                 <height>86</height>
                 </size>
                </property>
               </widget>
@@ -1695,7 +1458,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>453</width>
-             <height>436</height>
+             <height>438</height>
             </rect>
            </property>
            <property name="sizePolicy">
@@ -1751,9 +1514,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 </property>
                 <property name="frameShape">
                  <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="text">
-                 <string/>
                 </property>
                 <property name="scaledContents">
                  <bool>true</bool>
@@ -1837,9 +1597,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                     <property name="alignment">
                      <set>Qt::AlignCenter</set>
                     </property>
-                    <property name="buttonSymbols">
-                     <enum>QAbstractSpinBox::UpDownArrows</enum>
-                    </property>
                     <property name="correctionMode">
                      <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                     </property>
@@ -1915,9 +1672,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
                   </property>
-                  <property name="buttonSymbols">
-                   <enum>QAbstractSpinBox::UpDownArrows</enum>
-                  </property>
                   <property name="correctionMode">
                    <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                   </property>
@@ -1973,9 +1727,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
-                  </property>
-                  <property name="buttonSymbols">
-                   <enum>QAbstractSpinBox::UpDownArrows</enum>
                   </property>
                   <property name="correctionMode">
                    <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -2069,9 +1820,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
                   </property>
-                  <property name="buttonSymbols">
-                   <enum>QAbstractSpinBox::UpDownArrows</enum>
-                  </property>
                   <property name="correctionMode">
                    <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                   </property>
@@ -2124,9 +1872,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignCenter</set>
-                  </property>
-                  <property name="buttonSymbols">
-                   <enum>QAbstractSpinBox::UpDownArrows</enum>
                   </property>
                   <property name="correctionMode">
                    <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -2630,9 +2375,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      </property>
                      <property name="alignment">
                       <set>Qt::AlignCenter</set>
-                     </property>
-                     <property name="buttonSymbols">
-                      <enum>QAbstractSpinBox::UpDownArrows</enum>
                      </property>
                      <property name="correctionMode">
                       <enum>QAbstractSpinBox::CorrectToPreviousValue</enum>
@@ -3377,9 +3119,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
                         </property>
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::UpDownArrows</enum>
-                        </property>
                         <property name="correctionMode">
                          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                         </property>
@@ -3429,9 +3168,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
-                        </property>
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::UpDownArrows</enum>
                         </property>
                         <property name="correctionMode">
                          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -3526,9 +3262,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
                         </property>
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::UpDownArrows</enum>
-                        </property>
                         <property name="correctionMode">
                          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                         </property>
@@ -3578,9 +3311,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
-                        </property>
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::UpDownArrows</enum>
                         </property>
                         <property name="correctionMode">
                          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -3672,9 +3402,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
                         </property>
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::UpDownArrows</enum>
-                        </property>
                         <property name="correctionMode">
                          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                         </property>
@@ -3724,9 +3451,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
-                        </property>
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::UpDownArrows</enum>
                         </property>
                         <property name="correctionMode">
                          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -3818,9 +3542,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
                         </property>
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::UpDownArrows</enum>
-                        </property>
                         <property name="correctionMode">
                          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                         </property>
@@ -3870,9 +3591,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
-                        </property>
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::UpDownArrows</enum>
                         </property>
                         <property name="correctionMode">
                          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -3964,9 +3682,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
                         </property>
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::UpDownArrows</enum>
-                        </property>
                         <property name="correctionMode">
                          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                         </property>
@@ -4016,9 +3731,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
-                        </property>
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::UpDownArrows</enum>
                         </property>
                         <property name="correctionMode">
                          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -4110,9 +3822,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
                         </property>
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::UpDownArrows</enum>
-                        </property>
                         <property name="correctionMode">
                          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                         </property>
@@ -4162,9 +3871,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         </property>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
-                        </property>
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::UpDownArrows</enum>
                         </property>
                         <property name="correctionMode">
                          <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -4243,9 +3949,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
                        </property>
-                       <property name="buttonSymbols">
-                        <enum>QAbstractSpinBox::UpDownArrows</enum>
-                       </property>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
                        </property>
@@ -4309,9 +4012,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        </property>
                        <property name="alignment">
                         <set>Qt::AlignCenter</set>
-                       </property>
-                       <property name="buttonSymbols">
-                        <enum>QAbstractSpinBox::UpDownArrows</enum>
                        </property>
                        <property name="correctionMode">
                         <enum>QAbstractSpinBox::CorrectToNearestValue</enum>
@@ -4695,8 +4395,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>401</width>
-             <height>420</height>
+             <width>453</width>
+             <height>438</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -6943,9 +6643,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                         <property name="alignment">
                          <set>Qt::AlignCenter</set>
                         </property>
-                        <property name="buttonSymbols">
-                         <enum>QAbstractSpinBox::PlusMinus</enum>
-                        </property>
                         <property name="accelerated">
                          <bool>true</bool>
                         </property>
@@ -8521,8 +8218,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   <rect>
                    <x>0</x>
                    <y>0</y>
-                   <width>235</width>
-                   <height>319</height>
+                   <width>252</width>
+                   <height>264</height>
                   </rect>
                  </property>
                  <layout class="QVBoxLayout" name="verticalLayout_111">
@@ -10192,9 +9889,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <property name="alignment">
                  <set>Qt::AlignCenter</set>
                 </property>
-                <property name="buttonSymbols">
-                 <enum>QAbstractSpinBox::PlusMinus</enum>
-                </property>
                 <property name="accelerated">
                  <bool>true</bool>
                 </property>
@@ -11032,8 +10726,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>1452</width>
-             <height>334</height>
+             <width>1410</width>
+             <height>268</height>
             </rect>
            </property>
            <layout class="QHBoxLayout" name="horizontalLayout_158">
@@ -17034,15 +16728,15 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
 }</string>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <widget class="QWidget" name="page">
            <property name="geometry">
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>774</width>
-             <height>440</height>
+             <width>720</width>
+             <height>251</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -17461,7 +17155,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <x>0</x>
              <y>0</y>
              <width>747</width>
-             <height>414</height>
+             <height>411</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -19410,8 +19104,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>390</width>
-                  <height>1492</height>
+                  <width>303</width>
+                  <height>1294</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -20334,9 +20028,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </property>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
-                 </property>
-                 <property name="buttonSymbols">
-                  <enum>QAbstractSpinBox::UpDownArrows</enum>
                  </property>
                  <property name="maximum">
                   <number>65535</number>
@@ -22233,8 +21924,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>747</width>
-             <height>683</height>
+             <width>497</width>
+             <height>680</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -28196,9 +27887,6 @@ Var And Scrolling Synced To Left Table</string>
          <property name="lineWidth">
           <number>0</number>
          </property>
-         <property name="text">
-          <string/>
-         </property>
         </widget>
        </item>
        <item>
@@ -28211,17 +27899,14 @@ Var And Scrolling Synced To Left Table</string>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
-           <width>40</width>
-           <height>18</height>
+           <width>0</width>
+           <height>0</height>
           </size>
          </property>
         </spacer>
        </item>
        <item>
         <widget class="QLabel" name="lbl_current_slot_txt">
-         <property name="enabled">
-          <bool>true</bool>
-         </property>
          <property name="sizePolicy">
           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
            <horstretch>0</horstretch>
@@ -28239,9 +27924,6 @@ Var And Scrolling Synced To Left Table</string>
            <width>16777215</width>
            <height>18</height>
           </size>
-         </property>
-         <property name="text">
-          <string/>
          </property>
         </widget>
        </item>
@@ -28264,9 +27946,6 @@ Var And Scrolling Synced To Left Table</string>
            <width>16777215</width>
            <height>18</height>
           </size>
-         </property>
-         <property name="text">
-          <string/>
          </property>
         </widget>
        </item>
@@ -28297,7 +27976,7 @@ Var And Scrolling Synced To Left Table</string>
      <x>0</x>
      <y>0</y>
      <width>774</width>
-     <height>22</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">
