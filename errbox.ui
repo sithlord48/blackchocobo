@@ -9,15 +9,9 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>342</width>
-    <height>192</height>
+    <width>340</width>
+    <height>190</height>
    </rect>
-  </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
   </property>
   <property name="windowTitle">
    <string>Non Final Fantasy VII Slot Detected</string>
@@ -78,9 +72,6 @@ QPushButton:enabled {
           <height>64</height>
          </size>
         </property>
-        <property name="text">
-         <string/>
-        </property>
         <property name="scaledContents">
          <bool>true</bool>
         </property>
@@ -90,9 +81,6 @@ QPushButton:enabled {
        <layout class="QVBoxLayout" name="verticalLayout_3">
         <item>
          <widget class="QLabel" name="lbl_regionstring">
-          <property name="text">
-           <string notr="true">TextLabel</string>
-          </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
           </property>
@@ -108,19 +96,10 @@ QPushButton:enabled {
    </item>
    <item>
     <layout class="QVBoxLayout" name="verticalLayout">
-     <property name="spacing">
-      <number>-1</number>
-     </property>
      <item>
       <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QPushButton" name="btn_prev">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
          <property name="text">
           <string>&amp;Previous Slot</string>
          </property>
@@ -152,9 +131,6 @@ QPushButton:enabled {
          <property name="layoutDirection">
           <enum>Qt::RightToLeft</enum>
          </property>
-         <property name="autoFillBackground">
-          <bool>false</bool>
-         </property>
          <property name="text">
           <string>    &amp;Next Slot</string>
          </property>
@@ -167,9 +143,6 @@ QPushButton:enabled {
          </property>
          <property name="default">
           <bool>true</bool>
-         </property>
-         <property name="flat">
-          <bool>false</bool>
          </property>
         </widget>
        </item>

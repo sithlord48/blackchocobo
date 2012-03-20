@@ -380,7 +380,12 @@ void Options::on_slide_c3_b_valueChanged(int value)
 }
 
 /*~~~~~~~~~~~~~~~~~~RESET STUFF~~~~~~~~~~~~~~~~~~~*/
-void Options::on_reset_default_save_location_clicked(){settings->setValue("override_default_save",false);}
+void Options::on_reset_default_save_location_clicked()
+{
+    ui->cb_override_def_save->setChecked(Qt::Unchecked);
+    settings->remove("default_save_file");
+    ui->line_default_save->clear();
+}
 
 void Options::on_reset_char_stat_folder_clicked()
 {

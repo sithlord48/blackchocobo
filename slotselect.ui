@@ -10,25 +10,13 @@
     <x>0</x>
     <y>0</y>
     <width>630</width>
-    <height>495</height>
+    <height>489</height>
    </rect>
-  </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
   </property>
   <property name="minimumSize">
    <size>
     <width>630</width>
     <height>172</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>16777215</width>
-    <height>16777215</height>
    </size>
   </property>
   <property name="sizeIncrement">
@@ -48,9 +36,6 @@
   <property name="windowIcon">
    <iconset resource="images.qrc">
     <normaloff>:/icon/bchoco</normaloff>:/icon/bchoco</iconset>
-  </property>
-  <property name="styleSheet">
-   <string notr="true"/>
   </property>
   <property name="sizeGripEnabled">
    <bool>false</bool>
@@ -106,15 +91,6 @@
            <height>150</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
          <layout class="QGridLayout" name="gridLayout_31">
           <property name="margin">
            <number>0</number>
@@ -136,9 +112,6 @@
               <height>0</height>
              </size>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="text">
              <string>Load Slot 1</string>
             </property>
@@ -155,20 +128,11 @@
               <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -189,29 +153,17 @@
               <height>35</height>
              </size>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="lineWidth">
              <number>1</number>
             </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
-            </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -250,9 +202,6 @@
                  <width>48</width>
                  <height>31</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -360,9 +309,6 @@
                  <height>0</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -379,9 +325,6 @@
                  <height>16777215</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -392,9 +335,6 @@
              </item>
              <item row="0" column="3">
               <widget class="QLabel" name="s1_lbl_min">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -432,9 +372,6 @@
                <property name="frameShadow">
                 <enum>QFrame::Plain</enum>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -453,9 +390,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -476,9 +410,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -498,18 +429,6 @@
            <height>150</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
          <layout class="QGridLayout" name="gridLayout_5">
           <property name="margin">
            <number>0</number>
@@ -521,9 +440,6 @@
               <horstretch>0</horstretch>
               <verstretch>0</verstretch>
              </sizepolicy>
-            </property>
-            <property name="styleSheet">
-             <string notr="true"/>
             </property>
             <property name="text">
              <string>Load Slot 2</string>
@@ -541,20 +457,11 @@
               <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -581,29 +488,17 @@
               <height>35</height>
              </size>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="lineWidth">
              <number>1</number>
             </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
-            </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -633,12 +528,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -658,9 +547,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -679,9 +565,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -723,9 +606,6 @@
                  <width>48</width>
                  <height>31</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -833,9 +713,6 @@
                  <height>0</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -852,9 +729,6 @@
                  <height>16777215</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -865,9 +739,6 @@
              </item>
              <item row="0" column="3">
               <widget class="QLabel" name="s2_lbl_min">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -890,27 +761,12 @@
            <height>150</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
          <layout class="QGridLayout" name="gridLayout_6">
           <property name="margin">
            <number>0</number>
           </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s3">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="text">
              <string>Load Slot 3</string>
             </property>
@@ -927,20 +783,11 @@
               <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -955,26 +802,14 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -1014,9 +849,6 @@
                  <height>31</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -1051,12 +883,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -1076,9 +902,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -1097,9 +920,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -1198,9 +1018,6 @@
                  <height>0</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -1211,9 +1028,6 @@
              </item>
              <item row="0" column="1">
               <widget class="QLabel" name="s3_lbl_hr">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -1224,9 +1038,6 @@
              </item>
              <item row="0" column="3">
               <widget class="QLabel" name="s3_lbl_min">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -1249,27 +1060,12 @@
            <height>150</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
          <layout class="QGridLayout" name="gridLayout_9">
           <property name="margin">
            <number>0</number>
           </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s4">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="text">
              <string>Load Slot 4</string>
             </property>
@@ -1286,20 +1082,11 @@
               <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -1314,26 +1101,14 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -1429,9 +1204,6 @@
                  <height>0</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -1442,9 +1214,6 @@
              </item>
              <item row="0" column="1">
               <widget class="QLabel" name="s4_lbl_hr">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -1455,9 +1224,6 @@
              </item>
              <item row="0" column="3">
               <widget class="QLabel" name="s4_lbl_min">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -1502,9 +1268,6 @@
                  <height>31</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -1539,12 +1302,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -1563,9 +1320,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -1586,9 +1340,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -1608,27 +1359,12 @@
            <height>150</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
          <layout class="QGridLayout" name="gridLayout_11">
           <property name="margin">
            <number>0</number>
           </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s5">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="text">
              <string>Load Slot 5</string>
             </property>
@@ -1645,20 +1381,11 @@
               <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -1673,26 +1400,14 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -1722,12 +1437,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -1747,9 +1456,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -1768,9 +1474,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -1812,9 +1515,6 @@
                  <width>48</width>
                  <height>31</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -1916,9 +1616,6 @@
                  <height>0</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -1929,9 +1626,6 @@
              </item>
              <item row="0" column="1">
               <widget class="QLabel" name="s5_lbl_hr">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -1942,9 +1636,6 @@
              </item>
              <item row="0" column="3">
               <widget class="QLabel" name="s5_lbl_min">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -1967,27 +1658,12 @@
            <height>150</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
          <layout class="QGridLayout" name="gridLayout_7">
           <property name="margin">
            <number>0</number>
           </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s6">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="text">
              <string>Load Slot 6</string>
             </property>
@@ -2004,20 +1680,11 @@
               <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -2032,26 +1699,14 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -2081,12 +1736,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -2106,9 +1755,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -2127,9 +1773,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -2171,9 +1814,6 @@
                  <width>48</width>
                  <height>31</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -2275,9 +1915,6 @@
                  <height>0</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -2288,9 +1925,6 @@
              </item>
              <item row="0" column="1">
               <widget class="QLabel" name="s6_lbl_hr">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -2301,9 +1935,6 @@
              </item>
              <item row="0" column="3">
               <widget class="QLabel" name="s6_lbl_min">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -2326,27 +1957,12 @@
            <height>150</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
          <layout class="QGridLayout" name="gridLayout_21">
           <property name="margin">
            <number>0</number>
           </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s7">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="text">
              <string>Load Slot 7</string>
             </property>
@@ -2363,20 +1979,11 @@
               <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -2391,26 +1998,14 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -2449,9 +2044,6 @@
                  <width>48</width>
                  <height>31</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -2553,9 +2145,6 @@
                  <height>0</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -2566,9 +2155,6 @@
              </item>
              <item row="0" column="1">
               <widget class="QLabel" name="s7_lbl_hr">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -2579,9 +2165,6 @@
              </item>
              <item row="0" column="3">
               <widget class="QLabel" name="s7_lbl_min">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -2616,12 +2199,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -2640,9 +2217,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -2663,9 +2237,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -2685,27 +2256,12 @@
            <height>150</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
          <layout class="QGridLayout" name="gridLayout_23">
           <property name="margin">
            <number>0</number>
           </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s8">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="text">
              <string>Load Slot 8</string>
             </property>
@@ -2722,20 +2278,11 @@
               <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -2750,26 +2297,14 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -2808,9 +2343,6 @@
                  <width>48</width>
                  <height>31</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -2912,9 +2444,6 @@
                  <height>0</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -2925,9 +2454,6 @@
              </item>
              <item row="0" column="1">
               <widget class="QLabel" name="s8_lbl_hr">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -2938,9 +2464,6 @@
              </item>
              <item row="0" column="3">
               <widget class="QLabel" name="s8_lbl_min">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -2975,12 +2498,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -2999,9 +2516,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -3022,9 +2536,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -3044,27 +2555,12 @@
            <height>150</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
          <layout class="QGridLayout" name="gridLayout_19">
           <property name="margin">
            <number>0</number>
           </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s9">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="text">
              <string>Load Slot 9</string>
             </property>
@@ -3081,20 +2577,11 @@
               <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -3109,26 +2596,14 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -3167,9 +2642,6 @@
                  <width>48</width>
                  <height>31</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -3271,9 +2743,6 @@
                  <height>0</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -3284,9 +2753,6 @@
              </item>
              <item row="0" column="1">
               <widget class="QLabel" name="s9_lbl_hr">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -3297,9 +2763,6 @@
              </item>
              <item row="0" column="3">
               <widget class="QLabel" name="s9_lbl_min">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -3334,12 +2797,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -3358,9 +2815,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -3381,9 +2835,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -3403,27 +2854,12 @@
            <height>150</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
          <layout class="QGridLayout" name="gridLayout_13">
           <property name="margin">
            <number>0</number>
           </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s10">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="text">
              <string>Load Slot 10</string>
             </property>
@@ -3440,20 +2876,11 @@
               <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -3462,32 +2889,14 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s10_lbl_loc">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -3527,9 +2936,6 @@
                  <height>31</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -3544,9 +2950,6 @@
           <item row="1" column="0" rowspan="3">
            <widget class="QWidget" name="s10_frame_avatar" native="true">
             <layout class="QHBoxLayout" name="horizontalLayout_7">
-             <property name="spacing">
-              <number>-1</number>
-             </property>
              <property name="leftMargin">
               <number>1</number>
              </property>
@@ -3567,9 +2970,6 @@
                <property name="frameShadow">
                 <enum>QFrame::Plain</enum>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -3589,9 +2989,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -3610,9 +3007,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -3670,18 +3064,6 @@
              </item>
              <item row="1" column="0">
               <widget class="QLabel" name="s10_label_gil">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>0</width>
-                 <height>0</height>
-                </size>
-               </property>
                <property name="text">
                 <string>Gil</string>
                </property>
@@ -3701,9 +3083,6 @@
                  <height>0</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -3714,9 +3093,6 @@
              </item>
              <item row="0" column="1">
               <widget class="QLabel" name="s10_lbl_hr">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -3727,9 +3103,6 @@
              </item>
              <item row="0" column="3">
               <widget class="QLabel" name="s10_lbl_min">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -3762,27 +3135,12 @@
            <height>150</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
          <layout class="QGridLayout" name="gridLayout_15">
           <property name="margin">
            <number>0</number>
           </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s11">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="text">
              <string>Load Slot 11</string>
             </property>
@@ -3799,20 +3157,11 @@
               <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -3821,32 +3170,14 @@
           </item>
           <item row="3" column="1" colspan="2">
            <widget class="QLabel" name="s11_lbl_loc">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -3886,9 +3217,6 @@
                  <height>31</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -3918,6 +3246,32 @@
              <property name="horizontalSpacing">
               <number>0</number>
              </property>
+             <item row="1" column="1" colspan="3">
+              <widget class="QLabel" name="s11_lbl_gil">
+               <property name="minimumSize">
+                <size>
+                 <width>120</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="slot_select_label" stdset="0">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="3">
+              <widget class="QLabel" name="s11_lbl_min">
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+               <property name="slot_select_label" stdset="0">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
              <item row="0" column="0">
               <widget class="QLabel" name="s11_label_time">
                <property name="text">
@@ -3946,7 +3300,7 @@
                 </font>
                </property>
                <property name="text">
-                <string notr="true">:</string>
+                <string>:</string>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -3973,28 +3327,6 @@
                <property name="text">
                 <string>Gil</string>
                </property>
-               <property name="alignment">
-                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-               </property>
-               <property name="slot_select_label" stdset="0">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="1" colspan="3">
-              <widget class="QLabel" name="s11_lbl_gil">
-               <property name="minimumSize">
-                <size>
-                 <width>120</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="text">
-                <string/>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
                <property name="slot_select_label" stdset="0">
                 <bool>true</bool>
                </property>
@@ -4002,22 +3334,6 @@
              </item>
              <item row="0" column="1">
               <widget class="QLabel" name="s11_lbl_hr">
-               <property name="text">
-                <string/>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignCenter</set>
-               </property>
-               <property name="slot_select_label" stdset="0">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="3">
-              <widget class="QLabel" name="s11_lbl_min">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -4032,9 +3348,6 @@
           <item row="1" column="0" rowspan="3">
            <widget class="QWidget" name="s11_frame_avatar" native="true">
             <layout class="QHBoxLayout" name="horizontalLayout_8">
-             <property name="spacing">
-              <number>-1</number>
-             </property>
              <property name="leftMargin">
               <number>1</number>
              </property>
@@ -4051,12 +3364,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="frameShadow">
-                <enum>QFrame::Plain</enum>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -4077,9 +3384,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -4098,9 +3402,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -4121,27 +3422,12 @@
            <height>150</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
          <layout class="QGridLayout" name="gridLayout_17">
           <property name="margin">
            <number>0</number>
           </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s12">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="text">
              <string>Load Slot 12</string>
             </property>
@@ -4158,20 +3444,11 @@
               <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -4186,26 +3463,14 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -4245,9 +3510,6 @@
                  <height>31</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -4285,9 +3547,6 @@
                <property name="frameShadow">
                 <enum>QFrame::Plain</enum>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -4310,9 +3569,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -4334,9 +3590,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -4438,9 +3691,6 @@
                  <height>0</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -4451,9 +3701,6 @@
              </item>
              <item row="0" column="1">
               <widget class="QLabel" name="s12_lbl_hr">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -4464,9 +3711,6 @@
              </item>
              <item row="0" column="3">
               <widget class="QLabel" name="s12_lbl_min">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -4489,27 +3733,12 @@
            <height>150</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
          <layout class="QGridLayout" name="gridLayout_29">
           <property name="margin">
            <number>0</number>
           </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s13">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="text">
              <string>Load Slot 13</string>
             </property>
@@ -4526,20 +3755,11 @@
               <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -4554,26 +3774,14 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -4612,9 +3820,6 @@
                  <width>48</width>
                  <height>31</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
@@ -4716,9 +3921,6 @@
                  <height>0</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -4729,9 +3931,6 @@
              </item>
              <item row="0" column="1">
               <widget class="QLabel" name="s13_lbl_hr">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -4742,9 +3941,6 @@
              </item>
              <item row="0" column="3">
               <widget class="QLabel" name="s13_lbl_min">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -4782,9 +3978,6 @@
                <property name="frameShadow">
                 <enum>QFrame::Plain</enum>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -4803,9 +3996,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -4826,9 +4016,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -4848,27 +4035,12 @@
            <height>150</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
          <layout class="QGridLayout" name="gridLayout_25">
           <property name="margin">
            <number>0</number>
           </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s14">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="text">
              <string>Load Slot 14</string>
             </property>
@@ -4885,20 +4057,11 @@
               <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -4913,26 +4076,14 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -5028,9 +4179,6 @@
                  <height>0</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -5041,9 +4189,6 @@
              </item>
              <item row="0" column="1">
               <widget class="QLabel" name="s14_lbl_hr">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -5054,9 +4199,6 @@
              </item>
              <item row="0" column="3">
               <widget class="QLabel" name="s14_lbl_min">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -5094,9 +4236,6 @@
                <property name="frameShadow">
                 <enum>QFrame::Plain</enum>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -5116,9 +4255,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -5137,9 +4273,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
@@ -5182,9 +4315,6 @@
                  <height>31</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -5207,27 +4337,12 @@
            <height>150</height>
           </size>
          </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true"/>
-         </property>
-         <property name="title">
-          <string/>
-         </property>
          <layout class="QGridLayout" name="gridLayout_27">
           <property name="margin">
            <number>0</number>
           </property>
           <item row="0" column="0" colspan="3">
            <widget class="QPushButton" name="btn_s15">
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="text">
              <string>Load Slot 15</string>
             </property>
@@ -5241,26 +4356,14 @@
               <verstretch>0</verstretch>
              </sizepolicy>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
-             <enum>QFrame::Plain</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
+             <enum>QFrame::Sunken</enum>
             </property>
             <property name="alignment">
              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-            </property>
-            <property name="wordWrap">
-             <bool>true</bool>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -5278,20 +4381,11 @@
               <bold>false</bold>
              </font>
             </property>
-            <property name="styleSheet">
-             <string notr="true"/>
-            </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>
             </property>
             <property name="frameShadow">
              <enum>QFrame::Sunken</enum>
-            </property>
-            <property name="text">
-             <string notr="true"/>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
             </property>
             <property name="slot_select_label" stdset="0">
              <bool>true</bool>
@@ -5387,9 +4481,6 @@
                  <height>0</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -5400,9 +4491,6 @@
              </item>
              <item row="0" column="1">
               <widget class="QLabel" name="s15_lbl_hr">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -5413,9 +4501,6 @@
              </item>
              <item row="0" column="3">
               <widget class="QLabel" name="s15_lbl_min">
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -5460,9 +4545,6 @@
                  <height>31</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="alignment">
                 <set>Qt::AlignCenter</set>
                </property>
@@ -5500,9 +4582,6 @@
                <property name="frameShadow">
                 <enum>QFrame::Plain</enum>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -5522,9 +4601,6 @@
                  <height>100</height>
                 </size>
                </property>
-               <property name="text">
-                <string/>
-               </property>
                <property name="scaledContents">
                 <bool>true</bool>
                </property>
@@ -5543,9 +4619,6 @@
                  <width>100</width>
                  <height>100</height>
                 </size>
-               </property>
-               <property name="text">
-                <string/>
                </property>
                <property name="scaledContents">
                 <bool>true</bool>
