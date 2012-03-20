@@ -152,7 +152,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     if(!settings->value("font-size").toString().isEmpty()){QApplication::setFont(QFont(QApplication::font().family(),settings->value("font-size").toInt(),-1,false));}
     if(!settings->value("font-family").toString().isEmpty()){QApplication::setFont(QFont(settings->value("font-family").toString(),QApplication::font().pointSize(),-1,false));}
     if(settings->value("autochargrowth").isNull()){settings->setValue("autochargrowth",1);}
-    if(settings->value("default_save_file").isNull()){settings->setValue("default_save_file",QString(QCoreApplication::applicationDirPath()) + "/"+ "save0");}
     if(settings->value("load_path").isNull()){settings->setValue("load_path",QDir::homePath());}
     if(settings->value("char_stat_folder").isNull()){settings->setValue("char_stat_folder",QDir::homePath());}
     if(settings->value("color1_r").isNull()){settings->setValue("color1_r","7");}

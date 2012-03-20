@@ -9,27 +9,9 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>383</width>
-    <height>362</height>
+    <width>381</width>
+    <height>360</height>
    </rect>
-  </property>
-  <property name="sizePolicy">
-   <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-    <horstretch>0</horstretch>
-    <verstretch>0</verstretch>
-   </sizepolicy>
-  </property>
-  <property name="minimumSize">
-   <size>
-    <width>0</width>
-    <height>0</height>
-   </size>
-  </property>
-  <property name="maximumSize">
-   <size>
-    <width>1677215</width>
-    <height>1677215</height>
-   </size>
   </property>
   <property name="windowTitle">
    <string>About Black Chocobo</string>
@@ -143,9 +125,6 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
      </item>
      <item>
       <widget class="QLabel" name="lbl_icon">
-       <property name="text">
-        <string/>
-       </property>
        <property name="pixmap">
         <pixmap resource="images.qrc">:/icon/bchoco</pixmap>
        </property>
@@ -227,9 +206,6 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
            </item>
            <item>
             <widget class="QLabel" name="lbl_svn_version">
-             <property name="text">
-              <string/>
-             </property>
              <property name="smaller_text" stdset="0">
               <bool>true</bool>
              </property>
@@ -308,34 +284,19 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
    </item>
    <item>
     <widget class="QTabWidget" name="tabWidget">
-     <property name="sizePolicy">
-      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-       <horstretch>0</horstretch>
-       <verstretch>0</verstretch>
-      </sizepolicy>
-     </property>
      <property name="contextMenuPolicy">
       <enum>Qt::DefaultContextMenu</enum>
      </property>
      <property name="currentIndex">
       <number>0</number>
      </property>
-     <property name="usesScrollButtons">
-      <bool>true</bool>
-     </property>
      <widget class="QWidget" name="tab_about">
       <attribute name="title">
        <string>&amp;About</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_6">
-       <property name="spacing">
-        <number>6</number>
-       </property>
        <property name="leftMargin">
         <number>3</number>
-       </property>
-       <property name="topMargin">
-        <number>6</number>
        </property>
        <property name="rightMargin">
         <number>3</number>
@@ -356,9 +317,6 @@ background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y
          </property>
          <property name="indent">
           <number>3</number>
-         </property>
-         <property name="openExternalLinks">
-          <bool>false</bool>
          </property>
         </widget>
        </item>
@@ -460,12 +418,6 @@ p, li { white-space: pre-wrap; }
            <underline>true</underline>
           </font>
          </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
-         </property>
          <property name="midLineWidth">
           <number>0</number>
          </property>
@@ -479,30 +431,6 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QListWidget" name="list_newest">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
-         <property name="minimumSize">
-          <size>
-           <width>0</width>
-           <height>0</height>
-          </size>
-         </property>
-         <property name="maximumSize">
-          <size>
-           <width>16777215</width>
-           <height>16777215</height>
-          </size>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
-         </property>
          <property name="lineWidth">
           <number>0</number>
          </property>
@@ -520,15 +448,6 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="selectionMode">
           <enum>QAbstractItemView::NoSelection</enum>
-         </property>
-         <property name="isWrapping" stdset="0">
-          <bool>false</bool>
-         </property>
-         <property name="resizeMode">
-          <enum>QListView::Fixed</enum>
-         </property>
-         <property name="layoutMode">
-          <enum>QListView::Batched</enum>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
@@ -912,9 +831,6 @@ p, li { white-space: pre-wrap; }
        <string>Credits</string>
       </attribute>
       <layout class="QVBoxLayout" name="verticalLayout_5">
-       <property name="spacing">
-        <number>-1</number>
-       </property>
        <property name="leftMargin">
         <number>0</number>
        </property>
@@ -945,23 +861,8 @@ p, li { white-space: pre-wrap; }
        </item>
        <item>
         <widget class="QScrollArea" name="scrollArea">
-         <property name="sizePolicy">
-          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-           <horstretch>0</horstretch>
-           <verstretch>0</verstretch>
-          </sizepolicy>
-         </property>
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="horizontalScrollBarPolicy">
-          <enum>Qt::ScrollBarAsNeeded</enum>
-         </property>
-         <property name="widgetResizable">
-          <bool>false</bool>
-         </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
          </property>
          <widget class="QWidget" name="scrollAreaWidgetContents">
           <property name="geometry">
@@ -971,12 +872,6 @@ p, li { white-space: pre-wrap; }
             <width>349</width>
             <height>392</height>
            </rect>
-          </property>
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_9">
            <property name="margin">
@@ -1043,9 +938,6 @@ p, li { white-space: pre-wrap; }
              </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_5">
-               <property name="spacing">
-                <number>6</number>
-               </property>
                <item>
                 <widget class="QLabel" name="label_4">
                  <property name="text">
@@ -1064,9 +956,6 @@ p, li { white-space: pre-wrap; }
                 <spacer name="horizontalSpacer_2">
                  <property name="orientation">
                   <enum>Qt::Horizontal</enum>
-                 </property>
-                 <property name="sizeType">
-                  <enum>QSizePolicy::Expanding</enum>
                  </property>
                  <property name="sizeHint" stdset="0">
                   <size>
@@ -1172,9 +1061,6 @@ p, li { white-space: pre-wrap; }
              </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_7">
-               <property name="spacing">
-                <number>6</number>
-               </property>
                <item>
                 <widget class="QLabel" name="label_7">
                  <property name="text">
@@ -1329,9 +1215,6 @@ p, li { white-space: pre-wrap; }
              </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_12">
-               <property name="spacing">
-                <number>6</number>
-               </property>
                <item>
                 <widget class="QLabel" name="label_19">
                  <property name="text">
@@ -1428,9 +1311,6 @@ p, li { white-space: pre-wrap; }
              </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_25">
-               <property name="spacing">
-                <number>6</number>
-               </property>
                <item>
                 <widget class="QLabel" name="label_40">
                  <property name="text">
@@ -1506,9 +1386,6 @@ p, li { white-space: pre-wrap; }
              </item>
              <item>
               <layout class="QHBoxLayout" name="horizontalLayout_15">
-               <property name="spacing">
-                <number>6</number>
-               </property>
                <item>
                 <widget class="QLabel" name="label_28">
                  <property name="text">
@@ -1645,16 +1522,13 @@ p, li { white-space: pre-wrap; }
          <property name="frameShape">
           <enum>QFrame::NoFrame</enum>
          </property>
-         <property name="widgetResizable">
-          <bool>true</bool>
-         </property>
          <widget class="QWidget" name="scrollAreaWidgetContents_2">
           <property name="geometry">
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>138</width>
-            <height>740</height>
+            <width>347</width>
+            <height>334</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">
@@ -1673,9 +1547,6 @@ p, li { white-space: pre-wrap; }
               <string notr="true">Qhimm</string>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_16">
-              <property name="leftMargin">
-               <number>6</number>
-              </property>
               <property name="topMargin">
                <number>4</number>
               </property>
@@ -1701,14 +1572,8 @@ p, li { white-space: pre-wrap; }
               <string notr="true">Eslava</string>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_17">
-              <property name="leftMargin">
-               <number>6</number>
-              </property>
               <property name="topMargin">
                <number>4</number>
-              </property>
-              <property name="rightMargin">
-               <number>6</number>
               </property>
               <property name="bottomMargin">
                <number>4</number>
@@ -1732,14 +1597,8 @@ p, li { white-space: pre-wrap; }
               <string notr="true">Dziugo</string>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_18">
-              <property name="leftMargin">
-               <number>6</number>
-              </property>
               <property name="topMargin">
                <number>4</number>
-              </property>
-              <property name="rightMargin">
-               <number>6</number>
               </property>
               <property name="bottomMargin">
                <number>4</number>
@@ -1763,14 +1622,8 @@ p, li { white-space: pre-wrap; }
               <string notr="true">Aali</string>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_19">
-              <property name="leftMargin">
-               <number>6</number>
-              </property>
               <property name="topMargin">
                <number>4</number>
-              </property>
-              <property name="rightMargin">
-               <number>6</number>
               </property>
               <property name="bottomMargin">
                <number>4</number>
@@ -1794,14 +1647,8 @@ p, li { white-space: pre-wrap; }
               <string notr="true">Dhrosa</string>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_20">
-              <property name="leftMargin">
-               <number>6</number>
-              </property>
               <property name="topMargin">
                <number>4</number>
-              </property>
-              <property name="rightMargin">
-               <number>6</number>
               </property>
               <property name="bottomMargin">
                <number>4</number>
@@ -1825,14 +1672,8 @@ p, li { white-space: pre-wrap; }
               <string notr="true">Ms.sith</string>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_21">
-              <property name="leftMargin">
-               <number>6</number>
-              </property>
               <property name="topMargin">
                <number>4</number>
-              </property>
-              <property name="rightMargin">
-               <number>6</number>
               </property>
               <property name="bottomMargin">
                <number>4</number>
@@ -1860,9 +1701,6 @@ p, li { white-space: pre-wrap; }
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">
-     <property name="spacing">
-      <number>6</number>
-     </property>
      <item>
       <widget class="QPushButton" name="pushButton">
        <property name="minimumSize">
@@ -1883,12 +1721,6 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
         <iconset resource="images.qrc">
          <normaloff>:/icon/quit</normaloff>:/icon/quit</iconset>
        </property>
-       <property name="default">
-        <bool>false</bool>
-       </property>
-       <property name="flat">
-        <bool>false</bool>
-       </property>
       </widget>
      </item>
     </layout>
@@ -1897,6 +1729,7 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
  </widget>
  <resources>
   <include location="images.qrc"/>
+  <include location="../../../.designer/backup/images.qrc"/>
  </resources>
  <connections/>
 </ui>
