@@ -2196,10 +2196,6 @@
         <translation>G&amp;rupo</translation>
     </message>
     <message>
-        <source>CheckBox</source>
-        <translation>Casilla</translation>
-    </message>
-    <message>
         <source> HP</source>
         <translation>PG</translation>
     </message>
@@ -2728,10 +2724,6 @@
         <translation>Permitidos en PHS</translation>
     </message>
     <message>
-        <source>Sector 7 Slums</source>
-        <translation type="obsolete">Suburbios del Sector 7</translation>
-    </message>
-    <message>
         <source>1st Floor Shinra Building</source>
         <translation>Edificio Shinra 1er piso</translation>
     </message>
@@ -2794,26 +2786,6 @@
     <message>
         <source>&amp;Materia</source>
         <translation>&amp;Materia</translation>
-    </message>
-    <message>
-        <source>Lvl 1</source>
-        <translation>Nv 1</translation>
-    </message>
-    <message>
-        <source>Lvl 2</source>
-        <translation>Nv 2</translation>
-    </message>
-    <message>
-        <source>Lvl 3</source>
-        <translation>Nv 3</translation>
-    </message>
-    <message>
-        <source>Lvl 4</source>
-        <translation>Nv 4</translation>
-    </message>
-    <message>
-        <source>Lvl 5</source>
-        <translation>Nv 5</translation>
     </message>
     <message>
         <source>C&amp;hocobo</source>
@@ -2890,10 +2862,6 @@
     <message>
         <source>Young Cloud</source>
         <translation>Cloud Joven</translation>
-    </message>
-    <message>
-        <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation type="obsolete">Cait Sith y Vincent no deberían ser desbloqueados si estan deshabilitados en la pestaña de grupo. </translation>
     </message>
     <message>
         <source>map</source>
@@ -3276,10 +3244,6 @@
         <translation>Selecciona Una Partida Guardada de Final Fantasy 7 PSV</translation>
     </message>
     <message>
-        <source>Cannot save This Type of File</source>
-        <translation type="obsolete">No se Puede Guardar este Tipo de Archivo</translation>
-    </message>
-    <message>
         <source>Cannot read file %1:
 %2.</source>
         <translation>No se puede leer el archivo%1:
@@ -3292,12 +3256,6 @@
     <message>
         <source>FF7 SaveGame(*.ff7)</source>
         <translation>Juego Guardado de FF7 (*.ff7)</translation>
-    </message>
-    <message>
-        <source>Cannot write file %1:
-%2.</source>
-        <translation type="obsolete">No se puede escribir el archivo%1:
-%2.</translation>
     </message>
     <message>
         <source>Hour</source>
@@ -3440,14 +3398,6 @@
         <translation>0x80</translation>
     </message>
     <message>
-        <source>Mystery Ninja </source>
-        <translation>Ninja Misterioso</translation>
-    </message>
-    <message>
-        <source>Can Fight Yuffie in Forests</source>
-        <translation>Se puede luchar contra Yuffie en los bosques</translation>
-    </message>
-    <message>
         <source>Region String</source>
         <translation>String de Región</translation>
     </message>
@@ -3498,10 +3448,6 @@
     <message>
         <source>PSP Save Notice</source>
         <translation>Advertencia de guardado de PSP</translation>
-    </message>
-    <message>
-        <source>Bad Psx Save Name</source>
-        <translation type="obsolete">Nombre de partida de Psx incorrecto</translation>
     </message>
     <message>
         <source>Export MC File</source>
@@ -3590,32 +3536,6 @@
         <translation>Este archivo no tiene un checksum actualizado. No funcionará en tu PSP</translation>
     </message>
     <message>
-        <source>Cannot read file %1:
-%2 Be Sure its is a Raw PSX Save</source>
-        <translation type="obsolete">No se puede leer el archivo %1:
-%2 Asegúrate de que es una partida guardada PSX (Raw)</translation>
-    </message>
-    <message>
-        <source>Cannot read file %1:
-%2., Be Sure its is a Raw PSX Save</source>
-        <translation type="obsolete">No se puede leer el archivo %1:
-%2., Asegúrate de que es una partida guardada PSX (Raw)</translation>
-    </message>
-    <message>
-        <source>Unknown Filetype</source>
-        <translation type="obsolete">Tipo de archivo desconocido</translation>
-    </message>
-    <message>
-        <source>File: %1 
-is not a FF7 SaveGame.</source>
-        <translation type="obsolete">El archivo %1 
-no es una partida guardada de FF7.</translation>
-    </message>
-    <message>
-        <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
-        <translation type="obsolete">No se puede decidir en que cabecera escribir, por favor añade el sufijo SXX (donde x= 01-15, empezando con 0 si &lt; 10) Una cabecera con ese número de ranura se escribirá en el archivo</translation>
-    </message>
-    <message>
         <source>DON&apos;T USE</source>
         <translation>NO USAR</translation>
     </message>
@@ -3628,10 +3548,6 @@ no es una partida guardada de FF7.</translation>
  Remember 16777215 AP = master</source>
         <translation>Materia de relleno detectada
  Recuerda 16777215 AP = maestro</translation>
-    </message>
-    <message>
-        <source>New Game +</source>
-        <translation type="obsolete">Nuevo juego +</translation>
     </message>
     <message>
         <source>===Empty Slot===</source>
@@ -4274,30 +4190,6 @@ no es una partida guardada de FF7.</translation>
         <translation>-Ninguno-</translation>
     </message>
     <message>
-        <source>Slot:%1 Contains A PAL region save</source>
-        <translation type="obsolete">Ranura:%1 Contiene una partida de región PAL</translation>
-    </message>
-    <message>
-        <source>PAL PSX runs at 50/60 speed
-This results in an incorrect playtime
-Would you like to correct the playtime?</source>
-        <translation type="obsolete">PSX PAL corre a una velocidad de 50/60
-Esto resulta en tiempos de juego incorrectos
-¿Quieres corregir el tiempo de juego?</translation>
-    </message>
-    <message>
-        <source>PAL Slot Detected</source>
-        <translation type="obsolete">Ranura PAL detectada</translation>
-    </message>
-    <message>
-        <source>Always Correct</source>
-        <translation type="obsolete">Corregir siempre</translation>
-    </message>
-    <message>
-        <source>Never Correct</source>
-        <translation type="obsolete">Corregir nunca</translation>
-    </message>
-    <message>
         <source>PAL -&gt; NTSC Conversion</source>
         <translation>Conversión PAL-&gt;NTSC</translation>
     </message>
@@ -4346,10 +4238,6 @@ Var And Scrolling Synced To Left Table</source>
 Seleccionar una ranura para comparar
 Esta tabla es de sólo lectura
 Var y navegación sincronizadas con la tabla izquierda</translation>
-    </message>
-    <message>
-        <source>Steps</source>
-        <translation>Pasos</translation>
     </message>
     <message>
         <source>Number Steps</source>
@@ -4724,10 +4612,6 @@ Las entradas de la tabla son editables</translation>
         <translation>La placa se cae</translation>
     </message>
     <message>
-        <source>cb_s5_7 (aeris On roof)</source>
-        <translation type="obsolete">cb_s5_7 (Aeris sobre el tejado)</translation>
-    </message>
-    <message>
         <source>Spi</source>
         <translation>Esp</translation>
     </message>
@@ -4744,18 +4628,6 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>Raw PSX FF7 SaveGame (*)</source>
         <translation>Partida Guardada FF7 PSX Raw (*)</translation>
-    </message>
-    <message>
-        <source>The File %1
- is NOT a PSX Save</source>
-        <translation type="obsolete">El archivo %1
-NO es un archivo de guardado PSX</translation>
-    </message>
-    <message>
-        <source>The File %1
- is NOT a PSV Save</source>
-        <translation type="obsolete">El archivo %1
-NO es un archivo de guardado PSV</translation>
     </message>
     <message>
         <source>PC</source>
@@ -5033,6 +4905,10 @@ NO es un archivo de guardado PSV</translation>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
         <translation>Cait Sith y Vincent no deberían ser desbloqueados si estan deshabilitados en la pestaña de grupo. </translation>
+    </message>
+    <message>
+        <source>Can Fight Mystery Ninja in Forests</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6500,10 +6376,6 @@ Fénix x3 (180pm)</translation>
         <translation>Seleccionar una partida guardada por defecto (Debe ser Raw PSX)</translation>
     </message>
     <message>
-        <source>File To load When &quot;New Game&quot; is used</source>
-        <translation type="obsolete">Archivo a cargar cuando se usa &apos;Nuevo Juego&apos;</translation>
-    </message>
-    <message>
         <source>Location To Save Character Stat Files</source>
         <translation>Lugar para guardar los archivos de stat de personaje</translation>
     </message>
@@ -6526,10 +6398,6 @@ Fénix x3 (180pm)</translation>
     <message>
         <source>Main Window Background Color</source>
         <translation>Color de fondo de la ventana principal</translation>
-    </message>
-    <message>
-        <source>preview</source>
-        <translation>Vista previa</translation>
     </message>
     <message>
         <source>Color 1</source>
@@ -6725,6 +6593,10 @@ El juego usa el bloque de guardado %1 </translation>
         <translation>
 
  Fin de los bloques enlazados</translation>
+    </message>
+    <message>
+        <source>:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7239,16 +7111,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>All Files(*)</source>
         <translation>Todos los archivos(*)</translation>
-    </message>
-    <message>
-        <source>Black Chocobo</source>
-        <translation type="obsolete">Chocobo Negro</translation>
-    </message>
-    <message>
-        <source>Cannot write file %1:
-%2.</source>
-        <translation type="obsolete">No se puede escribir el archivo%1:
-%2.</translation>
     </message>
     <message>
         <source>Save Successfully</source>

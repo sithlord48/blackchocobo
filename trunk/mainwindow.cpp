@@ -2278,11 +2278,11 @@ void MainWindow::materiaupdate(void)
         ui->btn_m_lvl4->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
         ui->btn_m_lvl5->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
     }
-    ui->spell_lvl1_group->setVisible(0);
-    ui->spell_lvl2_group->setVisible(0);
-    ui->spell_lvl3_group->setVisible(0);
-    ui->spell_lvl4_group->setVisible(0);
-    ui->spell_lvl5_group->setVisible(0);
+    ui->lbl_spell_lvl1->setVisible(0);
+    ui->lbl_spell_lvl2->setVisible(0);
+    ui->lbl_spell_lvl3->setVisible(0);
+    ui->lbl_spell_lvl4->setVisible(0);
+    ui->lbl_spell_lvl5->setVisible(0);
 
     if(current_id == 0xFF) //if the slot is empty take some precautions
     {
@@ -2304,9 +2304,10 @@ void MainWindow::materiaupdate(void)
         load=true;
         ui->sb_addap->setValue(aptemp);
         // Set the unknown skills
-        ui->spell_lvl1_group->setVisible(1);    ui->combo_add_mat_slot->setCurrentIndex(0);
+        ui->combo_add_mat->setCurrentIndex(0);
         ui->combo_mat_type->setCurrentIndex(0);
         load=true;
+        ui->lbl_spell_lvl1->setVisible(1);
         ui->lbl_spell_lvl1->setText(Materias.Skills(current_id,0));
     }
 
@@ -2340,11 +2341,11 @@ void MainWindow::materiaupdate(void)
         //fill all stars needed..
         switch(level)
         {
-            case 5: ui->spell_lvl5_group->setVisible(1); ui->lbl_spell_lvl5->setText(Materias.Skills(current_id,4));ui->btn_m_lvl5->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
-            case 4: ui->spell_lvl4_group->setVisible(1); ui->lbl_spell_lvl4->setText(Materias.Skills(current_id,3));ui->btn_m_lvl4->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
-            case 3: ui->spell_lvl3_group->setVisible(1); ui->lbl_spell_lvl3->setText(Materias.Skills(current_id,2));ui->btn_m_lvl3->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
-            case 2: ui->spell_lvl2_group->setVisible(1); ui->lbl_spell_lvl2->setText(Materias.Skills(current_id,1));ui->btn_m_lvl2->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
-            case 1: ui->spell_lvl1_group->setVisible(1); ui->lbl_spell_lvl1->setText(Materias.Skills(current_id,0));ui->btn_m_lvl1->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
+        case 5:ui->lbl_spell_lvl5->setText(Materias.Skills(current_id,4));if(ui->lbl_spell_lvl5->text()!=""){ui->lbl_spell_lvl5->setVisible(1);}ui->btn_m_lvl5->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
+        case 4:ui->lbl_spell_lvl4->setText(Materias.Skills(current_id,3));if(ui->lbl_spell_lvl4->text()!=""){ui->lbl_spell_lvl4->setVisible(1);}ui->btn_m_lvl4->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
+        case 3:ui->lbl_spell_lvl3->setText(Materias.Skills(current_id,2));if(ui->lbl_spell_lvl3->text()!=""){ui->lbl_spell_lvl3->setVisible(1);}ui->btn_m_lvl3->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
+        case 2:ui->lbl_spell_lvl2->setText(Materias.Skills(current_id,1));if(ui->lbl_spell_lvl2->text()!=""){ui->lbl_spell_lvl2->setVisible(1);}ui->btn_m_lvl2->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
+        case 1:ui->lbl_spell_lvl1->setText(Materias.Skills(current_id,0));if(ui->lbl_spell_lvl1->text()!=""){ui->lbl_spell_lvl1->setVisible(1);}ui->btn_m_lvl1->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
         };
     } //end of else
 load=false;
@@ -3639,11 +3640,6 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row)
        ui->btn_m_lvl3->setVisible(0);
        ui->btn_m_lvl4->setVisible(0);
        ui->btn_m_lvl5->setVisible(0);
-       ui->spell_lvl1_group->setVisible(0);
-       ui->spell_lvl2_group->setVisible(0);
-       ui->spell_lvl3_group->setVisible(0);
-       ui->spell_lvl4_group->setVisible(0);
-       ui->spell_lvl5_group->setVisible(0);
        ui->eskill_group->setVisible(false);
        load=false;
     }
