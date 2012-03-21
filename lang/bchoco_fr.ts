@@ -2195,10 +2195,6 @@
         <translation>É&amp;quipe</translation>
     </message>
     <message>
-        <source>CheckBox</source>
-        <translation>CheckBox</translation>
-    </message>
-    <message>
         <source> HP</source>
         <translation>HP </translation>
     </message>
@@ -2819,10 +2815,6 @@
         <translation>Débloqué dans le PHS</translation>
     </message>
     <message>
-        <source>Sector 7 Slums</source>
-        <translation type="obsolete">Taudis du Secteur 7</translation>
-    </message>
-    <message>
         <source>1st Floor Shinra Building</source>
         <translation>Bâtiment Shinra, 1er étage</translation>
     </message>
@@ -2885,26 +2877,6 @@
     <message>
         <source>&amp;Materia</source>
         <translation>&amp;Matéria</translation>
-    </message>
-    <message>
-        <source>Lvl 1</source>
-        <translation>Niv.1</translation>
-    </message>
-    <message>
-        <source>Lvl 2</source>
-        <translation>Niv.2</translation>
-    </message>
-    <message>
-        <source>Lvl 3</source>
-        <translation>Niv.3</translation>
-    </message>
-    <message>
-        <source>Lvl 4</source>
-        <translation>Niv.4</translation>
-    </message>
-    <message>
-        <source>Lvl 5</source>
-        <translation>Niv.5</translation>
     </message>
     <message>
         <source>C&amp;hocobo</source>
@@ -2973,10 +2945,6 @@
     <message>
         <source>Othe&amp;r</source>
         <translation>&amp;Autres</translation>
-    </message>
-    <message>
-        <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation type="obsolete">Cait Sith et Vincent ne doivent pas être débloqués s&apos;ils sont désactivés dans l&apos;onglet Équipe.</translation>
     </message>
     <message>
         <source>map</source>
@@ -3263,10 +3231,6 @@
         <translation>Sélectionner sauvegarde Final Fantasy 7 PSV</translation>
     </message>
     <message>
-        <source>Cannot save This Type of File</source>
-        <translation type="obsolete">Impossible de sauvegarder ce type de fichier</translation>
-    </message>
-    <message>
         <source>Save Final Fantasy 7 SaveGame</source>
         <translation>Enregistrer Sauvegarde Final Fantasy 7</translation>
     </message>
@@ -3282,12 +3246,6 @@
         <source>Cannot read file %1:
 %2.</source>
         <translation>Impossible de lire le fichier %1:
-%2.</translation>
-    </message>
-    <message>
-        <source>Cannot write file %1:
-%2.</source>
-        <translation type="obsolete">Impossible d&apos;écrire le fichier %1:
 %2.</translation>
     </message>
     <message>
@@ -3431,14 +3389,6 @@
         <translation>0x80</translation>
     </message>
     <message>
-        <source>Mystery Ninja </source>
-        <translation>Ninja mystère</translation>
-    </message>
-    <message>
-        <source>Can Fight Yuffie in Forests</source>
-        <translation>Pouvoir affronter Youfie dans les forêts</translation>
-    </message>
-    <message>
         <source>Region String</source>
         <translation>Région</translation>
     </message>
@@ -3493,10 +3443,6 @@
     <message>
         <source>PSP Save Notice</source>
         <translation>Note de sauvegarde PSP</translation>
-    </message>
-    <message>
-        <source>Bad Psx Save Name</source>
-        <translation type="obsolete">PSX Mauvais nom de sauvegarde</translation>
     </message>
     <message>
         <source>Export MC File</source>
@@ -3585,31 +3531,6 @@
         <translation>Ce fichier n&apos;a pas de mise à jour Checksum.It ne fonctionnera pas sur votre PSP.</translation>
     </message>
     <message>
-        <source>Cannot read file %1:
-%2 Be Sure its is a Raw PSX Save</source>
-        <translation type="obsolete">Impossible de lire le fichier%1:
-%2., s&apos;assurer qu&apos;il est une sauvegarde PSX non-identifiée</translation>
-    </message>
-    <message>
-        <source>Cannot read file %1:
-%2., Be Sure its is a Raw PSX Save</source>
-        <translation type="obsolete">Impossible de lire le fichier%1:
-%2., s&apos;assurer qu&apos;il est une sauvegarde PSX non-identifiée</translation>
-    </message>
-    <message>
-        <source>Unknown Filetype</source>
-        <translation type="obsolete">Type de fichier inconnu</translation>
-    </message>
-    <message>
-        <source>File: %1 
-is not a FF7 SaveGame.</source>
-        <translation type="obsolete">Fichier:%1 n&apos;est pas une sauvegarde FF7.</translation>
-    </message>
-    <message>
-        <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
-        <translation type="obsolete">Ne peut pas décider Quel en-tête écrire, veuillez ajouter le suffixe-SXX (où x = 01-15, avec un 0 si &lt;10) Un en-tête de ce numéro d&apos;emplacement sera écrit dans la sauvegarde</translation>
-    </message>
-    <message>
         <source>DON&apos;T USE</source>
         <translation>NE PAS UTILISER</translation>
     </message>
@@ -3622,10 +3543,6 @@ is not a FF7 SaveGame.</source>
  Remember 16777215 AP = master</source>
         <translation>Emplacement réservé à une Matéria détecté
  N&apos;oubliez pas que 16777215 AP = Maître</translation>
-    </message>
-    <message>
-        <source>New Game +</source>
-        <translation type="obsolete">Nouvelle partie +</translation>
     </message>
     <message>
         <source>Young Cloud</source>
@@ -4273,30 +4190,6 @@ Les stats de Sephiroth proviendront directement de celles de Vincent.</translati
         <translation>-Rien-</translation>
     </message>
     <message>
-        <source>Slot:%1 Contains A PAL region save</source>
-        <translation type="obsolete">Fente %1 contien une sauvegarde PAL</translation>
-    </message>
-    <message>
-        <source>PAL PSX runs at 50/60 speed
-This results in an incorrect playtime
-Would you like to correct the playtime?</source>
-        <translation type="obsolete">PAL PSX fonctionne à la vitesse 50/60
-Cela rend le temps de jeu incorrect
-Voulez-vous corriger ceci ?</translation>
-    </message>
-    <message>
-        <source>PAL Slot Detected</source>
-        <translation type="obsolete">Fente PAL détectée</translation>
-    </message>
-    <message>
-        <source>Always Correct</source>
-        <translation type="obsolete">Toujours Correct</translation>
-    </message>
-    <message>
-        <source>Never Correct</source>
-        <translation type="obsolete">Jamais correct</translation>
-    </message>
-    <message>
         <source>PAL -&gt; NTSC Conversion</source>
         <translation>Conversion PAL -&gt; NTSC</translation>
     </message>
@@ -4345,10 +4238,6 @@ Var And Scrolling Synced To Left Table</source>
 Sélectionnez un emplacement à comparer
 Le tableau est uniquement pour visualiser
 Variables et barre coulissante synchronisées au tableau de gauche</translation>
-    </message>
-    <message>
-        <source>Steps</source>
-        <translation>Pas</translation>
     </message>
     <message>
         <source>Number Steps</source>
@@ -4723,10 +4612,6 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation>La plaque tombe</translation>
     </message>
     <message>
-        <source>cb_s5_7 (aeris On roof)</source>
-        <translation type="obsolete">cb_s5_7 (Aéris sur le toit)</translation>
-    </message>
-    <message>
         <source>Spi</source>
         <translation>ESP</translation>
     </message>
@@ -4743,18 +4628,6 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>Raw PSX FF7 SaveGame (*)</source>
         <translation>FF7 sauvegarde non-identifiée PSX (*)</translation>
-    </message>
-    <message>
-        <source>The File %1
- is NOT a PSX Save</source>
-        <translation type="obsolete">Le fichier %1 
-N&apos;EST PAS une sauvegarde PSX</translation>
-    </message>
-    <message>
-        <source>The File %1
- is NOT a PSV Save</source>
-        <translation type="obsolete">Le fichier %1 
-N&apos;EST PAS une sauvegarde PSV</translation>
     </message>
     <message>
         <source>PC</source>
@@ -5032,6 +4905,10 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
         <translation>Cait Sith et Vincent ne doivent pas être débloqués s&apos;ils sont désactivés dans l&apos;onglet Équipe.</translation>
+    </message>
+    <message>
+        <source>Can Fight Mystery Ninja in Forests</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6498,10 +6375,6 @@ N&apos;EST PAS une sauvegarde PSV</translation>
         <translation>Sélectionnez une sauvegarde par défaut (Doit être PSX non-identifiée)</translation>
     </message>
     <message>
-        <source>File To load When &quot;New Game&quot; is used</source>
-        <translation type="obsolete">Fichier à charger lors d&apos;une &quot;Nouvelle partie&quot;</translation>
-    </message>
-    <message>
         <source>Location To Save Character Stat Files</source>
         <translation>Emplacement pour enregistrer les fichiers de stats de personnages</translation>
     </message>
@@ -6524,10 +6397,6 @@ N&apos;EST PAS une sauvegarde PSV</translation>
     <message>
         <source>Main Window Background Color</source>
         <translation>Couleur de fond de la fenêtre principale</translation>
-    </message>
-    <message>
-        <source>preview</source>
-        <translation>Aperçu</translation>
     </message>
     <message>
         <source>Color 1</source>
@@ -6723,6 +6592,10 @@ Vide</translation>
         <translation>
 
  Fin du lien de sauvegard</translation>
+    </message>
+    <message>
+        <source>:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7239,16 +7112,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>All Files(*)</source>
         <translation>Tous les fichiers (*)</translation>
-    </message>
-    <message>
-        <source>Black Chocobo</source>
-        <translation type="obsolete">Black Chocobo</translation>
-    </message>
-    <message>
-        <source>Cannot write file %1:
-%2.</source>
-        <translation type="obsolete">Impossible d&apos;écrire dans le fichier %1:
-%2.</translation>
     </message>
     <message>
         <source>Save Successfully</source>

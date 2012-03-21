@@ -2191,10 +2191,6 @@
         <translation>ステータス タブ</translation>
     </message>
     <message>
-        <source>CheckBox</source>
-        <translation>[チェック ボックス]</translation>
-    </message>
-    <message>
         <source> HP</source>
         <translation>HP</translation>
     </message>
@@ -2857,10 +2853,6 @@
         <translation>ＰＨＳで入替え可能</translation>
     </message>
     <message>
-        <source>Sector 7 Slums</source>
-        <translation type="obsolete">７番街スラム</translation>
-    </message>
-    <message>
         <source>1st Floor Shinra Building</source>
         <translation>神羅ビル・１階ロビー</translation>
     </message>
@@ -2935,10 +2927,6 @@
     <message>
         <source>Materia Stat Changes</source>
         <translation>マテリアの装備効果</translation>
-    </message>
-    <message>
-        <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation type="obsolete">ケット・シー, ヴィンセントがパーティ タブで無効になっているときは、ここで彼らを有効化しないでください。</translation>
     </message>
     <message>
         <source>map</source>
@@ -3019,26 +3007,6 @@
     <message>
         <source>&amp;Materia</source>
         <translation>マテリア(&amp;M)</translation>
-    </message>
-    <message>
-        <source>Lvl 1</source>
-        <translation>LV. 1</translation>
-    </message>
-    <message>
-        <source>Lvl 2</source>
-        <translation>LV. 2</translation>
-    </message>
-    <message>
-        <source>Lvl 3</source>
-        <translation>LV. 3</translation>
-    </message>
-    <message>
-        <source>Lvl 4</source>
-        <translation>LV. 4</translation>
-    </message>
-    <message>
-        <source>Lvl 5</source>
-        <translation>LV. 5</translation>
     </message>
     <message>
         <source>Othe&amp;r</source>
@@ -3282,10 +3250,6 @@
         <translation>Final Fantasy 7 PSV セーブの選択</translation>
     </message>
     <message>
-        <source>Cannot save This Type of File</source>
-        <translation type="obsolete">このタイプのファイルは保存できません</translation>
-    </message>
-    <message>
         <source>Save Final Fantasy 7 SaveGame</source>
         <translation>Final Fantasy 7 セーブの保存</translation>
     </message>
@@ -3434,14 +3398,6 @@
         <translation>0x80</translation>
     </message>
     <message>
-        <source>Mystery Ninja </source>
-        <translation>謎のニンジャ</translation>
-    </message>
-    <message>
-        <source>Can Fight Yuffie in Forests</source>
-        <translation>森でユフィとバトル可能に</translation>
-    </message>
-    <message>
         <source>Region String</source>
         <translation>リージョン情報</translation>
     </message>
@@ -3496,10 +3452,6 @@
     <message>
         <source>PSP Save Notice</source>
         <translation>PSP セーブの警告</translation>
-    </message>
-    <message>
-        <source>Bad Psx Save Name</source>
-        <translation type="obsolete">無効な PSX セーブの名称</translation>
     </message>
     <message>
         <source>Export MC File</source>
@@ -3572,12 +3524,6 @@
         <translation>ゲーム上のダイアログのプレビュー</translation>
     </message>
     <message>
-        <source>Cannot write file %1:
-%2.</source>
-        <translation type="obsolete">ファイル %1に書き込めません:
-%2.</translation>
-    </message>
-    <message>
         <source>Export Raw PSX Save</source>
         <translation>Raw PSX セーブのエクスポート</translation>
     </message>
@@ -3594,32 +3540,6 @@
         <translation>このファイルのチェックサムは更新されていません。 PSP では正しく機能しません。</translation>
     </message>
     <message>
-        <source>Cannot read file %1:
-%2 Be Sure its is a Raw PSX Save</source>
-        <translation type="obsolete">ファイル %1 が読み込めません:
-%2 Raw PSX セーブかどうか確認してください</translation>
-    </message>
-    <message>
-        <source>Cannot read file %1:
-%2., Be Sure its is a Raw PSX Save</source>
-        <translation type="obsolete">ファイル %1は読み込めません:
-%2., Raw PSX セーブかどうか確認してください</translation>
-    </message>
-    <message>
-        <source>Unknown Filetype</source>
-        <translation type="obsolete">不明なファイル タイプ</translation>
-    </message>
-    <message>
-        <source>File: %1 
-is not a FF7 SaveGame.</source>
-        <translation type="obsolete">ファイル: %1 
-は FF7 セーブではありません。</translation>
-    </message>
-    <message>
-        <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
-        <translation type="obsolete">ヘッダーが決定できません。接尾辞 -SXX を追加してください。これはスロット番号としてセーブに書き込まれるヘッダーです。(XX = 01～15, 10 未満の場合は 0 を接頭して二桁に)</translation>
-    </message>
-    <message>
         <source>DON&apos;T USE</source>
         <translation>使用不可</translation>
     </message>
@@ -3632,10 +3552,6 @@ is not a FF7 SaveGame.</source>
  Remember 16777215 AP = master</source>
         <translation>プレース ホルダー マテリアを検出しました
 MASTER = 16777215 AP です</translation>
-    </message>
-    <message>
-        <source>New Game +</source>
-        <translation type="obsolete">新規ゲーム＋</translation>
     </message>
     <message>
         <source>Young Cloud</source>
@@ -4282,30 +4198,6 @@ MASTER = 16777215 AP です</translation>
         <translation>-なし-</translation>
     </message>
     <message>
-        <source>Slot:%1 Contains A PAL region save</source>
-        <translation type="obsolete">スロット:%1 のセーブは PAL 方式です</translation>
-    </message>
-    <message>
-        <source>PAL PSX runs at 50/60 speed
-This results in an incorrect playtime
-Would you like to correct the playtime?</source>
-        <translation type="obsolete">PAL PSX は 50/60 の速度で実行されます。
-このプレイ時間は不正確なものです。
-プレイ時間を修正しますか ?</translation>
-    </message>
-    <message>
-        <source>PAL Slot Detected</source>
-        <translation type="obsolete">PAL スロットを検出</translation>
-    </message>
-    <message>
-        <source>Always Correct</source>
-        <translation type="obsolete">つねに修正</translation>
-    </message>
-    <message>
-        <source>Never Correct</source>
-        <translation type="obsolete">修正しない</translation>
-    </message>
-    <message>
         <source>PAL -&gt; NTSC Conversion</source>
         <translation>PAL -&gt; NTSC 変換</translation>
     </message>
@@ -4354,10 +4246,6 @@ Var And Scrolling Synced To Left Table</source>
 比較するスロットを選択
 テーブルは編集できません
 左テーブルと同期してスクロール</translation>
-    </message>
-    <message>
-        <source>Steps</source>
-        <translation>歩数</translation>
     </message>
     <message>
         <source>Number Steps</source>
@@ -4742,10 +4630,6 @@ Table Entries are Editable</source>
         <translation>プレートの落下</translation>
     </message>
     <message>
-        <source>cb_s5_7 (aeris On roof)</source>
-        <translation type="obsolete">cb_s5_7 （エアリスが屋根の上に？）</translation>
-    </message>
-    <message>
         <source>Spi</source>
         <translatorcomment>●</translatorcomment>
         <translation>　精神</translation>
@@ -4763,18 +4647,6 @@ Table Entries are Editable</source>
     <message>
         <source>Raw PSX FF7 SaveGame (*)</source>
         <translation>Raw PSX FF7 セーブ (*)</translation>
-    </message>
-    <message>
-        <source>The File %1
- is NOT a PSX Save</source>
-        <translation type="obsolete">ファイル %1
- は PSX セーブではありません</translation>
-    </message>
-    <message>
-        <source>The File %1
- is NOT a PSV Save</source>
-        <translation type="obsolete">ファイル %1
- は PSV セーブではありません</translation>
     </message>
     <message>
         <source>PC</source>
@@ -5056,6 +4928,10 @@ Table Entries are Editable</source>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
         <translation>ケット・シー, ヴィンセントがパーティ タブで無効になっているときは、ここで彼らを有効化しないでください。</translation>
+    </message>
+    <message>
+        <source>Can Fight Mystery Ninja in Forests</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6522,10 +6398,6 @@ Table Entries are Editable</source>
         <translation>デフォルトのゲーム セーブを選択 (Raw PSX 必須)</translation>
     </message>
     <message>
-        <source>File To load When &quot;New Game&quot; is used</source>
-        <translation type="obsolete">&quot;新規ゲーム&quot; でロードするファイル</translation>
-    </message>
-    <message>
         <source>Location To Save Character Stat Files</source>
         <translation>キャラクター ステータス ファイルの保存フォルダ</translation>
     </message>
@@ -6548,10 +6420,6 @@ Table Entries are Editable</source>
     <message>
         <source>Main Window Background Color</source>
         <translation>メイン ウィンドウの背景色</translation>
-    </message>
-    <message>
-        <source>preview</source>
-        <translation>プレビュー</translation>
     </message>
     <message>
         <source>Color 1</source>
@@ -6747,6 +6615,10 @@ Empty</source>
         <translation>
 
  最後のリンク ブロック</translation>
+    </message>
+    <message>
+        <source>:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7261,16 +7133,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>All Files(*)</source>
         <translation>すべてのファイル (*.*)</translation>
-    </message>
-    <message>
-        <source>Black Chocobo</source>
-        <translation type="obsolete">Black Chocobo</translation>
-    </message>
-    <message>
-        <source>Cannot write file %1:
-%2.</source>
-        <translation type="obsolete">ファイル %1 に書き込めません:
-%2.</translation>
     </message>
     <message>
         <source>Save Successfully</source>

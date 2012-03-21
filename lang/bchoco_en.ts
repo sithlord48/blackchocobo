@@ -2191,10 +2191,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>CheckBox</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source> HP</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3011,26 +3007,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Lvl 1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lvl 2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lvl 3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lvl 4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lvl 5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Othe&amp;r</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3405,14 +3381,6 @@
     </message>
     <message>
         <source>0x80</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Mystery Ninja </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Can Fight Yuffie in Forests</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4261,10 +4229,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Steps</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Number Steps</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4930,6 +4894,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Can Fight Mystery Ninja in Forests</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6421,10 +6389,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>preview</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Color 1</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6611,6 +6575,10 @@ Empty</source>
         <source>
 
  End Of Linked Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>:</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

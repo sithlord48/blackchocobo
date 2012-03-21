@@ -2191,10 +2191,6 @@
         <translation>Stats Tab</translation>
     </message>
     <message>
-        <source>CheckBox</source>
-        <translation>CheckBox</translation>
-    </message>
-    <message>
         <source> HP</source>
         <translation> HP</translation>
     </message>
@@ -2856,10 +2852,6 @@
         <translation>Erlaubt im PHS</translation>
     </message>
     <message>
-        <source>Sector 7 Slums</source>
-        <translation type="obsolete">Sektor 7 - Slums</translation>
-    </message>
-    <message>
         <source>1st Floor Shinra Building</source>
         <translation>Shinra HQ Erdgeschoss</translation>
     </message>
@@ -2934,10 +2926,6 @@
     <message>
         <source>Materia Stat Changes</source>
         <translation>Materia Stat Änderungen</translation>
-    </message>
-    <message>
-        <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab. </source>
-        <translation type="obsolete">Cait Sith und Vincent sollten nicht aktiviert werden, wenn sie im Truppen-Tab deaktiviert wurden. </translation>
     </message>
     <message>
         <source>map</source>
@@ -3018,26 +3006,6 @@
     <message>
         <source>&amp;Materia</source>
         <translation>&amp;Materia</translation>
-    </message>
-    <message>
-        <source>Lvl 1</source>
-        <translation>Lvl 1</translation>
-    </message>
-    <message>
-        <source>Lvl 2</source>
-        <translation>Lvl 2</translation>
-    </message>
-    <message>
-        <source>Lvl 3</source>
-        <translation>Lvl 3</translation>
-    </message>
-    <message>
-        <source>Lvl 4</source>
-        <translation>Lvl 4</translation>
-    </message>
-    <message>
-        <source>Lvl 5</source>
-        <translation>Lvl 5</translation>
     </message>
     <message>
         <source>Othe&amp;r</source>
@@ -3270,10 +3238,6 @@
         <translation>Wähle Final Fantasy 7 PSV Spielstand</translation>
     </message>
     <message>
-        <source>Cannot save This Type of File</source>
-        <translation type="obsolete">Kann diesen Dateityp nicht speichern</translation>
-    </message>
-    <message>
         <source>Save Final Fantasy 7 SaveGame</source>
         <translation>Speichere Final Fantasy 7 Spielstand</translation>
     </message>
@@ -3422,14 +3386,6 @@
         <translation>0x80</translation>
     </message>
     <message>
-        <source>Mystery Ninja </source>
-        <translation>Mysteriöser Ninja</translation>
-    </message>
-    <message>
-        <source>Can Fight Yuffie in Forests</source>
-        <translation>Kann Yuffie in Wäldern bekämpfen</translation>
-    </message>
-    <message>
         <source>Region String</source>
         <translation>Region String</translation>
     </message>
@@ -3484,10 +3440,6 @@
     <message>
         <source>PSP Save Notice</source>
         <translation>PSP Speicher Notiz</translation>
-    </message>
-    <message>
-        <source>Bad Psx Save Name</source>
-        <translation type="obsolete">Schlechter PSX Spielstand Name</translation>
     </message>
     <message>
         <source>Export MC File</source>
@@ -3560,12 +3512,6 @@
         <translation>Dialog Vorschau im Spiel</translation>
     </message>
     <message>
-        <source>Cannot write file %1:
-%2.</source>
-        <translation type="obsolete">Kann Datei nicht schreiben %1:
-%2.</translation>
-    </message>
-    <message>
         <source>Export Raw PSX Save</source>
         <translation>Exportiere Raw PSX Spielstand</translation>
     </message>
@@ -3582,32 +3528,6 @@
         <translation>Diese Datei hat keinen aktuellen Checksum. Es wird nicht auf deiner PSP funktionieren.</translation>
     </message>
     <message>
-        <source>Cannot read file %1:
-%2 Be Sure its is a Raw PSX Save</source>
-        <translation type="obsolete">Kann Datei nicht lesen %1:
-%2 Gehe sicher, dass es ein Raw PSX Spielstand ist</translation>
-    </message>
-    <message>
-        <source>Cannot read file %1:
-%2., Be Sure its is a Raw PSX Save</source>
-        <translation type="obsolete">Kann Datei nicht lesen %1:
-%2., Gehe sicher, dass es ein Raw PSX Spielstand ist</translation>
-    </message>
-    <message>
-        <source>Unknown Filetype</source>
-        <translation type="obsolete">Unbekannter Dateityp</translation>
-    </message>
-    <message>
-        <source>File: %1 
-is not a FF7 SaveGame.</source>
-        <translation type="obsolete">Datei: %1 
-ist kein FF7 Spielstand.</translation>
-    </message>
-    <message>
-        <source>Can&apos;t Decide On What Header to Write, Please Add the suffix -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</source>
-        <translation type="obsolete">Kann nicht entscheiden auf welchem Header geschrieben werden muss, Bitte füge den Suffix hinzu -SXX (where x= 01-15, with leading 0 if &lt; 10) A Header for that slot number will be written to the save</translation>
-    </message>
-    <message>
         <source>DON&apos;T USE</source>
         <translation>NICHT BENUTZEN</translation>
     </message>
@@ -3620,10 +3540,6 @@ ist kein FF7 Spielstand.</translation>
  Remember 16777215 AP = master</source>
         <translation>Platzhalter Materia erkannt
  Erinnerung: 16777215 AP = master</translation>
-    </message>
-    <message>
-        <source>New Game +</source>
-        <translation type="obsolete">Neues Spiel +</translation>
     </message>
     <message>
         <source>Young Cloud</source>
@@ -4272,30 +4188,6 @@ ist kein FF7 Spielstand.</translation>
         <translation>-Nichts-</translation>
     </message>
     <message>
-        <source>Slot:%1 Contains A PAL region save</source>
-        <translation type="obsolete">Steckplatz:%1 Beinhaltet einen PAL Region Spielstand</translation>
-    </message>
-    <message>
-        <source>PAL PSX runs at 50/60 speed
-This results in an incorrect playtime
-Would you like to correct the playtime?</source>
-        <translation type="obsolete">PAL PSX läuft bei 50/60 Geschwindigkeit
-Dies führt zu einer inkorrekten Spielzeit
-Möchtest du die Spielzeit korrigieren?</translation>
-    </message>
-    <message>
-        <source>PAL Slot Detected</source>
-        <translation type="obsolete">PAL Steckplatz erkannt</translation>
-    </message>
-    <message>
-        <source>Always Correct</source>
-        <translation type="obsolete">Korrigiere immer</translation>
-    </message>
-    <message>
-        <source>Never Correct</source>
-        <translation type="obsolete">Korrigiere nie</translation>
-    </message>
-    <message>
         <source>PAL -&gt; NTSC Conversion</source>
         <translation>PAL -&gt; NTSC Konvertierung</translation>
     </message>
@@ -4344,10 +4236,6 @@ Var And Scrolling Synced To Left Table</source>
 Wähle Steckplatz zum Vergleichen
 Tabelle ist nur lesbar
 Var und Scrollen zusammen zur linken Tabelle</translation>
-    </message>
-    <message>
-        <source>Steps</source>
-        <translation>Schritte</translation>
     </message>
     <message>
         <source>Number Steps</source>
@@ -4730,10 +4618,6 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation>Die Platte fällt</translation>
     </message>
     <message>
-        <source>cb_s5_7 (aeris On roof)</source>
-        <translation type="obsolete">cb_s5_7 (aeris auf Dach)</translation>
-    </message>
-    <message>
         <source>Spi</source>
         <translation>Gem</translation>
     </message>
@@ -4750,18 +4634,6 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>Raw PSX FF7 SaveGame (*)</source>
         <translation>Raw PSX FF7 Spielstand (*)</translation>
-    </message>
-    <message>
-        <source>The File %1
- is NOT a PSX Save</source>
-        <translation type="obsolete">Die Datei %1
- ist KEIN PSX Spielstand</translation>
-    </message>
-    <message>
-        <source>The File %1
- is NOT a PSV Save</source>
-        <translation type="obsolete">Die Datei %1
- ist KEIN PSV Spielstand</translation>
     </message>
     <message>
         <source>PC</source>
@@ -5040,6 +4912,10 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
         <translation>Cait Sith und Vincent sollten nicht aktiviert werden, wenn sie im Truppen-Tab deaktiviert wurden. </translation>
+    </message>
+    <message>
+        <source>Can Fight Mystery Ninja in Forests</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -6506,10 +6382,6 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation>Wähle einen Standart Spielstand (Muss Raw PSX sein)</translation>
     </message>
     <message>
-        <source>File To load When &quot;New Game&quot; is used</source>
-        <translation type="obsolete">Datei, die geladen werden soll bei &quot;Neues Spiel&quot;</translation>
-    </message>
-    <message>
         <source>Location To Save Character Stat Files</source>
         <translation>Ort, an dem Charakter Stat Dateien gespeichert werden sollen</translation>
     </message>
@@ -6532,10 +6404,6 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>Main Window Background Color</source>
         <translation>Haupt-Fenster Hintergrund Farbe</translation>
-    </message>
-    <message>
-        <source>preview</source>
-        <translation>Vorschau</translation>
     </message>
     <message>
         <source>Color 1</source>
@@ -6731,6 +6599,10 @@ Leer</translation>
         <translation>
 
  Ende von Linked Blocks</translation>
+    </message>
+    <message>
+        <source>:</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7246,16 +7118,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>All Files(*)</source>
         <translation>Alle Dateien(*)</translation>
-    </message>
-    <message>
-        <source>Black Chocobo</source>
-        <translation type="obsolete">Black Chocobo</translation>
-    </message>
-    <message>
-        <source>Cannot write file %1:
-%2.</source>
-        <translation type="obsolete">Kann Datei nicht schreiben %1:
-%2.</translation>
     </message>
     <message>
         <source>Save Successfully</source>
