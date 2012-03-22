@@ -1380,10 +1380,29 @@ void MainWindow::update_stat_totals(void)
 
     for(int i=0;i<16;i++)
     {//Check each materia slot and create a runing total for each stat.
-        if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF)
+        bool add=false;
+        switch(i)
+        {
+            case 0: add=ui->w_m_s1->isVisible();break;
+            case 1: add=ui->w_m_s2->isVisible();break;
+            case 2: add=ui->w_m_s3->isVisible();break;
+            case 3: add=ui->w_m_s4->isVisible();break;
+            case 4: add=ui->w_m_s5->isVisible();break;
+            case 5: add=ui->w_m_s6->isVisible();break;
+            case 6: add=ui->w_m_s7->isVisible();break;
+            case 7: add=ui->w_m_s8->isVisible();break;
+            case 8: add=ui->a_m_s1->isVisible();break;
+            case 9: add=ui->a_m_s2->isVisible();break;
+            case 10: add=ui->a_m_s3->isVisible();break;
+            case 11: add=ui->a_m_s4->isVisible();break;
+            case 12: add=ui->a_m_s5->isVisible();break;
+            case 13: add=ui->a_m_s6->isVisible();break;
+            case 14: add=ui->a_m_s7->isVisible();break;
+            case 15: add=ui->a_m_s8->isVisible();break;
+        };
+        if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF && add)
         {
             strbonus += Materias.Stat_Str(ff7->slot[s].chars[curchar].materias[i].id);
-
             vitbonus += Materias.Stat_Vit(ff7->slot[s].chars[curchar].materias[i].id);
 
             if(ff7->slot[s].chars[curchar].materias[i].id == 0x03)
@@ -1432,8 +1451,8 @@ void MainWindow::update_stat_totals(void)
                 mpbonus +=level*10;
             }
             else{mpbonus +=Materias.Stat_Mp(ff7->slot[s].chars[curchar].materias[i].id);}
-        }
-    }
+        }//end if
+    }//end loop
     //out of the loop need to check things like accessory and armor/weapon for modifiers.
     strbonus+=Items.Stat_str(ff7->slot[s].chars[curchar].accessory+288);
     vitbonus+=Items.Stat_vit(ff7->slot[s].chars[curchar].accessory+288);

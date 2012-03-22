@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>775</width>
-    <height>587</height>
+    <width>773</width>
+    <height>585</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -1349,8 +1349,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>442</width>
-             <height>441</height>
+             <width>440</width>
+             <height>445</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3341,8 +3341,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>438</width>
-             <height>441</height>
+             <width>401</width>
+             <height>433</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -5857,12 +5857,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
         </property>
         <item>
          <widget class="QGroupBox" name="group_items">
-          <property name="minimumSize">
-           <size>
-            <width>250</width>
-            <height>0</height>
-           </size>
-          </property>
           <property name="maximumSize">
            <size>
             <width>250</width>
@@ -5887,6 +5881,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            </property>
            <item>
             <widget class="QTableWidget" name="tbl_itm">
+             <property name="minimumSize">
+              <size>
+               <width>245</width>
+               <height>0</height>
+              </size>
+             </property>
              <property name="editTriggers">
               <set>QAbstractItemView::NoEditTriggers</set>
              </property>
@@ -7114,12 +7114,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
         </property>
         <item>
          <widget class="QGroupBox" name="groupBox_18">
-          <property name="minimumSize">
-           <size>
-            <width>250</width>
-            <height>0</height>
-           </size>
-          </property>
           <property name="title">
            <string>Party's Materia Stock</string>
           </property>
@@ -7132,6 +7126,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            </property>
            <item>
             <widget class="QTableWidget" name="tbl_materia">
+             <property name="minimumSize">
+              <size>
+               <width>230</width>
+               <height>0</height>
+              </size>
+             </property>
              <property name="verticalScrollBarPolicy">
               <enum>Qt::ScrollBarAsNeeded</enum>
              </property>
@@ -11245,6 +11245,14 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
 }</string>
           </property>
           <widget class="QWidget" name="page">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>720</width>
+             <height>251</height>
+            </rect>
+           </property>
            <attribute name="icon">
             <iconset resource="images.qrc">
              <normaloff>:/icon/psxmc</normaloff>:/icon/psxmc</iconset>
@@ -11345,6 +11353,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <layout class="QVBoxLayout" name="verticalLayout_58">
               <item>
                <spacer name="verticalSpacer_13">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
                 <property name="sizeHint" stdset="0">
                  <size>
                   <width>20</width>
@@ -11582,6 +11593,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </item>
               <item>
                <spacer name="verticalSpacer_12">
+                <property name="orientation">
+                 <enum>Qt::Vertical</enum>
+                </property>
                 <property name="sizeHint" stdset="0">
                  <size>
                   <width>20</width>
@@ -11595,6 +11609,14 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            </layout>
           </widget>
           <widget class="QWidget" name="page_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>747</width>
+             <height>411</height>
+            </rect>
+           </property>
            <attribute name="icon">
             <iconset resource="images.qrc">
              <normaloff>:/icon/world_map</normaloff>:/icon/world_map</iconset>
@@ -13328,8 +13350,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>350</width>
-                  <height>1528</height>
+                  <width>303</width>
+                  <height>1330</height>
                  </rect>
                 </property>
                 <layout class="QVBoxLayout" name="verticalLayout_62">
@@ -13933,6 +13955,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </property>
           <item>
            <spacer name="verticalSpacer_6">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
             <property name="sizeHint" stdset="0">
              <size>
               <width>0</width>
@@ -14015,6 +14040,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
           </item>
           <item>
            <spacer name="verticalSpacer_5">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
             <property name="sizeHint" stdset="0">
              <size>
               <width>0</width>
@@ -14036,12 +14064,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
          <layout class="QVBoxLayout" name="verticalLayout_89">
           <item>
            <widget class="QGroupBox" name="groupBox_20">
-            <property name="minimumSize">
-             <size>
-              <width>241</width>
-              <height>0</height>
-             </size>
-            </property>
             <property name="maximumSize">
              <size>
               <width>241</width>
@@ -14060,6 +14082,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              </property>
              <item>
               <widget class="QTableWidget" name="tbl_materia_2">
+               <property name="minimumSize">
+                <size>
+                 <width>241</width>
+                 <height>0</height>
+                </size>
+               </property>
                <property name="editTriggers">
                 <set>QAbstractItemView::NoEditTriggers</set>
                </property>
@@ -15815,8 +15843,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>742</width>
-             <height>683</height>
+             <width>497</width>
+             <height>680</height>
             </rect>
            </property>
            <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -20100,7 +20128,11 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_33">
                 <item>
-                 <spacer name="verticalSpacer_9"/>
+                 <spacer name="verticalSpacer_9">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </spacer>
                 </item>
                 <item>
                  <widget class="QLabel" name="label_186">
@@ -20126,7 +20158,11 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </widget>
                 </item>
                 <item>
-                 <spacer name="verticalSpacer_8"/>
+                 <spacer name="verticalSpacer_8">
+                  <property name="orientation">
+                   <enum>Qt::Vertical</enum>
+                  </property>
+                 </spacer>
                 </item>
                </layout>
               </item>
@@ -21547,6 +21583,14 @@ Var And Scrolling Synced To Left Table</string>
    </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>773</width>
+     <height>19</height>
+    </rect>
+   </property>
    <widget class="QMenu" name="menuAbout">
     <property name="title">
      <string>Hel&amp;p</string>
