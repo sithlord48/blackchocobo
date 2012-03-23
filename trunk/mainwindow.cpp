@@ -32,6 +32,9 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     curchar =0;
     mslotsel=0;
     s=0;
+    buffer_materia.id=0xFF;
+    for(int i=0;i<4;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
+
     //set up comboboxes.
     for (int i=256;i<288;i++){ui->combo_armor->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
     for (int i=288;i<320;i++){ui->combo_acc->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
