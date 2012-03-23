@@ -64,8 +64,6 @@ private:
     FF7Item Items; //FF7Item Static Data
     FF7Materia Materias;//FF7Materia Static Data.
     FF7Location Locations; // FF7 Location Data
-    FF7SLOT bufferslot; // a buffer slot to keep copied slots in
-    QString buffer_region; //holds region data for bufferslot.
     MATERIA buffer_materia; // buffer for a materia
     //ITEM buffer_item; // for use later
     QString filename; //holds file name
