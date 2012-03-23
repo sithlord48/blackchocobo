@@ -4931,7 +4931,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Can Fight Mystery Ninja in Forests</source>
-        <translation type="unfinished"></translation>
+        <translation>森で謎のニンジャとバトル可能</translation>
     </message>
 </context>
 <context>
@@ -6618,7 +6618,7 @@ Empty</source>
     </message>
     <message>
         <source>:</source>
-        <translation type="unfinished"></translation>
+        <translation>:</translation>
     </message>
 </context>
 <context>
@@ -7085,7 +7085,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</source>
-        <translation type="unfinished"></translation>
+        <translation>修正: てきのわざ, キーアイテム,亀道楽, PHS メニューの変更適用の不具合</translation>
     </message>
 </context>
 <context>
