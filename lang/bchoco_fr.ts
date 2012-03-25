@@ -2137,7 +2137,7 @@
     </message>
     <message>
         <source>Mideel,Clinic</source>
-        <translation type="unfinished"></translation>
+        <translation>Mideel - Clinique</translation>
     </message>
 </context>
 <context>
@@ -4879,28 +4879,29 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Load Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Le chargement a échoué</translation>
     </message>
     <message>
         <source>Failed to Load File</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de charger le fichier</translation>
     </message>
     <message>
         <source>Failed to save file
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de sauver le fichier
+%1</translation>
     </message>
     <message>
         <source>Wutai - In Front Of Turtle Paradise</source>
-        <translation type="unfinished"></translation>
+        <translation>Utai - Devant le Turtle&apos;s Paradise</translation>
     </message>
     <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>2nd Floor Sector 5 House</source>
-        <translation type="unfinished"></translation>
+        <translation>Deuxième étage maison secteur 5</translation>
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
@@ -4908,7 +4909,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Can Fight Mystery Ninja in Forests</source>
-        <translation type="unfinished"></translation>
+        <translation>Rencontre possible avec Ninja mystère dans les forêts</translation>
     </message>
 </context>
 <context>
@@ -6476,7 +6477,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Override Default Save with Following File (raw psx only)</source>
-        <translation type="unfinished"></translation>
+        <translation>Remplacer la sauvegarde par défaut par le fichier courant (uniquement avec raw psx)</translation>
     </message>
 </context>
 <context>
@@ -6595,7 +6596,7 @@ Vide</translation>
     </message>
     <message>
         <source>:</source>
-        <translation type="unfinished"></translation>
+        <translation> :</translation>
     </message>
 </context>
 <context>
@@ -7060,11 +7061,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Bug In Dex and Vgs Header</source>
-        <translation type="unfinished"></translation>
+        <translation>Corrigé : Bogue dans l&apos;en-tête des fichiers Dex et Vgs</translation>
     </message>
     <message>
         <source>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</source>
-        <translation type="unfinished"></translation>
+        <translation>Corrigé : Bogue dans Eskill,KeyItem,Tparadise,Phs,Menu parfois empêche les modifications d&apos;être enregistrées</translation>
     </message>
 </context>
 <context>
@@ -7170,11 +7171,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Save Error</source>
-        <translation type="unfinished">Erreur de sauvegarde</translation>
+        <translation>Erreur de sauvegarde</translation>
     </message>
     <message>
         <source>Error On File Save, Going Back To The Selection Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur lors de l&apos;enregistrement du fichier, retour à la fenêtre de sélection</translation>
     </message>
 </context>
 </TS>
