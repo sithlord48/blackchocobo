@@ -4885,7 +4885,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>2nd Floor Sector 5 House</source>
-        <translation type="unfinished">Haus im Sektor 5, 2. Stockwerk</translation>
+        <translation type="unfinished">2nd Floor Sektor 5 Haus</translation>
     </message>
     <message>
         <source>Wutai - In Front Of Turtle Paradise</source>
@@ -4915,7 +4915,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Can Fight Mystery Ninja in Forests</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kann Geheimnis Ninja im Kampf Wälder</translation>
     </message>
 </context>
 <context>
@@ -6602,7 +6602,7 @@ Leer</translation>
     </message>
     <message>
         <source>:</source>
-        <translation type="unfinished"></translation>
+        <translation>:</translation>
     </message>
 </context>
 <context>
@@ -7070,7 +7070,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Behoben: Fehler in Eskill, KeyItem, Tparadise, PHS, Menü irgendwann Verhinderung von Änderungen zu speichern</translation>
     </message>
 </context>
 <context>
