@@ -2138,7 +2138,7 @@
     </message>
     <message>
         <source>Mideel,Clinic</source>
-        <translation type="unfinished"></translation>
+        <translation>Mideel, Clínica</translation>
     </message>
 </context>
 <context>
@@ -4879,28 +4879,29 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Load Failed</source>
-        <translation type="unfinished"></translation>
+        <translation>Fallo al cargar</translation>
     </message>
     <message>
         <source>Failed to Load File</source>
-        <translation type="unfinished"></translation>
+        <translation>No se pudo cargar el archivo</translation>
     </message>
     <message>
         <source>Failed to save file
 %1</source>
-        <translation type="unfinished"></translation>
+        <translation>No se pudo guardar el archivo
+%1</translation>
     </message>
     <message>
         <source>Wutai - In Front Of Turtle Paradise</source>
-        <translation type="unfinished"></translation>
+        <translation>Wutai - En frente del paraíso de las tortugas</translation>
     </message>
     <message>
         <source>cb_s5_7 (Turbo Ether from Kid in &quot;house 2F 5min1_2)</source>
-        <translation type="unfinished"></translation>
+        <translation>cb_s5_7 (Éter turbo del niño en la casa 2F 5min1_2)</translation>
     </message>
     <message>
         <source>2nd Floor Sector 5 House</source>
-        <translation type="unfinished"></translation>
+        <translation>Segundo piso de casa en Sector 5</translation>
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
@@ -4908,7 +4909,7 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Can Fight Mystery Ninja in Forests</source>
-        <translation type="unfinished"></translation>
+        <translation>Se puede luchar contra el ninja misterioso en los bosques</translation>
     </message>
 </context>
 <context>
@@ -6477,7 +6478,7 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>Override Default Save with Following File (raw psx only)</source>
-        <translation type="unfinished"></translation>
+        <translation>Anular el guardado por defecto con el siguiente archivo (sólo PSX raw)</translation>
     </message>
 </context>
 <context>
@@ -6596,7 +6597,7 @@ El juego usa el bloque de guardado %1 </translation>
     </message>
     <message>
         <source>:</source>
-        <translation type="unfinished"></translation>
+        <translation>:</translation>
     </message>
 </context>
 <context>
@@ -7059,11 +7060,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Bug In Dex and Vgs Header</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Error en las cabeceras Dex y Vgs</translation>
     </message>
     <message>
         <source>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Error en Eskill,KeyItem,Tparadise,Phs,Menu a veces los cambios no se guardaban</translation>
     </message>
 </context>
 <context>
@@ -7172,7 +7173,7 @@ El juego usa el bloque de guardado %1 </translation>
     </message>
     <message>
         <source>Error On File Save, Going Back To The Selection Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Error guardando el archivo, volviendo al diálogo de selección</translation>
     </message>
 </context>
 </TS>
