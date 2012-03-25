@@ -16,7 +16,6 @@
 
 #include "options.h"
 #include "ui_options.h"
-#include <QMessageBox>
 
 Options::Options(QWidget *parent,QSettings *config_data) :
     QDialog(parent),
@@ -39,8 +38,13 @@ Options::Options(QWidget *parent,QSettings *config_data) :
     ui->slide_c3_b->setValue(settings->value("color3_b").toInt());
     set_path_lbls();
     load=true;
-    ui->combo_font->setFont(QApplication::font().family());
-    ui->combo_font_size->setCurrentIndex(QApplication::font().pointSize()-8);
+
+    if(settings->value("font-size").isNull()){settings->setValue("font-size",QApplication::font().pointSize());}
+    if(settings->value("font-family").isNull()){settings->setValue("font-family",QApplication::font().family());}
+
+    ui->combo_font->setFont(settings->value("font-family").toString());
+    ui->combo_font_size->setCurrentIndex(settings->value("font-size").toInt()-8);
+
     if(settings->value("show_test").toBool()){ui->cb_skip_slot_mask->setVisible(true);}
     else{ui->cb_skip_slot_mask->setVisible(false);}
     if(settings->value("override_default_save").toBool()){ui->cb_override_def_save->setChecked(Qt::Checked);}
@@ -93,80 +97,83 @@ void Options::set_path_lbls()
 void Options::on_line_save_pc_editingFinished(){settings->setValue("save_pc",ui->line_save_pc->text());}
 void Options::on_btn_set_save_pc_clicked()
 {
-    int font_index = settings->value("font-size").toInt()-8;
+    load=true;
     QString temp = QFileDialog::getExistingDirectory(this,tr("Select A Directory To Save FF7 PC Saves"),settings->value("save_pc_path").toString());
     if(!temp.isNull()){settings->setValue("save_pc_path",temp);}
     set_path_lbls();
-    ui->combo_font_size->setCurrentIndex(font_index);
+    load=false;
 }
 
 
 void Options::on_line_save_emu_editingFinished(){settings->setValue("save_emu",ui->line_save_emu->text());}
 void Options::on_btn_set_save_emu_clicked()
 {
-    int font_index = settings->value("font-size").toInt()-8;
+    load=true;
     QString temp = QFileDialog::getExistingDirectory(this,tr("Select A Directory To Save mcd/mcr saves"),settings->value("save_emu_path").toString());
     if(!temp.isNull()){settings->setValue("save_emu_path",temp);}
     set_path_lbls();
-    ui->combo_font_size->setCurrentIndex(font_index);
+    load=false;
 }
 
 void Options::on_line_load_path_editingFinished(){settings->setValue("load_path",ui->line_load_path->text());}
 void Options::on_btn_set_load_path_clicked()
 {
-    int font_index = settings->value("font-size").toInt()-8;
+    load=true;
     QString temp = QFileDialog::getExistingDirectory(this,tr("Select A Directory To Load FF7 PC Saves From"),settings->value("load_path").toString());
     if(!temp.isNull()){settings->setValue("load_path",temp);}
     set_path_lbls();
-    ui->combo_font_size->setCurrentIndex(font_index);
+    load=false;
 }
 
 
 void Options::on_line_export_pc_editingFinished(){settings->setValue("export_pc",ui->line_export_pc->text());}
 void Options::on_btn_set_export_pc_clicked()
 {
-    int font_index = settings->value("font-size").toInt()-8;
+    load=true;
     QString temp = QFileDialog::getExistingDirectory(this,tr("Select A Directory To Export FF7 PC Saves"),settings->value("export_pc").toString());
     if(!temp.isNull()){settings->setValue("export_pc",temp);}
     set_path_lbls();
-    ui->combo_font_size->setCurrentIndex(font_index);
+    load=false;
 }
 
 void Options::on_line_default_save_editingFinished(){settings->setValue("default_save_file",ui->line_default_save->text());}
 void Options::on_btn_set_default_save_clicked()
 {
-    int font_index = settings->value("font-size").toInt()-8;
+    load=true;
     QString temp = QFileDialog::getOpenFileName(this,tr("Select A Default Save Game (Must Be Raw PSX)"),settings->value("default_save_file").toString());
     if(!temp.isNull()){settings->setValue("default_save_file",temp);}
     set_path_lbls();
-    ui->combo_font_size->setCurrentIndex(font_index);
+    load=false;
 }
 
 void Options::on_line_char_stat_folder_editingFinished(){settings->setValue("char_stat_folder",ui->line_char_stat_folder->text());}
 
 void Options::on_btn_set_char_stat_folder_clicked()
 {
-    int font_index = settings->value("font-size").toInt()-8;
+    load=true;
     QString temp = QFileDialog::getExistingDirectory(this,tr("Select A Location To Save Character Stat Files"),settings->value("char_stat_folder").toString());
     if(!temp.isNull()){settings->setValue("char_stat_folder",temp);}
     set_path_lbls();
-    ui->combo_font_size->setCurrentIndex(font_index);
-
+    load=false;
 }
 /*~~~~~~~~~~~~~~~~~~~~Font Stuff~~~~~~~~~~~~~~~~~~~~~~*/
 
 void Options::on_combo_font_currentIndexChanged(QString family)
 {if(!load){
     settings->setValue("font-family",family);
-    QApplication::setFont(QFont(family,int(QApplication::font().pointSize()),-1,false));
+    QApplication::setFont(QFont(family,settings->value("font-size").toInt(),-1,false));
 }}
 
 void Options::on_combo_font_size_currentIndexChanged(int index)
-{if(!load){
+{
+    if(!load)
+    {
         index+=8;//adjust so index 0 = starting font size.
-    settings->setValue("font-size",index);
-    QApplication::setFont(QFont(ui->combo_font->currentText(),index,-1,false));
-}}
+        settings->setValue("font-size",index);
+        QApplication::setFont(QFont(settings->value("font-family").toString(),index,-1,false));
+    }
+    else{ui->combo_font_size->setCurrentIndex(settings->value("font-size").toInt()-8);}
+}
 /*~~~~~~~~~~~~~~~~~~Color sliders~~~~~~~~~~~~~~~~~~*/
 void Options::on_slide_c1_r_valueChanged(int value)
 {
