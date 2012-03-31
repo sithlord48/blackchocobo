@@ -2,6 +2,105 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="fr" sourcelanguage="en_US">
 <context>
+    <name>E_skills</name>
+    <message>
+        <source>Frog Song</source>
+        <translation>Air de crapaud</translation>
+    </message>
+    <message>
+        <source>L4 Suicide</source>
+        <translation>Suicide N4</translation>
+    </message>
+    <message>
+        <source>Magic Hammer</source>
+        <translation>Marteau magie</translation>
+    </message>
+    <message>
+        <source>White Wind</source>
+        <translation>Vent blanc</translation>
+    </message>
+    <message>
+        <source>Big Guard</source>
+        <translation>Grand garde</translation>
+    </message>
+    <message>
+        <source>Angel Whisper</source>
+        <translation>Mot d&apos;ange</translation>
+    </message>
+    <message>
+        <source>Dragon Force</source>
+        <translation>Force de dragon</translation>
+    </message>
+    <message>
+        <source>Death Force</source>
+        <translation>Force de mort</translation>
+    </message>
+    <message>
+        <source>Flame Thrower</source>
+        <translation>Lance-flammes</translation>
+    </message>
+    <message>
+        <source>Laser</source>
+        <translation>Laser</translation>
+    </message>
+    <message>
+        <source>Matra Magic</source>
+        <translation>Magique Matra</translation>
+    </message>
+    <message>
+        <source>Bad Breath</source>
+        <translation>Haleine aigre</translation>
+    </message>
+    <message>
+        <source>Beta</source>
+        <translation>Bêta</translation>
+    </message>
+    <message>
+        <source>Aqualung</source>
+        <translation>Scaphandre</translation>
+    </message>
+    <message>
+        <source>Trine</source>
+        <translation>Trine</translation>
+    </message>
+    <message>
+        <source>Magic Breath</source>
+        <translation>Souffle magie</translation>
+    </message>
+    <message>
+        <source>????</source>
+        <translation>????</translation>
+    </message>
+    <message>
+        <source>Goblin Punch</source>
+        <translation>Punch-Gobelin</translation>
+    </message>
+    <message>
+        <source>Chocobuckle</source>
+        <translation>Chocoboucle</translation>
+    </message>
+    <message>
+        <source>L5 Death</source>
+        <translation>Mort N5</translation>
+    </message>
+    <message>
+        <source>Death Sentence</source>
+        <translation>Peine de mort</translation>
+    </message>
+    <message>
+        <source>Roulette</source>
+        <translation>Roulette</translation>
+    </message>
+    <message>
+        <source>Shadow Flare</source>
+        <translation>Eclat d&apos;ombre</translation>
+    </message>
+    <message>
+        <source>Pandora&apos;s Box</source>
+        <translation>Boîte-Pandore</translation>
+    </message>
+</context>
+<context>
     <name>FF7Save</name>
     <message>
         <source>New Game +</source>
@@ -2292,107 +2391,107 @@
     </message>
     <message>
         <source>Enemy Skill&apos;s</source>
-        <translation>Talents de l&apos;ennemi</translation>
+        <translation type="obsolete">Talents de l&apos;ennemi</translation>
     </message>
     <message>
         <source>Frog Song</source>
-        <translation>Air de crapaud</translation>
+        <translation type="obsolete">Air de crapaud</translation>
     </message>
     <message>
         <source>L4 Suicide</source>
-        <translation>Suicide N4</translation>
+        <translation type="obsolete">Suicide N4</translation>
     </message>
     <message>
         <source>Magic Hammer</source>
-        <translation>Marteau magie</translation>
+        <translation type="obsolete">Marteau magie</translation>
     </message>
     <message>
         <source>White Wind</source>
-        <translation>Vent blanc</translation>
+        <translation type="obsolete">Vent blanc</translation>
     </message>
     <message>
         <source>Big Guard</source>
-        <translation>Grand garde</translation>
+        <translation type="obsolete">Grand garde</translation>
     </message>
     <message>
         <source>Angel Whisper</source>
-        <translation>Mot d&apos;ange</translation>
+        <translation type="obsolete">Mot d&apos;ange</translation>
     </message>
     <message>
         <source>Dragon Force</source>
-        <translation>Force de dragon</translation>
+        <translation type="obsolete">Force de dragon</translation>
     </message>
     <message>
         <source>Death Force</source>
-        <translation>Force de mort</translation>
+        <translation type="obsolete">Force de mort</translation>
     </message>
     <message>
         <source>Flame Thrower</source>
-        <translation>Lance-flammes</translation>
+        <translation type="obsolete">Lance-flammes</translation>
     </message>
     <message>
         <source>Laser</source>
-        <translation>Laser</translation>
+        <translation type="obsolete">Laser</translation>
     </message>
     <message>
         <source>Matra Magic</source>
-        <translation>Magique Matra</translation>
+        <translation type="obsolete">Magique Matra</translation>
     </message>
     <message>
         <source>Bad Breath</source>
-        <translation>Haleine aigre</translation>
+        <translation type="obsolete">Haleine aigre</translation>
     </message>
     <message>
         <source>Beta</source>
-        <translation>Bêta</translation>
+        <translation type="obsolete">Bêta</translation>
     </message>
     <message>
         <source>Aqualung</source>
-        <translation>Scaphandre</translation>
+        <translation type="obsolete">Scaphandre</translation>
     </message>
     <message>
         <source>Trine</source>
-        <translation>Trine</translation>
+        <translation type="obsolete">Trine</translation>
     </message>
     <message>
         <source>Magic Breath</source>
-        <translation>Souffle magie</translation>
+        <translation type="obsolete">Souffle magie</translation>
     </message>
     <message>
         <source>????</source>
-        <translation>????</translation>
+        <translation type="obsolete">????</translation>
     </message>
     <message>
         <source>Goblin Punch</source>
-        <translation>Punch-Gobelin</translation>
+        <translation type="obsolete">Punch-Gobelin</translation>
     </message>
     <message>
         <source>Chocobuckle</source>
-        <translation>Chocoboucle</translation>
+        <translation type="obsolete">Chocoboucle</translation>
     </message>
     <message>
         <source>L5 Death</source>
-        <translation>Mort N5</translation>
+        <translation type="obsolete">Mort N5</translation>
     </message>
     <message>
         <source>Death Sentence</source>
-        <translation>Peine de mort</translation>
+        <translation type="obsolete">Peine de mort</translation>
     </message>
     <message>
         <source>Roulette</source>
-        <translation>Roulette</translation>
+        <translation type="obsolete">Roulette</translation>
     </message>
     <message>
         <source>Shadow Flare</source>
-        <translation>Eclat d&apos;ombre</translation>
+        <translation type="obsolete">Eclat d&apos;ombre</translation>
     </message>
     <message>
         <source>Pandora&apos;s Box</source>
-        <translation>Boîte-Pandore</translation>
+        <translation type="obsolete">Boîte-Pandore</translation>
     </message>
     <message>
         <source>All</source>
-        <translation>Tous</translation>
+        <translation type="obsolete">Tous</translation>
     </message>
     <message>
         <source>Inventory</source>
@@ -2864,11 +2963,11 @@
     </message>
     <message>
         <source>Clear</source>
-        <translation>Enlever</translation>
+        <translation type="obsolete">Enlever</translation>
     </message>
     <message>
         <source>AP:</source>
-        <translation>AP: </translation>
+        <translation type="obsolete">AP: </translation>
     </message>
     <message>
         <source>Accessory:</source>
@@ -2916,31 +3015,31 @@
     </message>
     <message>
         <source>Summon</source>
-        <translation>Invocation</translation>
+        <translation type="obsolete">Invocation</translation>
     </message>
     <message>
         <source>Independent</source>
-        <translation>Indépendante</translation>
+        <translation type="obsolete">Indépendante</translation>
     </message>
     <message>
         <source>Support</source>
-        <translation>Soutien</translation>
+        <translation type="obsolete">Soutien</translation>
     </message>
     <message>
         <source>Command</source>
-        <translation>Commande</translation>
+        <translation type="obsolete">Commande</translation>
     </message>
     <message>
         <source>Type Filter</source>
-        <translation>Type</translation>
+        <translation type="obsolete">Type</translation>
     </message>
     <message>
         <source>Materia Skills</source>
-        <translation>Compétences de la Matéria</translation>
+        <translation type="obsolete">Compétences de la Matéria</translation>
     </message>
     <message>
         <source>Materia Stat Changes</source>
-        <translation>Statistiques modifiées par la Matéria</translation>
+        <translation type="obsolete">Statistiques modifiées par la Matéria</translation>
     </message>
     <message>
         <source>Othe&amp;r</source>
@@ -3536,12 +3635,12 @@
     </message>
     <message>
         <source>Empty Materia</source>
-        <translation>Matéria vide</translation>
+        <translation type="obsolete">Matéria vide</translation>
     </message>
     <message>
         <source>Place holder Materia Detected
  Remember 16777215 AP = master</source>
-        <translation>Emplacement réservé à une Matéria détecté
+        <translation type="obsolete">Emplacement réservé à une Matéria détecté
  N&apos;oubliez pas que 16777215 AP = Maître</translation>
     </message>
     <message>
@@ -3554,11 +3653,11 @@
     </message>
     <message>
         <source>Empty Slot</source>
-        <translation>Emplacement vide</translation>
+        <translation type="obsolete">Emplacement vide</translation>
     </message>
     <message>
         <source>NO CAP</source>
-        <translation>AUCUNE LIMITE</translation>
+        <translation type="obsolete">AUCUNE LIMITE</translation>
     </message>
     <message>
         <source>Braver</source>
@@ -4529,11 +4628,11 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Ctrl+C</source>
-        <translation>Ctrl+C</translation>
+        <translation type="obsolete">Ctrl+C</translation>
     </message>
     <message>
         <source>Ctrl+V</source>
-        <translation>Ctrl+V</translation>
+        <translation type="obsolete">Ctrl+V</translation>
     </message>
     <message>
         <source>Del</source>
@@ -4541,11 +4640,11 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Materia Slot Actions</source>
-        <translation>Actions sur les Matérias</translation>
+        <translation type="obsolete">Actions sur les Matérias</translation>
     </message>
     <message>
         <source>&amp;Copy Slot</source>
-        <translation>&amp;Copier Emplacement</translation>
+        <translation type="obsolete">&amp;Copier Emplacement</translation>
     </message>
     <message>
         <source>Sector 5</source>
@@ -4910,6 +5009,57 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>Can Fight Mystery Ninja in Forests</source>
         <translation>Rencontre possible avec Ninja mystère dans les forêts</translation>
+    </message>
+</context>
+<context>
+    <name>MateriaEditor</name>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation type="unfinished">Enlever</translation>
+    </message>
+    <message>
+        <source>Skills</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stat Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic</source>
+        <translation type="unfinished">Magie</translation>
+    </message>
+    <message>
+        <source>Summon</source>
+        <translation type="unfinished">Invocation</translation>
+    </message>
+    <message>
+        <source>Independent</source>
+        <translation type="unfinished">Indépendante</translation>
+    </message>
+    <message>
+        <source>Support</source>
+        <translation type="unfinished">Soutien</translation>
+    </message>
+    <message>
+        <source>Command</source>
+        <translation type="unfinished">Commande</translation>
     </message>
 </context>
 <context>

@@ -40,23 +40,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     for (int i=288;i<320;i++){ui->combo_acc->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
         ui->combo_acc->addItem(QPixmap::fromImage(Items.Image(288)),tr("-None-"));//add clear option for accessories
         for (int i=0;i<320;i++){ui->combo_additem->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
-    for (int i=0;i<0x5b;i++){ui->combo_add_mat->addItem(Materias.Icon(i),Materias.Name(i));}
-    for (int i=0;i<0x5b;i++){ui->combo_add_mat_slot->addItem(Materias.Icon(i),Materias.Name(i));}
-    for (int i=0;i<0x5b;i++){if(Materias.Name(i) !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(Materias.Icon(i),Materias.Name(i));}}
-    for (int i=0;i<0x5b;i++){if(Materias.Name(i) !=tr("DON'T USE")){ui->combo_add_mat_slot_2->addItem(Materias.Icon(i),Materias.Name(i));}}
     //Fill the type combo boxes,picking a random materia of that type for each needed icon
-    ui->combo_mat_type->addItem(Materias.Icon_AllMateria(),tr("All"),0);
-    ui->combo_mat_type->addItem(Materias.Icon(0x38),tr("Magic"),0);
-    ui->combo_mat_type->addItem(Materias.Icon(0x4F),tr("Summon"),0);
-    ui->combo_mat_type->addItem(Materias.Icon(0x00),tr("Independent"),0);
-    ui->combo_mat_type->addItem(Materias.Icon(0x1C),tr("Support"),0);
-    ui->combo_mat_type->addItem(Materias.Icon(0x0E),tr("Command"),0);
-    ui->combo_mat_type_slot->addItem(Materias.Icon_AllMateria(),tr("All"),0);
-    ui->combo_mat_type_slot->addItem(Materias.Icon(0x38),tr("Magic"),0);
-    ui->combo_mat_type_slot->addItem(Materias.Icon(0x4F),tr("Summon"),0);
-    ui->combo_mat_type_slot->addItem(Materias.Icon(0x00),tr("Independent"),0);
-    ui->combo_mat_type_slot->addItem(Materias.Icon(0x1C),tr("Support"),0);
-    ui->combo_mat_type_slot->addItem(Materias.Icon(0x0E),tr("Command"),0);
     //LATER//
     //set the materia buttons.
     //to have the mslot and mlink items used.
@@ -98,10 +82,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     }
 
     //Hide the stuff that needs to be hidden.
-    ui->eskill_group->setVisible(false);
-    ui->eskill_group_2->setVisible(false);
-    ui->combo_add_mat->setVisible(false);
-    ui->combo_add_mat_slot->setVisible(false);
     ui->combo_id->setVisible(false);
     ui->lbl_id->setVisible(false);
     ui->compare_table->setEnabled(false);
@@ -228,6 +208,22 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     ui->dialog_preview_box->setLayout(dialog_preview_layout);
     ui->dialog_preview_box->setContentsMargins(0,0,0,0);
 
+    materia_editor = new MateriaEditor();
+    QHBoxLayout *materia_editor_layout = new QHBoxLayout();
+    materia_editor_layout->setContentsMargins(0,0,0,0);
+    materia_editor_layout->addWidget(materia_editor);
+    ui->group_materia->setLayout(materia_editor_layout);
+    ui->group_materia->setContentsMargins(0,0,0,0);
+    materia_editor->setStarsSize(48);
+
+    materia_editor_slot = new MateriaEditor();
+    QHBoxLayout *materia_editor_slot_layout = new QHBoxLayout();
+    materia_editor_slot_layout->setContentsMargins(0,0,0,0);
+    materia_editor_slot_layout->addWidget(materia_editor_slot);
+    ui->group_materia_slot->setLayout(materia_editor_slot_layout);
+    ui->group_materia_slot->setContentsMargins(0,0,0,0);
+    materia_editor_slot->setStarsSize(32);
+
     // Connect the unknown and unknown compare scrolling.
     connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );
     connect( ui->tbl_compare_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_unknown->verticalScrollBar(), SLOT(setValue(int)) );
@@ -237,6 +233,11 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     connect(dialog_preview,SIGNAL(LL_ColorChanged(QColor)),this,SLOT(set_LL_Color(QColor)));
     connect(dialog_preview,SIGNAL(LR_ColorChanged(QColor)),this,SLOT(set_LR_Color(QColor)));
 
+    connect(materia_editor,SIGNAL(ap_changed(qint32)),this,SLOT(materia_ap_changed(qint32)));
+    connect(materia_editor,SIGNAL(id_changed(qint8)),this,SLOT(materia_id_changed(qint8)));
+
+    connect(materia_editor_slot,SIGNAL(ap_changed(qint32)),this,SLOT(materia_slot_ap_changed(qint32)));
+    connect(materia_editor_slot,SIGNAL(id_changed(qint8)),this,SLOT(materia_slot_id_changed(qint8)));
     file_modified(false);
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
@@ -832,7 +833,6 @@ void MainWindow::on_action_Region_USA_triggered(bool checked)
         ui->action_Region_USA->setIcon(QIcon(":/icon/us_sel"));
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-        //Text.init(0);
     }
 }}
 /*~~~~~~~~~~~~~SET PAL MC HEADER~~~~~~~~~~~~~~~~*/
@@ -894,7 +894,6 @@ void MainWindow::on_action_Region_PAL_German_triggered(bool checked)
         ui->action_Region_PAL_German->setIcon(QIcon(":/icon/de_sel"));
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-        //Text.init(0);
     }
 }}
 /*~~~~~~~~~~~~~SET PAL_Spanish MC HEADER~~~~~~~~~~~~~~~~*/
@@ -925,7 +924,6 @@ void MainWindow::on_action_Region_PAL_Spanish_triggered(bool checked)
         ui->action_Region_PAL_Spanish->setIcon(QIcon(":/icon/es_sel"));
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-        //Text.init(0);
     }
 }}
 /*~~~~~~~~~~~~~SET PAL_French MC HEADER~~~~~~~~~~~~~~~~*/
@@ -956,7 +954,6 @@ void MainWindow::on_action_Region_PAL_French_triggered(bool checked)
         ui->action_Region_PAL_French->setIcon(QIcon(":/icon/fr_sel"));
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-        //Text.init(0);
     }
 }}
 /*~~~~~~~~~~~~~SET JPN MC HEADER~~~~~~~~~~~~~~~~*/
@@ -987,7 +984,6 @@ void MainWindow::on_action_Region_JPN_triggered(bool checked)
         ui->action_Region_JPN->setIcon(QIcon(":/icon/jp_sel"));
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-        //Text.init(1);
     }
 }}
 /*~~~~~~~~~~~~~SET JPN_International MC HEADER~~~~~~~~~~~~~~~~*/
@@ -1018,7 +1014,6 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
         ui->action_Region_JPN_International->setIcon(QIcon(":/icon/jp_sel"));
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
-        //Text.init(1);
     }
 }}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -1064,6 +1059,7 @@ QString MainWindow::avatar_style(int id)
       }
     return style;
 }
+
 /*~~~~~~~~~Char Update~~~~~~~~~~*/
 void MainWindow::charupdate(void)
 {
@@ -2043,17 +2039,7 @@ if(ff7->slot[s].chars[curchar].materias[15].id != 0xFF){ui->a_m_s8->setToolTip(M
 
 
 quint8 current_id = ff7->slot[s].chars[curchar].materias[mslotsel].id;
-ui->btn_m_lvl1_slot->setVisible(0);
-ui->btn_m_lvl2_slot->setVisible(0);
-ui->btn_m_lvl3_slot->setVisible(0);
-ui->btn_m_lvl4_slot->setVisible(0);
-ui->btn_m_lvl5_slot->setVisible(0);
 
-ui->spell_lvl1_group_slot->setVisible(0);
-ui->spell_lvl2_group_slot->setVisible(0);
-ui->spell_lvl3_group_slot->setVisible(0);
-ui->spell_lvl4_group_slot->setVisible(0);
-ui->spell_lvl5_group_slot->setVisible(0);
 ui->w_m_s1_frame->setFrameStyle(0);
 ui->w_m_s2_frame->setFrameStyle(0);
 ui->w_m_s3_frame->setFrameStyle(0);
@@ -2094,103 +2080,34 @@ switch(mslotsel)
     case 15:ui->a_m_s8_frame->setFrameStyle(1);    break;
 }
 
-if(current_id == 0xFF) //if the slot is empty take some precautions
-{
-    ui->combo_add_mat_slot_2->clear();
-    for(int i=0;i<0x5B;i++)
-    {
-        if(Materias.Name(i) !=tr("DON'T USE")){ui->combo_add_mat_slot_2->addItem(Materias.Icon(i),Materias.Name(i));}
-    }
-    ui->combo_add_mat_slot->setCurrentIndex(0);
-    ui->combo_mat_type_slot->setCurrentIndex(0);
-    load=true;//type calls reset load
-    ui->lbl_mat_stats_slot->setText(tr("Empty Slot"));
-    ui->lcd_ap_master_slot->display(0);
-    ui->sb_addap_slot->setValue(0);
-    ui->sb_addap_slot->setMaximum(0);
-    ff7->slot[s].chars[curchar].materias[mslotsel].id =0xFF;
-    ff7->slot[s].chars[curchar].materias[mslotsel].ap[0]=0xFF;//Just incase so the ap is set correct
-    ff7->slot[s].chars[curchar].materias[mslotsel].ap[1]=0xFF;//This will avoid the possiblity of
-    ff7->slot[s].chars[curchar].materias[mslotsel].ap[2]=0xFF;//the "gravity" bug dlpb found.
-}
-
-else if(Materias.Name(current_id) == tr("DON'T USE")) //this is a placeholder materia.
-{
-
-    ui->lbl_mat_stats_slot->setText(Materias.Stat_String(current_id));
-    ui->lcd_ap_master_slot->display(tr("NO CAP"));
-    ui->sb_addap_slot->setMaximum(16777215);
-    qint32 aptemp = ff7->slot[s].chars[curchar].materias[mslotsel].ap[0] |(ff7->slot[s].chars[curchar].materias[mslotsel].ap[1] << 8) | (ff7->slot[s].chars[curchar].materias[mslotsel].ap[2] << 16);
-    ui->sb_addap_slot->setValue(aptemp);
-    ui->combo_add_mat_slot->setCurrentIndex(current_id);
-    // Set the unknown skills
-    ui->spell_lvl1_group_slot->setVisible(1);
-    ui->lbl_spell_lvl1_slot->setText(Materias.Skills(ui->combo_add_mat_slot->currentIndex(),0));
-}
-
-else // make the materia look nice
-{
-    load=true;
-    qint32 masterap=0;
-    ui->lbl_mat_stats_slot->setText(Materias.Stat_String(current_id));// set stat string..
-    qint32 aptemp = ff7->slot[s].chars[curchar].materias[mslotsel].ap[0] |(ff7->slot[s].chars[curchar].materias[mslotsel].ap[1] << 8) | (ff7->slot[s].chars[curchar].materias[mslotsel].ap[2] << 16);
-    if(Materias.Levels(current_id) >1){masterap = Materias.Ap(current_id,Materias.Levels(current_id)-1);}
-    ui->lcd_ap_master_slot->display(masterap);
-    if(Materias.Levels(current_id)>1){ui->sb_addap_slot->setMaximum(masterap);}
-    // Check Materia Max AP and Set the Spin Box's Max Value.
-    else{ui->sb_addap_slot->setMaximum(16777215);}
-    ui->sb_addap_slot->setValue(aptemp);
-    //Show levels stars
-    int level=0;
-    ui->combo_mat_type_slot->setCurrentIndex(Materias.Type(current_id));
-    load=true;//mat_type calls reset load.
-    ui->combo_add_mat_slot->setCurrentIndex(current_id);
-
-    if(current_id == 0x2C)
-    {
-        ui->mskill_group->setVisible(false);
-        ui->eskill_group_2->setVisible(true);
-        ui->sb_addap_slot->setEnabled(false);
-        geteskills2(mslotsel);
-    }
-    else
-    {
-        ui->mskill_group->setVisible(true);
-        ui->eskill_group_2->setVisible(false);
-        ui->sb_addap_slot->setEnabled(true);
-    }
-
-    load=false;
-    for(int i=0; i<Materias.Levels(current_id);i++){if(aptemp >= Materias.Ap(current_id,i)){level++;}}
-    switch (Materias.Levels(current_id))
-
-    {
-        case 5:ui->btn_m_lvl5_slot->setVisible(1);
-        case 4:ui->btn_m_lvl4_slot->setVisible(1);
-        case 3:ui->btn_m_lvl3_slot->setVisible(1);
-        case 2:ui->btn_m_lvl2_slot->setVisible(1);
-        case 1:ui->btn_m_lvl1_slot->setVisible(1);
-
-    }
-//fill all stars needed..
-
-    ui->btn_m_lvl1_slot->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
-    ui->btn_m_lvl2_slot->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
-    ui->btn_m_lvl3_slot->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
-    ui->btn_m_lvl4_slot->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
-    ui->btn_m_lvl5_slot->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
-    switch(level)
-    {
-        case 5: ui->spell_lvl5_group_slot->setVisible(1); ui->lbl_spell_lvl5_slot->setText(Materias.Skills(current_id,4));ui->btn_m_lvl5_slot->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
-        case 4: ui->spell_lvl4_group_slot->setVisible(1); ui->lbl_spell_lvl4_slot->setText(Materias.Skills(current_id,3));ui->btn_m_lvl4_slot->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
-        case 3: ui->spell_lvl3_group_slot->setVisible(1); ui->lbl_spell_lvl3_slot->setText(Materias.Skills(current_id,2));ui->btn_m_lvl3_slot->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
-        case 2: ui->spell_lvl2_group_slot->setVisible(1); ui->lbl_spell_lvl2_slot->setText(Materias.Skills(current_id,1));ui->btn_m_lvl2_slot->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
-        case 1: ui->spell_lvl1_group_slot->setVisible(1); ui->lbl_spell_lvl1_slot->setText(Materias.Skills(current_id,0));ui->btn_m_lvl1_slot->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
-    }
-} //end of else
+qint32 current_ap = ff7->slot[s].chars[curchar].materias[mslotsel].ap[0] |(ff7->slot[s].chars[curchar].materias[mslotsel].ap[1] << 8) | (ff7->slot[s].chars[curchar].materias[mslotsel].ap[2] << 16);
+materia_editor_slot->setMateria(current_id,current_ap);
 load=false;
 update_stat_totals();
 }
+
+void MainWindow::materia_slot_ap_changed(qint32 ap)
+{if(!load){
+    if(ap ==  materia_editor_slot->MaxAP())
+    {
+        for(int i=0;i<3;i++){ff7->slot[s].chars[curchar].materias[mslotsel].ap[i] = 0xFF;}
+    }
+    else
+    {
+        int a = (ap & 0xff);
+        int b = (ap & 0xff00) >> 8;
+        int c = (ap & 0xff0000) >> 16;
+        ff7->slot[s].chars[curchar].materias[mslotsel].ap[0] = a;
+        ff7->slot[s].chars[curchar].materias[mslotsel].ap[1] = b;
+        ff7->slot[s].chars[curchar].materias[mslotsel].ap[2] = c;
+    }
+    materiaupdate_slot();
+}}
+void MainWindow::materia_slot_id_changed(qint8 id)
+{if(!load){
+    ff7->slot[s].chars[curchar].materias[mslotsel].id = id;
+    materiaupdate_slot();
+}}
 /*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
 void MainWindow::set_ntsc_time(void)
 {
@@ -2255,23 +2172,23 @@ void MainWindow::materiaupdate(void)
 
     for(int mat=0;mat<200;mat++)// partys materias
     {
-        qint32 aptemp=0;
+        qint32 current_ap=0;
         QString ap;
-        if (ff7->slot[s].materias[mat].id == 0x2C)
+        if(ff7->slot[s].materias[mat].id == 0x2C)
         {
             newItem = new QTableWidgetItem(Materias.Icon(ff7->slot[s].materias[mat].id),Materias.Name(ff7->slot[s].materias[mat].id),0);
             ui->tbl_materia->setItem(mat,0,newItem);
-            aptemp = ff7->slot[s].materias[mat].ap[0] |(ff7->slot[s].materias[mat].ap[1] << 8) | (ff7->slot[s].materias[mat].ap[2] << 16);
-            if (aptemp == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
+            current_ap = ff7->slot[s].materias[mat].ap[0] |(ff7->slot[s].materias[mat].ap[1] << 8) | (ff7->slot[s].materias[mat].ap[2] << 16);
+            if (current_ap == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
             else{newItem =new QTableWidgetItem(QString("N/A"),0);ui->tbl_materia->setItem(mat,1,newItem);}
         }
         else if (ff7->slot[s].materias[mat].id !=0xff)
         {
             newItem = new QTableWidgetItem(Materias.Icon(ff7->slot[s].materias[mat].id),Materias.Name(ff7->slot[s].materias[mat].id),0);
             ui->tbl_materia->setItem(mat,0,newItem);
-            aptemp = ff7->slot[s].materias[mat].ap[0] |(ff7->slot[s].materias[mat].ap[1] << 8) | (ff7->slot[s].materias[mat].ap[2] << 16);
-            if (aptemp == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
-            else{newItem =new QTableWidgetItem(ap.setNum(aptemp));ui->tbl_materia->setItem(mat,1,newItem);}
+            current_ap = ff7->slot[s].materias[mat].ap[0] |(ff7->slot[s].materias[mat].ap[1] << 8) | (ff7->slot[s].materias[mat].ap[2] << 16);
+            if (current_ap == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
+            else{newItem =new QTableWidgetItem(ap.setNum(current_ap));ui->tbl_materia->setItem(mat,1,newItem);}
         }
         else
         {
@@ -2286,93 +2203,34 @@ void MainWindow::materiaupdate(void)
     }
 
     quint8 current_id= ff7->slot[s].materias[j].id;
-    //before we check to see what kind of materia and lvl hide buttons and spellgroups
-    ui->btn_m_lvl1->setVisible(0);
-    ui->btn_m_lvl2->setVisible(0);
-    ui->btn_m_lvl3->setVisible(0);
-    ui->btn_m_lvl4->setVisible(0);
-    ui->btn_m_lvl5->setVisible(0);
-    if(current_id>0 and current_id<91)
-    {
-        ui->btn_m_lvl1->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
-        ui->btn_m_lvl2->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
-        ui->btn_m_lvl3->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
-        ui->btn_m_lvl4->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
-        ui->btn_m_lvl5->setIcon(QPixmap::fromImage(Materias.Image_EmptyStar(current_id)));
-    }
-    ui->lbl_spell_lvl1->setVisible(0);
-    ui->lbl_spell_lvl2->setVisible(0);
-    ui->lbl_spell_lvl3->setVisible(0);
-    ui->lbl_spell_lvl4->setVisible(0);
-    ui->lbl_spell_lvl5->setVisible(0);
-
-    if(current_id == 0xFF) //if the slot is empty take some precautions
-    {
-        ui->combo_add_mat->setCurrentIndex(0);
-        ui->combo_mat_type->setCurrentIndex(0);
-        load=true;
-        ui->lbl_mat_stats->setText(tr("Empty Slot"));
-        ui->lcd_ap_master->display(0);
-        ui->sb_addap->setValue(0);
-        ui->sb_addap->setMaximum(0);
-    }
-
-    else if(Materias.Name(current_id) == tr("DON'T USE")) //this is a placeholder materia.
-    {
-        ui->lbl_mat_stats->setText(Materias.Stat_String(current_id));
-        ui->lcd_ap_master->display(tr("NO CAP"));
-        ui->sb_addap->setMaximum(16777215);
-        qint32 aptemp = ff7->slot[s].materias[j].ap[0] |(ff7->slot[s].materias[j].ap[1] << 8) | (ff7->slot[s].materias[j].ap[2] << 16);
-        load=true;
-        ui->sb_addap->setValue(aptemp);
-        // Set the unknown skills
-        ui->combo_add_mat->setCurrentIndex(0);
-        ui->combo_mat_type->setCurrentIndex(0);
-        load=true;
-        ui->lbl_spell_lvl1->setVisible(1);
-        ui->lbl_spell_lvl1->setText(Materias.Skills(current_id,0));
-    }
-
-    else // make the materia look nice
-    {
-        qint32 masterap=0;
-        ui->lbl_mat_stats->setText(Materias.Stat_String(current_id));// set stat string..
-        qint32 aptemp = ff7->slot[s].materias[j].ap[0] |(ff7->slot[s].materias[j].ap[1] << 8) | (ff7->slot[s].materias[j].ap[2] << 16);
-        if(Materias.Levels(current_id) >1){masterap = (Materias.Ap(current_id,Materias.Levels(current_id)-1));}
-        ui->lcd_ap_master->display(masterap);
-        // Check Materia Max AP and Set the Spin Box's Max Value.
-        if(Materias.Levels(current_id)>1){ui->sb_addap->setMaximum(masterap);}
-        else{ui->sb_addap->setMaximum(16777215);}
-        load=true;
-        ui->sb_addap->setValue(aptemp);
-        //Show levels stars
-        int level=0;
-        if(current_id == 0x2C){ui->eskill_group->setVisible(true);ui->sb_addap->setEnabled(0);geteskills(j);}
-        else{ui->eskill_group->setVisible(false);ui->sb_addap->setEnabled(1);}
-
-        for(int i=0; i<Materias.Levels(current_id);i++){if(aptemp >= Materias.Ap(current_id,i)){level++;}}
-        switch (Materias.Levels(current_id))
-        {
-            case 5: ui->btn_m_lvl5->setVisible(1);
-            case 4: ui->btn_m_lvl4->setVisible(1);
-            case 3: ui->btn_m_lvl3->setVisible(1);
-            case 2: ui->btn_m_lvl2->setVisible(1);
-            case 1: ui->btn_m_lvl1->setVisible(1);
-        };
-
-        //fill all stars needed..
-        switch(level)
-        {
-        case 5:ui->lbl_spell_lvl5->setText(Materias.Skills(current_id,4));if(ui->lbl_spell_lvl5->text()!=""){ui->lbl_spell_lvl5->setVisible(1);}ui->btn_m_lvl5->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
-        case 4:ui->lbl_spell_lvl4->setText(Materias.Skills(current_id,3));if(ui->lbl_spell_lvl4->text()!=""){ui->lbl_spell_lvl4->setVisible(1);}ui->btn_m_lvl4->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
-        case 3:ui->lbl_spell_lvl3->setText(Materias.Skills(current_id,2));if(ui->lbl_spell_lvl3->text()!=""){ui->lbl_spell_lvl3->setVisible(1);}ui->btn_m_lvl3->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
-        case 2:ui->lbl_spell_lvl2->setText(Materias.Skills(current_id,1));if(ui->lbl_spell_lvl2->text()!=""){ui->lbl_spell_lvl2->setVisible(1);}ui->btn_m_lvl2->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
-        case 1:ui->lbl_spell_lvl1->setText(Materias.Skills(current_id,0));if(ui->lbl_spell_lvl1->text()!=""){ui->lbl_spell_lvl1->setVisible(1);}ui->btn_m_lvl1->setIcon(QPixmap::fromImage(Materias.Image_FullStar(current_id)));
-        };
-    } //end of else
-load=false;
-ui->tbl_materia->setCurrentCell(j,1);//so that right side is set correctly.
+    qint32 current_ap= ff7->slot[s].materias[j].ap[0] |(ff7->slot[s].materias[j].ap[1] << 8) | (ff7->slot[s].materias[j].ap[2] << 16);
+    materia_editor->setMateria(current_id,current_ap);
+    ui->tbl_materia->setCurrentCell(j,1);//so that right side is set correctly.
+    load=false;
 }
+void MainWindow::materia_ap_changed(qint32 ap)
+{if(!load){
+    if(ap ==  materia_editor->MaxAP())
+    {
+        for(int i=0;i<3;i++){ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[i] = 0xFF;}
+    }
+    else
+    {
+        int a = (ap & 0xff);
+        int b = (ap & 0xff00) >> 8;
+        int c = (ap & 0xff0000) >> 16;
+        ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[0] = a;
+        ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[1] = b;
+        ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[2] = c;
+    }
+    materiaupdate();
+}}
+void MainWindow::materia_id_changed(qint8 id)
+{if(!load){
+    ff7->slot[s].materias[ui->tbl_materia->currentRow()].id = id;
+    materiaupdate();
+}}
+
 void MainWindow::itemupdate()
 {
     QTableWidgetItem *newItem;
@@ -3636,206 +3494,54 @@ void MainWindow::on_tbl_itm_currentCellChanged(int row)
 
 void MainWindow::on_tbl_materia_currentCellChanged(int row)
 {if(!load){//file_modified(true);
-    if(ff7->slot[s].materias[row].id == 0x2C)//E.Skill Materia
-    {
-       ui->eskill_group->setVisible(true);
-       geteskills(row);
-       ui->combo_add_mat->setCurrentIndex(ff7->slot[s].materias[row].id);
-       ui->sb_addap->setEnabled(0);
-    }
-    else if(ff7->slot[s].materias[row].id == 0xFF) //if the slot is empty take some precautions
-    {
-       load=true;
-       ui->lbl_mat_stats->setText(tr("Empty Slot"));
-       ui->lcd_ap_master->display(0);
-       ui->sb_addap->setValue(0);
-       ui->sb_addap->setMaximum(0);
-       ui->combo_add_mat->setCurrentIndex(0);
-       ui->combo_mat_type->setCurrentIndex(0);
-       ui->combo_add_mat_2->clear();
-       for(int i=0;i<0x5B;i++)
-       {
-           if(Materias.Name(i) !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(Materias.Icon(i),Materias.Name(i));}
-       }
-       ui->btn_m_lvl1->setVisible(0);
-       ui->btn_m_lvl2->setVisible(0);
-       ui->btn_m_lvl3->setVisible(0);
-       ui->btn_m_lvl4->setVisible(0);
-       ui->btn_m_lvl5->setVisible(0);
-       ui->eskill_group->setVisible(false);
-       load=false;
-    }
-    else
-    {
-        ui->eskill_group->setVisible(false);
-        ui->combo_add_mat->setCurrentIndex(ff7->slot[s].materias[row].id);
-        ui->sb_addap->setEnabled(1);
-        ui->sb_addap->setValue(ff7->slot[s].materias[row].ap[0] |(ff7->slot[s].materias[row].ap[1] << 8) | (ff7->slot[s].materias[row].ap[2] << 16));
-    }
+        qint32 current_ap = ff7->slot[s].materias[row].ap[0] |(ff7->slot[s].materias[row].ap[1] << 8) | (ff7->slot[s].materias[row].ap[2] << 16);
+        materia_editor->setMateria(ff7->slot[s].materias[row].id,current_ap);
 }}
 
-void MainWindow::on_sb_addap_valueChanged(int value)
-{if(!load && ui->tbl_materia->currentRow() >-1){file_modified(true);
-    if(value ==  Materias.Ap(ui->combo_add_mat->currentIndex(),Materias.Levels(ui->combo_add_mat->currentIndex())-1) && Materias.Levels(ui->combo_add_mat->currentIndex()) >1)
-    {
-        for(int i=0;i<3;i++){ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[i] = 0xFF;}
-    }
-    else
-    {
-        int a = (value & 0xff);
-        int b = (value & 0xff00) >> 8;
-        int c = (value & 0xff0000) >> 16;
-        ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[0] = a;
-        ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[1] = b;
-        ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[2] = c;
-    }
-    materiaupdate();
-}}
-
-void MainWindow::on_combo_add_mat_currentIndexChanged(int index)
-{if(!load){
-    if(ui->combo_add_mat->currentText() ==tr("DON'T USE"))// this is a placeholder materia
-    {
-        QMessageBox::information(this,tr("Empty Materia"),tr("Place holder Materia Detected\n Remember 16777215 AP = master"));
-        materiaupdate();//clean up the materia.
-        return; //we are done here.
-    }
-        ui->combo_mat_type->setCurrentIndex(Materias.Type(index));
-        load=true;
-        for(int i=0;i<ui->combo_add_mat_2->count();i++)
-        {
-            if(ui->combo_add_mat_2->itemText(i)==Materias.Name(index))
-            {
-                ui->combo_add_mat_2->setCurrentIndex(i);
-            }
-        }
-        load=false;
-    ff7->slot[s].materias[ui->tbl_materia->currentRow()].id = index;
-    materiaupdate();
-}}
-
-void MainWindow::on_btn_m_lvl1_clicked(){ui->sb_addap->setValue(Materias.Ap(ui->combo_add_mat->currentIndex(),0));    materiaupdate();}
-void MainWindow::on_btn_m_lvl2_clicked(){ui->sb_addap->setValue(Materias.Ap(ui->combo_add_mat->currentIndex(),1));    materiaupdate();}
-void MainWindow::on_btn_m_lvl3_clicked(){ui->sb_addap->setValue(Materias.Ap(ui->combo_add_mat->currentIndex(),2));    materiaupdate();}
-void MainWindow::on_btn_m_lvl4_clicked(){ui->sb_addap->setValue(Materias.Ap(ui->combo_add_mat->currentIndex(),3));    materiaupdate();}
-void MainWindow::on_btn_m_lvl5_clicked(){ui->sb_addap->setValue(Materias.Ap(ui->combo_add_mat->currentIndex(),4));    materiaupdate();}
-
-void MainWindow::on_combo_mat_type_currentIndexChanged(int index)
-{
-    load=true;
-    ui->combo_add_mat_2->clear();
-    if(index == 0)
-    {
-        for(int i=0;i<0x5B;i++)
-        {
-            if(Materias.Name(i) !=tr("DON'T USE")){ui->combo_add_mat_2->addItem(Materias.Icon(i),Materias.Name(i));}
-        }
-    }
-    else{for(int i=0;i<0x5B;i++){if(index==Materias.Type(i)){ui->combo_add_mat_2->addItem(Materias.Icon(i),Materias.Name(i));}}}
-    load=false;
-}
-
-void MainWindow::on_combo_add_mat_2_currentIndexChanged()
-{if(!load){//file_modified(true); //set combo_add_mat.setCurrentindex = selected materia.id
-    for(int i=0;i<0x5B;i++)
-    {
-        if(ui->combo_add_mat_2->currentText()== Materias.Name(i)){ui->combo_add_mat->setCurrentIndex(i);}
-    }
-// if its eskill set it up right , or else do normal setup.
-}}
-
-
-void MainWindow::on_clearMateria_clicked()
-{
-    ff7->slot[s].materias[ui->tbl_materia->currentRow()].id = 0xFF;
-    ui->sb_addap->setValue(0xFFFFFF);
-    materiaupdate();
-}
-
-void MainWindow::on_btn_eskillall_clicked()
-{
-    for (int i=0;i<24;i++)
-    {
-        ui->list_eskill->item(i)->setCheckState(Qt::Checked);
-    }
-}
-
-void MainWindow::geteskills(int row)
-{
-    load=true;
-    quint32 temp = ff7->slot[s].materias[row].ap[0] |(ff7->slot[s].materias[row].ap[1] << 8) | (ff7->slot[s].materias[row].ap[2] << 16);
-    ui->sb_addap->setValue(temp);// no one cares cause there is no ap really..
-    for (int i=0;i<24;i++)
-    {
-        if (ff7->slot[s].materias[row].ap[i/8] & (1 << (i%8))){ui->list_eskill->item(i)->setCheckState(Qt::Checked);}
-        else{ui->list_eskill->item(i)->setCheckState(Qt::Unchecked);}
-    }
-    load=false;
-}
-void MainWindow::on_list_eskill_clicked(const QModelIndex &index)
-{if(!load){file_modified(true);
-    int j = index.row();
-    if (ui->list_eskill->item(j)->checkState() == Qt::Checked){ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[j/8] |= (1<< (j%8));}
-    else{ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[j/8] &= ~(1<<(j%8));}
-
-    quint32 temp = ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[0] |(ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[1] << 8) | (ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[2] << 16);
-    load=true;
-    ui->sb_addap->setValue(temp);
-    load=false;
-}}
-
-void MainWindow::on_btn_eskillclear_clicked()
-{
-    for (int i=0;i<24;i++)
-    {
-        ui->list_eskill->item(i)->setCheckState(Qt::Unchecked);
-    }//loop thru and uncheck no need to apply each one should thrown an itemChanged() event
-}
 
 void MainWindow::on_btn_add_all_materia_clicked()
 {
-    int j = ui->tbl_materia->currentRow();
-    for(int i=117;i<200;i++)
-    {//place one of each at lowest possible point
-        ui->tbl_materia->setCurrentCell(i,0);
-        //starting w/ magic (every first materia needs to be manually set) then support, command,indpendent , summon. fill the table w/ materia.
-        if(i==117){ff7->slot[s].materias[i].id = 0x31; ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        else if(i>117 && i<139)
-        {
-            ui->combo_mat_type->setCurrentIndex(1);
-            ui->combo_add_mat_2->setCurrentIndex(i-117);
-            ui->sb_addap->setValue(ui->sb_addap->maximum());
-        }
-        else if (i==139){ff7->slot[s].materias[i].id = 0x17; ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        else if (i>139 && i<152)
-        {
-            ui->combo_mat_type->setCurrentIndex(4);
-            ui->combo_add_mat_2->setCurrentIndex(i-139);
-            ui->sb_addap->setValue(ui->sb_addap->maximum());
-        }
-        else if (i==152){ff7->slot[s].materias[i].id = 0x0E; ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        else if (i>152 && i<166)
-        {
-            ui->combo_mat_type->setCurrentIndex(5);
-            ui->combo_add_mat_2->setCurrentIndex(i-152);
-            ui->sb_addap->setValue(ui->sb_addap->maximum());
-        }
-        else if (i==166){ff7->slot[s].materias[i].id = 0x00; ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        else if (i>166 && i<183)
-        {
-            ui->combo_mat_type->setCurrentIndex(3);
-            ui->combo_add_mat_2->setCurrentIndex(i-166);
-            ui->sb_addap->setValue(ui->sb_addap->maximum());
-        }
-        else if (i==183){ff7->slot[s].materias[i].id = 0x4A; ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        else if (i>183 && i<200)
-        {
-            ui->combo_mat_type->setCurrentIndex(2);
-            ui->combo_add_mat_2->setCurrentIndex(i-183);
-            ui->sb_addap->setValue(ui->sb_addap->maximum());
-        }
+
+    //int j = ui->tbl_materia->currentRow();
+    //place one of each at lowest ossible point
+    for(int i=117;i<142;i++)
+    {//Starting With Magic Materia
+        if(i<132){ff7->slot[s].materias[i].id=(i-68); ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        else if((i>=132) && (i<136)){ff7->slot[s].materias[i-1].id =(i-68);ff7->slot[s].materias[i-1].ap[0]=0xFF;ff7->slot[s].materias[i-1].ap[1]=0xFF;ff7->slot[s].materias[i-1].ap[2]=0xFF;}
+        else if((i>=136) && (i<142)){ff7->slot[s].materias[i-3].id =(i-68);ff7->slot[s].materias[i-3].ap[0]=0xFF;ff7->slot[s].materias[i-3].ap[1]=0xFF;ff7->slot[s].materias[i-3].ap[2]=0xFF;}
     }
-    ui->tbl_materia->setCurrentCell(j,0);
+    for(int i=139;i<152;i++)
+    {//Then Support
+        ff7->slot[s].materias[i].id = (i-116);ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;
+    }
+    for(int i=152;i<166;i++)
+    {//Then Command
+        if(i==152){ff7->slot[s].materias[i].id = 0x0E;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        if(i==153){ff7->slot[s].materias[i].id = 0x0F;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        if(i==154){ff7->slot[s].materias[i].id = 0x13;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        if(i==155){ff7->slot[s].materias[i].id = 0x14;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        if(i==156){ff7->slot[s].materias[i].id = 0x15;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        if(i==157){ff7->slot[s].materias[i].id = 0x24;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        if(i==158){ff7->slot[s].materias[i].id = 0x25;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        if(i==159){ff7->slot[s].materias[i].id = 0x27;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        if(i==160){ff7->slot[s].materias[i].id = 0x28;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        if(i==161){ff7->slot[s].materias[i].id = 0x29;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        if(i==162){ff7->slot[s].materias[i].id = 0x2A;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        if(i==163){ff7->slot[s].materias[i].id = 0x2B;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        if(i==164){ff7->slot[s].materias[i].id = 0x2C;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        if(i==165){ff7->slot[s].materias[i].id = 0x30;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+    }
+    for(int i=166;i<183;i++)
+    {
+        if(i<180){ff7->slot[s].materias[i].id = i-166;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        else{ff7->slot[s].materias[i].id =i-164;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+
+    }
+    for(int i=183;i<200;i++)
+    {
+        ff7->slot[s].materias[i].id = (i-109);ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;
+    }
+    materiaupdate();
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~SAVE LOCATION TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -4003,141 +3709,22 @@ void MainWindow::on_combo_weapon_activated(int index)
     }
 }}
 
-void MainWindow::on_sb_addap_slot_valueChanged(int value)
-{if(!load){file_modified(true);
-    if(value == Materias.Ap(ui->combo_add_mat_slot->currentIndex(),Materias.Levels(ui->combo_add_mat_slot->currentIndex())-1) && Materias.Levels(ui->combo_add_mat_slot->currentIndex()) >1)
-    {
-        for(int i=0;i<3;i++){ff7->slot[s].chars[curchar].materias[mslotsel].ap[i] = 0xFF;}
-    }
-    else
-    {
-        int a = (value & 0xff);
-        int b = (value & 0xff00) >> 8;
-        int c = (value & 0xff0000) >> 16;
-        ff7->slot[s].chars[curchar].materias[mslotsel].ap[0] = a;
-        ff7->slot[s].chars[curchar].materias[mslotsel].ap[1] = b;
-        ff7->slot[s].chars[curchar].materias[mslotsel].ap[2] = c;
-    }
-    materiaupdate_slot();
-}}
-
-void MainWindow::on_clearMateria_slot_clicked()
-{
-    ui->combo_mat_type_slot->setCurrentIndex(0);
-    ui->combo_add_mat_slot->setCurrentIndex(0);
-    ff7->slot[s].chars[curchar].materias[mslotsel].id = 0xFF;
-    ui->sb_addap_slot->setValue(0xFFFFFF);
-    if(!load){file_modified(true); }
-    materiaupdate_slot();
-}
-
-void MainWindow::on_combo_mat_type_slot_currentIndexChanged(int index)
-{
-    load=true;
-    ui->combo_add_mat_slot_2->clear();
-    if(index == 0)
-    {
-        for(int i=0;i<0x5B;i++)
-        {
-            if(Materias.Name(i) !=tr("DON'T USE")){ui->combo_add_mat_slot_2->addItem(Materias.Icon(i),Materias.Name(i));}
-        }
-    }
-    else{for(int i=0;i<0x5B;i++){if(index==Materias.Type(i)){ui->combo_add_mat_slot_2->addItem(Materias.Icon(i),Materias.Name(i));}}}
-    load=false;
-}
-void MainWindow::on_combo_add_mat_slot_currentIndexChanged(int index)
-{
-    if(ui->combo_add_mat_slot->currentText() ==tr("DON'T USE"))// this is a placeholder materia
-    {
-        QMessageBox::information(this,tr("Empty Materia"),tr("Place holder Materia Detected\n Remember 16777215 AP = master"));
-        guirefresh(0);// clean up the gui.
-        return; //we are done here.
-    }
-    if(!load)
-    {
-        file_modified(true);
-        ff7->slot[s].chars[curchar].materias[mslotsel].id = index;
-    }
-    ui->combo_mat_type_slot->setCurrentIndex(Materias.Type(index));
-    for(int i=0;i<ui->combo_add_mat_slot_2->count();i++)
-    {
-        if(ui->combo_add_mat_slot_2->itemText(i)==Materias.Name(index)){ui->combo_add_mat_slot_2->setCurrentIndex(i);}
-    }
-    materiaupdate_slot();
-}
-
-void MainWindow::on_combo_add_mat_slot_2_currentIndexChanged()
-{if(!load){//set combo_add_mat.setCurrentindex = selected materia.id
-    for(int i=0;i<0x5B;i++)
-    {
-        if(ui->combo_add_mat_slot_2->currentText()== Materias.Name(i)){ui->combo_add_mat_slot->setCurrentIndex(i);}
-    }
-}}
-void MainWindow::on_btn_copy_materia_slot_clicked()
-{
-    buffer_materia.id = ff7->slot[s].chars[curchar].materias[mslotsel].id;
-    buffer_materia.ap[0] = ff7->slot[s].chars[curchar].materias[mslotsel].ap[0];
-    buffer_materia.ap[1] = ff7->slot[s].chars[curchar].materias[mslotsel].ap[1];
-    buffer_materia.ap[2] = ff7->slot[s].chars[curchar].materias[mslotsel].ap[2];
-}
-
-void MainWindow::on_btn_paste_materia_slot_clicked()
-{
-    ff7->slot[s].chars[curchar].materias[mslotsel].id = buffer_materia.id;
-    ff7->slot[s].chars[curchar].materias[mslotsel].ap[0]= buffer_materia.ap[0];
-    ff7->slot[s].chars[curchar].materias[mslotsel].ap[1]= buffer_materia.ap[1];
-    ff7->slot[s].chars[curchar].materias[mslotsel].ap[2]= buffer_materia.ap[2];
-    if(!load){file_modified(true); }
-    materiaupdate_slot();
-}
-
-void MainWindow::on_w_m_s1_clicked(){mslotsel=0;    if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_w_m_s2_clicked(){mslotsel=1;    if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_w_m_s3_clicked(){mslotsel=2;    if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_w_m_s4_clicked(){mslotsel=3;    if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_w_m_s5_clicked(){mslotsel=4;    if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_w_m_s6_clicked(){mslotsel=5;    if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_w_m_s7_clicked(){mslotsel=6;    if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_w_m_s8_clicked(){mslotsel=7;    if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_a_m_s1_clicked(){mslotsel=8;    if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_a_m_s2_clicked(){mslotsel=9;    if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_a_m_s3_clicked(){mslotsel=10;   if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_a_m_s4_clicked(){mslotsel=11;   if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_a_m_s5_clicked(){mslotsel=12;   if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_a_m_s6_clicked(){mslotsel=13;   if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_a_m_s7_clicked(){mslotsel=14;   if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_a_m_s8_clicked(){mslotsel=15;   if(ff7->slot[s].chars[curchar].materias[mslotsel].id != 0xff){load=true;ui->combo_add_mat_slot->setCurrentIndex(ff7->slot[s].chars[curchar].materias[mslotsel].id);}  materiaupdate_slot();}
-void MainWindow::on_btn_m_lvl1_slot_clicked(){ui->sb_addap_slot->setValue(Materias.Ap(ui->combo_add_mat_slot->currentIndex(),0));    materiaupdate_slot();}
-void MainWindow::on_btn_m_lvl2_slot_clicked(){ui->sb_addap_slot->setValue(Materias.Ap(ui->combo_add_mat_slot->currentIndex(),1));    materiaupdate_slot();}
-void MainWindow::on_btn_m_lvl3_slot_clicked(){ui->sb_addap_slot->setValue(Materias.Ap(ui->combo_add_mat_slot->currentIndex(),2));    materiaupdate_slot();}
-void MainWindow::on_btn_m_lvl4_slot_clicked(){ui->sb_addap_slot->setValue(Materias.Ap(ui->combo_add_mat_slot->currentIndex(),3));    materiaupdate_slot();}
-void MainWindow::on_btn_m_lvl5_slot_clicked(){ui->sb_addap_slot->setValue(Materias.Ap(ui->combo_add_mat_slot->currentIndex(),4));    materiaupdate_slot();}
-
-void MainWindow::geteskills2(int row)
-{
-    load=true;
-    quint32 temp = ff7->slot[s].chars[curchar].materias[row].ap[0] |(ff7->slot[s].chars[curchar].materias[row].ap[1] << 8) | (ff7->slot[s].chars[curchar].materias[row].ap[2] << 16);
-    ui->sb_addap_slot->setValue(temp);
-
-    for (int i=0;i<24;i++)
-    {
-        if (ff7->slot[s].chars[curchar].materias[row].ap[i/8] & (1 << (i%8))){ui->list_eskill_2->item(i)->setCheckState(Qt::Checked);}
-        else{ui->list_eskill_2->item(i)->setCheckState(Qt::Unchecked);}
-    }
-    load=false;
-}
-void MainWindow::on_list_eskill_2_clicked(const QModelIndex &index)
-{if(!load){file_modified(true);
-
-    int j = index.row();
-    if (ui->list_eskill_2->item(j)->checkState() == Qt::Checked){ff7->slot[s].chars[curchar].materias[mslotsel].ap[j/8] |= (1<< (j%8));}
-    else{ff7->slot[s].chars[curchar].materias[mslotsel].ap[j/8] &= ~(1<<(j%8));}
-
-    quint32 temp = ff7->slot[s].chars[curchar].materias[mslotsel].ap[0] |(ff7->slot[s].chars[curchar].materias[mslotsel].ap[1] << 8) | (ff7->slot[s].chars[curchar].materias[mslotsel].ap[2] << 16);
-    load=true;
-    ui->sb_addap_slot->setValue(temp);
-    load=false;
-}}
+void MainWindow::on_w_m_s1_clicked(){mslotsel=0;materiaupdate_slot();}
+void MainWindow::on_w_m_s2_clicked(){mslotsel=1;materiaupdate_slot();}
+void MainWindow::on_w_m_s3_clicked(){mslotsel=2;materiaupdate_slot();}
+void MainWindow::on_w_m_s4_clicked(){mslotsel=3;materiaupdate_slot();}
+void MainWindow::on_w_m_s5_clicked(){mslotsel=4;materiaupdate_slot();}
+void MainWindow::on_w_m_s6_clicked(){mslotsel=5;materiaupdate_slot();}
+void MainWindow::on_w_m_s7_clicked(){mslotsel=6;materiaupdate_slot();}
+void MainWindow::on_w_m_s8_clicked(){mslotsel=7;materiaupdate_slot();}
+void MainWindow::on_a_m_s1_clicked(){mslotsel=8;materiaupdate_slot();}
+void MainWindow::on_a_m_s2_clicked(){mslotsel=9;materiaupdate_slot();}
+void MainWindow::on_a_m_s3_clicked(){mslotsel=10;materiaupdate_slot();}
+void MainWindow::on_a_m_s4_clicked(){mslotsel=11;materiaupdate_slot();}
+void MainWindow::on_a_m_s5_clicked(){mslotsel=12;materiaupdate_slot();}
+void MainWindow::on_a_m_s6_clicked(){mslotsel=13;materiaupdate_slot();}
+void MainWindow::on_a_m_s7_clicked(){mslotsel=14;materiaupdate_slot();}
+void MainWindow::on_a_m_s8_clicked(){mslotsel=15;materiaupdate_slot();}
 
 /*~~~~~~~~~~~~~~~~~~~ Game Options~~~~~~~~~~~~~~~~~~*/
 void MainWindow::set_UL_Color(QColor color)
@@ -5584,31 +5171,6 @@ void MainWindow::on_combo_button_13_currentIndexChanged(int index){if(!load){fil
 void MainWindow::on_combo_button_14_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[13]=index;}}
 void MainWindow::on_combo_button_15_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[14]=index;}}
 void MainWindow::on_combo_button_16_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[15]=index;}}
-
-void MainWindow::on_btn_copy_materia_clicked()
-{
-    if(ui->tbl_materia->currentRow() == -1){return;}
-    else
-    {
-        buffer_materia.id = ff7->slot[s].materias[ui->tbl_materia->currentRow()].id;
-        buffer_materia.ap[0] = ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[0];
-        buffer_materia.ap[1] = ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[1];
-        buffer_materia.ap[2] = ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[2];
-    }
-}
-
-void MainWindow::on_btn_paste_materia_clicked()
-{if(!load){file_modified(true);}
-    if(ui->tbl_materia->currentRow() == -1){return;}
-    else
-    {
-        ff7->slot[s].materias[ui->tbl_materia->currentRow()].id = buffer_materia.id;
-        ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[0]= buffer_materia.ap[0];
-        ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[1]= buffer_materia.ap[1];
-        ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[2]= buffer_materia.ap[2];
-        materiaupdate();
-    }
-}
 
 void MainWindow::on_combo_s7_slums_currentIndexChanged(int index)
 {if(!load){file_modified(true);
