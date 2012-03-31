@@ -1,14 +1,14 @@
 /****************************************************************************/
 //    copyright 2012  Chris Rizzitello <sithlord48@gmail.com>               //
 //                                                                          //
-//    This file is part of FF7tk                                            //
+//    This file is part of <UnNamedToolKit>                                 //
 //                                                                          //
-//    FF7tk is free software: you can redistribute it and/or modify         //
+//  <UnNamedToolKit> is free software: you can redistribute it and/or modify//
 //    it under the terms of the GNU General Public License as published by  //
 //    the Free Software Foundation, either version 3 of the License, or     //
 //    (at your option) any later version.                                   //
 //                                                                          //
-//    FF7tk is distributed in the hope that it will be useful,              //
+// <UnNamedToolKit> is distributed in the hope that it will be useful,      //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
@@ -82,8 +82,9 @@ public:
     //Static Icon for all materia..
     QIcon Icon_AllMateria();
     QImage Image_AllMateria();
+    // Return Eskill name;
+    QString Eskill(int i);
 };
-
 
 static MATERIA Materias[]=
 {
@@ -131,7 +132,7 @@ static MATERIA Materias[]=
     {QT_TRANSLATE_NOOP("Materia_Names","Deathblow"),       {QT_TRANSLATE_NOOP("Materia_Skills","DeathBlow"),QT_TRANSLATE_NOOP("Materia_Skills",""),"","",""},QT_TRANSLATE_NOOP("Materia_Stats","Lck:+1"), QImage(command_xpm),QImage(command_star_empty_xpm),QImage(command_star_full_xpm),     0x29,0,0,0,0,0,+1,0,0,{0,40000,0,0,0},5,2},
     {QT_TRANSLATE_NOOP("Materia_Names","Manipulate"),      {QT_TRANSLATE_NOOP("Materia_Skills","Manipulate"),QT_TRANSLATE_NOOP("Materia_Skills",""),"","",""},"", QImage(command_xpm),QImage(command_star_empty_xpm),QImage(command_star_full_xpm),     0x2A,0,0,0,0,0,0,0,0,{0,40000,0,0,0},5,2},
     {QT_TRANSLATE_NOOP("Materia_Names","Mime"),            {QT_TRANSLATE_NOOP("Materia_Skills","Mime"),QT_TRANSLATE_NOOP("Materia_Skills",""),"","",""},"", QImage(command_xpm),QImage(command_star_empty_xpm),QImage(command_star_full_xpm),     0x2B,0,0,0,0,0,0,0,0,{0,100000,0,0,0},5,2},
-    {QT_TRANSLATE_NOOP("Materia_Names","Enemy Skill"),     {QT_TRANSLATE_NOOP("Materia_Skills","Enemy Skill"),"","","",""},"", QImage(command_xpm),QImage(command_star_empty_xpm),QImage(command_star_full_xpm),     0x2C,0,0,0,0,0,0,0,0,{0,0,0,0,0},5,1},
+    {QT_TRANSLATE_NOOP("Materia_Names","Enemy Skill"),     {QT_TRANSLATE_NOOP("Materia_Skills","Enemy Skill"),"","","",""},"", QImage(command_xpm),QImage(command_star_empty_xpm),QImage(command_star_full_xpm),     0x2C,0,0,0,0,0,0,0,0,{16777215,0,0,0,0},5,1},
     {QT_TRANSLATE_NOOP("Materia_Names","DON'T USE"),       {"?","?","?","?","?"},"ID:0x2D",QImage(),QImage(),QImage(),0X2D,0,0,0,0,0,0,0,0,{0,0,0,0,0},0,0},
     {QT_TRANSLATE_NOOP("Materia_Names","DON'T USE"),       {"?","?","?","?","?"},"ID:0x2E",QImage(),QImage(),QImage(),0X2E,0,0,0,0,0,0,0,0,{0,0,0,0,0},0,0},
     {QT_TRANSLATE_NOOP("Materia_Names","DON'T USE"),       {"?","?","?","?","?"},"ID:0x2F",QImage(),QImage(),QImage(),0X2F,0,0,0,0,0,0,0,0,{0,0,0,0,0},0,0},
@@ -178,5 +179,32 @@ static MATERIA Materias[]=
     {QT_TRANSLATE_NOOP("Materia_Names","Bahamut ZERO"),    {QT_TRANSLATE_NOOP("Materia_Skills","Bahamut ZERO x1 (180mp)"),QT_TRANSLATE_NOOP("Materia_Skills","Bahamut ZERO x2 (180mp)"),QT_TRANSLATE_NOOP("Materia_Skills","Bahamut ZERO x3 (180mp)"),QT_TRANSLATE_NOOP("Materia_Skills","Bahamut ZERO x4 (180mp)"),QT_TRANSLATE_NOOP("Materia_Skills","Bahamut ZERO x5 (180mp)")},QT_TRANSLATE_NOOP("Materia_Stats","MaxHp:-10% MaxMp:+15% Mag:+4 Spi:+4"), QImage(summon_xpm),QImage(summon_star_empty_xpm),QImage(summon_star_full_xpm),      0x58,-10,+15,0,0,0,0,+4,+4,{0,35000,120000,150000,250000},2,5},
     {QT_TRANSLATE_NOOP("Materia_Names","Knights of Round"),{QT_TRANSLATE_NOOP("Materia_Skills","KOTR x1 (250mp)"),QT_TRANSLATE_NOOP("Materia_Skills","KOTR x2 (250mp)"),QT_TRANSLATE_NOOP("Materia_Skills","KOTR x3 (250mp)"),QT_TRANSLATE_NOOP("Materia_Skills","KOTR x4 (250mp)"),QT_TRANSLATE_NOOP("Materia_Skills","KOTR x5 (250mp)")},QT_TRANSLATE_NOOP("Materia_Stats","MaxHp:-10% MaxMp:+20% Mag:+8 Spi:+8"), QImage(summon_xpm),QImage(summon_star_empty_xpm),QImage(summon_star_full_xpm),      0x59,-10,+20,0,0,0,0,+8,+8,{0,50000,200000,300000,500000},2,5},
     {QT_TRANSLATE_NOOP("Materia_Names","Master Summon"),   {QT_TRANSLATE_NOOP("Materia_Skills","Master Summon"),"","","",""},"",QImage(summon_xpm),QImage(summon_star_empty_xpm),QImage(summon_star_full_xpm),      0x5A,0,0,0,0,0,0,0,0,{0,0,0,0,0},2,1}
+};
+static QString ESkills[]=
+{
+    QT_TRANSLATE_NOOP("E_skills","Frog Song"),
+    QT_TRANSLATE_NOOP("E_skills","L4 Suicide"),
+    QT_TRANSLATE_NOOP("E_skills","Magic Hammer"),
+    QT_TRANSLATE_NOOP("E_skills","White Wind"),
+    QT_TRANSLATE_NOOP("E_skills","Big Guard"),
+    QT_TRANSLATE_NOOP("E_skills","Angel Whisper"),
+    QT_TRANSLATE_NOOP("E_skills","Dragon Force"),
+    QT_TRANSLATE_NOOP("E_skills","Death Force"),
+    QT_TRANSLATE_NOOP("E_skills","Flame Thrower"),
+    QT_TRANSLATE_NOOP("E_skills","Laser"),
+    QT_TRANSLATE_NOOP("E_skills","Matra Magic"),
+    QT_TRANSLATE_NOOP("E_skills","Bad Breath"),
+    QT_TRANSLATE_NOOP("E_skills","Beta"),
+    QT_TRANSLATE_NOOP("E_skills","Aqualung"),
+    QT_TRANSLATE_NOOP("E_skills","Trine"),
+    QT_TRANSLATE_NOOP("E_skills","Magic Breath"),
+    QT_TRANSLATE_NOOP("E_skills","????"),
+    QT_TRANSLATE_NOOP("E_skills","Goblin Punch"),
+    QT_TRANSLATE_NOOP("E_skills","Chocobuckle"),
+    QT_TRANSLATE_NOOP("E_skills","L5 Death"),
+    QT_TRANSLATE_NOOP("E_skills","Death Sentence"),
+    QT_TRANSLATE_NOOP("E_skills","Roulette"),
+    QT_TRANSLATE_NOOP("E_skills","Shadow Flare"),
+    QT_TRANSLATE_NOOP("E_skills","Pandora's Box")
 };
 #endif //FF7MATERIA_H

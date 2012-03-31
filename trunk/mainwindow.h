@@ -35,7 +35,7 @@
 #include "static_data/FF7Location.h"
 #include "widgets/ItemPreview.h"
 #include "widgets/DialogPreview.h"
-
+#include "widgets/MateriaEditor.h"
 
 namespace Ui {
     class MainWindow;
@@ -71,6 +71,8 @@ private:
     int mslotsel; //keeps track of materia slot on char selected
     ItemPreview *item_preview;
     DialogPreview *dialog_preview;
+    MateriaEditor *materia_editor;
+    MateriaEditor *materia_editor_slot;
 public slots:
     void loadFileFull(const QString &fileName,int reload);//(Vegeta_Ss4) v0.8.3
 
@@ -475,21 +477,11 @@ private slots://try to keep these in the same order as the .cpp file
 
     // Materia Tab
     void on_tbl_materia_currentCellChanged(int row);
-    void on_clearMateria_clicked();
-    void on_combo_add_mat_currentIndexChanged(int index);
-    void on_sb_addap_valueChanged(int);
-    void on_btn_eskillall_clicked();
-    void geteskills(int row);
-    void on_btn_eskillclear_clicked();
-    void on_list_eskill_clicked(const QModelIndex &index);
-    void on_combo_add_mat_2_currentIndexChanged();
-    void on_combo_mat_type_currentIndexChanged(int index);
-    void on_btn_m_lvl5_clicked();
-    void on_btn_m_lvl4_clicked();
-    void on_btn_m_lvl3_clicked();
-    void on_btn_m_lvl2_clicked();
-    void on_btn_m_lvl1_clicked();
+    void materia_ap_changed(qint32 ap);
+    void materia_id_changed(qint8 id);
 
+    void materia_slot_ap_changed(qint32 ap);
+    void materia_slot_id_changed(qint8 id);
 //char stats
 
     void on_line_name_textChanged(QString text);
@@ -517,8 +509,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_spibonus_valueChanged();
     void on_sb_lck_valueChanged();
     void on_sb_lckbonus_valueChanged();
-    void on_combo_mat_type_slot_currentIndexChanged(int);
-    void on_combo_add_mat_slot_2_currentIndexChanged();
     // LIMITS STUFFS
     void on_limit_1a_toggled();
     void on_limit_1b_toggled();
@@ -555,16 +545,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_w_m_s6_clicked();
     void on_w_m_s7_clicked();
     void on_w_m_s8_clicked();
-    void on_clearMateria_slot_clicked();
-    void on_sb_addap_slot_valueChanged(int);
-    void on_combo_add_mat_slot_currentIndexChanged(int index);
-    void geteskills2(int row);
-    void on_btn_m_lvl5_slot_clicked();
-    void on_btn_m_lvl4_slot_clicked();
-    void on_btn_m_lvl3_slot_clicked();
-    void on_btn_m_lvl2_slot_clicked();
-    void on_btn_m_lvl1_slot_clicked();
-    void on_list_eskill_2_clicked(const QModelIndex &index);
+
     void on_cb_Region_Slot_currentIndexChanged();
     void on_combo_id_currentIndexChanged(int index);
     void on_cb_ruby_dead_toggled(bool checked);
@@ -647,10 +628,8 @@ private slots://try to keep these in the same order as the .cpp file
     void on_combo_button_14_currentIndexChanged(int index);
     void on_combo_button_15_currentIndexChanged(int index);
     void on_combo_button_16_currentIndexChanged(int index);
-    void on_btn_copy_materia_clicked();
-    void on_btn_paste_materia_clicked();
-    void on_btn_copy_materia_slot_clicked();
-    void on_btn_paste_materia_slot_clicked();
+
+
     void on_combo_s7_slums_currentIndexChanged(int index);
     void on_cb_visible_buggy_toggled(bool checked);
     void on_cb_visible_bronco_toggled(bool checked);

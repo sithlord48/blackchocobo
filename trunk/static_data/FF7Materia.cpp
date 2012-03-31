@@ -1,14 +1,14 @@
 /****************************************************************************/
-//    copyright 2012  Chris Rizzitello <sithlord48@gmail.com>               //
+//    copyright 2010-2012  Chris Rizzitello <sithlord48@gmail.com>          //
 //                                                                          //
-//    This file is part of FF7tk                                            //
+//    This file is part of <UnNamedToolKit>                                 //
 //                                                                          //
-//    FF7tk is free software: you can redistribute it and/or modify         //
+//  <UnNamedToolKit> is free software: you can redistribute it and/or modify//
 //    it under the terms of the GNU General Public License as published by  //
 //    the Free Software Foundation, either version 3 of the License, or     //
 //    (at your option) any later version.                                   //
 //                                                                          //
-//    FF7tk is distributed in the hope that it will be useful,              //
+// <UnNamedToolKit> is distributed in the hope that it will be useful,      //
 //    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
@@ -37,5 +37,6 @@ QImage FF7Materia::Image_EmptyStar(int id){return Materias[id].em_image;}
 QImage FF7Materia::Image_FullStar(int id){return Materias[id].fm_image;}
 QIcon FF7Materia::Icon_AllMateria(){return QIcon(all_xpm);}
 QImage FF7Materia::Image_AllMateria(){return QImage(all_xpm);}
+QString FF7Materia::Eskill(int i){return qApp->translate("E_skills",ESkills[i].toAscii());}
 
 

@@ -2,6 +2,105 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="ja" sourcelanguage="en_US">
 <context>
+    <name>E_skills</name>
+    <message>
+        <source>Frog Song</source>
+        <translation>カエルのうた</translation>
+    </message>
+    <message>
+        <source>L4 Suicide</source>
+        <translation>レベル４自爆</translation>
+    </message>
+    <message>
+        <source>Magic Hammer</source>
+        <translation>マジックハンマー</translation>
+    </message>
+    <message>
+        <source>White Wind</source>
+        <translation>ホワイトウィンド</translation>
+    </message>
+    <message>
+        <source>Big Guard</source>
+        <translation>マイティガード</translation>
+    </message>
+    <message>
+        <source>Angel Whisper</source>
+        <translation>天使のささやき</translation>
+    </message>
+    <message>
+        <source>Dragon Force</source>
+        <translation>ドラゴンフォース</translation>
+    </message>
+    <message>
+        <source>Death Force</source>
+        <translation>デスフォース</translation>
+    </message>
+    <message>
+        <source>Flame Thrower</source>
+        <translation>火炎放射</translation>
+    </message>
+    <message>
+        <source>Laser</source>
+        <translation>レーザー</translation>
+    </message>
+    <message>
+        <source>Matra Magic</source>
+        <translation>マトラマジック</translation>
+    </message>
+    <message>
+        <source>Bad Breath</source>
+        <translation>臭い息</translation>
+    </message>
+    <message>
+        <source>Beta</source>
+        <translation>ベータ</translation>
+    </message>
+    <message>
+        <source>Aqualung</source>
+        <translation>アクアブレス</translation>
+    </message>
+    <message>
+        <source>Trine</source>
+        <translation>トライン</translation>
+    </message>
+    <message>
+        <source>Magic Breath</source>
+        <translation>マジカルブレス</translation>
+    </message>
+    <message>
+        <source>????</source>
+        <translation>？？？？</translation>
+    </message>
+    <message>
+        <source>Goblin Punch</source>
+        <translation>ゴブリンパンチ</translation>
+    </message>
+    <message>
+        <source>Chocobuckle</source>
+        <translation>チョコボックル</translation>
+    </message>
+    <message>
+        <source>L5 Death</source>
+        <translation>レベル５デス</translation>
+    </message>
+    <message>
+        <source>Death Sentence</source>
+        <translation>死の宣告</translation>
+    </message>
+    <message>
+        <source>Roulette</source>
+        <translation>死のルーレット</translation>
+    </message>
+    <message>
+        <source>Shadow Flare</source>
+        <translation>シャドウフレア</translation>
+    </message>
+    <message>
+        <source>Pandora&apos;s Box</source>
+        <translation>なんとか？？？</translation>
+    </message>
+</context>
+<context>
     <name>FF7Save</name>
     <message>
         <source>New Game +</source>
@@ -2306,103 +2405,103 @@
     </message>
     <message>
         <source>Enemy Skill&apos;s</source>
-        <translation>てきのわざ</translation>
+        <translation type="obsolete">てきのわざ</translation>
     </message>
     <message>
         <source>Frog Song</source>
-        <translation>カエルのうた</translation>
+        <translation type="obsolete">カエルのうた</translation>
     </message>
     <message>
         <source>L4 Suicide</source>
-        <translation>レベル４自爆</translation>
+        <translation type="obsolete">レベル４自爆</translation>
     </message>
     <message>
         <source>Magic Hammer</source>
-        <translation>マジックハンマー</translation>
+        <translation type="obsolete">マジックハンマー</translation>
     </message>
     <message>
         <source>White Wind</source>
-        <translation>ホワイトウィンド</translation>
+        <translation type="obsolete">ホワイトウィンド</translation>
     </message>
     <message>
         <source>Big Guard</source>
-        <translation>マイティガード</translation>
+        <translation type="obsolete">マイティガード</translation>
     </message>
     <message>
         <source>Angel Whisper</source>
-        <translation>天使のささやき</translation>
+        <translation type="obsolete">天使のささやき</translation>
     </message>
     <message>
         <source>Dragon Force</source>
-        <translation>ドラゴンフォース</translation>
+        <translation type="obsolete">ドラゴンフォース</translation>
     </message>
     <message>
         <source>Death Force</source>
-        <translation>デスフォース</translation>
+        <translation type="obsolete">デスフォース</translation>
     </message>
     <message>
         <source>Flame Thrower</source>
-        <translation>火炎放射</translation>
+        <translation type="obsolete">火炎放射</translation>
     </message>
     <message>
         <source>Laser</source>
-        <translation>レーザー</translation>
+        <translation type="obsolete">レーザー</translation>
     </message>
     <message>
         <source>Matra Magic</source>
-        <translation>マトラマジック</translation>
+        <translation type="obsolete">マトラマジック</translation>
     </message>
     <message>
         <source>Bad Breath</source>
-        <translation>臭い息</translation>
+        <translation type="obsolete">臭い息</translation>
     </message>
     <message>
         <source>Beta</source>
-        <translation>ベータ</translation>
+        <translation type="obsolete">ベータ</translation>
     </message>
     <message>
         <source>Aqualung</source>
-        <translation>アクアブレス</translation>
+        <translation type="obsolete">アクアブレス</translation>
     </message>
     <message>
         <source>Trine</source>
-        <translation>トライン</translation>
+        <translation type="obsolete">トライン</translation>
     </message>
     <message>
         <source>Magic Breath</source>
-        <translation>マジカルブレス</translation>
+        <translation type="obsolete">マジカルブレス</translation>
     </message>
     <message>
         <source>????</source>
-        <translation>？？？？</translation>
+        <translation type="obsolete">？？？？</translation>
     </message>
     <message>
         <source>Goblin Punch</source>
-        <translation>ゴブリンパンチ</translation>
+        <translation type="obsolete">ゴブリンパンチ</translation>
     </message>
     <message>
         <source>Chocobuckle</source>
-        <translation>チョコボックル</translation>
+        <translation type="obsolete">チョコボックル</translation>
     </message>
     <message>
         <source>L5 Death</source>
-        <translation>レベル５デス</translation>
+        <translation type="obsolete">レベル５デス</translation>
     </message>
     <message>
         <source>Death Sentence</source>
-        <translation>死の宣告</translation>
+        <translation type="obsolete">死の宣告</translation>
     </message>
     <message>
         <source>Roulette</source>
-        <translation>死のルーレット</translation>
+        <translation type="obsolete">死のルーレット</translation>
     </message>
     <message>
         <source>Shadow Flare</source>
-        <translation>シャドウフレア</translation>
+        <translation type="obsolete">シャドウフレア</translation>
     </message>
     <message>
         <source>Pandora&apos;s Box</source>
-        <translation>なんとか？？？</translation>
+        <translation type="obsolete">なんとか？？？</translation>
     </message>
     <message>
         <source>Master</source>
@@ -2410,7 +2509,7 @@
     </message>
     <message>
         <source>Clear</source>
-        <translation>クリア</translation>
+        <translation type="obsolete">クリア</translation>
     </message>
     <message>
         <source>Inventory</source>
@@ -2882,7 +2981,7 @@
     </message>
     <message>
         <source>AP:</source>
-        <translation>AP:</translation>
+        <translation type="obsolete">AP:</translation>
     </message>
     <message>
         <source>Accessory:</source>
@@ -2894,7 +2993,7 @@
     </message>
     <message>
         <source>All</source>
-        <translation>すべて</translation>
+        <translation type="obsolete">すべて</translation>
     </message>
     <message>
         <source>Magic</source>
@@ -2902,31 +3001,31 @@
     </message>
     <message>
         <source>Summon</source>
-        <translation>しょうかん</translation>
+        <translation type="obsolete">しょうかん</translation>
     </message>
     <message>
         <source>Independent</source>
-        <translation>どくりつ</translation>
+        <translation type="obsolete">どくりつ</translation>
     </message>
     <message>
         <source>Support</source>
-        <translation>しえん</translation>
+        <translation type="obsolete">しえん</translation>
     </message>
     <message>
         <source>Command</source>
-        <translation>コマンド</translation>
+        <translation type="obsolete">コマンド</translation>
     </message>
     <message>
         <source>Type Filter</source>
-        <translation>タイプのフィルター</translation>
+        <translation type="obsolete">タイプのフィルター</translation>
     </message>
     <message>
         <source>Materia Skills</source>
-        <translation>マテリアのスキル</translation>
+        <translation type="obsolete">マテリアのスキル</translation>
     </message>
     <message>
         <source>Materia Stat Changes</source>
-        <translation>マテリアの装備効果</translation>
+        <translation type="obsolete">マテリアの装備効果</translation>
     </message>
     <message>
         <source>map</source>
@@ -3545,12 +3644,12 @@
     </message>
     <message>
         <source>Empty Materia</source>
-        <translation>空のマテリア</translation>
+        <translation type="obsolete">空のマテリア</translation>
     </message>
     <message>
         <source>Place holder Materia Detected
  Remember 16777215 AP = master</source>
-        <translation>プレース ホルダー マテリアを検出しました
+        <translation type="obsolete">プレース ホルダー マテリアを検出しました
 MASTER = 16777215 AP です</translation>
     </message>
     <message>
@@ -3563,11 +3662,11 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Empty Slot</source>
-        <translation>空きスロット</translation>
+        <translation type="obsolete">空きスロット</translation>
     </message>
     <message>
         <source>NO CAP</source>
-        <translation>制限なし</translation>
+        <translation type="obsolete">制限なし</translation>
     </message>
     <message>
         <source>Braver</source>
@@ -4547,11 +4646,11 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Ctrl+C</source>
-        <translation>Ctrl+C</translation>
+        <translation type="obsolete">Ctrl+C</translation>
     </message>
     <message>
         <source>Ctrl+V</source>
-        <translation>Ctrl+V</translation>
+        <translation type="obsolete">Ctrl+V</translation>
     </message>
     <message>
         <source>Del</source>
@@ -4559,11 +4658,11 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Materia Slot Actions</source>
-        <translation>マテリア スロットの操作</translation>
+        <translation type="obsolete">マテリア スロットの操作</translation>
     </message>
     <message>
         <source>&amp;Copy Slot</source>
-        <translation>スロットのコピー(&amp;C)</translation>
+        <translation type="obsolete">スロットのコピー(&amp;C)</translation>
     </message>
     <message>
         <source>Sector 5</source>
@@ -4932,6 +5031,57 @@ Table Entries are Editable</source>
     <message>
         <source>Can Fight Mystery Ninja in Forests</source>
         <translation>森で謎のニンジャとバトル可能</translation>
+    </message>
+</context>
+<context>
+    <name>MateriaEditor</name>
+    <message>
+        <source>Delete</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Copy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Paste</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Clear</source>
+        <translation type="unfinished">クリア</translation>
+    </message>
+    <message>
+        <source>Skills</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stat Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>All Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Magic</source>
+        <translation type="unfinished">まほう</translation>
+    </message>
+    <message>
+        <source>Summon</source>
+        <translation type="unfinished">しょうかん</translation>
+    </message>
+    <message>
+        <source>Independent</source>
+        <translation type="unfinished">どくりつ</translation>
+    </message>
+    <message>
+        <source>Support</source>
+        <translation type="unfinished">しえん</translation>
+    </message>
+    <message>
+        <source>Command</source>
+        <translation type="unfinished">コマンド</translation>
     </message>
 </context>
 <context>
