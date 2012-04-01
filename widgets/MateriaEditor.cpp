@@ -19,11 +19,12 @@
 #include "static_data/icons/Common_Icons/paste.xpm"
 #include "static_data/icons/Common_Icons/quit.xpm"
 
-MateriaEditor::MateriaEditor(QWidget *parent):QWidget(parent)
+MateriaEditor::MateriaEditor(QWidget *parent,int mode):QWidget(parent)
 {
-    this->init_display();
-    this->init_data();
-    this->init_connections();
+    if(mode==0){init_normal_mode();}
+    else if(mode ==1){init_compact_mode();}
+    init_data();
+    init_connections();
 }
 /*
 MateriaEditor::MateriaEditor(QWidget *parent, quint8 materia_id,qint32 materia_ap):QWidget(parent)
@@ -34,7 +35,7 @@ MateriaEditor::MateriaEditor(QWidget *parent, quint8 materia_id,qint32 materia_a
    this->setMateria(materia_id,materia_ap);
 }
 */
-void MateriaEditor::init_display(void)
+void MateriaEditor::init_normal_mode()
 {
 
     QHBoxLayout * type_name_layout = new QHBoxLayout;
@@ -133,7 +134,7 @@ void MateriaEditor::init_display(void)
     lbl_skill3 = new QLabel;
     lbl_skill4 = new QLabel;
     lbl_skill5 = new QLabel;
-
+    setStarsSize(48);
     box_stats = new QGroupBox(this);
     lbl_stats = new QLabel;
 
@@ -190,6 +191,176 @@ void MateriaEditor::init_display(void)
     Final->setSpacing(3);
     Final->addLayout(main_layout);
     this->setLayout(Final);
+
+}
+void MateriaEditor::init_compact_mode()
+{
+    this->setContentsMargins(0,0,0,0);
+    QHBoxLayout * type_name_layout = new QHBoxLayout;
+    combo_type =new QComboBox;
+    combo_type->setMinimumHeight(22);
+    combo_type->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
+    combo_materia = new QComboBox;
+    combo_materia->setMinimumHeight(22);
+    combo_materia->setSizePolicy(QSizePolicy::MinimumExpanding,QSizePolicy::Fixed);
+
+    btn_rm_materia = new QPushButton;
+    btn_rm_materia->setIcon(QIcon::fromTheme("edit-delete",QIcon(QPixmap(quit_xpm))));
+    btn_rm_materia->setToolTip(tr("Delete"));
+    btn_rm_materia->setMinimumSize(22,22);
+    btn_rm_materia->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
+
+    btn_copy_materia = new QPushButton;
+    btn_copy_materia->setIcon(QIcon::fromTheme("edit-copy",QIcon(QPixmap(copy_xpm))));
+    btn_copy_materia->setToolTip(tr("Copy"));
+    btn_copy_materia->setMinimumSize(22,22);
+    btn_copy_materia->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
+
+    btn_paste_materia = new QPushButton;
+    btn_paste_materia->setIcon(QIcon::fromTheme("edit-paste",QIcon(QPixmap(paste_xpm))));
+    btn_paste_materia->setToolTip(tr("Paste"));
+    btn_paste_materia->setMinimumSize(22,22);
+    btn_paste_materia->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
+
+
+    type_name_layout->addWidget(combo_type);
+    type_name_layout->addWidget(combo_materia);
+    type_name_layout->addWidget(btn_copy_materia);
+    type_name_layout->addWidget(btn_paste_materia);
+    type_name_layout->addWidget(btn_rm_materia);
+
+    QHBoxLayout * ap_layout = new QHBoxLayout;
+
+    sb_ap = new QSpinBox;
+    sb_ap->setWrapping(1);
+    sb_ap->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
+    sb_ap->setMinimumHeight(22);
+    lbl_slash = new QLabel;
+    lbl_slash->setText("/");
+    lbl_slash->setMinimumHeight(22);
+    lcd_max_ap = new QLCDNumber;
+    lcd_max_ap->setNumDigits(8);
+    lcd_max_ap->setSegmentStyle(QLCDNumber::Flat);
+    lcd_max_ap->setMinimumHeight(22);
+
+    ap_layout->addWidget(sb_ap);
+    ap_layout->addWidget(lbl_slash);
+    ap_layout->addWidget(lcd_max_ap);
+
+    QFrame *frm_ap = new QFrame(this);
+    frm_ap->setLayout(ap_layout);
+    frm_ap->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
+
+
+    frm_name_ap =new QFrame(this);
+    frm_name_ap->setLayout(type_name_layout);
+
+    box_stars = new QGroupBox(this);
+    btn_star1 = new QPushButton;
+    btn_star2 = new QPushButton;
+    btn_star3 = new QPushButton;
+    btn_star4 = new QPushButton;
+    btn_star5 = new QPushButton;
+    QString style="QPushButton:enabled{background-color: rgba(0,0,0,0);border:0px solid;} QPushButton:hover{background-color:rgba(0,50,50,96);}";
+    btn_star1->setStyleSheet(style);
+    btn_star2->setStyleSheet(style);
+    btn_star3->setStyleSheet(style);
+    btn_star4->setStyleSheet(style);
+    btn_star5->setStyleSheet(style);
+    btn_star1->setFlat(true);
+    btn_star2->setFlat(true);
+    btn_star3->setFlat(true);
+    btn_star4->setFlat(true);
+    btn_star5->setFlat(true);
+    QHBoxLayout *stars = new QHBoxLayout;
+    stars->setContentsMargins(0,0,0,0);
+    stars->addWidget(btn_star1);
+    stars->addWidget(btn_star2);
+    stars->addWidget(btn_star3);
+    stars->addWidget(btn_star4);
+    stars->addWidget(btn_star5);
+    box_stars->setLayout(stars);
+    box_stars->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Minimum);
+    /* Init Skills Area */
+    box_skills = new QGroupBox(this);
+    box_skills->setMaximumHeight(170);
+    lbl_skill1 = new QLabel;
+    lbl_skill2 = new QLabel;
+    lbl_skill3 = new QLabel;
+    lbl_skill4 = new QLabel;
+    lbl_skill5 = new QLabel;
+    setStarsSize(32);
+
+    QVBoxLayout *ap_stars_layout =  new QVBoxLayout;
+    ap_stars_layout->addWidget(frm_ap);
+    ap_stars_layout->addWidget(box_stars);
+
+    box_stats = new QGroupBox(this);
+    lbl_stats = new QLabel;
+
+    btn_clear_eskills = new QPushButton;
+    btn_clear_eskills->setText(tr("Clear"));
+    btn_master_eskills = new QPushButton;
+    btn_master_eskills->setText("Master");
+    QHBoxLayout *low_eskill_layout = new QHBoxLayout;
+    low_eskill_layout->addWidget(btn_master_eskills);
+    low_eskill_layout->addWidget(btn_clear_eskills);
+    low_eskill_layout->setContentsMargins(3,0,0,0);
+
+
+    eskill_list = new QListWidget;
+    QVBoxLayout * eskill_layout = new QVBoxLayout;
+    eskill_layout->addWidget(eskill_list);
+    eskill_layout->addItem(low_eskill_layout);
+    eskill_layout->setContentsMargins(3,3,0,0);
+    eskill_layout->setSpacing(3);
+    eskill_group = new QGroupBox;
+    eskill_group->setLayout(eskill_layout);
+    eskill_group->setHidden(true);
+    eskill_group->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
+
+    QVBoxLayout *skill_layout = new QVBoxLayout;
+    skill_layout->addWidget(lbl_skill1);
+    skill_layout->addWidget(lbl_skill2);
+    skill_layout->addWidget(lbl_skill3);
+    skill_layout->addWidget(lbl_skill4);
+    skill_layout->addWidget(lbl_skill5);
+    skill_layout->addWidget(eskill_group);
+    box_skills->setLayout(skill_layout);
+    box_skills->setTitle(tr("Skills"));
+    box_skills->setContentsMargins(0,0,0,0);
+    skill_layout->setContentsMargins(0,0,0,0);
+    skill_layout->setSpacing(2);
+
+    QHBoxLayout *skill_stars_layout = new QHBoxLayout;
+    skill_stars_layout->addItem(ap_stars_layout);
+    skill_stars_layout->addWidget(box_skills);
+
+    QHBoxLayout *stat_layout = new QHBoxLayout;
+    stat_layout->addWidget(lbl_stats);
+    stat_layout->setContentsMargins(0,0,0,0);
+    box_stats->setTitle(tr("Stat Changes"));
+    box_stats->setLayout(stat_layout);
+    box_stats->setContentsMargins(3,3,3,3);
+    //box_stats->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
+
+
+    QVBoxLayout *main_layout = new QVBoxLayout;
+    main_layout->setContentsMargins(0,3,0,0);
+    main_layout->setSpacing(3);
+    main_layout->addWidget(frm_name_ap);
+    main_layout->addItem(skill_stars_layout);
+    //main_layout->addWidget(box_stars);
+    //main_layout->addWidget(box_skills);
+    main_layout->addWidget(box_stats);
+
+    QHBoxLayout *Final = new QHBoxLayout(this);
+    Final->setContentsMargins(0,0,0,0);
+    Final->setSpacing(2);
+    Final->addLayout(main_layout);
+    this->setLayout(Final);
+    this->setFixedHeight(225);
+
 }
 void MateriaEditor::init_connections(void)
 {
@@ -239,8 +410,6 @@ void MateriaEditor::init_data()
     _current_ap=0;
     buffer_id=0;
     buffer_ap=0;
-    setStarsSize(32);
-
 }
 
 void MateriaEditor::setMateria(quint8 materia_id,qint32 materia_ap)
@@ -334,7 +503,7 @@ void MateriaEditor::setStats()
     if(_id==0xFF){lbl_stats->clear();}
     else{lbl_stats->setText(data->Stat_String(_id));}
     //Hide If Eskill..
-    if(lbl_stats->text().isEmpty()){box_stats->setHidden(true);}
+    if(_id==0x2C){box_stats->setHidden(true);}
     else{box_stats->setHidden(false);}
 }
 
