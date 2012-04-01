@@ -208,21 +208,19 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     ui->dialog_preview_box->setLayout(dialog_preview_layout);
     ui->dialog_preview_box->setContentsMargins(0,0,0,0);
 
-    materia_editor = new MateriaEditor();
+    materia_editor = new MateriaEditor(this,0);
     QHBoxLayout *materia_editor_layout = new QHBoxLayout();
     materia_editor_layout->setContentsMargins(0,0,0,0);
     materia_editor_layout->addWidget(materia_editor);
     ui->group_materia->setLayout(materia_editor_layout);
-    ui->group_materia->setContentsMargins(0,0,0,0);
-    materia_editor->setStarsSize(48);
+    ui->group_materia->setContentsMargins(0,6,0,6);
 
-    materia_editor_slot = new MateriaEditor();
+    materia_editor_slot = new MateriaEditor(this,1);
     QHBoxLayout *materia_editor_slot_layout = new QHBoxLayout();
     materia_editor_slot_layout->setContentsMargins(0,0,0,0);
     materia_editor_slot_layout->addWidget(materia_editor_slot);
     ui->group_materia_slot->setLayout(materia_editor_slot_layout);
-    ui->group_materia_slot->setContentsMargins(0,0,0,0);
-    materia_editor_slot->setStarsSize(32);
+    ui->group_materia_slot->setContentsMargins(0,6,0,6);
 
     // Connect the unknown and unknown compare scrolling.
     connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );

@@ -34,7 +34,7 @@ class MateriaEditor : public QWidget
     Q_OBJECT
     
 public:
-    MateriaEditor(QWidget *parent=0);
+    MateriaEditor(QWidget *parent=0,int mode=0);
     //MateriaEditor(QWidget *parent=0,quint8 materia_id=0,qint32 ap=0);
     void setMateria(quint8 materia_id=0,qint32 materia_ap=0);
     void setAP (qint32 current_ap=0);
@@ -44,7 +44,8 @@ public:
     qint8 id(void);
 //    qint32 raw_data(void);
 private:
-    void init_display(void);
+    void init_normal_mode(void);
+    void init_compact_mode(void);
     void init_data(void);
     void init_connections(void);
     void setStars(void);
