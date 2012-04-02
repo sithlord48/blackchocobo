@@ -34,7 +34,7 @@ class MateriaEditor : public QWidget
     Q_OBJECT
     
 public:
-    MateriaEditor(QWidget *parent=0,int mode=0);
+    MateriaEditor(QWidget *parent=0);
     //MateriaEditor(QWidget *parent=0,quint8 materia_id=0,qint32 ap=0);
     void setMateria(quint8 materia_id=0,qint32 materia_ap=0);
     void setAP (qint32 current_ap=0);
@@ -44,6 +44,7 @@ public:
     qint8 id(void);
 //    qint32 raw_data(void);
 private:
+    void init_display(void);
     void init_normal_mode(void);
     void init_compact_mode(void);
     void init_data(void);
@@ -53,6 +54,7 @@ private:
     void setStats(void);
     void setSkills(void);
     void setLevel(void);
+
     QLCDNumber * lcd_max_ap;
     QLabel * lbl_slash;
     QHBoxLayout *Final;
@@ -62,7 +64,8 @@ private:
     QPushButton *btn_copy_materia;
     QPushButton *btn_paste_materia;
     QSpinBox * sb_ap;
-    QFrame *frm_name_ap;
+    QFrame *frm_name_type;
+    QFrame *frm_ap;
     QPushButton *btn_star1;
     QPushButton *btn_star2;
     QPushButton *btn_star3;
@@ -75,14 +78,12 @@ private:
     QListWidget * eskill_list;
     QPushButton * btn_clear_eskills;
     QPushButton * btn_master_eskills;
-    QLabel *lbl_skill1;
-    QLabel *lbl_skill2;
-    QLabel *lbl_skill3;
-    QLabel *lbl_skill4;
-    QLabel *lbl_skill5;
+    QListWidget *list_skills;
     QGroupBox *box_stats;
+    QGroupBox *box_status_effects;
     QLabel *lbl_stats;
-
+    //QLabel *lbl_element;
+    QListWidget *list_status;
     FF7Materia *data;
     quint8 _id;// current id
     qint8 buffer_id;
@@ -96,7 +97,9 @@ private:
     QPixmap _full_star_icon;// hold current full star icon
     QPixmap _empty_star_icon;//hold current empty star icon
     QPixmap _type_icon; // materia type icon.
-
+    QStringList _skill_list;
+    QSpacerItem *v_spacer;
+    QFrame * frm_ap_stars;
 private slots:
     void btn_star1_clicked();
     void btn_star2_clicked();

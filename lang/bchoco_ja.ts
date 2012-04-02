@@ -101,6 +101,45 @@
     </message>
 </context>
 <context>
+    <name>Elements</name>
+    <message>
+        <source>[Fire]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Ice]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Earth]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Lightning]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Poison]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Gravity]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Wind]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Water]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Holy]</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FF7Save</name>
     <message>
         <source>New Game +</source>
@@ -2331,12 +2370,10 @@
     </message>
     <message>
         <source>Weapon</source>
-        <translatorcomment>●</translatorcomment>
         <translation>武器</translation>
     </message>
     <message>
         <source>Armor</source>
-        <translatorcomment>●</translatorcomment>
         <translation>防具</translation>
     </message>
     <message>
@@ -2545,7 +2582,7 @@
     </message>
     <message>
         <source>Dyed Wig</source>
-        <translation>チャバツのかつら</translation>
+        <translation>チャパツのかつら</translation>
     </message>
     <message>
         <source>Blonde Wig</source>
@@ -2629,19 +2666,19 @@
     </message>
     <message>
         <source>Keycard 60</source>
-        <translation>カードキー60</translation>
+        <translation>カードキー６０</translation>
     </message>
     <message>
         <source>Keycard 62</source>
-        <translation>カードキー62</translation>
+        <translation>カードキー６２</translation>
     </message>
     <message>
         <source>Keycard 65</source>
-        <translation>カードキー65</translation>
+        <translation>カードキー６５</translation>
     </message>
     <message>
         <source>Keycard 68</source>
-        <translation>カードキー68</translation>
+        <translation>カードキー６８</translation>
     </message>
     <message>
         <source>PHS</source>
@@ -3181,12 +3218,10 @@
     </message>
     <message>
         <source>Initial</source>
-        <translatorcomment>●</translatorcomment>
         <translation>初期</translation>
     </message>
     <message>
         <source>Memory</source>
-        <translatorcomment>●</translatorcomment>
         <translation>記憶</translation>
     </message>
     <message>
@@ -3219,37 +3254,30 @@
     </message>
     <message>
         <source>Magic Order</source>
-        <translatorcomment>●</translatorcomment>
         <translation>魔法の並び方</translation>
     </message>
     <message>
         <source>Restore,Attack,Indirect</source>
-        <translatorcomment>●</translatorcomment>
         <translation>回復　攻撃　間接</translation>
     </message>
     <message>
         <source>Restore,Indirect,Attack</source>
-        <translatorcomment>●</translatorcomment>
         <translation>回復　間接　攻撃</translation>
     </message>
     <message>
         <source>Attack,Indirect,Restore</source>
-        <translatorcomment>●</translatorcomment>
         <translation>攻撃　間接　回復</translation>
     </message>
     <message>
         <source>Attack,Restore,Indirect</source>
-        <translatorcomment>●</translatorcomment>
         <translation>攻撃　回復　間接</translation>
     </message>
     <message>
         <source>Indirect,Restore,Attack</source>
-        <translatorcomment>●</translatorcomment>
         <translation>間接　回復　攻撃</translation>
     </message>
     <message>
         <source>Indirect,Attack,Restore</source>
-        <translatorcomment>●</translatorcomment>
         <translation>間接　攻撃　回復</translation>
     </message>
     <message>
@@ -3258,12 +3286,10 @@
     </message>
     <message>
         <source>Fast</source>
-        <translatorcomment>●</translatorcomment>
         <translation>速い　</translation>
     </message>
     <message>
         <source>Slow</source>
-        <translatorcomment>●</translatorcomment>
         <translation>　遅い</translation>
     </message>
     <message>
@@ -3766,7 +3792,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Pulse of Life</source>
-        <translation>生命の波動</translation>
+        <translation>生命の鼓動</translation>
     </message>
     <message>
         <source>Great Gospel</source>
@@ -3866,7 +3892,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Dragon Dive</source>
-        <translation>ドラゴンダイブ</translation>
+        <translation>ドラゴンダイヴ</translation>
     </message>
     <message>
         <source>Big Brawl</source>
@@ -4138,7 +4164,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Keycard 66</source>
-        <translation>カードキー66</translation>
+        <translation>カードキー６６</translation>
     </message>
     <message>
         <source>FF7 Dex SaveGame(*.gme)</source>
@@ -4384,32 +4410,26 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Str</source>
-        <translatorcomment>●</translatorcomment>
         <translation>　　 力</translation>
     </message>
     <message>
         <source>Vit</source>
-        <translatorcomment>●</translatorcomment>
         <translation>　体力</translation>
     </message>
     <message>
         <source>Mag</source>
-        <translatorcomment>●</translatorcomment>
         <translation>　魔力</translation>
     </message>
     <message>
         <source>Dex</source>
-        <translatorcomment>●</translatorcomment>
         <translation>素速さ</translation>
     </message>
     <message>
         <source>Lck</source>
-        <translatorcomment>●</translatorcomment>
         <translation>　　 運</translation>
     </message>
     <message>
         <source>HP</source>
-        <translatorcomment>●</translatorcomment>
         <translation>　　HP </translation>
     </message>
     <message>
@@ -4730,7 +4750,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Spi</source>
-        <translatorcomment>●</translatorcomment>
         <translation>　精神</translation>
     </message>
     <message>
@@ -4954,7 +4973,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>MDS6_2: Sense Materia</source>
-        <translatorcomment>○</translatorcomment>
         <translation>６番街公園: マテリア みやぶる</translation>
     </message>
     <message>
@@ -4975,7 +4993,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>EALIN_1: Potion + Phoenix Down</source>
-        <translatorcomment>○</translatorcomment>
         <translation>エアリスの家２Ｆ: ポーション＆フェニックスの尾</translation>
     </message>
     <message>
@@ -5026,7 +5043,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Cait Sith And Vincent Should Not Be Enabled If They Are Disabled in the Party Tab.</source>
-        <translation>ケット・シー, ヴィンセントがパーティ タブで無効になっているときは、ここで彼らを有効化しないでください。</translation>
+        <translation>パーティ タブでケット・シー, ヴィンセントが無効化されている場合、ここで彼らを有効化しないでください。</translation>
     </message>
     <message>
         <source>Can Fight Mystery Ninja in Forests</source>
@@ -5037,51 +5054,55 @@ Table Entries are Editable</source>
     <name>MateriaEditor</name>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>削除</translation>
     </message>
     <message>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>コピー</translation>
     </message>
     <message>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>貼り付け</translation>
     </message>
     <message>
         <source>Clear</source>
-        <translation type="unfinished">クリア</translation>
+        <translation>クリア</translation>
     </message>
     <message>
         <source>Skills</source>
-        <translation type="unfinished"></translation>
+        <translation>スキル</translation>
     </message>
     <message>
         <source>Stat Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>ステータス変化</translation>
     </message>
     <message>
         <source>All Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>すべてのマテリア</translation>
     </message>
     <message>
         <source>Magic</source>
-        <translation type="unfinished">まほう</translation>
+        <translation>まほう</translation>
     </message>
     <message>
         <source>Summon</source>
-        <translation type="unfinished">しょうかん</translation>
+        <translation>しょうかん</translation>
     </message>
     <message>
         <source>Independent</source>
-        <translation type="unfinished">どくりつ</translation>
+        <translation>どくりつ</translation>
     </message>
     <message>
         <source>Support</source>
-        <translation type="unfinished">しえん</translation>
+        <translation>しえん</translation>
     </message>
     <message>
         <source>Command</source>
-        <translation type="unfinished">コマンド</translation>
+        <translation>コマンド</translation>
+    </message>
+    <message>
+        <source>Status</source>
+        <translation type="unfinished">ステータス</translation>
     </message>
 </context>
 <context>
@@ -6769,6 +6790,53 @@ Empty</source>
     <message>
         <source>:</source>
         <translation>:</translation>
+    </message>
+</context>
+<context>
+    <name>Status</name>
+    <message>
+        <source>[Sleep]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Silence]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Confusion]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Berserk]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Small]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Frog]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Poison]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Slow]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Stop]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Death]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Petrify]</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
