@@ -1397,57 +1397,57 @@ void MainWindow::update_stat_totals(void)
             case 14: add=ui->a_m_s7->isVisible();break;
             case 15: add=ui->a_m_s8->isVisible();break;
         };
-        if(ff7->slot[s].chars[curchar].materias[i].id != 0xFF && add)
+        if(ff7->charMateriaId(s,curchar,i)!= 0xFF && add)
         {
-            strbonus += Materias.Stat_Str(ff7->slot[s].chars[curchar].materias[i].id);
-            vitbonus += Materias.Stat_Vit(ff7->slot[s].chars[curchar].materias[i].id);
+            strbonus += Materias.Stat_Str(ff7->charMateriaId(s,curchar,i));
+            vitbonus += Materias.Stat_Vit(ff7->charMateriaId(s,curchar,i));
 
-            if(ff7->slot[s].chars[curchar].materias[i].id == 0x03)
+            if(ff7->charMateriaId(s,curchar,i) == 0x03)
             {//Catch Magic Plus
                 int level=0;
-                int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
+                int aptemp = ff7->charMateriaAp(s,curchar,i);
                 for(int m=0; m<Materias.Levels(3);m++){if(aptemp >= Materias.Ap(3,m)){level++;}}
                 magbonus += ff7->slot[s].chars[curchar].magic * (0.01*(level*10));
             }
-            else{magbonus += Materias.Stat_Mag(ff7->slot[s].chars[curchar].materias[i].id);}
+            else{magbonus += Materias.Stat_Mag(ff7->charMateriaId(s,curchar,i));}
 
-            spibonus += Materias.Stat_Spi(ff7->slot[s].chars[curchar].materias[i].id);
+            spibonus += Materias.Stat_Spi(ff7->charMateriaId(s,curchar,i));
 
-            if(ff7->slot[s].chars[curchar].materias[i].id == 0x02)
+            if(ff7->charMateriaId(s,curchar,i) == 0x02)
             {//Catch Speed Plus
                 int level=0;
-                int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
+                int aptemp = ff7->charMateriaAp(s,curchar,i);
                 for(int m=0; m<Materias.Levels(2);m++){if(aptemp >= Materias.Ap(2,m)){level++;}}
                 dexbonus += ff7->slot[s].chars[curchar].dexterity * (0.01*(level*10));
             }
-            else{dexbonus += Materias.Stat_Dex(ff7->slot[s].chars[curchar].materias[i].id);}
+            else{dexbonus += Materias.Stat_Dex(ff7->charMateriaId(s,curchar,i));}
 
-            if(ff7->slot[s].chars[curchar].materias[i].id == 0x04)
+            if(ff7->charMateriaId(s,curchar,i) == 0x04)
             {//Catch Luck Plus
                 int level=0;
-                int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
+                int aptemp = ff7->charMateriaAp(s,curchar,i);
                 for(int m=0; m<Materias.Levels(4);m++){if(aptemp >= Materias.Ap(4,m)){level++;}}
                 lckbonus += ff7->slot[s].chars[curchar].magic * (0.01*(level*10));
             }
-            else{lckbonus += Materias.Stat_Lck(ff7->slot[s].chars[curchar].materias[i].id);}
+            else{lckbonus += Materias.Stat_Lck(ff7->charMateriaId(s,curchar,i));}
 
-            if(ff7->slot[s].chars[curchar].materias[i].id == 0x01)
+            if(ff7->charMateriaId(s,curchar,i) == 0x01)
             {//Catch HP Plus
                 int level=0;
-                int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
+                int aptemp = ff7->charMateriaAp(s,curchar,i);
                 for(int m=0; m<Materias.Levels(1);m++){if(aptemp >= Materias.Ap(1,m)){level++;}}
                 hpbonus +=level*10;
             }
-            else{hpbonus += Materias.Stat_Hp(ff7->slot[s].chars[curchar].materias[i].id);}
+            else{hpbonus += Materias.Stat_Hp(ff7->charMateriaId(s,curchar,i));}
 
-            if(ff7->slot[s].chars[curchar].materias[i].id ==0x00)
+            if(ff7->charMateriaId(s,curchar,i) ==0x00)
             {//Catch Mp Plus
                 int level=0;
-                int aptemp = ff7->slot[s].chars[curchar].materias[i].ap[0] |  ff7->slot[s].chars[curchar].materias[i].ap[1] <<8 | ff7->slot[s].chars[curchar].materias[i].ap[2] <<16;
+                int aptemp = ff7->charMateriaAp(s,curchar,i);
                 for(int m=0; m<Materias.Levels(0);m++){if(aptemp >= Materias.Ap(0,m)){level++;}}
                 mpbonus +=level*10;
             }
-            else{mpbonus +=Materias.Stat_Mp(ff7->slot[s].chars[curchar].materias[i].id);}
+            else{mpbonus +=Materias.Stat_Mp(ff7->charMateriaId(s,curchar,i));}
         }//end if
     }//end loop
     //out of the loop need to check things like accessory and armor/weapon for modifiers.
@@ -2001,42 +2001,39 @@ void MainWindow::file_modified(bool changed)
 void MainWindow::materiaupdate_slot(void)
 {
 load=true;
-if(ff7->slot[s].chars[curchar].materias[0].id != 0xFF){ui->w_m_s1->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[0].id));}else{ui->w_m_s1->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[1].id != 0xFF){ui->w_m_s2->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[1].id));}else{ui->w_m_s2->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[2].id != 0xFF){ui->w_m_s3->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[2].id));}else{ui->w_m_s3->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[3].id != 0xFF){ui->w_m_s4->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[3].id));}else{ui->w_m_s4->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[4].id != 0xFF){ui->w_m_s5->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[4].id));}else{ui->w_m_s5->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[5].id != 0xFF){ui->w_m_s6->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[5].id));}else{ui->w_m_s6->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[6].id != 0xFF){ui->w_m_s7->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[6].id));}else{ui->w_m_s7->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[7].id != 0xFF){ui->w_m_s8->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[7].id));}else{ui->w_m_s8->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[0].id != 0xFF){ui->w_m_s1->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[0].id));}else{ui->w_m_s1->setToolTip(QString(tr("Empty")));}
-if(ff7->slot[s].chars[curchar].materias[1].id != 0xFF){ui->w_m_s2->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[1].id));}else{ui->w_m_s2->setToolTip(QString(tr("Empty")));}
-if(ff7->slot[s].chars[curchar].materias[2].id != 0xFF){ui->w_m_s3->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[2].id));}else{ui->w_m_s3->setToolTip(QString(tr("Empty")));}
-if(ff7->slot[s].chars[curchar].materias[3].id != 0xFF){ui->w_m_s4->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[3].id));}else{ui->w_m_s4->setToolTip(QString(tr("Empty")));}
-if(ff7->slot[s].chars[curchar].materias[4].id != 0xFF){ui->w_m_s5->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[4].id));}else{ui->w_m_s5->setToolTip(QString(tr("Empty")));}
-if(ff7->slot[s].chars[curchar].materias[5].id != 0xFF){ui->w_m_s6->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[5].id));}else{ui->w_m_s6->setToolTip(QString(tr("Empty")));}
-if(ff7->slot[s].chars[curchar].materias[6].id != 0xFF){ui->w_m_s7->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[6].id));}else{ui->w_m_s7->setToolTip(QString(tr("Empty")));}
-if(ff7->slot[s].chars[curchar].materias[7].id != 0xFF){ui->w_m_s8->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[7].id));}else{ui->w_m_s8->setToolTip(QString(tr("Empty")));}
+if(ff7->charMateriaId(s,curchar,0) != 0xFF){ui->w_m_s1->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,0)));}else{ui->w_m_s1->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,1) != 0xFF){ui->w_m_s2->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,1)));}else{ui->w_m_s2->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,2) != 0xFF){ui->w_m_s3->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,2)));}else{ui->w_m_s3->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,3) != 0xFF){ui->w_m_s4->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,3)));}else{ui->w_m_s4->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,4) != 0xFF){ui->w_m_s5->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,4)));}else{ui->w_m_s5->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,5) != 0xFF){ui->w_m_s6->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,5)));}else{ui->w_m_s6->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,6) != 0xFF){ui->w_m_s7->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,6)));}else{ui->w_m_s7->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,7) != 0xFF){ui->w_m_s8->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,7)));}else{ui->w_m_s8->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,0) != 0xFF){ui->w_m_s1->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,0)));}else{ui->w_m_s1->setToolTip(QString(tr("Empty")));}
+if(ff7->charMateriaId(s,curchar,1) != 0xFF){ui->w_m_s2->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,1)));}else{ui->w_m_s2->setToolTip(QString(tr("Empty")));}
+if(ff7->charMateriaId(s,curchar,2) != 0xFF){ui->w_m_s3->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,2)));}else{ui->w_m_s3->setToolTip(QString(tr("Empty")));}
+if(ff7->charMateriaId(s,curchar,3) != 0xFF){ui->w_m_s4->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,3)));}else{ui->w_m_s4->setToolTip(QString(tr("Empty")));}
+if(ff7->charMateriaId(s,curchar,4) != 0xFF){ui->w_m_s5->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,4)));}else{ui->w_m_s5->setToolTip(QString(tr("Empty")));}
+if(ff7->charMateriaId(s,curchar,5) != 0xFF){ui->w_m_s6->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,5)));}else{ui->w_m_s6->setToolTip(QString(tr("Empty")));}
+if(ff7->charMateriaId(s,curchar,6) != 0xFF){ui->w_m_s7->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,6)));}else{ui->w_m_s7->setToolTip(QString(tr("Empty")));}
+if(ff7->charMateriaId(s,curchar,7) != 0xFF){ui->w_m_s8->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,7)));}else{ui->w_m_s8->setToolTip(QString(tr("Empty")));}
 
-if(ff7->slot[s].chars[curchar].materias[8].id != 0xFF){ui->a_m_s1->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[8].id));}else{ui->a_m_s1->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[9].id != 0xFF){ui->a_m_s2->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[9].id));}else{ui->a_m_s2->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[10].id != 0xFF){ui->a_m_s3->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[10].id));}else{ui->a_m_s3->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[11].id != 0xFF){ui->a_m_s4->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[11].id));}else{ui->a_m_s4->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[12].id != 0xFF){ui->a_m_s5->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[12].id));}else{ui->a_m_s5->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[13].id != 0xFF){ui->a_m_s6->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[13].id));}else{ui->a_m_s6->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[14].id != 0xFF){ui->a_m_s7->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[14].id));}else{ui->a_m_s7->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[15].id != 0xFF){ui->a_m_s8->setIcon(Materias.Icon(ff7->slot[s].chars[curchar].materias[15].id));}else{ui->a_m_s8->setIcon(QIcon(QString("")));}
-if(ff7->slot[s].chars[curchar].materias[8].id != 0xFF){ui->a_m_s1->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[8].id));}else{ui->a_m_s1->setToolTip(QString(tr("Empty")));}
-if(ff7->slot[s].chars[curchar].materias[9].id != 0xFF){ui->a_m_s2->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[9].id));}else{ui->a_m_s2->setToolTip(QString(tr("Empty")));}
-if(ff7->slot[s].chars[curchar].materias[10].id != 0xFF){ui->a_m_s3->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[10].id));}else{ui->a_m_s3->setToolTip(QString(tr("Empty")));}
-if(ff7->slot[s].chars[curchar].materias[11].id != 0xFF){ui->a_m_s4->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[11].id));}else{ui->a_m_s4->setToolTip(QString(tr("Empty")));}
-if(ff7->slot[s].chars[curchar].materias[12].id != 0xFF){ui->a_m_s5->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[12].id));}else{ui->a_m_s5->setToolTip(QString(tr("Empty")));}
-if(ff7->slot[s].chars[curchar].materias[13].id != 0xFF){ui->a_m_s6->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[13].id));}else{ui->a_m_s6->setToolTip(QString(tr("Empty")));}
-if(ff7->slot[s].chars[curchar].materias[14].id != 0xFF){ui->a_m_s7->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[14].id));}else{ui->a_m_s7->setToolTip(QString(tr("Empty")));}
-if(ff7->slot[s].chars[curchar].materias[15].id != 0xFF){ui->a_m_s8->setToolTip(Materias.Name(ff7->slot[s].chars[curchar].materias[15].id));}else{ui->a_m_s8->setToolTip(QString(tr("Empty")));}
-
-
-quint8 current_id = ff7->slot[s].chars[curchar].materias[mslotsel].id;
+if(ff7->charMateriaId(s,curchar,8)  != 0xFF){ui->a_m_s1->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,8)));}else{ui->a_m_s1->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,9)  != 0xFF){ui->a_m_s2->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,9)));}else{ui->a_m_s2->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,10) != 0xFF){ui->a_m_s3->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,10)));}else{ui->a_m_s3->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,11) != 0xFF){ui->a_m_s4->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,11)));}else{ui->a_m_s4->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,12) != 0xFF){ui->a_m_s5->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,12)));}else{ui->a_m_s5->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,13) != 0xFF){ui->a_m_s6->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,13)));}else{ui->a_m_s6->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,14) != 0xFF){ui->a_m_s7->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,14)));}else{ui->a_m_s7->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,15) != 0xFF){ui->a_m_s8->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,15)));}else{ui->a_m_s8->setIcon(QIcon(QString("")));}
+if(ff7->charMateriaId(s,curchar,8) != 0xFF){ui->a_m_s1->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,8)));}else{ui->a_m_s1->setToolTip(QString(tr("Empty")));}
+if(ff7->charMateriaId(s,curchar,9) != 0xFF){ui->a_m_s2->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,9)));}else{ui->a_m_s2->setToolTip(QString(tr("Empty")));}
+if(ff7->charMateriaId(s,curchar,10) != 0xFF){ui->a_m_s3->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,10)));}else{ui->a_m_s3->setToolTip(QString(tr("Empty")));}
+if(ff7->charMateriaId(s,curchar,11) != 0xFF){ui->a_m_s4->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,11)));}else{ui->a_m_s4->setToolTip(QString(tr("Empty")));}
+if(ff7->charMateriaId(s,curchar,12) != 0xFF){ui->a_m_s5->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,12)));}else{ui->a_m_s5->setToolTip(QString(tr("Empty")));}
+if(ff7->charMateriaId(s,curchar,13) != 0xFF){ui->a_m_s6->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,13)));}else{ui->a_m_s6->setToolTip(QString(tr("Empty")));}
+if(ff7->charMateriaId(s,curchar,14) != 0xFF){ui->a_m_s7->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,14)));}else{ui->a_m_s7->setToolTip(QString(tr("Empty")));}
+if(ff7->charMateriaId(s,curchar,15) != 0xFF){ui->a_m_s8->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,15)));}else{ui->a_m_s8->setToolTip(QString(tr("Empty")));}
 
 ui->w_m_s1_frame->setFrameStyle(0);
 ui->w_m_s2_frame->setFrameStyle(0);
@@ -2078,32 +2075,20 @@ switch(mslotsel)
     case 15:ui->a_m_s8_frame->setFrameStyle(1);    break;
 }
 
-qint32 current_ap = ff7->slot[s].chars[curchar].materias[mslotsel].ap[0] |(ff7->slot[s].chars[curchar].materias[mslotsel].ap[1] << 8) | (ff7->slot[s].chars[curchar].materias[mslotsel].ap[2] << 16);
-materia_editor_slot->setMateria(current_id,current_ap);
+materia_editor_slot->setMateria(ff7->charMateriaId(s,curchar,mslotsel),ff7->charMateriaAp(s,curchar,mslotsel));
 load=false;
 update_stat_totals();
 }
 
 void MainWindow::materia_slot_ap_changed(qint32 ap)
 {if(!load){
-    if(ap ==  materia_editor_slot->MaxAP())
-    {
-        for(int i=0;i<3;i++){ff7->slot[s].chars[curchar].materias[mslotsel].ap[i] = 0xFF;}
-    }
-    else
-    {
-        int a = (ap & 0xff);
-        int b = (ap & 0xff00) >> 8;
-        int c = (ap & 0xff0000) >> 16;
-        ff7->slot[s].chars[curchar].materias[mslotsel].ap[0] = a;
-        ff7->slot[s].chars[curchar].materias[mslotsel].ap[1] = b;
-        ff7->slot[s].chars[curchar].materias[mslotsel].ap[2] = c;
-    }
+    if(ap>=materia_editor_slot->MaxAP()){ap=16777215;}
+    ff7->setCharMateria(s,curchar,mslotsel,ff7->charMateriaId(s,curchar,mslotsel),ap);
     materiaupdate_slot();
 }}
 void MainWindow::materia_slot_id_changed(qint8 id)
 {if(!load){
-    ff7->slot[s].chars[curchar].materias[mslotsel].id = id;
+    ff7->setCharMateria(s,curchar,mslotsel,id,ff7->charMateriaAp(s,curchar,mslotsel));
     materiaupdate_slot();
 }}
 /*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
@@ -2170,62 +2155,46 @@ void MainWindow::materiaupdate(void)
 
     for(int mat=0;mat<200;mat++)// partys materias
     {
-        qint32 current_ap=0;
+        qint32 current_ap= ff7->partyMateriaAp(s,mat);
+        quint8 current_id= ff7->partyMateriaId(s,mat);
         QString ap;
-        if(ff7->slot[s].materias[mat].id == 0x2C)
+
+        if(current_id == 0x2C)
         {
-            newItem = new QTableWidgetItem(Materias.Icon(ff7->slot[s].materias[mat].id),Materias.Name(ff7->slot[s].materias[mat].id),0);
+            newItem = new QTableWidgetItem(Materias.Icon(current_id),Materias.Name(current_id),0);
             ui->tbl_materia->setItem(mat,0,newItem);
-            current_ap = ff7->slot[s].materias[mat].ap[0] |(ff7->slot[s].materias[mat].ap[1] << 8) | (ff7->slot[s].materias[mat].ap[2] << 16);
             if (current_ap == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
             else{newItem =new QTableWidgetItem(QString("N/A"),0);ui->tbl_materia->setItem(mat,1,newItem);}
         }
-        else if (ff7->slot[s].materias[mat].id !=0xff)
+        else if (current_id !=0xff)
         {
-            newItem = new QTableWidgetItem(Materias.Icon(ff7->slot[s].materias[mat].id),Materias.Name(ff7->slot[s].materias[mat].id),0);
+            newItem = new QTableWidgetItem(Materias.Icon(current_id),Materias.Name(current_id),0);
             ui->tbl_materia->setItem(mat,0,newItem);
-            current_ap = ff7->slot[s].materias[mat].ap[0] |(ff7->slot[s].materias[mat].ap[1] << 8) | (ff7->slot[s].materias[mat].ap[2] << 16);
             if (current_ap == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
             else{newItem =new QTableWidgetItem(ap.setNum(current_ap));ui->tbl_materia->setItem(mat,1,newItem);}
         }
         else
         {
+            ff7->setPartyMateria(s,mat,0xFF,0xFFFFFF);//invalid insure its clear.
             newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
-            ff7->slot[s].materias[mat].ap[0]=0xFF;//just incase the empty slot has 0 ap
-            ff7->slot[s].materias[mat].ap[1]=0xFF;//this will fix the "gravity" bug
-            ff7->slot[s].materias[mat].ap[2]=0xFF;//that was reported by dlpb
             ui->tbl_materia->setItem(mat,0,newItem);
             newItem = new QTableWidgetItem("",0);
             ui->tbl_materia->setItem(mat,1,newItem);
         }
     }
-
-    quint8 current_id= ff7->slot[s].materias[j].id;
-    qint32 current_ap= ff7->slot[s].materias[j].ap[0] |(ff7->slot[s].materias[j].ap[1] << 8) | (ff7->slot[s].materias[j].ap[2] << 16);
-    materia_editor->setMateria(current_id,current_ap);
+    materia_editor->setMateria(ff7->partyMateriaId(s,j),ff7->partyMateriaAp(s,j));
     ui->tbl_materia->setCurrentCell(j,1);//so that right side is set correctly.
     load=false;
 }
 void MainWindow::materia_ap_changed(qint32 ap)
 {if(!load){
-    if(ap ==  materia_editor->MaxAP())
-    {
-        for(int i=0;i<3;i++){ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[i] = 0xFF;}
-    }
-    else
-    {
-        int a = (ap & 0xff);
-        int b = (ap & 0xff00) >> 8;
-        int c = (ap & 0xff0000) >> 16;
-        ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[0] = a;
-        ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[1] = b;
-        ff7->slot[s].materias[ui->tbl_materia->currentRow()].ap[2] = c;
-    }
+    if(ap>=materia_editor->MaxAP()){ap=16777215;}
+    ff7->setPartyMateria(s,ui->tbl_materia->currentRow(),ff7->partyMateriaId(s,ui->tbl_materia->currentRow()),ap);
     materiaupdate();
 }}
 void MainWindow::materia_id_changed(qint8 id)
 {if(!load){
-    ff7->slot[s].materias[ui->tbl_materia->currentRow()].id = id;
+    ff7->setPartyMateria(s,ui->tbl_materia->currentRow(),id,ff7->partyMateriaAp(s,ui->tbl_materia->currentRow()));
     materiaupdate();
 }}
 
@@ -2664,15 +2633,15 @@ void MainWindow::guirefresh(bool newgame)
         ui->tbl_materia_2->setRowCount(48);
         for(int mat=0;mat<48;mat++) //materias stolen by yuffie
         {
-            int aptemp;
             QString ap;
-            if (ff7->slot[s].stolen[mat].id !=0xff)
+            quint8 current_id = ff7->stolenMateriaId(s,mat);
+            if (current_id !=0xff)
             {
-                newItem = new QTableWidgetItem(QPixmap::fromImage(Materias.Image(ff7->slot[s].stolen[mat].id)),Materias.Name(ff7->slot[s].stolen[mat].id),0);
+                newItem = new QTableWidgetItem(QPixmap::fromImage(Materias.Image(current_id)),Materias.Name(current_id),0);
                 ui->tbl_materia_2->setItem(mat,0,newItem);
-                aptemp = ff7->slot[s].stolen[mat].ap[0] |(ff7->slot[s].stolen[mat].ap[1] << 8) | (ff7->slot[s].stolen[mat].ap[2] << 16);
-                if (aptemp == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia_2->setItem(mat,1,newItem);}
-                else{newItem =new QTableWidgetItem(ap.setNum(aptemp));ui->tbl_materia_2->setItem(mat,1,newItem);}
+                qint32 current_ap = ff7->stolenMateriaAp(s,mat);
+                if (current_ap == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia_2->setItem(mat,1,newItem);}
+                else{newItem =new QTableWidgetItem(ap.setNum(current_ap));ui->tbl_materia_2->setItem(mat,1,newItem);}
             }
             else
             {
@@ -3443,8 +3412,7 @@ void MainWindow::on_cb_farm_items_8_toggled(bool checked){if(!load){file_modifie
 
 void MainWindow::on_clearItem_clicked()
 {
-    ff7->setItemId(s,ui->tbl_itm->currentRow(),0x1FF);
-    ff7->setItemQty(s,ui->tbl_itm->currentRow(),0x7F);
+    ff7->setItem(s,ui->tbl_itm->currentRow(),0x1FF,0x7F);
     itemupdate();
 }
 void MainWindow::on_btn_clear_keyitems_clicked()
@@ -3458,7 +3426,7 @@ void MainWindow::on_btn_clear_keyitems_clicked()
 void MainWindow::on_combo_additem_currentIndexChanged(int index)
 {if(!load){file_modified(true);
     //Replaced by new item engine. (Vegeta_Ss4)
-    ff7->setItemId(s,ui->tbl_itm->currentRow(),index);
+    ff7->setItem(s,ui->tbl_itm->currentRow(),index,ui->sb_addqty->value());
     item_preview->setItem(index);
     itemupdate();
 }}
@@ -3466,7 +3434,7 @@ void MainWindow::on_combo_additem_currentIndexChanged(int index)
 void MainWindow::on_sb_addqty_valueChanged(int value)
 {if(!load){file_modified(true);
     //Replaced by new item engine. (Vegeta_Ss4)
-    ff7->setItemQty(s,ui->tbl_itm->currentRow(),value);
+    ff7->setItem(s,ui->tbl_itm->currentRow(),ui->combo_additem->currentIndex(),value);
     itemupdate();
 }}
 
@@ -3490,11 +3458,7 @@ void MainWindow::on_tbl_itm_currentCellChanged(int row)
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-void MainWindow::on_tbl_materia_currentCellChanged(int row)
-{if(!load){//file_modified(true);
-        qint32 current_ap = ff7->slot[s].materias[row].ap[0] |(ff7->slot[s].materias[row].ap[1] << 8) | (ff7->slot[s].materias[row].ap[2] << 16);
-        materia_editor->setMateria(ff7->slot[s].materias[row].id,current_ap);
-}}
+void MainWindow::on_tbl_materia_currentCellChanged(int row){if(!load){materia_editor->setMateria(ff7->partyMateriaId(s,row),ff7->partyMateriaAp(s,row));}}
 
 
 void MainWindow::on_btn_add_all_materia_clicked()
@@ -3504,41 +3468,28 @@ void MainWindow::on_btn_add_all_materia_clicked()
     //place one of each at lowest ossible point
     for(int i=117;i<142;i++)
     {//Starting With Magic Materia
-        if(i<132){ff7->slot[s].materias[i].id=(i-68); ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        else if((i>=132) && (i<136)){ff7->slot[s].materias[i-1].id =(i-68);ff7->slot[s].materias[i-1].ap[0]=0xFF;ff7->slot[s].materias[i-1].ap[1]=0xFF;ff7->slot[s].materias[i-1].ap[2]=0xFF;}
-        else if((i>=136) && (i<142)){ff7->slot[s].materias[i-3].id =(i-68);ff7->slot[s].materias[i-3].ap[0]=0xFF;ff7->slot[s].materias[i-3].ap[1]=0xFF;ff7->slot[s].materias[i-3].ap[2]=0xFF;}
+        if(i<132){ff7->setPartyMateria(s,i,(i-68),16777215);}
+        else if((i>=132) && (i<136)){ff7->setPartyMateria(s,(i-1),(i-68),16777215);}
+        else if((i>=136) && (i<142)){ff7->setPartyMateria(s,(i-3),(i-68),16777215);}
     }
-    for(int i=139;i<152;i++)
-    {//Then Support
-        ff7->slot[s].materias[i].id = (i-116);ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;
-    }
+    // Then Support
+    for(int i=139;i<152;i++){ff7->setPartyMateria(s,i,(i-116),16777215);}
+
     for(int i=152;i<166;i++)
     {//Then Command
-        if(i==152){ff7->slot[s].materias[i].id = 0x0E;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        if(i==153){ff7->slot[s].materias[i].id = 0x0F;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        if(i==154){ff7->slot[s].materias[i].id = 0x13;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        if(i==155){ff7->slot[s].materias[i].id = 0x14;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        if(i==156){ff7->slot[s].materias[i].id = 0x15;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        if(i==157){ff7->slot[s].materias[i].id = 0x24;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        if(i==158){ff7->slot[s].materias[i].id = 0x25;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        if(i==159){ff7->slot[s].materias[i].id = 0x27;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        if(i==160){ff7->slot[s].materias[i].id = 0x28;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        if(i==161){ff7->slot[s].materias[i].id = 0x29;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        if(i==162){ff7->slot[s].materias[i].id = 0x2A;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        if(i==163){ff7->slot[s].materias[i].id = 0x2B;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        if(i==164){ff7->slot[s].materias[i].id = 0x2C;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        if(i==165){ff7->slot[s].materias[i].id = 0x30;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
+        if(i<154){ff7->setPartyMateria(s,i,(i-138),16777215);}
+        else if(i<157){ff7->setPartyMateria(s,i,(i-135),16777215);}
+        else if(i<159){ff7->setPartyMateria(s,i,(i-121),16777215);}
+        else if(i<165){ff7->setPartyMateria(s,i,(i-120),16777215);}
+        else {ff7->setPartyMateria(s,i,0x30,16777215);}
     }
     for(int i=166;i<183;i++)
-    {
-        if(i<180){ff7->slot[s].materias[i].id = i-166;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-        else{ff7->slot[s].materias[i].id =i-164;ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;}
-
+    {//And Independent
+        if(i<180){ff7->setPartyMateria(s,i,(i-166),16777215);}
+        else{ff7->setPartyMateria(s,i,(i-164),16777215);}
     }
-    for(int i=183;i<200;i++)
-    {
-        ff7->slot[s].materias[i].id = (i-109);ff7->slot[s].materias[i].ap[0]=0xFF;ff7->slot[s].materias[i].ap[1]=0xFF;ff7->slot[s].materias[i].ap[2]=0xFF;
-    }
+    //Finish With Summons
+    for(int i=183;i<200;i++){ff7->setPartyMateria(s,i,(i-109),16777215);}
     materiaupdate();
 }
 
@@ -3957,8 +3908,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->slot[s].chars[6].limits= ff7->slot[s].chars[0].limits;
         for (int i=0;i<16;i++)
         {
-            ff7->slot[s].chars[6].materias[i].id = ff7->slot[s].chars[0].materias[i].id;
-            for (int j=0;j<3;j++){ff7->slot[s].chars[6].materias[i].ap[j]=ff7->slot[s].chars[0].materias[i].ap[j];}
+            ff7->setCharMateria(s,6,i,ff7->charMateriaId(s,0,i),ff7->charMateriaAp(s,0,i));
         }
         ff7->slot[s].chars[6].timesused1 = ff7->slot[s].chars[0].timesused1;
         ff7->slot[s].chars[6].timesused2 = ff7->slot[s].chars[0].timesused2;
@@ -4016,38 +3966,22 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS FOR TESTING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_btn_remove_all_items_clicked() //used for testing
 {
-    for(int i=0;i<320;i++)
-    {
-        ff7->setItemId(s,i,0x1FF);
-        ff7->setItemQty(s,i,0x7F);
-    }
+    for(int i=0;i<320;i++){ff7->setItem(s,i,0x1FF,0x7F);}
     if(!load){file_modified(true); }
     itemupdate();
 }
 
 void MainWindow::on_btn_remove_all_materia_clicked()
 {
-    for (int i=0;i<200;i++)
-    {
-        ff7->slot[s].materias[i].id =0xFF;
-        ff7->slot[s].materias[i].ap[0]=0xFF;
-        ff7->slot[s].materias[i].ap[1]=0xFF;
-        ff7->slot[s].materias[i].ap[2]=0xFF;
-    }
+    for (int i=0;i<200;i++){ff7->setPartyMateria(s,i,0xFF,16777215);}
     if(!load){file_modified(true); }
     materiaupdate();
 }
 
 void MainWindow::on_btn_remove_all_stolen_clicked()
 {
-    for(int i=0;i<48;i++)
-    {
-        ff7->slot[s].stolen[i].id =0xFF;
-        ff7->slot[s].stolen[i].ap[0]=0xFF;
-        ff7->slot[s].stolen[i].ap[1]=0xFF;
-        ff7->slot[s].stolen[i].ap[2]=0xFF;
-    }
-    if(!load){file_modified(true); }
+    for(int i=0;i<48;i++){ff7->setStolenMateria(s,i,0xFF,0xFFFFFF);}
+    if(!load){file_modified(true);}
     guirefresh(0);
 }
 
@@ -4615,17 +4549,15 @@ void MainWindow::on_btn_item_add_each_item_clicked()
         {
             if(i<106)
             {
-                ff7->setItemId(s,i,i);
-                ff7->setItemQty(s,i,127);
+                ff7->setItem(s,i,i,127);
             }
             else// after the block of empty items shift up 23 spots.
             {
-                ff7->setItemId(s,(i-23),i);
-                ff7->setItemQty(s,(i-23),127);
+                ff7->setItem(s,(i-23),i,127);
             }
         }
-        else{ff7->setItemId(s,i,0x1FF);ff7->setItemQty(s,i,0x7F);}//exclude the test items
-        if(i>296){ff7->setItemId(s,i,0x1FF);ff7->setItemQty(s,i,0x7F);}//replace the shifted ones w/ empty slots
+        else{ff7->setItem(s,i,0x1FF,0x7F);}//exclude the test items
+        if(i>296){ff7->setItem(s,i,0x1FF,0x7F);}//replace the shifted ones w/ empty slots
     }
     guirefresh(0);
 }
