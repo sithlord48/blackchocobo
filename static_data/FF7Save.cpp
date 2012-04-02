@@ -462,9 +462,13 @@ quint16 FF7Save::itemEncode( quint16 id, quint8 qty )
     }
     return itemraw;
 }
-void FF7Save::setItemId(int s,int item_num,quint16 new_id){slot[s].items[item_num]= itemEncode(new_id,itemQty(s,item_num));}
-
-void FF7Save::setItemQty(int s,int item_num,quint8 new_qty){slot[s].items[item_num]=itemEncode(itemId(s,item_num),new_qty);}
+void FF7Save::setItem(int s,int item_num,quint16 new_id,quint8 new_qty)
+{
+    if(region(s).contains("SLPS-00700")){if(new_qty>99){if(new_id != 0x1FF){new_qty = 99;}}}
+    //Item Qty over 99 on SLPS-00700 Causes an Error Durring Battle and break all items.
+    //Above Is to Check for and fix, since im sure no one wants to lose all their items.
+    slot[s].items[item_num]= itemEncode(new_id,new_qty);
+}
 
 quint16 FF7Save::itemId(int s,int item_num)
 {
@@ -1366,4 +1370,83 @@ int FF7Save::stat_gain(int who,int stat, int stat_amount, int next_lvl)
       else if (diff>=11){gain = ((next_lvl*mp_gradent[who][lvl_bracket]/10)-((next_lvl-1)*mp_gradent[who][lvl_bracket]/10))*1.60;}
   }
   return gain;
+}
+void FF7Save::setPartyMateria(int s, int mat_num, quint8 id,qint32 ap)
+{//if invalid set to 0xFF
+    if( (id<91) && ((ap>=0)&&(ap<=16777215)))
+    {//Valid Id and Ap provided.
+        slot[s].materias[mat_num].id = id;
+        int a = (ap & 0xff);
+        int b = (ap & 0xff00) >> 8;
+        int c = (ap & 0xff0000) >> 16;
+        slot[s].materias[mat_num].ap[0]=a;
+        slot[s].materias[mat_num].ap[1]=b;
+        slot[s].materias[mat_num].ap[2]=c;
+    }
+    else
+    {//invalid ID set Empty
+        slot[s].materias[mat_num].id =0xFF;
+        slot[s].materias[mat_num].ap[0]=0xFF;
+        slot[s].materias[mat_num].ap[1]=0xFF;
+        slot[s].materias[mat_num].ap[2]=0xFF;
+    }
+}
+quint8 FF7Save::partyMateriaId(int s,int mat_num){return slot[s].materias[mat_num].id;}
+qint32 FF7Save::partyMateriaAp(int s,int mat_num)
+{
+    qint32 ap_temp = slot[s].materias[mat_num].ap[0] |(slot[s].materias[mat_num].ap[1] << 8) | slot[s].materias[mat_num].ap[2]<<16;
+    return ap_temp;
+}
+void FF7Save::setStolenMateria(int s, int mat_num, quint8 id,qint32 ap)
+{
+    if( (id<91) && ((ap>=0)&&(ap<=16777215)))
+    {//Valid Id and Ap provided.
+        slot[s].stolen[mat_num].id = id;
+        int a = (ap & 0xff);
+        int b = (ap & 0xff00) >> 8;
+        int c = (ap & 0xff0000) >> 16;
+        slot[s].stolen[mat_num].ap[0]=a;
+        slot[s].stolen[mat_num].ap[1]=b;
+        slot[s].stolen[mat_num].ap[2]=c;
+    }
+    else
+    {//invalid ID set Empty
+        slot[s].stolen[mat_num].id =0xFF;
+        slot[s].stolen[mat_num].ap[0]=0xFF;
+        slot[s].stolen[mat_num].ap[1]=0xFF;
+        slot[s].stolen[mat_num].ap[2]=0xFF;
+    }
+}
+quint8 FF7Save::stolenMateriaId(int s,int mat_num){return slot[s].stolen[mat_num].id;}
+qint32 FF7Save::stolenMateriaAp(int s,int mat_num)
+{
+    qint32 ap_temp = slot[s].stolen[mat_num].ap[0] |(slot[s].stolen[mat_num].ap[1] << 8) | slot[s].stolen[mat_num].ap[2]<<16;
+    return ap_temp;
+}
+void FF7Save::setCharMateria(int s,int who,int mat_num,quint8 id,qint32 ap)
+{
+    if( (id<91) && ((ap>=0)&&(ap<=16777215)))
+    {//Valid Id and Ap provided.
+        slot[s].chars[who].materias[mat_num].id = id;
+        int a = (ap & 0xff);
+        int b = (ap & 0xff00) >> 8;
+        int c = (ap & 0xff0000) >> 16;
+        slot[s].chars[who].materias[mat_num].ap[0]=a;
+        slot[s].chars[who].materias[mat_num].ap[1]=b;
+        slot[s].chars[who].materias[mat_num].ap[2]=c;
+    }
+    else
+    {//invalid ID set Empty
+        slot[s].chars[who].materias[mat_num].id =0xFF;
+        slot[s].chars[who].materias[mat_num].ap[0]=0xFF;
+        slot[s].chars[who].materias[mat_num].ap[1]=0xFF;
+        slot[s].chars[who].materias[mat_num].ap[2]=0xFF;
+    }
+
+}
+quint8 FF7Save::charMateriaId(int s,int who,int mat_num){return slot[s].chars[who].materias[mat_num].id;}
+qint32 FF7Save::charMateriaAp(int s,int who,int mat_num)
+{
+    qint32 ap_temp = slot[s].chars[who].materias[mat_num].ap[0] |(slot[s].chars[who].materias[mat_num].ap[1] << 8) | slot[s].chars[who].materias[mat_num].ap[2]<<16;
+    return ap_temp;
 }
