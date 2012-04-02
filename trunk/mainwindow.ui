@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>771</width>
+    <width>767</width>
     <height>587</height>
    </rect>
   </property>
@@ -1349,7 +1349,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>438</width>
+             <width>434</width>
              <height>441</height>
             </rect>
            </property>
@@ -3341,8 +3341,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>438</width>
-             <height>441</height>
+             <width>420</width>
+             <height>458</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -4850,7 +4850,13 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <property name="minimumSize">
                <size>
                 <width>401</width>
-                <height>217</height>
+                <height>235</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>16777215</width>
+                <height>235</height>
                </size>
               </property>
               <property name="title">
@@ -9324,8 +9330,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>759</width>
-             <height>445</height>
+             <width>720</width>
+             <height>275</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -11425,7 +11431,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>350</width>
+                  <width>333</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -13918,7 +13924,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>738</width>
+             <width>513</width>
              <height>683</height>
             </rect>
            </property>
@@ -19674,7 +19680,7 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>771</width>
+     <width>767</width>
      <height>22</height>
     </rect>
    </property>

@@ -101,6 +101,45 @@
     </message>
 </context>
 <context>
+    <name>Elements</name>
+    <message>
+        <source>[Fire]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Ice]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Earth]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Lightning]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Poison]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Gravity]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Wind]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Water]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Holy]</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>FF7Save</name>
     <message>
         <source>New Game +</source>
@@ -4877,6 +4916,10 @@ Table Entries are Editable</source>
         <source>Command</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Status</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
@@ -6556,6 +6599,53 @@ Empty</source>
     </message>
     <message>
         <source>:</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>Status</name>
+    <message>
+        <source>[Sleep]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Silence]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Confusion]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Berserk]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Small]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Frog]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Poison]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Slow]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Stop]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Death]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Petrify]</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

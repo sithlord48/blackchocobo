@@ -19,7 +19,6 @@
 
 QString FF7Materia::Name(int id){return qApp->translate("Materia_Names",Materias[id].name.toAscii());}
 QString FF7Materia::Stat_String(int id){return qApp->translate("Materia_Stats",Materias[id].stats.toAscii());}
-QString FF7Materia::Skills(int id,int lvl){return qApp->translate("Materia_Skills",Materias[id].skills[lvl].toAscii());}
 qint8 FF7Materia::Stat_Str(int id){return Materias[id].str;}
 qint8 FF7Materia::Stat_Vit(int id){return Materias[id].vit;}
 qint8 FF7Materia::Stat_Dex(int id){return Materias[id].dex;}
@@ -38,5 +37,23 @@ QImage FF7Materia::Image_FullStar(int id){return Materias[id].fm_image;}
 QIcon FF7Materia::Icon_AllMateria(){return QIcon(all_xpm);}
 QImage FF7Materia::Image_AllMateria(){return QImage(all_xpm);}
 QString FF7Materia::Eskill(int i){return qApp->translate("E_skills",ESkills[i].toAscii());}
-
+QString FF7Materia::Element(int i){return qApp->translate("Elements",Materias[i].elemental.toAscii());}
+QStringList FF7Materia::Skills(int i)
+{
+    QStringList translated_list;
+    for(int j=0;j<Materias[i].skills.count();j++)
+    {
+        translated_list.append(qApp->translate("Materia_Skills",Materias[i].skills.at(j).toAscii()));
+    }
+    return translated_list;
+}
+QStringList FF7Materia::Status(int i)
+{
+    QStringList translated_list;
+    for (int j=0;j<Materias[i].status.count();j++)
+    {
+        translated_list.append(qApp->translate("Status",Materias[i].status.at(j).toAscii()));
+    }
+    return translated_list;
+}
 
