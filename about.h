@@ -18,10 +18,7 @@
 #define ABOUT_H
 
 #ifndef SVNVERSION
-#include "svnversion.h"
-#ifndef SVNVERSION
 #define SVNVERSION 0
-#endif
 #endif
 
 #include <QDialog>
