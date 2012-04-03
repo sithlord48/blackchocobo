@@ -82,8 +82,14 @@ macx:{
 win32:{
     #set up icon for windows
     RC_FILE = bchoco.rc
-    system(copy /y NUL svnversion.h >NUL)
-    system(SubWCRev $$PWD svnversion.hmake svnversion.h)
+    #system(copy /y NUL svnversion.h >NUL)
+    #system(SubWCRev $$PWD svnversion.hmake svnversion.h)
+    #system(svnversion $$PWD svnversion.hmake svnversion.h)
+    VERS = $$system(svnrev $$PWD)
+    {
+    DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
+    message("Using Svn Revision:$${VERS}")
+    }
 }
 
 #all other *nix (except for symbian)
