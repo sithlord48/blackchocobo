@@ -19,7 +19,6 @@
 #include "winver.h"
 
 // ----- local includes ---- //
-#include "svnversion.h"
 #include "version.h"
 
 // ----- predefines -------- //
