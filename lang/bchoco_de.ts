@@ -5072,7 +5072,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Clear</source>
-        <translation type="unfinished">Zurücksetzen</translation>
+        <translation>Zurücksetzen</translation>
     </message>
     <message>
         <source>Skills</source>
@@ -5088,27 +5088,31 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Magic</source>
-        <translation type="unfinished">Magie</translation>
+        <translation>Magie</translation>
     </message>
     <message>
         <source>Summon</source>
-        <translation type="unfinished">Beschwörung</translation>
+        <translation>Beschwörung</translation>
     </message>
     <message>
         <source>Independent</source>
-        <translation type="unfinished">Unabhängig</translation>
+        <translation>Unabhängig</translation>
     </message>
     <message>
         <source>Support</source>
-        <translation type="unfinished">Unterstützung</translation>
+        <translation>Unterstützung</translation>
     </message>
     <message>
         <source>Command</source>
-        <translation type="unfinished">Befehl</translation>
+        <translation>Befehl</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished">Status</translation>
+        <translation>Status</translation>
+    </message>
+    <message>
+        <source>Master</source>
+        <translation>Master</translation>
     </message>
 </context>
 <context>

@@ -104,39 +104,39 @@
     <name>Elements</name>
     <message>
         <source>[Fire]</source>
-        <translation type="unfinished"></translation>
+        <translation>[炎]</translation>
     </message>
     <message>
         <source>[Ice]</source>
-        <translation type="unfinished"></translation>
+        <translation>[冷気]</translation>
     </message>
     <message>
         <source>[Earth]</source>
-        <translation type="unfinished"></translation>
+        <translation>[大地]</translation>
     </message>
     <message>
         <source>[Lightning]</source>
-        <translation type="unfinished"></translation>
+        <translation>[雷]</translation>
     </message>
     <message>
         <source>[Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>[毒]</translation>
     </message>
     <message>
         <source>[Gravity]</source>
-        <translation type="unfinished"></translation>
+        <translation>[重力]</translation>
     </message>
     <message>
         <source>[Wind]</source>
-        <translation type="unfinished"></translation>
+        <translation>[風]</translation>
     </message>
     <message>
         <source>[Water]</source>
-        <translation type="unfinished"></translation>
+        <translation>[水]</translation>
     </message>
     <message>
         <source>[Holy]</source>
-        <translation type="unfinished"></translation>
+        <translation>[聖]</translation>
     </message>
 </context>
 <context>
@@ -5074,7 +5074,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Stat Changes</source>
-        <translation>ステータス変化</translation>
+        <translation>能力値補正</translation>
     </message>
     <message>
         <source>All Materia</source>
@@ -5102,7 +5102,11 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished">ステータス</translation>
+        <translation>ステータス</translation>
+    </message>
+    <message>
+        <source>Master</source>
+        <translation type="unfinished">MASTER</translation>
     </message>
 </context>
 <context>
@@ -6796,47 +6800,47 @@ Empty</source>
     <name>Status</name>
     <message>
         <source>[Sleep]</source>
-        <translation type="unfinished"></translation>
+        <translation>[睡眠]</translation>
     </message>
     <message>
         <source>[Silence]</source>
-        <translation type="unfinished"></translation>
+        <translation>[沈黙]</translation>
     </message>
     <message>
         <source>[Confusion]</source>
-        <translation type="unfinished"></translation>
+        <translation>[混乱]</translation>
     </message>
     <message>
         <source>[Berserk]</source>
-        <translation type="unfinished"></translation>
+        <translation>[バーサク]</translation>
     </message>
     <message>
         <source>[Small]</source>
-        <translation type="unfinished"></translation>
+        <translation>[ミニマム]</translation>
     </message>
     <message>
         <source>[Frog]</source>
-        <translation type="unfinished"></translation>
+        <translation>[カエル]</translation>
     </message>
     <message>
         <source>[Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>[毒]</translation>
     </message>
     <message>
         <source>[Slow]</source>
-        <translation type="unfinished"></translation>
+        <translation>[スロウ]</translation>
     </message>
     <message>
         <source>[Stop]</source>
-        <translation type="unfinished"></translation>
+        <translation>[ストップ]</translation>
     </message>
     <message>
         <source>[Death]</source>
-        <translation type="unfinished"></translation>
+        <translation>[戦闘不能]</translation>
     </message>
     <message>
         <source>[Petrify]</source>
-        <translation type="unfinished"></translation>
+        <translation>[石化]</translation>
     </message>
 </context>
 <context>

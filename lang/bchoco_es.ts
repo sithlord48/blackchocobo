@@ -5082,27 +5082,31 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Magic</source>
-        <translation type="unfinished">Magia</translation>
+        <translation>Magia</translation>
     </message>
     <message>
         <source>Summon</source>
-        <translation type="unfinished">Invocación</translation>
+        <translation>Invocación</translation>
     </message>
     <message>
         <source>Independent</source>
-        <translation type="unfinished">Independiente</translation>
+        <translation>Independiente</translation>
     </message>
     <message>
         <source>Support</source>
-        <translation type="unfinished">Soporte</translation>
+        <translation>Soporte</translation>
     </message>
     <message>
         <source>Command</source>
-        <translation type="unfinished">Comando</translation>
+        <translation>Comando</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished">Estado</translation>
+        <translation>Estado</translation>
+    </message>
+    <message>
+        <source>Master</source>
+        <translation>Maestro</translation>
     </message>
 </context>
 <context>

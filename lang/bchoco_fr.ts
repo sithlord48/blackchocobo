@@ -5104,6 +5104,10 @@ Les entrées dans le tableau sont modifiables</translation>
         <source>Status</source>
         <translation type="unfinished">Etat</translation>
     </message>
+    <message>
+        <source>Master</source>
+        <translation type="unfinished">Maître</translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>
