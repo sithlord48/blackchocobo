@@ -119,8 +119,6 @@ void MateriaEditor::init_display()
     btn_paste_materia->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
     box_stats->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
     frm_ap->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
-    //box_skills->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Expanding);
-    //eskill_group->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Expanding);
     box_status_effects->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Minimum);
 //Set up display
     this->setContentsMargins(0,6,0,0);
@@ -171,6 +169,7 @@ void MateriaEditor::init_display()
     QVBoxLayout *skill_layout = new QVBoxLayout;
     skill_layout->addWidget(list_skills);
     skill_layout->addWidget(eskill_group);
+
     box_skills->setLayout(skill_layout);
     skill_layout->setContentsMargins(3,0,0,0);
     skill_layout->setSpacing(2);
@@ -426,7 +425,6 @@ void MateriaEditor::setSkills()
         list_skills->setHidden(true);
         eskill_group->setHidden(false);
         v_spacer->changeSize(0,6,QSizePolicy::Preferred,QSizePolicy::Fixed);
-        eskill_group->adjustSize();
     }
     else if(_id ==0xFF)
     {
@@ -505,31 +503,10 @@ qint32 MateriaEditor::MaxAP(void)
 
 void MateriaEditor::copy_materia(){buffer_id= _id; buffer_ap = _current_ap;}
 void MateriaEditor::paste_materia(){setMateria(buffer_id,buffer_ap);}
-void MateriaEditor::btn_clear_eskill_clicked()
-{
-    for(int i=0;i<24;i++)
-    {
-        eskill_list->item(i)->setCheckState(Qt::Unchecked);
-    }
-    if(_current_ap != 0)
-    {
-        _current_ap = 0;
-        emit ap_changed(_current_ap);
-    }
-}
 
-void MateriaEditor::btn_master_eskill_clicked()
-{
-    for(int i=0;i<24;i++)
-    {
-        eskill_list->item(i)->setCheckState(Qt::Checked);
-    }
-    if(_current_ap != 16777215)
-    {
-       _current_ap = 16777215;
-       emit ap_changed(_current_ap);
-    }
-}
+void MateriaEditor::btn_clear_eskill_clicked(){if(_current_ap!=0){setAP(0);}}
+void MateriaEditor::btn_master_eskill_clicked(){if(_current_ap != 16777215){setAP(16777215);}}
+
 void MateriaEditor::setStarsSize(int size)
 {
     btn_star1->setFixedSize(size,size);
