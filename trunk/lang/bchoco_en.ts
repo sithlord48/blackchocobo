@@ -4920,6 +4920,10 @@ Table Entries are Editable</source>
         <source>Status</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Master</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>Materia_Names</name>

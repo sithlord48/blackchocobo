@@ -86,7 +86,7 @@ void MateriaEditor::init_display()
     //Set Label Text
     lbl_slash->setText("/");
     btn_clear_eskills->setText(tr("Clear"));
-    btn_master_eskills->setText("Master");
+    btn_master_eskills->setText(tr("Master"));
     box_skills->setTitle(tr("Skills"));
     box_stats->setTitle(tr("Stat Changes"));
     btn_rm_materia->setToolTip(tr("Delete"));
@@ -417,7 +417,7 @@ void MateriaEditor::setSkills()
     {
         list_skills->setHidden(false);
         eskill_group->setHidden(true);
-        list_skills->addItem(_skill_list.at(0).toAscii());
+        list_skills->addItem(_skill_list.at(0));
         v_spacer->changeSize(0,0,QSizePolicy::Preferred,QSizePolicy::Expanding);
     }
     else if( _id ==0x2C)
@@ -439,11 +439,11 @@ void MateriaEditor::setSkills()
         v_spacer->changeSize(0,0,QSizePolicy::Preferred,QSizePolicy::Expanding);
         switch (_level)
         {// no breaks on purpose
-            case 5:if(_skill_list.count()>4){list_skills->insertItem(0,_skill_list.at(4).toAscii());}
-            case 4:if(_skill_list.count()>3){list_skills->insertItem(0,_skill_list.at(3).toAscii());}
-            case 3:if(_skill_list.count()>2){list_skills->insertItem(0,_skill_list.at(2).toAscii());}
-            case 2:if(_skill_list.count()>1){list_skills->insertItem(0,_skill_list.at(1).toAscii());}
-            case 1:if(_skill_list.count()>0){list_skills->insertItem(0,_skill_list.at(0).toAscii());}
+            case 5:if(_skill_list.count()>4){list_skills->insertItem(0,_skill_list.at(4));}
+            case 4:if(_skill_list.count()>3){list_skills->insertItem(0,_skill_list.at(3));}
+            case 3:if(_skill_list.count()>2){list_skills->insertItem(0,_skill_list.at(2));}
+            case 2:if(_skill_list.count()>1){list_skills->insertItem(0,_skill_list.at(1));}
+            case 1:if(_skill_list.count()>0){list_skills->insertItem(0,_skill_list.at(0));}
         }
     }
     this->layout()->update();
