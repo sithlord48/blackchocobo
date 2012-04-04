@@ -69,14 +69,12 @@ static { # everything below takes effect with CONFIG += static
     QTPLUGIN += qcncodecs qjpcodecs qtwcodecs qkrcodecs
     DEFINES += STATIC
     message("Static Build") # this is for information, that the static build is done
-    mac: TARGET = $$join(TARGET,,,_static) #this adds an _static in the end, so you can seperate static build from non static build
-    win32: TARGET = $$join(TARGET,,,-static) #this adds an s in the end, so you can seperate static build from non static build
+    TARGET = $$join(TARGET,,,-static) #this adds an s in the end, so you can seperate static build from non static build
 }
 
 # change the name of the binary, if it is build in debug mode
 CONFIG(debug, debug|release) {
-     mac: TARGET = $$join(TARGET,,,_debug)
-     win32: TARGET = $$join(TARGET,,,-debug)
+    TARGET = $$join(TARGET,,,-debug)
 }
 
 #Below Is OS Specific Stuff.
@@ -86,12 +84,15 @@ macx:{
     #set program icon on mac os
     ICON = icon/bchoco_icon_osx.icns
     CONFIG += x86_64 x86
+}
+#all non symbian unix-like
+unix:!symbian{
     VERS = $$system(svn info -r HEAD . | grep '"Changed Rev"' | cut -b 19-)
     {
     DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
     message("Using Svn Revision:$${VERS}")
-    system(lrelease Black_Chocobo.pro)
     }
+    system(lrelease Black_Chocobo.pro)#release the .qm files
 }
 
 #set up for windows
@@ -107,14 +108,8 @@ win32:{
 
 #all other *nix (except for symbian)
 unix:!macx:!symbian {
-    VERS = $$system(svn info -r HEAD . | grep '"Changed Rev"' | cut -b 19-)
-    {
-    DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
-    message("Using Svn Revision:$${VERS}")
-    }
 #base for setting up deb packages(rpm too?).
 #becomes 'make install' when qmake generates the makefile
-system(lrelease Black_Chocobo.pro) #call lrelease to make the qm files.
 target.path = /opt/blackchocobo #set the path to deploy the build target.
 
 lang.path = /opt/blackchocobo/lang #set path for lang folder
