@@ -63,6 +63,22 @@ TRANSLATIONS += lang/bchoco_en.ts \
     lang/bchoco_de.ts \
     lang/bchoco_ja.ts
 
+static { # everything below takes effect with CONFIG += static
+    CONFIG += static
+    CONFIG += staticlib # this is needed if you create a static library, not a static executable
+    QTPLUGIN += qcncodecs qjpcodecs qtwcodecs qkrcodecs
+    DEFINES += STATIC
+    message("Static Build") # this is for information, that the static build is done
+    mac: TARGET = $$join(TARGET,,,_static) #this adds an _static in the end, so you can seperate static build from non static build
+    win32: TARGET = $$join(TARGET,,,-static) #this adds an s in the end, so you can seperate static build from non static build
+}
+
+# change the name of the binary, if it is build in debug mode
+CONFIG(debug, debug|release) {
+     mac: TARGET = $$join(TARGET,,,_debug)
+     win32: TARGET = $$join(TARGET,,,-debug)
+}
+
 #Below Is OS Specific Stuff.
 
 #set up for mac os

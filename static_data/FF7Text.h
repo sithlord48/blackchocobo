@@ -17,6 +17,19 @@
   #define FF7TEXT_H
 #include <QObject>
 
+#ifdef STATIC
+    #include <QtPlugin> //FOR STATIC BUILD. Q_IMPORT_PLUGIN: Allow to make use of a static plugins (qjpcodecs)
+
+    //FOR STATIC BUILD.
+    // Import the text codecs on OS X and Windows, since we build a static binary.
+    #if defined(Q_WS_MAC) || defined(Q_WS_WIN)
+    Q_IMPORT_PLUGIN(qcncodecs)
+    Q_IMPORT_PLUGIN(qjpcodecs)  //(Japanese Text Support)
+    Q_IMPORT_PLUGIN(qtwcodecs)
+    Q_IMPORT_PLUGIN(qkrcodecs)
+    #endif
+#endif //STATIC
+
 class FF7TEXT{
 private:
     QString eng;
