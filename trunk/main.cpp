@@ -53,7 +53,7 @@ int main(int argc, char *argv[])
     a.setApplicationVersion(Version);
 
     #ifdef STATIC
-    QSettings settings(QCoreApplication::applicationDirPath() +"/" + "settings.ini",QSettings::iniFormat);
+    QSettings settings(QCoreApplication::applicationDirPath() +"/" + "settings.ini",QSettings::IniFormat);
     #else
     QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
     #endif //STATIC
