@@ -36,12 +36,25 @@ int main(int argc, char *argv[])
         if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h"){printf("Usage: blackchocobo [<filename>]\n");return 0;}
         else if(QString(argv[1]) == "--version"){printf("Black Chocobo Version:%s \n",Version.toAscii().constData());return 0;}
     }
-    QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
+    //Start application init.
     Q_INIT_RESOURCE(images);
     QApplication a(argc, argv);
     a.setApplicationName("Black Chocobo");
     a.setStyle("Plastique");
     a.setApplicationVersion(Version);
+
+    #ifdef STATIC
+    #include <QtPlugin> //FOR STATIC BUILD. Q_IMPORT_PLUGIN: Allow to make use of a static plugins (qjpcodecs)
+    //FOR STATIC BUILD.(WILL FAIL HERE IF NOT STATICLY BUILT QT!)
+    Q_IMPORT_PLUGIN(qcncodecs)
+    Q_IMPORT_PLUGIN(qjpcodecs)  //(Japanese Text Support)
+    Q_IMPORT_PLUGIN(qtwcodecs)
+    Q_IMPORT_PLUGIN(qkrcodecs)
+    QSettings settings(QCoreApplication::applicationDirPath() + "/"+"settings.ini",QSettings::IniFormat);
+    #else
+    QSettings settings(QSettings::NativeFormat,QSettings::UserScope,"blackchocobo","settings",0);
+    #endif //STATIC
+
     QTranslator translator;
     QString lang = QCoreApplication::applicationDirPath() +"/"+ "lang/bchoco_";
     if(settings.value("lang").isNull()){settings.setValue("lang",QLocale::system().name().section('_',0,0));} //if no lang set it to os setting.
