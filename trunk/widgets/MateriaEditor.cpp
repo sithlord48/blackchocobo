@@ -18,7 +18,7 @@
 #include "static_data/icons/Common_Icons/copy.xpm"
 #include "static_data/icons/Common_Icons/paste.xpm"
 #include "static_data/icons/Common_Icons/quit.xpm"
-#include <QMessageBox>
+
 MateriaEditor::MateriaEditor(QWidget *parent):QWidget(parent)
 {
     init_display();
@@ -63,6 +63,7 @@ void MateriaEditor::init_display()
     box_status_effects = new QGroupBox;
     frm_name_type =new QFrame;
     frm_ap = new QFrame;
+    frm_ap_stars = new QFrame;
     v_spacer = new QSpacerItem(0,0,QSizePolicy::Minimum,QSizePolicy::Expanding);
     //Special Properties Of Above Widgets
     sb_ap->setWrapping(1);
@@ -98,14 +99,14 @@ void MateriaEditor::init_display()
     box_status_effects->setHidden(true);
     box_stats->setHidden(true);
     //set Minimum Sizes.
-    btn_copy_materia->setMinimumSize(22,22);
-    btn_paste_materia->setMinimumSize(22,22);
-    sb_ap->setMinimumHeight(22);
-    combo_type->setMinimumHeight(22);
-    combo_materia->setMinimumHeight(22);
-    lbl_slash->setMinimumHeight(22);
-    lcd_max_ap->setMinimumHeight(22);
-    btn_rm_materia->setMinimumSize(22,22);
+    btn_copy_materia->setMinimumSize(24,24);
+    btn_paste_materia->setMinimumSize(24,24);
+    btn_rm_materia->setMinimumSize(24,24);
+    combo_type->setMinimumHeight(24);
+    combo_materia->setMinimumHeight(24);
+    //sb_ap->setMinimumHeight(24);
+    //lbl_slash->setMinimumHeight(24);
+    //lcd_max_ap->setMinimumHeight(24);
     list_skills->setFixedHeight((this->font().pointSize()*10)+6);
     list_skills->setSelectionMode(QAbstractItemView::NoSelection);
     list_status->setFixedHeight((this->font().pointSize()*10)+6);
@@ -129,15 +130,18 @@ void MateriaEditor::init_display()
     type_name_layout->addWidget(btn_paste_materia);
     type_name_layout->addWidget(btn_rm_materia);
     type_name_layout->setContentsMargins(3,6,0,0);
+
+    QSpacerItem *spacer1 = new QSpacerItem(30,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
+
     QHBoxLayout * ap_layout = new QHBoxLayout;
+    ap_layout->addSpacerItem(spacer1);
     ap_layout->addWidget(sb_ap);
     ap_layout->addWidget(lbl_slash);
     ap_layout->addWidget(lcd_max_ap);
     ap_layout->setContentsMargins(3,0,0,0);
-
-    frm_name_type->setLayout(type_name_layout);
     frm_ap->setLayout(ap_layout);
 
+    frm_name_type->setLayout(type_name_layout);
 
     QHBoxLayout *stars = new QHBoxLayout;
     stars->setContentsMargins(3,0,0,0);
@@ -146,15 +150,18 @@ void MateriaEditor::init_display()
     stars->addWidget(btn_star3);
     stars->addWidget(btn_star4);
     stars->addWidget(btn_star5);
-    QSpacerItem *spacer1 = new QSpacerItem(30,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
     stars->addSpacerItem(spacer1);
     box_stars->setLayout(stars);
 
 
     /* Init Skills Area */
-    QHBoxLayout *ap_stars_layout =  new QHBoxLayout;
-    ap_stars_layout->addWidget(box_stars);
-    ap_stars_layout->addWidget(frm_ap);
+    ap_stars_layout =  new QGridLayout;
+    ap_stars_layout->setContentsMargins(0,0,0,0);
+    ap_stars_layout->addWidget(box_stars,0,0,1,1,0);
+    ap_stars_layout->addWidget(frm_ap,0,1,1,1,0);
+
+    frm_ap_stars->setLayout(ap_stars_layout);
+    frm_ap_stars->setContentsMargins(0,0,0,0);
 
     QHBoxLayout *low_eskill_layout = new QHBoxLayout;
     low_eskill_layout->addWidget(btn_master_eskills);
@@ -175,12 +182,13 @@ void MateriaEditor::init_display()
     skill_layout->setSpacing(2);
 
     QHBoxLayout *stat_layout = new QHBoxLayout;
-    stat_layout->addWidget(lbl_stats);
     stat_layout->setContentsMargins(3,0,0,0);
+    stat_layout->addWidget(lbl_stats);
     box_stats->setLayout(stat_layout);
 
     QHBoxLayout * status_effect_layout = new QHBoxLayout;
     status_effect_layout->addWidget(list_status);
+    status_effect_layout->setContentsMargins(3,0,0,0);
     box_status_effects->setLayout(status_effect_layout);
 
     QHBoxLayout *skill_status_layout = new QHBoxLayout;
@@ -191,7 +199,7 @@ void MateriaEditor::init_display()
     main_layout->setContentsMargins(3,0,0,0);
     main_layout->setSpacing(3);
     main_layout->addWidget(frm_name_type);
-    main_layout->addItem(ap_stars_layout);
+    main_layout->addWidget(frm_ap_stars);
     main_layout->addItem(skill_status_layout);
     main_layout->addWidget(box_stats);
 
@@ -199,7 +207,7 @@ void MateriaEditor::init_display()
     Final->setSpacing(0);
     Final->addLayout(main_layout);
     Final->addSpacerItem(v_spacer);
-    Final->setContentsMargins(3,6,0,0);
+    Final->setContentsMargins(6,6,6,6);
     this->setLayout(Final);
 }
 
@@ -251,6 +259,7 @@ void MateriaEditor::init_data()
     _current_ap=0;
     buffer_id=0;
     buffer_ap=0;
+    editable=true;
 }
 
 void MateriaEditor::setMateria(quint8 materia_id,qint32 materia_ap)
@@ -289,7 +298,7 @@ void MateriaEditor::setAP(qint32 ap)
 
     if( (_id ==0x11) || (_id==0x30) || (_id==0x49) ||(_id==0x5A) ||(_id==0x2C))
     {
-        frm_ap->setHidden(true);
+        frm_ap_stars->setHidden(true);
         if(_current_ap != ap){_current_ap = ap; emit(ap_changed(_current_ap));}
         if(_id==0x2C)
         {//Eskill Materia Specialness.
@@ -300,10 +309,10 @@ void MateriaEditor::setAP(qint32 ap)
             }
         }
     }
-    else if(_id ==0xFF){frm_ap->setHidden(false);}
+    else if(_id ==0xFF){frm_ap_stars->setHidden(false);}
     else
     {//All Other Materia
-        frm_ap->setHidden(false);
+        frm_ap_stars->setHidden(false);
         if( (ap <16777215) && (ap<_level_ap[_max_level-1]) )
         {
             _current_ap = ap;
@@ -519,6 +528,54 @@ void MateriaEditor::setStarsSize(int size)
     btn_star3->setIconSize(QSize(size,size));
     btn_star4->setIconSize(QSize(size,size));
     btn_star5->setIconSize(QSize(size,size));
-    box_stars->setFixedHeight(size +6);
+    box_stars->setFixedHeight(size +(size/8));
     box_stars->adjustSize();
+        
+
+    frm_ap_stars->layout()->removeWidget(box_stars);
+    frm_ap_stars->layout()->removeWidget(frm_ap);
+
+    if(size<=32)
+    {
+	ap_stars_layout->addWidget(box_stars,0,0,1,1,0);
+        ap_stars_layout->addWidget(frm_ap,0,1,1,1,0);
+        if(box_stars->sizeHint().height() < frm_ap->sizeHint().height())
+        {
+            frm_ap_stars->setFixedHeight(frm_ap->sizeHint().height()+6);
+        }
+        else{frm_ap_stars->setFixedHeight(box_stars->sizeHint().height()+6);}
+    }
+    else
+    {
+        ap_stars_layout->addWidget(frm_ap,0,0,1,1,0);
+        ap_stars_layout->addWidget(box_stars,1,0,1,1,0);
+        frm_ap_stars->setFixedHeight( (size +(size/6)) + (frm_ap->sizeHint().height()+6) );
+    }
+    frm_ap_stars->adjustSize();
+    //frm_ap_stars->layout()->update();
+    //this->layout()->update();
+}
+bool MateriaEditor::isEditable(void){return editable;}
+void MateriaEditor::setEditable(bool edit)
+{
+    editable = edit;
+    editMode();
+}
+void MateriaEditor::editMode(void)
+{
+    //Set blockSignals = !editable.
+    btn_star1->blockSignals(!editable);
+    btn_star2->blockSignals(!editable);
+    btn_star3->blockSignals(!editable);
+    btn_star4->blockSignals(!editable);
+    btn_star5->blockSignals(!editable);
+    //Set Enabled = editable
+    sb_ap->setEnabled(editable);
+    btn_paste_materia->setEnabled(editable);
+    btn_rm_materia->setEnabled(editable);
+    combo_materia->setEnabled(editable);
+    //Show combo type if editable
+    combo_type->setVisible(editable);
+
+
 }

@@ -42,8 +42,11 @@ public:
     qint32 ap(void);
     qint32 MaxAP(void);
     qint8 id(void);
+    bool isEditable(void);
+    void setEditable(bool);
 //    qint32 raw_data(void);
 private:
+    //Private Functions
     void init_display(void);
     void init_normal_mode(void);
     void init_compact_mode(void);
@@ -54,7 +57,7 @@ private:
     void setStats(void);
     void setSkills(void);
     void setLevel(void);
-
+    //Private Gui Parts.
     QLCDNumber * lcd_max_ap;
     QLabel * lbl_slash;
     QHBoxLayout *Final;
@@ -73,7 +76,6 @@ private:
     QPushButton *btn_star5;
     QGroupBox *box_stars;
     QGroupBox *box_skills;
-
     QGroupBox * eskill_group;
     QListWidget * eskill_list;
     QPushButton * btn_clear_eskills;
@@ -82,9 +84,12 @@ private:
     QGroupBox *box_stats;
     QGroupBox *box_status_effects;
     QLabel *lbl_stats;
-    //QLabel *lbl_element;
     QListWidget *list_status;
     FF7Materia *data;
+    QSpacerItem *v_spacer;
+    QFrame * frm_ap_stars;
+    QGridLayout *ap_stars_layout;
+    //Private Data Members
     quint8 _id;// current id
     qint8 buffer_id;
     qint32 buffer_ap;
@@ -98,8 +103,7 @@ private:
     QPixmap _empty_star_icon;//hold current empty star icon
     QPixmap _type_icon; // materia type icon.
     QStringList _skill_list;
-    QSpacerItem *v_spacer;
-    QFrame * frm_ap_stars;
+    bool editable;
 private slots:
     void btn_star1_clicked();
     void btn_star2_clicked();
@@ -115,6 +119,7 @@ private slots:
     void eskill_list_clicked(QModelIndex);
     void btn_master_eskill_clicked();
     void btn_clear_eskill_clicked();
+    void editMode(void);
 signals:
     void ap_changed(qint32);
     void id_changed(qint8);
