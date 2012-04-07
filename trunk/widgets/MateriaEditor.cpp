@@ -93,7 +93,7 @@ void MateriaEditor::init_display()
     btn_rm_materia->setToolTip(tr("Delete"));
     btn_copy_materia->setToolTip(tr("Copy"));
     btn_paste_materia->setToolTip(tr("Paste"));
-    box_status_effects->setTitle(tr("Status"));
+    box_status_effects->setTitle(tr("Added Effect"));
     //set Hidden
     eskill_group->setHidden(true);
     box_status_effects->setHidden(true);

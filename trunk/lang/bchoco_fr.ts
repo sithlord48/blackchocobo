@@ -5102,11 +5102,15 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation type="unfinished">Etat</translation>
+        <translation type="obsolete">Etat</translation>
     </message>
     <message>
         <source>Master</source>
         <translation type="unfinished">Maître</translation>
+    </message>
+    <message>
+        <source>Added Effect</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7310,6 +7314,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</source>
         <translation>Corrigé : Bogue dans Eskill,KeyItem,Tparadise,Phs,Menu parfois empêche les modifications d&apos;être enregistrées</translation>
+    </message>
+    <message>
+        <source>New: MateriaEditor Widget.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed:Bug In Stat Calculation For Materia Changes</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
