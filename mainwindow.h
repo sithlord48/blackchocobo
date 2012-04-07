@@ -486,29 +486,29 @@ private slots://try to keep these in the same order as the .cpp file
 
     void on_line_name_textChanged(QString text);
     void on_sb_lvl_valueChanged(int value);
-    void on_sb_exp_valueChanged();
-    void on_sb_kills_valueChanged();
+    void on_sb_exp_valueChanged(int value);
+    void on_sb_kills_valueChanged(int value);
     void on_cb_front_clicked(bool checked);
     void on_cb_fury_clicked(bool checked);
     void on_cb_sadness_clicked(bool checked);
-    void on_sb_hp_valueChanged();
-    void on_sb_mp_valueChanged();
-    void on_sb_maxmp_valueChanged();
-    void on_sb_maxhp_valueChanged();
-    void on_sb_curhp_valueChanged();
-    void on_sb_curmp_valueChanged();
-    void on_sb_str_valueChanged();
-    void on_sb_strbonus_valueChanged();
-    void on_sb_dex_valueChanged();
-    void on_sb_dexbonus_valueChanged();
-    void on_sb_mag_valueChanged();
-    void on_sb_magbonus_valueChanged();
-    void on_sb_vit_valueChanged();
-    void on_sb_vitbonus_valueChanged();
-    void on_sb_spi_valueChanged();
-    void on_sb_spibonus_valueChanged();
-    void on_sb_lck_valueChanged();
-    void on_sb_lckbonus_valueChanged();
+    void on_sb_hp_valueChanged(int value);
+    void on_sb_mp_valueChanged(int value);
+    void on_sb_maxmp_valueChanged(int value);
+    void on_sb_maxhp_valueChanged(int value);
+    void on_sb_curhp_valueChanged(int value);
+    void on_sb_curmp_valueChanged(int value);
+    void on_sb_str_valueChanged(int value);
+    void on_sb_strbonus_valueChanged(int value);
+    void on_sb_dex_valueChanged(int value);
+    void on_sb_dexbonus_valueChanged(int value);
+    void on_sb_mag_valueChanged(int value);
+    void on_sb_magbonus_valueChanged(int value);
+    void on_sb_vit_valueChanged(int value);
+    void on_sb_vitbonus_valueChanged(int value);
+    void on_sb_spi_valueChanged(int value);
+    void on_sb_spibonus_valueChanged(int value);
+    void on_sb_lck_valueChanged(int value);
+    void on_sb_lckbonus_valueChanged(int value);
     // LIMITS STUFFS
     void on_limit_1a_toggled();
     void on_limit_1b_toggled();
@@ -520,9 +520,9 @@ private slots://try to keep these in the same order as the .cpp file
     void limitapply();
     void on_sb_limitlvl_valueChanged(int);
     void on_slide_limit_valueChanged(int);
-    void on_sb_used1_valueChanged();
-    void on_sb_used2_valueChanged();
-    void on_sb_used3_valueChanged();
+    void on_sb_used1_valueChanged(int value);
+    void on_sb_used2_valueChanged(int value);
+    void on_sb_used3_valueChanged(int value);
 
     //char equipment Tab
     void on_combo_weapon_activated(int);

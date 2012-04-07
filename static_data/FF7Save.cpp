@@ -1456,6 +1456,91 @@ qint32 FF7Save::stolenMateriaAp(int s,int mat_num)
     qint32 ap_temp = slot[s].stolen[mat_num].ap[0] |(slot[s].stolen[mat_num].ap[1] << 8) | slot[s].stolen[mat_num].ap[2]<<16;
     return ap_temp;
 }
+qint8 FF7Save::charID(int s,int char_num){return slot[s].chars[char_num].id;}
+qint8 FF7Save::charLevel(int s,int char_num){return slot[s].chars[char_num].level;}
+quint8 FF7Save::charStr(int s,int char_num){return slot[s].chars[char_num].strength;}
+quint8 FF7Save::charVit(int s,int char_num){return slot[s].chars[char_num].vitality;}
+quint8 FF7Save::charMag(int s,int char_num){return slot[s].chars[char_num].magic;}
+quint8 FF7Save::charSpi(int s,int char_num){return slot[s].chars[char_num].spirit;}
+quint8 FF7Save::charDex(int s,int char_num){return slot[s].chars[char_num].dexterity;}
+quint8 FF7Save::charLck(int s,int char_num){return slot[s].chars[char_num].luck;}
+quint8 FF7Save::charStrBonus(int s,int char_num){return slot[s].chars[char_num].strength_bonus;}
+quint8 FF7Save::charVitBonus(int s,int char_num){return slot[s].chars[char_num].vitality_bonus;}
+quint8 FF7Save::charMagBonus(int s,int char_num){return slot[s].chars[char_num].magic_bonus;}
+quint8 FF7Save::charSpiBonus(int s,int char_num){return slot[s].chars[char_num].spirit_bonus;}
+quint8 FF7Save::charDexBonus(int s,int char_num){return slot[s].chars[char_num].dexterity_bonus;}
+quint8 FF7Save::charLckBonus(int s,int char_num){return slot[s].chars[char_num].luck_bonus;}
+qint8 FF7Save::charLimitLevel(int s,int char_num){return slot[s].chars[char_num].limitlevel;}
+quint8 FF7Save::charLimitBar(int s,int char_num){return slot[s].chars[char_num].limitbar;}
+quint8 FF7Save::charWeapon(int s,int char_num){return slot[s].chars[char_num].weapon;}
+quint8 FF7Save::charArmor(int s,int char_num){return slot[s].chars[char_num].armor;}
+quint8 FF7Save::charAccessory(int s,int char_num){return slot[s].chars[char_num].accessory;}
+quint8 FF7Save::charFlag(int s,int char_num,int flag_num){return slot[s].chars[char_num].flags[flag_num];}
+quint16 FF7Save::charLimits(int s,int char_num){return slot[s].chars[char_num].limits;}
+quint16 FF7Save::charKills(int s,int char_num){return slot[s].chars[char_num].kills;}
+
+quint16 FF7Save::charTimesLimitUsed(int s,int char_num,int level)
+{
+    switch(level)
+    {
+        case 1:return slot[s].chars[char_num].timesused1;break;
+        case 2:return slot[s].chars[char_num].timesused2;break;
+        case 3:return slot[s].chars[char_num].timesused3;break;
+        default:return 0;
+    }
+}
+
+quint16 FF7Save::charCurrentHp(int s,int char_num){return slot[s].chars[char_num].curHP;}
+quint16 FF7Save::charBaseHp(int s,int char_num){return slot[s].chars[char_num].baseHP;}
+quint16 FF7Save::charCurrentMp(int s,int char_num){return slot[s].chars[char_num].curMP;}
+quint16 FF7Save::charBaseMp(int s,int char_num){return slot[s].chars[char_num].baseMP;}
+quint8 FF7Save::charUnknown(int s,int char_num,int unknown_num){return slot[s].chars[char_num].z_4[unknown_num];}
+quint16 FF7Save::charMaxHp(int s,int char_num){return slot[s].chars[char_num].maxHP;}
+quint16 FF7Save::charMaxMp(int s,int char_num){return slot[s].chars[char_num].maxMP;}
+quint32 FF7Save::charCurrentExp(int s,int char_num){return slot[s].chars[char_num].exp;}
+quint32 FF7Save::charNextExp(int s,int char_num){return slot[s].chars[char_num].expNext;}
+
+void  FF7Save::setCharID(int s,int char_num,qint8 new_id){slot[s].chars[char_num].id=new_id;}
+void  FF7Save::setCharLevel(int s,int char_num,qint8 new_level){slot[s].chars[char_num].level=new_level;}
+void  FF7Save::setCharStr(int s,int char_num,quint8 str){slot[s].chars[char_num].strength=str;}
+void  FF7Save::setCharVit(int s,int char_num,quint8 vit){slot[s].chars[char_num].vitality=vit;}
+void  FF7Save::setCharMag(int s,int char_num,quint8 mag){slot[s].chars[char_num].magic=mag;}
+void  FF7Save::setCharSpi(int s,int char_num,quint8 spi){slot[s].chars[char_num].spirit=spi;}
+void  FF7Save::setCharDex(int s,int char_num,quint8 dex){slot[s].chars[char_num].dexterity=dex;}
+void  FF7Save::setCharLck(int s,int char_num,quint8 lck){slot[s].chars[char_num].luck=lck;}
+void  FF7Save::setCharStrBonus(int s,int char_num,quint8 strbonus){slot[s].chars[char_num].strength_bonus=strbonus;}
+void  FF7Save::setCharVitBonus(int s,int char_num,quint8 vitbonus){slot[s].chars[char_num].vitality_bonus=vitbonus;}
+void  FF7Save::setCharMagBonus(int s,int char_num,quint8 magbonus){slot[s].chars[char_num].magic_bonus=magbonus;}
+void  FF7Save::setCharSpiBonus(int s,int char_num,quint8 spibonus){slot[s].chars[char_num].spirit_bonus=spibonus;}
+void  FF7Save::setCharDexBonus(int s,int char_num,quint8 dexbonus){slot[s].chars[char_num].dexterity_bonus=dexbonus;}
+void  FF7Save::setCharLckBonus(int s,int char_num,quint8 lckbonus){slot[s].chars[char_num].luck_bonus=lckbonus;}
+void  FF7Save::setCharLimitLevel(int s,int char_num,qint8 limitlevel){slot[s].chars[char_num].limitlevel=limitlevel;}
+void  FF7Save::setCharLimitBar(int s,int char_num,quint8 limitbar){slot[s].chars[char_num].limitbar=limitbar;}
+void  FF7Save::setCharWeapon(int s,int char_num,quint8 weapon){slot[s].chars[char_num].weapon=weapon;}
+void  FF7Save::setCharArmor(int s,int char_num,quint8 armor){slot[s].chars[char_num].armor=armor;}
+void  FF7Save::setCharAccessory(int s,int char_num,quint8 accessory){slot[s].chars[char_num].accessory=accessory;}
+void  FF7Save::setCharFlag(int s,int char_num,int flag_num,quint8 flag_value){slot[s].chars[char_num].flags[flag_num]=flag_value;}
+void  FF7Save::setCharLimits(int s,int char_num,quint16 new_limits){slot[s].chars[char_num].limits=new_limits;}
+void  FF7Save::setCharKills(int s,int char_num,quint16 new_level){slot[s].chars[char_num].kills=new_level;}
+void  FF7Save::setCharTimeLimitUsed(int s,int char_num,int level,quint16 timesused)
+{
+    switch(level)
+    {
+        case 1:slot[s].chars[char_num].timesused1=timesused;break;
+        case 2:slot[s].chars[char_num].timesused2=timesused;break;
+        case 3:slot[s].chars[char_num].timesused3=timesused;break;
+    }
+}
+void  FF7Save::setCharCurrentHp(int s,int char_num,quint16 curHp){slot[s].chars[char_num].curHP=curHp;}
+void  FF7Save::setCharBaseHp(int s,int char_num,quint16 baseHp){slot[s].chars[char_num].baseHP=baseHp;}
+void  FF7Save::setCharCurrentMp(int s,int char_num,quint16 curMp){slot[s].chars[char_num].curMP=curMp;}
+void  FF7Save::setCharBaseMp(int s,int char_num,quint16 baseMp){slot[s].chars[char_num].baseMP=baseMp;}
+void  FF7Save::setCharUnknown(int s,int char_num,int unknown_num,quint8 value){slot[s].chars[char_num].z_4[unknown_num]=value;}
+void  FF7Save::setCharMaxHp(int s,int char_num,quint16 maxHp){slot[s].chars[char_num].maxHP=maxHp;}
+void  FF7Save::setCharMaxMp(int s,int char_num,quint16 maxMp){slot[s].chars[char_num].maxMP=maxMp;}
+void  FF7Save::setCharCurrentExp(int s,int char_num,quint32 exp){slot[s].chars[char_num].exp=exp;}
+void  FF7Save::setCharNextExp(int s,int char_num,quint32 next){slot[s].chars[char_num].expNext=next;}
+
 void FF7Save::setCharMateria(int s,int who,int mat_num,quint8 id,qint32 ap)
 {
     if( (id<91) && ((ap>=0)&&(ap<=16777215)))

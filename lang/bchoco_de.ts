@@ -5108,11 +5108,15 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Status</source>
-        <translation>Status</translation>
+        <translation type="obsolete">Status</translation>
     </message>
     <message>
         <source>Master</source>
         <translation>Master</translation>
+    </message>
+    <message>
+        <source>Added Effect</source>
+        <translation type="unfinished">Zusatzwirkung</translation>
     </message>
 </context>
 <context>
@@ -7315,6 +7319,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</source>
         <translation type="unfinished">Behoben: Fehler in Eskill, KeyItem, Tparadise, PHS, Menü irgendwann Verhinderung von Änderungen zu speichern</translation>
+    </message>
+    <message>
+        <source>New: MateriaEditor Widget.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed:Bug In Stat Calculation For Materia Changes</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

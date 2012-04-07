@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>767</width>
-    <height>587</height>
+    <width>786</width>
+    <height>604</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -1349,8 +1349,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>434</width>
-             <height>441</height>
+             <width>453</width>
+             <height>458</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3208,6 +3208,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <item>
                    <widget class="QLabel" name="lbl_0x34">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string notr="true">0x34</string>
                     </property>
@@ -3218,6 +3224,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QLCDNumber" name="lcd_0x34">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="numDigits">
                      <number>2</number>
                     </property>
@@ -3241,6 +3253,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <item>
                    <widget class="QLabel" name="lbl_0x35">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string notr="true">0x35</string>
                     </property>
@@ -3251,6 +3269,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QLCDNumber" name="lcd_0x35">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="numDigits">
                      <number>2</number>
                     </property>
@@ -3274,6 +3298,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <item>
                    <widget class="QLabel" name="lbl_0x37">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string notr="true">0x36</string>
                     </property>
@@ -3284,6 +3314,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QLCDNumber" name="lcd_0x37">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="numDigits">
                      <number>2</number>
                     </property>
@@ -3304,6 +3340,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </property>
                   <item>
                    <widget class="QLabel" name="lbl_0x36">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="text">
                      <string notr="true">0x37</string>
                     </property>
@@ -3314,6 +3356,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                   </item>
                   <item>
                    <widget class="QLCDNumber" name="lcd_0x36">
+                    <property name="sizePolicy">
+                     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                     </sizepolicy>
+                    </property>
                     <property name="numDigits">
                      <number>2</number>
                     </property>
@@ -3341,7 +3389,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>420</width>
+             <width>453</width>
              <height>458</height>
             </rect>
            </property>
@@ -9330,8 +9378,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>720</width>
-             <height>275</height>
+             <width>753</width>
+             <height>445</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -11431,7 +11479,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>333</width>
+                  <width>350</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -13924,7 +13972,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>513</width>
+             <width>732</width>
              <height>683</height>
             </rect>
            </property>
@@ -19680,7 +19728,7 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>767</width>
+     <width>786</width>
      <height>22</height>
     </rect>
    </property>

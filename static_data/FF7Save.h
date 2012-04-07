@@ -51,17 +51,12 @@ public:
   //materia get/set
   quint8 partyMateriaId(int s,int mat_num);
   qint32 partyMateriaAp(int s,int mat_num);
-  quint8 charMateriaId(int s,int who,int mat_num);
-  qint32 charMateriaAp(int s,int who,int mat_num);
   quint8 stolenMateriaId(int s,int mat_num);
   qint32 stolenMateriaAp(int s,int mat_num);
   void setPartyMateria(int s,int mat_num,quint8 id,qint32 ap);
   void setStolenMateria(int s, int mat_num,quint8 id,qint32 ap);
-  void setCharMateria(int s,int who,int mat_num,quint8 id,qint32 ap);
 
   // String Functions.
-  QString charName(int s,int char_num);//Return Char name
-  void setCharName(int s,int char_num,QString new_name);//write char_num 's new_name to slot s
   QString chocoName(int s,int choco_num);//return choco_num's name.
   void setChocoName(int s,int choco_num,QString new_name);//write choco_num 's new_name to slot s
   QString location(int s);// return save location string
@@ -70,6 +65,82 @@ public:
   void setDescName(int s,QString new_name);// desc name = new_name
   QString descLocation(int s);//return the location string used in the description
   void setDescLocation(int s, QString new_desc_location);//write new desc location string called from setLocation
+
+  //Char Related Functions get/set all stats.
+  qint8 charID(int s,int char_num);//Return Char ID
+  qint8 charLevel(int s,int char_num);//Return Char Level
+  quint8 charStr(int s,int char_num);
+  quint8 charVit(int s,int char_num);
+  quint8 charMag(int s,int char_num);
+  quint8 charSpi(int s,int char_num);
+  quint8 charDex(int s,int char_num);
+  quint8 charLck(int s,int char_num);
+  quint8 charStrBonus(int s,int char_num);
+  quint8 charVitBonus(int s,int char_num);
+  quint8 charMagBonus(int s,int char_num);
+  quint8 charSpiBonus(int s,int char_num);
+  quint8 charDexBonus(int s,int char_num);
+  quint8 charLckBonus(int s,int char_num);
+  qint8  charLimitLevel(int s,int char_num);
+  quint8 charLimitBar(int s,int char_num);
+  QString charName(int s,int char_num);//Return Char name
+  quint8 charWeapon(int s,int char_num);
+  quint8 charArmor(int s,int char_num);
+  quint8 charAccessory(int s,int char_num);
+  quint8 charFlag(int s,int char_num,int flag_num);
+
+  quint16 charLimits(int s,int char_num);//Return Char ID
+  quint16 charKills(int s,int char_num);//Return Char Level
+  quint16 charTimesLimitUsed(int s,int char_num,int level);
+
+  quint16 charCurrentHp(int s,int char_num);
+  quint16 charBaseHp(int s,int char_num);
+  quint16 charCurrentMp(int s,int char_num);
+  quint16 charBaseMp(int s,int char_num);
+  quint8 charUnknown(int s,int char_num,int unknown_num);
+  quint16 charMaxHp(int s,int char_num);
+  quint16 charMaxMp(int s,int char_num);
+
+  quint32 charCurrentExp(int s,int char_num);
+  quint32 charNextExp(int s,int char_num);
+
+  void  setCharID(int s,int char_num,qint8 new_id);
+  void  setCharLevel(int s,int char_num,qint8 new_level);
+  void  setCharStr(int s,int char_num,quint8 str);
+  void  setCharVit(int s,int char_num,quint8 vit);
+  void  setCharMag(int s,int char_num,quint8 mag);
+  void  setCharSpi(int s,int char_num,quint8 spi);
+  void  setCharDex(int s,int char_num,quint8 dex);
+  void  setCharLck(int s,int char_num,quint8 lck);
+  void  setCharStrBonus(int s,int char_num,quint8 strbonus);
+  void  setCharVitBonus(int s,int char_num,quint8 vitbonus);
+  void  setCharMagBonus(int s,int char_num,quint8 magbonus);
+  void  setCharSpiBonus(int s,int char_num,quint8 spibonus);
+  void  setCharDexBonus(int s,int char_num,quint8 dexbonus);
+  void  setCharLckBonus(int s,int char_num,quint8 lckbonus);
+  void  setCharLimitLevel(int s,int char_num,qint8 limitlevel);
+  void  setCharLimitBar(int s,int char_num,quint8 limitbar);
+  void setCharName(int s,int char_num,QString new_name);//write char_num 's new_name to slot s
+  void  setCharWeapon(int s,int char_num,quint8 weapon);
+  void  setCharArmor(int s,int char_num,quint8 armor);
+  void  setCharAccessory(int s,int char_num,quint8 accessory);
+  void  setCharFlag(int s,int char_num,int flag_num,quint8 flag_value);
+  void  setCharLimits(int s,int char_num,quint16 new_limits);
+  void  setCharKills(int s,int char_num,quint16 kills);
+  void  setCharTimeLimitUsed(int s,int char_num,int level,quint16 timesused);
+  void  setCharCurrentHp(int s,int char_num,quint16 curHp);
+  void  setCharBaseHp(int s,int char_num,quint16 baseHp);
+  void  setCharCurrentMp(int s,int char_num,quint16 curMp);
+  void  setCharBaseMp(int s,int char_num,quint16 baseMp);
+  void  setCharUnknown(int s,int char_num,int unknown_num,quint8 value);
+  void  setCharMaxHp(int s,int char_num,quint16 maxHp);
+  void  setCharMaxMp(int s,int char_num,quint16 maxMp);
+  void  setCharCurrentExp(int s,int char_num,quint32 exp);
+  void  setCharNextExp(int s,int char_num,quint32 next);
+
+  void setCharMateria(int s,int who,int mat_num,quint8 id,qint32 ap);
+  quint8 charMateriaId(int s,int who,int mat_num);
+  qint32 charMateriaAp(int s,int who,int mat_num);
 
   //publicly accessable core data(for now)
   FF7SLOT slot[15]; //core slot data.

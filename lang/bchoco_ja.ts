@@ -5102,11 +5102,15 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Status</source>
-        <translation>ステータス</translation>
+        <translation type="obsolete">ステータス</translation>
     </message>
     <message>
         <source>Master</source>
         <translation type="unfinished">MASTER</translation>
+    </message>
+    <message>
+        <source>Added Effect</source>
+        <translation type="unfinished">ついかこうか</translation>
     </message>
 </context>
 <context>
@@ -7308,6 +7312,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</source>
         <translation>修正: てきのわざ, キーアイテム,亀道楽, PHS メニューの変更適用の不具合</translation>
+    </message>
+    <message>
+        <source>New: MateriaEditor Widget.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed:Bug In Stat Calculation For Materia Changes</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

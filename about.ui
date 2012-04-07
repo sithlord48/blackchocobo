@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>381</width>
-    <height>360</height>
+    <width>379</width>
+    <height>366</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -454,6 +454,31 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>New: MateriaEditor Widget.</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fixed:Bug In Stat Calculation For Materia Changes</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Previous Versions</string>
+          </property>
+          <property name="font">
+           <font>
+            <weight>50</weight>
+            <bold>false</bold>
+            <underline>true</underline>
+           </font>
+          </property>
+          <property name="textAlignment">
+           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New: Added .VM1to list of VMC formats</string>
           </property>
          </item>
@@ -490,21 +515,6 @@ p, li { white-space: pre-wrap; }
          <item>
           <property name="text">
            <string>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</string>
-          </property>
-         </item>
-         <item>
-          <property name="text">
-           <string>Previous Versions</string>
-          </property>
-          <property name="font">
-           <font>
-            <weight>50</weight>
-            <bold>false</bold>
-            <underline>true</underline>
-           </font>
-          </property>
-          <property name="textAlignment">
-           <set>AlignHCenter|AlignVCenter|AlignCenter</set>
           </property>
          </item>
          <item>
@@ -1729,7 +1739,6 @@ font: 9pt &quot;Ubuntu&quot;;color:rgb(255,255,255);
  </widget>
  <resources>
   <include location="images.qrc"/>
-  <include location="../../../.designer/backup/images.qrc"/>
  </resources>
  <connections/>
 </ui>
