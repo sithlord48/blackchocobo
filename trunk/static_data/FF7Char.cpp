@@ -5,8 +5,29 @@ FF7Char::FF7Char(QObject *parent):QObject(parent){}
 qint8 FF7Char::id(int who){return Chars[who]._id;}
 int FF7Char::weapon_offset(int who){return Chars[who]._starting_weapon_id;}
 int FF7Char::num_weapons(int who){return Chars[who]._num_weapons;}
-QImage FF7Char::Image(int who){return Chars[who]._avatar;}
-QPixmap FF7Char::Pixmap(int who){return QPixmap::fromImage(Chars[who]._avatar);}
+
+QImage FF7Char::Image(int who)
+{
+  if((who<0x0B))
+  {
+    return Chars[who]._avatar;
+  }
+  else
+  {
+    return QImage();
+  }
+}
+QPixmap FF7Char::Pixmap(int who)
+{
+  if(who<0x0B)
+  {
+    return QPixmap::fromImage(Chars[who]._avatar);
+  }
+  else
+  {
+      return QPixmap::fromImage(QImage(""));
+  }
+}
 QIcon FF7Char::Icon(int who){return QIcon(Pixmap(who));}
 quint32 FF7Char::Total_Exp_For_Level(int who,int level){return Chars[who]._charlvls[level-1];}
 quint32 FF7Char::Tnl_For_Level(int who,int level){return Chars[who]._charlvls[level-1];}

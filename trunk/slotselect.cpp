@@ -597,194 +597,194 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
             {
             case 0:
                 ui->s1_box->setStyleSheet(style);
-                ui->s1_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
-                ui->s1_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
-                ui->s1_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
-                ui->s1_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
-                ui->s1_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
-                ui->s1_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
-                ui->s1_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
+                ui->s1_party1->setPixmap(Chars.Pixmap(ff7->descParty(s,0)));
+                ui->s1_party2->setPixmap(Chars.Pixmap(ff7->descParty(s,1)));
+                ui->s1_party3->setPixmap(Chars.Pixmap(ff7->descParty(s,2)));
+                ui->s1_lbl_lvl->setText(QString::number(ff7->descLevel(s)));
+                ui->s1_lbl_gil->setText(QString::number(ff7->descGil(s)));
+                ui->s1_lbl_hr->setText(QString::number(ff7->descTime(s)/3600));
+                ui->s1_lbl_min->setText(QString::number(ff7->descTime(s)/60 %60));
                 ui->s1_lbl_loc->setText(ff7->descLocation(s));
                 ui->s1_lbl_name->setText(ff7->descName(s));
             break;
 
             case 1:
                 ui->s2_box->setStyleSheet(style);
-                ui->s2_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
-                ui->s2_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
-                ui->s2_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
-                ui->s2_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
-                ui->s2_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
-                ui->s2_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
-                ui->s2_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
+                ui->s2_party1->setPixmap(Chars.Pixmap(ff7->descParty(s,0)));
+                ui->s2_party2->setPixmap(Chars.Pixmap(ff7->descParty(s,1)));
+                ui->s2_party3->setPixmap(Chars.Pixmap(ff7->descParty(s,2)));
+                ui->s2_lbl_lvl->setText(QString::number(ff7->descLevel(s)));
+                ui->s2_lbl_gil->setText(QString::number(ff7->descGil(s)));
+                ui->s2_lbl_hr->setText(QString::number(ff7->descTime(s)/3600));
+                ui->s2_lbl_min->setText(QString::number(ff7->descTime(s)/60 %60));
                 ui->s2_lbl_loc->setText(ff7->descLocation(s));
                 ui->s2_lbl_name->setText(ff7->descName(s));
             break;
 
             case 2:
                 ui->s3_box->setStyleSheet(style);
-                ui->s3_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
-                ui->s3_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
-                ui->s3_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
-                ui->s3_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
-                ui->s3_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
-                ui->s3_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
-                ui->s3_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
+                ui->s3_party1->setPixmap(Chars.Pixmap(ff7->descParty(s,0)));
+                ui->s3_party2->setPixmap(Chars.Pixmap(ff7->descParty(s,1)));
+                ui->s3_party3->setPixmap(Chars.Pixmap(ff7->descParty(s,2)));
+                ui->s3_lbl_lvl->setText(QString::number(ff7->descLevel(s)));
+                ui->s3_lbl_gil->setText(QString::number(ff7->descGil(s)));
+                ui->s3_lbl_hr->setText(QString::number(ff7->descTime(s)/3600));
+                ui->s3_lbl_min->setText(QString::number(ff7->descTime(s)/60 %60));
                 ui->s3_lbl_loc->setText(ff7->descLocation(s));
                 ui->s3_lbl_name->setText(ff7->descName(s));
             break;
 
             case 3:
                 ui->s4_box->setStyleSheet(style);
-                ui->s4_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
-                ui->s4_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
-                ui->s4_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
-                ui->s4_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
-                ui->s4_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
-                ui->s4_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
-                ui->s4_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
+                ui->s4_party1->setPixmap(Chars.Pixmap(ff7->descParty(s,0)));
+                ui->s4_party2->setPixmap(Chars.Pixmap(ff7->descParty(s,1)));
+                ui->s4_party3->setPixmap(Chars.Pixmap(ff7->descParty(s,2)));
+                ui->s4_lbl_lvl->setText(QString::number(ff7->descLevel(s)));
+                ui->s4_lbl_gil->setText(QString::number(ff7->descGil(s)));
+                ui->s4_lbl_hr->setText(QString::number(ff7->descTime(s)/3600));
+                ui->s4_lbl_min->setText(QString::number(ff7->descTime(s)/60 %60));
                 ui->s4_lbl_loc->setText(ff7->descLocation(s));
                 ui->s4_lbl_name->setText(ff7->descName(s));
             break;
 
             case 4:
                 ui->s5_box->setStyleSheet(style);
-                ui->s5_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
-                ui->s5_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
-                ui->s5_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
-                ui->s5_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
-                ui->s5_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
-                ui->s5_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
-                ui->s5_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
+                ui->s5_party1->setPixmap(Chars.Pixmap(ff7->descParty(s,0)));
+                ui->s5_party2->setPixmap(Chars.Pixmap(ff7->descParty(s,1)));
+                ui->s5_party3->setPixmap(Chars.Pixmap(ff7->descParty(s,2)));
+                ui->s5_lbl_lvl->setText(QString::number(ff7->descLevel(s)));
+                ui->s5_lbl_gil->setText(QString::number(ff7->descGil(s)));
+                ui->s5_lbl_hr->setText(QString::number(ff7->descTime(s)/3600));
+                ui->s5_lbl_min->setText(QString::number(ff7->descTime(s)/60 %60));
                 ui->s5_lbl_loc->setText(ff7->descLocation(s));
                 ui->s5_lbl_name->setText(ff7->descName(s));
             break;
 
             case 5:
                 ui->s6_box->setStyleSheet(style);
-                ui->s6_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
-                ui->s6_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
-                ui->s6_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
-                ui->s6_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
-                ui->s6_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
-                ui->s6_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
-                ui->s6_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
+                ui->s6_party1->setPixmap(Chars.Pixmap(ff7->descParty(s,0)));
+                ui->s6_party2->setPixmap(Chars.Pixmap(ff7->descParty(s,1)));
+                ui->s6_party3->setPixmap(Chars.Pixmap(ff7->descParty(s,2)));
+                ui->s6_lbl_lvl->setText(QString::number(ff7->descLevel(s)));
+                ui->s6_lbl_gil->setText(QString::number(ff7->descGil(s)));
+                ui->s6_lbl_hr->setText(QString::number(ff7->descTime(s)/3600));
+                ui->s6_lbl_min->setText(QString::number(ff7->descTime(s)/60 %60));
                 ui->s6_lbl_loc->setText(ff7->descLocation(s));
                 ui->s6_lbl_name->setText(ff7->descName(s));
             break;
 
             case 6:
                 ui->s7_box->setStyleSheet(style);
-                ui->s7_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
-                ui->s7_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
-                ui->s7_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
-                ui->s7_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
-                ui->s7_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
-                ui->s7_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
-                ui->s7_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
+                ui->s7_party1->setPixmap(Chars.Pixmap(ff7->descParty(s,0)));
+                ui->s7_party2->setPixmap(Chars.Pixmap(ff7->descParty(s,1)));
+                ui->s7_party3->setPixmap(Chars.Pixmap(ff7->descParty(s,2)));
+                ui->s7_lbl_lvl->setText(QString::number(ff7->descLevel(s)));
+                ui->s7_lbl_gil->setText(QString::number(ff7->descGil(s)));
+                ui->s7_lbl_hr->setText(QString::number(ff7->descTime(s)/3600));
+                ui->s7_lbl_min->setText(QString::number(ff7->descTime(s)/60 %60));
                 ui->s7_lbl_loc->setText(ff7->descLocation(s));
                 ui->s7_lbl_name->setText(ff7->descName(s));
             break;
 
             case 7:
                 ui->s8_box->setStyleSheet(style);
-                ui->s8_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
-                ui->s8_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
-                ui->s8_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
-                ui->s8_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
-                ui->s8_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
-                ui->s8_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
-                ui->s8_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
+                ui->s8_party1->setPixmap(Chars.Pixmap(ff7->descParty(s,0)));
+                ui->s8_party2->setPixmap(Chars.Pixmap(ff7->descParty(s,1)));
+                ui->s8_party3->setPixmap(Chars.Pixmap(ff7->descParty(s,2)));
+                ui->s8_lbl_lvl->setText(QString::number(ff7->descLevel(s)));
+                ui->s8_lbl_gil->setText(QString::number(ff7->descGil(s)));
+                ui->s8_lbl_hr->setText(QString::number(ff7->descTime(s)/3600));
+                ui->s8_lbl_min->setText(QString::number(ff7->descTime(s)/60 %60));
                 ui->s8_lbl_loc->setText(ff7->descLocation(s));
                 ui->s8_lbl_name->setText(ff7->descName(s));
             break;
 
             case 8:
                 ui->s9_box->setStyleSheet(style);
-                ui->s9_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
-                ui->s9_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
-                ui->s9_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
-                ui->s9_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
-                ui->s9_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
-                ui->s9_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
-                ui->s9_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
+                ui->s9_party1->setPixmap(Chars.Pixmap(ff7->descParty(s,0)));
+                ui->s9_party2->setPixmap(Chars.Pixmap(ff7->descParty(s,1)));
+                ui->s9_party3->setPixmap(Chars.Pixmap(ff7->descParty(s,2)));
+                ui->s9_lbl_lvl->setText(QString::number(ff7->descLevel(s)));
+                ui->s9_lbl_gil->setText(QString::number(ff7->descGil(s)));
+                ui->s9_lbl_hr->setText(QString::number(ff7->descTime(s)/3600));
+                ui->s9_lbl_min->setText(QString::number(ff7->descTime(s)/60 %60));
                 ui->s9_lbl_loc->setText(ff7->descLocation(s));
                 ui->s9_lbl_name->setText(ff7->descName(s));
             break;
             case 9:
                 ui->s10_box->setStyleSheet(style);
-                ui->s10_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
-                ui->s10_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
-                ui->s10_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
-                ui->s10_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
-                ui->s10_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
-                ui->s10_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
-                ui->s10_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
+                ui->s10_party1->setPixmap(Chars.Pixmap(ff7->descParty(s,0)));
+                ui->s10_party2->setPixmap(Chars.Pixmap(ff7->descParty(s,1)));
+                ui->s10_party3->setPixmap(Chars.Pixmap(ff7->descParty(s,2)));
+                ui->s10_lbl_lvl->setText(QString::number(ff7->descLevel(s)));
+                ui->s10_lbl_gil->setText(QString::number(ff7->descGil(s)));
+                ui->s10_lbl_hr->setText(QString::number(ff7->descTime(s)/3600));
+                ui->s10_lbl_min->setText(QString::number(ff7->descTime(s)/60 %60));
                 ui->s10_lbl_loc->setText(ff7->descLocation(s));
                 ui->s10_lbl_name->setText(ff7->descName(s));
             break;
 
             case 10:
                 ui->s11_box->setStyleSheet(style);
-                ui->s11_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
-                ui->s11_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
-                ui->s11_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
-                ui->s11_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
-                ui->s11_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
-                ui->s11_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
-                ui->s11_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
+                ui->s11_party1->setPixmap(Chars.Pixmap(ff7->descParty(s,0)));
+                ui->s11_party2->setPixmap(Chars.Pixmap(ff7->descParty(s,1)));
+                ui->s11_party3->setPixmap(Chars.Pixmap(ff7->descParty(s,2)));
+                ui->s11_lbl_lvl->setText(QString::number(ff7->descLevel(s)));
+                ui->s11_lbl_gil->setText(QString::number(ff7->descGil(s)));
+                ui->s11_lbl_hr->setText(QString::number(ff7->descTime(s)/3600));
+                ui->s11_lbl_min->setText(QString::number(ff7->descTime(s)/60 %60));
                 ui->s11_lbl_loc->setText(ff7->descLocation(s));
                 ui->s11_lbl_name->setText(ff7->descName(s));
             break;
 
             case 11:
                 ui->s12_box->setStyleSheet(style);
-                ui->s12_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
-                ui->s12_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
-                ui->s12_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
-                ui->s12_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
-                ui->s12_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
-                ui->s12_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
-                ui->s12_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
+                ui->s12_party1->setPixmap(Chars.Pixmap(ff7->descParty(s,0)));
+                ui->s12_party2->setPixmap(Chars.Pixmap(ff7->descParty(s,1)));
+                ui->s12_party3->setPixmap(Chars.Pixmap(ff7->descParty(s,2)));
+                ui->s12_lbl_lvl->setText(QString::number(ff7->descLevel(s)));
+                ui->s12_lbl_gil->setText(QString::number(ff7->descGil(s)));
+                ui->s12_lbl_hr->setText(QString::number(ff7->descTime(s)/3600));
+                ui->s12_lbl_min->setText(QString::number(ff7->descTime(s)/60 %60));
                 ui->s12_lbl_loc->setText(ff7->descLocation(s));
                 ui->s12_lbl_name->setText(ff7->descName(s));
             break;
 
             case 12:
                 ui->s13_box->setStyleSheet(style);
-                ui->s13_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
-                ui->s13_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
-                ui->s13_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
-                ui->s13_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
-                ui->s13_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
-                ui->s13_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
-                ui->s13_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
+                ui->s13_party1->setPixmap(Chars.Pixmap(ff7->descParty(s,0)));
+                ui->s13_party2->setPixmap(Chars.Pixmap(ff7->descParty(s,1)));
+                ui->s13_party3->setPixmap(Chars.Pixmap(ff7->descParty(s,2)));
+                ui->s13_lbl_lvl->setText(QString::number(ff7->descLevel(s)));
+                ui->s13_lbl_gil->setText(QString::number(ff7->descGil(s)));
+                ui->s13_lbl_hr->setText(QString::number(ff7->descTime(s)/3600));
+                ui->s13_lbl_min->setText(QString::number(ff7->descTime(s)/60 %60));
                 ui->s13_lbl_loc->setText(ff7->descLocation(s));
                 ui->s13_lbl_name->setText(ff7->descName(s));
             break;
 
             case 13:
                 ui->s14_box->setStyleSheet(style);
-                ui->s14_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
-                ui->s14_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
-                ui->s14_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
-                ui->s14_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
-                ui->s14_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
-                ui->s14_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
-                ui->s14_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
+                ui->s14_party1->setPixmap(Chars.Pixmap(ff7->descParty(s,0)));
+                ui->s14_party2->setPixmap(Chars.Pixmap(ff7->descParty(s,1)));
+                ui->s14_party3->setPixmap(Chars.Pixmap(ff7->descParty(s,2)));
+                ui->s14_lbl_lvl->setText(QString::number(ff7->descLevel(s)));
+                ui->s14_lbl_gil->setText(QString::number(ff7->descGil(s)));
+                ui->s14_lbl_hr->setText(QString::number(ff7->descTime(s)/3600));
+                ui->s14_lbl_min->setText(QString::number(ff7->descTime(s)/60 %60));
                 ui->s14_lbl_loc->setText(ff7->descLocation(s));
                 ui->s14_lbl_name->setText(ff7->descName(s));
             break;
 
             case 14:
                 ui->s15_box->setStyleSheet(style);
-                ui->s15_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
-                ui->s15_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
-                ui->s15_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
-                ui->s15_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
-                ui->s15_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
-                ui->s15_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
-                ui->s15_lbl_min->setText(QString::number(ff7->slot[s].desc.time/60 %60));
+                ui->s15_party1->setPixmap(Chars.Pixmap(ff7->descParty(s,0)));
+                ui->s15_party2->setPixmap(Chars.Pixmap(ff7->descParty(s,1)));
+                ui->s15_party3->setPixmap(Chars.Pixmap(ff7->descParty(s,2)));
+                ui->s15_lbl_lvl->setText(QString::number(ff7->descLevel(s)));
+                ui->s15_lbl_gil->setText(QString::number(ff7->descGil(s)));
+                ui->s15_lbl_hr->setText(QString::number(ff7->descTime(s)/3600));
+                ui->s15_lbl_min->setText(QString::number(ff7->descTime(s)/60 %60));
                 ui->s15_lbl_loc->setText(ff7->descLocation(s));
                 ui->s15_lbl_name->setText(ff7->descName(s));
             break;
