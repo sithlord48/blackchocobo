@@ -2,16 +2,6 @@
     <qresource prefix="/icon">
         <file alias="open">icon/open.png</file>
         <file alias="quit">icon/quit.png</file>
-        <file alias="aeris_icon">icon/aeris.png</file>
-        <file alias="barret_icon">icon/barret.png</file>
-        <file alias="cait_icon">icon/cait.png</file>
-        <file alias="cid_icon">icon/cid.png</file>
-        <file alias="cloud_icon">icon/cloud.png</file>
-        <file alias="red_icon">icon/red.png</file>
-        <file alias="sep_icon">icon/sep.png</file>
-        <file alias="tifa_icon">icon/tifa.png</file>
-        <file alias="vincent_icon">icon/vincent.png</file>
-        <file alias="yuffie_icon">icon/yuffie.png</file>
         <file alias="bchoco">icon/bchoco.png</file>
         <file alias="qt_logo">icon/qt_logo.png</file>
         <file alias="psxmc">icon/psxmc.png</file>
@@ -21,7 +11,6 @@
         <file alias="prev">icon/previous.png</file>
         <file alias="next">icon/next.png</file>
         <file alias="psn">icon/psn.png</file>
-        <file alias="y_cloud_icon">icon/y_cloud.png</file>
         <file alias="import">icon/import.png</file>
         <file alias="export">icon/export.png</file>
         <file alias="us_sel">icon/us.png</file>

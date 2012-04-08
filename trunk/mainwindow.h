@@ -31,6 +31,7 @@
 
 #include "static_data/FF7Item.h"
 #include "static_data/FF7Save.h"
+#include "static_data/FF7Char.h"
 #include "static_data/FF7Materia.h"
 #include "static_data/FF7Location.h"
 #include "widgets/ItemPreview.h"
@@ -61,6 +62,7 @@ private:
     FF7Save *ff7; // our save file struct pointer.
     QSettings *settings;
     int s; //track slot
+    FF7Char Chars; //FF7Char Static Data
     FF7Item Items; //FF7Item Static Data
     FF7Materia Materias;//FF7Materia Static Data.
     FF7Location Locations; // FF7 Location Data
@@ -154,7 +156,7 @@ private slots://try to keep these in the same order as the .cpp file
     void unknown_refresh(int);
     void set_ntsc_time(void);
     void set_pal_time(void);
-    QString avatar_style(int);
+    //QString avatar_style(int);
 
     /*CharButtons*/
     void on_btn_cloud_clicked();

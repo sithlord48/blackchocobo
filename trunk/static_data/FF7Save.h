@@ -169,7 +169,6 @@ public:
   quint8 psx_block_next(int s);// if using more then one block return location of next block
   quint8 psx_block_size(int s);//how many blocks save uses.
   void fix_pc_bytemask(int s);// update so last slot is shown selected on load (must be public to set to currently viewed slot).
-  int stat_gain(int who,int stat, int stat_amount, int next_lvl); //The "level up" function must be called once per stat per level up.
 private:
   //data members
   //FF7SLOT slot[15];

@@ -33,7 +33,8 @@ SOURCES += main.cpp \
     static_data/FF7Location.cpp \
     widgets/ItemPreview.cpp \
     widgets/DialogPreview.cpp \
-    widgets/MateriaEditor.cpp
+    widgets/MateriaEditor.cpp \
+    static_data/FF7Char.cpp
 HEADERS += mainwindow.h \
     slotselect.h \
     about.h \
@@ -50,7 +51,8 @@ HEADERS += mainwindow.h \
     version.h \
     static_data/FF7Save_Const.h \
     static_data/FF7Save_Types.h \
-    widgets/MateriaEditor.h
+    widgets/MateriaEditor.h \
+    static_data/FF7Char.h
 FORMS += mainwindow.ui \
     slotselect.ui \
     about.ui \

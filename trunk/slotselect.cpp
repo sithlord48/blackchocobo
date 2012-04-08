@@ -597,9 +597,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
             {
             case 0:
                 ui->s1_box->setStyleSheet(style);
-                ui->s1_party1->setStyleSheet(avatar_style(ff7->slot[s].desc.party[0]));
-                ui->s1_party2->setStyleSheet(avatar_style(ff7->slot[s].desc.party[1]));
-                ui->s1_party3->setStyleSheet(avatar_style(ff7->slot[s].desc.party[2]));
+                ui->s1_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
+                ui->s1_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
+                ui->s1_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
                 ui->s1_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
                 ui->s1_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s1_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
@@ -610,9 +610,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
 
             case 1:
                 ui->s2_box->setStyleSheet(style);
-                ui->s2_party1->setStyleSheet(avatar_style(ff7->slot[s].desc.party[0]));
-                ui->s2_party2->setStyleSheet(avatar_style(ff7->slot[s].desc.party[1]));
-                ui->s2_party3->setStyleSheet(avatar_style(ff7->slot[s].desc.party[2]));
+                ui->s2_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
+                ui->s2_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
+                ui->s2_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
                 ui->s2_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
                 ui->s2_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s2_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
@@ -623,9 +623,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
 
             case 2:
                 ui->s3_box->setStyleSheet(style);
-                ui->s3_party1->setStyleSheet(avatar_style(ff7->slot[s].desc.party[0]));
-                ui->s3_party2->setStyleSheet(avatar_style(ff7->slot[s].desc.party[1]));
-                ui->s3_party3->setStyleSheet(avatar_style(ff7->slot[s].desc.party[2]));
+                ui->s3_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
+                ui->s3_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
+                ui->s3_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
                 ui->s3_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
                 ui->s3_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s3_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
@@ -636,9 +636,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
 
             case 3:
                 ui->s4_box->setStyleSheet(style);
-                ui->s4_party1->setStyleSheet(avatar_style(ff7->slot[s].desc.party[0]));
-                ui->s4_party2->setStyleSheet(avatar_style(ff7->slot[s].desc.party[1]));
-                ui->s4_party3->setStyleSheet(avatar_style(ff7->slot[s].desc.party[2]));
+                ui->s4_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
+                ui->s4_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
+                ui->s4_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
                 ui->s4_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
                 ui->s4_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s4_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
@@ -649,9 +649,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
 
             case 4:
                 ui->s5_box->setStyleSheet(style);
-                ui->s5_party1->setStyleSheet(avatar_style(ff7->slot[s].desc.party[0]));
-                ui->s5_party2->setStyleSheet(avatar_style(ff7->slot[s].desc.party[1]));
-                ui->s5_party3->setStyleSheet(avatar_style(ff7->slot[s].desc.party[2]));
+                ui->s5_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
+                ui->s5_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
+                ui->s5_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
                 ui->s5_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
                 ui->s5_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s5_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
@@ -662,9 +662,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
 
             case 5:
                 ui->s6_box->setStyleSheet(style);
-                ui->s6_party1->setStyleSheet(avatar_style(ff7->slot[s].desc.party[0]));
-                ui->s6_party2->setStyleSheet(avatar_style(ff7->slot[s].desc.party[1]));
-                ui->s6_party3->setStyleSheet(avatar_style(ff7->slot[s].desc.party[2]));
+                ui->s6_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
+                ui->s6_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
+                ui->s6_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
                 ui->s6_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
                 ui->s6_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s6_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
@@ -675,9 +675,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
 
             case 6:
                 ui->s7_box->setStyleSheet(style);
-                ui->s7_party1->setStyleSheet(avatar_style(ff7->slot[s].desc.party[0]));
-                ui->s7_party2->setStyleSheet(avatar_style(ff7->slot[s].desc.party[1]));
-                ui->s7_party3->setStyleSheet(avatar_style(ff7->slot[s].desc.party[2]));
+                ui->s7_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
+                ui->s7_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
+                ui->s7_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
                 ui->s7_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
                 ui->s7_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s7_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
@@ -688,9 +688,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
 
             case 7:
                 ui->s8_box->setStyleSheet(style);
-                ui->s8_party1->setStyleSheet(avatar_style(ff7->slot[s].desc.party[0]));
-                ui->s8_party2->setStyleSheet(avatar_style(ff7->slot[s].desc.party[1]));
-                ui->s8_party3->setStyleSheet(avatar_style(ff7->slot[s].desc.party[2]));
+                ui->s8_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
+                ui->s8_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
+                ui->s8_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
                 ui->s8_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
                 ui->s8_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s8_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
@@ -701,9 +701,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
 
             case 8:
                 ui->s9_box->setStyleSheet(style);
-                ui->s9_party1->setStyleSheet(avatar_style(ff7->slot[s].desc.party[0]));
-                ui->s9_party2->setStyleSheet(avatar_style(ff7->slot[s].desc.party[1]));
-                ui->s9_party3->setStyleSheet(avatar_style(ff7->slot[s].desc.party[2]));
+                ui->s9_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
+                ui->s9_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
+                ui->s9_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
                 ui->s9_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
                 ui->s9_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s9_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
@@ -713,9 +713,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
             break;
             case 9:
                 ui->s10_box->setStyleSheet(style);
-                ui->s10_party1->setStyleSheet(avatar_style(ff7->slot[s].desc.party[0]));
-                ui->s10_party2->setStyleSheet(avatar_style(ff7->slot[s].desc.party[1]));
-                ui->s10_party3->setStyleSheet(avatar_style(ff7->slot[s].desc.party[2]));
+                ui->s10_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
+                ui->s10_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
+                ui->s10_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
                 ui->s10_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
                 ui->s10_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s10_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
@@ -726,9 +726,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
 
             case 10:
                 ui->s11_box->setStyleSheet(style);
-                ui->s11_party1->setStyleSheet(avatar_style(ff7->slot[s].desc.party[0]));
-                ui->s11_party2->setStyleSheet(avatar_style(ff7->slot[s].desc.party[1]));
-                ui->s11_party3->setStyleSheet(avatar_style(ff7->slot[s].desc.party[2]));
+                ui->s11_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
+                ui->s11_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
+                ui->s11_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
                 ui->s11_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
                 ui->s11_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s11_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
@@ -739,9 +739,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
 
             case 11:
                 ui->s12_box->setStyleSheet(style);
-                ui->s12_party1->setStyleSheet(avatar_style(ff7->slot[s].desc.party[0]));
-                ui->s12_party2->setStyleSheet(avatar_style(ff7->slot[s].desc.party[1]));
-                ui->s12_party3->setStyleSheet(avatar_style(ff7->slot[s].desc.party[2]));
+                ui->s12_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
+                ui->s12_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
+                ui->s12_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
                 ui->s12_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
                 ui->s12_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s12_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
@@ -752,9 +752,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
 
             case 12:
                 ui->s13_box->setStyleSheet(style);
-                ui->s13_party1->setStyleSheet(avatar_style(ff7->slot[s].desc.party[0]));
-                ui->s13_party2->setStyleSheet(avatar_style(ff7->slot[s].desc.party[1]));
-                ui->s13_party3->setStyleSheet(avatar_style(ff7->slot[s].desc.party[2]));
+                ui->s13_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
+                ui->s13_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
+                ui->s13_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
                 ui->s13_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
                 ui->s13_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s13_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
@@ -765,9 +765,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
 
             case 13:
                 ui->s14_box->setStyleSheet(style);
-                ui->s14_party1->setStyleSheet(avatar_style(ff7->slot[s].desc.party[0]));
-                ui->s14_party2->setStyleSheet(avatar_style(ff7->slot[s].desc.party[1]));
-                ui->s14_party3->setStyleSheet(avatar_style(ff7->slot[s].desc.party[2]));
+                ui->s14_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
+                ui->s14_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
+                ui->s14_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
                 ui->s14_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
                 ui->s14_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s14_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
@@ -778,9 +778,9 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *ff7) :
 
             case 14:
                 ui->s15_box->setStyleSheet(style);
-                ui->s15_party1->setStyleSheet(avatar_style(ff7->slot[s].desc.party[0]));
-                ui->s15_party2->setStyleSheet(avatar_style(ff7->slot[s].desc.party[1]));
-                ui->s15_party3->setStyleSheet(avatar_style(ff7->slot[s].desc.party[2]));
+                ui->s15_party1->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[0]));
+                ui->s15_party2->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[1]));
+                ui->s15_party3->setPixmap(Chars.Pixmap(ff7->slot[s].desc.party[2]));
                 ui->s15_lbl_lvl->setText(QString::number(ff7->slot[s].desc.level));
                 ui->s15_lbl_gil->setText(QString::number(ff7->slot[s].desc.gil));
                 ui->s15_lbl_hr->setText(QString::number(ff7->slot[s].desc.time/3600));
@@ -1155,45 +1155,3 @@ void SlotSelect::on_btn_s12_clicked(){this->done(11);}
 void SlotSelect::on_btn_s13_clicked(){this->done(12);}
 void SlotSelect::on_btn_s14_clicked(){this->done(13);}
 void SlotSelect::on_btn_s15_clicked(){this->done(14);}
-
-QString SlotSelect::avatar_style(int id)
-{
-    QString style;
-    switch(id)
-    {
-      case 0:
-        style="image: url(:/icon/cloud_icon)";
-        break;
-      case 1:
-        style="image: url(:/icon/barret_icon)";
-        break;
-      case 2:
-        style="image: url(:/icon/tifa_icon)";
-        break;
-      case 3:
-        style="image: url(:/icon/aeris_icon)";
-        break;
-      case 4:
-        style="image: url(:/icon/red_icon)";
-        break;
-      case 5:
-        style="image: url(:/icon/yuffie_icon)";
-        break;
-      case 6:
-        style="image: url(:/icon/cait_icon)";
-        break;
-      case 7:
-        style="image: url(:/icon/vincent_icon)";
-        break;
-      case 8:
-        style="image: url(:/icon/cid_icon)";
-        break;
-      case 9:
-        style="image: url(:/icon/y_cloud_icon)";
-        break;
-      case 10:
-        style="image: url(:/icon/sep_icon)";
-        break;
-      }
-    return style;
-}

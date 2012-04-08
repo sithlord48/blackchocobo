@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>786</width>
-    <height>604</height>
+    <width>774</width>
+    <height>592</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -434,15 +434,6 @@ background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, s
   width:1px;
  }
 /*Button Icons*/
-QPushButton#btn_cloud{image: url(:/icon/cloud_icon);}
-QPushButton#btn_barret{image: url(:/icon/barret_icon);}
-QPushButton#btn_tifa{image: url(:/icon/tifa_icon);}
-QPushButton#btn_aeris{image: url(:/icon/aeris_icon);}
-QPushButton#btn_red{image: url(:/icon/red_icon);}
-QPushButton#btn_yuffie{image: url(:/icon/yuffie_icon);}
-QPushButton#btn_cid{image: url(:/icon/cid_icon);}
-QPushButton#btn_vincent{image: url(:/icon/vincent_icon);}
-QPushButton#btn_cait{image: url(:/icon/cait_icon);}
 QSlider#slide_world_y::handle{image: url(:/icon/prev);}
 QSlider#slide_world_x::handle{image: url(:/icon/slider_up);}
 QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
@@ -519,352 +510,17 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               <number>1</number>
              </property>
              <item row="0" column="0">
-              <widget class="QComboBox" name="combo_party1">
-               <item>
-                <property name="text">
-                 <string>Cloud</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Barret</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Tifa</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Aerith</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Red XIII</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Yuffie</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Cait Sith</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Vincent</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Cid</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Y.Cloud</string>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normalon>:/icon/y_cloud_icon</normalon>
-                 </iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Sephiroth</string>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normalon>:/icon/sep_icon</normalon>
-                 </iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string notr="true">0x0B</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>-Empty-</string>
-                </property>
-               </item>
-              </widget>
+              <widget class="QComboBox" name="combo_party1"/>
              </item>
              <item row="0" column="1">
               <widget class="QComboBox" name="combo_party2">
                <property name="enabled">
                 <bool>true</bool>
                </property>
-               <item>
-                <property name="text">
-                 <string>Cloud</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Barret</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Tifa</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Aerith</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Red XIII</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Yuffie</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Cait Sith</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Vincent</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Cid</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Y.Cloud</string>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normalon>:/icon/y_cloud_icon</normalon>
-                 </iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Sephiroth</string>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normalon>:/icon/sep_icon</normalon>
-                 </iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string notr="true">0x0B</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>-Empty-</string>
-                </property>
-               </item>
               </widget>
              </item>
              <item row="0" column="2">
-              <widget class="QComboBox" name="combo_party3">
-               <item>
-                <property name="text">
-                 <string>Cloud</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Barret</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Tifa</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Aerith</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Red XIII</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Yuffie</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Cait Sith</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Vincent</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Cid</string>
-                </property>
-                <property name="icon">
-                 <iconset resource="images.qrc">
-                  <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Y.Cloud</string>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normalon>:/icon/y_cloud_icon</normalon>
-                 </iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>Sephiroth</string>
-                </property>
-                <property name="icon">
-                 <iconset>
-                  <normalon>:/icon/sep_icon</normalon>
-                 </iconset>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string notr="true">0x0B</string>
-                </property>
-               </item>
-               <item>
-                <property name="text">
-                 <string>-Empty-</string>
-                </property>
-               </item>
-              </widget>
+              <widget class="QComboBox" name="combo_party3"/>
              </item>
             </layout>
            </widget>
@@ -1145,6 +801,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <height>111</height>
                 </size>
                </property>
+               <property name="iconSize">
+                <size>
+                 <width>84</width>
+                 <height>96</height>
+                </size>
+               </property>
               </widget>
              </item>
              <item row="0" column="1">
@@ -1165,6 +827,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <size>
                  <width>101</width>
                  <height>111</height>
+                </size>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
               </widget>
@@ -1189,6 +857,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <height>111</height>
                 </size>
                </property>
+               <property name="iconSize">
+                <size>
+                 <width>84</width>
+                 <height>96</height>
+                </size>
+               </property>
               </widget>
              </item>
              <item row="1" column="0">
@@ -1209,6 +883,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <size>
                  <width>101</width>
                  <height>111</height>
+                </size>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
               </widget>
@@ -1236,6 +916,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <height>111</height>
                 </size>
                </property>
+               <property name="iconSize">
+                <size>
+                 <width>84</width>
+                 <height>96</height>
+                </size>
+               </property>
               </widget>
              </item>
              <item row="1" column="2">
@@ -1256,6 +942,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <size>
                  <width>101</width>
                  <height>111</height>
+                </size>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
               </widget>
@@ -1280,6 +972,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <height>111</height>
                 </size>
                </property>
+               <property name="iconSize">
+                <size>
+                 <width>84</width>
+                 <height>96</height>
+                </size>
+               </property>
               </widget>
              </item>
              <item row="2" column="1">
@@ -1302,6 +1000,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <height>111</height>
                 </size>
                </property>
+               <property name="iconSize">
+                <size>
+                 <width>84</width>
+                 <height>96</height>
+                </size>
+               </property>
               </widget>
              </item>
              <item row="2" column="2">
@@ -1322,6 +1026,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                 <size>
                  <width>101</width>
                  <height>111</height>
+                </size>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
               </widget>
@@ -1349,8 +1059,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>453</width>
-             <height>458</height>
+             <width>441</width>
+             <height>446</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -1905,9 +1615,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                        <height>27</height>
                       </size>
                      </property>
-                     <property name="currentIndex">
-                      <number>0</number>
-                     </property>
                      <property name="sizeAdjustPolicy">
                       <enum>QComboBox::AdjustToContents</enum>
                      </property>
@@ -1920,105 +1627,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                      <property name="frame">
                       <bool>false</bool>
                      </property>
-                     <item>
-                      <property name="text">
-                       <string notr="true"/>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="images.qrc">
-                        <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string notr="true"/>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="images.qrc">
-                        <normaloff>:/icon/barret_icon</normaloff>:/icon/barret_icon</iconset>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string notr="true"/>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="images.qrc">
-                        <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string notr="true"/>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="images.qrc">
-                        <normaloff>:/icon/aeris_icon</normaloff>:/icon/aeris_icon</iconset>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string notr="true"/>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="images.qrc">
-                        <normaloff>:/icon/red_icon</normaloff>:/icon/red_icon</iconset>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string notr="true"/>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="images.qrc">
-                        <normaloff>:/icon/yuffie_icon</normaloff>:/icon/yuffie_icon</iconset>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string notr="true"/>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="images.qrc">
-                        <normaloff>:/icon/cait_icon</normaloff>:/icon/cait_icon</iconset>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string notr="true"/>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="images.qrc">
-                        <normaloff>:/icon/vincent_icon</normaloff>:/icon/vincent_icon</iconset>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string notr="true"/>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="images.qrc">
-                        <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string notr="true"/>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="images.qrc">
-                        <normaloff>:/icon/y_cloud_icon</normaloff>:/icon/y_cloud_icon</iconset>
-                      </property>
-                     </item>
-                     <item>
-                      <property name="text">
-                       <string notr="true"/>
-                      </property>
-                      <property name="icon">
-                       <iconset resource="images.qrc">
-                        <normaloff>:/icon/sep_icon</normaloff>:/icon/sep_icon</iconset>
-                      </property>
-                     </item>
                     </widget>
                    </item>
                    <item>
@@ -3389,7 +2997,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>453</width>
+             <width>401</width>
              <height>458</height>
             </rect>
            </property>
@@ -9378,8 +8986,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>753</width>
-             <height>445</height>
+             <width>720</width>
+             <height>275</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -10089,7 +9697,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <string>Cloud</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="images.qrc">
+                         <iconset>
                           <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
                         </property>
                        </item>
@@ -10098,7 +9706,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <string>Tifa</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="images.qrc">
+                         <iconset>
                           <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
                         </property>
                        </item>
@@ -10107,7 +9715,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <string>Cid</string>
                         </property>
                         <property name="icon">
-                         <iconset resource="images.qrc">
+                         <iconset>
                           <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
                         </property>
                        </item>
@@ -11479,7 +11087,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>350</width>
+                  <width>333</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -13266,7 +12874,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_37">
                <item>
-                <widget class="QLabel" name="label_42">
+                <widget class="QLabel" name="lbl_love_aeris">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                    <horstretch>48</horstretch>
@@ -13290,9 +12898,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </property>
                  <property name="text">
                   <string/>
-                 </property>
-                 <property name="pixmap">
-                  <pixmap resource="images.qrc">:/icon/aeris_icon</pixmap>
                  </property>
                  <property name="scaledContents">
                   <bool>true</bool>
@@ -13338,7 +12943,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_94">
                <item>
-                <widget class="QLabel" name="label_40">
+                <widget class="QLabel" name="lbl_love_tifa">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -13359,9 +12964,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </property>
                  <property name="text">
                   <string/>
-                 </property>
-                 <property name="pixmap">
-                  <pixmap resource="images.qrc">:/icon/tifa_icon</pixmap>
                  </property>
                  <property name="scaledContents">
                   <bool>true</bool>
@@ -13404,7 +13006,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_98">
                <item>
-                <widget class="QLabel" name="label_41">
+                <widget class="QLabel" name="lbl_love_yuffie">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -13425,9 +13027,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </property>
                  <property name="text">
                   <string/>
-                 </property>
-                 <property name="pixmap">
-                  <pixmap resource="images.qrc">:/icon/yuffie_icon</pixmap>
                  </property>
                  <property name="scaledContents">
                   <bool>true</bool>
@@ -13470,7 +13069,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
              <item>
               <layout class="QVBoxLayout" name="verticalLayout_116">
                <item>
-                <widget class="QLabel" name="label_39">
+                <widget class="QLabel" name="lbl_love_barret">
                  <property name="sizePolicy">
                   <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                    <horstretch>0</horstretch>
@@ -13491,9 +13090,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  </property>
                  <property name="text">
                   <string/>
-                 </property>
-                 <property name="pixmap">
-                  <pixmap resource="images.qrc">:/icon/barret_icon</pixmap>
                  </property>
                  <property name="scaledContents">
                   <bool>true</bool>
@@ -13972,7 +13568,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>732</width>
+             <width>513</width>
              <height>683</height>
             </rect>
            </property>
@@ -18152,12 +17748,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <layout class="QVBoxLayout" name="verticalLayout_88">
                    <item>
-                    <widget class="QLabel" name="label_179">
+                    <widget class="QLabel" name="lbl_battle_love_aeris">
                      <property name="frameShape">
                       <enum>QFrame::NoFrame</enum>
-                     </property>
-                     <property name="pixmap">
-                      <pixmap resource="images.qrc">:/icon/aeris_icon</pixmap>
                      </property>
                      <property name="scaledContents">
                       <bool>true</bool>
@@ -18179,10 +17772,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <layout class="QVBoxLayout" name="verticalLayout_119">
                    <item>
-                    <widget class="QLabel" name="label_180">
-                     <property name="pixmap">
-                      <pixmap resource="images.qrc">:/icon/tifa_icon</pixmap>
-                     </property>
+                    <widget class="QLabel" name="lbl_battle_love_tifa">
                      <property name="scaledContents">
                       <bool>true</bool>
                      </property>
@@ -18203,10 +17793,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <layout class="QVBoxLayout" name="verticalLayout_120">
                    <item>
-                    <widget class="QLabel" name="label_181">
-                     <property name="pixmap">
-                      <pixmap resource="images.qrc">:/icon/yuffie_icon</pixmap>
-                     </property>
+                    <widget class="QLabel" name="lbl_battle_love_yuffie">
                      <property name="scaledContents">
                       <bool>true</bool>
                      </property>
@@ -18227,10 +17814,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <item>
                   <layout class="QVBoxLayout" name="verticalLayout_123">
                    <item>
-                    <widget class="QLabel" name="label_182">
-                     <property name="pixmap">
-                      <pixmap resource="images.qrc">:/icon/barret_icon</pixmap>
-                     </property>
+                    <widget class="QLabel" name="lbl_battle_love_barret">
                      <property name="scaledContents">
                       <bool>true</bool>
                      </property>
@@ -19728,7 +19312,7 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>786</width>
+     <width>774</width>
      <height>22</height>
     </rect>
    </property>
