@@ -32,7 +32,6 @@
 class MateriaEditor : public QWidget
 {
     Q_OBJECT
-    
 public:
     MateriaEditor(QWidget *parent=0);
     //MateriaEditor(QWidget *parent=0,quint8 materia_id=0,qint32 ap=0);
