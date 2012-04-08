@@ -1062,7 +1062,7 @@ QString MainWindow::avatar_style(int id)
 
 /*~~~~~~~~~Char Update~~~~~~~~~~*/
 void MainWindow::charupdate(void)
-{
+{    
     load=true;
     //QByteArray text;
     quint8 char_weapon_offset=0;
@@ -1521,11 +1521,11 @@ void MainWindow::update_stat_totals(void)
     stat_temp=ui->sb_lck->value()+ui->sb_lckbonus->value()+lckbonus;    if(stat_temp>256){stat_temp=255;}
     ui->lbl_lck_total->setText(QString::number(stat_temp));
     // hp/mp adjustment
-    //if(ui->action_auto_char_growth->isChecked())
-    //{
+    if(ui->action_auto_char_growth->isChecked())
+    {
         ui->sb_maxhp->setValue(ui->sb_hp->value() + (ui->sb_hp->value()*(hpbonus*0.01)));
         ui->sb_maxmp->setValue(ui->sb_mp->value() + (ui->sb_mp->value()*(mpbonus*0.01)));
-     //}
+    }
 }
 /*~~~~~~~END Char Update~~~~~~~~*/
 void MainWindow::setchar_growth(int caller)

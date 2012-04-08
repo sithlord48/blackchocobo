@@ -45,7 +45,7 @@ void MateriaEditor::init_display()
     btn_rm_materia = new QPushButton;
     btn_copy_materia = new QPushButton;
     btn_paste_materia = new QPushButton;
-    box_stars = new QGroupBox(this);
+    box_stars = new QGroupBox;
     btn_star1 = new QPushButton;
     btn_star2 = new QPushButton;
     btn_star3 = new QPushButton;
@@ -104,9 +104,7 @@ void MateriaEditor::init_display()
     btn_rm_materia->setMinimumSize(24,24);
     combo_type->setMinimumHeight(24);
     combo_materia->setMinimumHeight(24);
-    //sb_ap->setMinimumHeight(24);
-    //lbl_slash->setMinimumHeight(24);
-    //lcd_max_ap->setMinimumHeight(24);
+
     list_skills->setFixedHeight((this->font().pointSize()*10)+6);
     list_skills->setSelectionMode(QAbstractItemView::NoSelection);
     list_status->setFixedHeight((this->font().pointSize()*10)+6);
@@ -132,7 +130,6 @@ void MateriaEditor::init_display()
     type_name_layout->setContentsMargins(3,6,0,0);
 
     QSpacerItem *spacer1 = new QSpacerItem(30,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
-
     QHBoxLayout * ap_layout = new QHBoxLayout;
     ap_layout->addSpacerItem(spacer1);
     ap_layout->addWidget(sb_ap);
@@ -150,7 +147,8 @@ void MateriaEditor::init_display()
     stars->addWidget(btn_star3);
     stars->addWidget(btn_star4);
     stars->addWidget(btn_star5);
-    stars->addSpacerItem(spacer1);
+    QSpacerItem *spacer2 = new QSpacerItem(30,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
+    stars->addSpacerItem(spacer2);
     box_stars->setLayout(stars);
 
 
@@ -531,7 +529,6 @@ void MateriaEditor::setStarsSize(int size)
     box_stars->setFixedHeight(size +(size/8));
     box_stars->adjustSize();
         
-
     frm_ap_stars->layout()->removeWidget(box_stars);
     frm_ap_stars->layout()->removeWidget(frm_ap);
 
@@ -552,8 +549,6 @@ void MateriaEditor::setStarsSize(int size)
         frm_ap_stars->setFixedHeight( (size +(size/6)) + (frm_ap->sizeHint().height()+6) );
     }
     frm_ap_stars->adjustSize();
-    //frm_ap_stars->layout()->update();
-    //this->layout()->update();
 }
 bool MateriaEditor::isEditable(void){return editable;}
 void MateriaEditor::setEditable(bool edit)
@@ -576,6 +571,4 @@ void MateriaEditor::editMode(void)
     combo_materia->setEnabled(editable);
     //Show combo type if editable
     combo_type->setVisible(editable);
-
-
 }
