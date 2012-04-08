@@ -359,14 +359,14 @@
               <widget class="QLabel" name="s1_party1">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="frameShadow">
@@ -381,14 +381,14 @@
               <widget class="QLabel" name="s1_party2">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -400,14 +400,14 @@
               <widget class="QLabel" name="s1_party3">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -518,14 +518,14 @@
               <widget class="QLabel" name="s2_party1">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -537,14 +537,14 @@
               <widget class="QLabel" name="s2_party2">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -556,14 +556,14 @@
               <widget class="QLabel" name="s2_party3">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -873,14 +873,14 @@
               <widget class="QLabel" name="s3_party1">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -892,14 +892,14 @@
               <widget class="QLabel" name="s3_party2">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -911,14 +911,14 @@
               <widget class="QLabel" name="s3_party3">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -1292,14 +1292,14 @@
               <widget class="QLabel" name="s4_party1">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -1311,14 +1311,14 @@
               <widget class="QLabel" name="s4_party2">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -1330,14 +1330,14 @@
               <widget class="QLabel" name="s4_party3">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -1427,14 +1427,14 @@
               <widget class="QLabel" name="s5_party1">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -1446,14 +1446,14 @@
               <widget class="QLabel" name="s5_party2">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -1465,14 +1465,14 @@
               <widget class="QLabel" name="s5_party3">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -1726,14 +1726,14 @@
               <widget class="QLabel" name="s6_party1">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -1745,14 +1745,14 @@
               <widget class="QLabel" name="s6_party2">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -1764,14 +1764,14 @@
               <widget class="QLabel" name="s6_party3">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -2189,14 +2189,14 @@
               <widget class="QLabel" name="s7_party1">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -2208,14 +2208,14 @@
               <widget class="QLabel" name="s7_party2">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -2227,14 +2227,14 @@
               <widget class="QLabel" name="s7_party3">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -2488,14 +2488,14 @@
               <widget class="QLabel" name="s8_party1">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -2507,14 +2507,14 @@
               <widget class="QLabel" name="s8_party2">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -2526,14 +2526,14 @@
               <widget class="QLabel" name="s8_party3">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -2787,14 +2787,14 @@
               <widget class="QLabel" name="s9_party1">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -2806,14 +2806,14 @@
               <widget class="QLabel" name="s9_party2">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -2825,14 +2825,14 @@
               <widget class="QLabel" name="s9_party3">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -2957,14 +2957,14 @@
               <widget class="QLabel" name="s10_party1">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="frameShadow">
@@ -2979,14 +2979,14 @@
               <widget class="QLabel" name="s10_party2">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -2998,14 +2998,14 @@
               <widget class="QLabel" name="s10_party3">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -3355,14 +3355,14 @@
               <widget class="QLabel" name="s11_party1">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -3374,14 +3374,14 @@
               <widget class="QLabel" name="s11_party2">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -3393,14 +3393,14 @@
               <widget class="QLabel" name="s11_party3">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -3534,14 +3534,14 @@
               <widget class="QLabel" name="s12_party1">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="frameShadow">
@@ -3559,14 +3559,14 @@
               <widget class="QLabel" name="s12_party2">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -3581,14 +3581,14 @@
               <widget class="QLabel" name="s12_party3">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -3965,14 +3965,14 @@
               <widget class="QLabel" name="s13_party1">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="frameShadow">
@@ -3987,14 +3987,14 @@
               <widget class="QLabel" name="s13_party2">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -4006,14 +4006,14 @@
               <widget class="QLabel" name="s13_party3">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -4223,14 +4223,14 @@
               <widget class="QLabel" name="s14_party1">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="frameShadow">
@@ -4245,14 +4245,14 @@
               <widget class="QLabel" name="s14_party2">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -4264,14 +4264,14 @@
               <widget class="QLabel" name="s14_party3">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -4569,14 +4569,14 @@
               <widget class="QLabel" name="s15_party1">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="frameShadow">
@@ -4591,14 +4591,14 @@
               <widget class="QLabel" name="s15_party2">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">
@@ -4610,14 +4610,14 @@
               <widget class="QLabel" name="s15_party3">
                <property name="minimumSize">
                 <size>
-                 <width>96</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="maximumSize">
                 <size>
-                 <width>100</width>
-                 <height>100</height>
+                 <width>84</width>
+                 <height>96</height>
                 </size>
                </property>
                <property name="scaledContents">

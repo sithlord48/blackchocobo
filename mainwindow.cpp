@@ -219,12 +219,12 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     for(int i=0;i<11;i++){ui->combo_party1->addItem(Chars.Icon(i),Chars.defaultName(i));}
     for(int i=0;i<11;i++){ui->combo_party2->addItem(Chars.Icon(i),Chars.defaultName(i));}
     for(int i=0;i<11;i++){ui->combo_party3->addItem(Chars.Icon(i),Chars.defaultName(i));}
-    ui->combo_party1->addItem(QString("0x0B"));
-    ui->combo_party1->addItem(tr("-Empty-"));
-    ui->combo_party2->addItem(QString("0x0B"));
-    ui->combo_party2->addItem(tr("-Empty-"));
-    ui->combo_party3->addItem(QString("0x0B"));
-    ui->combo_party3->addItem(tr("-Empty-"));
+    ui->combo_party1->addItem(Chars.Icon(0x0B),QString("0x0B"));
+    ui->combo_party1->addItem(Chars.Icon(0xFF),tr("-Empty-"));
+    ui->combo_party2->addItem(Chars.Icon(0x0B),QString("0x0B"));
+    ui->combo_party2->addItem(Chars.Icon(0xFF),tr("-Empty-"));
+    ui->combo_party3->addItem(Chars.Icon(0x0B),QString("0x0B"));
+    ui->combo_party3->addItem(Chars.Icon(0xFF),tr("-Empty-"));
 
     dialog_preview = new DialogPreview();
     QHBoxLayout *dialog_preview_layout = new QHBoxLayout();
@@ -1578,7 +1578,7 @@ void MainWindow::setchar_growth(int caller)
     if(caller==2){
         //Basic lv change
         ff7->setCharLevel(s,curchar,ui->sb_lvl->value());
-        if(curchar==ff7->slot[s].party[0]){ff7->slot[s].desc.level = ui->sb_lvl->value();}
+        if(curchar==ff7->slot[s].party[0]){ff7->setDescLevel(s,ui->sb_lvl->value());}
         //Exp calc
         ff7->setCharCurrentExp(s,curchar,charlvls[ff7->charID(s,curchar)][ui->sb_lvl->value()-1]);
         ui->sb_exp->setValue(ff7->charCurrentExp(s,curchar));
@@ -1596,7 +1596,7 @@ void MainWindow::setchar_growth(int caller)
     if(caller==1){
         ff7->setCharLevel(s,curchar,ui->sb_lvl->value());
         if(curchar==ff7->slot[s].party[0]){
-            ff7->slot[s].desc.level = ui->sb_lvl->value();
+            ff7->setDescLevel(s,ui->sb_lvl->value());
         }
     }
     //Update base Stats Code
@@ -2147,7 +2147,7 @@ void MainWindow::set_ntsc_time(void)
     switch(result)
     {
         case QMessageBox::Yes:
-            ff7->slot[s].time = (ff7->slot[s].time*1.2); ff7->slot[s].desc.time = ff7->slot[s].time;
+            ff7->slot[s].time = (ff7->slot[s].time*1.2); ff7->setDescTime(s,ff7->slot[s].time);
             load=true;
             ui->sb_time_hour->setValue(ff7->slot[s].time / 3600);
             ui->sb_time_min->setValue(ff7->slot[s].time/60%60);
@@ -2172,7 +2172,7 @@ void MainWindow::set_pal_time(void)
     switch(result)
     {
         case QMessageBox::Yes:
-            ff7->slot[s].time = (ff7->slot[s].time/1.2); ff7->slot[s].desc.time = ff7->slot[s].time;
+            ff7->slot[s].time = (ff7->slot[s].time/1.2); ff7->setDescTime(s,ff7->slot[s].time);
             load=true;
             ui->sb_time_hour->setValue(ff7->slot[s].time / 3600);
             ui->sb_time_min->setValue(ff7->slot[s].time/60%60);
@@ -3095,41 +3095,38 @@ void MainWindow::on_btn_cid_clicked()       {curchar=8; charupdate();ui->btn_cid
 //void MainWindow::on_btn_vincent_clicked()   {curchar=7; charupdate();ui->btn_vincent->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
 //void MainWindow::on_btn_cid_clicked()       {curchar=8; charupdate();ui->btn_cid->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_sb_gil_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].gil = value;   ff7->slot[s].desc.gil = value;}}
+void MainWindow::on_sb_gil_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].gil = value;   ff7->setDescGil(s,value);}}
 void MainWindow::on_sb_gp_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].gp = value;}}
 void MainWindow::on_sb_battles_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].battles = value;}}
 void MainWindow::on_sb_runs_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].runs = value;}}
 void MainWindow::on_combo_party1_currentIndexChanged(int index)
 {if(!load){file_modified(true);
-    if(index == 12) //empty char slot?
+    if(index == 0x0C) //empty char slot (index 12)
     {
         ff7->slot[s].party[0] = 0xFF;
         //wipe all desc data if noone is there
-        ff7->slot[s].desc.party[0]=ff7->slot[s].party[0];
-        ff7->slot[s].desc.curHP =0;
-        ff7->slot[s].desc.maxHP =0;
-        ff7->slot[s].desc.curMP =0;
-        ff7->slot[s].desc.maxMP =0;
-        ff7->slot[s].desc.level =0;
-        for(int n=0;n<16;n++)
-        {
-            ff7->slot[s].desc.name[n]=0xFF;
-        }
+        ff7->setDescParty(s,0,ff7->slot[s].party[0]);
+        ff7->setDescCurHP(s,0);
+        ff7->setDescMaxHP(s,0);
+        ff7->setDescCurMP(s,0);
+        ff7->setDescMaxMP(s,0);
+        ff7->setDescLevel(s,0);
+        ff7->setDescName(s,QString(QByteArray(16,0xFF)));
+        //for(int n=0;n<16;n++)
+        //{
+        //    ff7->slot[s].desc.name[n]=0xFF;
+        //}
     }
     else
     {
         ff7->slot[s].party[0] = index;
-        ff7->slot[s].desc.party[0]=ff7->slot[s].party[0];
-        ff7->slot[s].desc.curHP =ff7->slot[s].chars[ui->combo_party1->currentIndex()].curHP;
-        ff7->slot[s].desc.maxHP =ff7->slot[s].chars[ui->combo_party1->currentIndex()].maxHP;
-        ff7->slot[s].desc.curMP =ff7->slot[s].chars[ui->combo_party1->currentIndex()].curMP;
-        ff7->slot[s].desc.maxMP =ff7->slot[s].chars[ui->combo_party1->currentIndex()].maxMP;
-        ff7->slot[s].desc.level = ff7->slot[s].chars[ui->combo_party1->currentIndex()].level;
-        for(int n=0;n<16;n++)
-        {
-            if(n<13){ff7->slot[s].desc.name[n]=ff7->slot[s].chars[ui->combo_party1->currentIndex()].name[n];}
-            else{ff7->slot[s].desc.name[n]=0xFF;}
-        }
+        ff7->setDescParty(s,0,ff7->slot[s].party[0]);
+        ff7->setDescCurHP(s,ff7->charCurrentHp(s,ui->combo_party1->currentIndex()));
+        ff7->setDescMaxHP(s,ff7->charMaxHp(s,ui->combo_party1->currentIndex()));
+        ff7->setDescCurMP(s,ff7->charCurrentMp(s,ui->combo_party1->currentIndex()));
+        ff7->setDescMaxMP(s,ff7->charMaxMp(s,ui->combo_party1->currentIndex()));
+        ff7->setDescLevel(s,ff7->charLevel(s,ui->combo_party1->currentIndex()));
+        ff7->setDescName(s,ff7->charName(s,ui->combo_party1->currentIndex()));
     }
 }}
 void MainWindow::on_combo_party2_currentIndexChanged(int index)
@@ -3137,13 +3134,13 @@ void MainWindow::on_combo_party2_currentIndexChanged(int index)
     if(index == 12){ff7->slot[s].party[1]= 0xFF;}
     else{ff7->slot[s].party[1] = index;}
     //either way set the desc
-    ff7->slot[s].desc.party[1]=ff7->slot[s].party[1];
+    ff7->setDescParty(s,1,ff7->slot[s].party[1]);
 }}
 void MainWindow::on_combo_party3_currentIndexChanged(int index)
 {if(!load){file_modified(true);
     if(index ==12){ff7->slot[s].party[2] =0xFF;}
     else{ff7->slot[s].party[2] = index;}
-    ff7->slot[s].desc.party[2]=ff7->slot[s].party[2];
+    ff7->setDescParty(s,2,ff7->slot[s].party[2]);
 }}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~Chocobo Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -3403,17 +3400,17 @@ void MainWindow::on_sb_love_yuffie_valueChanged(int value){if(!load){file_modifi
 
 void MainWindow::on_sb_time_hour_valueChanged(int value)
 {if(!load){file_modified(true);
-        ff7->slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60) + (ui->sb_time_sec->value())); ff7->slot[s].desc.time = ff7->slot[s].time;
+        ff7->slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60) + (ui->sb_time_sec->value()));ff7->setDescTime(s,ff7->slot[s].time);
 }}
 
 void MainWindow::on_sb_time_min_valueChanged(int value)
 {if(!load){file_modified(true);
-        ff7->slot[s].time = ( (ui->sb_time_hour->value()*3600) + ((value*60)) + (ui->sb_time_sec->value()) );ff7->slot[s].desc.time = ff7->slot[s].time;
+        ff7->slot[s].time = ( (ui->sb_time_hour->value()*3600) + ((value*60)) + (ui->sb_time_sec->value()) );ff7->setDescTime(s,ff7->slot[s].time);
 }}
 
 void MainWindow::on_sb_time_sec_valueChanged(int value)
 {if(!load){file_modified(true);
-        ff7->slot[s].time = ((ui->sb_time_hour->value()*3600) + (ui->sb_time_min->value()*60) + (value)); ff7->slot[s].desc.time = ff7->slot[s].time;
+        ff7->slot[s].time = ((ui->sb_time_hour->value()*3600) + (ui->sb_time_min->value()*60) + (value));ff7->setDescTime(s,ff7->slot[s].time);
 }}
 
 void MainWindow::on_sb_steps_valueChanged(int value)
@@ -3596,7 +3593,7 @@ void MainWindow::on_sb_lvl_valueChanged(int value)
     //Basic lv change
     else{
         ff7->setCharLevel(s,curchar,value);
-        if(curchar==ff7->slot[s].party[0]){ff7->slot[s].desc.level = value;}
+        if(curchar==ff7->slot[s].party[0]){ff7->setDescLevel(s,value);}
     }
 }}
 

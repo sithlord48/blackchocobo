@@ -711,18 +711,29 @@ void FF7Save::fix_vmc_header(void)
            }
            fix_psx_header(i);//fix header in current psx slot
         } // write string if found
-        else if(region(i).isEmpty() || region(i).isNull())
-        {   //QString empty_header = ;
-            mc_header_2.append("\xA0\x00\x00\x00\x00\x00\x00\x00\xFF\xFF",10);
-            for (int j=0;j<117;j++){mc_header_2.append('\x00');}
-            mc_header_2.append('\xA0');
-        }
         else
-        {//Write What Ever is in the Header (Non ff7 data)
-            if(SG_TYPE =="MC"){for(int j=0;j<128;j++){mc_header_2.append(file_header_mc[index+j]);}}
-            if(SG_TYPE =="PSP"){for(int j=0;j<128;j++){mc_header_2.append(file_header_psp[index+j]);}}
-            if(SG_TYPE =="VGS"){for(int j=0;j<128;j++){mc_header_2.append(file_header_vgs[index+j]);}}
-            if(SG_TYPE =="DEX"){for(int j=0;j<128;j++){mc_header_2.append(file_header_dex[index+j]);}}
+        {
+            if(psx_block_type(i)==0x52 || psx_block_type(i)==0x53)
+            {
+                if(SG_TYPE =="MC"){for(int j=0;j<128;j++){mc_header_2.append(file_header_mc[index+j]);}}
+                if(SG_TYPE =="PSP"){for(int j=0;j<128;j++){mc_header_2.append(file_header_psp[index+j]);}}
+                if(SG_TYPE =="VGS"){for(int j=0;j<128;j++){mc_header_2.append(file_header_vgs[index+j]);}}
+                if(SG_TYPE =="DEX"){for(int j=0;j<128;j++){mc_header_2.append(file_header_dex[index+j]);}}
+            }
+            else if((region(i).isEmpty() || region(i).isNull()))
+            {
+                //QString empty_header = ;
+                mc_header_2.append("\xA0\x00\x00\x00\x00\x00\x00\x00\xFF\xFF",10);
+                for (int j=0;j<117;j++){mc_header_2.append('\x00');}
+                mc_header_2.append('\xA0');
+            }
+            else
+            {//Write What Ever is in the Header (Non ff7 data)
+                if(SG_TYPE =="MC"){for(int j=0;j<128;j++){mc_header_2.append(file_header_mc[index+j]);}}
+                if(SG_TYPE =="PSP"){for(int j=0;j<128;j++){mc_header_2.append(file_header_psp[index+j]);}}
+                if(SG_TYPE =="VGS"){for(int j=0;j<128;j++){mc_header_2.append(file_header_vgs[index+j]);}}
+                if(SG_TYPE =="DEX"){for(int j=0;j<128;j++){mc_header_2.append(file_header_dex[index+j]);}}
+            }
         }
     }
 
@@ -1277,26 +1288,6 @@ void FF7Save::setDescName(int s,QString new_name)
     memcpy(slot[s].desc.name,temp,temp.length());
 }
 
-QString FF7Save::location(int s)
-{
-
-    if(isJPN(s)){Text.init(1);}//Japanese
-    else{Text.init(0);}// not japanese save.
-    QByteArray text;
-    for (int n=0;n<24;n++){text.append(slot[s].location[n]);}
-    return Text.toPC(text);
-}
-void FF7Save::setLocation(int s, QString new_location)
-{
-    if(isJPN(s)){Text.init(1);}//Japanese
-    else{Text.init(0);}// not japanese save.
-    QByteArray text;
-    for (int i=0;i<24;i++){slot[s].location[i] =0xFF;}
-    QByteArray temp = Text.toFF7(new_location);
-    memcpy(slot[s].location,temp,temp.length());
-    //and the description.
-    setDescLocation(s,new_location);
-}
 
 QString FF7Save::descLocation(int s)
 {
@@ -1317,6 +1308,44 @@ void FF7Save::setDescLocation(int s, QString new_desc_location)
     memcpy(slot[s].desc.location,temp,temp.length());
 }
 
+qint8 FF7Save::descLevel(int s){return slot[s].desc.level;}
+qint8 FF7Save::descParty(int s,int char_num){return slot[s].desc.party[char_num];}
+quint16 FF7Save::descCurHP(int s){return slot[s].desc.curHP;}
+quint16 FF7Save::descMaxHP(int s){return slot[s].desc.maxHP;}
+quint16 FF7Save::descCurMP(int s){return slot[s].desc.curMP;}
+quint16 FF7Save::descMaxMP(int s){return slot[s].desc.maxMP;}
+quint32 FF7Save::descGil(int s){return slot[s].desc.gil;}
+quint32 FF7Save::descTime(int s) {return slot[s].desc.time;}
+void FF7Save::setDescLevel(int s,int new_level){slot[s].desc.level=new_level;}
+void FF7Save::setDescParty(int s,int char_num,qint8 new_id){slot[s].desc.party[char_num]=new_id;}
+void FF7Save::setDescCurHP(int s,quint16 new_curHP){slot[s].desc.curHP=new_curHP;}
+void FF7Save::setDescMaxHP(int s,quint16 new_maxHP){slot[s].desc.maxHP=new_maxHP;}
+void FF7Save::setDescCurMP(int s,quint16 new_curMP){slot[s].desc.curMP=new_curMP;}
+void FF7Save::setDescMaxMP(int s,quint16 new_maxMP){slot[s].desc.maxMP=new_maxMP;}
+void FF7Save::setDescGil(int s,quint32 new_gil){slot[s].desc.gil=new_gil;}
+void FF7Save::setDescTime(int s,quint32 new_time){slot[s].desc.time=new_time;}
+
+
+QString FF7Save::location(int s)
+{
+
+    if(isJPN(s)){Text.init(1);}//Japanese
+    else{Text.init(0);}// not japanese save.
+    QByteArray text;
+    for (int n=0;n<24;n++){text.append(slot[s].location[n]);}
+    return Text.toPC(text);
+}
+void FF7Save::setLocation(int s, QString new_location)
+{
+    if(isJPN(s)){Text.init(1);}//Japanese
+    else{Text.init(0);}// not japanese save.
+    QByteArray text;
+    for (int i=0;i<24;i++){slot[s].location[i] =0xFF;}
+    QByteArray temp = Text.toFF7(new_location);
+    memcpy(slot[s].location,temp,temp.length());
+    //and the description.
+    setDescLocation(s,new_location);
+}
 QString FF7Save::chocoName(int s,int choco_num)
 {
     if(isJPN(s)){Text.init(1);}//Japanese

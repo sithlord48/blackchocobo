@@ -55,16 +55,32 @@ public:
   qint32 stolenMateriaAp(int s,int mat_num);
   void setPartyMateria(int s,int mat_num,quint8 id,qint32 ap);
   void setStolenMateria(int s, int mat_num,quint8 id,qint32 ap);
+  QString descName(int s);//return the name in the description
+  void setDescName(int s,QString new_name);// desc name = new_name
+  QString descLocation(int s);//return the location string used in the description
+  void setDescLocation(int s, QString new_desc_location);//write new desc location string called from setLocation
+  qint8 descLevel(int s);
+  void setDescLevel(int s,int new_level);
+  qint8 descParty(int s,int char_num);
+  void setDescParty(int s,int char_num,qint8 new_id);
+  quint16 descCurHP(int s);
+  void setDescCurHP(int s,quint16 new_curHP);
+  quint16 descMaxHP(int s);
+  void setDescMaxHP(int s,quint16 new_maxHP);
+  quint16 descCurMP(int s);
+  void setDescCurMP(int s,quint16 new_curMP);
+  quint16 descMaxMP(int s);
+  void setDescMaxMP(int s,quint16 new_maxMP);
+  quint32 descGil(int s);
+  void setDescGil(int s,quint32 new_gil);
+  quint32 descTime(int s);
+  void setDescTime(int s,quint32 new_time);
 
   // String Functions.
   QString chocoName(int s,int choco_num);//return choco_num's name.
   void setChocoName(int s,int choco_num,QString new_name);//write choco_num 's new_name to slot s
   QString location(int s);// return save location string
   void setLocation(int s, QString new_location);//set save location string to new_location
-  QString descName(int s);//return the name in the description
-  void setDescName(int s,QString new_name);// desc name = new_name
-  QString descLocation(int s);//return the location string used in the description
-  void setDescLocation(int s, QString new_desc_location);//write new desc location string called from setLocation
 
   //Char Related Functions get/set all stats.
   qint8 charID(int s,int char_num);//Return Char ID
