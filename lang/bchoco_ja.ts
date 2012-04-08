@@ -2,6 +2,276 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="ja" sourcelanguage="en_US">
 <context>
+    <name>Char_Limits</name>
+    <message>
+        <source>Braver</source>
+        <translation>ブレイバー</translation>
+    </message>
+    <message>
+        <source>Cross-Slash</source>
+        <translation>凶斬り</translation>
+    </message>
+    <message>
+        <source>Blade Beam</source>
+        <translation>破晄撃</translation>
+    </message>
+    <message>
+        <source>Climhazzard</source>
+        <translation>クライムハザード</translation>
+    </message>
+    <message>
+        <source>Meteorain</source>
+        <translation>メテオレイン</translation>
+    </message>
+    <message>
+        <source>Finishing Touch</source>
+        <translation>画龍点睛</translation>
+    </message>
+    <message>
+        <source>Omnislash</source>
+        <translation>超究武神覇斬</translation>
+    </message>
+    <message>
+        <source>Big Shot</source>
+        <translation>ヘビーショット</translation>
+    </message>
+    <message>
+        <source>Mindblow</source>
+        <translation>マインドブレイク</translation>
+    </message>
+    <message>
+        <source>Grenade Bomb</source>
+        <translation>グレネードボム</translation>
+    </message>
+    <message>
+        <source>Hammerblow</source>
+        <translation>ハンマーブロウ</translation>
+    </message>
+    <message>
+        <source>Satellite Beam</source>
+        <translation>サテライトビーム</translation>
+    </message>
+    <message>
+        <source>Angermax</source>
+        <translation>アンガーマックス</translation>
+    </message>
+    <message>
+        <source>Catastrophe</source>
+        <translation>カタストロフィ</translation>
+    </message>
+    <message>
+        <source>Beat Rush</source>
+        <translation>掌打ラッシュ</translation>
+    </message>
+    <message>
+        <source>Somersault</source>
+        <translation>サマーソルト</translation>
+    </message>
+    <message>
+        <source>Waterkick</source>
+        <translation>水面蹴り</translation>
+    </message>
+    <message>
+        <source>Meteodrive</source>
+        <translation>メテオドライヴ</translation>
+    </message>
+    <message>
+        <source>Dolphin Blow</source>
+        <translation>ドルフィンブロウ</translation>
+    </message>
+    <message>
+        <source>Meteor Strike</source>
+        <translation>メテオストライク</translation>
+    </message>
+    <message>
+        <source>Final Heaven</source>
+        <translation>ファイナルヘヴン</translation>
+    </message>
+    <message>
+        <source>Healing Wind</source>
+        <translation>癒しの風</translation>
+    </message>
+    <message>
+        <source>Seal Evil</source>
+        <translation>邪気封印</translation>
+    </message>
+    <message>
+        <source>Breath of the Earth</source>
+        <translation>大地の息吹</translation>
+    </message>
+    <message>
+        <source>Fury Brand</source>
+        <translation>怒りの烙印</translation>
+    </message>
+    <message>
+        <source>Planet Protector</source>
+        <translation>星の守護</translation>
+    </message>
+    <message>
+        <source>Pulse of Life</source>
+        <translation>生命の鼓動</translation>
+    </message>
+    <message>
+        <source>Great Gospel</source>
+        <translation>大いなる福音</translation>
+    </message>
+    <message>
+        <source>Sled Fang</source>
+        <translation>スレッドファング</translation>
+    </message>
+    <message>
+        <source>Lunatic High</source>
+        <translation>ルナティックハイ</translation>
+    </message>
+    <message>
+        <source>Blood Fang</source>
+        <translation>ブラッドファング</translation>
+    </message>
+    <message>
+        <source>Stardust Ray</source>
+        <translation>スターダストレイ</translation>
+    </message>
+    <message>
+        <source>Howling Moon</source>
+        <translation>ハウリングムーン</translation>
+    </message>
+    <message>
+        <source>Earth Rave</source>
+        <translation>アースレイヴ</translation>
+    </message>
+    <message>
+        <source>Cosmo Memory</source>
+        <translation>コスモメモリー</translation>
+    </message>
+    <message>
+        <source>Greased Lightning</source>
+        <translation>疾風迅雷</translation>
+    </message>
+    <message>
+        <source>Clear Tranquil</source>
+        <translation>明鏡止水</translation>
+    </message>
+    <message>
+        <source>Landscaper</source>
+        <translation>抜山蓋世</translation>
+    </message>
+    <message>
+        <source>Bloodfest</source>
+        <translation>血祭</translation>
+    </message>
+    <message>
+        <source>Gauntlet</source>
+        <translation>鎧袖一触</translation>
+    </message>
+    <message>
+        <source>Doom of the Living</source>
+        <translation>生者必滅</translation>
+    </message>
+    <message>
+        <source>All Creation</source>
+        <translation>森羅万象</translation>
+    </message>
+    <message>
+        <source>Dice</source>
+        <translation>ダイス</translation>
+    </message>
+    <message>
+        <source>Slots</source>
+        <translation>スロット</translation>
+    </message>
+    <message>
+        <source>Galian Beast</source>
+        <translation>ガリアンビースト</translation>
+    </message>
+    <message>
+        <source>Death Gigas</source>
+        <translation>デスギガス</translation>
+    </message>
+    <message>
+        <source>Hellmasker</source>
+        <translation>ヘルマスカー</translation>
+    </message>
+    <message>
+        <source>Chaos</source>
+        <translation>カオス</translation>
+    </message>
+    <message>
+        <source>Boost Jump</source>
+        <translation>ブーストジャンプ</translation>
+    </message>
+    <message>
+        <source>Dynamite</source>
+        <translation>ダイナマイト</translation>
+    </message>
+    <message>
+        <source>Hyper Jump</source>
+        <translation>ハイパージャンプ</translation>
+    </message>
+    <message>
+        <source>Dragon</source>
+        <translation>ドラゴンモッド</translation>
+    </message>
+    <message>
+        <source>Dragon Dive</source>
+        <translation>ドラゴンダイヴ</translation>
+    </message>
+    <message>
+        <source>Big Brawl</source>
+        <translation>大乱闘</translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation>ハイウインド</translation>
+    </message>
+</context>
+<context>
+    <name>Char_Names</name>
+    <message>
+        <source>Cloud</source>
+        <translation>クラウド</translation>
+    </message>
+    <message>
+        <source>Barret</source>
+        <translation>バレット</translation>
+    </message>
+    <message>
+        <source>Tifa</source>
+        <translation>ティファ</translation>
+    </message>
+    <message>
+        <source>Aeris</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Red XIII</source>
+        <translation>レッドXIII</translation>
+    </message>
+    <message>
+        <source>Yuffie</source>
+        <translation>ユフィ</translation>
+    </message>
+    <message>
+        <source>Cait Sith</source>
+        <translation>ケット・シー</translation>
+    </message>
+    <message>
+        <source>Vincent</source>
+        <translation>ヴィンセント</translation>
+    </message>
+    <message>
+        <source>Cid</source>
+        <translation>シド</translation>
+    </message>
+    <message>
+        <source>Y.Cloud</source>
+        <translation>昔のクラウド</translation>
+    </message>
+    <message>
+        <source>Sephiroth</source>
+        <translation>セフィロス</translation>
+    </message>
+</context>
+<context>
     <name>E_skills</name>
     <message>
         <source>Frog Song</source>
@@ -3536,7 +3806,7 @@
     </message>
     <message>
         <source>Y.Cloud</source>
-        <translation>昔のクラウド</translation>
+        <translation type="obsolete">昔のクラウド</translation>
     </message>
     <message>
         <source>Sephiroth</source>
@@ -5102,11 +5372,15 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Status</source>
-        <translation>ステータス</translation>
+        <translation type="obsolete">ステータス</translation>
     </message>
     <message>
         <source>Master</source>
         <translation>MASTER</translation>
+    </message>
+    <message>
+        <source>Added Effect</source>
+        <translation>ついかこうか</translation>
     </message>
 </context>
 <context>
@@ -7308,6 +7582,14 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</source>
         <translation>修正: てきのわざ, キーアイテム,亀道楽, PHS メニューの変更適用の不具合</translation>
+    </message>
+    <message>
+        <source>New: MateriaEditor Widget.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed:Bug In Stat Calculation For Materia Changes</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

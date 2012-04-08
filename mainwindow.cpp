@@ -201,6 +201,31 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
         ui->action_Lang_de->setChecked(1);
         ui->action_Lang_de->setIcon(QIcon(":/icon/de_sel"));
     }
+
+    ui->lbl_love_barret->setPixmap(Chars.Pixmap(1));
+    ui->lbl_love_tifa->setPixmap(Chars.Pixmap(2));
+    ui->lbl_love_aeris->setPixmap(Chars.Pixmap(3));
+    ui->lbl_love_yuffie->setPixmap(Chars.Pixmap(5));
+
+    ui->lbl_battle_love_barret->setPixmap(Chars.Pixmap(1));
+    ui->lbl_battle_love_tifa->setPixmap(Chars.Pixmap(2));
+    ui->lbl_battle_love_aeris->setPixmap(Chars.Pixmap(3));
+    ui->lbl_battle_love_yuffie->setPixmap(Chars.Pixmap(5));
+
+    ui->combo_id->blockSignals(1);
+    for(int i=0;i<11;i++){ui->combo_id->addItem(Chars.Icon(i),QString(""));}
+    ui->combo_id->blockSignals(0);
+
+    for(int i=0;i<11;i++){ui->combo_party1->addItem(Chars.Icon(i),Chars.defaultName(i));}
+    for(int i=0;i<11;i++){ui->combo_party2->addItem(Chars.Icon(i),Chars.defaultName(i));}
+    for(int i=0;i<11;i++){ui->combo_party3->addItem(Chars.Icon(i),Chars.defaultName(i));}
+    ui->combo_party1->addItem(QString("0x0B"));
+    ui->combo_party1->addItem(tr("-Empty-"));
+    ui->combo_party2->addItem(QString("0x0B"));
+    ui->combo_party2->addItem(tr("-Empty-"));
+    ui->combo_party3->addItem(QString("0x0B"));
+    ui->combo_party3->addItem(tr("-Empty-"));
+
     dialog_preview = new DialogPreview();
     QHBoxLayout *dialog_preview_layout = new QHBoxLayout();
     dialog_preview_layout->setContentsMargins(0,0,0,0);
@@ -1018,6 +1043,7 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
 }}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GUI FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+/*
 QString MainWindow::avatar_style(int id)
 {
     QString style;
@@ -1059,7 +1085,7 @@ QString MainWindow::avatar_style(int id)
       }
     return style;
 }
-
+*/
 /*~~~~~~~~~Char Update~~~~~~~~~~*/
 void MainWindow::charupdate(void)
 {    
@@ -1297,16 +1323,26 @@ void MainWindow::charupdate(void)
     ui->combo_acc->setCurrentIndex(ff7->charAccessory(s,curchar));
 
     //Set up char buttons and avatar icon.
-    ui->lbl_avatar->setStyleSheet(avatar_style(ff7->charID(s,curchar)));
-    ui->btn_cloud->setStyleSheet(avatar_style(ff7->slot[s].chars[0].id));
-    ui->btn_barret->setStyleSheet(avatar_style(ff7->slot[s].chars[1].id));
-    ui->btn_tifa->setStyleSheet(avatar_style(ff7->slot[s].chars[2].id));
-    ui->btn_aeris->setStyleSheet(avatar_style(ff7->slot[s].chars[3].id));
-    ui->btn_red->setStyleSheet(avatar_style(ff7->slot[s].chars[4].id));
-    ui->btn_yuffie->setStyleSheet(avatar_style(ff7->slot[s].chars[5].id));
-    ui->btn_cait->setStyleSheet(avatar_style(ff7->slot[s].chars[6].id));
-    ui->btn_vincent->setStyleSheet(avatar_style(ff7->slot[s].chars[7].id));
-    ui->btn_cid->setStyleSheet(avatar_style(ff7->slot[s].chars[8].id));
+    ui->lbl_avatar->setPixmap(Chars.Pixmap(ff7->charID(s,curchar)));
+    //ui->lbl_avatar->setStyleSheet(Chaavatar_style(ff7->charID(s,curchar)));
+    ui->btn_cloud->setIcon(Chars.Icon(ff7->charID(s,0)));
+    ui->btn_barret->setIcon(Chars.Icon(ff7->charID(s,1)));
+    ui->btn_tifa->setIcon(Chars.Icon(ff7->charID(s,2)));
+    ui->btn_aeris->setIcon(Chars.Icon(ff7->charID(s,3)));
+    ui->btn_red->setIcon(Chars.Icon(ff7->charID(s,4)));
+    ui->btn_yuffie->setIcon(Chars.Icon(ff7->charID(s,5)));
+    ui->btn_cait->setIcon(Chars.Icon(ff7->charID(s,6)));
+    ui->btn_vincent->setIcon(Chars.Icon(ff7->charID(s,7)));
+    ui->btn_cid->setIcon(Chars.Icon(ff7->charID(s,8)));
+    //ui->btn_cloud->setStyleSheet(avatar_style(ff7->slot[s].chars[0].id));
+    //ui->btn_barret->setStyleSheet(avatar_style(ff7->slot[s].chars[1].id));
+    //ui->btn_tifa->setStyleSheet(avatar_style(ff7->slot[s].chars[2].id));
+    //ui->btn_aeris->setStyleSheet(avatar_style(ff7->slot[s].chars[3].id));
+    //ui->btn_red->setStyleSheet(avatar_style(ff7->slot[s].chars[4].id));
+    //ui->btn_yuffie->setStyleSheet(avatar_style(ff7->slot[s].chars[5].id));
+    //ui->btn_cait->setStyleSheet(avatar_style(ff7->slot[s].chars[6].id));
+    //ui->btn_vincent->setStyleSheet(avatar_style(ff7->slot[s].chars[7].id));
+    //ui->btn_cid->setStyleSheet(avatar_style(ff7->slot[s].chars[8].id));
     load=false;
     setweaponslots();
     setarmorslots();
@@ -1563,7 +1599,6 @@ void MainWindow::setchar_growth(int caller)
             ff7->slot[s].desc.level = ui->sb_lvl->value();
         }
     }
-
     //Update base Stats Code
     int curlv = ui->sb_lvl->value();
     if(caller==1 || caller==2)
@@ -1572,28 +1607,28 @@ void MainWindow::setchar_growth(int caller)
         {//level up
             for(int i=pre_level;i<curlv;i++)
             {// for stat_gain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp also use id incase of mods that could move a char.
-                ui->sb_str->setValue(ui->sb_str->value() + ff7->stat_gain(ff7->charID(s,curchar),0,ff7->charStr(s,curchar),i+1));
-                ui->sb_vit->setValue(ui->sb_vit->value() + ff7->stat_gain(ff7->charID(s,curchar),1,ff7->charVit(s,curchar),i+1));
-                ui->sb_mag->setValue(ui->sb_mag->value() + ff7->stat_gain(ff7->charID(s,curchar),2,ff7->charMag(s,curchar),i+1));
-                ui->sb_spi->setValue(ui->sb_spi->value() + ff7->stat_gain(ff7->charID(s,curchar),3,ff7->charSpi(s,curchar),i+1));
-                ui->sb_dex->setValue(ui->sb_dex->value() + ff7->stat_gain(ff7->charID(s,curchar),4,ff7->charDex(s,curchar),i+1));
-                ui->sb_lck->setValue(ui->sb_lck->value() + ff7->stat_gain(ff7->charID(s,curchar),5,ff7->charLck(s,curchar),i+1));
-                ui->sb_hp->setValue(ui->sb_hp->value() + ff7->stat_gain(ff7->charID(s,curchar),6,ff7->charBaseHp(s,curchar),i+1));
-                ui->sb_mp->setValue(ui->sb_mp->value() + ff7->stat_gain(ff7->charID(s,curchar),7,ff7->charBaseMp(s,curchar),i+1));
+                ui->sb_str->setValue(ui->sb_str->value() + Chars.stat_gain(ff7->charID(s,curchar),0,ff7->charStr(s,curchar),i+1));
+                ui->sb_vit->setValue(ui->sb_vit->value() + Chars.stat_gain(ff7->charID(s,curchar),1,ff7->charVit(s,curchar),i+1));
+                ui->sb_mag->setValue(ui->sb_mag->value() + Chars.stat_gain(ff7->charID(s,curchar),2,ff7->charMag(s,curchar),i+1));
+                ui->sb_spi->setValue(ui->sb_spi->value() + Chars.stat_gain(ff7->charID(s,curchar),3,ff7->charSpi(s,curchar),i+1));
+                ui->sb_dex->setValue(ui->sb_dex->value() + Chars.stat_gain(ff7->charID(s,curchar),4,ff7->charDex(s,curchar),i+1));
+                ui->sb_lck->setValue(ui->sb_lck->value() + Chars.stat_gain(ff7->charID(s,curchar),5,ff7->charLck(s,curchar),i+1));
+                ui->sb_hp->setValue(ui->sb_hp->value() + Chars.stat_gain(ff7->charID(s,curchar),6,ff7->charBaseHp(s,curchar),i+1));
+                ui->sb_mp->setValue(ui->sb_mp->value() + Chars.stat_gain(ff7->charID(s,curchar),7,ff7->charBaseMp(s,curchar),i+1));
             }
         }
         else if(pre_level > curlv)
         {//level down
             for(int i=pre_level;i>curlv;i--)
             {// for stat_gain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp
-                ui->sb_str->setValue(ui->sb_str->value() - ff7->stat_gain(ff7->charID(s,curchar),0,ff7->charStr(s,curchar),i));
-                ui->sb_vit->setValue(ui->sb_vit->value() - ff7->stat_gain(ff7->charID(s,curchar),1,ff7->charVit(s,curchar),i));
-                ui->sb_mag->setValue(ui->sb_mag->value() - ff7->stat_gain(ff7->charID(s,curchar),2,ff7->charMag(s,curchar),i));
-                ui->sb_spi->setValue(ui->sb_spi->value() - ff7->stat_gain(ff7->charID(s,curchar),3,ff7->charSpi(s,curchar),i));
-                ui->sb_dex->setValue(ui->sb_dex->value() - ff7->stat_gain(ff7->charID(s,curchar),4,ff7->charDex(s,curchar),i));
-                ui->sb_lck->setValue(ui->sb_lck->value() - ff7->stat_gain(ff7->charID(s,curchar),5,ff7->charLck(s,curchar),i));
-                ui->sb_hp->setValue(ui->sb_hp->value() - ff7->stat_gain(ff7->charID(s,curchar),6,ff7->charBaseHp(s,curchar),i));
-                ui->sb_mp->setValue(ui->sb_mp->value() - ff7->stat_gain(ff7->charID(s,curchar),7,ff7->charBaseMp(s,curchar),i));
+                ui->sb_str->setValue(ui->sb_str->value() - Chars.stat_gain(ff7->charID(s,curchar),0,ff7->charStr(s,curchar),i));
+                ui->sb_vit->setValue(ui->sb_vit->value() - Chars.stat_gain(ff7->charID(s,curchar),1,ff7->charVit(s,curchar),i));
+                ui->sb_mag->setValue(ui->sb_mag->value() - Chars.stat_gain(ff7->charID(s,curchar),2,ff7->charMag(s,curchar),i));
+                ui->sb_spi->setValue(ui->sb_spi->value() - Chars.stat_gain(ff7->charID(s,curchar),3,ff7->charSpi(s,curchar),i));
+                ui->sb_dex->setValue(ui->sb_dex->value() - Chars.stat_gain(ff7->charID(s,curchar),4,ff7->charDex(s,curchar),i));
+                ui->sb_lck->setValue(ui->sb_lck->value() - Chars.stat_gain(ff7->charID(s,curchar),5,ff7->charLck(s,curchar),i));
+                ui->sb_hp->setValue(ui->sb_hp->value() - Chars.stat_gain(ff7->charID(s,curchar),6,ff7->charBaseHp(s,curchar),i));
+                ui->sb_mp->setValue(ui->sb_mp->value() - Chars.stat_gain(ff7->charID(s,curchar),7,ff7->charBaseMp(s,curchar),i));
             }
         } //little broken when going down..
         update_stat_totals();
@@ -3040,15 +3075,25 @@ void MainWindow::testdata_refresh()
     unknown_refresh(ui->combo_z_var->currentIndex());
 }
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
-void MainWindow::on_btn_cloud_clicked()     {curchar=0; charupdate();ui->btn_cloud->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_barret_clicked()    {curchar=1; charupdate();ui->btn_barret->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_tifa_clicked()      {curchar=2; charupdate();ui->btn_tifa->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_aeris_clicked()     {curchar=3; charupdate();ui->btn_aeris->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_red_clicked()       {curchar=4; charupdate();ui->btn_red->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_yuffie_clicked()    {curchar=5; charupdate();ui->btn_yuffie->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_cait_clicked()      {curchar=6; charupdate();ui->btn_cait->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_vincent_clicked()   {curchar=7; charupdate();ui->btn_vincent->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_cid_clicked()       {curchar=8; charupdate();ui->btn_cid->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_cloud_clicked()     {curchar=0; charupdate();ui->btn_cloud->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_barret_clicked()    {curchar=1; charupdate();ui->btn_barret->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_tifa_clicked()      {curchar=2; charupdate();ui->btn_tifa->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_aeris_clicked()     {curchar=3; charupdate();ui->btn_aeris->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_red_clicked()       {curchar=4; charupdate();ui->btn_red->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_yuffie_clicked()    {curchar=5; charupdate();ui->btn_yuffie->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_cait_clicked()      {curchar=6; charupdate();ui->btn_cait->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_vincent_clicked()   {curchar=7; charupdate();ui->btn_vincent->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_cid_clicked()       {curchar=8; charupdate();ui->btn_cid->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+
+//void MainWindow::on_btn_cloud_clicked()     {curchar=0; charupdate();ui->btn_cloud->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
+//void MainWindow::on_btn_barret_clicked()    {curchar=1; charupdate();ui->btn_barret->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
+//void MainWindow::on_btn_tifa_clicked()      {curchar=2; charupdate();ui->btn_tifa->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
+//void MainWindow::on_btn_aeris_clicked()     {curchar=3; charupdate();ui->btn_aeris->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
+//void MainWindow::on_btn_red_clicked()       {curchar=4; charupdate();ui->btn_red->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
+//void MainWindow::on_btn_yuffie_clicked()    {curchar=5; charupdate();ui->btn_yuffie->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
+//void MainWindow::on_btn_cait_clicked()      {curchar=6; charupdate();ui->btn_cait->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
+//void MainWindow::on_btn_vincent_clicked()   {curchar=7; charupdate();ui->btn_vincent->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
+//void MainWindow::on_btn_cid_clicked()       {curchar=8; charupdate();ui->btn_cid->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_sb_gil_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].gil = value;   ff7->slot[s].desc.gil = value;}}
 void MainWindow::on_sb_gp_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].gp = value;}}

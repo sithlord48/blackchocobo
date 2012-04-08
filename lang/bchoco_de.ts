@@ -2,6 +2,276 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="de">
 <context>
+    <name>Char_Limits</name>
+    <message>
+        <source>Braver</source>
+        <translation>Mutattacke</translation>
+    </message>
+    <message>
+        <source>Cross-Slash</source>
+        <translation>Querhieb</translation>
+    </message>
+    <message>
+        <source>Blade Beam</source>
+        <translation>Klingenstrahl</translation>
+    </message>
+    <message>
+        <source>Climhazzard</source>
+        <translation>Sprungattacke</translation>
+    </message>
+    <message>
+        <source>Meteorain</source>
+        <translation>Meteor-Regen</translation>
+    </message>
+    <message>
+        <source>Finishing Touch</source>
+        <translation>Tornadohieb</translation>
+    </message>
+    <message>
+        <source>Omnislash</source>
+        <translation>Omnischlag</translation>
+    </message>
+    <message>
+        <source>Big Shot</source>
+        <translation>Feuerball</translation>
+    </message>
+    <message>
+        <source>Mindblow</source>
+        <translation>Mind-Blow</translation>
+    </message>
+    <message>
+        <source>Grenade Bomb</source>
+        <translation>Granate</translation>
+    </message>
+    <message>
+        <source>Hammerblow</source>
+        <translation>Hammerschlag</translation>
+    </message>
+    <message>
+        <source>Satellite Beam</source>
+        <translation>Satellitenstrahl</translation>
+    </message>
+    <message>
+        <source>Angermax</source>
+        <translation>Kugelhagel</translation>
+    </message>
+    <message>
+        <source>Catastrophe</source>
+        <translation>Katastrophe</translation>
+    </message>
+    <message>
+        <source>Beat Rush</source>
+        <translation>Fausthagel</translation>
+    </message>
+    <message>
+        <source>Somersault</source>
+        <translation>Rückwärtssalto</translation>
+    </message>
+    <message>
+        <source>Waterkick</source>
+        <translation>Wasserkick</translation>
+    </message>
+    <message>
+        <source>Meteodrive</source>
+        <translation>Meteo-Lift</translation>
+    </message>
+    <message>
+        <source>Dolphin Blow</source>
+        <translation>Delphinsprung</translation>
+    </message>
+    <message>
+        <source>Meteor Strike</source>
+        <translation>Meteorschlag</translation>
+    </message>
+    <message>
+        <source>Final Heaven</source>
+        <translation>Himmelsfaust</translation>
+    </message>
+    <message>
+        <source>Healing Wind</source>
+        <translation>Heilender Wind</translation>
+    </message>
+    <message>
+        <source>Seal Evil</source>
+        <translation>Göttersiegel</translation>
+    </message>
+    <message>
+        <source>Breath of the Earth</source>
+        <translation>Erdodem</translation>
+    </message>
+    <message>
+        <source>Fury Brand</source>
+        <translation>Heiliger Zorn</translation>
+    </message>
+    <message>
+        <source>Planet Protector</source>
+        <translation>Planetenwächter</translation>
+    </message>
+    <message>
+        <source>Pulse of Life</source>
+        <translation>Lebensimpuls</translation>
+    </message>
+    <message>
+        <source>Great Gospel</source>
+        <translation>Engels Chor</translation>
+    </message>
+    <message>
+        <source>Sled Fang</source>
+        <translation>Reißzahn</translation>
+    </message>
+    <message>
+        <source>Lunatic High</source>
+        <translation>Mondjaulen</translation>
+    </message>
+    <message>
+        <source>Blood Fang</source>
+        <translation>Blutfletscher</translation>
+    </message>
+    <message>
+        <source>Stardust Ray</source>
+        <translation>Meteorschauer</translation>
+    </message>
+    <message>
+        <source>Howling Moon</source>
+        <translation>Mondsucht</translation>
+    </message>
+    <message>
+        <source>Earth Rave</source>
+        <translation>Erdwirbel</translation>
+    </message>
+    <message>
+        <source>Cosmo Memory</source>
+        <translation>Kosmo-Glut</translation>
+    </message>
+    <message>
+        <source>Greased Lightning</source>
+        <translation>Geölter Blitz</translation>
+    </message>
+    <message>
+        <source>Clear Tranquil</source>
+        <translation>Reine Stille</translation>
+    </message>
+    <message>
+        <source>Landscaper</source>
+        <translation>Bebendes Land</translation>
+    </message>
+    <message>
+        <source>Bloodfest</source>
+        <translation>Blutiges Fest</translation>
+    </message>
+    <message>
+        <source>Gauntlet</source>
+        <translation>Glühende Hand</translation>
+    </message>
+    <message>
+        <source>Doom of the Living</source>
+        <translation>Tödliches Fest</translation>
+    </message>
+    <message>
+        <source>All Creation</source>
+        <translation>Zorn der Götter</translation>
+    </message>
+    <message>
+        <source>Dice</source>
+        <translation>Würfel</translation>
+    </message>
+    <message>
+        <source>Slots</source>
+        <translation>Räder</translation>
+    </message>
+    <message>
+        <source>Galian Beast</source>
+        <translation>Galianische Bestie</translation>
+    </message>
+    <message>
+        <source>Death Gigas</source>
+        <translation>Todesgigas</translation>
+    </message>
+    <message>
+        <source>Hellmasker</source>
+        <translation>Hellmasker</translation>
+    </message>
+    <message>
+        <source>Chaos</source>
+        <translation>Chaos</translation>
+    </message>
+    <message>
+        <source>Boost Jump</source>
+        <translation>Megasprung</translation>
+    </message>
+    <message>
+        <source>Dynamite</source>
+        <translation>Dynamit</translation>
+    </message>
+    <message>
+        <source>Hyper Jump</source>
+        <translation>Hypersprung</translation>
+    </message>
+    <message>
+        <source>Dragon</source>
+        <translation>Drache</translation>
+    </message>
+    <message>
+        <source>Dragon Dive</source>
+        <translation>Drachensprung</translation>
+    </message>
+    <message>
+        <source>Big Brawl</source>
+        <translation>Massenprügelei</translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation>Highwind</translation>
+    </message>
+</context>
+<context>
+    <name>Char_Names</name>
+    <message>
+        <source>Cloud</source>
+        <translation>Cloud</translation>
+    </message>
+    <message>
+        <source>Barret</source>
+        <translation>Barret</translation>
+    </message>
+    <message>
+        <source>Tifa</source>
+        <translation>Tifa</translation>
+    </message>
+    <message>
+        <source>Aeris</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Red XIII</source>
+        <translation>Red XIII</translation>
+    </message>
+    <message>
+        <source>Yuffie</source>
+        <translation>Yuffie</translation>
+    </message>
+    <message>
+        <source>Cait Sith</source>
+        <translation>Cait Sith</translation>
+    </message>
+    <message>
+        <source>Vincent</source>
+        <translation>Vincent</translation>
+    </message>
+    <message>
+        <source>Cid</source>
+        <translation>Cid</translation>
+    </message>
+    <message>
+        <source>Y.Cloud</source>
+        <translation>Y.Cloud</translation>
+    </message>
+    <message>
+        <source>Sephiroth</source>
+        <translation>Sephiroth</translation>
+    </message>
+</context>
+<context>
     <name>E_skills</name>
     <message>
         <source>Frog Song</source>
@@ -3537,7 +3807,7 @@
     </message>
     <message>
         <source>Y.Cloud</source>
-        <translation>Y.Cloud</translation>
+        <translation type="obsolete">Y.Cloud</translation>
     </message>
     <message>
         <source>Sephiroth</source>

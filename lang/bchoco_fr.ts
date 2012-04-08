@@ -2,6 +2,276 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="fr" sourcelanguage="en_US">
 <context>
+    <name>Char_Limits</name>
+    <message>
+        <source>Braver</source>
+        <translation>Bravoure</translation>
+    </message>
+    <message>
+        <source>Cross-Slash</source>
+        <translation>Contre-taillade</translation>
+    </message>
+    <message>
+        <source>Blade Beam</source>
+        <translation>Coup tranchant</translation>
+    </message>
+    <message>
+        <source>Climhazzard</source>
+        <translation>DangerMétéo</translation>
+    </message>
+    <message>
+        <source>Meteorain</source>
+        <translation>PluieMétéores</translation>
+    </message>
+    <message>
+        <source>Finishing Touch</source>
+        <translation>Finition</translation>
+    </message>
+    <message>
+        <source>Omnislash</source>
+        <translation>Omnislash</translation>
+    </message>
+    <message>
+        <source>Big Shot</source>
+        <translation>Grand coup</translation>
+    </message>
+    <message>
+        <source>Mindblow</source>
+        <translation>Souffle</translation>
+    </message>
+    <message>
+        <source>Grenade Bomb</source>
+        <translation>Bombe grenade</translation>
+    </message>
+    <message>
+        <source>Hammerblow</source>
+        <translation>Frappe lourde</translation>
+    </message>
+    <message>
+        <source>Satellite Beam</source>
+        <translation>Rayon satellite</translation>
+    </message>
+    <message>
+        <source>Angermax</source>
+        <translation>Furamax</translation>
+    </message>
+    <message>
+        <source>Catastrophe</source>
+        <translation>Catastrophe</translation>
+    </message>
+    <message>
+        <source>Beat Rush</source>
+        <translation>Coup vif</translation>
+    </message>
+    <message>
+        <source>Somersault</source>
+        <translation>Culbute</translation>
+    </message>
+    <message>
+        <source>Waterkick</source>
+        <translation>Coup d&apos;eau</translation>
+    </message>
+    <message>
+        <source>Meteodrive</source>
+        <translation>Météodrive</translation>
+    </message>
+    <message>
+        <source>Dolphin Blow</source>
+        <translation>Coup de dauphin</translation>
+    </message>
+    <message>
+        <source>Meteor Strike</source>
+        <translation>Coup de météore</translation>
+    </message>
+    <message>
+        <source>Final Heaven</source>
+        <translation>Dernier paradis</translation>
+    </message>
+    <message>
+        <source>Healing Wind</source>
+        <translation>Vent guérisseur</translation>
+    </message>
+    <message>
+        <source>Seal Evil</source>
+        <translation>Sceller le mal</translation>
+    </message>
+    <message>
+        <source>Breath of the Earth</source>
+        <translation>Souffle terrien</translation>
+    </message>
+    <message>
+        <source>Fury Brand</source>
+        <translation>Marque de furie</translation>
+    </message>
+    <message>
+        <source>Planet Protector</source>
+        <translation>Protecteur planétaire</translation>
+    </message>
+    <message>
+        <source>Pulse of Life</source>
+        <translation>Battement de vie</translation>
+    </message>
+    <message>
+        <source>Great Gospel</source>
+        <translation>Grand évangile</translation>
+    </message>
+    <message>
+        <source>Sled Fang</source>
+        <translation>Coups de griffe</translation>
+    </message>
+    <message>
+        <source>Lunatic High</source>
+        <translation>Haut dément</translation>
+    </message>
+    <message>
+        <source>Blood Fang</source>
+        <translation>Dent de sang</translation>
+    </message>
+    <message>
+        <source>Stardust Ray</source>
+        <translation>Rayon d&apos;étoiles</translation>
+    </message>
+    <message>
+        <source>Howling Moon</source>
+        <translation>Lune hurlante</translation>
+    </message>
+    <message>
+        <source>Earth Rave</source>
+        <translation>Tempête terrienne</translation>
+    </message>
+    <message>
+        <source>Cosmo Memory</source>
+        <translation>Mémoire Cosmos</translation>
+    </message>
+    <message>
+        <source>Greased Lightning</source>
+        <translation>Eclair d&apos;huile</translation>
+    </message>
+    <message>
+        <source>Clear Tranquil</source>
+        <translation>Tranquille clair</translation>
+    </message>
+    <message>
+        <source>Landscaper</source>
+        <translation>Gratte-terre</translation>
+    </message>
+    <message>
+        <source>Bloodfest</source>
+        <translation>Buffet sanglant</translation>
+    </message>
+    <message>
+        <source>Gauntlet</source>
+        <translation>Gantelet</translation>
+    </message>
+    <message>
+        <source>Doom of the Living</source>
+        <translation>Sort des vivants</translation>
+    </message>
+    <message>
+        <source>All Creation</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Dice</source>
+        <translation>Dé</translation>
+    </message>
+    <message>
+        <source>Slots</source>
+        <translation>Roulette</translation>
+    </message>
+    <message>
+        <source>Galian Beast</source>
+        <translation>Bête galienne</translation>
+    </message>
+    <message>
+        <source>Death Gigas</source>
+        <translation>Gigas de la mort</translation>
+    </message>
+    <message>
+        <source>Hellmasker</source>
+        <translation>Masque infernal</translation>
+    </message>
+    <message>
+        <source>Chaos</source>
+        <translation>Chaos</translation>
+    </message>
+    <message>
+        <source>Boost Jump</source>
+        <translation>Propulsion</translation>
+    </message>
+    <message>
+        <source>Dynamite</source>
+        <translation>Dynamite</translation>
+    </message>
+    <message>
+        <source>Hyper Jump</source>
+        <translation>Super saut</translation>
+    </message>
+    <message>
+        <source>Dragon</source>
+        <translation>Dragon</translation>
+    </message>
+    <message>
+        <source>Dragon Dive</source>
+        <translation>Plongeon de dragon</translation>
+    </message>
+    <message>
+        <source>Big Brawl</source>
+        <translation>Grande rixe</translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation>Hautvent</translation>
+    </message>
+</context>
+<context>
+    <name>Char_Names</name>
+    <message>
+        <source>Cloud</source>
+        <translation>Cloud</translation>
+    </message>
+    <message>
+        <source>Barret</source>
+        <translation>Barret</translation>
+    </message>
+    <message>
+        <source>Tifa</source>
+        <translation>Tifa</translation>
+    </message>
+    <message>
+        <source>Aeris</source>
+        <translation>Aeris</translation>
+    </message>
+    <message>
+        <source>Red XIII</source>
+        <translation>Rouge XIII</translation>
+    </message>
+    <message>
+        <source>Yuffie</source>
+        <translation>Youfie</translation>
+    </message>
+    <message>
+        <source>Cait Sith</source>
+        <translation>Cait Sith</translation>
+    </message>
+    <message>
+        <source>Vincent</source>
+        <translation>Vincent</translation>
+    </message>
+    <message>
+        <source>Cid</source>
+        <translation>Cid</translation>
+    </message>
+    <message>
+        <source>Y.Cloud</source>
+        <translation>J.Cloud</translation>
+    </message>
+    <message>
+        <source>Sephiroth</source>
+        <translation>Sephiroth</translation>
+    </message>
+</context>
+<context>
     <name>E_skills</name>
     <message>
         <source>Frog Song</source>
@@ -3540,7 +3810,7 @@
     </message>
     <message>
         <source>Y.Cloud</source>
-        <translation>J.Cloud</translation>
+        <translation type="obsolete">J.Cloud</translation>
     </message>
     <message>
         <source>Sephiroth</source>

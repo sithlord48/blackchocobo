@@ -2,6 +2,276 @@
 <!DOCTYPE TS>
 <TS version="2.0" language="es_ES">
 <context>
+    <name>Char_Limits</name>
+    <message>
+        <source>Braver</source>
+        <translation>Bravura</translation>
+    </message>
+    <message>
+        <source>Cross-Slash</source>
+        <translation>Corte Cruzado</translation>
+    </message>
+    <message>
+        <source>Blade Beam</source>
+        <translation>Haz Espada</translation>
+    </message>
+    <message>
+        <source>Climhazzard</source>
+        <translation>Aerolito</translation>
+    </message>
+    <message>
+        <source>Meteorain</source>
+        <translation>Lluvia de Meteoritos</translation>
+    </message>
+    <message>
+        <source>Finishing Touch</source>
+        <translation>Toque Final</translation>
+    </message>
+    <message>
+        <source>Omnislash</source>
+        <translation>Omnilátigo</translation>
+    </message>
+    <message>
+        <source>Big Shot</source>
+        <translation>Gran Tiro</translation>
+    </message>
+    <message>
+        <source>Mindblow</source>
+        <translation>Aluci.</translation>
+    </message>
+    <message>
+        <source>Grenade Bomb</source>
+        <translation>Granada</translation>
+    </message>
+    <message>
+        <source>Hammerblow</source>
+        <translation>Golpe de Martillo</translation>
+    </message>
+    <message>
+        <source>Satellite Beam</source>
+        <translation>Haz del Satélite</translation>
+    </message>
+    <message>
+        <source>Angermax</source>
+        <translation>Ungarmax</translation>
+    </message>
+    <message>
+        <source>Catastrophe</source>
+        <translation>Catástrofe</translation>
+    </message>
+    <message>
+        <source>Beat Rush</source>
+        <translation>Golpe Veloz</translation>
+    </message>
+    <message>
+        <source>Somersault</source>
+        <translation>Salto Mortal</translation>
+    </message>
+    <message>
+        <source>Waterkick</source>
+        <translation>Golpeagua</translation>
+    </message>
+    <message>
+        <source>Meteodrive</source>
+        <translation>Meteobatida</translation>
+    </message>
+    <message>
+        <source>Dolphin Blow</source>
+        <translation>Golpe de Delfín</translation>
+    </message>
+    <message>
+        <source>Meteor Strike</source>
+        <translation>Ataque Meteorito</translation>
+    </message>
+    <message>
+        <source>Final Heaven</source>
+        <translation>Cielo Final</translation>
+    </message>
+    <message>
+        <source>Healing Wind</source>
+        <translation>Ala Sanadora</translation>
+    </message>
+    <message>
+        <source>Seal Evil</source>
+        <translation>Sello Maldito</translation>
+    </message>
+    <message>
+        <source>Breath of the Earth</source>
+        <translation>Aliento de la Tierra</translation>
+    </message>
+    <message>
+        <source>Fury Brand</source>
+        <translation>Marca Furia</translation>
+    </message>
+    <message>
+        <source>Planet Protector</source>
+        <translation>Protector del Planeta</translation>
+    </message>
+    <message>
+        <source>Pulse of Life</source>
+        <translation>Pulso Vital</translation>
+    </message>
+    <message>
+        <source>Great Gospel</source>
+        <translation>Gran Evangelio</translation>
+    </message>
+    <message>
+        <source>Sled Fang</source>
+        <translation>Colmillo Trineo</translation>
+    </message>
+    <message>
+        <source>Lunatic High</source>
+        <translation>Marea Luna</translation>
+    </message>
+    <message>
+        <source>Blood Fang</source>
+        <translation>Colmillo Sangrante</translation>
+    </message>
+    <message>
+        <source>Stardust Ray</source>
+        <translation>Rayo Estelar</translation>
+    </message>
+    <message>
+        <source>Howling Moon</source>
+        <translation>Luna Aullando</translation>
+    </message>
+    <message>
+        <source>Earth Rave</source>
+        <translation>Tempestad</translation>
+    </message>
+    <message>
+        <source>Cosmo Memory</source>
+        <translation>Memoria Cósmica</translation>
+    </message>
+    <message>
+        <source>Greased Lightning</source>
+        <translation>Relámpago Robótico</translation>
+    </message>
+    <message>
+        <source>Clear Tranquil</source>
+        <translation>Serenidad</translation>
+    </message>
+    <message>
+        <source>Landscaper</source>
+        <translation>Rascacielos</translation>
+    </message>
+    <message>
+        <source>Bloodfest</source>
+        <translation>Carnicería</translation>
+    </message>
+    <message>
+        <source>Gauntlet</source>
+        <translation>Guante</translation>
+    </message>
+    <message>
+        <source>Doom of the Living</source>
+        <translation>Hado de los Vivos</translation>
+    </message>
+    <message>
+        <source>All Creation</source>
+        <translation>Toda Creación</translation>
+    </message>
+    <message>
+        <source>Dice</source>
+        <translation>Dados</translation>
+    </message>
+    <message>
+        <source>Slots</source>
+        <translation>Ranuras</translation>
+    </message>
+    <message>
+        <source>Galian Beast</source>
+        <translation>Bestia Galiana</translation>
+    </message>
+    <message>
+        <source>Death Gigas</source>
+        <translation>Gigante Mortal</translation>
+    </message>
+    <message>
+        <source>Hellmasker</source>
+        <translation>Máscara Infernal</translation>
+    </message>
+    <message>
+        <source>Chaos</source>
+        <translation>Caos</translation>
+    </message>
+    <message>
+        <source>Boost Jump</source>
+        <translation>Gran Salto</translation>
+    </message>
+    <message>
+        <source>Dynamite</source>
+        <translation>Dinamita</translation>
+    </message>
+    <message>
+        <source>Hyper Jump</source>
+        <translation>Super Salto</translation>
+    </message>
+    <message>
+        <source>Dragon</source>
+        <translation>Dragón</translation>
+    </message>
+    <message>
+        <source>Dragon Dive</source>
+        <translation>Salto Dragón</translation>
+    </message>
+    <message>
+        <source>Big Brawl</source>
+        <translation>Gran Alboroto</translation>
+    </message>
+    <message>
+        <source>Highwind</source>
+        <translation>Gran Viento</translation>
+    </message>
+</context>
+<context>
+    <name>Char_Names</name>
+    <message>
+        <source>Cloud</source>
+        <translation>Cloud</translation>
+    </message>
+    <message>
+        <source>Barret</source>
+        <translation>Barret</translation>
+    </message>
+    <message>
+        <source>Tifa</source>
+        <translation>Tifa</translation>
+    </message>
+    <message>
+        <source>Aeris</source>
+        <translation></translation>
+    </message>
+    <message>
+        <source>Red XIII</source>
+        <translation>Red XIII</translation>
+    </message>
+    <message>
+        <source>Yuffie</source>
+        <translation>Yuffie</translation>
+    </message>
+    <message>
+        <source>Cait Sith</source>
+        <translation>Cait Sith</translation>
+    </message>
+    <message>
+        <source>Vincent</source>
+        <translation>Vincent</translation>
+    </message>
+    <message>
+        <source>Cid</source>
+        <translation>Cid</translation>
+    </message>
+    <message>
+        <source>Y.Cloud</source>
+        <translation>Cloud Joven</translation>
+    </message>
+    <message>
+        <source>Sephiroth</source>
+        <translation>Sefirot</translation>
+    </message>
+</context>
+<context>
     <name>E_skills</name>
     <message>
         <source>Frog Song</source>
@@ -3549,7 +3819,7 @@
     </message>
     <message>
         <source>Y.Cloud</source>
-        <translation>Cloud Joven</translation>
+        <translation type="obsolete">Cloud Joven</translation>
     </message>
     <message>
         <source>Slot Region</source>

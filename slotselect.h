@@ -21,6 +21,7 @@
 #include <QMessageBox>
 #include "SaveIcon.h"
 #include "static_data/FF7Save.h"
+#include "static_data/FF7Char.h"
 
 namespace Ui {
     class SlotSelect;
@@ -38,6 +39,7 @@ protected:
 private:
     Ui::SlotSelect *ui;
     SaveIcon icons[15];
+    FF7Char Chars;
 private slots:
 
 
@@ -57,7 +59,6 @@ private slots:
     void on_btn_s13_clicked();
     void on_btn_s14_clicked();
     void on_btn_s15_clicked();
-    QString avatar_style(int);
 };
 
 #endif // SLOTSELECT_H
