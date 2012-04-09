@@ -1320,7 +1320,7 @@ quint16 FF7Save::descMaxMP(int s){return slot[s].desc.maxMP;}
 quint32 FF7Save::descGil(int s){return slot[s].desc.gil;}
 quint32 FF7Save::descTime(int s) {return slot[s].desc.time;}
 void FF7Save::setDescLevel(int s,int new_level){slot[s].desc.level=new_level;}
-void FF7Save::setDescParty(int s,int char_num,qint8 new_id){slot[s].desc.party[char_num]=new_id;}
+void FF7Save::setDescParty(int s,int char_num,quint8 new_id){slot[s].desc.party[char_num]=new_id;}
 void FF7Save::setDescCurHP(int s,quint16 new_curHP){slot[s].desc.curHP=new_curHP;}
 void FF7Save::setDescMaxHP(int s,quint16 new_maxHP){slot[s].desc.maxHP=new_maxHP;}
 void FF7Save::setDescCurMP(int s,quint16 new_curMP){slot[s].desc.curMP=new_curMP;}
