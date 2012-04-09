@@ -25,7 +25,7 @@ class FF7Char : public QObject
 public:
     explicit FF7Char(QObject *parent = 0);
     int stat_gain(int who,int stat,int stat_amout,int next_lvl);
-    qint8 id(int who);
+    quint8 id(int who);
     int num_weapons(int who);
     int weapon_offset(int who);
     QString defaultName(int who);

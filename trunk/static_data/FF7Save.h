@@ -59,9 +59,9 @@ public:
   void setDescName(int s,QString new_name);// desc name = new_name
   QString descLocation(int s);//return the location string used in the description
   void setDescLocation(int s, QString new_desc_location);//write new desc location string called from setLocation
-  qint8 descLevel(int s);
+  quint8 descLevel(int s);
   void setDescLevel(int s,int new_level);
-  qint8 descParty(int s,int char_num);
+  quint8 descParty(int s,int char_num);
   void setDescParty(int s,int char_num,qint8 new_id);
   quint16 descCurHP(int s);
   void setDescCurHP(int s,quint16 new_curHP);
@@ -83,8 +83,8 @@ public:
   void setLocation(int s, QString new_location);//set save location string to new_location
 
   //Char Related Functions get/set all stats.
-  qint8 charID(int s,int char_num);//Return Char ID
-  qint8 charLevel(int s,int char_num);//Return Char Level
+  quint8 charID(int s,int char_num);//Return Char ID
+  quint8 charLevel(int s,int char_num);//Return Char Level
   quint8 charStr(int s,int char_num);
   quint8 charVit(int s,int char_num);
   quint8 charMag(int s,int char_num);

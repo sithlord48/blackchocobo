@@ -52,7 +52,9 @@ HEADERS += mainwindow.h \
     static_data/FF7Save_Const.h \
     static_data/FF7Save_Types.h \
     widgets/MateriaEditor.h \
-    static_data/FF7Char.h
+    static_data/FF7Char.h \
+    static_data/Type_materia.h \
+    static_data/Type_FF7CHAR.h
 FORMS += mainwindow.ui \
     slotselect.ui \
     about.ui \

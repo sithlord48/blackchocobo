@@ -1308,8 +1308,11 @@ void FF7Save::setDescLocation(int s, QString new_desc_location)
     memcpy(slot[s].desc.location,temp,temp.length());
 }
 
-qint8 FF7Save::descLevel(int s){return slot[s].desc.level;}
-qint8 FF7Save::descParty(int s,int char_num){return slot[s].desc.party[char_num];}
+quint8 FF7Save::descLevel(int s){return slot[s].desc.level;}
+quint8 FF7Save::descParty(int s,int char_num)
+{
+    return slot[s].desc.party[char_num];
+}
 quint16 FF7Save::descCurHP(int s){return slot[s].desc.curHP;}
 quint16 FF7Save::descMaxHP(int s){return slot[s].desc.maxHP;}
 quint16 FF7Save::descCurMP(int s){return slot[s].desc.curMP;}
@@ -1414,8 +1417,8 @@ qint32 FF7Save::stolenMateriaAp(int s,int mat_num)
     qint32 ap_temp = slot[s].stolen[mat_num].ap[0] |(slot[s].stolen[mat_num].ap[1] << 8) | slot[s].stolen[mat_num].ap[2]<<16;
     return ap_temp;
 }
-qint8 FF7Save::charID(int s,int char_num){return slot[s].chars[char_num].id;}
-qint8 FF7Save::charLevel(int s,int char_num){return slot[s].chars[char_num].level;}
+quint8 FF7Save::charID(int s,int char_num){return slot[s].chars[char_num].id;}
+quint8 FF7Save::charLevel(int s,int char_num){return slot[s].chars[char_num].level;}
 quint8 FF7Save::charStr(int s,int char_num){return slot[s].chars[char_num].strength;}
 quint8 FF7Save::charVit(int s,int char_num){return slot[s].chars[char_num].vitality;}
 quint8 FF7Save::charMag(int s,int char_num){return slot[s].chars[char_num].magic;}
