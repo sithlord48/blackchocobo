@@ -62,7 +62,7 @@ public:
   quint8 descLevel(int s);
   void setDescLevel(int s,int new_level);
   quint8 descParty(int s,int char_num);
-  void setDescParty(int s,int char_num,qint8 new_id);
+  void setDescParty(int s,int char_num,quint8 new_id);
   quint16 descCurHP(int s);
   void setDescCurHP(int s,quint16 new_curHP);
   quint16 descMaxHP(int s);
