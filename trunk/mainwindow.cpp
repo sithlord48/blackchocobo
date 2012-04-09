@@ -226,6 +226,11 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     ui->combo_party3->addItem(Chars.Icon(0x0B),QString("0x0B"));
     ui->combo_party3->addItem(Chars.Icon(0xFF),tr("-Empty-"));
 
+    ui->cb_world_party_leader->addItem(Chars.Icon(0),Chars.defaultName(0));
+    ui->cb_world_party_leader->addItem(Chars.Icon(2),Chars.defaultName(2));
+    ui->cb_world_party_leader->addItem(Chars.Icon(8),Chars.defaultName(8));
+    
+    
     dialog_preview = new DialogPreview();
     QHBoxLayout *dialog_preview_layout = new QHBoxLayout();
     dialog_preview_layout->setContentsMargins(0,0,0,0);

@@ -8986,8 +8986,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>720</width>
-             <height>275</height>
+             <width>762</width>
+             <height>450</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -9350,8 +9350,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>747</width>
-             <height>414</height>
+             <width>762</width>
+             <height>450</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -9692,33 +9692,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                          <height>24</height>
                         </size>
                        </property>
-                       <item>
-                        <property name="text">
-                         <string>Cloud</string>
-                        </property>
-                        <property name="icon">
-                         <iconset>
-                          <normaloff>:/icon/cloud_icon</normaloff>:/icon/cloud_icon</iconset>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>Tifa</string>
-                        </property>
-                        <property name="icon">
-                         <iconset>
-                          <normaloff>:/icon/tifa_icon</normaloff>:/icon/tifa_icon</iconset>
-                        </property>
-                       </item>
-                       <item>
-                        <property name="text">
-                         <string>Cid</string>
-                        </property>
-                        <property name="icon">
-                         <iconset>
-                          <normaloff>:/icon/cid_icon</normaloff>:/icon/cid_icon</iconset>
-                        </property>
-                       </item>
                       </widget>
                      </item>
                      <item>
