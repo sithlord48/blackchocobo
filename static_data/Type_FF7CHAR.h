@@ -6,8 +6,8 @@
 #endif // TYPE_FF7CHAR_H
 
 struct FF7CHAR {        	// [0x0084] Character info -98% - 1 Unknown
-    qint8 id;			// [0x0000] Character id (used by Sephiroth/Vincent slot)
-    qint8 level;        	// [0x0001] Level (0-99)
+    quint8 id;			// [0x0000] Character id (used by Sephiroth/Vincent slot)
+    quint8 level;        	// [0x0001] Level (0-99)
     quint8 strength;		// [0x0002] Strength (0-255)
     quint8 vitality;		// [0x0003] Vitality (0-255)
     quint8 magic;		// [0x0004] Magic (0-255)

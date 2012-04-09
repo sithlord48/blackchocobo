@@ -2,7 +2,7 @@
 #include <QCoreApplication>
 FF7Char::FF7Char(QObject *parent):QObject(parent){}
 
-qint8 FF7Char::id(int who){return Chars[who]._id;}
+quint8 FF7Char::id(int who){return Chars[who]._id;}
 int FF7Char::weapon_offset(int who){return Chars[who]._starting_weapon_id;}
 int FF7Char::num_weapons(int who){return Chars[who]._num_weapons;}
 

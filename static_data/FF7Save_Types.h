@@ -31,8 +31,8 @@ qint8 barret;
 }__attribute__((__packed__));
 
 struct FF7DESC {		// [0x0044] Descriptions; no actual game data -100%
-    qint8 level;		// [0x0000] Lead character's level
-    qint8 party[3];             // [0x0001] Party
+    quint8 level;		// [0x0000] Lead character's level
+    quint8 party[3];             // [0x0001] Party
     quint8 name[16];		// [0x0004] Lead character's name (ff7 string)
     quint16 curHP;		// [0x0014] Lead character's current HP
     quint16 maxHP;		// [0x0016] Lead character's base HP
