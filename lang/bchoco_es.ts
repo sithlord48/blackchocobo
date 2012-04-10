@@ -6953,87 +6953,102 @@ Fénix x3 (180pm)</translation>
     </message>
 </context>
 <context>
+    <name>SlotPreview</name>
+    <message>
+        <source>Level:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gil:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Time:%1:%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SlotSelect</name>
     <message>
         <source>Select A Save Slot</source>
-        <translation>Selecciona una Ranura de Guardado</translation>
+        <translation type="obsolete">Selecciona una Ranura de Guardado</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation>Tiempo</translation>
+        <translation type="obsolete">Tiempo</translation>
     </message>
     <message>
         <source>Gil</source>
-        <translation>Gil</translation>
+        <translation type="obsolete">Gil</translation>
     </message>
     <message>
         <source>Level</source>
-        <translation>nivel</translation>
+        <translation type="obsolete">nivel</translation>
     </message>
     <message>
         <source>Load Slot 1</source>
-        <translation>Cargar Ranura 1</translation>
+        <translation type="obsolete">Cargar Ranura 1</translation>
     </message>
     <message>
         <source>Load Slot 2</source>
-        <translation>Cargar Ranura 2</translation>
+        <translation type="obsolete">Cargar Ranura 2</translation>
     </message>
     <message>
         <source>Load Slot 3</source>
-        <translation>Cargar Ranura 3</translation>
+        <translation type="obsolete">Cargar Ranura 3</translation>
     </message>
     <message>
         <source>Load Slot 5</source>
-        <translation>Cargar Ranura 5</translation>
+        <translation type="obsolete">Cargar Ranura 5</translation>
     </message>
     <message>
         <source>Load Slot 6</source>
-        <translation>Cargar Ranura 6</translation>
+        <translation type="obsolete">Cargar Ranura 6</translation>
     </message>
     <message>
         <source>Load Slot 4</source>
-        <translation>Cargar Ranura 4</translation>
+        <translation type="obsolete">Cargar Ranura 4</translation>
     </message>
     <message>
         <source>Load Slot 8</source>
-        <translation>Cargar Ranura 8</translation>
+        <translation type="obsolete">Cargar Ranura 8</translation>
     </message>
     <message>
         <source>Load Slot 9</source>
-        <translation>Cargar Ranura 9</translation>
+        <translation type="obsolete">Cargar Ranura 9</translation>
     </message>
     <message>
         <source>Load Slot 7</source>
-        <translation>Cargar Ranura 7</translation>
+        <translation type="obsolete">Cargar Ranura 7</translation>
     </message>
     <message>
         <source>Load Slot 11</source>
-        <translation>Cargar Ranura 11</translation>
+        <translation type="obsolete">Cargar Ranura 11</translation>
     </message>
     <message>
         <source>Load Slot 12</source>
-        <translation>Cargar Ranura 12</translation>
+        <translation type="obsolete">Cargar Ranura 12</translation>
     </message>
     <message>
         <source>Load Slot 10</source>
-        <translation>Cargar Ranura 10</translation>
+        <translation type="obsolete">Cargar Ranura 10</translation>
     </message>
     <message>
         <source>Load Slot 14</source>
-        <translation>Cargar Ranura 14</translation>
+        <translation type="obsolete">Cargar Ranura 14</translation>
     </message>
     <message>
         <source>Load Slot 15</source>
-        <translation>Cargar Ranura 15</translation>
+        <translation type="obsolete">Cargar Ranura 15</translation>
     </message>
     <message>
         <source>Load Slot 13</source>
-        <translation>Cargar Ranura 13</translation>
+        <translation type="obsolete">Cargar Ranura 13</translation>
     </message>
     <message>
         <source>
 Empty</source>
-        <translation>
+        <translation type="obsolete">
 Vacío</translation>
     </message>
     <message>
@@ -7043,7 +7058,7 @@ Vacío</translation>
     <message>
         <source>
  Game Uses %1 Save Block</source>
-        <translation>
+        <translation type="obsolete">
 El juego usa el bloque de guardado %1 </translation>
     </message>
     <message>
@@ -7054,7 +7069,7 @@ El juego usa el bloque de guardado %1 </translation>
         <source>
 
  Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation>
+        <translation type="obsolete">
 
  Bloque semi-enlazado, siguiente trozo de datos en la ranura:%1</translation>
     </message>
@@ -7062,13 +7077,98 @@ El juego usa el bloque de guardado %1 </translation>
         <source>
 
  End Of Linked Blocks</source>
-        <translation>
+        <translation type="obsolete">
 
  Fin de los bloques enlazados</translation>
     </message>
     <message>
         <source>:</source>
-        <translation>:</translation>
+        <translation type="obsolete">:</translation>
+    </message>
+    <message>
+        <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>      End Of Linked Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ERROR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-Empty-</source>
+        <translation type="unfinished">-Vacío-</translation>
+    </message>
+    <message>
+        <source>
+	 Game Uses %1 Save Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:9</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:11</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:12</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:13</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:14</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:15</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

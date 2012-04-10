@@ -6958,87 +6958,102 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
 </context>
 <context>
+    <name>SlotPreview</name>
+    <message>
+        <source>Level:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gil:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Time:%1:%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SlotSelect</name>
     <message>
         <source>Select A Save Slot</source>
-        <translation>Wähle einen Speichersteckplatz aus</translation>
+        <translation type="obsolete">Wähle einen Speichersteckplatz aus</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation>Zeit</translation>
+        <translation type="obsolete">Zeit</translation>
     </message>
     <message>
         <source>Gil</source>
-        <translation>Gil</translation>
+        <translation type="obsolete">Gil</translation>
     </message>
     <message>
         <source>Level</source>
-        <translation>Level</translation>
+        <translation type="obsolete">Level</translation>
     </message>
     <message>
         <source>Load Slot 1</source>
-        <translation>Lade Steckplatz 1</translation>
+        <translation type="obsolete">Lade Steckplatz 1</translation>
     </message>
     <message>
         <source>Load Slot 2</source>
-        <translation>Lade Steckplatz 2</translation>
+        <translation type="obsolete">Lade Steckplatz 2</translation>
     </message>
     <message>
         <source>Load Slot 3</source>
-        <translation>Lade Steckplatz 3</translation>
+        <translation type="obsolete">Lade Steckplatz 3</translation>
     </message>
     <message>
         <source>Load Slot 5</source>
-        <translation>Lade Steckplatz 5</translation>
+        <translation type="obsolete">Lade Steckplatz 5</translation>
     </message>
     <message>
         <source>Load Slot 6</source>
-        <translation>Lade Steckplatz 6</translation>
+        <translation type="obsolete">Lade Steckplatz 6</translation>
     </message>
     <message>
         <source>Load Slot 4</source>
-        <translation>Lade Steckplatz 4</translation>
+        <translation type="obsolete">Lade Steckplatz 4</translation>
     </message>
     <message>
         <source>Load Slot 8</source>
-        <translation>Lade Steckplatz 8</translation>
+        <translation type="obsolete">Lade Steckplatz 8</translation>
     </message>
     <message>
         <source>Load Slot 9</source>
-        <translation>Lade Steckplatz 9</translation>
+        <translation type="obsolete">Lade Steckplatz 9</translation>
     </message>
     <message>
         <source>Load Slot 7</source>
-        <translation>Lade Steckplatz 7</translation>
+        <translation type="obsolete">Lade Steckplatz 7</translation>
     </message>
     <message>
         <source>Load Slot 11</source>
-        <translation>Lade Steckplatz 11</translation>
+        <translation type="obsolete">Lade Steckplatz 11</translation>
     </message>
     <message>
         <source>Load Slot 12</source>
-        <translation>Lade Steckplatz 12</translation>
+        <translation type="obsolete">Lade Steckplatz 12</translation>
     </message>
     <message>
         <source>Load Slot 10</source>
-        <translation>Lade Steckplatz 10</translation>
+        <translation type="obsolete">Lade Steckplatz 10</translation>
     </message>
     <message>
         <source>Load Slot 14</source>
-        <translation>Lade Steckplatz 14</translation>
+        <translation type="obsolete">Lade Steckplatz 14</translation>
     </message>
     <message>
         <source>Load Slot 15</source>
-        <translation>Lade Steckplatz 15</translation>
+        <translation type="obsolete">Lade Steckplatz 15</translation>
     </message>
     <message>
         <source>Load Slot 13</source>
-        <translation>Lade Steckplatz 13</translation>
+        <translation type="obsolete">Lade Steckplatz 13</translation>
     </message>
     <message>
         <source>
 Empty</source>
-        <translation>
+        <translation type="obsolete">
 Leer</translation>
     </message>
     <message>
@@ -7048,7 +7063,7 @@ Leer</translation>
     <message>
         <source>
  Game Uses %1 Save Block</source>
-        <translation>
+        <translation type="obsolete">
  Spiel benutzt %1 Speicherblöcke</translation>
     </message>
     <message>
@@ -7059,7 +7074,7 @@ Leer</translation>
         <source>
 
  Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation>
+        <translation type="obsolete">
 
  Mid-Linked Block Nächstes Datenstück @ Steckplatz:%1</translation>
     </message>
@@ -7067,13 +7082,98 @@ Leer</translation>
         <source>
 
  End Of Linked Blocks</source>
-        <translation>
+        <translation type="obsolete">
 
  Ende von Linked Blocks</translation>
     </message>
     <message>
         <source>:</source>
-        <translation>:</translation>
+        <translation type="obsolete">:</translation>
+    </message>
+    <message>
+        <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>      End Of Linked Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ERROR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-Empty-</source>
+        <translation type="unfinished">-Leer-</translation>
+    </message>
+    <message>
+        <source>
+	 Game Uses %1 Save Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:9</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:11</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:12</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:13</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:14</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:15</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
