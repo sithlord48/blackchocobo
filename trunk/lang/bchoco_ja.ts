@@ -6952,87 +6952,102 @@ Table Entries are Editable</source>
     </message>
 </context>
 <context>
+    <name>SlotPreview</name>
+    <message>
+        <source>Level:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gil:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Time:%1:%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SlotSelect</name>
     <message>
         <source>Select A Save Slot</source>
-        <translation>スロットの選択</translation>
+        <translation type="obsolete">スロットの選択</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation>時間</translation>
+        <translation type="obsolete">時間</translation>
     </message>
     <message>
         <source>Gil</source>
-        <translation>ギル</translation>
+        <translation type="obsolete">ギル</translation>
     </message>
     <message>
         <source>Level</source>
-        <translation>レベル</translation>
+        <translation type="obsolete">レベル</translation>
     </message>
     <message>
         <source>Load Slot 1</source>
-        <translation>スロット 1 をロード</translation>
+        <translation type="obsolete">スロット 1 をロード</translation>
     </message>
     <message>
         <source>Load Slot 2</source>
-        <translation>スロット 2 をロード</translation>
+        <translation type="obsolete">スロット 2 をロード</translation>
     </message>
     <message>
         <source>Load Slot 3</source>
-        <translation>スロット 3 をロード</translation>
+        <translation type="obsolete">スロット 3 をロード</translation>
     </message>
     <message>
         <source>Load Slot 5</source>
-        <translation>スロット 5 をロード</translation>
+        <translation type="obsolete">スロット 5 をロード</translation>
     </message>
     <message>
         <source>Load Slot 6</source>
-        <translation>スロット 6 をロード</translation>
+        <translation type="obsolete">スロット 6 をロード</translation>
     </message>
     <message>
         <source>Load Slot 4</source>
-        <translation>スロット 4 をロード</translation>
+        <translation type="obsolete">スロット 4 をロード</translation>
     </message>
     <message>
         <source>Load Slot 8</source>
-        <translation>スロット 8 をロード</translation>
+        <translation type="obsolete">スロット 8 をロード</translation>
     </message>
     <message>
         <source>Load Slot 9</source>
-        <translation>スロット 9 をロード</translation>
+        <translation type="obsolete">スロット 9 をロード</translation>
     </message>
     <message>
         <source>Load Slot 7</source>
-        <translation>スロット 7 をロード</translation>
+        <translation type="obsolete">スロット 7 をロード</translation>
     </message>
     <message>
         <source>Load Slot 11</source>
-        <translation>スロット 11 をロード</translation>
+        <translation type="obsolete">スロット 11 をロード</translation>
     </message>
     <message>
         <source>Load Slot 12</source>
-        <translation>スロット 12 をロード</translation>
+        <translation type="obsolete">スロット 12 をロード</translation>
     </message>
     <message>
         <source>Load Slot 10</source>
-        <translation>スロット 10 をロード</translation>
+        <translation type="obsolete">スロット 10 をロード</translation>
     </message>
     <message>
         <source>Load Slot 14</source>
-        <translation>スロット 14 をロード</translation>
+        <translation type="obsolete">スロット 14 をロード</translation>
     </message>
     <message>
         <source>Load Slot 15</source>
-        <translation>スロット 15 をロード</translation>
+        <translation type="obsolete">スロット 15 をロード</translation>
     </message>
     <message>
         <source>Load Slot 13</source>
-        <translation>スロット 13 をロード</translation>
+        <translation type="obsolete">スロット 13 をロード</translation>
     </message>
     <message>
         <source>
 Empty</source>
-        <translation>
+        <translation type="obsolete">
 ＥＭＰＴＹ</translation>
     </message>
     <message>
@@ -7042,7 +7057,7 @@ Empty</source>
     <message>
         <source>
  Game Uses %1 Save Block</source>
-        <translation>
+        <translation type="obsolete">
  セーブに %1 ブロックを使用</translation>
     </message>
     <message>
@@ -7053,7 +7068,7 @@ Empty</source>
         <source>
 
  Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation>
+        <translation type="obsolete">
 
  第二ブロック; 次のデータ チャンク @ スロット:%1</translation>
     </message>
@@ -7061,13 +7076,98 @@ Empty</source>
         <source>
 
  End Of Linked Blocks</source>
-        <translation>
+        <translation type="obsolete">
 
  最後のリンク ブロック</translation>
     </message>
     <message>
         <source>:</source>
-        <translation>:</translation>
+        <translation type="obsolete">:</translation>
+    </message>
+    <message>
+        <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>      End Of Linked Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ERROR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-Empty-</source>
+        <translation type="unfinished">-なし-</translation>
+    </message>
+    <message>
+        <source>
+	 Game Uses %1 Save Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:9</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:11</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:12</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:13</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:14</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:15</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

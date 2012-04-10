@@ -23,11 +23,11 @@
 #include <QWidget>
 #include <QMessageBox>
 #include <QSettings>
-#include "slotselect.h"             // slot selection dialog stuff.
+//#include "slotselect.h"             // slot selection dialog stuff.
 #include "options.h"                // contains the options dialog
 #include "about.h"                  // about dialog stuff.
 #include "errbox.h"                 // non ff7 error box
-#include <SaveIcon.h>
+#include "static_data/SaveIcon.h"
 
 #include "static_data/FF7Item.h"
 #include "static_data/FF7Save.h"
@@ -37,6 +37,7 @@
 #include "widgets/ItemPreview.h"
 #include "widgets/DialogPreview.h"
 #include "widgets/MateriaEditor.h"
+#include "widgets/SlotSelect.h"
 
 namespace Ui {
     class MainWindow;

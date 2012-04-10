@@ -6760,95 +6760,24 @@ Table Entries are Editable</source>
     </message>
 </context>
 <context>
+    <name>SlotPreview</name>
+    <message>
+        <source>Level:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gil:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Time:%1:%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SlotSelect</name>
     <message>
-        <source>Select A Save Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Time</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gil</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Level</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Slot 1</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Slot 2</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Slot 3</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Slot 5</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Slot 6</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Slot 4</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Slot 8</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Slot 9</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Slot 7</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Slot 11</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Slot 12</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Slot 10</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Slot 14</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Slot 15</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Load Slot 13</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>
-Empty</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>(Deleted)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>
- Game Uses %1 Save Block</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -6856,19 +6785,88 @@ Empty</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>
-
- Mid-Linked Block Next Data Chunk @ Slot:%1</source>
+        <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>      End Of Linked Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ERROR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-Empty-</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>
-
- End Of Linked Blocks</source>
+	 Game Uses %1 Save Block</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>:</source>
+        <source>Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:9</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:11</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:12</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:13</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:14</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:15</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -21,11 +21,11 @@ TARGET = Black_Chocobo
 TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \
-    slotselect.cpp \
+    #slotselect.cpp \
     about.cpp \
     options.cpp \
     errbox.cpp \
-    SaveIcon.cpp \
+    static_data/SaveIcon.cpp \
     static_data/FF7Save.cpp \
     static_data/FF7Text.cpp \
     static_data/FF7Item.cpp \
@@ -34,13 +34,15 @@ SOURCES += main.cpp \
     widgets/ItemPreview.cpp \
     widgets/DialogPreview.cpp \
     widgets/MateriaEditor.cpp \
+    widgets/SlotSelect.cpp\
+    widgets/SlotPreview.cpp\
     static_data/FF7Char.cpp
 HEADERS += mainwindow.h \
-    slotselect.h \
+    #slotselect.h \
     about.h \
     options.h \
     errbox.h \
-    SaveIcon.h \
+    static_data/SaveIcon.h \
     static_data/FF7Save.h \
     static_data/FF7Text.h \
     static_data/FF7Item.h \
@@ -52,11 +54,13 @@ HEADERS += mainwindow.h \
     static_data/FF7Save_Const.h \
     static_data/FF7Save_Types.h \
     widgets/MateriaEditor.h \
+    widgets/SlotSelect.h\
+    widgets/SlotPreview.h\
     static_data/FF7Char.h \
     static_data/Type_materia.h \
     static_data/Type_FF7CHAR.h
 FORMS += mainwindow.ui \
-    slotselect.ui \
+    #slotselect.ui \
     about.ui \
     options.ui \
     errbox.ui

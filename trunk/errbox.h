@@ -19,7 +19,7 @@
 
 #include <QDialog>
 #include "static_data/FF7Save.h"
-#include <SaveIcon.h>
+#include "static_data/SaveIcon.h"
 namespace Ui {
     class errbox;
 }

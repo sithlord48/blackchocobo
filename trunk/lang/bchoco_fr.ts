@@ -6952,87 +6952,102 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
 </context>
 <context>
+    <name>SlotPreview</name>
+    <message>
+        <source>Level:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gil:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Time:%1:%2</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>SlotSelect</name>
     <message>
         <source>Select A Save Slot</source>
-        <translation>Sélectionnez un slot</translation>
+        <translation type="obsolete">Sélectionnez un slot</translation>
     </message>
     <message>
         <source>Time</source>
-        <translation>Temps</translation>
+        <translation type="obsolete">Temps</translation>
     </message>
     <message>
         <source>Gil</source>
-        <translation>Gils</translation>
+        <translation type="obsolete">Gils</translation>
     </message>
     <message>
         <source>Level</source>
-        <translation>Niveau</translation>
+        <translation type="obsolete">Niveau</translation>
     </message>
     <message>
         <source>Load Slot 1</source>
-        <translation>Charger Slot 1</translation>
+        <translation type="obsolete">Charger Slot 1</translation>
     </message>
     <message>
         <source>Load Slot 2</source>
-        <translation>Charger Slot 2</translation>
+        <translation type="obsolete">Charger Slot 2</translation>
     </message>
     <message>
         <source>Load Slot 3</source>
-        <translation>Charger Slot 3</translation>
+        <translation type="obsolete">Charger Slot 3</translation>
     </message>
     <message>
         <source>Load Slot 5</source>
-        <translation>Charger Slot 5</translation>
+        <translation type="obsolete">Charger Slot 5</translation>
     </message>
     <message>
         <source>Load Slot 6</source>
-        <translation>Charger Slot 6</translation>
+        <translation type="obsolete">Charger Slot 6</translation>
     </message>
     <message>
         <source>Load Slot 4</source>
-        <translation>Charger Slot 4</translation>
+        <translation type="obsolete">Charger Slot 4</translation>
     </message>
     <message>
         <source>Load Slot 8</source>
-        <translation>Charger Slot 8</translation>
+        <translation type="obsolete">Charger Slot 8</translation>
     </message>
     <message>
         <source>Load Slot 9</source>
-        <translation>Charger Slot 9</translation>
+        <translation type="obsolete">Charger Slot 9</translation>
     </message>
     <message>
         <source>Load Slot 7</source>
-        <translation>Charger Slot 7</translation>
+        <translation type="obsolete">Charger Slot 7</translation>
     </message>
     <message>
         <source>Load Slot 11</source>
-        <translation>Charger Slot 11</translation>
+        <translation type="obsolete">Charger Slot 11</translation>
     </message>
     <message>
         <source>Load Slot 12</source>
-        <translation>Charger Slot 12</translation>
+        <translation type="obsolete">Charger Slot 12</translation>
     </message>
     <message>
         <source>Load Slot 10</source>
-        <translation>Charger Slot 10</translation>
+        <translation type="obsolete">Charger Slot 10</translation>
     </message>
     <message>
         <source>Load Slot 14</source>
-        <translation>Charger Slot 14</translation>
+        <translation type="obsolete">Charger Slot 14</translation>
     </message>
     <message>
         <source>Load Slot 15</source>
-        <translation>Charger Slot 15</translation>
+        <translation type="obsolete">Charger Slot 15</translation>
     </message>
     <message>
         <source>Load Slot 13</source>
-        <translation>Charger Slot 13</translation>
+        <translation type="obsolete">Charger Slot 13</translation>
     </message>
     <message>
         <source>
 Empty</source>
-        <translation>
+        <translation type="obsolete">
 Vide</translation>
     </message>
     <message>
@@ -7042,7 +7057,7 @@ Vide</translation>
     <message>
         <source>
  Game Uses %1 Save Block</source>
-        <translation>
+        <translation type="obsolete">
  Le jeu utilise %1 sauvegarde</translation>
     </message>
     <message>
@@ -7053,7 +7068,7 @@ Vide</translation>
         <source>
 
  Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation>
+        <translation type="obsolete">
 
  Sauvegarde semi-reliée la prochaine sauvegarde est à l&apos;emplacement %1</translation>
     </message>
@@ -7061,13 +7076,98 @@ Vide</translation>
         <source>
 
  End Of Linked Blocks</source>
-        <translation>
+        <translation type="obsolete">
 
  Fin du lien de sauvegard</translation>
     </message>
     <message>
         <source>:</source>
-        <translation> :</translation>
+        <translation type="obsolete"> :</translation>
+    </message>
+    <message>
+        <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>      End Of Linked Blocks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>ERROR</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-Empty-</source>
+        <translation type="unfinished">-Vide-</translation>
+    </message>
+    <message>
+        <source>
+	 Game Uses %1 Save Block</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:%1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:3</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:4</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:5</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:7</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:8</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:9</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:10</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:11</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:12</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:13</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:14</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slot:15</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
