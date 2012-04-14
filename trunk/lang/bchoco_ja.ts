@@ -2652,7 +2652,7 @@
     </message>
     <message>
         <source>Limit Bar</source>
-        <translation>リミットゲージ</translation>
+        <translation>リミット ゲージ</translation>
     </message>
     <message>
         <source>P&amp;arty</source>
@@ -5301,7 +5301,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>2nd Floor Sector 5 House</source>
-        <translation>５番街・民家２階</translation>
+        <translation>５番街スラム・民家２階</translation>
     </message>
     <message>
         <source>Wutai - In Front Of Turtle Paradise</source>
@@ -6955,15 +6955,15 @@ Table Entries are Editable</source>
     <name>SlotPreview</name>
     <message>
         <source>Level:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>レベル:%1</translation>
     </message>
     <message>
         <source>Gil:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>ギル:%1</translation>
     </message>
     <message>
         <source>Time:%1:%2</source>
-        <translation type="unfinished"></translation>
+        <translation>時間:%1:%2</translation>
     </message>
 </context>
 <context>
@@ -7086,88 +7086,89 @@ Empty</source>
     </message>
     <message>
         <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>       第二ブロック; 次のデータ チャンク @ スロット:%1</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>      最後のリンク ブロック</translation>
     </message>
     <message>
         <source>ERROR</source>
-        <translation type="unfinished"></translation>
+        <translation>エラー</translation>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation type="unfinished">-なし-</translation>
+        <translation>-EMPTY-</translation>
     </message>
     <message>
         <source>
 	 Game Uses %1 Save Block</source>
-        <translation type="unfinished"></translation>
+        <translation>
+	 ゲームに %1 ブロックを使用</translation>
     </message>
     <message>
         <source>Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:%1</translation>
     </message>
     <message>
         <source>Slot:1</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:1</translation>
     </message>
     <message>
         <source>Slot:2</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:2</translation>
     </message>
     <message>
         <source>Slot:3</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:3</translation>
     </message>
     <message>
         <source>Slot:4</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:4</translation>
     </message>
     <message>
         <source>Slot:5</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:5</translation>
     </message>
     <message>
         <source>Slot:6</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:6</translation>
     </message>
     <message>
         <source>Slot:7</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:7</translation>
     </message>
     <message>
         <source>Slot:8</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:8</translation>
     </message>
     <message>
         <source>Slot:9</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:9</translation>
     </message>
     <message>
         <source>Slot:10</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:10</translation>
     </message>
     <message>
         <source>Slot:11</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:11</translation>
     </message>
     <message>
         <source>Slot:12</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:12</translation>
     </message>
     <message>
         <source>Slot:13</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:13</translation>
     </message>
     <message>
         <source>Slot:14</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:14</translation>
     </message>
     <message>
         <source>Slot:15</source>
-        <translation type="unfinished"></translation>
+        <translation>スロット:15</translation>
     </message>
 </context>
 <context>
@@ -7685,11 +7686,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: MateriaEditor Widget.</source>
-        <translation type="unfinished"></translation>
+        <translation>追加: MateriaEditor ウィジェット</translation>
     </message>
     <message>
         <source>Fixed:Bug In Stat Calculation For Materia Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>修正: マテリア変更時の能力値算出</translation>
     </message>
 </context>
 <context>
