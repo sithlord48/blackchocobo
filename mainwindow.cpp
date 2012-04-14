@@ -3655,30 +3655,35 @@ void MainWindow::on_slide_limit_valueChanged(int value){if(!load){file_modified(
 
 void MainWindow::limitapply()
 {
-    quint16 limits = ff7->charLimits(s,curchar);
+    quint16 old_limit = ff7->charLimits(s,curchar);
     ff7->setCharLimits(s,curchar,0);
+    quint16 limits = 0;
     if (curchar == 7)
     {
-        if (ui->limit_1a->isChecked()==1) ff7->setCharLimits(s,curchar,limits |= (1<<0));
-        if (ui->limit_2a->isChecked()==1) ff7->setCharLimits(s,curchar,limits |= (1<<3));
-        if (ui->limit_3a->isChecked()==1) ff7->setCharLimits(s,curchar,limits |= (1<<6));
-        if (ui->limit_4 ->isChecked()==1) ff7->setCharLimits(s,curchar,limits |= (1<<9));
+        if (ui->limit_1a->isChecked()==1){limits |= (1<<0);}
+        if (ui->limit_2a->isChecked()==1){limits |= (1<<3);}
+        if (ui->limit_3a->isChecked()==1){limits |= (1<<6);}
+        if (ui->limit_4 ->isChecked()==1){limits |= (1<<9);}
     }
     else if (curchar == 6)
     {
-        if (ui->limit_1a->isChecked()==1) ff7->setCharLimits(s,curchar,limits |= (1<<0));
-        if (ui->limit_2a->isChecked()==1) ff7->setCharLimits(s,curchar,limits |= (1<<3));
+        if (ui->limit_1a->isChecked()==1){limits |= (1<<0);}
+        if (ui->limit_2a->isChecked()==1){limits |= (1<<3);}
     }
     else
     {
-        if (ui->limit_1a->isChecked()==1) ff7->setCharLimits(s,curchar,limits |= (1<<0));
-        if (ui->limit_1b->isChecked()==1) ff7->setCharLimits(s,curchar,limits |= (1<<1));
-        if (ui->limit_2a->isChecked()==1) ff7->setCharLimits(s,curchar,limits |= (1<<3));
-        if (ui->limit_2b->isChecked()==1) ff7->setCharLimits(s,curchar,limits |= (1<<4));
-        if (ui->limit_3a->isChecked()==1) ff7->setCharLimits(s,curchar,limits |= (1<<6));
-        if (ui->limit_3b->isChecked()==1) ff7->setCharLimits(s,curchar,limits |= (1<<7));
-        if (ui->limit_4 ->isChecked()==1) ff7->setCharLimits(s,curchar,limits |= (1<<9));
+        if (ui->limit_1a->isChecked()==1){limits |= (1<<0);}
+        if (ui->limit_1b->isChecked()==1){limits |= (1<<1);}
+        if (ui->limit_2a->isChecked()==1){limits |= (1<<3);}
+        if (ui->limit_2b->isChecked()==1){limits |= (1<<4);}
+        if (ui->limit_3a->isChecked()==1){limits |= (1<<6);}
+        if (ui->limit_3b->isChecked()==1){limits |= (1<<7);}
+        if (ui->limit_4 ->isChecked()==1){limits |= (1<<9);}
     }
+
+    if(limits != old_limit){ff7->setCharLimits(s,curchar,limits); file_modified(true);}
+    else{return;} // no changes to be made.
+
 }
 
 void MainWindow::on_limit_1a_toggled(){if(!load){limitapply();}}
@@ -3687,7 +3692,7 @@ void MainWindow::on_limit_2a_toggled(){if(!load){limitapply();}}
 void MainWindow::on_limit_2b_toggled(){if(!load){limitapply();}}
 void MainWindow::on_limit_3a_toggled(){if(!load){limitapply();}}
 void MainWindow::on_limit_3b_toggled(){if(!load){limitapply();}}
-void MainWindow::on_limit_4_toggled(){if(!load) {limitapply();}}
+void MainWindow::on_limit_4_toggled(){if(!load){limitapply();}}
 
 //Char Equiptment Tab
 
