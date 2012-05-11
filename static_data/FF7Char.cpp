@@ -62,6 +62,7 @@ int FF7Char::stat_gain(int who,int stat, int stat_amount, int next_lvl)
   int grade=0;// whats our grade in the stat only used for str/vit/mag/spi/dex
   int baseline_stat=0; // holds our baseline_stat calculation.
   //first find out the level bracket
+  if(stat_amount ==0){stat_amount = 1;}
   if(next_lvl>=2 && next_lvl<11){lvl_bracket=0;}
   else if(next_lvl>=12 && next_lvl<21){lvl_bracket=1;}
   else if(next_lvl>=22 && next_lvl<31){lvl_bracket=2;}
