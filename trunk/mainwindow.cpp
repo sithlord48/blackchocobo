@@ -306,12 +306,12 @@ int MainWindow::save_changes(void)
                         else if(result ==types.at(5)){on_actionExport_DEX_triggered();}
                         else if(result ==types.at(6)){on_actionExport_VGS_triggered();}
                         else{return rtn;}
-                }
-                rtn=1;
-                break;
+                    }
+                    rtn=1;
+                    break;
+         case QMessageBox::Cancel: rtn=0; break;
         case QMessageBox::No:rtn=1;break;
-        case QMessageBox::Cancel: rtn=0; break;
-    }
+     }
     return rtn;
 }
 void MainWindow::closeEvent(QCloseEvent *e)
@@ -601,6 +601,7 @@ void MainWindow::on_actionExport_PSX_activated()
     {
         ui->combo_control->setCurrentIndex(0);
         ff7->Export_PSX(fileName);
+        file_modified(false);
     }
 }
 /*~~~~~Export Mcr/Mcd~~~~~~*/
@@ -615,6 +616,7 @@ void MainWindow::on_actionExport_MC_triggered()
     {
         ui->combo_control->setCurrentIndex(0);
         ff7->Export_VMC(fileName);
+        file_modified(false);
     }
 }
 void MainWindow::on_actionExport_VGS_triggered()
@@ -627,6 +629,7 @@ void MainWindow::on_actionExport_VGS_triggered()
     {
         ui->combo_control->setCurrentIndex(0);
         ff7->Export_VGS(fileName);
+        file_modified(false);
     }
 }
 void MainWindow::on_actionExport_DEX_triggered()
@@ -639,6 +642,7 @@ void MainWindow::on_actionExport_DEX_triggered()
     {
         ui->combo_control->setCurrentIndex(0);
         ff7->Export_DEX(fileName);
+        file_modified(false);
     }
 }
 

@@ -81,7 +81,7 @@ public slots:
 
 private slots://try to keep these in the same order as the .cpp file  
     /*Loading and Saving related Functions*/
-    int save_changes(); //return 1 to accept and 0 to ingore the event
+    int save_changes(void); //return 1 to accept and 0 to ingore the event
     void on_actionNew_Window_triggered();
     void on_actionOpen_Save_File_activated();
     void on_actionReload_triggered();
