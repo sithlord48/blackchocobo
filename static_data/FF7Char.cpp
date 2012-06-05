@@ -29,8 +29,8 @@ QPixmap FF7Char::Pixmap(int who)
   }
 }
 QIcon FF7Char::Icon(int who){return QIcon(Pixmap(who));}
-quint32 FF7Char::Total_Exp_For_Level(int who,int level){return Chars[who]._charlvls[level-1];}
-quint32 FF7Char::Tnl_For_Level(int who,int level){return Chars[who]._charlvls[level-1];}
+quint32 FF7Char::Total_Exp_For_Level(int who,int level){return Chars[who]._charlvls[level];}
+quint32 FF7Char::Tnl_For_Level(int who,int level){return Chars[who]._charlvls[level];}
 quint8 FF7Char::stat_grade(int who,int stat){return Chars[who]._stat_grade[stat];}
 int FF7Char::mp_base(int who,int lvl_bracket){return Chars[who]._mp_base[lvl_bracket];}
 quint8 FF7Char::mp_gradent (int who, int lvl_bracket){return Chars[who]._mp_gradent[lvl_bracket];}
