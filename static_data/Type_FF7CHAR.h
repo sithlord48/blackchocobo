@@ -3,7 +3,6 @@
 
 #include "static_data/Type_materia.h"
 
-#endif // TYPE_FF7CHAR_H
 
 struct FF7CHAR {        	// [0x0084] Character info -98% - 1 Unknown
     quint8 id;			// [0x0000] Character id (used by Sephiroth/Vincent slot)
@@ -43,3 +42,4 @@ struct FF7CHAR {        	// [0x0084] Character info -98% - 1 Unknown
     materia materias[16];	// [0x0040] Materia slots (0-7=weapon,8-15=armor)
     quint32 expNext;            // [0x0080] EXP to next level
 }__attribute__((__packed__));
+#endif // TYPE_FF7CHAR_H

@@ -36,7 +36,8 @@ SOURCES += main.cpp \
     widgets/MateriaEditor.cpp \
     widgets/SlotSelect.cpp\
     widgets/SlotPreview.cpp\
-    static_data/FF7Char.cpp
+    static_data/FF7Char.cpp \
+    widgets/ChocoboEditor.cpp
 HEADERS += mainwindow.h \
     #slotselect.h \
     about.h \
@@ -58,7 +59,8 @@ HEADERS += mainwindow.h \
     widgets/SlotPreview.h\
     static_data/FF7Char.h \
     static_data/Type_materia.h \
-    static_data/Type_FF7CHAR.h
+    static_data/Type_FF7CHAR.h \
+    widgets/ChocoboEditor.h
 FORMS += mainwindow.ui \
     #slotselect.ui \
     about.ui \
