@@ -272,6 +272,89 @@
     </message>
 </context>
 <context>
+    <name>ChocoboEditor</name>
+    <message>
+        <source>Unable To Mate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stamina</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sex</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Run Speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sprint Speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Accel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Coop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>pCount</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Intel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Personality</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Male</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Female</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Yellow</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Green</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Blue</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Black</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gold</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>E_skills</name>
     <message>
         <source>Frog Song</source>
@@ -2895,10 +2978,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Intel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Average</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3004,74 +3083,6 @@
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Green</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Blue</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Black</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Gold</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sex</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Male</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Female</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Run Speed</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Sprint </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Accel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source> Wins</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Stamina</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Fed ?</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Coop</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Personality</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4398,10 +4409,6 @@
     </message>
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Unable to Mate</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7377,6 +7384,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed:Bug In Stat Calculation For Materia Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: ChocoboEditor Widgets.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

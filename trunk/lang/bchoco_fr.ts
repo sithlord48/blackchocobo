@@ -272,6 +272,89 @@
     </message>
 </context>
 <context>
+    <name>ChocoboEditor</name>
+    <message>
+        <source>Unable To Mate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stamina</source>
+        <translation type="unfinished">Résistance</translation>
+    </message>
+    <message>
+        <source>Sex</source>
+        <translation type="unfinished">Sexe </translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation type="unfinished">Type </translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">Nom</translation>
+    </message>
+    <message>
+        <source>Run Speed</source>
+        <translation type="unfinished">Sprint</translation>
+    </message>
+    <message>
+        <source>Sprint Speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Accel</source>
+        <translation type="unfinished">Accélération</translation>
+    </message>
+    <message>
+        <source>Wins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Coop</source>
+        <translation type="unfinished">Maniabilité</translation>
+    </message>
+    <message>
+        <source>pCount</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Intel</source>
+        <translation type="unfinished">Intelligence</translation>
+    </message>
+    <message>
+        <source>Personality</source>
+        <translation type="unfinished">Personnalité</translation>
+    </message>
+    <message>
+        <source>Male</source>
+        <translation type="unfinished">Mâle</translation>
+    </message>
+    <message>
+        <source>Female</source>
+        <translation type="unfinished">Femelle</translation>
+    </message>
+    <message>
+        <source>Yellow</source>
+        <translation type="unfinished">Jaune</translation>
+    </message>
+    <message>
+        <source>Green</source>
+        <translation type="unfinished">Vert</translation>
+    </message>
+    <message>
+        <source>Blue</source>
+        <translation type="unfinished">Bleu</translation>
+    </message>
+    <message>
+        <source>Black</source>
+        <translation type="unfinished">Noir</translation>
+    </message>
+    <message>
+        <source>Gold</source>
+        <translation type="unfinished">Doré</translation>
+    </message>
+</context>
+<context>
     <name>E_skills</name>
     <message>
         <source>Frog Song</source>
@@ -2988,71 +3071,71 @@
     </message>
     <message>
         <source>Type</source>
-        <translation>Type </translation>
+        <translation type="obsolete">Type </translation>
     </message>
     <message>
         <source>Yellow</source>
-        <translation>Jaune</translation>
+        <translation type="obsolete">Jaune</translation>
     </message>
     <message>
         <source>Green</source>
-        <translation>Vert</translation>
+        <translation type="obsolete">Vert</translation>
     </message>
     <message>
         <source>Blue</source>
-        <translation>Bleu</translation>
+        <translation type="obsolete">Bleu</translation>
     </message>
     <message>
         <source>Black</source>
-        <translation>Noir</translation>
+        <translation type="obsolete">Noir</translation>
     </message>
     <message>
         <source>Gold</source>
-        <translation>Doré</translation>
+        <translation type="obsolete">Doré</translation>
     </message>
     <message>
         <source>Sex</source>
-        <translation>Sexe </translation>
+        <translation type="obsolete">Sexe </translation>
     </message>
     <message>
         <source>Male</source>
-        <translation>Mâle</translation>
+        <translation type="obsolete">Mâle</translation>
     </message>
     <message>
         <source>Female</source>
-        <translation>Femelle</translation>
+        <translation type="obsolete">Femelle</translation>
     </message>
     <message>
         <source>Run Speed</source>
-        <translation>Sprint</translation>
+        <translation type="obsolete">Sprint</translation>
     </message>
     <message>
         <source>Sprint </source>
-        <translation>Vitesse</translation>
+        <translation type="obsolete">Vitesse</translation>
     </message>
     <message>
         <source>Accel</source>
-        <translation>Accélération</translation>
+        <translation type="obsolete">Accélération</translation>
     </message>
     <message>
         <source> Wins</source>
-        <translation> Victoires</translation>
+        <translation type="obsolete"> Victoires</translation>
     </message>
     <message>
         <source>Stamina</source>
-        <translation>Résistance</translation>
+        <translation type="obsolete">Résistance</translation>
     </message>
     <message>
         <source>Fed ?</source>
-        <translation>Sagesse?</translation>
+        <translation type="obsolete">Sagesse?</translation>
     </message>
     <message>
         <source>Coop</source>
-        <translation>Maniabilité</translation>
+        <translation type="obsolete">Maniabilité</translation>
     </message>
     <message>
         <source>Personality</source>
-        <translation>Personnalité</translation>
+        <translation type="obsolete">Personnalité</translation>
     </message>
     <message>
         <source>Stable 2</source>
@@ -3292,7 +3375,7 @@
     </message>
     <message>
         <source>Intel</source>
-        <translation>Intelligence</translation>
+        <translation type="obsolete">Intelligence</translation>
     </message>
     <message>
         <source>Average</source>
@@ -4571,7 +4654,7 @@ Les stats de Sephiroth proviendront directement de celles de Vincent.</translati
     </message>
     <message>
         <source>Unable to Mate</source>
-        <translation>Incapacité à s&apos;accoupler</translation>
+        <translation type="obsolete">Incapacité à s&apos;accoupler</translation>
     </message>
     <message>
         <source>Add One Of Each Mastered Materia </source>
@@ -7691,6 +7774,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed:Bug In Stat Calculation For Materia Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: ChocoboEditor Widgets.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>379</width>
+    <width>377</width>
     <height>366</height>
    </rect>
   </property>
@@ -452,6 +452,11 @@ p, li { white-space: pre-wrap; }
          <property name="wordWrap">
           <bool>true</bool>
          </property>
+         <item>
+          <property name="text">
+           <string>New: ChocoboEditor Widgets.</string>
+          </property>
+         </item>
          <item>
           <property name="text">
            <string>New: MateriaEditor Widget.</string>
