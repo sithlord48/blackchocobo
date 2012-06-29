@@ -65,11 +65,6 @@
         <file alias="new_plus">icon/new_plus.png</file>
         <file alias="export_char">icon/export_char.png</file>
         <file alias="import_char">icon/import_char.png</file>
-        <file alias="gold_choco">icon/gold_choco.png</file>
-        <file alias="green_choco">icon/green_choco.png</file>
-        <file alias="yellow_choco">icon/yellow_choco.png</file>
-        <file alias="black_choco">icon/black_choco.png</file>
-        <file alias="blue_choco">icon/blue_choco.png</file>
         <file alias="checkbox_checked">icon/checkbox_checked.png</file>
         <file alias="checkbox_indeterminate">icon/checkbox_indeterminate.png</file>
         <file alias="checkbox_unchecked">icon/checkbox_unchecked.png</file>
