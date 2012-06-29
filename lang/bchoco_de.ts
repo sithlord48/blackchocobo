@@ -272,6 +272,89 @@
     </message>
 </context>
 <context>
+    <name>ChocoboEditor</name>
+    <message>
+        <source>Unable To Mate</source>
+        <translation type="unfinished">Paarungs-Unfähig</translation>
+    </message>
+    <message>
+        <source>Stamina</source>
+        <translation type="unfinished">Ausdauer</translation>
+    </message>
+    <message>
+        <source>Sex</source>
+        <translation type="unfinished">Geschlecht</translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation type="unfinished">Typ</translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">Name</translation>
+    </message>
+    <message>
+        <source>Run Speed</source>
+        <translation type="unfinished">Renngeschwindigkeit</translation>
+    </message>
+    <message>
+        <source>Sprint Speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Accel</source>
+        <translation type="unfinished">Beschleunigung</translation>
+    </message>
+    <message>
+        <source>Wins</source>
+        <translation type="unfinished">Siege</translation>
+    </message>
+    <message>
+        <source>Coop</source>
+        <translation type="unfinished">Koop</translation>
+    </message>
+    <message>
+        <source>pCount</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Intel</source>
+        <translation type="unfinished">Intel</translation>
+    </message>
+    <message>
+        <source>Personality</source>
+        <translation type="unfinished">Personalität</translation>
+    </message>
+    <message>
+        <source>Male</source>
+        <translation type="unfinished">Männlich</translation>
+    </message>
+    <message>
+        <source>Female</source>
+        <translation type="unfinished">Weiblich</translation>
+    </message>
+    <message>
+        <source>Yellow</source>
+        <translation type="unfinished">Gelb</translation>
+    </message>
+    <message>
+        <source>Green</source>
+        <translation type="unfinished">Grün</translation>
+    </message>
+    <message>
+        <source>Blue</source>
+        <translation type="unfinished">Blau</translation>
+    </message>
+    <message>
+        <source>Black</source>
+        <translation type="unfinished">Schwarz</translation>
+    </message>
+    <message>
+        <source>Gold</source>
+        <translation type="unfinished">Gold</translation>
+    </message>
+</context>
+<context>
     <name>E_skills</name>
     <message>
         <source>Frog Song</source>
@@ -378,7 +461,7 @@
     </message>
     <message>
         <source>[Ice]</source>
-        <translation type="unfinished">Kälte</translation>
+        <translation type="unfinished">[Kälte]</translation>
     </message>
     <message>
         <source>[Earth]</source>
@@ -386,7 +469,7 @@
     </message>
     <message>
         <source>[Lightning]</source>
-        <translation type="unfinished">Gewitter</translation>
+        <translation type="unfinished">[Gewitter]</translation>
     </message>
     <message>
         <source>[Poison]</source>
@@ -3001,7 +3084,7 @@
     </message>
     <message>
         <source>Intel</source>
-        <translation>Intel</translation>
+        <translation type="obsolete">Intel</translation>
     </message>
     <message>
         <source>Average</source>
@@ -3113,71 +3196,71 @@
     </message>
     <message>
         <source>Type</source>
-        <translation>Typ</translation>
+        <translation type="obsolete">Typ</translation>
     </message>
     <message>
         <source>Yellow</source>
-        <translation>Gelb</translation>
+        <translation type="obsolete">Gelb</translation>
     </message>
     <message>
         <source>Green</source>
-        <translation>Grün</translation>
+        <translation type="obsolete">Grün</translation>
     </message>
     <message>
         <source>Blue</source>
-        <translation>Blau</translation>
+        <translation type="obsolete">Blau</translation>
     </message>
     <message>
         <source>Black</source>
-        <translation>Schwarz</translation>
+        <translation type="obsolete">Schwarz</translation>
     </message>
     <message>
         <source>Gold</source>
-        <translation>Gold</translation>
+        <translation type="obsolete">Gold</translation>
     </message>
     <message>
         <source>Sex</source>
-        <translation>Geschlecht</translation>
+        <translation type="obsolete">Geschlecht</translation>
     </message>
     <message>
         <source>Male</source>
-        <translation>Männlich</translation>
+        <translation type="obsolete">Männlich</translation>
     </message>
     <message>
         <source>Female</source>
-        <translation>Weiblich</translation>
+        <translation type="obsolete">Weiblich</translation>
     </message>
     <message>
         <source>Run Speed</source>
-        <translation>Renngeschwindigkeit</translation>
+        <translation type="obsolete">Renngeschwindigkeit</translation>
     </message>
     <message>
         <source>Sprint </source>
-        <translation>Sprint</translation>
+        <translation type="obsolete">Sprint</translation>
     </message>
     <message>
         <source>Accel</source>
-        <translation>Beschleunigung</translation>
+        <translation type="obsolete">Beschleunigung</translation>
     </message>
     <message>
         <source> Wins</source>
-        <translation>Siege</translation>
+        <translation type="obsolete">Siege</translation>
     </message>
     <message>
         <source>Stamina</source>
-        <translation>Ausdauer</translation>
+        <translation type="obsolete">Ausdauer</translation>
     </message>
     <message>
         <source>Fed ?</source>
-        <translation>Gefüttert ?</translation>
+        <translation type="obsolete">Gefüttert ?</translation>
     </message>
     <message>
         <source>Coop</source>
-        <translation>Koop</translation>
+        <translation type="obsolete">Koop</translation>
     </message>
     <message>
         <source>Personality</source>
-        <translation>Personalität</translation>
+        <translation type="obsolete">Personalität</translation>
     </message>
     <message>
         <source>Stable 2</source>
@@ -4569,7 +4652,7 @@
     </message>
     <message>
         <source>Unable to Mate</source>
-        <translation>Paarungs-Unfähig</translation>
+        <translation type="obsolete">Paarungs-Unfähig</translation>
     </message>
     <message>
         <source>Add One Of Each Mastered Materia </source>
@@ -5334,11 +5417,11 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Kopiere</translation>
     </message>
     <message>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Füge</translation>
     </message>
     <message>
         <source>Clear</source>
@@ -7092,88 +7175,89 @@ Leer</translation>
     </message>
     <message>
         <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>  Mid-Linked Block Nächstes Datenstück @ Steckplatz:%1</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation>  Ende von Linked Blocks</translation>
     </message>
     <message>
         <source>ERROR</source>
-        <translation type="unfinished"></translation>
+        <translation>FEHLER</translation>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation type="unfinished">-Leer-</translation>
+        <translation>-Leer-</translation>
     </message>
     <message>
         <source>
 	 Game Uses %1 Save Block</source>
-        <translation type="unfinished"></translation>
+        <translation>
+	 Spiel benutzt %1 Speicherblöcke</translation>
     </message>
     <message>
         <source>Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:%1</translation>
     </message>
     <message>
         <source>Slot:1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:1</translation>
     </message>
     <message>
         <source>Slot:2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:2</translation>
     </message>
     <message>
         <source>Slot:3</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:3</translation>
     </message>
     <message>
         <source>Slot:4</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:4</translation>
     </message>
     <message>
         <source>Slot:5</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:5</translation>
     </message>
     <message>
         <source>Slot:6</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:6</translation>
     </message>
     <message>
         <source>Slot:7</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:7</translation>
     </message>
     <message>
         <source>Slot:8</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:8</translation>
     </message>
     <message>
         <source>Slot:9</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:9</translation>
     </message>
     <message>
         <source>Slot:10</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:10</translation>
     </message>
     <message>
         <source>Slot:11</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:11</translation>
     </message>
     <message>
         <source>Slot:12</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:12</translation>
     </message>
     <message>
         <source>Slot:13</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:13</translation>
     </message>
     <message>
         <source>Slot:14</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:14</translation>
     </message>
     <message>
         <source>Slot:15</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Steckplatz:15</translation>
     </message>
 </context>
 <context>
@@ -7688,7 +7772,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Bug In Eskill,KeyItem,Tparadise,Phs,Menu sometime preventing changes from saving</source>
-        <translation type="unfinished">Behoben: Fehler in Eskill, KeyItem, Tparadise, PHS, Menü irgendwann Verhinderung von Änderungen zu speichern</translation>
+        <translation>Behoben: Fehler in Eskill, KeyItem, Tparadise, PHS, Menü irgendwann Verhinderung von Änderungen zu speichern</translation>
     </message>
     <message>
         <source>New: MateriaEditor Widget.</source>
@@ -7696,6 +7780,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed:Bug In Stat Calculation For Materia Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: ChocoboEditor Widgets.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

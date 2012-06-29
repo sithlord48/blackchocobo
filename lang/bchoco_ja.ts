@@ -272,6 +272,89 @@
     </message>
 </context>
 <context>
+    <name>ChocoboEditor</name>
+    <message>
+        <source>Unable To Mate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Stamina</source>
+        <translation type="unfinished">スタミナ</translation>
+    </message>
+    <message>
+        <source>Sex</source>
+        <translation type="unfinished">性別</translation>
+    </message>
+    <message>
+        <source>Type</source>
+        <translation type="unfinished">タイプ</translation>
+    </message>
+    <message>
+        <source>Name</source>
+        <translation type="unfinished">名前</translation>
+    </message>
+    <message>
+        <source>Run Speed</source>
+        <translation type="unfinished">スピード</translation>
+    </message>
+    <message>
+        <source>Sprint Speed</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Accel</source>
+        <translation type="unfinished">加速</translation>
+    </message>
+    <message>
+        <source>Wins</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Coop</source>
+        <translation type="unfinished">協調性</translation>
+    </message>
+    <message>
+        <source>pCount</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Intel</source>
+        <translation type="unfinished">知能</translation>
+    </message>
+    <message>
+        <source>Personality</source>
+        <translation type="unfinished">性格</translation>
+    </message>
+    <message>
+        <source>Male</source>
+        <translation type="unfinished">オス</translation>
+    </message>
+    <message>
+        <source>Female</source>
+        <translation type="unfinished">メス</translation>
+    </message>
+    <message>
+        <source>Yellow</source>
+        <translation type="unfinished">チョコボ</translation>
+    </message>
+    <message>
+        <source>Green</source>
+        <translation type="unfinished">山チョコボ</translation>
+    </message>
+    <message>
+        <source>Blue</source>
+        <translation type="unfinished">川チョコボ</translation>
+    </message>
+    <message>
+        <source>Black</source>
+        <translation type="unfinished">山川チョコボ</translation>
+    </message>
+    <message>
+        <source>Gold</source>
+        <translation type="unfinished">海チョコボ</translation>
+    </message>
+</context>
+<context>
     <name>E_skills</name>
     <message>
         <source>Frog Song</source>
@@ -3000,7 +3083,7 @@
     </message>
     <message>
         <source>Intel</source>
-        <translation>知能</translation>
+        <translation type="obsolete">知能</translation>
     </message>
     <message>
         <source>Average</source>
@@ -3112,71 +3195,71 @@
     </message>
     <message>
         <source>Type</source>
-        <translation>タイプ</translation>
+        <translation type="obsolete">タイプ</translation>
     </message>
     <message>
         <source>Yellow</source>
-        <translation>チョコボ</translation>
+        <translation type="obsolete">チョコボ</translation>
     </message>
     <message>
         <source>Green</source>
-        <translation>山チョコボ</translation>
+        <translation type="obsolete">山チョコボ</translation>
     </message>
     <message>
         <source>Blue</source>
-        <translation>川チョコボ</translation>
+        <translation type="obsolete">川チョコボ</translation>
     </message>
     <message>
         <source>Black</source>
-        <translation>山川チョコボ</translation>
+        <translation type="obsolete">山川チョコボ</translation>
     </message>
     <message>
         <source>Gold</source>
-        <translation>海チョコボ</translation>
+        <translation type="obsolete">海チョコボ</translation>
     </message>
     <message>
         <source>Sex</source>
-        <translation>性別</translation>
+        <translation type="obsolete">性別</translation>
     </message>
     <message>
         <source>Male</source>
-        <translation>オス</translation>
+        <translation type="obsolete">オス</translation>
     </message>
     <message>
         <source>Female</source>
-        <translation>メス</translation>
+        <translation type="obsolete">メス</translation>
     </message>
     <message>
         <source>Run Speed</source>
-        <translation>スピード</translation>
+        <translation type="obsolete">スピード</translation>
     </message>
     <message>
         <source>Sprint </source>
-        <translation>ラスト スパート</translation>
+        <translation type="obsolete">ラスト スパート</translation>
     </message>
     <message>
         <source>Accel</source>
-        <translation>加速</translation>
+        <translation type="obsolete">加速</translation>
     </message>
     <message>
         <source> Wins</source>
-        <translation>優勝数</translation>
+        <translation type="obsolete">優勝数</translation>
     </message>
     <message>
         <source>Stamina</source>
-        <translation>スタミナ</translation>
+        <translation type="obsolete">スタミナ</translation>
     </message>
     <message>
         <source>Fed ?</source>
-        <translation>給餌 (?)</translation>
+        <translation type="obsolete">給餌 (?)</translation>
     </message>
     <message>
         <source>Coop</source>
-        <translation>協調性</translation>
+        <translation type="obsolete">協調性</translation>
     </message>
     <message>
         <source>Personality</source>
-        <translation>性格</translation>
+        <translation type="obsolete">性格</translation>
     </message>
     <message>
         <source>Stable 2</source>
@@ -4566,7 +4649,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>Unable to Mate</source>
-        <translation>カップリング不可</translation>
+        <translation type="obsolete">カップリング不可</translation>
     </message>
     <message>
         <source>Add One Of Each Mastered Materia </source>
@@ -7691,6 +7774,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Fixed:Bug In Stat Calculation For Materia Changes</source>
         <translation>修正: マテリア変更時の能力値算出</translation>
+    </message>
+    <message>
+        <source>New: ChocoboEditor Widgets.</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
