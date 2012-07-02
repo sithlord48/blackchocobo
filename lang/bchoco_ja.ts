@@ -275,83 +275,83 @@
     <name>ChocoboEditor</name>
     <message>
         <source>Unable To Mate</source>
-        <translation type="unfinished"></translation>
+        <translation>カップリング不可</translation>
     </message>
     <message>
         <source>Stamina</source>
-        <translation type="unfinished">スタミナ</translation>
+        <translation>スタミナ</translation>
     </message>
     <message>
         <source>Sex</source>
-        <translation type="unfinished">性別</translation>
+        <translation>性別</translation>
     </message>
     <message>
         <source>Type</source>
-        <translation type="unfinished">タイプ</translation>
+        <translation>タイプ</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished">名前</translation>
+        <translation>名前</translation>
     </message>
     <message>
         <source>Run Speed</source>
-        <translation type="unfinished">スピード</translation>
+        <translation>スピード</translation>
     </message>
     <message>
         <source>Sprint Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>ラストスパート</translation>
     </message>
     <message>
         <source>Accel</source>
-        <translation type="unfinished">加速</translation>
+        <translation>ダッシュ</translation>
     </message>
     <message>
         <source>Wins</source>
-        <translation type="unfinished"></translation>
+        <translation>優勝回数</translation>
     </message>
     <message>
         <source>Coop</source>
-        <translation type="unfinished">協調性</translation>
+        <translation>仲の良さ</translation>
     </message>
     <message>
         <source>pCount</source>
-        <translation type="unfinished"></translation>
+        <translation>給餌</translation>
     </message>
     <message>
         <source>Intel</source>
-        <translation type="unfinished">知能</translation>
+        <translation>かしこさ</translation>
     </message>
     <message>
         <source>Personality</source>
-        <translation type="unfinished">性格</translation>
+        <translation>性格</translation>
     </message>
     <message>
         <source>Male</source>
-        <translation type="unfinished">オス</translation>
+        <translation>オス</translation>
     </message>
     <message>
         <source>Female</source>
-        <translation type="unfinished">メス</translation>
+        <translation>メス</translation>
     </message>
     <message>
         <source>Yellow</source>
-        <translation type="unfinished">チョコボ</translation>
+        <translation>チョコボ</translation>
     </message>
     <message>
         <source>Green</source>
-        <translation type="unfinished">山チョコボ</translation>
+        <translation>山チョコボ</translation>
     </message>
     <message>
         <source>Blue</source>
-        <translation type="unfinished">川チョコボ</translation>
+        <translation>川チョコボ</translation>
     </message>
     <message>
         <source>Black</source>
-        <translation type="unfinished">山川チョコボ</translation>
+        <translation>山川チョコボ</translation>
     </message>
     <message>
         <source>Gold</source>
-        <translation type="unfinished">海チョコボ</translation>
+        <translation>海チョコボ</translation>
     </message>
 </context>
 <context>
@@ -5346,7 +5346,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>EALIN_1: Potion + Phoenix Down</source>
-        <translation>エアリスの家２Ｆ: ポーション＆フェニックスの尾</translation>
+        <translation>エアリスの家２Ｆ: ポーション, フェニックスの尾</translation>
     </message>
     <message>
         <source>ZZ1:Mythril</source>
@@ -7777,7 +7777,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: ChocoboEditor Widgets.</source>
-        <translation type="unfinished"></translation>
+        <translation>追加: ChocoboEditor ウィジェット</translation>
     </message>
 </context>
 <context>
@@ -7856,11 +7856,11 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Mid-Linked Block </source>
-        <translation>第二リンク ブロック</translation>
+        <translation>中間リンク ブロック</translation>
     </message>
     <message>
         <source>End Of Linked Data</source>
-        <translation>最後のリンク データ</translation>
+        <translation>最終リンク データ</translation>
     </message>
     <message>
         <source>(Deleted)</source>

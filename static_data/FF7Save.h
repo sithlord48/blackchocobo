@@ -155,6 +155,7 @@ public:
   void  setCharNextExp(int s,int char_num,quint32 next);
 
   void setCharMateria(int s,int who,int mat_num,quint8 id,qint32 ap);
+  void setCharMateria(int s,int who,int mat_num,materia mat);
   quint8 charMateriaId(int s,int who,int mat_num);
   qint32 charMateriaAp(int s,int who,int mat_num);
 

@@ -107,10 +107,17 @@ class FF7Item
     QString Name(int);
     QString Desc(int);
     qint8 Type(int);
+    //Image Functions
     QImage Image(int);
     QImage Image_m_no_grow_slot(void);
     QImage Image_m_grow_slot(void);
     QImage Image_mlink(void);
+    //StyleSheet Equilvents (ONLY QButtons)
+    QString Style_m_no_grow_slot(void);
+    QString Style_m_grow_slot(void);
+    //Style Sheet Only For QLabel
+    QString Style_mlink(void);
+
     qint8 mslots(int);
     qint8 linked(int);
     qint8 Stat_hp(int);
