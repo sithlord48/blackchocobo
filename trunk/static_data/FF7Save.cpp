@@ -1521,8 +1521,8 @@ void FF7Save::setCharMateria(int s,int who,int mat_num,quint8 id,qint32 ap)
         slot[s].chars[who].materias[mat_num].ap[1]=0xFF;
         slot[s].chars[who].materias[mat_num].ap[2]=0xFF;
     }
-
 }
+void FF7Save::setCharMateria(int s, int who, int mat_num, materia mat){slot[s].chars[who].materias[mat_num] = mat;}
 quint8 FF7Save::charMateriaId(int s,int who,int mat_num){return slot[s].chars[who].materias[mat_num].id;}
 qint32 FF7Save::charMateriaAp(int s,int who,int mat_num)
 {

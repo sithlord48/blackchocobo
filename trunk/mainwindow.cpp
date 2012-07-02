@@ -321,6 +321,86 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     connect(chocobo_stable_1,SIGNAL(personality_changed(quint8)),this,SLOT(c1_personalityChanged(quint8)));
     connect(chocobo_stable_1,SIGNAL(pCount_changed(quint8)),this,SLOT(c1_pcountChanged(quint8)));
     connect(chocobo_stable_1,SIGNAL(wins_changed(quint8)),this,SLOT(c1_raceswonChanged(quint8)));
+    //Chocobo Editor 2
+    connect(chocobo_stable_2,SIGNAL(name_changed(QString)),this,SLOT(c2_nameChanged(QString)));
+    connect(chocobo_stable_2,SIGNAL(cantMate_changed(bool)),this,SLOT(c2_mated_toggled(bool)));
+    connect(chocobo_stable_2,SIGNAL(speed_changed(quint16)),this,SLOT(c2_speedChanged(quint16)));
+    connect(chocobo_stable_2,SIGNAL(mSpeed_changed(quint16)),this,SLOT(c2_maxspeedChanged(quint16)));
+    connect(chocobo_stable_2,SIGNAL(sprint_changed(quint16)),this,SLOT(c2_sprintChanged(quint16)));
+    connect(chocobo_stable_2,SIGNAL(mSprint_changed(quint16)),this,SLOT(c2_maxsprintChanged(quint16)));
+    connect(chocobo_stable_2,SIGNAL(stamina_changed(quint16)),this,SLOT(c2_staminaChanged(quint16)));
+    connect(chocobo_stable_2,SIGNAL(sex_changed(quint8)),this,SLOT(c2_sexChanged(quint8)));
+    connect(chocobo_stable_2,SIGNAL(type_changed(quint8)),this,SLOT(c2_typeChanged(quint8)));
+    connect(chocobo_stable_2,SIGNAL(accel_changed(quint8)),this,SLOT(c2_accelChanged(quint8)));
+    connect(chocobo_stable_2,SIGNAL(coop_changed(quint8)),this,SLOT(c2_coopChanged(quint8)));
+    connect(chocobo_stable_2,SIGNAL(intelligence_changed(quint8)),this,SLOT(c2_intelChanged(quint8)));
+    connect(chocobo_stable_2,SIGNAL(personality_changed(quint8)),this,SLOT(c2_personalityChanged(quint8)));
+    connect(chocobo_stable_2,SIGNAL(pCount_changed(quint8)),this,SLOT(c2_pcountChanged(quint8)));
+    connect(chocobo_stable_2,SIGNAL(wins_changed(quint8)),this,SLOT(c2_raceswonChanged(quint8)));
+    //Chocobo Editor 1
+    connect(chocobo_stable_3,SIGNAL(name_changed(QString)),this,SLOT(c3_nameChanged(QString)));
+    connect(chocobo_stable_3,SIGNAL(cantMate_changed(bool)),this,SLOT(c3_mated_toggled(bool)));
+    connect(chocobo_stable_3,SIGNAL(speed_changed(quint16)),this,SLOT(c3_speedChanged(quint16)));
+    connect(chocobo_stable_3,SIGNAL(mSpeed_changed(quint16)),this,SLOT(c3_maxspeedChanged(quint16)));
+    connect(chocobo_stable_3,SIGNAL(sprint_changed(quint16)),this,SLOT(c3_sprintChanged(quint16)));
+    connect(chocobo_stable_3,SIGNAL(mSprint_changed(quint16)),this,SLOT(c3_maxsprintChanged(quint16)));
+    connect(chocobo_stable_3,SIGNAL(stamina_changed(quint16)),this,SLOT(c3_staminaChanged(quint16)));
+    connect(chocobo_stable_3,SIGNAL(sex_changed(quint8)),this,SLOT(c3_sexChanged(quint8)));
+    connect(chocobo_stable_3,SIGNAL(type_changed(quint8)),this,SLOT(c3_typeChanged(quint8)));
+    connect(chocobo_stable_3,SIGNAL(accel_changed(quint8)),this,SLOT(c3_accelChanged(quint8)));
+    connect(chocobo_stable_3,SIGNAL(coop_changed(quint8)),this,SLOT(c3_coopChanged(quint8)));
+    connect(chocobo_stable_3,SIGNAL(intelligence_changed(quint8)),this,SLOT(c3_intelChanged(quint8)));
+    connect(chocobo_stable_3,SIGNAL(personality_changed(quint8)),this,SLOT(c3_personalityChanged(quint8)));
+    connect(chocobo_stable_3,SIGNAL(pCount_changed(quint8)),this,SLOT(c3_pcountChanged(quint8)));
+    connect(chocobo_stable_3,SIGNAL(wins_changed(quint8)),this,SLOT(c3_raceswonChanged(quint8)));
+    //Chocobo Editor 1
+    connect(chocobo_stable_4,SIGNAL(name_changed(QString)),this,SLOT(c4_nameChanged(QString)));
+    connect(chocobo_stable_4,SIGNAL(cantMate_changed(bool)),this,SLOT(c4_mated_toggled(bool)));
+    connect(chocobo_stable_4,SIGNAL(speed_changed(quint16)),this,SLOT(c4_speedChanged(quint16)));
+    connect(chocobo_stable_4,SIGNAL(mSpeed_changed(quint16)),this,SLOT(c4_maxspeedChanged(quint16)));
+    connect(chocobo_stable_4,SIGNAL(sprint_changed(quint16)),this,SLOT(c4_sprintChanged(quint16)));
+    connect(chocobo_stable_4,SIGNAL(mSprint_changed(quint16)),this,SLOT(c4_maxsprintChanged(quint16)));
+    connect(chocobo_stable_4,SIGNAL(stamina_changed(quint16)),this,SLOT(c4_staminaChanged(quint16)));
+    connect(chocobo_stable_4,SIGNAL(sex_changed(quint8)),this,SLOT(c4_sexChanged(quint8)));
+    connect(chocobo_stable_4,SIGNAL(type_changed(quint8)),this,SLOT(c4_typeChanged(quint8)));
+    connect(chocobo_stable_4,SIGNAL(accel_changed(quint8)),this,SLOT(c4_accelChanged(quint8)));
+    connect(chocobo_stable_4,SIGNAL(coop_changed(quint8)),this,SLOT(c4_coopChanged(quint8)));
+    connect(chocobo_stable_4,SIGNAL(intelligence_changed(quint8)),this,SLOT(c4_intelChanged(quint8)));
+    connect(chocobo_stable_4,SIGNAL(personality_changed(quint8)),this,SLOT(c4_personalityChanged(quint8)));
+    connect(chocobo_stable_4,SIGNAL(pCount_changed(quint8)),this,SLOT(c4_pcountChanged(quint8)));
+    connect(chocobo_stable_4,SIGNAL(wins_changed(quint8)),this,SLOT(c4_raceswonChanged(quint8)));
+    //Chocobo Editor 1
+    connect(chocobo_stable_5,SIGNAL(name_changed(QString)),this,SLOT(c5_nameChanged(QString)));
+    connect(chocobo_stable_5,SIGNAL(cantMate_changed(bool)),this,SLOT(c5_mated_toggled(bool)));
+    connect(chocobo_stable_5,SIGNAL(speed_changed(quint16)),this,SLOT(c5_speedChanged(quint16)));
+    connect(chocobo_stable_5,SIGNAL(mSpeed_changed(quint16)),this,SLOT(c5_maxspeedChanged(quint16)));
+    connect(chocobo_stable_5,SIGNAL(sprint_changed(quint16)),this,SLOT(c5_sprintChanged(quint16)));
+    connect(chocobo_stable_5,SIGNAL(mSprint_changed(quint16)),this,SLOT(c5_maxsprintChanged(quint16)));
+    connect(chocobo_stable_5,SIGNAL(stamina_changed(quint16)),this,SLOT(c5_staminaChanged(quint16)));
+    connect(chocobo_stable_5,SIGNAL(sex_changed(quint8)),this,SLOT(c5_sexChanged(quint8)));
+    connect(chocobo_stable_5,SIGNAL(type_changed(quint8)),this,SLOT(c5_typeChanged(quint8)));
+    connect(chocobo_stable_5,SIGNAL(accel_changed(quint8)),this,SLOT(c5_accelChanged(quint8)));
+    connect(chocobo_stable_5,SIGNAL(coop_changed(quint8)),this,SLOT(c5_coopChanged(quint8)));
+    connect(chocobo_stable_5,SIGNAL(intelligence_changed(quint8)),this,SLOT(c5_intelChanged(quint8)));
+    connect(chocobo_stable_5,SIGNAL(personality_changed(quint8)),this,SLOT(c5_personalityChanged(quint8)));
+    connect(chocobo_stable_5,SIGNAL(pCount_changed(quint8)),this,SLOT(c5_pcountChanged(quint8)));
+    connect(chocobo_stable_5,SIGNAL(wins_changed(quint8)),this,SLOT(c5_raceswonChanged(quint8)));
+    //Chocobo Editor 1
+    connect(chocobo_stable_6,SIGNAL(name_changed(QString)),this,SLOT(c6_nameChanged(QString)));
+    connect(chocobo_stable_6,SIGNAL(cantMate_changed(bool)),this,SLOT(c6_mated_toggled(bool)));
+    connect(chocobo_stable_6,SIGNAL(speed_changed(quint16)),this,SLOT(c6_speedChanged(quint16)));
+    connect(chocobo_stable_6,SIGNAL(mSpeed_changed(quint16)),this,SLOT(c6_maxspeedChanged(quint16)));
+    connect(chocobo_stable_6,SIGNAL(sprint_changed(quint16)),this,SLOT(c6_sprintChanged(quint16)));
+    connect(chocobo_stable_6,SIGNAL(mSprint_changed(quint16)),this,SLOT(c6_maxsprintChanged(quint16)));
+    connect(chocobo_stable_6,SIGNAL(stamina_changed(quint16)),this,SLOT(c6_staminaChanged(quint16)));
+    connect(chocobo_stable_6,SIGNAL(sex_changed(quint8)),this,SLOT(c6_sexChanged(quint8)));
+    connect(chocobo_stable_6,SIGNAL(type_changed(quint8)),this,SLOT(c6_typeChanged(quint8)));
+    connect(chocobo_stable_6,SIGNAL(accel_changed(quint8)),this,SLOT(c6_accelChanged(quint8)));
+    connect(chocobo_stable_6,SIGNAL(coop_changed(quint8)),this,SLOT(c6_coopChanged(quint8)));
+    connect(chocobo_stable_6,SIGNAL(intelligence_changed(quint8)),this,SLOT(c6_intelChanged(quint8)));
+    connect(chocobo_stable_6,SIGNAL(personality_changed(quint8)),this,SLOT(c6_personalityChanged(quint8)));
+    connect(chocobo_stable_6,SIGNAL(pCount_changed(quint8)),this,SLOT(c6_pcountChanged(quint8)));
+    connect(chocobo_stable_6,SIGNAL(wins_changed(quint8)),this,SLOT(c6_raceswonChanged(quint8)));
 
     file_modified(false);
 }
@@ -1387,7 +1467,6 @@ void MainWindow::charupdate(void)
 
     //Set up char buttons and avatar icon.
     ui->lbl_avatar->setPixmap(Chars.Pixmap(ff7->charID(s,curchar)));
-    //ui->lbl_avatar->setStyleSheet(Chaavatar_style(ff7->charID(s,curchar)));
     ui->btn_cloud->setIcon(Chars.Icon(ff7->charID(s,0)));
     ui->btn_barret->setIcon(Chars.Icon(ff7->charID(s,1)));
     ui->btn_tifa->setIcon(Chars.Icon(ff7->charID(s,2)));
@@ -1397,15 +1476,6 @@ void MainWindow::charupdate(void)
     ui->btn_cait->setIcon(Chars.Icon(ff7->charID(s,6)));
     ui->btn_vincent->setIcon(Chars.Icon(ff7->charID(s,7)));
     ui->btn_cid->setIcon(Chars.Icon(ff7->charID(s,8)));
-    //ui->btn_cloud->setStyleSheet(avatar_style(ff7->slot[s].chars[0].id));
-    //ui->btn_barret->setStyleSheet(avatar_style(ff7->slot[s].chars[1].id));
-    //ui->btn_tifa->setStyleSheet(avatar_style(ff7->slot[s].chars[2].id));
-    //ui->btn_aeris->setStyleSheet(avatar_style(ff7->slot[s].chars[3].id));
-    //ui->btn_red->setStyleSheet(avatar_style(ff7->slot[s].chars[4].id));
-    //ui->btn_yuffie->setStyleSheet(avatar_style(ff7->slot[s].chars[5].id));
-    //ui->btn_cait->setStyleSheet(avatar_style(ff7->slot[s].chars[6].id));
-    //ui->btn_vincent->setStyleSheet(avatar_style(ff7->slot[s].chars[7].id));
-    //ui->btn_cid->setStyleSheet(avatar_style(ff7->slot[s].chars[8].id));
     load=false;
     setweaponslots();
     setarmorslots();
