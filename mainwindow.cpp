@@ -734,7 +734,7 @@ void MainWindow::on_actionExport_PSX_activated()
     else
     {
         ui->combo_control->setCurrentIndex(0);
-        ff7->Export_PSX(fileName);
+        ff7->Export_PSX(s,fileName);
         file_modified(false);
     }
 }

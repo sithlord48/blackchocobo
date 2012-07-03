@@ -28,7 +28,7 @@ public:
   bool LoadFile(const QString &fileName);
   bool SaveFile(const QString &fileName);
   bool Export_PC(const QString &fileName);
-  bool Export_PSX(const QString &fileName);
+  bool Export_PSX(int s,const QString &fileName);
   bool Export_VMC(const QString &fileName);
   bool Export_DEX(const QString &fileName);
   bool Export_VGS(const QString &fileName);

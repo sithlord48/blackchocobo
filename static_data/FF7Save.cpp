@@ -166,7 +166,7 @@ bool FF7Save::Export_PC(const QString &fileName)
         return false;
     }
 }
-bool FF7Save::Export_PSX(const QString &fileName)
+bool FF7Save::Export_PSX(int s,const QString &fileName)
 {
     if(fileName.isEmpty()){return false;}
     QString prev_type = SG_TYPE;
@@ -180,35 +180,38 @@ bool FF7Save::Export_PSX(const QString &fileName)
        fileName.contains("00700") || fileName.contains("01057") ||
        fileName.contains("00868"))
     {
-        if(fileName.endsWith("S01")){for(int i=0;i<256;i++)	  {hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S01[i];}}
-        else if(fileName.endsWith("S02")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S02[i];}}
-        else if(fileName.endsWith("S03")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S03[i];}}
-        else if(fileName.endsWith("S04")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S04[i];}}
-        else if(fileName.endsWith("S05")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S05[i];}}
-        else if(fileName.endsWith("S06")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S06[i];}}
-        else if(fileName.endsWith("S07")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S07[i];}}
-        else if(fileName.endsWith("S08")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S08[i];}}
-        else if(fileName.endsWith("S09")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S09[i];}}
-        else if(fileName.endsWith("S10")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S10[i];}}
-        else if(fileName.endsWith("S11")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S11[i];}}
-        else if(fileName.endsWith("S12")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S12[i];}}
-        else if(fileName.endsWith("S13")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S13[i];}}
-        else if(fileName.endsWith("S14")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S14[i];}}
-        else if(fileName.endsWith("S15")){for(int i=0;i<256;i++){hf[0].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S15[i];}}
+        if(fileName.endsWith("S01")){for(int i=0;i<256;i++)	  {hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S01[i];}}
+        else if(fileName.endsWith("S02")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S02[i];}}
+        else if(fileName.endsWith("S03")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S03[i];}}
+        else if(fileName.endsWith("S04")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S04[i];}}
+        else if(fileName.endsWith("S05")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S05[i];}}
+        else if(fileName.endsWith("S06")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S06[i];}}
+        else if(fileName.endsWith("S07")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S07[i];}}
+        else if(fileName.endsWith("S08")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S08[i];}}
+        else if(fileName.endsWith("S09")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S09[i];}}
+        else if(fileName.endsWith("S10")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S10[i];}}
+        else if(fileName.endsWith("S11")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S11[i];}}
+        else if(fileName.endsWith("S12")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S12[i];}}
+        else if(fileName.endsWith("S13")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S13[i];}}
+        else if(fileName.endsWith("S14")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S14[i];}}
+        else if(fileName.endsWith("S15")){for(int i=0;i<256;i++){hf[s].sl_header[i] = PSX_SAVE_GAME_FILE_HEADER_S15[i];}}
         else{/*user ERROR*/}
-        for(int i=0; i<SG_SLOT_FOOTER;i++){hf[0].sl_footer[i] =0x00;} //CLEAN FOOTER
+        for(int i=0; i<SG_SLOT_FOOTER;i++){hf[s].sl_footer[i] =0x00;} //CLEAN FOOTER
     }
-    fix_psx_header(0);
-    if(SaveFile(fileName))
-    {
-        setType(prev_type);
-        return true;
-    }
-    else
-    {
-        setType(prev_type);
-        return false;
-    }
+    fix_psx_header(s);
+
+    FILE *pfile;
+    pfile = fopen(fileName.toAscii(),"wb");
+    if(pfile == NULL){ setType(prev_type); return false;}
+    fwrite(file_headerp,SG_HEADER,1,pfile);
+    fwrite(hf[s].sl_header,SG_SLOT_HEADER,1,pfile);
+    fwrite(&slot[s],SG_DATA_SIZE,1,pfile);
+    fwrite(hf[s].sl_footer,SG_SLOT_FOOTER,1,pfile);
+    fwrite(file_footerp,SG_FOOTER,1,pfile);
+    fclose(pfile);
+    fix_sum(fileName);
+    setType(prev_type);
+    return true;
 }
 bool FF7Save::Export_VMC(const QString &fileName)
 {
