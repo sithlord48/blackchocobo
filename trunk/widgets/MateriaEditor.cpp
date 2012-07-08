@@ -24,6 +24,7 @@ MateriaEditor::MateriaEditor(QWidget *parent):QWidget(parent)
     init_display();
     init_data();
     init_connections();
+    setMateria(0xFF,16777215);
 }
 /*
 MateriaEditor::MateriaEditor(QWidget *parent, quint8 materia_id,qint32 materia_ap):QWidget(parent)
