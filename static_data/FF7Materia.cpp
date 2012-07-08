@@ -56,4 +56,5 @@ QStringList FF7Materia::Status(int i)
     }
     return translated_list;
 }
+quint32 FF7Materia::ap2num(quint8 ap[3]){return (ap[0] | (ap[1] << 8) | (ap[2]<<16));}
 

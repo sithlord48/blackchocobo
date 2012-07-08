@@ -58,7 +58,7 @@ struct MATERIA
     qint8 levels;
     QString elemental;
     QStringList status;
-};
+ };
 
 class FF7Materia
 {
@@ -89,6 +89,7 @@ public:
 
     QStringList Skills(int id);
     QStringList Status(int i);
+    quint32 ap2num (quint8 ap[3]);
 };
 
 static MATERIA Materias[]=
