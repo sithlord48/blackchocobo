@@ -1864,15 +1864,6 @@ void MainWindow::guirefresh(bool newgame)
                 ui->tbl_materia_2->setItem(mat,0,newItem);
             }
         }
-        ui->btn_cloud->setIcon(Chars.Icon(ff7->charID(s,0)));
-        ui->btn_barret->setIcon(Chars.Icon(ff7->charID(s,1)));
-        ui->btn_tifa->setIcon(Chars.Icon(ff7->charID(s,2)));
-        ui->btn_aeris->setIcon(Chars.Icon(ff7->charID(s,3)));
-        ui->btn_red->setIcon(Chars.Icon(ff7->charID(s,4)));
-        ui->btn_yuffie->setIcon(Chars.Icon(ff7->charID(s,5)));
-        ui->btn_cait->setIcon(Chars.Icon(ff7->charID(s,6)));
-        ui->btn_vincent->setIcon(Chars.Icon(ff7->charID(s,7)));
-        ui->btn_cid->setIcon(Chars.Icon(ff7->charID(s,8)));
         load=false;
         // all functions should set load on their own.
         /*~~~~~Call External Functions~~~~~~~*/
@@ -1881,9 +1872,22 @@ void MainWindow::guirefresh(bool newgame)
         chocobo_refresh();
         materiaupdate();
         progress_update();
+        set_char_buttons();
         if(ui->action_show_debug->isChecked()){testdata_refresh();}
     }
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
+void MainWindow::set_char_buttons()
+{
+    ui->btn_cloud->setIcon(Chars.Icon(ff7->charID(s,0)));
+    ui->btn_barret->setIcon(Chars.Icon(ff7->charID(s,1)));
+    ui->btn_tifa->setIcon(Chars.Icon(ff7->charID(s,2)));
+    ui->btn_aeris->setIcon(Chars.Icon(ff7->charID(s,3)));
+    ui->btn_red->setIcon(Chars.Icon(ff7->charID(s,4)));
+    ui->btn_yuffie->setIcon(Chars.Icon(ff7->charID(s,5)));
+    ui->btn_cait->setIcon(Chars.Icon(ff7->charID(s,6)));
+    ui->btn_vincent->setIcon(Chars.Icon(ff7->charID(s,7)));
+    ui->btn_cid->setIcon(Chars.Icon(ff7->charID(s,8)));
+}
 void MainWindow::progress_update()
 {
     load=true;
@@ -4125,6 +4129,7 @@ void MainWindow::char_curMp_changed(quint16 mp)
 void MainWindow::char_id_changed(qint8 id)
 {
     ff7->setCharID(s,curchar,id);
+    set_char_buttons();
     file_modified(true);
 }
 void MainWindow::char_level_changed(qint8 level)

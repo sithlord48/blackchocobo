@@ -618,6 +618,6 @@ private slots://try to keep these in the same order as the .cpp file
     void set_LR_Color(QColor color);
     void set_LL_Color(QColor color);
 
-
+    void set_char_buttons();
 };
 #endif // MAINWINDOW_H

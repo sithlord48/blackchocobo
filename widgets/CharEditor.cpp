@@ -900,8 +900,8 @@ void CharEditor::init_display()
 
     main_layout = new QVBoxLayout;
     main_layout->setContentsMargins(0,0,0,0);
-    main_layout->addWidget(btnPage);
     main_layout->addWidget(main_widget);
+    main_layout->addWidget(btnPage);
    this->setLayout(main_layout);
 }
 void CharEditor::init_connections()
@@ -2329,19 +2329,19 @@ void CharEditor::btn_page_clicked()
     {
         main_widget->setCurrentIndex(1);
         btnPage->setText(QString(tr("Character Info")));
-        main_layout->removeWidget(btnPage);
-        main_layout->removeWidget(main_widget);
-        main_layout->addWidget(main_widget);
-        main_layout->addWidget(btnPage);
+        //main_layout->removeWidget(btnPage);
+        //main_layout->removeWidget(main_widget);
+       // main_layout->addWidget(main_widget);
+       // main_layout->addWidget(btnPage);
     }
     else if (main_widget->currentIndex()==1)
     {
         main_widget->setCurrentIndex(0);
         btnPage->setText(QString(tr("Equipment / Materia")));
-        main_layout->removeWidget(btnPage);
-        main_layout->removeWidget(main_widget);
-        main_layout->addWidget(btnPage);
-        main_layout->addWidget(main_widget);
+       // main_layout->removeWidget(btnPage);
+      //  main_layout->removeWidget(main_widget);
+      //  main_layout->addWidget(btnPage);
+      // main_layout->addWidget(main_widget);
     }
 }
 //void setFlags(int,int);
