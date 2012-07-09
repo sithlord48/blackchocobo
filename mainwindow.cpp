@@ -36,10 +36,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     for(int i=0;i<4;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
 
     //set up comboboxes.
-    for (int i=256;i<288;i++){ui->combo_armor->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
-    for (int i=288;i<320;i++){ui->combo_acc->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
-        ui->combo_acc->addItem(QPixmap::fromImage(Items.Image(288)),tr("-None-"));//add clear option for accessories
-        for (int i=0;i<320;i++){ui->combo_additem->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
     //Fill the type combo boxes,picking a random materia of that type for each needed icon
     //LATER//
     //set the materia buttons.
@@ -82,8 +78,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     }
 
     //Hide the stuff that needs to be hidden.
-    ui->combo_id->setVisible(false);
-    ui->lbl_id->setVisible(false);
     ui->compare_table->setEnabled(false);
     ui->tbl_diff->setVisible(0);
     ui->bm_unknown->setVisible(0);
@@ -100,14 +94,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     //testing stuff.
 
     ui->tabWidget->setTabEnabled(8,0);
-    ui->lbl_0x34->setVisible(false);
-    ui->lbl_0x35->setVisible(false);
-    ui->lbl_0x36->setVisible(false);
-    ui->lbl_0x37->setVisible(false);
-    ui->lcd_0x34->setVisible(false);
-    ui->lcd_0x35->setVisible(false);
-    ui->lcd_0x36->setVisible(false);
-    ui->lcd_0x37->setVisible(false);
     ui->cb_Region_Slot->setEnabled(false);
     ui->group_controller_mapping->setVisible(false);
     ui->actionNew_Window->setVisible(0);
@@ -212,10 +198,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     ui->lbl_battle_love_aeris->setPixmap(Chars.Pixmap(3));
     ui->lbl_battle_love_yuffie->setPixmap(Chars.Pixmap(5));
 
-    ui->combo_id->blockSignals(1);
-    for(int i=0;i<11;i++){ui->combo_id->addItem(Chars.Icon(i),QString(""));}
-    ui->combo_id->blockSignals(0);
-
     for(int i=0;i<11;i++){ui->combo_party1->addItem(Chars.Icon(i),Chars.defaultName(i));}
     for(int i=0;i<11;i++){ui->combo_party2->addItem(Chars.Icon(i),Chars.defaultName(i));}
     for(int i=0;i<11;i++){ui->combo_party3->addItem(Chars.Icon(i),Chars.defaultName(i));}
@@ -246,6 +228,13 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     ui->group_materia->setLayout(materia_editor_layout);
     ui->group_materia->setContentsMargins(0,6,0,6);
 
+    char_editor = new CharEditor;
+    QHBoxLayout *char_editor_layout = new QHBoxLayout;
+    char_editor_layout->setContentsMargins(0,0,0,0);
+    char_editor_layout->addWidget(char_editor);
+    ui->group_char_editor_box->setLayout(char_editor_layout);
+
+    /*
     materia_editor_slot = new MateriaEditor;
     materia_editor_slot->setStarsSize(32);
     QVBoxLayout *materia_editor_slot_layout = new QVBoxLayout();
@@ -253,7 +242,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     materia_editor_slot_layout->addWidget(materia_editor_slot);
     ui->group_materia_slot->setLayout(materia_editor_slot_layout);
     ui->group_materia_slot->setContentsMargins(0,0,0,6);
-
+*/
     chocobo_stable_1 = new ChocoboEditor;
     QVBoxLayout *stable_1_layout = new QVBoxLayout;
     stable_1_layout->setContentsMargins(0,0,0,0);
@@ -302,8 +291,47 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     connect(materia_editor,SIGNAL(ap_changed(qint32)),this,SLOT(materia_ap_changed(qint32)));
     connect(materia_editor,SIGNAL(id_changed(qint8)),this,SLOT(materia_id_changed(qint8)));
 
-    connect(materia_editor_slot,SIGNAL(ap_changed(qint32)),this,SLOT(materia_slot_ap_changed(qint32)));
-    connect(materia_editor_slot,SIGNAL(id_changed(qint8)),this,SLOT(materia_slot_id_changed(qint8)));
+//    connect(materia_editor_slot,SIGNAL(ap_changed(qint32)),this,SLOT(materia_slot_ap_changed(qint32)));
+//    connect(materia_editor_slot,SIGNAL(id_changed(qint8)),this,SLOT(materia_slot_id_changed(qint8)));
+
+    connect(char_editor,SIGNAL(id_changed(qint8)),this,SLOT(char_id_changed(qint8)));
+    connect(char_editor,SIGNAL(level_changed(qint8)),this,SLOT(char_level_changed(qint8)));
+    connect(char_editor,SIGNAL(str_changed(quint8)),this,SLOT(char_str_changed(quint8)));
+    connect(char_editor,SIGNAL(vit_changed(quint8)),this,SLOT(char_vit_changed(quint8)));
+    connect(char_editor,SIGNAL(mag_changed(quint8)),this,SLOT(char_mag_changed(quint8)));
+    connect(char_editor,SIGNAL(spi_changed(quint8)),this,SLOT(char_spi_changed(quint8)));
+    connect(char_editor,SIGNAL(dex_changed(quint8)),this,SLOT(char_dex_changed(quint8)));
+    connect(char_editor,SIGNAL(lck_changed(quint8)),this,SLOT(char_lck_changed(quint8)));
+    connect(char_editor,SIGNAL(strBonus_changed(quint8)),this,SLOT(char_strBonus_changed(quint8)));
+    connect(char_editor,SIGNAL(vitBonus_changed(quint8)),this,SLOT(char_vitBonus_changed(quint8)));
+    connect(char_editor,SIGNAL(magBonus_changed(quint8)),this,SLOT(char_magBonus_changed(quint8)));
+    connect(char_editor,SIGNAL(spiBonus_changed(quint8)),this,SLOT(char_spiBonus_changed(quint8)));
+    connect(char_editor,SIGNAL(dexBonus_changed(quint8)),this,SLOT(char_dexBonus_changed(quint8)));
+    connect(char_editor,SIGNAL(lckBonus_changed(quint8)),this,SLOT(char_lckBonus_changed(quint8)));
+    connect(char_editor,SIGNAL(limitLevel_changed(qint8)),this,SLOT(char_limitLevel_changed(qint8)));
+    connect(char_editor,SIGNAL(limitBar_changed(quint8)),this,SLOT(char_limitBar_changed(quint8)));
+    connect(char_editor,SIGNAL(name_changed(QString)),this,SLOT(char_name_changed(QString)));
+    connect(char_editor,SIGNAL(weapon_changed(quint8)),this,SLOT(char_weapon_changed(quint8)));
+    connect(char_editor,SIGNAL(armor_changed(quint8)),this,SLOT(char_armor_changed(quint8)));
+    connect(char_editor,SIGNAL(accessory_changed(quint8)),this,SLOT(char_accessory_changed(quint8)));
+    connect(char_editor,SIGNAL(curHp_changed(quint16)),this,SLOT(char_curHp_changed(quint16)));
+    connect(char_editor,SIGNAL(maxHp_changed(quint16)),this,SLOT(char_maxHp_changed(quint16)));
+    connect(char_editor,SIGNAL(curMp_changed(quint16)),this,SLOT(char_curMp_changed(quint16)));
+    connect(char_editor,SIGNAL(maxMp_changed(quint16)),this,SLOT(char_maxMp_changed(quint16)));
+    connect(char_editor,SIGNAL(kills_changed(quint16)),this,SLOT(char_kills_changed(quint16)));
+    connect(char_editor,SIGNAL(row_changed(quint8)),this,SLOT(char_row_changed(quint8)));
+    connect(char_editor,SIGNAL(levelProgress_changed(quint8)),this,SLOT(char_levelProgress_changed(quint8)));
+    connect(char_editor,SIGNAL(sadnessfury_changed(quint8)),this,SLOT(char_sadnessfury_changed(quint8)));
+    connect(char_editor,SIGNAL(limits_changed(quint16)),this,SLOT(char_limits_changed(quint16)));
+    connect(char_editor,SIGNAL(timesused1_changed(quint16)),this,SLOT(char_timesused1_changed(quint16)));
+    connect(char_editor,SIGNAL(timesused2_changed(quint16)),this,SLOT(char_timeused2_changed(quint16)));
+    connect(char_editor,SIGNAL(timesused3_changed(quint16)),this,SLOT(char_timeused3_changed(quint16)));
+    connect(char_editor,SIGNAL(baseHp_changed(quint16)),this,SLOT(char_baseHp_changed(quint16)));
+    connect(char_editor,SIGNAL(baseMp_changed(quint16)),this,SLOT(char_baseMp_changed(quint16)));
+    connect(char_editor,SIGNAL(exp_changed(quint32)),this,SLOT(char_exp_changed(quint32)));
+    connect(char_editor,SIGNAL(mslotChanged(int)),this,SLOT(char_mslot_changed(int)));
+    connect(char_editor,SIGNAL(Materias_changed(materia)),this,SLOT(char_materia_changed(materia)));
+    connect(char_editor,SIGNAL(expNext_changed(quint32)),this,SLOT(char_expNext_changed(quint32)));
 
     //Chocobo Editor 1
     connect(chocobo_stable_1,SIGNAL(name_changed(QString)),this,SLOT(c1_nameChanged(QString)));
@@ -337,7 +365,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     connect(chocobo_stable_2,SIGNAL(personality_changed(quint8)),this,SLOT(c2_personalityChanged(quint8)));
     connect(chocobo_stable_2,SIGNAL(pCount_changed(quint8)),this,SLOT(c2_pcountChanged(quint8)));
     connect(chocobo_stable_2,SIGNAL(wins_changed(quint8)),this,SLOT(c2_raceswonChanged(quint8)));
-    //Chocobo Editor 1
+    //Chocobo Editor 3
     connect(chocobo_stable_3,SIGNAL(name_changed(QString)),this,SLOT(c3_nameChanged(QString)));
     connect(chocobo_stable_3,SIGNAL(cantMate_changed(bool)),this,SLOT(c3_mated_toggled(bool)));
     connect(chocobo_stable_3,SIGNAL(speed_changed(quint16)),this,SLOT(c3_speedChanged(quint16)));
@@ -353,7 +381,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     connect(chocobo_stable_3,SIGNAL(personality_changed(quint8)),this,SLOT(c3_personalityChanged(quint8)));
     connect(chocobo_stable_3,SIGNAL(pCount_changed(quint8)),this,SLOT(c3_pcountChanged(quint8)));
     connect(chocobo_stable_3,SIGNAL(wins_changed(quint8)),this,SLOT(c3_raceswonChanged(quint8)));
-    //Chocobo Editor 1
+    //Chocobo Editor 4
     connect(chocobo_stable_4,SIGNAL(name_changed(QString)),this,SLOT(c4_nameChanged(QString)));
     connect(chocobo_stable_4,SIGNAL(cantMate_changed(bool)),this,SLOT(c4_mated_toggled(bool)));
     connect(chocobo_stable_4,SIGNAL(speed_changed(quint16)),this,SLOT(c4_speedChanged(quint16)));
@@ -369,7 +397,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     connect(chocobo_stable_4,SIGNAL(personality_changed(quint8)),this,SLOT(c4_personalityChanged(quint8)));
     connect(chocobo_stable_4,SIGNAL(pCount_changed(quint8)),this,SLOT(c4_pcountChanged(quint8)));
     connect(chocobo_stable_4,SIGNAL(wins_changed(quint8)),this,SLOT(c4_raceswonChanged(quint8)));
-    //Chocobo Editor 1
+    //Chocobo Editor 5
     connect(chocobo_stable_5,SIGNAL(name_changed(QString)),this,SLOT(c5_nameChanged(QString)));
     connect(chocobo_stable_5,SIGNAL(cantMate_changed(bool)),this,SLOT(c5_mated_toggled(bool)));
     connect(chocobo_stable_5,SIGNAL(speed_changed(quint16)),this,SLOT(c5_speedChanged(quint16)));
@@ -385,7 +413,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     connect(chocobo_stable_5,SIGNAL(personality_changed(quint8)),this,SLOT(c5_personalityChanged(quint8)));
     connect(chocobo_stable_5,SIGNAL(pCount_changed(quint8)),this,SLOT(c5_pcountChanged(quint8)));
     connect(chocobo_stable_5,SIGNAL(wins_changed(quint8)),this,SLOT(c5_raceswonChanged(quint8)));
-    //Chocobo Editor 1
+    //Chocobo Editor 6
     connect(chocobo_stable_6,SIGNAL(name_changed(QString)),this,SLOT(c6_nameChanged(QString)));
     connect(chocobo_stable_6,SIGNAL(cantMate_changed(bool)),this,SLOT(c6_mated_toggled(bool)));
     connect(chocobo_stable_6,SIGNAL(speed_changed(quint16)),this,SLOT(c6_speedChanged(quint16)));
@@ -558,7 +586,7 @@ void MainWindow::on_actionImport_char_triggered()
         ff7->importChar(s,curchar,new_char);
     }
     file_modified(true);
-    charupdate();
+    char_editor->setChar(ff7->slot[s].chars[curchar],ff7->charName(s,curchar));
 }
 
 void MainWindow::on_actionExport_char_triggered()
@@ -828,11 +856,12 @@ void MainWindow::on_action_auto_char_growth_triggered(bool checked)
     {
         settings->setValue("autochargrowth",1);
         ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_checked"));
-        if(!load){setchar_growth(0);}
+        if(!load){char_editor->setAutoLevel(1); char_editor->setAutoStatCalc(1);}
     }
     else
     {
         settings->setValue("autochargrowth",0);
+        char_editor->setAutoLevel(0); char_editor->setAutoStatCalc(0);
         ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_unchecked"));
     }
 }
@@ -842,17 +871,7 @@ void MainWindow::on_action_show_debug_toggled(bool checked)
     {
         ui->actionNew_Window->setVisible(1);
         ui->tabWidget->setTabEnabled(8,1);
-        ui->lbl_0x34->setVisible(true);
-        ui->lbl_0x35->setVisible(true);
-        ui->lbl_0x36->setVisible(true);
-        ui->lbl_0x37->setVisible(true);
-        ui->lcd_0x34->setVisible(true);
-        ui->lcd_0x35->setVisible(true);
-        ui->lcd_0x36->setVisible(true);
-        ui->lcd_0x37->setVisible(true);
         ui->cb_Region_Slot->setEnabled(true);
-        ui->combo_id->setVisible(true);
-        ui->lbl_id->setVisible(true);
         ui->bm_unknown->setVisible(true);
         ui->bh_id->setVisible(true);
         ui->leader_id->setVisible(true);
@@ -874,17 +893,7 @@ void MainWindow::on_action_show_debug_toggled(bool checked)
     {
         ui->actionNew_Window->setVisible(0);
         ui->tabWidget->setTabEnabled(8,0);
-        ui->lbl_0x34->setVisible(false);
-        ui->lbl_0x35->setVisible(false);
-        ui->lbl_0x36->setVisible(false);
-        ui->lbl_0x37->setVisible(false);
-        ui->lcd_0x34->setVisible(false);
-        ui->lcd_0x35->setVisible(false);
-        ui->lcd_0x36->setVisible(false);
-        ui->lcd_0x37->setVisible(false);
         ui->cb_Region_Slot->setEnabled(false);
-        ui->combo_id->setVisible(false);
-        ui->lbl_id->setVisible(false);
         ui->bm_unknown->setVisible(false);
         ui->bh_id->setVisible(false);
         ui->leader_id->setVisible(false);
@@ -1186,881 +1195,6 @@ void MainWindow::on_action_Region_JPN_International_triggered(bool checked)
 }}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~END MENU ACTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~GUI FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-/*
-QString MainWindow::avatar_style(int id)
-{
-    QString style;
-    switch(id)
-    {
-      case 0:
-        style="image: url(:/icon/cloud_icon)";
-        break;
-      case 1:
-        style="image: url(:/icon/barret_icon)";
-        break;
-      case 2:
-        style="image: url(:/icon/tifa_icon)";
-        break;
-      case 3:
-        style="image: url(:/icon/aeris_icon)";
-        break;
-      case 4:
-        style="image: url(:/icon/red_icon)";
-        break;
-      case 5:
-        style="image: url(:/icon/yuffie_icon)";
-        break;
-      case 6:
-        style="image: url(:/icon/cait_icon)";
-        break;
-      case 7:
-        style="image: url(:/icon/vincent_icon)";
-        break;
-      case 8:
-        style="image: url(:/icon/cid_icon)";
-        break;
-      case 9:
-        style="image: url(:/icon/y_cloud_icon)";
-        break;
-      case 10:
-        style="image: url(:/icon/sep_icon)";
-        break;
-      }
-    return style;
-}
-*/
-/*~~~~~~~~~Char Update~~~~~~~~~~*/
-void MainWindow::charupdate(void)
-{    
-    load=true;
-    //QByteArray text;
-    quint8 char_weapon_offset=0;
-    //clear everthing.
-    ui->cb_id->setText("");
-    ui->cb_id->setChecked(false);
-    ui->cb_id->setVisible(false);
-    ui->line_name->clear();
-    ui->cb_sadness->setChecked(0);
-    ui->cb_fury->setChecked(0);
-    ui->cb_front->setChecked(0);
-    ui->combo_weapon->clear();
-
-    if(curchar== 6)
-    {
-        ui->cb_id->setText(tr("Young Cloud"));
-        ui->cb_id->setVisible(true);
-        if(ff7->charID(s,6) == 9){ui->cb_id->setChecked(1);}
-        else{ui->cb_id->setChecked(0);}
-    }
-
-    if(curchar==7)
-    {
-        ui->cb_id->setText(tr("Sephiroth"));
-        ui->cb_id->setVisible(true);
-        if(ff7->charID(s,7) == 10){ui->cb_id->setChecked(1);}
-        else{ui->cb_id->setChecked(0);}
-    }
-
-    ui->combo_id->setCurrentIndex(ff7->charID(s,curchar));
-
-    ui->line_name->setText(ff7->charName(s,curchar));
-
-    ui->sb_exp->setValue(ff7->charCurrentExp(s,curchar));
-    ui->pbar_level->setValue(ff7->charFlag(s,curchar,2));
-    ui->lcd_next->display(double(ff7->charNextExp(s,curchar)));
-    ui->sb_lvl->setValue(ff7->charLevel(s,curchar));
-    ui->sb_curhp->setValue(ff7->charCurrentHp(s,curchar));
-    ui->sb_curmp->setValue(ff7->charCurrentMp(s,curchar));
-    ui->sb_maxhp->setValue(ff7->charMaxHp(s,curchar));
-    ui->sb_maxmp->setValue(ff7->charMaxMp(s,curchar));
-    ui->sb_str->setValue(ff7->charStr(s,curchar));
-    ui->sb_mag->setValue(ff7->charMag(s,curchar));
-    ui->sb_lck->setValue(ff7->charLck(s,curchar));
-    ui->sb_spi->setValue(ff7->charSpi(s,curchar));
-    ui->sb_dex->setValue(ff7->charDex(s,curchar));
-    ui->sb_vit->setValue(ff7->charVit(s,curchar));
-    ui->sb_hp->setValue(ff7->charBaseHp(s,curchar));
-    ui->sb_mp->setValue(ff7->charBaseMp(s,curchar));
-    ui->sb_kills->setValue(ff7->charKills(s,curchar));
-    ui->sb_used1->setValue(ff7->charTimesLimitUsed(s,curchar,1));
-    ui->sb_used2->setValue(ff7->charTimesLimitUsed(s,curchar,2));
-    ui->sb_used3->setValue(ff7->charTimesLimitUsed(s,curchar,3));
-    ui->sb_limitlvl->setValue(ff7->charLimitLevel(s,curchar));
-    ui->slide_limit->setValue(ff7->charLimitBar(s,curchar));
-
-    if(ff7->charFlag(s,curchar,0) == 16){ui->cb_sadness->setChecked(1);}
-    if(ff7->charFlag(s,curchar,0) == 32){ui->cb_fury->setChecked(1);}
-    if(ff7->charFlag(s,curchar,1) == 255){ui->cb_front->setChecked(1);}
-
-    ui->sb_strbonus->setValue(ff7->charStrBonus(s,curchar));
-    ui->sb_vitbonus->setValue(ff7->charVitBonus(s,curchar));
-    ui->sb_magbonus->setValue(ff7->charMagBonus(s,curchar));
-    ui->sb_spibonus->setValue(ff7->charSpiBonus(s,curchar));
-    ui->sb_dexbonus->setValue(ff7->charDexBonus(s,curchar));
-    ui->sb_lckbonus->setValue(ff7->charLckBonus(s,curchar));
-    ui->lcd_0x34->display(ff7->charUnknown(s,curchar,0));
-    ui->lcd_0x35->display(ff7->charUnknown(s,curchar,1));
-    ui->lcd_0x36->display(ff7->charUnknown(s,curchar,2));
-    ui->lcd_0x37->display(ff7->charUnknown(s,curchar,3));
-
-    //Set up Limit Boxes Clear and hide all
-    ui->limit_1a->setChecked(0);    ui->limit_1a->setVisible(0);
-    ui->limit_1b->setChecked(0);    ui->limit_1b->setVisible(0);
-    ui->limit_2a->setChecked(0);    ui->limit_2a->setVisible(0);
-    ui->limit_2b->setChecked(0);    ui->limit_2b->setVisible(0);
-    ui->limit_3a->setChecked(0);    ui->limit_3a->setVisible(0);
-    ui->limit_3b->setChecked(0);    ui->limit_3b->setVisible(0);
-    ui->limit_4->setChecked(0);     ui->limit_4->setVisible(0);
-    //set Visible based on char's limits and check the boxes
-    switch(ff7->charID(s,curchar))
-    {
-    case 6://Cait Sith Has 2 Limits
-        ui->limit_1a->setVisible(1);
-        ui->limit_2a->setVisible(1);
-        //set learned limits
-        if (ff7->charLimits(s,curchar) & (1<<0)) ui->limit_1a->setChecked(1);
-        if (ff7->charLimits(s,curchar) & (1<<3)) ui->limit_2a->setChecked(1);
-        break;
-    case 7://Vincent Has 4 Limits
-        ui->limit_1a->setVisible(1);
-        ui->limit_2a->setVisible(1);
-        ui->limit_3a->setVisible(1);
-        ui->limit_4->setVisible(1);
-        //check learned limits
-        if (ff7->charLimits(s,curchar) & (1<<0)) ui->limit_1a->setChecked(1);
-        if (ff7->charLimits(s,curchar) & (1<<3)) ui->limit_2a->setChecked(1);
-        if (ff7->charLimits(s,curchar) & (1<<6)) ui->limit_3a->setChecked(1);
-        if (ff7->charLimits(s,curchar) & (1<<9)) ui->limit_4->setChecked(1);
-        break;
-
-    case 10:break;//Sephiroth Has no limits
-
-    default://Normal Chars Have 7 limits
-        ui->limit_1a->setVisible(1);
-        ui->limit_1b->setVisible(1);
-        ui->limit_2a->setVisible(1);
-        ui->limit_2b->setVisible(1);
-        ui->limit_3a->setVisible(1);
-        ui->limit_3b->setVisible(1);
-        ui->limit_4->setVisible(1);
-        //check off learned limits
-        if (ff7->charLimits(s,curchar) & (1<<0)) ui->limit_1a->setChecked(1);
-        if (ff7->charLimits(s,curchar) & (1<<1)) ui->limit_1b->setChecked(1);
-        if (ff7->charLimits(s,curchar) & (1<<3)) ui->limit_2a->setChecked(1);
-        if (ff7->charLimits(s,curchar) & (1<<4)) ui->limit_2b->setChecked(1);
-        if (ff7->charLimits(s,curchar) & (1<<6)) ui->limit_3a->setChecked(1);
-        if (ff7->charLimits(s,curchar) & (1<<7)) ui->limit_3b->setChecked(1);
-        if (ff7->charLimits(s,curchar) & (1<<9)) ui->limit_4->setChecked(1);
-        break;
-    }
-    //Now Set Char Specific Things
-    switch (ff7->charID(s,curchar))
-    {
-        case 0:char_weapon_offset=0;    break;
-        case 1:char_weapon_offset=32;   break;
-        case 2:char_weapon_offset=16;   break;
-        case 3:char_weapon_offset=62;   break;
-        case 4:char_weapon_offset=48;   break;
-        case 5:char_weapon_offset=87;   break;
-        case 6:char_weapon_offset=101;  break;
-        case 7:char_weapon_offset=114;  break;
-        case 8:char_weapon_offset=73;   break;
-        case 9:char_weapon_offset=0;    break;
-        case 10:char_weapon_offset=0;   break;
-    }
-    switch(ff7->charID(s,curchar))
-    {
-    case 0: case 9://cloud
-        ui->limit_1a->setText(tr("Braver"));
-        ui->limit_1b->setText(tr("Cross-Slash"));
-        ui->limit_2a->setText(tr("Blade Beam"));
-        ui->limit_2b->setText(tr("Climhazzard"));
-        ui->limit_3a->setText(tr("Meteorain"));
-        ui->limit_3b->setText(tr("Finishing Touch"));
-        ui->limit_4->setText(tr("Omnislash"));
-        for(int i=128;i<144;i++){ui->combo_weapon->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
-        break;
-    case 1://barret
-        ui->limit_1a->setText(tr("Big Shot"));
-        ui->limit_1b->setText(tr("Mindblow"));
-        ui->limit_2a->setText(tr("Grenade Bomb"));
-        ui->limit_2b->setText(tr("Hammerblow"));
-        ui->limit_3a->setText(tr("Satellite Beam"));
-        ui->limit_3b->setText(tr("Angermax"));
-        ui->limit_4->setText(tr("Catastrophe"));
-        for(int i=160;i<176;i++){ui->combo_weapon->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
-        break;
-    case 2://tifa
-        ui->limit_1a->setText(tr("Beat Rush"));
-        ui->limit_1b->setText(tr("Somersault"));
-        ui->limit_2a->setText(tr("Waterkick"));
-        ui->limit_2b->setText(tr("Meteodrive"));
-        ui->limit_3a->setText(tr("Dolphin Blow"));
-        ui->limit_3b->setText(tr("Meteor Strike"));
-        ui->limit_4->setText(tr("Final Heaven"));
-        for(int i=144;i<160;i++){ui->combo_weapon->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
-        break;
-    case 3://aerith
-        ui->limit_1a->setText(tr("Healing Wind"));
-        ui->limit_1b->setText(tr("Seal Evil"));
-        ui->limit_2a->setText(tr("Breath of the Earth"));
-        ui->limit_2b->setText(tr("Fury Brand"));
-        ui->limit_3a->setText(tr("Planet Protector"));
-        ui->limit_3b->setText(tr("Pulse of Life"));
-        ui->limit_4->setText(tr("Great Gospel"));
-        for(int i=190;i<201;i++){ui->combo_weapon->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
-        break;
-    case 4://red
-        ui->limit_1a->setText(tr("Sled Fang"));
-        ui->limit_1b->setText(tr("Lunatic High"));
-        ui->limit_2a->setText(tr("Blood Fang"));
-        ui->limit_2b->setText(tr("Stardust Ray"));
-        ui->limit_3a->setText(tr("Howling Moon"));
-        ui->limit_3b->setText(tr("Earth Rave"));
-        ui->limit_4->setText(tr("Cosmo Memory"));
-        for(int i=176;i<190;i++){ui->combo_weapon->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
-        break;
-    case 5://yuffie
-        ui->limit_1a->setText(tr("Greased Lightning"));
-        ui->limit_1b->setText(tr("Clear Tranquil"));
-        ui->limit_2a->setText(tr("Landscaper"));
-        ui->limit_2b->setText(tr("Bloodfest"));
-        ui->limit_3a->setText(tr("Gauntlet"));
-        ui->limit_3b->setText(tr("Doom of the Living"));
-        ui->limit_4->setText(tr("All Creation"));
-        for(int i=215;i<229;i++){ui->combo_weapon->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
-        break;
-    case 6://cait
-        ui->limit_1a->setText(tr("Dice"));
-        ui->limit_2a->setText(tr("Slots"));
-        for(int i=229;i<242;i++){ui->combo_weapon->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
-        break;
-    case 7://vincent
-        ui->limit_1a->setText(tr("Galian Beast"));
-        ui->limit_2a->setText(tr("Death Gigas"));
-        ui->limit_3a->setText(tr("Hellmasker"));
-        ui->limit_4->setText(tr("Chaos"));
-        for(int i=242;i<255;i++){ui->combo_weapon->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
-        break;
-    case 8://cid
-        ui->limit_1a->setText(tr("Boost Jump"));
-        ui->limit_1b->setText(tr("Dynamite"));
-        ui->limit_2a->setText(tr("Hyper Jump"));
-        ui->limit_2b->setText(tr("Dragon"));
-        ui->limit_3a->setText(tr("Dragon Dive"));
-        ui->limit_3b->setText(tr("Big Brawl"));
-        ui->limit_4->setText(tr("Highwind"));
-        for(int i=201;i<215;i++){ui->combo_weapon->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
-        break;
-    case 10://sephiroth
-        ui->combo_weapon->addItem(QPixmap::fromImage(Items.Image(255)),Items.Name(255));
-        ui->combo_weapon->setCurrentIndex(0); //only set seppie's weapon cause he has only one.
-        break;
-    }
-
-    //Equipment Tab Stuff.
-    if(ff7->charID(s,curchar) !=10){ui->combo_weapon->setCurrentIndex((ff7->charWeapon(s,curchar))-char_weapon_offset);}//if not seppie set the weapon
-
-    ui->combo_armor->setCurrentIndex(ff7->charArmor(s,curchar));
-
-    ui->combo_acc->setCurrentIndex(ff7->charAccessory(s,curchar));
-
-    //Set up char buttons and avatar icon.
-    ui->lbl_avatar->setPixmap(Chars.Pixmap(ff7->charID(s,curchar)));
-    ui->btn_cloud->setIcon(Chars.Icon(ff7->charID(s,0)));
-    ui->btn_barret->setIcon(Chars.Icon(ff7->charID(s,1)));
-    ui->btn_tifa->setIcon(Chars.Icon(ff7->charID(s,2)));
-    ui->btn_aeris->setIcon(Chars.Icon(ff7->charID(s,3)));
-    ui->btn_red->setIcon(Chars.Icon(ff7->charID(s,4)));
-    ui->btn_yuffie->setIcon(Chars.Icon(ff7->charID(s,5)));
-    ui->btn_cait->setIcon(Chars.Icon(ff7->charID(s,6)));
-    ui->btn_vincent->setIcon(Chars.Icon(ff7->charID(s,7)));
-    ui->btn_cid->setIcon(Chars.Icon(ff7->charID(s,8)));
-    load=false;
-    setweaponslots();
-    setarmorslots();
-    materiaupdate_slot();
-    update_stat_totals();
-    weapon_stat();
-
-    if(ui->action_auto_char_growth->isChecked()){setchar_growth(0);}
-}
-void MainWindow::weapon_stat(void)
-{
-    if(ui->combo_weapon->currentText()==Items.Name(140)){ui->lbl_weapon_bonus->setText(tr("spi +13"));}//apocalpse}
-    else if(ui->combo_weapon->currentText()==Items.Name(142)){ui->lbl_weapon_bonus->setText(tr("spi +35"));}//ragnarok
-    else if(ui->combo_weapon->currentText()==Items.Name(143)){ui->lbl_weapon_bonus->setText(tr("spi +24"));}//Ultimate Weapon
-    else if(ui->combo_weapon->currentText()==Items.Name(187)){ui->lbl_weapon_bonus->setText(tr("vit +35 spi +18"));}//behemoth horn
-    else if(ui->combo_weapon->currentText()==Items.Name(190)){ui->lbl_weapon_bonus->setText(tr("vit +1 spi +4"));}//Guard Stick
-    else if(ui->combo_weapon->currentText()==Items.Name(199)){ui->lbl_weapon_bonus->setText(tr("vit +20"));}//Umbrella
-    else if(ui->combo_weapon->currentText()==Items.Name(200)){ui->lbl_weapon_bonus->setText(tr("vit +12 spi +20"));}//Princess Guard
-    else if(ui->combo_weapon->currentText()==Items.Name(213)){ui->lbl_weapon_bonus->setText(tr("spi +20"));}//Spirt Lance
-    else if(ui->combo_weapon->currentText()==Items.Name(225)){ui->lbl_weapon_bonus->setText(tr("dex +10"));}//Magic Shuriken
-    else if(ui->combo_weapon->currentText()==Items.Name(240)){ui->lbl_weapon_bonus->setText(tr("vit +30"));}//Starlight M Phone
-    else{ui->lbl_weapon_bonus->setText("");}
-
-    switch(ff7->charArmor(s,curchar))
-    {
-        case 11:ui->lbl_armor_bonus->setText(tr("mag +5")); break;//Enincoat
-        case 12:ui->lbl_armor_bonus->setText(tr("mag +20")); break;//Wizard Bracelet
-        case 14:ui->lbl_armor_bonus->setText(tr("str +30")); break;//Gigas Armlet
-        case 17:ui->lbl_armor_bonus->setText(tr("mag +20")); break;//Forth Braclet
-        case 18:ui->lbl_armor_bonus->setText(tr("str +5")); break;//Warrior Bangle
-        case 29:ui->lbl_armor_bonus->setText(tr("str +20 mag +20")); break;//Ziedrich
-        case 31:ui->lbl_armor_bonus->setText(tr("dex +30 lck +20")); break;//chocobobracelet
-        default:ui->lbl_armor_bonus->setText(""); break;
-    }
-
-    switch(ff7->charAccessory(s,curchar))
-    {
-        case 0x00: ui->lbl_acc_bonus->setText(tr("str +10"));break;//power wrist
-        case 0x01: ui->lbl_acc_bonus->setText(tr("vit +10"));break;//protect ring
-        case 0x02: ui->lbl_acc_bonus->setText(tr("mag +10"));break;//earing
-        case 0x03: ui->lbl_acc_bonus->setText(tr("spi +10"));break;//tailsman
-        case 0x04: ui->lbl_acc_bonus->setText(tr("dex +10"));break;//choco-feather
-        case 0x05: ui->lbl_acc_bonus->setText(tr("lck +10"));break;//amulet +10
-        case 0x06: ui->lbl_acc_bonus->setText(tr("str +30 vit +30"));break;// champ's belt
-        case 0x08: ui->lbl_acc_bonus->setText(tr("vit +50 spi +50"));break;// tough ring
-        case 0x09: ui->lbl_acc_bonus->setText(tr("mag +30 spi +30"));break;// circlet
-        default: ui->lbl_acc_bonus->setText("");break;
-    }
-}
-void MainWindow::update_stat_totals(void)
-{
-    int strbonus=0;  int magbonus=0; int spibonus=0; int lckbonus=0; int stat_temp=0;
-    int vitbonus=0;  int dexbonus=0; int hpbonus=0; int mpbonus=0; int char_weapon_offset=127;
-
-    switch (ff7->charID(s,curchar))
-    {//needed to get correct item numbers for weapons later on.
-        case 0:char_weapon_offset+=0;    break;
-        case 1:char_weapon_offset+=32;   break;
-        case 2:char_weapon_offset+=16;   break;
-        case 3:char_weapon_offset+=62;   break;
-        case 4:char_weapon_offset+=48;   break;
-        case 5:char_weapon_offset+=87;   break;
-        case 6:char_weapon_offset+=101;  break;
-        case 7:char_weapon_offset+=114;  break;
-        case 8:char_weapon_offset+=73;   break;
-        case 9:char_weapon_offset+=0;    break;
-        case 10:char_weapon_offset=0;   break;
-    }
-
-
-    for(int i=0;i<16;i++)
-    {//Check each materia slot and create a runing total for each stat.
-        bool add=false;
-        if(ff7->charMateriaId(s,curchar,i) !=0xFF){add=true;}
-        switch(i)
-        {
-            case 0: if(ui->w_m_s1->isHidden()){add=false;};break;
-            case 1: if(ui->w_m_s2->isHidden()){add=false;}break;
-            case 2: if(ui->w_m_s3->isHidden()){add=false;}break;
-            case 3: if(ui->w_m_s4->isHidden()){add=false;}break;
-            case 4: if(ui->w_m_s5->isHidden()){add=false;}break;
-            case 5: if(ui->w_m_s6->isHidden()){add=false;}break;
-            case 6: if(ui->w_m_s7->isHidden()){add=false;}break;
-            case 7: if(ui->w_m_s8->isHidden()){add=false;}break;
-            case 8: if(ui->a_m_s1->isHidden()){add=false;}break;
-            case 9: if(ui->a_m_s2->isHidden()){add=false;}break;
-            case 10:if(ui->a_m_s3->isHidden()){add=false;}break;
-            case 11:if(ui->a_m_s4->isHidden()){add=false;}break;
-            case 12:if(ui->a_m_s5->isHidden()){add=false;}break;
-            case 13:if(ui->a_m_s6->isHidden()){add=false;}break;
-            case 14:if(ui->a_m_s7->isHidden()){add=false;}break;
-            case 15:if(ui->a_m_s8->isHidden()){add=false;}break;
-        }
-
-        if(add)
-        {
-            strbonus += Materias.Stat_Str(ff7->charMateriaId(s,curchar,i));
-            vitbonus += Materias.Stat_Vit(ff7->charMateriaId(s,curchar,i));
-
-            if(ff7->charMateriaId(s,curchar,i) == 0x03)
-            {//Catch Magic Plus
-                int level=0;
-                int aptemp = ff7->charMateriaAp(s,curchar,i);
-                for(int m=0; m<Materias.Levels(3);m++){if(aptemp >= Materias.Ap(3,m)){level++;}}
-                magbonus += ff7->charMag(s,curchar) * (0.01*(level*10));
-            }
-            else{magbonus += Materias.Stat_Mag(ff7->charMateriaId(s,curchar,i));}
-
-            spibonus += Materias.Stat_Spi(ff7->charMateriaId(s,curchar,i));
-
-            if(ff7->charMateriaId(s,curchar,i) == 0x02)
-            {//Catch Speed Plus
-                int level=0;
-                int aptemp = ff7->charMateriaAp(s,curchar,i);
-                for(int m=0; m<Materias.Levels(2);m++){if(aptemp >= Materias.Ap(2,m)){level++;}}
-                dexbonus += ff7->charDex(s,curchar) * (0.01*(level*10));
-            }
-            else{dexbonus += Materias.Stat_Dex(ff7->charMateriaId(s,curchar,i));}
-
-            if(ff7->charMateriaId(s,curchar,i) == 0x04)
-            {//Catch Luck Plus
-                int level=0;
-                int aptemp = ff7->charMateriaAp(s,curchar,i);
-                for(int m=0; m<Materias.Levels(4);m++){if(aptemp >= Materias.Ap(4,m)){level++;}}
-                lckbonus += ff7->charLck(s,curchar) * (0.01*(level*10));
-            }
-            else{lckbonus += Materias.Stat_Lck(ff7->charMateriaId(s,curchar,i));}
-
-            if(ff7->charMateriaId(s,curchar,i) == 0x01)
-            {//Catch HP Plus
-                int level=0;
-                int aptemp = ff7->charMateriaAp(s,curchar,i);
-                for(int m=0; m<Materias.Levels(1);m++){if(aptemp >= Materias.Ap(1,m)){level++;}}
-                hpbonus +=level*10;
-            }
-            else{hpbonus += Materias.Stat_Hp(ff7->charMateriaId(s,curchar,i));}
-
-            if(ff7->charMateriaId(s,curchar,i) ==0x00)
-            {//Catch Mp Plus
-                int level=0;
-                int aptemp = ff7->charMateriaAp(s,curchar,i);
-                for(int m=0; m<Materias.Levels(0);m++){if(aptemp >= Materias.Ap(0,m)){level++;}}
-                mpbonus +=level*10;
-            }
-            else{mpbonus +=Materias.Stat_Mp(ff7->charMateriaId(s,curchar,i));}
-        }//end if
-    }//end loop
-    //out of the loop need to check things like accessory and armor/weapon for modifiers.
-    if(ff7->charAccessory(s,curchar) !=0xFF)
-    {
-        strbonus+=Items.Stat_str(ff7->charAccessory(s,curchar)+288);
-        vitbonus+=Items.Stat_vit(ff7->charAccessory(s,curchar)+288);
-        dexbonus+=Items.Stat_dex(ff7->charAccessory(s,curchar)+288);
-        magbonus+=Items.Stat_mag(ff7->charAccessory(s,curchar)+288);
-        spibonus+=Items.Stat_spi(ff7->charAccessory(s,curchar)+288);
-        lckbonus+=Items.Stat_lck(ff7->charAccessory(s,curchar)+288);
-        mpbonus+=Items.Stat_mp(ff7->charAccessory(s,curchar)+288);
-        hpbonus+=Items.Stat_hp(ff7->charAccessory(s,curchar)+288);
-    }
-    strbonus+=Items.Stat_str(ff7->charWeapon(s,curchar)+char_weapon_offset);
-    vitbonus+=Items.Stat_vit(ff7->charWeapon(s,curchar)+char_weapon_offset);
-    dexbonus+=Items.Stat_dex(ff7->charWeapon(s,curchar)+char_weapon_offset);
-    magbonus+=Items.Stat_mag(ff7->charWeapon(s,curchar)+char_weapon_offset);
-    spibonus+=Items.Stat_spi(ff7->charWeapon(s,curchar)+char_weapon_offset);
-    lckbonus+=Items.Stat_lck(ff7->charWeapon(s,curchar)+char_weapon_offset);
-    mpbonus+=Items.Stat_mp(ff7->charWeapon(s,curchar)+char_weapon_offset);
-    hpbonus+=Items.Stat_hp(ff7->charWeapon(s,curchar)+char_weapon_offset);
-
-    strbonus+=Items.Stat_str(ff7->charArmor(s,curchar)+256);
-    vitbonus+=Items.Stat_vit(ff7->charArmor(s,curchar)+256);
-    dexbonus+=Items.Stat_dex(ff7->charArmor(s,curchar)+256);
-    magbonus+=Items.Stat_mag(ff7->charArmor(s,curchar)+256);
-    spibonus+=Items.Stat_spi(ff7->charArmor(s,curchar)+256);
-    lckbonus+=Items.Stat_lck(ff7->charArmor(s,curchar)+256);
-    mpbonus+=Items.Stat_mp(ff7->charArmor(s,curchar)+256);
-    hpbonus+=Items.Stat_hp(ff7->charArmor(s,curchar)+256);
-
-    //set accessory tooltip... (this can be done better later on..)
-    if(ff7->charAccessory(s,curchar) == 0x00) {ui->lbl_acc_bonus->setText(tr("str +10"));} //power wrist
-    else if(ff7->charAccessory(s,curchar) == 0x01) {ui->lbl_acc_bonus->setText(tr("vit +10"));} //protect ring
-    else if(ff7->charAccessory(s,curchar) == 0x02) {ui->lbl_acc_bonus->setText(tr("mag +10"));} //earing
-    else if(ff7->charAccessory(s,curchar) == 0x03) {ui->lbl_acc_bonus->setText(tr("spi +10"));} //tailsman
-    else if(ff7->charAccessory(s,curchar) == 0x04) {ui->lbl_acc_bonus->setText(tr("dex +10"));} //choco-feather
-    else if(ff7->charAccessory(s,curchar) == 0x05) {ui->lbl_acc_bonus->setText(tr("lck +10"));} //amulet +10
-    else if(ff7->charAccessory(s,curchar) == 0x06) {ui->lbl_acc_bonus->setToolTip(tr("str +30 vit +30"));} // champ's belt
-    else if(ff7->charAccessory(s,curchar) == 0x08) {ui->lbl_acc_bonus->setToolTip(tr("vit +50 spi +50"));} // tough ring
-    else if(ff7->charAccessory(s,curchar) == 0x09) {ui->lbl_acc_bonus->setToolTip(tr("mag +30 spi +30"));} // circlet
-    else{ui->lbl_acc_bonus->setText("");}
-    //end of accessories
-
-    //set the labels for the bonuses.
-    ui->lbl_str_mat->setText(QString::number(strbonus));
-    ui->lbl_vit_mat->setText(QString::number(vitbonus));
-    ui->lbl_mag_mat->setText(QString::number(magbonus));
-    ui->lbl_spi_mat->setText(QString::number(spibonus));
-    ui->lbl_dex_mat->setText(QString::number(dexbonus));
-    ui->lbl_lck_mat->setText(QString::number(lckbonus));
-    ui->lbl_hp_mat->setText(QString::number(hpbonus)+"%");
-    ui->lbl_mp_mat->setText(QString::number(mpbonus)+"%");
-
-    //do the math for the stat, if greater then 255 then use 255 instead. like ff7 is going todo.
-    stat_temp=ui->sb_str->value()+ui->sb_strbonus->value()+strbonus;    if(stat_temp>256){stat_temp=255;}
-    ui->lbl_str_total->setText(QString::number(stat_temp));
-    stat_temp=ui->sb_vit->value()+ui->sb_vitbonus->value()+vitbonus;    if(stat_temp>256){stat_temp=255;}
-    ui->lbl_vit_total->setText(QString::number(stat_temp));
-    stat_temp=ui->sb_mag->value()+ui->sb_magbonus->value()+magbonus;    if(stat_temp>256){stat_temp=255;}
-    ui->lbl_mag_total->setText(QString::number(stat_temp));
-    stat_temp=ui->sb_spi->value()+ui->sb_spibonus->value()+spibonus;    if(stat_temp>256){stat_temp=255;}
-    ui->lbl_spi_total->setText(QString::number(stat_temp));
-    stat_temp=ui->sb_dex->value()+ui->sb_dexbonus->value()+dexbonus;    if(stat_temp>256){stat_temp=255;}
-    ui->lbl_dex_total->setText(QString::number(stat_temp));
-    stat_temp=ui->sb_lck->value()+ui->sb_lckbonus->value()+lckbonus;    if(stat_temp>256){stat_temp=255;}
-    ui->lbl_lck_total->setText(QString::number(stat_temp));
-    // hp/mp adjustment
-    if(ui->action_auto_char_growth->isChecked())
-    {
-        ui->sb_maxhp->setValue(ui->sb_hp->value() + (ui->sb_hp->value()*(hpbonus*0.01)));
-        ui->sb_maxmp->setValue(ui->sb_mp->value() + (ui->sb_mp->value()*(mpbonus*0.01)));
-    }
-}
-/*~~~~~~~END Char Update~~~~~~~~*/
-void MainWindow::setchar_growth(int caller)
-{ /* This Function only gets called if automatic exp<->lvl is enabled.*/
-  /* caller can be 0==just read, 1==exp_changed, 2==lvl_changed */
-    if(caller==0 && ff7->charLevel(s,curchar)==0){return;}//viewing a blank slot on slotchange lets keep it that way
-    load=true;
-
-    //Update base Stats Var
-    int pre_level = ff7->charLevel(s,curchar);
-
-
-    //if the lvl changed we need to set the exp correctly before we continue
-    if(caller==2){
-        //Basic lv change
-        ff7->setCharLevel(s,curchar,ui->sb_lvl->value());
-        if(curchar==ff7->slot[s].party[0]){ff7->setDescLevel(s,ui->sb_lvl->value());}
-        //Exp calc
-        ff7->setCharCurrentExp(s,curchar,charlvls[ff7->charID(s,curchar)][ui->sb_lvl->value()-1]);
-        ui->sb_exp->setValue(ff7->charCurrentExp(s,curchar));
-    }
-    for (int i=1;i<100;i++)
-    {
-        if(ff7->charCurrentExp(s,curchar)>=charlvls[ff7->charID(s,curchar)][i]){
-            if(i==99){ui->sb_lvl->setValue(i);}
-        }
-        else{
-            ui->sb_lvl->setValue(i);break;
-        }
-    }
-    //if the exp was changed make sure the lvl is set correctly.
-    if(caller==1){
-        ff7->setCharLevel(s,curchar,ui->sb_lvl->value());
-        if(curchar==ff7->slot[s].party[0]){
-            ff7->setDescLevel(s,ui->sb_lvl->value());
-        }
-    }
-    //Update base Stats Code
-    int curlv = ui->sb_lvl->value();
-    if(caller==1 || caller==2)
-    {
-        if(pre_level < curlv)
-        {//level up
-            for(int i=pre_level;i<curlv;i++)
-            {// for stat_gain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp also use id incase of mods that could move a char.
-                ui->sb_str->setValue(ui->sb_str->value() + Chars.stat_gain(ff7->charID(s,curchar),0,ff7->charStr(s,curchar),i+1));
-                ui->sb_vit->setValue(ui->sb_vit->value() + Chars.stat_gain(ff7->charID(s,curchar),1,ff7->charVit(s,curchar),i+1));
-                ui->sb_mag->setValue(ui->sb_mag->value() + Chars.stat_gain(ff7->charID(s,curchar),2,ff7->charMag(s,curchar),i+1));
-                ui->sb_spi->setValue(ui->sb_spi->value() + Chars.stat_gain(ff7->charID(s,curchar),3,ff7->charSpi(s,curchar),i+1));
-                ui->sb_dex->setValue(ui->sb_dex->value() + Chars.stat_gain(ff7->charID(s,curchar),4,ff7->charDex(s,curchar),i+1));
-                ui->sb_lck->setValue(ui->sb_lck->value() + Chars.stat_gain(ff7->charID(s,curchar),5,ff7->charLck(s,curchar),i+1));
-                ui->sb_hp->setValue(ui->sb_hp->value() + Chars.stat_gain(ff7->charID(s,curchar),6,ff7->charBaseHp(s,curchar),i+1));
-                ui->sb_mp->setValue(ui->sb_mp->value() + Chars.stat_gain(ff7->charID(s,curchar),7,ff7->charBaseMp(s,curchar),i+1));
-            }
-        }
-        else if(pre_level > curlv)
-        {//level down
-            for(int i=pre_level;i>curlv;i--)
-            {// for stat_gain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp
-                ui->sb_str->setValue(ui->sb_str->value() - Chars.stat_gain(ff7->charID(s,curchar),0,ff7->charStr(s,curchar),i));
-                ui->sb_vit->setValue(ui->sb_vit->value() - Chars.stat_gain(ff7->charID(s,curchar),1,ff7->charVit(s,curchar),i));
-                ui->sb_mag->setValue(ui->sb_mag->value() - Chars.stat_gain(ff7->charID(s,curchar),2,ff7->charMag(s,curchar),i));
-                ui->sb_spi->setValue(ui->sb_spi->value() - Chars.stat_gain(ff7->charID(s,curchar),3,ff7->charSpi(s,curchar),i));
-                ui->sb_dex->setValue(ui->sb_dex->value() - Chars.stat_gain(ff7->charID(s,curchar),4,ff7->charDex(s,curchar),i));
-                ui->sb_lck->setValue(ui->sb_lck->value() - Chars.stat_gain(ff7->charID(s,curchar),5,ff7->charLck(s,curchar),i));
-                ui->sb_hp->setValue(ui->sb_hp->value() - Chars.stat_gain(ff7->charID(s,curchar),6,ff7->charBaseHp(s,curchar),i));
-                ui->sb_mp->setValue(ui->sb_mp->value() - Chars.stat_gain(ff7->charID(s,curchar),7,ff7->charBaseMp(s,curchar),i));
-            }
-        } //little broken when going down..
-        update_stat_totals();
-    }
-
-    QString numvalue;
-    if(ui->sb_lvl->value()!=99)
-    {
-       ff7->setCharNextExp(s,curchar,charlvls[ff7->charID(s,curchar)][ui->sb_lvl->value()]- ui->sb_exp->value());
-       ff7->setCharFlag(s,curchar,2,(((chartnls[ff7->charID(s,curchar)][ui->sb_lvl->value()]-ff7->charNextExp(s,curchar))*62)/(chartnls[ff7->charID(s,curchar)][ui->sb_lvl->value()])));//level progress is in 62 parts.
-    }
-
-    else
-    {
-        ff7->setCharNextExp(s,curchar,0);
-        ff7->setCharFlag(s,curchar,2,0x3D);
-    }
-    ui->pbar_level->setValue(ff7->charFlag(s,curchar,2));
-    if(ui->pbar_level->value()<4){ui->pbar_level->setValue(0);}//ff7 ingores the value if its <4 (but we don't save this)
-    numvalue.setNum(ff7->charNextExp(s,curchar));
-    ui->lcd_next->display(numvalue);
-    load=false;
-}
-/*~~~~~~~~~Armor/Weapon Update~~~~~~~~~~*/
-void MainWindow::setarmorslots(void)
-{
-    ui->a_m_l1->setPixmap(QPixmap(""));
-    ui->a_m_l2->setPixmap(QPixmap(""));
-    ui->a_m_l3->setPixmap(QPixmap(""));
-    ui->a_m_l4->setPixmap(QPixmap(""));
-    ui->a_m_s1->setHidden(1);
-    ui->a_m_s2->setHidden(1);
-    ui->a_m_s3->setHidden(1);
-    ui->a_m_s4->setHidden(1);
-    ui->a_m_s5->setHidden(1);
-    ui->a_m_s6->setHidden(1);
-    ui->a_m_s7->setHidden(1);
-    ui->a_m_s8->setHidden(1);
-    switch(Items.mslots(256 +ff7->charArmor(s,curchar)))
-    {
-    case 0:{break;}
-    case 1:{ui->a_m_s1->setHidden(0);break;}
-    case 2:{ui->a_m_s1->setHidden(0);ui->a_m_s2->setHidden(0);break;}
-    case 3:{ui->a_m_s1->setHidden(0);ui->a_m_s2->setHidden(0);ui->a_m_s3->setHidden(0);break;}
-    case 4:{ui->a_m_s1->setHidden(0);ui->a_m_s2->setHidden(0);ui->a_m_s3->setHidden(0);ui->a_m_s4->setHidden(0);break;}
-    case 5:{ui->a_m_s1->setHidden(0);ui->a_m_s2->setHidden(0);ui->a_m_s3->setHidden(0);ui->a_m_s4->setHidden(0);ui->a_m_s5->setHidden(0);break;}
-    case 6:{ui->a_m_s1->setHidden(0);ui->a_m_s2->setHidden(0);ui->a_m_s3->setHidden(0);ui->a_m_s4->setHidden(0);ui->a_m_s5->setHidden(0);ui->a_m_s6->setHidden(0);break;}
-    case 7:{ui->a_m_s1->setHidden(0);ui->a_m_s2->setHidden(0);ui->a_m_s3->setHidden(0);ui->a_m_s4->setHidden(0);ui->a_m_s5->setHidden(0);ui->a_m_s6->setHidden(0);ui->a_m_s7->setHidden(0);break;}
-    case 8:{ui->a_m_s1->setHidden(0);ui->a_m_s2->setHidden(0);ui->a_m_s3->setHidden(0);ui->a_m_s4->setHidden(0);ui->a_m_s5->setHidden(0);ui->a_m_s6->setHidden(0);ui->a_m_s7->setHidden(0);ui->a_m_s8->setHidden(0);break;}
-    }
-    switch(Items.linked(256 +ff7->charArmor(s,curchar)))
-    {
-    case 0:{break;}
-    case 1:{ui->a_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-    case 2:{ui->a_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->a_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-    case 3:{ui->a_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->a_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->a_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-    case 4:{ui->a_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->a_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->a_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->a_m_l4->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-    }
-}
-void MainWindow::setweaponslots(void)
-{
-    ui->w_m_l1->setPixmap(QPixmap(""));
-    ui->w_m_l2->setPixmap(QPixmap(""));
-    ui->w_m_l3->setPixmap(QPixmap(""));
-    ui->w_m_l4->setPixmap(QPixmap(""));
-    ui->w_m_s1->setHidden(1);
-    ui->w_m_s2->setHidden(1);
-    ui->w_m_s3->setHidden(1);
-    ui->w_m_s4->setHidden(1);
-    ui->w_m_s5->setHidden(1);
-    ui->w_m_s6->setHidden(1);
-    ui->w_m_s7->setHidden(1);
-    ui->w_m_s8->setHidden(1);
-    switch(ff7->charID(s,curchar))
-    {
-    case 0: case 9:{
-        clouds_weapons:
-            switch(Items.mslots(128 +ui->combo_weapon->currentIndex()))
-            {
-            case 0:{break;}
-            case 1:{ui->w_m_s1->setHidden(0);break;}
-            case 2:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);break;}
-            case 3:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);break;}
-            case 4:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);break;}
-            case 5:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);break;}
-            case 6:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);break;}
-            case 7:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);break;}
-            case 8:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);ui->w_m_s8->setHidden(0);break;}
-            }
-            switch(Items.linked(128 +ui->combo_weapon->currentIndex()))
-            {
-            case 0:{break;}
-            case 1:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 2:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 3:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 4:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l4->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            }
-            break;
-        }
-    case 1:{
-            switch(Items.mslots(160 +ui->combo_weapon->currentIndex()))
-            {
-            case 0:{break;}
-            case 1:{ui->w_m_s1->setHidden(0);break;}
-            case 2:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);break;}
-            case 3:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);break;}
-            case 4:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);break;}
-            case 5:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);break;}
-            case 6:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);break;}
-            case 7:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);break;}
-            case 8:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);ui->w_m_s8->setHidden(0);break;}
-            }
-            switch(Items.linked(160+ui->combo_weapon->currentIndex()))
-            {
-            case 0:{break;}
-            case 1:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 2:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 3:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 4:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l4->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-           }
-            break;
-        }
-    case 2:{
-            switch(Items.mslots(144 +ui->combo_weapon->currentIndex()))
-            {
-            case 0:{break;}
-            case 1:{ui->w_m_s1->setHidden(0);break;}
-            case 2:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);break;}
-            case 3:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);break;}
-            case 4:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);break;}
-            case 5:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);break;}
-            case 6:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);break;}
-            case 7:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);break;}
-            case 8:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);ui->w_m_s8->setHidden(0);break;}
-            }
-            switch(Items.linked(144+ui->combo_weapon->currentIndex()))
-            {
-            case 0:{break;}
-            case 1:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 2:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 3:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 4:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l4->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            }
-            break;
-        }
-    case 3:{
-            switch(Items.mslots(190 +ui->combo_weapon->currentIndex()))
-            {
-            case 0:{break;}
-            case 1:{ui->w_m_s1->setHidden(0);break;}
-            case 2:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);break;}
-            case 3:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);break;}
-            case 4:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);break;}
-            case 5:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);break;}
-            case 6:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);break;}
-            case 7:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);break;}
-            case 8:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);ui->w_m_s8->setHidden(0);break;}
-            }
-            switch(Items.linked(190+ui->combo_weapon->currentIndex()))
-            {
-            case 0:{break;}
-            case 1:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 2:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 3:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 4:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l4->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            }
-            break;
-        }
-    case 4:{
-            switch(Items.mslots(176 +ui->combo_weapon->currentIndex()))
-            {
-            case 0:{break;}
-            case 1:{ui->w_m_s1->setHidden(0);break;}
-            case 2:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);break;}
-            case 3:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);break;}
-            case 4:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);break;}
-            case 5:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);break;}
-            case 6:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);break;}
-            case 7:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);break;}
-            case 8:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);ui->w_m_s8->setHidden(0);break;}
-            }
-            switch(Items.linked(176+ui->combo_weapon->currentIndex()))
-            {
-            case 0:{break;}
-            case 1:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 2:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 3:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 4:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l4->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-          }
-            break;
-       }
-    case 5:{
-            switch(Items.mslots(215 +ui->combo_weapon->currentIndex()))
-            {
-            case 0:{break;}
-            case 1:{ui->w_m_s1->setHidden(0);break;}
-            case 2:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);break;}
-            case 3:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);break;}
-            case 4:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);break;}
-            case 5:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);break;}
-            case 6:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);break;}
-            case 7:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);break;}
-            case 8:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);ui->w_m_s8->setHidden(0);break;}
-            }
-            switch(Items.linked(215+ui->combo_weapon->currentIndex()))
-            {
-            case 0:{break;}
-            case 1:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 2:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 3:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 4:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l4->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-           }
-            break;
-        }
-    case 6:{
-            if(ff7->charID(s,curchar)==6)
-            {
-                switch(Items.mslots(229 +ui->combo_weapon->currentIndex()))
-                {
-                case 0:{break;}
-                case 1:{ui->w_m_s1->setHidden(0);break;}
-                case 2:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);break;}
-                case 3:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);break;}
-                case 4:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);break;}
-                case 5:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);break;}
-                case 6:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);break;}
-                case 7:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);break;}
-                case 8:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);ui->w_m_s8->setHidden(0);break;}
-                }
-                switch(Items.linked(229+ui->combo_weapon->currentIndex()))
-                {
-                case 0:{break;}
-                case 1:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-                case 2:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-                case 3:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-                case 4:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l4->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-               }
-            }
-            else {goto clouds_weapons;}//jump to case0
-            break;
-        }
-    case 7:{
-            if(ff7->charID(s,curchar)==7)
-            {
-                switch(Items.mslots(242 +ui->combo_weapon->currentIndex()))
-                {
-                case 0:{break;}
-                case 1:{ui->w_m_s1->setHidden(0);break;}
-                case 2:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);break;}
-                case 3:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);break;}
-                case 4:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);break;}
-                case 5:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);break;}
-                case 6:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);break;}
-                case 7:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);break;}
-                case 8:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);ui->w_m_s8->setHidden(0);break;}
-                }
-                switch(Items.linked(242+ui->combo_weapon->currentIndex()))
-                {
-                case 0:{break;}
-                case 1:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-                case 2:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-                case 3:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-                case 4:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l4->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-                }
-            }                       
-            break;
-        }
-    case 8:{
-            switch(Items.mslots(201 +ui->combo_weapon->currentIndex()))
-            {
-            case 0:{break;}
-            case 1:{ui->w_m_s1->setHidden(0);break;}
-            case 2:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);break;}
-            case 3:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);break;}
-            case 4:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);break;}
-            case 5:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);break;}
-            case 6:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);break;}
-            case 7:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);break;}
-            case 8:{ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);ui->w_m_s7->setHidden(0);ui->w_m_s8->setHidden(0);break;}
-            }
-            switch(Items.linked(201+ui->combo_weapon->currentIndex()))
-            {
-            case 0:{break;}
-            case 1:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 2:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 3:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-            case 4:{ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l4->setPixmap(QPixmap::fromImage(Items.Image_mlink()));break;}
-           }
-            break;
-           }
-    case 10:{//sephiroth has only one weapon.
-            ui->w_m_s1->setHidden(0);ui->w_m_s2->setHidden(0);ui->w_m_s3->setHidden(0);ui->w_m_s4->setHidden(0);ui->w_m_s5->setHidden(0);ui->w_m_s6->setHidden(0);
-            ui->w_m_l1->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l2->setPixmap(QPixmap::fromImage(Items.Image_mlink()));ui->w_m_l3->setPixmap(QPixmap::fromImage(Items.Image_mlink()));
-            break;
-        }
-    }
-}
-//}
-/*~~~~~End Armor/Weapon Update~~~~*/
 /*~~~~~~~~Set Menu Items~~~~~~~~~~*/
 void MainWindow::setmenu(bool newgame)
 {
@@ -2172,98 +1306,6 @@ void MainWindow::file_modified(bool changed)
     if(changed){ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));}
 }
 
-void MainWindow::materiaupdate_slot(void)
-{
-load=true;
-if(ff7->charMateriaId(s,curchar,0) != 0xFF){ui->w_m_s1->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,0)));}else{ui->w_m_s1->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,1) != 0xFF){ui->w_m_s2->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,1)));}else{ui->w_m_s2->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,2) != 0xFF){ui->w_m_s3->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,2)));}else{ui->w_m_s3->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,3) != 0xFF){ui->w_m_s4->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,3)));}else{ui->w_m_s4->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,4) != 0xFF){ui->w_m_s5->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,4)));}else{ui->w_m_s5->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,5) != 0xFF){ui->w_m_s6->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,5)));}else{ui->w_m_s6->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,6) != 0xFF){ui->w_m_s7->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,6)));}else{ui->w_m_s7->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,7) != 0xFF){ui->w_m_s8->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,7)));}else{ui->w_m_s8->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,0) != 0xFF){ui->w_m_s1->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,0)));}else{ui->w_m_s1->setToolTip(QString(tr("Empty")));}
-if(ff7->charMateriaId(s,curchar,1) != 0xFF){ui->w_m_s2->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,1)));}else{ui->w_m_s2->setToolTip(QString(tr("Empty")));}
-if(ff7->charMateriaId(s,curchar,2) != 0xFF){ui->w_m_s3->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,2)));}else{ui->w_m_s3->setToolTip(QString(tr("Empty")));}
-if(ff7->charMateriaId(s,curchar,3) != 0xFF){ui->w_m_s4->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,3)));}else{ui->w_m_s4->setToolTip(QString(tr("Empty")));}
-if(ff7->charMateriaId(s,curchar,4) != 0xFF){ui->w_m_s5->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,4)));}else{ui->w_m_s5->setToolTip(QString(tr("Empty")));}
-if(ff7->charMateriaId(s,curchar,5) != 0xFF){ui->w_m_s6->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,5)));}else{ui->w_m_s6->setToolTip(QString(tr("Empty")));}
-if(ff7->charMateriaId(s,curchar,6) != 0xFF){ui->w_m_s7->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,6)));}else{ui->w_m_s7->setToolTip(QString(tr("Empty")));}
-if(ff7->charMateriaId(s,curchar,7) != 0xFF){ui->w_m_s8->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,7)));}else{ui->w_m_s8->setToolTip(QString(tr("Empty")));}
-
-if(ff7->charMateriaId(s,curchar,8)  != 0xFF){ui->a_m_s1->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,8)));}else{ui->a_m_s1->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,9)  != 0xFF){ui->a_m_s2->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,9)));}else{ui->a_m_s2->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,10) != 0xFF){ui->a_m_s3->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,10)));}else{ui->a_m_s3->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,11) != 0xFF){ui->a_m_s4->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,11)));}else{ui->a_m_s4->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,12) != 0xFF){ui->a_m_s5->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,12)));}else{ui->a_m_s5->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,13) != 0xFF){ui->a_m_s6->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,13)));}else{ui->a_m_s6->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,14) != 0xFF){ui->a_m_s7->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,14)));}else{ui->a_m_s7->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,15) != 0xFF){ui->a_m_s8->setIcon(Materias.Icon(ff7->charMateriaId(s,curchar,15)));}else{ui->a_m_s8->setIcon(QIcon(QString("")));}
-if(ff7->charMateriaId(s,curchar,8) != 0xFF){ui->a_m_s1->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,8)));}else{ui->a_m_s1->setToolTip(QString(tr("Empty")));}
-if(ff7->charMateriaId(s,curchar,9) != 0xFF){ui->a_m_s2->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,9)));}else{ui->a_m_s2->setToolTip(QString(tr("Empty")));}
-if(ff7->charMateriaId(s,curchar,10) != 0xFF){ui->a_m_s3->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,10)));}else{ui->a_m_s3->setToolTip(QString(tr("Empty")));}
-if(ff7->charMateriaId(s,curchar,11) != 0xFF){ui->a_m_s4->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,11)));}else{ui->a_m_s4->setToolTip(QString(tr("Empty")));}
-if(ff7->charMateriaId(s,curchar,12) != 0xFF){ui->a_m_s5->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,12)));}else{ui->a_m_s5->setToolTip(QString(tr("Empty")));}
-if(ff7->charMateriaId(s,curchar,13) != 0xFF){ui->a_m_s6->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,13)));}else{ui->a_m_s6->setToolTip(QString(tr("Empty")));}
-if(ff7->charMateriaId(s,curchar,14) != 0xFF){ui->a_m_s7->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,14)));}else{ui->a_m_s7->setToolTip(QString(tr("Empty")));}
-if(ff7->charMateriaId(s,curchar,15) != 0xFF){ui->a_m_s8->setToolTip(Materias.Name(ff7->charMateriaId(s,curchar,15)));}else{ui->a_m_s8->setToolTip(QString(tr("Empty")));}
-
-ui->w_m_s1_frame->setFrameStyle(0);
-ui->w_m_s2_frame->setFrameStyle(0);
-ui->w_m_s3_frame->setFrameStyle(0);
-ui->w_m_s4_frame->setFrameStyle(0);
-ui->w_m_s5_frame->setFrameStyle(0);
-ui->w_m_s6_frame->setFrameStyle(0);
-ui->w_m_s7_frame->setFrameStyle(0);
-ui->w_m_s8_frame->setFrameStyle(0);
-ui->a_m_s1_frame->setFrameStyle(0);
-ui->a_m_s2_frame->setFrameStyle(0);
-ui->a_m_s3_frame->setFrameStyle(0);
-ui->a_m_s4_frame->setFrameStyle(0);
-ui->a_m_s5_frame->setFrameStyle(0);
-ui->a_m_s6_frame->setFrameStyle(0);
-ui->a_m_s7_frame->setFrameStyle(0);
-ui->a_m_s8_frame->setFrameStyle(0);
-
-
-//All Stars Set to empty for this materia
-
-switch(mslotsel)
-{
-    case 0: ui->w_m_s1_frame->setFrameStyle(1);    break;
-    case 1: ui->w_m_s2_frame->setFrameStyle(1);    break;
-    case 2: ui->w_m_s3_frame->setFrameStyle(1);    break;
-    case 3: ui->w_m_s4_frame->setFrameStyle(1);    break;
-    case 4: ui->w_m_s5_frame->setFrameStyle(1);    break;
-    case 5: ui->w_m_s6_frame->setFrameStyle(1);    break;
-    case 6: ui->w_m_s7_frame->setFrameStyle(1);    break;
-    case 7: ui->w_m_s8_frame->setFrameStyle(1);    break;
-    case 8: ui->a_m_s1_frame->setFrameStyle(1);    break;
-    case 9: ui->a_m_s2_frame->setFrameStyle(1);    break;
-    case 10:ui->a_m_s3_frame->setFrameStyle(1);    break;
-    case 11:ui->a_m_s4_frame->setFrameStyle(1);    break;
-    case 12:ui->a_m_s5_frame->setFrameStyle(1);    break;
-    case 13:ui->a_m_s6_frame->setFrameStyle(1);    break;
-    case 14:ui->a_m_s7_frame->setFrameStyle(1);    break;
-    case 15:ui->a_m_s8_frame->setFrameStyle(1);    break;
-}
-materia_editor_slot->setMateria(ff7->charMateriaId(s,curchar,mslotsel),ff7->charMateriaAp(s,curchar,mslotsel));
-load=false;
-update_stat_totals();
-}
-
-void MainWindow::materia_slot_ap_changed(qint32 ap)
-{if(!load){
-    if(ap>=materia_editor_slot->MaxAP()){ap=16777215;}
-    ff7->setCharMateria(s,curchar,mslotsel,ff7->charMateriaId(s,curchar,mslotsel),ap);
-    materiaupdate_slot();
-}}
-void MainWindow::materia_slot_id_changed(qint8 id)
-{if(!load){
-    ff7->setCharMateria(s,curchar,mslotsel,id,ff7->charMateriaAp(s,curchar,mslotsel));
-    materiaupdate_slot();
-}}
 /*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
 void MainWindow::set_ntsc_time(void)
 {
@@ -2822,17 +1864,24 @@ void MainWindow::guirefresh(bool newgame)
                 ui->tbl_materia_2->setItem(mat,0,newItem);
             }
         }
+        ui->btn_cloud->setIcon(Chars.Icon(ff7->charID(s,0)));
+        ui->btn_barret->setIcon(Chars.Icon(ff7->charID(s,1)));
+        ui->btn_tifa->setIcon(Chars.Icon(ff7->charID(s,2)));
+        ui->btn_aeris->setIcon(Chars.Icon(ff7->charID(s,3)));
+        ui->btn_red->setIcon(Chars.Icon(ff7->charID(s,4)));
+        ui->btn_yuffie->setIcon(Chars.Icon(ff7->charID(s,5)));
+        ui->btn_cait->setIcon(Chars.Icon(ff7->charID(s,6)));
+        ui->btn_vincent->setIcon(Chars.Icon(ff7->charID(s,7)));
+        ui->btn_cid->setIcon(Chars.Icon(ff7->charID(s,8)));
         load=false;
         // all functions should set load on their own.
         /*~~~~~Call External Functions~~~~~~~*/
         setmenu(newgame);
         itemupdate();
         chocobo_refresh();
-        charupdate();
         materiaupdate();
         progress_update();
         if(ui->action_show_debug->isChecked()){testdata_refresh();}
-        ui->w_m_s1->click();
     }
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 void MainWindow::progress_update()
@@ -3097,25 +2146,16 @@ void MainWindow::testdata_refresh()
     unknown_refresh(ui->combo_z_var->currentIndex());
 }
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
-void MainWindow::on_btn_cloud_clicked()     {curchar=0; charupdate();ui->btn_cloud->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_barret_clicked()    {curchar=1; charupdate();ui->btn_barret->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_tifa_clicked()      {curchar=2; charupdate();ui->btn_tifa->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_aeris_clicked()     {curchar=3; charupdate();ui->btn_aeris->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_red_clicked()       {curchar=4; charupdate();ui->btn_red->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_yuffie_clicked()    {curchar=5; charupdate();ui->btn_yuffie->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_cait_clicked()      {curchar=6; charupdate();ui->btn_cait->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_vincent_clicked()   {curchar=7; charupdate();ui->btn_vincent->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_cid_clicked()       {curchar=8; charupdate();ui->btn_cid->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_cloud_clicked()     {curchar=0; char_editor->setChar(ff7->slot[s].chars[0],ff7->charName(s,0));ui->btn_cloud->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_barret_clicked()    {curchar=1; char_editor->setChar(ff7->slot[s].chars[1],ff7->charName(s,1));ui->btn_barret->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_tifa_clicked()      {curchar=2; char_editor->setChar(ff7->slot[s].chars[2],ff7->charName(s,2));ui->btn_tifa->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_aeris_clicked()     {curchar=3; char_editor->setChar(ff7->slot[s].chars[3],ff7->charName(s,3));ui->btn_aeris->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_red_clicked()       {curchar=4; char_editor->setChar(ff7->slot[s].chars[4],ff7->charName(s,4));ui->btn_red->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_yuffie_clicked()    {curchar=5; char_editor->setChar(ff7->slot[s].chars[5],ff7->charName(s,5));ui->btn_yuffie->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_cait_clicked()      {curchar=6; char_editor->setChar(ff7->slot[s].chars[6],ff7->charName(s,6));ui->btn_cait->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_vincent_clicked()   {curchar=7; char_editor->setChar(ff7->slot[s].chars[7],ff7->charName(s,7));ui->btn_vincent->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_cid_clicked()       {curchar=8; char_editor->setChar(ff7->slot[s].chars[8],ff7->charName(s,8));ui->btn_cid->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
 
-//void MainWindow::on_btn_cloud_clicked()     {curchar=0; charupdate();ui->btn_cloud->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-//void MainWindow::on_btn_barret_clicked()    {curchar=1; charupdate();ui->btn_barret->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-//void MainWindow::on_btn_tifa_clicked()      {curchar=2; charupdate();ui->btn_tifa->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-//void MainWindow::on_btn_aeris_clicked()     {curchar=3; charupdate();ui->btn_aeris->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-//void MainWindow::on_btn_red_clicked()       {curchar=4; charupdate();ui->btn_red->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-//void MainWindow::on_btn_yuffie_clicked()    {curchar=5; charupdate();ui->btn_yuffie->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-//void MainWindow::on_btn_cait_clicked()      {curchar=6; charupdate();ui->btn_cait->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-//void MainWindow::on_btn_vincent_clicked()   {curchar=7; charupdate();ui->btn_vincent->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
-//void MainWindow::on_btn_cid_clicked()       {curchar=8; charupdate();ui->btn_cid->setStyleSheet(avatar_style(ff7->charID(s,curchar)));}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_sb_gil_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].gil = value;   ff7->setDescGil(s,value);}}
 void MainWindow::on_sb_gp_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].gp = value;}}
@@ -3587,168 +2627,6 @@ void MainWindow::on_sb_coordz_valueChanged(int value){if(!load){file_modified(tr
 void MainWindow::on_line_location_textChanged(QString text){if (!load){file_modified(true);ff7->setLocation(s,text);}}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~CHARACTER TAB~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_cb_id_toggled(bool checked)
-{if(!load){file_modified(true);
-    if (curchar ==6)
-    {
-        if (checked){ff7->setCharID(s,6,9);}
-        else {ff7->setCharID(s,6,6);}
-        charupdate();
-    }
-    if (curchar ==7)
-    {
-        if (checked){ff7->setCharID(s,7,10);;}
-        else {ff7->setCharID(s,7,7);;}
-        charupdate();
-    }
-}}
-
-void MainWindow::on_line_name_textChanged(QString text)
-{if(!load){file_modified(true);
-    ff7->setCharName(s,curchar,text);
-    if (curchar == ui->combo_party1->currentIndex()){ff7->setDescName(s,text);}
-}}
-
-void MainWindow::on_sb_lvl_valueChanged(int value)
-{if(!load){file_modified(true);
-    if(settings->value("autochargrowth").toBool()){setchar_growth(2);}
-    //Basic lv change
-    else{
-        ff7->setCharLevel(s,curchar,value);
-        if(curchar==ff7->slot[s].party[0]){ff7->setDescLevel(s,value);}
-    }
-}}
-
-void MainWindow::on_sb_exp_valueChanged(int value)
-{if(!load){file_modified(true);
-    ff7->setCharCurrentExp(s,curchar,value);
-    if(settings->value("autochargrowth").toBool()){setchar_growth(1);}
-    }}
-
-void MainWindow::on_sb_curhp_valueChanged(int value){if(!load){file_modified(true); ff7->setCharCurrentHp(s,curchar,value);}}
-void MainWindow::on_sb_curmp_valueChanged(int value){if(!load){file_modified(true); ff7->setCharCurrentMp(s,curchar,value);}}
-void MainWindow::on_sb_maxhp_valueChanged(int value){if(!load){file_modified(true); ff7->setCharMaxHp(s,curchar,value);}}
-void MainWindow::on_sb_maxmp_valueChanged(int value){if(!load){file_modified(true); ff7->setCharMaxMp(s,curchar,value);}}
-void MainWindow::on_sb_hp_valueChanged(int value){if(!load){file_modified(true); ff7->setCharBaseHp(s,curchar,value); update_stat_totals();}}
-void MainWindow::on_sb_mp_valueChanged(int value){if(!load){file_modified(true); ff7->setCharBaseMp(s,curchar,value); update_stat_totals();}}
-void MainWindow::on_sb_kills_valueChanged(int value){if(!load){file_modified(true); ff7->setCharKills(s,curchar,value);}}
-void MainWindow::on_sb_str_valueChanged(int value){if(!load){file_modified(true); ff7->setCharStr(s,curchar,value); update_stat_totals();}}
-void MainWindow::on_sb_dex_valueChanged(int value){if(!load){file_modified(true); ff7->setCharDex(s,curchar,value);update_stat_totals();}}
-void MainWindow::on_sb_mag_valueChanged(int value){if(!load){file_modified(true); ff7->setCharMag(s,curchar,value);update_stat_totals();}}
-void MainWindow::on_sb_vit_valueChanged(int value){if(!load){file_modified(true); ff7->setCharVit(s,curchar,value);update_stat_totals();}}
-void MainWindow::on_sb_spi_valueChanged(int value){if(!load){file_modified(true); ff7->setCharSpi(s,curchar,value);update_stat_totals();}}
-void MainWindow::on_sb_lck_valueChanged(int value){if(!load){file_modified(true); ff7->setCharLck(s,curchar,value);update_stat_totals();}}
-void MainWindow::on_sb_strbonus_valueChanged(int value){if(!load){file_modified(true); ff7->setCharStrBonus(s,curchar,value);update_stat_totals();}}
-void MainWindow::on_sb_dexbonus_valueChanged(int value){if(!load){file_modified(true); ff7->setCharDexBonus(s,curchar,value);update_stat_totals();}}
-void MainWindow::on_sb_magbonus_valueChanged(int value){if(!load){file_modified(true); ff7->setCharMagBonus(s,curchar,value);update_stat_totals();}}
-void MainWindow::on_sb_vitbonus_valueChanged(int value){if(!load){file_modified(true); ff7->setCharVitBonus(s,curchar,value);update_stat_totals();}}
-void MainWindow::on_sb_spibonus_valueChanged(int value){if(!load){file_modified(true); ff7->setCharSpiBonus(s,curchar,value);update_stat_totals();}}
-void MainWindow::on_sb_lckbonus_valueChanged(int value){if(!load){file_modified(true); ff7->setCharLckBonus(s,curchar,value);update_stat_totals();}}
-
-void MainWindow::on_cb_front_clicked(bool checked)
-{if(!load){file_modified(true);
-    if(checked) ff7->setCharFlag(s,curchar,1,0xFF);
-    if(!checked)ff7->setCharFlag(s,curchar,1,0xFE);
-}}
-
-void MainWindow::on_cb_fury_clicked(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ui->cb_sadness->setChecked(0); ff7->setCharFlag(s,curchar,0,0x20);}
-    else {ff7->setCharFlag(s,curchar,0,0x00);}
-}}
-
-void MainWindow::on_cb_sadness_clicked(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ui->cb_fury->setChecked(0); ff7->setCharFlag(s,curchar,0,0x10);}
-    else {ff7->setCharFlag(s,curchar,0,0x00);}
-}}
-
-//char limit stuff
-void MainWindow::on_sb_used1_valueChanged(int value){if(!load){file_modified(true); ff7->setCharTimeLimitUsed(s,curchar,1,value);}}
-void MainWindow::on_sb_used2_valueChanged(int value){if(!load){file_modified(true); ff7->setCharTimeLimitUsed(s,curchar,2,value);}}
-void MainWindow::on_sb_used3_valueChanged(int value){if(!load){file_modified(true); ff7->setCharTimeLimitUsed(s,curchar,3,value);}}
-void MainWindow::on_sb_limitlvl_valueChanged(int value){if(!load){file_modified(true); ff7->setCharLimitLevel(s,curchar,value);}}
-void MainWindow::on_slide_limit_valueChanged(int value){if(!load){file_modified(true); ff7->setCharLimitBar(s,curchar,value);}}
-
-void MainWindow::limitapply()
-{
-    quint16 old_limit = ff7->charLimits(s,curchar);
-    ff7->setCharLimits(s,curchar,0);
-    quint16 limits = 0;
-    if (curchar == 7)
-    {
-        if (ui->limit_1a->isChecked()==1){limits |= (1<<0);}
-        if (ui->limit_2a->isChecked()==1){limits |= (1<<3);}
-        if (ui->limit_3a->isChecked()==1){limits |= (1<<6);}
-        if (ui->limit_4 ->isChecked()==1){limits |= (1<<9);}
-    }
-    else if (curchar == 6)
-    {
-        if (ui->limit_1a->isChecked()==1){limits |= (1<<0);}
-        if (ui->limit_2a->isChecked()==1){limits |= (1<<3);}
-    }
-    else
-    {
-        if (ui->limit_1a->isChecked()==1){limits |= (1<<0);}
-        if (ui->limit_1b->isChecked()==1){limits |= (1<<1);}
-        if (ui->limit_2a->isChecked()==1){limits |= (1<<3);}
-        if (ui->limit_2b->isChecked()==1){limits |= (1<<4);}
-        if (ui->limit_3a->isChecked()==1){limits |= (1<<6);}
-        if (ui->limit_3b->isChecked()==1){limits |= (1<<7);}
-        if (ui->limit_4 ->isChecked()==1){limits |= (1<<9);}
-    }
-
-    if(limits != old_limit){ff7->setCharLimits(s,curchar,limits); file_modified(true);}
-    else{return;} // no changes to be made.
-
-}
-
-void MainWindow::on_limit_1a_toggled(){if(!load){limitapply();}}
-void MainWindow::on_limit_1b_toggled(){if(!load){limitapply();}}
-void MainWindow::on_limit_2a_toggled(){if(!load){limitapply();}}
-void MainWindow::on_limit_2b_toggled(){if(!load){limitapply();}}
-void MainWindow::on_limit_3a_toggled(){if(!load){limitapply();}}
-void MainWindow::on_limit_3b_toggled(){if(!load){limitapply();}}
-void MainWindow::on_limit_4_toggled(){if(!load){limitapply();}}
-
-//Char Equiptment Tab
-
-void MainWindow::on_combo_armor_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setCharArmor(s,curchar,index);    setarmorslots(); update_stat_totals();weapon_stat();}}
-void MainWindow::on_combo_weapon_currentIndexChanged(){setweaponslots();update_stat_totals();weapon_stat();} //no matter what we need to update materia slots.
-void MainWindow::on_combo_acc_currentIndexChanged(int index){if(!load){file_modified(true); if(index==32){index=0xFF;} ff7->setCharAccessory(s,curchar,index);update_stat_totals();weapon_stat();}}
-
-void MainWindow::on_combo_weapon_activated(int index)
-{if(!load){file_modified(true);
-    switch(curchar)
-    {
-        case 0:{ff7->setCharWeapon(s,curchar,index);break;}
-        case 1:{ff7->setCharWeapon(s,curchar,index+32);break;}
-        case 2:{ff7->setCharWeapon(s,curchar,index+16);break;}
-        case 3:{ff7->setCharWeapon(s,curchar,index+62);break;}
-        case 4:{ff7->setCharWeapon(s,curchar,index+48);break;}
-        case 5:{ff7->setCharWeapon(s,curchar,index+87);break;}
-        case 6:{ff7->setCharWeapon(s,curchar,index+101);break;}
-        case 7:{ff7->setCharWeapon(s,curchar,index+114);break;}
-        case 8:{ff7->setCharWeapon(s,curchar,index+73);break;}
-    }
-}}
-
-void MainWindow::on_w_m_s1_clicked(){mslotsel=0;materiaupdate_slot();}
-void MainWindow::on_w_m_s2_clicked(){mslotsel=1;materiaupdate_slot();}
-void MainWindow::on_w_m_s3_clicked(){mslotsel=2;materiaupdate_slot();}
-void MainWindow::on_w_m_s4_clicked(){mslotsel=3;materiaupdate_slot();}
-void MainWindow::on_w_m_s5_clicked(){mslotsel=4;materiaupdate_slot();}
-void MainWindow::on_w_m_s6_clicked(){mslotsel=5;materiaupdate_slot();}
-void MainWindow::on_w_m_s7_clicked(){mslotsel=6;materiaupdate_slot();}
-void MainWindow::on_w_m_s8_clicked(){mslotsel=7;materiaupdate_slot();}
-void MainWindow::on_a_m_s1_clicked(){mslotsel=8;materiaupdate_slot();}
-void MainWindow::on_a_m_s2_clicked(){mslotsel=9;materiaupdate_slot();}
-void MainWindow::on_a_m_s3_clicked(){mslotsel=10;materiaupdate_slot();}
-void MainWindow::on_a_m_s4_clicked(){mslotsel=11;materiaupdate_slot();}
-void MainWindow::on_a_m_s5_clicked(){mslotsel=12;materiaupdate_slot();}
-void MainWindow::on_a_m_s6_clicked(){mslotsel=13;materiaupdate_slot();}
-void MainWindow::on_a_m_s7_clicked(){mslotsel=14;materiaupdate_slot();}
-void MainWindow::on_a_m_s8_clicked(){mslotsel=15;materiaupdate_slot();}
 
 /*~~~~~~~~~~~~~~~~~~~ Game Options~~~~~~~~~~~~~~~~~~*/
 void MainWindow::set_UL_Color(QColor color)
@@ -4067,7 +2945,6 @@ void MainWindow::on_sb_b_love_barret_valueChanged(int value){if(!load){file_modi
 void MainWindow::on_sb_coster_1_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].coster_1=value;}}
 void MainWindow::on_sb_coster_2_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].coster_2 = value;}}
 void MainWindow::on_sb_coster_3_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].coster_3 = value;}}
-void MainWindow::on_combo_id_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setCharID(s,curchar,index); charupdate();}}
 void MainWindow::on_sb_timer_time_hour_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].timer[0] = value;}}
 void MainWindow::on_sb_timer_time_min_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].timer[1] = value;}}
 void MainWindow::on_sb_timer_time_sec_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].timer[2] = value;}}
@@ -5210,3 +4087,213 @@ void MainWindow::on_combo_s7_slums_currentIndexChanged(int index)
             break;
         }
 }}
+void MainWindow::char_materia_changed(materia mat)
+{
+    ff7->setCharMateria(s,curchar,mslotsel,mat);
+    file_modified(true);
+}
+void MainWindow::char_accessory_changed(quint8 accessory)
+{
+    ff7->setCharAccessory(s,curchar,accessory);
+    file_modified(true);
+}
+void MainWindow::char_armor_changed(quint8 armor)
+{
+    ff7->setCharArmor(s,curchar,armor);
+    file_modified(true);
+}
+void MainWindow::char_baseHp_changed(quint16 hp)
+{
+    ff7->setCharBaseHp(s,curchar,hp);
+    file_modified(true);
+}
+void MainWindow::char_baseMp_changed(quint16 mp)
+{
+    ff7->setCharBaseMp(s,curchar,mp);
+    file_modified(true);
+}
+void MainWindow::char_curHp_changed(quint16 hp)
+{
+    ff7->setCharCurrentHp(s,curchar,hp);
+    file_modified(true);
+}
+void MainWindow::char_curMp_changed(quint16 mp)
+{
+    ff7->setCharCurrentMp(s,curchar,mp);
+    file_modified(true);
+}
+void MainWindow::char_id_changed(qint8 id)
+{
+    ff7->setCharID(s,curchar,id);
+    file_modified(true);
+}
+void MainWindow::char_level_changed(qint8 level)
+{
+    ff7->setCharLevel(s,curchar,level);
+    file_modified(true);
+}
+void MainWindow::char_str_changed(quint8 str)
+{
+    ff7->setCharStr(s,curchar,str);
+    file_modified(true);
+}
+
+void MainWindow::char_vit_changed(quint8 vit)
+{
+    ff7->setCharVit(s,curchar,vit);
+    file_modified(true);
+}
+
+void MainWindow::char_mag_changed(quint8 mag)
+{
+    ff7->setCharMag(s,curchar,mag);
+    file_modified(true);
+}
+void MainWindow::char_spi_changed(quint8 spi)
+{
+    ff7->setCharSpi(s,curchar,spi);
+    file_modified(true);
+}
+
+void MainWindow::char_dex_changed(quint8 dex)
+{
+    ff7->setCharDex(s,curchar,dex);
+    file_modified(true);
+}
+
+void MainWindow::char_lck_changed(quint8 lck)
+{
+    ff7->setCharLck(s,curchar,lck);
+    file_modified(true);
+}
+
+void MainWindow::char_strBonus_changed(quint8 value)
+{
+    ff7->setCharStrBonus(s,curchar,value);
+    file_modified(true);
+}
+void MainWindow::char_vitBonus_changed(quint8 value)
+{
+    ff7->setCharVitBonus(s,curchar,value);
+    file_modified(true);
+}
+
+void MainWindow::char_magBonus_changed(quint8 value)
+{
+    ff7->setCharMagBonus(s,curchar,value);
+    file_modified(true);
+}
+
+void MainWindow::char_spiBonus_changed(quint8 value)
+{
+    ff7->setCharSpiBonus(s,curchar,value);
+    file_modified(true);
+}
+
+void MainWindow::char_dexBonus_changed(quint8 value)
+{
+    ff7->setCharDexBonus(s,curchar,value);
+    file_modified(true);
+}
+
+void MainWindow::char_lckBonus_changed(quint8 value)
+{
+    ff7->setCharLckBonus(s,curchar,value);
+    file_modified(true);
+}
+
+void MainWindow::char_limitLevel_changed(qint8 value)
+{
+    ff7->setCharLimitLevel(s,curchar,value);
+    file_modified(true);
+}
+
+void MainWindow::char_limitBar_changed(quint8 value)
+{
+    ff7->setCharLimitBar(s,curchar,value);
+    file_modified(true);
+}
+
+void MainWindow::char_name_changed(QString name)
+{
+    ff7->setCharName(s,curchar,name);
+    file_modified(true);
+}
+
+void MainWindow::char_weapon_changed(quint8 value)
+{
+    ff7->setCharWeapon(s,curchar,value);
+    file_modified(true);
+}
+void MainWindow::char_maxHp_changed(quint16 value)
+
+{
+    ff7->setCharMaxHp(s,curchar,value);
+    file_modified(true);
+}
+void MainWindow::char_maxMp_changed(quint16 value)
+{
+    ff7->setCharMaxMp(s,curchar,value);
+    file_modified(true);
+}
+void MainWindow::char_kills_changed(quint16 value)
+{
+    ff7->setCharKills(s,curchar,value);
+    file_modified(true);
+}
+
+void MainWindow::char_row_changed(quint8 value)
+{
+    ff7->setCharFlag(s,curchar,1,value);
+    file_modified(true);
+}
+
+void MainWindow::char_levelProgress_changed(quint8 value)
+{
+    ff7->setCharFlag(s,curchar,2,value);
+    file_modified(true);
+}
+
+void MainWindow::char_sadnessfury_changed(quint8 value)
+{
+    ff7->setCharFlag(s,curchar,0,value);
+    file_modified(true);
+}
+
+void MainWindow::char_limits_changed(quint16 value)
+{
+    ff7->setCharLimits(s,curchar,value);
+    file_modified(true);
+}
+
+void MainWindow::char_timesused1_changed(quint16 value)
+{
+    ff7->setCharTimeLimitUsed(s,curchar,1,value);
+    file_modified(true);
+}
+
+void MainWindow::char_timeused2_changed(quint16 value)
+{
+    ff7->setCharTimeLimitUsed(s,curchar,2,value);
+    file_modified(true);
+}
+
+void MainWindow::char_timeused3_changed(quint16 value)
+{
+    ff7->setCharTimeLimitUsed(s,curchar,3,value);
+    file_modified(true);
+}
+
+void MainWindow::char_exp_changed(quint32 value)
+{
+    ff7->setCharCurrentExp(s,curchar,value);
+    file_modified(true);
+}
+
+void MainWindow::char_expNext_changed(quint32 value)
+{
+    ff7->setCharNextExp(s,curchar,value);
+    file_modified(true);
+}
+
+void MainWindow::char_mslot_changed(int slot){mslotsel=slot;}

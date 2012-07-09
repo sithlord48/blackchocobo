@@ -83,7 +83,6 @@
         <file alias="arrow_up_disabled">icon/arrow-up_disabled.png</file>
         <file alias="scroll_handle_h">icon/scroll_handle_h.png</file>
         <file alias="scroll_handle_v">icon/scroll_handle_v.png</file>
-        <file alias="mslot">icon/mslot.png</file>
         <file alias="default_setting">icon/default_setting.png</file>
         <file alias="save_as">icon/save_as.png</file>
         <file alias="save">icon/save.png</file>
