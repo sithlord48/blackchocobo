@@ -39,6 +39,7 @@
 #include "widgets/MateriaEditor.h"
 #include "widgets/SlotSelect.h"
 #include "widgets/ChocoboEditor.h"
+#include "widgets/CharEditor.h"
 namespace Ui {
     class MainWindow;
     }
@@ -75,7 +76,8 @@ private:
     ItemPreview *item_preview;
     DialogPreview *dialog_preview;
     MateriaEditor *materia_editor;
-    MateriaEditor *materia_editor_slot;
+    //MateriaEditor *materia_editor_slot;
+    CharEditor * char_editor;
     ChocoboEditor *chocobo_stable_1;
     ChocoboEditor *chocobo_stable_2;
     ChocoboEditor *chocobo_stable_3;
@@ -146,14 +148,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_action_Region_JPN_triggered(bool checked);
     void on_action_Region_JPN_International_triggered(bool checked);
     /*GuiFunctions*/
-    void charupdate(void);
-    void update_stat_totals(void);
-    void weapon_stat(void);
-    void setchar_growth(int caller);
-    void setarmorslots(void);
-    void setweaponslots(void);
     void setmenu(bool newgame);
-    void materiaupdate_slot(void);
     void materiaupdate(void);
     void itemupdate(void);
     void guirefresh(bool newgame);
@@ -306,6 +301,45 @@ private slots://try to keep these in the same order as the .cpp file
 
 
 //NOT IN ORDER FROM HERE DOWN
+    void char_id_changed(qint8);
+    void char_level_changed(qint8);
+    void char_str_changed(quint8);
+    void char_vit_changed(quint8);
+    void char_mag_changed(quint8);
+    void char_spi_changed(quint8);
+    void char_dex_changed(quint8);
+    void char_lck_changed(quint8);
+    void char_strBonus_changed(quint8);
+    void char_vitBonus_changed(quint8);
+    void char_magBonus_changed(quint8);
+    void char_spiBonus_changed(quint8);
+    void char_dexBonus_changed(quint8);
+    void char_lckBonus_changed(quint8);
+    void char_limitLevel_changed(qint8);
+    void char_limitBar_changed(quint8);
+    void char_name_changed(QString);
+    void char_weapon_changed(quint8);
+    void char_armor_changed(quint8);
+    void char_accessory_changed(quint8);
+    void char_curHp_changed(quint16);
+    void char_maxHp_changed(quint16);
+    void char_curMp_changed(quint16);
+    void char_maxMp_changed(quint16);
+    void char_kills_changed(quint16);
+    void char_row_changed(quint8);
+    void char_levelProgress_changed(quint8);
+    void char_sadnessfury_changed(quint8);
+    void char_limits_changed(quint16);
+    void char_timesused1_changed(quint16);
+    void char_timeused2_changed(quint16);
+    void char_timeused3_changed(quint16);
+    void char_baseHp_changed(quint16);
+    void char_baseMp_changed(quint16);
+    void char_exp_changed(quint32);
+    void char_mslot_changed(int);
+    void char_materia_changed(materia);
+    void char_expNext_changed(quint32);
+
     void on_cb_tut_sub_8_toggled(bool);
     void on_cb_tut_sub_7_toggled(bool);
     void on_cb_tut_sub_6_toggled(bool);
@@ -359,9 +393,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_list_menu_locked_clicked(const QModelIndex &index);
 
     void on_sb_turkschruch_valueChanged(int );
-
-
-    void on_cb_id_toggled(bool checked);
 
     void on_btn_remove_all_materia_clicked();
     void on_btn_remove_all_stolen_clicked();
@@ -486,76 +517,9 @@ private slots://try to keep these in the same order as the .cpp file
     // Materia Tab
     void on_tbl_materia_currentCellChanged(int row);
     void materia_ap_changed(qint32 ap);
-    void materia_id_changed(qint8 id);
-
-    void materia_slot_ap_changed(qint32 ap);
-    void materia_slot_id_changed(qint8 id);
-//char stats
-
-    void on_line_name_textChanged(QString text);
-    void on_sb_lvl_valueChanged(int value);
-    void on_sb_exp_valueChanged(int value);
-    void on_sb_kills_valueChanged(int value);
-    void on_cb_front_clicked(bool checked);
-    void on_cb_fury_clicked(bool checked);
-    void on_cb_sadness_clicked(bool checked);
-    void on_sb_hp_valueChanged(int value);
-    void on_sb_mp_valueChanged(int value);
-    void on_sb_maxmp_valueChanged(int value);
-    void on_sb_maxhp_valueChanged(int value);
-    void on_sb_curhp_valueChanged(int value);
-    void on_sb_curmp_valueChanged(int value);
-    void on_sb_str_valueChanged(int value);
-    void on_sb_strbonus_valueChanged(int value);
-    void on_sb_dex_valueChanged(int value);
-    void on_sb_dexbonus_valueChanged(int value);
-    void on_sb_mag_valueChanged(int value);
-    void on_sb_magbonus_valueChanged(int value);
-    void on_sb_vit_valueChanged(int value);
-    void on_sb_vitbonus_valueChanged(int value);
-    void on_sb_spi_valueChanged(int value);
-    void on_sb_spibonus_valueChanged(int value);
-    void on_sb_lck_valueChanged(int value);
-    void on_sb_lckbonus_valueChanged(int value);
-    // LIMITS STUFFS
-    void on_limit_1a_toggled();
-    void on_limit_1b_toggled();
-    void on_limit_2a_toggled();
-    void on_limit_2b_toggled();
-    void on_limit_3a_toggled();
-    void on_limit_3b_toggled();
-    void on_limit_4_toggled();
-    void limitapply();
-    void on_sb_limitlvl_valueChanged(int);
-    void on_slide_limit_valueChanged(int);
-    void on_sb_used1_valueChanged(int value);
-    void on_sb_used2_valueChanged(int value);
-    void on_sb_used3_valueChanged(int value);
-
-    //char equipment Tab
-    void on_combo_weapon_activated(int);
-    void on_combo_weapon_currentIndexChanged();
-    void on_combo_armor_currentIndexChanged(int);
-    void on_combo_acc_currentIndexChanged(int);
-    void on_a_m_s1_clicked();
-    void on_a_m_s2_clicked();
-    void on_a_m_s3_clicked();
-    void on_a_m_s4_clicked();
-    void on_a_m_s5_clicked();
-    void on_a_m_s6_clicked();
-    void on_a_m_s7_clicked();
-    void on_a_m_s8_clicked();
-    void on_w_m_s1_clicked();
-    void on_w_m_s2_clicked();
-    void on_w_m_s3_clicked();
-    void on_w_m_s4_clicked();
-    void on_w_m_s5_clicked();
-    void on_w_m_s6_clicked();
-    void on_w_m_s7_clicked();
-    void on_w_m_s8_clicked();
+    void materia_id_changed(qint8 id);  
 
     void on_cb_Region_Slot_currentIndexChanged();
-    void on_combo_id_currentIndexChanged(int index);
     void on_cb_ruby_dead_toggled(bool checked);
     void on_cb_emerald_dead_toggled(bool checked);
     void on_combo_highwind_buggy_currentIndexChanged(int index);
