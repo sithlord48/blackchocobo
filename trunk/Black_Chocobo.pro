@@ -21,7 +21,6 @@ TARGET = Black_Chocobo
 TEMPLATE = app
 SOURCES += main.cpp \
     mainwindow.cpp \
-    #slotselect.cpp \
     about.cpp \
     options.cpp \
     errbox.cpp \
@@ -40,7 +39,6 @@ SOURCES += main.cpp \
     widgets/ChocoboEditor.cpp \
     widgets/CharEditor.cpp
 HEADERS += mainwindow.h \
-    #slotselect.h \
     about.h \
     options.h \
     errbox.h \
@@ -64,7 +62,6 @@ HEADERS += mainwindow.h \
     widgets/ChocoboEditor.h \
     widgets/CharEditor.h
 FORMS += mainwindow.ui \
-    #slotselect.ui \
     about.ui \
     options.ui \
     errbox.ui
