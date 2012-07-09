@@ -24,7 +24,7 @@ MateriaEditor::MateriaEditor(QWidget *parent):QWidget(parent)
     init_display();
     init_data();
     init_connections();
-    setMateria(0xFF,16777215);
+    setMateria(0xFF,0xFFFFFF);//Smallest Possible Size. ready for use now.
 }
 /*
 MateriaEditor::MateriaEditor(QWidget *parent, quint8 materia_id,qint32 materia_ap):QWidget(parent)
@@ -276,6 +276,7 @@ void MateriaEditor::setMateria(quint8 materia_id,qint32 materia_ap)
             _max_level = data->Levels(_id);
             for(int i=0;i<_max_level;i++){_level_ap[i]=data->Ap(_id,i);}
             _skill_list = data->Skills(_id);
+            sb_ap->setEnabled(1);
             emit id_changed(_id);
          }
     }
@@ -283,6 +284,7 @@ void MateriaEditor::setMateria(quint8 materia_id,qint32 materia_ap)
     {//Invalid Data Reset Materia.
         if(_id != 0xFF){emit id_changed(0xFF);}
         _id=0xFF;
+        sb_ap->setEnabled(0);
         _current_ap = 16777215;//set since setAp ingores the 0xFF id.
     }
     this->setName();
@@ -566,7 +568,7 @@ void MateriaEditor::editMode(void)
     btn_star4->blockSignals(!editable);
     btn_star5->blockSignals(!editable);
     //Set Enabled = editable
-    sb_ap->setEnabled(editable);
+    if(_id != 0xFF){sb_ap->setEnabled(editable);}
     btn_paste_materia->setEnabled(editable);
     btn_rm_materia->setEnabled(editable);
     combo_materia->setEnabled(editable);
