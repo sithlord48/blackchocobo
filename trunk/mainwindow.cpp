@@ -234,6 +234,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     char_editor_layout->addWidget(char_editor);
     ui->group_char_editor_box->setLayout(char_editor_layout);
 
+    char_editor->setStyleSheet(this->styleSheet());
     /*
     materia_editor_slot = new MateriaEditor;
     materia_editor_slot->setStarsSize(32);
@@ -1874,6 +1875,19 @@ void MainWindow::guirefresh(bool newgame)
         progress_update();
         set_char_buttons();
         if(ui->action_show_debug->isChecked()){testdata_refresh();}
+
+        switch(curchar)
+        {
+            case 0: ui->btn_cloud->click();break;
+            case 1: ui->btn_barret->click();break;
+            case 2: ui->btn_tifa->click();break;
+            case 3: ui->btn_aeris->click();break;
+            case 4: ui->btn_red->click();break;
+            case 5: ui->btn_yuffie->click();break;
+            case 6: ui->btn_cait->click();break;
+            case 7: ui->btn_vincent->click();break;
+            case 8: ui->btn_cid->click();break;
+        }
     }
 }/*~~~~~~~~~~~~~~~~~~~~End GUIREFRESH ~~~~~~~~~~~~~~~~~*/
 void MainWindow::set_char_buttons()

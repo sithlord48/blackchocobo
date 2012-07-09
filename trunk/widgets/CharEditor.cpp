@@ -94,7 +94,7 @@ void CharEditor::init_display()
     slider_limit->setMaximum(255);
     slider_limit->setOrientation(Qt::Horizontal);
     lcd_limit_value = new QLCDNumber;
-
+    lcd_limit_value->setSegmentStyle(QLCDNumber::Flat);
 
     lbl_str = new QLabel(tr("Str"));
     sb_str = new QSpinBox;
@@ -903,6 +903,15 @@ void CharEditor::init_display()
     main_layout->addWidget(main_widget);
     main_layout->addWidget(btnPage);
    this->setLayout(main_layout);
+
+
+    QString style("QSlider:sub-page{background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87,192), stop:0.505682 rgba(209, 128, 173,192), stop:0.931818 rgba(209, 44, 136, 192));}");
+    style.append(QString("QSlider::add-page{background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
+    style.append(QString("QSlider{border:3px solid;border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));border-bottom-color: rgb(172, 172, 172);border-top-color: rgb(172, 172, 172);border-radius: 5px;}"));
+    style.append(QString("QSlider::groove{height: 12px;background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
+    style.append(QString("QSlider::handle{background: rgba(172, 172, 172,255);border: 1px solid #5c5c5c;width: 3px;border-radius: 2px;}"));
+
+    slider_limit->setStyleSheet(style);
 }
 void CharEditor::init_connections()
 {
@@ -1093,6 +1102,9 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
 
     sb_lck->setValue(data.luck);
     sb_lck_bonus->setValue(data.luck_bonus);
+
+    sb_base_hp->setValue(data.baseHP);
+    sb_base_mp->setValue(data.baseMP);
 
     //Process the limits.
     list_limits->blockSignals(true);
