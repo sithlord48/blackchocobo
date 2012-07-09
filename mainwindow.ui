@@ -135,25 +135,6 @@ background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1
 QSlider#slide_limit::add-pageQSlider#slide_battlespeed:add-page,QSlider#slide_fieldmspeed:add-page,QSlider#slide_battlemspeed:add-page {
  background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));
  }
-QSlider[slider_red=&quot;true&quot;]::groove{
-height:12px;
-background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(255,0,0, 255));
-}
-QSlider[slider_green=&quot;true&quot;]::groove{
-height:12px;
-background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(0,255, 0, 255));
-}
-QSlider[slider_blue=&quot;true&quot;]::groove{
-height:12px;
-background :qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(0, 0, 0, 255), stop:1 rgba(0,0,255, 255));
-}
-QSlider[slider_red=&quot;true&quot;]::handle,[slider_green=&quot;true&quot;]::handle,[slider_blue=&quot;true&quot;]::handle{
-     background: rgba(172, 172, 172,0);
-     border: 2px solid #5c5c5c;
-     width: 3px;
-     border-radius: 2px;
- }
-
 QSlider[regular=&quot;false&quot;]{
    border:3px solid; 
 	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
@@ -2882,8 +2863,8 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>720</width>
-             <height>275</height>
+             <width>769</width>
+             <height>445</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -4956,7 +4937,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>333</width>
+                  <width>350</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -7440,7 +7421,7 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>513</width>
+             <width>754</width>
              <height>683</height>
             </rect>
            </property>
