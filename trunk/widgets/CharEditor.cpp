@@ -78,11 +78,12 @@ void CharEditor::init_display()
 
     lcd_tnl = new QLCDNumber;
     lcd_tnl->setNumDigits(8);
+    lcd_tnl->setMaximumHeight(20);
     lcd_tnl->setSegmentStyle(QLCDNumber::Flat);
     lbl_limit_bar = new QLabel (tr("Limit Bar"));
     slider_limit = new QSlider;
-    slider_limit->setMaximumHeight(22);
-    bar_tnl->setMaximumHeight(22);
+    slider_limit->setMaximumHeight(20);
+    bar_tnl->setMaximumHeight(20);
     slider_limit->setMaximum(255);
     slider_limit->setOrientation(Qt::Horizontal);
     lcd_limit_value = new QLCDNumber;
@@ -188,36 +189,30 @@ void CharEditor::init_display()
     lbl_3_1->setAlignment(Qt::AlignHCenter);
 
 
-    QVBoxLayout *layout_1_1 = new QVBoxLayout;
+    QHBoxLayout *layout_1_1 = new QHBoxLayout;
     layout_1_1->setContentsMargins(0,0,0,0);
     layout_1_1->setSpacing(3);
     layout_1_1->addWidget(lbl_1_1);
     layout_1_1->addWidget(sb_uses_limit_1_1);
 
-    QVBoxLayout *layout_2_1 = new QVBoxLayout;
+    QHBoxLayout *layout_2_1 = new QHBoxLayout;
     layout_2_1->setContentsMargins(0,0,0,0);
     layout_2_1->setSpacing(3);
     layout_2_1->addWidget(lbl_2_1);
     layout_2_1->addWidget(sb_uses_limit_2_1);
-    QVBoxLayout *layout_3_1 = new QVBoxLayout;
+    QHBoxLayout *layout_3_1 = new QHBoxLayout;
     layout_3_1->setContentsMargins(0,0,0,0);
     layout_3_1->setSpacing(3);
     layout_3_1->addWidget(lbl_3_1);
     layout_3_1->addWidget(sb_uses_limit_3_1);
 
-
-    QHBoxLayout *used_layout = new QHBoxLayout;
-    used_layout->setContentsMargins(0,0,0,0);
-    used_layout->setSpacing(3);
-    used_layout->addLayout(layout_1_1);
-    used_layout->addLayout(layout_2_1);
-    used_layout->addLayout(layout_3_1);
-
     QVBoxLayout *used_limits_layout = new QVBoxLayout;
     used_limits_layout->setContentsMargins(0,0,0,0);
     used_limits_layout->setSpacing(3);
     used_limits_layout->addWidget(lbl_uses);
-    used_limits_layout->addLayout(used_layout);
+    used_limits_layout->addLayout(layout_1_1);
+    used_limits_layout->addLayout(layout_2_1);
+    used_limits_layout->addLayout(layout_3_1);
 
     list_limits = new QListWidget;
     lbl_limit_level = new QLabel(tr("Limit Level"));
@@ -227,9 +222,10 @@ void CharEditor::init_display()
 
 
     QHBoxLayout *limit_level_layout = new QHBoxLayout;
-    limit_level_layout->setContentsMargins(0,36,0,0);//push it far down so it lines up w/ the uses section
-    QSpacerItem *limitSpacer = new QSpacerItem(0,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
-    limit_level_layout->addSpacerItem(limitSpacer);
+    limit_level_layout->setContentsMargins(0,0,0,0);
+   // limit_level_layout->setContentsMargins(0,36,0,0);//push it far down so it lines up w/ the uses section
+   // QSpacerItem *limitSpacer = new QSpacerItem(0,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
+  //  limit_level_layout->addSpacerItem(limitSpacer);
     limit_level_layout->addWidget(lbl_limit_level);
     limit_level_layout->addWidget(sb_limit_level);
 
@@ -289,8 +285,9 @@ void CharEditor::init_display()
     mp_layout->addSpacerItem(mp_spacer);
 
 
-    QHBoxLayout *exp_layout = new QHBoxLayout;
-    exp_layout->setContentsMargins(0,36,0,0);
+    QVBoxLayout *exp_layout = new QVBoxLayout;
+    exp_layout->setContentsMargins(0,0,0,0);
+    exp_layout->setSpacing(0);
     exp_layout->addWidget(lbl_total_xp);
     exp_layout->addWidget(sb_total_exp);
 
@@ -325,10 +322,6 @@ void CharEditor::init_display()
     id_layout->addWidget(lbl_id);
     id_layout->addWidget(combo_id);
 
-    QVBoxLayout *level_next_layout = new QVBoxLayout;
-    level_next_layout->setContentsMargins(0,0,0,0);
-    level_next_layout->addWidget(lbl_level_next);
-    level_next_layout->addWidget(lcd_tnl);
 
     QVBoxLayout *sadness_row_id_layout =new QVBoxLayout;
     sadness_row_id_layout->addWidget(frm_fury_sadness);
@@ -336,14 +329,23 @@ void CharEditor::init_display()
     sadness_row_id_layout->addLayout(id_layout);
 
     QHBoxLayout *avatar_name_layout = new QHBoxLayout;
+    avatar_name_layout->setContentsMargins(0,0,0,0);
     avatar_name_layout->addWidget(lbl_avatar);
     avatar_name_layout->addLayout(name_hp_mp_kills_layout);
     avatar_name_layout->addLayout(sadness_row_id_layout);
 
+
     QVBoxLayout *level_bar_layout = new QVBoxLayout;
     level_bar_layout->setContentsMargins(0,0,0,0);
+    level_bar_layout->setSpacing(0);
     level_bar_layout->addWidget(lbl_level_progress);
     level_bar_layout->addWidget(bar_tnl);
+
+    QVBoxLayout *level_next_layout = new QVBoxLayout;
+    level_next_layout->setContentsMargins(0,0,0,0);
+    level_next_layout->setSpacing(0);
+    level_next_layout->addWidget(lbl_level_next);
+    level_next_layout->addWidget(lcd_tnl);
 
     QHBoxLayout *level_progress_layout = new QHBoxLayout;
     level_progress_layout->addLayout(level_bar_layout);
@@ -451,7 +453,7 @@ void CharEditor::init_display()
 
     QVBoxLayout *stat_layout = new QVBoxLayout;
     stat_layout->setContentsMargins(0,3,0,0);
-    stat_layout->setSpacing(3);
+    stat_layout->setSpacing(0);
     stat_layout->addLayout(str_layout);
     stat_layout->addLayout(vit_layout);
     stat_layout->addLayout(mag_layout);
@@ -464,16 +466,19 @@ void CharEditor::init_display()
     stat_box->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::MinimumExpanding);
     stat_box->setLayout(stat_layout);
 
-    QHBoxLayout *limit_uses_level_layout = new QHBoxLayout;
+    QVBoxLayout *limit_uses_level_layout = new QVBoxLayout;
     limit_uses_level_layout->setContentsMargins(0,0,0,0);
-    limit_uses_level_layout->setSpacing(3);
+    limit_uses_level_layout->setSpacing(0);
     limit_uses_level_layout->addLayout(limit_level_layout);
     limit_uses_level_layout->addLayout(used_limits_layout);
 
+    QHBoxLayout *limit_use_list = new QHBoxLayout;
+    limit_use_list->addLayout(limit_uses_level_layout);
+    limit_use_list->addWidget(list_limits);
+
     QVBoxLayout *limit_box = new QVBoxLayout;
-    limit_box->addLayout(limit_uses_level_layout);
     limit_box->addLayout(limit_bar_layout);
-    limit_box->addWidget(list_limits);
+    limit_box->addLayout(limit_use_list);
 
 
     QVBoxLayout *lower_section = new QVBoxLayout;
@@ -484,11 +489,10 @@ void CharEditor::init_display()
 
     QVBoxLayout *left_Final = new QVBoxLayout;
     left_Final->setContentsMargins(3,3,3,3);
+    //left_Final->setSpacing(0);
     left_Final->addLayout(avatar_name_layout);
     left_Final->addLayout(level_exp_limit_layout);
     left_Final->addLayout(lower_section);
-
-
 
     weapon_selection = new QComboBox;
 
