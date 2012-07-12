@@ -230,20 +230,13 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
 
     char_editor = new CharEditor;
     QHBoxLayout *char_editor_layout = new QHBoxLayout;
+    char_editor_layout->setSpacing(0);
     char_editor_layout->setContentsMargins(0,0,0,0);
     char_editor_layout->addWidget(char_editor);
     ui->group_char_editor_box->setLayout(char_editor_layout);
 
     char_editor->setStyleSheet(this->styleSheet());
-    /*
-    materia_editor_slot = new MateriaEditor;
-    materia_editor_slot->setStarsSize(32);
-    QVBoxLayout *materia_editor_slot_layout = new QVBoxLayout();
-    materia_editor_slot_layout->setContentsMargins(0,0,0,0);
-    materia_editor_slot_layout->addWidget(materia_editor_slot);
-    ui->group_materia_slot->setLayout(materia_editor_slot_layout);
-    ui->group_materia_slot->setContentsMargins(0,0,0,6);
-*/
+
     chocobo_stable_1 = new ChocoboEditor;
     QVBoxLayout *stable_1_layout = new QVBoxLayout;
     stable_1_layout->setContentsMargins(0,0,0,0);
@@ -291,9 +284,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
 
     connect(materia_editor,SIGNAL(ap_changed(qint32)),this,SLOT(materia_ap_changed(qint32)));
     connect(materia_editor,SIGNAL(id_changed(qint8)),this,SLOT(materia_id_changed(qint8)));
-
-//    connect(materia_editor_slot,SIGNAL(ap_changed(qint32)),this,SLOT(materia_slot_ap_changed(qint32)));
-//    connect(materia_editor_slot,SIGNAL(id_changed(qint8)),this,SLOT(materia_slot_id_changed(qint8)));
 
     connect(char_editor,SIGNAL(id_changed(qint8)),this,SLOT(char_id_changed(qint8)));
     connect(char_editor,SIGNAL(level_changed(qint8)),this,SLOT(char_level_changed(qint8)));

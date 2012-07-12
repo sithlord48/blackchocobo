@@ -479,6 +479,10 @@ void MateriaEditor::type_changed(int new_type)
     combo_materia->blockSignals(1);
     if(new_type ==0)for(int i=0;i<91;i++){if(data->Name(i) !="DON'T USE"){combo_materia->addItem(data->Icon(i),data->Name(i));}}
     else{for(int i=0;i<91;i++){if(data->Type(i) == new_type){combo_materia->addItem(data->Icon(i),data->Name(i));}}}
+    //look for the current id in the new list if found set it other wise set index -1
+    if(_id !=0xFF){combo_materia->setCurrentIndex(combo_materia->findText(data->Name(_id)));}
+
+    else{combo_materia->setCurrentIndex(-1);}
     combo_materia->blockSignals(0);
 }
 /*
@@ -489,7 +493,7 @@ qint32 MateriaEditor::raw_data(void)
     return materia;
 }
 */
-void MateriaEditor::remove_materia(void){setMateria(0xFF,0);}
+void MateriaEditor::remove_materia(void){setMateria(0xFF,0xFFFFFF);}
 
 qint32 MateriaEditor::ap(void){return _current_ap;}
 qint8 MateriaEditor::id(void){return _id;}

@@ -27,16 +27,6 @@ CharEditor::CharEditor(QWidget *parent) :
     autostatcalc=true;
     editable=true;
     mslotsel =0;
-    //init the data..(just incase)
-    //_name= "Cloud";
-    //QByteArray temp;
-    //temp.fill(0x00,132);
-    //memcpy(&data,temp,132);
-
-    //data.accessory = 0xFF;
-    //data.weapon = 0;
-    //data.armor =0;
-    //setChar(data,_name);
  }
 void CharEditor::init_display()
 {
@@ -91,6 +81,8 @@ void CharEditor::init_display()
     lcd_tnl->setSegmentStyle(QLCDNumber::Flat);
     lbl_limit_bar = new QLabel (tr("Limit Bar"));
     slider_limit = new QSlider;
+    slider_limit->setMaximumHeight(22);
+    bar_tnl->setMaximumHeight(22);
     slider_limit->setMaximum(255);
     slider_limit->setOrientation(Qt::Horizontal);
     lcd_limit_value = new QLCDNumber;
@@ -298,7 +290,7 @@ void CharEditor::init_display()
 
 
     QHBoxLayout *exp_layout = new QHBoxLayout;
-    exp_layout->setContentsMargins(0,12,0,0);
+    exp_layout->setContentsMargins(0,36,0,0);
     exp_layout->addWidget(lbl_total_xp);
     exp_layout->addWidget(sb_total_exp);
 
@@ -469,7 +461,6 @@ void CharEditor::init_display()
     stat_layout->addLayout(base_hp_mp_layout);
 
     QGroupBox *stat_box= new QGroupBox;
-    //stat_box->setFixedHeight(this->font().pointSize()*22);
     stat_box->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::MinimumExpanding);
     stat_box->setLayout(stat_layout);
 
@@ -488,12 +479,12 @@ void CharEditor::init_display()
     QVBoxLayout *lower_section = new QVBoxLayout;
     lower_section->setContentsMargins(0,0,0,0);
     lower_section->addWidget(stat_box);
-    //lower_section->addLayout(limit_box);
+    lower_section->addLayout(limit_box);
 
 
     QVBoxLayout *left_Final = new QVBoxLayout;
-    left_Final->setContentsMargins(0,0,0,0);
-    //left_Final->addLayout(avatar_name_layout);
+    left_Final->setContentsMargins(3,3,3,3);
+    left_Final->addLayout(avatar_name_layout);
     left_Final->addLayout(level_exp_limit_layout);
     left_Final->addLayout(lower_section);
 
@@ -826,84 +817,43 @@ void CharEditor::init_display()
     right_top->setLayout(right_Top);
     right_top->adjustSize();
     right_top->setFixedHeight(right_top->height());
-    right_top->setFixedWidth(410);
+    right_top->setFixedWidth(420);
+
 
     QVBoxLayout *right_bottom = new QVBoxLayout;
+    right_bottom->setContentsMargins(0,0,0,0);
     right_bottom->addWidget(materia_edit);
     right_bottom->addLayout(effects_layout);
-    QSpacerItem *rtb_spacer = new QSpacerItem(0,0,QSizePolicy::Fixed,QSizePolicy::Expanding);
-    right_bottom->addSpacerItem(rtb_spacer);
+    //QSpacerItem *rtb_spacer = new QSpacerItem(0,0,QSizePolicy::Fixed,QSizePolicy::Expanding);
+    //right_bottom->addSpacerItem(rtb_spacer);
 
-    materia_edit->setMaximumWidth(410);
+    materia_edit->setMaximumWidth(420);
 
 
     QVBoxLayout *right_Final = new QVBoxLayout;
+    right_Final->setContentsMargins(3,3,3,3);
     right_Final->addWidget(right_top);
     right_Final->setSpacing(3);
     right_Final->addLayout(right_bottom);
 
-    QWidget *equipment_stuff = new QWidget;
-    equipment_stuff->setLayout(right_Final);
-    equipment_stuff->setMinimumHeight(610);
-    equipment_stuff->adjustSize();
-
-
-    QVBoxLayout *equip_layout = new QVBoxLayout;
-    //equip_layout->addWidget(equipment_section);
-    equip_layout->addWidget(equipment_stuff);
-
-    QWidget *equip_widget = new QWidget;
-    equip_widget->setLayout(equip_layout);
-
-    equipment_section = new QScrollArea;
-    equipment_section->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
-    equipment_section->setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
-    equipment_section->setWidget(equipment_stuff);
-    equipment_section->setMinimumWidth(440);
-    equipment_section->adjustSize();
-
     list_limits->setFixedHeight(this->font().pointSize()*14);
-    //QHBoxLayout *Final = new QHBoxLayout;
-    //Final->setContentsMargins(0,0,0,0);
-    //Final->addLayout(left_Final);
-    //Final->addLayout(right_Final);
-    //Final->addWidget(equipment_section);
-    //this->setLayout(Final);
 
     toolbox = new QToolBox;
 
     QGroupBox *tab_1 = new QGroupBox;
     tab_1->setLayout(left_Final);
-    toolbox->addItem(tab_1,QString(tr("Status Info")));
+    toolbox->addItem(tab_1,Chars.Icon(0),QString(tr("Status Info")));
 
-    QGroupBox *tab_2 = new QGroupBox;
-    tab_2->setLayout(limit_box);
-    toolbox->addItem(tab_2,QString(tr("Limits")));
+    QGroupBox *tab_3 = new QGroupBox;
+    tab_3->setLayout(right_Final);
+    toolbox->addItem(tab_3,QIcon(QPixmap::fromImage(Items.Image(256))),QString(tr("Equipment")));
+
 
     QVBoxLayout *toolbox_layout = new QVBoxLayout;
-    toolbox_layout->addLayout(avatar_name_layout);
+    toolbox_layout->setContentsMargins(0,0,0,0);
     toolbox_layout->addWidget(toolbox);
 
-    QWidget *Status_Section = new QWidget;
-    Status_Section->setLayout(toolbox_layout);
-
-    //QGroupBox *tab_3 = new QGroupBox;
-    //tab_3->setLayout(equip_layout);
-    //toolbox->addItem(tab_3,QString(tr("Equipment")));
-
-    main_widget = new QStackedWidget;
-    main_widget->addWidget(Status_Section);
-    main_widget->addWidget(equipment_section);
-
-    btnPage = new QPushButton;
-    btnPage->setText(QString(tr("Equipment")));
-
-    main_layout = new QVBoxLayout;
-    main_layout->setContentsMargins(0,0,0,0);
-    main_layout->addWidget(main_widget);
-    main_layout->addWidget(btnPage);
-   this->setLayout(main_layout);
-
+    this->setLayout(toolbox_layout);
 
     QString style("QSlider:sub-page{background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87,192), stop:0.505682 rgba(209, 128, 173,192), stop:0.931818 rgba(209, 44, 136, 192));}");
     style.append(QString("QSlider::add-page{background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));}"));
@@ -968,7 +918,7 @@ void CharEditor::init_connections()
 
     connect(materia_edit,SIGNAL(ap_changed(qint32)),this,SLOT(matAp_changed(qint32)));
     connect(materia_edit,SIGNAL(id_changed(qint8)),this,SLOT(matId_changed(qint8)));
-    connect(btnPage,SIGNAL(clicked()),this,SLOT(btn_page_clicked()));
+    //connect(btnPage,SIGNAL(clicked()),this,SLOT(btn_page_clicked()));
     //connect(lbl_avatar,SIGNAL(customContextMenuRequested(QPoint)),this,SLOT(charMenu(QPoint)));
 }
 qint8 CharEditor::id(){return data.id;}
@@ -2334,27 +2284,6 @@ void CharEditor::armor_slot_8_clicked(void)
     mslotsel = 15;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-}
-void CharEditor::btn_page_clicked()
-{
-    if(main_widget->currentIndex()==0)
-    {
-        main_widget->setCurrentIndex(1);
-        btnPage->setText(QString(tr("Character Info")));
-        //main_layout->removeWidget(btnPage);
-        //main_layout->removeWidget(main_widget);
-       // main_layout->addWidget(main_widget);
-       // main_layout->addWidget(btnPage);
-    }
-    else if (main_widget->currentIndex()==1)
-    {
-        main_widget->setCurrentIndex(0);
-        btnPage->setText(QString(tr("Equipment / Materia")));
-       // main_layout->removeWidget(btnPage);
-      //  main_layout->removeWidget(main_widget);
-      //  main_layout->addWidget(btnPage);
-      // main_layout->addWidget(main_widget);
-    }
 }
 //void setFlags(int,int);
 //void setZ_4[4](int);
