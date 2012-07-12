@@ -205,4 +205,7 @@ static const quint8 _stat_gradent[30][8]=
     {70,70,70,71,67,48,16,16},
     {65,63,76,61,49,36,28,20}
 };
+
+
+static const quint16 _limitbitarray[0x07] = {0x01,0x02,/*0x04,*/0x08, 0x10,/*0x20,*/0x40,0x80, /*0x100,*/0x200};  //Vegeta_Ss4: Fixed list_limits GUI
 #endif // FF7CHAR_H

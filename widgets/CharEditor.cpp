@@ -898,6 +898,10 @@ void CharEditor::init_connections()
     connect(sb_total_exp,SIGNAL(valueChanged(int)),this,SLOT(Exp_Changed(int)));
     connect(slider_limit,SIGNAL(valueChanged(int)),lcd_limit_value,SLOT(display(int)));
     connect(list_limits,SIGNAL(clicked(QModelIndex)),this,SLOT(calc_limit_value(QModelIndex)));
+    connect(sb_uses_limit_1_1,SIGNAL(valueChanged(int)),this,SLOT(setTimesused1(int))); //Vegeta_Ss4: Fixed limit timeused GUI
+    connect(sb_uses_limit_2_1,SIGNAL(valueChanged(int)),this,SLOT(setTimesused2(int))); //Vegeta_Ss4: Fixed limit timeused GUI
+    connect(sb_uses_limit_3_1,SIGNAL(valueChanged(int)),this,SLOT(setTimesused3(int))); //Vegeta_Ss4: Fixed limit timeused GUI
+    connect(sb_limit_level,SIGNAL(valueChanged(int)),this,SLOT(setLimitLevel(int))); //Vegeta_Ss4: Fixed limitlevel GUI
     connect(combo_id,SIGNAL(currentIndexChanged(int)),this,SLOT(setId(int)));
     connect(weapon_selection,SIGNAL(currentIndexChanged(int)),this,SLOT(setWeapon(int)));
     connect(armor_selection,SIGNAL(currentIndexChanged(int)),this,SLOT(setArmor(int)));
@@ -1065,17 +1069,24 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     list_limits->blockSignals(true);
     list_limits->clear();
     list_limits->addItems(Chars.limits(data.id));
+
     for(int i=0;i<7;i++)
     {//Process the List. Hide "" entries, and Check Limts Learned.
 
         if(list_limits->item(i)->text()=="") {list_limits->item(i)->setHidden(true);}
         else{list_limits->item(i)->setHidden(false);}
 
-        if(data.limits & (1<<i)){list_limits->item(i)->setCheckState(Qt::Checked);}
+        if(data.limits & _limitbitarray[i]){list_limits->item(i)->setCheckState(Qt::Checked);} //Vegeta_Ss4: Fixed list_limits GUI
         else{list_limits->item(i)->setCheckState(Qt::Unchecked);}
     }
 
     list_limits->blockSignals(false);
+
+    sb_uses_limit_1_1->setValue(data.timesused1); //Vegeta_Ss4: Fixed limit timeused GUI
+    sb_uses_limit_2_1->setValue(data.timesused2); //Vegeta_Ss4: Fixed limit timeused GUI
+    sb_uses_limit_3_1->setValue(data.timesused3); //Vegeta_Ss4: Fixed limit timeused GUI
+
+    sb_limit_level->setValue(data.limitlevel); //Vegeta_Ss4: Fixed limitlevel GUI
 
     weapon_selection->blockSignals(true);
     weapon_selection->clear();
