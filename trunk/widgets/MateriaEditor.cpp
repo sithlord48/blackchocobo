@@ -60,6 +60,7 @@ void MateriaEditor::init_display()
     btn_clear_eskills = new QPushButton;
     btn_master_eskills = new QPushButton;
     eskill_group = new QGroupBox;
+    eskill_group->setMinimumHeight(150);
     list_status = new QListWidget;
     box_status_effects = new QGroupBox;
     frm_name_type =new QFrame;

@@ -213,6 +213,8 @@ void CharEditor::init_display()
     used_limits_layout->addLayout(layout_1_1);
     used_limits_layout->addLayout(layout_2_1);
     used_limits_layout->addLayout(layout_3_1);
+    QSpacerItem *usedSpacer = new QSpacerItem(0,0,QSizePolicy::Minimum,QSizePolicy::MinimumExpanding);
+    used_limits_layout->addSpacerItem(usedSpacer);
 
     list_limits = new QListWidget;
     lbl_limit_level = new QLabel(tr("Limit Level"));
@@ -223,9 +225,6 @@ void CharEditor::init_display()
 
     QHBoxLayout *limit_level_layout = new QHBoxLayout;
     limit_level_layout->setContentsMargins(0,0,0,0);
-   // limit_level_layout->setContentsMargins(0,36,0,0);//push it far down so it lines up w/ the uses section
-   // QSpacerItem *limitSpacer = new QSpacerItem(0,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
-  //  limit_level_layout->addSpacerItem(limitSpacer);
     limit_level_layout->addWidget(lbl_limit_level);
     limit_level_layout->addWidget(sb_limit_level);
 
@@ -354,6 +353,9 @@ void CharEditor::init_display()
 
     QHBoxLayout *limit_bar_layout = new QHBoxLayout;
     limit_bar_layout->setContentsMargins(0,0,0,0);
+    limit_bar_layout->addLayout(limit_level_layout);
+    QSpacerItem *limitSpacer = new QSpacerItem(10,0,QSizePolicy::Fixed,QSizePolicy::Fixed);
+    limit_bar_layout->addSpacerItem(limitSpacer);
     limit_bar_layout->addWidget(lbl_limit_bar);
     limit_bar_layout->addWidget(slider_limit);
     limit_bar_layout->addWidget(lcd_limit_value);
@@ -463,13 +465,13 @@ void CharEditor::init_display()
     stat_layout->addLayout(base_hp_mp_layout);
 
     QGroupBox *stat_box= new QGroupBox;
-    stat_box->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::MinimumExpanding);
+    //stat_box->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::MinimumExpanding);
     stat_box->setLayout(stat_layout);
 
     QVBoxLayout *limit_uses_level_layout = new QVBoxLayout;
     limit_uses_level_layout->setContentsMargins(0,0,0,0);
     limit_uses_level_layout->setSpacing(0);
-    limit_uses_level_layout->addLayout(limit_level_layout);
+    //limit_uses_level_layout->addLayout(limit_level_layout);
     limit_uses_level_layout->addLayout(used_limits_layout);
 
     QHBoxLayout *limit_use_list = new QHBoxLayout;
@@ -824,15 +826,11 @@ void CharEditor::init_display()
     //right_top->setFixedWidth(420);
 
 
+
     QVBoxLayout *right_bottom = new QVBoxLayout;
     right_bottom->setContentsMargins(0,0,0,0);
     right_bottom->addWidget(materia_edit);
     right_bottom->addLayout(effects_layout);
-    //QSpacerItem *rtb_spacer = new QSpacerItem(0,0,QSizePolicy::Fixed,QSizePolicy::Expanding);
-    //right_bottom->addSpacerItem(rtb_spacer);
-
-    //materia_edit->setMaximumWidth(420);
-
 
     QVBoxLayout *right_Final = new QVBoxLayout;
     right_Final->setContentsMargins(3,3,3,3);
@@ -853,6 +851,7 @@ void CharEditor::init_display()
     toolbox->addItem(tab_3,QIcon(QPixmap::fromImage(Items.Image(256))),QString(tr("Equipment")));
 
 
+
     QVBoxLayout *toolbox_layout = new QVBoxLayout;
     toolbox_layout->setContentsMargins(0,0,0,0);
     toolbox_layout->addWidget(toolbox);
@@ -866,6 +865,8 @@ void CharEditor::init_display()
     style.append(QString("QSlider::handle{background: rgba(172, 172, 172,255);border: 1px solid #5c5c5c;width: 3px;border-radius: 2px;}"));
 
     slider_limit->setStyleSheet(style);
+    right_top->setFixedWidth(tab_3->width());
+    materia_edit->setFixedWidth(tab_3->width());
 }
 void CharEditor::init_connections()
 {
