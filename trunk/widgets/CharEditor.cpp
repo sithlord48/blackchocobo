@@ -821,7 +821,7 @@ void CharEditor::init_display()
     right_top->setLayout(right_Top);
     right_top->adjustSize();
     right_top->setFixedHeight(right_top->height());
-    right_top->setFixedWidth(420);
+    //right_top->setFixedWidth(420);
 
 
     QVBoxLayout *right_bottom = new QVBoxLayout;
@@ -831,7 +831,7 @@ void CharEditor::init_display()
     //QSpacerItem *rtb_spacer = new QSpacerItem(0,0,QSizePolicy::Fixed,QSizePolicy::Expanding);
     //right_bottom->addSpacerItem(rtb_spacer);
 
-    materia_edit->setMaximumWidth(420);
+    //materia_edit->setMaximumWidth(420);
 
 
     QVBoxLayout *right_Final = new QVBoxLayout;
