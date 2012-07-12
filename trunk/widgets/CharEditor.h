@@ -30,7 +30,6 @@
 #include <QSlider>
 #include <QLCDNumber>
 #include <QToolBox>
-#include <QStackedWidget>
 
 //set path to FF7Item FF7Materia and FF7Char
 #include "static_data/FF7Item.h"
@@ -162,7 +161,6 @@ public slots:
 
     void setExpNext(int);
     //void setZ_4(int,int);
-    //void setMaterias(materia,int);
     void setCurMp(int);
     void setCurHp(int);
     void setMaxMp(int);
@@ -196,7 +194,6 @@ private slots:
     void armor_slot_8_clicked();
     void matAp_changed(qint32);
     void matId_changed(qint8);
-    void btn_page_clicked();
 private:
     void init_display(void);
     void init_connections(void);
@@ -329,10 +326,6 @@ private:
     QLabel *armor_m_link_3;
     QLabel *armor_m_link_4;
     QToolBox *toolbox;
-    QPushButton *btnPage;
-    QStackedWidget *main_widget;
-    QScrollArea *equipment_section;
-    QVBoxLayout * main_layout;
 //Data
    FF7Char Chars;
    FF7Item Items;
