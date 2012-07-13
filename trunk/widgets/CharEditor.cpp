@@ -1009,6 +1009,7 @@ void CharEditor::Level_Changed(int level)
 }
 void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
 {
+    this->blockSignals(true);
     data = Chardata;
     _name=Processed_Name;
     //more here like setting the gui stuff.
@@ -1020,56 +1021,34 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     sb_maxMp->setValue(data.maxMP);
     sb_maxHp->setValue(data.maxHP);
     sb_kills->setValue(data.kills);
-
-    combo_id->blockSignals(true);
     combo_id->setCurrentIndex(data.id);
-    combo_id->blockSignals(false);
-
-    cb_fury->blockSignals(true);//block when manually toggling.
-    cb_sadness->blockSignals(true);//block when manually toggling
     if(data.flags[0]==0x10){cb_fury->setChecked(Qt::Checked);}
     else if(data.flags[0]==0x20 ){cb_sadness->setChecked(Qt::Checked);}
     else{cb_fury->setChecked(Qt::Unchecked);cb_sadness->setChecked(Qt::Unchecked);}
-    cb_fury->blockSignals(false);
-    cb_sadness->blockSignals(false);
-
-    cb_front_row->blockSignals(true);
     if(data.flags[1] ==0xFF){cb_front_row->setChecked(Qt::Checked);}
     else{cb_front_row->setChecked(Qt::Unchecked);}
-    cb_front_row->blockSignals(false);
-
     sb_total_exp->setValue(data.exp);
     lcd_tnl->display(int(data.expNext));
     slider_limit->setValue(data.limitbar);
-
     bar_tnl->setValue(data.flags[2]);
-
     sb_str->setValue(data.strength);
     sb_str_bonus->setValue(data.strength_bonus);
-
     sb_vit->setValue(data.vitality);
     sb_vit_bonus->setValue(data.vitality_bonus);
-
     sb_dex->setValue(data.dexterity);
     sb_dex_bonus->setValue(data.dexterity_bonus);
-
     sb_mag->setValue(data.magic);
     sb_mag_bonus->setValue(data.magic_bonus);
-
     sb_spi->setValue(data.spirit);
     sb_spi_bonus->setValue(data.spirit_bonus);
-
     sb_lck->setValue(data.luck);
     sb_lck_bonus->setValue(data.luck_bonus);
-
     sb_base_hp->setValue(data.baseHP);
     sb_base_mp->setValue(data.baseMP);
 
     //Process the limits.
-    list_limits->blockSignals(true);
     list_limits->clear();
     list_limits->addItems(Chars.limits(data.id));
-
     for(int i=0;i<7;i++)
     {//Process the List. Hide "" entries, and Check Limts Learned.
 
@@ -1080,27 +1059,23 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
         else{list_limits->item(i)->setCheckState(Qt::Unchecked);}
     }
 
-    list_limits->blockSignals(false);
-
     sb_uses_limit_1_1->setValue(data.timesused1); //Vegeta_Ss4: Fixed limit timeused GUI
     sb_uses_limit_2_1->setValue(data.timesused2); //Vegeta_Ss4: Fixed limit timeused GUI
     sb_uses_limit_3_1->setValue(data.timesused3); //Vegeta_Ss4: Fixed limit timeused GUI
-
     sb_limit_level->setValue(data.limitlevel); //Vegeta_Ss4: Fixed limitlevel GUI
 
-    weapon_selection->blockSignals(true);
     weapon_selection->clear();
     for(int i = Chars.weapon_offset(data.id); i < Chars.num_weapons(data.id)+Chars.weapon_offset(data.id);i++)
     {
         weapon_selection->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));
     }
     weapon_selection->setCurrentIndex(data.weapon);
-    update_materia_slots();
-    weapon_selection->blockSignals(false);
 
     armor_selection->setCurrentIndex(data.armor);
+
     if(data.accessory != 0xFF){accessory_selection->setCurrentIndex(data.accessory);}
     else{accessory_selection->setCurrentIndex(32);}
+    this->blockSignals(false);
     update_materia_slots();
     calc_stats();
 }
@@ -1416,7 +1391,7 @@ void CharEditor::setWeapon(int weapon)
         elemental_info();
         status_info();
         update_materia_slots();
-        if(autostatcalc){calc_stats();}
+        calc_stats();
         //QMessageBox::information(this,"EMIT",QString("weapon_Changed:%1").arg(QString::number(data.weapon)));
     }
 }
@@ -1432,7 +1407,7 @@ void CharEditor::setArmor(int armor)
         elemental_info();
         status_info();
         update_materia_slots();
-        if(autostatcalc){calc_stats();}
+        calc_stats();
         //QMessageBox::information(this,"EMIT",QString("armor_Changed:%1").arg(QString::number(data.armor)));
     }
 }
@@ -1447,7 +1422,7 @@ void CharEditor::setAccessory(int accessory)
         emit accessory_changed(data.accessory);
         elemental_info();
         status_info();
-        if(autostatcalc){calc_stats();}
+        calc_stats();
         //QMessageBox::information(this,"EMIT",QString("accessory_Changed:%1").arg(QString::number(data.accessory)));
     }
 }
@@ -1542,7 +1517,7 @@ void CharEditor::setBaseHp(int baseHp)
         else if(baseHp >32767){data.baseHP=32767;}
         else{data.baseHP=baseHp;}
         emit baseHp_changed(data.baseHP);
-        if(autostatcalc){calc_stats(); }
+        calc_stats();
         //QMessageBox::information(this,"EMIT",QString("baseHp_Changed:%1").arg(QString::number(data.baseHP)));
     }
 }
@@ -1555,7 +1530,7 @@ void CharEditor::setBaseMp(int baseMp)
         else if(baseMp >32767){data.baseMP=32767;}
         else{data.baseMP=baseMp;}
         emit baseMp_changed(data.baseMP);
-        if(autostatcalc){calc_stats();}
+        calc_stats();
         //QMessageBox::information(this,"EMIT",QString("baseMp_Changed:%1").arg(QString::number(data.baseMP)));
     }
 }
@@ -2175,7 +2150,7 @@ void CharEditor::update_materia_slots()
         case 2: armor_m_link_2->setStyleSheet(Items.Style_mlink());
         case 1: armor_m_link_1->setStyleSheet(Items.Style_mlink());
       };
-     if(autostatcalc){calc_stats();}
+     calc_stats();
 }
 void CharEditor::matId_changed(qint8 id)
 {
@@ -2183,7 +2158,7 @@ void CharEditor::matId_changed(qint8 id)
     else{data.materias[mslotsel].id = 0xFF;}
     update_materia_slots();
     emit Materias_changed(data.materias[mslotsel]);
-    if(autostatcalc){calc_stats();}
+    calc_stats();
 }
 void CharEditor::matAp_changed(qint32 ap)
 {
