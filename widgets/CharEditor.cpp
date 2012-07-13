@@ -465,13 +465,11 @@ void CharEditor::init_display()
     stat_layout->addLayout(base_hp_mp_layout);
 
     QGroupBox *stat_box= new QGroupBox;
-    //stat_box->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::MinimumExpanding);
     stat_box->setLayout(stat_layout);
 
     QVBoxLayout *limit_uses_level_layout = new QVBoxLayout;
     limit_uses_level_layout->setContentsMargins(0,0,0,0);
     limit_uses_level_layout->setSpacing(0);
-    //limit_uses_level_layout->addLayout(limit_level_layout);
     limit_uses_level_layout->addLayout(used_limits_layout);
 
     QHBoxLayout *limit_use_list = new QHBoxLayout;
@@ -491,7 +489,6 @@ void CharEditor::init_display()
 
     QVBoxLayout *left_Final = new QVBoxLayout;
     left_Final->setContentsMargins(3,3,3,3);
-    //left_Final->setSpacing(0);
     left_Final->addLayout(avatar_name_layout);
     left_Final->addLayout(level_exp_limit_layout);
     left_Final->addLayout(lower_section);
@@ -550,6 +547,15 @@ void CharEditor::init_display()
     weapon_slot_1->setStyleSheet(Items.Style_m_no_grow_slot());
     weapon_slot_1->setHidden(1);
 
+    QHBoxLayout *weapon_slot_1_layout = new QHBoxLayout;
+    weapon_slot_1_layout->setContentsMargins(0,0,0,0);
+    weapon_slot_1_layout->addWidget(weapon_slot_1);
+
+    weapon_frm_1 = new QFrame;
+    weapon_frm_1->setFrameShape(QFrame::NoFrame);
+    weapon_frm_1->setFrameShadow(QFrame::Plain);
+    weapon_frm_1->setLayout(weapon_slot_1_layout);
+
     weapon_m_link_1= new QLabel();
     weapon_m_link_1->setFixedSize(12,16);
 
@@ -559,11 +565,20 @@ void CharEditor::init_display()
     weapon_slot_2->setStyleSheet(Items.Style_m_no_grow_slot());
     weapon_slot_2->setHidden(1);
 
+    QHBoxLayout *weapon_slot_2_layout = new QHBoxLayout;
+    weapon_slot_2_layout->setContentsMargins(0,0,0,0);
+    weapon_slot_2_layout->addWidget(weapon_slot_2);
+
+    weapon_frm_2 = new QFrame;
+    weapon_frm_2->setFrameShape(QFrame::NoFrame);
+    weapon_frm_2->setFrameShadow(QFrame::Plain);
+    weapon_frm_2->setLayout(weapon_slot_2_layout);
+
     QHBoxLayout *weapon_slots_1_and_2 = new QHBoxLayout();
     weapon_slots_1_and_2->setContentsMargins(0,0,0,0);
-    weapon_slots_1_and_2->addWidget(weapon_slot_1);
+    weapon_slots_1_and_2->addWidget(weapon_frm_1);
     weapon_slots_1_and_2->addWidget(weapon_m_link_1);
-    weapon_slots_1_and_2->addWidget(weapon_slot_2);
+    weapon_slots_1_and_2->addWidget(weapon_frm_2);
     weapon_slots_1_and_2->setSpacing(0);
 
     weapon_slot_3 = new QPushButton();
@@ -573,6 +588,15 @@ void CharEditor::init_display()
     weapon_slot_3->setIconSize(QSize(32,32));
     weapon_slot_3->setStyleSheet(Items.Style_m_no_grow_slot());
     weapon_slot_3->setHidden(1);
+
+    QHBoxLayout *weapon_slot_3_layout = new QHBoxLayout;
+    weapon_slot_3_layout->setContentsMargins(0,0,0,0);
+    weapon_slot_3_layout->addWidget(weapon_slot_3);
+
+    weapon_frm_3 = new QFrame;
+    weapon_frm_3->setFrameShape(QFrame::NoFrame);
+    weapon_frm_3->setFrameShadow(QFrame::Plain);
+    weapon_frm_3->setLayout(weapon_slot_3_layout);
 
     weapon_m_link_2 = new QLabel();
     weapon_m_link_2->setFixedSize(12,16);
@@ -587,11 +611,20 @@ void CharEditor::init_display()
     weapon_slot_4->setStyleSheet(Items.Style_m_no_grow_slot());
     weapon_slot_4->setHidden(1);
 
+    QHBoxLayout *weapon_slot_4_layout = new QHBoxLayout;
+    weapon_slot_4_layout->setContentsMargins(0,0,0,0);
+    weapon_slot_4_layout->addWidget(weapon_slot_4);
+
+    weapon_frm_4 = new QFrame;
+    weapon_frm_4->setFrameShape(QFrame::NoFrame);
+    weapon_frm_4->setFrameShadow(QFrame::Plain);
+    weapon_frm_4->setLayout(weapon_slot_4_layout);
+
     QHBoxLayout *weapon_slots_3_and_4 = new QHBoxLayout();
     weapon_slots_3_and_4->setContentsMargins(0,0,0,0);
-    weapon_slots_3_and_4->addWidget(weapon_slot_3);
+    weapon_slots_3_and_4->addWidget(weapon_frm_3);
     weapon_slots_3_and_4->addWidget(weapon_m_link_2);
-    weapon_slots_3_and_4->addWidget(weapon_slot_4);
+    weapon_slots_3_and_4->addWidget(weapon_frm_4);
     weapon_slots_3_and_4->setSpacing(0);
 
     weapon_slot_5 = new QPushButton();
@@ -601,6 +634,15 @@ void CharEditor::init_display()
     weapon_slot_5->setIconSize(QSize(32,32));
     weapon_slot_5->setStyleSheet(Items.Style_m_no_grow_slot());
     weapon_slot_5->setHidden(1);
+
+    QHBoxLayout *weapon_slot_5_layout = new QHBoxLayout;
+    weapon_slot_5_layout->setContentsMargins(0,0,0,0);
+    weapon_slot_5_layout->addWidget(weapon_slot_5);
+
+    weapon_frm_5 = new QFrame;
+    weapon_frm_5->setFrameShape(QFrame::NoFrame);
+    weapon_frm_5->setFrameShadow(QFrame::Plain);
+    weapon_frm_5->setLayout(weapon_slot_5_layout);
 
     weapon_m_link_3 = new QLabel();
     weapon_m_link_3->setFixedSize(12,16);
@@ -614,11 +656,20 @@ void CharEditor::init_display()
     weapon_slot_6->setStyleSheet(Items.Style_m_no_grow_slot());
     weapon_slot_6->setHidden(1);
 
+    QHBoxLayout *weapon_slot_6_layout = new QHBoxLayout;
+    weapon_slot_6_layout->setContentsMargins(0,0,0,0);
+    weapon_slot_6_layout->addWidget(weapon_slot_6);
+
+    weapon_frm_6 = new QFrame;
+    weapon_frm_6->setFrameShape(QFrame::NoFrame);
+    weapon_frm_6->setFrameShadow(QFrame::Plain);
+    weapon_frm_6->setLayout(weapon_slot_6_layout);
+
     QHBoxLayout *weapon_slots_5_and_6 = new QHBoxLayout();
     weapon_slots_5_and_6->setContentsMargins(0,0,0,0);
-    weapon_slots_5_and_6->addWidget(weapon_slot_5);
+    weapon_slots_5_and_6->addWidget(weapon_frm_5);
     weapon_slots_5_and_6->addWidget(weapon_m_link_3);
-    weapon_slots_5_and_6->addWidget(weapon_slot_6);
+    weapon_slots_5_and_6->addWidget(weapon_frm_6);
     weapon_slots_5_and_6->setSpacing(0);
 
     weapon_slot_7 = new QPushButton();
@@ -628,6 +679,15 @@ void CharEditor::init_display()
     weapon_slot_7->setIconSize(QSize(32,32));
     weapon_slot_7->setStyleSheet(Items.Style_m_no_grow_slot());
     weapon_slot_7->setHidden(1);
+
+    QHBoxLayout *weapon_slot_7_layout = new QHBoxLayout;
+    weapon_slot_7_layout->setContentsMargins(0,0,0,0);
+    weapon_slot_7_layout->addWidget(weapon_slot_7);
+
+    weapon_frm_7 = new QFrame;
+    weapon_frm_7->setFrameShape(QFrame::NoFrame);
+    weapon_frm_7->setFrameShadow(QFrame::Plain);
+    weapon_frm_7->setLayout(weapon_slot_7_layout);
 
     weapon_m_link_4 = new QLabel();
     weapon_m_link_4->setFixedSize(12,16);
@@ -641,11 +701,20 @@ void CharEditor::init_display()
     weapon_slot_8->setStyleSheet(Items.Style_m_no_grow_slot());
     weapon_slot_8->setHidden(1);
 
+    QHBoxLayout *weapon_slot_8_layout = new QHBoxLayout;
+    weapon_slot_8_layout->setContentsMargins(0,0,0,0);
+    weapon_slot_8_layout->addWidget(weapon_slot_8);
+
+    weapon_frm_8 = new QFrame;
+    weapon_frm_8->setFrameShape(QFrame::NoFrame);
+    weapon_frm_8->setFrameShadow(QFrame::Plain);
+    weapon_frm_8->setLayout(weapon_slot_8_layout);
+
     QHBoxLayout *weapon_slots_7_and_8 = new QHBoxLayout();
     weapon_slots_7_and_8->setContentsMargins(0,0,0,0);
-    weapon_slots_7_and_8->addWidget(weapon_slot_7);
+    weapon_slots_7_and_8->addWidget(weapon_frm_7);
     weapon_slots_7_and_8->addWidget(weapon_m_link_4);
-    weapon_slots_7_and_8->addWidget(weapon_slot_8);
+    weapon_slots_7_and_8->addWidget(weapon_frm_8);
     weapon_slots_7_and_8->setSpacing(0);
 
     QHBoxLayout *weapon_materia_slots = new QHBoxLayout();
@@ -658,8 +727,17 @@ void CharEditor::init_display()
     weapon_materia_slots->setSpacing(12);
 
     weapon_materia_box->setLayout(weapon_materia_slots);
+    weapon_materia_box->setFixedHeight(54);
 
-    //set up armor materia buttons.
+    QVBoxLayout *weapon_layout = new QVBoxLayout;
+    weapon_layout->setContentsMargins(0,0,0,0);
+    weapon_layout->addWidget(weapon_selection);
+    weapon_layout->addWidget(weapon_materia_box);
+
+    weapon_box = new QGroupBox(tr("Weapon"));
+    weapon_box->setLayout(weapon_layout);
+
+    //set up materia slots and box for armor.
     armor_materia_box = new QGroupBox;
     armor_materia_box->setFixedHeight(50);
     QSpacerItem *armor_spacer=new QSpacerItem(-1,-1,QSizePolicy::Expanding,QSizePolicy::Minimum);
@@ -668,28 +746,42 @@ void CharEditor::init_display()
 
     armor_slot_1 = new QPushButton();
     armor_slot_1->setFixedSize(32,32);
-    armor_slot_1->setFlat(true);
-    armor_slot_1->setAutoFillBackground(true);
     armor_slot_1->setIconSize(QSize(32,32));
     armor_slot_1->setStyleSheet(Items.Style_m_no_grow_slot());
     armor_slot_1->setHidden(1);
+
+    QHBoxLayout *armor_slot_1_layout = new QHBoxLayout;
+    armor_slot_1_layout->setContentsMargins(0,0,0,0);
+    armor_slot_1_layout->addWidget(armor_slot_1);
+
+    armor_frm_1 = new QFrame;
+    armor_frm_1->setFrameShape(QFrame::NoFrame);
+    armor_frm_1->setFrameShadow(QFrame::Plain);
+    armor_frm_1->setLayout(armor_slot_1_layout);
 
     armor_m_link_1= new QLabel();
     armor_m_link_1->setFixedSize(12,16);
 
     armor_slot_2 = new QPushButton();
     armor_slot_2->setFixedSize(32,32);
-    armor_slot_2->setFlat(true);
-    armor_slot_2->setAutoFillBackground(true);
     armor_slot_2->setIconSize(QSize(32,32));
     armor_slot_2->setStyleSheet(Items.Style_m_no_grow_slot());
     armor_slot_2->setHidden(1);
 
+    QHBoxLayout *armor_slot_2_layout = new QHBoxLayout;
+    armor_slot_2_layout->setContentsMargins(0,0,0,0);
+    armor_slot_2_layout->addWidget(armor_slot_2);
+
+    armor_frm_2 = new QFrame;
+    armor_frm_2->setFrameShape(QFrame::NoFrame);
+    armor_frm_2->setFrameShadow(QFrame::Plain);
+    armor_frm_2->setLayout(armor_slot_2_layout);
+
     QHBoxLayout *armor_slots_1_and_2 = new QHBoxLayout();
     armor_slots_1_and_2->setContentsMargins(0,0,0,0);
-    armor_slots_1_and_2->addWidget(armor_slot_1);
+    armor_slots_1_and_2->addWidget(armor_frm_1);
     armor_slots_1_and_2->addWidget(armor_m_link_1);
-    armor_slots_1_and_2->addWidget(armor_slot_2);
+    armor_slots_1_and_2->addWidget(armor_frm_2);
     armor_slots_1_and_2->setSpacing(0);
 
     armor_slot_3 = new QPushButton();
@@ -699,6 +791,15 @@ void CharEditor::init_display()
     armor_slot_3->setIconSize(QSize(32,32));
     armor_slot_3->setStyleSheet(Items.Style_m_no_grow_slot());
     armor_slot_3->setHidden(1);
+
+    QHBoxLayout *armor_slot_3_layout = new QHBoxLayout;
+    armor_slot_3_layout->setContentsMargins(0,0,0,0);
+    armor_slot_3_layout->addWidget(armor_slot_3);
+
+    armor_frm_3 = new QFrame;
+    armor_frm_3->setFrameShape(QFrame::NoFrame);
+    armor_frm_3->setFrameShadow(QFrame::Plain);
+    armor_frm_3->setLayout(armor_slot_3_layout);
 
     armor_m_link_2 = new QLabel();
     armor_m_link_2->setFixedSize(12,16);
@@ -713,11 +814,20 @@ void CharEditor::init_display()
     armor_slot_4->setStyleSheet(Items.Style_m_no_grow_slot());
     armor_slot_4->setHidden(1);
 
+    QHBoxLayout *armor_slot_4_layout = new QHBoxLayout;
+    armor_slot_4_layout->setContentsMargins(0,0,0,0);
+    armor_slot_4_layout->addWidget(armor_slot_4);
+
+    armor_frm_4 = new QFrame;
+    armor_frm_4->setFrameShape(QFrame::NoFrame);
+    armor_frm_4->setFrameShadow(QFrame::Plain);
+    armor_frm_4->setLayout(armor_slot_4_layout);
+
     QHBoxLayout *armor_slots_3_and_4 = new QHBoxLayout();
     armor_slots_3_and_4->setContentsMargins(0,0,0,0);
-    armor_slots_3_and_4->addWidget(armor_slot_3);
+    armor_slots_3_and_4->addWidget(armor_frm_3);
     armor_slots_3_and_4->addWidget(armor_m_link_2);
-    armor_slots_3_and_4->addWidget(armor_slot_4);
+    armor_slots_3_and_4->addWidget(armor_frm_4);
     armor_slots_3_and_4->setSpacing(0);
 
     armor_slot_5 = new QPushButton();
@@ -727,6 +837,15 @@ void CharEditor::init_display()
     armor_slot_5->setIconSize(QSize(32,32));
     armor_slot_5->setStyleSheet(Items.Style_m_no_grow_slot());
     armor_slot_5->setHidden(1);
+
+    QHBoxLayout *armor_slot_5_layout = new QHBoxLayout;
+    armor_slot_5_layout->setContentsMargins(0,0,0,0);
+    armor_slot_5_layout->addWidget(armor_slot_5);
+
+    armor_frm_5 = new QFrame;
+    armor_frm_5->setFrameShape(QFrame::NoFrame);
+    armor_frm_5->setFrameShadow(QFrame::Plain);
+    armor_frm_5->setLayout(armor_slot_5_layout);
 
     armor_m_link_3 = new QLabel();
     armor_m_link_3->setFixedSize(12,16);
@@ -740,11 +859,20 @@ void CharEditor::init_display()
     armor_slot_6->setStyleSheet(Items.Style_m_no_grow_slot());
     armor_slot_6->setHidden(1);
 
+    QHBoxLayout *armor_slot_6_layout = new QHBoxLayout;
+    armor_slot_6_layout->setContentsMargins(0,0,0,0);
+    armor_slot_6_layout->addWidget(armor_slot_6);
+
+    armor_frm_6 = new QFrame;
+    armor_frm_6->setFrameShape(QFrame::NoFrame);
+    armor_frm_6->setFrameShadow(QFrame::Plain);
+    armor_frm_6->setLayout(armor_slot_6_layout);
+
     QHBoxLayout *armor_slots_5_and_6 = new QHBoxLayout();
     armor_slots_5_and_6->setContentsMargins(0,0,0,0);
-    armor_slots_5_and_6->addWidget(armor_slot_5);
+    armor_slots_5_and_6->addWidget(armor_frm_5);
     armor_slots_5_and_6->addWidget(armor_m_link_3);
-    armor_slots_5_and_6->addWidget(armor_slot_6);
+    armor_slots_5_and_6->addWidget(armor_frm_6);
     armor_slots_5_and_6->setSpacing(0);
 
     armor_slot_7 = new QPushButton();
@@ -754,6 +882,15 @@ void CharEditor::init_display()
     armor_slot_7->setIconSize(QSize(32,32));
     armor_slot_7->setStyleSheet(Items.Style_m_no_grow_slot());
     armor_slot_7->setHidden(1);
+
+    QHBoxLayout *armor_slot_7_layout = new QHBoxLayout;
+    armor_slot_7_layout->setContentsMargins(0,0,0,0);
+    armor_slot_7_layout->addWidget(armor_slot_7);
+
+    armor_frm_7 = new QFrame;
+    armor_frm_7->setFrameShape(QFrame::NoFrame);
+    armor_frm_7->setFrameShadow(QFrame::Plain);
+    armor_frm_7->setLayout(armor_slot_7_layout);
 
     armor_m_link_4 = new QLabel();
     armor_m_link_4->setFixedSize(12,16);
@@ -767,11 +904,20 @@ void CharEditor::init_display()
     armor_slot_8->setStyleSheet(Items.Style_m_no_grow_slot());
     armor_slot_8->setHidden(1);
 
+    QHBoxLayout *armor_slot_8_layout = new QHBoxLayout;
+    armor_slot_8_layout->setContentsMargins(0,0,0,0);
+    armor_slot_8_layout->addWidget(armor_slot_8);
+
+    armor_frm_8 = new QFrame;
+    armor_frm_8->setFrameShape(QFrame::NoFrame);
+    armor_frm_8->setFrameShadow(QFrame::Plain);
+    armor_frm_8->setLayout(armor_slot_8_layout);
+
     QHBoxLayout *armor_slots_7_and_8 = new QHBoxLayout();
     armor_slots_7_and_8->setContentsMargins(0,0,0,0);
-    armor_slots_7_and_8->addWidget(armor_slot_7);
+    armor_slots_7_and_8->addWidget(armor_frm_7);
     armor_slots_7_and_8->addWidget(armor_m_link_4);
-    armor_slots_7_and_8->addWidget(armor_slot_8);
+    armor_slots_7_and_8->addWidget(armor_frm_8);
     armor_slots_7_and_8->setSpacing(0);
 
     QHBoxLayout *armor_materia_slots = new QHBoxLayout();
@@ -784,16 +930,9 @@ void CharEditor::init_display()
     armor_materia_slots->setSpacing(12);
 
     armor_materia_box->setLayout(armor_materia_slots);
+    armor_materia_box->setFixedHeight(54);
 
 
-    QVBoxLayout *weapon_layout = new QVBoxLayout;
-    weapon_layout->setContentsMargins(0,0,0,0);
-    weapon_layout->addWidget(weapon_selection);
-    weapon_layout->addWidget(weapon_materia_box);
-
-    weapon_box = new QGroupBox(tr("Weapon"));
-    weapon_box->setLayout(weapon_layout);
-    weapon_box->setMinimumHeight(100);
 
     QVBoxLayout *armor_layout = new QVBoxLayout;
     armor_layout->setContentsMargins(0,0,0,0);
@@ -802,7 +941,7 @@ void CharEditor::init_display()
 
     armor_box = new QGroupBox(tr("Armor"));
     armor_box->setLayout(armor_layout);
-    armor_box->setMinimumHeight(100);
+    armor_box->setMinimumHeight(110);
 
     QVBoxLayout *accessory_layout = new QVBoxLayout;
     accessory_layout->setContentsMargins(0,0,0,0);
@@ -823,7 +962,6 @@ void CharEditor::init_display()
     right_top->setLayout(right_Top);
     right_top->adjustSize();
     right_top->setFixedHeight(right_top->height());
-    //right_top->setFixedWidth(420);
 
 
 
@@ -927,8 +1065,6 @@ void CharEditor::init_connections()
 
     connect(materia_edit,SIGNAL(ap_changed(qint32)),this,SLOT(matAp_changed(qint32)));
     connect(materia_edit,SIGNAL(id_changed(qint8)),this,SLOT(matId_changed(qint8)));
-    //connect(btnPage,SIGNAL(clicked()),this,SLOT(btn_page_clicked()));
-    //connect(lbl_avatar,SIGNAL(customContextMenuRequested(QPoint)),this,SLOT(charMenu(QPoint)));
 }
 qint8 CharEditor::id(){return data.id;}
 qint8 CharEditor::level(){return data.level;}
@@ -2185,30 +2321,35 @@ void CharEditor::weapon_slot_1_clicked(void)
     mslotsel = 0;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+    setSlotFrame();
 }
 void CharEditor::weapon_slot_2_clicked(void)
 {
     mslotsel = 1;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+    setSlotFrame();
 }
 void CharEditor::weapon_slot_3_clicked(void)
 {
     mslotsel = 2;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+    setSlotFrame();
 }
 void CharEditor::weapon_slot_4_clicked(void)
 {
     mslotsel = 3;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+    setSlotFrame();
 }
 void CharEditor::weapon_slot_5_clicked(void)
 {
     mslotsel = 4;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+    setSlotFrame();
 }
 void CharEditor::weapon_slot_6_clicked(void)
 {
@@ -2221,60 +2362,112 @@ void CharEditor::weapon_slot_7_clicked(void)
     mslotsel = 6;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+    setSlotFrame();
 }
 void CharEditor::weapon_slot_8_clicked(void)
 {
     mslotsel = 7;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+    setSlotFrame();
 }
 void CharEditor::armor_slot_1_clicked(void)
 {
     mslotsel = 8;
     emit mslotChanged(mslotsel);
      materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+     setSlotFrame();
 }
 void CharEditor::armor_slot_2_clicked(void)
 {
     mslotsel = 9;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+    setSlotFrame();
 }
 void CharEditor::armor_slot_3_clicked(void)
 {
     mslotsel = 10;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+    setSlotFrame();
 }
 void CharEditor::armor_slot_4_clicked(void)
 {
     mslotsel = 11;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+    setSlotFrame();
 }
 void CharEditor::armor_slot_5_clicked(void)
 {
     mslotsel = 12;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+    setSlotFrame();
 }
 void CharEditor::armor_slot_6_clicked(void)
 {
     mslotsel = 13;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+    setSlotFrame();
 }
 void CharEditor::armor_slot_7_clicked(void)
 {
     mslotsel = 14;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+    setSlotFrame();
 }
 void CharEditor::armor_slot_8_clicked(void)
 {
     mslotsel = 15;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+    setSlotFrame();
+}
+void CharEditor::setSlotFrame(void)
+{
+    weapon_frm_1->setFrameShape(QFrame::NoFrame);
+    weapon_frm_2->setFrameShape(QFrame::NoFrame);
+    weapon_frm_3->setFrameShape(QFrame::NoFrame);
+    weapon_frm_4->setFrameShape(QFrame::NoFrame);
+    weapon_frm_5->setFrameShape(QFrame::NoFrame);
+    weapon_frm_6->setFrameShape(QFrame::NoFrame);
+    weapon_frm_7->setFrameShape(QFrame::NoFrame);
+    weapon_frm_8->setFrameShape(QFrame::NoFrame);
+
+    armor_frm_1->setFrameShape(QFrame::NoFrame);
+    armor_frm_2->setFrameShape(QFrame::NoFrame);
+    armor_frm_3->setFrameShape(QFrame::NoFrame);
+    armor_frm_4->setFrameShape(QFrame::NoFrame);
+    armor_frm_5->setFrameShape(QFrame::NoFrame);
+    armor_frm_6->setFrameShape(QFrame::NoFrame);
+    armor_frm_7->setFrameShape(QFrame::NoFrame);
+    armor_frm_8->setFrameShape(QFrame::NoFrame);
+
+    switch(mslotsel)
+    {
+        case 0: weapon_frm_1->setFrameShape(QFrame::Box);break;
+        case 1: weapon_frm_2->setFrameShape(QFrame::Box);break;
+        case 2: weapon_frm_3->setFrameShape(QFrame::Box);break;
+        case 3: weapon_frm_4->setFrameShape(QFrame::Box);break;
+        case 4: weapon_frm_5->setFrameShape(QFrame::Box);break;
+        case 5: weapon_frm_6->setFrameShape(QFrame::Box);break;
+        case 6: weapon_frm_7->setFrameShape(QFrame::Box);break;
+        case 7: weapon_frm_8->setFrameShape(QFrame::Box);break;
+
+        case 8:armor_frm_1->setFrameShape(QFrame::Box);break;
+        case 9: armor_frm_2->setFrameShape(QFrame::Box);break;
+        case 10: armor_frm_3->setFrameShape(QFrame::Box);break;
+        case 11: armor_frm_4->setFrameShape(QFrame::Box);break;
+        case 12: armor_frm_5->setFrameShape(QFrame::Box);break;
+        case 13: armor_frm_6->setFrameShape(QFrame::Box);break;
+        case 14: armor_frm_7->setFrameShape(QFrame::Box);break;
+        case 15: armor_frm_8->setFrameShape(QFrame::Box);break;
+    };
+
 }
 //void setFlags(int,int);
 //void setZ_4[4](int);

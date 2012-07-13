@@ -15,7 +15,6 @@
 /****************************************************************************/
 #ifndef CHAREDITOR_H
 #define CHAREDITOR_H
-#include <QScrollArea>
 #include <QWidget>
 #include <QSpinBox>
 #include <QLineEdit>
@@ -30,6 +29,7 @@
 #include <QSlider>
 #include <QLCDNumber>
 #include <QToolBox>
+#include <QFrame>
 
 //set path to FF7Item FF7Materia and FF7Char
 #include "static_data/FF7Item.h"
@@ -160,7 +160,6 @@ public slots:
     void setExp(int);
 
     void setExpNext(int);
-    //void setZ_4(int,int);
     void setCurMp(int);
     void setCurHp(int);
     void setMaxMp(int);
@@ -169,6 +168,7 @@ public slots:
     void setAutoLevel(bool);
     void setAutoStatCalc(bool);
     void setEditable(bool);
+    //void setZ_4(int,int);
 
 private slots:
     void cb_fury_toggled(bool);
@@ -203,6 +203,7 @@ private:
     void elemental_info();
     void status_info();
     void update_materia_slots();
+    void setSlotFrame(void);
     QLabel *lbl_avatar;
     QLineEdit *line_name;
     QSpinBox *sb_level;
@@ -301,6 +302,15 @@ private:
     QGroupBox *weapon_box;
     QGroupBox *armor_box;
     QGroupBox *accessory_box;
+
+    QFrame *weapon_frm_1;
+    QFrame *weapon_frm_2;
+    QFrame *weapon_frm_3;
+    QFrame *weapon_frm_4;
+    QFrame *weapon_frm_5;
+    QFrame *weapon_frm_6;
+    QFrame *weapon_frm_7;
+    QFrame *weapon_frm_8;
     QPushButton *weapon_slot_1;
     QPushButton *weapon_slot_2;
     QPushButton *weapon_slot_3;
@@ -309,6 +319,15 @@ private:
     QPushButton *weapon_slot_6;
     QPushButton *weapon_slot_7;
     QPushButton *weapon_slot_8;
+
+    QFrame *armor_frm_1;
+    QFrame *armor_frm_2;
+    QFrame *armor_frm_3;
+    QFrame *armor_frm_4;
+    QFrame *armor_frm_5;
+    QFrame *armor_frm_6;
+    QFrame *armor_frm_7;
+    QFrame *armor_frm_8;
     QPushButton *armor_slot_1;
     QPushButton *armor_slot_2;
     QPushButton *armor_slot_3;
