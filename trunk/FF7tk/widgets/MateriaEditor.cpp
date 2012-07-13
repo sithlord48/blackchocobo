@@ -131,7 +131,7 @@ void MateriaEditor::init_display()
     type_name_layout->addWidget(btn_rm_materia);
     type_name_layout->setContentsMargins(3,6,0,0);
 
-    QSpacerItem *spacer1 = new QSpacerItem(30,0,QSizePolicy::Expanding,QSizePolicy::Fixed);
+    QSpacerItem *spacer1 = new QSpacerItem(20,0,QSizePolicy::Minimum,QSizePolicy::Fixed);
     QHBoxLayout * ap_layout = new QHBoxLayout;
     ap_layout->addSpacerItem(spacer1);
     ap_layout->addWidget(sb_ap);

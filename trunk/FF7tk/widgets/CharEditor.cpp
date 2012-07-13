@@ -1046,8 +1046,7 @@ void CharEditor::init_display()
     right_Final->setSpacing(3);
     right_Final->addLayout(right_bottom);
 
-    list_limits->setFixedHeight(this->font().pointSize()*14);
-
+    list_limits->setFixedHeight(130);
     toolbox = new QToolBox;
 
     QGroupBox *tab_1 = new QGroupBox;
@@ -1057,6 +1056,7 @@ void CharEditor::init_display()
     QGroupBox *tab_3 = new QGroupBox;
     tab_3->setLayout(right_Final);
     toolbox->addItem(tab_3,QIcon(QPixmap::fromImage(Items.Image(256))),QString(tr("Equipment")));
+    tab_3->adjustSize();
 
 
 
@@ -1073,8 +1073,6 @@ void CharEditor::init_display()
     style.append(QString("QSlider::handle{background: rgba(172, 172, 172,255);border: 1px solid #5c5c5c;width: 3px;border-radius: 2px;}"));
 
     slider_limit->setStyleSheet(style);
-    right_top->setFixedWidth(tab_3->width());
-    materia_edit->setFixedWidth(tab_3->width());
 }
 void CharEditor::init_connections()
 {
