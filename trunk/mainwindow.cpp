@@ -36,6 +36,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     for(int i=0;i<4;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
 
     //set up comboboxes.
+     for (int i=0;i<320;i++){ui->combo_additem->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
     //Fill the type combo boxes,picking a random materia of that type for each needed icon
     //LATER//
     //set the materia buttons.
@@ -109,85 +110,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     ui->cb_farm_items_8->setVisible(false);
     load=false;
 
-    // load settings
-    if(settings->value("show_test").toBool())
-    {
-        ui->action_show_debug->setChecked(1);
-        ui->action_show_debug->setIcon(QIcon(":/icon/debug_sel"));
-    }
-    else{ui->action_show_debug->setChecked(0);}
-
-    //are any empty? if so set them accordingly.
-    if(!settings->value("font-size").toString().isEmpty()){QApplication::setFont(QFont(QApplication::font().family(),settings->value("font-size").toInt(),-1,false));}
-    if(!settings->value("font-family").toString().isEmpty()){QApplication::setFont(QFont(settings->value("font-family").toString(),QApplication::font().pointSize(),-1,false));}
-    if(settings->value("autochargrowth").isNull()){settings->setValue("autochargrowth",1);}
-    if(settings->value("load_path").isNull()){settings->setValue("load_path",QDir::homePath());}
-    if(settings->value("char_stat_folder").isNull()){settings->setValue("char_stat_folder",QDir::homePath());}
-    if(settings->value("color1_r").isNull()){settings->setValue("color1_r","7");}
-    if(settings->value("color1_g").isNull()){settings->setValue("color1_g","6");}
-    if(settings->value("color1_b").isNull()){settings->setValue("color1_b","6");}
-    if(settings->value("color2_r").isNull()){settings->setValue("color2_r","35");}
-    if(settings->value("color2_g").isNull()){settings->setValue("color2_g","33");}
-    if(settings->value("color2_b").isNull()){settings->setValue("color2_b","33");}
-    if(settings->value("color3_r").isNull()){settings->setValue("color3_r","65");}
-    if(settings->value("color3_g").isNull()){settings->setValue("color3_g","65");}
-    if(settings->value("color3_b").isNull()){settings->setValue("color3_b","65");}
-
-    QString style="QWidget#centralWidget{background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
-    style.append(settings->value("color1_r").toString());   style.append(",");
-    style.append(settings->value("color1_g").toString());   style.append(",");
-    style.append(settings->value("color1_b").toString());   style.append(", 255), stop:0.215909 rgba(");
-    style.append(settings->value("color2_r").toString());   style.append(",");
-    style.append(settings->value("color2_g").toString());   style.append(",");
-    style.append(settings->value("color2_b").toString());   style.append(", 255), stop:0.818182 rgba(");
-    style.append(settings->value("color3_r").toString());   style.append(",");
-    style.append(settings->value("color3_g").toString());   style.append(",");
-    style.append(settings->value("color3_b").toString());   style.append(", 255));}");
-    ui->centralWidget->setStyleSheet(style);
-
-    QString tablestyle = "::section{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));;color: white;padding-left:4px;border:1px solid #6c6c6c;}";
-    tablestyle.append("QHeaderView:down-arrow{image: url(:/icon/arrow_down);min-width:9px;}");
-    tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
-
-    ui->tbl_location_field->horizontalHeader()->setStyleSheet(tablestyle);
-    ui->tbl_unknown->horizontalHeader()->setStyleSheet(tablestyle);
-    ui->tbl_compare_unknown->horizontalHeader()->setStyleSheet(tablestyle);
-    ui->tbl_diff->horizontalHeader()->setStyleSheet(tablestyle);
-
-    if(settings->value("autochargrowth").toBool())
-    {
-        ui->action_auto_char_growth->setChecked(1);
-        ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_checked"));
-    }
-    else{ui->action_auto_char_growth->setChecked(0);}
-
-    /* LANGUAGE SELECT */
-    if(settings->value("lang").toString() == "en")
-    {
-        ui->action_Lang_en->setChecked(1);
-        ui->action_Lang_en->setIcon(QIcon(":/icon/us_sel"));
-    }
-    else if(settings->value("lang").toString() == "es")
-    {
-        ui->action_Lang_es->setChecked(1);
-        ui->action_Lang_es->setIcon(QIcon(":/icon/es_sel"));
-    }
-    else if(settings->value("lang").toString() == "fr")
-    {
-        ui->action_Lang_fr->setChecked(1);
-        ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_sel"));
-    }
-    else if(settings->value("lang").toString() == "ja")
-    {
-        ui->action_Lang_jp->setChecked(1);
-        ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_sel"));
-    }
-    else if(settings->value("lang").toString() == "de")
-    {
-        ui->action_Lang_de->setChecked(1);
-        ui->action_Lang_de->setIcon(QIcon(":/icon/de_sel"));
-    }
-
     ui->lbl_love_barret->setPixmap(Chars.Pixmap(1));
     ui->lbl_love_tifa->setPixmap(Chars.Pixmap(2));
     ui->lbl_love_aeris->setPixmap(Chars.Pixmap(3));
@@ -235,6 +157,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     char_editor_layout->addWidget(char_editor);
     ui->group_char_editor_box->setLayout(char_editor_layout);
 
+
     char_editor->setStyleSheet(this->styleSheet());
 
     chocobo_stable_1 = new ChocoboEditor;
@@ -275,6 +198,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
 
     // Connect the unknown and unknown compare scrolling.
     connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );
+    connect(ui->action_show_debug,SIGNAL(toggled(bool)),char_editor,(SLOT(setDebug(bool))));
     connect( ui->tbl_compare_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_unknown->verticalScrollBar(), SLOT(setValue(int)) );
     //connnect the dialogpreview to the data functions.
     connect(dialog_preview,SIGNAL(UL_ColorChanged(QColor)),this,SLOT(set_UL_Color(QColor)));
@@ -420,6 +344,87 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     connect(chocobo_stable_6,SIGNAL(personality_changed(quint8)),this,SLOT(c6_personalityChanged(quint8)));
     connect(chocobo_stable_6,SIGNAL(pCount_changed(quint8)),this,SLOT(c6_pcountChanged(quint8)));
     connect(chocobo_stable_6,SIGNAL(wins_changed(quint8)),this,SLOT(c6_raceswonChanged(quint8)));
+
+
+    // load settings
+    if(settings->value("show_test").toBool())
+    {
+        ui->action_show_debug->setChecked(1);
+        ui->action_show_debug->setIcon(QIcon(":/icon/debug_sel"));
+    }
+    else{ui->action_show_debug->setChecked(0);}
+
+    //are any empty? if so set them accordingly.
+    if(!settings->value("font-size").toString().isEmpty()){QApplication::setFont(QFont(QApplication::font().family(),settings->value("font-size").toInt(),-1,false));}
+    if(!settings->value("font-family").toString().isEmpty()){QApplication::setFont(QFont(settings->value("font-family").toString(),QApplication::font().pointSize(),-1,false));}
+    if(settings->value("autochargrowth").isNull()){settings->setValue("autochargrowth",1);}
+    if(settings->value("load_path").isNull()){settings->setValue("load_path",QDir::homePath());}
+    if(settings->value("char_stat_folder").isNull()){settings->setValue("char_stat_folder",QDir::homePath());}
+    if(settings->value("color1_r").isNull()){settings->setValue("color1_r","7");}
+    if(settings->value("color1_g").isNull()){settings->setValue("color1_g","6");}
+    if(settings->value("color1_b").isNull()){settings->setValue("color1_b","6");}
+    if(settings->value("color2_r").isNull()){settings->setValue("color2_r","35");}
+    if(settings->value("color2_g").isNull()){settings->setValue("color2_g","33");}
+    if(settings->value("color2_b").isNull()){settings->setValue("color2_b","33");}
+    if(settings->value("color3_r").isNull()){settings->setValue("color3_r","65");}
+    if(settings->value("color3_g").isNull()){settings->setValue("color3_g","65");}
+    if(settings->value("color3_b").isNull()){settings->setValue("color3_b","65");}
+
+    QString style="QWidget#centralWidget{background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
+    style.append(settings->value("color1_r").toString());   style.append(",");
+    style.append(settings->value("color1_g").toString());   style.append(",");
+    style.append(settings->value("color1_b").toString());   style.append(", 255), stop:0.215909 rgba(");
+    style.append(settings->value("color2_r").toString());   style.append(",");
+    style.append(settings->value("color2_g").toString());   style.append(",");
+    style.append(settings->value("color2_b").toString());   style.append(", 255), stop:0.818182 rgba(");
+    style.append(settings->value("color3_r").toString());   style.append(",");
+    style.append(settings->value("color3_g").toString());   style.append(",");
+    style.append(settings->value("color3_b").toString());   style.append(", 255));}");
+    ui->centralWidget->setStyleSheet(style);
+
+    QString tablestyle = "::section{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));;color: white;padding-left:4px;border:1px solid #6c6c6c;}";
+    tablestyle.append("QHeaderView:down-arrow{image: url(:/icon/arrow_down);min-width:9px;}");
+    tablestyle.append("QHeaderView:up-arrow{image: url(:/icon/arrow_up);min-width:9px;}");
+
+    ui->tbl_location_field->horizontalHeader()->setStyleSheet(tablestyle);
+    ui->tbl_unknown->horizontalHeader()->setStyleSheet(tablestyle);
+    ui->tbl_compare_unknown->horizontalHeader()->setStyleSheet(tablestyle);
+    ui->tbl_diff->horizontalHeader()->setStyleSheet(tablestyle);
+
+    if(settings->value("autochargrowth").toBool())
+    {
+        ui->action_auto_char_growth->setChecked(1);
+        ui->action_auto_char_growth->setIcon(QIcon(":/icon/checkbox_checked"));
+    }
+    else{ui->action_auto_char_growth->setChecked(0);}
+
+    /* LANGUAGE SELECT */
+    if(settings->value("lang").toString() == "en")
+    {
+        ui->action_Lang_en->setChecked(1);
+        ui->action_Lang_en->setIcon(QIcon(":/icon/us_sel"));
+    }
+    else if(settings->value("lang").toString() == "es")
+    {
+        ui->action_Lang_es->setChecked(1);
+        ui->action_Lang_es->setIcon(QIcon(":/icon/es_sel"));
+    }
+    else if(settings->value("lang").toString() == "fr")
+    {
+        ui->action_Lang_fr->setChecked(1);
+        ui->action_Lang_fr->setIcon(QIcon(":/icon/fr_sel"));
+    }
+    else if(settings->value("lang").toString() == "ja")
+    {
+        ui->action_Lang_jp->setChecked(1);
+        ui->action_Lang_jp->setIcon(QIcon(":/icon/jp_sel"));
+    }
+    else if(settings->value("lang").toString() == "de")
+    {
+        ui->action_Lang_de->setChecked(1);
+        ui->action_Lang_de->setIcon(QIcon(":/icon/de_sel"));
+    }
+
 
     file_modified(false);
 }

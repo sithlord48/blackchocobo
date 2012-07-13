@@ -23,23 +23,23 @@
 #include <QWidget>
 #include <QMessageBox>
 #include <QSettings>
-//#include "slotselect.h"             // slot selection dialog stuff.
+
 #include "options.h"                // contains the options dialog
 #include "about.h"                  // about dialog stuff.
 #include "errbox.h"                 // non ff7 error box
-#include "static_data/SaveIcon.h"
-
-#include "static_data/FF7Item.h"
-#include "static_data/FF7Save.h"
-#include "static_data/FF7Char.h"
-#include "static_data/FF7Materia.h"
-#include "static_data/FF7Location.h"
-#include "widgets/ItemPreview.h"
-#include "widgets/DialogPreview.h"
-#include "widgets/MateriaEditor.h"
-#include "widgets/SlotSelect.h"
-#include "widgets/ChocoboEditor.h"
-#include "widgets/CharEditor.h"
+//FF7tk Items
+#include "FF7tk/static_data/SaveIcon.h"
+#include "FF7tk/static_data/FF7Item.h"
+#include "FF7tk/static_data/FF7Save.h"
+#include "FF7tk/static_data/FF7Char.h"
+#include "FF7tk/static_data/FF7Materia.h"
+#include "FF7tk/static_data/FF7Location.h"
+#include "FF7tk/widgets/ItemPreview.h"
+#include "FF7tk/widgets/DialogPreview.h"
+#include "FF7tk/widgets/MateriaEditor.h"
+#include "FF7tk/widgets/SlotSelect.h"
+#include "FF7tk/widgets/ChocoboEditor.h"
+#include "FF7tk/widgets/CharEditor.h"
 namespace Ui {
     class MainWindow;
     }
