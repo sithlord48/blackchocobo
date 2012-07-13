@@ -5,11 +5,11 @@
     <name>CharEditor</name>
     <message>
         <source>Level</source>
-        <translation type="unfinished">Niveau</translation>
+        <translation>Niveau</translation>
     </message>
     <message>
         <source>Kills</source>
-        <translation type="unfinished">Tués </translation>
+        <translation>Tués </translation>
     </message>
     <message>
         <source>HP</source>
@@ -17,23 +17,23 @@
     </message>
     <message>
         <source>MP</source>
-        <translation type="unfinished">MP </translation>
+        <translation>MP</translation>
     </message>
     <message>
         <source>Fury</source>
-        <translation type="unfinished">Fureur</translation>
+        <translation>Fureur</translation>
     </message>
     <message>
         <source>Sadness</source>
-        <translation type="unfinished">Tristesse</translation>
+        <translation>Tristesse</translation>
     </message>
     <message>
         <source>Front Row</source>
-        <translation type="unfinished">Première ligne</translation>
+        <translation>Première ligne</translation>
     </message>
     <message>
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID </translation>
     </message>
     <message>
         <source>Base HP</source>
@@ -45,51 +45,51 @@
     </message>
     <message>
         <source>Total Exp</source>
-        <translation type="unfinished"></translation>
+        <translation>EXP totale</translation>
     </message>
     <message>
         <source>Level Progress</source>
-        <translation type="unfinished">Progression du Niveau</translation>
+        <translation>Progression du Niveau</translation>
     </message>
     <message>
         <source>Next</source>
-        <translation type="unfinished">Niveau suivant</translation>
+        <translation>Niveau suivant</translation>
     </message>
     <message>
         <source>Limit Bar</source>
-        <translation type="unfinished">Jauge de limite </translation>
+        <translation>Jauge de limite</translation>
     </message>
     <message>
         <source>Str</source>
-        <translation type="unfinished">FRC</translation>
+        <translation>FRC</translation>
     </message>
     <message>
         <source>+</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>=</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Vit</source>
-        <translation type="unfinished">VIT</translation>
+        <translation>VIT</translation>
     </message>
     <message>
         <source>Mag</source>
-        <translation type="unfinished">MAG</translation>
+        <translation>MAG</translation>
     </message>
     <message>
         <source>Spi</source>
-        <translation type="unfinished">ESP</translation>
+        <translation>ESP</translation>
     </message>
     <message>
         <source>Dex</source>
-        <translation type="unfinished">DEX</translation>
+        <translation>DEX</translation>
     </message>
     <message>
         <source>Lck</source>
-        <translation type="unfinished">CHC</translation>
+        <translation>CHC</translation>
     </message>
     <message>
         <source>Limit Uses</source>
@@ -97,43 +97,43 @@
     </message>
     <message>
         <source>1-1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>2-1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>3-1</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Limit Level</source>
-        <translation type="unfinished">Niveau de limite</translation>
+        <translation>Niveau de limite</translation>
     </message>
     <message>
         <source>-NONE-</source>
-        <translation type="unfinished"></translation>
+        <translation>-Rien-</translation>
     </message>
     <message>
         <source>Elemental Effects</source>
-        <translation type="unfinished">Effets élémentaux</translation>
+        <translation>Effets élémentaux</translation>
     </message>
     <message>
         <source>Status Effects</source>
-        <translation type="unfinished">Troubles mentaux</translation>
+        <translation>Troubles mentaux</translation>
     </message>
     <message>
         <source>Weapon</source>
-        <translation type="unfinished">Arme</translation>
+        <translation>Arme</translation>
     </message>
     <message>
         <source>Armor</source>
-        <translation type="unfinished">Armure</translation>
+        <translation>Armure</translation>
     </message>
     <message>
         <source>Accessory</source>
-        <translation type="unfinished"></translation>
+        <translation>Accessoire</translation>
     </message>
     <message>
         <source>Status Info</source>
@@ -145,215 +145,215 @@
     </message>
     <message>
         <source>Equipment</source>
-        <translation type="unfinished"></translation>
+        <translation>Équipement</translation>
     </message>
     <message>
         <source>AP:x%1</source>
-        <translation type="unfinished"></translation>
+        <translation>AP:x%1</translation>
     </message>
     <message>
         <source> Str:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation> Frc:+%1</translation>
     </message>
     <message>
         <source> Vit:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation> Vit:+%1</translation>
     </message>
     <message>
         <source> Dex:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation> Dex:+%1</translation>
     </message>
     <message>
         <source> Spi:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation> Esp:+%1</translation>
     </message>
     <message>
         <source> Mag:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation> Mag:+%1</translation>
     </message>
     <message>
         <source> Lck:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation> Chc:+%1</translation>
     </message>
     <message>
         <source> Hp:+%1%</source>
-        <translation type="unfinished"></translation>
+        <translation> Hp:+%1%</translation>
     </message>
     <message>
         <source> Mp:+%1%</source>
-        <translation type="unfinished"></translation>
+        <translation> Mp:+%1%</translation>
     </message>
     <message>
         <source>Restoration</source>
-        <translation type="unfinished">Restauration</translation>
+        <translation>Restauration</translation>
     </message>
     <message>
         <source>Fire</source>
-        <translation type="unfinished">Feu</translation>
+        <translation>Feu</translation>
     </message>
     <message>
         <source>Cold</source>
-        <translation type="unfinished">Glace</translation>
+        <translation>Glace</translation>
     </message>
     <message>
         <source>Lightning</source>
-        <translation type="unfinished">Foudre</translation>
+        <translation>Foudre</translation>
     </message>
     <message>
         <source>Earth</source>
-        <translation type="unfinished">Terre</translation>
+        <translation>Terre</translation>
     </message>
     <message>
         <source>Wind</source>
-        <translation type="unfinished">Vent</translation>
+        <translation>Vent</translation>
     </message>
     <message>
         <source>Water</source>
-        <translation type="unfinished">Eau</translation>
+        <translation>Eau</translation>
     </message>
     <message>
         <source>Gravity</source>
-        <translation type="unfinished">Gravité</translation>
+        <translation>Gravité</translation>
     </message>
     <message>
         <source>Holy</source>
-        <translation type="unfinished">Sacré</translation>
+        <translation>Sacré</translation>
     </message>
     <message>
         <source>Poison</source>
-        <translation type="unfinished">Poison</translation>
+        <translation>Poison</translation>
     </message>
     <message>
         <source>Cut</source>
-        <translation type="unfinished">CoupLame</translation>
+        <translation>CoupLame</translation>
     </message>
     <message>
         <source>Shoot</source>
-        <translation type="unfinished">CoupFeu</translation>
+        <translation>CoupFeu</translation>
     </message>
     <message>
         <source>Punch</source>
-        <translation type="unfinished">coupPoing</translation>
+        <translation>coupPoing</translation>
     </message>
     <message>
         <source>Hit</source>
-        <translation type="unfinished">Frapper</translation>
+        <translation>Frapper</translation>
     </message>
     <message>
         <source>Absorb:</source>
-        <translation type="unfinished">Absorbe:</translation>
+        <translation>Absorbe:</translation>
     </message>
     <message>
         <source>Nullify:</source>
-        <translation type="unfinished">Annule:</translation>
+        <translation>Annule:</translation>
     </message>
     <message>
         <source>Halve:</source>
-        <translation type="unfinished">Moitié:</translation>
+        <translation>Moitié:</translation>
     </message>
     <message>
         <source>Attack:</source>
-        <translation type="unfinished">Attaque:</translation>
+        <translation>Attaque:</translation>
     </message>
     <message>
         <source>Death</source>
-        <translation type="unfinished">Mort</translation>
+        <translation>Mort</translation>
     </message>
     <message>
         <source>Slow-Numb</source>
-        <translation type="unfinished">Lente-apathie</translation>
+        <translation>Lente-apathie</translation>
     </message>
     <message>
         <source>D.Sentence</source>
-        <translation type="unfinished">Peine de mort</translation>
+        <translation>Peine de mort</translation>
     </message>
     <message>
         <source>Paralysis</source>
-        <translation type="unfinished">Paralysie</translation>
+        <translation>Paralysie</translation>
     </message>
     <message>
         <source>Petrify</source>
-        <translation type="unfinished">Pétrifier</translation>
+        <translation>Pétrifier</translation>
     </message>
     <message>
         <source>Silence</source>
-        <translation type="unfinished">Silence</translation>
+        <translation>Silence</translation>
     </message>
     <message>
         <source>Sleep</source>
-        <translation type="unfinished">Sommeil</translation>
+        <translation>Sommeil</translation>
     </message>
     <message>
         <source>Confusion</source>
-        <translation type="unfinished">Confusion</translation>
+        <translation>Confusion</translation>
     </message>
     <message>
         <source>Berserk</source>
-        <translation type="unfinished">Folie</translation>
+        <translation>Folie</translation>
     </message>
     <message>
         <source>Frog</source>
-        <translation type="unfinished">Grenouille</translation>
+        <translation>Grenouille</translation>
     </message>
     <message>
         <source>Mini</source>
-        <translation type="unfinished">Mini</translation>
+        <translation>Mini</translation>
     </message>
     <message>
         <source>Darkness</source>
-        <translation type="unfinished">Obscurité</translation>
+        <translation>Obscurité</translation>
     </message>
     <message>
         <source>Haste</source>
-        <translation type="unfinished">Hâte</translation>
+        <translation>Hâte</translation>
     </message>
     <message>
         <source>Slow</source>
-        <translation type="unfinished">Lent</translation>
+        <translation>Lent</translation>
     </message>
     <message>
         <source>Stop</source>
-        <translation type="unfinished">Stop</translation>
+        <translation>Stop</translation>
     </message>
     <message>
         <source>Barrier</source>
-        <translation type="unfinished">Barrière</translation>
+        <translation>Barrière</translation>
     </message>
     <message>
         <source>M.Barrier</source>
-        <translation type="unfinished">BarrM</translation>
+        <translation>BarrM</translation>
     </message>
     <message>
         <source>Reflect</source>
-        <translation type="unfinished">Reflet</translation>
+        <translation>Reflet</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation type="unfinished">Bouclier</translation>
+        <translation>Bouclier</translation>
     </message>
     <message>
         <source>Regen</source>
-        <translation type="unfinished">Regen</translation>
+        <translation>Regen</translation>
     </message>
     <message>
         <source>Protect:</source>
-        <translation type="unfinished">Protège:</translation>
+        <translation>Protège:</translation>
     </message>
     <message>
         <source>Remove:</source>
-        <translation type="unfinished">Enlève:</translation>
+        <translation>Enlève:</translation>
     </message>
     <message>
         <source>Inflict:</source>
-        <translation type="unfinished">Inflige:</translation>
+        <translation>Inflige:</translation>
     </message>
     <message>
         <source>OnBattle:</source>
-        <translation type="unfinished">EnCombat:</translation>
+        <translation>EnCombat:</translation>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation type="unfinished">-Vide-</translation>
+        <translation>-Vide-</translation>
     </message>
     <message>
         <source>Character Info</source>
@@ -638,23 +638,23 @@
     <name>ChocoboEditor</name>
     <message>
         <source>Unable To Mate</source>
-        <translation type="unfinished"></translation>
+        <translation>Incapacité à s&apos;accoupler</translation>
     </message>
     <message>
         <source>Stamina</source>
-        <translation type="unfinished">Résistance</translation>
+        <translation>Résistance</translation>
     </message>
     <message>
         <source>Sex</source>
-        <translation type="unfinished">Sexe </translation>
+        <translation>Sexe</translation>
     </message>
     <message>
         <source>Type</source>
-        <translation type="unfinished">Type </translation>
+        <translation>Type</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished">Nom</translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <source>Run Speed</source>
@@ -666,7 +666,7 @@
     </message>
     <message>
         <source>Accel</source>
-        <translation type="unfinished">Accélération</translation>
+        <translation>Accélération</translation>
     </message>
     <message>
         <source>Wins</source>
@@ -674,7 +674,7 @@
     </message>
     <message>
         <source>Coop</source>
-        <translation type="unfinished">Maniabilité</translation>
+        <translation>Maniabilité</translation>
     </message>
     <message>
         <source>pCount</source>
@@ -682,39 +682,39 @@
     </message>
     <message>
         <source>Intel</source>
-        <translation type="unfinished">Intelligence</translation>
+        <translation>Intelligence</translation>
     </message>
     <message>
         <source>Personality</source>
-        <translation type="unfinished">Personnalité</translation>
+        <translation>Personnalité</translation>
     </message>
     <message>
         <source>Male</source>
-        <translation type="unfinished">Mâle</translation>
+        <translation>Mâle</translation>
     </message>
     <message>
         <source>Female</source>
-        <translation type="unfinished">Femelle</translation>
+        <translation>Femelle</translation>
     </message>
     <message>
         <source>Yellow</source>
-        <translation type="unfinished">Jaune</translation>
+        <translation>Jaune</translation>
     </message>
     <message>
         <source>Green</source>
-        <translation type="unfinished">Vert</translation>
+        <translation>Vert</translation>
     </message>
     <message>
         <source>Blue</source>
-        <translation type="unfinished">Bleu</translation>
+        <translation>Bleu</translation>
     </message>
     <message>
         <source>Black</source>
-        <translation type="unfinished">Noir</translation>
+        <translation>Noir</translation>
     </message>
     <message>
         <source>Gold</source>
-        <translation type="unfinished">Doré</translation>
+        <translation>Doré</translation>
     </message>
 </context>
 <context>
@@ -820,39 +820,39 @@
     <name>Elements</name>
     <message>
         <source>[Fire]</source>
-        <translation type="unfinished">[Feu]</translation>
+        <translation>[Feu]</translation>
     </message>
     <message>
         <source>[Ice]</source>
-        <translation type="unfinished">[Glace]</translation>
+        <translation>[Glace]</translation>
     </message>
     <message>
         <source>[Earth]</source>
-        <translation type="unfinished">[Terre]</translation>
+        <translation>[Terre]</translation>
     </message>
     <message>
         <source>[Lightning]</source>
-        <translation type="unfinished">[Foudre]</translation>
+        <translation>[Foudre]</translation>
     </message>
     <message>
         <source>[Poison]</source>
-        <translation type="unfinished">[Poison]</translation>
+        <translation>[Poison]</translation>
     </message>
     <message>
         <source>[Gravity]</source>
-        <translation type="unfinished">[Gravité]</translation>
+        <translation>[Gravité]</translation>
     </message>
     <message>
         <source>[Wind]</source>
-        <translation type="unfinished">[Vent]</translation>
+        <translation>[Vent]</translation>
     </message>
     <message>
         <source>[Water]</source>
-        <translation type="unfinished">[Eau]</translation>
+        <translation>[Eau]</translation>
     </message>
     <message>
         <source>[Holy]</source>
-        <translation type="unfinished">[Sacré]</translation>
+        <translation>[Sacré]</translation>
     </message>
 </context>
 <context>
@@ -5782,7 +5782,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Clear</source>
-        <translation type="unfinished">Enlever</translation>
+        <translation>Enlever</translation>
     </message>
     <message>
         <source>Skills</source>
@@ -5798,23 +5798,23 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Magic</source>
-        <translation type="unfinished">Magie</translation>
+        <translation>Magie</translation>
     </message>
     <message>
         <source>Summon</source>
-        <translation type="unfinished">Invocation</translation>
+        <translation>Invocation</translation>
     </message>
     <message>
         <source>Independent</source>
-        <translation type="unfinished">Indépendante</translation>
+        <translation>Indépendante</translation>
     </message>
     <message>
         <source>Support</source>
-        <translation type="unfinished">Soutien</translation>
+        <translation>Soutien</translation>
     </message>
     <message>
         <source>Command</source>
-        <translation type="unfinished">Commande</translation>
+        <translation>Commande</translation>
     </message>
     <message>
         <source>Status</source>
@@ -5822,11 +5822,11 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Master</source>
-        <translation type="unfinished">Maître</translation>
+        <translation>Maître</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation type="unfinished"></translation>
+        <translation>Effet suppl</translation>
     </message>
 </context>
 <context>
@@ -7532,135 +7532,136 @@ Vide</translation>
     </message>
     <message>
         <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation> Sauvegarde semi-reliée la prochaine sauvegarde est à l&apos;emplacement %1</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks</source>
-        <translation type="unfinished"></translation>
+        <translation> Fin du lien de sauvegard</translation>
     </message>
     <message>
         <source>ERROR</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur</translation>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation type="unfinished">-Vide-</translation>
+        <translation>-Vide-</translation>
     </message>
     <message>
         <source>
 	 Game Uses %1 Save Block</source>
-        <translation type="unfinished"></translation>
+        <translation>
+	 Le jeu utilise %1 sauvegarde</translation>
     </message>
     <message>
         <source>Slot:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:%1</translation>
     </message>
     <message>
         <source>Slot:1</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:1</translation>
     </message>
     <message>
         <source>Slot:2</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:2</translation>
     </message>
     <message>
         <source>Slot:3</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:3</translation>
     </message>
     <message>
         <source>Slot:4</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:4</translation>
     </message>
     <message>
         <source>Slot:5</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:5</translation>
     </message>
     <message>
         <source>Slot:6</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:6</translation>
     </message>
     <message>
         <source>Slot:7</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:7</translation>
     </message>
     <message>
         <source>Slot:8</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:8</translation>
     </message>
     <message>
         <source>Slot:9</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:9</translation>
     </message>
     <message>
         <source>Slot:10</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:10</translation>
     </message>
     <message>
         <source>Slot:11</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:11</translation>
     </message>
     <message>
         <source>Slot:12</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:12</translation>
     </message>
     <message>
         <source>Slot:13</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:13</translation>
     </message>
     <message>
         <source>Slot:14</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:14</translation>
     </message>
     <message>
         <source>Slot:15</source>
-        <translation type="unfinished"></translation>
+        <translation>Slot:15</translation>
     </message>
 </context>
 <context>
     <name>Status</name>
     <message>
         <source>[Sleep]</source>
-        <translation type="unfinished">[Sommeil]</translation>
+        <translation>[Sommeil]</translation>
     </message>
     <message>
         <source>[Silence]</source>
-        <translation type="unfinished">[Silence]</translation>
+        <translation>[Silence]</translation>
     </message>
     <message>
         <source>[Confusion]</source>
-        <translation type="unfinished">[Confusion]</translation>
+        <translation>[Confusion]</translation>
     </message>
     <message>
         <source>[Berserk]</source>
-        <translation type="unfinished">[Folie]</translation>
+        <translation>[Folie]</translation>
     </message>
     <message>
         <source>[Small]</source>
-        <translation type="unfinished">[Mini]</translation>
+        <translation>[Mini]</translation>
     </message>
     <message>
         <source>[Frog]</source>
-        <translation type="unfinished">[Grenouille]</translation>
+        <translation>[Grenouille]</translation>
     </message>
     <message>
         <source>[Poison]</source>
-        <translation type="unfinished">[Poison]</translation>
+        <translation>[Poison]</translation>
     </message>
     <message>
         <source>[Slow]</source>
-        <translation type="unfinished">[Lent]</translation>
+        <translation>[Lent]</translation>
     </message>
     <message>
         <source>[Stop]</source>
-        <translation type="unfinished">[Stop]</translation>
+        <translation>[Stop]</translation>
     </message>
     <message>
         <source>[Death]</source>
-        <translation type="unfinished">[Mort]</translation>
+        <translation>[Mort]</translation>
     </message>
     <message>
         <source>[Petrify]</source>
-        <translation type="unfinished">[Pétrifier]</translation>
+        <translation>[Pétrifier]</translation>
     </message>
 </context>
 <context>
