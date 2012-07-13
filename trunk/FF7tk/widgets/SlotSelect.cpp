@@ -45,14 +45,15 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
         else if(data->isFF7(i))
         {
             preview[i]->setMode(2);
-            QString style = "background-color: qlineargradient(spread:pad, x1:0.489, y1:0.459955, x2:0.482, y2:0, stop:0 rgba(";
-            style.append(QString::number(data->slot[i].colors[0][0]));    style.append(",");
-            style.append(QString::number(data->slot[i].colors[0][1]));    style.append(",");
-            style.append(QString::number(data->slot[i].colors[0][2]));    style.append(", 255), stop:1 rgba(");
-            style.append(QString::number(data->slot[i].colors[2][0]));    style.append(",");
-            style.append(QString::number(data->slot[i].colors[2][1]));    style.append(",");
-            style.append(QString::number(data->slot[i].colors[2][2]));    style.append(", 255));");
-            preview[i]->setStyleSheet(style);
+            //show real Dialog background.
+            QImage image(2, 2, QImage::Format_ARGB32);
+            image.setPixel(0, 0, QColor(data->slot[i].colors[0][0],data->slot[i].colors[0][1],data->slot[i].colors[0][2]).rgb());
+            image.setPixel(1, 0, QColor(data->slot[i].colors[1][0],data->slot[i].colors[1][1],data->slot[i].colors[1][2]).rgb());
+            image.setPixel(0, 1, QColor(data->slot[i].colors[2][0],data->slot[i].colors[2][1],data->slot[i].colors[2][2]).rgb());
+            image.setPixel(1, 1, QColor(data->slot[i].colors[3][0],data->slot[i].colors[3][1],data->slot[i].colors[3][2]).rgb());
+            QImage gradient = image.scaled(this->width(),this->height(),Qt::IgnoreAspectRatio, Qt::SmoothTransformation);
+            preview[i]->setPixmap(QPixmap::fromImage(gradient));
+
             preview[i]->setParty(Chars.Pixmap(data->descParty(i,0)),Chars.Pixmap(data->descParty(i,1)),Chars.Pixmap(data->descParty(i,2)));
             preview[i]->setLocation(data->descLocation(i));
             preview[i]->setName(data->descName(i));
