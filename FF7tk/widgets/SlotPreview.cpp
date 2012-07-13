@@ -15,7 +15,7 @@
 /****************************************************************************/
 #include "SlotPreview.h"
 //Slot Preview Widget is for display of the previewed save data.
-SlotPreview::SlotPreview(QWidget *parent):QWidget(parent)
+SlotPreview::SlotPreview(QWidget *parent):QLabel(parent)
 {
      btn_select = new QPushButton(this);
     top_most = new QGroupBox(this);
