@@ -91,11 +91,11 @@ unix:!symbian{
 win32:{
     #set up icon for windows
     RC_FILE = bchoco.rc
-    VERS = $$system(svnrev $$PWD)
-    {
-    DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
-    message("Using Svn Revision:$${VERS}")
-    }
+    #VERS = $$system(svnrev $$PWD)
+    #{
+    #DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
+    #message("Using Svn Revision:$${VERS}")
+    #}
 }
 
 #all other *nix (except for symbian)
