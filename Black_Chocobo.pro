@@ -24,43 +24,26 @@ SOURCES += main.cpp \
     about.cpp \
     options.cpp \
     errbox.cpp \
-    static_data/SaveIcon.cpp \
-    static_data/FF7Save.cpp \
-    static_data/FF7Text.cpp \
-    static_data/FF7Item.cpp \
-    static_data/FF7Materia.cpp \
-    static_data/FF7Location.cpp \
-    widgets/ItemPreview.cpp \
-    widgets/DialogPreview.cpp \
-    widgets/MateriaEditor.cpp \
-    widgets/SlotSelect.cpp\
-    widgets/SlotPreview.cpp\
-    static_data/FF7Char.cpp \
-    widgets/ChocoboEditor.cpp \
-    widgets/CharEditor.cpp
+    FF7tk/widgets/SlotSelect.cpp \
+    FF7tk/widgets/SlotPreview.cpp \
+    FF7tk/widgets/MateriaEditor.cpp \
+    FF7tk/widgets/ItemPreview.cpp \
+    FF7tk/widgets/DialogPreview.cpp \
+    FF7tk/widgets/ChocoboEditor.cpp \
+    FF7tk/widgets/CharEditor.cpp \
+    FF7tk/static_data/SaveIcon.cpp \
+    FF7tk/static_data/FF7Text.cpp \
+    FF7tk/static_data/FF7Save.cpp \
+    FF7tk/static_data/FF7Materia.cpp \
+    FF7tk/static_data/FF7Location.cpp \
+    FF7tk/static_data/FF7Item.cpp \
+    FF7tk/static_data/FF7Char.cpp
 HEADERS += mainwindow.h \
     about.h \
     options.h \
     errbox.h \
-    static_data/SaveIcon.h \
-    static_data/FF7Save.h \
-    static_data/FF7Text.h \
-    static_data/FF7Item.h \
-    static_data/FF7Materia.h \
-    static_data/FF7Location.h \
-    widgets/ItemPreview.h \
-    widgets/DialogPreview.h \
-    version.h \
-    static_data/FF7Save_Const.h \
-    static_data/FF7Save_Types.h \
-    widgets/MateriaEditor.h \
-    widgets/SlotSelect.h\
-    widgets/SlotPreview.h\
-    static_data/FF7Char.h \
-    static_data/Type_materia.h \
-    static_data/Type_FF7CHAR.h \
-    widgets/ChocoboEditor.h \
-    widgets/CharEditor.h
+    version.h
+
 FORMS += mainwindow.ui \
     about.ui \
     options.ui \
@@ -135,3 +118,23 @@ INSTALLS += target \
     icon  \
     desktop
 }
+
+HEADERS += \
+    FF7tk/static_data/Type_materia.h \
+    FF7tk/static_data/Type_FF7CHAR.h \
+    FF7tk/static_data/SaveIcon.h \
+    FF7tk/static_data/FF7Text.h \
+    FF7tk/static_data/FF7Save_Types.h \
+    FF7tk/static_data/FF7Save_Const.h \
+    FF7tk/static_data/FF7Save.h \
+    FF7tk/static_data/FF7Materia.h \
+    FF7tk/static_data/FF7Location.h \
+    FF7tk/static_data/FF7Item.h \
+    FF7tk/static_data/FF7Char.h \
+    FF7tk/widgets/SlotSelect.h \
+    FF7tk/widgets/SlotPreview.h \
+    FF7tk/widgets/MateriaEditor.h \
+    FF7tk/widgets/ItemPreview.h \
+    FF7tk/widgets/DialogPreview.h \
+    FF7tk/widgets/ChocoboEditor.h \
+    FF7tk/widgets/CharEditor.h
