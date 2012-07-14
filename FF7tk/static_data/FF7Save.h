@@ -19,6 +19,7 @@
 #include "FF7Save_Types.h" //All Custom Types for this class here.
 #include "FF7Text.h"
 #include <QObject>
+#include<QColor>
 #include <cstdlib>
 
 class FF7Save{
@@ -55,6 +56,7 @@ public:
   qint32 stolenMateriaAp(int s,int mat_num);
   void setPartyMateria(int s,int mat_num,quint8 id,qint32 ap);
   void setStolenMateria(int s, int mat_num,quint8 id,qint32 ap);
+  //Description Stuff.
   QString descName(int s);//return the name in the description
   void setDescName(int s,QString new_name);// desc name = new_name
   QString descLocation(int s);//return the location string used in the description
@@ -75,7 +77,16 @@ public:
   void setDescGil(int s,quint32 new_gil);
   quint32 descTime(int s);
   void setDescTime(int s,quint32 new_time);
+  //Dialog Colors
+  QColor Dialog_UL(int s);
+  QColor Dialog_UR(int s);
+  QColor Dialog_LL(int s);
+  QColor Dialog_LR(int s);
 
+  void setDialog_UL(int s,QColor color);
+  void setDialog_UR(int s,QColor color);
+  void setDialog_LL(int s,QColor color);
+  void setDialog_LR(int s,QColor color);
   // String Functions.
   QString chocoName(int s,int choco_num);//return choco_num's name.
   void setChocoName(int s,int choco_num,QString new_name);//write choco_num 's new_name to slot s
@@ -83,6 +94,7 @@ public:
   void setLocation(int s, QString new_location);//set save location string to new_location
 
   //Char Related Functions get/set all stats.
+  FF7CHAR Char(int s,int char_num); //Return Full Char
   quint8 charID(int s,int char_num);//Return Char ID
   quint8 charLevel(int s,int char_num);//Return Char Level
   quint8 charStr(int s,int char_num);
@@ -104,11 +116,9 @@ public:
   quint8 charArmor(int s,int char_num);
   quint8 charAccessory(int s,int char_num);
   quint8 charFlag(int s,int char_num,int flag_num);
-
   quint16 charLimits(int s,int char_num);//Return Char ID
   quint16 charKills(int s,int char_num);//Return Char Level
   quint16 charTimesLimitUsed(int s,int char_num,int level);
-
   quint16 charCurrentHp(int s,int char_num);
   quint16 charBaseHp(int s,int char_num);
   quint16 charCurrentMp(int s,int char_num);
@@ -116,10 +126,11 @@ public:
   quint8 charUnknown(int s,int char_num,int unknown_num);
   quint16 charMaxHp(int s,int char_num);
   quint16 charMaxMp(int s,int char_num);
-
   quint32 charCurrentExp(int s,int char_num);
   quint32 charNextExp(int s,int char_num);
-
+  quint8 charMateriaId(int s,int who,int mat_num);
+  qint32 charMateriaAp(int s,int who,int mat_num);
+  void setChar(int s,int char_num,FF7CHAR new_char);
   void  setCharID(int s,int char_num,qint8 new_id);
   void  setCharLevel(int s,int char_num,qint8 new_level);
   void  setCharStr(int s,int char_num,quint8 str);
@@ -153,11 +164,38 @@ public:
   void  setCharMaxMp(int s,int char_num,quint16 maxMp);
   void  setCharCurrentExp(int s,int char_num,quint32 exp);
   void  setCharNextExp(int s,int char_num,quint32 next);
-
   void setCharMateria(int s,int who,int mat_num,quint8 id,qint32 ap);
   void setCharMateria(int s,int who,int mat_num,materia mat);
-  quint8 charMateriaId(int s,int who,int mat_num);
-  qint32 charMateriaAp(int s,int who,int mat_num);
+  //chocobo Stuff.
+  FF7CHOCOBO chocobo(int s,int chocoSlot);
+  quint16 chocoStamina(int s,int chocoSlot);
+  quint16 chocoSpeed(int s,int chocoSlot);
+  quint16 chocoMaxSpeed(int s,int chocoSlot);
+  quint16 chocoSprintSpeed(int s,int chocoSlot);
+  quint16 chocoMaxSprintSpeed(int s,int chocoSlot);
+  quint8 chocoSex(int s, int chocoSlot);
+  quint8 chocoType(int s, int chocoSlot);
+  quint8 chocoCoop(int s, int chocoSlot);
+  quint8 chocoAccel(int s, int chocoSlot);
+  quint8 chocoIntelligence(int s, int chocoSlot);
+  quint8 chocoRaceswon(int s, int chocoSlot);
+  quint8 chocoPCount(int s, int chocoSlot);
+  quint8 chocoPersonality(int s, int chocoSlot);
+  bool chocoCantMate(int s, int chocoSlot);
+  void setChocoStamina(int s,int chocoSlot,quint16 stamina);
+  void setChocoSpeed(int s,int chocoSlot,quint16 speed);
+  void setChocoMaxSpeed(int s,int chocoSlot,quint16 maxspeed);
+  void setChocoSprintSpeed(int s,int chocoSlot,quint16 sprintSpeed);
+  void setChocoMaxSprintSpeed(int s,int chocoSlot,quint16 maxsprintSpeed);
+  void setChocoSex(int s, int chocoSlot,quint8 value);
+  void setChocoType(int s, int chocoSlot,quint8 value);
+  void setChocoCoop(int s, int chocoSlot,quint8 value);
+  void setChocoAccel(int s, int chocoSlot,quint8 value);
+  void setChocoIntelligence(int s, int chocoSlot,quint8 value);
+  void setChocoRaceswon(int s, int chocoSlot,quint8 value);
+  void setChocoPCount(int s, int chocoSlot,quint8 value);
+  void setChocoPersonality(int s, int chocoSlot,quint8 value);
+  void setChocoCantMate(int s,int chocoSlot,bool cantMate);
 
   //publicly accessable core data(for now)
   FF7SLOT slot[15]; //core slot data.

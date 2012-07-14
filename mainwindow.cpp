@@ -1820,10 +1820,10 @@ void MainWindow::guirefresh(bool newgame)
         ui->sb_time_min->setValue(ff7->slot[s].time/60%60);
         ui->sb_time_sec->setValue(ff7->slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
 
-        dialog_preview->SetULeft (QColor(ff7->slot[s].colors[0][0],ff7->slot[s].colors[0][1],ff7->slot[s].colors[0][2]));
-        dialog_preview->SetURight(QColor(ff7->slot[s].colors[1][0],ff7->slot[s].colors[1][1],ff7->slot[s].colors[1][2]));
-        dialog_preview->SetLLeft (QColor(ff7->slot[s].colors[2][0],ff7->slot[s].colors[2][1],ff7->slot[s].colors[2][2]));
-        dialog_preview->SetLRight(QColor(ff7->slot[s].colors[3][0],ff7->slot[s].colors[3][1],ff7->slot[s].colors[3][2]));
+        dialog_preview->SetULeft (ff7->Dialog_UL(s));
+        dialog_preview->SetURight(ff7->Dialog_UR(s));
+        dialog_preview->SetLLeft (ff7->Dialog_LL(s));
+        dialog_preview->SetLRight(ff7->Dialog_LR(s));
 
         if((ff7->slot[s].materiacaves)& (1<<0)){ui->cb_materiacave_1->setChecked(Qt::Checked);}
         else{ui->cb_materiacave_1->setChecked(Qt::Unchecked);}
@@ -2069,13 +2069,12 @@ void MainWindow::chocobo_refresh()
     if((ff7->slot[s].chocobomask)& (1<<5)){ui->box_stable6->setChecked(1);}
     else{ui->box_stable6->setChecked(0);}
 
-    chocobo_stable_1->SetChocobo(ff7->slot[s].chocobos[0],ff7->chocoName(s,0),ff7->slot[s].chocomated& (1<<0),ff7->slot[s].chocostaminas[0]);
-    chocobo_stable_2->SetChocobo(ff7->slot[s].chocobos[1],ff7->chocoName(s,1),ff7->slot[s].chocomated& (1<<1),ff7->slot[s].chocostaminas[1]);
-    chocobo_stable_3->SetChocobo(ff7->slot[s].chocobos[2],ff7->chocoName(s,2),ff7->slot[s].chocomated& (1<<2),ff7->slot[s].chocostaminas[2]);
-    chocobo_stable_4->SetChocobo(ff7->slot[s].chocobos[3],ff7->chocoName(s,3),ff7->slot[s].chocomated& (1<<3),ff7->slot[s].chocostaminas[3]);
-    chocobo_stable_5->SetChocobo(ff7->slot[s].chocobos[4],ff7->chocoName(s,4),ff7->slot[s].chocomated& (1<<4),ff7->slot[s].chocostaminas[4]);
-    chocobo_stable_6->SetChocobo(ff7->slot[s].chocobos[5],ff7->chocoName(s,5),ff7->slot[s].chocomated& (1<<5),ff7->slot[s].chocostaminas[5]);
-
+    chocobo_stable_1->SetChocobo(ff7->chocobo(s,0),ff7->chocoName(s,0),ff7->chocoCantMate(s,0),ff7->chocoStamina(s,0));
+    chocobo_stable_2->SetChocobo(ff7->chocobo(s,1),ff7->chocoName(s,1),ff7->chocoCantMate(s,1),ff7->chocoStamina(s,1));
+    chocobo_stable_3->SetChocobo(ff7->chocobo(s,2),ff7->chocoName(s,2),ff7->chocoCantMate(s,2),ff7->chocoStamina(s,2));
+    chocobo_stable_4->SetChocobo(ff7->chocobo(s,3),ff7->chocoName(s,3),ff7->chocoCantMate(s,3),ff7->chocoStamina(s,3));
+    chocobo_stable_5->SetChocobo(ff7->chocobo(s,4),ff7->chocoName(s,4),ff7->chocoCantMate(s,4),ff7->chocoStamina(s,4));
+    chocobo_stable_6->SetChocobo(ff7->chocobo(s,5),ff7->chocoName(s,5),ff7->chocoCantMate(s,5),ff7->chocoStamina(s,5));
     //set the penned chocobos
     ui->combo_pen1->setCurrentIndex(ff7->slot[s].pennedchocos[0]);
     ui->combo_pen2->setCurrentIndex(ff7->slot[s].pennedchocos[1]);
@@ -2329,124 +2328,100 @@ void MainWindow::on_box_stable6_toggled(bool checked)
 }}
 /*~~~~~ChocoboStats~~~~~*/
 void MainWindow::c1_nameChanged(QString text){if(!load){file_modified(true);ff7->setChocoName(s,0,text);}}
-void MainWindow::c1_staminaChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocostaminas[0] = value;}}
-void MainWindow::c1_speedChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[0].speed = value;}}
-void MainWindow::c1_maxspeedChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[0].maxspeed = value;}}
-void MainWindow::c1_sprintChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[0].sprintspd = value;}}
-void MainWindow::c1_maxsprintChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[0].maxsprintspd = value;}}
-void MainWindow::c1_sexChanged(quint8 index){if(!load){file_modified(true); ff7->slot[s].chocobos[0].sex = index;}}
-void MainWindow::c1_typeChanged(quint8 index){if(!load){file_modified(true); ff7->slot[s].chocobos[0].type = index;}}
-void MainWindow::c1_coopChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[0].coop= value;}}
-void MainWindow::c1_accelChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[0].accel= value;}}
-void MainWindow::c1_intelChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[0].intelligence = value;}}
-void MainWindow::c1_raceswonChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[0].raceswon = value;}}
-void MainWindow::c1_pcountChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[0].pcount= value;}}
-void MainWindow::c1_personalityChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[0].personality=value;}}
-void MainWindow::c1_mated_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].chocomated |= (1<<0);}
-    else{ff7->slot[s].chocomated &= ~(1<<0);}
-}}
+void MainWindow::c1_staminaChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoStamina(s,0,value);}}
+void MainWindow::c1_speedChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoSpeed(s,0,value);}}
+void MainWindow::c1_maxspeedChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoMaxSpeed(s,0,value);}}
+void MainWindow::c1_sprintChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoSprintSpeed(s,0,value);}}
+void MainWindow::c1_maxsprintChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoMaxSprintSpeed(s,0,value);}}
+void MainWindow::c1_sexChanged(quint8 index){if(!load){file_modified(true); ff7->setChocoSex(s,0,index);}}
+void MainWindow::c1_typeChanged(quint8 index){if(!load){file_modified(true); ff7->setChocoType(s,0,index);}}
+void MainWindow::c1_coopChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoCoop(s,0,value);}}
+void MainWindow::c1_accelChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoAccel(s,0,value);}}
+void MainWindow::c1_intelChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoIntelligence(s,0,value);}}
+void MainWindow::c1_raceswonChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoRaceswon(s,0,value);}}
+void MainWindow::c1_pcountChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoPCount(s,0,value);}}
+void MainWindow::c1_personalityChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoPersonality(s,0,value);}}
+void MainWindow::c1_mated_toggled(bool checked){if(!load){file_modified(true);ff7->setChocoCantMate(s,0,checked);}}
 
-void MainWindow::c2_nameChanged(QString text){if(!load){file_modified(true); ff7->setChocoName(s,1,text);}}
-void MainWindow::c2_staminaChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocostaminas[1] = value;}}
-void MainWindow::c2_speedChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[1].speed = value;}}
-void MainWindow::c2_maxspeedChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[1].maxspeed = value;}}
-void MainWindow::c2_sprintChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[1].sprintspd = value;}}
-void MainWindow::c2_maxsprintChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[1].maxsprintspd = value;}}
-void MainWindow::c2_sexChanged(quint8 index){if(!load){file_modified(true); ff7->slot[s].chocobos[1].sex = index;}}
-void MainWindow::c2_typeChanged(quint8 index){if(!load){file_modified(true); ff7->slot[s].chocobos[1].type = index;}}
-void MainWindow::c2_coopChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[1].coop= value;}}
-void MainWindow::c2_accelChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[1].accel= value;}}
-void MainWindow::c2_intelChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[1].intelligence = value;}}
-void MainWindow::c2_raceswonChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[1].raceswon = value;}}
-void MainWindow::c2_pcountChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[1].pcount= value;}}
-void MainWindow::c2_personalityChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[1].personality=value;}}
-void MainWindow::c2_mated_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].chocomated |= (1<<1);}
-    else{ff7->slot[s].chocomated &= ~(1<<1);}
-}}
+void MainWindow::c2_nameChanged(QString text){if(!load){file_modified(true);ff7->setChocoName(s,1,text);}}
+void MainWindow::c2_staminaChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoStamina(s,1,value);}}
+void MainWindow::c2_speedChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoSpeed(s,1,value);}}
+void MainWindow::c2_maxspeedChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoMaxSpeed(s,1,value);}}
+void MainWindow::c2_sprintChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoSprintSpeed(s,1,value);}}
+void MainWindow::c2_maxsprintChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoMaxSprintSpeed(s,1,value);}}
+void MainWindow::c2_sexChanged(quint8 index){if(!load){file_modified(true); ff7->setChocoSex(s,1,index);}}
+void MainWindow::c2_typeChanged(quint8 index){if(!load){file_modified(true); ff7->setChocoType(s,1,index);}}
+void MainWindow::c2_coopChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoCoop(s,1,value);}}
+void MainWindow::c2_accelChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoAccel(s,1,value);}}
+void MainWindow::c2_intelChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoIntelligence(s,1,value);}}
+void MainWindow::c2_raceswonChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoRaceswon(s,1,value);}}
+void MainWindow::c2_pcountChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoPCount(s,1,value);}}
+void MainWindow::c2_personalityChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoPersonality(s,1,value);}}
+void MainWindow::c2_mated_toggled(bool checked){if(!load){file_modified(true);ff7->setChocoCantMate(s,1,checked);}}
 
-void MainWindow::c3_nameChanged(QString text){if(!load){file_modified(true); ff7->setChocoName(s,2,text);}}
-void MainWindow::c3_staminaChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocostaminas[2] =value;}}
-void MainWindow::c3_speedChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[2].speed = value;}}
-void MainWindow::c3_maxspeedChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[2].maxspeed = value;}}
-void MainWindow::c3_sprintChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[2].sprintspd = value;}}
-void MainWindow::c3_maxsprintChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[2].maxsprintspd = value;}}
-void MainWindow::c3_sexChanged(quint8 index){if(!load){file_modified(true); ff7->slot[s].chocobos[2].sex = index;}}
-void MainWindow::c3_typeChanged(quint8 index){if(!load){file_modified(true); ff7->slot[s].chocobos[2].type = index;}}
-void MainWindow::c3_coopChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[2].coop= value;}}
-void MainWindow::c3_accelChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[2].accel= value;}}
-void MainWindow::c3_intelChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[2].intelligence = value;}}
-void MainWindow::c3_raceswonChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[2].raceswon = value;}}
-void MainWindow::c3_pcountChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[2].pcount= value;}}
-void MainWindow::c3_personalityChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[2].personality=value;}}
-void MainWindow::c3_mated_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].chocomated |= (1<<2);}
-    else{ff7->slot[s].chocomated &= ~(1<<2);}
-}}
+void MainWindow::c3_nameChanged(QString text){if(!load){file_modified(true);ff7->setChocoName(s,2,text);}}
+void MainWindow::c3_staminaChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoStamina(s,2,value);}}
+void MainWindow::c3_speedChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoSpeed(s,2,value);}}
+void MainWindow::c3_maxspeedChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoMaxSpeed(s,2,value);}}
+void MainWindow::c3_sprintChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoSprintSpeed(s,2,value);}}
+void MainWindow::c3_maxsprintChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoMaxSprintSpeed(s,2,value);}}
+void MainWindow::c3_sexChanged(quint8 index){if(!load){file_modified(true); ff7->setChocoSex(s,2,index);}}
+void MainWindow::c3_typeChanged(quint8 index){if(!load){file_modified(true); ff7->setChocoType(s,2,index);}}
+void MainWindow::c3_coopChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoCoop(s,2,value);}}
+void MainWindow::c3_accelChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoAccel(s,2,value);}}
+void MainWindow::c3_intelChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoIntelligence(s,2,value);}}
+void MainWindow::c3_raceswonChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoRaceswon(s,2,value);}}
+void MainWindow::c3_pcountChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoPCount(s,2,value);}}
+void MainWindow::c3_personalityChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoPersonality(s,2,value);}}
+void MainWindow::c3_mated_toggled(bool checked){if(!load){file_modified(true);ff7->setChocoCantMate(s,2,checked);}}
 
-void MainWindow::c4_nameChanged(QString text){if(!load){file_modified(true); ff7->setChocoName(s,3,text);}}
-void MainWindow::c4_staminaChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocostaminas[3] = value;}}
-void MainWindow::c4_speedChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[3].speed = value;}}
-void MainWindow::c4_maxspeedChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[3].maxspeed = value;}}
-void MainWindow::c4_sprintChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[3].sprintspd = value;}}
-void MainWindow::c4_maxsprintChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocobos[3].maxsprintspd = value;}}
-void MainWindow::c4_sexChanged(quint8 index){if(!load){file_modified(true); ff7->slot[s].chocobos[3].sex = index;}}
-void MainWindow::c4_typeChanged(quint8 index){if(!load){file_modified(true); ff7->slot[s].chocobos[3].type = index;}}
-void MainWindow::c4_coopChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[3].coop= value;}}
-void MainWindow::c4_accelChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[3].accel= value;}}
-void MainWindow::c4_intelChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[3].intelligence = value;}}
-void MainWindow::c4_raceswonChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[3].raceswon = value;}}
-void MainWindow::c4_pcountChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[3].pcount= value;}}
-void MainWindow::c4_personalityChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].chocobos[3].personality=value;}}
-void MainWindow::c4_mated_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].chocomated |= (1<<3);}
-    else{ff7->slot[s].chocomated &= ~(1<<3);}
-}}
+void MainWindow::c4_nameChanged(QString text){if(!load){file_modified(true);ff7->setChocoName(s,3,text);}}
+void MainWindow::c4_staminaChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoStamina(s,3,value);}}
+void MainWindow::c4_speedChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoSpeed(s,3,value);}}
+void MainWindow::c4_maxspeedChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoMaxSpeed(s,3,value);}}
+void MainWindow::c4_sprintChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoSprintSpeed(s,3,value);}}
+void MainWindow::c4_maxsprintChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoMaxSprintSpeed(s,3,value);}}
+void MainWindow::c4_sexChanged(quint8 index){if(!load){file_modified(true); ff7->setChocoSex(s,3,index);}}
+void MainWindow::c4_typeChanged(quint8 index){if(!load){file_modified(true); ff7->setChocoType(s,3,index);}}
+void MainWindow::c4_coopChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoCoop(s,3,value);}}
+void MainWindow::c4_accelChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoAccel(s,3,value);}}
+void MainWindow::c4_intelChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoIntelligence(s,3,value);}}
+void MainWindow::c4_raceswonChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoRaceswon(s,3,value);}}
+void MainWindow::c4_pcountChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoPCount(s,3,value);}}
+void MainWindow::c4_personalityChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoPersonality(s,3,value);}}
+void MainWindow::c4_mated_toggled(bool checked){if(!load){file_modified(true);ff7->setChocoCantMate(s,3,checked);}}
 
-void MainWindow::c5_nameChanged(QString text){if(!load){file_modified(true); ff7->setChocoName(s,4,text);}}
-void MainWindow::c5_staminaChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocostaminas[4] = value;}}
-void MainWindow::c5_speedChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].choco56[0].speed = value;}}
-void MainWindow::c5_maxspeedChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].choco56[0].maxspeed = value;}}
-void MainWindow::c5_sprintChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].choco56[0].sprintspd = value;}}
-void MainWindow::c5_maxsprintChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].choco56[0].maxsprintspd = value;}}
-void MainWindow::c5_sexChanged(quint8 index){if(!load){file_modified(true); ff7->slot[s].choco56[0].sex = index;}}
-void MainWindow::c5_typeChanged(quint8 index){if(!load){file_modified(true); ff7->slot[s].choco56[0].type = index;}}
-void MainWindow::c5_coopChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].choco56[0].coop= value;}}
-void MainWindow::c5_accelChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].choco56[0].accel= value;}}
-void MainWindow::c5_intelChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].choco56[0].intelligence = value;}}
-void MainWindow::c5_raceswonChanged(quint8 value){ if(!load){file_modified(true); ff7->slot[s].choco56[0].raceswon = value;}}
-void MainWindow::c5_pcountChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].choco56[0].pcount= value;}}
-void MainWindow::c5_personalityChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].choco56[0].personality=value;}}
-void MainWindow::c5_mated_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].chocomated |= (1<<4);}
-    else{ff7->slot[s].chocomated &= ~(1<<4);}
-}}
+void MainWindow::c5_nameChanged(QString text){if(!load){file_modified(true);ff7->setChocoName(s,4,text);}}
+void MainWindow::c5_staminaChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoStamina(s,4,value);}}
+void MainWindow::c5_speedChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoSpeed(s,4,value);}}
+void MainWindow::c5_maxspeedChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoMaxSpeed(s,4,value);}}
+void MainWindow::c5_sprintChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoSprintSpeed(s,4,value);}}
+void MainWindow::c5_maxsprintChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoMaxSprintSpeed(s,4,value);}}
+void MainWindow::c5_sexChanged(quint8 index){if(!load){file_modified(true); ff7->setChocoSex(s,4,index);}}
+void MainWindow::c5_typeChanged(quint8 index){if(!load){file_modified(true); ff7->setChocoType(s,4,index);}}
+void MainWindow::c5_coopChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoCoop(s,4,value);}}
+void MainWindow::c5_accelChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoAccel(s,4,value);}}
+void MainWindow::c5_intelChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoIntelligence(s,4,value);}}
+void MainWindow::c5_raceswonChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoRaceswon(s,4,value);}}
+void MainWindow::c5_pcountChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoPCount(s,4,value);}}
+void MainWindow::c5_personalityChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoPersonality(s,4,value);}}
+void MainWindow::c5_mated_toggled(bool checked){if(!load){file_modified(true);ff7->setChocoCantMate(s,4,checked);}}
 
-void MainWindow::c6_nameChanged(QString text){if(!load){file_modified(true); ff7->setChocoName(s,5,text);}}
-void MainWindow::c6_staminaChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].chocostaminas[5] = value;}}
-void MainWindow::c6_speedChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].choco56[1].speed = value;}}
-void MainWindow::c6_maxspeedChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].choco56[1].maxspeed = value;}}
-void MainWindow::c6_sprintChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].choco56[1].sprintspd = value;}}
-void MainWindow::c6_maxsprintChanged(quint16 value){if(!load){file_modified(true); ff7->slot[s].choco56[1].maxsprintspd = value;}}
-void MainWindow::c6_sexChanged(quint8 index){if(!load){file_modified(true); ff7->slot[s].choco56[1].sex = index;}}
-void MainWindow::c6_typeChanged(quint8 index){if(!load){file_modified(true); ff7->slot[s].choco56[1].type = index;}}
-void MainWindow::c6_coopChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].choco56[1].coop= value;}}
-void MainWindow::c6_accelChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].choco56[1].accel= value;}}
-void MainWindow::c6_intelChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].choco56[1].intelligence = value;}}
-void MainWindow::c6_raceswonChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].choco56[1].raceswon = value;}}
-void MainWindow::c6_pcountChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].choco56[1].pcount= value;}}
-void MainWindow::c6_personalityChanged(quint8 value){if(!load){file_modified(true); ff7->slot[s].choco56[1].personality=value;}}
-void MainWindow::c6_mated_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].chocomated |= (1<<5);}
-    else{ff7->slot[s].chocomated &= ~(1<<5);}
-}}
+void MainWindow::c6_nameChanged(QString text){if(!load){file_modified(true);ff7->setChocoName(s,5,text);}}
+void MainWindow::c6_staminaChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoStamina(s,5,value);}}
+void MainWindow::c6_speedChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoSpeed(s,5,value);}}
+void MainWindow::c6_maxspeedChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoMaxSpeed(s,5,value);}}
+void MainWindow::c6_sprintChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoSprintSpeed(s,5,value);}}
+void MainWindow::c6_maxsprintChanged(quint16 value){if(!load){file_modified(true); ff7->setChocoMaxSprintSpeed(s,5,value);}}
+void MainWindow::c6_sexChanged(quint8 index){if(!load){file_modified(true); ff7->setChocoSex(s,5,index);}}
+void MainWindow::c6_typeChanged(quint8 index){if(!load){file_modified(true); ff7->setChocoType(s,5,index);}}
+void MainWindow::c6_coopChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoCoop(s,5,value);}}
+void MainWindow::c6_accelChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoAccel(s,5,value);}}
+void MainWindow::c6_intelChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoIntelligence(s,5,value);}}
+void MainWindow::c6_raceswonChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoRaceswon(s,5,value);}}
+void MainWindow::c6_pcountChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoPCount(s,5,value);}}
+void MainWindow::c6_personalityChanged(quint8 value){if(!load){file_modified(true); ff7->setChocoPersonality(s,5,value);}}
+void MainWindow::c6_mated_toggled(bool checked){if(!load){file_modified(true);ff7->setChocoCantMate(s,5,checked);}}
 
 //set data for pens outside
 void MainWindow::on_combo_pen1_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].pennedchocos[0]=index;}}
@@ -2642,32 +2617,10 @@ void MainWindow::on_line_location_textChanged(QString text){if (!load){file_modi
 /*~~~~~~~~~~~~~~~~~~~~~~~~CHARACTER TAB~~~~~~~~~~~~~~~~~~~~~*/
 
 /*~~~~~~~~~~~~~~~~~~~ Game Options~~~~~~~~~~~~~~~~~~*/
-void MainWindow::set_UL_Color(QColor color)
-{if(!load){file_modified(true);
-        ff7->slot[s].colors[0][0]=color.red();
-        ff7->slot[s].colors[0][1]=color.green();
-        ff7->slot[s].colors[0][2]=color.blue();
-}}
-
-void MainWindow::set_UR_Color(QColor color)
-{if(!load){file_modified(true);
-        ff7->slot[s].colors[1][0]=color.red();
-        ff7->slot[s].colors[1][1]=color.green();
-        ff7->slot[s].colors[1][2]=color.blue();
-}}
-void MainWindow::set_LL_Color(QColor color)
-{if(!load){file_modified(true);
-        ff7->slot[s].colors[2][0]=color.red();
-        ff7->slot[s].colors[2][1]=color.green();
-        ff7->slot[s].colors[2][2]=color.blue();
-}}
-void MainWindow::set_LR_Color(QColor color)
-{if(!load){file_modified(true);
-        ff7->slot[s].colors[3][0]=color.red();
-        ff7->slot[s].colors[3][1]=color.green();
-        ff7->slot[s].colors[3][2]=color.blue();
-}}
-
+void MainWindow::set_UL_Color(QColor color){if(!load){file_modified(true);ff7->setDialog_UL(s,color);}}
+void MainWindow::set_UR_Color(QColor color){if(!load){file_modified(true);ff7->setDialog_UR(s,color);}}
+void MainWindow::set_LL_Color(QColor color){if(!load){file_modified(true);ff7->setDialog_LL(s,color);}}
+void MainWindow::set_LR_Color(QColor color){if(!load){file_modified(true);ff7->setDialog_LR(s,color);}}
 void MainWindow::on_slide_battlespeed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].battlespeed = value;}}
 void MainWindow::on_slide_battlemspeed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].battlemspeed = value;}}
 void MainWindow::on_slide_fieldmspeed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].fieldmspeed = value;}}
