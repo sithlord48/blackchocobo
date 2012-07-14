@@ -157,8 +157,8 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     char_editor_layout->addWidget(char_editor);
     ui->group_char_editor_box->setLayout(char_editor_layout);
 
-
     char_editor->setStyleSheet(this->styleSheet());
+    char_editor->Slider_Limit_FF7_Style();//sets style to ff7 limit bar style
 
     chocobo_stable_1 = new ChocoboEditor;
     QVBoxLayout *stable_1_layout = new QVBoxLayout;

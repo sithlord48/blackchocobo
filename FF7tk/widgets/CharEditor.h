@@ -49,6 +49,7 @@ public:
     bool AutoStatCalc();
     bool Editable();
     bool Debug();
+    void Slider_Limit_FF7_Style();
     qint8 id();
     qint8 level();
     quint8 str();
@@ -169,6 +170,8 @@ public slots:
     void setAutoStatCalc(bool);
     void setEditable(bool);
     void setDebug(bool);
+    void setSlideLimitStyleSheet(QString);
+
     //void setZ_4(int,int);
 
 private slots:
