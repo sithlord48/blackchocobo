@@ -171,6 +171,7 @@ public slots:
     void setEditable(bool);
     void setDebug(bool);
     void setSlideLimitStyleSheet(QString);
+    void setToolBoxStyle(QString);
 
     //void setZ_4(int,int);
 

@@ -53,7 +53,6 @@ public:
 protected:
     void changeEvent(QEvent *e);
     void closeEvent(QCloseEvent *e);
-    //void closeEvent();
 private:
     Ui::MainWindow *ui;
     void file_modified(bool);
@@ -619,5 +618,6 @@ private slots://try to keep these in the same order as the .cpp file
     void set_LL_Color(QColor color);
 
     void set_char_buttons();
+    void on_tbl_itm_customContextMenuRequested(const QPoint &pos);
 };
 #endif // MAINWINDOW_H

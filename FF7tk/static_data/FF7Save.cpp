@@ -1566,156 +1566,173 @@ qint32 FF7Save::charMateriaAp(int s,int who,int mat_num)
 }
 FF7CHOCOBO FF7Save::chocobo(int s, int chocoSlot)
 {
-    if(chocoSlot <4){return slot[s].chocobos[chocoSlot];}
+    if(chocoSlot >-1 && chocoSlot <4){return slot[s].chocobos[chocoSlot];}
     else if (chocoSlot ==4){return slot[s].choco56[0];}
     else if (chocoSlot ==5){return slot[s].choco56[1];}
+    else
+    {
+        FF7CHOCOBO bob;
+        return bob;
+   }
 }
 
 quint16 FF7Save::chocoStamina(int s,int chocoSlot){return slot[s].chocostaminas[chocoSlot];}
 quint16 FF7Save::chocoSpeed(int s,int chocoSlot)
 {
-    if(chocoSlot <4){return slot[s].chocobos[chocoSlot].speed;}
+    if(chocoSlot >-1 && chocoSlot <4){return slot[s].chocobos[chocoSlot].speed;}
     else if (chocoSlot ==4){return slot[s].choco56[0].speed;}
     else if (chocoSlot ==5){return slot[s].choco56[1].speed;}
+    else {return 0;}
 }
 quint16 FF7Save::chocoMaxSpeed(int s,int chocoSlot)
 {
-    if(chocoSlot <4){return slot[s].chocobos[chocoSlot].maxspeed;}
+    if(chocoSlot >-1 && chocoSlot <4){return slot[s].chocobos[chocoSlot].maxspeed;}
     else if (chocoSlot ==4){return slot[s].choco56[0].maxspeed;}
     else if (chocoSlot ==5){return slot[s].choco56[1].maxspeed;}
+    else {return 0;}
 }
 quint16 FF7Save::chocoSprintSpeed(int s,int chocoSlot)
 {
-    if(chocoSlot <4){return slot[s].chocobos[chocoSlot].sprintspd;}
+    if(chocoSlot >-1 && chocoSlot <4){return slot[s].chocobos[chocoSlot].sprintspd;}
     else if (chocoSlot ==4){return slot[s].choco56[0].sprintspd;}
     else if (chocoSlot ==5){return slot[s].choco56[1].sprintspd;}
+    else {return 0;}
 }
 quint16 FF7Save::chocoMaxSprintSpeed(int s,int chocoSlot)
 {
-    if(chocoSlot <4){return slot[s].chocobos[chocoSlot].maxsprintspd;}
+    if(chocoSlot >-1 && chocoSlot <4){return slot[s].chocobos[chocoSlot].maxsprintspd;}
     else if (chocoSlot ==4){return slot[s].choco56[0].maxsprintspd;}
     else if (chocoSlot ==5){return slot[s].choco56[1].maxsprintspd;}
+    else {return 0;}
 }
 quint8 FF7Save::chocoSex(int s, int chocoSlot)
 {
-    if(chocoSlot <4){return slot[s].chocobos[chocoSlot].sex;}
+    if(chocoSlot >-1 && chocoSlot <4){return slot[s].chocobos[chocoSlot].sex;}
     else if (chocoSlot ==4){return slot[s].choco56[0].sex;}
     else if (chocoSlot ==5){return slot[s].choco56[1].sex;}
+    else {return 0;}
 }
 quint8 FF7Save::chocoType(int s, int chocoSlot)
 {
-    if(chocoSlot <4){return slot[s].chocobos[chocoSlot].type;}
+    if(chocoSlot >-1 && chocoSlot <4){return slot[s].chocobos[chocoSlot].type;}
     else if (chocoSlot ==4){return slot[s].choco56[0].type;}
     else if (chocoSlot ==5){return slot[s].choco56[1].type;}
+    else {return 0;}
 }
 quint8 FF7Save::chocoCoop(int s, int chocoSlot)
 {
-    if(chocoSlot <4){return slot[s].chocobos[chocoSlot].coop;}
+    if(chocoSlot >-1 && chocoSlot <4){return slot[s].chocobos[chocoSlot].coop;}
     else if (chocoSlot ==4){return slot[s].choco56[0].coop;}
     else if (chocoSlot ==5){return slot[s].choco56[1].coop;}
+    else {return 0;}
 }
 quint8 FF7Save::chocoAccel(int s, int chocoSlot)
 {
-    if(chocoSlot <4){return slot[s].chocobos[chocoSlot].accel;}
+    if(chocoSlot >-1 && chocoSlot <4){return slot[s].chocobos[chocoSlot].accel;}
     else if (chocoSlot ==4){return slot[s].choco56[0].accel;}
     else if (chocoSlot ==5){return slot[s].choco56[1].accel;}
+    else {return 0;}
 }
 quint8 FF7Save::chocoIntelligence(int s, int chocoSlot)
 {
-    if(chocoSlot <4){return slot[s].chocobos[chocoSlot].intelligence;}
+    if(chocoSlot >-1 && chocoSlot <4){return slot[s].chocobos[chocoSlot].intelligence;}
     else if (chocoSlot ==4){return slot[s].choco56[0].intelligence;}
     else if (chocoSlot ==5){return slot[s].choco56[1].intelligence;}
+    else {return 0;}
 }
 quint8 FF7Save::chocoRaceswon(int s, int chocoSlot)
 {
-    if(chocoSlot <4){return slot[s].chocobos[chocoSlot].raceswon;}
+    if(chocoSlot >-1 && chocoSlot <4){return slot[s].chocobos[chocoSlot].raceswon;}
     else if (chocoSlot ==4){return slot[s].choco56[0].raceswon;}
     else if (chocoSlot ==5){return slot[s].choco56[1].raceswon;}
+    else {return 0;}
 }
 quint8 FF7Save::chocoPCount(int s, int chocoSlot)
 {
-    if(chocoSlot <4){return slot[s].chocobos[chocoSlot].pcount;}
+    if(chocoSlot >-1 && chocoSlot <4){return slot[s].chocobos[chocoSlot].pcount;}
     else if (chocoSlot ==4){return slot[s].choco56[0].pcount;}
     else if (chocoSlot ==5){return slot[s].choco56[1].pcount;}
+    else {return 0;}
 }
 quint8 FF7Save::chocoPersonality(int s, int chocoSlot)
 {
-    if(chocoSlot <4){return slot[s].chocobos[chocoSlot].personality;}
+    if(chocoSlot >-1 && chocoSlot <4){return slot[s].chocobos[chocoSlot].personality;}
     else if (chocoSlot ==4){return slot[s].choco56[0].personality;}
     else if (chocoSlot ==5){return slot[s].choco56[1].personality;}
+    else {return 0;}
 }
 bool FF7Save::chocoCantMate(int s, int chocoSlot){return slot[s].chocomated& (1<<chocoSlot);}
 
 void FF7Save::setChocoStamina(int s,int chocoSlot,quint16 stamina){slot[s].chocostaminas[chocoSlot] = stamina;}
 void FF7Save::setChocoSpeed(int s,int chocoSlot,quint16 speed)
 {
-    if(chocoSlot <4){slot[s].chocobos[chocoSlot].speed = speed;}
+    if(chocoSlot >-1 && chocoSlot <4){slot[s].chocobos[chocoSlot].speed = speed;}
     else if (chocoSlot ==4){slot[s].choco56[0].speed = speed;}
     else if (chocoSlot ==5){slot[s].choco56[1].speed = speed;}
 }
 void FF7Save::setChocoMaxSpeed(int s,int chocoSlot,quint16 maxspeed)
 {
-    if(chocoSlot <4){slot[s].chocobos[chocoSlot].maxspeed = maxspeed;}
+    if(chocoSlot >-1 && chocoSlot <4){slot[s].chocobos[chocoSlot].maxspeed = maxspeed;}
     else if (chocoSlot ==4){slot[s].choco56[0].maxspeed = maxspeed;}
     else if (chocoSlot ==5){slot[s].choco56[1].maxspeed = maxspeed;}
 }
 void FF7Save::setChocoSprintSpeed(int s,int chocoSlot,quint16 sprintSpeed)
 {
-    if(chocoSlot <4){slot[s].chocobos[chocoSlot].sprintspd = sprintSpeed;}
+    if(chocoSlot >-1 && chocoSlot <4){slot[s].chocobos[chocoSlot].sprintspd = sprintSpeed;}
     else if (chocoSlot ==4){slot[s].choco56[0].sprintspd = sprintSpeed;}
     else if (chocoSlot ==5){slot[s].choco56[1].sprintspd = sprintSpeed;}
 }
 void FF7Save::setChocoMaxSprintSpeed(int s,int chocoSlot,quint16 maxsprintSpeed)
 {
-    if(chocoSlot <4){slot[s].chocobos[chocoSlot].maxsprintspd = maxsprintSpeed;}
+    if(chocoSlot >-1 && chocoSlot <4){slot[s].chocobos[chocoSlot].maxsprintspd = maxsprintSpeed;}
     else if (chocoSlot ==4){slot[s].choco56[0].maxsprintspd = maxsprintSpeed;}
     else if (chocoSlot ==5){slot[s].choco56[1].maxsprintspd = maxsprintSpeed;}
 }
 void FF7Save::setChocoSex(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot <4){ slot[s].chocobos[chocoSlot].sex = value;}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].sex = value;}
     else if (chocoSlot ==4){ slot[s].choco56[0].sex = value;}
     else if (chocoSlot ==5){ slot[s].choco56[1].sex = value;}
 }
 void FF7Save::setChocoType(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot <4){ slot[s].chocobos[chocoSlot].type = value;}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].type = value;}
     else if (chocoSlot ==4){ slot[s].choco56[0].type = value;}
     else if (chocoSlot ==5){ slot[s].choco56[1].type = value;}
 }
 void FF7Save::setChocoCoop(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot <4){ slot[s].chocobos[chocoSlot].coop = value;}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].coop = value;}
     else if (chocoSlot ==4){ slot[s].choco56[0].coop = value;}
     else if (chocoSlot ==5){ slot[s].choco56[1].coop = value;}
 }
 void FF7Save::setChocoAccel(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot <4){ slot[s].chocobos[chocoSlot].accel = value;}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].accel = value;}
     else if (chocoSlot ==4){ slot[s].choco56[0].accel = value;}
     else if (chocoSlot ==5){ slot[s].choco56[1].accel = value;}
 }
 void FF7Save::setChocoIntelligence(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot <4){ slot[s].chocobos[chocoSlot].intelligence = value;}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].intelligence = value;}
     else if (chocoSlot ==4){ slot[s].choco56[0].intelligence = value;}
     else if (chocoSlot ==5){ slot[s].choco56[1].intelligence = value;}
 }
 void FF7Save::setChocoRaceswon(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot <4){ slot[s].chocobos[chocoSlot].raceswon = value;}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].raceswon = value;}
     else if (chocoSlot ==4){ slot[s].choco56[0].raceswon = value;}
     else if (chocoSlot ==5){ slot[s].choco56[1].raceswon = value;}
 }
 void FF7Save::setChocoPCount(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot <4){ slot[s].chocobos[chocoSlot].pcount = value;}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].pcount = value;}
     else if (chocoSlot ==4){ slot[s].choco56[0].pcount = value;}
     else if (chocoSlot ==5){ slot[s].choco56[1].pcount = value;}
 }
 void FF7Save::setChocoPersonality(int s, int chocoSlot,quint8 value)
 {
-    if(chocoSlot <4){ slot[s].chocobos[chocoSlot].personality = value;}
+    if(chocoSlot >-1 && chocoSlot <4){ slot[s].chocobos[chocoSlot].personality = value;}
     else if (chocoSlot ==4){ slot[s].choco56[0].personality = value;}
     else if (chocoSlot ==5){ slot[s].choco56[1].personality = value;}
 }
