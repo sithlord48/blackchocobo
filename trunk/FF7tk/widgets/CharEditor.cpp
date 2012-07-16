@@ -1067,7 +1067,7 @@ void CharEditor::init_display()
     this->setLayout(toolbox_layout);
 }
 void CharEditor::setSlideLimitStyleSheet(QString stylesheet){slider_limit->setStyleSheet(stylesheet);}
-
+void CharEditor::setToolBoxStyle(QString stylesheet){toolbox->setStyleSheet(stylesheet);}
 void CharEditor::Slider_Limit_FF7_Style()
 {
     QString style("QSlider:sub-page{background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87,192), stop:0.505682 rgba(209, 128, 173,192), stop:0.931818 rgba(209, 44, 136, 192));}");

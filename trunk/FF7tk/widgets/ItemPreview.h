@@ -19,13 +19,13 @@
 
 //Besure to set FF7Item Path!
 #include "../static_data/FF7Item.h"
-#include <QtGui/QWidget>
+#include <QtGui/QMenu>
 #include <QtGui/QLabel>
 #include <QtGui/QGroupBox>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QListWidget>
 
-class ItemPreview : public QWidget
+class ItemPreview : public QMenu
 {
 Q_OBJECT
   public:

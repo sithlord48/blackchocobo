@@ -37,11 +37,9 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
 
     //set up comboboxes.
      for (int i=0;i<320;i++){ui->combo_additem->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
-    //Fill the type combo boxes,picking a random materia of that type for each needed icon
     //LATER//
-    //set the materia buttons.
-    //to have the mslot and mlink items used.
-    //set up tables..
+
+     //set up tables..
     ui->tbl_location_field->setColumnWidth(0,147);
     ui->tbl_location_field->setColumnWidth(1,50);
     ui->tbl_location_field->setColumnWidth(2,50);
@@ -50,14 +48,14 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
 
     //Item Preview Stuff...
 
-    item_preview = new ItemPreview();
-    QVBoxLayout *item_preview_layout= new QVBoxLayout();
-    item_preview->setContentsMargins(0,0,0,0);
-    item_preview_layout->setContentsMargins(0,0,0,0);
-    item_preview_layout->addWidget(item_preview);
-    ui->box_item_preview->setLayout(item_preview_layout);
-    ui->box_item_preview->setContentsMargins(0,0,0,0);
-    item_preview->setItem(-1);
+    //item_preview = new ItemPreview();
+    //QVBoxLayout *item_preview_layout= new QVBoxLayout();
+    //item_preview->setContentsMargins(0,0,0,0);
+    //item_preview_layout->setContentsMargins(0,0,0,0);
+    //item_preview_layout->addWidget(item_preview);
+    //ui->box_item_preview->setLayout(item_preview_layout);
+    //ui->box_item_preview->setContentsMargins(0,0,0,0);
+    //item_preview->setItem(-1);
 
     QTableWidgetItem *newItem;
     FF7Location Locations;
@@ -159,6 +157,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
 
     char_editor->setStyleSheet(this->styleSheet());
     char_editor->Slider_Limit_FF7_Style();//sets style to ff7 limit bar style
+    char_editor->setToolBoxStyle(QString("::tab:hover{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));}"));
 
     chocobo_stable_1 = new ChocoboEditor;
     QVBoxLayout *stable_1_layout = new QVBoxLayout;
@@ -195,7 +194,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     stable_6_layout->setContentsMargins(0,0,0,0);
     stable_6_layout->addWidget(chocobo_stable_6);
     ui->box_stable6->setLayout(stable_6_layout);
-
     // Connect the unknown and unknown compare scrolling.
     connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );
     connect(ui->action_show_debug,SIGNAL(toggled(bool)),char_editor,(SLOT(setDebug(bool))));
@@ -1580,9 +1578,6 @@ void MainWindow::guirefresh(bool newgame)
         {//if empty region string and a virtual memcard format and dir frame says empty.
             ff7->clearslot(s); //file_modified(false);//checking only
         }
-    //    if(ff7->region(s).contains("00700") || ff7->region(s).contains("01057")){Text.init(1);}//Japanese
-    //    else{Text.init(0);}// not japanese save.
-
         //Clear all check boxes and index's
         ui->cb_replay->setCurrentIndex(0);
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
@@ -1603,7 +1598,7 @@ void MainWindow::guirefresh(bool newgame)
         if((ff7->slot[s].ruby_emerald)& (1<<4)){ui->cb_emerald_dead->setChecked(Qt::Checked);}
         if((ff7->slot[s].field_help)& (1<<0)){ui->cb_field_help->setChecked(Qt::Checked);}
         if((ff7->slot[s].tut_sub)& (1<<6)){ui->cb_battle_targets->setChecked(Qt::Checked);}
-        item_preview->setItem(-1);//reset.
+        //item_preview->setItem(-1);//reset.
         /*~~~~Set Region info and icon~~~~*/
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
@@ -2524,7 +2519,7 @@ void MainWindow::on_combo_additem_currentIndexChanged(int index)
 {if(!load){file_modified(true);
     //Replaced by new item engine. (Vegeta_Ss4)
     ff7->setItem(s,ui->tbl_itm->currentRow(),index,ui->sb_addqty->value());
-    item_preview->setItem(index);
+    //item_preview->setItem(index);
     itemupdate();
 }}
 
@@ -2539,7 +2534,7 @@ void MainWindow::on_tbl_itm_currentCellChanged(int row)
 {
     if(!load)
     {//file_modified(true);
-        if (ff7->itemQty(s,row) == 0x7F && ff7->itemId(s,row) == 0x1FF){item_preview->setItem(-1);}
+        if (ff7->itemQty(s,row) == 0x7F && ff7->itemId(s,row) == 0x1FF){/*item_preview->setItem(-1);*/}
         else
         {
             load=true;
@@ -2550,7 +2545,7 @@ void MainWindow::on_tbl_itm_currentCellChanged(int row)
         }
     }
     //Replaced by new item engine. (Vegeta_Ss4)
-    item_preview->setItem(ff7->itemId(s,row));
+    //item_preview->setItem(ff7->itemId(s,row));
 }
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -4264,3 +4259,10 @@ void MainWindow::char_expNext_changed(quint32 value)
 }
 
 void MainWindow::char_mslot_changed(int slot){mslotsel=slot;}
+
+void MainWindow::on_tbl_itm_customContextMenuRequested(const QPoint &pos)
+{
+    item_preview = new ItemPreview(this);
+    item_preview->setItem(ff7->itemId(s,ui->tbl_itm->currentRow()));
+    item_preview->exec(ui->tbl_itm->mapToGlobal(pos));
+}

@@ -44,10 +44,6 @@ QWidget#tab_gpl,QWidget#tab_programmers,QWidget#tab_about,QWidget#tabWidget{
 	selection-color: rgb(255,255,255);
 }
 
-QLabel#lbl_avatar{
-border:2px solid grey;
-border-radius: 5px;
-}
 QLabel[smaller_text=&quot;true&quot;]{font-size: 8pt;}
 QLabel[Heading=&quot;true&quot;]{text-decoration: underline;}
 QLabel[program_name=&quot;true&quot;]{	font-size:12pt }
@@ -113,7 +109,6 @@ QFrame#frame_status{
  	color: rgb(255,255,255);
  }
 /*End OF Menu*/
-
 
 QComboBox:disabled,QPushButton:disabled,QLineEdit:disabled,QSpinBox:disabled,QTableWidget:disabled,QListWidget:disabled{
 background-color:rgba(48, 47, 47,16);
@@ -383,24 +378,7 @@ width:12px;
 QScrollBar::add-page:vertical,QScrollBar::sub-page:vertical{
 background-color: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 192), stop:0.5 rgba(106, 106, 106,192), stop:1 rgba(67, 67, 67, 192));
 }
-QPushButton[mslot=&quot;true&quot;]{
-border: 0px;
-border-radius:12px;
-image: url(:/icon/mslot);
-height:32px;	
-width:32px;
-}
 
-QPushButton[stars=&quot;true&quot;]{
-border: 0px;
-background:none;
-}
-QLabel[slot_select_label=&quot;true&quot;]{font: 75 14pt &quot;Verdana&quot;;color:rgb(255, 255, 255);}
-
-QPushButton[stars=&quot;true&quot;]:hover{
-border: 0px;
-background-color:rgba(24, 72, 128,96);
-}
 QProgressBar {
   border:3px solid;	
 		border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
@@ -439,7 +417,10 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
     <item>
      <widget class="QTabWidget" name="tabWidget">
       <property name="styleSheet">
-       <string notr="true">disbled{font:;color: rgb(74, 80, 73);}</string>
+       <string notr="true">::tab:hover{
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));
+}
+disbled{font:;color: rgb(74, 80, 73);}</string>
       </property>
       <property name="currentIndex">
        <number>0</number>
@@ -1077,6 +1058,9 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                <height>0</height>
               </size>
              </property>
+             <property name="contextMenuPolicy">
+              <enum>Qt::CustomContextMenu</enum>
+             </property>
              <property name="editTriggers">
               <set>QAbstractItemView::NoEditTriggers</set>
              </property>
@@ -1274,6 +1258,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
               </property>
               <item>
                <widget class="QListWidget" name="list_flyers">
+                <property name="sizePolicy">
+                 <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
+                 </sizepolicy>
+                </property>
                 <property name="editTriggers">
                  <set>QAbstractItemView::NoEditTriggers</set>
                 </property>
@@ -1367,6 +1357,12 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
            </item>
            <item>
             <widget class="QGroupBox" name="box_field_item">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="MinimumExpanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="title">
               <string>Field Items Picked Up</string>
              </property>
@@ -1669,19 +1665,6 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
                </widget>
               </item>
              </layout>
-            </widget>
-           </item>
-           <item>
-            <widget class="QGroupBox" name="box_item_preview">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-             <property name="title">
-              <string>Selected Item Details</string>
-             </property>
             </widget>
            </item>
           </layout>
@@ -11575,6 +11558,11 @@ QLabel#world_map_view{background-image: url(:/icon/world_map);}</string>
             <horstretch>0</horstretch>
             <verstretch>0</verstretch>
            </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">::tab:hover{
+	background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));
+}</string>
           </property>
           <property name="tabPosition">
            <enum>QTabWidget::West</enum>
