@@ -69,6 +69,7 @@ void MateriaEditor::init_display()
     v_spacer = new QSpacerItem(0,0,QSizePolicy::Minimum,QSizePolicy::Expanding);
     //Special Properties Of Above Widgets
     sb_ap->setWrapping(1);
+    sb_ap->setAlignment(Qt::AlignCenter);
     lcd_max_ap->setNumDigits(8);
     lcd_max_ap->setSegmentStyle(QLCDNumber::Flat);
     btn_rm_materia->setIcon(QIcon::fromTheme("edit-delete",QIcon(QPixmap(quit_xpm))));
@@ -114,7 +115,7 @@ void MateriaEditor::init_display()
     //size policies
     combo_materia->setSizePolicy(QSizePolicy::MinimumExpanding,QSizePolicy::Fixed);
     combo_type->setSizePolicy(QSizePolicy::MinimumExpanding,QSizePolicy::Fixed);
-    sb_ap->setSizePolicy(QSizePolicy::MinimumExpanding,QSizePolicy::Fixed);
+    sb_ap->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Fixed);
     btn_rm_materia->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
     btn_copy_materia->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
     btn_paste_materia->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
@@ -131,13 +132,14 @@ void MateriaEditor::init_display()
     type_name_layout->addWidget(btn_rm_materia);
     type_name_layout->setContentsMargins(3,6,0,0);
 
-    QSpacerItem *spacer1 = new QSpacerItem(20,0,QSizePolicy::Minimum,QSizePolicy::Fixed);
+    QSpacerItem *spacer1 = new QSpacerItem(20,0,QSizePolicy::Preferred,QSizePolicy::Fixed);
     QHBoxLayout * ap_layout = new QHBoxLayout;
     ap_layout->addSpacerItem(spacer1);
     ap_layout->addWidget(sb_ap);
     ap_layout->addWidget(lbl_slash);
+    lbl_slash->setFixedWidth(this->font().pointSize());
     ap_layout->addWidget(lcd_max_ap);
-    ap_layout->setContentsMargins(3,0,0,0);
+    ap_layout->setContentsMargins(0,0,0,0);
     frm_ap->setLayout(ap_layout);
 
     frm_name_type->setLayout(type_name_layout);
@@ -192,15 +194,21 @@ void MateriaEditor::init_display()
     box_status_effects->setLayout(status_effect_layout);
 
     QHBoxLayout *skill_status_layout = new QHBoxLayout;
+    skill_status_layout->setContentsMargins(0,0,0,0);
     skill_status_layout->addWidget(box_skills);
     skill_status_layout->addWidget(box_status_effects);
+
+    frm_skill_status = new QFrame;
+    frm_skill_status->setContentsMargins(0,0,0,0);
+    frm_skill_status->setLayout(skill_status_layout);
+    frm_skill_status->setSizePolicy(QSizePolicy::Preferred,QSizePolicy::Preferred);
 
     QVBoxLayout *main_layout = new QVBoxLayout;
     main_layout->setContentsMargins(3,0,0,0);
     main_layout->setSpacing(3);
     main_layout->addWidget(frm_name_type);
     main_layout->addWidget(frm_ap_stars);
-    main_layout->addItem(skill_status_layout);
+    main_layout->addWidget(frm_skill_status);
     main_layout->addWidget(box_stats);
 
     QVBoxLayout *Final = new QVBoxLayout(this);
@@ -286,7 +294,10 @@ void MateriaEditor::setMateria(quint8 materia_id,qint32 materia_ap)
         if(_id != 0xFF){emit id_changed(0xFF);}
         _id=0xFF;
         sb_ap->setEnabled(0);
+        sb_ap->setValue(16777215);
         _current_ap = 16777215;//set since setAp ingores the 0xFF id.
+        box_status_effects->setHidden(true);
+        box_stats->setHidden(true);
     }
     this->setName();
     this->setAP(materia_ap);
@@ -424,27 +435,24 @@ void MateriaEditor::setStars()
 void MateriaEditor::setSkills()
 {
     list_skills->clear();
-    if(_id==0x11 || (_id ==0x30) || (_id==0x49) ||(_id==0x5A))
+    if( _id ==0x2C)
     {
-        list_skills->setHidden(false);
-        eskill_group->setHidden(true);
-        list_skills->addItem(_skill_list.at(0));
-        v_spacer->changeSize(0,0,QSizePolicy::Preferred,QSizePolicy::Expanding);
-    }
-    else if( _id ==0x2C)
-    {
+        box_skills->setHidden(false);
         list_skills->setHidden(true);
         eskill_group->setHidden(false);
+        frm_skill_status->adjustSize();
         v_spacer->changeSize(0,6,QSizePolicy::Preferred,QSizePolicy::Fixed);
     }
     else if(_id ==0xFF)
     {
+        box_skills->setHidden(true);
         list_skills->setHidden(true);
         eskill_group->setHidden(true);
         v_spacer->changeSize(0,0,QSizePolicy::Preferred,QSizePolicy::Expanding);
     }
     else
     {
+        box_skills->setHidden(false);
         list_skills->setHidden(false);
         eskill_group->setHidden(true);
         v_spacer->changeSize(0,0,QSizePolicy::Preferred,QSizePolicy::Expanding);
@@ -456,6 +464,7 @@ void MateriaEditor::setSkills()
             case 2:if(_skill_list.count()>1){list_skills->insertItem(0,_skill_list.at(1));}
             case 1:if(_skill_list.count()>0){list_skills->insertItem(0,_skill_list.at(0));}
         }
+        frm_skill_status->adjustSize();
     }
     this->layout()->update();
 }
@@ -486,14 +495,7 @@ void MateriaEditor::type_changed(int new_type)
     else{combo_materia->setCurrentIndex(-1);}
     combo_materia->blockSignals(0);
 }
-/*
-qint32 MateriaEditor::raw_data(void)
-{
-    qint32 materia;
-    materia = _id |= _current_ap <<8;
-    return materia;
-}
-*/
+
 void MateriaEditor::remove_materia(void){setMateria(0xFF,0xFFFFFF);}
 
 qint32 MateriaEditor::ap(void){return _current_ap;}

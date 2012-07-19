@@ -1741,3 +1741,48 @@ void FF7Save::setChocoCantMate(int s,int chocoSlot,bool cantMate)
     if(cantMate){slot[s].chocomated |= (1 << chocoSlot);}
     else{slot[s].chocomated &=~(1<< chocoSlot);}
 }
+quint32 FF7Save::Gil(int s){return slot[s].gil;}
+void FF7Save::setGil(int s,int gil)
+{
+    if(gil<0){gil =0;}
+    slot[s].gil = gil;
+}
+quint16 FF7Save::Gp (int s){return slot[s].gp;}
+void FF7Save::setGp(int s,int gp)
+{
+    if(gp <0){gp = 0;}
+    if(gp >65535){gp = 65535;}
+    slot[s].gp = gp;
+}
+quint16 FF7Save::Battles (int s){return slot[s].battles;}
+void FF7Save::setBattles(int s,int battles)
+{
+    if(battles <0){battles = 0;}
+    if(battles >65535){battles = 65535;}
+    slot[s].battles = battles;
+}
+quint16 FF7Save::Runs (int s){return slot[s].runs;}
+void FF7Save::setRuns(int s,int runs)
+{
+    if(runs <0){runs = 0;}
+    if(runs >65535){runs = 65535;}
+    slot[s].runs = runs;
+}
+quint8 FF7Save::Party(int s,int pos){return slot[s].party[pos];}
+void FF7Save::setParty(int s,int pos, int new_id)
+{
+    if(pos >=0 && pos <4)
+    {
+        if(new_id >=0 && new_id<12){slot[s].party[pos] = new_id;}
+        else{slot[s].party[pos] =0xFF;}
+    }
+}
+qint8 FF7Save::ChocoPen(int s, int pos){return slot[s].pennedchocos[pos];}
+void FF7Save::setChocoPen(int s, int pos, int type)
+{
+    if(pos<5)
+    {
+        if(type >=0 && type <9){slot[s].pennedchocos[pos]=type;}
+        else{slot[s].pennedchocos[pos]=0;}
+    }
+}

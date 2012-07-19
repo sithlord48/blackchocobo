@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>749</width>
-    <height>426</height>
+    <width>747</width>
+    <height>424</height>
    </rect>
   </property>
   <property name="contextMenuPolicy">
@@ -528,8 +528,8 @@
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
-           <property name="slider_red" stdset="0">
-            <bool>true</bool>
+           <property name="regular" stdset="0">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -566,8 +566,8 @@
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
-           <property name="slider_green" stdset="0">
-            <bool>true</bool>
+           <property name="regular" stdset="0">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -604,8 +604,8 @@
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
-           <property name="slider_blue" stdset="0">
-            <bool>true</bool>
+           <property name="regular" stdset="0">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -654,8 +654,8 @@
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
-           <property name="slider_red" stdset="0">
-            <bool>true</bool>
+           <property name="regular" stdset="0">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -692,8 +692,8 @@
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
-           <property name="slider_green" stdset="0">
-            <bool>true</bool>
+           <property name="regular" stdset="0">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -730,8 +730,8 @@
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
-           <property name="slider_blue" stdset="0">
-            <bool>true</bool>
+           <property name="regular" stdset="0">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -780,8 +780,8 @@
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
-           <property name="slider_red" stdset="0">
-            <bool>true</bool>
+           <property name="regular" stdset="0">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -818,8 +818,8 @@
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
-           <property name="slider_green" stdset="0">
-            <bool>true</bool>
+           <property name="regular" stdset="0">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -856,8 +856,8 @@
            <property name="orientation">
             <enum>Qt::Horizontal</enum>
            </property>
-           <property name="slider_blue" stdset="0">
-            <bool>true</bool>
+           <property name="regular" stdset="0">
+            <bool>false</bool>
            </property>
           </widget>
          </item>

@@ -21,7 +21,7 @@
 
 #define VER_MAJOR 1
 #define VER_MINOR 9
-#define VER_SP 65
+#define VER_SP 66
 
 #ifdef SVNVERSION
 #define VER_BUILDNR SVNVERSION

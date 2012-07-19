@@ -75,7 +75,7 @@ private:
     ItemPreview *item_preview;
     DialogPreview *dialog_preview;
     MateriaEditor *materia_editor;
-    //MateriaEditor *materia_editor_slot;
+    QSpacerItem *mat_spacer;
     CharEditor * char_editor;
     ChocoboEditor *chocobo_stable_1;
     ChocoboEditor *chocobo_stable_2;

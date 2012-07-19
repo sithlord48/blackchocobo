@@ -92,6 +92,18 @@ public:
   void setChocoName(int s,int choco_num,QString new_name);//write choco_num 's new_name to slot s
   QString location(int s);// return save location string
   void setLocation(int s, QString new_location);//set save location string to new_location
+  quint32 Gil(int s);
+  void setGil(int s,int gil);
+  quint16 Gp (int s);
+  void setGp(int s,int gp);
+  quint16 Battles (int s);
+  void setBattles(int s,int battles);
+  quint16 Runs (int s);
+  void setRuns(int s,int runs);
+  quint8 Party(int s,int pos);
+  void setParty(int s,int pos, int new_id);
+  qint8 ChocoPen(int s, int pos);
+  void setChocoPen(int s, int pos, int type);
 
   //Char Related Functions get/set all stats.
   FF7CHAR Char(int s,int char_num); //Return Full Char

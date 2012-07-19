@@ -380,6 +380,7 @@ void Options::on_slide_c3_b_valueChanged(int value)
     g_style.append(QString::number(255));                       g_style.append(",");
     g_style.append(QString::number(ui->slide_c3_b->value()));   g_style.append(",255));}");
 
+
     ui->slide_c3_r->setStyleSheet(r_style);
     ui->slide_c3_g->setStyleSheet(g_style);
     settings->setValue("color3_b",value);
