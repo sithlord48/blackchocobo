@@ -2469,6 +2469,7 @@ void CharEditor::weapon_slot_6_clicked(void)
     mslotsel = 5;
     emit mslotChanged(mslotsel);
     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
+    setSlotFrame();
 }
 void CharEditor::weapon_slot_7_clicked(void)
 {
