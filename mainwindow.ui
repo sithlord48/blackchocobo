@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>781</width>
-    <height>587</height>
+    <height>585</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -124,10 +124,10 @@ gridline-color: rgb(25, 25, 25);
 }
 /*WIDGET ITEMS (spinboxes, sliders, combos etc...)*/
 /*Sliders */
-QSlider#slide_limit:sub-page,QSlider#slide_battlespeed:sub-page,QSlider#slide_fieldmspeed:sub-page,QSlider#slide_battlemspeed:sub-page{
+QSlider#slider_limit:sub-page,QSlider#slide_battlespeed:sub-page,QSlider#slide_fieldmspeed:sub-page,QSlider#slide_battlemspeed:sub-page{
 background-color: qlineargradient(spread:pad, x1:0.472, y1:0.011, x2:0.483, y2:1, stop:0 rgba(186, 1, 87,192), stop:0.505682 rgba(209, 128, 173,192), stop:0.931818 rgba(209, 44, 136, 192));
  }
-QSlider#slide_limit::add-pageQSlider#slide_battlespeed:add-page,QSlider#slide_fieldmspeed:add-page,QSlider#slide_battlemspeed:add-page {
+QSlider#slider_limit::add-pageQSlider#slide_battlespeed:add-page,QSlider#slide_fieldmspeed:add-page,QSlider#slide_battlemspeed:add-page {
  background: qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(91, 91, 91, 255), stop:0.494318 rgba(122, 122, 122, 255), stop:1 rgba(106, 106, 106, 255));
  }
 QSlider[regular=&quot;false&quot;]{
@@ -2847,7 +2847,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
              <x>0</x>
              <y>0</y>
              <width>769</width>
-             <height>445</height>
+             <height>443</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -4920,7 +4920,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>350</width>
+                  <width>353</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -7404,7 +7404,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>754</width>
+             <width>757</width>
              <height>683</height>
             </rect>
            </property>

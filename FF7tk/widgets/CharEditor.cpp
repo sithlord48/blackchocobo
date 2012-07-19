@@ -50,10 +50,12 @@ void CharEditor::init_display()
     cb_fury=new QCheckBox(tr("Fury"));
     cb_sadness = new QCheckBox(tr("Sadness"));
     cb_front_row = new QCheckBox(tr("Front Row"));
+    cb_idChanger = new QCheckBox;
+    cb_idChanger->setHidden(true);
+
     lbl_id = new QLabel(tr("ID"));
     combo_id = new QComboBox;
     for(int i=0;i<11;i++){combo_id->addItem(Chars.Icon(i),Chars.defaultName(i));}
-
     lbl_base_hp = new QLabel(tr("Base HP"));
     lbl_base_hp_bonus = new QLabel;
     lbl_base_hp->setFixedWidth(this->font().pointSize()*6);
@@ -322,11 +324,17 @@ void CharEditor::init_display()
     id_layout->addWidget(lbl_id);
     id_layout->addWidget(combo_id);
 
+    combo_id_box = new QWidget;
+    combo_id_box->setLayout(id_layout);
+    combo_id_box->setHidden(true);
+
+
 
     QVBoxLayout *sadness_row_id_layout =new QVBoxLayout;
     sadness_row_id_layout->addWidget(frm_fury_sadness);
     sadness_row_id_layout->addWidget(cb_front_row);
-    sadness_row_id_layout->addLayout(id_layout);
+    sadness_row_id_layout->addWidget(cb_idChanger);
+    sadness_row_id_layout->addWidget(combo_id_box);
 
     QHBoxLayout *avatar_name_layout = new QHBoxLayout;
     avatar_name_layout->setContentsMargins(0,0,0,0);
@@ -1080,6 +1088,7 @@ void CharEditor::Slider_Limit_FF7_Style()
 
 void CharEditor::init_connections()
 {
+    connect(cb_idChanger,SIGNAL(toggled(bool)),this,SLOT(cb_idChanger_toggled(bool)));
     connect(sb_level,SIGNAL(valueChanged(int)),this,SLOT(Level_Changed(int)));
     connect(sb_curMp,SIGNAL(valueChanged(int)),this,SLOT(setCurMp(int)));
     connect(sb_curHp,SIGNAL(valueChanged(int)),this,SLOT(setCurHp(int)));
@@ -1178,29 +1187,34 @@ materia CharEditor::char_materia(int mat){return data.materias[mat];}
 
 void CharEditor::Exp_Changed(int exp)
 {
-    setExp(exp);
-    if(autolevel)
+    if(quint32(exp) != data.exp)
     {
-        if( (data.exp>=Chars.Total_Exp_For_Level(data.id,data.level)) || (data.exp<=Chars.Total_Exp_For_Level(data.id,data.level-1)) )
+        setExp(exp);
+        if(autolevel)
         {
-            int level=0;
-            int prev_level = data.level;
-            for (int i=level;i<99;i++)
+            if( (data.exp>=Chars.Total_Exp_For_Level(data.id,data.level)) || (data.exp<=Chars.Total_Exp_For_Level(data.id,data.level-1)) )
             {
-                if(data.exp>=Chars.Total_Exp_For_Level(data.id,i)){level++;}
-             }
-            sb_level->blockSignals(true);
-            sb_level->setValue(level);
-            setLevel(level);
-            sb_level->blockSignals(false);
-            level_up(prev_level);
+                int level=0;
+                int prev_level = data.level;
+                for (int i=level;i<99;i++)
+                {
+                    if(data.exp>=Chars.Total_Exp_For_Level(data.id,i)){level++;}
+                }
+                sb_level->blockSignals(true);
+                sb_level->setValue(level);
+                setLevel(level);
+                sb_level->blockSignals(false);
+                level_up(prev_level);
+            }
+            update_tnl_bar();
         }
-        update_tnl_bar();
     }
 }
 
 void CharEditor::Level_Changed(int level)
 {
+    if(level != data.level)
+    {
         if(autolevel)
         {
             int prev_level=data.level;
@@ -1214,6 +1228,7 @@ void CharEditor::Level_Changed(int level)
             update_tnl_bar();
         }
         else{setLevel(level);}
+    }
 }
 void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
 {
@@ -1254,6 +1269,16 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     sb_base_hp->setValue(data.baseHP);
     sb_base_mp->setValue(data.baseMP);
 
+    if(data.id ==6 || data.id ==7 ||data.id ==9 || data.id ==10 )
+    {
+        if(!debug){cb_idChanger->setHidden(false);}
+        else{cb_idChanger->setHidden(true);}
+        if(data.id ==6 || data.id == 9){cb_idChanger->setText(tr("Young Cloud"));}
+        if(data.id ==7 || data.id == 10){cb_idChanger->setText(tr("Sephiroth"));}
+        if(data.id == 6 || data.id == 7){cb_idChanger->setCheckState(Qt::Unchecked);}
+        if(data.id == 9 || data.id == 10){cb_idChanger->setCheckState(Qt::Checked);}
+    }
+    else{cb_idChanger->setHidden(true);}
     //Process the limits.
     list_limits->clear();
     list_limits->addItems(Chars.limits(data.id));
@@ -1289,9 +1314,9 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     lcd_0x36->display(data.z_4[2]);
     lcd_0x37->display(data.z_4[3]);
 
-    this->blockSignals(false);
-    update_materia_slots();
     calc_stats();
+    update_materia_slots();
+    this->blockSignals(false);
 }
 
 void CharEditor::setLevel(int level)
@@ -1809,8 +1834,12 @@ bool CharEditor::AutoStatCalc(void){return autostatcalc;}
 bool CharEditor::Debug(void){return debug;}
 void CharEditor::setDebug(bool new_debug)
 {
-debug = new_debug;
-unknown_box->setVisible(debug);
+    debug = new_debug;
+    unknown_box->setVisible(debug);
+    combo_id_box->setVisible(debug);
+    //if viewing cait/vincent/y.cloud or sephiroth hid the checkbox for simple id changing.
+    if(data.id == 6 ||data.id == 7 || data.id == 9 ||data.id == 10){cb_idChanger->setHidden(debug);}
+
 }
 void CharEditor::setEditable(bool edit)
 {
@@ -2552,6 +2581,13 @@ void CharEditor::setSlotFrame(void)
         case 15: armor_frm_8->setFrameShape(QFrame::Box);break;
     };
 
+}
+void CharEditor::cb_idChanger_toggled(bool checked)
+{
+    if(checked && data.id == 6){combo_id->setCurrentIndex(9);}
+    if(checked && data.id == 7){combo_id->setCurrentIndex(10);}
+    if(!checked && data.id ==9){combo_id->setCurrentIndex(6);}
+    if(!checked && data.id ==10){combo_id->setCurrentIndex(7);}
 }
 //void setFlags(int,int);
 //void setZ_4[4](int);

@@ -143,10 +143,12 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     materia_editor = new MateriaEditor;
     materia_editor->setStarsSize(48);
     QVBoxLayout *materia_editor_layout = new QVBoxLayout();
+    mat_spacer = new QSpacerItem(0,6,QSizePolicy::Preferred,QSizePolicy::MinimumExpanding);
     materia_editor_layout->setContentsMargins(0,0,0,0);
     materia_editor_layout->addWidget(materia_editor);
+    materia_editor_layout->addSpacerItem(mat_spacer);
     ui->group_materia->setLayout(materia_editor_layout);
-    ui->group_materia->setContentsMargins(0,6,0,6);
+    ui->group_materia->setContentsMargins(0,3,0,3);
 
     char_editor = new CharEditor;
     QHBoxLayout *char_editor_layout = new QHBoxLayout;
@@ -155,7 +157,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     char_editor_layout->addWidget(char_editor);
     ui->group_char_editor_box->setLayout(char_editor_layout);
 
-    char_editor->setStyleSheet(this->styleSheet());
     char_editor->Slider_Limit_FF7_Style();//sets style to ff7 limit bar style
     char_editor->setToolBoxStyle(QString("::tab:hover{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));}"));
 
@@ -1391,13 +1392,15 @@ void MainWindow::materiaupdate(void)
             ui->tbl_materia->setItem(mat,1,newItem);
         }
     }
+    if(ff7->partyMateriaId(s,j) == 0x2C){mat_spacer->changeSize(0,0,QSizePolicy::Fixed,QSizePolicy::Fixed);}
+    else{mat_spacer->changeSize(0,0,QSizePolicy::Fixed,QSizePolicy::MinimumExpanding);}
     materia_editor->setMateria(ff7->partyMateriaId(s,j),ff7->partyMateriaAp(s,j));
     ui->tbl_materia->setCurrentCell(j,1);//so that right side is set correctly.
     load=false;
 }
 void MainWindow::materia_ap_changed(qint32 ap)
 {if(!load){
-    if(ap>=materia_editor->MaxAP()){ap=16777215;}
+    //if(ap>=materia_editor->MaxAP()){ap=16777215;}
     ff7->setPartyMateria(s,ui->tbl_materia->currentRow(),ff7->partyMateriaId(s,ui->tbl_materia->currentRow()),ap);
     materiaupdate();
 }}
@@ -1504,7 +1507,9 @@ void MainWindow::guirefresh(bool newgame)
 {
     load=true;
     /*~~~~Check for SG type and ff7~~~~*/
-    if(!ff7->isFF7(s) && !ff7->region(s).isEmpty())
+    if((!ff7->isFF7(s) && !ff7->region(s).isEmpty()) ||
+      ((!ff7->isFF7(s))&& (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
+                       && (ff7->psx_block_type(s) !=0xA0)))
     {// NOT FF7
         errbox error(0,ff7,s);
         error.setStyleSheet(this->styleSheet());
@@ -1535,39 +1540,6 @@ void MainWindow::guirefresh(bool newgame)
         }
 
     }
-    /*if empty and a Virtual memcard format and frame not empty must be link or mid link skip block!*/
-    else if((!ff7->isFF7(s))
-                 && (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
-            && (ff7->psx_block_type(s) !=0xA0))
-        {
-            errbox error(0,ff7,s);
-            error.setStyleSheet(this->styleSheet());
-            switch(error.exec())
-            {
-
-             case 0://View Anyway..
-                QMessageBox::information(this,tr("Ingoring Non FF7 Save"),tr("Using Unknown Var Table To View Save"));
-                ui->tabWidget->setCurrentIndex(8);
-                ui->tabWidget_3->setCurrentIndex(1);
-                ui->tabWidget->setTabEnabled(8,1);
-                unknown_refresh(ui->combo_z_var->count()-1);
-                break;
-
-            case 1://Previous Clicked
-                s--;
-                guirefresh(0);
-                break;
-
-            case 2://Next Clicked
-                s++;
-                guirefresh(0);
-                break;
-
-            case 3://exported as psx
-                on_actionShow_Selection_Dialog_activated();
-                break;
-            }
-        }
     else
     {//IS FF7 Slot
 
@@ -1795,17 +1767,17 @@ void MainWindow::guirefresh(bool newgame)
             else{ ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);}
         }
         /*~~~~~party combo boxes (checking for empty slots)~~~*/
-        if (ff7->slot[s].party[0] >= 0x0C){ui->combo_party1->setCurrentIndex(12);}
-        else{ui->combo_party1->setCurrentIndex(ff7->slot[s].party[0]);}
-        if (ff7->slot[s].party[1] >= 0x0C){ui->combo_party2->setCurrentIndex(12);}
-        else{ui->combo_party2->setCurrentIndex(ff7->slot[s].party[1]);}
-        if (ff7->slot[s].party[2] >= 0x0C){ui->combo_party3->setCurrentIndex(12);}
-        else{ui->combo_party3->setCurrentIndex(ff7->slot[s].party[2]);}
+        if (ff7->Party(s,0) >= 0x0C){ui->combo_party1->setCurrentIndex(12);}
+        else{ui->combo_party1->setCurrentIndex(ff7->Party(s,0));}
+        if (ff7->Party(s,1) >= 0x0C){ui->combo_party2->setCurrentIndex(12);}
+        else{ui->combo_party2->setCurrentIndex(ff7->Party(s,1));}
+        if (ff7->Party(s,2) >= 0x0C){ui->combo_party3->setCurrentIndex(12);}
+        else{ui->combo_party3->setCurrentIndex(ff7->Party(s,2));}
 
-        ui->sb_gil->setValue(ff7->slot[s].gil);
-        ui->sb_gp->setValue(ff7->slot[s].gp);
-        ui->sb_runs->setValue(ff7->slot[s].runs);
-        ui->sb_battles->setValue(ff7->slot[s].battles);
+        ui->sb_gil->setValue(ff7->Gil(s));
+        ui->sb_gp->setValue(ff7->Gp(s));
+        ui->sb_runs->setValue(ff7->Runs(s));
+        ui->sb_battles->setValue(ff7->Battles(s));
         ui->sb_steps->setValue(ff7->slot[s].steps);
         ui->sb_love_barret->setValue(ff7->slot[s].love.barret);
         ui->sb_love_tifa->setValue(ff7->slot[s].love.tifa);
@@ -2071,10 +2043,10 @@ void MainWindow::chocobo_refresh()
     chocobo_stable_5->SetChocobo(ff7->chocobo(s,4),ff7->chocoName(s,4),ff7->chocoCantMate(s,4),ff7->chocoStamina(s,4));
     chocobo_stable_6->SetChocobo(ff7->chocobo(s,5),ff7->chocoName(s,5),ff7->chocoCantMate(s,5),ff7->chocoStamina(s,5));
     //set the penned chocobos
-    ui->combo_pen1->setCurrentIndex(ff7->slot[s].pennedchocos[0]);
-    ui->combo_pen2->setCurrentIndex(ff7->slot[s].pennedchocos[1]);
-    ui->combo_pen3->setCurrentIndex(ff7->slot[s].pennedchocos[2]);
-    ui->combo_pen4->setCurrentIndex(ff7->slot[s].pennedchocos[3]);
+    ui->combo_pen1->setCurrentIndex(ff7->ChocoPen(s,0));
+    ui->combo_pen2->setCurrentIndex(ff7->ChocoPen(s,1));
+    ui->combo_pen3->setCurrentIndex(ff7->ChocoPen(s,2));
+    ui->combo_pen4->setCurrentIndex(ff7->ChocoPen(s,3));
     load=false;
 }/*~~~~~~~~~~~End Chocobo Slots~~~~~~~~~*/
 
@@ -2153,63 +2125,91 @@ void MainWindow::testdata_refresh()
     unknown_refresh(ui->combo_z_var->currentIndex());
 }
 /*~~~~~~~~~Char Buttons.~~~~~~~~~~~*/
-void MainWindow::on_btn_cloud_clicked()     {curchar=0; char_editor->setChar(ff7->slot[s].chars[0],ff7->charName(s,0));ui->btn_cloud->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_barret_clicked()    {curchar=1; char_editor->setChar(ff7->slot[s].chars[1],ff7->charName(s,1));ui->btn_barret->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_tifa_clicked()      {curchar=2; char_editor->setChar(ff7->slot[s].chars[2],ff7->charName(s,2));ui->btn_tifa->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_aeris_clicked()     {curchar=3; char_editor->setChar(ff7->slot[s].chars[3],ff7->charName(s,3));ui->btn_aeris->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_red_clicked()       {curchar=4; char_editor->setChar(ff7->slot[s].chars[4],ff7->charName(s,4));ui->btn_red->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_yuffie_clicked()    {curchar=5; char_editor->setChar(ff7->slot[s].chars[5],ff7->charName(s,5));ui->btn_yuffie->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_cait_clicked()      {curchar=6; char_editor->setChar(ff7->slot[s].chars[6],ff7->charName(s,6));ui->btn_cait->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_vincent_clicked()   {curchar=7; char_editor->setChar(ff7->slot[s].chars[7],ff7->charName(s,7));ui->btn_vincent->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
-void MainWindow::on_btn_cid_clicked()       {curchar=8; char_editor->setChar(ff7->slot[s].chars[8],ff7->charName(s,8));ui->btn_cid->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_cloud_clicked()     {curchar=0; char_editor->setChar(ff7->Char(s,0),ff7->charName(s,0));ui->btn_cloud->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_barret_clicked()    {curchar=1; char_editor->setChar(ff7->Char(s,1),ff7->charName(s,1));ui->btn_barret->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_tifa_clicked()      {curchar=2; char_editor->setChar(ff7->Char(s,2),ff7->charName(s,2));ui->btn_tifa->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_aeris_clicked()     {curchar=3; char_editor->setChar(ff7->Char(s,3),ff7->charName(s,3));ui->btn_aeris->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_red_clicked()       {curchar=4; char_editor->setChar(ff7->Char(s,4),ff7->charName(s,4));ui->btn_red->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_yuffie_clicked()    {curchar=5; char_editor->setChar(ff7->Char(s,5),ff7->charName(s,5));ui->btn_yuffie->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_cait_clicked()      {curchar=6; char_editor->setChar(ff7->Char(s,6),ff7->charName(s,6));ui->btn_cait->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_vincent_clicked()   {curchar=7; char_editor->setChar(ff7->Char(s,7),ff7->charName(s,7));ui->btn_vincent->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
+void MainWindow::on_btn_cid_clicked()       {curchar=8; char_editor->setChar(ff7->Char(s,8),ff7->charName(s,8));ui->btn_cid->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_sb_gil_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].gil = value;   ff7->setDescGil(s,value);}}
-void MainWindow::on_sb_gp_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].gp = value;}}
-void MainWindow::on_sb_battles_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].battles = value;}}
-void MainWindow::on_sb_runs_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].runs = value;}}
+void MainWindow::on_sb_gil_valueChanged(int value){if(!load){file_modified(true); ff7->setGil(s,value); ff7->setDescGil(s,value);}}
+void MainWindow::on_sb_gp_valueChanged(int value){if(!load){file_modified(true); ff7->setGp(s,value);}}
+void MainWindow::on_sb_battles_valueChanged(int value){if(!load){file_modified(true); ff7->setBattles(s,value);}}
+void MainWindow::on_sb_runs_valueChanged(int value){if(!load){file_modified(true); ff7->setRuns(s,value);}}
 void MainWindow::on_combo_party1_currentIndexChanged(int index)
 {if(!load){file_modified(true);
     if(index == 0x0C) //empty char slot (index 12)
     {
-        ff7->slot[s].party[0] = 0xFF;
+        ff7->setParty(s,0,0xFF);
         //wipe all desc data if noone is there
-        ff7->setDescParty(s,0,ff7->slot[s].party[0]);
+        ff7->setDescParty(s,0,ff7->Party(s,0));
         ff7->setDescCurHP(s,0);
         ff7->setDescMaxHP(s,0);
         ff7->setDescCurMP(s,0);
         ff7->setDescMaxMP(s,0);
         ff7->setDescLevel(s,0);
         ff7->setDescName(s,QString(QByteArray(16,0xFF)));
-        //for(int n=0;n<16;n++)
-        //{
-        //    ff7->slot[s].desc.name[n]=0xFF;
-        //}
     }
     else
     {
-        ff7->slot[s].party[0] = index;
-        ff7->setDescParty(s,0,ff7->slot[s].party[0]);
-        ff7->setDescCurHP(s,ff7->charCurrentHp(s,ui->combo_party1->currentIndex()));
-        ff7->setDescMaxHP(s,ff7->charMaxHp(s,ui->combo_party1->currentIndex()));
-        ff7->setDescCurMP(s,ff7->charCurrentMp(s,ui->combo_party1->currentIndex()));
-        ff7->setDescMaxMP(s,ff7->charMaxMp(s,ui->combo_party1->currentIndex()));
-        ff7->setDescLevel(s,ff7->charLevel(s,ui->combo_party1->currentIndex()));
-        ff7->setDescName(s,ff7->charName(s,ui->combo_party1->currentIndex()));
+        ff7->setParty(s,0,index);
+        ff7->setDescParty(s,0,ff7->Party(s,0));
+        // IF ID >8 no char slot so for 9, 10, 11 Use slot 6,7,8 char data.
+        if(ff7->Party(s,0)== 9)
+        {
+            ff7->setDescCurHP(s,ff7->charCurrentHp(s,6));
+            ff7->setDescMaxHP(s,ff7->charMaxHp(s,6));
+            ff7->setDescCurMP(s,ff7->charCurrentMp(s,6));
+            ff7->setDescMaxMP(s,ff7->charMaxMp(s,6));
+            ff7->setDescLevel(s,ff7->charLevel(s,6));
+            ff7->setDescName(s,ff7->charName(s,6));
+        }
+        else if(ff7->Party(s,0)== 10)
+        {
+            ff7->setDescCurHP(s,ff7->charCurrentHp(s,7));
+            ff7->setDescMaxHP(s,ff7->charMaxHp(s,7));
+            ff7->setDescCurMP(s,ff7->charCurrentMp(s,7));
+            ff7->setDescMaxMP(s,ff7->charMaxMp(s,7));
+            ff7->setDescLevel(s,ff7->charLevel(s,7));
+            ff7->setDescName(s,ff7->charName(s,7));
+        }
+        else if(ff7->Party(s,0)== 11)
+        {
+            ff7->setDescCurHP(s,ff7->charCurrentHp(s,8));
+            ff7->setDescMaxHP(s,ff7->charMaxHp(s,8));
+            ff7->setDescCurMP(s,ff7->charCurrentMp(s,8));
+            ff7->setDescMaxMP(s,ff7->charMaxMp(s,8));
+            ff7->setDescLevel(s,ff7->charLevel(s,8));
+            ff7->setDescName(s,ff7->charName(s,8));
+        }
+        else
+        {
+            ff7->setDescCurHP(s,ff7->charCurrentHp(s,ff7->Party(s,0)));
+            ff7->setDescMaxHP(s,ff7->charMaxHp(s,ff7->Party(s,0)));
+            ff7->setDescCurMP(s,ff7->charCurrentMp(s,ff7->Party(s,0)));
+            ff7->setDescMaxMP(s,ff7->charMaxMp(s,ff7->Party(s,0)));
+            ff7->setDescLevel(s,ff7->charLevel(s,ff7->Party(s,0)));
+            ff7->setDescName(s,ff7->charName(s,ff7->Party(s,0)));
+        }
     }
 }}
 void MainWindow::on_combo_party2_currentIndexChanged(int index)
 {if(!load){file_modified(true);
-    if(index == 12){ff7->slot[s].party[1]= 0xFF;}
-    else{ff7->slot[s].party[1] = index;}
+    if(index == 12){ff7->setParty(s,1,0xFF);}
+    else{ff7->setParty(s,1,index);}
     //either way set the desc
-    ff7->setDescParty(s,1,ff7->slot[s].party[1]);
+    ff7->setDescParty(s,1,ff7->Party(s,1));
 }}
 void MainWindow::on_combo_party3_currentIndexChanged(int index)
 {if(!load){file_modified(true);
-    if(index ==12){ff7->slot[s].party[2] =0xFF;}
-    else{ff7->slot[s].party[2] = index;}
-    ff7->setDescParty(s,2,ff7->slot[s].party[2]);
+        if(index == 12){ff7->setParty(s,2,0xFF);}
+        else{ff7->setParty(s,2,index);}
+        //either way set the desc
+        ff7->setDescParty(s,2,ff7->Party(s,2));
 }}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~Chocobo Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
@@ -2218,70 +2218,20 @@ void MainWindow::on_combo_party3_currentIndexChanged(int index)
 void MainWindow::on_sb_stables_owned_valueChanged(int value)
 {
     if(!load){file_modified(true); ff7->slot[s].stables = value;}
+    ui->box_stable1->setEnabled(false);
+    ui->box_stable2->setEnabled(false);
+    ui->box_stable3->setEnabled(false);
+    ui->box_stable4->setEnabled(false);
+    ui->box_stable5->setEnabled(false);
+    ui->box_stable6->setEnabled(false);
     switch(value)
-    {
-        case 0:
-            ui->box_stable1->setEnabled(false);
-            ui->box_stable2->setEnabled(false);
-            ui->box_stable3->setEnabled(false);
-            ui->box_stable4->setEnabled(false);
-            ui->box_stable5->setEnabled(false);
-            ui->box_stable6->setEnabled(false);
-            break;
-
-        case 1:
-            ui->box_stable1->setEnabled(true);
-            ui->box_stable2->setEnabled(false);
-            ui->box_stable3->setEnabled(false);
-            ui->box_stable4->setEnabled(false);
-            ui->box_stable5->setEnabled(false);
-            ui->box_stable6->setEnabled(false);
-        break;
-
-        case 2:
-            ui->box_stable1->setEnabled(true);
-            ui->box_stable2->setEnabled(true);
-            ui->box_stable3->setEnabled(false);
-            ui->box_stable4->setEnabled(false);
-            ui->box_stable5->setEnabled(false);
-            ui->box_stable6->setEnabled(false);
-            break;
-
-        case 3:
-            ui->box_stable1->setEnabled(true);
-            ui->box_stable2->setEnabled(true);
-            ui->box_stable3->setEnabled(true);
-            ui->box_stable4->setEnabled(false);
-            ui->box_stable5->setEnabled(false);
-            ui->box_stable6->setEnabled(false);
-            break;
-
-        case 4:
-            ui->box_stable1->setEnabled(true);
-            ui->box_stable2->setEnabled(true);
-            ui->box_stable3->setEnabled(true);
-            ui->box_stable4->setEnabled(true);
-            ui->box_stable5->setEnabled(false);
-            ui->box_stable6->setEnabled(false);
-            break;
-
-        case 5:
-            ui->box_stable1->setEnabled(true);
-            ui->box_stable2->setEnabled(true);
-            ui->box_stable3->setEnabled(true);
-            ui->box_stable4->setEnabled(true);
-            ui->box_stable5->setEnabled(true);
-            ui->box_stable6->setEnabled(false);
-            break;
-
-        case 6:
-            ui->box_stable1->setEnabled(true);
-            ui->box_stable2->setEnabled(true);
-            ui->box_stable3->setEnabled(true);
-            ui->box_stable4->setEnabled(true);
-            ui->box_stable5->setEnabled(true);
-            ui->box_stable6->setEnabled(true);
-            break;
+    {//No Breaks On Purpose.
+        case 6:ui->box_stable6->setEnabled(true);
+        case 5:ui->box_stable5->setEnabled(true);
+        case 4:ui->box_stable4->setEnabled(true);
+        case 3:ui->box_stable3->setEnabled(true);
+        case 2:ui->box_stable2->setEnabled(true);
+        case 1:ui->box_stable1->setEnabled(true);
     }
 }
 /*~~~~~~~~~Occupied~~~~~~~~~~~*/
@@ -2419,10 +2369,10 @@ void MainWindow::c6_personalityChanged(quint8 value){if(!load){file_modified(tru
 void MainWindow::c6_mated_toggled(bool checked){if(!load){file_modified(true);ff7->setChocoCantMate(s,5,checked);}}
 
 //set data for pens outside
-void MainWindow::on_combo_pen1_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].pennedchocos[0]=index;}}
-void MainWindow::on_combo_pen2_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].pennedchocos[1]=index;}}
-void MainWindow::on_combo_pen3_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].pennedchocos[2]=index;}}
-void MainWindow::on_combo_pen4_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].pennedchocos[3]=index;}}
+void MainWindow::on_combo_pen1_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setChocoPen(s,0,index);}}
+void MainWindow::on_combo_pen2_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setChocoPen(s,1,index);}}
+void MainWindow::on_combo_pen3_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setChocoPen(s,2,index);}}
+void MainWindow::on_combo_pen4_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setChocoPen(s,3,index);}}
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~OTHERS TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_list_phs_chars_clicked(const QModelIndex &index)
@@ -2786,54 +2736,18 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_coordx->setValue(267);
         ui->sb_coordy->setValue(65429);
         ui->sb_coordz->setValue(15);
-// set up young cloud
-        ff7->slot[s].chars[6].id=9;
-        for(int i=0;i<12;i++){ff7->slot[s].chars[6].name[i] = ff7->slot[s].chars[0].name[i];}
-        ff7->slot[s].chars[6].level =ff7->slot[s].chars[0].level;
-        ff7->slot[s].chars[6].armor=ff7->slot[s].chars[0].armor;
-        ff7->slot[s].chars[6].accessory=ff7->slot[s].chars[0].accessory;
-        ff7->slot[s].chars[6].weapon= ff7->slot[s].chars[0].weapon;
-        ff7->slot[s].chars[6].baseHP=ff7->slot[s].chars[0].baseHP;
-        ff7->slot[s].chars[6].baseMP=ff7->slot[s].chars[0].baseMP;
-        ff7->slot[s].chars[6].exp=ff7->slot[s].chars[0].exp;
-        ff7->slot[s].chars[6].expNext=ff7->slot[s].chars[0].expNext;
-        ff7->slot[s].chars[6].curHP=ff7->slot[s].chars[0].curHP;
-        ff7->slot[s].chars[6].maxHP=ff7->slot[s].chars[0].maxHP;
-        ff7->slot[s].chars[6].curMP=ff7->slot[s].chars[0].curMP;
-        ff7->slot[s].chars[6].maxMP=ff7->slot[s].chars[0].maxMP;
-        ff7->slot[s].chars[6].dexterity=ff7->slot[s].chars[0].dexterity;
-        ff7->slot[s].chars[6].dexterity_bonus=ff7->slot[s].chars[0].dexterity_bonus;
-        ff7->slot[s].chars[6].strength=ff7->slot[s].chars[0].strength;
-        ff7->slot[s].chars[6].strength_bonus=ff7->slot[s].chars[0].strength_bonus;
-        ff7->slot[s].chars[6].magic=ff7->slot[s].chars[0].magic;
-        ff7->slot[s].chars[6].magic_bonus=ff7->slot[s].chars[0].magic_bonus;
-        ff7->slot[s].chars[6].spirit=ff7->slot[s].chars[0].spirit;
-        ff7->slot[s].chars[6].spirit_bonus=ff7->slot[s].chars[0].spirit_bonus;
-        ff7->slot[s].chars[6].vitality= ff7->slot[s].chars[0].vitality;
-        ff7->slot[s].chars[6].vitality_bonus= ff7->slot[s].chars[0].vitality_bonus;
-        ff7->slot[s].chars[6].luck= ff7->slot[s].chars[0].luck;
-        ff7->slot[s].chars[6].luck_bonus= ff7->slot[s].chars[0].luck_bonus;
-        ff7->slot[s].chars[6].flags[0]= ff7->slot[s].chars[0].flags[0];
-        ff7->slot[s].chars[6].flags[1]= ff7->slot[s].chars[0].flags[1];
-        ff7->slot[s].chars[6].flags[2]= ff7->slot[s].chars[0].flags[2];
-        ff7->slot[s].chars[6].kills=ff7->slot[s].chars[0].kills;
-        ff7->slot[s].chars[6].limitbar= ff7->slot[s].chars[0].limitbar;
-        ff7->slot[s].chars[6].limitlevel= ff7->slot[s].chars[0].limitlevel;
-        ff7->slot[s].chars[6].limits= ff7->slot[s].chars[0].limits;
-        for (int i=0;i<16;i++)
-        {
-            ff7->setCharMateria(s,6,i,ff7->charMateriaId(s,0,i),ff7->charMateriaAp(s,0,i));
-        }
-        ff7->slot[s].chars[6].timesused1 = ff7->slot[s].chars[0].timesused1;
-        ff7->slot[s].chars[6].timesused2 = ff7->slot[s].chars[0].timesused2;
-        ff7->slot[s].chars[6].timesused3 = ff7->slot[s].chars[0].timesused3;
-        for(int i=0;i<4;i++){ff7->slot[s].chars[6].z_4[i] = ff7->slot[s].chars[0].z_4[i];}
+        // set up young cloud, Copy Cloud Change ID to young Cloud
+        ff7->setChar(s,6,ff7->Char(s,0));
+        ff7->setCharID(s,6,9);
         //set up Sephiroth
-        ff7->slot[s].chars[7].id=10;
+        ff7->setCharID(s,7,10);
         if(ff7->region(s).contains("00700") || ff7->region(s).contains("01057"))
         {        ff7->setCharName(s,7,QString::fromUtf8("セフィロス"));
         }
         else{ff7->setCharName(s,7,QString::fromUtf8("Sephiroth"));}
+        set_char_buttons();
+        if(curchar == 6){char_editor->setChar(ff7->Char(s,6),ff7->charName(s,6));}
+        else if(curchar ==7){char_editor->setChar(ff7->Char(s,7),ff7->charName(s,7));}
         ui->label_replaynote->setText(tr("Setting This Will Copy Cloud as is to young cloud (caitsith's slot). sephiroth's stats will come directly from vincent."));
     }
 

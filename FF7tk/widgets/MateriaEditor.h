@@ -68,6 +68,7 @@ private:
     QSpinBox * sb_ap;
     QFrame *frm_name_type;
     QFrame *frm_ap;
+    QFrame *frm_skill_status;
     QPushButton *btn_star1;
     QPushButton *btn_star2;
     QPushButton *btn_star3;

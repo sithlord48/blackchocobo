@@ -173,11 +173,13 @@ public slots:
     void setSlideLimitStyleSheet(QString);
     void setToolBoxStyle(QString);
 
+
     //void setZ_4(int,int);
 
 private slots:
     void cb_fury_toggled(bool);
     void cb_sadness_toggled(bool);
+    void cb_idChanger_toggled(bool);
     void calc_limit_value(QModelIndex);
     void Level_Changed(int);// used for tracking growth of char
     void Exp_Changed(int);// used for tracking growth of char
@@ -355,6 +357,8 @@ private:
     QLCDNumber *lcd_0x35;
     QLCDNumber *lcd_0x36;
     QLCDNumber *lcd_0x37;
+    QCheckBox * cb_idChanger;
+    QWidget *combo_id_box;
 //Data
    FF7Char Chars;
    FF7Item Items;
