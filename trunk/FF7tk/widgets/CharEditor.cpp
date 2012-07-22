@@ -14,7 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "CharEditor.h"
-#include <QMessageBox>
+//#include <QMessageBox>
 CharEditor::CharEditor(QWidget *parent) :
     QWidget(parent)
 {
@@ -2573,11 +2573,9 @@ void CharEditor::cb_idChanger_toggled(bool checked)
     if(!checked && data.id ==9){combo_id->setCurrentIndex(6);}
     if(!checked && data.id ==10){combo_id->setCurrentIndex(7);}
 }
-//void setFlags(int,int);
-//void setZ_4[4](int);
-void CharEditor::MaxChar()
+void CharEditor::MaxStats()
 {
-    if(data.id ==9 || data.id ==10){return;}
+    if(data.id ==9 || data.id == 10){return;}
     else
     {
         sb_base_hp->setValue(32767);
@@ -2595,28 +2593,55 @@ void CharEditor::MaxChar()
         if(data.id ==6)
         {//Cait Sith
             sb_limit_level->setValue(2);
-            list_limits->item(0)->setCheckState(Qt::Checked);
-            list_limits->item(2)->setCheckState(Qt::Checked);
+            this->setLimits(0x09);
         }
         else if (data.id ==7)
         {
             sb_limit_level->setValue(4);
-            list_limits->item(0)->setCheckState(Qt::Checked);
-            list_limits->item(2)->setCheckState(Qt::Checked);
-            list_limits->item(4)->setCheckState(Qt::Checked);
-            list_limits->item(6)->setCheckState(Qt::Checked);
+            this->setLimits(0x249);
         }
         else
         {
             sb_limit_level->setValue(4);
-            for(int i=0;i<list_limits->count();i++)
-            {
-                list_limits->item(i)->setCheckState(Qt::Checked);
-            }
+            this->setLimits(0x2DB);
         }
+    }
+
+}
+void CharEditor::MaxEquip()
+{
+    if(data.id ==9 || data.id ==10){return;}
+    else
+    {
         //set up weapons/ armor
         weapon_selection->setCurrentIndex(Chars.num_weapons(data.id)-1);
         armor_selection->setCurrentIndex(29);
         accessory_selection->setCurrentIndex(18);
+
+        for(int i=15;i>0;i--)
+        {
+            quint8 new_id;
+            switch(i)
+            {
+                case 6: new_id = 0x0C; break;
+                case 5: new_id = 0x0B; break;
+                case 4: new_id = 0x0A; break;
+                case 3: new_id = 0x5A; break;
+                case 2: new_id = 0x2C; break;
+                case 1: new_id = 0x30; break;
+                case 0: new_id = 0x49; break;
+                default: new_id= 0xFF;break;
+            }
+            data.materias[i].id = new_id;
+            data.materias[i].ap[0] = 0xFF;
+            data.materias[i].ap[1] = 0xFF;
+            data.materias[i].ap[2] = 0xFF;
+            mslotsel = i;
+            this->mslotChanged(i);
+            this->matId_changed(new_id);
+            this->matAp_changed(0xFFFFFF);
+        }
+        update_materia_slots();
+        cb_front_row->setCheckState(Qt::Unchecked);
     }
 }

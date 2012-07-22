@@ -4183,7 +4183,13 @@ void MainWindow::on_tbl_itm_customContextMenuRequested(const QPoint &pos)
 
 void MainWindow::on_btn_maxChar_clicked()
 {
-    char_editor->MaxChar();
+    if(ff7->charID(s,curchar)==9 || ff7->charID(s,curchar) == 10 ||  _init){return;}//no char selected, sephiroth and young cloud.
+    int result = QMessageBox::question(this,tr("Black Chococbo"),tr("Replace %1's Materia and Equipment").arg(ff7->charName(s,curchar)),QMessageBox::Yes,QMessageBox::No);
+    switch(result)
+    {
+        case QMessageBox::Yes:char_editor->MaxStats();char_editor->MaxEquip();break;
+        case QMessageBox::No: char_editor->MaxStats();break;
+    }
     switch(curchar)
     {
         case 0: on_btn_cloud_clicked();break;

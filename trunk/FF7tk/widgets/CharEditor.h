@@ -50,7 +50,8 @@ public:
     bool Editable();
     bool Debug();
     void Slider_Limit_FF7_Style();
-    void MaxChar();
+    void MaxStats();
+    void MaxEquip();
     qint8 id();
     qint8 level();
     quint8 str();

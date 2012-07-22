@@ -140,10 +140,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Limits</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Equipment</source>
         <translation>Ausrüstungs</translation>
     </message>
@@ -356,12 +352,28 @@
         <translation>-Leer-</translation>
     </message>
     <message>
-        <source>Character Info</source>
-        <translation type="unfinished"></translation>
+        <source>0x34</source>
+        <translation type="unfinished">0x02 {0x?} {34?}</translation>
     </message>
     <message>
-        <source>Equipment / Materia</source>
-        <translation type="unfinished"></translation>
+        <source>0x35</source>
+        <translation type="unfinished">0x02 {0x?} {35?}</translation>
+    </message>
+    <message>
+        <source>0x36</source>
+        <translation type="unfinished">0x02 {0x?} {36?}</translation>
+    </message>
+    <message>
+        <source>0x37</source>
+        <translation type="unfinished">0x02 {0x?} {37?}</translation>
+    </message>
+    <message>
+        <source>Young Cloud</source>
+        <translation type="unfinished">Junger Cloud</translation>
+    </message>
+    <message>
+        <source>Sephiroth</source>
+        <translation type="unfinished">Sephiroth</translation>
     </message>
 </context>
 <context>
@@ -5687,7 +5699,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Selected Item Details</source>
-        <translation>Details der ausgewählten Gegenstände</translation>
+        <translation type="obsolete">Details der ausgewählten Gegenstände</translation>
     </message>
     <message>
         <source>-------BAD ID-------</source>
@@ -5770,6 +5782,18 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>Can Fight Mystery Ninja in Forests</source>
         <translation>Kann Geheimnis Ninja im Kampf Wälder</translation>
+    </message>
+    <message>
+        <source>Selected Character Max Stats/Weapons/Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Black Chococbo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replace %1&apos;s Materia and Equipment</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7834,7 +7858,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct,item/materia lists  and string conversion function. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation> Danke dir für die Freigabe des Jenova-Quellcodes. Dieses Programm benutzt veränderte Versionen von Jenova&apos;s Spielstand-Strukturen, Item-/Materia-Listen und die string-Konvertierungs-Funktion. Zugang zum Quellcode rettete viel Zeit in der Frühentwicklung.</translation>
+        <translation type="obsolete"> Danke dir für die Freigabe des Jenova-Quellcodes. Dieses Programm benutzt veränderte Versionen von Jenova&apos;s Spielstand-Strukturen, Item-/Materia-Listen und die string-Konvertierungs-Funktion. Zugang zum Quellcode rettete viel Zeit in der Frühentwicklung.</translation>
     </message>
     <message>
         <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
@@ -8151,6 +8175,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Character Editor Widget.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct And item/materia lists. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
