@@ -3,7 +3,8 @@
 FF7Char::FF7Char(QObject *parent):QObject(parent){}
 
 quint8 FF7Char::id(int who){return Chars[who]._id;}
-int FF7Char::weapon_offset(int who){return Chars[who]._starting_weapon_id;}
+int FF7Char::weapon_starting_id(int who){return Chars[who]._starting_weapon_id;}
+int FF7Char::weapon_offset(int who){return Chars[who]._weapon_offset;}
 int FF7Char::num_weapons(int who){return Chars[who]._num_weapons;}
 
 QImage FF7Char::Image(int who)

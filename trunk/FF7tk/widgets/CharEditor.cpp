@@ -14,7 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "CharEditor.h"
-//#include <QMessageBox>
+#include <QMessageBox>
 CharEditor::CharEditor(QWidget *parent) :
     QWidget(parent)
 {
@@ -1297,12 +1297,22 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     sb_uses_limit_3_1->setValue(data.timesused3); //Vegeta_Ss4: Fixed limit timeused GUI
     sb_limit_level->setValue(data.limitlevel); //Vegeta_Ss4: Fixed limitlevel GUI
 
+    QString String2 = QString("data.weapon:%1").arg(QString::number(data.weapon));
+    QMessageBox::information(this,"info",String2);
+
+
+    quint8 weapon = data.weapon;
     weapon_selection->clear();
-    for(int i = Chars.weapon_offset(data.id); i < Chars.num_weapons(data.id)+Chars.weapon_offset(data.id);i++)
+
+    for(int i = Chars.weapon_starting_id(data.id); i < Chars.num_weapons(data.id)+Chars.weapon_starting_id(data.id);i++)
     {
         weapon_selection->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));
     }
-    weapon_selection->setCurrentIndex(data.weapon);
+    QString String = QString("weapon:%1 \n data.weapon:%2\n Char Offset:%3").arg(QString::number(weapon),QString::number(data.weapon),QString::number(Chars.weapon_starting_id(data.id)));
+    QMessageBox::information(this,"info",String);
+
+    data.weapon = weapon;
+    weapon_selection->setCurrentIndex(data.weapon-Chars.weapon_offset(data.id));
 
     armor_selection->setCurrentIndex(data.armor);
 
@@ -1619,12 +1629,12 @@ void CharEditor::setLimitBar(int limitbar)
 }
 void CharEditor::setWeapon(int weapon)
 {
-    if(weapon == data.weapon){return;}
+    if(weapon == (data.weapon-Chars.weapon_offset(data.id))){return;}
     else
     {
-        if(weapon<0){data.weapon=0;}
+        if(weapon<0){data.weapon=0+Chars.weapon_offset(data.id);}
         else if(weapon>Chars.num_weapons(data.id)){data.weapon=Chars.num_weapons(data.id);}
-        else {data.weapon=weapon;}
+        else {data.weapon=weapon+Chars.weapon_offset(data.id);}
         emit weapon_changed(data.weapon);
         //Update the Widget.
         elemental_info();
@@ -1864,48 +1874,48 @@ void CharEditor::calc_stats(void)
     {
         //add equipment bonuses
         //Weapon
-        str_bonus +=Items.Stat_str(data.weapon + Chars.weapon_offset(data.id));
-        vit_bonus +=Items.Stat_vit(data.weapon + Chars.weapon_offset(data.id));
-        dex_bonus +=Items.Stat_dex(data.weapon + Chars.weapon_offset(data.id));
-        spi_bonus +=Items.Stat_spi(data.weapon + Chars.weapon_offset(data.id));
-        mag_bonus +=Items.Stat_mag(data.weapon + Chars.weapon_offset(data.id));
-        lck_bonus +=Items.Stat_lck(data.weapon + Chars.weapon_offset(data.id));
-        hp_bonus+=Items.Stat_hp(data.weapon + Chars.weapon_offset(data.id));
-        mp_bonus+=Items.Stat_mp(data.weapon + Chars.weapon_offset(data.id));
+        str_bonus +=Items.Stat_str(data.weapon + Chars.weapon_starting_id(data.id));
+        vit_bonus +=Items.Stat_vit(data.weapon + Chars.weapon_starting_id(data.id));
+        dex_bonus +=Items.Stat_dex(data.weapon + Chars.weapon_starting_id(data.id));
+        spi_bonus +=Items.Stat_spi(data.weapon + Chars.weapon_starting_id(data.id));
+        mag_bonus +=Items.Stat_mag(data.weapon + Chars.weapon_starting_id(data.id));
+        lck_bonus +=Items.Stat_lck(data.weapon + Chars.weapon_starting_id(data.id));
+        hp_bonus+=Items.Stat_hp(data.weapon + Chars.weapon_starting_id(data.id));
+        mp_bonus+=Items.Stat_mp(data.weapon + Chars.weapon_starting_id(data.id));
         QString title;
-        title.append(tr("AP:x%1").arg(QString::number(Items.m_growth_rate(data.weapon + Chars.weapon_offset(data.id)))));
+        title.append(tr("AP:x%1").arg(QString::number(Items.m_growth_rate(data.weapon + Chars.weapon_starting_id(data.id)))));
 
-        if(Items.Stat_str(data.weapon + Chars.weapon_offset(data.id))!=0)
+        if(Items.Stat_str(data.weapon + Chars.weapon_starting_id(data.id))!=0)
         {
-            title.append(tr(" Str:+%1").arg(QString::number(Items.Stat_str(data.weapon + Chars.weapon_offset(data.id)))));
+            title.append(tr(" Str:+%1").arg(QString::number(Items.Stat_str(data.weapon + Chars.weapon_starting_id(data.id)))));
         }
-        if(Items.Stat_vit(data.weapon + Chars.weapon_offset(data.id))!=0)
+        if(Items.Stat_vit(data.weapon + Chars.weapon_starting_id(data.id))!=0)
         {
-            title.append(tr(" Vit:+%1").arg(QString::number(Items.Stat_vit(data.weapon + Chars.weapon_offset(data.id)))));
+            title.append(tr(" Vit:+%1").arg(QString::number(Items.Stat_vit(data.weapon + Chars.weapon_starting_id(data.id)))));
         }
-        if(Items.Stat_dex(data.weapon + Chars.weapon_offset(data.id))!=0)
+        if(Items.Stat_dex(data.weapon + Chars.weapon_starting_id(data.id))!=0)
         {
-            title.append(tr(" Dex:+%1").arg(QString::number(Items.Stat_dex(data.weapon + Chars.weapon_offset(data.id)))));
+            title.append(tr(" Dex:+%1").arg(QString::number(Items.Stat_dex(data.weapon + Chars.weapon_starting_id(data.id)))));
         }
-        if(Items.Stat_spi(data.weapon + Chars.weapon_offset(data.id))!=0)
+        if(Items.Stat_spi(data.weapon + Chars.weapon_starting_id(data.id))!=0)
         {
-            title.append(tr(" Spi:+%1").arg(QString::number(Items.Stat_spi(data.weapon + Chars.weapon_offset(data.id)))));
+            title.append(tr(" Spi:+%1").arg(QString::number(Items.Stat_spi(data.weapon + Chars.weapon_starting_id(data.id)))));
         }
-        if(Items.Stat_mag(data.weapon + Chars.weapon_offset(data.id))!=0)
+        if(Items.Stat_mag(data.weapon + Chars.weapon_starting_id(data.id))!=0)
         {
-            title.append(tr(" Mag:+%1").arg(QString::number(Items.Stat_mag(data.weapon + Chars.weapon_offset(data.id)))));
+            title.append(tr(" Mag:+%1").arg(QString::number(Items.Stat_mag(data.weapon + Chars.weapon_starting_id(data.id)))));
         }
-        if(Items.Stat_lck(data.weapon + Chars.weapon_offset(data.id))!=0)
+        if(Items.Stat_lck(data.weapon + Chars.weapon_starting_id(data.id))!=0)
         {
-            title.append(tr(" Lck:+%1").arg(QString::number(Items.Stat_lck(data.weapon + Chars.weapon_offset(data.id)))));
+            title.append(tr(" Lck:+%1").arg(QString::number(Items.Stat_lck(data.weapon + Chars.weapon_starting_id(data.id)))));
         }
-        if(Items.Stat_hp(data.weapon + Chars.weapon_offset(data.id))!=0)
+        if(Items.Stat_hp(data.weapon + Chars.weapon_starting_id(data.id))!=0)
         {
-            title.append(tr(" Hp:+%1%").arg(QString::number(Items.Stat_hp(data.weapon + Chars.weapon_offset(data.id)))));
+            title.append(tr(" Hp:+%1%").arg(QString::number(Items.Stat_hp(data.weapon + Chars.weapon_starting_id(data.id)))));
         }
-        if(Items.Stat_mp(data.weapon + Chars.weapon_offset(data.id))!=0)
+        if(Items.Stat_mp(data.weapon + Chars.weapon_starting_id(data.id))!=0)
         {
-            title.append(tr(" Mp:+%1%").arg(QString::number(Items.Stat_mp(data.weapon + Chars.weapon_offset(data.id)))));
+            title.append(tr(" Mp:+%1%").arg(QString::number(Items.Stat_mp(data.weapon + Chars.weapon_starting_id(data.id)))));
         }
         weapon_materia_box->setTitle(title);
         //Armor
@@ -2152,7 +2162,7 @@ void CharEditor::elemental_info(void)
     {
         switch (r)
         {
-            case 0:item_id = data.weapon +Chars.weapon_offset(data.id); break;
+            case 0:item_id = data.weapon +Chars.weapon_starting_id(data.id); break;
             case 1:item_id = data.armor +256; break;
             case 2:item_id = data.accessory +288; break;
          }
@@ -2214,7 +2224,7 @@ void CharEditor::status_info(void)
     {
         switch (r)
         {
-            case 0:item_id = data.weapon +Chars.weapon_offset(data.id); break;
+            case 0:item_id = data.weapon +Chars.weapon_starting_id(data.id); break;
             case 1:item_id = data.armor +256; break;
             case 2:item_id = data.accessory +288; break;
          }
@@ -2338,9 +2348,9 @@ void CharEditor::update_materia_slots()
      if(data.materias[15].id!=0xFF){armor_slot_8->setToolTip(Materias.Name(data.materias[15].id));}else{armor_slot_8->setToolTip(QString(tr("-Empty-")));}
 
      //set up weapon
-     QString ap_rate =tr("AP:x%1").arg(Items.m_growth_rate(data.weapon +Chars.weapon_offset(data.id)));
+     QString ap_rate =tr("AP:x%1").arg(Items.m_growth_rate(data.weapon +Chars.weapon_starting_id(data.id)));
      weapon_materia_box->setTitle(ap_rate);
-     switch(Items.mslots(data.weapon +Chars.weapon_offset(data.id)))
+     switch(Items.mslots(data.weapon +Chars.weapon_starting_id(data.id)))
      {
         case 8:weapon_slot_8->setHidden(0);
         case 7:weapon_slot_7->setHidden(0);
@@ -2351,7 +2361,7 @@ void CharEditor::update_materia_slots()
         case 2:weapon_slot_2->setHidden(0);
         case 1:weapon_slot_1->setHidden(0);
      };
-     switch(Items.linked((data.weapon +Chars.weapon_offset(data.id))))
+     switch(Items.linked((data.weapon +Chars.weapon_starting_id(data.id))))
       {
         case 4: weapon_m_link_4->setStyleSheet(Items.Style_mlink());
         case 3: weapon_m_link_3->setStyleSheet(Items.Style_mlink());
