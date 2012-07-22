@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>781</width>
-    <height>585</height>
+    <height>587</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -740,6 +740,34 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
              <property name="margin">
               <number>0</number>
              </property>
+             <item row="0" column="2">
+              <widget class="QPushButton" name="btn_tifa">
+               <property name="sizePolicy">
+                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                 <horstretch>0</horstretch>
+                 <verstretch>0</verstretch>
+                </sizepolicy>
+               </property>
+               <property name="minimumSize">
+                <size>
+                 <width>101</width>
+                 <height>111</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>101</width>
+                 <height>111</height>
+                </size>
+               </property>
+               <property name="iconSize">
+                <size>
+                 <width>84</width>
+                 <height>96</height>
+                </size>
+               </property>
+              </widget>
+             </item>
              <item row="0" column="0">
               <widget class="QPushButton" name="btn_cloud">
                <property name="sizePolicy">
@@ -770,34 +798,6 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
              </item>
              <item row="0" column="1">
               <widget class="QPushButton" name="btn_barret">
-               <property name="sizePolicy">
-                <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                 <horstretch>0</horstretch>
-                 <verstretch>0</verstretch>
-                </sizepolicy>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>101</width>
-                 <height>111</height>
-                </size>
-               </property>
-               <property name="maximumSize">
-                <size>
-                 <width>101</width>
-                 <height>111</height>
-                </size>
-               </property>
-               <property name="iconSize">
-                <size>
-                 <width>84</width>
-                 <height>96</height>
-                </size>
-               </property>
-              </widget>
-             </item>
-             <item row="0" column="2">
-              <widget class="QPushButton" name="btn_tifa">
                <property name="sizePolicy">
                 <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
                  <horstretch>0</horstretch>
@@ -996,6 +996,13 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
               </widget>
              </item>
             </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QPushButton" name="btn_maxChar">
+            <property name="text">
+             <string>Selected Character Max Stats/Weapons/Materia</string>
+            </property>
            </widget>
           </item>
          </layout>
@@ -2846,8 +2853,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>769</width>
-             <height>443</height>
+             <width>720</width>
+             <height>275</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -4920,7 +4927,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>353</width>
+                  <width>333</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -7404,7 +7411,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>757</width>
+             <width>514</width>
              <height>683</height>
             </rect>
            </property>

@@ -224,8 +224,6 @@ void CharEditor::init_display()
     sb_limit_level = new QSpinBox;
     sb_limit_level->setFixedWidth(this->font().pointSize()*4);
 
-
-
     QHBoxLayout *limit_level_layout = new QHBoxLayout;
     limit_level_layout->setContentsMargins(0,0,0,0);
     limit_level_layout->addWidget(lbl_limit_level);
@@ -1288,7 +1286,7 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
         if(list_limits->item(i)->text()=="") {list_limits->item(i)->setHidden(true);}
         else{list_limits->item(i)->setHidden(false);}
 
-        if(data.limits & _limitbitarray[i]){list_limits->item(i)->setCheckState(Qt::Checked);} //Vegeta_Ss4: Fixed list_limits GUI
+        if(data.limits & (1<< _limitbitarray[i])){list_limits->item(i)->setCheckState(Qt::Checked);} //Vegeta_Ss4: Fixed list_limits GUI
         else{list_limits->item(i)->setCheckState(Qt::Unchecked);}
     }
 
@@ -1297,10 +1295,6 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     sb_uses_limit_3_1->setValue(data.timesused3); //Vegeta_Ss4: Fixed limit timeused GUI
     sb_limit_level->setValue(data.limitlevel); //Vegeta_Ss4: Fixed limitlevel GUI
 
-    QString String2 = QString("data.weapon:%1").arg(QString::number(data.weapon));
-    QMessageBox::information(this,"info",String2);
-
-
     quint8 weapon = data.weapon;
     weapon_selection->clear();
 
@@ -1308,11 +1302,10 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     {
         weapon_selection->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));
     }
-    QString String = QString("weapon:%1 \n data.weapon:%2\n Char Offset:%3").arg(QString::number(weapon),QString::number(data.weapon),QString::number(Chars.weapon_starting_id(data.id)));
-    QMessageBox::information(this,"info",String);
 
     data.weapon = weapon;
-    weapon_selection->setCurrentIndex(data.weapon-Chars.weapon_offset(data.id));
+    if(data.id !=10){weapon_selection->setCurrentIndex(data.weapon-Chars.weapon_offset(data.id));}
+    else{weapon_selection->blockSignals(true);weapon_selection->setCurrentIndex(0);weapon_selection->blockSignals(false);}
 
     armor_selection->setCurrentIndex(data.armor);
 
@@ -1632,8 +1625,8 @@ void CharEditor::setWeapon(int weapon)
     if(weapon == (data.weapon-Chars.weapon_offset(data.id))){return;}
     else
     {
-        if(weapon<0){data.weapon=0+Chars.weapon_offset(data.id);}
-        else if(weapon>Chars.num_weapons(data.id)){data.weapon=Chars.num_weapons(data.id);}
+        if(weapon<0){data.weapon=Chars.weapon_offset(data.id);}
+        else if(weapon>Chars.num_weapons(data.id)){data.weapon=Chars.num_weapons(data.id)+Chars.weapon_offset(data.id);}
         else {data.weapon=weapon+Chars.weapon_offset(data.id);}
         emit weapon_changed(data.weapon);
         //Update the Widget.
@@ -1813,8 +1806,8 @@ void CharEditor::calc_limit_value(QModelIndex item)
 {
     int row = item.row();
     int limits = data.limits;
-    if(list_limits->item(row)->checkState() ==Qt::Checked){limits |= (1<<row);}
-    else{limits &= ~(1<<row);}
+    if(list_limits->item(row)->checkState()==Qt::Checked){limits |= (1<< _limitbitarray[row]);}
+    else{limits &= ~(1<<_limitbitarray[row]);}
     setLimits(limits);
 }
 void CharEditor::setAutoLevel(bool ans){autolevel=ans;}//used to turn off auto char leveling
@@ -1874,48 +1867,48 @@ void CharEditor::calc_stats(void)
     {
         //add equipment bonuses
         //Weapon
-        str_bonus +=Items.Stat_str(data.weapon + Chars.weapon_starting_id(data.id));
-        vit_bonus +=Items.Stat_vit(data.weapon + Chars.weapon_starting_id(data.id));
-        dex_bonus +=Items.Stat_dex(data.weapon + Chars.weapon_starting_id(data.id));
-        spi_bonus +=Items.Stat_spi(data.weapon + Chars.weapon_starting_id(data.id));
-        mag_bonus +=Items.Stat_mag(data.weapon + Chars.weapon_starting_id(data.id));
-        lck_bonus +=Items.Stat_lck(data.weapon + Chars.weapon_starting_id(data.id));
-        hp_bonus+=Items.Stat_hp(data.weapon + Chars.weapon_starting_id(data.id));
-        mp_bonus+=Items.Stat_mp(data.weapon + Chars.weapon_starting_id(data.id));
+        str_bonus +=Items.Stat_str(data.weapon + 128 );
+        vit_bonus +=Items.Stat_vit(data.weapon + 128);
+        dex_bonus +=Items.Stat_dex(data.weapon + 128);
+        spi_bonus +=Items.Stat_spi(data.weapon + 128);
+        mag_bonus +=Items.Stat_mag(data.weapon + 128);
+        lck_bonus +=Items.Stat_lck(data.weapon + 128);
+        hp_bonus+=Items.Stat_hp(data.weapon + 128);
+        mp_bonus+=Items.Stat_mp(data.weapon + 128);
         QString title;
-        title.append(tr("AP:x%1").arg(QString::number(Items.m_growth_rate(data.weapon + Chars.weapon_starting_id(data.id)))));
+        title.append(tr("AP:x%1").arg(QString::number(Items.m_growth_rate(data.weapon + 128))));
 
-        if(Items.Stat_str(data.weapon + Chars.weapon_starting_id(data.id))!=0)
+        if(Items.Stat_str(data.weapon + 128)!=0)
         {
-            title.append(tr(" Str:+%1").arg(QString::number(Items.Stat_str(data.weapon + Chars.weapon_starting_id(data.id)))));
+            title.append(tr(" Str:+%1").arg(QString::number(Items.Stat_str(data.weapon + 128))));
         }
-        if(Items.Stat_vit(data.weapon + Chars.weapon_starting_id(data.id))!=0)
+        if(Items.Stat_vit(data.weapon + 128)!=0)
         {
-            title.append(tr(" Vit:+%1").arg(QString::number(Items.Stat_vit(data.weapon + Chars.weapon_starting_id(data.id)))));
+            title.append(tr(" Vit:+%1").arg(QString::number(Items.Stat_vit(data.weapon + 128))));
         }
-        if(Items.Stat_dex(data.weapon + Chars.weapon_starting_id(data.id))!=0)
+        if(Items.Stat_dex(data.weapon + 128)!=0)
         {
-            title.append(tr(" Dex:+%1").arg(QString::number(Items.Stat_dex(data.weapon + Chars.weapon_starting_id(data.id)))));
+            title.append(tr(" Dex:+%1").arg(QString::number(Items.Stat_dex(data.weapon + 128))));
         }
-        if(Items.Stat_spi(data.weapon + Chars.weapon_starting_id(data.id))!=0)
+        if(Items.Stat_spi(data.weapon + 128)!=0)
         {
-            title.append(tr(" Spi:+%1").arg(QString::number(Items.Stat_spi(data.weapon + Chars.weapon_starting_id(data.id)))));
+            title.append(tr(" Spi:+%1").arg(QString::number(Items.Stat_spi(data.weapon + 128))));
         }
-        if(Items.Stat_mag(data.weapon + Chars.weapon_starting_id(data.id))!=0)
+        if(Items.Stat_mag(data.weapon + 128)!=0)
         {
-            title.append(tr(" Mag:+%1").arg(QString::number(Items.Stat_mag(data.weapon + Chars.weapon_starting_id(data.id)))));
+            title.append(tr(" Mag:+%1").arg(QString::number(Items.Stat_mag(data.weapon + 128))));
         }
-        if(Items.Stat_lck(data.weapon + Chars.weapon_starting_id(data.id))!=0)
+        if(Items.Stat_lck(data.weapon + 128)!=0)
         {
-            title.append(tr(" Lck:+%1").arg(QString::number(Items.Stat_lck(data.weapon + Chars.weapon_starting_id(data.id)))));
+            title.append(tr(" Lck:+%1").arg(QString::number(Items.Stat_lck(data.weapon + 128))));
         }
-        if(Items.Stat_hp(data.weapon + Chars.weapon_starting_id(data.id))!=0)
+        if(Items.Stat_hp(data.weapon + 128)!=0)
         {
-            title.append(tr(" Hp:+%1%").arg(QString::number(Items.Stat_hp(data.weapon + Chars.weapon_starting_id(data.id)))));
+            title.append(tr(" Hp:+%1%").arg(QString::number(Items.Stat_hp(data.weapon + 128))));
         }
-        if(Items.Stat_mp(data.weapon + Chars.weapon_starting_id(data.id))!=0)
+        if(Items.Stat_mp(data.weapon + 128)!=0)
         {
-            title.append(tr(" Mp:+%1%").arg(QString::number(Items.Stat_mp(data.weapon + Chars.weapon_starting_id(data.id)))));
+            title.append(tr(" Mp:+%1%").arg(QString::number(Items.Stat_mp(data.weapon + 128))));
         }
         weapon_materia_box->setTitle(title);
         //Armor
@@ -2162,7 +2155,7 @@ void CharEditor::elemental_info(void)
     {
         switch (r)
         {
-            case 0:item_id = data.weapon +Chars.weapon_starting_id(data.id); break;
+            case 0:item_id = data.weapon +128; break;
             case 1:item_id = data.armor +256; break;
             case 2:item_id = data.accessory +288; break;
          }
@@ -2224,7 +2217,7 @@ void CharEditor::status_info(void)
     {
         switch (r)
         {
-            case 0:item_id = data.weapon +Chars.weapon_starting_id(data.id); break;
+            case 0:item_id = data.weapon +128; break;
             case 1:item_id = data.armor +256; break;
             case 2:item_id = data.accessory +288; break;
          }
@@ -2348,9 +2341,9 @@ void CharEditor::update_materia_slots()
      if(data.materias[15].id!=0xFF){armor_slot_8->setToolTip(Materias.Name(data.materias[15].id));}else{armor_slot_8->setToolTip(QString(tr("-Empty-")));}
 
      //set up weapon
-     QString ap_rate =tr("AP:x%1").arg(Items.m_growth_rate(data.weapon +Chars.weapon_starting_id(data.id)));
+     QString ap_rate =tr("AP:x%1").arg(Items.m_growth_rate(data.weapon +128));
      weapon_materia_box->setTitle(ap_rate);
-     switch(Items.mslots(data.weapon +Chars.weapon_starting_id(data.id)))
+     switch(Items.mslots(data.weapon +128))
      {
         case 8:weapon_slot_8->setHidden(0);
         case 7:weapon_slot_7->setHidden(0);
@@ -2361,7 +2354,7 @@ void CharEditor::update_materia_slots()
         case 2:weapon_slot_2->setHidden(0);
         case 1:weapon_slot_1->setHidden(0);
      };
-     switch(Items.linked((data.weapon +Chars.weapon_starting_id(data.id))))
+     switch(Items.linked((data.weapon +128)))
       {
         case 4: weapon_m_link_4->setStyleSheet(Items.Style_mlink());
         case 3: weapon_m_link_3->setStyleSheet(Items.Style_mlink());
@@ -2582,3 +2575,48 @@ void CharEditor::cb_idChanger_toggled(bool checked)
 }
 //void setFlags(int,int);
 //void setZ_4[4](int);
+void CharEditor::MaxChar()
+{
+    if(data.id ==9 || data.id ==10){return;}
+    else
+    {
+        sb_base_hp->setValue(32767);
+        sb_base_mp->setValue(32767);
+        sb_str->setValue(255);
+        sb_dex->setValue(255);
+        sb_spi->setValue(255);
+        sb_vit->setValue(255);
+        sb_mag->setValue(255);
+        sb_lck->setValue(255);
+        sb_curHp->setValue(data.maxHP);
+        sb_curMp->setValue(data.maxMP);
+
+        //do limits.
+        if(data.id ==6)
+        {//Cait Sith
+            sb_limit_level->setValue(2);
+            list_limits->item(0)->setCheckState(Qt::Checked);
+            list_limits->item(2)->setCheckState(Qt::Checked);
+        }
+        else if (data.id ==7)
+        {
+            sb_limit_level->setValue(4);
+            list_limits->item(0)->setCheckState(Qt::Checked);
+            list_limits->item(2)->setCheckState(Qt::Checked);
+            list_limits->item(4)->setCheckState(Qt::Checked);
+            list_limits->item(6)->setCheckState(Qt::Checked);
+        }
+        else
+        {
+            sb_limit_level->setValue(4);
+            for(int i=0;i<list_limits->count();i++)
+            {
+                list_limits->item(i)->setCheckState(Qt::Checked);
+            }
+        }
+        //set up weapons/ armor
+        weapon_selection->setCurrentIndex(Chars.num_weapons(data.id)-1);
+        armor_selection->setCurrentIndex(29);
+        accessory_selection->setCurrentIndex(18);
+    }
+}

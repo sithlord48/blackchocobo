@@ -4180,3 +4180,20 @@ void MainWindow::on_tbl_itm_customContextMenuRequested(const QPoint &pos)
     item_preview->setItem(ff7->itemId(s,ui->tbl_itm->currentRow()));
     item_preview->exec(ui->tbl_itm->mapToGlobal(pos));
 }
+
+void MainWindow::on_btn_maxChar_clicked()
+{
+    char_editor->MaxChar();
+    switch(curchar)
+    {
+        case 0: on_btn_cloud_clicked();break;
+        case 1: on_btn_barret_clicked();break;
+        case 2: on_btn_tifa_clicked();break;
+        case 3: on_btn_aeris_clicked();break;
+        case 4: on_btn_red_clicked();break;
+        case 5: on_btn_yuffie_clicked();break;
+        case 6: on_btn_cait_clicked();break;
+        case 7: on_btn_vincent_clicked();break;
+        case 8: on_btn_cid_clicked();break;
+    }
+}

@@ -209,5 +209,6 @@ static const quint8 _stat_gradent[30][8]=
 };
 
 
-static const quint16 _limitbitarray[0x07] = {0x01,0x02,/*0x04,*/0x08, 0x10,/*0x20,*/0x40,0x80, /*0x100,*/0x200};  //Vegeta_Ss4: Fixed list_limits GUI
+//static const quint16 _limitbitarray[0x07] = {0x01,0x02,/*0x04,*/0x08, 0x10,/*0x20,*/0x40,0x80, /*0x100,*/0x200};  //Vegeta_Ss4: Fixed list_limits GUI
+static const quint16 _limitbitarray[0x07] = {0,1,3,4,6,7,9};  //Sithlord48: Adjusted to bit offset so we can use for read/write
 #endif // FF7CHAR_H
