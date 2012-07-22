@@ -140,10 +140,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Limits</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Equipment</source>
         <translation type="unfinished"></translation>
     </message>
@@ -356,11 +352,27 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Character Info</source>
+        <source>0x34</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Equipment / Materia</source>
+        <source>0x35</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x36</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>0x37</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Young Cloud</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sephiroth</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4973,10 +4985,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Selected Item Details</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>-------BAD ID-------</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5055,6 +5063,18 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Can Fight Mystery Ninja in Forests</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Selected Character Max Stats/Weapons/Materia</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Black Chococbo</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replace %1&apos;s Materia and Equipment</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6994,10 +7014,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct,item/materia lists  and string conversion function. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7311,6 +7327,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Character Editor Widget.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct And item/materia lists. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
