@@ -129,7 +129,14 @@ signals:
     void expNext_changed(quint32);
 
 public slots:
-    void charMenu(QPoint);
+    void setAutoLevel(bool);
+    void setAutoStatCalc(bool);
+    void setEditable(bool);
+    void setDebug(bool);
+    void setSlideLimitStyleSheet(QString);
+    void setToolBoxStyle(QString);
+
+private slots:
     void setId(int);
     void setLevel(int);
     void setStr(int);
@@ -166,17 +173,6 @@ public slots:
     void setMaxMp(int);
     void setMaxHp(int);
     void setKills(int);
-    void setAutoLevel(bool);
-    void setAutoStatCalc(bool);
-    void setEditable(bool);
-    void setDebug(bool);
-    void setSlideLimitStyleSheet(QString);
-    void setToolBoxStyle(QString);
-
-
-    //void setZ_4(int,int);
-
-private slots:
     void cb_fury_toggled(bool);
     void cb_sadness_toggled(bool);
     void cb_idChanger_toggled(bool);

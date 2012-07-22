@@ -1724,6 +1724,7 @@ void CharEditor::setTimesused1(int timesused)
         if(timesused <0){data.timesused1=0;}
         else if(timesused>65535){data.timesused1=65535;}
         else{data.timesused1 = timesused;}
+        emit(timesused1_changed(data.timesused1));
     }
 }
 
@@ -1735,6 +1736,7 @@ void CharEditor::setTimesused2(int timesused)
         if(timesused <0){data.timesused2=0;}
         else if(timesused>65535){data.timesused2=65535;}
         else{data.timesused2 = timesused;}
+        emit(timesused2_changed(data.timesused2));
     }
 }
 void CharEditor::setTimesused3(int timesused)
@@ -1745,6 +1747,7 @@ void CharEditor::setTimesused3(int timesused)
         if(timesused <0){data.timesused3=0;}
         else if(timesused>65535){data.timesused3=65535;}
         else{data.timesused3 = timesused;}
+        emit(timesused3_changed(data.timesused3));
     }
 }
 void CharEditor::setBaseHp(int baseHp)
@@ -1804,29 +1807,6 @@ void CharEditor::calc_limit_value(QModelIndex item)
     else{limits &= ~(1<<row);}
     setLimits(limits);
 }
-
-void CharEditor::charMenu(QPoint pos)
-{//this has problems with out reading all chars. i.e no dynamic entries to the list.
-    QMenu menu(this);
-    QAction *sel;
-
-
-    menu.addAction(Chars.Icon(0),Chars.defaultName(0));
-    menu.addAction(Chars.Icon(1),Chars.defaultName(1));
-    menu.addAction(Chars.Icon(2),Chars.defaultName(2));
-    menu.addAction(Chars.Icon(3),Chars.defaultName(3));
-    menu.addAction(Chars.Icon(4),Chars.defaultName(4));
-    menu.addAction(Chars.Icon(5),Chars.defaultName(5));
-    menu.addAction(Chars.Icon(6),Chars.defaultName(6));
-    menu.addAction(Chars.Icon(7),Chars.defaultName(7));
-    menu.addAction(Chars.Icon(8),Chars.defaultName(8));
-
-    sel = menu.exec(lbl_avatar->mapToGlobal(pos));
-    if(sel==0){return;}
-
-    else{return;}
-}//End Of Map Context Menu
-
 void CharEditor::setAutoLevel(bool ans){autolevel=ans;}//used to turn off auto char leveling
 bool CharEditor::AutoLevel(void){return autolevel;}
 void CharEditor::setAutoStatCalc(bool ans){autostatcalc=ans;}
