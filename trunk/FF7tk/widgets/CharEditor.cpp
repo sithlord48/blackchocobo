@@ -628,6 +628,7 @@ void CharEditor::init_display()
     weapon_slot_1_layout->addWidget(weapon_slot_1);
 
     weapon_frm_1 = new QFrame;
+    weapon_frm_1->setFixedSize(32,32);
     weapon_frm_1->setFrameShape(QFrame::NoFrame);
     weapon_frm_1->setFrameShadow(QFrame::Plain);
     weapon_frm_1->setLayout(weapon_slot_1_layout);
@@ -646,6 +647,7 @@ void CharEditor::init_display()
     weapon_slot_2_layout->addWidget(weapon_slot_2);
 
     weapon_frm_2 = new QFrame;
+    weapon_frm_2->setFixedSize(32,32);
     weapon_frm_2->setFrameShape(QFrame::NoFrame);
     weapon_frm_2->setFrameShadow(QFrame::Plain);
     weapon_frm_2->setLayout(weapon_slot_2_layout);
@@ -670,6 +672,7 @@ void CharEditor::init_display()
     weapon_slot_3_layout->addWidget(weapon_slot_3);
 
     weapon_frm_3 = new QFrame;
+    weapon_frm_3->setFixedSize(32,32);
     weapon_frm_3->setFrameShape(QFrame::NoFrame);
     weapon_frm_3->setFrameShadow(QFrame::Plain);
     weapon_frm_3->setLayout(weapon_slot_3_layout);
@@ -692,6 +695,7 @@ void CharEditor::init_display()
     weapon_slot_4_layout->addWidget(weapon_slot_4);
 
     weapon_frm_4 = new QFrame;
+    weapon_frm_4->setFixedSize(32,32);
     weapon_frm_4->setFrameShape(QFrame::NoFrame);
     weapon_frm_4->setFrameShadow(QFrame::Plain);
     weapon_frm_4->setLayout(weapon_slot_4_layout);
@@ -716,6 +720,7 @@ void CharEditor::init_display()
     weapon_slot_5_layout->addWidget(weapon_slot_5);
 
     weapon_frm_5 = new QFrame;
+    weapon_frm_5->setFixedSize(32,32);
     weapon_frm_5->setFrameShape(QFrame::NoFrame);
     weapon_frm_5->setFrameShadow(QFrame::Plain);
     weapon_frm_5->setLayout(weapon_slot_5_layout);
@@ -737,6 +742,7 @@ void CharEditor::init_display()
     weapon_slot_6_layout->addWidget(weapon_slot_6);
 
     weapon_frm_6 = new QFrame;
+    weapon_frm_6->setFixedSize(32,32);
     weapon_frm_6->setFrameShape(QFrame::NoFrame);
     weapon_frm_6->setFrameShadow(QFrame::Plain);
     weapon_frm_6->setLayout(weapon_slot_6_layout);
@@ -761,6 +767,7 @@ void CharEditor::init_display()
     weapon_slot_7_layout->addWidget(weapon_slot_7);
 
     weapon_frm_7 = new QFrame;
+    weapon_frm_7->setFixedSize(32,32);
     weapon_frm_7->setFrameShape(QFrame::NoFrame);
     weapon_frm_7->setFrameShadow(QFrame::Plain);
     weapon_frm_7->setLayout(weapon_slot_7_layout);
@@ -782,6 +789,7 @@ void CharEditor::init_display()
     weapon_slot_8_layout->addWidget(weapon_slot_8);
 
     weapon_frm_8 = new QFrame;
+    weapon_frm_8->setFixedSize(32,32);
     weapon_frm_8->setFrameShape(QFrame::NoFrame);
     weapon_frm_8->setFrameShadow(QFrame::Plain);
     weapon_frm_8->setLayout(weapon_slot_8_layout);
@@ -831,6 +839,7 @@ void CharEditor::init_display()
     armor_slot_1_layout->addWidget(armor_slot_1);
 
     armor_frm_1 = new QFrame;
+    armor_frm_1->setFixedSize(32,32);
     armor_frm_1->setFrameShape(QFrame::NoFrame);
     armor_frm_1->setFrameShadow(QFrame::Plain);
     armor_frm_1->setLayout(armor_slot_1_layout);
@@ -849,6 +858,7 @@ void CharEditor::init_display()
     armor_slot_2_layout->addWidget(armor_slot_2);
 
     armor_frm_2 = new QFrame;
+    armor_frm_2->setFixedSize(32,32);
     armor_frm_2->setFrameShape(QFrame::NoFrame);
     armor_frm_2->setFrameShadow(QFrame::Plain);
     armor_frm_2->setLayout(armor_slot_2_layout);
@@ -873,6 +883,7 @@ void CharEditor::init_display()
     armor_slot_3_layout->addWidget(armor_slot_3);
 
     armor_frm_3 = new QFrame;
+    armor_frm_3->setFixedSize(32,32);
     armor_frm_3->setFrameShape(QFrame::NoFrame);
     armor_frm_3->setFrameShadow(QFrame::Plain);
     armor_frm_3->setLayout(armor_slot_3_layout);
@@ -895,6 +906,7 @@ void CharEditor::init_display()
     armor_slot_4_layout->addWidget(armor_slot_4);
 
     armor_frm_4 = new QFrame;
+    armor_frm_4->setFixedSize(32,32);
     armor_frm_4->setFrameShape(QFrame::NoFrame);
     armor_frm_4->setFrameShadow(QFrame::Plain);
     armor_frm_4->setLayout(armor_slot_4_layout);
@@ -919,6 +931,7 @@ void CharEditor::init_display()
     armor_slot_5_layout->addWidget(armor_slot_5);
 
     armor_frm_5 = new QFrame;
+    armor_frm_5->setFixedSize(32,32);
     armor_frm_5->setFrameShape(QFrame::NoFrame);
     armor_frm_5->setFrameShadow(QFrame::Plain);
     armor_frm_5->setLayout(armor_slot_5_layout);
@@ -940,6 +953,7 @@ void CharEditor::init_display()
     armor_slot_6_layout->addWidget(armor_slot_6);
 
     armor_frm_6 = new QFrame;
+    armor_frm_6->setFixedSize(32,32);
     armor_frm_6->setFrameShape(QFrame::NoFrame);
     armor_frm_6->setFrameShadow(QFrame::Plain);
     armor_frm_6->setLayout(armor_slot_6_layout);
@@ -964,6 +978,7 @@ void CharEditor::init_display()
     armor_slot_7_layout->addWidget(armor_slot_7);
 
     armor_frm_7 = new QFrame;
+    armor_frm_7->setFixedSize(32,32);
     armor_frm_7->setFrameShape(QFrame::NoFrame);
     armor_frm_7->setFrameShadow(QFrame::Plain);
     armor_frm_7->setLayout(armor_slot_7_layout);
@@ -985,6 +1000,7 @@ void CharEditor::init_display()
     armor_slot_8_layout->addWidget(armor_slot_8);
 
     armor_frm_8 = new QFrame;
+    armor_frm_8->setFixedSize(32,32);
     armor_frm_8->setFrameShape(QFrame::NoFrame);
     armor_frm_8->setFrameShadow(QFrame::Plain);
     armor_frm_8->setLayout(armor_slot_8_layout);
