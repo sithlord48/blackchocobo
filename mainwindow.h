@@ -619,5 +619,6 @@ private slots://try to keep these in the same order as the .cpp file
 
     void set_char_buttons();
     void on_tbl_itm_customContextMenuRequested(const QPoint &pos);
+    void on_btn_maxChar_clicked();
 };
 #endif // MAINWINDOW_H
