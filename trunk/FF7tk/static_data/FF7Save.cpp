@@ -1572,6 +1572,9 @@ FF7CHOCOBO FF7Save::chocobo(int s, int chocoSlot)
     else
     {
         FF7CHOCOBO bob;
+        QByteArray temp;
+        temp.fill(0,16);
+        memcpy(&bob,temp,16);
         return bob;
    }
 }
