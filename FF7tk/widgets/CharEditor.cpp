@@ -2634,7 +2634,7 @@ void CharEditor::MaxEquip()
         armor_selection->setCurrentIndex(29);
         accessory_selection->setCurrentIndex(18);
 
-        for(int i=15;i>0;i--)
+        for(int i=15;i>=0;i--)
         {
             quint8 new_id;
             switch(i)

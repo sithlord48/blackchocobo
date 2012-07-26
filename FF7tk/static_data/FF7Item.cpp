@@ -24,6 +24,7 @@ QString FF7Item::Name(int i){return qApp->translate("Items",Items[i].name.toAsci
 QString FF7Item::Desc(int i){return qApp->translate("Item_desc",Items[i].desc.toAscii());}
 qint8  FF7Item::Type(int i){return Items[i].type;}
 QImage FF7Item::Image(int i){return Items[i].image;}
+QIcon FF7Item::Icon(int i){return QIcon(QPixmap::fromImage(Image(i)));}
 qint8 FF7Item::mslots(int i){return Items[i].mslots;}
 qint8 FF7Item::linked(int i){return Items[i].linked;}
 qint8 FF7Item::m_growth_rate(int i){return Items[i].mgrowth;}
