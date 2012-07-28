@@ -498,6 +498,13 @@ quint16 FF7Save::itemEncode( quint16 id, quint8 qty )
     }
     return itemraw;
 }
+void FF7Save::setItem(int s,int item_num,quint16 rawitem)
+{
+    if(region(s).contains("SLPS-00700")){if(itemQty(rawitem)>99){if(itemId(rawitem) != 0x1FF){rawitem = itemEncode(itemId(rawitem),99);}}}
+    //Item Qty over 99 on SLPS-00700 Causes an Error Durring Battle and break all items.
+    //Above Is to Check for and fix, since im sure no one wants to lose all their items.
+    slot[s].items[item_num]=rawitem;
+}
 void FF7Save::setItem(int s,int item_num,quint16 new_id,quint8 new_qty)
 {
     if(region(s).contains("SLPS-00700")){if(new_qty>99){if(new_id != 0x1FF){new_qty = 99;}}}
@@ -506,6 +513,14 @@ void FF7Save::setItem(int s,int item_num,quint16 new_id,quint8 new_qty)
     slot[s].items[item_num]= itemEncode(new_id,new_qty);
 }
 
+quint16 FF7Save::item(int s,int item_num){return slot[s].items[item_num];}
+
+quint16 FF7Save::itemId(quint16 rawitem)
+{
+    quint16 item = itemDecode(rawitem);
+    quint16 id = (item & 0x1FF);
+    return id;
+}
 quint16 FF7Save::itemId(int s,int item_num)
 {
     quint16 item = itemDecode(slot[s].items[item_num]);
@@ -520,6 +535,13 @@ quint8 FF7Save::itemQty(int s,int item_num)
     return qty;
 }
 
+quint8 FF7Save::itemQty(quint16 rawitem)
+{
+    quint16 item = itemDecode(rawitem);
+    quint8 qty;
+    qty = (item & 0xFE00) >> 9;
+    return qty;
+}
 void FF7Save::fix_pc_bytemask(int s)
 {
     quint8 mask=0;

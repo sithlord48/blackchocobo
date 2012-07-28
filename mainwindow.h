@@ -40,6 +40,8 @@
 #include "FF7tk/widgets/SlotSelect.h"
 #include "FF7tk/widgets/ChocoboEditor.h"
 #include "FF7tk/widgets/CharEditor.h"
+#include "FF7tk/widgets/ItemSelector.h"
+
 namespace Ui {
     class MainWindow;
     }
@@ -77,6 +79,7 @@ private:
     MateriaEditor *materia_editor;
     QSpacerItem *mat_spacer;
     CharEditor * char_editor;
+    ItemSelector *item_selector;
     ChocoboEditor *chocobo_stable_1;
     ChocoboEditor *chocobo_stable_2;
     ChocoboEditor *chocobo_stable_3;
@@ -88,7 +91,7 @@ public slots:
 
 private slots://try to keep these in the same order as the .cpp file  
     /*Loading and Saving related Functions*/
-    int save_changes(void); //return 1 to accept and 0 to ingore the event
+   int save_changes(void); //return 1 to accept and 0 to ingore the event
     void on_actionNew_Window_triggered();
     void on_actionOpen_Save_File_activated();
     void on_actionReload_triggered();
@@ -494,9 +497,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_list_flyers_clicked(const QModelIndex &index);
     void on_list_keyitems_clicked(const QModelIndex &index);
     void on_tbl_itm_currentCellChanged(int row);
-    void on_combo_additem_currentIndexChanged(int);
-    void on_sb_addqty_valueChanged(int);
-    void on_clearItem_clicked();
+    void item_selector_changed(quint16);
     void on_btn_item_add_each_item_clicked();
     void on_btn_remove_all_items_clicked();
     void on_cb_bm_items_1_toggled(bool checked);
