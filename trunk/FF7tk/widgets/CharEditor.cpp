@@ -2162,7 +2162,7 @@ void CharEditor::update_tnl_bar(void)
 
 void CharEditor::elemental_info(void)
 {
-    int y=20;
+    int y=this->font().pointSize()*2;
     bool show=false;
     int item_id = 0;
     QString m_effect;
@@ -2214,8 +2214,8 @@ void CharEditor::elemental_info(void)
                         show=true; y+=18;
                  }
              }//end of for Loop
-            if(y<=100){elemental_box->setFixedSize(200,y);}
-            else{elemental_box->setFixedSize(200,100);}
+            if(elemental_effects->count()<6){elemental_box->setFixedSize(212,y);}
+            else{elemental_box->setFixedSize(212,(this->font().pointSize()*2)*5);}
         }//end of else.
     }//end of other loop.
    elemental_box->setVisible(show);
@@ -2224,7 +2224,7 @@ void CharEditor::elemental_info(void)
 
 void CharEditor::status_info(void)
 {
-    int y=20;
+    int y=this->font().pointSize()*2;
     bool show=false;
     int item_id =0;
     QString m_status;
@@ -2285,8 +2285,8 @@ void CharEditor::status_info(void)
                     show=true; y+=18;
                  }
             }//end of for Loop
-            if(y<=100){status_box->setFixedSize(200,y);}
-            else{status_box->setFixedSize(200,100);}
+            if(status_effects->count()<6){status_box->setFixedSize(212,y);}
+            else{status_box->setFixedSize(212,(this->font().pointSize()*2)*5);}
         }//end of else.
      }//end of loop
     status_box->setVisible(show);
