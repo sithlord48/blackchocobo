@@ -35,11 +35,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     buffer_materia.id=0xFF;
     for(int i=0;i<4;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
 
-    //set up comboboxes.
-     for (int i=0;i<320;i++){ui->combo_additem->addItem(QPixmap::fromImage(Items.Image(i)),Items.Name(i));}
-    //LATER//
-
-     //set up tables..
+    //set up tables..
     ui->tbl_location_field->setColumnWidth(0,147);
     ui->tbl_location_field->setColumnWidth(1,50);
     ui->tbl_location_field->setColumnWidth(2,50);
@@ -160,6 +156,13 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     char_editor->Slider_Limit_FF7_Style();//sets style to ff7 limit bar style
     char_editor->setToolBoxStyle(QString("::tab:hover{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));}"));
 
+    item_selector= new ItemSelector;
+    QHBoxLayout *item_selector_layout = new QHBoxLayout;
+    item_selector_layout->setSpacing(0);
+    item_selector_layout->setContentsMargins(0,0,0,0);
+    item_selector_layout->addWidget(item_selector);
+    ui->frm_item_selector->setLayout(item_selector_layout);
+
     chocobo_stable_1 = new ChocoboEditor;
     QVBoxLayout *stable_1_layout = new QVBoxLayout;
     stable_1_layout->setContentsMargins(0,0,0,0);
@@ -195,11 +198,14 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     stable_6_layout->setContentsMargins(0,0,0,0);
     stable_6_layout->addWidget(chocobo_stable_6);
     ui->box_stable6->setLayout(stable_6_layout);
+
+
     // Connect the unknown and unknown compare scrolling.
     connect( ui->tbl_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_compare_unknown->verticalScrollBar(), SLOT(setValue(int)) );
     connect(ui->action_show_debug,SIGNAL(toggled(bool)),char_editor,(SLOT(setDebug(bool))));
     connect( ui->tbl_compare_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_unknown->verticalScrollBar(), SLOT(setValue(int)) );
     //connnect the dialogpreview to the data functions.
+    connect(item_selector,SIGNAL(item_changed(quint16)),this,SLOT(item_selector_changed(quint16)));
     connect(dialog_preview,SIGNAL(UL_ColorChanged(QColor)),this,SLOT(set_UL_Color(QColor)));
     connect(dialog_preview,SIGNAL(UR_ColorChanged(QColor)),this,SLOT(set_UR_Color(QColor)));
     connect(dialog_preview,SIGNAL(LL_ColorChanged(QColor)),this,SLOT(set_LL_Color(QColor)));
@@ -1453,10 +1459,11 @@ void MainWindow::itemupdate()
             ui->tbl_itm->setItem(i,1,newItem);
 
         }
-    }
-    ui->tbl_itm->setCurrentCell(j,0);
 
+    }
     load=true;
+    ui->tbl_itm->setCurrentCell(j,0);
+    item_selector->setCurrentItem(ff7->item(s,ui->tbl_itm->currentRow()));
     //Field Items Picked up
     if((ff7->slot[s].z_38[48])&(1<<0)){ui->cb_bm_items_1->setChecked(1);}
     else{ui->cb_bm_items_1->setChecked(0);}
@@ -2452,11 +2459,6 @@ void MainWindow::on_cb_farm_items_6_toggled(bool checked){if(!load){file_modifie
 void MainWindow::on_cb_farm_items_7_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].z_11[3] |= (1<<6);}else{ff7->slot[s].z_11[3] &= ~(1<<6);}}ui->lcd_farm_items->display(ff7->slot[s].z_11[3]);}
 void MainWindow::on_cb_farm_items_8_toggled(bool checked){if(!load){file_modified(true); if(checked){ff7->slot[s].z_11[3] |= (1<<7);}else{ff7->slot[s].z_11[3] &= ~(1<<7);}}ui->lcd_farm_items->display(ff7->slot[s].z_11[3]);}
 
-void MainWindow::on_clearItem_clicked()
-{
-    ff7->setItem(s,ui->tbl_itm->currentRow(),0x1FF,0x7F);
-    itemupdate();
-}
 void MainWindow::on_btn_clear_keyitems_clicked()
 {if(!load){file_modified(true);}//used in other functions
     for(int i=0;i<51;i++)// be sure to clear key items first..
@@ -2464,39 +2466,17 @@ void MainWindow::on_btn_clear_keyitems_clicked()
         ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);
     }
 }
-
-void MainWindow::on_combo_additem_currentIndexChanged(int index)
+void MainWindow::item_selector_changed(quint16 rawitem)
 {if(!load){file_modified(true);
-    //Replaced by new item engine. (Vegeta_Ss4)
-    ff7->setItem(s,ui->tbl_itm->currentRow(),index,ui->sb_addqty->value());
-    //item_preview->setItem(index);
-    itemupdate();
+        ff7->setItem(s,ui->tbl_itm->currentRow(),rawitem);
+        itemupdate();
 }}
-
-void MainWindow::on_sb_addqty_valueChanged(int value)
-{if(!load){file_modified(true);
-    //Replaced by new item engine. (Vegeta_Ss4)
-    ff7->setItem(s,ui->tbl_itm->currentRow(),ui->combo_additem->currentIndex(),value);
-    itemupdate();
-}}
-
 void MainWindow::on_tbl_itm_currentCellChanged(int row)
-{
-    if(!load)
-    {//file_modified(true);
-        if (ff7->itemQty(s,row) == 0x7F && ff7->itemId(s,row) == 0x1FF){/*item_preview->setItem(-1);*/}
-        else
-        {
-            load=true;
-            //Replaced by new item engine. (Vegeta_Ss4)
-            ui->combo_additem->setCurrentIndex(ff7->itemId(s,row));
-            ui->sb_addqty->setValue(ff7->itemQty(s,row));
-            load=false;
-        }
-    }
-    //Replaced by new item engine. (Vegeta_Ss4)
-    //item_preview->setItem(ff7->itemId(s,row));
-}
+{if(!load){
+        load=true;
+        item_selector->setCurrentItem(ff7->itemId(s,row),ff7->itemQty(s,row));
+        load=false;
+}}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 

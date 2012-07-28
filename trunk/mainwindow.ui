@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>781</width>
-    <height>587</height>
+    <height>588</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -1035,9 +1035,15 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
         </property>
         <item>
          <widget class="QGroupBox" name="group_items">
+          <property name="minimumSize">
+           <size>
+            <width>270</width>
+            <height>0</height>
+           </size>
+          </property>
           <property name="maximumSize">
            <size>
-            <width>250</width>
+            <width>270</width>
             <height>16777215</height>
            </size>
           </property>
@@ -1102,7 +1108,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             </widget>
            </item>
            <item>
-            <widget class="QGroupBox" name="groupBox_21">
+            <widget class="QGroupBox" name="group_item_options">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
                <horstretch>0</horstretch>
@@ -1120,82 +1126,13 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                <number>3</number>
               </property>
               <item>
-               <widget class="QFrame" name="frame_1">
-                <layout class="QHBoxLayout" name="horizontalLayout_161">
-                 <property name="margin">
-                  <number>0</number>
-                 </property>
-                 <item>
-                  <widget class="QComboBox" name="combo_additem">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="minimumSize">
-                    <size>
-                     <width>0</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="maximumSize">
-                    <size>
-                     <width>16777215</width>
-                     <height>23</height>
-                    </size>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QSpinBox" name="sb_addqty">
-                   <property name="maximumSize">
-                    <size>
-                     <width>54</width>
-                     <height>24</height>
-                    </size>
-                   </property>
-                   <property name="wrapping">
-                    <bool>true</bool>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="minimum">
-                    <number>1</number>
-                   </property>
-                   <property name="maximum">
-                    <number>127</number>
-                   </property>
-                   <property name="value">
-                    <number>1</number>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QPushButton" name="clearItem">
-                   <property name="sizePolicy">
-                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                    </sizepolicy>
-                   </property>
-                   <property name="sizeIncrement">
-                    <size>
-                     <width>80</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="icon">
-                    <iconset resource="images.qrc">
-                     <normaloff>:/icon/quit</normaloff>:/icon/quit</iconset>
-                   </property>
-                   <property name="shortcut">
-                    <string>Del</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
+               <widget class="QFrame" name="frm_item_selector">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
                </widget>
               </item>
               <item>
@@ -2853,8 +2790,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>720</width>
-             <height>275</height>
+             <width>769</width>
+             <height>446</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -4927,7 +4864,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>333</width>
+                  <width>350</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -7411,7 +7348,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>514</width>
+             <width>754</width>
              <height>683</height>
             </rect>
            </property>

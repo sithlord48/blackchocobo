@@ -37,12 +37,14 @@ SOURCES += main.cpp \
     FF7tk/static_data/FF7Materia.cpp \
     FF7tk/static_data/FF7Location.cpp \
     FF7tk/static_data/FF7Item.cpp \
-    FF7tk/static_data/FF7Char.cpp
+    FF7tk/static_data/FF7Char.cpp \
+    FF7tk/widgets/ItemSelector.cpp
 HEADERS += mainwindow.h \
     about.h \
     options.h \
     errbox.h \
-    version.h
+    version.h \
+    FF7tk/widgets/ItemSelector.h
 
 FORMS += mainwindow.ui \
     about.ui \
