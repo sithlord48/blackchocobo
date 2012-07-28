@@ -1422,10 +1422,10 @@ void MainWindow::itemupdate()
     int j= ui->tbl_itm->currentRow();
     ui->tbl_itm->reset(); // just incase
     ui->tbl_itm->clearContents();
-    ui->tbl_itm->setColumnWidth(0,ui->tbl_itm->width()-54);
+    //if(_init){ui->tbl_itm->setColumnWidth(0,ui->tbl_itm->width()-54);}
+    ui->tbl_itm->setColumnWidth(0,212);
     ui->tbl_itm->setColumnWidth(1,32);
     ui->tbl_itm->setRowCount(320);
-
 
     for (int i=0;i<320;i++) // set up items
     {
