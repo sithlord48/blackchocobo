@@ -268,7 +268,7 @@ void ItemPreview::setItem(int id)
 }
 void ItemPreview::elemental_info(int id)
 {
-    int y=20;
+    int y=this->font().pointSize()*2;
     bool show=false;
     elemental_effects->clear();
     if(id<0 || id>319){/*invalid number*/}
@@ -306,11 +306,11 @@ void ItemPreview::elemental_info(int id)
             if(!effect.isNull())
             {
                 elemental_effects->addItem(effect);
-                show=true; y+=18;
+                show=true; y+=this->font().pointSize()*2;
             }
         }//end of for Loop
-        if(y<=100){elemental_box->setFixedSize(160,y);}
-        else{elemental_box->setFixedSize(160,100);}
+        if(elemental_effects->count()<6){elemental_box->setFixedSize(160,y);}
+        else{elemental_box->setFixedSize(160,(this->font().pointSize()*2)*5);}
    }//end of else
    elemental_box->setVisible(show);
    elemental_box->adjustSize();
@@ -318,7 +318,7 @@ void ItemPreview::elemental_info(int id)
 
 void ItemPreview::status_info(int id)
 {
-    int y=20;
+    int y=this->font().pointSize()*2;
     bool show=false;
     status_effects->clear();
     if(id<0 || id>319){/*invalid number*/}
@@ -368,8 +368,8 @@ void ItemPreview::status_info(int id)
                 show=true; y+=18;
             }
         }//end of for Loop
-        if(y<=100){status_box->setFixedSize(160,y);}
-        else{status_box->setFixedSize(160,100);}
+        if(status_effects->count()<6){status_box->setFixedSize(160,y);}
+        else{status_box->setFixedSize(160,(this->font().pointSize()*2)*5);}
     }//end of else
     status_box->setVisible(show);
     status_box->adjustSize();
