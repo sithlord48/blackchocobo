@@ -1417,7 +1417,7 @@ void MainWindow::materia_id_changed(qint8 id)
     materiaupdate();
 }}
 
-void MainWindow::itemupdate()
+void MainWindow::itemupdate(void)
 {
     //itemlist->setItems(ff7->items(s));
     load=true;
