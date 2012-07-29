@@ -1080,50 +1080,6 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             </widget>
            </item>
            <item>
-            <widget class="QTableWidget" name="tbl_itm">
-             <property name="minimumSize">
-              <size>
-               <width>245</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="contextMenuPolicy">
-              <enum>Qt::CustomContextMenu</enum>
-             </property>
-             <property name="editTriggers">
-              <set>QAbstractItemView::NoEditTriggers</set>
-             </property>
-             <property name="showDropIndicator" stdset="0">
-              <bool>false</bool>
-             </property>
-             <property name="selectionMode">
-              <enum>QAbstractItemView::SingleSelection</enum>
-             </property>
-             <property name="selectionBehavior">
-              <enum>QAbstractItemView::SelectRows</enum>
-             </property>
-             <property name="textElideMode">
-              <enum>Qt::ElideLeft</enum>
-             </property>
-             <attribute name="horizontalHeaderVisible">
-              <bool>false</bool>
-             </attribute>
-             <attribute name="verticalHeaderVisible">
-              <bool>false</bool>
-             </attribute>
-             <column>
-              <property name="text">
-               <string>Item</string>
-              </property>
-             </column>
-             <column>
-              <property name="text">
-               <string>Qty</string>
-              </property>
-             </column>
-            </widget>
-           </item>
-           <item>
             <widget class="QGroupBox" name="group_item_options">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -1132,7 +1088,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
               </sizepolicy>
              </property>
              <property name="title">
-              <string>Edit Selected Item Slot</string>
+              <string/>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_95">
               <property name="spacing">
@@ -1141,16 +1097,6 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
               <property name="margin">
                <number>3</number>
               </property>
-              <item>
-               <widget class="QFrame" name="frm_item_selector">
-                <property name="frameShape">
-                 <enum>QFrame::StyledPanel</enum>
-                </property>
-                <property name="frameShadow">
-                 <enum>QFrame::Raised</enum>
-                </property>
-               </widget>
-              </item>
               <item>
                <widget class="QPushButton" name="btn_item_add_each_item">
                 <property name="sizePolicy">

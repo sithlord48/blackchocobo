@@ -156,13 +156,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     char_editor->Slider_Limit_FF7_Style();//sets style to ff7 limit bar style
     char_editor->setToolBoxStyle(QString("::tab:hover{background-color:qlineargradient(spread:pad, x1:0.5, y1:0.00568182, x2:0.497, y2:1, stop:0 rgba(67, 67, 67, 128), stop:0.5 rgba(34, 201, 247, 128), stop:1 rgba(67, 67, 67, 128));}"));
 
-    item_selector= new ItemSelector;
-    QHBoxLayout *item_selector_layout = new QHBoxLayout;
-    item_selector_layout->setSpacing(0);
-    item_selector_layout->setContentsMargins(0,0,0,0);
-    item_selector_layout->addWidget(item_selector);
-    ui->frm_item_selector->setLayout(item_selector_layout);
-
     itemlist= new ItemList;
     QHBoxLayout *itemlist_layout = new QHBoxLayout;
     itemlist_layout->setSpacing(0);
@@ -212,7 +205,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     connect(ui->action_show_debug,SIGNAL(toggled(bool)),char_editor,(SLOT(setDebug(bool))));
     connect( ui->tbl_compare_unknown->verticalScrollBar(), SIGNAL(valueChanged(int)), ui->tbl_unknown->verticalScrollBar(), SLOT(setValue(int)) );
     //connnect the dialogpreview to the data functions.
-    connect(item_selector,SIGNAL(item_changed(quint16)),this,SLOT(item_selector_changed(quint16)));
+    //connect(item_selector,SIGNAL(item_changed(quint16)),this,SLOT(item_selector_changed(quint16)));
     connect(dialog_preview,SIGNAL(UL_ColorChanged(QColor)),this,SLOT(set_UL_Color(QColor)));
     connect(dialog_preview,SIGNAL(UR_ColorChanged(QColor)),this,SLOT(set_UR_Color(QColor)));
     connect(dialog_preview,SIGNAL(LL_ColorChanged(QColor)),this,SLOT(set_LL_Color(QColor)));
@@ -1426,54 +1419,8 @@ void MainWindow::materia_id_changed(qint8 id)
 
 void MainWindow::itemupdate()
 {
-    QTableWidgetItem *newItem;
-    int j= ui->tbl_itm->currentRow();
-    ui->tbl_itm->reset(); // just incase
-    ui->tbl_itm->clearContents();
-    //if(_init){ui->tbl_itm->setColumnWidth(0,ui->tbl_itm->width()-54);}
-    ui->tbl_itm->setColumnWidth(0,212);
-    ui->tbl_itm->setColumnWidth(1,32);
-    ui->tbl_itm->setRowCount(320);
-
-    for (int i=0;i<320;i++) // set up items
-    {
-        if (ff7->itemQty(s,i) == 0x7F && ff7->itemId(s,i) == 0x1FF)
-        {
-            newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
-            newItem->setToolTip("");
-            ui->tbl_itm->setItem(i,0,newItem);
-            ui->tbl_itm->setRowHeight(i,22);
-            newItem = new QTableWidgetItem("",0);
-            ui->tbl_itm->setItem(i,1,newItem);
-        }
-        else if(ff7->itemId(s,i) > 319)
-        {
-            newItem = new QTableWidgetItem(tr("-------BAD ID-------"),0);
-            newItem->setToolTip("");
-            ui->tbl_itm->setItem(i,0,newItem);
-            ui->tbl_itm->setRowHeight(i,22);
-            newItem = new QTableWidgetItem("",0);
-            ui->tbl_itm->setItem(i,1,newItem);
-        }
-        else
-        {
-            QString qty;
-            //Replaced by new item engine. (Vegeta_Ss4)
-            newItem = new QTableWidgetItem(QPixmap::fromImage(Items.Image(ff7->itemId(s,i))),Items.Name(ff7->itemId(s,i)),0);
-            newItem->setToolTip(Items.Desc(ff7->itemId(s,i)));
-            ui->tbl_itm->setItem(i,0, newItem);
-            ui->tbl_itm->setRowHeight(i,22);
-            newItem = new QTableWidgetItem(qty.setNum(ff7->itemQty(s,i)),0);
-            ui->tbl_itm->setItem(i,1,newItem);
-
-        }
-
-    }
-    itemlist->setItems(ff7->items(s));
-
+    //itemlist->setItems(ff7->items(s));
     load=true;
-    ui->tbl_itm->setCurrentCell(j,0);
-    item_selector->setCurrentItem(ff7->item(s,ui->tbl_itm->currentRow()));
     //Field Items Picked up
     if((ff7->slot[s].z_38[48])&(1<<0)){ui->cb_bm_items_1->setChecked(1);}
     else{ui->cb_bm_items_1->setChecked(0);}
@@ -1847,6 +1794,7 @@ void MainWindow::guirefresh(bool newgame)
         load=false;
         // all functions should set load on their own.
         /*~~~~~Call External Functions~~~~~~~*/
+        itemlist->setItems(ff7->items(s));
         setmenu(newgame);
         itemupdate();
         chocobo_refresh();
@@ -2476,18 +2424,6 @@ void MainWindow::on_btn_clear_keyitems_clicked()
         ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);
     }
 }
-void MainWindow::item_selector_changed(quint16 rawitem)
-{if(!load){file_modified(true);
-        ff7->setItem(s,ui->tbl_itm->currentRow(),rawitem);
-        itemupdate();
-}}
-void MainWindow::on_tbl_itm_currentCellChanged(int row)
-{if(!load){
-        load=true;
-        item_selector->setCurrentItem(ff7->itemId(s,row),ff7->itemQty(s,row));
-        load=false;
-}}
-
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~MATERIA TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 void MainWindow::on_tbl_materia_currentCellChanged(int row){if(!load){materia_editor->setMateria(ff7->partyMateriaId(s,row),ff7->partyMateriaAp(s,row));}}
@@ -2786,7 +2722,8 @@ void MainWindow::on_btn_remove_all_items_clicked() //used for testing
 {
     for(int i=0;i<320;i++){ff7->setItem(s,i,0x1FF,0x7F);}
     if(!load){file_modified(true); }
-    itemupdate();
+    itemlist->setItems(ff7->items(s));
+    //itemupdate();
 }
 
 void MainWindow::on_btn_remove_all_materia_clicked()
@@ -3376,7 +3313,8 @@ void MainWindow::on_btn_item_add_each_item_clicked()
         else{ff7->setItem(s,i,0x1FF,0x7F);}//exclude the test items
         if(i>296){ff7->setItem(s,i,0x1FF,0x7F);}//replace the shifted ones w/ empty slots
     }
-    guirefresh(0);
+    //guirefresh(0)
+            itemlist->setItems(ff7->items(s));
 }
 
 
@@ -4163,13 +4101,6 @@ void MainWindow::char_expNext_changed(quint32 value)
 }
 
 void MainWindow::char_mslot_changed(int slot){mslotsel=slot;}
-
-void MainWindow::on_tbl_itm_customContextMenuRequested(const QPoint &pos)
-{
-    item_preview = new ItemPreview(this);
-    item_preview->setItem(ff7->itemId(s,ui->tbl_itm->currentRow()));
-    item_preview->exec(ui->tbl_itm->mapToGlobal(pos));
-}
 
 void MainWindow::on_btn_maxChar_clicked()
 {
