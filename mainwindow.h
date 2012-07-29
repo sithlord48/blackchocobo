@@ -40,7 +40,7 @@
 #include "FF7tk/widgets/SlotSelect.h"
 #include "FF7tk/widgets/ChocoboEditor.h"
 #include "FF7tk/widgets/CharEditor.h"
-#include "FF7tk/widgets/ItemSelector.h"
+//#include "FF7tk/widgets/ItemSelector.h"
 #include "FF7tk/widgets/ItemList.h"
 
 namespace Ui {
@@ -80,7 +80,7 @@ private:
     MateriaEditor *materia_editor;
     QSpacerItem *mat_spacer;
     CharEditor * char_editor;
-    ItemSelector *item_selector;
+//    ItemSelector *item_selector;
     ItemList *itemlist;
     ChocoboEditor *chocobo_stable_1;
     ChocoboEditor *chocobo_stable_2;
@@ -498,8 +498,6 @@ private slots://try to keep these in the same order as the .cpp file
     //items tab
     void on_list_flyers_clicked(const QModelIndex &index);
     void on_list_keyitems_clicked(const QModelIndex &index);
-    void on_tbl_itm_currentCellChanged(int row);
-    void item_selector_changed(quint16);
     void on_btn_item_add_each_item_clicked();
     void on_btn_remove_all_items_clicked();
     void on_cb_bm_items_1_toggled(bool checked);
@@ -621,7 +619,6 @@ private slots://try to keep these in the same order as the .cpp file
     void set_LL_Color(QColor color);
 
     void set_char_buttons();
-    void on_tbl_itm_customContextMenuRequested(const QPoint &pos);
     void on_btn_maxChar_clicked();
 };
 #endif // MAINWINDOW_H

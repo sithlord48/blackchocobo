@@ -4,9 +4,11 @@
 #include <QWidget>
 #include <QTableWidget>
 #include <QHeaderView>
-#include "ItemSelector.h"
 #include <QSignalMapper>
 #include "ItemPreview.h"
+
+#include "ItemSelector.h"
+#include "../static_data/FF7Item.h"
 
 class ItemList : public QWidget
 {
@@ -21,9 +23,12 @@ public slots:
 
 private slots:
     void itemselector_changed(quint16);
-    //void customContextMenuRequested(const QPoint &pos);
+    void listSelectionChanged(int row,int colum,int prevRow,int prevColum);
+    void customContextMenuRequested(const QPoint &pos);
 private:
-    ItemSelector * itemselector[320];
+    void itemupdate();
+    FF7Item Items;
+    ItemSelector * itemselector;
     ItemPreview *item_preview;
     QTableWidget * tbl_item;
     QList<quint16> itemlist;

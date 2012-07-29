@@ -3,7 +3,10 @@
 //#include <QMessageBox>
 // include icon data
 #include "../static_data/icons/Common_Icons/quit.xpm"
-
+void ItemSelector::focusOutEvent(QFocusEvent *ev)
+{
+    this->close();
+}
 ItemSelector::ItemSelector(QWidget *parent) :
     QWidget(parent)
 {
