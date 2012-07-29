@@ -221,3 +221,4 @@ int ItemSelector::type_offset(int type)
     }
     return offset;
 }
+int ItemSelector::id(void){return (int)itemId(current_item);}

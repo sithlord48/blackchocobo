@@ -41,6 +41,7 @@
 #include "FF7tk/widgets/ChocoboEditor.h"
 #include "FF7tk/widgets/CharEditor.h"
 #include "FF7tk/widgets/ItemSelector.h"
+#include "FF7tk/widgets/ItemList.h"
 
 namespace Ui {
     class MainWindow;
@@ -80,6 +81,7 @@ private:
     QSpacerItem *mat_spacer;
     CharEditor * char_editor;
     ItemSelector *item_selector;
+    ItemList *itemlist;
     ChocoboEditor *chocobo_stable_1;
     ChocoboEditor *chocobo_stable_2;
     ChocoboEditor *chocobo_stable_3;
@@ -95,7 +97,7 @@ private slots://try to keep these in the same order as the .cpp file
     void on_actionNew_Window_triggered();
     void on_actionOpen_Save_File_activated();
     void on_actionReload_triggered();
-
+    void Items_Changed(QList<quint16>);
     void on_actionFrom_PSX_Slot_activated();
     void on_actionFrom_PSV_Slot_activated();
     void on_actionImport_char_triggered();
