@@ -81,7 +81,7 @@ void ItemSelector::btn_remove_clicked()
 void ItemSelector::setFilter(int type)
 {
     type++;//for hiding no filter.
-    int id = itemId(current_item);
+    int id = Items.itemId(current_item);
     combo_item->blockSignals(true);
     combo_item->clear();
     for(int i=0;i<320;i++)
@@ -96,21 +96,21 @@ void ItemSelector::setFilter(int type)
         else{combo_item->addItem(Items.Icon(i),Items.Name(i));}
     }
 
-    current_item = itemEncode(id,itemQty(current_item));
-    if(current_item != 0xFFFF){combo_item->setCurrentIndex(combo_item->findText(Items.Name(itemId(current_item))));}
+    current_item = Items.itemEncode(id,Items.itemQty(current_item));
+    if(current_item != 0xFFFF){combo_item->setCurrentIndex(combo_item->findText(Items.Name(Items.itemId(current_item))));}
     else{combo_item->setCurrentIndex(-1);}
     combo_item->blockSignals(false);
 }
 void ItemSelector::comboItem_changed(int index)
 {
     int offset = type_offset(combo_type->currentIndex()+1);
-    if(index+offset != itemId(current_item))
+    if(index+offset != Items.itemId(current_item))
     {
-        current_item=itemEncode(index+offset,itemQty(current_item));
+        current_item=Items.itemEncode(index+offset,Items.itemQty(current_item));
         if(current_item ==0xFFFF){sb_qty->setEnabled(false);}
         else{sb_qty->setEnabled(true);}
         emit(item_changed(current_item));
-    //    QMessageBox::information(this,"Id_Change",QString("Id:%1").arg(QString::number(itemId(current_item))));
+    //    QMessageBox::information(this,"Id_Change",QString("Id:%1").arg(QString::number(Items.itemId(current_item))));
     }
 }
 void ItemSelector::setCurrentItem(int id,int qty)
@@ -129,7 +129,7 @@ void ItemSelector::setCurrentItem(int id,int qty)
         combo_type->setCurrentIndex(Items.Type(id)-1);
         combo_item->setCurrentIndex(id-type_offset(Items.Type(id)));
         sb_qty->setValue(qty);
-        current_item=itemEncode(id,qty);
+        current_item=Items.itemEncode(id,qty);
     }
     this->blockSignals(false);
 
@@ -143,59 +143,22 @@ void ItemSelector::setCurrentItem(quint16 ff7item)
         btn_remove_clicked();
         btn_remove->blockSignals(false);
     }
-    combo_type->setCurrentIndex(Items.Type(itemId(ff7item))-1);
-    combo_item->setCurrentIndex(itemId(ff7item) - type_offset(Items.Type(itemId(ff7item))));
-    sb_qty->setValue(itemQty(ff7item));
+    combo_type->setCurrentIndex(Items.Type(Items.itemId(ff7item))-1);
+    combo_item->setCurrentIndex(Items.itemId(ff7item) - type_offset(Items.Type(Items.itemId(ff7item))));
+    sb_qty->setValue(Items.itemQty(ff7item));
     current_item=ff7item;
     this->blockSignals(false);
 }
 void ItemSelector::sb_qty_changed(int qty)
 {
-    if(qty != itemQty(current_item))
+    if(qty != Items.itemQty(current_item))
     {
-        current_item = itemEncode(itemId(current_item),qty);
+        current_item = Items.itemEncode(Items.itemId(current_item),qty);
         emit(item_changed(current_item));
-    //    QMessageBox::information(this,"Qty_Change",QString("Qty:%1").arg(QString::number(itemQty(current_item))));
+    //    QMessageBox::information(this,"Qty_Change",QString("Qty:%1").arg(QString::number(Items.itemQty(current_item))));
     }
-}
-quint16 ItemSelector::itemDecode( quint16 itemraw )
-{//see FF7Save::itemDecode for full comments
-    quint16 item;
-    int one = 1;
-    if (*(char *)&one){item = itemraw;}
-    else {item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);}
-    return item;
-}
-quint16 ItemSelector::itemEncode( quint16 id, quint8 qty )
-{//see FF7Save::itemEncode for full comments
-    quint16 item,itemraw;
-    int one = 1;
-    if (*(char *)&one)
-    {
-        item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
-        itemraw = item;
-    }
-    else
-    {
-        item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
-        itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
-    }
-    return itemraw;
 }
 
-quint16 ItemSelector::itemId(quint16 item)
-{
-    quint16 new_item = itemDecode(item);
-    quint16 id = (new_item & 0x1FF);
-    return id;
-}
-quint8 ItemSelector::itemQty(quint16 item)
-{
-    quint16 new_item = itemDecode(item);
-    quint8 qty;
-    qty = (new_item & 0xFE00) >> 9;
-    return qty;
-}
 
 int ItemSelector::type_offset(int type)
 {
@@ -219,4 +182,4 @@ int ItemSelector::type_offset(int type)
     }
     return offset;
 }
-int ItemSelector::id(void){return (int)itemId(current_item);}
+int ItemSelector::id(void){return (int)Items.itemId(current_item);}

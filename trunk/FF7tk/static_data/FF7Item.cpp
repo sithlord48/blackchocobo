@@ -90,3 +90,41 @@ QString FF7Item::Style_mlink(void)
     return QString("QLabel:enabled{background-color: qlineargradient(spread:reflect, x1:0.5, y1:0.5, x2:0.5, y2:0, stop:0.0225989 rgba(37, 37, 37, 255), stop:0.231638 rgba(153, 152, 152, 255), stop:0.389831 rgba(200, 195, 194, 255), stop:0.502825 rgba(138, 137, 137, 255), stop:0.621469 rgba(200, 195, 194, 255), stop:0.768362 rgba(138, 137, 137, 255), stop:0.932584 rgba(37, 37, 37, 0));}");
 }
 
+quint16 FF7Item::itemDecode( quint16 itemraw )
+{//see FF7Save::itemDecode for full comments
+    quint16 item;
+    int one = 1;
+    if (*(char *)&one){item = itemraw;}
+    else {item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);}
+    return item;
+}
+quint16 FF7Item::itemEncode( quint16 id, quint8 qty )
+{//see FF7Save::itemEncode for full comments
+    quint16 item,itemraw;
+    int one = 1;
+    if (*(char *)&one)
+    {
+        item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+        itemraw = item;
+    }
+    else
+    {
+        item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+        itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
+    }
+    return itemraw;
+}
+
+quint16 FF7Item::itemId(quint16 item)
+{
+    quint16 new_item = itemDecode(item);
+    quint16 id = (new_item & 0x1FF);
+    return id;
+}
+quint8 FF7Item::itemQty(quint16 item)
+{
+    quint16 new_item = itemDecode(item);
+    quint8 qty;
+    qty = (new_item & 0xFE00) >> 9;
+    return qty;
+}
