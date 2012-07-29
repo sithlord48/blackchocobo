@@ -1,4 +1,5 @@
 #include "ItemSelector.h"
+
 //#include <QMessageBox>
 // include icon data
 #include "../static_data/icons/Common_Icons/quit.xpm"
@@ -59,7 +60,7 @@ void ItemSelector::init_data()
     combo_type->addItem(Items.Icon(215),tr(""));
     combo_type->addItem(Items.Icon(229),tr(""));
     combo_type->addItem(Items.Icon(242),tr(""));
-
+    sb_qty->setEnabled(false);
     //Fill Combo_Item (all items type is 0 or no filter defalut)
     for(int i=0;i<320;i++){combo_item->addItem(Items.Icon(i),Items.Name(i));}
     combo_type->setCurrentIndex(-1);
@@ -71,21 +72,15 @@ void ItemSelector::btn_remove_clicked()
     combo_item->blockSignals(true);
     combo_type->setCurrentIndex(-1);
     combo_item->setCurrentIndex(-1);
+
     combo_item->blockSignals(false);
-
-    sb_qty->blockSignals(true);
-    sb_qty->setValue(-1);
-    sb_qty->clear();
-    sb_qty->blockSignals(false);
-
+    sb_qty->setEnabled(false);
     current_item = 0xFFFF;
     emit item_changed(current_item);
 }
 void ItemSelector::setFilter(int type)
 {
-    //for hiding no filter.
-    type++;
-
+    type++;//for hiding no filter.
     int id = itemId(current_item);
     combo_item->blockSignals(true);
     combo_item->clear();
@@ -100,6 +95,7 @@ void ItemSelector::setFilter(int type)
         }
         else{combo_item->addItem(Items.Icon(i),Items.Name(i));}
     }
+
     current_item = itemEncode(id,itemQty(current_item));
     if(current_item != 0xFFFF){combo_item->setCurrentIndex(combo_item->findText(Items.Name(itemId(current_item))));}
     else{combo_item->setCurrentIndex(-1);}
@@ -111,6 +107,8 @@ void ItemSelector::comboItem_changed(int index)
     if(index+offset != itemId(current_item))
     {
         current_item=itemEncode(index+offset,itemQty(current_item));
+        if(current_item ==0xFFFF){sb_qty->setEnabled(false);}
+        else{sb_qty->setEnabled(true);}
         emit(item_changed(current_item));
     //    QMessageBox::information(this,"Id_Change",QString("Id:%1").arg(QString::number(itemId(current_item))));
     }
