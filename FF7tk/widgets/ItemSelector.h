@@ -30,10 +30,6 @@ private:
     void init_connections();
     void init_data();
     int type_offset(int type);
-    quint16 itemDecode(quint16 itemraw);
-    quint16 itemEncode(quint16 id,quint8 qty);
-    quint16 itemId(quint16 item);
-    quint8 itemQty(quint16 item);
     FF7Item Items;
     QComboBox *combo_type;
     QComboBox *combo_item;

@@ -105,6 +105,10 @@ struct ITEM {
 class FF7Item
 {
   public:
+    quint16 itemDecode(quint16 itemraw);
+    quint16 itemEncode(quint16 id,quint8 qty);
+    quint16 itemId(quint16 item);
+    quint8 itemQty(quint16 item);
     QString Name(int);
     QString Desc(int);
     qint8 Type(int);
