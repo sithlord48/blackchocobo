@@ -14,10 +14,9 @@ class ItemSelector : public QWidget
     Q_OBJECT
 public:
     explicit ItemSelector(QWidget *parent = 0);
-    
+    int id();// current id
 signals:
-    void item_changed(quint16);//return id of selected item 0-320
-
+    void item_changed(quint16);//return selected rawitem
 public slots:
     void setCurrentItem(quint16 ff7item);
     void setCurrentItem(int id,int qty);

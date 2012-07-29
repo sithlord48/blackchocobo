@@ -1037,7 +1037,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
          <widget class="QGroupBox" name="group_items">
           <property name="minimumSize">
            <size>
-            <width>270</width>
+            <width>300</width>
             <height>0</height>
            </size>
           </property>
@@ -1063,6 +1063,22 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
            <property name="bottomMargin">
             <number>3</number>
            </property>
+           <item>
+            <widget class="QFrame" name="frm_itemlist">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+            </widget>
+           </item>
            <item>
             <widget class="QTableWidget" name="tbl_itm">
              <property name="minimumSize">
@@ -2790,8 +2806,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>769</width>
-             <height>446</height>
+             <width>720</width>
+             <height>275</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -4864,7 +4880,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>350</width>
+                  <width>333</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -7348,7 +7364,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>754</width>
+             <width>514</width>
              <height>683</height>
             </rect>
            </property>

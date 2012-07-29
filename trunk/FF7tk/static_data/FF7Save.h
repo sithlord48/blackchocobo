@@ -45,12 +45,13 @@ public:
   void importChar(int s,int char_num,QByteArray new_char);//import new_char to slot[s].char[char_num]
   //Set/Get Data Parts.
   quint16 item(int s,int item_num); //return raw ff7item
-
+  QList<quint16> items(int s);// return all items
   quint16 itemId(int s,int item_num);
   quint16 itemId(quint16 rawitem);
   quint8 itemQty(int s,int item_num);
   quint8 itemQty(quint16 rawitem);
 
+  void setItems(int s,QList<quint16> items);
   void setItem(int s,int item_num,quint16 rawitem);
   void setItem(int s,int item_num,quint16 new_id,quint8 new_qty);
 

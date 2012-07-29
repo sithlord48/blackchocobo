@@ -514,6 +514,13 @@ void FF7Save::setItem(int s,int item_num,quint16 new_id,quint8 new_qty)
 }
 
 quint16 FF7Save::item(int s,int item_num){return slot[s].items[item_num];}
+QList<quint16> FF7Save::items(int s)
+{
+    QList<quint16> item_list;
+    for (int i=0;i<320;i++){item_list.append(slot[s].items[i]);}
+    return item_list;
+}
+void FF7Save::setItems(int s,QList<quint16> items){for(int i=0;i<320;i++){slot[s].items[i]= items.at(i);}}
 
 quint16 FF7Save::itemId(quint16 rawitem)
 {

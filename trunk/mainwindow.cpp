@@ -163,6 +163,13 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     item_selector_layout->addWidget(item_selector);
     ui->frm_item_selector->setLayout(item_selector_layout);
 
+    itemlist= new ItemList;
+    QHBoxLayout *itemlist_layout = new QHBoxLayout;
+    itemlist_layout->setSpacing(0);
+    itemlist_layout->setContentsMargins(0,0,0,0);
+    itemlist_layout->addWidget(itemlist);
+    ui->frm_itemlist->setLayout(itemlist_layout);
+
     chocobo_stable_1 = new ChocoboEditor;
     QVBoxLayout *stable_1_layout = new QVBoxLayout;
     stable_1_layout->setContentsMargins(0,0,0,0);
@@ -211,6 +218,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     connect(dialog_preview,SIGNAL(LL_ColorChanged(QColor)),this,SLOT(set_LL_Color(QColor)));
     connect(dialog_preview,SIGNAL(LR_ColorChanged(QColor)),this,SLOT(set_LR_Color(QColor)));
 
+    connect(itemlist,SIGNAL(itemsChanged(QList<quint16>)),this,SLOT(Items_Changed(QList<quint16>)));
     connect(materia_editor,SIGNAL(ap_changed(qint32)),this,SLOT(materia_ap_changed(qint32)));
     connect(materia_editor,SIGNAL(id_changed(qint8)),this,SLOT(materia_id_changed(qint8)));
 
@@ -1461,6 +1469,8 @@ void MainWindow::itemupdate()
         }
 
     }
+    itemlist->setItems(ff7->items(s));
+
     load=true;
     ui->tbl_itm->setCurrentCell(j,0);
     item_selector->setCurrentItem(ff7->item(s,ui->tbl_itm->currentRow()));
@@ -4182,4 +4192,9 @@ void MainWindow::on_btn_maxChar_clicked()
         case 7: on_btn_vincent_clicked();break;
         case 8: on_btn_cid_clicked();break;
     }
+}
+void MainWindow::Items_Changed(QList<quint16> items)
+{
+    ff7->setItems(s,items);
+    itemupdate();
 }
