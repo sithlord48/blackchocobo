@@ -10,7 +10,7 @@
 #include "ItemSelector.h"
 #include "../static_data/FF7Item.h"
 
-class ItemList : public QWidget
+class ItemList : public QTableWidget
 {
     Q_OBJECT
 public:
@@ -20,17 +20,18 @@ signals:
     void itemsChanged(QList<quint16> items);
 public slots:
     void setItems(QList<quint16> items);
-
+protected:
+    void HelpEvent(QObject *,QEvent *);
 private slots:
-    void itemselector_changed(quint16);
     void listSelectionChanged(int row,int colum,int prevRow,int prevColum);
+    void itemselector_changed(quint16);
     void customContextMenuRequested(const QPoint &pos);
 private:
     void itemupdate();
     FF7Item Items;
     ItemSelector * itemselector;
     ItemPreview *item_preview;
-    QTableWidget * tbl_item;
+    //QTableWidget * tbl_item;
     QList<quint16> itemlist;
     bool createdSelector;
 };
