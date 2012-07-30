@@ -875,6 +875,17 @@
     </message>
 </context>
 <context>
+    <name>ItemList</name>
+    <message>
+        <source>-------EMPTY--------</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>-------BAD ID-------</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
     <name>ItemPreview</name>
     <message>
         <source>Elemental Effects</source>
@@ -1062,6 +1073,13 @@
     </message>
     <message>
         <source>D.Sentence</source>
+        <translation type="unfinished"></translation>
+    </message>
+</context>
+<context>
+    <name>ItemSelector</name>
+    <message>
+        <source>Empty Item</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3109,10 +3127,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Qty</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Key Items</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4215,10 +4229,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>-------EMPTY--------</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Show Battle Target Labels</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4782,10 +4792,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Edit Selected Item Slot</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Table Entries are Editable</source>
@@ -4805,10 +4811,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>In this region the game runs 50hz</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Del</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4982,10 +4984,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Gold chocobo</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>-------BAD ID-------</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -7331,6 +7329,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct And item/materia lists. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: ItemList Widget;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

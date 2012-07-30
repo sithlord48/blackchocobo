@@ -42,17 +42,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     ui->tbl_location_field->setColumnWidth(3,50);
     ui->tbl_location_field->setColumnWidth(4,50);
 
-    //Item Preview Stuff...
-
-    //item_preview = new ItemPreview();
-    //QVBoxLayout *item_preview_layout= new QVBoxLayout();
-    //item_preview->setContentsMargins(0,0,0,0);
-    //item_preview_layout->setContentsMargins(0,0,0,0);
-    //item_preview_layout->addWidget(item_preview);
-    //ui->box_item_preview->setLayout(item_preview_layout);
-    //ui->box_item_preview->setContentsMargins(0,0,0,0);
-    //item_preview->setItem(-1);
-
     QTableWidgetItem *newItem;
     FF7Location Locations;
     ui->tbl_location_field->setRowCount(Locations.len());

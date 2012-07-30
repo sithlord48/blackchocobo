@@ -1,11 +1,12 @@
 #include "ItemList.h"
+#include <QToolTip>
 //#include <QMessageBox>
 ItemList::ItemList(QWidget *parent) :
     QWidget(parent)
 {
     QString style ="QTableWidget{selection-background-color:rgba(0, 0,0,0);}";
-            //selection-color: rgba(255,255,255,0);"
-    tbl_item = new QTableWidget(320,2);
+    tbl_item = new QTableWidget(320,3);
+    tbl_item->setEditTriggers(QAbstractItemView::NoEditTriggers);// thats a long 0
     tbl_item->setStyleSheet(style);
     tbl_item->setContextMenuPolicy(Qt::CustomContextMenu);
     tbl_item->setSelectionBehavior(QAbstractItemView::SelectRows);
@@ -30,7 +31,6 @@ void ItemList::setItems(QList<quint16> items)
     itemlist = items;
     createdSelector=false;
     itemupdate();
-    //for(int i=0;i<320;i++){itemselector[i]->setCurrentItem(items.at(i));}
 }
 void ItemList::itemselector_changed(quint16 item)
 {
@@ -51,41 +51,47 @@ void ItemList::itemupdate()
     int j= tbl_item->currentRow();
     tbl_item->reset(); // just incase
     tbl_item->clearContents();
-    //if(_init){tbl_item->setColumnWidth(0,tbl_item->width()-54);}
-    tbl_item->setColumnWidth(0,232);
-    tbl_item->setColumnWidth(1,32);
+    tbl_item->setColumnWidth(0,40);
+    tbl_item->setColumnWidth(1,172);
+    tbl_item->setColumnWidth(2,55);
     tbl_item->setRowCount(320);
 
     for (int i=0;i<320;i++) // set up items
     {
         if (Items.itemQty(itemlist.at(i)) == 0x7F && Items.itemId(itemlist.at(i)) == 0x1FF)
         {
+            newItem = new QTableWidgetItem("",0);
+            tbl_item->setItem(i,0,newItem);
             newItem = new QTableWidgetItem(tr("-------EMPTY--------"),0);
             newItem->setToolTip("");
-            tbl_item->setItem(i,0,newItem);
+            tbl_item->setItem(i,1,newItem);
             tbl_item->setRowHeight(i,22);
             newItem = new QTableWidgetItem("",0);
-            tbl_item->setItem(i,1,newItem);
+            tbl_item->setItem(i,2,newItem);
         }
         else if(Items.itemId(itemlist.at(i)) > 319)
         {
+            newItem = new QTableWidgetItem("",0);
+            tbl_item->setItem(i,0,newItem);
             newItem = new QTableWidgetItem(tr("-------BAD ID-------"),0);
             newItem->setToolTip("");
-            tbl_item->setItem(i,0,newItem);
+            tbl_item->setItem(i,1,newItem);
             tbl_item->setRowHeight(i,22);
             newItem = new QTableWidgetItem("",0);
-            tbl_item->setItem(i,1,newItem);
+            tbl_item->setItem(i,2,newItem);
         }
         else
         {
             QString qty;
             //Replaced by new item engine. (Vegeta_Ss4)
-            newItem = new QTableWidgetItem(Items.Icon(Items.itemId(itemlist.at(i))),Items.Name(Items.itemId(itemlist.at(i))),0);
+            newItem = new QTableWidgetItem(Items.Icon(Items.itemId(itemlist.at(i))),"",0);
+            tbl_item->setItem(i,0,newItem);
+            newItem = new QTableWidgetItem(Items.Name(Items.itemId(itemlist.at(i))),0);
             newItem->setToolTip(Items.Desc(Items.itemId(itemlist.at(i))));
-            tbl_item->setItem(i,0, newItem);
+            tbl_item->setItem(i,1, newItem);
             tbl_item->setRowHeight(i,22);
             newItem = new QTableWidgetItem(qty.setNum(Items.itemQty(itemlist.at(i))),0);
-            tbl_item->setItem(i,1,newItem);
+            tbl_item->setItem(i,2,newItem);
 
         }
     }
@@ -108,6 +114,8 @@ void ItemList::listSelectionChanged(int row,int colum,int prevRow,int prevColum)
     tbl_item->setItem(row,0,newItem);
     newItem = new QTableWidgetItem("",0);//can't put the same item in two places.
     tbl_item->setItem(row,1,newItem);
+    newItem = new QTableWidgetItem("",0);//can't put the same item in two places.
+    tbl_item->setItem(row,2,newItem);
     tbl_item->setCellWidget(row,0,itemselector);
     itemselector->setCurrentItem(itemlist.at(row));
     connect(itemselector,SIGNAL(item_changed(quint16)),this,SLOT(itemselector_changed(quint16)));
