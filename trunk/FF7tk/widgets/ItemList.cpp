@@ -3,7 +3,10 @@
 ItemList::ItemList(QWidget *parent) :
     QWidget(parent)
 {
+    QString style ="QTableWidget{selection-background-color:rgba(0, 0,0,0);}";
+            //selection-color: rgba(255,255,255,0);"
     tbl_item = new QTableWidget(320,2);
+    tbl_item->setStyleSheet(style);
     tbl_item->setContextMenuPolicy(Qt::CustomContextMenu);
     tbl_item->setSelectionBehavior(QAbstractItemView::SelectRows);
     //tbl_item->setSelectionMode(QAbstractItemView::NoSelection);
@@ -19,12 +22,13 @@ ItemList::ItemList(QWidget *parent) :
     layout->setContentsMargins(0,0,0,0);
     this->setLayout(layout);
     this->adjustSize();
-
+    createdSelector = false;
     for(int i=0;i<320;i++){itemlist.append(0xFFFF);}//initlize the data.
 }
 void ItemList::setItems(QList<quint16> items)
 {
     itemlist = items;
+    createdSelector=false;
     itemupdate();
     //for(int i=0;i<320;i++){itemselector[i]->setCurrentItem(items.at(i));}
 }
@@ -87,18 +91,23 @@ void ItemList::itemupdate()
     }
     tbl_item->blockSignals(true);
     tbl_item->setCurrentCell(j,0);
+    if(createdSelector==false){tbl_item->clearSelection();}//if there is no Selector made its because of a new item list.
     tbl_item->blockSignals(false);
 }
 void ItemList::listSelectionChanged(int row,int colum,int prevRow,int prevColum)
 {
-    //QMessageBox::information(this,"title",QString::number(prevRow));
-    //if(prevRow != -1 &&(prevRow !=row)) {itemselector->~QWidget();}
+    if(createdSelector){itemselector->close();createdSelector=false;}
     if ((colum >=0 || colum <= 0) && (prevRow >=0 || prevRow <= 0) &&(prevColum >=0 || prevColum <= 0))
     {/*Stop Warning About unused vars*/}
     itemupdate();
     itemselector = new ItemSelector();
+    createdSelector = true;
     itemselector->setMinimumWidth(270);
     itemselector->setObjectName(QString::number(row));
+    QTableWidgetItem *newItem = new QTableWidgetItem("",0);
+    tbl_item->setItem(row,0,newItem);
+    newItem = new QTableWidgetItem("",0);//can't put the same item in two places.
+    tbl_item->setItem(row,1,newItem);
     tbl_item->setCellWidget(row,0,itemselector);
     itemselector->setCurrentItem(itemlist.at(row));
     connect(itemselector,SIGNAL(item_changed(quint16)),this,SLOT(itemselector_changed(quint16)));
