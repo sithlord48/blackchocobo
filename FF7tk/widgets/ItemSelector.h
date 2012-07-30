@@ -27,7 +27,6 @@ private slots:
     void btn_remove_clicked();
 private:
     void init_display();
-    void focusOutEvent(QFocusEvent *);
     void init_connections();
     void init_data();
     int type_offset(int type);

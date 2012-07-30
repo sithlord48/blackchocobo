@@ -32,6 +32,7 @@ private:
     ItemPreview *item_preview;
     QTableWidget * tbl_item;
     QList<quint16> itemlist;
+    bool createdSelector;
 };
 
 #endif // ITEMLIST_H
