@@ -18,7 +18,7 @@
 
 ItemPreview::ItemPreview(QWidget *parent) :QMenu(parent)
 {
-  this->setWindowFlags(Qt::ToolTip);
+  //this->setWindowFlags(Qt::ToolTip);
   lbl_name=new QLabel();
   lbl_desc=new QLabel();
   lbl_icon=new QLabel();
