@@ -875,6 +875,17 @@
     </message>
 </context>
 <context>
+    <name>ItemList</name>
+    <message>
+        <source>-------EMPTY--------</source>
+        <translation type="unfinished">--------Vide--------</translation>
+    </message>
+    <message>
+        <source>-------BAD ID-------</source>
+        <translation type="unfinished">----MAUVAIS ID----</translation>
+    </message>
+</context>
+<context>
     <name>ItemPreview</name>
     <message>
         <source>Elemental Effects</source>
@@ -1063,6 +1074,13 @@
     <message>
         <source>D.Sentence</source>
         <translation>Peine de mort</translation>
+    </message>
+</context>
+<context>
+    <name>ItemSelector</name>
+    <message>
+        <source>Empty Item</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3270,7 +3288,7 @@
     </message>
     <message>
         <source>Qty</source>
-        <translation>Qté</translation>
+        <translation type="obsolete">Qté</translation>
     </message>
     <message>
         <source>Key Items</source>
@@ -4868,7 +4886,7 @@
     </message>
     <message>
         <source>-------EMPTY--------</source>
-        <translation>--------Vide--------</translation>
+        <translation type="obsolete">--------Vide--------</translation>
     </message>
     <message>
         <source>Place Leader</source>
@@ -5367,7 +5385,7 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     </message>
     <message>
         <source>Edit Selected Item Slot</source>
-        <translation>Modifier l&apos;objet sélectionné</translation>
+        <translation type="obsolete">Modifier l&apos;objet sélectionné</translation>
     </message>
     <message>
         <source>&lt;------Left Table------
@@ -5403,7 +5421,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Del</source>
-        <translation>Sppr</translation>
+        <translation type="obsolete">Sppr</translation>
     </message>
     <message>
         <source>Materia Slot Actions</source>
@@ -5697,7 +5715,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>-------BAD ID-------</source>
-        <translation>----MAUVAIS ID----</translation>
+        <translation type="obsolete">----MAUVAIS ID----</translation>
     </message>
     <message>
         <source>MDS6_2: Sense Materia</source>
@@ -8174,6 +8192,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct And item/materia lists. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: ItemList Widget;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

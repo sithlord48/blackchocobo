@@ -875,6 +875,17 @@
     </message>
 </context>
 <context>
+    <name>ItemList</name>
+    <message>
+        <source>-------EMPTY--------</source>
+        <translation type="unfinished">-------空き--------</translation>
+    </message>
+    <message>
+        <source>-------BAD ID-------</source>
+        <translation type="unfinished">------無効な ID------</translation>
+    </message>
+</context>
+<context>
     <name>ItemPreview</name>
     <message>
         <source>Elemental Effects</source>
@@ -1063,6 +1074,13 @@
     <message>
         <source>D.Sentence</source>
         <translation>死の宣告</translation>
+    </message>
+</context>
+<context>
+    <name>ItemSelector</name>
+    <message>
+        <source>Empty Item</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3286,7 +3304,7 @@
     </message>
     <message>
         <source>Qty</source>
-        <translation>個数</translation>
+        <translation type="obsolete">個数</translation>
     </message>
     <message>
         <source>Key Items</source>
@@ -4744,7 +4762,7 @@ MASTER = 16777215 AP です</translation>
     </message>
     <message>
         <source>-------EMPTY--------</source>
-        <translation>-------空き--------</translation>
+        <translation type="obsolete">-------空き--------</translation>
     </message>
     <message>
         <source>ID </source>
@@ -5366,7 +5384,7 @@ Var And Scrolling Synced To Left Table</source>
     </message>
     <message>
         <source>Edit Selected Item Slot</source>
-        <translation>選択アイテム スロットの編集</translation>
+        <translation type="obsolete">選択アイテム スロットの編集</translation>
     </message>
     <message>
         <source>&lt;------Left Table------
@@ -5402,7 +5420,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Del</source>
-        <translation>Del</translation>
+        <translation type="obsolete">Del</translation>
     </message>
     <message>
         <source>Materia Slot Actions</source>
@@ -5697,7 +5715,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>-------BAD ID-------</source>
-        <translation>------無効な ID------</translation>
+        <translation type="obsolete">------無効な ID------</translation>
     </message>
     <message>
         <source>MDS6_2: Sense Materia</source>
@@ -8172,6 +8190,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct And item/materia lists. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: ItemList Widget;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -875,6 +875,17 @@
     </message>
 </context>
 <context>
+    <name>ItemList</name>
+    <message>
+        <source>-------EMPTY--------</source>
+        <translation type="unfinished">-------LEER--------</translation>
+    </message>
+    <message>
+        <source>-------BAD ID-------</source>
+        <translation type="unfinished">-------Fehlerhafte ID-------</translation>
+    </message>
+</context>
+<context>
     <name>ItemPreview</name>
     <message>
         <source>Elemental Effects</source>
@@ -1063,6 +1074,13 @@
     <message>
         <source>D.Sentence</source>
         <translation>Todesurteil</translation>
+    </message>
+</context>
+<context>
+    <name>ItemSelector</name>
+    <message>
+        <source>Empty Item</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3287,7 +3305,7 @@
     </message>
     <message>
         <source>Qty</source>
-        <translation>Stk</translation>
+        <translation type="obsolete">Stk</translation>
     </message>
     <message>
         <source>Key Items</source>
@@ -4745,7 +4763,7 @@
     </message>
     <message>
         <source>-------EMPTY--------</source>
-        <translation>-------LEER--------</translation>
+        <translation type="obsolete">-------LEER--------</translation>
     </message>
     <message>
         <source>ID </source>
@@ -5371,7 +5389,7 @@ Var und Scrollen zusammen zur linken Tabelle</translation>
     </message>
     <message>
         <source>Edit Selected Item Slot</source>
-        <translation>Bearbeite ausgewählten Item Schacht</translation>
+        <translation type="obsolete">Bearbeite ausgewählten Item Schacht</translation>
     </message>
     <message>
         <source>&lt;------Left Table------
@@ -5408,7 +5426,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Del</source>
-        <translation>Entf</translation>
+        <translation type="obsolete">Entf</translation>
     </message>
     <message>
         <source>Materia Slot Actions</source>
@@ -5703,7 +5721,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>-------BAD ID-------</source>
-        <translation>-------Fehlerhafte ID-------</translation>
+        <translation type="obsolete">-------Fehlerhafte ID-------</translation>
     </message>
     <message>
         <source>MDS6_2: Sense Materia</source>
@@ -8179,6 +8197,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct And item/materia lists. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: ItemList Widget;</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

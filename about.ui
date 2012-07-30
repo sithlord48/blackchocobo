@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>417</width>
-    <height>403</height>
+    <width>413</width>
+    <height>399</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -454,6 +454,11 @@ p, li { white-space: pre-wrap; }
          </property>
          <item>
           <property name="text">
+           <string>New: ItemList Widget;</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
            <string>New: Character Editor Widget.</string>
           </property>
          </item>
@@ -895,7 +900,7 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>383</width>
+            <width>343</width>
             <height>430</height>
            </rect>
           </property>
@@ -1571,8 +1576,8 @@ p, li { white-space: pre-wrap; }
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>383</width>
-            <height>382</height>
+            <width>110</width>
+            <height>942</height>
            </rect>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_11">
