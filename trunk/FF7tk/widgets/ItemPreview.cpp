@@ -13,12 +13,14 @@
 //   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
-
 #include "ItemPreview.h"
 
-ItemPreview::ItemPreview(QWidget *parent) :QMenu(parent)
+ItemPreview::ItemPreview(QWidget *parent,QFlags<Qt::WindowType> WindowFlags) :QWidget(parent)
 {
-  //this->setWindowFlags(Qt::ToolTip);
+  //keep window flag of Qt:Popup untill we figure out how to destroy tooltips
+  //Possibly with an event filter or type, check Qtooltip code to see how they do it.
+  setWindowFlags(WindowFlags);
+  _id=0x1FF;
   lbl_name=new QLabel();
   lbl_desc=new QLabel();
   lbl_icon=new QLabel();
@@ -171,6 +173,15 @@ void ItemPreview::setName(QString text){lbl_name->setText(text);lbl_name->adjust
 void ItemPreview::setDesc(QString text){lbl_desc->setText(text);lbl_desc->adjustSize();}
 void ItemPreview::setIcon(QPixmap picture){lbl_icon->setPixmap(picture);lbl_icon->adjustSize();}
 
+void ItemPreview::setItem(quint16 itemraw)
+{//see FF7Save::itemDecode(quint16) for proper comments.
+    quint16 item;
+    int one = 1;
+    if (*(char *)&one){item=itemraw;}
+    else{item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);}
+    int id = (item & 0x1FF);
+    setItem(id);
+}
 void ItemPreview::setItem(int id)
 {
     lbl_slot_8->setHidden(1);
@@ -194,9 +205,10 @@ void ItemPreview::setItem(int id)
     status_box->setHidden(1);
     elemental_box->setHidden(1);
 
-    if(id<0 || id>319){/*InValid Number..Do Nothing*/}
+    if(id<0 || id>319){_id=0x1FF;/*InValid Number..Do Nothing*/}
     else
     {
+        _id=id;
         if(data.Name(id) !="")
         {
             lbl_name->setHidden(0);
@@ -216,7 +228,7 @@ void ItemPreview::setItem(int id)
         this->status_info(id);
         this->elemental_info(id);
 
-        if(data.Type(id)>1 && data.Type(id)<12)
+        if(data.Type(id)>1 && data.Type(id)!=3)
         {
             if(data.m_growth_rate(id)==0)
             {//no growth slots
@@ -307,11 +319,16 @@ void ItemPreview::elemental_info(int id)
             if(!effect.isNull())
             {
                 elemental_effects->addItem(effect);
-                show=true; y+=this->font().pointSize()*2;
+                show=true; y+=this->font().pointSize()*1.90;
             }
         }//end of for Loop
-        if(elemental_effects->count()<6){elemental_box->setFixedSize(160,y);}
-        else{elemental_box->setFixedSize(160,(this->font().pointSize()*2)*5);}
+       // if(this->windowFlags() !=Qt::Popup && this->windowFlags() !=Qt::ToolTip)
+       // {//make the combo box smaller if not a popup or tooltip
+       //     if(elemental_effects->count()<6){elemental_box->setFixedSize(160,y);}
+       //     else{elemental_box->setFixedSize(160,(this->font().pointSize()*2)*5);}
+       // }
+       // else{elemental_box->setFixedSize(160,y);}
+        elemental_box->setFixedSize(160,y);
    }//end of else
    elemental_box->setVisible(show);
    elemental_box->adjustSize();
@@ -366,12 +383,19 @@ void ItemPreview::status_info(int id)
             if(!effect.isNull())
             {
                 status_effects->addItem(effect);
-                show=true; y+=18;
+                show=true; y+=this->font().pointSize()*1.90;
             }
         }//end of for Loop
-        if(status_effects->count()<6){status_box->setFixedSize(160,y);}
-        else{status_box->setFixedSize(160,(this->font().pointSize()*2)*5);}
+        //if(this->windowFlags() == Qt::Popup || this->windowFlags() ==Qt::ToolTip)
+        //{status_box->setFixedSize(160,y);}
+        //else
+        //{//make the combo box smaller if not a popup or tooltip
+        //    if(status_effects->count()<6){status_box->setFixedSize(160,y);}
+        //    else{status_box->setFixedSize(160,(this->font().pointSize()*2)*5);}
+        //}
+        status_box->setFixedSize(160,y);
     }//end of else
     status_box->setVisible(show);
     status_box->adjustSize();
 }//end of function
+int ItemPreview::id(void){return _id;}

@@ -32,10 +32,23 @@ DialogPreview::DialogPreview(QWidget *parent) : QLabel(parent)
 
     this->draw();
 
-    connect(btn_ul,SIGNAL(clicked()),this,SLOT(btn_ul_clicked()));
-    connect(btn_ur,SIGNAL(clicked()),this,SLOT(btn_ur_clicked()));
-    connect(btn_ll,SIGNAL(clicked()),this,SLOT(btn_ll_clicked()));
-    connect(btn_lr,SIGNAL(clicked()),this,SLOT(btn_lr_clicked()));
+
+    if(QT_VERSION<0x050000)
+    {//QT4 Style Connections.
+        connect(btn_ul,SIGNAL(clicked()),this,SLOT(btn_ul_clicked()));
+        connect(btn_ur,SIGNAL(clicked()),this,SLOT(btn_ur_clicked()));
+        connect(btn_ll,SIGNAL(clicked()),this,SLOT(btn_ll_clicked()));
+        connect(btn_lr,SIGNAL(clicked()),this,SLOT(btn_lr_clicked()));
+    }
+    else
+    {//QT5 Style Connections
+        /*
+        connect(btn_ul::clicked(),this::btn_ul_clicked());
+        connect(btn_ur::clicked(),this::btn_ur_clicked());
+        connect(btn_ll::clicked(),this::btn_ll_clicked());
+        connect(btn_lr::clicked(),this::btn_lr_clicked());
+        */
+    }
 
 }
 
