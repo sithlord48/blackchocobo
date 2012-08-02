@@ -4,8 +4,7 @@
 // include icon data
 #include "../static_data/icons/Common_Icons/quit.xpm"
 
-ItemSelector::ItemSelector(QWidget *parent) :
-    QWidget(parent)
+ItemSelector::ItemSelector(QWidget *parent): QWidget(parent)
 {
     init_display();
     init_connections();
@@ -21,30 +20,43 @@ void ItemSelector::init_display()
     sb_qty->setFixedWidth(this->font().pointSize()*5);
     sb_qty->setAlignment(Qt::AlignCenter);
     sb_qty->setMaximum(127);
+    sb_qty->setMinimum(1);
+    sb_qty->setWrapping(true);
 
     btn_remove = new QPushButton;
     btn_remove->setIcon(QIcon(QPixmap(quit_xpm)));
     btn_remove->setToolTip(tr("Empty Item"));
     btn_remove->setFixedSize(22,22);
-
-    init_data(); //before setting layout set data.
+    init_data(); //before setting layout set dat
     QHBoxLayout *layout = new QHBoxLayout;
     layout->setContentsMargins(0,0,0,0);
-    layout->setSpacing(2);
+    layout->setSpacing(0);
     layout->addWidget(combo_type);
     layout->addWidget(combo_item);
     layout->addWidget(sb_qty);
     layout->addWidget(btn_remove);
     this->setLayout(layout);
-    this->setFixedHeight(22);
+    this->layout()->update();
     this->adjustSize();
 }
 void ItemSelector::init_connections()
 {
-    connect(combo_type,SIGNAL(currentIndexChanged(int)),this,SLOT(setFilter(int)));
-    connect(combo_item,SIGNAL(currentIndexChanged(int)),this,SLOT(comboItem_changed(int)));
-    connect(sb_qty,SIGNAL(valueChanged(int)),this,SLOT(sb_qty_changed(int)));
-    connect(btn_remove,SIGNAL(clicked()),this,SLOT(btn_remove_clicked()));
+    if(QT_VERSION<0x050000)
+    {//QT4 Style Connections
+        connect(combo_type,SIGNAL(currentIndexChanged(int)),this,SLOT(setFilter(int)));
+        connect(combo_item,SIGNAL(currentIndexChanged(int)),this,SLOT(comboItem_changed(int)));
+        connect(sb_qty,SIGNAL(valueChanged(int)),this,SLOT(sb_qty_changed(int)));
+        connect(btn_remove,SIGNAL(clicked()),this,SLOT(btn_remove_clicked()));
+    }
+    else
+    {//QT5 Style Connections
+        /*
+        connect(combo_type::currentIndexChanged(int),this::setFilter(int));
+        connect(combo_item::currentIndexChanged(int),this::comboItem_changed(int));
+        connect(sb_qty::valueChanged(int),this::sb_qty_changed(int));
+        connect(btn_remove::clicked(),this::btn_remove_clicked());
+        */
+    }
 }
 void ItemSelector::init_data()
 {
@@ -72,7 +84,6 @@ void ItemSelector::btn_remove_clicked()
     combo_item->blockSignals(true);
     combo_type->setCurrentIndex(-1);
     combo_item->setCurrentIndex(-1);
-
     combo_item->blockSignals(false);
     sb_qty->setEnabled(false);
     current_item = 0xFFFF;
@@ -86,19 +97,14 @@ void ItemSelector::setFilter(int type)
     combo_item->clear();
     for(int i=0;i<320;i++)
     {
-        if(type !=0)
-        {
-            if(Items.Type(i) == type)
-            {
-                combo_item->addItem(Items.Icon(i),Items.Name(i));
-            }
-        }
+        if(type !=0){if(Items.Type(i) == type){combo_item->addItem(Items.Icon(i),Items.Name(i));}}
         else{combo_item->addItem(Items.Icon(i),Items.Name(i));}
     }
 
     current_item = Items.itemEncode(id,Items.itemQty(current_item));
     if(current_item != 0xFFFF){combo_item->setCurrentIndex(combo_item->findText(Items.Name(Items.itemId(current_item))));}
     else{combo_item->setCurrentIndex(-1);}
+    this->layout()->update();
     combo_item->blockSignals(false);
 }
 void ItemSelector::comboItem_changed(int index)
@@ -183,3 +189,4 @@ int ItemSelector::type_offset(int type)
     return offset;
 }
 int ItemSelector::id(void){return (int)Items.itemId(current_item);}
+int ItemSelector::combo_item_width(){return combo_item->width();}

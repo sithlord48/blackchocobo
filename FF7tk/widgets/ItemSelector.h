@@ -15,6 +15,7 @@ class ItemSelector : public QWidget
 public:
     explicit ItemSelector(QWidget *parent = 0);
     int id();// current id
+    int combo_item_width();//width of the item box.
 signals:
     void item_changed(quint16);//return selected rawitem
 public slots:

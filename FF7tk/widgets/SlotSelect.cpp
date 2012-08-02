@@ -99,8 +99,14 @@ SlotSelect::SlotSelect(QWidget *parent,FF7Save *data):QDialog(parent)
         //more checks after this....
         //for any item
         preview[i]->set_Button_Label(QString((tr("Slot:%1"))).arg(QString::number(i+1)));
-        connect(preview[i],SIGNAL(button_clicked(QString)),this,SLOT(button_clicked(QString)));
-//        frm_preview->layout()->update();
+        if(QT_VERSION<0x050000)
+        {//QT4 Style Connection
+            connect(preview[i],SIGNAL(button_clicked(QString)),this,SLOT(button_clicked(QString)));
+        }
+        else
+        {//QT5 Style Connection
+        //    connect(preview[i]::button_clicked(QString),this::button_clicked(QString));
+        }
     }
     list_preview->setWidget(frm_preview);
     list_preview->setContentsMargins(0,0,0,0);

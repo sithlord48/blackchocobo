@@ -34,13 +34,11 @@
 #include "FF7tk/static_data/FF7Char.h"
 #include "FF7tk/static_data/FF7Materia.h"
 #include "FF7tk/static_data/FF7Location.h"
-#include "FF7tk/widgets/ItemPreview.h"
 #include "FF7tk/widgets/DialogPreview.h"
 #include "FF7tk/widgets/MateriaEditor.h"
 #include "FF7tk/widgets/SlotSelect.h"
 #include "FF7tk/widgets/ChocoboEditor.h"
 #include "FF7tk/widgets/CharEditor.h"
-//#include "FF7tk/widgets/ItemSelector.h"
 #include "FF7tk/widgets/ItemList.h"
 
 namespace Ui {
@@ -64,7 +62,7 @@ private:
     bool load; // are we loading data? if so don't save it to the file.
     bool file_changed; //if file changed after load.
     FF7Save *ff7; // our save file struct pointer.
-    QSettings *settings;
+    QSettings *settings;//Pointer To settings object.
     int s; //track slot
     FF7Char Chars; //FF7Char Static Data
     FF7Item Items; //FF7Item Static Data
@@ -80,7 +78,6 @@ private:
     MateriaEditor *materia_editor;
     QSpacerItem *mat_spacer;
     CharEditor * char_editor;
-//    ItemSelector *item_selector;
     ItemList *itemlist;
     ChocoboEditor *chocobo_stable_1;
     ChocoboEditor *chocobo_stable_2;
@@ -88,6 +85,9 @@ private:
     ChocoboEditor *chocobo_stable_4;
     ChocoboEditor *chocobo_stable_5;
     ChocoboEditor *chocobo_stable_6;
+    void init_display();
+    void init_connections();
+    void init_settings();
 public slots:
     void loadFileFull(const QString &fileName,int reload);//(Vegeta_Ss4) v0.8.3
 

@@ -19,17 +19,20 @@
 
 //Besure to set FF7Item Path!
 #include "../static_data/FF7Item.h"
-#include <QtGui/QMenu>
+#include <QtGui/QWidget>
 #include <QtGui/QLabel>
 #include <QtGui/QGroupBox>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QListWidget>
 
-class ItemPreview : public QMenu
+class ItemPreview : public QWidget
 {
 Q_OBJECT
   public:
-    ItemPreview(QWidget *parent=0);
+    ItemPreview(QWidget *parent=0,QFlags<Qt::WindowType> WindowFlags=Qt::Widget);
+    int id(void);//return shown id.
+  public slots:
+    void setItem(quint16);
     void setItem(int);
   private:
     void setName(QString);
@@ -58,5 +61,6 @@ Q_OBJECT
     QListWidget *elemental_effects;
     QListWidget *status_effects;
     FF7Item data;
+    int _id;
 };
 #endif//ITEMPREVIEW_H

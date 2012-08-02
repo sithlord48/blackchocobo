@@ -23,7 +23,14 @@ SlotPreview::SlotPreview(QWidget *parent):QLabel(parent)
     Final->addWidget(top_most);
     this->setLayout(Final);
     this->setFixedSize(581,150);
-    connect(btn_select,SIGNAL(clicked()),this,SLOT(selected()));
+    if(QT_VERSION<0x050000)
+    {//QT4 Style Connect
+        connect(btn_select,SIGNAL(clicked()),this,SLOT(selected()));
+    }
+    else
+    {//QT5 Style Connect
+    //   connect(btn_select::clicked(),this::selected());
+    }
 }
 void SlotPreview::setMode(int mode)
 {
