@@ -1,0 +1,5 @@
+#!/bin/sh
+if [ -f /usr/bin/blackchocobo ];then
+  rm /usr/bin/blackchocobo 
+else exit 0
+fi

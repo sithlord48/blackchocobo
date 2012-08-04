@@ -1,0 +1,14 @@
+#!/bin/sh
+    echo "Checking for and removing old install...\c"
+    if [ -d /usr/bin/blackchocobo ];then #check to see if older version installed.
+    rm -r /usr/bin/blackchocobo/
+    echo "Ok"
+    else echo "Not Found"
+    fi
+    echo "Checking for removing save0...\c"
+    if [ -f /opt/blackchocobo/save0 ];then #check to see if older version installed.
+    rm /opt/blackchocobo/save0
+    echo "Ok"
+    else echo "Not Found"
+    fi
+    exit 0

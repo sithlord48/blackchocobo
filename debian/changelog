@@ -1,0 +1,99 @@
+blackchocobo (1.9.6) natty; urgency=low
+  *New:Added VM1 to list of VMC formats
+  *New:Dialog Preview Widget
+  *New:Item Preview Widget
+  *New:Static Data Classes
+  *New:Added Support for French PSX (BASCES-00868)
+  *Fixed:E.Skills Not updating in some cases
+  -- Chris Rizzitello <sithlord48@gmail.com>  Wed, 14 Mar 2012 20:48:07-0400
+
+  blackchocobo (1.9.51) natty; urgency=low
+  *Fixed: Error In Non English Materia Combobox
+ -- Chris Rizzitello <sithlord48@gmail.com>  Tue, 13 Dec 2011 17:36:44 -0400
+
+blackchocobo (1.9.5) natty; urgency=low
+  *New: German Translation
+  *New: String Convertor For Conversion to FF7 test
+  *New: Stat Calculation
+  *New: Many Improvements to handling (and editing) of non FF7 slots
+  *New: Prompt for unsaved changes.
+  *Fixed: Save Button
+  *Fixed: Better File Type Detection.
+  *Now With Proper OOP Objects.
+ -- Chris Rizzitello <sithlord48@gmail.com>  Fri, 09 Dec 2011 21:58:50 -0400
+
+blackchocobo (1.9.4) natty; urgency=low
+  *New: Japanese Translation
+  *New: Copy / Paste Materia Slots
+  *New: Files can now be Opened With BC.
+  *New: Field Items Picked up can be Twiddled.(WIP)
+  *New: Edit Number of Steps
+  *New: Game Progression Tab Now more useful
+  *New: Edit Custome Controls (non-pc saves only)
+  *Fixed: Optimized Slot Selection Dialog, and other internals
+  *Fixed: Proper Install Path of /opt/blackchocobo
+ -- Chris Rizzitello <sithlord48@gmail.com>  Sat, 08 Oct 2011 13:12:52 -0400
+
+blackchocobo (1.9.3) lucid; urgency=low
+  *New: Better Unknown Var Tab.
+  *New: Toggle Each Stable Occupied Flag
+  *New: Reload Feature
+  *New: Locations "Chocobo Ranch" And "Highwind"
+  *New: Toggle "unable to mate" flag for chocobos
+  *New: NTSC <=> PAL Time Conversion
+  *Fixed: Dialogs Inherit style.
+  *Fixed: Use the Action for showing Slot select dialog.
+  *Fixed: Chocobo Name Editable again
+ -- Chris Rizzitello <sithlord48@gmail.com>  Fri, 19 Aug 2011 23:54:39 -0400
+
+blackchocobo (1.9.2) lucid; urgency=low
+  *New: Editable Unknowns
+  *Fixed:New Window Via Qprocess.
+  *Fixed:Limit Bug
+  *Fixed:Cait/Vincent backward in PHS
+ -- Chris Rizzitello <sithlord48@gmail.com>  Sat, 23 Jul 2011 22:40:07 -0400
+
+blackchocobo (1.9.1) lucid; urgency=low
+  *New:Spawn New Windows (mainly for testing)
+  *New:Simple Unknown Var Tab (part of test data) to view whats in the "unknown" vars (find new stuff this way)
+  *New:Flashback "Church In The Slums"
+  *New:Automatic Exp <-> LVL Setting (enabled by default)
+  *Fixed:Empty Chocobo's Start W/ Empty Names Not " "
+  *Fixed:Lots Of Typo's...
+  *Fixed:"Time Bug" (seconds were calculated incorrectly)
+  *Fixed:"Gravity Bug"(empty slots w/o 0xFFFFFF as ap)
+  *Fixed: Gil,Exp,CosterScore and other Incorrect Caps
+  *Fixed:Keycard 66 Missing for Key Item List. (with extra midgar part)
+  *Update:Location Tab; Both Save && World Locations in one Tab!
+  *Update:Almost All SpinBoxes "Wrapping" 
+ -- Chris Rizzitello <sithlord48@gmail.com>  Sun, 17 Jul 2011 13:37:22 -0400
+
+blackchocobo (1.9.0) lucid; urgency=low
+  *New: Set Program Font
+  *More Dialog Cleanup
+ -- Chris Rizzitello <sithlord48@gmail.com>  Sun, 26 Jun 2011 23:15:52 -0400
+
+blackchocobo (1.8.9-r427) lucid; urgency=low
+  * New: Enabled PSv File saving(no checksum)
+  * More Dialog Cleanup's 
+  * Improved World Map Functions.
+ -- Chris Rizzitello <sithlord48@gmail.com>  Thu, 16 Jun 2011 17:42:11 -0400
+
+blackchocobo (1.8.9-r423) lucid; urgency=low
+  * New: World Map Stuff for Debug
+  * Cleaned up the about dialog's horizontal size being to long
+ -- Chris Rizzitello <sithlord48@gmail.com>  Sat, 11 Jun 2011 11:30:27 -0400
+
+blackchocobo (1.8.9-r420) lucid; urgency=low
+  * Fixed Annoying Bugs
+  * New: Toggle Ruby / Emerald Weapon On Map.
+  * Updated:Most Of the Spanish Translation
+ -- Chris Rizzitello <sithlord48@gmail.com>  Sun, 05 Jun 2011 22:15:41 -0400
+
+blackchocobo (1.8.9-package2) lucid; urgency=low
+  * Fixed the src package so that .ts files are included and auto make menu entrys
+ -- Chris Rizzitello <sithlord48@gmail.com>  Sat, 04 Jun 2011 13:27:36 -0400
+
+blackchocobo (1.8.9) lucid; urgency=low
+  * Fixed Lang files not being "released" 
+ -- Chris Rizzitello <sithlord48@gmail.com>  Wed, 01 Jun 2011 11:37:05 -0400

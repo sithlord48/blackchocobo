@@ -1,0 +1,2 @@
+?package(blackchocobo):needs="x11" section="Games/Toys"\
+  title="blackchocobo" command="/usr/bin/blackchocobo"
