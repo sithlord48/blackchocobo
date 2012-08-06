@@ -45,7 +45,7 @@ bool ItemList::eventFilter(QObject *obj, QEvent *ev)
                 }
             }//end of If(createdToolTip)
             //If our Entry is an Empty Item then don't show a tooltip
-            if(Items.itemId(itemlist.at(row))==0x1FF){return true;}
+            if(Items.itemId(itemlist.at(row))==FF7Item::EmptyItem){return true;}
             else
             {//unless our xcoord is off on the scrollbar) show for item in row
              //scrollbars are ontop of the viewport and trigger events for items below.
@@ -119,7 +119,7 @@ ItemList::ItemList(QWidget *parent) : QTableWidget(parent)
     verticalScrollBar()->setToolTip("");//negate custom tooltip
     adjustSize();
     createdSelector = false;
-    for(int i=0;i<320;i++){itemlist.append(0xFFFF);}//initlize the data.
+    for(int i=0;i<320;i++){itemlist.append(FF7Item::EmptyItemData);}//initlize the data.
     this->setFixedWidth(itemSelector->size().width());
     itemupdate();// redraw Display After data init.
 }
@@ -156,7 +156,7 @@ void ItemList::itemupdate()
 
     for (int i=0;i<320;i++) // set up items
     {
-        if (Items.itemQty(itemlist.at(i)) == 0x7F && Items.itemId(itemlist.at(i)) == 0x1FF)
+        if (itemlist.at(i) == FF7Item::EmptyItemData)
         {
             newItem = new QTableWidgetItem("",0);
             setItem(i,0,newItem);

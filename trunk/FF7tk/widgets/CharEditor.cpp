@@ -14,7 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "CharEditor.h"
-//#include <QMessageBox>
+
 CharEditor::CharEditor(QWidget *parent) :
     QWidget(parent)
 {
@@ -22,7 +22,6 @@ CharEditor::CharEditor(QWidget *parent) :
     init_connections();
     //auto level and auto stat calc are enabled by default.
     //always check them when doing these actions.
-
     autolevel=true;
     autostatcalc=true;
     editable=true;
@@ -1319,10 +1318,10 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     sb_maxHp->setValue(data.maxHP);
     sb_kills->setValue(data.kills);
     combo_id->setCurrentIndex(data.id);
-    if(data.flags[0]==0x10){cb_fury->setChecked(Qt::Checked);}
-    else if(data.flags[0]==0x20 ){cb_sadness->setChecked(Qt::Checked);}
+    if(data.flags[0]==FF7Char::Fury){cb_fury->setChecked(Qt::Checked);}
+    else if(data.flags[0]==FF7Char::Sadness ){cb_sadness->setChecked(Qt::Checked);}
     else{cb_fury->setChecked(Qt::Unchecked);cb_sadness->setChecked(Qt::Unchecked);}
-    if(data.flags[1] ==0xFF){cb_front_row->setChecked(Qt::Checked);}
+    if(data.flags[1] ==FF7Char::FrontRow){cb_front_row->setChecked(Qt::Checked);}
     else{cb_front_row->setChecked(Qt::Unchecked);}
     sb_total_exp->setValue(data.exp);
     lcd_tnl->display(int(data.expNext));
@@ -1343,14 +1342,14 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     sb_base_hp->setValue(data.baseHP);
     sb_base_mp->setValue(data.baseMP);
 
-    if(data.id ==6 || data.id ==7 ||data.id ==9 || data.id ==10 )
+    if(data.id ==FF7Char::CaitSith || data.id ==FF7Char::Vincent ||data.id ==FF7Char::YoungCloud || data.id ==FF7Char::Sephiroth )
     {
         if(!debug){cb_idChanger->setHidden(false);}
         else{cb_idChanger->setHidden(true);}
-        if(data.id ==6 || data.id == 9){cb_idChanger->setText(tr("Young Cloud"));}
-        if(data.id ==7 || data.id == 10){cb_idChanger->setText(tr("Sephiroth"));}
-        if(data.id == 6 || data.id == 7){cb_idChanger->setCheckState(Qt::Unchecked);}
-        if(data.id == 9 || data.id == 10){cb_idChanger->setCheckState(Qt::Checked);}
+        if(data.id == FF7Char::CaitSith || data.id == FF7Char::YoungCloud){cb_idChanger->setText(tr("Young Cloud"));}
+        if(data.id ==FF7Char::Vincent || data.id == FF7Char::Sephiroth){cb_idChanger->setText(tr("Sephiroth"));}
+        if(data.id == FF7Char::CaitSith || data.id == FF7Char::Vincent){cb_idChanger->setCheckState(Qt::Unchecked);}
+        if(data.id == FF7Char::YoungCloud || data.id == FF7Char::Sephiroth){cb_idChanger->setCheckState(Qt::Checked);}
     }
     else{cb_idChanger->setHidden(true);}
     //Process the limits.
@@ -1380,12 +1379,12 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     }
 
     data.weapon = weapon;
-    if(data.id !=10){weapon_selection->setCurrentIndex(data.weapon-Chars.weapon_offset(data.id));}
+    if(data.id !=FF7Char::Sephiroth){weapon_selection->setCurrentIndex(data.weapon-Chars.weapon_offset(data.id));}
     else{weapon_selection->blockSignals(true);weapon_selection->setCurrentIndex(0);weapon_selection->blockSignals(false);}
 
     armor_selection->setCurrentIndex(data.armor);
 
-    if(data.accessory != 0xFF){accessory_selection->setCurrentIndex(data.accessory);}
+    if(data.accessory != FF7Char::EmptyAccessory){accessory_selection->setCurrentIndex(data.accessory);}
     else{accessory_selection->setCurrentIndex(32);}
     //set the unknowns
     lcd_0x34->display(data.z_4[0]);
@@ -1407,7 +1406,6 @@ void CharEditor::setLevel(int level)
         else if(level>99){data.level=99;}
         else{data.level=level;}
         emit level_changed(data.level);
-        //QMessageBox::information(this,"EMIT",QString("Level_Changed:%1").arg(QString::number(data.level)));
     }
 }
 void CharEditor::cb_sadness_toggled(bool sad)
@@ -1441,7 +1439,6 @@ void CharEditor::setMaxHp(int maxHp)
         else if(maxHp >32767){data.maxHP=32767;}
         else{data.maxHP=maxHp;}
         emit maxHp_changed(data.maxHP);
-        //QMessageBox::information(this,"EMIT",QString("MaxHp_Changed:%1").arg(QString::number(data.maxHP)));
     }
 }
 void CharEditor::setCurHp(int curHp)
@@ -1453,7 +1450,6 @@ void CharEditor::setCurHp(int curHp)
         else if(curHp >32767){data.curHP=32767;}
         else{data.curHP=curHp;}
         emit curHp_changed(data.curHP);
-        //QMessageBox::information(this,"EMIT",QString("CurHp_Changed:%1").arg(QString::number(data.curHP)));
     }
 }
 void CharEditor::setMaxMp(int maxMp)
@@ -1465,7 +1461,6 @@ void CharEditor::setMaxMp(int maxMp)
         else if(maxMp >32767){data.maxMP=32767;}
         else{data.maxMP=maxMp;}
         emit maxMp_changed(data.maxMP);
-        //QMessageBox::information(this,"EMIT",QString("MaxMp_Changed:%1").arg(QString::number(data.maxMP)));
     }
 }
 void CharEditor::setCurMp(int curMp)
@@ -1477,7 +1472,6 @@ void CharEditor::setCurMp(int curMp)
         else if(curMp >32767){data.curMP=32767;}
         else{data.curMP=curMp;}
         emit curMp_changed(data.curMP);
-        //QMessageBox::information(this,"EMIT",QString("CurMp_Changed:%1").arg(QString::number(data.curMP)));
     }
 }
 void CharEditor::setKills(int kills)
@@ -1489,7 +1483,6 @@ void CharEditor::setKills(int kills)
         else if(kills >65535){data.kills=65535;}
         else{data.kills=kills;}
         emit kills_changed(data.kills);
-        //QMessageBox::information(this,"EMIT",QString("Kills_Changed:%1").arg(QString::number(data.kills)));
     }
 }
 void CharEditor::setName(QString name)
@@ -1500,7 +1493,6 @@ void CharEditor::setName(QString name)
         if(name==""){_name = QByteArray(12,0xFF);}
         else{_name = name;}
         emit name_changed(_name);
-        //QMessageBox::information(this,"EMIT",QString("Name_Changed:%1").arg(name));
     }
 }
 void CharEditor::setId(int id)
@@ -1509,11 +1501,10 @@ void CharEditor::setId(int id)
     else
     {
         if(id<0){data.id = 0;}
-        else if(id>0x0B){data.id=0xFF;}
+        else if(id>0x0B){data.id=FF7Char::Empty;}
         else{data.id = id;}
         setChar(data,line_name->text());
         emit id_changed(data.id);
-        //QMessageBox::information(this,"EMIT",QString("Id_Changed:%1").arg(QString::number(data.id)));
     }
 }
 void CharEditor::setStr(int strength)
@@ -1526,7 +1517,6 @@ void CharEditor::setStr(int strength)
         else{data.strength = strength;}
         emit str_changed(data.strength);
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("str_Changed:%1").arg(QString::number(data.strength)));
     }
 }
 void CharEditor::setVit(int vitality)
@@ -1539,7 +1529,6 @@ void CharEditor::setVit(int vitality)
         else{data.vitality = vitality;}
         emit vit_changed(data.vitality);
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("vit_Changed:%1").arg(QString::number(data.vitality)));
     }
 }
 void CharEditor::setMag(int magic)
@@ -1552,7 +1541,6 @@ void CharEditor::setMag(int magic)
         else{data.magic = magic;}
         emit mag_changed(data.magic);
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("mag_Changed:%1").arg(QString::number(data.magic)));
     }
 }
 void CharEditor::setSpi(int spirit)
@@ -1565,7 +1553,6 @@ void CharEditor::setSpi(int spirit)
         else{data.spirit = spirit;}
         emit spi_changed(data.spirit);
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("spi_Changed:%1").arg(QString::number(data.spirit)));
     }
 }
 void CharEditor::setDex(int dexterity)
@@ -1578,7 +1565,6 @@ void CharEditor::setDex(int dexterity)
         else{data.dexterity = dexterity;}
         emit dex_changed(data.dexterity);
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("dex_Changed:%1").arg(QString::number(data.dexterity)));
     }
 }
 void CharEditor::setLck(int luck)
@@ -1591,7 +1577,6 @@ void CharEditor::setLck(int luck)
         else{data.luck = luck;}
         emit lck_changed(data.luck);
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("lck_Changed:%1").arg(QString::number(data.luck)));
     }
 }
 void CharEditor::setStrBonus(int strength_bonus)
@@ -1604,7 +1589,6 @@ void CharEditor::setStrBonus(int strength_bonus)
         else{data.strength_bonus = strength_bonus;}
         emit strBonus_changed(data.strength_bonus);
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("strBonus_Changed:%1").arg(QString::number(data.strength_bonus)));
     }
 }
 void CharEditor::setVitBonus(int vitality_bonus)
@@ -1617,7 +1601,6 @@ void CharEditor::setVitBonus(int vitality_bonus)
         else{data.vitality_bonus = vitality_bonus;}
         emit vitBonus_changed(data.vitality_bonus);
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("vitBonus_Changed:%1").arg(QString::number(data.vitality_bonus)));
     }
 }
 void CharEditor::setMagBonus(int magic_bonus)
@@ -1630,7 +1613,6 @@ void CharEditor::setMagBonus(int magic_bonus)
         else{data.magic_bonus = magic_bonus;}
         emit magBonus_changed(data.magic_bonus);
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("magBonus_Changed:%1").arg(QString::number(data.magic_bonus)));
     }
 }
 void CharEditor::setSpiBonus(int spirit_bonus)
@@ -1643,7 +1625,6 @@ void CharEditor::setSpiBonus(int spirit_bonus)
         else{data.spirit_bonus = spirit_bonus;}
         emit spiBonus_changed(data.spirit_bonus);
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("spiBonus_Changed:%1").arg(QString::number(data.spirit_bonus)));
     }
 }
 void CharEditor::setDexBonus(int dexterity_bonus)
@@ -1656,7 +1637,6 @@ void CharEditor::setDexBonus(int dexterity_bonus)
         else{data.dexterity_bonus = dexterity_bonus;}
         emit dexBonus_changed(data.dexterity_bonus);
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("dexBonus_Changed:%1").arg(QString::number(data.dexterity_bonus)));
     }
 }
 void CharEditor::setLckBonus(int luck_bonus)
@@ -1669,7 +1649,6 @@ void CharEditor::setLckBonus(int luck_bonus)
         else{data.luck_bonus = luck_bonus;}
         emit lckBonus_changed(data.luck_bonus);
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("lckBonus_Changed:%1").arg(QString::number(data.luck_bonus)));
     }
 }
 void CharEditor::setLimitLevel(int limitlevel)
@@ -1681,7 +1660,6 @@ void CharEditor::setLimitLevel(int limitlevel)
         else if(limitlevel>4){data.limitlevel=4;}
         else{data.limitlevel = limitlevel;}
         emit limitLevel_changed(data.limitlevel);
-        //QMessageBox::information(this,"EMIT",QString("limitLevel_Changed:%1").arg(QString::number(data.limitlevel)));
     }
 }
 void CharEditor::setLimitBar(int limitbar)
@@ -1693,7 +1671,6 @@ void CharEditor::setLimitBar(int limitbar)
         else if(limitbar>0xFF){data.limitbar=0xFF;}
         else{data.limitbar = limitbar;}
         emit limitBar_changed(data.limitbar);
-        //QMessageBox::information(this,"EMIT",QString("limitBar_Changed:%1").arg(QString::number(data.limitbar)));
     }
 }
 void CharEditor::setWeapon(int weapon)
@@ -1710,7 +1687,6 @@ void CharEditor::setWeapon(int weapon)
         status_info();
         update_materia_slots();
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("weapon_Changed:%1").arg(QString::number(data.weapon)));
     }
 }
 void CharEditor::setArmor(int armor)
@@ -1719,14 +1695,13 @@ void CharEditor::setArmor(int armor)
     else
     {
         if(armor<0){data.armor=0;}
-        else if(armor>32){data.armor=0xFF;}
+        else if(armor>32){data.armor=FF7Char::EmptyArmor;}
         else {data.armor= armor; }
         emit armor_changed(data.armor);
         elemental_info();
         status_info();
         update_materia_slots();
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("armor_Changed:%1").arg(QString::number(data.armor)));
     }
 }
 void CharEditor::setAccessory(int accessory)
@@ -1735,13 +1710,12 @@ void CharEditor::setAccessory(int accessory)
     else
     {
         if(accessory<0){data.accessory=0;}
-        else if(accessory>32){data.accessory=0xFF;}
+        else if(accessory>32){data.accessory=FF7Char::EmptyAccessory;}
         else {data.accessory = accessory;}
         emit accessory_changed(data.accessory);
         elemental_info();
         status_info();
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("accessory_Changed:%1").arg(QString::number(data.accessory)));
     }
 }
 void CharEditor::setSadnessFury(int sad_fury)
@@ -1749,24 +1723,22 @@ void CharEditor::setSadnessFury(int sad_fury)
     if(sad_fury == data.flags[0]){return;}
     else
     {
-        if(sad_fury==0x10){data.flags[0]=0x10;}
-        else if( sad_fury==0x20 ){data.flags[0]=0x20;}
+        if(sad_fury==FF7Char::Fury){data.flags[0]=FF7Char::Fury;}
+        else if( sad_fury==FF7Char::Sadness ){data.flags[0]=FF7Char::Sadness;}
         else{data.flags[0]=0;}
         emit sadnessfury_changed(data.flags[0]);
     }
-    //QMessageBox::information(this,"EMIT",QString("sad_fury_Changed:%1").arg(QString::number(data.flags[0])));
 
 }
 void CharEditor::setRow(bool front_row)
 {
-    if( (front_row) && (data.flags[1]==0xFF) ){return;}
-    else if((!front_row) && (data.flags[1]==0xFE)){return;}
+    if( (front_row) && (data.flags[1]==FF7Char::FrontRow) ){return;}
+    else if((!front_row) && (data.flags[1]==FF7Char::BackRow)){return;}
     else
     {
-        if(front_row){data.flags[1]=0xFF;}
-        else{data.flags[1]=0xFE;}
+        if(front_row){data.flags[1]=FF7Char::FrontRow;}
+        else{data.flags[1]=FF7Char::BackRow;}
         emit row_changed(data.flags[1]);
-        //QMessageBox::information(this,"EMIT",QString("row_Changed:%1").arg(QString::number(data.flags[1])));
     }
 }
 
@@ -1779,7 +1751,6 @@ void CharEditor::setLevelProgress(int level_progress)
         else if(level_progress >63){data.flags[2]=63;}
         else{data.flags[2]=level_progress;}
         emit levelProgress_changed(data.flags[2]);
-        ////QMessageBox::information(this,"EMIT",QString("Level_Progress_Changed:%1").arg(QString::number(data.flags[2])));
     }
 }
 
@@ -1792,7 +1763,6 @@ void CharEditor::setLimits(int limits)
         else if(limits>32767){data.limits=32767;}
         else {data.limits = limits;}
         emit limits_changed(data.limits);
-        //QMessageBox::information(this,"EMIT",QString("Limits_Changed:%1").arg(QString::number(data.limits,2)));
     }
 }
 void CharEditor::setTimesused1(int timesused)
@@ -1839,7 +1809,6 @@ void CharEditor::setBaseHp(int baseHp)
         else{data.baseHP=baseHp;}
         emit baseHp_changed(data.baseHP);
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("baseHp_Changed:%1").arg(QString::number(data.baseHP)));
     }
 }
 void CharEditor::setBaseMp(int baseMp)
@@ -1852,7 +1821,6 @@ void CharEditor::setBaseMp(int baseMp)
         else{data.baseMP=baseMp;}
         emit baseMp_changed(data.baseMP);
         calc_stats();
-        //QMessageBox::information(this,"EMIT",QString("baseMp_Changed:%1").arg(QString::number(data.baseMP)));
     }
 }
 void CharEditor::setExp(int exp)
@@ -1863,7 +1831,6 @@ void CharEditor::setExp(int exp)
         if(exp<0){data.exp=0;}
         else{data.exp=exp;}
         emit exp_changed(data.exp);
-        //QMessageBox::information(this,"EMIT",QString("exp_Changed:%1").arg(QString::number(data.exp)));
     }
 }
 void CharEditor::setExpNext(int expNext)
@@ -1874,7 +1841,6 @@ void CharEditor::setExpNext(int expNext)
         if(expNext<0){data.expNext=0;}
         else{data.expNext=expNext;}
         emit expNext_changed(data.expNext);
-        //QMessageBox::information(this,"EMIT",QString("expNext_Changed:%1").arg(QString::number(data.expNext)));
     }
 }
 
@@ -1897,7 +1863,7 @@ void CharEditor::setDebug(bool new_debug)
     unknown_box->setVisible(debug);
     combo_id_box->setVisible(debug);
     //if viewing cait/vincent/y.cloud or sephiroth hid the checkbox for simple id changing.
-    if(data.id == 6 ||data.id == 7 || data.id == 9 ||data.id == 10){cb_idChanger->setHidden(debug);}
+    if(data.id ==FF7Char::CaitSith || data.id ==FF7Char::Vincent ||data.id ==FF7Char::YoungCloud || data.id ==FF7Char::Sephiroth ){cb_idChanger->setHidden(debug);}
 
 }
 void CharEditor::setEditable(bool edit)
@@ -2082,7 +2048,7 @@ void CharEditor::calc_stats(void)
         //process materia
         for(int i=0;i<16;i++)
         {
-            if(data.materias[i].id!=0xFF)
+            if(data.materias[i].id!=FF7Materia::EmptyId)
             {
                 bool add=true;
                 int level=0;
@@ -2383,38 +2349,38 @@ void CharEditor::update_materia_slots()
 
      //fill the slots.
 
-     if(data.materias[0].id!=0xFF){weapon_slot_1->setIcon(Materias.Icon(data.materias[0].id));}else{weapon_slot_1->setIcon(QIcon(QString("")));}
-     if(data.materias[0].id!=0xFF){weapon_slot_1->setToolTip(Materias.Name(data.materias[0].id));}else{weapon_slot_1->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[1].id!=0xFF){weapon_slot_2->setIcon(Materias.Icon(data.materias[1].id));}else{weapon_slot_2->setIcon(QIcon(QString("")));}
-     if(data.materias[1].id!=0xFF){weapon_slot_2->setToolTip(Materias.Name(data.materias[1].id));}else{weapon_slot_2->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[2].id!=0xFF){weapon_slot_3->setIcon(Materias.Icon(data.materias[2].id));}else{weapon_slot_3->setIcon(QIcon(QString("")));}
-     if(data.materias[2].id!=0xFF){weapon_slot_3->setToolTip(Materias.Name(data.materias[2].id));}else{weapon_slot_3->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[3].id!=0xFF){weapon_slot_4->setIcon(Materias.Icon(data.materias[3].id));}else{weapon_slot_4->setIcon(QIcon(QString("")));}
-     if(data.materias[3].id!=0xFF){weapon_slot_4->setToolTip(Materias.Name(data.materias[3].id));}else{weapon_slot_4->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[4].id!=0xFF){weapon_slot_5->setIcon(Materias.Icon(data.materias[4].id));}else{weapon_slot_5->setIcon(QIcon(QString("")));}
-     if(data.materias[4].id!=0xFF){weapon_slot_5->setToolTip(Materias.Name(data.materias[4].id));}else{weapon_slot_5->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[5].id!=0xFF){weapon_slot_6->setIcon(Materias.Icon(data.materias[5].id));}else{weapon_slot_6->setIcon(QIcon(QString("")));}
-     if(data.materias[5].id!=0xFF){weapon_slot_6->setToolTip(Materias.Name(data.materias[5].id));}else{weapon_slot_6->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[6].id!=0xFF){weapon_slot_7->setIcon(Materias.Icon(data.materias[6].id));}else{weapon_slot_7->setIcon(QIcon(QString("")));}
-     if(data.materias[6].id!=0xFF){weapon_slot_7->setToolTip(Materias.Name(data.materias[6].id));}else{weapon_slot_7->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[7].id!=0xFF){weapon_slot_8->setIcon(Materias.Icon(data.materias[7].id));}else{weapon_slot_8->setIcon(QIcon(QString("")));}
-     if(data.materias[7].id!=0xFF){weapon_slot_8->setToolTip(Materias.Name(data.materias[7].id));}else{weapon_slot_8->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[8].id!=0xFF){armor_slot_1->setIcon(Materias.Icon(data.materias[8].id));}else{armor_slot_1->setIcon(QIcon(QString("")));}
-     if(data.materias[8].id!=0xFF){armor_slot_1->setToolTip(Materias.Name(data.materias[8].id));}else{armor_slot_1->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[9].id!=0xFF){armor_slot_2->setIcon(Materias.Icon(data.materias[9].id));}else{armor_slot_2->setIcon(QIcon(QString("")));}
-     if(data.materias[9].id!=0xFF){armor_slot_2->setToolTip(Materias.Name(data.materias[9].id));}else{armor_slot_2->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[10].id!=0xFF){armor_slot_3->setIcon(Materias.Icon(data.materias[10].id));}else{armor_slot_3->setIcon(QIcon(QString("")));}
-     if(data.materias[10].id!=0xFF){armor_slot_3->setToolTip(Materias.Name(data.materias[10].id));}else{armor_slot_3->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[11].id!=0xFF){armor_slot_4->setIcon(Materias.Icon(data.materias[11].id));}else{armor_slot_4->setIcon(QIcon(QString("")));}
-     if(data.materias[11].id!=0xFF){armor_slot_4->setToolTip(Materias.Name(data.materias[11].id));}else{armor_slot_4->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[12].id!=0xFF){armor_slot_5->setIcon(Materias.Icon(data.materias[12].id));}else{armor_slot_5->setIcon(QIcon(QString("")));}
-     if(data.materias[12].id!=0xFF){armor_slot_5->setToolTip(Materias.Name(data.materias[12].id));}else{armor_slot_5->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[13].id!=0xFF){armor_slot_6->setIcon(Materias.Icon(data.materias[13].id));}else{armor_slot_6->setIcon(QIcon(QString("")));}
-     if(data.materias[13].id!=0xFF){armor_slot_6->setToolTip(Materias.Name(data.materias[13].id));}else{armor_slot_6->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[14].id!=0xFF){armor_slot_7->setIcon(Materias.Icon(data.materias[14].id));}else{armor_slot_7->setIcon(QIcon(QString("")));}
-     if(data.materias[14].id!=0xFF){armor_slot_7->setToolTip(Materias.Name(data.materias[14].id));}else{armor_slot_7->setToolTip(QString(tr("-Empty-")));}
-     if(data.materias[15].id!=0xFF){armor_slot_8->setIcon(Materias.Icon(data.materias[15].id));}else{armor_slot_8->setIcon(QIcon(QString("")));}
-     if(data.materias[15].id!=0xFF){armor_slot_8->setToolTip(Materias.Name(data.materias[15].id));}else{armor_slot_8->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[0].id!=FF7Materia::EmptyId){weapon_slot_1->setIcon(Materias.Icon(data.materias[0].id));}else{weapon_slot_1->setIcon(QIcon(QString("")));}
+     if(data.materias[0].id!=FF7Materia::EmptyId){weapon_slot_1->setToolTip(Materias.Name(data.materias[0].id));}else{weapon_slot_1->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[1].id!=FF7Materia::EmptyId){weapon_slot_2->setIcon(Materias.Icon(data.materias[1].id));}else{weapon_slot_2->setIcon(QIcon(QString("")));}
+     if(data.materias[1].id!=FF7Materia::EmptyId){weapon_slot_2->setToolTip(Materias.Name(data.materias[1].id));}else{weapon_slot_2->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[2].id!=FF7Materia::EmptyId){weapon_slot_3->setIcon(Materias.Icon(data.materias[2].id));}else{weapon_slot_3->setIcon(QIcon(QString("")));}
+     if(data.materias[2].id!=FF7Materia::EmptyId){weapon_slot_3->setToolTip(Materias.Name(data.materias[2].id));}else{weapon_slot_3->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[3].id!=FF7Materia::EmptyId){weapon_slot_4->setIcon(Materias.Icon(data.materias[3].id));}else{weapon_slot_4->setIcon(QIcon(QString("")));}
+     if(data.materias[3].id!=FF7Materia::EmptyId){weapon_slot_4->setToolTip(Materias.Name(data.materias[3].id));}else{weapon_slot_4->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[4].id!=FF7Materia::EmptyId){weapon_slot_5->setIcon(Materias.Icon(data.materias[4].id));}else{weapon_slot_5->setIcon(QIcon(QString("")));}
+     if(data.materias[4].id!=FF7Materia::EmptyId){weapon_slot_5->setToolTip(Materias.Name(data.materias[4].id));}else{weapon_slot_5->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[5].id!=FF7Materia::EmptyId){weapon_slot_6->setIcon(Materias.Icon(data.materias[5].id));}else{weapon_slot_6->setIcon(QIcon(QString("")));}
+     if(data.materias[5].id!=FF7Materia::EmptyId){weapon_slot_6->setToolTip(Materias.Name(data.materias[5].id));}else{weapon_slot_6->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[6].id!=FF7Materia::EmptyId){weapon_slot_7->setIcon(Materias.Icon(data.materias[6].id));}else{weapon_slot_7->setIcon(QIcon(QString("")));}
+     if(data.materias[6].id!=FF7Materia::EmptyId){weapon_slot_7->setToolTip(Materias.Name(data.materias[6].id));}else{weapon_slot_7->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[7].id!=FF7Materia::EmptyId){weapon_slot_8->setIcon(Materias.Icon(data.materias[7].id));}else{weapon_slot_8->setIcon(QIcon(QString("")));}
+     if(data.materias[7].id!=FF7Materia::EmptyId){weapon_slot_8->setToolTip(Materias.Name(data.materias[7].id));}else{weapon_slot_8->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[8].id!=FF7Materia::EmptyId){armor_slot_1->setIcon(Materias.Icon(data.materias[8].id));}else{armor_slot_1->setIcon(QIcon(QString("")));}
+     if(data.materias[8].id!=FF7Materia::EmptyId){armor_slot_1->setToolTip(Materias.Name(data.materias[8].id));}else{armor_slot_1->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[9].id!=FF7Materia::EmptyId){armor_slot_2->setIcon(Materias.Icon(data.materias[9].id));}else{armor_slot_2->setIcon(QIcon(QString("")));}
+     if(data.materias[9].id!=FF7Materia::EmptyId){armor_slot_2->setToolTip(Materias.Name(data.materias[9].id));}else{armor_slot_2->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[10].id!=FF7Materia::EmptyId){armor_slot_3->setIcon(Materias.Icon(data.materias[10].id));}else{armor_slot_3->setIcon(QIcon(QString("")));}
+     if(data.materias[10].id!=FF7Materia::EmptyId){armor_slot_3->setToolTip(Materias.Name(data.materias[10].id));}else{armor_slot_3->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[11].id!=FF7Materia::EmptyId){armor_slot_4->setIcon(Materias.Icon(data.materias[11].id));}else{armor_slot_4->setIcon(QIcon(QString("")));}
+     if(data.materias[11].id!=FF7Materia::EmptyId){armor_slot_4->setToolTip(Materias.Name(data.materias[11].id));}else{armor_slot_4->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[12].id!=FF7Materia::EmptyId){armor_slot_5->setIcon(Materias.Icon(data.materias[12].id));}else{armor_slot_5->setIcon(QIcon(QString("")));}
+     if(data.materias[12].id!=FF7Materia::EmptyId){armor_slot_5->setToolTip(Materias.Name(data.materias[12].id));}else{armor_slot_5->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[13].id!=FF7Materia::EmptyId){armor_slot_6->setIcon(Materias.Icon(data.materias[13].id));}else{armor_slot_6->setIcon(QIcon(QString("")));}
+     if(data.materias[13].id!=FF7Materia::EmptyId){armor_slot_6->setToolTip(Materias.Name(data.materias[13].id));}else{armor_slot_6->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[14].id!=FF7Materia::EmptyId){armor_slot_7->setIcon(Materias.Icon(data.materias[14].id));}else{armor_slot_7->setIcon(QIcon(QString("")));}
+     if(data.materias[14].id!=FF7Materia::EmptyId){armor_slot_7->setToolTip(Materias.Name(data.materias[14].id));}else{armor_slot_7->setToolTip(QString(tr("-Empty-")));}
+     if(data.materias[15].id!=FF7Materia::EmptyId){armor_slot_8->setIcon(Materias.Icon(data.materias[15].id));}else{armor_slot_8->setIcon(QIcon(QString("")));}
+     if(data.materias[15].id!=FF7Materia::EmptyId){armor_slot_8->setToolTip(Materias.Name(data.materias[15].id));}else{armor_slot_8->setToolTip(QString(tr("-Empty-")));}
 
      //set up weapon
      QString ap_rate =tr("AP:x%1").arg(Items.m_growth_rate(data.weapon +128));
@@ -2463,14 +2429,14 @@ void CharEditor::update_materia_slots()
 void CharEditor::matId_changed(qint8 id)
 {
     if(id>=0 &&id<91){data.materias[mslotsel].id = id;}
-    else{data.materias[mslotsel].id = 0xFF;}
+    else{data.materias[mslotsel].id = FF7Materia::EmptyId;}
     update_materia_slots();
     emit Materias_changed(data.materias[mslotsel]);
     calc_stats();
 }
 void CharEditor::matAp_changed(qint32 ap)
 {
-    if(ap>=0 && ap<16777215)
+    if(ap>=0 && ap<FF7Materia::MaxMateriaAp)
     {
         int a = (ap & 0xff);
         int b = (ap & 0xff00) >> 8;
@@ -2644,14 +2610,14 @@ void CharEditor::setSlotFrame(void)
 }
 void CharEditor::cb_idChanger_toggled(bool checked)
 {
-    if(checked && data.id == 6){combo_id->setCurrentIndex(9);}
-    if(checked && data.id == 7){combo_id->setCurrentIndex(10);}
-    if(!checked && data.id ==9){combo_id->setCurrentIndex(6);}
-    if(!checked && data.id ==10){combo_id->setCurrentIndex(7);}
+    if(checked && data.id == FF7Char::CaitSith){combo_id->setCurrentIndex(FF7Char::YoungCloud);}
+    if(checked && data.id == FF7Char::Vincent){combo_id->setCurrentIndex(FF7Char::Sephiroth);}
+    if(!checked && data.id ==FF7Char::YoungCloud){combo_id->setCurrentIndex(FF7Char::CaitSith);}
+    if(!checked && data.id ==FF7Char::Sephiroth){combo_id->setCurrentIndex(FF7Char::Vincent);}
 }
 void CharEditor::MaxStats()
 {
-    if(data.id ==9 || data.id == 10){return;}
+    if(data.id ==FF7Char::YoungCloud || data.id == FF7Char::Sephiroth){return;}
     else
     {
         sb_base_hp->setValue(32767);
@@ -2666,12 +2632,12 @@ void CharEditor::MaxStats()
         sb_curMp->setValue(data.maxMP);
 
         //do limits.
-        if(data.id ==6)
-        {//Cait Sith
+        if(data.id ==FF7Char::CaitSith)
+        {
             sb_limit_level->setValue(2);
             this->setLimits(0x09);
         }
-        else if (data.id ==7)
+        else if (data.id ==FF7Char::Vincent)
         {
             sb_limit_level->setValue(4);
             this->setLimits(0x249);
@@ -2686,7 +2652,7 @@ void CharEditor::MaxStats()
 }
 void CharEditor::MaxEquip()
 {
-    if(data.id ==9 || data.id ==10){return;}
+    if(data.id ==FF7Char::Vincent || data.id ==FF7Char::Sephiroth){return;}
     else
     {
         //set up weapons/ armor
@@ -2699,14 +2665,14 @@ void CharEditor::MaxEquip()
             quint8 new_id;
             switch(i)
             {
-                case 6: new_id = 0x0C; break;
-                case 5: new_id = 0x0B; break;
-                case 4: new_id = 0x0A; break;
-                case 3: new_id = 0x5A; break;
-                case 2: new_id = 0x2C; break;
-                case 1: new_id = 0x30; break;
-                case 0: new_id = 0x49; break;
-                default: new_id= 0xFF;break;
+                case 6: new_id = FF7Materia::MegaAll; break;
+                case 5: new_id = FF7Materia::LongRange; break;
+                case 4: new_id = FF7Materia::PreEmptive; break;
+                case 3: new_id = FF7Materia::MasterSummon; break;
+                case 2: new_id = FF7Materia::EnemySkill; break;
+                case 1: new_id = FF7Materia::MasterCommand; break;
+                case 0: new_id = FF7Materia::MasterMagic; break;
+                default: new_id= FF7Materia::EmptyId;break;
             }
             data.materias[i].id = new_id;
             data.materias[i].ap[0] = 0xFF;
@@ -2715,7 +2681,7 @@ void CharEditor::MaxEquip()
             mslotsel = i;
             this->mslotChanged(i);
             this->matId_changed(new_id);
-            this->matAp_changed(0xFFFFFF);
+            this->matAp_changed(FF7Materia::MaxMateriaAp);
         }
         update_materia_slots();
         cb_front_row->setCheckState(Qt::Unchecked);

@@ -214,10 +214,8 @@ public:
   void setChocoPCount(int s, int chocoSlot,quint8 value);
   void setChocoPersonality(int s, int chocoSlot,quint8 value);
   void setChocoCantMate(int s,int chocoSlot,bool cantMate);
-
   //publicly accessable core data(for now)
   FF7SLOT slot[15]; //core slot data.
-
   // Return File Info
   int len_file(void);//Return File length.
   int len_file_header(void);//Return File Header length

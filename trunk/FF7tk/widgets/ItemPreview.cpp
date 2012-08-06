@@ -281,7 +281,7 @@ void ItemPreview::setItem(int id)
 }
 void ItemPreview::elemental_info(int id)
 {
-    int y=this->font().pointSize()*2;
+    int y=6+this->font().pointSize()*2;
     bool show=false;
     elemental_effects->clear();
     if(id<0 || id>319){/*invalid number*/}
@@ -310,16 +310,16 @@ void ItemPreview::elemental_info(int id)
             }
             switch(element)
             {
-                case -3: effect.prepend(tr("Absorb:"));break;
-                case -2: effect.prepend(tr("Nullify:"));break;
-                case -1: effect.prepend(tr("Halve:"));break;
-                case  0: effect.clear();break;
-                case +1: effect.prepend(tr("Attack:"));break;
+                case FF7Item::Absorb: effect.prepend(tr("Absorb:"));break;
+                case FF7Item::Nullify: effect.prepend(tr("Nullify:"));break;
+                case FF7Item::Halve: effect.prepend(tr("Halve:"));break;
+                case FF7Item::NoEffect: effect.clear();break;
+                case FF7Item::Damage: effect.prepend(tr("Attack:"));break;
             }
             if(!effect.isNull())
             {
                 elemental_effects->addItem(effect);
-                show=true; y+=this->font().pointSize()*1.90;
+                show=true; y+=this->font().pointSize()*2;
             }
         }//end of for Loop
        // if(this->windowFlags() !=Qt::Popup && this->windowFlags() !=Qt::ToolTip)
@@ -336,7 +336,7 @@ void ItemPreview::elemental_info(int id)
 
 void ItemPreview::status_info(int id)
 {
-    int y=this->font().pointSize()*2;
+    int y=6+this->font().pointSize()*2;
     bool show=false;
     status_effects->clear();
     if(id<0 || id>319){/*invalid number*/}
@@ -374,16 +374,16 @@ void ItemPreview::status_info(int id)
             }
             switch(status)
             {
-                case -2: effect.prepend(tr("Protect:")); break;
-                case -1: effect.prepend(tr("Remove:")); break;
-                case  0: effect.clear();break;
-                case +1: effect.prepend(tr("Inflict:")); break;
-                case +2: effect.prepend(tr("OnBattle:"));break;
+                case FF7Item::Protect: effect.prepend(tr("Protect:")); break;
+                case FF7Item::Remove: effect.prepend(tr("Remove:")); break;
+                case  FF7Item::NoEffect: effect.clear();break;
+                case FF7Item::Infilict: effect.prepend(tr("Inflict:")); break;
+                case FF7Item::SelfCast: effect.prepend(tr("OnBattle:"));break;
             }
             if(!effect.isNull())
             {
                 status_effects->addItem(effect);
-                show=true; y+=this->font().pointSize()*1.90;
+                show=true; y+=this->font().pointSize()*2;
             }
         }//end of for Loop
         //if(this->windowFlags() == Qt::Popup || this->windowFlags() ==Qt::ToolTip)

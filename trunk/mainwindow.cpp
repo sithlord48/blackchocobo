@@ -34,7 +34,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     curchar =0;
     mslotsel=0;
     s=0;
-    buffer_materia.id=0xFF;
+    buffer_materia.id=FF7Materia::EmptyId;
     for(int i=0;i<4;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
     init_display();
     init_connections();
@@ -102,15 +102,15 @@ void MainWindow::init_display()
     ui->cb_farm_items_8->setVisible(false);
     load=false;
 
-    ui->lbl_love_barret->setPixmap(Chars.Pixmap(1));
-    ui->lbl_love_tifa->setPixmap(Chars.Pixmap(2));
-    ui->lbl_love_aeris->setPixmap(Chars.Pixmap(3));
-    ui->lbl_love_yuffie->setPixmap(Chars.Pixmap(5));
+    ui->lbl_love_barret->setPixmap(Chars.Pixmap(FF7Char::Barret));
+    ui->lbl_love_tifa->setPixmap(Chars.Pixmap(FF7Char::Tifa));
+    ui->lbl_love_aeris->setPixmap(Chars.Pixmap(FF7Char::Aerith));
+    ui->lbl_love_yuffie->setPixmap(Chars.Pixmap(FF7Char::Yuffie));
 
-    ui->lbl_battle_love_barret->setPixmap(Chars.Pixmap(1));
-    ui->lbl_battle_love_tifa->setPixmap(Chars.Pixmap(2));
-    ui->lbl_battle_love_aeris->setPixmap(Chars.Pixmap(3));
-    ui->lbl_battle_love_yuffie->setPixmap(Chars.Pixmap(5));
+    ui->lbl_battle_love_barret->setPixmap(Chars.Pixmap(FF7Char::Barret));
+    ui->lbl_battle_love_tifa->setPixmap(Chars.Pixmap(FF7Char::Tifa));
+    ui->lbl_battle_love_aeris->setPixmap(Chars.Pixmap(FF7Char::Aerith));
+    ui->lbl_battle_love_yuffie->setPixmap(Chars.Pixmap(FF7Char::Yuffie));
 
     for(int i=0;i<11;i++){ui->combo_party1->addItem(Chars.Icon(i),Chars.defaultName(i));}
     for(int i=0;i<11;i++){ui->combo_party2->addItem(Chars.Icon(i),Chars.defaultName(i));}
@@ -122,9 +122,9 @@ void MainWindow::init_display()
     ui->combo_party3->addItem(Chars.Icon(0x0B),QString("0x0B"));
     ui->combo_party3->addItem(Chars.Icon(0xFF),tr("-Empty-"));
 
-    ui->cb_world_party_leader->addItem(Chars.Icon(0),Chars.defaultName(0));
-    ui->cb_world_party_leader->addItem(Chars.Icon(2),Chars.defaultName(2));
-    ui->cb_world_party_leader->addItem(Chars.Icon(8),Chars.defaultName(8));
+    ui->cb_world_party_leader->addItem(Chars.Icon(0),Chars.defaultName(FF7Char::Cloud));
+    ui->cb_world_party_leader->addItem(Chars.Icon(2),Chars.defaultName(FF7Char::Tifa));
+    ui->cb_world_party_leader->addItem(Chars.Icon(8),Chars.defaultName(FF7Char::Cid));
 
 
     dialog_preview = new DialogPreview();
@@ -1527,30 +1527,30 @@ void MainWindow::materiaupdate(void)
         quint8 current_id= ff7->partyMateriaId(s,mat);
         QString ap;
 
-        if(current_id == 0x2C)
+        if(current_id == FF7Materia::EnemySkill)
         {
             newItem = new QTableWidgetItem(Materias.Icon(current_id),Materias.Name(current_id),0);
             ui->tbl_materia->setItem(mat,0,newItem);
-            if (current_ap == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
+            if (current_ap == FF7Materia::MaxMateriaAp){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
             else{newItem =new QTableWidgetItem(QString("N/A"),0);ui->tbl_materia->setItem(mat,1,newItem);}
         }
-        else if (current_id !=0xff)
+        else if (current_id !=FF7Materia::EmptyId)
         {
             newItem = new QTableWidgetItem(Materias.Icon(current_id),Materias.Name(current_id),0);
             ui->tbl_materia->setItem(mat,0,newItem);
-            if (current_ap == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
+            if (current_ap == FF7Materia::MaxMateriaAp){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia->setItem(mat,1,newItem);}
             else{newItem =new QTableWidgetItem(ap.setNum(current_ap));ui->tbl_materia->setItem(mat,1,newItem);}
         }
         else
         {
-            ff7->setPartyMateria(s,mat,0xFF,0xFFFFFF);//invalid insure its clear.
+            ff7->setPartyMateria(s,mat,FF7Materia::EmptyId,FF7Materia::MaxMateriaAp);//invalid insure its clear.
             newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
             ui->tbl_materia->setItem(mat,0,newItem);
             newItem = new QTableWidgetItem("",0);
             ui->tbl_materia->setItem(mat,1,newItem);
         }
     }
-    if(ff7->partyMateriaId(s,j) == 0x2C){mat_spacer->changeSize(0,0,QSizePolicy::Fixed,QSizePolicy::Fixed);}
+    if(ff7->partyMateriaId(s,j) == FF7Materia::EnemySkill){mat_spacer->changeSize(0,0,QSizePolicy::Fixed,QSizePolicy::Fixed);}
     else{mat_spacer->changeSize(0,0,QSizePolicy::Fixed,QSizePolicy::MinimumExpanding);}
     materia_editor->setMateria(ff7->partyMateriaId(s,j),ff7->partyMateriaAp(s,j));
     ui->tbl_materia->setCurrentCell(j,1);//so that right side is set correctly.
@@ -1927,12 +1927,12 @@ void MainWindow::guirefresh(bool newgame)
         {
             QString ap;
             quint8 current_id = ff7->stolenMateriaId(s,mat);
-            if (current_id !=0xff)
+            if (current_id !=FF7Materia::EmptyId)
             {
                 newItem = new QTableWidgetItem(QPixmap::fromImage(Materias.Image(current_id)),Materias.Name(current_id),0);
                 ui->tbl_materia_2->setItem(mat,0,newItem);
                 qint32 current_ap = ff7->stolenMateriaAp(s,mat);
-                if (current_ap == 0xFFFFFF){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia_2->setItem(mat,1,newItem);}
+                if (current_ap == FF7Materia::MaxMateriaAp){newItem =new QTableWidgetItem(tr("Master"));ui->tbl_materia_2->setItem(mat,1,newItem);}
                 else{newItem =new QTableWidgetItem(ap.setNum(current_ap));ui->tbl_materia_2->setItem(mat,1,newItem);}
             }
             else
@@ -2274,7 +2274,7 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
         ff7->setParty(s,0,index);
         ff7->setDescParty(s,0,ff7->Party(s,0));
         // IF ID >8 no char slot so for 9, 10, 11 Use slot 6,7,8 char data.
-        if(ff7->Party(s,0)== 9)
+        if(ff7->Party(s,0)== FF7Char::YoungCloud)
         {
             ff7->setDescCurHP(s,ff7->charCurrentHp(s,6));
             ff7->setDescMaxHP(s,ff7->charMaxHp(s,6));
@@ -2283,7 +2283,7 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
             ff7->setDescLevel(s,ff7->charLevel(s,6));
             ff7->setDescName(s,ff7->charName(s,6));
         }
-        else if(ff7->Party(s,0)== 10)
+        else if(ff7->Party(s,0)== FF7Char::Sephiroth)
         {
             ff7->setDescCurHP(s,ff7->charCurrentHp(s,7));
             ff7->setDescMaxHP(s,ff7->charMaxHp(s,7));
@@ -2293,7 +2293,7 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
             ff7->setDescName(s,ff7->charName(s,7));
         }
         else if(ff7->Party(s,0)== 11)
-        {
+        {//chocobo? that never really works.
             ff7->setDescCurHP(s,ff7->charCurrentHp(s,8));
             ff7->setDescMaxHP(s,ff7->charMaxHp(s,8));
             ff7->setDescCurMP(s,ff7->charCurrentMp(s,8));
@@ -2314,14 +2314,14 @@ void MainWindow::on_combo_party1_currentIndexChanged(int index)
 }}
 void MainWindow::on_combo_party2_currentIndexChanged(int index)
 {if(!load){file_modified(true);
-    if(index == 12){ff7->setParty(s,1,0xFF);}
+    if(index == 12){ff7->setParty(s,1,FF7Char::Empty);}
     else{ff7->setParty(s,1,index);}
     //either way set the desc
     ff7->setDescParty(s,1,ff7->Party(s,1));
 }}
 void MainWindow::on_combo_party3_currentIndexChanged(int index)
 {if(!load){file_modified(true);
-        if(index == 12){ff7->setParty(s,2,0xFF);}
+        if(index == 12){ff7->setParty(s,2,FF7Char::Empty);}
         else{ff7->setParty(s,2,index);}
         //either way set the desc
         ff7->setDescParty(s,2,ff7->Party(s,2));
@@ -2586,28 +2586,28 @@ void MainWindow::on_btn_add_all_materia_clicked()
     //place one of each at lowest ossible point
     for(int i=117;i<142;i++)
     {//Starting With Magic Materia
-        if(i<132){ff7->setPartyMateria(s,i,(i-68),16777215);}
-        else if((i>=132) && (i<136)){ff7->setPartyMateria(s,(i-1),(i-68),16777215);}
-        else if((i>=136) && (i<142)){ff7->setPartyMateria(s,(i-3),(i-68),16777215);}
+        if(i<132){ff7->setPartyMateria(s,i,(i-68),FF7Materia::MaxMateriaAp);}
+        else if((i>=132) && (i<136)){ff7->setPartyMateria(s,(i-1),(i-68),FF7Materia::MaxMateriaAp);}
+        else if((i>=136) && (i<142)){ff7->setPartyMateria(s,(i-3),(i-68),FF7Materia::MaxMateriaAp);}
     }
     // Then Support
-    for(int i=139;i<152;i++){ff7->setPartyMateria(s,i,(i-116),16777215);}
+    for(int i=139;i<152;i++){ff7->setPartyMateria(s,i,(i-116),FF7Materia::MaxMateriaAp);}
 
     for(int i=152;i<166;i++)
     {//Then Command
-        if(i<154){ff7->setPartyMateria(s,i,(i-138),16777215);}
-        else if(i<157){ff7->setPartyMateria(s,i,(i-135),16777215);}
-        else if(i<159){ff7->setPartyMateria(s,i,(i-121),16777215);}
-        else if(i<165){ff7->setPartyMateria(s,i,(i-120),16777215);}
-        else {ff7->setPartyMateria(s,i,0x30,16777215);}
+        if(i<154){ff7->setPartyMateria(s,i,(i-138),FF7Materia::MaxMateriaAp);}
+        else if(i<157){ff7->setPartyMateria(s,i,(i-135),FF7Materia::MaxMateriaAp);}
+        else if(i<159){ff7->setPartyMateria(s,i,(i-121),FF7Materia::MaxMateriaAp);}
+        else if(i<165){ff7->setPartyMateria(s,i,(i-120),FF7Materia::MaxMateriaAp);}
+        else {ff7->setPartyMateria(s,i,0x30,FF7Materia::MaxMateriaAp);}
     }
     for(int i=166;i<183;i++)
     {//And Independent
-        if(i<180){ff7->setPartyMateria(s,i,(i-166),16777215);}
-        else{ff7->setPartyMateria(s,i,(i-164),16777215);}
+        if(i<180){ff7->setPartyMateria(s,i,(i-166),FF7Materia::MaxMateriaAp);}
+        else{ff7->setPartyMateria(s,i,(i-164),FF7Materia::MaxMateriaAp);}
     }
     //Finish With Summons
-    for(int i=183;i<200;i++){ff7->setPartyMateria(s,i,(i-109),16777215);}
+    for(int i=183;i<200;i++){ff7->setPartyMateria(s,i,(i-109),FF7Materia::MaxMateriaAp);}
     materiaupdate();
 }
 
@@ -2814,16 +2814,16 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ui->sb_coordz->setValue(15);
         // set up young cloud, Copy Cloud Change ID to young Cloud
         ff7->setChar(s,6,ff7->Char(s,0));
-        ff7->setCharID(s,6,9);
+        ff7->setCharID(s,6,FF7Char::YoungCloud);
         //set up Sephiroth
-        ff7->setCharID(s,7,10);
+        ff7->setCharID(s,7,FF7Char::Sephiroth);
         if(ff7->region(s).contains("00700") || ff7->region(s).contains("01057"))
         {        ff7->setCharName(s,7,QString::fromUtf8("セフィロス"));
         }
         else{ff7->setCharName(s,7,QString::fromUtf8("Sephiroth"));}
         set_char_buttons();
-        if(curchar == 6){char_editor->setChar(ff7->Char(s,6),ff7->charName(s,6));}
-        else if(curchar ==7){char_editor->setChar(ff7->Char(s,7),ff7->charName(s,7));}
+        if(curchar == FF7Char::CaitSith){char_editor->setChar(ff7->Char(s,6),ff7->charName(s,6));}
+        else if(curchar ==FF7Char::Vincent){char_editor->setChar(ff7->Char(s,7),ff7->charName(s,7));}
         ui->label_replaynote->setText(tr("Setting This Will Copy Cloud as is to young cloud (caitsith's slot). sephiroth's stats will come directly from vincent."));
     }
 
@@ -2870,7 +2870,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~FUNCTIONS FOR TESTING~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_btn_remove_all_items_clicked() //used for testing
 {
-    for(int i=0;i<320;i++){ff7->setItem(s,i,0x1FF,0x7F);}
+    for(int i=0;i<320;i++){ff7->setItem(s,i,FF7Item::EmptyItemData);}
     if(!load){file_modified(true); }
     itemlist->setItems(ff7->items(s));
     //itemupdate();
@@ -2878,14 +2878,14 @@ void MainWindow::on_btn_remove_all_items_clicked() //used for testing
 
 void MainWindow::on_btn_remove_all_materia_clicked()
 {
-    for (int i=0;i<200;i++){ff7->setPartyMateria(s,i,0xFF,16777215);}
+    for (int i=0;i<200;i++){ff7->setPartyMateria(s,i,FF7Materia::EmptyId,FF7Materia::MaxMateriaAp);}
     if(!load){file_modified(true); }
     materiaupdate();
 }
 
 void MainWindow::on_btn_remove_all_stolen_clicked()
 {
-    for(int i=0;i<48;i++){ff7->setStolenMateria(s,i,0xFF,0xFFFFFF);}
+    for(int i=0;i<48;i++){ff7->setStolenMateria(s,i,FF7Materia::EmptyId,FF7Materia::MaxMateriaAp);}
     if(!load){file_modified(true);}
     guirefresh(0);
 }
@@ -4254,7 +4254,7 @@ void MainWindow::char_mslot_changed(int slot){mslotsel=slot;}
 
 void MainWindow::on_btn_maxChar_clicked()
 {
-    if(ff7->charID(s,curchar)==9 || ff7->charID(s,curchar) == 10 ||  _init){return;}//no char selected, sephiroth and young cloud.
+    if(ff7->charID(s,curchar)==FF7Char::YoungCloud || ff7->charID(s,curchar) == FF7Char::Sephiroth  ||  _init){return;}//no char selected, sephiroth and young cloud.
     int result = QMessageBox::question(this,tr("Black Chococbo"),tr("Replace %1's Materia and Equipment").arg(ff7->charName(s,curchar)),QMessageBox::Yes,QMessageBox::No);
     switch(result)
     {
@@ -4278,5 +4278,4 @@ void MainWindow::Items_Changed(QList<quint16> items)
 {
     ff7->setItems(s,items);
     file_modified(true);
-    //itemupdate();
 }
