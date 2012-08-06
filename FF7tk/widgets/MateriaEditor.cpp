@@ -24,7 +24,7 @@ MateriaEditor::MateriaEditor(QWidget *parent):QWidget(parent)
     init_display();
     init_data();
     init_connections();
-    setMateria(0xFF,0xFFFFFF);//Smallest Possible Size. ready for use now.
+    setMateria(FF7Materia::EmptyId,FF7Materia::MaxMateriaAp);//Smallest Possible Size. ready for use now.
 }
 /*
 MateriaEditor::MateriaEditor(QWidget *parent, quint8 materia_id,qint32 materia_ap):QWidget(parent)
@@ -273,11 +273,11 @@ void MateriaEditor::init_data()
     eskill_list->setSelectionMode(QAbstractItemView::NoSelection);
     //Fill Combo_type
     combo_type->addItem(data->Icon_AllMateria(),tr("All Materia"));
-    combo_type->addItem(data->Icon(0x3B),tr("Magic"));
-    combo_type->addItem(data->Icon(0x5A),tr("Summon"));
-    combo_type->addItem(data->Icon(0x00),tr("Independent"));
+    combo_type->addItem(data->Icon(FF7Materia::MasterMagic),tr("Magic"));
+    combo_type->addItem(data->Icon(FF7Materia::MasterSummon),tr("Summon"));
+    combo_type->addItem(data->Icon(FF7Materia::Underwater),tr("Independent"));
     combo_type->addItem(data->Icon(0x1D),tr("Support"));
-    combo_type->addItem(data->Icon(0x24),tr("Command"));
+    combo_type->addItem(data->Icon(FF7Materia::MasterCommand),tr("Command"));
 
     //Set initial combo_materia info.
     for(int i=0;i<91;i++)
@@ -312,11 +312,11 @@ void MateriaEditor::setMateria(quint8 materia_id,qint32 materia_ap)
     }
     else
     {//Invalid Data Reset Materia.
-        if(_id != 0xFF){emit id_changed(0xFF);}
-        _id=0xFF;
+        if(_id != FF7Materia::EmptyId){emit id_changed(FF7Materia::EmptyId);}
+        _id=FF7Materia::EmptyId;
         sb_ap->setEnabled(0);
-        sb_ap->setValue(16777215);
-        _current_ap = 16777215;//set since setAp ingores the 0xFF id.
+        sb_ap->setValue(FF7Materia::MaxMateriaAp);
+        _current_ap = FF7Materia::MaxMateriaAp;//set since setAp ingores the 0xFF id.
         box_status_effects->setHidden(true);
         box_stats->setHidden(true);
     }
@@ -330,11 +330,11 @@ void MateriaEditor::setAP(qint32 ap)
 {
     sb_ap->setMaximum(MaxAP());lcd_max_ap->display(MaxAP());
 
-    if( (_id ==0x11) || (_id==0x30) || (_id==0x49) ||(_id==0x5A) ||(_id==0x2C))
+    if( (_id ==FF7Materia::Underwater) || (_id==FF7Materia::MasterCommand) || (_id==FF7Materia::MasterMagic) ||(_id==FF7Materia::MasterSummon) ||(_id==FF7Materia::EnemySkill))
     {
         frm_ap_stars->setHidden(true);
         if(_current_ap != ap){_current_ap = ap; emit(ap_changed(_current_ap));}
-        if(_id==0x2C)
+        if(_id==FF7Materia::EnemySkill)
         {//Eskill Materia Specialness.
             for (int i=0;i<24;i++)
             {
@@ -343,18 +343,18 @@ void MateriaEditor::setAP(qint32 ap)
             }
         }
     }
-    else if(_id ==0xFF){frm_ap_stars->setHidden(false);}
+    else if(_id ==FF7Materia::EmptyId){frm_ap_stars->setHidden(false);}
     else
     {//All Other Materia
         frm_ap_stars->setHidden(false);
-        if( (ap <16777215) && (ap<_level_ap[_max_level-1]) )
+        if( (ap <FF7Materia::MaxMateriaAp) && (ap<_level_ap[_max_level-1]) )
         {
             _current_ap = ap;
             sb_ap->setValue(_current_ap);
         }
         else
         {
-            _current_ap = 16777215;
+            _current_ap = FF7Materia::MaxMateriaAp;
             sb_ap->setValue(_level_ap[_max_level-1]);
         }
         emit ap_changed(_current_ap);
@@ -364,10 +364,10 @@ void MateriaEditor::setAP(qint32 ap)
 
 void MateriaEditor::setName()
 {
-    if(_id==0xFF){combo_type->setCurrentIndex(0);combo_materia->setCurrentIndex(-1);}
+    if(_id==FF7Materia::EmptyId){combo_type->setCurrentIndex(0);combo_materia->setCurrentIndex(-1);}
     else
     {
-        if(combo_type->currentIndex()!=0){combo_type->setCurrentIndex(_type);}
+        if(combo_type->currentIndex()!=FF7Materia::Unknown){combo_type->setCurrentIndex(_type);}
         for(int i=0;i<combo_materia->count();i++)
         {//loop thru type and see if name matches if so set index and stop
             if(_name == combo_materia->itemText(i)){combo_materia->setCurrentIndex(i);return;}
@@ -380,7 +380,7 @@ void MateriaEditor::setStats()
     list_status->clear();
     lbl_stats->clear();
     QString title = tr("Skills");
-    if(_id !=0xFF)
+    if(_id !=FF7Materia::EmptyId)
     {
         if(data->Element(_id)!="")
         {
@@ -407,7 +407,7 @@ void MateriaEditor::setStats()
 void MateriaEditor::setLevel()
 {
     _level=0;
-    if( (_id==0x2C)||(_id==0x11)||(_id==0x30)||(_id==0x49)||(_id==0x5A)){_level=1;}
+    if( (_id==FF7Materia::EnemySkill)||(_id==FF7Materia::Underwater)||(_id==FF7Materia::MasterCommand)||(_id==FF7Materia::MasterMagic)||(_id==FF7Materia::MasterSummon)){_level=1;}
     else{for(int i=0;i<_max_level;i++){if(_current_ap >= _level_ap[i]){_level++;}}}
     setStars();
     setSkills();
@@ -417,7 +417,7 @@ void MateriaEditor::setStars()
 {
    //Hide if its eskill Materia
 
-    if((_id==0x2C)||(_id==0x11)||(_id ==0x30)||(_id==0x49)||(_id==0x5A)||(_id==0xFF)){box_stars->setHidden(true);return;}
+    if((_id==FF7Materia::EnemySkill)||(_id==FF7Materia::Underwater)||(_id==FF7Materia::MasterCommand)||(_id==FF7Materia::MasterMagic)||(_id==FF7Materia::MasterSummon)||(_id==FF7Materia::EmptyId)){box_stars->setHidden(true);return;}
     else
     {
         box_stars->setHidden(false);
@@ -456,7 +456,7 @@ void MateriaEditor::setStars()
 void MateriaEditor::setSkills()
 {
     list_skills->clear();
-    if( _id ==0x2C)
+    if( _id ==FF7Materia::EnemySkill)
     {
         box_skills->setHidden(false);
         list_skills->setHidden(true);
@@ -464,7 +464,7 @@ void MateriaEditor::setSkills()
         frm_skill_status->adjustSize();
         v_spacer->changeSize(0,6,QSizePolicy::Preferred,QSizePolicy::Fixed);
     }
-    else if(_id ==0xFF)
+    else if(_id ==FF7Materia::EmptyId)
     {
         box_skills->setHidden(true);
         list_skills->setHidden(true);
@@ -494,7 +494,7 @@ void MateriaEditor::btn_star1_clicked(){setAP(_level_ap[0]);setLevel();}
 void MateriaEditor::btn_star2_clicked(){setAP(_level_ap[1]);setLevel();}
 void MateriaEditor::btn_star3_clicked(){setAP(_level_ap[2]);setLevel();}
 void MateriaEditor::btn_star4_clicked(){setAP(_level_ap[3]);setLevel();}
-void MateriaEditor::btn_star5_clicked(){setAP(16777215);setLevel();}
+void MateriaEditor::btn_star5_clicked(){setAP(FF7Materia::MaxMateriaAp);setLevel();}
 
 void MateriaEditor::materia_changed(QString new_name)
 {
@@ -511,13 +511,13 @@ void MateriaEditor::type_changed(int new_type)
     if(new_type ==0)for(int i=0;i<91;i++){if(data->Name(i) !="DON'T USE"){combo_materia->addItem(data->Icon(i),data->Name(i));}}
     else{for(int i=0;i<91;i++){if(data->Type(i) == new_type){combo_materia->addItem(data->Icon(i),data->Name(i));}}}
     //look for the current id in the new list if found set it other wise set index -1
-    if(_id !=0xFF){combo_materia->setCurrentIndex(combo_materia->findText(data->Name(_id)));}
+    if(_id !=FF7Materia::EmptyId){combo_materia->setCurrentIndex(combo_materia->findText(data->Name(_id)));}
 
     else{combo_materia->setCurrentIndex(-1);}
     combo_materia->blockSignals(0);
 }
 
-void MateriaEditor::remove_materia(void){setMateria(0xFF,0xFFFFFF);}
+void MateriaEditor::remove_materia(void){setMateria(FF7Materia::EmptyId,FF7Materia::MaxMateriaAp);}
 
 qint32 MateriaEditor::ap(void){return _current_ap;}
 qint8 MateriaEditor::id(void){return _id;}
@@ -532,18 +532,18 @@ void MateriaEditor::eskill_list_clicked(QModelIndex index)
 }
 qint32 MateriaEditor::MaxAP(void)
 {
-    if( (_id!=0x11) || (_id !=0x30) || (_id!=0x49) ||(_id!=0x5A) || (_id!=0x2C))
+    if( (_id!=FF7Materia::Underwater) || (_id !=FF7Materia::MasterCommand) || (_id!=FF7Materia::MasterMagic) ||(_id!=FF7Materia::MasterSummon) || (_id!=FF7Materia::EnemySkill))
     {
         return _level_ap[_max_level-1];
     }
-    else{return 16777215;}
+    else{return FF7Materia::MaxMateriaAp;}
 }
 
 void MateriaEditor::copy_materia(){buffer_id= _id; buffer_ap = _current_ap;}
 void MateriaEditor::paste_materia(){setMateria(buffer_id,buffer_ap);}
 
 void MateriaEditor::btn_clear_eskill_clicked(){if(_current_ap!=0){setAP(0);}}
-void MateriaEditor::btn_master_eskill_clicked(){if(_current_ap != 16777215){setAP(16777215);}}
+void MateriaEditor::btn_master_eskill_clicked(){if(_current_ap != FF7Materia::MaxMateriaAp){setAP(FF7Materia::MaxMateriaAp);}}
 
 void MateriaEditor::setStarsSize(int size)
 {
@@ -596,7 +596,7 @@ void MateriaEditor::editMode(void)
     btn_star4->blockSignals(!editable);
     btn_star5->blockSignals(!editable);
     //Set Enabled = editable
-    if(_id != 0xFF){sb_ap->setEnabled(editable);}
+    if(_id != FF7Materia::EmptyId){sb_ap->setEnabled(editable);}
     btn_paste_materia->setEnabled(editable);
     btn_rm_materia->setEnabled(editable);
     combo_materia->setEnabled(editable);

@@ -18,6 +18,7 @@
 #include <QObject>
 
 class FF7TEXT{
+  //  Q_OBJECT
 private:
     QString eng;
     QString jap;

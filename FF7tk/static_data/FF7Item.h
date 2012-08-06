@@ -105,6 +105,33 @@ struct ITEM {
 class FF7Item
 {
   public:
+    enum ItemSpecial
+    {
+        EmptyItem = 0x1FF,
+        EmptyItemData = 0xFFFF
+    };
+    enum ItemType
+    {
+        Unknown,Item,Armor,Accessory,WeaponCloud,
+        WeaponBarret,WeaponTifa,WeaponRed,WeaponAerith,WeaponCid,
+        WeaponYuffie,WeaponCait,WeaponVincent};
+    enum ItemElementalEffect
+    {
+        Absorb = -3,
+        Nullify =-2,
+        Halve =-1,
+        NoEffect=0x00,
+        Damage=0x01
+    };
+    enum ItemStatusEffect
+    {
+        Protect =-2,
+        Remove=-1,
+         //NoEffect=0, // declared above
+        Infilict=0x01,
+        SelfCast=0x02
+    };
+
     quint16 itemDecode(quint16 itemraw);
     quint16 itemEncode(quint16 id,quint8 qty);
     quint16 itemId(quint16 item);

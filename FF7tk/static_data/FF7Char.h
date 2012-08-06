@@ -19,11 +19,23 @@
 #include "icons/Char_Icons/y_cloud.xpm"
 #include "icons/Char_Icons/yuffie.xpm"
 
-class FF7Char : public QObject
+class FF7Char
 {
-    Q_OBJECT
 public:
-    explicit FF7Char(QObject *parent = 0);
+    enum FF7CharId{Cloud,Barret,Tifa,Aerith,Red,Yuffie,CaitSith,Vincent,Cid,YoungCloud,Sephiroth,Empty=0xFF};
+    enum FF7CharStatus
+    {
+        Fury = 0x10,
+        Sadness =0x20,
+        BackRow = 0xFE,
+        FrontRow =0xFF
+    };
+    enum CharSpecial
+    {
+        EmptyArmor=0xFF,
+        EmptyAccessory=0xFF
+    };
+    explicit FF7Char();
     int stat_gain(int who,int stat,int stat_amout,int next_lvl);
     quint8 id(int who);
     int num_weapons(int who);

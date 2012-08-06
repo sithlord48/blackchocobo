@@ -97,7 +97,7 @@ void ItemSelector::setFilter(int type)
     combo_item->clear();
     for(int i=0;i<320;i++)
     {
-        if(type !=0){if(Items.Type(i) == type){combo_item->addItem(Items.Icon(i),Items.Name(i));}}
+        if(type !=FF7Item::Unknown){if(Items.Type(i) == type){combo_item->addItem(Items.Icon(i),Items.Name(i));}}
         else{combo_item->addItem(Items.Icon(i),Items.Name(i));}
     }
 
@@ -161,7 +161,6 @@ void ItemSelector::sb_qty_changed(int qty)
     {
         current_item = Items.itemEncode(Items.itemId(current_item),qty);
         emit(item_changed(current_item));
-    //    QMessageBox::information(this,"Qty_Change",QString("Qty:%1").arg(QString::number(Items.itemQty(current_item))));
     }
 }
 
@@ -171,19 +170,19 @@ int ItemSelector::type_offset(int type)
     int offset = 0;
     switch(type)
     {//set offset for type.
-        case 0: offset =0; break;
-        case 1: offset =0; break;
-        case 2: offset =256; break;
-        case 3: offset =288; break;
-        case 4: offset =128; break;
-        case 5: offset =160; break;
-        case 6: offset =144; break;
-        case 7: offset =176; break;
-        case 8: offset =190; break;
-        case 9: offset =201; break;
-        case 10: offset=215; break;
-        case 11: offset=229; break;
-        case 12: offset=242; break;
+        case FF7Item::Unknown: offset =0; break;
+        case FF7Item::Item: offset =0; break;
+        case FF7Item::Armor: offset =256; break;
+        case FF7Item::Accessory: offset =288; break;
+        case FF7Item::WeaponCloud: offset =128; break;
+        case FF7Item::WeaponBarret: offset =160; break;
+        case FF7Item::WeaponTifa: offset =144; break;
+        case FF7Item::WeaponRed: offset =176; break;
+        case FF7Item::WeaponAerith: offset =190; break;
+        case FF7Item::WeaponCid: offset =201; break;
+        case FF7Item::WeaponYuffie: offset=215; break;
+        case FF7Item::WeaponCait: offset=229; break;
+        case FF7Item::WeaponVincent: offset=242; break;
         default: offset= -1; break;//ERROR INVALID TYPE.
     }
     return offset;
