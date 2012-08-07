@@ -52,6 +52,8 @@ public:
     ~MainWindow();
 
 protected:
+    void dragEnterEvent(QDragEnterEvent *e);
+    void dropEvent(QDropEvent *e);
     void changeEvent(QEvent *e);
     void closeEvent(QCloseEvent *e);
 private:
