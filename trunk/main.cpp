@@ -42,7 +42,7 @@ int main(int argc, char *argv[])
 
     if(argc >1)
     {//Check for and display help to the console :D
-        if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h"){printf("Usage: blackchocobo [<filename>]\n");return 0;}
+        if(QString(argv[1]) == "--help" || QString(argv[1]) =="-h"){printf("Usage: blackchocobo [<filename>]\nUsage: blackchocobo --version :Print Version Info\n");return 0;}
         else if(QString(argv[1]) == "--version"){printf("Black Chocobo Version:%s \n",Version.toAscii().constData());return 0;}
     }
     //Start application init.

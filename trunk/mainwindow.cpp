@@ -122,9 +122,9 @@ void MainWindow::init_display()
     ui->combo_party3->addItem(Chars.Icon(0x0B),QString("0x0B"));
     ui->combo_party3->addItem(Chars.Icon(0xFF),tr("-Empty-"));
 
-    ui->cb_world_party_leader->addItem(Chars.Icon(0),Chars.defaultName(FF7Char::Cloud));
-    ui->cb_world_party_leader->addItem(Chars.Icon(2),Chars.defaultName(FF7Char::Tifa));
-    ui->cb_world_party_leader->addItem(Chars.Icon(8),Chars.defaultName(FF7Char::Cid));
+    ui->cb_world_party_leader->addItem(Chars.Icon(FF7Char::Cloud),Chars.defaultName(FF7Char::Cloud));
+    ui->cb_world_party_leader->addItem(Chars.Icon(FF7Char::Tifa),Chars.defaultName(FF7Char::Tifa));
+    ui->cb_world_party_leader->addItem(Chars.Icon(FF7Char::Cid),Chars.defaultName(FF7Char::Cid));
 
 
     dialog_preview = new DialogPreview();

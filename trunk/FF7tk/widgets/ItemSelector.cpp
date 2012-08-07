@@ -22,7 +22,7 @@ void ItemSelector::init_display()
     sb_qty->setMaximum(127);
     sb_qty->setMinimum(1);
     sb_qty->setWrapping(true);
-
+    sb_qty->setToolTip("");
     btn_remove = new QPushButton;
     btn_remove->setIcon(QIcon(QPixmap(quit_xpm)));
     btn_remove->setToolTip(tr("Empty Item"));
@@ -60,24 +60,24 @@ void ItemSelector::init_connections()
 }
 void ItemSelector::init_data()
 {
-    combo_type->addItem(Items.Icon(1),tr(""));
-    combo_type->addItem(Items.Icon(256),tr(""));
-    combo_type->addItem(Items.Icon(288),tr(""));
-    combo_type->addItem(Items.Icon(128),tr(""));
-    combo_type->addItem(Items.Icon(160),tr(""));
-    combo_type->addItem(Items.Icon(144),tr(""));
-    combo_type->addItem(Items.Icon(176),tr(""));
-    combo_type->addItem(Items.Icon(190),tr(""));
-    combo_type->addItem(Items.Icon(201),tr(""));
-    combo_type->addItem(Items.Icon(215),tr(""));
-    combo_type->addItem(Items.Icon(229),tr(""));
-    combo_type->addItem(Items.Icon(242),tr(""));
+    combo_type->addItem(Items.Icon(FF7Item::Potion),tr(""));
+    combo_type->addItem(Items.Icon(FF7Item::BronzeBangle),tr(""));
+    combo_type->addItem(Items.Icon(FF7Item::Ribbon),tr(""));
+    combo_type->addItem(Items.Icon(FF7Item::BusterSword),tr(""));
+    combo_type->addItem(Items.Icon(FF7Item::GatlingGun),tr(""));
+    combo_type->addItem(Items.Icon(FF7Item::GodsHand),tr(""));
+    combo_type->addItem(Items.Icon(FF7Item::AdamanClip),tr(""));
+    combo_type->addItem(Items.Icon(FF7Item::StrikingStaff),tr(""));
+    combo_type->addItem(Items.Icon(FF7Item::Mop),tr(""));
+    combo_type->addItem(Items.Icon(FF7Item::FourPointShuriken),tr(""));
+    combo_type->addItem(Items.Icon(FF7Item::CrystalMphone),tr(""));
+    combo_type->addItem(Items.Icon(FF7Item::SupershotST),tr(""));
     sb_qty->setEnabled(false);
     //Fill Combo_Item (all items type is 0 or no filter defalut)
     for(int i=0;i<320;i++){combo_item->addItem(Items.Icon(i),Items.Name(i));}
     combo_type->setCurrentIndex(-1);
     combo_item->setCurrentIndex(-1);
-    current_item=0xFFFF;
+    current_item=FF7Item::EmptyItemData;
 }
 void ItemSelector::btn_remove_clicked()
 {
@@ -86,7 +86,7 @@ void ItemSelector::btn_remove_clicked()
     combo_item->setCurrentIndex(-1);
     combo_item->blockSignals(false);
     sb_qty->setEnabled(false);
-    current_item = 0xFFFF;
+    current_item =FF7Item::EmptyItemData;
     emit item_changed(current_item);
 }
 void ItemSelector::setFilter(int type)
@@ -102,7 +102,7 @@ void ItemSelector::setFilter(int type)
     }
 
     current_item = Items.itemEncode(id,Items.itemQty(current_item));
-    if(current_item != 0xFFFF){combo_item->setCurrentIndex(combo_item->findText(Items.Name(Items.itemId(current_item))));}
+    if(current_item !=FF7Item::EmptyItemData){combo_item->setCurrentIndex(combo_item->findText(Items.Name(Items.itemId(current_item))));}
     else{combo_item->setCurrentIndex(-1);}
     this->layout()->update();
     combo_item->blockSignals(false);
@@ -113,7 +113,7 @@ void ItemSelector::comboItem_changed(int index)
     if(index+offset != Items.itemId(current_item))
     {
         current_item=Items.itemEncode(index+offset,Items.itemQty(current_item));
-        if(current_item ==0xFFFF){sb_qty->setEnabled(false);}
+        if(current_item ==FF7Item::EmptyItemData){sb_qty->setEnabled(false);}
         else{sb_qty->setEnabled(true);}
         emit(item_changed(current_item));
     //    QMessageBox::information(this,"Id_Change",QString("Id:%1").arg(QString::number(Items.itemId(current_item))));
@@ -122,9 +122,9 @@ void ItemSelector::comboItem_changed(int index)
 void ItemSelector::setCurrentItem(int id,int qty)
 {
 
-    if(id<0 || id >319 || qty <0 || qty >127){if(id!=0x1FF){return;}}
+    if(id<0 || id >319 || qty <0 || qty >127){if(id!=FF7Item::EmptyItem){return;}}
     this->blockSignals(true);
-    if(id == 0x1FF)
+    if(id == FF7Item::EmptyItem)
     {
         btn_remove->blockSignals(true);
         btn_remove_clicked();
@@ -143,7 +143,7 @@ void ItemSelector::setCurrentItem(int id,int qty)
 void ItemSelector::setCurrentItem(quint16 ff7item)
 {
     this->blockSignals(true);
-    if(ff7item == 0xFFFF)
+    if(ff7item ==FF7Item::EmptyItemData)
     {
         btn_remove->blockSignals(true);
         btn_remove_clicked();
