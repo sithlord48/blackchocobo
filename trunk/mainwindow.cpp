@@ -22,6 +22,7 @@
 MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     :QMainWindow(parent),ui(new Ui::MainWindow)
 {
+    this->setAcceptDrops(true);
     //Get Font Info Before Setting up the GUI!
     settings =configdata;
     if(!settings->value("font-size").toString().isEmpty()){QApplication::setFont(QFont(QApplication::font().family(),settings->value("font-size").toInt(),-1,false));}
@@ -598,6 +599,27 @@ void MainWindow::changeEvent(QEvent *e)
     default:
         break;
     };
+}
+void MainWindow::dragEnterEvent(QDragEnterEvent *e) { e->accept(); }
+void MainWindow::dropEvent(QDropEvent *e)
+{
+    if(file_changed)
+    {
+        switch(save_changes())
+        {
+            case 0: return;//cancel load.
+            case 1: break;//continue load
+        }
+    }
+    const QMimeData *mimeData = e->mimeData();
+    if(mimeData->hasUrls())
+    {
+        QStringList fileList;
+        QList<QUrl> urlList = mimeData->urls();
+
+        fileList.append(urlList.at(0).toLocalFile());
+        loadFileFull(fileList.at(0),0);
+     }
 }
 int MainWindow::save_changes(void)
 {//return 0 to ingore the event/ return 1 to process event.
