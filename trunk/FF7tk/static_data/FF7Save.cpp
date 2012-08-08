@@ -437,65 +437,104 @@ int FF7Save::ff7__checksum( void* qw )
 quint16 FF7Save::itemDecode( quint16 itemraw )
 {
     quint16 item;
-    int one = 1;
-    if (*(char *)&one){
-        /******************************************************************************************/
-        /* Little-Endian (Do Nothing, No Change)                                                  */
-        /* ITEMRAW:                                                                               */
-        /* Itemraw Format: QQQQQQQXXXXXXXXX                                                       */
-        /* ITEM:                                                                                  */
-        /* Item Format: QQQQQQQXXXXXXXXX                                                          */
-        /******************************************************************************************/
-        item = itemraw;
-    } else {
-        /***********************************--*****************************************************/
-        /* Big-Endian (Do things, Format Change)                                                  */
-        /* ITEMRAW:                                                                               */
-        /* Itemraw Format: XXXXXXXXQQQQQQQX                                                       */
-        /* ITEM:                                                                                  */
-        /* Left Shift&Mask itemraw 8bits:  QQQQQQQX00000000 & 1111111100000000 = QQQQQQQX00000000 */
-        /* Right Shift&Mask itemraw 8bits: 00000000XXXXXXXX & 0000000011111111 = 00000000XXXXXXXX */
-        /* Then OR them:                   QQQQQQQX00000000 | 00000000XXXXXXXX = QQQQQQQXXXXXXXXX */
-        /* Item Format: QQQQQQQXXXXXXXXX                                                          */
-        /******************************************************************************************/
-        item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);
-    }
+    #ifdef Q_BYTE_ORDER
+        #if Q_BYTE_ORDER == Q_LITTLE_ENDIAN
+            item = itemraw;
+        #elif Q_BYTE_ORDER == Q_BIG_ENDIAN
+            item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);
+        #else
+        int one = 1;
+        if (*(char *)&one){
+            /******************************************************************************************/
+            /* Little-Endian (Do Nothing, No Change)                                                  */
+            /* ITEMRAW:                                                                               */
+            /* Itemraw Format: QQQQQQQXXXXXXXXX                                                       */
+            /* ITEM:                                                                                  */
+            /* Item Format: QQQQQQQXXXXXXXXX                                                          */
+            /******************************************************************************************/
+            item = itemraw;
+        } else {
+            /***********************************--*****************************************************/
+            /* Big-Endian (Do things, Format Change)                                                  */
+            /* ITEMRAW:                                                                               */
+            /* Itemraw Format: XXXXXXXXQQQQQQQX                                                       */
+            /* ITEM:                                                                                  */
+            /* Left Shift&Mask itemraw 8bits:  QQQQQQQX00000000 & 1111111100000000 = QQQQQQQX00000000 */
+            /* Right Shift&Mask itemraw 8bits: 00000000XXXXXXXX & 0000000011111111 = 00000000XXXXXXXX */
+            /* Then OR them:                   QQQQQQQX00000000 | 00000000XXXXXXXX = QQQQQQQXXXXXXXXX */
+            /* Item Format: QQQQQQQXXXXXXXXX                                                          */
+            /******************************************************************************************/
+            item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);
+        }
+        #endif
+    #else
+        int one = 1;
+        if (*(char *)&one){
+            item = itemraw;
+        } else {
+            item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);
+        }
+    #endif
+
     return item;
 }
 quint16 FF7Save::itemEncode( quint16 id, quint8 qty )
 {
     quint16 item,itemraw;
-    int one = 1;
-    if (*(char *)&one) {
-        /******************************************************************************************/
-        /* Little-Endian                                                                          */
-        /* ITEM:                                                                                  */
-        /* Item Format: QQQQQQQXXXXXXXXX                                                          */
-        /* Left Shift&Mask qty 9bits: QQQQQQQ000000000 & 1111111000000000 = QQQQQQQ000000000      */
-        /* Right Mask id 9bits:              XXXXXXXXX & 0000000111111111 = 0000000XXXXXXXXX      */
-        /* Then OR them:              QQQQQQQ000000000 | 0000000XXXXXXXXX = QQQQQQQXXXXXXXXX      */
-        /* ITEMRAW:                                                                               */
-        /* Itemraw Format: QQQQQQQXXXXXXXXX                                                       */
-        /******************************************************************************************/
-        item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
-        itemraw = item;
-    } else {
-        /******************************************************************************************/
-        /* Big-Endian                                                                             */
-        /* ITEM:                                                                                  */
-        /* Left Shift&Mask qty 9bits:   QQQQQQQ000000000 & 1111111000000000 = QQQQQQQ000000000    */
-        /* Right Mask id 9bits:         0000000XXXXXXXXX & 0000000111111111 = 0000000XXXXXXXXX    */
-        /* Then OR them:                QQQQQQQ000000000 | 0000000XXXXXXXXX = QQQQQQQXXXXXXXXX    */
-        /* Item Format: QQQQQQQXXXXXXXXX                                                          */
-        /* ITEMRAW:                                                                               */
-        /* Left Shift&Mask item 8bits:  QQQQQQQX00000000 & 1111111100000000 = QQQQQQQX00000000    */
-        /* Right Shift&Mask item 8bits: 00000000XXXXXXXX & 0000000011111111 = 00000000XXXXXXXX    */
-        /* Then OR them:                QQQQQQQX00000000 | 00000000XXXXXXXX = QQQQQQQXXXXXXXXX    */
-        /* Itemraw Format: XXXXXXXXQQQQQQQX                                                       */
-        /******************************************************************************************/
-        item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
-        itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
-    }
+    #ifdef Q_BYTE_ORDER
+        #if Q_BYTE_ORDER == Q_LITTLE_ENDIAN
+            item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+            itemraw = item;
+        #elif Q_BYTE_ORDER == Q_BIG_ENDIAN
+            item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+            itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
+        #else
+            int one = 1;
+            if (*(char *)&one) {
+                /******************************************************************************************/
+                /* Little-Endian                                                                          */
+                /* ITEM:                                                                                  */
+                /* Item Format: QQQQQQQXXXXXXXXX                                                          */
+                /* Left Shift&Mask qty 9bits: QQQQQQQ000000000 & 1111111000000000 = QQQQQQQ000000000      */
+                /* Right Mask id 9bits:              XXXXXXXXX & 0000000111111111 = 0000000XXXXXXXXX      */
+                /* Then OR them:              QQQQQQQ000000000 | 0000000XXXXXXXXX = QQQQQQQXXXXXXXXX      */
+                /* ITEMRAW:                                                                               */
+                /* Itemraw Format: QQQQQQQXXXXXXXXX                                                       */
+                /******************************************************************************************/
+                item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+                itemraw = item;
+            } else {
+                /******************************************************************************************/
+                /* Big-Endian                                                                             */
+                /* ITEM:                                                                                  */
+                /* Left Shift&Mask qty 9bits:   QQQQQQQ000000000 & 1111111000000000 = QQQQQQQ000000000    */
+                /* Right Mask id 9bits:         0000000XXXXXXXXX & 0000000111111111 = 0000000XXXXXXXXX    */
+                /* Then OR them:                QQQQQQQ000000000 | 0000000XXXXXXXXX = QQQQQQQXXXXXXXXX    */
+                /* Item Format: QQQQQQQXXXXXXXXX                                                          */
+                /* ITEMRAW:                                                                               */
+                /* Left Shift&Mask item 8bits:  QQQQQQQX00000000 & 1111111100000000 = QQQQQQQX00000000    */
+                /* Right Shift&Mask item 8bits: 00000000XXXXXXXX & 0000000011111111 = 00000000XXXXXXXX    */
+                /* Then OR them:                QQQQQQQX00000000 | 00000000XXXXXXXX = QQQQQQQXXXXXXXXX    */
+                /* Itemraw Format: XXXXXXXXQQQQQQQX                                                       */
+                /******************************************************************************************/
+                item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+                itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
+            }
+        #endif
+    #else
+        int one = 1;
+        if (*(char *)&one)
+        {
+            item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+            itemraw = item;
+        }
+        else
+        {
+            item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+            itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
+        }
+    #endif
+
     return itemraw;
 }
 void FF7Save::setItem(int s,int item_num,quint16 rawitem)
