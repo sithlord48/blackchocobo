@@ -93,25 +93,61 @@ QString FF7Item::Style_mlink(void)
 quint16 FF7Item::itemDecode( quint16 itemraw )
 {//see FF7Save::itemDecode for full comments
     quint16 item;
-    int one = 1;
-    if (*(char *)&one){item = itemraw;}
-    else {item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);}
+    #ifdef Q_BYTE_ORDER
+        #if Q_BYTE_ORDER == Q_LITTLE_ENDIAN
+            item = itemraw;
+        #elif Q_BYTE_ORDER == Q_BIG_ENDIAN
+            item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);
+        #else
+            int one = 1;
+            if (*(char *)&one){item = itemraw;}
+            else {item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);}
+        #endif
+    #else
+        int one = 1;
+        if (*(char *)&one){item = itemraw;}
+        else {item = ((itemraw & 0xFF) << 8) | ((itemraw >> 8) & 0xFF);}
+    #endif
+
     return item;
 }
 quint16 FF7Item::itemEncode( quint16 id, quint8 qty )
 {//see FF7Save::itemEncode for full comments
     quint16 item,itemraw;
-    int one = 1;
-    if (*(char *)&one)
-    {
-        item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
-        itemraw = item;
-    }
-    else
-    {
-        item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
-        itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
-    }
+    #ifdef Q_BYTE_ORDER
+        #if Q_BYTE_ORDER == Q_LITTLE_ENDIAN
+            item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+            itemraw = item;
+        #elif Q_BYTE_ORDER == Q_BIG_ENDIAN
+            item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+            itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
+        #else
+            int one = 1;
+            if (*(char *)&one)
+            {
+                item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+                itemraw = item;
+            }
+            else
+            {
+                item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+                itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
+            }
+        #endif
+    #else
+        int one = 1;
+        if (*(char *)&one)
+        {
+            item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+            itemraw = item;
+        }
+        else
+        {
+            item = ((qty << 9) & 0xFE00) | (id & 0x1FF);
+            itemraw = ((item & 0xFF) << 8) | ((item >> 8) & 0xFF);
+        }
+    #endif
+
     return itemraw;
 }
 
