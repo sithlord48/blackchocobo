@@ -2188,7 +2188,7 @@ void CharEditor::update_tnl_bar(void)
 
 void CharEditor::elemental_info(void)
 {
-    int y=this->font().pointSize()*2;
+    int y=6+this->font().pointSize()*2;
     bool show=false;
     int item_id = 0;
     QString m_effect;
@@ -2237,11 +2237,12 @@ void CharEditor::elemental_info(void)
                 {
                         m_effect.append(effect);
                         elemental_effects->addItem(effect);
-                        show=true; y+=18;
+                        show=true; y+=this->font().pointSize()*5/3;
                  }
              }//end of for Loop
-            if(elemental_effects->count()<6){elemental_box->setFixedSize(212,y);}
-            else{elemental_box->setFixedSize(212,(this->font().pointSize()*2)*5);}
+            elemental_box->setFixedSize(212,y);
+            //if(elemental_effects->count()<6){elemental_box->setFixedSize(212,y);}
+            //else{elemental_box->setFixedSize(212,(this->font().pointSize()*2)*5);}
         }//end of else.
     }//end of other loop.
    elemental_box->setVisible(show);
@@ -2250,7 +2251,7 @@ void CharEditor::elemental_info(void)
 
 void CharEditor::status_info(void)
 {
-    int y=this->font().pointSize()*2;
+    int y=6+this->font().pointSize()*2;
     bool show=false;
     int item_id =0;
     QString m_status;
@@ -2308,11 +2309,12 @@ void CharEditor::status_info(void)
                 {
                     m_status.append(effect);
                     status_effects->addItem(effect);
-                    show=true; y+=18;
+                    show=true; y+=this->font().pointSize()*5/3;
                  }
             }//end of for Loop
-            if(status_effects->count()<6){status_box->setFixedSize(212,y);}
-            else{status_box->setFixedSize(212,(this->font().pointSize()*2)*5);}
+            status_box->setFixedSize(212,y);
+            //if(status_effects->count()<6){status_box->setFixedSize(212,y);}
+            //else{status_box->setFixedSize(212,(this->font().pointSize()*2)*5);}
         }//end of else.
      }//end of loop
     status_box->setVisible(show);
