@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>413</width>
-    <height>399</height>
+    <width>411</width>
+    <height>397</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -452,6 +452,11 @@ p, li { white-space: pre-wrap; }
          <property name="wordWrap">
           <bool>true</bool>
          </property>
+         <item>
+          <property name="text">
+           <string>New: File Drop Support.</string>
+          </property>
+         </item>
          <item>
           <property name="text">
            <string>New: ItemList Widget;</string>

@@ -1,6 +1,4 @@
 #include "ItemSelector.h"
-
-//#include <QMessageBox>
 // include icon data
 #include "../static_data/icons/Common_Icons/quit.xpm"
 
@@ -109,14 +107,16 @@ void ItemSelector::setFilter(int type)
 }
 void ItemSelector::comboItem_changed(int index)
 {
+    if(combo_item->currentText()==Items.Name(FF7Item::Masamune)){sb_qty->setMaximum(126);}
+    else{sb_qty->setMaximum(127);}
     int offset = type_offset(combo_type->currentIndex()+1);
     if(index+offset != Items.itemId(current_item))
     {
-        current_item=Items.itemEncode(index+offset,Items.itemQty(current_item));
+        if(current_item==FF7Item::EmptyItemData){current_item=Items.itemEncode(index+offset,sb_qty->value());}
+        else{current_item=Items.itemEncode(index+offset,Items.itemQty(current_item));}
         if(current_item ==FF7Item::EmptyItemData){sb_qty->setEnabled(false);}
         else{sb_qty->setEnabled(true);}
         emit(item_changed(current_item));
-    //    QMessageBox::information(this,"Id_Change",QString("Id:%1").arg(QString::number(Items.itemId(current_item))));
     }
 }
 void ItemSelector::setCurrentItem(int id,int qty)
@@ -124,6 +124,7 @@ void ItemSelector::setCurrentItem(int id,int qty)
 
     if(id<0 || id >319 || qty <0 || qty >127){if(id!=FF7Item::EmptyItem){return;}}
     this->blockSignals(true);
+    if(id == FF7Item::Masamune && qty == 127){qty =126;}
     if(id == FF7Item::EmptyItem)
     {
         btn_remove->blockSignals(true);
@@ -143,16 +144,21 @@ void ItemSelector::setCurrentItem(int id,int qty)
 void ItemSelector::setCurrentItem(quint16 ff7item)
 {
     this->blockSignals(true);
+    if((Items.itemId(ff7item) == FF7Item::Masamune) && (Items.itemQty(ff7item) ==127)){ ff7item = Items.itemEncode(FF7Item::Masamune,126);}
+
     if(ff7item ==FF7Item::EmptyItemData)
     {
         btn_remove->blockSignals(true);
         btn_remove_clicked();
         btn_remove->blockSignals(false);
     }
-    combo_type->setCurrentIndex(Items.Type(Items.itemId(ff7item))-1);
-    combo_item->setCurrentIndex(Items.itemId(ff7item) - type_offset(Items.Type(Items.itemId(ff7item))));
-    sb_qty->setValue(Items.itemQty(ff7item));
-    current_item=ff7item;
+    else
+    {
+        combo_type->setCurrentIndex(Items.Type(Items.itemId(ff7item))-1);
+        combo_item->setCurrentIndex(Items.itemId(ff7item) - type_offset(Items.Type(Items.itemId(ff7item))));
+        sb_qty->setValue(Items.itemQty(ff7item));
+        current_item=ff7item;
+    }
     this->blockSignals(false);
 }
 void ItemSelector::sb_qty_changed(int qty)

@@ -317,7 +317,7 @@ void ItemPreview::elemental_info(int id)
             if(!effect.isNull())
             {
                 elemental_effects->addItem(effect);
-                show=true; y+=this->font().pointSize()*2;
+                show=true; y+=this->font().pointSize()*5/3;
             }
         }//end of for Loop
         Qt::WindowFlags WidgetType =(this->windowFlags() & Qt::WindowType_Mask);
@@ -382,7 +382,7 @@ void ItemPreview::status_info(int id)
             if(!effect.isNull())
             {
                 status_effects->addItem(effect);
-                show=true; y+=this->font().pointSize()*2;
+                show=true; y+=this->font().pointSize()*5/3;
             }
         }//end of for Loop
         Qt::WindowFlags WidgetType =(this->windowFlags() & Qt::WindowType_Mask);
