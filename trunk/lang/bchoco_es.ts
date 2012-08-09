@@ -614,10 +614,6 @@
         <translation>Tifa</translation>
     </message>
     <message>
-        <source>Aeris</source>
-        <translation></translation>
-    </message>
-    <message>
         <source>Red XIII</source>
         <translation>Red XIII</translation>
     </message>
@@ -644,6 +640,10 @@
     <message>
         <source>Sephiroth</source>
         <translation>Sefirot</translation>
+    </message>
+    <message>
+        <source>Aerith</source>
+        <translation>Aerith</translation>
     </message>
 </context>
 <context>
@@ -8195,6 +8195,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: ItemList Widget;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: File Drop Support.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
