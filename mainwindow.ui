@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>781</width>
-    <height>586</height>
+    <height>588</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -2262,6 +2262,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
            </sizepolicy>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_55">
+           <property name="spacing">
+            <number>2</number>
+           </property>
            <property name="leftMargin">
             <number>3</number>
            </property>
@@ -2746,8 +2749,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>769</width>
-             <height>446</height>
+             <width>720</width>
+             <height>275</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -4820,7 +4823,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>350</width>
+                  <width>333</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -7304,7 +7307,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>754</width>
+             <width>513</width>
              <height>683</height>
             </rect>
            </property>
@@ -13054,7 +13057,7 @@ Var And Scrolling Synced To Left Table</string>
      <x>0</x>
      <y>0</y>
      <width>781</width>
-     <height>20</height>
+     <height>22</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuAbout">

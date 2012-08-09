@@ -123,14 +123,14 @@ void MateriaEditor::init_display()
     frm_ap->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
     box_status_effects->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Minimum);
 //Set up display
-    this->setContentsMargins(0,6,0,0);
+    //this->setContentsMargins(0,6,0,0);
     QHBoxLayout * type_name_layout = new QHBoxLayout;
     type_name_layout->addWidget(combo_type);
     type_name_layout->addWidget(combo_materia);
     type_name_layout->addWidget(btn_copy_materia);
     type_name_layout->addWidget(btn_paste_materia);
     type_name_layout->addWidget(btn_rm_materia);
-    type_name_layout->setContentsMargins(3,6,0,0);
+    type_name_layout->setContentsMargins(3,0,0,0);
 
     QSpacerItem *spacer1 = new QSpacerItem(20,0,QSizePolicy::Preferred,QSizePolicy::Fixed);
     QHBoxLayout * ap_layout = new QHBoxLayout;
@@ -166,6 +166,7 @@ void MateriaEditor::init_display()
     frm_ap_stars->setContentsMargins(0,0,0,0);
 
     QHBoxLayout *low_eskill_layout = new QHBoxLayout;
+    //low_eskill_layout->setContentsMargins(0,0,0,0);
     low_eskill_layout->addWidget(btn_master_eskills);
     low_eskill_layout->addWidget(btn_clear_eskills);
 
@@ -173,6 +174,7 @@ void MateriaEditor::init_display()
     eskill_layout->addWidget(eskill_list);
     eskill_layout->addItem(low_eskill_layout);
     eskill_layout->setContentsMargins(0,0,0,0);
+    eskill_layout->setSpacing(0);
     eskill_group->setLayout(eskill_layout);
 
     QVBoxLayout *skill_layout = new QVBoxLayout;
@@ -205,7 +207,7 @@ void MateriaEditor::init_display()
 
     QVBoxLayout *main_layout = new QVBoxLayout;
     main_layout->setContentsMargins(3,0,0,0);
-    main_layout->setSpacing(3);
+    main_layout->setSpacing(2);
     main_layout->addWidget(frm_name_type);
     main_layout->addWidget(frm_ap_stars);
     main_layout->addWidget(frm_skill_status);
@@ -215,7 +217,7 @@ void MateriaEditor::init_display()
     Final->setSpacing(0);
     Final->addLayout(main_layout);
     Final->addSpacerItem(v_spacer);
-    Final->setContentsMargins(6,6,6,6);
+    Final->setContentsMargins(6,6,6,0);
     this->setLayout(Final);
 }
 
@@ -416,7 +418,6 @@ void MateriaEditor::setLevel()
 void MateriaEditor::setStars()
 {
    //Hide if its eskill Materia
-
     if((_id==FF7Materia::EnemySkill)||(_id==FF7Materia::Underwater)||(_id==FF7Materia::MasterCommand)||(_id==FF7Materia::MasterMagic)||(_id==FF7Materia::MasterSummon)||(_id==FF7Materia::EmptyId)){box_stars->setHidden(true);return;}
     else
     {
@@ -462,7 +463,7 @@ void MateriaEditor::setSkills()
         list_skills->setHidden(true);
         eskill_group->setHidden(false);
         frm_skill_status->adjustSize();
-        v_spacer->changeSize(0,6,QSizePolicy::Preferred,QSizePolicy::Fixed);
+        v_spacer->changeSize(0,0,QSizePolicy::Preferred,QSizePolicy::Fixed);
     }
     else if(_id ==FF7Materia::EmptyId)
     {
