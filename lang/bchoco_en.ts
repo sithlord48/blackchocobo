@@ -614,10 +614,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Aeris</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Red XIII</source>
         <translation type="unfinished"></translation>
     </message>
@@ -643,6 +639,10 @@
     </message>
     <message>
         <source>Sephiroth</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Aerith</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7333,6 +7333,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: ItemList Widget;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: File Drop Support.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

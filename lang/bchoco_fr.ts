@@ -615,7 +615,7 @@
     </message>
     <message>
         <source>Aeris</source>
-        <translation>Aeris</translation>
+        <translation type="obsolete">Aeris</translation>
     </message>
     <message>
         <source>Red XIII</source>
@@ -644,6 +644,10 @@
     <message>
         <source>Sephiroth</source>
         <translation>Sephiroth</translation>
+    </message>
+    <message>
+        <source>Aerith</source>
+        <translation type="unfinished">Aerith</translation>
     </message>
 </context>
 <context>
@@ -8196,6 +8200,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: ItemList Widget;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: File Drop Support.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
