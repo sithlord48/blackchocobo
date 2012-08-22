@@ -80,7 +80,7 @@ QMenuBar:item{
 	background-color: qlineargradient(spread:reflect, x1:0.5, y1:1, x2:0.5, y2:0, stop:0 rgba(7, 6, 6, 255), stop:0.0397727 rgba(35, 33, 33, 212), stop:0.960227 rgba(63, 62, 62, 210), stop:0.994318 rgba(18, 16, 16, 255));
 }
 
-QMenu{
+QMenu,QWidget.ItemPreview{
 	border:2px solid; 
 	border-left-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));
 	border-right-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(123, 123, 123, 255), stop:1 rgba(172, 172, 172, 255));

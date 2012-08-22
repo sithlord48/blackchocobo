@@ -89,6 +89,9 @@ static LOCATION Locations[]=
     {QT_TRANSLATE_NOOP("Locations","Debug Room [en]"),"1","94","0","0","0"},
     {QT_TRANSLATE_NOOP("Locations","Debug Room [ja]"),"1","65","0","0","0"},
     {QT_TRANSLATE_NOOP("Locations","Test Fight"),"2","0","0","0","0"},
-    {QT_TRANSLATE_NOOP("Locations","Mideel,Clinic"),"1","720","151","65380","19"}
+    {QT_TRANSLATE_NOOP("Locations","Mideel,Clinic"),"1","720","151","65380","19"},
+    {QT_TRANSLATE_NOOP("Locations","Sector 6"),"1","194","12","302","15"},
+    {QT_TRANSLATE_NOOP("Locations","Honey Bee Inn"),"1","214","12","65429","24"},
+    {QT_TRANSLATE_NOOP("Locations","Corneo Hall"),"1","206","53","341","35"}
 };
 #endif //FF7LOCATION_H

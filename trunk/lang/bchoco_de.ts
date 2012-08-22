@@ -93,7 +93,7 @@
     </message>
     <message>
         <source>Limit Uses</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Benutzte Limit</translation>
     </message>
     <message>
         <source>1-1</source>
@@ -353,19 +353,19 @@
     </message>
     <message>
         <source>0x34</source>
-        <translation type="unfinished">0x02 {0x?} {34?}</translation>
+        <translation type="unfinished">0x34</translation>
     </message>
     <message>
         <source>0x35</source>
-        <translation type="unfinished">0x02 {0x?} {35?}</translation>
+        <translation type="unfinished">0x35</translation>
     </message>
     <message>
         <source>0x36</source>
-        <translation type="unfinished">0x02 {0x?} {36?}</translation>
+        <translation type="unfinished">0x36</translation>
     </message>
     <message>
         <source>0x37</source>
-        <translation type="unfinished">0x02 {0x?} {37?}</translation>
+        <translation type="unfinished">0x37</translation>
     </message>
     <message>
         <source>Young Cloud</source>
@@ -1080,7 +1080,7 @@
     <name>ItemSelector</name>
     <message>
         <source>Empty Item</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Leer</translation>
     </message>
 </context>
 <context>
@@ -3022,6 +3022,18 @@
     <message>
         <source>Mideel,Clinic</source>
         <translation>Mideel, Klinik</translation>
+    </message>
+    <message>
+        <source>Sector 6</source>
+        <translation type="unfinished">Sektor 6</translation>
+    </message>
+    <message>
+        <source>Honey Bee Inn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corneo Hall</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -5807,7 +5819,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Black Chococbo</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Schwarzer Chocobo</translation>
     </message>
     <message>
         <source>Replace %1&apos;s Materia and Equipment</source>
@@ -7449,15 +7461,15 @@ Tabellen Einträge sind bearbeitbar</translation>
     <name>SlotPreview</name>
     <message>
         <source>Level:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Level:%1</translation>
     </message>
     <message>
         <source>Gil:%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gil:%1</translation>
     </message>
     <message>
         <source>Time:%1:%2</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zeit:%1:%2</translation>
     </message>
 </context>
 <context>

@@ -3023,6 +3023,18 @@
         <source>Mideel,Clinic</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Sector 6</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Honey Bee Inn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corneo Hall</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
