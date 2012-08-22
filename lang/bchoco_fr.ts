@@ -13,7 +13,7 @@
     </message>
     <message>
         <source>HP</source>
-        <translation type="unfinished">HP</translation>
+        <translation>HP</translation>
     </message>
     <message>
         <source>MP</source>
@@ -37,11 +37,11 @@
     </message>
     <message>
         <source>Base HP</source>
-        <translation type="unfinished"></translation>
+        <translation>Base HP</translation>
     </message>
     <message>
         <source>Base MP</source>
-        <translation type="unfinished"></translation>
+        <translation>Base MP</translation>
     </message>
     <message>
         <source>Total Exp</source>
@@ -93,7 +93,7 @@
     </message>
     <message>
         <source>Limit Uses</source>
-        <translation type="unfinished"></translation>
+        <translation>Limiter les utilisations</translation>
     </message>
     <message>
         <source>1-1</source>
@@ -137,7 +137,7 @@
     </message>
     <message>
         <source>Status Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Info sur l&apos;état</translation>
     </message>
     <message>
         <source>Equipment</source>
@@ -353,27 +353,27 @@
     </message>
     <message>
         <source>0x34</source>
-        <translation type="unfinished">0x02 {0x?} {34?}</translation>
+        <translation>0x34</translation>
     </message>
     <message>
         <source>0x35</source>
-        <translation type="unfinished">0x02 {0x?} {35?}</translation>
+        <translation>0x35</translation>
     </message>
     <message>
         <source>0x36</source>
-        <translation type="unfinished">0x02 {0x?} {36?}</translation>
+        <translation>0x36</translation>
     </message>
     <message>
         <source>0x37</source>
-        <translation type="unfinished">0x02 {0x?} {37?}</translation>
+        <translation>0x37</translation>
     </message>
     <message>
         <source>Young Cloud</source>
-        <translation type="unfinished">Jeune Cloud</translation>
+        <translation>Jeune Cloud</translation>
     </message>
     <message>
         <source>Sephiroth</source>
-        <translation type="unfinished">Sephiroth</translation>
+        <translation>Sephiroth</translation>
     </message>
 </context>
 <context>
@@ -647,7 +647,7 @@
     </message>
     <message>
         <source>Aerith</source>
-        <translation type="unfinished">Aerith</translation>
+        <translation>Aeris</translation>
     </message>
 </context>
 <context>
@@ -882,11 +882,11 @@
     <name>ItemList</name>
     <message>
         <source>-------EMPTY--------</source>
-        <translation type="unfinished">--------Vide--------</translation>
+        <translation>--------VIDE--------</translation>
     </message>
     <message>
         <source>-------BAD ID-------</source>
-        <translation type="unfinished">----MAUVAIS ID----</translation>
+        <translation>-----MAUVAIS ID-----</translation>
     </message>
 </context>
 <context>
@@ -1084,7 +1084,7 @@
     <name>ItemSelector</name>
     <message>
         <source>Empty Item</source>
-        <translation type="unfinished"></translation>
+        <translation>Object vide</translation>
     </message>
 </context>
 <context>
@@ -3029,15 +3029,15 @@
     </message>
     <message>
         <source>Sector 6</source>
-        <translation type="unfinished">Secteur 6</translation>
+        <translation>Secteur 6</translation>
     </message>
     <message>
         <source>Honey Bee Inn</source>
-        <translation type="unfinished"></translation>
+        <translation>Honey Bee Inn</translation>
     </message>
     <message>
         <source>Corneo Hall</source>
-        <translation type="unfinished"></translation>
+        <translation>Hall de Cornéo</translation>
     </message>
 </context>
 <context>
@@ -5813,30 +5813,30 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Selected Character Max Stats/Weapons/Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>Persos sélectionné au max stats/armes/matérias</translation>
     </message>
     <message>
         <source>Black Chococbo</source>
-        <translation type="unfinished"></translation>
+        <translation>Black Chocobo</translation>
     </message>
     <message>
         <source>Replace %1&apos;s Materia and Equipment</source>
-        <translation type="unfinished"></translation>
+        <translation>Remplacer les matérias et l&apos;équipement de %1</translation>
     </message>
 </context>
 <context>
     <name>MateriaEditor</name>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer</translation>
     </message>
     <message>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Copier</translation>
     </message>
     <message>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Coller</translation>
     </message>
     <message>
         <source>Clear</source>
@@ -5844,15 +5844,15 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Skills</source>
-        <translation type="unfinished"></translation>
+        <translation>Capacités</translation>
     </message>
     <message>
         <source>Stat Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifications sur les stats</translation>
     </message>
     <message>
         <source>All Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>Toutes les matérias</translation>
     </message>
     <message>
         <source>Magic</source>
@@ -7459,15 +7459,15 @@ Les entrées dans le tableau sont modifiables</translation>
     <name>SlotPreview</name>
     <message>
         <source>Level:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Niveau:%1</translation>
     </message>
     <message>
         <source>Gil:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Gils:%1</translation>
     </message>
     <message>
         <source>Time:%1:%2</source>
-        <translation type="unfinished"></translation>
+        <translation>Temps:%1:%2</translation>
     </message>
 </context>
 <context>
@@ -8192,31 +8192,31 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: MateriaEditor Widget.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : widget MateriaEditor.</translation>
     </message>
     <message>
         <source>Fixed:Bug In Stat Calculation For Materia Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Corrigé : bogue dans le calcul des stats pour les changements de matéria</translation>
     </message>
     <message>
         <source>New: ChocoboEditor Widgets.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : widgets ChocoboEditor.</translation>
     </message>
     <message>
         <source>New: Character Editor Widget.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : widget CharEditor.</translation>
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct And item/materia lists. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation type="unfinished"></translation>
+        <translation> Merci pour avoir publié le code source de Jenova. Ce programme utilise une version modifiée des structures du fichier de sauvegarde et des listes d&apos;objets/matérias provenant de Jenova. Pouvoir consulter ces sources m&apos;a permis de gagner beaucoup de temps au cours des premiers stades de développement.</translation>
     </message>
     <message>
         <source>New: ItemList Widget;</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : widget ItemList</translation>
     </message>
     <message>
         <source>New: File Drop Support.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : prise en charge du glisser/déposer d&apos;un fichier.</translation>
     </message>
 </context>
 <context>
