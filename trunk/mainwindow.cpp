@@ -4293,7 +4293,9 @@ void MainWindow::Items_Changed(QList<quint16> items)
 void MainWindow::FixMetaData()
 {
     QString Md5= ff7->md5sum(filename,UserId);
-    QString timestamp = QString::number(QDateTime::currentDateTime().currentMSecsSinceEpoch());
+    QFileInfo file(filename);
+    QString timestamp = QString::number(file.lastModified().toMSecsSinceEpoch());
+
 
     QString UserID = UserId;
     if (UserID.isEmpty()){UserID=(tr("No Id Set"));}
