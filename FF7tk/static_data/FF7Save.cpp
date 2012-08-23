@@ -1868,7 +1868,7 @@ QString FF7Save::md5sum(QString fileName, QString UserID)
         if(!file.open(QIODevice::ReadOnly)){return "-1";}//can't open the file.
         ff7file = file.readAll(); //put all data in temp raw file
     }
-    ff7file.append(UserID);//append the user
+    ff7file.append(UserID.toInt());//append the user's ID
     QCryptographicHash md5(QCryptographicHash::Md5);
     md5.addData(ff7file);
     return md5.result().toHex().toLower();

@@ -5829,6 +5829,10 @@ Tabellen Einträge sind bearbeitbar</translation>
         <source>FF7PC2012 File Info</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>No Id Set</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MateriaEditor</name>
