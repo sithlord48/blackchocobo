@@ -40,6 +40,7 @@ private:
     bool load;
     QSettings *settings;
 private slots:
+    void on_line_userId_editingFinished();
     void on_line_char_stat_folder_editingFinished();
     void on_line_default_save_editingFinished();
     void on_line_export_pc_editingFinished();

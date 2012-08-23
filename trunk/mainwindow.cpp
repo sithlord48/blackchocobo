@@ -525,6 +525,7 @@ void MainWindow::init_settings()
     if(settings->value("color3_g").isNull()){settings->setValue("color3_g","65");}
     if(settings->value("color3_b").isNull()){settings->setValue("color3_b","65");}
     skip_slot_mask = settings->value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
+    UserId= settings->value("userId").toString();
 
     if(settings->value("show_test").toBool())
     {
@@ -1405,7 +1406,7 @@ void MainWindow::setmenu(bool newgame)
     ui->actionSlot_09->setEnabled(0);ui->actionSlot_10->setEnabled(0);ui->actionSlot_11->setEnabled(0);
     ui->actionSlot_12->setEnabled(0);ui->actionSlot_13->setEnabled(0);ui->actionSlot_14->setEnabled(0);
     ui->actionSlot_15->setEnabled(0);ui->actionNew_Game->setEnabled(0);ui->compare_table->setEnabled(0);
-    ui->lbl_current_slot_num->clear(); ui->lbl_current_slot_txt->clear();
+    ui->lbl_current_slot_num->clear(); ui->lbl_current_slot_txt->clear();ui->actionFF7PC2012_File_Info->setEnabled(0);
     /*~~End Clear Menu Items~~*/
     /*~~~~~~Current Slot~~~~~~*/
     switch(s)
@@ -1473,6 +1474,7 @@ void MainWindow::setmenu(bool newgame)
     else if(ff7->region(s).isEmpty()){/*do nothing*/}
     else{QMessageBox::information(this,tr("Region Detect Error"),tr("Region Cannot be Automatically Detected, You Must Set it Manually"));}
     /*~~End Detected Region~~*/
+    if(ff7->type() =="PC"){ui->actionFF7PC2012_File_Info->setEnabled(true);}
     load=false;
 }
 void MainWindow::file_modified(bool changed)
@@ -4301,4 +4303,17 @@ void MainWindow::Items_Changed(QList<quint16> items)
 {
     ff7->setItems(s,items);
     file_modified(true);
+}
+void MainWindow::FixMetaData()
+{
+    if(settings->value("userId").toString().isEmpty()){QMessageBox::information(this,"File Info","Please Set Your User Id in the Options Dialog\n Signature Data Will Be Incorrect");}
+
+    QString Md5= ff7->md5sum(filename,UserId);
+    QString timestamp = QString::number(QDateTime::currentDateTime().currentMSecsSinceEpoch());
+    QMessageBox::information(this,"File Info",QString("Use This Info To update your Metadata.xml file \nTimeStamp:%1\nFile Signature:%2").arg(timestamp,Md5));
+}
+
+void MainWindow::on_actionFF7PC2012_File_Info_triggered()
+{
+    FixMetaData();
 }

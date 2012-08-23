@@ -21,7 +21,6 @@
 #include <QObject>
 #include<QColor>
 #include <cstdlib>
-
 class FF7Save{
 
 public:
@@ -39,10 +38,10 @@ public:
   void CopySlot(int s);
   void PasteSlot(int s);
   void New_Game(int s,QString fileName=""); //new game in slot s (over load default w/ fileName must be RAW PSX)
-  void New_Game_Plus(int s,QString CharFileName,QString fileName="");//new game + in slot s (over load default w/ fileName must be RAW PSX)
-
+  void New_Game_Plus(int s,QString CharFileName,QString fileName="");//new game + in slot s (over load default w/ fileName must be RAW PSX
   bool exportChar(int s,int char_num,QString fileName);// Write slot[s].char[char_num] to fileName
   void importChar(int s,int char_num,QByteArray new_char);//import new_char to slot[s].char[char_num]
+  QString md5sum(QString fileName,QString UserID);
   //Set/Get Data Parts.
   quint16 item(int s,int item_num); //return raw ff7item
   QList<quint16> items(int s);// return all items
@@ -217,6 +216,7 @@ public:
   //publicly accessable core data(for now)
   FF7SLOT slot[15]; //core slot data.
   // Return File Info
+
   int len_file(void);//Return File length.
   int len_file_header(void);//Return File Header length
   int len_file_footer(void);//Return File Footer length

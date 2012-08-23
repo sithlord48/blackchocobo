@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>411</width>
-    <height>397</height>
+    <width>409</width>
+    <height>395</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -479,7 +479,12 @@ p, li { white-space: pre-wrap; }
          </item>
          <item>
           <property name="text">
-           <string>Fixed:Bug In Stat Calculation For Materia Changes</string>
+           <string>New: Slot Selection Dialog.</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fixed: Bug In Stat Calculation For Materia Changes</string>
           </property>
          </item>
          <item>

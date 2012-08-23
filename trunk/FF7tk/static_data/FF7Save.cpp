@@ -18,6 +18,7 @@
 #include <QObject>
 #include <QFile>
 #include <QDataStream>
+#include <QCryptographicHash>
 
 bool FF7Save::LoadFile(const QString &fileName)
 {
@@ -1856,4 +1857,19 @@ void FF7Save::setChocoPen(int s, int pos, int type)
         if(type >=0 && type <9){slot[s].pennedchocos[pos]=type;}
         else{slot[s].pennedchocos[pos]=0;}
     }
+}
+QString FF7Save::md5sum(QString fileName, QString UserID)
+{
+    QByteArray ff7file;
+    if(fileName.isEmpty()){return "-1";}
+    QFile  file(fileName);
+    if(file.exists())
+    {
+        if(!file.open(QIODevice::ReadOnly)){return "-1";}//can't open the file.
+        ff7file = file.readAll(); //put all data in temp raw file
+    }
+    ff7file.append(UserID);//append the user
+    QCryptographicHash md5(QCryptographicHash::Md5);
+    md5.addData(ff7file);
+    return md5.result().toHex().toLower();
 }

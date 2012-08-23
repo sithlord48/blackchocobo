@@ -5819,6 +5819,10 @@ Table Entries are Editable</source>
         <source>Replace %1&apos;s Materia and Equipment</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>FF7PC2012 File Info</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MateriaEditor</name>
@@ -7450,6 +7454,10 @@ Table Entries are Editable</source>
         <source>Override Default Save with Following File (raw psx only)</source>
         <translation>デフォルトのセーブに指定のファイルを適用 (RAW PSX のみ)</translation>
     </message>
+    <message>
+        <source>User ID: (FF7 Pc 2012 ONLY)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SlotPreview</name>
@@ -8190,7 +8198,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed:Bug In Stat Calculation For Materia Changes</source>
-        <translation>修正: マテリア変更時の能力値算出</translation>
+        <translation type="obsolete">修正: マテリア変更時の能力値算出</translation>
     </message>
     <message>
         <source>New: ChocoboEditor Widgets.</source>
@@ -8210,6 +8218,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: File Drop Support.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Slot Selection Dialog.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Bug In Stat Calculation For Materia Changes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

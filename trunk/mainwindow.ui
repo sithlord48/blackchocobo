@@ -13135,6 +13135,8 @@ Var And Scrolling Synced To Left Table</string>
     <addaction name="actionSlot_13"/>
     <addaction name="actionSlot_14"/>
     <addaction name="actionSlot_15"/>
+    <addaction name="separator"/>
+    <addaction name="actionFF7PC2012_File_Info"/>
    </widget>
    <widget class="QMenu" name="menuOptions">
     <property name="title">
@@ -13972,6 +13974,14 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="text">
     <string>PAL (BESCES-00868)</string>
+   </property>
+  </action>
+  <action name="actionFF7PC2012_File_Info">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string>FF7PC2012 File Info</string>
    </property>
   </action>
  </widget>
