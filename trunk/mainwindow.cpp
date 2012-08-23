@@ -1011,22 +1011,8 @@ void MainWindow::on_actionNext_Slot_activated(){if(ff7->type()==""){return;}else
 void MainWindow::on_actionAbout_activated(){about adialog;  adialog.setStyleSheet(this->styleSheet()); adialog.exec();}
 void MainWindow::on_actionCopy_Slot_activated(){ff7->CopySlot(s);}
 void MainWindow::on_actionPaste_Slot_activated(){ff7->PasteSlot(s); file_modified(true); guirefresh(0);}
+void MainWindow::on_actionShow_Options_triggered(){Options odialog(0,settings); odialog.setStyleSheet(this->styleSheet()); odialog.exec(); init_settings(); }
 
-void MainWindow::on_actionShow_Options_triggered()
-{
-    Options odialog(0,settings);  odialog.setStyleSheet(this->styleSheet());    odialog.exec();
-    QString style="QWidget#centralWidget{background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
-    style.append(settings->value("color1_r").toString());    style.append(",");
-    style.append(settings->value("color1_g").toString());    style.append(",");
-    style.append(settings->value("color1_b").toString());    style.append(", 255), stop:0.215909 rgba(");
-    style.append(settings->value("color2_r").toString());    style.append(",");
-    style.append(settings->value("color2_g").toString());    style.append(",");
-    style.append(settings->value("color2_b").toString());    style.append(", 255), stop:0.818182 rgba(");
-    style.append(settings->value("color3_r").toString());    style.append(",");
-    style.append(settings->value("color3_g").toString());    style.append(",");
-    style.append(settings->value("color3_b").toString());    style.append(", 255));}");
-    ui->centralWidget->setStyleSheet(style);
-}
 void MainWindow::on_action_auto_char_growth_triggered(bool checked)
 {
     if(checked)
@@ -4306,11 +4292,13 @@ void MainWindow::Items_Changed(QList<quint16> items)
 }
 void MainWindow::FixMetaData()
 {
-    if(settings->value("userId").toString().isEmpty()){QMessageBox::information(this,"File Info","Please Set Your User Id in the Options Dialog\n Signature Data Will Be Incorrect");}
-
     QString Md5= ff7->md5sum(filename,UserId);
     QString timestamp = QString::number(QDateTime::currentDateTime().currentMSecsSinceEpoch());
-    QMessageBox::information(this,"File Info",QString("Use This Info To update your Metadata.xml file \nTimeStamp:%1\nFile Signature:%2").arg(timestamp,Md5));
+
+    QString UserID = UserId;
+    if (UserID.isEmpty()){UserID=(tr("No Id Set"));}
+
+    QMessageBox::information(this,"File Info",QString("Use This Info To update your Metadata.xml file\n UserId:%1(set in options) \nTimeStamp:%2\nFile Signature:%3").arg(UserID,timestamp,Md5));
 }
 
 void MainWindow::on_actionFF7PC2012_File_Info_triggered()
