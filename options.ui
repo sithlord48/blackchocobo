@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>747</width>
-    <height>424</height>
+    <width>745</width>
+    <height>461</height>
    </rect>
   </property>
   <property name="contextMenuPolicy">
@@ -316,6 +316,27 @@
            <size>
             <width>16</width>
             <height>16</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_5">
+          <property name="text">
+           <string>User ID: (FF7 Pc 2012 ONLY)</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLineEdit" name="line_userId">
+          <property name="baseSize">
+           <size>
+            <width>375</width>
+            <height>0</height>
            </size>
           </property>
          </widget>

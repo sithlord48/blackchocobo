@@ -63,6 +63,7 @@ private:
     bool _init; //set true then false after a file load.
     bool load; // are we loading data? if so don't save it to the file.
     bool file_changed; //if file changed after load.
+    QString UserId;
     FF7Save *ff7; // our save file struct pointer.
     QSettings *settings;//Pointer To settings object.
     int s; //track slot
@@ -95,6 +96,7 @@ public slots:
 
 private slots://try to keep these in the same order as the .cpp file  
     /*Loading and Saving related Functions*/
+    void FixMetaData(void);
    int save_changes(void); //return 1 to accept and 0 to ingore the event
     void on_actionNew_Window_triggered();
     void on_actionOpen_Save_File_activated();
@@ -622,5 +624,6 @@ private slots://try to keep these in the same order as the .cpp file
 
     void set_char_buttons();
     void on_btn_maxChar_clicked();
+    void on_actionFF7PC2012_File_Info_triggered();
 };
 #endif // MAINWINDOW_H

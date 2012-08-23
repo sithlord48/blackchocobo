@@ -5819,6 +5819,10 @@ Las entradas de la tabla son editables</translation>
         <source>Replace %1&apos;s Materia and Equipment</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>FF7PC2012 File Info</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MateriaEditor</name>
@@ -7451,6 +7455,10 @@ Fénix x3 (180pm)</translation>
         <source>Override Default Save with Following File (raw psx only)</source>
         <translation>Anular el guardado por defecto con el siguiente archivo (sólo PSX raw)</translation>
     </message>
+    <message>
+        <source>User ID: (FF7 Pc 2012 ONLY)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>SlotPreview</name>
@@ -8190,10 +8198,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Fixed:Bug In Stat Calculation For Materia Changes</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>New: ChocoboEditor Widgets.</source>
         <translation type="unfinished"></translation>
     </message>
@@ -8211,6 +8215,14 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: File Drop Support.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: Slot Selection Dialog.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Fixed: Bug In Stat Calculation For Materia Changes</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
