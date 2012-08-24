@@ -5,375 +5,375 @@
     <name>CharEditor</name>
     <message>
         <source>Level</source>
-        <translation type="unfinished"></translation>
+        <translation>Nivel</translation>
     </message>
     <message>
         <source>Kills</source>
-        <translation type="unfinished">Muertes</translation>
+        <translation>Muertes</translation>
     </message>
     <message>
         <source>HP</source>
-        <translation type="unfinished">PG</translation>
+        <translation>PG</translation>
     </message>
     <message>
         <source>MP</source>
-        <translation type="unfinished">PM</translation>
+        <translation>PM</translation>
     </message>
     <message>
         <source>Fury</source>
-        <translation type="unfinished">Furia</translation>
+        <translation>Furia</translation>
     </message>
     <message>
         <source>Sadness</source>
-        <translation type="unfinished">Tristeza</translation>
+        <translation>Tristeza</translation>
     </message>
     <message>
         <source>Front Row</source>
-        <translation type="unfinished">Primera Fila</translation>
+        <translation>Primera Fila</translation>
     </message>
     <message>
         <source>ID</source>
-        <translation type="unfinished"></translation>
+        <translation>ID</translation>
     </message>
     <message>
         <source>Base HP</source>
-        <translation type="unfinished"></translation>
+        <translation>PG Base</translation>
     </message>
     <message>
         <source>Base MP</source>
-        <translation type="unfinished"></translation>
+        <translation>PM Base</translation>
     </message>
     <message>
         <source>Total Exp</source>
-        <translation type="unfinished"></translation>
+        <translation>Exp Total</translation>
     </message>
     <message>
         <source>Level Progress</source>
-        <translation type="unfinished">Progreso de Nivel</translation>
+        <translation>Progreso de Nivel</translation>
     </message>
     <message>
         <source>Next</source>
-        <translation type="unfinished">Siguiente</translation>
+        <translation>Siguiente</translation>
     </message>
     <message>
         <source>Limit Bar</source>
-        <translation type="unfinished">Barra de Límite</translation>
+        <translation>Barra de Límite</translation>
     </message>
     <message>
         <source>Str</source>
-        <translation type="unfinished">Fue</translation>
+        <translation>Fue</translation>
     </message>
     <message>
         <source>+</source>
-        <translation type="unfinished"></translation>
+        <translation>+</translation>
     </message>
     <message>
         <source>=</source>
-        <translation type="unfinished"></translation>
+        <translation>=</translation>
     </message>
     <message>
         <source>Vit</source>
-        <translation type="unfinished">Vit</translation>
+        <translation>Vit</translation>
     </message>
     <message>
         <source>Mag</source>
-        <translation type="unfinished">Mag</translation>
+        <translation>Mag</translation>
     </message>
     <message>
         <source>Spi</source>
-        <translation type="unfinished">Esp</translation>
+        <translation>Esp</translation>
     </message>
     <message>
         <source>Dex</source>
-        <translation type="unfinished">Des</translation>
+        <translation>Des</translation>
     </message>
     <message>
         <source>Lck</source>
-        <translation type="unfinished">Sue</translation>
+        <translation>Sue</translation>
     </message>
     <message>
         <source>Limit Uses</source>
-        <translation type="unfinished"></translation>
+        <translation>Usos de límite</translation>
     </message>
     <message>
         <source>1-1</source>
-        <translation type="unfinished"></translation>
+        <translation>1-1</translation>
     </message>
     <message>
         <source>2-1</source>
-        <translation type="unfinished"></translation>
+        <translation>2-1</translation>
     </message>
     <message>
         <source>3-1</source>
-        <translation type="unfinished"></translation>
+        <translation>3-1</translation>
     </message>
     <message>
         <source>Limit Level</source>
-        <translation type="unfinished">Nivel de Límite</translation>
+        <translation>Nivel de Límite</translation>
     </message>
     <message>
         <source>-NONE-</source>
-        <translation type="unfinished"></translation>
+        <translation>-NADA-</translation>
     </message>
     <message>
         <source>Elemental Effects</source>
-        <translation type="unfinished">Efectos Elementales</translation>
+        <translation>Efectos Elementales</translation>
     </message>
     <message>
         <source>Status Effects</source>
-        <translation type="unfinished">Efectos de Estado</translation>
+        <translation>Efectos de Estado</translation>
     </message>
     <message>
         <source>Weapon</source>
-        <translation type="unfinished">Arma</translation>
+        <translation>Arma</translation>
     </message>
     <message>
         <source>Armor</source>
-        <translation type="unfinished">Armadura</translation>
+        <translation>Armadura</translation>
     </message>
     <message>
         <source>Accessory</source>
-        <translation type="unfinished"></translation>
+        <translation>Accesorio</translation>
     </message>
     <message>
         <source>Status Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Info de estado</translation>
     </message>
     <message>
         <source>Equipment</source>
-        <translation type="unfinished"></translation>
+        <translation>Equipamiento</translation>
     </message>
     <message>
         <source>AP:x%1</source>
-        <translation type="unfinished"></translation>
+        <translation>PA:x%1</translation>
     </message>
     <message>
         <source> Str:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Fue:+%1</translation>
     </message>
     <message>
         <source> Vit:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Vit:+%1</translation>
     </message>
     <message>
         <source> Dex:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Des:+%1</translation>
     </message>
     <message>
         <source> Spi:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Esp:+%1</translation>
     </message>
     <message>
         <source> Mag:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Mag:+%1</translation>
     </message>
     <message>
         <source> Lck:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Sue:+%1</translation>
     </message>
     <message>
         <source> Hp:+%1%</source>
-        <translation type="unfinished"></translation>
+        <translation>PG:+%1%</translation>
     </message>
     <message>
         <source> Mp:+%1%</source>
-        <translation type="unfinished"></translation>
+        <translation>PM:+%1%</translation>
     </message>
     <message>
         <source>Restoration</source>
-        <translation type="unfinished">Restauración</translation>
+        <translation>Restauración</translation>
     </message>
     <message>
         <source>Fire</source>
-        <translation type="unfinished">Fuego</translation>
+        <translation>Fuego</translation>
     </message>
     <message>
         <source>Cold</source>
-        <translation type="unfinished">Frío</translation>
+        <translation>Frío</translation>
     </message>
     <message>
         <source>Lightning</source>
-        <translation type="unfinished">Rayo</translation>
+        <translation>Rayo</translation>
     </message>
     <message>
         <source>Earth</source>
-        <translation type="unfinished">Tierra</translation>
+        <translation>Tierra</translation>
     </message>
     <message>
         <source>Wind</source>
-        <translation type="unfinished">Viento</translation>
+        <translation>Viento</translation>
     </message>
     <message>
         <source>Water</source>
-        <translation type="unfinished">Agua</translation>
+        <translation>Agua</translation>
     </message>
     <message>
         <source>Gravity</source>
-        <translation type="unfinished">Gravedad</translation>
+        <translation>Gravedad</translation>
     </message>
     <message>
         <source>Holy</source>
-        <translation type="unfinished">Sagrado</translation>
+        <translation>Sagrado</translation>
     </message>
     <message>
         <source>Poison</source>
-        <translation type="unfinished">Envenenar</translation>
+        <translation>Envenenar</translation>
     </message>
     <message>
         <source>Cut</source>
-        <translation type="unfinished">Corte</translation>
+        <translation>Corte</translation>
     </message>
     <message>
         <source>Shoot</source>
-        <translation type="unfinished">Disparo</translation>
+        <translation>Disparo</translation>
     </message>
     <message>
         <source>Punch</source>
-        <translation type="unfinished">Puñetazo</translation>
+        <translation>Puñetazo</translation>
     </message>
     <message>
         <source>Hit</source>
-        <translation type="unfinished">Golpe</translation>
+        <translation>Golpe</translation>
     </message>
     <message>
         <source>Absorb:</source>
-        <translation type="unfinished">Absorbe:</translation>
+        <translation>Absorbe:</translation>
     </message>
     <message>
         <source>Nullify:</source>
-        <translation type="unfinished">Anula:</translation>
+        <translation>Anula:</translation>
     </message>
     <message>
         <source>Halve:</source>
-        <translation type="unfinished">1/2:</translation>
+        <translation>1/2:</translation>
     </message>
     <message>
         <source>Attack:</source>
-        <translation type="unfinished">Ataque:</translation>
+        <translation>Ataque:</translation>
     </message>
     <message>
         <source>Death</source>
-        <translation type="unfinished">Muerte</translation>
+        <translation>Muerte</translation>
     </message>
     <message>
         <source>Slow-Numb</source>
-        <translation type="unfinished">Ardor</translation>
+        <translation>Ardor</translation>
     </message>
     <message>
         <source>D.Sentence</source>
-        <translation type="unfinished">Pena Capital</translation>
+        <translation>Pena Capital</translation>
     </message>
     <message>
         <source>Paralysis</source>
-        <translation type="unfinished">Parálisis</translation>
+        <translation>Parálisis</translation>
     </message>
     <message>
         <source>Petrify</source>
-        <translation type="unfinished">Petrif</translation>
+        <translation>Petrif</translation>
     </message>
     <message>
         <source>Silence</source>
-        <translation type="unfinished">Silencio</translation>
+        <translation>Silencio</translation>
     </message>
     <message>
         <source>Sleep</source>
-        <translation type="unfinished">Sueño</translation>
+        <translation>Sueño</translation>
     </message>
     <message>
         <source>Confusion</source>
-        <translation type="unfinished">Confusión</translation>
+        <translation>Confusión</translation>
     </message>
     <message>
         <source>Berserk</source>
-        <translation type="unfinished">Locura</translation>
+        <translation>Locura</translation>
     </message>
     <message>
         <source>Frog</source>
-        <translation type="unfinished">Rana</translation>
+        <translation>Rana</translation>
     </message>
     <message>
         <source>Mini</source>
-        <translation type="unfinished">Pequeño</translation>
+        <translation>Pequeño</translation>
     </message>
     <message>
         <source>Darkness</source>
-        <translation type="unfinished">Oscuridad</translation>
+        <translation>Oscuridad</translation>
     </message>
     <message>
         <source>Haste</source>
-        <translation type="unfinished">Prisa</translation>
+        <translation>Prisa</translation>
     </message>
     <message>
         <source>Slow</source>
-        <translation type="unfinished">Lento</translation>
+        <translation>Lento</translation>
     </message>
     <message>
         <source>Stop</source>
-        <translation type="unfinished">Alto</translation>
+        <translation>Alto</translation>
     </message>
     <message>
         <source>Barrier</source>
-        <translation type="unfinished">Barrera</translation>
+        <translation>Barrera</translation>
     </message>
     <message>
         <source>M.Barrier</source>
-        <translation type="unfinished">BarreraM</translation>
+        <translation>BarreraM</translation>
     </message>
     <message>
         <source>Reflect</source>
-        <translation type="unfinished">Reflejo</translation>
+        <translation>Reflejo</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation type="unfinished">Escudo</translation>
+        <translation>Escudo</translation>
     </message>
     <message>
         <source>Regen</source>
-        <translation type="unfinished">Regenerar</translation>
+        <translation>Regenerar</translation>
     </message>
     <message>
         <source>Protect:</source>
-        <translation type="unfinished">Proteje:</translation>
+        <translation>Proteje:</translation>
     </message>
     <message>
         <source>Remove:</source>
-        <translation type="unfinished">Elimina:</translation>
+        <translation>Elimina:</translation>
     </message>
     <message>
         <source>Inflict:</source>
-        <translation type="unfinished">Infringe:</translation>
+        <translation>Infringe:</translation>
     </message>
     <message>
         <source>OnBattle:</source>
-        <translation type="unfinished">EnBatalla:</translation>
+        <translation>EnBatalla:</translation>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation type="unfinished">-Vacío-</translation>
+        <translation>-Vacío-</translation>
     </message>
     <message>
         <source>0x34</source>
-        <translation type="unfinished">0x02 {0x?} {34?}</translation>
+        <translation>0x34</translation>
     </message>
     <message>
         <source>0x35</source>
-        <translation type="unfinished">0x02 {0x?} {35?}</translation>
+        <translation>0x35</translation>
     </message>
     <message>
         <source>0x36</source>
-        <translation type="unfinished">0x02 {0x?} {36?}</translation>
+        <translation>0x36</translation>
     </message>
     <message>
         <source>0x37</source>
-        <translation type="unfinished">0x02 {0x?} {37?}</translation>
+        <translation>0x37</translation>
     </message>
     <message>
         <source>Young Cloud</source>
-        <translation type="unfinished">Cloud Joven</translation>
+        <translation>Cloud Joven</translation>
     </message>
     <message>
         <source>Sephiroth</source>
-        <translation type="unfinished">Sefirot</translation>
+        <translation>Sefirot</translation>
     </message>
 </context>
 <context>
@@ -650,83 +650,83 @@
     <name>ChocoboEditor</name>
     <message>
         <source>Unable To Mate</source>
-        <translation type="unfinished">Imposible cruzar</translation>
+        <translation>Imposible cruzar</translation>
     </message>
     <message>
         <source>Stamina</source>
-        <translation type="unfinished">Resistencia</translation>
+        <translation>Resistencia</translation>
     </message>
     <message>
         <source>Sex</source>
-        <translation type="unfinished">Sexo</translation>
+        <translation>Sexo</translation>
     </message>
     <message>
         <source>Type</source>
-        <translation type="unfinished">Tipo</translation>
+        <translation>Tipo</translation>
     </message>
     <message>
         <source>Name</source>
-        <translation type="unfinished">Nombre</translation>
+        <translation>Nombre</translation>
     </message>
     <message>
         <source>Run Speed</source>
-        <translation type="unfinished">Velocidad</translation>
+        <translation>Velocidad</translation>
     </message>
     <message>
         <source>Sprint Speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Velocidad máxima</translation>
     </message>
     <message>
         <source>Accel</source>
-        <translation type="unfinished">Aceleración</translation>
+        <translation>Aceleración</translation>
     </message>
     <message>
         <source>Wins</source>
-        <translation type="unfinished">Ganados</translation>
+        <translation>Ganados</translation>
     </message>
     <message>
         <source>Coop</source>
-        <translation type="unfinished">Cooperación</translation>
+        <translation>Cooperación</translation>
     </message>
     <message>
         <source>pCount</source>
-        <translation type="unfinished"></translation>
+        <translation>pCount</translation>
     </message>
     <message>
         <source>Intel</source>
-        <translation type="unfinished">Intel</translation>
+        <translation>Intel</translation>
     </message>
     <message>
         <source>Personality</source>
-        <translation type="unfinished">Personalidad</translation>
+        <translation>Personalidad</translation>
     </message>
     <message>
         <source>Male</source>
-        <translation type="unfinished">Macho</translation>
+        <translation>Macho</translation>
     </message>
     <message>
         <source>Female</source>
-        <translation type="unfinished">Hembra</translation>
+        <translation>Hembra</translation>
     </message>
     <message>
         <source>Yellow</source>
-        <translation type="unfinished">Amarillo</translation>
+        <translation>Amarillo</translation>
     </message>
     <message>
         <source>Green</source>
-        <translation type="unfinished">Verde</translation>
+        <translation>Verde</translation>
     </message>
     <message>
         <source>Blue</source>
-        <translation type="unfinished">Azul</translation>
+        <translation>Azul</translation>
     </message>
     <message>
         <source>Black</source>
-        <translation type="unfinished">Negro</translation>
+        <translation>Negro</translation>
     </message>
     <message>
         <source>Gold</source>
-        <translation type="unfinished">Dorado</translation>
+        <translation>Dorado</translation>
     </message>
 </context>
 <context>
@@ -832,39 +832,39 @@
     <name>Elements</name>
     <message>
         <source>[Fire]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Fuego]</translation>
     </message>
     <message>
         <source>[Ice]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Frío]</translation>
     </message>
     <message>
         <source>[Earth]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Tierra]</translation>
     </message>
     <message>
         <source>[Lightning]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Rayo]</translation>
     </message>
     <message>
         <source>[Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Veneno]</translation>
     </message>
     <message>
         <source>[Gravity]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Gravedad]</translation>
     </message>
     <message>
         <source>[Wind]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Viento]</translation>
     </message>
     <message>
         <source>[Water]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Agua]</translation>
     </message>
     <message>
         <source>[Holy]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Sagrado]</translation>
     </message>
 </context>
 <context>
@@ -878,11 +878,11 @@
     <name>ItemList</name>
     <message>
         <source>-------EMPTY--------</source>
-        <translation type="unfinished">-------VACIO-------</translation>
+        <translation>-------VACIO-------</translation>
     </message>
     <message>
         <source>-------BAD ID-------</source>
-        <translation type="unfinished">---ID ERRONEO---</translation>
+        <translation>---ID ERRONEO---</translation>
     </message>
 </context>
 <context>
@@ -1080,7 +1080,7 @@
     <name>ItemSelector</name>
     <message>
         <source>Empty Item</source>
-        <translation type="unfinished"></translation>
+        <translation>Objeto vacío</translation>
     </message>
 </context>
 <context>
@@ -3026,15 +3026,15 @@
     </message>
     <message>
         <source>Sector 6</source>
-        <translation type="unfinished">Sector 6</translation>
+        <translation>Sector 6</translation>
     </message>
     <message>
         <source>Honey Bee Inn</source>
-        <translation type="unfinished"></translation>
+        <translation>Honey Bee Inn</translation>
     </message>
     <message>
         <source>Corneo Hall</source>
-        <translation type="unfinished"></translation>
+        <translation>Hall de Corneo</translation>
     </message>
 </context>
 <context>
@@ -5087,54 +5087,54 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Selected Character Max Stats/Weapons/Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>Max stats/armas/materia de personaje seleccionado</translation>
     </message>
     <message>
         <source>Black Chococbo</source>
-        <translation type="unfinished"></translation>
+        <translation>Chocobo Negro</translation>
     </message>
     <message>
         <source>Replace %1&apos;s Materia and Equipment</source>
-        <translation type="unfinished"></translation>
+        <translation>Reemplazar Materia y Equipamiento de %1</translation>
     </message>
     <message>
         <source>FF7PC2012 File Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Info de archivo FF7PC2012</translation>
     </message>
     <message>
         <source>No Id</source>
-        <translation type="unfinished"></translation>
+        <translation>Sin ID</translation>
     </message>
 </context>
 <context>
     <name>MateriaEditor</name>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation>Eliminar</translation>
     </message>
     <message>
         <source>Copy</source>
-        <translation type="unfinished"></translation>
+        <translation>Copiar</translation>
     </message>
     <message>
         <source>Paste</source>
-        <translation type="unfinished"></translation>
+        <translation>Pegar</translation>
     </message>
     <message>
         <source>Clear</source>
-        <translation type="unfinished">Limpiar</translation>
+        <translation>Limpiar</translation>
     </message>
     <message>
         <source>Skills</source>
-        <translation type="unfinished"></translation>
+        <translation>Habilidades</translation>
     </message>
     <message>
         <source>Stat Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Cambios de stats</translation>
     </message>
     <message>
         <source>All Materia</source>
-        <translation type="unfinished"></translation>
+        <translation>Toda la materia</translation>
     </message>
     <message>
         <source>Magic</source>
@@ -5162,7 +5162,7 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Added Effect</source>
-        <translation type="unfinished">Efecto añaddo</translation>
+        <translation>Efecto añaddo</translation>
     </message>
 </context>
 <context>
@@ -6738,15 +6738,15 @@ Fénix x3 (180pm)</translation>
     <name>SlotPreview</name>
     <message>
         <source>Level:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Nivel:%1</translation>
     </message>
     <message>
         <source>Gil:%1</source>
-        <translation type="unfinished"></translation>
+        <translation>Gil:%1</translation>
     </message>
     <message>
         <source>Time:%1:%2</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiempo:%1:%2</translation>
     </message>
 </context>
 <context>
@@ -6761,136 +6761,136 @@ Fénix x3 (180pm)</translation>
     </message>
     <message>
         <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation type="unfinished">     Bloque semi-enlazado, siguiente trozo de datos en la ranura:%1</translation>
+        <translation>     Bloque semi-enlazado, siguiente trozo de datos en la ranura:%1</translation>
     </message>
     <message>
         <source>      End Of Linked Blocks</source>
-        <translation type="unfinished">     Fin de los bloques enlazados</translation>
+        <translation>     Fin de los bloques enlazados</translation>
     </message>
     <message>
         <source>ERROR</source>
-        <translation type="unfinished"></translation>
+        <translation>ERROR</translation>
     </message>
     <message>
         <source>-Empty-</source>
-        <translation type="unfinished">-Vacío-</translation>
+        <translation>-Vacío-</translation>
     </message>
     <message>
         <source>
 	 Game Uses %1 Save Block</source>
-        <translation type="unfinished">
+        <translation>
 	El juego usa el bloque de guardado %1 </translation>
     </message>
     <message>
         <source>Slot:%1</source>
-        <translation type="unfinished">Ranura:%1</translation>
+        <translation>Ranura:%1</translation>
     </message>
     <message>
         <source>Slot:1</source>
-        <translation type="unfinished">Ranura:1</translation>
+        <translation>Ranura:1</translation>
     </message>
     <message>
         <source>Slot:2</source>
-        <translation type="unfinished">Ranura:2</translation>
+        <translation>Ranura:2</translation>
     </message>
     <message>
         <source>Slot:3</source>
-        <translation type="unfinished">Ranura:3</translation>
+        <translation>Ranura:3</translation>
     </message>
     <message>
         <source>Slot:4</source>
-        <translation type="unfinished">Ranura:4</translation>
+        <translation>Ranura:4</translation>
     </message>
     <message>
         <source>Slot:5</source>
-        <translation type="unfinished">Ranura:5</translation>
+        <translation>Ranura:5</translation>
     </message>
     <message>
         <source>Slot:6</source>
-        <translation type="unfinished">Ranura:6</translation>
+        <translation>Ranura:6</translation>
     </message>
     <message>
         <source>Slot:7</source>
-        <translation type="unfinished">Ranura:7</translation>
+        <translation>Ranura:7</translation>
     </message>
     <message>
         <source>Slot:8</source>
-        <translation type="unfinished">Ranura:8</translation>
+        <translation>Ranura:8</translation>
     </message>
     <message>
         <source>Slot:9</source>
-        <translation type="unfinished">Ranura:9</translation>
+        <translation>Ranura:9</translation>
     </message>
     <message>
         <source>Slot:10</source>
-        <translation type="unfinished">Ranura:10</translation>
+        <translation>Ranura:10</translation>
     </message>
     <message>
         <source>Slot:11</source>
-        <translation type="unfinished">Ranura:11</translation>
+        <translation>Ranura:11</translation>
     </message>
     <message>
         <source>Slot:12</source>
-        <translation type="unfinished">Ranura:12</translation>
+        <translation>Ranura:12</translation>
     </message>
     <message>
         <source>Slot:13</source>
-        <translation type="unfinished">Ranura:13</translation>
+        <translation>Ranura:13</translation>
     </message>
     <message>
         <source>Slot:14</source>
-        <translation type="unfinished">Ranura:14</translation>
+        <translation>Ranura:14</translation>
     </message>
     <message>
         <source>Slot:15</source>
-        <translation type="unfinished">Ranura:15</translation>
+        <translation>Ranura:15</translation>
     </message>
 </context>
 <context>
     <name>Status</name>
     <message>
         <source>[Sleep]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Sueño]</translation>
     </message>
     <message>
         <source>[Silence]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Silencio]</translation>
     </message>
     <message>
         <source>[Confusion]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Confusión]</translation>
     </message>
     <message>
         <source>[Berserk]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Locura]</translation>
     </message>
     <message>
         <source>[Small]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Pequeño]</translation>
     </message>
     <message>
         <source>[Frog]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Rana]</translation>
     </message>
     <message>
         <source>[Poison]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Veneno]</translation>
     </message>
     <message>
         <source>[Slow]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Lento]</translation>
     </message>
     <message>
         <source>[Stop]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Alto]</translation>
     </message>
     <message>
         <source>[Death]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Muerte]</translation>
     </message>
     <message>
         <source>[Petrify]</source>
-        <translation type="unfinished"></translation>
+        <translation>[Petrif]</translation>
     </message>
 </context>
 <context>
@@ -7357,35 +7357,35 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: MateriaEditor Widget.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Widget para editor de materia</translation>
     </message>
     <message>
         <source>New: ChocoboEditor Widgets.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Widget para Editor de chocobo</translation>
     </message>
     <message>
         <source>New: Character Editor Widget.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Widget para editor de personajes</translation>
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct And item/materia lists. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation type="unfinished"></translation>
+        <translation>Gracias por facilitarme el código de Jenova. Este programa usa versiones modificadas de la estructura de datos de guardado y listas de objetos/materia de Jenova. Poder acceder al código fuente ahorro mucho tiempo durante las primeras fases de desarrollo.</translation>
     </message>
     <message>
         <source>New: ItemList Widget;</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Widget para las listas de objetos</translation>
     </message>
     <message>
         <source>New: File Drop Support.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Soporte para volcado de archivo</translation>
     </message>
     <message>
         <source>New: Slot Selection Dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Diálogo de selección de ranura</translation>
     </message>
     <message>
         <source>Fixed: Bug In Stat Calculation For Materia Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Arreglado: Fallo en el cálculo de stats cuando se cambian materias</translation>
     </message>
 </context>
 <context>
