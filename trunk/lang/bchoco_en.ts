@@ -5092,7 +5092,7 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No Id Set</source>
+        <source>No Id</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6720,10 +6720,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Override Default Save with Following File (raw psx only)</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>User ID: (FF7 Pc 2012 ONLY)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
