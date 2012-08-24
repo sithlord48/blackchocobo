@@ -1130,10 +1130,6 @@
         <translation>Hebt [Frosch] auf</translation>
     </message>
     <message>
-        <source>Cures [Small]</source>
-        <translation>Hebt [Klein] auf</translation>
-    </message>
-    <message>
         <source>Cures [Silence]</source>
         <translation>Hebt [Stummheit] auf</translation>
     </message>
@@ -1632,6 +1628,10 @@
     <message>
         <source>Increases Manipulation rate</source>
         <translation>Verstärkt Manipul</translation>
+    </message>
+    <message>
+        <source>Cures [Mini]</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4498,10 +4498,6 @@
         <translation>Region kann nicht automatisch erkannt werden, Du musst es manuell festlegen</translation>
     </message>
     <message>
-        <source>Add One Of Each Mastered Materia </source>
-        <translation>Füge jeweils eins der gemeisterten Materia hinzu</translation>
-    </message>
-    <message>
         <source>Remove ALL Materia </source>
         <translation>Enferne ALLE Materia</translation>
     </message>
@@ -5104,11 +5100,11 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FF7PC2012 File Info</source>
+        <source>No Id</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No Id</source>
+        <source>Add Each Materia to Stock (end of list)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6870,10 +6866,6 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation>[Tobsucht]</translation>
     </message>
     <message>
-        <source>[Small]</source>
-        <translation>[Klein]</translation>
-    </message>
-    <message>
         <source>[Frog]</source>
         <translation>[Frosch]</translation>
     </message>
@@ -6896,6 +6888,10 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>[Petrify]</source>
         <translation>[Versteinerung]</translation>
+    </message>
+    <message>
+        <source>[Mini]</source>
+        <translation type="unfinished">[Klein]</translation>
     </message>
 </context>
 <context>
@@ -7391,6 +7387,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Bug In Stat Calculation For Materia Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: FF7 Pc 2012 Cloud Save Support</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -1130,10 +1130,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Cures [Small]</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Cures [Silence]</source>
         <translation type="unfinished"></translation>
     </message>
@@ -1631,6 +1627,10 @@
     </message>
     <message>
         <source>Increases Manipulation rate</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cures [Mini]</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -4493,10 +4493,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add One Of Each Mastered Materia </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Remove ALL Materia </source>
         <translation type="unfinished"></translation>
     </message>
@@ -5088,11 +5084,11 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FF7PC2012 File Info</source>
+        <source>No Id</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No Id</source>
+        <source>Add Each Materia to Stock (end of list)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6853,10 +6849,6 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>[Small]</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>[Frog]</source>
         <translation type="unfinished"></translation>
     </message>
@@ -6878,6 +6870,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>[Petrify]</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>[Mini]</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7361,6 +7357,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Bug In Stat Calculation For Materia Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: FF7 Pc 2012 Cloud Save Support</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

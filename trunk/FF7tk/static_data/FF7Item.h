@@ -245,7 +245,7 @@ static ITEM Items[]=
      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},
     {QT_TRANSLATE_NOOP("Items","Maiden's Kiss"),QT_TRANSLATE_NOOP("Item_desc","Cures [Frog]"),1,QImage(item_xpm),
      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0,0},
-    {QT_TRANSLATE_NOOP("Items","Cornucopia"),QT_TRANSLATE_NOOP("Item_desc","Cures [Small]"),1,QImage(item_xpm),
+    {QT_TRANSLATE_NOOP("Items","Cornucopia"),QT_TRANSLATE_NOOP("Item_desc","Cures [Mini]"),1,QImage(item_xpm),
      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0},
     {QT_TRANSLATE_NOOP("Items","Echo screen"),QT_TRANSLATE_NOOP("Item_desc","Cures [Silence]"),1,QImage(item_xpm),
      0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,-1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0},

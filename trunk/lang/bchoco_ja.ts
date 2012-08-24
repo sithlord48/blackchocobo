@@ -13,7 +13,7 @@
     </message>
     <message>
         <source>HP</source>
-        <translation type="unfinished">　　HP </translation>
+        <translation type="unfinished">HP</translation>
     </message>
     <message>
         <source>MP</source>
@@ -21,11 +21,11 @@
     </message>
     <message>
         <source>Fury</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">怒り</translation>
     </message>
     <message>
         <source>Sadness</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">悲しい</translation>
     </message>
     <message>
         <source>Front Row</source>
@@ -65,11 +65,11 @@
     </message>
     <message>
         <source>+</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">+</translation>
     </message>
     <message>
         <source>=</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">=</translation>
     </message>
     <message>
         <source>Vit</source>
@@ -97,15 +97,15 @@
     </message>
     <message>
         <source>1-1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">1-1</translation>
     </message>
     <message>
         <source>2-1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">2-1</translation>
     </message>
     <message>
         <source>3-1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">3-1</translation>
     </message>
     <message>
         <source>Limit Level</source>
@@ -113,7 +113,7 @@
     </message>
     <message>
         <source>-NONE-</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">-なし-</translation>
     </message>
     <message>
         <source>Elemental Effects</source>
@@ -145,7 +145,7 @@
     </message>
     <message>
         <source>AP:x%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">AP:x%1</translation>
     </message>
     <message>
         <source> Str:+%1</source>
@@ -185,7 +185,7 @@
     </message>
     <message>
         <source>Fire</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">炎</translation>
     </message>
     <message>
         <source>Cold</source>
@@ -193,11 +193,11 @@
     </message>
     <message>
         <source>Lightning</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">雷</translation>
     </message>
     <message>
         <source>Earth</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">地</translation>
     </message>
     <message>
         <source>Wind</source>
@@ -209,7 +209,7 @@
     </message>
     <message>
         <source>Gravity</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">重</translation>
     </message>
     <message>
         <source>Holy</source>
@@ -217,7 +217,7 @@
     </message>
     <message>
         <source>Poison</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">毒</translation>
     </message>
     <message>
         <source>Cut</source>
@@ -349,7 +349,7 @@
     </message>
     <message>
         <source>-Empty-</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">-なし-</translation>
     </message>
     <message>
         <source>0x34</source>
@@ -1130,10 +1130,6 @@
         <translation>カエル状態を治す</translation>
     </message>
     <message>
-        <source>Cures [Small]</source>
-        <translation>ミニマム状態を治す</translation>
-    </message>
-    <message>
         <source>Cures [Silence]</source>
         <translation>沈黙状態を治す</translation>
     </message>
@@ -1632,6 +1628,10 @@
     <message>
         <source>Increases Manipulation rate</source>
         <translation>あやつりの確率アップ</translation>
+    </message>
+    <message>
+        <source>Cures [Mini]</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4495,10 +4495,6 @@
         <translation>リージョンが検出できません。手動で選択してください</translation>
     </message>
     <message>
-        <source>Add One Of Each Mastered Materia </source>
-        <translation>すべての MASTER マテリアを一個ずつ追加</translation>
-    </message>
-    <message>
         <source>Remove ALL Materia </source>
         <translation>すべてのマテリアを削除</translation>
     </message>
@@ -5098,11 +5094,11 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>FF7PC2012 File Info</source>
+        <source>No Id</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No Id</source>
+        <source>Add Each Materia to Stock (end of list)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6864,10 +6860,6 @@ Table Entries are Editable</source>
         <translation>[バーサク]</translation>
     </message>
     <message>
-        <source>[Small]</source>
-        <translation>[ミニマム]</translation>
-    </message>
-    <message>
         <source>[Frog]</source>
         <translation>[カエル]</translation>
     </message>
@@ -6890,6 +6882,10 @@ Table Entries are Editable</source>
     <message>
         <source>[Petrify]</source>
         <translation>[石化]</translation>
+    </message>
+    <message>
+        <source>[Mini]</source>
+        <translation type="unfinished">[ミニマム]</translation>
     </message>
 </context>
 <context>
@@ -7384,6 +7380,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Bug In Stat Calculation For Materia Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: FF7 Pc 2012 Cloud Save Support</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

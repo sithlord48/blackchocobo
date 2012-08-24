@@ -1286,8 +1286,8 @@ void CharEditor::Exp_Changed(int exp)
 
 void CharEditor::Level_Changed(int level)
 {
-    if(level != data.level)
-    {
+    //if(level != data.level)
+   // {
         if(autolevel)
         {
             int prev_level=data.level;
@@ -1301,7 +1301,7 @@ void CharEditor::Level_Changed(int level)
             update_tnl_bar();
         }
         else{setLevel(level);}
-    }
+   // }
 }
 void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
 {
@@ -1852,9 +1852,9 @@ void CharEditor::calc_limit_value(QModelIndex item)
     else{limits &= ~(1<<_limitbitarray[row]);}
     setLimits(limits);
 }
-void CharEditor::setAutoLevel(bool ans){autolevel=ans;}//used to turn off auto char leveling
+void CharEditor::setAutoLevel(bool ans){autolevel=ans;if(ans){Level_Changed(data.level);}}//used to turn off auto char leveling
 bool CharEditor::AutoLevel(void){return autolevel;}
-void CharEditor::setAutoStatCalc(bool ans){autostatcalc=ans;}
+void CharEditor::setAutoStatCalc(bool ans){autostatcalc=ans;calc_stats();}//Toggle stat calculation
 bool CharEditor::AutoStatCalc(void){return autostatcalc;}
 bool CharEditor::Debug(void){return debug;}
 void CharEditor::setDebug(bool new_debug)
@@ -2091,13 +2091,14 @@ void CharEditor::calc_stats(void)
             }
         }
 
-        lbl_str_mat_bonus->setText(QString::number(str_bonus));
-        lbl_vit_mat_bonus->setText(QString::number(vit_bonus));
-        lbl_dex_mat_bonus->setText(QString::number(dex_bonus));
-        lbl_spi_mat_bonus->setText(QString::number(spi_bonus));
-        lbl_mag_mat_bonus->setText(QString::number(mag_bonus));
-        lbl_lck_mat_bonus->setText(QString::number(lck_bonus));
     }
+
+    lbl_str_mat_bonus->setText(QString::number(str_bonus));
+    lbl_vit_mat_bonus->setText(QString::number(vit_bonus));
+    lbl_dex_mat_bonus->setText(QString::number(dex_bonus));
+    lbl_spi_mat_bonus->setText(QString::number(spi_bonus));
+    lbl_mag_mat_bonus->setText(QString::number(mag_bonus));
+    lbl_lck_mat_bonus->setText(QString::number(lck_bonus));
 
     str_total+=str_bonus;
     vit_total+= vit_bonus;
