@@ -92,9 +92,7 @@ void Options::set_path_lbls()
     if (!settings->value("save_emu_path").isNull()){ui->line_save_emu->setText(settings->value("save_emu_path").toString());}
     if (!settings->value("load_path").isNull()){ui->line_load_path->setText(settings->value("load_path").toString());}
     if (!settings->value("export_pc").isNull()){ui->line_export_pc->setText(settings->value("export_pc").toString());}
-    if(!settings->value("userId").isNull()){ui->line_userId->setText(settings->value("userId").toString());}
 }
-void Options::on_line_userId_editingFinished(){settings->setValue("userId",ui->line_userId->text());}
 
 void Options::on_line_save_pc_editingFinished(){settings->setValue("save_pc",ui->line_save_pc->text());}
 void Options::on_btn_set_save_pc_clicked()
