@@ -614,10 +614,6 @@
         <translation>Tifa</translation>
     </message>
     <message>
-        <source>Aeris</source>
-        <translation type="obsolete">Aeris</translation>
-    </message>
-    <message>
         <source>Red XIII</source>
         <translation>Rouge XIII</translation>
     </message>
@@ -3087,68 +3083,12 @@
         <translation>Cliquez sur un perso pour l&apos;éditer =====&gt;</translation>
     </message>
     <message>
-        <source>Stats Tab</source>
-        <translation type="obsolete">Onglet Stats</translation>
-    </message>
-    <message>
         <source>P&amp;arty</source>
         <translation>É&amp;quipe</translation>
     </message>
     <message>
-        <source> HP</source>
-        <translation type="obsolete">HP </translation>
-    </message>
-    <message>
-        <source>MP</source>
-        <translation type="obsolete">MP </translation>
-    </message>
-    <message>
-        <source>Level</source>
-        <translation type="obsolete">Niveau</translation>
-    </message>
-    <message>
-        <source>Front Row</source>
-        <translation type="obsolete">Première ligne</translation>
-    </message>
-    <message>
-        <source>Fury</source>
-        <translation type="obsolete">Fureur</translation>
-    </message>
-    <message>
-        <source>Sadness</source>
-        <translation type="obsolete">Tristesse</translation>
-    </message>
-    <message>
-        <source>Kills</source>
-        <translation type="obsolete">Tués </translation>
-    </message>
-    <message>
-        <source> Uses of Limit 1-1</source>
-        <translation type="obsolete"> Usages de limite 1-1</translation>
-    </message>
-    <message>
-        <source> Uses of Limit 2-1</source>
-        <translation type="obsolete"> Usages de limite 2-1</translation>
-    </message>
-    <message>
-        <source> Uses of Limit 3-1</source>
-        <translation type="obsolete"> Usages de limite 3-1</translation>
-    </message>
-    <message>
-        <source>Weapon</source>
-        <translation type="obsolete">Arme</translation>
-    </message>
-    <message>
-        <source>Armor</source>
-        <translation type="obsolete">Armure</translation>
-    </message>
-    <message>
         <source>AP</source>
         <translation>AP</translation>
-    </message>
-    <message>
-        <source>Limit Bar</source>
-        <translation type="obsolete">Jauge de limite </translation>
     </message>
     <message>
         <source>Fights</source>
@@ -3187,124 +3127,12 @@
         <translation>Matéria</translation>
     </message>
     <message>
-        <source>Edit Selected Materia Slot</source>
-        <translation type="obsolete">Modifier la Matéria sélectionnée</translation>
-    </message>
-    <message>
-        <source>Enemy Skill&apos;s</source>
-        <translation type="obsolete">Talents de l&apos;ennemi</translation>
-    </message>
-    <message>
-        <source>Frog Song</source>
-        <translation type="obsolete">Air de crapaud</translation>
-    </message>
-    <message>
-        <source>L4 Suicide</source>
-        <translation type="obsolete">Suicide N4</translation>
-    </message>
-    <message>
-        <source>Magic Hammer</source>
-        <translation type="obsolete">Marteau magie</translation>
-    </message>
-    <message>
-        <source>White Wind</source>
-        <translation type="obsolete">Vent blanc</translation>
-    </message>
-    <message>
-        <source>Big Guard</source>
-        <translation type="obsolete">Grand garde</translation>
-    </message>
-    <message>
-        <source>Angel Whisper</source>
-        <translation type="obsolete">Mot d&apos;ange</translation>
-    </message>
-    <message>
-        <source>Dragon Force</source>
-        <translation type="obsolete">Force de dragon</translation>
-    </message>
-    <message>
-        <source>Death Force</source>
-        <translation type="obsolete">Force de mort</translation>
-    </message>
-    <message>
-        <source>Flame Thrower</source>
-        <translation type="obsolete">Lance-flammes</translation>
-    </message>
-    <message>
-        <source>Laser</source>
-        <translation type="obsolete">Laser</translation>
-    </message>
-    <message>
-        <source>Matra Magic</source>
-        <translation type="obsolete">Magique Matra</translation>
-    </message>
-    <message>
-        <source>Bad Breath</source>
-        <translation type="obsolete">Haleine aigre</translation>
-    </message>
-    <message>
-        <source>Beta</source>
-        <translation type="obsolete">Bêta</translation>
-    </message>
-    <message>
-        <source>Aqualung</source>
-        <translation type="obsolete">Scaphandre</translation>
-    </message>
-    <message>
-        <source>Trine</source>
-        <translation type="obsolete">Trine</translation>
-    </message>
-    <message>
-        <source>Magic Breath</source>
-        <translation type="obsolete">Souffle magie</translation>
-    </message>
-    <message>
-        <source>????</source>
-        <translation type="obsolete">????</translation>
-    </message>
-    <message>
-        <source>Goblin Punch</source>
-        <translation type="obsolete">Punch-Gobelin</translation>
-    </message>
-    <message>
-        <source>Chocobuckle</source>
-        <translation type="obsolete">Chocoboucle</translation>
-    </message>
-    <message>
-        <source>L5 Death</source>
-        <translation type="obsolete">Mort N5</translation>
-    </message>
-    <message>
-        <source>Death Sentence</source>
-        <translation type="obsolete">Peine de mort</translation>
-    </message>
-    <message>
-        <source>Roulette</source>
-        <translation type="obsolete">Roulette</translation>
-    </message>
-    <message>
-        <source>Shadow Flare</source>
-        <translation type="obsolete">Eclat d&apos;ombre</translation>
-    </message>
-    <message>
-        <source>Pandora&apos;s Box</source>
-        <translation type="obsolete">Boîte-Pandore</translation>
-    </message>
-    <message>
-        <source>All</source>
-        <translation type="obsolete">Tous</translation>
-    </message>
-    <message>
         <source>Inventory</source>
         <translation>Inventaire</translation>
     </message>
     <message>
         <source>Item</source>
         <translation>Elément</translation>
-    </message>
-    <message>
-        <source>Qty</source>
-        <translation type="obsolete">Qté</translation>
     </message>
     <message>
         <source>Key Items</source>
@@ -3477,74 +3305,6 @@
     <message>
         <source>Name</source>
         <translation>Nom</translation>
-    </message>
-    <message>
-        <source>Type</source>
-        <translation type="obsolete">Type </translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <translation type="obsolete">Jaune</translation>
-    </message>
-    <message>
-        <source>Green</source>
-        <translation type="obsolete">Vert</translation>
-    </message>
-    <message>
-        <source>Blue</source>
-        <translation type="obsolete">Bleu</translation>
-    </message>
-    <message>
-        <source>Black</source>
-        <translation type="obsolete">Noir</translation>
-    </message>
-    <message>
-        <source>Gold</source>
-        <translation type="obsolete">Doré</translation>
-    </message>
-    <message>
-        <source>Sex</source>
-        <translation type="obsolete">Sexe </translation>
-    </message>
-    <message>
-        <source>Male</source>
-        <translation type="obsolete">Mâle</translation>
-    </message>
-    <message>
-        <source>Female</source>
-        <translation type="obsolete">Femelle</translation>
-    </message>
-    <message>
-        <source>Run Speed</source>
-        <translation type="obsolete">Sprint</translation>
-    </message>
-    <message>
-        <source>Sprint </source>
-        <translation type="obsolete">Vitesse</translation>
-    </message>
-    <message>
-        <source>Accel</source>
-        <translation type="obsolete">Accélération</translation>
-    </message>
-    <message>
-        <source> Wins</source>
-        <translation type="obsolete"> Victoires</translation>
-    </message>
-    <message>
-        <source>Stamina</source>
-        <translation type="obsolete">Résistance</translation>
-    </message>
-    <message>
-        <source>Fed ?</source>
-        <translation type="obsolete">Sagesse?</translation>
-    </message>
-    <message>
-        <source>Coop</source>
-        <translation type="obsolete">Maniabilité</translation>
-    </message>
-    <message>
-        <source>Personality</source>
-        <translation type="obsolete">Personnalité</translation>
     </message>
     <message>
         <source>Stable 2</source>
@@ -3739,40 +3499,8 @@
         <translation>-Vide-</translation>
     </message>
     <message>
-        <source>HP</source>
-        <translation type="obsolete">HP</translation>
-    </message>
-    <message>
-        <source>Char&apos;s Limits</source>
-        <translation type="obsolete">Limites du perso</translation>
-    </message>
-    <message>
-        <source>Limit Level</source>
-        <translation type="obsolete">Niveau de limite</translation>
-    </message>
-    <message>
-        <source>Level Progress</source>
-        <translation type="obsolete">Progression du Niveau</translation>
-    </message>
-    <message>
-        <source>Equipment Tab</source>
-        <translation type="obsolete">Onglet Équipement</translation>
-    </message>
-    <message>
         <source>Master</source>
         <translation>Maître</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation type="obsolete">Enlever</translation>
-    </message>
-    <message>
-        <source>AP:</source>
-        <translation type="obsolete">AP: </translation>
-    </message>
-    <message>
-        <source>Accessory:</source>
-        <translation type="obsolete">Accessoire:</translation>
     </message>
     <message>
         <source>&amp;Materia</source>
@@ -3781,10 +3509,6 @@
     <message>
         <source>C&amp;hocobo</source>
         <translation>C&amp;hocobos</translation>
-    </message>
-    <message>
-        <source>Intel</source>
-        <translation type="obsolete">Intelligence</translation>
     </message>
     <message>
         <source>Average</source>
@@ -3813,34 +3537,6 @@
     <message>
         <source>Magic</source>
         <translation>Magie</translation>
-    </message>
-    <message>
-        <source>Summon</source>
-        <translation type="obsolete">Invocation</translation>
-    </message>
-    <message>
-        <source>Independent</source>
-        <translation type="obsolete">Indépendante</translation>
-    </message>
-    <message>
-        <source>Support</source>
-        <translation type="obsolete">Soutien</translation>
-    </message>
-    <message>
-        <source>Command</source>
-        <translation type="obsolete">Commande</translation>
-    </message>
-    <message>
-        <source>Type Filter</source>
-        <translation type="obsolete">Type</translation>
-    </message>
-    <message>
-        <source>Materia Skills</source>
-        <translation type="obsolete">Compétences de la Matéria</translation>
-    </message>
-    <message>
-        <source>Materia Stat Changes</source>
-        <translation type="obsolete">Statistiques modifiées par la Matéria</translation>
     </message>
     <message>
         <source>Othe&amp;r</source>
@@ -4301,14 +3997,6 @@
         <translation>Lorsque la boîte est partiellement cochée (&quot;-&quot;)le tutoriel se déclenche</translation>
     </message>
     <message>
-        <source>Y.Cloud</source>
-        <translation type="obsolete">J.Cloud</translation>
-    </message>
-    <message>
-        <source>Sephiroth</source>
-        <translation type="obsolete">Sephiroth</translation>
-    </message>
-    <message>
         <source>Slot Region</source>
         <translation>Format du slot</translation>
     </message>
@@ -4435,234 +4123,8 @@
         <translation>NE PAS UTILISER</translation>
     </message>
     <message>
-        <source>Empty Materia</source>
-        <translation type="obsolete">Matéria vide</translation>
-    </message>
-    <message>
-        <source>Place holder Materia Detected
- Remember 16777215 AP = master</source>
-        <translation type="obsolete">Emplacement réservé à une Matéria détecté
- N&apos;oubliez pas que 16777215 AP = Maître</translation>
-    </message>
-    <message>
-        <source>Young Cloud</source>
-        <translation type="obsolete">Jeune Cloud</translation>
-    </message>
-    <message>
         <source>===Empty Slot===</source>
         <translation>==Emplacement vide==</translation>
-    </message>
-    <message>
-        <source>Empty Slot</source>
-        <translation type="obsolete">Emplacement vide</translation>
-    </message>
-    <message>
-        <source>NO CAP</source>
-        <translation type="obsolete">AUCUNE LIMITE</translation>
-    </message>
-    <message>
-        <source>Braver</source>
-        <translation type="obsolete">Bravoure</translation>
-    </message>
-    <message>
-        <source>Cross-Slash</source>
-        <translation type="obsolete">Contre-taillade</translation>
-    </message>
-    <message>
-        <source>Blade Beam</source>
-        <translation type="obsolete">Coup tranchant</translation>
-    </message>
-    <message>
-        <source>Climhazzard</source>
-        <translation type="obsolete">DangerMétéo</translation>
-    </message>
-    <message>
-        <source>Meteorain</source>
-        <translation type="obsolete">PluieMétéores</translation>
-    </message>
-    <message>
-        <source>Finishing Touch</source>
-        <translation type="obsolete">Finition</translation>
-    </message>
-    <message>
-        <source>Big Shot</source>
-        <translation type="obsolete">Grand coup</translation>
-    </message>
-    <message>
-        <source>Mindblow</source>
-        <translation type="obsolete">Souffle</translation>
-    </message>
-    <message>
-        <source>Grenade Bomb</source>
-        <translation type="obsolete">Bombe grenade</translation>
-    </message>
-    <message>
-        <source>Hammerblow</source>
-        <translation type="obsolete">Frappe lourde</translation>
-    </message>
-    <message>
-        <source>Satellite Beam</source>
-        <translation type="obsolete">Rayon satellite</translation>
-    </message>
-    <message>
-        <source>Angermax</source>
-        <translation type="obsolete">Furamax</translation>
-    </message>
-    <message>
-        <source>Catastrophe</source>
-        <translation type="obsolete">Catastrophe</translation>
-    </message>
-    <message>
-        <source>Beat Rush</source>
-        <translation type="obsolete">Coup vif</translation>
-    </message>
-    <message>
-        <source>Waterkick</source>
-        <translation type="obsolete">Coup d&apos;eau</translation>
-    </message>
-    <message>
-        <source>Meteodrive</source>
-        <translation type="obsolete">Météodrive</translation>
-    </message>
-    <message>
-        <source>Dolphin Blow</source>
-        <translation type="obsolete">Coup de dauphin</translation>
-    </message>
-    <message>
-        <source>Meteor Strike</source>
-        <translation type="obsolete">Coup de météore</translation>
-    </message>
-    <message>
-        <source>Final Heaven</source>
-        <translation type="obsolete">Dernier paradis</translation>
-    </message>
-    <message>
-        <source>Healing Wind</source>
-        <translation type="obsolete">Vent guérisseur</translation>
-    </message>
-    <message>
-        <source>Seal Evil</source>
-        <translation type="obsolete">Sceller le mal</translation>
-    </message>
-    <message>
-        <source>Breath of the Earth</source>
-        <translation type="obsolete">Souffle terrien</translation>
-    </message>
-    <message>
-        <source>Fury Brand</source>
-        <translation type="obsolete">Marque de furie</translation>
-    </message>
-    <message>
-        <source>Planet Protector</source>
-        <translation type="obsolete">Protecteur planétaire</translation>
-    </message>
-    <message>
-        <source>Pulse of Life</source>
-        <translation type="obsolete">Battement de vie</translation>
-    </message>
-    <message>
-        <source>Great Gospel</source>
-        <translation type="obsolete">Grand évangile</translation>
-    </message>
-    <message>
-        <source>Sled Fang</source>
-        <translation type="obsolete">Coups de griffe</translation>
-    </message>
-    <message>
-        <source>Lunatic High</source>
-        <translation type="obsolete">Haut dément</translation>
-    </message>
-    <message>
-        <source>Blood Fang</source>
-        <translation type="obsolete">Dent de sang</translation>
-    </message>
-    <message>
-        <source>Stardust Ray</source>
-        <translation type="obsolete">Rayon d&apos;étoiles</translation>
-    </message>
-    <message>
-        <source>Howling Moon</source>
-        <translation type="obsolete">Lune hurlante</translation>
-    </message>
-    <message>
-        <source>Earth Rave</source>
-        <translation type="obsolete">Tempête terrienne</translation>
-    </message>
-    <message>
-        <source>Cosmo Memory</source>
-        <translation type="obsolete">Mémoire Cosmos</translation>
-    </message>
-    <message>
-        <source>Greased Lightning</source>
-        <translation type="obsolete">Eclair d&apos;huile</translation>
-    </message>
-    <message>
-        <source>Clear Tranquil</source>
-        <translation type="obsolete">Tranquille clair</translation>
-    </message>
-    <message>
-        <source>Landscaper</source>
-        <translation type="obsolete">Gratte-terre</translation>
-    </message>
-    <message>
-        <source>Bloodfest</source>
-        <translation type="obsolete">Buffet sanglant</translation>
-    </message>
-    <message>
-        <source>Gauntlet</source>
-        <translation type="obsolete">Gantelet</translation>
-    </message>
-    <message>
-        <source>Doom of the Living</source>
-        <translation type="obsolete">Sort des vivants</translation>
-    </message>
-    <message>
-        <source>All Creation</source>
-        <translation type="obsolete">Tout-création</translation>
-    </message>
-    <message>
-        <source>Dice</source>
-        <translation type="obsolete">Dé</translation>
-    </message>
-    <message>
-        <source>Slots</source>
-        <translation type="obsolete">Roulette</translation>
-    </message>
-    <message>
-        <source>Death Gigas</source>
-        <translation type="obsolete">Gigas de la mort</translation>
-    </message>
-    <message>
-        <source>Hellmasker</source>
-        <translation type="obsolete">Masque infernal</translation>
-    </message>
-    <message>
-        <source>Chaos</source>
-        <translation type="obsolete">Chaos</translation>
-    </message>
-    <message>
-        <source>Boost Jump</source>
-        <translation type="obsolete">Propulsion</translation>
-    </message>
-    <message>
-        <source>Dynamite</source>
-        <translation type="obsolete">Dynamite</translation>
-    </message>
-    <message>
-        <source>Hyper Jump</source>
-        <translation type="obsolete">Super saut</translation>
-    </message>
-    <message>
-        <source>Dragon</source>
-        <translation type="obsolete">Dragon</translation>
-    </message>
-    <message>
-        <source>Dragon Dive</source>
-        <translation type="obsolete">Plongeon de dragon</translation>
-    </message>
-    <message>
-        <source>Big Brawl</source>
-        <translation type="obsolete">Grande rixe</translation>
     </message>
     <message>
         <source>Highwind</source>
@@ -4671,18 +4133,6 @@
     <message>
         <source>Ingoring Non FF7 Save</source>
         <translation>Ignorer sauvegarde non-FF7</translation>
-    </message>
-    <message>
-        <source>ID </source>
-        <translation type="obsolete">ID </translation>
-    </message>
-    <message>
-        <source>Total Exp:</source>
-        <translation type="obsolete">EXP totale:</translation>
-    </message>
-    <message>
-        <source>Next</source>
-        <translation type="obsolete">Niveau suivant</translation>
     </message>
     <message>
         <source>Keycard 66</source>
@@ -4901,10 +4351,6 @@
         <translation>Région détecter les erreurs</translation>
     </message>
     <message>
-        <source>-------EMPTY--------</source>
-        <translation type="obsolete">--------Vide--------</translation>
-    </message>
-    <message>
         <source>Place Leader</source>
         <translation>Placer le chef d&apos;équipe</translation>
     </message>
@@ -4963,18 +4409,6 @@
     <message>
         <source>Normal</source>
         <translation>Normale</translation>
-    </message>
-    <message>
-        <source>Omnislash</source>
-        <translation type="obsolete">Omnislash</translation>
-    </message>
-    <message>
-        <source>Somersault</source>
-        <translation type="obsolete">Culbute</translation>
-    </message>
-    <message>
-        <source>Galian Beast</source>
-        <translation type="obsolete">Bête galienne</translation>
     </message>
     <message>
         <source>Add Max Of All Items</source>
@@ -5060,10 +4494,6 @@ Les stats de Sephiroth proviendront directement de celles de Vincent.</translati
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
         <translation></translation>
-    </message>
-    <message>
-        <source>Unable to Mate</source>
-        <translation type="obsolete">Incapacité à s&apos;accoupler</translation>
     </message>
     <message>
         <source>Add One Of Each Mastered Materia </source>
@@ -5174,26 +4604,6 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
     <message>
         <source>The Bomb Was Set</source>
         <translation>Bombe placée</translation>
-    </message>
-    <message>
-        <source>Str</source>
-        <translation type="obsolete">FRC</translation>
-    </message>
-    <message>
-        <source>Vit</source>
-        <translation type="obsolete">VIT</translation>
-    </message>
-    <message>
-        <source>Mag</source>
-        <translation type="obsolete">MAG</translation>
-    </message>
-    <message>
-        <source>Dex</source>
-        <translation type="obsolete">DEX</translation>
-    </message>
-    <message>
-        <source>Lck</source>
-        <translation type="obsolete">CHC</translation>
     </message>
     <message>
         <source>Event Progress</source>
@@ -5400,10 +4810,6 @@ Variables et barre coulissante synchronisées au tableau de gauche</translation>
         <translation>MDS7ST2:Potion</translation>
     </message>
     <message>
-        <source>Edit Selected Item Slot</source>
-        <translation type="obsolete">Modifier l&apos;objet sélectionné</translation>
-    </message>
-    <message>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Table Entries are Editable</source>
@@ -5426,26 +4832,6 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>In this region the game runs 50hz</source>
         <translation>Dans cette région le jeu fonctionne à 50hz</translation>
-    </message>
-    <message>
-        <source>Ctrl+C</source>
-        <translation type="obsolete">Ctrl+C</translation>
-    </message>
-    <message>
-        <source>Ctrl+V</source>
-        <translation type="obsolete">Ctrl+V</translation>
-    </message>
-    <message>
-        <source>Del</source>
-        <translation type="obsolete">Sppr</translation>
-    </message>
-    <message>
-        <source>Materia Slot Actions</source>
-        <translation type="obsolete">Actions sur les Matérias</translation>
-    </message>
-    <message>
-        <source>&amp;Copy Slot</source>
-        <translation type="obsolete">&amp;Copier Emplacement</translation>
     </message>
     <message>
         <source>Sector 5</source>
@@ -5512,10 +4898,6 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation>La plaque tombe</translation>
     </message>
     <message>
-        <source>Spi</source>
-        <translation type="obsolete">ESP</translation>
-    </message>
-    <message>
         <source>Unsaved Changes</source>
         <translation>Modifications Inchangées</translation>
     </message>
@@ -5566,10 +4948,6 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation>Veuillez sélectionner un formet pour sauvegarder</translation>
     </message>
     <message>
-        <source>Stats: Base+Bonus+Materia=Total</source>
-        <translation type="obsolete">Stat: Base +Bonus +Matéria=Total</translation>
-    </message>
-    <message>
         <source>Calculate Stats</source>
         <translation>Calculer les statistiques</translation>
     </message>
@@ -5580,94 +4958,6 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>PSV FF7 SaveGame (*.psv)</source>
         <translation>Sauvegarde FF7 PSV (*.psv)</translation>
-    </message>
-    <message>
-        <source>spi +13</source>
-        <translation type="obsolete">esp +13</translation>
-    </message>
-    <message>
-        <source>spi +35</source>
-        <translation type="obsolete">esp +35</translation>
-    </message>
-    <message>
-        <source>spi +24</source>
-        <translation type="obsolete">esp +24</translation>
-    </message>
-    <message>
-        <source>vit +35 spi +18</source>
-        <translation type="obsolete">vit +35 esp +18</translation>
-    </message>
-    <message>
-        <source>vit +1 spi +4</source>
-        <translation type="obsolete">vit +1 esp +4</translation>
-    </message>
-    <message>
-        <source>vit +20</source>
-        <translation type="obsolete">vit +20</translation>
-    </message>
-    <message>
-        <source>vit +12 spi +20</source>
-        <translation type="obsolete">vit +12 esp +20</translation>
-    </message>
-    <message>
-        <source>spi +20</source>
-        <translation type="obsolete">esp +20</translation>
-    </message>
-    <message>
-        <source>dex +10</source>
-        <translation type="obsolete">dex +10</translation>
-    </message>
-    <message>
-        <source>vit +30</source>
-        <translation type="obsolete">vit +30</translation>
-    </message>
-    <message>
-        <source>mag +5</source>
-        <translation type="obsolete">mag +5</translation>
-    </message>
-    <message>
-        <source>mag +20</source>
-        <translation type="obsolete">mag +20</translation>
-    </message>
-    <message>
-        <source>str +30</source>
-        <translation type="obsolete">frc +30</translation>
-    </message>
-    <message>
-        <source>str +5</source>
-        <translation type="obsolete">frc +5</translation>
-    </message>
-    <message>
-        <source>str +20 mag +20</source>
-        <translation type="obsolete">frc +20 mag +20</translation>
-    </message>
-    <message>
-        <source>dex +30 lck +20</source>
-        <translation type="obsolete">dex +30 chc +20</translation>
-    </message>
-    <message>
-        <source>str +10</source>
-        <translation type="obsolete">frc +10</translation>
-    </message>
-    <message>
-        <source>vit +10</source>
-        <translation type="obsolete">vit +10</translation>
-    </message>
-    <message>
-        <source>mag +10</source>
-        <translation type="obsolete">mag +10</translation>
-    </message>
-    <message>
-        <source>str +30 vit +30</source>
-        <translation type="obsolete">frc +30 vit +30</translation>
-    </message>
-    <message>
-        <source>mag +30 spi +30</source>
-        <translation type="obsolete">mag +30 esp +30</translation>
-    </message>
-    <message>
-        <source>spi +10</source>
-        <translation type="obsolete">esp +10</translation>
     </message>
     <message>
         <source>Church in the Slums</source>
@@ -5716,22 +5006,6 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>Gold chocobo</source>
         <translation>Chocobo or</translation>
-    </message>
-    <message>
-        <source>lck +10</source>
-        <translation type="obsolete">chc +10</translation>
-    </message>
-    <message>
-        <source>vit +50 spi +50</source>
-        <translation type="obsolete">vit +50 esp +50</translation>
-    </message>
-    <message>
-        <source>Selected Item Details</source>
-        <translation type="obsolete">Détails de l&apos;élément sélectionné</translation>
-    </message>
-    <message>
-        <source>-------BAD ID-------</source>
-        <translation type="obsolete">----MAUVAIS ID----</translation>
     </message>
     <message>
         <source>MDS6_2: Sense Materia</source>
@@ -5828,7 +5102,7 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No Id Set</source>
+        <source>No Id</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5881,10 +5155,6 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>Command</source>
         <translation>Commande</translation>
-    </message>
-    <message>
-        <source>Status</source>
-        <translation type="obsolete">Etat</translation>
     </message>
     <message>
         <source>Master</source>
@@ -7462,10 +6732,6 @@ Les entrées dans le tableau sont modifiables</translation>
         <source>Override Default Save with Following File (raw psx only)</source>
         <translation>Remplacer la sauvegarde par défaut par le fichier courant (uniquement avec raw psx)</translation>
     </message>
-    <message>
-        <source>User ID: (FF7 Pc 2012 ONLY)</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SlotPreview</name>
@@ -7485,120 +6751,12 @@ Les entrées dans le tableau sont modifiables</translation>
 <context>
     <name>SlotSelect</name>
     <message>
-        <source>Select A Save Slot</source>
-        <translation type="obsolete">Sélectionnez un slot</translation>
-    </message>
-    <message>
-        <source>Time</source>
-        <translation type="obsolete">Temps</translation>
-    </message>
-    <message>
-        <source>Gil</source>
-        <translation type="obsolete">Gils</translation>
-    </message>
-    <message>
-        <source>Level</source>
-        <translation type="obsolete">Niveau</translation>
-    </message>
-    <message>
-        <source>Load Slot 1</source>
-        <translation type="obsolete">Charger Slot 1</translation>
-    </message>
-    <message>
-        <source>Load Slot 2</source>
-        <translation type="obsolete">Charger Slot 2</translation>
-    </message>
-    <message>
-        <source>Load Slot 3</source>
-        <translation type="obsolete">Charger Slot 3</translation>
-    </message>
-    <message>
-        <source>Load Slot 5</source>
-        <translation type="obsolete">Charger Slot 5</translation>
-    </message>
-    <message>
-        <source>Load Slot 6</source>
-        <translation type="obsolete">Charger Slot 6</translation>
-    </message>
-    <message>
-        <source>Load Slot 4</source>
-        <translation type="obsolete">Charger Slot 4</translation>
-    </message>
-    <message>
-        <source>Load Slot 8</source>
-        <translation type="obsolete">Charger Slot 8</translation>
-    </message>
-    <message>
-        <source>Load Slot 9</source>
-        <translation type="obsolete">Charger Slot 9</translation>
-    </message>
-    <message>
-        <source>Load Slot 7</source>
-        <translation type="obsolete">Charger Slot 7</translation>
-    </message>
-    <message>
-        <source>Load Slot 11</source>
-        <translation type="obsolete">Charger Slot 11</translation>
-    </message>
-    <message>
-        <source>Load Slot 12</source>
-        <translation type="obsolete">Charger Slot 12</translation>
-    </message>
-    <message>
-        <source>Load Slot 10</source>
-        <translation type="obsolete">Charger Slot 10</translation>
-    </message>
-    <message>
-        <source>Load Slot 14</source>
-        <translation type="obsolete">Charger Slot 14</translation>
-    </message>
-    <message>
-        <source>Load Slot 15</source>
-        <translation type="obsolete">Charger Slot 15</translation>
-    </message>
-    <message>
-        <source>Load Slot 13</source>
-        <translation type="obsolete">Charger Slot 13</translation>
-    </message>
-    <message>
-        <source>
-Empty</source>
-        <translation type="obsolete">
-Vide</translation>
-    </message>
-    <message>
         <source>(Deleted)</source>
         <translation>(Supprimé)</translation>
     </message>
     <message>
-        <source>
- Game Uses %1 Save Block</source>
-        <translation type="obsolete">
- Le jeu utilise %1 sauvegarde</translation>
-    </message>
-    <message>
         <source>s; Next Data Chunk @ Slot:%1</source>
         <translation>s; la prochaine sauvegarde est à l&apos;emplacement %1</translation>
-    </message>
-    <message>
-        <source>
-
- Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation type="obsolete">
-
- Sauvegarde semi-reliée la prochaine sauvegarde est à l&apos;emplacement %1</translation>
-    </message>
-    <message>
-        <source>
-
- End Of Linked Blocks</source>
-        <translation type="obsolete">
-
- Fin du lien de sauvegard</translation>
-    </message>
-    <message>
-        <source>:</source>
-        <translation type="obsolete"> :</translation>
     </message>
     <message>
         <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
@@ -7895,10 +7053,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>A Big Thank You  To:</source>
         <translation>Un grand merci à:</translation>
-    </message>
-    <message>
-        <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct,item/materia lists  and string conversion function. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation type="obsolete">Merci pour avoir donné la source de Jenova. Ce programme utilise des versions modifiées de la structure de sauvegarde de Jenova, les listes des élément/Matérias et la fonction de conversion des strings. L&apos;accès au code source m&apos;a sauvé énormément de fois durant les premières phases de développement.</translation>
     </message>
     <message>
         <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
@@ -8205,10 +7359,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>New: MateriaEditor Widget.</source>
         <translation>Nouveau : widget MateriaEditor.</translation>
-    </message>
-    <message>
-        <source>Fixed:Bug In Stat Calculation For Materia Changes</source>
-        <translation type="obsolete">Corrigé : bogue dans le calcul des stats pour les changements de matéria</translation>
     </message>
     <message>
         <source>New: ChocoboEditor Widgets.</source>

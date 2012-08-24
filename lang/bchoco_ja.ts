@@ -3083,64 +3083,8 @@
         <translation>編集するキャラクターをクリック =========&gt;</translation>
     </message>
     <message>
-        <source>Stats Tab</source>
-        <translation type="obsolete">ステータス タブ</translation>
-    </message>
-    <message>
-        <source> HP</source>
-        <translation type="obsolete">HP</translation>
-    </message>
-    <message>
-        <source>MP</source>
-        <translation type="obsolete">MP</translation>
-    </message>
-    <message>
-        <source>Level</source>
-        <translation type="obsolete">レベル</translation>
-    </message>
-    <message>
-        <source>Front Row</source>
-        <translation type="obsolete">前列配置</translation>
-    </message>
-    <message>
-        <source>Fury</source>
-        <translation type="obsolete">いかり</translation>
-    </message>
-    <message>
-        <source>Sadness</source>
-        <translation type="obsolete">かなしい</translation>
-    </message>
-    <message>
-        <source>Kills</source>
-        <translation type="obsolete">倒した敵</translation>
-    </message>
-    <message>
-        <source> Uses of Limit 1-1</source>
-        <translation type="obsolete">リミット１－１の使用回数</translation>
-    </message>
-    <message>
-        <source> Uses of Limit 2-1</source>
-        <translation type="obsolete">リミット２－１の使用回数</translation>
-    </message>
-    <message>
-        <source> Uses of Limit 3-1</source>
-        <translation type="obsolete">リミット３－１の使用回数</translation>
-    </message>
-    <message>
-        <source>Weapon</source>
-        <translation type="obsolete">武器</translation>
-    </message>
-    <message>
-        <source>Armor</source>
-        <translation type="obsolete">防具</translation>
-    </message>
-    <message>
         <source>AP</source>
         <translation>AP</translation>
-    </message>
-    <message>
-        <source>Limit Bar</source>
-        <translation type="obsolete">リミット ゲージ</translation>
     </message>
     <message>
         <source>P&amp;arty</source>
@@ -3149,18 +3093,6 @@
     <message>
         <source>-Empty-</source>
         <translation>-なし-</translation>
-    </message>
-    <message>
-        <source>Char&apos;s Limits</source>
-        <translation type="obsolete">キャラクターのリミット</translation>
-    </message>
-    <message>
-        <source>Level Progress</source>
-        <translation type="obsolete">レベル アップの進捗</translation>
-    </message>
-    <message>
-        <source>Equipment Tab</source>
-        <translation type="obsolete">装備タグ</translation>
     </message>
     <message>
         <source>Fights</source>
@@ -3195,116 +3127,8 @@
         <translation>マテリア</translation>
     </message>
     <message>
-        <source>Edit Selected Materia Slot</source>
-        <translation type="obsolete">選択マテリア スロットの編集</translation>
-    </message>
-    <message>
-        <source>Enemy Skill&apos;s</source>
-        <translation type="obsolete">てきのわざ</translation>
-    </message>
-    <message>
-        <source>Frog Song</source>
-        <translation type="obsolete">カエルのうた</translation>
-    </message>
-    <message>
-        <source>L4 Suicide</source>
-        <translation type="obsolete">レベル４自爆</translation>
-    </message>
-    <message>
-        <source>Magic Hammer</source>
-        <translation type="obsolete">マジックハンマー</translation>
-    </message>
-    <message>
-        <source>White Wind</source>
-        <translation type="obsolete">ホワイトウィンド</translation>
-    </message>
-    <message>
-        <source>Big Guard</source>
-        <translation type="obsolete">マイティガード</translation>
-    </message>
-    <message>
-        <source>Angel Whisper</source>
-        <translation type="obsolete">天使のささやき</translation>
-    </message>
-    <message>
-        <source>Dragon Force</source>
-        <translation type="obsolete">ドラゴンフォース</translation>
-    </message>
-    <message>
-        <source>Death Force</source>
-        <translation type="obsolete">デスフォース</translation>
-    </message>
-    <message>
-        <source>Flame Thrower</source>
-        <translation type="obsolete">火炎放射</translation>
-    </message>
-    <message>
-        <source>Laser</source>
-        <translation type="obsolete">レーザー</translation>
-    </message>
-    <message>
-        <source>Matra Magic</source>
-        <translation type="obsolete">マトラマジック</translation>
-    </message>
-    <message>
-        <source>Bad Breath</source>
-        <translation type="obsolete">臭い息</translation>
-    </message>
-    <message>
-        <source>Beta</source>
-        <translation type="obsolete">ベータ</translation>
-    </message>
-    <message>
-        <source>Aqualung</source>
-        <translation type="obsolete">アクアブレス</translation>
-    </message>
-    <message>
-        <source>Trine</source>
-        <translation type="obsolete">トライン</translation>
-    </message>
-    <message>
-        <source>Magic Breath</source>
-        <translation type="obsolete">マジカルブレス</translation>
-    </message>
-    <message>
-        <source>????</source>
-        <translation type="obsolete">？？？？</translation>
-    </message>
-    <message>
-        <source>Goblin Punch</source>
-        <translation type="obsolete">ゴブリンパンチ</translation>
-    </message>
-    <message>
-        <source>Chocobuckle</source>
-        <translation type="obsolete">チョコボックル</translation>
-    </message>
-    <message>
-        <source>L5 Death</source>
-        <translation type="obsolete">レベル５デス</translation>
-    </message>
-    <message>
-        <source>Death Sentence</source>
-        <translation type="obsolete">死の宣告</translation>
-    </message>
-    <message>
-        <source>Roulette</source>
-        <translation type="obsolete">死のルーレット</translation>
-    </message>
-    <message>
-        <source>Shadow Flare</source>
-        <translation type="obsolete">シャドウフレア</translation>
-    </message>
-    <message>
-        <source>Pandora&apos;s Box</source>
-        <translation type="obsolete">なんとか？？？</translation>
-    </message>
-    <message>
         <source>Master</source>
         <translation>MASTER</translation>
-    </message>
-    <message>
-        <source>Clear</source>
-        <translation type="obsolete">クリア</translation>
     </message>
     <message>
         <source>Inventory</source>
@@ -3313,10 +3137,6 @@
     <message>
         <source>Item</source>
         <translation>アイテム</translation>
-    </message>
-    <message>
-        <source>Qty</source>
-        <translation type="obsolete">個数</translation>
     </message>
     <message>
         <source>Key Items</source>
@@ -3487,10 +3307,6 @@
         <translation>チョコボ(&amp;C)</translation>
     </message>
     <message>
-        <source>Intel</source>
-        <translation type="obsolete">知能</translation>
-    </message>
-    <message>
         <source>Average</source>
         <translation>普通のチョコボ</translation>
     </message>
@@ -3599,74 +3415,6 @@
         <translation>名前</translation>
     </message>
     <message>
-        <source>Type</source>
-        <translation type="obsolete">タイプ</translation>
-    </message>
-    <message>
-        <source>Yellow</source>
-        <translation type="obsolete">チョコボ</translation>
-    </message>
-    <message>
-        <source>Green</source>
-        <translation type="obsolete">山チョコボ</translation>
-    </message>
-    <message>
-        <source>Blue</source>
-        <translation type="obsolete">川チョコボ</translation>
-    </message>
-    <message>
-        <source>Black</source>
-        <translation type="obsolete">山川チョコボ</translation>
-    </message>
-    <message>
-        <source>Gold</source>
-        <translation type="obsolete">海チョコボ</translation>
-    </message>
-    <message>
-        <source>Sex</source>
-        <translation type="obsolete">性別</translation>
-    </message>
-    <message>
-        <source>Male</source>
-        <translation type="obsolete">オス</translation>
-    </message>
-    <message>
-        <source>Female</source>
-        <translation type="obsolete">メス</translation>
-    </message>
-    <message>
-        <source>Run Speed</source>
-        <translation type="obsolete">スピード</translation>
-    </message>
-    <message>
-        <source>Sprint </source>
-        <translation type="obsolete">ラスト スパート</translation>
-    </message>
-    <message>
-        <source>Accel</source>
-        <translation type="obsolete">加速</translation>
-    </message>
-    <message>
-        <source> Wins</source>
-        <translation type="obsolete">優勝数</translation>
-    </message>
-    <message>
-        <source>Stamina</source>
-        <translation type="obsolete">スタミナ</translation>
-    </message>
-    <message>
-        <source>Fed ?</source>
-        <translation type="obsolete">給餌 (?)</translation>
-    </message>
-    <message>
-        <source>Coop</source>
-        <translation type="obsolete">協調性</translation>
-    </message>
-    <message>
-        <source>Personality</source>
-        <translation type="obsolete">性格</translation>
-    </message>
-    <message>
         <source>Stable 2</source>
         <translation>チョコ房 2</translation>
     </message>
@@ -3771,56 +3519,12 @@
         <translation>エアリス</translation>
     </message>
     <message>
-        <source>Limit Level</source>
-        <translation type="obsolete">リミット レベル</translation>
-    </message>
-    <message>
-        <source>AP:</source>
-        <translation type="obsolete">AP:</translation>
-    </message>
-    <message>
-        <source>Accessory:</source>
-        <translation type="obsolete">アクセサリ:</translation>
-    </message>
-    <message>
         <source>Selected Materia Skills and Stat Info</source>
         <translation>選択マテリアのアビリティと装備効果</translation>
     </message>
     <message>
-        <source>All</source>
-        <translation type="obsolete">すべて</translation>
-    </message>
-    <message>
         <source>Magic</source>
         <translation>まほう</translation>
-    </message>
-    <message>
-        <source>Summon</source>
-        <translation type="obsolete">しょうかん</translation>
-    </message>
-    <message>
-        <source>Independent</source>
-        <translation type="obsolete">どくりつ</translation>
-    </message>
-    <message>
-        <source>Support</source>
-        <translation type="obsolete">しえん</translation>
-    </message>
-    <message>
-        <source>Command</source>
-        <translation type="obsolete">コマンド</translation>
-    </message>
-    <message>
-        <source>Type Filter</source>
-        <translation type="obsolete">タイプのフィルター</translation>
-    </message>
-    <message>
-        <source>Materia Skills</source>
-        <translation type="obsolete">マテリアのスキル</translation>
-    </message>
-    <message>
-        <source>Materia Stat Changes</source>
-        <translation type="obsolete">マテリアの装備効果</translation>
     </message>
     <message>
         <source>map</source>
@@ -4293,14 +3997,6 @@
         <translation>半チェック (&quot;-&quot;) の場合はチュートリアルを表示するフラグになります</translation>
     </message>
     <message>
-        <source>Y.Cloud</source>
-        <translation type="obsolete">昔のクラウド</translation>
-    </message>
-    <message>
-        <source>Sephiroth</source>
-        <translation type="obsolete">セフィロス</translation>
-    </message>
-    <message>
         <source>Slot Region</source>
         <translation>スロットのリージョン</translation>
     </message>
@@ -4427,234 +4123,8 @@
         <translation>使用不可</translation>
     </message>
     <message>
-        <source>Empty Materia</source>
-        <translation type="obsolete">空のマテリア</translation>
-    </message>
-    <message>
-        <source>Place holder Materia Detected
- Remember 16777215 AP = master</source>
-        <translation type="obsolete">プレース ホルダー マテリアを検出しました
-MASTER = 16777215 AP です</translation>
-    </message>
-    <message>
-        <source>Young Cloud</source>
-        <translation type="obsolete">クラウド/昔</translation>
-    </message>
-    <message>
         <source>===Empty Slot===</source>
         <translation>===空きスロット===</translation>
-    </message>
-    <message>
-        <source>Empty Slot</source>
-        <translation type="obsolete">空きスロット</translation>
-    </message>
-    <message>
-        <source>NO CAP</source>
-        <translation type="obsolete">制限なし</translation>
-    </message>
-    <message>
-        <source>Braver</source>
-        <translation type="obsolete">ブレイバー</translation>
-    </message>
-    <message>
-        <source>Cross-Slash</source>
-        <translation type="obsolete">凶斬り</translation>
-    </message>
-    <message>
-        <source>Blade Beam</source>
-        <translation type="obsolete">破晄撃</translation>
-    </message>
-    <message>
-        <source>Climhazzard</source>
-        <translation type="obsolete">クライムハザード</translation>
-    </message>
-    <message>
-        <source>Meteorain</source>
-        <translation type="obsolete">メテオレイン</translation>
-    </message>
-    <message>
-        <source>Finishing Touch</source>
-        <translation type="obsolete">画龍点睛</translation>
-    </message>
-    <message>
-        <source>Big Shot</source>
-        <translation type="obsolete">ヘビーショット</translation>
-    </message>
-    <message>
-        <source>Mindblow</source>
-        <translation type="obsolete">マインドブレイク</translation>
-    </message>
-    <message>
-        <source>Grenade Bomb</source>
-        <translation type="obsolete">グレネードボム</translation>
-    </message>
-    <message>
-        <source>Hammerblow</source>
-        <translation type="obsolete">ハンマーブロウ</translation>
-    </message>
-    <message>
-        <source>Satellite Beam</source>
-        <translation type="obsolete">サテライトビーム</translation>
-    </message>
-    <message>
-        <source>Angermax</source>
-        <translation type="obsolete">アンガーマックス</translation>
-    </message>
-    <message>
-        <source>Catastrophe</source>
-        <translation type="obsolete">カタストロフィ</translation>
-    </message>
-    <message>
-        <source>Beat Rush</source>
-        <translation type="obsolete">掌打ラッシュ</translation>
-    </message>
-    <message>
-        <source>Waterkick</source>
-        <translation type="obsolete">水面蹴り</translation>
-    </message>
-    <message>
-        <source>Meteodrive</source>
-        <translation type="obsolete">メテオドライヴ</translation>
-    </message>
-    <message>
-        <source>Dolphin Blow</source>
-        <translation type="obsolete">ドルフィンブロウ</translation>
-    </message>
-    <message>
-        <source>Meteor Strike</source>
-        <translation type="obsolete">メテオストライク</translation>
-    </message>
-    <message>
-        <source>Final Heaven</source>
-        <translation type="obsolete">ファイナルヘヴン</translation>
-    </message>
-    <message>
-        <source>Healing Wind</source>
-        <translation type="obsolete">癒しの風</translation>
-    </message>
-    <message>
-        <source>Seal Evil</source>
-        <translation type="obsolete">邪気封印</translation>
-    </message>
-    <message>
-        <source>Breath of the Earth</source>
-        <translation type="obsolete">大地の息吹</translation>
-    </message>
-    <message>
-        <source>Fury Brand</source>
-        <translation type="obsolete">怒りの烙印</translation>
-    </message>
-    <message>
-        <source>Planet Protector</source>
-        <translation type="obsolete">星の守護</translation>
-    </message>
-    <message>
-        <source>Pulse of Life</source>
-        <translation type="obsolete">生命の鼓動</translation>
-    </message>
-    <message>
-        <source>Great Gospel</source>
-        <translation type="obsolete">大いなる福音</translation>
-    </message>
-    <message>
-        <source>Sled Fang</source>
-        <translation type="obsolete">スレッドファング</translation>
-    </message>
-    <message>
-        <source>Lunatic High</source>
-        <translation type="obsolete">ルナティックハイ</translation>
-    </message>
-    <message>
-        <source>Blood Fang</source>
-        <translation type="obsolete">ブラッドファング</translation>
-    </message>
-    <message>
-        <source>Stardust Ray</source>
-        <translation type="obsolete">スターダストレイ</translation>
-    </message>
-    <message>
-        <source>Howling Moon</source>
-        <translation type="obsolete">ハウリングムーン</translation>
-    </message>
-    <message>
-        <source>Earth Rave</source>
-        <translation type="obsolete">アースレイヴ</translation>
-    </message>
-    <message>
-        <source>Cosmo Memory</source>
-        <translation type="obsolete">コスモメモリー</translation>
-    </message>
-    <message>
-        <source>Greased Lightning</source>
-        <translation type="obsolete">疾風迅雷</translation>
-    </message>
-    <message>
-        <source>Clear Tranquil</source>
-        <translation type="obsolete">明鏡止水</translation>
-    </message>
-    <message>
-        <source>Landscaper</source>
-        <translation type="obsolete">抜山蓋世</translation>
-    </message>
-    <message>
-        <source>Bloodfest</source>
-        <translation type="obsolete">血祭</translation>
-    </message>
-    <message>
-        <source>Gauntlet</source>
-        <translation type="obsolete">鎧袖一触</translation>
-    </message>
-    <message>
-        <source>Doom of the Living</source>
-        <translation type="obsolete">生者必滅</translation>
-    </message>
-    <message>
-        <source>All Creation</source>
-        <translation type="obsolete">森羅万象</translation>
-    </message>
-    <message>
-        <source>Dice</source>
-        <translation type="obsolete">ダイス</translation>
-    </message>
-    <message>
-        <source>Slots</source>
-        <translation type="obsolete">スロット</translation>
-    </message>
-    <message>
-        <source>Death Gigas</source>
-        <translation type="obsolete">デスギガス</translation>
-    </message>
-    <message>
-        <source>Hellmasker</source>
-        <translation type="obsolete">ヘルマスカー</translation>
-    </message>
-    <message>
-        <source>Chaos</source>
-        <translation type="obsolete">カオス</translation>
-    </message>
-    <message>
-        <source>Boost Jump</source>
-        <translation type="obsolete">ブーストジャンプ</translation>
-    </message>
-    <message>
-        <source>Dynamite</source>
-        <translation type="obsolete">ダイナマイト</translation>
-    </message>
-    <message>
-        <source>Hyper Jump</source>
-        <translation type="obsolete">ハイパージャンプ</translation>
-    </message>
-    <message>
-        <source>Dragon</source>
-        <translation type="obsolete">ドラゴンモッド</translation>
-    </message>
-    <message>
-        <source>Dragon Dive</source>
-        <translation type="obsolete">ドラゴンダイヴ</translation>
-    </message>
-    <message>
-        <source>Big Brawl</source>
-        <translation type="obsolete">大乱闘</translation>
     </message>
     <message>
         <source>Highwind</source>
@@ -4771,22 +4241,6 @@ MASTER = 16777215 AP です</translation>
     <message>
         <source>Region Detect Error</source>
         <translation>リージョンの検出エラー</translation>
-    </message>
-    <message>
-        <source>-------EMPTY--------</source>
-        <translation type="obsolete">-------空き--------</translation>
-    </message>
-    <message>
-        <source>ID </source>
-        <translation type="obsolete">ID </translation>
-    </message>
-    <message>
-        <source>Total Exp:</source>
-        <translation type="obsolete">経験値:</translation>
-    </message>
-    <message>
-        <source>Next</source>
-        <translation type="obsolete">次のレベルまで</translation>
     </message>
     <message>
         <source>Show Battle Target Labels</source>
@@ -4957,18 +4411,6 @@ MASTER = 16777215 AP です</translation>
         <translation>ノーマル</translation>
     </message>
     <message>
-        <source>Omnislash</source>
-        <translation type="obsolete">超究武神覇斬</translation>
-    </message>
-    <message>
-        <source>Somersault</source>
-        <translation type="obsolete">サマーソルト</translation>
-    </message>
-    <message>
-        <source>Galian Beast</source>
-        <translation type="obsolete">ガリアンビースト</translation>
-    </message>
-    <message>
         <source>Add Max Of All Items</source>
         <translation>すべてのアイテムを最大数追加</translation>
     </message>
@@ -5051,10 +4493,6 @@ MASTER = 16777215 AP です</translation>
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
         <translation>リージョンが検出できません。手動で選択してください</translation>
-    </message>
-    <message>
-        <source>Unable to Mate</source>
-        <translation type="obsolete">カップリング不可</translation>
     </message>
     <message>
         <source>Add One Of Each Mastered Materia </source>
@@ -5165,30 +4603,6 @@ Var And Scrolling Synced To Left Table</source>
     <message>
         <source>The Bomb Was Set</source>
         <translation>爆弾をセット</translation>
-    </message>
-    <message>
-        <source>Str</source>
-        <translation type="obsolete">　　 力</translation>
-    </message>
-    <message>
-        <source>Vit</source>
-        <translation type="obsolete">　体力</translation>
-    </message>
-    <message>
-        <source>Mag</source>
-        <translation type="obsolete">　魔力</translation>
-    </message>
-    <message>
-        <source>Dex</source>
-        <translation type="obsolete">素速さ</translation>
-    </message>
-    <message>
-        <source>Lck</source>
-        <translation type="obsolete">　　 運</translation>
-    </message>
-    <message>
-        <source>HP</source>
-        <translation type="obsolete">　　HP </translation>
     </message>
     <message>
         <source>Event Progress</source>
@@ -5395,10 +4809,6 @@ Var And Scrolling Synced To Left Table</source>
         <translation>列車墓場2: ポーション</translation>
     </message>
     <message>
-        <source>Edit Selected Item Slot</source>
-        <translation type="obsolete">選択アイテム スロットの編集</translation>
-    </message>
-    <message>
         <source>&lt;------Left Table------
 Select Unknown Var To View
 Table Entries are Editable</source>
@@ -5421,26 +4831,6 @@ Table Entries are Editable</source>
     <message>
         <source>In this region the game runs 50hz</source>
         <translation>このリージョンは 50Hz でゲームが実行されます</translation>
-    </message>
-    <message>
-        <source>Ctrl+C</source>
-        <translation type="obsolete">Ctrl+C</translation>
-    </message>
-    <message>
-        <source>Ctrl+V</source>
-        <translation type="obsolete">Ctrl+V</translation>
-    </message>
-    <message>
-        <source>Del</source>
-        <translation type="obsolete">Del</translation>
-    </message>
-    <message>
-        <source>Materia Slot Actions</source>
-        <translation type="obsolete">マテリア スロットの操作</translation>
-    </message>
-    <message>
-        <source>&amp;Copy Slot</source>
-        <translation type="obsolete">スロットのコピー(&amp;C)</translation>
     </message>
     <message>
         <source>Sector 5</source>
@@ -5507,10 +4897,6 @@ Table Entries are Editable</source>
         <translation>プレートの落下</translation>
     </message>
     <message>
-        <source>Spi</source>
-        <translation type="obsolete">　精神</translation>
-    </message>
-    <message>
         <source>Unsaved Changes</source>
         <translation>変更が保存されていません</translation>
     </message>
@@ -5561,10 +4947,6 @@ Table Entries are Editable</source>
         <translation>保存するファイルの種類を選択してください</translation>
     </message>
     <message>
-        <source>Stats: Base+Bonus+Materia=Total</source>
-        <translation type="obsolete">能力値: 基本 + ボーナス + マテリア = トータル</translation>
-    </message>
-    <message>
         <source>Calculate Stats</source>
         <translation>能力値を算出</translation>
     </message>
@@ -5575,94 +4957,6 @@ Table Entries are Editable</source>
     <message>
         <source>PSV FF7 SaveGame (*.psv)</source>
         <translation>PSV FF7 セーブ (*.psv)</translation>
-    </message>
-    <message>
-        <source>spi +13</source>
-        <translation type="obsolete">精神 + 13</translation>
-    </message>
-    <message>
-        <source>spi +35</source>
-        <translation type="obsolete">精神 + 35</translation>
-    </message>
-    <message>
-        <source>spi +24</source>
-        <translation type="obsolete">精神 + 24</translation>
-    </message>
-    <message>
-        <source>vit +35 spi +18</source>
-        <translation type="obsolete">体力 + 35, 精神 + 18</translation>
-    </message>
-    <message>
-        <source>vit +1 spi +4</source>
-        <translation type="obsolete">体力 + 1, 精神 + 4</translation>
-    </message>
-    <message>
-        <source>vit +20</source>
-        <translation type="obsolete">体力 + 20</translation>
-    </message>
-    <message>
-        <source>vit +12 spi +20</source>
-        <translation type="obsolete">体力 + 12, 精神 + 20</translation>
-    </message>
-    <message>
-        <source>spi +20</source>
-        <translation type="obsolete">精神 + 20</translation>
-    </message>
-    <message>
-        <source>dex +10</source>
-        <translation type="obsolete">素早さ + 10</translation>
-    </message>
-    <message>
-        <source>vit +30</source>
-        <translation type="obsolete">体力 + 30</translation>
-    </message>
-    <message>
-        <source>mag +5</source>
-        <translation type="obsolete">魔力 + 5</translation>
-    </message>
-    <message>
-        <source>mag +20</source>
-        <translation type="obsolete">魔力 + 20</translation>
-    </message>
-    <message>
-        <source>str +30</source>
-        <translation type="obsolete">力 + 30</translation>
-    </message>
-    <message>
-        <source>str +5</source>
-        <translation type="obsolete">力 + 5</translation>
-    </message>
-    <message>
-        <source>str +20 mag +20</source>
-        <translation type="obsolete">力 + 20, 魔力 + 20</translation>
-    </message>
-    <message>
-        <source>dex +30 lck +20</source>
-        <translation type="obsolete">速さ + 30, 運 + 20</translation>
-    </message>
-    <message>
-        <source>str +10</source>
-        <translation type="obsolete">力 + 10</translation>
-    </message>
-    <message>
-        <source>vit +10</source>
-        <translation type="obsolete">体力 + 10</translation>
-    </message>
-    <message>
-        <source>mag +10</source>
-        <translation type="obsolete">魔力 + 10</translation>
-    </message>
-    <message>
-        <source>str +30 vit +30</source>
-        <translation type="obsolete">力 + 20, 体力 + 20</translation>
-    </message>
-    <message>
-        <source>mag +30 spi +30</source>
-        <translation type="obsolete">魔力 + 30, 精神 + 30</translation>
-    </message>
-    <message>
-        <source>spi +10</source>
-        <translation type="obsolete">精神 + 10</translation>
     </message>
     <message>
         <source>Church in the Slums</source>
@@ -5712,22 +5006,6 @@ Table Entries are Editable</source>
     <message>
         <source>Gold chocobo</source>
         <translation>海チョコボ</translation>
-    </message>
-    <message>
-        <source>lck +10</source>
-        <translation type="obsolete">運 + 10</translation>
-    </message>
-    <message>
-        <source>vit +50 spi +50</source>
-        <translation type="obsolete">体力 + 50, 精神 + 50</translation>
-    </message>
-    <message>
-        <source>Selected Item Details</source>
-        <translation type="obsolete">選択アイテムの詳細</translation>
-    </message>
-    <message>
-        <source>-------BAD ID-------</source>
-        <translation type="obsolete">------無効な ID------</translation>
     </message>
     <message>
         <source>MDS6_2: Sense Materia</source>
@@ -5824,7 +5102,7 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No Id Set</source>
+        <source>No Id</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5877,10 +5155,6 @@ Table Entries are Editable</source>
     <message>
         <source>Command</source>
         <translation>コマンド</translation>
-    </message>
-    <message>
-        <source>Status</source>
-        <translation type="obsolete">ステータス</translation>
     </message>
     <message>
         <source>Master</source>
@@ -7458,10 +6732,6 @@ Table Entries are Editable</source>
         <source>Override Default Save with Following File (raw psx only)</source>
         <translation>デフォルトのセーブに指定のファイルを適用 (RAW PSX のみ)</translation>
     </message>
-    <message>
-        <source>User ID: (FF7 Pc 2012 ONLY)</source>
-        <translation type="unfinished"></translation>
-    </message>
 </context>
 <context>
     <name>SlotPreview</name>
@@ -7481,120 +6751,12 @@ Table Entries are Editable</source>
 <context>
     <name>SlotSelect</name>
     <message>
-        <source>Select A Save Slot</source>
-        <translation type="obsolete">スロットの選択</translation>
-    </message>
-    <message>
-        <source>Time</source>
-        <translation type="obsolete">時間</translation>
-    </message>
-    <message>
-        <source>Gil</source>
-        <translation type="obsolete">ギル</translation>
-    </message>
-    <message>
-        <source>Level</source>
-        <translation type="obsolete">レベル</translation>
-    </message>
-    <message>
-        <source>Load Slot 1</source>
-        <translation type="obsolete">スロット 1 をロード</translation>
-    </message>
-    <message>
-        <source>Load Slot 2</source>
-        <translation type="obsolete">スロット 2 をロード</translation>
-    </message>
-    <message>
-        <source>Load Slot 3</source>
-        <translation type="obsolete">スロット 3 をロード</translation>
-    </message>
-    <message>
-        <source>Load Slot 5</source>
-        <translation type="obsolete">スロット 5 をロード</translation>
-    </message>
-    <message>
-        <source>Load Slot 6</source>
-        <translation type="obsolete">スロット 6 をロード</translation>
-    </message>
-    <message>
-        <source>Load Slot 4</source>
-        <translation type="obsolete">スロット 4 をロード</translation>
-    </message>
-    <message>
-        <source>Load Slot 8</source>
-        <translation type="obsolete">スロット 8 をロード</translation>
-    </message>
-    <message>
-        <source>Load Slot 9</source>
-        <translation type="obsolete">スロット 9 をロード</translation>
-    </message>
-    <message>
-        <source>Load Slot 7</source>
-        <translation type="obsolete">スロット 7 をロード</translation>
-    </message>
-    <message>
-        <source>Load Slot 11</source>
-        <translation type="obsolete">スロット 11 をロード</translation>
-    </message>
-    <message>
-        <source>Load Slot 12</source>
-        <translation type="obsolete">スロット 12 をロード</translation>
-    </message>
-    <message>
-        <source>Load Slot 10</source>
-        <translation type="obsolete">スロット 10 をロード</translation>
-    </message>
-    <message>
-        <source>Load Slot 14</source>
-        <translation type="obsolete">スロット 14 をロード</translation>
-    </message>
-    <message>
-        <source>Load Slot 15</source>
-        <translation type="obsolete">スロット 15 をロード</translation>
-    </message>
-    <message>
-        <source>Load Slot 13</source>
-        <translation type="obsolete">スロット 13 をロード</translation>
-    </message>
-    <message>
-        <source>
-Empty</source>
-        <translation type="obsolete">
-ＥＭＰＴＹ</translation>
-    </message>
-    <message>
         <source>(Deleted)</source>
         <translation>(削除済み)</translation>
     </message>
     <message>
-        <source>
- Game Uses %1 Save Block</source>
-        <translation type="obsolete">
- セーブに %1 ブロックを使用</translation>
-    </message>
-    <message>
         <source>s; Next Data Chunk @ Slot:%1</source>
         <translation>; 次のデータ チャンク @ スロット:%1</translation>
-    </message>
-    <message>
-        <source>
-
- Mid-Linked Block Next Data Chunk @ Slot:%1</source>
-        <translation type="obsolete">
-
- 第二ブロック; 次のデータ チャンク @ スロット:%1</translation>
-    </message>
-    <message>
-        <source>
-
- End Of Linked Blocks</source>
-        <translation type="obsolete">
-
- 最後のリンク ブロック</translation>
-    </message>
-    <message>
-        <source>:</source>
-        <translation type="obsolete">:</translation>
     </message>
     <message>
         <source>       Mid-Linked Block Next Data Chunk @ Slot:%1</source>
@@ -7891,10 +7053,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>A Big Thank You  To:</source>
         <translation>大いなる感謝を:</translation>
-    </message>
-    <message>
-        <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct,item/materia lists  and string conversion function. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
-        <translation type="obsolete"> Jenova ソースコードの提供に感謝します。セーブマップ, アイテム/マテリア リスト 文字列変換の修正バージョンの使用によって、初期の作業時間を大幅に短縮できました。</translation>
     </message>
     <message>
         <source>Thank You For,  All of the Help With Black Chocobo. Translating , Bug testing, helping w/ finding data in the savemap. theme testing, etc. he does alot to help.</source>
@@ -8199,10 +7357,6 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>New: MateriaEditor Widget.</source>
         <translation>追加: MateriaEditor ウィジェット</translation>
-    </message>
-    <message>
-        <source>Fixed:Bug In Stat Calculation For Materia Changes</source>
-        <translation type="obsolete">修正: マテリア変更時の能力値算出</translation>
     </message>
     <message>
         <source>New: ChocoboEditor Widgets.</source>
