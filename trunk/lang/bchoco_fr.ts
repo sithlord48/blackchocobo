@@ -670,7 +670,7 @@
     </message>
     <message>
         <source>Run Speed</source>
-        <translation type="unfinished">Sprint</translation>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Sprint Speed</source>
@@ -682,7 +682,7 @@
     </message>
     <message>
         <source>Wins</source>
-        <translation type="unfinished"></translation>
+        <translation>Victoires</translation>
     </message>
     <message>
         <source>Coop</source>
@@ -1631,7 +1631,7 @@
     </message>
     <message>
         <source>Cures [Mini]</source>
-        <translation type="unfinished"></translation>
+        <translation>Guérit de [Mini]</translation>
     </message>
 </context>
 <context>
@@ -5095,11 +5095,11 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>No Id</source>
-        <translation type="unfinished"></translation>
+        <translation>Pas d&apos;Id</translation>
     </message>
     <message>
         <source>Add Each Materia to Stock (end of list)</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajoute chaque matéria au stock (en fin de liste)</translation>
     </message>
 </context>
 <context>
@@ -6885,7 +6885,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>[Mini]</source>
-        <translation type="unfinished">[Mini]</translation>
+        <translation>[Mini]</translation>
     </message>
 </context>
 <context>
@@ -7378,15 +7378,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: Slot Selection Dialog.</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : fenêtre de sélection de slot.</translation>
     </message>
     <message>
         <source>Fixed: Bug In Stat Calculation For Materia Changes</source>
-        <translation type="unfinished"></translation>
+        <translation>Corrigé : bogue dans le calcul des stats lors des changements de matéria</translation>
     </message>
     <message>
         <source>New: FF7 Pc 2012 Cloud Save Support</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : FF7 PC 2012 support des sauvegardes dans le Cloud</translation>
     </message>
 </context>
 <context>
