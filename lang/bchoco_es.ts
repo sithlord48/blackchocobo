@@ -1130,10 +1130,6 @@
         <translation>Cura [Rana]</translation>
     </message>
     <message>
-        <source>Cures [Small]</source>
-        <translation>Cura [Pequeño]</translation>
-    </message>
-    <message>
         <source>Cures [Silence]</source>
         <translation>Cura [Silencio]</translation>
     </message>
@@ -1632,6 +1628,10 @@
     <message>
         <source>Increases Manipulation rate</source>
         <translation>Más rapidez</translation>
+    </message>
+    <message>
+        <source>Cures [Mini]</source>
+        <translation>Cura [Pequeño]</translation>
     </message>
 </context>
 <context>
@@ -4117,7 +4117,7 @@
     </message>
     <message>
         <source>This File Does Not Have An Updated Checksum.It will not work on your PSP.</source>
-        <translation>Este archivo no tiene un checksum actualizado. No funcionará en tu PSP</translation>
+        <translation>Este archivo no tiene un checksum actualizado. No funcionará en tu PSP.</translation>
     </message>
     <message>
         <source>DON&apos;T USE</source>
@@ -4494,10 +4494,6 @@
     <message>
         <source>Region Cannot be Automatically Detected, You Must Set it Manually</source>
         <translation>La región no se puede detectar automáticamente, Debes ponerla manualmente</translation>
-    </message>
-    <message>
-        <source>Add One Of Each Mastered Materia </source>
-        <translation>Añadir una materia maestra de cada</translation>
     </message>
     <message>
         <source>Remove ALL Materia </source>
@@ -5098,12 +5094,12 @@ Las entradas de la tabla son editables</translation>
         <translation>Reemplazar Materia y Equipamiento de %1</translation>
     </message>
     <message>
-        <source>FF7PC2012 File Info</source>
-        <translation>Info de archivo FF7PC2012</translation>
-    </message>
-    <message>
         <source>No Id</source>
         <translation>Sin ID</translation>
+    </message>
+    <message>
+        <source>Add Each Materia to Stock (end of list)</source>
+        <translation>Añadir todas las Materias (al final de la lista)</translation>
     </message>
 </context>
 <context>
@@ -6865,10 +6861,6 @@ Fénix x3 (180pm)</translation>
         <translation>[Locura]</translation>
     </message>
     <message>
-        <source>[Small]</source>
-        <translation>[Pequeño]</translation>
-    </message>
-    <message>
         <source>[Frog]</source>
         <translation>[Rana]</translation>
     </message>
@@ -6891,6 +6883,10 @@ Fénix x3 (180pm)</translation>
     <message>
         <source>[Petrify]</source>
         <translation>[Petrif]</translation>
+    </message>
+    <message>
+        <source>[Mini]</source>
+        <translation>[Pequeño]</translation>
     </message>
 </context>
 <context>
@@ -7357,15 +7353,15 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: MateriaEditor Widget.</source>
-        <translation>Nuevo: Widget para editor de materia</translation>
+        <translation>Nuevo: Widget para editor de materia.</translation>
     </message>
     <message>
         <source>New: ChocoboEditor Widgets.</source>
-        <translation>Nuevo: Widget para Editor de chocobo</translation>
+        <translation>Nuevo: Widget para Editor de chocobo.</translation>
     </message>
     <message>
         <source>New: Character Editor Widget.</source>
-        <translation>Nuevo: Widget para editor de personajes</translation>
+        <translation>Nuevo: Widget para editor de personajes.</translation>
     </message>
     <message>
         <source> Thank You For, providing the source to Jenova. This programs uses modified versions of Jenova&apos;s savefile struct And item/materia lists. Access to it&apos;s source code saved a lot of time during the early stages of development.</source>
@@ -7377,15 +7373,19 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: File Drop Support.</source>
-        <translation>Nuevo: Soporte para volcado de archivo</translation>
+        <translation>Nuevo: Soporte para volcado de archivo.</translation>
     </message>
     <message>
         <source>New: Slot Selection Dialog.</source>
-        <translation>Nuevo: Diálogo de selección de ranura</translation>
+        <translation>Nuevo: Diálogo de selección de ranura.</translation>
     </message>
     <message>
         <source>Fixed: Bug In Stat Calculation For Materia Changes</source>
         <translation>Arreglado: Fallo en el cálculo de stats cuando se cambian materias</translation>
+    </message>
+    <message>
+        <source>New: FF7 Pc 2012 Cloud Save Support</source>
+        <translation>Nuevo: Compatibilidad para guardado en la nube en FF7 Pc 2012</translation>
     </message>
 </context>
 <context>

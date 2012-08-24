@@ -1130,10 +1130,6 @@
         <translation>Guérit de [Grenouille]</translation>
     </message>
     <message>
-        <source>Cures [Small]</source>
-        <translation>Guérit de [Mini]</translation>
-    </message>
-    <message>
         <source>Cures [Silence]</source>
         <translation>Guérit de [Silence]</translation>
     </message>
@@ -1632,6 +1628,10 @@
     <message>
         <source>Increases Manipulation rate</source>
         <translation>Accroît capacité manipulation</translation>
+    </message>
+    <message>
+        <source>Cures [Mini]</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -4496,10 +4496,6 @@ Les stats de Sephiroth proviendront directement de celles de Vincent.</translati
         <translation></translation>
     </message>
     <message>
-        <source>Add One Of Each Mastered Materia </source>
-        <translation>Ajouter un exemplaire de chaque Matéria au niveau maître</translation>
-    </message>
-    <message>
         <source>Remove ALL Materia </source>
         <translation>Supprimer toutes les Matérias</translation>
     </message>
@@ -5098,11 +5094,11 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation>Remplacer les matérias et l&apos;équipement de %1</translation>
     </message>
     <message>
-        <source>FF7PC2012 File Info</source>
+        <source>No Id</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No Id</source>
+        <source>Add Each Materia to Stock (end of list)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6864,10 +6860,6 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation>[Folie]</translation>
     </message>
     <message>
-        <source>[Small]</source>
-        <translation>[Mini]</translation>
-    </message>
-    <message>
         <source>[Frog]</source>
         <translation>[Grenouille]</translation>
     </message>
@@ -6890,6 +6882,10 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>[Petrify]</source>
         <translation>[Pétrifier]</translation>
+    </message>
+    <message>
+        <source>[Mini]</source>
+        <translation type="unfinished">[Mini]</translation>
     </message>
 </context>
 <context>
@@ -7386,6 +7382,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Fixed: Bug In Stat Calculation For Materia Changes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: FF7 Pc 2012 Cloud Save Support</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

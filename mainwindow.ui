@@ -2287,7 +2287,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
            <item>
             <widget class="QPushButton" name="btn_add_all_materia">
              <property name="text">
-              <string>Add One Of Each Mastered Materia </string>
+              <string>Add Each Materia to Stock (end of list)</string>
              </property>
             </widget>
            </item>
@@ -13972,14 +13972,6 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="text">
     <string>PAL (BESCES-00868)</string>
-   </property>
-  </action>
-  <action name="actionFF7PC2012_File_Info">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="text">
-    <string>FF7PC2012 File Info</string>
    </property>
   </action>
  </widget>
