@@ -525,7 +525,6 @@ void MainWindow::init_settings()
     if(settings->value("color3_g").isNull()){settings->setValue("color3_g","65");}
     if(settings->value("color3_b").isNull()){settings->setValue("color3_b","65");}
     skip_slot_mask = settings->value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
-    UserId= settings->value("userId").toString();
 
     if(settings->value("show_test").toBool())
     {
@@ -889,6 +888,7 @@ void MainWindow::saveFileFull(QString fileName)
         }
         filename =fileName;
         file_modified(false);
+        if(ff7->type()=="PC"){FixMetaData();}//check for metadata and update it if in savepath.
         guirefresh(0);
     }
     else{QMessageBox::information(this,tr("Save Error"),tr("Failed to save file\n%1").arg(fileName));}
@@ -1392,7 +1392,7 @@ void MainWindow::setmenu(bool newgame)
     ui->actionSlot_09->setEnabled(0);ui->actionSlot_10->setEnabled(0);ui->actionSlot_11->setEnabled(0);
     ui->actionSlot_12->setEnabled(0);ui->actionSlot_13->setEnabled(0);ui->actionSlot_14->setEnabled(0);
     ui->actionSlot_15->setEnabled(0);ui->actionNew_Game->setEnabled(0);ui->compare_table->setEnabled(0);
-    ui->lbl_current_slot_num->clear(); ui->lbl_current_slot_txt->clear();ui->actionFF7PC2012_File_Info->setEnabled(0);
+    ui->lbl_current_slot_num->clear(); ui->lbl_current_slot_txt->clear();
     /*~~End Clear Menu Items~~*/
     /*~~~~~~Current Slot~~~~~~*/
     switch(s)
@@ -1460,8 +1460,7 @@ void MainWindow::setmenu(bool newgame)
     else if(ff7->region(s).isEmpty()){/*do nothing*/}
     else{QMessageBox::information(this,tr("Region Detect Error"),tr("Region Cannot be Automatically Detected, You Must Set it Manually"));}
     /*~~End Detected Region~~*/
-    if(ff7->type() =="PC"){ui->actionFF7PC2012_File_Info->setEnabled(true);}
-    load=false;
+   load=false;
 }
 void MainWindow::file_modified(bool changed)
 {
@@ -4292,18 +4291,29 @@ void MainWindow::Items_Changed(QList<quint16> items)
 }
 void MainWindow::FixMetaData()
 {
-    QString Md5= ff7->md5sum(filename,UserId);
+    QString UserId;//user id is not global for now
     QFileInfo file(filename);
+    QString Path = file.filePath();
+    Path.chop(file.fileName().length());
+
+    QString metadataPath = Path;
+    metadataPath.append("metadata.xml");
+    QFile Metadata(metadataPath);
+
+    if(Metadata.exists())
+    {//get our user id
+        Path.remove(0,Path.lastIndexOf("_")+1);
+        Path.chop(Path.length()-Path.lastIndexOf("/"));
+        UserId = Path;
+    }
+    else{return;}//no metadata.xml don't try to edit it.
+
+    QString Md5= ff7->md5sum(filename,UserId);
     QString timestamp = QString::number(file.lastModified().toMSecsSinceEpoch());
 
-
-    QString UserID = UserId;
+    //Load File Here look for the proper file to add the data to
+    //  Comment out the other stuff below
+    QString UserID = QString::number(UserId.toAscii());
     if (UserID.isEmpty()){UserID=(tr("No Id Set"));}
-
     QMessageBox::information(this,"File Info",QString("Use This Info To update your Metadata.xml file\n UserId:%1(set in options) \nTimeStamp:%2\nFile Signature:%3").arg(UserID,timestamp,Md5));
-}
-
-void MainWindow::on_actionFF7PC2012_File_Info_triggered()
-{
-    FixMetaData();
 }

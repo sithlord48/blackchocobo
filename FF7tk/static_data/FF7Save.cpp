@@ -1870,7 +1870,7 @@ QString FF7Save::md5sum(QString fileName, QString UserID)
     }
     if(UserID!="")
     {
-    ff7file.append(UserID.toInt());//append the user's ID
+        ff7file.append(UserID.toAscii());//append the user's ID
     }
     QCryptographicHash md5(QCryptographicHash::Md5);
     md5.addData(ff7file);

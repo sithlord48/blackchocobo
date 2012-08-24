@@ -13135,8 +13135,6 @@ Var And Scrolling Synced To Left Table</string>
     <addaction name="actionSlot_13"/>
     <addaction name="actionSlot_14"/>
     <addaction name="actionSlot_15"/>
-    <addaction name="separator"/>
-    <addaction name="actionFF7PC2012_File_Info"/>
    </widget>
    <widget class="QMenu" name="menuOptions">
     <property name="title">
