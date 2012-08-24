@@ -4313,7 +4313,7 @@ void MainWindow::FixMetaData()
 
     //Load File Here look for the proper file to add the data to
     //  Comment out the other stuff below
-    QString UserID = QString::number(UserId.toAscii());
+    QString UserID = UserId.toAscii();
     if (UserID.isEmpty()){UserID=(tr("No Id Set"));}
     QMessageBox::information(this,"File Info",QString("Use This Info To update your Metadata.xml file\n UserId:%1(set in options) \nTimeStamp:%2\nFile Signature:%3").arg(UserID,timestamp,Md5));
 }
