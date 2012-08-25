@@ -23,6 +23,7 @@
 #include <QWidget>
 #include <QMessageBox>
 #include <QSettings>
+#include <QtXml/QDomDocument>             // for metadata.xml parse
 
 #include "options.h"                // contains the options dialog
 #include "about.h"                  // about dialog stuff.
