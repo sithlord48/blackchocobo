@@ -59,6 +59,8 @@ TRANSLATIONS += lang/bchoco_en.ts \
     lang/bchoco_de.ts \
     lang/bchoco_ja.ts
 
+QT +=xml
+
 static { # everything below takes effect with CONFIG += static
     CONFIG += static
     CONFIG += staticlib # this is needed if you create a static library, not a static executable

@@ -47,11 +47,13 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
 void MainWindow::init_display()
 {
     //set up tables..
-    ui->tbl_location_field->setColumnWidth(0,147);
+    ui->tbl_location_field->setColumnWidth(0,193);
     ui->tbl_location_field->setColumnWidth(1,50);
     ui->tbl_location_field->setColumnWidth(2,50);
     ui->tbl_location_field->setColumnWidth(3,50);
     ui->tbl_location_field->setColumnWidth(4,50);
+    ui->tbl_location_field->setColumnWidth(5,50);
+
 
     QTableWidgetItem *newItem;
     FF7Location Locations;
@@ -61,14 +63,19 @@ void MainWindow::init_display()
         newItem = new QTableWidgetItem(Locations.loc_name(i),0);
         ui->tbl_location_field->setItem(i,0,newItem);
         newItem = new QTableWidgetItem(Locations.map_id(i),0);
+        newItem->setTextAlignment(Qt::AlignHCenter);
         ui->tbl_location_field->setItem(i,1,newItem);
         newItem = new QTableWidgetItem(Locations.loc_id(i),0);
+        newItem->setTextAlignment(Qt::AlignHCenter);
         ui->tbl_location_field->setItem(i,2,newItem);
         newItem = new QTableWidgetItem(Locations.x(i),0);
+        newItem->setTextAlignment(Qt::AlignHCenter);
         ui->tbl_location_field->setItem(i,3,newItem);
         newItem = new QTableWidgetItem(Locations.y(i),0);
+        newItem->setTextAlignment(Qt::AlignHCenter);
         ui->tbl_location_field->setItem(i,4,newItem);
         newItem = new QTableWidgetItem(Locations.z(i),0);
+        newItem->setTextAlignment(Qt::AlignHCenter);
         ui->tbl_location_field->setItem(i,5,newItem);
     }
 
@@ -4084,11 +4091,13 @@ void MainWindow::char_baseMp_changed(quint16 mp)
 void MainWindow::char_curHp_changed(quint16 hp)
 {
     ff7->setCharCurrentHp(s,curchar,hp);
+    if(curchar==ff7->Party(s,0)){ff7->setDescCurHP(s,hp);}
     file_modified(true);
 }
 void MainWindow::char_curMp_changed(quint16 mp)
 {
     ff7->setCharCurrentMp(s,curchar,mp);
+    if(curchar==ff7->Party(s,0)){ff7->setDescCurMP(s,mp);}
     file_modified(true);
 }
 void MainWindow::char_id_changed(qint8 id)
@@ -4100,6 +4109,7 @@ void MainWindow::char_id_changed(qint8 id)
 void MainWindow::char_level_changed(qint8 level)
 {
     ff7->setCharLevel(s,curchar,level);
+    if(curchar==ff7->Party(s,0)){ff7->setDescLevel(s,level);}
     file_modified(true);
 }
 void MainWindow::char_str_changed(quint8 str)
@@ -4187,6 +4197,7 @@ void MainWindow::char_limitBar_changed(quint8 value)
 void MainWindow::char_name_changed(QString name)
 {
     ff7->setCharName(s,curchar,name);
+    if(curchar==ff7->Party(s,0)){ff7->setDescName(s,name);}
     file_modified(true);
 }
 
@@ -4199,11 +4210,13 @@ void MainWindow::char_maxHp_changed(quint16 value)
 
 {
     ff7->setCharMaxHp(s,curchar,value);
+    if(curchar==ff7->Party(s,0)){ff7->setDescMaxHP(s,value);}
     file_modified(true);
 }
 void MainWindow::char_maxMp_changed(quint16 value)
 {
     ff7->setCharMaxMp(s,curchar,value);
+    if(curchar==ff7->Party(s,0)){ff7->setDescMaxMP(s,value);}
     file_modified(true);
 }
 void MainWindow::char_kills_changed(quint16 value)
@@ -4235,7 +4248,6 @@ void MainWindow::char_limits_changed(quint16 value)
     ff7->setCharLimits(s,curchar,value);
     file_modified(true);
 }
-
 void MainWindow::char_timesused1_changed(quint16 value)
 {
     ff7->setCharTimeLimitUsed(s,curchar,1,value);
@@ -4301,7 +4313,7 @@ void MainWindow::FixMetaData()
     QFileInfo file(filename);
     QString Path = file.filePath();
     Path.chop(file.fileName().length());
-
+    
     QString metadataPath = Path;
     metadataPath.append("metadata.xml");
     QFile Metadata(metadataPath);
@@ -4319,9 +4331,9 @@ void MainWindow::FixMetaData()
 
     //Load File Here look for the proper file to add the data to
     //  Comment out the other stuff below
-    QString UserID = UserId.toAscii();
-    if (UserID.isEmpty()){UserID=(tr("No Id"));}
-    QMessageBox::information(this,"File Info",QString("Use This Info To update your Metadata.xml file\n UserId:%1(AutoDetected) \nTimeStamp:%2\nFile Signature:%3").arg(UserID,timestamp,Md5));
+ //   QString UserID = UserId.toAscii();
+ //   if (UserID.isEmpty()){UserID=(tr("No Id"));}
+ //   QMessageBox::information(this,"File Info",QString("Use This Info To update your Metadata.xml file\n UserId:%1(AutoDetected) \nTimeStamp:%2\nFile Signature:%3").arg(UserID,timestamp,Md5));
 
 
     //METADATA PARSE/MOD START
