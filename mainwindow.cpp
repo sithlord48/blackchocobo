@@ -17,6 +17,7 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <QDebug>
 
 /*~~~~~~~~GUI Set Up~~~~~~~*/
 MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
@@ -4321,4 +4322,114 @@ void MainWindow::FixMetaData()
     QString UserID = UserId.toAscii();
     if (UserID.isEmpty()){UserID=(tr("No Id"));}
     QMessageBox::information(this,"File Info",QString("Use This Info To update your Metadata.xml file\n UserId:%1(AutoDetected) \nTimeStamp:%2\nFile Signature:%3").arg(UserID,timestamp,Md5));
+
+
+    //METADATA PARSE/MOD START
+
+    /* We'll parse the metadata.xml */
+    QFile* file2 = new QFile(metadataPath);
+    /* If we can't open it, let's show an error message. */
+    if (!file2->open(QIODevice::ReadOnly | QIODevice::Text)) {
+    QMessageBox::critical(this,
+    "QXSRExample::parseXML",
+    "Couldn't open metadata.xml",
+    QMessageBox::Ok);
+    return;
+    }
+
+    //int filenumber = file.baseName().remove(0,Path.lastIndexOf("e")+1).toInt();
+
+    //Get file block number
+    QString number = file.baseName();
+    number.remove(0,4);
+    number = QString::number(number.toInt()+1); // try that ;)
+
+    //qDebug()<<number;
+
+    /* QDomDocument takes any QIODevice. as well as QString buffer*/
+    QDomDocument doc("metadata");
+    if (!doc.setContent(file2))
+    {
+        //return;
+    }
+    file2->close();
+
+    //Get the root element
+    QDomElement docElem = doc.documentElement();
+
+    // you could check the root tag name here if it matters
+    QString rootTag = docElem.tagName(); // == gamestatus
+
+    // get the node's interested in, this time only caring about person's
+    QDomNodeList nodeList = docElem.elementsByTagName("savefiles");
+
+    //Check each node one by one.
+    for(int ii = 0;ii < nodeList.count(); ii++)
+    {
+    QMap<QString, QString> person;
+
+    // get the current one as QDomElement
+    QDomElement el = nodeList.at(ii).toElement();
+
+    person["id"] = el.attribute("block"); // get and set the attribute ID
+
+    if(el.attribute("block") == number){
+        //get all data for the element, by looping through all child elements
+        QDomNode pEntries = el.firstChild();
+        int iii = 0;
+        while(!pEntries.isNull()) {
+            if(iii == s || iii == 15){
+
+                QDomElement peData = pEntries.toElement();
+                QString tagNam = peData.tagName();
+
+                qDebug()<<tagNam;
+                qDebug()<<peData.text();
+
+                //Set values
+                if(iii == s){
+                    QDomText t=peData.firstChild().toText();
+                    if ( !t.isNull() ) {
+                        t.setData(timestamp);
+                    }
+                } else if(iii == 15){
+                    QDomText t=peData.firstChild().toText();
+                    if ( !t.isNull() ) {
+                        t.setData(Md5);
+                    }
+                }
+
+                qDebug()<<tagNam;
+                qDebug()<<peData.text();
+
+            }
+            pEntries = pEntries.nextSibling();
+            iii++;
+        }
+    }
+    }
+
+
+    //qDebug()<<"Saving...";
+
+    QString Path2 = file.filePath();
+
+    Path2.chop(file.fileName().length());
+    QString metadataPath2 = Path2;;
+    metadataPath2.append("metadata.xml");
+    qDebug()<< metadataPath2;
+
+    /* We'll parse the example.xml */
+    QFile* file3 = new QFile(metadataPath2);
+    /* If we can't open it, let's show an error message. */
+    if (!file3->open(QIODevice::WriteOnly | QIODevice::Text)) {
+    QMessageBox::critical(this,
+    "QXSRExample::parseXML",
+    "Couldn't save metadata.xml",
+    QMessageBox::Ok);
+    return;
+    }
+    file3->write(doc.toByteArray());
+    file3->close();
+
 }
