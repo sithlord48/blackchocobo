@@ -637,5 +637,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sbSnowCrazySec_valueChanged(int value);
     void on_sbSnowCrazyMsec_valueChanged(int value);
     void on_sb_BikeHighScore_valueChanged(int arg1);
+    void on_sb_BattlePoints_valueChanged(int arg1);
 };
 #endif // MAINWINDOW_H

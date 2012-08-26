@@ -4276,18 +4276,6 @@
         <translation>0x40 - Objetivos de batalla</translation>
     </message>
     <message>
-        <source>Weapons Killed</source>
-        <translation>Armas muertas</translation>
-    </message>
-    <message>
-        <source>Ruby</source>
-        <translation>Rubí</translation>
-    </message>
-    <message>
-        <source>Emerald</source>
-        <translation>Esmeralda</translation>
-    </message>
-    <message>
         <source>Misc</source>
         <translation>Misc</translation>
     </message>
@@ -5135,6 +5123,22 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>G_Bike High Score</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Beat Ruby Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Beat Emerald Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Battle Points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resets When you Pass thru Battle Square&apos;s Door</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -4199,18 +4199,6 @@
         <translation>S15</translation>
     </message>
     <message>
-        <source>Weapons Killed</source>
-        <translation>Armes tuées</translation>
-    </message>
-    <message>
-        <source>Ruby</source>
-        <translation>Rubis</translation>
-    </message>
-    <message>
-        <source>Emerald</source>
-        <translation>Émeraude</translation>
-    </message>
-    <message>
         <source>Show Battle Target Labels</source>
         <translation>Activer les flèches de cibles en combat</translation>
     </message>
@@ -5136,6 +5124,22 @@ Les entrées dans le tableau sont modifiables</translation>
     <message>
         <source>G_Bike High Score</source>
         <translation>meilleur score Moto-G</translation>
+    </message>
+    <message>
+        <source>Beat Ruby Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Beat Emerald Weapon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Battle Points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Resets When you Pass thru Battle Square&apos;s Door</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

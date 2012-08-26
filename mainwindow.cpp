@@ -1981,6 +1981,8 @@ void MainWindow::guirefresh(bool newgame)
         ui->sbSnowCrazyScore->setValue(ff7->snowboardScore(s,2));
 
         ui->sb_BikeHighScore->setValue(ff7->BikeHighScore(s));
+        ui->sb_BattlePoints->setValue(ff7->battlePoints(s));
+
         load=false;
         // all functions should set load on their own.
         /*~~~~~Call External Functions~~~~~~~*/
@@ -4532,3 +4534,5 @@ void MainWindow::on_sbSnowCrazyMsec_valueChanged(int value)
         ff7->setSnowboardTime(s,2,time);
 }}
 void MainWindow::on_sb_BikeHighScore_valueChanged(int arg1){if(!load){file_modified(true);ff7->setBikeHighScore(s,arg1);}}
+void MainWindow::on_sb_BattlePoints_valueChanged(int arg1){if(!load){file_modified(true);ff7->setBattlePoints(s,arg1);}}
+
