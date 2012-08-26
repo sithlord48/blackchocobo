@@ -25,6 +25,7 @@ void ItemSelector::init_display()
     btn_remove->setIcon(QIcon(QPixmap(quit_xpm)));
     btn_remove->setToolTip(tr("Empty Item"));
     btn_remove->setFixedSize(22,22);
+    btn_remove->setShortcut(QKeySequence::Delete);
     init_data(); //before setting layout set dat
     QHBoxLayout *layout = new QHBoxLayout;
     layout->setContentsMargins(0,0,0,0);
