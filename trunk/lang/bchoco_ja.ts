@@ -5094,11 +5094,47 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>No Id</source>
+        <source>Add Each Materia to Stock (end of list)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Add Each Materia to Stock (end of list)</source>
+        <source>SnowBoard Mini Game </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Beginner Course</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Time:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>:</source>
+        <translation>:</translation>
+    </message>
+    <message>
+        <source>.</source>
+        <translation>.</translation>
+    </message>
+    <message>
+        <source>Score:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Expert Course</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Crazy Course</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>G_Bike High Score</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7384,6 +7420,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: FF7 Pc 2012 Cloud Save Support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>New: SnowBoard and G-Bike Score/Time Editing (thanks DLPB)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

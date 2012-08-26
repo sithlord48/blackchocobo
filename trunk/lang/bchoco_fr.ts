@@ -5094,12 +5094,48 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation>Remplacer les matérias et l&apos;équipement de %1</translation>
     </message>
     <message>
-        <source>No Id</source>
-        <translation>Pas d&apos;Id</translation>
-    </message>
-    <message>
         <source>Add Each Materia to Stock (end of list)</source>
         <translation>Ajoute chaque matéria au stock (en fin de liste)</translation>
+    </message>
+    <message>
+        <source>SnowBoard Mini Game </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Beginner Course</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Time:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>:</source>
+        <translation>:</translation>
+    </message>
+    <message>
+        <source>.</source>
+        <translation>.</translation>
+    </message>
+    <message>
+        <source>Score:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Points</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Expert Course</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Crazy Course</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>G_Bike High Score</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -7387,6 +7423,10 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>New: FF7 Pc 2012 Cloud Save Support</source>
         <translation>Nouveau : FF7 PC 2012 support des sauvegardes dans le Cloud</translation>
+    </message>
+    <message>
+        <source>New: SnowBoard and G-Bike Score/Time Editing (thanks DLPB)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

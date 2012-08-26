@@ -1067,7 +1067,6 @@ void CharEditor::init_display()
     right_Final->setSpacing(3);
     right_Final->addLayout(right_bottom);
 
-    list_limits->setFixedHeight(130);
     toolbox = new QToolBox;
 
     QGroupBox *tab_1 = new QGroupBox;

@@ -1876,3 +1876,74 @@ QString FF7Save::md5sum(QString fileName, QString UserID)
     md5.addData(ff7file);
     return md5.result().toHex().toLower();
 }
+quint32 FF7Save::snowboardTime(int s, int course)
+{
+    quint32 time=0;
+    switch(course)
+    {
+    case 0:
+        time = ((slot[s].SnowBegFastTime[1]) | (slot[s].SnowBegFastTime[2]<< 8) | (slot[s].SnowBegFastTime[3] <<16));
+        break;
+
+    case 1:
+        time = ((slot[s].SnowExpFastTime[1]) | (slot[s].SnowExpFastTime[2]<< 8) | (slot[s].SnowExpFastTime[3] <<16));
+       break;
+
+    case 2:
+        time = ((slot[s].SnowCrazyFastTime[1]) | (slot[s].SnowCrazyFastTime[2]<< 8) | (slot[s].SnowCrazyFastTime[3] <<16));
+       break;
+
+       default: break;
+     }
+    return time;
+}
+
+void FF7Save::setSnowboardTime(int s, int course,quint32 value)
+{
+    int a = (value & 0xff);
+    int b = (value & 0xff00) >> 8;
+    int c = (value & 0xff0000) >> 16;
+    switch(course)
+    {
+    case 0:
+        slot[s].SnowBegFastTime[1]=a;
+        slot[s].SnowBegFastTime[2]=b;
+        slot[s].SnowBegFastTime[3]=c;
+        break;
+    case 1:
+        slot[s].SnowExpFastTime[1]=a;
+        slot[s].SnowExpFastTime[2]=b;
+        slot[s].SnowExpFastTime[3]=c;
+        break;
+    case 2:
+        slot[s].SnowCrazyFastTime[1]=a;
+        slot[s].SnowCrazyFastTime[2]=b;
+        slot[s].SnowCrazyFastTime[3]=c;
+        break;
+        default: break;
+     }
+}
+
+quint8 FF7Save::snowboardScore(int s, int course)
+{
+    switch(course)
+    {
+        case 0: return slot[s].SnowBegScore; break;
+        case 1: return slot[s].SnowExpScore; break;
+        case 2: return slot[s].SnowCrazyScore; break;
+        default: return 0; break;
+     }
+}
+
+void FF7Save::setSnowboardScore(int s, int course,quint8 score)
+{
+    switch(course)
+    {
+        case 0:  slot[s].SnowBegScore=score; break;
+        case 1:  slot[s].SnowExpScore=score; break;
+        case 2:  slot[s].SnowCrazyScore=score; break;
+        default: break;
+     }
+}
+quint16 FF7Save::BikeHighScore(int s){return slot[s].BikeHighScore;}
+void FF7Save::setBikeHighScore(int s,quint16 score){slot[s].BikeHighScore = score;}
