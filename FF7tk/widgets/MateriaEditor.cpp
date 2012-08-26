@@ -44,8 +44,11 @@ void MateriaEditor::init_display()
     lbl_slash = new QLabel;
     lcd_max_ap = new QLCDNumber;
     btn_rm_materia = new QPushButton;
+    btn_rm_materia->setShortcut(QKeySequence::Delete);
     btn_copy_materia = new QPushButton;
+    btn_copy_materia->setShortcut(QKeySequence::Copy);
     btn_paste_materia = new QPushButton;
+    btn_paste_materia->setShortcut(QKeySequence::Paste);
     box_stars = new QGroupBox;
     btn_star1 = new QPushButton;
     btn_star2 = new QPushButton;
