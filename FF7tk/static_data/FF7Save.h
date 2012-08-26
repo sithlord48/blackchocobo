@@ -111,6 +111,12 @@ public:
   void setChocoPen(int s, int pos, int type);
 
   //Char Related Functions get/set all stats.
+  quint16 BikeHighScore(int s);
+  void setBikeHighScore(int s,quint16 score);
+  quint32 snowboardTime(int s,int course);
+  void setSnowboardTime(int s,int course,quint32 time);
+  quint8 snowboardScore(int s,int course);
+  void setSnowboardScore(int s,int course,quint8 score);
   FF7CHAR Char(int s,int char_num); //Return Full Char
   quint8 charID(int s,int char_num);//Return Char ID
   quint8 charLevel(int s,int char_num);//Return Char Level

@@ -624,5 +624,18 @@ private slots://try to keep these in the same order as the .cpp file
 
     void set_char_buttons();
     void on_btn_maxChar_clicked();
+    void on_sbSnowBegScore_valueChanged(int value);
+    void on_sbSnowExpScore_valueChanged(int value);
+    void on_sbSnowCrazyScore_valueChanged(int value);
+    void on_sbSnowBegMin_valueChanged(int value);
+    void on_sbSnowBegSec_valueChanged(int value);
+    void on_sbSnowBegMsec_valueChanged(int value);
+    void on_sbSnowExpMin_valueChanged(int value);
+    void on_sbSnowExpSec_valueChanged(int value);
+    void on_sbSnowExpMsec_valueChanged(int value);
+    void on_sbSnowCrazyMin_valueChanged(int value);
+    void on_sbSnowCrazySec_valueChanged(int value);
+    void on_sbSnowCrazyMsec_valueChanged(int value);
+    void on_sb_BikeHighScore_valueChanged(int arg1);
 };
 #endif // MAINWINDOW_H

@@ -146,7 +146,16 @@ struct FF7SLOT {		            // Save slot - Length 0x10F4
     quint8 midgartrainflags;        // [0x0D83] Midgar Train Flags.
     quint8 z_27[64];                // [0x0D84] UNKNOWN DATA
     FF7CHOCOBO chocobos[4];         // [0x0DC4] Chocobo slots
-    quint8 z_28[32];                // [0x0E04] UNKNOWN DATA
+    quint8 z_28[13];	            // [0x0E04] UNKNOWN DATA
+    quint16 BikeHighScore;	    // [0x0E11] Bike Mini Game High Score
+    quint8 SnowBegFastTime[4];      // [0x0E13] Fastest Time For Snowboard Beginner Course stored in Msec 3bytes byte[0] unused
+    quint8 SnowExpFastTime[4];      // [0x0E17] Fastest Time For Snowboard Expert Course Stored in Msec 3bytes byte[0] unused
+    quint8 SnowCrazyFastTime[4];    // [0x0E1B] Fastest Time For Snowboard Crazy Course Stored in Msec 3bytes byte[0] unused
+    quint8 SnowUnused;              // [0x0E1F] Unused var for snowboard game?
+    quint8 SnowBegScore;            // [0x0E20] SnowBoard Minigame HighScore For Beginner Course
+    quint8 SnowExpScore;    	    // [0x0E21] SnowBoard Minigame HighScore For Expert Course
+    quint8 SnowCrazyScore;          // [0x0E22] SnowBoard Minigame HighScore For Crazy Course
+    quint8 Snowtempvar;      	    // [0x0E23] SnowBoard Minigame Temp var Not used.
     quint16 coster_2;               // [0x0E24] Coster 2nd place score
     quint16 coster_3;               // [0x0E26] Coster 3rd place score
     quint8 z_29[17];                // [0x0E28] UNKNOWN DATA

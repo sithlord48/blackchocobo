@@ -1964,6 +1964,23 @@ void MainWindow::guirefresh(bool newgame)
                 ui->tbl_materia_2->setItem(mat,0,newItem);
             }
         }
+        //SnowBoard Mini Game Data.
+        ui->sbSnowBegMin->setValue((ff7->snowboardTime(s,0)/1000)/60%60);
+        ui->sbSnowBegSec->setValue((ff7->snowboardTime(s,0)/1000)-(ui->sbSnowBegMin->value()*60));
+        ui->sbSnowBegMsec->setValue(ff7->snowboardTime(s,0)%1000);
+        ui->sbSnowBegScore->setValue(ff7->snowboardScore(s,0));
+
+        ui->sbSnowExpMin->setValue((ff7->snowboardTime(s,1)/1000)/60%60);
+        ui->sbSnowExpSec->setValue((ff7->snowboardTime(s,1)/1000)-(ui->sbSnowExpMin->value()*60));
+        ui->sbSnowExpMsec->setValue(ff7->snowboardTime(s,1)%1000);
+        ui->sbSnowExpScore->setValue(ff7->snowboardScore(s,1));
+
+        ui->sbSnowCrazyMin->setValue((ff7->snowboardTime(s,2)/1000)/60%60);
+        ui->sbSnowCrazySec->setValue((ff7->snowboardTime(s,2)/1000)-(ui->sbSnowCrazyMin->value()*60));
+        ui->sbSnowCrazyMsec->setValue(ff7->snowboardTime(s,2)%1000);
+        ui->sbSnowCrazyScore->setValue(ff7->snowboardScore(s,2));
+
+        ui->sb_BikeHighScore->setValue(ff7->BikeHighScore(s));
         load=false;
         // all functions should set load on their own.
         /*~~~~~Call External Functions~~~~~~~*/
@@ -2258,6 +2275,8 @@ void MainWindow::testdata_refresh()
     if((ff7->slot[s].tut_sub)& (1<<7)){ui->cb_tut_sub_8->setChecked(Qt::Checked);}
     else{ui->cb_tut_sub_8->setChecked(Qt::Unchecked);}
     ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
+
+    //Snowboard Times.
     load=false;
 
     unknown_refresh(ui->combo_z_var->currentIndex());
@@ -4445,3 +4464,71 @@ void MainWindow::FixMetaData()
     file3->close();
 
 }
+
+void MainWindow::on_sbSnowBegScore_valueChanged(int value){ff7->setSnowboardScore(s,0,value);}
+void MainWindow::on_sbSnowExpScore_valueChanged(int value){ff7->setSnowboardScore(s,1,value);}
+void MainWindow::on_sbSnowCrazyScore_valueChanged(int value){ff7->setSnowboardScore(s,2,value);}
+
+void MainWindow::on_sbSnowBegMin_valueChanged(int value)
+{if(!load){file_modified(true);
+    quint32 time;
+    time = ((value*60)*1000) + (ui->sbSnowBegSec->value()*1000) + ui->sbSnowBegMsec->value();
+    ff7->setSnowboardTime(s,0,time);
+}}
+
+void MainWindow::on_sbSnowBegSec_valueChanged(int value)
+{if(!load){file_modified(true);
+        quint32 time;
+        time = ((ui->sbSnowBegMin->value()*60)*1000) + (value*1000) + ui->sbSnowBegMsec->value();
+        ff7->setSnowboardTime(s,0,time);
+}}
+
+void MainWindow::on_sbSnowBegMsec_valueChanged(int value)
+{if(!load){file_modified(true);
+        quint32 time;
+        time = ((ui->sbSnowBegMin->value()*60)*1000) + (ui->sbSnowBegSec->value()*1000) + value;
+        ff7->setSnowboardTime(s,0,time);
+}}
+
+void MainWindow::on_sbSnowExpMin_valueChanged(int value)
+{if(!load){file_modified(true);
+    quint32 time;
+    time = ((value*60)*1000) + (ui->sbSnowExpSec->value()*1000) + ui->sbSnowExpMsec->value();
+    ff7->setSnowboardTime(s,1,time);
+}}
+
+void MainWindow::on_sbSnowExpSec_valueChanged(int value)
+{if(!load){file_modified(true);
+        quint32 time;
+        time = ((ui->sbSnowExpMin->value()*60)*1000) + (value*1000) + ui->sbSnowExpMsec->value();
+        ff7->setSnowboardTime(s,1,time);
+}}
+
+void MainWindow::on_sbSnowExpMsec_valueChanged(int value)
+{if(!load){file_modified(true);
+        quint32 time;
+        time = ((ui->sbSnowExpMin->value()*60)*1000) + (ui->sbSnowExpSec->value()*1000) + value;
+        ff7->setSnowboardTime(s,1,time);
+}}
+
+void MainWindow::on_sbSnowCrazyMin_valueChanged(int value)
+{if(!load){file_modified(true);
+    quint32 time;
+    time = ((value*60)*1000) + (ui->sbSnowCrazySec->value()*1000) + ui->sbSnowCrazyMsec->value();
+    ff7->setSnowboardTime(s,2,time);
+}}
+
+void MainWindow::on_sbSnowCrazySec_valueChanged(int value)
+{if(!load){file_modified(true);
+        quint32 time;
+        time = ((ui->sbSnowCrazyMin->value()*60)*1000) + (value*1000) + ui->sbSnowCrazyMsec->value();
+        ff7->setSnowboardTime(s,2,time);
+}}
+
+void MainWindow::on_sbSnowCrazyMsec_valueChanged(int value)
+{if(!load){file_modified(true);
+        quint32 time;
+        time = ((ui->sbSnowCrazyMin->value()*60)*1000) + (ui->sbSnowCrazySec->value()*1000) + value;
+        ff7->setSnowboardTime(s,2,time);
+}}
+void MainWindow::on_sb_BikeHighScore_valueChanged(int arg1){if(!load){file_modified(true);ff7->setBikeHighScore(s,arg1);}}
