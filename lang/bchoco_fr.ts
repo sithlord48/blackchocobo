@@ -5099,15 +5099,15 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>SnowBoard Mini Game </source>
-        <translation type="unfinished"></translation>
+        <translation>Mini jeu de snowboard</translation>
     </message>
     <message>
         <source>Beginner Course</source>
-        <translation type="unfinished"></translation>
+        <translation>Course A (facile)</translation>
     </message>
     <message>
         <source>Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Temps :</translation>
     </message>
     <message>
         <source>:</source>
@@ -5119,23 +5119,23 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Score:</source>
-        <translation type="unfinished"></translation>
+        <translation>Score :</translation>
     </message>
     <message>
         <source>Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Points</translation>
     </message>
     <message>
         <source>Expert Course</source>
-        <translation type="unfinished"></translation>
+        <translation>Course B (moyenne)</translation>
     </message>
     <message>
         <source>Crazy Course</source>
-        <translation type="unfinished"></translation>
+        <translation>Course C (difficile)</translation>
     </message>
     <message>
         <source>G_Bike High Score</source>
-        <translation type="unfinished"></translation>
+        <translation>meilleur score Moto-G</translation>
     </message>
 </context>
 <context>
@@ -7426,7 +7426,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: SnowBoard and G-Bike Score/Time Editing (thanks DLPB)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nouveau : édition du score/temps pour snowboard et Moto-G (merci DLPB)</translation>
     </message>
 </context>
 <context>
