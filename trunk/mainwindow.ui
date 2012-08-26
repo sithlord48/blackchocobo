@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>783</width>
-    <height>600</height>
+    <height>598</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -2750,7 +2750,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
              <x>0</x>
              <y>0</y>
              <width>769</width>
-             <height>466</height>
+             <height>460</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3113,8 +3113,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>747</width>
-             <height>414</height>
+             <width>769</width>
+             <height>460</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -5533,8 +5533,17 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
         <string>Othe&amp;r</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <property name="spacing">
+         <number>3</number>
+        </property>
+        <property name="margin">
+         <number>3</number>
+        </property>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_89">
+          <property name="spacing">
+           <number>3</number>
+          </property>
           <item>
            <widget class="QGroupBox" name="groupBox_6">
             <property name="minimumSize">
@@ -5647,6 +5656,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
                  </property>
+                 <property name="buddy">
+                  <cstring>sb_time_sec</cstring>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -5725,6 +5737,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <property name="scaledContents">
                   <bool>true</bool>
                  </property>
+                 <property name="buddy">
+                  <cstring>sb_love_aeris</cstring>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -5791,6 +5806,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <property name="scaledContents">
                   <bool>true</bool>
                  </property>
+                 <property name="buddy">
+                  <cstring>sb_love_tifa</cstring>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -5853,6 +5871,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  </property>
                  <property name="scaledContents">
                   <bool>true</bool>
+                 </property>
+                 <property name="buddy">
+                  <cstring>sb_love_yuffie</cstring>
                  </property>
                 </widget>
                </item>
@@ -5920,6 +5941,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <property name="alignment">
                   <set>Qt::AlignCenter</set>
                  </property>
+                 <property name="buddy">
+                  <cstring>sb_love_barret</cstring>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -5965,7 +5989,73 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
            </widget>
           </item>
           <item>
+           <widget class="QCheckBox" name="cb_ruby_dead">
+            <property name="text">
+             <string>Beat Ruby Weapon</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="cb_emerald_dead">
+            <property name="text">
+             <string>Beat Emerald Weapon</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="cb_yuffieforest">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Can Fight Mystery Ninja in Forests</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_170">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_236">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Number Steps</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="sb_steps">
+              <property name="wrapping">
+               <bool>true</bool>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="maximum">
+               <number>65535</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
            <widget class="QGroupBox" name="groupBox_20">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="maximumSize">
              <size>
               <width>241</width>
@@ -6045,43 +6135,6 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             </layout>
            </widget>
           </item>
-          <item>
-           <widget class="QCheckBox" name="cb_yuffieforest">
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
-            </property>
-            <property name="text">
-             <string>Can Fight Mystery Ninja in Forests</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_170">
-            <item>
-             <widget class="QLabel" name="label_236">
-              <property name="text">
-               <string>Number Steps</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSpinBox" name="sb_steps">
-              <property name="wrapping">
-               <bool>true</bool>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-              <property name="maximum">
-               <number>65535</number>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
          </layout>
         </item>
         <item>
@@ -6114,7 +6167,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
              <widget class="QGroupBox" name="groupBox_16">
               <property name="minimumSize">
                <size>
-                <width>121</width>
+                <width>0</width>
                 <height>0</height>
                </size>
               </property>
@@ -6289,7 +6342,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
              <widget class="QGroupBox" name="groupBox_19">
               <property name="minimumSize">
                <size>
-                <width>121</width>
+                <width>0</width>
                 <height>0</height>
                </size>
               </property>
@@ -6496,7 +6549,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
               </property>
               <property name="minimumSize">
                <size>
-                <width>121</width>
+                <width>0</width>
                 <height>0</height>
                </size>
               </property>
@@ -6667,7 +6720,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
               </property>
               <property name="minimumSize">
                <size>
-                <width>126</width>
+                <width>0</width>
                 <height>0</height>
                </size>
               </property>
@@ -6998,7 +7051,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
         <item>
          <layout class="QVBoxLayout" name="verticalLayout_65">
           <property name="spacing">
-           <number>3</number>
+           <number>0</number>
           </property>
           <property name="leftMargin">
            <number>3</number>
@@ -7070,6 +7123,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <property name="text">
                   <string>1st</string>
                  </property>
+                 <property name="buddy">
+                  <cstring>sb_coster_1</cstring>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -7127,6 +7183,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <property name="text">
                   <string>2nd</string>
                  </property>
+                 <property name="buddy">
+                  <cstring>sb_coster_2</cstring>
+                 </property>
                 </widget>
                </item>
                <item>
@@ -7183,6 +7242,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  </property>
                  <property name="text">
                   <string>3rd</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>sb_coster_3</cstring>
                  </property>
                 </widget>
                </item>
@@ -7269,6 +7331,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                <property name="text">
                 <string>G_Bike High Score</string>
                </property>
+               <property name="buddy">
+                <cstring>sb_BikeHighScore</cstring>
+               </property>
               </widget>
              </item>
              <item>
@@ -7303,7 +7368,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout">
                 <property name="spacing">
-                 <number>3</number>
+                 <number>0</number>
                 </property>
                 <property name="leftMargin">
                  <number>0</number>
@@ -7431,7 +7496,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_6">
                 <property name="spacing">
-                 <number>3</number>
+                 <number>0</number>
                 </property>
                 <property name="leftMargin">
                  <number>0</number>
@@ -7559,7 +7624,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_7">
                 <property name="spacing">
-                 <number>3</number>
+                 <number>0</number>
                 </property>
                 <property name="leftMargin">
                  <number>0</number>
@@ -7680,6 +7745,42 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                </layout>
               </widget>
              </item>
+             <item>
+              <layout class="QHBoxLayout" name="horizontalLayout_10">
+               <item>
+                <widget class="QLabel" name="label_16">
+                 <property name="toolTip">
+                  <string>Resets When you Pass thru Battle Square's Door</string>
+                 </property>
+                 <property name="text">
+                  <string>Battle Points</string>
+                 </property>
+                 <property name="buddy">
+                  <cstring>sb_BattlePoints</cstring>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSpinBox" name="sb_BattlePoints">
+                 <property name="toolTip">
+                  <string>Resets When you Pass thru Battle Square's Door</string>
+                 </property>
+                 <property name="wrapping">
+                  <bool>true</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                 <property name="specialValueText">
+                  <string/>
+                 </property>
+                 <property name="maximum">
+                  <number>65535</number>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
             </layout>
            </widget>
           </item>
@@ -7723,38 +7824,6 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
               <widget class="QCheckBox" name="cb_materiacave_4">
                <property name="text">
                 <string>KOTR</string>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item>
-           <widget class="QGroupBox" name="groupBox_9">
-            <property name="title">
-             <string>Weapons Killed</string>
-            </property>
-            <layout class="QVBoxLayout" name="verticalLayout_9">
-             <property name="spacing">
-              <number>0</number>
-             </property>
-             <property name="topMargin">
-              <number>0</number>
-             </property>
-             <property name="bottomMargin">
-              <number>0</number>
-             </property>
-             <item>
-              <widget class="QCheckBox" name="cb_ruby_dead">
-               <property name="text">
-                <string>Ruby</string>
-               </property>
-              </widget>
-             </item>
-             <item>
-              <widget class="QCheckBox" name="cb_emerald_dead">
-               <property name="text">
-                <string>Emerald</string>
                </property>
               </widget>
              </item>
@@ -12601,7 +12670,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                   <property name="title">
                    <string>0xBEF (farmitems)</string>
                   </property>
-                  <layout class="QVBoxLayout" name="verticalLayout_35">
+                  <layout class="QVBoxLayout" name="verticalLayout_9">
                    <item>
                     <widget class="QCheckBox" name="cb_farm_items_1">
                      <property name="text">

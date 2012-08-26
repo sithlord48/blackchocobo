@@ -1947,3 +1947,11 @@ void FF7Save::setSnowboardScore(int s, int course,quint8 score)
 }
 quint16 FF7Save::BikeHighScore(int s){return slot[s].BikeHighScore;}
 void FF7Save::setBikeHighScore(int s,quint16 score){slot[s].BikeHighScore = score;}
+quint16 FF7Save::battlePoints(int s){return (slot[s].z_20[4] | (slot[s].z_20[5] << 8));}
+void FF7Save::setBattlePoints(int s,quint16 bp)
+{
+    int a = bp &0xFF;
+    int b = (bp &0xFF00) >>8;
+    slot[s].z_20[4]=a;
+    slot[s].z_20[5]=b;
+}
