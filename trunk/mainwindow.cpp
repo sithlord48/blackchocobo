@@ -4348,26 +4348,13 @@ void MainWindow::FixMetaData()
 
     QString Md5 = ff7->md5sum(filename,UserId);
     QString timestamp = QString::number(file.lastModified().toMSecsSinceEpoch());
-
-    //Load File Here look for the proper file to add the data to
-    //Comment out the other stuff below
-    //QString UserID = UserId.toAscii();
-    //if (UserID.isEmpty()){UserID=(tr("No Id"));}
-    //QMessageBox::information(this,"File Info",QString("Use This Info To update your Metadata.xml file\n UserId:%1(AutoDetected) \nTimeStamp:%2\nFile Signature:%3").arg(UserID,timestamp,Md5));
-
-    //------------------------//
+//------------------------//
     //METADATA PARSE/MOD START//
     //------------------------//
     //Parse metadata.xml
     QFile* file2 = new QFile(metadataPath);
     //If open fail, show an error message.
-    if (!file2->open(QIODevice::ReadOnly)) {
-    QMessageBox::critical(this,
-    "Error::parseXML",
-    "Couldn't open metadata.xml",
-    QMessageBox::Ok);
-    return;
-    }
+    if (!file2->open(QIODevice::ReadOnly)){QMessageBox::critical(this,tr("Error::parseXML"), tr("Couldn't open metadata.xml")); return; }
     //To save the parsed data
     typedef QVector< QString > SubContainer;
     QVector< SubContainer > vector( 10, SubContainer( 16 ) );
@@ -4376,27 +4363,17 @@ void MainWindow::FixMetaData()
     number.remove(0,4);
     bool isNumber = false;
     number = QString::number(number.toInt(&isNumber)+1);
-    if(!isNumber){
-        return;
-    }
-    //QDomDocument (QIODevice / QString buffer)
+    if(!isNumber){return;}//bail if not a number.
+
     QDomDocument doc("metadata");
     bool setdoc = doc.setContent(file2);
     file2->close();
-    if (!setdoc)
-    {
-        return;
-    }
+    if (!setdoc){ return; }
+
     //Get the root element
     QDomElement docElem = doc.documentElement();
     //Check file format
-    if(docElem.tagName() != "gamestatus"){
-        QMessageBox::critical(this,
-        "Error::parseXML",
-        "Couldn't parse metadata.xml. Wrong file format.",
-        QMessageBox::Ok);
-        return;
-    }
+    if(docElem.tagName() != "gamestatus"){QMessageBox::critical(this,tr("Error::parseXML"),tr("Couldn't parse metadata.xml. Wrong file format."));return; }
     //Get savefiles node
     QDomNodeList nodeList = docElem.elementsByTagName("savefiles");
     //Check each node one by one.
@@ -4407,20 +4384,20 @@ void MainWindow::FixMetaData()
         //get all data for the element, by looping through all child elements
         QDomNode pEntries = el.firstChild();
         int iii = 0;
-        while(!pEntries.isNull()) {
+        while(!pEntries.isNull())
+        {
             QDomElement peData = pEntries.toElement();
-            if(el.attribute("block") == number){
+            if(el.attribute("block") == number)
+            {
                 //Set values
-                if(iii == s){
+                if(iii == s)
+                {
                     QDomText t=peData.firstChild().toText();
-                    if ( !t.isNull() ) {
-                        t.setData(timestamp);
-                    }
-                } else if(iii == 15){
+                    if ( !t.isNull() ) {t.setData(timestamp);}
+                } else if(iii == 15)
+                {
                     QDomText t=peData.firstChild().toText();
-                    if ( !t.isNull() ) {
-                        t.setData(Md5);
-                    }
+                    if ( !t.isNull() ) {t.setData(Md5);}
                 }
             }
             vector[ii][iii] = peData.text();
@@ -4430,33 +4407,22 @@ void MainWindow::FixMetaData()
     }
 
     QFile file3(metadataPath);
-    if (!file3.open(QIODevice::ReadWrite))
-    {
-        QMessageBox::critical(this,
-        "Error::parseXML",
-        "Couldn't save metadata.xml",
-        QMessageBox::Ok);
-        return;
-    }
+    if (!file3.open(QIODevice::ReadWrite)){QMessageBox::critical(this, tr("Error::parseXML"),tr("Couldn't save metadata.xml")); return; }
     QTextStream out (&file3);
     file3.seek(0);//Set pointer to the Beggining
-    out << QByteArray("\x3C\x3F\x78\x6D\x6C\x20\x76\x65\x72\x73\x69\x6F\x6E\x3D\x22\x31\x2E\x30\x22\x20\x65\x6E\x63\x6F\x64\x69\x6E\x67\x3D\x22\x55\x54\x46\x2D\x38\x22\x3F\x3E\x0A");
+    out << QString ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
     out << QString("<gamestatus>\n").toAscii();
     //Do foreach block
     for(int i=0;i<10; i++)
     {
-        out << QByteArray("\x20\x20");
-        out << (QString("<savefiles block=\"%1\">\n").arg(QString::number(i+1))).toAscii();
+        out << (QString("  <savefiles block=\"%1\">\n").arg(QString::number(i+1))).toAscii();
         //Do foreach slot
         for(int j=0; j<15; j++)
         {
-            out << QByteArray("\x20\x20\x20\x20");
-            out << (QString("<timestamp slot=\"%1\">%2</timestamp>\n").arg(QString::number(j+1),vector[i][j])).toAscii();
+            out << (QString("    <timestamp slot=\"%1\">%2</timestamp>\n").arg(QString::number(j+1),vector[i][j])).toAscii();
         }
-        out << QByteArray("\x20\x20\x20\x20");
-        out << (QString("<signature>%1</signature>\n").arg(vector[i][15])).toAscii();
-        out << QByteArray("\x20\x20");
-        out << QString("</savefiles>\n").toAscii();
+        out << (QString("    <signature>%1</signature>\n").arg(vector[i][15])).toAscii();
+        out << QString("  </savefiles>\n").toAscii();
     }
     out << QString("</gamestatus>\n").toAscii();
     file3.resize(file3.pos());

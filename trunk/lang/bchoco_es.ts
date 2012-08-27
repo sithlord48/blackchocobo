@@ -5141,6 +5141,22 @@ Las entradas de la tabla son editables</translation>
         <source>Resets When you Pass thru Battle Square&apos;s Door</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Error::parseXML</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t open metadata.xml</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t parse metadata.xml. Wrong file format.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Couldn&apos;t save metadata.xml</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MateriaEditor</name>
