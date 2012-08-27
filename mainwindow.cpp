@@ -4370,7 +4370,7 @@ void MainWindow::FixMetaData()
     }
     //To save the parsed data
     typedef QVector< QString > SubContainer;
-    QVector< SubContainer > vector( 15, SubContainer( 20 ) );
+    QVector< SubContainer > vector( 10, SubContainer( 16 ) );
     //Get file block number
     QString number = file.baseName();
     number.remove(0,4);
