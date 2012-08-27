@@ -4346,11 +4346,11 @@ void MainWindow::FixMetaData()
     }
     else{return;}//no metadata.xml don't try to edit it.
 
-    QString Md5 = ff7->md5sum(filename,UserId);
-    QString timestamp = QString::number(file.lastModified().toMSecsSinceEpoch());
-//------------------------//
+    //------------------------//
     //METADATA PARSE/MOD START//
     //------------------------//
+    QString Md5 = ff7->md5sum(filename,UserId);
+    QString timestamp = QString::number(file.lastModified().toMSecsSinceEpoch());
     //Parse metadata.xml
     QFile* file2 = new QFile(metadataPath);
     //If open fail, show an error message.
@@ -4363,44 +4363,30 @@ void MainWindow::FixMetaData()
     number.remove(0,4);
     bool isNumber = false;
     number = QString::number(number.toInt(&isNumber)+1);
-    if(!isNumber){return;}//bail if not a number.
+    if(!isNumber){return;}//fail if not a number.
 
     QDomDocument doc("metadata");
     bool setdoc = doc.setContent(file2);
     file2->close();
     if (!setdoc){ return; }
 
-    //Get the root element
-    QDomElement docElem = doc.documentElement();
-    //Check file format
-    if(docElem.tagName() != "gamestatus"){QMessageBox::critical(this,tr("Error::parseXML"),tr("Couldn't parse metadata.xml. Wrong file format."));return; }
-    //Get savefiles node
-    QDomNodeList nodeList = docElem.elementsByTagName("savefiles");
-    //Check each node one by one.
-    for(int ii = 0;ii < nodeList.count(); ii++)
+    QDomElement docElem = doc.documentElement();                    //Get the root element
+    if(docElem.tagName() != "gamestatus"){QMessageBox::critical(this,tr("Error::parseXML"),tr("Couldn't parse metadata.xml. Wrong file format."));return; } //Check file format
+    QDomNodeList nodeList = docElem.elementsByTagName("savefiles"); //Get savefiles node
+    for(int ii = 0;ii < nodeList.count(); ii++)                     //Check each node one by one.
     {
-        // get the current one as QDomElement
-        QDomElement el = nodeList.at(ii).toElement();
-        //get all data for the element, by looping through all child elements
-        QDomNode pEntries = el.firstChild();
+        QDomElement el = nodeList.at(ii).toElement();               //Get the current one as QDomElement
+        QDomNode pEntries = el.firstChild();                        //Get all data for the element, by looping through all child elements
         int iii = 0;
         while(!pEntries.isNull())
         {
             QDomElement peData = pEntries.toElement();
-            if(el.attribute("block") == number)
-            {
-                //Set values
-                if(iii == s)
-                {
-                    QDomText t=peData.firstChild().toText();
-                    if ( !t.isNull() ) {t.setData(timestamp);}
-                } else if(iii == 15)
-                {
-                    QDomText t=peData.firstChild().toText();
-                    if ( !t.isNull() ) {t.setData(Md5);}
-                }
-            }
             vector[ii][iii] = peData.text();
+            if(el.attribute("block") == number){
+                if(iii == s){vector[ii][iii] = timestamp;}          //TODO: we must add a slot mod tracker to make the time update on all modified slots
+                else if(iii == 15){vector[ii][iii] = Md5;}
+                else if(ff7->region(iii).isEmpty()){vector[ii][iii] = "";}//Clear timestamp for empty slot
+            }
             pEntries = pEntries.nextSibling();
             iii++;
         }
@@ -4427,6 +4413,7 @@ void MainWindow::FixMetaData()
     out << QString("</gamestatus>\n").toAscii();
     file3.resize(file3.pos());
     file3.close();
+
 }
 
 void MainWindow::on_sbSnowBegScore_valueChanged(int value){ff7->setSnowboardScore(s,0,value);}
