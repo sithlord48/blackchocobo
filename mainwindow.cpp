@@ -4383,20 +4383,20 @@ void MainWindow::FixMetaData()
     QTextStream out (&file3);
     file3.seek(0);//Set pointer to the Beggining
     out << QString ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
-    out << QString("<gamestatus>\n").toAscii();
+    out << QString("<gamestatus>\n");
     //Do foreach block
     for(int i=0;i<10; i++)
     {
-        out << (QString("  <savefiles block=\"%1\">\n").arg(QString::number(i+1))).toAscii();
+        out << (QString("  <savefiles block=\"%1\">\n").arg(QString::number(i+1)));
         //Do foreach slot
         for(int j=0; j<15; j++)
         {
-            out << (QString("    <timestamp slot=\"%1\">%2</timestamp>\n").arg(QString::number(j+1),vector[i][j])).toAscii();
+            out << (QString("    <timestamp slot=\"%1\">%2</timestamp>\n").arg(QString::number(j+1),vector[i][j]));
         }
-        out << (QString("    <signature>%1</signature>\n").arg(vector[i][15])).toAscii();
-        out << QString("  </savefiles>\n").toAscii();
+        out << (QString("    <signature>%1</signature>\n").arg(vector[i][15]));
+        out << QString("  </savefiles>\n");
     }
-    out << QString("</gamestatus>\n").toAscii();
+    out << QString("</gamestatus>\n");
     file3.resize(file3.pos());
     file3.close();
 
