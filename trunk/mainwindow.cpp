@@ -4369,7 +4369,7 @@ void MainWindow::FixMetaData()
             QDomElement peData = pEntries.toElement();
             vector[ii][iii] = peData.text();
             if(el.attribute("block") == number){
-                if(iii == s){vector[ii][iii] = timestamp;}          //TODO: we must add a slot mod tracker to make the time update on all modified slots
+                if(slotChanged(iii)){vector[ii][iii] = timestamp;}        //TODO: we must add a slot mod tracker to make the time update on all modified slots
                 else if(iii == 15){vector[ii][iii] = Md5;}
                 else if(ff7->region(iii).isEmpty()){vector[ii][iii] = "";}//Clear timestamp for empty slot
             }
