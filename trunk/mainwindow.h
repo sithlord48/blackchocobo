@@ -64,6 +64,7 @@ private:
     bool _init; //set true then false after a file load.
     bool load; // are we loading data? if so don't save it to the file.
     bool file_changed; //if file changed after load.
+    bool slotChanged[15];// slot changed.
     FF7Save *ff7; // our save file struct pointer.
     QSettings *settings;//Pointer To settings object.
     int s; //track slot

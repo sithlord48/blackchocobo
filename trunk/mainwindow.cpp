@@ -684,20 +684,15 @@ void MainWindow::on_actionOpen_Save_File_activated()
     tr("Open Final Fantasy 7 Save"),settings->value("load_path").toString(),
     tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
     if (!fileName.isEmpty()){loadFileFull(fileName,0);}
-
 }
 void MainWindow::on_actionReload_triggered(){if(!filename.isEmpty()){loadFileFull(filename,1);}}
 /*~~~~~~~~~~~~~~~~~Load Full ~~~~~~~~~~~~~~~~~~*/
 void MainWindow::loadFileFull(const QString &fileName,int reload)
 {//if called from reload then int reload ==1 (don't call slot select)
     QFile file(fileName);
-    if (!file.open(QFile::ReadOnly ))
-    {
-        QMessageBox::warning(this, tr("Black Chocobo"),
-        tr("Cannot read file %1:\n%2.")
-        .arg(fileName).arg(file.errorString()));
-        return;
-    }
+
+    if (!file.open(QFile::ReadOnly )){QMessageBox::warning(this, tr("Black Chocobo"), tr("Cannot read file %1:\n%2.") .arg(fileName).arg(file.errorString()));  return; }
+
     if(ff7->LoadFile(fileName))
     {
         _init=false;//we have now loaded a file
@@ -718,21 +713,19 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
 /*~~~~~~~~~~~~~~~~~IMPORT PSX~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionFrom_PSX_Slot_activated()
 {//should check better to be sure its a raw PSX SAVE. then make file filter *
-    QString fileName = QFileDialog::getOpenFileName(this,
-    tr("Select Final Fantasy 7 PSX Save"),QDir::homePath(),tr("Raw PSX FF7 SaveGame (*)"));
+    QString fileName = QFileDialog::getOpenFileName(this, tr("Select Final Fantasy 7 PSX Save"),QDir::homePath(),tr("Raw PSX FF7 SaveGame (*)"));
     if(fileName.isEmpty()){return;}
     else
     {
         ff7->Import_PSX(s,fileName);
-        guirefresh(0);
         file_modified(true);
+        guirefresh(0);
     }
 }
 /*~~~~~~~~~~~~~~~~~IMPORT PSV~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionFrom_PSV_Slot_activated()
 {//check beter to be sure its the correct PSV type file.
-    QString fileName = QFileDialog::getOpenFileName(this,
-    tr("Select Final Fantasy 7 PSV Save"),QDir::homePath(),tr("PSV FF7 SaveGame (*.psv)"));
+    QString fileName = QFileDialog::getOpenFileName(this,tr("Select Final Fantasy 7 PSV Save"),QDir::homePath(),tr("PSV FF7 SaveGame (*.psv)"));
     if (fileName.isEmpty()){return;}
     else
     {
@@ -744,26 +737,13 @@ void MainWindow::on_actionFrom_PSV_Slot_activated()
 /*~~~~~~~~~~~~~~~~~IMPORT Char~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionImport_char_triggered()
 {
-    QString fileName = QFileDialog::getOpenFileName(this,
-    tr("Select FF7 Character Stat File"),settings->value("char_stat_folder").toString(),tr("FF7 Character Stat File(*.char)"));
+    QString fileName = QFileDialog::getOpenFileName(this,tr("Select FF7 Character Stat File"),settings->value("char_stat_folder").toString(),tr("FF7 Character Stat File(*.char)"));
     if (fileName.isEmpty()){return;}
     else
     {
         QFile file(fileName);
-        if(!file.open(QFile::ReadOnly))
-        {
-            QMessageBox::warning(this, tr("Black Chocobo"),
-            tr("Cannot read file %1:\n%2.")
-            .arg(fileName).arg(file.errorString()));
-            return;
-        }
-        if(file.size() !=0x84)
-        {
-            QMessageBox::warning(this, tr("Black Chocobo"),
-            tr("%1:\n%2 is Not a FF7 Character Stat File.")
-            .arg(fileName).arg(file.errorString()));
-            return;
-        }
+        if(!file.open(QFile::ReadOnly)){QMessageBox::warning(this, tr("Black Chocobo"),tr("Cannot read file %1:\n%2.").arg(fileName).arg(file.errorString())); return; }
+        if(file.size() !=0x84){QMessageBox::warning(this, tr("Black Chocobo"),tr("%1:\n%2 is Not a FF7 Character Stat File.").arg(fileName).arg(file.errorString()));return;}
         QByteArray new_char;
         new_char = file.readAll();
         ff7->importChar(s,curchar,new_char);
@@ -1478,7 +1458,13 @@ void MainWindow::file_modified(bool changed)
 {
     file_changed=changed;
     ui->lbl_fileName->setText(filename);
-    if(changed){ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));}
+
+    if(changed)
+    {
+        ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));
+        slotChanged[s]=true;
+    }
+    else{for(int i=0;i<15;i++){slotChanged[i]=false;}}
 }
 
 /*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
