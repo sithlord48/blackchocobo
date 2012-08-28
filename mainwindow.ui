@@ -3113,8 +3113,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>769</width>
-             <height>460</height>
+             <width>747</width>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -13703,6 +13703,7 @@ Var And Scrolling Synced To Left Table</string>
     </widget>
     <addaction name="action_auto_char_growth"/>
     <addaction name="action_show_debug"/>
+    <addaction name="actionCreateNewMetadata"/>
     <addaction name="separator"/>
     <addaction name="menuLang"/>
     <addaction name="separator"/>
@@ -14453,7 +14454,10 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/checkbox_unchecked</normaloff>:/icon/checkbox_unchecked</iconset>
+     <normaloff>:/icon/checkbox_unchecked</normaloff>
+     <normalon>:/icon/checkbox_checked</normalon>
+     <disabledoff>:/icon/checkbox_unchecked_disabled</disabledoff>
+     <disabledon>:/icon/checkbox_checked_disabled</disabledon>:/icon/checkbox_unchecked</iconset>
    </property>
    <property name="text">
     <string>Calculate Stats</string>
@@ -14523,6 +14527,20 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="text">
     <string>PAL (BESCES-00868)</string>
+   </property>
+  </action>
+  <action name="actionCreateNewMetadata">
+   <property name="checkable">
+    <bool>false</bool>
+   </property>
+   <property name="checked">
+    <bool>false</bool>
+   </property>
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="text">
+    <string>New Cloud Save Folder</string>
    </property>
   </action>
  </widget>

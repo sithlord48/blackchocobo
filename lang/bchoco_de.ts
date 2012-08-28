@@ -5163,6 +5163,10 @@ Tabellen Einträge sind bearbeitbar</translation>
         <source>Couldn&apos;t save metadata.xml</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>New Cloud Save Folder</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MateriaEditor</name>

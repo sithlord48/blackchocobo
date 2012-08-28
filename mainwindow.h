@@ -639,5 +639,6 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sbSnowCrazyMsec_valueChanged(int value);
     void on_sb_BikeHighScore_valueChanged(int arg1);
     void on_sb_BattlePoints_valueChanged(int arg1);
+    void on_actionCreateNewMetadata_triggered();
 };
 #endif // MAINWINDOW_H

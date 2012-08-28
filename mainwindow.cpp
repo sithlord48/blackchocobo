@@ -4471,3 +4471,7 @@ void MainWindow::on_sbSnowCrazyMsec_valueChanged(int value)
 void MainWindow::on_sb_BikeHighScore_valueChanged(int arg1){if(!load){file_modified(true);ff7->setBikeHighScore(s,arg1);}}
 void MainWindow::on_sb_BattlePoints_valueChanged(int arg1){if(!load){file_modified(true);ff7->setBattlePoints(s,arg1);}}
 
+void MainWindow::on_actionCreateNewMetadata_triggered()
+{
+
+}
