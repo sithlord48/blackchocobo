@@ -39,19 +39,22 @@ SOURCES += main.cpp \
     FF7tk/static_data/FF7Item.cpp \
     FF7tk/static_data/FF7Char.cpp \
     FF7tk/widgets/ItemSelector.cpp \
-    FF7tk/widgets/ItemList.cpp
+    FF7tk/widgets/ItemList.cpp \
+    metadatacreator.cpp
 HEADERS += mainwindow.h \
     about.h \
     options.h \
     errbox.h \
     version.h \
     FF7tk/widgets/ItemSelector.h \
-    FF7tk/widgets/ItemList.h
+    FF7tk/widgets/ItemList.h \
+    metadatacreator.h
 
 FORMS += mainwindow.ui \
     about.ui \
     options.ui \
-    errbox.ui
+    errbox.ui \
+    metadatacreator.ui
 RESOURCES += images.qrc
 TRANSLATIONS += lang/bchoco_en.ts \
     lang/bchoco_es.ts \

@@ -1004,6 +1004,7 @@ void MainWindow::on_actionAbout_activated(){about adialog;  adialog.setStyleShee
 void MainWindow::on_actionCopy_Slot_activated(){ff7->CopySlot(s);}
 void MainWindow::on_actionPaste_Slot_activated(){ff7->PasteSlot(s); file_modified(true); guirefresh(0);}
 void MainWindow::on_actionShow_Options_triggered(){Options odialog(0,settings); odialog.setStyleSheet(this->styleSheet()); odialog.exec(); init_settings(); }
+void MainWindow::on_actionCreateNewMetadata_triggered(){ metadataCreator mdata(this,ff7); mdata.setStyleSheet(this->styleSheet()); mdata.exec();}
 
 void MainWindow::on_action_auto_char_growth_triggered(bool checked)
 {
@@ -4470,8 +4471,3 @@ void MainWindow::on_sbSnowCrazyMsec_valueChanged(int value)
 }}
 void MainWindow::on_sb_BikeHighScore_valueChanged(int arg1){if(!load){file_modified(true);ff7->setBikeHighScore(s,arg1);}}
 void MainWindow::on_sb_BattlePoints_valueChanged(int arg1){if(!load){file_modified(true);ff7->setBattlePoints(s,arg1);}}
-
-void MainWindow::on_actionCreateNewMetadata_triggered()
-{
-
-}
