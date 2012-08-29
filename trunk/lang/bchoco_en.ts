@@ -7523,10 +7523,6 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>metadataCreator</name>
     <message>
-        <source>Dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Folder To Write Files Into</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7603,14 +7599,6 @@ p, li { white-space: pre-wrap; }
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ok</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Select A File To Use As Save00</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7656,6 +7644,10 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Select A Directory To Save Into</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create Cloud Save Folder</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

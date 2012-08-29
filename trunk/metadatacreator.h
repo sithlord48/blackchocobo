@@ -55,8 +55,8 @@ private slots:
     void on_lineSave08_textChanged(const QString &arg1);
     void on_btnSave09_clicked();
     void on_lineSave09_textChanged(const QString &arg1);
-    void on_btnOk_clicked();
-
+    void on_buttonBox_accepted();
+    void on_buttonBox_rejected();
 private:
     Ui::metadataCreator *ui;
     bool load;

@@ -7548,10 +7548,6 @@ El juego usa el bloque de guardado %1 </translation>
 <context>
     <name>metadataCreator</name>
     <message>
-        <source>Dialog</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Folder To Write Files Into</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7628,14 +7624,6 @@ El juego usa el bloque de guardado %1 </translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ok</source>
-        <translation type="unfinished">Ok</translation>
-    </message>
-    <message>
-        <source>Cancel</source>
-        <translation type="unfinished">Cancelar</translation>
-    </message>
-    <message>
         <source>Select A File To Use As Save00</source>
         <translation type="unfinished"></translation>
     </message>
@@ -7681,6 +7669,10 @@ El juego usa el bloque de guardado %1 </translation>
     </message>
     <message>
         <source>Select A Directory To Save Into</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Create Cloud Save Folder</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
