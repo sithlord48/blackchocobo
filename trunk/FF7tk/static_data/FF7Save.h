@@ -48,7 +48,7 @@ public:
   void importChar(int s,int char_num,QByteArray new_char);//import new_char to slot[s].char[char_num]
   QString md5sum(QString fileName,QString UserID);
   //Set/Get Data Parts.
-  bool FixMetaData(QString fileName="",QString OutPath="");
+  bool FixMetaData(QString fileName="",QString OutPath="",QString UserID="");
   quint16 battlePoints(int s);
   void setBattlePoints(int s,quint16);
   quint16 item(int s,int item_num); //return raw ff7item
@@ -239,6 +239,7 @@ public:
   int len_slot_footer(void);//Return slot footer length
   int len_slot(void);//Return Slot length
   int number_slots(void);//Return number of slots in the file_footer_dex
+  QString fileName(void);//return loaded filename
   QString type(void);// Returns the file type loaded.
   void FileModified(bool,int s);//file changed toggle, with slot called
   bool isFileModified(void);//has the file changed since load
@@ -282,6 +283,7 @@ private:
   FF7SLOT buffer_slot;// hold a buffer slot
   QString buffer_region; // hold the buffers region data.
   QString SG_Region_String[15];
+  QString filename;//opened file;
   FF7TEXT Text;
   bool fileChanged;
   bool slotChanged[15];

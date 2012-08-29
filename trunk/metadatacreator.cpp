@@ -130,12 +130,12 @@ void metadataCreator::on_btnOk_clicked()
 {
     for(int i=i;i<10;i++)
     {
-        if(InFiles.at(i) ==""){return;}
+        if(InFiles.at(i) ==""){continue;}
         QString OutFile =QString("%1/save0%2.ff7").arg(OutPath,QString::number(i));
         if(!ff7->LoadFile(InFiles.at(i))){return;}
         if(ff7->type()!="PC"){ff7->Export_PC(OutFile);}
         else{ff7->SaveFile(OutFile);}
-        ff7->FixMetaData(OutFile,OutPath);
+        ff7->FixMetaData(OutFile,OutPath,ui->lineUserID->text());
     }
     this->close();
 }
