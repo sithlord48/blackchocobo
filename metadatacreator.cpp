@@ -143,7 +143,7 @@ void metadataCreator::on_btnSave09_clicked()
     load=false;
 }
 
-void metadataCreator::on_btnOk_clicked()
+void metadataCreator::on_buttonBox_accepted()
 {
     for(int i=0;i<10;i++)
     {
@@ -164,3 +164,4 @@ void metadataCreator::on_btnOk_clicked()
     }
     this->close();
 }
+void metadataCreator::on_buttonBox_rejected(){this->close();}
