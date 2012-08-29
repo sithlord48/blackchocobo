@@ -2749,8 +2749,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>769</width>
-             <height>460</height>
+             <width>771</width>
+             <height>456</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3113,8 +3113,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>747</width>
-             <height>414</height>
+             <width>771</width>
+             <height>456</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -7858,7 +7858,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>754</width>
+             <width>756</width>
              <height>683</height>
             </rect>
            </property>
@@ -13857,7 +13857,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/1_unsel</normaloff>:/icon/1_unsel</iconset>
+     <normaloff>:/icon/1_unsel</normaloff>
+     <normalon>:/icon/1_sel</normalon>:/icon/1_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-01</string>
@@ -13875,7 +13876,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/2_unsel</normaloff>:/icon/2_unsel</iconset>
+     <normaloff>:/icon/2_unsel</normaloff>
+     <normalon>:/icon/2_sel</normalon>:/icon/2_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-02</string>
@@ -13890,7 +13892,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/3_unsel</normaloff>:/icon/3_unsel</iconset>
+     <normaloff>:/icon/3_unsel</normaloff>
+     <normalon>:/icon/3_sel</normalon>:/icon/3_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-03</string>
@@ -13905,7 +13908,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/4_unsel</normaloff>:/icon/4_unsel</iconset>
+     <normaloff>:/icon/4_unsel</normaloff>
+     <normalon>:/icon/4_sel</normalon>:/icon/4_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-04</string>
@@ -13920,7 +13924,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/5_unsel</normaloff>:/icon/5_unsel</iconset>
+     <normaloff>:/icon/5_unsel</normaloff>
+     <normalon>:/icon/5_sel</normalon>:/icon/5_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-05</string>
@@ -13935,7 +13940,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/6_unsel</normaloff>:/icon/6_unsel</iconset>
+     <normaloff>:/icon/6_unsel</normaloff>
+     <normalon>:/icon/6_sel</normalon>:/icon/6_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-06</string>
@@ -13950,7 +13956,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/7_unsel</normaloff>:/icon/7_unsel</iconset>
+     <normaloff>:/icon/7_unsel</normaloff>
+     <normalon>:/icon/7_sel</normalon>:/icon/7_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-07</string>
@@ -13965,7 +13972,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/8_unsel</normaloff>:/icon/8_unsel</iconset>
+     <normaloff>:/icon/8_unsel</normaloff>
+     <normalon>:/icon/8_sel</normalon>:/icon/8_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-08</string>
@@ -13980,7 +13988,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/9_unsel</normaloff>:/icon/9_unsel</iconset>
+     <normaloff>:/icon/9_unsel</normaloff>
+     <normalon>:/icon/9_sel</normalon>:/icon/9_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-09</string>
@@ -13995,7 +14004,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/10_unsel</normaloff>:/icon/10_unsel</iconset>
+     <normaloff>:/icon/10_unsel</normaloff>
+     <normalon>:/icon/10_sel</normalon>:/icon/10_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-10</string>
@@ -14010,7 +14020,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/11_unsel</normaloff>:/icon/11_unsel</iconset>
+     <normaloff>:/icon/11_unsel</normaloff>
+     <normalon>:/icon/11_sel</normalon>:/icon/11_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-11</string>
@@ -14025,7 +14036,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/12_unsel</normaloff>:/icon/12_unsel</iconset>
+     <normaloff>:/icon/12_unsel</normaloff>
+     <normalon>:/icon/12_sel</normalon>:/icon/12_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-12</string>
@@ -14040,7 +14052,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/13_unsel</normaloff>:/icon/13_unsel</iconset>
+     <normaloff>:/icon/13_unsel</normaloff>
+     <normalon>:/icon/13_sel</normalon>:/icon/13_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-13</string>
@@ -14055,7 +14068,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/14_unsel</normaloff>:/icon/14_unsel</iconset>
+     <normaloff>:/icon/14_unsel</normaloff>
+     <normalon>:/icon/14_sel</normalon>:/icon/14_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-14</string>
@@ -14070,7 +14084,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/15_unsel</normaloff>:/icon/15_unsel</iconset>
+     <normaloff>:/icon/15_unsel</normaloff>
+     <normalon>:/icon/15_sel</normalon>:/icon/15_unsel</iconset>
    </property>
    <property name="text">
     <string>Slot-15</string>
@@ -14208,7 +14223,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/debug_unsel</normaloff>:/icon/debug_unsel</iconset>
+     <normaloff>:/icon/debug_unsel</normaloff>
+     <normalon>:/icon/debug_sel</normalon>:/icon/debug_unsel</iconset>
    </property>
    <property name="text">
     <string>Debug Mode</string>
@@ -14220,7 +14236,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/us_unsel</normaloff>:/icon/us_unsel</iconset>
+     <normaloff>:/icon/us_unsel</normaloff>
+     <normalon>:/icon/us_sel</normalon>:/icon/us_unsel</iconset>
    </property>
    <property name="text">
     <string notr="true">English</string>
@@ -14232,7 +14249,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/es_unsel</normaloff>:/icon/es_unsel</iconset>
+     <normaloff>:/icon/es_unsel</normaloff>
+     <normalon>:/icon/es_sel</normalon>:/icon/es_unsel</iconset>
    </property>
    <property name="text">
     <string notr="true">Español</string>
@@ -14244,7 +14262,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/fr_unsel</normaloff>:/icon/fr_unsel</iconset>
+     <normaloff>:/icon/fr_unsel</normaloff>
+     <normalon>:/icon/fr_sel</normalon>:/icon/fr_unsel</iconset>
    </property>
    <property name="text">
     <string notr="true">Francais</string>
@@ -14271,7 +14290,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/us_unsel</normaloff>:/icon/us_unsel</iconset>
+     <normaloff>:/icon/us_unsel</normaloff>
+     <normalon>:/icon/us_sel</normalon>:/icon/us_unsel</iconset>
    </property>
    <property name="text">
     <string>USA (BASLUS-94163)</string>
@@ -14283,7 +14303,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/eu_unsel</normaloff>:/icon/eu_unsel</iconset>
+     <normaloff>:/icon/eu_unsel</normaloff>
+     <normalon>:/icon/eu_sel</normalon>:/icon/eu_unsel</iconset>
    </property>
    <property name="text">
     <string>PAL (BESCES-00867)</string>
@@ -14295,7 +14316,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/de_unsel</normaloff>:/icon/de_unsel</iconset>
+     <normaloff>:/icon/de_unsel</normaloff>
+     <normalon>:/icon/de_sel</normalon>:/icon/de_unsel</iconset>
    </property>
    <property name="text">
     <string>PAL (BESCES-00869)</string>
@@ -14307,7 +14329,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/es_unsel</normaloff>:/icon/es_unsel</iconset>
+     <normaloff>:/icon/es_unsel</normaloff>
+     <normalon>:/icon/es_sel</normalon>:/icon/es_unsel</iconset>
    </property>
    <property name="text">
     <string>PAL (BESCES-00900)</string>
@@ -14319,7 +14342,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/jp_unsel</normaloff>:/icon/jp_unsel</iconset>
+     <normaloff>:/icon/jp_unsel</normaloff>
+     <normalon>:/icon/jp_sel</normalon>:/icon/jp_unsel</iconset>
    </property>
    <property name="text">
     <string>JPN (BISLPS-00700)</string>
@@ -14331,7 +14355,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/jp_unsel</normaloff>:/icon/jp_unsel</iconset>
+     <normaloff>:/icon/jp_unsel</normaloff>
+     <normalon>:/icon/jp_sel</normalon>:/icon/jp_unsel</iconset>
    </property>
    <property name="text">
     <string>JPN (BISLPS-01057)</string>
@@ -14499,7 +14524,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/jp_unsel</normaloff>:/icon/jp_unsel</iconset>
+     <normaloff>:/icon/jp_unsel</normaloff>
+     <normalon>:/icon/jp_sel</normalon>:/icon/jp_unsel</iconset>
    </property>
    <property name="text">
     <string notr="true">日本語</string>
@@ -14511,7 +14537,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/de_unsel</normaloff>:/icon/de_unsel</iconset>
+     <normaloff>:/icon/de_unsel</normaloff>
+     <normalon>:/icon/de_sel</normalon>:/icon/de_unsel</iconset>
    </property>
    <property name="text">
     <string notr="true">Deutsch</string>
@@ -14523,7 +14550,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/fr_unsel</normaloff>:/icon/fr_unsel</iconset>
+     <normaloff>:/icon/fr_unsel</normaloff>
+     <normalon>:/icon/fr_sel</normalon>:/icon/fr_unsel</iconset>
    </property>
    <property name="text">
     <string>PAL (BESCES-00868)</string>

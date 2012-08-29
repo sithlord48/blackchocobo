@@ -117,7 +117,7 @@ bool FF7Save::SaveFile(const QString &fileName)
 {
     if(fileName.isEmpty()){return false;}
     //fix our headers before saving
-    if(type() =="PC"){FixMetaData();}
+    if(type() =="PC"){}
     else if(type() == "PSX"){fix_psx_header(0);}
     else if(type() =="PSV"){fix_psv_header();}
     else{fix_vmc_header();}
@@ -136,7 +136,7 @@ bool FF7Save::SaveFile(const QString &fileName)
     fclose(pfile);
     fix_sum(fileName);
     filename=fileName;
-    FixMetaData();
+    if(type()==("PC")){FixMetaData();}
     return true;
 }
 bool FF7Save::Export_PC(const QString &fileName)
@@ -168,6 +168,7 @@ bool FF7Save::Export_PC(const QString &fileName)
         FixMetaData();
         filename=temp;
         setType(prev_type);
+        FileModified(false,0);
         return true;
     }
     else
