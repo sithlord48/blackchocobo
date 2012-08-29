@@ -47,6 +47,9 @@ public:
   bool exportChar(int s,int char_num,QString fileName);// Write slot[s].char[char_num] to fileName
   void importChar(int s,int char_num,QByteArray new_char);//import new_char to slot[s].char[char_num]
   QString md5sum(QString fileName,QString UserID);
+  typedef QVector< QString > SubContainer;
+  QVector< SubContainer >  parsexml(QString fileName,QString metadataPath,QString UserID);
+  QVector< SubContainer >  CreateMetadata(QString fileName, QString metadataPath, QString UserID);
   //Set/Get Data Parts.
   bool FixMetaData(QString fileName="",QString OutPath="",QString UserID="");
   quint16 battlePoints(int s);
