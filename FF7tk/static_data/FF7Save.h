@@ -21,6 +21,11 @@
 #include <QObject>
 #include<QColor>
 #include <cstdlib>
+#include <QFileInfo>
+#include <QDateTime>
+#include <QVector>
+#include <QtXml/QDomDocument>
+
 class FF7Save{
 
 public:
@@ -43,6 +48,7 @@ public:
   void importChar(int s,int char_num,QByteArray new_char);//import new_char to slot[s].char[char_num]
   QString md5sum(QString fileName,QString UserID);
   //Set/Get Data Parts.
+  bool FixMetaData(QString fileName="",QString OutPath="");
   quint16 battlePoints(int s);
   void setBattlePoints(int s,quint16);
   quint16 item(int s,int item_num); //return raw ff7item
@@ -234,6 +240,10 @@ public:
   int len_slot(void);//Return Slot length
   int number_slots(void);//Return number of slots in the file_footer_dex
   QString type(void);// Returns the file type loaded.
+  void FileModified(bool,int s);//file changed toggle, with slot called
+  bool isFileModified(void);//has the file changed since load
+  bool isSlotModified(int s);//has slot[s] changed since load.
+  bool isSlotEmpty(int s);//is Slot s empty
   bool isFF7(int s);//valid ff7 slot?
   bool isPAL(int s);//PAL SLOT?
   bool isNTSC(int s);//NTSC SLOT??
@@ -273,6 +283,8 @@ private:
   QString buffer_region; // hold the buffers region data.
   QString SG_Region_String[15];
   FF7TEXT Text;
+  bool fileChanged;
+  bool slotChanged[15];
   int SG_SIZE;
   int SG_HEADER;
   int SG_FOOTER;
