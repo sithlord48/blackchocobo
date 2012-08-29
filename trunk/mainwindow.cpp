@@ -30,7 +30,6 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     ui->setupUi(this);
     _init=true;
     ff7 =ff7data;
-    file_changed=false;
     load=true;
     curchar =0;
     mslotsel=0;
@@ -611,7 +610,7 @@ void MainWindow::changeEvent(QEvent *e)
 void MainWindow::dragEnterEvent(QDragEnterEvent *e) { e->accept(); }
 void MainWindow::dropEvent(QDropEvent *e)
 {
-    if(file_changed)
+    if(ff7->isFileModified())
     {
         switch(save_changes())
         {
@@ -660,7 +659,7 @@ int MainWindow::save_changes(void)
     return rtn;
 }
 void MainWindow::closeEvent(QCloseEvent *e)
-{if(file_changed){
+{if(ff7->isFileModified()){
     switch(save_changes())
     {
         case 0: e->ignore(); break;
@@ -672,7 +671,7 @@ void MainWindow::on_actionNew_Window_triggered(){QProcess::startDetached(QCoreAp
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~LOAD/SAVE FUNCTIONS~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 void MainWindow::on_actionOpen_Save_File_activated()
 {
-    if(file_changed)
+    if(ff7->isFileModified())
     {
         switch(save_changes())
         {
@@ -1457,15 +1456,10 @@ void MainWindow::setmenu(bool newgame)
 }
 void MainWindow::file_modified(bool changed)
 {
-    file_changed=changed;
+    ff7->FileModified(changed,s);
     ui->lbl_fileName->setText(filename);
 
-    if(changed)
-    {
-        ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));
-        slotChanged[s]=true;
-    }
-    else{for(int i=0;i<15;i++){slotChanged[i]=false;}}
+    if(changed){ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));}
 }
 
 /*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
@@ -4370,7 +4364,7 @@ void MainWindow::FixMetaData()
             QDomElement peData = pEntries.toElement();
             vector[ii][iii] = peData.text();
             if(el.attribute("block") == number){
-                if(slotChanged[iii]){vector[ii][iii] = timestamp;}        //TODO: we must add a slot mod tracker to make the time update on all modified slots
+                if(ff7->isSlotModified(iii)){vector[ii][iii] = timestamp;}        //TODO: we must add a slot mod tracker to make the time update on all modified slots
                 else if(iii == 15){vector[ii][iii] = Md5;}
                 else if(ff7->region(iii).isEmpty()){vector[ii][iii] = "";}//Clear timestamp for empty slot
             }
