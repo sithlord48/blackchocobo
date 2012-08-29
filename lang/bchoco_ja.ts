@@ -5142,23 +5142,7 @@ Table Entries are Editable</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Error::parseXML</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Couldn&apos;t open metadata.xml</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Couldn&apos;t parse metadata.xml. Wrong file format.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Couldn&apos;t save metadata.xml</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>New Cloud Save Folder</source>
+        <source>Create Cloud Save Folder</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -7558,6 +7542,145 @@ p, li { white-space: pre-wrap; }
     <message>
         <source>Error On File Save, Going Back To The Selection Dialog</source>
         <translation>ファイルの保存エラー, 選択ダイアログに戻ります</translation>
+    </message>
+</context>
+<context>
+    <name>metadataCreator</name>
+    <message>
+        <source>Dialog</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Folder To Write Files Into</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>...</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sign With User Id</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Your SE Id number</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Files To Import</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>save00</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>save01</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>save02</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>save03</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>save04</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>save05</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Add Files For each Save you want in your cloud data.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>save06</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>You Can Use Any Format That Black Chocobo Can Open</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>save07</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>save08</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unused files will be Looked for in the Save Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>save09</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pressing Ok WIll Overwrite Any Meta Data in the save path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ok</source>
+        <translation type="unfinished">けってい</translation>
+    </message>
+    <message>
+        <source>Cancel</source>
+        <translation type="unfinished">キャンセル</translation>
+    </message>
+    <message>
+        <source>Select A File To Use As Save00</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A File To Use As Save01</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A File To Use As Save02</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A File To Use As Save03</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A File To Use As Save04</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A File To Use As Save05</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A File To Use As Save06</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A File To Use As Save07</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A File To Use As Save08</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A File To Use As Save09</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Output Path:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Select A Directory To Save Into</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

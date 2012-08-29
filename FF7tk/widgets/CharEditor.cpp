@@ -14,7 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "CharEditor.h"
-
+#include <QMessageBox>
 CharEditor::CharEditor(QWidget *parent) :
     QWidget(parent)
 {
@@ -1219,6 +1219,64 @@ void CharEditor::init_connections()
     */
     }
 }
+void CharEditor::disconnectAll(void)
+{
+    disconnect(cb_idChanger,SIGNAL(toggled(bool)),this,SLOT(cb_idChanger_toggled(bool)));
+    disconnect(sb_level,SIGNAL(valueChanged(int)),this,SLOT(Level_Changed(int)));
+    disconnect(sb_curMp,SIGNAL(valueChanged(int)),this,SLOT(setCurMp(int)));
+    disconnect(sb_curHp,SIGNAL(valueChanged(int)),this,SLOT(setCurHp(int)));
+    disconnect(sb_maxMp,SIGNAL(valueChanged(int)),this,SLOT(setMaxMp(int)));
+    disconnect(sb_maxHp,SIGNAL(valueChanged(int)),this,SLOT(setMaxHp(int)));
+    disconnect(sb_base_hp,SIGNAL(valueChanged(int)),this,SLOT(setBaseHp(int)));
+    disconnect(sb_base_mp,SIGNAL(valueChanged(int)),this,SLOT(setBaseMp(int)));
+    disconnect(sb_kills,SIGNAL(valueChanged(int)),this,SLOT(setKills(int)));
+    disconnect(line_name,SIGNAL(textChanged(QString)),this,SLOT(setName(QString)));
+    disconnect(cb_front_row,SIGNAL(toggled(bool)),this,SLOT(setRow(bool)));
+    disconnect(cb_fury,SIGNAL(toggled(bool)),this,SLOT(cb_fury_toggled(bool)));
+    disconnect(cb_sadness,SIGNAL(toggled(bool)),this,SLOT(cb_sadness_toggled(bool)));
+    disconnect(sb_str,SIGNAL(valueChanged(int)),this,SLOT(setStr(int)));
+    disconnect(sb_str_bonus,SIGNAL(valueChanged(int)),this,SLOT(setStrBonus(int)));
+    disconnect(sb_vit,SIGNAL(valueChanged(int)),this,SLOT(setVit(int)));
+    disconnect(sb_vit_bonus,SIGNAL(valueChanged(int)),this,SLOT(setVitBonus(int)));
+    disconnect(sb_mag,SIGNAL(valueChanged(int)),this,SLOT(setMag(int)));
+    disconnect(sb_mag_bonus,SIGNAL(valueChanged(int)),this,SLOT(setMagBonus(int)));
+    disconnect(sb_spi,SIGNAL(valueChanged(int)),this,SLOT(setSpi(int)));
+    disconnect(sb_spi_bonus,SIGNAL(valueChanged(int)),this,SLOT(setSpiBonus(int)));
+    disconnect(sb_dex,SIGNAL(valueChanged(int)),this,SLOT(setDex(int)));
+    disconnect(sb_dex_bonus,SIGNAL(valueChanged(int)),this,SLOT(setDexBonus(int)));
+    disconnect(sb_lck,SIGNAL(valueChanged(int)),this,SLOT(setLck(int)));
+    disconnect(sb_lck_bonus,SIGNAL(valueChanged(int)),this,SLOT(setLckBonus(int)));
+    disconnect(slider_limit,SIGNAL(valueChanged(int)),this,SLOT(setLimitBar(int)));
+    disconnect(sb_total_exp,SIGNAL(valueChanged(int)),this,SLOT(Exp_Changed(int)));
+    disconnect(slider_limit,SIGNAL(valueChanged(int)),lcd_limit_value,SLOT(display(int)));
+    disconnect(list_limits,SIGNAL(clicked(QModelIndex)),this,SLOT(calc_limit_value(QModelIndex)));
+    disconnect(sb_uses_limit_1_1,SIGNAL(valueChanged(int)),this,SLOT(setTimesused1(int))); //Vegeta_Ss4: Fixed limit timeused GUI
+    disconnect(sb_uses_limit_2_1,SIGNAL(valueChanged(int)),this,SLOT(setTimesused2(int))); //Vegeta_Ss4: Fixed limit timeused GUI
+    disconnect(sb_uses_limit_3_1,SIGNAL(valueChanged(int)),this,SLOT(setTimesused3(int))); //Vegeta_Ss4: Fixed limit timeused GUI
+    disconnect(sb_limit_level,SIGNAL(valueChanged(int)),this,SLOT(setLimitLevel(int))); //Vegeta_Ss4: Fixed limitlevel GUI
+    disconnect(combo_id,SIGNAL(currentIndexChanged(int)),this,SLOT(setId(int)));
+    disconnect(weapon_selection,SIGNAL(currentIndexChanged(int)),this,SLOT(setWeapon(int)));
+    disconnect(armor_selection,SIGNAL(currentIndexChanged(int)),this,SLOT(setArmor(int)));
+    disconnect(accessory_selection,SIGNAL(currentIndexChanged(int)),this,SLOT(setAccessory(int)));
+    disconnect(weapon_slot_1,SIGNAL(clicked()),this,SLOT(weapon_slot_1_clicked()));
+    disconnect(weapon_slot_2,SIGNAL(clicked()),this,SLOT(weapon_slot_2_clicked()));
+    disconnect(weapon_slot_3,SIGNAL(clicked()),this,SLOT(weapon_slot_3_clicked()));
+    disconnect(weapon_slot_4,SIGNAL(clicked()),this,SLOT(weapon_slot_4_clicked()));
+    disconnect(weapon_slot_5,SIGNAL(clicked()),this,SLOT(weapon_slot_5_clicked()));
+    disconnect(weapon_slot_6,SIGNAL(clicked()),this,SLOT(weapon_slot_6_clicked()));
+    disconnect(weapon_slot_7,SIGNAL(clicked()),this,SLOT(weapon_slot_7_clicked()));
+    disconnect(weapon_slot_8,SIGNAL(clicked()),this,SLOT(weapon_slot_8_clicked()));
+    disconnect(armor_slot_1,SIGNAL(clicked()),this,SLOT(armor_slot_1_clicked()));
+    disconnect(armor_slot_2,SIGNAL(clicked()),this,SLOT(armor_slot_2_clicked()));
+    disconnect(armor_slot_3,SIGNAL(clicked()),this,SLOT(armor_slot_3_clicked()));
+    disconnect(armor_slot_4,SIGNAL(clicked()),this,SLOT(armor_slot_4_clicked()));
+    disconnect(armor_slot_5,SIGNAL(clicked()),this,SLOT(armor_slot_5_clicked()));
+    disconnect(armor_slot_6,SIGNAL(clicked()),this,SLOT(armor_slot_6_clicked()));
+    disconnect(armor_slot_7,SIGNAL(clicked()),this,SLOT(armor_slot_7_clicked()));
+    disconnect(armor_slot_8,SIGNAL(clicked()),this,SLOT(armor_slot_8_clicked()));
+    disconnect(materia_edit,SIGNAL(ap_changed(qint32)),this,SLOT(matAp_changed(qint32)));
+    disconnect(materia_edit,SIGNAL(id_changed(qint8)),this,SLOT(matId_changed(qint8)));
+}
 qint8 CharEditor::id(){return data.id;}
 qint8 CharEditor::level(){return data.level;}
 quint8 CharEditor::str(){return data.strength;}
@@ -1304,7 +1362,7 @@ void CharEditor::Level_Changed(int level)
 }
 void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
 {
-    this->blockSignals(true);
+    disconnectAll();// remove all connections. safer signal blocking!
     data = Chardata;
     _name=Processed_Name;
     //more here like setting the gui stuff.
@@ -1390,10 +1448,9 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     lcd_0x35->display(data.z_4[1]);
     lcd_0x36->display(data.z_4[2]);
     lcd_0x37->display(data.z_4[3]);
-
     calc_stats();
     update_materia_slots();
-    this->blockSignals(false);
+    init_connections();//reconnect all
 }
 
 void CharEditor::setLevel(int level)

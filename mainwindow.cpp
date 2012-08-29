@@ -1404,11 +1404,28 @@ void MainWindow::materiaupdate(void)
         }
         else
         {
+            //We need to clear invalid to prevent data issues. to keep file changes correct we back up our change vars and replace later.
+            bool fileTemp=ff7->isFileModified();
+            bool slotTemp[15];
+            for(int i=0;i<15;i++){slotTemp[i] = ff7->isSlotModified(i);}
+
             ff7->setPartyMateria(s,mat,FF7Materia::EmptyId,FF7Materia::MaxMateriaAp);//invalid insure its clear.
             newItem = new QTableWidgetItem(tr("===Empty Slot==="),0);
             ui->tbl_materia->setItem(mat,0,newItem);
             newItem = new QTableWidgetItem("",0);
             ui->tbl_materia->setItem(mat,1,newItem);
+
+            if(fileTemp)
+            {//file was changed need to set what slots changed.
+                for(int i=0;i<15;i++)
+                {
+                    if(slotTemp[i])
+                    {//reset slots marked changed.
+                        ff7->FileModified(true,i);
+                    }
+                }
+             }
+            else{ff7->FileModified(false,0);}
         }
     }
     if(ff7->partyMateriaId(s,j) == FF7Materia::EnemySkill){mat_spacer->changeSize(0,0,QSizePolicy::Fixed,QSizePolicy::Fixed);}

@@ -200,8 +200,10 @@ private slots:
     void matAp_changed(qint32);
     void matId_changed(qint8);
 private:
+
     void init_display(void);
     void init_connections(void);
+    void disconnectAll(void);
     void calc_stats(void);//calc stat changes if autostatcalc == true;
     void level_up(int);
     void update_tnl_bar();

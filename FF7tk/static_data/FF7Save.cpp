@@ -117,7 +117,7 @@ bool FF7Save::SaveFile(const QString &fileName)
 {
     if(fileName.isEmpty()){return false;}
     //fix our headers before saving
-    if(type() =="PC"){}
+    if(type() =="PC"){/*PC Header Should be Fixed By Host*/}
     else if(type() == "PSX"){fix_psx_header(0);}
     else if(type() =="PSV"){fix_psv_header();}
     else{fix_vmc_header();}
@@ -137,6 +137,7 @@ bool FF7Save::SaveFile(const QString &fileName)
     fix_sum(fileName);
     filename=fileName;
     if(type()==("PC")){FixMetaData();}
+    FileModified(false,0);
     return true;
 }
 bool FF7Save::Export_PC(const QString &fileName)
@@ -363,6 +364,7 @@ void FF7Save::Import_PSV(int s,const QString &fileName)
 }
 void FF7Save::clearslot(int rmslot)
 {
+    if(isSlotEmpty(rmslot)){return;}
     QByteArray temp;
     temp.fill(0x00,0x10f4);
     memcpy(hf[rmslot].sl_header,temp,SG_SLOT_HEADER);// clear the header..

@@ -84,6 +84,7 @@ public slots:
 private:
     void init_display(void);
     void init_connections(void);
+    void disconnectAll(void);
     //Widgets
     QComboBox *combo_sex;
     QComboBox *combo_type;

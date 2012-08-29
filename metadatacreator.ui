@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>469</width>
-    <height>511</height>
+    <width>465</width>
+    <height>507</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,12 +19,16 @@
      <item>
       <widget class="QLabel" name="label">
        <property name="text">
-        <string>Path To Save</string>
+        <string>Output Path:</string>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineOutPath"/>
+      <widget class="QLineEdit" name="lineOutPath">
+       <property name="placeholderText">
+        <string>Folder To Write Files Into</string>
+       </property>
+      </widget>
      </item>
      <item>
       <widget class="QToolButton" name="btnOutPath">
@@ -45,7 +49,11 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineUserID"/>
+      <widget class="QLineEdit" name="lineUserID">
+       <property name="placeholderText">
+        <string>Your SE Id number</string>
+       </property>
+      </widget>
      </item>
      <item>
       <spacer name="horizontalSpacer">
@@ -54,7 +62,7 @@
        </property>
        <property name="sizeHint" stdset="0">
         <size>
-         <width>250</width>
+         <width>200</width>
          <height>20</height>
         </size>
        </property>
@@ -64,8 +72,17 @@
    </item>
    <item>
     <widget class="QGroupBox" name="groupBox">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="title">
       <string>Files To Import</string>
+     </property>
+     <property name="checkable">
+      <bool>false</bool>
+     </property>
+     <property name="checked">
+      <bool>false</bool>
      </property>
      <layout class="QVBoxLayout" name="verticalLayout_2">
       <item>
@@ -78,7 +95,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineSave00"/>
+         <widget class="QLineEdit" name="lineSave00">
+          <property name="placeholderText">
+           <string/>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QToolButton" name="btnSave00">
@@ -99,7 +120,14 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineSave01"/>
+         <widget class="QLineEdit" name="lineSave01">
+          <property name="text">
+           <string/>
+          </property>
+          <property name="placeholderText">
+           <string/>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QToolButton" name="btnSave01">
@@ -120,7 +148,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineSave02"/>
+         <widget class="QLineEdit" name="lineSave02">
+          <property name="placeholderText">
+           <string/>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QToolButton" name="btnSave02">
@@ -141,7 +173,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineSave03"/>
+         <widget class="QLineEdit" name="lineSave03">
+          <property name="placeholderText">
+           <string/>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QToolButton" name="btnSave03">
@@ -162,7 +198,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineSave04"/>
+         <widget class="QLineEdit" name="lineSave04">
+          <property name="placeholderText">
+           <string/>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QToolButton" name="btnSave04">
@@ -183,7 +223,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineSave05"/>
+         <widget class="QLineEdit" name="lineSave05">
+          <property name="placeholderText">
+           <string/>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QToolButton" name="btnSave05">
@@ -204,7 +248,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineSave06"/>
+         <widget class="QLineEdit" name="lineSave06">
+          <property name="placeholderText">
+           <string>Add Files For each Save you want in your cloud data.</string>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QToolButton" name="btnSave06">
@@ -225,7 +273,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineSave07"/>
+         <widget class="QLineEdit" name="lineSave07">
+          <property name="placeholderText">
+           <string>You Can Use Any Format That Black Chocobo Can Open</string>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QToolButton" name="btnSave07">
@@ -246,7 +298,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineSave08"/>
+         <widget class="QLineEdit" name="lineSave08">
+          <property name="placeholderText">
+           <string>Unused files will be Looked for in the Save Path</string>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QToolButton" name="btnSave08">
@@ -267,7 +323,11 @@
          </widget>
         </item>
         <item>
-         <widget class="QLineEdit" name="lineSave09"/>
+         <widget class="QLineEdit" name="lineSave09">
+          <property name="placeholderText">
+           <string>Pressing Ok WIll Overwrite Any Meta Data in the save path</string>
+          </property>
+         </widget>
         </item>
         <item>
          <widget class="QToolButton" name="btnSave09">
