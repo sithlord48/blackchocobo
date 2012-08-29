@@ -107,5 +107,6 @@
         <file alias="left_button">icon/left_button.png</file>
         <file alias="right_button">icon/right_button.png</file>
         <file alias="up_button">icon/up_button.png</file>
+        <file alias="cloudsave">icon/cloudsave.png</file>
     </qresource>
 </RCC>

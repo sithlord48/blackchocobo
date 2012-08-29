@@ -2749,8 +2749,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>771</width>
-             <height>456</height>
+             <width>720</width>
+             <height>275</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3113,8 +3113,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>771</width>
-             <height>456</height>
+             <width>747</width>
+             <height>414</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -4823,7 +4823,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>350</width>
+                  <width>333</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -7858,7 +7858,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>756</width>
+             <width>513</width>
              <height>683</height>
             </rect>
            </property>
@@ -13660,6 +13660,8 @@ Var And Scrolling Synced To Left Table</string>
     <addaction name="menuImport"/>
     <addaction name="menuExport"/>
     <addaction name="separator"/>
+    <addaction name="actionCreateNewMetadata"/>
+    <addaction name="separator"/>
     <addaction name="action_Quit"/>
    </widget>
    <widget class="QMenu" name="menuSlot">
@@ -13703,7 +13705,6 @@ Var And Scrolling Synced To Left Table</string>
     </widget>
     <addaction name="action_auto_char_growth"/>
     <addaction name="action_show_debug"/>
-    <addaction name="actionCreateNewMetadata"/>
     <addaction name="separator"/>
     <addaction name="menuLang"/>
     <addaction name="separator"/>
@@ -14567,8 +14568,12 @@ Var And Scrolling Synced To Left Table</string>
    <property name="enabled">
     <bool>true</bool>
    </property>
+   <property name="icon">
+    <iconset resource="images.qrc">
+     <normaloff>:/icon/cloudsave</normaloff>:/icon/cloudsave</iconset>
+   </property>
    <property name="text">
-    <string>New Cloud Save Folder</string>
+    <string>Create Cloud Save Folder</string>
    </property>
   </action>
  </widget>

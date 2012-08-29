@@ -1,3 +1,20 @@
+/****************************************************************************/
+//    copyright 2012 Chris Rizzitello <sithlord48@gmail.com>           //
+//                                                                          //
+//    This file is part of Black Chocobo.                                   //
+//                                                                          //
+//    Black Chocobo is free software: you can redistribute it and/or modify //
+//    it under the terms of the GNU General Public License as published by  //
+//    the Free Software Foundation, either version 3 of the License, or     //
+//    (at your option) any later version.                                   //
+//                                                                          //
+//    Black Chocobo is distributed in the hope that it will be useful,      //
+//    but WITHOUT ANY WARRANTY; without even the implied warranty of        //
+//   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the          //
+//    GNU General Public License for more details.                          //
+/****************************************************************************/
+/*~~~~~~~~~~~Includes~~~~~~~~*/
+
 #include "metadatacreator.h"
 #include "ui_metadatacreator.h"
 #include <QFileDialog>
@@ -19,7 +36,7 @@ void metadataCreator::on_lineOutPath_textChanged(const QString &arg1){if(!load){
 void metadataCreator::on_btnOutPath_clicked()
 {
     load = true;
-    QString temp = QFileDialog::getExistingDirectory(this,tr("Select A Directory To Save FF7 PC Saves"),QString("%1/Square Enix/FINAL FANTASY VII/").arg(QDir::homePath()));
+    QString temp = QFileDialog::getExistingDirectory(this,tr("Select A Directory To Save Into"),QString("%1/Square Enix/FINAL FANTASY VII/").arg(QDir::homePath()));
     if(!temp.isNull()){OutPath=temp;}
     ui->lineOutPath->setText(OutPath);
     ui->lineUserID->setText(temp.remove(0,temp.lastIndexOf("_")+1));
@@ -128,10 +145,18 @@ void metadataCreator::on_btnSave09_clicked()
 
 void metadataCreator::on_btnOk_clicked()
 {
-    for(int i=i;i<10;i++)
+    for(int i=0;i<10;i++)
     {
-        if(InFiles.at(i) ==""){continue;}
         QString OutFile =QString("%1/save0%2.ff7").arg(OutPath,QString::number(i));
+        if(InFiles.at(i) =="")
+        {//No File Supplied Look in OutPath to see if there is a file.
+            QFile tempFile(OutFile);
+            if(tempFile.exists())
+            {//If we find the file put its path in InFiles
+                InFiles.replace(i,OutFile);
+            }
+            else{continue;}//empty and not found
+        }
         if(!ff7->LoadFile(InFiles.at(i))){return;}
         if(ff7->type()!="PC"){ff7->Export_PC(OutFile);}
         else{ff7->SaveFile(OutFile);}
