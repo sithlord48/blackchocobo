@@ -631,7 +631,7 @@ void MainWindow::dropEvent(QDropEvent *e)
 int MainWindow::save_changes(void)
 {//return 0 to ingore the event/ return 1 to process event.
     int result; int rtn=0;
-    result = QMessageBox::question(this,tr("Unsaved Changes"),tr("Save Changes to the File:\n%1").arg(filename),QMessageBox::Yes,QMessageBox::No,QMessageBox::Cancel);
+    result = QMessageBox::question(this,tr("Unsaved Changes"),tr("Save Changes to the File:\n%1").arg(ff7->fileName()),QMessageBox::Yes,QMessageBox::No,QMessageBox::Cancel);
     switch(result)
     {
         case QMessageBox::Yes:
@@ -684,7 +684,7 @@ void MainWindow::on_actionOpen_Save_File_activated()
     tr("Known FF7 Save Types (*.ff7 *-S* *.psv *.vmp *.vgs *.mem *.gme *.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PC FF7 SaveGame (*.ff7);;Raw PSX FF7 SaveGame (*-S*);;MC SaveGame (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.VM1 *.bin);;PSV SaveGame (*.psv);;PSP SaveGame (*.vmp);;VGS SaveGame(*.vgs *.mem);;Dex-Drive SaveGame(*.gme);;All Files(*)"));
     if (!fileName.isEmpty()){loadFileFull(fileName,0);}
 }
-void MainWindow::on_actionReload_triggered(){if(!filename.isEmpty()){loadFileFull(filename,1);}}
+void MainWindow::on_actionReload_triggered(){if(!ff7->fileName().isEmpty()){loadFileFull(ff7->fileName(),1);}}
 /*~~~~~~~~~~~~~~~~~Load Full ~~~~~~~~~~~~~~~~~~*/
 void MainWindow::loadFileFull(const QString &fileName,int reload)
 {//if called from reload then int reload ==1 (don't call slot select)
@@ -695,7 +695,6 @@ void MainWindow::loadFileFull(const QString &fileName,int reload)
     if(ff7->LoadFile(fileName))
     {
         _init=false;//we have now loaded a file
-        filename=fileName;
         file_modified(false);
     }
     else{QMessageBox::information(this,tr("Load Failed"),tr("Failed to Load File"));return;}
@@ -777,7 +776,7 @@ void MainWindow::on_action_Save_activated()
     return;//leave this function.
     }
 
-    if(!filename.isEmpty())
+    if(!ff7->fileName().isEmpty())
     {
         if(ff7->type()=="PSP")
         {
@@ -789,7 +788,7 @@ void MainWindow::on_action_Save_activated()
             QMessageBox::information(this,tr("PSV Save Notice"),tr("This File Does Not Have An Updated Checksum.It will not work on your PS3."));
         }
 
-        saveFileFull(filename);
+        saveFileFull(ff7->fileName());
     }
     else{on_actionSave_File_As_activated();return;}//there is no filename we should get one from save as..
 }
@@ -869,12 +868,9 @@ void MainWindow::saveFileFull(QString fileName)
     {
         if(_init)
         {//if no save was loaded and new game was clicked be sure to act like a game was loaded.
-            filename=fileName;//update filename.
             _init=false;
         }
-        filename =fileName;
         file_modified(false);
-        if(ff7->type()=="PC"){FixMetaData();}//check for metadata and update it if in savepath.
         guirefresh(0);
     }
     else{QMessageBox::information(this,tr("Save Error"),tr("Failed to save file\n%1").arg(fileName));}
@@ -897,7 +893,7 @@ void MainWindow::on_actionNew_Game_Plus_triggered()
     QString save_name ="";
     if(settings->value("override_default_save").toBool())
     {save_name = settings->value("default_save_file").toString();}
-    ff7->New_Game_Plus(s,filename,save_name);
+    ff7->New_Game_Plus(s,ff7->fileName(),save_name);
     if(!load){file_modified(true);}
     guirefresh(0);
 }
@@ -914,10 +910,6 @@ void MainWindow::on_actionExport_PC_Save_activated()
         ui->combo_control->setCurrentIndex(0);
         ff7->Export_PC(fileName);
         file_modified(false);
-        QString temp = filename;
-        filename =fileName;
-        FixMetaData();
-        filename=temp;
     }
 }
 /*~~~~~~~~~~~~~~~~~EXPORT PSX~~~~~~~~~~~~~~~~~~*/
@@ -1457,7 +1449,7 @@ void MainWindow::setmenu(bool newgame)
 void MainWindow::file_modified(bool changed)
 {
     ff7->FileModified(changed,s);
-    ui->lbl_fileName->setText(filename);
+    ui->lbl_fileName->setText(ff7->fileName());
 
     if(changed){ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));}
 }
@@ -4308,95 +4300,6 @@ void MainWindow::Items_Changed(QList<quint16> items)
     ff7->setItems(s,items);
     file_modified(true);
 }
-void MainWindow::FixMetaData()
-{
-    QString UserId;//user id is not global for now
-    QFileInfo file(filename);
-    QString Path = file.filePath();
-    Path.chop(file.fileName().length());
-    
-    QString metadataPath = Path;
-    metadataPath.append("metadata.xml");
-    QFile Metadata(metadataPath);
-
-    if(Metadata.exists())
-    {//get our user id
-        Path.remove(0,Path.lastIndexOf("_")+1);
-        Path.chop(Path.length()-Path.lastIndexOf("/"));
-        UserId = Path;
-    }
-    else{return;}//no metadata.xml don't try to edit it.
-
-    //------------------------//
-    //METADATA PARSE/MOD START//
-    //------------------------//
-    QString Md5 = ff7->md5sum(filename,UserId);
-    QString timestamp = QString::number(file.lastModified().toMSecsSinceEpoch());
-    //Parse metadata.xml
-    QFile* file2 = new QFile(metadataPath);
-    //If open fail, show an error message.
-    if (!file2->open(QIODevice::ReadOnly)){QMessageBox::critical(this,tr("Error::parseXML"), tr("Couldn't open metadata.xml")); return; }
-    //To save the parsed data
-    typedef QVector< QString > SubContainer;
-    QVector< SubContainer > vector( 10, SubContainer( 16 ) );
-    //Get file block number
-    QString number = file.baseName();
-    number.remove(0,4);
-    bool isNumber = false;
-    number = QString::number(number.toInt(&isNumber)+1);
-    if(!isNumber){return;}//fail if not a number.
-
-    QDomDocument doc("metadata");
-    bool setdoc = doc.setContent(file2);
-    file2->close();
-    if (!setdoc){ return; }
-
-    QDomElement docElem = doc.documentElement();                    //Get the root element
-    if(docElem.tagName() != "gamestatus"){QMessageBox::critical(this,tr("Error::parseXML"),tr("Couldn't parse metadata.xml. Wrong file format."));return; } //Check file format
-    QDomNodeList nodeList = docElem.elementsByTagName("savefiles"); //Get savefiles node
-    for(int ii = 0;ii < nodeList.count(); ii++)                     //Check each node one by one.
-    {
-        QDomElement el = nodeList.at(ii).toElement();               //Get the current one as QDomElement
-        QDomNode pEntries = el.firstChild();                        //Get all data for the element, by looping through all child elements
-        int iii = 0;
-        while(!pEntries.isNull())
-        {
-            QDomElement peData = pEntries.toElement();
-            vector[ii][iii] = peData.text();
-            if(el.attribute("block") == number){
-                if(ff7->isSlotModified(iii)){vector[ii][iii] = timestamp;}        //TODO: we must add a slot mod tracker to make the time update on all modified slots
-                else if(iii == 15){vector[ii][iii] = Md5;}
-                else if(ff7->region(iii).isEmpty()){vector[ii][iii] = "";}//Clear timestamp for empty slot
-            }
-            pEntries = pEntries.nextSibling();
-            iii++;
-        }
-    }
-
-    QFile file3(metadataPath);
-    if (!file3.open(QIODevice::ReadWrite)){QMessageBox::critical(this, tr("Error::parseXML"),tr("Couldn't save metadata.xml")); return; }
-    QTextStream out (&file3);
-    file3.seek(0);//Set pointer to the Beggining
-    out << QString ("<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n");
-    out << QString("<gamestatus>\n");
-    //Do foreach block
-    for(int i=0;i<10; i++)
-    {
-        out << (QString("  <savefiles block=\"%1\">\n").arg(QString::number(i+1)));
-        //Do foreach slot
-        for(int j=0; j<15; j++)
-        {
-            out << (QString("    <timestamp slot=\"%1\">%2</timestamp>\n").arg(QString::number(j+1),vector[i][j]));
-        }
-        out << (QString("    <signature>%1</signature>\n").arg(vector[i][15]));
-        out << QString("  </savefiles>\n");
-    }
-    out << QString("</gamestatus>\n");
-    file3.resize(file3.pos());
-    file3.close();
-
-}
-
 void MainWindow::on_sbSnowBegScore_valueChanged(int value){ff7->setSnowboardScore(s,0,value);}
 void MainWindow::on_sbSnowExpScore_valueChanged(int value){ff7->setSnowboardScore(s,1,value);}
 void MainWindow::on_sbSnowCrazyScore_valueChanged(int value){ff7->setSnowboardScore(s,2,value);}
