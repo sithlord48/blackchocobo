@@ -126,7 +126,7 @@ void MateriaEditor::init_display()
     frm_ap->setSizePolicy(QSizePolicy::Minimum,QSizePolicy::Fixed);
     box_status_effects->setSizePolicy(QSizePolicy::Fixed,QSizePolicy::Minimum);
 //Set up display
-    //this->setContentsMargins(0,6,0,0);
+    this->setContentsMargins(0,0,0,0);
     QHBoxLayout * type_name_layout = new QHBoxLayout;
     type_name_layout->addWidget(combo_type);
     type_name_layout->addWidget(combo_materia);
@@ -169,7 +169,7 @@ void MateriaEditor::init_display()
     frm_ap_stars->setContentsMargins(0,0,0,0);
 
     QHBoxLayout *low_eskill_layout = new QHBoxLayout;
-    //low_eskill_layout->setContentsMargins(0,0,0,0);
+    low_eskill_layout->setContentsMargins(0,0,0,0);
     low_eskill_layout->addWidget(btn_master_eskills);
     low_eskill_layout->addWidget(btn_clear_eskills);
 

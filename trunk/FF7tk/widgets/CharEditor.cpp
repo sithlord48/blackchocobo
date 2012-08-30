@@ -14,7 +14,7 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "CharEditor.h"
-#include <QMessageBox>
+
 CharEditor::CharEditor(QWidget *parent) :
     QWidget(parent)
 {

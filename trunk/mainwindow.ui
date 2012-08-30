@@ -2269,13 +2269,13 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <number>3</number>
            </property>
            <property name="topMargin">
-            <number>6</number>
+            <number>0</number>
            </property>
            <property name="rightMargin">
             <number>3</number>
            </property>
            <property name="bottomMargin">
-            <number>3</number>
+            <number>0</number>
            </property>
            <item>
             <widget class="QGroupBox" name="group_materia">
@@ -2749,8 +2749,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>720</width>
-             <height>275</height>
+             <width>769</width>
+             <height>460</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -4823,7 +4823,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>333</width>
+                  <width>350</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -7858,7 +7858,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>513</width>
+             <width>754</width>
              <height>683</height>
             </rect>
            </property>
