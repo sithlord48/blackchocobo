@@ -17,6 +17,7 @@
 #ifndef FF7SAVE_TYPES_H
 #define FF7SAVE_TYPES_H
 
+#include <QVector>
 #include "Type_FF7CHAR.h"
 //Materia Type is included as part of FF7Char
 
@@ -214,4 +215,5 @@ struct FF7SLOT {		            // Save slot - Length 0x10F4
     quint8 sl_footer[0x0D0C];       // [0x0000] Slot Footer
 }__attribute__((__packed__));
 
+typedef QVector< QString > SubContainer;
 #endif // FF7SAVE_TYPES_H
