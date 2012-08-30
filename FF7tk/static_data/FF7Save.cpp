@@ -2018,10 +2018,7 @@ QVector< SubContainer > FF7Save::parsexml(QString fileName, QString metadataPath
     QString Md5 = md5sum(fileName,UserID);
     QString timestamp = "";
     QFile tempFile(fileName);
-    if(tempFile.exists())
-    {//If we find the file get the timestamp
-        timestamp = QString::number(file.lastModified().toMSecsSinceEpoch());
-    }
+    if(tempFile.exists()){timestamp = QString::number(file.lastModified().toMSecsSinceEpoch());}
     //Parse metadata.xml
     QFile* file2 = new QFile(metadataPath);
     //If open fail, show an error message.
@@ -2040,37 +2037,29 @@ QVector< SubContainer > FF7Save::parsexml(QString fileName, QString metadataPath
     file2->close();
     if (!setdoc){/*return 0;*/}
     QDomElement docElem = doc.documentElement();                    //Get the root element
-
     if(docElem.tagName() != "gamestatus"){/*return 0;*/} //Check file format
     QDomNodeList nodeList = docElem.elementsByTagName("savefiles"); //Get savefiles node
     for(int ii = 0;ii < nodeList.count(); ii++)                     //Check each node one by one.
-
     {
         QDomElement el = nodeList.at(ii).toElement();               //Get the current one as QDomElement
         QDomNode pEntries = el.firstChild();                        //Get all data for the element, by looping through all child elements
-
-
         int iii = 0;
         while(!pEntries.isNull())
         {
             QDomElement peData = pEntries.toElement();
             vector[ii][iii] = peData.text();
-            if(el.attribute("block") == number){
+            if(el.attribute("block") == number)
+            {
                 if(iii==15){vector[ii][iii]=Md5;}
                 else if(isSlotModified(iii)){vector[ii][iii] = timestamp;}  //We check the slot mod tracker to make the time update on all modified slots
                 else if(region(iii).isEmpty()){vector[ii][iii] = "";}       //Clear timestamp for empty slot
                 else if(vector[ii][iii] == ""){vector[ii][iii] = timestamp;}//Write the stamp (if no stamp is present and the slot isn't empty).
-
             }
             pEntries = pEntries.nextSibling();
             iii++;
         }
-
-
     }
     return vector;
-
-
 }
 
 QVector< SubContainer > FF7Save::CreateMetadata(QString fileName, QString UserID)
@@ -2082,12 +2071,7 @@ QVector< SubContainer > FF7Save::CreateMetadata(QString fileName, QString UserID
     QString Md5 = md5sum(fileName,UserID);
     QString timestamp = "";
     QFile tempFile(fileName);
-    if(tempFile.exists())
-    {//If we find the file get the timestamp
-        timestamp = QString::number(file.lastModified().toMSecsSinceEpoch());
-        //QString timestamp = timestamp(fileName);
-    }
-
+    if(tempFile.exists()){timestamp = QString::number(file.lastModified().toMSecsSinceEpoch());}
     QVector< SubContainer > vector( 10, SubContainer( 16 ) );
     //Get file block number
     QString number = file.baseName();
@@ -2098,19 +2082,14 @@ QVector< SubContainer > FF7Save::CreateMetadata(QString fileName, QString UserID
 
     //Do foreach block
     for(int i=0;i<10; i++)
-    {
-        if(i == number.toInt()) {
-        //Do foreach slot
-        for(int j=0; j<16; j++)
+    {//if i is the current number then do each slot and md5
+        if(i == number.toInt()){ for(int j=0; j<16; j++)
         {
-
-
             if(j==15){vector[i][j] = Md5;}
             else if(isSlotModified(j)){vector[i][j] = timestamp;} //We check the slot mod tracker to make the time update on all modified slots
             else if(region(j).isEmpty()){vector[i][j] = "";}      //Clear timestamp for empty slot
             else if(vector[i][j] == ""){vector[i][j] = timestamp;}//Write the stamp (if no stamp is present and the slot isn't empty)
-        }
-        }
+        }}
     }
     return vector;
 }

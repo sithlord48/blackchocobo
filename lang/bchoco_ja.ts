@@ -3095,20 +3095,12 @@
         <translation>-なし-</translation>
     </message>
     <message>
-        <source>Fights</source>
-        <translation>バトル</translation>
-    </message>
-    <message>
         <source>Battles</source>
         <translation>バトル回数</translation>
     </message>
     <message>
         <source>Runs</source>
         <translation>逃走回数</translation>
-    </message>
-    <message>
-        <source>Money</source>
-        <translation>資金</translation>
     </message>
     <message>
         <source>Gil</source>
