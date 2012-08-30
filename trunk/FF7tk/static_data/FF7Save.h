@@ -46,7 +46,7 @@ public:
   void New_Game_Plus(int s,QString CharFileName,QString fileName="");//new game + in slot s (over load default w/ fileName must be RAW PSX
   bool exportChar(int s,int char_num,QString fileName);// Write slot[s].char[char_num] to fileName
   void importChar(int s,int char_num,QByteArray new_char);//import new_char to slot[s].char[char_num]
-  QString md5sum(QString fileName,QString UserID);
+
   typedef QVector< QString > SubContainer;
   QVector< SubContainer >  parsexml(QString fileName,QString metadataPath,QString UserID);
   QVector< SubContainer >  CreateMetadata(QString fileName, QString metadataPath, QString UserID);
@@ -300,6 +300,7 @@ private:
   int SG_SLOT_NUMBER;
   QString SG_TYPE;
   //private functions
+  QString md5sum(QString fileName,QString UserID);
   void fix_sum(const QString &fileName);
   int ff7__checksum(void * qw );
   void fix_psv_header(void);

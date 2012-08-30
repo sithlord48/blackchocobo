@@ -1989,14 +1989,10 @@ void FF7Save::setBattlePoints(int s,quint16 bp)
 QString FF7Save::md5sum(QString fileName, QString UserID)
 {
     QByteArray ff7file;
-    if(!fileName.isEmpty())
-    {// if the file is not empty and we can read it..
-        QFile  file(fileName);
-        if(file.exists())
-        {
-            if(!file.open(QIODevice::ReadOnly)){return "-1";}//can't open the file.
-            ff7file = file.readAll(); //put all data in temp raw file
-        }
+    QFile  file(fileName);
+    if(file.exists())
+    {
+        if(file.open(QIODevice::ReadOnly)){ff7file = file.readAll();}
     }
     if(UserID!="")
     {
@@ -2075,7 +2071,7 @@ QVector< SubContainer > FF7Save::CreateMetadata(QString fileName, QString metada
     //------------------------//
     QString Md5 = md5sum(fileName,UserID);
     QString timestamp = QString::number(file.lastModified().toMSecsSinceEpoch());
-    //QString timestamp = timestamp(fileName);
+    if(timestamp.toInt()==0){timestamp == "";}
 
     typedef QVector< QString > SubContainer;
     QVector< SubContainer > vector( 10, SubContainer( 16 ) );
