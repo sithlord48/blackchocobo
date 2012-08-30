@@ -18,6 +18,7 @@
 #include "metadatacreator.h"
 #include "ui_metadatacreator.h"
 #include <QFileDialog>
+
 metadataCreator::metadataCreator(QWidget *parent,FF7Save *ff7save) :
     QDialog(parent),
     ui(new Ui::metadataCreator)
@@ -162,13 +163,25 @@ void metadataCreator::on_buttonBox_accepted()
         else{ff7->SaveFile(OutFile);}
         ff7->FixMetaData(OutFile,OutPath,ui->lineUserID->text());
     }
+
     QString achevement(QString("%1/achievement.dat").arg(OutPath));
     FILE *pfile;
+    long size;
+
+    pfile = fopen(achevement.toAscii(),"rb");
+    //If file exist, get the size
+    if (pfile!=NULL){fseek(pfile, 0, SEEK_END); size=ftell(pfile); fclose(pfile);}
+
     pfile = fopen(achevement.toAscii(),"wb");
-    if(pfile == NULL){return;}
-    quint8 byte=0x00;
-    fwrite(&byte,1,8,pfile);
-    fclose(pfile);
+    if(pfile != NULL){
+        if(size != 8) {//if size is different, rewrite it
+            quint8 byte=0x00;
+            fwrite(&byte,1,8,pfile);
+        }
+        fclose(pfile);
+    }
+    else {}//show the write error msg ("Couldn't write achievement.dat")
+
     this->close();
 }
 void metadataCreator::on_buttonBox_rejected(){this->close();}

@@ -49,7 +49,7 @@ public:
 
   typedef QVector< QString > SubContainer;
   QVector< SubContainer >  parsexml(QString fileName,QString metadataPath,QString UserID);
-  QVector< SubContainer >  CreateMetadata(QString fileName, QString metadataPath, QString UserID);
+  QVector< SubContainer >  CreateMetadata(QString fileName, QString UserID);
   //Set/Get Data Parts.
   bool FixMetaData(QString fileName="",QString OutPath="",QString UserID="");
   quint16 battlePoints(int s);
