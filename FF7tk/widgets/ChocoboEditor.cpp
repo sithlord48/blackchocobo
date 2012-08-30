@@ -14,7 +14,6 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "ChocoboEditor.h"
-#include <QMessageBox>
 // Pull in Icons, Be Sure Paths Are Correct
 #include"../static_data/icons/Chocobo_Icons/black_choco.xpm"
 #include"../static_data/icons/Chocobo_Icons/blue_choco.xpm"

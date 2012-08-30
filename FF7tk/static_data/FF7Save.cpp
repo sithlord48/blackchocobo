@@ -1989,12 +1989,14 @@ void FF7Save::setBattlePoints(int s,quint16 bp)
 QString FF7Save::md5sum(QString fileName, QString UserID)
 {
     QByteArray ff7file;
-    if(fileName.isEmpty()){return "-1";}
-    QFile  file(fileName);
-    if(file.exists())
-    {
-        if(!file.open(QIODevice::ReadOnly)){return "-1";}//can't open the file.
-        ff7file = file.readAll(); //put all data in temp raw file
+    if(!fileName.isEmpty())
+    {// if the file is not empty and we can read it..
+        QFile  file(fileName);
+        if(file.exists())
+        {
+            if(!file.open(QIODevice::ReadOnly)){return "-1";}//can't open the file.
+            ff7file = file.readAll(); //put all data in temp raw file
+        }
     }
     if(UserID!="")
     {
@@ -2081,31 +2083,24 @@ QVector< SubContainer > FF7Save::CreateMetadata(QString fileName, QString metada
     QString number = file.baseName();
     number.remove(0,4);
     bool isNumber = false;
-    number = QString::number(number.toInt(&isNumber)+1);
+    number = QString::number(number.toInt(&isNumber));
     if(!isNumber){/*return 0;*/}//fail if not a number.
-
-    return vector;
-
-
     //Do foreach block
+
     for(int i=0;i<10; i++)
     {
         if(i == number.toInt()) {
         //Do foreach slot
-        for(int j=0; j<15; j++)
+        for(int j=0; j<16; j++)
         {
             if(j==15){vector[i][j] = Md5;}
             else if(isSlotModified(j)){vector[i][j] = timestamp;} //We check the slot mod tracker to make the time update on all modified slots
             else if(vector[i][j] == ""){vector[i][j] = timestamp;}//Write the stamp (if no stamp is present). Will be cleared for empty slot on the next step
-            else if(region(j).isEmpty()){vector[i][j] = "";}      //Clear timestamp for empty slot
+             if(region(j).isEmpty()){vector[i][j] = "";}      //Clear timestamp for empty slot
         }
         }
     }
-
-
     return vector;
-
-
 }
 bool FF7Save::FixMetaData(QString fileName,QString OutPath,QString UserID)
 {

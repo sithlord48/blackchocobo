@@ -14,7 +14,6 @@
 //    GNU General Public License for more details.                          //
 /****************************************************************************/
 #include "ItemList.h"
-#include <QMessageBox>
 
 bool ItemList::eventFilter(QObject *obj, QEvent *ev)
 {//Catch toolTip related events and process them(i.e custom tooltips :P)
