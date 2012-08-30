@@ -674,7 +674,7 @@
     </message>
     <message>
         <source>Sprint Speed</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sprint Geschw.</translation>
     </message>
     <message>
         <source>Accel</source>
@@ -1080,7 +1080,7 @@
     <name>ItemSelector</name>
     <message>
         <source>Empty Item</source>
-        <translation type="unfinished">Leer</translation>
+        <translation type="unfinished">leere Artikel</translation>
     </message>
 </context>
 <context>
@@ -5077,7 +5077,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Selected Character Max Stats/Weapons/Materia</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ausgewählte Charakter Max Stats / Waffen / Materia</translation>
     </message>
     <message>
         <source>Black Chococbo</source>
@@ -5085,11 +5085,11 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Replace %1&apos;s Materia and Equipment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Ersetzen Sie%1 Materia und Ausrüstung</translation>
     </message>
     <message>
         <source>Add Each Materia to Stock (end of list)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Fügen Sie jede Materia Stock (Ende der Liste)</translation>
     </message>
     <message>
         <source>SnowBoard Mini Game </source>
@@ -5097,11 +5097,11 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Beginner Course</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Anfängerkurs</translation>
     </message>
     <message>
         <source>Time:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zeit:</translation>
     </message>
     <message>
         <source>:</source>
@@ -5113,11 +5113,11 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Score:</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Partitur:</translation>
     </message>
     <message>
         <source>Points</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Punkte</translation>
     </message>
     <message>
         <source>Expert Course</source>
@@ -5133,11 +5133,11 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Beat Ruby Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Schlage Rubin Waffe</translation>
     </message>
     <message>
         <source>Beat Emerald Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Schlage Smaragd Waffe</translation>
     </message>
     <message>
         <source>Battle Points</source>
@@ -5149,7 +5149,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Create Cloud Save Folder</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Neues Cloud-Save Folder</translation>
     </message>
 </context>
 <context>
