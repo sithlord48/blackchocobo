@@ -155,13 +155,20 @@ void metadataCreator::on_buttonBox_accepted()
             {//If we find the file put its path in InFiles
                 InFiles.replace(i,OutFile);
             }
-            else{continue;}//empty and not found
+            else{ff7->FixMetaData(OutFile,OutPath,ui->lineUserID->text()); continue;}//empty and not found
         }
         if(!ff7->LoadFile(InFiles.at(i))){return;}
         if(ff7->type()!="PC"){ff7->Export_PC(OutFile);}
         else{ff7->SaveFile(OutFile);}
         ff7->FixMetaData(OutFile,OutPath,ui->lineUserID->text());
     }
+    QString achevement(QString("%1/achievement.dat").arg(OutPath));
+    FILE *pfile;
+    pfile = fopen(achevement.toAscii(),"wb");
+    if(pfile == NULL){return;}
+    quint8 byte=0x00;
+    fwrite(&byte,1,8,pfile);
+    fclose(pfile);
     this->close();
 }
 void metadataCreator::on_buttonBox_rejected(){this->close();}
