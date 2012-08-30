@@ -3092,20 +3092,12 @@
         <translation>AP</translation>
     </message>
     <message>
-        <source>Fights</source>
-        <translation>Peleas</translation>
-    </message>
-    <message>
         <source>Battles</source>
         <translation>Batallas</translation>
     </message>
     <message>
         <source>Runs</source>
         <translation>Huídas</translation>
-    </message>
-    <message>
-        <source>Money</source>
-        <translation>Dinero</translation>
     </message>
     <message>
         <source>Gil</source>

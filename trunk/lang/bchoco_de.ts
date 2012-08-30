@@ -3095,10 +3095,6 @@
         <translation>-Leer-</translation>
     </message>
     <message>
-        <source>Fights</source>
-        <translation>Kämpfe</translation>
-    </message>
-    <message>
         <source>Battles</source>
         <translation>Anzahl der Kämpfe</translation>
     </message>
@@ -3106,10 +3102,6 @@
         <source>Runs</source>
         <translatorcomment>&quot;Runs&quot;- you mean the amount of flees?</translatorcomment>
         <translation>Fluchten</translation>
-    </message>
-    <message>
-        <source>Money</source>
-        <translation>Geld</translation>
     </message>
     <message>
         <source>Gil</source>
@@ -7681,7 +7673,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Create Cloud Save Folder</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Neues Cloud-Save Folder</translation>
     </message>
 </context>
 </TS>

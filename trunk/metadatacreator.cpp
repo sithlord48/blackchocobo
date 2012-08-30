@@ -26,6 +26,7 @@ metadataCreator::metadataCreator(QWidget *parent,FF7Save *ff7save) :
     ui->setupUi(this);
     for(int i=0;i<15;i++){InFiles.append(QString(""));}
      ff7 = ff7save;
+     ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);
 }
 
 metadataCreator::~metadataCreator()
@@ -33,7 +34,12 @@ metadataCreator::~metadataCreator()
     delete ui;
 }
 
-void metadataCreator::on_lineOutPath_textChanged(const QString &arg1){if(!load){OutPath=arg1;}}
+void metadataCreator::on_lineOutPath_textChanged(const QString &arg1)
+{
+    if(!load){OutPath=arg1;}
+    if(arg1.isEmpty()){ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(false);}
+    else{ui->buttonBox->button(QDialogButtonBox::Ok)->setEnabled(true);}
+}
 void metadataCreator::on_btnOutPath_clicked()
 {
     load = true;
@@ -166,7 +172,7 @@ void metadataCreator::on_buttonBox_accepted()
 
     QString achevement(QString("%1/achievement.dat").arg(OutPath));
     FILE *pfile;
-    long size;
+    long size=0;
 
     pfile = fopen(achevement.toAscii(),"rb");
     //If file exist, get the size

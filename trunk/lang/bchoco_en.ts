@@ -3095,19 +3095,11 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Fights</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Battles</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Runs</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Money</source>
         <translation type="unfinished"></translation>
     </message>
     <message>

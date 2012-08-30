@@ -3091,20 +3091,12 @@
         <translation>AP</translation>
     </message>
     <message>
-        <source>Fights</source>
-        <translation>Combats</translation>
-    </message>
-    <message>
         <source>Battles</source>
         <translation>Batailles</translation>
     </message>
     <message>
         <source>Runs</source>
         <translation>Fuites</translation>
-    </message>
-    <message>
-        <source>Money</source>
-        <translation>Argent</translation>
     </message>
     <message>
         <source>Gil</source>
