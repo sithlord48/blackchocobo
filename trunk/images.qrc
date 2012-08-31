@@ -30,8 +30,6 @@
         <file alias="exportpc">icon/exportpc.png</file>
         <file alias="slot_sel">icon/slot_sel.png</file>
         <file alias="def_save">icon/default_save.png</file>
-        <file alias="debug_sel">icon/debug.png</file>
-        <file alias="debug_unsel">icon/debug_unsel.png</file>
         <file alias="1_sel">icon/1.png</file>
         <file alias="1_unsel">icon/1_unsel.png</file>
         <file alias="2_sel">icon/2.png</file>

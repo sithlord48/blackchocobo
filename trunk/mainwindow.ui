@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>778</width>
-    <height>598</height>
+    <width>766</width>
+    <height>590</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -458,7 +458,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_23">
            <property name="spacing">
-            <number>0</number>
+            <number>3</number>
            </property>
            <property name="margin">
             <number>0</number>
@@ -562,17 +562,20 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
               <item>
                <layout class="QVBoxLayout" name="verticalLayout_14">
                 <property name="spacing">
-                 <number>0</number>
+                 <number>3</number>
                 </property>
                 <item>
                  <spacer name="verticalSpacer_2">
                   <property name="orientation">
                    <enum>Qt::Vertical</enum>
                   </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
                   <property name="sizeHint" stdset="0">
                    <size>
                     <width>20</width>
-                    <height>20</height>
+                    <height>15</height>
                    </size>
                   </property>
                  </spacer>
@@ -735,10 +738,13 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                   <property name="orientation">
                    <enum>Qt::Vertical</enum>
                   </property>
+                  <property name="sizeType">
+                   <enum>QSizePolicy::Fixed</enum>
+                  </property>
                   <property name="sizeHint" stdset="0">
                    <size>
                     <width>20</width>
-                    <height>20</height>
+                    <height>15</height>
                    </size>
                   </property>
                  </spacer>
@@ -774,6 +780,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
              <layout class="QGridLayout" name="gridLayout_2">
               <property name="margin">
                <number>3</number>
+              </property>
+              <property name="spacing">
+               <number>0</number>
               </property>
               <item row="2" column="0">
                <widget class="QPushButton" name="btn_cait">
@@ -1170,6 +1179,12 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
            </property>
            <item>
             <widget class="QGroupBox" name="box_t_paradise">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
              <property name="title">
               <string>Turtle Paradise Flyers Collected</string>
              </property>
@@ -1199,6 +1214,24 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                   <horstretch>0</horstretch>
                   <verstretch>0</verstretch>
                  </sizepolicy>
+                </property>
+                <property name="minimumSize">
+                 <size>
+                  <width>0</width>
+                  <height>0</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>16777215</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="baseSize">
+                 <size>
+                  <width>0</width>
+                  <height>130</height>
+                 </size>
                 </property>
                 <property name="editTriggers">
                  <set>QAbstractItemView::NoEditTriggers</set>
@@ -2209,6 +2242,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
         <string>&amp;Materia</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <property name="margin">
+         <number>3</number>
+        </property>
         <item>
          <widget class="QGroupBox" name="groupBox_18">
           <property name="minimumSize">
@@ -2230,6 +2266,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
            <set>Qt::AlignCenter</set>
           </property>
           <layout class="QVBoxLayout" name="verticalLayout_2">
+           <property name="spacing">
+            <number>0</number>
+           </property>
            <property name="margin">
             <number>2</number>
            </property>
@@ -2420,6 +2459,24 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
         </item>
         <item>
          <widget class="QScrollArea" name="scrollArea_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>350</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
           <widget class="QWidget" name="scrollAreaWidgetContents_2">
            <property name="geometry">
             <rect>
@@ -2773,6 +2830,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
         <string>&amp;Location</string>
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_96">
+        <property name="margin">
+         <number>3</number>
+        </property>
         <item>
          <widget class="QToolBox" name="toolBox_2">
           <property name="styleSheet">
@@ -2785,8 +2845,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>766</width>
-             <height>456</height>
+             <width>760</width>
+             <height>454</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3149,8 +3209,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>747</width>
-             <height>414</height>
+             <width>758</width>
+             <height>460</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -3193,124 +3253,167 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <x>0</x>
                  <y>0</y>
                  <width>256</width>
-                 <height>660</height>
+                 <height>510</height>
                 </rect>
                </property>
                <layout class="QVBoxLayout" name="verticalLayout_91">
-                <property name="leftMargin">
+                <property name="spacing">
                  <number>0</number>
                 </property>
-                <property name="topMargin">
-                 <number>2</number>
-                </property>
-                <property name="rightMargin">
+                <property name="margin">
                  <number>0</number>
-                </property>
-                <property name="bottomMargin">
-                 <number>2</number>
                 </property>
                 <item>
                  <widget class="QGroupBox" name="groupBox_42">
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>111</height>
+                    <height>0</height>
+                   </size>
+                  </property>
+                  <property name="maximumSize">
+                   <size>
+                    <width>16777215</width>
+                    <height>130</height>
                    </size>
                   </property>
                   <property name="title">
                    <string>Visible On World Map</string>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_22">
-                   <property name="topMargin">
-                    <number>3</number>
+                   <property name="spacing">
+                    <number>0</number>
                    </property>
-                   <property name="bottomMargin">
-                    <number>3</number>
+                   <property name="margin">
+                    <number>0</number>
                    </property>
                    <item>
                     <layout class="QHBoxLayout" name="horizontalLayout_98">
+                     <property name="spacing">
+                      <number>0</number>
+                     </property>
                      <item>
-                      <layout class="QVBoxLayout" name="verticalLayout_121">
-                       <item>
-                        <widget class="QCheckBox" name="cb_visible_buggy">
-                         <property name="text">
-                          <string>Buggy</string>
-                         </property>
-                         <property name="autoExclusive">
-                          <bool>true</bool>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QCheckBox" name="cb_visible_bronco">
-                         <property name="text">
-                          <string>Tiny bronco</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QCheckBox" name="cb_visible_highwind">
-                         <property name="text">
-                          <string>Highwind</string>
-                         </property>
-                         <property name="autoExclusive">
-                          <bool>true</bool>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QCheckBox" name="cb_visible_wild_chocobo">
-                         <property name="text">
-                          <string>Wild chocobo</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
+                      <widget class="QFrame" name="frmOnmap">
+                       <property name="sizePolicy">
+                        <sizepolicy hsizetype="Preferred" vsizetype="Minimum">
+                         <horstretch>0</horstretch>
+                         <verstretch>0</verstretch>
+                        </sizepolicy>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_121">
+                        <property name="spacing">
+                         <number>0</number>
+                        </property>
+                        <property name="margin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QCheckBox" name="cb_visible_buggy">
+                          <property name="maximumSize">
+                           <size>
+                            <width>16777215</width>
+                            <height>15</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string>Buggy</string>
+                          </property>
+                          <property name="autoExclusive">
+                           <bool>true</bool>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCheckBox" name="cb_visible_bronco">
+                          <property name="text">
+                           <string>Tiny bronco</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCheckBox" name="cb_visible_highwind">
+                          <property name="text">
+                           <string>Highwind</string>
+                          </property>
+                          <property name="autoExclusive">
+                           <bool>true</bool>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCheckBox" name="cb_visible_wild_chocobo">
+                          <property name="text">
+                           <string>Wild chocobo</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
                      </item>
                      <item>
-                      <layout class="QVBoxLayout" name="verticalLayout_122">
-                       <item>
-                        <widget class="QCheckBox" name="cb_visible_yellow_chocobo">
-                         <property name="text">
-                          <string>Yellow chocobo</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QCheckBox" name="cb_visible_green_chocobo">
-                         <property name="text">
-                          <string>Green chocobo</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QCheckBox" name="cb_visible_blue_chocobo">
-                         <property name="text">
-                          <string>Blue chocobo</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QCheckBox" name="cb_visible_black_chocobo">
-                         <property name="minimumSize">
-                          <size>
-                           <width>0</width>
-                           <height>16</height>
-                          </size>
-                         </property>
-                         <property name="text">
-                          <string>Black chocobo</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item>
-                        <widget class="QCheckBox" name="cb_visible_gold_chocobo">
-                         <property name="text">
-                          <string>Gold chocobo</string>
-                         </property>
-                        </widget>
-                       </item>
-                      </layout>
+                      <widget class="QFrame" name="frmChocoType">
+                       <property name="maximumSize">
+                        <size>
+                         <width>16777215</width>
+                         <height>16777215</height>
+                        </size>
+                       </property>
+                       <layout class="QVBoxLayout" name="verticalLayout_122">
+                        <property name="spacing">
+                         <number>0</number>
+                        </property>
+                        <property name="margin">
+                         <number>0</number>
+                        </property>
+                        <item>
+                         <widget class="QCheckBox" name="cb_visible_yellow_chocobo">
+                          <property name="text">
+                           <string>Yellow chocobo</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCheckBox" name="cb_visible_green_chocobo">
+                          <property name="text">
+                           <string>Green chocobo</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCheckBox" name="cb_visible_blue_chocobo">
+                          <property name="text">
+                           <string>Blue chocobo</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCheckBox" name="cb_visible_black_chocobo">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>16</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string>Black chocobo</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item>
+                         <widget class="QCheckBox" name="cb_visible_gold_chocobo">
+                          <property name="text">
+                           <string>Gold chocobo</string>
+                          </property>
+                         </widget>
+                        </item>
+                       </layout>
+                      </widget>
                      </item>
                     </layout>
                    </item>
@@ -3329,6 +3432,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                    <string>Party leader</string>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_64">
+                   <property name="spacing">
+                    <number>2</number>
+                   </property>
                    <property name="margin">
                     <number>2</number>
                    </property>
@@ -3520,6 +3626,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                    <string>Tiny Bronco / Chocobo</string>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_99">
+                   <property name="spacing">
+                    <number>2</number>
+                   </property>
                    <property name="margin">
                     <number>2</number>
                    </property>
@@ -3715,6 +3824,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                    <string>Buggy / Highwind</string>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_100">
+                   <property name="spacing">
+                    <number>2</number>
+                   </property>
                    <property name="margin">
                     <number>2</number>
                    </property>
@@ -3927,6 +4039,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                    <string>Sub</string>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_102">
+                   <property name="spacing">
+                    <number>2</number>
+                   </property>
                    <property name="margin">
                     <number>2</number>
                    </property>
@@ -4116,6 +4231,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                    <string>Wild Chocobo</string>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_101">
+                   <property name="spacing">
+                    <number>2</number>
+                   </property>
                    <property name="margin">
                     <number>2</number>
                    </property>
@@ -4305,6 +4423,9 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                    <string>Diamond / Ultimate / Ruby  Weapon</string>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_103">
+                   <property name="spacing">
+                    <number>2</number>
+                   </property>
                    <property name="margin">
                     <number>2</number>
                    </property>
@@ -6052,39 +6173,6 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
            </widget>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_170">
-            <property name="spacing">
-             <number>0</number>
-            </property>
-            <item>
-             <widget class="QLabel" name="label_236">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="text">
-               <string>Number Steps</string>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QSpinBox" name="sb_steps">
-              <property name="wrapping">
-               <bool>true</bool>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-              <property name="maximum">
-               <number>65535</number>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
            <widget class="QGroupBox" name="groupBox_20">
             <property name="sizePolicy">
              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
@@ -6920,6 +7008,39 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
            </layout>
           </item>
           <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_170">
+            <property name="spacing">
+             <number>0</number>
+            </property>
+            <item>
+             <widget class="QLabel" name="label_236">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="text">
+               <string>Number Steps</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="sb_steps">
+              <property name="wrapping">
+               <bool>true</bool>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+              <property name="maximum">
+               <number>65535</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
            <widget class="QGroupBox" name="Group_Region">
             <property name="minimumSize">
              <size>
@@ -7108,8 +7229,8 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             </property>
             <property name="minimumSize">
              <size>
-              <width>216</width>
-              <height>101</height>
+              <width>0</width>
+              <height>0</height>
              </size>
             </property>
             <property name="title">
@@ -7387,6 +7508,12 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
           </item>
           <item>
            <widget class="QGroupBox" name="groupBox">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
+            </property>
             <property name="title">
              <string>SnowBoard Mini Game </string>
             </property>
@@ -7894,7 +8021,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>751</width>
+             <width>739</width>
              <height>683</height>
             </rect>
            </property>
@@ -13643,7 +13770,7 @@ Var And Scrolling Synced To Left Table</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>778</width>
+     <width>766</width>
      <height>22</height>
     </rect>
    </property>
@@ -14260,8 +14387,8 @@ Var And Scrolling Synced To Left Table</string>
    </property>
    <property name="icon">
     <iconset resource="images.qrc">
-     <normaloff>:/icon/debug_unsel</normaloff>
-     <normalon>:/icon/debug_sel</normalon>:/icon/debug_unsel</iconset>
+     <normaloff>:/icon/checkbox_unchecked</normaloff>
+     <normalon>:/icon/checkbox_checked</normalon>:/icon/checkbox_unchecked</iconset>
    </property>
    <property name="text">
     <string>Debug Mode</string>
