@@ -21,7 +21,6 @@
 #include <QTextStream>
 #include <QCryptographicHash>
 
-
 bool FF7Save::LoadFile(const QString &fileName)
 {
     // Return true if File Loaded and false if file not loaded.
@@ -2011,33 +2010,22 @@ void FF7Save::FileModified(bool changed,int s)
 }
 QVector< SubContainer > FF7Save::parsexml(QString fileName, QString metadataPath, QString UserID)
 {
-    QFileInfo file(fileName);
-    //------------------------//
-    //METADATA PARSE/MOD START//
-    //------------------------//
-    QString Md5 = md5sum(fileName,UserID);
-    QString timestamp = "";
-    QFile tempFile(fileName);
-    if(tempFile.exists()){timestamp = QString::number(file.lastModified().toMSecsSinceEpoch());}
-    //Parse metadata.xml
-    QFile* file2 = new QFile(metadataPath);
-    //If open fail, show an error message.
-    if (!file2->open(QIODevice::ReadOnly)){/*return 0;*/}
-    //To save the parsed data
     //typedef QVector< QString > SubContainer;
     QVector< SubContainer > vector( 10, SubContainer( 16 ) );
-    //Get file block number
-    QString number = file.baseName();
-    number.remove(0,4);
-    bool isNumber = false;
-    number = QString::number(number.toInt(&isNumber)+1);
-    if(!isNumber){/*return 0;*/}//fail if not a number.
+    QString Md5 = md5sum(fileName,UserID);
+    QString timestamp = filetimestamp(fileName);
+    QString number = fileblock(fileName);                           //Get file block number
+    if(number == "-1"){/*return 0;*/}                               //Fail if not a number
+    else {number = QString::number(number.toInt()+1);}
+
+    QFile* file2 = new QFile(metadataPath);                         //Open metadata.xml
+    if (!file2->open(QIODevice::ReadOnly)){/*return 0;*/}           //If open fail, show an error message.
     QDomDocument doc("metadata");
     bool setdoc = doc.setContent(file2);
     file2->close();
     if (!setdoc){/*return 0;*/}
     QDomElement docElem = doc.documentElement();                    //Get the root element
-    if(docElem.tagName() != "gamestatus"){/*return 0;*/} //Check file format
+    if(docElem.tagName() != "gamestatus"){/*return 0;*/}            //Check file format
     QDomNodeList nodeList = docElem.elementsByTagName("savefiles"); //Get savefiles node
     for(int ii = 0;ii < nodeList.count(); ii++)                     //Check each node one by one.
     {
@@ -2050,10 +2038,10 @@ QVector< SubContainer > FF7Save::parsexml(QString fileName, QString metadataPath
             vector[ii][iii] = peData.text();
             if(el.attribute("block") == number)
             {
-                if(iii==15){vector[ii][iii]=Md5;}
+                if(iii==15){vector[ii][iii] = Md5;}
                 else if(isSlotModified(iii)){vector[ii][iii] = timestamp;}  //We check the slot mod tracker to make the time update on all modified slots
                 else if(region(iii).isEmpty()){vector[ii][iii] = "";}       //Clear timestamp for empty slot
-                else if(vector[ii][iii] == ""){vector[ii][iii] = timestamp;}//Write the stamp (if no stamp is present and the slot isn't empty).
+                else if(vector[ii][iii] == ""){vector[ii][iii] = timestamp;}//Write the stamp (if no stamp is present and the slot isn't empty)
             }
             pEntries = pEntries.nextSibling();
             iii++;
@@ -2064,22 +2052,11 @@ QVector< SubContainer > FF7Save::parsexml(QString fileName, QString metadataPath
 
 QVector< SubContainer > FF7Save::CreateMetadata(QString fileName, QString UserID)
 {
-    //------------------------//
-    //METADATA PARSE/MOD START//
-    //------------------------//
-    QFileInfo file(fileName);
-    QString Md5 = md5sum(fileName,UserID);
-    QString timestamp = "";
-    QFile tempFile(fileName);
-    if(tempFile.exists()){timestamp = QString::number(file.lastModified().toMSecsSinceEpoch());}
     QVector< SubContainer > vector( 10, SubContainer( 16 ) );
-    //Get file block number
-    QString number = file.baseName();
-    number.remove(0,4);
-    bool isNumber = false;
-    number = QString::number(number.toInt(&isNumber));
-    if(!isNumber){/*return 0;*/}//fail if not a number.
-
+    QString Md5 = md5sum(fileName,UserID);
+    QString timestamp = filetimestamp(fileName);
+    QString number = fileblock(fileName);//Get file block number
+    if(number == "-1"){return vector;}
     //Do foreach block
     for(int i=0;i<10; i++)
     {//if i is the current number then do each slot and md5
@@ -2100,7 +2077,6 @@ bool FF7Save::FixMetaData(QString fileName,QString OutPath,QString UserID)
     QString Path =fileName;
     Path.chop(Path.length()-Path.lastIndexOf("/"));
     QString metadataPath = Path;
-    if(OutPath!=""){metadataPath = OutPath.append("/");}
     metadataPath.append("/metadata.xml");
 
     QFile Metadata(metadataPath);
@@ -2145,3 +2121,19 @@ bool FF7Save::FixMetaData(QString fileName,QString OutPath,QString UserID)
     return 1;
 }
 QString FF7Save::fileName(void){return filename;}
+QString FF7Save::fileblock(QString fileName)
+{
+        QString number = fileName;
+        number.remove(0,number.lastIndexOf("/")+5);//5=(/save)
+        number.chop(4);
+        bool isNumber = false;
+        number = QString::number(number.toInt(&isNumber));
+        if(isNumber){return number;}
+        else{return "-1";}//fail if not a number.
+}
+QString FF7Save::filetimestamp(QString fileName)
+{
+    QFile tempFile(fileName);
+    if(tempFile.exists()){QFileInfo file(fileName); return QString::number(file.lastModified().toMSecsSinceEpoch());}
+    else {return "";}
+}

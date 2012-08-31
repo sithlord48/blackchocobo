@@ -181,7 +181,7 @@ void metadataCreator::on_buttonBox_accepted()
     pfile = fopen(achevement.toAscii(),"wb");
     if(pfile != NULL){
         if(size != 8) {//if size is different, rewrite it
-            quint8 byte=0x00;
+            unsigned int byte[8] = {0,0,0,0,0,0,0,0};
             fwrite(&byte,1,8,pfile);
         }
         fclose(pfile);
