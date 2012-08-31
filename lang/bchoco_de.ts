@@ -3035,6 +3035,10 @@
         <source>Corneo Hall</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Arena Lobby</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -5136,12 +5140,16 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Resets When you Pass thru Battle Square&apos;s Door</source>
+        <source>Create Cloud Save Folder</source>
+        <translation type="unfinished">Neues Cloud-Save Folder</translation>
+    </message>
+    <message>
+        <source>Money</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Create Cloud Save Folder</source>
-        <translation type="unfinished">Neues Cloud-Save Folder</translation>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena Lobby&amp;quot; so you can spend them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
