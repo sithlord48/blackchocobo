@@ -301,6 +301,8 @@ private:
   QString SG_TYPE;
   //private functions
   QString md5sum(QString fileName,QString UserID);
+  QString fileblock(QString fileName);
+  QString filetimestamp(QString fileName);
   void fix_sum(const QString &fileName);
   int ff7__checksum(void * qw );
   void fix_psv_header(void);
