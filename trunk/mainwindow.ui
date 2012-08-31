@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>764</width>
-    <height>588</height>
+    <height>586</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -2849,7 +2849,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
              <x>0</x>
              <y>0</y>
              <width>758</width>
-             <height>452</height>
+             <height>450</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -7916,7 +7916,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                <item>
                 <widget class="QLabel" name="label_16">
                  <property name="toolTip">
-                  <string>Resets When you Pass thru Battle Square's Door</string>
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets When you Pass thru Battle Square's Door Set Location To &amp;quot;Arena Lobby&amp;quot; so you can spend them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="text">
                   <string>Battle Points</string>
@@ -7929,7 +7929,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                <item>
                 <widget class="QSpinBox" name="sb_BattlePoints">
                  <property name="toolTip">
-                  <string>Resets When you Pass thru Battle Square's Door</string>
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets When you Pass thru Battle Square's Door Set Location To &amp;quot;Arena Lobby&amp;quot; so you can spend them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                  </property>
                  <property name="wrapping">
                   <bool>true</bool>

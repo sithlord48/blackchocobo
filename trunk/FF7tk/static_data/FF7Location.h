@@ -92,6 +92,7 @@ static LOCATION Locations[]=
     {QT_TRANSLATE_NOOP("Locations","Mideel,Clinic"),"1","720","151","65380","19"},
     {QT_TRANSLATE_NOOP("Locations","Sector 6"),"1","194","12","302","15"},
     {QT_TRANSLATE_NOOP("Locations","Honey Bee Inn"),"1","214","12","65429","24"},
-    {QT_TRANSLATE_NOOP("Locations","Corneo Hall"),"1","206","53","341","35"}
+    {QT_TRANSLATE_NOOP("Locations","Corneo Hall"),"1","206","53","341","35"},
+    {QT_TRANSLATE_NOOP("Locations","Arena Lobby"),"1","500","6","62146","4"}
 };
 #endif //FF7LOCATION_H
