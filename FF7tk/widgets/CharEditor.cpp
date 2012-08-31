@@ -1069,16 +1069,14 @@ void CharEditor::init_display()
 
     toolbox = new QToolBox;
 
-    QGroupBox *tab_1 = new QGroupBox;
-    tab_1->setLayout(left_Final);
-    toolbox->addItem(tab_1,Chars.Icon(0),QString(tr("Status Info")));
+    QGroupBox *tabStatus = new QGroupBox;
+    tabStatus->setLayout(left_Final);
+    toolbox->addItem(tabStatus,Chars.Icon(0),QString(tr("Status Info")));
 
-    QGroupBox *tab_3 = new QGroupBox;
-    tab_3->setLayout(right_Final);
-    toolbox->addItem(tab_3,QIcon(QPixmap::fromImage(Items.Image(256))),QString(tr("Equipment")));
-    tab_3->adjustSize();
-
-
+    QGroupBox *tabEquipment = new QGroupBox;
+    tabEquipment->setLayout(right_Final);
+    tabEquipment->adjustSize();
+    toolbox->addItem(tabEquipment,QIcon(QPixmap::fromImage(Items.Image(256))),QString(tr("Equipment")));
 
     QVBoxLayout *toolbox_layout = new QVBoxLayout;
     toolbox_layout->setContentsMargins(0,0,0,0);
@@ -1450,6 +1448,8 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     lcd_0x37->display(data.z_4[3]);
     calc_stats();
     update_materia_slots();
+    elemental_info();
+    status_info();
     init_connections();//reconnect all
 }
 
