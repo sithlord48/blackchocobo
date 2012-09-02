@@ -3996,10 +3996,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Debug Mode</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>USA (BASLUS-94163)</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5133,6 +5129,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena Lobby&amp;quot; so you can spend them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Advanced Mode</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

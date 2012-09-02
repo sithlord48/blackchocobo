@@ -58,7 +58,9 @@ void MainWindow::init_display()
     ui->tbl_location_field->setRowCount(Locations.len());
     for (int i=0;i<ui->tbl_location_field->rowCount();i++)
     {
+        QString tooltip(QString("<html><head/><body><p><img src=\":/locations/%1_%2\"/></p></body></html>").arg(Locations.map_id(i),Locations.loc_id(i)));
         newItem = new QTableWidgetItem(Locations.loc_name(i),0);
+        newItem->setToolTip(tooltip);
         ui->tbl_location_field->setItem(i,0,newItem);
         newItem = new QTableWidgetItem(Locations.map_id(i),0);
         newItem->setTextAlignment(Qt::AlignHCenter);

@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>764</width>
-    <height>586</height>
+    <height>584</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -2849,7 +2849,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
              <x>0</x>
              <y>0</y>
              <width>758</width>
-             <height>450</height>
+             <height>448</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -4983,7 +4983,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>351</width>
+                  <width>350</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -8024,7 +8024,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>738</width>
+             <width>737</width>
              <height>683</height>
             </rect>
            </property>
@@ -14394,7 +14394,7 @@ Var And Scrolling Synced To Left Table</string>
      <normalon>:/icon/checkbox_checked</normalon>:/icon/checkbox_unchecked</iconset>
    </property>
    <property name="text">
-    <string>Debug Mode</string>
+    <string>Advanced Mode</string>
    </property>
   </action>
   <action name="action_Lang_en">
