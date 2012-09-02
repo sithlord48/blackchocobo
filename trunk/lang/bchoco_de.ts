@@ -41,7 +41,7 @@
     </message>
     <message>
         <source>Base MP</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>Total Exp</source>
@@ -353,19 +353,19 @@
     </message>
     <message>
         <source>0x34</source>
-        <translation type="unfinished">0x34</translation>
+        <translation>0x34</translation>
     </message>
     <message>
         <source>0x35</source>
-        <translation type="unfinished">0x35</translation>
+        <translation>0x35</translation>
     </message>
     <message>
         <source>0x36</source>
-        <translation type="unfinished">0x36</translation>
+        <translation>0x36</translation>
     </message>
     <message>
         <source>0x37</source>
-        <translation type="unfinished">0x37</translation>
+        <translation>0x37</translation>
     </message>
     <message>
         <source>Young Cloud</source>
@@ -1631,7 +1631,7 @@
     </message>
     <message>
         <source>Cures [Mini]</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hebt [Klein] auf</translation>
     </message>
 </context>
 <context>
@@ -3999,7 +3999,7 @@
     </message>
     <message>
         <source>Debug Mode</source>
-        <translation>Debug Modus</translation>
+        <translation type="obsolete">Debug Modus</translation>
     </message>
     <message>
         <source>USA (BASLUS-94163)</source>
@@ -5145,10 +5145,14 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Money</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Zahlungsmittel</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena Lobby&amp;quot; so you can spend them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Advanced Mode</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -5156,7 +5160,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     <name>MateriaEditor</name>
     <message>
         <source>Delete</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Löschen</translation>
     </message>
     <message>
         <source>Copy</source>
@@ -7561,7 +7565,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <source>Sign With User Id</source>
