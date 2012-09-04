@@ -45,7 +45,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
 void MainWindow::init_display()
 {
     //set up tables..
-    ui->tbl_location_field->setColumnWidth(0,193);
+    ui->tbl_location_field->setColumnWidth(0,160);
     ui->tbl_location_field->setColumnWidth(1,50);
     ui->tbl_location_field->setColumnWidth(2,50);
     ui->tbl_location_field->setColumnWidth(3,50);
@@ -1637,6 +1637,7 @@ void MainWindow::guirefresh(bool newgame)
 
         ui->sb_map_id->setValue(ff7->slot[s].mapid);
         ui->sb_loc_id->setValue(ff7->slot[s].locationid);
+        ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->slot[s].mapid),QString::number(ff7->slot[s].locationid)));
         switch(ui->combo_map_controls->currentIndex())
         {
         case 0: ui->slide_world_x->setValue(ff7->slot[s].l_world & 0x7FFFF);
@@ -2527,9 +2528,18 @@ void MainWindow::on_tbl_location_field_itemSelectionChanged()
     ui->sb_coordy->setValue(ui->tbl_location_field->currentItem()->text().toInt());
     ui->tbl_location_field->setCurrentCell(ui->tbl_location_field->currentRow(),5);
     ui->sb_coordz->setValue(ui->tbl_location_field->currentItem()->text().toInt());
+    ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->slot[s].mapid),QString::number(ff7->slot[s].locationid)));
 }
-void MainWindow::on_sb_map_id_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].mapid= value;}}
-void MainWindow::on_sb_loc_id_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].locationid = value;}}
+void MainWindow::on_sb_map_id_valueChanged(int value)
+{if(!load){file_modified(true);
+        ff7->slot[s].mapid= value;
+        ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->slot[s].mapid),QString::number(ff7->slot[s].locationid)));
+ }}
+void MainWindow::on_sb_loc_id_valueChanged(int value)
+{if(!load){file_modified(true);
+    ff7->slot[s].locationid = value;
+    ui->lbl_locationPreview->setPixmap(QString("://locations/%1_%2").arg(QString::number(ff7->slot[s].mapid),QString::number(ff7->slot[s].locationid)));
+}}
 void MainWindow::on_sb_coordx_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].coord.x = value;}}
 void MainWindow::on_sb_coordy_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].coord.y = value;}}
 void MainWindow::on_sb_coordz_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].coord.z = value;}}
