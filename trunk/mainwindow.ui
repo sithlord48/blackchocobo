@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>764</width>
-    <height>584</height>
+    <height>582</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -2849,7 +2849,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
              <x>0</x>
              <y>0</y>
              <width>758</width>
-             <height>448</height>
+             <height>446</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -2958,7 +2958,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                 <property name="sizeHint" stdset="0">
                  <size>
                   <width>20</width>
-                  <height>40</height>
+                  <height>0</height>
                  </size>
                 </property>
                </spacer>
@@ -2967,6 +2967,16 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                <widget class="QLabel" name="label_166">
                 <property name="text">
                  <string>Click A Row To &quot;Warp&quot; your save there  OR. set your map location , x,y,z manually</string>
+                </property>
+                <property name="wordWrap">
+                 <bool>true</bool>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="label_143">
+                <property name="text">
+                 <string>Have Fun With This Feature, But Don't Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</string>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>
@@ -3181,12 +3191,21 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                </layout>
               </item>
               <item>
-               <widget class="QLabel" name="label_143">
-                <property name="text">
-                 <string>Have Fun With This Feature, But Don't Be Reckless Setting The Values Above Can Cause Some  Annomilies In FF7 Depending On your Quest Progression Value(s).</string>
+               <widget class="QLabel" name="lbl_locationPreview">
+                <property name="minimumSize">
+                 <size>
+                  <width>320</width>
+                  <height>240</height>
+                 </size>
                 </property>
-                <property name="wordWrap">
-                 <bool>true</bool>
+                <property name="maximumSize">
+                 <size>
+                  <width>320</width>
+                  <height>240</height>
+                 </size>
+                </property>
+                <property name="text">
+                 <string/>
                 </property>
                </widget>
               </item>
@@ -3198,7 +3217,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                 <property name="sizeHint" stdset="0">
                  <size>
                   <width>20</width>
-                  <height>40</height>
+                  <height>0</height>
                  </size>
                 </property>
                </spacer>
@@ -4983,7 +5002,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
                  <rect>
                   <x>0</x>
                   <y>0</y>
-                  <width>350</width>
+                  <width>333</width>
                   <height>1528</height>
                  </rect>
                 </property>
@@ -8024,7 +8043,7 @@ disbled{font:;color: rgb(74, 80, 73);}</string>
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>737</width>
+             <width>514</width>
              <height>683</height>
             </rect>
            </property>
