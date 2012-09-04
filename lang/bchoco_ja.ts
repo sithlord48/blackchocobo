@@ -1080,7 +1080,7 @@
     <name>ItemSelector</name>
     <message>
         <source>Empty Item</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">アイテムなし</translation>
     </message>
 </context>
 <context>
@@ -1631,7 +1631,7 @@
     </message>
     <message>
         <source>Cures [Mini]</source>
-        <translation type="unfinished"></translation>
+        <translation>ミニマム状態を治す</translation>
     </message>
 </context>
 <context>
@@ -3025,19 +3025,19 @@
     </message>
     <message>
         <source>Sector 6</source>
-        <translation type="unfinished">５番街 {6?}</translation>
+        <translation>6番街</translation>
     </message>
     <message>
         <source>Honey Bee Inn</source>
-        <translation type="unfinished"></translation>
+        <translation>蜜蜂の館</translation>
     </message>
     <message>
         <source>Corneo Hall</source>
-        <translation type="unfinished"></translation>
+        <translation>コルネオの館</translation>
     </message>
     <message>
         <source>Arena Lobby</source>
-        <translation type="unfinished"></translation>
+        <translation>闘技場ロビー</translation>
     </message>
 </context>
 <context>
@@ -3998,7 +3998,7 @@
     </message>
     <message>
         <source>Debug Mode</source>
-        <translation type="obsolete">デバッグ モード</translation>
+        <translation>デバッグ モード</translation>
     </message>
     <message>
         <source>USA (BASLUS-94163)</source>
@@ -5091,7 +5091,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>時間:</translation>
     </message>
     <message>
         <source>:</source>
@@ -5143,10 +5143,6 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena Lobby&amp;quot; so you can spend them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Advanced Mode</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -6933,7 +6929,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>[Mini]</source>
-        <translation type="unfinished">[ミニマム]</translation>
+        <translation>[ミニマム]</translation>
     </message>
 </context>
 <context>
@@ -7556,7 +7552,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">...</translation>
     </message>
     <message>
         <source>Sign With User Id</source>
@@ -7672,7 +7668,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>Select A Directory To Save Into</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">セーブの保存ディレクトリを選択</translation>
     </message>
     <message>
         <source>Create Cloud Save Folder</source>
