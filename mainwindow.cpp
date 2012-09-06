@@ -32,7 +32,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     ff7 =ff7data;
     load=true;
     curchar =0;
-    mslotsel=0;
+    mslotsel=-1;
     s=0;
     buffer_materia.id=FF7Materia::EmptyId;
     for(int i=0;i<4;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase

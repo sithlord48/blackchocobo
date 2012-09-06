@@ -200,7 +200,7 @@ private slots:
     void matAp_changed(qint32);
     void matId_changed(qint8);
 private:
-
+    void mButtonPress(int Mslot);
     void init_display(void);
     void init_connections(void);
     void disconnectAll(void);
@@ -211,6 +211,7 @@ private:
     void status_info();
     void update_materia_slots();
     void setSlotFrame(void);
+
     QLabel *lbl_avatar;
     QLineEdit *line_name;
     QSpinBox *sb_level;
