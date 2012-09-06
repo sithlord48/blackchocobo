@@ -26,7 +26,7 @@ CharEditor::CharEditor(QWidget *parent) :
     autostatcalc=true;
     editable=true;
     debug=false;
-    mslotsel =0;
+    mslotsel =-1;
  }
 void CharEditor::init_display()
 {
@@ -1450,6 +1450,7 @@ void CharEditor::setChar(FF7CHAR Chardata,QString Processed_Name)
     update_materia_slots();
     elemental_info();
     status_info();
+    mButtonPress(mslotsel);
     init_connections();//reconnect all
 }
 
@@ -2513,118 +2514,36 @@ void CharEditor::matAp_changed(qint32 ap)
     update_materia_slots();
     emit Materias_changed(data.materias[mslotsel]);
 }
-void CharEditor::weapon_slot_1_clicked(void)
+void CharEditor::weapon_slot_1_clicked(void){mButtonPress(0);}
+void CharEditor::weapon_slot_2_clicked(void){mButtonPress(1);}
+void CharEditor::weapon_slot_3_clicked(void){mButtonPress(2);}
+void CharEditor::weapon_slot_4_clicked(void){mButtonPress(3);}
+void CharEditor::weapon_slot_5_clicked(void){mButtonPress(4);}
+void CharEditor::weapon_slot_6_clicked(void){mButtonPress(5);}
+void CharEditor::weapon_slot_7_clicked(void){mButtonPress(6);}
+void CharEditor::weapon_slot_8_clicked(void){mButtonPress(7);}
+void CharEditor::armor_slot_1_clicked(void){mButtonPress(8);}
+void CharEditor::armor_slot_2_clicked(void){mButtonPress(9);}
+void CharEditor::armor_slot_3_clicked(void){mButtonPress(10);}
+void CharEditor::armor_slot_4_clicked(void){mButtonPress(11);}
+void CharEditor::armor_slot_5_clicked(void){mButtonPress(12);}
+void CharEditor::armor_slot_6_clicked(void){mButtonPress(13);}
+void CharEditor::armor_slot_7_clicked(void){mButtonPress(14);}
+void CharEditor::armor_slot_8_clicked(void){mButtonPress(15);}
+
+void CharEditor::mButtonPress(int Mslot)
 {
-    mslotsel = 0;
-    emit mslotChanged(mslotsel);
-    materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-    setSlotFrame();
+    if(Mslot<0){return;}
+    if(Mslot != mslotsel)
+    {
+        mslotsel = Mslot;
+        emit mslotChanged(mslotsel);
+        materia_edit->setMateria(char_materia(mslotsel).id,Materias.ap2num(char_materia(mslotsel).ap));
+        setSlotFrame();
+    }
+   else{materia_edit->setMateria(char_materia(mslotsel).id,Materias.ap2num(char_materia(mslotsel).ap));}
 }
-void CharEditor::weapon_slot_2_clicked(void)
-{
-    mslotsel = 1;
-    emit mslotChanged(mslotsel);
-    materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-    setSlotFrame();
-}
-void CharEditor::weapon_slot_3_clicked(void)
-{
-    mslotsel = 2;
-    emit mslotChanged(mslotsel);
-    materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-    setSlotFrame();
-}
-void CharEditor::weapon_slot_4_clicked(void)
-{
-    mslotsel = 3;
-    emit mslotChanged(mslotsel);
-    materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-    setSlotFrame();
-}
-void CharEditor::weapon_slot_5_clicked(void)
-{
-    mslotsel = 4;
-    emit mslotChanged(mslotsel);
-    materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-    setSlotFrame();
-}
-void CharEditor::weapon_slot_6_clicked(void)
-{
-    mslotsel = 5;
-    emit mslotChanged(mslotsel);
-    materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-    setSlotFrame();
-}
-void CharEditor::weapon_slot_7_clicked(void)
-{
-    mslotsel = 6;
-    emit mslotChanged(mslotsel);
-    materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-    setSlotFrame();
-}
-void CharEditor::weapon_slot_8_clicked(void)
-{
-    mslotsel = 7;
-    emit mslotChanged(mslotsel);
-    materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-    setSlotFrame();
-}
-void CharEditor::armor_slot_1_clicked(void)
-{
-    mslotsel = 8;
-    emit mslotChanged(mslotsel);
-     materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-     setSlotFrame();
-}
-void CharEditor::armor_slot_2_clicked(void)
-{
-    mslotsel = 9;
-    emit mslotChanged(mslotsel);
-    materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-    setSlotFrame();
-}
-void CharEditor::armor_slot_3_clicked(void)
-{
-    mslotsel = 10;
-    emit mslotChanged(mslotsel);
-    materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-    setSlotFrame();
-}
-void CharEditor::armor_slot_4_clicked(void)
-{
-    mslotsel = 11;
-    emit mslotChanged(mslotsel);
-    materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-    setSlotFrame();
-}
-void CharEditor::armor_slot_5_clicked(void)
-{
-    mslotsel = 12;
-    emit mslotChanged(mslotsel);
-    materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-    setSlotFrame();
-}
-void CharEditor::armor_slot_6_clicked(void)
-{
-    mslotsel = 13;
-    emit mslotChanged(mslotsel);
-    materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-    setSlotFrame();
-}
-void CharEditor::armor_slot_7_clicked(void)
-{
-    mslotsel = 14;
-    emit mslotChanged(mslotsel);
-    materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-    setSlotFrame();
-}
-void CharEditor::armor_slot_8_clicked(void)
-{
-    mslotsel = 15;
-    emit mslotChanged(mslotsel);
-    materia_edit->setMateria(data.materias[mslotsel].id,Materias.ap2num(data.materias[mslotsel].ap));
-    setSlotFrame();
-}
+
 void CharEditor::setSlotFrame(void)
 {
     weapon_frm_1->setFrameShape(QFrame::NoFrame);
@@ -2635,7 +2554,6 @@ void CharEditor::setSlotFrame(void)
     weapon_frm_6->setFrameShape(QFrame::NoFrame);
     weapon_frm_7->setFrameShape(QFrame::NoFrame);
     weapon_frm_8->setFrameShape(QFrame::NoFrame);
-
     armor_frm_1->setFrameShape(QFrame::NoFrame);
     armor_frm_2->setFrameShape(QFrame::NoFrame);
     armor_frm_3->setFrameShape(QFrame::NoFrame);
@@ -2655,17 +2573,16 @@ void CharEditor::setSlotFrame(void)
         case 5: weapon_frm_6->setFrameShape(QFrame::Box);break;
         case 6: weapon_frm_7->setFrameShape(QFrame::Box);break;
         case 7: weapon_frm_8->setFrameShape(QFrame::Box);break;
-
-        case 8:armor_frm_1->setFrameShape(QFrame::Box);break;
-        case 9: armor_frm_2->setFrameShape(QFrame::Box);break;
+        case 8:   armor_frm_1->setFrameShape(QFrame::Box);break;
+        case 9:   armor_frm_2->setFrameShape(QFrame::Box);break;
         case 10: armor_frm_3->setFrameShape(QFrame::Box);break;
         case 11: armor_frm_4->setFrameShape(QFrame::Box);break;
         case 12: armor_frm_5->setFrameShape(QFrame::Box);break;
         case 13: armor_frm_6->setFrameShape(QFrame::Box);break;
         case 14: armor_frm_7->setFrameShape(QFrame::Box);break;
         case 15: armor_frm_8->setFrameShape(QFrame::Box);break;
+        default: break;
     };
-
 }
 void CharEditor::cb_idChanger_toggled(bool checked)
 {
@@ -2707,7 +2624,6 @@ void CharEditor::MaxStats()
             this->setLimits(0x2DB);
         }
     }
-
 }
 void CharEditor::MaxEquip()
 {
