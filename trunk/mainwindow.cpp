@@ -2544,7 +2544,22 @@ void MainWindow::on_sb_coordx_valueChanged(int value){if(!load){file_modified(tr
 void MainWindow::on_sb_coordy_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].coord.y = value;}}
 void MainWindow::on_sb_coordz_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].coord.z = value;}}
 
-void MainWindow::on_line_location_textChanged(QString text){if (!load){ff7->setLocation(s,text);}}
+void MainWindow::on_line_location_textChanged(QString text)
+{if (!load){
+        QString lang = QCoreApplication::applicationDirPath() +"/"+ "lang/bchoco_";// base path and name for translation files.
+        QTranslator Translator;// will do the translating.
+        QString region = ff7->region(s);//get region
+        region.chop(7);// remove trailing  FF7-SXX
+        if(region =="BASLUS-94163" || region =="BESLES-00867"){lang.append("en.qm");}
+        else if(region =="BESCES-00868"){lang.append("fr.qm");}
+        else if(region =="BESCES-00869"){lang.append("de.qm");}
+        else if(region =="BESCES-00900"){lang.append("es.qm");}
+        else if(region =="BISLPS-00700" || region =="BISLPS-01057"){lang.append("ja.qm");}
+        else{}//unknown language.
+        Translator.load(lang);
+        text = Translator.translate("Locations",text.toUtf8());
+        ff7->setLocation(s,text);
+}}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~CHARACTER TAB~~~~~~~~~~~~~~~~~~~~~*/
 
