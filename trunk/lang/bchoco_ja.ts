@@ -133,7 +133,7 @@
     </message>
     <message>
         <source>Accessory</source>
-        <translation type="unfinished"></translation>
+        <translation>アクセサリー</translation>
     </message>
     <message>
         <source>Status Info</source>
@@ -141,7 +141,7 @@
     </message>
     <message>
         <source>Equipment</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">そうび</translation>
     </message>
     <message>
         <source>AP:x%1</source>
@@ -149,35 +149,35 @@
     </message>
     <message>
         <source> Str:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished"> 力:+%1</translation>
     </message>
     <message>
         <source> Vit:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">体力:+%1</translation>
     </message>
     <message>
         <source> Dex:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">素速さ:+%1</translation>
     </message>
     <message>
         <source> Spi:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">　精神:+%1</translation>
     </message>
     <message>
         <source> Mag:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">　魔力:+%1</translation>
     </message>
     <message>
         <source> Lck:+%1</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">　　 運:+%1</translation>
     </message>
     <message>
         <source> Hp:+%1%</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hp:+%1</translation>
     </message>
     <message>
         <source> Mp:+%1%</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Mp:+%1</translation>
     </message>
     <message>
         <source>Restoration</source>
@@ -301,35 +301,35 @@
     </message>
     <message>
         <source>Haste</source>
-        <translation type="unfinished">ヘイスト</translation>
+        <translation>ヘイスト</translation>
     </message>
     <message>
         <source>Slow</source>
-        <translation type="unfinished"></translation>
+        <translation>スロウ</translation>
     </message>
     <message>
         <source>Stop</source>
-        <translation type="unfinished">ストップ</translation>
+        <translation>ストップ</translation>
     </message>
     <message>
         <source>Barrier</source>
-        <translation type="unfinished">バリア</translation>
+        <translation>バリア</translation>
     </message>
     <message>
         <source>M.Barrier</source>
-        <translation type="unfinished">マバリア</translation>
+        <translation>マバリア</translation>
     </message>
     <message>
         <source>Reflect</source>
-        <translation type="unfinished">リフレク</translation>
+        <translation>リフレク</translation>
     </message>
     <message>
         <source>Shield</source>
-        <translation type="unfinished"></translation>
+        <translation>シールド</translation>
     </message>
     <message>
         <source>Regen</source>
-        <translation type="unfinished">リジェネ</translation>
+        <translation>リジェネ</translation>
     </message>
     <message>
         <source>Protect:</source>
@@ -825,7 +825,7 @@
     </message>
     <message>
         <source>Pandora&apos;s Box</source>
-        <translation>なんとか？？？</translation>
+        <translation>なんとか？？？？</translation>
     </message>
 </context>
 <context>
@@ -1327,7 +1327,7 @@
     </message>
     <message>
         <source>Restores ally&apos;s max HP/MP. Use at Save Point.</source>
-        <translation>全員のＨＰ・ＭＰが全回復. セーブできる場所でしか使えない</translation>
+        <translation>全員のＨＰ・ＭＰが全回復。セーブできる所でしか使えない。</translation>
     </message>
     <message>
         <source>Raises [Strength]</source>
@@ -1399,7 +1399,7 @@
     </message>
     <message>
         <source>Shinra armored &apos;attack&apos; soldiers: 12 in the Set!</source>
-        <translation>新羅軍装甲閃弾兵『突撃』セット 12体入</translation>
+        <translation>神羅軍装甲擲弾兵「突撃」セット 12体入。</translation>
     </message>
     <message>
         <source>A new machine to protect the reactor!</source>
