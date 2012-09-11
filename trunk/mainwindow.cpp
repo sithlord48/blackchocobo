@@ -2559,8 +2559,9 @@ void MainWindow::on_line_location_textChanged(QString text)
         else if(region =="BISLPS-00700" || region =="BISLPS-01057"){lang.append("ja.qm");}
         else{}//unknown language.
         Translator.load(lang);
-        text = Translator.translate("Locations",text.toUtf8());
-        ff7->setLocation(s,text);
+        QString newText = Translator.translate("Locations",text.toUtf8());
+        if(newText.isEmpty()){ff7->setLocation(s,text);}
+        else{ff7->setLocation(s,newText);}
     }
 }
 
