@@ -2864,10 +2864,6 @@
         <translation>カーム・宿屋２階</translation>
     </message>
     <message>
-        <source>Reactor No. 5</source>
-        <translation>５番魔晄炉</translation>
-    </message>
-    <message>
         <source>Aerith&apos;s House</source>
         <translation>エアリスの家</translation>
     </message>
@@ -2908,14 +2904,6 @@
         <translation>絶壁のふもと</translation>
     </message>
     <message>
-        <source>Sector 7 - Slums</source>
-        <translation>７番街スラム</translation>
-    </message>
-    <message>
-        <source>Reactor No.1</source>
-        <translation>１番魔晄炉</translation>
-    </message>
-    <message>
         <source>Corel Prison</source>
         <translation>コレルプリズン</translation>
     </message>
@@ -2936,10 +2924,6 @@
         <translation>コスモキャニオン</translation>
     </message>
     <message>
-        <source>Church in the slums</source>
-        <translation>スラムの教会</translation>
-    </message>
-    <message>
         <source>Boat</source>
         <translation>運搬船</translation>
     </message>
@@ -2950,10 +2934,6 @@
     <message>
         <source>Mt. Corel</source>
         <translation>コレル山・西</translation>
-    </message>
-    <message>
-        <source>Sector 5 - Slums</source>
-        <translation>５番街スラム</translation>
     </message>
     <message>
         <source>Debug Room [ja]</source>
@@ -3038,6 +3018,110 @@
     <message>
         <source>Arena Lobby</source>
         <translation>闘技場ロビー</translation>
+    </message>
+    <message>
+        <source>Sector 1 Station</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 1</source>
+        <translation type="unfinished">５番街 {1?}</translation>
+    </message>
+    <message>
+        <source>No.1 Reactor</source>
+        <translation type="unfinished">１番魔晄炉</translation>
+    </message>
+    <message>
+        <source>Sector 8</source>
+        <translation type="unfinished">５番街 {8?}</translation>
+    </message>
+    <message>
+        <source>Last Train From Midgar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 7 Station</source>
+        <translation type="unfinished">７番街スラム駅</translation>
+    </message>
+    <message>
+        <source>Sector 7 Slums</source>
+        <translation type="unfinished">７番街スラム</translation>
+    </message>
+    <message>
+        <source>Sector 7 Item Store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 7 Weapon Shop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Johnny&apos;s Home</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inside Train</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Winding Tunnel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>4th Street Plate Int.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No.5 Reactor</source>
+        <translation type="unfinished">５番魔晄炉</translation>
+    </message>
+    <message>
+        <source>church in the slums</source>
+        <translation type="unfinished">スラムの教会</translation>
+    </message>
+    <message>
+        <source>Inside the Church</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Church Roof</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 5 Slum</source>
+        <translation type="unfinished">５番街スラム</translation>
+    </message>
+    <message>
+        <source>Earthen Pipe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Materia store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Item Store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>House 1f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>House 2f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Weapon Store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Church</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 6 park</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -3995,10 +4079,6 @@
     <message>
         <source>Slot Region</source>
         <translation>スロットのリージョン</translation>
-    </message>
-    <message>
-        <source>Debug Mode</source>
-        <translation>デバッグ モード</translation>
     </message>
     <message>
         <source>USA (BASLUS-94163)</source>
@@ -5143,6 +5223,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena Lobby&amp;quot; so you can spend them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Advanced Mode</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

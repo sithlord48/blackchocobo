@@ -2865,10 +2865,6 @@
         <translation>Posada Kalm</translation>
     </message>
     <message>
-        <source>Reactor No. 5</source>
-        <translation>Reactor No. 5</translation>
-    </message>
-    <message>
         <source>Aerith&apos;s House</source>
         <translation>Casa de Aerith</translation>
     </message>
@@ -2909,14 +2905,6 @@
         <translation>Base del Acantilado de Gaea</translation>
     </message>
     <message>
-        <source>Sector 7 - Slums</source>
-        <translation>Suburbios del Sector 7</translation>
-    </message>
-    <message>
-        <source>Reactor No.1</source>
-        <translation>Reactor No. 1</translation>
-    </message>
-    <message>
         <source>Corel Prison</source>
         <translation>Prisión de Corel</translation>
     </message>
@@ -2937,10 +2925,6 @@
         <translation>Cañón Cosmo</translation>
     </message>
     <message>
-        <source>Church in the slums</source>
-        <translation>Iglesia en los suburbios</translation>
-    </message>
-    <message>
         <source>Boat</source>
         <translation>Barco</translation>
     </message>
@@ -2951,10 +2935,6 @@
     <message>
         <source>Mt. Corel</source>
         <translation>Mt. Corel</translation>
-    </message>
-    <message>
-        <source>Sector 5 - Slums</source>
-        <translation>Sector 5 tug.</translation>
     </message>
     <message>
         <source>Debug Room [ja]</source>
@@ -3038,6 +3018,110 @@
     </message>
     <message>
         <source>Arena Lobby</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 1 Station</source>
+        <translation type="unfinished">Estación de tren del Sector 1</translation>
+    </message>
+    <message>
+        <source>Sector 1</source>
+        <translation type="unfinished">Sector 1</translation>
+    </message>
+    <message>
+        <source>No.1 Reactor</source>
+        <translation type="unfinished">No.1 Reactor</translation>
+    </message>
+    <message>
+        <source>Sector 8</source>
+        <translation type="unfinished">Sector 8</translation>
+    </message>
+    <message>
+        <source>Last Train From Midgar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 7 Station</source>
+        <translation type="unfinished">Estación de tren del Sector 7</translation>
+    </message>
+    <message>
+        <source>Sector 7 Slums</source>
+        <translation type="unfinished">Suburbios del Sector 7</translation>
+    </message>
+    <message>
+        <source>Sector 7 Item Store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 7 Weapon Shop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Johnny&apos;s Home</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inside Train</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Winding Tunnel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>4th Street Plate Int.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>No.5 Reactor</source>
+        <translation type="unfinished">No.5 Reacor</translation>
+    </message>
+    <message>
+        <source>church in the slums</source>
+        <translation type="unfinished">iglesia en los suburbios</translation>
+    </message>
+    <message>
+        <source>Inside the Church</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Church Roof</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 5 Slum</source>
+        <translation type="unfinished">Sector 5 tug.</translation>
+    </message>
+    <message>
+        <source>Earthen Pipe</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Materia store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Item Store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>House 1f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>House 2f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Weapon Store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Church</source>
+        <translation type="unfinished">Iglesia</translation>
+    </message>
+    <message>
+        <source>Sector 6 park</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -3996,10 +4080,6 @@
     <message>
         <source>Slot Region</source>
         <translation>Región de la ranura</translation>
-    </message>
-    <message>
-        <source>Debug Mode</source>
-        <translation type="obsolete">Modo Test</translation>
     </message>
     <message>
         <source>USA (BASLUS-94163)</source>
