@@ -2988,10 +2988,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Shinra Bldg 64F.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>7th Heaven</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3060,10 +3056,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Inside Train</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Winding Tunnel</source>
         <translation type="unfinished"></translation>
     </message>
@@ -3121,6 +3113,110 @@
     </message>
     <message>
         <source>Sector 6 park</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inside Train </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lower Sector 4 Plate </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pharmacy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Boutique</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Materia Store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Men&apos;s Hall</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corneo Hall,1f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Torture Room</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corneo Hall,2f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plate Support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plate Section</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. Stairs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 59f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Outside Elevator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 60f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 61f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 62f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 63f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 64f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 65f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg.66f.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

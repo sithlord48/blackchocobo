@@ -2877,7 +2877,7 @@
     </message>
     <message>
         <source>Beginner&apos;s Hall</source>
-        <translation>Halle der Anfänger</translation>
+        <translation>Anfänger-Halle</translation>
     </message>
     <message>
         <source>Whirlwind Maze</source>
@@ -2989,7 +2989,7 @@
     </message>
     <message>
         <source>Shinra Bldg 64F.</source>
-        <translation>Shinra HQ 64. Stockwerk.</translation>
+        <translation type="obsolete">Shinra HQ 64. Stockwerk.</translation>
     </message>
     <message>
         <source>7th Heaven</source>
@@ -2997,7 +2997,7 @@
     </message>
     <message>
         <source>AVALANCHE Hideout</source>
-        <translation>AVALANCHE Versteck</translation>
+        <translation>AVALANCHE-Versteck</translation>
     </message>
     <message>
         <source>Mideel,Clinic</source>
@@ -3021,15 +3021,15 @@
     </message>
     <message>
         <source>Sector 1 Station</source>
-        <translation type="unfinished">Sektor 1 Bahnhof</translation>
+        <translation>Station, Sektor 1</translation>
     </message>
     <message>
         <source>Sector 1</source>
-        <translation type="unfinished">Sektor 1</translation>
+        <translation>Sektor 1</translation>
     </message>
     <message>
         <source>No.1 Reactor</source>
-        <translation type="unfinished">Nr.1 Reaktor</translation>
+        <translation>Reaktor Nr. 1</translation>
     </message>
     <message>
         <source>Sector 8</source>
@@ -3037,30 +3037,26 @@
     </message>
     <message>
         <source>Last Train From Midgar</source>
-        <translation type="unfinished"></translation>
+        <translation>Letzter Zug aus Midgar</translation>
     </message>
     <message>
         <source>Sector 7 Station</source>
-        <translation type="unfinished">Sektor 7 Bahnhof</translation>
+        <translation>Bahnhof in Sektor Siebe</translation>
     </message>
     <message>
         <source>Sector 7 Slums</source>
-        <translation type="unfinished">Sektor 7 Slums</translation>
+        <translation>Slums von Sektor 7</translation>
     </message>
     <message>
         <source>Sector 7 Item Store</source>
-        <translation type="unfinished"></translation>
+        <translation>7. Straβe, Objektladen</translation>
     </message>
     <message>
         <source>Sector 7 Weapon Shop</source>
-        <translation type="unfinished"></translation>
+        <translation>Sektor 7, Wafenladen</translation>
     </message>
     <message>
         <source>Johnny&apos;s Home</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Inside Train</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3073,7 +3069,7 @@
     </message>
     <message>
         <source>No.5 Reactor</source>
-        <translation type="unfinished">Nr.5 Reaktor</translation>
+        <translation>Reaktor Nr.5</translation>
     </message>
     <message>
         <source>church in the slums</source>
@@ -3121,6 +3117,110 @@
     </message>
     <message>
         <source>Sector 6 park</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inside Train </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lower Sector 4 Plate </source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Pharmacy</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Diner</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Boutique</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Materia Store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Men&apos;s Hall</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corneo Hall,1f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Torture Room</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corneo Hall,2f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sewer</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plate Support</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plate Section</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Sector 0</source>
+        <translation type="unfinished">Sektor 0</translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. Stairs</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 59f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Outside Elevator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 60f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 61f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 62f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 63f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 64f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 65f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg.66f.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
