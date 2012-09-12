@@ -2865,7 +2865,7 @@
     </message>
     <message>
         <source>Aerith&apos;s House</source>
-        <translation>Aerith&apos;s Haus</translation>
+        <translation>Aeriths&apos; Haus</translation>
     </message>
     <message>
         <source>North Crater</source>
@@ -3005,15 +3005,15 @@
     </message>
     <message>
         <source>Sector 6</source>
-        <translation type="unfinished">Sektor 6</translation>
+        <translation>Sektor 6</translation>
     </message>
     <message>
         <source>Honey Bee Inn</source>
-        <translation type="unfinished">Halle der Anfänger</translation>
+        <translation>Gasthaus zur Honigbiene</translation>
     </message>
     <message>
         <source>Corneo Hall</source>
-        <translation type="unfinished"></translation>
+        <translation>Corneo-Halle</translation>
     </message>
     <message>
         <source>Arena Lobby</source>
@@ -3033,7 +3033,7 @@
     </message>
     <message>
         <source>Sector 8</source>
-        <translation type="unfinished">Sektor 8</translation>
+        <translation>Sektor 8</translation>
     </message>
     <message>
         <source>Last Train From Midgar</source>
@@ -3049,7 +3049,7 @@
     </message>
     <message>
         <source>Sector 7 Item Store</source>
-        <translation>7. Straβe, Objektladen</translation>
+        <translation>7. Straße, Objektladen</translation>
     </message>
     <message>
         <source>Sector 7 Weapon Shop</source>
@@ -3057,15 +3057,15 @@
     </message>
     <message>
         <source>Johnny&apos;s Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Johnnys Zuhause</translation>
     </message>
     <message>
         <source>Winding Tunnel</source>
-        <translation type="unfinished"></translation>
+        <translation>Gewundener Tunnel</translation>
     </message>
     <message>
         <source>4th Street Plate Int.</source>
-        <translation type="unfinished"></translation>
+        <translation>4. Straße, Platte Int.</translation>
     </message>
     <message>
         <source>No.5 Reactor</source>
@@ -3073,43 +3073,43 @@
     </message>
     <message>
         <source>church in the slums</source>
-        <translation type="unfinished">kirch in den Slums</translation>
+        <translation>Kirch in den Slums</translation>
     </message>
     <message>
         <source>Inside the Church</source>
-        <translation type="unfinished"></translation>
+        <translation>In der Kirche</translation>
     </message>
     <message>
         <source>Church Roof</source>
-        <translation type="unfinished"></translation>
+        <translation>Auf dem Kirchendach</translation>
     </message>
     <message>
         <source>Sector 5 Slum</source>
-        <translation type="unfinished">Sektor 5 Slums</translation>
+        <translation>Sektor 5, Slum</translation>
     </message>
     <message>
         <source>Earthen Pipe</source>
-        <translation type="unfinished"></translation>
+        <translation>Erdflöte</translation>
     </message>
     <message>
         <source>Materia store</source>
-        <translation type="unfinished"></translation>
+        <translation>Substanzladen</translation>
     </message>
     <message>
         <source>Item Store</source>
-        <translation type="unfinished"></translation>
+        <translation>Objektladen</translation>
     </message>
     <message>
         <source>House 1f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Haus, 1. Stock</translation>
     </message>
     <message>
         <source>House 2f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Haus, 2. Stock</translation>
     </message>
     <message>
         <source>Weapon Store</source>
-        <translation type="unfinished"></translation>
+        <translation>Waffenladen</translation>
     </message>
     <message>
         <source>Church</source>
@@ -3117,31 +3117,31 @@
     </message>
     <message>
         <source>Sector 6 park</source>
-        <translation type="unfinished"></translation>
+        <translation>Park Secktor 6</translation>
     </message>
     <message>
         <source>Inside Train </source>
-        <translation type="unfinished"></translation>
+        <translation>Im Zug</translation>
     </message>
     <message>
         <source>Lower Sector 4 Plate </source>
-        <translation type="unfinished"></translation>
+        <translation>Unterer Sektor 4, Platt</translation>
     </message>
     <message>
         <source>Inn</source>
-        <translation type="unfinished"></translation>
+        <translation>Gasthaus</translation>
     </message>
     <message>
         <source>Pharmacy</source>
-        <translation type="unfinished"></translation>
+        <translation>Apotheke</translation>
     </message>
     <message>
         <source>Diner</source>
-        <translation type="unfinished"></translation>
+        <translation>Lokal</translation>
     </message>
     <message>
         <source>Boutique</source>
-        <translation type="unfinished"></translation>
+        <translation>Boutique</translation>
     </message>
     <message>
         <source>Materia Store</source>
@@ -3149,11 +3149,11 @@
     </message>
     <message>
         <source>Men&apos;s Hall</source>
-        <translation type="unfinished"></translation>
+        <translation>Herren-Halle</translation>
     </message>
     <message>
         <source>Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Bar</translation>
     </message>
     <message>
         <source>Corneo Hall,1f.</source>
