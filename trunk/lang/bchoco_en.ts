@@ -2860,10 +2860,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Kalm Inn</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Aerith&apos;s House</source>
         <translation type="unfinished"></translation>
     </message>
@@ -2885,14 +2881,6 @@
     </message>
     <message>
         <source>Mt. Nibel</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shinra Bldg 69F.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Shinra Bldg 67F.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3217,6 +3205,70 @@
     </message>
     <message>
         <source>Shinra Bldg.66f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Elevator</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg.67f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg.68f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 69f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 70f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 1f. lobby</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 2f. Lobby</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Bldg. 3f. Lobby</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Slum Outskirts</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Midgar Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Kalm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>House: 1f</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>House: 2f</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rear Tower (Pagoda)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inn: 1f</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Inn: 2f</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
