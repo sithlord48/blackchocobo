@@ -2969,7 +2969,7 @@
     </message>
     <message>
         <source>Shinra Bldg.</source>
-        <translation>Shinra HQ.</translation>
+        <translation>Shinra-Gebäude</translation>
     </message>
     <message>
         <source>Wutai</source>
@@ -3113,7 +3113,7 @@
     </message>
     <message>
         <source>Church</source>
-        <translation type="unfinished">Kirch</translation>
+        <translation>Kirche</translation>
     </message>
     <message>
         <source>Sector 6 park</source>
@@ -3145,7 +3145,7 @@
     </message>
     <message>
         <source>Materia Store</source>
-        <translation type="unfinished"></translation>
+        <translation>Substanzladen</translation>
     </message>
     <message>
         <source>Men&apos;s Hall</source>
@@ -3157,135 +3157,135 @@
     </message>
     <message>
         <source>Corneo Hall,1f.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Corneo-Halle,1.Stock</translation>
     </message>
     <message>
         <source>Torture Room</source>
-        <translation type="unfinished"></translation>
+        <translation>Folterkammer</translation>
     </message>
     <message>
         <source>Corneo Hall,2f.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Corneo-Halle,2.Stock</translation>
     </message>
     <message>
         <source>Sewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Abwasserkanal</translation>
     </message>
     <message>
         <source>Plate Support</source>
-        <translation type="unfinished"></translation>
+        <translation>Plattenstützen</translation>
     </message>
     <message>
         <source>Plate Section</source>
-        <translation type="unfinished"></translation>
+        <translation>Plattenabschnitt</translation>
     </message>
     <message>
         <source>Sector 0</source>
-        <translation type="unfinished">Sektor 0</translation>
+        <translation>Sektor 0</translation>
     </message>
     <message>
         <source>Shinra Bldg. Stairs</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gebäude, Treppen</translation>
     </message>
     <message>
         <source>Shinra Bldg. 59f.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gbde, 59.Stock</translation>
     </message>
     <message>
         <source>Outside Elevator</source>
-        <translation type="unfinished"></translation>
+        <translation>Außenzufzug</translation>
     </message>
     <message>
         <source>Shinra Bldg. 60f.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gbde, 60.Stock</translation>
     </message>
     <message>
         <source>Shinra Bldg. 61f.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gbde, 61.Stock</translation>
     </message>
     <message>
         <source>Shinra Bldg. 62f.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gbde, 62.Stock</translation>
     </message>
     <message>
         <source>Shinra Bldg. 63f.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gbde, 63.Stock</translation>
     </message>
     <message>
         <source>Shinra Bldg. 64f.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gbde, 64.Stock</translation>
     </message>
     <message>
         <source>Shinra Bldg. 65f.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gbde, 65.Stock</translation>
     </message>
     <message>
         <source>Shinra Bldg.66f.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gbde,66.Stock</translation>
     </message>
     <message>
         <source>Elevator</source>
-        <translation type="unfinished"></translation>
+        <translation>Aufzug</translation>
     </message>
     <message>
         <source>Shinra Bldg.67f.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gbde, 67.Stock</translation>
     </message>
     <message>
         <source>Shinra Bldg.68f.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gbde, 68.Stock</translation>
     </message>
     <message>
         <source>Shinra Bldg. 69f.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gbde, 69.Stock</translation>
     </message>
     <message>
         <source>Shinra Bldg. 70f.</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gbde, 70.Stock</translation>
     </message>
     <message>
         <source>Shinra Bldg. 1f. lobby</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gbde,1.St.,Lobby</translation>
     </message>
     <message>
         <source>Shinra Bldg. 2f. Lobby</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gbde,2.St.,Lobby</translation>
     </message>
     <message>
         <source>Shinra Bldg. 3f. Lobby</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Shinra-Gbde,3.St.,Lobby</translation>
     </message>
     <message>
         <source>Slum Outskirts</source>
-        <translation type="unfinished"></translation>
+        <translation>Slums</translation>
     </message>
     <message>
         <source>Midgar Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Midgar-Region</translation>
     </message>
     <message>
         <source>Kalm</source>
-        <translation type="unfinished"></translation>
+        <translation>Kalm</translation>
     </message>
     <message>
         <source>House: 1f</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Haus: 1. Stock</translation>
     </message>
     <message>
         <source>House: 2f</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Haus: 2. Stock</translation>
     </message>
     <message>
         <source>Rear Tower (Pagoda)</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Hinterer Turm (Pagode)</translation>
     </message>
     <message>
         <source>Inn: 1f</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gasthaus: 1. Stock</translation>
     </message>
     <message>
         <source>Inn: 2f</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Gasthaus: 1. Stock</translation>
     </message>
 </context>
 <context>
