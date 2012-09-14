@@ -2993,299 +2993,373 @@
     </message>
     <message>
         <source>7th Heaven</source>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
         <translation>セブンスヘブン</translation>
     </message>
     <message>
         <source>AVALANCHE Hideout</source>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
         <translation>アバランチアジト</translation>
     </message>
     <message>
         <source>Mideel,Clinic</source>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
         <translation>ミディール　治療所</translation>
     </message>
     <message>
         <source>Sector 6</source>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
         <translation>6番街</translation>
     </message>
     <message>
         <source>Honey Bee Inn</source>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
         <translation>蜜蜂の館</translation>
     </message>
     <message>
         <source>Corneo Hall</source>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
         <translation>コルネオの館</translation>
     </message>
     <message>
         <source>Arena Lobby</source>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
         <translation>闘技場ロビー</translation>
     </message>
     <message>
         <source>Sector 1 Station</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>１番街駅</translation>
     </message>
     <message>
         <source>Sector 1</source>
-        <translation type="unfinished">５番街 {1?}</translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>１番街</translation>
     </message>
     <message>
         <source>No.1 Reactor</source>
-        <translation type="unfinished">１番魔晄炉</translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>１番魔晄炉</translation>
     </message>
     <message>
         <source>Sector 8</source>
-        <translation type="unfinished">５番街 {8?}</translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>８番街</translation>
     </message>
     <message>
         <source>Last Train From Midgar</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>ミッドガル発最終列車</translation>
     </message>
     <message>
         <source>Sector 7 Station</source>
-        <translation type="unfinished">７番街スラム駅</translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>７番街スラム駅</translation>
     </message>
     <message>
         <source>Sector 7 Slums</source>
-        <translation type="unfinished">７番街スラム</translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>７番街スラム</translation>
     </message>
     <message>
         <source>Sector 7 Item Store</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>７番街・道具屋</translation>
     </message>
     <message>
         <source>Sector 7 Weapon Shop</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>７番街・武器屋１階</translation>
     </message>
     <message>
         <source>Johnny&apos;s Home</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>ジョニーの家</translation>
     </message>
     <message>
         <source>Winding Tunnel</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>螺旋トンネル</translation>
     </message>
     <message>
         <source>4th Street Plate Int.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>４番街プレート内部</translation>
     </message>
     <message>
         <source>No.5 Reactor</source>
-        <translation type="unfinished">５番魔晄炉</translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>５番魔晄炉</translation>
     </message>
     <message>
         <source>church in the slums</source>
-        <translation type="unfinished">スラムの教会</translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>スラムの教会</translation>
     </message>
     <message>
         <source>Inside the Church</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>教会奥</translation>
     </message>
     <message>
         <source>Church Roof</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>教会屋根裏</translation>
     </message>
     <message>
         <source>Sector 5 Slum</source>
-        <translation type="unfinished">５番街スラム</translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>５番街スラム</translation>
     </message>
     <message>
         <source>Earthen Pipe</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>ドカン</translation>
     </message>
     <message>
         <source>Materia store</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>マテリア屋</translation>
     </message>
     <message>
         <source>Item Store</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>アイテム屋</translation>
     </message>
     <message>
         <source>House 1f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>民家１階</translation>
     </message>
     <message>
         <source>House 2f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>民家２階</translation>
     </message>
     <message>
         <source>Weapon Store</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>武器屋</translation>
     </message>
     <message>
         <source>Church</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>教会</translation>
     </message>
     <message>
         <source>Sector 6 park</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>６番街公園</translation>
     </message>
     <message>
         <source>Inside Train </source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>客車内</translation>
     </message>
     <message>
         <source>Lower Sector 4 Plate </source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>４番街プレート下部</translation>
     </message>
     <message>
         <source>Inn</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>宿屋</translation>
     </message>
     <message>
         <source>Pharmacy</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>薬屋</translation>
     </message>
     <message>
         <source>Diner</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>定食屋</translation>
     </message>
     <message>
         <source>Boutique</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>ブティック</translation>
     </message>
     <message>
         <source>Materia Store</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>マテリアショップ</translation>
     </message>
     <message>
         <source>Men&apos;s Hall</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>男の館</translation>
     </message>
     <message>
         <source>Bar</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>酒場</translation>
     </message>
     <message>
         <source>Corneo Hall,1f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>コルネオの館１階</translation>
     </message>
     <message>
         <source>Torture Room</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>おしおき部屋</translation>
     </message>
     <message>
         <source>Corneo Hall,2f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>コルネオの館２階</translation>
     </message>
     <message>
         <source>Sewer</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>地下下水道</translation>
     </message>
     <message>
         <source>Plate Support</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>プレート支柱</translation>
     </message>
     <message>
         <source>Plate Section</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>プレート断面</translation>
     </message>
     <message>
         <source>Sector 0</source>
-        <translation type="unfinished">５番街 {0?}</translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>５番街バせゲだそ</translation>
     </message>
     <message>
         <source>Shinra Bldg. Stairs</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・階段</translation>
     </message>
     <message>
         <source>Shinra Bldg. 59f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・５９階</translation>
     </message>
     <message>
         <source>Outside Elevator</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>外観エレベーター</translation>
     </message>
     <message>
         <source>Shinra Bldg. 60f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・６０階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 61f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・６１階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 62f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・６２階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 63f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・６３階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 64f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・６４階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 65f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・６５階</translation>
     </message>
     <message>
         <source>Shinra Bldg.66f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・６６階</translation>
     </message>
     <message>
         <source>Elevator</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>エレベーター</translation>
     </message>
     <message>
         <source>Shinra Bldg.67f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・６７階</translation>
     </message>
     <message>
         <source>Shinra Bldg.68f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・６８階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 69f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・６９階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 70f.</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・７０階</translation>
     </message>
     <message>
         <source>Shinra Bldg. 1f. lobby</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・１階ロビー</translation>
     </message>
     <message>
         <source>Shinra Bldg. 2f. Lobby</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・２階ロビー</translation>
     </message>
     <message>
         <source>Shinra Bldg. 3f. Lobby</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>神羅ビル・３階ロビー</translation>
     </message>
     <message>
         <source>Slum Outskirts</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>スラム外辺</translation>
     </message>
     <message>
         <source>Midgar Area</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>ミッドガルエリア</translation>
     </message>
     <message>
         <source>Kalm</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>カーム</translation>
     </message>
     <message>
         <source>House: 1f</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>民家１階</translation>
     </message>
     <message>
         <source>House: 2f</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>民家２階</translation>
     </message>
     <message>
         <source>Rear Tower (Pagoda)</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>裏の塔</translation>
     </message>
     <message>
         <source>Inn: 1f</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>宿屋１階</translation>
     </message>
     <message>
         <source>Inn: 2f</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
+        <translation>宿屋２階</translation>
     </message>
 </context>
 <context>
