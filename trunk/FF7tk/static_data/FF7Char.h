@@ -36,7 +36,7 @@ public:
         EmptyAccessory=0xFF
     };
     explicit FF7Char();
-    int stat_gain(int who,int stat,int stat_amout,int next_lvl);
+    int stat_gain(int who,int stat,int stat_amout,int current_lvl, int next_lvl);
     quint8 id(int who);
     int num_weapons(int who);
     int weapon_starting_id(int who);

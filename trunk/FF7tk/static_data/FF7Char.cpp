@@ -54,37 +54,39 @@ QStringList FF7Char::limits(int who)
     return translated_list;
 }
 
-int FF7Char::stat_gain(int who,int stat, int stat_amount, int next_lvl)
+int FF7Char::stat_gain(int who,int stat, int stat_amount, int current_lvl, int next_lvl)
 {
   int gain=0;//return this
   int diff=0; //holds our dif
   int lvl_bracket=0; //track what bracket in the gradent/base were looking at.
-  //0 str; 1 vit;2 mag; 3;spi ;4:dex; ; 5=luck; 6 hp;7mp
+  //0:str; 1:vit; 2:mag; 3:spi; 4:dex; 5:luck; 6:hp; 7:mp
   int grade=0;// whats our grade in the stat only used for str/vit/mag/spi/dex
   int baseline_stat=0; // holds our baseline_stat calculation.
   //first find out the level bracket
-  if(stat_amount ==0){stat_amount = 1;}
-  if(next_lvl>=2 && next_lvl<11){lvl_bracket=0;}
-  else if(next_lvl>=12 && next_lvl<21){lvl_bracket=1;}
-  else if(next_lvl>=22 && next_lvl<31){lvl_bracket=2;}
-  else if(next_lvl>=32 && next_lvl<41){lvl_bracket=3;}
-  else if(next_lvl>=42 && next_lvl<51){lvl_bracket=4;}
-  else if(next_lvl>=52 && next_lvl<61){lvl_bracket=5;}
-  else if(next_lvl>=62 && next_lvl<81){lvl_bracket=6;}
-  else if(next_lvl>=82 && next_lvl<99){lvl_bracket=7;}
+  if(stat_amount==0){stat_amount = 1;}
+  if(next_lvl>=2 && next_lvl<=11){lvl_bracket=0;}
+  else if(next_lvl>=12 && next_lvl<=21){lvl_bracket=1;}
+  else if(next_lvl>=22 && next_lvl<=31){lvl_bracket=2;}
+  else if(next_lvl>=32 && next_lvl<=41){lvl_bracket=3;}
+  else if(next_lvl>=42 && next_lvl<=51){lvl_bracket=4;}
+  else if(next_lvl>=52 && next_lvl<=61){lvl_bracket=5;}
+  else if(next_lvl>=62 && next_lvl<=81){lvl_bracket=6;}
+  else if(next_lvl>=82 && next_lvl<=99){lvl_bracket=7;}
   //calculate the baseline to use.
-  if(stat <5)
+  if(stat<5)
   {//calculating str,vit,mag,spi or dex
-    grade =stat_grade(who,stat);
-    baseline_stat= stat_base(grade,lvl_bracket)+((stat_gradent(grade,lvl_bracket)*next_lvl)/100);
+    grade = stat_grade(who,stat);
+    baseline_stat = stat_base(grade,lvl_bracket)+((stat_gradent(grade,lvl_bracket)*next_lvl)/100);
   }
   else if(stat==5){baseline_stat = luck_base(who,lvl_bracket)+((luck_gradent(who,lvl_bracket))/100);}//
   else if(stat==6){baseline_stat = hp_base(who,lvl_bracket) + (next_lvl -1) * hp_gradent(who,lvl_bracket);}
   else if(stat==7){baseline_stat = mp_base(who,lvl_bracket) + ((next_lvl -1) * mp_gradent(who,lvl_bracket)/10);}
   //now calc the diff, so we can send back a gain based on type
-  if(stat <6)
+  if(stat<6)
   {//str, vit,mag, spr,dex or luck all calculated the same
-    diff = ((qrand() %8)+1) + (baseline_stat - stat_amount);
+    //Vegeta_Ss4 lv down mod
+    if(current_lvl < next_lvl) {diff = ((qrand() %8)+1) + (baseline_stat - stat_amount);}//is lv up
+    else {diff = ((qrand() %8)+1) - baseline_stat + stat_amount;}//lv down
     if(diff<4){gain=0;}
     else if(diff<7){gain=1;}
     else if(diff<10){gain=2;}
@@ -92,8 +94,10 @@ int FF7Char::stat_gain(int who,int stat, int stat_amount, int next_lvl)
   }
   else if(stat==6)
   {// Base HP Gain
-      diff= ((qrand()%8)+1) + (100* baseline_stat/stat_amount)-100;
-      if(diff ==0){gain = hp_gradent(who,lvl_bracket)*0.40;}
+      //Vegeta_Ss4 lv down mod
+      if(current_lvl < next_lvl){diff = ((qrand()%8)+1) + (100* baseline_stat/stat_amount)-100;}//is lv up
+      else {diff = ((qrand()%8)+1) + (100* stat_amount/baseline_stat)-100;}//lv down
+      if(diff==0){gain = hp_gradent(who,lvl_bracket)*0.40;}
       else if (diff==1){gain = hp_gradent(who,lvl_bracket)*.50;}
       else if (diff==2){gain = hp_gradent(who,lvl_bracket)*.50;}
       else if (diff==3){gain = hp_gradent(who,lvl_bracket)*.60;}
@@ -108,7 +112,10 @@ int FF7Char::stat_gain(int who,int stat, int stat_amount, int next_lvl)
   }
   else if(stat==7)
   {// Base MP Gain
-      diff= ((qrand()%8)+1) + (100* baseline_stat/stat_amount)-100;
+      //Vegeta_Ss4 lv down mod
+      if(current_lvl < next_lvl) {diff = ((qrand()%8)+1) + (100* baseline_stat/stat_amount)-100;}//is lv up
+      else {diff = ((qrand()%8)+1) + (100* stat_amount/baseline_stat)-100;}//lv down
+
       if(diff ==0){gain = ((next_lvl*mp_gradent(who,lvl_bracket)/10)-((next_lvl-1)*mp_gradent(who,lvl_bracket)/10))*0.20;}
       else if (diff==1){gain = ((next_lvl*mp_gradent(who,lvl_bracket)/10)-((next_lvl-1)*mp_gradent(who,lvl_bracket)/10))*.30;}
       else if (diff==2){gain = ((next_lvl*mp_gradent(who,lvl_bracket)/10)-((next_lvl-1)*mp_gradent(who,lvl_bracket)/10))*.30;}
