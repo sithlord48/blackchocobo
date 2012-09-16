@@ -2195,28 +2195,28 @@ void CharEditor::level_up(int pre_level)
     {//level up
         for(int i=pre_level;i<data.level;i++)
         {// for stat_gain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp also use id incase of mods that could move a char.
-            sb_str->setValue(data.strength + Chars.stat_gain(data.id,0,data.strength,i+1));
-            sb_vit->setValue(data.vitality + Chars.stat_gain(data.id,1,data.vitality,i+1));
-            sb_mag->setValue(data.magic + Chars.stat_gain(data.id,2,data.magic,i+1));
-            sb_spi->setValue(data.spirit + Chars.stat_gain(data.id,3,data.spirit,i+1));
-            sb_dex->setValue(data.dexterity + Chars.stat_gain(data.id,4,data.dexterity,i+1));
-            sb_lck->setValue(data.luck + Chars.stat_gain(data.id,5,data.luck,i+1));
-            sb_base_hp->setValue(data.baseHP + Chars.stat_gain(data.id,6,data.baseHP,i+1));
-            sb_base_mp->setValue(data.baseMP + Chars.stat_gain(data.id,7,data.baseMP,i+1));
+            sb_str->setValue(data.strength + Chars.stat_gain(data.id,0,data.strength,i,i+1));
+            sb_vit->setValue(data.vitality + Chars.stat_gain(data.id,1,data.vitality,i,i+1));
+            sb_mag->setValue(data.magic + Chars.stat_gain(data.id,2,data.magic,i,i+1));
+            sb_spi->setValue(data.spirit + Chars.stat_gain(data.id,3,data.spirit,i,i+1));
+            sb_dex->setValue(data.dexterity + Chars.stat_gain(data.id,4,data.dexterity,i,i+1));
+            sb_lck->setValue(data.luck + Chars.stat_gain(data.id,5,data.luck,i,i+1));
+            sb_base_hp->setValue(data.baseHP + Chars.stat_gain(data.id,6,data.baseHP,i,i+1));
+            sb_base_mp->setValue(data.baseMP + Chars.stat_gain(data.id,7,data.baseMP,i,i+1));
          }
     }
     else if(pre_level > data.level)
     {//level down
         for(int i=pre_level;i>data.level;i--)
         {// for stat_gain stat guide, 0=str; 1=vit;2=mag;3=spr;4=dex;5=lck;6=basehp;7basemp
-            sb_str->setValue(data.strength - Chars.stat_gain(data.id,0,data.strength,i));
-            sb_vit->setValue(data.vitality - Chars.stat_gain(data.id,1,data.vitality,i));
-            sb_mag->setValue(data.magic - Chars.stat_gain(data.id,2,data.magic,i));
-            sb_spi->setValue(data.spirit - Chars.stat_gain(data.id,3,data.spirit,i));
-            sb_dex->setValue(data.dexterity - Chars.stat_gain(data.id,4,data.dexterity,i));
-            sb_lck->setValue(data.luck - Chars.stat_gain(data.id,5,data.luck,i));
-            sb_base_hp->setValue(data.baseHP - Chars.stat_gain(data.id,6,data.baseHP,i));
-            sb_base_mp->setValue(data.baseMP - Chars.stat_gain(data.id,7,data.baseMP,i));
+            sb_str->setValue(data.strength - Chars.stat_gain(data.id,0,data.strength,i,i-1));
+            sb_vit->setValue(data.vitality - Chars.stat_gain(data.id,1,data.vitality,i,i-1));
+            sb_mag->setValue(data.magic - Chars.stat_gain(data.id,2,data.magic,i,i-1));
+            sb_spi->setValue(data.spirit - Chars.stat_gain(data.id,3,data.spirit,i,i-1));
+            sb_dex->setValue(data.dexterity - Chars.stat_gain(data.id,4,data.dexterity,i,i-1));
+            sb_lck->setValue(data.luck - Chars.stat_gain(data.id,5,data.luck,i,i-1));
+            sb_base_hp->setValue(data.baseHP - Chars.stat_gain(data.id,6,data.baseHP,i,i-1));
+            sb_base_mp->setValue(data.baseMP - Chars.stat_gain(data.id,7,data.baseMP,i,i-1));
         }
     } //little broken when going down..
     calc_stats();
