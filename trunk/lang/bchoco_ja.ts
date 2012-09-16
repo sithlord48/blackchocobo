@@ -2860,10 +2860,6 @@
         <translation>ジュノン支社２階</translation>
     </message>
     <message>
-        <source>Kalm Inn</source>
-        <translation type="obsolete">カーム・宿屋２階</translation>
-    </message>
-    <message>
         <source>Aerith&apos;s House</source>
         <translation>エアリスの家</translation>
     </message>
@@ -2886,14 +2882,6 @@
     <message>
         <source>Mt. Nibel</source>
         <translation>ニブル山</translation>
-    </message>
-    <message>
-        <source>Shinra Bldg 69F.</source>
-        <translation type="obsolete">神羅ビル・６９階</translation>
-    </message>
-    <message>
-        <source>Shinra Bldg 67F.</source>
-        <translation type="obsolete">神羅ビル・６７階</translation>
     </message>
     <message>
         <source>Gaeas Cliff</source>
@@ -2922,10 +2910,6 @@
     <message>
         <source>Cosmo Canyon</source>
         <translation>コスモキャニオン</translation>
-    </message>
-    <message>
-        <source>Boat</source>
-        <translation>運搬船</translation>
     </message>
     <message>
         <source>Lower Sector 4 Plate</source>
@@ -2986,10 +2970,6 @@
     <message>
         <source>Highwind</source>
         <translation>ハイウインド</translation>
-    </message>
-    <message>
-        <source>Shinra Bldg 64F.</source>
-        <translation type="obsolete">神羅ビル・６４階</translation>
     </message>
     <message>
         <source>7th Heaven</source>
@@ -3360,6 +3340,174 @@
         <source>Inn: 2f</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
         <translation>宿屋２階</translation>
+    </message>
+    <message>
+        <source>Nibelheim House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Tifa&apos;s House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cloud&apos;s House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nibelheim Item Store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nibelheim Inn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mt. Nibel Cave</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nibel Reactor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nibel Reactor(Int.)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mansion, 1f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mansion, 2f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mansion, Hidden Steps</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mansion, Basement</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Nibelheim</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chocobo farm</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Marshes</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mythril Mine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Base of Fort Condor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Entrance to Fort Condor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Watch Room</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Plains</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Under Junon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Priscilla&apos;s House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dolphin Offing</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Airport</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Locker Room</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Upper Junon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Barracks</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Junon Path</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Lower Junon</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shinra Member&apos;s Bar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Junon Dock</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cargo Ship</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Costa del Sol Harbor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Costa del Sol</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>House for Sale</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cellar</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Costa del Sol Inn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cloud&apos;s Past</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cloud&apos;s Villa</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Grasslands Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Junon Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corel Area</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
