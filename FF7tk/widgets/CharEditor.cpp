@@ -2596,6 +2596,7 @@ void CharEditor::MaxStats()
     if(data.id ==FF7Char::YoungCloud || data.id == FF7Char::Sephiroth){return;}
     else
     {
+        sb_level->setValue(99);
         sb_base_hp->setValue(32767);
         sb_base_mp->setValue(32767);
         sb_str->setValue(255);

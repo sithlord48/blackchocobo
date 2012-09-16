@@ -2860,10 +2860,6 @@
         <translation>Junon Office E2</translation>
     </message>
     <message>
-        <source>Kalm Inn</source>
-        <translation type="obsolete">Kalm Inn</translation>
-    </message>
-    <message>
         <source>Aerith&apos;s House</source>
         <translation>Aeriths&apos; Haus</translation>
     </message>
@@ -2886,14 +2882,6 @@
     <message>
         <source>Mt. Nibel</source>
         <translation>Berg Nibel</translation>
-    </message>
-    <message>
-        <source>Shinra Bldg 69F.</source>
-        <translation type="obsolete">Shinra HQ 69. Stockwerk.</translation>
-    </message>
-    <message>
-        <source>Shinra Bldg 67F.</source>
-        <translation type="obsolete">Shinra HQ 67. Stockwerk.</translation>
     </message>
     <message>
         <source>Gaeas Cliff</source>
@@ -2922,10 +2910,6 @@
     <message>
         <source>Cosmo Canyon</source>
         <translation>Cosmo Canyon</translation>
-    </message>
-    <message>
-        <source>Boat</source>
-        <translation>Boot</translation>
     </message>
     <message>
         <source>Lower Sector 4 Plate</source>
@@ -2988,10 +2972,6 @@
         <translation>Highwind</translation>
     </message>
     <message>
-        <source>Shinra Bldg 64F.</source>
-        <translation type="obsolete">Shinra HQ 64. Stockwerk.</translation>
-    </message>
-    <message>
         <source>7th Heaven</source>
         <translation>7. Himmel</translation>
     </message>
@@ -3017,7 +2997,7 @@
     </message>
     <message>
         <source>Arena Lobby</source>
-        <translation type="unfinished"></translation>
+        <translation>Lobby der Arena</translation>
     </message>
     <message>
         <source>Sector 1 Station</source>
@@ -3185,7 +3165,7 @@
     </message>
     <message>
         <source>Shinra Bldg. Stairs</source>
-        <translation>Shinra-Gebãude, Treppen</translation>
+        <translation>Shinra-Gebäude, Treppen</translation>
     </message>
     <message>
         <source>Shinra Bldg. 59f.</source>
@@ -3193,7 +3173,7 @@
     </message>
     <message>
         <source>Outside Elevator</source>
-        <translation>Außenzufzug</translation>
+        <translation>Außenaufzug</translation>
     </message>
     <message>
         <source>Shinra Bldg. 60f.</source>
@@ -3221,7 +3201,7 @@
     </message>
     <message>
         <source>Shinra Bldg.66f.</source>
-        <translation>Shinra-Gebãude, 66. St.</translation>
+        <translation>Shinra-Gebäude, 66. St.</translation>
     </message>
     <message>
         <source>Elevator</source>
@@ -3229,19 +3209,19 @@
     </message>
     <message>
         <source>Shinra Bldg.67f.</source>
-        <translation>Shinra-Gebãude, 67. St.</translation>
+        <translation>Shinra-Gebäude, 67. St.</translation>
     </message>
     <message>
         <source>Shinra Bldg.68f.</source>
-        <translation>Shinra-Gebãude, 68. St.</translation>
+        <translation>Shinra-Gebäude, 68. St.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 69f.</source>
-        <translation>Shinra-Gebãude, 69. St.</translation>
+        <translation>Shinra-Gebäude, 69. St.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 70f.</source>
-        <translation>Shinra-Gebãude, 70. St.</translation>
+        <translation>Shinra-Gebäude, 70. St.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 1f. lobby</source>
@@ -3286,6 +3266,174 @@
     <message>
         <source>Inn: 2f</source>
         <translation>Gasthaus: 2. Stock</translation>
+    </message>
+    <message>
+        <source>Nibelheim House</source>
+        <translation>11</translation>
+    </message>
+    <message>
+        <source>Tifa&apos;s House</source>
+        <translation>Nibelheim</translation>
+    </message>
+    <message>
+        <source>Cloud&apos;s House</source>
+        <translation>Nibelheim</translation>
+    </message>
+    <message>
+        <source>Nibelheim Item Store</source>
+        <translation>Nibelheim</translation>
+    </message>
+    <message>
+        <source>Nibelheim Inn</source>
+        <translation>Nibelheim</translation>
+    </message>
+    <message>
+        <source>Mt. Nibel Cave</source>
+        <translation>Höhle von Berg Nibel</translation>
+    </message>
+    <message>
+        <source>Nibel Reactor</source>
+        <translation>Reaktor von Nibel</translation>
+    </message>
+    <message>
+        <source>Nibel Reactor(Int.)</source>
+        <translation>Reaktor von Nibel(Int.)</translation>
+    </message>
+    <message>
+        <source>Mansion, 1f.</source>
+        <translation>Villa, 1. Stock</translation>
+    </message>
+    <message>
+        <source>Mansion, 2f.</source>
+        <translation>Villa, 2. Stock</translation>
+    </message>
+    <message>
+        <source>Mansion, Hidden Steps</source>
+        <translation>Villa, Verborg. Treppe</translation>
+    </message>
+    <message>
+        <source>Mansion, Basement</source>
+        <translation>Villa, Untergescho</translation>
+    </message>
+    <message>
+        <source>Nibelheim</source>
+        <translation>Nibelheim</translation>
+    </message>
+    <message>
+        <source>Chocobo farm</source>
+        <translation>Chocobo-Farm</translation>
+    </message>
+    <message>
+        <source>Marshes</source>
+        <translation>Sümpfe</translation>
+    </message>
+    <message>
+        <source>Mythril Mine</source>
+        <translation>Mythril-Mine</translation>
+    </message>
+    <message>
+        <source>Base of Fort Condor</source>
+        <translation>Eingang zu Fort Condor</translation>
+    </message>
+    <message>
+        <source>Entrance to Fort Condor</source>
+        <translation>Eingang zu Condolford</translation>
+    </message>
+    <message>
+        <source>Watch Room</source>
+        <translation>Wachraum</translation>
+    </message>
+    <message>
+        <source>Plains</source>
+        <translation>Prärie</translation>
+    </message>
+    <message>
+        <source>Under Junon</source>
+        <translation>Unter Junon</translation>
+    </message>
+    <message>
+        <source>Priscilla&apos;s House</source>
+        <translation>Priscillas Haus</translation>
+    </message>
+    <message>
+        <source>Dolphin Offing</source>
+        <translation>Delphingewässer</translation>
+    </message>
+    <message>
+        <source>Airport</source>
+        <translation>Flughafen</translation>
+    </message>
+    <message>
+        <source>Locker Room</source>
+        <translation>Umkleideraum</translation>
+    </message>
+    <message>
+        <source>Upper Junon</source>
+        <translation>Ober-Junon</translation>
+    </message>
+    <message>
+        <source>Barracks</source>
+        <translation>Kaserne</translation>
+    </message>
+    <message>
+        <source>Junon Path</source>
+        <translation>Weg nach Junon</translation>
+    </message>
+    <message>
+        <source>Lower Junon</source>
+        <translation>Unter-Junon</translation>
+    </message>
+    <message>
+        <source>Shinra Member&apos;s Bar</source>
+        <translation>Shinra-Mitgliederbar</translation>
+    </message>
+    <message>
+        <source>Junon Dock</source>
+        <translation>Dock von Junon</translation>
+    </message>
+    <message>
+        <source>Cargo Ship</source>
+        <translation>Frachtschiff</translation>
+    </message>
+    <message>
+        <source>Costa del Sol Harbor</source>
+        <translation>Hafen von Costa del Sol</translation>
+    </message>
+    <message>
+        <source>Costa del Sol</source>
+        <translation>Costa del Sol</translation>
+    </message>
+    <message>
+        <source>House for Sale</source>
+        <translation>Haus zu verkaufen</translation>
+    </message>
+    <message>
+        <source>Cellar</source>
+        <translation>Keller</translation>
+    </message>
+    <message>
+        <source>Costa del Sol Inn</source>
+        <translation>Gasthaus von Costa del </translation>
+    </message>
+    <message>
+        <source>Cloud&apos;s Past</source>
+        <translation>Clouds Vergangenheit</translation>
+    </message>
+    <message>
+        <source>Cloud&apos;s Villa</source>
+        <translation>Clouds Villa</translation>
+    </message>
+    <message>
+        <source>Grasslands Area</source>
+        <translation>Grasland-Region</translation>
+    </message>
+    <message>
+        <source>Junon Area</source>
+        <translation>Junon-Region</translation>
+    </message>
+    <message>
+        <source>Corel Area</source>
+        <translation>Corel-Region</translation>
     </message>
 </context>
 <context>
