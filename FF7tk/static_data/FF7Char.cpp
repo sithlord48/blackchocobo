@@ -96,7 +96,7 @@ int FF7Char::stat_gain(int who,int stat, int stat_amount, int current_lvl, int n
   {// Base HP Gain
       //Vegeta_Ss4 lv down mod
       if(current_lvl < next_lvl){diff = ((qrand()%8)+1) + (100* baseline_stat/stat_amount)-100;}//is lv up
-      else {diff = ((qrand()%8)+1) + (100* stat_amount/baseline_stat)-100;}//lv down
+      else if (baseline_stat != 0){diff = ((qrand()%8)+1) + (100* stat_amount/baseline_stat)-100;}//lv down
       if(diff==0){gain = hp_gradent(who,lvl_bracket)*0.40;}
       else if (diff==1){gain = hp_gradent(who,lvl_bracket)*.50;}
       else if (diff==2){gain = hp_gradent(who,lvl_bracket)*.50;}
@@ -114,8 +114,7 @@ int FF7Char::stat_gain(int who,int stat, int stat_amount, int current_lvl, int n
   {// Base MP Gain
       //Vegeta_Ss4 lv down mod
       if(current_lvl < next_lvl) {diff = ((qrand()%8)+1) + (100* baseline_stat/stat_amount)-100;}//is lv up
-      else {diff = ((qrand()%8)+1) + (100* stat_amount/baseline_stat)-100;}//lv down
-
+      else if (baseline_stat != 0){diff = ((qrand()%8)+1) + (100* stat_amount/baseline_stat)-100;}//lv down
       if(diff ==0){gain = ((next_lvl*mp_gradent(who,lvl_bracket)/10)-((next_lvl-1)*mp_gradent(who,lvl_bracket)/10))*0.20;}
       else if (diff==1){gain = ((next_lvl*mp_gradent(who,lvl_bracket)/10)-((next_lvl-1)*mp_gradent(who,lvl_bracket)/10))*.30;}
       else if (diff==2){gain = ((next_lvl*mp_gradent(who,lvl_bracket)/10)-((next_lvl-1)*mp_gradent(who,lvl_bracket)/10))*.30;}
