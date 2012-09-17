@@ -2893,7 +2893,7 @@
     </message>
     <message>
         <source>Corel Prison</source>
-        <translation>Gefängnis Corel</translation>
+        <translation>Gefängnis Von Corel</translation>
     </message>
     <message>
         <source>Fort Condor</source>
@@ -3434,6 +3434,130 @@
     <message>
         <source>Corel Area</source>
         <translation>Corel-Region</translation>
+    </message>
+    <message>
+        <source>Corel Reactor</source>
+        <translation>Reaktor von Corel</translation>
+    </message>
+    <message>
+        <source>North Corel</source>
+        <translation>Nord-Corel</translation>
+    </message>
+    <message>
+        <source>North Corel Inn</source>
+        <translation>Gasthaus von Nord-Corel</translation>
+    </message>
+    <message>
+        <source>Terminal Floor</source>
+        <translation>Terminalstockwerk</translation>
+    </message>
+    <message>
+        <source>Chocobo Square</source>
+        <translation>Chocobo-Feld</translation>
+    </message>
+    <message>
+        <source>Ticket Office</source>
+        <translation>Kartenschalter</translation>
+    </message>
+    <message>
+        <source>Wonder Square</source>
+        <translation>Wonder Square</translation>
+    </message>
+    <message>
+        <source>Building 1f.</source>
+        <translation>Gebäude, 1. Stock</translation>
+    </message>
+    <message>
+        <source>Building 2f.</source>
+        <translation>Gebäude, 2. Stock</translation>
+    </message>
+    <message>
+        <source>Event square</source>
+        <translation>Event Square</translation>
+    </message>
+    <message>
+        <source>Speed square</source>
+        <translation>Speed Square</translation>
+    </message>
+    <message>
+        <source>Ghost Hotel</source>
+        <translation>Geisterhotel</translation>
+    </message>
+    <message>
+        <source>Hotel Lobby</source>
+        <translation>Hotellobby</translation>
+    </message>
+    <message>
+        <source>Hotel Shop</source>
+        <translation>Hotelshop</translation>
+    </message>
+    <message>
+        <source>Round Square</source>
+        <translation>Rounds Square</translation>
+    </message>
+    <message>
+        <source>Basement</source>
+        <translation>Keller</translation>
+    </message>
+    <message>
+        <source>Container</source>
+        <translation>Container</translation>
+    </message>
+    <message>
+        <source>Mayor&apos;s Old House</source>
+        <translation>Altes Haus des Bürgerme</translation>
+    </message>
+    <message>
+        <source>Prison Pub</source>
+        <translation>Gefängniskneipe</translation>
+    </message>
+    <message>
+        <source>Corel Desert</source>
+        <translation>Wüste von Corel</translation>
+    </message>
+    <message>
+        <source>Jungle</source>
+        <translation>Dschungel</translation>
+    </message>
+    <message>
+        <source>Meltdown Reactor</source>
+        <translation>Schmelzreaktor</translation>
+    </message>
+    <message>
+        <source>Gongaga Village</source>
+        <translation>Gongaga Village</translation>
+    </message>
+    <message>
+        <source>Weapons Store</source>
+        <translation>Waffenladen</translation>
+    </message>
+    <message>
+        <source>Zach&apos;s Home</source>
+        <translation>Zacks Zuhause</translation>
+    </message>
+    <message>
+        <source>Mayor&apos;s Home</source>
+        <translation>Haus des Bürgermeisters</translation>
+    </message>
+    <message>
+        <source>Gold Saucer Area</source>
+        <translation>Gold Saucer-Region</translation>
+    </message>
+    <message>
+        <source>Gongaga Area</source>
+        <translation>Gongaga-Region</translation>
+    </message>
+    <message>
+        <source>Cosmo Area</source>
+        <translation>Cosmo-Region</translation>
+    </message>
+    <message>
+        <source>Battle Square</source>
+        <translation>Battle Square</translation>
+    </message>
+    <message>
+        <source>Dio&apos;s Museum</source>
+        <translation>Dios-Museum</translation>
     </message>
 </context>
 <context>
