@@ -2997,10 +2997,6 @@
         <translation>Hall de Corneo</translation>
     </message>
     <message>
-        <source>Arena Lobby</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Sector 1 Station</source>
         <translation type="unfinished">Estación de tren del Sector 1</translation>
     </message>
@@ -3434,6 +3430,134 @@
     </message>
     <message>
         <source>Corel Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corel Reactor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>North Corel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>North Corel Inn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Terminal Floor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Chocobo Square</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ticket Office</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Wonder Square</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Building 1f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Building 2f.</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Event square</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Speed square</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ghost Hotel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hotel Lobby</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hotel Shop</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Round Square</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Basement</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Container</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mayor&apos;s Old House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Prison Pub</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Corel Desert</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Jungle</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Meltdown Reactor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gongaga Village</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Weapons Store</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Zach&apos;s Home</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Mayor&apos;s Home</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gold Saucer Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Gongaga Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Cosmo Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Battle Square</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Arena Lobby</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Dio&apos;s Museum</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
