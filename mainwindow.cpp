@@ -3508,9 +3508,9 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
             case 39: value = ff7->slot[s].z_39[i]; break;
             case 40: value = ff7->slot[s].z_40[i]; break;
             //Always Last Case , Full Slot
-            case 41:temp.setRawData(reinterpret_cast<char *>(&ff7->slot[s]),rows);
-                    value = temp.at(i);
-                    break;
+            case 41: if(i==0){temp.setRawData(reinterpret_cast<char *>(&ff7->slot[s]),rows);}//Resource friendly: we set the slot data only one time (before was one time for each row).
+                     value = temp.at(i);
+                     break;
         }
         //Write Hex
         QString hex_str = QString("%1").arg(value,2,16,QChar('0')).toUpper(); //Format: 000C
@@ -3540,79 +3540,79 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
                 newItem = new QTableWidgetItem(text,0);
                 ui->tbl_compare_unknown->setItem(i,0,newItem);
             }
-        switch(z)
-        {
-            case 1: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_1[i]; break;
-            case 2: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_2[i]; break;
-            case 3: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_3[i]; break;
-            case 4: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_4[i]; break;
-            case 5: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_5[i]; break;
-            case 6: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_6[i]; break;
-            case 7: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_7[i]; break;
-            case 8: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_8[i]; break;
-            case 9: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_9[i]; break;
-            case 10: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_10[i]; break;
-            case 11: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_11[i]; break;
-            case 12: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_12[i]; break;
-            case 13: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_13[i]; break;
-            case 14: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_14[i]; break;
-            case 15: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_15[i]; break;
-            case 16: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_16[i]; break;
-            case 17: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_17[i]; break;
-            case 18: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_18[i]; break;
-            case 19: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_19[i]; break;
-            case 20: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_20[i]; break;
-            case 21: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_21[i]; break;
-            case 22: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_22[i]; break;
-            case 23: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_23[i]; break;
-            case 24: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_24[i]; break;
-            case 25: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_25[i]; break;
-            case 26: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_26[i]; break;
-            case 27: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_27[i]; break;
-            case 28: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_28[i]; break;
-            case 29: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_29[i]; break;
-            case 30: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_30[i]; break;
-            case 31: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_31[i]; break;
-            case 32: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_32[i]; break;
-            case 33: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_33[i]; break;
-            case 34: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_34[i]; break;
-            case 35: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_35[i]; break;
-            case 36: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_36[i]; break;
-            case 37: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_37[i]; break;
-            case 38: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_38[i]; break;
-            case 39: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_39[i]; break;
-            case 40: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_40[i]; break;
-            //Always Last Case , Full Slot
-            case 41: temp.setRawData(reinterpret_cast<char *>(&ff7->slot[ui->combo_compare_slot->currentIndex()-1]),rows);
-                     value = temp.at(i);
-                     break;
-        }
-        //Write Hex
-        QString hex_str = QString("%1").arg(value,2,16,QChar('0')).toUpper(); //New format ex: 0C | Vegeta_Ss4 Hex mod
-        newItem = new QTableWidgetItem(hex_str,0);
-        ui->tbl_compare_unknown->setItem(i,1,newItem);
-        //Write Dec
-        newItem = new QTableWidgetItem(text.number(value,10),0);
-        ui->tbl_compare_unknown->setItem(i,2,newItem);
-        //Write Bin
-        QString binary_str = QString("%1").arg(value,8,2,QChar('0')); //New format ex: 00000111 | Vegeta_Ss4 Bin mod
-        newItem = new QTableWidgetItem(binary_str,0);
-        ui->tbl_compare_unknown->setItem(i,3,newItem);
-        //Write Char
-        newItem = new QTableWidgetItem(QChar(value),0);
-        ui->tbl_compare_unknown->setItem(i,4,newItem);
+            switch(z)
+            {
+                case 1: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_1[i]; break;
+                case 2: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_2[i]; break;
+                case 3: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_3[i]; break;
+                case 4: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_4[i]; break;
+                case 5: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_5[i]; break;
+                case 6: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_6[i]; break;
+                case 7: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_7[i]; break;
+                case 8: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_8[i]; break;
+                case 9: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_9[i]; break;
+                case 10: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_10[i]; break;
+                case 11: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_11[i]; break;
+                case 12: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_12[i]; break;
+                case 13: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_13[i]; break;
+                case 14: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_14[i]; break;
+                case 15: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_15[i]; break;
+                case 16: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_16[i]; break;
+                case 17: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_17[i]; break;
+                case 18: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_18[i]; break;
+                case 19: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_19[i]; break;
+                case 20: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_20[i]; break;
+                case 21: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_21[i]; break;
+                case 22: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_22[i]; break;
+                case 23: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_23[i]; break;
+                case 24: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_24[i]; break;
+                case 25: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_25[i]; break;
+                case 26: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_26[i]; break;
+                case 27: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_27[i]; break;
+                case 28: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_28[i]; break;
+                case 29: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_29[i]; break;
+                case 30: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_30[i]; break;
+                case 31: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_31[i]; break;
+                case 32: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_32[i]; break;
+                case 33: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_33[i]; break;
+                case 34: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_34[i]; break;
+                case 35: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_35[i]; break;
+                case 36: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_36[i]; break;
+                case 37: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_37[i]; break;
+                case 38: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_38[i]; break;
+                case 39: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_39[i]; break;
+                case 40: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_40[i]; break;
+                //Always Last Case , Full Slot
+                case 41: if(i==0){temp.setRawData(reinterpret_cast<char *>(&ff7->slot[ui->combo_compare_slot->currentIndex()-1]),rows);}//Resource friendly: we set the slot data only one time (before was one time for each row).
+                         value = temp.at(i);
+                         break;
+            }
+            //Write Hex
+            QString hex_str = QString("%1").arg(value,2,16,QChar('0')).toUpper(); //New format ex: 0C | Vegeta_Ss4 Hex mod
+            newItem = new QTableWidgetItem(hex_str,0);
+            ui->tbl_compare_unknown->setItem(i,1,newItem);
+            //Write Dec
+            newItem = new QTableWidgetItem(text.number(value,10),0);
+            ui->tbl_compare_unknown->setItem(i,2,newItem);
+            //Write Bin
+            QString binary_str = QString("%1").arg(value,8,2,QChar('0')); //New format ex: 00000111 | Vegeta_Ss4 Bin mod
+            newItem = new QTableWidgetItem(binary_str,0);
+            ui->tbl_compare_unknown->setItem(i,3,newItem);
+            //Write Char
+            newItem = new QTableWidgetItem(QChar(value),0);
+            ui->tbl_compare_unknown->setItem(i,4,newItem);
 
-        if(ui->tbl_compare_unknown->item(i,1)->text()!=ui->tbl_unknown->item(i,1)->text())
-        {
-            for (int c=0;c<5;c++)
-            {//color the diffs ;)
-                ui->tbl_compare_unknown->item(i,c)->setBackgroundColor(Qt::yellow);
-                ui->tbl_compare_unknown->item(i,c)->setTextColor(Qt::red);
-                ui->tbl_unknown->item(i,c)->setBackgroundColor(Qt::yellow);
-                ui->tbl_unknown->item(i,c)->setTextColor(Qt::red);
+            if(ui->tbl_compare_unknown->item(i,1)->text()!=ui->tbl_unknown->item(i,1)->text())
+            {
+                for (int c=0;c<5;c++)
+                {//color the diffs ;)
+                    ui->tbl_compare_unknown->item(i,c)->setBackgroundColor(Qt::yellow);
+                    ui->tbl_compare_unknown->item(i,c)->setTextColor(Qt::red);
+                    ui->tbl_unknown->item(i,c)->setBackgroundColor(Qt::yellow);
+                    ui->tbl_unknown->item(i,c)->setTextColor(Qt::red);
+                }
             }
         }
-      }
     }
     for(int i=0;i<rows;i++)//set up the item flags
     {
