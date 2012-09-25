@@ -28,7 +28,6 @@
 #include "options.h"                // contains the options dialog
 #include "about.h"                  // about dialog stuff.
 #include "errbox.h"                 // non ff7 error box
-#include "metadatacreator.h"
 //FF7tk Items
 #include "FF7tk/static_data/SaveIcon.h"
 #include "FF7tk/static_data/FF7Item.h"
@@ -42,6 +41,7 @@
 #include "FF7tk/widgets/ChocoboEditor.h"
 #include "FF7tk/widgets/CharEditor.h"
 #include "FF7tk/widgets/ItemList.h"
+#include "FF7tk/widgets/MetadataCreator.h"
 
 namespace Ui {
     class MainWindow;

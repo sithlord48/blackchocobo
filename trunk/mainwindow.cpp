@@ -964,7 +964,7 @@ void MainWindow::on_actionAbout_activated(){about adialog;  adialog.setStyleShee
 void MainWindow::on_actionCopy_Slot_activated(){ff7->CopySlot(s);}
 void MainWindow::on_actionPaste_Slot_activated(){ff7->PasteSlot(s); guirefresh(0);}
 void MainWindow::on_actionShow_Options_triggered(){Options odialog(0,settings); odialog.setStyleSheet(this->styleSheet()); odialog.exec(); init_settings(); }
-void MainWindow::on_actionCreateNewMetadata_triggered(){ metadataCreator mdata(this,ff7); mdata.setStyleSheet(this->styleSheet()); mdata.exec();}
+void MainWindow::on_actionCreateNewMetadata_triggered(){ MetadataCreator mdata(this,ff7); mdata.setStyleSheet(this->styleSheet()); mdata.exec();}
 
 void MainWindow::on_action_auto_char_growth_triggered(bool checked)
 {
