@@ -2837,19 +2837,19 @@
     </message>
     <message>
         <source>Tunnel</source>
-        <translation>Tunnel</translation>
+        <translation type="unfinished">Tunnel</translation>
     </message>
     <message>
         <source>Junon Inn</source>
-        <translation>Auberge de Junon</translation>
+        <translation type="unfinished">Auberge de Junon</translation>
     </message>
     <message>
         <source>Midgar Sector 8</source>
-        <translation>Midgar, Secteur 8</translation>
+        <translation type="unfinished">Midgar, Secteur 8</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
-        <translation>Cimetière des trains</translation>
+        <translation type="unfinished">Cimetière des trains</translation>
     </message>
     <message>
         <source>Underwater Reactor</source>
@@ -2857,23 +2857,24 @@
     </message>
     <message>
         <source>Junon Office F2</source>
-        <translation>Bureaux de Junon, 2ème étage</translation>
+        <translation type="unfinished">Bureaux de Junon, 2ème étage</translation>
     </message>
     <message>
         <source>Aerith&apos;s House</source>
-        <translation>Maison d&apos;Aeris</translation>
+        <translation>Maison de Aeris</translation>
     </message>
     <message>
         <source>North Crater</source>
-        <translation>Cratère Nord</translation>
+        <translation type="unfinished">Cratère Nord</translation>
     </message>
     <message>
         <source>Wall Market</source>
-        <translation>Wall Market</translation>
+        <translation type="unfinished">Wall Market</translation>
     </message>
     <message>
         <source>Beginner&apos;s Hall</source>
-        <translation>Hall des débutants</translation>
+        <translatorcomment>i know this is not a &quot;real&quot; translation but its what its called in game.</translatorcomment>
+        <translation>Secteur 7 Taudis</translation>
     </message>
     <message>
         <source>Whirlwind Maze</source>
@@ -2881,15 +2882,15 @@
     </message>
     <message>
         <source>Mt. Nibel</source>
-        <translation>Mont Nibel</translation>
+        <translation type="unfinished">Mont Nibel</translation>
     </message>
     <message>
         <source>Gaeas Cliff</source>
-        <translation>Falaise de Gaea</translation>
+        <translation>Dans la falaise de Gaea</translation>
     </message>
     <message>
         <source>Gaeas Cliff Base</source>
-        <translation>Falaise de Gaea, abords</translation>
+        <translation>Dans la falaise de Gaea</translation>
     </message>
     <message>
         <source>Corel Prison</source>
@@ -2901,7 +2902,7 @@
     </message>
     <message>
         <source>Inside Submarine</source>
-        <translation>À l&apos;intérieur du sous-marin</translation>
+        <translation>Intérieur de sous-marin</translation>
     </message>
     <message>
         <source>Hallway</source>
@@ -2913,11 +2914,11 @@
     </message>
     <message>
         <source>Lower Sector 4 Plate</source>
-        <translation>Sous la plaque du Secteur 4</translation>
+        <translation type="unfinished">Sous la plaque du Secteur 4</translation>
     </message>
     <message>
         <source>Mt. Corel</source>
-        <translation>Mont Corel</translation>
+        <translation type="unfinished">Mont Corel</translation>
     </message>
     <message>
         <source>Debug Room [ja]</source>
@@ -2933,15 +2934,15 @@
     </message>
     <message>
         <source>Ropeway Station</source>
-        <translation>Station de téléphérique</translation>
+        <translation type="unfinished">Station de téléphérique</translation>
     </message>
     <message>
         <source>Junon Way</source>
-        <translation>Chemin de Junon</translation>
+        <translation type="unfinished">Chemin de Junon</translation>
     </message>
     <message>
         <source>Junon Airport Path</source>
-        <translation>Junon - Chemin vers l&apos;aéroport</translation>
+        <translation>Chemin de l&apos;aéroport</translation>
     </message>
     <message>
         <source>Forgotten Captial</source>
@@ -2949,7 +2950,7 @@
     </message>
     <message>
         <source>Sector 8, Underground</source>
-        <translation>Secteur 8 - Souterrains</translation>
+        <translation type="unfinished">Secteur 8 - Souterrains</translation>
     </message>
     <message>
         <source>Shinra Bldg.</source>
@@ -2965,7 +2966,7 @@
     </message>
     <message>
         <source>Chocobo Ranch</source>
-        <translation>Ferme de chocobos</translation>
+        <translation>Ranch à chocobos</translation>
     </message>
     <message>
         <source>Highwind</source>
@@ -2973,7 +2974,7 @@
     </message>
     <message>
         <source>7th Heaven</source>
-        <translation>Septième Ciel</translation>
+        <translation>7ème Ciel</translation>
     </message>
     <message>
         <source>AVALANCHE Hideout</source>
@@ -2997,67 +2998,67 @@
     </message>
     <message>
         <source>Sector 1 Station</source>
-        <translation type="unfinished">Gare du Secteur 1</translation>
+        <translation>Secteur 1 Gare</translation>
     </message>
     <message>
         <source>Sector 1</source>
-        <translation type="unfinished">Secteur 1</translation>
+        <translation>Secteur 1</translation>
     </message>
     <message>
         <source>No.1 Reactor</source>
-        <translation type="unfinished">N°1 Réacteur</translation>
+        <translation>Réacteur no.1</translation>
     </message>
     <message>
         <source>Sector 8</source>
-        <translation type="unfinished">Secteur 8</translation>
+        <translation>Secteur 8</translation>
     </message>
     <message>
         <source>Last Train From Midgar</source>
-        <translation type="unfinished"></translation>
+        <translation>Dernier train pour Midgar</translation>
     </message>
     <message>
         <source>Sector 7 Station</source>
-        <translation type="unfinished">Gare du Secteur 7</translation>
+        <translation>Secteur 7 Gare</translation>
     </message>
     <message>
         <source>Sector 7 Slums</source>
-        <translation type="unfinished">Secteur 7 Taudis</translation>
+        <translation>Secteur 7 Taudis</translation>
     </message>
     <message>
         <source>Sector 7 Item Store</source>
-        <translation type="unfinished"></translation>
+        <translation>7ème rue Magasin d&apos;éléments</translation>
     </message>
     <message>
         <source>Sector 7 Weapon Shop</source>
-        <translation type="unfinished"></translation>
+        <translation>Secteur 7 Magasin d&apos;armes</translation>
     </message>
     <message>
         <source>Johnny&apos;s Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Maison de Johnny</translation>
     </message>
     <message>
         <source>Winding Tunnel</source>
-        <translation type="unfinished"></translation>
+        <translation>Tunnel sinueux</translation>
     </message>
     <message>
         <source>4th Street Plate Int.</source>
-        <translation type="unfinished"></translation>
+        <translation>Int. des plaques 4è rue</translation>
     </message>
     <message>
         <source>No.5 Reactor</source>
-        <translation type="unfinished">N°5 Réacteur</translation>
+        <translation>Réacteur no.5</translation>
     </message>
     <message>
         <source>church in the slums</source>
-        <translation type="unfinished">Église - Taudis</translation>
+        <translation>église des Taudis</translation>
     </message>
     <message>
         <source>Inside the Church</source>
-        <translation type="unfinished"></translation>
+        <translation>Intérieur d&apos;église</translation>
     </message>
     <message>
         <source>Church Roof</source>
-        <translation type="unfinished"></translation>
+        <translation>Toiture d&apos;église</translation>
     </message>
     <message>
         <source>Sector 5 Slum</source>
@@ -3065,7 +3066,7 @@
     </message>
     <message>
         <source>Earthen Pipe</source>
-        <translation type="unfinished"></translation>
+        <translation>Canalisation souterraine</translation>
     </message>
     <message>
         <source>Materia store</source>
@@ -3073,15 +3074,15 @@
     </message>
     <message>
         <source>Item Store</source>
-        <translation type="unfinished"></translation>
+        <translation>Magasin d&apos;éléments</translation>
     </message>
     <message>
         <source>House 1f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Maison 1er ét.</translation>
     </message>
     <message>
         <source>House 2f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Maison 2ème ét.</translation>
     </message>
     <message>
         <source>Weapon Store</source>
@@ -3089,7 +3090,7 @@
     </message>
     <message>
         <source>Church</source>
-        <translation type="unfinished"></translation>
+        <translation>Eglise</translation>
     </message>
     <message>
         <source>Sector 6 park</source>
@@ -3097,7 +3098,7 @@
     </message>
     <message>
         <source>Inside Train </source>
-        <translation type="unfinished"></translation>
+        <translation>Intérieur de train</translation>
     </message>
     <message>
         <source>Lower Sector 4 Plate </source>
@@ -3105,7 +3106,7 @@
     </message>
     <message>
         <source>Inn</source>
-        <translation type="unfinished"></translation>
+        <translation>Auberge</translation>
     </message>
     <message>
         <source>Pharmacy</source>
@@ -3113,11 +3114,11 @@
     </message>
     <message>
         <source>Diner</source>
-        <translation type="unfinished"></translation>
+        <translation>Restaurant</translation>
     </message>
     <message>
         <source>Boutique</source>
-        <translation type="unfinished"></translation>
+        <translation>Boutique</translation>
     </message>
     <message>
         <source>Materia Store</source>
@@ -3129,11 +3130,11 @@
     </message>
     <message>
         <source>Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Bar</translation>
     </message>
     <message>
         <source>Corneo Hall,1f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hall de Cornéo, 1er ét.</translation>
     </message>
     <message>
         <source>Torture Room</source>
@@ -3141,7 +3142,7 @@
     </message>
     <message>
         <source>Corneo Hall,2f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Hall de Cornéo, 2ème ét.</translation>
     </message>
     <message>
         <source>Sewer</source>
@@ -3201,7 +3202,7 @@
     </message>
     <message>
         <source>Elevator</source>
-        <translation type="unfinished"></translation>
+        <translation>Ascenseur</translation>
     </message>
     <message>
         <source>Shinra Bldg.67f.</source>
@@ -3245,11 +3246,11 @@
     </message>
     <message>
         <source>House: 1f</source>
-        <translation type="unfinished"></translation>
+        <translation>Maison : 1er ét.</translation>
     </message>
     <message>
         <source>House: 2f</source>
-        <translation type="unfinished"></translation>
+        <translation>Maison : 2ème ét.</translation>
     </message>
     <message>
         <source>Rear Tower (Pagoda)</source>
@@ -3257,11 +3258,11 @@
     </message>
     <message>
         <source>Inn: 1f</source>
-        <translation type="unfinished"></translation>
+        <translation>Auberge : 1er ét.</translation>
     </message>
     <message>
         <source>Inn: 2f</source>
-        <translation type="unfinished"></translation>
+        <translation>Auberge : 2ème ét.</translation>
     </message>
     <message>
         <source>Nibelheim House</source>
@@ -3273,7 +3274,7 @@
     </message>
     <message>
         <source>Cloud&apos;s House</source>
-        <translation type="unfinished"></translation>
+        <translation>maison de Cloud</translation>
     </message>
     <message>
         <source>Nibelheim Item Store</source>
@@ -3317,7 +3318,7 @@
     </message>
     <message>
         <source>Chocobo farm</source>
-        <translation type="unfinished"></translation>
+        <translation>Ferme de chocobos</translation>
     </message>
     <message>
         <source>Marshes</source>
@@ -3329,11 +3330,11 @@
     </message>
     <message>
         <source>Base of Fort Condor</source>
-        <translation type="unfinished"></translation>
+        <translation>Base de Condolford</translation>
     </message>
     <message>
         <source>Entrance to Fort Condor</source>
-        <translation type="unfinished"></translation>
+        <translation>Entrée de Condolford</translation>
     </message>
     <message>
         <source>Watch Room</source>
@@ -3353,11 +3354,11 @@
     </message>
     <message>
         <source>Dolphin Offing</source>
-        <translation type="unfinished"></translation>
+        <translation>Dauphin au loin</translation>
     </message>
     <message>
         <source>Airport</source>
-        <translation type="unfinished"></translation>
+        <translation>Aéroport</translation>
     </message>
     <message>
         <source>Locker Room</source>
@@ -3369,7 +3370,7 @@
     </message>
     <message>
         <source>Barracks</source>
-        <translation type="unfinished"></translation>
+        <translation>Caserne</translation>
     </message>
     <message>
         <source>Junon Path</source>
@@ -3389,27 +3390,27 @@
     </message>
     <message>
         <source>Cargo Ship</source>
-        <translation type="unfinished"></translation>
+        <translation>Cargo</translation>
     </message>
     <message>
         <source>Costa del Sol Harbor</source>
-        <translation type="unfinished"></translation>
+        <translation>Port de Costa del Sol</translation>
     </message>
     <message>
         <source>Costa del Sol</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <source>House for Sale</source>
-        <translation type="unfinished"></translation>
+        <translation>Maison à vendre</translation>
     </message>
     <message>
         <source>Cellar</source>
-        <translation type="unfinished"></translation>
+        <translation>Cave</translation>
     </message>
     <message>
         <source>Costa del Sol Inn</source>
-        <translation type="unfinished"></translation>
+        <translation>Auberge de Costa del Sol</translation>
     </message>
     <message>
         <source>Cloud&apos;s Past</source>
@@ -3417,7 +3418,7 @@
     </message>
     <message>
         <source>Cloud&apos;s Villa</source>
-        <translation type="unfinished"></translation>
+        <translation>Villa de Cloud</translation>
     </message>
     <message>
         <source>Grasslands Area</source>
@@ -3433,7 +3434,7 @@
     </message>
     <message>
         <source>Corel Reactor</source>
-        <translation type="unfinished"></translation>
+        <translation>Réacteur Corel</translation>
     </message>
     <message>
         <source>North Corel</source>
@@ -3449,7 +3450,7 @@
     </message>
     <message>
         <source>Chocobo Square</source>
-        <translation type="unfinished"></translation>
+        <translation>Chocobo Square</translation>
     </message>
     <message>
         <source>Ticket Office</source>
@@ -3461,15 +3462,15 @@
     </message>
     <message>
         <source>Building 1f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bâtiment 1er ét.</translation>
     </message>
     <message>
         <source>Building 2f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bâtiment 2ème ét.</translation>
     </message>
     <message>
         <source>Event square</source>
-        <translation type="unfinished"></translation>
+        <translation>Event square</translation>
     </message>
     <message>
         <source>Speed square</source>
@@ -3477,15 +3478,15 @@
     </message>
     <message>
         <source>Ghost Hotel</source>
-        <translation type="unfinished"></translation>
+        <translation>Hôtel Fantôme</translation>
     </message>
     <message>
         <source>Hotel Lobby</source>
-        <translation type="unfinished"></translation>
+        <translation>Hall de l&apos;hôtel</translation>
     </message>
     <message>
         <source>Hotel Shop</source>
-        <translation type="unfinished"></translation>
+        <translation>Boutique d&apos;hôtel</translation>
     </message>
     <message>
         <source>Round Square</source>
@@ -3493,11 +3494,11 @@
     </message>
     <message>
         <source>Basement</source>
-        <translation type="unfinished"></translation>
+        <translation>Sous-sol</translation>
     </message>
     <message>
         <source>Container</source>
-        <translation type="unfinished"></translation>
+        <translation>Conteneur</translation>
     </message>
     <message>
         <source>Mayor&apos;s Old House</source>
@@ -3509,11 +3510,11 @@
     </message>
     <message>
         <source>Corel Desert</source>
-        <translation type="unfinished"></translation>
+        <translation>Désert de Corel</translation>
     </message>
     <message>
         <source>Jungle</source>
-        <translation type="unfinished"></translation>
+        <translation>Jungle</translation>
     </message>
     <message>
         <source>Meltdown Reactor</source>
@@ -3521,7 +3522,7 @@
     </message>
     <message>
         <source>Gongaga Village</source>
-        <translation type="unfinished"></translation>
+        <translation>Village de Gongaga</translation>
     </message>
     <message>
         <source>Weapons Store</source>
@@ -3549,15 +3550,15 @@
     </message>
     <message>
         <source>Battle Square</source>
-        <translation type="unfinished"></translation>
+        <translation>Battle Square</translation>
     </message>
     <message>
         <source>Arena Lobby</source>
-        <translation type="unfinished"></translation>
+        <translation>Entrée de l&apos;arène</translation>
     </message>
     <message>
         <source>Dio&apos;s Museum</source>
-        <translation type="unfinished"></translation>
+        <translation>Musée de Dio</translation>
     </message>
 </context>
 <context>
