@@ -2841,11 +2841,11 @@
     </message>
     <message>
         <source>Junon Inn</source>
-        <translation type="unfinished">Auberge de Junon</translation>
+        <translation>Auberge de Junon</translation>
     </message>
     <message>
         <source>Midgar Sector 8</source>
-        <translation type="unfinished">Midgar, Secteur 8</translation>
+        <translation>Midgar, Secteur 8</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
@@ -2857,7 +2857,7 @@
     </message>
     <message>
         <source>Junon Office F2</source>
-        <translation type="unfinished">Bureaux de Junon, 2ème étage</translation>
+        <translation>Dpt. Junon, 2er ét.</translation>
     </message>
     <message>
         <source>Aerith&apos;s House</source>
@@ -2865,7 +2865,7 @@
     </message>
     <message>
         <source>North Crater</source>
-        <translation type="unfinished">Cratère Nord</translation>
+        <translation>Dans la Grotte Nord</translation>
     </message>
     <message>
         <source>Wall Market</source>
@@ -2882,7 +2882,7 @@
     </message>
     <message>
         <source>Mt. Nibel</source>
-        <translation type="unfinished">Mont Nibel</translation>
+        <translation>Mt. Nibel</translation>
     </message>
     <message>
         <source>Gaeas Cliff</source>
@@ -2914,11 +2914,11 @@
     </message>
     <message>
         <source>Lower Sector 4 Plate</source>
-        <translation type="unfinished">Sous la plaque du Secteur 4</translation>
+        <translation>Plaques Secteur inf. 4</translation>
     </message>
     <message>
         <source>Mt. Corel</source>
-        <translation type="unfinished">Mont Corel</translation>
+        <translation>Mt. Corel</translation>
     </message>
     <message>
         <source>Debug Room [ja]</source>
@@ -2938,7 +2938,7 @@
     </message>
     <message>
         <source>Junon Way</source>
-        <translation type="unfinished">Chemin de Junon</translation>
+        <translation>Chemin de Junon</translation>
     </message>
     <message>
         <source>Junon Airport Path</source>
@@ -3070,7 +3070,7 @@
     </message>
     <message>
         <source>Materia store</source>
-        <translation type="unfinished"></translation>
+        <translation>Magasin de Materia</translation>
     </message>
     <message>
         <source>Item Store</source>
@@ -3102,7 +3102,7 @@
     </message>
     <message>
         <source>Lower Sector 4 Plate </source>
-        <translation type="unfinished"></translation>
+        <translation>Plaques Secteur inf. 4</translation>
     </message>
     <message>
         <source>Inn</source>
@@ -3122,11 +3122,11 @@
     </message>
     <message>
         <source>Materia Store</source>
-        <translation type="unfinished"></translation>
+        <translation>Magasin de Materia</translation>
     </message>
     <message>
         <source>Men&apos;s Hall</source>
-        <translation type="unfinished"></translation>
+        <translation>Hall pour hommes</translation>
     </message>
     <message>
         <source>Bar</source>
@@ -3170,7 +3170,7 @@
     </message>
     <message>
         <source>Outside Elevator</source>
-        <translation type="unfinished"></translation>
+        <translation>Ascenseur extérieur</translation>
     </message>
     <message>
         <source>Shinra Bldg. 60f.</source>
@@ -3242,7 +3242,7 @@
     </message>
     <message>
         <source>Kalm</source>
-        <translation type="unfinished"></translation>
+        <translation>Kalm</translation>
     </message>
     <message>
         <source>House: 1f</source>
@@ -3266,7 +3266,7 @@
     </message>
     <message>
         <source>Nibelheim House</source>
-        <translation type="unfinished"></translation>
+        <translation>Maison de Nibelheim</translation>
     </message>
     <message>
         <source>Tifa&apos;s House</source>
@@ -3278,43 +3278,43 @@
     </message>
     <message>
         <source>Nibelheim Item Store</source>
-        <translation type="unfinished"></translation>
+        <translation>Nibelheim</translation>
     </message>
     <message>
         <source>Nibelheim Inn</source>
-        <translation type="unfinished"></translation>
+        <translation>Auberge de Nibelheim</translation>
     </message>
     <message>
         <source>Mt. Nibel Cave</source>
-        <translation type="unfinished"></translation>
+        <translation>Grotte du Mt. Nibel</translation>
     </message>
     <message>
         <source>Nibel Reactor</source>
-        <translation type="unfinished"></translation>
+        <translation>Réacteur de Nibel</translation>
     </message>
     <message>
         <source>Nibel Reactor(Int.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Réacteur de Nibel(Int.)</translation>
     </message>
     <message>
         <source>Mansion, 1f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Château, 1er ét.</translation>
     </message>
     <message>
         <source>Mansion, 2f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Château, 2ème ét.</translation>
     </message>
     <message>
         <source>Mansion, Hidden Steps</source>
-        <translation type="unfinished"></translation>
+        <translation>Château, esc. secrets</translation>
     </message>
     <message>
         <source>Mansion, Basement</source>
-        <translation type="unfinished"></translation>
+        <translation>Château, sous-sol</translation>
     </message>
     <message>
         <source>Nibelheim</source>
-        <translation type="unfinished"></translation>
+        <translation>Nibelheim</translation>
     </message>
     <message>
         <source>Chocobo farm</source>
@@ -3322,11 +3322,11 @@
     </message>
     <message>
         <source>Marshes</source>
-        <translation type="unfinished"></translation>
+        <translation>Marais</translation>
     </message>
     <message>
         <source>Mythril Mine</source>
-        <translation type="unfinished"></translation>
+        <translation>Mine de Mythril</translation>
     </message>
     <message>
         <source>Base of Fort Condor</source>
@@ -3362,7 +3362,7 @@
     </message>
     <message>
         <source>Locker Room</source>
-        <translation type="unfinished"></translation>
+        <translation>Vestiaires</translation>
     </message>
     <message>
         <source>Upper Junon</source>
@@ -3374,11 +3374,11 @@
     </message>
     <message>
         <source>Junon Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Chemin de Junon</translation>
     </message>
     <message>
         <source>Lower Junon</source>
-        <translation type="unfinished"></translation>
+        <translation>Junon du bas</translation>
     </message>
     <message>
         <source>Shinra Member&apos;s Bar</source>
@@ -3386,7 +3386,7 @@
     </message>
     <message>
         <source>Junon Dock</source>
-        <translation type="unfinished"></translation>
+        <translation>Bassin de Junon</translation>
     </message>
     <message>
         <source>Cargo Ship</source>
@@ -3438,11 +3438,11 @@
     </message>
     <message>
         <source>North Corel</source>
-        <translation type="unfinished"></translation>
+        <translation>Corel Nord</translation>
     </message>
     <message>
         <source>North Corel Inn</source>
-        <translation type="unfinished"></translation>
+        <translation>Bar de Corel Nord</translation>
     </message>
     <message>
         <source>Terminal Floor</source>
@@ -3502,7 +3502,7 @@
     </message>
     <message>
         <source>Mayor&apos;s Old House</source>
-        <translation type="unfinished"></translation>
+        <translation>Ancienne maison du maire</translation>
     </message>
     <message>
         <source>Prison Pub</source>
@@ -3518,7 +3518,7 @@
     </message>
     <message>
         <source>Meltdown Reactor</source>
-        <translation type="unfinished"></translation>
+        <translation>Réacteur de fusion</translation>
     </message>
     <message>
         <source>Gongaga Village</source>
@@ -3534,7 +3534,7 @@
     </message>
     <message>
         <source>Mayor&apos;s Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Maison du maire</translation>
     </message>
     <message>
         <source>Gold Saucer Area</source>
