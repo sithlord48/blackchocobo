@@ -2837,7 +2837,7 @@
     </message>
     <message>
         <source>Tunnel</source>
-        <translation type="unfinished">Tunnel</translation>
+        <translation>Tunnel</translation>
     </message>
     <message>
         <source>Junon Inn</source>
@@ -2849,7 +2849,7 @@
     </message>
     <message>
         <source>Train Graveyard</source>
-        <translation type="unfinished">Cimetière des trains</translation>
+        <translation>Cimetière des trains</translation>
     </message>
     <message>
         <source>Underwater Reactor</source>
@@ -2869,7 +2869,7 @@
     </message>
     <message>
         <source>Wall Market</source>
-        <translation type="unfinished">Wall Market</translation>
+        <translation>Wall Market</translation>
     </message>
     <message>
         <source>Beginner&apos;s Hall</source>
@@ -2934,7 +2934,7 @@
     </message>
     <message>
         <source>Ropeway Station</source>
-        <translation type="unfinished">Station de téléphérique</translation>
+        <translation>Station de câblage</translation>
     </message>
     <message>
         <source>Junon Way</source>
@@ -2950,7 +2950,7 @@
     </message>
     <message>
         <source>Sector 8, Underground</source>
-        <translation type="unfinished">Secteur 8 - Souterrains</translation>
+        <translation>Secteur 8, souterrain</translation>
     </message>
     <message>
         <source>Shinra Bldg.</source>
@@ -3062,7 +3062,7 @@
     </message>
     <message>
         <source>Sector 5 Slum</source>
-        <translation type="unfinished"></translation>
+        <translation>Secteur 5 Taudis</translation>
     </message>
     <message>
         <source>Earthen Pipe</source>
@@ -3086,7 +3086,7 @@
     </message>
     <message>
         <source>Weapon Store</source>
-        <translation type="unfinished"></translation>
+        <translation>Magasin d&apos;armes</translation>
     </message>
     <message>
         <source>Church</source>
@@ -3094,7 +3094,7 @@
     </message>
     <message>
         <source>Sector 6 park</source>
-        <translation type="unfinished"></translation>
+        <translation>Parc du secteur 6</translation>
     </message>
     <message>
         <source>Inside Train </source>
@@ -3110,7 +3110,7 @@
     </message>
     <message>
         <source>Pharmacy</source>
-        <translation type="unfinished"></translation>
+        <translation>Pharmacie</translation>
     </message>
     <message>
         <source>Diner</source>
@@ -3138,7 +3138,7 @@
     </message>
     <message>
         <source>Torture Room</source>
-        <translation type="unfinished"></translation>
+        <translation>Salle des tortures</translation>
     </message>
     <message>
         <source>Corneo Hall,2f.</source>
@@ -3146,27 +3146,27 @@
     </message>
     <message>
         <source>Sewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Egout</translation>
     </message>
     <message>
         <source>Plate Support</source>
-        <translation type="unfinished"></translation>
+        <translation>Supports de la plaque</translation>
     </message>
     <message>
         <source>Plate Section</source>
-        <translation type="unfinished"></translation>
+        <translation>Section des plaques</translation>
     </message>
     <message>
         <source>Sector 0</source>
-        <translation type="unfinished">Secteur 0</translation>
+        <translation>Secteur 0</translation>
     </message>
     <message>
         <source>Shinra Bldg. Stairs</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât. Shinra Escaliers</translation>
     </message>
     <message>
         <source>Shinra Bldg. 59f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât. Shinra 59ème ét.</translation>
     </message>
     <message>
         <source>Outside Elevator</source>
@@ -3174,31 +3174,31 @@
     </message>
     <message>
         <source>Shinra Bldg. 60f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât. Shinra 60ème ét.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 61f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât. Shinra 61ème ét.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 62f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât. Shinra 62ème ét.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 63f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât. Shinra 63ème ét.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 64f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât. Shinra 64ème ét.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 65f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât. Shinra 65ème ét.</translation>
     </message>
     <message>
         <source>Shinra Bldg.66f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât. Shinra 66ème ét.</translation>
     </message>
     <message>
         <source>Elevator</source>
@@ -3206,35 +3206,35 @@
     </message>
     <message>
         <source>Shinra Bldg.67f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât. Shinra 67ème ét.</translation>
     </message>
     <message>
         <source>Shinra Bldg.68f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât. Shinra 68ème ét.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 69f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât. Shinra 69ème ét.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 70f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât. Shinra 70ème ét.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 1f. lobby</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât. Shinra Hall 1er ét.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 2f. Lobby</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât.Shinra Hall 2è ét.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 3f. Lobby</source>
-        <translation type="unfinished"></translation>
+        <translation>Bât.Shinra Hall 3è ét.</translation>
     </message>
     <message>
         <source>Slum Outskirts</source>
-        <translation type="unfinished"></translation>
+        <translation>Taudis</translation>
     </message>
     <message>
         <source>Midgar Area</source>
@@ -3254,7 +3254,7 @@
     </message>
     <message>
         <source>Rear Tower (Pagoda)</source>
-        <translation type="unfinished"></translation>
+        <translation>tour arrière (pagode)</translation>
     </message>
     <message>
         <source>Inn: 1f</source>
@@ -3270,7 +3270,7 @@
     </message>
     <message>
         <source>Tifa&apos;s House</source>
-        <translation type="unfinished"></translation>
+        <translation>maison de Tifa</translation>
     </message>
     <message>
         <source>Cloud&apos;s House</source>
@@ -3338,19 +3338,19 @@
     </message>
     <message>
         <source>Watch Room</source>
-        <translation type="unfinished"></translation>
+        <translation>Salle de guêt</translation>
     </message>
     <message>
         <source>Plains</source>
-        <translation type="unfinished"></translation>
+        <translation>Plaines</translation>
     </message>
     <message>
         <source>Under Junon</source>
-        <translation type="unfinished"></translation>
+        <translation>Bas Junon</translation>
     </message>
     <message>
         <source>Priscilla&apos;s House</source>
-        <translation type="unfinished"></translation>
+        <translation>Maison de Priscilla</translation>
     </message>
     <message>
         <source>Dolphin Offing</source>
@@ -3366,7 +3366,7 @@
     </message>
     <message>
         <source>Upper Junon</source>
-        <translation type="unfinished"></translation>
+        <translation>Junon du haut</translation>
     </message>
     <message>
         <source>Barracks</source>
@@ -3382,7 +3382,7 @@
     </message>
     <message>
         <source>Shinra Member&apos;s Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Bar des membres de la Shinra</translation>
     </message>
     <message>
         <source>Junon Dock</source>
@@ -3446,7 +3446,7 @@
     </message>
     <message>
         <source>Terminal Floor</source>
-        <translation type="unfinished"></translation>
+        <translation>Hall d&apos;aérogare</translation>
     </message>
     <message>
         <source>Chocobo Square</source>
@@ -3454,11 +3454,11 @@
     </message>
     <message>
         <source>Ticket Office</source>
-        <translation type="unfinished"></translation>
+        <translation>Vente des billets</translation>
     </message>
     <message>
         <source>Wonder Square</source>
-        <translation type="unfinished"></translation>
+        <translation>Wonder Square</translation>
     </message>
     <message>
         <source>Building 1f.</source>
@@ -3474,7 +3474,7 @@
     </message>
     <message>
         <source>Speed square</source>
-        <translation type="unfinished"></translation>
+        <translation>Speed square</translation>
     </message>
     <message>
         <source>Ghost Hotel</source>
@@ -3490,7 +3490,7 @@
     </message>
     <message>
         <source>Round Square</source>
-        <translation type="unfinished"></translation>
+        <translation>Round Square</translation>
     </message>
     <message>
         <source>Basement</source>
@@ -3506,7 +3506,7 @@
     </message>
     <message>
         <source>Prison Pub</source>
-        <translation type="unfinished"></translation>
+        <translation>Pub de la prison</translation>
     </message>
     <message>
         <source>Corel Desert</source>
@@ -3526,11 +3526,11 @@
     </message>
     <message>
         <source>Weapons Store</source>
-        <translation type="unfinished"></translation>
+        <translation>Magasin d&apos;armes</translation>
     </message>
     <message>
         <source>Zach&apos;s Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Maison de Zack</translation>
     </message>
     <message>
         <source>Mayor&apos;s Home</source>
