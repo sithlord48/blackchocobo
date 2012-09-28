@@ -901,7 +901,7 @@ void MainWindow::on_actionExport_MC_triggered()
 
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 MC SaveGame"), settings->value("save_emu_path").toString(),
-    tr("FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)"));
+    tr("MCR File(*.mcr);;MCD File(*.mcd);;MCI File(*.mci);;MC File(*.mc);;DDF File(*.ddf);;PS File(*.ps);;PSM File(*.psm);;BIN File(*.bin);;PS3 Virtual Memory Card(*.VM1)"));
     if(fileName.isEmpty()){return;}
     else
     {
@@ -914,7 +914,7 @@ void MainWindow::on_actionExport_VGS_triggered()
 {
     QString fileName = QFileDialog::getSaveFileName(this,
     tr("Save Final Fantasy 7 VGS SaveGame"), settings->value("save_emu_path").toString(),
-    tr("FF7 VGS SaveGame(*.vgs *.mem)"));
+    tr("VGS File(*.vgs);;MEM File(*.mem)"));
     if(fileName.isEmpty()){return;}
     else
     {
