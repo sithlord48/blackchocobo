@@ -2834,31 +2834,31 @@
     <name>Locations</name>
     <message>
         <source>Platform</source>
-        <translation type="unfinished">Plataforma</translation>
+        <translation>Plataforma</translation>
     </message>
     <message>
         <source>Tunnel</source>
-        <translation type="unfinished">Túnel</translation>
+        <translation>Túnel</translation>
     </message>
     <message>
         <source>Junon Inn</source>
-        <translation type="unfinished">Posada Junon</translation>
+        <translation>Posada Junon</translation>
     </message>
     <message>
         <source>Midgar Sector 8</source>
-        <translation type="unfinished">Midgar Sector 8</translation>
+        <translation>Midgar Sector 8</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
-        <translation type="unfinished">Cementerio de Trenes</translation>
+        <translation>Cementerio de Trenes</translation>
     </message>
     <message>
         <source>Underwater Reactor</source>
-        <translation type="unfinished">Reactor Submarino</translation>
+        <translation>Reactor Submarino</translation>
     </message>
     <message>
         <source>Junon Office F2</source>
-        <translation type="unfinished">Oficina Junon P2</translation>
+        <translation>Oficina Junon P2</translation>
     </message>
     <message>
         <source>Aerith&apos;s House</source>
@@ -2866,11 +2866,11 @@
     </message>
     <message>
         <source>North Crater</source>
-        <translation type="unfinished">Cráter del Norte</translation>
+        <translation>Cráter del Norte</translation>
     </message>
     <message>
         <source>Wall Market</source>
-        <translation type="unfinished">Mercado Muro</translation>
+        <translation>Mercado Muro</translation>
     </message>
     <message>
         <source>Beginner&apos;s Hall</source>
@@ -2878,19 +2878,19 @@
     </message>
     <message>
         <source>Whirlwind Maze</source>
-        <translation type="unfinished">Mazo Torbellino</translation>
+        <translation>Mazo Torbellino</translation>
     </message>
     <message>
         <source>Mt. Nibel</source>
-        <translation type="unfinished">Mt. Nibel</translation>
+        <translation>Mt. Nibel</translation>
     </message>
     <message>
         <source>Gaeas Cliff</source>
-        <translation type="unfinished">Acantilado de Gaea</translation>
+        <translation>Acantilado de Gaea</translation>
     </message>
     <message>
         <source>Gaeas Cliff Base</source>
-        <translation type="unfinished">Base del Acantilado de Gaea</translation>
+        <translation>Base del Acantilado de Gaea</translation>
     </message>
     <message>
         <source>Corel Prison</source>
@@ -2898,15 +2898,15 @@
     </message>
     <message>
         <source>Fort Condor</source>
-        <translation type="unfinished">Fuerte Cóndor</translation>
+        <translation>Fuerte Cóndor</translation>
     </message>
     <message>
         <source>Inside Submarine</source>
-        <translation type="unfinished">Interior Submarino</translation>
+        <translation>Interior Submarino</translation>
     </message>
     <message>
         <source>Hallway</source>
-        <translation type="unfinished">Pasillo</translation>
+        <translation>Pasillo</translation>
     </message>
     <message>
         <source>Cosmo Canyon</source>
@@ -2914,11 +2914,11 @@
     </message>
     <message>
         <source>Lower Sector 4 Plate</source>
-        <translation type="unfinished">Placa Bajo el Sector 4</translation>
+        <translation>Placa Bajo el Sector 4</translation>
     </message>
     <message>
         <source>Mt. Corel</source>
-        <translation type="unfinished">Mt. Corel</translation>
+        <translation>Mt. Corel</translation>
     </message>
     <message>
         <source>Debug Room [ja]</source>
@@ -2930,27 +2930,27 @@
     </message>
     <message>
         <source>Test Fight</source>
-        <translation type="unfinished">Pelea de Prueba</translation>
+        <translation>Pelea de Prueba</translation>
     </message>
     <message>
         <source>Ropeway Station</source>
-        <translation type="unfinished">Estación Ropeway</translation>
+        <translation>Estación Ropeway</translation>
     </message>
     <message>
         <source>Junon Way</source>
-        <translation type="unfinished">Camino de Junon</translation>
+        <translation>Camino de Junon</translation>
     </message>
     <message>
         <source>Junon Airport Path</source>
-        <translation type="unfinished">Camino del Aeropuerto de Junon</translation>
+        <translation>Camino del Aeropuerto de Junon</translation>
     </message>
     <message>
         <source>Forgotten Captial</source>
-        <translation type="unfinished">Capital Olvidada</translation>
+        <translation>Capital Olvidada</translation>
     </message>
     <message>
         <source>Sector 8, Underground</source>
-        <translation type="unfinished">Sector 8, Subterráneo</translation>
+        <translation>Sector 8, Subterráneo</translation>
     </message>
     <message>
         <source>Shinra Bldg.</source>
@@ -2958,11 +2958,11 @@
     </message>
     <message>
         <source>Wutai</source>
-        <translation type="unfinished">Wutai</translation>
+        <translation>Wutai</translation>
     </message>
     <message>
         <source>Forgotten City</source>
-        <translation type="unfinished">Ciudad Olvidada</translation>
+        <translation>Ciudad Olvidada</translation>
     </message>
     <message>
         <source>Chocobo Ranch</source>
@@ -2970,7 +2970,7 @@
     </message>
     <message>
         <source>Highwind</source>
-        <translation type="unfinished">Gran Viento</translation>
+        <translation>Gran Viento</translation>
     </message>
     <message>
         <source>7th Heaven</source>
@@ -2982,15 +2982,15 @@
     </message>
     <message>
         <source>Mideel,Clinic</source>
-        <translation type="unfinished">Mideel, Clínica</translation>
+        <translation>Mideel, Clínica</translation>
     </message>
     <message>
         <source>Sector 6</source>
-        <translation type="unfinished">Sector 6</translation>
+        <translation>Sector 6</translation>
     </message>
     <message>
         <source>Honey Bee Inn</source>
-        <translation type="unfinished">Honey Bee Inn</translation>
+        <translation>Honey Bee Inn</translation>
     </message>
     <message>
         <source>Corneo Hall</source>
@@ -2998,19 +2998,19 @@
     </message>
     <message>
         <source>Sector 1 Station</source>
-        <translation type="unfinished">Estación de tren del Sector 1</translation>
+        <translation>Estación de tren del Sector 1</translation>
     </message>
     <message>
         <source>Sector 1</source>
-        <translation type="unfinished">Sector 1</translation>
+        <translation>Sector 1</translation>
     </message>
     <message>
         <source>No.1 Reactor</source>
-        <translation type="unfinished">No.1 Reactor</translation>
+        <translation>No.1 Reactor</translation>
     </message>
     <message>
         <source>Sector 8</source>
-        <translation type="unfinished">Sector 8</translation>
+        <translation>Sector 8</translation>
     </message>
     <message>
         <source>Last Train From Midgar</source>
@@ -3018,11 +3018,11 @@
     </message>
     <message>
         <source>Sector 7 Station</source>
-        <translation type="unfinished">Estación de tren del Sector 7</translation>
+        <translation>Estación de tren del Sector 7</translation>
     </message>
     <message>
         <source>Sector 7 Slums</source>
-        <translation type="unfinished">Suburbios del Sector 7</translation>
+        <translation>Suburbios del Sector 7</translation>
     </message>
     <message>
         <source>Sector 7 Item Store</source>
@@ -3046,7 +3046,7 @@
     </message>
     <message>
         <source>No.5 Reactor</source>
-        <translation type="unfinished">No.5 Reacor</translation>
+        <translation>No.5 Reactor</translation>
     </message>
     <message>
         <source>church in the slums</source>
@@ -3062,7 +3062,7 @@
     </message>
     <message>
         <source>Sector 5 Slum</source>
-        <translation type="unfinished">Sector 5 tug.</translation>
+        <translation>Sector 5 tug.</translation>
     </message>
     <message>
         <source>Earthen Pipe</source>
@@ -3158,7 +3158,7 @@
     </message>
     <message>
         <source>Sector 0</source>
-        <translation type="unfinished">Sector 0</translation>
+        <translation>Sector 0</translation>
     </message>
     <message>
         <source>Shinra Bldg. Stairs</source>
@@ -3314,7 +3314,7 @@
     </message>
     <message>
         <source>Nibelheim</source>
-        <translation type="unfinished"></translation>
+        <translation>Nibelheim</translation>
     </message>
     <message>
         <source>Chocobo farm</source>
@@ -3542,11 +3542,11 @@
     </message>
     <message>
         <source>Gongaga Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Área Gongaga</translation>
     </message>
     <message>
         <source>Cosmo Area</source>
-        <translation type="unfinished"></translation>
+        <translation>Área de Cosmo</translation>
     </message>
     <message>
         <source>Battle Square</source>
@@ -5599,15 +5599,15 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>SnowBoard Mini Game </source>
-        <translation type="unfinished"></translation>
+        <translation>Mini Juego de Snowboard</translation>
     </message>
     <message>
         <source>Beginner Course</source>
-        <translation type="unfinished"></translation>
+        <translation>Etapa de principiante</translation>
     </message>
     <message>
         <source>Time:</source>
-        <translation type="unfinished"></translation>
+        <translation>Tiempo:</translation>
     </message>
     <message>
         <source>:</source>
@@ -5619,51 +5619,51 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Score:</source>
-        <translation type="unfinished"></translation>
+        <translation>Puntuación:</translation>
     </message>
     <message>
         <source>Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Puntos</translation>
     </message>
     <message>
         <source>Expert Course</source>
-        <translation type="unfinished"></translation>
+        <translation>Etapa de experto</translation>
     </message>
     <message>
         <source>Crazy Course</source>
-        <translation type="unfinished"></translation>
+        <translation>Etapa loca</translation>
     </message>
     <message>
         <source>G_Bike High Score</source>
-        <translation type="unfinished"></translation>
+        <translation>Puntuación más alta G_Bike</translation>
     </message>
     <message>
         <source>Beat Ruby Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Arma Rubí derrotada</translation>
     </message>
     <message>
         <source>Beat Emerald Weapon</source>
-        <translation type="unfinished"></translation>
+        <translation>Arma Esmeralda derrotada</translation>
     </message>
     <message>
         <source>Battle Points</source>
-        <translation type="unfinished"></translation>
+        <translation>Puntos de batalla</translation>
     </message>
     <message>
         <source>Create Cloud Save Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Crear una carpeta de guardado en la nube</translation>
     </message>
     <message>
         <source>Money</source>
-        <translation type="unfinished"></translation>
+        <translation>Dinero</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Resets When you Pass thru Battle Square&apos;s Door Set Location To &amp;quot;Arena Lobby&amp;quot; so you can spend them&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Se resetean cuando cruzas la puerta de Battle Square a &amp;quot;Arena Lobby&amp;quot; para que puedas gastarlos&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>Advanced Mode</source>
-        <translation type="unfinished"></translation>
+        <translation>Modo Avanzado</translation>
     </message>
 </context>
 <context>
@@ -7171,123 +7171,123 @@ Fénix x3 (180pm)</translation>
     <name>MetadataCreator</name>
     <message>
         <source>Output Path:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ruta de salida:</translation>
     </message>
     <message>
         <source>Folder To Write Files Into</source>
-        <translation type="unfinished"></translation>
+        <translation>Carpeta donde se escribirán los archivos</translation>
     </message>
     <message>
         <source>Sign With User Id</source>
-        <translation type="unfinished"></translation>
+        <translation>Firmar con la ID de usuario</translation>
     </message>
     <message>
         <source>Your SE Id number</source>
-        <translation type="unfinished"></translation>
+        <translation>Tu número de ID de SE</translation>
     </message>
     <message>
         <source>Save00</source>
-        <translation type="unfinished"></translation>
+        <translation>Save00</translation>
     </message>
     <message>
         <source>Save01</source>
-        <translation type="unfinished"></translation>
+        <translation>Save01</translation>
     </message>
     <message>
         <source>Save02</source>
-        <translation type="unfinished"></translation>
+        <translation>Save02</translation>
     </message>
     <message>
         <source>Save03</source>
-        <translation type="unfinished"></translation>
+        <translation>Save03</translation>
     </message>
     <message>
         <source>Save04</source>
-        <translation type="unfinished"></translation>
+        <translation>Save04</translation>
     </message>
     <message>
         <source>Save05</source>
-        <translation type="unfinished"></translation>
+        <translation>Save05</translation>
     </message>
     <message>
         <source>Save06</source>
-        <translation type="unfinished"></translation>
+        <translation>Save06</translation>
     </message>
     <message>
         <source>Add Files For each Save you want in your cloud data.</source>
-        <translation type="unfinished"></translation>
+        <translation>Añade un archivo por cada &apos;Save&apos; que quieras en la nube.</translation>
     </message>
     <message>
         <source>Save07</source>
-        <translation type="unfinished"></translation>
+        <translation>Save07</translation>
     </message>
     <message>
         <source>You Can Use Any Format That Black Chocobo Can Open</source>
-        <translation type="unfinished"></translation>
+        <translation>Puedes usar cualquier formato compatible con Black Chocobo</translation>
     </message>
     <message>
         <source>Save08</source>
-        <translation type="unfinished"></translation>
+        <translation>Save08</translation>
     </message>
     <message>
         <source>Unused files will be Looked for in the Save Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Los archivos sin usar se buscarán en la ruta de guardado</translation>
     </message>
     <message>
         <source>Save09</source>
-        <translation type="unfinished"></translation>
+        <translation>Save09</translation>
     </message>
     <message>
         <source>Pressing Ok WIll Overwrite Any Metadata in the save path</source>
-        <translation type="unfinished"></translation>
+        <translation>Pulsando Ok se sobreescribirá cualquier metadato en la ruta de guardado</translation>
     </message>
     <message>
         <source>Select A Directory To Save Into</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona una carpeta para guardar</translation>
     </message>
     <message>
         <source>Select A File To Use As Save00</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un archivo para usar como Save00</translation>
     </message>
     <message>
         <source>Select A File To Use As Save01</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un archivo para usar como Save01</translation>
     </message>
     <message>
         <source>Select A File To Use As Save02</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un archivo para usar como Save02</translation>
     </message>
     <message>
         <source>Select A File To Use As Save03</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un archivo para usar como Save03</translation>
     </message>
     <message>
         <source>Select A File To Use As Save04</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un archivo para usar como Save04</translation>
     </message>
     <message>
         <source>Select A File To Use As Save05</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un archivo para usar como Save05</translation>
     </message>
     <message>
         <source>Select A File To Use As Save06</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un archivo para usar como Save06</translation>
     </message>
     <message>
         <source>Select A File To Use As Save07</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un archivo para usar como Save07</translation>
     </message>
     <message>
         <source>Select A File To Use As Save08</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un archivo para usar como Save08</translation>
     </message>
     <message>
         <source>Select A File To Use As Save09</source>
-        <translation type="unfinished"></translation>
+        <translation>Selecciona un archivo para usar como Save09</translation>
     </message>
     <message>
         <source>Create Cloud Save Folder</source>
-        <translation type="unfinished"></translation>
+        <translation>Crear carpeta de guardado en la nube</translation>
     </message>
 </context>
 <context>
@@ -8076,7 +8076,7 @@ p, li { white-space: pre-wrap; }
     </message>
     <message>
         <source>New: SnowBoard and G-Bike Score/Time Editing (thanks DLPB)</source>
-        <translation type="unfinished"></translation>
+        <translation>Nuevo: Edición de puntuación/tiempo en los minijuegos Snowboard y G-Bike (Gracias a DLPB)</translation>
     </message>
 </context>
 <context>
