@@ -2846,15 +2846,15 @@
     </message>
     <message>
         <source>Midgar Sector 8</source>
-        <translation>Midgar Sector 8</translation>
+        <translation>Midgar, Sector 8</translation>
     </message>
     <message>
         <source>Train Graveyard</source>
-        <translation>Cementerio de Trenes</translation>
+        <translation>Cemen. trenes</translation>
     </message>
     <message>
         <source>Underwater Reactor</source>
-        <translation>Reactor Submarino</translation>
+        <translation>Reactor submarino</translation>
     </message>
     <message>
         <source>Junon Office F2</source>
@@ -2866,11 +2866,11 @@
     </message>
     <message>
         <source>North Crater</source>
-        <translation>Cráter del Norte</translation>
+        <translation>En Cueva del Norte</translation>
     </message>
     <message>
         <source>Wall Market</source>
-        <translation>Mercado Muro</translation>
+        <translation>Mercado muro</translation>
     </message>
     <message>
         <source>Beginner&apos;s Hall</source>
@@ -2878,11 +2878,11 @@
     </message>
     <message>
         <source>Whirlwind Maze</source>
-        <translation>Mazo Torbellino</translation>
+        <translation>Mazo torbellino</translation>
     </message>
     <message>
         <source>Mt. Nibel</source>
-        <translation>Mt. Nibel</translation>
+        <translation>Monte Nibel</translation>
     </message>
     <message>
         <source>Gaeas Cliff</source>
@@ -2918,7 +2918,7 @@
     </message>
     <message>
         <source>Mt. Corel</source>
-        <translation>Mt. Corel</translation>
+        <translation>Monte Corel</translation>
     </message>
     <message>
         <source>Debug Room [ja]</source>
@@ -2934,7 +2934,7 @@
     </message>
     <message>
         <source>Ropeway Station</source>
-        <translation>Estación Ropeway</translation>
+        <translation>Estación de tranvías</translation>
     </message>
     <message>
         <source>Junon Way</source>
@@ -2950,7 +2950,7 @@
     </message>
     <message>
         <source>Sector 8, Underground</source>
-        <translation>Sector 8, Subterráneo</translation>
+        <translation>Sector 8, subterráneo</translation>
     </message>
     <message>
         <source>Shinra Bldg.</source>
@@ -2982,7 +2982,7 @@
     </message>
     <message>
         <source>Mideel,Clinic</source>
-        <translation>Mideel, Clínica</translation>
+        <translation>Mideel</translation>
     </message>
     <message>
         <source>Sector 6</source>
@@ -2998,7 +2998,7 @@
     </message>
     <message>
         <source>Sector 1 Station</source>
-        <translation>Estación de tren del Sector 1</translation>
+        <translation>Estación del Sector 1</translation>
     </message>
     <message>
         <source>Sector 1</source>
@@ -3006,7 +3006,7 @@
     </message>
     <message>
         <source>No.1 Reactor</source>
-        <translation>No.1 Reactor</translation>
+        <translation>Reactor No.1</translation>
     </message>
     <message>
         <source>Sector 8</source>
@@ -3014,11 +3014,11 @@
     </message>
     <message>
         <source>Last Train From Midgar</source>
-        <translation type="unfinished"></translation>
+        <translation>Ùltimo tren a Midgar</translation>
     </message>
     <message>
         <source>Sector 7 Station</source>
-        <translation>Estación de tren del Sector 7</translation>
+        <translation>Estación del sector 7</translation>
     </message>
     <message>
         <source>Sector 7 Slums</source>
@@ -3026,19 +3026,19 @@
     </message>
     <message>
         <source>Sector 7 Item Store</source>
-        <translation type="unfinished"></translation>
+        <translation>Almacén de elementos de la calle 7</translation>
     </message>
     <message>
         <source>Sector 7 Weapon Shop</source>
-        <translation type="unfinished"></translation>
+        <translation>Almacén de armas</translation>
     </message>
     <message>
         <source>Johnny&apos;s Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Casa de Johnny</translation>
     </message>
     <message>
         <source>Winding Tunnel</source>
-        <translation type="unfinished"></translation>
+        <translation>Túnel curvo</translation>
     </message>
     <message>
         <source>4th Street Plate Int.</source>
@@ -3046,7 +3046,7 @@
     </message>
     <message>
         <source>No.5 Reactor</source>
-        <translation>No.5 Reactor</translation>
+        <translation>Reactor No.5</translation>
     </message>
     <message>
         <source>church in the slums</source>
@@ -3054,7 +3054,7 @@
     </message>
     <message>
         <source>Inside the Church</source>
-        <translation type="unfinished"></translation>
+        <translation>En la iglesia</translation>
     </message>
     <message>
         <source>Church Roof</source>
@@ -3062,7 +3062,7 @@
     </message>
     <message>
         <source>Sector 5 Slum</source>
-        <translation>Sector 5 tug.</translation>
+        <translation>sector 5 tug.</translation>
     </message>
     <message>
         <source>Earthen Pipe</source>
@@ -3070,23 +3070,23 @@
     </message>
     <message>
         <source>Materia store</source>
-        <translation type="unfinished"></translation>
+        <translation>Alm. Materia</translation>
     </message>
     <message>
         <source>Item Store</source>
-        <translation type="unfinished"></translation>
+        <translation>Alm. elem.</translation>
     </message>
     <message>
         <source>House 1f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Casa 1P.</translation>
     </message>
     <message>
         <source>House 2f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Casa 2P.</translation>
     </message>
     <message>
         <source>Weapon Store</source>
-        <translation type="unfinished"></translation>
+        <translation>Alm. armas</translation>
     </message>
     <message>
         <source>Church</source>
@@ -3094,23 +3094,19 @@
     </message>
     <message>
         <source>Sector 6 park</source>
-        <translation type="unfinished"></translation>
+        <translation>Parque del Sector 6</translation>
     </message>
     <message>
         <source>Inside Train </source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Lower Sector 4 Plate </source>
-        <translation type="unfinished"></translation>
+        <translation type="obsolete">Dentro del Tren</translation>
     </message>
     <message>
         <source>Inn</source>
-        <translation type="unfinished"></translation>
+        <translation>Pos.</translation>
     </message>
     <message>
         <source>Pharmacy</source>
-        <translation type="unfinished"></translation>
+        <translation>Farmacia</translation>
     </message>
     <message>
         <source>Diner</source>
@@ -3122,11 +3118,11 @@
     </message>
     <message>
         <source>Materia Store</source>
-        <translation type="unfinished"></translation>
+        <translation>Alm. materia</translation>
     </message>
     <message>
         <source>Men&apos;s Hall</source>
-        <translation type="unfinished"></translation>
+        <translation>Hall varones</translation>
     </message>
     <message>
         <source>Bar</source>
@@ -3138,7 +3134,7 @@
     </message>
     <message>
         <source>Torture Room</source>
-        <translation type="unfinished"></translation>
+        <translation>Sala Tortura</translation>
     </message>
     <message>
         <source>Corneo Hall,2f.</source>
@@ -3146,59 +3142,59 @@
     </message>
     <message>
         <source>Sewer</source>
-        <translation type="unfinished"></translation>
+        <translation>Alcantarilla</translation>
     </message>
     <message>
         <source>Plate Support</source>
-        <translation type="unfinished"></translation>
+        <translation>Soportes de plataforma</translation>
     </message>
     <message>
         <source>Plate Section</source>
-        <translation type="unfinished"></translation>
+        <translation>Sección placa</translation>
     </message>
     <message>
         <source>Sector 0</source>
-        <translation>Sector 0</translation>
+        <translation>sector 0</translation>
     </message>
     <message>
         <source>Shinra Bldg. Stairs</source>
-        <translation type="unfinished"></translation>
+        <translation>Edif. Shinra Escal.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 59f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edif. Shinra 59P.</translation>
     </message>
     <message>
         <source>Outside Elevator</source>
-        <translation type="unfinished"></translation>
+        <translation>Elevador externo</translation>
     </message>
     <message>
         <source>Shinra Bldg. 60f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edif. Shinra 60P.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 61f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edif. Shinra 61P.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 62f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edif. Shinra 62P.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 63f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edif. Shinra 63P.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 64f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edif. Shinra 64P.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 65f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edif. Shinra 65P.</translation>
     </message>
     <message>
         <source>Shinra Bldg.66f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edificio Shinra.p66.</translation>
     </message>
     <message>
         <source>Elevator</source>
@@ -3206,35 +3202,35 @@
     </message>
     <message>
         <source>Shinra Bldg.67f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edificio Shinra.p67.</translation>
     </message>
     <message>
         <source>Shinra Bldg.68f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edificio Shinra.p68.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 69f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edificio Shinra.p69.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 70f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Edificio Shinra.p70.</translation>
     </message>
     <message>
         <source>Shinra Bldg. 1f. lobby</source>
-        <translation type="unfinished"></translation>
+        <translation>Edif. Shinra 1P. Hall</translation>
     </message>
     <message>
         <source>Shinra Bldg. 2f. Lobby</source>
-        <translation type="unfinished"></translation>
+        <translation>Edif. Shinra 2P. Hall</translation>
     </message>
     <message>
         <source>Shinra Bldg. 3f. Lobby</source>
-        <translation type="unfinished"></translation>
+        <translation>Edif. Shinra 3P. Hall</translation>
     </message>
     <message>
         <source>Slum Outskirts</source>
-        <translation type="unfinished"></translation>
+        <translation>Suburbios</translation>
     </message>
     <message>
         <source>Midgar Area</source>
@@ -3242,75 +3238,76 @@
     </message>
     <message>
         <source>Kalm</source>
-        <translation type="unfinished"></translation>
+        <translation>Kalm</translation>
     </message>
     <message>
         <source>House: 1f</source>
-        <translation type="unfinished"></translation>
+        <translation>Casa: 1p</translation>
     </message>
     <message>
         <source>House: 2f</source>
-        <translation type="unfinished"></translation>
+        <translation>Casa: 2p</translation>
     </message>
     <message>
         <source>Rear Tower (Pagoda)</source>
-        <translation type="unfinished"></translation>
+        <translation>Torre post.(Pagoda)</translation>
     </message>
     <message>
         <source>Inn: 1f</source>
-        <translation type="unfinished"></translation>
+        <translation>Pos.: 1p</translation>
     </message>
     <message>
         <source>Inn: 2f</source>
-        <translation type="unfinished"></translation>
+        <translation>Pos.: 1p</translation>
     </message>
     <message>
         <source>Nibelheim House</source>
-        <translation type="unfinished"></translation>
+        <translation>Nibelheim</translation>
     </message>
     <message>
         <source>Tifa&apos;s House</source>
-        <translation type="unfinished"></translation>
+        <translation>Nibelhiem</translation>
     </message>
     <message>
         <source>Cloud&apos;s House</source>
+        <translatorcomment>another shining example of the care the translations for ff7 got....</translatorcomment>
         <translation type="unfinished">Nibelhiem</translation>
     </message>
     <message>
         <source>Nibelheim Item Store</source>
-        <translation type="unfinished"></translation>
+        <translation>Nibelheim</translation>
     </message>
     <message>
         <source>Nibelheim Inn</source>
-        <translation type="unfinished"></translation>
+        <translation>Nibelheim</translation>
     </message>
     <message>
         <source>Mt. Nibel Cave</source>
-        <translation type="unfinished"></translation>
+        <translation>Cueva del monte Nibel</translation>
     </message>
     <message>
         <source>Nibel Reactor</source>
-        <translation type="unfinished"></translation>
+        <translation>Reactor Nibel</translation>
     </message>
     <message>
         <source>Nibel Reactor(Int.)</source>
-        <translation type="unfinished"></translation>
+        <translation>Reactor Nibel(Int.)</translation>
     </message>
     <message>
         <source>Mansion, 1f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mansión, p1.</translation>
     </message>
     <message>
         <source>Mansion, 2f.</source>
-        <translation type="unfinished"></translation>
+        <translation>Mansión, p2.</translation>
     </message>
     <message>
         <source>Mansion, Hidden Steps</source>
-        <translation type="unfinished"></translation>
+        <translation>Mansión, Pasos Ocultos</translation>
     </message>
     <message>
         <source>Mansion, Basement</source>
-        <translation type="unfinished"></translation>
+        <translation>Mansión, Sótano</translation>
     </message>
     <message>
         <source>Nibelheim</source>
@@ -3322,11 +3319,11 @@
     </message>
     <message>
         <source>Marshes</source>
-        <translation type="unfinished"></translation>
+        <translation>Pantanos</translation>
     </message>
     <message>
         <source>Mythril Mine</source>
-        <translation type="unfinished"></translation>
+        <translation>Mina Mitrilo</translation>
     </message>
     <message>
         <source>Base of Fort Condor</source>
@@ -3338,19 +3335,19 @@
     </message>
     <message>
         <source>Watch Room</source>
-        <translation type="unfinished"></translation>
+        <translation>Vigilanc.</translation>
     </message>
     <message>
         <source>Plains</source>
-        <translation type="unfinished"></translation>
+        <translation>Llanos</translation>
     </message>
     <message>
         <source>Under Junon</source>
-        <translation type="unfinished"></translation>
+        <translation>Bajo Junon</translation>
     </message>
     <message>
         <source>Priscilla&apos;s House</source>
-        <translation type="unfinished"></translation>
+        <translation>Casa de Priscilla</translation>
     </message>
     <message>
         <source>Dolphin Offing</source>
@@ -3362,11 +3359,11 @@
     </message>
     <message>
         <source>Locker Room</source>
-        <translation type="unfinished"></translation>
+        <translation>Vestuario</translation>
     </message>
     <message>
         <source>Upper Junon</source>
-        <translation type="unfinished"></translation>
+        <translation>Junon Superior</translation>
     </message>
     <message>
         <source>Barracks</source>
@@ -3374,19 +3371,19 @@
     </message>
     <message>
         <source>Junon Path</source>
-        <translation type="unfinished"></translation>
+        <translation>Camino de Junon</translation>
     </message>
     <message>
         <source>Lower Junon</source>
-        <translation type="unfinished"></translation>
+        <translation>Junon Inferior</translation>
     </message>
     <message>
         <source>Shinra Member&apos;s Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Bar de los miembros de Shinra</translation>
     </message>
     <message>
         <source>Junon Dock</source>
-        <translation type="unfinished"></translation>
+        <translation>Muelle de Junon</translation>
     </message>
     <message>
         <source>Cargo Ship</source>
@@ -3438,15 +3435,15 @@
     </message>
     <message>
         <source>North Corel</source>
-        <translation type="unfinished"></translation>
+        <translation>Corel del norte</translation>
     </message>
     <message>
         <source>North Corel Inn</source>
-        <translation type="unfinished"></translation>
+        <translation>Posada Corel del norte</translation>
     </message>
     <message>
         <source>Terminal Floor</source>
-        <translation type="unfinished"></translation>
+        <translation>Piso terminal</translation>
     </message>
     <message>
         <source>Chocobo Square</source>
@@ -3454,11 +3451,11 @@
     </message>
     <message>
         <source>Ticket Office</source>
-        <translation type="unfinished"></translation>
+        <translation>Taquilla</translation>
     </message>
     <message>
         <source>Wonder Square</source>
-        <translation type="unfinished"></translation>
+        <translation>Wonder Square</translation>
     </message>
     <message>
         <source>Building 1f.</source>
@@ -3474,23 +3471,23 @@
     </message>
     <message>
         <source>Speed square</source>
-        <translation type="unfinished"></translation>
+        <translation>Speed square</translation>
     </message>
     <message>
         <source>Ghost Hotel</source>
-        <translation type="unfinished"></translation>
+        <translation>Hotel Fantasma</translation>
     </message>
     <message>
         <source>Hotel Lobby</source>
-        <translation type="unfinished"></translation>
+        <translation>Vestíbulo del hotel</translation>
     </message>
     <message>
         <source>Hotel Shop</source>
-        <translation type="unfinished"></translation>
+        <translation>Tienda del hotel</translation>
     </message>
     <message>
         <source>Round Square</source>
-        <translation type="unfinished"></translation>
+        <translation>Round Square</translation>
     </message>
     <message>
         <source>Basement</source>
@@ -3502,11 +3499,11 @@
     </message>
     <message>
         <source>Mayor&apos;s Old House</source>
-        <translation type="unfinished"></translation>
+        <translation>Vieja casa del Alcalde</translation>
     </message>
     <message>
         <source>Prison Pub</source>
-        <translation type="unfinished"></translation>
+        <translation>Pub de la prisión</translation>
     </message>
     <message>
         <source>Corel Desert</source>
@@ -3514,27 +3511,27 @@
     </message>
     <message>
         <source>Jungle</source>
-        <translation type="unfinished"></translation>
+        <translation>Selva</translation>
     </message>
     <message>
         <source>Meltdown Reactor</source>
-        <translation type="unfinished"></translation>
+        <translation>Reactor fusión</translation>
     </message>
     <message>
         <source>Gongaga Village</source>
-        <translation type="unfinished"></translation>
+        <translation>Aldea Gongaga</translation>
     </message>
     <message>
         <source>Weapons Store</source>
-        <translation type="unfinished"></translation>
+        <translation>Alm. Armas</translation>
     </message>
     <message>
         <source>Zach&apos;s Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Casa Zack</translation>
     </message>
     <message>
         <source>Mayor&apos;s Home</source>
-        <translation type="unfinished"></translation>
+        <translation>Alcaldía</translation>
     </message>
     <message>
         <source>Gold Saucer Area</source>
@@ -3559,6 +3556,10 @@
     <message>
         <source>Dio&apos;s Museum</source>
         <translation>Museo de Dio</translation>
+    </message>
+    <message>
+        <source>Inside Train</source>
+        <translation>Dentro del Tren</translation>
     </message>
 </context>
 <context>
@@ -4729,7 +4730,7 @@
     </message>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</source>
-        <translation>Archivos de guardado FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</translation>
+        <translation type="obsolete">Archivos de guardado FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7  VGS SaveGame</source>
@@ -5664,6 +5665,14 @@ Las entradas de la tabla son editables</translation>
     <message>
         <source>Advanced Mode</source>
         <translation>Modo Avanzado</translation>
+    </message>
+    <message>
+        <source>MCR File(*.mcr);;MCD File(*.mcd);;MCI File(*.mci);;MC File(*.mc);;DDF File(*.ddf);;PS File(*.ps);;PSM File(*.psm);;BIN File(*.bin);;PS3 Virtual Memory Card(*.VM1)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>VGS File(*.vgs);;MEM File(*.mem)</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

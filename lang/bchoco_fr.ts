@@ -3098,11 +3098,11 @@
     </message>
     <message>
         <source>Inside Train </source>
-        <translation>Intérieur de train</translation>
+        <translation type="obsolete">Intérieur de train</translation>
     </message>
     <message>
         <source>Lower Sector 4 Plate </source>
-        <translation>Plaques Secteur inf. 4</translation>
+        <translation type="obsolete">Plaques Secteur inf. 4</translation>
     </message>
     <message>
         <source>Inn</source>
@@ -3559,6 +3559,10 @@
     <message>
         <source>Dio&apos;s Museum</source>
         <translation>Musée de Dio</translation>
+    </message>
+    <message>
+        <source>Inside Train</source>
+        <translation>Intérieur de train</translation>
     </message>
 </context>
 <context>
@@ -4825,7 +4829,7 @@
     </message>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</source>
-        <translation>Sauvegarde FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</translation>
+        <translation type="obsolete">Sauvegarde FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7  VGS SaveGame</source>
@@ -5664,6 +5668,14 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Advanced Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MCR File(*.mcr);;MCD File(*.mcd);;MCI File(*.mci);;MC File(*.mc);;DDF File(*.ddf);;PS File(*.ps);;PSM File(*.psm);;BIN File(*.bin);;PS3 Virtual Memory Card(*.VM1)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>VGS File(*.vgs);;MEM File(*.mem)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

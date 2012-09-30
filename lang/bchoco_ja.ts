@@ -3004,7 +3004,7 @@
     <message>
         <source>Arena Lobby</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation type="unfinished">闘技場ロビー</translation>
+        <translation>闘技場ロビー</translation>
     </message>
     <message>
         <source>Sector 1 Station</source>
@@ -3134,12 +3134,12 @@
     <message>
         <source>Inside Train </source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>客車内</translation>
+        <translation type="obsolete">客車内</translation>
     </message>
     <message>
         <source>Lower Sector 4 Plate </source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation>４番街プレート下部</translation>
+        <translation type="obsolete">４番街プレート下部</translation>
     </message>
     <message>
         <source>Inn</source>
@@ -3343,59 +3343,59 @@
     </message>
     <message>
         <source>Nibelheim House</source>
-        <translation type="unfinished"></translation>
+        <translation>小さな姉弟がいた家</translation>
     </message>
     <message>
         <source>Tifa&apos;s House</source>
-        <translation type="unfinished"></translation>
+        <translation>ティファの家</translation>
     </message>
     <message>
         <source>Cloud&apos;s House</source>
-        <translation type="unfinished"></translation>
+        <translation>クラウドの家</translation>
     </message>
     <message>
         <source>Nibelheim Item Store</source>
-        <translation type="unfinished"></translation>
+        <translation>ニブルヘイムのよろず屋</translation>
     </message>
     <message>
         <source>Nibelheim Inn</source>
-        <translation type="unfinished"></translation>
+        <translation>ニブルヘイムの宿</translation>
     </message>
     <message>
         <source>Mt. Nibel Cave</source>
-        <translation type="unfinished"></translation>
+        <translation>ニブル山洞窟</translation>
     </message>
     <message>
         <source>Nibel Reactor</source>
-        <translation type="unfinished"></translation>
+        <translation>ニブル魔晄炉</translation>
     </message>
     <message>
         <source>Nibel Reactor(Int.)</source>
-        <translation type="unfinished"></translation>
+        <translation>ニブル魔晄炉内部</translation>
     </message>
     <message>
         <source>Mansion, 1f.</source>
-        <translation type="unfinished"></translation>
+        <translation>神羅屋敷１階</translation>
     </message>
     <message>
         <source>Mansion, 2f.</source>
-        <translation type="unfinished"></translation>
+        <translation>神羅屋敷２階</translation>
     </message>
     <message>
         <source>Mansion, Hidden Steps</source>
-        <translation type="unfinished"></translation>
+        <translation>神羅屋敷隠し階段</translation>
     </message>
     <message>
         <source>Mansion, Basement</source>
-        <translation type="unfinished"></translation>
+        <translation>神羅屋敷地下</translation>
     </message>
     <message>
         <source>Nibelheim</source>
-        <translation type="unfinished"></translation>
+        <translation>ニブルヘイム</translation>
     </message>
     <message>
         <source>Chocobo farm</source>
-        <translation type="unfinished"></translation>
+        <translation>チョコボファーム</translation>
     </message>
     <message>
         <source>Marshes</source>
@@ -3403,14 +3403,16 @@
     </message>
     <message>
         <source>Mythril Mine</source>
-        <translation type="unfinished"></translation>
+        <translation>ミスリルマイン</translation>
     </message>
     <message>
         <source>Base of Fort Condor</source>
+        <translatorcomment>has no translation.</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <source>Entrance to Fort Condor</source>
+        <translatorcomment>has no translation</translatorcomment>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3419,83 +3421,83 @@
     </message>
     <message>
         <source>Plains</source>
-        <translation type="unfinished"></translation>
+        <translation>草原</translation>
     </message>
     <message>
         <source>Under Junon</source>
-        <translation type="unfinished"></translation>
+        <translation>アンダージュノン</translation>
     </message>
     <message>
         <source>Priscilla&apos;s House</source>
-        <translation type="unfinished"></translation>
+        <translation>プリシラの家</translation>
     </message>
     <message>
         <source>Dolphin Offing</source>
-        <translation type="unfinished"></translation>
+        <translation>イルカの入りえ</translation>
     </message>
     <message>
         <source>Airport</source>
-        <translation type="unfinished"></translation>
+        <translation>エアポート</translation>
     </message>
     <message>
         <source>Locker Room</source>
-        <translation type="unfinished"></translation>
+        <translation>ひかえ室</translation>
     </message>
     <message>
         <source>Upper Junon</source>
-        <translation type="unfinished"></translation>
+        <translation>アルジュノン</translation>
     </message>
     <message>
         <source>Barracks</source>
-        <translation type="unfinished"></translation>
+        <translation>兵舎</translation>
     </message>
     <message>
         <source>Junon Path</source>
-        <translation type="unfinished"></translation>
+        <translation>ジュノン・通路</translation>
     </message>
     <message>
         <source>Lower Junon</source>
-        <translation type="unfinished"></translation>
+        <translation>エルジュノン</translation>
     </message>
     <message>
         <source>Shinra Member&apos;s Bar</source>
-        <translation type="unfinished"></translation>
+        <translation>神羅会員制ＢＡＲ</translation>
     </message>
     <message>
         <source>Junon Dock</source>
-        <translation type="unfinished"></translation>
+        <translation>ジュノン港</translation>
     </message>
     <message>
         <source>Cargo Ship</source>
-        <translation type="unfinished"></translation>
+        <translation>運搬船</translation>
     </message>
     <message>
         <source>Costa del Sol Harbor</source>
-        <translation type="unfinished"></translation>
+        <translation>コスタ・デル・ソル港</translation>
     </message>
     <message>
         <source>Costa del Sol</source>
-        <translation type="unfinished"></translation>
+        <translation>コスタ・デル・ソル</translation>
     </message>
     <message>
         <source>House for Sale</source>
-        <translation type="unfinished"></translation>
+        <translation>売り家（旧神羅べっそう</translation>
     </message>
     <message>
         <source>Cellar</source>
-        <translation type="unfinished"></translation>
+        <translation>地下室</translation>
     </message>
     <message>
         <source>Costa del Sol Inn</source>
-        <translation type="unfinished"></translation>
+        <translation>コスタデルソル・イン</translation>
     </message>
     <message>
         <source>Cloud&apos;s Past</source>
-        <translation type="unfinished"></translation>
+        <translation>クラウドの過去</translation>
     </message>
     <message>
         <source>Cloud&apos;s Villa</source>
-        <translation type="unfinished"></translation>
+        <translation>クラウドべっそう</translation>
     </message>
     <message>
         <source>Grasslands Area</source>
@@ -3511,107 +3513,107 @@
     </message>
     <message>
         <source>Corel Reactor</source>
-        <translation type="unfinished"></translation>
+        <translation>コレル魔晄炉</translation>
     </message>
     <message>
         <source>North Corel</source>
-        <translation type="unfinished"></translation>
+        <translation>北コレル</translation>
     </message>
     <message>
         <source>North Corel Inn</source>
-        <translation type="unfinished"></translation>
+        <translation>宿屋</translation>
     </message>
     <message>
         <source>Terminal Floor</source>
-        <translation type="unfinished"></translation>
+        <translation>ターミナルフロア</translation>
     </message>
     <message>
         <source>Chocobo Square</source>
-        <translation type="unfinished"></translation>
+        <translation>チョコボスクェア</translation>
     </message>
     <message>
         <source>Ticket Office</source>
-        <translation type="unfinished"></translation>
+        <translation>チケットオフィス</translation>
     </message>
     <message>
         <source>Wonder Square</source>
-        <translation type="unfinished"></translation>
+        <translation>ワンダースクェア</translation>
     </message>
     <message>
         <source>Building 1f.</source>
-        <translation type="unfinished"></translation>
+        <translation>建物１Ｆ</translation>
     </message>
     <message>
         <source>Building 2f.</source>
-        <translation type="unfinished"></translation>
+        <translation>建物２Ｆ</translation>
     </message>
     <message>
         <source>Event square</source>
-        <translation type="unfinished"></translation>
+        <translation>イベントスクェア</translation>
     </message>
     <message>
         <source>Speed square</source>
-        <translation type="unfinished"></translation>
+        <translation>スピードスクェア</translation>
     </message>
     <message>
         <source>Ghost Hotel</source>
-        <translation type="unfinished"></translation>
+        <translation>ゴーストホテル</translation>
     </message>
     <message>
         <source>Hotel Lobby</source>
-        <translation type="unfinished"></translation>
+        <translation>ホテルロビー</translation>
     </message>
     <message>
         <source>Hotel Shop</source>
-        <translation type="unfinished"></translation>
+        <translation>ホテルショップ</translation>
     </message>
     <message>
         <source>Round Square</source>
-        <translation type="unfinished"></translation>
+        <translation>ラウンドスクェア</translation>
     </message>
     <message>
         <source>Basement</source>
-        <translation type="unfinished"></translation>
+        <translation>地下室</translation>
     </message>
     <message>
         <source>Container</source>
-        <translation type="unfinished"></translation>
+        <translation>コーツのコンテナ</translation>
     </message>
     <message>
         <source>Mayor&apos;s Old House</source>
-        <translation type="unfinished"></translation>
+        <translation>旧村長の家</translation>
     </message>
     <message>
         <source>Prison Pub</source>
-        <translation type="unfinished"></translation>
+        <translation>プリズンパブ</translation>
     </message>
     <message>
         <source>Corel Desert</source>
-        <translation type="unfinished"></translation>
+        <translation>コレルサバク</translation>
     </message>
     <message>
         <source>Jungle</source>
-        <translation type="unfinished"></translation>
+        <translation>ジャングル</translation>
     </message>
     <message>
         <source>Meltdown Reactor</source>
-        <translation type="unfinished"></translation>
+        <translation>メルトダウン魔晄炉</translation>
     </message>
     <message>
         <source>Gongaga Village</source>
-        <translation type="unfinished"></translation>
+        <translation>ゴンガガ</translation>
     </message>
     <message>
         <source>Weapons Store</source>
-        <translation type="unfinished"></translation>
+        <translation>武器屋</translation>
     </message>
     <message>
         <source>Zach&apos;s Home</source>
-        <translation type="unfinished"></translation>
+        <translation>ザックスの実家</translation>
     </message>
     <message>
         <source>Mayor&apos;s Home</source>
-        <translation type="unfinished"></translation>
+        <translation>村長の家</translation>
     </message>
     <message>
         <source>Gold Saucer Area</source>
@@ -3627,11 +3629,15 @@
     </message>
     <message>
         <source>Battle Square</source>
-        <translation type="unfinished"></translation>
+        <translation>バトルスクェア</translation>
     </message>
     <message>
         <source>Dio&apos;s Museum</source>
-        <translation type="unfinished"></translation>
+        <translation>ディオの展示場</translation>
+    </message>
+    <message>
+        <source>Inside Train</source>
+        <translation>客車内</translation>
     </message>
 </context>
 <context>
@@ -4802,7 +4808,7 @@
     </message>
     <message>
         <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</source>
-        <translation>FF7 MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</translation>
+        <translation type="obsolete">FF7 MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</translation>
     </message>
     <message>
         <source>Save Final Fantasy 7  VGS SaveGame</source>
@@ -5737,6 +5743,14 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Advanced Mode</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>MCR File(*.mcr);;MCD File(*.mcd);;MCI File(*.mci);;MC File(*.mc);;DDF File(*.ddf);;PS File(*.ps);;PSM File(*.psm);;BIN File(*.bin);;PS3 Virtual Memory Card(*.VM1)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>VGS File(*.vgs);;MEM File(*.mem)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
