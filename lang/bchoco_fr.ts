@@ -1075,6 +1075,10 @@
         <source>D.Sentence</source>
         <translation>Peine de mort</translation>
     </message>
+    <message>
+        <source>Resist</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemSelector</name>

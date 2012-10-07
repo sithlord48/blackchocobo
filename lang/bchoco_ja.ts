@@ -1075,6 +1075,10 @@
         <source>D.Sentence</source>
         <translation>死の宣告</translation>
     </message>
+    <message>
+        <source>Resist</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ItemSelector</name>

@@ -341,7 +341,7 @@ void ItemPreview::status_info(int id)
     if(id<0 || id>319){/*invalid number*/}
     else
     {
-        for(int i=0;i<23;i++)
+        for(int i=0;i<24;i++)
         {
             QString effect;
             int status=0;
@@ -370,6 +370,7 @@ void ItemPreview::status_info(int id)
                 case 20: status=data.status_reflect(id); effect.append(tr("Reflect"));break;
                 case 21: status=data.status_shield(id); effect.append(tr("Shield"));break;
                 case 22: status=data.status_regen(id); effect.append(tr("Regen"));break;
+                case 23:status=data.status_resist(id); effect.append(tr("Resist"));break;
             }
             switch(status)
             {

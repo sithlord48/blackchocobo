@@ -2325,7 +2325,7 @@ void CharEditor::status_info(void)
          if(item_id <0 || item_id >319){}
          else
          {
-            for(int i=0;i<23;i++)
+            for(int i=0;i<24;i++)
             {
                 QString effect;
                 int status=0;
@@ -2354,6 +2354,7 @@ void CharEditor::status_info(void)
                     case 20: status=Items.status_reflect(item_id); effect.append(tr("Reflect"));break;
                     case 21: status=Items.status_shield(item_id); effect.append(tr("Shield"));break;
                     case 22: status=Items.status_regen(item_id); effect.append(tr("Regen"));break;
+		    case 23: status=Items.status_resist(item_id); effect.append(tr("Regen"));break;
                 }
                 switch(status)
                 {
