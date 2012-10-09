@@ -93,13 +93,15 @@ unix:!symbian{
     message("Using Svn Revision:$${VERS}")
     }
     system(lrelease Black_Chocobo.pro)#release the .qm files
-    system(rcc -binary locations.qrc -o locations)
+    system(rcc -binary locations.qrc -o locations.rcc) #make locations resource
 }
 
 #set up for windows
 win32:{
     #set up icon for windows
     RC_FILE = bchoco.rc
+    system(lrelease Black_Chocobo.pro)#release the .qm files
+    system(rcc -binary locations.qrc -o locations.rcc) #make locations resource
     #VERS = $$system(svnrev $$PWD)
     #{
     #DEFINES += SVNVERSION=\"$${VERS}\"# svn rev was found set to its value
@@ -117,7 +119,7 @@ lang.path = /opt/blackchocobo/lang #set path for lang folder
 lang.files = lang/*.qm  #grab All qm files
 
 locationPreview.path=/opt/blackchocobo/
-locationPreview.file= locations
+locationPreview.file= locations.rcc
 
 icon.path = /usr/share/pixmaps       #system path icon.
 icon.files = icon/Black_Chocobo.png
