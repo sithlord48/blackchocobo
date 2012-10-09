@@ -36,8 +36,7 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     s=0;
     buffer_materia.id=FF7Materia::EmptyId;
     for(int i=0;i<4;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
-    QString ScreenShotPath=QApplication::applicationDirPath().append(QString("/locations"));
-    if(QResource::registerResource(ScreenShotPath)){showLocPreview=true;}
+    if(QResource::registerResource(QApplication::applicationDirPath().append(QString("/locations.rcc")))){showLocPreview=true;}
     else{showLocPreview=false;}
     init_display();
     init_connections();
