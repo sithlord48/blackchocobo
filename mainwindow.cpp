@@ -36,9 +36,13 @@ MainWindow::MainWindow(QWidget *parent,FF7Save *ff7data,QSettings *configdata)
     s=0;
     buffer_materia.id=FF7Materia::EmptyId;
     for(int i=0;i<4;i++){buffer_materia.ap[i]=0xFF;} //empty buffer incase
+    QString ScreenShotPath=QApplication::applicationDirPath().append(QString("/locations"));
+    if(QResource::registerResource(ScreenShotPath)){showLocPreview=true;}
+    else{showLocPreview=false;}
     init_display();
     init_connections();
     init_settings();
+    //setup locations previews if found
     on_actionNew_Game_triggered();
     file_modified(false);
 }
@@ -52,15 +56,17 @@ void MainWindow::init_display()
     ui->tbl_location_field->setColumnWidth(4,50);
     ui->tbl_location_field->setColumnWidth(5,50);
 
-
     QTableWidgetItem *newItem;
     FF7Location Locations;
     ui->tbl_location_field->setRowCount(Locations.len());
     for (int i=0;i<ui->tbl_location_field->rowCount();i++)
     {
-        QString tooltip(QString("<html><head/><body><p><img src=\":/locations/%1_%2\"/></p></body></html>").arg(Locations.map_id(i),Locations.loc_id(i)));
         newItem = new QTableWidgetItem(Locations.loc_name(i),0);
-        newItem->setToolTip(tooltip);
+        if(showLocPreview)
+        {//set the tooltip to the needed file if the locations resource is found.
+            QString tooltip(QString("<html><head/><body><p><img src=\":/locations/%1_%2\"/></p></body></html>").arg(Locations.map_id(i),Locations.loc_id(i)));
+            newItem->setToolTip(tooltip);
+        }
         ui->tbl_location_field->setItem(i,0,newItem);
         newItem = new QTableWidgetItem(Locations.map_id(i),0);
         newItem->setTextAlignment(Qt::AlignHCenter);

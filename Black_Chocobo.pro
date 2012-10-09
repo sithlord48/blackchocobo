@@ -93,6 +93,7 @@ unix:!symbian{
     message("Using Svn Revision:$${VERS}")
     }
     system(lrelease Black_Chocobo.pro)#release the .qm files
+    system(rcc -binary locations.qrc -o locations)
 }
 
 #set up for windows
@@ -115,6 +116,9 @@ target.path = /opt/blackchocobo #set the path to deploy the build target.
 lang.path = /opt/blackchocobo/lang #set path for lang folder
 lang.files = lang/*.qm  #grab All qm files
 
+locationPreview.path=/opt/blackchocobo/
+locationPreview.file= locations
+
 icon.path = /usr/share/pixmaps       #system path icon.
 icon.files = icon/Black_Chocobo.png
 
@@ -123,6 +127,7 @@ desktop.files = Black_Chocobo.desktop  #
 
 INSTALLS += target \
     lang  \
+    locationPreview \
     icon  \
     desktop
 }
