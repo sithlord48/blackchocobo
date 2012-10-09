@@ -119,7 +119,7 @@ lang.path = /opt/blackchocobo/lang #set path for lang folder
 lang.files = lang/*.qm  #grab All qm files
 
 locationPreview.path=/opt/blackchocobo/
-locationPreview.file= locations.rcc
+locationPreview.files= locations.rcc
 
 icon.path = /usr/share/pixmaps       #system path icon.
 icon.files = icon/Black_Chocobo.png
