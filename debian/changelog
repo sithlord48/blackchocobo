@@ -1,4 +1,4 @@
-blackchocobo (1.9.71) precise; urgency=low
+blackchocobo (1.9.701) precise; urgency=low
   *Fix:Package Error not Deploying locations.rcc
  -- Chris Rizzitello <sithlord48@gmail.com>  Tue, 9 Oct 2012 02:34:48 -0400
  
