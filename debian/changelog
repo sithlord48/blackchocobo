@@ -1,11 +1,11 @@
-blackchocobo (1.9.7) precise; urgency=low
+blackchocobo (1.9.70) precise; urgency=low
   *New:Drop File Support
   *New:ItemList Widget
   *New:Character Editor Widget
   *New:ChocoboEditor Widget
   *New:MateriaEditor Widget
   *New:SlotSelection Dialog
-  -- Chris Rizzitello <sithlord48@gmail.com>  Wed, 14 Mar 2012 20:48:07-0400
+ -- Chris Rizzitello <sithlord48@gmail.com>  Wed, 14 Mar 2012 20:48:07 -0400
 
 blackchocobo (1.9.6) natty; urgency=low
   *New:Added VM1 to list of VMC formats
@@ -14,7 +14,7 @@ blackchocobo (1.9.6) natty; urgency=low
   *New:Static Data Classes
   *New:Added Support for French PSX (BASCES-00868)
   *Fixed:E.Skills Not updating in some cases
-  -- Chris Rizzitello <sithlord48@gmail.com>  Wed, 14 Mar 2012 20:48:07-0400
+  -- Chris Rizzitello <sithlord48@gmail.com>  Wed, 14 Mar 2012 20:48:07 -0400
 
   blackchocobo (1.9.51) natty; urgency=low
   *Fixed: Error In Non English Materia Combobox
