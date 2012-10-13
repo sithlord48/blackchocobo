@@ -2137,3 +2137,201 @@ QString FF7Save::filetimestamp(QString fileName)
     if(tempFile.exists()){QFileInfo file(fileName); return QString::number(file.lastModified().toMSecsSinceEpoch());}
     else {return "";}
 }
+QByteArray FF7Save::SlotRawData(int s)
+{
+    if(s<0 || s>14){return QByteArray(0x00);}
+    QByteArray temp;
+    temp.setRawData(reinterpret_cast<char *>(&slot[s]),sizeof(slot[s]));
+    return temp;
+}
+bool FF7Save::setSlotRawData(int s,QByteArray data)
+{
+
+    if(s<0 || s>14){return false;}
+    if(data.size()!=sizeof(slot[s])){return false;}
+    memcpy(&slot[s],data,sizeof(slot[s]));
+    return true;
+}
+QByteArray FF7Save::UnknownVar(int s,int z)
+{
+    if(s<0 || s>14){return QByteArray(0x00);}
+    QByteArray temp;
+    switch(z)
+    {
+        case 0: temp.setRawData(0x00,1); break;
+        case 1: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_1),sizeof(slot[s].z_1)); break;
+        case 2: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_2),sizeof(slot[s].z_2)); break;
+        case 3: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_3),sizeof(slot[s].z_3)); break;
+        case 4: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_4),sizeof(slot[s].z_4)); break;
+        case 5: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_5),sizeof(slot[s].z_5)); break;
+        case 6: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_6),sizeof(slot[s].z_6)); break;
+        case 7: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_7),sizeof(slot[s].z_7)); break;
+        case 8: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_8),sizeof(slot[s].z_8)); break;
+        case 9: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_9),sizeof(slot[s].z_9)); break;
+        case 10: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_10),sizeof(slot[s].z_10)); break;
+        case 11: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_11),sizeof(slot[s].z_11)); break;
+        case 12: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_12),sizeof(slot[s].z_12)); break;
+        case 13: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_13),sizeof(slot[s].z_13)); break;
+        case 14: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_14),sizeof(slot[s].z_14)); break;
+        case 15: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_15),sizeof(slot[s].z_15)); break;
+        case 16: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_16),sizeof(slot[s].z_16)); break;
+        case 17: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_17),sizeof(slot[s].z_17)); break;
+        case 18: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_18),sizeof(slot[s].z_18)); break;
+        case 19: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_19),sizeof(slot[s].z_19)); break;
+        case 20: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_20),sizeof(slot[s].z_20)); break;
+        case 21: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_21),sizeof(slot[s].z_21)); break;
+        case 22: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_22),sizeof(slot[s].z_22)); break;
+        case 23: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_23),sizeof(slot[s].z_23)); break;
+        case 24: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_24),sizeof(slot[s].z_24)); break;
+        case 25: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_25),sizeof(slot[s].z_25)); break;
+        case 26: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_26),sizeof(slot[s].z_26)); break;
+        case 27: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_27),sizeof(slot[s].z_27)); break;
+        case 28: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_28),sizeof(slot[s].z_28)); break;
+        case 29: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_29),sizeof(slot[s].z_29)); break;
+        case 30: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_30),sizeof(slot[s].z_30)); break;
+        case 31: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_31),sizeof(slot[s].z_31)); break;
+        case 32: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_32),sizeof(slot[s].z_32)); break;
+        case 33: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_33),sizeof(slot[s].z_33)); break;
+        case 34: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_34),sizeof(slot[s].z_34)); break;
+        case 35: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_35),sizeof(slot[s].z_35)); break;
+        case 36: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_36),sizeof(slot[s].z_36)); break;
+        case 37: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_37),sizeof(slot[s].z_37)); break;
+        case 38: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_38),sizeof(slot[s].z_38)); break;
+        case 39: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_39),sizeof(slot[s].z_39)); break;
+        case 40: temp.setRawData(reinterpret_cast<char *>(&slot[s].z_40),sizeof(slot[s].z_40)); break;
+        default: temp.setRawData(0x00,1); break;
+    }
+    return temp;
+}
+
+bool FF7Save::setUnknownVar(int s,int z,QByteArray data)
+{
+    if(s<0 || s>14){return false;}
+    bool result;
+    switch(z)
+    {
+        case 0: result=false; break;
+        case 1:
+                    if(data.size() != sizeof(slot[s].z_1)) {result=false; break;}
+                    else{memcpy(&slot[s].z_1,&data,sizeof(slot[s].z_1)); result=true;break;}
+        case 2:
+                    if(data.size() != sizeof(slot[s].z_2)) {result=false; break;}
+                    else{memcpy(&slot[s].z_2,&data,sizeof(slot[s].z_2)); result=true;break;}
+        case 3:
+                    if(data.size() != sizeof(slot[s].z_3)) {result=false; break;}
+                    else{memcpy(&slot[s].z_3,&data,sizeof(slot[s].z_3)); result=true;break;}
+        case 4:
+                    if(data.size() != sizeof(slot[s].z_4)) {result=false; break;}
+                    else{memcpy(&slot[s].z_4,&data,sizeof(slot[s].z_4)); result=true;break;}
+        case 5:
+                    if(data.size() != sizeof(slot[s].z_5)) {result=false; break;}
+                    else{memcpy(&slot[s].z_5,&data,sizeof(slot[s].z_5)); result=true;break;}
+        case 6:
+                    if(data.size() != sizeof(slot[s].z_6)) {result=false; break;}
+                    else{memcpy(&slot[s].z_6,&data,sizeof(slot[s].z_6)); result=true;break;}
+        case 7:
+                    if(data.size() != sizeof(slot[s].z_7)) {result=false; break;}
+                    else{memcpy(&slot[s].z_7,&data,sizeof(slot[s].z_7)); result=true;break;}
+        case 8:
+                    if(data.size() != sizeof(slot[s].z_8)) {result=false; break;}
+                    else{memcpy(&slot[s].z_8,&data,sizeof(slot[s].z_8)); result=true;break;}
+        case 9:
+                    if(data.size() != sizeof(slot[s].z_9)) {result=false; break;}
+                    else{memcpy(&slot[s].z_9,&data,sizeof(slot[s].z_9)); result=true;break;}
+        case 10:
+                    if(data.size() != sizeof(slot[s].z_10)) {result=false; break;}
+                    else{memcpy(&slot[s].z_10,&data,sizeof(slot[s].z_10)); result=true;break;}
+        case 11:
+                    if(data.size() != sizeof(slot[s].z_11)) {result=false; break;}
+                    else{memcpy(&slot[s].z_11,&data,sizeof(slot[s].z_11)); result=true;break;}
+        case 12:
+                    if(data.size() != sizeof(slot[s].z_12)) {result=false; break;}
+                    else{memcpy(&slot[s].z_12,&data,sizeof(slot[s].z_12)); result=true;break;}
+        case 13:
+                    if(data.size() != sizeof(slot[s].z_13)) {result=false; break;}
+                    else{memcpy(&slot[s].z_13,&data,sizeof(slot[s].z_13)); result=true;break;}
+        case 14:
+                    if(data.size() != sizeof(slot[s].z_14)) {result=false; break;}
+                    else{memcpy(&slot[s].z_14,&data,sizeof(slot[s].z_14)); result=true;break;}
+        case 15:
+                    if(data.size() != sizeof(slot[s].z_15)) {result=false; break;}
+                    else{memcpy(&slot[s].z_15,&data,sizeof(slot[s].z_15)); result=true;break;}
+        case 16:
+                    if(data.size() != sizeof(slot[s].z_16)) {result=false; break;}
+                    else{memcpy(&slot[s].z_16,&data,sizeof(slot[s].z_16)); result=true;break;}
+        case 17:
+                    if(data.size() != sizeof(slot[s].z_17)) {result=false; break;}
+                    else{memcpy(&slot[s].z_17,&data,sizeof(slot[s].z_17)); result=true;break;}
+        case 18:
+                    if(data.size() != sizeof(slot[s].z_18)) {result=false; break;}
+                    else{memcpy(&slot[s].z_18,&data,sizeof(slot[s].z_18)); result=true;break;}
+        case 19:
+                    if(data.size() != sizeof(slot[s].z_19)) {result=false; break;}
+                    else{memcpy(&slot[s].z_19,&data,sizeof(slot[s].z_19)); result=true;break;}
+        case 20:
+                    if(data.size() != sizeof(slot[s].z_20)) {result=false; break;}
+                    else{memcpy(&slot[s].z_20,&data,sizeof(slot[s].z_20)); result=true;break;}
+        case 21:
+                    if(data.size() != sizeof(slot[s].z_21)) {result=false; break;}
+                    else{memcpy(&slot[s].z_21,&data,sizeof(slot[s].z_21)); result=true;break;}
+        case 22:
+                    if(data.size() != sizeof(slot[s].z_22)) {result=false; break;}
+                    else{memcpy(&slot[s].z_22,&data,sizeof(slot[s].z_22)); result=true;break;}
+        case 23:
+                    if(data.size() != sizeof(slot[s].z_23)) {result=false; break;}
+                    else{memcpy(&slot[s].z_23,&data,sizeof(slot[s].z_23)); result=true;break;}
+        case 24:
+                    if(data.size() != sizeof(slot[s].z_24)) {result=false; break;}
+                    else{memcpy(&slot[s].z_24,&data,sizeof(slot[s].z_24)); result=true;break;}
+        case 25:
+                    if(data.size() != sizeof(slot[s].z_25)) {result=false; break;}
+                    else{memcpy(&slot[s].z_25,&data,sizeof(slot[s].z_25)); result=true;break;}
+        case 26:
+                    if(data.size() != sizeof(slot[s].z_26)) {result=false; break;}
+                    else{memcpy(&slot[s].z_26,&data,sizeof(slot[s].z_26)); result=true;break;}
+        case 27:
+                    if(data.size() != sizeof(slot[s].z_27)) {result=false; break;}
+                    else{memcpy(&slot[s].z_27,&data,sizeof(slot[s].z_27)); result=true;break;}
+        case 28:
+                    if(data.size() != sizeof(slot[s].z_28)) {result=false; break;}
+                    else{memcpy(&slot[s].z_28,&data,sizeof(slot[s].z_28)); result=true;break;}
+        case 29:
+                    if(data.size() != sizeof(slot[s].z_29)) {result=false; break;}
+                    else{memcpy(&slot[s].z_29,&data,sizeof(slot[s].z_29)); result=true;break;}
+        case 30:
+                    if(data.size() != sizeof(slot[s].z_30)) {result=false; break;}
+                    else{memcpy(&slot[s].z_30,&data,sizeof(slot[s].z_30)); result=true;break;}
+        case 31:
+                    if(data.size() != sizeof(slot[s].z_31)) {result=false; break;}
+                    else{memcpy(&slot[s].z_31,&data,sizeof(slot[s].z_31)); result=true;break;}
+        case 32:
+                    if(data.size() != sizeof(slot[s].z_32)) {result=false; break;}
+                    else{memcpy(&slot[s].z_32,&data,sizeof(slot[s].z_32)); result=true;break;}
+        case 33:
+                    if(data.size() != sizeof(slot[s].z_33)) {result=false; break;}
+                    else{memcpy(&slot[s].z_33,&data,sizeof(slot[s].z_33)); result=true;break;}
+        case 34:
+                    if(data.size() != sizeof(slot[s].z_34)) {result=false; break;}
+                    else{memcpy(&slot[s].z_34,&data,sizeof(slot[s].z_34)); result=true;break;}
+        case 35:
+                    if(data.size() != sizeof(slot[s].z_35)) {result=false; break;}
+                    else{memcpy(&slot[s].z_35,&data,sizeof(slot[s].z_35)); result=true;break;}
+        case 36:
+                    if(data.size() != sizeof(slot[s].z_36)) {result=false; break;}
+                    else{memcpy(&slot[s].z_36,&data,sizeof(slot[s].z_36)); result=true;break;}
+        case 37:
+                    if(data.size() != sizeof(slot[s].z_37)) {result=false; break;}
+                    else{memcpy(&slot[s].z_37,&data,sizeof(slot[s].z_37)); result=true;break;}
+        case 38:
+                    if(data.size() != sizeof(slot[s].z_38)) {result=false; break;}
+                    else{memcpy(&slot[s].z_38,&data,sizeof(slot[s].z_38)); result=true;break;}
+        case 39:
+                    if(data.size() != sizeof(slot[s].z_39)) {result=false; break;}
+                    else{memcpy(&slot[s].z_39,&data,sizeof(slot[s].z_39)); result=true;break;}
+        case 40:
+                    if(data.size() != sizeof(slot[s].z_40)) {result=false; break;}
+                    else{memcpy(&slot[s].z_40,&data,sizeof(slot[s].z_40)); result=true;break;}
+        default: result=false; break;
+    }
+    return result;
+}
