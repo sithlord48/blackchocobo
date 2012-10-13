@@ -230,8 +230,6 @@ public:
   void setChocoPCount(int s, int chocoSlot,quint8 value);
   void setChocoPersonality(int s, int chocoSlot,quint8 value);
   void setChocoCantMate(int s,int chocoSlot,bool cantMate);
-  //publicly accessable core data(for now)
-  FF7SLOT slot[15]; //core slot data.
   // Return File Info
 
   int len_file(void);//Return File length.
@@ -262,6 +260,15 @@ public:
   quint8 psx_block_next(int s);// if using more then one block return location of next block
   quint8 psx_block_size(int s);//how many blocks save uses.
   void fix_pc_bytemask(int s);// update so last slot is shown selected on load (must be public to set to currently viewed slot).
+
+  QByteArray SlotRawData(int s); //Return Raw data from the slot
+  bool setSlotRawData(int s, QByteArray data);
+
+  QByteArray UnknownVar(int s,int z);
+  bool setUnknownVar(int s,int z,QByteArray data);
+
+  //publicly accessable core data(for now)
+  FF7SLOT slot[15]; //core slot data.
 private:
   //data members
   //FF7SLOT slot[15];
