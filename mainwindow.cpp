@@ -3389,7 +3389,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
     int rows=0;
     QTableWidgetItem *newItem;
     quint8 value=0;
-    QByteArray temp;
+    QByteArray temp,temp2;
 
     ui->tbl_unknown->reset();
     ui->tbl_unknown->setColumnWidth(0,40);
@@ -3588,8 +3588,8 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
                 case 39: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_39[i]; break;
                 case 40: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_40[i]; break;
                 //Always Last Case , Full Slot
-                case 41: if(i==0){temp.setRawData(reinterpret_cast<char *>(&ff7->slot[ui->combo_compare_slot->currentIndex()-1]),rows);}//Resource friendly: we set the slot data only one time (before was one time for each row).
-                         value = temp.at(i);
+                case 41: if(i==0){temp2.setRawData(reinterpret_cast<char *>(&ff7->slot[ui->combo_compare_slot->currentIndex()-1]),rows);}//Resource friendly: we set the slot data only one time (before was one time for each row).
+                         value = temp2.at(i);
                          break;
             }
             //Write Hex
