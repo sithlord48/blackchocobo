@@ -40,7 +40,11 @@ SOURCES += main.cpp \
     FF7tk/static_data/FF7Char.cpp \
     FF7tk/widgets/ItemSelector.cpp \
     FF7tk/widgets/ItemList.cpp \
-    FF7tk/widgets/MetadataCreator.cpp
+    FF7tk/widgets/MetadataCreator.cpp \
+    qhexedit/xbytearray.cpp \
+    qhexedit/qhexedit_p.cpp \
+    qhexedit/qhexedit.cpp \
+    qhexedit/commands.cpp
 HEADERS += mainwindow.h \
     about.h \
     options.h \
@@ -48,7 +52,11 @@ HEADERS += mainwindow.h \
     version.h \
     FF7tk/widgets/ItemSelector.h \
     FF7tk/widgets/ItemList.h \
-    FF7tk/widgets/MetadataCreator.h
+    FF7tk/widgets/MetadataCreator.h \
+    qhexedit/xbytearray.h \
+    qhexedit/qhexedit_p.h \
+    qhexedit/qhexedit.h \
+    qhexedit/commands.h
 
 FORMS += mainwindow.ui \
     about.ui \

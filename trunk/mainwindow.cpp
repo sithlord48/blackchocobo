@@ -212,6 +212,13 @@ void MainWindow::init_display()
     stable_6_layout->setContentsMargins(0,0,0,0);
     stable_6_layout->addWidget(chocobo_stable_6);
     ui->box_stable6->setLayout(stable_6_layout);
+
+    hexEditor = new QHexEdit;
+    hexEditor->setHighlighting(false);
+    QVBoxLayout *hexLayout = new QVBoxLayout;
+    hexLayout->setContentsMargins(0,0,0,0);
+    hexLayout->addWidget(hexEditor);
+    ui->group_hexedit->setLayout(hexLayout);
 }
 void MainWindow::init_connections()
 {//check Qt Version and Connect With Apporate Method.
@@ -366,6 +373,7 @@ void MainWindow::init_connections()
         connect(chocobo_stable_6,SIGNAL(personality_changed(quint8)),this,SLOT(c6_personalityChanged(quint8)));
         connect(chocobo_stable_6,SIGNAL(pCount_changed(quint8)),this,SLOT(c6_pcountChanged(quint8)));
         connect(chocobo_stable_6,SIGNAL(wins_changed(quint8)),this,SLOT(c6_raceswonChanged(quint8)));
+        connect(hexEditor,SIGNAL(dataChanged()),this,SLOT(hexEditorChanged()));
     }
     else
     {//Qt 5 Style connect Statements
@@ -1239,7 +1247,7 @@ void MainWindow::setmenu(bool newgame)
     ui->actionSlot_01->setChecked(0);    ui->actionSlot_02->setChecked(0);    ui->actionSlot_03->setChecked(0);    ui->actionSlot_04->setChecked(0);
     ui->actionSlot_05->setChecked(0);    ui->actionSlot_06->setChecked(0);    ui->actionSlot_07->setChecked(0);    ui->actionSlot_08->setChecked(0);
     ui->actionSlot_09->setChecked(0);    ui->actionSlot_10->setChecked(0);    ui->actionSlot_11->setChecked(0);    ui->actionSlot_12->setChecked(0);
-    ui->actionSlot_13->setChecked(0);    ui->actionSlot_14->setChecked(0);    ui->actionSlot_15->setChecked(0);
+    ui->actionSlot_13->setChecked(0);    ui->actionSlot_14->setChecked(0);    ui->actionSlot_15->setChecked(0);     ui->actionClear_Slot->setEnabled(0);
     ui->action_Region_USA->setChecked(0);    ui->action_Region_PAL_Generic->setChecked(0);  ui->action_Region_PAL_German->setChecked(0);
     ui->action_Region_PAL_French->setChecked(0);ui->action_Region_PAL_Spanish->setChecked(0);    ui->action_Region_JPN->setChecked(0);
     ui->action_Region_JPN_International->setChecked(0);    ui->actionNext_Slot->setEnabled(0);ui->actionPrevious_Slot->setEnabled(0);
@@ -1290,6 +1298,7 @@ void MainWindow::setmenu(bool newgame)
         ui->actionFrom_PSX_Slot->setEnabled(1); ui->actionCopy_Slot->setEnabled(1);
         ui->actionPaste_Slot->setEnabled(1);
     }
+
     if (ff7->type()!= "PSX" && ff7->type() !="PSV" && (!_init)) //more then one slot
     {
         ui->actionSlot_01->setEnabled(1);   ui->actionNext_Slot->setEnabled(1);
@@ -1303,8 +1312,9 @@ void MainWindow::setmenu(bool newgame)
         ui->actionSlot_12->setEnabled(1);   ui->actionSlot_13->setEnabled(1);
         ui->actionSlot_14->setEnabled(1);   ui->actionSlot_15->setEnabled(1);
         ui->compare_table->setEnabled(1);   ui->lbl_current_slot_txt->setText(tr("Current Slot:"));
-        ui->lbl_current_slot_num->setNum(s+1);
+        ui->lbl_current_slot_num->setNum(s+1); ui->actionClear_Slot->setEnabled(1);
     }
+    if(ff7->type()==""){ui->actionClear_Slot->setEnabled(0);}
     /*~~~End Set Actions By Type~~~*/
     /*~~Set Detected Region ~~*/
     if(ff7->region(s).contains("94163")){ui->action_Region_USA->setChecked(Qt::Checked);}
@@ -1324,6 +1334,7 @@ void MainWindow::file_modified(bool changed)
     ff7->FileModified(changed,s);
     ui->lbl_fileName->setText(ff7->fileName());
 
+    hexEditor->setData(ff7->SlotRawData(s));
     if(changed){ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));}
 }
 
@@ -3385,6 +3396,7 @@ void MainWindow::on_btn_item_add_each_item_clicked()
 void MainWindow::unknown_refresh(int z)//remember to add/remove case statments in all 3 switches when number of z vars changes.
 {//for updating the unknown table(s)
     load=true;
+    hexEditor->setData(ff7->SlotRawData(s));
     QString text;
     int rows=0;
     QTableWidgetItem *newItem;
@@ -4114,3 +4126,19 @@ void MainWindow::on_sbSnowCrazyMsec_valueChanged(int value)
 }}
 void MainWindow::on_sb_BikeHighScore_valueChanged(int arg1){if(!load){ff7->setBikeHighScore(s,arg1);}}
 void MainWindow::on_sb_BattlePoints_valueChanged(int arg1){if(!load){ff7->setBattlePoints(s,arg1);}}
+
+void MainWindow::hexEditorRefresh()
+{
+    if(ui->combo_hexEditor->currentIndex() == 0){hexEditor->setData(ff7->SlotRawData(s));}
+    else{hexEditor->setData(ff7->UnknownVar(s,ui->combo_hexEditor->currentIndex()));}
+}
+void MainWindow::on_combo_hexEditor_currentIndexChanged(){hexEditorRefresh();}
+
+void MainWindow::hexEditorChanged(void)
+{
+    switch(ui->combo_hexEditor->currentIndex())
+    {
+        case 0:ff7->setSlotRawData(s,hexEditor->data());
+        default:ff7->setUnknownVar(s,ui->combo_hexEditor->currentIndex(),hexEditor->data());
+    }
+}

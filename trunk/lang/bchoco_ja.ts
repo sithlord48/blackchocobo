@@ -3136,16 +3136,6 @@
         <translation>６番街公園</translation>
     </message>
     <message>
-        <source>Inside Train </source>
-        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation type="obsolete">客車内</translation>
-    </message>
-    <message>
-        <source>Lower Sector 4 Plate </source>
-        <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
-        <translation type="obsolete">４番街プレート下部</translation>
-    </message>
-    <message>
         <source>Inn</source>
         <translatorcomment>Riped from SLPS-01057-60</translatorcomment>
         <translation>宿屋</translation>
@@ -4811,10 +4801,6 @@
         <translation>Dex-Drive ファイルのエクスポート</translation>
     </message>
     <message>
-        <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</source>
-        <translation type="obsolete">FF7 MC セーブ (*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</translation>
-    </message>
-    <message>
         <source>Save Final Fantasy 7  VGS SaveGame</source>
         <translation>Final Fantasy 7  VGS セーブの保存</translation>
     </message>
@@ -5041,10 +5027,6 @@
     <message>
         <source>Buggy</source>
         <translation>バギー</translation>
-    </message>
-    <message>
-        <source>Unknown  Vars</source>
-        <translation>未知の変数</translation>
     </message>
     <message>
         <source>New Window</source>
@@ -5755,6 +5737,18 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>VGS File(*.vgs);;MEM File(*.mem)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hex Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown Vars</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

@@ -3101,14 +3101,6 @@
         <translation>Parc du secteur 6</translation>
     </message>
     <message>
-        <source>Inside Train </source>
-        <translation type="obsolete">Intérieur de train</translation>
-    </message>
-    <message>
-        <source>Lower Sector 4 Plate </source>
-        <translation type="obsolete">Plaques Secteur inf. 4</translation>
-    </message>
-    <message>
         <source>Inn</source>
         <translation>Auberge</translation>
     </message>
@@ -4832,10 +4824,6 @@
         <translation>Ce fichier n&apos;a pas un jour Checksum.It ne fonctionnera pas sur votre PS3.</translation>
     </message>
     <message>
-        <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</source>
-        <translation type="obsolete">Sauvegarde FF7 MC(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</translation>
-    </message>
-    <message>
         <source>Save Final Fantasy 7  VGS SaveGame</source>
         <translation>Sélectionner sauvegarde Final Fantasy 7 VGS</translation>
     </message>
@@ -4966,10 +4954,6 @@
     <message>
         <source>Buggy</source>
         <translation>Buggy</translation>
-    </message>
-    <message>
-        <source>Unknown  Vars</source>
-        <translation>Variables inconnues</translation>
     </message>
     <message>
         <source>New Window</source>
@@ -5680,6 +5664,18 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>VGS File(*.vgs);;MEM File(*.mem)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hex Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown Vars</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
