@@ -3104,14 +3104,6 @@
         <translation>Park Secktor 6</translation>
     </message>
     <message>
-        <source>Inside Train </source>
-        <translation type="obsolete">Im Zug</translation>
-    </message>
-    <message>
-        <source>Lower Sector 4 Plate </source>
-        <translation type="obsolete">Unterer Sektor 4, Platt</translation>
-    </message>
-    <message>
         <source>Inn</source>
         <translation>Gasthaus</translation>
     </message>
@@ -4736,10 +4728,6 @@
         <translation>Exportiere Dex-Drive Datei</translation>
     </message>
     <message>
-        <source>FF7 MC SaveGame(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</source>
-        <translation type="obsolete">FF7 MC Spielstand(*.mcr *.mcd *.mci *.mc *.ddf *.ps *.psm *.bin)</translation>
-    </message>
-    <message>
         <source>Save Final Fantasy 7  VGS SaveGame</source>
         <translation>Speichere Final Fantasy 7 VGS Spielstand</translation>
     </message>
@@ -4968,10 +4956,6 @@
     <message>
         <source>Buggy</source>
         <translation>Buggy</translation>
-    </message>
-    <message>
-        <source>Unknown  Vars</source>
-        <translation>Unbekannte Variabeln</translation>
     </message>
     <message>
         <source>New Window</source>
@@ -5685,6 +5669,18 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>VGS File(*.vgs);;MEM File(*.mem)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hex Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown Vars</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

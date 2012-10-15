@@ -4953,10 +4953,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Unknown  Vars</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>New Window</source>
         <translation type="unfinished"></translation>
     </message>
@@ -5657,6 +5653,18 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>VGS File(*.vgs);;MEM File(*.mem)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hex Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Show:</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Unknown Vars</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

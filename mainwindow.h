@@ -42,6 +42,8 @@
 #include "FF7tk/widgets/CharEditor.h"
 #include "FF7tk/widgets/ItemList.h"
 #include "FF7tk/widgets/MetadataCreator.h"
+//QHexedit
+#include "qhexedit/qhexedit.h"
 
 namespace Ui {
     class MainWindow;
@@ -88,6 +90,7 @@ private:
     ChocoboEditor *chocobo_stable_4;
     ChocoboEditor *chocobo_stable_5;
     ChocoboEditor *chocobo_stable_6;
+    QHexEdit *hexEditor;
     void init_display();
     void init_connections();
     void init_settings();
@@ -638,5 +641,8 @@ private slots://try to keep these in the same order as the .cpp file
     void on_sb_BikeHighScore_valueChanged(int arg1);
     void on_sb_BattlePoints_valueChanged(int arg1);
     void on_actionCreateNewMetadata_triggered();
+    void hexEditorRefresh();
+    void on_combo_hexEditor_currentIndexChanged(void);
+    void hexEditorChanged(void);
 };
 #endif // MAINWINDOW_H

@@ -2146,7 +2146,6 @@ QByteArray FF7Save::SlotRawData(int s)
 }
 bool FF7Save::setSlotRawData(int s,QByteArray data)
 {
-
     if(s<0 || s>14){return false;}
     if(data.size()!=sizeof(slot[s])){return false;}
     memcpy(&slot[s],data,sizeof(slot[s]));
@@ -2213,124 +2212,124 @@ bool FF7Save::setUnknownVar(int s,int z,QByteArray data)
         case 0: result=false; break;
         case 1:
                     if(data.size() != sizeof(slot[s].z_1)) {result=false; break;}
-                    else{memcpy(&slot[s].z_1,&data,sizeof(slot[s].z_1)); result=true;break;}
+                    else{memcpy(&slot[s].z_1,data,sizeof(slot[s].z_1)); result=true;break;}
         case 2:
                     if(data.size() != sizeof(slot[s].z_2)) {result=false; break;}
-                    else{memcpy(&slot[s].z_2,&data,sizeof(slot[s].z_2)); result=true;break;}
+                    else{memcpy(&slot[s].z_2,data,sizeof(slot[s].z_2)); result=true;break;}
         case 3:
                     if(data.size() != sizeof(slot[s].z_3)) {result=false; break;}
-                    else{memcpy(&slot[s].z_3,&data,sizeof(slot[s].z_3)); result=true;break;}
+                    else{memcpy(&slot[s].z_3,data,sizeof(slot[s].z_3)); result=true;break;}
         case 4:
                     if(data.size() != sizeof(slot[s].z_4)) {result=false; break;}
-                    else{memcpy(&slot[s].z_4,&data,sizeof(slot[s].z_4)); result=true;break;}
+                    else{memcpy(&slot[s].z_4,data,sizeof(slot[s].z_4)); result=true;break;}
         case 5:
                     if(data.size() != sizeof(slot[s].z_5)) {result=false; break;}
-                    else{memcpy(&slot[s].z_5,&data,sizeof(slot[s].z_5)); result=true;break;}
+                    else{memcpy(&slot[s].z_5,data,sizeof(slot[s].z_5)); result=true;break;}
         case 6:
                     if(data.size() != sizeof(slot[s].z_6)) {result=false; break;}
-                    else{memcpy(&slot[s].z_6,&data,sizeof(slot[s].z_6)); result=true;break;}
+                    else{memcpy(&slot[s].z_6,data,sizeof(slot[s].z_6)); result=true;break;}
         case 7:
                     if(data.size() != sizeof(slot[s].z_7)) {result=false; break;}
-                    else{memcpy(&slot[s].z_7,&data,sizeof(slot[s].z_7)); result=true;break;}
+                    else{memcpy(&slot[s].z_7,data,sizeof(slot[s].z_7)); result=true;break;}
         case 8:
                     if(data.size() != sizeof(slot[s].z_8)) {result=false; break;}
-                    else{memcpy(&slot[s].z_8,&data,sizeof(slot[s].z_8)); result=true;break;}
+                    else{memcpy(&slot[s].z_8,data,sizeof(slot[s].z_8)); result=true;break;}
         case 9:
                     if(data.size() != sizeof(slot[s].z_9)) {result=false; break;}
-                    else{memcpy(&slot[s].z_9,&data,sizeof(slot[s].z_9)); result=true;break;}
+                    else{memcpy(&slot[s].z_9,data,sizeof(slot[s].z_9)); result=true;break;}
         case 10:
                     if(data.size() != sizeof(slot[s].z_10)) {result=false; break;}
-                    else{memcpy(&slot[s].z_10,&data,sizeof(slot[s].z_10)); result=true;break;}
+                    else{memcpy(&slot[s].z_10,data,sizeof(slot[s].z_10)); result=true;break;}
         case 11:
                     if(data.size() != sizeof(slot[s].z_11)) {result=false; break;}
-                    else{memcpy(&slot[s].z_11,&data,sizeof(slot[s].z_11)); result=true;break;}
+                    else{memcpy(&slot[s].z_11,data,sizeof(slot[s].z_11)); result=true;break;}
         case 12:
                     if(data.size() != sizeof(slot[s].z_12)) {result=false; break;}
-                    else{memcpy(&slot[s].z_12,&data,sizeof(slot[s].z_12)); result=true;break;}
+                    else{memcpy(&slot[s].z_12,data,sizeof(slot[s].z_12)); result=true;break;}
         case 13:
                     if(data.size() != sizeof(slot[s].z_13)) {result=false; break;}
-                    else{memcpy(&slot[s].z_13,&data,sizeof(slot[s].z_13)); result=true;break;}
+                    else{memcpy(&slot[s].z_13,data,sizeof(slot[s].z_13)); result=true;break;}
         case 14:
                     if(data.size() != sizeof(slot[s].z_14)) {result=false; break;}
-                    else{memcpy(&slot[s].z_14,&data,sizeof(slot[s].z_14)); result=true;break;}
+                    else{memcpy(&slot[s].z_14,data,sizeof(slot[s].z_14)); result=true;break;}
         case 15:
                     if(data.size() != sizeof(slot[s].z_15)) {result=false; break;}
-                    else{memcpy(&slot[s].z_15,&data,sizeof(slot[s].z_15)); result=true;break;}
+                    else{memcpy(&slot[s].z_15,data,sizeof(slot[s].z_15)); result=true;break;}
         case 16:
                     if(data.size() != sizeof(slot[s].z_16)) {result=false; break;}
-                    else{memcpy(&slot[s].z_16,&data,sizeof(slot[s].z_16)); result=true;break;}
+                    else{memcpy(&slot[s].z_16,data,sizeof(slot[s].z_16)); result=true;break;}
         case 17:
                     if(data.size() != sizeof(slot[s].z_17)) {result=false; break;}
-                    else{memcpy(&slot[s].z_17,&data,sizeof(slot[s].z_17)); result=true;break;}
+                    else{memcpy(&slot[s].z_17,data,sizeof(slot[s].z_17)); result=true;break;}
         case 18:
                     if(data.size() != sizeof(slot[s].z_18)) {result=false; break;}
-                    else{memcpy(&slot[s].z_18,&data,sizeof(slot[s].z_18)); result=true;break;}
+                    else{memcpy(&slot[s].z_18,data,sizeof(slot[s].z_18)); result=true;break;}
         case 19:
                     if(data.size() != sizeof(slot[s].z_19)) {result=false; break;}
-                    else{memcpy(&slot[s].z_19,&data,sizeof(slot[s].z_19)); result=true;break;}
+                    else{memcpy(&slot[s].z_19,data,sizeof(slot[s].z_19)); result=true;break;}
         case 20:
                     if(data.size() != sizeof(slot[s].z_20)) {result=false; break;}
-                    else{memcpy(&slot[s].z_20,&data,sizeof(slot[s].z_20)); result=true;break;}
+                    else{memcpy(&slot[s].z_20,data,sizeof(slot[s].z_20)); result=true;break;}
         case 21:
                     if(data.size() != sizeof(slot[s].z_21)) {result=false; break;}
-                    else{memcpy(&slot[s].z_21,&data,sizeof(slot[s].z_21)); result=true;break;}
+                    else{memcpy(&slot[s].z_21,data,sizeof(slot[s].z_21)); result=true;break;}
         case 22:
                     if(data.size() != sizeof(slot[s].z_22)) {result=false; break;}
-                    else{memcpy(&slot[s].z_22,&data,sizeof(slot[s].z_22)); result=true;break;}
+                    else{memcpy(&slot[s].z_22,data,sizeof(slot[s].z_22)); result=true;break;}
         case 23:
                     if(data.size() != sizeof(slot[s].z_23)) {result=false; break;}
-                    else{memcpy(&slot[s].z_23,&data,sizeof(slot[s].z_23)); result=true;break;}
+                    else{memcpy(&slot[s].z_23,data,sizeof(slot[s].z_23)); result=true;break;}
         case 24:
                     if(data.size() != sizeof(slot[s].z_24)) {result=false; break;}
-                    else{memcpy(&slot[s].z_24,&data,sizeof(slot[s].z_24)); result=true;break;}
+                    else{memcpy(&slot[s].z_24,data,sizeof(slot[s].z_24)); result=true;break;}
         case 25:
                     if(data.size() != sizeof(slot[s].z_25)) {result=false; break;}
-                    else{memcpy(&slot[s].z_25,&data,sizeof(slot[s].z_25)); result=true;break;}
+                    else{memcpy(&slot[s].z_25,data,sizeof(slot[s].z_25)); result=true;break;}
         case 26:
                     if(data.size() != sizeof(slot[s].z_26)) {result=false; break;}
-                    else{memcpy(&slot[s].z_26,&data,sizeof(slot[s].z_26)); result=true;break;}
+                    else{memcpy(&slot[s].z_26,data,sizeof(slot[s].z_26)); result=true;break;}
         case 27:
                     if(data.size() != sizeof(slot[s].z_27)) {result=false; break;}
-                    else{memcpy(&slot[s].z_27,&data,sizeof(slot[s].z_27)); result=true;break;}
+                    else{memcpy(&slot[s].z_27,data,sizeof(slot[s].z_27)); result=true;break;}
         case 28:
                     if(data.size() != sizeof(slot[s].z_28)) {result=false; break;}
-                    else{memcpy(&slot[s].z_28,&data,sizeof(slot[s].z_28)); result=true;break;}
+                    else{memcpy(&slot[s].z_28,data,sizeof(slot[s].z_28)); result=true;break;}
         case 29:
                     if(data.size() != sizeof(slot[s].z_29)) {result=false; break;}
-                    else{memcpy(&slot[s].z_29,&data,sizeof(slot[s].z_29)); result=true;break;}
+                    else{memcpy(&slot[s].z_29,data,sizeof(slot[s].z_29)); result=true;break;}
         case 30:
                     if(data.size() != sizeof(slot[s].z_30)) {result=false; break;}
-                    else{memcpy(&slot[s].z_30,&data,sizeof(slot[s].z_30)); result=true;break;}
+                    else{memcpy(&slot[s].z_30,data,sizeof(slot[s].z_30)); result=true;break;}
         case 31:
                     if(data.size() != sizeof(slot[s].z_31)) {result=false; break;}
-                    else{memcpy(&slot[s].z_31,&data,sizeof(slot[s].z_31)); result=true;break;}
+                    else{memcpy(&slot[s].z_31,data,sizeof(slot[s].z_31)); result=true;break;}
         case 32:
                     if(data.size() != sizeof(slot[s].z_32)) {result=false; break;}
-                    else{memcpy(&slot[s].z_32,&data,sizeof(slot[s].z_32)); result=true;break;}
+                    else{memcpy(&slot[s].z_32,data,sizeof(slot[s].z_32)); result=true;break;}
         case 33:
                     if(data.size() != sizeof(slot[s].z_33)) {result=false; break;}
-                    else{memcpy(&slot[s].z_33,&data,sizeof(slot[s].z_33)); result=true;break;}
+                    else{memcpy(&slot[s].z_33,data,sizeof(slot[s].z_33)); result=true;break;}
         case 34:
                     if(data.size() != sizeof(slot[s].z_34)) {result=false; break;}
-                    else{memcpy(&slot[s].z_34,&data,sizeof(slot[s].z_34)); result=true;break;}
+                    else{memcpy(&slot[s].z_34,data,sizeof(slot[s].z_34)); result=true;break;}
         case 35:
                     if(data.size() != sizeof(slot[s].z_35)) {result=false; break;}
-                    else{memcpy(&slot[s].z_35,&data,sizeof(slot[s].z_35)); result=true;break;}
+                    else{memcpy(&slot[s].z_35,data,sizeof(slot[s].z_35)); result=true;break;}
         case 36:
                     if(data.size() != sizeof(slot[s].z_36)) {result=false; break;}
-                    else{memcpy(&slot[s].z_36,&data,sizeof(slot[s].z_36)); result=true;break;}
+                    else{memcpy(&slot[s].z_36,data,sizeof(slot[s].z_36)); result=true;break;}
         case 37:
                     if(data.size() != sizeof(slot[s].z_37)) {result=false; break;}
-                    else{memcpy(&slot[s].z_37,&data,sizeof(slot[s].z_37)); result=true;break;}
+                    else{memcpy(&slot[s].z_37,data,sizeof(slot[s].z_37)); result=true;break;}
         case 38:
                     if(data.size() != sizeof(slot[s].z_38)) {result=false; break;}
-                    else{memcpy(&slot[s].z_38,&data,sizeof(slot[s].z_38)); result=true;break;}
+                    else{memcpy(&slot[s].z_38,data,sizeof(slot[s].z_38)); result=true;break;}
         case 39:
                     if(data.size() != sizeof(slot[s].z_39)) {result=false; break;}
-                    else{memcpy(&slot[s].z_39,&data,sizeof(slot[s].z_39)); result=true;break;}
+                    else{memcpy(&slot[s].z_39,data,sizeof(slot[s].z_39)); result=true;break;}
         case 40:
                     if(data.size() != sizeof(slot[s].z_40)) {result=false; break;}
-                    else{memcpy(&slot[s].z_40,&data,sizeof(slot[s].z_40)); result=true;break;}
+                    else{memcpy(&slot[s].z_40,data,sizeof(slot[s].z_40)); result=true;break;}
         default: result=false; break;
     }
     return result;
