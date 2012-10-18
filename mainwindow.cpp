@@ -3392,7 +3392,6 @@ void MainWindow::on_btn_item_add_each_item_clicked()
             itemlist->setItems(ff7->items(s));
 }
 
-
 void MainWindow::unknown_refresh(int z)//remember to add/remove case statments in all 3 switches when number of z vars changes.
 {//for updating the unknown table(s)
     load=true;
@@ -3402,7 +3401,6 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
     QTableWidgetItem *newItem;
     quint8 value=0;
     QByteArray temp,temp2;
-    int zmax = 40;
     int s2;
 
     ui->tbl_unknown->reset();
@@ -3422,11 +3420,8 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
     if(ui->combo_compare_slot->currentIndex()==0){ui->btn_all_z_diffs->setEnabled(0);}
     else {ui->btn_all_z_diffs->setEnabled(1);}
 
-    if(z <= zmax){
-        temp = ff7->UnknownVar(s,z);
-    } else if(z == zmax+1){
-        temp = ff7->SlotRawData(s);
-    }
+    if(z <= unknown_zmax){temp = ff7->UnknownVar(s,z);}
+    else if(z == unknown_zmax+1){temp = ff7->SlotRawData(s);}
 
     rows=temp.size();
 
@@ -3479,12 +3474,8 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
             }
 
             s2 = ui->combo_compare_slot->currentIndex()-1;
-            if(z <= zmax){
-                temp2 = ff7->UnknownVar(s2,z);
-            } else if(z == zmax+1){
-                temp2 = ff7->SlotRawData(s2);
-            }
-
+            if(z <= unknown_zmax){temp2 = ff7->UnknownVar(s2,z);}
+            else if(z == unknown_zmax+1){temp2 = ff7->SlotRawData(s2);}
 
             //rows=temp2.size();
             value = temp2.at(i);
@@ -3535,9 +3526,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
     }
     load=false;
 }
-
 void MainWindow::on_combo_z_var_currentIndexChanged(int z){unknown_refresh(z);}
-
 void MainWindow::on_combo_compare_slot_currentIndexChanged(void)
 {
     if(ui->combo_compare_slot->currentIndex()==0)
@@ -3551,170 +3540,25 @@ void MainWindow::on_combo_compare_slot_currentIndexChanged(void)
     else{unknown_refresh(ui->combo_z_var->currentIndex());}
     ui->tbl_diff->setVisible(0);
 }
-
 void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
 {if(!load){file_modified(true);
     QByteArray temp;
-    if(item->column()==1)
-    {//column 1 selected
-        switch (ui->combo_z_var->currentIndex())
-        {
-            case 0: break;
-            case 1: ff7->slot[s].z_1[item->row()]= item->text().toInt(0,16);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 2: ff7->slot[s].z_2[item->row()]= item->text().toInt(0,16);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 3: ff7->slot[s].z_3[item->row()]= item->text().toInt(0,16);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 4: ff7->slot[s].z_4[item->row()]= item->text().toInt(0,16);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 5: ff7->slot[s].z_5[item->row()]= item->text().toInt(0,16);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 6: ff7->slot[s].z_6[item->row()]= item->text().toInt(0,16);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 7: ff7->slot[s].z_7[item->row()]= item->text().toInt(0,16);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 8: ff7->slot[s].z_8[item->row()]= item->text().toInt(0,16);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 9: ff7->slot[s].z_9[item->row()]= item->text().toInt(0,16);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 10: ff7->slot[s].z_10[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 11: ff7->slot[s].z_11[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 12: ff7->slot[s].z_12[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 13: ff7->slot[s].z_13[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 14: ff7->slot[s].z_14[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 15: ff7->slot[s].z_15[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 16: ff7->slot[s].z_16[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 17: ff7->slot[s].z_17[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 18: ff7->slot[s].z_18[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 19: ff7->slot[s].z_19[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 20: ff7->slot[s].z_20[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 21: ff7->slot[s].z_21[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 22: ff7->slot[s].z_22[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 23: ff7->slot[s].z_23[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 24: ff7->slot[s].z_24[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 25: ff7->slot[s].z_25[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 26: ff7->slot[s].z_26[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 27: ff7->slot[s].z_27[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 28: ff7->slot[s].z_28[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 29: ff7->slot[s].z_29[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 30: ff7->slot[s].z_30[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 31: ff7->slot[s].z_31[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 32: ff7->slot[s].z_32[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 33: ff7->slot[s].z_33[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 34: ff7->slot[s].z_34[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 35: ff7->slot[s].z_35[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 36: ff7->slot[s].z_36[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 37: ff7->slot[s].z_37[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 38: ff7->slot[s].z_38[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 39: ff7->slot[s].z_39[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 40: ff7->slot[s].z_40[item->row()]= item->text().toInt(0,16); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            //Always Last Case , Full Slot
-            case 41: temp.setRawData(reinterpret_cast<char *>(&ff7->slot[s]),sizeof(ff7->slot[s]));
-                     temp[item->row()]=item->text().toInt(0,16);
-                     memcpy(&ff7->slot[s],temp,sizeof(ff7->slot[s]));
-                     unknown_refresh(ui->combo_z_var->currentIndex());
-                     break;
-        }
-    }
-    else if(item->column()==2)
-    {//column 2 selected
-        switch (ui->combo_z_var->currentIndex())
-        {
-            case 0: break;
-            case 1: ff7->slot[s].z_1[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 2: ff7->slot[s].z_2[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 3: ff7->slot[s].z_3[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 4: ff7->slot[s].z_4[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 5: ff7->slot[s].z_5[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 6: ff7->slot[s].z_6[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 7: ff7->slot[s].z_7[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 8: ff7->slot[s].z_8[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 9: ff7->slot[s].z_9[item->row()]= item->text().toInt();   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 10: ff7->slot[s].z_10[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 11: ff7->slot[s].z_11[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 12: ff7->slot[s].z_12[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 13: ff7->slot[s].z_13[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 14: ff7->slot[s].z_14[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 15: ff7->slot[s].z_15[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 16: ff7->slot[s].z_16[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 17: ff7->slot[s].z_17[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 18: ff7->slot[s].z_18[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 19: ff7->slot[s].z_19[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 20: ff7->slot[s].z_20[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 21: ff7->slot[s].z_21[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 22: ff7->slot[s].z_22[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 23: ff7->slot[s].z_23[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 24: ff7->slot[s].z_24[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 25: ff7->slot[s].z_25[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 26: ff7->slot[s].z_26[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 27: ff7->slot[s].z_27[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 28: ff7->slot[s].z_28[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 29: ff7->slot[s].z_29[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 30: ff7->slot[s].z_30[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 31: ff7->slot[s].z_31[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 32: ff7->slot[s].z_32[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 33: ff7->slot[s].z_33[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 34: ff7->slot[s].z_34[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 35: ff7->slot[s].z_35[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 36: ff7->slot[s].z_36[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 37: ff7->slot[s].z_37[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 38: ff7->slot[s].z_38[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 39: ff7->slot[s].z_39[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 40: ff7->slot[s].z_40[item->row()]= item->text().toInt(); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            //Always Last Case , Full Slot
-            case 41: temp.setRawData(reinterpret_cast<char *>(&ff7->slot[s]),sizeof(ff7->slot[s]));
-                     temp[item->row()]=item->text().toInt();
-                     memcpy(&ff7->slot[s],temp,sizeof(ff7->slot[s]));
-                     unknown_refresh(ui->combo_z_var->currentIndex());
-                     break;
-        }
-    }
-    else if(item->column()==3)
-    {//column 3 selected
-        switch (ui->combo_z_var->currentIndex())
-        {
-            case 0: break;
-            case 1: ff7->slot[s].z_1[item->row()]= item->text().toInt(0,2);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 2: ff7->slot[s].z_2[item->row()]= item->text().toInt(0,2);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 3: ff7->slot[s].z_3[item->row()]= item->text().toInt(0,2);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 4: ff7->slot[s].z_4[item->row()]= item->text().toInt(0,2);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 5: ff7->slot[s].z_5[item->row()]= item->text().toInt(0,2);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 6: ff7->slot[s].z_6[item->row()]= item->text().toInt(0,2);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 7: ff7->slot[s].z_7[item->row()]= item->text().toInt(0,2);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 8: ff7->slot[s].z_8[item->row()]= item->text().toInt(0,2);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 9: ff7->slot[s].z_9[item->row()]= item->text().toInt(0,2);   unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 10: ff7->slot[s].z_10[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 11: ff7->slot[s].z_11[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 12: ff7->slot[s].z_12[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 13: ff7->slot[s].z_13[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 14: ff7->slot[s].z_14[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 15: ff7->slot[s].z_15[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 16: ff7->slot[s].z_16[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 17: ff7->slot[s].z_17[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 18: ff7->slot[s].z_18[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 19: ff7->slot[s].z_19[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 20: ff7->slot[s].z_20[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 21: ff7->slot[s].z_21[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 22: ff7->slot[s].z_22[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 23: ff7->slot[s].z_23[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 24: ff7->slot[s].z_24[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 25: ff7->slot[s].z_25[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 26: ff7->slot[s].z_26[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 27: ff7->slot[s].z_27[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 28: ff7->slot[s].z_28[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 29: ff7->slot[s].z_29[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 30: ff7->slot[s].z_30[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 31: ff7->slot[s].z_31[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 32: ff7->slot[s].z_32[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 33: ff7->slot[s].z_33[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 34: ff7->slot[s].z_34[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 35: ff7->slot[s].z_35[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 36: ff7->slot[s].z_36[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 37: ff7->slot[s].z_37[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 38: ff7->slot[s].z_38[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 39: ff7->slot[s].z_39[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            case 40: ff7->slot[s].z_40[item->row()]= item->text().toInt(0,2); unknown_refresh(ui->combo_z_var->currentIndex());    break;
-            //Always Last Case , Full Slot
-            case 41: temp.setRawData(reinterpret_cast<char *>(&ff7->slot[s]),sizeof(ff7->slot[s]));
-                     temp[item->row()]=item->text().toInt(0,2);
-                     memcpy(&ff7->slot[s],temp,sizeof(ff7->slot[s]));
-                     unknown_refresh(ui->combo_z_var->currentIndex());
-                     break;
-        }
-    }
-    else {/*do nothing*/}
+
+    int z = ui->combo_z_var->currentIndex();
+    if(z <= unknown_zmax){temp = ff7->UnknownVar(s,z);}
+    else if(z == unknown_zmax+1){temp = ff7->SlotRawData(s);}
+
+    switch(item->column())
+    {
+    case 1: temp[item->row()] = item->text().toInt(0,16);  break;
+    case 2: temp[item->row()] = item->text().toInt();      break;
+    case 3: temp[item->row()] = item->text().toInt(0,2);   break;
+    };
+
+    if(z <= unknown_zmax){ff7->setUnknownVar(s,z,temp);}
+    else if(z == unknown_zmax+1){ff7->setSlotRawData(s,temp);}
+
+    unknown_refresh(z);
 }}
 void MainWindow::on_btn_all_z_diffs_clicked()
 {
