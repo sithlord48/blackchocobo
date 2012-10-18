@@ -3402,6 +3402,8 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
     QTableWidgetItem *newItem;
     quint8 value=0;
     QByteArray temp,temp2;
+    int zmax = 40;
+    int s2;
 
     ui->tbl_unknown->reset();
     ui->tbl_unknown->setColumnWidth(0,40);
@@ -3420,52 +3422,14 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
     if(ui->combo_compare_slot->currentIndex()==0){ui->btn_all_z_diffs->setEnabled(0);}
     else {ui->btn_all_z_diffs->setEnabled(1);}
 
-    switch(z)//how many rows
-    {
-      case 0: break;
-      case 1: rows=sizeof(ff7->slot[s].z_1); break;
-      case 2: rows=sizeof(ff7->slot[s].z_2); break;
-      case 3: rows=sizeof(ff7->slot[s].z_3); break;
-      case 4: rows=sizeof(ff7->slot[s].z_4); break;
-      case 5: rows=sizeof(ff7->slot[s].z_5); break;
-      case 6: rows=sizeof(ff7->slot[s].z_6); break;
-      case 7: rows=sizeof(ff7->slot[s].z_7); break;
-      case 8: rows=sizeof(ff7->slot[s].z_8); break;
-      case 9: rows=sizeof(ff7->slot[s].z_9); break;
-      case 10: rows=sizeof(ff7->slot[s].z_10); break;
-      case 11: rows=sizeof(ff7->slot[s].z_11); break;
-      case 12: rows=sizeof(ff7->slot[s].z_12); break;
-      case 13: rows=sizeof(ff7->slot[s].z_13); break;
-      case 14: rows=sizeof(ff7->slot[s].z_14); break;
-      case 15: rows=sizeof(ff7->slot[s].z_15); break;
-      case 16: rows=sizeof(ff7->slot[s].z_16); break;
-      case 17: rows=sizeof(ff7->slot[s].z_17); break;
-      case 18: rows=sizeof(ff7->slot[s].z_18); break;
-      case 19: rows=sizeof(ff7->slot[s].z_19); break;
-      case 20: rows=sizeof(ff7->slot[s].z_20); break;
-      case 21: rows=sizeof(ff7->slot[s].z_21); break;
-      case 22: rows=sizeof(ff7->slot[s].z_22); break;
-      case 23: rows=sizeof(ff7->slot[s].z_23); break;
-      case 24: rows=sizeof(ff7->slot[s].z_24); break;
-      case 25: rows=sizeof(ff7->slot[s].z_25); break;
-      case 26: rows=sizeof(ff7->slot[s].z_26); break;
-      case 27: rows=sizeof(ff7->slot[s].z_27); break;
-      case 28: rows=sizeof(ff7->slot[s].z_28); break;
-      case 29: rows=sizeof(ff7->slot[s].z_29); break;
-      case 30: rows=sizeof(ff7->slot[s].z_30); break;
-      case 31: rows=sizeof(ff7->slot[s].z_31); break;
-      case 32: rows=sizeof(ff7->slot[s].z_32); break;
-      case 33: rows=sizeof(ff7->slot[s].z_33); break;
-      case 34: rows=sizeof(ff7->slot[s].z_34); break;
-      case 35: rows=sizeof(ff7->slot[s].z_35); break;
-      case 36: rows=sizeof(ff7->slot[s].z_36); break;
-      case 37: rows=sizeof(ff7->slot[s].z_37); break;
-      case 38: rows=sizeof(ff7->slot[s].z_38); break;
-      case 39: rows=sizeof(ff7->slot[s].z_39); break;
-      case 40: rows=sizeof(ff7->slot[s].z_40); break;
-      //Always Last Case , Full Slot
-      case 41: rows=sizeof(ff7->slot[s]); break;
+    if(z <= zmax){
+        temp = ff7->UnknownVar(s,z);
+    } else if(z == zmax+1){
+        temp = ff7->SlotRawData(s);
     }
+
+    rows=temp.size();
+
     ui->tbl_unknown->setRowCount(rows);
     if(ui->combo_compare_slot->currentIndex()!=0){ui->tbl_compare_unknown->setRowCount(rows);}
     for(int i=0;i<rows;i++)
@@ -3482,53 +3446,9 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
             newItem = new QTableWidgetItem(text,0);
             ui->tbl_unknown->setItem(i,0,newItem);
         }
-        switch(z)//what is the items data one byte at a time
-        {
-            case 1: value = ff7->slot[s].z_1[i]; break;
-            case 2: value = ff7->slot[s].z_2[i]; break;
-            case 3: value = ff7->slot[s].z_3[i]; break;
-            case 4: value = ff7->slot[s].z_4[i]; break;
-            case 5: value = ff7->slot[s].z_5[i]; break;
-            case 6: value = ff7->slot[s].z_6[i]; break;
-            case 7: value = ff7->slot[s].z_7[i]; break;
-            case 8: value = ff7->slot[s].z_8[i]; break;
-            case 9: value = ff7->slot[s].z_9[i]; break;
-            case 10: value = ff7->slot[s].z_10[i]; break;
-            case 11: value = ff7->slot[s].z_11[i]; break;
-            case 12: value = ff7->slot[s].z_12[i]; break;
-            case 13: value = ff7->slot[s].z_13[i]; break;
-            case 14: value = ff7->slot[s].z_14[i]; break;
-            case 15: value = ff7->slot[s].z_15[i]; break;
-            case 16: value = ff7->slot[s].z_16[i]; break;
-            case 17: value = ff7->slot[s].z_17[i]; break;
-            case 18: value = ff7->slot[s].z_18[i]; break;
-            case 19: value = ff7->slot[s].z_19[i]; break;
-            case 20: value = ff7->slot[s].z_20[i]; break;
-            case 21: value = ff7->slot[s].z_21[i]; break;
-            case 22: value = ff7->slot[s].z_22[i]; break;
-            case 23: value = ff7->slot[s].z_23[i]; break;
-            case 24: value = ff7->slot[s].z_24[i]; break;
-            case 25: value = ff7->slot[s].z_25[i]; break;
-            case 26: value = ff7->slot[s].z_26[i]; break;
-            case 27: value = ff7->slot[s].z_27[i]; break;
-            case 28: value = ff7->slot[s].z_28[i]; break;
-            case 29: value = ff7->slot[s].z_29[i]; break;
-            case 30: value = ff7->slot[s].z_30[i]; break;
-            case 31: value = ff7->slot[s].z_31[i]; break;
-            case 32: value = ff7->slot[s].z_32[i]; break;
-            case 33: value = ff7->slot[s].z_33[i]; break;
-            case 34: value = ff7->slot[s].z_34[i]; break;
-            case 35: value = ff7->slot[s].z_35[i]; break;
-            case 36: value = ff7->slot[s].z_36[i]; break;
-            case 37: value = ff7->slot[s].z_37[i]; break;
-            case 38: value = ff7->slot[s].z_38[i]; break;
-            case 39: value = ff7->slot[s].z_39[i]; break;
-            case 40: value = ff7->slot[s].z_40[i]; break;
-            //Always Last Case , Full Slot
-            case 41: if(i==0){temp.setRawData(reinterpret_cast<char *>(&ff7->slot[s]),rows);}//Resource friendly: we set the slot data only one time (before was one time for each row).
-                     value = temp.at(i);
-                     break;
-        }
+
+        value = temp.at(i);
+
         //Write Hex
         QString hex_str = QString("%1").arg(value,2,16,QChar('0')).toUpper(); //Format: 000C
         newItem = new QTableWidgetItem(hex_str,0);
@@ -3557,53 +3477,18 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
                 newItem = new QTableWidgetItem(text,0);
                 ui->tbl_compare_unknown->setItem(i,0,newItem);
             }
-            switch(z)
-            {
-                case 1: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_1[i]; break;
-                case 2: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_2[i]; break;
-                case 3: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_3[i]; break;
-                case 4: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_4[i]; break;
-                case 5: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_5[i]; break;
-                case 6: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_6[i]; break;
-                case 7: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_7[i]; break;
-                case 8: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_8[i]; break;
-                case 9: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_9[i]; break;
-                case 10: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_10[i]; break;
-                case 11: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_11[i]; break;
-                case 12: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_12[i]; break;
-                case 13: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_13[i]; break;
-                case 14: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_14[i]; break;
-                case 15: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_15[i]; break;
-                case 16: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_16[i]; break;
-                case 17: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_17[i]; break;
-                case 18: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_18[i]; break;
-                case 19: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_19[i]; break;
-                case 20: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_20[i]; break;
-                case 21: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_21[i]; break;
-                case 22: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_22[i]; break;
-                case 23: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_23[i]; break;
-                case 24: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_24[i]; break;
-                case 25: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_25[i]; break;
-                case 26: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_26[i]; break;
-                case 27: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_27[i]; break;
-                case 28: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_28[i]; break;
-                case 29: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_29[i]; break;
-                case 30: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_30[i]; break;
-                case 31: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_31[i]; break;
-                case 32: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_32[i]; break;
-                case 33: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_33[i]; break;
-                case 34: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_34[i]; break;
-                case 35: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_35[i]; break;
-                case 36: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_36[i]; break;
-                case 37: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_37[i]; break;
-                case 38: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_38[i]; break;
-                case 39: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_39[i]; break;
-                case 40: value = ff7->slot[ui->combo_compare_slot->currentIndex()-1].z_40[i]; break;
-                //Always Last Case , Full Slot
-                case 41: if(i==0){temp2.setRawData(reinterpret_cast<char *>(&ff7->slot[ui->combo_compare_slot->currentIndex()-1]),rows);}//Resource friendly: we set the slot data only one time (before was one time for each row).
-                         value = temp2.at(i);
-                         break;
+
+            s2 = ui->combo_compare_slot->currentIndex()-1;
+            if(z <= zmax){
+                temp2 = ff7->UnknownVar(s2,z);
+            } else if(z == zmax+1){
+                temp2 = ff7->SlotRawData(s2);
             }
+
+
+            //rows=temp2.size();
+            value = temp2.at(i);
+
             //Write Hex
             QString hex_str = QString("%1").arg(value,2,16,QChar('0')).toUpper(); //New format ex: 0C | Vegeta_Ss4 Hex mod
             newItem = new QTableWidgetItem(hex_str,0);
