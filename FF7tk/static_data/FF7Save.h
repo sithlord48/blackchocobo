@@ -66,13 +66,19 @@ public:
   void setItem(int s,int item_num,quint16 new_id,quint8 new_qty);
 
   //materia get/set
+
   quint8 partyMateriaId(int s,int mat_num);
   qint32 partyMateriaAp(int s,int mat_num);
   quint8 stolenMateriaId(int s,int mat_num);
   qint32 stolenMateriaAp(int s,int mat_num);
   void setPartyMateria(int s,int mat_num,quint8 id,qint32 ap);
   void setStolenMateria(int s, int mat_num,quint8 id,qint32 ap);
+  quint32 time(int s);
+  void setTime(int s,quint32 new_time);
+
   //Description Stuff.
+  quint32 descTime(int s);
+  void setDescTime(int s,quint32 new_time);
   QString descName(int s);//return the name in the description
   void setDescName(int s,QString new_name);// desc name = new_name
   QString descLocation(int s);//return the location string used in the description
@@ -91,8 +97,6 @@ public:
   void setDescMaxMP(int s,quint16 new_maxMP);
   quint32 descGil(int s);
   void setDescGil(int s,quint32 new_gil);
-  quint32 descTime(int s);
-  void setDescTime(int s,quint32 new_time);
   //Dialog Colors
   QColor Dialog_UL(int s);
   QColor Dialog_UR(int s);

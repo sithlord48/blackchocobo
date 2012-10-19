@@ -1386,7 +1386,6 @@ void FF7Save::setDescName(int s,QString new_name)
     FileModified(true,s);
 }
 
-
 QString FF7Save::descLocation(int s)
 {
     if(isJPN(s)){Text.init(1);}//Japanese
@@ -1417,16 +1416,26 @@ quint16 FF7Save::descMaxHP(int s){return slot[s].desc.maxHP;}
 quint16 FF7Save::descCurMP(int s){return slot[s].desc.curMP;}
 quint16 FF7Save::descMaxMP(int s){return slot[s].desc.maxMP;}
 quint32 FF7Save::descGil(int s){return slot[s].desc.gil;}
-quint32 FF7Save::descTime(int s) {return slot[s].desc.time;}
 void FF7Save::setDescLevel(int s,int new_level){slot[s].desc.level=new_level;FileModified(true,s);}
+
 void FF7Save::setDescParty(int s,int char_num,quint8 new_id){slot[s].desc.party[char_num]=new_id;FileModified(true,s);}
 void FF7Save::setDescCurHP(int s,quint16 new_curHP){slot[s].desc.curHP=new_curHP;FileModified(true,s);}
 void FF7Save::setDescMaxHP(int s,quint16 new_maxHP){slot[s].desc.maxHP=new_maxHP;FileModified(true,s);}
 void FF7Save::setDescCurMP(int s,quint16 new_curMP){slot[s].desc.curMP=new_curMP;FileModified(true,s);}
 void FF7Save::setDescMaxMP(int s,quint16 new_maxMP){slot[s].desc.maxMP=new_maxMP;FileModified(true,s);}
 void FF7Save::setDescGil(int s,quint32 new_gil){slot[s].desc.gil=new_gil;FileModified(true,s);}
+
+quint32 FF7Save::descTime(int s){return slot[s].desc.time;}
 void FF7Save::setDescTime(int s,quint32 new_time){slot[s].desc.time=new_time;FileModified(true,s);}
 
+quint32 FF7Save::time(int s) {return slot[s].time;}
+
+void FF7Save::setTime(int s,quint32 new_time)
+{
+    slot[s].time=new_time;
+    setDescTime(s,new_time);//set Desc also.
+    FileModified(true,s);
+}
 
 QString FF7Save::location(int s)
 {
@@ -1855,6 +1864,7 @@ void FF7Save::setGil(int s,int gil)
 {
     if(gil<0){gil =0;}
     slot[s].gil = gil;
+    setDescGil(s,gil);//Update Desc
     FileModified(true,s);
 }
 quint16 FF7Save::Gp (int s){return slot[s].gp;}

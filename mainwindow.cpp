@@ -1299,7 +1299,7 @@ void MainWindow::setmenu(bool newgame)
         ui->actionPaste_Slot->setEnabled(1);
     }
 
-    if (ff7->type()!= "PSX" && ff7->type() !="PSV" && (!_init)) //more then one slot
+    if ( (ff7->type()!= "PSX" && ff7->type() !="PSV" && (!_init)) && (ff7->type()!="") ) //more then one slot, or unknown Type
     {
         ui->actionSlot_01->setEnabled(1);   ui->actionNext_Slot->setEnabled(1);
         ui->actionSlot_02->setEnabled(1);   ui->actionPrevious_Slot->setEnabled(1);
@@ -1314,7 +1314,7 @@ void MainWindow::setmenu(bool newgame)
         ui->compare_table->setEnabled(1);   ui->lbl_current_slot_txt->setText(tr("Current Slot:"));
         ui->lbl_current_slot_num->setNum(s+1); ui->actionClear_Slot->setEnabled(1);
     }
-    if(ff7->type()==""){ui->actionClear_Slot->setEnabled(0);}
+    //if(ff7->type()==""){ui->actionClear_Slot->setEnabled(0);ui->actionShow_Selection_Dialog->setEnabled(0);}
     /*~~~End Set Actions By Type~~~*/
     /*~~Set Detected Region ~~*/
     if(ff7->region(s).contains("94163")){ui->action_Region_USA->setChecked(Qt::Checked);}
@@ -1354,11 +1354,11 @@ void MainWindow::set_ntsc_time(void)
     switch(result)
     {
         case QMessageBox::Yes:
-            ff7->slot[s].time = (ff7->slot[s].time*1.2); ff7->setDescTime(s,ff7->slot[s].time);
+            ff7->setTime(s,ff7->time(s)*1.2);
             load=true;
-            ui->sb_time_hour->setValue(ff7->slot[s].time / 3600);
-            ui->sb_time_min->setValue(ff7->slot[s].time/60%60);
-            ui->sb_time_sec->setValue(ff7->slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+            ui->sb_time_hour->setValue(ff7->time(s) / 3600);
+            ui->sb_time_min->setValue(ff7->time(s)/60%60);
+            ui->sb_time_sec->setValue(ff7->time(s) -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
             load=false;
         break;
         case QMessageBox::Cancel:break;
@@ -1379,11 +1379,11 @@ void MainWindow::set_pal_time(void)
     switch(result)
     {
         case QMessageBox::Yes:
-            ff7->slot[s].time = (ff7->slot[s].time/1.2); ff7->setDescTime(s,ff7->slot[s].time);
+        ff7->setTime(s,ff7->time(s)/1.2);
             load=true;
-            ui->sb_time_hour->setValue(ff7->slot[s].time / 3600);
-            ui->sb_time_min->setValue(ff7->slot[s].time/60%60);
-            ui->sb_time_sec->setValue(ff7->slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+            ui->sb_time_hour->setValue(ff7->time(s) / 3600);
+            ui->sb_time_min->setValue(ff7->time(s)/60%60);
+            ui->sb_time_sec->setValue(ff7->time(s) -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
             load=false;
         break;
         case QMessageBox::Cancel:break;
@@ -1794,9 +1794,9 @@ void MainWindow::guirefresh(bool newgame)
         ui->sb_love_tifa->setValue(ff7->slot[s].love.tifa);
         ui->sb_love_aeris->setValue(ff7->slot[s].love.aeris);
         ui->sb_love_yuffie->setValue(ff7->slot[s].love.yuffie);
-        ui->sb_time_hour->setValue(ff7->slot[s].time / 3600);
-        ui->sb_time_min->setValue(ff7->slot[s].time/60%60);
-        ui->sb_time_sec->setValue(ff7->slot[s].time -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
+        ui->sb_time_hour->setValue(ff7->time(s) / 3600);
+        ui->sb_time_min->setValue(ff7->time(s)/60%60);
+        ui->sb_time_sec->setValue(ff7->time(s) -((ui->sb_time_hour->value()*3600)+ui->sb_time_min->value()*60));
 
         dialog_preview->SetULeft (ff7->Dialog_UL(s));
         dialog_preview->SetURight(ff7->Dialog_UR(s));
@@ -2169,7 +2169,7 @@ void MainWindow::on_btn_vincent_clicked()   {curchar=7; char_editor->setChar(ff7
 void MainWindow::on_btn_cid_clicked()       {curchar=8; char_editor->setChar(ff7->Char(s,8),ff7->charName(s,8));ui->btn_cid->setIcon(Chars.Icon(ff7->charID(s,curchar)));}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Party TAB~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-void MainWindow::on_sb_gil_valueChanged(int value){if(!load){ ff7->setGil(s,value); ff7->setDescGil(s,value);}}
+void MainWindow::on_sb_gil_valueChanged(int value){if(!load){ ff7->setGil(s,value);}}
 void MainWindow::on_sb_gp_valueChanged(int value){if(!load){ ff7->setGp(s,value);}}
 void MainWindow::on_sb_battles_valueChanged(int value){if(!load){ ff7->setBattles(s,value);}}
 void MainWindow::on_sb_runs_valueChanged(int value){if(!load){ ff7->setRuns(s,value);}}
@@ -2426,20 +2426,9 @@ void MainWindow::on_sb_love_aeris_valueChanged(int value){if(!load){file_modifie
 void MainWindow::on_sb_love_tifa_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].love.tifa = value;}}
 void MainWindow::on_sb_love_yuffie_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].love.yuffie = value;}}
 
-void MainWindow::on_sb_time_hour_valueChanged(int value)
-{if(!load){
-        ff7->slot[s].time = ((value*3600) + (ui->sb_time_min->value()*60) + (ui->sb_time_sec->value()));ff7->setDescTime(s,ff7->slot[s].time);
-}}
-
-void MainWindow::on_sb_time_min_valueChanged(int value)
-{if(!load){
-        ff7->slot[s].time = ( (ui->sb_time_hour->value()*3600) + ((value*60)) + (ui->sb_time_sec->value()) );ff7->setDescTime(s,ff7->slot[s].time);
-}}
-
-void MainWindow::on_sb_time_sec_valueChanged(int value)
-{if(!load){
-        ff7->slot[s].time = ((ui->sb_time_hour->value()*3600) + (ui->sb_time_min->value()*60) + (value));ff7->setDescTime(s,ff7->slot[s].time);
-}}
+void MainWindow::on_sb_time_hour_valueChanged(int value){if(!load){ff7->setTime(s,((value*3600) + (ui->sb_time_min->value()*60) + (ui->sb_time_sec->value())));}}
+void MainWindow::on_sb_time_min_valueChanged(int value){if(!load){ff7->setTime (s,( (ui->sb_time_hour->value()*3600) + ((value*60)) + (ui->sb_time_sec->value())));}}
+void MainWindow::on_sb_time_sec_valueChanged(int value){if(!load){ff7->setTime(s,((ui->sb_time_hour->value()*3600) + (ui->sb_time_min->value()*60) + (value)));}}
 
 void MainWindow::on_sb_steps_valueChanged(int value)
 {if(!load){file_modified(true);
