@@ -29,6 +29,8 @@
 class FF7Save{
 
 public:
+    enum  LOVER{LOVE_BARRET,LOVE_TIFA,LOVE_AERIS,LOVE_YUFFIE};
+    enum MATERIACAVE{CAVE_MIME,CAVE_HPMP,CAVE_QUADMAGIC,CAVE_KOTR};
   //File Members
   bool LoadFile(const QString &fileName);
   bool SaveFile(const QString &fileName);
@@ -66,6 +68,8 @@ public:
   void setItem(int s,int item_num,quint16 new_id,quint8 new_qty);
 
   //materia get/set
+  bool  materiaCave(int s, FF7Save::MATERIACAVE cave);
+  void setMateriaCave(int s, FF7Save::MATERIACAVE cave, bool hasMateria);
 
   quint8 partyMateriaId(int s,int mat_num);
   qint32 partyMateriaAp(int s,int mat_num);
@@ -75,7 +79,8 @@ public:
   void setStolenMateria(int s, int mat_num,quint8 id,qint32 ap);
   quint32 time(int s);
   void setTime(int s,quint32 new_time);
-
+  void setDisc(int s,int disc);
+  quint8 disc(int s);
   //Description Stuff.
   quint32 descTime(int s);
   void setDescTime(int s,quint32 new_time);
@@ -125,13 +130,18 @@ public:
   qint8 ChocoPen(int s, int pos);
   void setChocoPen(int s, int pos, int type);
 
-  //Char Related Functions get/set all stats.
+  //Mini Game Stuff
+  quint8 love(int s,bool battle, FF7Save::LOVER who);
+  void setLove(int s,bool battle, FF7Save::LOVER who ,quint8 love);
+  quint16 speedScore(int s, int rank);
+  void setSpeedScore(int s,int rank,quint16 score);
   quint16 BikeHighScore(int s);
   void setBikeHighScore(int s,quint16 score);
   quint32 snowboardTime(int s,int course);
   void setSnowboardTime(int s,int course,quint32 time);
   quint8 snowboardScore(int s,int course);
   void setSnowboardScore(int s,int course,quint8 score);
+  //Char Releated Functions
   FF7CHAR Char(int s,int char_num); //Return Full Char
   quint8 charID(int s,int char_num);//Return Char ID
   quint8 charLevel(int s,int char_num);//Return Char Level
