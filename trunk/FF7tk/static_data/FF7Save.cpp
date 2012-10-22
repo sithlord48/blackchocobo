@@ -1339,7 +1339,12 @@ void FF7Save::New_Game_Plus(int s,QString CharFileName,QString fileName)
     setLocation(s,QT_TRANSLATE_NOOP("FF7Save","New Game +"));
     FileModified(true,s);
 }
-
+quint8 FF7Save::disc(int s){return slot[s].disc;}
+void FF7Save::setDisc(int s, int disc)
+{
+    if(disc<1 || disc>3){return;}
+    else{slot[s].disc=disc;}
+}
 QByteArray FF7Save::slot_header(int s)
 {
     QByteArray icon;
@@ -1458,6 +1463,119 @@ void FF7Save::setLocation(int s, QString new_location)
     setDescLocation(s,new_location);
     FileModified(true,s);
 }
+quint8 FF7Save::love(int s,bool battle, FF7Save::LOVER who)
+{
+    if(battle)
+    {
+        switch(who)
+        {
+            case FF7Save::LOVE_BARRET: return slot[s].b_love.barret; break;
+            case FF7Save::LOVE_TIFA: return slot[s].b_love.tifa; break;
+            case FF7Save::LOVE_AERIS: return slot[s].b_love.aeris; break;
+            case FF7Save::LOVE_YUFFIE: return slot[s].b_love.yuffie; break;
+            default:  return 0; break;
+        }
+    }
+    else
+    {
+        switch(who)
+        {
+            case FF7Save::LOVE_BARRET: return slot[s].love.barret; break;
+            case FF7Save::LOVE_TIFA: return slot[s].love.tifa; break;
+            case FF7Save::LOVE_AERIS: return slot[s].love.aeris; break;
+            case FF7Save::LOVE_YUFFIE: return slot[s].love.yuffie; break;
+            default:  return 0; break;
+        }
+    }
+}
+void FF7Save::setLove(int s,bool battle, FF7Save::LOVER who ,quint8 love)
+{
+    if(battle)
+    {
+        switch(who)
+        {
+            case FF7Save::LOVE_BARRET: slot[s].b_love.barret = love; break;
+            case FF7Save::LOVE_TIFA: slot[s].b_love.tifa=love; break;
+            case FF7Save::LOVE_AERIS:  slot[s].b_love.aeris=love; break;
+            case FF7Save::LOVE_YUFFIE:  slot[s].b_love.yuffie=love; break;
+            default: break;
+        }
+    }
+    else
+    {
+        switch(who)
+        {
+            case FF7Save::LOVE_BARRET: slot[s].love.barret = love; break;
+            case FF7Save::LOVE_TIFA: slot[s].love.tifa=love; break;
+            case FF7Save::LOVE_AERIS:  slot[s].love.aeris=love; break;
+            case FF7Save::LOVE_YUFFIE:  slot[s].love.yuffie=love; break;
+            default: break;
+        }
+    }
+}
+bool  FF7Save::materiaCave(int s, FF7Save::MATERIACAVE cave)
+{
+    switch(cave)
+    {
+        case FF7Save::CAVE_MIME: return (slot[s].materiacaves &(1<<0)); break;
+        case FF7Save::CAVE_HPMP: return (slot[s].materiacaves &(1<<1)); break;
+        case FF7Save::CAVE_QUADMAGIC: return (slot[s].materiacaves & (1<<2)); break;
+        case FF7Save::CAVE_KOTR: return (slot[s].materiacaves & (1<<3)); break;
+        default: return false;
+    }
+}
+void FF7Save::setMateriaCave(int s, FF7Save::MATERIACAVE cave, bool isEmpty)
+{
+    switch(cave)
+    {
+        case FF7Save::CAVE_MIME:
+            if(isEmpty){slot[s].materiacaves |= (1<<0);}
+            else{slot[s].materiacaves &= ~(1<<0);}
+            FileModified(true,s);
+            break;
+
+        case FF7Save::CAVE_HPMP:
+            if(isEmpty){slot[s].materiacaves |= (1<<1);}
+            else{slot[s].materiacaves &= ~(1<<1);}
+            FileModified(true,s);
+            break;
+
+        case FF7Save::CAVE_QUADMAGIC:
+            if(isEmpty){slot[s].materiacaves |= (1<<2);}
+            else{slot[s].materiacaves &= ~(1<<2);}
+            FileModified(true,s);
+            break;
+
+        case FF7Save::CAVE_KOTR:
+            if(isEmpty){slot[s].materiacaves |= (1<<3);}
+            else{slot[s].materiacaves &= ~(1<<3);}
+            FileModified(true,s);
+            break;
+
+        default: break;
+    }
+}
+quint16 FF7Save::speedScore(int s, int rank)
+{
+    switch(rank)
+    {
+        case 1: return slot[s].coster_1; break;
+        case 2: return slot[s].coster_2; break;
+        case 3: return slot[s].coster_3; break;
+        default:  return 0; break;
+     }
+}
+void FF7Save::setSpeedScore(int s, int rank,quint16 score)
+{
+    switch(rank)
+    {
+        case 1: slot[s].coster_1=score; break;
+        case 2: slot[s].coster_2=score; break;
+        case 3: slot[s].coster_3=score; break;
+        default: break;
+     }
+}
+
 QString FF7Save::chocoName(int s,int choco_num)
 {
     if(isJPN(s)){Text.init(1);}//Japanese
