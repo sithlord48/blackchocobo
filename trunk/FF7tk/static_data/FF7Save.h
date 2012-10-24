@@ -31,6 +31,72 @@ class FF7Save{
 public:
     enum  LOVER{LOVE_BARRET,LOVE_TIFA,LOVE_AERIS,LOVE_YUFFIE};
     enum MATERIACAVE{CAVE_MIME,CAVE_HPMP,CAVE_QUADMAGIC,CAVE_KOTR};
+    //Options Enums
+    enum SOUNDMODE{SOUND_MONO,SOUND_STEREO};
+    enum CONTROLMODE {CONTROL_NORMAL,CONTROL_CUSTOM};
+    enum CURSORMODE{CURSOR_INITIAL, CURSOR_MEMORY};
+    enum ATBMODE{ATB_ACTIVE,ATB_RECOMMENED,ATB_WAIT};
+    enum CAMERAMODE {CAMERA_AUTO,CAMERA_FIXED};
+    enum MAGICORDER {MAGIC_RAI,MAGIC_RIA,MAGIC_AIR,MAGIC_ARI,MAGIC_IRA,MAGIC_IAR};
+    enum CONTROLACTION
+    {
+        ACTION_CAMERA,ACTION_TARGET,ACTION_PAGEUP,ACTION_PAGEDOWN,
+        ACTION_MENU,ACTION_OK,ACTION_CANCEL,ACTION_SWITCH,
+        ACTION_HELP,ACTION_UNKNOWN1,ACTION_UNKNOWN2,
+        ACTION_PAUSE,ACTION_UP,ACTION_DOWN,ACTION_LEFT,ACTION_RIGHT
+    };
+    enum PSXBUTTONS
+    {
+        BTN_L2,BTN_R2,BTN_L1,BTN_R1,
+        BTN_TRIANGLE,BTN_CIRCLE,BTN_X,BTN_SQUARE,
+        BTN_SELECT,BTN_UNKNOWN1,BTN_UNKNOWN2,BTN_START,
+        BTN_UP,BTN_DOWN,BTN_LEFT,BTN_RIGHT
+    };
+
+    QByteArray slotHeader(int s);
+    QByteArray slotFooter(int s);
+    QByteArray slotPsxRawData(int s);
+
+    bool setSlotHeader(int s,QByteArray data);
+    bool setSlotFooter(int s,QByteArray data);
+    bool setSlotPsxRawData(int s,QByteArray data);
+
+    QByteArray controllerMapping(int s);
+    quint8 controllerMapping(int s, int action);
+
+    void setControllerMapping(int s,QByteArray map);
+    void setControllerMapping(int s, int action,  int button);
+
+    quint16 options(int s);
+    void setOptions(int s, int opt);
+    bool soundMode(int s);
+    void setSoundMode(int s, int mode);
+    void setSoundMode(int s, bool mode);
+    bool controlMode(int s);
+    void setControlMode(int s, int mode);
+    void setControlMode(int s, bool mode);
+    bool cursorMode(int s);
+    void setCursorMode(int s, int mode);
+    void setCursorMode(int s, bool mode);
+    int atbMode(int s);
+    void setAtbMode(int s, int mode);
+    bool cameraMode(int s);
+    void setCameraMode(int s, int mode);
+    void setCameraMode(int s, bool mode);
+    int magicOrder(int s);
+    void setMagicOrder(int s , int order);
+    bool battleHelp(int s);
+    void setBattleHelp(int s, bool shown);
+    int  battleSpeed(int s);
+    void setBattleSpeed(int s,int speed);
+    int battleMSpeed(int s);
+    void setBattleMSpeed(int s, int speed);
+    int messageSpeed(int s);
+    void setMessageSpeed(int s, int speed);
+    bool fieldHelp(int s);
+    void setfieldHelp(int s, bool shown);
+    bool battleTargets(int s);
+    void setBattleTargets(int s, bool shown);
   //File Members
   bool LoadFile(const QString &fileName);
   bool SaveFile(const QString &fileName);
@@ -48,7 +114,6 @@ public:
   void New_Game_Plus(int s,QString CharFileName,QString fileName="");//new game + in slot s (over load default w/ fileName must be RAW PSX
   bool exportChar(int s,int char_num,QString fileName);// Write slot[s].char[char_num] to fileName
   void importChar(int s,int char_num,QByteArray new_char);//import new_char to slot[s].char[char_num]
-
   typedef QVector< QString > SubContainer;
   QVector< SubContainer >  parsexml(QString fileName,QString metadataPath,QString UserID);
   QVector< SubContainer >  CreateMetadata(QString fileName, QString UserID);
@@ -68,8 +133,8 @@ public:
   void setItem(int s,int item_num,quint16 new_id,quint8 new_qty);
 
   //materia get/set
-  bool  materiaCave(int s, FF7Save::MATERIACAVE cave);
-  void setMateriaCave(int s, FF7Save::MATERIACAVE cave, bool hasMateria);
+  bool  materiaCave(int s,MATERIACAVE cave);
+  void setMateriaCave(int s, MATERIACAVE cave, bool hasMateria);
 
   quint8 partyMateriaId(int s,int mat_num);
   qint32 partyMateriaAp(int s,int mat_num);
@@ -131,8 +196,8 @@ public:
   void setChocoPen(int s, int pos, int type);
 
   //Mini Game Stuff
-  quint8 love(int s,bool battle, FF7Save::LOVER who);
-  void setLove(int s,bool battle, FF7Save::LOVER who ,quint8 love);
+  quint8 love(int s,bool battle, LOVER who);
+  void setLove(int s,bool battle, LOVER who ,quint8 love);
   quint16 speedScore(int s, int rank);
   void setSpeedScore(int s,int rank,quint16 score);
   quint16 BikeHighScore(int s);
@@ -275,8 +340,8 @@ public:
   quint8 psx_block_size(int s);//how many blocks save uses.
   void fix_pc_bytemask(int s);// update so last slot is shown selected on load (must be public to set to currently viewed slot).
 
-  QByteArray SlotRawData(int s); //Return Raw data from the slot
-  bool setSlotRawData(int s, QByteArray data);
+  QByteArray slotRawData(int s); //Return Raw data from the slot
+  bool setslotRawData(int s, QByteArray data);
 
   QByteArray UnknownVar(int s,int z);
   bool setUnknownVar(int s,int z,QByteArray data);

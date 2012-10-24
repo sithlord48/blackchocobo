@@ -476,20 +476,19 @@ private slots://try to keep these in the same order as the .cpp file
     void on_cb_s5_8_toggled(bool checked);
 
     // game options tab
-    void setoptions_one();
-    void setoptions_two();
-    void on_cb_battle_help_toggled();
+    void on_cb_battle_help_toggled(bool checked);
     void on_cb_battle_targets_toggled(bool checked);
     void on_cb_field_help_toggled(bool checked);
-    void on_combo_magic_order_currentIndexChanged();
-    void on_combo_camera_currentIndexChanged();
-    void on_combo_atb_currentIndexChanged();
-    void on_combo_cursor_currentIndexChanged();
-    void on_combo_control_currentIndexChanged();
-    void on_combo_sound_currentIndexChanged();
     void on_slide_fieldmspeed_valueChanged(int value);
     void on_slide_battlemspeed_valueChanged(int value);
     void on_slide_battlespeed_valueChanged(int value);
+
+    void on_combo_magic_order_currentIndexChanged(int order);
+    void on_combo_camera_currentIndexChanged(int mode);
+    void on_combo_atb_currentIndexChanged(int mode);
+    void on_combo_cursor_currentIndexChanged(int mode);
+    void on_combo_control_currentIndexChanged(int mode);
+    void on_combo_sound_currentIndexChanged(int mode);
 
     //save location tab
     void on_sb_map_id_valueChanged(int);

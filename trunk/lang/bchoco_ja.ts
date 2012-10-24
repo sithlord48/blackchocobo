@@ -4922,7 +4922,7 @@
     </message>
     <message>
         <source>Place Emerald Weapon?</source>
-        <translation>エメラルド ウェポン (?) を配置</translation>
+        <translation type="obsolete">エメラルド ウェポン (?) を配置</translation>
     </message>
     <message>
         <source>PSV Save Notice</source>
@@ -5440,7 +5440,7 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Using Unknown Var Table To View Save</source>
-        <translation>未知の変数のテーブルを使ってセーブを表示します</translation>
+        <translation type="obsolete">未知の変数のテーブルを使ってセーブを表示します</translation>
     </message>
     <message>
         <source>Sector 7 - Slums Progress</source>
@@ -5749,6 +5749,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Unknown Vars</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Using HexEditor To View Save</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

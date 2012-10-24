@@ -4851,7 +4851,7 @@
     </message>
     <message>
         <source>Place Emerald Weapon?</source>
-        <translation>Platziere Emerald Weapon?</translation>
+        <translation type="obsolete">Platziere Emerald Weapon?</translation>
     </message>
     <message>
         <source>PSV Save Notice</source>
@@ -5373,7 +5373,7 @@ Tabellen Einträge sind bearbeitbar</translation>
     <message>
         <source>Using Unknown Var Table To View Save</source>
         <translatorcomment>Correct if table = spreadsheet/Scheme/scale/chart ~</translatorcomment>
-        <translation>Benutze unbekannte Var Tabelle zum Anzeigen von Spielständen</translation>
+        <translation type="obsolete">Benutze unbekannte Var Tabelle zum Anzeigen von Spielständen</translation>
     </message>
     <message>
         <source>Sector 7 - Slums Progress</source>
@@ -5681,6 +5681,10 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Unknown Vars</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Using HexEditor To View Save</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

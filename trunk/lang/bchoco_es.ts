@@ -4850,7 +4850,7 @@
     </message>
     <message>
         <source>Place Emerald Weapon?</source>
-        <translation>¿Colocar Arma Esmeralda?</translation>
+        <translation type="obsolete">¿Colocar Arma Esmeralda?</translation>
     </message>
     <message>
         <source>PSV Save Notice</source>
@@ -5368,7 +5368,7 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Using Unknown Var Table To View Save</source>
-        <translation>Usando la tabla de variables desconocidas para ver la partida guardada</translation>
+        <translation type="obsolete">Usando la tabla de variables desconocidas para ver la partida guardada</translation>
     </message>
     <message>
         <source>Sector 7 - Slums Progress</source>
@@ -5676,6 +5676,10 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Unknown Vars</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Using HexEditor To View Save</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

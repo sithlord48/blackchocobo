@@ -203,8 +203,7 @@ struct FF7SLOT {		            // Save slot - Length 0x10F4
     quint8 z_39[48];                // [0x10A8] UNKNOWN DATA
     quint8 battlespeed;             // [0x10D8] Battle Speed
     quint8 battlemspeed;            // [0x10D9] Battle Message Speed
-    quint8 options1;                // [0x10DA] Options 1
-    quint8 options2;                // [0x10DB] Options 2
+    quint16 options;                // [0x10DA] Options
     quint8 controller_map[16];      // [0x10DC] controller mapping?
     quint8 fieldmspeed;             // [0x10EC] Message Speed On field
     quint8 z_40[8];                 // [0x10ED] UNKNOWN DATA
