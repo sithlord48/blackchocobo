@@ -547,8 +547,8 @@ void MainWindow::init_settings()
     if(settings->value("color3_b").isNull()){settings->setValue("color3_b","65");}
     skip_slot_mask = settings->value("skip_slot_mask").toBool(); //skips setting the mask of last saved slot on writes. testing function
 
-    if(settings->value("show_test").toBool()){ui->action_show_debug->setChecked(1);}
-    else{ui->action_show_debug->setChecked(0);}
+    if(settings->value("show_test").toBool()){ui->action_show_debug->setChecked(Qt::Checked);}
+    else{ui->action_show_debug->setChecked(Qt::Unchecked);}
 
     QString style="QWidget#centralWidget{background-color: qlineargradient(spread:repeat, x1:1, y1:1, x2:0, y2:0, stop:0.0625 rgba(";
     style.append(settings->value("color1_r").toString());   style.append(",");
@@ -571,15 +571,15 @@ void MainWindow::init_settings()
     ui->tbl_compare_unknown->horizontalHeader()->setStyleSheet(tablestyle);
     ui->tbl_diff->horizontalHeader()->setStyleSheet(tablestyle);
 
-    if(settings->value("autochargrowth").toBool()){ui->action_auto_char_growth->setChecked(1);}
-    else{ui->action_auto_char_growth->setChecked(0);}
+    if(settings->value("autochargrowth").toBool()){ui->action_auto_char_growth->setChecked(Qt::Checked);}
+    else{ui->action_auto_char_growth->setChecked(Qt::Unchecked);}
 
     /* LANGUAGE SELECT */
-    if(settings->value("lang").toString() == "en"){ui->action_Lang_en->setChecked(1);}
-    else if(settings->value("lang").toString() == "es"){ui->action_Lang_es->setChecked(1);}
-    else if(settings->value("lang").toString() == "fr"){ui->action_Lang_fr->setChecked(1);}
-    else if(settings->value("lang").toString() == "ja"){ui->action_Lang_jp->setChecked(1);}
-    else if(settings->value("lang").toString() == "de"){ui->action_Lang_de->setChecked(1);}
+    if(settings->value("lang").toString() == "en"){ui->action_Lang_en->setChecked(Qt::Checked);}
+    else if(settings->value("lang").toString() == "es"){ui->action_Lang_es->setChecked(Qt::Checked);}
+    else if(settings->value("lang").toString() == "fr"){ui->action_Lang_fr->setChecked(Qt::Checked);}
+    else if(settings->value("lang").toString() == "ja"){ui->action_Lang_jp->setChecked(Qt::Checked);}
+    else if(settings->value("lang").toString() == "de"){ui->action_Lang_de->setChecked(Qt::Checked);}
 }
 /*~~~~~~ END GUI SETUP ~~~~~~~*/
 MainWindow::~MainWindow(){delete ui;}
@@ -891,8 +891,8 @@ void MainWindow::on_actionExport_PC_Save_activated()
     if(fileName.isEmpty()){return;}// catch if Cancel is pressed
     else
     {
-        ui->combo_control->setCurrentIndex(0);
         ff7->Export_PC(fileName);
+        file_modified(false);
     }
 }
 /*~~~~~~~~~~~~~~~~~EXPORT PSX~~~~~~~~~~~~~~~~~~*/
@@ -904,7 +904,6 @@ void MainWindow::on_actionExport_PSX_activated()
     if (fileName.isEmpty()){return;}// catch if Cancel is pressed
     else
     {
-        ui->combo_control->setCurrentIndex(0);
         ff7->Export_PSX(s,fileName);
         file_modified(false);
     }
@@ -919,7 +918,6 @@ void MainWindow::on_actionExport_MC_triggered()
     if(fileName.isEmpty()){return;}
     else
     {
-        ui->combo_control->setCurrentIndex(0);
         ff7->Export_VMC(fileName);
         file_modified(false);
     }
@@ -932,7 +930,6 @@ void MainWindow::on_actionExport_VGS_triggered()
     if(fileName.isEmpty()){return;}
     else
     {
-        ui->combo_control->setCurrentIndex(0);
         ff7->Export_VGS(fileName);
         file_modified(false);
     }
@@ -945,7 +942,6 @@ void MainWindow::on_actionExport_DEX_triggered()
     if(fileName.isEmpty()){return;}
     else
     {
-        ui->combo_control->setCurrentIndex(0);
         ff7->Export_DEX(fileName);
         file_modified(false);
     }
@@ -1041,45 +1037,45 @@ void MainWindow::on_action_show_debug_toggled(bool checked)
 void MainWindow::on_action_Lang_en_triggered()
 {
     //clear other lang
-    ui->action_Lang_es->setChecked(0);
-    ui->action_Lang_fr->setChecked(0);
-    ui->action_Lang_jp->setChecked(0);
-    ui->action_Lang_de->setChecked(0);
+    ui->action_Lang_es->setChecked(Qt::Unchecked);
+    ui->action_Lang_fr->setChecked(Qt::Unchecked);
+    ui->action_Lang_jp->setChecked(Qt::Unchecked);
+    ui->action_Lang_de->setChecked(Qt::Unchecked);
     settings->setValue("lang","en");
     QMessageBox::information(this,"Language Changed","You Must Restart For The Language to Change");
 }
 void MainWindow::on_action_Lang_es_triggered()
 {
-    ui->action_Lang_en->setChecked(0);
-    ui->action_Lang_fr->setChecked(0);
-    ui->action_Lang_jp->setChecked(0);
-    ui->action_Lang_de->setChecked(0);
+    ui->action_Lang_en->setChecked(Qt::Unchecked);
+    ui->action_Lang_fr->setChecked(Qt::Unchecked);
+    ui->action_Lang_jp->setChecked(Qt::Unchecked);
+    ui->action_Lang_de->setChecked(Qt::Unchecked);
     settings->setValue("lang","es");
     QMessageBox::information(this,QString::fromUtf8("Idioma Cambiado"),QString::fromUtf8("Debe reiniciar Para el cambio de idioma"));
 }
 void MainWindow::on_action_Lang_fr_triggered()
 {
-    ui->action_Lang_en->setChecked(0);
-    ui->action_Lang_es->setChecked(0);
-    ui->action_Lang_jp->setChecked(0);
-    ui->action_Lang_de->setChecked(0);
+    ui->action_Lang_en->setChecked(Qt::Unchecked);
+    ui->action_Lang_es->setChecked(Qt::Unchecked);
+    ui->action_Lang_jp->setChecked(Qt::Unchecked);
+    ui->action_Lang_de->setChecked(Qt::Unchecked);
     settings->setValue("lang","fr");
     QMessageBox::information(this,QString::fromUtf8("Langue Modifiée"),QString::fromUtf8("Vous Devez Redemarrer Pour Changer la Langue"));
 }
 void MainWindow::on_action_Lang_de_triggered()
 {
-    ui->action_Lang_en->setChecked(0);
-    ui->action_Lang_es->setChecked(0);
-    ui->action_Lang_fr->setChecked(0);
+    ui->action_Lang_en->setChecked(Qt::Unchecked);
+    ui->action_Lang_es->setChecked(Qt::Unchecked);
+    ui->action_Lang_fr->setChecked(Qt::Unchecked);
     settings->setValue("lang","de");
     QMessageBox::information(this,QString::fromUtf8("Sprache geändert"),QString::fromUtf8("Neustarten um Sprache zu ändern"));
 }
 void MainWindow::on_action_Lang_jp_triggered()
 {
-    ui->action_Lang_en->setChecked(0);
-    ui->action_Lang_es->setChecked(0);
-    ui->action_Lang_fr->setChecked(0);
-    ui->action_Lang_de->setChecked(0);
+    ui->action_Lang_en->setChecked(Qt::Unchecked);
+    ui->action_Lang_es->setChecked(Qt::Unchecked);
+    ui->action_Lang_fr->setChecked(Qt::Unchecked);
+    ui->action_Lang_de->setChecked(Qt::Unchecked);
     settings->setValue("lang","ja");
     QMessageBox::information(this,QString::fromUtf8("言語の変更"),QString::fromUtf8("プログラムを再起動して言語の変更を適用してください"));
 }
@@ -1245,13 +1241,13 @@ void MainWindow::setmenu(bool newgame)
 {
     load=true;
     /*~~Disable All Items that are dependent on File Type~~*/
-    ui->actionSlot_01->setChecked(0);    ui->actionSlot_02->setChecked(0);    ui->actionSlot_03->setChecked(0);    ui->actionSlot_04->setChecked(0);
-    ui->actionSlot_05->setChecked(0);    ui->actionSlot_06->setChecked(0);    ui->actionSlot_07->setChecked(0);    ui->actionSlot_08->setChecked(0);
-    ui->actionSlot_09->setChecked(0);    ui->actionSlot_10->setChecked(0);    ui->actionSlot_11->setChecked(0);    ui->actionSlot_12->setChecked(0);
-    ui->actionSlot_13->setChecked(0);    ui->actionSlot_14->setChecked(0);    ui->actionSlot_15->setChecked(0);     ui->actionClear_Slot->setEnabled(0);
-    ui->action_Region_USA->setChecked(0);    ui->action_Region_PAL_Generic->setChecked(0);  ui->action_Region_PAL_German->setChecked(0);
-    ui->action_Region_PAL_French->setChecked(0);ui->action_Region_PAL_Spanish->setChecked(0);    ui->action_Region_JPN->setChecked(0);
-    ui->action_Region_JPN_International->setChecked(0);    ui->actionNext_Slot->setEnabled(0);ui->actionPrevious_Slot->setEnabled(0);
+    ui->actionSlot_01->setChecked(Qt::Unchecked);    ui->actionSlot_02->setChecked(Qt::Unchecked);    ui->actionSlot_03->setChecked(Qt::Unchecked);    ui->actionSlot_04->setChecked(Qt::Unchecked);
+    ui->actionSlot_05->setChecked(Qt::Unchecked);    ui->actionSlot_06->setChecked(Qt::Unchecked);    ui->actionSlot_07->setChecked(Qt::Unchecked);    ui->actionSlot_08->setChecked(Qt::Unchecked);
+    ui->actionSlot_09->setChecked(Qt::Unchecked);    ui->actionSlot_10->setChecked(Qt::Unchecked);    ui->actionSlot_11->setChecked(Qt::Unchecked);    ui->actionSlot_12->setChecked(Qt::Unchecked);
+    ui->actionSlot_13->setChecked(Qt::Unchecked);    ui->actionSlot_14->setChecked(Qt::Unchecked);    ui->actionSlot_15->setChecked(Qt::Unchecked);     ui->actionClear_Slot->setEnabled(0);
+    ui->action_Region_USA->setChecked(Qt::Unchecked);    ui->action_Region_PAL_Generic->setChecked(Qt::Unchecked);  ui->action_Region_PAL_German->setChecked(Qt::Unchecked);
+    ui->action_Region_PAL_French->setChecked(Qt::Unchecked);ui->action_Region_PAL_Spanish->setChecked(Qt::Unchecked);    ui->action_Region_JPN->setChecked(Qt::Unchecked);
+    ui->action_Region_JPN_International->setChecked(Qt::Unchecked);    ui->actionNext_Slot->setEnabled(0);ui->actionPrevious_Slot->setEnabled(0);
     ui->actionShow_Selection_Dialog->setEnabled(0);ui->actionSlot_01->setEnabled(0);ui->actionSlot_02->setEnabled(0);
     ui->actionSlot_03->setEnabled(0);ui->actionSlot_04->setEnabled(0);ui->actionSlot_05->setEnabled(0);
     ui->actionSlot_06->setEnabled(0);ui->actionSlot_07->setEnabled(0);ui->actionSlot_08->setEnabled(0);
@@ -1263,21 +1259,21 @@ void MainWindow::setmenu(bool newgame)
     /*~~~~~~Current Slot~~~~~~*/
     switch(s)
     {
-        case 0:ui->actionSlot_01->setChecked(1);break;
-        case 1:ui->actionSlot_02->setChecked(1);break;
-        case 2:ui->actionSlot_03->setChecked(1);break;
-        case 3:ui->actionSlot_04->setChecked(1);break;
-        case 4:ui->actionSlot_05->setChecked(1);break;
-        case 5:ui->actionSlot_06->setChecked(1);break;
-        case 6:ui->actionSlot_07->setChecked(1);break;
-        case 7:ui->actionSlot_08->setChecked(1);break;
-        case 8:ui->actionSlot_09->setChecked(1);break;
-        case 9:ui->actionSlot_10->setChecked(1);break;
-        case 10:ui->actionSlot_11->setChecked(1);break;
-        case 11:ui->actionSlot_12->setChecked(1);break;
-        case 12:ui->actionSlot_13->setChecked(1);break;
-        case 13:ui->actionSlot_14->setChecked(1);break;
-        case 14:ui->actionSlot_15->setChecked(1);break;
+        case 0:ui->actionSlot_01->setChecked(Qt::Checked);break;
+        case 1:ui->actionSlot_02->setChecked(Qt::Checked);break;
+        case 2:ui->actionSlot_03->setChecked(Qt::Checked);break;
+        case 3:ui->actionSlot_04->setChecked(Qt::Checked);break;
+        case 4:ui->actionSlot_05->setChecked(Qt::Checked);break;
+        case 5:ui->actionSlot_06->setChecked(Qt::Checked);break;
+        case 6:ui->actionSlot_07->setChecked(Qt::Checked);break;
+        case 7:ui->actionSlot_08->setChecked(Qt::Checked);break;
+        case 8:ui->actionSlot_09->setChecked(Qt::Checked);break;
+        case 9:ui->actionSlot_10->setChecked(Qt::Checked);break;
+        case 10:ui->actionSlot_11->setChecked(Qt::Checked);break;
+        case 11:ui->actionSlot_12->setChecked(Qt::Checked);break;
+        case 12:ui->actionSlot_13->setChecked(Qt::Checked);break;
+        case 13:ui->actionSlot_14->setChecked(Qt::Checked);break;
+        case 14:ui->actionSlot_15->setChecked(Qt::Checked);break;
     }
     /*~~~~End Current Slot~~~~~*/
     /*~~~~~~~Set Actions By Type~~~~~~~*/
@@ -1335,7 +1331,8 @@ void MainWindow::file_modified(bool changed)
     ff7->FileModified(changed,s);
     ui->lbl_fileName->setText(ff7->fileName());
 
-    hexEditor->setData(ff7->SlotRawData(s));
+    if(ff7->isFF7(s)){hexEditor->setData(ff7->slotRawData(s));}
+    else{hexEditor->setData(ff7->slotPsxRawData(s));}
     if(changed){ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));}
 }
 
@@ -1469,48 +1466,28 @@ void MainWindow::itemupdate(void)
 {
     load=true;
     //Field Items Picked up
-    if(ff7->UnknownVar(s,38).at(48) & (1<<0)){ui->cb_bm_items_1->setChecked(1);}
-    else{ui->cb_bm_items_1->setChecked(0);}
-    if(ff7->UnknownVar(s,38).at(48) & (1<<1)){ui->cb_bm_items_2->setChecked(1);}
-    else{ui->cb_bm_items_2->setChecked(0);}
-    if(ff7->UnknownVar(s,38).at(48) & (1<<2)){ui->cb_bm_items_3->setChecked(1);}
-    else{ui->cb_bm_items_3->setChecked(0);}
-    if(ff7->UnknownVar(s,38).at(48) & (1<<3)){ui->cb_bm_items_4->setChecked(1);}
-    else{ui->cb_bm_items_4->setChecked(0);}
+    if(ff7->UnknownVar(s,38).at(48) & (1<<0)){ui->cb_bm_items_1->setChecked(Qt::Checked);}    else{ui->cb_bm_items_1->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,38).at(48) & (1<<1)){ui->cb_bm_items_2->setChecked(Qt::Checked);}    else{ui->cb_bm_items_2->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,38).at(48) & (1<<2)){ui->cb_bm_items_3->setChecked(Qt::Checked);}    else{ui->cb_bm_items_3->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,38).at(48) & (1<<3)){ui->cb_bm_items_4->setChecked(Qt::Checked);}    else{ui->cb_bm_items_4->setChecked(Qt::Unchecked);}
 
-    if((ff7->slot[s].itemsmask_1)& (1<<0)){ui->cb_itemmask1_1->setChecked(1);}
-    else{ui->cb_itemmask1_1->setChecked(0);}
-    if((ff7->slot[s].itemsmask_1)& (1<<1)){ui->cb_itemmask1_2->setChecked(1);}
-    else{ui->cb_itemmask1_2->setChecked(0);}
-    if((ff7->slot[s].itemsmask_1)& (1<<2)){ui->cb_itemmask1_3->setChecked(1);}
-    else{ui->cb_itemmask1_3->setChecked(0);}
-    if((ff7->slot[s].itemsmask_1)& (1<<3)){ui->cb_itemmask1_4->setChecked(1);}
-    else{ui->cb_itemmask1_4->setChecked(0);}
-    if((ff7->slot[s].itemsmask_1)& (1<<4)){ui->cb_itemmask1_5->setChecked(1);}
-    else{ui->cb_itemmask1_5->setChecked(0);}
-    if((ff7->slot[s].itemsmask_1)& (1<<5)){ui->cb_itemmask1_6->setChecked(1);}
-    else{ui->cb_itemmask1_6->setChecked(0);}
-    if((ff7->slot[s].itemsmask_1)& (1<<6)){ui->cb_itemmask1_7->setChecked(1);}
-    else{ui->cb_itemmask1_7->setChecked(0);}
-    if((ff7->slot[s].itemsmask_1)& (1<<7)){ui->cb_itemmask1_8->setChecked(1);}
-    else{ui->cb_itemmask1_8->setChecked(0);}
+    if((ff7->slot[s].itemsmask_1)& (1<<0)){ui->cb_itemmask1_1->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_1->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].itemsmask_1)& (1<<1)){ui->cb_itemmask1_2->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_2->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].itemsmask_1)& (1<<2)){ui->cb_itemmask1_3->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_3->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].itemsmask_1)& (1<<3)){ui->cb_itemmask1_4->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_4->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].itemsmask_1)& (1<<4)){ui->cb_itemmask1_5->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_5->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].itemsmask_1)& (1<<5)){ui->cb_itemmask1_6->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_6->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].itemsmask_1)& (1<<6)){ui->cb_itemmask1_7->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_7->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].itemsmask_1)& (1<<7)){ui->cb_itemmask1_8->setChecked(Qt::Checked);}    else{ui->cb_itemmask1_8->setChecked(Qt::Unchecked);}
 
-    if(ff7->UnknownVar(s,9).at(4) & (1<<0)){ui->cb_s7tg_items_1->setChecked(1);}
-    else{ui->cb_s7tg_items_1->setChecked(0);}
-    if(ff7->UnknownVar(s,9).at(4) & (1<<1)){ui->cb_s7tg_items_2->setChecked(1);}
-    else{ui->cb_s7tg_items_2->setChecked(0);}
-    if(ff7->UnknownVar(s,9).at(4) & (1<<2)){ui->cb_s7tg_items_3->setChecked(1);}
-    else{ui->cb_s7tg_items_3->setChecked(0);}
-    if(ff7->UnknownVar(s,9).at(4) & (1<<3)){ui->cb_s7tg_items_4->setChecked(1);}
-    else{ui->cb_s7tg_items_4->setChecked(0);}
-    if(ff7->UnknownVar(s,9).at(4) & (1<<4)){ui->cb_s7tg_items_5->setChecked(1);}
-    else{ui->cb_s7tg_items_5->setChecked(0);}
-    if(ff7->UnknownVar(s,9).at(4) & (1<<5)){ui->cb_s7tg_items_6->setChecked(1);}
-    else{ui->cb_s7tg_items_6->setChecked(0);}
-    if(ff7->UnknownVar(s,9).at(4) & (1<<6)){ui->cb_s7tg_items_7->setChecked(1);}
-    else{ui->cb_s7tg_items_7->setChecked(0);}
-    if(ff7->UnknownVar(s,9).at(4) & (1<<7)){ui->cb_s7tg_items_8->setChecked(1);}
-    else{ui->cb_s7tg_items_8->setChecked(0);}
+    if(ff7->UnknownVar(s,9).at(4) & (1<<0)){ui->cb_s7tg_items_1->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_1->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,9).at(4) & (1<<1)){ui->cb_s7tg_items_2->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_2->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,9).at(4) & (1<<2)){ui->cb_s7tg_items_3->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_3->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,9).at(4) & (1<<3)){ui->cb_s7tg_items_4->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_4->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,9).at(4) & (1<<4)){ui->cb_s7tg_items_5->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_5->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,9).at(4) & (1<<5)){ui->cb_s7tg_items_6->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_6->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,9).at(4) & (1<<6)){ui->cb_s7tg_items_7->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_7->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,9).at(4) & (1<<7)){ui->cb_s7tg_items_8->setChecked(Qt::Checked);}    else{ui->cb_s7tg_items_8->setChecked(Qt::Unchecked);}
     load=false;
 }
 /*~~~~~~~~~~~~~~~~~~~~~GUIREFRESH~~~~~~~~~~~~~~~~~~~~~~*/
@@ -1528,11 +1505,13 @@ void MainWindow::guirefresh(bool newgame)
         {
 
          case 0://View Anyway..
-            QMessageBox::information(this,tr("Ingoring Non FF7 Save"),tr("Using Unknown Var Table To View Save"));
+            QMessageBox::information(this,tr("Ingoring Non FF7 Save"),tr("Using HexEditor To View Save"));
             ui->tabWidget->setCurrentIndex(8);
             ui->tabWidget_3->setCurrentIndex(1);
             ui->tabWidget->setTabEnabled(8,1);
-            unknown_refresh(ui->combo_z_var->count()-1);
+            hexEditor->setData(ff7->slotPsxRawData(s));
+
+            //unknown_refresh(ui->combo_z_var->count()-1);
             break;
 
         case 1://Previous Clicked
@@ -1564,8 +1543,6 @@ void MainWindow::guirefresh(bool newgame)
         //Clear all check boxes and index's
         ui->cb_replay->setCurrentIndex(0);
         ui->cb_bombing_int->setChecked(Qt::Unchecked);
-        ui->cb_field_help->setChecked(Qt::Unchecked);
-        ui->cb_battle_targets->setChecked(Qt::Unchecked);
         ui->cb_ruby_dead->setChecked(Qt::Unchecked);
         ui->cb_emerald_dead->setChecked(Qt::Unchecked);
         ui->cb_visible_bronco->setChecked(Qt::Unchecked);
@@ -1579,10 +1556,9 @@ void MainWindow::guirefresh(bool newgame)
         ui->cb_visible_gold_chocobo->setChecked(Qt::Unchecked);
         if((ff7->slot[s].ruby_emerald) &(1<<3)){ui->cb_ruby_dead->setChecked(Qt::Checked);}
         if((ff7->slot[s].ruby_emerald)& (1<<4)){ui->cb_emerald_dead->setChecked(Qt::Checked);}
-        if((ff7->slot[s].field_help)& (1<<0)){ui->cb_field_help->setChecked(Qt::Checked);}
-        if((ff7->slot[s].tut_sub)& (1<<6)){ui->cb_battle_targets->setChecked(Qt::Checked);}
         //item_preview->setItem(-1);//reset.
         /*~~~~Set Region info and icon~~~~*/
+
         ui->lbl_sg_region->setText(ff7->region(s).mid(0,ff7->region(s).lastIndexOf("-")+1));
         ui->cb_Region_Slot->setCurrentIndex(ff7->region(s).mid(ff7->region(s).lastIndexOf("S")+1,2).toInt()-1);
         if (ff7->type() != "PC") //we Display an icon. for all formats except for pc
@@ -1591,51 +1567,36 @@ void MainWindow::guirefresh(bool newgame)
             ui->lbl_slot_icon->setPixmap(ico.icon().scaledToHeight(64,Qt::SmoothTransformation));
         }
         /*~~~~~Load Game Options~~~~~*/
-
-        if((ff7->slot[s].options1)& (1<<0)){ui->combo_sound->setCurrentIndex(1);}
-        else{ui->combo_sound->setCurrentIndex(0);}
-
-        if((ff7->slot[s].options1) & (1<<2)){ui->combo_control->setCurrentIndex(1);}
-        else{ui->combo_control->setCurrentIndex(0);}
-
-        if((ff7->slot[s].options1)&(1<<4)){ui->combo_cursor->setCurrentIndex(1);}
-        else{ui->combo_cursor->setCurrentIndex(0);}
-
-        if((ff7->slot[s].options1)&(1<<6)){ui->combo_atb->setCurrentIndex(1);}
-        else if((ff7->slot[s].options1)&(1<<7)){ui->combo_atb->setCurrentIndex(2);}
-        else{ui->combo_atb->setCurrentIndex(0);}
-
-        ui->slide_battlespeed->setValue(ff7->slot[s].battlespeed);
-        ui->slide_battlemspeed->setValue(ff7->slot[s].battlemspeed);
-        ui->slide_fieldmspeed->setValue(ff7->slot[s].fieldmspeed);
-        if((ff7->slot[s].options2)&(1<<0)){ui->combo_camera->setCurrentIndex(1);}
-        else{ui->combo_camera->setCurrentIndex(0);}
-        if(((ff7->slot[s].options2)&(1<<2)) && ((ff7->slot[s].options2)&(1<<3))){ui->combo_magic_order->setCurrentIndex(3);}
-        else if(((ff7->slot[s].options2)&(1<<2)) && ((ff7->slot[s].options2)&(1<<4))){ui->combo_magic_order->setCurrentIndex(5);}
-        else if((ff7->slot[s].options2)&(1<<2)){ui->combo_magic_order->setCurrentIndex(1);}
-        else if((ff7->slot[s].options2)&(1<<3)){ui->combo_magic_order->setCurrentIndex(2);}
-        else if((ff7->slot[s].options2)&(1<<4)){ui->combo_magic_order->setCurrentIndex(4);}
-        else{ui->combo_magic_order->setCurrentIndex(0);}
-        if((ff7->slot[s].options2)&(1<<6)){ui->cb_battle_help->setCheckState(Qt::Checked);}
-        else{ui->cb_battle_help->setCheckState(Qt::Unchecked);}
+        if(ff7->fieldHelp(s)){ui->cb_field_help->setChecked(Qt::Checked);} else{ui->cb_field_help->setChecked(Qt::Unchecked);}
+        if(ff7->battleTargets(s)){ui->cb_battle_targets->setCheckState(Qt::Checked);} else{ui->cb_battle_targets->setCheckState(Qt::Unchecked);}
+        if(ff7->soundMode(s)){ui->combo_sound->setCurrentIndex(1);}        else{ui->combo_sound->setCurrentIndex(0);}
+        if(ff7->controlMode(s)){ui->combo_control->setCurrentIndex(1);}   else{ui->combo_control->setCurrentIndex(0);}
+        if(ff7->cursorMode(s)){ui->combo_cursor->setCurrentIndex(1);}      else{ui->combo_cursor->setCurrentIndex(0);}
+        if(ff7->cameraMode(s)){ui->combo_camera->setCurrentIndex(1);}   else{ui->combo_camera->setCurrentIndex(0);}
+        if(ff7->battleHelp(s)){ui->cb_battle_help->setCheckState(Qt::Checked);}  else{ui->cb_battle_help->setCheckState(Qt::Unchecked);}
+        ui->combo_atb->setCurrentIndex(ff7->atbMode(s));
+        ui->combo_magic_order->setCurrentIndex(ff7->magicOrder(s));
+        ui->slide_battlespeed->setValue(ff7->battleSpeed(s));
+        ui->slide_battlemspeed->setValue(ff7->battleMSpeed(s));
+        ui->slide_fieldmspeed->setValue(ff7->messageSpeed(s));
 
         //CONTROLLER MAPPING
-        ui->combo_button_1->setCurrentIndex(ff7->slot[s].controller_map[0]);
-        ui->combo_button_2->setCurrentIndex(ff7->slot[s].controller_map[1]);
-        ui->combo_button_3->setCurrentIndex(ff7->slot[s].controller_map[2]);
-        ui->combo_button_4->setCurrentIndex(ff7->slot[s].controller_map[3]);
-        ui->combo_button_5->setCurrentIndex(ff7->slot[s].controller_map[4]);
-        ui->combo_button_6->setCurrentIndex(ff7->slot[s].controller_map[5]);
-        ui->combo_button_7->setCurrentIndex(ff7->slot[s].controller_map[6]);
-        ui->combo_button_8->setCurrentIndex(ff7->slot[s].controller_map[7]);
-        ui->combo_button_9->setCurrentIndex(ff7->slot[s].controller_map[8]);
-        ui->combo_button_10->setCurrentIndex(ff7->slot[s].controller_map[9]);
-        ui->combo_button_11->setCurrentIndex(ff7->slot[s].controller_map[10]);
-        ui->combo_button_12->setCurrentIndex(ff7->slot[s].controller_map[11]);
-        ui->combo_button_13->setCurrentIndex(ff7->slot[s].controller_map[12]);
-        ui->combo_button_14->setCurrentIndex(ff7->slot[s].controller_map[13]);
-        ui->combo_button_15->setCurrentIndex(ff7->slot[s].controller_map[14]);
-        ui->combo_button_16->setCurrentIndex(ff7->slot[s].controller_map[15]);
+        ui->combo_button_1->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_CAMERA));
+        ui->combo_button_2->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_TARGET));
+        ui->combo_button_3->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_PAGEUP));
+        ui->combo_button_4->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_PAGEDOWN));
+        ui->combo_button_5->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_MENU));
+        ui->combo_button_6->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_OK));
+        ui->combo_button_7->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_CANCEL));
+        ui->combo_button_8->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_SWITCH));
+        ui->combo_button_9->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_HELP));
+        ui->combo_button_10->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_UNKNOWN1));
+        ui->combo_button_11->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_UNKNOWN2));
+        ui->combo_button_12->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_PAUSE));
+        ui->combo_button_13->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_UP));
+        ui->combo_button_14->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_DOWN));
+        ui->combo_button_15->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_LEFT));
+        ui->combo_button_16->setCurrentIndex(ff7->controllerMapping(s,FF7Save::ACTION_RIGHT));
         //hide buttons config if not debug or non pc save
         if(ff7->type() !="PC" || ui->action_show_debug->isChecked()){ui->group_controller_mapping->setVisible(1);}
         else{ui->group_controller_mapping->setVisible(0);}
@@ -1804,16 +1765,12 @@ void MainWindow::guirefresh(bool newgame)
         dialog_preview->SetLLeft (ff7->Dialog_LL(s));
         dialog_preview->SetLRight(ff7->Dialog_LR(s));
 
-        if(ff7->materiaCave(s,FF7Save::CAVE_MIME)){ui->cb_materiacave_1->setChecked(Qt::Checked);}
-        else{ui->cb_materiacave_1->setChecked(Qt::Unchecked);}
-        if(ff7->materiaCave(s,FF7Save::CAVE_HPMP)){ui->cb_materiacave_2->setChecked(Qt::Checked);}
-        else{ui->cb_materiacave_2->setChecked(Qt::Unchecked);}
-        if(ff7->materiaCave(s,FF7Save::CAVE_QUADMAGIC)){ui->cb_materiacave_3->setChecked(Qt::Checked);}
-        else{ui->cb_materiacave_3->setChecked(Qt::Unchecked);}
-        if(ff7->materiaCave(s,FF7Save::CAVE_KOTR)){ui->cb_materiacave_4->setChecked(Qt::Checked);}
-        else{ui->cb_materiacave_4->setChecked(Qt::Unchecked);}
-        if((ff7->slot[s].yuffieforest)& (1<<0)){ui->cb_yuffieforest->setChecked(Qt::Checked);}
-        else{ui->cb_yuffieforest->setChecked(Qt::Unchecked);}
+        if(ff7->materiaCave(s,FF7Save::CAVE_MIME)){ui->cb_materiacave_1->setChecked(Qt::Checked);}        else{ui->cb_materiacave_1->setChecked(Qt::Unchecked);}
+        if(ff7->materiaCave(s,FF7Save::CAVE_HPMP)){ui->cb_materiacave_2->setChecked(Qt::Checked);}        else{ui->cb_materiacave_2->setChecked(Qt::Unchecked);}
+        if(ff7->materiaCave(s,FF7Save::CAVE_QUADMAGIC)){ui->cb_materiacave_3->setChecked(Qt::Checked);}        else{ui->cb_materiacave_3->setChecked(Qt::Unchecked);}
+        if(ff7->materiaCave(s,FF7Save::CAVE_KOTR)){ui->cb_materiacave_4->setChecked(Qt::Checked);}        else{ui->cb_materiacave_4->setChecked(Qt::Unchecked);}
+        if((ff7->slot[s].yuffieforest)& (1<<0)){ui->cb_yuffieforest->setChecked(Qt::Checked);}        else{ui->cb_yuffieforest->setChecked(Qt::Unchecked);}
+
         /*~~~~~Stolen Materia~~~~~~~*/
         QTableWidgetItem *newItem;
         ui->tbl_materia_2->reset();
@@ -1907,146 +1864,91 @@ void MainWindow::progress_update()
     ui->combo_s7_slums->setCurrentIndex(0);
     if(ff7->slot[s].intbombing == 0x14){ui->cb_bombing_int->setChecked(Qt::Checked);}
 
-    if((ff7->slot[s].bm_progress1)& (1<<0)){ui->cb_bm1_1->setChecked(Qt::Checked);}
-    else{ui->cb_bm1_1->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress1)& (1<<1)){ui->cb_bm1_2->setChecked(Qt::Checked);}
-    else{ui->cb_bm1_2->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress1)& (1<<2)){ui->cb_bm1_3->setChecked(Qt::Checked);}
-    else{ui->cb_bm1_3->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress1)& (1<<3)){ui->cb_bm1_4->setChecked(Qt::Checked);}
-    else{ui->cb_bm1_4->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress1)& (1<<4)){ui->cb_bm1_5->setChecked(Qt::Checked);}
-    else{ui->cb_bm1_5->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress1)& (1<<5)){ui->cb_bm1_6->setChecked(Qt::Checked);}
-    else{ui->cb_bm1_6->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress1)& (1<<6)){ui->cb_bm1_7->setChecked(Qt::Checked);}
-    else{ui->cb_bm1_7->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress1)& (1<<7)){ui->cb_bm1_8->setChecked(Qt::Checked);}
-    else{ui->cb_bm1_8->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress1)& (1<<0)){ui->cb_bm1_1->setChecked(Qt::Checked);}     else{ui->cb_bm1_1->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress1)& (1<<1)){ui->cb_bm1_2->setChecked(Qt::Checked);}     else{ui->cb_bm1_2->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress1)& (1<<2)){ui->cb_bm1_3->setChecked(Qt::Checked);}     else{ui->cb_bm1_3->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress1)& (1<<3)){ui->cb_bm1_4->setChecked(Qt::Checked);}     else{ui->cb_bm1_4->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress1)& (1<<4)){ui->cb_bm1_5->setChecked(Qt::Checked);}     else{ui->cb_bm1_5->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress1)& (1<<5)){ui->cb_bm1_6->setChecked(Qt::Checked);}     else{ui->cb_bm1_6->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress1)& (1<<6)){ui->cb_bm1_7->setChecked(Qt::Checked);}     else{ui->cb_bm1_7->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress1)& (1<<7)){ui->cb_bm1_8->setChecked(Qt::Checked);}     else{ui->cb_bm1_8->setChecked(Qt::Unchecked);}
 
-    if((ff7->slot[s].bm_progress2)& (1<<0)){ui->cb_bm2_1->setChecked(Qt::Checked);}
-    else{ui->cb_bm2_1->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress2)& (1<<1)){ui->cb_bm2_2->setChecked(Qt::Checked);}
-    else{ui->cb_bm2_2->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress2)& (1<<2)){ui->cb_bm2_3->setChecked(Qt::Checked);}
-    else{ui->cb_bm2_3->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress2)& (1<<3)){ui->cb_bm2_4->setChecked(Qt::Checked);}
-    else{ui->cb_bm2_4->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress2)& (1<<4)){ui->cb_bm2_5->setChecked(Qt::Checked);}
-    else{ui->cb_bm2_5->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress2)& (1<<5)){ui->cb_bm2_6->setChecked(Qt::Checked);}
-    else{ui->cb_bm2_6->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress2)& (1<<6)){ui->cb_bm2_7->setChecked(Qt::Checked);}
-    else{ui->cb_bm2_7->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress2)& (1<<7)){ui->cb_bm2_8->setChecked(Qt::Checked);}
-    else{ui->cb_bm2_8->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress2)& (1<<0)){ui->cb_bm2_1->setChecked(Qt::Checked);}     else{ui->cb_bm2_1->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress2)& (1<<1)){ui->cb_bm2_2->setChecked(Qt::Checked);}     else{ui->cb_bm2_2->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress2)& (1<<2)){ui->cb_bm2_3->setChecked(Qt::Checked);}     else{ui->cb_bm2_3->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress2)& (1<<3)){ui->cb_bm2_4->setChecked(Qt::Checked);}     else{ui->cb_bm2_4->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress2)& (1<<4)){ui->cb_bm2_5->setChecked(Qt::Checked);}     else{ui->cb_bm2_5->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress2)& (1<<5)){ui->cb_bm2_6->setChecked(Qt::Checked);}     else{ui->cb_bm2_6->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress2)& (1<<6)){ui->cb_bm2_7->setChecked(Qt::Checked);}     else{ui->cb_bm2_7->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress2)& (1<<7)){ui->cb_bm2_8->setChecked(Qt::Checked);}     else{ui->cb_bm2_8->setChecked(Qt::Unchecked);}
 
-    if((ff7->slot[s].bm_progress3)& (1<<0)){ui->cb_bm3_1->setChecked(Qt::Checked);}
-    else{ui->cb_bm3_1->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress3)& (1<<1)){ui->cb_bm3_2->setChecked(Qt::Checked);}
-    else{ui->cb_bm3_2->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress3)& (1<<2)){ui->cb_bm3_3->setChecked(Qt::Checked);}
-    else{ui->cb_bm3_3->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress3)& (1<<3)){ui->cb_bm3_4->setChecked(Qt::Checked);}
-    else{ui->cb_bm3_4->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress3)& (1<<4)){ui->cb_bm3_5->setChecked(Qt::Checked);}
-    else{ui->cb_bm3_5->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress3)& (1<<5)){ui->cb_bm3_6->setChecked(Qt::Checked);}
-    else{ui->cb_bm3_6->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress3)& (1<<6)){ui->cb_bm3_7->setChecked(Qt::Checked);}
-    else{ui->cb_bm3_7->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].bm_progress3)& (1<<7)){ui->cb_bm3_8->setChecked(Qt::Checked);}
-    else{ui->cb_bm3_8->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress3)& (1<<0)){ui->cb_bm3_1->setChecked(Qt::Checked);}     else{ui->cb_bm3_1->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress3)& (1<<1)){ui->cb_bm3_2->setChecked(Qt::Checked);}     else{ui->cb_bm3_2->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress3)& (1<<2)){ui->cb_bm3_3->setChecked(Qt::Checked);}     else{ui->cb_bm3_3->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress3)& (1<<3)){ui->cb_bm3_4->setChecked(Qt::Checked);}     else{ui->cb_bm3_4->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress3)& (1<<4)){ui->cb_bm3_5->setChecked(Qt::Checked);}     else{ui->cb_bm3_5->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress3)& (1<<5)){ui->cb_bm3_6->setChecked(Qt::Checked);}     else{ui->cb_bm3_6->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress3)& (1<<6)){ui->cb_bm3_7->setChecked(Qt::Checked);}     else{ui->cb_bm3_7->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].bm_progress3)& (1<<7)){ui->cb_bm3_8->setChecked(Qt::Checked);}     else{ui->cb_bm3_8->setChecked(Qt::Unchecked);}
 
-    if(ff7->UnknownVar(s,26).at(0) & (1<<0)){ui->cb_s7pl_1->setChecked(Qt::Checked);}
-    else{ui->cb_s7pl_1->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(0) & (1<<1)){ui->cb_s7pl_2->setChecked(Qt::Checked);}
-    else{ui->cb_s7pl_2->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(0) & (1<<2)){ui->cb_s7pl_3->setChecked(Qt::Checked);}
-    else{ui->cb_s7pl_3->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(0) & (1<<3)){ui->cb_s7pl_4->setChecked(Qt::Checked);}
-    else{ui->cb_s7pl_4->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(0) & (1<<4)){ui->cb_s7pl_5->setChecked(Qt::Checked);}
-    else{ui->cb_s7pl_5->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(0) & (1<<5)){ui->cb_s7pl_6->setChecked(Qt::Checked);}
-    else{ui->cb_s7pl_6->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(0) & (1<<6)){ui->cb_s7pl_7->setChecked(Qt::Checked);}
-    else{ui->cb_s7pl_7->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(0) & (1<<7)){ui->cb_s7pl_8->setChecked(Qt::Checked);}
-    else{ui->cb_s7pl_8->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(0) & (1<<0)){ui->cb_s7pl_1->setChecked(Qt::Checked);}    else{ui->cb_s7pl_1->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(0) & (1<<1)){ui->cb_s7pl_2->setChecked(Qt::Checked);}    else{ui->cb_s7pl_2->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(0) & (1<<2)){ui->cb_s7pl_3->setChecked(Qt::Checked);}    else{ui->cb_s7pl_3->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(0) & (1<<3)){ui->cb_s7pl_4->setChecked(Qt::Checked);}    else{ui->cb_s7pl_4->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(0) & (1<<4)){ui->cb_s7pl_5->setChecked(Qt::Checked);}    else{ui->cb_s7pl_5->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(0) & (1<<5)){ui->cb_s7pl_6->setChecked(Qt::Checked);}    else{ui->cb_s7pl_6->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(0) & (1<<6)){ui->cb_s7pl_7->setChecked(Qt::Checked);}    else{ui->cb_s7pl_7->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(0) & (1<<7)){ui->cb_s7pl_8->setChecked(Qt::Checked);}    else{ui->cb_s7pl_8->setChecked(Qt::Unchecked);}
 
-    if(ff7->UnknownVar(s,26).at(8) & (1<<0)){ui->cb_s7ts_1->setChecked(Qt::Checked);}
-    else{ui->cb_s7ts_1->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(8) & (1<<1)){ui->cb_s7ts_2->setChecked(Qt::Checked);}
-    else{ui->cb_s7ts_2->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(8) & (1<<2)){ui->cb_s7ts_3->setChecked(Qt::Checked);}
-    else{ui->cb_s7ts_3->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(8) & (1<<3)){ui->cb_s7ts_4->setChecked(Qt::Checked);}
-    else{ui->cb_s7ts_4->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(8) & (1<<4)){ui->cb_s7ts_5->setChecked(Qt::Checked);}
-    else{ui->cb_s7ts_5->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(8) & (1<<5)){ui->cb_s7ts_6->setChecked(Qt::Checked);}
-    else{ui->cb_s7ts_6->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(8) & (1<<6)){ui->cb_s7ts_7->setChecked(Qt::Checked);}
-    else{ui->cb_s7ts_7->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,26).at(8) & (1<<7)){ui->cb_s7ts_8->setChecked(Qt::Checked);}
-    else{ui->cb_s7ts_8->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(8) & (1<<0)){ui->cb_s7ts_1->setChecked(Qt::Checked);}    else{ui->cb_s7ts_1->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(8) & (1<<1)){ui->cb_s7ts_2->setChecked(Qt::Checked);}    else{ui->cb_s7ts_2->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(8) & (1<<2)){ui->cb_s7ts_3->setChecked(Qt::Checked);}    else{ui->cb_s7ts_3->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(8) & (1<<3)){ui->cb_s7ts_4->setChecked(Qt::Checked);}    else{ui->cb_s7ts_4->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(8) & (1<<4)){ui->cb_s7ts_5->setChecked(Qt::Checked);}    else{ui->cb_s7ts_5->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(8) & (1<<5)){ui->cb_s7ts_6->setChecked(Qt::Checked);}    else{ui->cb_s7ts_6->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(8) & (1<<6)){ui->cb_s7ts_7->setChecked(Qt::Checked);}    else{ui->cb_s7ts_7->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,26).at(8) & (1<<7)){ui->cb_s7ts_8->setChecked(Qt::Checked);}    else{ui->cb_s7ts_8->setChecked(Qt::Unchecked);}
 
-    if(ff7->UnknownVar(s,23).at(26) & (1<<0)){ui->cb_s5_1->setChecked(Qt::Checked);}
-    else{ui->cb_s5_1->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,23).at(26) & (1<<1)){ui->cb_s5_2->setChecked(Qt::Checked);}
-    else{ui->cb_s5_2->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,23).at(26) & (1<<2)){ui->cb_s5_3->setChecked(Qt::Checked);}
-    else{ui->cb_s5_3->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,23).at(26) & (1<<3)){ui->cb_s5_4->setChecked(Qt::Checked);}
-    else{ui->cb_s5_4->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,23).at(26) & (1<<4)){ui->cb_s5_5->setChecked(Qt::Checked);}
-    else{ui->cb_s5_5->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,23).at(26) & (1<<5)){ui->cb_s5_6->setChecked(Qt::Checked);}
-    else{ui->cb_s5_6->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,23).at(26) & (1<<6)){ui->cb_s5_7->setChecked(Qt::Checked);}
-    else{ui->cb_s5_7->setChecked(Qt::Unchecked);}
-    if(ff7->UnknownVar(s,23).at(26) & (1<<7)){ui->cb_s5_8->setChecked(Qt::Checked);}
-    else{ui->cb_s5_8->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,23).at(26) & (1<<0)){ui->cb_s5_1->setChecked(Qt::Checked);}      else{ui->cb_s5_1->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,23).at(26) & (1<<1)){ui->cb_s5_2->setChecked(Qt::Checked);}      else{ui->cb_s5_2->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,23).at(26) & (1<<2)){ui->cb_s5_3->setChecked(Qt::Checked);}      else{ui->cb_s5_3->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,23).at(26) & (1<<3)){ui->cb_s5_4->setChecked(Qt::Checked);}      else{ui->cb_s5_4->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,23).at(26) & (1<<4)){ui->cb_s5_5->setChecked(Qt::Checked);}      else{ui->cb_s5_5->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,23).at(26) & (1<<5)){ui->cb_s5_6->setChecked(Qt::Checked);}      else{ui->cb_s5_6->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,23).at(26) & (1<<6)){ui->cb_s5_7->setChecked(Qt::Checked);}      else{ui->cb_s5_7->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,23).at(26) & (1<<7)){ui->cb_s5_8->setChecked(Qt::Checked);}      else{ui->cb_s5_8->setChecked(Qt::Unchecked);}
 
-    if((ff7->slot[s].midgartrainflags)& (1<<0)){ui->cb_midgartrain_1->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_1->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].midgartrainflags)& (1<<1)){ui->cb_midgartrain_2->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_2->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].midgartrainflags)& (1<<2)){ui->cb_midgartrain_3->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_3->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].midgartrainflags)& (1<<3)){ui->cb_midgartrain_4->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_4->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].midgartrainflags)& (1<<4)){ui->cb_midgartrain_5->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_5->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].midgartrainflags)& (1<<5)){ui->cb_midgartrain_6->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_6->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].midgartrainflags)& (1<<6)){ui->cb_midgartrain_7->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_7->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].midgartrainflags)& (1<<7)){ui->cb_midgartrain_8->setChecked(Qt::Checked);}
-    else{ui->cb_midgartrain_8->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].midgartrainflags)& (1<<0)){ui->cb_midgartrain_1->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_1->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].midgartrainflags)& (1<<1)){ui->cb_midgartrain_2->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_2->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].midgartrainflags)& (1<<2)){ui->cb_midgartrain_3->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_3->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].midgartrainflags)& (1<<3)){ui->cb_midgartrain_4->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_4->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].midgartrainflags)& (1<<4)){ui->cb_midgartrain_5->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_5->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].midgartrainflags)& (1<<5)){ui->cb_midgartrain_6->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_6->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].midgartrainflags)& (1<<6)){ui->cb_midgartrain_7->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_7->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].midgartrainflags)& (1<<7)){ui->cb_midgartrain_8->setChecked(Qt::Checked);}    else{ui->cb_midgartrain_8->setChecked(Qt::Unchecked);}
 
-    if(ff7->UnknownVar(s,26).at(1) ==0x00 &&
-      ff7->UnknownVar(s,26).at(2) ==0x00 &&
-      ff7->UnknownVar(s,26).at(3) ==0x00 &&
-      ff7->UnknownVar(s,26).at(4) ==0x00 &&
-      ff7->UnknownVar(s,26).at(5) ==0x00 &&
-      ff7->UnknownVar(s,26).at(6) ==0x00   )
-      {ui->combo_s7_slums->setCurrentIndex(1);}
+    //When using A char for comparison to an int value such as below be sure to static_cast<unsigned char> the value
+    //to avoid possible build warning and failed run time check  due to possible return of signed char  and int >127
 
+    if( static_cast<unsigned char>(ff7->UnknownVar(s,26).at(1)) ==0x00 &&
+         static_cast<unsigned char>(ff7->UnknownVar(s,26).at(2)) ==0x00 &&
+         static_cast<unsigned char>(ff7->UnknownVar(s,26).at(3)) ==0x00 &&
+         static_cast<unsigned char>(ff7->UnknownVar(s,26).at(4)) ==0x00 &&
+         static_cast<unsigned char>(ff7->UnknownVar(s,26).at(5)) ==0x00 &&
+         static_cast<unsigned char>(ff7->UnknownVar(s,26).at(6)) ==0x00   )
+         {ui->combo_s7_slums->setCurrentIndex(1);}
 
-    else if((ff7->UnknownVar(s,26).at(1) == 0xFF || ff7->UnknownVar(s,26).at(1) == 0xBF) &&
-      (ff7->UnknownVar(s,26).at(2) == 0x03 || ff7->UnknownVar(s,26).at(2) == 0x51) &&
-      (ff7->UnknownVar(s,26).at(3) == 0x04 || ff7->UnknownVar(s,26).at(3) == 0x05) &&
-      (ff7->UnknownVar(s,26).at(4) == 0x0F || ff7->UnknownVar(s,26).at(4) == 0x17) &&
-      (ff7->UnknownVar(s,26).at(5) == 0x1F || ff7->UnknownVar(s,26).at(5) == 0x5D) &&
-      (ff7->UnknownVar(s,26).at(6) == 0x6F || ff7->UnknownVar(s,26).at(6) == 0xEF)   )
-      {ui->combo_s7_slums->setCurrentIndex(2);}
+    else if(
+        (static_cast<unsigned char>(ff7->UnknownVar(s,26).at(1)) == 0xFF || static_cast<unsigned char>(ff7->UnknownVar(s,26).at(1)) == 0xBF) &&
+        (static_cast<unsigned char>(ff7->UnknownVar(s,26).at(2)) == 0x03 || static_cast<unsigned char>(ff7->UnknownVar(s,26).at(2)) == 0x51) &&
+        (static_cast<unsigned char>(ff7->UnknownVar(s,26).at(3)) == 0x04 || static_cast<unsigned char>(ff7->UnknownVar(s,26).at(3)) == 0x05) &&
+        (static_cast<unsigned char>(ff7->UnknownVar(s,26).at(4)) == 0x0F || static_cast<unsigned char>(ff7->UnknownVar(s,26).at(4)) == 0x17) &&
+        (static_cast<unsigned char>(ff7->UnknownVar(s,26).at(5)) == 0x1F || static_cast<unsigned char>(ff7->UnknownVar(s,26).at(5)) == 0x5D) &&
+        (static_cast<unsigned char>(ff7->UnknownVar(s,26).at(6)) == 0x6F || static_cast<unsigned char>(ff7->UnknownVar(s,26).at(6)) == 0xEF)   )
+        {ui->combo_s7_slums->setCurrentIndex(2);}
 
-    else if (ff7->UnknownVar(s,26).at(2)== 0x13){ui->combo_s7_slums->setCurrentIndex(3);}
-
+    else if ( static_cast<unsigned char>(ff7->UnknownVar(s,26).at(2))== 0x13){ui->combo_s7_slums->setCurrentIndex(3);}
     else {ui->combo_s7_slums->setCurrentIndex(0);}
-
     load=false;
 }
 /*~~~~~~~~~~~~~~~~~~~~Chocobo Refresh~~~~~~~~~~~~~~~~*/
@@ -2056,18 +1958,12 @@ void MainWindow::chocobo_refresh()
     ui->sb_stables_owned->setValue(ff7->slot[s].stables);
     ui->lcd_stables_occupied->display(ff7->slot[s].stablesoccupied);
 
-    if((ff7->slot[s].chocobomask)& (1<<0)){ui->box_stable1->setChecked(1);}
-    else{ui->box_stable1->setChecked(0);}
-    if((ff7->slot[s].chocobomask)& (1<<1)){ui->box_stable2->setChecked(1);}
-    else{ui->box_stable2->setChecked(0);}
-    if((ff7->slot[s].chocobomask)& (1<<2)){ui->box_stable3->setChecked(1);}
-    else{ui->box_stable3->setChecked(0);}
-    if((ff7->slot[s].chocobomask)& (1<<3)){ui->box_stable4->setChecked(1);}
-    else{ui->box_stable4->setChecked(0);}
-    if((ff7->slot[s].chocobomask)& (1<<4)){ui->box_stable5->setChecked(1);}
-    else{ui->box_stable5->setChecked(0);}
-    if((ff7->slot[s].chocobomask)& (1<<5)){ui->box_stable6->setChecked(1);}
-    else{ui->box_stable6->setChecked(0);}
+    if((ff7->slot[s].chocobomask)& (1<<0)){ui->box_stable1->setChecked(Qt::Checked);}    else{ui->box_stable1->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].chocobomask)& (1<<1)){ui->box_stable2->setChecked(Qt::Checked);}    else{ui->box_stable2->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].chocobomask)& (1<<2)){ui->box_stable3->setChecked(Qt::Checked);}    else{ui->box_stable3->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].chocobomask)& (1<<3)){ui->box_stable4->setChecked(Qt::Checked);}    else{ui->box_stable4->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].chocobomask)& (1<<4)){ui->box_stable5->setChecked(Qt::Checked);}    else{ui->box_stable5->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].chocobomask)& (1<<5)){ui->box_stable6->setChecked(Qt::Checked);}    else{ui->box_stable6->setChecked(Qt::Unchecked);}
 
     chocobo_stable_1->SetChocobo(ff7->chocobo(s,0),ff7->chocoName(s,0),ff7->chocoCantMate(s,0),ff7->chocoStamina(s,0));
     chocobo_stable_2->SetChocobo(ff7->chocobo(s,1),ff7->chocoName(s,1),ff7->chocoCantMate(s,1),ff7->chocoStamina(s,1));
@@ -2118,40 +2014,24 @@ void MainWindow::testdata_refresh()
     if(ff7->slot[s].reg_yuffie == 0x6F){ui->cb_reg_yuffie->setChecked(Qt::Checked);}
     ui->lcdNumber_9->display(ff7->slot[s].reg_yuffie);
 
-    if(ff7->UnknownVar(s,11).at(3)&(1<<0)){ui->cb_farm_items_1->setChecked(1);}
-    else{ui->cb_farm_items_1->setChecked(0);}
-    if(ff7->UnknownVar(s,11).at(3)&(1<<1)){ui->cb_farm_items_2->setChecked(1);}
-    else{ui->cb_farm_items_2->setChecked(0);}
-    if(ff7->UnknownVar(s,11).at(3)&(1<<2)){ui->cb_farm_items_3->setChecked(1);}
-    else{ui->cb_farm_items_3->setChecked(0);}
-    if(ff7->UnknownVar(s,11).at(3)&(1<<3)){ui->cb_farm_items_4->setChecked(1);}
-    else{ui->cb_farm_items_4->setChecked(0);}
-    if(ff7->UnknownVar(s,11).at(3)&(1<<4)){ui->cb_farm_items_5->setChecked(1);}
-    else{ui->cb_farm_items_5->setChecked(0);}
-    if(ff7->UnknownVar(s,11).at(3)&(1<<5)){ui->cb_farm_items_6->setChecked(1);}
-    else{ui->cb_farm_items_6->setChecked(0);}
-    if(ff7->UnknownVar(s,11).at(3)&(1<<6)){ui->cb_farm_items_7->setChecked(1);}
-    else{ui->cb_farm_items_7->setChecked(0);}
-    if(ff7->UnknownVar(s,11).at(3)&(1<<7)){ui->cb_farm_items_8->setChecked(1);}
-    else{ui->cb_farm_items_8->setChecked(0);}
+    if(ff7->UnknownVar(s,11).at(3)&(1<<0)){ui->cb_farm_items_1->setChecked(Qt::Checked);}    else{ui->cb_farm_items_1->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,11).at(3)&(1<<1)){ui->cb_farm_items_2->setChecked(Qt::Checked);}    else{ui->cb_farm_items_2->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,11).at(3)&(1<<2)){ui->cb_farm_items_3->setChecked(Qt::Checked);}    else{ui->cb_farm_items_3->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,11).at(3)&(1<<3)){ui->cb_farm_items_4->setChecked(Qt::Checked);}    else{ui->cb_farm_items_4->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,11).at(3)&(1<<4)){ui->cb_farm_items_5->setChecked(Qt::Checked);}    else{ui->cb_farm_items_5->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,11).at(3)&(1<<5)){ui->cb_farm_items_6->setChecked(Qt::Checked);}    else{ui->cb_farm_items_6->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,11).at(3)&(1<<6)){ui->cb_farm_items_7->setChecked(Qt::Checked);}    else{ui->cb_farm_items_7->setChecked(Qt::Unchecked);}
+    if(ff7->UnknownVar(s,11).at(3)&(1<<7)){ui->cb_farm_items_8->setChecked(Qt::Checked);}    else{ui->cb_farm_items_8->setChecked(Qt::Unchecked);}
 
 
-    if((ff7->slot[s].tut_sub)& (1<<0)){ui->cb_tut_sub_1->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_1->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].tut_sub)& (1<<1)){ui->cb_tut_sub_2->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_2->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].tut_sub)& (1<<2)){ui->cb_tut_sub_3->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_3->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].tut_sub)& (1<<3)){ui->cb_tut_sub_4->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_4->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].tut_sub)& (1<<4)){ui->cb_tut_sub_5->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_5->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].tut_sub)& (1<<5)){ui->cb_tut_sub_6->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_6->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].tut_sub)& (1<<6)){ui->cb_tut_sub_7->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_7->setChecked(Qt::Unchecked);}
-    if((ff7->slot[s].tut_sub)& (1<<7)){ui->cb_tut_sub_8->setChecked(Qt::Checked);}
-    else{ui->cb_tut_sub_8->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].tut_sub)& (1<<0)){ui->cb_tut_sub_1->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_1->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].tut_sub)& (1<<1)){ui->cb_tut_sub_2->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_2->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].tut_sub)& (1<<2)){ui->cb_tut_sub_3->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_3->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].tut_sub)& (1<<3)){ui->cb_tut_sub_4->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_4->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].tut_sub)& (1<<4)){ui->cb_tut_sub_5->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_5->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].tut_sub)& (1<<5)){ui->cb_tut_sub_6->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_6->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].tut_sub)& (1<<6)){ui->cb_tut_sub_7->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_7->setChecked(Qt::Unchecked);}
+    if((ff7->slot[s].tut_sub)& (1<<7)){ui->cb_tut_sub_8->setChecked(Qt::Checked);}    else{ui->cb_tut_sub_8->setChecked(Qt::Unchecked);}
     ui->lcd_tut_sub->display(ff7->slot[s].tut_sub);
 
     //Snowboard Times.
@@ -2432,10 +2312,7 @@ void MainWindow::on_sb_time_hour_valueChanged(int value){if(!load){ff7->setTime(
 void MainWindow::on_sb_time_min_valueChanged(int value){if(!load){ff7->setTime (s,( (ui->sb_time_hour->value()*3600) + ((value*60)) + (ui->sb_time_sec->value())));}}
 void MainWindow::on_sb_time_sec_valueChanged(int value){if(!load){ff7->setTime(s,((ui->sb_time_hour->value()*3600) + (ui->sb_time_min->value()*60) + (value)));}}
 
-void MainWindow::on_sb_steps_valueChanged(int value)
-{if(!load){file_modified(true);
-  ff7->slot[s].steps = value;
-}}
+void MainWindow::on_sb_steps_valueChanged(int value){if(!load){file_modified(true);  ff7->slot[s].steps = value;}}
 
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~Item Tab~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -2455,7 +2332,7 @@ void MainWindow::on_list_keyitems_clicked(const QModelIndex &index)
 // Field Items Combos
 void MainWindow::on_cb_bm_items_1_toggled(bool checked)
 {if(!load){file_modified(true);
-        QByteArray temp = ff7->UnknownVar(s,38); char t = temp.at(48);
+        QByteArray temp = ff7->UnknownVar(s,38);  char t = temp.at(48);
         if(checked){t |= (1<<0);}
         else{t &= ~(1<<0);}
         temp[48]=t;
@@ -2664,7 +2541,7 @@ void MainWindow::on_cb_farm_items_8_toggled(bool checked)
 
 void MainWindow::on_btn_clear_keyitems_clicked()
 {if(!load){file_modified(true);}//used in other functions
-    for(int i=0;i<51;i++)// be sure to clear key items first..
+    for(int i=0;i<51;i++)
     {
         ui->list_keyitems->item(i)->setCheckState(Qt::Unchecked);
     }
@@ -2676,8 +2553,6 @@ void MainWindow::on_tbl_materia_currentCellChanged(int row){if(!load){materia_ed
 
 void MainWindow::on_btn_add_all_materia_clicked()
 {
-
-    //int j = ui->tbl_materia->currentRow();
     //place one of each at lowest ossible point
     for(int i=117;i<142;i++)
     {//Starting With Magic Materia
@@ -2765,42 +2640,17 @@ void MainWindow::set_UL_Color(QColor color){if(!load){ff7->setDialog_UL(s,color)
 void MainWindow::set_UR_Color(QColor color){if(!load){ff7->setDialog_UR(s,color);}}
 void MainWindow::set_LL_Color(QColor color){if(!load){ff7->setDialog_LL(s,color);}}
 void MainWindow::set_LR_Color(QColor color){if(!load){ff7->setDialog_LR(s,color);}}
-void MainWindow::on_slide_battlespeed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].battlespeed = value;}}
-void MainWindow::on_slide_battlemspeed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].battlemspeed = value;}}
-void MainWindow::on_slide_fieldmspeed_valueChanged(int value){if(!load){file_modified(true); ff7->slot[s].fieldmspeed = value;}}
-void MainWindow::on_combo_control_currentIndexChanged(){if(!load){file_modified(true); setoptions_one();}}
-void MainWindow::on_combo_sound_currentIndexChanged(){if(!load){file_modified(true); setoptions_one();}}
-void MainWindow::on_combo_cursor_currentIndexChanged(){if(!load){file_modified(true); setoptions_one();}}
-void MainWindow::on_combo_atb_currentIndexChanged(){if(!load){file_modified(true); setoptions_one();}}
-void MainWindow::on_combo_camera_currentIndexChanged(){if(!load){file_modified(true); setoptions_two();}}
-void MainWindow::on_combo_magic_order_currentIndexChanged(){if(!load){file_modified(true); setoptions_two();}}
-void MainWindow::on_cb_battle_help_toggled(){if(!load){file_modified(true); setoptions_two();}}
+void MainWindow::on_slide_battlespeed_valueChanged(int value){if(!load){file_modified(true);ff7->setBattleSpeed(s,value);}}
+void MainWindow::on_slide_battlemspeed_valueChanged(int value){if(!load){file_modified(true); ff7->setBattleMSpeed(s,value);}}
+void MainWindow::on_slide_fieldmspeed_valueChanged(int value){if(!load){file_modified(true); ff7->setMessageSpeed(s, value);}}
+void MainWindow::on_cb_battle_help_toggled(bool checked){if(!load){file_modified(true); ff7->setBattleHelp(s,checked);}}
 
-void MainWindow::setoptions_one()
-{
-    load=true;
-    ff7->slot[s].options1 = 0;
-    if(ui->combo_sound->currentIndex() == 1){ff7->slot[s].options1 += 0x01;}
-    if(ui->combo_control->currentIndex() == 1){ff7->slot[s].options1 += 0x04;} //you have to also change mapped buttons for this to work 100%
-    if(ui->combo_cursor->currentIndex() == 1){ff7->slot[s].options1 +=0x10;}
-    if(ui->combo_atb->currentIndex() == 1){ff7->slot[s].options1 +=0x40;}
-    if(ui->combo_atb->currentIndex() == 2){ff7->slot[s].options1 += 0x80;}
-    load=false;
-}
-void MainWindow::setoptions_two()
-{
-    load=true;
-    quint8 temp=0;
-    if(ui->combo_camera->currentIndex()==1){temp += 1;}
-    if(ui->combo_magic_order->currentIndex() == 1){temp += 0x04;}
-    else if(ui->combo_magic_order->currentIndex()==2){temp += 0x08;}
-    else if(ui->combo_magic_order->currentIndex()==3){temp += 0x0C;}
-    else if(ui->combo_magic_order->currentIndex()==4){temp += 0x10;}
-    else if(ui->combo_magic_order->currentIndex()==5){temp += 0x14;}
-    if(ui->cb_battle_help->checkState() ==2){temp +=0x40;}
-    ff7->slot[s].options2 =temp;
-    load=false;
-}
+void MainWindow::on_combo_control_currentIndexChanged(int mode){if(!load){file_modified(true);ff7->setControlMode(s,mode);}}
+void MainWindow::on_combo_sound_currentIndexChanged(int mode){if(!load){file_modified(true); ff7->setSoundMode(s,mode);}}
+void MainWindow::on_combo_cursor_currentIndexChanged(int mode){if(!load){file_modified(true);ff7->setCursorMode(s,mode);}}
+void MainWindow::on_combo_atb_currentIndexChanged(int mode){if(!load){file_modified(true); ff7->setAtbMode(s,mode);}}
+void MainWindow::on_combo_camera_currentIndexChanged(int mode){if(!load){file_modified(true);ff7->setCameraMode(s,mode);}}
+void MainWindow::on_combo_magic_order_currentIndexChanged(int order){if(!load){file_modified(true);ff7->setMagicOrder(s,order);}}
 
 /*--------GAME PROGRESS-------*/
 void MainWindow::on_sb_curdisc_valueChanged(int value){if(!load){file_modified(true); ff7->setDisc(s,value);}}
@@ -3059,18 +2909,18 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->slot[s].bm_progress1=0;
         ff7->slot[s].bm_progress2=0;
         ff7->slot[s].bm_progress3=0;
-        ui->cb_bombing_int->setChecked(1);
-        ui->cb_midgartrain_1->setChecked(0);
-        ui->cb_midgartrain_2->setChecked(0);
-        ui->cb_midgartrain_3->setChecked(0);
-        ui->cb_midgartrain_4->setChecked(0);
-        ui->cb_midgartrain_5->setChecked(0);
-        ui->cb_midgartrain_6->setChecked(0);
-        ui->cb_midgartrain_7->setChecked(0);
-        ui->cb_midgartrain_8->setChecked(0);
+        ui->cb_bombing_int->setChecked(Qt::Checked);
+        ui->cb_midgartrain_1->setChecked(Qt::Unchecked);
+        ui->cb_midgartrain_2->setChecked(Qt::Unchecked);
+        ui->cb_midgartrain_3->setChecked(Qt::Unchecked);
+        ui->cb_midgartrain_4->setChecked(Qt::Unchecked);
+        ui->cb_midgartrain_5->setChecked(Qt::Unchecked);
+        ui->cb_midgartrain_6->setChecked(Qt::Unchecked);
+        ui->cb_midgartrain_7->setChecked(Qt::Unchecked);
+        ui->cb_midgartrain_8->setChecked(Qt::Unchecked);
         ui->combo_s7_slums->setCurrentIndex(1);
-        ui->cb_s5_7->setChecked(0);//show aeris on roof of chruch durring script
-        ui->cb_s5_8->setChecked(0);//not after chruch scene.
+        ui->cb_s5_7->setChecked(Qt::Unchecked);//show aeris on roof of chruch durring script
+        ui->cb_s5_8->setChecked(Qt::Unchecked);//not after chruch scene.
         ui->sb_turkschruch->setValue(0); // reset turks.
         ui->line_location->setText(tr("Platform"));
         ui->sb_map_id->setValue(1);
@@ -3088,9 +2938,9 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->slot[s].bm_progress1=120;
         ff7->slot[s].bm_progress2=198;
         ff7->slot[s].bm_progress3=3;
-        ui->cb_bombing_int->setChecked(0);
-        ui->cb_s5_7->setChecked(0);//show aeris on roof of chruch durring script
-        ui->cb_s5_8->setChecked(0);//not after chruch scene.
+        ui->cb_bombing_int->setChecked(Qt::Unchecked);
+        ui->cb_s5_7->setChecked(Qt::Unchecked);//show aeris on roof of chruch durring script
+        ui->cb_s5_8->setChecked(Qt::Unchecked);//not after chruch scene.
         ui->line_location->setText(tr("Church in the Slums"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(183);
@@ -3110,7 +2960,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->slot[s].bm_progress1=120;
         ff7->slot[s].bm_progress2=198;
         ff7->slot[s].bm_progress3=3;
-        ui->cb_bombing_int->setChecked(0);
+        ui->cb_bombing_int->setChecked(Qt::Unchecked);
         ui->line_location->setText(tr("Kalm Inn"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(332);
@@ -3139,7 +2989,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->slot[s].bm_progress1=120;
         ff7->slot[s].bm_progress2=198;
         ff7->slot[s].bm_progress3=3;
-        ui->cb_bombing_int->setChecked(0);
+        ui->cb_bombing_int->setChecked(Qt::Unchecked);
         ui->line_location->setText(tr("Ropeway Station"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(496);
@@ -3156,7 +3006,7 @@ void MainWindow::on_cb_replay_currentIndexChanged(int index)
         ff7->slot[s].bm_progress1=120;
         ff7->slot[s].bm_progress2=198;
         ff7->slot[s].bm_progress3=3;
-        ui->cb_bombing_int->setChecked(0);
+        ui->cb_bombing_int->setChecked(Qt::Unchecked);
         ui->line_location->setText(tr("Forgotten City"));
         ui->sb_map_id->setValue(1);
         ui->sb_loc_id->setValue(646);
@@ -3326,17 +3176,9 @@ void MainWindow::on_cb_Region_Slot_currentIndexChanged()
     if(ff7->type()== "MC"|| ff7->type()=="PSP"|| ff7->type()=="VGS" || ff7->type() =="DEX"){guirefresh(0);}
 }}}
 
-void MainWindow::on_cb_field_help_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].field_help |= (1<<0);}
-    else{ff7->slot[s].field_help &= ~(1<<0);}
-}}
+void MainWindow::on_cb_field_help_toggled(bool checked){if(!load){file_modified(true);ff7->setfieldHelp(s,checked);}}
+void MainWindow::on_cb_battle_targets_toggled(bool checked){if(!load){file_modified(true);ff7->setBattleTargets(s,checked);}}
 
-void MainWindow::on_cb_battle_targets_toggled(bool checked)
-{if(!load){file_modified(true);
-    if(checked){ff7->slot[s].tut_sub |= (1<<6);}
-    else{ff7->slot[s].tut_sub &= ~(1<<6);}
-}}
 void MainWindow::on_cb_tut_sub_toggled(bool checked)
 {if(!load){file_modified(true);
     if(checked){ff7->slot[s].tut_sub |= (1<<2);}
@@ -3591,29 +3433,12 @@ void MainWindow::on_combo_map_controls_currentIndexChanged(int index)
     load=true;
     switch(index)
     {
-    case 0: ui->slide_world_x->setValue(ff7->slot[s].l_world  & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7->slot[s].l_world2 & 0x3FFFF);
-            break;
-    case 1: ui->slide_world_x->setValue(ff7->slot[s].tc_world  & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7->slot[s].tc_world2 & 0x3FFFF);
-            break;
-    case 2: ui->slide_world_x->setValue(ff7->slot[s].bh_world  & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7->slot[s].bh_world2 & 0x3FFFF);
-            break;
-    case 3: ui->slide_world_x->setValue(ff7->slot[s].sub_world  & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7->slot[s].sub_world2 & 0x3FFFF);
-            break;
-    case 4: ui->slide_world_x->setValue(ff7->slot[s].uw_world  & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7->slot[s].uw_world2 & 0x3FFFF);
-            break;
-    case 5: ui->slide_world_x->setValue(ff7->slot[s].durw_world  & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7->slot[s].durw_world2 & 0x3FFFF);
-            break;
-    case 6: /* Do Nothing. Don't know emerald weapon Coords
-            ui->slide_world_x->setValue(ff7->slot[s].ew_world  & 0x7FFFF);
-            ui->slide_world_y->setValue(ff7->slot[s].ew_world2 & 0x3FFFF);
-            */
-            break;
+        case 0: ui->slide_world_x->setValue(ff7->slot[s].l_world  & 0x7FFFF);            ui->slide_world_y->setValue(ff7->slot[s].l_world2 & 0x3FFFF);           break;
+        case 1: ui->slide_world_x->setValue(ff7->slot[s].tc_world  & 0x7FFFF);         ui->slide_world_y->setValue(ff7->slot[s].tc_world2 & 0x3FFFF);       break;
+        case 2: ui->slide_world_x->setValue(ff7->slot[s].bh_world  & 0x7FFFF);         ui->slide_world_y->setValue(ff7->slot[s].bh_world2 & 0x3FFFF);      break;
+        case 3: ui->slide_world_x->setValue(ff7->slot[s].sub_world  & 0x7FFFF);       ui->slide_world_y->setValue(ff7->slot[s].sub_world2 & 0x3FFFF);    break;
+        case 4: ui->slide_world_x->setValue(ff7->slot[s].uw_world  & 0x7FFFF);        ui->slide_world_y->setValue(ff7->slot[s].uw_world2 & 0x3FFFF);      break;
+        case 5: ui->slide_world_x->setValue(ff7->slot[s].durw_world  & 0x7FFFF);    ui->slide_world_y->setValue(ff7->slot[s].durw_world2 & 0x3FFFF);  break;
     }
     load=false;
 }
@@ -3622,15 +3447,12 @@ void MainWindow::on_slide_world_x_valueChanged(int value)
 {if(!load){file_modified(true);
     switch(ui->combo_map_controls->currentIndex())
     {
-    case 0: ui->leader_x->setValue(value);  break;
-    case 1: ui->tc_x->setValue(value);      break;
-    case 2: ui->bh_x->setValue(value);      break;
-    case 3: ui->sub_x->setValue(value);     break;
-    case 4: ui->uw_x->setValue(value);      break;
-    case 5: ui->durw_x->setValue(value);    break;
-    /* Do Nothing. Don't know emerald weapon Coords
-    case 6: ui->ew_x->setValue(value);      break;
-    */
+        case 0: ui->leader_x->setValue(value);  break;
+        case 1: ui->tc_x->setValue(value);      break;
+        case 2: ui->bh_x->setValue(value);      break;
+        case 3: ui->sub_x->setValue(value);     break;
+        case 4: ui->uw_x->setValue(value);      break;
+        case 5: ui->durw_x->setValue(value);    break;
     }
 }}
 
@@ -3638,15 +3460,12 @@ void MainWindow::on_slide_world_y_valueChanged(int value)
 {if(!load){file_modified(true);
     switch(ui->combo_map_controls->currentIndex())
     {
-    case 0: ui->leader_y->setValue(value);  break;
-    case 1: ui->tc_y->setValue(value);      break;
-    case 2: ui->bh_y->setValue(value);      break;
-    case 3: ui->sub_y->setValue(value);     break;
-    case 4: ui->uw_y->setValue(value);      break;
-    case 5: ui->durw_y->setValue(value);    break;
-    /* Do Nothing. Don't know emerald weapon Coords
-    case 6: ui->ew_y->setValue(value);      break;
-    */
+        case 0: ui->leader_y->setValue(value);  break;
+        case 1: ui->tc_y->setValue(value);      break;
+        case 2: ui->bh_y->setValue(value);      break;
+        case 3: ui->sub_y->setValue(value);     break;
+        case 4: ui->uw_y->setValue(value);      break;
+        case 5: ui->durw_y->setValue(value);    break;
     }
 
 }}
@@ -3697,13 +3516,6 @@ void MainWindow::on_world_map_view_customContextMenuRequested(QPoint pos)
          ui->durw_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
          ui->durw_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
     }
-    else if(sel->text()==tr("Place Emerald Weapon?"))
-    {
-         /* Do Nothing. Don't know emerald weapon Coords
-         ui->ew_x->setValue(pos.x() *( 295000/ ui->world_map_view->width()));
-         ui->ew_y->setValue(pos.y() *( 230000/ ui->world_map_view->height()));
-         */
-    }
     else{return;}
 }//End Of Map Context Menu
 
@@ -3735,7 +3547,11 @@ void MainWindow::on_btn_item_add_each_item_clicked()
 void MainWindow::unknown_refresh(int z)//remember to add/remove case statments in all 3 switches when number of z vars changes.
 {//for updating the unknown table(s)
     load=true;
-    hexEditor->setData(ff7->SlotRawData(s));
+
+    if(ff7->isFF7(s)){ hexEditor->setData(ff7->slotRawData(s));}
+    else{hexEditor->setData(ff7->slotPsxRawData(s));}
+
+
     QString text;
     int rows=0;
     QTableWidgetItem *newItem;
@@ -3761,7 +3577,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
     else {ui->btn_all_z_diffs->setEnabled(1);}
 
     if(z <= unknown_zmax){temp = ff7->UnknownVar(s,z);}
-    else if(z == unknown_zmax+1){temp = ff7->SlotRawData(s);}
+    else if(z == unknown_zmax+1){temp = ff7->slotRawData(s);}
 
     rows=temp.size();
 
@@ -3815,7 +3631,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 
             s2 = ui->combo_compare_slot->currentIndex()-1;
             if(z <= unknown_zmax){temp2 = ff7->UnknownVar(s2,z);}
-            else if(z == unknown_zmax+1){temp2 = ff7->SlotRawData(s2);}
+            else if(z == unknown_zmax+1){temp2 = ff7->slotRawData(s2);}
 
             //rows=temp2.size();
             value = temp2.at(i);
@@ -3886,7 +3702,7 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
 
     int z = ui->combo_z_var->currentIndex();
     if(z <= unknown_zmax){temp = ff7->UnknownVar(s,z);}
-    else if(z == unknown_zmax+1){temp = ff7->SlotRawData(s);}
+    else if(z == unknown_zmax+1){temp = ff7->slotRawData(s);}
 
     switch(item->column())
     {
@@ -3896,7 +3712,7 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
     };
 
     if(z <= unknown_zmax){ff7->setUnknownVar(s,z,temp);}
-    else if(z == unknown_zmax+1){ff7->setSlotRawData(s,temp);}
+    else if(z == unknown_zmax+1){ff7->setslotRawData(s,temp);}
 
     unknown_refresh(z);
 }}
@@ -3985,22 +3801,22 @@ void MainWindow::on_btn_all_z_diffs_clicked()
     if(num_diff ==0){ui->tbl_diff->clearContents();ui->tbl_diff->setRowCount(0);ui->tbl_diff->setVisible(0);}
 }
 
-void MainWindow::on_combo_button_1_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[0]=index;}}
-void MainWindow::on_combo_button_2_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[1]=index;}}
-void MainWindow::on_combo_button_3_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[2]=index;}}
-void MainWindow::on_combo_button_4_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[3]=index;}}
-void MainWindow::on_combo_button_5_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[4]=index;}}
-void MainWindow::on_combo_button_6_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[5]=index;}}
-void MainWindow::on_combo_button_7_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[6]=index;}}
-void MainWindow::on_combo_button_8_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[7]=index;}}
-void MainWindow::on_combo_button_9_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[8]=index;}}
-void MainWindow::on_combo_button_10_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[9]=index;}}
-void MainWindow::on_combo_button_11_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[10]=index;}}
-void MainWindow::on_combo_button_12_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[11]=index;}}
-void MainWindow::on_combo_button_13_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[12]=index;}}
-void MainWindow::on_combo_button_14_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[13]=index;}}
-void MainWindow::on_combo_button_15_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[14]=index;}}
-void MainWindow::on_combo_button_16_currentIndexChanged(int index){if(!load){file_modified(true); ff7->slot[s].controller_map[15]=index;}}
+void MainWindow::on_combo_button_1_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_CAMERA,index);}}
+void MainWindow::on_combo_button_2_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_TARGET,index);}}
+void MainWindow::on_combo_button_3_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_PAGEUP,index);}}
+void MainWindow::on_combo_button_4_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_PAGEDOWN,index);}}
+void MainWindow::on_combo_button_5_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_MENU,index);}}
+void MainWindow::on_combo_button_6_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_OK,index);}}
+void MainWindow::on_combo_button_7_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_CANCEL,index);}}
+void MainWindow::on_combo_button_8_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_SWITCH,index);}}
+void MainWindow::on_combo_button_9_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_HELP,index);}}
+void MainWindow::on_combo_button_10_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN1,index);}}
+void MainWindow::on_combo_button_11_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_UNKNOWN2,index);}}
+void MainWindow::on_combo_button_12_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_PAUSE,index);}}
+void MainWindow::on_combo_button_13_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_UP,index);}}
+void MainWindow::on_combo_button_14_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_DOWN,index);}}
+void MainWindow::on_combo_button_15_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_LEFT,index);}}
+void MainWindow::on_combo_button_16_currentIndexChanged(int index){if(!load){file_modified(true); ff7->setControllerMapping(s,FF7Save::ACTION_RIGHT,index);}}
 
 void MainWindow::on_combo_s7_slums_currentIndexChanged(int index)
 {if(!load){file_modified(true);
@@ -4187,7 +4003,7 @@ void MainWindow::on_sb_BattlePoints_valueChanged(int arg1){if(!load){ff7->setBat
 
 void MainWindow::hexEditorRefresh()
 {
-    if(ui->combo_hexEditor->currentIndex() == 0){hexEditor->setData(ff7->SlotRawData(s));}
+    if(ui->combo_hexEditor->currentIndex() == 0)if(ff7->isFF7(s)){hexEditor->setData(ff7->slotRawData(s));}else{hexEditor->setData(ff7->slotPsxRawData(s));}
     else{hexEditor->setData(ff7->UnknownVar(s,ui->combo_hexEditor->currentIndex()));}
 }
 void MainWindow::on_combo_hexEditor_currentIndexChanged(){hexEditorRefresh();}
@@ -4196,7 +4012,11 @@ void MainWindow::hexEditorChanged(void)
 {
     switch(ui->combo_hexEditor->currentIndex())
     {
-        case 0:ff7->setSlotRawData(s,hexEditor->data());
-        default:ff7->setUnknownVar(s,ui->combo_hexEditor->currentIndex(),hexEditor->data());
+        case 0:
+            if(ff7->isFF7(s)){ff7->setslotRawData(s,hexEditor->data());}
+            else{ff7->setSlotPsxRawData(s,hexEditor->data());}//viewing a raw psx slot instead of ff7 data.
+
+            break;
+        default:ff7->setUnknownVar(s,ui->combo_hexEditor->currentIndex(),hexEditor->data()); break;
     }
 }

@@ -4873,7 +4873,7 @@
     </message>
     <message>
         <source>Place Emerald Weapon?</source>
-        <translation>Placer Arme d&apos;émeraude ?</translation>
+        <translation type="obsolete">Placer Arme d&apos;émeraude ?</translation>
     </message>
     <message>
         <source>FF7 Dex SaveGame(*.gme)</source>
@@ -5368,7 +5368,7 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Using Unknown Var Table To View Save</source>
-        <translation>Utilisation du tableau de variables inconnues pour visionner la sauvegarde</translation>
+        <translation type="obsolete">Utilisation du tableau de variables inconnues pour visionner la sauvegarde</translation>
     </message>
     <message>
         <source>Sector 7 - Slums Progress</source>
@@ -5676,6 +5676,10 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Unknown Vars</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Using HexEditor To View Save</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

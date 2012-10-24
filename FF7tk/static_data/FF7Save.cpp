@@ -113,6 +113,65 @@ bool FF7Save::LoadFile(const QString &fileName)
     FileModified(false,0);
     return true;
 }
+QByteArray FF7Save::slotHeader(int s)
+{
+    QByteArray temp;
+    temp.setRawData(reinterpret_cast<char *>(&hf[s].sl_header),SG_SLOT_HEADER);
+    return temp;
+}
+bool FF7Save::setSlotHeader(int s, QByteArray data)
+{
+    if(s<0 || s>14){return false;}
+    if(data.size()!=SG_SLOT_HEADER){return false;}
+    memcpy(&hf[s].sl_header,data,SG_SLOT_HEADER);
+    return true;
+}
+QByteArray FF7Save::slotFooter(int s)
+{
+    QByteArray temp;
+    temp.setRawData(reinterpret_cast<char *>(&hf[s].sl_footer),SG_SLOT_FOOTER);
+    return temp;
+}
+bool FF7Save::setSlotFooter(int s, QByteArray data)
+{
+    if(s<0 || s>14){return false;}
+    if(data.size()!=SG_SLOT_FOOTER){return false;}
+    memcpy(&hf[s].sl_footer,data,SG_SLOT_FOOTER);
+    return true;
+}
+QByteArray FF7Save::slotPsxRawData(int s)
+{
+    if(filename.isEmpty()){return QByteArray("\x00");}
+    else
+    {
+        QByteArray temp;
+        temp.append(slotHeader(s));
+        temp.append(slotRawData(s));
+        temp.append(slotFooter(s));
+        return temp;
+    }
+}
+bool FF7Save::setSlotPsxRawData(int s, QByteArray data)
+{
+    if(s<0 || s>14){return false;}
+    QByteArray temp;
+
+    temp.append(data.mid(0,SG_SLOT_HEADER));
+    if(setSlotHeader(s,temp)) {}
+    else{return false;}
+
+    temp.clear();
+    temp.append(data.mid(SG_SLOT_HEADER,sizeof(slot[s])));
+    if(setslotRawData(s,temp)){}
+    else{return false;}
+
+    temp.clear();
+    temp.append(data.mid((SG_SLOT_HEADER+sizeof(slot[s])),SG_SLOT_FOOTER));
+    if(setSlotFooter(s,temp)){}
+    else{return false;}
+
+    return true;
+}
 bool FF7Save::SaveFile(const QString &fileName)
 {
     if(fileName.isEmpty()){return false;}
@@ -146,7 +205,7 @@ bool FF7Save::Export_PC(const QString &fileName)
     QString prev_type = SG_TYPE;
     if(SG_TYPE !="PC")
     {
-      /*RESET CONTROLLS LATER WHEN IMPLIMENTED!!!*/
+      for(int i=0;i<15;i++){if(isFF7(i)){setControlMode(i,CONTROL_NORMAL);}}
       setType("PC");
       // Add File Header
       for(int i=0;i<9;i++){file_header_pc[i]= PC_SAVE_GAME_FILE_HEADER[i];}
@@ -180,8 +239,8 @@ bool FF7Save::Export_PSX(int s,const QString &fileName)
     QString prev_type = SG_TYPE;
     if(SG_TYPE != "PSX")
     {
-        /*RESET CONTROLLS LATER WHEN IMPLIMENTED!!!*/
-        setType("PSX");
+       if(isFF7(s)){setControlMode(s,CONTROL_NORMAL);}
+       setType("PSX");
     }
     if(fileName.contains("00867") || fileName.contains("00869") ||
        fileName.contains("00900") || fileName.contains("94163") ||
@@ -227,7 +286,7 @@ bool FF7Save::Export_VMC(const QString &fileName)
   QString prev_type = SG_TYPE;
   if(SG_TYPE != "MC")
   {
-    /* RESET CONTROLS LATER WHEN IMPLIMENTED!!!!!!*/
+    for(int i=0;i<15;i++){if(isFF7(i)){setControlMode(i,CONTROL_NORMAL);}}
     setType("MC");
   }
   fix_vmc_header();
@@ -248,7 +307,7 @@ bool FF7Save::Export_VGS(const QString &fileName)
   QString prev_type = SG_TYPE;
   if(SG_TYPE != "VGS")
   {
-    /* RESET CONTROLS LATER WHEN IMPLIMENTED!!!!!!*/
+     for(int i=0;i<15;i++){if(isFF7(i)){setControlMode(i,CONTROL_NORMAL);}}
     setType("VGS");//fill the Header With The Needed Default
     file_header_vgs[0] =0x56;
     file_header_vgs[1] =0x67;
@@ -276,7 +335,7 @@ bool FF7Save::Export_DEX(const QString &fileName)
   QString prev_type = SG_TYPE;
   if(SG_TYPE != "DEX")
   {
-    /* RESET CONTROLS LATER WHEN IMPLIMENTED!!!!!!*/
+      for(int i=0;i<15;i++){if(isFF7(i)){setControlMode(i,CONTROL_NORMAL);}}
       setType("DEX");
     //default header..
     file_header_dex[0]=0x31;
@@ -1330,8 +1389,8 @@ void FF7Save::New_Game_Plus(int s,QString CharFileName,QString fileName)
     // copy options
     buffer_slot.battlespeed =slot[s].battlespeed;
     buffer_slot.battlemspeed =slot[s].battlemspeed;
-    buffer_slot.options1 = slot[s].options1;
-    buffer_slot.options2 = slot[s].options2;
+    buffer_slot.options=slot[s].options;
+
     memcpy(&buffer_slot.controller_map,slot[s].controller_map,16);
     buffer_slot.fieldmspeed = slot[s].fieldmspeed;
     //~~ buffer now ready to be copied~
@@ -2265,14 +2324,14 @@ QString FF7Save::filetimestamp(QString fileName)
     if(tempFile.exists()){QFileInfo file(fileName); return QString::number(file.lastModified().toMSecsSinceEpoch());}
     else {return "";}
 }
-QByteArray FF7Save::SlotRawData(int s)
+QByteArray FF7Save::slotRawData(int s)
 {
     if(s<0 || s>14){return QByteArray(0x00);}
     QByteArray temp;
     temp.setRawData(reinterpret_cast<char *>(&slot[s]),sizeof(slot[s]));
     return temp;
 }
-bool FF7Save::setSlotRawData(int s,QByteArray data)
+bool FF7Save::setslotRawData(int s,QByteArray data)
 {
     if(s<0 || s>14){return false;}
     if(data.size()!=sizeof(slot[s])){return false;}
@@ -2461,4 +2520,250 @@ bool FF7Save::setUnknownVar(int s,int z,QByteArray data)
         default: result=false; break;
     }
     return result;
+}
+bool FF7Save::soundMode(int s){return (slot[s].options & (1<<0));}
+
+void FF7Save::setSoundMode(int s,int mode)
+{
+    if(mode !=soundMode(s))
+    {
+        switch(mode)
+        {
+            case SOUND_MONO: slot[s].options &= ~(1<<0); break;
+            case SOUND_STEREO: slot[s].options |= (1<<0);   break;
+            default: slot[s].options &= ~(1<<0) ; break;
+        }
+        FileModified(true,s);
+     }
+}
+void FF7Save::setSoundMode(int s,bool mode)
+{
+    if(!(mode && soundMode(s)))
+    {
+        if(mode){slot[s].options |= (1<<0);}
+        else{slot[s].options &=~(1<<0);}
+        FileModified(true,s);
+    }
+}
+
+bool FF7Save::controlMode(int s){return (slot[s].options& (1<<2));}
+void FF7Save::setControlMode(int s, int mode)
+{
+    if(mode !=controlMode(s))
+    {
+        switch(mode)
+        {
+            case CONTROL_NORMAL: slot[s].options &= ~(1<<2); break;
+            case CONTROL_CUSTOM: slot[s].options |= (1<<2);   break;
+            default: slot[s].options &= ~(1<<2) ; break;
+        }
+        FileModified(true,s);
+     }
+}
+
+void FF7Save::setControlMode(int s, bool mode)
+{
+    if(!(mode && controlMode(s)))
+    {
+        if(mode){slot[s].options |= (1<<2);}
+        else{slot[s].options &=~(1<<2);}
+        FileModified(true,s);
+    }
+}
+bool FF7Save::cursorMode(int s){return (slot[s].options&(1<<4));}
+
+void FF7Save::setCursorMode(int s, int mode)
+{
+    if(!(mode && cursorMode(s)))
+    {
+        switch(mode)
+        {
+            case CURSOR_INITIAL: slot[s].options &= ~(1<<4); break;
+            case CURSOR_MEMORY: slot[s].options |= (1<<4);   break;
+            default: slot[s].options &= ~(1<<2) ; break;
+        }
+        FileModified(true,s);
+     }
+}
+void FF7Save::setCursorMode(int s,  bool mode)
+{
+    if(mode != cursorMode(s))
+    {
+        if(mode){slot[s].options |= (1<<4);}
+        else{slot[s].options &=~(1<<4);}
+        FileModified(true,s);
+    }
+}
+int FF7Save::atbMode(int s)
+{
+    if( (slot[s].options &(1<<6))){return 1;}
+    else if((slot[s].options &(1<<7))){return 2;}
+    else{return 0;}
+}
+
+void FF7Save::setAtbMode(int s, int mode)
+{
+    if(mode != atbMode(s))
+    {
+        switch(mode)
+        {
+            case ATB_ACTIVE: slot[s].options &=~(1<<6); slot[s].options&=~(1<<7); break;
+            case ATB_RECOMMENED:  slot[s].options |= (1<<6); slot[s].options&= ~(1<<7); break;
+            case ATB_WAIT: slot[s].options &= ~(1<<6); slot[s].options |= (1<<7); break;
+            default:slot[s].options &=~(1<<6); slot[s].options&= ~(1<<7); break;
+        };
+        FileModified(true,s);
+    }
+}
+bool FF7Save::cameraMode(int s){return (slot[s].options&(1<<8));}
+
+void FF7Save::setCameraMode(int s, int mode)
+{
+    if(mode != cameraMode(s))
+    {
+        switch(mode)
+        {
+            case CAMERA_AUTO: slot[s].options &= ~(1<<8); break;
+            case CAMERA_FIXED: slot[s].options |= (1<<8); break;
+         }
+        FileModified(true,s);
+    }
+}
+void FF7Save::setCameraMode(int s, bool mode)
+{
+    if(!(mode && cameraMode(s)))
+    {
+        if(mode){slot[s].options |= (1<<8);}
+        else{slot[s].options &=~(1<<8);}
+        FileModified(true,s);
+    }
+}
+int FF7Save::magicOrder(int s)
+{
+        if ( (slot[s].options&(1<<10)) && (slot[s].options&(1<<11))){return 3;}
+        if ((slot[s].options&(1<<10)) && (slot[s].options&(1<<12))){return 5;}
+        else if(slot[s].options&(1<<10)){return 1;}
+        else if((slot[s].options&(1<<11))){return 2;}
+        else if((slot[s].options&(1<<12))){return 4;}
+        else{return 0;}
+}
+
+void FF7Save::setMagicOrder(int s, int order)
+{
+    if(order != magicOrder(s))
+    switch(order)
+    {
+        case MAGIC_RAI: slot[s].options &=~(1<<10); slot[s].options &=~(1<<11); slot[s].options &= ~(1<<12); break;
+        case MAGIC_RIA: slot[s].options |=(1<<10); slot[s].options &=~(1<<11); slot[s].options &= ~(1<<12); break;
+        case MAGIC_AIR: slot[s].options &=~(1<<10); slot[s].options |=(1<<11); slot[s].options &= ~(1<<12); break;
+        case MAGIC_ARI: slot[s].options |=(1<<10); slot[s].options |=(1<<11); slot[s].options &= ~(1<<12); break;
+        case MAGIC_IRA: slot[s].options &=~(1<<10); slot[s].options &=~(1<<11); slot[s].options |= (1<<12); break;
+        case MAGIC_IAR: slot[s].options |=(1<<10); slot[s].options &=~(1<<11); slot[s].options |= (1<<12); break;
+        default: slot[s].options &=~(1<<10); slot[s].options &=~(1<<11); slot[s].options &= ~(1<<12); break;
+        FileModified(true,s);
+    }
+}
+
+bool FF7Save::battleHelp(int s){return ((slot[s].options)&(1<<14));}
+
+void FF7Save::setBattleHelp(int s, bool shown)
+{
+    if(!(shown && battleHelp(s)))
+    {
+        if(shown){slot[s].options |=(1<<14);}
+        else{slot[s].options &= ~(1<<14);}
+        FileModified(true,s);
+    }
+}
+
+int FF7Save::battleSpeed(int s){return slot[s].battlespeed;}
+void FF7Save::setBattleSpeed(int s, int speed)
+{
+    if(speed != slot[s].battlespeed)
+    {
+        if(speed<0 || speed>255){speed=0;}
+        else{slot[s].battlespeed=speed;}
+        FileModified(true,s);
+    }
+}
+
+int FF7Save::messageSpeed(int s){return slot[s].fieldmspeed;}
+void FF7Save::setMessageSpeed(int s, int speed)
+{
+    if(speed != slot[s].fieldmspeed)
+    {
+        if(speed<0 || speed>255){speed=0;}
+        else{slot[s].fieldmspeed=speed;}
+        FileModified(true,s);
+    }
+}
+
+int FF7Save::battleMSpeed(int s){return slot[s].battlemspeed;}
+void FF7Save::setBattleMSpeed(int s, int speed)
+{
+    if(speed != slot[s].battlemspeed)
+    {
+        if(speed<0 || speed>255){speed=0;}
+        else{slot[s].battlemspeed=speed;}
+        FileModified(true,s);
+    }
+}
+bool FF7Save::fieldHelp(int s){return ((slot[s].field_help)&(1<<0));}
+void FF7Save::setfieldHelp(int s, bool shown)
+{
+    if(!(shown && fieldHelp(s)))
+    {
+        if(shown){slot[s].field_help |= (1<<0);}
+        else{slot[s].field_help &= ~(1<<0);}
+        FileModified(true,s);
+    }
+}
+bool FF7Save::battleTargets(int s){return ((slot[s].tut_sub)&(1<<6));}
+void FF7Save::setBattleTargets(int s, bool shown)
+{
+    if(!(shown &&battleTargets(s)))
+    {
+        if(shown){slot[s].tut_sub |= (1<<6);}
+        else{slot[s].tut_sub &= ~(1<<6);}
+        FileModified(true,s);
+    }
+}
+
+quint16 FF7Save::options(int s){return  slot[s].options;}
+void FF7Save::setOptions(int s, int opt)
+{
+    if(opt != options(s))
+    {
+        slot[s].options= opt;
+        FileModified(true,s);
+    }
+}
+QByteArray FF7Save::controllerMapping(int s)
+{
+    QByteArray temp;
+    for(int i=0;i<16;i++){temp.append(slot[s].controller_map[i]);}
+    return temp;
+}
+quint8 FF7Save::controllerMapping(int s, int action){return slot[s].controller_map[action];}
+
+void FF7Save::setControllerMapping(int s,QByteArray map)
+{
+    if(map.length()>16){map.chop(16);}
+    if(map != controllerMapping(s))
+    {
+        memcpy(&slot[s].controller_map,map,16);
+        FileModified(true,s);
+    }
+}
+void FF7Save::setControllerMapping(int s, int action,  int button)
+{
+    if(button<0 || button >15){return;}
+    else
+    {
+        if(slot[s].controller_map[action] != button)
+        {
+            slot[s].controller_map[action]= button;
+            FileModified(true,s);
+        }
+    }
 }
