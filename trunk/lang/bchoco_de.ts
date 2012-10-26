@@ -4850,10 +4850,6 @@
         <translation>Platziere U-Boot</translation>
     </message>
     <message>
-        <source>Place Emerald Weapon?</source>
-        <translation type="obsolete">Platziere Emerald Weapon?</translation>
-    </message>
-    <message>
         <source>PSV Save Notice</source>
         <translation>PSV Speicher Notiz</translation>
     </message>
@@ -5371,11 +5367,6 @@ Tabellen Einträge sind bearbeitbar</translation>
         <translation>Nach Aeris Kirchen Szene</translation>
     </message>
     <message>
-        <source>Using Unknown Var Table To View Save</source>
-        <translatorcomment>Correct if table = spreadsheet/Scheme/scale/chart ~</translatorcomment>
-        <translation type="obsolete">Benutze unbekannte Var Tabelle zum Anzeigen von Spielständen</translation>
-    </message>
-    <message>
         <source>Sector 7 - Slums Progress</source>
         <translation>Sektor 7 Slums Fortschritt</translation>
     </message>
@@ -5685,6 +5676,10 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Using HexEditor To View Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Psx Slot (0x2000)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

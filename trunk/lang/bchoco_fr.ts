@@ -4872,10 +4872,6 @@
         <translation>Placer Dernière Arme / Diamant / Rubis</translation>
     </message>
     <message>
-        <source>Place Emerald Weapon?</source>
-        <translation type="obsolete">Placer Arme d&apos;émeraude ?</translation>
-    </message>
-    <message>
         <source>FF7 Dex SaveGame(*.gme)</source>
         <translation>Sauvegarde FF7 Dex(*.gme)</translation>
     </message>
@@ -5367,10 +5363,6 @@ Les entrées dans le tableau sont modifiables</translation>
         <translation>Passé la scène de l&apos;église d&apos;Aéris</translation>
     </message>
     <message>
-        <source>Using Unknown Var Table To View Save</source>
-        <translation type="obsolete">Utilisation du tableau de variables inconnues pour visionner la sauvegarde</translation>
-    </message>
-    <message>
         <source>Sector 7 - Slums Progress</source>
         <translation>Secteur 7 - Progression des Taudis</translation>
     </message>
@@ -5680,6 +5672,10 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Using HexEditor To View Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Psx Slot (0x2000)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

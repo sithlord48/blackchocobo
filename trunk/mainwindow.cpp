@@ -1331,9 +1331,11 @@ void MainWindow::file_modified(bool changed)
     ff7->FileModified(changed,s);
     ui->lbl_fileName->setText(ff7->fileName());
 
-    if(ff7->isFF7(s)){hexEditor->setData(ff7->slotRawData(s));}
-    else{hexEditor->setData(ff7->slotPsxRawData(s));}
-    if(changed){ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));}
+    if(changed)
+    {    
+        hexEditorRefresh();
+        ui->lbl_fileName->setText(ui->lbl_fileName->text().append("*"));
+    }
 }
 
 /*~~~~~~~~~End Set Menu~~~~~~~~~~~*/
@@ -1504,35 +1506,34 @@ void MainWindow::guirefresh(bool newgame)
         switch(error.exec())
         {
 
-         case 0://View Anyway..
+        case 0://View Anyway..
             QMessageBox::information(this,tr("Ingoring Non FF7 Save"),tr("Using HexEditor To View Save"));
             ui->tabWidget->setCurrentIndex(8);
             ui->tabWidget_3->setCurrentIndex(1);
             ui->tabWidget->setTabEnabled(8,1);
-            hexEditor->setData(ff7->slotPsxRawData(s));
-
-            //unknown_refresh(ui->combo_z_var->count()-1);
-            break;
+            if(ui->combo_hexEditor->currentIndex()!=0){ui->combo_hexEditor->setCurrentIndex(0);}
+            hexEditorRefresh();
+        break;
 
         case 1://Previous Clicked
             s--;
             guirefresh(0);
-            break;
+        break;
 
         case 2://Next Clicked
             s++;
             guirefresh(0);
-            break;
+        break;
 
         case 3://exported as psx
             on_actionShow_Selection_Dialog_activated();
-            break;
+        break;
         }
 
     }
     else
     {//IS FF7 Slot
-
+        if((ff7->type()=="PC") || (ff7->type()=="")){if(ui->combo_hexEditor->currentIndex()!=1){ui->combo_hexEditor->setCurrentIndex(1);}}
         QByteArray text;
         if(ff7->region(s).isEmpty()
            && (ff7->type() =="MC" || ff7->type() =="VGS" ||ff7->type() =="DEX" ||ff7->type() =="PSP")
@@ -1654,14 +1655,6 @@ void MainWindow::guirefresh(bool newgame)
         ui->durw_angle->setValue((ff7->slot[s].durw_world) >> 24);
         ui->durw_y->setValue((ff7->slot[s].durw_world2) & 0x3FFFF);
         ui->durw_z->setValue((ff7->slot[s].durw_world2) >> 18);
-
-        /* Do Nothing. Don't know emerald weapon Coords
-        ui->ew_x->setValue((ff7->slot[s].ew_world) & 0x7FFFF);
-        ui->ew_id->setValue((ff7->slot[s].ew_world >> 19)&0x1F);
-        ui->ew_angle->setValue((ff7->slot[s].ew_world) >> 24);
-        ui->ew_y->setValue((ff7->slot[s].ew_world2) & 0x3FFFF);
-        ui->ew_z->setValue((ff7->slot[s].ew_world2) >> 18);
-        */
 
         ui->uw_x->setValue((ff7->slot[s].uw_world) & 0x7FFFF);
         ui->uw_id->setValue((ff7->slot[s].uw_world >> 19)&0x1F);
@@ -1825,6 +1818,7 @@ void MainWindow::guirefresh(bool newgame)
         materiaupdate();
         progress_update();
         set_char_buttons();
+        hexEditorRefresh();
         if(ui->action_show_debug->isChecked()){testdata_refresh();}
 
         switch(curchar)
@@ -3548,10 +3542,6 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 {//for updating the unknown table(s)
     load=true;
 
-    if(ff7->isFF7(s)){ hexEditor->setData(ff7->slotRawData(s));}
-    else{hexEditor->setData(ff7->slotPsxRawData(s));}
-
-
     QString text;
     int rows=0;
     QTableWidgetItem *newItem;
@@ -3577,7 +3567,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
     else {ui->btn_all_z_diffs->setEnabled(1);}
 
     if(z <= unknown_zmax){temp = ff7->UnknownVar(s,z);}
-    else if(z == unknown_zmax+1){temp = ff7->slotRawData(s);}
+    else if(z == unknown_zmax+1){temp = ff7->slotFF7Data(s);}
 
     rows=temp.size();
 
@@ -3631,7 +3621,7 @@ void MainWindow::unknown_refresh(int z)//remember to add/remove case statments i
 
             s2 = ui->combo_compare_slot->currentIndex()-1;
             if(z <= unknown_zmax){temp2 = ff7->UnknownVar(s2,z);}
-            else if(z == unknown_zmax+1){temp2 = ff7->slotRawData(s2);}
+            else if(z == unknown_zmax+1){temp2 = ff7->slotFF7Data(s2);}
 
             //rows=temp2.size();
             value = temp2.at(i);
@@ -3702,7 +3692,7 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
 
     int z = ui->combo_z_var->currentIndex();
     if(z <= unknown_zmax){temp = ff7->UnknownVar(s,z);}
-    else if(z == unknown_zmax+1){temp = ff7->slotRawData(s);}
+    else if(z == unknown_zmax+1){temp = ff7->slotFF7Data(s);}
 
     switch(item->column())
     {
@@ -3712,7 +3702,7 @@ void MainWindow::on_tbl_unknown_itemChanged(QTableWidgetItem* item)
     };
 
     if(z <= unknown_zmax){ff7->setUnknownVar(s,z,temp);}
-    else if(z == unknown_zmax+1){ff7->setslotRawData(s,temp);}
+    else if(z == unknown_zmax+1){ff7->setSlotFF7Data(s,temp);}
 
     unknown_refresh(z);
 }}
@@ -4003,8 +3993,11 @@ void MainWindow::on_sb_BattlePoints_valueChanged(int arg1){if(!load){ff7->setBat
 
 void MainWindow::hexEditorRefresh()
 {
-    if(ui->combo_hexEditor->currentIndex() == 0)if(ff7->isFF7(s)){hexEditor->setData(ff7->slotRawData(s));}else{hexEditor->setData(ff7->slotPsxRawData(s));}
-    else{hexEditor->setData(ff7->UnknownVar(s,ui->combo_hexEditor->currentIndex()));}
+    switch(ui->combo_hexEditor->currentIndex())
+    {
+        case 0:hexEditor->setData(ff7->slotPsxRawData(s)); break;
+        case 1:hexEditor->setData(ff7->slotFF7Data(s)); break;
+    }
 }
 void MainWindow::on_combo_hexEditor_currentIndexChanged(){hexEditorRefresh();}
 
@@ -4012,11 +4005,7 @@ void MainWindow::hexEditorChanged(void)
 {
     switch(ui->combo_hexEditor->currentIndex())
     {
-        case 0:
-            if(ff7->isFF7(s)){ff7->setslotRawData(s,hexEditor->data());}
-            else{ff7->setSlotPsxRawData(s,hexEditor->data());}//viewing a raw psx slot instead of ff7 data.
-
-            break;
-        default:ff7->setUnknownVar(s,ui->combo_hexEditor->currentIndex(),hexEditor->data()); break;
+        case 0: ff7->setSlotPsxRawData(s,hexEditor->data()); break;
+        case 1: ff7->setSlotFF7Data(s,hexEditor->data());   break;
     }
 }

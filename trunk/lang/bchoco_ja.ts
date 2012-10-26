@@ -4921,10 +4921,6 @@
         <translation>潜水艦を配置</translation>
     </message>
     <message>
-        <source>Place Emerald Weapon?</source>
-        <translation type="obsolete">エメラルド ウェポン (?) を配置</translation>
-    </message>
-    <message>
         <source>PSV Save Notice</source>
         <translation>PSV セーブ: 警告</translation>
     </message>
@@ -5439,10 +5435,6 @@ Table Entries are Editable</source>
         <translation>エアリスとの教会イベント完了</translation>
     </message>
     <message>
-        <source>Using Unknown Var Table To View Save</source>
-        <translation type="obsolete">未知の変数のテーブルを使ってセーブを表示します</translation>
-    </message>
-    <message>
         <source>Sector 7 - Slums Progress</source>
         <translation>７番街スラム - 進捗</translation>
     </message>
@@ -5753,6 +5745,10 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Using HexEditor To View Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Psx Slot (0x2000)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

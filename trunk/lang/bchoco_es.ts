@@ -4849,10 +4849,6 @@
         <translation>Colocar Submarino</translation>
     </message>
     <message>
-        <source>Place Emerald Weapon?</source>
-        <translation type="obsolete">¿Colocar Arma Esmeralda?</translation>
-    </message>
-    <message>
         <source>PSV Save Notice</source>
         <translation>Aviso de guardado PSV</translation>
     </message>
@@ -5367,10 +5363,6 @@ Las entradas de la tabla son editables</translation>
         <translation>Después de la escena de la iglesia de Aeris</translation>
     </message>
     <message>
-        <source>Using Unknown Var Table To View Save</source>
-        <translation type="obsolete">Usando la tabla de variables desconocidas para ver la partida guardada</translation>
-    </message>
-    <message>
         <source>Sector 7 - Slums Progress</source>
         <translation>Sector 7 - Progreso en los suburbios</translation>
     </message>
@@ -5680,6 +5672,10 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Using HexEditor To View Save</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Psx Slot (0x2000)</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
