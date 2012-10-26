@@ -5663,6 +5663,10 @@ Table Entries are Editable</source>
         <source>Using HexEditor To View Save</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Psx Slot (0x2000)</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MateriaEditor</name>

@@ -340,8 +340,9 @@ public:
   quint8 psx_block_size(int s);//how many blocks save uses.
   void fix_pc_bytemask(int s);// update so last slot is shown selected on load (must be public to set to currently viewed slot).
 
-  QByteArray slotRawData(int s); //Return Raw data from the slot
-  bool setslotRawData(int s, QByteArray data);
+  QByteArray slotFF7Data(int s); //Return Raw data from the slot
+  bool setSlotFF7Data(int s, QByteArray data);
+  bool setSlotFF7Data(int s, FF7SLOT data);
 
   QByteArray UnknownVar(int s,int z);
   bool setUnknownVar(int s,int z,QByteArray data);
