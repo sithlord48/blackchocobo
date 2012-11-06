@@ -2837,7 +2837,7 @@
     <name>Locations</name>
     <message>
         <source>Platform</source>
-        <translation>Plate-forme</translation>
+        <translation type="unfinished">Plate-forme</translation>
     </message>
     <message>
         <source>Tunnel</source>
@@ -3559,6 +3559,50 @@
     <message>
         <source>Inside Train</source>
         <translation>Intérieur de train</translation>
+    </message>
+    <message>
+        <source>Pub &quot;Starlet&quot; </source>
+        <translation>Bar &quot;Starlet&quot;</translation>
+    </message>
+    <message>
+        <source>Shildra Inn</source>
+        <translation>Auberge Shildra</translation>
+    </message>
+    <message>
+        <source>Elder&apos;s Room</source>
+        <translation>Chambre d&apos;ancien</translation>
+    </message>
+    <message>
+        <source>Gate of Naught</source>
+        <translation>Porte du Néant</translation>
+    </message>
+    <message>
+        <source>Materia Shop</source>
+        <translation>Magasin de Materia</translation>
+    </message>
+    <message>
+        <source>Observatory</source>
+        <translation>Observatoire</translation>
+    </message>
+    <message>
+        <source>Bugen Research Center</source>
+        <translation>Dpt. de recherche Bugen</translation>
+    </message>
+    <message>
+        <source>Cosmo Candle</source>
+        <translation>Bougie Cosmo</translation>
+    </message>
+    <message>
+        <source>Sealed Cave</source>
+        <translation>Grotte à sceau</translation>
+    </message>
+    <message>
+        <source>Cave of the Gi</source>
+        <translation>Grotte Gi</translation>
+    </message>
+    <message>
+        <source>Nibel Area</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>

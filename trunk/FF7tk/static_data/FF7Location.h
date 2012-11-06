@@ -38,6 +38,7 @@ public:
 };
 static LOCATION Locations[]=
 {
+    /************************Every Location In The Game With Stock Translation******************/
     {QT_TRANSLATE_NOOP("Locations","Platform"),"1","116","3655","27432","25"},
     {QT_TRANSLATE_NOOP("Locations","Sector 1 Station"),"1","117","1433","386","78"},
     {QT_TRANSLATE_NOOP("Locations","Sector 1"),"1","118","3568","30777","55"},
@@ -315,8 +316,26 @@ static LOCATION Locations[]=
     {QT_TRANSLATE_NOOP("Locations","Item Store"),"1","521","76","65453","2"},
     {QT_TRANSLATE_NOOP("Locations","Inn"),"1","522","65510","65333","13"},
     {QT_TRANSLATE_NOOP("Locations","Mayor's Home"),"1","524","65419","65328","94"},
-    /**********************************Below The List Is UnFinished   *********/
+    {QT_TRANSLATE_NOOP("Locations","Cosmo Canyon"),"1","525","64574","63796","128"},
+    {QT_TRANSLATE_NOOP("Locations","Pub \"Starlet\" "),"1","532","403","65493","22"},
+    {QT_TRANSLATE_NOOP("Locations","Shildra Inn"),"1","538","40","65292","22"},
+    {QT_TRANSLATE_NOOP("Locations","Item Store"),"1","539","108","65477","32"},
+    {QT_TRANSLATE_NOOP("Locations","Cosmo Canyon"),"1","529","128","65215","79"},
+    {QT_TRANSLATE_NOOP("Locations","Elder's Room"),"1","530","99","65396","7"},
+    {QT_TRANSLATE_NOOP("Locations","Gate of Naught"),"1","531","8","65448","71"},
+    {QT_TRANSLATE_NOOP("Locations","Materia Shop"),"1","535","65503","108","11"},
+    {QT_TRANSLATE_NOOP("Locations","Cosmo Canyon"),"1","536","137","58","16"},
+    {QT_TRANSLATE_NOOP("Locations","Observatory"),"1","540","65455","65083","31"},
+    {QT_TRANSLATE_NOOP("Locations","Bugen Research Center"),"1","544","65429","65399","9"},
+    {QT_TRANSLATE_NOOP("Locations","Observatory"),"1","541","65389","42","32"},
+    {QT_TRANSLATE_NOOP("Locations","Cosmo Candle"),"1","526","65006","63732","48"},
+    {QT_TRANSLATE_NOOP("Locations","Sealed Cave"),"1","534","65391","624","47"},
+    {QT_TRANSLATE_NOOP("Locations","Cave of the Gi"),"1","546","64466","515","198"},
+    {QT_TRANSLATE_NOOP("Locations","Cave of the Gi"),"1","547","333","64409","144"},
+    {QT_TRANSLATE_NOOP("Locations","Cave of the Gi"),"1","548","335","64015","17"},
+    {QT_TRANSLATE_NOOP("Locations","Cave of the Gi"),"1","549","65492","64577","19"},
     {QT_TRANSLATE_NOOP("Locations","Mt. Nibel"),"1","317","667","65035","261"},
+    /**********************************Below The List Is UnFinished   *********/
     {QT_TRANSLATE_NOOP("Locations","Midgar Sector 8"),"1","732","265","65332","24"},
     {QT_TRANSLATE_NOOP("Locations","Midgar Sector 8"),"1","739","61439","18394","34"},
     {QT_TRANSLATE_NOOP("Locations","Sector 8, Underground"),"1","733","65264","1614","116"},
@@ -330,7 +349,6 @@ static LOCATION Locations[]=
     {QT_TRANSLATE_NOOP("Locations","Underwater Reactor"),"1","422","34","426","14"},
     {QT_TRANSLATE_NOOP("Locations","Inside Submarine"),"1","408","65484","433","7"},
     {QT_TRANSLATE_NOOP("Locations","Hallway"),"1","88","65141","34","13"},
-    {QT_TRANSLATE_NOOP("Locations","Cosmo Canyon"),"1","529","128","65215","79"},
     {QT_TRANSLATE_NOOP("Locations","Forgotten Captial"),"1","633","65402","65401","40"},
     {QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","703","65170","64488","44"},
     {QT_TRANSLATE_NOOP("Locations","Whirlwind Maze"),"1","705","94","1168","173"},
@@ -358,6 +376,8 @@ static LOCATION Locations[]=
     {QT_TRANSLATE_NOOP("Locations","Gold Saucer Area"),"3","16","0","0","0"},
     {QT_TRANSLATE_NOOP("Locations","Gongaga Area"),"3","10","0","0","0"},
     {QT_TRANSLATE_NOOP("Locations","Gongaga Area"),"3","17","0","0","0"},
-    {QT_TRANSLATE_NOOP("Locations","Cosmo Area"),"3","18","0","0","0"}
+    {QT_TRANSLATE_NOOP("Locations","Cosmo Area"),"3","18","0","0","0"},
+    {QT_TRANSLATE_NOOP("Locations","Nibel Area"),"3","19","0","0","0"},
+    {QT_TRANSLATE_NOOP("Locations","Nibel Area"),"3","43","0","0","0"}
 };
 #endif //FF7LOCATION_H

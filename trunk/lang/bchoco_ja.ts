@@ -3633,6 +3633,50 @@
         <source>Inside Train</source>
         <translation>客車内</translation>
     </message>
+    <message>
+        <source>Pub &quot;Starlet&quot; </source>
+        <translation>パブ『スターレット』</translation>
+    </message>
+    <message>
+        <source>Shildra Inn</source>
+        <translation>シルドラ・イン</translation>
+    </message>
+    <message>
+        <source>Elder&apos;s Room</source>
+        <translation>長老の部屋</translation>
+    </message>
+    <message>
+        <source>Gate of Naught</source>
+        <translation>『無用の扉』前</translation>
+    </message>
+    <message>
+        <source>Materia Shop</source>
+        <translation>マテリアショップ</translation>
+    </message>
+    <message>
+        <source>Observatory</source>
+        <translation>天文台</translation>
+    </message>
+    <message>
+        <source>Bugen Research Center</source>
+        <translation>ブーゲンの研究所</translation>
+    </message>
+    <message>
+        <source>Cosmo Candle</source>
+        <translation>コスモキャンドル</translation>
+    </message>
+    <message>
+        <source>Sealed Cave</source>
+        <translation>封印の洞窟</translation>
+    </message>
+    <message>
+        <source>Cave of the Gi</source>
+        <translation>ギ族の洞窟</translation>
+    </message>
+    <message>
+        <source>Nibel Area</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>

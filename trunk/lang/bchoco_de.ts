@@ -3559,6 +3559,50 @@
         <source>Inside Train</source>
         <translation>Im Zug</translation>
     </message>
+    <message>
+        <source>Pub &quot;Starlet&quot; </source>
+        <translation>Gasthaus &quot;Starlet&quot;</translation>
+    </message>
+    <message>
+        <source>Shildra Inn</source>
+        <translation>Shildra-Bar</translation>
+    </message>
+    <message>
+        <source>Elder&apos;s Room</source>
+        <translation>Zimmer des Ältesten</translation>
+    </message>
+    <message>
+        <source>Gate of Naught</source>
+        <translation>Tor des Nichts</translation>
+    </message>
+    <message>
+        <source>Materia Shop</source>
+        <translation>Substanzladen</translation>
+    </message>
+    <message>
+        <source>Observatory</source>
+        <translation>Observatorium</translation>
+    </message>
+    <message>
+        <source>Bugen Research Center</source>
+        <translation>Bugen-Forschungszentrum</translation>
+    </message>
+    <message>
+        <source>Cosmo Candle</source>
+        <translation>Cosmo-Kerze</translation>
+    </message>
+    <message>
+        <source>Sealed Cave</source>
+        <translation>Versiegelte Höhle</translation>
+    </message>
+    <message>
+        <source>Cave of the Gi</source>
+        <translation>Höhle von Gi</translation>
+    </message>
+    <message>
+        <source>Nibel Area</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
