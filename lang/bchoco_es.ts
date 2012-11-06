@@ -3561,6 +3561,50 @@
         <source>Inside Train</source>
         <translation>Dentro del Tren</translation>
     </message>
+    <message>
+        <source>Pub &quot;Starlet&quot; </source>
+        <translation>Pub &quot;Estrellita&quot;</translation>
+    </message>
+    <message>
+        <source>Shildra Inn</source>
+        <translation>Pos. Shildra</translation>
+    </message>
+    <message>
+        <source>Elder&apos;s Room</source>
+        <translation>Sala mayores</translation>
+    </message>
+    <message>
+        <source>Gate of Naught</source>
+        <translation>Puerta cero</translation>
+    </message>
+    <message>
+        <source>Materia Shop</source>
+        <translation>Alm. Materia</translation>
+    </message>
+    <message>
+        <source>Observatory</source>
+        <translation>Observat.</translation>
+    </message>
+    <message>
+        <source>Bugen Research Center</source>
+        <translation>Investigac. Bugen</translation>
+    </message>
+    <message>
+        <source>Cosmo Candle</source>
+        <translation>Flama de Cosmo</translation>
+    </message>
+    <message>
+        <source>Sealed Cave</source>
+        <translation>Cueva sellada</translation>
+    </message>
+    <message>
+        <source>Cave of the Gi</source>
+        <translation>Cueva de Gi</translation>
+    </message>
+    <message>
+        <source>Nibel Area</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
