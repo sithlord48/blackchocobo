@@ -3603,6 +3603,34 @@
         <source>Nibel Area</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Rocket Town</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Shanghai Inn</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>House</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rocket Launching Pad</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Ship Hallway</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Rocket Launch Pad Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Weapon seller</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>

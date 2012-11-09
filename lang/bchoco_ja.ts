@@ -3677,6 +3677,35 @@
         <source>Nibel Area</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Rocket Town</source>
+        <translation>ロケット村</translation>
+    </message>
+    <message>
+        <source>Shanghai Inn</source>
+        <translatorcomment>first floor (english has only one string for this) will fix on load  if floor 2</translatorcomment>
+        <translation>上海亭1階</translation>
+    </message>
+    <message>
+        <source>House</source>
+        <translation>民家</translation>
+    </message>
+    <message>
+        <source>Rocket Launching Pad</source>
+        <translation>ロケット発射台</translation>
+    </message>
+    <message>
+        <source>Ship Hallway</source>
+        <translation>船内通路</translation>
+    </message>
+    <message>
+        <source>Rocket Launch Pad Area</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Weapon seller</source>
+        <translation>武器職人の小屋</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
