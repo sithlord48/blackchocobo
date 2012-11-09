@@ -3633,6 +3633,10 @@
         <source>Weapon seller</source>
         <translation>Vendedor de armas</translation>
     </message>
+    <message>
+        <source>Hotel</source>
+        <translation>Hotel</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -4105,10 +4109,6 @@
         <translation>Ranura Siguente</translation>
     </message>
     <message>
-        <source>Ropeway Station</source>
-        <translation>Estación Ropeway</translation>
-    </message>
-    <message>
         <source>Forgotten City</source>
         <translation>Ciudad Olvidada</translation>
     </message>
@@ -4407,10 +4407,6 @@
     <message>
         <source>FF7 PSP SaveGame(*.vmp)</source>
         <translation>Partida Guardada de FF7 PSP(*.vmp)</translation>
-    </message>
-    <message>
-        <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
-        <translation>Rejugar la Escena de la Cita, Tu situación se pondrá en la Estación Ropeway, Habla con el Hombre al lado del Tranvía para empezar el evento, Si buscas una cita en especial asegúrate de que has puesto los puntos de amor.</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSX Save</source>
@@ -5748,6 +5744,14 @@ Las entradas de la tabla son editables</translation>
     </message>
     <message>
         <source>Psx Slot (0x2000)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hotel</source>
+        <translation type="unfinished">Hotel</translation>
+    </message>
+    <message>
+        <source>Replay the Date Scene, Your Location will be set To The Hotel Room. If Your Looking for a special Date be sure to set your love points too.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

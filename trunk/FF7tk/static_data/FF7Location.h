@@ -348,7 +348,7 @@ static LOCATION Locations[]=
     {QT_TRANSLATE_NOOP("Locations","Rocket Launching Pad"),"1","562","64529","4947","89"},
     {QT_TRANSLATE_NOOP("Locations","Ship Hallway"),"1","564","65505","60","15"},
     {QT_TRANSLATE_NOOP("Locations","Weapon seller"),"1","79","65359","65470","30"},
-
+    {QT_TRANSLATE_NOOP("Locations","Hotel"),"1","494","273","65320","8"},
     /**********************************Below The List Is UnFinished   *********/
     {QT_TRANSLATE_NOOP("Locations","Midgar Sector 8"),"1","732","265","65332","24"},
     {QT_TRANSLATE_NOOP("Locations","Midgar Sector 8"),"1","739","61439","18394","34"},

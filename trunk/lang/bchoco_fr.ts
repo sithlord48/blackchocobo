@@ -3632,6 +3632,10 @@
         <source>Weapon seller</source>
         <translation>Vendeur d&apos;armes</translation>
     </message>
+    <message>
+        <source>Hotel</source>
+        <translation>Hôtel</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -4200,10 +4204,6 @@
         <translation>Slot suivant</translation>
     </message>
     <message>
-        <source>Ropeway Station</source>
-        <translation>Station de téléphérique</translation>
-    </message>
-    <message>
         <source>Forgotten City</source>
         <translation>Cité perdue</translation>
     </message>
@@ -4386,10 +4386,6 @@
     <message>
         <source>Save Final Fantasy 7 MC SaveGame</source>
         <translation>Enregistrer sauvegarde Final Fantasy 7 MC</translation>
-    </message>
-    <message>
-        <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
-        <translation>Rejouer la scène du rendez-vous au Gold Saucer : votre emplacement de sauvegarde sera à la station de téléphérique. Parlez à l&apos;homme près du tramway afin de démarrer cette scène. Si vous cherchez à obtenir un rendez-vous spécifique, assurez-vous d&apos;ajuster les points d&apos;affection des personnages.</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSX Save</source>
@@ -5748,6 +5744,14 @@ Les entrées dans le tableau sont modifiables</translation>
     </message>
     <message>
         <source>Psx Slot (0x2000)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hotel</source>
+        <translation type="unfinished">Hôtel</translation>
+    </message>
+    <message>
+        <source>Replay the Date Scene, Your Location will be set To The Hotel Room. If Your Looking for a special Date be sure to set your love points too.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
