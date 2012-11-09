@@ -3706,6 +3706,10 @@
         <source>Weapon seller</source>
         <translation>武器職人の小屋</translation>
     </message>
+    <message>
+        <source>Hotel</source>
+        <translation>客室</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -4274,10 +4278,6 @@
         <translation>その他(&amp;R)</translation>
     </message>
     <message>
-        <source>Ropeway Station</source>
-        <translation>ロープウェイ乗り場</translation>
-    </message>
-    <message>
         <source>Forgotten City</source>
         <translation>忘らるる都＊</translation>
     </message>
@@ -4486,10 +4486,6 @@
     <message>
         <source>Save Final Fantasy 7 MC SaveGame</source>
         <translation>Final Fantasy 7 MC セーブの保存</translation>
-    </message>
-    <message>
-        <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
-        <translation>デート イベントをリプレイします。 ロープウェイの駅からスタートします。 画面右の係員に話しかけるとイベントが始まります。 レアなデート イベントを始めるには好感度も設定する必要があります。</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSX Save</source>
@@ -5822,6 +5818,14 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Psx Slot (0x2000)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hotel</source>
+        <translation type="unfinished">客室</translation>
+    </message>
+    <message>
+        <source>Replay the Date Scene, Your Location will be set To The Hotel Room. If Your Looking for a special Date be sure to set your love points too.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

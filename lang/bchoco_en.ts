@@ -3631,6 +3631,10 @@
         <source>Weapon seller</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Hotel</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -4199,10 +4203,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Ropeway Station</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Forgotten City</source>
         <translation type="unfinished"></translation>
     </message>
@@ -4409,10 +4409,6 @@
     </message>
     <message>
         <source>Save Final Fantasy 7 MC SaveGame</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -5737,6 +5733,14 @@ Table Entries are Editable</source>
     </message>
     <message>
         <source>Psx Slot (0x2000)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hotel</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Replay the Date Scene, Your Location will be set To The Hotel Room. If Your Looking for a special Date be sure to set your love points too.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

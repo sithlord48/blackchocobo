@@ -3631,6 +3631,10 @@
         <source>Weapon seller</source>
         <translation>Waffenhändler</translation>
     </message>
+    <message>
+        <source>Hotel</source>
+        <translation>Hotel</translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
@@ -4200,10 +4204,6 @@
         <translation>&amp;Othe&amp;r</translation>
     </message>
     <message>
-        <source>Ropeway Station</source>
-        <translation>Seilbahnstation</translation>
-    </message>
-    <message>
         <source>Forgotten City</source>
         <translation>Vergessene Stadt</translation>
     </message>
@@ -4412,10 +4412,6 @@
     <message>
         <source>Save Final Fantasy 7 MC SaveGame</source>
         <translation>Speichere Final Fantasy 7 MC Spielstand</translation>
-    </message>
-    <message>
-        <source>Replay the Date Scene, Your Location will be set To Ropeway Station, Talk To The Guy By The Tram To Start The Event, If Your Looking for a special Date be sure to set your love points too.</source>
-        <translation>Wiederhole die Date Szene, Der Ort wird zur Seilbahnstation gesetzt, Rede mit dem Typen an der Bahn, um das Event zu starten, wenn du für ein bestimmtes Date schaust, stelle sicher, dass du auch die Liebespunkte gesetzt hast.</translation>
     </message>
     <message>
         <source>Select Final Fantasy 7 PSX Save</source>
@@ -5752,6 +5748,14 @@ Tabellen Einträge sind bearbeitbar</translation>
     </message>
     <message>
         <source>Psx Slot (0x2000)</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Hotel</source>
+        <translation type="unfinished">Hotel</translation>
+    </message>
+    <message>
+        <source>Replay the Date Scene, Your Location will be set To The Hotel Room. If Your Looking for a special Date be sure to set your love points too.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
